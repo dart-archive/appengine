@@ -352,6 +352,12 @@ class AppengineHttpResponse extends Object
 
   Duration get deadline => _realResponse.deadline;
 
+  void set bufferOutput(bool bufferOutput) {
+    _realResponse.bufferOutput = bufferOutput;
+  }
+
+  bool get bufferOutput => _realResponse.bufferOutput;
+
   Future redirect(Uri location, {int status: HttpStatus.MOVED_TEMPORARILY}) {
     _ensureInHeaderBuildingState();
     return _submitRedirect(location, status);
