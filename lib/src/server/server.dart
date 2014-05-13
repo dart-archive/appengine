@@ -8,6 +8,9 @@ import 'dart:async';
 import 'dart:convert' show UTF8;
 import 'dart:io';
 
+import 'package:http_server/http_server.dart' show VirtualDirectory;
+import 'package:path/path.dart' show normalize;
+
 import 'context_registry.dart';
 import 'http_wrapper.dart';
 
@@ -28,16 +31,27 @@ class AppEngineHttpServer {
   final String _localHostname;
   HttpServer _httpServer;
 
+  VirtualDirectory _webRoot;
+  VirtualDirectory _buildWebRoot;
+
   AppEngineHttpServer(this._contextRegistry,
                       {String hostname: '0.0.0.0', int port: 8080})
-      : _localHostname = _getHostname(), _hostname = hostname, _port = port;
+      : _localHostname = _getHostname(), _hostname = hostname, _port = port,
+        _webRoot = new VirtualDirectory('web'),
+        _buildWebRoot = new VirtualDirectory('build/web');
 
   Stream<HttpRequest> run() {
     var controller = new StreamController();
 
     var serviceHandlers = {
+        '/_ah/start' : _start,
         '/_ah/health' : _health,
         '/_ah/stop' : _stop
+    };
+
+    var fileHandlers = {
+        _buildWebRoot.root : (_) => _serveFile(_buildWebRoot, _),
+        _webRoot.root : (_) => _serveFile(_webRoot, _)
     };
 
     HttpServer.bind(_hostname, _port).then((HttpServer server) {
@@ -49,7 +63,10 @@ class AppEngineHttpServer {
 
         _info("Got request: ${appengineRequest.uri}");
 
+        // Default handling is sending the request to the aplication.
         var handler = controller.add;
+
+        // Check if the request path is one of the service handlers.
         String path = appengineRequest.uri.path;
         for (var pattern in serviceHandlers.keys) {
           if (path.startsWith(pattern)) {
@@ -57,6 +74,17 @@ class AppEngineHttpServer {
             break;
           }
         }
+
+        // Check if the request path is pointing to a static resource.
+        // TODO(sgjesse): Change this handling of static files.
+        path = normalize(path);
+        for (var root in fileHandlers.keys) {
+          if (FileSystemEntity.isFileSync(root + path)) {
+            handler = fileHandlers[root];
+            break;
+          }
+        }
+
         _contextRegistry.add(appengineRequest).then((_) {
           /*
            * This sets the 'Server' header in the http response to the hostname
@@ -80,6 +108,12 @@ class AppEngineHttpServer {
     return controller.stream;
   }
 
+  _start(HttpRequest request) {
+    request.drain().then((_) {
+      _sendResponse(request.response, HttpStatus.OK, "ok");
+    });
+  }
+
   _health(HttpRequest request) {
     request.drain().then((_) {
       _sendResponse(request.response, HttpStatus.OK, "ok");
@@ -95,6 +129,13 @@ class AppEngineHttpServer {
       } else {
         _sendResponse(request.response, HttpStatus.CONFLICT, "fail");
       }
+    });
+  }
+
+  _serveFile(VirtualDirectory root, HttpRequest request) {
+    _info('Serving file for "${request.uri.path}" from "${root.root}"');
+    request.drain().then((_) {
+      root.serveRequest(request);
     });
   }
 

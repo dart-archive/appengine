@@ -2,12 +2,14 @@ name: appengine
 version: 0.1.0
 author: Dart Team
 dependencies:
-  fixnum: any
-  memcache:
-    path: ../memcache
-  protobuf: any
-  yaml: any
   cloud_datastore:
     path: ../cloud_datastore
+  fixnum: any
+  http_server: any
+  memcache:
+    path: ../memcache
+  path: any
+  protobuf: any
+  yaml: any
 dev_dependencies:
   unittest: any
