@@ -127,7 +127,7 @@ class Codec {
           return intValue;
       }
     } else if (pb.hasBooleanValue()) {
-      pb.booleanValue;
+      return pb.booleanValue;
     } else if (pb.hasPointValue()) {
       throw new UnimplementedError("Point values are not supported yet.");
     } else if (pb.hasDoubleValue()) {

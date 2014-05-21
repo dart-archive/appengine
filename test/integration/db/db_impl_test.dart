@@ -24,6 +24,7 @@ class Person extends db.Model {
   sameAs(Object other) {
     return other is Person &&
         id == other.id &&
+        parentKey == other.parentKey &&
         name == other.name &&
         age == other.age &&
         wife == other.wife;
@@ -321,6 +322,35 @@ runTests(db.DatastoreDB store) {
         expandoPerson.bar = 2;
 
         return testInsertLookupDelete(models, transactional: true, xg: true);
+      });
+
+      test('parent_key', () {
+        var root = store.emptyKey;
+        var users = [];
+        for (var i = 333; i <= 334; i++) {
+          users.add(new User()
+              ..id = i
+              ..parentKey = root
+              ..age = 42 + i
+              ..name = 'user$i'
+              ..nickname = 'nickname${i%3}');
+        }
+        var persons = [];
+        for (var i = 335; i <= 336; i++) {
+          persons.add(new Person()
+              ..id = i
+              ..parentKey = root
+              ..age = 42 + i
+              ..name = 'person$i');
+        }
+
+        // We test that we can insert + lookup
+        // users[0], (persons[0] + users[0] as parent)
+        // persons[1], (users[1] + persons[0] as parent)
+        persons[0].parentKey = users[0].key;
+        users[1].parentKey = persons[1].key;
+
+        return testInsertLookupDelete([]..addAll(users)..addAll(persons));
       });
 
       test('auto_ids', () {

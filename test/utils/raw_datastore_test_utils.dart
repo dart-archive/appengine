@@ -68,6 +68,7 @@ List<Entity> buildEntityWithAllProperties(
 
   Map<String, String> buildProperties(int i) {
     return {
+      'boolProperty' : true,
       'intProperty' : 42,
       'doubleProperty' : 4.2,
       'stringProperty' : 'foobar',
