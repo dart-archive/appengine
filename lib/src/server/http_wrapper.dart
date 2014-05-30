@@ -406,7 +406,7 @@ class AppengineHttpResponse extends Object
 
   Encoding get encoding => _realResponse.encoding;
 
-  Future<Socket> detachSocket() {
+  Future<Socket> detachSocket({bool writeHeaders: true}) {
     throw new UnsupportedError('You cannot detach the socket '
         'from AppengineHttpResponse implementation.');
   }

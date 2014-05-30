@@ -8,7 +8,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:memcache/memcache.dart';
-import 'package:cloud_datastore/raw_datastore.dart';
 import 'package:cloud_datastore/cloud_datastore.dart';
 
 import 'api/logging.dart';
