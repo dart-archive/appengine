@@ -129,5 +129,95 @@ main() {
         }));
       }));
     });
+
+    test('increment-increment', () {
+      memcache.increment('A').then(expectAsync((value) {
+        expect(value, 1);
+        memcache.increment([65]).then(expectAsync((value) {
+          expect(value, 2);
+        }));
+      }));
+    });
+
+    test('initial-increment-increment', () {
+      memcache.increment('A', initialValue: 2).then(expectAsync((value) {
+        expect(value, 3);
+        memcache.increment([65], delta: 2).then(expectAsync((value) {
+          expect(value, 5);
+        }));
+      }));
+    });
+
+    test('initial-max-increment-wrap-increment', () {
+      memcache.increment(
+          'A', initialValue: 0xFFFFFFFFFFFFFFFF).then(expectAsync((value) {
+        expect(value, 0);
+        memcache.increment([65], delta: 2).then(expectAsync((value) {
+          expect(value, 2);
+        }));
+      }));
+    });
+
+    test('initial-almost-max-increment-increment-wrap', () {
+      memcache.increment(
+          'A', initialValue: 0xFFFFFFFFFFFFFFFE).then(expectAsync((value) {
+        expect(value, 0xFFFFFFFFFFFFFFFF);
+        memcache.increment([65], delta: 2).then(expectAsync((value) {
+          expect(value, 1);
+        }));
+      }));
+    });
+
+    test('increment-max-delta-increment-wrap', () {
+      memcache.increment(
+          'A', delta: 0xFFFFFFFFFFFFFFFF).then(expectAsync((value) {
+        expect(value, 0xFFFFFFFFFFFFFFFF);
+        memcache.increment([65], delta: 2).then(expectAsync((value) {
+          expect(value, 1);
+        }));
+      }));
+    });
+
+    test('decrement-decrement', () {
+      memcache.decrement('A').then(expectAsync((value) {
+        expect(value, 0);
+        memcache.decrement([65]).then(expectAsync((value) {
+          expect(value, 0);
+        }));
+      }));
+    });
+
+    test('initial-decrement-decrement', () {
+      memcache.decrement('A', initialValue: 3).then(expectAsync((value) {
+        expect(value, 2);
+        memcache.decrement([65], delta: 2).then(expectAsync((value) {
+          expect(value, 0);
+        }));
+      }));
+    });
+
+    test('initial-max-decrement-max-decrement', () {
+      memcache.decrement(
+          'A',
+          delta: 0xFFFFFFFFFFFFFFFF,
+          initialValue:  0xFFFFFFFFFFFFFFFF).then(expectAsync((value) {
+        expect(value, 0);
+        memcache.decrement(
+            [65], delta: 0xFFFFFFFFFFFFFFFE).then(expectAsync((value) {
+          expect(value, 0);
+        }));
+      }));
+    });
+
+    test('initial-max-decrement-decrement', () {
+      memcache.decrement(
+          'A', initialValue:  0xFFFFFFFFFFFFFFFF).then(expectAsync((value) {
+        expect(value,  0xFFFFFFFFFFFFFFFE);
+        memcache.decrement(
+            [65], delta: 0xFFFFFFFFFFFFFFFE).then(expectAsync((value) {
+          expect(value, 0);
+        }));
+      }));
+    });
   });
 }

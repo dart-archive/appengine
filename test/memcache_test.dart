@@ -8,6 +8,7 @@ import 'dart:convert';
 import 'package:appengine/api/errors.dart';
 import 'package:appengine/src/api_impl/raw_memcache_impl.dart';
 import 'package:appengine/src/protobuf_api/internal/memcache_service.pb.dart';
+import 'package:fixnum/fixnum.dart';
 import 'package:memcache/src/memcache_impl.dart';
 import 'package:unittest/unittest.dart';
 
@@ -326,6 +327,91 @@ main() {
       }));
 
       expect(memcache.removeAll(keys), completes);
+    });
+
+    test('increment', () {
+      var key1 = 'increment';
+      var key2 = UTF8.encode(key1);
+
+      var mock = new MockRPCService('memcache');
+      var memcache = new MemCacheImpl(new RawMemcacheRpcImpl(mock, ''));
+
+      // Tests sucessfull increment.
+      mock.register(
+          'Increment', MemcacheIncrementRequest, expectAsync((request) {
+        expect(request.key, key2);
+        expect(request.delta.toInt(), 1);
+        expect(request.direction, MemcacheIncrementRequest_Direction.INCREMENT);
+        expect(request.initialValue.toInt(), 0);
+        expect(request.initialFlags, 0);
+
+        var response = new MemcacheIncrementResponse();
+        response.incrementStatus =
+            MemcacheIncrementResponse_IncrementStatusCode.OK;
+        response.newValue = new Int64(42);
+        return new Future.value(response.writeToBuffer());
+      }));
+      expect(memcache.increment(key1), completion(42));
+    });
+
+    test('decrement', () {
+      var key1 = 'decrement';
+      var key2 = UTF8.encode(key1);
+
+      var mock = new MockRPCService('memcache');
+      var memcache = new MemCacheImpl(new RawMemcacheRpcImpl(mock, ''));
+
+      // Tests sucessfull decrement.
+      mock.register(
+          'Increment', MemcacheIncrementRequest, expectAsync((request) {
+        expect(request.key, key2);
+        expect(request.delta.toInt(), 1);
+        expect(request.direction, MemcacheIncrementRequest_Direction.DECREMENT);
+        expect(request.initialValue.toInt(), 0);
+        expect(request.initialFlags, 0);
+
+        var response = new MemcacheIncrementResponse();
+        response.incrementStatus =
+            MemcacheIncrementResponse_IncrementStatusCode.OK;
+        response.newValue = new Int64(42);
+        return new Future.value(response.writeToBuffer());
+      }));
+      expect(memcache.decrement(key1), completion(42));
+    });
+
+    test('increment-decrement-errors', () {
+      var key1 = 'key';
+      var key2 = UTF8.encode(key1);
+
+      var mock = new MockRPCService('memcache');
+      var memcache = new MemCacheImpl(new RawMemcacheRpcImpl(mock, ''));
+
+      // Tests NetworkError.
+      mock.register(
+          'Increment', MemcacheIncrementRequest, expectAsync((request) {
+        return new Future.error(new NetworkError(""));
+      }, count: 2));
+      expect(memcache.increment(key1), throwsA(isNetworkError));
+      expect(memcache.decrement(key1), throwsA(isNetworkError));
+
+      // Tests ProtocolError.
+      mock.register(
+          'Increment', MemcacheIncrementRequest, expectAsync((request) {
+        return new Future.value(INVALID_PROTOBUF);
+            }, count: 2));
+      expect(memcache.increment(key1), throwsA(isProtocolError));
+      expect(memcache.decrement(key1), throwsA(isProtocolError));
+
+      // Tests error response.
+      mock.register(
+          'Increment', MemcacheIncrementRequest, expectAsync((request) {
+        var response = new MemcacheIncrementResponse();
+        response.incrementStatus =
+            MemcacheIncrementResponse_IncrementStatusCode.ERROR;
+        return new Future.value(response.writeToBuffer());
+      }, count: 2));
+      expect(memcache.increment(key1), throwsA(isMemcacheError));
+      expect(memcache.decrement(key1), throwsA(isMemcacheError));
     });
 
     test('clear', () {

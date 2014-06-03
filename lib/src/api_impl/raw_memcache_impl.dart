@@ -6,6 +6,7 @@ library memcache_raw_impl;
 
 import 'dart:async';
 
+import 'package:fixnum/fixnum.dart';
 import 'package:memcache/memcache_raw.dart' as raw;
 
 import '../../api/errors.dart';
@@ -136,6 +137,46 @@ class RawMemcacheRpcImpl implements raw.RawMemcache {
           });
           return result;
     });
+  }
+
+  Future<List<raw.IncrementResult>> increment(
+      List<raw.IncrementOperation> batch) {
+    if (batch.length == 1) {
+      var request = new pb.MemcacheIncrementRequest();
+      request.key = batch[0].key;
+      request.delta = new Int64(batch[0].delta);
+      request.direction =
+          batch[0].direction == raw.IncrementOperation.INCREMENT
+              ? pb.MemcacheIncrementRequest_Direction.INCREMENT
+              : pb.MemcacheIncrementRequest_Direction.DECREMENT;
+      request.initialValue = new Int64(batch[0].initialValue);
+      return _clientRPCStub.Increment(request)
+          .then((pb.MemcacheIncrementResponse response) {
+            raw.Status status;
+            String message;
+            switch (response.incrementStatus) {
+              case pb.MemcacheIncrementResponse_IncrementStatusCode.OK:
+                status = raw.Status.NO_ERROR;
+                break;
+              case pb.MemcacheIncrementResponse_IncrementStatusCode.NOT_CHANGED:
+                status = raw.Status.NO_ERROR;
+                break;
+              case pb.MemcacheIncrementResponse_IncrementStatusCode.ERROR:
+                status = raw.Status.ERROR;
+                message = 'Increment failed';
+                break;
+              default:
+                throw new UnsupportedError(
+                    'Unsupported increment status ${response.incrementStatus}');
+            }
+            int newValue = response.newValue.toInt();
+            if (newValue < 0) newValue = 0x10000000000000000 + newValue;
+            var result = new raw.IncrementResult(status, message, newValue);
+            return [result];
+      });
+    } else {
+      throw new UnsupportedError('Unsupported batch increment');
+    }
   }
 
   Future clear() {
