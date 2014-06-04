@@ -13,6 +13,7 @@ import 'package:path/path.dart' show normalize;
 
 import 'context_registry.dart';
 import 'http_wrapper.dart';
+import '../../appengine.dart' show AppEngineRequestHandler;
 
 _info(String message) {
   var formattedMessage = "${new DateTime.now()}: " + message;
@@ -40,9 +41,7 @@ class AppEngineHttpServer {
         _webRoot = new VirtualDirectory('web'),
         _buildWebRoot = new VirtualDirectory('build/web');
 
-  Stream<HttpRequest> run() {
-    var controller = new StreamController();
-
+  void run(AppEngineRequestHandler applicationHandler) {
     var serviceHandlers = {
         '/_ah/start' : _start,
         '/_ah/health' : _health,
@@ -64,7 +63,7 @@ class AppEngineHttpServer {
         _info("Got request: ${appengineRequest.uri}");
 
         // Default handling is sending the request to the aplication.
-        var handler = controller.add;
+        var handler = applicationHandler;
 
         // Check if the request path is one of the service handlers.
         String path = appengineRequest.uri.path;
@@ -104,8 +103,6 @@ class AppEngineHttpServer {
         });
       });
     });
-
-    return controller.stream;
   }
 
   _start(HttpRequest request) {

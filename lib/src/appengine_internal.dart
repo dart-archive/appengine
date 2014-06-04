@@ -21,7 +21,7 @@ ClientContext contextFromRequest(HttpRequest request) {
   return _contextRegistry.lookup(request);
 }
 
-Future<Stream<HttpRequest>> runAppEngine() {
+Future runAppEngine(AppEngineRequestHandler handler) {
   RPCService initializeRPC() {
     var apiHostString = Platform.environment['API_HOST'];
     var apiPortString = Platform.environment['API_PORT'];
@@ -57,5 +57,5 @@ Future<Stream<HttpRequest>> runAppEngine() {
 
   _contextRegistry = new ContextRegistry(rpcService, context);
   var appengineServer = new AppEngineHttpServer(_contextRegistry);
-  return new Future.value(appengineServer.run());
+  return new Future.value(appengineServer.run(handler));
 }
