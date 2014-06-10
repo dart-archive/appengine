@@ -2,9 +2,9 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-library error_matters;
+library error_matchers;
 
-import 'package:unittest/unittest.dart';
+import 'package:matcher/matcher.dart';
 
 import 'package:appengine/api/errors.dart';
 import 'package:cloud_datastore/raw_datastore.dart';
@@ -57,9 +57,9 @@ class _MemcacheError extends TypeMatcher {
   bool matches(item, Map matchState) => item is memcache.MemcacheError;
 }
 
-class _MemcacheNotStored extends TypeMatcher {
-  const _MemcacheNotStored() : super("MemcacheNotStored");
-  bool matches(item, Map matchState) => item is memcache.NotStored;
+class _MemcacheNotStoredError extends TypeMatcher {
+  const _MemcacheNotStoredError() : super("NotStoredError");
+  bool matches(item, Map matchState) => item is memcache.NotStoredError;
 }
 
 
@@ -79,6 +79,6 @@ const isNeedIndexError = const _NeedIndexError();
 const isTimeoutError = const _TimeoutError();
 
 const isMemcacheError = const _MemcacheError();
-const isMemcacheNotStored = const _MemcacheNotStored();
+const isMemcacheNotStored = const _MemcacheNotStoredError();
 
 const isInt = const _IntMatcher();
