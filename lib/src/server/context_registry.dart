@@ -28,8 +28,14 @@ class ContextRegistry {
   final RPCService _rpcService;
   final AppengineContext _appengineContext;
   final Map<AppengineHttpRequest, ClientContext> _request2context = {};
+  db.ModelDB _modelDB;
 
-  ContextRegistry(this._rpcService, this._appengineContext);
+  ContextRegistry(this._rpcService, this._appengineContext) {
+    // TODO: We should provide an API to allow users providing us with either a
+    // different [ModelDB] object or specify a list of libraries to scan for
+    // models.
+    _modelDB = new db.ModelDB();
+  }
 
   Future add(AppengineHttpRequest request) {
     var ticket = request.headers.value(HTTP_HEADER_APPENGINE_TICKET);
@@ -75,7 +81,8 @@ class ContextRegistry {
     };
     serviceMap['memcache'] =
         new memcache_impl.MemCacheImpl(serviceMap['raw_memcache']);
-    serviceMap['db'] = new db.DatastoreDB(serviceMap['raw_datastore_v3']);
+    serviceMap['db'] =
+        new db.DatastoreDB(serviceMap['raw_datastore_v3'], modelDB: _modelDB);
     return new _ServicesImpl(serviceMap);
   }
 }
