@@ -2,7 +2,7 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-library apengine_internal;
+library appengine.internal;
 
 import 'dart:async';
 import 'dart:io';
@@ -10,8 +10,9 @@ import 'dart:io';
 import 'protobuf_api/rpc/rpc_service.dart';
 import 'protobuf_api/rpc/rpc_service_remote_api.dart';
 
-import '../appengine.dart';
 import 'appengine_context.dart';
+import 'app_engine_request_handler.dart';
+import 'client_context.dart';
 import 'server/server.dart';
 import 'server/context_registry.dart';
 

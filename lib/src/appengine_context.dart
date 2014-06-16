@@ -2,7 +2,7 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-library appengine_context;
+library appengine.appengine_context;
 
 class AppengineContext {
   final String applicationID;

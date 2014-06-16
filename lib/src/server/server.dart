@@ -4,18 +4,17 @@
 
 library application;
 
-import 'dart:async';
 import 'dart:convert' show UTF8;
 import 'dart:io';
 
 import 'package:http_server/http_server.dart' show VirtualDirectory;
 import 'package:path/path.dart' show normalize;
 
+import '../app_engine_request_handler.dart';
 import 'context_registry.dart';
 import 'http_wrapper.dart';
-import '../../appengine.dart' show AppEngineRequestHandler;
 
-_info(String message) {
+void _info(String message) {
   var formattedMessage = "${new DateTime.now()}: " + message;
   print(formattedMessage);
 }

@@ -17,7 +17,7 @@ class User {
   User({this.email, this.authDomain, this.id, this.isAdmin,
         this.federatedIdentity, this.federatedProvider});
 
-  toString() => email != null ? email : federatedIdentity;
+  String toString() => email != null ? email : federatedIdentity;
 }
 
 abstract class UserService {

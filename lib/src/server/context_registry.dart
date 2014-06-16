@@ -1,6 +1,7 @@
 // Copyright (c) 2014, the Dart project authors.  Please see the AUTHORS file
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
+
 library appengine.context_registry;
 
 import 'dart:async';
@@ -39,7 +40,7 @@ class ContextRegistry {
       }
     }
     var services = _getServices(ticket, request);
-    var context = new ClientContext(services);
+    var context = new _ClientContextImpl(services);
     _request2context[request] = context;
 
     request.response.registerHook(
@@ -75,6 +76,20 @@ class ContextRegistry {
     serviceMap['memcache'] =
         new memcache_impl.MemCacheImpl(serviceMap['raw_memcache']);
     serviceMap['db'] = new db.DatastoreDB(serviceMap['raw_datastore_v3']);
-    return new Services(serviceMap);
+    return new _ServicesImpl(serviceMap);
   }
+}
+
+class _ClientContextImpl implements ClientContext {
+  final Services services;
+
+  _ClientContextImpl(this.services);
+}
+
+class _ServicesImpl extends Services {
+  final Map<String, dynamic> _serviceMap;
+
+  _ServicesImpl(this._serviceMap);
+
+  operator[](String name) => _serviceMap[name];
 }
