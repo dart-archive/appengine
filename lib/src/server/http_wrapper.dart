@@ -458,7 +458,7 @@ class AppengineHttpResponse extends Object
     });
   }
 
-  _submitRedirect(Uri location, int status) {
+  Future _submitRedirect(Uri location, int status) {
     _state = _STATE_FINISHED;
 
     if (_drainFuture == null) {
@@ -473,7 +473,7 @@ class AppengineHttpResponse extends Object
     });
   }
 
-  _ensureInHeaderBuildingState({bool stateError: false}) {
+  void _ensureInHeaderBuildingState({bool stateError: false}) {
     if (_state != _STATE_BUILDING_HEADER) {
       if (stateError) {
         throw new StateError('HTTP headers were already sent.');

@@ -104,19 +104,19 @@ class AppEngineHttpServer {
     });
   }
 
-  _start(HttpRequest request) {
+  void _start(HttpRequest request) {
     request.drain().then((_) {
       _sendResponse(request.response, HttpStatus.OK, "ok");
     });
   }
 
-  _health(HttpRequest request) {
+  void _health(HttpRequest request) {
     request.drain().then((_) {
       _sendResponse(request.response, HttpStatus.OK, "ok");
     });
   }
 
-  _stop(HttpRequest request) {
+  void _stop(HttpRequest request) {
     request.drain().then((_) {
       if (_httpServer != null) {
         _httpServer.close().then((_){
@@ -128,14 +128,14 @@ class AppEngineHttpServer {
     });
   }
 
-  _serveFile(VirtualDirectory root, HttpRequest request) {
+  void _serveFile(VirtualDirectory root, HttpRequest request) {
     _info('Serving file for "${request.uri.path}" from "${root.root}"');
     request.drain().then((_) {
       root.serveRequest(request);
     });
   }
 
-  _sendResponse(HttpResponse response, int statusCode, String message) {
+  void _sendResponse(HttpResponse response, int statusCode, String message) {
     var data = UTF8.encode(message);
     response.headers.contentType =
         new ContentType('text', 'plain', charset: 'utf-8');
