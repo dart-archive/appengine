@@ -3,7 +3,6 @@
 ///
 library appengine.user;
 
-import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class UserServiceError_ErrorCode extends ProtobufEnum {

@@ -3,7 +3,6 @@
 ///
 library remote_api;
 
-import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Request extends GeneratedMessage {

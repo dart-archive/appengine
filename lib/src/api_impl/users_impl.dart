@@ -18,10 +18,6 @@ class UserRpcImpl extends UserService {
   static String _HTTP_HEADER_USER_EMAIL = 'x-appengine-user-email';
   static String _HTTP_HEADER_USER_ID = 'x-appengine-user-id';
   static String _HTTP_HEADER_USER_IS_ADMIN = 'x-appengine-user-is-admin';
-  static String _HTTP_HEADER_FEDERATED_IDENTITY =
-      'x-appengine-federated-identity';
-  static String _HTTP_HEADER_FEDERATED_PROVIDER =
-      'x-appengine-federated-provider';
 
   final UserServiceClientRPCStub _clientRPCStub;
   User _currentUser;
@@ -33,31 +29,20 @@ class UserRpcImpl extends UserService {
     var userId = request.headers.value(_HTTP_HEADER_USER_ID);
     var userIsAdmin = request.headers.value(_HTTP_HEADER_USER_IS_ADMIN) == '1';
     var authDomain = request.headers.value(_HTTP_HEADER_AUTH_DOMAIN);
-    var federatedIdentity =
-        request.headers.value(_HTTP_HEADER_FEDERATED_IDENTITY);
-    var federatedProvider =
-        request.headers.value(_HTTP_HEADER_FEDERATED_PROVIDER);
 
-    if ((userEmail != null && !userEmail.isEmpty) ||
-        (federatedIdentity != null && !federatedIdentity.isEmpty)) {
+    if (userEmail != null && !userEmail.isEmpty) {
       _currentUser = new User(
           authDomain: authDomain,
           email: userEmail, id: userId,
-          federatedIdentity: federatedIdentity,
-          federatedProvider: federatedProvider,
           isAdmin: userIsAdmin);
     }
   }
 
   User get currentUser => _currentUser;
 
-  Future<String> createLoginUrl(String destination,
-                                {String federatedIdentity}) {
+  Future<String> createLoginUrl(String destination) {
     var request = new pb.CreateLoginURLRequest();
     request.destinationUrl = destination;
-    if (federatedIdentity != null) {
-      request.federatedIdentity = federatedIdentity;
-    }
     return _clientRPCStub.CreateLoginURL(request)
         .then((response) => response.loginUrl);
   }
