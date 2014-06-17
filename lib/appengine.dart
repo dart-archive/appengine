@@ -29,12 +29,21 @@ Future runAppEngineRaw(AppEngineRequestHandler handler) {
 }
 
 Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
-  if (onError != null &&
-      !(onError is ZoneUnaryCallback || onError is ZoneBinaryCallback)) {
-    throw new ArgumentError(
-        'The [onError] argument must take either one or two arguments.');
+  var errorHandler;
+  if (onError != null) {
+    if (onError is ZoneUnaryCallback) {
+      errorHandler = (error, stack) => onError(error);
+    } else if (onError is ZoneBinaryCallback) {
+      errorHandler = onError;
+    } else {
+      throw new ArgumentError(
+          'The [onError] argument must take either one or two arguments.');
+    }
+  } else {
+    errorHandler = (error, stack) {
+      print("$error\nStack:\n$stack");
+    };
   }
-
 
   return runAppEngineRaw((HttpRequest request) {
     runZoned(() {
@@ -42,15 +51,18 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
     }, zoneValues: <Symbol, Object>{
       _APPENGINE_CONTEXT: contextFromRequest(request),
     }, onError: (error, stack) {
-      if (onError != null) {
-        if (onError is ZoneUnaryCallback) {
-          onError(error);
-        } else if (onError is ZoneBinaryCallback) {
-          onError(error, stack);
-        }
-      } else {
-        print("Uncaught error in request handler: $error\nStack: $stack");
-      }
+      errorHandler('Uncaught error in request handler zone: $error', stack);
+
+      // In many cases errors happen during request processing or response
+      // preparation. In such cases we want to close the connection, since user
+      // code might not be able to.
+      try {
+        request.response.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
+      } on StateError catch (_) {}
+      request.response.close().catchError((_) {
+        errorHandler('Forcefully closing response, due to error in request '
+                     'handler zone, resulted in an error: $error', stack);
+      });
     });
   });
 }
