@@ -20,14 +20,25 @@ export 'src/client_context.dart';
 
 const Symbol _APPENGINE_CONTEXT = #appengine_context;
 
-ClientContext contextFromRequest(HttpRequest request) {
-  return appengine_internal.contextFromRequest(request);
-}
-
-Future runAppEngineRaw(AppEngineRequestHandler handler) {
-  return appengine_internal.runAppEngine(handler);
-}
-
+/**
+ * Starts serving requests coming to this AppEngine application.
+ *
+ * This function will start an HTTP server and will forward new HTTP requests
+ * to [handler].
+ *
+ * The [handler] will be executed inside a new request handler zone for every
+ * new request. This will isolate different requests from each other.
+ * Each [handler] has access to a [ClientContext] using the [context] getter
+ * in this library. It can be used to access appengine services, e.g. memcache.
+ *
+ * In case an uncaught error occurs inside the request handler, the request
+ * will be closed with an "500 Internal Server Error", if possible, and the
+ * given [onError] handler will be called.
+ *
+ * The [onError] function can take either the error object, or the error object
+ * and a stack as an argument. If [onError] was not provided, errors will get
+ * printed out to the stdout of this process.
+ */
 Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
   var errorHandler;
   if (onError != null) {
@@ -45,11 +56,11 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
     };
   }
 
-  return runAppEngineRaw((HttpRequest request) {
+  return appengine_internal.runAppEngine((HttpRequest request) {
     runZoned(() {
       handler(request);
     }, zoneValues: <Symbol, Object>{
-      _APPENGINE_CONTEXT: contextFromRequest(request),
+      _APPENGINE_CONTEXT: appengine_internal.contextFromRequest(request),
     }, onError: (error, stack) {
       errorHandler('Uncaught error in request handler zone: $error', stack);
 
@@ -59,9 +70,10 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
       try {
         request.response.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
       } on StateError catch (_) {}
-      request.response.close().catchError((_) {
+      request.response.close().catchError((closeError, closeErrorStack) {
         errorHandler('Forcefully closing response, due to error in request '
-                     'handler zone, resulted in an error: $error', stack);
+                     'handler zone, resulted in an error: $closeError',
+                     closeErrorStack);
       });
     });
   });
@@ -70,8 +82,8 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
 /**
  * Returns the [ClientContext] of the current request.
  *
- * This getter can only be called inside a request handler and only if
- * [runAppEngine] was used.
+ * This getter can only be called inside a request handler which was passed to
+ * [runAppEngine].
  */
 ClientContext get context {
   var context = Zone.current[_APPENGINE_CONTEXT];
