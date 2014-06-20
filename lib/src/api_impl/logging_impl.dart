@@ -21,14 +21,18 @@ class LoggingRpcImpl extends Logging {
       : _clientRPCStub = new LoggingServiceClientRPCStub(rpcService, ticket);
 
   void log(LogLevel level, String message, {DateTime timestamp}) {
-    _logLines.add(_createLogLine(level, message, timestamp: timestamp));
-  }
-
-  pb.UserAppLogLine _createLogLine(
-      LogLevel level, String message, {DateTime timestamp}) {
     if (timestamp == null) {
       timestamp = new DateTime.now();
     }
+
+    // Issue 15747158.
+    print('$timestamp: ApplicationLog | $level: ${message.trim()}');
+
+    _logLines.add(_createLogLine(level, message, timestamp));
+  }
+
+  pb.UserAppLogLine _createLogLine(
+      LogLevel level, String message, DateTime timestamp) {
     var timestampUsec = timestamp.toUtc().millisecondsSinceEpoch * 1000;
     return new pb.UserAppLogLine()
         ..timestampUsec = new Int64(timestampUsec)
