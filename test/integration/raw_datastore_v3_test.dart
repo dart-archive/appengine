@@ -11,7 +11,7 @@ import 'raw_datastore_test_impl.dart';
 main() {
   var rpcService = new RPCServiceRemoteApi('127.0.0.1', 4444);
   var appengineContext = new AppengineContext(
-      'dev', 'test-application', 'test-version', null, null, true);
+      'dev', 'test-application', 'test-version', null, null, null);
   var datastore =
       new DatastoreV3RpcImpl(rpcService, appengineContext, '<invalid-ticket>');
 

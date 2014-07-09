@@ -10,6 +10,7 @@ import 'package:memcache/src/memcache_impl.dart' as memcache_impl;
 import 'package:cloud_datastore/cloud_datastore.dart' as db;
 
 import 'http_wrapper.dart';
+import 'assets.dart';
 
 import '../../appengine.dart';
 import '../appengine_context.dart';
@@ -46,7 +47,8 @@ class ContextRegistry {
       }
     }
     var services = _getServices(ticket, request);
-    var context = new _ClientContextImpl(services);
+    var assets = new AssetsImpl(request, _appengineContext);
+    var context = new _ClientContextImpl(services, assets);
     _request2context[request] = context;
 
     request.response.registerHook(
@@ -89,8 +91,9 @@ class ContextRegistry {
 
 class _ClientContextImpl implements ClientContext {
   final Services services;
+  final Assets assets;
 
-  _ClientContextImpl(this.services);
+  _ClientContextImpl(this.services, this.assets);
 }
 
 class _ServicesImpl extends Services {

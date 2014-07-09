@@ -7,9 +7,6 @@ library application;
 import 'dart:convert' show UTF8;
 import 'dart:io';
 
-import 'package:http_server/http_server.dart' show VirtualDirectory;
-import 'package:path/path.dart' show normalize;
-
 import '../app_engine_request_handler.dart';
 import 'context_registry.dart';
 import 'http_wrapper.dart';
@@ -31,25 +28,15 @@ class AppEngineHttpServer {
   final String _localHostname;
   HttpServer _httpServer;
 
-  VirtualDirectory _webRoot;
-  VirtualDirectory _buildWebRoot;
-
   AppEngineHttpServer(this._contextRegistry,
                       {String hostname: '0.0.0.0', int port: 8080})
-      : _localHostname = _getHostname(), _hostname = hostname, _port = port,
-        _webRoot = new VirtualDirectory('web'),
-        _buildWebRoot = new VirtualDirectory('build/web');
+      : _localHostname = _getHostname(), _hostname = hostname, _port = port;
 
   void run(AppEngineRequestHandler applicationHandler) {
     var serviceHandlers = {
         '/_ah/start' : _start,
         '/_ah/health' : _health,
         '/_ah/stop' : _stop
-    };
-
-    var fileHandlers = {
-        _buildWebRoot.root : (_) => _serveFile(_buildWebRoot, _),
-        _webRoot.root : (_) => _serveFile(_webRoot, _)
     };
 
     HttpServer.bind(_hostname, _port).then((HttpServer server) {
@@ -69,16 +56,6 @@ class AppEngineHttpServer {
         for (var pattern in serviceHandlers.keys) {
           if (path.startsWith(pattern)) {
             handler = serviceHandlers[pattern];
-            break;
-          }
-        }
-
-        // Check if the request path is pointing to a static resource.
-        // TODO(sgjesse): Change this handling of static files.
-        path = normalize(path);
-        for (var root in fileHandlers.keys) {
-          if (FileSystemEntity.isFileSync(root + path)) {
-            handler = fileHandlers[root];
             break;
           }
         }
@@ -125,13 +102,6 @@ class AppEngineHttpServer {
       } else {
         _sendResponse(request.response, HttpStatus.CONFLICT, "fail");
       }
-    });
-  }
-
-  void _serveFile(VirtualDirectory root, HttpRequest request) {
-    _info('Serving file for "${request.uri.path}" from "${root.root}"');
-    request.drain().then((_) {
-      root.serveRequest(request);
     });
   }
 

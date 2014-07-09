@@ -38,11 +38,14 @@ function analyze_file {
 
 function test_file {
   echo "Testing file '$1'."
+  cd test
   "$DART_SDK/bin/dart" --checked "$1"
   if [ $? -ne 0 ]; then
+    cd ..
     error "Running tests in '$1' failed."
     return 1
   fi
+  cd ..
   return 0
 }
 

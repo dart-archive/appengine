@@ -24,7 +24,7 @@ void runTests() {
   group('raw_datastore_v3_error_handling', () {
     var unnamedKeys5 = buildKeys(1, 6);
     var context = new AppengineContext(
-        'dev', 'application', 'version', null, null, false);
+        'dev', 'application', 'version', null, null, null);
 
     var transactionAbortedError = new RpcApplicationError(
         Error_ErrorCode.CONCURRENT_TRANSACTION.value, 'foobar');

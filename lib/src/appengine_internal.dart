@@ -41,6 +41,7 @@ Future runAppEngine(AppEngineRequestHandler handler) {
     String version = env['GAE_MODULE_VERSION'];
     String instance = env['GAE_MODULE_INSTANCE'];
     String partition = env['GAE_PARTITION'];
+    String pubServeUrlString = env['DART_PUB_SERVE'];
 
     // TODO: [instance] is currently only passed by devappserver when starting
     // docker container but not by real deployment.
@@ -49,8 +50,12 @@ Future runAppEngine(AppEngineRequestHandler handler) {
       throw new StateError('Expected docker environment variables not found.');
     }
 
+    Uri pubServeUrl = pubServeUrlString != null
+                    ? Uri.parse(pubServeUrlString)
+                    : null;
+
     return new AppengineContext(
-        partition, applicationID, version, module, instance, false);
+        partition, applicationID, version, module, instance, pubServeUrl);
   }
 
   var context = getDockerContext();

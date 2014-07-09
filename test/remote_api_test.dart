@@ -150,7 +150,7 @@ void runTests() {
   group('remote_api', () {
     var invalidTicket = 'invalid-ticket';
     var context = new AppengineContext(
-        'dev', 'application', 'version', null, null, false);
+        'dev', 'application', 'version', null, null, null);
 
     test('get_rtok', () {
       var remoteApi = new RemoteApiImpl(null, context, invalidTicket);
