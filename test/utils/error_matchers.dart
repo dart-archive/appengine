@@ -4,7 +4,7 @@
 
 library error_matchers;
 
-import 'package:matcher/matcher.dart';
+import 'package:unittest/unittest.dart';
 
 import 'package:appengine/api/errors.dart';
 import 'package:cloud_datastore/raw_datastore.dart';
