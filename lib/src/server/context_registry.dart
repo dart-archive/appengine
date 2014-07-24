@@ -6,6 +6,7 @@ library appengine.context_registry;
 
 import 'dart:async';
 
+import 'package:memcache/memcache.dart' as memcache;
 import 'package:memcache/src/memcache_impl.dart' as memcache_impl;
 import 'package:cloud_datastore/cloud_datastore.dart' as db;
 
@@ -97,9 +98,20 @@ class _ClientContextImpl implements ClientContext {
 }
 
 class _ServicesImpl extends Services {
+  // TODO:
+  // - consider removing the map
+  // - consider building the services on demand
   final Map<String, dynamic> _serviceMap;
 
   _ServicesImpl(this._serviceMap);
 
-  operator[](String name) => _serviceMap[name];
+  db.DatastoreDB get db => _serviceMap['db'];
+
+  Logging get logging => _serviceMap['logging'];
+
+  memcache.Memcache get memcache => _serviceMap['memcache'];
+
+  RemoteApi get remoteApi => _serviceMap['remote_api'];
+
+  UserService get users => _serviceMap['users'];
 }

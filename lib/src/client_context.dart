@@ -20,17 +20,11 @@ abstract class ClientContext {
 }
 
 abstract class Services {
-  operator[](String name);
-
-  DatastoreDB get db => this['db'];
-
-  Logging get logging => this['logging'];
-
-  Memcache get memcache => this['memcache'];
-
-  RemoteApi get remoteApi => this['remote_api'];
-
-  UserService get users => this['users'];
+  DatastoreDB get db;
+  Logging get logging;
+  Memcache get memcache;
+  RemoteApi get remoteApi;
+  UserService get users;
 }
 
 class AssetError implements Exception {
