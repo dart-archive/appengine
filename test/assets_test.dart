@@ -35,7 +35,13 @@ Future<List<int>> getAsset(int port, String path,
       });
 }
 
-main() {
+void main() {
+  if (!FileSystemEntity.isDirectorySync(AssetsManager.root)) {
+    throw new StateError('The directory "${AssetsManager.root}" does not '
+        'exist in the current directory – "${Directory.current.path}". '
+        'Try running from the "test" directory.');
+  }
+
   group('pub serve proxy', () {
     var pubServe;
     var appServer;
