@@ -60,7 +60,6 @@ class AssetsManager {
         return _serve404(request);
       }
     });
-
   }
 
   Future<Stream<List<int>>> readFromPub(String path) {

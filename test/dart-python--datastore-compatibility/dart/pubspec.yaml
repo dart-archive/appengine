@@ -2,9 +2,12 @@ name: python_dart_interop_test
 version: 0.1.0
 description: A python<->dart interop test for datastore.
 dependencies:
-  appengine:
-    path: ../../../../appengine
-  cloud_datastore:
-    path: ../../../../cloud_datastore
+  appengine: any
+  cloud_datastore: any
 dev_dependencies:
   unittest: any
+dependency_overrides:
+  cloud_datastore:
+    path: ../../../../cloud_datastore
+  memcache:
+    path: ../../../../memcache
