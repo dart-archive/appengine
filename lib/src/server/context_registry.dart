@@ -17,6 +17,7 @@ import '../../appengine.dart';
 import '../appengine_context.dart';
 import '../protobuf_api/rpc/rpc_service.dart';
 import '../api_impl/logging_impl.dart' as logging_impl;
+import '../api_impl/modules_impl.dart' as modules_impl;
 import '../api_impl/raw_memcache_impl.dart' as raw_memcache_impl;
 import '../api_impl/remote_api_impl.dart' as remote_api_impl;
 import '../api_impl/raw_datastore_v3_impl.dart' as raw_datastore_v3_impl;
@@ -81,6 +82,8 @@ class ContextRegistry {
           _rpcService, _appengineContext, ticket),
       'users' : new users_impl.UserRpcImpl(
           _rpcService, ticket, request),
+      'modules' : new modules_impl.ModulesRpcImpl(
+          _rpcService, _appengineContext, ticket),
     };
     serviceMap['memcache'] =
         new memcache_impl.MemCacheImpl(serviceMap['raw_memcache']);
@@ -110,6 +113,8 @@ class _ServicesImpl extends Services {
   Logging get logging => _serviceMap['logging'];
 
   memcache.Memcache get memcache => _serviceMap['memcache'];
+
+  ModulesService get modules => _serviceMap['modules'];
 
   RemoteApi get remoteApi => _serviceMap['remote_api'];
 

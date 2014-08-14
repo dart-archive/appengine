@@ -10,6 +10,7 @@ import 'package:gcloud/db.dart';
 import 'package:memcache/memcache.dart';
 
 import '../api/logging.dart';
+import '../api/modules.dart';
 import '../api/remote_api.dart';
 import '../api/users.dart';
 
@@ -22,6 +23,7 @@ abstract class Services {
   DatastoreDB get db;
   Logging get logging;
   Memcache get memcache;
+  ModulesService get modules;
   RemoteApi get remoteApi;
   UserService get users;
 }
