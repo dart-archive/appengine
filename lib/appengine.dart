@@ -13,6 +13,7 @@ import 'src/client_context.dart';
 
 export 'api/errors.dart';
 export 'api/logging.dart';
+export 'api/modules.dart';
 export 'api/remote_api.dart';
 export 'api/users.dart';
 export 'src/app_engine_request_handler.dart';
