@@ -63,6 +63,18 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
     }, zoneValues: <Symbol, Object>{
       _APPENGINE_CONTEXT: appengine_internal.contextFromRequest(request),
     }, onError: (error, stack) {
+      var context = appengine_internal.contextFromRequest(request);
+      if (context != null) {
+        try {
+          context.services.logging.error(
+              'Uncaught error in request handler: $error\n$stack');
+        } catch (e) {
+          print('Error while logging uncaught error: $e');
+        }
+      } else {
+        // TODO: We could log on the background ticket here.
+        print('Unable to log error, since response has already been sent.');
+      }
       errorHandler('Uncaught error in request handler zone: $error', stack);
 
       // In many cases errors happen during request processing or response
