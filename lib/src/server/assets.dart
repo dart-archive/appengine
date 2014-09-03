@@ -134,7 +134,7 @@ class AssetsImpl implements Assets {
         path == null ? request.uri.path : path);
   }
 
-  void serve(HttpResponse response, [String path]) {
+  void serve([String path]) {
     appengineContext.assets.serve(request,
         path == null ? request.uri.path : path);
   }
