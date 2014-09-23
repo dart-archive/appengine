@@ -7,7 +7,7 @@ library error_matchers;
 import 'package:unittest/unittest.dart';
 
 import 'package:appengine/api/errors.dart';
-import 'package:cloud_datastore/raw_datastore.dart';
+import 'package:gcloud/datastore.dart' as datastore;
 
 import 'package:memcache/memcache.dart' as memcache;
 
@@ -32,24 +32,20 @@ class _ApplicationError extends TypeMatcher {
 }
 
 
-class _DataStoreError extends TypeMatcher {
-  const _DataStoreError() : super("DataStoreError");
-  bool matches(item, Map matchState) => item is DataStoreError;
-}
-
 class _TransactionAbortedError extends TypeMatcher {
   const _TransactionAbortedError() : super("TransactionAbortedError");
-  bool matches(item, Map matchState) => item is TransactionAbortedError;
+  bool matches(item, Map matchState)
+      => item is datastore.TransactionAbortedError;
 }
 
 class _NeedIndexError extends TypeMatcher {
   const _NeedIndexError() : super("NeedIndexError");
-  bool matches(item, Map matchState) => item is NeedIndexError;
+  bool matches(item, Map matchState) => item is datastore.NeedIndexError;
 }
 
 class _TimeoutError extends TypeMatcher {
   const _TimeoutError() : super("TimeoutError");
-  bool matches(item, Map matchState) => item is TimeoutError;
+  bool matches(item, Map matchState) => item is datastore.TimeoutError;
 }
 
 class _MemcacheError extends TypeMatcher {
@@ -73,7 +69,6 @@ const isProtocolError = const _ProtocolError();
 const isServiceError = const _ServiceError();
 const isApplicationError = const _ApplicationError();
 
-const isDataStoreError = const _DataStoreError();
 const isTransactionAbortedError = const _TransactionAbortedError();
 const isNeedIndexError = const _NeedIndexError();
 const isTimeoutError = const _TimeoutError();

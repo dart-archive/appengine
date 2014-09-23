@@ -8,7 +8,7 @@ import 'dart:async';
 
 import 'package:unittest/unittest.dart';
 
-import 'package:cloud_datastore/cloud_datastore.dart' as db;
+import 'package:gcloud/db.dart' as db;
 import 'package:appengine/src/appengine_context.dart';
 import 'package:appengine/src/api_impl/raw_datastore_v3_impl.dart';
 import 'package:appengine/src/protobuf_api/rpc/rpc_service_remote_api.dart';

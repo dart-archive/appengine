@@ -8,7 +8,7 @@ import 'dart:async';
 import 'dart:convert' show UTF8;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:cloud_datastore/raw_datastore.dart' as raw;
+import 'package:gcloud/datastore.dart' as raw;
 
 import '../appengine_context.dart';
 
@@ -17,6 +17,7 @@ import '../protobuf_api/rpc/rpc_service.dart';
 import '../protobuf_api/internal/datastore_v3.pb.dart';
 import '../protobuf_api/datastore_v3_service.dart';
 
+// TODO(gcloud Issue #3): Unified exception handing.
 buildDatastoreException(RpcApplicationError error) {
   var errorCode = Error_ErrorCode.valueOf(error.code);
   switch (errorCode) {
@@ -37,7 +38,7 @@ buildDatastoreException(RpcApplicationError error) {
     case Error_ErrorCode.CAPABILITY_DISABLED:
     case Error_ErrorCode.TRY_ALTERNATE_BACKEND:
     case Error_ErrorCode.SAFE_TIME_TOO_OLD:
-      return new raw.UnknownDataStoreError(error);
+      return new Exception(error);
   }
 }
 
@@ -316,7 +317,7 @@ class Codec {
   }
 }
 
-class DatastoreV3RpcImpl implements raw.RawDataStore {
+class DatastoreV3RpcImpl implements raw.Datastore {
   final DataStoreV3ServiceClientRPCStub _clientRPCStub;
   final AppengineContext _appengineContext;
   final Codec _codec;
@@ -407,7 +408,8 @@ class DatastoreV3RpcImpl implements raw.RawDataStore {
 
       insertFuture = _clientRPCStub.Put(request).then((PutResponse response) {
         if (response.key.length != totalNumberOfInserts) {
-          throw new raw.DataStoreError(
+          // TODO(gcloud Issue #3): Unified exception handing.
+          throw new Exception(
               "Tried to insert $totalNumberOfInserts entities, but response "
               "seems to indicate we inserted ${response.key.length} entities.");
         }

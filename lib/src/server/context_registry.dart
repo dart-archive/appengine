@@ -8,7 +8,7 @@ import 'dart:async';
 
 import 'package:memcache/memcache.dart' as memcache;
 import 'package:memcache/src/memcache_impl.dart' as memcache_impl;
-import 'package:cloud_datastore/cloud_datastore.dart' as db;
+import 'package:gcloud/db.dart' as db;
 
 import 'http_wrapper.dart';
 import 'assets.dart';

@@ -11,10 +11,10 @@ import 'package:unittest/unittest.dart';
 import 'package:appengine/src/appengine_context.dart';
 import 'package:appengine/src/api_impl/raw_datastore_v3_impl.dart';
 import 'package:appengine/src/protobuf_api/rpc/rpc_service_remote_api.dart';
-import 'package:cloud_datastore/raw_datastore.dart';
-import 'package:cloud_datastore/metamodel.dart';
-import 'package:cloud_datastore/raw_datastore.dart' show Key, Query, Partition;
-import 'package:cloud_datastore/cloud_datastore.dart' as db;
+import 'package:gcloud/datastore.dart';
+import 'package:gcloud/db/metamodel.dart';
+import 'package:gcloud/datastore.dart' show Key, Query, Partition;
+import 'package:gcloud/db.dart' as db;
 
 List<Entity> buildEntitiesWithDifferentNamespaces() {
   newKey(String namespace, String kind, int id) {

@@ -12,7 +12,7 @@ import 'package:appengine/src/appengine_context.dart';
 import 'package:appengine/src/api_impl/raw_datastore_v3_impl.dart';
 import 'package:appengine/src/protobuf_api/rpc/rpc_service.dart';
 import 'package:appengine/src/protobuf_api/internal/datastore_v3.pb.dart';
-import 'package:cloud_datastore/raw_datastore.dart' as raw;
+import 'package:gcloud/datastore.dart' as raw;
 
 import 'utils/mock_rpc.dart';
 import 'utils/error_matchers.dart';

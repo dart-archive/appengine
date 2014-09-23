@@ -3,11 +3,13 @@ version: 0.1.0
 description: A python<->dart interop test for datastore.
 dependencies:
   appengine: any
-  cloud_datastore: any
+  gcloud: any
 dev_dependencies:
   unittest: any
 dependency_overrides:
-  cloud_datastore:
-    path: ../../../../cloud_datastore
+  appengine:
+    path: ../../../../appengine
+  gcloud:
+    path: ../../../../gcloud
   memcache:
     path: ../../../../memcache
