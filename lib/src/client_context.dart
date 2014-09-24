@@ -5,7 +5,6 @@
 library appengine.client_context;
 
 import 'dart:async';
-import 'dart:io';
 
 import 'package:gcloud/db.dart';
 import 'package:memcache/memcache.dart';
