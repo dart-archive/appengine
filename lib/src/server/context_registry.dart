@@ -37,7 +37,7 @@ class ContextRegistry {
     // TODO: We should provide an API to allow users providing us with either a
     // different [ModelDB] object or specify a list of libraries to scan for
     // models.
-    _modelDB = new db.ModelDB();
+    _modelDB = new db.ModelDBImpl();
   }
 
   Future add(AppengineHttpRequest request) {

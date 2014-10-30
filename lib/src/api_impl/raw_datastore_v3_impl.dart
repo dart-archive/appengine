@@ -8,6 +8,7 @@ import 'dart:async';
 import 'dart:convert' show UTF8;
 
 import 'package:fixnum/fixnum.dart';
+import 'package:gcloud/common.dart';
 import 'package:gcloud/datastore.dart' as raw;
 
 import '../appengine_context.dart';
@@ -22,7 +23,7 @@ buildDatastoreException(RpcApplicationError error) {
   var errorCode = Error_ErrorCode.valueOf(error.code);
   switch (errorCode) {
     case Error_ErrorCode.BAD_REQUEST:
-      return new errors.ApplicationError("Bad request: ${error.message}");
+      return new raw.ApplicationError("Bad request: ${error.message}");
     case Error_ErrorCode.CONCURRENT_TRANSACTION:
       return new raw.TransactionAbortedError();
     case Error_ErrorCode.INTERNAL_ERROR:
@@ -42,6 +43,11 @@ buildDatastoreException(RpcApplicationError error) {
   }
 }
 
+Future catchAndReThrowDatastoreException(Future future) {
+  return future.catchError((error, stack) {
+    throw buildDatastoreException(error);
+  }, test: (error) => error is RpcApplicationError);
+}
 
 class TransactionImpl extends raw.Transaction {
   final Transaction _rpcTransaction;
@@ -340,7 +346,8 @@ class DatastoreV3RpcImpl implements raw.Datastore {
       request.size = new Int64(1);
       requests.add(_clientRPCStub.AllocateIds(request));
     }
-    return Future.wait(requests).then((List<AllocateIdsResponse> responses) {
+    return catchAndReThrowDatastoreException(
+        Future.wait(requests).then((List<AllocateIdsResponse> responses) {
       var result = [];
       for (int i = 0; i < keys.length; i++) {
         var key = keys[i];
@@ -358,9 +365,7 @@ class DatastoreV3RpcImpl implements raw.Datastore {
         result.add(new raw.Key(parts, partition: key.partition));
       }
       return result;
-    }).catchError((RpcApplicationError error) {
-      throw buildDatastoreException(error);
-    }, test: (error) => error is RpcApplicationError);
+    }));
   }
 
   Future<raw.Transaction> beginTransaction({bool crossEntityGroup: false}) {
@@ -368,11 +373,10 @@ class DatastoreV3RpcImpl implements raw.Datastore {
     request.allowMultipleEg = crossEntityGroup;
     request.app = _appengineContext.fullQualifiedApplicationId;
 
-    return _clientRPCStub.BeginTransaction(request).then((Transaction t) {
+    return catchAndReThrowDatastoreException(
+        _clientRPCStub.BeginTransaction(request).then((Transaction t) {
       return new TransactionImpl(t);
-    }).catchError((RpcApplicationError error) {
-      throw buildDatastoreException(error);
-    }, test: (error) => error is RpcApplicationError);
+    }));
   }
 
   Future<raw.CommitResult> commit({List<raw.Entity> inserts,
@@ -438,21 +442,18 @@ class DatastoreV3RpcImpl implements raw.Datastore {
       deleteFuture = new Future.value();
     }
 
-    return Future.wait([insertFuture, deleteFuture]).then((results) {
+    return catchAndReThrowDatastoreException(
+        Future.wait([insertFuture, deleteFuture]).then((results) {
       var result = new raw.CommitResult(results[0]);
       if (rpcTransaction == null) return result;
       return _clientRPCStub.Commit(rpcTransaction).then((_) => result);
-    }).catchError((RpcApplicationError error) {
-      throw buildDatastoreException(error);
-    }, test: (error) => error is RpcApplicationError);
+    }));
   }
 
   Future rollback(TransactionImpl transaction) {
-    return _clientRPCStub.Rollback(transaction._rpcTransaction)
-        .then((_) => null)
-        .catchError((RpcApplicationError error) {
-          throw buildDatastoreException(error);
-        }, test: (error) => error is RpcApplicationError);
+    return catchAndReThrowDatastoreException(
+        _clientRPCStub.Rollback(transaction._rpcTransaction)
+        .then((_) => null));
   }
 
   Future<List<raw.Entity>> lookup(
@@ -467,17 +468,16 @@ class DatastoreV3RpcImpl implements raw.Datastore {
     for (var key in keys) {
       request.key.add(_codec.encodeKey(key));
     }
-    return _clientRPCStub.Get(request).then((GetResponse response) {
+    return catchAndReThrowDatastoreException(
+        _clientRPCStub.Get(request).then((GetResponse response) {
       return response.entity.map((GetResponse_Entity pb) {
         if (pb.hasEntity()) return _codec.decodeEntity(pb.entity);
         return null;
       }).toList();
-    }).catchError((RpcApplicationError error) {
-      throw buildDatastoreException(error);
-    }, test: (error) => error is RpcApplicationError);
+    }));
   }
 
-  Future<List<raw.Entity>> query(
+  Future<Page<raw.Entity>> query(
       raw.Query query, {raw.Partition partition, TransactionImpl transaction}) {
     if (query.kind == null && query.ancestorKey == null) {
       throw new errors.ApplicationError(
@@ -539,27 +539,123 @@ class DatastoreV3RpcImpl implements raw.Datastore {
       }
     }
 
-    Future<QueryResult> fetchNext(Cursor cursor) {
-      var nextRequest = new NextRequest();
-      nextRequest.cursor = cursor;
-      return _clientRPCStub.Next(nextRequest);
+    return catchAndReThrowDatastoreException(
+        _clientRPCStub.RunQuery(request).then((QueryResult result) {
+      return QueryPageImpl.fromQueryResult(
+          _clientRPCStub, _codec, query.offset, 0, query.limit, result);
+    }));
+  }
+}
+
+// NOTE: We're never calling datastore_v3.DeleteCursor() here.
+//   - we don't know when this is safe, due to the Page<> interface
+//   - the devappserver2/apiServer does not implement `DeleteCursor()`
+class QueryPageImpl implements Page<raw.Entity> {
+  final DataStoreV3ServiceClientRPCStub _clientRPCStub;
+  final Codec _codec;
+  final Cursor _cursor;
+
+  final List<raw.Entity> _entities;
+  final bool _isLast;
+
+  // This is `Query.offset` and will be carried across page walking.
+  final int _offset;
+
+  // This is always non-`null` and contains the number of entities that were
+  // skiped so far.
+  final int _alreadySkipped;
+
+  // If not `null` this will hold the remaining number of entities we are
+  // allowed to receive according to `Query.limit`.
+  final int _remainingNumberOfEntities;
+
+  QueryPageImpl(this._clientRPCStub,
+                this._codec,
+                this._cursor,
+                this._entities,
+                this._isLast,
+                this._offset,
+                this._alreadySkipped,
+                this._remainingNumberOfEntities);
+
+  static QueryPageImpl fromQueryResult(
+      DataStoreV3ServiceClientRPCStub clientRPCStub,
+      Codec codec,
+      int offset,
+      int alreadySkipped,
+      int remainingNumberOfEntities,
+      QueryResult queryResult) {
+    // If we have an offset: Check that in total we haven't skipped too many.
+    if (offset != null &&
+        offset > 0 &&
+        queryResult.hasSkippedResults() &&
+        queryResult.skippedResults > (offset - alreadySkipped)) {
+      throw new raw.DatastoreError(
+          'Datastore was supposed to skip ${offset} entities, '
+          'but response indicated '
+          '${queryResult.skippedResults + alreadySkipped} entities were '
+          'skipped (which is more).');
     }
 
-    Future handleResults(List<raw.Entity> resultSet, QueryResult queryResult) {
-      resultSet.addAll(queryResult.result.map(_codec.decodeEntity));
-      if (queryResult.hasMoreResults() && queryResult.moreResults) {
-        return fetchNext(queryResult.cursor)
-            .then((queryResult) => handleResults(resultSet, queryResult));
-      }
-      return new Future.value();
+    // If we have a limit: Check that in total we haven't gotten too many.
+    if (remainingNumberOfEntities != null &&
+        remainingNumberOfEntities > 0 &&
+        queryResult.result.length > remainingNumberOfEntities) {
+      throw new raw.DatastoreError(
+          'Datastore returned more entitites (${queryResult.result.length}) '
+          'then the limit was ($remainingNumberOfEntities).');
     }
 
-    var resultSet = new List<raw.Entity>();
-    return _clientRPCStub.RunQuery(request)
-        .then((queryResult) => handleResults(resultSet, queryResult))
-        .then((_) => resultSet)
-        .catchError((RpcApplicationError error) {
-          throw buildDatastoreException(error);
-        }, test: (error) => error is RpcApplicationError);
+    // If we have a limit: Calculate the remaining limit.
+    int remainingEntities;
+    if (remainingNumberOfEntities != null && remainingNumberOfEntities > 0) {
+      remainingEntities = remainingNumberOfEntities - queryResult.result.length;
+    }
+
+    // Determine if this is the last query batch.
+    bool isLast = !(queryResult.hasMoreResults() && queryResult.moreResults);
+
+    // If we have an offset: Calculate the new number of skipped entities.
+    int skipped = alreadySkipped;
+    if (offset != null && offset > 0 && queryResult.hasSkippedResults()) {
+      skipped += queryResult.skippedResults;
+    }
+
+    var entities = queryResult.result.map(codec.decodeEntity).toList();
+    return new QueryPageImpl(
+        clientRPCStub, codec, queryResult.cursor, entities, isLast,
+        offset, skipped, remainingEntities);
+  }
+
+  bool get isLast => _isLast;
+
+  List<raw.Entity> get items => _entities;
+
+  Future<Page<raw.Entity>> next({int pageSize}) {
+    if (isLast) {
+      return new Future.sync(() {
+        throw new ArgumentError('Cannot call next() on last page.');
+      });
+    }
+
+    var nextRequest = new NextRequest();
+    nextRequest.cursor = _cursor;
+
+    if (pageSize != null && pageSize > 0) {
+      nextRequest.count = pageSize;
+    }
+
+    if (_offset != null && (_offset - _alreadySkipped) > 0) {
+      nextRequest.offset = _offset - _alreadySkipped;
+    } else {
+      nextRequest.offset = 0;
+    }
+
+    return catchAndReThrowDatastoreException(
+        _clientRPCStub.Next(nextRequest).then((QueryResult result) {
+      return QueryPageImpl.fromQueryResult(
+          _clientRPCStub, _codec, _offset, _alreadySkipped,
+          _remainingNumberOfEntities, result);
+    }));
   }
 }
