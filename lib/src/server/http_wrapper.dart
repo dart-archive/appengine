@@ -601,5 +601,9 @@ class AppengineHttpHeaders implements HttpHeaders {
   }
 
   String value(String name) => _realHeaders.value(name);
-}
 
+  void clear() {
+    _response._ensureInHeaderBuildingState();
+    _realHeaders.clear();
+  }
+}

@@ -6,7 +6,7 @@ library raw_datastore_test_impl;
 
 import 'dart:async';
 
-import 'package:cloud_datastore/raw_datastore.dart';
+import 'package:gcloud/datastore.dart';
 import 'package:unittest/unittest.dart';
 
 import '../utils/error_matchers.dart';
@@ -18,7 +18,7 @@ Future sleep(Duration duration) {
   return completer.future;
 }
 
-runTests(RawDataStore datastore) {
+runTests(Datastore datastore) {
   Future withTransaction(Function f, {bool xg: false}) {
     return datastore.beginTransaction(crossEntityGroup: xg).then(f);
   }
@@ -222,8 +222,7 @@ runTests(RawDataStore datastore) {
 
       test('negative_insert_20000_entities', () {
         // Maybe it should not be a [DataStoreError] here?
-        expect(datastore.commit(inserts: named20000),
-               throwsA(isDataStoreError));
+        expect(datastore.commit(inserts: named20000), throws);
       });
 
       // TODO: test invalid inserts (like entities without key, ...)

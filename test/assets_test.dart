@@ -103,7 +103,7 @@ void main() {
 
     test('test not found serve', () {
       void requestHandler(HttpRequest request, Assets assets) {
-        assets.serve(request.response);
+        assets.serve();
       }
 
       return startAppServer(requestHandler).then((_) {
@@ -136,7 +136,7 @@ void main() {
 
     test('test serve', () {
       void requestHandler(HttpRequest request, Assets assets) {
-        assets.serve(request.response);
+        assets.serve();
       }
 
       return startAppServer(requestHandler).then((_) {
@@ -148,7 +148,7 @@ void main() {
 
     test('test serve path', () {
       void requestHandler(HttpRequest request, Assets assets) {
-        assets.serve(request.response, '/test.css');
+        assets.serve('/test.css');
       }
 
       return startAppServer(requestHandler).then((_) {
@@ -202,7 +202,7 @@ void main() {
 
     test('test not found serve', () {
       void requestHandler(HttpRequest request, Assets assets) {
-        assets.serve(request.response);
+        assets.serve();
       }
 
       return startAppServer(requestHandler).then((_) {
@@ -235,7 +235,7 @@ void main() {
 
     test('test serve', () {
       void requestHandler(HttpRequest request, Assets assets) {
-        assets.serve(request.response);
+        assets.serve();
       }
 
       return startAppServer(requestHandler).then((_) {
@@ -247,7 +247,7 @@ void main() {
 
     test('test serve path', () {
       void requestHandler(HttpRequest request, Assets assets) {
-        assets.serve(request.response, '/test.css');
+        assets.serve('/test.css');
       }
 
       return startAppServer(requestHandler).then((_) {

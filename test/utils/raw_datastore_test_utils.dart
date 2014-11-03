@@ -4,7 +4,7 @@
 
 library raw_datastore_test_utils;
 
-import 'package:cloud_datastore/raw_datastore.dart';
+import 'package:gcloud/datastore.dart';
 
 const TEST_KIND = 'TestKind';
 const TEST_PROPERTY_KEY_PREFIX = 'test_property';

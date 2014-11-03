@@ -1,19 +1,16 @@
 name: appengine
-version: 0.1.0
-author: Dart Team
+version: 0.2.0
+author: Dart Team <misc@dartlang.org>
+description: Experimental support for using Dart as a custom runtime on Google App Engine ManagedVMs
+homepage: http://www.dartlang.org
 environment:
-  sdk: '>=1.4.0 <2.0.0'
+  sdk: '>=1.5.0 <2.0.0'
 dependencies:
-  cloud_datastore:
-    git:
-      url: https://github.com/dart-lang/cloud_datastore
-      ref: v0.1
+  gcloud: '>=0.1.0 <0.2.0'
+  googleapis_auth: '>=0.1.1 <0.2.0'
   fixnum: '>=0.9.0 <0.10.0'
   http_server: '>=0.9.2 <0.10.0'
-  memcache:
-    git:
-      url: https://github.com/dart-lang/memcache
-      ref: v0.1
+  memcache: '>=0.1.0 <0.2.0'
   path: '>=1.2.0 <2.0.0'
   protobuf: '>=0.3.3 <0.4.0'
 dev_dependencies:

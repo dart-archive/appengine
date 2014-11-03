@@ -7,6 +7,9 @@ library appengine.internal;
 import 'dart:async';
 import 'dart:io';
 
+import 'package:gcloud/storage.dart' as storage;
+import 'package:googleapis_auth/auth_io.dart' as auth;
+
 import 'protobuf_api/rpc/rpc_service.dart';
 import 'protobuf_api/rpc/rpc_service_remote_api.dart';
 
@@ -58,10 +61,42 @@ Future runAppEngine(AppEngineRequestHandler handler) {
         partition, applicationID, version, module, instance, pubServeUrl);
   }
 
+  Future<storage.Storage> getStorage(AppengineContext context) {
+    if (context.partition == 'dev') {
+      // When running locally the service account path is passed through
+      // an environment variable.
+      var serviceAccount = Platform.environment['STORAGE_SERVICE_ACCOUNT_FILE'];
+      if (serviceAccount != null) {
+        return new File(serviceAccount).readAsString().then((keyJson) {
+          var creds = new auth.ServiceAccountCredentials.fromJson(keyJson);
+          return auth.clientViaServiceAccount(creds, storage.Storage.Scopes)
+              .then((client) {
+                // TODO: Once we have a proper shutdown mechanism for an
+                // AppEngine server, we need to close the HTTP client created
+                // here.
+                return new storage.Storage(client, context.applicationID);
+              });
+        });
+      } else {
+        return new Future.value();
+      }
+    } else {
+      return auth.clientViaMetadataServer()
+          .then((client) {
+            // TODO: Once we have a proper shutdown mechanism for an
+            // AppEngine server, we need to close the HTTP client created
+            // here.
+            return new storage.Storage(client, context.applicationID);
+          });
+    }
+  }
+
   var context = getDockerContext();
   var rpcService = initializeRPC();
 
-  _contextRegistry = new ContextRegistry(rpcService, context);
-  var appengineServer = new AppEngineHttpServer(_contextRegistry);
-  return new Future.value(appengineServer.run(handler));
+  return getStorage(context).then((storage) {
+    _contextRegistry = new ContextRegistry(rpcService, storage, context);
+    var appengineServer = new AppEngineHttpServer(_contextRegistry);
+    return new Future.value(appengineServer.run(handler));
+  });
 }
