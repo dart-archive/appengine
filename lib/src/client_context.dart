@@ -7,6 +7,7 @@ library appengine.client_context;
 import 'dart:async';
 
 import 'package:gcloud/db.dart';
+import 'package:gcloud/storage.dart';
 import 'package:memcache/memcache.dart';
 
 import '../api/logging.dart';
@@ -21,6 +22,14 @@ abstract class ClientContext {
 
 abstract class Services {
   DatastoreDB get db;
+
+  /// Access the gcloud package storage API. This will autumatically be
+  /// available on deployed App Engine applications. For local testing this
+  /// will be `null` unless the environemnt variable
+  /// `STORAGE_SERVICE_ACCOUNT_FILE` is passed in `app.yaml`. This environment
+  /// variable should point to a private key for a service account in JSON
+  /// format.
+  Storage get storage;
   Logging get logging;
   Memcache get memcache;
   ModulesService get modules;

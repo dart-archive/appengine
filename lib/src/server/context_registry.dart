@@ -9,6 +9,7 @@ import 'dart:async';
 import 'package:memcache/memcache.dart' as memcache;
 import 'package:memcache/src/memcache_impl.dart' as memcache_impl;
 import 'package:gcloud/db.dart' as db;
+import 'package:gcloud/storage.dart' as storage;
 
 import 'http_wrapper.dart';
 import 'assets.dart';
@@ -29,11 +30,12 @@ class ContextRegistry {
       'x-appengine-dev-request-id';
 
   final RPCService _rpcService;
+  final storage.Storage _storage;
   final AppengineContext _appengineContext;
   final Map<AppengineHttpRequest, ClientContext> _request2context = {};
   db.ModelDB _modelDB;
 
-  ContextRegistry(this._rpcService, this._appengineContext) {
+  ContextRegistry(this._rpcService, this._storage, this._appengineContext) {
     // TODO: We should provide an API to allow users providing us with either a
     // different [ModelDB] object or specify a list of libraries to scan for
     // models.
@@ -89,6 +91,7 @@ class ContextRegistry {
         new memcache_impl.MemCacheImpl(serviceMap['raw_memcache']);
     serviceMap['db'] =
         new db.DatastoreDB(serviceMap['raw_datastore_v3'], modelDB: _modelDB);
+    serviceMap['storage'] = _storage;
     return new _ServicesImpl(serviceMap);
   }
 }
@@ -109,6 +112,8 @@ class _ServicesImpl extends Services {
   _ServicesImpl(this._serviceMap);
 
   db.DatastoreDB get db => _serviceMap['db'];
+
+  storage.Storage get storage => _serviceMap['storage'];
 
   Logging get logging => _serviceMap['logging'];
 
