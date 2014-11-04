@@ -27,8 +27,11 @@ function check_env_variable {
 
 function analyze_file {
   echo "Analyzing file '$1'."
+  # Hack because dartanalyzer doesn't look into packages/ directory next to
+  # entry point (if pacakges are nested).
+  PACKAGE_ROOT="$(dirname $1)/packages"
 
-  "$DART_SDK/bin/dartanalyzer" --fatal-warnings "$1"
+  "$DART_SDK/bin/dartanalyzer" "--package-root=$PACKAGE_ROOT" --fatal-warnings "$1"
   if [ $? -ne 0 ]; then
     error "Analyzer failed on file '$1'."
     return 1

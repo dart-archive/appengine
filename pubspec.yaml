@@ -1,5 +1,5 @@
 name: appengine
-version: 0.2.0
+version: 0.2.1
 author: Dart Team <misc@dartlang.org>
 description: Experimental support for using Dart as a custom runtime on Google App Engine ManagedVMs
 homepage: http://www.dartlang.org

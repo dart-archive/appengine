@@ -28,9 +28,13 @@ class _ServiceError extends TypeMatcher {
 
 class _ApplicationError extends TypeMatcher {
   const _ApplicationError() : super("ApplicationError");
-  bool matches(item, Map matchState) => item is ApplicationError;
+  bool matches(item, Map matchState) => item is datastore.ApplicationError;
 }
 
+class _AppEngineApplicationError extends TypeMatcher {
+  const _AppEngineApplicationError() : super("ApplicationError");
+  bool matches(item, Map matchState) => item is ApplicationError;
+}
 
 class _TransactionAbortedError extends TypeMatcher {
   const _TransactionAbortedError() : super("TransactionAbortedError");
@@ -68,6 +72,7 @@ const isNetworkError = const _NetworkError();
 const isProtocolError = const _ProtocolError();
 const isServiceError = const _ServiceError();
 const isApplicationError = const _ApplicationError();
+const isAppEngineApplicationError = const _AppEngineApplicationError();
 
 const isTransactionAbortedError = const _TransactionAbortedError();
 const isNeedIndexError = const _NeedIndexError();

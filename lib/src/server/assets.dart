@@ -15,13 +15,17 @@ import '../client_context.dart';
 
 class AssetsManager {
   static final root = 'build/web';
+
   final Uri pubServeUrl;
+  final bool usePubServe;
   final client = new HttpClient();
   final VirtualDirectory vd = new VirtualDirectory(root);
 
-  AssetsManager(this.pubServeUrl);
+  AssetsManager(Uri pubServeUrl, bool isDevEnvironment)
+      : usePubServe = isDevEnvironment && pubServeUrl != null,
+        pubServeUrl = pubServeUrl;
 
-  Future proxyToPub(HttpRequest request, String path) {
+  Future _proxyToPub(HttpRequest request, String path) {
     const RESPONSE_HEADERS = const [
         HttpHeaders.CONTENT_LENGTH,
         HttpHeaders.CONTENT_TYPE ];
@@ -50,7 +54,7 @@ class AssetsManager {
         });
   }
 
-  Future serveFromFile(HttpRequest request, String path) {
+  Future _serveFromFile(HttpRequest request, String path) {
     // Check if the request path is pointing to a static resource.
     path = normalize(path);
     return FileSystemEntity.isFile(root + path).then((exists) {
@@ -62,7 +66,7 @@ class AssetsManager {
     });
   }
 
-  Future<Stream<List<int>>> readFromPub(String path) {
+  Future<Stream<List<int>>> _readFromPub(String path) {
     var uri = pubServeUrl.resolve(path);
     return client.openUrl('GET', uri)
         .then((request) => request.close())
@@ -85,7 +89,7 @@ class AssetsManager {
         });
   }
 
-  Future<Stream<List<int>>> readFromFile(String path) {
+  Future<Stream<List<int>>> _readFromFile(String path) {
     path = normalize(path);
     return FileSystemEntity.isFile(root + path).then((exists) {
       if (exists) {
@@ -107,18 +111,18 @@ class AssetsManager {
   }
 
   Future<Stream<List<int>>> read(String path) {
-    if (pubServeUrl != null) {
-      return readFromPub(path);
+    if (usePubServe) {
+      return _readFromPub(path);
     } else {
-      return readFromFile(path);
+      return _readFromFile(path);
     }
   }
 
   Future serve(HttpRequest request, String path) {
-    if (pubServeUrl != null) {
-      return proxyToPub(request, path);
+    if (usePubServe) {
+      return _proxyToPub(request, path);
     } else {
-      return serveFromFile(request, path);
+      return _serveFromFile(request, path);
     }
   }
 }

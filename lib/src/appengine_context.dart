@@ -14,9 +14,12 @@ class AppengineContext {
   final String instance;
   final AssetsManager assets;
 
-  AppengineContext(this.partition, this.applicationID, this.version,
+  AppengineContext(String partition, this.applicationID, this.version,
                    this.module, this.instance, Uri pubServeUrl)
-      : assets = new AssetsManager(pubServeUrl);
+      : partition = partition,
+        assets = new AssetsManager(pubServeUrl, partition == 'dev');
+
+  bool get isDevEnvironment => partition == 'dev';
 
   String get fullQualifiedApplicationId => '$partition~$applicationID';
 

@@ -3,7 +3,7 @@
 REPO_ROOT=$( cd $(dirname $(dirname "${BASH_SOURCE[0]}" )) && pwd )
 
 # Source utility functions
-source "$REPO_ROOT/tools/utils.sh"
+source "$REPO_ROOT/tool/utils.sh"
 
 # Check that the necessary environment variables are set.
 check_env_variable "DART_SDK"

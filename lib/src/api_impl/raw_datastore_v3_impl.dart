@@ -267,13 +267,13 @@ class Codec {
         } else if (part.id is int) {
           partPb.id = new Int64(part.id);
         } else {
-          throw new errors.ApplicationError(
+          throw new raw.ApplicationError(
               'Only strings and integers are supported as IDs '
               '(was: ${part.id.runtimeType}).');
         }
       } else {
         if (enforceId) {
-          throw new errors.ApplicationError(
+          throw new raw.ApplicationError(
               'Error while encoding entity key: id was null.');
         }
       }
@@ -316,7 +316,7 @@ class Codec {
       pb.value = new PropertyValue()..int64Value = usSinceEpoch;
       pb.meaning = Property_Meaning.GD_WHEN;
     } else {
-      throw new errors.ApplicationError(
+      throw new raw.ApplicationError(
           'Cannot encode unsupported ${value.runtimeType} type.');
     }
     return pb;
@@ -480,7 +480,7 @@ class DatastoreV3RpcImpl implements raw.Datastore {
   Future<Page<raw.Entity>> query(
       raw.Query query, {raw.Partition partition, TransactionImpl transaction}) {
     if (query.kind == null && query.ancestorKey == null) {
-      throw new errors.ApplicationError(
+      throw new raw.ApplicationError(
           "You must specify a kind or ancestorKey in a query");
     }
 
@@ -516,7 +516,7 @@ class DatastoreV3RpcImpl implements raw.Datastore {
         queryFilter.op = Codec.FILTER_RELATION_MAPPING[filter.relation];
         if (filter.relation == raw.FilterRelation.In) {
           if (filter.value == null || filter.value is! List) {
-            throw new errors.ApplicationError('Filters with list entry checks '
+            throw new raw.ApplicationError('Filters with list entry checks '
                 'must have a list value for membership checking.');
           }
           for (var listValue in filter.value) {

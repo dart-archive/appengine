@@ -173,7 +173,7 @@ void runTests() {
 
       return testRemoteApi(remoteApi, runClientWithInvalidMethod)
           .then((futures) {
-            expect(futures[0], throwsA(isApplicationError));
+            expect(futures[0], throwsA(isAppEngineApplicationError));
             return futures[1].catchError((_) {});
           });
     });

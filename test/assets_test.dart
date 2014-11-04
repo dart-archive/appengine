@@ -42,6 +42,31 @@ void main() {
         'Try running from the "test" directory.');
   }
 
+  test('use pub serve', () {
+    var uri = Uri.parse("http://localhost:9090");
+    var context;
+
+    context = new AppengineContext(
+        'dev',  null,  null,  null,  null, uri);
+    expect(context.isDevEnvironment, isTrue);
+    expect(context.assets.usePubServe, isTrue);
+
+    context = new AppengineContext(
+        's',  null,  null,  null,  null, uri);
+    expect(context.isDevEnvironment, isFalse);
+    expect(context.assets.usePubServe, isFalse);
+
+    context = new AppengineContext(
+        'dev',  null,  null,  null,  null, null);
+    expect(context.isDevEnvironment, isTrue);
+    expect(context.assets.usePubServe, isFalse);
+
+    context = new AppengineContext(
+        's',  null,  null,  null,  null, null);
+    expect(context.isDevEnvironment, isFalse);
+    expect(context.assets.usePubServe, isFalse);
+  });
+
   group('pub serve proxy', () {
     var pubServe;
     var appServer;
@@ -73,7 +98,7 @@ void main() {
       assert(appServer == null);
       return HttpServer.bind('127.0.0.1', 0).then((server) {
         var appengineContext = new AppengineContext(
-            null,  null,  null,  null,  null, pubServeUri);
+            'dev',  null,  null,  null,  null, pubServeUri);
         appServer = server;
         appServerPort = server.port;
         server.listen((request) {

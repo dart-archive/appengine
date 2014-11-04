@@ -62,14 +62,14 @@ Future runAppEngine(AppEngineRequestHandler handler) {
   }
 
   Future<storage.Storage> getStorage(AppengineContext context) {
-    if (context.partition == 'dev') {
+    if (context.isDevEnvironment) {
       // When running locally the service account path is passed through
       // an environment variable.
       var serviceAccount = Platform.environment['STORAGE_SERVICE_ACCOUNT_FILE'];
       if (serviceAccount != null) {
         return new File(serviceAccount).readAsString().then((keyJson) {
           var creds = new auth.ServiceAccountCredentials.fromJson(keyJson);
-          return auth.clientViaServiceAccount(creds, storage.Storage.Scopes)
+          return auth.clientViaServiceAccount(creds, storage.Storage.SCOPES)
               .then((client) {
                 // TODO: Once we have a proper shutdown mechanism for an
                 // AppEngine server, we need to close the HTTP client created

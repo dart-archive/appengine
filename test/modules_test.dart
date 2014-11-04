@@ -56,7 +56,8 @@ main() {
         return new Future.error(new RpcApplicationError(
             pb.ModulesServiceError_ErrorCode.INVALID_MODULE.value, 'foobar'));
       }));
-      expect(modules.defaultVersion('module'), throwsA(isApplicationError));
+      expect(modules.defaultVersion('module'),
+             throwsA(isAppEngineApplicationError));
 
       mock.register('GetDefaultVersion',
                     pb.GetDefaultVersionRequest, expectAsync((request) {
@@ -94,7 +95,7 @@ main() {
         return new Future.error(new RpcApplicationError(
             pb.ModulesServiceError_ErrorCode.INVALID_MODULE.value, 'foobar'));
       }));
-      expect(modules.modules(), throwsA(isApplicationError));
+      expect(modules.modules(), throwsA(isAppEngineApplicationError));
 
       mock.register('GetModules', pb.GetModulesRequest, expectAsync((request) {
         var response = new pb.GetModulesResponse();
@@ -131,7 +132,7 @@ main() {
         return new Future.error(new RpcApplicationError(
             pb.ModulesServiceError_ErrorCode.INVALID_MODULE.value, 'foobar'));
       }));
-      expect(modules.versions('module'), throwsA(isApplicationError));
+      expect(modules.versions('module'), throwsA(isAppEngineApplicationError));
 
       mock.register('GetVersions',
                     pb.GetVersionsRequest, expectAsync((request) {
@@ -171,7 +172,7 @@ main() {
         return new Future.error(new RpcApplicationError(
             pb.ModulesServiceError_ErrorCode.INVALID_MODULE.value, 'foobar'));
       }));
-      expect(modules.hostname(), throwsA(isApplicationError));
+      expect(modules.hostname(), throwsA(isAppEngineApplicationError));
 
       mock.register('GetHostname',
                     pb.GetHostnameRequest, expectAsync((request) {

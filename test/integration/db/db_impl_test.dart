@@ -13,10 +13,24 @@ import 'package:appengine/src/appengine_context.dart';
 import 'package:appengine/src/api_impl/raw_datastore_v3_impl.dart';
 import 'package:appengine/src/protobuf_api/rpc/rpc_service_remote_api.dart';
 
-@db.ModelMetadata(const PersonDesc())
+
+// Note:
+// Non-ancestor queries (i.e. queries not lookups) result in index scans.
+// The index tables are updated in a "eventually consistent" way.
+//
+// So this can make tests flaky, if the index updates take longer than the
+// following constant.
+const INDEX_UPDATE_DELAY = const Duration(milliseconds: 2500);
+
+@db.Kind()
 class Person extends db.Model {
+  @db.StringProperty()
   String name;
+
+  @db.IntProperty()
   int age;
+
+  @db.ModelKeyProperty()
   db.Key wife;
 
   operator==(Object other) => sameAs(other);
@@ -29,11 +43,17 @@ class Person extends db.Model {
         age == other.age &&
         wife == other.wife;
   }
+
+  String toString() => 'Person(id: $id, name: $name, age: $age)';
 }
 
-@db.ModelMetadata(const UserDesc())
+
+@db.Kind()
 class User extends Person {
+  @db.StringProperty()
   String nickname;
+
+  @db.StringListProperty(propertyName: 'language')
   List<String> languages = const [];
 
   sameAs(Object other) {
@@ -56,76 +76,18 @@ class User extends Person {
     }
     return true;
   }
-}
 
-class PersonDesc extends db.ModelDescription {
-  final id = const db.IntProperty();
-  final name = const db.StringProperty();
-  final age = const db.IntProperty();
-  final wife = const db.ModelKeyProperty();
-
-  const PersonDesc({String kind: 'Person'}) : super(kind);
-}
-
-class UserDesc extends PersonDesc {
-  final nickname = const db.StringProperty();
-  final languages =
-      const db.StringListProperty(propertyName: 'language');
-  const UserDesc({String kind: 'User'}) : super(kind: kind);
+  String toString() =>
+      'User(${super.toString()}, nickname: $nickname, languages: $languages';
 }
 
 
-@db.ModelMetadata(const PolyPersonDesc())
-class PolyPerson extends db.PolyModel {
-  String name;
-
-  // NOTE: There is no need to store these values, we make these two an alias
-  // for [name]. They are only used for querying.
-  String get indexedName => name;
-  String get unIndexedName => name;
-  set indexedName(String newName) => name = newName;
-  set unIndexedName(String newName) => name = newName;
-
-  operator==(Object other) => isSame(other);
-
-  isSame(Object other) {
-    return
-        other is PolyPerson &&
-        id == other.id &&
-        name == other.name;
-  }
-}
-
-@db.ModelMetadata(const PolyUserDesc())
-class PolyUser extends PolyPerson {
-  String nickname;
-
-  isSame(Object other) =>
-      super.isSame(other) && other is PolyUser && nickname == other.nickname;
-}
-
-class PolyPersonDesc extends db.PolyModelDescription {
-  static String PolyModelName = 'PolyPerson';
-
-  final id = const db.IntProperty();
-  final name = const db.StringProperty();
-  final indexedName = const db.StringProperty(indexed: true);
-  final unIndexedName = const db.StringProperty(indexed: false);
-
-  const PolyPersonDesc() : super();
-}
-
-class PolyUserDesc extends PolyPersonDesc {
-  static String PolyModelName = 'PolyUser';
-
-  final nickname = const db.StringProperty();
-  const PolyUserDesc();
-}
-
-
-@db.ModelMetadata(const ExpandoPersonDesc())
+@db.Kind()
 class ExpandoPerson extends db.ExpandoModel {
+  @db.StringProperty()
   String name;
+
+  @db.StringProperty(propertyName: 'NN')
   String nickname;
 
   operator==(Object other) {
@@ -142,14 +104,6 @@ class ExpandoPerson extends db.ExpandoModel {
     }
     return false;
   }
-}
-
-class ExpandoPersonDesc extends db.ExpandoModelDescription {
-  final id = const db.IntProperty();
-  final name = const db.StringProperty();
-  final nickname = const db.StringProperty(propertyName: 'NN');
-
-  const ExpandoPersonDesc() : super('ExpandoPerson');
 }
 
 
@@ -184,21 +138,19 @@ runTests(db.DatastoreDB store) {
   }
 
   Future testInsertLookupDelete(
-      List<db.Model> objects, {bool transactional: false, bool xg: false}) {
+      List<db.Model> objects, {bool transactional: false}) {
     var keys = objects.map((db.Model obj) => obj.key).toList();
 
     if (transactional) {
-      return store.beginTransaction(crossEntityGroup: xg)
-          .then((db.Transaction commitTransaction) {
+      return store.withTransaction((db.Transaction commitTransaction) {
         commitTransaction.queueMutations(inserts: objects);
-        return commitTransaction.commit().then((_) {
-          return store.beginTransaction(crossEntityGroup: xg)
-              .then((db.Transaction deleteTransaction) {
-            return deleteTransaction.lookup(keys).then((List<db.Model> models) {
-              compareModels(objects, models);
-              deleteTransaction.queueMutations(deletes: keys);
-              return deleteTransaction.commit();
-            });
+        return commitTransaction.commit();
+      }).then((_) {
+        return store.withTransaction((db.Transaction deleteTransaction) {
+          return deleteTransaction.lookup(keys).then((List<db.Model> models) {
+            compareModels(objects, models);
+            deleteTransaction.queueMutations(deletes: keys);
+            return deleteTransaction.commit();
           });
         });
       });
@@ -228,7 +180,7 @@ runTests(db.DatastoreDB store) {
     });
   });
 
-  group('db', () {
+  group('e2e_db', () {
     group('insert_lookup_delete', () {
       test('persons', () {
         var root = store.emptyKey;
@@ -255,24 +207,6 @@ runTests(db.DatastoreDB store) {
               ..nickname = 'nickname${i%3}');
         }
         return testInsertLookupDelete(users);
-      });
-      test('poly_insert', () {
-        var root = store.emptyKey;
-        var persons = [];
-        for (var i = 1; i <= 10; i++) {
-          persons.add(new PolyPerson()
-              ..id = i
-              ..parentKey = root
-              ..name = 'user$i');
-        }
-        for (var i = 11; i <= 20; i++) {
-          persons.add(new PolyUser()
-              ..id = i
-              ..parentKey = root
-              ..name = 'user$i'
-              ..nickname = 'nickname${i%3}');
-        }
-        return testInsertLookupDelete(persons);
       });
       test('expando_insert', () {
         var root = store.emptyKey;
@@ -305,15 +239,6 @@ runTests(db.DatastoreDB store) {
             ..age = 2
             ..name = 'user2'
             ..nickname = 'nickname2');
-        models.add(new PolyPerson()
-            ..id = 3
-            ..parentKey = root
-            ..name = 'user3');
-        models.add(new PolyUser()
-            ..id = 4
-            ..parentKey = root
-            ..name = 'user4'
-            ..nickname = 'nickname4');
         var expandoPerson = new ExpandoPerson()
             ..parentKey = root
             ..id = 3
@@ -321,7 +246,7 @@ runTests(db.DatastoreDB store) {
         expandoPerson.foo = 'foo1';
         expandoPerson.bar = 2;
 
-        return testInsertLookupDelete(models, transactional: true, xg: true);
+        return testInsertLookupDelete(models, transactional: true);
       });
 
       test('parent_key', () {
@@ -437,7 +362,7 @@ runTests(db.DatastoreDB store) {
       var users = [];
       for (var i = 1; i <= 10; i++) {
         var languages = [];
-        if (i == 10) {
+        if (i == 9) {
           languages = ['foo'];
         } else if (i == 10) {
           languages = ['foo', 'bar'];
@@ -450,26 +375,6 @@ runTests(db.DatastoreDB store) {
             ..nickname = 'nickname${i%3}'
             ..languages = languages);
       }
-
-      var polyPersons = [];
-      var polyUsers = [];
-      for (var i = 1; i <= 10; i++) {
-        polyPersons.add(new PolyPerson()
-            ..id = i
-            ..parentKey = root
-            ..name = 'person$i');
-      }
-      for (var i = 11; i <= 20; i++) {
-        polyPersons.add(new PolyUser()
-            ..id = i
-            ..parentKey = root
-            ..name = 'user$i'
-            ..nickname = 'nickname${i%3}');
-        polyUsers.add(polyPersons.last);
-      }
-      var sortedPolyPersons = []
-          ..addAll(polyPersons)
-          ..sort((a, b) => a.name.compareTo(b.name));
 
       var expandoPersons = [];
       for (var i = 1; i <= 3; i++) {
@@ -489,14 +394,14 @@ runTests(db.DatastoreDB store) {
 
       var usersSortedNameDescNicknameAsc = new List.from(users);
       usersSortedNameDescNicknameAsc.sort((User a, User b) {
-        var result = b.name.compareTo(b.name);
+        var result = b.name.compareTo(a.name);
         if (result == 0) return a.nickname.compareTo(b.nickname);
         return result;
       });
 
       var usersSortedNameDescNicknameDesc = new List.from(users);
       usersSortedNameDescNicknameDesc.sort((User a, User b) {
-        var result = b.name.compareTo(b.name);
+        var result = b.name.compareTo(a.name);
         if (result == 0) return b.nickname.compareTo(a.nickname);
         return result;
       });
@@ -516,17 +421,8 @@ runTests(db.DatastoreDB store) {
       var barUsers = users.where(
           (User u) => u.languages.contains('bar')).toList();
 
-      // Note:
-      // Non-ancestor queries (i.e. queries not lookups) result in index scans.
-      // The index tables are updated in a "eventually consistent" way.
-      //
-      // So this can make tests flaky, if the index updates take longer than the
-      // following constant.
-      var INDEX_UPDATE_DELAY = const Duration(milliseconds: 900);
-
       var allInserts = []
           ..addAll(users)
-          ..addAll(polyPersons)
           ..addAll(expandoPersons);
       var allKeys = allInserts.map((db.Model model) => model.key).toList();
       return store.commit(inserts: allInserts).then((_) {
@@ -535,14 +431,16 @@ runTests(db.DatastoreDB store) {
             // Queries for [Person] return no results, we only have [User]
             // objects.
             () {
-              return store.query(Person).run().then((List<db.Model> models) {
+              return store.query(Person).run().toList()
+                  .then((List<db.Model> models) {
                 compareModels([], models);
               });
             },
 
             // All users query
             () {
-              return store.query(User).run().then((List<db.Model> models) {
+              return store.query(User).run().toList()
+                  .then((List<db.Model> models) {
                 compareModels(users, models, anyOrder: true);
               });
             },
@@ -552,18 +450,18 @@ runTests(db.DatastoreDB store) {
               return store.query(User)
                   ..order('-name')
                   ..order('nickname')
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels(
-                    usersSortedNameDescNicknameAsc, models, anyOrder: true);
+                    usersSortedNameDescNicknameAsc, models);
               });
             },
             () {
               return store.query(User)
                   ..order('-name')
                   ..order('-nickname')
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels(
-                    usersSortedNameDescNicknameDesc, models, anyOrder: true);
+                    usersSortedNameDescNicknameDesc, models);
               });
             },
 
@@ -572,29 +470,30 @@ runTests(db.DatastoreDB store) {
               return store.query(User)
                   ..filter('name >=', LOWER_BOUND)
                   ..order('-name')
-                  ..order('-nickname')
-                  ..run().then((List<db.Model> models) {
+                  ..order('nickname')
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels(usersSortedAndFilteredNameDescNicknameAsc,
-                    models, anyOrder: true);
+                    models);
               });
             },
             () {
               return store.query(User)
                   ..filter('name >=', LOWER_BOUND)
-                  ..order('name')
+                  ..order('-name')
                   ..order('-nickname')
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels(usersSortedAndFilteredNameDescNicknameDesc,
-                    models, anyOrder: true);
+                    models);
               });
             },
 
             // Filter lists
+            /* FIXME: TODO: FIXME: "IN" not supported in public proto/apiary */
             () {
               return store.query(User)
                   ..filter('languages IN', ['foo'])
                   ..order('name')
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels(fooUsers, models, anyOrder: true);
               });
             },
@@ -602,54 +501,22 @@ runTests(db.DatastoreDB store) {
               return store.query(User)
                   ..filter('languages IN', ['bar'])
                   ..order('name')
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels(barUsers, models, anyOrder: true);
-              });
-            },
-
-            // PolyModel queries
-            () {
-              return store.query(PolyPerson)
-                  ..run().then((List<db.Model> models) {
-                // We compare here the query result in [models] to
-                // *all* persons (i.e. [polyPersons] contains all Person and
-                // User model objects)
-                compareModels(polyPersons, models, anyOrder: true);
-              });
-            },
-            () {
-              return store.query(PolyUser)
-                  ..run().then((List<db.Model> models) {
-                // Here we ensure that [models] contains only Users.
-                compareModels(polyUsers, models, anyOrder: true);
-              });
-            },
-
-            // PolyModel indexed/unindexed queries
-            () {
-              return store.query(PolyPerson)
-                  ..filter('indexedName =', 'person1')
-                  ..run().then((List<db.Model> models) {
-                compareModels([polyPersons[0]], models, anyOrder: true);
-              });
-            },
-            () {
-              return store.query(PolyPerson)
-                  ..filter('unIndexedName =', 'person1')
-                  ..run().then((List<db.Model> models) {
-                compareModels([], models, anyOrder: true);
               });
             },
 
             // Simple limit/offset test.
             () {
-              return store.query(PolyPerson)
-                  ..order('name')
+              return store.query(User)
+                  ..order('-name')
+                  ..order('nickname')
                   ..offset(3)
-                  ..limit(10)
-                  ..run().then((List<db.Model> models) {
-                var expectedModels = sortedPolyPersons.sublist(3, 13);
-                compareModels(expectedModels, models, anyOrder: true);
+                  ..limit(4)
+                  ..run().toList().then((List<db.Model> models) {
+                var expectedModels =
+                    usersSortedAndFilteredNameDescNicknameAsc.sublist(3, 7);
+                compareModels(expectedModels, models);
               });
             },
 
@@ -657,7 +524,7 @@ runTests(db.DatastoreDB store) {
             () {
               return store.query(ExpandoPerson)
                   ..filter('name =', expandoPersons.last.name)
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels([expandoPersons.last], models);
               });
             },
@@ -665,7 +532,7 @@ runTests(db.DatastoreDB store) {
             () {
               return store.query(ExpandoPerson)
                   ..filter('foo =', expandoPersons.last.foo)
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels([expandoPersons.last], models);
               });
             },
@@ -673,7 +540,7 @@ runTests(db.DatastoreDB store) {
             () {
               return store.query(ExpandoPerson)
                   ..filter('bar =', expandoPersons.last.bar)
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels([expandoPersons.last], models);
               });
             },
@@ -682,7 +549,7 @@ runTests(db.DatastoreDB store) {
             () {
               return store.query(ExpandoPerson)
                   ..filter('nickname =', expandoPersons.last.nickname)
-                  ..run().then((List<db.Model> models) {
+                  ..run().toList().then((List<db.Model> models) {
                 compareModels([expandoPersons.last], models);
               });
             },

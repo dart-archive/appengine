@@ -7,15 +7,30 @@ library raw_datastore_test_impl;
 import 'dart:async';
 
 import 'package:gcloud/datastore.dart';
+import 'package:gcloud/src/datastore_impl.dart' as datastore_impl;
+import 'package:gcloud/common.dart';
 import 'package:unittest/unittest.dart';
 
 import '../utils/error_matchers.dart';
 import '../utils/raw_datastore_test_utils.dart';
 
+// Note:
+// Non-ancestor queries (i.e. queries not lookups) result in index scans.
+// The index tables are updated in a "eventually consistent" way.
+//
+// So this can make tests flaky, the index updates take longer than the
+// following constant.
+const INDEX_UPDATE_DELAY = const Duration(milliseconds: 2500);
+
+
 Future sleep(Duration duration) {
   var completer = new Completer();
   new Timer(duration, completer.complete);
   return completer.future;
+}
+
+Future<List<Entity>> consumePages(FirstPageProvider provider) {
+  return new StreamFromPages(provider).stream.toList();
 }
 
 runTests(Datastore datastore) {
@@ -128,7 +143,7 @@ runTests(Datastore datastore) {
     return true;
   }
 
-  group('raw_datastore_v3', () {
+  group('e2e_datastore', () {
     group('insert', () {
       Future<List<Key>> testInsert(List<Entity> entities,
           {bool transactional: false, bool xg: false, bool unnamed: true}) {
@@ -222,7 +237,9 @@ runTests(Datastore datastore) {
 
       test('negative_insert_20000_entities', () {
         // Maybe it should not be a [DataStoreError] here?
-        expect(datastore.commit(inserts: named20000), throws);
+        // FIXME/TODO: This was adapted
+        expect(datastore.commit(inserts: named20000),
+               throws);
       });
 
       // TODO: test invalid inserts (like entities without key, ...)
@@ -481,11 +498,6 @@ runTests(Datastore datastore) {
         return testEmptyCommit(namedEntities5Keys);
       });
 
-      test('negative_empty_commit', () {
-        expect(testEmptyCommit(namedEntities5Keys, transactional: true),
-               throwsA(isApplicationError));
-      });
-
       test('negative_empty_commit_xg', () {
         expect(testEmptyCommit(
                namedEntities20Keys, transactional: true, xg: true),
@@ -572,7 +584,8 @@ runTests(Datastore datastore) {
           var query = new Query(
               kind: kind, filters: filters, orders: orders,
               offset: offset, limit: limit);
-          return datastore.query(query).then((List<Entity> entities) {
+          return consumePages((_) => datastore.query(query))
+              .then((List<Entity> entities) {
             if (transaction != null) {
               return datastore.commit(transaction: transaction)
                   .then((_) => entities);
@@ -690,14 +703,6 @@ runTests(Datastore datastore) {
       var sortedAndListFiltered = sorted.where(listFilterFunction).toList();
       var indexedEntity = sorted.where(indexFilterMatches).toList();
       expect(indexedEntity.length, equals(1));
-
-      // Note:
-      // Non-ancestor queries (i.e. queries not lookups) result in index scans.
-      // The index tables are updated in a "eventually consistent" way.
-      //
-      // So this can make tests flaky, the index updates take longer than the
-      // following constant.
-      var INDEX_UPDATE_DELAY = const Duration(milliseconds: 700);
 
       var filters = [
           new Filter(FilterRelation.GreatherThan, QUERY_KEY, QUERY_LOWER_BOUND),
@@ -858,6 +863,9 @@ runTests(Datastore datastore) {
 
         return datastore.commit(inserts: [entity, entity2]).then((_) {
           var futures = [
+            () {
+              return sleep(INDEX_UPDATE_DELAY);
+            },
             // Test that lookup only returns inserted entities.
             () {
               return datastore.lookup([rootKey, subKey, subSubKey, subSubKey2])
@@ -877,7 +885,8 @@ runTests(Datastore datastore) {
             () {
               var ancestorQuery =
                   new Query(ancestorKey: rootKey, orders: orders);
-              return datastore.query(ancestorQuery).then((results) {
+              return consumePages((_) => datastore.query(ancestorQuery))
+                  .then((results) {
                 expect(results.length, 2);
                 expect(compareEntity(entity, results[0]), isTrue);
                 expect(compareEntity(entity2, results[1]), isTrue);
@@ -887,7 +896,8 @@ runTests(Datastore datastore) {
             () {
               var ancestorQuery =
                   new Query(ancestorKey: subKey, orders: orders);
-              return datastore.query(ancestorQuery).then((results) {
+              return consumePages((_) => datastore.query(ancestorQuery))
+                  .then((results) {
                 expect(results.length, 2);
                 expect(compareEntity(entity, results[0]), isTrue);
                 expect(compareEntity(entity2, results[1]), isTrue);
@@ -896,7 +906,8 @@ runTests(Datastore datastore) {
             // - by [subSubKey]
             () {
               var ancestorQuery = new Query(ancestorKey: subSubKey);
-              return datastore.query(ancestorQuery).then((results) {
+              return consumePages((_) => datastore.query(ancestorQuery))
+                  .then((results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity, results[0]), isTrue);
               });
@@ -904,7 +915,8 @@ runTests(Datastore datastore) {
             // - by [subSubKey2]
             () {
               var ancestorQuery = new Query(ancestorKey: subSubKey2);
-              return datastore.query(ancestorQuery).then((results) {
+              return consumePages((_) => datastore.query(ancestorQuery))
+                  .then((results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity2, results[0]), isTrue);
               });
@@ -914,7 +926,8 @@ runTests(Datastore datastore) {
             // - by [rootKey] + 'SubSubKind'
             () {
               var query = new Query(ancestorKey: rootKey, kind: 'SubSubKind');
-              return datastore.query(query).then((List<Entity> results) {
+              return consumePages((_) => datastore.query(query))
+                  .then((List<Entity> results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity, results[0]), isTrue);
               });
@@ -922,7 +935,8 @@ runTests(Datastore datastore) {
             // - by [rootKey] + 'SubSubKind2'
             () {
               var query = new Query(ancestorKey: rootKey, kind: 'SubSubKind2');
-              return datastore.query(query).then((List<Entity> results) {
+              return consumePages((_) => datastore.query(query))
+                  .then((List<Entity> results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity2, results[0]), isTrue);
               });
@@ -930,7 +944,8 @@ runTests(Datastore datastore) {
             // - by [subSubKey] + 'SubSubKind'
             () {
               var query = new Query(ancestorKey: subSubKey, kind: 'SubSubKind');
-              return datastore.query(query).then((List<Entity> results) {
+              return consumePages((_) => datastore.query(query))
+                  .then((List<Entity> results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity, results[0]), isTrue);
               });
@@ -939,7 +954,8 @@ runTests(Datastore datastore) {
             () {
               var query =
                   new Query(ancestorKey: subSubKey2, kind: 'SubSubKind2');
-              return datastore.query(query).then((List<Entity> results) {
+              return consumePages((_) => datastore.query(query))
+                  .then((List<Entity> results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity2, results[0]), isTrue);
               });
@@ -948,7 +964,8 @@ runTests(Datastore datastore) {
             () {
               var query =
                   new Query(ancestorKey: subSubKey, kind: 'SubSubKind2');
-              return datastore.query(query).then((List<Entity> results) {
+              return consumePages((_) => datastore.query(query))
+                  .then((List<Entity> results) {
                 expect(results.length, 0);
               });
             },
@@ -956,7 +973,8 @@ runTests(Datastore datastore) {
             () {
               var query =
                   new Query(ancestorKey: subSubKey2, kind: 'SubSubKind');
-              return datastore.query(query).then((List<Entity> results) {
+              return consumePages((_) => datastore.query(query))
+                  .then((List<Entity> results) {
                 expect(results.length, 0);
               });
             },
@@ -969,8 +987,26 @@ runTests(Datastore datastore) {
           return Future.forEach(futures, (f) => f()).then(expectAsync((_) {}));
         });
       });
-
     });
-
   });
 }
+
+Future cleanupDB(Datastore db) {
+  // cleanup() will call itself again as long as the DB is not clean.
+  cleanup() {
+    var q = new Query(limit: 500);
+    return consumePages((_) => db.query(q)).then((List<Entity> entities) {
+      entities = entities.where((entity) {
+        return !entity.key.elements[0].kind.contains('__');
+      }).toList();
+
+      if (entities.length == 0) return null;
+
+      print('[cleanupDB]: Removing left-over ${entities.length} entities');
+      var deletes = entities.map((e) => e.key).toList();
+      return db.commit(deletes: deletes).then((_) => cleanup());
+    });
+  }
+  return cleanup();
+}
+

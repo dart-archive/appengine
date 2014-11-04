@@ -6,10 +6,3 @@ dependencies:
   gcloud: any
 dev_dependencies:
   unittest: any
-dependency_overrides:
-  appengine:
-    path: ../../../../appengine
-  gcloud:
-    path: ../../../../gcloud
-  memcache:
-    path: ../../../../memcache

@@ -12,9 +12,9 @@ import 'package:appengine/src/appengine_context.dart';
 import 'package:appengine/src/api_impl/raw_datastore_v3_impl.dart';
 import 'package:appengine/src/protobuf_api/rpc/rpc_service_remote_api.dart';
 import 'package:gcloud/datastore.dart';
-import 'package:gcloud/db/metamodel.dart';
 import 'package:gcloud/datastore.dart' show Key, Query, Partition;
 import 'package:gcloud/db.dart' as db;
+import 'package:gcloud/db/metamodel.dart';
 
 List<Entity> buildEntitiesWithDifferentNamespaces() {
   newKey(String namespace, String kind, int id) {
@@ -51,42 +51,46 @@ Future sleep(Duration duration) {
 }
 
 runTests(datastore, db.DatastoreDB store) {
-  // Shorten this name, so we don't have to break lines at 80 chars.
   final cond = predicate;
 
-  test('namespaces__insert_lookup_delete', () {
-    var entities = buildEntitiesWithDifferentNamespaces();
-    var keys = entities.map((e) => e.key).toList();
+  group('e2e_db_metamodel', () {
+    test('namespaces__insert_lookup_delete', () {
+      var entities = buildEntitiesWithDifferentNamespaces();
+      var keys = entities.map((e) => e.key).toList();
 
-    return datastore.commit(inserts: entities).then((_) {
-      return sleep(const Duration(milliseconds: 500)).then((_) {
-        var namespaceQuery = store.query(Namespace);
-        return namespaceQuery.run().then((List<Namespace> namespaces) {
-          expect(namespaces.length, 3);
-          expect(namespaces, contains(cond((ns) => ns.name == null)));
-          expect(namespaces, contains(cond((ns) => ns.name == 'FooNamespace')));
-          expect(namespaces, contains(cond((ns) => ns.name == 'BarNamespace')));
+      return datastore.commit(inserts: entities).then((_) {
+        return sleep(const Duration(seconds: 10)).then((_) {
+          var namespaceQuery = store.query(Namespace);
+          return namespaceQuery.run().toList()
+              .then((List<Namespace> namespaces) {
+            expect(namespaces.length, 3);
+            expect(namespaces, contains(cond((ns) => ns.name == null)));
+            expect(namespaces,
+                   contains(cond((ns) => ns.name == 'FooNamespace')));
+            expect(namespaces,
+                   contains(cond((ns) => ns.name == 'BarNamespace')));
 
-          var futures = [];
-          for (var namespace in namespaces) {
-            var partition = store.newPartition(namespace.name);
-            var kindQuery = store.query(Kind, partition: partition);
-            futures.add(kindQuery.run().then((List<Kind> kinds) {
-              expect(kinds.length, equals(2));
-              if (namespace.name == null) {
-                expect(kinds, contains(cond((k) => k.name == 'NullKind')));
-                expect(kinds, contains(cond((k) => k.name == 'NullKind2')));
-              } else if (namespace.name == 'FooNamespace') {
-                expect(kinds, contains(cond((k) => k.name == 'FooKind')));
-                expect(kinds, contains(cond((k) => k.name == 'FooKind2')));
-              } else if (namespace.name == 'BarNamespace') {
-                expect(kinds, contains(cond((k) => k.name == 'BarKind')));
-                expect(kinds, contains(cond((k) => k.name == 'BarKind2')));
-              }
-            }));
-          }
-          return Future.wait(futures).then((_) {
-            expect(datastore.commit(deletes: keys), completes);
+            var futures = [];
+            for (var namespace in namespaces) {
+              var partition = store.newPartition(namespace.name);
+              var kindQuery = store.query(Kind, partition: partition);
+              futures.add(kindQuery.run().toList().then((List<Kind> kinds) {
+                expect(kinds.length, greaterThanOrEqualTo(2));
+                if (namespace.name == null) {
+                  expect(kinds, contains(cond((k) => k.name == 'NullKind')));
+                  expect(kinds, contains(cond((k) => k.name == 'NullKind2')));
+                } else if (namespace.name == 'FooNamespace') {
+                  expect(kinds, contains(cond((k) => k.name == 'FooKind')));
+                  expect(kinds, contains(cond((k) => k.name == 'FooKind2')));
+                } else if (namespace.name == 'BarNamespace') {
+                  expect(kinds, contains(cond((k) => k.name == 'BarKind')));
+                  expect(kinds, contains(cond((k) => k.name == 'BarKind2')));
+                }
+              }));
+            }
+            return Future.wait(futures).then((_) {
+              expect(datastore.commit(deletes: keys), completes);
+            });
           });
         });
       });
