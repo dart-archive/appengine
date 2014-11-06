@@ -1,6 +1,7 @@
-## 0.2.1+1
+## 0.2.2
 
 * Updated `README.md`
+* Widen googleapis_auth constraint to include version 0.2.0
 
 ## 0.2.1
 
