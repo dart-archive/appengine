@@ -28,12 +28,12 @@ void main() {
 Add the application configuration in a `app.yaml` file and run it locally using
 by running:
 
-    gcloud app run app.yaml
+    gcloud preview app run app.yaml
 
 When you are ready to deploy your application, make sure you have authenticated
 with `gcloud` and defined your current project. Then run:
 
-    gcloud app depoly app.yaml
+    gcloud preview app deploy app.yaml
 
 ### Send Feedback
 
