@@ -221,6 +221,52 @@ main() {
         return new Future.value(response.writeToBuffer());
       }));
       expect(memcache.getAll(keys), completion(success));
+
+      // Tests sucessfull get with different ordered response.
+      // The result of getAll should be ordered with respect to the
+      // passed in keys.
+      var successWithLast = {key1: 'dart', key2: 'dart', key3: 'lastElement'};
+      mock.register('Get', MemcacheGetRequest, expectAsync((request) {
+        expect(request.key.length, 3);
+        expect(request.key[0], key2);  // Key2 is the UTF-8 encoding of key1.
+        expect(request.key[1], key2);
+        expect(request.key[2], key3);
+        // Create a response where the resulting keys are in different order.
+        var response = new MemcacheGetResponse();
+        var item1 = new MemcacheGetResponse_Item();
+        item1.key = key3;
+        item1.value = UTF8.encode('lastElement');
+        response.item.add(item1);
+        var item2 = new MemcacheGetResponse_Item();
+        item2.key = key2;
+        item2.value = UTF8.encode('dart');
+        response.item.add(item2);
+        var item3 = new MemcacheGetResponse_Item();
+        item3.key = key2; // key2 is the UTF-8 encoding of key1.
+        item3.value = UTF8.encode('dart');
+        response.item.add(item3);
+        return new Future.value(response.writeToBuffer());
+      }));
+      expect(memcache.getAll(keys), completion(successWithLast));
+
+      // Tests sucessfull get with single value response for two keys.
+      // The result of getAll should be ordered with respect to the
+      // passed in keys.
+      var twoKeys = [key3, key1];
+      var successWithOne = {key3: null, key1: 'dart'};
+      mock.register('Get', MemcacheGetRequest, expectAsync((request) {
+        expect(request.key.length, 2);
+        expect(request.key[0], key3);
+        expect(request.key[1], key2);  // Key2 is the UTF-8 encoding of key1.
+        // Create a response with only key1 (aka. key2) having a value.
+        var response = new MemcacheGetResponse();
+        var item1 = new MemcacheGetResponse_Item();
+        item1.key = key2; // key is the UTF-8 encoding of key1.
+        item1.value = UTF8.encode('dart');
+        response.item.add(item1);
+        return new Future.value(response.writeToBuffer());
+      }));
+      expect(memcache.getAll(twoKeys), completion(successWithOne));
     });
 
     test('remove', () {

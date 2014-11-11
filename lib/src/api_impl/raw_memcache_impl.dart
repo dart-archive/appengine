@@ -36,29 +36,38 @@ class RawMemcacheRpcImpl implements raw.RawMemcache {
         throw ProtocolError.INVALID_RESPONSE;
       }
       // The response from the memcache service only have the items which
-      // where actually found. The items found are returned in the same order
-      // as the keys in the request.
+      // where actually found. In most cases the items found are returned
+      // in the same order as the keys in the request. The loop below is
+      // optimized for this case to degenerate into linear time by remembering
+      // the last index.
       var result = [];
+      int responseItemIdx = 0;
       int remaining = response.item.length;
-      int index = 0;
       for (int i = 0; i < batch.length; i++) {
-        if (remaining == 0 ||
-            !_sameKey(response.item[index].key, batch[i].key)) {
+        bool found = false;
+        for (int j = 0;
+             remaining > 0 && !found && j < response.item.length;
+             j++) {
+          if (_sameKey(batch[i].key, response.item[responseItemIdx].key)) {
+            // Value found for key.
+            result.add(new raw.GetResult(
+                raw.Status.NO_ERROR,
+                null,
+                response.item[responseItemIdx].flags,
+                null,
+                response.item[responseItemIdx].value));
+            found = true;
+            remaining--;
+          }
+          responseItemIdx = (responseItemIdx + 1) % response.item.length;
+        }
+        if (!found) {
           // This key had no value found.
           result.add(new raw.GetResult(raw.Status.KEY_NOT_FOUND,
                                        null,
                                        0,
                                        null,
                                        null));
-        } else {
-          // Value found for key.
-          result.add(new raw.GetResult(raw.Status.NO_ERROR,
-                                       null,
-                                       response.item[index].flags,
-                                       null,
-                                       response.item[index].value));
-          remaining--;
-          index++;
         }
       }
       return result;
