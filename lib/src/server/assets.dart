@@ -47,10 +47,10 @@ class AssetsManager {
           return proxyResponse.pipe(request.response);
         })
         .catchError((e) {
+          // TODO(kevmoo) Use logging here
           print("Unable to connect to 'pub serve' for '${request.uri}': $e");
-          var error = new AssetError(
+          throw new AssetError(
               "Unable to connect to 'pub serve' for '${request.uri}': $e");
-          return new Future.error(error);
         });
   }
 
@@ -74,10 +74,9 @@ class AssetsManager {
           if (response.statusCode == HttpStatus.OK) {
             return response;
           } else {
-            var error = new AssetError(
+            throw new AssetError(
                 "Failed to fetch asset '$path' from pub: "
                 "${response.statusCode}.");
-            return new Future.error(error);
           }
         })
         .catchError((error) {
@@ -85,7 +84,7 @@ class AssetsManager {
             error = new AssetError(
                 "Failed to fetch asset '$path' from pub: '${path}': $error");
           }
-          return new Future.error(error);
+          throw error;
         });
   }
 
@@ -95,8 +94,7 @@ class AssetsManager {
       if (exists) {
         return new File(root + path).openRead();
       } else {
-        var error = new AssetError("Asset '$path' not found");
-        return new Future.error(error);
+        throw new AssetError("Asset '$path' not found");
       }
     });
   }
