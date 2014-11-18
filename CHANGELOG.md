@@ -1,3 +1,7 @@
+## 0.2.3
+
+* Small bugfix in the lowlevel memcache API implementation.
+
 ## 0.2.2
 
 * Updated `README.md`
