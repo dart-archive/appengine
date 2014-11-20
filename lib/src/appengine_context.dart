@@ -19,7 +19,7 @@ class AppengineContext {
       : partition = partition,
         assets = new AssetsManager(pubServeUrl, partition == 'dev');
 
-  bool get isDevEnvironment => partition == 'dev';
+  bool get isDevelopmentEnvironment => partition == 'dev';
 
   String get fullQualifiedApplicationId => '$partition~$applicationID';
 

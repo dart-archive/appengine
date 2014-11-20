@@ -62,7 +62,7 @@ Future runAppEngine(AppEngineRequestHandler handler) {
   }
 
   Future<storage.Storage> getStorage(AppengineContext context) {
-    if (context.isDevEnvironment) {
+    if (context.isDevelopmentEnvironment) {
       // When running locally the service account path is passed through
       // an environment variable.
       var serviceAccount = Platform.environment['STORAGE_SERVICE_ACCOUNT_FILE'];

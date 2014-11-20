@@ -16,6 +16,13 @@ import '../api/remote_api.dart';
 import '../api/users.dart';
 
 abstract class ClientContext {
+  /// Whether the application is currently running in the development
+  /// environment.
+  bool get isDevelopmentEnvironment;
+  /// Whether the application is currently running in the production
+  /// environment.
+  bool get isProductionEnvironment;
+
   Services get services;
   Assets get assets;
 }

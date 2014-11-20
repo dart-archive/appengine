@@ -52,7 +52,9 @@ class ContextRegistry {
     }
     var services = _getServices(ticket, request);
     var assets = new AssetsImpl(request, _appengineContext);
-    var context = new _ClientContextImpl(services, assets);
+    var context =
+        new _ClientContextImpl(
+            services, assets, _appengineContext.isDevelopmentEnvironment);
     _request2context[request] = context;
 
     request.response.registerHook(
@@ -99,8 +101,13 @@ class ContextRegistry {
 class _ClientContextImpl implements ClientContext {
   final Services services;
   final Assets assets;
+  final bool _isDevelopmentEnvironment;
 
-  _ClientContextImpl(this.services, this.assets);
+  _ClientContextImpl(
+      this.services, this.assets, this._isDevelopmentEnvironment);
+
+  bool get isDevelopmentEnvironment => _isDevelopmentEnvironment;
+  bool get isProductionEnvironment => !_isDevelopmentEnvironment;
 }
 
 class _ServicesImpl extends Services {

@@ -48,22 +48,22 @@ void main() {
 
     context = new AppengineContext(
         'dev',  null,  null,  null,  null, uri);
-    expect(context.isDevEnvironment, isTrue);
+    expect(context.isDevelopmentEnvironment, isTrue);
     expect(context.assets.usePubServe, isTrue);
 
     context = new AppengineContext(
         's',  null,  null,  null,  null, uri);
-    expect(context.isDevEnvironment, isFalse);
+    expect(context.isDevelopmentEnvironment, isFalse);
     expect(context.assets.usePubServe, isFalse);
 
     context = new AppengineContext(
         'dev',  null,  null,  null,  null, null);
-    expect(context.isDevEnvironment, isTrue);
+    expect(context.isDevelopmentEnvironment, isTrue);
     expect(context.assets.usePubServe, isFalse);
 
     context = new AppengineContext(
         's',  null,  null,  null,  null, null);
-    expect(context.isDevEnvironment, isFalse);
+    expect(context.isDevelopmentEnvironment, isFalse);
     expect(context.assets.usePubServe, isFalse);
   });
 
