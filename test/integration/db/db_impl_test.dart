@@ -13,15 +13,6 @@ import 'package:appengine/src/appengine_context.dart';
 import 'package:appengine/src/api_impl/raw_datastore_v3_impl.dart';
 import 'package:appengine/src/protobuf_api/rpc/rpc_service_remote_api.dart';
 
-
-// Note:
-// Non-ancestor queries (i.e. queries not lookups) result in index scans.
-// The index tables are updated in a "eventually consistent" way.
-//
-// So this can make tests flaky, if the index updates take longer than the
-// following constant.
-const INDEX_UPDATE_DELAY = const Duration(milliseconds: 2500);
-
 @db.Kind()
 class Person extends db.Model {
   @db.StringProperty()
@@ -426,7 +417,7 @@ runTests(db.DatastoreDB store) {
           ..addAll(expandoPersons);
       var allKeys = allInserts.map((db.Model model) => model.key).toList();
       return store.commit(inserts: allInserts).then((_) {
-        return sleep(INDEX_UPDATE_DELAY).then((_) {
+        return waitUntilEntitiesReady(store, allKeys).then((_) {
           var tests = [
             // Queries for [Person] return no results, we only have [User]
             // objects.
@@ -558,7 +549,7 @@ runTests(db.DatastoreDB store) {
             () => store.commit(deletes: allKeys),
 
             // Wait until the entity deletes are reflected in the indices.
-            () => sleep(INDEX_UPDATE_DELAY),
+            () => waitUntilEntitiesGone(store, allKeys),
 
             // Make sure queries don't return results
             () => store.lookup(allKeys).then((List<db.Model> models) {
@@ -575,6 +566,43 @@ runTests(db.DatastoreDB store) {
   });
 }
 
+Future waitUntilEntitiesReady(db.DatastoreDB mdb, List<db.Key> keys) {
+  return waitUntilEntitiesHelper(mdb, keys, true);
+}
+
+Future waitUntilEntitiesGone(db.DatastoreDB mdb, List<db.Key> keys) {
+  return waitUntilEntitiesHelper(mdb, keys, false);
+}
+
+Future waitUntilEntitiesHelper(db.DatastoreDB mdb,
+                               List<db.Key> keys,
+                               bool positive) {
+  var keysByKind = {};
+  for (var key in keys) {
+    keysByKind.putIfAbsent(key.type, () => []).add(key);
+  }
+
+  Future waitForKeys(Type kind, List<db.Key> keys) {
+    return mdb.query(kind).run().toList().then((List<db.Model> models) {
+      for (var key in keys) {
+        bool found = false;
+        for (var model in models) {
+          if (key == model.key) found = true;
+        }
+        if (positive) {
+          if (!found) return waitForKeys(kind, keys);
+        } else {
+          if (found) return waitForKeys(kind, keys);
+        }
+      }
+      return null;
+    });
+  }
+
+  return Future.forEach(keysByKind.keys.toList(), (Type kind) {
+    return waitForKeys(kind, keysByKind[kind]);
+  });
+}
 
 void main() {
   var rpcService = new RPCServiceRemoteApi('127.0.0.1', 4444);
