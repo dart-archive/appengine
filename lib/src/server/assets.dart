@@ -102,9 +102,8 @@ class AssetsManager {
   Future _serve404(HttpRequest request) {
     // Serve 404.
     return request.drain().then((_) {
-      return request.response
-          ..statusCode = HttpStatus.NOT_FOUND
-          ..close();
+      request.response.statusCode = HttpStatus.NOT_FOUND;
+      return request.response.close();
     });
   }
 
