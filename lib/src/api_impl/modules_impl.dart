@@ -90,6 +90,29 @@ class ModulesRpcImpl extends ModulesService {
   }
 
   Future<String> hostname([String module, String version, String instance]) {
+    // Maps double-wildcard domains hosted at appspot.com as Google is
+    // issuing certificates for SSL certificates for double-wildcard
+    // domains hosted at appspot.com (i.e. *.*.appspot.com).
+    //
+    // It performs mapping like this:
+    //
+    //   project.appspot.com -> project.appspot.com
+    //   version.project.appspot.com -> version-dot-project.appspot.com
+    //   version.module.project.appspot.com ->
+    //       version-dot-module-dot-project.appspot.com
+    String mapHostname(String hostname) {
+      const appSpotDotCom = '.appspot.com';
+      if (hostname.endsWith(appSpotDotCom)) {
+        var lastDotindex = hostname.length - appSpotDotCom.length;
+        if (hostname.indexOf('.') < lastDotindex) {
+          return hostname.substring(0, lastDotindex)
+              .split('.')
+              .join('-dot-')
+              + appSpotDotCom;
+        }
+      }
+      return hostname;
+    }
     var request = new pb.GetHostnameRequest();
     if (module != null) {
       request.module = module;
@@ -101,7 +124,7 @@ class ModulesRpcImpl extends ModulesService {
       request.instance = instance;
     }
     return _clientRPCStub.GetHostname(request)
-        .then((response) => response.hostname)
+        .then((response) => mapHostname(response.hostname))
         .catchError((RpcApplicationError error) {
           throw buildModulesException(error);
         }, test: (error) => error is RpcApplicationError);

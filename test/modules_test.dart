@@ -150,7 +150,6 @@ main() {
       var context = new AppengineContext(
           'dev', 'application', 'version', null, null, null);
       var modules = new ModulesRpcImpl(mock, context, '');
-      var count = 0;
 
       // Tests NetworkError.
       mock.register('GetHostname',
@@ -174,6 +173,7 @@ main() {
       }));
       expect(modules.hostname(), throwsA(isAppEngineApplicationError));
 
+      var count = 0;
       mock.register('GetHostname',
                     pb.GetHostnameRequest, expectAsync((request) {
         switch (count++) {
@@ -209,6 +209,34 @@ main() {
       expect(modules.hostname('module', 'version'), completion('hostname'));
       expect(modules.hostname('module', 'version', 'instance'),
              completion('hostname'));
+
+      count = 0;
+      var hostnames = [
+          'project.appspot.com',
+          'version.project.appspot.com',
+          'version.module.project.appspot.com',
+          'instance.version.module.project.appspot.com'
+      ];
+
+      var mappedHostnames = [
+          'project.appspot.com',
+          'version-dot-project.appspot.com',
+          'version-dot-module-dot-project.appspot.com',
+          'instance-dot-version-dot-module-dot-project.appspot.com'
+      ];
+
+      mock.register('GetHostname',
+                    pb.GetHostnameRequest, expectAsync((request) {
+        var response = new pb.GetHostnameResponse();
+        response.hostname = hostnames[count++];
+        print(response.hostname);
+        return new Future.value(response.writeToBuffer());
+      }, count: hostnames.length));
+      Future.forEach(mappedHostnames, expectAsync((expected) {
+        return modules.hostname().then((hostname) {
+          expect(hostname, expected);
+        });
+      }, count: mappedHostnames.length));
     });
   });
 }

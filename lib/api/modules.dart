@@ -53,6 +53,12 @@ abstract class ModulesService {
    * Finally if [instance] is also specified, the result is the hostname for
    * contacting a specific running instance for the specified [module] and
    * [version].
+   *
+   * For applications served from the appspot.com domain, some of the dots
+   * used to separate the different parts of the hostname will be replaced
+   * by `-dot-`. This is to support application access using HTTPS, and is
+   * required as Google is no longer issuing SSL certificates for
+   * double-wildcard domains hosted at appspot.com (i.e. *.*.appspot.com).
    */
   Future<String> hostname([String module, String version, String instance]);
 }
