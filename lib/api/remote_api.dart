@@ -7,6 +7,7 @@ library appengine.api.remote_api;
 import 'dart:async';
 import 'dart:io';
 
+@deprecated
 abstract class RemoteApi {
   // TODO: We might want to change this to (maybe with more information about
   // request):

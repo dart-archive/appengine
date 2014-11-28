@@ -42,7 +42,7 @@ class ContextRegistry {
     _modelDB = new db.ModelDBImpl();
   }
 
-  Future add(AppengineHttpRequest request) {
+  ClientContext add(AppengineHttpRequest request) {
     var ticket = request.headers.value(HTTP_HEADER_APPENGINE_TICKET);
     if (ticket == null) {
       ticket = request.headers.value(HTTP_HEADER_DEVAPPSERVER_REQUEST_ID);
@@ -60,7 +60,7 @@ class ContextRegistry {
     request.response.registerHook(
         () => services.logging.flush().catchError((_) {}));
 
-    return new Future.value();
+    return context;
   }
 
   ClientContext lookup(AppengineHttpRequest request) {
@@ -71,6 +71,9 @@ class ContextRegistry {
     _request2context.remove(request);
     return new Future.value();
   }
+
+  Services newBackgroundServices()
+      => _getServices(_appengineContext.backgroundTicket, null);
 
   Services _getServices(String ticket, AppengineHttpRequest request) {
     var raw_memcache =
@@ -84,11 +87,13 @@ class ContextRegistry {
           _rpcService, _appengineContext, ticket),
       'remote_api' : new remote_api_impl.RemoteApiImpl(
           _rpcService, _appengineContext, ticket),
-      'users' : new users_impl.UserRpcImpl(
-          _rpcService, ticket, request),
       'modules' : new modules_impl.ModulesRpcImpl(
           _rpcService, _appengineContext, ticket),
     };
+    if (request != null) {
+      serviceMap['users'] =
+          new users_impl.UserRpcImpl(_rpcService, ticket, request);
+    }
     serviceMap['memcache'] =
         new memcache_impl.MemCacheImpl(serviceMap['raw_memcache']);
     serviceMap['db'] =

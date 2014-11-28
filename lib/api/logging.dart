@@ -6,6 +6,8 @@ library appengine.api.logging;
 
 import 'dart:async';
 
+import 'package:gcloud/service_scope.dart' as ss;
+
 class LogLevel {
   static const LogLevel CRITICAL = const LogLevel._('Critical', 4);
   static const LogLevel ERROR = const LogLevel._('Error', 3);
@@ -46,3 +48,23 @@ abstract class Logging {
 
   Future flush();
 }
+
+/**
+ * Register a new [Logging] object.
+ *
+ * Calling this outside of a service scope or calling it more than once inside
+ * the same service scope will result in an error.
+ *
+ * See the `package:gcloud/service_scope.dart` library for more information.
+ */
+void registerLoggingService(Logging service) {
+  ss.register(#_appengine.logging, service);
+}
+
+/**
+ * The logging service.
+ *
+ * Request handlers will be run inside a service scope which contains the
+ * modules service.
+ */
+Logging get loggingService => ss.lookup(#_appengine.logging);

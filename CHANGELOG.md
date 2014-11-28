@@ -1,3 +1,15 @@
+## 0.2.4
+
+* Run request handlers inside a service scope
+(see `package:gcloud/service_scope.dart`).
+* Insert an authenticated HTTP client into the service scope.
+* Insert a `memcacheService` into the service scope.
+* Added `isDevelopmentServer` and `isProductionEnvironment` getter to client
+context.
+* Make hostnames returned from modules service use -dot- naming to support
+HTTPS.
+* Mark `package:appengine/remote_api.dart` as deprecated.
+
 ## 0.2.3
 
 * Small bugfix in the lowlevel memcache API implementation.

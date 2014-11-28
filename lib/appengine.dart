@@ -7,19 +7,23 @@ library appengine;
 import 'dart:async';
 import 'dart:io';
 
+import 'package:gcloud/service_scope.dart' as ss;
+
 import 'src/appengine_internal.dart' as appengine_internal;
 import 'src/app_engine_request_handler.dart';
 import 'src/client_context.dart';
 
+export 'package:gcloud/http.dart';
 export 'api/errors.dart';
 export 'api/logging.dart';
 export 'api/modules.dart';
+export 'api/memcache.dart';
 export 'api/remote_api.dart';
 export 'api/users.dart';
 export 'src/app_engine_request_handler.dart';
 export 'src/client_context.dart';
 
-const Symbol _APPENGINE_CONTEXT = #appengine_context;
+const Symbol _APPENGINE_CONTEXT = #_appengine.context;
 
 /**
  * Starts serving requests coming to this AppEngine application.
@@ -57,39 +61,11 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
     };
   }
 
-  return appengine_internal.runAppEngine((HttpRequest request) {
-    runZoned(() {
-      handler(request);
-    }, zoneValues: <Symbol, Object>{
-      _APPENGINE_CONTEXT: appengine_internal.contextFromRequest(request),
-    }, onError: (error, stack) {
-      var context = appengine_internal.contextFromRequest(request);
-      if (context != null) {
-        try {
-          context.services.logging.error(
-              'Uncaught error in request handler: $error\n$stack');
-        } catch (e) {
-          print('Error while logging uncaught error: $e');
-        }
-      } else {
-        // TODO: We could log on the background ticket here.
-        print('Unable to log error, since response has already been sent.');
-      }
-      errorHandler('Uncaught error in request handler zone: $error', stack);
-
-      // In many cases errors happen during request processing or response
-      // preparation. In such cases we want to close the connection, since user
-      // code might not be able to.
-      try {
-        request.response.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
-      } on StateError catch (_) {}
-      request.response.close().catchError((closeError, closeErrorStack) {
-        errorHandler('Forcefully closing response, due to error in request '
-                     'handler zone, resulted in an error: $closeError',
-                     closeErrorStack);
-      });
-    });
-  });
+  return appengine_internal.runAppEngine((HttpRequest request,
+                                          ClientContext context) {
+    ss.register(_APPENGINE_CONTEXT, context);
+    handler(request);
+  }, errorHandler);
 }
 
 /**
@@ -98,13 +74,4 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
  * This getter can only be called inside a request handler which was passed to
  * [runAppEngine].
  */
-ClientContext get context {
-  var context = Zone.current[_APPENGINE_CONTEXT];
-  if (context == null) {
-    throw new StateError(
-        'Could not retrieve the request handler context. Either you were not '
-        'using `runAppEngine` or you are calling this method outside of the '
-        'request handler zone.');
-  }
-  return context;
-}
+ClientContext get context => ss.lookup(_APPENGINE_CONTEXT);

@@ -7,25 +7,36 @@ library appengine.internal;
 import 'dart:async';
 import 'dart:io';
 
+import 'package:gcloud/service_scope.dart' as ss;
 import 'package:gcloud/storage.dart' as storage;
+import 'package:gcloud/db.dart' as db;
+import 'package:gcloud/datastore.dart' as datastore;
+import 'package:gcloud/http.dart' as gcloud_http;
+import 'package:http/http.dart' as http;
 import 'package:googleapis_auth/auth_io.dart' as auth;
+
+import '../api/logging.dart' as logging;
+import '../api/modules.dart' as modules;
+import '../api/memcache.dart' as memcache;
+import '../api/users.dart' as users;
 
 import 'protobuf_api/rpc/rpc_service.dart';
 import 'protobuf_api/rpc/rpc_service_remote_api.dart';
 
 import 'appengine_context.dart';
-import 'app_engine_request_handler.dart';
 import 'client_context.dart';
 import 'server/server.dart';
 import 'server/context_registry.dart';
 
+// Currently only with storage scopes.
+http.Client _authClient;
 ContextRegistry _contextRegistry;
 
 ClientContext contextFromRequest(HttpRequest request) {
   return _contextRegistry.lookup(request);
 }
 
-Future runAppEngine(AppEngineRequestHandler handler) {
+Future<ContextRegistry> initializeAppEngine() {
   RPCService initializeRPC() {
     var apiHostString = Platform.environment['API_HOST'];
     var apiPortString = Platform.environment['API_PORT'];
@@ -71,9 +82,7 @@ Future runAppEngine(AppEngineRequestHandler handler) {
           var creds = new auth.ServiceAccountCredentials.fromJson(keyJson);
           return auth.clientViaServiceAccount(creds, storage.Storage.SCOPES)
               .then((client) {
-                // TODO: Once we have a proper shutdown mechanism for an
-                // AppEngine server, we need to close the HTTP client created
-                // here.
+                _authClient = client;
                 return new storage.Storage(client, context.applicationID);
               });
         });
@@ -81,13 +90,10 @@ Future runAppEngine(AppEngineRequestHandler handler) {
         return new Future.value();
       }
     } else {
-      return auth.clientViaMetadataServer()
-          .then((client) {
-            // TODO: Once we have a proper shutdown mechanism for an
-            // AppEngine server, we need to close the HTTP client created
-            // here.
-            return new storage.Storage(client, context.applicationID);
-          });
+      return auth.clientViaMetadataServer().then((client) {
+        _authClient = client;
+        return new storage.Storage(client, context.applicationID);
+      });
     }
   }
 
@@ -95,8 +101,76 @@ Future runAppEngine(AppEngineRequestHandler handler) {
   var rpcService = initializeRPC();
 
   return getStorage(context).then((storage) {
-    _contextRegistry = new ContextRegistry(rpcService, storage, context);
+    return new ContextRegistry(rpcService, storage, context);
+  });
+}
+
+void initializeContext(Services services) {
+  db.registerDbService(services.db);
+  datastore.registerDatastoreService(services.db.datastore);
+  storage.registerStorageService(services.storage);
+  logging.registerLoggingService(services.logging);
+  modules.registerModulesService(services.modules);
+  memcache.registerMemcacheService(services.memcache);
+
+  if (_authClient != null) {
+    gcloud_http.registerAuthClientService(_authClient);
+
+    // This will automatically close the authenticated HTTP client when the
+    // HTTP server shuts down.
+    ss.registerScopeExitCallback(() => _authClient.close());
+  }
+}
+
+void initializeRequestSpecificServices(Services services) {
+  logging.registerLoggingService(services.logging);
+  users.registerUserService(services.users);
+}
+
+Future runAppEngine(void handler(request, context), void onError(e, s)) {
+  return initializeAppEngine().then((ContextRegistry contextRegistry) {
+    _contextRegistry = contextRegistry;
     var appengineServer = new AppEngineHttpServer(_contextRegistry);
-    return new Future.value(appengineServer.run(handler));
+    var backgroundServices = _contextRegistry.newBackgroundServices();
+
+    ss.fork(() {
+      initializeContext(backgroundServices);
+      appengineServer.run((request, context) {
+        ss.fork(() {
+          initializeRequestSpecificServices(context.services);
+          handler(request, context);
+          return request.response.done;
+        }, onError: (error, stack) {
+          var context = _contextRegistry.lookup(request);
+          if (context != null) {
+            try {
+              context.services.logging.error(
+                  'Uncaught error in request handler: $error\n$stack');
+            } catch (e) {
+              print('Error while logging uncaught error: $e');
+            }
+          } else {
+            // TODO: We could log on the background ticket here.
+            print('Unable to log error, since response has already been sent.');
+          }
+          onError('Uncaught error in request handler zone: $error', stack);
+
+          // In many cases errors happen during request processing or response
+          // preparation. In such cases we want to close the connection, since
+          // user code might not be able to.
+          try {
+            request.response.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
+          } on StateError catch (_) {}
+            request.response.close().catchError((closeError, closeErrorStack) {
+              onError('Forcefully closing response, due to error in request '
+                      'handler zone, resulted in an error: $closeError',
+                      closeErrorStack);
+          });
+        });
+      });
+      return appengineServer.done;
+    });
+
+    return new Future.value();
   });
 }

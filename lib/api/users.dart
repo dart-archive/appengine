@@ -6,6 +6,8 @@ library appengine.api.users;
 
 import 'dart:async';
 
+import 'package:gcloud/service_scope.dart' as ss;
+
 class User {
   final String email;
   final String id;
@@ -24,3 +26,23 @@ abstract class UserService {
 
   Future<String> createLogoutUrl(String destination);
 }
+
+/**
+ * Register a new [UserService] object.
+ *
+ * Calling this outside of a service scope or calling it more than once inside
+ * the same service scope will result in an error.
+ *
+ * See the `package:gcloud/service_scope.dart` library for more information.
+ */
+void registerUserService(UserService service) {
+  ss.register(#_appengine.users, service);
+}
+
+/**
+ * The user service.
+ *
+ * Request handlers will be run inside a service scope which contains the
+ * users service.
+ */
+UserService get userService => ss.lookup(#_appengine.users);

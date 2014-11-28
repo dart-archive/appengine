@@ -6,6 +6,8 @@ library appengine.api.modules;
 
 import 'dart:async';
 
+import 'package:gcloud/service_scope.dart' as ss;
+
 abstract class ModulesService {
   /**
    * Returns the current running module name.
@@ -62,3 +64,23 @@ abstract class ModulesService {
    */
   Future<String> hostname([String module, String version, String instance]);
 }
+
+/**
+ * Register a new [ModulesService] object.
+ *
+ * Calling this outside of a service scope or calling it more than once inside
+ * the same service scope will result in an error.
+ *
+ * See the `package:gcloud/service_scope.dart` library for more information.
+ */
+void registerModulesService(ModulesService service) {
+  ss.register(#_appengine.modules, service);
+}
+
+/**
+ * The modules service.
+ *
+ * Request handlers will be run inside a service scope which contains the
+ * modules service.
+ */
+ModulesService get modulesService => ss.lookup(#_appengine.modules);
