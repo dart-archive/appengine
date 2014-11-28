@@ -42,6 +42,11 @@ class RPCServiceRemoteApi extends RPCServiceBase implements RPCService {
             apiResponse.applicationError.code,
             apiResponse.applicationError.detail);
       }
+      // This can e.g. happen if the request ticket is invalid.
+      if (apiResponse.hasRpcError()) {
+        throw new Exception('An internal error occured while making a RPC call '
+            '(${apiResponse.rpcError.toString().replaceAll('\n','  ')}).');
+      }
       return apiResponse.response;
     });
   }
