@@ -23,7 +23,7 @@ export 'api/users.dart';
 export 'src/app_engine_request_handler.dart';
 export 'src/client_context.dart';
 
-const Symbol _APPENGINE_CONTEXT = #_appengine.context;
+const Symbol _APPENGINE_CONTEXT = #appengine.context;
 
 /**
  * Starts serving requests coming to this AppEngine application.

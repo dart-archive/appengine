@@ -36,7 +36,7 @@ abstract class UserService {
  * See the `package:gcloud/service_scope.dart` library for more information.
  */
 void registerUserService(UserService service) {
-  ss.register(#_appengine.users, service);
+  ss.register(#appengine.users, service);
 }
 
 /**
@@ -45,4 +45,4 @@ void registerUserService(UserService service) {
  * Request handlers will be run inside a service scope which contains the
  * users service.
  */
-UserService get userService => ss.lookup(#_appengine.users);
+UserService get userService => ss.lookup(#appengine.users);

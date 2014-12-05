@@ -16,7 +16,7 @@ import 'package:memcache/memcache.dart';
  * See the `package:gcloud/service_scope.dart` library for more information.
  */
 void registerMemcacheService(Memcache service) {
-  ss.register(#_appengine.memcache, service);
+  ss.register(#appengine.memcache, service);
 }
 
 /**
@@ -25,4 +25,4 @@ void registerMemcacheService(Memcache service) {
  * Request handlers will be run inside a service scope which contains the
  * memcache service.
  */
-Memcache get memcacheService => ss.lookup(#_appengine.memcache);
+Memcache get memcacheService => ss.lookup(#appengine.memcache);

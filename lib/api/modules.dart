@@ -74,7 +74,7 @@ abstract class ModulesService {
  * See the `package:gcloud/service_scope.dart` library for more information.
  */
 void registerModulesService(ModulesService service) {
-  ss.register(#_appengine.modules, service);
+  ss.register(#appengine.modules, service);
 }
 
 /**
@@ -83,4 +83,4 @@ void registerModulesService(ModulesService service) {
  * Request handlers will be run inside a service scope which contains the
  * modules service.
  */
-ModulesService get modulesService => ss.lookup(#_appengine.modules);
+ModulesService get modulesService => ss.lookup(#appengine.modules);

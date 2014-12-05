@@ -58,7 +58,7 @@ abstract class Logging {
  * See the `package:gcloud/service_scope.dart` library for more information.
  */
 void registerLoggingService(Logging service) {
-  ss.register(#_appengine.logging, service);
+  ss.register(#appengine.logging, service);
 }
 
 /**
@@ -67,4 +67,4 @@ void registerLoggingService(Logging service) {
  * Request handlers will be run inside a service scope which contains the
  * modules service.
  */
-Logging get loggingService => ss.lookup(#_appengine.logging);
+Logging get loggingService => ss.lookup(#appengine.logging);

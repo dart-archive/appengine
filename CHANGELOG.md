@@ -1,3 +1,7 @@
+## 0.2.4+1
+
+* Change the service scope keys keys to non-private symbols.
+
 ## 0.2.4
 
 * Run request handlers inside a service scope
