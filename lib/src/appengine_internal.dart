@@ -97,12 +97,17 @@ Future<ContextRegistry> initializeAppEngine() {
     }
   }
 
-  var context = getDockerContext();
-  var rpcService = initializeRPC();
+  if (_contextRegistry != null) {
+    return new Future.value(_contextRegistry);
+  } else {
+    var context = getDockerContext();
+    var rpcService = initializeRPC();
 
-  return getStorage(context).then((storage) {
-    return new ContextRegistry(rpcService, storage, context);
-  });
+    return getStorage(context).then((storage) {
+      _contextRegistry = new ContextRegistry(rpcService, storage, context);
+      return _contextRegistry;
+    });
+  }
 }
 
 void initializeContext(Services services) {
@@ -127,50 +132,52 @@ void initializeRequestSpecificServices(Services services) {
   users.registerUserService(services.users);
 }
 
-Future runAppEngine(void handler(request, context), void onError(e, s)) {
+Future withAppEngineServices(Future callback()) {
   return initializeAppEngine().then((ContextRegistry contextRegistry) {
-    _contextRegistry = contextRegistry;
-    var appengineServer = new AppEngineHttpServer(_contextRegistry);
-    var backgroundServices = _contextRegistry.newBackgroundServices();
-
-    ss.fork(() {
+    return ss.fork(() {
+      var backgroundServices = _contextRegistry.newBackgroundServices();
       initializeContext(backgroundServices);
-      appengineServer.run((request, context) {
-        ss.fork(() {
-          initializeRequestSpecificServices(context.services);
-          handler(request, context);
-          return request.response.done;
-        }, onError: (error, stack) {
-          var context = _contextRegistry.lookup(request);
-          if (context != null) {
-            try {
-              context.services.logging.error(
-                  'Uncaught error in request handler: $error\n$stack');
-            } catch (e) {
-              print('Error while logging uncaught error: $e');
-            }
-          } else {
-            // TODO: We could log on the background ticket here.
-            print('Unable to log error, since response has already been sent.');
-          }
-          onError('Uncaught error in request handler zone: $error', stack);
+      return callback();
+    });
+  });
+}
 
-          // In many cases errors happen during request processing or response
-          // preparation. In such cases we want to close the connection, since
-          // user code might not be able to.
+Future runAppEngine(void handler(request, context), void onError(e, s)) {
+  return withAppEngineServices(() {
+    var appengineServer = new AppEngineHttpServer(_contextRegistry);
+    appengineServer.run((request, context) {
+      ss.fork(() {
+        initializeRequestSpecificServices(context.services);
+        handler(request, context);
+        return request.response.done;
+      }, onError: (error, stack) {
+        var context = _contextRegistry.lookup(request);
+        if (context != null) {
           try {
-            request.response.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
-          } on StateError catch (_) {}
-            request.response.close().catchError((closeError, closeErrorStack) {
-              onError('Forcefully closing response, due to error in request '
-                      'handler zone, resulted in an error: $closeError',
-                      closeErrorStack);
-          });
+            context.services.logging.error(
+                'Uncaught error in request handler: $error\n$stack');
+          } catch (e) {
+            print('Error while logging uncaught error: $e');
+          }
+        } else {
+          // TODO: We could log on the background ticket here.
+          print('Unable to log error, since response has already been sent.');
+        }
+        onError('Uncaught error in request handler zone: $error', stack);
+
+        // In many cases errors happen during request processing or response
+        // preparation. In such cases we want to close the connection, since
+        // user code might not be able to.
+        try {
+          request.response.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
+        } on StateError catch (_) {}
+          request.response.close().catchError((closeError, closeErrorStack) {
+            onError('Forcefully closing response, due to error in request '
+                    'handler zone, resulted in an error: $closeError',
+                    closeErrorStack);
         });
       });
-      return appengineServer.done;
     });
-
-    return new Future.value();
+    return appengineServer.done;
   });
 }

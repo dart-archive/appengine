@@ -7,13 +7,13 @@ library appengine;
 import 'dart:async';
 import 'dart:io';
 
+export 'package:gcloud/http.dart';
 import 'package:gcloud/service_scope.dart' as ss;
 
 import 'src/appengine_internal.dart' as appengine_internal;
 import 'src/app_engine_request_handler.dart';
 import 'src/client_context.dart';
 
-export 'package:gcloud/http.dart';
 export 'api/errors.dart';
 export 'api/logging.dart';
 export 'api/modules.dart';
@@ -43,6 +43,9 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
  * The [onError] function can take either the error object, or the error object
  * and a stack as an argument. If [onError] was not provided, errors will get
  * printed out to the stdout of this process.
+ *
+ * The returned `Future` will complete when the HTTP server has been shutdown
+ * and is no longer serving requests.
  */
 Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
   var errorHandler;
@@ -66,6 +69,48 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
     ss.register(_APPENGINE_CONTEXT, context);
     handler(request);
   }, errorHandler);
+}
+
+/**
+ * Runs [callback] inside a new service scope with appengine services added.
+ *
+ * The services available to `callback` are all non-request specific appengine
+ * services e.g. `memcacheService`, `dbService`.
+ *
+ * See `package:gcloud/service_scope.dart` for more information on service
+ * scopes.
+ *
+ * Here is an example on how this can be used:
+ *
+ *     import 'dart:async';
+ *     import 'dart:io';
+ *     import 'package:appengine/appengine.dart';
+ *
+ *     Future backgroundWork() {
+ *       return dbService.query(Person).run().toList().then((persons) {
+ *         // Do something with `persons`.
+ *       });
+ *     }
+ *
+ *     void mainHandler(HttpRequest request) {
+ *       dbService.query(Greeting).run().toList().then((greetings) {
+ *         request.response
+ *             ..write('Number of greetings: ${greetings.length}')
+ *             ..close();
+ *       });
+ *     }
+ *
+ *     main() {
+ *       withAppEngineServices(() {
+ *         return Future.wait([
+ *            runAppEngine(mainHandler),
+ *            backgroundWork(),
+ *         ]);
+ *       });
+ *     }
+ */
+Future withAppEngineServices(Future callback()) {
+  return appengine_internal.withAppEngineServices(callback);
 }
 
 /**

@@ -1,3 +1,8 @@
+## 0.2.5
+
+* Added withAppEngineServices() function which allows running arbitrary code
+  using AppEngine services via a service scope.
+
 ## 0.2.4+1
 
 * Change the service scope keys keys to non-private symbols.
