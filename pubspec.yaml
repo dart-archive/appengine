@@ -1,5 +1,5 @@
 name: appengine
-version: 0.2.5
+version: 0.2.6-dev
 author: Dart Team <misc@dartlang.org>
 description: Support for using Dart as a custom runtime on Google App Engine Managed VMs
 homepage: https://www.dartlang.org/cloud
@@ -13,5 +13,7 @@ dependencies:
   memcache: '>=0.1.0 <0.2.0'
   path: '>=1.2.0 <2.0.0'
   protobuf: '>=0.3.3 <0.4.0'
+  logging: '>=0.9.3 <0.10.0'
+
 dev_dependencies:
   unittest: '>=0.11.0 <0.12.0'

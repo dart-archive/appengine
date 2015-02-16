@@ -27,10 +27,12 @@ import 'appengine_context.dart';
 import 'client_context.dart';
 import 'server/server.dart';
 import 'server/context_registry.dart';
+import 'server/logging_package_adaptor.dart';
 
 // Currently only with storage scopes.
 http.Client _authClient;
 ContextRegistry _contextRegistry;
+bool _loggingPackageEnabled = false;
 
 ClientContext contextFromRequest(HttpRequest request) {
   return _contextRegistry.lookup(request);
@@ -180,4 +182,10 @@ Future runAppEngine(void handler(request, context), void onError(e, s)) {
     });
     return appengineServer.done;
   });
+}
+
+void useLoggingPackageAdaptor() {
+  if (_loggingPackageEnabled) return;
+  _loggingPackageEnabled = true;
+  setupAppEngineLogging();
 }

@@ -120,3 +120,11 @@ Future withAppEngineServices(Future callback()) {
  * [runAppEngine].
  */
 ClientContext get context => ss.lookup(_APPENGINE_CONTEXT);
+
+/**
+ * Will register for log events produced by `package:logging` and forwards
+ * log records to the AppEngine logging service.
+ */
+void useLoggingPackageAdaptor() {
+  appengine_internal.useLoggingPackageAdaptor();
+}

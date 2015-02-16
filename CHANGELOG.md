@@ -1,3 +1,7 @@
+## 0.2.6
+
+* Added adaptor for `package:logging` via `useLoggingPackageAdaptor()`.
+
 ## 0.2.5
 
 * Added withAppEngineServices() function which allows running arbitrary code
