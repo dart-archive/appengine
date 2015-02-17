@@ -61,16 +61,6 @@ void main() {
       }));
     });
 
-    test('logging_adaptor_not_enabled', () {
-      fork(expectAsync(() async {
-        var logger = new Logger('a.b');
-        var mock = new LoggingMock();
-
-        mock.expectNoCall();
-        logger.info('abc');
-      }));
-    });
-
     group('use_logging_adaptor', () {
       test('enable_logging_adaptor', () {
         // This is a global setting. We rely on the test runner executing tests
@@ -97,7 +87,6 @@ void main() {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
 
-        var outerZone = Zone.current;
         return fork(expectAsync(() async {
           registerLoggingService(mock);
 
@@ -131,7 +120,6 @@ void main() {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
 
-        var outerZone = Zone.current;
         return fork(expectAsync(() async {
           registerLoggingService(mock);
           mock.expect((LogLevel level, String message, DateTime ts) {
@@ -147,7 +135,6 @@ void main() {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
 
-        var outerZone = Zone.current;
         return fork(expectAsync(() async {
           registerLoggingService(mock);
           mock.expect((LogLevel level, String message, DateTime ts) {
