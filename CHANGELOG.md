@@ -1,6 +1,7 @@
 ## 0.2.6
 
 * Added adaptor for `package:logging` via `useLoggingPackageAdaptor()`.
+* Added workaround for incorrect `requestedUri` comming from 'dart:io'.
 
 ## 0.2.5
 
