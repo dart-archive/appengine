@@ -9,7 +9,7 @@ import 'package:logging/logging.dart';
 import '../../api/logging.dart';
 
 final Map<Level, LogLevel> _loggingLevel2AppengineLoggingLevel = {
-  Level.OFF: LogLevel.DEBUG,
+  Level.OFF: null,
   Level.ALL: LogLevel.DEBUG,
   Level.FINEST: LogLevel.DEBUG,
   Level.FINER: LogLevel.DEBUG,
@@ -34,19 +34,21 @@ void setupAppEngineLogging() {
 
       if (logging != null) {
         var level = _loggingLevel2AppengineLoggingLevel[record.level];
-        var message = '${record.loggerName}: ${record.message}';
+        if (level != null) {
+          var message = '${record.loggerName}: ${record.message}';
 
-        addBlock(String header, String body) {
-          body = body.replaceAll('\n', '\n    ');
-          message = '$message\n\n$header:\n    $body';
+          addBlock(String header, String body) {
+            body = body.replaceAll('\n', '\n    ');
+            message = '$message\n\n$header:\n    $body';
+          }
+
+          if (record.error != null) addBlock('Error', '${record.error}');
+          if (record.stackTrace != null) {
+            addBlock('Stack', '${record.stackTrace}');
+          }
+
+          logging.log(level, message, timestamp: record.time);
         }
-
-        if (record.error != null) addBlock('Error', '${record.error}');
-        if (record.stackTrace != null) {
-          addBlock('Stack', '${record.stackTrace}');
-        }
-
-        logging.log(level, message, timestamp: record.time);
       }
     });
   });

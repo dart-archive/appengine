@@ -91,7 +91,7 @@ void main() {
           registerLoggingService(mock);
 
           var logLevelMapping = {
-            Level.OFF: LogLevel.DEBUG,
+            Level.OFF: null,
             Level.ALL: LogLevel.DEBUG,
             Level.FINEST: LogLevel.DEBUG,
             Level.FINER: LogLevel.DEBUG,
@@ -104,10 +104,12 @@ void main() {
           };
           logLevelMapping.forEach((level, appengineLevel) {
             if (logger.isLoggable(level)) {
-              mock.expect((LogLevel level, String message, DateTime ts) {
-                expect(level, equals(appengineLevel));
-                expect(message, equals('a.b: abc'));
-              });
+              if (appengineLevel != null) {
+                mock.expect((LogLevel level, String message, DateTime ts) {
+                  expect(level, equals(appengineLevel));
+                  expect(message, equals('a.b: abc'));
+                });
+              }
             } else {
               mock.expectNoCall();
             }
