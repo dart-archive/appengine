@@ -226,7 +226,7 @@ class AppengineHttpRequest implements HttpRequest {
   Uri get requestedUri {
     // dart:io constructs the wrong `requestedUri` for HTTP requests
     // coming from AppEngine.
-    var https = _realRequest.headers['x-appengine-https'];
+    String https = _realRequest.headers.value('x-appengine-https');
     if (https != null) {
       var scheme = https == 'on' ? 'https' : 'http';
       return _realRequest.requestedUri.replace(scheme: scheme);

@@ -1,3 +1,8 @@
+## 0.2.6+1
+
+* Correctly handling `x-appengine-https` header.
+* Turn logging of for Level.OFF
+
 ## 0.2.6
 
 * Added adaptor for `package:logging` via `useLoggingPackageAdaptor()`.
