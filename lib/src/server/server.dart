@@ -48,7 +48,6 @@ class AppEngineHttpServer {
       _httpServer = server;
 
       server.listen((HttpRequest request) {
-        var hooksBeforeSendingResponse = [];
         var appengineRequest = new AppengineHttpRequest(request);
 
         _info("Got request: ${appengineRequest.uri}");

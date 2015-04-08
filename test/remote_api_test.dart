@@ -28,7 +28,7 @@ class MockRPCService extends RPCService {
   Future<List<int>> call(String apiPackage,
                          String method,
                          List<int> requestProtocolBuffer,
-                         {String ticket}) {
+                         {String ticket: 'invalid-ticket'}) {
     expect(apiPackage, equals(_expectedPbRequest.serviceName));
     expect(method, equals(_expectedPbRequest.method));
     expect(requestProtocolBuffer, equals(_expectedPbRequest.request));
@@ -52,7 +52,7 @@ class ErrorMockRPCService extends RPCService {
   Future<List<int>> call(String apiPackage,
                          String method,
                          List<int> requestProtocolBuffer,
-                         {String ticket}) {
+                         {String ticket: 'invalid-ticket'}) {
     return new Future.sync(() {
       if (throwNetworkError) {
         throw new NetworkError("network error from mock");

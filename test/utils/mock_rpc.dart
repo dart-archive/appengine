@@ -28,7 +28,7 @@ class MockRPCService extends RPCService {
   Future<List<int>> call(String apiPackage,
                          String method,
                          List<int> requestProtocolBuffer,
-                         {String ticket}) {
+                         {String ticket: 'invalid-ticket'}) {
     if (_service != apiPackage) {
       throw "This Mock only works for the $_service service.";
     }

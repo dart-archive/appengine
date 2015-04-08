@@ -29,14 +29,7 @@ import 'server/server.dart';
 import 'server/context_registry.dart';
 import 'server/logging_package_adaptor.dart';
 
-// Currently only with storage scopes.
-http.Client _authClient;
-ContextRegistry _contextRegistry;
 bool _loggingPackageEnabled = false;
-
-ClientContext contextFromRequest(HttpRequest request) {
-  return _contextRegistry.lookup(request);
-}
 
 Future<ContextRegistry> initializeAppEngine() {
   RPCService initializeRPC() {
@@ -84,7 +77,7 @@ Future<ContextRegistry> initializeAppEngine() {
           var creds = new auth.ServiceAccountCredentials.fromJson(keyJson);
           return auth.clientViaServiceAccount(creds, storage.Storage.SCOPES)
               .then((client) {
-                _authClient = client;
+                gcloud_http.registerAuthClientService(client, close: true);
                 return new storage.Storage(client, context.applicationID);
               });
         });
@@ -93,23 +86,19 @@ Future<ContextRegistry> initializeAppEngine() {
       }
     } else {
       return auth.clientViaMetadataServer().then((client) {
-        _authClient = client;
+        gcloud_http.registerAuthClientService(client, close: true);
         return new storage.Storage(client, context.applicationID);
       });
     }
   }
 
-  if (_contextRegistry != null) {
-    return new Future.value(_contextRegistry);
-  } else {
-    var context = getDockerContext();
-    var rpcService = initializeRPC();
+  var context = getDockerContext();
+  var rpcService = initializeRPC();
 
-    return getStorage(context).then((storage) {
-      _contextRegistry = new ContextRegistry(rpcService, storage, context);
-      return _contextRegistry;
-    });
-  }
+  return getStorage(context).then((storage) {
+    var contextRegistry = new ContextRegistry(rpcService, storage, context);
+    return contextRegistry;
+  });
 }
 
 void initializeContext(Services services) {
@@ -119,14 +108,6 @@ void initializeContext(Services services) {
   logging.registerLoggingService(services.logging);
   modules.registerModulesService(services.modules);
   memcache.registerMemcacheService(services.memcache);
-
-  if (_authClient != null) {
-    gcloud_http.registerAuthClientService(_authClient);
-
-    // This will automatically close the authenticated HTTP client when the
-    // HTTP server shuts down.
-    ss.registerScopeExitCallback(() => _authClient.close());
-  }
 }
 
 void initializeRequestSpecificServices(Services services) {
@@ -134,26 +115,30 @@ void initializeRequestSpecificServices(Services services) {
   users.registerUserService(services.users);
 }
 
-Future withAppEngineServices(Future callback()) {
-  return initializeAppEngine().then((ContextRegistry contextRegistry) {
-    return ss.fork(() {
-      var backgroundServices = _contextRegistry.newBackgroundServices();
+Future withAppEngineServicesInternal(Future callback(contextRegistry)) {
+  return ss.fork(() {
+    return initializeAppEngine().then((ContextRegistry contextRegistry) {
+      var backgroundServices = contextRegistry.newBackgroundServices();
       initializeContext(backgroundServices);
-      return callback();
+      return callback(contextRegistry);
     });
   });
 }
 
+Future withAppEngineServices(Future callback()) {
+  return withAppEngineServicesInternal((_) => callback());
+}
+
 Future runAppEngine(void handler(request, context), void onError(e, s)) {
-  return withAppEngineServices(() {
-    var appengineServer = new AppEngineHttpServer(_contextRegistry);
+  return withAppEngineServicesInternal((ContextRegistry contextRegistry) {
+    var appengineServer = new AppEngineHttpServer(contextRegistry);
     appengineServer.run((request, context) {
       ss.fork(() {
         initializeRequestSpecificServices(context.services);
         handler(request, context);
         return request.response.done;
       }, onError: (error, stack) {
-        var context = _contextRegistry.lookup(request);
+        var context = contextRegistry.lookup(request);
         if (context != null) {
           try {
             context.services.logging.error(

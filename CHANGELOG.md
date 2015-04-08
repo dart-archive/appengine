@@ -1,3 +1,8 @@
+## 0.2.6+2
+
+* Do not close `authClient`, since `registerStorageService` does it
+  automatically.
+
 ## 0.2.6+1
 
 * Correctly handling `x-appengine-https` header.
