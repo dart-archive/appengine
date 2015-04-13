@@ -1,3 +1,7 @@
+## 0.2.6+3
+
+* Update dependencies to allow gcloud 0.2.0 with Cloud Pub/Sub support.
+
 ## 0.2.6+2
 
 * Do not close `authClient`, since `registerStorageService` does it
