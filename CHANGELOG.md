@@ -1,3 +1,11 @@
+## 0.3.0
+
+* Pass the memcache expiration time to the memcache service. Before the
+  expiration argument to Memcache.set and Memcache.setAll was ignored.
+
+* Removed the expiration argument to Memcache.clear. It is not supported by
+  the App Engine memcache API.
+
 ## 0.2.6+3
 
 * Update dependencies to allow gcloud 0.2.0 with Cloud Pub/Sub support.

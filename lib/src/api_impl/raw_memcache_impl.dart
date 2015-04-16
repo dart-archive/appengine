@@ -93,6 +93,7 @@ class RawMemcacheRpcImpl implements raw.RawMemcache {
         default:
           throw new UnsupportedError('Unsupported set operation $operation');
       }
+      item.expirationTime = operation.expiration;
       request.item.add(item);
     });
     return _clientRPCStub.Set(request).then((pb.MemcacheSetResponse response) {

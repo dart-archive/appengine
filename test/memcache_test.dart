@@ -54,17 +54,31 @@ main() {
       }));
       expect(memcache.set('language', 'dart'), throwsA(isMemcacheNotStored));
 
-      // Tests sucessfull store
+      // Tests sucessfull store.
       mock.register('Set', MemcacheSetRequest, expectAsync((request) {
         expect(request.item[0].key, equals(UTF8.encode('language')));
         expect(request.item[0].value, equals(UTF8.encode('dart')));
+        expect(request.item[0].expirationTime, 0);
 
         var response = new MemcacheSetResponse();
         response.setStatus.add(MemcacheSetResponse_SetStatusCode.STORED);
         return new Future.value(response.writeToBuffer());
       }));
-
       expect(memcache.set('language', 'dart'), completes);
+
+      // Tests sucessfull store with expiration.
+      mock.register('Set', MemcacheSetRequest, expectAsync((request) {
+        expect(request.item[0].key, equals(UTF8.encode('language')));
+        expect(request.item[0].value, equals(UTF8.encode('dart')));
+        expect(request.item[0].expirationTime, 3600);
+
+        var response = new MemcacheSetResponse();
+        response.setStatus.add(MemcacheSetResponse_SetStatusCode.STORED);
+        return new Future.value(response.writeToBuffer());
+      }));
+      expect(
+          memcache.set('language', 'dart', expiration: new Duration(hours: 1)),
+          completes);
     });
 
     var setAllMap = {
@@ -77,12 +91,13 @@ main() {
     var setAllValues =
         [UTF8.encode('dart'), UTF8.encode('dart'), UTF8.encode('dart')];
 
-    checkSetAllRequest(request, setPolicy) {
+    checkSetAllRequest(request, setPolicy, expirationTime) {
       expect(request.item.length, setAllKeys.length);
       for (var i = 0; i < setAllKeys.length; i++) {
         expect(request.item[i].setPolicy, setPolicy);
         expect(request.item[i].key, setAllKeys[i]);
         expect(request.item[i].value, setAllValues[i]);
+        expect(request.item[i].expirationTime, expirationTime);
       }
     }
 
@@ -114,7 +129,7 @@ main() {
 
       // Tests not stored.
       mock.register('Set', MemcacheSetRequest, expectAsync((request) {
-        checkSetAllRequest(request, MemcacheSetRequest_SetPolicy.SET);
+        checkSetAllRequest(request, MemcacheSetRequest_SetPolicy.SET, 0);
 
         var response = new MemcacheSetResponse();
         response.setStatus.add(MemcacheSetResponse_SetStatusCode.NOT_STORED);
@@ -124,9 +139,9 @@ main() {
       }));
       expect(memcache.setAll(setAllMap), throwsA(isMemcacheNotStored));
 
-      // Tests sucessfull store
+      // Tests sucessfull store.
       mock.register('Set', MemcacheSetRequest, expectAsync((request) {
-        checkSetAllRequest(request, MemcacheSetRequest_SetPolicy.SET);
+        checkSetAllRequest(request, MemcacheSetRequest_SetPolicy.SET, 0);
 
         var response = new MemcacheSetResponse();
         response.setStatus.add(MemcacheSetResponse_SetStatusCode.STORED);
@@ -134,8 +149,20 @@ main() {
         response.setStatus.add(MemcacheSetResponse_SetStatusCode.STORED);
         return new Future.value(response.writeToBuffer());
       }));
-
       expect(memcache.setAll(setAllMap), completes);
+
+      // Tests sucessfull store with expiration.
+      mock.register('Set', MemcacheSetRequest, expectAsync((request) {
+        checkSetAllRequest(request, MemcacheSetRequest_SetPolicy.SET, 1800);
+
+        var response = new MemcacheSetResponse();
+        response.setStatus.add(MemcacheSetResponse_SetStatusCode.STORED);
+        response.setStatus.add(MemcacheSetResponse_SetStatusCode.STORED);
+        response.setStatus.add(MemcacheSetResponse_SetStatusCode.STORED);
+        return new Future.value(response.writeToBuffer());
+      }));
+      expect(memcache.setAll(setAllMap, expiration: new Duration(minutes: 30)),
+             completes);
     });
 
     test('get', () {
