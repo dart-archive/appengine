@@ -1,3 +1,7 @@
+## 0.3.0+1
+
+* Widen dependency constraint on `package:logging`.
+
 ## 0.3.0
 
 * Pass the memcache expiration time to the memcache service. Before the
