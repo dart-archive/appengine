@@ -454,7 +454,6 @@ main() {
 
     test('increment-decrement-errors', () {
       var key1 = 'key';
-      var key2 = UTF8.encode(key1);
 
       var mock = new MockRPCService('memcache');
       var memcache = new MemCacheImpl(new RawMemcacheRpcImpl(mock, ''));

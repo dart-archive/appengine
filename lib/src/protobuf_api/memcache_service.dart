@@ -23,7 +23,7 @@ class MemcacheServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new MemcacheGetResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });
@@ -34,7 +34,7 @@ class MemcacheServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new MemcacheSetResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -45,7 +45,7 @@ class MemcacheServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new MemcacheDeleteResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -56,7 +56,7 @@ class MemcacheServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new MemcacheIncrementResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -68,7 +68,7 @@ class MemcacheServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new MemcacheBatchIncrementResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -79,7 +79,7 @@ class MemcacheServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new MemcacheFlushResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -90,7 +90,7 @@ class MemcacheServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new MemcacheStatsResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -101,7 +101,7 @@ class MemcacheServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new MemcacheGrabTailResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });

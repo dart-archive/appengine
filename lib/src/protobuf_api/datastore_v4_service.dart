@@ -27,7 +27,7 @@ class DataStoreV4ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new BeginTransactionResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -39,7 +39,7 @@ class DataStoreV4ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new RollbackResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -51,7 +51,7 @@ class DataStoreV4ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new CommitResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -63,7 +63,7 @@ class DataStoreV4ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new RunQueryResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -77,7 +77,7 @@ class DataStoreV4ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new ContinueQueryResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -89,7 +89,7 @@ class DataStoreV4ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new LookupResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -101,7 +101,7 @@ class DataStoreV4ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new AllocateIdsResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });

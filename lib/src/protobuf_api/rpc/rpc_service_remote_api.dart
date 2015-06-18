@@ -5,7 +5,6 @@
 library rpc_service_remote_api;
 
 import 'dart:async';
-import 'dart:io';
 
 import 'rpc_service.dart';
 import 'rpc_service_base.dart';
@@ -21,11 +20,8 @@ class RPCServiceRemoteApi extends RPCServiceBase implements RPCService {
   final String hostname;
   final int port;
   final String path;
-  HttpClient _client;
 
-  RPCServiceRemoteApi(this.hostname, this.port, {this.path: '/rpc_http'}) {
-    _client = new HttpClient();
-  }
+  RPCServiceRemoteApi(this.hostname, this.port, {this.path: '/rpc_http'});
 
   Future<List<int>> call(String apiPackage,
                          String method,

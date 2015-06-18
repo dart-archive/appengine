@@ -25,7 +25,7 @@ class ModulesServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new pb.GetDefaultVersionResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });
@@ -38,7 +38,7 @@ class ModulesServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new pb.GetModulesResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });
@@ -51,7 +51,7 @@ class ModulesServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new pb.GetVersionsResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });
@@ -64,7 +64,7 @@ class ModulesServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new pb.GetHostnameResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });

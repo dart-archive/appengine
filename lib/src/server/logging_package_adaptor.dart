@@ -27,7 +27,7 @@ void setupAppEngineLogging() {
       var logging;
       try {
         logging = loggingService;
-      } on StateError catch (e) {
+      } on StateError {
         // If there is no active service scope, we'll get a `StateError` and we
         // will treat it the same way as if the logging service was `null`.
       }

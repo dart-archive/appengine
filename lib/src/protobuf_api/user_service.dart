@@ -25,7 +25,7 @@ class UserServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new pb.CreateLoginURLResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });
@@ -38,7 +38,7 @@ class UserServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new pb.CreateLogoutURLResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });
@@ -51,7 +51,7 @@ class UserServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new pb.GetOAuthUserResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });
@@ -64,7 +64,7 @@ class UserServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new pb.CheckOAuthSignatureResponse.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw ProtocolError.INVALID_RESPONSE;
           }
     });

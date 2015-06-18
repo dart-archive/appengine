@@ -375,8 +375,6 @@ runTests(Datastore datastore) {
         return test(null);
       }
 
-      var unnamedEntities1 = buildEntities(42, 43);
-      var unnamedEntities5 = buildEntities(1, 6);
       var unnamedEntities99 = buildEntities(6, 106);
 
       test('delete', () {

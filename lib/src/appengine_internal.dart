@@ -12,7 +12,6 @@ import 'package:gcloud/storage.dart' as storage;
 import 'package:gcloud/db.dart' as db;
 import 'package:gcloud/datastore.dart' as datastore;
 import 'package:gcloud/http.dart' as gcloud_http;
-import 'package:http/http.dart' as http;
 import 'package:googleapis_auth/auth_io.dart' as auth;
 
 import '../api/logging.dart' as logging;

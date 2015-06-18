@@ -25,7 +25,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new GetResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -37,7 +37,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new PutResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -49,7 +49,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new TouchResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -61,7 +61,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new DeleteResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -74,7 +74,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new QueryResult.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -87,7 +87,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new AddActionsResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -99,7 +99,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new QueryResult.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -113,7 +113,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new VoidProto.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -128,7 +128,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new Transaction.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -140,7 +140,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new CommitResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -152,7 +152,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new VoidProto.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -165,7 +165,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new AllocateIdsResponse.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -178,7 +178,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new VoidProto.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -190,7 +190,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new VoidProto.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -202,7 +202,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new CompositeIndices.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });
@@ -214,7 +214,7 @@ class DataStoreV3ServiceClientRPCStub {
         .then((List<int> response) {
       try {
         return new VoidProto.fromBuffer(response);
-      } on InvalidProtocolBufferException catch (error) {
+      } on InvalidProtocolBufferException {
         throw ProtocolError.INVALID_RESPONSE;
       }
     });

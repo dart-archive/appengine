@@ -25,7 +25,7 @@ class LoggingServiceClientRPCStub {
         .then((List<int> response) {
           try {
             return new VoidProto.fromBuffer(response);
-          } on InvalidProtocolBufferException catch (error) {
+          } on InvalidProtocolBufferException {
             throw errors.ProtocolError.INVALID_RESPONSE;
           }
     });
