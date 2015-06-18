@@ -6,7 +6,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
 
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 import 'package:appengine/api/remote_api.dart';
 import 'package:appengine/api/errors.dart';

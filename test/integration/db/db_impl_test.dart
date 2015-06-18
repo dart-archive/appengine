@@ -6,7 +6,7 @@ library db_impl_test;
 
 import 'dart:async';
 
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 import 'package:gcloud/db.dart' as db;
 import 'package:appengine/src/appengine_context.dart';

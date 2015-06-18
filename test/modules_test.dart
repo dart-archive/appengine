@@ -4,7 +4,7 @@
 
 import 'dart:async';
 
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 import 'package:appengine/api/errors.dart';
 import 'package:appengine/src/api_impl/modules_impl.dart';

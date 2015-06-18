@@ -9,7 +9,9 @@ import 'dart:io';
 import 'package:appengine/src/appengine_context.dart';
 import 'package:appengine/src/client_context.dart';
 import 'package:appengine/src/server/assets.dart';
-import 'package:unittest/unittest.dart';
+
+import 'package:path/path.dart' as p;
+import 'package:test/test.dart';
 
 
 class _AssetError extends TypeMatcher {
@@ -39,13 +41,26 @@ Future<List<int>> getAsset(int port, String path,
       });
 }
 
-void main() {
-  if (!FileSystemEntity.isDirectorySync(AssetsManager.root)) {
-    throw new StateError('The directory "${AssetsManager.root}" does not '
-        'exist in the current directory – "${Directory.current.path}". '
-        'Try running from the "test" directory.');
+// Updates the current directory to make sure it's 'test'.
+// This allows path resolution to succeed if the tests are run from the root of
+// the project.
+void updateCurrentDirectory() {
+  var pubspec = new File(p.join(p.current, 'pubspec.yaml'));
+
+  // We're in the root directory, so make the current working directory 'test'
+  // to fix test expectations
+  if (pubspec.existsSync()) {
+    Directory.current = 'test';
   }
 
+  if (!FileSystemEntity.isDirectorySync(AssetsManager.root)) {
+    throw new StateError('The directory "${AssetsManager.root}" does not '
+    'exist in the current directory – "${Directory.current.path}". '
+    'Try running from the "test" directory.');
+  }
+}
+
+void main() {
   test('use pub serve', () {
     var uri = Uri.parse("http://localhost:9090");
     var context;
@@ -203,6 +218,8 @@ void main() {
   });
 
   group('no pub serve proxy', () {
+
+    Directory startingCurrentDir = Directory.current;
     var appServer;
     var appServerPort;
 
@@ -223,7 +240,16 @@ void main() {
       });
     }
 
+    setUp(() {
+      // These tests are using the AssetsManager in dev mode, where files are
+      // served from the file system. Update the current directory to make sure
+      // it's 'test'. This allows path resolution to succeed if the tests are
+      // run from the root of the project.
+      updateCurrentDirectory();
+    });
+
     tearDown(() {
+      Directory.current = startingCurrentDir;
       return appServer.close().then((_) {
         appServer = null;
       });

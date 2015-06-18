@@ -5,7 +5,7 @@
 import 'dart:async';
 
 import 'package:fixnum/fixnum.dart';
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 import 'package:appengine/api/errors.dart';
 import 'package:appengine/src/appengine_context.dart';

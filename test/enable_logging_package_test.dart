@@ -4,7 +4,7 @@
 
 import 'dart:async';
 
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 import 'package:appengine/appengine.dart';
 import 'package:gcloud/service_scope.dart';

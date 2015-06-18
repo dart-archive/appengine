@@ -4,7 +4,7 @@
 
 library memcache_test;
 
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 import 'package:memcache/memcache.dart';
 
 import 'package:appengine/src/protobuf_api/rpc/rpc_service_remote_api.dart';

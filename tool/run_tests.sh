@@ -27,13 +27,8 @@ sleep 3
 
 
 start_phase "Testing"
-for testfile in $(find $REPO_ROOT/test -name "*test.dart"); do
-  pushd "$REPO_ROOT/test"
-    test_file "$testfile"
-    RETURN_VALUE=$(expr $RETURN_VALUE + $?)
-  popd
-done
-
+pub run test
+RETURN_VALUE=$(expr $RETURN_VALUE + $?)
 
 start_phase "Killing API server"
 kill $API_SERVER_PID &> /dev/null

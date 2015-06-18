@@ -10,7 +10,7 @@ import 'package:appengine/src/api_impl/raw_memcache_impl.dart';
 import 'package:appengine/src/protobuf_api/internal/memcache_service.pb.dart';
 import 'package:fixnum/fixnum.dart';
 import 'package:memcache/src/memcache_impl.dart';
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 import 'utils/mock_rpc.dart';
 import 'utils/error_matchers.dart';
