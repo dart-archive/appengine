@@ -8,14 +8,14 @@ on the requirements for getting started.
 
 When you are up and running a simple hello world application looks like this:
 
-```
+```dart
 import 'dart:io';
 import 'package:appengine/appengine.dart';
 
 void requestHandler(HttpRequest request) {
   request.response
-      ..write('Hello, world!');
-      ..close();
+    ..write('Hello, world!')
+    ..close();
 }
 
 void main() {
@@ -28,12 +28,16 @@ void main() {
 Add the application configuration in a `app.yaml` file and run it locally using
 by running:
 
-    gcloud preview app run app.yaml
+```
+gcloud preview app run app.yaml
+```
 
 When you are ready to deploy your application, make sure you have authenticated
 with `gcloud` and defined your current project. Then run:
 
-    gcloud preview app deploy app.yaml
+```
+gcloud preview app deploy app.yaml
+```
 
 ### Send Feedback
 
