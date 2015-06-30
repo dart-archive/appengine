@@ -14,9 +14,10 @@ import 'package:gcloud/datastore.dart' as datastore;
 import 'package:gcloud/http.dart' as gcloud_http;
 import 'package:googleapis_auth/auth_io.dart' as auth;
 
+import '../api/errors.dart' as errors;
 import '../api/logging.dart' as logging;
-import '../api/modules.dart' as modules;
 import '../api/memcache.dart' as memcache;
+import '../api/modules.dart' as modules;
 import '../api/users.dart' as users;
 
 import 'protobuf_api/rpc/rpc_service.dart';
@@ -66,29 +67,35 @@ Future<ContextRegistry> initializeAppEngine() {
         partition, applicationID, version, module, instance, pubServeUrl);
   }
 
-  Future<storage.Storage> getStorage(AppengineContext context) {
+  Future<storage.Storage> getStorage(AppengineContext context) async {
+    auth.AuthClient client;
     if (context.isDevelopmentEnvironment) {
       // When running locally the service account path is passed through
       // an environment variable.
       var serviceAccount = Platform.environment['STORAGE_SERVICE_ACCOUNT_FILE'];
       if (serviceAccount != null) {
-        return new File(serviceAccount).readAsString().then((keyJson) {
+        try {
+          var keyJson = await new File(serviceAccount).readAsString();
           var creds = new auth.ServiceAccountCredentials.fromJson(keyJson);
-          return auth.clientViaServiceAccount(creds, storage.Storage.SCOPES)
-              .then((client) {
-                gcloud_http.registerAuthClientService(client, close: true);
-                return new storage.Storage(client, context.applicationID);
-              });
-        });
-      } else {
-        return new Future.value();
+          client =
+              await auth.clientViaServiceAccount(creds, storage.Storage.SCOPES);
+        } catch (e) {
+          throw new errors.AppEngineError(
+              'There was problem using the STORAGE_SERVICE_ACCOUNT_FILE '
+              '$serviceAccount. It may not be valid.\n'
+              '$e');
+        }
       }
     } else {
-      return auth.clientViaMetadataServer().then((client) {
-        gcloud_http.registerAuthClientService(client, close: true);
-        return new storage.Storage(client, context.applicationID);
-      });
+      client = await auth.clientViaMetadataServer();
     }
+
+    if (client == null) {
+      return null;
+    }
+
+    gcloud_http.registerAuthClientService(client, close: true);
+    return new storage.Storage(client, context.applicationID);
   }
 
   var context = getDockerContext();
