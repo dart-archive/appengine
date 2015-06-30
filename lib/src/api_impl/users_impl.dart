@@ -13,11 +13,12 @@ import '../protobuf_api/rpc/rpc_service.dart';
 import '../protobuf_api/internal/user_service.pb.dart' as pb;
 import '../server/http_wrapper.dart';
 
+const String _HTTP_HEADER_AUTH_DOMAIN = 'x-appengine-auth-domain';
+const String _HTTP_HEADER_USER_EMAIL = 'x-appengine-user-email';
+const String _HTTP_HEADER_USER_ID = 'x-appengine-user-id';
+const String _HTTP_HEADER_USER_IS_ADMIN = 'x-appengine-user-is-admin';
+
 class UserRpcImpl extends UserService {
-  static String _HTTP_HEADER_AUTH_DOMAIN = 'x-appengine-auth-domain';
-  static String _HTTP_HEADER_USER_EMAIL = 'x-appengine-user-email';
-  static String _HTTP_HEADER_USER_ID = 'x-appengine-user-id';
-  static String _HTTP_HEADER_USER_IS_ADMIN = 'x-appengine-user-is-admin';
 
   final UserServiceClientRPCStub _clientRPCStub;
   User _currentUser;
