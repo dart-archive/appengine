@@ -135,9 +135,9 @@ Future withAppEngineServices(Future callback()) {
   return withAppEngineServicesInternal((_) => callback());
 }
 
-Future runAppEngine(void handler(request, context), void onError(e, s)) {
+Future runAppEngine(void handler(request, context), void onError(e, s), {int port: 8080}) {
   return withAppEngineServicesInternal((ContextRegistry contextRegistry) {
-    var appengineServer = new AppEngineHttpServer(contextRegistry);
+    var appengineServer = new AppEngineHttpServer(contextRegistry, port: port);
     appengineServer.run((request, context) {
       ss.fork(() {
         initializeRequestSpecificServices(context.services);

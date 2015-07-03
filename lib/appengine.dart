@@ -47,7 +47,7 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
  * The returned `Future` will complete when the HTTP server has been shutdown
  * and is no longer serving requests.
  */
-Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
+Future runAppEngine(AppEngineRequestHandler handler, {Function onError, int port: 8080}) {
   var errorHandler;
   if (onError != null) {
     if (onError is ZoneUnaryCallback) {
@@ -68,7 +68,7 @@ Future runAppEngine(AppEngineRequestHandler handler, {Function onError}) {
                                           ClientContext context) {
     ss.register(_APPENGINE_CONTEXT, context);
     handler(request);
-  }, errorHandler);
+  }, errorHandler, port: port);
 }
 
 /**
