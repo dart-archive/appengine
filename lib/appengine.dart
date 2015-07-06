@@ -44,6 +44,9 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
  * and a stack as an argument. If [onError] was not provided, errors will get
  * printed out to the stdout of this process.
  *
+ * You can provide a [port] if you want to run the HTTP server on a different
+ * port than the `8080` default.
+ *
  * The returned `Future` will complete when the HTTP server has been shutdown
  * and is no longer serving requests.
  */
