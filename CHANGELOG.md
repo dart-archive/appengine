@@ -1,3 +1,7 @@
+## 0.3.1
+
+* Added optional `port` argument to `runAppEngine`.
+
 ## 0.3.0+1
 
 * Widen dependency constraint on `package:logging`.
