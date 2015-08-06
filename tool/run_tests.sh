@@ -7,6 +7,13 @@ source "$REPO_ROOT/tool/utils.sh"
 
 # Check that the necessary environment variables are set.
 check_env_variable "DART_SDK"
+
+# You must have gcloud tools installed
+#   https://cloud.google.com/sdk/gcloud/
+# Running `gcloud info` will display the Installation Root
+#   e.g. /Users/alice/google-cloud-sdk
+# The API server – api_server.py – should be at
+# [Installation Root]/platform/google_appengine/api_server.py
 check_env_variable "APPENGINE_API_SERVER"
 
 export PATH="$PATH:$DART_SDK/bin"
