@@ -1,6 +1,7 @@
 ## 0.3.1
 
 * Added optional `port` argument to `runAppEngine`.
+* Removed the call to `/bin/hostname`.
 
 ## 0.3.0+1
 
