@@ -68,6 +68,24 @@ void main() {
         useLoggingPackageAdaptor();
       });
 
+      test('root logger', () {
+        var logger = Logger.root;
+        var mock = new LoggingMock();
+
+        return fork(expectAsync(() async {
+          registerLoggingService(mock);
+
+          var level = Level.INFO;
+          var appengineLevel = LogLevel.INFO;
+
+          mock.expect((LogLevel level, String message, DateTime ts) {
+            expect(level, equals(appengineLevel));
+            expect(message, equals('abc'));
+          });
+          logger.log(level, 'abc');
+        }));
+      });
+
       test('different_zone', () {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();

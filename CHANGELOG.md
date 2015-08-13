@@ -1,3 +1,7 @@
+## 0.3.1+1
+
+* Improved output of `Logger.root` with `useLoggingPackageAdaptor`.
+
 ## 0.3.1
 
 * Added optional `port` argument to `runAppEngine`.

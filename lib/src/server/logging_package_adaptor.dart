@@ -35,7 +35,11 @@ void setupAppEngineLogging() {
       if (logging != null) {
         var level = _loggingLevel2AppengineLoggingLevel[record.level];
         if (level != null) {
-          var message = '${record.loggerName}: ${record.message}';
+          var message = record.message;
+
+          if (record.loggerName != null && record.loggerName.isNotEmpty) {
+            message = '${record.loggerName}: $message';
+          }
 
           addBlock(String header, String body) {
             body = body.replaceAll('\n', '\n    ');
