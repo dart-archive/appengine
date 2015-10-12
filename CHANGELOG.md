@@ -1,3 +1,8 @@
+## 0.3.2
+
+* Require `protobuf` package `^0.5.0`
+* Support the lastest release of `fixnum` package.
+
 ## 0.3.1+1
 
 * Improved output of `Logger.root` with `useLoggingPackageAdaptor`.
