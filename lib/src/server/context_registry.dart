@@ -42,6 +42,10 @@ class ContextRegistry {
     _modelDB = new db.ModelDBImpl();
   }
 
+  bool get isDevelopmentEnvironment {
+    return _appengineContext.isDevelopmentEnvironment;
+  }
+
   ClientContext add(AppengineHttpRequest request) {
     var ticket = request.headers.value(HTTP_HEADER_APPENGINE_TICKET);
     if (ticket == null) {

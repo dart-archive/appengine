@@ -46,7 +46,9 @@ class AppEngineHttpServer {
       server.listen((HttpRequest request) {
         var appengineRequest = new AppengineHttpRequest(request);
 
-        _info("Got request: ${appengineRequest.uri}");
+        if (!_contextRegistry.isDevelopmentEnvironment) {
+          _info("Got request: ${appengineRequest.uri}");
+        }
 
         // Default handling is sending the request to the application.
         var handler = applicationHandler;
@@ -66,7 +68,9 @@ class AppEngineHttpServer {
             () => _contextRegistry.remove(appengineRequest));
 
         appengineRequest.response.done.catchError((error) {
-          _info("Error while handling response: $error");
+          if (!_contextRegistry.isDevelopmentEnvironment) {
+            _info("Error while handling response: $error");
+          }
           _pendingRequests--;
           _checkShutdown();
         });

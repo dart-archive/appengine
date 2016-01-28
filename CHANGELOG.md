@@ -1,3 +1,8 @@
+## 0.3.3
+
+* Work around dev_appserver.py issue (it doesn't drain stdout we therefore avoid
+  printing anything).
+
 ## 0.3.2
 
 * Require `protobuf` package `^0.5.0`
