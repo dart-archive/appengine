@@ -1,3 +1,7 @@
+## 0.3.3+1
+
+* Support `gcloud` package version `0.3.0`.
+
 ## 0.3.3
 
 * Work around dev_appserver.py issue (it doesn't drain stdout we therefore avoid
