@@ -45,10 +45,10 @@ Future<ContextRegistry> initializeAppEngine() {
   AppengineContext getDockerContext() {
     var env = Platform.environment;
 
-    String applicationID = env['GAE_LONG_APP_ID'];
-    String module = env['GAE_MODULE_NAME'];
-    String version = env['GAE_MODULE_VERSION'];
-    String instance = env['GAE_MODULE_INSTANCE'];
+    String applicationID = env['GCLOUD_PROJECT']; // GAE_LONG_APP_ID deprecated
+    String module = env['GAE_SERVICE']; // GAE_MODULE_NAME deprecated
+    String version = env['GAE_VERSION']; // GAE_MODULE_VERSION deprecated
+    String instance = env['GAE_INSTANCE']; // GAE_MODULE_INSTANCE deprecated
     String partition = env['GAE_PARTITION'];
     String pubServeUrlString = env['DART_PUB_SERVE'];
 
