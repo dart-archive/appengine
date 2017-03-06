@@ -1,5 +1,5 @@
 name: appengine
-version: 0.4.0-flex.alpha.0
+version: 0.3.3+1
 author: Dart Team <misc@dartlang.org>
 description: Support for using Dart as a custom runtime on Google App Engine Managed VMs
 homepage: https://www.dartlang.org/cloud
