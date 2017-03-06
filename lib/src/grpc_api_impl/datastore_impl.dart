@@ -98,6 +98,8 @@ class GrpcDatastoreImpl implements raw.Datastore {
     } on grpc.RpcException catch (error) {
       if (error.code == grpc.ErrorCode.Aborted) {
         throw new raw.TransactionAbortedError();
+      } else if (error.code == grpc.ErrorCode.InvalidArgument) {
+        throw new raw.ApplicationError(error.message);
       } else {
         rethrow;
       }
@@ -198,22 +200,8 @@ class GrpcDatastoreImpl implements raw.Datastore {
     final List<Filter> filters = <Filter>[];
     if (query.filters != null && query.filters.length > 0) {
       for (final filter in query.filters) {
-        var operation = _Codec.FILTER_RELATION_MAPPING[filter.relation];
-        var value = filter.value;
-        if (filter.relation == raw.FilterRelation.In) {
-          if (filter.value is! List) {
-            throw new ArgumentError(
-                '"In" filters must have a list as comparison value.');
-          }
-          final List list = filter.value;
-          if (list.length == 1) {
-            operation = PropertyFilter_Operator.EQUAL;
-            value = list[0];
-          } else {
-            throw new ArgumentError(
-                '"In" filters are currently not supported.');
-          }
-        }
+        final operation = _Codec.FILTER_RELATION_MAPPING[filter.relation];
+        final value = filter.value;
         final pbPropertyFilter = new PropertyFilter()
           ..property = (new PropertyReference()..name = filter.name)
           ..op = operation
@@ -428,9 +416,6 @@ class _Codec {
     raw.FilterRelation.GreatherThan: PropertyFilter_Operator.GREATER_THAN,
     raw.FilterRelation.GreatherThanOrEqual:
         PropertyFilter_Operator.GREATER_THAN_OR_EQUAL,
-
-    // FIXME(kustermann): Get rid of raw.FilterRelation.In!
-    raw.FilterRelation.In: PropertyFilter_Operator.OPERATOR_UNSPECIFIED,
   };
 
   final String _projectId;

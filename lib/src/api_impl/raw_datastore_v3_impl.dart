@@ -69,7 +69,6 @@ class Codec {
     raw.FilterRelation.GreatherThan : Query_Filter_Operator.GREATER_THAN,
     raw.FilterRelation.GreatherThanOrEqual :
       Query_Filter_Operator.GREATER_THAN_OR_EQUAL,
-    raw.FilterRelation.In : Query_Filter_Operator.IN,
   };
 
   final String _application;
@@ -514,19 +513,8 @@ class DatastoreV3RpcImpl implements raw.Datastore {
       for (var filter in query.filters) {
         var queryFilter = new Query_Filter();
         queryFilter.op = Codec.FILTER_RELATION_MAPPING[filter.relation];
-        if (filter.relation == raw.FilterRelation.In) {
-          if (filter.value == null || filter.value is! List) {
-            throw new raw.ApplicationError('Filters with list entry checks '
-                'must have a list value for membership checking.');
-          }
-          for (var listValue in filter.value) {
-            queryFilter.property.add(_codec.encodeProperty(
-                filter.name, listValue, indexProperty: true));
-          }
-        } else {
-          queryFilter.property.add(_codec.encodeProperty(
-              filter.name, filter.value, indexProperty: true));
-        }
+        queryFilter.property.add(_codec.encodeProperty(
+            filter.name, filter.value, indexProperty: true));
         request.filter.add(queryFilter);
       }
     }

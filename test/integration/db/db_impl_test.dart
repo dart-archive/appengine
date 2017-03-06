@@ -4,6 +4,46 @@
 
 library db_impl_test;
 
+/// NOTE: In order to run these tests, the following datastore indices must
+/// exist:
+/// $ cat index.yaml
+/// indexes:
+/// - kind: User
+///   ancestor: no
+///   properties:
+///   - name: name
+///     direction: asc
+///   - name: nickname
+///     direction: desc
+///
+/// - kind: User
+///   ancestor: no
+///   properties:
+///   - name: name
+///     direction: desc
+///   - name: nickname
+///     direction: desc
+///
+/// - kind: User
+///   ancestor: no
+///   properties:
+///   - name: name
+///     direction: desc
+///   - name: nickname
+///     direction: asc
+///
+/// - kind: User
+///   ancestor: no
+///   properties:
+///   - name: language
+///     direction: asc
+///   - name: name
+///     direction: asc
+///
+/// $ gcloud preview datastore create-indexes .
+/// 02:19 PM Host: appengine.google.com
+/// 02:19 PM Uploading index definitions.
+
 import 'dart:async';
 
 import 'package:test/test.dart';
@@ -21,7 +61,7 @@ class Person extends db.Model {
   @db.IntProperty()
   int age;
 
-  @db.ModelKeyProperty()
+  @db.ModelKeyProperty(propertyName: 'mangledWife')
   db.Key wife;
 
   operator==(Object other) => sameAs(other);
@@ -98,13 +138,11 @@ class ExpandoPerson extends db.ExpandoModel {
 }
 
 
-Future sleep(Duration duration) {
-  var completer = new Completer();
-  new Timer(duration, completer.complete);
-  return completer.future;
-}
+Future sleep(Duration duration) => new Future.delayed(duration);
 
-runTests(db.DatastoreDB store) {
+runTests(db.DatastoreDB store, String namespace) {
+  var partition = store.newPartition(namespace);
+
   void compareModels(List<db.Model> expectedModels,
                      List<db.Model> models,
                      {bool anyOrder: false}) {
@@ -174,7 +212,7 @@ runTests(db.DatastoreDB store) {
   group('e2e_db', () {
     group('insert_lookup_delete', () {
       test('persons', () {
-        var root = store.emptyKey;
+        var root = partition.emptyKey;
         var persons = [];
         for (var i = 1; i <= 10; i++) {
           persons.add(new Person()
@@ -187,7 +225,7 @@ runTests(db.DatastoreDB store) {
         return testInsertLookupDelete(persons);
       });
       test('users', () {
-        var root = store.emptyKey;
+        var root = partition.emptyKey;
         var users = [];
         for (var i = 1; i <= 10; i++) {
           users.add(new User()
@@ -200,7 +238,7 @@ runTests(db.DatastoreDB store) {
         return testInsertLookupDelete(users);
       });
       test('expando_insert', () {
-        var root = store.emptyKey;
+        var root = partition.emptyKey;
         var expandoPersons = [];
         for (var i = 1; i <= 10; i++) {
           var expandoPerson = new ExpandoPerson()
@@ -216,7 +254,7 @@ runTests(db.DatastoreDB store) {
         return testInsertLookupDelete(expandoPersons);
       });
       test('transactional_insert', () {
-        var root = store.emptyKey;
+        var root = partition.emptyKey;
         var models = [];
 
         models.add(new Person()
@@ -241,7 +279,7 @@ runTests(db.DatastoreDB store) {
       });
 
       test('parent_key', () {
-        var root = store.emptyKey;
+        var root = partition.emptyKey;
         var users = [];
         for (var i = 333; i <= 334; i++) {
           users.add(new User()
@@ -270,7 +308,7 @@ runTests(db.DatastoreDB store) {
       });
 
       test('auto_ids', () {
-        var root = store.emptyKey;
+        var root = partition.emptyKey;
         var persons = [];
         persons.add(new Person()
             ..id = 42
@@ -282,23 +320,19 @@ runTests(db.DatastoreDB store) {
             ..parentKey = root
             ..age = 81
             ..name = 'user81');
-        // Auto id person without parentKey
-        persons.add(new Person()
-            ..age = 82
-            ..name = 'user82');
         // Auto id person with non-root parentKey
         var fatherKey = persons.first.parentKey;
         persons.add(new Person()
             ..parentKey = fatherKey
-            ..age = 83
-            ..name = 'user83');
+            ..age = 82
+            ..name = 'user82');
         persons.add(new Person()
             ..id = 43
             ..parentKey = root
-            ..age = 84
-            ..name = 'user84');
+            ..age = 83
+            ..name = 'user83');
         return store.commit(inserts: persons).then(expectAsync((_) {
-          // At this point, autoIds are allocated and are relfected in the
+          // At this point, autoIds are allocated and are reflected in the
           // models (as well as parentKey if it was empty).
 
           var keys = persons.map((db.Model obj) => obj.key).toList();
@@ -317,14 +351,10 @@ runTests(db.DatastoreDB store) {
 
           expect(persons[2].id, isNotNull);
           expect(persons[2].id is int, isTrue);
-          expect(persons[2].parentKey, equals(root));
+          expect(persons[2].parentKey, equals(fatherKey));
 
-          expect(persons[3].id, isNotNull);
-          expect(persons[3].id is int, isTrue);
-          expect(persons[3].parentKey, equals(fatherKey));
-
-          expect(persons[4].id, equals(43));
-          expect(persons[4].parentKey, equals(root));
+          expect(persons[3].id, equals(43));
+          expect(persons[3].parentKey, equals(root));
 
           expect(persons[1].id != persons[2].id, isTrue);
           // NOTE: We can't make assumptions about the id of persons[3],
@@ -333,7 +363,7 @@ runTests(db.DatastoreDB store) {
 
           return store.lookup(keys).then(expectAsync((List<Person> models) {
             // Since the id/parentKey fields are set after commit and a lookup
-            // returns new model instances, we can do full model comparision
+            // returns new model instances, we can do full model comparison
             // here.
             compareModels(persons, models);
             return store.commit(deletes: keys).then(expectAsync((_) {
@@ -349,7 +379,7 @@ runTests(db.DatastoreDB store) {
     });
 
     test('query', () {
-      var root = store.emptyKey;
+      var root = partition.emptyKey;
       var users = [];
       for (var i = 1; i <= 10; i++) {
         var languages = [];
@@ -361,6 +391,7 @@ runTests(db.DatastoreDB store) {
         users.add(new User()
             ..id = i
             ..parentKey = root
+            ..wife = root.append(User, id: 42 + i)
             ..age = 42 + i
             ..name = 'user$i'
             ..nickname = 'nickname${i%3}'
@@ -411,18 +442,20 @@ runTests(db.DatastoreDB store) {
           (User u) => u.languages.contains('foo')).toList();
       var barUsers = users.where(
           (User u) => u.languages.contains('bar')).toList();
+      var usersWithWife = users.where(
+          (User u) => u.wife == root.append(User, id: 42 + 3)).toList();
 
       var allInserts = []
           ..addAll(users)
           ..addAll(expandoPersons);
       var allKeys = allInserts.map((db.Model model) => model.key).toList();
       return store.commit(inserts: allInserts).then((_) {
-        return waitUntilEntitiesReady(store, allKeys).then((_) {
+        return waitUntilEntitiesReady(store, allKeys, partition).then((_) {
           var tests = [
             // Queries for [Person] return no results, we only have [User]
             // objects.
             () {
-              return store.query(Person).run().toList()
+              return store.query(Person, partition: partition).run().toList()
                   .then((List<db.Model> models) {
                 compareModels([], models);
               });
@@ -430,126 +463,140 @@ runTests(db.DatastoreDB store) {
 
             // All users query
             () {
-              return store.query(User).run().toList()
+              return store.query(User, partition: partition).run().toList()
                   .then((List<db.Model> models) {
                 compareModels(users, models, anyOrder: true);
               });
             },
 
             // Sorted query
-            () {
-              return store.query(User)
+            () async {
+              var query = store.query(User, partition: partition)
                   ..order('-name')
-                  ..order('nickname')
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels(
-                    usersSortedNameDescNicknameAsc, models);
-              });
+                  ..order('nickname');
+              var models = await runQueryWithExponentialBackoff(
+                  query, usersSortedNameDescNicknameAsc.length);
+              compareModels(
+                  usersSortedNameDescNicknameAsc, models);
             },
-            () {
-              return store.query(User)
+            () async {
+              var query = store.query(User, partition: partition)
                   ..order('-name')
                   ..order('-nickname')
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels(
-                    usersSortedNameDescNicknameDesc, models);
-              });
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(
+                  query, usersSortedNameDescNicknameDesc.length);
+              compareModels(
+                  usersSortedNameDescNicknameDesc, models);
             },
 
             // Sorted query with filter
-            () {
-              return store.query(User)
+            () async {
+              var query = store.query(User, partition: partition)
                   ..filter('name >=', LOWER_BOUND)
                   ..order('-name')
-                  ..order('nickname')
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels(usersSortedAndFilteredNameDescNicknameAsc,
-                    models);
-              });
+                  ..order('nickname');
+              var models = await runQueryWithExponentialBackoff(
+                  query, usersSortedAndFilteredNameDescNicknameAsc.length);
+              compareModels(usersSortedAndFilteredNameDescNicknameAsc,
+                  models);
             },
-            () {
-              return store.query(User)
+            () async {
+              var query = store.query(User, partition: partition)
                   ..filter('name >=', LOWER_BOUND)
                   ..order('-name')
                   ..order('-nickname')
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels(usersSortedAndFilteredNameDescNicknameDesc,
-                    models);
-              });
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(
+                  query, usersSortedAndFilteredNameDescNicknameDesc.length);
+              compareModels(usersSortedAndFilteredNameDescNicknameDesc,
+                  models);
             },
 
             // Filter lists
-            /* FIXME: TODO: FIXME: "IN" not supported in public proto/apiary */
-            () {
-              return store.query(User)
-                  ..filter('languages IN', ['foo'])
+            () async {
+              var query = store.query(User, partition: partition)
+                  ..filter('languages =', 'foo')
                   ..order('name')
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels(fooUsers, models, anyOrder: true);
-              });
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(
+                  query, fooUsers.length);
+              compareModels(fooUsers, models, anyOrder: true);
             },
-            () {
-              return store.query(User)
-                  ..filter('languages IN', ['bar'])
+            () async {
+              var query = store.query(User, partition: partition)
+                  ..filter('languages =', 'bar')
                   ..order('name')
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels(barUsers, models, anyOrder: true);
-              });
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(
+                  query, barUsers.length);
+              compareModels(barUsers, models, anyOrder: true);
+            },
+
+            // Filter equals
+            () async {
+              var wifeKey = root.append(User, id: usersWithWife.first.wife.id);
+              var query = store.query(User, partition: partition)
+                  ..filter('wife =', wifeKey)
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(
+                  query, usersWithWife.length);
+              compareModels(usersWithWife, models, anyOrder: true);
             },
 
             // Simple limit/offset test.
-            () {
-              return store.query(User)
+            () async {
+              var query = store.query(User, partition: partition)
                   ..order('-name')
                   ..order('nickname')
                   ..offset(3)
-                  ..limit(4)
-                  ..run().toList().then((List<db.Model> models) {
-                var expectedModels =
-                    usersSortedAndFilteredNameDescNicknameAsc.sublist(3, 7);
-                compareModels(expectedModels, models);
-              });
+                  ..limit(4);
+              var expectedModels =
+                  usersSortedAndFilteredNameDescNicknameAsc.sublist(3, 7);
+              var models = await runQueryWithExponentialBackoff(
+                  query, expectedModels.length);
+              compareModels(expectedModels, models);
             },
 
             // Expando queries: Filter on normal property.
-            () {
-              return store.query(ExpandoPerson)
+            () async {
+              var query = store.query(ExpandoPerson, partition: partition)
                   ..filter('name =', expandoPersons.last.name)
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels([expandoPersons.last], models);
-              });
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(query, 1);
+              compareModels([expandoPersons.last], models);
             },
             // Expando queries: Filter on expanded String property
-            () {
-              return store.query(ExpandoPerson)
+            () async {
+              var query = store.query(ExpandoPerson, partition: partition)
                   ..filter('foo =', expandoPersons.last.foo)
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels([expandoPersons.last], models);
-              });
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(query, 1);
+              compareModels([expandoPersons.last], models);
             },
             // Expando queries: Filter on expanded int property
-            () {
-              return store.query(ExpandoPerson)
+            () async {
+              var query = store.query(ExpandoPerson, partition: partition)
                   ..filter('bar =', expandoPersons.last.bar)
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels([expandoPersons.last], models);
-              });
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(query, 1);
+              compareModels([expandoPersons.last], models);
             },
             // Expando queries: Filter normal property with different
             // propertyName (datastore name is 'NN').
-            () {
-              return store.query(ExpandoPerson)
+            () async {
+              var query = store.query(ExpandoPerson, partition: partition)
                   ..filter('nickname =', expandoPersons.last.nickname)
-                  ..run().toList().then((List<db.Model> models) {
-                compareModels([expandoPersons.last], models);
-              });
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(query, 1);
+              compareModels([expandoPersons.last], models);
             },
 
             // Delete results
             () => store.commit(deletes: allKeys),
 
             // Wait until the entity deletes are reflected in the indices.
-            () => waitUntilEntitiesGone(store, allKeys),
+            () => waitUntilEntitiesGone(store, allKeys, partition),
 
             // Make sure queries don't return results
             () => store.lookup(allKeys).then((List<db.Model> models) {
@@ -566,24 +613,51 @@ runTests(db.DatastoreDB store) {
   });
 }
 
-Future waitUntilEntitiesReady(db.DatastoreDB mdb, List<db.Key> keys) {
-  return waitUntilEntitiesHelper(mdb, keys, true);
+Future<List<db.Model>> runQueryWithExponentialBackoff(
+    db.Query query, int expectedResults) async {
+  for (int i = 0; i <= 6; i++) {
+    if (i > 0) {
+      // Wait for 0.1s, 0.2s, ..., 12.8s
+      var duration = new Duration(milliseconds: 100 * (2 << i));
+      print("Running query did return less results than expected."
+            "Using exponential backoff: Sleeping for $duration.");
+      await sleep(duration);
+    }
+
+    List<db.Model> models = await query.run().toList();
+    if (models.length >= expectedResults) {
+      return models;
+    }
+  }
+
+  throw new Exception(
+      "Tried running a query with exponential backoff, giving up now.");
 }
 
-Future waitUntilEntitiesGone(db.DatastoreDB mdb, List<db.Key> keys) {
-  return waitUntilEntitiesHelper(mdb, keys, false);
+Future waitUntilEntitiesReady(db.DatastoreDB mdb,
+                              List<db.Key> keys,
+                              db.Partition partition) {
+  return waitUntilEntitiesHelper(mdb, keys, true, partition);
+}
+
+Future waitUntilEntitiesGone(db.DatastoreDB mdb,
+                             List<db.Key> keys,
+                             db.Partition partition) {
+  return waitUntilEntitiesHelper(mdb, keys, false, partition);
 }
 
 Future waitUntilEntitiesHelper(db.DatastoreDB mdb,
                                List<db.Key> keys,
-                               bool positive) {
+                               bool positive,
+                               db.Partition partition) {
   var keysByKind = {};
   for (var key in keys) {
     keysByKind.putIfAbsent(key.type, () => []).add(key);
   }
 
   Future waitForKeys(Type kind, List<db.Key> keys) {
-    return mdb.query(kind).run().toList().then((List<db.Model> models) {
+    return mdb.query(kind, partition: partition)
+        .run().toList().then((List<db.Model> models) {
       for (var key in keys) {
         bool found = false;
         for (var model in models) {
@@ -611,5 +685,5 @@ void main() {
   var datastore =
       new DatastoreV3RpcImpl(rpcService, appengineContext, '<invalid-ticket>');
 
-  runTests(new db.DatastoreDB(datastore));
+  runTests(new db.DatastoreDB(datastore), null);
 }

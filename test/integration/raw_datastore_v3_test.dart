@@ -15,5 +15,5 @@ main() {
   var datastore =
       new DatastoreV3RpcImpl(rpcService, appengineContext, '<invalid-ticket>');
 
-  runTests(datastore);
+  runTests(datastore, null);
 }

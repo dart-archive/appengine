@@ -2,6 +2,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'dart:io';
+
 import 'package:test/test.dart' as test;
 
 import 'package:appengine/src/grpc_api_impl/auth_utils.dart';
@@ -21,6 +23,9 @@ main() async {
     'https://www.googleapis.com/auth/datastore',
   ];
 
+  final now = new DateTime.now().millisecondsSinceEpoch;
+  final String namespace = '${Platform.operatingSystem}${now}';
+
   await withServiceAccount(
       (String project, ServiceAccountCredentials serviceAccount) async {
     final accessTokenProvider =
@@ -36,9 +41,9 @@ main() async {
     });
 
     // Run low-level datastore tests.
-    datastore_tests.runTests(datastore);
+    datastore_tests.runTests(datastore, namespace);
 
     // Run high-level db tests.
-    db_tests.runTests(new db.DatastoreDB(datastore));
+    db_tests.runTests(new db.DatastoreDB(datastore), namespace);
   });
 }
