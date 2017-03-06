@@ -224,7 +224,7 @@ runTests(Datastore datastore) {
       test('negative_insert_transactional_xg', () {
         return testInsertNegative(
             unnamedEntities20, transactional: true, xg: true);
-      }, skip: 'Existing failure');
+      });
 
       test('negative_insert_20000_entities', () {
         // Maybe it should not be a [DataStoreError] here?
