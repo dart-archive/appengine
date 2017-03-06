@@ -1,3 +1,7 @@
+## 0.4.0-flex.alpha.0
+
+* Remove the already deprecated `RemoteApi` support.
+
 ## 0.3.3+1
 
 * Support `gcloud` package version `0.3.0`.
