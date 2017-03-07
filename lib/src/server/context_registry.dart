@@ -21,7 +21,6 @@ import '../api_impl/logging_impl.dart' as logging_impl;
 import '../api_impl/modules_impl.dart' as modules_impl;
 import '../api_impl/raw_memcache_impl.dart' as raw_memcache_impl;
 import '../api_impl/raw_datastore_v3_impl.dart' as raw_datastore_v3_impl;
-import '../api_impl/users_impl.dart' as users_impl;
 
 class ContextRegistry {
   static const HTTP_HEADER_APPENGINE_TICKET = 'x-appengine-api-ticket';
@@ -91,10 +90,6 @@ class ContextRegistry {
       'modules' : new modules_impl.ModulesRpcImpl(
           _rpcService, _appengineContext, ticket),
     };
-    if (request != null) {
-      serviceMap['users'] =
-          new users_impl.UserRpcImpl(_rpcService, ticket, request);
-    }
     serviceMap['memcache'] =
         new memcache_impl.MemCacheImpl(serviceMap['raw_memcache']);
     serviceMap['db'] =
@@ -133,6 +128,4 @@ class _ServicesImpl extends Services {
   memcache.Memcache get memcache => _serviceMap['memcache'];
 
   ModulesService get modules => _serviceMap['modules'];
-
-  UserService get users => _serviceMap['users'];
 }

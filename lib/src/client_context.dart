@@ -12,7 +12,6 @@ import 'package:memcache/memcache.dart';
 
 import '../api/logging.dart';
 import '../api/modules.dart';
-import '../api/users.dart';
 
 abstract class ClientContext {
   /// Whether the application is currently running in the development
@@ -39,7 +38,6 @@ abstract class Services {
   Logging get logging;
   Memcache get memcache;
   ModulesService get modules;
-  UserService get users;
 }
 
 class AssetError implements Exception {

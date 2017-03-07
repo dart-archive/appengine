@@ -18,7 +18,6 @@ import '../api/errors.dart' as errors;
 import '../api/logging.dart' as logging;
 import '../api/memcache.dart' as memcache;
 import '../api/modules.dart' as modules;
-import '../api/users.dart' as users;
 
 import 'protobuf_api/rpc/rpc_service.dart';
 import 'protobuf_api/rpc/rpc_service_remote_api.dart';
@@ -118,7 +117,6 @@ void initializeContext(Services services) {
 
 void initializeRequestSpecificServices(Services services) {
   logging.registerLoggingService(services.logging);
-  users.registerUserService(services.users);
 }
 
 Future withAppEngineServicesInternal(Future callback(contextRegistry)) {

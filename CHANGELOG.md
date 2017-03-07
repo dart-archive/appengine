@@ -1,6 +1,7 @@
 ## 0.4.0-flex.alpha.0
 
 * Remove the already deprecated `RemoteApi` support.
+* Remove `UsersService` api
 
 ## 0.3.3+1
 
