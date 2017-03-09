@@ -17,7 +17,6 @@ import 'package:googleapis_auth/auth_io.dart' as auth;
 import '../api/errors.dart' as errors;
 import '../api/logging.dart' as logging;
 import '../api/memcache.dart' as memcache;
-import '../api/modules.dart' as modules;
 
 import 'protobuf_api/rpc/rpc_service.dart';
 import 'protobuf_api/rpc/rpc_service_remote_api.dart';
@@ -111,7 +110,6 @@ void initializeContext(Services services) {
   datastore.registerDatastoreService(services.db.datastore);
   storage.registerStorageService(services.storage);
   logging.registerLoggingService(services.logging);
-  modules.registerModulesService(services.modules);
   memcache.registerMemcacheService(services.memcache);
 }
 

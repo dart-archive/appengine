@@ -11,7 +11,6 @@ import 'package:gcloud/storage.dart';
 import 'package:memcache/memcache.dart';
 
 import '../api/logging.dart';
-import '../api/modules.dart';
 
 abstract class ClientContext {
   /// Whether the application is currently running in the development
@@ -37,7 +36,6 @@ abstract class Services {
   Storage get storage;
   Logging get logging;
   Memcache get memcache;
-  ModulesService get modules;
 }
 
 class AssetError implements Exception {

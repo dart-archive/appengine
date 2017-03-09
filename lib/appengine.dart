@@ -16,7 +16,6 @@ import 'src/client_context.dart';
 
 export 'api/errors.dart';
 export 'api/logging.dart';
-export 'api/modules.dart';
 export 'api/memcache.dart';
 export 'src/app_engine_request_handler.dart';
 export 'src/client_context.dart';
