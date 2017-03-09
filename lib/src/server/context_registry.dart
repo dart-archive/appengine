@@ -19,7 +19,7 @@ import '../appengine_context.dart';
 import '../protobuf_api/rpc/rpc_service.dart';
 import '../api_impl/logging_impl.dart' as logging_impl;
 import '../api_impl/modules_impl.dart' as modules_impl;
-import '../api_impl/raw_memcache_impl.dart' as raw_memcache_impl;
+import '../api_impl/nop_memcache_impl.dart' as nop_memcache_impl;
 import '../api_impl/raw_datastore_v3_impl.dart' as raw_datastore_v3_impl;
 
 class ContextRegistry {
@@ -78,13 +78,12 @@ class ContextRegistry {
       => _getServices(_appengineContext.backgroundTicket, null);
 
   Services _getServices(String ticket, AppengineHttpRequest request) {
-    var raw_memcache =
-        new raw_memcache_impl.RawMemcacheRpcImpl(_rpcService, ticket);
+    var rawMemcache = new nop_memcache_impl.NopMemcacheRpcImpl();
     var serviceMap = {
       // Create a new logging instance for every request, but use the background
       // ticket, so we can flush logs at the end of the request.
       'logging': new logging_impl.LoggingRpcImpl(_rpcService, ticket),
-      'raw_memcache': raw_memcache,
+      'raw_memcache': rawMemcache,
       'raw_datastore_v3' : new raw_datastore_v3_impl.DatastoreV3RpcImpl(
           _rpcService, _appengineContext, ticket),
       'modules' : new modules_impl.ModulesRpcImpl(

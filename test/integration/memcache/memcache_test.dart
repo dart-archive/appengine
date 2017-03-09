@@ -7,15 +7,15 @@ library memcache_test;
 import 'package:test/test.dart';
 import 'package:memcache/memcache.dart';
 
-import 'package:appengine/src/protobuf_api/rpc/rpc_service_remote_api.dart';
-import 'package:appengine/src/api_impl/raw_memcache_impl.dart';
+import 'package:appengine/src/api_impl/nop_memcache_impl.dart';
 import 'package:memcache/src/memcache_impl.dart';
 
 import '../../utils/error_matchers.dart';
 
 main() {
-  var rpcService = new RPCServiceRemoteApi('127.0.0.1', 4444);
-  var memcache = new MemCacheImpl(new RawMemcacheRpcImpl(rpcService, ''));
+  // TODO(kustermann): Make tests tests work again by using the native memcache
+  // protocol.
+  var memcache = new MemCacheImpl(new NopMemcacheRpcImpl());
 
   group('memcache', () {
     setUp(() => memcache.clear());
