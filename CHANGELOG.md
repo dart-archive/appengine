@@ -3,6 +3,23 @@
 * Removed the already deprecated `RemoteApi` support.
 * Removed `UsersService` api.
 * Removed `ModulesService` api.
+* Use the new flexible runtime environment variables:
+   - GCLOUD\_PROJECT
+   - GAE\_SERVICE
+   - GAE\_VERSION
+   - GAE\_INSTANCE
+* Introduce a new GCLOUD\_KEY environment variable:
+
+  For local development purposes this variable must point to a service acount
+  credentials file (in json form).
+
+  The more specific STORAGE\_SERVICE\_ACCOUNT\_FILE environment variable is no
+  longer used.
+
+* To prevent duplicate logging of errors, `runAppEngine` will no longer log
+  request-specific errors on stdout if they got already logged via the
+  request-specific log.
+
 
 ## 0.3.3+1
 

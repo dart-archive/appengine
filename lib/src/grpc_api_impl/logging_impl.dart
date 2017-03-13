@@ -15,6 +15,11 @@ import '../grpc_api/dart/google/appengine/logging/v1/request_log.pb.dart'
 
 import 'grpc.dart' as grpc;
 
+const List<String> OAuth2Scopes = const <String>[
+  "https://www.googleapis.com/auth/cloud-platform",
+  "https://www.googleapis.com/auth/logging.write",
+];
+
 /// A [appengine.Logging] adapter which groups request-specific logging
 /// entries and sends them off via the [SharedLoggingService].
 ///

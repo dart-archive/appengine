@@ -59,10 +59,6 @@ Future runAppEngine(AppEngineRequestHandler handler,
       throw new ArgumentError(
           'The [onError] argument must take either one or two arguments.');
     }
-  } else {
-    errorHandler = (error, stack) {
-      print("$error\nStack:\n$stack");
-    };
   }
 
   return appengine_internal.runAppEngine((HttpRequest request,

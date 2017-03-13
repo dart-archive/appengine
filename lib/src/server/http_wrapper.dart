@@ -8,6 +8,8 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
 
+typedef void EndHook(int statuCode, int bytesSent);
+
 class AppengineHttpRequest implements HttpRequest {
   final HttpRequest _realRequest;
   AppengineHttpResponse _response;
@@ -26,10 +28,10 @@ class AppengineHttpRequest implements HttpRequest {
 
   Stream<List<int>> asBroadcastStream(
       {void onListen(StreamSubscription<List<int>> subscription),
-       void onCancel(StreamSubscription<List<int>> subscription)}) {
+      void onCancel(StreamSubscription<List<int>> subscription)}) {
     _hasSubscriber = true;
-    return _realRequest.asBroadcastStream(onListen: onListen,
-                                          onCancel: onCancel);
+    return _realRequest.asBroadcastStream(
+        onListen: onListen, onCancel: onCancel);
   }
 
   Stream asyncExpand(Stream convert(List<int> event)) {
@@ -53,7 +55,7 @@ class AppengineHttpRequest implements HttpRequest {
     return _realRequest.distinct(equals);
   }
 
-  Future drain([futureValue])  {
+  Future drain([futureValue]) {
     _hasSubscriber = true;
     return _realRequest.drain(futureValue);
   }
@@ -127,9 +129,7 @@ class AppengineHttpRequest implements HttpRequest {
       {Function onError, void onDone(), bool cancelOnError}) {
     _hasSubscriber = true;
     return _realRequest.listen(onData,
-                               onError: onError,
-                               onDone: onDone,
-                               cancelOnError: cancelOnError);
+        onError: onError, onDone: onDone, cancelOnError: cancelOnError);
   }
 
   Stream map(convert(List<int> event)) {
@@ -274,8 +274,8 @@ abstract class AppengineIOSinkMixin {
 }
 
 class AppengineHttpResponse extends Object
-                            with AppengineIOSinkMixin
-                            implements HttpResponse {
+    with AppengineIOSinkMixin
+    implements HttpResponse {
   final AppengineHttpRequest _request;
   final HttpResponse _realResponse;
   AppengineHttpHeaders _headers;
@@ -287,7 +287,8 @@ class AppengineHttpResponse extends Object
   static const int _STATE_FINISHED = 3;
 
   final BytesBuilder _data = new BytesBuilder();
-  final List<Function> _hooksToRunBeforeEnd = [];
+  int _dataLength = 0;
+  final List<EndHook> _hooksToRunBeforeEnd = [];
   final Completer _hooksAndResponseComplete = new Completer();
   int _state = _STATE_BUILDING_HEADER;
   Future _drainFuture = null;
@@ -296,7 +297,7 @@ class AppengineHttpResponse extends Object
     _headers = new AppengineHttpHeaders(this);
   }
 
-  void registerHook(Function function) => _hooksToRunBeforeEnd.add(function);
+  void registerHook(EndHook function) => _hooksToRunBeforeEnd.add(function);
 
   void add(List<int> data) {
     if (_state == _STATE_BUILDING_HEADER) {
@@ -409,7 +410,6 @@ class AppengineHttpResponse extends Object
 
   String get reasonPhrase => _realResponse.reasonPhrase;
 
-
   void set encoding(Encoding _encoding) {
     throw new StateError('HttpResponse encoding is not mutable.');
   }
@@ -441,6 +441,7 @@ class AppengineHttpResponse extends Object
     }
 
     _data.add(data);
+    _dataLength += data.length;
   }
 
   _submitData([error, stack]) {
@@ -453,17 +454,16 @@ class AppengineHttpResponse extends Object
 
     // Run all hooks before sending the data and closing.
     _drainFuture.then((_) {
-      _runHooks().then((_) {
-        if (_request.method != 'HEAD' &&_realResponse.contentLength == -1) {
-          _realResponse.contentLength = _data.length;
-        }
-        _realResponse.add(_data.takeBytes());
-        _data.clear();
-        _realResponse.close().then((_){
-          _hooksAndResponseComplete.complete(this);
-        }).catchError((error, stack) {
-          _hooksAndResponseComplete.completeError(error, stack);
-        });
+      _runHooks();
+      if (_request.method != 'HEAD' && _realResponse.contentLength == -1) {
+        _realResponse.contentLength = _data.length;
+      }
+      _realResponse.add(_data.takeBytes());
+      _data.clear();
+      _realResponse.close().then((_) {
+        _hooksAndResponseComplete.complete(this);
+      }).catchError((error, stack) {
+        _hooksAndResponseComplete.completeError(error, stack);
       });
     });
   }
@@ -477,9 +477,8 @@ class AppengineHttpResponse extends Object
 
     // Run all hooks before sending the redirect.
     return _drainFuture.then((_) {
-      return _runHooks().then((_) {
-        return _realResponse.redirect(location, status: status);
-      });
+      _runHooks();
+      return _realResponse.redirect(location, status: status);
     });
   }
 
@@ -493,12 +492,19 @@ class AppengineHttpResponse extends Object
     }
   }
 
-  Future _runHooks() {
+  void _runHooks() {
     // TODO: We swallow errors from the hooks here. Having an internal error
     // mechanism would be beneficial where we could report these kinds of
     // errors.
-    var futures = _hooksToRunBeforeEnd.map((hook) => hook());
-    return Future.wait(futures).catchError((_) {});
+    for (var hook in _hooksToRunBeforeEnd) {
+      try {
+        hook(statusCode, _dataLength);
+      } catch (error, stack) {
+        stderr.writeln('An error occured while running hook:\n'
+            'Error:$error\n'
+            '$stack');
+      }
+    }
   }
 }
 
@@ -507,7 +513,8 @@ class AppengineHttpHeaders implements HttpHeaders {
   final HttpHeaders _realHeaders;
 
   AppengineHttpHeaders(AppengineHttpResponse response)
-      : _response = response, _realHeaders = response._realResponse.headers;
+      : _response = response,
+        _realHeaders = response._realResponse.headers;
 
   List<String> operator [](String name) {
     // NOTE: The underlying HttpResponse from dart:io doesn't do checks, so we

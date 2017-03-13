@@ -12,22 +12,13 @@ class AppengineContext {
   final String version;
   final String module;
   final String instance;
+  final bool isDevelopmentEnvironment;
   final AssetsManager assets;
 
-  AppengineContext(String partition, this.applicationID, this.version,
-                   this.module, this.instance, Uri pubServeUrl)
-      : partition = partition,
-        assets = new AssetsManager(pubServeUrl, partition == 'dev');
-
-  bool get isDevelopmentEnvironment => partition == 'dev';
+  AppengineContext(this.isDevelopmentEnvironment, this.applicationID,
+      this.version, this.module, this.instance, Uri pubServeUrl)
+      : partition = '',
+        assets = new AssetsManager(pubServeUrl, isDevelopmentEnvironment);
 
   String get fullQualifiedApplicationId => '$partition~$applicationID';
-
-  String get backgroundTicket {
-    var majorVersion = version.split('_')[0];
-    var escapedApplicationID =
-       applicationID.replaceAll(':', '_').replaceAll('.', '_');
-
-    return '$escapedApplicationID/$module.$majorVersion.$instance';
-  }
 }

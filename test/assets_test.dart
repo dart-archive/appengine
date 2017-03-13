@@ -66,22 +66,22 @@ void main() {
     var context;
 
     context = new AppengineContext(
-        'dev',  null,  null,  null,  null, uri);
+        true,  null,  null,  null,  null, uri);
     expect(context.isDevelopmentEnvironment, isTrue);
     expect(context.assets.usePubServe, isTrue);
 
     context = new AppengineContext(
-        's',  null,  null,  null,  null, uri);
+        false,  null,  null,  null,  null, uri);
     expect(context.isDevelopmentEnvironment, isFalse);
     expect(context.assets.usePubServe, isFalse);
 
     context = new AppengineContext(
-        'dev',  null,  null,  null,  null, null);
+        true,  null,  null,  null,  null, null);
     expect(context.isDevelopmentEnvironment, isTrue);
     expect(context.assets.usePubServe, isFalse);
 
     context = new AppengineContext(
-        's',  null,  null,  null,  null, null);
+        false,  null,  null,  null,  null, null);
     expect(context.isDevelopmentEnvironment, isFalse);
     expect(context.assets.usePubServe, isFalse);
   });
@@ -117,7 +117,7 @@ void main() {
       assert(appServer == null);
       return HttpServer.bind('127.0.0.1', 0).then((server) {
         var appengineContext = new AppengineContext(
-            'dev',  null,  null,  null,  null, pubServeUri);
+            true,  null,  null,  null,  null, pubServeUri);
         appServer = server;
         appServerPort = server.port;
         server.listen((request) {

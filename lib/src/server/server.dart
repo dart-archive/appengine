@@ -28,16 +28,17 @@ class AppEngineHttpServer {
   HttpServer _httpServer;
 
   AppEngineHttpServer(this._contextRegistry,
-                      {String hostname: '0.0.0.0', int port: 8080})
-      : _hostname = hostname, _port = port;
+      {String hostname: '0.0.0.0', int port: 8080})
+      : _hostname = hostname,
+        _port = port;
 
   Future get done => _shutdownCompleter.future;
 
   void run(applicationHandler(request, context)) {
     var serviceHandlers = {
-        '/_ah/start' : _start,
-        '/_ah/health' : _health,
-        '/_ah/stop' : _stop
+      '/_ah/start': _start,
+      '/_ah/health': _health,
+      '/_ah/stop': _stop
     };
 
     HttpServer.bind(_hostname, _port).then((HttpServer server) {
@@ -64,8 +65,10 @@ class AppEngineHttpServer {
 
         _pendingRequests++;
         var context = _contextRegistry.add(appengineRequest);
-        appengineRequest.response.registerHook(
-            () => _contextRegistry.remove(appengineRequest));
+        appengineRequest.response
+            .registerHook((int statusCode, int responseSize) {
+          _contextRegistry.remove(appengineRequest);
+        });
 
         appengineRequest.response.done.catchError((error) {
           if (!_contextRegistry.isDevelopmentEnvironment) {

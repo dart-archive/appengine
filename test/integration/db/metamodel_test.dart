@@ -8,11 +8,8 @@ import 'dart:async';
 
 import 'package:test/test.dart';
 
-import 'package:appengine/src/appengine_context.dart';
-import 'package:appengine/src/api_impl/raw_datastore_v3_impl.dart';
-import 'package:appengine/src/protobuf_api/rpc/rpc_service_remote_api.dart';
 import 'package:gcloud/datastore.dart';
-import 'package:gcloud/datastore.dart' show Key, Query, Partition;
+import 'package:gcloud/datastore.dart' show Key, Partition;
 import 'package:gcloud/db.dart' as db;
 import 'package:gcloud/db/metamodel.dart';
 
@@ -96,14 +93,4 @@ runTests(datastore, db.DatastoreDB store) {
       });
     });
   });
-}
-
-main() {
-  var rpcService = new RPCServiceRemoteApi('127.0.0.1', 4444);
-  var appengineContext = new AppengineContext(
-      'dev', 'test-application', 'test-version', null, null, null);
-  var datastore =
-      new DatastoreV3RpcImpl(rpcService, appengineContext, '<invalid-ticket>');
-
-  runTests(datastore, new db.DatastoreDB(datastore));
 }

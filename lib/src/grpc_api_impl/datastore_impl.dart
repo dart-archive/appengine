@@ -13,6 +13,11 @@ import '../../api/errors.dart' as errors;
 import '../grpc_api/datastore_api.dart';
 import 'grpc.dart' as grpc;
 
+const List<String> OAuth2Scopes = const <String>[
+  "https://www.googleapis.com/auth/cloud-platform",
+  "https://www.googleapis.com/auth/datastore",
+];
+
 // TODO(kustermann): Currently we only convert service specific errors to
 // different exceptions (e.g. transaction aborted).
 // Maybe we want to wrap all grpc.BaseException exceptions and convert them to
