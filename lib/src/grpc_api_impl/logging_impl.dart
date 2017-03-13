@@ -24,7 +24,7 @@ import 'grpc.dart' as grpc;
 ///
 /// It uses an embedded AppEngine-compatible protobuf message in order to group
 /// logging messages together.
-class GrpcLoggingImpl extends appengine.Logging {
+class GrpcRequestLoggingImpl extends appengine.Logging {
   static const int logEntryBaseLimit = 150;
   static const int logEntrySizeLimit = 40 * 1024;
 
@@ -41,31 +41,14 @@ class GrpcLoggingImpl extends appengine.Logging {
   int _estimatedSize;
   bool _isFirst;
 
-  GrpcLoggingImpl(this._sharedLoggingService, this._httpMethod,
+  GrpcRequestLoggingImpl(this._sharedLoggingService, this._httpMethod,
       this._httpResource, this._userAgent, this._host, this._ip)
       : _startTimestamp = new DateTime.now().toUtc().millisecondsSinceEpoch {
     _resetState();
   }
 
   void log(appengine.LogLevel level, String message, {DateTime timestamp}) {
-    api.LogSeverity severity;
-    switch (level) {
-      case appengine.LogLevel.CRITICAL:
-        severity = api.LogSeverity.CRITICAL;
-        break;
-      case appengine.LogLevel.ERROR:
-        severity = api.LogSeverity.ERROR;
-        break;
-      case appengine.LogLevel.WARNING:
-        severity = api.LogSeverity.WARNING;
-        break;
-      case appengine.LogLevel.INFO:
-        severity = api.LogSeverity.INFO;
-        break;
-      case appengine.LogLevel.DEBUG:
-        severity = api.LogSeverity.DEBUG;
-        break;
-    }
+    api.LogSeverity severity = _severityFromLogLevel(level);
 
     // The severity of the combined log entry will be the highest severity
     // of the individual log lines.
@@ -150,7 +133,7 @@ class GrpcLoggingImpl extends appengine.Logging {
       ..resource = gaeResource
       ..timestamp = nowTimestamp
       ..severity = _currentSeverity
-      ..logName = _sharedLoggingService.logName;
+      ..logName = _sharedLoggingService.requestLogName;
 
     _resetState();
 
@@ -183,6 +166,36 @@ class GrpcLoggingImpl extends appengine.Logging {
   }
 }
 
+/// A [appengine.Logging] adapter which sends log entries off via the
+/// [SharedLoggingService].
+class GrpcBackgroundLoggingImpl extends appengine.Logging {
+  final SharedLoggingService _sharedLoggingService;
+
+  GrpcBackgroundLoggingImpl(this._sharedLoggingService);
+
+  void log(appengine.LogLevel level, String message, {DateTime timestamp}) {
+    api.LogSeverity severity = _severityFromLogLevel(level);
+
+    final int now = new DateTime.now().toUtc().millisecondsSinceEpoch;
+    final api.Timestamp nowTimestamp = _protobufTimestampFromMilliseconds(now);
+
+    final gaeResource = new api.MonitoredResource()
+      ..type = 'gae_app'
+      ..labels.addAll(_sharedLoggingService.resourceLabels);
+
+    final logEntry = new api.LogEntry()
+      ..textPayload = message
+      ..resource = gaeResource
+      ..timestamp = nowTimestamp
+      ..severity = severity
+      ..logName = _sharedLoggingService.backgroundLogName;
+
+    _sharedLoggingService.enqueue(logEntry);
+  }
+
+  Future flush() => new Future.value();
+}
+
 /// A [appengine.Logging] adapter which uses the gRPC logging API to send
 /// logs asynchronously to the Stackdriver logging service.
 class SharedLoggingService {
@@ -193,7 +206,8 @@ class SharedLoggingService {
   final String projectId;
   final String versionId;
   final List<api.MonitoredResource_LabelsEntry> resourceLabels;
-  final String logName;
+  final String requestLogName;
+  final String backgroundLogName;
 
   final List<api.LogEntry> _entries = <api.LogEntry>[];
   Timer _timer;
@@ -213,8 +227,10 @@ class SharedLoggingService {
           _makeLabel('module_id', serviceId),
           _makeLabel('zone', zoneId),
         ],
-        logName =
-            'projects/$projectId/logs/appengine.googleapis.com%2Frequest_log';
+        requestLogName =
+            'projects/$projectId/logs/appengine.googleapis.com%2Frequest_log',
+        backgroundLogName =
+            'projects/$projectId/logs/appengine.googleapis.com%2Fstderr';
 
   static _makeLabel(String key, String value) {
     return new api.MonitoredResource_LabelsEntry()
@@ -287,4 +303,20 @@ api.Timestamp _protobufTimestampFromMilliseconds(int ms) {
   return new api.Timestamp()
     ..seconds = new api.Int64(ms ~/ 1000)
     ..nanos = 1000 * 1000 * (ms % 1000);
+}
+
+api.LogSeverity _severityFromLogLevel(appengine.LogLevel level) {
+  switch (level) {
+    case appengine.LogLevel.CRITICAL:
+      return api.LogSeverity.CRITICAL;
+    case appengine.LogLevel.ERROR:
+      return api.LogSeverity.ERROR;
+    case appengine.LogLevel.WARNING:
+      return api.LogSeverity.WARNING;
+    case appengine.LogLevel.INFO:
+      return api.LogSeverity.INFO;
+    case appengine.LogLevel.DEBUG:
+      return api.LogSeverity.DEBUG;
+  }
+  throw new ArgumentError('Unknown logevel $level');
 }
