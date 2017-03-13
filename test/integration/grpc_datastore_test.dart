@@ -13,7 +13,8 @@ import 'package:gcloud/db.dart' as db;
 import 'package:googleapis_auth/auth_io.dart';
 
 import 'common_e2e.dart' show withServiceAccount;
-import 'db/db_impl_test.dart' as db_tests;
+import 'db/db_tests.dart' as db_tests;
+import 'db/metamodel_tests.dart' as metamodel_tests;
 import 'raw_datastore_test_impl.dart' as datastore_tests;
 
 main() async {
@@ -23,8 +24,7 @@ main() async {
     'https://www.googleapis.com/auth/datastore',
   ];
 
-  final now = new DateTime.now().millisecondsSinceEpoch;
-  final String namespace = '${Platform.operatingSystem}${now}';
+  final String nsPrefix = Platform.operatingSystem;
 
   await withServiceAccount(
       (String project, ServiceAccountCredentials serviceAccount) async {
@@ -33,6 +33,7 @@ main() async {
     final dialer = new grpc.Dialer(endpoint);
     final client = new grpc.Client(dialer, accessTokenProvider, 10);
     final datastore = new GrpcDatastoreImpl(client, project);
+    final dbService = new db.DatastoreDB(datastore);
 
     // Once all tests are done we'll close the resources.
     test.tearDownAll(() async {
@@ -41,9 +42,15 @@ main() async {
     });
 
     // Run low-level datastore tests.
-    datastore_tests.runTests(datastore, namespace);
+    datastore_tests.runTests(
+        datastore, '${nsPrefix}${new DateTime.now().millisecondsSinceEpoch}');
 
     // Run high-level db tests.
-    db_tests.runTests(new db.DatastoreDB(datastore), namespace);
+    db_tests.runTests(
+        dbService, '${nsPrefix}${new DateTime.now().millisecondsSinceEpoch}');
+
+    // Run metamodel tests.
+    metamodel_tests.runTests(datastore, dbService,
+        '${nsPrefix}${new DateTime.now().millisecondsSinceEpoch}');
   });
 }

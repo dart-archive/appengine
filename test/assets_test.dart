@@ -229,7 +229,7 @@ void main() {
       assert(appServer == null);
       return HttpServer.bind('127.0.0.1', 0).then((server) {
         var appengineContext = new AppengineContext(
-            null,  null,  null,  null,  null, null);
+            true,  null,  null,  null,  null, null);
         appServer = server;
         appServerPort = server.port;
         server.listen((request) {
