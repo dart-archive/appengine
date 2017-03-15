@@ -13,7 +13,7 @@ import 'http_wrapper.dart';
 
 void _info(String message) {
   var formattedMessage = "${new DateTime.now()}: " + message;
-  print(formattedMessage);
+  stderr.writeln(formattedMessage);
 }
 
 class AppEngineHttpServer {
@@ -46,10 +46,6 @@ class AppEngineHttpServer {
 
       server.listen((HttpRequest request) {
         var appengineRequest = new AppengineHttpRequest(request);
-
-        if (!_contextRegistry.isDevelopmentEnvironment) {
-          _info("Got request: ${appengineRequest.uri}");
-        }
 
         // Default handling is sending the request to the application.
         var handler = applicationHandler;

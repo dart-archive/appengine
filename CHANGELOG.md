@@ -1,3 +1,8 @@
+## 0.4.0-flex.alpha.0+2
+
+* Do not log every request to stdout, since we will write to the logging service
+  anyway.
+
 ## 0.4.0-flex.alpha.0+1
 
 * Set tcp-nodelay socket option to reduce rpc latency.
