@@ -139,7 +139,7 @@ Future<ContextRegistry> _initializeAppEngine() async {
 
   final projectId = _findEnvironmentVariable('GCLOUD_PROJECT', needed: true);
 
-  // If we find the 'GCLOUD_KEY" environment variable, we'll use it for
+  // If we find the "GCLOUD_KEY" environment variable, we'll use it for
   // authentication otherwise the assumption is we're running in the cloud and
   // can use the metadata server.
   final gcloudKey =

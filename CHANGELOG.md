@@ -1,3 +1,7 @@
+## 0.4.0-flex.alpha.0+1
+
+* Set tcp-nodelay socket option to reduce rpc latency.
+
 ## 0.4.0-flex.alpha.0
 
 * Removed the already deprecated `RemoteApi` support.
