@@ -1,3 +1,8 @@
+## 0.4.0-flex.alpha.0+3
+
+* Use the empty string if there is no user agent.
+* Only log requests for which there is logging information
+
 ## 0.4.0-flex.alpha.0+2
 
 * Do not log every request to stdout, since we will write to the logging service

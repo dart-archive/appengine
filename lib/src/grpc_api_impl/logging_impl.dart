@@ -98,10 +98,12 @@ class GrpcRequestLoggingImpl extends appengine.Logging {
   /// Finishes the request-specific logs with the given HTTP [responseStatus]
   /// and [responseSize].
   void finish(int responseStatus, int responseSize) {
-    _enqueue(
-        finish: true,
-        responseStatus: responseStatus,
-        responseSize: responseSize);
+    if (_gaeLogLines.length > 0) {
+      _enqueue(
+          finish: true,
+          responseStatus: responseStatus,
+          responseSize: responseSize);
+    }
   }
 
   /// Builds up the combined [api.LogEntry] and enqueues it in the underlying
@@ -119,7 +121,7 @@ class GrpcRequestLoggingImpl extends appengine.Logging {
       ..method = _httpMethod
       ..resource = _httpResource
       ..startTime = startTimestamp
-      ..userAgent = _userAgent
+      ..userAgent = _userAgent ?? ''
       ..host = _host
       ..ip = _ip
       ..line.addAll(_gaeLogLines)
