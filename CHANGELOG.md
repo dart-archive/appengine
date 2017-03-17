@@ -1,3 +1,8 @@
+## 0.4.0-flex.alpha.0+4
+
+* Refresh gRPC connections after 50 minutes (server seems to forcefully close
+  the connection after 1 hour).
+
 ## 0.4.0-flex.alpha.0+3
 
 * Use the empty string if there is no user agent.
