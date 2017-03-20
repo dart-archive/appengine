@@ -70,7 +70,13 @@ class ContextRegistry {
       final uri = request.requestedUri;
       final resource = uri.hasQuery ? '${uri.path}?${uri.query}' : uri.path;
       final userAgent = request.headers.value(HttpHeaders.USER_AGENT);
-      final ip = request.connectionInfo.remoteAddress.toString();
+
+      final List<String> forwardedFor = request.headers['x-forwarded-for'];
+      final bool hasForwardedFor = forwardedFor != null &&
+                                   forwardedFor.isNotEmpty;
+      final ip = hasForwardedFor
+          ? forwardedFor.first
+          : request.connectionInfo.remoteAddress.host;
 
       loggingService = _loggingFactory.newRequestSpecificLogger(
           request.method, resource, userAgent, uri.host, ip);

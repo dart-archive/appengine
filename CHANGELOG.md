@@ -1,3 +1,7 @@
+## 0.4.0-flex.alpha.0+5
+
+* Use X-Forwarded-For header to discover real client IP.
+
 ## 0.4.0-flex.alpha.0+4
 
 * Refresh gRPC connections after 50 minutes (server seems to forcefully close

@@ -76,8 +76,8 @@ class Client {
   // ids ... we will use the [Dialer] to make a new connection.
   // While the connection is being made, all callers should wait on the
   // [_connectionCompleter].
+  final Stopwatch _stopwatch = new Stopwatch()..start();
   http2.ClientTransportConnection _connection;
-  DateTime _connectionStart;
 
   // In case a [AccessTokenProvider] was given we cache the access token and
   // a [http2.Header] object while it is valid.
@@ -106,12 +106,12 @@ class Client {
     // NOTE: It seems like Google's gRPC endpoints will forcefully close the
     // connection after precisely 1 hour. So we *proactively* refresh our
     // connection after 50 minutes. This will avoid one failed RPC call.
-    final now = new DateTime.now();
-    if (_connection == null ||
-        !_connection.isOpen ||
-        now.difference(_connectionStart).inMinutes > 50) {
+    final bool isHealthy = _connection != null && _connection.isOpen;
+    final bool shouldRefresh = _stopwatch.elapsed.inMinutes > 50;
+    if (!isHealthy || shouldRefresh) {
+      if (isHealthy) _connection.finish();
       _connection = await _dialer.dial();
-      _connectionStart = now;
+      _stopwatch.reset();
     }
 
     if (!_connection.isOpen) {
