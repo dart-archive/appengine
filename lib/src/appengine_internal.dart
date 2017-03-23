@@ -16,6 +16,7 @@ import 'package:googleapis_auth/auth_io.dart' as auth;
 import 'package:http/http.dart' as http;
 import 'package:memcache/memcache.dart' as memcache;
 import 'package:memcache/memcache_raw.dart' as memcache_raw;
+import 'package:path/path.dart' as p;
 
 import '../api/errors.dart' as errors;
 import '../api/logging.dart' as logging;
@@ -122,7 +123,9 @@ void useLoggingPackageAdaptor() {
 /// returns a new [ContextRegistry] which is used for registering in-progress
 /// http requests.
 Future<ContextRegistry> _initializeAppEngine() async {
-  final bool isDevEnvironment = await _isDevelopmentEnvironment();
+  var zoneId = await _getZoneInProduction();
+  final isDevEnvironment = zoneId == null;
+  zoneId ??= 'dev-machine';
   final bool isProdEnvironment = !isDevEnvironment;
 
   String _findEnvironmentVariable(String name,
@@ -159,7 +162,6 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final instance = _findEnvironmentVariable('GAE_INSTANCE',
           onlyInProd: true, needed: true) ??
       'dummy-instance';
-  final zoneId = 'dummy-zone';
 
   final String pubServeUrlString = Platform.environment['DART_PUB_SERVE'];
   final Uri pubServeUrl =
@@ -353,18 +355,30 @@ auth.ServiceAccountCredentials _obtainServiceAccountCredentials(
   return null;
 }
 
-Future<bool> _isDevelopmentEnvironment() async {
-  // For simplicity we'll just try talking to the metadata server, if it doesn't
-  // work then we're for sure not on compute engine.
+Future<String> _getZoneInProduction() async {
   final client = new http.Client();
   try {
-    final socket = await Socket.connect('metadata.google.internal', 80);
-    await socket.close();
-    return false;
-  } catch (_) {} finally {
+    var response = await client.get(
+        'http://metadata.google.internal/computeMetadata/v1/instance/zone',
+        headers: {'Metadata-Flavor': 'Google'});
+    if (response.statusCode == HttpStatus.OK) {
+      return p.split(response.body).last;
+    }
+
+    throw [
+      "Reqeust for metadata returned something unexpected",
+      response.statusCode,
+      response.body
+    ].join('\n');
+  } on SocketException {
+    // likely not on cloud
+    return null;
+  } catch (e) {
+    stderr.writeln("Unexpected error when trying to access metadata");
+    rethrow;
+  } finally {
     client.close();
   }
-  return true;
 }
 
 /// Factory used for creating request-specific and background loggers.
