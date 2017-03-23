@@ -72,11 +72,18 @@ class ContextRegistry {
       final userAgent = request.headers.value(HttpHeaders.USER_AGENT);
 
       final List<String> forwardedFor = request.headers['x-forwarded-for'];
-      final bool hasForwardedFor = forwardedFor != null &&
-                                   forwardedFor.isNotEmpty;
-      final ip = hasForwardedFor
-          ? forwardedFor.first
-          : request.connectionInfo.remoteAddress.host;
+
+      String ip;
+      if (forwardedFor != null && forwardedFor.isNotEmpty) {
+        // It seems that, in general, if `x-forwarded-for` has multiple values
+        // it is sent as a single header value separated by commas.
+        // To ensure only one value for IP is provided, we join all of the
+        // `x-forwarded-for` headers into a single string, split on comma,
+        // then use the first value.
+        ip = forwardedFor.join(",").split(",").first.trim();
+      } else {
+        ip = request.connectionInfo.remoteAddress.host;
+      }
 
       loggingService = _loggingFactory.newRequestSpecificLogger(
           request.method, resource, userAgent, uri.host, ip);
