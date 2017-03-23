@@ -11,7 +11,6 @@ import 'package:memcache/memcache.dart' as memcache;
 import 'package:gcloud/db.dart' as db;
 import 'package:gcloud/storage.dart' as storage;
 
-import 'http_wrapper.dart';
 import 'assets.dart';
 
 import '../../appengine.dart';
@@ -30,7 +29,7 @@ class ContextRegistry {
   final memcache.Memcache _memcache;
   final AppengineContext _appengineContext;
 
-  final Map<AppengineHttpRequest, ClientContext> _request2context = {};
+  final Map<HttpRequest, ClientContext> _request2context = {};
 
   ContextRegistry(this._loggingFactory, this._db, this._storage, this._memcache,
       this._appengineContext);
@@ -39,32 +38,33 @@ class ContextRegistry {
     return _appengineContext.isDevelopmentEnvironment;
   }
 
-  ClientContext add(AppengineHttpRequest request) {
+  ClientContext add(HttpRequest request) {
     final services = _getServices(request);
     final assets = new AssetsImpl(request, _appengineContext);
     final context = new _ClientContextImpl(
         services, assets, _appengineContext.isDevelopmentEnvironment);
     _request2context[request] = context;
 
-    request.response.registerHook((int statusCode, int responseSize) {
-      services.logging.finish(statusCode, responseSize);
+    request.response.done.whenComplete(() {
+      final int responseSize = request.response.headers.contentLength;
+      services.logging.finish(request.response.statusCode, responseSize);
     });
 
     return context;
   }
 
-  ClientContext lookup(AppengineHttpRequest request) {
+  ClientContext lookup(HttpRequest request) {
     return _request2context[request];
   }
 
-  Future remove(AppengineHttpRequest request) {
+  Future remove(HttpRequest request) {
     _request2context.remove(request);
     return new Future.value();
   }
 
   Services newBackgroundServices() => _getServices(null);
 
-  Services _getServices(AppengineHttpRequest request) {
+  Services _getServices(HttpRequest request) {
     var loggingService;
     if (request != null) {
       final uri = request.requestedUri;

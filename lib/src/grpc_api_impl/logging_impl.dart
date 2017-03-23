@@ -151,10 +151,13 @@ class GrpcRequestLoggingImpl extends appengine.Logging {
         ..nanos = 1000 * 1000 * (diff % 1000);
 
       appengineRequestLog
-        ..responseSize = new api.Int64(responseSize)
         ..endTime = nowTimestamp
         ..latency = latency
         ..status = responseStatus;
+
+      if (responseSize != null) {
+        appengineRequestLog.responseSize = new api.Int64(responseSize);
+      }
 
       final httpRequest = new api.HttpRequest()..status = responseStatus;
 

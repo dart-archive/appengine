@@ -1,3 +1,7 @@
+## 0.4.0-flex.alpha.0+6
+
+* Remove buffering of the http response (this is no longer needed).
+
 ## 0.4.0-flex.alpha.0+5
 
 * Use X-Forwarded-For header to discover real client IP.

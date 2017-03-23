@@ -9,7 +9,6 @@ import 'dart:convert' show UTF8;
 import 'dart:io';
 
 import 'context_registry.dart';
-import 'http_wrapper.dart';
 
 void _info(String message) {
   var formattedMessage = "${new DateTime.now()}: " + message;
@@ -45,13 +44,11 @@ class AppEngineHttpServer {
       _httpServer = server;
 
       server.listen((HttpRequest request) {
-        var appengineRequest = new AppengineHttpRequest(request);
-
         // Default handling is sending the request to the application.
         var handler = applicationHandler;
 
         // Check if the request path is one of the service handlers.
-        String path = appengineRequest.uri.path;
+        String path = request.uri.path;
         for (var pattern in serviceHandlers.keys) {
           if (path.startsWith(pattern)) {
             handler = serviceHandlers[pattern];
@@ -60,13 +57,12 @@ class AppEngineHttpServer {
         }
 
         _pendingRequests++;
-        var context = _contextRegistry.add(appengineRequest);
-        appengineRequest.response
-            .registerHook((int statusCode, int responseSize) {
-          _contextRegistry.remove(appengineRequest);
+        var context = _contextRegistry.add(request);
+        request.response.done.whenComplete(() {
+          _contextRegistry.remove(request);
         });
 
-        appengineRequest.response.done.catchError((error) {
+        request.response.done.catchError((error) {
           if (!_contextRegistry.isDevelopmentEnvironment) {
             _info("Error while handling response: $error");
           }
@@ -74,7 +70,7 @@ class AppEngineHttpServer {
           _checkShutdown();
         });
 
-        handler(appengineRequest, context);
+        handler(request, context);
       });
     });
   }
