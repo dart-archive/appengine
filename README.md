@@ -1,5 +1,5 @@
 This package provide support for running Dart on
-[Google App Engine Managed VMs][managed-vms].
+[Google App Engine Flexible Environment][flex].
 
 ### Getting started
 
@@ -45,6 +45,6 @@ We'd love to hear from you! If you encounter a bug, have suggestions for our
 APIs or is missing a feature, file it an issue on the
 [GitHub issue tracker](https://github.com/dart-lang/appengine/issues/new).
 
-**Note** The Dart support for App Engine is currently in beta.
+**Note** The Dart support for App Engine Flexible Environment is currently in beta.
 
-[managed-vms]: https://developers.google.com/appengine/docs/managed-vms/
+[flex]: https://cloud.google.com/appengine/docs/flexible/
