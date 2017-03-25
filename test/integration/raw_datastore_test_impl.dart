@@ -870,7 +870,7 @@ runTests(Datastore datastore, String namespace) {
         // TODO: query by multiple keys, multiple sort orders, ...
       });
 
-      test('ancestor_query', () {
+      test('ancestor_query', () async {
         /*
          * This test creates an
          * RootKind:1 -- This defines the entity group (no entity with that key)
@@ -1026,7 +1026,7 @@ runTests(Datastore datastore, String namespace) {
               return datastore.commit(deletes: [subSubKey, subSubKey2]);
             }
           ];
-          return Future.forEach(futures, (f) => f()).then(expectAsync((_) {}));
+          return Future.forEach(futures, (f) => f()).then(expectAsync1((_) {}));
         });
       });
     });

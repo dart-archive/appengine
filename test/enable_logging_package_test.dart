@@ -19,8 +19,8 @@ class LoggingMock extends Logging {
     _logFunctionMock(level, message, timestamp);
   }
 
-  void expect(Function function) {
-    _logFunctionMock = expectAsync(function);
+  void expect(void func(LogLevel a, String b, DateTime c)) {
+    _logFunctionMock = expectAsync3(func);
   }
 
   void expectNoCall() {
@@ -39,7 +39,7 @@ class CustomStackTrace implements StackTrace {
 void main() {
   group('enable_logging_package_test', () {
     test('not_registered', () {
-      fork(expectAsync(() async {
+      fork(expectAsync0(() async {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
 
@@ -51,7 +51,7 @@ void main() {
     });
 
     test('logging_adaptor_not_enabled', () {
-      fork(expectAsync(() async {
+      fork(expectAsync0(() async {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
         registerLoggingService(mock);
@@ -72,7 +72,7 @@ void main() {
         var logger = Logger.root;
         var mock = new LoggingMock();
 
-        return fork(expectAsync(() async {
+        return fork(expectAsync0(() async {
           registerLoggingService(mock);
 
           var level = Level.INFO;
@@ -91,7 +91,7 @@ void main() {
         var mock = new LoggingMock();
 
         var testZone = Zone.current;
-        fork(expectAsync(() async {
+        fork(expectAsync0(() async {
           registerLoggingService(mock);
 
           mock.expectNoCall();
@@ -105,7 +105,7 @@ void main() {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
 
-        return fork(expectAsync(() async {
+        return fork(expectAsync0(() async {
           registerLoggingService(mock);
 
           var logLevelMapping = {
@@ -140,7 +140,7 @@ void main() {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
 
-        return fork(expectAsync(() async {
+        return fork(expectAsync0(() async {
           registerLoggingService(mock);
           mock.expect((LogLevel level, String message, DateTime ts) {
             expect(level, equals(LogLevel.INFO));
@@ -155,7 +155,7 @@ void main() {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
 
-        return fork(expectAsync(() async {
+        return fork(expectAsync0(() async {
           registerLoggingService(mock);
           mock.expect((LogLevel level, String message, DateTime ts) {
             expect(level, equals(LogLevel.INFO));
