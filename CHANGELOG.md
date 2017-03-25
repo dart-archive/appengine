@@ -1,3 +1,8 @@
+## 0.4.0-flex.alpha.0+7
+
+* Send GCE zone with log requests.
+* Send only first IP address from X-Forwarded-For
+
 ## 0.4.0-flex.alpha.0+6
 
 * Remove buffering of the http response (this is no longer needed).
