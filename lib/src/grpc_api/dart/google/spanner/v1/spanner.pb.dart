@@ -4,6 +4,7 @@
 library google.spanner.v1_spanner;
 
 import 'dart:async';
+import 'dart:core' hide Type;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
