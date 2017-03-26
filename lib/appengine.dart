@@ -13,9 +13,9 @@ import 'package:gcloud/service_scope.dart' as ss;
 import 'src/appengine_internal.dart' as appengine_internal;
 import 'src/client_context.dart';
 
-export 'api/errors.dart';
-export 'api/logging.dart';
-export 'api/memcache.dart';
+export 'src/errors.dart';
+export 'src/logging.dart';
+export 'src/memcache.dart';
 export 'src/client_context.dart';
 
 const Symbol _APPENGINE_CONTEXT = #appengine.context;

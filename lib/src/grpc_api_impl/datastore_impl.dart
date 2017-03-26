@@ -9,7 +9,7 @@ import 'dart:async';
 import 'package:gcloud/common.dart';
 import 'package:gcloud/datastore.dart' as raw;
 
-import '../../api/errors.dart' as errors;
+import '../errors.dart' as errors;
 import '../grpc_api/datastore_api.dart';
 import 'grpc.dart' as grpc;
 

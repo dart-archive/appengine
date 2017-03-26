@@ -10,7 +10,7 @@ import 'package:gcloud/db.dart';
 import 'package:gcloud/storage.dart';
 import 'package:memcache/memcache.dart';
 
-import '../api/logging.dart';
+import 'logging.dart';
 
 abstract class ClientContext {
   /// Whether the application is currently running in the development

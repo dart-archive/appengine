@@ -18,9 +18,9 @@ import 'package:memcache/memcache.dart' as memcache;
 import 'package:memcache/memcache_raw.dart' as memcache_raw;
 import 'package:path/path.dart' as p;
 
-import '../api/errors.dart' as errors;
-import '../api/logging.dart' as logging;
-import '../api/memcache.dart' as memcache_interface;
+import 'errors.dart' as errors;
+import 'logging.dart' as logging;
+import 'memcache.dart' as memcache_interface;
 
 import 'api_impl/nop_memcache_impl.dart' as nop_memcache_impl;
 import 'api_impl/stderr_logging_impl.dart' as stderr_logging_impl;

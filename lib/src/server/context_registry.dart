@@ -13,7 +13,7 @@ import 'package:gcloud/storage.dart' as storage;
 
 import 'assets.dart';
 
-import '../../api/logging.dart';
+import '../logging.dart';
 import '../client_context.dart';
 import '../appengine_context.dart';
 import '../logging_impl.dart';

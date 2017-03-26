@@ -7,7 +7,7 @@ library stderr_logging;
 import 'dart:io' as io;
 import 'dart:async';
 
-import '../../api/logging.dart';
+import '../logging.dart';
 import '../logging_impl.dart';
 
 class StderrRequestLoggingImpl extends LoggingImpl {

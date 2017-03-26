@@ -7,7 +7,7 @@ library grpc_logging;
 import 'dart:io';
 import 'dart:async';
 
-import '../../api/logging.dart';
+import '../logging.dart';
 
 import '../grpc_api/logging_api.dart' as api;
 import '../grpc_api/dart/google/appengine/logging/v1/request_log.pb.dart'
