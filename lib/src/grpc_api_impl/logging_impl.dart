@@ -7,7 +7,7 @@ library grpc_logging;
 import 'dart:io';
 import 'dart:async';
 
-import 'package:appengine/appengine.dart' as appengine;
+import '../../api/logging.dart';
 
 import '../grpc_api/logging_api.dart' as api;
 import '../grpc_api/dart/google/appengine/logging/v1/request_log.pb.dart'
@@ -52,7 +52,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
     _resetState();
   }
 
-  void log(appengine.LogLevel level, String message, {DateTime timestamp}) {
+  void log(LogLevel level, String message, {DateTime timestamp}) {
     api.LogSeverity severity = _severityFromLogLevel(level);
 
     // The severity of the combined log entry will be the highest severity
@@ -178,12 +178,12 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
 /// A [appengine.Logging] adapter which sends log entries off via the
 /// [SharedLoggingService].
-class GrpcBackgroundLoggingImpl extends appengine.Logging {
+class GrpcBackgroundLoggingImpl extends Logging {
   final SharedLoggingService _sharedLoggingService;
 
   GrpcBackgroundLoggingImpl(this._sharedLoggingService);
 
-  void log(appengine.LogLevel level, String message, {DateTime timestamp}) {
+  void log(LogLevel level, String message, {DateTime timestamp}) {
     api.LogSeverity severity = _severityFromLogLevel(level);
 
     final int now = new DateTime.now().toUtc().millisecondsSinceEpoch;
@@ -315,17 +315,17 @@ api.Timestamp _protobufTimestampFromMilliseconds(int ms) {
     ..nanos = 1000 * 1000 * (ms % 1000);
 }
 
-api.LogSeverity _severityFromLogLevel(appengine.LogLevel level) {
+api.LogSeverity _severityFromLogLevel(LogLevel level) {
   switch (level) {
-    case appengine.LogLevel.CRITICAL:
+    case LogLevel.CRITICAL:
       return api.LogSeverity.CRITICAL;
-    case appengine.LogLevel.ERROR:
+    case LogLevel.ERROR:
       return api.LogSeverity.ERROR;
-    case appengine.LogLevel.WARNING:
+    case LogLevel.WARNING:
       return api.LogSeverity.WARNING;
-    case appengine.LogLevel.INFO:
+    case LogLevel.INFO:
       return api.LogSeverity.INFO;
-    case appengine.LogLevel.DEBUG:
+    case LogLevel.DEBUG:
       return api.LogSeverity.DEBUG;
   }
   throw new ArgumentError('Unknown logevel $level');

@@ -7,8 +7,7 @@ library stderr_logging;
 import 'dart:io' as io;
 import 'dart:async';
 
-import 'package:appengine/appengine.dart' as appengine;
-
+import '../../api/logging.dart';
 import '../logging_impl.dart';
 
 class StderrRequestLoggingImpl extends LoggingImpl {
@@ -20,14 +19,14 @@ class StderrRequestLoggingImpl extends LoggingImpl {
   final DateTime _startTimestamp = new DateTime.now().toUtc();
   final List<_LogLine> _gaeLogLines = <_LogLine>[];
 
-  appengine.LogLevel _currentLogLevel;
+  LogLevel _currentLogLevel;
 
   StderrRequestLoggingImpl(this._httpMethod, this._httpResource,
       this._userAgent, this._host, this._ip) {
     _resetState();
   }
 
-  void log(appengine.LogLevel level, String message, {DateTime timestamp}) {
+  void log(LogLevel level, String message, {DateTime timestamp}) {
     if (level.level > _currentLogLevel.level) {
       _currentLogLevel = level;
     }
@@ -77,12 +76,12 @@ class StderrRequestLoggingImpl extends LoggingImpl {
 
   void _resetState() {
     _gaeLogLines.clear();
-    _currentLogLevel = appengine.LogLevel.DEBUG;
+    _currentLogLevel = LogLevel.DEBUG;
   }
 }
 
-class StderrBackgroundLoggingImpl extends appengine.Logging {
-  void log(appengine.LogLevel level, String message, {DateTime timestamp}) {
+class StderrBackgroundLoggingImpl extends Logging {
+  void log(LogLevel level, String message, {DateTime timestamp}) {
     final logLine =
         new _LogLine(level, message, timestamp ?? new DateTime.now().toUtc());
     io.stderr.writeln('$logLine');
@@ -92,7 +91,7 @@ class StderrBackgroundLoggingImpl extends appengine.Logging {
 }
 
 class _LogLine {
-  final appengine.LogLevel level;
+  final LogLevel level;
   final String message;
   final DateTime timestamp;
 
