@@ -278,7 +278,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
       test('parent_key', () {
         var root = partition.emptyKey;
-        var users = [];
+        var users = <db.Model>[];
         for (var i = 333; i <= 334; i++) {
           users.add(new User()
               ..id = i

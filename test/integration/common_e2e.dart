@@ -25,9 +25,9 @@ bool onBot() {
   return Platform.environment[name] == 'chrome-bot';
 }
 
-typedef Future SACallback(String project, auth.ServiceAccountCredentials creds);
-
-Future withServiceAccount(SACallback callback) async {
+Future withServiceAccount(
+    Future callback(
+        String project, auth.ServiceAccountCredentials creds)) async {
   var project = Platform.environment[PROJECT_ENV];
   var serviceKeyLocation = Platform.environment[SERVICE_KEY_LOCATION_ENV];
 

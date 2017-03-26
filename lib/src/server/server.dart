@@ -9,6 +9,7 @@ import 'dart:convert' show UTF8;
 import 'dart:io';
 
 import 'context_registry.dart';
+import '../client_context.dart';
 
 void _info(String message) {
   var formattedMessage = "${new DateTime.now()}: " + message;
@@ -33,7 +34,7 @@ class AppEngineHttpServer {
 
   Future get done => _shutdownCompleter.future;
 
-  void run(applicationHandler(request, context)) {
+  void run(applicationHandler(HttpRequest request, ClientContext context)) {
     var serviceHandlers = {
       '/_ah/start': _start,
       '/_ah/health': _health,

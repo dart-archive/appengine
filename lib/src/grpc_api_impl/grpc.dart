@@ -36,7 +36,7 @@ class Channel extends protobuf.RpcClient {
 
   Channel(this.servicePackage, this.client);
 
-  Future invoke(
+  Future<protobuf.GeneratedMessage> invoke(
       protobuf.ClientContext ctx,
       String serviceName,
       String methodName,
@@ -151,7 +151,7 @@ class Client {
     // is being asynchronously executed.
     final http2.ClientTransportConnection connection = _connection;
     final http2.TransportStream stream = connection.makeRequest(headers);
-    final messageIterator = new StreamIterator(stream.incomingMessages);
+    final messageIterator = new StreamIterator<http2.StreamMessage>(stream.incomingMessages);
 
     final messageBody = request.writeToBuffer();
 

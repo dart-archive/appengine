@@ -9,7 +9,9 @@ import 'dart:async';
 
 import 'package:appengine/appengine.dart' as appengine;
 
-class StderrRequestLoggingImpl extends appengine.Logging {
+import '../logging_impl.dart';
+
+class StderrRequestLoggingImpl extends LoggingImpl {
   final String _httpMethod;
   final String _httpResource;
   final String _userAgent;

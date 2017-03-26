@@ -12,8 +12,8 @@ import 'package:appengine/appengine.dart' as appengine;
 import '../grpc_api/logging_api.dart' as api;
 import '../grpc_api/dart/google/appengine/logging/v1/request_log.pb.dart'
     as gae_log;
-
 import 'grpc.dart' as grpc;
+import '../logging_impl.dart';
 
 const List<String> OAuth2Scopes = const <String>[
   "https://www.googleapis.com/auth/cloud-platform",
@@ -29,7 +29,7 @@ const List<String> OAuth2Scopes = const <String>[
 ///
 /// It uses an embedded AppEngine-compatible protobuf message in order to group
 /// logging messages together.
-class GrpcRequestLoggingImpl extends appengine.Logging {
+class GrpcRequestLoggingImpl extends LoggingImpl {
   static const int logEntryBaseLimit = 150;
   static const int logEntrySizeLimit = 40 * 1024;
 

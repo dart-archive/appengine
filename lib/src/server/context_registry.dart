@@ -15,9 +15,10 @@ import 'assets.dart';
 
 import '../../appengine.dart';
 import '../appengine_context.dart';
+import '../logging_impl.dart';
 
 abstract class LoggerFactory {
-  Logging newRequestSpecificLogger(
+  LoggingImpl newRequestSpecificLogger(
       String method, String resource, String userAgent, String host, String ip);
   Logging newBackgroundLogger();
 }
@@ -64,8 +65,8 @@ class ContextRegistry {
 
   Services newBackgroundServices() => _getServices(null);
 
-  Services _getServices(HttpRequest request) {
-    var loggingService;
+  _ServicesImpl _getServices(HttpRequest request) {
+    LoggingImpl loggingService;
     if (request != null) {
       final uri = request.requestedUri;
       final resource = uri.hasQuery ? '${uri.path}?${uri.query}' : uri.path;
@@ -110,7 +111,7 @@ class _ClientContextImpl implements ClientContext {
 class _ServicesImpl extends Services {
   final db.DatastoreDB db;
   final storage.Storage storage;
-  final Logging logging;
+  final LoggingImpl logging;
   final memcache.Memcache memcache;
 
   _ServicesImpl(this.db, this.storage, this.logging, this.memcache);
