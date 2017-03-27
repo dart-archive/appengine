@@ -96,7 +96,7 @@ void main() {
     // fixed body.
     Future startPubServeMock() {
       return HttpServer.bind('127.0.0.1', 0).then((server) {
-        server.listen(expectAsync((request) {
+        server.listen(expectAsync1((request) {
           if (request.uri.path == '/test') {
             request.response.statusCode = HttpStatus.NOT_FOUND;
           } else if (request.uri.path == '/test.html') {

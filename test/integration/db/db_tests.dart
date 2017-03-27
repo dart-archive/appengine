@@ -181,11 +181,12 @@ runTests(db.DatastoreDB store, String namespace) {
         });
       });
     } else {
-      return store.commit(inserts: objects).then(expectAsync((_) {
-        return store.lookup(keys).then(expectAsync((List<db.Model> models) {
+      return store.commit(inserts: objects).then(expectAsync1((_) {
+        return store.lookup(keys).then(expectAsync1((List<db.Model> models) {
           compareModels(objects, models);
-          return store.commit(deletes: keys).then(expectAsync((_) {
-            return store.lookup(keys).then(expectAsync((List<db.Model> models) {
+          return store.commit(deletes: keys).then(expectAsync1((_) {
+            return store.lookup(keys)
+                .then(expectAsync1((List<db.Model> models) {
               for (var i = 0; i < models.length; i++) {
                 expect(models[i], isNull);
               }
@@ -277,7 +278,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
       test('parent_key', () {
         var root = partition.emptyKey;
-        var users = [];
+        var users = <db.Model>[];
         for (var i = 333; i <= 334; i++) {
           users.add(new User()
               ..id = i
@@ -328,7 +329,7 @@ runTests(db.DatastoreDB store, String namespace) {
             ..parentKey = root
             ..age = 83
             ..name = 'user83');
-        return store.commit(inserts: persons).then(expectAsync((_) {
+        return store.commit(inserts: persons).then(expectAsync1((_) {
           // At this point, autoIds are allocated and are reflected in the
           // models (as well as parentKey if it was empty).
 
@@ -358,13 +359,13 @@ runTests(db.DatastoreDB store, String namespace) {
           // because an id doesn't need to be globally unique, only under
           // entities with the same parent.
 
-          return store.lookup(keys).then(expectAsync((List<Person> models) {
+          return store.lookup(keys).then(expectAsync1((List<Person> models) {
             // Since the id/parentKey fields are set after commit and a lookup
             // returns new model instances, we can do full model comparison
             // here.
             compareModels(persons, models);
-            return store.commit(deletes: keys).then(expectAsync((_) {
-              return store.lookup(keys).then(expectAsync((List models) {
+            return store.commit(deletes: keys).then(expectAsync1((_) {
+              return store.lookup(keys).then(expectAsync1((List models) {
                 for (var i = 0; i < models.length; i++) {
                   expect(models[i], isNull);
                 }

@@ -358,7 +358,7 @@ class MockDialer implements grpc.Dialer {
 
   Future<http2.TransportConnection> dial() async {
     if (throwOnDial) {
-      throw new grpc.NetworkException('dialing error', null);
+      throw new grpc.NetworkException('dialing error');
     }
     return usedConnection = connectionCreator();
   }

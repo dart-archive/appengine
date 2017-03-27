@@ -36,7 +36,7 @@ class Channel extends protobuf.RpcClient {
 
   Channel(this.servicePackage, this.client);
 
-  Future invoke(
+  Future<protobuf.GeneratedMessage> invoke(
       protobuf.ClientContext ctx,
       String serviceName,
       String methodName,
@@ -115,8 +115,7 @@ class Client {
     }
 
     if (!_connection.isOpen) {
-      throw new NetworkException(
-          'The http/2 connection is no longer open.', null);
+      throw new NetworkException('The http/2 connection is no longer open.');
     }
     final headers = [
       _postHeader,
@@ -152,7 +151,7 @@ class Client {
     // is being asynchronously executed.
     final http2.ClientTransportConnection connection = _connection;
     final http2.TransportStream stream = connection.makeRequest(headers);
-    final messageIterator = new StreamIterator(stream.incomingMessages);
+    final messageIterator = new StreamIterator<http2.StreamMessage>(stream.incomingMessages);
 
     final messageBody = request.writeToBuffer();
 
@@ -244,7 +243,8 @@ class Client {
       }
 
       final List<int> realData = responseData is Uint8List
-          ? new Uint8List.view(responseData.buffer, responseData.offsetInBytes  + 5, responseData.length - 5)
+          ? new Uint8List.view(responseData.buffer,
+              responseData.offsetInBytes + 5, responseData.length - 5)
           : responseData.sublist(5);
       try {
         response.mergeFromBuffer(realData);
@@ -257,10 +257,11 @@ class Client {
       // If there was a stream error, we'll just kill the whole connection.
       // There is a high chance that something is not right.
       if (connection.isOpen) await connection.terminate();
-      throw new NetworkException('Stream error during grpc call', error);
+      throw new NetworkException('Stream error during grpc call', error: error);
     } on http2.TransportConnectionException catch (error) {
       if (connection.isOpen) await connection.terminate();
-      throw new NetworkException('Connection error during grpc call', error);
+      throw new NetworkException('Connection error during grpc call',
+          error: error);
     }
 
     return response;
@@ -338,12 +339,13 @@ class Dialer {
         } else {
           socket.destroy();
           _completer.completeError(new NetworkException(
-              'Endpoint $endpoint does not support http/2 via ALPN', null));
+              'Endpoint $endpoint does not support http/2 via ALPN'));
           _completer = null;
         }
       } catch (error) {
         _completer.completeError(new NetworkException(
-            'Could not connect to endpoint "$endpoint"', error));
+            'Could not connect to endpoint "$endpoint"',
+            error: error));
         _completer = null;
       }
     } else {
@@ -356,7 +358,8 @@ class Dialer {
         _completer = null;
       } catch (error) {
         _completer.completeError(new NetworkException(
-            'Could not connect to endpoint "$endpoint"', error));
+            'Could not connect to endpoint "$endpoint"',
+            error: error));
         _completer = null;
       }
     }
@@ -383,9 +386,15 @@ class NetworkException extends BaseException {
   final String message;
   final Object error;
 
-  NetworkException(this.message, this.error);
+  NetworkException(this.message, {this.error});
 
-  String toString() => 'GrpcNetworkException: $error';
+  String toString() {
+    var str = 'GrpcNetworkException: $message';
+    if (error != null) {
+      str = '$str ($error)';
+    }
+    return str;
+  }
 }
 
 class ProtocolException extends BaseException {

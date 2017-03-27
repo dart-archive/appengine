@@ -18,17 +18,19 @@ import 'package:memcache/memcache.dart' as memcache;
 import 'package:memcache/memcache_raw.dart' as memcache_raw;
 import 'package:path/path.dart' as p;
 
-import '../api/errors.dart' as errors;
-import '../api/logging.dart' as logging;
-import '../api/memcache.dart' as memcache_interface;
+import 'errors.dart' as errors;
+import 'logging.dart' as logging;
+import 'memcache.dart' as memcache_interface;
 
 import 'api_impl/nop_memcache_impl.dart' as nop_memcache_impl;
 import 'api_impl/stderr_logging_impl.dart' as stderr_logging_impl;
 import 'appengine_context.dart';
+import 'client_context.dart';
 import 'grpc_api_impl/auth_utils.dart' as auth_utils;
 import 'grpc_api_impl/datastore_impl.dart' as grpc_datastore_impl;
 import 'grpc_api_impl/grpc.dart' as grpc;
 import 'grpc_api_impl/logging_impl.dart' as grpc_logging_impl;
+import 'logging_impl.dart';
 import 'server/context_registry.dart';
 import 'server/logging_package_adaptor.dart';
 import 'server/server.dart';
@@ -37,16 +39,16 @@ bool _loggingPackageEnabled = false;
 
 /// Runs the given [callback] inside a new service scope and makes AppEngine
 /// services available within that scope.
-Future withAppEngineServices(Future callback()) {
-  return _withAppEngineServicesInternal((_) => callback());
-}
+Future withAppEngineServices(Future callback()) =>
+    _withAppEngineServicesInternal((_) => callback());
 
 /// Runs the AppEngine http server and uses the given request [handler] to
 /// handle incoming http requests.
 ///
 /// The given request [handler] is run inside a new service scope and has all
 /// AppEngine services available within that scope.
-Future runAppEngine(void handler(request, context), void onError(e, s),
+Future runAppEngine(void handler(HttpRequest request, ClientContext context),
+    void onError(Object e, StackTrace s),
     {int port: 8080}) {
   return _withAppEngineServicesInternal((ContextRegistry contextRegistry) {
     var appengineServer = new AppEngineHttpServer(contextRegistry, port: port);
@@ -94,7 +96,7 @@ Future runAppEngine(void handler(request, context), void onError(e, s),
   });
 }
 
-Future _withAppEngineServicesInternal(Future callback(contextRegistry)) {
+Future _withAppEngineServicesInternal(Future callback(ContextRegistry contextRegistry)) {
   return ss.fork(() async {
     ContextRegistry contextRegistry = await _initializeAppEngine();
     final bgServices = contextRegistry.newBackgroundServices();
@@ -390,7 +392,7 @@ class GrpcLoggerFactory implements LoggerFactory {
 
   GrpcLoggerFactory(this._shared);
 
-  logging.Logging newRequestSpecificLogger(String method, String resource,
+  LoggingImpl newRequestSpecificLogger(String method, String resource,
       String userAgent, String host, String ip) {
     return new grpc_logging_impl.GrpcRequestLoggingImpl(
         _shared, method, resource, userAgent, host, ip);
