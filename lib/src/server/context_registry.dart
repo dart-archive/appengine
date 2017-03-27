@@ -5,105 +5,95 @@
 library appengine.context_registry;
 
 import 'dart:async';
+import 'dart:io';
 
 import 'package:memcache/memcache.dart' as memcache;
-import 'package:memcache/src/memcache_impl.dart' as memcache_impl;
 import 'package:gcloud/db.dart' as db;
 import 'package:gcloud/storage.dart' as storage;
 
-import 'http_wrapper.dart';
 import 'assets.dart';
 
-import '../../appengine.dart';
+import '../logging.dart';
+import '../client_context.dart';
 import '../appengine_context.dart';
-import '../protobuf_api/rpc/rpc_service.dart';
-import '../api_impl/logging_impl.dart' as logging_impl;
-import '../api_impl/modules_impl.dart' as modules_impl;
-import '../api_impl/raw_memcache_impl.dart' as raw_memcache_impl;
-import '../api_impl/remote_api_impl.dart' as remote_api_impl;
-import '../api_impl/raw_datastore_v3_impl.dart' as raw_datastore_v3_impl;
-import '../api_impl/users_impl.dart' as users_impl;
+import '../logging_impl.dart';
+
+abstract class LoggerFactory {
+  LoggingImpl newRequestSpecificLogger(
+      String method, String resource, String userAgent, String host, String ip);
+  Logging newBackgroundLogger();
+}
 
 class ContextRegistry {
-  static const HTTP_HEADER_APPENGINE_TICKET = 'x-appengine-api-ticket';
-  static const HTTP_HEADER_DEVAPPSERVER_REQUEST_ID =
-      'x-appengine-dev-request-id';
-
-  final RPCService _rpcService;
+  final LoggerFactory _loggingFactory;
+  final db.DatastoreDB _db;
   final storage.Storage _storage;
+  final memcache.Memcache _memcache;
   final AppengineContext _appengineContext;
-  final Map<AppengineHttpRequest, ClientContext> _request2context = {};
-  db.ModelDB _modelDB;
 
-  ContextRegistry(this._rpcService, this._storage, this._appengineContext) {
-    // TODO: We should provide an API to allow users providing us with either a
-    // different [ModelDB] object or specify a list of libraries to scan for
-    // models.
-    _modelDB = new db.ModelDBImpl();
-  }
+  final Map<HttpRequest, ClientContext> _request2context = {};
+
+  ContextRegistry(this._loggingFactory, this._db, this._storage, this._memcache,
+      this._appengineContext);
 
   bool get isDevelopmentEnvironment {
     return _appengineContext.isDevelopmentEnvironment;
   }
 
-  ClientContext add(AppengineHttpRequest request) {
-    var ticket = request.headers.value(HTTP_HEADER_APPENGINE_TICKET);
-    if (ticket == null) {
-      ticket = request.headers.value(HTTP_HEADER_DEVAPPSERVER_REQUEST_ID);
-      if (ticket == null) {
-        ticket = 'invalid-ticket';
-      }
-    }
-    var services = _getServices(ticket, request);
-    var assets = new AssetsImpl(request, _appengineContext);
-    var context =
-        new _ClientContextImpl(
-            services, assets, _appengineContext.isDevelopmentEnvironment);
+  ClientContext add(HttpRequest request) {
+    final services = _getServices(request);
+    final assets = new AssetsImpl(request, _appengineContext);
+    final context = new _ClientContextImpl(
+        services, assets, _appengineContext.isDevelopmentEnvironment);
     _request2context[request] = context;
 
-    request.response.registerHook(
-        () => services.logging.flush().catchError((_) {}));
+    request.response.done.whenComplete(() {
+      final int responseSize = request.response.headers.contentLength;
+      services.logging.finish(request.response.statusCode, responseSize);
+    });
 
     return context;
   }
 
-  ClientContext lookup(AppengineHttpRequest request) {
+  ClientContext lookup(HttpRequest request) {
     return _request2context[request];
   }
 
-  Future remove(AppengineHttpRequest request) {
+  Future remove(HttpRequest request) {
     _request2context.remove(request);
     return new Future.value();
   }
 
-  Services newBackgroundServices()
-      => _getServices(_appengineContext.backgroundTicket, null);
+  Services newBackgroundServices() => _getServices(null);
 
-  Services _getServices(String ticket, AppengineHttpRequest request) {
-    var raw_memcache =
-        new raw_memcache_impl.RawMemcacheRpcImpl(_rpcService, ticket);
-    var serviceMap = {
-      // Create a new logging instance for every request, but use the background
-      // ticket, so we can flush logs at the end of the request.
-      'logging': new logging_impl.LoggingRpcImpl(_rpcService, ticket),
-      'raw_memcache': raw_memcache,
-      'raw_datastore_v3' : new raw_datastore_v3_impl.DatastoreV3RpcImpl(
-          _rpcService, _appengineContext, ticket),
-      'remote_api' : new remote_api_impl.RemoteApiImpl(
-          _rpcService, _appengineContext, ticket),
-      'modules' : new modules_impl.ModulesRpcImpl(
-          _rpcService, _appengineContext, ticket),
-    };
+  _ServicesImpl _getServices(HttpRequest request) {
+    LoggingImpl loggingService;
     if (request != null) {
-      serviceMap['users'] =
-          new users_impl.UserRpcImpl(_rpcService, ticket, request);
+      final uri = request.requestedUri;
+      final resource = uri.hasQuery ? '${uri.path}?${uri.query}' : uri.path;
+      final userAgent = request.headers.value(HttpHeaders.USER_AGENT);
+
+      final List<String> forwardedFor = request.headers['x-forwarded-for'];
+
+      String ip;
+      if (forwardedFor != null && forwardedFor.isNotEmpty) {
+        // It seems that, in general, if `x-forwarded-for` has multiple values
+        // it is sent as a single header value separated by commas.
+        // To ensure only one value for IP is provided, we join all of the
+        // `x-forwarded-for` headers into a single string, split on comma,
+        // then use the first value.
+        ip = forwardedFor.join(",").split(",").first.trim();
+      } else {
+        ip = request.connectionInfo.remoteAddress.host;
+      }
+
+      loggingService = _loggingFactory.newRequestSpecificLogger(
+          request.method, resource, userAgent, uri.host, ip);
+    } else {
+      loggingService = _loggingFactory.newBackgroundLogger();
     }
-    serviceMap['memcache'] =
-        new memcache_impl.MemCacheImpl(serviceMap['raw_memcache']);
-    serviceMap['db'] =
-        new db.DatastoreDB(serviceMap['raw_datastore_v3'], modelDB: _modelDB);
-    serviceMap['storage'] = _storage;
-    return new _ServicesImpl(serviceMap);
+
+    return new _ServicesImpl(_db, _storage, loggingService, _memcache);
   }
 }
 
@@ -120,24 +110,10 @@ class _ClientContextImpl implements ClientContext {
 }
 
 class _ServicesImpl extends Services {
-  // TODO:
-  // - consider removing the map
-  // - consider building the services on demand
-  final Map<String, dynamic> _serviceMap;
+  final db.DatastoreDB db;
+  final storage.Storage storage;
+  final LoggingImpl logging;
+  final memcache.Memcache memcache;
 
-  _ServicesImpl(this._serviceMap);
-
-  db.DatastoreDB get db => _serviceMap['db'];
-
-  storage.Storage get storage => _serviceMap['storage'];
-
-  Logging get logging => _serviceMap['logging'];
-
-  memcache.Memcache get memcache => _serviceMap['memcache'];
-
-  ModulesService get modules => _serviceMap['modules'];
-
-  RemoteApi get remoteApi => _serviceMap['remote_api'];
-
-  UserService get users => _serviceMap['users'];
+  _ServicesImpl(this.db, this.storage, this.logging, this.memcache);
 }

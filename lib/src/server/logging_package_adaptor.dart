@@ -6,7 +6,7 @@ library appengine.server.logging_package_adaptor;
 
 import 'package:logging/logging.dart';
 
-import '../../api/logging.dart';
+import '../logging.dart';
 
 final Map<Level, LogLevel> _loggingLevel2AppengineLoggingLevel = {
   Level.OFF: null,

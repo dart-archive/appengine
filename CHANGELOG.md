@@ -1,3 +1,58 @@
+## 0.4.0-flex.alpha.0+7
+
+* Send GCE zone with log requests.
+* Send only first IP address from X-Forwarded-For
+
+## 0.4.0-flex.alpha.0+6
+
+* Remove buffering of the http response (this is no longer needed).
+
+## 0.4.0-flex.alpha.0+5
+
+* Use X-Forwarded-For header to discover real client IP.
+
+## 0.4.0-flex.alpha.0+4
+
+* Refresh gRPC connections after 50 minutes (server seems to forcefully close
+  the connection after 1 hour).
+
+## 0.4.0-flex.alpha.0+3
+
+* Use the empty string if there is no user agent.
+* Only log requests for which there is logging information
+
+## 0.4.0-flex.alpha.0+2
+
+* Do not log every request to stdout, since we will write to the logging service
+  anyway.
+
+## 0.4.0-flex.alpha.0+1
+
+* Set tcp-nodelay socket option to reduce rpc latency.
+
+## 0.4.0-flex.alpha.0
+
+* Removed the already deprecated `RemoteApi` support.
+* Removed `UsersService` api.
+* Removed `ModulesService` api.
+* Use the new flexible runtime environment variables:
+   - GCLOUD\_PROJECT
+   - GAE\_SERVICE
+   - GAE\_VERSION
+   - GAE\_INSTANCE
+* Introduce a new GCLOUD\_KEY environment variable:
+
+  For local development purposes this variable must point to a service acount
+  credentials file (in json form).
+
+  The more specific STORAGE\_SERVICE\_ACCOUNT\_FILE environment variable is no
+  longer used.
+
+* To prevent duplicate logging of errors, `runAppEngine` will no longer log
+  request-specific errors on stdout if they got already logged via the
+  request-specific log.
+
+
 ## 0.3.3+1
 
 * Support `gcloud` package version `0.3.0`.

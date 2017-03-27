@@ -11,16 +11,11 @@ export 'package:gcloud/http.dart';
 import 'package:gcloud/service_scope.dart' as ss;
 
 import 'src/appengine_internal.dart' as appengine_internal;
-import 'src/app_engine_request_handler.dart';
 import 'src/client_context.dart';
 
-export 'api/errors.dart';
-export 'api/logging.dart';
-export 'api/modules.dart';
-export 'api/memcache.dart';
-export 'api/remote_api.dart';
-export 'api/users.dart';
-export 'src/app_engine_request_handler.dart';
+export 'src/errors.dart';
+export 'src/logging.dart';
+export 'src/memcache.dart';
 export 'src/client_context.dart';
 
 const Symbol _APPENGINE_CONTEXT = #appengine.context;
@@ -50,7 +45,7 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
  * The returned `Future` will complete when the HTTP server has been shutdown
  * and is no longer serving requests.
  */
-Future runAppEngine(AppEngineRequestHandler handler,
+Future runAppEngine(void handler(HttpRequest request),
     {Function onError, int port: 8080}) {
   var errorHandler;
   if (onError != null) {
@@ -62,10 +57,6 @@ Future runAppEngine(AppEngineRequestHandler handler,
       throw new ArgumentError(
           'The [onError] argument must take either one or two arguments.');
     }
-  } else {
-    errorHandler = (error, stack) {
-      print("$error\nStack:\n$stack");
-    };
   }
 
   return appengine_internal.runAppEngine((HttpRequest request,

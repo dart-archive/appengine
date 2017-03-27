@@ -9,11 +9,11 @@ import 'dart:convert' show UTF8;
 import 'dart:io';
 
 import 'context_registry.dart';
-import 'http_wrapper.dart';
+import '../client_context.dart';
 
 void _info(String message) {
   var formattedMessage = "${new DateTime.now()}: " + message;
-  print(formattedMessage);
+  stderr.writeln(formattedMessage);
 }
 
 class AppEngineHttpServer {
@@ -28,33 +28,28 @@ class AppEngineHttpServer {
   HttpServer _httpServer;
 
   AppEngineHttpServer(this._contextRegistry,
-                      {String hostname: '0.0.0.0', int port: 8080})
-      : _hostname = hostname, _port = port;
+      {String hostname: '0.0.0.0', int port: 8080})
+      : _hostname = hostname,
+        _port = port;
 
   Future get done => _shutdownCompleter.future;
 
-  void run(applicationHandler(request, context)) {
+  void run(applicationHandler(HttpRequest request, ClientContext context)) {
     var serviceHandlers = {
-        '/_ah/start' : _start,
-        '/_ah/health' : _health,
-        '/_ah/stop' : _stop
+      '/_ah/start': _start,
+      '/_ah/health': _health,
+      '/_ah/stop': _stop
     };
 
     HttpServer.bind(_hostname, _port).then((HttpServer server) {
       _httpServer = server;
 
       server.listen((HttpRequest request) {
-        var appengineRequest = new AppengineHttpRequest(request);
-
-        if (!_contextRegistry.isDevelopmentEnvironment) {
-          _info("Got request: ${appengineRequest.uri}");
-        }
-
         // Default handling is sending the request to the application.
         var handler = applicationHandler;
 
         // Check if the request path is one of the service handlers.
-        String path = appengineRequest.uri.path;
+        String path = request.uri.path;
         for (var pattern in serviceHandlers.keys) {
           if (path.startsWith(pattern)) {
             handler = serviceHandlers[pattern];
@@ -63,11 +58,12 @@ class AppEngineHttpServer {
         }
 
         _pendingRequests++;
-        var context = _contextRegistry.add(appengineRequest);
-        appengineRequest.response.registerHook(
-            () => _contextRegistry.remove(appengineRequest));
+        var context = _contextRegistry.add(request);
+        request.response.done.whenComplete(() {
+          _contextRegistry.remove(request);
+        });
 
-        appengineRequest.response.done.catchError((error) {
+        request.response.done.catchError((error) {
           if (!_contextRegistry.isDevelopmentEnvironment) {
             _info("Error while handling response: $error");
           }
@@ -75,7 +71,7 @@ class AppEngineHttpServer {
           _checkShutdown();
         });
 
-        handler(appengineRequest, context);
+        handler(request, context);
       });
     });
   }

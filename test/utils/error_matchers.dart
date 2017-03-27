@@ -6,7 +6,7 @@ library error_matchers;
 
 import 'package:test/test.dart';
 
-import 'package:appengine/api/errors.dart';
+import 'package:appengine/src/errors.dart';
 import 'package:gcloud/datastore.dart' as datastore;
 
 import 'package:memcache/memcache.dart' as memcache;

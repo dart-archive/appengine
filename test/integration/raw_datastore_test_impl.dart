@@ -4,6 +4,29 @@
 
 library raw_datastore_test_impl;
 
+/// NOTE: In order to run these tests, the following datastore indices must
+/// exist:
+/// $ cat index.yaml
+/// indexes:
+/// - kind: TestQueryKind
+///   ancestor: no
+///   properties:
+///   - name: indexedProp
+///     direction: asc
+///   - name: blobPropertyIndexed
+///     direction: asc
+///
+/// - kind: TestQueryKind
+///   ancestor: no
+///   properties:
+///   - name: listproperty
+///   - name: test_property
+///     direction: desc
+/// $ gcloud preview datastore create-indexes .
+/// 02:19 PM Host: appengine.google.com
+/// 02:19 PM Uploading index definitions.
+
+
 import 'dart:async';
 
 import 'package:gcloud/datastore.dart';
@@ -24,7 +47,9 @@ Future<List<Entity>> consumePages(FirstPageProvider provider) {
   return new StreamFromPages(provider).stream.toList();
 }
 
-runTests(Datastore datastore) {
+runTests(Datastore datastore, String namespace) {
+  Partition partition = new Partition(namespace);
+
   Future withTransaction(Function f, {bool xg: false}) {
     return datastore.beginTransaction(crossEntityGroup: xg).then(f);
   }
@@ -167,7 +192,7 @@ runTests(Datastore datastore) {
       Future<List<Key>> testInsertNegative(List<Entity> entities,
           {bool transactional: false, bool xg: false}) {
         test(Transaction transaction) {
-          expect(datastore.commit(inserts: entities,
+          expect(datastore.commit(autoIdInserts: entities,
                                   transaction: transaction),
                                   throwsA(isApplicationError));
         }
@@ -178,11 +203,12 @@ runTests(Datastore datastore) {
         return test(null);
       }
 
-      var unnamedEntities1 = buildEntities(42, 43);
-      var unnamedEntities5 = buildEntities(1, 6);
-      var unnamedEntities20 = buildEntities(6, 26);
+      var unnamedEntities1 = buildEntities(42, 43, partition: partition);
+      var unnamedEntities5 = buildEntities(1, 6, partition: partition);
+      var unnamedEntities26 = buildEntities(6, 32, partition: partition);
       var named20000 = buildEntities(
-          1000, 21001, idFunction: (i) => 'named_${i}_of_10000');
+          1000, 21001, idFunction: (i) => 'named_${i}_of_10000',
+          partition: partition);
 
       test('insert', () {
         return testInsert(unnamedEntities5, transactional: false).then((keys) {
@@ -215,16 +241,15 @@ runTests(Datastore datastore) {
         });
       });
 
-      // Does not work with cloud datastore REST api, why?
-      test('negative_insert_transactional', () {
-        return testInsertNegative(unnamedEntities5, transactional: true);
+      test('negative_insert__incomplete_path', () {
+        expect(datastore.commit(inserts: unnamedEntities1),
+               throwsA(isApplicationError));
       });
 
-      // Does not work with cloud datastore REST api, why?
       test('negative_insert_transactional_xg', () {
         return testInsertNegative(
-            unnamedEntities20, transactional: true, xg: true);
-      }, skip: 'Existing failure');
+            unnamedEntities26, transactional: true, xg: true);
+      });
 
       test('negative_insert_20000_entities', () {
         // Maybe it should not be a [DataStoreError] here?
@@ -260,7 +285,7 @@ runTests(Datastore datastore) {
           }
         }
 
-        var keys = buildKeys(1, 4);
+        var keys = buildKeys(1, 4, partition: partition);
         return datastore.allocateIds(keys).then((List<Key> completedKeys) {
           compareResult(keys, completedKeys);
           // TODO: Make sure we can insert these keys
@@ -312,10 +337,11 @@ runTests(Datastore datastore) {
         return test(null);
       }
 
-      var unnamedEntities1 = buildEntities(42, 43);
-      var unnamedEntities5 = buildEntities(1, 6);
-      var unnamedEntities20 = buildEntities(6, 26);
-      var entitiesWithAllPropertyTypes = buildEntityWithAllProperties(1, 6);
+      var unnamedEntities1 = buildEntities(42, 43, partition: partition);
+      var unnamedEntities5 = buildEntities(1, 6, partition: partition);
+      var unnamedEntities20 = buildEntities(6, 26, partition: partition);
+      var entitiesWithAllPropertyTypes =
+          buildEntityWithAllProperties(1, 6, partition: partition);
 
       test('lookup', () {
         return insert([], unnamedEntities20, transactional: false).then((keys) {
@@ -374,7 +400,7 @@ runTests(Datastore datastore) {
         return test(null);
       }
 
-      var unnamedEntities99 = buildEntities(6, 106);
+      var unnamedEntities99 = buildEntities(6, 106, partition: partition);
 
       test('delete', () {
         return insert([], unnamedEntities99, transactional: false).then((keys) {
@@ -429,14 +455,16 @@ runTests(Datastore datastore) {
       Future testRollback(List<Key> keys, {bool xg: false}) {
         return withTransaction((Transaction transaction) {
           return datastore.lookup(keys, transaction: transaction)
-              .then((List<Entity> entitites) {
+              .then((List<Entity> entities) {
             return datastore.rollback(transaction);
           });
         }, xg: xg);
       }
 
-      var namedEntities1 = buildEntities(42, 43, idFunction: (i) => "i$i");
-      var namedEntities5 = buildEntities(1, 6, idFunction: (i) => "i$i");
+      var namedEntities1 =
+          buildEntities(42, 43, idFunction: (i) => "i$i", partition: partition);
+      var namedEntities5 =
+          buildEntities(1, 6, idFunction: (i) => "i$i", partition: partition);
 
       var namedEntities1Keys = namedEntities1.map((e) => e.key).toList();
       var namedEntities5Keys = namedEntities5.map((e) => e.key).toList();
@@ -455,7 +483,7 @@ runTests(Datastore datastore) {
           List<Key> keys, {bool transactional: false, bool xg: false}) {
         Future test(Transaction transaction) {
           return datastore.lookup(keys, transaction: transaction)
-              .then((List<Entity> entitites) {
+              .then((List<Entity> entities) {
             return datastore.commit(transaction: transaction);
           });
         }
@@ -467,9 +495,12 @@ runTests(Datastore datastore) {
         }
       }
 
-      var namedEntities1 = buildEntities(42, 43, idFunction: (i) => "i$i");
-      var namedEntities5 = buildEntities(1, 6, idFunction: (i) => "i$i");
-      var namedEntities20 = buildEntities(6, 26, idFunction: (i) => "i$i");
+      var namedEntities1 =
+          buildEntities(42, 43, idFunction: (i) => "i$i", partition: partition);
+      var namedEntities5 =
+          buildEntities(1, 6, idFunction: (i) => "i$i", partition: partition);
+      var namedEntities20 =
+          buildEntities(6, 26, idFunction: (i) => "i$i", partition: partition);
 
       var namedEntities1Keys = namedEntities1.map((e) => e.key).toList();
       var namedEntities5Keys = namedEntities5.map((e) => e.key).toList();
@@ -486,7 +517,6 @@ runTests(Datastore datastore) {
       test('empty_commit_transactional_xg', () {
         return testEmptyCommit(namedEntities5Keys);
       });
-
       test('negative_empty_commit_xg', () {
         expect(testEmptyCommit(
                namedEntities20Keys, transactional: true, xg: true),
@@ -547,8 +577,10 @@ runTests(Datastore datastore) {
         });
       }
 
-      var namedEntities1 = buildEntities(42, 43, idFunction: (i) => "i$i");
-      var namedEntities5 = buildEntities(1, 6, idFunction: (i) => "i$i");
+      var namedEntities1 =
+          buildEntities(42, 43, idFunction: (i) => "i$i", partition: partition);
+      var namedEntities5 =
+          buildEntities(1, 6, idFunction: (i) => "i$i", partition: partition);
 
       test('conflicting_transaction', () {
         expect(testConflictingTransaction(namedEntities1),
@@ -560,7 +592,6 @@ runTests(Datastore datastore) {
                throwsA(isTransactionAbortedError));
       });
     });
-
     group('query', () {
       Future testQuery(String kind,
                        {List<Filter> filters,
@@ -573,7 +604,8 @@ runTests(Datastore datastore) {
           var query = new Query(
               kind: kind, filters: filters, orders: orders,
               offset: offset, limit: limit);
-          return consumePages((_) => datastore.query(query))
+          return consumePages(
+              (_) => datastore.query(query, partition: partition))
               .then((List<Entity> entities) {
             if (transaction != null) {
               return datastore.commit(transaction: transaction)
@@ -658,7 +690,8 @@ runTests(Datastore datastore) {
 
       const TEST_QUERY_KIND = 'TestQueryKind';
       var stringNamedEntities = buildEntities(
-          1, 6, idFunction: (i) => 'str$i', kind: TEST_QUERY_KIND);
+          1, 6, idFunction: (i) => 'str$i', kind: TEST_QUERY_KIND,
+          partition: partition);
       var stringNamedKeys = stringNamedEntities.map((e) => e.key).toList();
 
       var QUERY_KEY = TEST_PROPERTY_KEY_PREFIX;
@@ -702,7 +735,7 @@ runTests(Datastore datastore) {
           new Filter(FilterRelation.LessThan, QUERY_KEY, QUERY_UPPER_BOUND),
       ];
       var listFilters = [
-          new Filter(FilterRelation.In, TEST_LIST_PROPERTY, [QUERY_LIST_ENTRY])
+          new Filter(FilterRelation.Equal, TEST_LIST_PROPERTY, QUERY_LIST_ENTRY)
       ];
       var indexedPropertyFilter = [
         new Filter(FilterRelation.Equal,
@@ -722,7 +755,8 @@ runTests(Datastore datastore) {
 
       test('query', () {
         return insert(stringNamedEntities, []).then((keys) {
-          return waitUntilEntitiesReady(datastore, stringNamedKeys).then((_) {
+          return waitUntilEntitiesReady(
+              datastore, stringNamedKeys, partition).then((_) {
             var tests = [
               // EntityKind query
               () => testQueryAndCompare(
@@ -815,7 +849,8 @@ runTests(Datastore datastore) {
               () => delete(stringNamedKeys, transactional: true),
 
               // Wait until the entity deletes are reflected in the indices.
-              () => waitUntilEntitiesGone(datastore, stringNamedKeys),
+              () => waitUntilEntitiesGone(
+                  datastore, stringNamedKeys, partition),
 
               // Make sure queries don't return results
               () => testQueryAndCompare(
@@ -832,10 +867,10 @@ runTests(Datastore datastore) {
           });
         });
 
-        // TODO: query by multiple keys, multiple sort oders, ...
+        // TODO: query by multiple keys, multiple sort orders, ...
       });
 
-      test('ancestor_query', () {
+      test('ancestor_query', () async {
         /*
          * This test creates an
          * RootKind:1 -- This defines the entity group (no entity with that key)
@@ -843,7 +878,8 @@ runTests(Datastore datastore) {
          *        + SubSubKind:1  -- This is a real entity of kind SubSubKind
          *        + SubSubKind2:1 -- This is a real entity of kind SubSubKind2
          */
-        var rootKey = new Key.fromParent('RootKind', 1);
+        var rootKey =
+            new Key([new KeyElement('RootKind', 1)], partition: partition);
         var subKey = new Key.fromParent('SubKind', 1, parent: rootKey);
         var subSubKey = new Key.fromParent('SubSubKind', 1, parent: subKey);
         var subSubKey2 = new Key.fromParent('SubSubKind2', 1, parent: subKey);
@@ -859,7 +895,8 @@ runTests(Datastore datastore) {
             // FIXME/TODO: Ancestor queries should be strongly consistent.
             // We should not need to wait for them.
             () {
-              return waitUntilEntitiesReady(datastore, [subSubKey, subSubKey2]);
+              return waitUntilEntitiesReady(
+                  datastore, [subSubKey, subSubKey2], partition);
             },
             // Test that lookup only returns inserted entities.
             () {
@@ -880,7 +917,8 @@ runTests(Datastore datastore) {
             () {
               var ancestorQuery =
                   new Query(ancestorKey: rootKey, orders: orders);
-              return consumePages((_) => datastore.query(ancestorQuery))
+              return consumePages(
+                  (_) => datastore.query(ancestorQuery, partition: partition))
                   .then((results) {
                 expect(results.length, 2);
                 expect(compareEntity(entity, results[0]), isTrue);
@@ -891,7 +929,8 @@ runTests(Datastore datastore) {
             () {
               var ancestorQuery =
                   new Query(ancestorKey: subKey, orders: orders);
-              return consumePages((_) => datastore.query(ancestorQuery))
+              return consumePages(
+                  (_) => datastore.query(ancestorQuery, partition: partition))
                   .then((results) {
                 expect(results.length, 2);
                 expect(compareEntity(entity, results[0]), isTrue);
@@ -901,7 +940,8 @@ runTests(Datastore datastore) {
             // - by [subSubKey]
             () {
               var ancestorQuery = new Query(ancestorKey: subSubKey);
-              return consumePages((_) => datastore.query(ancestorQuery))
+              return consumePages(
+                  (_) => datastore.query(ancestorQuery, partition: partition))
                   .then((results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity, results[0]), isTrue);
@@ -910,7 +950,8 @@ runTests(Datastore datastore) {
             // - by [subSubKey2]
             () {
               var ancestorQuery = new Query(ancestorKey: subSubKey2);
-              return consumePages((_) => datastore.query(ancestorQuery))
+              return consumePages(
+                  (_) => datastore.query(ancestorQuery, partition: partition))
                   .then((results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity2, results[0]), isTrue);
@@ -921,7 +962,8 @@ runTests(Datastore datastore) {
             // - by [rootKey] + 'SubSubKind'
             () {
               var query = new Query(ancestorKey: rootKey, kind: 'SubSubKind');
-              return consumePages((_) => datastore.query(query))
+              return consumePages(
+                  (_) => datastore.query(query, partition: partition))
                   .then((List<Entity> results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity, results[0]), isTrue);
@@ -930,7 +972,8 @@ runTests(Datastore datastore) {
             // - by [rootKey] + 'SubSubKind2'
             () {
               var query = new Query(ancestorKey: rootKey, kind: 'SubSubKind2');
-              return consumePages((_) => datastore.query(query))
+              return consumePages(
+                  (_) => datastore.query(query, partition: partition))
                   .then((List<Entity> results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity2, results[0]), isTrue);
@@ -939,7 +982,8 @@ runTests(Datastore datastore) {
             // - by [subSubKey] + 'SubSubKind'
             () {
               var query = new Query(ancestorKey: subSubKey, kind: 'SubSubKind');
-              return consumePages((_) => datastore.query(query))
+              return consumePages(
+                  (_) => datastore.query(query, partition: partition))
                   .then((List<Entity> results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity, results[0]), isTrue);
@@ -949,7 +993,8 @@ runTests(Datastore datastore) {
             () {
               var query =
                   new Query(ancestorKey: subSubKey2, kind: 'SubSubKind2');
-              return consumePages((_) => datastore.query(query))
+              return consumePages(
+                  (_) => datastore.query(query, partition: partition))
                   .then((List<Entity> results) {
                 expect(results.length, 1);
                 expect(compareEntity(entity2, results[0]), isTrue);
@@ -959,7 +1004,8 @@ runTests(Datastore datastore) {
             () {
               var query =
                   new Query(ancestorKey: subSubKey, kind: 'SubSubKind2');
-              return consumePages((_) => datastore.query(query))
+              return consumePages(
+                  (_) => datastore.query(query, partition: partition))
                   .then((List<Entity> results) {
                 expect(results.length, 0);
               });
@@ -968,7 +1014,8 @@ runTests(Datastore datastore) {
             () {
               var query =
                   new Query(ancestorKey: subSubKey2, kind: 'SubSubKind');
-              return consumePages((_) => datastore.query(query))
+              return consumePages(
+                  (_) => datastore.query(query, partition: partition))
                   .then((List<Entity> results) {
                 expect(results.length, 0);
               });
@@ -979,25 +1026,14 @@ runTests(Datastore datastore) {
               return datastore.commit(deletes: [subSubKey, subSubKey2]);
             }
           ];
-          return Future.forEach(futures, (f) => f()).then(expectAsync((_) {}));
+          return Future.forEach(futures, (f) => f()).then(expectAsync1((_) {}));
         });
       });
     });
   });
 }
 
-Future cleanupDB(Datastore db) {
-  Future<List<String>> getNamespaces() {
-    var q = new Query(kind: '__namespace__');
-    return consumePages((_) => db.query(q)).then((List<Entity> entities) {
-      return entities.map((Entity e) {
-        var id = e.key.elements.last.id;
-        if (id == 1) return null;
-        return id;
-      }).toList();
-    });
-  }
-
+Future cleanupDB(Datastore db, String namespace) {
   Future<List<String>> getKinds(String namespace) {
     var partition = new Partition(namespace);
     var q = new Query(kind: '__kind__');
@@ -1024,26 +1060,25 @@ Future cleanupDB(Datastore db) {
     });
   }
 
-  return getNamespaces().then((List<String> namespaces) {
-    return Future.forEach(namespaces, (String namespace) {
-      return getKinds(namespace).then((List<String> kinds) {
-        return Future.forEach(kinds, (String kind) {
-          return cleanup(namespace, kind);
-        });
-      });
+  return getKinds(namespace).then((List<String> kinds) {
+    return Future.forEach(kinds, (String kind) {
+      return cleanup(namespace, kind);
     });
   });
 }
 
-Future waitUntilEntitiesReady(Datastore db, List<Key> keys) {
-  return waitUntilEntitiesHelper(db, keys, true);
+Future waitUntilEntitiesReady(Datastore db, List<Key> keys, Partition p) {
+  return waitUntilEntitiesHelper(db, keys, true, p);
 }
 
-Future waitUntilEntitiesGone(Datastore db, List<Key> keys) {
-  return waitUntilEntitiesHelper(db, keys, false);
+Future waitUntilEntitiesGone(Datastore db, List<Key> keys, Partition p) {
+  return waitUntilEntitiesHelper(db, keys, false, p);
 }
 
-Future waitUntilEntitiesHelper(Datastore db, List<Key> keys, bool positive) {
+Future waitUntilEntitiesHelper(Datastore db,
+                               List<Key> keys,
+                               bool positive,
+                               Partition p) {
   var keysByKind = {};
   for (var key in keys) {
     keysByKind.putIfAbsent(key.elements.last.kind, () => []).add(key);
@@ -1051,7 +1086,7 @@ Future waitUntilEntitiesHelper(Datastore db, List<Key> keys, bool positive) {
 
   Future waitForKeys(String kind, List<Key> keys) {
     var q = new Query(kind: kind);
-    return consumePages((_) => db.query(q)).then((entities) {
+    return consumePages((_) => db.query(q, partition: p)).then((entities) {
       for (var key in keys) {
         bool found = false;
         for (var entity in entities) {
