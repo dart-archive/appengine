@@ -49,7 +49,8 @@ class ContextRegistry {
 
     request.response.done.whenComplete(() {
       final int responseSize = request.response.headers.contentLength;
-      services.logging.finish(request.response.statusCode, responseSize);
+      (services.logging as LoggingImpl)
+          .finish(request.response.statusCode, responseSize);
     });
 
     return context;
@@ -67,7 +68,7 @@ class ContextRegistry {
   Services newBackgroundServices() => _getServices(null);
 
   _ServicesImpl _getServices(HttpRequest request) {
-    LoggingImpl loggingService;
+    Logging loggingService;
     if (request != null) {
       final uri = request.requestedUri;
       final resource = uri.hasQuery ? '${uri.path}?${uri.query}' : uri.path;
@@ -112,7 +113,7 @@ class _ClientContextImpl implements ClientContext {
 class _ServicesImpl extends Services {
   final db.DatastoreDB db;
   final storage.Storage storage;
-  final LoggingImpl logging;
+  final Logging logging;
   final memcache.Memcache memcache;
 
   _ServicesImpl(this.db, this.storage, this.logging, this.memcache);
