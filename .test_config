@@ -1,0 +1,4 @@
+{
+  "test_package": true,
+  "platforms" : ["vm"]
+}

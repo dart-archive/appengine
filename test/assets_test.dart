@@ -53,9 +53,6 @@ void updateCurrentDirectory() {
     Directory.current = 'test';
   }
 
-  // Else try to navigate relative to this test file.
-  Directory.current = p.dirname(Platform.script.toFilePath());
-
   if (!FileSystemEntity.isDirectorySync(AssetsManager.root)) {
     throw new StateError('The directory "${AssetsManager.root}" does not '
     'exist in the current directory – "${Directory.current.path}". '
