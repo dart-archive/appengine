@@ -1,0 +1,15 @@
+# We do not run any tests after "pub build"!
+build/*: Skip
+build/integration/*: Skip
+
+# The datastore test is simply slow.
+test/integration/grpc_datastore_test: Pass, Slow
+
+# We don't run non-vm tests!
+[ $runtime != vm ]
+*: Skip
+integration/*: Skip
+
+# There is no support for ALPN (and therefore gRPC) on MacOS
+[ $system == macos ]
+test/integration/grpc_datastore_test: Skip
