@@ -88,5 +88,7 @@ runTests(datastore, db.DatastoreDB store, String uniquePostfix) {
         await datastore.commit(deletes: keys);
       }
     });
+  }, onPlatform: {
+    'mac-os': new Skip('Missing ALPN support on MacOS.'),
   });
 }

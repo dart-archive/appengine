@@ -608,6 +608,8 @@ runTests(db.DatastoreDB store, String namespace) {
         });
       });
     });
+  }, onPlatform: {
+    'mac-os': new Skip('Missing ALPN support on MacOS.'),
   });
 }
 
