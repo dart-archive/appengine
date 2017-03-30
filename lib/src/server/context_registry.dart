@@ -67,7 +67,7 @@ class ContextRegistry {
 
   Services newBackgroundServices() => _getServices(null);
 
-  _ServicesImpl _getServices(HttpRequest request) {
+  Services _getServices(HttpRequest request) {
     Logging loggingService;
     if (request != null) {
       final uri = request.requestedUri;
@@ -94,7 +94,7 @@ class ContextRegistry {
       loggingService = _loggingFactory.newBackgroundLogger();
     }
 
-    return new _ServicesImpl(_db, _storage, loggingService, _memcache);
+    return new Services(_db, _storage, loggingService, _memcache);
   }
 }
 
@@ -108,13 +108,4 @@ class _ClientContextImpl implements ClientContext {
 
   bool get isDevelopmentEnvironment => _isDevelopmentEnvironment;
   bool get isProductionEnvironment => !_isDevelopmentEnvironment;
-}
-
-class _ServicesImpl extends Services {
-  final db.DatastoreDB db;
-  final storage.Storage storage;
-  final Logging logging;
-  final memcache.Memcache memcache;
-
-  _ServicesImpl(this.db, this.storage, this.logging, this.memcache);
 }

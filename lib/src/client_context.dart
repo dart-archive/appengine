@@ -24,18 +24,13 @@ abstract class ClientContext {
   Assets get assets;
 }
 
-abstract class Services {
-  DatastoreDB get db;
+class Services {
+  final DatastoreDB db;
+  final Storage storage;
+  final Logging logging;
+  final Memcache memcache;
 
-  /// Access the gcloud package storage API. This will autumatically be
-  /// available on deployed App Engine applications. For local testing this
-  /// will be `null` unless the environemnt variable
-  /// `STORAGE_SERVICE_ACCOUNT_FILE` is passed in `app.yaml`. This environment
-  /// variable should point to a private key for a service account in JSON
-  /// format.
-  Storage get storage;
-  Logging get logging;
-  Memcache get memcache;
+  Services(this.db, this.storage, this.logging,this.memcache);
 }
 
 class AssetError implements Exception {

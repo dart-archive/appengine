@@ -96,7 +96,8 @@ Future runAppEngine(void handler(HttpRequest request, ClientContext context),
   });
 }
 
-Future _withAppEngineServicesInternal(Future callback(ContextRegistry contextRegistry)) {
+Future _withAppEngineServicesInternal(
+    Future callback(ContextRegistry contextRegistry)) {
   return ss.fork(() async {
     ContextRegistry contextRegistry = await _initializeAppEngine();
     final bgServices = contextRegistry.newBackgroundServices();
@@ -407,7 +408,7 @@ class GrpcLoggerFactory implements LoggerFactory {
 ///
 /// The implementation writes log messages to stderr.
 class StderrLoggerFactory implements LoggerFactory {
-  logging.Logging newRequestSpecificLogger(String method, String resource,
+  LoggingImpl newRequestSpecificLogger(String method, String resource,
       String userAgent, String host, String ip) {
     return new stderr_logging_impl.StderrRequestLoggingImpl(
         method, resource, userAgent, host, ip);

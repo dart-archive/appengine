@@ -59,7 +59,7 @@ class AssetsManager {
     path = normalize(path);
     return FileSystemEntity.isFile(root + path).then((exists) {
       if (exists) {
-        return vd.serveFile(new File(root + path), request);
+        vd.serveFile(new File(root + path), request);
       } else {
         return _serve404(request);
       }

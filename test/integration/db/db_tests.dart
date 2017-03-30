@@ -287,7 +287,7 @@ runTests(db.DatastoreDB store, String namespace) {
               ..name = 'user$i'
               ..nickname = 'nickname${i%3}');
         }
-        var persons = [];
+        var persons = <db.Model>[];
         for (var i = 335; i <= 336; i++) {
           persons.add(new Person()
               ..id = i
@@ -359,7 +359,7 @@ runTests(db.DatastoreDB store, String namespace) {
           // because an id doesn't need to be globally unique, only under
           // entities with the same parent.
 
-          return store.lookup(keys).then(expectAsync1((List<Person> models) {
+          return store.lookup(keys).then(expectAsync1((List<db.Model> models) {
             // Since the id/parentKey fields are set after commit and a lookup
             // returns new model instances, we can do full model comparison
             // here.

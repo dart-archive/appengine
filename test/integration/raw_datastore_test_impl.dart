@@ -552,21 +552,21 @@ runTests(Datastore datastore, String namespace) {
           var NUM_TRANSACTIONS = 10;
 
           // Start transactions
-          var transactions = [];
+          var transactions = <Future<Transaction>>[];
           for (var i = 0; i < NUM_TRANSACTIONS; i++) {
             transactions.add(datastore.beginTransaction(crossEntityGroup: xg));
           }
           return Future.wait(transactions)
               .then((List<Transaction> transactions) {
             // Do a lookup for the entities in every transaction
-            var lookups = [];
+            var lookups = <Future<List<Entity>>>[];
             for (var transaction in transactions) {
               lookups.add(
                   datastore.lookup(keys, transaction: transaction));
             }
             return Future.wait(lookups).then((List<List<Entity>> results) {
               // Do a conflicting commit in every transaction.
-              var commits = [];
+              var commits = <Future>[];
               for (var i = 0; i < transactions.length; i++) {
                 var transaction = transactions[i];
                 commits.add(test(results[i], transaction, i));
@@ -1042,7 +1042,7 @@ Future cleanupDB(Datastore db, String namespace) {
     return consumePages((_) => db.query(q, partition: partition))
         .then((List<Entity> entities) {
       return entities
-          .map((Entity e) => e.key.elements.last.id)
+          .map((Entity e) => e.key.elements.last.id as String)
           .where((String kind) => !kind.contains('__'))
           .toList();
     });
@@ -1081,7 +1081,7 @@ Future waitUntilEntitiesHelper(Datastore db,
                                List<Key> keys,
                                bool positive,
                                Partition p) {
-  var keysByKind = {};
+  var keysByKind = <String, List<Key>>{};
   for (var key in keys) {
     keysByKind.putIfAbsent(key.elements.last.kind, () => []).add(key);
   }
