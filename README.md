@@ -18,10 +18,10 @@ installed and their bin folders have been added to `PATH`.
 
 To ensure gcloud was authorized to access the cloud project and we have the
 `app` component installed, we assume the following has been run:
-```
-% gcloud auth login
-% gcloud config set project <project-name>
-% gcloud components update app
+```console
+$ gcloud auth login
+$ gcloud config set project <project-name>
+$ gcloud components update app
 ```
 
 ### Creation service account
@@ -83,10 +83,10 @@ of which require a service account key.
 ### Running without Docker
 
 The simplest way to run the application is on the command line like this:
-```dart
-app % export GCLOUD_KEY=<path-to-service-account-key.json>
-app % export GCLOUD_PROJECT=<project-name>
-app % dart bin/server.dart
+```console
+$ export GCLOUD_KEY=<path-to-service-account-key.json>
+$ export GCLOUD_PROJECT=<project-name>
+$ dart bin/server.dart
 ```
 
 This will serve the application at [localhost:8080](http://localhost:8080)!
@@ -95,7 +95,7 @@ This will serve the application at [localhost:8080](http://localhost:8080)!
 
 To be closer to the production environment one can run the application inside a
 docker container. In order to do so, docker needs to be installed first (see the
-[official instructinos](https://docs.docker.com/engine/installation/). 
+[official instructions](https://docs.docker.com/engine/installation/). 
 
 In order to run the application locally we uncomment the 3 lines in the
 `Dockerfile` and place the service account key in under `app/key.json`:
@@ -106,18 +106,18 @@ ENV GCLOUD_PROJECT dartlang-pub
 ```
 
 We can then run the application via:
-```
-app % docker build .
+```console
+$ docker build .
 ...
 Sucessfully built <docker-imgage-hash>
-app % docker run -it <docker-imgage-hash>
+$ docker run -it <docker-imgage-hash>
 ...
 ```
 
 In order to find out at which IP the Docker container is available we inspect
 the running container via:
-```
-app % docker ps
+```console
+$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 <container-id>       ...
 app % docker inspect --format '{{ .NetworkSettings.IPAddress }}' <container-id>
@@ -134,8 +134,8 @@ Before deploying the app, be sure to remove the environment variables in the
 To deploy the application to the cloud we run the following command (optionally
 passing the `--no-promote` flag to avoid replacing the production version)
 
-```
-app % gcloud app deploy --no-promote app.yaml
+```console
+$ gcloud app deploy --no-promote app.yaml
 ...
 Updating service [default]...done.
 Deployed service [default] to [https://<version-id>-dot-<project-id>.appspot.com]
@@ -144,21 +144,20 @@ Deployed service [default] to [https://<version-id>-dot-<project-id>.appspot.com
 
 This will perform a remote docker build in the cloud and deploy a new version.
 You can find the URL to the version that got deployed
-in the output of `gcloud app deploy` (as well as also via the
+in the output of `gcloud app deploy` (as well as via the
 [Cloud Console](https://console.cloud.google.com) under `AppEngine > Versions`).
 
 
 ## Using memcache via memcached
 
-By default `package:appengine`s `memcacheService` is a NOP implementation (i.e.
-it does not perform any caching) unless a memcache service was found at the
-default port (i.e. at `localhost:11211`).
+By default, the `memcacheService` in `package:appengine` is a NOP – it does not
+perform any caching – unless a memcache service is found at the default port –
+`localhost:11211`.
 
-Custom runtimes don't have a memcache service to use at the moment. But it is
-possible to simply install a `memcached` inside the docker container.
+App Engine Flexible Environment doesn't have a memcache service at the moment,
+but it is possible to simply install a `memcached` inside the Docker container.
 
-All that is necessary is to update the `Dockerfile` with the installation of
-`memcached` and it's start:
+Update the `Dockerfile` with the installation of `memcached`:
 
 ```Dockerfile
 FROM ...
@@ -181,8 +180,8 @@ ENTRYPOINT service memcached start && sleep 1 && /bin/bash /dart_runtime/dart_ru
 The gcloud sdk provides an easy-to-use datastore emulator. The emulator can be
 launched via
 
-```
-% gcloud beta emulators datastore start
+```console
+$ gcloud beta emulators datastore start
 ...
 [datastore] If you are using a library that supports the DATASTORE_EMULATOR_HOST
 [datastore] environment variable, run:
@@ -196,9 +195,9 @@ launched via
 To make the application use the emulator, the `DATASTORE_EMULATOR_HOST`
 environment variable needs to be set (in addition to the other variables):
 
-```
-app % export DATASTORE_EMULATOR_HOST=localhost:8268
-app % export GCLOUD_KEY=<path-to-service-account-key.json>
-app % export GCLOUD_PROJECT=<project-name>
-app % dart bin/server.dart
+```console
+$ export DATASTORE_EMULATOR_HOST=localhost:8268
+$ export GCLOUD_KEY=<path-to-service-account-key.json>
+$ export GCLOUD_PROJECT=<project-name>
+$ dart bin/server.dart
 ```
