@@ -51,8 +51,12 @@ Future<String> _serviceKeyJson(String serviceKeyLocation) async {
   } else {
     ProcessResult result;
     if (onBot()) {
+      // Use gsutil.py from depot_tools on the bots.
+      final gsutilPath = Platform.operatingSystem == 'windows'
+          ? 'E:\\b\\depot_tools\\gsutil.py'
+          : '/b/depot_tools/gsutil.py';
       result = await Process.run(
-          'python', ['third_party/gsutil/gsutil', 'cat', serviceKeyLocation],
+          'python', [gsutilPath, 'cat', serviceKeyLocation],
           runInShell: true);
     } else {
       final gsutil = Platform.isWindows ? 'gsutil.cmd' : 'gsutil';
