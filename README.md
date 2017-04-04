@@ -91,11 +91,14 @@ $ dart bin/server.dart
 
 This will serve the application at [localhost:8080](http://localhost:8080)!
 
+Please note: There is an [Issue 63](https://github.com/dart-lang/appengine/issues/63) which
+causes this to not work on MacOS at the moment.
+
 ### Running with Docker
 
 To be closer to the production environment one can run the application inside a
 docker container. In order to do so, docker needs to be installed first (see the
-[official instructions](https://docs.docker.com/engine/installation/). 
+[official instructions](https://docs.docker.com/engine/installation/).
 
 In order to run the application locally we uncomment the 3 lines in the
 `Dockerfile` and place the service account key in under `app/key.json`:
