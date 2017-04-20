@@ -41,7 +41,7 @@ To setup a hello world application we need 4 different things:
 name: hello_world
 version: 0.1.0
 dependencies:
-  appengine: '>=0.4.0-flex.alpha.0 <0.4.0-flex.alpha.1'
+  appengine: '>=0.4.0 <0.5.0'
 ```
 #### An `app/app.yaml` file describing the AppEngine app:
 ```yaml
