@@ -1,3 +1,7 @@
+## 0.4.0+2
+
+* Be less verbose in request logs printed during local development
+
 ## 0.4.0
 
 Switch from Managed VMs to Flexible environment:

@@ -51,26 +51,19 @@ class StderrRequestLoggingImpl extends LoggingImpl {
     final now = new DateTime.now().toUtc();
     final buffer = new StringBuffer();
 
-    buffer.writeln('$now $_currentLogLevel: $_httpMethod $_httpResource');
-    buffer.writeln('  Host: $_host');
-    buffer.writeln('  User Agent: $_userAgent');
-    buffer.writeln('  IP: $_ip');
-    buffer.writeln('  ----------- ');
     if (finish) {
-      buffer.writeln('  Http status: $responseStatus');
-      buffer.writeln('  Response size: $responseSize bytes');
-      buffer.writeln('  Request duration: ${now.difference(_startTimestamp)}');
+      buffer.writeln('$now $_httpMethod $responseStatus '
+                     '${now.difference(_startTimestamp).inMilliseconds} ms'
+                     ' $_httpResource');
     } else {
-      buffer.writeln('  Start: $_startTimestamp');
+      buffer.writeln('$now $_httpMethod - - $_httpResource');
     }
-    buffer.writeln('  ----------- ');
-
     for (final _LogLine line in _gaeLogLines) {
-      final indented = '$line'.split('\n').join('\n  ');
+      final indented = line.format(_startTimestamp).replaceAll('\n', '\n  ');
       buffer.writeln('  $indented');
     }
 
-    io.stderr.writeln('$buffer');
+    io.stderr.write('$buffer');
     _resetState();
   }
 
@@ -84,7 +77,7 @@ class StderrBackgroundLoggingImpl extends Logging {
   void log(LogLevel level, String message, {DateTime timestamp}) {
     final logLine =
         new _LogLine(level, message, timestamp ?? new DateTime.now().toUtc());
-    io.stderr.writeln('$logLine');
+    io.stderr.writeln(logLine.format(null));
   }
 
   Future flush() => new Future.value();
@@ -97,5 +90,14 @@ class _LogLine {
 
   _LogLine(this.level, this.message, this.timestamp);
 
-  String toString() => '$timestamp  ${level.name}: $message';
+  String format(DateTime start) {
+    String time;
+    if (start != null) {
+      final ms = timestamp.difference(start).inMilliseconds.toString();
+      time = '${' ' * (5 - ms.length)}$ms ms';
+    } else {
+      time = '$timestamp';
+    }
+    return '$time ${level.name}: $message';
+  }
 }
