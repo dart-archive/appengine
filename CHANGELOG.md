@@ -1,3 +1,8 @@
+## 0.4.0+3
+
+* Fix an issue where models with un-indexed list properties could not be
+  committed.
+
 ## 0.4.0+2
 
 * Be less verbose in request logs printed during local development

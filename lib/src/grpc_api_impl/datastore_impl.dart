@@ -532,9 +532,7 @@ class _Codec {
 
       final pbProperty = new Entity_PropertiesEntry();
       pbProperty.key = property;
-      pbProperty.value = encodeValue(value);
-      if (!indexProperty) pbProperty.value.excludeFromIndexes = true;
-
+      pbProperty.value = encodeValue(value, !indexProperty);
       pb.properties.add(pbProperty);
     });
     return pb;
@@ -574,22 +572,29 @@ class _Codec {
     return pb;
   }
 
-  Value encodeValue(value) {
+  Value encodeValue(value, [bool excludeFromIndexes = false]) {
     final pb = new Value();
     if (value is bool) {
       pb.booleanValue = value;
+      if (excludeFromIndexes) pb.excludeFromIndexes = true;
     } else if (value is String) {
       pb.stringValue = value;
+      if (excludeFromIndexes) pb.excludeFromIndexes = true;
     } else if (value is int) {
       pb.integerValue = new Int64(value);
+      if (excludeFromIndexes) pb.excludeFromIndexes = true;
     } else if (value is raw.BlobValue) {
       pb.blobValue = value.bytes;
+      if (excludeFromIndexes) pb.excludeFromIndexes = true;
     } else if (value is double) {
       pb.doubleValue = value;
+      if (excludeFromIndexes) pb.excludeFromIndexes = true;
     } else if (value is raw.Key) {
       pb.keyValue = encodeKey(value, enforceId: true);
+      if (excludeFromIndexes) pb.excludeFromIndexes = true;
     } else if (value == null) {
       pb.nullValue = NullValue.NULL_VALUE;
+      if (excludeFromIndexes) pb.excludeFromIndexes = true;
     } else if (value is DateTime) {
       final int ms = value.millisecondsSinceEpoch;
       final int seconds = ms ~/ 1000;
@@ -597,8 +602,13 @@ class _Codec {
       pb.timestampValue = new Timestamp()
         ..seconds = (new Int64(seconds))
         ..nanos = ns;
+      if (excludeFromIndexes) pb.excludeFromIndexes = true;
     } else if (value is List) {
-      pb.arrayValue = new ArrayValue()..values.addAll(value.map(encodeValue));
+      // For [ArrayValue]s we need to set the indexing-bit on the individual
+      // values, not on the array!
+      pb.arrayValue = new ArrayValue()..values.addAll(value.map((value) {
+        return encodeValue(value, excludeFromIndexes);
+      }));
     } else {
       throw new raw.ApplicationError(
           'Cannot encode unsupported ${value.runtimeType} type.');

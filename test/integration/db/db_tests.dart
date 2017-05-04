@@ -75,6 +75,21 @@ class Person extends db.Model {
   String toString() => 'Person(id: $id, name: $name, age: $age)';
 }
 
+bool areStringListsEqual(List<String> a, List<String> b) {
+  if (a == null) {
+    if (b == null) return true;
+    return false;
+  }
+
+  if (a.length != b?.length)  return false;
+
+  for (int i = 0; i < a.length; i++) {
+    if (a[i] != b[i]) return false;
+  }
+
+  return true;
+}
+
 
 @db.Kind()
 class User extends Person {
@@ -84,29 +99,23 @@ class User extends Person {
   @db.StringListProperty(propertyName: 'language')
   List<String> languages = const [];
 
+  @db.StringListProperty(indexed: false)
+  List<String> hobbies = const [];
+
   sameAs(Object other) {
     if (!(super.sameAs(other) && other is User && nickname == other.nickname))
       return false;
 
     User user = other;
-    if (languages == null) {
-      if (user.languages == null) return true;
-      return false;
-    }
-    if (languages.length != user.languages.length) {
-      return false;
-    }
-
-    for (int i = 0; i < languages.length; i++) {
-      if (languages[i] != user.languages[i]) {
-        return false;
-      }
-    }
-    return true;
+    return areStringListsEqual(languages, user?.languages) &&
+           areStringListsEqual(hobbies, user?.hobbies);
   }
 
   String toString() =>
-      'User(${super.toString()}, nickname: $nickname, languages: $languages';
+      'User(${super.toString()}, '
+      'nickname: $nickname, '
+      'languages: $languages, '
+      'hobbies: $hobbies)';
 }
 
 
@@ -381,6 +390,7 @@ runTests(db.DatastoreDB store, String namespace) {
       var users = [];
       for (var i = 1; i <= 10; i++) {
         var languages = [];
+        var hobbies = ['running', 'swimming'];
         if (i == 9) {
           languages = ['foo'];
         } else if (i == 10) {
@@ -393,7 +403,8 @@ runTests(db.DatastoreDB store, String namespace) {
             ..age = 42 + i
             ..name = 'user$i'
             ..nickname = 'nickname${i%3}'
-            ..languages = languages);
+            ..languages = languages
+            ..hobbies = hobbies);
       }
 
       var expandoPersons = [];
@@ -529,6 +540,20 @@ runTests(db.DatastoreDB store, String namespace) {
               var models = await runQueryWithExponentialBackoff(
                   query, barUsers.length);
               compareModels(barUsers, models, anyOrder: true);
+            },
+            () async {
+              var query = store.query(User, partition: partition)
+                  ..filter('hobbies =', 'swimming')
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(query, 0);
+              expect(models, isEmpty);
+            },
+            () async {
+              var query = store.query(User, partition: partition)
+                  ..filter('hobbies =', 'running')
+                  ..run();
+              var models = await runQueryWithExponentialBackoff(query, 0);
+              expect(models, isEmpty);
             },
 
             // Filter equals
