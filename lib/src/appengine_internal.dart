@@ -49,9 +49,10 @@ Future withAppEngineServices(Future callback()) =>
 /// AppEngine services available within that scope.
 Future runAppEngine(void handler(HttpRequest request, ClientContext context),
     void onError(Object e, StackTrace s),
-    {int port: 8080}) {
+    {int port: 8080, bool shared: false}) {
   return _withAppEngineServicesInternal((ContextRegistry contextRegistry) {
-    var appengineServer = new AppEngineHttpServer(contextRegistry, port: port);
+    var appengineServer =
+        new AppEngineHttpServer(contextRegistry, port: port, shared: shared);
     appengineServer.run((request, context) {
       ss.fork(() {
         logging.registerLoggingService(context.services.logging);
