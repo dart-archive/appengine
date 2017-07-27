@@ -1,3 +1,8 @@
+## 0.4.1
+
+* Add `shared` option to `runAppEngine` to enable multi-threaded operation
+  with isolates.
+
 ## 0.4.0+3
 
 * Fix an issue where models with un-indexed list properties could not be
