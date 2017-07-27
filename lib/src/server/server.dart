@@ -21,6 +21,7 @@ class AppEngineHttpServer {
 
   final String _hostname;
   final int _port;
+  final bool _shared;
 
   final Completer _shutdownCompleter = new Completer();
   int _pendingRequests = 0;
@@ -28,9 +29,10 @@ class AppEngineHttpServer {
   HttpServer _httpServer;
 
   AppEngineHttpServer(this._contextRegistry,
-      {String hostname: '0.0.0.0', int port: 8080})
+      {String hostname: '0.0.0.0', int port: 8080, bool shared: false})
       : _hostname = hostname,
-        _port = port;
+        _port = port,
+        _shared = shared;
 
   Future get done => _shutdownCompleter.future;
 
@@ -41,7 +43,9 @@ class AppEngineHttpServer {
       '/_ah/stop': _stop
     };
 
-    HttpServer.bind(_hostname, _port).then((HttpServer server) {
+    HttpServer
+        .bind(_hostname, _port, shared: _shared)
+        .then((HttpServer server) {
       _httpServer = server;
 
       server.listen((HttpRequest request) {

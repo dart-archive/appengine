@@ -46,7 +46,7 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
  * and is no longer serving requests.
  */
 Future runAppEngine(void handler(HttpRequest request),
-    {Function onError, int port: 8080}) {
+    {Function onError, int port: 8080, bool shared: false}) {
   var errorHandler;
   if (onError != null) {
     if (onError is ZoneUnaryCallback) {
@@ -59,11 +59,11 @@ Future runAppEngine(void handler(HttpRequest request),
     }
   }
 
-  return appengine_internal.runAppEngine((HttpRequest request,
-                                          ClientContext context) {
+  return appengine_internal.runAppEngine(
+      (HttpRequest request, ClientContext context) {
     ss.register(_APPENGINE_CONTEXT, context);
     handler(request);
-  }, errorHandler, port: port);
+  }, errorHandler, port: port, shared: shared);
 }
 
 /**
