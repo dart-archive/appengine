@@ -280,6 +280,7 @@ Future<memcache.Memcache> _tryMemcacheInstance(
   final String testKey = '__test_key_${now.microsecondsSinceEpoch}';
   final testValue = 'fobar-$now';
 
+  logging.debug('Attempting to connect to memcache at $host:$port');
   var rawMemcache = new memcache_raw.BinaryMemcacheProtocol(host, port);
   try {
     final memcacheService = new memcache.Memcache.fromRaw(rawMemcache);
@@ -293,6 +294,7 @@ Future<memcache.Memcache> _tryMemcacheInstance(
       // once we go out of the current service scope and return the instance.
       await memcacheService.remove(testKey);
       ss.registerScopeExitCallback(rawMemcache.close);
+      logging.info('Connected to memcache at $host:$port');
       return memcacheService;
     }
   } catch (e, stack) {
