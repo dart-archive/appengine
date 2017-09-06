@@ -1,3 +1,8 @@
+## 0.4.2
+
+* Add support for connecting to memcache instance defined by environment
+  variables `GAE_MEMCACHE_HOST` and `GAE_MEMCACHE_PORT`.
+
 ## 0.4.1
 
 * Add `shared` option to `runAppEngine` to enable multi-threaded operation

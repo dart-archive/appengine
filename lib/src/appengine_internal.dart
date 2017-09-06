@@ -30,6 +30,7 @@ import 'grpc_api_impl/auth_utils.dart' as auth_utils;
 import 'grpc_api_impl/datastore_impl.dart' as grpc_datastore_impl;
 import 'grpc_api_impl/grpc.dart' as grpc;
 import 'grpc_api_impl/logging_impl.dart' as grpc_logging_impl;
+import 'logging.dart';
 import 'logging_impl.dart';
 import 'server/context_registry.dart';
 import 'server/logging_package_adaptor.dart';
@@ -179,7 +180,9 @@ Future<ContextRegistry> _initializeAppEngine() async {
       await _obtainLoggerFactory(context, serviceAccount, zoneId);
   final storageService =
       await _obtainStorageService(context.applicationID, serviceAccount);
-  final memcacheService = await _obtainMemcacheInstance();
+
+  final memcacheService =
+      await _obtainMemcacheInstance(loggerFactory.newBackgroundLogger());
   final dbService = await _obtainDatastoreService(
       context.applicationID, dbEmulatorHost, serviceAccount);
 
@@ -237,15 +240,48 @@ Future<db.DatastoreDB> _obtainDatastoreService(
 ///
 /// The returned [memcache.Memcache] will be usable within the current service
 /// scope.
-Future<memcache.Memcache> _obtainMemcacheInstance() async {
-  var rawMemcache;
-  try {
-    const int defaultMemcachedPort = 11211;
-    const String testKey = '__memcached_test_key';
-    final testValue = 'fobar-${new DateTime.now()}';
+Future<memcache.Memcache> _obtainMemcacheInstance(Logging logging) async {
+  //
+  // Try to connect to the app engine instance
+  //
+  const hostKey = 'GAE_MEMCACHE_HOST';
+  const portKey = 'GAE_MEMCACHE_PORT';
 
-    rawMemcache = new memcache_raw.BinaryMemcacheProtocol(
-        'localhost', defaultMemcachedPort);
+  var hostVar = Platform.environment[hostKey];
+  var hostPort = Platform.environment[portKey];
+
+  if (hostVar != null && hostPort != null) {
+    var portNumber = int.parse(hostPort);
+    var instance = await _tryMemcacheInstance(hostVar, portNumber, logging);
+    if (instance != null) {
+      return instance;
+    }
+  }
+
+  //
+  // Try to connect to local host
+  //
+  const int defaultMemcachedPort = 11211;
+  var instance =
+      await _tryMemcacheInstance('localhost', defaultMemcachedPort, logging);
+  if (instance != null) {
+    return instance;
+  }
+
+  // We were unable to connect to a memcached server.
+  // Fall back to a dummy NOP memcache instance.
+  final nopMemcache = new nop_memcache_impl.NopMemcacheRpcImpl();
+  return new memcache.Memcache.fromRaw(nopMemcache);
+}
+
+Future<memcache.Memcache> _tryMemcacheInstance(
+    String host, int port, Logging logging) async {
+  var now = new DateTime.now();
+  final String testKey = '__test_key_${now.microsecondsSinceEpoch}';
+  final testValue = 'fobar-$now';
+
+  var rawMemcache = new memcache_raw.BinaryMemcacheProtocol(host, port);
+  try {
     final memcacheService = new memcache.Memcache.fromRaw(rawMemcache);
 
     // Do a store/read attempt (which will trigger the real tcp connection) and
@@ -259,8 +295,12 @@ Future<memcache.Memcache> _obtainMemcacheInstance() async {
       ss.registerScopeExitCallback(rawMemcache.close);
       return memcacheService;
     }
-  } catch (error) {
-    // FIXME(kustermann): We should log the [error] message here!
+  } catch (e, stack) {
+    logging.warning([
+      'Could not connect to memcache instance at $host:$port',
+      e,
+      stack
+    ].where((i) => i != null).join('\n'));
   }
 
   // We were unable to connect to a memcached server running on localhost, so
@@ -268,8 +308,8 @@ Future<memcache.Memcache> _obtainMemcacheInstance() async {
   if (rawMemcache != null) {
     await rawMemcache.close();
   }
-  final nopMemcache = new nop_memcache_impl.NopMemcacheRpcImpl();
-  return new memcache.Memcache.fromRaw(nopMemcache);
+
+  return null;
 }
 
 /// Creates a storage service using the service account credentials (if given)
