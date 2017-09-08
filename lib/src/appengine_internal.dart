@@ -241,44 +241,40 @@ Future<db.DatastoreDB> _obtainDatastoreService(
 /// The returned [memcache.Memcache] will be usable within the current service
 /// scope.
 Future<memcache.Memcache> _obtainMemcacheInstance(Logging logging) async {
+  // These are the environment variables available within the AppEngine Flex
+  // Docker container when Memcache support is enabled.
   //
-  // Try to connect to the app engine instance
-  //
+  // NOTE: As of 2017-09-08 this is an alpha feature – functionality may change.
   const hostKey = 'GAE_MEMCACHE_HOST';
   const portKey = 'GAE_MEMCACHE_PORT';
-
-  var hostVar = Platform.environment[hostKey];
-  var hostPort = Platform.environment[portKey];
+  final hostVar = Platform.environment[hostKey];
+  final hostPort = Platform.environment[portKey];
 
   if (hostVar != null && hostPort != null) {
-    var portNumber = int.parse(hostPort);
-    var instance = await _tryMemcacheInstance(hostVar, portNumber, logging);
+    final portNumber = int.parse(hostPort);
+    final instance = await _tryMemcacheInstance(hostVar, portNumber, logging);
     if (instance != null) {
       return instance;
     }
   }
 
-  //
-  // Try to connect to local host
-  //
   const int defaultMemcachedPort = 11211;
-  var instance =
+  final instance =
       await _tryMemcacheInstance('localhost', defaultMemcachedPort, logging);
   if (instance != null) {
     return instance;
   }
 
-  // We were unable to connect to a memcached server.
-  // Fall back to a dummy NOP memcache instance.
+  logging.debug('Falling back to non-caching memcache implementation.');
   final nopMemcache = new nop_memcache_impl.NopMemcacheRpcImpl();
   return new memcache.Memcache.fromRaw(nopMemcache);
 }
 
 Future<memcache.Memcache> _tryMemcacheInstance(
     String host, int port, Logging logging) async {
-  var now = new DateTime.now();
-  final String testKey = '__test_key_${now.microsecondsSinceEpoch}';
-  final testValue = 'fobar-$now';
+  final nowMicros = new DateTime.now().microsecondsSinceEpoch;
+  final String testKey = '__test_key_$nowMicros';
+  final testValue = 'fobar-$nowMicros';
 
   logging.debug('Attempting to connect to memcache at $host:$port');
   var rawMemcache = new memcache_raw.BinaryMemcacheProtocol(host, port);
@@ -298,11 +294,8 @@ Future<memcache.Memcache> _tryMemcacheInstance(
       return memcacheService;
     }
   } catch (e, stack) {
-    logging.warning([
-      'Could not connect to memcache instance at $host:$port',
-      e,
-      stack
-    ].where((i) => i != null).join('\n'));
+    logging.warning('Could not connect to memcache instance at $host:$port\n'
+        '$e\n$stack');
   }
 
   // We were unable to connect to a memcached server running on localhost, so
