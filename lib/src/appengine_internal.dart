@@ -446,8 +446,7 @@ class GrpcLoggerFactory implements LoggerFactory {
 class StderrLoggerFactory implements LoggerFactory {
   LoggingImpl newRequestSpecificLogger(String method, String resource,
       String userAgent, String host, String ip) {
-    return new stderr_logging_impl.StderrRequestLoggingImpl(
-        method, resource, userAgent, host, ip);
+    return new stderr_logging_impl.StderrRequestLoggingImpl(method, resource);
   }
 
   logging.Logging newBackgroundLogger() {
