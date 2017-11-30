@@ -1,3 +1,8 @@
+## 0.4.3+1
+
+* When logging requests, the `appengine.googleapis.com/trace_id` label
+  is populated. 
+
 ## 0.4.3
 
 * When logging, the following `protoPayload` values are now populated:
