@@ -125,6 +125,20 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
     final int now = new DateTime.now().toUtc().millisecondsSinceEpoch;
     final api.Timestamp nowTimestamp = _protobufTimestampFromMilliseconds(now);
 
+    final protoPayload = new api.Any()
+      ..typeUrl = 'type.googleapis.com/google.appengine.logging.v1.RequestLog';
+
+    final gaeResource = new api.MonitoredResource()
+      ..type = 'gae_app'
+      ..labels.addAll(_sharedLoggingService.resourceLabels);
+
+    final logEntry = new api.LogEntry()
+      ..protoPayload = protoPayload
+      ..resource = gaeResource
+      ..timestamp = nowTimestamp
+      ..severity = _currentSeverity
+      ..logName = _sharedLoggingService.requestLogName;
+
     final appengineRequestLog = new gae_log.RequestLog()
       ..appId = 's~${_sharedLoggingService.projectId}'
       ..versionId = _sharedLoggingService.versionId
@@ -141,26 +155,12 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
     if (_traceId != null) {
       appengineRequestLog.traceId = _traceId;
+      _addLabel(logEntry, 'appengine.googleapis.com/trace_id', _traceId);
     }
 
     if (_referrer != null) {
       appengineRequestLog.referrer = _referrer;
     }
-
-    final protoPayload = new api.Any()
-      ..typeUrl = 'type.googleapis.com/google.appengine.logging.v1.RequestLog';
-
-    final gaeResource = new api.MonitoredResource()
-      ..type = 'gae_app'
-      ..labels.addAll(_sharedLoggingService.resourceLabels);
-
-    final logEntry = new api.LogEntry()
-      ..protoPayload = protoPayload
-      ..resource = gaeResource
-      ..timestamp = nowTimestamp
-      ..severity = _currentSeverity
-      ..logName = _sharedLoggingService.requestLogName;
-
     _resetState();
 
     if (finish) {
