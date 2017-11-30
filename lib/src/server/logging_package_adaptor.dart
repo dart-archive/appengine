@@ -24,7 +24,7 @@ final Map<Level, LogLevel> _loggingLevel2AppengineLoggingLevel = {
 void setupAppEngineLogging() {
   Logger.root.onRecord.listen((LogRecord record) {
     record.zone.run(() {
-      var logging;
+      Logging logging;
       try {
         logging = loggingService;
       } on StateError {

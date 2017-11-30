@@ -20,7 +20,13 @@ import '../logging_impl.dart';
 
 abstract class LoggerFactory {
   LoggingImpl newRequestSpecificLogger(
-      String method, String resource, String userAgent, String host, String ip);
+      String method,
+      String resource,
+      String userAgent,
+      String host,
+      String ip,
+      String traceId,
+      String referrer);
   Logging newBackgroundLogger();
 }
 
@@ -41,10 +47,17 @@ class ContextRegistry {
   }
 
   ClientContext add(HttpRequest request) {
-    final services = _getServices(request);
+    String traceId;
+    // See https://cloud.google.com/trace/docs/support
+    final traceHeader = request.headers.value('X-Cloud-Trace-Context');
+    if (traceHeader != null) {
+      traceId = traceHeader.split('/')[0];
+    }
+
+    final services = _getServices(request, traceId);
     final assets = new AssetsImpl(request, _appengineContext);
     final context = new _ClientContextImpl(
-        services, assets, _appengineContext.isDevelopmentEnvironment);
+        services, assets, _appengineContext.isDevelopmentEnvironment, traceId);
     _request2context[request] = context;
 
     request.response.done.whenComplete(() {
@@ -65,9 +78,9 @@ class ContextRegistry {
     return new Future.value();
   }
 
-  Services newBackgroundServices() => _getServices(null);
+  Services newBackgroundServices() => _getServices(null, null);
 
-  Services _getServices(HttpRequest request) {
+  Services _getServices(HttpRequest request, String traceId) {
     Logging loggingService;
     if (request != null) {
       final uri = request.requestedUri;
@@ -89,7 +102,13 @@ class ContextRegistry {
       }
 
       loggingService = _loggingFactory.newRequestSpecificLogger(
-          request.method, resource, userAgent, uri.host, ip);
+          request.method,
+          resource,
+          userAgent,
+          uri.host,
+          ip,
+          traceId,
+          request.headers.value(HttpHeaders.REFERER));
     } else {
       loggingService = _loggingFactory.newBackgroundLogger();
     }
@@ -101,11 +120,11 @@ class ContextRegistry {
 class _ClientContextImpl implements ClientContext {
   final Services services;
   final Assets assets;
-  final bool _isDevelopmentEnvironment;
+  final bool isDevelopmentEnvironment;
+  final String traceId;
 
   _ClientContextImpl(
-      this.services, this.assets, this._isDevelopmentEnvironment);
+      this.services, this.assets, this.isDevelopmentEnvironment, this.traceId);
 
-  bool get isDevelopmentEnvironment => _isDevelopmentEnvironment;
-  bool get isProductionEnvironment => !_isDevelopmentEnvironment;
+  bool get isProductionEnvironment => !isDevelopmentEnvironment;
 }

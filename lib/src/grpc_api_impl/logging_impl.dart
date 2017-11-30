@@ -39,6 +39,8 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   final String _userAgent;
   final String _host;
   final String _ip;
+  final String _traceId;
+  final String _referrer;
   final int _startTimestamp;
   final List<gae_log.LogLine> _gaeLogLines = <gae_log.LogLine>[];
 
@@ -46,10 +48,18 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   int _estimatedSize;
   bool _isFirst;
 
-  GrpcRequestLoggingImpl(this._sharedLoggingService, this._httpMethod,
-      this._httpResource, this._userAgent, this._host, this._ip)
+  GrpcRequestLoggingImpl(
+      this._sharedLoggingService,
+      this._httpMethod,
+      this._httpResource,
+      this._userAgent,
+      this._host,
+      this._ip,
+      this._traceId,
+      this._referrer)
       : _startTimestamp = new DateTime.now().toUtc().millisecondsSinceEpoch {
     _resetState();
+    _isFirst = true;
   }
 
   void log(LogLevel level, String message, {DateTime timestamp}) {
@@ -126,7 +136,16 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
       ..ip = _ip
       ..line.addAll(_gaeLogLines)
       ..first = _isFirst
-      ..finished = finish;
+      ..finished = finish
+      ..instanceId = _sharedLoggingService.instanceId;
+
+    if (_traceId != null) {
+      appengineRequestLog.traceId = _traceId;
+    }
+
+    if (_referrer != null) {
+      appengineRequestLog.referrer = _referrer;
+    }
 
     final protoPayload = new api.Any()
       ..typeUrl = 'type.googleapis.com/google.appengine.logging.v1.RequestLog';
@@ -163,6 +182,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
       logEntry..httpRequest = httpRequest;
     }
+
     protoPayload..value = appengineRequestLog.writeToBuffer();
 
     _sharedLoggingService.enqueue(logEntry);
@@ -215,6 +235,8 @@ class SharedLoggingService {
   final api.LoggingServiceV2Api _clientStub;
   final String projectId;
   final String versionId;
+  final String instanceId;
+  final String _instanceName;
   final List<api.MonitoredResource_LabelsEntry> resourceLabels;
   final String requestLogName;
   final String backgroundLogName;
@@ -226,7 +248,7 @@ class SharedLoggingService {
   int _outstandingRequests = 0;
 
   SharedLoggingService(grpc.Client client, String projectId, String serviceId,
-      String versionId, String zoneId)
+      String versionId, String zoneId, this._instanceName, this.instanceId)
       : _clientStub = new api.LoggingServiceV2Api(
             new grpc.Channel('google.logging.v2', client)),
         projectId = projectId,
@@ -249,6 +271,8 @@ class SharedLoggingService {
   }
 
   void enqueue(api.LogEntry entry) {
+    _addLabel(entry, 'appengine.googleapis.com/instance_name', _instanceName);
+
     _entries.add(entry);
 
     // If all entries have maximum size we should send them once we have 25 in
@@ -307,6 +331,13 @@ class SharedLoggingService {
       _closeCompleter.complete(null);
     }
   }
+}
+
+void _addLabel(api.LogEntry entry, String key, String value) {
+  entry
+    ..labels.add(new api.LogEntry_LabelsEntry()
+      ..key = key
+      ..value = value);
 }
 
 api.Timestamp _protobufTimestampFromMilliseconds(int ms) {

@@ -13,16 +13,12 @@ import '../logging_impl.dart';
 class StderrRequestLoggingImpl extends LoggingImpl {
   final String _httpMethod;
   final String _httpResource;
-  final String _userAgent;
-  final String _host;
-  final String _ip;
   final DateTime _startTimestamp = new DateTime.now().toUtc();
   final List<_LogLine> _gaeLogLines = <_LogLine>[];
 
   LogLevel _currentLogLevel;
 
-  StderrRequestLoggingImpl(this._httpMethod, this._httpResource,
-      this._userAgent, this._host, this._ip) {
+  StderrRequestLoggingImpl(this._httpMethod, this._httpResource) {
     _resetState();
   }
 

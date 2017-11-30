@@ -22,6 +22,14 @@ abstract class ClientContext {
 
   Services get services;
   Assets get assets;
+
+  /// The `TRACE_ID` value from the `X-Cloud-Trace-Context` request header.
+  ///
+  /// If `X-Cloud-Trace-Context` was not included in the request, the value will
+  /// be `null`.
+  ///
+  /// See https://cloud.google.com/trace/docs/support for details.
+  String get traceId;
 }
 
 class Services {
