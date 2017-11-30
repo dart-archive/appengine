@@ -12,11 +12,12 @@ class AppengineContext {
   final String version;
   final String module;
   final String instance;
+  final String instanceId;
   final bool isDevelopmentEnvironment;
   final AssetsManager assets;
 
   AppengineContext(this.isDevelopmentEnvironment, this.applicationID,
-      this.version, this.module, this.instance, Uri pubServeUrl)
+      this.version, this.module, this.instance, this.instanceId, Uri pubServeUrl)
       : partition = '',
         assets = new AssetsManager(pubServeUrl, isDevelopmentEnvironment);
 

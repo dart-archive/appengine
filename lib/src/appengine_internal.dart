@@ -172,8 +172,10 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final Uri pubServeUrl =
       pubServeUrlString != null ? Uri.parse(pubServeUrlString) : null;
 
-  final context = new AppengineContext(
-      isDevEnvironment, projectId, versionId, serviceId, instance, pubServeUrl);
+  final instanceId = await _getInstanceid();
+
+  final context = new AppengineContext(isDevEnvironment, projectId, versionId,
+      serviceId, instance, instanceId, pubServeUrl);
 
   final serviceAccount = _obtainServiceAccountCredentials(gcloudKey);
   final loggerFactory =
@@ -331,7 +333,9 @@ Future<LoggerFactory> _obtainLoggerFactory(AppengineContext context,
         context.applicationID,
         context.module,
         context.version,
-        zoneId);
+        zoneId,
+        context.instance,
+        context.instanceId);
     ss.registerScopeExitCallback(sharedLoggingService.close);
     return new GrpcLoggerFactory(sharedLoggingService);
   }
@@ -394,11 +398,15 @@ auth.ServiceAccountCredentials _obtainServiceAccountCredentials(
   return null;
 }
 
-Future<String> _getZoneInProduction() async {
+Future<String> _getZoneInProduction() => _getMetadataValue('zone');
+
+Future<String> _getInstanceid() => _getMetadataValue('id');
+
+Future<String> _getMetadataValue(String path) async {
   final client = new http.Client();
   try {
     var response = await client.get(
-        'http://metadata.google.internal/computeMetadata/v1/instance/zone',
+        'http://metadata.google.internal/computeMetadata/v1/instance/$path',
         headers: {'Metadata-Flavor': 'Google'});
     if (response.statusCode == HttpStatus.OK) {
       return p.split(response.body).last;
@@ -429,10 +437,16 @@ class GrpcLoggerFactory implements LoggerFactory {
 
   GrpcLoggerFactory(this._shared);
 
-  LoggingImpl newRequestSpecificLogger(String method, String resource,
-      String userAgent, String host, String ip) {
+  LoggingImpl newRequestSpecificLogger(
+      String method,
+      String resource,
+      String userAgent,
+      String host,
+      String ip,
+      String traceId,
+      String referrer) {
     return new grpc_logging_impl.GrpcRequestLoggingImpl(
-        _shared, method, resource, userAgent, host, ip);
+        _shared, method, resource, userAgent, host, ip, traceId, referrer);
   }
 
   logging.Logging newBackgroundLogger() {
@@ -444,8 +458,14 @@ class GrpcLoggerFactory implements LoggerFactory {
 ///
 /// The implementation writes log messages to stderr.
 class StderrLoggerFactory implements LoggerFactory {
-  LoggingImpl newRequestSpecificLogger(String method, String resource,
-      String userAgent, String host, String ip) {
+  LoggingImpl newRequestSpecificLogger(
+      String method,
+      String resource,
+      String userAgent,
+      String host,
+      String ip,
+      String traceId,
+      String referrer) {
     return new stderr_logging_impl.StderrRequestLoggingImpl(method, resource);
   }
 

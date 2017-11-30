@@ -1,3 +1,15 @@
+## 0.4.3
+
+* When logging, the following `protoPayload` values are now populated:
+  * `instanceId`
+  * `referrer`
+  * `traceId` via the `X-Cloud-Trace-Context` request header.
+
+* The `appengine.googleapis.com/instance_name` label is also populated for 
+  all log entries.
+
+* `traceId` was also added to the `ClientContext` class.
+
 ## 0.4.2
 
 * Add support for connecting to memcache instance defined by environment
