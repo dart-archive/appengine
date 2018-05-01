@@ -5,6 +5,7 @@
 library appengine.internal;
 
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:gcloud/datastore.dart' as datastore;
@@ -17,6 +18,7 @@ import 'package:http/http.dart' as http;
 import 'package:memcache/memcache.dart' as memcache;
 import 'package:memcache/memcache_raw.dart' as memcache_raw;
 import 'package:path/path.dart' as p;
+import 'package:stack_trace/stack_trace.dart';
 
 import 'errors.dart' as errors;
 import 'logging.dart' as logging;
@@ -296,8 +298,13 @@ Future<memcache.Memcache> _tryMemcacheInstance(
       return memcacheService;
     }
   } catch (e, stack) {
+    var stackIndented = LineSplitter
+        .split(Trace.format(stack, terse: true))
+        .map((l) => '  $l')
+        .join('\n');
+
     logging.warning('Could not connect to memcache instance at $host:$port\n'
-        '$e\n$stack');
+        '$e\n$stackIndented');
   }
 
   // We were unable to connect to a memcached server running on localhost, so
