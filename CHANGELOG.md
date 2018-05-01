@@ -1,3 +1,7 @@
+## 0.4.4
+
+* Improve output logging when memcache connections fail.
+
 ## 0.4.3+1
 
 * When logging requests, the `appengine.googleapis.com/trace_id` label
