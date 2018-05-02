@@ -1,5 +1,5 @@
 name: appengine
-version: 0.4.3+1
+version: 0.4.4-dev
 author: Dart Team <misc@dartlang.org>
 description: Support for using Dart as a custom runtime on Google App Engine Flexible Environment
 homepage: https://github.com/dart-lang/appengine
@@ -16,5 +16,6 @@ dependencies:
   memcache: '^0.2.1+1'
   path: '^1.2.0'
   protobuf: '^0.5.0'
+  stack_trace: '^1.9.0'
 dev_dependencies:
   test: '^0.12.18+1'
