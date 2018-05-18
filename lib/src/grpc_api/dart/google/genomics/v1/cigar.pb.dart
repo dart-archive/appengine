@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_cigar;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
@@ -12,9 +15,9 @@ export 'cigar.pbenum.dart';
 
 class CigarUnit extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CigarUnit')
-    ..e/*<CigarUnit_Operation>*/(1, 'operation', PbFieldType.OE, CigarUnit_Operation.OPERATION_UNSPECIFIED, CigarUnit_Operation.valueOf)
-    ..a/*<Int64>*/(2, 'operationLength', PbFieldType.O6, Int64.ZERO)
-    ..a/*<String>*/(3, 'referenceSequence', PbFieldType.OS)
+    ..e<CigarUnit_Operation>(1, 'operation', PbFieldType.OE, CigarUnit_Operation.OPERATION_UNSPECIFIED, CigarUnit_Operation.valueOf, CigarUnit_Operation.values)
+    ..aInt64(2, 'operationLength')
+    ..aOS(3, 'referenceSequence')
     ..hasRequiredFields = false
   ;
 
@@ -31,22 +34,22 @@ class CigarUnit extends GeneratedMessage {
   }
   static CigarUnit _defaultInstance;
   static void $checkItem(CigarUnit v) {
-    if (v is !CigarUnit) checkItemFailed(v, 'CigarUnit');
+    if (v is! CigarUnit) checkItemFailed(v, 'CigarUnit');
   }
 
-  CigarUnit_Operation get operation => $_get(0, 1, null);
-  void set operation(CigarUnit_Operation v) { setField(1, v); }
-  bool hasOperation() => $_has(0, 1);
+  CigarUnit_Operation get operation => $_getN(0);
+  set operation(CigarUnit_Operation v) { setField(1, v); }
+  bool hasOperation() => $_has(0);
   void clearOperation() => clearField(1);
 
-  Int64 get operationLength => $_get(1, 2, null);
-  void set operationLength(Int64 v) { $_setInt64(1, 2, v); }
-  bool hasOperationLength() => $_has(1, 2);
+  Int64 get operationLength => $_getI64(1);
+  set operationLength(Int64 v) { $_setInt64(1, v); }
+  bool hasOperationLength() => $_has(1);
   void clearOperationLength() => clearField(2);
 
-  String get referenceSequence => $_get(2, 3, '');
-  void set referenceSequence(String v) { $_setString(2, 3, v); }
-  bool hasReferenceSequence() => $_has(2, 3);
+  String get referenceSequence => $_getS(2, '');
+  set referenceSequence(String v) { $_setString(2, v); }
+  bool hasReferenceSequence() => $_has(2);
   void clearReferenceSequence() => clearField(3);
 }
 

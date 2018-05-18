@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_field_mask;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class FieldMask extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('FieldMask')
-    ..p/*<String>*/(1, 'paths', PbFieldType.PS)
+    ..pPS(1, 'paths')
     ..hasRequiredFields = false
   ;
 
@@ -24,10 +27,10 @@ class FieldMask extends GeneratedMessage {
   }
   static FieldMask _defaultInstance;
   static void $checkItem(FieldMask v) {
-    if (v is !FieldMask) checkItemFailed(v, 'FieldMask');
+    if (v is! FieldMask) checkItemFailed(v, 'FieldMask');
   }
 
-  List<String> get paths => $_get(0, 1, null);
+  List<String> get paths => $_getList(0);
 }
 
 class _ReadonlyFieldMask extends FieldMask with ReadonlyMessageMixin {}

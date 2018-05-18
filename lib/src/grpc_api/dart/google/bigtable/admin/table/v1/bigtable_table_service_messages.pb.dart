@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.admin.table.v1_bigtable_table_service_messages;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -9,10 +12,10 @@ import 'bigtable_table_data.pb.dart';
 
 class CreateTableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateTableRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'tableId', PbFieldType.OS)
-    ..a/*<Table>*/(3, 'table', PbFieldType.OM, Table.getDefault, Table.create)
-    ..p/*<String>*/(4, 'initialSplitKeys', PbFieldType.PS)
+    ..aOS(1, 'name')
+    ..aOS(2, 'tableId')
+    ..a<Table>(3, 'table', PbFieldType.OM, Table.getDefault, Table.create)
+    ..pPS(4, 'initialSplitKeys')
     ..hasRequiredFields = false
   ;
 
@@ -29,32 +32,32 @@ class CreateTableRequest extends GeneratedMessage {
   }
   static CreateTableRequest _defaultInstance;
   static void $checkItem(CreateTableRequest v) {
-    if (v is !CreateTableRequest) checkItemFailed(v, 'CreateTableRequest');
+    if (v is! CreateTableRequest) checkItemFailed(v, 'CreateTableRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get tableId => $_get(1, 2, '');
-  void set tableId(String v) { $_setString(1, 2, v); }
-  bool hasTableId() => $_has(1, 2);
+  String get tableId => $_getS(1, '');
+  set tableId(String v) { $_setString(1, v); }
+  bool hasTableId() => $_has(1);
   void clearTableId() => clearField(2);
 
-  Table get table => $_get(2, 3, null);
-  void set table(Table v) { setField(3, v); }
-  bool hasTable() => $_has(2, 3);
+  Table get table => $_getN(2);
+  set table(Table v) { setField(3, v); }
+  bool hasTable() => $_has(2);
   void clearTable() => clearField(3);
 
-  List<String> get initialSplitKeys => $_get(3, 4, null);
+  List<String> get initialSplitKeys => $_getList(3);
 }
 
 class _ReadonlyCreateTableRequest extends CreateTableRequest with ReadonlyMessageMixin {}
 
 class ListTablesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTablesRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -71,12 +74,12 @@ class ListTablesRequest extends GeneratedMessage {
   }
   static ListTablesRequest _defaultInstance;
   static void $checkItem(ListTablesRequest v) {
-    if (v is !ListTablesRequest) checkItemFailed(v, 'ListTablesRequest');
+    if (v is! ListTablesRequest) checkItemFailed(v, 'ListTablesRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -84,7 +87,7 @@ class _ReadonlyListTablesRequest extends ListTablesRequest with ReadonlyMessageM
 
 class ListTablesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTablesResponse')
-    ..pp/*<Table>*/(1, 'tables', PbFieldType.PM, Table.$checkItem, Table.create)
+    ..pp<Table>(1, 'tables', PbFieldType.PM, Table.$checkItem, Table.create)
     ..hasRequiredFields = false
   ;
 
@@ -101,17 +104,17 @@ class ListTablesResponse extends GeneratedMessage {
   }
   static ListTablesResponse _defaultInstance;
   static void $checkItem(ListTablesResponse v) {
-    if (v is !ListTablesResponse) checkItemFailed(v, 'ListTablesResponse');
+    if (v is! ListTablesResponse) checkItemFailed(v, 'ListTablesResponse');
   }
 
-  List<Table> get tables => $_get(0, 1, null);
+  List<Table> get tables => $_getList(0);
 }
 
 class _ReadonlyListTablesResponse extends ListTablesResponse with ReadonlyMessageMixin {}
 
 class GetTableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetTableRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -128,12 +131,12 @@ class GetTableRequest extends GeneratedMessage {
   }
   static GetTableRequest _defaultInstance;
   static void $checkItem(GetTableRequest v) {
-    if (v is !GetTableRequest) checkItemFailed(v, 'GetTableRequest');
+    if (v is! GetTableRequest) checkItemFailed(v, 'GetTableRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -141,7 +144,7 @@ class _ReadonlyGetTableRequest extends GetTableRequest with ReadonlyMessageMixin
 
 class DeleteTableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteTableRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -158,12 +161,12 @@ class DeleteTableRequest extends GeneratedMessage {
   }
   static DeleteTableRequest _defaultInstance;
   static void $checkItem(DeleteTableRequest v) {
-    if (v is !DeleteTableRequest) checkItemFailed(v, 'DeleteTableRequest');
+    if (v is! DeleteTableRequest) checkItemFailed(v, 'DeleteTableRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -171,8 +174,8 @@ class _ReadonlyDeleteTableRequest extends DeleteTableRequest with ReadonlyMessag
 
 class RenameTableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RenameTableRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'newId', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..aOS(2, 'newId')
     ..hasRequiredFields = false
   ;
 
@@ -189,17 +192,17 @@ class RenameTableRequest extends GeneratedMessage {
   }
   static RenameTableRequest _defaultInstance;
   static void $checkItem(RenameTableRequest v) {
-    if (v is !RenameTableRequest) checkItemFailed(v, 'RenameTableRequest');
+    if (v is! RenameTableRequest) checkItemFailed(v, 'RenameTableRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get newId => $_get(1, 2, '');
-  void set newId(String v) { $_setString(1, 2, v); }
-  bool hasNewId() => $_has(1, 2);
+  String get newId => $_getS(1, '');
+  set newId(String v) { $_setString(1, v); }
+  bool hasNewId() => $_has(1);
   void clearNewId() => clearField(2);
 }
 
@@ -207,9 +210,9 @@ class _ReadonlyRenameTableRequest extends RenameTableRequest with ReadonlyMessag
 
 class CreateColumnFamilyRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateColumnFamilyRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'columnFamilyId', PbFieldType.OS)
-    ..a/*<ColumnFamily>*/(3, 'columnFamily', PbFieldType.OM, ColumnFamily.getDefault, ColumnFamily.create)
+    ..aOS(1, 'name')
+    ..aOS(2, 'columnFamilyId')
+    ..a<ColumnFamily>(3, 'columnFamily', PbFieldType.OM, ColumnFamily.getDefault, ColumnFamily.create)
     ..hasRequiredFields = false
   ;
 
@@ -226,22 +229,22 @@ class CreateColumnFamilyRequest extends GeneratedMessage {
   }
   static CreateColumnFamilyRequest _defaultInstance;
   static void $checkItem(CreateColumnFamilyRequest v) {
-    if (v is !CreateColumnFamilyRequest) checkItemFailed(v, 'CreateColumnFamilyRequest');
+    if (v is! CreateColumnFamilyRequest) checkItemFailed(v, 'CreateColumnFamilyRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get columnFamilyId => $_get(1, 2, '');
-  void set columnFamilyId(String v) { $_setString(1, 2, v); }
-  bool hasColumnFamilyId() => $_has(1, 2);
+  String get columnFamilyId => $_getS(1, '');
+  set columnFamilyId(String v) { $_setString(1, v); }
+  bool hasColumnFamilyId() => $_has(1);
   void clearColumnFamilyId() => clearField(2);
 
-  ColumnFamily get columnFamily => $_get(2, 3, null);
-  void set columnFamily(ColumnFamily v) { setField(3, v); }
-  bool hasColumnFamily() => $_has(2, 3);
+  ColumnFamily get columnFamily => $_getN(2);
+  set columnFamily(ColumnFamily v) { setField(3, v); }
+  bool hasColumnFamily() => $_has(2);
   void clearColumnFamily() => clearField(3);
 }
 
@@ -249,7 +252,7 @@ class _ReadonlyCreateColumnFamilyRequest extends CreateColumnFamilyRequest with 
 
 class DeleteColumnFamilyRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteColumnFamilyRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -266,12 +269,12 @@ class DeleteColumnFamilyRequest extends GeneratedMessage {
   }
   static DeleteColumnFamilyRequest _defaultInstance;
   static void $checkItem(DeleteColumnFamilyRequest v) {
-    if (v is !DeleteColumnFamilyRequest) checkItemFailed(v, 'DeleteColumnFamilyRequest');
+    if (v is! DeleteColumnFamilyRequest) checkItemFailed(v, 'DeleteColumnFamilyRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -279,9 +282,9 @@ class _ReadonlyDeleteColumnFamilyRequest extends DeleteColumnFamilyRequest with 
 
 class BulkDeleteRowsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BulkDeleteRowsRequest')
-    ..a/*<String>*/(1, 'tableName', PbFieldType.OS)
-    ..a/*<List<int>>*/(2, 'rowKeyPrefix', PbFieldType.OY)
-    ..a/*<bool>*/(3, 'deleteAllDataFromTable', PbFieldType.OB)
+    ..aOS(1, 'tableName')
+    ..a<List<int>>(2, 'rowKeyPrefix', PbFieldType.OY)
+    ..aOB(3, 'deleteAllDataFromTable')
     ..hasRequiredFields = false
   ;
 
@@ -298,22 +301,22 @@ class BulkDeleteRowsRequest extends GeneratedMessage {
   }
   static BulkDeleteRowsRequest _defaultInstance;
   static void $checkItem(BulkDeleteRowsRequest v) {
-    if (v is !BulkDeleteRowsRequest) checkItemFailed(v, 'BulkDeleteRowsRequest');
+    if (v is! BulkDeleteRowsRequest) checkItemFailed(v, 'BulkDeleteRowsRequest');
   }
 
-  String get tableName => $_get(0, 1, '');
-  void set tableName(String v) { $_setString(0, 1, v); }
-  bool hasTableName() => $_has(0, 1);
+  String get tableName => $_getS(0, '');
+  set tableName(String v) { $_setString(0, v); }
+  bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
-  List<int> get rowKeyPrefix => $_get(1, 2, null);
-  void set rowKeyPrefix(List<int> v) { $_setBytes(1, 2, v); }
-  bool hasRowKeyPrefix() => $_has(1, 2);
+  List<int> get rowKeyPrefix => $_getN(1);
+  set rowKeyPrefix(List<int> v) { $_setBytes(1, v); }
+  bool hasRowKeyPrefix() => $_has(1);
   void clearRowKeyPrefix() => clearField(2);
 
-  bool get deleteAllDataFromTable => $_get(2, 3, false);
-  void set deleteAllDataFromTable(bool v) { $_setBool(2, 3, v); }
-  bool hasDeleteAllDataFromTable() => $_has(2, 3);
+  bool get deleteAllDataFromTable => $_get(2, false);
+  set deleteAllDataFromTable(bool v) { $_setBool(2, v); }
+  bool hasDeleteAllDataFromTable() => $_has(2);
   void clearDeleteAllDataFromTable() => clearField(3);
 }
 

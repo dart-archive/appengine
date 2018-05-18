@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.v1_bigtable_service_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'bigtable_service_messages.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'bigtable_data.pb.dart';
 import 'bigtable_service.pbjson.dart';
 
@@ -17,7 +17,7 @@ export 'bigtable_service.pb.dart';
 abstract class BigtableServiceBase extends GeneratedService {
   Future<ReadRowsResponse> readRows(ServerContext ctx, ReadRowsRequest request);
   Future<SampleRowKeysResponse> sampleRowKeys(ServerContext ctx, SampleRowKeysRequest request);
-  Future<google$protobuf.Empty> mutateRow(ServerContext ctx, MutateRowRequest request);
+  Future<$google$protobuf.Empty> mutateRow(ServerContext ctx, MutateRowRequest request);
   Future<MutateRowsResponse> mutateRows(ServerContext ctx, MutateRowsRequest request);
   Future<CheckAndMutateRowResponse> checkAndMutateRow(ServerContext ctx, CheckAndMutateRowRequest request);
   Future<Row> readModifyWriteRow(ServerContext ctx, ReadModifyWriteRowRequest request);
@@ -47,6 +47,6 @@ abstract class BigtableServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => BigtableService$json;
-  Map<String, dynamic> get $messageJson => BigtableService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => BigtableService$messageJson;
 }
 

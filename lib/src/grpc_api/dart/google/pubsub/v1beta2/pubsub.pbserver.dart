@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.pubsub.v1beta2_pubsub_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'pubsub.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'pubsub.pbjson.dart';
 
 export 'pubsub.pb.dart';
@@ -17,11 +17,11 @@ abstract class SubscriberServiceBase extends GeneratedService {
   Future<Subscription> createSubscription(ServerContext ctx, Subscription request);
   Future<Subscription> getSubscription(ServerContext ctx, GetSubscriptionRequest request);
   Future<ListSubscriptionsResponse> listSubscriptions(ServerContext ctx, ListSubscriptionsRequest request);
-  Future<google$protobuf.Empty> deleteSubscription(ServerContext ctx, DeleteSubscriptionRequest request);
-  Future<google$protobuf.Empty> modifyAckDeadline(ServerContext ctx, ModifyAckDeadlineRequest request);
-  Future<google$protobuf.Empty> acknowledge(ServerContext ctx, AcknowledgeRequest request);
+  Future<$google$protobuf.Empty> deleteSubscription(ServerContext ctx, DeleteSubscriptionRequest request);
+  Future<$google$protobuf.Empty> modifyAckDeadline(ServerContext ctx, ModifyAckDeadlineRequest request);
+  Future<$google$protobuf.Empty> acknowledge(ServerContext ctx, AcknowledgeRequest request);
   Future<PullResponse> pull(ServerContext ctx, PullRequest request);
-  Future<google$protobuf.Empty> modifyPushConfig(ServerContext ctx, ModifyPushConfigRequest request);
+  Future<$google$protobuf.Empty> modifyPushConfig(ServerContext ctx, ModifyPushConfigRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -52,7 +52,7 @@ abstract class SubscriberServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Subscriber$json;
-  Map<String, dynamic> get $messageJson => Subscriber$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Subscriber$messageJson;
 }
 
 abstract class PublisherServiceBase extends GeneratedService {
@@ -61,7 +61,7 @@ abstract class PublisherServiceBase extends GeneratedService {
   Future<Topic> getTopic(ServerContext ctx, GetTopicRequest request);
   Future<ListTopicsResponse> listTopics(ServerContext ctx, ListTopicsRequest request);
   Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(ServerContext ctx, ListTopicSubscriptionsRequest request);
-  Future<google$protobuf.Empty> deleteTopic(ServerContext ctx, DeleteTopicRequest request);
+  Future<$google$protobuf.Empty> deleteTopic(ServerContext ctx, DeleteTopicRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -88,6 +88,6 @@ abstract class PublisherServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Publisher$json;
-  Map<String, dynamic> get $messageJson => Publisher$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Publisher$messageJson;
 }
 

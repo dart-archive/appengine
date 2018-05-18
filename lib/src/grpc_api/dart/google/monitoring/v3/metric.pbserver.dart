@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.monitoring.v3_metric_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'metric.pb.dart';
 

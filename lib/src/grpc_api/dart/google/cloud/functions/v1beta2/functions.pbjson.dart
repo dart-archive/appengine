@@ -1,13 +1,13 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.functions.v1beta2_functions_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
-import '../../../protobuf/duration.pbjson.dart' as google$protobuf;
-import '../../../protobuf/timestamp.pbjson.dart' as google$protobuf;
-import '../../../longrunning/operations.pbjson.dart' as google$longrunning;
-import '../../../protobuf/any.pbjson.dart' as google$protobuf;
-import '../../../rpc/status.pbjson.dart' as google$rpc;
+import '../../../protobuf/duration.pbjson.dart' as $google$protobuf;
+import '../../../protobuf/timestamp.pbjson.dart' as $google$protobuf;
+import '../../../longrunning/operations.pbjson.dart' as $google$longrunning;
+import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
+import '../../../rpc/status.pbjson.dart' as $google$rpc;
 
 const CloudFunctionStatus$json = const {
   '1': 'CloudFunctionStatus',
@@ -23,109 +23,116 @@ const CloudFunctionStatus$json = const {
 const CloudFunction$json = const {
   '1': 'CloudFunction',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9},
-    const {'1': 'source_archive_url', '3': 14, '4': 1, '5': 9},
-    const {'1': 'source_repository', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.SourceRepository'},
-    const {'1': 'https_trigger', '3': 6, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.HTTPSTrigger'},
-    const {'1': 'event_trigger', '3': 12, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.EventTrigger'},
-    const {'1': 'status', '3': 7, '4': 1, '5': 14, '6': '.google.cloud.functions.v1beta2.CloudFunctionStatus'},
-    const {'1': 'latest_operation', '3': 8, '4': 1, '5': 9},
-    const {'1': 'entry_point', '3': 9, '4': 1, '5': 9},
-    const {'1': 'timeout', '3': 10, '4': 1, '5': 11, '6': '.google.protobuf.Duration'},
-    const {'1': 'available_memory_mb', '3': 11, '4': 1, '5': 5},
-    const {'1': 'service_account', '3': 13, '4': 1, '5': 9},
-    const {'1': 'update_time', '3': 15, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'source_archive_url', '3': 14, '4': 1, '5': 9, '9': 0, '10': 'sourceArchiveUrl'},
+    const {'1': 'source_repository', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.SourceRepository', '9': 0, '10': 'sourceRepository'},
+    const {'1': 'https_trigger', '3': 6, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.HTTPSTrigger', '9': 1, '10': 'httpsTrigger'},
+    const {'1': 'event_trigger', '3': 12, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.EventTrigger', '9': 1, '10': 'eventTrigger'},
+    const {'1': 'status', '3': 7, '4': 1, '5': 14, '6': '.google.cloud.functions.v1beta2.CloudFunctionStatus', '10': 'status'},
+    const {'1': 'latest_operation', '3': 8, '4': 1, '5': 9, '10': 'latestOperation'},
+    const {'1': 'entry_point', '3': 9, '4': 1, '5': 9, '10': 'entryPoint'},
+    const {'1': 'timeout', '3': 10, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'timeout'},
+    const {'1': 'available_memory_mb', '3': 11, '4': 1, '5': 5, '10': 'availableMemoryMb'},
+    const {'1': 'service_account', '3': 13, '4': 1, '5': 9, '10': 'serviceAccount'},
+    const {'1': 'update_time', '3': 15, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'updateTime'},
+  ],
+  '8': const [
+    const {'1': 'source_code'},
+    const {'1': 'trigger'},
   ],
 };
 
 const HTTPSTrigger$json = const {
   '1': 'HTTPSTrigger',
   '2': const [
-    const {'1': 'url', '3': 1, '4': 1, '5': 9},
+    const {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
   ],
 };
 
 const EventTrigger$json = const {
   '1': 'EventTrigger',
   '2': const [
-    const {'1': 'event_type', '3': 1, '4': 1, '5': 9},
-    const {'1': 'resource', '3': 2, '4': 1, '5': 9},
+    const {'1': 'event_type', '3': 1, '4': 1, '5': 9, '10': 'eventType'},
+    const {'1': 'resource', '3': 2, '4': 1, '5': 9, '10': 'resource'},
   ],
 };
 
 const SourceRepository$json = const {
   '1': 'SourceRepository',
   '2': const [
-    const {'1': 'repository_url', '3': 1, '4': 1, '5': 9},
-    const {'1': 'source_path', '3': 2, '4': 1, '5': 9},
-    const {'1': 'branch', '3': 3, '4': 1, '5': 9},
-    const {'1': 'tag', '3': 4, '4': 1, '5': 9},
-    const {'1': 'revision', '3': 5, '4': 1, '5': 9},
-    const {'1': 'deployed_revision', '3': 6, '4': 1, '5': 9},
+    const {'1': 'repository_url', '3': 1, '4': 1, '5': 9, '10': 'repositoryUrl'},
+    const {'1': 'source_path', '3': 2, '4': 1, '5': 9, '10': 'sourcePath'},
+    const {'1': 'branch', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'branch'},
+    const {'1': 'tag', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'tag'},
+    const {'1': 'revision', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'revision'},
+    const {'1': 'deployed_revision', '3': 6, '4': 1, '5': 9, '10': 'deployedRevision'},
+  ],
+  '8': const [
+    const {'1': 'version'},
   ],
 };
 
 const CreateFunctionRequest$json = const {
   '1': 'CreateFunctionRequest',
   '2': const [
-    const {'1': 'location', '3': 1, '4': 1, '5': 9},
-    const {'1': 'function', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.CloudFunction'},
+    const {'1': 'location', '3': 1, '4': 1, '5': 9, '10': 'location'},
+    const {'1': 'function', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.CloudFunction', '10': 'function'},
   ],
 };
 
 const UpdateFunctionRequest$json = const {
   '1': 'UpdateFunctionRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9},
-    const {'1': 'function', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.CloudFunction'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'function', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.functions.v1beta2.CloudFunction', '10': 'function'},
   ],
 };
 
 const GetFunctionRequest$json = const {
   '1': 'GetFunctionRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
 const ListFunctionsRequest$json = const {
   '1': 'ListFunctionsRequest',
   '2': const [
-    const {'1': 'location', '3': 1, '4': 1, '5': 9},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9},
+    const {'1': 'location', '3': 1, '4': 1, '5': 9, '10': 'location'},
+    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
 const ListFunctionsResponse$json = const {
   '1': 'ListFunctionsResponse',
   '2': const [
-    const {'1': 'functions', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.functions.v1beta2.CloudFunction'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9},
+    const {'1': 'functions', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.functions.v1beta2.CloudFunction', '10': 'functions'},
+    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
 const DeleteFunctionRequest$json = const {
   '1': 'DeleteFunctionRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
 const CallFunctionRequest$json = const {
   '1': 'CallFunctionRequest',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9},
-    const {'1': 'data', '3': 2, '4': 1, '5': 9},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'data', '3': 2, '4': 1, '5': 9, '10': 'data'},
   ],
 };
 
 const CallFunctionResponse$json = const {
   '1': 'CallFunctionResponse',
   '2': const [
-    const {'1': 'execution_id', '3': 1, '4': 1, '5': 9},
-    const {'1': 'result', '3': 2, '4': 1, '5': 9},
-    const {'1': 'error', '3': 3, '4': 1, '5': 9},
+    const {'1': 'execution_id', '3': 1, '4': 1, '5': 9, '10': 'executionId'},
+    const {'1': 'result', '3': 2, '4': 1, '5': 9, '10': 'result'},
+    const {'1': 'error', '3': 3, '4': 1, '5': 9, '10': 'error'},
   ],
 };
 
@@ -147,14 +154,14 @@ const CloudFunctionsService$messageJson = const {
   '.google.cloud.functions.v1beta2.CloudFunction': CloudFunction$json,
   '.google.cloud.functions.v1beta2.SourceRepository': SourceRepository$json,
   '.google.cloud.functions.v1beta2.HTTPSTrigger': HTTPSTrigger$json,
-  '.google.protobuf.Duration': google$protobuf.Duration$json,
+  '.google.protobuf.Duration': $google$protobuf.Duration$json,
   '.google.cloud.functions.v1beta2.EventTrigger': EventTrigger$json,
-  '.google.protobuf.Timestamp': google$protobuf.Timestamp$json,
+  '.google.protobuf.Timestamp': $google$protobuf.Timestamp$json,
   '.google.cloud.functions.v1beta2.GetFunctionRequest': GetFunctionRequest$json,
   '.google.cloud.functions.v1beta2.CreateFunctionRequest': CreateFunctionRequest$json,
-  '.google.longrunning.Operation': google$longrunning.Operation$json,
-  '.google.protobuf.Any': google$protobuf.Any$json,
-  '.google.rpc.Status': google$rpc.Status$json,
+  '.google.longrunning.Operation': $google$longrunning.Operation$json,
+  '.google.protobuf.Any': $google$protobuf.Any$json,
+  '.google.rpc.Status': $google$rpc.Status$json,
   '.google.cloud.functions.v1beta2.UpdateFunctionRequest': UpdateFunctionRequest$json,
   '.google.cloud.functions.v1beta2.DeleteFunctionRequest': DeleteFunctionRequest$json,
   '.google.cloud.functions.v1beta2.CallFunctionRequest': CallFunctionRequest$json,

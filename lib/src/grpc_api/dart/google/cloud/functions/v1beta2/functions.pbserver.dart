@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.functions.v1beta2_functions_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'functions.pb.dart';
-import '../../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../../longrunning/operations.pb.dart' as $google$longrunning;
 import 'functions.pbjson.dart';
 
 export 'functions.pb.dart';
@@ -16,9 +16,9 @@ export 'functions.pb.dart';
 abstract class CloudFunctionsServiceBase extends GeneratedService {
   Future<ListFunctionsResponse> listFunctions(ServerContext ctx, ListFunctionsRequest request);
   Future<CloudFunction> getFunction(ServerContext ctx, GetFunctionRequest request);
-  Future<google$longrunning.Operation> createFunction(ServerContext ctx, CreateFunctionRequest request);
-  Future<google$longrunning.Operation> updateFunction(ServerContext ctx, UpdateFunctionRequest request);
-  Future<google$longrunning.Operation> deleteFunction(ServerContext ctx, DeleteFunctionRequest request);
+  Future<$google$longrunning.Operation> createFunction(ServerContext ctx, CreateFunctionRequest request);
+  Future<$google$longrunning.Operation> updateFunction(ServerContext ctx, UpdateFunctionRequest request);
+  Future<$google$longrunning.Operation> deleteFunction(ServerContext ctx, DeleteFunctionRequest request);
   Future<CallFunctionResponse> callFunction(ServerContext ctx, CallFunctionRequest request);
 
   GeneratedMessage createRequest(String method) {
@@ -46,6 +46,6 @@ abstract class CloudFunctionsServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => CloudFunctionsService$json;
-  Map<String, dynamic> get $messageJson => CloudFunctionsService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => CloudFunctionsService$messageJson;
 }
 

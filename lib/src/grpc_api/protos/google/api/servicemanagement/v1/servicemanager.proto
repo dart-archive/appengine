@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc.
+// Copyright 2018 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,28 +21,42 @@ import "google/api/service.proto";
 import "google/api/servicemanagement/v1/resources.proto";
 import "google/longrunning/operations.proto";
 import "google/protobuf/any.proto";
-import "google/protobuf/empty.proto";
 import "google/protobuf/field_mask.proto";
 import "google/protobuf/struct.proto";
 import "google/rpc/status.proto";
 
+option csharp_namespace = "Google.Cloud.ServiceManagement.V1";
 option go_package = "google.golang.org/genproto/googleapis/api/servicemanagement/v1;servicemanagement";
 option java_multiple_files = true;
 option java_outer_classname = "ServiceManagerProto";
 option java_package = "com.google.api.servicemanagement.v1";
 option objc_class_prefix = "GASM";
+option php_namespace = "Google\\Cloud\\ServiceManagement\\V1";
 
 
 // [Google Service Management API](/service-management/overview)
 service ServiceManager {
-  // Lists all managed services.
+  // Lists managed services.
+  //
+  // Returns all public services. For authenticated users, also returns all
+  // services the calling user has "servicemanagement.services.get" permission
+  // for.
+  //
+  // **BETA:** If the caller specifies the `consumer_id`, it returns only the
+  // services enabled on the consumer. The `consumer_id` must have the format
+  // of "project:{PROJECT-ID}".
   rpc ListServices(ListServicesRequest) returns (ListServicesResponse) {
-    option (google.api.http) = { get: "/v1/services" };
+    option (google.api.http) = {
+      get: "/v1/services"
+    };
   }
 
-  // Gets a managed service.
+  // Gets a managed service. Authentication is required unless the service is
+  // public.
   rpc GetService(GetServiceRequest) returns (ManagedService) {
-    option (google.api.http) = { get: "/v1/services/{service_name}" };
+    option (google.api.http) = {
+      get: "/v1/services/{service_name}"
+    };
   }
 
   // Creates a new managed service.
@@ -50,17 +64,22 @@ service ServiceManager {
   //
   // Operation<response: ManagedService>
   rpc CreateService(CreateServiceRequest) returns (google.longrunning.Operation) {
-    option (google.api.http) = { post: "/v1/services" body: "service" };
+    option (google.api.http) = {
+      post: "/v1/services"
+      body: "service"
+    };
   }
 
-  // Deletes a managed service. This method will change the serivce in the
+  // Deletes a managed service. This method will change the service to the
   // `Soft-Delete` state for 30 days. Within this period, service producers may
   // call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
   // After 30 days, the service will be permanently deleted.
   //
   // Operation<response: google.protobuf.Empty>
   rpc DeleteService(DeleteServiceRequest) returns (google.longrunning.Operation) {
-    option (google.api.http) = { delete: "/v1/services/{service_name}" };
+    option (google.api.http) = {
+      delete: "/v1/services/{service_name}"
+    };
   }
 
   // Revives a previously deleted managed service. The method restores the
@@ -70,26 +89,42 @@ service ServiceManager {
   //
   // Operation<response: UndeleteServiceResponse>
   rpc UndeleteService(UndeleteServiceRequest) returns (google.longrunning.Operation) {
-    option (google.api.http) = { post: "/v1/services/{service_name}:undelete" body: "" };
+    option (google.api.http) = {
+      post: "/v1/services/{service_name}:undelete"
+    };
   }
 
   // Lists the history of the service configuration for a managed service,
   // from the newest to the oldest.
   rpc ListServiceConfigs(ListServiceConfigsRequest) returns (ListServiceConfigsResponse) {
-    option (google.api.http) = { get: "/v1/services/{service_name}/configs" };
+    option (google.api.http) = {
+      get: "/v1/services/{service_name}/configs"
+    };
   }
 
   // Gets a service configuration (version) for a managed service.
   rpc GetServiceConfig(GetServiceConfigRequest) returns (google.api.Service) {
-    option (google.api.http) = { get: "/v1/services/{service_name}/configs/{config_id}" };
+    option (google.api.http) = {
+      get: "/v1/services/{service_name}/configs/{config_id}"
+      additional_bindings {
+        get: "/v1/services/{service_name}/config"
+      }
+    };
   }
 
   // Creates a new service configuration (version) for a managed service.
   // This method only stores the service configuration. To roll out the service
   // configuration to backend systems please call
   // [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+  //
+  // Only the 100 most recent service configurations and ones referenced by
+  // existing rollouts are kept for each service. The rest will be deleted
+  // eventually.
   rpc CreateServiceConfig(CreateServiceConfigRequest) returns (google.api.Service) {
-    option (google.api.http) = { post: "/v1/services/{service_name}/configs" body: "service_config" };
+    option (google.api.http) = {
+      post: "/v1/services/{service_name}/configs"
+      body: "service_config"
+    };
   }
 
   // Creates a new service configuration (version) for a managed service based
@@ -100,20 +135,31 @@ service ServiceManager {
   // other services,
   // please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
   //
+  // Only the 100 most recent configuration sources and ones referenced by
+  // existing service configurtions are kept for each service. The rest will be
+  // deleted eventually.
+  //
   // Operation<response: SubmitConfigSourceResponse>
   rpc SubmitConfigSource(SubmitConfigSourceRequest) returns (google.longrunning.Operation) {
-    option (google.api.http) = { post: "/v1/services/{service_name}/configs:submit" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/services/{service_name}/configs:submit"
+      body: "*"
+    };
   }
 
   // Lists the history of the service configuration rollouts for a managed
   // service, from the newest to the oldest.
   rpc ListServiceRollouts(ListServiceRolloutsRequest) returns (ListServiceRolloutsResponse) {
-    option (google.api.http) = { get: "/v1/services/{service_name}/rollouts" };
+    option (google.api.http) = {
+      get: "/v1/services/{service_name}/rollouts"
+    };
   }
 
   // Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
   rpc GetServiceRollout(GetServiceRolloutRequest) returns (Rollout) {
-    option (google.api.http) = { get: "/v1/services/{service_name}/rollouts/{rollout_id}" };
+    option (google.api.http) = {
+      get: "/v1/services/{service_name}/rollouts/{rollout_id}"
+    };
   }
 
   // Creates a new service configuration rollout. Based on rollout, the
@@ -125,9 +171,16 @@ service ServiceManager {
   // Operations will be automatically cancelled so that the latest Rollout will
   // not be blocked by previous Rollouts.
   //
+  // Only the 100 most recent (in any state) and the last 10 successful (if not
+  // already part of the set of 100 most recent) rollouts are kept for each
+  // service. The rest will be deleted eventually.
+  //
   // Operation<response: Rollout>
   rpc CreateServiceRollout(CreateServiceRolloutRequest) returns (google.longrunning.Operation) {
-    option (google.api.http) = { post: "/v1/services/{service_name}/rollouts" body: "rollout" };
+    option (google.api.http) = {
+      post: "/v1/services/{service_name}/rollouts"
+      body: "rollout"
+    };
   }
 
   // Generates and returns a report (errors, warnings and changes from
@@ -142,24 +195,35 @@ service ServiceManager {
   // will compare GenerateConfigReportRequest.new_value with the last pushed
   // service configuration.
   rpc GenerateConfigReport(GenerateConfigReportRequest) returns (GenerateConfigReportResponse) {
-    option (google.api.http) = { post: "/v1/services:generateConfigReport" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/services:generateConfigReport"
+      body: "*"
+    };
   }
 
-  // Enable a managed service for a project with default setting.
+  // Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
+  // for the project. See
+  // [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
+  // more information.
   //
   // Operation<response: EnableServiceResponse>
-  //
-  // [google.rpc.Status][google.rpc.Status] errors may contain a
-  // [google.rpc.PreconditionFailure][] error detail.
   rpc EnableService(EnableServiceRequest) returns (google.longrunning.Operation) {
-    option (google.api.http) = { post: "/v1/services/{service_name}:enable" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/services/{service_name}:enable"
+      body: "*"
+    };
   }
 
-  // Disable a managed service for a project.
+  // Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
+  // be used for the project. It prevents accidental usage that may cause
+  // unexpected billing charges or security leaks.
   //
   // Operation<response: DisableServiceResponse>
   rpc DisableService(DisableServiceRequest) returns (google.longrunning.Operation) {
-    option (google.api.http) = { post: "/v1/services/{service_name}:disable" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/services/{service_name}:disable"
+      body: "*"
+    };
   }
 }
 
@@ -174,11 +238,18 @@ message ListServicesRequest {
   // Token identifying which result to start with; returned by a previous list
   // call.
   string page_token = 6;
+
+  // Include services consumed by the specified consumer.
+  //
+  // The Google Service Management implementation accepts the following
+  // forms:
+  // - project:<project_id>
+  string consumer_id = 7;
 }
 
 // Response message for `ListServices` method.
 message ListServicesResponse {
-  // The results of the query.
+  // The returned services will only have the name field set.
   repeated ManagedService services = 1;
 
   // Token that can be passed to `ListServices` to resume a paginated query.
@@ -220,11 +291,27 @@ message UndeleteServiceResponse {
 
 // Request message for GetServiceConfig method.
 message GetServiceConfigRequest {
+  enum ConfigView {
+    // Server response includes all fields except SourceInfo.
+    BASIC = 0;
+
+    // Server response includes all fields including SourceInfo.
+    // SourceFiles are of type 'google.api.servicemanagement.v1.ConfigFile'
+    // and are only available for configs created using the
+    // SubmitConfigSource method.
+    FULL = 1;
+  }
+
   // The name of the service.  See the [overview](/service-management/overview)
   // for naming requirements.  For example: `example.googleapis.com`.
   string service_name = 1;
 
+  // The id of the service configuration resource.
   string config_id = 2;
+
+  // Specifies which parts of the Service Config should be returned in the
+  // response.
+  ConfigView view = 3;
 }
 
 // Request message for ListServiceConfigs method.
@@ -301,6 +388,16 @@ message ListServiceRolloutsRequest {
 
   // The max number of items to include in the response list.
   int32 page_size = 3;
+
+  // Use `filter` to return subset of rollouts.
+  // The following filters are supported:
+  //   -- To limit the results to only those in
+  //      [status](google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
+  //      use filter='status=SUCCESS'
+  //   -- To limit the results to those in
+  //      [status](google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
+  //      or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
+  string filter = 4;
 }
 
 // Response message for ListServiceRollouts method.
@@ -332,7 +429,8 @@ message EnableServiceRequest {
   // applied to.
   //
   // The Google Service Management implementation accepts the following
-  // forms: "project:<project_id>", "project_number:<project_number>".
+  // forms:
+  // - "project:<project_id>"
   //
   // Note: this is made compatible with
   // google.api.servicecontrol.v1.Operation.consumer_id.
@@ -349,7 +447,8 @@ message DisableServiceRequest {
   // applied to.
   //
   // The Google Service Management implementation accepts the following
-  // forms: "project:<project_id>", "project_number:<project_number>".
+  // forms:
+  // - "project:<project_id>"
   //
   // Note: this is made compatible with
   // google.api.servicecontrol.v1.Operation.consumer_id.

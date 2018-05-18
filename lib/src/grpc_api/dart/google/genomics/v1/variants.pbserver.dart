@@ -1,15 +1,15 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_variants_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'variants.pb.dart';
-import '../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'variants.pbjson.dart';
 
 export 'variants.pb.dart';
@@ -32,27 +32,27 @@ abstract class StreamingVariantServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => StreamingVariantService$json;
-  Map<String, dynamic> get $messageJson => StreamingVariantService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => StreamingVariantService$messageJson;
 }
 
 abstract class VariantServiceV1ServiceBase extends GeneratedService {
-  Future<google$longrunning.Operation> importVariants(ServerContext ctx, ImportVariantsRequest request);
+  Future<$google$longrunning.Operation> importVariants(ServerContext ctx, ImportVariantsRequest request);
   Future<VariantSet> createVariantSet(ServerContext ctx, CreateVariantSetRequest request);
-  Future<google$longrunning.Operation> exportVariantSet(ServerContext ctx, ExportVariantSetRequest request);
+  Future<$google$longrunning.Operation> exportVariantSet(ServerContext ctx, ExportVariantSetRequest request);
   Future<VariantSet> getVariantSet(ServerContext ctx, GetVariantSetRequest request);
   Future<SearchVariantSetsResponse> searchVariantSets(ServerContext ctx, SearchVariantSetsRequest request);
-  Future<google$protobuf.Empty> deleteVariantSet(ServerContext ctx, DeleteVariantSetRequest request);
+  Future<$google$protobuf.Empty> deleteVariantSet(ServerContext ctx, DeleteVariantSetRequest request);
   Future<VariantSet> updateVariantSet(ServerContext ctx, UpdateVariantSetRequest request);
   Future<SearchVariantsResponse> searchVariants(ServerContext ctx, SearchVariantsRequest request);
   Future<Variant> createVariant(ServerContext ctx, CreateVariantRequest request);
   Future<Variant> updateVariant(ServerContext ctx, UpdateVariantRequest request);
-  Future<google$protobuf.Empty> deleteVariant(ServerContext ctx, DeleteVariantRequest request);
+  Future<$google$protobuf.Empty> deleteVariant(ServerContext ctx, DeleteVariantRequest request);
   Future<Variant> getVariant(ServerContext ctx, GetVariantRequest request);
-  Future<google$protobuf.Empty> mergeVariants(ServerContext ctx, MergeVariantsRequest request);
+  Future<$google$protobuf.Empty> mergeVariants(ServerContext ctx, MergeVariantsRequest request);
   Future<SearchCallSetsResponse> searchCallSets(ServerContext ctx, SearchCallSetsRequest request);
   Future<CallSet> createCallSet(ServerContext ctx, CreateCallSetRequest request);
   Future<CallSet> updateCallSet(ServerContext ctx, UpdateCallSetRequest request);
-  Future<google$protobuf.Empty> deleteCallSet(ServerContext ctx, DeleteCallSetRequest request);
+  Future<$google$protobuf.Empty> deleteCallSet(ServerContext ctx, DeleteCallSetRequest request);
   Future<CallSet> getCallSet(ServerContext ctx, GetCallSetRequest request);
 
   GeneratedMessage createRequest(String method) {
@@ -104,6 +104,6 @@ abstract class VariantServiceV1ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => VariantServiceV1$json;
-  Map<String, dynamic> get $messageJson => VariantServiceV1$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => VariantServiceV1$messageJson;
 }
 

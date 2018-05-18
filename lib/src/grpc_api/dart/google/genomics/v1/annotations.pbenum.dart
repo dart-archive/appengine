@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_annotations_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class AnnotationType extends ProtobufEnum {
@@ -23,7 +25,7 @@ class AnnotationType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static AnnotationType valueOf(int value) => _byValue[value] as AnnotationType;
   static void $checkItem(AnnotationType v) {
-    if (v is !AnnotationType) checkItemFailed(v, 'AnnotationType');
+    if (v is! AnnotationType) checkItemFailed(v, 'AnnotationType');
   }
 
   const AnnotationType._(int v, String n) : super(v, n);
@@ -53,7 +55,7 @@ class VariantAnnotation_Type extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static VariantAnnotation_Type valueOf(int value) => _byValue[value] as VariantAnnotation_Type;
   static void $checkItem(VariantAnnotation_Type v) {
-    if (v is !VariantAnnotation_Type) checkItemFailed(v, 'VariantAnnotation_Type');
+    if (v is! VariantAnnotation_Type) checkItemFailed(v, 'VariantAnnotation_Type');
   }
 
   const VariantAnnotation_Type._(int v, String n) : super(v, n);
@@ -85,7 +87,7 @@ class VariantAnnotation_Effect extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static VariantAnnotation_Effect valueOf(int value) => _byValue[value] as VariantAnnotation_Effect;
   static void $checkItem(VariantAnnotation_Effect v) {
-    if (v is !VariantAnnotation_Effect) checkItemFailed(v, 'VariantAnnotation_Effect');
+    if (v is! VariantAnnotation_Effect) checkItemFailed(v, 'VariantAnnotation_Effect');
   }
 
   const VariantAnnotation_Effect._(int v, String n) : super(v, n);
@@ -127,7 +129,7 @@ class VariantAnnotation_ClinicalSignificance extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static VariantAnnotation_ClinicalSignificance valueOf(int value) => _byValue[value] as VariantAnnotation_ClinicalSignificance;
   static void $checkItem(VariantAnnotation_ClinicalSignificance v) {
-    if (v is !VariantAnnotation_ClinicalSignificance) checkItemFailed(v, 'VariantAnnotation_ClinicalSignificance');
+    if (v is! VariantAnnotation_ClinicalSignificance) checkItemFailed(v, 'VariantAnnotation_ClinicalSignificance');
   }
 
   const VariantAnnotation_ClinicalSignificance._(int v, String n) : super(v, n);

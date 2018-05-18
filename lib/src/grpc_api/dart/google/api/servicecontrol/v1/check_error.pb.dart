@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicecontrol.v1_check_error;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,8 +14,8 @@ export 'check_error.pbenum.dart';
 
 class CheckError extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CheckError')
-    ..e/*<CheckError_Code>*/(1, 'code', PbFieldType.OE, CheckError_Code.ERROR_CODE_UNSPECIFIED, CheckError_Code.valueOf)
-    ..a/*<String>*/(2, 'detail', PbFieldType.OS)
+    ..e<CheckError_Code>(1, 'code', PbFieldType.OE, CheckError_Code.ERROR_CODE_UNSPECIFIED, CheckError_Code.valueOf, CheckError_Code.values)
+    ..aOS(2, 'detail')
     ..hasRequiredFields = false
   ;
 
@@ -29,17 +32,17 @@ class CheckError extends GeneratedMessage {
   }
   static CheckError _defaultInstance;
   static void $checkItem(CheckError v) {
-    if (v is !CheckError) checkItemFailed(v, 'CheckError');
+    if (v is! CheckError) checkItemFailed(v, 'CheckError');
   }
 
-  CheckError_Code get code => $_get(0, 1, null);
-  void set code(CheckError_Code v) { setField(1, v); }
-  bool hasCode() => $_has(0, 1);
+  CheckError_Code get code => $_getN(0);
+  set code(CheckError_Code v) { setField(1, v); }
+  bool hasCode() => $_has(0);
   void clearCode() => clearField(1);
 
-  String get detail => $_get(1, 2, '');
-  void set detail(String v) { $_setString(1, 2, v); }
-  bool hasDetail() => $_has(1, 2);
+  String get detail => $_getS(1, '');
+  set detail(String v) { $_setString(1, v); }
+  bool hasDetail() => $_has(1);
   void clearDetail() => clearField(2);
 }
 

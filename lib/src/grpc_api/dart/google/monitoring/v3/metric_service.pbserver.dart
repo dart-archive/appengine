@@ -1,29 +1,29 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.monitoring.v3_metric_service_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'metric_service.pb.dart';
-import '../../api/monitored_resource.pb.dart' as google$api;
-import '../../api/metric.pb.dart' as google$api;
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../api/monitored_resource.pb.dart' as $google$api;
+import '../../api/metric.pb.dart' as $google$api;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'metric_service.pbjson.dart';
 
 export 'metric_service.pb.dart';
 
 abstract class MetricServiceBase extends GeneratedService {
   Future<ListMonitoredResourceDescriptorsResponse> listMonitoredResourceDescriptors(ServerContext ctx, ListMonitoredResourceDescriptorsRequest request);
-  Future<google$api.MonitoredResourceDescriptor> getMonitoredResourceDescriptor(ServerContext ctx, GetMonitoredResourceDescriptorRequest request);
+  Future<$google$api.MonitoredResourceDescriptor> getMonitoredResourceDescriptor(ServerContext ctx, GetMonitoredResourceDescriptorRequest request);
   Future<ListMetricDescriptorsResponse> listMetricDescriptors(ServerContext ctx, ListMetricDescriptorsRequest request);
-  Future<google$api.MetricDescriptor> getMetricDescriptor(ServerContext ctx, GetMetricDescriptorRequest request);
-  Future<google$api.MetricDescriptor> createMetricDescriptor(ServerContext ctx, CreateMetricDescriptorRequest request);
-  Future<google$protobuf.Empty> deleteMetricDescriptor(ServerContext ctx, DeleteMetricDescriptorRequest request);
+  Future<$google$api.MetricDescriptor> getMetricDescriptor(ServerContext ctx, GetMetricDescriptorRequest request);
+  Future<$google$api.MetricDescriptor> createMetricDescriptor(ServerContext ctx, CreateMetricDescriptorRequest request);
+  Future<$google$protobuf.Empty> deleteMetricDescriptor(ServerContext ctx, DeleteMetricDescriptorRequest request);
   Future<ListTimeSeriesResponse> listTimeSeries(ServerContext ctx, ListTimeSeriesRequest request);
-  Future<google$protobuf.Empty> createTimeSeries(ServerContext ctx, CreateTimeSeriesRequest request);
+  Future<$google$protobuf.Empty> createTimeSeries(ServerContext ctx, CreateTimeSeriesRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -54,6 +54,6 @@ abstract class MetricServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => MetricService$json;
-  Map<String, dynamic> get $messageJson => MetricService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => MetricService$messageJson;
 }
 

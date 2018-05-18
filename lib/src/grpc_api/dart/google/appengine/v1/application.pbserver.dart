@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_application_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'application.pb.dart';
 

@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.cloudtrace.v1_trace_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'trace.pb.dart';
-import '../../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'trace.pbjson.dart';
 
 export 'trace.pb.dart';
@@ -16,7 +16,7 @@ export 'trace.pb.dart';
 abstract class TraceServiceBase extends GeneratedService {
   Future<ListTracesResponse> listTraces(ServerContext ctx, ListTracesRequest request);
   Future<Trace> getTrace(ServerContext ctx, GetTraceRequest request);
-  Future<google$protobuf.Empty> patchTraces(ServerContext ctx, PatchTracesRequest request);
+  Future<$google$protobuf.Empty> patchTraces(ServerContext ctx, PatchTracesRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -37,6 +37,6 @@ abstract class TraceServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => TraceService$json;
-  Map<String, dynamic> get $messageJson => TraceService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => TraceService$messageJson;
 }
 

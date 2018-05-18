@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.v1_mutation_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'mutation.pb.dart';
 

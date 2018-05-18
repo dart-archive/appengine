@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_struct;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,8 +14,8 @@ export 'struct.pbenum.dart';
 
 class Struct_FieldsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Struct_FieldsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<Value>*/(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
+    ..aOS(1, 'key')
+    ..a<Value>(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
     ..hasRequiredFields = false
   ;
 
@@ -29,17 +32,17 @@ class Struct_FieldsEntry extends GeneratedMessage {
   }
   static Struct_FieldsEntry _defaultInstance;
   static void $checkItem(Struct_FieldsEntry v) {
-    if (v is !Struct_FieldsEntry) checkItemFailed(v, 'Struct_FieldsEntry');
+    if (v is! Struct_FieldsEntry) checkItemFailed(v, 'Struct_FieldsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  Value get value => $_get(1, 2, null);
-  void set value(Value v) { setField(2, v); }
-  bool hasValue() => $_has(1, 2);
+  Value get value => $_getN(1);
+  set value(Value v) { setField(2, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -47,7 +50,7 @@ class _ReadonlyStruct_FieldsEntry extends Struct_FieldsEntry with ReadonlyMessag
 
 class Struct extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Struct')
-    ..pp/*<Struct_FieldsEntry>*/(1, 'fields', PbFieldType.PM, Struct_FieldsEntry.$checkItem, Struct_FieldsEntry.create)
+    ..pp<Struct_FieldsEntry>(1, 'fields', PbFieldType.PM, Struct_FieldsEntry.$checkItem, Struct_FieldsEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -64,22 +67,22 @@ class Struct extends GeneratedMessage {
   }
   static Struct _defaultInstance;
   static void $checkItem(Struct v) {
-    if (v is !Struct) checkItemFailed(v, 'Struct');
+    if (v is! Struct) checkItemFailed(v, 'Struct');
   }
 
-  List<Struct_FieldsEntry> get fields => $_get(0, 1, null);
+  List<Struct_FieldsEntry> get fields => $_getList(0);
 }
 
 class _ReadonlyStruct extends Struct with ReadonlyMessageMixin {}
 
 class Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Value')
-    ..e/*<NullValue>*/(1, 'nullValue', PbFieldType.OE, NullValue.NULL_VALUE, NullValue.valueOf)
-    ..a/*<double>*/(2, 'numberValue', PbFieldType.OD)
-    ..a/*<String>*/(3, 'stringValue', PbFieldType.OS)
-    ..a/*<bool>*/(4, 'boolValue', PbFieldType.OB)
-    ..a/*<Struct>*/(5, 'structValue', PbFieldType.OM, Struct.getDefault, Struct.create)
-    ..a/*<ListValue>*/(6, 'listValue', PbFieldType.OM, ListValue.getDefault, ListValue.create)
+    ..e<NullValue>(1, 'nullValue', PbFieldType.OE, NullValue.NULL_VALUE, NullValue.valueOf, NullValue.values)
+    ..a<double>(2, 'numberValue', PbFieldType.OD)
+    ..aOS(3, 'stringValue')
+    ..aOB(4, 'boolValue')
+    ..a<Struct>(5, 'structValue', PbFieldType.OM, Struct.getDefault, Struct.create)
+    ..a<ListValue>(6, 'listValue', PbFieldType.OM, ListValue.getDefault, ListValue.create)
     ..hasRequiredFields = false
   ;
 
@@ -96,37 +99,37 @@ class Value extends GeneratedMessage {
   }
   static Value _defaultInstance;
   static void $checkItem(Value v) {
-    if (v is !Value) checkItemFailed(v, 'Value');
+    if (v is! Value) checkItemFailed(v, 'Value');
   }
 
-  NullValue get nullValue => $_get(0, 1, null);
-  void set nullValue(NullValue v) { setField(1, v); }
-  bool hasNullValue() => $_has(0, 1);
+  NullValue get nullValue => $_getN(0);
+  set nullValue(NullValue v) { setField(1, v); }
+  bool hasNullValue() => $_has(0);
   void clearNullValue() => clearField(1);
 
-  double get numberValue => $_get(1, 2, null);
-  void set numberValue(double v) { $_setDouble(1, 2, v); }
-  bool hasNumberValue() => $_has(1, 2);
+  double get numberValue => $_getN(1);
+  set numberValue(double v) { $_setDouble(1, v); }
+  bool hasNumberValue() => $_has(1);
   void clearNumberValue() => clearField(2);
 
-  String get stringValue => $_get(2, 3, '');
-  void set stringValue(String v) { $_setString(2, 3, v); }
-  bool hasStringValue() => $_has(2, 3);
+  String get stringValue => $_getS(2, '');
+  set stringValue(String v) { $_setString(2, v); }
+  bool hasStringValue() => $_has(2);
   void clearStringValue() => clearField(3);
 
-  bool get boolValue => $_get(3, 4, false);
-  void set boolValue(bool v) { $_setBool(3, 4, v); }
-  bool hasBoolValue() => $_has(3, 4);
+  bool get boolValue => $_get(3, false);
+  set boolValue(bool v) { $_setBool(3, v); }
+  bool hasBoolValue() => $_has(3);
   void clearBoolValue() => clearField(4);
 
-  Struct get structValue => $_get(4, 5, null);
-  void set structValue(Struct v) { setField(5, v); }
-  bool hasStructValue() => $_has(4, 5);
+  Struct get structValue => $_getN(4);
+  set structValue(Struct v) { setField(5, v); }
+  bool hasStructValue() => $_has(4);
   void clearStructValue() => clearField(5);
 
-  ListValue get listValue => $_get(5, 6, null);
-  void set listValue(ListValue v) { setField(6, v); }
-  bool hasListValue() => $_has(5, 6);
+  ListValue get listValue => $_getN(5);
+  set listValue(ListValue v) { setField(6, v); }
+  bool hasListValue() => $_has(5);
   void clearListValue() => clearField(6);
 }
 
@@ -134,7 +137,7 @@ class _ReadonlyValue extends Value with ReadonlyMessageMixin {}
 
 class ListValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListValue')
-    ..pp/*<Value>*/(1, 'values', PbFieldType.PM, Value.$checkItem, Value.create)
+    ..pp<Value>(1, 'values', PbFieldType.PM, Value.$checkItem, Value.create)
     ..hasRequiredFields = false
   ;
 
@@ -151,10 +154,10 @@ class ListValue extends GeneratedMessage {
   }
   static ListValue _defaultInstance;
   static void $checkItem(ListValue v) {
-    if (v is !ListValue) checkItemFailed(v, 'ListValue');
+    if (v is! ListValue) checkItemFailed(v, 'ListValue');
   }
 
-  List<Value> get values => $_get(0, 1, null);
+  List<Value> get values => $_getList(0);
 }
 
 class _ReadonlyListValue extends ListValue with ReadonlyMessageMixin {}

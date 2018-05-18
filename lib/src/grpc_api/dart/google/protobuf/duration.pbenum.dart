@@ -1,5 +1,5 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_duration_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 

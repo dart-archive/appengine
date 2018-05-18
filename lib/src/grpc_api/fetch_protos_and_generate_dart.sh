@@ -39,7 +39,7 @@ run cp $PROTOBUF_DIR/src/google/protobuf/*.proto $DIR/protos/google/protobuf
 run cp -R $GOOGLEAPIS_DIR/google/* $DIR/protos/google
 
 # Generate the dart code.
-run rm -rf $
+run rm -rf $DIR/dart
 run mkdir -p $DIR/dart
 for file in $(find $DIR/protos -name '*proto' | grep -v unittest); do
   echo -e "\nCompiling $file"

@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_monitored_resource;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -9,11 +12,11 @@ import 'label.pb.dart';
 
 class MonitoredResourceDescriptor extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('MonitoredResourceDescriptor')
-    ..a/*<String>*/(1, 'type', PbFieldType.OS)
-    ..a/*<String>*/(2, 'displayName', PbFieldType.OS)
-    ..a/*<String>*/(3, 'description', PbFieldType.OS)
-    ..pp/*<LabelDescriptor>*/(4, 'labels', PbFieldType.PM, LabelDescriptor.$checkItem, LabelDescriptor.create)
-    ..a/*<String>*/(5, 'name', PbFieldType.OS)
+    ..aOS(1, 'type')
+    ..aOS(2, 'displayName')
+    ..aOS(3, 'description')
+    ..pp<LabelDescriptor>(4, 'labels', PbFieldType.PM, LabelDescriptor.$checkItem, LabelDescriptor.create)
+    ..aOS(5, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -30,29 +33,29 @@ class MonitoredResourceDescriptor extends GeneratedMessage {
   }
   static MonitoredResourceDescriptor _defaultInstance;
   static void $checkItem(MonitoredResourceDescriptor v) {
-    if (v is !MonitoredResourceDescriptor) checkItemFailed(v, 'MonitoredResourceDescriptor');
+    if (v is! MonitoredResourceDescriptor) checkItemFailed(v, 'MonitoredResourceDescriptor');
   }
 
-  String get type => $_get(0, 1, '');
-  void set type(String v) { $_setString(0, 1, v); }
-  bool hasType() => $_has(0, 1);
+  String get type => $_getS(0, '');
+  set type(String v) { $_setString(0, v); }
+  bool hasType() => $_has(0);
   void clearType() => clearField(1);
 
-  String get displayName => $_get(1, 2, '');
-  void set displayName(String v) { $_setString(1, 2, v); }
-  bool hasDisplayName() => $_has(1, 2);
+  String get displayName => $_getS(1, '');
+  set displayName(String v) { $_setString(1, v); }
+  bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
-  String get description => $_get(2, 3, '');
-  void set description(String v) { $_setString(2, 3, v); }
-  bool hasDescription() => $_has(2, 3);
+  String get description => $_getS(2, '');
+  set description(String v) { $_setString(2, v); }
+  bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  List<LabelDescriptor> get labels => $_get(3, 4, null);
+  List<LabelDescriptor> get labels => $_getList(3);
 
-  String get name => $_get(4, 5, '');
-  void set name(String v) { $_setString(4, 5, v); }
-  bool hasName() => $_has(4, 5);
+  String get name => $_getS(4, '');
+  set name(String v) { $_setString(4, v); }
+  bool hasName() => $_has(4);
   void clearName() => clearField(5);
 }
 
@@ -60,8 +63,8 @@ class _ReadonlyMonitoredResourceDescriptor extends MonitoredResourceDescriptor w
 
 class MonitoredResource_LabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('MonitoredResource_LabelsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -78,17 +81,17 @@ class MonitoredResource_LabelsEntry extends GeneratedMessage {
   }
   static MonitoredResource_LabelsEntry _defaultInstance;
   static void $checkItem(MonitoredResource_LabelsEntry v) {
-    if (v is !MonitoredResource_LabelsEntry) checkItemFailed(v, 'MonitoredResource_LabelsEntry');
+    if (v is! MonitoredResource_LabelsEntry) checkItemFailed(v, 'MonitoredResource_LabelsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -96,8 +99,8 @@ class _ReadonlyMonitoredResource_LabelsEntry extends MonitoredResource_LabelsEnt
 
 class MonitoredResource extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('MonitoredResource')
-    ..a/*<String>*/(1, 'type', PbFieldType.OS)
-    ..pp/*<MonitoredResource_LabelsEntry>*/(2, 'labels', PbFieldType.PM, MonitoredResource_LabelsEntry.$checkItem, MonitoredResource_LabelsEntry.create)
+    ..aOS(1, 'type')
+    ..pp<MonitoredResource_LabelsEntry>(2, 'labels', PbFieldType.PM, MonitoredResource_LabelsEntry.$checkItem, MonitoredResource_LabelsEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -114,15 +117,15 @@ class MonitoredResource extends GeneratedMessage {
   }
   static MonitoredResource _defaultInstance;
   static void $checkItem(MonitoredResource v) {
-    if (v is !MonitoredResource) checkItemFailed(v, 'MonitoredResource');
+    if (v is! MonitoredResource) checkItemFailed(v, 'MonitoredResource');
   }
 
-  String get type => $_get(0, 1, '');
-  void set type(String v) { $_setString(0, 1, v); }
-  bool hasType() => $_has(0, 1);
+  String get type => $_getS(0, '');
+  set type(String v) { $_setString(0, v); }
+  bool hasType() => $_has(0);
   void clearType() => clearField(1);
 
-  List<MonitoredResource_LabelsEntry> get labels => $_get(1, 2, null);
+  List<MonitoredResource_LabelsEntry> get labels => $_getList(1);
 }
 
 class _ReadonlyMonitoredResource extends MonitoredResource with ReadonlyMessageMixin {}

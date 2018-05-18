@@ -1,22 +1,29 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicemanagement.v1_servicemanager;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 import 'resources.pb.dart';
-import '../../service.pb.dart' as google$api;
-import '../../../protobuf/any.pb.dart' as google$protobuf;
-import '../../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../service.pb.dart' as $google$api;
+import '../../../protobuf/any.pb.dart' as $google$protobuf;
+import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+
+import 'servicemanager.pbenum.dart';
+
+export 'servicemanager.pbenum.dart';
 
 class ListServicesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServicesRequest')
-    ..a/*<String>*/(1, 'producerProjectId', PbFieldType.OS)
-    ..a/*<int>*/(5, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(6, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'producerProjectId')
+    ..a<int>(5, 'pageSize', PbFieldType.O3)
+    ..aOS(6, 'pageToken')
+    ..aOS(7, 'consumerId')
     ..hasRequiredFields = false
   ;
 
@@ -33,31 +40,36 @@ class ListServicesRequest extends GeneratedMessage {
   }
   static ListServicesRequest _defaultInstance;
   static void $checkItem(ListServicesRequest v) {
-    if (v is !ListServicesRequest) checkItemFailed(v, 'ListServicesRequest');
+    if (v is! ListServicesRequest) checkItemFailed(v, 'ListServicesRequest');
   }
 
-  String get producerProjectId => $_get(0, 1, '');
-  void set producerProjectId(String v) { $_setString(0, 1, v); }
-  bool hasProducerProjectId() => $_has(0, 1);
+  String get producerProjectId => $_getS(0, '');
+  set producerProjectId(String v) { $_setString(0, v); }
+  bool hasProducerProjectId() => $_has(0);
   void clearProducerProjectId() => clearField(1);
 
-  int get pageSize => $_get(1, 5, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 5, v); }
-  bool hasPageSize() => $_has(1, 5);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(5);
 
-  String get pageToken => $_get(2, 6, '');
-  void set pageToken(String v) { $_setString(2, 6, v); }
-  bool hasPageToken() => $_has(2, 6);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(6);
+
+  String get consumerId => $_getS(3, '');
+  set consumerId(String v) { $_setString(3, v); }
+  bool hasConsumerId() => $_has(3);
+  void clearConsumerId() => clearField(7);
 }
 
 class _ReadonlyListServicesRequest extends ListServicesRequest with ReadonlyMessageMixin {}
 
 class ListServicesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServicesResponse')
-    ..pp/*<ManagedService>*/(1, 'services', PbFieldType.PM, ManagedService.$checkItem, ManagedService.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<ManagedService>(1, 'services', PbFieldType.PM, ManagedService.$checkItem, ManagedService.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -74,14 +86,14 @@ class ListServicesResponse extends GeneratedMessage {
   }
   static ListServicesResponse _defaultInstance;
   static void $checkItem(ListServicesResponse v) {
-    if (v is !ListServicesResponse) checkItemFailed(v, 'ListServicesResponse');
+    if (v is! ListServicesResponse) checkItemFailed(v, 'ListServicesResponse');
   }
 
-  List<ManagedService> get services => $_get(0, 1, null);
+  List<ManagedService> get services => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -89,7 +101,7 @@ class _ReadonlyListServicesResponse extends ListServicesResponse with ReadonlyMe
 
 class GetServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetServiceRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
     ..hasRequiredFields = false
   ;
 
@@ -106,12 +118,12 @@ class GetServiceRequest extends GeneratedMessage {
   }
   static GetServiceRequest _defaultInstance;
   static void $checkItem(GetServiceRequest v) {
-    if (v is !GetServiceRequest) checkItemFailed(v, 'GetServiceRequest');
+    if (v is! GetServiceRequest) checkItemFailed(v, 'GetServiceRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 }
 
@@ -119,7 +131,7 @@ class _ReadonlyGetServiceRequest extends GetServiceRequest with ReadonlyMessageM
 
 class CreateServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateServiceRequest')
-    ..a/*<ManagedService>*/(1, 'service', PbFieldType.OM, ManagedService.getDefault, ManagedService.create)
+    ..a<ManagedService>(1, 'service', PbFieldType.OM, ManagedService.getDefault, ManagedService.create)
     ..hasRequiredFields = false
   ;
 
@@ -136,12 +148,12 @@ class CreateServiceRequest extends GeneratedMessage {
   }
   static CreateServiceRequest _defaultInstance;
   static void $checkItem(CreateServiceRequest v) {
-    if (v is !CreateServiceRequest) checkItemFailed(v, 'CreateServiceRequest');
+    if (v is! CreateServiceRequest) checkItemFailed(v, 'CreateServiceRequest');
   }
 
-  ManagedService get service => $_get(0, 1, null);
-  void set service(ManagedService v) { setField(1, v); }
-  bool hasService() => $_has(0, 1);
+  ManagedService get service => $_getN(0);
+  set service(ManagedService v) { setField(1, v); }
+  bool hasService() => $_has(0);
   void clearService() => clearField(1);
 }
 
@@ -149,7 +161,7 @@ class _ReadonlyCreateServiceRequest extends CreateServiceRequest with ReadonlyMe
 
 class DeleteServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteServiceRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
     ..hasRequiredFields = false
   ;
 
@@ -166,12 +178,12 @@ class DeleteServiceRequest extends GeneratedMessage {
   }
   static DeleteServiceRequest _defaultInstance;
   static void $checkItem(DeleteServiceRequest v) {
-    if (v is !DeleteServiceRequest) checkItemFailed(v, 'DeleteServiceRequest');
+    if (v is! DeleteServiceRequest) checkItemFailed(v, 'DeleteServiceRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 }
 
@@ -179,7 +191,7 @@ class _ReadonlyDeleteServiceRequest extends DeleteServiceRequest with ReadonlyMe
 
 class UndeleteServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UndeleteServiceRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
     ..hasRequiredFields = false
   ;
 
@@ -196,12 +208,12 @@ class UndeleteServiceRequest extends GeneratedMessage {
   }
   static UndeleteServiceRequest _defaultInstance;
   static void $checkItem(UndeleteServiceRequest v) {
-    if (v is !UndeleteServiceRequest) checkItemFailed(v, 'UndeleteServiceRequest');
+    if (v is! UndeleteServiceRequest) checkItemFailed(v, 'UndeleteServiceRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 }
 
@@ -209,7 +221,7 @@ class _ReadonlyUndeleteServiceRequest extends UndeleteServiceRequest with Readon
 
 class UndeleteServiceResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UndeleteServiceResponse')
-    ..a/*<ManagedService>*/(1, 'service', PbFieldType.OM, ManagedService.getDefault, ManagedService.create)
+    ..a<ManagedService>(1, 'service', PbFieldType.OM, ManagedService.getDefault, ManagedService.create)
     ..hasRequiredFields = false
   ;
 
@@ -226,12 +238,12 @@ class UndeleteServiceResponse extends GeneratedMessage {
   }
   static UndeleteServiceResponse _defaultInstance;
   static void $checkItem(UndeleteServiceResponse v) {
-    if (v is !UndeleteServiceResponse) checkItemFailed(v, 'UndeleteServiceResponse');
+    if (v is! UndeleteServiceResponse) checkItemFailed(v, 'UndeleteServiceResponse');
   }
 
-  ManagedService get service => $_get(0, 1, null);
-  void set service(ManagedService v) { setField(1, v); }
-  bool hasService() => $_has(0, 1);
+  ManagedService get service => $_getN(0);
+  set service(ManagedService v) { setField(1, v); }
+  bool hasService() => $_has(0);
   void clearService() => clearField(1);
 }
 
@@ -239,8 +251,9 @@ class _ReadonlyUndeleteServiceResponse extends UndeleteServiceResponse with Read
 
 class GetServiceConfigRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetServiceConfigRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'configId', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
+    ..aOS(2, 'configId')
+    ..e<GetServiceConfigRequest_ConfigView>(3, 'view', PbFieldType.OE, GetServiceConfigRequest_ConfigView.BASIC, GetServiceConfigRequest_ConfigView.valueOf, GetServiceConfigRequest_ConfigView.values)
     ..hasRequiredFields = false
   ;
 
@@ -257,27 +270,32 @@ class GetServiceConfigRequest extends GeneratedMessage {
   }
   static GetServiceConfigRequest _defaultInstance;
   static void $checkItem(GetServiceConfigRequest v) {
-    if (v is !GetServiceConfigRequest) checkItemFailed(v, 'GetServiceConfigRequest');
+    if (v is! GetServiceConfigRequest) checkItemFailed(v, 'GetServiceConfigRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get configId => $_get(1, 2, '');
-  void set configId(String v) { $_setString(1, 2, v); }
-  bool hasConfigId() => $_has(1, 2);
+  String get configId => $_getS(1, '');
+  set configId(String v) { $_setString(1, v); }
+  bool hasConfigId() => $_has(1);
   void clearConfigId() => clearField(2);
+
+  GetServiceConfigRequest_ConfigView get view => $_getN(2);
+  set view(GetServiceConfigRequest_ConfigView v) { setField(3, v); }
+  bool hasView() => $_has(2);
+  void clearView() => clearField(3);
 }
 
 class _ReadonlyGetServiceConfigRequest extends GetServiceConfigRequest with ReadonlyMessageMixin {}
 
 class ListServiceConfigsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServiceConfigsRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'pageToken', PbFieldType.OS)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
+    ..aOS(1, 'serviceName')
+    ..aOS(2, 'pageToken')
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -294,22 +312,22 @@ class ListServiceConfigsRequest extends GeneratedMessage {
   }
   static ListServiceConfigsRequest _defaultInstance;
   static void $checkItem(ListServiceConfigsRequest v) {
-    if (v is !ListServiceConfigsRequest) checkItemFailed(v, 'ListServiceConfigsRequest');
+    if (v is! ListServiceConfigsRequest) checkItemFailed(v, 'ListServiceConfigsRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get pageToken => $_get(1, 2, '');
-  void set pageToken(String v) { $_setString(1, 2, v); }
-  bool hasPageToken() => $_has(1, 2);
+  String get pageToken => $_getS(1, '');
+  set pageToken(String v) { $_setString(1, v); }
+  bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasPageSize() => $_has(2, 3);
+  int get pageSize => $_get(2, 0);
+  set pageSize(int v) { $_setSignedInt32(2, v); }
+  bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
@@ -317,8 +335,8 @@ class _ReadonlyListServiceConfigsRequest extends ListServiceConfigsRequest with 
 
 class ListServiceConfigsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServiceConfigsResponse')
-    ..pp/*<google$api.Service>*/(1, 'serviceConfigs', PbFieldType.PM, google$api.Service.$checkItem, google$api.Service.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<$google$api.Service>(1, 'serviceConfigs', PbFieldType.PM, $google$api.Service.$checkItem, $google$api.Service.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -335,14 +353,14 @@ class ListServiceConfigsResponse extends GeneratedMessage {
   }
   static ListServiceConfigsResponse _defaultInstance;
   static void $checkItem(ListServiceConfigsResponse v) {
-    if (v is !ListServiceConfigsResponse) checkItemFailed(v, 'ListServiceConfigsResponse');
+    if (v is! ListServiceConfigsResponse) checkItemFailed(v, 'ListServiceConfigsResponse');
   }
 
-  List<google$api.Service> get serviceConfigs => $_get(0, 1, null);
+  List<$google$api.Service> get serviceConfigs => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -350,8 +368,8 @@ class _ReadonlyListServiceConfigsResponse extends ListServiceConfigsResponse wit
 
 class CreateServiceConfigRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateServiceConfigRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<google$api.Service>*/(2, 'serviceConfig', PbFieldType.OM, google$api.Service.getDefault, google$api.Service.create)
+    ..aOS(1, 'serviceName')
+    ..a<$google$api.Service>(2, 'serviceConfig', PbFieldType.OM, $google$api.Service.getDefault, $google$api.Service.create)
     ..hasRequiredFields = false
   ;
 
@@ -368,17 +386,17 @@ class CreateServiceConfigRequest extends GeneratedMessage {
   }
   static CreateServiceConfigRequest _defaultInstance;
   static void $checkItem(CreateServiceConfigRequest v) {
-    if (v is !CreateServiceConfigRequest) checkItemFailed(v, 'CreateServiceConfigRequest');
+    if (v is! CreateServiceConfigRequest) checkItemFailed(v, 'CreateServiceConfigRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  google$api.Service get serviceConfig => $_get(1, 2, null);
-  void set serviceConfig(google$api.Service v) { setField(2, v); }
-  bool hasServiceConfig() => $_has(1, 2);
+  $google$api.Service get serviceConfig => $_getN(1);
+  set serviceConfig($google$api.Service v) { setField(2, v); }
+  bool hasServiceConfig() => $_has(1);
   void clearServiceConfig() => clearField(2);
 }
 
@@ -386,9 +404,9 @@ class _ReadonlyCreateServiceConfigRequest extends CreateServiceConfigRequest wit
 
 class SubmitConfigSourceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SubmitConfigSourceRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<ConfigSource>*/(2, 'configSource', PbFieldType.OM, ConfigSource.getDefault, ConfigSource.create)
-    ..a/*<bool>*/(3, 'validateOnly', PbFieldType.OB)
+    ..aOS(1, 'serviceName')
+    ..a<ConfigSource>(2, 'configSource', PbFieldType.OM, ConfigSource.getDefault, ConfigSource.create)
+    ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false
   ;
 
@@ -405,22 +423,22 @@ class SubmitConfigSourceRequest extends GeneratedMessage {
   }
   static SubmitConfigSourceRequest _defaultInstance;
   static void $checkItem(SubmitConfigSourceRequest v) {
-    if (v is !SubmitConfigSourceRequest) checkItemFailed(v, 'SubmitConfigSourceRequest');
+    if (v is! SubmitConfigSourceRequest) checkItemFailed(v, 'SubmitConfigSourceRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  ConfigSource get configSource => $_get(1, 2, null);
-  void set configSource(ConfigSource v) { setField(2, v); }
-  bool hasConfigSource() => $_has(1, 2);
+  ConfigSource get configSource => $_getN(1);
+  set configSource(ConfigSource v) { setField(2, v); }
+  bool hasConfigSource() => $_has(1);
   void clearConfigSource() => clearField(2);
 
-  bool get validateOnly => $_get(2, 3, false);
-  void set validateOnly(bool v) { $_setBool(2, 3, v); }
-  bool hasValidateOnly() => $_has(2, 3);
+  bool get validateOnly => $_get(2, false);
+  set validateOnly(bool v) { $_setBool(2, v); }
+  bool hasValidateOnly() => $_has(2);
   void clearValidateOnly() => clearField(3);
 }
 
@@ -428,7 +446,7 @@ class _ReadonlySubmitConfigSourceRequest extends SubmitConfigSourceRequest with 
 
 class SubmitConfigSourceResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SubmitConfigSourceResponse')
-    ..a/*<google$api.Service>*/(1, 'serviceConfig', PbFieldType.OM, google$api.Service.getDefault, google$api.Service.create)
+    ..a<$google$api.Service>(1, 'serviceConfig', PbFieldType.OM, $google$api.Service.getDefault, $google$api.Service.create)
     ..hasRequiredFields = false
   ;
 
@@ -445,12 +463,12 @@ class SubmitConfigSourceResponse extends GeneratedMessage {
   }
   static SubmitConfigSourceResponse _defaultInstance;
   static void $checkItem(SubmitConfigSourceResponse v) {
-    if (v is !SubmitConfigSourceResponse) checkItemFailed(v, 'SubmitConfigSourceResponse');
+    if (v is! SubmitConfigSourceResponse) checkItemFailed(v, 'SubmitConfigSourceResponse');
   }
 
-  google$api.Service get serviceConfig => $_get(0, 1, null);
-  void set serviceConfig(google$api.Service v) { setField(1, v); }
-  bool hasServiceConfig() => $_has(0, 1);
+  $google$api.Service get serviceConfig => $_getN(0);
+  set serviceConfig($google$api.Service v) { setField(1, v); }
+  bool hasServiceConfig() => $_has(0);
   void clearServiceConfig() => clearField(1);
 }
 
@@ -458,8 +476,8 @@ class _ReadonlySubmitConfigSourceResponse extends SubmitConfigSourceResponse wit
 
 class CreateServiceRolloutRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateServiceRolloutRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<Rollout>*/(2, 'rollout', PbFieldType.OM, Rollout.getDefault, Rollout.create)
+    ..aOS(1, 'serviceName')
+    ..a<Rollout>(2, 'rollout', PbFieldType.OM, Rollout.getDefault, Rollout.create)
     ..hasRequiredFields = false
   ;
 
@@ -476,17 +494,17 @@ class CreateServiceRolloutRequest extends GeneratedMessage {
   }
   static CreateServiceRolloutRequest _defaultInstance;
   static void $checkItem(CreateServiceRolloutRequest v) {
-    if (v is !CreateServiceRolloutRequest) checkItemFailed(v, 'CreateServiceRolloutRequest');
+    if (v is! CreateServiceRolloutRequest) checkItemFailed(v, 'CreateServiceRolloutRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  Rollout get rollout => $_get(1, 2, null);
-  void set rollout(Rollout v) { setField(2, v); }
-  bool hasRollout() => $_has(1, 2);
+  Rollout get rollout => $_getN(1);
+  set rollout(Rollout v) { setField(2, v); }
+  bool hasRollout() => $_has(1);
   void clearRollout() => clearField(2);
 }
 
@@ -494,9 +512,10 @@ class _ReadonlyCreateServiceRolloutRequest extends CreateServiceRolloutRequest w
 
 class ListServiceRolloutsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServiceRolloutsRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'pageToken', PbFieldType.OS)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
+    ..aOS(1, 'serviceName')
+    ..aOS(2, 'pageToken')
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'filter')
     ..hasRequiredFields = false
   ;
 
@@ -513,31 +532,36 @@ class ListServiceRolloutsRequest extends GeneratedMessage {
   }
   static ListServiceRolloutsRequest _defaultInstance;
   static void $checkItem(ListServiceRolloutsRequest v) {
-    if (v is !ListServiceRolloutsRequest) checkItemFailed(v, 'ListServiceRolloutsRequest');
+    if (v is! ListServiceRolloutsRequest) checkItemFailed(v, 'ListServiceRolloutsRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get pageToken => $_get(1, 2, '');
-  void set pageToken(String v) { $_setString(1, 2, v); }
-  bool hasPageToken() => $_has(1, 2);
+  String get pageToken => $_getS(1, '');
+  set pageToken(String v) { $_setString(1, v); }
+  bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasPageSize() => $_has(2, 3);
+  int get pageSize => $_get(2, 0);
+  set pageSize(int v) { $_setSignedInt32(2, v); }
+  bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
+
+  String get filter => $_getS(3, '');
+  set filter(String v) { $_setString(3, v); }
+  bool hasFilter() => $_has(3);
+  void clearFilter() => clearField(4);
 }
 
 class _ReadonlyListServiceRolloutsRequest extends ListServiceRolloutsRequest with ReadonlyMessageMixin {}
 
 class ListServiceRolloutsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServiceRolloutsResponse')
-    ..pp/*<Rollout>*/(1, 'rollouts', PbFieldType.PM, Rollout.$checkItem, Rollout.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Rollout>(1, 'rollouts', PbFieldType.PM, Rollout.$checkItem, Rollout.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -554,14 +578,14 @@ class ListServiceRolloutsResponse extends GeneratedMessage {
   }
   static ListServiceRolloutsResponse _defaultInstance;
   static void $checkItem(ListServiceRolloutsResponse v) {
-    if (v is !ListServiceRolloutsResponse) checkItemFailed(v, 'ListServiceRolloutsResponse');
+    if (v is! ListServiceRolloutsResponse) checkItemFailed(v, 'ListServiceRolloutsResponse');
   }
 
-  List<Rollout> get rollouts => $_get(0, 1, null);
+  List<Rollout> get rollouts => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -569,8 +593,8 @@ class _ReadonlyListServiceRolloutsResponse extends ListServiceRolloutsResponse w
 
 class GetServiceRolloutRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetServiceRolloutRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'rolloutId', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
+    ..aOS(2, 'rolloutId')
     ..hasRequiredFields = false
   ;
 
@@ -587,17 +611,17 @@ class GetServiceRolloutRequest extends GeneratedMessage {
   }
   static GetServiceRolloutRequest _defaultInstance;
   static void $checkItem(GetServiceRolloutRequest v) {
-    if (v is !GetServiceRolloutRequest) checkItemFailed(v, 'GetServiceRolloutRequest');
+    if (v is! GetServiceRolloutRequest) checkItemFailed(v, 'GetServiceRolloutRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get rolloutId => $_get(1, 2, '');
-  void set rolloutId(String v) { $_setString(1, 2, v); }
-  bool hasRolloutId() => $_has(1, 2);
+  String get rolloutId => $_getS(1, '');
+  set rolloutId(String v) { $_setString(1, v); }
+  bool hasRolloutId() => $_has(1);
   void clearRolloutId() => clearField(2);
 }
 
@@ -605,8 +629,8 @@ class _ReadonlyGetServiceRolloutRequest extends GetServiceRolloutRequest with Re
 
 class EnableServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('EnableServiceRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'consumerId', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
+    ..aOS(2, 'consumerId')
     ..hasRequiredFields = false
   ;
 
@@ -623,17 +647,17 @@ class EnableServiceRequest extends GeneratedMessage {
   }
   static EnableServiceRequest _defaultInstance;
   static void $checkItem(EnableServiceRequest v) {
-    if (v is !EnableServiceRequest) checkItemFailed(v, 'EnableServiceRequest');
+    if (v is! EnableServiceRequest) checkItemFailed(v, 'EnableServiceRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get consumerId => $_get(1, 2, '');
-  void set consumerId(String v) { $_setString(1, 2, v); }
-  bool hasConsumerId() => $_has(1, 2);
+  String get consumerId => $_getS(1, '');
+  set consumerId(String v) { $_setString(1, v); }
+  bool hasConsumerId() => $_has(1);
   void clearConsumerId() => clearField(2);
 }
 
@@ -641,8 +665,8 @@ class _ReadonlyEnableServiceRequest extends EnableServiceRequest with ReadonlyMe
 
 class DisableServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DisableServiceRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'consumerId', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
+    ..aOS(2, 'consumerId')
     ..hasRequiredFields = false
   ;
 
@@ -659,17 +683,17 @@ class DisableServiceRequest extends GeneratedMessage {
   }
   static DisableServiceRequest _defaultInstance;
   static void $checkItem(DisableServiceRequest v) {
-    if (v is !DisableServiceRequest) checkItemFailed(v, 'DisableServiceRequest');
+    if (v is! DisableServiceRequest) checkItemFailed(v, 'DisableServiceRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get consumerId => $_get(1, 2, '');
-  void set consumerId(String v) { $_setString(1, 2, v); }
-  bool hasConsumerId() => $_has(1, 2);
+  String get consumerId => $_getS(1, '');
+  set consumerId(String v) { $_setString(1, v); }
+  bool hasConsumerId() => $_has(1);
   void clearConsumerId() => clearField(2);
 }
 
@@ -677,8 +701,8 @@ class _ReadonlyDisableServiceRequest extends DisableServiceRequest with Readonly
 
 class GenerateConfigReportRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GenerateConfigReportRequest')
-    ..a/*<google$protobuf.Any>*/(1, 'newConfig', PbFieldType.OM, google$protobuf.Any.getDefault, google$protobuf.Any.create)
-    ..a/*<google$protobuf.Any>*/(2, 'oldConfig', PbFieldType.OM, google$protobuf.Any.getDefault, google$protobuf.Any.create)
+    ..a<$google$protobuf.Any>(1, 'newConfig', PbFieldType.OM, $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
+    ..a<$google$protobuf.Any>(2, 'oldConfig', PbFieldType.OM, $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -695,17 +719,17 @@ class GenerateConfigReportRequest extends GeneratedMessage {
   }
   static GenerateConfigReportRequest _defaultInstance;
   static void $checkItem(GenerateConfigReportRequest v) {
-    if (v is !GenerateConfigReportRequest) checkItemFailed(v, 'GenerateConfigReportRequest');
+    if (v is! GenerateConfigReportRequest) checkItemFailed(v, 'GenerateConfigReportRequest');
   }
 
-  google$protobuf.Any get newConfig => $_get(0, 1, null);
-  void set newConfig(google$protobuf.Any v) { setField(1, v); }
-  bool hasNewConfig() => $_has(0, 1);
+  $google$protobuf.Any get newConfig => $_getN(0);
+  set newConfig($google$protobuf.Any v) { setField(1, v); }
+  bool hasNewConfig() => $_has(0);
   void clearNewConfig() => clearField(1);
 
-  google$protobuf.Any get oldConfig => $_get(1, 2, null);
-  void set oldConfig(google$protobuf.Any v) { setField(2, v); }
-  bool hasOldConfig() => $_has(1, 2);
+  $google$protobuf.Any get oldConfig => $_getN(1);
+  set oldConfig($google$protobuf.Any v) { setField(2, v); }
+  bool hasOldConfig() => $_has(1);
   void clearOldConfig() => clearField(2);
 }
 
@@ -713,10 +737,10 @@ class _ReadonlyGenerateConfigReportRequest extends GenerateConfigReportRequest w
 
 class GenerateConfigReportResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GenerateConfigReportResponse')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'id', PbFieldType.OS)
-    ..pp/*<ChangeReport>*/(3, 'changeReports', PbFieldType.PM, ChangeReport.$checkItem, ChangeReport.create)
-    ..pp/*<Diagnostic>*/(4, 'diagnostics', PbFieldType.PM, Diagnostic.$checkItem, Diagnostic.create)
+    ..aOS(1, 'serviceName')
+    ..aOS(2, 'id')
+    ..pp<ChangeReport>(3, 'changeReports', PbFieldType.PM, ChangeReport.$checkItem, ChangeReport.create)
+    ..pp<Diagnostic>(4, 'diagnostics', PbFieldType.PM, Diagnostic.$checkItem, Diagnostic.create)
     ..hasRequiredFields = false
   ;
 
@@ -733,22 +757,22 @@ class GenerateConfigReportResponse extends GeneratedMessage {
   }
   static GenerateConfigReportResponse _defaultInstance;
   static void $checkItem(GenerateConfigReportResponse v) {
-    if (v is !GenerateConfigReportResponse) checkItemFailed(v, 'GenerateConfigReportResponse');
+    if (v is! GenerateConfigReportResponse) checkItemFailed(v, 'GenerateConfigReportResponse');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get id => $_get(1, 2, '');
-  void set id(String v) { $_setString(1, 2, v); }
-  bool hasId() => $_has(1, 2);
+  String get id => $_getS(1, '');
+  set id(String v) { $_setString(1, v); }
+  bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  List<ChangeReport> get changeReports => $_get(2, 3, null);
+  List<ChangeReport> get changeReports => $_getList(2);
 
-  List<Diagnostic> get diagnostics => $_get(3, 4, null);
+  List<Diagnostic> get diagnostics => $_getList(3);
 }
 
 class _ReadonlyGenerateConfigReportResponse extends GenerateConfigReportResponse with ReadonlyMessageMixin {}
@@ -759,63 +783,63 @@ class ServiceManagerApi {
 
   Future<ListServicesResponse> listServices(ClientContext ctx, ListServicesRequest request) {
     var emptyResponse = new ListServicesResponse();
-    return _client.invoke(ctx, 'ServiceManager', 'ListServices', request, emptyResponse);
+    return _client.invoke<ListServicesResponse>(ctx, 'ServiceManager', 'ListServices', request, emptyResponse);
   }
   Future<ManagedService> getService(ClientContext ctx, GetServiceRequest request) {
     var emptyResponse = new ManagedService();
-    return _client.invoke(ctx, 'ServiceManager', 'GetService', request, emptyResponse);
+    return _client.invoke<ManagedService>(ctx, 'ServiceManager', 'GetService', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> createService(ClientContext ctx, CreateServiceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ServiceManager', 'CreateService', request, emptyResponse);
+  Future<$google$longrunning.Operation> createService(ClientContext ctx, CreateServiceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ServiceManager', 'CreateService', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> deleteService(ClientContext ctx, DeleteServiceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ServiceManager', 'DeleteService', request, emptyResponse);
+  Future<$google$longrunning.Operation> deleteService(ClientContext ctx, DeleteServiceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ServiceManager', 'DeleteService', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> undeleteService(ClientContext ctx, UndeleteServiceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ServiceManager', 'UndeleteService', request, emptyResponse);
+  Future<$google$longrunning.Operation> undeleteService(ClientContext ctx, UndeleteServiceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ServiceManager', 'UndeleteService', request, emptyResponse);
   }
   Future<ListServiceConfigsResponse> listServiceConfigs(ClientContext ctx, ListServiceConfigsRequest request) {
     var emptyResponse = new ListServiceConfigsResponse();
-    return _client.invoke(ctx, 'ServiceManager', 'ListServiceConfigs', request, emptyResponse);
+    return _client.invoke<ListServiceConfigsResponse>(ctx, 'ServiceManager', 'ListServiceConfigs', request, emptyResponse);
   }
-  Future<google$api.Service> getServiceConfig(ClientContext ctx, GetServiceConfigRequest request) {
-    var emptyResponse = new google$api.Service();
-    return _client.invoke(ctx, 'ServiceManager', 'GetServiceConfig', request, emptyResponse);
+  Future<$google$api.Service> getServiceConfig(ClientContext ctx, GetServiceConfigRequest request) {
+    var emptyResponse = new $google$api.Service();
+    return _client.invoke<$google$api.Service>(ctx, 'ServiceManager', 'GetServiceConfig', request, emptyResponse);
   }
-  Future<google$api.Service> createServiceConfig(ClientContext ctx, CreateServiceConfigRequest request) {
-    var emptyResponse = new google$api.Service();
-    return _client.invoke(ctx, 'ServiceManager', 'CreateServiceConfig', request, emptyResponse);
+  Future<$google$api.Service> createServiceConfig(ClientContext ctx, CreateServiceConfigRequest request) {
+    var emptyResponse = new $google$api.Service();
+    return _client.invoke<$google$api.Service>(ctx, 'ServiceManager', 'CreateServiceConfig', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> submitConfigSource(ClientContext ctx, SubmitConfigSourceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ServiceManager', 'SubmitConfigSource', request, emptyResponse);
+  Future<$google$longrunning.Operation> submitConfigSource(ClientContext ctx, SubmitConfigSourceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ServiceManager', 'SubmitConfigSource', request, emptyResponse);
   }
   Future<ListServiceRolloutsResponse> listServiceRollouts(ClientContext ctx, ListServiceRolloutsRequest request) {
     var emptyResponse = new ListServiceRolloutsResponse();
-    return _client.invoke(ctx, 'ServiceManager', 'ListServiceRollouts', request, emptyResponse);
+    return _client.invoke<ListServiceRolloutsResponse>(ctx, 'ServiceManager', 'ListServiceRollouts', request, emptyResponse);
   }
   Future<Rollout> getServiceRollout(ClientContext ctx, GetServiceRolloutRequest request) {
     var emptyResponse = new Rollout();
-    return _client.invoke(ctx, 'ServiceManager', 'GetServiceRollout', request, emptyResponse);
+    return _client.invoke<Rollout>(ctx, 'ServiceManager', 'GetServiceRollout', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> createServiceRollout(ClientContext ctx, CreateServiceRolloutRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ServiceManager', 'CreateServiceRollout', request, emptyResponse);
+  Future<$google$longrunning.Operation> createServiceRollout(ClientContext ctx, CreateServiceRolloutRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ServiceManager', 'CreateServiceRollout', request, emptyResponse);
   }
   Future<GenerateConfigReportResponse> generateConfigReport(ClientContext ctx, GenerateConfigReportRequest request) {
     var emptyResponse = new GenerateConfigReportResponse();
-    return _client.invoke(ctx, 'ServiceManager', 'GenerateConfigReport', request, emptyResponse);
+    return _client.invoke<GenerateConfigReportResponse>(ctx, 'ServiceManager', 'GenerateConfigReport', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> enableService(ClientContext ctx, EnableServiceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ServiceManager', 'EnableService', request, emptyResponse);
+  Future<$google$longrunning.Operation> enableService(ClientContext ctx, EnableServiceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ServiceManager', 'EnableService', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> disableService(ClientContext ctx, DisableServiceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ServiceManager', 'DisableService', request, emptyResponse);
+  Future<$google$longrunning.Operation> disableService(ClientContext ctx, DisableServiceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ServiceManager', 'DisableService', request, emptyResponse);
   }
 }
 

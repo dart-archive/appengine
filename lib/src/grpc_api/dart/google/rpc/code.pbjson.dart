@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.rpc_code_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 const Code$json = const {
   '1': 'Code',

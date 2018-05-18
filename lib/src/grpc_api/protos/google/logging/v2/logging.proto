@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc.
+// Copyright 2017 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,18 +30,26 @@ option go_package = "google.golang.org/genproto/googleapis/logging/v2;logging";
 option java_multiple_files = true;
 option java_outer_classname = "LoggingProto";
 option java_package = "com.google.logging.v2";
+option php_namespace = "Google\\Cloud\\Logging\\V2";
 
 
 // Service for ingesting and querying logs.
 service LoggingServiceV2 {
   // Deletes all the log entries in a log.
   // The log reappears if it receives new entries.
+  // Log entries written shortly before the delete operation might not be
+  // deleted.
   rpc DeleteLog(DeleteLogRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = { delete: "/v2beta1/{log_name=projects/*/logs/*}" };
   }
 
-  // Writes log entries to Stackdriver Logging.  All log entries are
-  // written by this method.
+  // ## Log entry resources
+  //
+  // Writes log entries to Stackdriver Logging. This API method is the
+  // only way to send log entries to Stackdriver Logging. This method
+  // is used, directly or indirectly, by the Stackdriver Logging agent
+  // (fluentd) and all logging libraries configured to use Stackdriver
+  // Logging.
   rpc WriteLogEntries(WriteLogEntriesRequest) returns (WriteLogEntriesResponse) {
     option (google.api.http) = { post: "/v2/entries:write" body: "*" };
   }
@@ -59,10 +67,10 @@ service LoggingServiceV2 {
     option (google.api.http) = { get: "/v2/monitoredResourceDescriptors" };
   }
 
-  // Lists the logs in projects or organizations.
+  // Lists the logs in projects, organizations, folders, or billing accounts.
   // Only logs that have entries are listed.
   rpc ListLogs(ListLogsRequest) returns (ListLogsResponse) {
-    option (google.api.http) = { get: "/v2/{parent=projects/*}/logs" };
+    option (google.api.http) = { get: "/v2/{parent=*/*}/logs" };
   }
 }
 
@@ -72,6 +80,8 @@ message DeleteLogRequest {
   //
   //     "projects/[PROJECT_ID]/logs/[LOG_ID]"
   //     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+  //     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+  //     "folders/[FOLDER_ID]/logs/[LOG_ID]"
   //
   // `[LOG_ID]` must be URL-encoded. For example,
   // `"projects/my-project-id/logs/syslog"`,
@@ -88,6 +98,8 @@ message WriteLogEntriesRequest {
   //
   //     "projects/[PROJECT_ID]/logs/[LOG_ID]"
   //     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+  //     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+  //     "folders/[FOLDER_ID]/logs/[LOG_ID]"
   //
   // `[LOG_ID]` must be URL-encoded. For example,
   // `"projects/my-project-id/logs/syslog"` or
@@ -112,22 +124,34 @@ message WriteLogEntriesRequest {
   // See [LogEntry][google.logging.v2.LogEntry].
   map<string, string> labels = 3;
 
-  // Required. The log entries to write. Values supplied for the fields
-  // `log_name`, `resource`, and `labels` in this `entries.write` request are
-  // added to those log entries that do not provide their own values for the
-  // fields.
+  // Required. The log entries to send to Stackdriver Logging. The order of log
+  // entries in this list does not matter. Values supplied in this method's
+  // `log_name`, `resource`, and `labels` fields are copied into those log
+  // entries in this list that do not include values for their corresponding
+  // fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
+  //
+  // If the `timestamp` or `insert_id` fields are missing in log entries, then
+  // this method supplies the current time or a unique identifier, respectively.
+  // The supplied values are chosen so that, among the log entries that did not
+  // supply their own values, the entries earlier in the list will sort before
+  // the entries later in the list. See the `entries.list` method.
+  //
+  // Log entries with timestamps that are more than the
+  // [logs retention period](/logging/quota-policy) in the past or more than
+  // 24 hours in the future might be discarded. Discarding does not return
+  // an error.
   //
   // To improve throughput and to avoid exceeding the
   // [quota limit](/logging/quota-policy) for calls to `entries.write`,
-  // you should write multiple log entries at once rather than
-  // calling this method for each individual log entry.
+  // you should try to include several log entries in this list,
+  // rather than calling this method for each individual log entry.
   repeated LogEntry entries = 4;
 
   // Optional. Whether valid entries should be written even if some other
   // entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
-  // entry is not written, the response status will be the error associated
-  // with one of the failed entries and include error details in the form of
-  // WriteLogEntriesPartialErrors.
+  // entry is not written, then the response status is the error associated
+  // with one of the failed entries and the response includes error details
+  // keyed by the entries' zero-based index in the `entries.write` method.
   bool partial_success = 5;
 }
 
@@ -135,6 +159,17 @@ message WriteLogEntriesRequest {
 // empty
 message WriteLogEntriesResponse {
 
+}
+
+// Error details for WriteLogEntries with partial success.
+message WriteLogEntriesPartialErrors {
+  // When `WriteLogEntriesRequest.partial_success` is true, records the error
+  // status for entries that were not written due to a permanent error, keyed
+  // by the entry's zero-based index in `WriteLogEntriesRequest.entries`.
+  //
+  // Failed requests for which no entries are written will not include
+  // per-entry errors.
+  map<int32, google.rpc.Status> log_entry_errors = 1;
 }
 
 // The parameters to `ListLogEntries`.
@@ -146,11 +181,13 @@ message ListLogEntriesRequest {
   // `resource_names`.
   repeated string project_ids = 1;
 
-  // Required. Names of one or more resources from which to retrieve log
-  // entries:
+  // Required. Names of one or more parent resources from which to
+  // retrieve log entries:
   //
   //     "projects/[PROJECT_ID]"
   //     "organizations/[ORGANIZATION_ID]"
+  //     "billingAccounts/[BILLING_ACCOUNT_ID]"
+  //     "folders/[FOLDER_ID]"
   //
   // Projects listed in the `project_ids` field are added to this list.
   repeated string resource_names = 8;
@@ -169,24 +206,26 @@ message ListLogEntriesRequest {
   // option returns entries in order of increasing values of
   // `LogEntry.timestamp` (oldest first), and the second option returns entries
   // in order of decreasing timestamps (newest first).  Entries with equal
-  // timestamps are returned in order of `LogEntry.insertId`.
+  // timestamps are returned in order of their `insert_id` values.
   string order_by = 3;
 
   // Optional. The maximum number of results to return from this request.
-  // Non-positive values are ignored.  The presence of `nextPageToken` in the
+  // Non-positive values are ignored.  The presence of `next_page_token` in the
   // response indicates that more results might be available.
   int32 page_size = 4;
 
   // Optional. If present, then retrieve the next batch of results from the
-  // preceding call to this method.  `pageToken` must be the value of
-  // `nextPageToken` from the previous response.  The values of other method
+  // preceding call to this method.  `page_token` must be the value of
+  // `next_page_token` from the previous response.  The values of other method
   // parameters should be identical to those in the previous call.
   string page_token = 5;
 }
 
 // Result returned from `ListLogEntries`.
 message ListLogEntriesResponse {
-  // A list of log entries.
+  // A list of log entries.  If `entries` is empty, `nextPageToken` may still be
+  // returned, indicating that more entries may exist.  See `nextPageToken` for
+  // more information.
   repeated LogEntry entries = 1;
 
   // If there might be more results than those appearing in this response, then
@@ -233,6 +272,8 @@ message ListLogsRequest {
   //
   //     "projects/[PROJECT_ID]"
   //     "organizations/[ORGANIZATION_ID]"
+  //     "billingAccounts/[BILLING_ACCOUNT_ID]"
+  //     "folders/[FOLDER_ID]"
   string parent = 1;
 
   // Optional. The maximum number of results to return from this request.

@@ -1,14 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_wrappers;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class DoubleValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DoubleValue')
-    ..a/*<double>*/(1, 'value', PbFieldType.OD)
+    ..a<double>(1, 'value', PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -25,12 +28,12 @@ class DoubleValue extends GeneratedMessage {
   }
   static DoubleValue _defaultInstance;
   static void $checkItem(DoubleValue v) {
-    if (v is !DoubleValue) checkItemFailed(v, 'DoubleValue');
+    if (v is! DoubleValue) checkItemFailed(v, 'DoubleValue');
   }
 
-  double get value => $_get(0, 1, null);
-  void set value(double v) { $_setDouble(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  double get value => $_getN(0);
+  set value(double v) { $_setDouble(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
@@ -38,7 +41,7 @@ class _ReadonlyDoubleValue extends DoubleValue with ReadonlyMessageMixin {}
 
 class FloatValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('FloatValue')
-    ..a/*<double>*/(1, 'value', PbFieldType.OF)
+    ..a<double>(1, 'value', PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -55,12 +58,12 @@ class FloatValue extends GeneratedMessage {
   }
   static FloatValue _defaultInstance;
   static void $checkItem(FloatValue v) {
-    if (v is !FloatValue) checkItemFailed(v, 'FloatValue');
+    if (v is! FloatValue) checkItemFailed(v, 'FloatValue');
   }
 
-  double get value => $_get(0, 1, null);
-  void set value(double v) { $_setFloat(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  double get value => $_getN(0);
+  set value(double v) { $_setFloat(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
@@ -68,7 +71,7 @@ class _ReadonlyFloatValue extends FloatValue with ReadonlyMessageMixin {}
 
 class Int64Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Int64Value')
-    ..a/*<Int64>*/(1, 'value', PbFieldType.O6, Int64.ZERO)
+    ..aInt64(1, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -85,12 +88,12 @@ class Int64Value extends GeneratedMessage {
   }
   static Int64Value _defaultInstance;
   static void $checkItem(Int64Value v) {
-    if (v is !Int64Value) checkItemFailed(v, 'Int64Value');
+    if (v is! Int64Value) checkItemFailed(v, 'Int64Value');
   }
 
-  Int64 get value => $_get(0, 1, null);
-  void set value(Int64 v) { $_setInt64(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  Int64 get value => $_getI64(0);
+  set value(Int64 v) { $_setInt64(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
@@ -98,7 +101,7 @@ class _ReadonlyInt64Value extends Int64Value with ReadonlyMessageMixin {}
 
 class UInt64Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UInt64Value')
-    ..a/*<Int64>*/(1, 'value', PbFieldType.OU6, Int64.ZERO)
+    ..a<Int64>(1, 'value', PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -115,12 +118,12 @@ class UInt64Value extends GeneratedMessage {
   }
   static UInt64Value _defaultInstance;
   static void $checkItem(UInt64Value v) {
-    if (v is !UInt64Value) checkItemFailed(v, 'UInt64Value');
+    if (v is! UInt64Value) checkItemFailed(v, 'UInt64Value');
   }
 
-  Int64 get value => $_get(0, 1, null);
-  void set value(Int64 v) { $_setInt64(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  Int64 get value => $_getI64(0);
+  set value(Int64 v) { $_setInt64(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
@@ -128,7 +131,7 @@ class _ReadonlyUInt64Value extends UInt64Value with ReadonlyMessageMixin {}
 
 class Int32Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Int32Value')
-    ..a/*<int>*/(1, 'value', PbFieldType.O3)
+    ..a<int>(1, 'value', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -145,12 +148,12 @@ class Int32Value extends GeneratedMessage {
   }
   static Int32Value _defaultInstance;
   static void $checkItem(Int32Value v) {
-    if (v is !Int32Value) checkItemFailed(v, 'Int32Value');
+    if (v is! Int32Value) checkItemFailed(v, 'Int32Value');
   }
 
-  int get value => $_get(0, 1, 0);
-  void set value(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  int get value => $_get(0, 0);
+  set value(int v) { $_setSignedInt32(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
@@ -158,7 +161,7 @@ class _ReadonlyInt32Value extends Int32Value with ReadonlyMessageMixin {}
 
 class UInt32Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UInt32Value')
-    ..a/*<int>*/(1, 'value', PbFieldType.OU3)
+    ..a<int>(1, 'value', PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -175,12 +178,12 @@ class UInt32Value extends GeneratedMessage {
   }
   static UInt32Value _defaultInstance;
   static void $checkItem(UInt32Value v) {
-    if (v is !UInt32Value) checkItemFailed(v, 'UInt32Value');
+    if (v is! UInt32Value) checkItemFailed(v, 'UInt32Value');
   }
 
-  int get value => $_get(0, 1, 0);
-  void set value(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  int get value => $_get(0, 0);
+  set value(int v) { $_setUnsignedInt32(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
@@ -188,7 +191,7 @@ class _ReadonlyUInt32Value extends UInt32Value with ReadonlyMessageMixin {}
 
 class BoolValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BoolValue')
-    ..a/*<bool>*/(1, 'value', PbFieldType.OB)
+    ..aOB(1, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -205,12 +208,12 @@ class BoolValue extends GeneratedMessage {
   }
   static BoolValue _defaultInstance;
   static void $checkItem(BoolValue v) {
-    if (v is !BoolValue) checkItemFailed(v, 'BoolValue');
+    if (v is! BoolValue) checkItemFailed(v, 'BoolValue');
   }
 
-  bool get value => $_get(0, 1, false);
-  void set value(bool v) { $_setBool(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  bool get value => $_get(0, false);
+  set value(bool v) { $_setBool(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
@@ -218,7 +221,7 @@ class _ReadonlyBoolValue extends BoolValue with ReadonlyMessageMixin {}
 
 class StringValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StringValue')
-    ..a/*<String>*/(1, 'value', PbFieldType.OS)
+    ..aOS(1, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -235,12 +238,12 @@ class StringValue extends GeneratedMessage {
   }
   static StringValue _defaultInstance;
   static void $checkItem(StringValue v) {
-    if (v is !StringValue) checkItemFailed(v, 'StringValue');
+    if (v is! StringValue) checkItemFailed(v, 'StringValue');
   }
 
-  String get value => $_get(0, 1, '');
-  void set value(String v) { $_setString(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  String get value => $_getS(0, '');
+  set value(String v) { $_setString(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
@@ -248,7 +251,7 @@ class _ReadonlyStringValue extends StringValue with ReadonlyMessageMixin {}
 
 class BytesValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BytesValue')
-    ..a/*<List<int>>*/(1, 'value', PbFieldType.OY)
+    ..a<List<int>>(1, 'value', PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -265,12 +268,12 @@ class BytesValue extends GeneratedMessage {
   }
   static BytesValue _defaultInstance;
   static void $checkItem(BytesValue v) {
-    if (v is !BytesValue) checkItemFailed(v, 'BytesValue');
+    if (v is! BytesValue) checkItemFailed(v, 'BytesValue');
   }
 
-  List<int> get value => $_get(0, 1, null);
-  void set value(List<int> v) { $_setBytes(0, 1, v); }
-  bool hasValue() => $_has(0, 1);
+  List<int> get value => $_getN(0);
+  set value(List<int> v) { $_setBytes(0, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 

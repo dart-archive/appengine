@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_control;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Control extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Control')
-    ..a/*<String>*/(1, 'environment', PbFieldType.OS)
+    ..aOS(1, 'environment')
     ..hasRequiredFields = false
   ;
 
@@ -24,12 +27,12 @@ class Control extends GeneratedMessage {
   }
   static Control _defaultInstance;
   static void $checkItem(Control v) {
-    if (v is !Control) checkItemFailed(v, 'Control');
+    if (v is! Control) checkItemFailed(v, 'Control');
   }
 
-  String get environment => $_get(0, 1, '');
-  void set environment(String v) { $_setString(0, 1, v); }
-  bool hasEnvironment() => $_has(0, 1);
+  String get environment => $_getS(0, '');
+  set environment(String v) { $_setString(0, v); }
+  bool hasEnvironment() => $_has(0);
   void clearEnvironment() => clearField(1);
 }
 

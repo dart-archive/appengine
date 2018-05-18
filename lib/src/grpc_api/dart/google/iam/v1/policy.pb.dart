@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.iam.v1_policy;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,9 +14,9 @@ export 'policy.pbenum.dart';
 
 class Policy extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Policy')
-    ..a/*<int>*/(1, 'version', PbFieldType.O3)
-    ..a/*<List<int>>*/(3, 'etag', PbFieldType.OY)
-    ..pp/*<Binding>*/(4, 'bindings', PbFieldType.PM, Binding.$checkItem, Binding.create)
+    ..a<int>(1, 'version', PbFieldType.O3)
+    ..a<List<int>>(3, 'etag', PbFieldType.OY)
+    ..pp<Binding>(4, 'bindings', PbFieldType.PM, Binding.$checkItem, Binding.create)
     ..hasRequiredFields = false
   ;
 
@@ -30,28 +33,28 @@ class Policy extends GeneratedMessage {
   }
   static Policy _defaultInstance;
   static void $checkItem(Policy v) {
-    if (v is !Policy) checkItemFailed(v, 'Policy');
+    if (v is! Policy) checkItemFailed(v, 'Policy');
   }
 
-  int get version => $_get(0, 1, 0);
-  void set version(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasVersion() => $_has(0, 1);
+  int get version => $_get(0, 0);
+  set version(int v) { $_setSignedInt32(0, v); }
+  bool hasVersion() => $_has(0);
   void clearVersion() => clearField(1);
 
-  List<int> get etag => $_get(1, 3, null);
-  void set etag(List<int> v) { $_setBytes(1, 3, v); }
-  bool hasEtag() => $_has(1, 3);
+  List<int> get etag => $_getN(1);
+  set etag(List<int> v) { $_setBytes(1, v); }
+  bool hasEtag() => $_has(1);
   void clearEtag() => clearField(3);
 
-  List<Binding> get bindings => $_get(2, 4, null);
+  List<Binding> get bindings => $_getList(2);
 }
 
 class _ReadonlyPolicy extends Policy with ReadonlyMessageMixin {}
 
 class Binding extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Binding')
-    ..a/*<String>*/(1, 'role', PbFieldType.OS)
-    ..p/*<String>*/(2, 'members', PbFieldType.PS)
+    ..aOS(1, 'role')
+    ..pPS(2, 'members')
     ..hasRequiredFields = false
   ;
 
@@ -68,22 +71,22 @@ class Binding extends GeneratedMessage {
   }
   static Binding _defaultInstance;
   static void $checkItem(Binding v) {
-    if (v is !Binding) checkItemFailed(v, 'Binding');
+    if (v is! Binding) checkItemFailed(v, 'Binding');
   }
 
-  String get role => $_get(0, 1, '');
-  void set role(String v) { $_setString(0, 1, v); }
-  bool hasRole() => $_has(0, 1);
+  String get role => $_getS(0, '');
+  set role(String v) { $_setString(0, v); }
+  bool hasRole() => $_has(0);
   void clearRole() => clearField(1);
 
-  List<String> get members => $_get(1, 2, null);
+  List<String> get members => $_getList(1);
 }
 
 class _ReadonlyBinding extends Binding with ReadonlyMessageMixin {}
 
 class PolicyDelta extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PolicyDelta')
-    ..pp/*<BindingDelta>*/(1, 'bindingDeltas', PbFieldType.PM, BindingDelta.$checkItem, BindingDelta.create)
+    ..pp<BindingDelta>(1, 'bindingDeltas', PbFieldType.PM, BindingDelta.$checkItem, BindingDelta.create)
     ..hasRequiredFields = false
   ;
 
@@ -100,19 +103,19 @@ class PolicyDelta extends GeneratedMessage {
   }
   static PolicyDelta _defaultInstance;
   static void $checkItem(PolicyDelta v) {
-    if (v is !PolicyDelta) checkItemFailed(v, 'PolicyDelta');
+    if (v is! PolicyDelta) checkItemFailed(v, 'PolicyDelta');
   }
 
-  List<BindingDelta> get bindingDeltas => $_get(0, 1, null);
+  List<BindingDelta> get bindingDeltas => $_getList(0);
 }
 
 class _ReadonlyPolicyDelta extends PolicyDelta with ReadonlyMessageMixin {}
 
 class BindingDelta extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BindingDelta')
-    ..e/*<BindingDelta_Action>*/(1, 'action', PbFieldType.OE, BindingDelta_Action.ACTION_UNSPECIFIED, BindingDelta_Action.valueOf)
-    ..a/*<String>*/(2, 'role', PbFieldType.OS)
-    ..a/*<String>*/(3, 'member', PbFieldType.OS)
+    ..e<BindingDelta_Action>(1, 'action', PbFieldType.OE, BindingDelta_Action.ACTION_UNSPECIFIED, BindingDelta_Action.valueOf, BindingDelta_Action.values)
+    ..aOS(2, 'role')
+    ..aOS(3, 'member')
     ..hasRequiredFields = false
   ;
 
@@ -129,22 +132,22 @@ class BindingDelta extends GeneratedMessage {
   }
   static BindingDelta _defaultInstance;
   static void $checkItem(BindingDelta v) {
-    if (v is !BindingDelta) checkItemFailed(v, 'BindingDelta');
+    if (v is! BindingDelta) checkItemFailed(v, 'BindingDelta');
   }
 
-  BindingDelta_Action get action => $_get(0, 1, null);
-  void set action(BindingDelta_Action v) { setField(1, v); }
-  bool hasAction() => $_has(0, 1);
+  BindingDelta_Action get action => $_getN(0);
+  set action(BindingDelta_Action v) { setField(1, v); }
+  bool hasAction() => $_has(0);
   void clearAction() => clearField(1);
 
-  String get role => $_get(1, 2, '');
-  void set role(String v) { $_setString(1, 2, v); }
-  bool hasRole() => $_has(1, 2);
+  String get role => $_getS(1, '');
+  set role(String v) { $_setString(1, v); }
+  bool hasRole() => $_has(1);
   void clearRole() => clearField(2);
 
-  String get member => $_get(2, 3, '');
-  void set member(String v) { $_setString(2, 3, v); }
-  bool hasMember() => $_has(2, 3);
+  String get member => $_getS(2, '');
+  set member(String v) { $_setString(2, v); }
+  bool hasMember() => $_has(2);
   void clearMember() => clearField(3);
 }
 

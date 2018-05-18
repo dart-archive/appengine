@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.logging.type_log_severity_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 const LogSeverity$json = const {
   '1': 'LogSeverity',

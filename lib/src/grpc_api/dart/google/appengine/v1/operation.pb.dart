@@ -1,19 +1,22 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_operation;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../protobuf/timestamp.pb.dart' as google$protobuf;
+import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
 
 class OperationMetadataV1 extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('OperationMetadataV1')
-    ..a/*<String>*/(1, 'method', PbFieldType.OS)
-    ..a/*<google$protobuf.Timestamp>*/(2, 'insertTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<google$protobuf.Timestamp>*/(3, 'endTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<String>*/(4, 'user', PbFieldType.OS)
-    ..a/*<String>*/(5, 'target', PbFieldType.OS)
+    ..aOS(1, 'method')
+    ..a<$google$protobuf.Timestamp>(2, 'insertTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<$google$protobuf.Timestamp>(3, 'endTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..aOS(4, 'user')
+    ..aOS(5, 'target')
     ..hasRequiredFields = false
   ;
 
@@ -30,32 +33,32 @@ class OperationMetadataV1 extends GeneratedMessage {
   }
   static OperationMetadataV1 _defaultInstance;
   static void $checkItem(OperationMetadataV1 v) {
-    if (v is !OperationMetadataV1) checkItemFailed(v, 'OperationMetadataV1');
+    if (v is! OperationMetadataV1) checkItemFailed(v, 'OperationMetadataV1');
   }
 
-  String get method => $_get(0, 1, '');
-  void set method(String v) { $_setString(0, 1, v); }
-  bool hasMethod() => $_has(0, 1);
+  String get method => $_getS(0, '');
+  set method(String v) { $_setString(0, v); }
+  bool hasMethod() => $_has(0);
   void clearMethod() => clearField(1);
 
-  google$protobuf.Timestamp get insertTime => $_get(1, 2, null);
-  void set insertTime(google$protobuf.Timestamp v) { setField(2, v); }
-  bool hasInsertTime() => $_has(1, 2);
+  $google$protobuf.Timestamp get insertTime => $_getN(1);
+  set insertTime($google$protobuf.Timestamp v) { setField(2, v); }
+  bool hasInsertTime() => $_has(1);
   void clearInsertTime() => clearField(2);
 
-  google$protobuf.Timestamp get endTime => $_get(2, 3, null);
-  void set endTime(google$protobuf.Timestamp v) { setField(3, v); }
-  bool hasEndTime() => $_has(2, 3);
+  $google$protobuf.Timestamp get endTime => $_getN(2);
+  set endTime($google$protobuf.Timestamp v) { setField(3, v); }
+  bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
 
-  String get user => $_get(3, 4, '');
-  void set user(String v) { $_setString(3, 4, v); }
-  bool hasUser() => $_has(3, 4);
+  String get user => $_getS(3, '');
+  set user(String v) { $_setString(3, v); }
+  bool hasUser() => $_has(3);
   void clearUser() => clearField(4);
 
-  String get target => $_get(4, 5, '');
-  void set target(String v) { $_setString(4, 5, v); }
-  bool hasTarget() => $_has(4, 5);
+  String get target => $_getS(4, '');
+  set target(String v) { $_setString(4, v); }
+  bool hasTarget() => $_has(4);
   void clearTarget() => clearField(5);
 }
 

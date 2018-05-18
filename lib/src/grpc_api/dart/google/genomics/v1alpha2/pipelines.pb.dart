@@ -1,29 +1,31 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1alpha2_pipelines;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
-import '../../protobuf/duration.pb.dart' as google$protobuf;
-import '../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/duration.pb.dart' as $google$protobuf;
+import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
-import '../../rpc/code.pbenum.dart' as google$rpc;
+import '../../rpc/code.pbenum.dart' as $google$rpc;
 import 'pipelines.pbenum.dart';
 
 export 'pipelines.pbenum.dart';
 
 class ComputeEngine extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ComputeEngine')
-    ..a/*<String>*/(1, 'instanceName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'zone', PbFieldType.OS)
-    ..a/*<String>*/(3, 'machineType', PbFieldType.OS)
-    ..p/*<String>*/(4, 'diskNames', PbFieldType.PS)
+    ..aOS(1, 'instanceName')
+    ..aOS(2, 'zone')
+    ..aOS(3, 'machineType')
+    ..pPS(4, 'diskNames')
     ..hasRequiredFields = false
   ;
 
@@ -40,32 +42,32 @@ class ComputeEngine extends GeneratedMessage {
   }
   static ComputeEngine _defaultInstance;
   static void $checkItem(ComputeEngine v) {
-    if (v is !ComputeEngine) checkItemFailed(v, 'ComputeEngine');
+    if (v is! ComputeEngine) checkItemFailed(v, 'ComputeEngine');
   }
 
-  String get instanceName => $_get(0, 1, '');
-  void set instanceName(String v) { $_setString(0, 1, v); }
-  bool hasInstanceName() => $_has(0, 1);
+  String get instanceName => $_getS(0, '');
+  set instanceName(String v) { $_setString(0, v); }
+  bool hasInstanceName() => $_has(0);
   void clearInstanceName() => clearField(1);
 
-  String get zone => $_get(1, 2, '');
-  void set zone(String v) { $_setString(1, 2, v); }
-  bool hasZone() => $_has(1, 2);
+  String get zone => $_getS(1, '');
+  set zone(String v) { $_setString(1, v); }
+  bool hasZone() => $_has(1);
   void clearZone() => clearField(2);
 
-  String get machineType => $_get(2, 3, '');
-  void set machineType(String v) { $_setString(2, 3, v); }
-  bool hasMachineType() => $_has(2, 3);
+  String get machineType => $_getS(2, '');
+  set machineType(String v) { $_setString(2, v); }
+  bool hasMachineType() => $_has(2);
   void clearMachineType() => clearField(3);
 
-  List<String> get diskNames => $_get(3, 4, null);
+  List<String> get diskNames => $_getList(3);
 }
 
 class _ReadonlyComputeEngine extends ComputeEngine with ReadonlyMessageMixin {}
 
 class RuntimeMetadata extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RuntimeMetadata')
-    ..a/*<ComputeEngine>*/(1, 'computeEngine', PbFieldType.OM, ComputeEngine.getDefault, ComputeEngine.create)
+    ..a<ComputeEngine>(1, 'computeEngine', PbFieldType.OM, ComputeEngine.getDefault, ComputeEngine.create)
     ..hasRequiredFields = false
   ;
 
@@ -82,12 +84,12 @@ class RuntimeMetadata extends GeneratedMessage {
   }
   static RuntimeMetadata _defaultInstance;
   static void $checkItem(RuntimeMetadata v) {
-    if (v is !RuntimeMetadata) checkItemFailed(v, 'RuntimeMetadata');
+    if (v is! RuntimeMetadata) checkItemFailed(v, 'RuntimeMetadata');
   }
 
-  ComputeEngine get computeEngine => $_get(0, 1, null);
-  void set computeEngine(ComputeEngine v) { setField(1, v); }
-  bool hasComputeEngine() => $_has(0, 1);
+  ComputeEngine get computeEngine => $_getN(0);
+  set computeEngine(ComputeEngine v) { setField(1, v); }
+  bool hasComputeEngine() => $_has(0);
   void clearComputeEngine() => clearField(1);
 }
 
@@ -95,14 +97,14 @@ class _ReadonlyRuntimeMetadata extends RuntimeMetadata with ReadonlyMessageMixin
 
 class Pipeline extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Pipeline')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'name', PbFieldType.OS)
-    ..a/*<String>*/(3, 'description', PbFieldType.OS)
-    ..a/*<DockerExecutor>*/(5, 'docker', PbFieldType.OM, DockerExecutor.getDefault, DockerExecutor.create)
-    ..a/*<PipelineResources>*/(6, 'resources', PbFieldType.OM, PipelineResources.getDefault, PipelineResources.create)
-    ..a/*<String>*/(7, 'pipelineId', PbFieldType.OS)
-    ..pp/*<PipelineParameter>*/(8, 'inputParameters', PbFieldType.PM, PipelineParameter.$checkItem, PipelineParameter.create)
-    ..pp/*<PipelineParameter>*/(9, 'outputParameters', PbFieldType.PM, PipelineParameter.$checkItem, PipelineParameter.create)
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'name')
+    ..aOS(3, 'description')
+    ..a<DockerExecutor>(5, 'docker', PbFieldType.OM, DockerExecutor.getDefault, DockerExecutor.create)
+    ..a<PipelineResources>(6, 'resources', PbFieldType.OM, PipelineResources.getDefault, PipelineResources.create)
+    ..aOS(7, 'pipelineId')
+    ..pp<PipelineParameter>(8, 'inputParameters', PbFieldType.PM, PipelineParameter.$checkItem, PipelineParameter.create)
+    ..pp<PipelineParameter>(9, 'outputParameters', PbFieldType.PM, PipelineParameter.$checkItem, PipelineParameter.create)
     ..hasRequiredFields = false
   ;
 
@@ -119,49 +121,49 @@ class Pipeline extends GeneratedMessage {
   }
   static Pipeline _defaultInstance;
   static void $checkItem(Pipeline v) {
-    if (v is !Pipeline) checkItemFailed(v, 'Pipeline');
+    if (v is! Pipeline) checkItemFailed(v, 'Pipeline');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get name => $_get(1, 2, '');
-  void set name(String v) { $_setString(1, 2, v); }
-  bool hasName() => $_has(1, 2);
+  String get name => $_getS(1, '');
+  set name(String v) { $_setString(1, v); }
+  bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
-  String get description => $_get(2, 3, '');
-  void set description(String v) { $_setString(2, 3, v); }
-  bool hasDescription() => $_has(2, 3);
+  String get description => $_getS(2, '');
+  set description(String v) { $_setString(2, v); }
+  bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  DockerExecutor get docker => $_get(3, 5, null);
-  void set docker(DockerExecutor v) { setField(5, v); }
-  bool hasDocker() => $_has(3, 5);
+  DockerExecutor get docker => $_getN(3);
+  set docker(DockerExecutor v) { setField(5, v); }
+  bool hasDocker() => $_has(3);
   void clearDocker() => clearField(5);
 
-  PipelineResources get resources => $_get(4, 6, null);
-  void set resources(PipelineResources v) { setField(6, v); }
-  bool hasResources() => $_has(4, 6);
+  PipelineResources get resources => $_getN(4);
+  set resources(PipelineResources v) { setField(6, v); }
+  bool hasResources() => $_has(4);
   void clearResources() => clearField(6);
 
-  String get pipelineId => $_get(5, 7, '');
-  void set pipelineId(String v) { $_setString(5, 7, v); }
-  bool hasPipelineId() => $_has(5, 7);
+  String get pipelineId => $_getS(5, '');
+  set pipelineId(String v) { $_setString(5, v); }
+  bool hasPipelineId() => $_has(5);
   void clearPipelineId() => clearField(7);
 
-  List<PipelineParameter> get inputParameters => $_get(6, 8, null);
+  List<PipelineParameter> get inputParameters => $_getList(6);
 
-  List<PipelineParameter> get outputParameters => $_get(7, 9, null);
+  List<PipelineParameter> get outputParameters => $_getList(7);
 }
 
 class _ReadonlyPipeline extends Pipeline with ReadonlyMessageMixin {}
 
 class CreatePipelineRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreatePipelineRequest')
-    ..a/*<Pipeline>*/(1, 'pipeline', PbFieldType.OM, Pipeline.getDefault, Pipeline.create)
+    ..a<Pipeline>(1, 'pipeline', PbFieldType.OM, Pipeline.getDefault, Pipeline.create)
     ..hasRequiredFields = false
   ;
 
@@ -178,12 +180,12 @@ class CreatePipelineRequest extends GeneratedMessage {
   }
   static CreatePipelineRequest _defaultInstance;
   static void $checkItem(CreatePipelineRequest v) {
-    if (v is !CreatePipelineRequest) checkItemFailed(v, 'CreatePipelineRequest');
+    if (v is! CreatePipelineRequest) checkItemFailed(v, 'CreatePipelineRequest');
   }
 
-  Pipeline get pipeline => $_get(0, 1, null);
-  void set pipeline(Pipeline v) { setField(1, v); }
-  bool hasPipeline() => $_has(0, 1);
+  Pipeline get pipeline => $_getN(0);
+  set pipeline(Pipeline v) { setField(1, v); }
+  bool hasPipeline() => $_has(0);
   void clearPipeline() => clearField(1);
 }
 
@@ -191,8 +193,8 @@ class _ReadonlyCreatePipelineRequest extends CreatePipelineRequest with Readonly
 
 class RunPipelineArgs_InputsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RunPipelineArgs_InputsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -209,17 +211,17 @@ class RunPipelineArgs_InputsEntry extends GeneratedMessage {
   }
   static RunPipelineArgs_InputsEntry _defaultInstance;
   static void $checkItem(RunPipelineArgs_InputsEntry v) {
-    if (v is !RunPipelineArgs_InputsEntry) checkItemFailed(v, 'RunPipelineArgs_InputsEntry');
+    if (v is! RunPipelineArgs_InputsEntry) checkItemFailed(v, 'RunPipelineArgs_InputsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -227,8 +229,8 @@ class _ReadonlyRunPipelineArgs_InputsEntry extends RunPipelineArgs_InputsEntry w
 
 class RunPipelineArgs_OutputsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RunPipelineArgs_OutputsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -245,17 +247,17 @@ class RunPipelineArgs_OutputsEntry extends GeneratedMessage {
   }
   static RunPipelineArgs_OutputsEntry _defaultInstance;
   static void $checkItem(RunPipelineArgs_OutputsEntry v) {
-    if (v is !RunPipelineArgs_OutputsEntry) checkItemFailed(v, 'RunPipelineArgs_OutputsEntry');
+    if (v is! RunPipelineArgs_OutputsEntry) checkItemFailed(v, 'RunPipelineArgs_OutputsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -263,8 +265,8 @@ class _ReadonlyRunPipelineArgs_OutputsEntry extends RunPipelineArgs_OutputsEntry
 
 class RunPipelineArgs_LabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RunPipelineArgs_LabelsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -281,17 +283,17 @@ class RunPipelineArgs_LabelsEntry extends GeneratedMessage {
   }
   static RunPipelineArgs_LabelsEntry _defaultInstance;
   static void $checkItem(RunPipelineArgs_LabelsEntry v) {
-    if (v is !RunPipelineArgs_LabelsEntry) checkItemFailed(v, 'RunPipelineArgs_LabelsEntry');
+    if (v is! RunPipelineArgs_LabelsEntry) checkItemFailed(v, 'RunPipelineArgs_LabelsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -299,15 +301,15 @@ class _ReadonlyRunPipelineArgs_LabelsEntry extends RunPipelineArgs_LabelsEntry w
 
 class RunPipelineArgs extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RunPipelineArgs')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..pp/*<RunPipelineArgs_InputsEntry>*/(2, 'inputs', PbFieldType.PM, RunPipelineArgs_InputsEntry.$checkItem, RunPipelineArgs_InputsEntry.create)
-    ..pp/*<RunPipelineArgs_OutputsEntry>*/(3, 'outputs', PbFieldType.PM, RunPipelineArgs_OutputsEntry.$checkItem, RunPipelineArgs_OutputsEntry.create)
-    ..a/*<ServiceAccount>*/(4, 'serviceAccount', PbFieldType.OM, ServiceAccount.getDefault, ServiceAccount.create)
-    ..a/*<String>*/(5, 'clientId', PbFieldType.OS)
-    ..a/*<PipelineResources>*/(6, 'resources', PbFieldType.OM, PipelineResources.getDefault, PipelineResources.create)
-    ..a/*<LoggingOptions>*/(7, 'logging', PbFieldType.OM, LoggingOptions.getDefault, LoggingOptions.create)
-    ..a/*<google$protobuf.Duration>*/(8, 'keepVmAliveOnFailureDuration', PbFieldType.OM, google$protobuf.Duration.getDefault, google$protobuf.Duration.create)
-    ..pp/*<RunPipelineArgs_LabelsEntry>*/(9, 'labels', PbFieldType.PM, RunPipelineArgs_LabelsEntry.$checkItem, RunPipelineArgs_LabelsEntry.create)
+    ..aOS(1, 'projectId')
+    ..pp<RunPipelineArgs_InputsEntry>(2, 'inputs', PbFieldType.PM, RunPipelineArgs_InputsEntry.$checkItem, RunPipelineArgs_InputsEntry.create)
+    ..pp<RunPipelineArgs_OutputsEntry>(3, 'outputs', PbFieldType.PM, RunPipelineArgs_OutputsEntry.$checkItem, RunPipelineArgs_OutputsEntry.create)
+    ..a<ServiceAccount>(4, 'serviceAccount', PbFieldType.OM, ServiceAccount.getDefault, ServiceAccount.create)
+    ..aOS(5, 'clientId')
+    ..a<PipelineResources>(6, 'resources', PbFieldType.OM, PipelineResources.getDefault, PipelineResources.create)
+    ..a<LoggingOptions>(7, 'logging', PbFieldType.OM, LoggingOptions.getDefault, LoggingOptions.create)
+    ..a<$google$protobuf.Duration>(8, 'keepVmAliveOnFailureDuration', PbFieldType.OM, $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..pp<RunPipelineArgs_LabelsEntry>(9, 'labels', PbFieldType.PM, RunPipelineArgs_LabelsEntry.$checkItem, RunPipelineArgs_LabelsEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -324,53 +326,53 @@ class RunPipelineArgs extends GeneratedMessage {
   }
   static RunPipelineArgs _defaultInstance;
   static void $checkItem(RunPipelineArgs v) {
-    if (v is !RunPipelineArgs) checkItemFailed(v, 'RunPipelineArgs');
+    if (v is! RunPipelineArgs) checkItemFailed(v, 'RunPipelineArgs');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  List<RunPipelineArgs_InputsEntry> get inputs => $_get(1, 2, null);
+  List<RunPipelineArgs_InputsEntry> get inputs => $_getList(1);
 
-  List<RunPipelineArgs_OutputsEntry> get outputs => $_get(2, 3, null);
+  List<RunPipelineArgs_OutputsEntry> get outputs => $_getList(2);
 
-  ServiceAccount get serviceAccount => $_get(3, 4, null);
-  void set serviceAccount(ServiceAccount v) { setField(4, v); }
-  bool hasServiceAccount() => $_has(3, 4);
+  ServiceAccount get serviceAccount => $_getN(3);
+  set serviceAccount(ServiceAccount v) { setField(4, v); }
+  bool hasServiceAccount() => $_has(3);
   void clearServiceAccount() => clearField(4);
 
-  String get clientId => $_get(4, 5, '');
-  void set clientId(String v) { $_setString(4, 5, v); }
-  bool hasClientId() => $_has(4, 5);
+  String get clientId => $_getS(4, '');
+  set clientId(String v) { $_setString(4, v); }
+  bool hasClientId() => $_has(4);
   void clearClientId() => clearField(5);
 
-  PipelineResources get resources => $_get(5, 6, null);
-  void set resources(PipelineResources v) { setField(6, v); }
-  bool hasResources() => $_has(5, 6);
+  PipelineResources get resources => $_getN(5);
+  set resources(PipelineResources v) { setField(6, v); }
+  bool hasResources() => $_has(5);
   void clearResources() => clearField(6);
 
-  LoggingOptions get logging => $_get(6, 7, null);
-  void set logging(LoggingOptions v) { setField(7, v); }
-  bool hasLogging() => $_has(6, 7);
+  LoggingOptions get logging => $_getN(6);
+  set logging(LoggingOptions v) { setField(7, v); }
+  bool hasLogging() => $_has(6);
   void clearLogging() => clearField(7);
 
-  google$protobuf.Duration get keepVmAliveOnFailureDuration => $_get(7, 8, null);
-  void set keepVmAliveOnFailureDuration(google$protobuf.Duration v) { setField(8, v); }
-  bool hasKeepVmAliveOnFailureDuration() => $_has(7, 8);
+  $google$protobuf.Duration get keepVmAliveOnFailureDuration => $_getN(7);
+  set keepVmAliveOnFailureDuration($google$protobuf.Duration v) { setField(8, v); }
+  bool hasKeepVmAliveOnFailureDuration() => $_has(7);
   void clearKeepVmAliveOnFailureDuration() => clearField(8);
 
-  List<RunPipelineArgs_LabelsEntry> get labels => $_get(8, 9, null);
+  List<RunPipelineArgs_LabelsEntry> get labels => $_getList(8);
 }
 
 class _ReadonlyRunPipelineArgs extends RunPipelineArgs with ReadonlyMessageMixin {}
 
 class RunPipelineRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RunPipelineRequest')
-    ..a/*<String>*/(1, 'pipelineId', PbFieldType.OS)
-    ..a/*<Pipeline>*/(2, 'ephemeralPipeline', PbFieldType.OM, Pipeline.getDefault, Pipeline.create)
-    ..a/*<RunPipelineArgs>*/(3, 'pipelineArgs', PbFieldType.OM, RunPipelineArgs.getDefault, RunPipelineArgs.create)
+    ..aOS(1, 'pipelineId')
+    ..a<Pipeline>(2, 'ephemeralPipeline', PbFieldType.OM, Pipeline.getDefault, Pipeline.create)
+    ..a<RunPipelineArgs>(3, 'pipelineArgs', PbFieldType.OM, RunPipelineArgs.getDefault, RunPipelineArgs.create)
     ..hasRequiredFields = false
   ;
 
@@ -387,22 +389,22 @@ class RunPipelineRequest extends GeneratedMessage {
   }
   static RunPipelineRequest _defaultInstance;
   static void $checkItem(RunPipelineRequest v) {
-    if (v is !RunPipelineRequest) checkItemFailed(v, 'RunPipelineRequest');
+    if (v is! RunPipelineRequest) checkItemFailed(v, 'RunPipelineRequest');
   }
 
-  String get pipelineId => $_get(0, 1, '');
-  void set pipelineId(String v) { $_setString(0, 1, v); }
-  bool hasPipelineId() => $_has(0, 1);
+  String get pipelineId => $_getS(0, '');
+  set pipelineId(String v) { $_setString(0, v); }
+  bool hasPipelineId() => $_has(0);
   void clearPipelineId() => clearField(1);
 
-  Pipeline get ephemeralPipeline => $_get(1, 2, null);
-  void set ephemeralPipeline(Pipeline v) { setField(2, v); }
-  bool hasEphemeralPipeline() => $_has(1, 2);
+  Pipeline get ephemeralPipeline => $_getN(1);
+  set ephemeralPipeline(Pipeline v) { setField(2, v); }
+  bool hasEphemeralPipeline() => $_has(1);
   void clearEphemeralPipeline() => clearField(2);
 
-  RunPipelineArgs get pipelineArgs => $_get(2, 3, null);
-  void set pipelineArgs(RunPipelineArgs v) { setField(3, v); }
-  bool hasPipelineArgs() => $_has(2, 3);
+  RunPipelineArgs get pipelineArgs => $_getN(2);
+  set pipelineArgs(RunPipelineArgs v) { setField(3, v); }
+  bool hasPipelineArgs() => $_has(2);
   void clearPipelineArgs() => clearField(3);
 }
 
@@ -410,7 +412,7 @@ class _ReadonlyRunPipelineRequest extends RunPipelineRequest with ReadonlyMessag
 
 class GetPipelineRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetPipelineRequest')
-    ..a/*<String>*/(1, 'pipelineId', PbFieldType.OS)
+    ..aOS(1, 'pipelineId')
     ..hasRequiredFields = false
   ;
 
@@ -427,12 +429,12 @@ class GetPipelineRequest extends GeneratedMessage {
   }
   static GetPipelineRequest _defaultInstance;
   static void $checkItem(GetPipelineRequest v) {
-    if (v is !GetPipelineRequest) checkItemFailed(v, 'GetPipelineRequest');
+    if (v is! GetPipelineRequest) checkItemFailed(v, 'GetPipelineRequest');
   }
 
-  String get pipelineId => $_get(0, 1, '');
-  void set pipelineId(String v) { $_setString(0, 1, v); }
-  bool hasPipelineId() => $_has(0, 1);
+  String get pipelineId => $_getS(0, '');
+  set pipelineId(String v) { $_setString(0, v); }
+  bool hasPipelineId() => $_has(0);
   void clearPipelineId() => clearField(1);
 }
 
@@ -440,10 +442,10 @@ class _ReadonlyGetPipelineRequest extends GetPipelineRequest with ReadonlyMessag
 
 class ListPipelinesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListPipelinesRequest')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'namePrefix', PbFieldType.OS)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(4, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'namePrefix')
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -460,27 +462,27 @@ class ListPipelinesRequest extends GeneratedMessage {
   }
   static ListPipelinesRequest _defaultInstance;
   static void $checkItem(ListPipelinesRequest v) {
-    if (v is !ListPipelinesRequest) checkItemFailed(v, 'ListPipelinesRequest');
+    if (v is! ListPipelinesRequest) checkItemFailed(v, 'ListPipelinesRequest');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get namePrefix => $_get(1, 2, '');
-  void set namePrefix(String v) { $_setString(1, 2, v); }
-  bool hasNamePrefix() => $_has(1, 2);
+  String get namePrefix => $_getS(1, '');
+  set namePrefix(String v) { $_setString(1, v); }
+  bool hasNamePrefix() => $_has(1);
   void clearNamePrefix() => clearField(2);
 
-  int get pageSize => $_get(2, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasPageSize() => $_has(2, 3);
+  int get pageSize => $_get(2, 0);
+  set pageSize(int v) { $_setSignedInt32(2, v); }
+  bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_get(3, 4, '');
-  void set pageToken(String v) { $_setString(3, 4, v); }
-  bool hasPageToken() => $_has(3, 4);
+  String get pageToken => $_getS(3, '');
+  set pageToken(String v) { $_setString(3, v); }
+  bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 }
 
@@ -488,8 +490,8 @@ class _ReadonlyListPipelinesRequest extends ListPipelinesRequest with ReadonlyMe
 
 class ListPipelinesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListPipelinesResponse')
-    ..pp/*<Pipeline>*/(1, 'pipelines', PbFieldType.PM, Pipeline.$checkItem, Pipeline.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Pipeline>(1, 'pipelines', PbFieldType.PM, Pipeline.$checkItem, Pipeline.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -506,14 +508,14 @@ class ListPipelinesResponse extends GeneratedMessage {
   }
   static ListPipelinesResponse _defaultInstance;
   static void $checkItem(ListPipelinesResponse v) {
-    if (v is !ListPipelinesResponse) checkItemFailed(v, 'ListPipelinesResponse');
+    if (v is! ListPipelinesResponse) checkItemFailed(v, 'ListPipelinesResponse');
   }
 
-  List<Pipeline> get pipelines => $_get(0, 1, null);
+  List<Pipeline> get pipelines => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -521,7 +523,7 @@ class _ReadonlyListPipelinesResponse extends ListPipelinesResponse with Readonly
 
 class DeletePipelineRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeletePipelineRequest')
-    ..a/*<String>*/(1, 'pipelineId', PbFieldType.OS)
+    ..aOS(1, 'pipelineId')
     ..hasRequiredFields = false
   ;
 
@@ -538,12 +540,12 @@ class DeletePipelineRequest extends GeneratedMessage {
   }
   static DeletePipelineRequest _defaultInstance;
   static void $checkItem(DeletePipelineRequest v) {
-    if (v is !DeletePipelineRequest) checkItemFailed(v, 'DeletePipelineRequest');
+    if (v is! DeletePipelineRequest) checkItemFailed(v, 'DeletePipelineRequest');
   }
 
-  String get pipelineId => $_get(0, 1, '');
-  void set pipelineId(String v) { $_setString(0, 1, v); }
-  bool hasPipelineId() => $_has(0, 1);
+  String get pipelineId => $_getS(0, '');
+  set pipelineId(String v) { $_setString(0, v); }
+  bool hasPipelineId() => $_has(0);
   void clearPipelineId() => clearField(1);
 }
 
@@ -551,8 +553,8 @@ class _ReadonlyDeletePipelineRequest extends DeletePipelineRequest with Readonly
 
 class GetControllerConfigRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetControllerConfigRequest')
-    ..a/*<String>*/(1, 'operationId', PbFieldType.OS)
-    ..a/*<Int64>*/(2, 'validationToken', PbFieldType.OU6, Int64.ZERO)
+    ..aOS(1, 'operationId')
+    ..a<Int64>(2, 'validationToken', PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -569,17 +571,17 @@ class GetControllerConfigRequest extends GeneratedMessage {
   }
   static GetControllerConfigRequest _defaultInstance;
   static void $checkItem(GetControllerConfigRequest v) {
-    if (v is !GetControllerConfigRequest) checkItemFailed(v, 'GetControllerConfigRequest');
+    if (v is! GetControllerConfigRequest) checkItemFailed(v, 'GetControllerConfigRequest');
   }
 
-  String get operationId => $_get(0, 1, '');
-  void set operationId(String v) { $_setString(0, 1, v); }
-  bool hasOperationId() => $_has(0, 1);
+  String get operationId => $_getS(0, '');
+  set operationId(String v) { $_setString(0, v); }
+  bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
-  Int64 get validationToken => $_get(1, 2, null);
-  void set validationToken(Int64 v) { $_setInt64(1, 2, v); }
-  bool hasValidationToken() => $_has(1, 2);
+  Int64 get validationToken => $_getI64(1);
+  set validationToken(Int64 v) { $_setInt64(1, v); }
+  bool hasValidationToken() => $_has(1);
   void clearValidationToken() => clearField(2);
 }
 
@@ -587,7 +589,7 @@ class _ReadonlyGetControllerConfigRequest extends GetControllerConfigRequest wit
 
 class ControllerConfig_RepeatedString extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ControllerConfig_RepeatedString')
-    ..p/*<String>*/(1, 'values', PbFieldType.PS)
+    ..pPS(1, 'values')
     ..hasRequiredFields = false
   ;
 
@@ -604,18 +606,18 @@ class ControllerConfig_RepeatedString extends GeneratedMessage {
   }
   static ControllerConfig_RepeatedString _defaultInstance;
   static void $checkItem(ControllerConfig_RepeatedString v) {
-    if (v is !ControllerConfig_RepeatedString) checkItemFailed(v, 'ControllerConfig_RepeatedString');
+    if (v is! ControllerConfig_RepeatedString) checkItemFailed(v, 'ControllerConfig_RepeatedString');
   }
 
-  List<String> get values => $_get(0, 1, null);
+  List<String> get values => $_getList(0);
 }
 
 class _ReadonlyControllerConfig_RepeatedString extends ControllerConfig_RepeatedString with ReadonlyMessageMixin {}
 
 class ControllerConfig_VarsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ControllerConfig_VarsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -632,17 +634,17 @@ class ControllerConfig_VarsEntry extends GeneratedMessage {
   }
   static ControllerConfig_VarsEntry _defaultInstance;
   static void $checkItem(ControllerConfig_VarsEntry v) {
-    if (v is !ControllerConfig_VarsEntry) checkItemFailed(v, 'ControllerConfig_VarsEntry');
+    if (v is! ControllerConfig_VarsEntry) checkItemFailed(v, 'ControllerConfig_VarsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -650,8 +652,8 @@ class _ReadonlyControllerConfig_VarsEntry extends ControllerConfig_VarsEntry wit
 
 class ControllerConfig_DisksEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ControllerConfig_DisksEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -668,17 +670,17 @@ class ControllerConfig_DisksEntry extends GeneratedMessage {
   }
   static ControllerConfig_DisksEntry _defaultInstance;
   static void $checkItem(ControllerConfig_DisksEntry v) {
-    if (v is !ControllerConfig_DisksEntry) checkItemFailed(v, 'ControllerConfig_DisksEntry');
+    if (v is! ControllerConfig_DisksEntry) checkItemFailed(v, 'ControllerConfig_DisksEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -686,8 +688,8 @@ class _ReadonlyControllerConfig_DisksEntry extends ControllerConfig_DisksEntry w
 
 class ControllerConfig_GcsSourcesEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ControllerConfig_GcsSourcesEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<ControllerConfig_RepeatedString>*/(2, 'value', PbFieldType.OM, ControllerConfig_RepeatedString.getDefault, ControllerConfig_RepeatedString.create)
+    ..aOS(1, 'key')
+    ..a<ControllerConfig_RepeatedString>(2, 'value', PbFieldType.OM, ControllerConfig_RepeatedString.getDefault, ControllerConfig_RepeatedString.create)
     ..hasRequiredFields = false
   ;
 
@@ -704,17 +706,17 @@ class ControllerConfig_GcsSourcesEntry extends GeneratedMessage {
   }
   static ControllerConfig_GcsSourcesEntry _defaultInstance;
   static void $checkItem(ControllerConfig_GcsSourcesEntry v) {
-    if (v is !ControllerConfig_GcsSourcesEntry) checkItemFailed(v, 'ControllerConfig_GcsSourcesEntry');
+    if (v is! ControllerConfig_GcsSourcesEntry) checkItemFailed(v, 'ControllerConfig_GcsSourcesEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  ControllerConfig_RepeatedString get value => $_get(1, 2, null);
-  void set value(ControllerConfig_RepeatedString v) { setField(2, v); }
-  bool hasValue() => $_has(1, 2);
+  ControllerConfig_RepeatedString get value => $_getN(1);
+  set value(ControllerConfig_RepeatedString v) { setField(2, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -722,8 +724,8 @@ class _ReadonlyControllerConfig_GcsSourcesEntry extends ControllerConfig_GcsSour
 
 class ControllerConfig_GcsSinksEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ControllerConfig_GcsSinksEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<ControllerConfig_RepeatedString>*/(2, 'value', PbFieldType.OM, ControllerConfig_RepeatedString.getDefault, ControllerConfig_RepeatedString.create)
+    ..aOS(1, 'key')
+    ..a<ControllerConfig_RepeatedString>(2, 'value', PbFieldType.OM, ControllerConfig_RepeatedString.getDefault, ControllerConfig_RepeatedString.create)
     ..hasRequiredFields = false
   ;
 
@@ -740,17 +742,17 @@ class ControllerConfig_GcsSinksEntry extends GeneratedMessage {
   }
   static ControllerConfig_GcsSinksEntry _defaultInstance;
   static void $checkItem(ControllerConfig_GcsSinksEntry v) {
-    if (v is !ControllerConfig_GcsSinksEntry) checkItemFailed(v, 'ControllerConfig_GcsSinksEntry');
+    if (v is! ControllerConfig_GcsSinksEntry) checkItemFailed(v, 'ControllerConfig_GcsSinksEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  ControllerConfig_RepeatedString get value => $_get(1, 2, null);
-  void set value(ControllerConfig_RepeatedString v) { setField(2, v); }
-  bool hasValue() => $_has(1, 2);
+  ControllerConfig_RepeatedString get value => $_getN(1);
+  set value(ControllerConfig_RepeatedString v) { setField(2, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -758,14 +760,14 @@ class _ReadonlyControllerConfig_GcsSinksEntry extends ControllerConfig_GcsSinksE
 
 class ControllerConfig extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ControllerConfig')
-    ..a/*<String>*/(1, 'image', PbFieldType.OS)
-    ..a/*<String>*/(2, 'cmd', PbFieldType.OS)
-    ..a/*<String>*/(3, 'gcsLogPath', PbFieldType.OS)
-    ..a/*<String>*/(4, 'machineType', PbFieldType.OS)
-    ..pp/*<ControllerConfig_VarsEntry>*/(5, 'vars', PbFieldType.PM, ControllerConfig_VarsEntry.$checkItem, ControllerConfig_VarsEntry.create)
-    ..pp/*<ControllerConfig_DisksEntry>*/(6, 'disks', PbFieldType.PM, ControllerConfig_DisksEntry.$checkItem, ControllerConfig_DisksEntry.create)
-    ..pp/*<ControllerConfig_GcsSourcesEntry>*/(7, 'gcsSources', PbFieldType.PM, ControllerConfig_GcsSourcesEntry.$checkItem, ControllerConfig_GcsSourcesEntry.create)
-    ..pp/*<ControllerConfig_GcsSinksEntry>*/(8, 'gcsSinks', PbFieldType.PM, ControllerConfig_GcsSinksEntry.$checkItem, ControllerConfig_GcsSinksEntry.create)
+    ..aOS(1, 'image')
+    ..aOS(2, 'cmd')
+    ..aOS(3, 'gcsLogPath')
+    ..aOS(4, 'machineType')
+    ..pp<ControllerConfig_VarsEntry>(5, 'vars', PbFieldType.PM, ControllerConfig_VarsEntry.$checkItem, ControllerConfig_VarsEntry.create)
+    ..pp<ControllerConfig_DisksEntry>(6, 'disks', PbFieldType.PM, ControllerConfig_DisksEntry.$checkItem, ControllerConfig_DisksEntry.create)
+    ..pp<ControllerConfig_GcsSourcesEntry>(7, 'gcsSources', PbFieldType.PM, ControllerConfig_GcsSourcesEntry.$checkItem, ControllerConfig_GcsSourcesEntry.create)
+    ..pp<ControllerConfig_GcsSinksEntry>(8, 'gcsSinks', PbFieldType.PM, ControllerConfig_GcsSinksEntry.$checkItem, ControllerConfig_GcsSinksEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -782,44 +784,44 @@ class ControllerConfig extends GeneratedMessage {
   }
   static ControllerConfig _defaultInstance;
   static void $checkItem(ControllerConfig v) {
-    if (v is !ControllerConfig) checkItemFailed(v, 'ControllerConfig');
+    if (v is! ControllerConfig) checkItemFailed(v, 'ControllerConfig');
   }
 
-  String get image => $_get(0, 1, '');
-  void set image(String v) { $_setString(0, 1, v); }
-  bool hasImage() => $_has(0, 1);
+  String get image => $_getS(0, '');
+  set image(String v) { $_setString(0, v); }
+  bool hasImage() => $_has(0);
   void clearImage() => clearField(1);
 
-  String get cmd => $_get(1, 2, '');
-  void set cmd(String v) { $_setString(1, 2, v); }
-  bool hasCmd() => $_has(1, 2);
+  String get cmd => $_getS(1, '');
+  set cmd(String v) { $_setString(1, v); }
+  bool hasCmd() => $_has(1);
   void clearCmd() => clearField(2);
 
-  String get gcsLogPath => $_get(2, 3, '');
-  void set gcsLogPath(String v) { $_setString(2, 3, v); }
-  bool hasGcsLogPath() => $_has(2, 3);
+  String get gcsLogPath => $_getS(2, '');
+  set gcsLogPath(String v) { $_setString(2, v); }
+  bool hasGcsLogPath() => $_has(2);
   void clearGcsLogPath() => clearField(3);
 
-  String get machineType => $_get(3, 4, '');
-  void set machineType(String v) { $_setString(3, 4, v); }
-  bool hasMachineType() => $_has(3, 4);
+  String get machineType => $_getS(3, '');
+  set machineType(String v) { $_setString(3, v); }
+  bool hasMachineType() => $_has(3);
   void clearMachineType() => clearField(4);
 
-  List<ControllerConfig_VarsEntry> get vars => $_get(4, 5, null);
+  List<ControllerConfig_VarsEntry> get vars => $_getList(4);
 
-  List<ControllerConfig_DisksEntry> get disks => $_get(5, 6, null);
+  List<ControllerConfig_DisksEntry> get disks => $_getList(5);
 
-  List<ControllerConfig_GcsSourcesEntry> get gcsSources => $_get(6, 7, null);
+  List<ControllerConfig_GcsSourcesEntry> get gcsSources => $_getList(6);
 
-  List<ControllerConfig_GcsSinksEntry> get gcsSinks => $_get(7, 8, null);
+  List<ControllerConfig_GcsSinksEntry> get gcsSinks => $_getList(7);
 }
 
 class _ReadonlyControllerConfig extends ControllerConfig with ReadonlyMessageMixin {}
 
 class TimestampEvent extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TimestampEvent')
-    ..a/*<String>*/(1, 'description', PbFieldType.OS)
-    ..a/*<google$protobuf.Timestamp>*/(2, 'timestamp', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
+    ..aOS(1, 'description')
+    ..a<$google$protobuf.Timestamp>(2, 'timestamp', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -836,17 +838,17 @@ class TimestampEvent extends GeneratedMessage {
   }
   static TimestampEvent _defaultInstance;
   static void $checkItem(TimestampEvent v) {
-    if (v is !TimestampEvent) checkItemFailed(v, 'TimestampEvent');
+    if (v is! TimestampEvent) checkItemFailed(v, 'TimestampEvent');
   }
 
-  String get description => $_get(0, 1, '');
-  void set description(String v) { $_setString(0, 1, v); }
-  bool hasDescription() => $_has(0, 1);
+  String get description => $_getS(0, '');
+  set description(String v) { $_setString(0, v); }
+  bool hasDescription() => $_has(0);
   void clearDescription() => clearField(1);
 
-  google$protobuf.Timestamp get timestamp => $_get(1, 2, null);
-  void set timestamp(google$protobuf.Timestamp v) { setField(2, v); }
-  bool hasTimestamp() => $_has(1, 2);
+  $google$protobuf.Timestamp get timestamp => $_getN(1);
+  set timestamp($google$protobuf.Timestamp v) { setField(2, v); }
+  bool hasTimestamp() => $_has(1);
   void clearTimestamp() => clearField(2);
 }
 
@@ -854,11 +856,11 @@ class _ReadonlyTimestampEvent extends TimestampEvent with ReadonlyMessageMixin {
 
 class SetOperationStatusRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SetOperationStatusRequest')
-    ..a/*<String>*/(1, 'operationId', PbFieldType.OS)
-    ..pp/*<TimestampEvent>*/(2, 'timestampEvents', PbFieldType.PM, TimestampEvent.$checkItem, TimestampEvent.create)
-    ..e/*<google$rpc.Code>*/(3, 'errorCode', PbFieldType.OE, google$rpc.Code.OK, google$rpc.Code.valueOf)
-    ..a/*<String>*/(4, 'errorMessage', PbFieldType.OS)
-    ..a/*<Int64>*/(5, 'validationToken', PbFieldType.OU6, Int64.ZERO)
+    ..aOS(1, 'operationId')
+    ..pp<TimestampEvent>(2, 'timestampEvents', PbFieldType.PM, TimestampEvent.$checkItem, TimestampEvent.create)
+    ..e<$google$rpc.Code>(3, 'errorCode', PbFieldType.OE, $google$rpc.Code.OK, $google$rpc.Code.valueOf, $google$rpc.Code.values)
+    ..aOS(4, 'errorMessage')
+    ..a<Int64>(5, 'validationToken', PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -875,29 +877,29 @@ class SetOperationStatusRequest extends GeneratedMessage {
   }
   static SetOperationStatusRequest _defaultInstance;
   static void $checkItem(SetOperationStatusRequest v) {
-    if (v is !SetOperationStatusRequest) checkItemFailed(v, 'SetOperationStatusRequest');
+    if (v is! SetOperationStatusRequest) checkItemFailed(v, 'SetOperationStatusRequest');
   }
 
-  String get operationId => $_get(0, 1, '');
-  void set operationId(String v) { $_setString(0, 1, v); }
-  bool hasOperationId() => $_has(0, 1);
+  String get operationId => $_getS(0, '');
+  set operationId(String v) { $_setString(0, v); }
+  bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
-  List<TimestampEvent> get timestampEvents => $_get(1, 2, null);
+  List<TimestampEvent> get timestampEvents => $_getList(1);
 
-  google$rpc.Code get errorCode => $_get(2, 3, null);
-  void set errorCode(google$rpc.Code v) { setField(3, v); }
-  bool hasErrorCode() => $_has(2, 3);
+  $google$rpc.Code get errorCode => $_getN(2);
+  set errorCode($google$rpc.Code v) { setField(3, v); }
+  bool hasErrorCode() => $_has(2);
   void clearErrorCode() => clearField(3);
 
-  String get errorMessage => $_get(3, 4, '');
-  void set errorMessage(String v) { $_setString(3, 4, v); }
-  bool hasErrorMessage() => $_has(3, 4);
+  String get errorMessage => $_getS(3, '');
+  set errorMessage(String v) { $_setString(3, v); }
+  bool hasErrorMessage() => $_has(3);
   void clearErrorMessage() => clearField(4);
 
-  Int64 get validationToken => $_get(4, 5, null);
-  void set validationToken(Int64 v) { $_setInt64(4, 5, v); }
-  bool hasValidationToken() => $_has(4, 5);
+  Int64 get validationToken => $_getI64(4);
+  set validationToken(Int64 v) { $_setInt64(4, v); }
+  bool hasValidationToken() => $_has(4);
   void clearValidationToken() => clearField(5);
 }
 
@@ -905,8 +907,8 @@ class _ReadonlySetOperationStatusRequest extends SetOperationStatusRequest with 
 
 class ServiceAccount extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ServiceAccount')
-    ..a/*<String>*/(1, 'email', PbFieldType.OS)
-    ..p/*<String>*/(2, 'scopes', PbFieldType.PS)
+    ..aOS(1, 'email')
+    ..pPS(2, 'scopes')
     ..hasRequiredFields = false
   ;
 
@@ -923,22 +925,22 @@ class ServiceAccount extends GeneratedMessage {
   }
   static ServiceAccount _defaultInstance;
   static void $checkItem(ServiceAccount v) {
-    if (v is !ServiceAccount) checkItemFailed(v, 'ServiceAccount');
+    if (v is! ServiceAccount) checkItemFailed(v, 'ServiceAccount');
   }
 
-  String get email => $_get(0, 1, '');
-  void set email(String v) { $_setString(0, 1, v); }
-  bool hasEmail() => $_has(0, 1);
+  String get email => $_getS(0, '');
+  set email(String v) { $_setString(0, v); }
+  bool hasEmail() => $_has(0);
   void clearEmail() => clearField(1);
 
-  List<String> get scopes => $_get(1, 2, null);
+  List<String> get scopes => $_getList(1);
 }
 
 class _ReadonlyServiceAccount extends ServiceAccount with ReadonlyMessageMixin {}
 
 class LoggingOptions extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('LoggingOptions')
-    ..a/*<String>*/(1, 'gcsPath', PbFieldType.OS)
+    ..aOS(1, 'gcsPath')
     ..hasRequiredFields = false
   ;
 
@@ -955,12 +957,12 @@ class LoggingOptions extends GeneratedMessage {
   }
   static LoggingOptions _defaultInstance;
   static void $checkItem(LoggingOptions v) {
-    if (v is !LoggingOptions) checkItemFailed(v, 'LoggingOptions');
+    if (v is! LoggingOptions) checkItemFailed(v, 'LoggingOptions');
   }
 
-  String get gcsPath => $_get(0, 1, '');
-  void set gcsPath(String v) { $_setString(0, 1, v); }
-  bool hasGcsPath() => $_has(0, 1);
+  String get gcsPath => $_getS(0, '');
+  set gcsPath(String v) { $_setString(0, v); }
+  bool hasGcsPath() => $_has(0);
   void clearGcsPath() => clearField(1);
 }
 
@@ -968,12 +970,12 @@ class _ReadonlyLoggingOptions extends LoggingOptions with ReadonlyMessageMixin {
 
 class PipelineResources_Disk extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PipelineResources_Disk')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..e/*<PipelineResources_Disk_Type>*/(2, 'type', PbFieldType.OE, PipelineResources_Disk_Type.TYPE_UNSPECIFIED, PipelineResources_Disk_Type.valueOf)
-    ..a/*<int>*/(3, 'sizeGb', PbFieldType.O3)
-    ..a/*<String>*/(4, 'source', PbFieldType.OS)
-    ..a/*<bool>*/(6, 'autoDelete', PbFieldType.OB)
-    ..a/*<String>*/(8, 'mountPoint', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..e<PipelineResources_Disk_Type>(2, 'type', PbFieldType.OE, PipelineResources_Disk_Type.TYPE_UNSPECIFIED, PipelineResources_Disk_Type.valueOf, PipelineResources_Disk_Type.values)
+    ..a<int>(3, 'sizeGb', PbFieldType.O3)
+    ..aOS(4, 'source')
+    ..aOB(6, 'autoDelete')
+    ..aOS(8, 'mountPoint')
     ..hasRequiredFields = false
   ;
 
@@ -990,37 +992,37 @@ class PipelineResources_Disk extends GeneratedMessage {
   }
   static PipelineResources_Disk _defaultInstance;
   static void $checkItem(PipelineResources_Disk v) {
-    if (v is !PipelineResources_Disk) checkItemFailed(v, 'PipelineResources_Disk');
+    if (v is! PipelineResources_Disk) checkItemFailed(v, 'PipelineResources_Disk');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  PipelineResources_Disk_Type get type => $_get(1, 2, null);
-  void set type(PipelineResources_Disk_Type v) { setField(2, v); }
-  bool hasType() => $_has(1, 2);
+  PipelineResources_Disk_Type get type => $_getN(1);
+  set type(PipelineResources_Disk_Type v) { setField(2, v); }
+  bool hasType() => $_has(1);
   void clearType() => clearField(2);
 
-  int get sizeGb => $_get(2, 3, 0);
-  void set sizeGb(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasSizeGb() => $_has(2, 3);
+  int get sizeGb => $_get(2, 0);
+  set sizeGb(int v) { $_setSignedInt32(2, v); }
+  bool hasSizeGb() => $_has(2);
   void clearSizeGb() => clearField(3);
 
-  String get source => $_get(3, 4, '');
-  void set source(String v) { $_setString(3, 4, v); }
-  bool hasSource() => $_has(3, 4);
+  String get source => $_getS(3, '');
+  set source(String v) { $_setString(3, v); }
+  bool hasSource() => $_has(3);
   void clearSource() => clearField(4);
 
-  bool get autoDelete => $_get(4, 6, false);
-  void set autoDelete(bool v) { $_setBool(4, 6, v); }
-  bool hasAutoDelete() => $_has(4, 6);
+  bool get autoDelete => $_get(4, false);
+  set autoDelete(bool v) { $_setBool(4, v); }
+  bool hasAutoDelete() => $_has(4);
   void clearAutoDelete() => clearField(6);
 
-  String get mountPoint => $_get(5, 8, '');
-  void set mountPoint(String v) { $_setString(5, 8, v); }
-  bool hasMountPoint() => $_has(5, 8);
+  String get mountPoint => $_getS(5, '');
+  set mountPoint(String v) { $_setString(5, v); }
+  bool hasMountPoint() => $_has(5);
   void clearMountPoint() => clearField(8);
 }
 
@@ -1028,13 +1030,13 @@ class _ReadonlyPipelineResources_Disk extends PipelineResources_Disk with Readon
 
 class PipelineResources extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PipelineResources')
-    ..a/*<int>*/(1, 'minimumCpuCores', PbFieldType.O3)
-    ..a/*<bool>*/(2, 'preemptible', PbFieldType.OB)
-    ..a/*<double>*/(3, 'minimumRamGb', PbFieldType.OD)
-    ..pp/*<PipelineResources_Disk>*/(4, 'disks', PbFieldType.PM, PipelineResources_Disk.$checkItem, PipelineResources_Disk.create)
-    ..p/*<String>*/(5, 'zones', PbFieldType.PS)
-    ..a/*<int>*/(6, 'bootDiskSizeGb', PbFieldType.O3)
-    ..a/*<bool>*/(7, 'noAddress', PbFieldType.OB)
+    ..a<int>(1, 'minimumCpuCores', PbFieldType.O3)
+    ..aOB(2, 'preemptible')
+    ..a<double>(3, 'minimumRamGb', PbFieldType.OD)
+    ..pp<PipelineResources_Disk>(4, 'disks', PbFieldType.PM, PipelineResources_Disk.$checkItem, PipelineResources_Disk.create)
+    ..pPS(5, 'zones')
+    ..a<int>(6, 'bootDiskSizeGb', PbFieldType.O3)
+    ..aOB(7, 'noAddress')
     ..hasRequiredFields = false
   ;
 
@@ -1051,36 +1053,36 @@ class PipelineResources extends GeneratedMessage {
   }
   static PipelineResources _defaultInstance;
   static void $checkItem(PipelineResources v) {
-    if (v is !PipelineResources) checkItemFailed(v, 'PipelineResources');
+    if (v is! PipelineResources) checkItemFailed(v, 'PipelineResources');
   }
 
-  int get minimumCpuCores => $_get(0, 1, 0);
-  void set minimumCpuCores(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasMinimumCpuCores() => $_has(0, 1);
+  int get minimumCpuCores => $_get(0, 0);
+  set minimumCpuCores(int v) { $_setSignedInt32(0, v); }
+  bool hasMinimumCpuCores() => $_has(0);
   void clearMinimumCpuCores() => clearField(1);
 
-  bool get preemptible => $_get(1, 2, false);
-  void set preemptible(bool v) { $_setBool(1, 2, v); }
-  bool hasPreemptible() => $_has(1, 2);
+  bool get preemptible => $_get(1, false);
+  set preemptible(bool v) { $_setBool(1, v); }
+  bool hasPreemptible() => $_has(1);
   void clearPreemptible() => clearField(2);
 
-  double get minimumRamGb => $_get(2, 3, null);
-  void set minimumRamGb(double v) { $_setDouble(2, 3, v); }
-  bool hasMinimumRamGb() => $_has(2, 3);
+  double get minimumRamGb => $_getN(2);
+  set minimumRamGb(double v) { $_setDouble(2, v); }
+  bool hasMinimumRamGb() => $_has(2);
   void clearMinimumRamGb() => clearField(3);
 
-  List<PipelineResources_Disk> get disks => $_get(3, 4, null);
+  List<PipelineResources_Disk> get disks => $_getList(3);
 
-  List<String> get zones => $_get(4, 5, null);
+  List<String> get zones => $_getList(4);
 
-  int get bootDiskSizeGb => $_get(5, 6, 0);
-  void set bootDiskSizeGb(int v) { $_setUnsignedInt32(5, 6, v); }
-  bool hasBootDiskSizeGb() => $_has(5, 6);
+  int get bootDiskSizeGb => $_get(5, 0);
+  set bootDiskSizeGb(int v) { $_setSignedInt32(5, v); }
+  bool hasBootDiskSizeGb() => $_has(5);
   void clearBootDiskSizeGb() => clearField(6);
 
-  bool get noAddress => $_get(6, 7, false);
-  void set noAddress(bool v) { $_setBool(6, 7, v); }
-  bool hasNoAddress() => $_has(6, 7);
+  bool get noAddress => $_get(6, false);
+  set noAddress(bool v) { $_setBool(6, v); }
+  bool hasNoAddress() => $_has(6);
   void clearNoAddress() => clearField(7);
 }
 
@@ -1088,8 +1090,8 @@ class _ReadonlyPipelineResources extends PipelineResources with ReadonlyMessageM
 
 class PipelineParameter_LocalCopy extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PipelineParameter_LocalCopy')
-    ..a/*<String>*/(1, 'path', PbFieldType.OS)
-    ..a/*<String>*/(2, 'disk', PbFieldType.OS)
+    ..aOS(1, 'path')
+    ..aOS(2, 'disk')
     ..hasRequiredFields = false
   ;
 
@@ -1106,17 +1108,17 @@ class PipelineParameter_LocalCopy extends GeneratedMessage {
   }
   static PipelineParameter_LocalCopy _defaultInstance;
   static void $checkItem(PipelineParameter_LocalCopy v) {
-    if (v is !PipelineParameter_LocalCopy) checkItemFailed(v, 'PipelineParameter_LocalCopy');
+    if (v is! PipelineParameter_LocalCopy) checkItemFailed(v, 'PipelineParameter_LocalCopy');
   }
 
-  String get path => $_get(0, 1, '');
-  void set path(String v) { $_setString(0, 1, v); }
-  bool hasPath() => $_has(0, 1);
+  String get path => $_getS(0, '');
+  set path(String v) { $_setString(0, v); }
+  bool hasPath() => $_has(0);
   void clearPath() => clearField(1);
 
-  String get disk => $_get(1, 2, '');
-  void set disk(String v) { $_setString(1, 2, v); }
-  bool hasDisk() => $_has(1, 2);
+  String get disk => $_getS(1, '');
+  set disk(String v) { $_setString(1, v); }
+  bool hasDisk() => $_has(1);
   void clearDisk() => clearField(2);
 }
 
@@ -1124,10 +1126,10 @@ class _ReadonlyPipelineParameter_LocalCopy extends PipelineParameter_LocalCopy w
 
 class PipelineParameter extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PipelineParameter')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'description', PbFieldType.OS)
-    ..a/*<String>*/(5, 'defaultValue', PbFieldType.OS)
-    ..a/*<PipelineParameter_LocalCopy>*/(6, 'localCopy', PbFieldType.OM, PipelineParameter_LocalCopy.getDefault, PipelineParameter_LocalCopy.create)
+    ..aOS(1, 'name')
+    ..aOS(2, 'description')
+    ..aOS(5, 'defaultValue')
+    ..a<PipelineParameter_LocalCopy>(6, 'localCopy', PbFieldType.OM, PipelineParameter_LocalCopy.getDefault, PipelineParameter_LocalCopy.create)
     ..hasRequiredFields = false
   ;
 
@@ -1144,27 +1146,27 @@ class PipelineParameter extends GeneratedMessage {
   }
   static PipelineParameter _defaultInstance;
   static void $checkItem(PipelineParameter v) {
-    if (v is !PipelineParameter) checkItemFailed(v, 'PipelineParameter');
+    if (v is! PipelineParameter) checkItemFailed(v, 'PipelineParameter');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_get(1, 2, '');
-  void set description(String v) { $_setString(1, 2, v); }
-  bool hasDescription() => $_has(1, 2);
+  String get description => $_getS(1, '');
+  set description(String v) { $_setString(1, v); }
+  bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  String get defaultValue => $_get(2, 5, '');
-  void set defaultValue(String v) { $_setString(2, 5, v); }
-  bool hasDefaultValue() => $_has(2, 5);
+  String get defaultValue => $_getS(2, '');
+  set defaultValue(String v) { $_setString(2, v); }
+  bool hasDefaultValue() => $_has(2);
   void clearDefaultValue() => clearField(5);
 
-  PipelineParameter_LocalCopy get localCopy => $_get(3, 6, null);
-  void set localCopy(PipelineParameter_LocalCopy v) { setField(6, v); }
-  bool hasLocalCopy() => $_has(3, 6);
+  PipelineParameter_LocalCopy get localCopy => $_getN(3);
+  set localCopy(PipelineParameter_LocalCopy v) { setField(6, v); }
+  bool hasLocalCopy() => $_has(3);
   void clearLocalCopy() => clearField(6);
 }
 
@@ -1172,8 +1174,8 @@ class _ReadonlyPipelineParameter extends PipelineParameter with ReadonlyMessageM
 
 class DockerExecutor extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DockerExecutor')
-    ..a/*<String>*/(1, 'imageName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'cmd', PbFieldType.OS)
+    ..aOS(1, 'imageName')
+    ..aOS(2, 'cmd')
     ..hasRequiredFields = false
   ;
 
@@ -1190,17 +1192,17 @@ class DockerExecutor extends GeneratedMessage {
   }
   static DockerExecutor _defaultInstance;
   static void $checkItem(DockerExecutor v) {
-    if (v is !DockerExecutor) checkItemFailed(v, 'DockerExecutor');
+    if (v is! DockerExecutor) checkItemFailed(v, 'DockerExecutor');
   }
 
-  String get imageName => $_get(0, 1, '');
-  void set imageName(String v) { $_setString(0, 1, v); }
-  bool hasImageName() => $_has(0, 1);
+  String get imageName => $_getS(0, '');
+  set imageName(String v) { $_setString(0, v); }
+  bool hasImageName() => $_has(0);
   void clearImageName() => clearField(1);
 
-  String get cmd => $_get(1, 2, '');
-  void set cmd(String v) { $_setString(1, 2, v); }
-  bool hasCmd() => $_has(1, 2);
+  String get cmd => $_getS(1, '');
+  set cmd(String v) { $_setString(1, v); }
+  bool hasCmd() => $_has(1);
   void clearCmd() => clearField(2);
 }
 
@@ -1212,31 +1214,31 @@ class PipelinesV1Alpha2Api {
 
   Future<Pipeline> createPipeline(ClientContext ctx, CreatePipelineRequest request) {
     var emptyResponse = new Pipeline();
-    return _client.invoke(ctx, 'PipelinesV1Alpha2', 'CreatePipeline', request, emptyResponse);
+    return _client.invoke<Pipeline>(ctx, 'PipelinesV1Alpha2', 'CreatePipeline', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> runPipeline(ClientContext ctx, RunPipelineRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'PipelinesV1Alpha2', 'RunPipeline', request, emptyResponse);
+  Future<$google$longrunning.Operation> runPipeline(ClientContext ctx, RunPipelineRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'PipelinesV1Alpha2', 'RunPipeline', request, emptyResponse);
   }
   Future<Pipeline> getPipeline(ClientContext ctx, GetPipelineRequest request) {
     var emptyResponse = new Pipeline();
-    return _client.invoke(ctx, 'PipelinesV1Alpha2', 'GetPipeline', request, emptyResponse);
+    return _client.invoke<Pipeline>(ctx, 'PipelinesV1Alpha2', 'GetPipeline', request, emptyResponse);
   }
   Future<ListPipelinesResponse> listPipelines(ClientContext ctx, ListPipelinesRequest request) {
     var emptyResponse = new ListPipelinesResponse();
-    return _client.invoke(ctx, 'PipelinesV1Alpha2', 'ListPipelines', request, emptyResponse);
+    return _client.invoke<ListPipelinesResponse>(ctx, 'PipelinesV1Alpha2', 'ListPipelines', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deletePipeline(ClientContext ctx, DeletePipelineRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'PipelinesV1Alpha2', 'DeletePipeline', request, emptyResponse);
+  Future<$google$protobuf.Empty> deletePipeline(ClientContext ctx, DeletePipelineRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'PipelinesV1Alpha2', 'DeletePipeline', request, emptyResponse);
   }
   Future<ControllerConfig> getControllerConfig(ClientContext ctx, GetControllerConfigRequest request) {
     var emptyResponse = new ControllerConfig();
-    return _client.invoke(ctx, 'PipelinesV1Alpha2', 'GetControllerConfig', request, emptyResponse);
+    return _client.invoke<ControllerConfig>(ctx, 'PipelinesV1Alpha2', 'GetControllerConfig', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> setOperationStatus(ClientContext ctx, SetOperationStatusRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'PipelinesV1Alpha2', 'SetOperationStatus', request, emptyResponse);
+  Future<$google$protobuf.Empty> setOperationStatus(ClientContext ctx, SetOperationStatusRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'PipelinesV1Alpha2', 'SetOperationStatus', request, emptyResponse);
   }
 }
 

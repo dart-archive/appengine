@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_authorization_config;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class AuthorizationConfig extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AuthorizationConfig')
-    ..a/*<String>*/(1, 'provider', PbFieldType.OS)
+    ..aOS(1, 'provider')
     ..hasRequiredFields = false
   ;
 
@@ -24,12 +27,12 @@ class AuthorizationConfig extends GeneratedMessage {
   }
   static AuthorizationConfig _defaultInstance;
   static void $checkItem(AuthorizationConfig v) {
-    if (v is !AuthorizationConfig) checkItemFailed(v, 'AuthorizationConfig');
+    if (v is! AuthorizationConfig) checkItemFailed(v, 'AuthorizationConfig');
   }
 
-  String get provider => $_get(0, 1, '');
-  void set provider(String v) { $_setString(0, 1, v); }
-  bool hasProvider() => $_has(0, 1);
+  String get provider => $_getS(0, '');
+  set provider(String v) { $_setString(0, v); }
+  bool hasProvider() => $_has(0);
   void clearProvider() => clearField(1);
 }
 

@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_experimental;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -9,7 +12,7 @@ import 'authorization_config.pb.dart';
 
 class Experimental extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Experimental')
-    ..a/*<AuthorizationConfig>*/(8, 'authorization', PbFieldType.OM, AuthorizationConfig.getDefault, AuthorizationConfig.create)
+    ..a<AuthorizationConfig>(8, 'authorization', PbFieldType.OM, AuthorizationConfig.getDefault, AuthorizationConfig.create)
     ..hasRequiredFields = false
   ;
 
@@ -26,12 +29,12 @@ class Experimental extends GeneratedMessage {
   }
   static Experimental _defaultInstance;
   static void $checkItem(Experimental v) {
-    if (v is !Experimental) checkItemFailed(v, 'Experimental');
+    if (v is! Experimental) checkItemFailed(v, 'Experimental');
   }
 
-  AuthorizationConfig get authorization => $_get(0, 8, null);
-  void set authorization(AuthorizationConfig v) { setField(8, v); }
-  bool hasAuthorization() => $_has(0, 8);
+  AuthorizationConfig get authorization => $_getN(0);
+  set authorization(AuthorizationConfig v) { setField(8, v); }
+  bool hasAuthorization() => $_has(0);
   void clearAuthorization() => clearField(8);
 }
 

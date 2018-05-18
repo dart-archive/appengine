@@ -1,16 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_datasets_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'datasets.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
-import '../../iam/v1/iam_policy.pb.dart' as google$iam$v1;
-import '../../iam/v1/policy.pb.dart' as google$iam$v1;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
+import '../../iam/v1/policy.pb.dart' as $google$iam$v1;
 import 'datasets.pbjson.dart';
 
 export 'datasets.pb.dart';
@@ -20,11 +20,11 @@ abstract class DatasetServiceV1ServiceBase extends GeneratedService {
   Future<Dataset> createDataset(ServerContext ctx, CreateDatasetRequest request);
   Future<Dataset> getDataset(ServerContext ctx, GetDatasetRequest request);
   Future<Dataset> updateDataset(ServerContext ctx, UpdateDatasetRequest request);
-  Future<google$protobuf.Empty> deleteDataset(ServerContext ctx, DeleteDatasetRequest request);
+  Future<$google$protobuf.Empty> deleteDataset(ServerContext ctx, DeleteDatasetRequest request);
   Future<Dataset> undeleteDataset(ServerContext ctx, UndeleteDatasetRequest request);
-  Future<google$iam$v1.Policy> setIamPolicy(ServerContext ctx, google$iam$v1.SetIamPolicyRequest request);
-  Future<google$iam$v1.Policy> getIamPolicy(ServerContext ctx, google$iam$v1.GetIamPolicyRequest request);
-  Future<google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ServerContext ctx, google$iam$v1.TestIamPermissionsRequest request);
+  Future<$google$iam$v1.Policy> setIamPolicy(ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
+  Future<$google$iam$v1.Policy> getIamPolicy(ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
+  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -34,9 +34,9 @@ abstract class DatasetServiceV1ServiceBase extends GeneratedService {
       case 'UpdateDataset': return new UpdateDatasetRequest();
       case 'DeleteDataset': return new DeleteDatasetRequest();
       case 'UndeleteDataset': return new UndeleteDatasetRequest();
-      case 'SetIamPolicy': return new google$iam$v1.SetIamPolicyRequest();
-      case 'GetIamPolicy': return new google$iam$v1.GetIamPolicyRequest();
-      case 'TestIamPermissions': return new google$iam$v1.TestIamPermissionsRequest();
+      case 'SetIamPolicy': return new $google$iam$v1.SetIamPolicyRequest();
+      case 'GetIamPolicy': return new $google$iam$v1.GetIamPolicyRequest();
+      case 'TestIamPermissions': return new $google$iam$v1.TestIamPermissionsRequest();
       default: throw new ArgumentError('Unknown method: $method');
     }
   }
@@ -57,6 +57,6 @@ abstract class DatasetServiceV1ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => DatasetServiceV1$json;
-  Map<String, dynamic> get $messageJson => DatasetServiceV1$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => DatasetServiceV1$messageJson;
 }
 

@@ -1,16 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_position;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Position extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Position')
-    ..a/*<String>*/(1, 'referenceName', PbFieldType.OS)
-    ..a/*<Int64>*/(2, 'position', PbFieldType.O6, Int64.ZERO)
-    ..a/*<bool>*/(3, 'reverseStrand', PbFieldType.OB)
+    ..aOS(1, 'referenceName')
+    ..aInt64(2, 'position')
+    ..aOB(3, 'reverseStrand')
     ..hasRequiredFields = false
   ;
 
@@ -27,22 +30,22 @@ class Position extends GeneratedMessage {
   }
   static Position _defaultInstance;
   static void $checkItem(Position v) {
-    if (v is !Position) checkItemFailed(v, 'Position');
+    if (v is! Position) checkItemFailed(v, 'Position');
   }
 
-  String get referenceName => $_get(0, 1, '');
-  void set referenceName(String v) { $_setString(0, 1, v); }
-  bool hasReferenceName() => $_has(0, 1);
+  String get referenceName => $_getS(0, '');
+  set referenceName(String v) { $_setString(0, v); }
+  bool hasReferenceName() => $_has(0);
   void clearReferenceName() => clearField(1);
 
-  Int64 get position => $_get(1, 2, null);
-  void set position(Int64 v) { $_setInt64(1, 2, v); }
-  bool hasPosition() => $_has(1, 2);
+  Int64 get position => $_getI64(1);
+  set position(Int64 v) { $_setInt64(1, v); }
+  bool hasPosition() => $_has(1);
   void clearPosition() => clearField(2);
 
-  bool get reverseStrand => $_get(2, 3, false);
-  void set reverseStrand(bool v) { $_setBool(2, 3, v); }
-  bool hasReverseStrand() => $_has(2, 3);
+  bool get reverseStrand => $_get(2, false);
+  set reverseStrand(bool v) { $_setBool(2, v); }
+  bool hasReverseStrand() => $_has(2);
   void clearReverseStrand() => clearField(3);
 }
 

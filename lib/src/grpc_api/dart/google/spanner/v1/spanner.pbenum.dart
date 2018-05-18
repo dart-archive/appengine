@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.v1_spanner_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class ExecuteSqlRequest_QueryMode extends ProtobufEnum {
@@ -19,7 +21,7 @@ class ExecuteSqlRequest_QueryMode extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static ExecuteSqlRequest_QueryMode valueOf(int value) => _byValue[value] as ExecuteSqlRequest_QueryMode;
   static void $checkItem(ExecuteSqlRequest_QueryMode v) {
-    if (v is !ExecuteSqlRequest_QueryMode) checkItemFailed(v, 'ExecuteSqlRequest_QueryMode');
+    if (v is! ExecuteSqlRequest_QueryMode) checkItemFailed(v, 'ExecuteSqlRequest_QueryMode');
   }
 
   const ExecuteSqlRequest_QueryMode._(int v, String n) : super(v, n);

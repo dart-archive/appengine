@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.admin.v2_common_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 const StorageType$json = const {
   '1': 'StorageType',

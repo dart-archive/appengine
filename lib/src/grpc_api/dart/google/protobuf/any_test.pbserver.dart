@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library protobuf_unittest_any_test_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'any_test.pb.dart';
 

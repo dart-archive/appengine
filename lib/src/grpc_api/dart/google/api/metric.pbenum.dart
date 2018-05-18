@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_metric_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class MetricDescriptor_MetricKind extends ProtobufEnum {
@@ -21,7 +23,7 @@ class MetricDescriptor_MetricKind extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static MetricDescriptor_MetricKind valueOf(int value) => _byValue[value] as MetricDescriptor_MetricKind;
   static void $checkItem(MetricDescriptor_MetricKind v) {
-    if (v is !MetricDescriptor_MetricKind) checkItemFailed(v, 'MetricDescriptor_MetricKind');
+    if (v is! MetricDescriptor_MetricKind) checkItemFailed(v, 'MetricDescriptor_MetricKind');
   }
 
   const MetricDescriptor_MetricKind._(int v, String n) : super(v, n);
@@ -49,7 +51,7 @@ class MetricDescriptor_ValueType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static MetricDescriptor_ValueType valueOf(int value) => _byValue[value] as MetricDescriptor_ValueType;
   static void $checkItem(MetricDescriptor_ValueType v) {
-    if (v is !MetricDescriptor_ValueType) checkItemFailed(v, 'MetricDescriptor_ValueType');
+    if (v is! MetricDescriptor_ValueType) checkItemFailed(v, 'MetricDescriptor_ValueType');
   }
 
   const MetricDescriptor_ValueType._(int v, String n) : super(v, n);

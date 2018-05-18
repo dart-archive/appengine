@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_appengine_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class VersionView extends ProtobufEnum {
@@ -17,7 +19,7 @@ class VersionView extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static VersionView valueOf(int value) => _byValue[value] as VersionView;
   static void $checkItem(VersionView v) {
-    if (v is !VersionView) checkItemFailed(v, 'VersionView');
+    if (v is! VersionView) checkItemFailed(v, 'VersionView');
   }
 
   const VersionView._(int v, String n) : super(v, n);

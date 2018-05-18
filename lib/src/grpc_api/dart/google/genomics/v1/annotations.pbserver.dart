@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_annotations_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'annotations.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'annotations.pbjson.dart';
 
 export 'annotations.pb.dart';
@@ -17,13 +17,13 @@ abstract class AnnotationServiceV1ServiceBase extends GeneratedService {
   Future<AnnotationSet> createAnnotationSet(ServerContext ctx, CreateAnnotationSetRequest request);
   Future<AnnotationSet> getAnnotationSet(ServerContext ctx, GetAnnotationSetRequest request);
   Future<AnnotationSet> updateAnnotationSet(ServerContext ctx, UpdateAnnotationSetRequest request);
-  Future<google$protobuf.Empty> deleteAnnotationSet(ServerContext ctx, DeleteAnnotationSetRequest request);
+  Future<$google$protobuf.Empty> deleteAnnotationSet(ServerContext ctx, DeleteAnnotationSetRequest request);
   Future<SearchAnnotationSetsResponse> searchAnnotationSets(ServerContext ctx, SearchAnnotationSetsRequest request);
   Future<Annotation> createAnnotation(ServerContext ctx, CreateAnnotationRequest request);
   Future<BatchCreateAnnotationsResponse> batchCreateAnnotations(ServerContext ctx, BatchCreateAnnotationsRequest request);
   Future<Annotation> getAnnotation(ServerContext ctx, GetAnnotationRequest request);
   Future<Annotation> updateAnnotation(ServerContext ctx, UpdateAnnotationRequest request);
-  Future<google$protobuf.Empty> deleteAnnotation(ServerContext ctx, DeleteAnnotationRequest request);
+  Future<$google$protobuf.Empty> deleteAnnotation(ServerContext ctx, DeleteAnnotationRequest request);
   Future<SearchAnnotationsResponse> searchAnnotations(ServerContext ctx, SearchAnnotationsRequest request);
 
   GeneratedMessage createRequest(String method) {
@@ -61,6 +61,6 @@ abstract class AnnotationServiceV1ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => AnnotationServiceV1$json;
-  Map<String, dynamic> get $messageJson => AnnotationServiceV1$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => AnnotationServiceV1$messageJson;
 }
 

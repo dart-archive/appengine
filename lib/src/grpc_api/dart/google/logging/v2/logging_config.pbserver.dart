@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.logging.v2_logging_config_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'logging_config.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'logging_config.pbjson.dart';
 
 export 'logging_config.pb.dart';
@@ -18,7 +18,12 @@ abstract class ConfigServiceV2ServiceBase extends GeneratedService {
   Future<LogSink> getSink(ServerContext ctx, GetSinkRequest request);
   Future<LogSink> createSink(ServerContext ctx, CreateSinkRequest request);
   Future<LogSink> updateSink(ServerContext ctx, UpdateSinkRequest request);
-  Future<google$protobuf.Empty> deleteSink(ServerContext ctx, DeleteSinkRequest request);
+  Future<$google$protobuf.Empty> deleteSink(ServerContext ctx, DeleteSinkRequest request);
+  Future<ListExclusionsResponse> listExclusions(ServerContext ctx, ListExclusionsRequest request);
+  Future<LogExclusion> getExclusion(ServerContext ctx, GetExclusionRequest request);
+  Future<LogExclusion> createExclusion(ServerContext ctx, CreateExclusionRequest request);
+  Future<LogExclusion> updateExclusion(ServerContext ctx, UpdateExclusionRequest request);
+  Future<$google$protobuf.Empty> deleteExclusion(ServerContext ctx, DeleteExclusionRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -27,6 +32,11 @@ abstract class ConfigServiceV2ServiceBase extends GeneratedService {
       case 'CreateSink': return new CreateSinkRequest();
       case 'UpdateSink': return new UpdateSinkRequest();
       case 'DeleteSink': return new DeleteSinkRequest();
+      case 'ListExclusions': return new ListExclusionsRequest();
+      case 'GetExclusion': return new GetExclusionRequest();
+      case 'CreateExclusion': return new CreateExclusionRequest();
+      case 'UpdateExclusion': return new UpdateExclusionRequest();
+      case 'DeleteExclusion': return new DeleteExclusionRequest();
       default: throw new ArgumentError('Unknown method: $method');
     }
   }
@@ -38,11 +48,16 @@ abstract class ConfigServiceV2ServiceBase extends GeneratedService {
       case 'CreateSink': return this.createSink(ctx, request);
       case 'UpdateSink': return this.updateSink(ctx, request);
       case 'DeleteSink': return this.deleteSink(ctx, request);
+      case 'ListExclusions': return this.listExclusions(ctx, request);
+      case 'GetExclusion': return this.getExclusion(ctx, request);
+      case 'CreateExclusion': return this.createExclusion(ctx, request);
+      case 'UpdateExclusion': return this.updateExclusion(ctx, request);
+      case 'DeleteExclusion': return this.deleteExclusion(ctx, request);
       default: throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => ConfigServiceV2$json;
-  Map<String, dynamic> get $messageJson => ConfigServiceV2$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => ConfigServiceV2$messageJson;
 }
 

@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_consumer;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,7 +14,7 @@ export 'consumer.pbenum.dart';
 
 class ProjectProperties extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ProjectProperties')
-    ..pp/*<Property>*/(1, 'properties', PbFieldType.PM, Property.$checkItem, Property.create)
+    ..pp<Property>(1, 'properties', PbFieldType.PM, Property.$checkItem, Property.create)
     ..hasRequiredFields = false
   ;
 
@@ -28,19 +31,19 @@ class ProjectProperties extends GeneratedMessage {
   }
   static ProjectProperties _defaultInstance;
   static void $checkItem(ProjectProperties v) {
-    if (v is !ProjectProperties) checkItemFailed(v, 'ProjectProperties');
+    if (v is! ProjectProperties) checkItemFailed(v, 'ProjectProperties');
   }
 
-  List<Property> get properties => $_get(0, 1, null);
+  List<Property> get properties => $_getList(0);
 }
 
 class _ReadonlyProjectProperties extends ProjectProperties with ReadonlyMessageMixin {}
 
 class Property extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Property')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..e/*<Property_PropertyType>*/(2, 'type', PbFieldType.OE, Property_PropertyType.UNSPECIFIED, Property_PropertyType.valueOf)
-    ..a/*<String>*/(3, 'description', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..e<Property_PropertyType>(2, 'type', PbFieldType.OE, Property_PropertyType.UNSPECIFIED, Property_PropertyType.valueOf, Property_PropertyType.values)
+    ..aOS(3, 'description')
     ..hasRequiredFields = false
   ;
 
@@ -57,22 +60,22 @@ class Property extends GeneratedMessage {
   }
   static Property _defaultInstance;
   static void $checkItem(Property v) {
-    if (v is !Property) checkItemFailed(v, 'Property');
+    if (v is! Property) checkItemFailed(v, 'Property');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Property_PropertyType get type => $_get(1, 2, null);
-  void set type(Property_PropertyType v) { setField(2, v); }
-  bool hasType() => $_has(1, 2);
+  Property_PropertyType get type => $_getN(1);
+  set type(Property_PropertyType v) { setField(2, v); }
+  bool hasType() => $_has(1);
   void clearType() => clearField(2);
 
-  String get description => $_get(2, 3, '');
-  void set description(String v) { $_setString(2, 3, v); }
-  bool hasDescription() => $_has(2, 3);
+  String get description => $_getS(2, '');
+  set description(String v) { $_setString(2, v); }
+  bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 }
 

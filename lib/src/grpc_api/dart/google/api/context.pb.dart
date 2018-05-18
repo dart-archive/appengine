@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_context;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Context extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Context')
-    ..pp/*<ContextRule>*/(1, 'rules', PbFieldType.PM, ContextRule.$checkItem, ContextRule.create)
+    ..pp<ContextRule>(1, 'rules', PbFieldType.PM, ContextRule.$checkItem, ContextRule.create)
     ..hasRequiredFields = false
   ;
 
@@ -24,19 +27,19 @@ class Context extends GeneratedMessage {
   }
   static Context _defaultInstance;
   static void $checkItem(Context v) {
-    if (v is !Context) checkItemFailed(v, 'Context');
+    if (v is! Context) checkItemFailed(v, 'Context');
   }
 
-  List<ContextRule> get rules => $_get(0, 1, null);
+  List<ContextRule> get rules => $_getList(0);
 }
 
 class _ReadonlyContext extends Context with ReadonlyMessageMixin {}
 
 class ContextRule extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ContextRule')
-    ..a/*<String>*/(1, 'selector', PbFieldType.OS)
-    ..p/*<String>*/(2, 'requested', PbFieldType.PS)
-    ..p/*<String>*/(3, 'provided', PbFieldType.PS)
+    ..aOS(1, 'selector')
+    ..pPS(2, 'requested')
+    ..pPS(3, 'provided')
     ..hasRequiredFields = false
   ;
 
@@ -53,17 +56,17 @@ class ContextRule extends GeneratedMessage {
   }
   static ContextRule _defaultInstance;
   static void $checkItem(ContextRule v) {
-    if (v is !ContextRule) checkItemFailed(v, 'ContextRule');
+    if (v is! ContextRule) checkItemFailed(v, 'ContextRule');
   }
 
-  String get selector => $_get(0, 1, '');
-  void set selector(String v) { $_setString(0, 1, v); }
-  bool hasSelector() => $_has(0, 1);
+  String get selector => $_getS(0, '');
+  set selector(String v) { $_setString(0, v); }
+  bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  List<String> get requested => $_get(1, 2, null);
+  List<String> get requested => $_getList(1);
 
-  List<String> get provided => $_get(2, 3, null);
+  List<String> get provided => $_getList(2);
 }
 
 class _ReadonlyContextRule extends ContextRule with ReadonlyMessageMixin {}

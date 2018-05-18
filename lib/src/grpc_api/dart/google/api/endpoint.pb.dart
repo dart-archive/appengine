@@ -1,17 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_endpoint;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Endpoint extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Endpoint')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..p/*<String>*/(2, 'aliases', PbFieldType.PS)
-    ..p/*<String>*/(3, 'apis', PbFieldType.PS)
-    ..p/*<String>*/(4, 'features', PbFieldType.PS)
-    ..a/*<bool>*/(5, 'allowCors', PbFieldType.OB)
+    ..aOS(1, 'name')
+    ..pPS(2, 'aliases')
+    ..pPS(3, 'apis')
+    ..pPS(4, 'features')
+    ..aOB(5, 'allowCors')
+    ..aOS(101, 'target')
     ..hasRequiredFields = false
   ;
 
@@ -28,24 +32,29 @@ class Endpoint extends GeneratedMessage {
   }
   static Endpoint _defaultInstance;
   static void $checkItem(Endpoint v) {
-    if (v is !Endpoint) checkItemFailed(v, 'Endpoint');
+    if (v is! Endpoint) checkItemFailed(v, 'Endpoint');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<String> get aliases => $_get(1, 2, null);
+  List<String> get aliases => $_getList(1);
 
-  List<String> get apis => $_get(2, 3, null);
+  List<String> get apis => $_getList(2);
 
-  List<String> get features => $_get(3, 4, null);
+  List<String> get features => $_getList(3);
 
-  bool get allowCors => $_get(4, 5, false);
-  void set allowCors(bool v) { $_setBool(4, 5, v); }
-  bool hasAllowCors() => $_has(4, 5);
+  bool get allowCors => $_get(4, false);
+  set allowCors(bool v) { $_setBool(4, v); }
+  bool hasAllowCors() => $_has(4);
   void clearAllowCors() => clearField(5);
+
+  String get target => $_getS(5, '');
+  set target(String v) { $_setString(5, v); }
+  bool hasTarget() => $_has(5);
+  void clearTarget() => clearField(101);
 }
 
 class _ReadonlyEndpoint extends Endpoint with ReadonlyMessageMixin {}

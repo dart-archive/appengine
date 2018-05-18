@@ -1,14 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_httpbody;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class HttpBody extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('HttpBody')
-    ..a/*<String>*/(1, 'contentType', PbFieldType.OS)
-    ..a/*<List<int>>*/(2, 'data', PbFieldType.OY)
+    ..aOS(1, 'contentType')
+    ..a<List<int>>(2, 'data', PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -25,17 +28,17 @@ class HttpBody extends GeneratedMessage {
   }
   static HttpBody _defaultInstance;
   static void $checkItem(HttpBody v) {
-    if (v is !HttpBody) checkItemFailed(v, 'HttpBody');
+    if (v is! HttpBody) checkItemFailed(v, 'HttpBody');
   }
 
-  String get contentType => $_get(0, 1, '');
-  void set contentType(String v) { $_setString(0, 1, v); }
-  bool hasContentType() => $_has(0, 1);
+  String get contentType => $_getS(0, '');
+  set contentType(String v) { $_setString(0, v); }
+  bool hasContentType() => $_has(0);
   void clearContentType() => clearField(1);
 
-  List<int> get data => $_get(1, 2, null);
-  void set data(List<int> v) { $_setBytes(1, 2, v); }
-  bool hasData() => $_has(1, 2);
+  List<int> get data => $_getN(1);
+  set data(List<int> v) { $_setBytes(1, v); }
+  bool hasData() => $_has(1);
   void clearData() => clearField(2);
 }
 

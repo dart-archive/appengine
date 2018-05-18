@@ -1,19 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouderrorreporting.v1beta1_report_errors_service;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/timestamp.pb.dart' as google$protobuf;
+import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 import 'common.pb.dart';
 
 class ReportErrorEventRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReportErrorEventRequest')
-    ..a/*<String>*/(1, 'projectName', PbFieldType.OS)
-    ..a/*<ReportedErrorEvent>*/(2, 'event', PbFieldType.OM, ReportedErrorEvent.getDefault, ReportedErrorEvent.create)
+    ..aOS(1, 'projectName')
+    ..a<ReportedErrorEvent>(2, 'event', PbFieldType.OM, ReportedErrorEvent.getDefault, ReportedErrorEvent.create)
     ..hasRequiredFields = false
   ;
 
@@ -30,17 +32,17 @@ class ReportErrorEventRequest extends GeneratedMessage {
   }
   static ReportErrorEventRequest _defaultInstance;
   static void $checkItem(ReportErrorEventRequest v) {
-    if (v is !ReportErrorEventRequest) checkItemFailed(v, 'ReportErrorEventRequest');
+    if (v is! ReportErrorEventRequest) checkItemFailed(v, 'ReportErrorEventRequest');
   }
 
-  String get projectName => $_get(0, 1, '');
-  void set projectName(String v) { $_setString(0, 1, v); }
-  bool hasProjectName() => $_has(0, 1);
+  String get projectName => $_getS(0, '');
+  set projectName(String v) { $_setString(0, v); }
+  bool hasProjectName() => $_has(0);
   void clearProjectName() => clearField(1);
 
-  ReportedErrorEvent get event => $_get(1, 2, null);
-  void set event(ReportedErrorEvent v) { setField(2, v); }
-  bool hasEvent() => $_has(1, 2);
+  ReportedErrorEvent get event => $_getN(1);
+  set event(ReportedErrorEvent v) { setField(2, v); }
+  bool hasEvent() => $_has(1);
   void clearEvent() => clearField(2);
 }
 
@@ -64,7 +66,7 @@ class ReportErrorEventResponse extends GeneratedMessage {
   }
   static ReportErrorEventResponse _defaultInstance;
   static void $checkItem(ReportErrorEventResponse v) {
-    if (v is !ReportErrorEventResponse) checkItemFailed(v, 'ReportErrorEventResponse');
+    if (v is! ReportErrorEventResponse) checkItemFailed(v, 'ReportErrorEventResponse');
   }
 }
 
@@ -72,10 +74,10 @@ class _ReadonlyReportErrorEventResponse extends ReportErrorEventResponse with Re
 
 class ReportedErrorEvent extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReportedErrorEvent')
-    ..a/*<google$protobuf.Timestamp>*/(1, 'eventTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<ServiceContext>*/(2, 'serviceContext', PbFieldType.OM, ServiceContext.getDefault, ServiceContext.create)
-    ..a/*<String>*/(3, 'message', PbFieldType.OS)
-    ..a/*<ErrorContext>*/(4, 'context', PbFieldType.OM, ErrorContext.getDefault, ErrorContext.create)
+    ..a<$google$protobuf.Timestamp>(1, 'eventTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<ServiceContext>(2, 'serviceContext', PbFieldType.OM, ServiceContext.getDefault, ServiceContext.create)
+    ..aOS(3, 'message')
+    ..a<ErrorContext>(4, 'context', PbFieldType.OM, ErrorContext.getDefault, ErrorContext.create)
     ..hasRequiredFields = false
   ;
 
@@ -92,27 +94,27 @@ class ReportedErrorEvent extends GeneratedMessage {
   }
   static ReportedErrorEvent _defaultInstance;
   static void $checkItem(ReportedErrorEvent v) {
-    if (v is !ReportedErrorEvent) checkItemFailed(v, 'ReportedErrorEvent');
+    if (v is! ReportedErrorEvent) checkItemFailed(v, 'ReportedErrorEvent');
   }
 
-  google$protobuf.Timestamp get eventTime => $_get(0, 1, null);
-  void set eventTime(google$protobuf.Timestamp v) { setField(1, v); }
-  bool hasEventTime() => $_has(0, 1);
+  $google$protobuf.Timestamp get eventTime => $_getN(0);
+  set eventTime($google$protobuf.Timestamp v) { setField(1, v); }
+  bool hasEventTime() => $_has(0);
   void clearEventTime() => clearField(1);
 
-  ServiceContext get serviceContext => $_get(1, 2, null);
-  void set serviceContext(ServiceContext v) { setField(2, v); }
-  bool hasServiceContext() => $_has(1, 2);
+  ServiceContext get serviceContext => $_getN(1);
+  set serviceContext(ServiceContext v) { setField(2, v); }
+  bool hasServiceContext() => $_has(1);
   void clearServiceContext() => clearField(2);
 
-  String get message => $_get(2, 3, '');
-  void set message(String v) { $_setString(2, 3, v); }
-  bool hasMessage() => $_has(2, 3);
+  String get message => $_getS(2, '');
+  set message(String v) { $_setString(2, v); }
+  bool hasMessage() => $_has(2);
   void clearMessage() => clearField(3);
 
-  ErrorContext get context => $_get(3, 4, null);
-  void set context(ErrorContext v) { setField(4, v); }
-  bool hasContext() => $_has(3, 4);
+  ErrorContext get context => $_getN(3);
+  set context(ErrorContext v) { setField(4, v); }
+  bool hasContext() => $_has(3);
   void clearContext() => clearField(4);
 }
 
@@ -124,7 +126,7 @@ class ReportErrorsServiceApi {
 
   Future<ReportErrorEventResponse> reportErrorEvent(ClientContext ctx, ReportErrorEventRequest request) {
     var emptyResponse = new ReportErrorEventResponse();
-    return _client.invoke(ctx, 'ReportErrorsService', 'ReportErrorEvent', request, emptyResponse);
+    return _client.invoke<ReportErrorEventResponse>(ctx, 'ReportErrorsService', 'ReportErrorEvent', request, emptyResponse);
   }
 }
 

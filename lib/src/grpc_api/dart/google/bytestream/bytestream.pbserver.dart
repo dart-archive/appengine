@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bytestream_bytestream_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -36,6 +36,6 @@ abstract class ByteStreamServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => ByteStream$json;
-  Map<String, dynamic> get $messageJson => ByteStream$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => ByteStream$messageJson;
 }
 

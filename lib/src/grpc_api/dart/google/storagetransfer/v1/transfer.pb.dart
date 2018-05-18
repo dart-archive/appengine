@@ -1,19 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.storagetransfer.v1_transfer;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 import 'transfer_types.pb.dart';
-import '../../protobuf/field_mask.pb.dart' as google$protobuf;
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class GetGoogleServiceAccountRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetGoogleServiceAccountRequest')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
+    ..aOS(1, 'projectId')
     ..hasRequiredFields = false
   ;
 
@@ -30,12 +32,12 @@ class GetGoogleServiceAccountRequest extends GeneratedMessage {
   }
   static GetGoogleServiceAccountRequest _defaultInstance;
   static void $checkItem(GetGoogleServiceAccountRequest v) {
-    if (v is !GetGoogleServiceAccountRequest) checkItemFailed(v, 'GetGoogleServiceAccountRequest');
+    if (v is! GetGoogleServiceAccountRequest) checkItemFailed(v, 'GetGoogleServiceAccountRequest');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 }
 
@@ -43,7 +45,7 @@ class _ReadonlyGetGoogleServiceAccountRequest extends GetGoogleServiceAccountReq
 
 class CreateTransferJobRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateTransferJobRequest')
-    ..a/*<TransferJob>*/(1, 'transferJob', PbFieldType.OM, TransferJob.getDefault, TransferJob.create)
+    ..a<TransferJob>(1, 'transferJob', PbFieldType.OM, TransferJob.getDefault, TransferJob.create)
     ..hasRequiredFields = false
   ;
 
@@ -60,12 +62,12 @@ class CreateTransferJobRequest extends GeneratedMessage {
   }
   static CreateTransferJobRequest _defaultInstance;
   static void $checkItem(CreateTransferJobRequest v) {
-    if (v is !CreateTransferJobRequest) checkItemFailed(v, 'CreateTransferJobRequest');
+    if (v is! CreateTransferJobRequest) checkItemFailed(v, 'CreateTransferJobRequest');
   }
 
-  TransferJob get transferJob => $_get(0, 1, null);
-  void set transferJob(TransferJob v) { setField(1, v); }
-  bool hasTransferJob() => $_has(0, 1);
+  TransferJob get transferJob => $_getN(0);
+  set transferJob(TransferJob v) { setField(1, v); }
+  bool hasTransferJob() => $_has(0);
   void clearTransferJob() => clearField(1);
 }
 
@@ -73,10 +75,10 @@ class _ReadonlyCreateTransferJobRequest extends CreateTransferJobRequest with Re
 
 class UpdateTransferJobRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateTransferJobRequest')
-    ..a/*<String>*/(1, 'jobName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'projectId', PbFieldType.OS)
-    ..a/*<TransferJob>*/(3, 'transferJob', PbFieldType.OM, TransferJob.getDefault, TransferJob.create)
-    ..a/*<google$protobuf.FieldMask>*/(4, 'updateTransferJobFieldMask', PbFieldType.OM, google$protobuf.FieldMask.getDefault, google$protobuf.FieldMask.create)
+    ..aOS(1, 'jobName')
+    ..aOS(2, 'projectId')
+    ..a<TransferJob>(3, 'transferJob', PbFieldType.OM, TransferJob.getDefault, TransferJob.create)
+    ..a<$google$protobuf.FieldMask>(4, 'updateTransferJobFieldMask', PbFieldType.OM, $google$protobuf.FieldMask.getDefault, $google$protobuf.FieldMask.create)
     ..hasRequiredFields = false
   ;
 
@@ -93,27 +95,27 @@ class UpdateTransferJobRequest extends GeneratedMessage {
   }
   static UpdateTransferJobRequest _defaultInstance;
   static void $checkItem(UpdateTransferJobRequest v) {
-    if (v is !UpdateTransferJobRequest) checkItemFailed(v, 'UpdateTransferJobRequest');
+    if (v is! UpdateTransferJobRequest) checkItemFailed(v, 'UpdateTransferJobRequest');
   }
 
-  String get jobName => $_get(0, 1, '');
-  void set jobName(String v) { $_setString(0, 1, v); }
-  bool hasJobName() => $_has(0, 1);
+  String get jobName => $_getS(0, '');
+  set jobName(String v) { $_setString(0, v); }
+  bool hasJobName() => $_has(0);
   void clearJobName() => clearField(1);
 
-  String get projectId => $_get(1, 2, '');
-  void set projectId(String v) { $_setString(1, 2, v); }
-  bool hasProjectId() => $_has(1, 2);
+  String get projectId => $_getS(1, '');
+  set projectId(String v) { $_setString(1, v); }
+  bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 
-  TransferJob get transferJob => $_get(2, 3, null);
-  void set transferJob(TransferJob v) { setField(3, v); }
-  bool hasTransferJob() => $_has(2, 3);
+  TransferJob get transferJob => $_getN(2);
+  set transferJob(TransferJob v) { setField(3, v); }
+  bool hasTransferJob() => $_has(2);
   void clearTransferJob() => clearField(3);
 
-  google$protobuf.FieldMask get updateTransferJobFieldMask => $_get(3, 4, null);
-  void set updateTransferJobFieldMask(google$protobuf.FieldMask v) { setField(4, v); }
-  bool hasUpdateTransferJobFieldMask() => $_has(3, 4);
+  $google$protobuf.FieldMask get updateTransferJobFieldMask => $_getN(3);
+  set updateTransferJobFieldMask($google$protobuf.FieldMask v) { setField(4, v); }
+  bool hasUpdateTransferJobFieldMask() => $_has(3);
   void clearUpdateTransferJobFieldMask() => clearField(4);
 }
 
@@ -121,8 +123,8 @@ class _ReadonlyUpdateTransferJobRequest extends UpdateTransferJobRequest with Re
 
 class GetTransferJobRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetTransferJobRequest')
-    ..a/*<String>*/(1, 'jobName', PbFieldType.OS)
-    ..a/*<String>*/(2, 'projectId', PbFieldType.OS)
+    ..aOS(1, 'jobName')
+    ..aOS(2, 'projectId')
     ..hasRequiredFields = false
   ;
 
@@ -139,17 +141,17 @@ class GetTransferJobRequest extends GeneratedMessage {
   }
   static GetTransferJobRequest _defaultInstance;
   static void $checkItem(GetTransferJobRequest v) {
-    if (v is !GetTransferJobRequest) checkItemFailed(v, 'GetTransferJobRequest');
+    if (v is! GetTransferJobRequest) checkItemFailed(v, 'GetTransferJobRequest');
   }
 
-  String get jobName => $_get(0, 1, '');
-  void set jobName(String v) { $_setString(0, 1, v); }
-  bool hasJobName() => $_has(0, 1);
+  String get jobName => $_getS(0, '');
+  set jobName(String v) { $_setString(0, v); }
+  bool hasJobName() => $_has(0);
   void clearJobName() => clearField(1);
 
-  String get projectId => $_get(1, 2, '');
-  void set projectId(String v) { $_setString(1, 2, v); }
-  bool hasProjectId() => $_has(1, 2);
+  String get projectId => $_getS(1, '');
+  set projectId(String v) { $_setString(1, v); }
+  bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 }
 
@@ -157,9 +159,9 @@ class _ReadonlyGetTransferJobRequest extends GetTransferJobRequest with Readonly
 
 class ListTransferJobsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTransferJobsRequest')
-    ..a/*<String>*/(1, 'filter', PbFieldType.OS)
-    ..a/*<int>*/(4, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(5, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'filter')
+    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..aOS(5, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -176,22 +178,22 @@ class ListTransferJobsRequest extends GeneratedMessage {
   }
   static ListTransferJobsRequest _defaultInstance;
   static void $checkItem(ListTransferJobsRequest v) {
-    if (v is !ListTransferJobsRequest) checkItemFailed(v, 'ListTransferJobsRequest');
+    if (v is! ListTransferJobsRequest) checkItemFailed(v, 'ListTransferJobsRequest');
   }
 
-  String get filter => $_get(0, 1, '');
-  void set filter(String v) { $_setString(0, 1, v); }
-  bool hasFilter() => $_has(0, 1);
+  String get filter => $_getS(0, '');
+  set filter(String v) { $_setString(0, v); }
+  bool hasFilter() => $_has(0);
   void clearFilter() => clearField(1);
 
-  int get pageSize => $_get(1, 4, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 4, v); }
-  bool hasPageSize() => $_has(1, 4);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(4);
 
-  String get pageToken => $_get(2, 5, '');
-  void set pageToken(String v) { $_setString(2, 5, v); }
-  bool hasPageToken() => $_has(2, 5);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(5);
 }
 
@@ -199,8 +201,8 @@ class _ReadonlyListTransferJobsRequest extends ListTransferJobsRequest with Read
 
 class ListTransferJobsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTransferJobsResponse')
-    ..pp/*<TransferJob>*/(1, 'transferJobs', PbFieldType.PM, TransferJob.$checkItem, TransferJob.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<TransferJob>(1, 'transferJobs', PbFieldType.PM, TransferJob.$checkItem, TransferJob.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -217,14 +219,14 @@ class ListTransferJobsResponse extends GeneratedMessage {
   }
   static ListTransferJobsResponse _defaultInstance;
   static void $checkItem(ListTransferJobsResponse v) {
-    if (v is !ListTransferJobsResponse) checkItemFailed(v, 'ListTransferJobsResponse');
+    if (v is! ListTransferJobsResponse) checkItemFailed(v, 'ListTransferJobsResponse');
   }
 
-  List<TransferJob> get transferJobs => $_get(0, 1, null);
+  List<TransferJob> get transferJobs => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -232,7 +234,7 @@ class _ReadonlyListTransferJobsResponse extends ListTransferJobsResponse with Re
 
 class PauseTransferOperationRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PauseTransferOperationRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -249,12 +251,12 @@ class PauseTransferOperationRequest extends GeneratedMessage {
   }
   static PauseTransferOperationRequest _defaultInstance;
   static void $checkItem(PauseTransferOperationRequest v) {
-    if (v is !PauseTransferOperationRequest) checkItemFailed(v, 'PauseTransferOperationRequest');
+    if (v is! PauseTransferOperationRequest) checkItemFailed(v, 'PauseTransferOperationRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -262,7 +264,7 @@ class _ReadonlyPauseTransferOperationRequest extends PauseTransferOperationReque
 
 class ResumeTransferOperationRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ResumeTransferOperationRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -279,12 +281,12 @@ class ResumeTransferOperationRequest extends GeneratedMessage {
   }
   static ResumeTransferOperationRequest _defaultInstance;
   static void $checkItem(ResumeTransferOperationRequest v) {
-    if (v is !ResumeTransferOperationRequest) checkItemFailed(v, 'ResumeTransferOperationRequest');
+    if (v is! ResumeTransferOperationRequest) checkItemFailed(v, 'ResumeTransferOperationRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -296,31 +298,31 @@ class StorageTransferServiceApi {
 
   Future<GoogleServiceAccount> getGoogleServiceAccount(ClientContext ctx, GetGoogleServiceAccountRequest request) {
     var emptyResponse = new GoogleServiceAccount();
-    return _client.invoke(ctx, 'StorageTransferService', 'GetGoogleServiceAccount', request, emptyResponse);
+    return _client.invoke<GoogleServiceAccount>(ctx, 'StorageTransferService', 'GetGoogleServiceAccount', request, emptyResponse);
   }
   Future<TransferJob> createTransferJob(ClientContext ctx, CreateTransferJobRequest request) {
     var emptyResponse = new TransferJob();
-    return _client.invoke(ctx, 'StorageTransferService', 'CreateTransferJob', request, emptyResponse);
+    return _client.invoke<TransferJob>(ctx, 'StorageTransferService', 'CreateTransferJob', request, emptyResponse);
   }
   Future<TransferJob> updateTransferJob(ClientContext ctx, UpdateTransferJobRequest request) {
     var emptyResponse = new TransferJob();
-    return _client.invoke(ctx, 'StorageTransferService', 'UpdateTransferJob', request, emptyResponse);
+    return _client.invoke<TransferJob>(ctx, 'StorageTransferService', 'UpdateTransferJob', request, emptyResponse);
   }
   Future<TransferJob> getTransferJob(ClientContext ctx, GetTransferJobRequest request) {
     var emptyResponse = new TransferJob();
-    return _client.invoke(ctx, 'StorageTransferService', 'GetTransferJob', request, emptyResponse);
+    return _client.invoke<TransferJob>(ctx, 'StorageTransferService', 'GetTransferJob', request, emptyResponse);
   }
   Future<ListTransferJobsResponse> listTransferJobs(ClientContext ctx, ListTransferJobsRequest request) {
     var emptyResponse = new ListTransferJobsResponse();
-    return _client.invoke(ctx, 'StorageTransferService', 'ListTransferJobs', request, emptyResponse);
+    return _client.invoke<ListTransferJobsResponse>(ctx, 'StorageTransferService', 'ListTransferJobs', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> pauseTransferOperation(ClientContext ctx, PauseTransferOperationRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'StorageTransferService', 'PauseTransferOperation', request, emptyResponse);
+  Future<$google$protobuf.Empty> pauseTransferOperation(ClientContext ctx, PauseTransferOperationRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'StorageTransferService', 'PauseTransferOperation', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> resumeTransferOperation(ClientContext ctx, ResumeTransferOperationRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'StorageTransferService', 'ResumeTransferOperation', request, emptyResponse);
+  Future<$google$protobuf.Empty> resumeTransferOperation(ClientContext ctx, ResumeTransferOperationRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'StorageTransferService', 'ResumeTransferOperation', request, emptyResponse);
   }
 }
 

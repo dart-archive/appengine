@@ -1,22 +1,24 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.runtimeconfig.v1beta1_runtimeconfig;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 import 'resources.pb.dart';
-import '../../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../../protobuf/empty.pb.dart' as google$protobuf;
-import '../../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../longrunning/operations.pb.dart' as $google$longrunning;
 
 class ListConfigsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListConfigsRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -33,22 +35,22 @@ class ListConfigsRequest extends GeneratedMessage {
   }
   static ListConfigsRequest _defaultInstance;
   static void $checkItem(ListConfigsRequest v) {
-    if (v is !ListConfigsRequest) checkItemFailed(v, 'ListConfigsRequest');
+    if (v is! ListConfigsRequest) checkItemFailed(v, 'ListConfigsRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -56,8 +58,8 @@ class _ReadonlyListConfigsRequest extends ListConfigsRequest with ReadonlyMessag
 
 class ListConfigsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListConfigsResponse')
-    ..pp/*<RuntimeConfig>*/(1, 'configs', PbFieldType.PM, RuntimeConfig.$checkItem, RuntimeConfig.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<RuntimeConfig>(1, 'configs', PbFieldType.PM, RuntimeConfig.$checkItem, RuntimeConfig.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -74,14 +76,14 @@ class ListConfigsResponse extends GeneratedMessage {
   }
   static ListConfigsResponse _defaultInstance;
   static void $checkItem(ListConfigsResponse v) {
-    if (v is !ListConfigsResponse) checkItemFailed(v, 'ListConfigsResponse');
+    if (v is! ListConfigsResponse) checkItemFailed(v, 'ListConfigsResponse');
   }
 
-  List<RuntimeConfig> get configs => $_get(0, 1, null);
+  List<RuntimeConfig> get configs => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -89,7 +91,7 @@ class _ReadonlyListConfigsResponse extends ListConfigsResponse with ReadonlyMess
 
 class GetConfigRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetConfigRequest')
-    ..a/*<String>*/(2, 'name', PbFieldType.OS)
+    ..aOS(2, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -106,12 +108,12 @@ class GetConfigRequest extends GeneratedMessage {
   }
   static GetConfigRequest _defaultInstance;
   static void $checkItem(GetConfigRequest v) {
-    if (v is !GetConfigRequest) checkItemFailed(v, 'GetConfigRequest');
+    if (v is! GetConfigRequest) checkItemFailed(v, 'GetConfigRequest');
   }
 
-  String get name => $_get(0, 2, '');
-  void set name(String v) { $_setString(0, 2, v); }
-  bool hasName() => $_has(0, 2);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(2);
 }
 
@@ -119,9 +121,9 @@ class _ReadonlyGetConfigRequest extends GetConfigRequest with ReadonlyMessageMix
 
 class CreateConfigRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateConfigRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<RuntimeConfig>*/(2, 'config', PbFieldType.OM, RuntimeConfig.getDefault, RuntimeConfig.create)
-    ..a/*<String>*/(3, 'requestId', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..a<RuntimeConfig>(2, 'config', PbFieldType.OM, RuntimeConfig.getDefault, RuntimeConfig.create)
+    ..aOS(3, 'requestId')
     ..hasRequiredFields = false
   ;
 
@@ -138,22 +140,22 @@ class CreateConfigRequest extends GeneratedMessage {
   }
   static CreateConfigRequest _defaultInstance;
   static void $checkItem(CreateConfigRequest v) {
-    if (v is !CreateConfigRequest) checkItemFailed(v, 'CreateConfigRequest');
+    if (v is! CreateConfigRequest) checkItemFailed(v, 'CreateConfigRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  RuntimeConfig get config => $_get(1, 2, null);
-  void set config(RuntimeConfig v) { setField(2, v); }
-  bool hasConfig() => $_has(1, 2);
+  RuntimeConfig get config => $_getN(1);
+  set config(RuntimeConfig v) { setField(2, v); }
+  bool hasConfig() => $_has(1);
   void clearConfig() => clearField(2);
 
-  String get requestId => $_get(2, 3, '');
-  void set requestId(String v) { $_setString(2, 3, v); }
-  bool hasRequestId() => $_has(2, 3);
+  String get requestId => $_getS(2, '');
+  set requestId(String v) { $_setString(2, v); }
+  bool hasRequestId() => $_has(2);
   void clearRequestId() => clearField(3);
 }
 
@@ -161,8 +163,8 @@ class _ReadonlyCreateConfigRequest extends CreateConfigRequest with ReadonlyMess
 
 class UpdateConfigRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateConfigRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<RuntimeConfig>*/(2, 'config', PbFieldType.OM, RuntimeConfig.getDefault, RuntimeConfig.create)
+    ..aOS(1, 'name')
+    ..a<RuntimeConfig>(2, 'config', PbFieldType.OM, RuntimeConfig.getDefault, RuntimeConfig.create)
     ..hasRequiredFields = false
   ;
 
@@ -179,17 +181,17 @@ class UpdateConfigRequest extends GeneratedMessage {
   }
   static UpdateConfigRequest _defaultInstance;
   static void $checkItem(UpdateConfigRequest v) {
-    if (v is !UpdateConfigRequest) checkItemFailed(v, 'UpdateConfigRequest');
+    if (v is! UpdateConfigRequest) checkItemFailed(v, 'UpdateConfigRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  RuntimeConfig get config => $_get(1, 2, null);
-  void set config(RuntimeConfig v) { setField(2, v); }
-  bool hasConfig() => $_has(1, 2);
+  RuntimeConfig get config => $_getN(1);
+  set config(RuntimeConfig v) { setField(2, v); }
+  bool hasConfig() => $_has(1);
   void clearConfig() => clearField(2);
 }
 
@@ -197,7 +199,7 @@ class _ReadonlyUpdateConfigRequest extends UpdateConfigRequest with ReadonlyMess
 
 class DeleteConfigRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteConfigRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -214,12 +216,12 @@ class DeleteConfigRequest extends GeneratedMessage {
   }
   static DeleteConfigRequest _defaultInstance;
   static void $checkItem(DeleteConfigRequest v) {
-    if (v is !DeleteConfigRequest) checkItemFailed(v, 'DeleteConfigRequest');
+    if (v is! DeleteConfigRequest) checkItemFailed(v, 'DeleteConfigRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -227,10 +229,11 @@ class _ReadonlyDeleteConfigRequest extends DeleteConfigRequest with ReadonlyMess
 
 class ListVariablesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListVariablesRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<String>*/(2, 'filter', PbFieldType.OS)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(4, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..aOS(2, 'filter')
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'pageToken')
+    ..aOB(5, 'returnValues')
     ..hasRequiredFields = false
   ;
 
@@ -247,36 +250,41 @@ class ListVariablesRequest extends GeneratedMessage {
   }
   static ListVariablesRequest _defaultInstance;
   static void $checkItem(ListVariablesRequest v) {
-    if (v is !ListVariablesRequest) checkItemFailed(v, 'ListVariablesRequest');
+    if (v is! ListVariablesRequest) checkItemFailed(v, 'ListVariablesRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get filter => $_get(1, 2, '');
-  void set filter(String v) { $_setString(1, 2, v); }
-  bool hasFilter() => $_has(1, 2);
+  String get filter => $_getS(1, '');
+  set filter(String v) { $_setString(1, v); }
+  bool hasFilter() => $_has(1);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(2, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasPageSize() => $_has(2, 3);
+  int get pageSize => $_get(2, 0);
+  set pageSize(int v) { $_setSignedInt32(2, v); }
+  bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_get(3, 4, '');
-  void set pageToken(String v) { $_setString(3, 4, v); }
-  bool hasPageToken() => $_has(3, 4);
+  String get pageToken => $_getS(3, '');
+  set pageToken(String v) { $_setString(3, v); }
+  bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
+
+  bool get returnValues => $_get(4, false);
+  set returnValues(bool v) { $_setBool(4, v); }
+  bool hasReturnValues() => $_has(4);
+  void clearReturnValues() => clearField(5);
 }
 
 class _ReadonlyListVariablesRequest extends ListVariablesRequest with ReadonlyMessageMixin {}
 
 class ListVariablesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListVariablesResponse')
-    ..pp/*<Variable>*/(1, 'variables', PbFieldType.PM, Variable.$checkItem, Variable.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Variable>(1, 'variables', PbFieldType.PM, Variable.$checkItem, Variable.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -293,14 +301,14 @@ class ListVariablesResponse extends GeneratedMessage {
   }
   static ListVariablesResponse _defaultInstance;
   static void $checkItem(ListVariablesResponse v) {
-    if (v is !ListVariablesResponse) checkItemFailed(v, 'ListVariablesResponse');
+    if (v is! ListVariablesResponse) checkItemFailed(v, 'ListVariablesResponse');
   }
 
-  List<Variable> get variables => $_get(0, 1, null);
+  List<Variable> get variables => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -308,8 +316,8 @@ class _ReadonlyListVariablesResponse extends ListVariablesResponse with Readonly
 
 class WatchVariableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('WatchVariableRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<google$protobuf.Timestamp>*/(4, 'newerThan', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
+    ..aOS(1, 'name')
+    ..a<$google$protobuf.Timestamp>(4, 'newerThan', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -326,17 +334,17 @@ class WatchVariableRequest extends GeneratedMessage {
   }
   static WatchVariableRequest _defaultInstance;
   static void $checkItem(WatchVariableRequest v) {
-    if (v is !WatchVariableRequest) checkItemFailed(v, 'WatchVariableRequest');
+    if (v is! WatchVariableRequest) checkItemFailed(v, 'WatchVariableRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  google$protobuf.Timestamp get newerThan => $_get(1, 4, null);
-  void set newerThan(google$protobuf.Timestamp v) { setField(4, v); }
-  bool hasNewerThan() => $_has(1, 4);
+  $google$protobuf.Timestamp get newerThan => $_getN(1);
+  set newerThan($google$protobuf.Timestamp v) { setField(4, v); }
+  bool hasNewerThan() => $_has(1);
   void clearNewerThan() => clearField(4);
 }
 
@@ -344,7 +352,7 @@ class _ReadonlyWatchVariableRequest extends WatchVariableRequest with ReadonlyMe
 
 class GetVariableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetVariableRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -361,12 +369,12 @@ class GetVariableRequest extends GeneratedMessage {
   }
   static GetVariableRequest _defaultInstance;
   static void $checkItem(GetVariableRequest v) {
-    if (v is !GetVariableRequest) checkItemFailed(v, 'GetVariableRequest');
+    if (v is! GetVariableRequest) checkItemFailed(v, 'GetVariableRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -374,9 +382,9 @@ class _ReadonlyGetVariableRequest extends GetVariableRequest with ReadonlyMessag
 
 class CreateVariableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateVariableRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<Variable>*/(2, 'variable', PbFieldType.OM, Variable.getDefault, Variable.create)
-    ..a/*<String>*/(3, 'requestId', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..a<Variable>(2, 'variable', PbFieldType.OM, Variable.getDefault, Variable.create)
+    ..aOS(3, 'requestId')
     ..hasRequiredFields = false
   ;
 
@@ -393,22 +401,22 @@ class CreateVariableRequest extends GeneratedMessage {
   }
   static CreateVariableRequest _defaultInstance;
   static void $checkItem(CreateVariableRequest v) {
-    if (v is !CreateVariableRequest) checkItemFailed(v, 'CreateVariableRequest');
+    if (v is! CreateVariableRequest) checkItemFailed(v, 'CreateVariableRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  Variable get variable => $_get(1, 2, null);
-  void set variable(Variable v) { setField(2, v); }
-  bool hasVariable() => $_has(1, 2);
+  Variable get variable => $_getN(1);
+  set variable(Variable v) { setField(2, v); }
+  bool hasVariable() => $_has(1);
   void clearVariable() => clearField(2);
 
-  String get requestId => $_get(2, 3, '');
-  void set requestId(String v) { $_setString(2, 3, v); }
-  bool hasRequestId() => $_has(2, 3);
+  String get requestId => $_getS(2, '');
+  set requestId(String v) { $_setString(2, v); }
+  bool hasRequestId() => $_has(2);
   void clearRequestId() => clearField(3);
 }
 
@@ -416,8 +424,8 @@ class _ReadonlyCreateVariableRequest extends CreateVariableRequest with Readonly
 
 class UpdateVariableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateVariableRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<Variable>*/(2, 'variable', PbFieldType.OM, Variable.getDefault, Variable.create)
+    ..aOS(1, 'name')
+    ..a<Variable>(2, 'variable', PbFieldType.OM, Variable.getDefault, Variable.create)
     ..hasRequiredFields = false
   ;
 
@@ -434,17 +442,17 @@ class UpdateVariableRequest extends GeneratedMessage {
   }
   static UpdateVariableRequest _defaultInstance;
   static void $checkItem(UpdateVariableRequest v) {
-    if (v is !UpdateVariableRequest) checkItemFailed(v, 'UpdateVariableRequest');
+    if (v is! UpdateVariableRequest) checkItemFailed(v, 'UpdateVariableRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Variable get variable => $_get(1, 2, null);
-  void set variable(Variable v) { setField(2, v); }
-  bool hasVariable() => $_has(1, 2);
+  Variable get variable => $_getN(1);
+  set variable(Variable v) { setField(2, v); }
+  bool hasVariable() => $_has(1);
   void clearVariable() => clearField(2);
 }
 
@@ -452,8 +460,8 @@ class _ReadonlyUpdateVariableRequest extends UpdateVariableRequest with Readonly
 
 class DeleteVariableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteVariableRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<bool>*/(2, 'recursive', PbFieldType.OB)
+    ..aOS(1, 'name')
+    ..aOB(2, 'recursive')
     ..hasRequiredFields = false
   ;
 
@@ -470,17 +478,17 @@ class DeleteVariableRequest extends GeneratedMessage {
   }
   static DeleteVariableRequest _defaultInstance;
   static void $checkItem(DeleteVariableRequest v) {
-    if (v is !DeleteVariableRequest) checkItemFailed(v, 'DeleteVariableRequest');
+    if (v is! DeleteVariableRequest) checkItemFailed(v, 'DeleteVariableRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  bool get recursive => $_get(1, 2, false);
-  void set recursive(bool v) { $_setBool(1, 2, v); }
-  bool hasRecursive() => $_has(1, 2);
+  bool get recursive => $_get(1, false);
+  set recursive(bool v) { $_setBool(1, v); }
+  bool hasRecursive() => $_has(1);
   void clearRecursive() => clearField(2);
 }
 
@@ -488,9 +496,9 @@ class _ReadonlyDeleteVariableRequest extends DeleteVariableRequest with Readonly
 
 class ListWaitersRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListWaitersRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -507,22 +515,22 @@ class ListWaitersRequest extends GeneratedMessage {
   }
   static ListWaitersRequest _defaultInstance;
   static void $checkItem(ListWaitersRequest v) {
-    if (v is !ListWaitersRequest) checkItemFailed(v, 'ListWaitersRequest');
+    if (v is! ListWaitersRequest) checkItemFailed(v, 'ListWaitersRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -530,8 +538,8 @@ class _ReadonlyListWaitersRequest extends ListWaitersRequest with ReadonlyMessag
 
 class ListWaitersResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListWaitersResponse')
-    ..pp/*<Waiter>*/(1, 'waiters', PbFieldType.PM, Waiter.$checkItem, Waiter.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Waiter>(1, 'waiters', PbFieldType.PM, Waiter.$checkItem, Waiter.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -548,14 +556,14 @@ class ListWaitersResponse extends GeneratedMessage {
   }
   static ListWaitersResponse _defaultInstance;
   static void $checkItem(ListWaitersResponse v) {
-    if (v is !ListWaitersResponse) checkItemFailed(v, 'ListWaitersResponse');
+    if (v is! ListWaitersResponse) checkItemFailed(v, 'ListWaitersResponse');
   }
 
-  List<Waiter> get waiters => $_get(0, 1, null);
+  List<Waiter> get waiters => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -563,7 +571,7 @@ class _ReadonlyListWaitersResponse extends ListWaitersResponse with ReadonlyMess
 
 class GetWaiterRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetWaiterRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -580,12 +588,12 @@ class GetWaiterRequest extends GeneratedMessage {
   }
   static GetWaiterRequest _defaultInstance;
   static void $checkItem(GetWaiterRequest v) {
-    if (v is !GetWaiterRequest) checkItemFailed(v, 'GetWaiterRequest');
+    if (v is! GetWaiterRequest) checkItemFailed(v, 'GetWaiterRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -593,9 +601,9 @@ class _ReadonlyGetWaiterRequest extends GetWaiterRequest with ReadonlyMessageMix
 
 class CreateWaiterRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateWaiterRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<Waiter>*/(2, 'waiter', PbFieldType.OM, Waiter.getDefault, Waiter.create)
-    ..a/*<String>*/(3, 'requestId', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..a<Waiter>(2, 'waiter', PbFieldType.OM, Waiter.getDefault, Waiter.create)
+    ..aOS(3, 'requestId')
     ..hasRequiredFields = false
   ;
 
@@ -612,22 +620,22 @@ class CreateWaiterRequest extends GeneratedMessage {
   }
   static CreateWaiterRequest _defaultInstance;
   static void $checkItem(CreateWaiterRequest v) {
-    if (v is !CreateWaiterRequest) checkItemFailed(v, 'CreateWaiterRequest');
+    if (v is! CreateWaiterRequest) checkItemFailed(v, 'CreateWaiterRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  Waiter get waiter => $_get(1, 2, null);
-  void set waiter(Waiter v) { setField(2, v); }
-  bool hasWaiter() => $_has(1, 2);
+  Waiter get waiter => $_getN(1);
+  set waiter(Waiter v) { setField(2, v); }
+  bool hasWaiter() => $_has(1);
   void clearWaiter() => clearField(2);
 
-  String get requestId => $_get(2, 3, '');
-  void set requestId(String v) { $_setString(2, 3, v); }
-  bool hasRequestId() => $_has(2, 3);
+  String get requestId => $_getS(2, '');
+  set requestId(String v) { $_setString(2, v); }
+  bool hasRequestId() => $_has(2);
   void clearRequestId() => clearField(3);
 }
 
@@ -635,7 +643,7 @@ class _ReadonlyCreateWaiterRequest extends CreateWaiterRequest with ReadonlyMess
 
 class DeleteWaiterRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteWaiterRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -652,12 +660,12 @@ class DeleteWaiterRequest extends GeneratedMessage {
   }
   static DeleteWaiterRequest _defaultInstance;
   static void $checkItem(DeleteWaiterRequest v) {
-    if (v is !DeleteWaiterRequest) checkItemFailed(v, 'DeleteWaiterRequest');
+    if (v is! DeleteWaiterRequest) checkItemFailed(v, 'DeleteWaiterRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -669,63 +677,63 @@ class RuntimeConfigManagerApi {
 
   Future<ListConfigsResponse> listConfigs(ClientContext ctx, ListConfigsRequest request) {
     var emptyResponse = new ListConfigsResponse();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'ListConfigs', request, emptyResponse);
+    return _client.invoke<ListConfigsResponse>(ctx, 'RuntimeConfigManager', 'ListConfigs', request, emptyResponse);
   }
   Future<RuntimeConfig> getConfig(ClientContext ctx, GetConfigRequest request) {
     var emptyResponse = new RuntimeConfig();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'GetConfig', request, emptyResponse);
+    return _client.invoke<RuntimeConfig>(ctx, 'RuntimeConfigManager', 'GetConfig', request, emptyResponse);
   }
   Future<RuntimeConfig> createConfig(ClientContext ctx, CreateConfigRequest request) {
     var emptyResponse = new RuntimeConfig();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'CreateConfig', request, emptyResponse);
+    return _client.invoke<RuntimeConfig>(ctx, 'RuntimeConfigManager', 'CreateConfig', request, emptyResponse);
   }
   Future<RuntimeConfig> updateConfig(ClientContext ctx, UpdateConfigRequest request) {
     var emptyResponse = new RuntimeConfig();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'UpdateConfig', request, emptyResponse);
+    return _client.invoke<RuntimeConfig>(ctx, 'RuntimeConfigManager', 'UpdateConfig', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteConfig(ClientContext ctx, DeleteConfigRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'DeleteConfig', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteConfig(ClientContext ctx, DeleteConfigRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'RuntimeConfigManager', 'DeleteConfig', request, emptyResponse);
   }
   Future<ListVariablesResponse> listVariables(ClientContext ctx, ListVariablesRequest request) {
     var emptyResponse = new ListVariablesResponse();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'ListVariables', request, emptyResponse);
+    return _client.invoke<ListVariablesResponse>(ctx, 'RuntimeConfigManager', 'ListVariables', request, emptyResponse);
   }
   Future<Variable> getVariable(ClientContext ctx, GetVariableRequest request) {
     var emptyResponse = new Variable();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'GetVariable', request, emptyResponse);
+    return _client.invoke<Variable>(ctx, 'RuntimeConfigManager', 'GetVariable', request, emptyResponse);
   }
   Future<Variable> watchVariable(ClientContext ctx, WatchVariableRequest request) {
     var emptyResponse = new Variable();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'WatchVariable', request, emptyResponse);
+    return _client.invoke<Variable>(ctx, 'RuntimeConfigManager', 'WatchVariable', request, emptyResponse);
   }
   Future<Variable> createVariable(ClientContext ctx, CreateVariableRequest request) {
     var emptyResponse = new Variable();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'CreateVariable', request, emptyResponse);
+    return _client.invoke<Variable>(ctx, 'RuntimeConfigManager', 'CreateVariable', request, emptyResponse);
   }
   Future<Variable> updateVariable(ClientContext ctx, UpdateVariableRequest request) {
     var emptyResponse = new Variable();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'UpdateVariable', request, emptyResponse);
+    return _client.invoke<Variable>(ctx, 'RuntimeConfigManager', 'UpdateVariable', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteVariable(ClientContext ctx, DeleteVariableRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'DeleteVariable', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteVariable(ClientContext ctx, DeleteVariableRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'RuntimeConfigManager', 'DeleteVariable', request, emptyResponse);
   }
   Future<ListWaitersResponse> listWaiters(ClientContext ctx, ListWaitersRequest request) {
     var emptyResponse = new ListWaitersResponse();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'ListWaiters', request, emptyResponse);
+    return _client.invoke<ListWaitersResponse>(ctx, 'RuntimeConfigManager', 'ListWaiters', request, emptyResponse);
   }
   Future<Waiter> getWaiter(ClientContext ctx, GetWaiterRequest request) {
     var emptyResponse = new Waiter();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'GetWaiter', request, emptyResponse);
+    return _client.invoke<Waiter>(ctx, 'RuntimeConfigManager', 'GetWaiter', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> createWaiter(ClientContext ctx, CreateWaiterRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'CreateWaiter', request, emptyResponse);
+  Future<$google$longrunning.Operation> createWaiter(ClientContext ctx, CreateWaiterRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'RuntimeConfigManager', 'CreateWaiter', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteWaiter(ClientContext ctx, DeleteWaiterRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'RuntimeConfigManager', 'DeleteWaiter', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteWaiter(ClientContext ctx, DeleteWaiterRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'RuntimeConfigManager', 'DeleteWaiter', request, emptyResponse);
   }
 }
 

@@ -1,5 +1,5 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicecontrol.v1_distribution_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 

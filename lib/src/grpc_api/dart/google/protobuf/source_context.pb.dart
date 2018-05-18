@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_source_context;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class SourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SourceContext')
-    ..a/*<String>*/(1, 'fileName', PbFieldType.OS)
+    ..aOS(1, 'fileName')
     ..hasRequiredFields = false
   ;
 
@@ -24,12 +27,12 @@ class SourceContext extends GeneratedMessage {
   }
   static SourceContext _defaultInstance;
   static void $checkItem(SourceContext v) {
-    if (v is !SourceContext) checkItemFailed(v, 'SourceContext');
+    if (v is! SourceContext) checkItemFailed(v, 'SourceContext');
   }
 
-  String get fileName => $_get(0, 1, '');
-  void set fileName(String v) { $_setString(0, 1, v); }
-  bool hasFileName() => $_has(0, 1);
+  String get fileName => $_getS(0, '');
+  set fileName(String v) { $_setString(0, v); }
+  bool hasFileName() => $_has(0);
   void clearFileName() => clearField(1);
 }
 

@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouderrorreporting.v1beta1_error_stats_service_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -36,6 +36,6 @@ abstract class ErrorStatsServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => ErrorStatsService$json;
-  Map<String, dynamic> get $messageJson => ErrorStatsService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => ErrorStatsService$messageJson;
 }
 

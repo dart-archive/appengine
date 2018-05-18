@@ -1,17 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_appengine;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 import 'service.pb.dart';
-import '../../protobuf/field_mask.pb.dart' as google$protobuf;
+import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
 import 'version.pb.dart';
 import 'instance.pb.dart';
-import '../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../longrunning/operations.pb.dart' as $google$longrunning;
 import 'application.pb.dart';
 
 import 'appengine.pbenum.dart';
@@ -20,7 +22,7 @@ export 'appengine.pbenum.dart';
 
 class GetApplicationRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetApplicationRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -37,12 +39,12 @@ class GetApplicationRequest extends GeneratedMessage {
   }
   static GetApplicationRequest _defaultInstance;
   static void $checkItem(GetApplicationRequest v) {
-    if (v is !GetApplicationRequest) checkItemFailed(v, 'GetApplicationRequest');
+    if (v is! GetApplicationRequest) checkItemFailed(v, 'GetApplicationRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -50,7 +52,7 @@ class _ReadonlyGetApplicationRequest extends GetApplicationRequest with Readonly
 
 class RepairApplicationRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RepairApplicationRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -67,12 +69,12 @@ class RepairApplicationRequest extends GeneratedMessage {
   }
   static RepairApplicationRequest _defaultInstance;
   static void $checkItem(RepairApplicationRequest v) {
-    if (v is !RepairApplicationRequest) checkItemFailed(v, 'RepairApplicationRequest');
+    if (v is! RepairApplicationRequest) checkItemFailed(v, 'RepairApplicationRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -80,9 +82,9 @@ class _ReadonlyRepairApplicationRequest extends RepairApplicationRequest with Re
 
 class ListServicesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServicesRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -99,22 +101,22 @@ class ListServicesRequest extends GeneratedMessage {
   }
   static ListServicesRequest _defaultInstance;
   static void $checkItem(ListServicesRequest v) {
-    if (v is !ListServicesRequest) checkItemFailed(v, 'ListServicesRequest');
+    if (v is! ListServicesRequest) checkItemFailed(v, 'ListServicesRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -122,8 +124,8 @@ class _ReadonlyListServicesRequest extends ListServicesRequest with ReadonlyMess
 
 class ListServicesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServicesResponse')
-    ..pp/*<Service>*/(1, 'services', PbFieldType.PM, Service.$checkItem, Service.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Service>(1, 'services', PbFieldType.PM, Service.$checkItem, Service.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -140,14 +142,14 @@ class ListServicesResponse extends GeneratedMessage {
   }
   static ListServicesResponse _defaultInstance;
   static void $checkItem(ListServicesResponse v) {
-    if (v is !ListServicesResponse) checkItemFailed(v, 'ListServicesResponse');
+    if (v is! ListServicesResponse) checkItemFailed(v, 'ListServicesResponse');
   }
 
-  List<Service> get services => $_get(0, 1, null);
+  List<Service> get services => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -155,7 +157,7 @@ class _ReadonlyListServicesResponse extends ListServicesResponse with ReadonlyMe
 
 class GetServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetServiceRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -172,12 +174,12 @@ class GetServiceRequest extends GeneratedMessage {
   }
   static GetServiceRequest _defaultInstance;
   static void $checkItem(GetServiceRequest v) {
-    if (v is !GetServiceRequest) checkItemFailed(v, 'GetServiceRequest');
+    if (v is! GetServiceRequest) checkItemFailed(v, 'GetServiceRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -185,10 +187,10 @@ class _ReadonlyGetServiceRequest extends GetServiceRequest with ReadonlyMessageM
 
 class UpdateServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateServiceRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<Service>*/(2, 'service', PbFieldType.OM, Service.getDefault, Service.create)
-    ..a/*<google$protobuf.FieldMask>*/(3, 'updateMask', PbFieldType.OM, google$protobuf.FieldMask.getDefault, google$protobuf.FieldMask.create)
-    ..a/*<bool>*/(4, 'migrateTraffic', PbFieldType.OB)
+    ..aOS(1, 'name')
+    ..a<Service>(2, 'service', PbFieldType.OM, Service.getDefault, Service.create)
+    ..a<$google$protobuf.FieldMask>(3, 'updateMask', PbFieldType.OM, $google$protobuf.FieldMask.getDefault, $google$protobuf.FieldMask.create)
+    ..aOB(4, 'migrateTraffic')
     ..hasRequiredFields = false
   ;
 
@@ -205,27 +207,27 @@ class UpdateServiceRequest extends GeneratedMessage {
   }
   static UpdateServiceRequest _defaultInstance;
   static void $checkItem(UpdateServiceRequest v) {
-    if (v is !UpdateServiceRequest) checkItemFailed(v, 'UpdateServiceRequest');
+    if (v is! UpdateServiceRequest) checkItemFailed(v, 'UpdateServiceRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Service get service => $_get(1, 2, null);
-  void set service(Service v) { setField(2, v); }
-  bool hasService() => $_has(1, 2);
+  Service get service => $_getN(1);
+  set service(Service v) { setField(2, v); }
+  bool hasService() => $_has(1);
   void clearService() => clearField(2);
 
-  google$protobuf.FieldMask get updateMask => $_get(2, 3, null);
-  void set updateMask(google$protobuf.FieldMask v) { setField(3, v); }
-  bool hasUpdateMask() => $_has(2, 3);
+  $google$protobuf.FieldMask get updateMask => $_getN(2);
+  set updateMask($google$protobuf.FieldMask v) { setField(3, v); }
+  bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 
-  bool get migrateTraffic => $_get(3, 4, false);
-  void set migrateTraffic(bool v) { $_setBool(3, 4, v); }
-  bool hasMigrateTraffic() => $_has(3, 4);
+  bool get migrateTraffic => $_get(3, false);
+  set migrateTraffic(bool v) { $_setBool(3, v); }
+  bool hasMigrateTraffic() => $_has(3);
   void clearMigrateTraffic() => clearField(4);
 }
 
@@ -233,7 +235,7 @@ class _ReadonlyUpdateServiceRequest extends UpdateServiceRequest with ReadonlyMe
 
 class DeleteServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteServiceRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -250,12 +252,12 @@ class DeleteServiceRequest extends GeneratedMessage {
   }
   static DeleteServiceRequest _defaultInstance;
   static void $checkItem(DeleteServiceRequest v) {
-    if (v is !DeleteServiceRequest) checkItemFailed(v, 'DeleteServiceRequest');
+    if (v is! DeleteServiceRequest) checkItemFailed(v, 'DeleteServiceRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -263,10 +265,10 @@ class _ReadonlyDeleteServiceRequest extends DeleteServiceRequest with ReadonlyMe
 
 class ListVersionsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListVersionsRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..e/*<VersionView>*/(2, 'view', PbFieldType.OE, VersionView.BASIC, VersionView.valueOf)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(4, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..e<VersionView>(2, 'view', PbFieldType.OE, VersionView.BASIC, VersionView.valueOf, VersionView.values)
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -283,27 +285,27 @@ class ListVersionsRequest extends GeneratedMessage {
   }
   static ListVersionsRequest _defaultInstance;
   static void $checkItem(ListVersionsRequest v) {
-    if (v is !ListVersionsRequest) checkItemFailed(v, 'ListVersionsRequest');
+    if (v is! ListVersionsRequest) checkItemFailed(v, 'ListVersionsRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  VersionView get view => $_get(1, 2, null);
-  void set view(VersionView v) { setField(2, v); }
-  bool hasView() => $_has(1, 2);
+  VersionView get view => $_getN(1);
+  set view(VersionView v) { setField(2, v); }
+  bool hasView() => $_has(1);
   void clearView() => clearField(2);
 
-  int get pageSize => $_get(2, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasPageSize() => $_has(2, 3);
+  int get pageSize => $_get(2, 0);
+  set pageSize(int v) { $_setSignedInt32(2, v); }
+  bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_get(3, 4, '');
-  void set pageToken(String v) { $_setString(3, 4, v); }
-  bool hasPageToken() => $_has(3, 4);
+  String get pageToken => $_getS(3, '');
+  set pageToken(String v) { $_setString(3, v); }
+  bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 }
 
@@ -311,8 +313,8 @@ class _ReadonlyListVersionsRequest extends ListVersionsRequest with ReadonlyMess
 
 class ListVersionsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListVersionsResponse')
-    ..pp/*<Version>*/(1, 'versions', PbFieldType.PM, Version.$checkItem, Version.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Version>(1, 'versions', PbFieldType.PM, Version.$checkItem, Version.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -329,14 +331,14 @@ class ListVersionsResponse extends GeneratedMessage {
   }
   static ListVersionsResponse _defaultInstance;
   static void $checkItem(ListVersionsResponse v) {
-    if (v is !ListVersionsResponse) checkItemFailed(v, 'ListVersionsResponse');
+    if (v is! ListVersionsResponse) checkItemFailed(v, 'ListVersionsResponse');
   }
 
-  List<Version> get versions => $_get(0, 1, null);
+  List<Version> get versions => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -344,8 +346,8 @@ class _ReadonlyListVersionsResponse extends ListVersionsResponse with ReadonlyMe
 
 class GetVersionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetVersionRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..e/*<VersionView>*/(2, 'view', PbFieldType.OE, VersionView.BASIC, VersionView.valueOf)
+    ..aOS(1, 'name')
+    ..e<VersionView>(2, 'view', PbFieldType.OE, VersionView.BASIC, VersionView.valueOf, VersionView.values)
     ..hasRequiredFields = false
   ;
 
@@ -362,17 +364,17 @@ class GetVersionRequest extends GeneratedMessage {
   }
   static GetVersionRequest _defaultInstance;
   static void $checkItem(GetVersionRequest v) {
-    if (v is !GetVersionRequest) checkItemFailed(v, 'GetVersionRequest');
+    if (v is! GetVersionRequest) checkItemFailed(v, 'GetVersionRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  VersionView get view => $_get(1, 2, null);
-  void set view(VersionView v) { setField(2, v); }
-  bool hasView() => $_has(1, 2);
+  VersionView get view => $_getN(1);
+  set view(VersionView v) { setField(2, v); }
+  bool hasView() => $_has(1);
   void clearView() => clearField(2);
 }
 
@@ -380,8 +382,8 @@ class _ReadonlyGetVersionRequest extends GetVersionRequest with ReadonlyMessageM
 
 class CreateVersionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateVersionRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<Version>*/(2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
+    ..aOS(1, 'parent')
+    ..a<Version>(2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
     ..hasRequiredFields = false
   ;
 
@@ -398,17 +400,17 @@ class CreateVersionRequest extends GeneratedMessage {
   }
   static CreateVersionRequest _defaultInstance;
   static void $checkItem(CreateVersionRequest v) {
-    if (v is !CreateVersionRequest) checkItemFailed(v, 'CreateVersionRequest');
+    if (v is! CreateVersionRequest) checkItemFailed(v, 'CreateVersionRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  Version get version => $_get(1, 2, null);
-  void set version(Version v) { setField(2, v); }
-  bool hasVersion() => $_has(1, 2);
+  Version get version => $_getN(1);
+  set version(Version v) { setField(2, v); }
+  bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 }
 
@@ -416,9 +418,9 @@ class _ReadonlyCreateVersionRequest extends CreateVersionRequest with ReadonlyMe
 
 class UpdateVersionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateVersionRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<Version>*/(2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
-    ..a/*<google$protobuf.FieldMask>*/(3, 'updateMask', PbFieldType.OM, google$protobuf.FieldMask.getDefault, google$protobuf.FieldMask.create)
+    ..aOS(1, 'name')
+    ..a<Version>(2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
+    ..a<$google$protobuf.FieldMask>(3, 'updateMask', PbFieldType.OM, $google$protobuf.FieldMask.getDefault, $google$protobuf.FieldMask.create)
     ..hasRequiredFields = false
   ;
 
@@ -435,22 +437,22 @@ class UpdateVersionRequest extends GeneratedMessage {
   }
   static UpdateVersionRequest _defaultInstance;
   static void $checkItem(UpdateVersionRequest v) {
-    if (v is !UpdateVersionRequest) checkItemFailed(v, 'UpdateVersionRequest');
+    if (v is! UpdateVersionRequest) checkItemFailed(v, 'UpdateVersionRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Version get version => $_get(1, 2, null);
-  void set version(Version v) { setField(2, v); }
-  bool hasVersion() => $_has(1, 2);
+  Version get version => $_getN(1);
+  set version(Version v) { setField(2, v); }
+  bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
-  google$protobuf.FieldMask get updateMask => $_get(2, 3, null);
-  void set updateMask(google$protobuf.FieldMask v) { setField(3, v); }
-  bool hasUpdateMask() => $_has(2, 3);
+  $google$protobuf.FieldMask get updateMask => $_getN(2);
+  set updateMask($google$protobuf.FieldMask v) { setField(3, v); }
+  bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
@@ -458,7 +460,7 @@ class _ReadonlyUpdateVersionRequest extends UpdateVersionRequest with ReadonlyMe
 
 class DeleteVersionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteVersionRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -475,12 +477,12 @@ class DeleteVersionRequest extends GeneratedMessage {
   }
   static DeleteVersionRequest _defaultInstance;
   static void $checkItem(DeleteVersionRequest v) {
-    if (v is !DeleteVersionRequest) checkItemFailed(v, 'DeleteVersionRequest');
+    if (v is! DeleteVersionRequest) checkItemFailed(v, 'DeleteVersionRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -488,9 +490,9 @@ class _ReadonlyDeleteVersionRequest extends DeleteVersionRequest with ReadonlyMe
 
 class ListInstancesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListInstancesRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -507,22 +509,22 @@ class ListInstancesRequest extends GeneratedMessage {
   }
   static ListInstancesRequest _defaultInstance;
   static void $checkItem(ListInstancesRequest v) {
-    if (v is !ListInstancesRequest) checkItemFailed(v, 'ListInstancesRequest');
+    if (v is! ListInstancesRequest) checkItemFailed(v, 'ListInstancesRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -530,8 +532,8 @@ class _ReadonlyListInstancesRequest extends ListInstancesRequest with ReadonlyMe
 
 class ListInstancesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListInstancesResponse')
-    ..pp/*<Instance>*/(1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Instance>(1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -548,14 +550,14 @@ class ListInstancesResponse extends GeneratedMessage {
   }
   static ListInstancesResponse _defaultInstance;
   static void $checkItem(ListInstancesResponse v) {
-    if (v is !ListInstancesResponse) checkItemFailed(v, 'ListInstancesResponse');
+    if (v is! ListInstancesResponse) checkItemFailed(v, 'ListInstancesResponse');
   }
 
-  List<Instance> get instances => $_get(0, 1, null);
+  List<Instance> get instances => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -563,7 +565,7 @@ class _ReadonlyListInstancesResponse extends ListInstancesResponse with Readonly
 
 class GetInstanceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetInstanceRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -580,12 +582,12 @@ class GetInstanceRequest extends GeneratedMessage {
   }
   static GetInstanceRequest _defaultInstance;
   static void $checkItem(GetInstanceRequest v) {
-    if (v is !GetInstanceRequest) checkItemFailed(v, 'GetInstanceRequest');
+    if (v is! GetInstanceRequest) checkItemFailed(v, 'GetInstanceRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -593,7 +595,7 @@ class _ReadonlyGetInstanceRequest extends GetInstanceRequest with ReadonlyMessag
 
 class DeleteInstanceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteInstanceRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -610,12 +612,12 @@ class DeleteInstanceRequest extends GeneratedMessage {
   }
   static DeleteInstanceRequest _defaultInstance;
   static void $checkItem(DeleteInstanceRequest v) {
-    if (v is !DeleteInstanceRequest) checkItemFailed(v, 'DeleteInstanceRequest');
+    if (v is! DeleteInstanceRequest) checkItemFailed(v, 'DeleteInstanceRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -623,7 +625,7 @@ class _ReadonlyDeleteInstanceRequest extends DeleteInstanceRequest with Readonly
 
 class DebugInstanceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DebugInstanceRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -640,12 +642,12 @@ class DebugInstanceRequest extends GeneratedMessage {
   }
   static DebugInstanceRequest _defaultInstance;
   static void $checkItem(DebugInstanceRequest v) {
-    if (v is !DebugInstanceRequest) checkItemFailed(v, 'DebugInstanceRequest');
+    if (v is! DebugInstanceRequest) checkItemFailed(v, 'DebugInstanceRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -657,19 +659,19 @@ class InstancesApi {
 
   Future<ListInstancesResponse> listInstances(ClientContext ctx, ListInstancesRequest request) {
     var emptyResponse = new ListInstancesResponse();
-    return _client.invoke(ctx, 'Instances', 'ListInstances', request, emptyResponse);
+    return _client.invoke<ListInstancesResponse>(ctx, 'Instances', 'ListInstances', request, emptyResponse);
   }
   Future<Instance> getInstance(ClientContext ctx, GetInstanceRequest request) {
     var emptyResponse = new Instance();
-    return _client.invoke(ctx, 'Instances', 'GetInstance', request, emptyResponse);
+    return _client.invoke<Instance>(ctx, 'Instances', 'GetInstance', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> deleteInstance(ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Instances', 'DeleteInstance', request, emptyResponse);
+  Future<$google$longrunning.Operation> deleteInstance(ClientContext ctx, DeleteInstanceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Instances', 'DeleteInstance', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> debugInstance(ClientContext ctx, DebugInstanceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Instances', 'DebugInstance', request, emptyResponse);
+  Future<$google$longrunning.Operation> debugInstance(ClientContext ctx, DebugInstanceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Instances', 'DebugInstance', request, emptyResponse);
   }
 }
 
@@ -679,23 +681,23 @@ class VersionsApi {
 
   Future<ListVersionsResponse> listVersions(ClientContext ctx, ListVersionsRequest request) {
     var emptyResponse = new ListVersionsResponse();
-    return _client.invoke(ctx, 'Versions', 'ListVersions', request, emptyResponse);
+    return _client.invoke<ListVersionsResponse>(ctx, 'Versions', 'ListVersions', request, emptyResponse);
   }
   Future<Version> getVersion(ClientContext ctx, GetVersionRequest request) {
     var emptyResponse = new Version();
-    return _client.invoke(ctx, 'Versions', 'GetVersion', request, emptyResponse);
+    return _client.invoke<Version>(ctx, 'Versions', 'GetVersion', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> createVersion(ClientContext ctx, CreateVersionRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Versions', 'CreateVersion', request, emptyResponse);
+  Future<$google$longrunning.Operation> createVersion(ClientContext ctx, CreateVersionRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Versions', 'CreateVersion', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> updateVersion(ClientContext ctx, UpdateVersionRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Versions', 'UpdateVersion', request, emptyResponse);
+  Future<$google$longrunning.Operation> updateVersion(ClientContext ctx, UpdateVersionRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Versions', 'UpdateVersion', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> deleteVersion(ClientContext ctx, DeleteVersionRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Versions', 'DeleteVersion', request, emptyResponse);
+  Future<$google$longrunning.Operation> deleteVersion(ClientContext ctx, DeleteVersionRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Versions', 'DeleteVersion', request, emptyResponse);
   }
 }
 
@@ -705,19 +707,19 @@ class ServicesApi {
 
   Future<ListServicesResponse> listServices(ClientContext ctx, ListServicesRequest request) {
     var emptyResponse = new ListServicesResponse();
-    return _client.invoke(ctx, 'Services', 'ListServices', request, emptyResponse);
+    return _client.invoke<ListServicesResponse>(ctx, 'Services', 'ListServices', request, emptyResponse);
   }
   Future<Service> getService(ClientContext ctx, GetServiceRequest request) {
     var emptyResponse = new Service();
-    return _client.invoke(ctx, 'Services', 'GetService', request, emptyResponse);
+    return _client.invoke<Service>(ctx, 'Services', 'GetService', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> updateService(ClientContext ctx, UpdateServiceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Services', 'UpdateService', request, emptyResponse);
+  Future<$google$longrunning.Operation> updateService(ClientContext ctx, UpdateServiceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Services', 'UpdateService', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> deleteService(ClientContext ctx, DeleteServiceRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Services', 'DeleteService', request, emptyResponse);
+  Future<$google$longrunning.Operation> deleteService(ClientContext ctx, DeleteServiceRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Services', 'DeleteService', request, emptyResponse);
   }
 }
 
@@ -727,11 +729,11 @@ class ApplicationsApi {
 
   Future<Application> getApplication(ClientContext ctx, GetApplicationRequest request) {
     var emptyResponse = new Application();
-    return _client.invoke(ctx, 'Applications', 'GetApplication', request, emptyResponse);
+    return _client.invoke<Application>(ctx, 'Applications', 'GetApplication', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> repairApplication(ClientContext ctx, RepairApplicationRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Applications', 'RepairApplication', request, emptyResponse);
+  Future<$google$longrunning.Operation> repairApplication(ClientContext ctx, RepairApplicationRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Applications', 'RepairApplication', request, emptyResponse);
   }
 }
 

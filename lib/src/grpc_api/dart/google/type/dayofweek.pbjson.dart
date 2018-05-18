@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.type_dayofweek_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 const DayOfWeek$json = const {
   '1': 'DayOfWeek',

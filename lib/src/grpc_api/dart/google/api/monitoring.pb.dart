@@ -1,14 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_monitoring;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Monitoring_MonitoringDestination extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Monitoring_MonitoringDestination')
-    ..a/*<String>*/(1, 'monitoredResource', PbFieldType.OS)
-    ..p/*<String>*/(2, 'metrics', PbFieldType.PS)
+    ..aOS(1, 'monitoredResource')
+    ..pPS(2, 'metrics')
     ..hasRequiredFields = false
   ;
 
@@ -25,23 +28,23 @@ class Monitoring_MonitoringDestination extends GeneratedMessage {
   }
   static Monitoring_MonitoringDestination _defaultInstance;
   static void $checkItem(Monitoring_MonitoringDestination v) {
-    if (v is !Monitoring_MonitoringDestination) checkItemFailed(v, 'Monitoring_MonitoringDestination');
+    if (v is! Monitoring_MonitoringDestination) checkItemFailed(v, 'Monitoring_MonitoringDestination');
   }
 
-  String get monitoredResource => $_get(0, 1, '');
-  void set monitoredResource(String v) { $_setString(0, 1, v); }
-  bool hasMonitoredResource() => $_has(0, 1);
+  String get monitoredResource => $_getS(0, '');
+  set monitoredResource(String v) { $_setString(0, v); }
+  bool hasMonitoredResource() => $_has(0);
   void clearMonitoredResource() => clearField(1);
 
-  List<String> get metrics => $_get(1, 2, null);
+  List<String> get metrics => $_getList(1);
 }
 
 class _ReadonlyMonitoring_MonitoringDestination extends Monitoring_MonitoringDestination with ReadonlyMessageMixin {}
 
 class Monitoring extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Monitoring')
-    ..pp/*<Monitoring_MonitoringDestination>*/(1, 'producerDestinations', PbFieldType.PM, Monitoring_MonitoringDestination.$checkItem, Monitoring_MonitoringDestination.create)
-    ..pp/*<Monitoring_MonitoringDestination>*/(2, 'consumerDestinations', PbFieldType.PM, Monitoring_MonitoringDestination.$checkItem, Monitoring_MonitoringDestination.create)
+    ..pp<Monitoring_MonitoringDestination>(1, 'producerDestinations', PbFieldType.PM, Monitoring_MonitoringDestination.$checkItem, Monitoring_MonitoringDestination.create)
+    ..pp<Monitoring_MonitoringDestination>(2, 'consumerDestinations', PbFieldType.PM, Monitoring_MonitoringDestination.$checkItem, Monitoring_MonitoringDestination.create)
     ..hasRequiredFields = false
   ;
 
@@ -58,12 +61,12 @@ class Monitoring extends GeneratedMessage {
   }
   static Monitoring _defaultInstance;
   static void $checkItem(Monitoring v) {
-    if (v is !Monitoring) checkItemFailed(v, 'Monitoring');
+    if (v is! Monitoring) checkItemFailed(v, 'Monitoring');
   }
 
-  List<Monitoring_MonitoringDestination> get producerDestinations => $_get(0, 1, null);
+  List<Monitoring_MonitoringDestination> get producerDestinations => $_getList(0);
 
-  List<Monitoring_MonitoringDestination> get consumerDestinations => $_get(1, 2, null);
+  List<Monitoring_MonitoringDestination> get consumerDestinations => $_getList(1);
 }
 
 class _ReadonlyMonitoring extends Monitoring with ReadonlyMessageMixin {}

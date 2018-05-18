@@ -1,17 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.billing.v1_cloud_billing;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class BillingAccount extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BillingAccount')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<bool>*/(2, 'open', PbFieldType.OB)
-    ..a/*<String>*/(3, 'displayName', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..aOB(2, 'open')
+    ..aOS(3, 'displayName')
     ..hasRequiredFields = false
   ;
 
@@ -28,22 +30,22 @@ class BillingAccount extends GeneratedMessage {
   }
   static BillingAccount _defaultInstance;
   static void $checkItem(BillingAccount v) {
-    if (v is !BillingAccount) checkItemFailed(v, 'BillingAccount');
+    if (v is! BillingAccount) checkItemFailed(v, 'BillingAccount');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  bool get open => $_get(1, 2, false);
-  void set open(bool v) { $_setBool(1, 2, v); }
-  bool hasOpen() => $_has(1, 2);
+  bool get open => $_get(1, false);
+  set open(bool v) { $_setBool(1, v); }
+  bool hasOpen() => $_has(1);
   void clearOpen() => clearField(2);
 
-  String get displayName => $_get(2, 3, '');
-  void set displayName(String v) { $_setString(2, 3, v); }
-  bool hasDisplayName() => $_has(2, 3);
+  String get displayName => $_getS(2, '');
+  set displayName(String v) { $_setString(2, v); }
+  bool hasDisplayName() => $_has(2);
   void clearDisplayName() => clearField(3);
 }
 
@@ -51,10 +53,10 @@ class _ReadonlyBillingAccount extends BillingAccount with ReadonlyMessageMixin {
 
 class ProjectBillingInfo extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ProjectBillingInfo')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(3, 'billingAccountName', PbFieldType.OS)
-    ..a/*<bool>*/(4, 'billingEnabled', PbFieldType.OB)
+    ..aOS(1, 'name')
+    ..aOS(2, 'projectId')
+    ..aOS(3, 'billingAccountName')
+    ..aOB(4, 'billingEnabled')
     ..hasRequiredFields = false
   ;
 
@@ -71,27 +73,27 @@ class ProjectBillingInfo extends GeneratedMessage {
   }
   static ProjectBillingInfo _defaultInstance;
   static void $checkItem(ProjectBillingInfo v) {
-    if (v is !ProjectBillingInfo) checkItemFailed(v, 'ProjectBillingInfo');
+    if (v is! ProjectBillingInfo) checkItemFailed(v, 'ProjectBillingInfo');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get projectId => $_get(1, 2, '');
-  void set projectId(String v) { $_setString(1, 2, v); }
-  bool hasProjectId() => $_has(1, 2);
+  String get projectId => $_getS(1, '');
+  set projectId(String v) { $_setString(1, v); }
+  bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 
-  String get billingAccountName => $_get(2, 3, '');
-  void set billingAccountName(String v) { $_setString(2, 3, v); }
-  bool hasBillingAccountName() => $_has(2, 3);
+  String get billingAccountName => $_getS(2, '');
+  set billingAccountName(String v) { $_setString(2, v); }
+  bool hasBillingAccountName() => $_has(2);
   void clearBillingAccountName() => clearField(3);
 
-  bool get billingEnabled => $_get(3, 4, false);
-  void set billingEnabled(bool v) { $_setBool(3, 4, v); }
-  bool hasBillingEnabled() => $_has(3, 4);
+  bool get billingEnabled => $_get(3, false);
+  set billingEnabled(bool v) { $_setBool(3, v); }
+  bool hasBillingEnabled() => $_has(3);
   void clearBillingEnabled() => clearField(4);
 }
 
@@ -99,7 +101,7 @@ class _ReadonlyProjectBillingInfo extends ProjectBillingInfo with ReadonlyMessag
 
 class GetBillingAccountRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetBillingAccountRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -116,12 +118,12 @@ class GetBillingAccountRequest extends GeneratedMessage {
   }
   static GetBillingAccountRequest _defaultInstance;
   static void $checkItem(GetBillingAccountRequest v) {
-    if (v is !GetBillingAccountRequest) checkItemFailed(v, 'GetBillingAccountRequest');
+    if (v is! GetBillingAccountRequest) checkItemFailed(v, 'GetBillingAccountRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -129,8 +131,8 @@ class _ReadonlyGetBillingAccountRequest extends GetBillingAccountRequest with Re
 
 class ListBillingAccountsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListBillingAccountsRequest')
-    ..a/*<int>*/(1, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(2, 'pageToken', PbFieldType.OS)
+    ..a<int>(1, 'pageSize', PbFieldType.O3)
+    ..aOS(2, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -147,17 +149,17 @@ class ListBillingAccountsRequest extends GeneratedMessage {
   }
   static ListBillingAccountsRequest _defaultInstance;
   static void $checkItem(ListBillingAccountsRequest v) {
-    if (v is !ListBillingAccountsRequest) checkItemFailed(v, 'ListBillingAccountsRequest');
+    if (v is! ListBillingAccountsRequest) checkItemFailed(v, 'ListBillingAccountsRequest');
   }
 
-  int get pageSize => $_get(0, 1, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasPageSize() => $_has(0, 1);
+  int get pageSize => $_get(0, 0);
+  set pageSize(int v) { $_setSignedInt32(0, v); }
+  bool hasPageSize() => $_has(0);
   void clearPageSize() => clearField(1);
 
-  String get pageToken => $_get(1, 2, '');
-  void set pageToken(String v) { $_setString(1, 2, v); }
-  bool hasPageToken() => $_has(1, 2);
+  String get pageToken => $_getS(1, '');
+  set pageToken(String v) { $_setString(1, v); }
+  bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 }
 
@@ -165,8 +167,8 @@ class _ReadonlyListBillingAccountsRequest extends ListBillingAccountsRequest wit
 
 class ListBillingAccountsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListBillingAccountsResponse')
-    ..pp/*<BillingAccount>*/(1, 'billingAccounts', PbFieldType.PM, BillingAccount.$checkItem, BillingAccount.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<BillingAccount>(1, 'billingAccounts', PbFieldType.PM, BillingAccount.$checkItem, BillingAccount.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -183,14 +185,14 @@ class ListBillingAccountsResponse extends GeneratedMessage {
   }
   static ListBillingAccountsResponse _defaultInstance;
   static void $checkItem(ListBillingAccountsResponse v) {
-    if (v is !ListBillingAccountsResponse) checkItemFailed(v, 'ListBillingAccountsResponse');
+    if (v is! ListBillingAccountsResponse) checkItemFailed(v, 'ListBillingAccountsResponse');
   }
 
-  List<BillingAccount> get billingAccounts => $_get(0, 1, null);
+  List<BillingAccount> get billingAccounts => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -198,9 +200,9 @@ class _ReadonlyListBillingAccountsResponse extends ListBillingAccountsResponse w
 
 class ListProjectBillingInfoRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListProjectBillingInfoRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -217,22 +219,22 @@ class ListProjectBillingInfoRequest extends GeneratedMessage {
   }
   static ListProjectBillingInfoRequest _defaultInstance;
   static void $checkItem(ListProjectBillingInfoRequest v) {
-    if (v is !ListProjectBillingInfoRequest) checkItemFailed(v, 'ListProjectBillingInfoRequest');
+    if (v is! ListProjectBillingInfoRequest) checkItemFailed(v, 'ListProjectBillingInfoRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -240,8 +242,8 @@ class _ReadonlyListProjectBillingInfoRequest extends ListProjectBillingInfoReque
 
 class ListProjectBillingInfoResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListProjectBillingInfoResponse')
-    ..pp/*<ProjectBillingInfo>*/(1, 'projectBillingInfo', PbFieldType.PM, ProjectBillingInfo.$checkItem, ProjectBillingInfo.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<ProjectBillingInfo>(1, 'projectBillingInfo', PbFieldType.PM, ProjectBillingInfo.$checkItem, ProjectBillingInfo.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -258,14 +260,14 @@ class ListProjectBillingInfoResponse extends GeneratedMessage {
   }
   static ListProjectBillingInfoResponse _defaultInstance;
   static void $checkItem(ListProjectBillingInfoResponse v) {
-    if (v is !ListProjectBillingInfoResponse) checkItemFailed(v, 'ListProjectBillingInfoResponse');
+    if (v is! ListProjectBillingInfoResponse) checkItemFailed(v, 'ListProjectBillingInfoResponse');
   }
 
-  List<ProjectBillingInfo> get projectBillingInfo => $_get(0, 1, null);
+  List<ProjectBillingInfo> get projectBillingInfo => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -273,7 +275,7 @@ class _ReadonlyListProjectBillingInfoResponse extends ListProjectBillingInfoResp
 
 class GetProjectBillingInfoRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetProjectBillingInfoRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -290,12 +292,12 @@ class GetProjectBillingInfoRequest extends GeneratedMessage {
   }
   static GetProjectBillingInfoRequest _defaultInstance;
   static void $checkItem(GetProjectBillingInfoRequest v) {
-    if (v is !GetProjectBillingInfoRequest) checkItemFailed(v, 'GetProjectBillingInfoRequest');
+    if (v is! GetProjectBillingInfoRequest) checkItemFailed(v, 'GetProjectBillingInfoRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -303,8 +305,8 @@ class _ReadonlyGetProjectBillingInfoRequest extends GetProjectBillingInfoRequest
 
 class UpdateProjectBillingInfoRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateProjectBillingInfoRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<ProjectBillingInfo>*/(2, 'projectBillingInfo', PbFieldType.OM, ProjectBillingInfo.getDefault, ProjectBillingInfo.create)
+    ..aOS(1, 'name')
+    ..a<ProjectBillingInfo>(2, 'projectBillingInfo', PbFieldType.OM, ProjectBillingInfo.getDefault, ProjectBillingInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -321,17 +323,17 @@ class UpdateProjectBillingInfoRequest extends GeneratedMessage {
   }
   static UpdateProjectBillingInfoRequest _defaultInstance;
   static void $checkItem(UpdateProjectBillingInfoRequest v) {
-    if (v is !UpdateProjectBillingInfoRequest) checkItemFailed(v, 'UpdateProjectBillingInfoRequest');
+    if (v is! UpdateProjectBillingInfoRequest) checkItemFailed(v, 'UpdateProjectBillingInfoRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  ProjectBillingInfo get projectBillingInfo => $_get(1, 2, null);
-  void set projectBillingInfo(ProjectBillingInfo v) { setField(2, v); }
-  bool hasProjectBillingInfo() => $_has(1, 2);
+  ProjectBillingInfo get projectBillingInfo => $_getN(1);
+  set projectBillingInfo(ProjectBillingInfo v) { setField(2, v); }
+  bool hasProjectBillingInfo() => $_has(1);
   void clearProjectBillingInfo() => clearField(2);
 }
 
@@ -343,23 +345,23 @@ class CloudBillingApi {
 
   Future<BillingAccount> getBillingAccount(ClientContext ctx, GetBillingAccountRequest request) {
     var emptyResponse = new BillingAccount();
-    return _client.invoke(ctx, 'CloudBilling', 'GetBillingAccount', request, emptyResponse);
+    return _client.invoke<BillingAccount>(ctx, 'CloudBilling', 'GetBillingAccount', request, emptyResponse);
   }
   Future<ListBillingAccountsResponse> listBillingAccounts(ClientContext ctx, ListBillingAccountsRequest request) {
     var emptyResponse = new ListBillingAccountsResponse();
-    return _client.invoke(ctx, 'CloudBilling', 'ListBillingAccounts', request, emptyResponse);
+    return _client.invoke<ListBillingAccountsResponse>(ctx, 'CloudBilling', 'ListBillingAccounts', request, emptyResponse);
   }
   Future<ListProjectBillingInfoResponse> listProjectBillingInfo(ClientContext ctx, ListProjectBillingInfoRequest request) {
     var emptyResponse = new ListProjectBillingInfoResponse();
-    return _client.invoke(ctx, 'CloudBilling', 'ListProjectBillingInfo', request, emptyResponse);
+    return _client.invoke<ListProjectBillingInfoResponse>(ctx, 'CloudBilling', 'ListProjectBillingInfo', request, emptyResponse);
   }
   Future<ProjectBillingInfo> getProjectBillingInfo(ClientContext ctx, GetProjectBillingInfoRequest request) {
     var emptyResponse = new ProjectBillingInfo();
-    return _client.invoke(ctx, 'CloudBilling', 'GetProjectBillingInfo', request, emptyResponse);
+    return _client.invoke<ProjectBillingInfo>(ctx, 'CloudBilling', 'GetProjectBillingInfo', request, emptyResponse);
   }
   Future<ProjectBillingInfo> updateProjectBillingInfo(ClientContext ctx, UpdateProjectBillingInfoRequest request) {
     var emptyResponse = new ProjectBillingInfo();
-    return _client.invoke(ctx, 'CloudBilling', 'UpdateProjectBillingInfo', request, emptyResponse);
+    return _client.invoke<ProjectBillingInfo>(ctx, 'CloudBilling', 'UpdateProjectBillingInfo', request, emptyResponse);
   }
 }
 

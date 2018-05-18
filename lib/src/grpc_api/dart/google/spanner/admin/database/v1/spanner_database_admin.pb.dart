@@ -1,17 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.admin.database.v1_spanner_database_admin;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../../../protobuf/empty.pb.dart' as google$protobuf;
-import '../../../../iam/v1/iam_policy.pb.dart' as google$iam$v1;
-import '../../../../iam/v1/policy.pb.dart' as google$iam$v1;
+import '../../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
+import '../../../../iam/v1/policy.pb.dart' as $google$iam$v1;
 
 import 'spanner_database_admin.pbenum.dart';
 
@@ -19,8 +21,8 @@ export 'spanner_database_admin.pbenum.dart';
 
 class Database extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Database')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..e/*<Database_State>*/(2, 'state', PbFieldType.OE, Database_State.STATE_UNSPECIFIED, Database_State.valueOf)
+    ..aOS(1, 'name')
+    ..e<Database_State>(2, 'state', PbFieldType.OE, Database_State.STATE_UNSPECIFIED, Database_State.valueOf, Database_State.values)
     ..hasRequiredFields = false
   ;
 
@@ -37,17 +39,17 @@ class Database extends GeneratedMessage {
   }
   static Database _defaultInstance;
   static void $checkItem(Database v) {
-    if (v is !Database) checkItemFailed(v, 'Database');
+    if (v is! Database) checkItemFailed(v, 'Database');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Database_State get state => $_get(1, 2, null);
-  void set state(Database_State v) { setField(2, v); }
-  bool hasState() => $_has(1, 2);
+  Database_State get state => $_getN(1);
+  set state(Database_State v) { setField(2, v); }
+  bool hasState() => $_has(1);
   void clearState() => clearField(2);
 }
 
@@ -55,9 +57,9 @@ class _ReadonlyDatabase extends Database with ReadonlyMessageMixin {}
 
 class ListDatabasesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListDatabasesRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(4, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'parent')
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -74,22 +76,22 @@ class ListDatabasesRequest extends GeneratedMessage {
   }
   static ListDatabasesRequest _defaultInstance;
   static void $checkItem(ListDatabasesRequest v) {
-    if (v is !ListDatabasesRequest) checkItemFailed(v, 'ListDatabasesRequest');
+    if (v is! ListDatabasesRequest) checkItemFailed(v, 'ListDatabasesRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 3, v); }
-  bool hasPageSize() => $_has(1, 3);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_get(2, 4, '');
-  void set pageToken(String v) { $_setString(2, 4, v); }
-  bool hasPageToken() => $_has(2, 4);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(4);
 }
 
@@ -97,8 +99,8 @@ class _ReadonlyListDatabasesRequest extends ListDatabasesRequest with ReadonlyMe
 
 class ListDatabasesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListDatabasesResponse')
-    ..pp/*<Database>*/(1, 'databases', PbFieldType.PM, Database.$checkItem, Database.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Database>(1, 'databases', PbFieldType.PM, Database.$checkItem, Database.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -115,14 +117,14 @@ class ListDatabasesResponse extends GeneratedMessage {
   }
   static ListDatabasesResponse _defaultInstance;
   static void $checkItem(ListDatabasesResponse v) {
-    if (v is !ListDatabasesResponse) checkItemFailed(v, 'ListDatabasesResponse');
+    if (v is! ListDatabasesResponse) checkItemFailed(v, 'ListDatabasesResponse');
   }
 
-  List<Database> get databases => $_get(0, 1, null);
+  List<Database> get databases => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -130,9 +132,9 @@ class _ReadonlyListDatabasesResponse extends ListDatabasesResponse with Readonly
 
 class CreateDatabaseRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateDatabaseRequest')
-    ..a/*<String>*/(1, 'parent', PbFieldType.OS)
-    ..a/*<String>*/(2, 'createStatement', PbFieldType.OS)
-    ..p/*<String>*/(3, 'extraStatements', PbFieldType.PS)
+    ..aOS(1, 'parent')
+    ..aOS(2, 'createStatement')
+    ..pPS(3, 'extraStatements')
     ..hasRequiredFields = false
   ;
 
@@ -149,27 +151,27 @@ class CreateDatabaseRequest extends GeneratedMessage {
   }
   static CreateDatabaseRequest _defaultInstance;
   static void $checkItem(CreateDatabaseRequest v) {
-    if (v is !CreateDatabaseRequest) checkItemFailed(v, 'CreateDatabaseRequest');
+    if (v is! CreateDatabaseRequest) checkItemFailed(v, 'CreateDatabaseRequest');
   }
 
-  String get parent => $_get(0, 1, '');
-  void set parent(String v) { $_setString(0, 1, v); }
-  bool hasParent() => $_has(0, 1);
+  String get parent => $_getS(0, '');
+  set parent(String v) { $_setString(0, v); }
+  bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get createStatement => $_get(1, 2, '');
-  void set createStatement(String v) { $_setString(1, 2, v); }
-  bool hasCreateStatement() => $_has(1, 2);
+  String get createStatement => $_getS(1, '');
+  set createStatement(String v) { $_setString(1, v); }
+  bool hasCreateStatement() => $_has(1);
   void clearCreateStatement() => clearField(2);
 
-  List<String> get extraStatements => $_get(2, 3, null);
+  List<String> get extraStatements => $_getList(2);
 }
 
 class _ReadonlyCreateDatabaseRequest extends CreateDatabaseRequest with ReadonlyMessageMixin {}
 
 class CreateDatabaseMetadata extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateDatabaseMetadata')
-    ..a/*<String>*/(1, 'database', PbFieldType.OS)
+    ..aOS(1, 'database')
     ..hasRequiredFields = false
   ;
 
@@ -186,12 +188,12 @@ class CreateDatabaseMetadata extends GeneratedMessage {
   }
   static CreateDatabaseMetadata _defaultInstance;
   static void $checkItem(CreateDatabaseMetadata v) {
-    if (v is !CreateDatabaseMetadata) checkItemFailed(v, 'CreateDatabaseMetadata');
+    if (v is! CreateDatabaseMetadata) checkItemFailed(v, 'CreateDatabaseMetadata');
   }
 
-  String get database => $_get(0, 1, '');
-  void set database(String v) { $_setString(0, 1, v); }
-  bool hasDatabase() => $_has(0, 1);
+  String get database => $_getS(0, '');
+  set database(String v) { $_setString(0, v); }
+  bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 }
 
@@ -199,7 +201,7 @@ class _ReadonlyCreateDatabaseMetadata extends CreateDatabaseMetadata with Readon
 
 class GetDatabaseRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetDatabaseRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -216,12 +218,12 @@ class GetDatabaseRequest extends GeneratedMessage {
   }
   static GetDatabaseRequest _defaultInstance;
   static void $checkItem(GetDatabaseRequest v) {
-    if (v is !GetDatabaseRequest) checkItemFailed(v, 'GetDatabaseRequest');
+    if (v is! GetDatabaseRequest) checkItemFailed(v, 'GetDatabaseRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -229,9 +231,9 @@ class _ReadonlyGetDatabaseRequest extends GetDatabaseRequest with ReadonlyMessag
 
 class UpdateDatabaseDdlRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateDatabaseDdlRequest')
-    ..a/*<String>*/(1, 'database', PbFieldType.OS)
-    ..p/*<String>*/(2, 'statements', PbFieldType.PS)
-    ..a/*<String>*/(3, 'operationId', PbFieldType.OS)
+    ..aOS(1, 'database')
+    ..pPS(2, 'statements')
+    ..aOS(3, 'operationId')
     ..hasRequiredFields = false
   ;
 
@@ -248,19 +250,19 @@ class UpdateDatabaseDdlRequest extends GeneratedMessage {
   }
   static UpdateDatabaseDdlRequest _defaultInstance;
   static void $checkItem(UpdateDatabaseDdlRequest v) {
-    if (v is !UpdateDatabaseDdlRequest) checkItemFailed(v, 'UpdateDatabaseDdlRequest');
+    if (v is! UpdateDatabaseDdlRequest) checkItemFailed(v, 'UpdateDatabaseDdlRequest');
   }
 
-  String get database => $_get(0, 1, '');
-  void set database(String v) { $_setString(0, 1, v); }
-  bool hasDatabase() => $_has(0, 1);
+  String get database => $_getS(0, '');
+  set database(String v) { $_setString(0, v); }
+  bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 
-  List<String> get statements => $_get(1, 2, null);
+  List<String> get statements => $_getList(1);
 
-  String get operationId => $_get(2, 3, '');
-  void set operationId(String v) { $_setString(2, 3, v); }
-  bool hasOperationId() => $_has(2, 3);
+  String get operationId => $_getS(2, '');
+  set operationId(String v) { $_setString(2, v); }
+  bool hasOperationId() => $_has(2);
   void clearOperationId() => clearField(3);
 }
 
@@ -268,9 +270,9 @@ class _ReadonlyUpdateDatabaseDdlRequest extends UpdateDatabaseDdlRequest with Re
 
 class UpdateDatabaseDdlMetadata extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateDatabaseDdlMetadata')
-    ..a/*<String>*/(1, 'database', PbFieldType.OS)
-    ..p/*<String>*/(2, 'statements', PbFieldType.PS)
-    ..pp/*<google$protobuf.Timestamp>*/(3, 'commitTimestamps', PbFieldType.PM, google$protobuf.Timestamp.$checkItem, google$protobuf.Timestamp.create)
+    ..aOS(1, 'database')
+    ..pPS(2, 'statements')
+    ..pp<$google$protobuf.Timestamp>(3, 'commitTimestamps', PbFieldType.PM, $google$protobuf.Timestamp.$checkItem, $google$protobuf.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -287,24 +289,24 @@ class UpdateDatabaseDdlMetadata extends GeneratedMessage {
   }
   static UpdateDatabaseDdlMetadata _defaultInstance;
   static void $checkItem(UpdateDatabaseDdlMetadata v) {
-    if (v is !UpdateDatabaseDdlMetadata) checkItemFailed(v, 'UpdateDatabaseDdlMetadata');
+    if (v is! UpdateDatabaseDdlMetadata) checkItemFailed(v, 'UpdateDatabaseDdlMetadata');
   }
 
-  String get database => $_get(0, 1, '');
-  void set database(String v) { $_setString(0, 1, v); }
-  bool hasDatabase() => $_has(0, 1);
+  String get database => $_getS(0, '');
+  set database(String v) { $_setString(0, v); }
+  bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 
-  List<String> get statements => $_get(1, 2, null);
+  List<String> get statements => $_getList(1);
 
-  List<google$protobuf.Timestamp> get commitTimestamps => $_get(2, 3, null);
+  List<$google$protobuf.Timestamp> get commitTimestamps => $_getList(2);
 }
 
 class _ReadonlyUpdateDatabaseDdlMetadata extends UpdateDatabaseDdlMetadata with ReadonlyMessageMixin {}
 
 class DropDatabaseRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DropDatabaseRequest')
-    ..a/*<String>*/(1, 'database', PbFieldType.OS)
+    ..aOS(1, 'database')
     ..hasRequiredFields = false
   ;
 
@@ -321,12 +323,12 @@ class DropDatabaseRequest extends GeneratedMessage {
   }
   static DropDatabaseRequest _defaultInstance;
   static void $checkItem(DropDatabaseRequest v) {
-    if (v is !DropDatabaseRequest) checkItemFailed(v, 'DropDatabaseRequest');
+    if (v is! DropDatabaseRequest) checkItemFailed(v, 'DropDatabaseRequest');
   }
 
-  String get database => $_get(0, 1, '');
-  void set database(String v) { $_setString(0, 1, v); }
-  bool hasDatabase() => $_has(0, 1);
+  String get database => $_getS(0, '');
+  set database(String v) { $_setString(0, v); }
+  bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 }
 
@@ -334,7 +336,7 @@ class _ReadonlyDropDatabaseRequest extends DropDatabaseRequest with ReadonlyMess
 
 class GetDatabaseDdlRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetDatabaseDdlRequest')
-    ..a/*<String>*/(1, 'database', PbFieldType.OS)
+    ..aOS(1, 'database')
     ..hasRequiredFields = false
   ;
 
@@ -351,12 +353,12 @@ class GetDatabaseDdlRequest extends GeneratedMessage {
   }
   static GetDatabaseDdlRequest _defaultInstance;
   static void $checkItem(GetDatabaseDdlRequest v) {
-    if (v is !GetDatabaseDdlRequest) checkItemFailed(v, 'GetDatabaseDdlRequest');
+    if (v is! GetDatabaseDdlRequest) checkItemFailed(v, 'GetDatabaseDdlRequest');
   }
 
-  String get database => $_get(0, 1, '');
-  void set database(String v) { $_setString(0, 1, v); }
-  bool hasDatabase() => $_has(0, 1);
+  String get database => $_getS(0, '');
+  set database(String v) { $_setString(0, v); }
+  bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 }
 
@@ -364,7 +366,7 @@ class _ReadonlyGetDatabaseDdlRequest extends GetDatabaseDdlRequest with Readonly
 
 class GetDatabaseDdlResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetDatabaseDdlResponse')
-    ..p/*<String>*/(1, 'statements', PbFieldType.PS)
+    ..pPS(1, 'statements')
     ..hasRequiredFields = false
   ;
 
@@ -381,10 +383,10 @@ class GetDatabaseDdlResponse extends GeneratedMessage {
   }
   static GetDatabaseDdlResponse _defaultInstance;
   static void $checkItem(GetDatabaseDdlResponse v) {
-    if (v is !GetDatabaseDdlResponse) checkItemFailed(v, 'GetDatabaseDdlResponse');
+    if (v is! GetDatabaseDdlResponse) checkItemFailed(v, 'GetDatabaseDdlResponse');
   }
 
-  List<String> get statements => $_get(0, 1, null);
+  List<String> get statements => $_getList(0);
 }
 
 class _ReadonlyGetDatabaseDdlResponse extends GetDatabaseDdlResponse with ReadonlyMessageMixin {}
@@ -395,39 +397,39 @@ class DatabaseAdminApi {
 
   Future<ListDatabasesResponse> listDatabases(ClientContext ctx, ListDatabasesRequest request) {
     var emptyResponse = new ListDatabasesResponse();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'ListDatabases', request, emptyResponse);
+    return _client.invoke<ListDatabasesResponse>(ctx, 'DatabaseAdmin', 'ListDatabases', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> createDatabase(ClientContext ctx, CreateDatabaseRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'CreateDatabase', request, emptyResponse);
+  Future<$google$longrunning.Operation> createDatabase(ClientContext ctx, CreateDatabaseRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'DatabaseAdmin', 'CreateDatabase', request, emptyResponse);
   }
   Future<Database> getDatabase(ClientContext ctx, GetDatabaseRequest request) {
     var emptyResponse = new Database();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'GetDatabase', request, emptyResponse);
+    return _client.invoke<Database>(ctx, 'DatabaseAdmin', 'GetDatabase', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> updateDatabaseDdl(ClientContext ctx, UpdateDatabaseDdlRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'UpdateDatabaseDdl', request, emptyResponse);
+  Future<$google$longrunning.Operation> updateDatabaseDdl(ClientContext ctx, UpdateDatabaseDdlRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'DatabaseAdmin', 'UpdateDatabaseDdl', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> dropDatabase(ClientContext ctx, DropDatabaseRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'DropDatabase', request, emptyResponse);
+  Future<$google$protobuf.Empty> dropDatabase(ClientContext ctx, DropDatabaseRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'DatabaseAdmin', 'DropDatabase', request, emptyResponse);
   }
   Future<GetDatabaseDdlResponse> getDatabaseDdl(ClientContext ctx, GetDatabaseDdlRequest request) {
     var emptyResponse = new GetDatabaseDdlResponse();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'GetDatabaseDdl', request, emptyResponse);
+    return _client.invoke<GetDatabaseDdlResponse>(ctx, 'DatabaseAdmin', 'GetDatabaseDdl', request, emptyResponse);
   }
-  Future<google$iam$v1.Policy> setIamPolicy(ClientContext ctx, google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new google$iam$v1.Policy();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'SetIamPolicy', request, emptyResponse);
+  Future<$google$iam$v1.Policy> setIamPolicy(ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
+    var emptyResponse = new $google$iam$v1.Policy();
+    return _client.invoke<$google$iam$v1.Policy>(ctx, 'DatabaseAdmin', 'SetIamPolicy', request, emptyResponse);
   }
-  Future<google$iam$v1.Policy> getIamPolicy(ClientContext ctx, google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new google$iam$v1.Policy();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'GetIamPolicy', request, emptyResponse);
+  Future<$google$iam$v1.Policy> getIamPolicy(ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
+    var emptyResponse = new $google$iam$v1.Policy();
+    return _client.invoke<$google$iam$v1.Policy>(ctx, 'DatabaseAdmin', 'GetIamPolicy', request, emptyResponse);
   }
-  Future<google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ClientContext ctx, google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new google$iam$v1.TestIamPermissionsResponse();
-    return _client.invoke(ctx, 'DatabaseAdmin', 'TestIamPermissions', request, emptyResponse);
+  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
+    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(ctx, 'DatabaseAdmin', 'TestIamPermissions', request, emptyResponse);
   }
 }
 

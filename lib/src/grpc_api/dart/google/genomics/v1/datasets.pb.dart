@@ -1,24 +1,26 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_datasets;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../protobuf/field_mask.pb.dart' as google$protobuf;
-import '../../protobuf/empty.pb.dart' as google$protobuf;
-import '../../iam/v1/iam_policy.pb.dart' as google$iam$v1;
-import '../../iam/v1/policy.pb.dart' as google$iam$v1;
+import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
+import '../../iam/v1/policy.pb.dart' as $google$iam$v1;
 
 class Dataset extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Dataset')
-    ..a/*<String>*/(1, 'id', PbFieldType.OS)
-    ..a/*<String>*/(2, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
-    ..a/*<google$protobuf.Timestamp>*/(4, 'createTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
+    ..aOS(1, 'id')
+    ..aOS(2, 'projectId')
+    ..aOS(3, 'name')
+    ..a<$google$protobuf.Timestamp>(4, 'createTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -35,27 +37,27 @@ class Dataset extends GeneratedMessage {
   }
   static Dataset _defaultInstance;
   static void $checkItem(Dataset v) {
-    if (v is !Dataset) checkItemFailed(v, 'Dataset');
+    if (v is! Dataset) checkItemFailed(v, 'Dataset');
   }
 
-  String get id => $_get(0, 1, '');
-  void set id(String v) { $_setString(0, 1, v); }
-  bool hasId() => $_has(0, 1);
+  String get id => $_getS(0, '');
+  set id(String v) { $_setString(0, v); }
+  bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get projectId => $_get(1, 2, '');
-  void set projectId(String v) { $_setString(1, 2, v); }
-  bool hasProjectId() => $_has(1, 2);
+  String get projectId => $_getS(1, '');
+  set projectId(String v) { $_setString(1, v); }
+  bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 
-  String get name => $_get(2, 3, '');
-  void set name(String v) { $_setString(2, 3, v); }
-  bool hasName() => $_has(2, 3);
+  String get name => $_getS(2, '');
+  set name(String v) { $_setString(2, v); }
+  bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  google$protobuf.Timestamp get createTime => $_get(3, 4, null);
-  void set createTime(google$protobuf.Timestamp v) { setField(4, v); }
-  bool hasCreateTime() => $_has(3, 4);
+  $google$protobuf.Timestamp get createTime => $_getN(3);
+  set createTime($google$protobuf.Timestamp v) { setField(4, v); }
+  bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 }
 
@@ -63,9 +65,9 @@ class _ReadonlyDataset extends Dataset with ReadonlyMessageMixin {}
 
 class ListDatasetsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListDatasetsRequest')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'projectId')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -82,22 +84,22 @@ class ListDatasetsRequest extends GeneratedMessage {
   }
   static ListDatasetsRequest _defaultInstance;
   static void $checkItem(ListDatasetsRequest v) {
-    if (v is !ListDatasetsRequest) checkItemFailed(v, 'ListDatasetsRequest');
+    if (v is! ListDatasetsRequest) checkItemFailed(v, 'ListDatasetsRequest');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -105,8 +107,8 @@ class _ReadonlyListDatasetsRequest extends ListDatasetsRequest with ReadonlyMess
 
 class ListDatasetsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListDatasetsResponse')
-    ..pp/*<Dataset>*/(1, 'datasets', PbFieldType.PM, Dataset.$checkItem, Dataset.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Dataset>(1, 'datasets', PbFieldType.PM, Dataset.$checkItem, Dataset.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -123,14 +125,14 @@ class ListDatasetsResponse extends GeneratedMessage {
   }
   static ListDatasetsResponse _defaultInstance;
   static void $checkItem(ListDatasetsResponse v) {
-    if (v is !ListDatasetsResponse) checkItemFailed(v, 'ListDatasetsResponse');
+    if (v is! ListDatasetsResponse) checkItemFailed(v, 'ListDatasetsResponse');
   }
 
-  List<Dataset> get datasets => $_get(0, 1, null);
+  List<Dataset> get datasets => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -138,7 +140,7 @@ class _ReadonlyListDatasetsResponse extends ListDatasetsResponse with ReadonlyMe
 
 class CreateDatasetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateDatasetRequest')
-    ..a/*<Dataset>*/(1, 'dataset', PbFieldType.OM, Dataset.getDefault, Dataset.create)
+    ..a<Dataset>(1, 'dataset', PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false
   ;
 
@@ -155,12 +157,12 @@ class CreateDatasetRequest extends GeneratedMessage {
   }
   static CreateDatasetRequest _defaultInstance;
   static void $checkItem(CreateDatasetRequest v) {
-    if (v is !CreateDatasetRequest) checkItemFailed(v, 'CreateDatasetRequest');
+    if (v is! CreateDatasetRequest) checkItemFailed(v, 'CreateDatasetRequest');
   }
 
-  Dataset get dataset => $_get(0, 1, null);
-  void set dataset(Dataset v) { setField(1, v); }
-  bool hasDataset() => $_has(0, 1);
+  Dataset get dataset => $_getN(0);
+  set dataset(Dataset v) { setField(1, v); }
+  bool hasDataset() => $_has(0);
   void clearDataset() => clearField(1);
 }
 
@@ -168,9 +170,9 @@ class _ReadonlyCreateDatasetRequest extends CreateDatasetRequest with ReadonlyMe
 
 class UpdateDatasetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateDatasetRequest')
-    ..a/*<String>*/(1, 'datasetId', PbFieldType.OS)
-    ..a/*<Dataset>*/(2, 'dataset', PbFieldType.OM, Dataset.getDefault, Dataset.create)
-    ..a/*<google$protobuf.FieldMask>*/(3, 'updateMask', PbFieldType.OM, google$protobuf.FieldMask.getDefault, google$protobuf.FieldMask.create)
+    ..aOS(1, 'datasetId')
+    ..a<Dataset>(2, 'dataset', PbFieldType.OM, Dataset.getDefault, Dataset.create)
+    ..a<$google$protobuf.FieldMask>(3, 'updateMask', PbFieldType.OM, $google$protobuf.FieldMask.getDefault, $google$protobuf.FieldMask.create)
     ..hasRequiredFields = false
   ;
 
@@ -187,22 +189,22 @@ class UpdateDatasetRequest extends GeneratedMessage {
   }
   static UpdateDatasetRequest _defaultInstance;
   static void $checkItem(UpdateDatasetRequest v) {
-    if (v is !UpdateDatasetRequest) checkItemFailed(v, 'UpdateDatasetRequest');
+    if (v is! UpdateDatasetRequest) checkItemFailed(v, 'UpdateDatasetRequest');
   }
 
-  String get datasetId => $_get(0, 1, '');
-  void set datasetId(String v) { $_setString(0, 1, v); }
-  bool hasDatasetId() => $_has(0, 1);
+  String get datasetId => $_getS(0, '');
+  set datasetId(String v) { $_setString(0, v); }
+  bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 
-  Dataset get dataset => $_get(1, 2, null);
-  void set dataset(Dataset v) { setField(2, v); }
-  bool hasDataset() => $_has(1, 2);
+  Dataset get dataset => $_getN(1);
+  set dataset(Dataset v) { setField(2, v); }
+  bool hasDataset() => $_has(1);
   void clearDataset() => clearField(2);
 
-  google$protobuf.FieldMask get updateMask => $_get(2, 3, null);
-  void set updateMask(google$protobuf.FieldMask v) { setField(3, v); }
-  bool hasUpdateMask() => $_has(2, 3);
+  $google$protobuf.FieldMask get updateMask => $_getN(2);
+  set updateMask($google$protobuf.FieldMask v) { setField(3, v); }
+  bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
@@ -210,7 +212,7 @@ class _ReadonlyUpdateDatasetRequest extends UpdateDatasetRequest with ReadonlyMe
 
 class DeleteDatasetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteDatasetRequest')
-    ..a/*<String>*/(1, 'datasetId', PbFieldType.OS)
+    ..aOS(1, 'datasetId')
     ..hasRequiredFields = false
   ;
 
@@ -227,12 +229,12 @@ class DeleteDatasetRequest extends GeneratedMessage {
   }
   static DeleteDatasetRequest _defaultInstance;
   static void $checkItem(DeleteDatasetRequest v) {
-    if (v is !DeleteDatasetRequest) checkItemFailed(v, 'DeleteDatasetRequest');
+    if (v is! DeleteDatasetRequest) checkItemFailed(v, 'DeleteDatasetRequest');
   }
 
-  String get datasetId => $_get(0, 1, '');
-  void set datasetId(String v) { $_setString(0, 1, v); }
-  bool hasDatasetId() => $_has(0, 1);
+  String get datasetId => $_getS(0, '');
+  set datasetId(String v) { $_setString(0, v); }
+  bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 }
 
@@ -240,7 +242,7 @@ class _ReadonlyDeleteDatasetRequest extends DeleteDatasetRequest with ReadonlyMe
 
 class UndeleteDatasetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UndeleteDatasetRequest')
-    ..a/*<String>*/(1, 'datasetId', PbFieldType.OS)
+    ..aOS(1, 'datasetId')
     ..hasRequiredFields = false
   ;
 
@@ -257,12 +259,12 @@ class UndeleteDatasetRequest extends GeneratedMessage {
   }
   static UndeleteDatasetRequest _defaultInstance;
   static void $checkItem(UndeleteDatasetRequest v) {
-    if (v is !UndeleteDatasetRequest) checkItemFailed(v, 'UndeleteDatasetRequest');
+    if (v is! UndeleteDatasetRequest) checkItemFailed(v, 'UndeleteDatasetRequest');
   }
 
-  String get datasetId => $_get(0, 1, '');
-  void set datasetId(String v) { $_setString(0, 1, v); }
-  bool hasDatasetId() => $_has(0, 1);
+  String get datasetId => $_getS(0, '');
+  set datasetId(String v) { $_setString(0, v); }
+  bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 }
 
@@ -270,7 +272,7 @@ class _ReadonlyUndeleteDatasetRequest extends UndeleteDatasetRequest with Readon
 
 class GetDatasetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetDatasetRequest')
-    ..a/*<String>*/(1, 'datasetId', PbFieldType.OS)
+    ..aOS(1, 'datasetId')
     ..hasRequiredFields = false
   ;
 
@@ -287,12 +289,12 @@ class GetDatasetRequest extends GeneratedMessage {
   }
   static GetDatasetRequest _defaultInstance;
   static void $checkItem(GetDatasetRequest v) {
-    if (v is !GetDatasetRequest) checkItemFailed(v, 'GetDatasetRequest');
+    if (v is! GetDatasetRequest) checkItemFailed(v, 'GetDatasetRequest');
   }
 
-  String get datasetId => $_get(0, 1, '');
-  void set datasetId(String v) { $_setString(0, 1, v); }
-  bool hasDatasetId() => $_has(0, 1);
+  String get datasetId => $_getS(0, '');
+  set datasetId(String v) { $_setString(0, v); }
+  bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 }
 
@@ -304,39 +306,39 @@ class DatasetServiceV1Api {
 
   Future<ListDatasetsResponse> listDatasets(ClientContext ctx, ListDatasetsRequest request) {
     var emptyResponse = new ListDatasetsResponse();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'ListDatasets', request, emptyResponse);
+    return _client.invoke<ListDatasetsResponse>(ctx, 'DatasetServiceV1', 'ListDatasets', request, emptyResponse);
   }
   Future<Dataset> createDataset(ClientContext ctx, CreateDatasetRequest request) {
     var emptyResponse = new Dataset();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'CreateDataset', request, emptyResponse);
+    return _client.invoke<Dataset>(ctx, 'DatasetServiceV1', 'CreateDataset', request, emptyResponse);
   }
   Future<Dataset> getDataset(ClientContext ctx, GetDatasetRequest request) {
     var emptyResponse = new Dataset();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'GetDataset', request, emptyResponse);
+    return _client.invoke<Dataset>(ctx, 'DatasetServiceV1', 'GetDataset', request, emptyResponse);
   }
   Future<Dataset> updateDataset(ClientContext ctx, UpdateDatasetRequest request) {
     var emptyResponse = new Dataset();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'UpdateDataset', request, emptyResponse);
+    return _client.invoke<Dataset>(ctx, 'DatasetServiceV1', 'UpdateDataset', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteDataset(ClientContext ctx, DeleteDatasetRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'DeleteDataset', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteDataset(ClientContext ctx, DeleteDatasetRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'DatasetServiceV1', 'DeleteDataset', request, emptyResponse);
   }
   Future<Dataset> undeleteDataset(ClientContext ctx, UndeleteDatasetRequest request) {
     var emptyResponse = new Dataset();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'UndeleteDataset', request, emptyResponse);
+    return _client.invoke<Dataset>(ctx, 'DatasetServiceV1', 'UndeleteDataset', request, emptyResponse);
   }
-  Future<google$iam$v1.Policy> setIamPolicy(ClientContext ctx, google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new google$iam$v1.Policy();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'SetIamPolicy', request, emptyResponse);
+  Future<$google$iam$v1.Policy> setIamPolicy(ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
+    var emptyResponse = new $google$iam$v1.Policy();
+    return _client.invoke<$google$iam$v1.Policy>(ctx, 'DatasetServiceV1', 'SetIamPolicy', request, emptyResponse);
   }
-  Future<google$iam$v1.Policy> getIamPolicy(ClientContext ctx, google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new google$iam$v1.Policy();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'GetIamPolicy', request, emptyResponse);
+  Future<$google$iam$v1.Policy> getIamPolicy(ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
+    var emptyResponse = new $google$iam$v1.Policy();
+    return _client.invoke<$google$iam$v1.Policy>(ctx, 'DatasetServiceV1', 'GetIamPolicy', request, emptyResponse);
   }
-  Future<google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ClientContext ctx, google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new google$iam$v1.TestIamPermissionsResponse();
-    return _client.invoke(ctx, 'DatasetServiceV1', 'TestIamPermissions', request, emptyResponse);
+  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
+    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(ctx, 'DatasetServiceV1', 'TestIamPermissions', request, emptyResponse);
   }
 }
 

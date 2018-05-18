@@ -1,18 +1,20 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.monitoring.v3_metric_service;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../api/monitored_resource.pb.dart' as google$api;
-import '../../api/metric.pb.dart' as google$api;
+import '../../api/monitored_resource.pb.dart' as $google$api;
+import '../../api/metric.pb.dart' as $google$api;
 import 'common.pb.dart';
 import 'metric.pb.dart';
-import '../../rpc/status.pb.dart' as google$rpc;
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../rpc/status.pb.dart' as $google$rpc;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 import 'metric_service.pbenum.dart';
 
@@ -20,10 +22,10 @@ export 'metric_service.pbenum.dart';
 
 class ListMonitoredResourceDescriptorsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListMonitoredResourceDescriptorsRequest')
-    ..a/*<String>*/(2, 'filter', PbFieldType.OS)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(4, 'pageToken', PbFieldType.OS)
-    ..a/*<String>*/(5, 'name', PbFieldType.OS)
+    ..aOS(2, 'filter')
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'pageToken')
+    ..aOS(5, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -40,27 +42,27 @@ class ListMonitoredResourceDescriptorsRequest extends GeneratedMessage {
   }
   static ListMonitoredResourceDescriptorsRequest _defaultInstance;
   static void $checkItem(ListMonitoredResourceDescriptorsRequest v) {
-    if (v is !ListMonitoredResourceDescriptorsRequest) checkItemFailed(v, 'ListMonitoredResourceDescriptorsRequest');
+    if (v is! ListMonitoredResourceDescriptorsRequest) checkItemFailed(v, 'ListMonitoredResourceDescriptorsRequest');
   }
 
-  String get filter => $_get(0, 2, '');
-  void set filter(String v) { $_setString(0, 2, v); }
-  bool hasFilter() => $_has(0, 2);
+  String get filter => $_getS(0, '');
+  set filter(String v) { $_setString(0, v); }
+  bool hasFilter() => $_has(0);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(1, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 3, v); }
-  bool hasPageSize() => $_has(1, 3);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_get(2, 4, '');
-  void set pageToken(String v) { $_setString(2, 4, v); }
-  bool hasPageToken() => $_has(2, 4);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(4);
 
-  String get name => $_get(3, 5, '');
-  void set name(String v) { $_setString(3, 5, v); }
-  bool hasName() => $_has(3, 5);
+  String get name => $_getS(3, '');
+  set name(String v) { $_setString(3, v); }
+  bool hasName() => $_has(3);
   void clearName() => clearField(5);
 }
 
@@ -68,8 +70,8 @@ class _ReadonlyListMonitoredResourceDescriptorsRequest extends ListMonitoredReso
 
 class ListMonitoredResourceDescriptorsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListMonitoredResourceDescriptorsResponse')
-    ..pp/*<google$api.MonitoredResourceDescriptor>*/(1, 'resourceDescriptors', PbFieldType.PM, google$api.MonitoredResourceDescriptor.$checkItem, google$api.MonitoredResourceDescriptor.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<$google$api.MonitoredResourceDescriptor>(1, 'resourceDescriptors', PbFieldType.PM, $google$api.MonitoredResourceDescriptor.$checkItem, $google$api.MonitoredResourceDescriptor.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -86,14 +88,14 @@ class ListMonitoredResourceDescriptorsResponse extends GeneratedMessage {
   }
   static ListMonitoredResourceDescriptorsResponse _defaultInstance;
   static void $checkItem(ListMonitoredResourceDescriptorsResponse v) {
-    if (v is !ListMonitoredResourceDescriptorsResponse) checkItemFailed(v, 'ListMonitoredResourceDescriptorsResponse');
+    if (v is! ListMonitoredResourceDescriptorsResponse) checkItemFailed(v, 'ListMonitoredResourceDescriptorsResponse');
   }
 
-  List<google$api.MonitoredResourceDescriptor> get resourceDescriptors => $_get(0, 1, null);
+  List<$google$api.MonitoredResourceDescriptor> get resourceDescriptors => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -101,7 +103,7 @@ class _ReadonlyListMonitoredResourceDescriptorsResponse extends ListMonitoredRes
 
 class GetMonitoredResourceDescriptorRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetMonitoredResourceDescriptorRequest')
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
+    ..aOS(3, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -118,12 +120,12 @@ class GetMonitoredResourceDescriptorRequest extends GeneratedMessage {
   }
   static GetMonitoredResourceDescriptorRequest _defaultInstance;
   static void $checkItem(GetMonitoredResourceDescriptorRequest v) {
-    if (v is !GetMonitoredResourceDescriptorRequest) checkItemFailed(v, 'GetMonitoredResourceDescriptorRequest');
+    if (v is! GetMonitoredResourceDescriptorRequest) checkItemFailed(v, 'GetMonitoredResourceDescriptorRequest');
   }
 
-  String get name => $_get(0, 3, '');
-  void set name(String v) { $_setString(0, 3, v); }
-  bool hasName() => $_has(0, 3);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
@@ -131,10 +133,10 @@ class _ReadonlyGetMonitoredResourceDescriptorRequest extends GetMonitoredResourc
 
 class ListMetricDescriptorsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListMetricDescriptorsRequest')
-    ..a/*<String>*/(2, 'filter', PbFieldType.OS)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(4, 'pageToken', PbFieldType.OS)
-    ..a/*<String>*/(5, 'name', PbFieldType.OS)
+    ..aOS(2, 'filter')
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'pageToken')
+    ..aOS(5, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -151,27 +153,27 @@ class ListMetricDescriptorsRequest extends GeneratedMessage {
   }
   static ListMetricDescriptorsRequest _defaultInstance;
   static void $checkItem(ListMetricDescriptorsRequest v) {
-    if (v is !ListMetricDescriptorsRequest) checkItemFailed(v, 'ListMetricDescriptorsRequest');
+    if (v is! ListMetricDescriptorsRequest) checkItemFailed(v, 'ListMetricDescriptorsRequest');
   }
 
-  String get filter => $_get(0, 2, '');
-  void set filter(String v) { $_setString(0, 2, v); }
-  bool hasFilter() => $_has(0, 2);
+  String get filter => $_getS(0, '');
+  set filter(String v) { $_setString(0, v); }
+  bool hasFilter() => $_has(0);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(1, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 3, v); }
-  bool hasPageSize() => $_has(1, 3);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_get(2, 4, '');
-  void set pageToken(String v) { $_setString(2, 4, v); }
-  bool hasPageToken() => $_has(2, 4);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(4);
 
-  String get name => $_get(3, 5, '');
-  void set name(String v) { $_setString(3, 5, v); }
-  bool hasName() => $_has(3, 5);
+  String get name => $_getS(3, '');
+  set name(String v) { $_setString(3, v); }
+  bool hasName() => $_has(3);
   void clearName() => clearField(5);
 }
 
@@ -179,8 +181,8 @@ class _ReadonlyListMetricDescriptorsRequest extends ListMetricDescriptorsRequest
 
 class ListMetricDescriptorsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListMetricDescriptorsResponse')
-    ..pp/*<google$api.MetricDescriptor>*/(1, 'metricDescriptors', PbFieldType.PM, google$api.MetricDescriptor.$checkItem, google$api.MetricDescriptor.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<$google$api.MetricDescriptor>(1, 'metricDescriptors', PbFieldType.PM, $google$api.MetricDescriptor.$checkItem, $google$api.MetricDescriptor.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -197,14 +199,14 @@ class ListMetricDescriptorsResponse extends GeneratedMessage {
   }
   static ListMetricDescriptorsResponse _defaultInstance;
   static void $checkItem(ListMetricDescriptorsResponse v) {
-    if (v is !ListMetricDescriptorsResponse) checkItemFailed(v, 'ListMetricDescriptorsResponse');
+    if (v is! ListMetricDescriptorsResponse) checkItemFailed(v, 'ListMetricDescriptorsResponse');
   }
 
-  List<google$api.MetricDescriptor> get metricDescriptors => $_get(0, 1, null);
+  List<$google$api.MetricDescriptor> get metricDescriptors => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -212,7 +214,7 @@ class _ReadonlyListMetricDescriptorsResponse extends ListMetricDescriptorsRespon
 
 class GetMetricDescriptorRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetMetricDescriptorRequest')
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
+    ..aOS(3, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -229,12 +231,12 @@ class GetMetricDescriptorRequest extends GeneratedMessage {
   }
   static GetMetricDescriptorRequest _defaultInstance;
   static void $checkItem(GetMetricDescriptorRequest v) {
-    if (v is !GetMetricDescriptorRequest) checkItemFailed(v, 'GetMetricDescriptorRequest');
+    if (v is! GetMetricDescriptorRequest) checkItemFailed(v, 'GetMetricDescriptorRequest');
   }
 
-  String get name => $_get(0, 3, '');
-  void set name(String v) { $_setString(0, 3, v); }
-  bool hasName() => $_has(0, 3);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
@@ -242,8 +244,8 @@ class _ReadonlyGetMetricDescriptorRequest extends GetMetricDescriptorRequest wit
 
 class CreateMetricDescriptorRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateMetricDescriptorRequest')
-    ..a/*<google$api.MetricDescriptor>*/(2, 'metricDescriptor', PbFieldType.OM, google$api.MetricDescriptor.getDefault, google$api.MetricDescriptor.create)
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
+    ..a<$google$api.MetricDescriptor>(2, 'metricDescriptor', PbFieldType.OM, $google$api.MetricDescriptor.getDefault, $google$api.MetricDescriptor.create)
+    ..aOS(3, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -260,17 +262,17 @@ class CreateMetricDescriptorRequest extends GeneratedMessage {
   }
   static CreateMetricDescriptorRequest _defaultInstance;
   static void $checkItem(CreateMetricDescriptorRequest v) {
-    if (v is !CreateMetricDescriptorRequest) checkItemFailed(v, 'CreateMetricDescriptorRequest');
+    if (v is! CreateMetricDescriptorRequest) checkItemFailed(v, 'CreateMetricDescriptorRequest');
   }
 
-  google$api.MetricDescriptor get metricDescriptor => $_get(0, 2, null);
-  void set metricDescriptor(google$api.MetricDescriptor v) { setField(2, v); }
-  bool hasMetricDescriptor() => $_has(0, 2);
+  $google$api.MetricDescriptor get metricDescriptor => $_getN(0);
+  set metricDescriptor($google$api.MetricDescriptor v) { setField(2, v); }
+  bool hasMetricDescriptor() => $_has(0);
   void clearMetricDescriptor() => clearField(2);
 
-  String get name => $_get(1, 3, '');
-  void set name(String v) { $_setString(1, 3, v); }
-  bool hasName() => $_has(1, 3);
+  String get name => $_getS(1, '');
+  set name(String v) { $_setString(1, v); }
+  bool hasName() => $_has(1);
   void clearName() => clearField(3);
 }
 
@@ -278,7 +280,7 @@ class _ReadonlyCreateMetricDescriptorRequest extends CreateMetricDescriptorReque
 
 class DeleteMetricDescriptorRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteMetricDescriptorRequest')
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
+    ..aOS(3, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -295,12 +297,12 @@ class DeleteMetricDescriptorRequest extends GeneratedMessage {
   }
   static DeleteMetricDescriptorRequest _defaultInstance;
   static void $checkItem(DeleteMetricDescriptorRequest v) {
-    if (v is !DeleteMetricDescriptorRequest) checkItemFailed(v, 'DeleteMetricDescriptorRequest');
+    if (v is! DeleteMetricDescriptorRequest) checkItemFailed(v, 'DeleteMetricDescriptorRequest');
   }
 
-  String get name => $_get(0, 3, '');
-  void set name(String v) { $_setString(0, 3, v); }
-  bool hasName() => $_has(0, 3);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
@@ -308,14 +310,14 @@ class _ReadonlyDeleteMetricDescriptorRequest extends DeleteMetricDescriptorReque
 
 class ListTimeSeriesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTimeSeriesRequest')
-    ..a/*<String>*/(2, 'filter', PbFieldType.OS)
-    ..a/*<TimeInterval>*/(4, 'interval', PbFieldType.OM, TimeInterval.getDefault, TimeInterval.create)
-    ..a/*<Aggregation>*/(5, 'aggregation', PbFieldType.OM, Aggregation.getDefault, Aggregation.create)
-    ..a/*<String>*/(6, 'orderBy', PbFieldType.OS)
-    ..e/*<ListTimeSeriesRequest_TimeSeriesView>*/(7, 'view', PbFieldType.OE, ListTimeSeriesRequest_TimeSeriesView.FULL, ListTimeSeriesRequest_TimeSeriesView.valueOf)
-    ..a/*<int>*/(8, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(9, 'pageToken', PbFieldType.OS)
-    ..a/*<String>*/(10, 'name', PbFieldType.OS)
+    ..aOS(2, 'filter')
+    ..a<TimeInterval>(4, 'interval', PbFieldType.OM, TimeInterval.getDefault, TimeInterval.create)
+    ..a<Aggregation>(5, 'aggregation', PbFieldType.OM, Aggregation.getDefault, Aggregation.create)
+    ..aOS(6, 'orderBy')
+    ..e<ListTimeSeriesRequest_TimeSeriesView>(7, 'view', PbFieldType.OE, ListTimeSeriesRequest_TimeSeriesView.FULL, ListTimeSeriesRequest_TimeSeriesView.valueOf, ListTimeSeriesRequest_TimeSeriesView.values)
+    ..a<int>(8, 'pageSize', PbFieldType.O3)
+    ..aOS(9, 'pageToken')
+    ..aOS(10, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -332,47 +334,47 @@ class ListTimeSeriesRequest extends GeneratedMessage {
   }
   static ListTimeSeriesRequest _defaultInstance;
   static void $checkItem(ListTimeSeriesRequest v) {
-    if (v is !ListTimeSeriesRequest) checkItemFailed(v, 'ListTimeSeriesRequest');
+    if (v is! ListTimeSeriesRequest) checkItemFailed(v, 'ListTimeSeriesRequest');
   }
 
-  String get filter => $_get(0, 2, '');
-  void set filter(String v) { $_setString(0, 2, v); }
-  bool hasFilter() => $_has(0, 2);
+  String get filter => $_getS(0, '');
+  set filter(String v) { $_setString(0, v); }
+  bool hasFilter() => $_has(0);
   void clearFilter() => clearField(2);
 
-  TimeInterval get interval => $_get(1, 4, null);
-  void set interval(TimeInterval v) { setField(4, v); }
-  bool hasInterval() => $_has(1, 4);
+  TimeInterval get interval => $_getN(1);
+  set interval(TimeInterval v) { setField(4, v); }
+  bool hasInterval() => $_has(1);
   void clearInterval() => clearField(4);
 
-  Aggregation get aggregation => $_get(2, 5, null);
-  void set aggregation(Aggregation v) { setField(5, v); }
-  bool hasAggregation() => $_has(2, 5);
+  Aggregation get aggregation => $_getN(2);
+  set aggregation(Aggregation v) { setField(5, v); }
+  bool hasAggregation() => $_has(2);
   void clearAggregation() => clearField(5);
 
-  String get orderBy => $_get(3, 6, '');
-  void set orderBy(String v) { $_setString(3, 6, v); }
-  bool hasOrderBy() => $_has(3, 6);
+  String get orderBy => $_getS(3, '');
+  set orderBy(String v) { $_setString(3, v); }
+  bool hasOrderBy() => $_has(3);
   void clearOrderBy() => clearField(6);
 
-  ListTimeSeriesRequest_TimeSeriesView get view => $_get(4, 7, null);
-  void set view(ListTimeSeriesRequest_TimeSeriesView v) { setField(7, v); }
-  bool hasView() => $_has(4, 7);
+  ListTimeSeriesRequest_TimeSeriesView get view => $_getN(4);
+  set view(ListTimeSeriesRequest_TimeSeriesView v) { setField(7, v); }
+  bool hasView() => $_has(4);
   void clearView() => clearField(7);
 
-  int get pageSize => $_get(5, 8, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(5, 8, v); }
-  bool hasPageSize() => $_has(5, 8);
+  int get pageSize => $_get(5, 0);
+  set pageSize(int v) { $_setSignedInt32(5, v); }
+  bool hasPageSize() => $_has(5);
   void clearPageSize() => clearField(8);
 
-  String get pageToken => $_get(6, 9, '');
-  void set pageToken(String v) { $_setString(6, 9, v); }
-  bool hasPageToken() => $_has(6, 9);
+  String get pageToken => $_getS(6, '');
+  set pageToken(String v) { $_setString(6, v); }
+  bool hasPageToken() => $_has(6);
   void clearPageToken() => clearField(9);
 
-  String get name => $_get(7, 10, '');
-  void set name(String v) { $_setString(7, 10, v); }
-  bool hasName() => $_has(7, 10);
+  String get name => $_getS(7, '');
+  set name(String v) { $_setString(7, v); }
+  bool hasName() => $_has(7);
   void clearName() => clearField(10);
 }
 
@@ -380,8 +382,8 @@ class _ReadonlyListTimeSeriesRequest extends ListTimeSeriesRequest with Readonly
 
 class ListTimeSeriesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTimeSeriesResponse')
-    ..pp/*<TimeSeries>*/(1, 'timeSeries', PbFieldType.PM, TimeSeries.$checkItem, TimeSeries.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<TimeSeries>(1, 'timeSeries', PbFieldType.PM, TimeSeries.$checkItem, TimeSeries.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -398,14 +400,14 @@ class ListTimeSeriesResponse extends GeneratedMessage {
   }
   static ListTimeSeriesResponse _defaultInstance;
   static void $checkItem(ListTimeSeriesResponse v) {
-    if (v is !ListTimeSeriesResponse) checkItemFailed(v, 'ListTimeSeriesResponse');
+    if (v is! ListTimeSeriesResponse) checkItemFailed(v, 'ListTimeSeriesResponse');
   }
 
-  List<TimeSeries> get timeSeries => $_get(0, 1, null);
+  List<TimeSeries> get timeSeries => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -413,8 +415,8 @@ class _ReadonlyListTimeSeriesResponse extends ListTimeSeriesResponse with Readon
 
 class CreateTimeSeriesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateTimeSeriesRequest')
-    ..pp/*<TimeSeries>*/(2, 'timeSeries', PbFieldType.PM, TimeSeries.$checkItem, TimeSeries.create)
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
+    ..pp<TimeSeries>(2, 'timeSeries', PbFieldType.PM, TimeSeries.$checkItem, TimeSeries.create)
+    ..aOS(3, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -431,14 +433,14 @@ class CreateTimeSeriesRequest extends GeneratedMessage {
   }
   static CreateTimeSeriesRequest _defaultInstance;
   static void $checkItem(CreateTimeSeriesRequest v) {
-    if (v is !CreateTimeSeriesRequest) checkItemFailed(v, 'CreateTimeSeriesRequest');
+    if (v is! CreateTimeSeriesRequest) checkItemFailed(v, 'CreateTimeSeriesRequest');
   }
 
-  List<TimeSeries> get timeSeries => $_get(0, 2, null);
+  List<TimeSeries> get timeSeries => $_getList(0);
 
-  String get name => $_get(1, 3, '');
-  void set name(String v) { $_setString(1, 3, v); }
-  bool hasName() => $_has(1, 3);
+  String get name => $_getS(1, '');
+  set name(String v) { $_setString(1, v); }
+  bool hasName() => $_has(1);
   void clearName() => clearField(3);
 }
 
@@ -446,8 +448,8 @@ class _ReadonlyCreateTimeSeriesRequest extends CreateTimeSeriesRequest with Read
 
 class CreateTimeSeriesError extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateTimeSeriesError')
-    ..a/*<TimeSeries>*/(1, 'timeSeries', PbFieldType.OM, TimeSeries.getDefault, TimeSeries.create)
-    ..a/*<google$rpc.Status>*/(2, 'status', PbFieldType.OM, google$rpc.Status.getDefault, google$rpc.Status.create)
+    ..a<TimeSeries>(1, 'timeSeries', PbFieldType.OM, TimeSeries.getDefault, TimeSeries.create)
+    ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM, $google$rpc.Status.getDefault, $google$rpc.Status.create)
     ..hasRequiredFields = false
   ;
 
@@ -464,17 +466,17 @@ class CreateTimeSeriesError extends GeneratedMessage {
   }
   static CreateTimeSeriesError _defaultInstance;
   static void $checkItem(CreateTimeSeriesError v) {
-    if (v is !CreateTimeSeriesError) checkItemFailed(v, 'CreateTimeSeriesError');
+    if (v is! CreateTimeSeriesError) checkItemFailed(v, 'CreateTimeSeriesError');
   }
 
-  TimeSeries get timeSeries => $_get(0, 1, null);
-  void set timeSeries(TimeSeries v) { setField(1, v); }
-  bool hasTimeSeries() => $_has(0, 1);
+  TimeSeries get timeSeries => $_getN(0);
+  set timeSeries(TimeSeries v) { setField(1, v); }
+  bool hasTimeSeries() => $_has(0);
   void clearTimeSeries() => clearField(1);
 
-  google$rpc.Status get status => $_get(1, 2, null);
-  void set status(google$rpc.Status v) { setField(2, v); }
-  bool hasStatus() => $_has(1, 2);
+  $google$rpc.Status get status => $_getN(1);
+  set status($google$rpc.Status v) { setField(2, v); }
+  bool hasStatus() => $_has(1);
   void clearStatus() => clearField(2);
 }
 
@@ -486,35 +488,35 @@ class MetricServiceApi {
 
   Future<ListMonitoredResourceDescriptorsResponse> listMonitoredResourceDescriptors(ClientContext ctx, ListMonitoredResourceDescriptorsRequest request) {
     var emptyResponse = new ListMonitoredResourceDescriptorsResponse();
-    return _client.invoke(ctx, 'MetricService', 'ListMonitoredResourceDescriptors', request, emptyResponse);
+    return _client.invoke<ListMonitoredResourceDescriptorsResponse>(ctx, 'MetricService', 'ListMonitoredResourceDescriptors', request, emptyResponse);
   }
-  Future<google$api.MonitoredResourceDescriptor> getMonitoredResourceDescriptor(ClientContext ctx, GetMonitoredResourceDescriptorRequest request) {
-    var emptyResponse = new google$api.MonitoredResourceDescriptor();
-    return _client.invoke(ctx, 'MetricService', 'GetMonitoredResourceDescriptor', request, emptyResponse);
+  Future<$google$api.MonitoredResourceDescriptor> getMonitoredResourceDescriptor(ClientContext ctx, GetMonitoredResourceDescriptorRequest request) {
+    var emptyResponse = new $google$api.MonitoredResourceDescriptor();
+    return _client.invoke<$google$api.MonitoredResourceDescriptor>(ctx, 'MetricService', 'GetMonitoredResourceDescriptor', request, emptyResponse);
   }
   Future<ListMetricDescriptorsResponse> listMetricDescriptors(ClientContext ctx, ListMetricDescriptorsRequest request) {
     var emptyResponse = new ListMetricDescriptorsResponse();
-    return _client.invoke(ctx, 'MetricService', 'ListMetricDescriptors', request, emptyResponse);
+    return _client.invoke<ListMetricDescriptorsResponse>(ctx, 'MetricService', 'ListMetricDescriptors', request, emptyResponse);
   }
-  Future<google$api.MetricDescriptor> getMetricDescriptor(ClientContext ctx, GetMetricDescriptorRequest request) {
-    var emptyResponse = new google$api.MetricDescriptor();
-    return _client.invoke(ctx, 'MetricService', 'GetMetricDescriptor', request, emptyResponse);
+  Future<$google$api.MetricDescriptor> getMetricDescriptor(ClientContext ctx, GetMetricDescriptorRequest request) {
+    var emptyResponse = new $google$api.MetricDescriptor();
+    return _client.invoke<$google$api.MetricDescriptor>(ctx, 'MetricService', 'GetMetricDescriptor', request, emptyResponse);
   }
-  Future<google$api.MetricDescriptor> createMetricDescriptor(ClientContext ctx, CreateMetricDescriptorRequest request) {
-    var emptyResponse = new google$api.MetricDescriptor();
-    return _client.invoke(ctx, 'MetricService', 'CreateMetricDescriptor', request, emptyResponse);
+  Future<$google$api.MetricDescriptor> createMetricDescriptor(ClientContext ctx, CreateMetricDescriptorRequest request) {
+    var emptyResponse = new $google$api.MetricDescriptor();
+    return _client.invoke<$google$api.MetricDescriptor>(ctx, 'MetricService', 'CreateMetricDescriptor', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteMetricDescriptor(ClientContext ctx, DeleteMetricDescriptorRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'MetricService', 'DeleteMetricDescriptor', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteMetricDescriptor(ClientContext ctx, DeleteMetricDescriptorRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'MetricService', 'DeleteMetricDescriptor', request, emptyResponse);
   }
   Future<ListTimeSeriesResponse> listTimeSeries(ClientContext ctx, ListTimeSeriesRequest request) {
     var emptyResponse = new ListTimeSeriesResponse();
-    return _client.invoke(ctx, 'MetricService', 'ListTimeSeries', request, emptyResponse);
+    return _client.invoke<ListTimeSeriesResponse>(ctx, 'MetricService', 'ListTimeSeries', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> createTimeSeries(ClientContext ctx, CreateTimeSeriesRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'MetricService', 'CreateTimeSeries', request, emptyResponse);
+  Future<$google$protobuf.Empty> createTimeSeries(ClientContext ctx, CreateTimeSeriesRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'MetricService', 'CreateTimeSeries', request, emptyResponse);
   }
 }
 

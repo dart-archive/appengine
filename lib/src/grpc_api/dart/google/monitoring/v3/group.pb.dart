@@ -1,17 +1,20 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.monitoring.v3_group;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Group extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Group')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'displayName', PbFieldType.OS)
-    ..a/*<String>*/(3, 'parentName', PbFieldType.OS)
-    ..a/*<String>*/(5, 'filter', PbFieldType.OS)
-    ..a/*<bool>*/(6, 'isCluster', PbFieldType.OB)
+    ..aOS(1, 'name')
+    ..aOS(2, 'displayName')
+    ..aOS(3, 'parentName')
+    ..aOS(5, 'filter')
+    ..aOB(6, 'isCluster')
     ..hasRequiredFields = false
   ;
 
@@ -28,32 +31,32 @@ class Group extends GeneratedMessage {
   }
   static Group _defaultInstance;
   static void $checkItem(Group v) {
-    if (v is !Group) checkItemFailed(v, 'Group');
+    if (v is! Group) checkItemFailed(v, 'Group');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get displayName => $_get(1, 2, '');
-  void set displayName(String v) { $_setString(1, 2, v); }
-  bool hasDisplayName() => $_has(1, 2);
+  String get displayName => $_getS(1, '');
+  set displayName(String v) { $_setString(1, v); }
+  bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
-  String get parentName => $_get(2, 3, '');
-  void set parentName(String v) { $_setString(2, 3, v); }
-  bool hasParentName() => $_has(2, 3);
+  String get parentName => $_getS(2, '');
+  set parentName(String v) { $_setString(2, v); }
+  bool hasParentName() => $_has(2);
   void clearParentName() => clearField(3);
 
-  String get filter => $_get(3, 5, '');
-  void set filter(String v) { $_setString(3, 5, v); }
-  bool hasFilter() => $_has(3, 5);
+  String get filter => $_getS(3, '');
+  set filter(String v) { $_setString(3, v); }
+  bool hasFilter() => $_has(3);
   void clearFilter() => clearField(5);
 
-  bool get isCluster => $_get(4, 6, false);
-  void set isCluster(bool v) { $_setBool(4, 6, v); }
-  bool hasIsCluster() => $_has(4, 6);
+  bool get isCluster => $_get(4, false);
+  set isCluster(bool v) { $_setBool(4, v); }
+  bool hasIsCluster() => $_has(4);
   void clearIsCluster() => clearField(6);
 }
 

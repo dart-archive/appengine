@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.runtimeconfig.v1beta1_resources;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../../protobuf/duration.pb.dart' as google$protobuf;
-import '../../../rpc/status.pb.dart' as google$rpc;
+import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../../protobuf/duration.pb.dart' as $google$protobuf;
+import '../../../rpc/status.pb.dart' as $google$rpc;
 
 import 'resources.pbenum.dart';
 
@@ -15,8 +18,8 @@ export 'resources.pbenum.dart';
 
 class RuntimeConfig extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RuntimeConfig')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'description', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..aOS(2, 'description')
     ..hasRequiredFields = false
   ;
 
@@ -33,17 +36,17 @@ class RuntimeConfig extends GeneratedMessage {
   }
   static RuntimeConfig _defaultInstance;
   static void $checkItem(RuntimeConfig v) {
-    if (v is !RuntimeConfig) checkItemFailed(v, 'RuntimeConfig');
+    if (v is! RuntimeConfig) checkItemFailed(v, 'RuntimeConfig');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_get(1, 2, '');
-  void set description(String v) { $_setString(1, 2, v); }
-  bool hasDescription() => $_has(1, 2);
+  String get description => $_getS(1, '');
+  set description(String v) { $_setString(1, v); }
+  bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 }
 
@@ -51,11 +54,11 @@ class _ReadonlyRuntimeConfig extends RuntimeConfig with ReadonlyMessageMixin {}
 
 class Variable extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Variable')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<List<int>>*/(2, 'value', PbFieldType.OY)
-    ..a/*<google$protobuf.Timestamp>*/(3, 'updateTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..e/*<VariableState>*/(4, 'state', PbFieldType.OE, VariableState.VARIABLE_STATE_UNSPECIFIED, VariableState.valueOf)
-    ..a/*<String>*/(5, 'text', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..a<List<int>>(2, 'value', PbFieldType.OY)
+    ..a<$google$protobuf.Timestamp>(3, 'updateTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..e<VariableState>(4, 'state', PbFieldType.OE, VariableState.VARIABLE_STATE_UNSPECIFIED, VariableState.valueOf, VariableState.values)
+    ..aOS(5, 'text')
     ..hasRequiredFields = false
   ;
 
@@ -72,32 +75,32 @@ class Variable extends GeneratedMessage {
   }
   static Variable _defaultInstance;
   static void $checkItem(Variable v) {
-    if (v is !Variable) checkItemFailed(v, 'Variable');
+    if (v is! Variable) checkItemFailed(v, 'Variable');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<int> get value => $_get(1, 2, null);
-  void set value(List<int> v) { $_setBytes(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  List<int> get value => $_getN(1);
+  set value(List<int> v) { $_setBytes(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 
-  google$protobuf.Timestamp get updateTime => $_get(2, 3, null);
-  void set updateTime(google$protobuf.Timestamp v) { setField(3, v); }
-  bool hasUpdateTime() => $_has(2, 3);
+  $google$protobuf.Timestamp get updateTime => $_getN(2);
+  set updateTime($google$protobuf.Timestamp v) { setField(3, v); }
+  bool hasUpdateTime() => $_has(2);
   void clearUpdateTime() => clearField(3);
 
-  VariableState get state => $_get(3, 4, null);
-  void set state(VariableState v) { setField(4, v); }
-  bool hasState() => $_has(3, 4);
+  VariableState get state => $_getN(3);
+  set state(VariableState v) { setField(4, v); }
+  bool hasState() => $_has(3);
   void clearState() => clearField(4);
 
-  String get text => $_get(4, 5, '');
-  void set text(String v) { $_setString(4, 5, v); }
-  bool hasText() => $_has(4, 5);
+  String get text => $_getS(4, '');
+  set text(String v) { $_setString(4, v); }
+  bool hasText() => $_has(4);
   void clearText() => clearField(5);
 }
 
@@ -105,8 +108,8 @@ class _ReadonlyVariable extends Variable with ReadonlyMessageMixin {}
 
 class EndCondition_Cardinality extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('EndCondition_Cardinality')
-    ..a/*<String>*/(1, 'path', PbFieldType.OS)
-    ..a/*<int>*/(2, 'number', PbFieldType.O3)
+    ..aOS(1, 'path')
+    ..a<int>(2, 'number', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -123,17 +126,17 @@ class EndCondition_Cardinality extends GeneratedMessage {
   }
   static EndCondition_Cardinality _defaultInstance;
   static void $checkItem(EndCondition_Cardinality v) {
-    if (v is !EndCondition_Cardinality) checkItemFailed(v, 'EndCondition_Cardinality');
+    if (v is! EndCondition_Cardinality) checkItemFailed(v, 'EndCondition_Cardinality');
   }
 
-  String get path => $_get(0, 1, '');
-  void set path(String v) { $_setString(0, 1, v); }
-  bool hasPath() => $_has(0, 1);
+  String get path => $_getS(0, '');
+  set path(String v) { $_setString(0, v); }
+  bool hasPath() => $_has(0);
   void clearPath() => clearField(1);
 
-  int get number => $_get(1, 2, 0);
-  void set number(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasNumber() => $_has(1, 2);
+  int get number => $_get(1, 0);
+  set number(int v) { $_setSignedInt32(1, v); }
+  bool hasNumber() => $_has(1);
   void clearNumber() => clearField(2);
 }
 
@@ -141,7 +144,7 @@ class _ReadonlyEndCondition_Cardinality extends EndCondition_Cardinality with Re
 
 class EndCondition extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('EndCondition')
-    ..a/*<EndCondition_Cardinality>*/(1, 'cardinality', PbFieldType.OM, EndCondition_Cardinality.getDefault, EndCondition_Cardinality.create)
+    ..a<EndCondition_Cardinality>(1, 'cardinality', PbFieldType.OM, EndCondition_Cardinality.getDefault, EndCondition_Cardinality.create)
     ..hasRequiredFields = false
   ;
 
@@ -158,12 +161,12 @@ class EndCondition extends GeneratedMessage {
   }
   static EndCondition _defaultInstance;
   static void $checkItem(EndCondition v) {
-    if (v is !EndCondition) checkItemFailed(v, 'EndCondition');
+    if (v is! EndCondition) checkItemFailed(v, 'EndCondition');
   }
 
-  EndCondition_Cardinality get cardinality => $_get(0, 1, null);
-  void set cardinality(EndCondition_Cardinality v) { setField(1, v); }
-  bool hasCardinality() => $_has(0, 1);
+  EndCondition_Cardinality get cardinality => $_getN(0);
+  set cardinality(EndCondition_Cardinality v) { setField(1, v); }
+  bool hasCardinality() => $_has(0);
   void clearCardinality() => clearField(1);
 }
 
@@ -171,13 +174,13 @@ class _ReadonlyEndCondition extends EndCondition with ReadonlyMessageMixin {}
 
 class Waiter extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Waiter')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<google$protobuf.Duration>*/(2, 'timeout', PbFieldType.OM, google$protobuf.Duration.getDefault, google$protobuf.Duration.create)
-    ..a/*<EndCondition>*/(3, 'failure', PbFieldType.OM, EndCondition.getDefault, EndCondition.create)
-    ..a/*<EndCondition>*/(4, 'success', PbFieldType.OM, EndCondition.getDefault, EndCondition.create)
-    ..a/*<google$protobuf.Timestamp>*/(5, 'createTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<bool>*/(6, 'done', PbFieldType.OB)
-    ..a/*<google$rpc.Status>*/(7, 'error', PbFieldType.OM, google$rpc.Status.getDefault, google$rpc.Status.create)
+    ..aOS(1, 'name')
+    ..a<$google$protobuf.Duration>(2, 'timeout', PbFieldType.OM, $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..a<EndCondition>(3, 'failure', PbFieldType.OM, EndCondition.getDefault, EndCondition.create)
+    ..a<EndCondition>(4, 'success', PbFieldType.OM, EndCondition.getDefault, EndCondition.create)
+    ..a<$google$protobuf.Timestamp>(5, 'createTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..aOB(6, 'done')
+    ..a<$google$rpc.Status>(7, 'error', PbFieldType.OM, $google$rpc.Status.getDefault, $google$rpc.Status.create)
     ..hasRequiredFields = false
   ;
 
@@ -194,42 +197,42 @@ class Waiter extends GeneratedMessage {
   }
   static Waiter _defaultInstance;
   static void $checkItem(Waiter v) {
-    if (v is !Waiter) checkItemFailed(v, 'Waiter');
+    if (v is! Waiter) checkItemFailed(v, 'Waiter');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  google$protobuf.Duration get timeout => $_get(1, 2, null);
-  void set timeout(google$protobuf.Duration v) { setField(2, v); }
-  bool hasTimeout() => $_has(1, 2);
+  $google$protobuf.Duration get timeout => $_getN(1);
+  set timeout($google$protobuf.Duration v) { setField(2, v); }
+  bool hasTimeout() => $_has(1);
   void clearTimeout() => clearField(2);
 
-  EndCondition get failure => $_get(2, 3, null);
-  void set failure(EndCondition v) { setField(3, v); }
-  bool hasFailure() => $_has(2, 3);
+  EndCondition get failure => $_getN(2);
+  set failure(EndCondition v) { setField(3, v); }
+  bool hasFailure() => $_has(2);
   void clearFailure() => clearField(3);
 
-  EndCondition get success => $_get(3, 4, null);
-  void set success(EndCondition v) { setField(4, v); }
-  bool hasSuccess() => $_has(3, 4);
+  EndCondition get success => $_getN(3);
+  set success(EndCondition v) { setField(4, v); }
+  bool hasSuccess() => $_has(3);
   void clearSuccess() => clearField(4);
 
-  google$protobuf.Timestamp get createTime => $_get(4, 5, null);
-  void set createTime(google$protobuf.Timestamp v) { setField(5, v); }
-  bool hasCreateTime() => $_has(4, 5);
+  $google$protobuf.Timestamp get createTime => $_getN(4);
+  set createTime($google$protobuf.Timestamp v) { setField(5, v); }
+  bool hasCreateTime() => $_has(4);
   void clearCreateTime() => clearField(5);
 
-  bool get done => $_get(5, 6, false);
-  void set done(bool v) { $_setBool(5, 6, v); }
-  bool hasDone() => $_has(5, 6);
+  bool get done => $_get(5, false);
+  set done(bool v) { $_setBool(5, v); }
+  bool hasDone() => $_has(5);
   void clearDone() => clearField(6);
 
-  google$rpc.Status get error => $_get(6, 7, null);
-  void set error(google$rpc.Status v) { setField(7, v); }
-  bool hasError() => $_has(6, 7);
+  $google$rpc.Status get error => $_getN(6);
+  set error($google$rpc.Status v) { setField(7, v); }
+  bool hasError() => $_has(6);
   void clearError() => clearField(7);
 }
 

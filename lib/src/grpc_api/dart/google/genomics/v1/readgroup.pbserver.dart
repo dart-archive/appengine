@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_readgroup_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'readgroup.pb.dart';
 

@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.example.library.v1_library_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'library.pb.dart';
-import '../../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'library.pbjson.dart';
 
 export 'library.pb.dart';
@@ -17,12 +17,12 @@ abstract class LibraryServiceBase extends GeneratedService {
   Future<Shelf> createShelf(ServerContext ctx, CreateShelfRequest request);
   Future<Shelf> getShelf(ServerContext ctx, GetShelfRequest request);
   Future<ListShelvesResponse> listShelves(ServerContext ctx, ListShelvesRequest request);
-  Future<google$protobuf.Empty> deleteShelf(ServerContext ctx, DeleteShelfRequest request);
+  Future<$google$protobuf.Empty> deleteShelf(ServerContext ctx, DeleteShelfRequest request);
   Future<Shelf> mergeShelves(ServerContext ctx, MergeShelvesRequest request);
   Future<Book> createBook(ServerContext ctx, CreateBookRequest request);
   Future<Book> getBook(ServerContext ctx, GetBookRequest request);
   Future<ListBooksResponse> listBooks(ServerContext ctx, ListBooksRequest request);
-  Future<google$protobuf.Empty> deleteBook(ServerContext ctx, DeleteBookRequest request);
+  Future<$google$protobuf.Empty> deleteBook(ServerContext ctx, DeleteBookRequest request);
   Future<Book> updateBook(ServerContext ctx, UpdateBookRequest request);
   Future<Book> moveBook(ServerContext ctx, MoveBookRequest request);
 
@@ -61,6 +61,6 @@ abstract class LibraryServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => LibraryService$json;
-  Map<String, dynamic> get $messageJson => LibraryService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => LibraryService$messageJson;
 }
 

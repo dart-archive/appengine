@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicecontrol.v1_check_error_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class CheckError_Code extends ProtobufEnum {
@@ -47,7 +49,7 @@ class CheckError_Code extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static CheckError_Code valueOf(int value) => _byValue[value] as CheckError_Code;
   static void $checkItem(CheckError_Code v) {
-    if (v is !CheckError_Code) checkItemFailed(v, 'CheckError_Code');
+    if (v is! CheckError_Code) checkItemFailed(v, 'CheckError_Code');
   }
 
   const CheckError_Code._(int v, String n) : super(v, n);

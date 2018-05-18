@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.functions.v1beta2_operations_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class OperationType extends ProtobufEnum {
@@ -21,7 +23,7 @@ class OperationType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static OperationType valueOf(int value) => _byValue[value] as OperationType;
   static void $checkItem(OperationType v) {
-    if (v is !OperationType) checkItemFailed(v, 'OperationType');
+    if (v is! OperationType) checkItemFailed(v, 'OperationType');
   }
 
   const OperationType._(int v, String n) : super(v, n);

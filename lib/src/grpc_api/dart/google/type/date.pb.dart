@@ -1,15 +1,18 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.type_date;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Date extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Date')
-    ..a/*<int>*/(1, 'year', PbFieldType.O3)
-    ..a/*<int>*/(2, 'month', PbFieldType.O3)
-    ..a/*<int>*/(3, 'day', PbFieldType.O3)
+    ..a<int>(1, 'year', PbFieldType.O3)
+    ..a<int>(2, 'month', PbFieldType.O3)
+    ..a<int>(3, 'day', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -26,22 +29,22 @@ class Date extends GeneratedMessage {
   }
   static Date _defaultInstance;
   static void $checkItem(Date v) {
-    if (v is !Date) checkItemFailed(v, 'Date');
+    if (v is! Date) checkItemFailed(v, 'Date');
   }
 
-  int get year => $_get(0, 1, 0);
-  void set year(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasYear() => $_has(0, 1);
+  int get year => $_get(0, 0);
+  set year(int v) { $_setSignedInt32(0, v); }
+  bool hasYear() => $_has(0);
   void clearYear() => clearField(1);
 
-  int get month => $_get(1, 2, 0);
-  void set month(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasMonth() => $_has(1, 2);
+  int get month => $_get(1, 0);
+  set month(int v) { $_setSignedInt32(1, v); }
+  bool hasMonth() => $_has(1);
   void clearMonth() => clearField(2);
 
-  int get day => $_get(2, 3, 0);
-  void set day(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasDay() => $_has(2, 3);
+  int get day => $_get(2, 0);
+  set day(int v) { $_setSignedInt32(2, v); }
+  bool hasDay() => $_has(2);
   void clearDay() => clearField(3);
 }
 

@@ -1,5 +1,5 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bytestream_bytestream_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 

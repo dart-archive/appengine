@@ -1,15 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.cloudtrace.v1_trace;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 
 import 'trace.pbenum.dart';
 
@@ -17,9 +19,9 @@ export 'trace.pbenum.dart';
 
 class Trace extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Trace')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'traceId', PbFieldType.OS)
-    ..pp/*<TraceSpan>*/(3, 'spans', PbFieldType.PM, TraceSpan.$checkItem, TraceSpan.create)
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'traceId')
+    ..pp<TraceSpan>(3, 'spans', PbFieldType.PM, TraceSpan.$checkItem, TraceSpan.create)
     ..hasRequiredFields = false
   ;
 
@@ -36,27 +38,27 @@ class Trace extends GeneratedMessage {
   }
   static Trace _defaultInstance;
   static void $checkItem(Trace v) {
-    if (v is !Trace) checkItemFailed(v, 'Trace');
+    if (v is! Trace) checkItemFailed(v, 'Trace');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get traceId => $_get(1, 2, '');
-  void set traceId(String v) { $_setString(1, 2, v); }
-  bool hasTraceId() => $_has(1, 2);
+  String get traceId => $_getS(1, '');
+  set traceId(String v) { $_setString(1, v); }
+  bool hasTraceId() => $_has(1);
   void clearTraceId() => clearField(2);
 
-  List<TraceSpan> get spans => $_get(2, 3, null);
+  List<TraceSpan> get spans => $_getList(2);
 }
 
 class _ReadonlyTrace extends Trace with ReadonlyMessageMixin {}
 
 class Traces extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Traces')
-    ..pp/*<Trace>*/(1, 'traces', PbFieldType.PM, Trace.$checkItem, Trace.create)
+    ..pp<Trace>(1, 'traces', PbFieldType.PM, Trace.$checkItem, Trace.create)
     ..hasRequiredFields = false
   ;
 
@@ -73,18 +75,18 @@ class Traces extends GeneratedMessage {
   }
   static Traces _defaultInstance;
   static void $checkItem(Traces v) {
-    if (v is !Traces) checkItemFailed(v, 'Traces');
+    if (v is! Traces) checkItemFailed(v, 'Traces');
   }
 
-  List<Trace> get traces => $_get(0, 1, null);
+  List<Trace> get traces => $_getList(0);
 }
 
 class _ReadonlyTraces extends Traces with ReadonlyMessageMixin {}
 
 class TraceSpan_LabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TraceSpan_LabelsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -101,17 +103,17 @@ class TraceSpan_LabelsEntry extends GeneratedMessage {
   }
   static TraceSpan_LabelsEntry _defaultInstance;
   static void $checkItem(TraceSpan_LabelsEntry v) {
-    if (v is !TraceSpan_LabelsEntry) checkItemFailed(v, 'TraceSpan_LabelsEntry');
+    if (v is! TraceSpan_LabelsEntry) checkItemFailed(v, 'TraceSpan_LabelsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -119,13 +121,13 @@ class _ReadonlyTraceSpan_LabelsEntry extends TraceSpan_LabelsEntry with Readonly
 
 class TraceSpan extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TraceSpan')
-    ..a/*<Int64>*/(1, 'spanId', PbFieldType.OF6, Int64.ZERO)
-    ..e/*<TraceSpan_SpanKind>*/(2, 'kind', PbFieldType.OE, TraceSpan_SpanKind.SPAN_KIND_UNSPECIFIED, TraceSpan_SpanKind.valueOf)
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
-    ..a/*<google$protobuf.Timestamp>*/(4, 'startTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<google$protobuf.Timestamp>*/(5, 'endTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<Int64>*/(6, 'parentSpanId', PbFieldType.OF6, Int64.ZERO)
-    ..pp/*<TraceSpan_LabelsEntry>*/(7, 'labels', PbFieldType.PM, TraceSpan_LabelsEntry.$checkItem, TraceSpan_LabelsEntry.create)
+    ..a<Int64>(1, 'spanId', PbFieldType.OF6, Int64.ZERO)
+    ..e<TraceSpan_SpanKind>(2, 'kind', PbFieldType.OE, TraceSpan_SpanKind.SPAN_KIND_UNSPECIFIED, TraceSpan_SpanKind.valueOf, TraceSpan_SpanKind.values)
+    ..aOS(3, 'name')
+    ..a<$google$protobuf.Timestamp>(4, 'startTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<$google$protobuf.Timestamp>(5, 'endTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<Int64>(6, 'parentSpanId', PbFieldType.OF6, Int64.ZERO)
+    ..pp<TraceSpan_LabelsEntry>(7, 'labels', PbFieldType.PM, TraceSpan_LabelsEntry.$checkItem, TraceSpan_LabelsEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -142,54 +144,54 @@ class TraceSpan extends GeneratedMessage {
   }
   static TraceSpan _defaultInstance;
   static void $checkItem(TraceSpan v) {
-    if (v is !TraceSpan) checkItemFailed(v, 'TraceSpan');
+    if (v is! TraceSpan) checkItemFailed(v, 'TraceSpan');
   }
 
-  Int64 get spanId => $_get(0, 1, null);
-  void set spanId(Int64 v) { $_setInt64(0, 1, v); }
-  bool hasSpanId() => $_has(0, 1);
+  Int64 get spanId => $_getI64(0);
+  set spanId(Int64 v) { $_setInt64(0, v); }
+  bool hasSpanId() => $_has(0);
   void clearSpanId() => clearField(1);
 
-  TraceSpan_SpanKind get kind => $_get(1, 2, null);
-  void set kind(TraceSpan_SpanKind v) { setField(2, v); }
-  bool hasKind() => $_has(1, 2);
+  TraceSpan_SpanKind get kind => $_getN(1);
+  set kind(TraceSpan_SpanKind v) { setField(2, v); }
+  bool hasKind() => $_has(1);
   void clearKind() => clearField(2);
 
-  String get name => $_get(2, 3, '');
-  void set name(String v) { $_setString(2, 3, v); }
-  bool hasName() => $_has(2, 3);
+  String get name => $_getS(2, '');
+  set name(String v) { $_setString(2, v); }
+  bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  google$protobuf.Timestamp get startTime => $_get(3, 4, null);
-  void set startTime(google$protobuf.Timestamp v) { setField(4, v); }
-  bool hasStartTime() => $_has(3, 4);
+  $google$protobuf.Timestamp get startTime => $_getN(3);
+  set startTime($google$protobuf.Timestamp v) { setField(4, v); }
+  bool hasStartTime() => $_has(3);
   void clearStartTime() => clearField(4);
 
-  google$protobuf.Timestamp get endTime => $_get(4, 5, null);
-  void set endTime(google$protobuf.Timestamp v) { setField(5, v); }
-  bool hasEndTime() => $_has(4, 5);
+  $google$protobuf.Timestamp get endTime => $_getN(4);
+  set endTime($google$protobuf.Timestamp v) { setField(5, v); }
+  bool hasEndTime() => $_has(4);
   void clearEndTime() => clearField(5);
 
-  Int64 get parentSpanId => $_get(5, 6, null);
-  void set parentSpanId(Int64 v) { $_setInt64(5, 6, v); }
-  bool hasParentSpanId() => $_has(5, 6);
+  Int64 get parentSpanId => $_getI64(5);
+  set parentSpanId(Int64 v) { $_setInt64(5, v); }
+  bool hasParentSpanId() => $_has(5);
   void clearParentSpanId() => clearField(6);
 
-  List<TraceSpan_LabelsEntry> get labels => $_get(6, 7, null);
+  List<TraceSpan_LabelsEntry> get labels => $_getList(6);
 }
 
 class _ReadonlyTraceSpan extends TraceSpan with ReadonlyMessageMixin {}
 
 class ListTracesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTracesRequest')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..e/*<ListTracesRequest_ViewType>*/(2, 'view', PbFieldType.OE, ListTracesRequest_ViewType.VIEW_TYPE_UNSPECIFIED, ListTracesRequest_ViewType.valueOf)
-    ..a/*<int>*/(3, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(4, 'pageToken', PbFieldType.OS)
-    ..a/*<google$protobuf.Timestamp>*/(5, 'startTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<google$protobuf.Timestamp>*/(6, 'endTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<String>*/(7, 'filter', PbFieldType.OS)
-    ..a/*<String>*/(8, 'orderBy', PbFieldType.OS)
+    ..aOS(1, 'projectId')
+    ..e<ListTracesRequest_ViewType>(2, 'view', PbFieldType.OE, ListTracesRequest_ViewType.VIEW_TYPE_UNSPECIFIED, ListTracesRequest_ViewType.valueOf, ListTracesRequest_ViewType.values)
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'pageToken')
+    ..a<$google$protobuf.Timestamp>(5, 'startTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<$google$protobuf.Timestamp>(6, 'endTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..aOS(7, 'filter')
+    ..aOS(8, 'orderBy')
     ..hasRequiredFields = false
   ;
 
@@ -206,47 +208,47 @@ class ListTracesRequest extends GeneratedMessage {
   }
   static ListTracesRequest _defaultInstance;
   static void $checkItem(ListTracesRequest v) {
-    if (v is !ListTracesRequest) checkItemFailed(v, 'ListTracesRequest');
+    if (v is! ListTracesRequest) checkItemFailed(v, 'ListTracesRequest');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  ListTracesRequest_ViewType get view => $_get(1, 2, null);
-  void set view(ListTracesRequest_ViewType v) { setField(2, v); }
-  bool hasView() => $_has(1, 2);
+  ListTracesRequest_ViewType get view => $_getN(1);
+  set view(ListTracesRequest_ViewType v) { setField(2, v); }
+  bool hasView() => $_has(1);
   void clearView() => clearField(2);
 
-  int get pageSize => $_get(2, 3, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasPageSize() => $_has(2, 3);
+  int get pageSize => $_get(2, 0);
+  set pageSize(int v) { $_setSignedInt32(2, v); }
+  bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_get(3, 4, '');
-  void set pageToken(String v) { $_setString(3, 4, v); }
-  bool hasPageToken() => $_has(3, 4);
+  String get pageToken => $_getS(3, '');
+  set pageToken(String v) { $_setString(3, v); }
+  bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 
-  google$protobuf.Timestamp get startTime => $_get(4, 5, null);
-  void set startTime(google$protobuf.Timestamp v) { setField(5, v); }
-  bool hasStartTime() => $_has(4, 5);
+  $google$protobuf.Timestamp get startTime => $_getN(4);
+  set startTime($google$protobuf.Timestamp v) { setField(5, v); }
+  bool hasStartTime() => $_has(4);
   void clearStartTime() => clearField(5);
 
-  google$protobuf.Timestamp get endTime => $_get(5, 6, null);
-  void set endTime(google$protobuf.Timestamp v) { setField(6, v); }
-  bool hasEndTime() => $_has(5, 6);
+  $google$protobuf.Timestamp get endTime => $_getN(5);
+  set endTime($google$protobuf.Timestamp v) { setField(6, v); }
+  bool hasEndTime() => $_has(5);
   void clearEndTime() => clearField(6);
 
-  String get filter => $_get(6, 7, '');
-  void set filter(String v) { $_setString(6, 7, v); }
-  bool hasFilter() => $_has(6, 7);
+  String get filter => $_getS(6, '');
+  set filter(String v) { $_setString(6, v); }
+  bool hasFilter() => $_has(6);
   void clearFilter() => clearField(7);
 
-  String get orderBy => $_get(7, 8, '');
-  void set orderBy(String v) { $_setString(7, 8, v); }
-  bool hasOrderBy() => $_has(7, 8);
+  String get orderBy => $_getS(7, '');
+  set orderBy(String v) { $_setString(7, v); }
+  bool hasOrderBy() => $_has(7);
   void clearOrderBy() => clearField(8);
 }
 
@@ -254,8 +256,8 @@ class _ReadonlyListTracesRequest extends ListTracesRequest with ReadonlyMessageM
 
 class ListTracesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTracesResponse')
-    ..pp/*<Trace>*/(1, 'traces', PbFieldType.PM, Trace.$checkItem, Trace.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Trace>(1, 'traces', PbFieldType.PM, Trace.$checkItem, Trace.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -272,14 +274,14 @@ class ListTracesResponse extends GeneratedMessage {
   }
   static ListTracesResponse _defaultInstance;
   static void $checkItem(ListTracesResponse v) {
-    if (v is !ListTracesResponse) checkItemFailed(v, 'ListTracesResponse');
+    if (v is! ListTracesResponse) checkItemFailed(v, 'ListTracesResponse');
   }
 
-  List<Trace> get traces => $_get(0, 1, null);
+  List<Trace> get traces => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -287,8 +289,8 @@ class _ReadonlyListTracesResponse extends ListTracesResponse with ReadonlyMessag
 
 class GetTraceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetTraceRequest')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'traceId', PbFieldType.OS)
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'traceId')
     ..hasRequiredFields = false
   ;
 
@@ -305,17 +307,17 @@ class GetTraceRequest extends GeneratedMessage {
   }
   static GetTraceRequest _defaultInstance;
   static void $checkItem(GetTraceRequest v) {
-    if (v is !GetTraceRequest) checkItemFailed(v, 'GetTraceRequest');
+    if (v is! GetTraceRequest) checkItemFailed(v, 'GetTraceRequest');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get traceId => $_get(1, 2, '');
-  void set traceId(String v) { $_setString(1, 2, v); }
-  bool hasTraceId() => $_has(1, 2);
+  String get traceId => $_getS(1, '');
+  set traceId(String v) { $_setString(1, v); }
+  bool hasTraceId() => $_has(1);
   void clearTraceId() => clearField(2);
 }
 
@@ -323,8 +325,8 @@ class _ReadonlyGetTraceRequest extends GetTraceRequest with ReadonlyMessageMixin
 
 class PatchTracesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PatchTracesRequest')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<Traces>*/(2, 'traces', PbFieldType.OM, Traces.getDefault, Traces.create)
+    ..aOS(1, 'projectId')
+    ..a<Traces>(2, 'traces', PbFieldType.OM, Traces.getDefault, Traces.create)
     ..hasRequiredFields = false
   ;
 
@@ -341,17 +343,17 @@ class PatchTracesRequest extends GeneratedMessage {
   }
   static PatchTracesRequest _defaultInstance;
   static void $checkItem(PatchTracesRequest v) {
-    if (v is !PatchTracesRequest) checkItemFailed(v, 'PatchTracesRequest');
+    if (v is! PatchTracesRequest) checkItemFailed(v, 'PatchTracesRequest');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  Traces get traces => $_get(1, 2, null);
-  void set traces(Traces v) { setField(2, v); }
-  bool hasTraces() => $_has(1, 2);
+  Traces get traces => $_getN(1);
+  set traces(Traces v) { setField(2, v); }
+  bool hasTraces() => $_has(1);
   void clearTraces() => clearField(2);
 }
 
@@ -363,15 +365,15 @@ class TraceServiceApi {
 
   Future<ListTracesResponse> listTraces(ClientContext ctx, ListTracesRequest request) {
     var emptyResponse = new ListTracesResponse();
-    return _client.invoke(ctx, 'TraceService', 'ListTraces', request, emptyResponse);
+    return _client.invoke<ListTracesResponse>(ctx, 'TraceService', 'ListTraces', request, emptyResponse);
   }
   Future<Trace> getTrace(ClientContext ctx, GetTraceRequest request) {
     var emptyResponse = new Trace();
-    return _client.invoke(ctx, 'TraceService', 'GetTrace', request, emptyResponse);
+    return _client.invoke<Trace>(ctx, 'TraceService', 'GetTrace', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> patchTraces(ClientContext ctx, PatchTracesRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'TraceService', 'PatchTraces', request, emptyResponse);
+  Future<$google$protobuf.Empty> patchTraces(ClientContext ctx, PatchTracesRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'TraceService', 'PatchTraces', request, emptyResponse);
   }
 }
 

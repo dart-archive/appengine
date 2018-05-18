@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.language.v1beta1_language_service_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class EncodingType extends ProtobufEnum {
@@ -21,7 +23,7 @@ class EncodingType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static EncodingType valueOf(int value) => _byValue[value] as EncodingType;
   static void $checkItem(EncodingType v) {
-    if (v is !EncodingType) checkItemFailed(v, 'EncodingType');
+    if (v is! EncodingType) checkItemFailed(v, 'EncodingType');
   }
 
   const EncodingType._(int v, String n) : super(v, n);
@@ -41,7 +43,7 @@ class Document_Type extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static Document_Type valueOf(int value) => _byValue[value] as Document_Type;
   static void $checkItem(Document_Type v) {
-    if (v is !Document_Type) checkItemFailed(v, 'Document_Type');
+    if (v is! Document_Type) checkItemFailed(v, 'Document_Type');
   }
 
   const Document_Type._(int v, String n) : super(v, n);
@@ -71,7 +73,7 @@ class Entity_Type extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static Entity_Type valueOf(int value) => _byValue[value] as Entity_Type;
   static void $checkItem(Entity_Type v) {
-    if (v is !Entity_Type) checkItemFailed(v, 'Entity_Type');
+    if (v is! Entity_Type) checkItemFailed(v, 'Entity_Type');
   }
 
   const Entity_Type._(int v, String n) : super(v, n);
@@ -113,7 +115,7 @@ class PartOfSpeech_Tag extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Tag valueOf(int value) => _byValue[value] as PartOfSpeech_Tag;
   static void $checkItem(PartOfSpeech_Tag v) {
-    if (v is !PartOfSpeech_Tag) checkItemFailed(v, 'PartOfSpeech_Tag');
+    if (v is! PartOfSpeech_Tag) checkItemFailed(v, 'PartOfSpeech_Tag');
   }
 
   const PartOfSpeech_Tag._(int v, String n) : super(v, n);
@@ -135,7 +137,7 @@ class PartOfSpeech_Aspect extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Aspect valueOf(int value) => _byValue[value] as PartOfSpeech_Aspect;
   static void $checkItem(PartOfSpeech_Aspect v) {
-    if (v is !PartOfSpeech_Aspect) checkItemFailed(v, 'PartOfSpeech_Aspect');
+    if (v is! PartOfSpeech_Aspect) checkItemFailed(v, 'PartOfSpeech_Aspect');
   }
 
   const PartOfSpeech_Aspect._(int v, String n) : super(v, n);
@@ -179,7 +181,7 @@ class PartOfSpeech_Case extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Case valueOf(int value) => _byValue[value] as PartOfSpeech_Case;
   static void $checkItem(PartOfSpeech_Case v) {
-    if (v is !PartOfSpeech_Case) checkItemFailed(v, 'PartOfSpeech_Case');
+    if (v is! PartOfSpeech_Case) checkItemFailed(v, 'PartOfSpeech_Case');
   }
 
   const PartOfSpeech_Case._(int v, String n) : super(v, n);
@@ -217,7 +219,7 @@ class PartOfSpeech_Form extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Form valueOf(int value) => _byValue[value] as PartOfSpeech_Form;
   static void $checkItem(PartOfSpeech_Form v) {
-    if (v is !PartOfSpeech_Form) checkItemFailed(v, 'PartOfSpeech_Form');
+    if (v is! PartOfSpeech_Form) checkItemFailed(v, 'PartOfSpeech_Form');
   }
 
   const PartOfSpeech_Form._(int v, String n) : super(v, n);
@@ -239,7 +241,7 @@ class PartOfSpeech_Gender extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Gender valueOf(int value) => _byValue[value] as PartOfSpeech_Gender;
   static void $checkItem(PartOfSpeech_Gender v) {
-    if (v is !PartOfSpeech_Gender) checkItemFailed(v, 'PartOfSpeech_Gender');
+    if (v is! PartOfSpeech_Gender) checkItemFailed(v, 'PartOfSpeech_Gender');
   }
 
   const PartOfSpeech_Gender._(int v, String n) : super(v, n);
@@ -267,7 +269,7 @@ class PartOfSpeech_Mood extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Mood valueOf(int value) => _byValue[value] as PartOfSpeech_Mood;
   static void $checkItem(PartOfSpeech_Mood v) {
-    if (v is !PartOfSpeech_Mood) checkItemFailed(v, 'PartOfSpeech_Mood');
+    if (v is! PartOfSpeech_Mood) checkItemFailed(v, 'PartOfSpeech_Mood');
   }
 
   const PartOfSpeech_Mood._(int v, String n) : super(v, n);
@@ -289,7 +291,7 @@ class PartOfSpeech_Number extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Number valueOf(int value) => _byValue[value] as PartOfSpeech_Number;
   static void $checkItem(PartOfSpeech_Number v) {
-    if (v is !PartOfSpeech_Number) checkItemFailed(v, 'PartOfSpeech_Number');
+    if (v is! PartOfSpeech_Number) checkItemFailed(v, 'PartOfSpeech_Number');
   }
 
   const PartOfSpeech_Number._(int v, String n) : super(v, n);
@@ -313,7 +315,7 @@ class PartOfSpeech_Person extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Person valueOf(int value) => _byValue[value] as PartOfSpeech_Person;
   static void $checkItem(PartOfSpeech_Person v) {
-    if (v is !PartOfSpeech_Person) checkItemFailed(v, 'PartOfSpeech_Person');
+    if (v is! PartOfSpeech_Person) checkItemFailed(v, 'PartOfSpeech_Person');
   }
 
   const PartOfSpeech_Person._(int v, String n) : super(v, n);
@@ -333,7 +335,7 @@ class PartOfSpeech_Proper extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Proper valueOf(int value) => _byValue[value] as PartOfSpeech_Proper;
   static void $checkItem(PartOfSpeech_Proper v) {
-    if (v is !PartOfSpeech_Proper) checkItemFailed(v, 'PartOfSpeech_Proper');
+    if (v is! PartOfSpeech_Proper) checkItemFailed(v, 'PartOfSpeech_Proper');
   }
 
   const PartOfSpeech_Proper._(int v, String n) : super(v, n);
@@ -353,7 +355,7 @@ class PartOfSpeech_Reciprocity extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Reciprocity valueOf(int value) => _byValue[value] as PartOfSpeech_Reciprocity;
   static void $checkItem(PartOfSpeech_Reciprocity v) {
-    if (v is !PartOfSpeech_Reciprocity) checkItemFailed(v, 'PartOfSpeech_Reciprocity');
+    if (v is! PartOfSpeech_Reciprocity) checkItemFailed(v, 'PartOfSpeech_Reciprocity');
   }
 
   const PartOfSpeech_Reciprocity._(int v, String n) : super(v, n);
@@ -381,7 +383,7 @@ class PartOfSpeech_Tense extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Tense valueOf(int value) => _byValue[value] as PartOfSpeech_Tense;
   static void $checkItem(PartOfSpeech_Tense v) {
-    if (v is !PartOfSpeech_Tense) checkItemFailed(v, 'PartOfSpeech_Tense');
+    if (v is! PartOfSpeech_Tense) checkItemFailed(v, 'PartOfSpeech_Tense');
   }
 
   const PartOfSpeech_Tense._(int v, String n) : super(v, n);
@@ -403,7 +405,7 @@ class PartOfSpeech_Voice extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PartOfSpeech_Voice valueOf(int value) => _byValue[value] as PartOfSpeech_Voice;
   static void $checkItem(PartOfSpeech_Voice v) {
-    if (v is !PartOfSpeech_Voice) checkItemFailed(v, 'PartOfSpeech_Voice');
+    if (v is! PartOfSpeech_Voice) checkItemFailed(v, 'PartOfSpeech_Voice');
   }
 
   const PartOfSpeech_Voice._(int v, String n) : super(v, n);
@@ -571,7 +573,7 @@ class DependencyEdge_Label extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static DependencyEdge_Label valueOf(int value) => _byValue[value] as DependencyEdge_Label;
   static void $checkItem(DependencyEdge_Label v) {
-    if (v is !DependencyEdge_Label) checkItemFailed(v, 'DependencyEdge_Label');
+    if (v is! DependencyEdge_Label) checkItemFailed(v, 'DependencyEdge_Label');
   }
 
   const DependencyEdge_Label._(int v, String n) : super(v, n);
@@ -591,7 +593,7 @@ class EntityMention_Type extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static EntityMention_Type valueOf(int value) => _byValue[value] as EntityMention_Type;
   static void $checkItem(EntityMention_Type v) {
-    if (v is !EntityMention_Type) checkItemFailed(v, 'EntityMention_Type');
+    if (v is! EntityMention_Type) checkItemFailed(v, 'EntityMention_Type');
   }
 
   const EntityMention_Type._(int v, String n) : super(v, n);

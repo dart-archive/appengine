@@ -1,12 +1,15 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicemanagement.v1_resources;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../config_change.pb.dart' as google$api;
+import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../config_change.pb.dart' as $google$api;
 
 import 'resources.pbenum.dart';
 
@@ -14,8 +17,8 @@ export 'resources.pbenum.dart';
 
 class ManagedService extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ManagedService')
-    ..a/*<String>*/(2, 'serviceName', PbFieldType.OS)
-    ..a/*<String>*/(3, 'producerProjectId', PbFieldType.OS)
+    ..aOS(2, 'serviceName')
+    ..aOS(3, 'producerProjectId')
     ..hasRequiredFields = false
   ;
 
@@ -32,17 +35,17 @@ class ManagedService extends GeneratedMessage {
   }
   static ManagedService _defaultInstance;
   static void $checkItem(ManagedService v) {
-    if (v is !ManagedService) checkItemFailed(v, 'ManagedService');
+    if (v is! ManagedService) checkItemFailed(v, 'ManagedService');
   }
 
-  String get serviceName => $_get(0, 2, '');
-  void set serviceName(String v) { $_setString(0, 2, v); }
-  bool hasServiceName() => $_has(0, 2);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(2);
 
-  String get producerProjectId => $_get(1, 3, '');
-  void set producerProjectId(String v) { $_setString(1, 3, v); }
-  bool hasProducerProjectId() => $_has(1, 3);
+  String get producerProjectId => $_getS(1, '');
+  set producerProjectId(String v) { $_setString(1, v); }
+  bool hasProducerProjectId() => $_has(1);
   void clearProducerProjectId() => clearField(3);
 }
 
@@ -50,8 +53,8 @@ class _ReadonlyManagedService extends ManagedService with ReadonlyMessageMixin {
 
 class OperationMetadata_Step extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('OperationMetadata_Step')
-    ..a/*<String>*/(2, 'description', PbFieldType.OS)
-    ..e/*<OperationMetadata_Status>*/(4, 'status', PbFieldType.OE, OperationMetadata_Status.STATUS_UNSPECIFIED, OperationMetadata_Status.valueOf)
+    ..aOS(2, 'description')
+    ..e<OperationMetadata_Status>(4, 'status', PbFieldType.OE, OperationMetadata_Status.STATUS_UNSPECIFIED, OperationMetadata_Status.valueOf, OperationMetadata_Status.values)
     ..hasRequiredFields = false
   ;
 
@@ -68,17 +71,17 @@ class OperationMetadata_Step extends GeneratedMessage {
   }
   static OperationMetadata_Step _defaultInstance;
   static void $checkItem(OperationMetadata_Step v) {
-    if (v is !OperationMetadata_Step) checkItemFailed(v, 'OperationMetadata_Step');
+    if (v is! OperationMetadata_Step) checkItemFailed(v, 'OperationMetadata_Step');
   }
 
-  String get description => $_get(0, 2, '');
-  void set description(String v) { $_setString(0, 2, v); }
-  bool hasDescription() => $_has(0, 2);
+  String get description => $_getS(0, '');
+  set description(String v) { $_setString(0, v); }
+  bool hasDescription() => $_has(0);
   void clearDescription() => clearField(2);
 
-  OperationMetadata_Status get status => $_get(1, 4, null);
-  void set status(OperationMetadata_Status v) { setField(4, v); }
-  bool hasStatus() => $_has(1, 4);
+  OperationMetadata_Status get status => $_getN(1);
+  set status(OperationMetadata_Status v) { setField(4, v); }
+  bool hasStatus() => $_has(1);
   void clearStatus() => clearField(4);
 }
 
@@ -86,10 +89,10 @@ class _ReadonlyOperationMetadata_Step extends OperationMetadata_Step with Readon
 
 class OperationMetadata extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('OperationMetadata')
-    ..p/*<String>*/(1, 'resourceNames', PbFieldType.PS)
-    ..pp/*<OperationMetadata_Step>*/(2, 'steps', PbFieldType.PM, OperationMetadata_Step.$checkItem, OperationMetadata_Step.create)
-    ..a/*<int>*/(3, 'progressPercentage', PbFieldType.O3)
-    ..a/*<google$protobuf.Timestamp>*/(4, 'startTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
+    ..pPS(1, 'resourceNames')
+    ..pp<OperationMetadata_Step>(2, 'steps', PbFieldType.PM, OperationMetadata_Step.$checkItem, OperationMetadata_Step.create)
+    ..a<int>(3, 'progressPercentage', PbFieldType.O3)
+    ..a<$google$protobuf.Timestamp>(4, 'startTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -106,21 +109,21 @@ class OperationMetadata extends GeneratedMessage {
   }
   static OperationMetadata _defaultInstance;
   static void $checkItem(OperationMetadata v) {
-    if (v is !OperationMetadata) checkItemFailed(v, 'OperationMetadata');
+    if (v is! OperationMetadata) checkItemFailed(v, 'OperationMetadata');
   }
 
-  List<String> get resourceNames => $_get(0, 1, null);
+  List<String> get resourceNames => $_getList(0);
 
-  List<OperationMetadata_Step> get steps => $_get(1, 2, null);
+  List<OperationMetadata_Step> get steps => $_getList(1);
 
-  int get progressPercentage => $_get(2, 3, 0);
-  void set progressPercentage(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasProgressPercentage() => $_has(2, 3);
+  int get progressPercentage => $_get(2, 0);
+  set progressPercentage(int v) { $_setSignedInt32(2, v); }
+  bool hasProgressPercentage() => $_has(2);
   void clearProgressPercentage() => clearField(3);
 
-  google$protobuf.Timestamp get startTime => $_get(3, 4, null);
-  void set startTime(google$protobuf.Timestamp v) { setField(4, v); }
-  bool hasStartTime() => $_has(3, 4);
+  $google$protobuf.Timestamp get startTime => $_getN(3);
+  set startTime($google$protobuf.Timestamp v) { setField(4, v); }
+  bool hasStartTime() => $_has(3);
   void clearStartTime() => clearField(4);
 }
 
@@ -128,9 +131,9 @@ class _ReadonlyOperationMetadata extends OperationMetadata with ReadonlyMessageM
 
 class Diagnostic extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Diagnostic')
-    ..a/*<String>*/(1, 'location', PbFieldType.OS)
-    ..e/*<Diagnostic_Kind>*/(2, 'kind', PbFieldType.OE, Diagnostic_Kind.WARNING, Diagnostic_Kind.valueOf)
-    ..a/*<String>*/(3, 'message', PbFieldType.OS)
+    ..aOS(1, 'location')
+    ..e<Diagnostic_Kind>(2, 'kind', PbFieldType.OE, Diagnostic_Kind.WARNING, Diagnostic_Kind.valueOf, Diagnostic_Kind.values)
+    ..aOS(3, 'message')
     ..hasRequiredFields = false
   ;
 
@@ -147,22 +150,22 @@ class Diagnostic extends GeneratedMessage {
   }
   static Diagnostic _defaultInstance;
   static void $checkItem(Diagnostic v) {
-    if (v is !Diagnostic) checkItemFailed(v, 'Diagnostic');
+    if (v is! Diagnostic) checkItemFailed(v, 'Diagnostic');
   }
 
-  String get location => $_get(0, 1, '');
-  void set location(String v) { $_setString(0, 1, v); }
-  bool hasLocation() => $_has(0, 1);
+  String get location => $_getS(0, '');
+  set location(String v) { $_setString(0, v); }
+  bool hasLocation() => $_has(0);
   void clearLocation() => clearField(1);
 
-  Diagnostic_Kind get kind => $_get(1, 2, null);
-  void set kind(Diagnostic_Kind v) { setField(2, v); }
-  bool hasKind() => $_has(1, 2);
+  Diagnostic_Kind get kind => $_getN(1);
+  set kind(Diagnostic_Kind v) { setField(2, v); }
+  bool hasKind() => $_has(1);
   void clearKind() => clearField(2);
 
-  String get message => $_get(2, 3, '');
-  void set message(String v) { $_setString(2, 3, v); }
-  bool hasMessage() => $_has(2, 3);
+  String get message => $_getS(2, '');
+  set message(String v) { $_setString(2, v); }
+  bool hasMessage() => $_has(2);
   void clearMessage() => clearField(3);
 }
 
@@ -170,8 +173,8 @@ class _ReadonlyDiagnostic extends Diagnostic with ReadonlyMessageMixin {}
 
 class ConfigSource extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ConfigSource')
-    ..pp/*<ConfigFile>*/(2, 'files', PbFieldType.PM, ConfigFile.$checkItem, ConfigFile.create)
-    ..a/*<String>*/(5, 'id', PbFieldType.OS)
+    ..pp<ConfigFile>(2, 'files', PbFieldType.PM, ConfigFile.$checkItem, ConfigFile.create)
+    ..aOS(5, 'id')
     ..hasRequiredFields = false
   ;
 
@@ -188,14 +191,14 @@ class ConfigSource extends GeneratedMessage {
   }
   static ConfigSource _defaultInstance;
   static void $checkItem(ConfigSource v) {
-    if (v is !ConfigSource) checkItemFailed(v, 'ConfigSource');
+    if (v is! ConfigSource) checkItemFailed(v, 'ConfigSource');
   }
 
-  List<ConfigFile> get files => $_get(0, 2, null);
+  List<ConfigFile> get files => $_getList(0);
 
-  String get id => $_get(1, 5, '');
-  void set id(String v) { $_setString(1, 5, v); }
-  bool hasId() => $_has(1, 5);
+  String get id => $_getS(1, '');
+  set id(String v) { $_setString(1, v); }
+  bool hasId() => $_has(1);
   void clearId() => clearField(5);
 }
 
@@ -203,9 +206,9 @@ class _ReadonlyConfigSource extends ConfigSource with ReadonlyMessageMixin {}
 
 class ConfigFile extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ConfigFile')
-    ..a/*<String>*/(1, 'filePath', PbFieldType.OS)
-    ..a/*<List<int>>*/(3, 'fileContents', PbFieldType.OY)
-    ..e/*<ConfigFile_FileType>*/(4, 'fileType', PbFieldType.OE, ConfigFile_FileType.FILE_TYPE_UNSPECIFIED, ConfigFile_FileType.valueOf)
+    ..aOS(1, 'filePath')
+    ..a<List<int>>(3, 'fileContents', PbFieldType.OY)
+    ..e<ConfigFile_FileType>(4, 'fileType', PbFieldType.OE, ConfigFile_FileType.FILE_TYPE_UNSPECIFIED, ConfigFile_FileType.valueOf, ConfigFile_FileType.values)
     ..hasRequiredFields = false
   ;
 
@@ -222,22 +225,22 @@ class ConfigFile extends GeneratedMessage {
   }
   static ConfigFile _defaultInstance;
   static void $checkItem(ConfigFile v) {
-    if (v is !ConfigFile) checkItemFailed(v, 'ConfigFile');
+    if (v is! ConfigFile) checkItemFailed(v, 'ConfigFile');
   }
 
-  String get filePath => $_get(0, 1, '');
-  void set filePath(String v) { $_setString(0, 1, v); }
-  bool hasFilePath() => $_has(0, 1);
+  String get filePath => $_getS(0, '');
+  set filePath(String v) { $_setString(0, v); }
+  bool hasFilePath() => $_has(0);
   void clearFilePath() => clearField(1);
 
-  List<int> get fileContents => $_get(1, 3, null);
-  void set fileContents(List<int> v) { $_setBytes(1, 3, v); }
-  bool hasFileContents() => $_has(1, 3);
+  List<int> get fileContents => $_getN(1);
+  set fileContents(List<int> v) { $_setBytes(1, v); }
+  bool hasFileContents() => $_has(1);
   void clearFileContents() => clearField(3);
 
-  ConfigFile_FileType get fileType => $_get(2, 4, null);
-  void set fileType(ConfigFile_FileType v) { setField(4, v); }
-  bool hasFileType() => $_has(2, 4);
+  ConfigFile_FileType get fileType => $_getN(2);
+  set fileType(ConfigFile_FileType v) { setField(4, v); }
+  bool hasFileType() => $_has(2);
   void clearFileType() => clearField(4);
 }
 
@@ -245,7 +248,7 @@ class _ReadonlyConfigFile extends ConfigFile with ReadonlyMessageMixin {}
 
 class ConfigRef extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ConfigRef')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -262,12 +265,12 @@ class ConfigRef extends GeneratedMessage {
   }
   static ConfigRef _defaultInstance;
   static void $checkItem(ConfigRef v) {
-    if (v is !ConfigRef) checkItemFailed(v, 'ConfigRef');
+    if (v is! ConfigRef) checkItemFailed(v, 'ConfigRef');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -275,7 +278,7 @@ class _ReadonlyConfigRef extends ConfigRef with ReadonlyMessageMixin {}
 
 class ChangeReport extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ChangeReport')
-    ..pp/*<google$api.ConfigChange>*/(1, 'configChanges', PbFieldType.PM, google$api.ConfigChange.$checkItem, google$api.ConfigChange.create)
+    ..pp<$google$api.ConfigChange>(1, 'configChanges', PbFieldType.PM, $google$api.ConfigChange.$checkItem, $google$api.ConfigChange.create)
     ..hasRequiredFields = false
   ;
 
@@ -292,18 +295,18 @@ class ChangeReport extends GeneratedMessage {
   }
   static ChangeReport _defaultInstance;
   static void $checkItem(ChangeReport v) {
-    if (v is !ChangeReport) checkItemFailed(v, 'ChangeReport');
+    if (v is! ChangeReport) checkItemFailed(v, 'ChangeReport');
   }
 
-  List<google$api.ConfigChange> get configChanges => $_get(0, 1, null);
+  List<$google$api.ConfigChange> get configChanges => $_getList(0);
 }
 
 class _ReadonlyChangeReport extends ChangeReport with ReadonlyMessageMixin {}
 
 class Rollout_TrafficPercentStrategy_PercentagesEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Rollout_TrafficPercentStrategy_PercentagesEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<double>*/(2, 'value', PbFieldType.OD)
+    ..aOS(1, 'key')
+    ..a<double>(2, 'value', PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -320,17 +323,17 @@ class Rollout_TrafficPercentStrategy_PercentagesEntry extends GeneratedMessage {
   }
   static Rollout_TrafficPercentStrategy_PercentagesEntry _defaultInstance;
   static void $checkItem(Rollout_TrafficPercentStrategy_PercentagesEntry v) {
-    if (v is !Rollout_TrafficPercentStrategy_PercentagesEntry) checkItemFailed(v, 'Rollout_TrafficPercentStrategy_PercentagesEntry');
+    if (v is! Rollout_TrafficPercentStrategy_PercentagesEntry) checkItemFailed(v, 'Rollout_TrafficPercentStrategy_PercentagesEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  double get value => $_get(1, 2, null);
-  void set value(double v) { $_setDouble(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  double get value => $_getN(1);
+  set value(double v) { $_setDouble(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -338,7 +341,7 @@ class _ReadonlyRollout_TrafficPercentStrategy_PercentagesEntry extends Rollout_T
 
 class Rollout_TrafficPercentStrategy extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Rollout_TrafficPercentStrategy')
-    ..pp/*<Rollout_TrafficPercentStrategy_PercentagesEntry>*/(1, 'percentages', PbFieldType.PM, Rollout_TrafficPercentStrategy_PercentagesEntry.$checkItem, Rollout_TrafficPercentStrategy_PercentagesEntry.create)
+    ..pp<Rollout_TrafficPercentStrategy_PercentagesEntry>(1, 'percentages', PbFieldType.PM, Rollout_TrafficPercentStrategy_PercentagesEntry.$checkItem, Rollout_TrafficPercentStrategy_PercentagesEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -355,10 +358,10 @@ class Rollout_TrafficPercentStrategy extends GeneratedMessage {
   }
   static Rollout_TrafficPercentStrategy _defaultInstance;
   static void $checkItem(Rollout_TrafficPercentStrategy v) {
-    if (v is !Rollout_TrafficPercentStrategy) checkItemFailed(v, 'Rollout_TrafficPercentStrategy');
+    if (v is! Rollout_TrafficPercentStrategy) checkItemFailed(v, 'Rollout_TrafficPercentStrategy');
   }
 
-  List<Rollout_TrafficPercentStrategy_PercentagesEntry> get percentages => $_get(0, 1, null);
+  List<Rollout_TrafficPercentStrategy_PercentagesEntry> get percentages => $_getList(0);
 }
 
 class _ReadonlyRollout_TrafficPercentStrategy extends Rollout_TrafficPercentStrategy with ReadonlyMessageMixin {}
@@ -381,7 +384,7 @@ class Rollout_DeleteServiceStrategy extends GeneratedMessage {
   }
   static Rollout_DeleteServiceStrategy _defaultInstance;
   static void $checkItem(Rollout_DeleteServiceStrategy v) {
-    if (v is !Rollout_DeleteServiceStrategy) checkItemFailed(v, 'Rollout_DeleteServiceStrategy');
+    if (v is! Rollout_DeleteServiceStrategy) checkItemFailed(v, 'Rollout_DeleteServiceStrategy');
   }
 }
 
@@ -389,13 +392,13 @@ class _ReadonlyRollout_DeleteServiceStrategy extends Rollout_DeleteServiceStrate
 
 class Rollout extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Rollout')
-    ..a/*<String>*/(1, 'rolloutId', PbFieldType.OS)
-    ..a/*<google$protobuf.Timestamp>*/(2, 'createTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<String>*/(3, 'createdBy', PbFieldType.OS)
-    ..e/*<Rollout_RolloutStatus>*/(4, 'status', PbFieldType.OE, Rollout_RolloutStatus.ROLLOUT_STATUS_UNSPECIFIED, Rollout_RolloutStatus.valueOf)
-    ..a/*<Rollout_TrafficPercentStrategy>*/(5, 'trafficPercentStrategy', PbFieldType.OM, Rollout_TrafficPercentStrategy.getDefault, Rollout_TrafficPercentStrategy.create)
-    ..a/*<String>*/(8, 'serviceName', PbFieldType.OS)
-    ..a/*<Rollout_DeleteServiceStrategy>*/(200, 'deleteServiceStrategy', PbFieldType.OM, Rollout_DeleteServiceStrategy.getDefault, Rollout_DeleteServiceStrategy.create)
+    ..aOS(1, 'rolloutId')
+    ..a<$google$protobuf.Timestamp>(2, 'createTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..aOS(3, 'createdBy')
+    ..e<Rollout_RolloutStatus>(4, 'status', PbFieldType.OE, Rollout_RolloutStatus.ROLLOUT_STATUS_UNSPECIFIED, Rollout_RolloutStatus.valueOf, Rollout_RolloutStatus.values)
+    ..a<Rollout_TrafficPercentStrategy>(5, 'trafficPercentStrategy', PbFieldType.OM, Rollout_TrafficPercentStrategy.getDefault, Rollout_TrafficPercentStrategy.create)
+    ..aOS(8, 'serviceName')
+    ..a<Rollout_DeleteServiceStrategy>(200, 'deleteServiceStrategy', PbFieldType.OM, Rollout_DeleteServiceStrategy.getDefault, Rollout_DeleteServiceStrategy.create)
     ..hasRequiredFields = false
   ;
 
@@ -412,42 +415,42 @@ class Rollout extends GeneratedMessage {
   }
   static Rollout _defaultInstance;
   static void $checkItem(Rollout v) {
-    if (v is !Rollout) checkItemFailed(v, 'Rollout');
+    if (v is! Rollout) checkItemFailed(v, 'Rollout');
   }
 
-  String get rolloutId => $_get(0, 1, '');
-  void set rolloutId(String v) { $_setString(0, 1, v); }
-  bool hasRolloutId() => $_has(0, 1);
+  String get rolloutId => $_getS(0, '');
+  set rolloutId(String v) { $_setString(0, v); }
+  bool hasRolloutId() => $_has(0);
   void clearRolloutId() => clearField(1);
 
-  google$protobuf.Timestamp get createTime => $_get(1, 2, null);
-  void set createTime(google$protobuf.Timestamp v) { setField(2, v); }
-  bool hasCreateTime() => $_has(1, 2);
+  $google$protobuf.Timestamp get createTime => $_getN(1);
+  set createTime($google$protobuf.Timestamp v) { setField(2, v); }
+  bool hasCreateTime() => $_has(1);
   void clearCreateTime() => clearField(2);
 
-  String get createdBy => $_get(2, 3, '');
-  void set createdBy(String v) { $_setString(2, 3, v); }
-  bool hasCreatedBy() => $_has(2, 3);
+  String get createdBy => $_getS(2, '');
+  set createdBy(String v) { $_setString(2, v); }
+  bool hasCreatedBy() => $_has(2);
   void clearCreatedBy() => clearField(3);
 
-  Rollout_RolloutStatus get status => $_get(3, 4, null);
-  void set status(Rollout_RolloutStatus v) { setField(4, v); }
-  bool hasStatus() => $_has(3, 4);
+  Rollout_RolloutStatus get status => $_getN(3);
+  set status(Rollout_RolloutStatus v) { setField(4, v); }
+  bool hasStatus() => $_has(3);
   void clearStatus() => clearField(4);
 
-  Rollout_TrafficPercentStrategy get trafficPercentStrategy => $_get(4, 5, null);
-  void set trafficPercentStrategy(Rollout_TrafficPercentStrategy v) { setField(5, v); }
-  bool hasTrafficPercentStrategy() => $_has(4, 5);
+  Rollout_TrafficPercentStrategy get trafficPercentStrategy => $_getN(4);
+  set trafficPercentStrategy(Rollout_TrafficPercentStrategy v) { setField(5, v); }
+  bool hasTrafficPercentStrategy() => $_has(4);
   void clearTrafficPercentStrategy() => clearField(5);
 
-  String get serviceName => $_get(5, 8, '');
-  void set serviceName(String v) { $_setString(5, 8, v); }
-  bool hasServiceName() => $_has(5, 8);
+  String get serviceName => $_getS(5, '');
+  set serviceName(String v) { $_setString(5, v); }
+  bool hasServiceName() => $_has(5);
   void clearServiceName() => clearField(8);
 
-  Rollout_DeleteServiceStrategy get deleteServiceStrategy => $_get(6, 200, null);
-  void set deleteServiceStrategy(Rollout_DeleteServiceStrategy v) { setField(200, v); }
-  bool hasDeleteServiceStrategy() => $_has(6, 200);
+  Rollout_DeleteServiceStrategy get deleteServiceStrategy => $_getN(6);
+  set deleteServiceStrategy(Rollout_DeleteServiceStrategy v) { setField(200, v); }
+  bool hasDeleteServiceStrategy() => $_has(6);
   void clearDeleteServiceStrategy() => clearField(200);
 }
 

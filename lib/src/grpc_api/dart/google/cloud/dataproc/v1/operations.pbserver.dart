@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.dataproc.v1_operations_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'operations.pb.dart';
 

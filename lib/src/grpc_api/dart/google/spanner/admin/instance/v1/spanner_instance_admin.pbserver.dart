@@ -1,17 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.admin.instance.v1_spanner_instance_admin_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'spanner_instance_admin.pb.dart';
-import '../../../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../../../protobuf/empty.pb.dart' as google$protobuf;
-import '../../../../iam/v1/iam_policy.pb.dart' as google$iam$v1;
-import '../../../../iam/v1/policy.pb.dart' as google$iam$v1;
+import '../../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
+import '../../../../iam/v1/policy.pb.dart' as $google$iam$v1;
 import 'spanner_instance_admin.pbjson.dart';
 
 export 'spanner_instance_admin.pb.dart';
@@ -21,12 +21,12 @@ abstract class InstanceAdminServiceBase extends GeneratedService {
   Future<InstanceConfig> getInstanceConfig(ServerContext ctx, GetInstanceConfigRequest request);
   Future<ListInstancesResponse> listInstances(ServerContext ctx, ListInstancesRequest request);
   Future<Instance> getInstance(ServerContext ctx, GetInstanceRequest request);
-  Future<google$longrunning.Operation> createInstance(ServerContext ctx, CreateInstanceRequest request);
-  Future<google$longrunning.Operation> updateInstance(ServerContext ctx, UpdateInstanceRequest request);
-  Future<google$protobuf.Empty> deleteInstance(ServerContext ctx, DeleteInstanceRequest request);
-  Future<google$iam$v1.Policy> setIamPolicy(ServerContext ctx, google$iam$v1.SetIamPolicyRequest request);
-  Future<google$iam$v1.Policy> getIamPolicy(ServerContext ctx, google$iam$v1.GetIamPolicyRequest request);
-  Future<google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ServerContext ctx, google$iam$v1.TestIamPermissionsRequest request);
+  Future<$google$longrunning.Operation> createInstance(ServerContext ctx, CreateInstanceRequest request);
+  Future<$google$longrunning.Operation> updateInstance(ServerContext ctx, UpdateInstanceRequest request);
+  Future<$google$protobuf.Empty> deleteInstance(ServerContext ctx, DeleteInstanceRequest request);
+  Future<$google$iam$v1.Policy> setIamPolicy(ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
+  Future<$google$iam$v1.Policy> getIamPolicy(ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
+  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -37,9 +37,9 @@ abstract class InstanceAdminServiceBase extends GeneratedService {
       case 'CreateInstance': return new CreateInstanceRequest();
       case 'UpdateInstance': return new UpdateInstanceRequest();
       case 'DeleteInstance': return new DeleteInstanceRequest();
-      case 'SetIamPolicy': return new google$iam$v1.SetIamPolicyRequest();
-      case 'GetIamPolicy': return new google$iam$v1.GetIamPolicyRequest();
-      case 'TestIamPermissions': return new google$iam$v1.TestIamPermissionsRequest();
+      case 'SetIamPolicy': return new $google$iam$v1.SetIamPolicyRequest();
+      case 'GetIamPolicy': return new $google$iam$v1.GetIamPolicyRequest();
+      case 'TestIamPermissions': return new $google$iam$v1.TestIamPermissionsRequest();
       default: throw new ArgumentError('Unknown method: $method');
     }
   }
@@ -61,6 +61,6 @@ abstract class InstanceAdminServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => InstanceAdmin$json;
-  Map<String, dynamic> get $messageJson => InstanceAdmin$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => InstanceAdmin$messageJson;
 }
 
