@@ -41,7 +41,7 @@ run cp -R $GOOGLEAPIS_DIR/google/* $DIR/protos/google
 # Generate the dart code.
 run rm -rf $
 run mkdir -p $DIR/dart
-for file in $(find protos -name '*proto' | grep -v unittest); do
+for file in $(find $DIR/protos -name '*proto' | grep -v unittest); do
   echo -e "\nCompiling $file"
   run protoc -I$DIR/protos --dart_out=$DIR/dart $file
   echo
