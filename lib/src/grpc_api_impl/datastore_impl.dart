@@ -428,7 +428,7 @@ class _Codec {
   _Codec(this._projectId);
 
   raw.Entity decodeEntity(Entity pb) {
-    final properties = {};
+    final properties = <String, Object>{};
     final unIndexedProperties = new Set<String>();
 
     for (final propertyPb in pb.properties) {
@@ -454,7 +454,7 @@ class _Codec {
       } else {
         final oldValue = properties[name];
         if (oldValue is List) {
-          properties[name].add(value);
+          oldValue.add(value);
         } else {
           properties[name] = [oldValue, value];
         }
@@ -497,7 +497,7 @@ class _Codec {
   }
 
   raw.Key decodeKey(Key pb) {
-    final keyElements = new List(pb.path.length);
+    final keyElements = new List<raw.KeyElement>(pb.path.length);
     for (int i = 0; i < pb.path.length; i++) {
       final part = pb.path[i];
       var id;

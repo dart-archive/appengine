@@ -36,12 +36,12 @@ class Channel extends protobuf.RpcClient {
 
   Channel(this.servicePackage, this.client);
 
-  Future<protobuf.GeneratedMessage> invoke(
+  Future<T> invoke<T extends protobuf.GeneratedMessage>(
       protobuf.ClientContext ctx,
       String serviceName,
       String methodName,
       protobuf.GeneratedMessage request,
-      protobuf.GeneratedMessage response) async {
+      T response) async {
     return client.invoke(
         '$servicePackage.$serviceName', methodName, request, response);
   }
@@ -95,11 +95,11 @@ class Client {
             : null,
         _dialer = dialer;
 
-  Future invoke(
+  Future<T> invoke<T extends protobuf.GeneratedMessage>(
       String service,
       String method,
       protobuf.GeneratedMessage request,
-      protobuf.GeneratedMessage response) async {
+      T response) async {
     // If the current connection is not healthy we'll make a new one:
     // NOTE: Several concurrent callers will end up using the same dialer and
     // will therefore obtain the same connection.
@@ -160,7 +160,7 @@ class Client {
     // Byte [0]:   Is Compressed (0/1).
     // Byte [1-4]: Length in big endian.
     bytedata.setUint8(0, 0);
-    bytedata.setUint32(1, messageBody.length, Endianness.BIG_ENDIAN);
+    bytedata.setUint32(1, messageBody.length, Endian.big);
 
     stream.sendData(messageHeader);
     stream.sendData(messageBody, endStream: true);
@@ -176,7 +176,8 @@ class Client {
         stream.terminate();
         throw new ProtocolException('No initial headers from server.');
       }
-      final Map responseHeaders = _getHeaders(messageIterator.current.headers);
+      final headerMessage = messageIterator.current as http2.HeadersStreamMessage;
+      final Map responseHeaders = _getHeaders(headerMessage.headers);
       final status = responseHeaders[':status'];
       if (status != '200') {
         stream.terminate();
@@ -192,7 +193,8 @@ class Client {
       final resultBytes = new BytesBuilder(copy: false);
       while (await messageIterator.moveNext() &&
           messageIterator.current is http2.DataStreamMessage) {
-        resultBytes.add(messageIterator.current.bytes);
+        final dataMessage = messageIterator.current as http2.DataStreamMessage;
+        resultBytes.add(dataMessage.bytes);
       }
       if (messageIterator.current == null) {
         stream.terminate();
@@ -206,9 +208,9 @@ class Client {
       //      'google.rpc.debuginfo-bin': ...,
       //    }
       assert(messageIterator.current is http2.HeadersStreamMessage);
-      final Map trailingHeaders = _getHeaders(messageIterator.current.headers);
-      final int grpcStatus =
-          int.parse(trailingHeaders['grpc-status'], onError: (_) => null);
+      final trailerMessage = messageIterator.current as http2.HeadersStreamMessage;
+      final Map trailingHeaders = _getHeaders(trailerMessage.headers);
+      final int grpcStatus = int.tryParse(trailingHeaders['grpc-status']);
       if (grpcStatus != 0) {
         stream.terminate();
         final message =
@@ -270,11 +272,11 @@ class Client {
   Future close() => _connection?.finish();
 
   Map<String, String> _getHeaders(List<http2.Header> headers) {
-    final Map headerMap = {};
+    final Map headerMap = <String, String>{};
     for (var header in headers) {
-      final name = ASCII.decode(header.name);
+      final name = ascii.decode(header.name);
       if (!headerMap.containsKey(name)) {
-        headerMap[name] = ASCII.decode(header.value);
+        headerMap[name] = ascii.decode(header.value);
       }
     }
     return headerMap;

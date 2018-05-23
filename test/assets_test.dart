@@ -25,8 +25,7 @@ const isAssetError = const _AssetError();
 // body.
 Future<List<int>> getAsset(int port, String path,
                            [int expectedStatusCode = 200]) {
-  var client;
-  client = new HttpClient();
+  var client = new HttpClient();
   return client.get('127.0.0.1', port, path)
       .then((request) {
         return request.close();
@@ -34,7 +33,7 @@ Future<List<int>> getAsset(int port, String path,
       .then((response) {
         expect(response.statusCode, expectedStatusCode);
         return response
-            .fold([], (buf, data) => buf..addAll(data));
+            .fold<List<int>>([], (buf, data) => buf..addAll(data));
       })
       .whenComplete(() {
         client.close();
@@ -185,7 +184,7 @@ void main() {
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(appServerPort, '/test.html').then((body) {
-          expect(LATIN1.decode(body), 'pub serve html');
+          expect(latin1.decode(body), 'pub serve html');
         });
       });
     });
@@ -197,7 +196,7 @@ void main() {
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(appServerPort, '/test.css').then((body) {
-          expect(LATIN1.decode(body), 'pub serve css');
+          expect(latin1.decode(body), 'pub serve css');
         });
       });
     });
@@ -211,7 +210,7 @@ void main() {
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(appServerPort, '/test.html').then((body) {
-          expect(LATIN1.decode(body), 'pub serve html');
+          expect(latin1.decode(body), 'pub serve html');
         });
       });
     });
@@ -295,7 +294,7 @@ void main() {
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(appServerPort, '/test.html').then((body) {
-          expect(LATIN1.decode(body), 'from build html');
+          expect(latin1.decode(body), 'from build html');
         });
       });
     });
@@ -307,7 +306,7 @@ void main() {
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(appServerPort, '/test.html').then((body) {
-          expect(LATIN1.decode(body), 'from build css');
+          expect(latin1.decode(body), 'from build css');
         });
       });
     });
@@ -321,7 +320,7 @@ void main() {
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(appServerPort, '/test.html').then((body) {
-          expect(LATIN1.decode(body), 'from build html');
+          expect(latin1.decode(body), 'from build html');
         });
       });
     });
