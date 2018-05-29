@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_app_yaml_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class AuthFailAction extends ProtobufEnum {
@@ -19,7 +21,7 @@ class AuthFailAction extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static AuthFailAction valueOf(int value) => _byValue[value] as AuthFailAction;
   static void $checkItem(AuthFailAction v) {
-    if (v is !AuthFailAction) checkItemFailed(v, 'AuthFailAction');
+    if (v is! AuthFailAction) checkItemFailed(v, 'AuthFailAction');
   }
 
   const AuthFailAction._(int v, String n) : super(v, n);
@@ -41,7 +43,7 @@ class LoginRequirement extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static LoginRequirement valueOf(int value) => _byValue[value] as LoginRequirement;
   static void $checkItem(LoginRequirement v) {
-    if (v is !LoginRequirement) checkItemFailed(v, 'LoginRequirement');
+    if (v is! LoginRequirement) checkItemFailed(v, 'LoginRequirement');
   }
 
   const LoginRequirement._(int v, String n) : super(v, n);
@@ -65,7 +67,7 @@ class SecurityLevel extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static SecurityLevel valueOf(int value) => _byValue[value] as SecurityLevel;
   static void $checkItem(SecurityLevel v) {
-    if (v is !SecurityLevel) checkItemFailed(v, 'SecurityLevel');
+    if (v is! SecurityLevel) checkItemFailed(v, 'SecurityLevel');
   }
 
   const SecurityLevel._(int v, String n) : super(v, n);
@@ -89,7 +91,7 @@ class ErrorHandler_ErrorCode extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static ErrorHandler_ErrorCode valueOf(int value) => _byValue[value] as ErrorHandler_ErrorCode;
   static void $checkItem(ErrorHandler_ErrorCode v) {
-    if (v is !ErrorHandler_ErrorCode) checkItemFailed(v, 'ErrorHandler_ErrorCode');
+    if (v is! ErrorHandler_ErrorCode) checkItemFailed(v, 'ErrorHandler_ErrorCode');
   }
 
   const ErrorHandler_ErrorCode._(int v, String n) : super(v, n);
@@ -113,7 +115,7 @@ class UrlMap_RedirectHttpResponseCode extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static UrlMap_RedirectHttpResponseCode valueOf(int value) => _byValue[value] as UrlMap_RedirectHttpResponseCode;
   static void $checkItem(UrlMap_RedirectHttpResponseCode v) {
-    if (v is !UrlMap_RedirectHttpResponseCode) checkItemFailed(v, 'UrlMap_RedirectHttpResponseCode');
+    if (v is! UrlMap_RedirectHttpResponseCode) checkItemFailed(v, 'UrlMap_RedirectHttpResponseCode');
   }
 
   const UrlMap_RedirectHttpResponseCode._(int v, String n) : super(v, n);

@@ -1,9 +1,10 @@
 type: com.google.api.codegen.ConfigProto
+config_schema_version: 1.0.0
 language_settings:
   java:
-    package_name: com.google.cloud.iam.admin.spi.v1
+    package_name: com.google.cloud.iam.admin.v1
   python:
-    package_name: google.cloud.gapic.iam_admin.v1
+    package_name: google.cloud.iam_admin_v1.gapic
   go:
     package_name: cloud.google.com/go/iam/admin/apiv1
   csharp:
@@ -23,6 +24,9 @@ interfaces:
   collections:
   - name_pattern: projects/{project}
     entity_name: project
+    language_overrides:
+    - language: csharp
+      common_resource_name: Google.Api.Gax.ResourceNames.ProjectName
   - name_pattern: projects/{project}/serviceAccounts/{service_account}
     entity_name: service_account
   - name_pattern: projects/{project}/serviceAccounts/{service_account}/keys/{key}
@@ -244,6 +248,19 @@ interfaces:
         - full_resource_name
     required_fields:
     - full_resource_name
+    request_object_method: false
+    retry_codes_name: non_idempotent
+    retry_params_name: default
+    timeout_millis: 60000
+  - name: SignJwt
+    flattening:
+      groups:
+      - parameters:
+        - name
+        - payload
+    required_fields:
+    - name
+    - payload
     request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default

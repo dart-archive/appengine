@@ -5,7 +5,7 @@
 library grpc_test;
 
 import 'dart:async';
-import 'dart:convert' show ASCII;
+import 'dart:convert' show ascii;
 import 'dart:typed_data' show ByteData;
 
 import 'package:http2/transport.dart' as http2;
@@ -78,7 +78,7 @@ main() {
       test('token-provider-error', () {
         final dialer = new MockDialer(false, () {
           return new OpenMockConnection(
-              (new StreamController()..close()).stream);
+              (new StreamController<http2.StreamMessage>()..close()).stream);
         });
         final tokenProvider = new ThrowingMockAccessTokenProvider();
         final client = new grpc.Client(dialer, tokenProvider, timeout);
@@ -320,11 +320,11 @@ buildValidGrpcResponseData(
 class MockClient implements grpc.Client {
   var invokeService, invokeMethod, invokeRequest, invokeResponse;
 
-  Future invoke(
+  Future<T> invoke<T extends protobuf.GeneratedMessage>(
       String service,
       String method,
       protobuf.GeneratedMessage request,
-      protobuf.GeneratedMessage response) async {
+      T response) async {
     invokeService = service;
     invokeMethod = method;
     invokeRequest = request;
@@ -367,6 +367,10 @@ class MockDialer implements grpc.Dialer {
 abstract class MockConnection
     implements http2.ClientTransportConnection {
 
+  Map<String, String> get usedHeaders => throw 'unsupported call';
+  MockStream get usedMockStream => throw 'unsupported call';
+  bool get wasTerminated => false;
+
   MockStream makeRequest(List<http2.Header> headers,
                          {bool endStream: false}) {
     throw 'unsupported call';
@@ -383,6 +387,13 @@ abstract class MockConnection
   Future finish() async {
     throw 'unsupported call';
   }
+
+  @override
+  set onActiveStateChanged(http2.ActiveStateHandler callback) {
+    throw 'unsupported call';
+  }
+
+
 }
 
 class OpenMockConnection extends MockConnection {
@@ -402,7 +413,7 @@ class OpenMockConnection extends MockConnection {
 
     usedHeaders = {};
     for (final http2.Header h in headers) {
-      usedHeaders[ASCII.decode(h.name)] = ASCII.decode(h.value);
+      usedHeaders[ascii.decode(h.name)] = ascii.decode(h.value);
     }
 
     return usedMockStream = new MockStream(responseMessages);
@@ -453,6 +464,12 @@ class MockStream extends http2.ClientTransportStream {
   void terminate() {
     wasTerminated = true;
   }
+
+  @override
+  set onTerminated(void value(int v)) {
+    throw 'unsupported call';
+  }
+
 }
 
 class ThrowingMockAccessTokenProvider implements AccessTokenProvider {

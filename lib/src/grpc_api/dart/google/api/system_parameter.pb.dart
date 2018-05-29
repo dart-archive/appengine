@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_system_parameter;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class SystemParameters extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SystemParameters')
-    ..pp/*<SystemParameterRule>*/(1, 'rules', PbFieldType.PM, SystemParameterRule.$checkItem, SystemParameterRule.create)
+    ..pp<SystemParameterRule>(1, 'rules', PbFieldType.PM, SystemParameterRule.$checkItem, SystemParameterRule.create)
     ..hasRequiredFields = false
   ;
 
@@ -24,18 +27,18 @@ class SystemParameters extends GeneratedMessage {
   }
   static SystemParameters _defaultInstance;
   static void $checkItem(SystemParameters v) {
-    if (v is !SystemParameters) checkItemFailed(v, 'SystemParameters');
+    if (v is! SystemParameters) checkItemFailed(v, 'SystemParameters');
   }
 
-  List<SystemParameterRule> get rules => $_get(0, 1, null);
+  List<SystemParameterRule> get rules => $_getList(0);
 }
 
 class _ReadonlySystemParameters extends SystemParameters with ReadonlyMessageMixin {}
 
 class SystemParameterRule extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SystemParameterRule')
-    ..a/*<String>*/(1, 'selector', PbFieldType.OS)
-    ..pp/*<SystemParameter>*/(2, 'parameters', PbFieldType.PM, SystemParameter.$checkItem, SystemParameter.create)
+    ..aOS(1, 'selector')
+    ..pp<SystemParameter>(2, 'parameters', PbFieldType.PM, SystemParameter.$checkItem, SystemParameter.create)
     ..hasRequiredFields = false
   ;
 
@@ -52,24 +55,24 @@ class SystemParameterRule extends GeneratedMessage {
   }
   static SystemParameterRule _defaultInstance;
   static void $checkItem(SystemParameterRule v) {
-    if (v is !SystemParameterRule) checkItemFailed(v, 'SystemParameterRule');
+    if (v is! SystemParameterRule) checkItemFailed(v, 'SystemParameterRule');
   }
 
-  String get selector => $_get(0, 1, '');
-  void set selector(String v) { $_setString(0, 1, v); }
-  bool hasSelector() => $_has(0, 1);
+  String get selector => $_getS(0, '');
+  set selector(String v) { $_setString(0, v); }
+  bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  List<SystemParameter> get parameters => $_get(1, 2, null);
+  List<SystemParameter> get parameters => $_getList(1);
 }
 
 class _ReadonlySystemParameterRule extends SystemParameterRule with ReadonlyMessageMixin {}
 
 class SystemParameter extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SystemParameter')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'httpHeader', PbFieldType.OS)
-    ..a/*<String>*/(3, 'urlQueryParameter', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..aOS(2, 'httpHeader')
+    ..aOS(3, 'urlQueryParameter')
     ..hasRequiredFields = false
   ;
 
@@ -86,22 +89,22 @@ class SystemParameter extends GeneratedMessage {
   }
   static SystemParameter _defaultInstance;
   static void $checkItem(SystemParameter v) {
-    if (v is !SystemParameter) checkItemFailed(v, 'SystemParameter');
+    if (v is! SystemParameter) checkItemFailed(v, 'SystemParameter');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get httpHeader => $_get(1, 2, '');
-  void set httpHeader(String v) { $_setString(1, 2, v); }
-  bool hasHttpHeader() => $_has(1, 2);
+  String get httpHeader => $_getS(1, '');
+  set httpHeader(String v) { $_setString(1, v); }
+  bool hasHttpHeader() => $_has(1);
   void clearHttpHeader() => clearField(2);
 
-  String get urlQueryParameter => $_get(2, 3, '');
-  void set urlQueryParameter(String v) { $_setString(2, 3, v); }
-  bool hasUrlQueryParameter() => $_has(2, 3);
+  String get urlQueryParameter => $_getS(2, '');
+  set urlQueryParameter(String v) { $_setString(2, v); }
+  bool hasUrlQueryParameter() => $_has(2);
   void clearUrlQueryParameter() => clearField(3);
 }
 

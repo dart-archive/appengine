@@ -1,21 +1,24 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicecontrol.v1_service_controller;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
+import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 import 'operation.pb.dart';
 import 'check_error.pb.dart';
-import '../../../rpc/status.pb.dart' as google$rpc;
+import '../../../rpc/status.pb.dart' as $google$rpc;
 
 class CheckRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CheckRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..a/*<Operation>*/(2, 'operation', PbFieldType.OM, Operation.getDefault, Operation.create)
-    ..a/*<String>*/(4, 'serviceConfigId', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
+    ..a<Operation>(2, 'operation', PbFieldType.OM, Operation.getDefault, Operation.create)
+    ..aOS(4, 'serviceConfigId')
     ..hasRequiredFields = false
   ;
 
@@ -32,32 +35,93 @@ class CheckRequest extends GeneratedMessage {
   }
   static CheckRequest _defaultInstance;
   static void $checkItem(CheckRequest v) {
-    if (v is !CheckRequest) checkItemFailed(v, 'CheckRequest');
+    if (v is! CheckRequest) checkItemFailed(v, 'CheckRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  Operation get operation => $_get(1, 2, null);
-  void set operation(Operation v) { setField(2, v); }
-  bool hasOperation() => $_has(1, 2);
+  Operation get operation => $_getN(1);
+  set operation(Operation v) { setField(2, v); }
+  bool hasOperation() => $_has(1);
   void clearOperation() => clearField(2);
 
-  String get serviceConfigId => $_get(2, 4, '');
-  void set serviceConfigId(String v) { $_setString(2, 4, v); }
-  bool hasServiceConfigId() => $_has(2, 4);
+  String get serviceConfigId => $_getS(2, '');
+  set serviceConfigId(String v) { $_setString(2, v); }
+  bool hasServiceConfigId() => $_has(2);
   void clearServiceConfigId() => clearField(4);
 }
 
 class _ReadonlyCheckRequest extends CheckRequest with ReadonlyMessageMixin {}
 
+class CheckResponse_CheckInfo extends GeneratedMessage {
+  static final BuilderInfo _i = new BuilderInfo('CheckResponse_CheckInfo')
+    ..a<CheckResponse_ConsumerInfo>(2, 'consumerInfo', PbFieldType.OM, CheckResponse_ConsumerInfo.getDefault, CheckResponse_ConsumerInfo.create)
+    ..hasRequiredFields = false
+  ;
+
+  CheckResponse_CheckInfo() : super();
+  CheckResponse_CheckInfo.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CheckResponse_CheckInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CheckResponse_CheckInfo clone() => new CheckResponse_CheckInfo()..mergeFromMessage(this);
+  BuilderInfo get info_ => _i;
+  static CheckResponse_CheckInfo create() => new CheckResponse_CheckInfo();
+  static PbList<CheckResponse_CheckInfo> createRepeated() => new PbList<CheckResponse_CheckInfo>();
+  static CheckResponse_CheckInfo getDefault() {
+    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCheckResponse_CheckInfo();
+    return _defaultInstance;
+  }
+  static CheckResponse_CheckInfo _defaultInstance;
+  static void $checkItem(CheckResponse_CheckInfo v) {
+    if (v is! CheckResponse_CheckInfo) checkItemFailed(v, 'CheckResponse_CheckInfo');
+  }
+
+  CheckResponse_ConsumerInfo get consumerInfo => $_getN(0);
+  set consumerInfo(CheckResponse_ConsumerInfo v) { setField(2, v); }
+  bool hasConsumerInfo() => $_has(0);
+  void clearConsumerInfo() => clearField(2);
+}
+
+class _ReadonlyCheckResponse_CheckInfo extends CheckResponse_CheckInfo with ReadonlyMessageMixin {}
+
+class CheckResponse_ConsumerInfo extends GeneratedMessage {
+  static final BuilderInfo _i = new BuilderInfo('CheckResponse_ConsumerInfo')
+    ..aInt64(1, 'projectNumber')
+    ..hasRequiredFields = false
+  ;
+
+  CheckResponse_ConsumerInfo() : super();
+  CheckResponse_ConsumerInfo.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CheckResponse_ConsumerInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CheckResponse_ConsumerInfo clone() => new CheckResponse_ConsumerInfo()..mergeFromMessage(this);
+  BuilderInfo get info_ => _i;
+  static CheckResponse_ConsumerInfo create() => new CheckResponse_ConsumerInfo();
+  static PbList<CheckResponse_ConsumerInfo> createRepeated() => new PbList<CheckResponse_ConsumerInfo>();
+  static CheckResponse_ConsumerInfo getDefault() {
+    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCheckResponse_ConsumerInfo();
+    return _defaultInstance;
+  }
+  static CheckResponse_ConsumerInfo _defaultInstance;
+  static void $checkItem(CheckResponse_ConsumerInfo v) {
+    if (v is! CheckResponse_ConsumerInfo) checkItemFailed(v, 'CheckResponse_ConsumerInfo');
+  }
+
+  Int64 get projectNumber => $_getI64(0);
+  set projectNumber(Int64 v) { $_setInt64(0, v); }
+  bool hasProjectNumber() => $_has(0);
+  void clearProjectNumber() => clearField(1);
+}
+
+class _ReadonlyCheckResponse_ConsumerInfo extends CheckResponse_ConsumerInfo with ReadonlyMessageMixin {}
+
 class CheckResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CheckResponse')
-    ..a/*<String>*/(1, 'operationId', PbFieldType.OS)
-    ..pp/*<CheckError>*/(2, 'checkErrors', PbFieldType.PM, CheckError.$checkItem, CheckError.create)
-    ..a/*<String>*/(5, 'serviceConfigId', PbFieldType.OS)
+    ..aOS(1, 'operationId')
+    ..pp<CheckError>(2, 'checkErrors', PbFieldType.PM, CheckError.$checkItem, CheckError.create)
+    ..aOS(5, 'serviceConfigId')
+    ..a<CheckResponse_CheckInfo>(6, 'checkInfo', PbFieldType.OM, CheckResponse_CheckInfo.getDefault, CheckResponse_CheckInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -74,29 +138,34 @@ class CheckResponse extends GeneratedMessage {
   }
   static CheckResponse _defaultInstance;
   static void $checkItem(CheckResponse v) {
-    if (v is !CheckResponse) checkItemFailed(v, 'CheckResponse');
+    if (v is! CheckResponse) checkItemFailed(v, 'CheckResponse');
   }
 
-  String get operationId => $_get(0, 1, '');
-  void set operationId(String v) { $_setString(0, 1, v); }
-  bool hasOperationId() => $_has(0, 1);
+  String get operationId => $_getS(0, '');
+  set operationId(String v) { $_setString(0, v); }
+  bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
-  List<CheckError> get checkErrors => $_get(1, 2, null);
+  List<CheckError> get checkErrors => $_getList(1);
 
-  String get serviceConfigId => $_get(2, 5, '');
-  void set serviceConfigId(String v) { $_setString(2, 5, v); }
-  bool hasServiceConfigId() => $_has(2, 5);
+  String get serviceConfigId => $_getS(2, '');
+  set serviceConfigId(String v) { $_setString(2, v); }
+  bool hasServiceConfigId() => $_has(2);
   void clearServiceConfigId() => clearField(5);
+
+  CheckResponse_CheckInfo get checkInfo => $_getN(3);
+  set checkInfo(CheckResponse_CheckInfo v) { setField(6, v); }
+  bool hasCheckInfo() => $_has(3);
+  void clearCheckInfo() => clearField(6);
 }
 
 class _ReadonlyCheckResponse extends CheckResponse with ReadonlyMessageMixin {}
 
 class ReportRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReportRequest')
-    ..a/*<String>*/(1, 'serviceName', PbFieldType.OS)
-    ..pp/*<Operation>*/(2, 'operations', PbFieldType.PM, Operation.$checkItem, Operation.create)
-    ..a/*<String>*/(3, 'serviceConfigId', PbFieldType.OS)
+    ..aOS(1, 'serviceName')
+    ..pp<Operation>(2, 'operations', PbFieldType.PM, Operation.$checkItem, Operation.create)
+    ..aOS(3, 'serviceConfigId')
     ..hasRequiredFields = false
   ;
 
@@ -113,19 +182,19 @@ class ReportRequest extends GeneratedMessage {
   }
   static ReportRequest _defaultInstance;
   static void $checkItem(ReportRequest v) {
-    if (v is !ReportRequest) checkItemFailed(v, 'ReportRequest');
+    if (v is! ReportRequest) checkItemFailed(v, 'ReportRequest');
   }
 
-  String get serviceName => $_get(0, 1, '');
-  void set serviceName(String v) { $_setString(0, 1, v); }
-  bool hasServiceName() => $_has(0, 1);
+  String get serviceName => $_getS(0, '');
+  set serviceName(String v) { $_setString(0, v); }
+  bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  List<Operation> get operations => $_get(1, 2, null);
+  List<Operation> get operations => $_getList(1);
 
-  String get serviceConfigId => $_get(2, 3, '');
-  void set serviceConfigId(String v) { $_setString(2, 3, v); }
-  bool hasServiceConfigId() => $_has(2, 3);
+  String get serviceConfigId => $_getS(2, '');
+  set serviceConfigId(String v) { $_setString(2, v); }
+  bool hasServiceConfigId() => $_has(2);
   void clearServiceConfigId() => clearField(3);
 }
 
@@ -133,8 +202,8 @@ class _ReadonlyReportRequest extends ReportRequest with ReadonlyMessageMixin {}
 
 class ReportResponse_ReportError extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReportResponse_ReportError')
-    ..a/*<String>*/(1, 'operationId', PbFieldType.OS)
-    ..a/*<google$rpc.Status>*/(2, 'status', PbFieldType.OM, google$rpc.Status.getDefault, google$rpc.Status.create)
+    ..aOS(1, 'operationId')
+    ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM, $google$rpc.Status.getDefault, $google$rpc.Status.create)
     ..hasRequiredFields = false
   ;
 
@@ -151,17 +220,17 @@ class ReportResponse_ReportError extends GeneratedMessage {
   }
   static ReportResponse_ReportError _defaultInstance;
   static void $checkItem(ReportResponse_ReportError v) {
-    if (v is !ReportResponse_ReportError) checkItemFailed(v, 'ReportResponse_ReportError');
+    if (v is! ReportResponse_ReportError) checkItemFailed(v, 'ReportResponse_ReportError');
   }
 
-  String get operationId => $_get(0, 1, '');
-  void set operationId(String v) { $_setString(0, 1, v); }
-  bool hasOperationId() => $_has(0, 1);
+  String get operationId => $_getS(0, '');
+  set operationId(String v) { $_setString(0, v); }
+  bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
-  google$rpc.Status get status => $_get(1, 2, null);
-  void set status(google$rpc.Status v) { setField(2, v); }
-  bool hasStatus() => $_has(1, 2);
+  $google$rpc.Status get status => $_getN(1);
+  set status($google$rpc.Status v) { setField(2, v); }
+  bool hasStatus() => $_has(1);
   void clearStatus() => clearField(2);
 }
 
@@ -169,8 +238,8 @@ class _ReadonlyReportResponse_ReportError extends ReportResponse_ReportError wit
 
 class ReportResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReportResponse')
-    ..pp/*<ReportResponse_ReportError>*/(1, 'reportErrors', PbFieldType.PM, ReportResponse_ReportError.$checkItem, ReportResponse_ReportError.create)
-    ..a/*<String>*/(2, 'serviceConfigId', PbFieldType.OS)
+    ..pp<ReportResponse_ReportError>(1, 'reportErrors', PbFieldType.PM, ReportResponse_ReportError.$checkItem, ReportResponse_ReportError.create)
+    ..aOS(2, 'serviceConfigId')
     ..hasRequiredFields = false
   ;
 
@@ -187,14 +256,14 @@ class ReportResponse extends GeneratedMessage {
   }
   static ReportResponse _defaultInstance;
   static void $checkItem(ReportResponse v) {
-    if (v is !ReportResponse) checkItemFailed(v, 'ReportResponse');
+    if (v is! ReportResponse) checkItemFailed(v, 'ReportResponse');
   }
 
-  List<ReportResponse_ReportError> get reportErrors => $_get(0, 1, null);
+  List<ReportResponse_ReportError> get reportErrors => $_getList(0);
 
-  String get serviceConfigId => $_get(1, 2, '');
-  void set serviceConfigId(String v) { $_setString(1, 2, v); }
-  bool hasServiceConfigId() => $_has(1, 2);
+  String get serviceConfigId => $_getS(1, '');
+  set serviceConfigId(String v) { $_setString(1, v); }
+  bool hasServiceConfigId() => $_has(1);
   void clearServiceConfigId() => clearField(2);
 }
 
@@ -206,11 +275,11 @@ class ServiceControllerApi {
 
   Future<CheckResponse> check(ClientContext ctx, CheckRequest request) {
     var emptyResponse = new CheckResponse();
-    return _client.invoke(ctx, 'ServiceController', 'Check', request, emptyResponse);
+    return _client.invoke<CheckResponse>(ctx, 'ServiceController', 'Check', request, emptyResponse);
   }
   Future<ReportResponse> report(ClientContext ctx, ReportRequest request) {
     var emptyResponse = new ReportResponse();
-    return _client.invoke(ctx, 'ServiceController', 'Report', request, emptyResponse);
+    return _client.invoke<ReportResponse>(ctx, 'ServiceController', 'Report', request, emptyResponse);
   }
 }
 

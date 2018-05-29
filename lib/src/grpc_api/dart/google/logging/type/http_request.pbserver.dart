@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.logging.type_http_request_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'http_request.pb.dart';
 

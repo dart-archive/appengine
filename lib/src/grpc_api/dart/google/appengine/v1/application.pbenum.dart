@@ -1,5 +1,5 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_application_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 

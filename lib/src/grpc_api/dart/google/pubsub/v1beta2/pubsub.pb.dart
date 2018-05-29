@@ -1,17 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.pubsub.v1beta2_pubsub;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class Topic extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Topic')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -28,12 +30,12 @@ class Topic extends GeneratedMessage {
   }
   static Topic _defaultInstance;
   static void $checkItem(Topic v) {
-    if (v is !Topic) checkItemFailed(v, 'Topic');
+    if (v is! Topic) checkItemFailed(v, 'Topic');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -41,8 +43,8 @@ class _ReadonlyTopic extends Topic with ReadonlyMessageMixin {}
 
 class PubsubMessage_AttributesEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PubsubMessage_AttributesEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -59,17 +61,17 @@ class PubsubMessage_AttributesEntry extends GeneratedMessage {
   }
   static PubsubMessage_AttributesEntry _defaultInstance;
   static void $checkItem(PubsubMessage_AttributesEntry v) {
-    if (v is !PubsubMessage_AttributesEntry) checkItemFailed(v, 'PubsubMessage_AttributesEntry');
+    if (v is! PubsubMessage_AttributesEntry) checkItemFailed(v, 'PubsubMessage_AttributesEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -77,9 +79,9 @@ class _ReadonlyPubsubMessage_AttributesEntry extends PubsubMessage_AttributesEnt
 
 class PubsubMessage extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PubsubMessage')
-    ..a/*<List<int>>*/(1, 'data', PbFieldType.OY)
-    ..pp/*<PubsubMessage_AttributesEntry>*/(2, 'attributes', PbFieldType.PM, PubsubMessage_AttributesEntry.$checkItem, PubsubMessage_AttributesEntry.create)
-    ..a/*<String>*/(3, 'messageId', PbFieldType.OS)
+    ..a<List<int>>(1, 'data', PbFieldType.OY)
+    ..pp<PubsubMessage_AttributesEntry>(2, 'attributes', PbFieldType.PM, PubsubMessage_AttributesEntry.$checkItem, PubsubMessage_AttributesEntry.create)
+    ..aOS(3, 'messageId')
     ..hasRequiredFields = false
   ;
 
@@ -96,19 +98,19 @@ class PubsubMessage extends GeneratedMessage {
   }
   static PubsubMessage _defaultInstance;
   static void $checkItem(PubsubMessage v) {
-    if (v is !PubsubMessage) checkItemFailed(v, 'PubsubMessage');
+    if (v is! PubsubMessage) checkItemFailed(v, 'PubsubMessage');
   }
 
-  List<int> get data => $_get(0, 1, null);
-  void set data(List<int> v) { $_setBytes(0, 1, v); }
-  bool hasData() => $_has(0, 1);
+  List<int> get data => $_getN(0);
+  set data(List<int> v) { $_setBytes(0, v); }
+  bool hasData() => $_has(0);
   void clearData() => clearField(1);
 
-  List<PubsubMessage_AttributesEntry> get attributes => $_get(1, 2, null);
+  List<PubsubMessage_AttributesEntry> get attributes => $_getList(1);
 
-  String get messageId => $_get(2, 3, '');
-  void set messageId(String v) { $_setString(2, 3, v); }
-  bool hasMessageId() => $_has(2, 3);
+  String get messageId => $_getS(2, '');
+  set messageId(String v) { $_setString(2, v); }
+  bool hasMessageId() => $_has(2);
   void clearMessageId() => clearField(3);
 }
 
@@ -116,7 +118,7 @@ class _ReadonlyPubsubMessage extends PubsubMessage with ReadonlyMessageMixin {}
 
 class GetTopicRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetTopicRequest')
-    ..a/*<String>*/(1, 'topic', PbFieldType.OS)
+    ..aOS(1, 'topic')
     ..hasRequiredFields = false
   ;
 
@@ -133,12 +135,12 @@ class GetTopicRequest extends GeneratedMessage {
   }
   static GetTopicRequest _defaultInstance;
   static void $checkItem(GetTopicRequest v) {
-    if (v is !GetTopicRequest) checkItemFailed(v, 'GetTopicRequest');
+    if (v is! GetTopicRequest) checkItemFailed(v, 'GetTopicRequest');
   }
 
-  String get topic => $_get(0, 1, '');
-  void set topic(String v) { $_setString(0, 1, v); }
-  bool hasTopic() => $_has(0, 1);
+  String get topic => $_getS(0, '');
+  set topic(String v) { $_setString(0, v); }
+  bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 }
 
@@ -146,8 +148,8 @@ class _ReadonlyGetTopicRequest extends GetTopicRequest with ReadonlyMessageMixin
 
 class PublishRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PublishRequest')
-    ..a/*<String>*/(1, 'topic', PbFieldType.OS)
-    ..pp/*<PubsubMessage>*/(2, 'messages', PbFieldType.PM, PubsubMessage.$checkItem, PubsubMessage.create)
+    ..aOS(1, 'topic')
+    ..pp<PubsubMessage>(2, 'messages', PbFieldType.PM, PubsubMessage.$checkItem, PubsubMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -164,22 +166,22 @@ class PublishRequest extends GeneratedMessage {
   }
   static PublishRequest _defaultInstance;
   static void $checkItem(PublishRequest v) {
-    if (v is !PublishRequest) checkItemFailed(v, 'PublishRequest');
+    if (v is! PublishRequest) checkItemFailed(v, 'PublishRequest');
   }
 
-  String get topic => $_get(0, 1, '');
-  void set topic(String v) { $_setString(0, 1, v); }
-  bool hasTopic() => $_has(0, 1);
+  String get topic => $_getS(0, '');
+  set topic(String v) { $_setString(0, v); }
+  bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 
-  List<PubsubMessage> get messages => $_get(1, 2, null);
+  List<PubsubMessage> get messages => $_getList(1);
 }
 
 class _ReadonlyPublishRequest extends PublishRequest with ReadonlyMessageMixin {}
 
 class PublishResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PublishResponse')
-    ..p/*<String>*/(1, 'messageIds', PbFieldType.PS)
+    ..pPS(1, 'messageIds')
     ..hasRequiredFields = false
   ;
 
@@ -196,19 +198,19 @@ class PublishResponse extends GeneratedMessage {
   }
   static PublishResponse _defaultInstance;
   static void $checkItem(PublishResponse v) {
-    if (v is !PublishResponse) checkItemFailed(v, 'PublishResponse');
+    if (v is! PublishResponse) checkItemFailed(v, 'PublishResponse');
   }
 
-  List<String> get messageIds => $_get(0, 1, null);
+  List<String> get messageIds => $_getList(0);
 }
 
 class _ReadonlyPublishResponse extends PublishResponse with ReadonlyMessageMixin {}
 
 class ListTopicsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTopicsRequest')
-    ..a/*<String>*/(1, 'project', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'project')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -225,22 +227,22 @@ class ListTopicsRequest extends GeneratedMessage {
   }
   static ListTopicsRequest _defaultInstance;
   static void $checkItem(ListTopicsRequest v) {
-    if (v is !ListTopicsRequest) checkItemFailed(v, 'ListTopicsRequest');
+    if (v is! ListTopicsRequest) checkItemFailed(v, 'ListTopicsRequest');
   }
 
-  String get project => $_get(0, 1, '');
-  void set project(String v) { $_setString(0, 1, v); }
-  bool hasProject() => $_has(0, 1);
+  String get project => $_getS(0, '');
+  set project(String v) { $_setString(0, v); }
+  bool hasProject() => $_has(0);
   void clearProject() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -248,8 +250,8 @@ class _ReadonlyListTopicsRequest extends ListTopicsRequest with ReadonlyMessageM
 
 class ListTopicsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTopicsResponse')
-    ..pp/*<Topic>*/(1, 'topics', PbFieldType.PM, Topic.$checkItem, Topic.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Topic>(1, 'topics', PbFieldType.PM, Topic.$checkItem, Topic.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -266,14 +268,14 @@ class ListTopicsResponse extends GeneratedMessage {
   }
   static ListTopicsResponse _defaultInstance;
   static void $checkItem(ListTopicsResponse v) {
-    if (v is !ListTopicsResponse) checkItemFailed(v, 'ListTopicsResponse');
+    if (v is! ListTopicsResponse) checkItemFailed(v, 'ListTopicsResponse');
   }
 
-  List<Topic> get topics => $_get(0, 1, null);
+  List<Topic> get topics => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -281,9 +283,9 @@ class _ReadonlyListTopicsResponse extends ListTopicsResponse with ReadonlyMessag
 
 class ListTopicSubscriptionsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTopicSubscriptionsRequest')
-    ..a/*<String>*/(1, 'topic', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'topic')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -300,22 +302,22 @@ class ListTopicSubscriptionsRequest extends GeneratedMessage {
   }
   static ListTopicSubscriptionsRequest _defaultInstance;
   static void $checkItem(ListTopicSubscriptionsRequest v) {
-    if (v is !ListTopicSubscriptionsRequest) checkItemFailed(v, 'ListTopicSubscriptionsRequest');
+    if (v is! ListTopicSubscriptionsRequest) checkItemFailed(v, 'ListTopicSubscriptionsRequest');
   }
 
-  String get topic => $_get(0, 1, '');
-  void set topic(String v) { $_setString(0, 1, v); }
-  bool hasTopic() => $_has(0, 1);
+  String get topic => $_getS(0, '');
+  set topic(String v) { $_setString(0, v); }
+  bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -323,8 +325,8 @@ class _ReadonlyListTopicSubscriptionsRequest extends ListTopicSubscriptionsReque
 
 class ListTopicSubscriptionsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTopicSubscriptionsResponse')
-    ..p/*<String>*/(1, 'subscriptions', PbFieldType.PS)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pPS(1, 'subscriptions')
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -341,14 +343,14 @@ class ListTopicSubscriptionsResponse extends GeneratedMessage {
   }
   static ListTopicSubscriptionsResponse _defaultInstance;
   static void $checkItem(ListTopicSubscriptionsResponse v) {
-    if (v is !ListTopicSubscriptionsResponse) checkItemFailed(v, 'ListTopicSubscriptionsResponse');
+    if (v is! ListTopicSubscriptionsResponse) checkItemFailed(v, 'ListTopicSubscriptionsResponse');
   }
 
-  List<String> get subscriptions => $_get(0, 1, null);
+  List<String> get subscriptions => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -356,7 +358,7 @@ class _ReadonlyListTopicSubscriptionsResponse extends ListTopicSubscriptionsResp
 
 class DeleteTopicRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteTopicRequest')
-    ..a/*<String>*/(1, 'topic', PbFieldType.OS)
+    ..aOS(1, 'topic')
     ..hasRequiredFields = false
   ;
 
@@ -373,12 +375,12 @@ class DeleteTopicRequest extends GeneratedMessage {
   }
   static DeleteTopicRequest _defaultInstance;
   static void $checkItem(DeleteTopicRequest v) {
-    if (v is !DeleteTopicRequest) checkItemFailed(v, 'DeleteTopicRequest');
+    if (v is! DeleteTopicRequest) checkItemFailed(v, 'DeleteTopicRequest');
   }
 
-  String get topic => $_get(0, 1, '');
-  void set topic(String v) { $_setString(0, 1, v); }
-  bool hasTopic() => $_has(0, 1);
+  String get topic => $_getS(0, '');
+  set topic(String v) { $_setString(0, v); }
+  bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 }
 
@@ -386,10 +388,10 @@ class _ReadonlyDeleteTopicRequest extends DeleteTopicRequest with ReadonlyMessag
 
 class Subscription extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Subscription')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'topic', PbFieldType.OS)
-    ..a/*<PushConfig>*/(4, 'pushConfig', PbFieldType.OM, PushConfig.getDefault, PushConfig.create)
-    ..a/*<int>*/(5, 'ackDeadlineSeconds', PbFieldType.O3)
+    ..aOS(1, 'name')
+    ..aOS(2, 'topic')
+    ..a<PushConfig>(4, 'pushConfig', PbFieldType.OM, PushConfig.getDefault, PushConfig.create)
+    ..a<int>(5, 'ackDeadlineSeconds', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -406,27 +408,27 @@ class Subscription extends GeneratedMessage {
   }
   static Subscription _defaultInstance;
   static void $checkItem(Subscription v) {
-    if (v is !Subscription) checkItemFailed(v, 'Subscription');
+    if (v is! Subscription) checkItemFailed(v, 'Subscription');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get topic => $_get(1, 2, '');
-  void set topic(String v) { $_setString(1, 2, v); }
-  bool hasTopic() => $_has(1, 2);
+  String get topic => $_getS(1, '');
+  set topic(String v) { $_setString(1, v); }
+  bool hasTopic() => $_has(1);
   void clearTopic() => clearField(2);
 
-  PushConfig get pushConfig => $_get(2, 4, null);
-  void set pushConfig(PushConfig v) { setField(4, v); }
-  bool hasPushConfig() => $_has(2, 4);
+  PushConfig get pushConfig => $_getN(2);
+  set pushConfig(PushConfig v) { setField(4, v); }
+  bool hasPushConfig() => $_has(2);
   void clearPushConfig() => clearField(4);
 
-  int get ackDeadlineSeconds => $_get(3, 5, 0);
-  void set ackDeadlineSeconds(int v) { $_setUnsignedInt32(3, 5, v); }
-  bool hasAckDeadlineSeconds() => $_has(3, 5);
+  int get ackDeadlineSeconds => $_get(3, 0);
+  set ackDeadlineSeconds(int v) { $_setSignedInt32(3, v); }
+  bool hasAckDeadlineSeconds() => $_has(3);
   void clearAckDeadlineSeconds() => clearField(5);
 }
 
@@ -434,8 +436,8 @@ class _ReadonlySubscription extends Subscription with ReadonlyMessageMixin {}
 
 class PushConfig_AttributesEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PushConfig_AttributesEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -452,17 +454,17 @@ class PushConfig_AttributesEntry extends GeneratedMessage {
   }
   static PushConfig_AttributesEntry _defaultInstance;
   static void $checkItem(PushConfig_AttributesEntry v) {
-    if (v is !PushConfig_AttributesEntry) checkItemFailed(v, 'PushConfig_AttributesEntry');
+    if (v is! PushConfig_AttributesEntry) checkItemFailed(v, 'PushConfig_AttributesEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -470,8 +472,8 @@ class _ReadonlyPushConfig_AttributesEntry extends PushConfig_AttributesEntry wit
 
 class PushConfig extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PushConfig')
-    ..a/*<String>*/(1, 'pushEndpoint', PbFieldType.OS)
-    ..pp/*<PushConfig_AttributesEntry>*/(2, 'attributes', PbFieldType.PM, PushConfig_AttributesEntry.$checkItem, PushConfig_AttributesEntry.create)
+    ..aOS(1, 'pushEndpoint')
+    ..pp<PushConfig_AttributesEntry>(2, 'attributes', PbFieldType.PM, PushConfig_AttributesEntry.$checkItem, PushConfig_AttributesEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -488,23 +490,23 @@ class PushConfig extends GeneratedMessage {
   }
   static PushConfig _defaultInstance;
   static void $checkItem(PushConfig v) {
-    if (v is !PushConfig) checkItemFailed(v, 'PushConfig');
+    if (v is! PushConfig) checkItemFailed(v, 'PushConfig');
   }
 
-  String get pushEndpoint => $_get(0, 1, '');
-  void set pushEndpoint(String v) { $_setString(0, 1, v); }
-  bool hasPushEndpoint() => $_has(0, 1);
+  String get pushEndpoint => $_getS(0, '');
+  set pushEndpoint(String v) { $_setString(0, v); }
+  bool hasPushEndpoint() => $_has(0);
   void clearPushEndpoint() => clearField(1);
 
-  List<PushConfig_AttributesEntry> get attributes => $_get(1, 2, null);
+  List<PushConfig_AttributesEntry> get attributes => $_getList(1);
 }
 
 class _ReadonlyPushConfig extends PushConfig with ReadonlyMessageMixin {}
 
 class ReceivedMessage extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReceivedMessage')
-    ..a/*<String>*/(1, 'ackId', PbFieldType.OS)
-    ..a/*<PubsubMessage>*/(2, 'message', PbFieldType.OM, PubsubMessage.getDefault, PubsubMessage.create)
+    ..aOS(1, 'ackId')
+    ..a<PubsubMessage>(2, 'message', PbFieldType.OM, PubsubMessage.getDefault, PubsubMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -521,17 +523,17 @@ class ReceivedMessage extends GeneratedMessage {
   }
   static ReceivedMessage _defaultInstance;
   static void $checkItem(ReceivedMessage v) {
-    if (v is !ReceivedMessage) checkItemFailed(v, 'ReceivedMessage');
+    if (v is! ReceivedMessage) checkItemFailed(v, 'ReceivedMessage');
   }
 
-  String get ackId => $_get(0, 1, '');
-  void set ackId(String v) { $_setString(0, 1, v); }
-  bool hasAckId() => $_has(0, 1);
+  String get ackId => $_getS(0, '');
+  set ackId(String v) { $_setString(0, v); }
+  bool hasAckId() => $_has(0);
   void clearAckId() => clearField(1);
 
-  PubsubMessage get message => $_get(1, 2, null);
-  void set message(PubsubMessage v) { setField(2, v); }
-  bool hasMessage() => $_has(1, 2);
+  PubsubMessage get message => $_getN(1);
+  set message(PubsubMessage v) { setField(2, v); }
+  bool hasMessage() => $_has(1);
   void clearMessage() => clearField(2);
 }
 
@@ -539,7 +541,7 @@ class _ReadonlyReceivedMessage extends ReceivedMessage with ReadonlyMessageMixin
 
 class GetSubscriptionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetSubscriptionRequest')
-    ..a/*<String>*/(1, 'subscription', PbFieldType.OS)
+    ..aOS(1, 'subscription')
     ..hasRequiredFields = false
   ;
 
@@ -556,12 +558,12 @@ class GetSubscriptionRequest extends GeneratedMessage {
   }
   static GetSubscriptionRequest _defaultInstance;
   static void $checkItem(GetSubscriptionRequest v) {
-    if (v is !GetSubscriptionRequest) checkItemFailed(v, 'GetSubscriptionRequest');
+    if (v is! GetSubscriptionRequest) checkItemFailed(v, 'GetSubscriptionRequest');
   }
 
-  String get subscription => $_get(0, 1, '');
-  void set subscription(String v) { $_setString(0, 1, v); }
-  bool hasSubscription() => $_has(0, 1);
+  String get subscription => $_getS(0, '');
+  set subscription(String v) { $_setString(0, v); }
+  bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 }
 
@@ -569,9 +571,9 @@ class _ReadonlyGetSubscriptionRequest extends GetSubscriptionRequest with Readon
 
 class ListSubscriptionsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListSubscriptionsRequest')
-    ..a/*<String>*/(1, 'project', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'project')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -588,22 +590,22 @@ class ListSubscriptionsRequest extends GeneratedMessage {
   }
   static ListSubscriptionsRequest _defaultInstance;
   static void $checkItem(ListSubscriptionsRequest v) {
-    if (v is !ListSubscriptionsRequest) checkItemFailed(v, 'ListSubscriptionsRequest');
+    if (v is! ListSubscriptionsRequest) checkItemFailed(v, 'ListSubscriptionsRequest');
   }
 
-  String get project => $_get(0, 1, '');
-  void set project(String v) { $_setString(0, 1, v); }
-  bool hasProject() => $_has(0, 1);
+  String get project => $_getS(0, '');
+  set project(String v) { $_setString(0, v); }
+  bool hasProject() => $_has(0);
   void clearProject() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -611,8 +613,8 @@ class _ReadonlyListSubscriptionsRequest extends ListSubscriptionsRequest with Re
 
 class ListSubscriptionsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListSubscriptionsResponse')
-    ..pp/*<Subscription>*/(1, 'subscriptions', PbFieldType.PM, Subscription.$checkItem, Subscription.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Subscription>(1, 'subscriptions', PbFieldType.PM, Subscription.$checkItem, Subscription.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -629,14 +631,14 @@ class ListSubscriptionsResponse extends GeneratedMessage {
   }
   static ListSubscriptionsResponse _defaultInstance;
   static void $checkItem(ListSubscriptionsResponse v) {
-    if (v is !ListSubscriptionsResponse) checkItemFailed(v, 'ListSubscriptionsResponse');
+    if (v is! ListSubscriptionsResponse) checkItemFailed(v, 'ListSubscriptionsResponse');
   }
 
-  List<Subscription> get subscriptions => $_get(0, 1, null);
+  List<Subscription> get subscriptions => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -644,7 +646,7 @@ class _ReadonlyListSubscriptionsResponse extends ListSubscriptionsResponse with 
 
 class DeleteSubscriptionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteSubscriptionRequest')
-    ..a/*<String>*/(1, 'subscription', PbFieldType.OS)
+    ..aOS(1, 'subscription')
     ..hasRequiredFields = false
   ;
 
@@ -661,12 +663,12 @@ class DeleteSubscriptionRequest extends GeneratedMessage {
   }
   static DeleteSubscriptionRequest _defaultInstance;
   static void $checkItem(DeleteSubscriptionRequest v) {
-    if (v is !DeleteSubscriptionRequest) checkItemFailed(v, 'DeleteSubscriptionRequest');
+    if (v is! DeleteSubscriptionRequest) checkItemFailed(v, 'DeleteSubscriptionRequest');
   }
 
-  String get subscription => $_get(0, 1, '');
-  void set subscription(String v) { $_setString(0, 1, v); }
-  bool hasSubscription() => $_has(0, 1);
+  String get subscription => $_getS(0, '');
+  set subscription(String v) { $_setString(0, v); }
+  bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 }
 
@@ -674,8 +676,8 @@ class _ReadonlyDeleteSubscriptionRequest extends DeleteSubscriptionRequest with 
 
 class ModifyPushConfigRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ModifyPushConfigRequest')
-    ..a/*<String>*/(1, 'subscription', PbFieldType.OS)
-    ..a/*<PushConfig>*/(2, 'pushConfig', PbFieldType.OM, PushConfig.getDefault, PushConfig.create)
+    ..aOS(1, 'subscription')
+    ..a<PushConfig>(2, 'pushConfig', PbFieldType.OM, PushConfig.getDefault, PushConfig.create)
     ..hasRequiredFields = false
   ;
 
@@ -692,17 +694,17 @@ class ModifyPushConfigRequest extends GeneratedMessage {
   }
   static ModifyPushConfigRequest _defaultInstance;
   static void $checkItem(ModifyPushConfigRequest v) {
-    if (v is !ModifyPushConfigRequest) checkItemFailed(v, 'ModifyPushConfigRequest');
+    if (v is! ModifyPushConfigRequest) checkItemFailed(v, 'ModifyPushConfigRequest');
   }
 
-  String get subscription => $_get(0, 1, '');
-  void set subscription(String v) { $_setString(0, 1, v); }
-  bool hasSubscription() => $_has(0, 1);
+  String get subscription => $_getS(0, '');
+  set subscription(String v) { $_setString(0, v); }
+  bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  PushConfig get pushConfig => $_get(1, 2, null);
-  void set pushConfig(PushConfig v) { setField(2, v); }
-  bool hasPushConfig() => $_has(1, 2);
+  PushConfig get pushConfig => $_getN(1);
+  set pushConfig(PushConfig v) { setField(2, v); }
+  bool hasPushConfig() => $_has(1);
   void clearPushConfig() => clearField(2);
 }
 
@@ -710,9 +712,9 @@ class _ReadonlyModifyPushConfigRequest extends ModifyPushConfigRequest with Read
 
 class PullRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PullRequest')
-    ..a/*<String>*/(1, 'subscription', PbFieldType.OS)
-    ..a/*<bool>*/(2, 'returnImmediately', PbFieldType.OB)
-    ..a/*<int>*/(3, 'maxMessages', PbFieldType.O3)
+    ..aOS(1, 'subscription')
+    ..aOB(2, 'returnImmediately')
+    ..a<int>(3, 'maxMessages', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -729,22 +731,22 @@ class PullRequest extends GeneratedMessage {
   }
   static PullRequest _defaultInstance;
   static void $checkItem(PullRequest v) {
-    if (v is !PullRequest) checkItemFailed(v, 'PullRequest');
+    if (v is! PullRequest) checkItemFailed(v, 'PullRequest');
   }
 
-  String get subscription => $_get(0, 1, '');
-  void set subscription(String v) { $_setString(0, 1, v); }
-  bool hasSubscription() => $_has(0, 1);
+  String get subscription => $_getS(0, '');
+  set subscription(String v) { $_setString(0, v); }
+  bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  bool get returnImmediately => $_get(1, 2, false);
-  void set returnImmediately(bool v) { $_setBool(1, 2, v); }
-  bool hasReturnImmediately() => $_has(1, 2);
+  bool get returnImmediately => $_get(1, false);
+  set returnImmediately(bool v) { $_setBool(1, v); }
+  bool hasReturnImmediately() => $_has(1);
   void clearReturnImmediately() => clearField(2);
 
-  int get maxMessages => $_get(2, 3, 0);
-  void set maxMessages(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasMaxMessages() => $_has(2, 3);
+  int get maxMessages => $_get(2, 0);
+  set maxMessages(int v) { $_setSignedInt32(2, v); }
+  bool hasMaxMessages() => $_has(2);
   void clearMaxMessages() => clearField(3);
 }
 
@@ -752,7 +754,7 @@ class _ReadonlyPullRequest extends PullRequest with ReadonlyMessageMixin {}
 
 class PullResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PullResponse')
-    ..pp/*<ReceivedMessage>*/(1, 'receivedMessages', PbFieldType.PM, ReceivedMessage.$checkItem, ReceivedMessage.create)
+    ..pp<ReceivedMessage>(1, 'receivedMessages', PbFieldType.PM, ReceivedMessage.$checkItem, ReceivedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -769,19 +771,19 @@ class PullResponse extends GeneratedMessage {
   }
   static PullResponse _defaultInstance;
   static void $checkItem(PullResponse v) {
-    if (v is !PullResponse) checkItemFailed(v, 'PullResponse');
+    if (v is! PullResponse) checkItemFailed(v, 'PullResponse');
   }
 
-  List<ReceivedMessage> get receivedMessages => $_get(0, 1, null);
+  List<ReceivedMessage> get receivedMessages => $_getList(0);
 }
 
 class _ReadonlyPullResponse extends PullResponse with ReadonlyMessageMixin {}
 
 class ModifyAckDeadlineRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ModifyAckDeadlineRequest')
-    ..a/*<String>*/(1, 'subscription', PbFieldType.OS)
-    ..a/*<String>*/(2, 'ackId', PbFieldType.OS)
-    ..a/*<int>*/(3, 'ackDeadlineSeconds', PbFieldType.O3)
+    ..aOS(1, 'subscription')
+    ..aOS(2, 'ackId')
+    ..a<int>(3, 'ackDeadlineSeconds', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -798,22 +800,22 @@ class ModifyAckDeadlineRequest extends GeneratedMessage {
   }
   static ModifyAckDeadlineRequest _defaultInstance;
   static void $checkItem(ModifyAckDeadlineRequest v) {
-    if (v is !ModifyAckDeadlineRequest) checkItemFailed(v, 'ModifyAckDeadlineRequest');
+    if (v is! ModifyAckDeadlineRequest) checkItemFailed(v, 'ModifyAckDeadlineRequest');
   }
 
-  String get subscription => $_get(0, 1, '');
-  void set subscription(String v) { $_setString(0, 1, v); }
-  bool hasSubscription() => $_has(0, 1);
+  String get subscription => $_getS(0, '');
+  set subscription(String v) { $_setString(0, v); }
+  bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  String get ackId => $_get(1, 2, '');
-  void set ackId(String v) { $_setString(1, 2, v); }
-  bool hasAckId() => $_has(1, 2);
+  String get ackId => $_getS(1, '');
+  set ackId(String v) { $_setString(1, v); }
+  bool hasAckId() => $_has(1);
   void clearAckId() => clearField(2);
 
-  int get ackDeadlineSeconds => $_get(2, 3, 0);
-  void set ackDeadlineSeconds(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasAckDeadlineSeconds() => $_has(2, 3);
+  int get ackDeadlineSeconds => $_get(2, 0);
+  set ackDeadlineSeconds(int v) { $_setSignedInt32(2, v); }
+  bool hasAckDeadlineSeconds() => $_has(2);
   void clearAckDeadlineSeconds() => clearField(3);
 }
 
@@ -821,8 +823,8 @@ class _ReadonlyModifyAckDeadlineRequest extends ModifyAckDeadlineRequest with Re
 
 class AcknowledgeRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AcknowledgeRequest')
-    ..a/*<String>*/(1, 'subscription', PbFieldType.OS)
-    ..p/*<String>*/(2, 'ackIds', PbFieldType.PS)
+    ..aOS(1, 'subscription')
+    ..pPS(2, 'ackIds')
     ..hasRequiredFields = false
   ;
 
@@ -839,15 +841,15 @@ class AcknowledgeRequest extends GeneratedMessage {
   }
   static AcknowledgeRequest _defaultInstance;
   static void $checkItem(AcknowledgeRequest v) {
-    if (v is !AcknowledgeRequest) checkItemFailed(v, 'AcknowledgeRequest');
+    if (v is! AcknowledgeRequest) checkItemFailed(v, 'AcknowledgeRequest');
   }
 
-  String get subscription => $_get(0, 1, '');
-  void set subscription(String v) { $_setString(0, 1, v); }
-  bool hasSubscription() => $_has(0, 1);
+  String get subscription => $_getS(0, '');
+  set subscription(String v) { $_setString(0, v); }
+  bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  List<String> get ackIds => $_get(1, 2, null);
+  List<String> get ackIds => $_getList(1);
 }
 
 class _ReadonlyAcknowledgeRequest extends AcknowledgeRequest with ReadonlyMessageMixin {}
@@ -858,35 +860,35 @@ class SubscriberApi {
 
   Future<Subscription> createSubscription(ClientContext ctx, Subscription request) {
     var emptyResponse = new Subscription();
-    return _client.invoke(ctx, 'Subscriber', 'CreateSubscription', request, emptyResponse);
+    return _client.invoke<Subscription>(ctx, 'Subscriber', 'CreateSubscription', request, emptyResponse);
   }
   Future<Subscription> getSubscription(ClientContext ctx, GetSubscriptionRequest request) {
     var emptyResponse = new Subscription();
-    return _client.invoke(ctx, 'Subscriber', 'GetSubscription', request, emptyResponse);
+    return _client.invoke<Subscription>(ctx, 'Subscriber', 'GetSubscription', request, emptyResponse);
   }
   Future<ListSubscriptionsResponse> listSubscriptions(ClientContext ctx, ListSubscriptionsRequest request) {
     var emptyResponse = new ListSubscriptionsResponse();
-    return _client.invoke(ctx, 'Subscriber', 'ListSubscriptions', request, emptyResponse);
+    return _client.invoke<ListSubscriptionsResponse>(ctx, 'Subscriber', 'ListSubscriptions', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteSubscription(ClientContext ctx, DeleteSubscriptionRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'Subscriber', 'DeleteSubscription', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteSubscription(ClientContext ctx, DeleteSubscriptionRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'Subscriber', 'DeleteSubscription', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> modifyAckDeadline(ClientContext ctx, ModifyAckDeadlineRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'Subscriber', 'ModifyAckDeadline', request, emptyResponse);
+  Future<$google$protobuf.Empty> modifyAckDeadline(ClientContext ctx, ModifyAckDeadlineRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'Subscriber', 'ModifyAckDeadline', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> acknowledge(ClientContext ctx, AcknowledgeRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'Subscriber', 'Acknowledge', request, emptyResponse);
+  Future<$google$protobuf.Empty> acknowledge(ClientContext ctx, AcknowledgeRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'Subscriber', 'Acknowledge', request, emptyResponse);
   }
   Future<PullResponse> pull(ClientContext ctx, PullRequest request) {
     var emptyResponse = new PullResponse();
-    return _client.invoke(ctx, 'Subscriber', 'Pull', request, emptyResponse);
+    return _client.invoke<PullResponse>(ctx, 'Subscriber', 'Pull', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> modifyPushConfig(ClientContext ctx, ModifyPushConfigRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'Subscriber', 'ModifyPushConfig', request, emptyResponse);
+  Future<$google$protobuf.Empty> modifyPushConfig(ClientContext ctx, ModifyPushConfigRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'Subscriber', 'ModifyPushConfig', request, emptyResponse);
   }
 }
 
@@ -896,27 +898,27 @@ class PublisherApi {
 
   Future<Topic> createTopic(ClientContext ctx, Topic request) {
     var emptyResponse = new Topic();
-    return _client.invoke(ctx, 'Publisher', 'CreateTopic', request, emptyResponse);
+    return _client.invoke<Topic>(ctx, 'Publisher', 'CreateTopic', request, emptyResponse);
   }
   Future<PublishResponse> publish(ClientContext ctx, PublishRequest request) {
     var emptyResponse = new PublishResponse();
-    return _client.invoke(ctx, 'Publisher', 'Publish', request, emptyResponse);
+    return _client.invoke<PublishResponse>(ctx, 'Publisher', 'Publish', request, emptyResponse);
   }
   Future<Topic> getTopic(ClientContext ctx, GetTopicRequest request) {
     var emptyResponse = new Topic();
-    return _client.invoke(ctx, 'Publisher', 'GetTopic', request, emptyResponse);
+    return _client.invoke<Topic>(ctx, 'Publisher', 'GetTopic', request, emptyResponse);
   }
   Future<ListTopicsResponse> listTopics(ClientContext ctx, ListTopicsRequest request) {
     var emptyResponse = new ListTopicsResponse();
-    return _client.invoke(ctx, 'Publisher', 'ListTopics', request, emptyResponse);
+    return _client.invoke<ListTopicsResponse>(ctx, 'Publisher', 'ListTopics', request, emptyResponse);
   }
   Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(ClientContext ctx, ListTopicSubscriptionsRequest request) {
     var emptyResponse = new ListTopicSubscriptionsResponse();
-    return _client.invoke(ctx, 'Publisher', 'ListTopicSubscriptions', request, emptyResponse);
+    return _client.invoke<ListTopicSubscriptionsResponse>(ctx, 'Publisher', 'ListTopicSubscriptions', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteTopic(ClientContext ctx, DeleteTopicRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'Publisher', 'DeleteTopic', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteTopic(ClientContext ctx, DeleteTopicRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'Publisher', 'DeleteTopic', request, emptyResponse);
   }
 }
 

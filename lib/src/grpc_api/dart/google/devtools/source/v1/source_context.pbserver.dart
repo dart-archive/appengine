@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.source.v1_source_context_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'source_context.pb.dart';
 

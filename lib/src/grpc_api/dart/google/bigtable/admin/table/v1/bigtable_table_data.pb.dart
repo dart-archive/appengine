@@ -1,12 +1,15 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.admin.table.v1_bigtable_table_data;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../../../protobuf/duration.pb.dart' as google$protobuf;
+import '../../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../../protobuf/duration.pb.dart' as $google$protobuf;
 
 import 'bigtable_table_data.pbenum.dart';
 
@@ -14,8 +17,8 @@ export 'bigtable_table_data.pbenum.dart';
 
 class Table_ColumnFamiliesEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Table_ColumnFamiliesEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<ColumnFamily>*/(2, 'value', PbFieldType.OM, ColumnFamily.getDefault, ColumnFamily.create)
+    ..aOS(1, 'key')
+    ..a<ColumnFamily>(2, 'value', PbFieldType.OM, ColumnFamily.getDefault, ColumnFamily.create)
     ..hasRequiredFields = false
   ;
 
@@ -32,17 +35,17 @@ class Table_ColumnFamiliesEntry extends GeneratedMessage {
   }
   static Table_ColumnFamiliesEntry _defaultInstance;
   static void $checkItem(Table_ColumnFamiliesEntry v) {
-    if (v is !Table_ColumnFamiliesEntry) checkItemFailed(v, 'Table_ColumnFamiliesEntry');
+    if (v is! Table_ColumnFamiliesEntry) checkItemFailed(v, 'Table_ColumnFamiliesEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  ColumnFamily get value => $_get(1, 2, null);
-  void set value(ColumnFamily v) { setField(2, v); }
-  bool hasValue() => $_has(1, 2);
+  ColumnFamily get value => $_getN(1);
+  set value(ColumnFamily v) { setField(2, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -50,10 +53,10 @@ class _ReadonlyTable_ColumnFamiliesEntry extends Table_ColumnFamiliesEntry with 
 
 class Table extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Table')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<google$longrunning.Operation>*/(2, 'currentOperation', PbFieldType.OM, google$longrunning.Operation.getDefault, google$longrunning.Operation.create)
-    ..pp/*<Table_ColumnFamiliesEntry>*/(3, 'columnFamilies', PbFieldType.PM, Table_ColumnFamiliesEntry.$checkItem, Table_ColumnFamiliesEntry.create)
-    ..e/*<Table_TimestampGranularity>*/(4, 'granularity', PbFieldType.OE, Table_TimestampGranularity.MILLIS, Table_TimestampGranularity.valueOf)
+    ..aOS(1, 'name')
+    ..a<$google$longrunning.Operation>(2, 'currentOperation', PbFieldType.OM, $google$longrunning.Operation.getDefault, $google$longrunning.Operation.create)
+    ..pp<Table_ColumnFamiliesEntry>(3, 'columnFamilies', PbFieldType.PM, Table_ColumnFamiliesEntry.$checkItem, Table_ColumnFamiliesEntry.create)
+    ..e<Table_TimestampGranularity>(4, 'granularity', PbFieldType.OE, Table_TimestampGranularity.MILLIS, Table_TimestampGranularity.valueOf, Table_TimestampGranularity.values)
     ..hasRequiredFields = false
   ;
 
@@ -70,24 +73,24 @@ class Table extends GeneratedMessage {
   }
   static Table _defaultInstance;
   static void $checkItem(Table v) {
-    if (v is !Table) checkItemFailed(v, 'Table');
+    if (v is! Table) checkItemFailed(v, 'Table');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  google$longrunning.Operation get currentOperation => $_get(1, 2, null);
-  void set currentOperation(google$longrunning.Operation v) { setField(2, v); }
-  bool hasCurrentOperation() => $_has(1, 2);
+  $google$longrunning.Operation get currentOperation => $_getN(1);
+  set currentOperation($google$longrunning.Operation v) { setField(2, v); }
+  bool hasCurrentOperation() => $_has(1);
   void clearCurrentOperation() => clearField(2);
 
-  List<Table_ColumnFamiliesEntry> get columnFamilies => $_get(2, 3, null);
+  List<Table_ColumnFamiliesEntry> get columnFamilies => $_getList(2);
 
-  Table_TimestampGranularity get granularity => $_get(3, 4, null);
-  void set granularity(Table_TimestampGranularity v) { setField(4, v); }
-  bool hasGranularity() => $_has(3, 4);
+  Table_TimestampGranularity get granularity => $_getN(3);
+  set granularity(Table_TimestampGranularity v) { setField(4, v); }
+  bool hasGranularity() => $_has(3);
   void clearGranularity() => clearField(4);
 }
 
@@ -95,9 +98,9 @@ class _ReadonlyTable extends Table with ReadonlyMessageMixin {}
 
 class ColumnFamily extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ColumnFamily')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'gcExpression', PbFieldType.OS)
-    ..a/*<GcRule>*/(3, 'gcRule', PbFieldType.OM, GcRule.getDefault, GcRule.create)
+    ..aOS(1, 'name')
+    ..aOS(2, 'gcExpression')
+    ..a<GcRule>(3, 'gcRule', PbFieldType.OM, GcRule.getDefault, GcRule.create)
     ..hasRequiredFields = false
   ;
 
@@ -114,22 +117,22 @@ class ColumnFamily extends GeneratedMessage {
   }
   static ColumnFamily _defaultInstance;
   static void $checkItem(ColumnFamily v) {
-    if (v is !ColumnFamily) checkItemFailed(v, 'ColumnFamily');
+    if (v is! ColumnFamily) checkItemFailed(v, 'ColumnFamily');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get gcExpression => $_get(1, 2, '');
-  void set gcExpression(String v) { $_setString(1, 2, v); }
-  bool hasGcExpression() => $_has(1, 2);
+  String get gcExpression => $_getS(1, '');
+  set gcExpression(String v) { $_setString(1, v); }
+  bool hasGcExpression() => $_has(1);
   void clearGcExpression() => clearField(2);
 
-  GcRule get gcRule => $_get(2, 3, null);
-  void set gcRule(GcRule v) { setField(3, v); }
-  bool hasGcRule() => $_has(2, 3);
+  GcRule get gcRule => $_getN(2);
+  set gcRule(GcRule v) { setField(3, v); }
+  bool hasGcRule() => $_has(2);
   void clearGcRule() => clearField(3);
 }
 
@@ -137,7 +140,7 @@ class _ReadonlyColumnFamily extends ColumnFamily with ReadonlyMessageMixin {}
 
 class GcRule_Intersection extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GcRule_Intersection')
-    ..pp/*<GcRule>*/(1, 'rules', PbFieldType.PM, GcRule.$checkItem, GcRule.create)
+    ..pp<GcRule>(1, 'rules', PbFieldType.PM, GcRule.$checkItem, GcRule.create)
     ..hasRequiredFields = false
   ;
 
@@ -154,17 +157,17 @@ class GcRule_Intersection extends GeneratedMessage {
   }
   static GcRule_Intersection _defaultInstance;
   static void $checkItem(GcRule_Intersection v) {
-    if (v is !GcRule_Intersection) checkItemFailed(v, 'GcRule_Intersection');
+    if (v is! GcRule_Intersection) checkItemFailed(v, 'GcRule_Intersection');
   }
 
-  List<GcRule> get rules => $_get(0, 1, null);
+  List<GcRule> get rules => $_getList(0);
 }
 
 class _ReadonlyGcRule_Intersection extends GcRule_Intersection with ReadonlyMessageMixin {}
 
 class GcRule_Union extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GcRule_Union')
-    ..pp/*<GcRule>*/(1, 'rules', PbFieldType.PM, GcRule.$checkItem, GcRule.create)
+    ..pp<GcRule>(1, 'rules', PbFieldType.PM, GcRule.$checkItem, GcRule.create)
     ..hasRequiredFields = false
   ;
 
@@ -181,20 +184,20 @@ class GcRule_Union extends GeneratedMessage {
   }
   static GcRule_Union _defaultInstance;
   static void $checkItem(GcRule_Union v) {
-    if (v is !GcRule_Union) checkItemFailed(v, 'GcRule_Union');
+    if (v is! GcRule_Union) checkItemFailed(v, 'GcRule_Union');
   }
 
-  List<GcRule> get rules => $_get(0, 1, null);
+  List<GcRule> get rules => $_getList(0);
 }
 
 class _ReadonlyGcRule_Union extends GcRule_Union with ReadonlyMessageMixin {}
 
 class GcRule extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GcRule')
-    ..a/*<int>*/(1, 'maxNumVersions', PbFieldType.O3)
-    ..a/*<google$protobuf.Duration>*/(2, 'maxAge', PbFieldType.OM, google$protobuf.Duration.getDefault, google$protobuf.Duration.create)
-    ..a/*<GcRule_Intersection>*/(3, 'intersection', PbFieldType.OM, GcRule_Intersection.getDefault, GcRule_Intersection.create)
-    ..a/*<GcRule_Union>*/(4, 'union', PbFieldType.OM, GcRule_Union.getDefault, GcRule_Union.create)
+    ..a<int>(1, 'maxNumVersions', PbFieldType.O3)
+    ..a<$google$protobuf.Duration>(2, 'maxAge', PbFieldType.OM, $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..a<GcRule_Intersection>(3, 'intersection', PbFieldType.OM, GcRule_Intersection.getDefault, GcRule_Intersection.create)
+    ..a<GcRule_Union>(4, 'union', PbFieldType.OM, GcRule_Union.getDefault, GcRule_Union.create)
     ..hasRequiredFields = false
   ;
 
@@ -211,27 +214,27 @@ class GcRule extends GeneratedMessage {
   }
   static GcRule _defaultInstance;
   static void $checkItem(GcRule v) {
-    if (v is !GcRule) checkItemFailed(v, 'GcRule');
+    if (v is! GcRule) checkItemFailed(v, 'GcRule');
   }
 
-  int get maxNumVersions => $_get(0, 1, 0);
-  void set maxNumVersions(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasMaxNumVersions() => $_has(0, 1);
+  int get maxNumVersions => $_get(0, 0);
+  set maxNumVersions(int v) { $_setSignedInt32(0, v); }
+  bool hasMaxNumVersions() => $_has(0);
   void clearMaxNumVersions() => clearField(1);
 
-  google$protobuf.Duration get maxAge => $_get(1, 2, null);
-  void set maxAge(google$protobuf.Duration v) { setField(2, v); }
-  bool hasMaxAge() => $_has(1, 2);
+  $google$protobuf.Duration get maxAge => $_getN(1);
+  set maxAge($google$protobuf.Duration v) { setField(2, v); }
+  bool hasMaxAge() => $_has(1);
   void clearMaxAge() => clearField(2);
 
-  GcRule_Intersection get intersection => $_get(2, 3, null);
-  void set intersection(GcRule_Intersection v) { setField(3, v); }
-  bool hasIntersection() => $_has(2, 3);
+  GcRule_Intersection get intersection => $_getN(2);
+  set intersection(GcRule_Intersection v) { setField(3, v); }
+  bool hasIntersection() => $_has(2);
   void clearIntersection() => clearField(3);
 
-  GcRule_Union get union => $_get(3, 4, null);
-  void set union(GcRule_Union v) { setField(4, v); }
-  bool hasUnion() => $_has(3, 4);
+  GcRule_Union get union => $_getN(3);
+  set union(GcRule_Union v) { setField(4, v); }
+  bool hasUnion() => $_has(3);
   void clearUnion() => clearField(4);
 }
 

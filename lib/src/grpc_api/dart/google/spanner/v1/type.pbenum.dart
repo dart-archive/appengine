@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.v1_type_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class TypeCode extends ProtobufEnum {
@@ -33,7 +35,7 @@ class TypeCode extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static TypeCode valueOf(int value) => _byValue[value] as TypeCode;
   static void $checkItem(TypeCode v) {
-    if (v is !TypeCode) checkItemFailed(v, 'TypeCode');
+    if (v is! TypeCode) checkItemFailed(v, 'TypeCode');
   }
 
   const TypeCode._(int v, String n) : super(v, n);

@@ -1,18 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.type_color;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../protobuf/wrappers.pb.dart' as google$protobuf;
+import '../protobuf/wrappers.pb.dart' as $google$protobuf;
 
 class Color extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Color')
-    ..a/*<double>*/(1, 'red', PbFieldType.OF)
-    ..a/*<double>*/(2, 'green', PbFieldType.OF)
-    ..a/*<double>*/(3, 'blue', PbFieldType.OF)
-    ..a/*<google$protobuf.FloatValue>*/(4, 'alpha', PbFieldType.OM, google$protobuf.FloatValue.getDefault, google$protobuf.FloatValue.create)
+    ..a<double>(1, 'red', PbFieldType.OF)
+    ..a<double>(2, 'green', PbFieldType.OF)
+    ..a<double>(3, 'blue', PbFieldType.OF)
+    ..a<$google$protobuf.FloatValue>(4, 'alpha', PbFieldType.OM, $google$protobuf.FloatValue.getDefault, $google$protobuf.FloatValue.create)
     ..hasRequiredFields = false
   ;
 
@@ -29,27 +32,27 @@ class Color extends GeneratedMessage {
   }
   static Color _defaultInstance;
   static void $checkItem(Color v) {
-    if (v is !Color) checkItemFailed(v, 'Color');
+    if (v is! Color) checkItemFailed(v, 'Color');
   }
 
-  double get red => $_get(0, 1, null);
-  void set red(double v) { $_setFloat(0, 1, v); }
-  bool hasRed() => $_has(0, 1);
+  double get red => $_getN(0);
+  set red(double v) { $_setFloat(0, v); }
+  bool hasRed() => $_has(0);
   void clearRed() => clearField(1);
 
-  double get green => $_get(1, 2, null);
-  void set green(double v) { $_setFloat(1, 2, v); }
-  bool hasGreen() => $_has(1, 2);
+  double get green => $_getN(1);
+  set green(double v) { $_setFloat(1, v); }
+  bool hasGreen() => $_has(1);
   void clearGreen() => clearField(2);
 
-  double get blue => $_get(2, 3, null);
-  void set blue(double v) { $_setFloat(2, 3, v); }
-  bool hasBlue() => $_has(2, 3);
+  double get blue => $_getN(2);
+  set blue(double v) { $_setFloat(2, v); }
+  bool hasBlue() => $_has(2);
   void clearBlue() => clearField(3);
 
-  google$protobuf.FloatValue get alpha => $_get(3, 4, null);
-  void set alpha(google$protobuf.FloatValue v) { setField(4, v); }
-  bool hasAlpha() => $_has(3, 4);
+  $google$protobuf.FloatValue get alpha => $_getN(3);
+  set alpha($google$protobuf.FloatValue v) { setField(4, v); }
+  bool hasAlpha() => $_has(3);
   void clearAlpha() => clearField(4);
 }
 

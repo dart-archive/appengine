@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.language.v1beta1_language_service_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -39,6 +39,6 @@ abstract class LanguageServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => LanguageService$json;
-  Map<String, dynamic> get $messageJson => LanguageService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => LanguageService$messageJson;
 }
 

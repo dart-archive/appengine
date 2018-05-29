@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_version_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class InboundServiceType extends ProtobufEnum {
@@ -31,7 +33,7 @@ class InboundServiceType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static InboundServiceType valueOf(int value) => _byValue[value] as InboundServiceType;
   static void $checkItem(InboundServiceType v) {
-    if (v is !InboundServiceType) checkItemFailed(v, 'InboundServiceType');
+    if (v is! InboundServiceType) checkItemFailed(v, 'InboundServiceType');
   }
 
   const InboundServiceType._(int v, String n) : super(v, n);
@@ -51,7 +53,7 @@ class ServingStatus extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static ServingStatus valueOf(int value) => _byValue[value] as ServingStatus;
   static void $checkItem(ServingStatus v) {
-    if (v is !ServingStatus) checkItemFailed(v, 'ServingStatus');
+    if (v is! ServingStatus) checkItemFailed(v, 'ServingStatus');
   }
 
   const ServingStatus._(int v, String n) : super(v, n);

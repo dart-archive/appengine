@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.functions.v1beta2_operations_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 const OperationType$json = const {
   '1': 'OperationType',
@@ -16,9 +16,9 @@ const OperationType$json = const {
 const OperationMetadataV1Beta2$json = const {
   '1': 'OperationMetadataV1Beta2',
   '2': const [
-    const {'1': 'target', '3': 1, '4': 1, '5': 9},
-    const {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.functions.v1beta2.OperationType'},
-    const {'1': 'request', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Any'},
+    const {'1': 'target', '3': 1, '4': 1, '5': 9, '10': 'target'},
+    const {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.functions.v1beta2.OperationType', '10': 'type'},
+    const {'1': 'request', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Any', '10': 'request'},
   ],
 };
 

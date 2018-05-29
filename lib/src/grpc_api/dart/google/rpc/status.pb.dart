@@ -1,17 +1,20 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.rpc_status;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../protobuf/any.pb.dart' as google$protobuf;
+import '../protobuf/any.pb.dart' as $google$protobuf;
 
 class Status extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Status')
-    ..a/*<int>*/(1, 'code', PbFieldType.O3)
-    ..a/*<String>*/(2, 'message', PbFieldType.OS)
-    ..pp/*<google$protobuf.Any>*/(3, 'details', PbFieldType.PM, google$protobuf.Any.$checkItem, google$protobuf.Any.create)
+    ..a<int>(1, 'code', PbFieldType.O3)
+    ..aOS(2, 'message')
+    ..pp<$google$protobuf.Any>(3, 'details', PbFieldType.PM, $google$protobuf.Any.$checkItem, $google$protobuf.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -28,20 +31,20 @@ class Status extends GeneratedMessage {
   }
   static Status _defaultInstance;
   static void $checkItem(Status v) {
-    if (v is !Status) checkItemFailed(v, 'Status');
+    if (v is! Status) checkItemFailed(v, 'Status');
   }
 
-  int get code => $_get(0, 1, 0);
-  void set code(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasCode() => $_has(0, 1);
+  int get code => $_get(0, 0);
+  set code(int v) { $_setSignedInt32(0, v); }
+  bool hasCode() => $_has(0);
   void clearCode() => clearField(1);
 
-  String get message => $_get(1, 2, '');
-  void set message(String v) { $_setString(1, 2, v); }
-  bool hasMessage() => $_has(1, 2);
+  String get message => $_getS(1, '');
+  set message(String v) { $_setString(1, v); }
+  bool hasMessage() => $_has(1);
   void clearMessage() => clearField(2);
 
-  List<google$protobuf.Any> get details => $_get(2, 3, null);
+  List<$google$protobuf.Any> get details => $_getList(2);
 }
 
 class _ReadonlyStatus extends Status with ReadonlyMessageMixin {}

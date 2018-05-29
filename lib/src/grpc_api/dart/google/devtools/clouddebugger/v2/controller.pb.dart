@@ -1,9 +1,11 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouddebugger.v2_controller;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,7 +13,7 @@ import 'data.pb.dart';
 
 class RegisterDebuggeeRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RegisterDebuggeeRequest')
-    ..a/*<Debuggee>*/(1, 'debuggee', PbFieldType.OM, Debuggee.getDefault, Debuggee.create)
+    ..a<Debuggee>(1, 'debuggee', PbFieldType.OM, Debuggee.getDefault, Debuggee.create)
     ..hasRequiredFields = false
   ;
 
@@ -28,12 +30,12 @@ class RegisterDebuggeeRequest extends GeneratedMessage {
   }
   static RegisterDebuggeeRequest _defaultInstance;
   static void $checkItem(RegisterDebuggeeRequest v) {
-    if (v is !RegisterDebuggeeRequest) checkItemFailed(v, 'RegisterDebuggeeRequest');
+    if (v is! RegisterDebuggeeRequest) checkItemFailed(v, 'RegisterDebuggeeRequest');
   }
 
-  Debuggee get debuggee => $_get(0, 1, null);
-  void set debuggee(Debuggee v) { setField(1, v); }
-  bool hasDebuggee() => $_has(0, 1);
+  Debuggee get debuggee => $_getN(0);
+  set debuggee(Debuggee v) { setField(1, v); }
+  bool hasDebuggee() => $_has(0);
   void clearDebuggee() => clearField(1);
 }
 
@@ -41,7 +43,7 @@ class _ReadonlyRegisterDebuggeeRequest extends RegisterDebuggeeRequest with Read
 
 class RegisterDebuggeeResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RegisterDebuggeeResponse')
-    ..a/*<Debuggee>*/(1, 'debuggee', PbFieldType.OM, Debuggee.getDefault, Debuggee.create)
+    ..a<Debuggee>(1, 'debuggee', PbFieldType.OM, Debuggee.getDefault, Debuggee.create)
     ..hasRequiredFields = false
   ;
 
@@ -58,12 +60,12 @@ class RegisterDebuggeeResponse extends GeneratedMessage {
   }
   static RegisterDebuggeeResponse _defaultInstance;
   static void $checkItem(RegisterDebuggeeResponse v) {
-    if (v is !RegisterDebuggeeResponse) checkItemFailed(v, 'RegisterDebuggeeResponse');
+    if (v is! RegisterDebuggeeResponse) checkItemFailed(v, 'RegisterDebuggeeResponse');
   }
 
-  Debuggee get debuggee => $_get(0, 1, null);
-  void set debuggee(Debuggee v) { setField(1, v); }
-  bool hasDebuggee() => $_has(0, 1);
+  Debuggee get debuggee => $_getN(0);
+  set debuggee(Debuggee v) { setField(1, v); }
+  bool hasDebuggee() => $_has(0);
   void clearDebuggee() => clearField(1);
 }
 
@@ -71,9 +73,9 @@ class _ReadonlyRegisterDebuggeeResponse extends RegisterDebuggeeResponse with Re
 
 class ListActiveBreakpointsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListActiveBreakpointsRequest')
-    ..a/*<String>*/(1, 'debuggeeId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'waitToken', PbFieldType.OS)
-    ..a/*<bool>*/(3, 'successOnTimeout', PbFieldType.OB)
+    ..aOS(1, 'debuggeeId')
+    ..aOS(2, 'waitToken')
+    ..aOB(3, 'successOnTimeout')
     ..hasRequiredFields = false
   ;
 
@@ -90,22 +92,22 @@ class ListActiveBreakpointsRequest extends GeneratedMessage {
   }
   static ListActiveBreakpointsRequest _defaultInstance;
   static void $checkItem(ListActiveBreakpointsRequest v) {
-    if (v is !ListActiveBreakpointsRequest) checkItemFailed(v, 'ListActiveBreakpointsRequest');
+    if (v is! ListActiveBreakpointsRequest) checkItemFailed(v, 'ListActiveBreakpointsRequest');
   }
 
-  String get debuggeeId => $_get(0, 1, '');
-  void set debuggeeId(String v) { $_setString(0, 1, v); }
-  bool hasDebuggeeId() => $_has(0, 1);
+  String get debuggeeId => $_getS(0, '');
+  set debuggeeId(String v) { $_setString(0, v); }
+  bool hasDebuggeeId() => $_has(0);
   void clearDebuggeeId() => clearField(1);
 
-  String get waitToken => $_get(1, 2, '');
-  void set waitToken(String v) { $_setString(1, 2, v); }
-  bool hasWaitToken() => $_has(1, 2);
+  String get waitToken => $_getS(1, '');
+  set waitToken(String v) { $_setString(1, v); }
+  bool hasWaitToken() => $_has(1);
   void clearWaitToken() => clearField(2);
 
-  bool get successOnTimeout => $_get(2, 3, false);
-  void set successOnTimeout(bool v) { $_setBool(2, 3, v); }
-  bool hasSuccessOnTimeout() => $_has(2, 3);
+  bool get successOnTimeout => $_get(2, false);
+  set successOnTimeout(bool v) { $_setBool(2, v); }
+  bool hasSuccessOnTimeout() => $_has(2);
   void clearSuccessOnTimeout() => clearField(3);
 }
 
@@ -113,9 +115,9 @@ class _ReadonlyListActiveBreakpointsRequest extends ListActiveBreakpointsRequest
 
 class ListActiveBreakpointsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListActiveBreakpointsResponse')
-    ..pp/*<Breakpoint>*/(1, 'breakpoints', PbFieldType.PM, Breakpoint.$checkItem, Breakpoint.create)
-    ..a/*<String>*/(2, 'nextWaitToken', PbFieldType.OS)
-    ..a/*<bool>*/(3, 'waitExpired', PbFieldType.OB)
+    ..pp<Breakpoint>(1, 'breakpoints', PbFieldType.PM, Breakpoint.$checkItem, Breakpoint.create)
+    ..aOS(2, 'nextWaitToken')
+    ..aOB(3, 'waitExpired')
     ..hasRequiredFields = false
   ;
 
@@ -132,19 +134,19 @@ class ListActiveBreakpointsResponse extends GeneratedMessage {
   }
   static ListActiveBreakpointsResponse _defaultInstance;
   static void $checkItem(ListActiveBreakpointsResponse v) {
-    if (v is !ListActiveBreakpointsResponse) checkItemFailed(v, 'ListActiveBreakpointsResponse');
+    if (v is! ListActiveBreakpointsResponse) checkItemFailed(v, 'ListActiveBreakpointsResponse');
   }
 
-  List<Breakpoint> get breakpoints => $_get(0, 1, null);
+  List<Breakpoint> get breakpoints => $_getList(0);
 
-  String get nextWaitToken => $_get(1, 2, '');
-  void set nextWaitToken(String v) { $_setString(1, 2, v); }
-  bool hasNextWaitToken() => $_has(1, 2);
+  String get nextWaitToken => $_getS(1, '');
+  set nextWaitToken(String v) { $_setString(1, v); }
+  bool hasNextWaitToken() => $_has(1);
   void clearNextWaitToken() => clearField(2);
 
-  bool get waitExpired => $_get(2, 3, false);
-  void set waitExpired(bool v) { $_setBool(2, 3, v); }
-  bool hasWaitExpired() => $_has(2, 3);
+  bool get waitExpired => $_get(2, false);
+  set waitExpired(bool v) { $_setBool(2, v); }
+  bool hasWaitExpired() => $_has(2);
   void clearWaitExpired() => clearField(3);
 }
 
@@ -152,8 +154,8 @@ class _ReadonlyListActiveBreakpointsResponse extends ListActiveBreakpointsRespon
 
 class UpdateActiveBreakpointRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateActiveBreakpointRequest')
-    ..a/*<String>*/(1, 'debuggeeId', PbFieldType.OS)
-    ..a/*<Breakpoint>*/(2, 'breakpoint', PbFieldType.OM, Breakpoint.getDefault, Breakpoint.create)
+    ..aOS(1, 'debuggeeId')
+    ..a<Breakpoint>(2, 'breakpoint', PbFieldType.OM, Breakpoint.getDefault, Breakpoint.create)
     ..hasRequiredFields = false
   ;
 
@@ -170,17 +172,17 @@ class UpdateActiveBreakpointRequest extends GeneratedMessage {
   }
   static UpdateActiveBreakpointRequest _defaultInstance;
   static void $checkItem(UpdateActiveBreakpointRequest v) {
-    if (v is !UpdateActiveBreakpointRequest) checkItemFailed(v, 'UpdateActiveBreakpointRequest');
+    if (v is! UpdateActiveBreakpointRequest) checkItemFailed(v, 'UpdateActiveBreakpointRequest');
   }
 
-  String get debuggeeId => $_get(0, 1, '');
-  void set debuggeeId(String v) { $_setString(0, 1, v); }
-  bool hasDebuggeeId() => $_has(0, 1);
+  String get debuggeeId => $_getS(0, '');
+  set debuggeeId(String v) { $_setString(0, v); }
+  bool hasDebuggeeId() => $_has(0);
   void clearDebuggeeId() => clearField(1);
 
-  Breakpoint get breakpoint => $_get(1, 2, null);
-  void set breakpoint(Breakpoint v) { setField(2, v); }
-  bool hasBreakpoint() => $_has(1, 2);
+  Breakpoint get breakpoint => $_getN(1);
+  set breakpoint(Breakpoint v) { setField(2, v); }
+  bool hasBreakpoint() => $_has(1);
   void clearBreakpoint() => clearField(2);
 }
 
@@ -204,7 +206,7 @@ class UpdateActiveBreakpointResponse extends GeneratedMessage {
   }
   static UpdateActiveBreakpointResponse _defaultInstance;
   static void $checkItem(UpdateActiveBreakpointResponse v) {
-    if (v is !UpdateActiveBreakpointResponse) checkItemFailed(v, 'UpdateActiveBreakpointResponse');
+    if (v is! UpdateActiveBreakpointResponse) checkItemFailed(v, 'UpdateActiveBreakpointResponse');
   }
 }
 
@@ -216,15 +218,15 @@ class Controller2Api {
 
   Future<RegisterDebuggeeResponse> registerDebuggee(ClientContext ctx, RegisterDebuggeeRequest request) {
     var emptyResponse = new RegisterDebuggeeResponse();
-    return _client.invoke(ctx, 'Controller2', 'RegisterDebuggee', request, emptyResponse);
+    return _client.invoke<RegisterDebuggeeResponse>(ctx, 'Controller2', 'RegisterDebuggee', request, emptyResponse);
   }
   Future<ListActiveBreakpointsResponse> listActiveBreakpoints(ClientContext ctx, ListActiveBreakpointsRequest request) {
     var emptyResponse = new ListActiveBreakpointsResponse();
-    return _client.invoke(ctx, 'Controller2', 'ListActiveBreakpoints', request, emptyResponse);
+    return _client.invoke<ListActiveBreakpointsResponse>(ctx, 'Controller2', 'ListActiveBreakpoints', request, emptyResponse);
   }
   Future<UpdateActiveBreakpointResponse> updateActiveBreakpoint(ClientContext ctx, UpdateActiveBreakpointRequest request) {
     var emptyResponse = new UpdateActiveBreakpointResponse();
-    return _client.invoke(ctx, 'Controller2', 'UpdateActiveBreakpoint', request, emptyResponse);
+    return _client.invoke<UpdateActiveBreakpointResponse>(ctx, 'Controller2', 'UpdateActiveBreakpoint', request, emptyResponse);
   }
 }
 

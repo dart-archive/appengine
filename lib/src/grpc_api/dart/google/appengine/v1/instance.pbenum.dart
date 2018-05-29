@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_instance_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Instance_Availability extends ProtobufEnum {
@@ -19,7 +21,7 @@ class Instance_Availability extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static Instance_Availability valueOf(int value) => _byValue[value] as Instance_Availability;
   static void $checkItem(Instance_Availability v) {
-    if (v is !Instance_Availability) checkItemFailed(v, 'Instance_Availability');
+    if (v is! Instance_Availability) checkItemFailed(v, 'Instance_Availability');
   }
 
   const Instance_Availability._(int v, String n) : super(v, n);

@@ -1,16 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.type_money;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Money extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Money')
-    ..a/*<String>*/(1, 'currencyCode', PbFieldType.OS)
-    ..a/*<Int64>*/(2, 'units', PbFieldType.O6, Int64.ZERO)
-    ..a/*<int>*/(3, 'nanos', PbFieldType.O3)
+    ..aOS(1, 'currencyCode')
+    ..aInt64(2, 'units')
+    ..a<int>(3, 'nanos', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -27,22 +30,22 @@ class Money extends GeneratedMessage {
   }
   static Money _defaultInstance;
   static void $checkItem(Money v) {
-    if (v is !Money) checkItemFailed(v, 'Money');
+    if (v is! Money) checkItemFailed(v, 'Money');
   }
 
-  String get currencyCode => $_get(0, 1, '');
-  void set currencyCode(String v) { $_setString(0, 1, v); }
-  bool hasCurrencyCode() => $_has(0, 1);
+  String get currencyCode => $_getS(0, '');
+  set currencyCode(String v) { $_setString(0, v); }
+  bool hasCurrencyCode() => $_has(0);
   void clearCurrencyCode() => clearField(1);
 
-  Int64 get units => $_get(1, 2, null);
-  void set units(Int64 v) { $_setInt64(1, 2, v); }
-  bool hasUnits() => $_has(1, 2);
+  Int64 get units => $_getI64(1);
+  set units(Int64 v) { $_setInt64(1, v); }
+  bool hasUnits() => $_has(1);
   void clearUnits() => clearField(2);
 
-  int get nanos => $_get(2, 3, 0);
-  void set nanos(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasNanos() => $_has(2, 3);
+  int get nanos => $_get(2, 0);
+  set nanos(int v) { $_setSignedInt32(2, v); }
+  bool hasNanos() => $_has(2);
   void clearNanos() => clearField(3);
 }
 

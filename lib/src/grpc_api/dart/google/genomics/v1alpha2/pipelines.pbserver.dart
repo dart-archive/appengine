@@ -1,27 +1,27 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1alpha2_pipelines_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'pipelines.pb.dart';
-import '../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'pipelines.pbjson.dart';
 
 export 'pipelines.pb.dart';
 
 abstract class PipelinesV1Alpha2ServiceBase extends GeneratedService {
   Future<Pipeline> createPipeline(ServerContext ctx, CreatePipelineRequest request);
-  Future<google$longrunning.Operation> runPipeline(ServerContext ctx, RunPipelineRequest request);
+  Future<$google$longrunning.Operation> runPipeline(ServerContext ctx, RunPipelineRequest request);
   Future<Pipeline> getPipeline(ServerContext ctx, GetPipelineRequest request);
   Future<ListPipelinesResponse> listPipelines(ServerContext ctx, ListPipelinesRequest request);
-  Future<google$protobuf.Empty> deletePipeline(ServerContext ctx, DeletePipelineRequest request);
+  Future<$google$protobuf.Empty> deletePipeline(ServerContext ctx, DeletePipelineRequest request);
   Future<ControllerConfig> getControllerConfig(ServerContext ctx, GetControllerConfigRequest request);
-  Future<google$protobuf.Empty> setOperationStatus(ServerContext ctx, SetOperationStatusRequest request);
+  Future<$google$protobuf.Empty> setOperationStatus(ServerContext ctx, SetOperationStatusRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -50,6 +50,6 @@ abstract class PipelinesV1Alpha2ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => PipelinesV1Alpha2$json;
-  Map<String, dynamic> get $messageJson => PipelinesV1Alpha2$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => PipelinesV1Alpha2$messageJson;
 }
 

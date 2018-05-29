@@ -1,18 +1,20 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bytestream_bytestream;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class ReadRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReadRequest')
-    ..a/*<String>*/(1, 'resourceName', PbFieldType.OS)
-    ..a/*<Int64>*/(2, 'readOffset', PbFieldType.O6, Int64.ZERO)
-    ..a/*<Int64>*/(3, 'readLimit', PbFieldType.O6, Int64.ZERO)
+    ..aOS(1, 'resourceName')
+    ..aInt64(2, 'readOffset')
+    ..aInt64(3, 'readLimit')
     ..hasRequiredFields = false
   ;
 
@@ -29,22 +31,22 @@ class ReadRequest extends GeneratedMessage {
   }
   static ReadRequest _defaultInstance;
   static void $checkItem(ReadRequest v) {
-    if (v is !ReadRequest) checkItemFailed(v, 'ReadRequest');
+    if (v is! ReadRequest) checkItemFailed(v, 'ReadRequest');
   }
 
-  String get resourceName => $_get(0, 1, '');
-  void set resourceName(String v) { $_setString(0, 1, v); }
-  bool hasResourceName() => $_has(0, 1);
+  String get resourceName => $_getS(0, '');
+  set resourceName(String v) { $_setString(0, v); }
+  bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
 
-  Int64 get readOffset => $_get(1, 2, null);
-  void set readOffset(Int64 v) { $_setInt64(1, 2, v); }
-  bool hasReadOffset() => $_has(1, 2);
+  Int64 get readOffset => $_getI64(1);
+  set readOffset(Int64 v) { $_setInt64(1, v); }
+  bool hasReadOffset() => $_has(1);
   void clearReadOffset() => clearField(2);
 
-  Int64 get readLimit => $_get(2, 3, null);
-  void set readLimit(Int64 v) { $_setInt64(2, 3, v); }
-  bool hasReadLimit() => $_has(2, 3);
+  Int64 get readLimit => $_getI64(2);
+  set readLimit(Int64 v) { $_setInt64(2, v); }
+  bool hasReadLimit() => $_has(2);
   void clearReadLimit() => clearField(3);
 }
 
@@ -52,7 +54,7 @@ class _ReadonlyReadRequest extends ReadRequest with ReadonlyMessageMixin {}
 
 class ReadResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReadResponse')
-    ..a/*<List<int>>*/(10, 'data', PbFieldType.OY)
+    ..a<List<int>>(10, 'data', PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -69,12 +71,12 @@ class ReadResponse extends GeneratedMessage {
   }
   static ReadResponse _defaultInstance;
   static void $checkItem(ReadResponse v) {
-    if (v is !ReadResponse) checkItemFailed(v, 'ReadResponse');
+    if (v is! ReadResponse) checkItemFailed(v, 'ReadResponse');
   }
 
-  List<int> get data => $_get(0, 10, null);
-  void set data(List<int> v) { $_setBytes(0, 10, v); }
-  bool hasData() => $_has(0, 10);
+  List<int> get data => $_getN(0);
+  set data(List<int> v) { $_setBytes(0, v); }
+  bool hasData() => $_has(0);
   void clearData() => clearField(10);
 }
 
@@ -82,10 +84,10 @@ class _ReadonlyReadResponse extends ReadResponse with ReadonlyMessageMixin {}
 
 class WriteRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('WriteRequest')
-    ..a/*<String>*/(1, 'resourceName', PbFieldType.OS)
-    ..a/*<Int64>*/(2, 'writeOffset', PbFieldType.O6, Int64.ZERO)
-    ..a/*<bool>*/(3, 'finishWrite', PbFieldType.OB)
-    ..a/*<List<int>>*/(10, 'data', PbFieldType.OY)
+    ..aOS(1, 'resourceName')
+    ..aInt64(2, 'writeOffset')
+    ..aOB(3, 'finishWrite')
+    ..a<List<int>>(10, 'data', PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -102,27 +104,27 @@ class WriteRequest extends GeneratedMessage {
   }
   static WriteRequest _defaultInstance;
   static void $checkItem(WriteRequest v) {
-    if (v is !WriteRequest) checkItemFailed(v, 'WriteRequest');
+    if (v is! WriteRequest) checkItemFailed(v, 'WriteRequest');
   }
 
-  String get resourceName => $_get(0, 1, '');
-  void set resourceName(String v) { $_setString(0, 1, v); }
-  bool hasResourceName() => $_has(0, 1);
+  String get resourceName => $_getS(0, '');
+  set resourceName(String v) { $_setString(0, v); }
+  bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
 
-  Int64 get writeOffset => $_get(1, 2, null);
-  void set writeOffset(Int64 v) { $_setInt64(1, 2, v); }
-  bool hasWriteOffset() => $_has(1, 2);
+  Int64 get writeOffset => $_getI64(1);
+  set writeOffset(Int64 v) { $_setInt64(1, v); }
+  bool hasWriteOffset() => $_has(1);
   void clearWriteOffset() => clearField(2);
 
-  bool get finishWrite => $_get(2, 3, false);
-  void set finishWrite(bool v) { $_setBool(2, 3, v); }
-  bool hasFinishWrite() => $_has(2, 3);
+  bool get finishWrite => $_get(2, false);
+  set finishWrite(bool v) { $_setBool(2, v); }
+  bool hasFinishWrite() => $_has(2);
   void clearFinishWrite() => clearField(3);
 
-  List<int> get data => $_get(3, 10, null);
-  void set data(List<int> v) { $_setBytes(3, 10, v); }
-  bool hasData() => $_has(3, 10);
+  List<int> get data => $_getN(3);
+  set data(List<int> v) { $_setBytes(3, v); }
+  bool hasData() => $_has(3);
   void clearData() => clearField(10);
 }
 
@@ -130,7 +132,7 @@ class _ReadonlyWriteRequest extends WriteRequest with ReadonlyMessageMixin {}
 
 class WriteResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('WriteResponse')
-    ..a/*<Int64>*/(1, 'committedSize', PbFieldType.O6, Int64.ZERO)
+    ..aInt64(1, 'committedSize')
     ..hasRequiredFields = false
   ;
 
@@ -147,12 +149,12 @@ class WriteResponse extends GeneratedMessage {
   }
   static WriteResponse _defaultInstance;
   static void $checkItem(WriteResponse v) {
-    if (v is !WriteResponse) checkItemFailed(v, 'WriteResponse');
+    if (v is! WriteResponse) checkItemFailed(v, 'WriteResponse');
   }
 
-  Int64 get committedSize => $_get(0, 1, null);
-  void set committedSize(Int64 v) { $_setInt64(0, 1, v); }
-  bool hasCommittedSize() => $_has(0, 1);
+  Int64 get committedSize => $_getI64(0);
+  set committedSize(Int64 v) { $_setInt64(0, v); }
+  bool hasCommittedSize() => $_has(0);
   void clearCommittedSize() => clearField(1);
 }
 
@@ -160,7 +162,7 @@ class _ReadonlyWriteResponse extends WriteResponse with ReadonlyMessageMixin {}
 
 class QueryWriteStatusRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('QueryWriteStatusRequest')
-    ..a/*<String>*/(1, 'resourceName', PbFieldType.OS)
+    ..aOS(1, 'resourceName')
     ..hasRequiredFields = false
   ;
 
@@ -177,12 +179,12 @@ class QueryWriteStatusRequest extends GeneratedMessage {
   }
   static QueryWriteStatusRequest _defaultInstance;
   static void $checkItem(QueryWriteStatusRequest v) {
-    if (v is !QueryWriteStatusRequest) checkItemFailed(v, 'QueryWriteStatusRequest');
+    if (v is! QueryWriteStatusRequest) checkItemFailed(v, 'QueryWriteStatusRequest');
   }
 
-  String get resourceName => $_get(0, 1, '');
-  void set resourceName(String v) { $_setString(0, 1, v); }
-  bool hasResourceName() => $_has(0, 1);
+  String get resourceName => $_getS(0, '');
+  set resourceName(String v) { $_setString(0, v); }
+  bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
 }
 
@@ -190,8 +192,8 @@ class _ReadonlyQueryWriteStatusRequest extends QueryWriteStatusRequest with Read
 
 class QueryWriteStatusResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('QueryWriteStatusResponse')
-    ..a/*<Int64>*/(1, 'committedSize', PbFieldType.O6, Int64.ZERO)
-    ..a/*<bool>*/(2, 'complete', PbFieldType.OB)
+    ..aInt64(1, 'committedSize')
+    ..aOB(2, 'complete')
     ..hasRequiredFields = false
   ;
 
@@ -208,17 +210,17 @@ class QueryWriteStatusResponse extends GeneratedMessage {
   }
   static QueryWriteStatusResponse _defaultInstance;
   static void $checkItem(QueryWriteStatusResponse v) {
-    if (v is !QueryWriteStatusResponse) checkItemFailed(v, 'QueryWriteStatusResponse');
+    if (v is! QueryWriteStatusResponse) checkItemFailed(v, 'QueryWriteStatusResponse');
   }
 
-  Int64 get committedSize => $_get(0, 1, null);
-  void set committedSize(Int64 v) { $_setInt64(0, 1, v); }
-  bool hasCommittedSize() => $_has(0, 1);
+  Int64 get committedSize => $_getI64(0);
+  set committedSize(Int64 v) { $_setInt64(0, v); }
+  bool hasCommittedSize() => $_has(0);
   void clearCommittedSize() => clearField(1);
 
-  bool get complete => $_get(1, 2, false);
-  void set complete(bool v) { $_setBool(1, 2, v); }
-  bool hasComplete() => $_has(1, 2);
+  bool get complete => $_get(1, false);
+  set complete(bool v) { $_setBool(1, v); }
+  bool hasComplete() => $_has(1);
   void clearComplete() => clearField(2);
 }
 
@@ -230,15 +232,15 @@ class ByteStreamApi {
 
   Future<ReadResponse> read(ClientContext ctx, ReadRequest request) {
     var emptyResponse = new ReadResponse();
-    return _client.invoke(ctx, 'ByteStream', 'Read', request, emptyResponse);
+    return _client.invoke<ReadResponse>(ctx, 'ByteStream', 'Read', request, emptyResponse);
   }
   Future<WriteResponse> write(ClientContext ctx, WriteRequest request) {
     var emptyResponse = new WriteResponse();
-    return _client.invoke(ctx, 'ByteStream', 'Write', request, emptyResponse);
+    return _client.invoke<WriteResponse>(ctx, 'ByteStream', 'Write', request, emptyResponse);
   }
   Future<QueryWriteStatusResponse> queryWriteStatus(ClientContext ctx, QueryWriteStatusRequest request) {
     var emptyResponse = new QueryWriteStatusResponse();
-    return _client.invoke(ctx, 'ByteStream', 'QueryWriteStatus', request, emptyResponse);
+    return _client.invoke<QueryWriteStatusResponse>(ctx, 'ByteStream', 'QueryWriteStatus', request, emptyResponse);
   }
 }
 

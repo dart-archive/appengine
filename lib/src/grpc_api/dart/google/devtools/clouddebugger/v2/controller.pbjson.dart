@@ -1,50 +1,50 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouddebugger.v2_controller_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'data.pbjson.dart';
-import '../../source/v1/source_context.pbjson.dart' as google$devtools$source$v1;
-import '../../../protobuf/wrappers.pbjson.dart' as google$protobuf;
-import '../../../protobuf/timestamp.pbjson.dart' as google$protobuf;
+import '../../source/v1/source_context.pbjson.dart' as $google$devtools$source$v1;
+import '../../../protobuf/wrappers.pbjson.dart' as $google$protobuf;
+import '../../../protobuf/timestamp.pbjson.dart' as $google$protobuf;
 
 const RegisterDebuggeeRequest$json = const {
   '1': 'RegisterDebuggeeRequest',
   '2': const [
-    const {'1': 'debuggee', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.clouddebugger.v2.Debuggee'},
+    const {'1': 'debuggee', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.clouddebugger.v2.Debuggee', '10': 'debuggee'},
   ],
 };
 
 const RegisterDebuggeeResponse$json = const {
   '1': 'RegisterDebuggeeResponse',
   '2': const [
-    const {'1': 'debuggee', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.clouddebugger.v2.Debuggee'},
+    const {'1': 'debuggee', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.clouddebugger.v2.Debuggee', '10': 'debuggee'},
   ],
 };
 
 const ListActiveBreakpointsRequest$json = const {
   '1': 'ListActiveBreakpointsRequest',
   '2': const [
-    const {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9},
-    const {'1': 'wait_token', '3': 2, '4': 1, '5': 9},
-    const {'1': 'success_on_timeout', '3': 3, '4': 1, '5': 8},
+    const {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
+    const {'1': 'wait_token', '3': 2, '4': 1, '5': 9, '10': 'waitToken'},
+    const {'1': 'success_on_timeout', '3': 3, '4': 1, '5': 8, '10': 'successOnTimeout'},
   ],
 };
 
 const ListActiveBreakpointsResponse$json = const {
   '1': 'ListActiveBreakpointsResponse',
   '2': const [
-    const {'1': 'breakpoints', '3': 1, '4': 3, '5': 11, '6': '.google.devtools.clouddebugger.v2.Breakpoint'},
-    const {'1': 'next_wait_token', '3': 2, '4': 1, '5': 9},
-    const {'1': 'wait_expired', '3': 3, '4': 1, '5': 8},
+    const {'1': 'breakpoints', '3': 1, '4': 3, '5': 11, '6': '.google.devtools.clouddebugger.v2.Breakpoint', '10': 'breakpoints'},
+    const {'1': 'next_wait_token', '3': 2, '4': 1, '5': 9, '10': 'nextWaitToken'},
+    const {'1': 'wait_expired', '3': 3, '4': 1, '5': 8, '10': 'waitExpired'},
   ],
 };
 
 const UpdateActiveBreakpointRequest$json = const {
   '1': 'UpdateActiveBreakpointRequest',
   '2': const [
-    const {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9},
-    const {'1': 'breakpoint', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.clouddebugger.v2.Breakpoint'},
+    const {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
+    const {'1': 'breakpoint', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.clouddebugger.v2.Breakpoint', '10': 'breakpoint'},
   ],
 };
 
@@ -66,18 +66,18 @@ const Controller2$messageJson = const {
   '.google.devtools.clouddebugger.v2.Debuggee': Debuggee$json,
   '.google.devtools.clouddebugger.v2.StatusMessage': StatusMessage$json,
   '.google.devtools.clouddebugger.v2.FormatMessage': FormatMessage$json,
-  '.google.devtools.source.v1.SourceContext': google$devtools$source$v1.SourceContext$json,
-  '.google.devtools.source.v1.CloudRepoSourceContext': google$devtools$source$v1.CloudRepoSourceContext$json,
-  '.google.devtools.source.v1.RepoId': google$devtools$source$v1.RepoId$json,
-  '.google.devtools.source.v1.ProjectRepoId': google$devtools$source$v1.ProjectRepoId$json,
-  '.google.devtools.source.v1.AliasContext': google$devtools$source$v1.AliasContext$json,
-  '.google.devtools.source.v1.CloudWorkspaceSourceContext': google$devtools$source$v1.CloudWorkspaceSourceContext$json,
-  '.google.devtools.source.v1.CloudWorkspaceId': google$devtools$source$v1.CloudWorkspaceId$json,
-  '.google.devtools.source.v1.GerritSourceContext': google$devtools$source$v1.GerritSourceContext$json,
-  '.google.devtools.source.v1.GitSourceContext': google$devtools$source$v1.GitSourceContext$json,
+  '.google.devtools.source.v1.SourceContext': $google$devtools$source$v1.SourceContext$json,
+  '.google.devtools.source.v1.CloudRepoSourceContext': $google$devtools$source$v1.CloudRepoSourceContext$json,
+  '.google.devtools.source.v1.RepoId': $google$devtools$source$v1.RepoId$json,
+  '.google.devtools.source.v1.ProjectRepoId': $google$devtools$source$v1.ProjectRepoId$json,
+  '.google.devtools.source.v1.AliasContext': $google$devtools$source$v1.AliasContext$json,
+  '.google.devtools.source.v1.CloudWorkspaceSourceContext': $google$devtools$source$v1.CloudWorkspaceSourceContext$json,
+  '.google.devtools.source.v1.CloudWorkspaceId': $google$devtools$source$v1.CloudWorkspaceId$json,
+  '.google.devtools.source.v1.GerritSourceContext': $google$devtools$source$v1.GerritSourceContext$json,
+  '.google.devtools.source.v1.GitSourceContext': $google$devtools$source$v1.GitSourceContext$json,
   '.google.devtools.clouddebugger.v2.Debuggee.LabelsEntry': Debuggee_LabelsEntry$json,
-  '.google.devtools.source.v1.ExtendedSourceContext': google$devtools$source$v1.ExtendedSourceContext$json,
-  '.google.devtools.source.v1.ExtendedSourceContext.LabelsEntry': google$devtools$source$v1.ExtendedSourceContext_LabelsEntry$json,
+  '.google.devtools.source.v1.ExtendedSourceContext': $google$devtools$source$v1.ExtendedSourceContext$json,
+  '.google.devtools.source.v1.ExtendedSourceContext.LabelsEntry': $google$devtools$source$v1.ExtendedSourceContext_LabelsEntry$json,
   '.google.devtools.clouddebugger.v2.RegisterDebuggeeResponse': RegisterDebuggeeResponse$json,
   '.google.devtools.clouddebugger.v2.ListActiveBreakpointsRequest': ListActiveBreakpointsRequest$json,
   '.google.devtools.clouddebugger.v2.ListActiveBreakpointsResponse': ListActiveBreakpointsResponse$json,
@@ -85,8 +85,8 @@ const Controller2$messageJson = const {
   '.google.devtools.clouddebugger.v2.SourceLocation': SourceLocation$json,
   '.google.devtools.clouddebugger.v2.StackFrame': StackFrame$json,
   '.google.devtools.clouddebugger.v2.Variable': Variable$json,
-  '.google.protobuf.Int32Value': google$protobuf.Int32Value$json,
-  '.google.protobuf.Timestamp': google$protobuf.Timestamp$json,
+  '.google.protobuf.Int32Value': $google$protobuf.Int32Value$json,
+  '.google.protobuf.Timestamp': $google$protobuf.Timestamp$json,
   '.google.devtools.clouddebugger.v2.Breakpoint.LabelsEntry': Breakpoint_LabelsEntry$json,
   '.google.devtools.clouddebugger.v2.UpdateActiveBreakpointRequest': UpdateActiveBreakpointRequest$json,
   '.google.devtools.clouddebugger.v2.UpdateActiveBreakpointResponse': UpdateActiveBreakpointResponse$json,

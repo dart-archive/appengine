@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.rpc_error_details_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'error_details.pb.dart';
 

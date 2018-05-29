@@ -1,18 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_readgroup;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../protobuf/struct.pb.dart' as google$protobuf;
+import '../../protobuf/struct.pb.dart' as $google$protobuf;
 
 class ReadGroup_Experiment extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReadGroup_Experiment')
-    ..a/*<String>*/(1, 'libraryId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'platformUnit', PbFieldType.OS)
-    ..a/*<String>*/(3, 'sequencingCenter', PbFieldType.OS)
-    ..a/*<String>*/(4, 'instrumentModel', PbFieldType.OS)
+    ..aOS(1, 'libraryId')
+    ..aOS(2, 'platformUnit')
+    ..aOS(3, 'sequencingCenter')
+    ..aOS(4, 'instrumentModel')
     ..hasRequiredFields = false
   ;
 
@@ -29,27 +32,27 @@ class ReadGroup_Experiment extends GeneratedMessage {
   }
   static ReadGroup_Experiment _defaultInstance;
   static void $checkItem(ReadGroup_Experiment v) {
-    if (v is !ReadGroup_Experiment) checkItemFailed(v, 'ReadGroup_Experiment');
+    if (v is! ReadGroup_Experiment) checkItemFailed(v, 'ReadGroup_Experiment');
   }
 
-  String get libraryId => $_get(0, 1, '');
-  void set libraryId(String v) { $_setString(0, 1, v); }
-  bool hasLibraryId() => $_has(0, 1);
+  String get libraryId => $_getS(0, '');
+  set libraryId(String v) { $_setString(0, v); }
+  bool hasLibraryId() => $_has(0);
   void clearLibraryId() => clearField(1);
 
-  String get platformUnit => $_get(1, 2, '');
-  void set platformUnit(String v) { $_setString(1, 2, v); }
-  bool hasPlatformUnit() => $_has(1, 2);
+  String get platformUnit => $_getS(1, '');
+  set platformUnit(String v) { $_setString(1, v); }
+  bool hasPlatformUnit() => $_has(1);
   void clearPlatformUnit() => clearField(2);
 
-  String get sequencingCenter => $_get(2, 3, '');
-  void set sequencingCenter(String v) { $_setString(2, 3, v); }
-  bool hasSequencingCenter() => $_has(2, 3);
+  String get sequencingCenter => $_getS(2, '');
+  set sequencingCenter(String v) { $_setString(2, v); }
+  bool hasSequencingCenter() => $_has(2);
   void clearSequencingCenter() => clearField(3);
 
-  String get instrumentModel => $_get(3, 4, '');
-  void set instrumentModel(String v) { $_setString(3, 4, v); }
-  bool hasInstrumentModel() => $_has(3, 4);
+  String get instrumentModel => $_getS(3, '');
+  set instrumentModel(String v) { $_setString(3, v); }
+  bool hasInstrumentModel() => $_has(3);
   void clearInstrumentModel() => clearField(4);
 }
 
@@ -57,11 +60,11 @@ class _ReadonlyReadGroup_Experiment extends ReadGroup_Experiment with ReadonlyMe
 
 class ReadGroup_Program extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReadGroup_Program')
-    ..a/*<String>*/(1, 'commandLine', PbFieldType.OS)
-    ..a/*<String>*/(2, 'id', PbFieldType.OS)
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
-    ..a/*<String>*/(4, 'prevProgramId', PbFieldType.OS)
-    ..a/*<String>*/(5, 'version', PbFieldType.OS)
+    ..aOS(1, 'commandLine')
+    ..aOS(2, 'id')
+    ..aOS(3, 'name')
+    ..aOS(4, 'prevProgramId')
+    ..aOS(5, 'version')
     ..hasRequiredFields = false
   ;
 
@@ -78,32 +81,32 @@ class ReadGroup_Program extends GeneratedMessage {
   }
   static ReadGroup_Program _defaultInstance;
   static void $checkItem(ReadGroup_Program v) {
-    if (v is !ReadGroup_Program) checkItemFailed(v, 'ReadGroup_Program');
+    if (v is! ReadGroup_Program) checkItemFailed(v, 'ReadGroup_Program');
   }
 
-  String get commandLine => $_get(0, 1, '');
-  void set commandLine(String v) { $_setString(0, 1, v); }
-  bool hasCommandLine() => $_has(0, 1);
+  String get commandLine => $_getS(0, '');
+  set commandLine(String v) { $_setString(0, v); }
+  bool hasCommandLine() => $_has(0);
   void clearCommandLine() => clearField(1);
 
-  String get id => $_get(1, 2, '');
-  void set id(String v) { $_setString(1, 2, v); }
-  bool hasId() => $_has(1, 2);
+  String get id => $_getS(1, '');
+  set id(String v) { $_setString(1, v); }
+  bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  String get name => $_get(2, 3, '');
-  void set name(String v) { $_setString(2, 3, v); }
-  bool hasName() => $_has(2, 3);
+  String get name => $_getS(2, '');
+  set name(String v) { $_setString(2, v); }
+  bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  String get prevProgramId => $_get(3, 4, '');
-  void set prevProgramId(String v) { $_setString(3, 4, v); }
-  bool hasPrevProgramId() => $_has(3, 4);
+  String get prevProgramId => $_getS(3, '');
+  set prevProgramId(String v) { $_setString(3, v); }
+  bool hasPrevProgramId() => $_has(3);
   void clearPrevProgramId() => clearField(4);
 
-  String get version => $_get(4, 5, '');
-  void set version(String v) { $_setString(4, 5, v); }
-  bool hasVersion() => $_has(4, 5);
+  String get version => $_getS(4, '');
+  set version(String v) { $_setString(4, v); }
+  bool hasVersion() => $_has(4);
   void clearVersion() => clearField(5);
 }
 
@@ -111,8 +114,8 @@ class _ReadonlyReadGroup_Program extends ReadGroup_Program with ReadonlyMessageM
 
 class ReadGroup_InfoEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReadGroup_InfoEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<google$protobuf.ListValue>*/(2, 'value', PbFieldType.OM, google$protobuf.ListValue.getDefault, google$protobuf.ListValue.create)
+    ..aOS(1, 'key')
+    ..a<$google$protobuf.ListValue>(2, 'value', PbFieldType.OM, $google$protobuf.ListValue.getDefault, $google$protobuf.ListValue.create)
     ..hasRequiredFields = false
   ;
 
@@ -129,17 +132,17 @@ class ReadGroup_InfoEntry extends GeneratedMessage {
   }
   static ReadGroup_InfoEntry _defaultInstance;
   static void $checkItem(ReadGroup_InfoEntry v) {
-    if (v is !ReadGroup_InfoEntry) checkItemFailed(v, 'ReadGroup_InfoEntry');
+    if (v is! ReadGroup_InfoEntry) checkItemFailed(v, 'ReadGroup_InfoEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  google$protobuf.ListValue get value => $_get(1, 2, null);
-  void set value(google$protobuf.ListValue v) { setField(2, v); }
-  bool hasValue() => $_has(1, 2);
+  $google$protobuf.ListValue get value => $_getN(1);
+  set value($google$protobuf.ListValue v) { setField(2, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -147,16 +150,16 @@ class _ReadonlyReadGroup_InfoEntry extends ReadGroup_InfoEntry with ReadonlyMess
 
 class ReadGroup extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ReadGroup')
-    ..a/*<String>*/(1, 'id', PbFieldType.OS)
-    ..a/*<String>*/(2, 'datasetId', PbFieldType.OS)
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
-    ..a/*<String>*/(4, 'description', PbFieldType.OS)
-    ..a/*<String>*/(5, 'sampleId', PbFieldType.OS)
-    ..a/*<ReadGroup_Experiment>*/(6, 'experiment', PbFieldType.OM, ReadGroup_Experiment.getDefault, ReadGroup_Experiment.create)
-    ..a/*<int>*/(7, 'predictedInsertSize', PbFieldType.O3)
-    ..pp/*<ReadGroup_Program>*/(10, 'programs', PbFieldType.PM, ReadGroup_Program.$checkItem, ReadGroup_Program.create)
-    ..a/*<String>*/(11, 'referenceSetId', PbFieldType.OS)
-    ..pp/*<ReadGroup_InfoEntry>*/(12, 'info', PbFieldType.PM, ReadGroup_InfoEntry.$checkItem, ReadGroup_InfoEntry.create)
+    ..aOS(1, 'id')
+    ..aOS(2, 'datasetId')
+    ..aOS(3, 'name')
+    ..aOS(4, 'description')
+    ..aOS(5, 'sampleId')
+    ..a<ReadGroup_Experiment>(6, 'experiment', PbFieldType.OM, ReadGroup_Experiment.getDefault, ReadGroup_Experiment.create)
+    ..a<int>(7, 'predictedInsertSize', PbFieldType.O3)
+    ..pp<ReadGroup_Program>(10, 'programs', PbFieldType.PM, ReadGroup_Program.$checkItem, ReadGroup_Program.create)
+    ..aOS(11, 'referenceSetId')
+    ..pp<ReadGroup_InfoEntry>(12, 'info', PbFieldType.PM, ReadGroup_InfoEntry.$checkItem, ReadGroup_InfoEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -173,52 +176,52 @@ class ReadGroup extends GeneratedMessage {
   }
   static ReadGroup _defaultInstance;
   static void $checkItem(ReadGroup v) {
-    if (v is !ReadGroup) checkItemFailed(v, 'ReadGroup');
+    if (v is! ReadGroup) checkItemFailed(v, 'ReadGroup');
   }
 
-  String get id => $_get(0, 1, '');
-  void set id(String v) { $_setString(0, 1, v); }
-  bool hasId() => $_has(0, 1);
+  String get id => $_getS(0, '');
+  set id(String v) { $_setString(0, v); }
+  bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get datasetId => $_get(1, 2, '');
-  void set datasetId(String v) { $_setString(1, 2, v); }
-  bool hasDatasetId() => $_has(1, 2);
+  String get datasetId => $_getS(1, '');
+  set datasetId(String v) { $_setString(1, v); }
+  bool hasDatasetId() => $_has(1);
   void clearDatasetId() => clearField(2);
 
-  String get name => $_get(2, 3, '');
-  void set name(String v) { $_setString(2, 3, v); }
-  bool hasName() => $_has(2, 3);
+  String get name => $_getS(2, '');
+  set name(String v) { $_setString(2, v); }
+  bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  String get description => $_get(3, 4, '');
-  void set description(String v) { $_setString(3, 4, v); }
-  bool hasDescription() => $_has(3, 4);
+  String get description => $_getS(3, '');
+  set description(String v) { $_setString(3, v); }
+  bool hasDescription() => $_has(3);
   void clearDescription() => clearField(4);
 
-  String get sampleId => $_get(4, 5, '');
-  void set sampleId(String v) { $_setString(4, 5, v); }
-  bool hasSampleId() => $_has(4, 5);
+  String get sampleId => $_getS(4, '');
+  set sampleId(String v) { $_setString(4, v); }
+  bool hasSampleId() => $_has(4);
   void clearSampleId() => clearField(5);
 
-  ReadGroup_Experiment get experiment => $_get(5, 6, null);
-  void set experiment(ReadGroup_Experiment v) { setField(6, v); }
-  bool hasExperiment() => $_has(5, 6);
+  ReadGroup_Experiment get experiment => $_getN(5);
+  set experiment(ReadGroup_Experiment v) { setField(6, v); }
+  bool hasExperiment() => $_has(5);
   void clearExperiment() => clearField(6);
 
-  int get predictedInsertSize => $_get(6, 7, 0);
-  void set predictedInsertSize(int v) { $_setUnsignedInt32(6, 7, v); }
-  bool hasPredictedInsertSize() => $_has(6, 7);
+  int get predictedInsertSize => $_get(6, 0);
+  set predictedInsertSize(int v) { $_setSignedInt32(6, v); }
+  bool hasPredictedInsertSize() => $_has(6);
   void clearPredictedInsertSize() => clearField(7);
 
-  List<ReadGroup_Program> get programs => $_get(7, 10, null);
+  List<ReadGroup_Program> get programs => $_getList(7);
 
-  String get referenceSetId => $_get(8, 11, '');
-  void set referenceSetId(String v) { $_setString(8, 11, v); }
-  bool hasReferenceSetId() => $_has(8, 11);
+  String get referenceSetId => $_getS(8, '');
+  set referenceSetId(String v) { $_setString(8, v); }
+  bool hasReferenceSetId() => $_has(8);
   void clearReferenceSetId() => clearField(11);
 
-  List<ReadGroup_InfoEntry> get info => $_get(9, 12, null);
+  List<ReadGroup_InfoEntry> get info => $_getList(9);
 }
 
 class _ReadonlyReadGroup extends ReadGroup with ReadonlyMessageMixin {}

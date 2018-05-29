@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.monitoring.v3_group_service_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -9,7 +9,7 @@ import 'package:protobuf/protobuf.dart';
 
 import 'group_service.pb.dart';
 import 'group.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'group_service.pbjson.dart';
 
 export 'group_service.pb.dart';
@@ -19,7 +19,7 @@ abstract class GroupServiceBase extends GeneratedService {
   Future<Group> getGroup(ServerContext ctx, GetGroupRequest request);
   Future<Group> createGroup(ServerContext ctx, CreateGroupRequest request);
   Future<Group> updateGroup(ServerContext ctx, UpdateGroupRequest request);
-  Future<google$protobuf.Empty> deleteGroup(ServerContext ctx, DeleteGroupRequest request);
+  Future<$google$protobuf.Empty> deleteGroup(ServerContext ctx, DeleteGroupRequest request);
   Future<ListGroupMembersResponse> listGroupMembers(ServerContext ctx, ListGroupMembersRequest request);
 
   GeneratedMessage createRequest(String method) {
@@ -47,6 +47,6 @@ abstract class GroupServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => GroupService$json;
-  Map<String, dynamic> get $messageJson => GroupService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => GroupService$messageJson;
 }
 

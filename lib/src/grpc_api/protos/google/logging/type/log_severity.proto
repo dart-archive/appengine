@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc.
+// Copyright 2017 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ option go_package = "google.golang.org/genproto/googleapis/logging/type;ltype";
 option java_multiple_files = true;
 option java_outer_classname = "LogSeverityProto";
 option java_package = "com.google.logging.type";
+option php_namespace = "Google\\Cloud\\Logging\\Type";
 
 
 // The severity of the event described in a log entry, expressed as one of the

@@ -1,14 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_auth;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Authentication extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Authentication')
-    ..pp/*<AuthenticationRule>*/(3, 'rules', PbFieldType.PM, AuthenticationRule.$checkItem, AuthenticationRule.create)
-    ..pp/*<AuthProvider>*/(4, 'providers', PbFieldType.PM, AuthProvider.$checkItem, AuthProvider.create)
+    ..pp<AuthenticationRule>(3, 'rules', PbFieldType.PM, AuthenticationRule.$checkItem, AuthenticationRule.create)
+    ..pp<AuthProvider>(4, 'providers', PbFieldType.PM, AuthProvider.$checkItem, AuthProvider.create)
     ..hasRequiredFields = false
   ;
 
@@ -25,22 +28,22 @@ class Authentication extends GeneratedMessage {
   }
   static Authentication _defaultInstance;
   static void $checkItem(Authentication v) {
-    if (v is !Authentication) checkItemFailed(v, 'Authentication');
+    if (v is! Authentication) checkItemFailed(v, 'Authentication');
   }
 
-  List<AuthenticationRule> get rules => $_get(0, 3, null);
+  List<AuthenticationRule> get rules => $_getList(0);
 
-  List<AuthProvider> get providers => $_get(1, 4, null);
+  List<AuthProvider> get providers => $_getList(1);
 }
 
 class _ReadonlyAuthentication extends Authentication with ReadonlyMessageMixin {}
 
 class AuthenticationRule extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AuthenticationRule')
-    ..a/*<String>*/(1, 'selector', PbFieldType.OS)
-    ..a/*<OAuthRequirements>*/(2, 'oauth', PbFieldType.OM, OAuthRequirements.getDefault, OAuthRequirements.create)
-    ..a/*<bool>*/(5, 'allowWithoutCredential', PbFieldType.OB)
-    ..pp/*<AuthRequirement>*/(7, 'requirements', PbFieldType.PM, AuthRequirement.$checkItem, AuthRequirement.create)
+    ..aOS(1, 'selector')
+    ..a<OAuthRequirements>(2, 'oauth', PbFieldType.OM, OAuthRequirements.getDefault, OAuthRequirements.create)
+    ..aOB(5, 'allowWithoutCredential')
+    ..pp<AuthRequirement>(7, 'requirements', PbFieldType.PM, AuthRequirement.$checkItem, AuthRequirement.create)
     ..hasRequiredFields = false
   ;
 
@@ -57,35 +60,36 @@ class AuthenticationRule extends GeneratedMessage {
   }
   static AuthenticationRule _defaultInstance;
   static void $checkItem(AuthenticationRule v) {
-    if (v is !AuthenticationRule) checkItemFailed(v, 'AuthenticationRule');
+    if (v is! AuthenticationRule) checkItemFailed(v, 'AuthenticationRule');
   }
 
-  String get selector => $_get(0, 1, '');
-  void set selector(String v) { $_setString(0, 1, v); }
-  bool hasSelector() => $_has(0, 1);
+  String get selector => $_getS(0, '');
+  set selector(String v) { $_setString(0, v); }
+  bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  OAuthRequirements get oauth => $_get(1, 2, null);
-  void set oauth(OAuthRequirements v) { setField(2, v); }
-  bool hasOauth() => $_has(1, 2);
+  OAuthRequirements get oauth => $_getN(1);
+  set oauth(OAuthRequirements v) { setField(2, v); }
+  bool hasOauth() => $_has(1);
   void clearOauth() => clearField(2);
 
-  bool get allowWithoutCredential => $_get(2, 5, false);
-  void set allowWithoutCredential(bool v) { $_setBool(2, 5, v); }
-  bool hasAllowWithoutCredential() => $_has(2, 5);
+  bool get allowWithoutCredential => $_get(2, false);
+  set allowWithoutCredential(bool v) { $_setBool(2, v); }
+  bool hasAllowWithoutCredential() => $_has(2);
   void clearAllowWithoutCredential() => clearField(5);
 
-  List<AuthRequirement> get requirements => $_get(3, 7, null);
+  List<AuthRequirement> get requirements => $_getList(3);
 }
 
 class _ReadonlyAuthenticationRule extends AuthenticationRule with ReadonlyMessageMixin {}
 
 class AuthProvider extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AuthProvider')
-    ..a/*<String>*/(1, 'id', PbFieldType.OS)
-    ..a/*<String>*/(2, 'issuer', PbFieldType.OS)
-    ..a/*<String>*/(3, 'jwksUri', PbFieldType.OS)
-    ..a/*<String>*/(4, 'audiences', PbFieldType.OS)
+    ..aOS(1, 'id')
+    ..aOS(2, 'issuer')
+    ..aOS(3, 'jwksUri')
+    ..aOS(4, 'audiences')
+    ..aOS(5, 'authorizationUrl')
     ..hasRequiredFields = false
   ;
 
@@ -102,35 +106,40 @@ class AuthProvider extends GeneratedMessage {
   }
   static AuthProvider _defaultInstance;
   static void $checkItem(AuthProvider v) {
-    if (v is !AuthProvider) checkItemFailed(v, 'AuthProvider');
+    if (v is! AuthProvider) checkItemFailed(v, 'AuthProvider');
   }
 
-  String get id => $_get(0, 1, '');
-  void set id(String v) { $_setString(0, 1, v); }
-  bool hasId() => $_has(0, 1);
+  String get id => $_getS(0, '');
+  set id(String v) { $_setString(0, v); }
+  bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get issuer => $_get(1, 2, '');
-  void set issuer(String v) { $_setString(1, 2, v); }
-  bool hasIssuer() => $_has(1, 2);
+  String get issuer => $_getS(1, '');
+  set issuer(String v) { $_setString(1, v); }
+  bool hasIssuer() => $_has(1);
   void clearIssuer() => clearField(2);
 
-  String get jwksUri => $_get(2, 3, '');
-  void set jwksUri(String v) { $_setString(2, 3, v); }
-  bool hasJwksUri() => $_has(2, 3);
+  String get jwksUri => $_getS(2, '');
+  set jwksUri(String v) { $_setString(2, v); }
+  bool hasJwksUri() => $_has(2);
   void clearJwksUri() => clearField(3);
 
-  String get audiences => $_get(3, 4, '');
-  void set audiences(String v) { $_setString(3, 4, v); }
-  bool hasAudiences() => $_has(3, 4);
+  String get audiences => $_getS(3, '');
+  set audiences(String v) { $_setString(3, v); }
+  bool hasAudiences() => $_has(3);
   void clearAudiences() => clearField(4);
+
+  String get authorizationUrl => $_getS(4, '');
+  set authorizationUrl(String v) { $_setString(4, v); }
+  bool hasAuthorizationUrl() => $_has(4);
+  void clearAuthorizationUrl() => clearField(5);
 }
 
 class _ReadonlyAuthProvider extends AuthProvider with ReadonlyMessageMixin {}
 
 class OAuthRequirements extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('OAuthRequirements')
-    ..a/*<String>*/(1, 'canonicalScopes', PbFieldType.OS)
+    ..aOS(1, 'canonicalScopes')
     ..hasRequiredFields = false
   ;
 
@@ -147,12 +156,12 @@ class OAuthRequirements extends GeneratedMessage {
   }
   static OAuthRequirements _defaultInstance;
   static void $checkItem(OAuthRequirements v) {
-    if (v is !OAuthRequirements) checkItemFailed(v, 'OAuthRequirements');
+    if (v is! OAuthRequirements) checkItemFailed(v, 'OAuthRequirements');
   }
 
-  String get canonicalScopes => $_get(0, 1, '');
-  void set canonicalScopes(String v) { $_setString(0, 1, v); }
-  bool hasCanonicalScopes() => $_has(0, 1);
+  String get canonicalScopes => $_getS(0, '');
+  set canonicalScopes(String v) { $_setString(0, v); }
+  bool hasCanonicalScopes() => $_has(0);
   void clearCanonicalScopes() => clearField(1);
 }
 
@@ -160,8 +169,8 @@ class _ReadonlyOAuthRequirements extends OAuthRequirements with ReadonlyMessageM
 
 class AuthRequirement extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AuthRequirement')
-    ..a/*<String>*/(1, 'providerId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'audiences', PbFieldType.OS)
+    ..aOS(1, 'providerId')
+    ..aOS(2, 'audiences')
     ..hasRequiredFields = false
   ;
 
@@ -178,17 +187,17 @@ class AuthRequirement extends GeneratedMessage {
   }
   static AuthRequirement _defaultInstance;
   static void $checkItem(AuthRequirement v) {
-    if (v is !AuthRequirement) checkItemFailed(v, 'AuthRequirement');
+    if (v is! AuthRequirement) checkItemFailed(v, 'AuthRequirement');
   }
 
-  String get providerId => $_get(0, 1, '');
-  void set providerId(String v) { $_setString(0, 1, v); }
-  bool hasProviderId() => $_has(0, 1);
+  String get providerId => $_getS(0, '');
+  set providerId(String v) { $_setString(0, v); }
+  bool hasProviderId() => $_has(0);
   void clearProviderId() => clearField(1);
 
-  String get audiences => $_get(1, 2, '');
-  void set audiences(String v) { $_setString(1, 2, v); }
-  bool hasAudiences() => $_has(1, 2);
+  String get audiences => $_getS(1, '');
+  set audiences(String v) { $_setString(1, v); }
+  bool hasAudiences() => $_has(1);
   void clearAudiences() => clearField(2);
 }
 

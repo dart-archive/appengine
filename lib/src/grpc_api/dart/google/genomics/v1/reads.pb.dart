@@ -1,19 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_reads;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 import 'readgroupset.pb.dart';
-import '../../protobuf/field_mask.pb.dart' as google$protobuf;
+import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
 import 'range.pb.dart';
 import 'readalignment.pb.dart';
-import '../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 import 'reads.pbenum.dart';
 
@@ -21,10 +23,10 @@ export 'reads.pbenum.dart';
 
 class SearchReadGroupSetsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SearchReadGroupSetsRequest')
-    ..p/*<String>*/(1, 'datasetIds', PbFieldType.PS)
-    ..a/*<String>*/(2, 'pageToken', PbFieldType.OS)
-    ..a/*<String>*/(3, 'name', PbFieldType.OS)
-    ..a/*<int>*/(4, 'pageSize', PbFieldType.O3)
+    ..pPS(1, 'datasetIds')
+    ..aOS(2, 'pageToken')
+    ..aOS(3, 'name')
+    ..a<int>(4, 'pageSize', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -41,24 +43,24 @@ class SearchReadGroupSetsRequest extends GeneratedMessage {
   }
   static SearchReadGroupSetsRequest _defaultInstance;
   static void $checkItem(SearchReadGroupSetsRequest v) {
-    if (v is !SearchReadGroupSetsRequest) checkItemFailed(v, 'SearchReadGroupSetsRequest');
+    if (v is! SearchReadGroupSetsRequest) checkItemFailed(v, 'SearchReadGroupSetsRequest');
   }
 
-  List<String> get datasetIds => $_get(0, 1, null);
+  List<String> get datasetIds => $_getList(0);
 
-  String get pageToken => $_get(1, 2, '');
-  void set pageToken(String v) { $_setString(1, 2, v); }
-  bool hasPageToken() => $_has(1, 2);
+  String get pageToken => $_getS(1, '');
+  set pageToken(String v) { $_setString(1, v); }
+  bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  String get name => $_get(2, 3, '');
-  void set name(String v) { $_setString(2, 3, v); }
-  bool hasName() => $_has(2, 3);
+  String get name => $_getS(2, '');
+  set name(String v) { $_setString(2, v); }
+  bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  int get pageSize => $_get(3, 4, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(3, 4, v); }
-  bool hasPageSize() => $_has(3, 4);
+  int get pageSize => $_get(3, 0);
+  set pageSize(int v) { $_setSignedInt32(3, v); }
+  bool hasPageSize() => $_has(3);
   void clearPageSize() => clearField(4);
 }
 
@@ -66,8 +68,8 @@ class _ReadonlySearchReadGroupSetsRequest extends SearchReadGroupSetsRequest wit
 
 class SearchReadGroupSetsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SearchReadGroupSetsResponse')
-    ..pp/*<ReadGroupSet>*/(1, 'readGroupSets', PbFieldType.PM, ReadGroupSet.$checkItem, ReadGroupSet.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<ReadGroupSet>(1, 'readGroupSets', PbFieldType.PM, ReadGroupSet.$checkItem, ReadGroupSet.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -84,14 +86,14 @@ class SearchReadGroupSetsResponse extends GeneratedMessage {
   }
   static SearchReadGroupSetsResponse _defaultInstance;
   static void $checkItem(SearchReadGroupSetsResponse v) {
-    if (v is !SearchReadGroupSetsResponse) checkItemFailed(v, 'SearchReadGroupSetsResponse');
+    if (v is! SearchReadGroupSetsResponse) checkItemFailed(v, 'SearchReadGroupSetsResponse');
   }
 
-  List<ReadGroupSet> get readGroupSets => $_get(0, 1, null);
+  List<ReadGroupSet> get readGroupSets => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -99,10 +101,10 @@ class _ReadonlySearchReadGroupSetsResponse extends SearchReadGroupSetsResponse w
 
 class ImportReadGroupSetsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ImportReadGroupSetsRequest')
-    ..a/*<String>*/(1, 'datasetId', PbFieldType.OS)
-    ..p/*<String>*/(2, 'sourceUris', PbFieldType.PS)
-    ..a/*<String>*/(4, 'referenceSetId', PbFieldType.OS)
-    ..e/*<ImportReadGroupSetsRequest_PartitionStrategy>*/(5, 'partitionStrategy', PbFieldType.OE, ImportReadGroupSetsRequest_PartitionStrategy.PARTITION_STRATEGY_UNSPECIFIED, ImportReadGroupSetsRequest_PartitionStrategy.valueOf)
+    ..aOS(1, 'datasetId')
+    ..pPS(2, 'sourceUris')
+    ..aOS(4, 'referenceSetId')
+    ..e<ImportReadGroupSetsRequest_PartitionStrategy>(5, 'partitionStrategy', PbFieldType.OE, ImportReadGroupSetsRequest_PartitionStrategy.PARTITION_STRATEGY_UNSPECIFIED, ImportReadGroupSetsRequest_PartitionStrategy.valueOf, ImportReadGroupSetsRequest_PartitionStrategy.values)
     ..hasRequiredFields = false
   ;
 
@@ -119,24 +121,24 @@ class ImportReadGroupSetsRequest extends GeneratedMessage {
   }
   static ImportReadGroupSetsRequest _defaultInstance;
   static void $checkItem(ImportReadGroupSetsRequest v) {
-    if (v is !ImportReadGroupSetsRequest) checkItemFailed(v, 'ImportReadGroupSetsRequest');
+    if (v is! ImportReadGroupSetsRequest) checkItemFailed(v, 'ImportReadGroupSetsRequest');
   }
 
-  String get datasetId => $_get(0, 1, '');
-  void set datasetId(String v) { $_setString(0, 1, v); }
-  bool hasDatasetId() => $_has(0, 1);
+  String get datasetId => $_getS(0, '');
+  set datasetId(String v) { $_setString(0, v); }
+  bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 
-  List<String> get sourceUris => $_get(1, 2, null);
+  List<String> get sourceUris => $_getList(1);
 
-  String get referenceSetId => $_get(2, 4, '');
-  void set referenceSetId(String v) { $_setString(2, 4, v); }
-  bool hasReferenceSetId() => $_has(2, 4);
+  String get referenceSetId => $_getS(2, '');
+  set referenceSetId(String v) { $_setString(2, v); }
+  bool hasReferenceSetId() => $_has(2);
   void clearReferenceSetId() => clearField(4);
 
-  ImportReadGroupSetsRequest_PartitionStrategy get partitionStrategy => $_get(3, 5, null);
-  void set partitionStrategy(ImportReadGroupSetsRequest_PartitionStrategy v) { setField(5, v); }
-  bool hasPartitionStrategy() => $_has(3, 5);
+  ImportReadGroupSetsRequest_PartitionStrategy get partitionStrategy => $_getN(3);
+  set partitionStrategy(ImportReadGroupSetsRequest_PartitionStrategy v) { setField(5, v); }
+  bool hasPartitionStrategy() => $_has(3);
   void clearPartitionStrategy() => clearField(5);
 }
 
@@ -144,7 +146,7 @@ class _ReadonlyImportReadGroupSetsRequest extends ImportReadGroupSetsRequest wit
 
 class ImportReadGroupSetsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ImportReadGroupSetsResponse')
-    ..p/*<String>*/(1, 'readGroupSetIds', PbFieldType.PS)
+    ..pPS(1, 'readGroupSetIds')
     ..hasRequiredFields = false
   ;
 
@@ -161,20 +163,20 @@ class ImportReadGroupSetsResponse extends GeneratedMessage {
   }
   static ImportReadGroupSetsResponse _defaultInstance;
   static void $checkItem(ImportReadGroupSetsResponse v) {
-    if (v is !ImportReadGroupSetsResponse) checkItemFailed(v, 'ImportReadGroupSetsResponse');
+    if (v is! ImportReadGroupSetsResponse) checkItemFailed(v, 'ImportReadGroupSetsResponse');
   }
 
-  List<String> get readGroupSetIds => $_get(0, 1, null);
+  List<String> get readGroupSetIds => $_getList(0);
 }
 
 class _ReadonlyImportReadGroupSetsResponse extends ImportReadGroupSetsResponse with ReadonlyMessageMixin {}
 
 class ExportReadGroupSetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ExportReadGroupSetRequest')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'exportUri', PbFieldType.OS)
-    ..a/*<String>*/(3, 'readGroupSetId', PbFieldType.OS)
-    ..p/*<String>*/(4, 'referenceNames', PbFieldType.PS)
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'exportUri')
+    ..aOS(3, 'readGroupSetId')
+    ..pPS(4, 'referenceNames')
     ..hasRequiredFields = false
   ;
 
@@ -191,34 +193,34 @@ class ExportReadGroupSetRequest extends GeneratedMessage {
   }
   static ExportReadGroupSetRequest _defaultInstance;
   static void $checkItem(ExportReadGroupSetRequest v) {
-    if (v is !ExportReadGroupSetRequest) checkItemFailed(v, 'ExportReadGroupSetRequest');
+    if (v is! ExportReadGroupSetRequest) checkItemFailed(v, 'ExportReadGroupSetRequest');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get exportUri => $_get(1, 2, '');
-  void set exportUri(String v) { $_setString(1, 2, v); }
-  bool hasExportUri() => $_has(1, 2);
+  String get exportUri => $_getS(1, '');
+  set exportUri(String v) { $_setString(1, v); }
+  bool hasExportUri() => $_has(1);
   void clearExportUri() => clearField(2);
 
-  String get readGroupSetId => $_get(2, 3, '');
-  void set readGroupSetId(String v) { $_setString(2, 3, v); }
-  bool hasReadGroupSetId() => $_has(2, 3);
+  String get readGroupSetId => $_getS(2, '');
+  set readGroupSetId(String v) { $_setString(2, v); }
+  bool hasReadGroupSetId() => $_has(2);
   void clearReadGroupSetId() => clearField(3);
 
-  List<String> get referenceNames => $_get(3, 4, null);
+  List<String> get referenceNames => $_getList(3);
 }
 
 class _ReadonlyExportReadGroupSetRequest extends ExportReadGroupSetRequest with ReadonlyMessageMixin {}
 
 class UpdateReadGroupSetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateReadGroupSetRequest')
-    ..a/*<String>*/(1, 'readGroupSetId', PbFieldType.OS)
-    ..a/*<ReadGroupSet>*/(2, 'readGroupSet', PbFieldType.OM, ReadGroupSet.getDefault, ReadGroupSet.create)
-    ..a/*<google$protobuf.FieldMask>*/(3, 'updateMask', PbFieldType.OM, google$protobuf.FieldMask.getDefault, google$protobuf.FieldMask.create)
+    ..aOS(1, 'readGroupSetId')
+    ..a<ReadGroupSet>(2, 'readGroupSet', PbFieldType.OM, ReadGroupSet.getDefault, ReadGroupSet.create)
+    ..a<$google$protobuf.FieldMask>(3, 'updateMask', PbFieldType.OM, $google$protobuf.FieldMask.getDefault, $google$protobuf.FieldMask.create)
     ..hasRequiredFields = false
   ;
 
@@ -235,22 +237,22 @@ class UpdateReadGroupSetRequest extends GeneratedMessage {
   }
   static UpdateReadGroupSetRequest _defaultInstance;
   static void $checkItem(UpdateReadGroupSetRequest v) {
-    if (v is !UpdateReadGroupSetRequest) checkItemFailed(v, 'UpdateReadGroupSetRequest');
+    if (v is! UpdateReadGroupSetRequest) checkItemFailed(v, 'UpdateReadGroupSetRequest');
   }
 
-  String get readGroupSetId => $_get(0, 1, '');
-  void set readGroupSetId(String v) { $_setString(0, 1, v); }
-  bool hasReadGroupSetId() => $_has(0, 1);
+  String get readGroupSetId => $_getS(0, '');
+  set readGroupSetId(String v) { $_setString(0, v); }
+  bool hasReadGroupSetId() => $_has(0);
   void clearReadGroupSetId() => clearField(1);
 
-  ReadGroupSet get readGroupSet => $_get(1, 2, null);
-  void set readGroupSet(ReadGroupSet v) { setField(2, v); }
-  bool hasReadGroupSet() => $_has(1, 2);
+  ReadGroupSet get readGroupSet => $_getN(1);
+  set readGroupSet(ReadGroupSet v) { setField(2, v); }
+  bool hasReadGroupSet() => $_has(1);
   void clearReadGroupSet() => clearField(2);
 
-  google$protobuf.FieldMask get updateMask => $_get(2, 3, null);
-  void set updateMask(google$protobuf.FieldMask v) { setField(3, v); }
-  bool hasUpdateMask() => $_has(2, 3);
+  $google$protobuf.FieldMask get updateMask => $_getN(2);
+  set updateMask($google$protobuf.FieldMask v) { setField(3, v); }
+  bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
@@ -258,7 +260,7 @@ class _ReadonlyUpdateReadGroupSetRequest extends UpdateReadGroupSetRequest with 
 
 class DeleteReadGroupSetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteReadGroupSetRequest')
-    ..a/*<String>*/(1, 'readGroupSetId', PbFieldType.OS)
+    ..aOS(1, 'readGroupSetId')
     ..hasRequiredFields = false
   ;
 
@@ -275,12 +277,12 @@ class DeleteReadGroupSetRequest extends GeneratedMessage {
   }
   static DeleteReadGroupSetRequest _defaultInstance;
   static void $checkItem(DeleteReadGroupSetRequest v) {
-    if (v is !DeleteReadGroupSetRequest) checkItemFailed(v, 'DeleteReadGroupSetRequest');
+    if (v is! DeleteReadGroupSetRequest) checkItemFailed(v, 'DeleteReadGroupSetRequest');
   }
 
-  String get readGroupSetId => $_get(0, 1, '');
-  void set readGroupSetId(String v) { $_setString(0, 1, v); }
-  bool hasReadGroupSetId() => $_has(0, 1);
+  String get readGroupSetId => $_getS(0, '');
+  set readGroupSetId(String v) { $_setString(0, v); }
+  bool hasReadGroupSetId() => $_has(0);
   void clearReadGroupSetId() => clearField(1);
 }
 
@@ -288,7 +290,7 @@ class _ReadonlyDeleteReadGroupSetRequest extends DeleteReadGroupSetRequest with 
 
 class GetReadGroupSetRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetReadGroupSetRequest')
-    ..a/*<String>*/(1, 'readGroupSetId', PbFieldType.OS)
+    ..aOS(1, 'readGroupSetId')
     ..hasRequiredFields = false
   ;
 
@@ -305,12 +307,12 @@ class GetReadGroupSetRequest extends GeneratedMessage {
   }
   static GetReadGroupSetRequest _defaultInstance;
   static void $checkItem(GetReadGroupSetRequest v) {
-    if (v is !GetReadGroupSetRequest) checkItemFailed(v, 'GetReadGroupSetRequest');
+    if (v is! GetReadGroupSetRequest) checkItemFailed(v, 'GetReadGroupSetRequest');
   }
 
-  String get readGroupSetId => $_get(0, 1, '');
-  void set readGroupSetId(String v) { $_setString(0, 1, v); }
-  bool hasReadGroupSetId() => $_has(0, 1);
+  String get readGroupSetId => $_getS(0, '');
+  set readGroupSetId(String v) { $_setString(0, v); }
+  bool hasReadGroupSetId() => $_has(0);
   void clearReadGroupSetId() => clearField(1);
 }
 
@@ -318,13 +320,13 @@ class _ReadonlyGetReadGroupSetRequest extends GetReadGroupSetRequest with Readon
 
 class ListCoverageBucketsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListCoverageBucketsRequest')
-    ..a/*<String>*/(1, 'readGroupSetId', PbFieldType.OS)
-    ..a/*<String>*/(3, 'referenceName', PbFieldType.OS)
-    ..a/*<Int64>*/(4, 'start', PbFieldType.O6, Int64.ZERO)
-    ..a/*<Int64>*/(5, 'end', PbFieldType.O6, Int64.ZERO)
-    ..a/*<Int64>*/(6, 'targetBucketWidth', PbFieldType.O6, Int64.ZERO)
-    ..a/*<String>*/(7, 'pageToken', PbFieldType.OS)
-    ..a/*<int>*/(8, 'pageSize', PbFieldType.O3)
+    ..aOS(1, 'readGroupSetId')
+    ..aOS(3, 'referenceName')
+    ..aInt64(4, 'start')
+    ..aInt64(5, 'end')
+    ..aInt64(6, 'targetBucketWidth')
+    ..aOS(7, 'pageToken')
+    ..a<int>(8, 'pageSize', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -341,42 +343,42 @@ class ListCoverageBucketsRequest extends GeneratedMessage {
   }
   static ListCoverageBucketsRequest _defaultInstance;
   static void $checkItem(ListCoverageBucketsRequest v) {
-    if (v is !ListCoverageBucketsRequest) checkItemFailed(v, 'ListCoverageBucketsRequest');
+    if (v is! ListCoverageBucketsRequest) checkItemFailed(v, 'ListCoverageBucketsRequest');
   }
 
-  String get readGroupSetId => $_get(0, 1, '');
-  void set readGroupSetId(String v) { $_setString(0, 1, v); }
-  bool hasReadGroupSetId() => $_has(0, 1);
+  String get readGroupSetId => $_getS(0, '');
+  set readGroupSetId(String v) { $_setString(0, v); }
+  bool hasReadGroupSetId() => $_has(0);
   void clearReadGroupSetId() => clearField(1);
 
-  String get referenceName => $_get(1, 3, '');
-  void set referenceName(String v) { $_setString(1, 3, v); }
-  bool hasReferenceName() => $_has(1, 3);
+  String get referenceName => $_getS(1, '');
+  set referenceName(String v) { $_setString(1, v); }
+  bool hasReferenceName() => $_has(1);
   void clearReferenceName() => clearField(3);
 
-  Int64 get start => $_get(2, 4, null);
-  void set start(Int64 v) { $_setInt64(2, 4, v); }
-  bool hasStart() => $_has(2, 4);
+  Int64 get start => $_getI64(2);
+  set start(Int64 v) { $_setInt64(2, v); }
+  bool hasStart() => $_has(2);
   void clearStart() => clearField(4);
 
-  Int64 get end => $_get(3, 5, null);
-  void set end(Int64 v) { $_setInt64(3, 5, v); }
-  bool hasEnd() => $_has(3, 5);
+  Int64 get end => $_getI64(3);
+  set end(Int64 v) { $_setInt64(3, v); }
+  bool hasEnd() => $_has(3);
   void clearEnd() => clearField(5);
 
-  Int64 get targetBucketWidth => $_get(4, 6, null);
-  void set targetBucketWidth(Int64 v) { $_setInt64(4, 6, v); }
-  bool hasTargetBucketWidth() => $_has(4, 6);
+  Int64 get targetBucketWidth => $_getI64(4);
+  set targetBucketWidth(Int64 v) { $_setInt64(4, v); }
+  bool hasTargetBucketWidth() => $_has(4);
   void clearTargetBucketWidth() => clearField(6);
 
-  String get pageToken => $_get(5, 7, '');
-  void set pageToken(String v) { $_setString(5, 7, v); }
-  bool hasPageToken() => $_has(5, 7);
+  String get pageToken => $_getS(5, '');
+  set pageToken(String v) { $_setString(5, v); }
+  bool hasPageToken() => $_has(5);
   void clearPageToken() => clearField(7);
 
-  int get pageSize => $_get(6, 8, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(6, 8, v); }
-  bool hasPageSize() => $_has(6, 8);
+  int get pageSize => $_get(6, 0);
+  set pageSize(int v) { $_setSignedInt32(6, v); }
+  bool hasPageSize() => $_has(6);
   void clearPageSize() => clearField(8);
 }
 
@@ -384,8 +386,8 @@ class _ReadonlyListCoverageBucketsRequest extends ListCoverageBucketsRequest wit
 
 class CoverageBucket extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CoverageBucket')
-    ..a/*<Range>*/(1, 'range', PbFieldType.OM, Range.getDefault, Range.create)
-    ..a/*<double>*/(2, 'meanCoverage', PbFieldType.OF)
+    ..a<Range>(1, 'range', PbFieldType.OM, Range.getDefault, Range.create)
+    ..a<double>(2, 'meanCoverage', PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -402,17 +404,17 @@ class CoverageBucket extends GeneratedMessage {
   }
   static CoverageBucket _defaultInstance;
   static void $checkItem(CoverageBucket v) {
-    if (v is !CoverageBucket) checkItemFailed(v, 'CoverageBucket');
+    if (v is! CoverageBucket) checkItemFailed(v, 'CoverageBucket');
   }
 
-  Range get range => $_get(0, 1, null);
-  void set range(Range v) { setField(1, v); }
-  bool hasRange() => $_has(0, 1);
+  Range get range => $_getN(0);
+  set range(Range v) { setField(1, v); }
+  bool hasRange() => $_has(0);
   void clearRange() => clearField(1);
 
-  double get meanCoverage => $_get(1, 2, null);
-  void set meanCoverage(double v) { $_setFloat(1, 2, v); }
-  bool hasMeanCoverage() => $_has(1, 2);
+  double get meanCoverage => $_getN(1);
+  set meanCoverage(double v) { $_setFloat(1, v); }
+  bool hasMeanCoverage() => $_has(1);
   void clearMeanCoverage() => clearField(2);
 }
 
@@ -420,9 +422,9 @@ class _ReadonlyCoverageBucket extends CoverageBucket with ReadonlyMessageMixin {
 
 class ListCoverageBucketsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListCoverageBucketsResponse')
-    ..a/*<Int64>*/(1, 'bucketWidth', PbFieldType.O6, Int64.ZERO)
-    ..pp/*<CoverageBucket>*/(2, 'coverageBuckets', PbFieldType.PM, CoverageBucket.$checkItem, CoverageBucket.create)
-    ..a/*<String>*/(3, 'nextPageToken', PbFieldType.OS)
+    ..aInt64(1, 'bucketWidth')
+    ..pp<CoverageBucket>(2, 'coverageBuckets', PbFieldType.PM, CoverageBucket.$checkItem, CoverageBucket.create)
+    ..aOS(3, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -439,19 +441,19 @@ class ListCoverageBucketsResponse extends GeneratedMessage {
   }
   static ListCoverageBucketsResponse _defaultInstance;
   static void $checkItem(ListCoverageBucketsResponse v) {
-    if (v is !ListCoverageBucketsResponse) checkItemFailed(v, 'ListCoverageBucketsResponse');
+    if (v is! ListCoverageBucketsResponse) checkItemFailed(v, 'ListCoverageBucketsResponse');
   }
 
-  Int64 get bucketWidth => $_get(0, 1, null);
-  void set bucketWidth(Int64 v) { $_setInt64(0, 1, v); }
-  bool hasBucketWidth() => $_has(0, 1);
+  Int64 get bucketWidth => $_getI64(0);
+  set bucketWidth(Int64 v) { $_setInt64(0, v); }
+  bool hasBucketWidth() => $_has(0);
   void clearBucketWidth() => clearField(1);
 
-  List<CoverageBucket> get coverageBuckets => $_get(1, 2, null);
+  List<CoverageBucket> get coverageBuckets => $_getList(1);
 
-  String get nextPageToken => $_get(2, 3, '');
-  void set nextPageToken(String v) { $_setString(2, 3, v); }
-  bool hasNextPageToken() => $_has(2, 3);
+  String get nextPageToken => $_getS(2, '');
+  set nextPageToken(String v) { $_setString(2, v); }
+  bool hasNextPageToken() => $_has(2);
   void clearNextPageToken() => clearField(3);
 }
 
@@ -459,13 +461,13 @@ class _ReadonlyListCoverageBucketsResponse extends ListCoverageBucketsResponse w
 
 class SearchReadsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SearchReadsRequest')
-    ..p/*<String>*/(1, 'readGroupSetIds', PbFieldType.PS)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
-    ..a/*<int>*/(4, 'pageSize', PbFieldType.O3)
-    ..p/*<String>*/(5, 'readGroupIds', PbFieldType.PS)
-    ..a/*<String>*/(7, 'referenceName', PbFieldType.OS)
-    ..a/*<Int64>*/(8, 'start', PbFieldType.O6, Int64.ZERO)
-    ..a/*<Int64>*/(9, 'end', PbFieldType.O6, Int64.ZERO)
+    ..pPS(1, 'readGroupSetIds')
+    ..aOS(3, 'pageToken')
+    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..pPS(5, 'readGroupIds')
+    ..aOS(7, 'referenceName')
+    ..aInt64(8, 'start')
+    ..aInt64(9, 'end')
     ..hasRequiredFields = false
   ;
 
@@ -482,36 +484,36 @@ class SearchReadsRequest extends GeneratedMessage {
   }
   static SearchReadsRequest _defaultInstance;
   static void $checkItem(SearchReadsRequest v) {
-    if (v is !SearchReadsRequest) checkItemFailed(v, 'SearchReadsRequest');
+    if (v is! SearchReadsRequest) checkItemFailed(v, 'SearchReadsRequest');
   }
 
-  List<String> get readGroupSetIds => $_get(0, 1, null);
+  List<String> get readGroupSetIds => $_getList(0);
 
-  String get pageToken => $_get(1, 3, '');
-  void set pageToken(String v) { $_setString(1, 3, v); }
-  bool hasPageToken() => $_has(1, 3);
+  String get pageToken => $_getS(1, '');
+  set pageToken(String v) { $_setString(1, v); }
+  bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(3);
 
-  int get pageSize => $_get(2, 4, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(2, 4, v); }
-  bool hasPageSize() => $_has(2, 4);
+  int get pageSize => $_get(2, 0);
+  set pageSize(int v) { $_setSignedInt32(2, v); }
+  bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(4);
 
-  List<String> get readGroupIds => $_get(3, 5, null);
+  List<String> get readGroupIds => $_getList(3);
 
-  String get referenceName => $_get(4, 7, '');
-  void set referenceName(String v) { $_setString(4, 7, v); }
-  bool hasReferenceName() => $_has(4, 7);
+  String get referenceName => $_getS(4, '');
+  set referenceName(String v) { $_setString(4, v); }
+  bool hasReferenceName() => $_has(4);
   void clearReferenceName() => clearField(7);
 
-  Int64 get start => $_get(5, 8, null);
-  void set start(Int64 v) { $_setInt64(5, 8, v); }
-  bool hasStart() => $_has(5, 8);
+  Int64 get start => $_getI64(5);
+  set start(Int64 v) { $_setInt64(5, v); }
+  bool hasStart() => $_has(5);
   void clearStart() => clearField(8);
 
-  Int64 get end => $_get(6, 9, null);
-  void set end(Int64 v) { $_setInt64(6, 9, v); }
-  bool hasEnd() => $_has(6, 9);
+  Int64 get end => $_getI64(6);
+  set end(Int64 v) { $_setInt64(6, v); }
+  bool hasEnd() => $_has(6);
   void clearEnd() => clearField(9);
 }
 
@@ -519,8 +521,8 @@ class _ReadonlySearchReadsRequest extends SearchReadsRequest with ReadonlyMessag
 
 class SearchReadsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SearchReadsResponse')
-    ..pp/*<Read>*/(1, 'alignments', PbFieldType.PM, Read.$checkItem, Read.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Read>(1, 'alignments', PbFieldType.PM, Read.$checkItem, Read.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -537,14 +539,14 @@ class SearchReadsResponse extends GeneratedMessage {
   }
   static SearchReadsResponse _defaultInstance;
   static void $checkItem(SearchReadsResponse v) {
-    if (v is !SearchReadsResponse) checkItemFailed(v, 'SearchReadsResponse');
+    if (v is! SearchReadsResponse) checkItemFailed(v, 'SearchReadsResponse');
   }
 
-  List<Read> get alignments => $_get(0, 1, null);
+  List<Read> get alignments => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -552,13 +554,13 @@ class _ReadonlySearchReadsResponse extends SearchReadsResponse with ReadonlyMess
 
 class StreamReadsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StreamReadsRequest')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'readGroupSetId', PbFieldType.OS)
-    ..a/*<String>*/(3, 'referenceName', PbFieldType.OS)
-    ..a/*<Int64>*/(4, 'start', PbFieldType.O6, Int64.ZERO)
-    ..a/*<Int64>*/(5, 'end', PbFieldType.O6, Int64.ZERO)
-    ..a/*<int>*/(6, 'shard', PbFieldType.O3)
-    ..a/*<int>*/(7, 'totalShards', PbFieldType.O3)
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'readGroupSetId')
+    ..aOS(3, 'referenceName')
+    ..aInt64(4, 'start')
+    ..aInt64(5, 'end')
+    ..a<int>(6, 'shard', PbFieldType.O3)
+    ..a<int>(7, 'totalShards', PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -575,42 +577,42 @@ class StreamReadsRequest extends GeneratedMessage {
   }
   static StreamReadsRequest _defaultInstance;
   static void $checkItem(StreamReadsRequest v) {
-    if (v is !StreamReadsRequest) checkItemFailed(v, 'StreamReadsRequest');
+    if (v is! StreamReadsRequest) checkItemFailed(v, 'StreamReadsRequest');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get readGroupSetId => $_get(1, 2, '');
-  void set readGroupSetId(String v) { $_setString(1, 2, v); }
-  bool hasReadGroupSetId() => $_has(1, 2);
+  String get readGroupSetId => $_getS(1, '');
+  set readGroupSetId(String v) { $_setString(1, v); }
+  bool hasReadGroupSetId() => $_has(1);
   void clearReadGroupSetId() => clearField(2);
 
-  String get referenceName => $_get(2, 3, '');
-  void set referenceName(String v) { $_setString(2, 3, v); }
-  bool hasReferenceName() => $_has(2, 3);
+  String get referenceName => $_getS(2, '');
+  set referenceName(String v) { $_setString(2, v); }
+  bool hasReferenceName() => $_has(2);
   void clearReferenceName() => clearField(3);
 
-  Int64 get start => $_get(3, 4, null);
-  void set start(Int64 v) { $_setInt64(3, 4, v); }
-  bool hasStart() => $_has(3, 4);
+  Int64 get start => $_getI64(3);
+  set start(Int64 v) { $_setInt64(3, v); }
+  bool hasStart() => $_has(3);
   void clearStart() => clearField(4);
 
-  Int64 get end => $_get(4, 5, null);
-  void set end(Int64 v) { $_setInt64(4, 5, v); }
-  bool hasEnd() => $_has(4, 5);
+  Int64 get end => $_getI64(4);
+  set end(Int64 v) { $_setInt64(4, v); }
+  bool hasEnd() => $_has(4);
   void clearEnd() => clearField(5);
 
-  int get shard => $_get(5, 6, 0);
-  void set shard(int v) { $_setUnsignedInt32(5, 6, v); }
-  bool hasShard() => $_has(5, 6);
+  int get shard => $_get(5, 0);
+  set shard(int v) { $_setSignedInt32(5, v); }
+  bool hasShard() => $_has(5);
   void clearShard() => clearField(6);
 
-  int get totalShards => $_get(6, 7, 0);
-  void set totalShards(int v) { $_setUnsignedInt32(6, 7, v); }
-  bool hasTotalShards() => $_has(6, 7);
+  int get totalShards => $_get(6, 0);
+  set totalShards(int v) { $_setSignedInt32(6, v); }
+  bool hasTotalShards() => $_has(6);
   void clearTotalShards() => clearField(7);
 }
 
@@ -618,7 +620,7 @@ class _ReadonlyStreamReadsRequest extends StreamReadsRequest with ReadonlyMessag
 
 class StreamReadsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StreamReadsResponse')
-    ..pp/*<Read>*/(1, 'alignments', PbFieldType.PM, Read.$checkItem, Read.create)
+    ..pp<Read>(1, 'alignments', PbFieldType.PM, Read.$checkItem, Read.create)
     ..hasRequiredFields = false
   ;
 
@@ -635,10 +637,10 @@ class StreamReadsResponse extends GeneratedMessage {
   }
   static StreamReadsResponse _defaultInstance;
   static void $checkItem(StreamReadsResponse v) {
-    if (v is !StreamReadsResponse) checkItemFailed(v, 'StreamReadsResponse');
+    if (v is! StreamReadsResponse) checkItemFailed(v, 'StreamReadsResponse');
   }
 
-  List<Read> get alignments => $_get(0, 1, null);
+  List<Read> get alignments => $_getList(0);
 }
 
 class _ReadonlyStreamReadsResponse extends StreamReadsResponse with ReadonlyMessageMixin {}
@@ -649,7 +651,7 @@ class StreamingReadServiceApi {
 
   Future<StreamReadsResponse> streamReads(ClientContext ctx, StreamReadsRequest request) {
     var emptyResponse = new StreamReadsResponse();
-    return _client.invoke(ctx, 'StreamingReadService', 'StreamReads', request, emptyResponse);
+    return _client.invoke<StreamReadsResponse>(ctx, 'StreamingReadService', 'StreamReads', request, emptyResponse);
   }
 }
 
@@ -657,37 +659,37 @@ class ReadServiceV1Api {
   RpcClient _client;
   ReadServiceV1Api(this._client);
 
-  Future<google$longrunning.Operation> importReadGroupSets(ClientContext ctx, ImportReadGroupSetsRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ReadServiceV1', 'ImportReadGroupSets', request, emptyResponse);
+  Future<$google$longrunning.Operation> importReadGroupSets(ClientContext ctx, ImportReadGroupSetsRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ReadServiceV1', 'ImportReadGroupSets', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> exportReadGroupSet(ClientContext ctx, ExportReadGroupSetRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'ReadServiceV1', 'ExportReadGroupSet', request, emptyResponse);
+  Future<$google$longrunning.Operation> exportReadGroupSet(ClientContext ctx, ExportReadGroupSetRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'ReadServiceV1', 'ExportReadGroupSet', request, emptyResponse);
   }
   Future<SearchReadGroupSetsResponse> searchReadGroupSets(ClientContext ctx, SearchReadGroupSetsRequest request) {
     var emptyResponse = new SearchReadGroupSetsResponse();
-    return _client.invoke(ctx, 'ReadServiceV1', 'SearchReadGroupSets', request, emptyResponse);
+    return _client.invoke<SearchReadGroupSetsResponse>(ctx, 'ReadServiceV1', 'SearchReadGroupSets', request, emptyResponse);
   }
   Future<ReadGroupSet> updateReadGroupSet(ClientContext ctx, UpdateReadGroupSetRequest request) {
     var emptyResponse = new ReadGroupSet();
-    return _client.invoke(ctx, 'ReadServiceV1', 'UpdateReadGroupSet', request, emptyResponse);
+    return _client.invoke<ReadGroupSet>(ctx, 'ReadServiceV1', 'UpdateReadGroupSet', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteReadGroupSet(ClientContext ctx, DeleteReadGroupSetRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'ReadServiceV1', 'DeleteReadGroupSet', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteReadGroupSet(ClientContext ctx, DeleteReadGroupSetRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'ReadServiceV1', 'DeleteReadGroupSet', request, emptyResponse);
   }
   Future<ReadGroupSet> getReadGroupSet(ClientContext ctx, GetReadGroupSetRequest request) {
     var emptyResponse = new ReadGroupSet();
-    return _client.invoke(ctx, 'ReadServiceV1', 'GetReadGroupSet', request, emptyResponse);
+    return _client.invoke<ReadGroupSet>(ctx, 'ReadServiceV1', 'GetReadGroupSet', request, emptyResponse);
   }
   Future<ListCoverageBucketsResponse> listCoverageBuckets(ClientContext ctx, ListCoverageBucketsRequest request) {
     var emptyResponse = new ListCoverageBucketsResponse();
-    return _client.invoke(ctx, 'ReadServiceV1', 'ListCoverageBuckets', request, emptyResponse);
+    return _client.invoke<ListCoverageBucketsResponse>(ctx, 'ReadServiceV1', 'ListCoverageBuckets', request, emptyResponse);
   }
   Future<SearchReadsResponse> searchReads(ClientContext ctx, SearchReadsRequest request) {
     var emptyResponse = new SearchReadsResponse();
-    return _client.invoke(ctx, 'ReadServiceV1', 'SearchReads', request, emptyResponse);
+    return _client.invoke<SearchReadsResponse>(ctx, 'ReadServiceV1', 'SearchReads', request, emptyResponse);
   }
 }
 

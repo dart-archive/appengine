@@ -36,7 +36,6 @@ import 'package:test/test.dart';
 import '../utils/error_matchers.dart';
 import '../utils/raw_datastore_test_utils.dart';
 
-
 Future sleep(Duration duration) {
   var completer = new Completer();
   new Timer(duration, completer.complete);
@@ -44,13 +43,13 @@ Future sleep(Duration duration) {
 }
 
 Future<List<Entity>> consumePages(FirstPageProvider provider) {
-  return new StreamFromPages(provider).stream.toList();
+  return new StreamFromPages<Entity>(provider).stream.toList();
 }
 
 runTests(Datastore datastore, String namespace) {
   Partition partition = new Partition(namespace);
 
-  Future withTransaction(Function f, {bool xg: false}) {
+  Future<T> withTransaction<T>(Function f, {bool xg: false}) {
     return datastore.beginTransaction(crossEntityGroup: xg).then(f);
   }
 
@@ -133,8 +132,8 @@ runTests(Datastore datastore, String namespace) {
     for (var key in a.properties.keys) {
       if (!b.properties.containsKey(key)) return false;
       if (a.properties[key] != null && a.properties[key] is List) {
-        var aList = a.properties[key];
-        var bList = b.properties[key];
+        List aList = a.properties[key];
+        List bList = b.properties[key];
         if (aList.length != bList.length) return false;
         for (var i = 0; i < aList.length; i++) {
           if (aList[i] != bList[i]) return false;
@@ -255,7 +254,7 @@ runTests(Datastore datastore, String namespace) {
         // Maybe it should not be a [DataStoreError] here?
         // FIXME/TODO: This was adapted
         expect(datastore.commit(inserts: named20000),
-               throws);
+               throwsA(isApplicationError));
       });
 
       // TODO: test invalid inserts (like entities without key, ...)
@@ -534,7 +533,7 @@ runTests(Datastore datastore, String namespace) {
           var changedEntities = new List<Entity>(entities.length);
           for (int i = 0; i < entities.length; i++) {
             var entity = entities[i];
-            var newProperties = new Map.from(entity.properties);
+            var newProperties = new Map<String, Object>.from(entity.properties);
             for (var prop in newProperties.keys) {
               newProperties[prop] = "${newProperties[prop]}conflict$value";
             }
@@ -593,7 +592,7 @@ runTests(Datastore datastore, String namespace) {
       });
     });
     group('query', () {
-      Future testQuery(String kind,
+      Future<List<Entity>> testQuery(String kind,
                        {List<Filter> filters,
                         List<Order> orders,
                         bool transactional: false,
@@ -707,12 +706,12 @@ runTests(Datastore datastore, String namespace) {
       };
 
       var filterFunction = (Entity entity) {
-        var value = entity.properties[QUERY_KEY];
+        Comparable value = entity.properties[QUERY_KEY];
         return value.compareTo(QUERY_UPPER_BOUND) == -1 &&
                value.compareTo(QUERY_LOWER_BOUND) == 1;
       };
       var listFilterFunction = (Entity entity) {
-        var values = entity.properties[TEST_LIST_PROPERTY];
+        List values = entity.properties[TEST_LIST_PROPERTY];
         return values.contains(QUERY_LIST_ENTRY);
       };
       var indexFilterMatches = (Entity entity) {

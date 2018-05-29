@@ -1,14 +1,49 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_billing;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
+class Billing_BillingDestination extends GeneratedMessage {
+  static final BuilderInfo _i = new BuilderInfo('Billing_BillingDestination')
+    ..aOS(1, 'monitoredResource')
+    ..pPS(2, 'metrics')
+    ..hasRequiredFields = false
+  ;
+
+  Billing_BillingDestination() : super();
+  Billing_BillingDestination.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Billing_BillingDestination.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Billing_BillingDestination clone() => new Billing_BillingDestination()..mergeFromMessage(this);
+  BuilderInfo get info_ => _i;
+  static Billing_BillingDestination create() => new Billing_BillingDestination();
+  static PbList<Billing_BillingDestination> createRepeated() => new PbList<Billing_BillingDestination>();
+  static Billing_BillingDestination getDefault() {
+    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBilling_BillingDestination();
+    return _defaultInstance;
+  }
+  static Billing_BillingDestination _defaultInstance;
+  static void $checkItem(Billing_BillingDestination v) {
+    if (v is! Billing_BillingDestination) checkItemFailed(v, 'Billing_BillingDestination');
+  }
+
+  String get monitoredResource => $_getS(0, '');
+  set monitoredResource(String v) { $_setString(0, v); }
+  bool hasMonitoredResource() => $_has(0);
+  void clearMonitoredResource() => clearField(1);
+
+  List<String> get metrics => $_getList(1);
+}
+
+class _ReadonlyBilling_BillingDestination extends Billing_BillingDestination with ReadonlyMessageMixin {}
+
 class Billing extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Billing')
-    ..p/*<String>*/(1, 'metrics', PbFieldType.PS)
-    ..pp/*<BillingStatusRule>*/(5, 'rules', PbFieldType.PM, BillingStatusRule.$checkItem, BillingStatusRule.create)
+    ..pp<Billing_BillingDestination>(8, 'consumerDestinations', PbFieldType.PM, Billing_BillingDestination.$checkItem, Billing_BillingDestination.create)
     ..hasRequiredFields = false
   ;
 
@@ -25,46 +60,11 @@ class Billing extends GeneratedMessage {
   }
   static Billing _defaultInstance;
   static void $checkItem(Billing v) {
-    if (v is !Billing) checkItemFailed(v, 'Billing');
+    if (v is! Billing) checkItemFailed(v, 'Billing');
   }
 
-  List<String> get metrics => $_get(0, 1, null);
-
-  List<BillingStatusRule> get rules => $_get(1, 5, null);
+  List<Billing_BillingDestination> get consumerDestinations => $_getList(0);
 }
 
 class _ReadonlyBilling extends Billing with ReadonlyMessageMixin {}
-
-class BillingStatusRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BillingStatusRule')
-    ..a/*<String>*/(1, 'selector', PbFieldType.OS)
-    ..p/*<String>*/(2, 'allowedStatuses', PbFieldType.PS)
-    ..hasRequiredFields = false
-  ;
-
-  BillingStatusRule() : super();
-  BillingStatusRule.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  BillingStatusRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  BillingStatusRule clone() => new BillingStatusRule()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BillingStatusRule create() => new BillingStatusRule();
-  static PbList<BillingStatusRule> createRepeated() => new PbList<BillingStatusRule>();
-  static BillingStatusRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBillingStatusRule();
-    return _defaultInstance;
-  }
-  static BillingStatusRule _defaultInstance;
-  static void $checkItem(BillingStatusRule v) {
-    if (v is !BillingStatusRule) checkItemFailed(v, 'BillingStatusRule');
-  }
-
-  String get selector => $_get(0, 1, '');
-  void set selector(String v) { $_setString(0, 1, v); }
-  bool hasSelector() => $_has(0, 1);
-  void clearSelector() => clearField(1);
-
-  List<String> get allowedStatuses => $_get(1, 2, null);
-}
-
-class _ReadonlyBillingStatusRule extends BillingStatusRule with ReadonlyMessageMixin {}
 

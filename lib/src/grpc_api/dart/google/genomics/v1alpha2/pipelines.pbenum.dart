@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1alpha2_pipelines_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class PipelineResources_Disk_Type extends ProtobufEnum {
@@ -21,7 +23,7 @@ class PipelineResources_Disk_Type extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PipelineResources_Disk_Type valueOf(int value) => _byValue[value] as PipelineResources_Disk_Type;
   static void $checkItem(PipelineResources_Disk_Type v) {
-    if (v is !PipelineResources_Disk_Type) checkItemFailed(v, 'PipelineResources_Disk_Type');
+    if (v is! PipelineResources_Disk_Type) checkItemFailed(v, 'PipelineResources_Disk_Type');
   }
 
   const PipelineResources_Disk_Type._(int v, String n) : super(v, n);

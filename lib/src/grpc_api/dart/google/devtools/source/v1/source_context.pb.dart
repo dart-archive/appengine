@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.source.v1_source_context;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,10 +14,10 @@ export 'source_context.pbenum.dart';
 
 class SourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SourceContext')
-    ..a/*<CloudRepoSourceContext>*/(1, 'cloudRepo', PbFieldType.OM, CloudRepoSourceContext.getDefault, CloudRepoSourceContext.create)
-    ..a/*<CloudWorkspaceSourceContext>*/(2, 'cloudWorkspace', PbFieldType.OM, CloudWorkspaceSourceContext.getDefault, CloudWorkspaceSourceContext.create)
-    ..a/*<GerritSourceContext>*/(3, 'gerrit', PbFieldType.OM, GerritSourceContext.getDefault, GerritSourceContext.create)
-    ..a/*<GitSourceContext>*/(6, 'git', PbFieldType.OM, GitSourceContext.getDefault, GitSourceContext.create)
+    ..a<CloudRepoSourceContext>(1, 'cloudRepo', PbFieldType.OM, CloudRepoSourceContext.getDefault, CloudRepoSourceContext.create)
+    ..a<CloudWorkspaceSourceContext>(2, 'cloudWorkspace', PbFieldType.OM, CloudWorkspaceSourceContext.getDefault, CloudWorkspaceSourceContext.create)
+    ..a<GerritSourceContext>(3, 'gerrit', PbFieldType.OM, GerritSourceContext.getDefault, GerritSourceContext.create)
+    ..a<GitSourceContext>(6, 'git', PbFieldType.OM, GitSourceContext.getDefault, GitSourceContext.create)
     ..hasRequiredFields = false
   ;
 
@@ -31,27 +34,27 @@ class SourceContext extends GeneratedMessage {
   }
   static SourceContext _defaultInstance;
   static void $checkItem(SourceContext v) {
-    if (v is !SourceContext) checkItemFailed(v, 'SourceContext');
+    if (v is! SourceContext) checkItemFailed(v, 'SourceContext');
   }
 
-  CloudRepoSourceContext get cloudRepo => $_get(0, 1, null);
-  void set cloudRepo(CloudRepoSourceContext v) { setField(1, v); }
-  bool hasCloudRepo() => $_has(0, 1);
+  CloudRepoSourceContext get cloudRepo => $_getN(0);
+  set cloudRepo(CloudRepoSourceContext v) { setField(1, v); }
+  bool hasCloudRepo() => $_has(0);
   void clearCloudRepo() => clearField(1);
 
-  CloudWorkspaceSourceContext get cloudWorkspace => $_get(1, 2, null);
-  void set cloudWorkspace(CloudWorkspaceSourceContext v) { setField(2, v); }
-  bool hasCloudWorkspace() => $_has(1, 2);
+  CloudWorkspaceSourceContext get cloudWorkspace => $_getN(1);
+  set cloudWorkspace(CloudWorkspaceSourceContext v) { setField(2, v); }
+  bool hasCloudWorkspace() => $_has(1);
   void clearCloudWorkspace() => clearField(2);
 
-  GerritSourceContext get gerrit => $_get(2, 3, null);
-  void set gerrit(GerritSourceContext v) { setField(3, v); }
-  bool hasGerrit() => $_has(2, 3);
+  GerritSourceContext get gerrit => $_getN(2);
+  set gerrit(GerritSourceContext v) { setField(3, v); }
+  bool hasGerrit() => $_has(2);
   void clearGerrit() => clearField(3);
 
-  GitSourceContext get git => $_get(3, 6, null);
-  void set git(GitSourceContext v) { setField(6, v); }
-  bool hasGit() => $_has(3, 6);
+  GitSourceContext get git => $_getN(3);
+  set git(GitSourceContext v) { setField(6, v); }
+  bool hasGit() => $_has(3);
   void clearGit() => clearField(6);
 }
 
@@ -59,8 +62,8 @@ class _ReadonlySourceContext extends SourceContext with ReadonlyMessageMixin {}
 
 class ExtendedSourceContext_LabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ExtendedSourceContext_LabelsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -77,17 +80,17 @@ class ExtendedSourceContext_LabelsEntry extends GeneratedMessage {
   }
   static ExtendedSourceContext_LabelsEntry _defaultInstance;
   static void $checkItem(ExtendedSourceContext_LabelsEntry v) {
-    if (v is !ExtendedSourceContext_LabelsEntry) checkItemFailed(v, 'ExtendedSourceContext_LabelsEntry');
+    if (v is! ExtendedSourceContext_LabelsEntry) checkItemFailed(v, 'ExtendedSourceContext_LabelsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -95,8 +98,8 @@ class _ReadonlyExtendedSourceContext_LabelsEntry extends ExtendedSourceContext_L
 
 class ExtendedSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ExtendedSourceContext')
-    ..a/*<SourceContext>*/(1, 'context', PbFieldType.OM, SourceContext.getDefault, SourceContext.create)
-    ..pp/*<ExtendedSourceContext_LabelsEntry>*/(2, 'labels', PbFieldType.PM, ExtendedSourceContext_LabelsEntry.$checkItem, ExtendedSourceContext_LabelsEntry.create)
+    ..a<SourceContext>(1, 'context', PbFieldType.OM, SourceContext.getDefault, SourceContext.create)
+    ..pp<ExtendedSourceContext_LabelsEntry>(2, 'labels', PbFieldType.PM, ExtendedSourceContext_LabelsEntry.$checkItem, ExtendedSourceContext_LabelsEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -113,23 +116,23 @@ class ExtendedSourceContext extends GeneratedMessage {
   }
   static ExtendedSourceContext _defaultInstance;
   static void $checkItem(ExtendedSourceContext v) {
-    if (v is !ExtendedSourceContext) checkItemFailed(v, 'ExtendedSourceContext');
+    if (v is! ExtendedSourceContext) checkItemFailed(v, 'ExtendedSourceContext');
   }
 
-  SourceContext get context => $_get(0, 1, null);
-  void set context(SourceContext v) { setField(1, v); }
-  bool hasContext() => $_has(0, 1);
+  SourceContext get context => $_getN(0);
+  set context(SourceContext v) { setField(1, v); }
+  bool hasContext() => $_has(0);
   void clearContext() => clearField(1);
 
-  List<ExtendedSourceContext_LabelsEntry> get labels => $_get(1, 2, null);
+  List<ExtendedSourceContext_LabelsEntry> get labels => $_getList(1);
 }
 
 class _ReadonlyExtendedSourceContext extends ExtendedSourceContext with ReadonlyMessageMixin {}
 
 class AliasContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AliasContext')
-    ..e/*<AliasContext_Kind>*/(1, 'kind', PbFieldType.OE, AliasContext_Kind.ANY, AliasContext_Kind.valueOf)
-    ..a/*<String>*/(2, 'name', PbFieldType.OS)
+    ..e<AliasContext_Kind>(1, 'kind', PbFieldType.OE, AliasContext_Kind.ANY, AliasContext_Kind.valueOf, AliasContext_Kind.values)
+    ..aOS(2, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -146,17 +149,17 @@ class AliasContext extends GeneratedMessage {
   }
   static AliasContext _defaultInstance;
   static void $checkItem(AliasContext v) {
-    if (v is !AliasContext) checkItemFailed(v, 'AliasContext');
+    if (v is! AliasContext) checkItemFailed(v, 'AliasContext');
   }
 
-  AliasContext_Kind get kind => $_get(0, 1, null);
-  void set kind(AliasContext_Kind v) { setField(1, v); }
-  bool hasKind() => $_has(0, 1);
+  AliasContext_Kind get kind => $_getN(0);
+  set kind(AliasContext_Kind v) { setField(1, v); }
+  bool hasKind() => $_has(0);
   void clearKind() => clearField(1);
 
-  String get name => $_get(1, 2, '');
-  void set name(String v) { $_setString(1, 2, v); }
-  bool hasName() => $_has(1, 2);
+  String get name => $_getS(1, '');
+  set name(String v) { $_setString(1, v); }
+  bool hasName() => $_has(1);
   void clearName() => clearField(2);
 }
 
@@ -164,10 +167,10 @@ class _ReadonlyAliasContext extends AliasContext with ReadonlyMessageMixin {}
 
 class CloudRepoSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CloudRepoSourceContext')
-    ..a/*<RepoId>*/(1, 'repoId', PbFieldType.OM, RepoId.getDefault, RepoId.create)
-    ..a/*<String>*/(2, 'revisionId', PbFieldType.OS)
-    ..a/*<String>*/(3, 'aliasName', PbFieldType.OS)
-    ..a/*<AliasContext>*/(4, 'aliasContext', PbFieldType.OM, AliasContext.getDefault, AliasContext.create)
+    ..a<RepoId>(1, 'repoId', PbFieldType.OM, RepoId.getDefault, RepoId.create)
+    ..aOS(2, 'revisionId')
+    ..aOS(3, 'aliasName')
+    ..a<AliasContext>(4, 'aliasContext', PbFieldType.OM, AliasContext.getDefault, AliasContext.create)
     ..hasRequiredFields = false
   ;
 
@@ -184,27 +187,27 @@ class CloudRepoSourceContext extends GeneratedMessage {
   }
   static CloudRepoSourceContext _defaultInstance;
   static void $checkItem(CloudRepoSourceContext v) {
-    if (v is !CloudRepoSourceContext) checkItemFailed(v, 'CloudRepoSourceContext');
+    if (v is! CloudRepoSourceContext) checkItemFailed(v, 'CloudRepoSourceContext');
   }
 
-  RepoId get repoId => $_get(0, 1, null);
-  void set repoId(RepoId v) { setField(1, v); }
-  bool hasRepoId() => $_has(0, 1);
+  RepoId get repoId => $_getN(0);
+  set repoId(RepoId v) { setField(1, v); }
+  bool hasRepoId() => $_has(0);
   void clearRepoId() => clearField(1);
 
-  String get revisionId => $_get(1, 2, '');
-  void set revisionId(String v) { $_setString(1, 2, v); }
-  bool hasRevisionId() => $_has(1, 2);
+  String get revisionId => $_getS(1, '');
+  set revisionId(String v) { $_setString(1, v); }
+  bool hasRevisionId() => $_has(1);
   void clearRevisionId() => clearField(2);
 
-  String get aliasName => $_get(2, 3, '');
-  void set aliasName(String v) { $_setString(2, 3, v); }
-  bool hasAliasName() => $_has(2, 3);
+  String get aliasName => $_getS(2, '');
+  set aliasName(String v) { $_setString(2, v); }
+  bool hasAliasName() => $_has(2);
   void clearAliasName() => clearField(3);
 
-  AliasContext get aliasContext => $_get(3, 4, null);
-  void set aliasContext(AliasContext v) { setField(4, v); }
-  bool hasAliasContext() => $_has(3, 4);
+  AliasContext get aliasContext => $_getN(3);
+  set aliasContext(AliasContext v) { setField(4, v); }
+  bool hasAliasContext() => $_has(3);
   void clearAliasContext() => clearField(4);
 }
 
@@ -212,8 +215,8 @@ class _ReadonlyCloudRepoSourceContext extends CloudRepoSourceContext with Readon
 
 class CloudWorkspaceSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CloudWorkspaceSourceContext')
-    ..a/*<CloudWorkspaceId>*/(1, 'workspaceId', PbFieldType.OM, CloudWorkspaceId.getDefault, CloudWorkspaceId.create)
-    ..a/*<String>*/(2, 'snapshotId', PbFieldType.OS)
+    ..a<CloudWorkspaceId>(1, 'workspaceId', PbFieldType.OM, CloudWorkspaceId.getDefault, CloudWorkspaceId.create)
+    ..aOS(2, 'snapshotId')
     ..hasRequiredFields = false
   ;
 
@@ -230,17 +233,17 @@ class CloudWorkspaceSourceContext extends GeneratedMessage {
   }
   static CloudWorkspaceSourceContext _defaultInstance;
   static void $checkItem(CloudWorkspaceSourceContext v) {
-    if (v is !CloudWorkspaceSourceContext) checkItemFailed(v, 'CloudWorkspaceSourceContext');
+    if (v is! CloudWorkspaceSourceContext) checkItemFailed(v, 'CloudWorkspaceSourceContext');
   }
 
-  CloudWorkspaceId get workspaceId => $_get(0, 1, null);
-  void set workspaceId(CloudWorkspaceId v) { setField(1, v); }
-  bool hasWorkspaceId() => $_has(0, 1);
+  CloudWorkspaceId get workspaceId => $_getN(0);
+  set workspaceId(CloudWorkspaceId v) { setField(1, v); }
+  bool hasWorkspaceId() => $_has(0);
   void clearWorkspaceId() => clearField(1);
 
-  String get snapshotId => $_get(1, 2, '');
-  void set snapshotId(String v) { $_setString(1, 2, v); }
-  bool hasSnapshotId() => $_has(1, 2);
+  String get snapshotId => $_getS(1, '');
+  set snapshotId(String v) { $_setString(1, v); }
+  bool hasSnapshotId() => $_has(1);
   void clearSnapshotId() => clearField(2);
 }
 
@@ -248,11 +251,11 @@ class _ReadonlyCloudWorkspaceSourceContext extends CloudWorkspaceSourceContext w
 
 class GerritSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GerritSourceContext')
-    ..a/*<String>*/(1, 'hostUri', PbFieldType.OS)
-    ..a/*<String>*/(2, 'gerritProject', PbFieldType.OS)
-    ..a/*<String>*/(3, 'revisionId', PbFieldType.OS)
-    ..a/*<String>*/(4, 'aliasName', PbFieldType.OS)
-    ..a/*<AliasContext>*/(5, 'aliasContext', PbFieldType.OM, AliasContext.getDefault, AliasContext.create)
+    ..aOS(1, 'hostUri')
+    ..aOS(2, 'gerritProject')
+    ..aOS(3, 'revisionId')
+    ..aOS(4, 'aliasName')
+    ..a<AliasContext>(5, 'aliasContext', PbFieldType.OM, AliasContext.getDefault, AliasContext.create)
     ..hasRequiredFields = false
   ;
 
@@ -269,32 +272,32 @@ class GerritSourceContext extends GeneratedMessage {
   }
   static GerritSourceContext _defaultInstance;
   static void $checkItem(GerritSourceContext v) {
-    if (v is !GerritSourceContext) checkItemFailed(v, 'GerritSourceContext');
+    if (v is! GerritSourceContext) checkItemFailed(v, 'GerritSourceContext');
   }
 
-  String get hostUri => $_get(0, 1, '');
-  void set hostUri(String v) { $_setString(0, 1, v); }
-  bool hasHostUri() => $_has(0, 1);
+  String get hostUri => $_getS(0, '');
+  set hostUri(String v) { $_setString(0, v); }
+  bool hasHostUri() => $_has(0);
   void clearHostUri() => clearField(1);
 
-  String get gerritProject => $_get(1, 2, '');
-  void set gerritProject(String v) { $_setString(1, 2, v); }
-  bool hasGerritProject() => $_has(1, 2);
+  String get gerritProject => $_getS(1, '');
+  set gerritProject(String v) { $_setString(1, v); }
+  bool hasGerritProject() => $_has(1);
   void clearGerritProject() => clearField(2);
 
-  String get revisionId => $_get(2, 3, '');
-  void set revisionId(String v) { $_setString(2, 3, v); }
-  bool hasRevisionId() => $_has(2, 3);
+  String get revisionId => $_getS(2, '');
+  set revisionId(String v) { $_setString(2, v); }
+  bool hasRevisionId() => $_has(2);
   void clearRevisionId() => clearField(3);
 
-  String get aliasName => $_get(3, 4, '');
-  void set aliasName(String v) { $_setString(3, 4, v); }
-  bool hasAliasName() => $_has(3, 4);
+  String get aliasName => $_getS(3, '');
+  set aliasName(String v) { $_setString(3, v); }
+  bool hasAliasName() => $_has(3);
   void clearAliasName() => clearField(4);
 
-  AliasContext get aliasContext => $_get(4, 5, null);
-  void set aliasContext(AliasContext v) { setField(5, v); }
-  bool hasAliasContext() => $_has(4, 5);
+  AliasContext get aliasContext => $_getN(4);
+  set aliasContext(AliasContext v) { setField(5, v); }
+  bool hasAliasContext() => $_has(4);
   void clearAliasContext() => clearField(5);
 }
 
@@ -302,8 +305,8 @@ class _ReadonlyGerritSourceContext extends GerritSourceContext with ReadonlyMess
 
 class GitSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GitSourceContext')
-    ..a/*<String>*/(1, 'url', PbFieldType.OS)
-    ..a/*<String>*/(2, 'revisionId', PbFieldType.OS)
+    ..aOS(1, 'url')
+    ..aOS(2, 'revisionId')
     ..hasRequiredFields = false
   ;
 
@@ -320,17 +323,17 @@ class GitSourceContext extends GeneratedMessage {
   }
   static GitSourceContext _defaultInstance;
   static void $checkItem(GitSourceContext v) {
-    if (v is !GitSourceContext) checkItemFailed(v, 'GitSourceContext');
+    if (v is! GitSourceContext) checkItemFailed(v, 'GitSourceContext');
   }
 
-  String get url => $_get(0, 1, '');
-  void set url(String v) { $_setString(0, 1, v); }
-  bool hasUrl() => $_has(0, 1);
+  String get url => $_getS(0, '');
+  set url(String v) { $_setString(0, v); }
+  bool hasUrl() => $_has(0);
   void clearUrl() => clearField(1);
 
-  String get revisionId => $_get(1, 2, '');
-  void set revisionId(String v) { $_setString(1, 2, v); }
-  bool hasRevisionId() => $_has(1, 2);
+  String get revisionId => $_getS(1, '');
+  set revisionId(String v) { $_setString(1, v); }
+  bool hasRevisionId() => $_has(1);
   void clearRevisionId() => clearField(2);
 }
 
@@ -338,8 +341,8 @@ class _ReadonlyGitSourceContext extends GitSourceContext with ReadonlyMessageMix
 
 class RepoId extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RepoId')
-    ..a/*<ProjectRepoId>*/(1, 'projectRepoId', PbFieldType.OM, ProjectRepoId.getDefault, ProjectRepoId.create)
-    ..a/*<String>*/(2, 'uid', PbFieldType.OS)
+    ..a<ProjectRepoId>(1, 'projectRepoId', PbFieldType.OM, ProjectRepoId.getDefault, ProjectRepoId.create)
+    ..aOS(2, 'uid')
     ..hasRequiredFields = false
   ;
 
@@ -356,17 +359,17 @@ class RepoId extends GeneratedMessage {
   }
   static RepoId _defaultInstance;
   static void $checkItem(RepoId v) {
-    if (v is !RepoId) checkItemFailed(v, 'RepoId');
+    if (v is! RepoId) checkItemFailed(v, 'RepoId');
   }
 
-  ProjectRepoId get projectRepoId => $_get(0, 1, null);
-  void set projectRepoId(ProjectRepoId v) { setField(1, v); }
-  bool hasProjectRepoId() => $_has(0, 1);
+  ProjectRepoId get projectRepoId => $_getN(0);
+  set projectRepoId(ProjectRepoId v) { setField(1, v); }
+  bool hasProjectRepoId() => $_has(0);
   void clearProjectRepoId() => clearField(1);
 
-  String get uid => $_get(1, 2, '');
-  void set uid(String v) { $_setString(1, 2, v); }
-  bool hasUid() => $_has(1, 2);
+  String get uid => $_getS(1, '');
+  set uid(String v) { $_setString(1, v); }
+  bool hasUid() => $_has(1);
   void clearUid() => clearField(2);
 }
 
@@ -374,8 +377,8 @@ class _ReadonlyRepoId extends RepoId with ReadonlyMessageMixin {}
 
 class ProjectRepoId extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ProjectRepoId')
-    ..a/*<String>*/(1, 'projectId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'repoName', PbFieldType.OS)
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'repoName')
     ..hasRequiredFields = false
   ;
 
@@ -392,17 +395,17 @@ class ProjectRepoId extends GeneratedMessage {
   }
   static ProjectRepoId _defaultInstance;
   static void $checkItem(ProjectRepoId v) {
-    if (v is !ProjectRepoId) checkItemFailed(v, 'ProjectRepoId');
+    if (v is! ProjectRepoId) checkItemFailed(v, 'ProjectRepoId');
   }
 
-  String get projectId => $_get(0, 1, '');
-  void set projectId(String v) { $_setString(0, 1, v); }
-  bool hasProjectId() => $_has(0, 1);
+  String get projectId => $_getS(0, '');
+  set projectId(String v) { $_setString(0, v); }
+  bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get repoName => $_get(1, 2, '');
-  void set repoName(String v) { $_setString(1, 2, v); }
-  bool hasRepoName() => $_has(1, 2);
+  String get repoName => $_getS(1, '');
+  set repoName(String v) { $_setString(1, v); }
+  bool hasRepoName() => $_has(1);
   void clearRepoName() => clearField(2);
 }
 
@@ -410,8 +413,8 @@ class _ReadonlyProjectRepoId extends ProjectRepoId with ReadonlyMessageMixin {}
 
 class CloudWorkspaceId extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CloudWorkspaceId')
-    ..a/*<RepoId>*/(1, 'repoId', PbFieldType.OM, RepoId.getDefault, RepoId.create)
-    ..a/*<String>*/(2, 'name', PbFieldType.OS)
+    ..a<RepoId>(1, 'repoId', PbFieldType.OM, RepoId.getDefault, RepoId.create)
+    ..aOS(2, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -428,17 +431,17 @@ class CloudWorkspaceId extends GeneratedMessage {
   }
   static CloudWorkspaceId _defaultInstance;
   static void $checkItem(CloudWorkspaceId v) {
-    if (v is !CloudWorkspaceId) checkItemFailed(v, 'CloudWorkspaceId');
+    if (v is! CloudWorkspaceId) checkItemFailed(v, 'CloudWorkspaceId');
   }
 
-  RepoId get repoId => $_get(0, 1, null);
-  void set repoId(RepoId v) { setField(1, v); }
-  bool hasRepoId() => $_has(0, 1);
+  RepoId get repoId => $_getN(0);
+  set repoId(RepoId v) { setField(1, v); }
+  bool hasRepoId() => $_has(0);
   void clearRepoId() => clearField(1);
 
-  String get name => $_get(1, 2, '');
-  void set name(String v) { $_setString(1, 2, v); }
-  bool hasName() => $_has(1, 2);
+  String get name => $_getS(1, '');
+  set name(String v) { $_setString(1, v); }
+  bool hasName() => $_has(1);
   void clearName() => clearField(2);
 }
 

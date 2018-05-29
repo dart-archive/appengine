@@ -1,14 +1,21 @@
 type: com.google.api.codegen.ConfigProto
+config_schema_version: 1.0.0
 language_settings:
   java:
-    package_name: com.google.cloud.pubsub.spi.v1
+    package_name: com.google.cloud.pubsub.v1
+    interface_names:
+      google.pubsub.v1.Publisher: TopicAdmin
+      google.pubsub.v1.Subscriber: SubscriptionAdmin
   python:
-    package_name: google.cloud.gapic.pubsub.v1
+    package_name: google.cloud.pubsub_v1.gapic
   go:
     package_name: cloud.google.com/go/pubsub/apiv1
     domain_layer_location: cloud.google.com/go/pubsub
   csharp:
     package_name: Google.Cloud.PubSub.V1
+    interface_names:
+      google.pubsub.v1.Publisher: PublisherServiceApi
+      google.pubsub.v1.Subscriber: SubscriberServiceApi
   ruby:
     package_name: Google::Cloud::Pubsub::V1
   php:
@@ -27,19 +34,31 @@ collection_oneofs:
   collection_names:
   - topic
   - deleted_topic
+collections:
+- name_pattern: projects/{project}
+  entity_name: project
+  language_overrides:
+  - language: csharp
+    common_resource_name: Google.Api.Gax.ResourceNames.ProjectName
+- name_pattern: projects/{project}/snapshots/{snapshot}
+  entity_name: snapshot
+  language_overrides:
+  - language: java
+    entity_name: project_snapshot
+- name_pattern: projects/{project}/subscriptions/{subscription}
+  entity_name: subscription
+  language_overrides:
+  - language: java
+    entity_name: project_subscription
+- name_pattern: projects/{project}/topics/{topic}
+  entity_name: topic
+  language_overrides:
+  - language: java
+    entity_name: project_topic
 interfaces:
 - name: google.pubsub.v1.Subscriber
   lang_doc:
     java: To retrieve messages from a subscription, see the Subscriber class.
-  collections:
-  - name_pattern: projects/{project}
-    entity_name: project
-  - name_pattern: projects/{project}/snapshots/{snapshot}
-    entity_name: snapshot
-  - name_pattern: projects/{project}/subscriptions/{subscription}
-    entity_name: subscription
-  - name_pattern: projects/{project}/topics/{topic}
-    entity_name: topic
   retry_codes_def:
   - name: idempotent
     retry_codes:
@@ -47,6 +66,13 @@ interfaces:
     - DEADLINE_EXCEEDED
   - name: non_idempotent
     retry_codes: []
+  - name: pull
+    retry_codes:
+    - DEADLINE_EXCEEDED
+    - INTERNAL
+    - CANCELLED
+    - RESOURCE_EXHAUSTED
+    - UNAVAILABLE
   retry_params_def:
   - name: default
     initial_retry_delay_millis: 100
@@ -63,6 +89,14 @@ interfaces:
     initial_rpc_timeout_millis: 12000 # 12 seconds
     rpc_timeout_multiplier: 1
     max_rpc_timeout_millis: 12000 # 12 seconds
+    total_timeout_millis: 600000 # 10 minutes
+  - name: streaming_messaging
+    initial_retry_delay_millis: 100
+    retry_delay_multiplier: 1.3
+    max_retry_delay_millis: 60000 # 60 seconds
+    initial_rpc_timeout_millis: 600000 # 10 minutes
+    rpc_timeout_multiplier: 1
+    max_rpc_timeout_millis: 600000 # 10 minutes
     total_timeout_millis: 600000 # 10 minutes
   experimental_features:
     iam_resources:
@@ -112,6 +146,9 @@ interfaces:
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
+    sample_code_init_fields:
+    - update_mask.paths[0]="ack_deadline_seconds"
+    - subscription.ack_deadline_seconds=42
   - name: ListSubscriptions
     flattening:
       groups:
@@ -165,6 +202,10 @@ interfaces:
     field_name_patterns:
       subscription: subscription
     timeout_millis: 60000
+    surface_treatments:
+    - include_languages:
+      - java
+      visibility: PACKAGE
   - name: Acknowledge
     flattening:
       groups:
@@ -181,6 +222,10 @@ interfaces:
     field_name_patterns:
       subscription: subscription
     timeout_millis: 60000
+    surface_treatments:
+    - include_languages:
+      - java
+      visibility: PACKAGE
   - name: Pull
     flattening:
       groups:
@@ -193,11 +238,15 @@ interfaces:
     - max_messages
     request_object_method: true
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: non_idempotent
+    retry_codes_name: pull
     retry_params_name: messaging
     field_name_patterns:
       subscription: subscription
     timeout_millis: 60000
+    surface_treatments:
+    - include_languages:
+      - java
+      visibility: PACKAGE
   - name: StreamingPull
     required_fields:
     - subscription
@@ -206,11 +255,11 @@ interfaces:
       response:
         resources_field: received_messages
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: non_idempotent
-    retry_params_name: messaging
+    retry_codes_name: pull
+    retry_params_name: streaming_messaging
     field_name_patterns:
       subscription: subscription
-    timeout_millis: 60000
+    timeout_millis: 900000
     surface_treatments:
     - include_languages:
       - java
@@ -239,6 +288,7 @@ interfaces:
     required_fields:
     - project
     request_object_method: true
+    resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
         page_size_field: page_size
@@ -261,12 +311,24 @@ interfaces:
     - name
     - subscription
     request_object_method: true
+    resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: snapshot
       subscription: subscription
     timeout_millis: 60000
+  - name: UpdateSnapshot
+    required_fields:
+    - snapshot
+    - update_mask
+    request_object_method: true
+    retry_codes_name: idempotent
+    retry_params_name: default
+    timeout_millis: 60000
+    sample_code_init_fields:
+    - update_mask.paths[0]="expire_time"
+    - snapshot.expire_time.seconds=123456
   - name: DeleteSnapshot
     flattening:
       groups:
@@ -275,6 +337,7 @@ interfaces:
     required_fields:
     - snapshot
     request_object_method: false
+    resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -286,6 +349,7 @@ interfaces:
     required_fields:
     - subscription
     request_object_method: true
+    resource_name_treatment: STATIC_TYPES
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -353,15 +417,9 @@ interfaces:
   lang_doc:
     java: To publish messages to a topic, see the Publisher class.
   smoke_test:
-    method: CreateTopic
+    method: ListTopics
     init_fields:
-    - name%project=$PROJECT_ID
-    - name%topic="smoketesttopic-$RANDOM"
-  collections:
-  - name_pattern: projects/{project}
-    entity_name: project
-  - name_pattern: projects/{project}/topics/{topic}
-    entity_name: topic
+    - project%project=$PROJECT_ID
   retry_codes_def:
   - name: idempotent
     retry_codes:
@@ -369,6 +427,11 @@ interfaces:
     - DEADLINE_EXCEEDED
   - name: one_plus_delivery
     retry_codes:
+    - ABORTED
+    - CANCELLED
+    - INTERNAL
+    - RESOURCE_EXHAUSTED
+    - UNKNOWN
     - UNAVAILABLE
     - DEADLINE_EXCEEDED
   - name: non_idempotent
@@ -388,7 +451,7 @@ interfaces:
     max_retry_delay_millis: 60000 # 60 seconds
     initial_rpc_timeout_millis: 12000 # 12 seconds
     rpc_timeout_multiplier: 1
-    max_rpc_timeout_millis: 12000 # 12 seconds
+    max_rpc_timeout_millis: 30000 # 30 seconds
     total_timeout_millis: 600000 # 10 minutes
   experimental_features:
     iam_resources:
@@ -411,6 +474,18 @@ interfaces:
     field_name_patterns:
       name: topic
     timeout_millis: 60000
+  - name: UpdateTopic
+    required_fields:
+    - topic
+    - update_mask
+    request_object_method: true
+    retry_codes_name: idempotent
+    retry_params_name: default
+    timeout_millis: 60000
+    surface_treatments:
+    - include_languages:
+      - java
+      visibility: PACKAGE
   - name: Publish
     flattening:
       groups:
@@ -424,15 +499,15 @@ interfaces:
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: one_plus_delivery
     retry_params_name: messaging
-    bundling:
+    batching:
       thresholds:
         element_count_threshold: 10
         element_count_limit: 1000 # TO BE REMOVED LATER
         request_byte_threshold: 1024 # 1 Kb
         request_byte_limit: 10485760 # TO BE REMOVED LATER
         delay_threshold_millis: 10
-      bundle_descriptor:
-        bundled_field: messages
+      batch_descriptor:
+        batched_field: messages
         discriminator_fields:
         - topic
         subresponse_field: message_ids
@@ -444,7 +519,7 @@ interfaces:
     surface_treatments:
     - include_languages:
       - java
-      release_level: DEPRECATED
+      visibility: PACKAGE
   - name: GetTopic
     flattening:
       groups:

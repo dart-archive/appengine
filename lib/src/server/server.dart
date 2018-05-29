@@ -5,7 +5,7 @@
 library application;
 
 import 'dart:async';
-import 'dart:convert' show UTF8;
+import 'dart:convert' show utf8;
 import 'dart:io';
 
 import 'context_registry.dart';
@@ -112,7 +112,7 @@ class AppEngineHttpServer {
   }
 
   void _sendResponse(HttpResponse response, int statusCode, String message) {
-    var data = UTF8.encode(message);
+    var data = utf8.encode(message);
     response.headers.contentType =
         new ContentType('text', 'plain', charset: 'utf-8');
     response.headers.set("Cache-Control", "no-cache");

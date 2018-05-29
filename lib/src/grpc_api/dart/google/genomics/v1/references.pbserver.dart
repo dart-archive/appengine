@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_references_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -42,6 +42,6 @@ abstract class ReferenceServiceV1ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => ReferenceServiceV1$json;
-  Map<String, dynamic> get $messageJson => ReferenceServiceV1$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => ReferenceServiceV1$messageJson;
 }
 

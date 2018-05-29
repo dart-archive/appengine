@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouddebugger.v2_data_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'data.pb.dart';
 

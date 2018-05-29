@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_service_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class TrafficSplit_ShardBy extends ProtobufEnum {
@@ -19,7 +21,7 @@ class TrafficSplit_ShardBy extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static TrafficSplit_ShardBy valueOf(int value) => _byValue[value] as TrafficSplit_ShardBy;
   static void $checkItem(TrafficSplit_ShardBy v) {
-    if (v is !TrafficSplit_ShardBy) checkItemFailed(v, 'TrafficSplit_ShardBy');
+    if (v is! TrafficSplit_ShardBy) checkItemFailed(v, 'TrafficSplit_ShardBy');
   }
 
   const TrafficSplit_ShardBy._(int v, String n) : super(v, n);

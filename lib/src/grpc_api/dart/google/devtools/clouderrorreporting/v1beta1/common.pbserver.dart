@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouderrorreporting.v1beta1_common_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'common.pb.dart';
 

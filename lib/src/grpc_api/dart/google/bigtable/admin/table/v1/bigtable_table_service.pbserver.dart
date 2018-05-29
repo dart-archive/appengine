@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.admin.table.v1_bigtable_table_service_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -9,7 +9,7 @@ import 'package:protobuf/protobuf.dart';
 
 import 'bigtable_table_service_messages.pb.dart';
 import 'bigtable_table_data.pb.dart';
-import '../../../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'bigtable_table_service.pbjson.dart';
 
 export 'bigtable_table_service.pb.dart';
@@ -18,12 +18,12 @@ abstract class BigtableTableServiceBase extends GeneratedService {
   Future<Table> createTable(ServerContext ctx, CreateTableRequest request);
   Future<ListTablesResponse> listTables(ServerContext ctx, ListTablesRequest request);
   Future<Table> getTable(ServerContext ctx, GetTableRequest request);
-  Future<google$protobuf.Empty> deleteTable(ServerContext ctx, DeleteTableRequest request);
-  Future<google$protobuf.Empty> renameTable(ServerContext ctx, RenameTableRequest request);
+  Future<$google$protobuf.Empty> deleteTable(ServerContext ctx, DeleteTableRequest request);
+  Future<$google$protobuf.Empty> renameTable(ServerContext ctx, RenameTableRequest request);
   Future<ColumnFamily> createColumnFamily(ServerContext ctx, CreateColumnFamilyRequest request);
   Future<ColumnFamily> updateColumnFamily(ServerContext ctx, ColumnFamily request);
-  Future<google$protobuf.Empty> deleteColumnFamily(ServerContext ctx, DeleteColumnFamilyRequest request);
-  Future<google$protobuf.Empty> bulkDeleteRows(ServerContext ctx, BulkDeleteRowsRequest request);
+  Future<$google$protobuf.Empty> deleteColumnFamily(ServerContext ctx, DeleteColumnFamilyRequest request);
+  Future<$google$protobuf.Empty> bulkDeleteRows(ServerContext ctx, BulkDeleteRowsRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -56,6 +56,6 @@ abstract class BigtableTableServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => BigtableTableService$json;
-  Map<String, dynamic> get $messageJson => BigtableTableService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => BigtableTableService$messageJson;
 }
 

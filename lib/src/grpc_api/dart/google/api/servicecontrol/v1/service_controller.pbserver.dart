@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicecontrol.v1_service_controller_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -33,6 +33,6 @@ abstract class ServiceControllerServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => ServiceController$json;
-  Map<String, dynamic> get $messageJson => ServiceController$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => ServiceController$messageJson;
 }
 

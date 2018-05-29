@@ -1,11 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.functions.v1beta2_operations;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/any.pb.dart' as google$protobuf;
+import '../../../protobuf/any.pb.dart' as $google$protobuf;
 
 import 'operations.pbenum.dart';
 
@@ -13,9 +16,9 @@ export 'operations.pbenum.dart';
 
 class OperationMetadataV1Beta2 extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('OperationMetadataV1Beta2')
-    ..a/*<String>*/(1, 'target', PbFieldType.OS)
-    ..e/*<OperationType>*/(2, 'type', PbFieldType.OE, OperationType.OPERATION_UNSPECIFIED, OperationType.valueOf)
-    ..a/*<google$protobuf.Any>*/(3, 'request', PbFieldType.OM, google$protobuf.Any.getDefault, google$protobuf.Any.create)
+    ..aOS(1, 'target')
+    ..e<OperationType>(2, 'type', PbFieldType.OE, OperationType.OPERATION_UNSPECIFIED, OperationType.valueOf, OperationType.values)
+    ..a<$google$protobuf.Any>(3, 'request', PbFieldType.OM, $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -32,22 +35,22 @@ class OperationMetadataV1Beta2 extends GeneratedMessage {
   }
   static OperationMetadataV1Beta2 _defaultInstance;
   static void $checkItem(OperationMetadataV1Beta2 v) {
-    if (v is !OperationMetadataV1Beta2) checkItemFailed(v, 'OperationMetadataV1Beta2');
+    if (v is! OperationMetadataV1Beta2) checkItemFailed(v, 'OperationMetadataV1Beta2');
   }
 
-  String get target => $_get(0, 1, '');
-  void set target(String v) { $_setString(0, 1, v); }
-  bool hasTarget() => $_has(0, 1);
+  String get target => $_getS(0, '');
+  set target(String v) { $_setString(0, v); }
+  bool hasTarget() => $_has(0);
   void clearTarget() => clearField(1);
 
-  OperationType get type => $_get(1, 2, null);
-  void set type(OperationType v) { setField(2, v); }
-  bool hasType() => $_has(1, 2);
+  OperationType get type => $_getN(1);
+  set type(OperationType v) { setField(2, v); }
+  bool hasType() => $_has(1);
   void clearType() => clearField(2);
 
-  google$protobuf.Any get request => $_get(2, 3, null);
-  void set request(google$protobuf.Any v) { setField(3, v); }
-  bool hasRequest() => $_has(2, 3);
+  $google$protobuf.Any get request => $_getN(2);
+  set request($google$protobuf.Any v) { setField(3, v); }
+  bool hasRequest() => $_has(2);
   void clearRequest() => clearField(3);
 }
 

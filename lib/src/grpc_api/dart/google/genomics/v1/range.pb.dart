@@ -1,16 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_range;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Range extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Range')
-    ..a/*<String>*/(1, 'referenceName', PbFieldType.OS)
-    ..a/*<Int64>*/(2, 'start', PbFieldType.O6, Int64.ZERO)
-    ..a/*<Int64>*/(3, 'end', PbFieldType.O6, Int64.ZERO)
+    ..aOS(1, 'referenceName')
+    ..aInt64(2, 'start')
+    ..aInt64(3, 'end')
     ..hasRequiredFields = false
   ;
 
@@ -27,22 +30,22 @@ class Range extends GeneratedMessage {
   }
   static Range _defaultInstance;
   static void $checkItem(Range v) {
-    if (v is !Range) checkItemFailed(v, 'Range');
+    if (v is! Range) checkItemFailed(v, 'Range');
   }
 
-  String get referenceName => $_get(0, 1, '');
-  void set referenceName(String v) { $_setString(0, 1, v); }
-  bool hasReferenceName() => $_has(0, 1);
+  String get referenceName => $_getS(0, '');
+  set referenceName(String v) { $_setString(0, v); }
+  bool hasReferenceName() => $_has(0);
   void clearReferenceName() => clearField(1);
 
-  Int64 get start => $_get(1, 2, null);
-  void set start(Int64 v) { $_setInt64(1, 2, v); }
-  bool hasStart() => $_has(1, 2);
+  Int64 get start => $_getI64(1);
+  set start(Int64 v) { $_setInt64(1, v); }
+  bool hasStart() => $_has(1);
   void clearStart() => clearField(2);
 
-  Int64 get end => $_get(2, 3, null);
-  void set end(Int64 v) { $_setInt64(2, 3, v); }
-  bool hasEnd() => $_has(2, 3);
+  Int64 get end => $_getI64(2);
+  set end(Int64 v) { $_setInt64(2, v); }
+  bool hasEnd() => $_has(2);
   void clearEnd() => clearField(3);
 }
 

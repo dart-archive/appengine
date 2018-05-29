@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_appengine_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -9,7 +9,7 @@ import 'package:protobuf/protobuf.dart';
 
 import 'appengine.pb.dart';
 import 'instance.pb.dart';
-import '../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../longrunning/operations.pb.dart' as $google$longrunning;
 import 'version.pb.dart';
 import 'service.pb.dart';
 import 'application.pb.dart';
@@ -20,8 +20,8 @@ export 'appengine.pb.dart';
 abstract class InstancesServiceBase extends GeneratedService {
   Future<ListInstancesResponse> listInstances(ServerContext ctx, ListInstancesRequest request);
   Future<Instance> getInstance(ServerContext ctx, GetInstanceRequest request);
-  Future<google$longrunning.Operation> deleteInstance(ServerContext ctx, DeleteInstanceRequest request);
-  Future<google$longrunning.Operation> debugInstance(ServerContext ctx, DebugInstanceRequest request);
+  Future<$google$longrunning.Operation> deleteInstance(ServerContext ctx, DeleteInstanceRequest request);
+  Future<$google$longrunning.Operation> debugInstance(ServerContext ctx, DebugInstanceRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -44,15 +44,15 @@ abstract class InstancesServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Instances$json;
-  Map<String, dynamic> get $messageJson => Instances$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Instances$messageJson;
 }
 
 abstract class VersionsServiceBase extends GeneratedService {
   Future<ListVersionsResponse> listVersions(ServerContext ctx, ListVersionsRequest request);
   Future<Version> getVersion(ServerContext ctx, GetVersionRequest request);
-  Future<google$longrunning.Operation> createVersion(ServerContext ctx, CreateVersionRequest request);
-  Future<google$longrunning.Operation> updateVersion(ServerContext ctx, UpdateVersionRequest request);
-  Future<google$longrunning.Operation> deleteVersion(ServerContext ctx, DeleteVersionRequest request);
+  Future<$google$longrunning.Operation> createVersion(ServerContext ctx, CreateVersionRequest request);
+  Future<$google$longrunning.Operation> updateVersion(ServerContext ctx, UpdateVersionRequest request);
+  Future<$google$longrunning.Operation> deleteVersion(ServerContext ctx, DeleteVersionRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -77,14 +77,14 @@ abstract class VersionsServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Versions$json;
-  Map<String, dynamic> get $messageJson => Versions$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Versions$messageJson;
 }
 
 abstract class ServicesServiceBase extends GeneratedService {
   Future<ListServicesResponse> listServices(ServerContext ctx, ListServicesRequest request);
   Future<Service> getService(ServerContext ctx, GetServiceRequest request);
-  Future<google$longrunning.Operation> updateService(ServerContext ctx, UpdateServiceRequest request);
-  Future<google$longrunning.Operation> deleteService(ServerContext ctx, DeleteServiceRequest request);
+  Future<$google$longrunning.Operation> updateService(ServerContext ctx, UpdateServiceRequest request);
+  Future<$google$longrunning.Operation> deleteService(ServerContext ctx, DeleteServiceRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -107,12 +107,12 @@ abstract class ServicesServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Services$json;
-  Map<String, dynamic> get $messageJson => Services$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Services$messageJson;
 }
 
 abstract class ApplicationsServiceBase extends GeneratedService {
   Future<Application> getApplication(ServerContext ctx, GetApplicationRequest request);
-  Future<google$longrunning.Operation> repairApplication(ServerContext ctx, RepairApplicationRequest request);
+  Future<$google$longrunning.Operation> repairApplication(ServerContext ctx, RepairApplicationRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -131,6 +131,6 @@ abstract class ApplicationsServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Applications$json;
-  Map<String, dynamic> get $messageJson => Applications$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Applications$messageJson;
 }
 

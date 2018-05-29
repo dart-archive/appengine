@@ -1,9 +1,11 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.iam.v1_iam_policy;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,8 +13,8 @@ import 'policy.pb.dart';
 
 class SetIamPolicyRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SetIamPolicyRequest')
-    ..a/*<String>*/(1, 'resource', PbFieldType.OS)
-    ..a/*<Policy>*/(2, 'policy', PbFieldType.OM, Policy.getDefault, Policy.create)
+    ..aOS(1, 'resource')
+    ..a<Policy>(2, 'policy', PbFieldType.OM, Policy.getDefault, Policy.create)
     ..hasRequiredFields = false
   ;
 
@@ -29,17 +31,17 @@ class SetIamPolicyRequest extends GeneratedMessage {
   }
   static SetIamPolicyRequest _defaultInstance;
   static void $checkItem(SetIamPolicyRequest v) {
-    if (v is !SetIamPolicyRequest) checkItemFailed(v, 'SetIamPolicyRequest');
+    if (v is! SetIamPolicyRequest) checkItemFailed(v, 'SetIamPolicyRequest');
   }
 
-  String get resource => $_get(0, 1, '');
-  void set resource(String v) { $_setString(0, 1, v); }
-  bool hasResource() => $_has(0, 1);
+  String get resource => $_getS(0, '');
+  set resource(String v) { $_setString(0, v); }
+  bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 
-  Policy get policy => $_get(1, 2, null);
-  void set policy(Policy v) { setField(2, v); }
-  bool hasPolicy() => $_has(1, 2);
+  Policy get policy => $_getN(1);
+  set policy(Policy v) { setField(2, v); }
+  bool hasPolicy() => $_has(1);
   void clearPolicy() => clearField(2);
 }
 
@@ -47,7 +49,7 @@ class _ReadonlySetIamPolicyRequest extends SetIamPolicyRequest with ReadonlyMess
 
 class GetIamPolicyRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetIamPolicyRequest')
-    ..a/*<String>*/(1, 'resource', PbFieldType.OS)
+    ..aOS(1, 'resource')
     ..hasRequiredFields = false
   ;
 
@@ -64,12 +66,12 @@ class GetIamPolicyRequest extends GeneratedMessage {
   }
   static GetIamPolicyRequest _defaultInstance;
   static void $checkItem(GetIamPolicyRequest v) {
-    if (v is !GetIamPolicyRequest) checkItemFailed(v, 'GetIamPolicyRequest');
+    if (v is! GetIamPolicyRequest) checkItemFailed(v, 'GetIamPolicyRequest');
   }
 
-  String get resource => $_get(0, 1, '');
-  void set resource(String v) { $_setString(0, 1, v); }
-  bool hasResource() => $_has(0, 1);
+  String get resource => $_getS(0, '');
+  set resource(String v) { $_setString(0, v); }
+  bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
@@ -77,8 +79,8 @@ class _ReadonlyGetIamPolicyRequest extends GetIamPolicyRequest with ReadonlyMess
 
 class TestIamPermissionsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TestIamPermissionsRequest')
-    ..a/*<String>*/(1, 'resource', PbFieldType.OS)
-    ..p/*<String>*/(2, 'permissions', PbFieldType.PS)
+    ..aOS(1, 'resource')
+    ..pPS(2, 'permissions')
     ..hasRequiredFields = false
   ;
 
@@ -95,22 +97,22 @@ class TestIamPermissionsRequest extends GeneratedMessage {
   }
   static TestIamPermissionsRequest _defaultInstance;
   static void $checkItem(TestIamPermissionsRequest v) {
-    if (v is !TestIamPermissionsRequest) checkItemFailed(v, 'TestIamPermissionsRequest');
+    if (v is! TestIamPermissionsRequest) checkItemFailed(v, 'TestIamPermissionsRequest');
   }
 
-  String get resource => $_get(0, 1, '');
-  void set resource(String v) { $_setString(0, 1, v); }
-  bool hasResource() => $_has(0, 1);
+  String get resource => $_getS(0, '');
+  set resource(String v) { $_setString(0, v); }
+  bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 
-  List<String> get permissions => $_get(1, 2, null);
+  List<String> get permissions => $_getList(1);
 }
 
 class _ReadonlyTestIamPermissionsRequest extends TestIamPermissionsRequest with ReadonlyMessageMixin {}
 
 class TestIamPermissionsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TestIamPermissionsResponse')
-    ..p/*<String>*/(1, 'permissions', PbFieldType.PS)
+    ..pPS(1, 'permissions')
     ..hasRequiredFields = false
   ;
 
@@ -127,10 +129,10 @@ class TestIamPermissionsResponse extends GeneratedMessage {
   }
   static TestIamPermissionsResponse _defaultInstance;
   static void $checkItem(TestIamPermissionsResponse v) {
-    if (v is !TestIamPermissionsResponse) checkItemFailed(v, 'TestIamPermissionsResponse');
+    if (v is! TestIamPermissionsResponse) checkItemFailed(v, 'TestIamPermissionsResponse');
   }
 
-  List<String> get permissions => $_get(0, 1, null);
+  List<String> get permissions => $_getList(0);
 }
 
 class _ReadonlyTestIamPermissionsResponse extends TestIamPermissionsResponse with ReadonlyMessageMixin {}
@@ -141,15 +143,15 @@ class IAMPolicyApi {
 
   Future<Policy> setIamPolicy(ClientContext ctx, SetIamPolicyRequest request) {
     var emptyResponse = new Policy();
-    return _client.invoke(ctx, 'IAMPolicy', 'SetIamPolicy', request, emptyResponse);
+    return _client.invoke<Policy>(ctx, 'IAMPolicy', 'SetIamPolicy', request, emptyResponse);
   }
   Future<Policy> getIamPolicy(ClientContext ctx, GetIamPolicyRequest request) {
     var emptyResponse = new Policy();
-    return _client.invoke(ctx, 'IAMPolicy', 'GetIamPolicy', request, emptyResponse);
+    return _client.invoke<Policy>(ctx, 'IAMPolicy', 'GetIamPolicy', request, emptyResponse);
   }
   Future<TestIamPermissionsResponse> testIamPermissions(ClientContext ctx, TestIamPermissionsRequest request) {
     var emptyResponse = new TestIamPermissionsResponse();
-    return _client.invoke(ctx, 'IAMPolicy', 'TestIamPermissions', request, emptyResponse);
+    return _client.invoke<TestIamPermissionsResponse>(ctx, 'IAMPolicy', 'TestIamPermissions', request, emptyResponse);
   }
 }
 

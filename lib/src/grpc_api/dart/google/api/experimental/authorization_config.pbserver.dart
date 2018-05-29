@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_authorization_config_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'authorization_config.pb.dart';
 

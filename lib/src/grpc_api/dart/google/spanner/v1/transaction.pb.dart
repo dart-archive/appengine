@@ -1,12 +1,15 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.v1_transaction;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../protobuf/duration.pb.dart' as google$protobuf;
+import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../protobuf/duration.pb.dart' as $google$protobuf;
 
 class TransactionOptions_ReadWrite extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TransactionOptions_ReadWrite')
@@ -26,7 +29,7 @@ class TransactionOptions_ReadWrite extends GeneratedMessage {
   }
   static TransactionOptions_ReadWrite _defaultInstance;
   static void $checkItem(TransactionOptions_ReadWrite v) {
-    if (v is !TransactionOptions_ReadWrite) checkItemFailed(v, 'TransactionOptions_ReadWrite');
+    if (v is! TransactionOptions_ReadWrite) checkItemFailed(v, 'TransactionOptions_ReadWrite');
   }
 }
 
@@ -34,12 +37,12 @@ class _ReadonlyTransactionOptions_ReadWrite extends TransactionOptions_ReadWrite
 
 class TransactionOptions_ReadOnly extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TransactionOptions_ReadOnly')
-    ..a/*<bool>*/(1, 'strong', PbFieldType.OB)
-    ..a/*<google$protobuf.Timestamp>*/(2, 'minReadTimestamp', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<google$protobuf.Duration>*/(3, 'maxStaleness', PbFieldType.OM, google$protobuf.Duration.getDefault, google$protobuf.Duration.create)
-    ..a/*<google$protobuf.Timestamp>*/(4, 'readTimestamp', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<google$protobuf.Duration>*/(5, 'exactStaleness', PbFieldType.OM, google$protobuf.Duration.getDefault, google$protobuf.Duration.create)
-    ..a/*<bool>*/(6, 'returnReadTimestamp', PbFieldType.OB)
+    ..aOB(1, 'strong')
+    ..a<$google$protobuf.Timestamp>(2, 'minReadTimestamp', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<$google$protobuf.Duration>(3, 'maxStaleness', PbFieldType.OM, $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..a<$google$protobuf.Timestamp>(4, 'readTimestamp', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<$google$protobuf.Duration>(5, 'exactStaleness', PbFieldType.OM, $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..aOB(6, 'returnReadTimestamp')
     ..hasRequiredFields = false
   ;
 
@@ -56,37 +59,37 @@ class TransactionOptions_ReadOnly extends GeneratedMessage {
   }
   static TransactionOptions_ReadOnly _defaultInstance;
   static void $checkItem(TransactionOptions_ReadOnly v) {
-    if (v is !TransactionOptions_ReadOnly) checkItemFailed(v, 'TransactionOptions_ReadOnly');
+    if (v is! TransactionOptions_ReadOnly) checkItemFailed(v, 'TransactionOptions_ReadOnly');
   }
 
-  bool get strong => $_get(0, 1, false);
-  void set strong(bool v) { $_setBool(0, 1, v); }
-  bool hasStrong() => $_has(0, 1);
+  bool get strong => $_get(0, false);
+  set strong(bool v) { $_setBool(0, v); }
+  bool hasStrong() => $_has(0);
   void clearStrong() => clearField(1);
 
-  google$protobuf.Timestamp get minReadTimestamp => $_get(1, 2, null);
-  void set minReadTimestamp(google$protobuf.Timestamp v) { setField(2, v); }
-  bool hasMinReadTimestamp() => $_has(1, 2);
+  $google$protobuf.Timestamp get minReadTimestamp => $_getN(1);
+  set minReadTimestamp($google$protobuf.Timestamp v) { setField(2, v); }
+  bool hasMinReadTimestamp() => $_has(1);
   void clearMinReadTimestamp() => clearField(2);
 
-  google$protobuf.Duration get maxStaleness => $_get(2, 3, null);
-  void set maxStaleness(google$protobuf.Duration v) { setField(3, v); }
-  bool hasMaxStaleness() => $_has(2, 3);
+  $google$protobuf.Duration get maxStaleness => $_getN(2);
+  set maxStaleness($google$protobuf.Duration v) { setField(3, v); }
+  bool hasMaxStaleness() => $_has(2);
   void clearMaxStaleness() => clearField(3);
 
-  google$protobuf.Timestamp get readTimestamp => $_get(3, 4, null);
-  void set readTimestamp(google$protobuf.Timestamp v) { setField(4, v); }
-  bool hasReadTimestamp() => $_has(3, 4);
+  $google$protobuf.Timestamp get readTimestamp => $_getN(3);
+  set readTimestamp($google$protobuf.Timestamp v) { setField(4, v); }
+  bool hasReadTimestamp() => $_has(3);
   void clearReadTimestamp() => clearField(4);
 
-  google$protobuf.Duration get exactStaleness => $_get(4, 5, null);
-  void set exactStaleness(google$protobuf.Duration v) { setField(5, v); }
-  bool hasExactStaleness() => $_has(4, 5);
+  $google$protobuf.Duration get exactStaleness => $_getN(4);
+  set exactStaleness($google$protobuf.Duration v) { setField(5, v); }
+  bool hasExactStaleness() => $_has(4);
   void clearExactStaleness() => clearField(5);
 
-  bool get returnReadTimestamp => $_get(5, 6, false);
-  void set returnReadTimestamp(bool v) { $_setBool(5, 6, v); }
-  bool hasReturnReadTimestamp() => $_has(5, 6);
+  bool get returnReadTimestamp => $_get(5, false);
+  set returnReadTimestamp(bool v) { $_setBool(5, v); }
+  bool hasReturnReadTimestamp() => $_has(5);
   void clearReturnReadTimestamp() => clearField(6);
 }
 
@@ -94,8 +97,8 @@ class _ReadonlyTransactionOptions_ReadOnly extends TransactionOptions_ReadOnly w
 
 class TransactionOptions extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TransactionOptions')
-    ..a/*<TransactionOptions_ReadWrite>*/(1, 'readWrite', PbFieldType.OM, TransactionOptions_ReadWrite.getDefault, TransactionOptions_ReadWrite.create)
-    ..a/*<TransactionOptions_ReadOnly>*/(2, 'readOnly', PbFieldType.OM, TransactionOptions_ReadOnly.getDefault, TransactionOptions_ReadOnly.create)
+    ..a<TransactionOptions_ReadWrite>(1, 'readWrite', PbFieldType.OM, TransactionOptions_ReadWrite.getDefault, TransactionOptions_ReadWrite.create)
+    ..a<TransactionOptions_ReadOnly>(2, 'readOnly', PbFieldType.OM, TransactionOptions_ReadOnly.getDefault, TransactionOptions_ReadOnly.create)
     ..hasRequiredFields = false
   ;
 
@@ -112,17 +115,17 @@ class TransactionOptions extends GeneratedMessage {
   }
   static TransactionOptions _defaultInstance;
   static void $checkItem(TransactionOptions v) {
-    if (v is !TransactionOptions) checkItemFailed(v, 'TransactionOptions');
+    if (v is! TransactionOptions) checkItemFailed(v, 'TransactionOptions');
   }
 
-  TransactionOptions_ReadWrite get readWrite => $_get(0, 1, null);
-  void set readWrite(TransactionOptions_ReadWrite v) { setField(1, v); }
-  bool hasReadWrite() => $_has(0, 1);
+  TransactionOptions_ReadWrite get readWrite => $_getN(0);
+  set readWrite(TransactionOptions_ReadWrite v) { setField(1, v); }
+  bool hasReadWrite() => $_has(0);
   void clearReadWrite() => clearField(1);
 
-  TransactionOptions_ReadOnly get readOnly => $_get(1, 2, null);
-  void set readOnly(TransactionOptions_ReadOnly v) { setField(2, v); }
-  bool hasReadOnly() => $_has(1, 2);
+  TransactionOptions_ReadOnly get readOnly => $_getN(1);
+  set readOnly(TransactionOptions_ReadOnly v) { setField(2, v); }
+  bool hasReadOnly() => $_has(1);
   void clearReadOnly() => clearField(2);
 }
 
@@ -130,8 +133,8 @@ class _ReadonlyTransactionOptions extends TransactionOptions with ReadonlyMessag
 
 class Transaction extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Transaction')
-    ..a/*<List<int>>*/(1, 'id', PbFieldType.OY)
-    ..a/*<google$protobuf.Timestamp>*/(2, 'readTimestamp', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
+    ..a<List<int>>(1, 'id', PbFieldType.OY)
+    ..a<$google$protobuf.Timestamp>(2, 'readTimestamp', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -148,17 +151,17 @@ class Transaction extends GeneratedMessage {
   }
   static Transaction _defaultInstance;
   static void $checkItem(Transaction v) {
-    if (v is !Transaction) checkItemFailed(v, 'Transaction');
+    if (v is! Transaction) checkItemFailed(v, 'Transaction');
   }
 
-  List<int> get id => $_get(0, 1, null);
-  void set id(List<int> v) { $_setBytes(0, 1, v); }
-  bool hasId() => $_has(0, 1);
+  List<int> get id => $_getN(0);
+  set id(List<int> v) { $_setBytes(0, v); }
+  bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  google$protobuf.Timestamp get readTimestamp => $_get(1, 2, null);
-  void set readTimestamp(google$protobuf.Timestamp v) { setField(2, v); }
-  bool hasReadTimestamp() => $_has(1, 2);
+  $google$protobuf.Timestamp get readTimestamp => $_getN(1);
+  set readTimestamp($google$protobuf.Timestamp v) { setField(2, v); }
+  bool hasReadTimestamp() => $_has(1);
   void clearReadTimestamp() => clearField(2);
 }
 
@@ -166,9 +169,9 @@ class _ReadonlyTransaction extends Transaction with ReadonlyMessageMixin {}
 
 class TransactionSelector extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TransactionSelector')
-    ..a/*<TransactionOptions>*/(1, 'singleUse', PbFieldType.OM, TransactionOptions.getDefault, TransactionOptions.create)
-    ..a/*<List<int>>*/(2, 'id', PbFieldType.OY)
-    ..a/*<TransactionOptions>*/(3, 'begin', PbFieldType.OM, TransactionOptions.getDefault, TransactionOptions.create)
+    ..a<TransactionOptions>(1, 'singleUse', PbFieldType.OM, TransactionOptions.getDefault, TransactionOptions.create)
+    ..a<List<int>>(2, 'id', PbFieldType.OY)
+    ..a<TransactionOptions>(3, 'begin', PbFieldType.OM, TransactionOptions.getDefault, TransactionOptions.create)
     ..hasRequiredFields = false
   ;
 
@@ -185,22 +188,22 @@ class TransactionSelector extends GeneratedMessage {
   }
   static TransactionSelector _defaultInstance;
   static void $checkItem(TransactionSelector v) {
-    if (v is !TransactionSelector) checkItemFailed(v, 'TransactionSelector');
+    if (v is! TransactionSelector) checkItemFailed(v, 'TransactionSelector');
   }
 
-  TransactionOptions get singleUse => $_get(0, 1, null);
-  void set singleUse(TransactionOptions v) { setField(1, v); }
-  bool hasSingleUse() => $_has(0, 1);
+  TransactionOptions get singleUse => $_getN(0);
+  set singleUse(TransactionOptions v) { setField(1, v); }
+  bool hasSingleUse() => $_has(0);
   void clearSingleUse() => clearField(1);
 
-  List<int> get id => $_get(1, 2, null);
-  void set id(List<int> v) { $_setBytes(1, 2, v); }
-  bool hasId() => $_has(1, 2);
+  List<int> get id => $_getN(1);
+  set id(List<int> v) { $_setBytes(1, v); }
+  bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  TransactionOptions get begin => $_get(2, 3, null);
-  void set begin(TransactionOptions v) { setField(3, v); }
-  bool hasBegin() => $_has(2, 3);
+  TransactionOptions get begin => $_getN(2);
+  set begin(TransactionOptions v) { setField(3, v); }
+  bool hasBegin() => $_has(2);
   void clearBegin() => clearField(3);
 }
 

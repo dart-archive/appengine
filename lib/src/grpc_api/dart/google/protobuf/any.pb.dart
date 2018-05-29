@@ -1,14 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_any;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Any extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Any')
-    ..a/*<String>*/(1, 'typeUrl', PbFieldType.OS)
-    ..a/*<List<int>>*/(2, 'value', PbFieldType.OY)
+    ..aOS(1, 'typeUrl')
+    ..a<List<int>>(2, 'value', PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -25,17 +28,17 @@ class Any extends GeneratedMessage {
   }
   static Any _defaultInstance;
   static void $checkItem(Any v) {
-    if (v is !Any) checkItemFailed(v, 'Any');
+    if (v is! Any) checkItemFailed(v, 'Any');
   }
 
-  String get typeUrl => $_get(0, 1, '');
-  void set typeUrl(String v) { $_setString(0, 1, v); }
-  bool hasTypeUrl() => $_has(0, 1);
+  String get typeUrl => $_getS(0, '');
+  set typeUrl(String v) { $_setString(0, v); }
+  bool hasTypeUrl() => $_has(0);
   void clearTypeUrl() => clearField(1);
 
-  List<int> get value => $_get(1, 2, null);
-  void set value(List<int> v) { $_setBytes(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  List<int> get value => $_getN(1);
+  set value(List<int> v) { $_setBytes(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 

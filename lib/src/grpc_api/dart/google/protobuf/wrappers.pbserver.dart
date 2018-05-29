@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_wrappers_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'wrappers.pb.dart';
 

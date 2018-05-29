@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_log;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -9,10 +12,10 @@ import 'label.pb.dart';
 
 class LogDescriptor extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('LogDescriptor')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..pp/*<LabelDescriptor>*/(2, 'labels', PbFieldType.PM, LabelDescriptor.$checkItem, LabelDescriptor.create)
-    ..a/*<String>*/(3, 'description', PbFieldType.OS)
-    ..a/*<String>*/(4, 'displayName', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..pp<LabelDescriptor>(2, 'labels', PbFieldType.PM, LabelDescriptor.$checkItem, LabelDescriptor.create)
+    ..aOS(3, 'description')
+    ..aOS(4, 'displayName')
     ..hasRequiredFields = false
   ;
 
@@ -29,24 +32,24 @@ class LogDescriptor extends GeneratedMessage {
   }
   static LogDescriptor _defaultInstance;
   static void $checkItem(LogDescriptor v) {
-    if (v is !LogDescriptor) checkItemFailed(v, 'LogDescriptor');
+    if (v is! LogDescriptor) checkItemFailed(v, 'LogDescriptor');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<LabelDescriptor> get labels => $_get(1, 2, null);
+  List<LabelDescriptor> get labels => $_getList(1);
 
-  String get description => $_get(2, 3, '');
-  void set description(String v) { $_setString(2, 3, v); }
-  bool hasDescription() => $_has(2, 3);
+  String get description => $_getS(2, '');
+  set description(String v) { $_setString(2, v); }
+  bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  String get displayName => $_get(3, 4, '');
-  void set displayName(String v) { $_setString(3, 4, v); }
-  bool hasDisplayName() => $_has(3, 4);
+  String get displayName => $_getS(3, '');
+  set displayName(String v) { $_setString(3, v); }
+  bool hasDisplayName() => $_has(3);
   void clearDisplayName() => clearField(4);
 }
 

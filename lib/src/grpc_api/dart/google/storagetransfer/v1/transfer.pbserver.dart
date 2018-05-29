@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.storagetransfer.v1_transfer_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -9,7 +9,7 @@ import 'package:protobuf/protobuf.dart';
 
 import 'transfer.pb.dart';
 import 'transfer_types.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'transfer.pbjson.dart';
 
 export 'transfer.pb.dart';
@@ -20,8 +20,8 @@ abstract class StorageTransferServiceBase extends GeneratedService {
   Future<TransferJob> updateTransferJob(ServerContext ctx, UpdateTransferJobRequest request);
   Future<TransferJob> getTransferJob(ServerContext ctx, GetTransferJobRequest request);
   Future<ListTransferJobsResponse> listTransferJobs(ServerContext ctx, ListTransferJobsRequest request);
-  Future<google$protobuf.Empty> pauseTransferOperation(ServerContext ctx, PauseTransferOperationRequest request);
-  Future<google$protobuf.Empty> resumeTransferOperation(ServerContext ctx, ResumeTransferOperationRequest request);
+  Future<$google$protobuf.Empty> pauseTransferOperation(ServerContext ctx, PauseTransferOperationRequest request);
+  Future<$google$protobuf.Empty> resumeTransferOperation(ServerContext ctx, ResumeTransferOperationRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -50,6 +50,6 @@ abstract class StorageTransferServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => StorageTransferService$json;
-  Map<String, dynamic> get $messageJson => StorageTransferService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => StorageTransferService$messageJson;
 }
 

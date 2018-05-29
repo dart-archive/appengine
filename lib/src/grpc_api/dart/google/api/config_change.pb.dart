@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_config_change;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,11 +14,11 @@ export 'config_change.pbenum.dart';
 
 class ConfigChange extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ConfigChange')
-    ..a/*<String>*/(1, 'element', PbFieldType.OS)
-    ..a/*<String>*/(2, 'oldValue', PbFieldType.OS)
-    ..a/*<String>*/(3, 'newValue', PbFieldType.OS)
-    ..e/*<ChangeType>*/(4, 'changeType', PbFieldType.OE, ChangeType.CHANGE_TYPE_UNSPECIFIED, ChangeType.valueOf)
-    ..pp/*<Advice>*/(5, 'advices', PbFieldType.PM, Advice.$checkItem, Advice.create)
+    ..aOS(1, 'element')
+    ..aOS(2, 'oldValue')
+    ..aOS(3, 'newValue')
+    ..e<ChangeType>(4, 'changeType', PbFieldType.OE, ChangeType.CHANGE_TYPE_UNSPECIFIED, ChangeType.valueOf, ChangeType.values)
+    ..pp<Advice>(5, 'advices', PbFieldType.PM, Advice.$checkItem, Advice.create)
     ..hasRequiredFields = false
   ;
 
@@ -32,37 +35,37 @@ class ConfigChange extends GeneratedMessage {
   }
   static ConfigChange _defaultInstance;
   static void $checkItem(ConfigChange v) {
-    if (v is !ConfigChange) checkItemFailed(v, 'ConfigChange');
+    if (v is! ConfigChange) checkItemFailed(v, 'ConfigChange');
   }
 
-  String get element => $_get(0, 1, '');
-  void set element(String v) { $_setString(0, 1, v); }
-  bool hasElement() => $_has(0, 1);
+  String get element => $_getS(0, '');
+  set element(String v) { $_setString(0, v); }
+  bool hasElement() => $_has(0);
   void clearElement() => clearField(1);
 
-  String get oldValue => $_get(1, 2, '');
-  void set oldValue(String v) { $_setString(1, 2, v); }
-  bool hasOldValue() => $_has(1, 2);
+  String get oldValue => $_getS(1, '');
+  set oldValue(String v) { $_setString(1, v); }
+  bool hasOldValue() => $_has(1);
   void clearOldValue() => clearField(2);
 
-  String get newValue => $_get(2, 3, '');
-  void set newValue(String v) { $_setString(2, 3, v); }
-  bool hasNewValue() => $_has(2, 3);
+  String get newValue => $_getS(2, '');
+  set newValue(String v) { $_setString(2, v); }
+  bool hasNewValue() => $_has(2);
   void clearNewValue() => clearField(3);
 
-  ChangeType get changeType => $_get(3, 4, null);
-  void set changeType(ChangeType v) { setField(4, v); }
-  bool hasChangeType() => $_has(3, 4);
+  ChangeType get changeType => $_getN(3);
+  set changeType(ChangeType v) { setField(4, v); }
+  bool hasChangeType() => $_has(3);
   void clearChangeType() => clearField(4);
 
-  List<Advice> get advices => $_get(4, 5, null);
+  List<Advice> get advices => $_getList(4);
 }
 
 class _ReadonlyConfigChange extends ConfigChange with ReadonlyMessageMixin {}
 
 class Advice extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Advice')
-    ..a/*<String>*/(2, 'description', PbFieldType.OS)
+    ..aOS(2, 'description')
     ..hasRequiredFields = false
   ;
 
@@ -79,12 +82,12 @@ class Advice extends GeneratedMessage {
   }
   static Advice _defaultInstance;
   static void $checkItem(Advice v) {
-    if (v is !Advice) checkItemFailed(v, 'Advice');
+    if (v is! Advice) checkItemFailed(v, 'Advice');
   }
 
-  String get description => $_get(0, 2, '');
-  void set description(String v) { $_setString(0, 2, v); }
-  bool hasDescription() => $_has(0, 2);
+  String get description => $_getS(0, '');
+  set description(String v) { $_setString(0, v); }
+  bool hasDescription() => $_has(0);
   void clearDescription() => clearField(2);
 }
 

@@ -1,14 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_location;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class LocationMetadata extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('LocationMetadata')
-    ..a/*<bool>*/(2, 'standardEnvironmentAvailable', PbFieldType.OB)
-    ..a/*<bool>*/(4, 'flexibleEnvironmentAvailable', PbFieldType.OB)
+    ..aOB(2, 'standardEnvironmentAvailable')
+    ..aOB(4, 'flexibleEnvironmentAvailable')
     ..hasRequiredFields = false
   ;
 
@@ -25,17 +28,17 @@ class LocationMetadata extends GeneratedMessage {
   }
   static LocationMetadata _defaultInstance;
   static void $checkItem(LocationMetadata v) {
-    if (v is !LocationMetadata) checkItemFailed(v, 'LocationMetadata');
+    if (v is! LocationMetadata) checkItemFailed(v, 'LocationMetadata');
   }
 
-  bool get standardEnvironmentAvailable => $_get(0, 2, false);
-  void set standardEnvironmentAvailable(bool v) { $_setBool(0, 2, v); }
-  bool hasStandardEnvironmentAvailable() => $_has(0, 2);
+  bool get standardEnvironmentAvailable => $_get(0, false);
+  set standardEnvironmentAvailable(bool v) { $_setBool(0, v); }
+  bool hasStandardEnvironmentAvailable() => $_has(0);
   void clearStandardEnvironmentAvailable() => clearField(2);
 
-  bool get flexibleEnvironmentAvailable => $_get(1, 4, false);
-  void set flexibleEnvironmentAvailable(bool v) { $_setBool(1, 4, v); }
-  bool hasFlexibleEnvironmentAvailable() => $_has(1, 4);
+  bool get flexibleEnvironmentAvailable => $_get(1, false);
+  set flexibleEnvironmentAvailable(bool v) { $_setBool(1, v); }
+  bool hasFlexibleEnvironmentAvailable() => $_has(1);
   void clearFlexibleEnvironmentAvailable() => clearField(4);
 }
 

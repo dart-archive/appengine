@@ -1,16 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.genomics.v1_reads_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'reads.pb.dart';
-import '../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../longrunning/operations.pb.dart' as $google$longrunning;
 import 'readgroupset.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'reads.pbjson.dart';
 
 export 'reads.pb.dart';
@@ -33,15 +33,15 @@ abstract class StreamingReadServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => StreamingReadService$json;
-  Map<String, dynamic> get $messageJson => StreamingReadService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => StreamingReadService$messageJson;
 }
 
 abstract class ReadServiceV1ServiceBase extends GeneratedService {
-  Future<google$longrunning.Operation> importReadGroupSets(ServerContext ctx, ImportReadGroupSetsRequest request);
-  Future<google$longrunning.Operation> exportReadGroupSet(ServerContext ctx, ExportReadGroupSetRequest request);
+  Future<$google$longrunning.Operation> importReadGroupSets(ServerContext ctx, ImportReadGroupSetsRequest request);
+  Future<$google$longrunning.Operation> exportReadGroupSet(ServerContext ctx, ExportReadGroupSetRequest request);
   Future<SearchReadGroupSetsResponse> searchReadGroupSets(ServerContext ctx, SearchReadGroupSetsRequest request);
   Future<ReadGroupSet> updateReadGroupSet(ServerContext ctx, UpdateReadGroupSetRequest request);
-  Future<google$protobuf.Empty> deleteReadGroupSet(ServerContext ctx, DeleteReadGroupSetRequest request);
+  Future<$google$protobuf.Empty> deleteReadGroupSet(ServerContext ctx, DeleteReadGroupSetRequest request);
   Future<ReadGroupSet> getReadGroupSet(ServerContext ctx, GetReadGroupSetRequest request);
   Future<ListCoverageBucketsResponse> listCoverageBuckets(ServerContext ctx, ListCoverageBucketsRequest request);
   Future<SearchReadsResponse> searchReads(ServerContext ctx, SearchReadsRequest request);
@@ -75,6 +75,6 @@ abstract class ReadServiceV1ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => ReadServiceV1$json;
-  Map<String, dynamic> get $messageJson => ReadServiceV1$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => ReadServiceV1$messageJson;
 }
 

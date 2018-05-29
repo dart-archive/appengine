@@ -1,5 +1,5 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouderrorreporting.v1beta1_report_errors_service_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 

@@ -1,17 +1,20 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouderrorreporting.v1beta1_common;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/timestamp.pb.dart' as google$protobuf;
+import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 
 class ErrorGroup extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ErrorGroup')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'groupId', PbFieldType.OS)
-    ..pp/*<TrackingIssue>*/(3, 'trackingIssues', PbFieldType.PM, TrackingIssue.$checkItem, TrackingIssue.create)
+    ..aOS(1, 'name')
+    ..aOS(2, 'groupId')
+    ..pp<TrackingIssue>(3, 'trackingIssues', PbFieldType.PM, TrackingIssue.$checkItem, TrackingIssue.create)
     ..hasRequiredFields = false
   ;
 
@@ -28,27 +31,27 @@ class ErrorGroup extends GeneratedMessage {
   }
   static ErrorGroup _defaultInstance;
   static void $checkItem(ErrorGroup v) {
-    if (v is !ErrorGroup) checkItemFailed(v, 'ErrorGroup');
+    if (v is! ErrorGroup) checkItemFailed(v, 'ErrorGroup');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get groupId => $_get(1, 2, '');
-  void set groupId(String v) { $_setString(1, 2, v); }
-  bool hasGroupId() => $_has(1, 2);
+  String get groupId => $_getS(1, '');
+  set groupId(String v) { $_setString(1, v); }
+  bool hasGroupId() => $_has(1);
   void clearGroupId() => clearField(2);
 
-  List<TrackingIssue> get trackingIssues => $_get(2, 3, null);
+  List<TrackingIssue> get trackingIssues => $_getList(2);
 }
 
 class _ReadonlyErrorGroup extends ErrorGroup with ReadonlyMessageMixin {}
 
 class TrackingIssue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('TrackingIssue')
-    ..a/*<String>*/(1, 'url', PbFieldType.OS)
+    ..aOS(1, 'url')
     ..hasRequiredFields = false
   ;
 
@@ -65,12 +68,12 @@ class TrackingIssue extends GeneratedMessage {
   }
   static TrackingIssue _defaultInstance;
   static void $checkItem(TrackingIssue v) {
-    if (v is !TrackingIssue) checkItemFailed(v, 'TrackingIssue');
+    if (v is! TrackingIssue) checkItemFailed(v, 'TrackingIssue');
   }
 
-  String get url => $_get(0, 1, '');
-  void set url(String v) { $_setString(0, 1, v); }
-  bool hasUrl() => $_has(0, 1);
+  String get url => $_getS(0, '');
+  set url(String v) { $_setString(0, v); }
+  bool hasUrl() => $_has(0);
   void clearUrl() => clearField(1);
 }
 
@@ -78,10 +81,10 @@ class _ReadonlyTrackingIssue extends TrackingIssue with ReadonlyMessageMixin {}
 
 class ErrorEvent extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ErrorEvent')
-    ..a/*<google$protobuf.Timestamp>*/(1, 'eventTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<ServiceContext>*/(2, 'serviceContext', PbFieldType.OM, ServiceContext.getDefault, ServiceContext.create)
-    ..a/*<String>*/(3, 'message', PbFieldType.OS)
-    ..a/*<ErrorContext>*/(5, 'context', PbFieldType.OM, ErrorContext.getDefault, ErrorContext.create)
+    ..a<$google$protobuf.Timestamp>(1, 'eventTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<ServiceContext>(2, 'serviceContext', PbFieldType.OM, ServiceContext.getDefault, ServiceContext.create)
+    ..aOS(3, 'message')
+    ..a<ErrorContext>(5, 'context', PbFieldType.OM, ErrorContext.getDefault, ErrorContext.create)
     ..hasRequiredFields = false
   ;
 
@@ -98,27 +101,27 @@ class ErrorEvent extends GeneratedMessage {
   }
   static ErrorEvent _defaultInstance;
   static void $checkItem(ErrorEvent v) {
-    if (v is !ErrorEvent) checkItemFailed(v, 'ErrorEvent');
+    if (v is! ErrorEvent) checkItemFailed(v, 'ErrorEvent');
   }
 
-  google$protobuf.Timestamp get eventTime => $_get(0, 1, null);
-  void set eventTime(google$protobuf.Timestamp v) { setField(1, v); }
-  bool hasEventTime() => $_has(0, 1);
+  $google$protobuf.Timestamp get eventTime => $_getN(0);
+  set eventTime($google$protobuf.Timestamp v) { setField(1, v); }
+  bool hasEventTime() => $_has(0);
   void clearEventTime() => clearField(1);
 
-  ServiceContext get serviceContext => $_get(1, 2, null);
-  void set serviceContext(ServiceContext v) { setField(2, v); }
-  bool hasServiceContext() => $_has(1, 2);
+  ServiceContext get serviceContext => $_getN(1);
+  set serviceContext(ServiceContext v) { setField(2, v); }
+  bool hasServiceContext() => $_has(1);
   void clearServiceContext() => clearField(2);
 
-  String get message => $_get(2, 3, '');
-  void set message(String v) { $_setString(2, 3, v); }
-  bool hasMessage() => $_has(2, 3);
+  String get message => $_getS(2, '');
+  set message(String v) { $_setString(2, v); }
+  bool hasMessage() => $_has(2);
   void clearMessage() => clearField(3);
 
-  ErrorContext get context => $_get(3, 5, null);
-  void set context(ErrorContext v) { setField(5, v); }
-  bool hasContext() => $_has(3, 5);
+  ErrorContext get context => $_getN(3);
+  set context(ErrorContext v) { setField(5, v); }
+  bool hasContext() => $_has(3);
   void clearContext() => clearField(5);
 }
 
@@ -126,9 +129,9 @@ class _ReadonlyErrorEvent extends ErrorEvent with ReadonlyMessageMixin {}
 
 class ServiceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ServiceContext')
-    ..a/*<String>*/(2, 'service', PbFieldType.OS)
-    ..a/*<String>*/(3, 'version', PbFieldType.OS)
-    ..a/*<String>*/(4, 'resourceType', PbFieldType.OS)
+    ..aOS(2, 'service')
+    ..aOS(3, 'version')
+    ..aOS(4, 'resourceType')
     ..hasRequiredFields = false
   ;
 
@@ -145,22 +148,22 @@ class ServiceContext extends GeneratedMessage {
   }
   static ServiceContext _defaultInstance;
   static void $checkItem(ServiceContext v) {
-    if (v is !ServiceContext) checkItemFailed(v, 'ServiceContext');
+    if (v is! ServiceContext) checkItemFailed(v, 'ServiceContext');
   }
 
-  String get service => $_get(0, 2, '');
-  void set service(String v) { $_setString(0, 2, v); }
-  bool hasService() => $_has(0, 2);
+  String get service => $_getS(0, '');
+  set service(String v) { $_setString(0, v); }
+  bool hasService() => $_has(0);
   void clearService() => clearField(2);
 
-  String get version => $_get(1, 3, '');
-  void set version(String v) { $_setString(1, 3, v); }
-  bool hasVersion() => $_has(1, 3);
+  String get version => $_getS(1, '');
+  set version(String v) { $_setString(1, v); }
+  bool hasVersion() => $_has(1);
   void clearVersion() => clearField(3);
 
-  String get resourceType => $_get(2, 4, '');
-  void set resourceType(String v) { $_setString(2, 4, v); }
-  bool hasResourceType() => $_has(2, 4);
+  String get resourceType => $_getS(2, '');
+  set resourceType(String v) { $_setString(2, v); }
+  bool hasResourceType() => $_has(2);
   void clearResourceType() => clearField(4);
 }
 
@@ -168,9 +171,9 @@ class _ReadonlyServiceContext extends ServiceContext with ReadonlyMessageMixin {
 
 class ErrorContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ErrorContext')
-    ..a/*<HttpRequestContext>*/(1, 'httpRequest', PbFieldType.OM, HttpRequestContext.getDefault, HttpRequestContext.create)
-    ..a/*<String>*/(2, 'user', PbFieldType.OS)
-    ..a/*<SourceLocation>*/(3, 'reportLocation', PbFieldType.OM, SourceLocation.getDefault, SourceLocation.create)
+    ..a<HttpRequestContext>(1, 'httpRequest', PbFieldType.OM, HttpRequestContext.getDefault, HttpRequestContext.create)
+    ..aOS(2, 'user')
+    ..a<SourceLocation>(3, 'reportLocation', PbFieldType.OM, SourceLocation.getDefault, SourceLocation.create)
     ..hasRequiredFields = false
   ;
 
@@ -187,22 +190,22 @@ class ErrorContext extends GeneratedMessage {
   }
   static ErrorContext _defaultInstance;
   static void $checkItem(ErrorContext v) {
-    if (v is !ErrorContext) checkItemFailed(v, 'ErrorContext');
+    if (v is! ErrorContext) checkItemFailed(v, 'ErrorContext');
   }
 
-  HttpRequestContext get httpRequest => $_get(0, 1, null);
-  void set httpRequest(HttpRequestContext v) { setField(1, v); }
-  bool hasHttpRequest() => $_has(0, 1);
+  HttpRequestContext get httpRequest => $_getN(0);
+  set httpRequest(HttpRequestContext v) { setField(1, v); }
+  bool hasHttpRequest() => $_has(0);
   void clearHttpRequest() => clearField(1);
 
-  String get user => $_get(1, 2, '');
-  void set user(String v) { $_setString(1, 2, v); }
-  bool hasUser() => $_has(1, 2);
+  String get user => $_getS(1, '');
+  set user(String v) { $_setString(1, v); }
+  bool hasUser() => $_has(1);
   void clearUser() => clearField(2);
 
-  SourceLocation get reportLocation => $_get(2, 3, null);
-  void set reportLocation(SourceLocation v) { setField(3, v); }
-  bool hasReportLocation() => $_has(2, 3);
+  SourceLocation get reportLocation => $_getN(2);
+  set reportLocation(SourceLocation v) { setField(3, v); }
+  bool hasReportLocation() => $_has(2);
   void clearReportLocation() => clearField(3);
 }
 
@@ -210,12 +213,12 @@ class _ReadonlyErrorContext extends ErrorContext with ReadonlyMessageMixin {}
 
 class HttpRequestContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('HttpRequestContext')
-    ..a/*<String>*/(1, 'method', PbFieldType.OS)
-    ..a/*<String>*/(2, 'url', PbFieldType.OS)
-    ..a/*<String>*/(3, 'userAgent', PbFieldType.OS)
-    ..a/*<String>*/(4, 'referrer', PbFieldType.OS)
-    ..a/*<int>*/(5, 'responseStatusCode', PbFieldType.O3)
-    ..a/*<String>*/(6, 'remoteIp', PbFieldType.OS)
+    ..aOS(1, 'method')
+    ..aOS(2, 'url')
+    ..aOS(3, 'userAgent')
+    ..aOS(4, 'referrer')
+    ..a<int>(5, 'responseStatusCode', PbFieldType.O3)
+    ..aOS(6, 'remoteIp')
     ..hasRequiredFields = false
   ;
 
@@ -232,37 +235,37 @@ class HttpRequestContext extends GeneratedMessage {
   }
   static HttpRequestContext _defaultInstance;
   static void $checkItem(HttpRequestContext v) {
-    if (v is !HttpRequestContext) checkItemFailed(v, 'HttpRequestContext');
+    if (v is! HttpRequestContext) checkItemFailed(v, 'HttpRequestContext');
   }
 
-  String get method => $_get(0, 1, '');
-  void set method(String v) { $_setString(0, 1, v); }
-  bool hasMethod() => $_has(0, 1);
+  String get method => $_getS(0, '');
+  set method(String v) { $_setString(0, v); }
+  bool hasMethod() => $_has(0);
   void clearMethod() => clearField(1);
 
-  String get url => $_get(1, 2, '');
-  void set url(String v) { $_setString(1, 2, v); }
-  bool hasUrl() => $_has(1, 2);
+  String get url => $_getS(1, '');
+  set url(String v) { $_setString(1, v); }
+  bool hasUrl() => $_has(1);
   void clearUrl() => clearField(2);
 
-  String get userAgent => $_get(2, 3, '');
-  void set userAgent(String v) { $_setString(2, 3, v); }
-  bool hasUserAgent() => $_has(2, 3);
+  String get userAgent => $_getS(2, '');
+  set userAgent(String v) { $_setString(2, v); }
+  bool hasUserAgent() => $_has(2);
   void clearUserAgent() => clearField(3);
 
-  String get referrer => $_get(3, 4, '');
-  void set referrer(String v) { $_setString(3, 4, v); }
-  bool hasReferrer() => $_has(3, 4);
+  String get referrer => $_getS(3, '');
+  set referrer(String v) { $_setString(3, v); }
+  bool hasReferrer() => $_has(3);
   void clearReferrer() => clearField(4);
 
-  int get responseStatusCode => $_get(4, 5, 0);
-  void set responseStatusCode(int v) { $_setUnsignedInt32(4, 5, v); }
-  bool hasResponseStatusCode() => $_has(4, 5);
+  int get responseStatusCode => $_get(4, 0);
+  set responseStatusCode(int v) { $_setSignedInt32(4, v); }
+  bool hasResponseStatusCode() => $_has(4);
   void clearResponseStatusCode() => clearField(5);
 
-  String get remoteIp => $_get(5, 6, '');
-  void set remoteIp(String v) { $_setString(5, 6, v); }
-  bool hasRemoteIp() => $_has(5, 6);
+  String get remoteIp => $_getS(5, '');
+  set remoteIp(String v) { $_setString(5, v); }
+  bool hasRemoteIp() => $_has(5);
   void clearRemoteIp() => clearField(6);
 }
 
@@ -270,9 +273,9 @@ class _ReadonlyHttpRequestContext extends HttpRequestContext with ReadonlyMessag
 
 class SourceLocation extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SourceLocation')
-    ..a/*<String>*/(1, 'filePath', PbFieldType.OS)
-    ..a/*<int>*/(2, 'lineNumber', PbFieldType.O3)
-    ..a/*<String>*/(4, 'functionName', PbFieldType.OS)
+    ..aOS(1, 'filePath')
+    ..a<int>(2, 'lineNumber', PbFieldType.O3)
+    ..aOS(4, 'functionName')
     ..hasRequiredFields = false
   ;
 
@@ -289,22 +292,22 @@ class SourceLocation extends GeneratedMessage {
   }
   static SourceLocation _defaultInstance;
   static void $checkItem(SourceLocation v) {
-    if (v is !SourceLocation) checkItemFailed(v, 'SourceLocation');
+    if (v is! SourceLocation) checkItemFailed(v, 'SourceLocation');
   }
 
-  String get filePath => $_get(0, 1, '');
-  void set filePath(String v) { $_setString(0, 1, v); }
-  bool hasFilePath() => $_has(0, 1);
+  String get filePath => $_getS(0, '');
+  set filePath(String v) { $_setString(0, v); }
+  bool hasFilePath() => $_has(0);
   void clearFilePath() => clearField(1);
 
-  int get lineNumber => $_get(1, 2, 0);
-  void set lineNumber(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasLineNumber() => $_has(1, 2);
+  int get lineNumber => $_get(1, 0);
+  set lineNumber(int v) { $_setSignedInt32(1, v); }
+  bool hasLineNumber() => $_has(1);
   void clearLineNumber() => clearField(2);
 
-  String get functionName => $_get(2, 4, '');
-  void set functionName(String v) { $_setString(2, 4, v); }
-  bool hasFunctionName() => $_has(2, 4);
+  String get functionName => $_getS(2, '');
+  set functionName(String v) { $_setString(2, v); }
+  bool hasFunctionName() => $_has(2);
   void clearFunctionName() => clearField(4);
 }
 

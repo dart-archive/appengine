@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc.
+// Copyright 2017 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -122,6 +122,10 @@ message AuthProvider {
   //     audiences: bookstore_android.apps.googleusercontent.com,
   //                bookstore_web.apps.googleusercontent.com
   string audiences = 4;
+
+  // Redirect URL if JWT token is required but no present or is expired.
+  // Implement authorizationUrl of securityDefinitions in OpenAPI spec.
+  string authorization_url = 5;
 }
 
 // OAuth scopes are a way to define data and permissions on data. For example,

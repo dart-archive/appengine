@@ -1,19 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.v1_bigtable_service_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'bigtable_service_messages.pbjson.dart';
 import 'bigtable_data.pbjson.dart';
-import '../../protobuf/empty.pbjson.dart' as google$protobuf;
-import '../../rpc/status.pbjson.dart' as google$rpc;
-import '../../protobuf/any.pbjson.dart' as google$protobuf;
+import '../../protobuf/empty.pbjson.dart' as $google$protobuf;
+import '../../rpc/status.pbjson.dart' as $google$rpc;
+import '../../protobuf/any.pbjson.dart' as $google$protobuf;
 
 const BigtableService$json = const {
   '1': 'BigtableService',
   '2': const [
-    const {'1': 'ReadRows', '2': '.google.bigtable.v1.ReadRowsRequest', '3': '.google.bigtable.v1.ReadRowsResponse', '4': const {}},
-    const {'1': 'SampleRowKeys', '2': '.google.bigtable.v1.SampleRowKeysRequest', '3': '.google.bigtable.v1.SampleRowKeysResponse', '4': const {}},
+    const {'1': 'ReadRows', '2': '.google.bigtable.v1.ReadRowsRequest', '3': '.google.bigtable.v1.ReadRowsResponse', '4': const {}, '6': true},
+    const {'1': 'SampleRowKeys', '2': '.google.bigtable.v1.SampleRowKeysRequest', '3': '.google.bigtable.v1.SampleRowKeysResponse', '4': const {}, '6': true},
     const {'1': 'MutateRow', '2': '.google.bigtable.v1.MutateRowRequest', '3': '.google.protobuf.Empty', '4': const {}},
     const {'1': 'MutateRows', '2': '.google.bigtable.v1.MutateRowsRequest', '3': '.google.bigtable.v1.MutateRowsResponse', '4': const {}},
     const {'1': 'CheckAndMutateRow', '2': '.google.bigtable.v1.CheckAndMutateRowRequest', '3': '.google.bigtable.v1.CheckAndMutateRowResponse', '4': const {}},
@@ -45,12 +45,12 @@ const BigtableService$messageJson = const {
   '.google.bigtable.v1.Mutation.DeleteFromColumn': Mutation_DeleteFromColumn$json,
   '.google.bigtable.v1.Mutation.DeleteFromFamily': Mutation_DeleteFromFamily$json,
   '.google.bigtable.v1.Mutation.DeleteFromRow': Mutation_DeleteFromRow$json,
-  '.google.protobuf.Empty': google$protobuf.Empty$json,
+  '.google.protobuf.Empty': $google$protobuf.Empty$json,
   '.google.bigtable.v1.MutateRowsRequest': MutateRowsRequest$json,
   '.google.bigtable.v1.MutateRowsRequest.Entry': MutateRowsRequest_Entry$json,
   '.google.bigtable.v1.MutateRowsResponse': MutateRowsResponse$json,
-  '.google.rpc.Status': google$rpc.Status$json,
-  '.google.protobuf.Any': google$protobuf.Any$json,
+  '.google.rpc.Status': $google$rpc.Status$json,
+  '.google.protobuf.Any': $google$protobuf.Any$json,
   '.google.bigtable.v1.CheckAndMutateRowRequest': CheckAndMutateRowRequest$json,
   '.google.bigtable.v1.CheckAndMutateRowResponse': CheckAndMutateRowResponse$json,
   '.google.bigtable.v1.ReadModifyWriteRowRequest': ReadModifyWriteRowRequest$json,

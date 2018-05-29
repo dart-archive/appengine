@@ -1,9 +1,10 @@
 type: com.google.api.codegen.ConfigProto
+config_schema_version: 1.0.0
 language_settings:
   java:
-    package_name: com.google.cloud.spanner.admin.instance.spi.v1
+    package_name: com.google.cloud.spanner.admin.instance.v1
   python:
-    package_name: google.cloud.gapic.spanner_admin_instance.v1
+    package_name: google.cloud.spanner_admin_instance_v1.gapic
   go:
     package_name: cloud.google.com/go/spanner/admin/instance/apiv1
   csharp:
@@ -13,7 +14,7 @@ language_settings:
   php:
     package_name: Google\Cloud\Spanner\Admin\Instance\V1
   nodejs:
-    package_name: spanner-admin-instance.v1
+    package_name: spanner.v1
     domain_layer_location: google-cloud
 license_header:
   copyright_file: copyright-google.txt
@@ -23,10 +24,16 @@ interfaces:
   collections:
   - name_pattern: projects/{project}
     entity_name: project
+    language_overrides:
+    - language: csharp
+      common_resource_name: Google.Api.Gax.ResourceNames.ProjectName
   - name_pattern: projects/{project}/instanceConfigs/{instance_config}
     entity_name: instance_config
   - name_pattern: projects/{project}/instances/{instance}
     entity_name: instance
+    language_overrides:
+    - language: csharp
+      common_resource_name: Google.Cloud.Spanner.Common.V1.InstanceName
   retry_codes_def:
   - name: idempotent
     retry_codes:
@@ -52,6 +59,7 @@ interfaces:
     required_fields:
     - parent
     request_object_method: false
+    resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
         page_size_field: page_size
@@ -72,6 +80,7 @@ interfaces:
     required_fields:
     - name
     request_object_method: false
+    resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -85,6 +94,7 @@ interfaces:
     required_fields:
     - parent
     request_object_method: true
+    resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
         page_size_field: page_size
@@ -105,6 +115,7 @@ interfaces:
     required_fields:
     - name
     request_object_method: false
+    resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -122,6 +133,7 @@ interfaces:
     - instance_id
     - instance
     request_object_method: true
+    resource_name_treatment: STATIC_TYPES
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -130,6 +142,10 @@ interfaces:
     long_running:
       return_type: google.spanner.admin.instance.v1.Instance
       metadata_type: google.spanner.admin.instance.v1.CreateInstanceMetadata
+      initial_poll_delay_millis: 20000
+      poll_delay_multiplier: 1.5
+      max_poll_delay_millis: 45000
+      total_poll_timeout_millis: 86400000
   - name: UpdateInstance
     flattening:
       groups:
@@ -140,6 +156,7 @@ interfaces:
     - instance
     - field_mask
     request_object_method: true
+    resource_name_treatment: STATIC_TYPES
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -148,6 +165,10 @@ interfaces:
     long_running:
       return_type: google.spanner.admin.instance.v1.Instance
       metadata_type: google.spanner.admin.instance.v1.UpdateInstanceMetadata
+      initial_poll_delay_millis: 20000
+      poll_delay_multiplier: 1.5
+      max_poll_delay_millis: 45000
+      total_poll_timeout_millis: 86400000
   - name: DeleteInstance
     flattening:
       groups:
@@ -156,6 +177,7 @@ interfaces:
     required_fields:
     - name
     request_object_method: false
+    resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -204,3 +226,30 @@ interfaces:
     field_name_patterns:
       resource: instance
     timeout_millis: 30000
+resource_name_generation:
+- message_name: InstanceConfig
+  field_entity_map:
+    name: instance_config
+- message_name: Instance
+  field_entity_map:
+    name: instance
+    config: instance_config
+- message_name: ListInstanceConfigsRequest
+  field_entity_map:
+    parent: project
+- message_name: GetInstanceConfigRequest
+  field_entity_map:
+    name: instance_config
+- message_name: GetInstanceRequest
+  field_entity_map:
+    name: instance
+- message_name: CreateInstanceRequest
+  field_entity_map:
+    parent: project
+    instance_id: instance
+- message_name: ListInstancesRequest
+  field_entity_map:
+    parent: project
+- message_name: DeleteInstanceRequest
+  field_entity_map:
+    name: instance

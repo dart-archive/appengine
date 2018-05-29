@@ -1,15 +1,18 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_usage;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Usage extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Usage')
-    ..p/*<String>*/(1, 'requirements', PbFieldType.PS)
-    ..pp/*<UsageRule>*/(6, 'rules', PbFieldType.PM, UsageRule.$checkItem, UsageRule.create)
-    ..a/*<String>*/(7, 'producerNotificationChannel', PbFieldType.OS)
+    ..pPS(1, 'requirements')
+    ..pp<UsageRule>(6, 'rules', PbFieldType.PM, UsageRule.$checkItem, UsageRule.create)
+    ..aOS(7, 'producerNotificationChannel')
     ..hasRequiredFields = false
   ;
 
@@ -26,16 +29,16 @@ class Usage extends GeneratedMessage {
   }
   static Usage _defaultInstance;
   static void $checkItem(Usage v) {
-    if (v is !Usage) checkItemFailed(v, 'Usage');
+    if (v is! Usage) checkItemFailed(v, 'Usage');
   }
 
-  List<String> get requirements => $_get(0, 1, null);
+  List<String> get requirements => $_getList(0);
 
-  List<UsageRule> get rules => $_get(1, 6, null);
+  List<UsageRule> get rules => $_getList(1);
 
-  String get producerNotificationChannel => $_get(2, 7, '');
-  void set producerNotificationChannel(String v) { $_setString(2, 7, v); }
-  bool hasProducerNotificationChannel() => $_has(2, 7);
+  String get producerNotificationChannel => $_getS(2, '');
+  set producerNotificationChannel(String v) { $_setString(2, v); }
+  bool hasProducerNotificationChannel() => $_has(2);
   void clearProducerNotificationChannel() => clearField(7);
 }
 
@@ -43,8 +46,9 @@ class _ReadonlyUsage extends Usage with ReadonlyMessageMixin {}
 
 class UsageRule extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UsageRule')
-    ..a/*<String>*/(1, 'selector', PbFieldType.OS)
-    ..a/*<bool>*/(2, 'allowUnregisteredCalls', PbFieldType.OB)
+    ..aOS(1, 'selector')
+    ..aOB(2, 'allowUnregisteredCalls')
+    ..aOB(3, 'skipServiceControl')
     ..hasRequiredFields = false
   ;
 
@@ -61,18 +65,23 @@ class UsageRule extends GeneratedMessage {
   }
   static UsageRule _defaultInstance;
   static void $checkItem(UsageRule v) {
-    if (v is !UsageRule) checkItemFailed(v, 'UsageRule');
+    if (v is! UsageRule) checkItemFailed(v, 'UsageRule');
   }
 
-  String get selector => $_get(0, 1, '');
-  void set selector(String v) { $_setString(0, 1, v); }
-  bool hasSelector() => $_has(0, 1);
+  String get selector => $_getS(0, '');
+  set selector(String v) { $_setString(0, v); }
+  bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  bool get allowUnregisteredCalls => $_get(1, 2, false);
-  void set allowUnregisteredCalls(bool v) { $_setBool(1, 2, v); }
-  bool hasAllowUnregisteredCalls() => $_has(1, 2);
+  bool get allowUnregisteredCalls => $_get(1, false);
+  set allowUnregisteredCalls(bool v) { $_setBool(1, v); }
+  bool hasAllowUnregisteredCalls() => $_has(1);
   void clearAllowUnregisteredCalls() => clearField(2);
+
+  bool get skipServiceControl => $_get(2, false);
+  set skipServiceControl(bool v) { $_setBool(2, v); }
+  bool hasSkipServiceControl() => $_has(2);
+  void clearSkipServiceControl() => clearField(3);
 }
 
 class _ReadonlyUsageRule extends UsageRule with ReadonlyMessageMixin {}

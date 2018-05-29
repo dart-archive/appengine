@@ -1,9 +1,11 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouderrorreporting.v1beta1_error_group_service;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,7 +13,7 @@ import 'common.pb.dart';
 
 class GetGroupRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetGroupRequest')
-    ..a/*<String>*/(1, 'groupName', PbFieldType.OS)
+    ..aOS(1, 'groupName')
     ..hasRequiredFields = false
   ;
 
@@ -28,12 +30,12 @@ class GetGroupRequest extends GeneratedMessage {
   }
   static GetGroupRequest _defaultInstance;
   static void $checkItem(GetGroupRequest v) {
-    if (v is !GetGroupRequest) checkItemFailed(v, 'GetGroupRequest');
+    if (v is! GetGroupRequest) checkItemFailed(v, 'GetGroupRequest');
   }
 
-  String get groupName => $_get(0, 1, '');
-  void set groupName(String v) { $_setString(0, 1, v); }
-  bool hasGroupName() => $_has(0, 1);
+  String get groupName => $_getS(0, '');
+  set groupName(String v) { $_setString(0, v); }
+  bool hasGroupName() => $_has(0);
   void clearGroupName() => clearField(1);
 }
 
@@ -41,7 +43,7 @@ class _ReadonlyGetGroupRequest extends GetGroupRequest with ReadonlyMessageMixin
 
 class UpdateGroupRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateGroupRequest')
-    ..a/*<ErrorGroup>*/(1, 'group', PbFieldType.OM, ErrorGroup.getDefault, ErrorGroup.create)
+    ..a<ErrorGroup>(1, 'group', PbFieldType.OM, ErrorGroup.getDefault, ErrorGroup.create)
     ..hasRequiredFields = false
   ;
 
@@ -58,12 +60,12 @@ class UpdateGroupRequest extends GeneratedMessage {
   }
   static UpdateGroupRequest _defaultInstance;
   static void $checkItem(UpdateGroupRequest v) {
-    if (v is !UpdateGroupRequest) checkItemFailed(v, 'UpdateGroupRequest');
+    if (v is! UpdateGroupRequest) checkItemFailed(v, 'UpdateGroupRequest');
   }
 
-  ErrorGroup get group => $_get(0, 1, null);
-  void set group(ErrorGroup v) { setField(1, v); }
-  bool hasGroup() => $_has(0, 1);
+  ErrorGroup get group => $_getN(0);
+  set group(ErrorGroup v) { setField(1, v); }
+  bool hasGroup() => $_has(0);
   void clearGroup() => clearField(1);
 }
 
@@ -75,11 +77,11 @@ class ErrorGroupServiceApi {
 
   Future<ErrorGroup> getGroup(ClientContext ctx, GetGroupRequest request) {
     var emptyResponse = new ErrorGroup();
-    return _client.invoke(ctx, 'ErrorGroupService', 'GetGroup', request, emptyResponse);
+    return _client.invoke<ErrorGroup>(ctx, 'ErrorGroupService', 'GetGroup', request, emptyResponse);
   }
   Future<ErrorGroup> updateGroup(ClientContext ctx, UpdateGroupRequest request) {
     var emptyResponse = new ErrorGroup();
-    return _client.invoke(ctx, 'ErrorGroupService', 'UpdateGroup', request, emptyResponse);
+    return _client.invoke<ErrorGroup>(ctx, 'ErrorGroupService', 'UpdateGroup', request, emptyResponse);
   }
 }
 

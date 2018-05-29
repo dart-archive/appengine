@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.v2_bigtable_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -45,6 +45,6 @@ abstract class BigtableServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Bigtable$json;
-  Map<String, dynamic> get $messageJson => Bigtable$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Bigtable$messageJson;
 }
 

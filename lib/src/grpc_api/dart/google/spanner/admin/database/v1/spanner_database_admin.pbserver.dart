@@ -1,31 +1,31 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.admin.database.v1_spanner_database_admin_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'spanner_database_admin.pb.dart';
-import '../../../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../../../protobuf/empty.pb.dart' as google$protobuf;
-import '../../../../iam/v1/iam_policy.pb.dart' as google$iam$v1;
-import '../../../../iam/v1/policy.pb.dart' as google$iam$v1;
+import '../../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
+import '../../../../iam/v1/policy.pb.dart' as $google$iam$v1;
 import 'spanner_database_admin.pbjson.dart';
 
 export 'spanner_database_admin.pb.dart';
 
 abstract class DatabaseAdminServiceBase extends GeneratedService {
   Future<ListDatabasesResponse> listDatabases(ServerContext ctx, ListDatabasesRequest request);
-  Future<google$longrunning.Operation> createDatabase(ServerContext ctx, CreateDatabaseRequest request);
+  Future<$google$longrunning.Operation> createDatabase(ServerContext ctx, CreateDatabaseRequest request);
   Future<Database> getDatabase(ServerContext ctx, GetDatabaseRequest request);
-  Future<google$longrunning.Operation> updateDatabaseDdl(ServerContext ctx, UpdateDatabaseDdlRequest request);
-  Future<google$protobuf.Empty> dropDatabase(ServerContext ctx, DropDatabaseRequest request);
+  Future<$google$longrunning.Operation> updateDatabaseDdl(ServerContext ctx, UpdateDatabaseDdlRequest request);
+  Future<$google$protobuf.Empty> dropDatabase(ServerContext ctx, DropDatabaseRequest request);
   Future<GetDatabaseDdlResponse> getDatabaseDdl(ServerContext ctx, GetDatabaseDdlRequest request);
-  Future<google$iam$v1.Policy> setIamPolicy(ServerContext ctx, google$iam$v1.SetIamPolicyRequest request);
-  Future<google$iam$v1.Policy> getIamPolicy(ServerContext ctx, google$iam$v1.GetIamPolicyRequest request);
-  Future<google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ServerContext ctx, google$iam$v1.TestIamPermissionsRequest request);
+  Future<$google$iam$v1.Policy> setIamPolicy(ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
+  Future<$google$iam$v1.Policy> getIamPolicy(ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
+  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -35,9 +35,9 @@ abstract class DatabaseAdminServiceBase extends GeneratedService {
       case 'UpdateDatabaseDdl': return new UpdateDatabaseDdlRequest();
       case 'DropDatabase': return new DropDatabaseRequest();
       case 'GetDatabaseDdl': return new GetDatabaseDdlRequest();
-      case 'SetIamPolicy': return new google$iam$v1.SetIamPolicyRequest();
-      case 'GetIamPolicy': return new google$iam$v1.GetIamPolicyRequest();
-      case 'TestIamPermissions': return new google$iam$v1.TestIamPermissionsRequest();
+      case 'SetIamPolicy': return new $google$iam$v1.SetIamPolicyRequest();
+      case 'GetIamPolicy': return new $google$iam$v1.GetIamPolicyRequest();
+      case 'TestIamPermissions': return new $google$iam$v1.TestIamPermissionsRequest();
       default: throw new ArgumentError('Unknown method: $method');
     }
   }
@@ -58,6 +58,6 @@ abstract class DatabaseAdminServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => DatabaseAdmin$json;
-  Map<String, dynamic> get $messageJson => DatabaseAdmin$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => DatabaseAdmin$messageJson;
 }
 

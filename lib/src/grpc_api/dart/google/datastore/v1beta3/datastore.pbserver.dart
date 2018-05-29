@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.datastore.v1beta3_datastore_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -19,6 +19,7 @@ abstract class DatastoreServiceBase extends GeneratedService {
   Future<CommitResponse> commit(ServerContext ctx, CommitRequest request);
   Future<RollbackResponse> rollback(ServerContext ctx, RollbackRequest request);
   Future<AllocateIdsResponse> allocateIds(ServerContext ctx, AllocateIdsRequest request);
+  Future<ReserveIdsResponse> reserveIds(ServerContext ctx, ReserveIdsRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -28,6 +29,7 @@ abstract class DatastoreServiceBase extends GeneratedService {
       case 'Commit': return new CommitRequest();
       case 'Rollback': return new RollbackRequest();
       case 'AllocateIds': return new AllocateIdsRequest();
+      case 'ReserveIds': return new ReserveIdsRequest();
       default: throw new ArgumentError('Unknown method: $method');
     }
   }
@@ -40,11 +42,12 @@ abstract class DatastoreServiceBase extends GeneratedService {
       case 'Commit': return this.commit(ctx, request);
       case 'Rollback': return this.rollback(ctx, request);
       case 'AllocateIds': return this.allocateIds(ctx, request);
+      case 'ReserveIds': return this.reserveIds(ctx, request);
       default: throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => Datastore$json;
-  Map<String, dynamic> get $messageJson => Datastore$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Datastore$messageJson;
 }
 

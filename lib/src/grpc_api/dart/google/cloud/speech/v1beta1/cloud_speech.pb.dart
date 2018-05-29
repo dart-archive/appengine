@@ -1,15 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.speech.v1beta1_cloud_speech;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/timestamp.pb.dart' as google$protobuf;
-import '../../../rpc/status.pb.dart' as google$rpc;
-import '../../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../../rpc/status.pb.dart' as $google$rpc;
+import '../../../longrunning/operations.pb.dart' as $google$longrunning;
 
 import 'cloud_speech.pbenum.dart';
 
@@ -17,8 +19,8 @@ export 'cloud_speech.pbenum.dart';
 
 class SyncRecognizeRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SyncRecognizeRequest')
-    ..a/*<RecognitionConfig>*/(1, 'config', PbFieldType.OM, RecognitionConfig.getDefault, RecognitionConfig.create)
-    ..a/*<RecognitionAudio>*/(2, 'audio', PbFieldType.OM, RecognitionAudio.getDefault, RecognitionAudio.create)
+    ..a<RecognitionConfig>(1, 'config', PbFieldType.OM, RecognitionConfig.getDefault, RecognitionConfig.create)
+    ..a<RecognitionAudio>(2, 'audio', PbFieldType.OM, RecognitionAudio.getDefault, RecognitionAudio.create)
     ..hasRequiredFields = false
   ;
 
@@ -35,17 +37,17 @@ class SyncRecognizeRequest extends GeneratedMessage {
   }
   static SyncRecognizeRequest _defaultInstance;
   static void $checkItem(SyncRecognizeRequest v) {
-    if (v is !SyncRecognizeRequest) checkItemFailed(v, 'SyncRecognizeRequest');
+    if (v is! SyncRecognizeRequest) checkItemFailed(v, 'SyncRecognizeRequest');
   }
 
-  RecognitionConfig get config => $_get(0, 1, null);
-  void set config(RecognitionConfig v) { setField(1, v); }
-  bool hasConfig() => $_has(0, 1);
+  RecognitionConfig get config => $_getN(0);
+  set config(RecognitionConfig v) { setField(1, v); }
+  bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
-  RecognitionAudio get audio => $_get(1, 2, null);
-  void set audio(RecognitionAudio v) { setField(2, v); }
-  bool hasAudio() => $_has(1, 2);
+  RecognitionAudio get audio => $_getN(1);
+  set audio(RecognitionAudio v) { setField(2, v); }
+  bool hasAudio() => $_has(1);
   void clearAudio() => clearField(2);
 }
 
@@ -53,8 +55,8 @@ class _ReadonlySyncRecognizeRequest extends SyncRecognizeRequest with ReadonlyMe
 
 class AsyncRecognizeRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AsyncRecognizeRequest')
-    ..a/*<RecognitionConfig>*/(1, 'config', PbFieldType.OM, RecognitionConfig.getDefault, RecognitionConfig.create)
-    ..a/*<RecognitionAudio>*/(2, 'audio', PbFieldType.OM, RecognitionAudio.getDefault, RecognitionAudio.create)
+    ..a<RecognitionConfig>(1, 'config', PbFieldType.OM, RecognitionConfig.getDefault, RecognitionConfig.create)
+    ..a<RecognitionAudio>(2, 'audio', PbFieldType.OM, RecognitionAudio.getDefault, RecognitionAudio.create)
     ..hasRequiredFields = false
   ;
 
@@ -71,17 +73,17 @@ class AsyncRecognizeRequest extends GeneratedMessage {
   }
   static AsyncRecognizeRequest _defaultInstance;
   static void $checkItem(AsyncRecognizeRequest v) {
-    if (v is !AsyncRecognizeRequest) checkItemFailed(v, 'AsyncRecognizeRequest');
+    if (v is! AsyncRecognizeRequest) checkItemFailed(v, 'AsyncRecognizeRequest');
   }
 
-  RecognitionConfig get config => $_get(0, 1, null);
-  void set config(RecognitionConfig v) { setField(1, v); }
-  bool hasConfig() => $_has(0, 1);
+  RecognitionConfig get config => $_getN(0);
+  set config(RecognitionConfig v) { setField(1, v); }
+  bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
-  RecognitionAudio get audio => $_get(1, 2, null);
-  void set audio(RecognitionAudio v) { setField(2, v); }
-  bool hasAudio() => $_has(1, 2);
+  RecognitionAudio get audio => $_getN(1);
+  set audio(RecognitionAudio v) { setField(2, v); }
+  bool hasAudio() => $_has(1);
   void clearAudio() => clearField(2);
 }
 
@@ -89,8 +91,8 @@ class _ReadonlyAsyncRecognizeRequest extends AsyncRecognizeRequest with Readonly
 
 class StreamingRecognizeRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StreamingRecognizeRequest')
-    ..a/*<StreamingRecognitionConfig>*/(1, 'streamingConfig', PbFieldType.OM, StreamingRecognitionConfig.getDefault, StreamingRecognitionConfig.create)
-    ..a/*<List<int>>*/(2, 'audioContent', PbFieldType.OY)
+    ..a<StreamingRecognitionConfig>(1, 'streamingConfig', PbFieldType.OM, StreamingRecognitionConfig.getDefault, StreamingRecognitionConfig.create)
+    ..a<List<int>>(2, 'audioContent', PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -107,17 +109,17 @@ class StreamingRecognizeRequest extends GeneratedMessage {
   }
   static StreamingRecognizeRequest _defaultInstance;
   static void $checkItem(StreamingRecognizeRequest v) {
-    if (v is !StreamingRecognizeRequest) checkItemFailed(v, 'StreamingRecognizeRequest');
+    if (v is! StreamingRecognizeRequest) checkItemFailed(v, 'StreamingRecognizeRequest');
   }
 
-  StreamingRecognitionConfig get streamingConfig => $_get(0, 1, null);
-  void set streamingConfig(StreamingRecognitionConfig v) { setField(1, v); }
-  bool hasStreamingConfig() => $_has(0, 1);
+  StreamingRecognitionConfig get streamingConfig => $_getN(0);
+  set streamingConfig(StreamingRecognitionConfig v) { setField(1, v); }
+  bool hasStreamingConfig() => $_has(0);
   void clearStreamingConfig() => clearField(1);
 
-  List<int> get audioContent => $_get(1, 2, null);
-  void set audioContent(List<int> v) { $_setBytes(1, 2, v); }
-  bool hasAudioContent() => $_has(1, 2);
+  List<int> get audioContent => $_getN(1);
+  set audioContent(List<int> v) { $_setBytes(1, v); }
+  bool hasAudioContent() => $_has(1);
   void clearAudioContent() => clearField(2);
 }
 
@@ -125,9 +127,9 @@ class _ReadonlyStreamingRecognizeRequest extends StreamingRecognizeRequest with 
 
 class StreamingRecognitionConfig extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StreamingRecognitionConfig')
-    ..a/*<RecognitionConfig>*/(1, 'config', PbFieldType.OM, RecognitionConfig.getDefault, RecognitionConfig.create)
-    ..a/*<bool>*/(2, 'singleUtterance', PbFieldType.OB)
-    ..a/*<bool>*/(3, 'interimResults', PbFieldType.OB)
+    ..a<RecognitionConfig>(1, 'config', PbFieldType.OM, RecognitionConfig.getDefault, RecognitionConfig.create)
+    ..aOB(2, 'singleUtterance')
+    ..aOB(3, 'interimResults')
     ..hasRequiredFields = false
   ;
 
@@ -144,22 +146,22 @@ class StreamingRecognitionConfig extends GeneratedMessage {
   }
   static StreamingRecognitionConfig _defaultInstance;
   static void $checkItem(StreamingRecognitionConfig v) {
-    if (v is !StreamingRecognitionConfig) checkItemFailed(v, 'StreamingRecognitionConfig');
+    if (v is! StreamingRecognitionConfig) checkItemFailed(v, 'StreamingRecognitionConfig');
   }
 
-  RecognitionConfig get config => $_get(0, 1, null);
-  void set config(RecognitionConfig v) { setField(1, v); }
-  bool hasConfig() => $_has(0, 1);
+  RecognitionConfig get config => $_getN(0);
+  set config(RecognitionConfig v) { setField(1, v); }
+  bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
-  bool get singleUtterance => $_get(1, 2, false);
-  void set singleUtterance(bool v) { $_setBool(1, 2, v); }
-  bool hasSingleUtterance() => $_has(1, 2);
+  bool get singleUtterance => $_get(1, false);
+  set singleUtterance(bool v) { $_setBool(1, v); }
+  bool hasSingleUtterance() => $_has(1);
   void clearSingleUtterance() => clearField(2);
 
-  bool get interimResults => $_get(2, 3, false);
-  void set interimResults(bool v) { $_setBool(2, 3, v); }
-  bool hasInterimResults() => $_has(2, 3);
+  bool get interimResults => $_get(2, false);
+  set interimResults(bool v) { $_setBool(2, v); }
+  bool hasInterimResults() => $_has(2);
   void clearInterimResults() => clearField(3);
 }
 
@@ -167,12 +169,12 @@ class _ReadonlyStreamingRecognitionConfig extends StreamingRecognitionConfig wit
 
 class RecognitionConfig extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RecognitionConfig')
-    ..e/*<RecognitionConfig_AudioEncoding>*/(1, 'encoding', PbFieldType.OE, RecognitionConfig_AudioEncoding.ENCODING_UNSPECIFIED, RecognitionConfig_AudioEncoding.valueOf)
-    ..a/*<int>*/(2, 'sampleRate', PbFieldType.O3)
-    ..a/*<String>*/(3, 'languageCode', PbFieldType.OS)
-    ..a/*<int>*/(4, 'maxAlternatives', PbFieldType.O3)
-    ..a/*<bool>*/(5, 'profanityFilter', PbFieldType.OB)
-    ..a/*<SpeechContext>*/(6, 'speechContext', PbFieldType.OM, SpeechContext.getDefault, SpeechContext.create)
+    ..e<RecognitionConfig_AudioEncoding>(1, 'encoding', PbFieldType.OE, RecognitionConfig_AudioEncoding.ENCODING_UNSPECIFIED, RecognitionConfig_AudioEncoding.valueOf, RecognitionConfig_AudioEncoding.values)
+    ..a<int>(2, 'sampleRate', PbFieldType.O3)
+    ..aOS(3, 'languageCode')
+    ..a<int>(4, 'maxAlternatives', PbFieldType.O3)
+    ..aOB(5, 'profanityFilter')
+    ..a<SpeechContext>(6, 'speechContext', PbFieldType.OM, SpeechContext.getDefault, SpeechContext.create)
     ..hasRequiredFields = false
   ;
 
@@ -189,37 +191,37 @@ class RecognitionConfig extends GeneratedMessage {
   }
   static RecognitionConfig _defaultInstance;
   static void $checkItem(RecognitionConfig v) {
-    if (v is !RecognitionConfig) checkItemFailed(v, 'RecognitionConfig');
+    if (v is! RecognitionConfig) checkItemFailed(v, 'RecognitionConfig');
   }
 
-  RecognitionConfig_AudioEncoding get encoding => $_get(0, 1, null);
-  void set encoding(RecognitionConfig_AudioEncoding v) { setField(1, v); }
-  bool hasEncoding() => $_has(0, 1);
+  RecognitionConfig_AudioEncoding get encoding => $_getN(0);
+  set encoding(RecognitionConfig_AudioEncoding v) { setField(1, v); }
+  bool hasEncoding() => $_has(0);
   void clearEncoding() => clearField(1);
 
-  int get sampleRate => $_get(1, 2, 0);
-  void set sampleRate(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasSampleRate() => $_has(1, 2);
+  int get sampleRate => $_get(1, 0);
+  set sampleRate(int v) { $_setSignedInt32(1, v); }
+  bool hasSampleRate() => $_has(1);
   void clearSampleRate() => clearField(2);
 
-  String get languageCode => $_get(2, 3, '');
-  void set languageCode(String v) { $_setString(2, 3, v); }
-  bool hasLanguageCode() => $_has(2, 3);
+  String get languageCode => $_getS(2, '');
+  set languageCode(String v) { $_setString(2, v); }
+  bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 
-  int get maxAlternatives => $_get(3, 4, 0);
-  void set maxAlternatives(int v) { $_setUnsignedInt32(3, 4, v); }
-  bool hasMaxAlternatives() => $_has(3, 4);
+  int get maxAlternatives => $_get(3, 0);
+  set maxAlternatives(int v) { $_setSignedInt32(3, v); }
+  bool hasMaxAlternatives() => $_has(3);
   void clearMaxAlternatives() => clearField(4);
 
-  bool get profanityFilter => $_get(4, 5, false);
-  void set profanityFilter(bool v) { $_setBool(4, 5, v); }
-  bool hasProfanityFilter() => $_has(4, 5);
+  bool get profanityFilter => $_get(4, false);
+  set profanityFilter(bool v) { $_setBool(4, v); }
+  bool hasProfanityFilter() => $_has(4);
   void clearProfanityFilter() => clearField(5);
 
-  SpeechContext get speechContext => $_get(5, 6, null);
-  void set speechContext(SpeechContext v) { setField(6, v); }
-  bool hasSpeechContext() => $_has(5, 6);
+  SpeechContext get speechContext => $_getN(5);
+  set speechContext(SpeechContext v) { setField(6, v); }
+  bool hasSpeechContext() => $_has(5);
   void clearSpeechContext() => clearField(6);
 }
 
@@ -227,7 +229,7 @@ class _ReadonlyRecognitionConfig extends RecognitionConfig with ReadonlyMessageM
 
 class SpeechContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SpeechContext')
-    ..p/*<String>*/(1, 'phrases', PbFieldType.PS)
+    ..pPS(1, 'phrases')
     ..hasRequiredFields = false
   ;
 
@@ -244,18 +246,18 @@ class SpeechContext extends GeneratedMessage {
   }
   static SpeechContext _defaultInstance;
   static void $checkItem(SpeechContext v) {
-    if (v is !SpeechContext) checkItemFailed(v, 'SpeechContext');
+    if (v is! SpeechContext) checkItemFailed(v, 'SpeechContext');
   }
 
-  List<String> get phrases => $_get(0, 1, null);
+  List<String> get phrases => $_getList(0);
 }
 
 class _ReadonlySpeechContext extends SpeechContext with ReadonlyMessageMixin {}
 
 class RecognitionAudio extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RecognitionAudio')
-    ..a/*<List<int>>*/(1, 'content', PbFieldType.OY)
-    ..a/*<String>*/(2, 'uri', PbFieldType.OS)
+    ..a<List<int>>(1, 'content', PbFieldType.OY)
+    ..aOS(2, 'uri')
     ..hasRequiredFields = false
   ;
 
@@ -272,17 +274,17 @@ class RecognitionAudio extends GeneratedMessage {
   }
   static RecognitionAudio _defaultInstance;
   static void $checkItem(RecognitionAudio v) {
-    if (v is !RecognitionAudio) checkItemFailed(v, 'RecognitionAudio');
+    if (v is! RecognitionAudio) checkItemFailed(v, 'RecognitionAudio');
   }
 
-  List<int> get content => $_get(0, 1, null);
-  void set content(List<int> v) { $_setBytes(0, 1, v); }
-  bool hasContent() => $_has(0, 1);
+  List<int> get content => $_getN(0);
+  set content(List<int> v) { $_setBytes(0, v); }
+  bool hasContent() => $_has(0);
   void clearContent() => clearField(1);
 
-  String get uri => $_get(1, 2, '');
-  void set uri(String v) { $_setString(1, 2, v); }
-  bool hasUri() => $_has(1, 2);
+  String get uri => $_getS(1, '');
+  set uri(String v) { $_setString(1, v); }
+  bool hasUri() => $_has(1);
   void clearUri() => clearField(2);
 }
 
@@ -290,7 +292,7 @@ class _ReadonlyRecognitionAudio extends RecognitionAudio with ReadonlyMessageMix
 
 class SyncRecognizeResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SyncRecognizeResponse')
-    ..pp/*<SpeechRecognitionResult>*/(2, 'results', PbFieldType.PM, SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
+    ..pp<SpeechRecognitionResult>(2, 'results', PbFieldType.PM, SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
     ..hasRequiredFields = false
   ;
 
@@ -307,17 +309,17 @@ class SyncRecognizeResponse extends GeneratedMessage {
   }
   static SyncRecognizeResponse _defaultInstance;
   static void $checkItem(SyncRecognizeResponse v) {
-    if (v is !SyncRecognizeResponse) checkItemFailed(v, 'SyncRecognizeResponse');
+    if (v is! SyncRecognizeResponse) checkItemFailed(v, 'SyncRecognizeResponse');
   }
 
-  List<SpeechRecognitionResult> get results => $_get(0, 2, null);
+  List<SpeechRecognitionResult> get results => $_getList(0);
 }
 
 class _ReadonlySyncRecognizeResponse extends SyncRecognizeResponse with ReadonlyMessageMixin {}
 
 class AsyncRecognizeResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AsyncRecognizeResponse')
-    ..pp/*<SpeechRecognitionResult>*/(2, 'results', PbFieldType.PM, SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
+    ..pp<SpeechRecognitionResult>(2, 'results', PbFieldType.PM, SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
     ..hasRequiredFields = false
   ;
 
@@ -334,19 +336,19 @@ class AsyncRecognizeResponse extends GeneratedMessage {
   }
   static AsyncRecognizeResponse _defaultInstance;
   static void $checkItem(AsyncRecognizeResponse v) {
-    if (v is !AsyncRecognizeResponse) checkItemFailed(v, 'AsyncRecognizeResponse');
+    if (v is! AsyncRecognizeResponse) checkItemFailed(v, 'AsyncRecognizeResponse');
   }
 
-  List<SpeechRecognitionResult> get results => $_get(0, 2, null);
+  List<SpeechRecognitionResult> get results => $_getList(0);
 }
 
 class _ReadonlyAsyncRecognizeResponse extends AsyncRecognizeResponse with ReadonlyMessageMixin {}
 
 class AsyncRecognizeMetadata extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AsyncRecognizeMetadata')
-    ..a/*<int>*/(1, 'progressPercent', PbFieldType.O3)
-    ..a/*<google$protobuf.Timestamp>*/(2, 'startTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..a/*<google$protobuf.Timestamp>*/(3, 'lastUpdateTime', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
+    ..a<int>(1, 'progressPercent', PbFieldType.O3)
+    ..a<$google$protobuf.Timestamp>(2, 'startTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<$google$protobuf.Timestamp>(3, 'lastUpdateTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -363,22 +365,22 @@ class AsyncRecognizeMetadata extends GeneratedMessage {
   }
   static AsyncRecognizeMetadata _defaultInstance;
   static void $checkItem(AsyncRecognizeMetadata v) {
-    if (v is !AsyncRecognizeMetadata) checkItemFailed(v, 'AsyncRecognizeMetadata');
+    if (v is! AsyncRecognizeMetadata) checkItemFailed(v, 'AsyncRecognizeMetadata');
   }
 
-  int get progressPercent => $_get(0, 1, 0);
-  void set progressPercent(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasProgressPercent() => $_has(0, 1);
+  int get progressPercent => $_get(0, 0);
+  set progressPercent(int v) { $_setSignedInt32(0, v); }
+  bool hasProgressPercent() => $_has(0);
   void clearProgressPercent() => clearField(1);
 
-  google$protobuf.Timestamp get startTime => $_get(1, 2, null);
-  void set startTime(google$protobuf.Timestamp v) { setField(2, v); }
-  bool hasStartTime() => $_has(1, 2);
+  $google$protobuf.Timestamp get startTime => $_getN(1);
+  set startTime($google$protobuf.Timestamp v) { setField(2, v); }
+  bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  google$protobuf.Timestamp get lastUpdateTime => $_get(2, 3, null);
-  void set lastUpdateTime(google$protobuf.Timestamp v) { setField(3, v); }
-  bool hasLastUpdateTime() => $_has(2, 3);
+  $google$protobuf.Timestamp get lastUpdateTime => $_getN(2);
+  set lastUpdateTime($google$protobuf.Timestamp v) { setField(3, v); }
+  bool hasLastUpdateTime() => $_has(2);
   void clearLastUpdateTime() => clearField(3);
 }
 
@@ -386,10 +388,10 @@ class _ReadonlyAsyncRecognizeMetadata extends AsyncRecognizeMetadata with Readon
 
 class StreamingRecognizeResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StreamingRecognizeResponse')
-    ..a/*<google$rpc.Status>*/(1, 'error', PbFieldType.OM, google$rpc.Status.getDefault, google$rpc.Status.create)
-    ..pp/*<StreamingRecognitionResult>*/(2, 'results', PbFieldType.PM, StreamingRecognitionResult.$checkItem, StreamingRecognitionResult.create)
-    ..a/*<int>*/(3, 'resultIndex', PbFieldType.O3)
-    ..e/*<StreamingRecognizeResponse_EndpointerType>*/(4, 'endpointerType', PbFieldType.OE, StreamingRecognizeResponse_EndpointerType.ENDPOINTER_EVENT_UNSPECIFIED, StreamingRecognizeResponse_EndpointerType.valueOf)
+    ..a<$google$rpc.Status>(1, 'error', PbFieldType.OM, $google$rpc.Status.getDefault, $google$rpc.Status.create)
+    ..pp<StreamingRecognitionResult>(2, 'results', PbFieldType.PM, StreamingRecognitionResult.$checkItem, StreamingRecognitionResult.create)
+    ..a<int>(3, 'resultIndex', PbFieldType.O3)
+    ..e<StreamingRecognizeResponse_EndpointerType>(4, 'endpointerType', PbFieldType.OE, StreamingRecognizeResponse_EndpointerType.ENDPOINTER_EVENT_UNSPECIFIED, StreamingRecognizeResponse_EndpointerType.valueOf, StreamingRecognizeResponse_EndpointerType.values)
     ..hasRequiredFields = false
   ;
 
@@ -406,24 +408,24 @@ class StreamingRecognizeResponse extends GeneratedMessage {
   }
   static StreamingRecognizeResponse _defaultInstance;
   static void $checkItem(StreamingRecognizeResponse v) {
-    if (v is !StreamingRecognizeResponse) checkItemFailed(v, 'StreamingRecognizeResponse');
+    if (v is! StreamingRecognizeResponse) checkItemFailed(v, 'StreamingRecognizeResponse');
   }
 
-  google$rpc.Status get error => $_get(0, 1, null);
-  void set error(google$rpc.Status v) { setField(1, v); }
-  bool hasError() => $_has(0, 1);
+  $google$rpc.Status get error => $_getN(0);
+  set error($google$rpc.Status v) { setField(1, v); }
+  bool hasError() => $_has(0);
   void clearError() => clearField(1);
 
-  List<StreamingRecognitionResult> get results => $_get(1, 2, null);
+  List<StreamingRecognitionResult> get results => $_getList(1);
 
-  int get resultIndex => $_get(2, 3, 0);
-  void set resultIndex(int v) { $_setUnsignedInt32(2, 3, v); }
-  bool hasResultIndex() => $_has(2, 3);
+  int get resultIndex => $_get(2, 0);
+  set resultIndex(int v) { $_setSignedInt32(2, v); }
+  bool hasResultIndex() => $_has(2);
   void clearResultIndex() => clearField(3);
 
-  StreamingRecognizeResponse_EndpointerType get endpointerType => $_get(3, 4, null);
-  void set endpointerType(StreamingRecognizeResponse_EndpointerType v) { setField(4, v); }
-  bool hasEndpointerType() => $_has(3, 4);
+  StreamingRecognizeResponse_EndpointerType get endpointerType => $_getN(3);
+  set endpointerType(StreamingRecognizeResponse_EndpointerType v) { setField(4, v); }
+  bool hasEndpointerType() => $_has(3);
   void clearEndpointerType() => clearField(4);
 }
 
@@ -431,9 +433,9 @@ class _ReadonlyStreamingRecognizeResponse extends StreamingRecognizeResponse wit
 
 class StreamingRecognitionResult extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StreamingRecognitionResult')
-    ..pp/*<SpeechRecognitionAlternative>*/(1, 'alternatives', PbFieldType.PM, SpeechRecognitionAlternative.$checkItem, SpeechRecognitionAlternative.create)
-    ..a/*<bool>*/(2, 'isFinal', PbFieldType.OB)
-    ..a/*<double>*/(3, 'stability', PbFieldType.OF)
+    ..pp<SpeechRecognitionAlternative>(1, 'alternatives', PbFieldType.PM, SpeechRecognitionAlternative.$checkItem, SpeechRecognitionAlternative.create)
+    ..aOB(2, 'isFinal')
+    ..a<double>(3, 'stability', PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -450,19 +452,19 @@ class StreamingRecognitionResult extends GeneratedMessage {
   }
   static StreamingRecognitionResult _defaultInstance;
   static void $checkItem(StreamingRecognitionResult v) {
-    if (v is !StreamingRecognitionResult) checkItemFailed(v, 'StreamingRecognitionResult');
+    if (v is! StreamingRecognitionResult) checkItemFailed(v, 'StreamingRecognitionResult');
   }
 
-  List<SpeechRecognitionAlternative> get alternatives => $_get(0, 1, null);
+  List<SpeechRecognitionAlternative> get alternatives => $_getList(0);
 
-  bool get isFinal => $_get(1, 2, false);
-  void set isFinal(bool v) { $_setBool(1, 2, v); }
-  bool hasIsFinal() => $_has(1, 2);
+  bool get isFinal => $_get(1, false);
+  set isFinal(bool v) { $_setBool(1, v); }
+  bool hasIsFinal() => $_has(1);
   void clearIsFinal() => clearField(2);
 
-  double get stability => $_get(2, 3, null);
-  void set stability(double v) { $_setFloat(2, 3, v); }
-  bool hasStability() => $_has(2, 3);
+  double get stability => $_getN(2);
+  set stability(double v) { $_setFloat(2, v); }
+  bool hasStability() => $_has(2);
   void clearStability() => clearField(3);
 }
 
@@ -470,7 +472,7 @@ class _ReadonlyStreamingRecognitionResult extends StreamingRecognitionResult wit
 
 class SpeechRecognitionResult extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SpeechRecognitionResult')
-    ..pp/*<SpeechRecognitionAlternative>*/(1, 'alternatives', PbFieldType.PM, SpeechRecognitionAlternative.$checkItem, SpeechRecognitionAlternative.create)
+    ..pp<SpeechRecognitionAlternative>(1, 'alternatives', PbFieldType.PM, SpeechRecognitionAlternative.$checkItem, SpeechRecognitionAlternative.create)
     ..hasRequiredFields = false
   ;
 
@@ -487,18 +489,18 @@ class SpeechRecognitionResult extends GeneratedMessage {
   }
   static SpeechRecognitionResult _defaultInstance;
   static void $checkItem(SpeechRecognitionResult v) {
-    if (v is !SpeechRecognitionResult) checkItemFailed(v, 'SpeechRecognitionResult');
+    if (v is! SpeechRecognitionResult) checkItemFailed(v, 'SpeechRecognitionResult');
   }
 
-  List<SpeechRecognitionAlternative> get alternatives => $_get(0, 1, null);
+  List<SpeechRecognitionAlternative> get alternatives => $_getList(0);
 }
 
 class _ReadonlySpeechRecognitionResult extends SpeechRecognitionResult with ReadonlyMessageMixin {}
 
 class SpeechRecognitionAlternative extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SpeechRecognitionAlternative')
-    ..a/*<String>*/(1, 'transcript', PbFieldType.OS)
-    ..a/*<double>*/(2, 'confidence', PbFieldType.OF)
+    ..aOS(1, 'transcript')
+    ..a<double>(2, 'confidence', PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
@@ -515,17 +517,17 @@ class SpeechRecognitionAlternative extends GeneratedMessage {
   }
   static SpeechRecognitionAlternative _defaultInstance;
   static void $checkItem(SpeechRecognitionAlternative v) {
-    if (v is !SpeechRecognitionAlternative) checkItemFailed(v, 'SpeechRecognitionAlternative');
+    if (v is! SpeechRecognitionAlternative) checkItemFailed(v, 'SpeechRecognitionAlternative');
   }
 
-  String get transcript => $_get(0, 1, '');
-  void set transcript(String v) { $_setString(0, 1, v); }
-  bool hasTranscript() => $_has(0, 1);
+  String get transcript => $_getS(0, '');
+  set transcript(String v) { $_setString(0, v); }
+  bool hasTranscript() => $_has(0);
   void clearTranscript() => clearField(1);
 
-  double get confidence => $_get(1, 2, null);
-  void set confidence(double v) { $_setFloat(1, 2, v); }
-  bool hasConfidence() => $_has(1, 2);
+  double get confidence => $_getN(1);
+  set confidence(double v) { $_setFloat(1, v); }
+  bool hasConfidence() => $_has(1);
   void clearConfidence() => clearField(2);
 }
 
@@ -537,15 +539,15 @@ class SpeechApi {
 
   Future<SyncRecognizeResponse> syncRecognize(ClientContext ctx, SyncRecognizeRequest request) {
     var emptyResponse = new SyncRecognizeResponse();
-    return _client.invoke(ctx, 'Speech', 'SyncRecognize', request, emptyResponse);
+    return _client.invoke<SyncRecognizeResponse>(ctx, 'Speech', 'SyncRecognize', request, emptyResponse);
   }
-  Future<google$longrunning.Operation> asyncRecognize(ClientContext ctx, AsyncRecognizeRequest request) {
-    var emptyResponse = new google$longrunning.Operation();
-    return _client.invoke(ctx, 'Speech', 'AsyncRecognize', request, emptyResponse);
+  Future<$google$longrunning.Operation> asyncRecognize(ClientContext ctx, AsyncRecognizeRequest request) {
+    var emptyResponse = new $google$longrunning.Operation();
+    return _client.invoke<$google$longrunning.Operation>(ctx, 'Speech', 'AsyncRecognize', request, emptyResponse);
   }
   Future<StreamingRecognizeResponse> streamingRecognize(ClientContext ctx, StreamingRecognizeRequest request) {
     var emptyResponse = new StreamingRecognizeResponse();
-    return _client.invoke(ctx, 'Speech', 'StreamingRecognize', request, emptyResponse);
+    return _client.invoke<StreamingRecognizeResponse>(ctx, 'Speech', 'StreamingRecognize', request, emptyResponse);
   }
 }
 

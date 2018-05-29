@@ -1,5 +1,5 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.iam.v1_iam_policy_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 

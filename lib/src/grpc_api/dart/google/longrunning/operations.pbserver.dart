@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.longrunning_operations_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'operations.pb.dart';
-import '../protobuf/empty.pb.dart' as google$protobuf;
+import '../protobuf/empty.pb.dart' as $google$protobuf;
 import 'operations.pbjson.dart';
 
 export 'operations.pb.dart';
@@ -16,8 +16,8 @@ export 'operations.pb.dart';
 abstract class OperationsServiceBase extends GeneratedService {
   Future<ListOperationsResponse> listOperations(ServerContext ctx, ListOperationsRequest request);
   Future<Operation> getOperation(ServerContext ctx, GetOperationRequest request);
-  Future<google$protobuf.Empty> deleteOperation(ServerContext ctx, DeleteOperationRequest request);
-  Future<google$protobuf.Empty> cancelOperation(ServerContext ctx, CancelOperationRequest request);
+  Future<$google$protobuf.Empty> deleteOperation(ServerContext ctx, DeleteOperationRequest request);
+  Future<$google$protobuf.Empty> cancelOperation(ServerContext ctx, CancelOperationRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -40,6 +40,6 @@ abstract class OperationsServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Operations$json;
-  Map<String, dynamic> get $messageJson => Operations$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Operations$messageJson;
 }
 

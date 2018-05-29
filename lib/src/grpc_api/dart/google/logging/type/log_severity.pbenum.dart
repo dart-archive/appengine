@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.logging.type_log_severity_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class LogSeverity extends ProtobufEnum {
@@ -31,7 +33,7 @@ class LogSeverity extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static LogSeverity valueOf(int value) => _byValue[value] as LogSeverity;
   static void $checkItem(LogSeverity v) {
-    if (v is !LogSeverity) checkItemFailed(v, 'LogSeverity');
+    if (v is! LogSeverity) checkItemFailed(v, 'LogSeverity');
   }
 
   const LogSeverity._(int v, String n) : super(v, n);

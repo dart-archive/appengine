@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.logging.v1_request_log_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'request_log.pb.dart';
 

@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.admin.table.v1_bigtable_table_service_messages_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'bigtable_table_service_messages.pb.dart';
 

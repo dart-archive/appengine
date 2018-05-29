@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.cloudtrace.v1_trace_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class TraceSpan_SpanKind extends ProtobufEnum {
@@ -19,7 +21,7 @@ class TraceSpan_SpanKind extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static TraceSpan_SpanKind valueOf(int value) => _byValue[value] as TraceSpan_SpanKind;
   static void $checkItem(TraceSpan_SpanKind v) {
-    if (v is !TraceSpan_SpanKind) checkItemFailed(v, 'TraceSpan_SpanKind');
+    if (v is! TraceSpan_SpanKind) checkItemFailed(v, 'TraceSpan_SpanKind');
   }
 
   const TraceSpan_SpanKind._(int v, String n) : super(v, n);
@@ -41,7 +43,7 @@ class ListTracesRequest_ViewType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static ListTracesRequest_ViewType valueOf(int value) => _byValue[value] as ListTracesRequest_ViewType;
   static void $checkItem(ListTracesRequest_ViewType v) {
-    if (v is !ListTracesRequest_ViewType) checkItemFailed(v, 'ListTracesRequest_ViewType');
+    if (v is! ListTracesRequest_ViewType) checkItemFailed(v, 'ListTracesRequest_ViewType');
   }
 
   const ListTracesRequest_ViewType._(int v, String n) : super(v, n);

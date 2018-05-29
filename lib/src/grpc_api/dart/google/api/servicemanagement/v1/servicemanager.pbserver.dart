@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicemanagement.v1_servicemanager_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -9,8 +9,8 @@ import 'package:protobuf/protobuf.dart';
 
 import 'servicemanager.pb.dart';
 import 'resources.pb.dart';
-import '../../../longrunning/operations.pb.dart' as google$longrunning;
-import '../../service.pb.dart' as google$api;
+import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../service.pb.dart' as $google$api;
 import 'servicemanager.pbjson.dart';
 
 export 'servicemanager.pb.dart';
@@ -18,19 +18,19 @@ export 'servicemanager.pb.dart';
 abstract class ServiceManagerServiceBase extends GeneratedService {
   Future<ListServicesResponse> listServices(ServerContext ctx, ListServicesRequest request);
   Future<ManagedService> getService(ServerContext ctx, GetServiceRequest request);
-  Future<google$longrunning.Operation> createService(ServerContext ctx, CreateServiceRequest request);
-  Future<google$longrunning.Operation> deleteService(ServerContext ctx, DeleteServiceRequest request);
-  Future<google$longrunning.Operation> undeleteService(ServerContext ctx, UndeleteServiceRequest request);
+  Future<$google$longrunning.Operation> createService(ServerContext ctx, CreateServiceRequest request);
+  Future<$google$longrunning.Operation> deleteService(ServerContext ctx, DeleteServiceRequest request);
+  Future<$google$longrunning.Operation> undeleteService(ServerContext ctx, UndeleteServiceRequest request);
   Future<ListServiceConfigsResponse> listServiceConfigs(ServerContext ctx, ListServiceConfigsRequest request);
-  Future<google$api.Service> getServiceConfig(ServerContext ctx, GetServiceConfigRequest request);
-  Future<google$api.Service> createServiceConfig(ServerContext ctx, CreateServiceConfigRequest request);
-  Future<google$longrunning.Operation> submitConfigSource(ServerContext ctx, SubmitConfigSourceRequest request);
+  Future<$google$api.Service> getServiceConfig(ServerContext ctx, GetServiceConfigRequest request);
+  Future<$google$api.Service> createServiceConfig(ServerContext ctx, CreateServiceConfigRequest request);
+  Future<$google$longrunning.Operation> submitConfigSource(ServerContext ctx, SubmitConfigSourceRequest request);
   Future<ListServiceRolloutsResponse> listServiceRollouts(ServerContext ctx, ListServiceRolloutsRequest request);
   Future<Rollout> getServiceRollout(ServerContext ctx, GetServiceRolloutRequest request);
-  Future<google$longrunning.Operation> createServiceRollout(ServerContext ctx, CreateServiceRolloutRequest request);
+  Future<$google$longrunning.Operation> createServiceRollout(ServerContext ctx, CreateServiceRolloutRequest request);
   Future<GenerateConfigReportResponse> generateConfigReport(ServerContext ctx, GenerateConfigReportRequest request);
-  Future<google$longrunning.Operation> enableService(ServerContext ctx, EnableServiceRequest request);
-  Future<google$longrunning.Operation> disableService(ServerContext ctx, DisableServiceRequest request);
+  Future<$google$longrunning.Operation> enableService(ServerContext ctx, EnableServiceRequest request);
+  Future<$google$longrunning.Operation> disableService(ServerContext ctx, DisableServiceRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -75,6 +75,6 @@ abstract class ServiceManagerServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => ServiceManager$json;
-  Map<String, dynamic> get $messageJson => ServiceManager$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => ServiceManager$messageJson;
 }
 

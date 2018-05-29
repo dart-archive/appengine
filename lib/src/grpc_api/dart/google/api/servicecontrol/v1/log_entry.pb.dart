@@ -1,20 +1,23 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicecontrol.v1_log_entry;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/any.pb.dart' as google$protobuf;
-import '../../../protobuf/struct.pb.dart' as google$protobuf;
-import '../../../protobuf/timestamp.pb.dart' as google$protobuf;
+import '../../../protobuf/any.pb.dart' as $google$protobuf;
+import '../../../protobuf/struct.pb.dart' as $google$protobuf;
+import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 
-import '../../../logging/type/log_severity.pbenum.dart' as google$logging$type;
+import '../../../logging/type/log_severity.pbenum.dart' as $google$logging$type;
 
 class LogEntry_LabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('LogEntry_LabelsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -31,17 +34,17 @@ class LogEntry_LabelsEntry extends GeneratedMessage {
   }
   static LogEntry_LabelsEntry _defaultInstance;
   static void $checkItem(LogEntry_LabelsEntry v) {
-    if (v is !LogEntry_LabelsEntry) checkItemFailed(v, 'LogEntry_LabelsEntry');
+    if (v is! LogEntry_LabelsEntry) checkItemFailed(v, 'LogEntry_LabelsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -49,14 +52,14 @@ class _ReadonlyLogEntry_LabelsEntry extends LogEntry_LabelsEntry with ReadonlyMe
 
 class LogEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('LogEntry')
-    ..a/*<google$protobuf.Any>*/(2, 'protoPayload', PbFieldType.OM, google$protobuf.Any.getDefault, google$protobuf.Any.create)
-    ..a/*<String>*/(3, 'textPayload', PbFieldType.OS)
-    ..a/*<String>*/(4, 'insertId', PbFieldType.OS)
-    ..a/*<google$protobuf.Struct>*/(6, 'structPayload', PbFieldType.OM, google$protobuf.Struct.getDefault, google$protobuf.Struct.create)
-    ..a/*<String>*/(10, 'name', PbFieldType.OS)
-    ..a/*<google$protobuf.Timestamp>*/(11, 'timestamp', PbFieldType.OM, google$protobuf.Timestamp.getDefault, google$protobuf.Timestamp.create)
-    ..e/*<google$logging$type.LogSeverity>*/(12, 'severity', PbFieldType.OE, google$logging$type.LogSeverity.DEFAULT, google$logging$type.LogSeverity.valueOf)
-    ..pp/*<LogEntry_LabelsEntry>*/(13, 'labels', PbFieldType.PM, LogEntry_LabelsEntry.$checkItem, LogEntry_LabelsEntry.create)
+    ..a<$google$protobuf.Any>(2, 'protoPayload', PbFieldType.OM, $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
+    ..aOS(3, 'textPayload')
+    ..aOS(4, 'insertId')
+    ..a<$google$protobuf.Struct>(6, 'structPayload', PbFieldType.OM, $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
+    ..aOS(10, 'name')
+    ..a<$google$protobuf.Timestamp>(11, 'timestamp', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..e<$google$logging$type.LogSeverity>(12, 'severity', PbFieldType.OE, $google$logging$type.LogSeverity.DEFAULT, $google$logging$type.LogSeverity.valueOf, $google$logging$type.LogSeverity.values)
+    ..pp<LogEntry_LabelsEntry>(13, 'labels', PbFieldType.PM, LogEntry_LabelsEntry.$checkItem, LogEntry_LabelsEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -73,45 +76,45 @@ class LogEntry extends GeneratedMessage {
   }
   static LogEntry _defaultInstance;
   static void $checkItem(LogEntry v) {
-    if (v is !LogEntry) checkItemFailed(v, 'LogEntry');
+    if (v is! LogEntry) checkItemFailed(v, 'LogEntry');
   }
 
-  google$protobuf.Any get protoPayload => $_get(0, 2, null);
-  void set protoPayload(google$protobuf.Any v) { setField(2, v); }
-  bool hasProtoPayload() => $_has(0, 2);
+  $google$protobuf.Any get protoPayload => $_getN(0);
+  set protoPayload($google$protobuf.Any v) { setField(2, v); }
+  bool hasProtoPayload() => $_has(0);
   void clearProtoPayload() => clearField(2);
 
-  String get textPayload => $_get(1, 3, '');
-  void set textPayload(String v) { $_setString(1, 3, v); }
-  bool hasTextPayload() => $_has(1, 3);
+  String get textPayload => $_getS(1, '');
+  set textPayload(String v) { $_setString(1, v); }
+  bool hasTextPayload() => $_has(1);
   void clearTextPayload() => clearField(3);
 
-  String get insertId => $_get(2, 4, '');
-  void set insertId(String v) { $_setString(2, 4, v); }
-  bool hasInsertId() => $_has(2, 4);
+  String get insertId => $_getS(2, '');
+  set insertId(String v) { $_setString(2, v); }
+  bool hasInsertId() => $_has(2);
   void clearInsertId() => clearField(4);
 
-  google$protobuf.Struct get structPayload => $_get(3, 6, null);
-  void set structPayload(google$protobuf.Struct v) { setField(6, v); }
-  bool hasStructPayload() => $_has(3, 6);
+  $google$protobuf.Struct get structPayload => $_getN(3);
+  set structPayload($google$protobuf.Struct v) { setField(6, v); }
+  bool hasStructPayload() => $_has(3);
   void clearStructPayload() => clearField(6);
 
-  String get name => $_get(4, 10, '');
-  void set name(String v) { $_setString(4, 10, v); }
-  bool hasName() => $_has(4, 10);
+  String get name => $_getS(4, '');
+  set name(String v) { $_setString(4, v); }
+  bool hasName() => $_has(4);
   void clearName() => clearField(10);
 
-  google$protobuf.Timestamp get timestamp => $_get(5, 11, null);
-  void set timestamp(google$protobuf.Timestamp v) { setField(11, v); }
-  bool hasTimestamp() => $_has(5, 11);
+  $google$protobuf.Timestamp get timestamp => $_getN(5);
+  set timestamp($google$protobuf.Timestamp v) { setField(11, v); }
+  bool hasTimestamp() => $_has(5);
   void clearTimestamp() => clearField(11);
 
-  google$logging$type.LogSeverity get severity => $_get(6, 12, null);
-  void set severity(google$logging$type.LogSeverity v) { setField(12, v); }
-  bool hasSeverity() => $_has(6, 12);
+  $google$logging$type.LogSeverity get severity => $_getN(6);
+  set severity($google$logging$type.LogSeverity v) { setField(12, v); }
+  bool hasSeverity() => $_has(6);
   void clearSeverity() => clearField(12);
 
-  List<LogEntry_LabelsEntry> get labels => $_get(7, 13, null);
+  List<LogEntry_LabelsEntry> get labels => $_getList(7);
 }
 
 class _ReadonlyLogEntry extends LogEntry with ReadonlyMessageMixin {}

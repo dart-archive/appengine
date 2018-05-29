@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.v1_type;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,9 +14,9 @@ export 'type.pbenum.dart';
 
 class Type extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Type')
-    ..e/*<TypeCode>*/(1, 'code', PbFieldType.OE, TypeCode.TYPE_CODE_UNSPECIFIED, TypeCode.valueOf)
-    ..a/*<Type>*/(2, 'arrayElementType', PbFieldType.OM, Type.getDefault, Type.create)
-    ..a/*<StructType>*/(3, 'structType', PbFieldType.OM, StructType.getDefault, StructType.create)
+    ..e<TypeCode>(1, 'code', PbFieldType.OE, TypeCode.TYPE_CODE_UNSPECIFIED, TypeCode.valueOf, TypeCode.values)
+    ..a<Type>(2, 'arrayElementType', PbFieldType.OM, Type.getDefault, Type.create)
+    ..a<StructType>(3, 'structType', PbFieldType.OM, StructType.getDefault, StructType.create)
     ..hasRequiredFields = false
   ;
 
@@ -30,22 +33,22 @@ class Type extends GeneratedMessage {
   }
   static Type _defaultInstance;
   static void $checkItem(Type v) {
-    if (v is !Type) checkItemFailed(v, 'Type');
+    if (v is! Type) checkItemFailed(v, 'Type');
   }
 
-  TypeCode get code => $_get(0, 1, null);
-  void set code(TypeCode v) { setField(1, v); }
-  bool hasCode() => $_has(0, 1);
+  TypeCode get code => $_getN(0);
+  set code(TypeCode v) { setField(1, v); }
+  bool hasCode() => $_has(0);
   void clearCode() => clearField(1);
 
-  Type get arrayElementType => $_get(1, 2, null);
-  void set arrayElementType(Type v) { setField(2, v); }
-  bool hasArrayElementType() => $_has(1, 2);
+  Type get arrayElementType => $_getN(1);
+  set arrayElementType(Type v) { setField(2, v); }
+  bool hasArrayElementType() => $_has(1);
   void clearArrayElementType() => clearField(2);
 
-  StructType get structType => $_get(2, 3, null);
-  void set structType(StructType v) { setField(3, v); }
-  bool hasStructType() => $_has(2, 3);
+  StructType get structType => $_getN(2);
+  set structType(StructType v) { setField(3, v); }
+  bool hasStructType() => $_has(2);
   void clearStructType() => clearField(3);
 }
 
@@ -53,8 +56,8 @@ class _ReadonlyType extends Type with ReadonlyMessageMixin {}
 
 class StructType_Field extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StructType_Field')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<Type>*/(2, 'type', PbFieldType.OM, Type.getDefault, Type.create)
+    ..aOS(1, 'name')
+    ..a<Type>(2, 'type', PbFieldType.OM, Type.getDefault, Type.create)
     ..hasRequiredFields = false
   ;
 
@@ -71,17 +74,17 @@ class StructType_Field extends GeneratedMessage {
   }
   static StructType_Field _defaultInstance;
   static void $checkItem(StructType_Field v) {
-    if (v is !StructType_Field) checkItemFailed(v, 'StructType_Field');
+    if (v is! StructType_Field) checkItemFailed(v, 'StructType_Field');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Type get type => $_get(1, 2, null);
-  void set type(Type v) { setField(2, v); }
-  bool hasType() => $_has(1, 2);
+  Type get type => $_getN(1);
+  set type(Type v) { setField(2, v); }
+  bool hasType() => $_has(1);
   void clearType() => clearField(2);
 }
 
@@ -89,7 +92,7 @@ class _ReadonlyStructType_Field extends StructType_Field with ReadonlyMessageMix
 
 class StructType extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StructType')
-    ..pp/*<StructType_Field>*/(1, 'fields', PbFieldType.PM, StructType_Field.$checkItem, StructType_Field.create)
+    ..pp<StructType_Field>(1, 'fields', PbFieldType.PM, StructType_Field.$checkItem, StructType_Field.create)
     ..hasRequiredFields = false
   ;
 
@@ -106,10 +109,10 @@ class StructType extends GeneratedMessage {
   }
   static StructType _defaultInstance;
   static void $checkItem(StructType v) {
-    if (v is !StructType) checkItemFailed(v, 'StructType');
+    if (v is! StructType) checkItemFailed(v, 'StructType');
   }
 
-  List<StructType_Field> get fields => $_get(0, 1, null);
+  List<StructType_Field> get fields => $_getList(0);
 }
 
 class _ReadonlyStructType extends StructType with ReadonlyMessageMixin {}

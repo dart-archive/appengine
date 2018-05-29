@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.runtimeconfig.v1beta1_runtimeconfig_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -9,8 +9,8 @@ import 'package:protobuf/protobuf.dart';
 
 import 'runtimeconfig.pb.dart';
 import 'resources.pb.dart';
-import '../../../protobuf/empty.pb.dart' as google$protobuf;
-import '../../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../longrunning/operations.pb.dart' as $google$longrunning;
 import 'runtimeconfig.pbjson.dart';
 
 export 'runtimeconfig.pb.dart';
@@ -20,17 +20,17 @@ abstract class RuntimeConfigManagerServiceBase extends GeneratedService {
   Future<RuntimeConfig> getConfig(ServerContext ctx, GetConfigRequest request);
   Future<RuntimeConfig> createConfig(ServerContext ctx, CreateConfigRequest request);
   Future<RuntimeConfig> updateConfig(ServerContext ctx, UpdateConfigRequest request);
-  Future<google$protobuf.Empty> deleteConfig(ServerContext ctx, DeleteConfigRequest request);
+  Future<$google$protobuf.Empty> deleteConfig(ServerContext ctx, DeleteConfigRequest request);
   Future<ListVariablesResponse> listVariables(ServerContext ctx, ListVariablesRequest request);
   Future<Variable> getVariable(ServerContext ctx, GetVariableRequest request);
   Future<Variable> watchVariable(ServerContext ctx, WatchVariableRequest request);
   Future<Variable> createVariable(ServerContext ctx, CreateVariableRequest request);
   Future<Variable> updateVariable(ServerContext ctx, UpdateVariableRequest request);
-  Future<google$protobuf.Empty> deleteVariable(ServerContext ctx, DeleteVariableRequest request);
+  Future<$google$protobuf.Empty> deleteVariable(ServerContext ctx, DeleteVariableRequest request);
   Future<ListWaitersResponse> listWaiters(ServerContext ctx, ListWaitersRequest request);
   Future<Waiter> getWaiter(ServerContext ctx, GetWaiterRequest request);
-  Future<google$longrunning.Operation> createWaiter(ServerContext ctx, CreateWaiterRequest request);
-  Future<google$protobuf.Empty> deleteWaiter(ServerContext ctx, DeleteWaiterRequest request);
+  Future<$google$longrunning.Operation> createWaiter(ServerContext ctx, CreateWaiterRequest request);
+  Future<$google$protobuf.Empty> deleteWaiter(ServerContext ctx, DeleteWaiterRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -75,6 +75,6 @@ abstract class RuntimeConfigManagerServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => RuntimeConfigManager$json;
-  Map<String, dynamic> get $messageJson => RuntimeConfigManager$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => RuntimeConfigManager$messageJson;
 }
 

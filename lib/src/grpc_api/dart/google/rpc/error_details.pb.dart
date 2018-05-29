@@ -1,15 +1,18 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.rpc_error_details;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../protobuf/duration.pb.dart' as google$protobuf;
+import '../protobuf/duration.pb.dart' as $google$protobuf;
 
 class RetryInfo extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RetryInfo')
-    ..a/*<google$protobuf.Duration>*/(1, 'retryDelay', PbFieldType.OM, google$protobuf.Duration.getDefault, google$protobuf.Duration.create)
+    ..a<$google$protobuf.Duration>(1, 'retryDelay', PbFieldType.OM, $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..hasRequiredFields = false
   ;
 
@@ -26,12 +29,12 @@ class RetryInfo extends GeneratedMessage {
   }
   static RetryInfo _defaultInstance;
   static void $checkItem(RetryInfo v) {
-    if (v is !RetryInfo) checkItemFailed(v, 'RetryInfo');
+    if (v is! RetryInfo) checkItemFailed(v, 'RetryInfo');
   }
 
-  google$protobuf.Duration get retryDelay => $_get(0, 1, null);
-  void set retryDelay(google$protobuf.Duration v) { setField(1, v); }
-  bool hasRetryDelay() => $_has(0, 1);
+  $google$protobuf.Duration get retryDelay => $_getN(0);
+  set retryDelay($google$protobuf.Duration v) { setField(1, v); }
+  bool hasRetryDelay() => $_has(0);
   void clearRetryDelay() => clearField(1);
 }
 
@@ -39,8 +42,8 @@ class _ReadonlyRetryInfo extends RetryInfo with ReadonlyMessageMixin {}
 
 class DebugInfo extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DebugInfo')
-    ..p/*<String>*/(1, 'stackEntries', PbFieldType.PS)
-    ..a/*<String>*/(2, 'detail', PbFieldType.OS)
+    ..pPS(1, 'stackEntries')
+    ..aOS(2, 'detail')
     ..hasRequiredFields = false
   ;
 
@@ -57,14 +60,14 @@ class DebugInfo extends GeneratedMessage {
   }
   static DebugInfo _defaultInstance;
   static void $checkItem(DebugInfo v) {
-    if (v is !DebugInfo) checkItemFailed(v, 'DebugInfo');
+    if (v is! DebugInfo) checkItemFailed(v, 'DebugInfo');
   }
 
-  List<String> get stackEntries => $_get(0, 1, null);
+  List<String> get stackEntries => $_getList(0);
 
-  String get detail => $_get(1, 2, '');
-  void set detail(String v) { $_setString(1, 2, v); }
-  bool hasDetail() => $_has(1, 2);
+  String get detail => $_getS(1, '');
+  set detail(String v) { $_setString(1, v); }
+  bool hasDetail() => $_has(1);
   void clearDetail() => clearField(2);
 }
 
@@ -72,8 +75,8 @@ class _ReadonlyDebugInfo extends DebugInfo with ReadonlyMessageMixin {}
 
 class QuotaFailure_Violation extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('QuotaFailure_Violation')
-    ..a/*<String>*/(1, 'subject', PbFieldType.OS)
-    ..a/*<String>*/(2, 'description', PbFieldType.OS)
+    ..aOS(1, 'subject')
+    ..aOS(2, 'description')
     ..hasRequiredFields = false
   ;
 
@@ -90,17 +93,17 @@ class QuotaFailure_Violation extends GeneratedMessage {
   }
   static QuotaFailure_Violation _defaultInstance;
   static void $checkItem(QuotaFailure_Violation v) {
-    if (v is !QuotaFailure_Violation) checkItemFailed(v, 'QuotaFailure_Violation');
+    if (v is! QuotaFailure_Violation) checkItemFailed(v, 'QuotaFailure_Violation');
   }
 
-  String get subject => $_get(0, 1, '');
-  void set subject(String v) { $_setString(0, 1, v); }
-  bool hasSubject() => $_has(0, 1);
+  String get subject => $_getS(0, '');
+  set subject(String v) { $_setString(0, v); }
+  bool hasSubject() => $_has(0);
   void clearSubject() => clearField(1);
 
-  String get description => $_get(1, 2, '');
-  void set description(String v) { $_setString(1, 2, v); }
-  bool hasDescription() => $_has(1, 2);
+  String get description => $_getS(1, '');
+  set description(String v) { $_setString(1, v); }
+  bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 }
 
@@ -108,7 +111,7 @@ class _ReadonlyQuotaFailure_Violation extends QuotaFailure_Violation with Readon
 
 class QuotaFailure extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('QuotaFailure')
-    ..pp/*<QuotaFailure_Violation>*/(1, 'violations', PbFieldType.PM, QuotaFailure_Violation.$checkItem, QuotaFailure_Violation.create)
+    ..pp<QuotaFailure_Violation>(1, 'violations', PbFieldType.PM, QuotaFailure_Violation.$checkItem, QuotaFailure_Violation.create)
     ..hasRequiredFields = false
   ;
 
@@ -125,18 +128,87 @@ class QuotaFailure extends GeneratedMessage {
   }
   static QuotaFailure _defaultInstance;
   static void $checkItem(QuotaFailure v) {
-    if (v is !QuotaFailure) checkItemFailed(v, 'QuotaFailure');
+    if (v is! QuotaFailure) checkItemFailed(v, 'QuotaFailure');
   }
 
-  List<QuotaFailure_Violation> get violations => $_get(0, 1, null);
+  List<QuotaFailure_Violation> get violations => $_getList(0);
 }
 
 class _ReadonlyQuotaFailure extends QuotaFailure with ReadonlyMessageMixin {}
 
+class PreconditionFailure_Violation extends GeneratedMessage {
+  static final BuilderInfo _i = new BuilderInfo('PreconditionFailure_Violation')
+    ..aOS(1, 'type')
+    ..aOS(2, 'subject')
+    ..aOS(3, 'description')
+    ..hasRequiredFields = false
+  ;
+
+  PreconditionFailure_Violation() : super();
+  PreconditionFailure_Violation.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  PreconditionFailure_Violation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  PreconditionFailure_Violation clone() => new PreconditionFailure_Violation()..mergeFromMessage(this);
+  BuilderInfo get info_ => _i;
+  static PreconditionFailure_Violation create() => new PreconditionFailure_Violation();
+  static PbList<PreconditionFailure_Violation> createRepeated() => new PbList<PreconditionFailure_Violation>();
+  static PreconditionFailure_Violation getDefault() {
+    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPreconditionFailure_Violation();
+    return _defaultInstance;
+  }
+  static PreconditionFailure_Violation _defaultInstance;
+  static void $checkItem(PreconditionFailure_Violation v) {
+    if (v is! PreconditionFailure_Violation) checkItemFailed(v, 'PreconditionFailure_Violation');
+  }
+
+  String get type => $_getS(0, '');
+  set type(String v) { $_setString(0, v); }
+  bool hasType() => $_has(0);
+  void clearType() => clearField(1);
+
+  String get subject => $_getS(1, '');
+  set subject(String v) { $_setString(1, v); }
+  bool hasSubject() => $_has(1);
+  void clearSubject() => clearField(2);
+
+  String get description => $_getS(2, '');
+  set description(String v) { $_setString(2, v); }
+  bool hasDescription() => $_has(2);
+  void clearDescription() => clearField(3);
+}
+
+class _ReadonlyPreconditionFailure_Violation extends PreconditionFailure_Violation with ReadonlyMessageMixin {}
+
+class PreconditionFailure extends GeneratedMessage {
+  static final BuilderInfo _i = new BuilderInfo('PreconditionFailure')
+    ..pp<PreconditionFailure_Violation>(1, 'violations', PbFieldType.PM, PreconditionFailure_Violation.$checkItem, PreconditionFailure_Violation.create)
+    ..hasRequiredFields = false
+  ;
+
+  PreconditionFailure() : super();
+  PreconditionFailure.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  PreconditionFailure.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  PreconditionFailure clone() => new PreconditionFailure()..mergeFromMessage(this);
+  BuilderInfo get info_ => _i;
+  static PreconditionFailure create() => new PreconditionFailure();
+  static PbList<PreconditionFailure> createRepeated() => new PbList<PreconditionFailure>();
+  static PreconditionFailure getDefault() {
+    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPreconditionFailure();
+    return _defaultInstance;
+  }
+  static PreconditionFailure _defaultInstance;
+  static void $checkItem(PreconditionFailure v) {
+    if (v is! PreconditionFailure) checkItemFailed(v, 'PreconditionFailure');
+  }
+
+  List<PreconditionFailure_Violation> get violations => $_getList(0);
+}
+
+class _ReadonlyPreconditionFailure extends PreconditionFailure with ReadonlyMessageMixin {}
+
 class BadRequest_FieldViolation extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BadRequest_FieldViolation')
-    ..a/*<String>*/(1, 'field_1', PbFieldType.OS)
-    ..a/*<String>*/(2, 'description', PbFieldType.OS)
+    ..aOS(1, 'field_1')
+    ..aOS(2, 'description')
     ..hasRequiredFields = false
   ;
 
@@ -153,17 +225,17 @@ class BadRequest_FieldViolation extends GeneratedMessage {
   }
   static BadRequest_FieldViolation _defaultInstance;
   static void $checkItem(BadRequest_FieldViolation v) {
-    if (v is !BadRequest_FieldViolation) checkItemFailed(v, 'BadRequest_FieldViolation');
+    if (v is! BadRequest_FieldViolation) checkItemFailed(v, 'BadRequest_FieldViolation');
   }
 
-  String get field_1 => $_get(0, 1, '');
-  void set field_1(String v) { $_setString(0, 1, v); }
-  bool hasField_1() => $_has(0, 1);
+  String get field_1 => $_getS(0, '');
+  set field_1(String v) { $_setString(0, v); }
+  bool hasField_1() => $_has(0);
   void clearField_1() => clearField(1);
 
-  String get description => $_get(1, 2, '');
-  void set description(String v) { $_setString(1, 2, v); }
-  bool hasDescription() => $_has(1, 2);
+  String get description => $_getS(1, '');
+  set description(String v) { $_setString(1, v); }
+  bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 }
 
@@ -171,7 +243,7 @@ class _ReadonlyBadRequest_FieldViolation extends BadRequest_FieldViolation with 
 
 class BadRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BadRequest')
-    ..pp/*<BadRequest_FieldViolation>*/(1, 'fieldViolations', PbFieldType.PM, BadRequest_FieldViolation.$checkItem, BadRequest_FieldViolation.create)
+    ..pp<BadRequest_FieldViolation>(1, 'fieldViolations', PbFieldType.PM, BadRequest_FieldViolation.$checkItem, BadRequest_FieldViolation.create)
     ..hasRequiredFields = false
   ;
 
@@ -188,18 +260,18 @@ class BadRequest extends GeneratedMessage {
   }
   static BadRequest _defaultInstance;
   static void $checkItem(BadRequest v) {
-    if (v is !BadRequest) checkItemFailed(v, 'BadRequest');
+    if (v is! BadRequest) checkItemFailed(v, 'BadRequest');
   }
 
-  List<BadRequest_FieldViolation> get fieldViolations => $_get(0, 1, null);
+  List<BadRequest_FieldViolation> get fieldViolations => $_getList(0);
 }
 
 class _ReadonlyBadRequest extends BadRequest with ReadonlyMessageMixin {}
 
 class RequestInfo extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RequestInfo')
-    ..a/*<String>*/(1, 'requestId', PbFieldType.OS)
-    ..a/*<String>*/(2, 'servingData', PbFieldType.OS)
+    ..aOS(1, 'requestId')
+    ..aOS(2, 'servingData')
     ..hasRequiredFields = false
   ;
 
@@ -216,17 +288,17 @@ class RequestInfo extends GeneratedMessage {
   }
   static RequestInfo _defaultInstance;
   static void $checkItem(RequestInfo v) {
-    if (v is !RequestInfo) checkItemFailed(v, 'RequestInfo');
+    if (v is! RequestInfo) checkItemFailed(v, 'RequestInfo');
   }
 
-  String get requestId => $_get(0, 1, '');
-  void set requestId(String v) { $_setString(0, 1, v); }
-  bool hasRequestId() => $_has(0, 1);
+  String get requestId => $_getS(0, '');
+  set requestId(String v) { $_setString(0, v); }
+  bool hasRequestId() => $_has(0);
   void clearRequestId() => clearField(1);
 
-  String get servingData => $_get(1, 2, '');
-  void set servingData(String v) { $_setString(1, 2, v); }
-  bool hasServingData() => $_has(1, 2);
+  String get servingData => $_getS(1, '');
+  set servingData(String v) { $_setString(1, v); }
+  bool hasServingData() => $_has(1);
   void clearServingData() => clearField(2);
 }
 
@@ -234,10 +306,10 @@ class _ReadonlyRequestInfo extends RequestInfo with ReadonlyMessageMixin {}
 
 class ResourceInfo extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ResourceInfo')
-    ..a/*<String>*/(1, 'resourceType', PbFieldType.OS)
-    ..a/*<String>*/(2, 'resourceName', PbFieldType.OS)
-    ..a/*<String>*/(3, 'owner', PbFieldType.OS)
-    ..a/*<String>*/(4, 'description', PbFieldType.OS)
+    ..aOS(1, 'resourceType')
+    ..aOS(2, 'resourceName')
+    ..aOS(3, 'owner')
+    ..aOS(4, 'description')
     ..hasRequiredFields = false
   ;
 
@@ -254,27 +326,27 @@ class ResourceInfo extends GeneratedMessage {
   }
   static ResourceInfo _defaultInstance;
   static void $checkItem(ResourceInfo v) {
-    if (v is !ResourceInfo) checkItemFailed(v, 'ResourceInfo');
+    if (v is! ResourceInfo) checkItemFailed(v, 'ResourceInfo');
   }
 
-  String get resourceType => $_get(0, 1, '');
-  void set resourceType(String v) { $_setString(0, 1, v); }
-  bool hasResourceType() => $_has(0, 1);
+  String get resourceType => $_getS(0, '');
+  set resourceType(String v) { $_setString(0, v); }
+  bool hasResourceType() => $_has(0);
   void clearResourceType() => clearField(1);
 
-  String get resourceName => $_get(1, 2, '');
-  void set resourceName(String v) { $_setString(1, 2, v); }
-  bool hasResourceName() => $_has(1, 2);
+  String get resourceName => $_getS(1, '');
+  set resourceName(String v) { $_setString(1, v); }
+  bool hasResourceName() => $_has(1);
   void clearResourceName() => clearField(2);
 
-  String get owner => $_get(2, 3, '');
-  void set owner(String v) { $_setString(2, 3, v); }
-  bool hasOwner() => $_has(2, 3);
+  String get owner => $_getS(2, '');
+  set owner(String v) { $_setString(2, v); }
+  bool hasOwner() => $_has(2);
   void clearOwner() => clearField(3);
 
-  String get description => $_get(3, 4, '');
-  void set description(String v) { $_setString(3, 4, v); }
-  bool hasDescription() => $_has(3, 4);
+  String get description => $_getS(3, '');
+  set description(String v) { $_setString(3, v); }
+  bool hasDescription() => $_has(3);
   void clearDescription() => clearField(4);
 }
 
@@ -282,8 +354,8 @@ class _ReadonlyResourceInfo extends ResourceInfo with ReadonlyMessageMixin {}
 
 class Help_Link extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Help_Link')
-    ..a/*<String>*/(1, 'description', PbFieldType.OS)
-    ..a/*<String>*/(2, 'url', PbFieldType.OS)
+    ..aOS(1, 'description')
+    ..aOS(2, 'url')
     ..hasRequiredFields = false
   ;
 
@@ -300,17 +372,17 @@ class Help_Link extends GeneratedMessage {
   }
   static Help_Link _defaultInstance;
   static void $checkItem(Help_Link v) {
-    if (v is !Help_Link) checkItemFailed(v, 'Help_Link');
+    if (v is! Help_Link) checkItemFailed(v, 'Help_Link');
   }
 
-  String get description => $_get(0, 1, '');
-  void set description(String v) { $_setString(0, 1, v); }
-  bool hasDescription() => $_has(0, 1);
+  String get description => $_getS(0, '');
+  set description(String v) { $_setString(0, v); }
+  bool hasDescription() => $_has(0);
   void clearDescription() => clearField(1);
 
-  String get url => $_get(1, 2, '');
-  void set url(String v) { $_setString(1, 2, v); }
-  bool hasUrl() => $_has(1, 2);
+  String get url => $_getS(1, '');
+  set url(String v) { $_setString(1, v); }
+  bool hasUrl() => $_has(1);
   void clearUrl() => clearField(2);
 }
 
@@ -318,7 +390,7 @@ class _ReadonlyHelp_Link extends Help_Link with ReadonlyMessageMixin {}
 
 class Help extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Help')
-    ..pp/*<Help_Link>*/(1, 'links', PbFieldType.PM, Help_Link.$checkItem, Help_Link.create)
+    ..pp<Help_Link>(1, 'links', PbFieldType.PM, Help_Link.$checkItem, Help_Link.create)
     ..hasRequiredFields = false
   ;
 
@@ -335,18 +407,18 @@ class Help extends GeneratedMessage {
   }
   static Help _defaultInstance;
   static void $checkItem(Help v) {
-    if (v is !Help) checkItemFailed(v, 'Help');
+    if (v is! Help) checkItemFailed(v, 'Help');
   }
 
-  List<Help_Link> get links => $_get(0, 1, null);
+  List<Help_Link> get links => $_getList(0);
 }
 
 class _ReadonlyHelp extends Help with ReadonlyMessageMixin {}
 
 class LocalizedMessage extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('LocalizedMessage')
-    ..a/*<String>*/(1, 'locale', PbFieldType.OS)
-    ..a/*<String>*/(2, 'message', PbFieldType.OS)
+    ..aOS(1, 'locale')
+    ..aOS(2, 'message')
     ..hasRequiredFields = false
   ;
 
@@ -363,17 +435,17 @@ class LocalizedMessage extends GeneratedMessage {
   }
   static LocalizedMessage _defaultInstance;
   static void $checkItem(LocalizedMessage v) {
-    if (v is !LocalizedMessage) checkItemFailed(v, 'LocalizedMessage');
+    if (v is! LocalizedMessage) checkItemFailed(v, 'LocalizedMessage');
   }
 
-  String get locale => $_get(0, 1, '');
-  void set locale(String v) { $_setString(0, 1, v); }
-  bool hasLocale() => $_has(0, 1);
+  String get locale => $_getS(0, '');
+  set locale(String v) { $_setString(0, v); }
+  bool hasLocale() => $_has(0);
   void clearLocale() => clearField(1);
 
-  String get message => $_get(1, 2, '');
-  void set message(String v) { $_setString(1, 2, v); }
-  bool hasMessage() => $_has(1, 2);
+  String get message => $_getS(1, '');
+  set message(String v) { $_setString(1, v); }
+  bool hasMessage() => $_has(1);
   void clearMessage() => clearField(2);
 }
 

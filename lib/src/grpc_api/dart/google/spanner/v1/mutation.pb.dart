@@ -1,18 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.spanner.v1_mutation;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../protobuf/struct.pb.dart' as google$protobuf;
+import '../../protobuf/struct.pb.dart' as $google$protobuf;
 import 'keys.pb.dart';
 
 class Mutation_Write extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Mutation_Write')
-    ..a/*<String>*/(1, 'table', PbFieldType.OS)
-    ..p/*<String>*/(2, 'columns', PbFieldType.PS)
-    ..pp/*<google$protobuf.ListValue>*/(3, 'values', PbFieldType.PM, google$protobuf.ListValue.$checkItem, google$protobuf.ListValue.create)
+    ..aOS(1, 'table')
+    ..pPS(2, 'columns')
+    ..pp<$google$protobuf.ListValue>(3, 'values', PbFieldType.PM, $google$protobuf.ListValue.$checkItem, $google$protobuf.ListValue.create)
     ..hasRequiredFields = false
   ;
 
@@ -29,25 +32,25 @@ class Mutation_Write extends GeneratedMessage {
   }
   static Mutation_Write _defaultInstance;
   static void $checkItem(Mutation_Write v) {
-    if (v is !Mutation_Write) checkItemFailed(v, 'Mutation_Write');
+    if (v is! Mutation_Write) checkItemFailed(v, 'Mutation_Write');
   }
 
-  String get table => $_get(0, 1, '');
-  void set table(String v) { $_setString(0, 1, v); }
-  bool hasTable() => $_has(0, 1);
+  String get table => $_getS(0, '');
+  set table(String v) { $_setString(0, v); }
+  bool hasTable() => $_has(0);
   void clearTable() => clearField(1);
 
-  List<String> get columns => $_get(1, 2, null);
+  List<String> get columns => $_getList(1);
 
-  List<google$protobuf.ListValue> get values => $_get(2, 3, null);
+  List<$google$protobuf.ListValue> get values => $_getList(2);
 }
 
 class _ReadonlyMutation_Write extends Mutation_Write with ReadonlyMessageMixin {}
 
 class Mutation_Delete extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Mutation_Delete')
-    ..a/*<String>*/(1, 'table', PbFieldType.OS)
-    ..a/*<KeySet>*/(2, 'keySet', PbFieldType.OM, KeySet.getDefault, KeySet.create)
+    ..aOS(1, 'table')
+    ..a<KeySet>(2, 'keySet', PbFieldType.OM, KeySet.getDefault, KeySet.create)
     ..hasRequiredFields = false
   ;
 
@@ -64,17 +67,17 @@ class Mutation_Delete extends GeneratedMessage {
   }
   static Mutation_Delete _defaultInstance;
   static void $checkItem(Mutation_Delete v) {
-    if (v is !Mutation_Delete) checkItemFailed(v, 'Mutation_Delete');
+    if (v is! Mutation_Delete) checkItemFailed(v, 'Mutation_Delete');
   }
 
-  String get table => $_get(0, 1, '');
-  void set table(String v) { $_setString(0, 1, v); }
-  bool hasTable() => $_has(0, 1);
+  String get table => $_getS(0, '');
+  set table(String v) { $_setString(0, v); }
+  bool hasTable() => $_has(0);
   void clearTable() => clearField(1);
 
-  KeySet get keySet => $_get(1, 2, null);
-  void set keySet(KeySet v) { setField(2, v); }
-  bool hasKeySet() => $_has(1, 2);
+  KeySet get keySet => $_getN(1);
+  set keySet(KeySet v) { setField(2, v); }
+  bool hasKeySet() => $_has(1);
   void clearKeySet() => clearField(2);
 }
 
@@ -82,11 +85,11 @@ class _ReadonlyMutation_Delete extends Mutation_Delete with ReadonlyMessageMixin
 
 class Mutation extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Mutation')
-    ..a/*<Mutation_Write>*/(1, 'insert', PbFieldType.OM, Mutation_Write.getDefault, Mutation_Write.create)
-    ..a/*<Mutation_Write>*/(2, 'update', PbFieldType.OM, Mutation_Write.getDefault, Mutation_Write.create)
-    ..a/*<Mutation_Write>*/(3, 'insertOrUpdate', PbFieldType.OM, Mutation_Write.getDefault, Mutation_Write.create)
-    ..a/*<Mutation_Write>*/(4, 'replace', PbFieldType.OM, Mutation_Write.getDefault, Mutation_Write.create)
-    ..a/*<Mutation_Delete>*/(5, 'delete', PbFieldType.OM, Mutation_Delete.getDefault, Mutation_Delete.create)
+    ..a<Mutation_Write>(1, 'insert', PbFieldType.OM, Mutation_Write.getDefault, Mutation_Write.create)
+    ..a<Mutation_Write>(2, 'update', PbFieldType.OM, Mutation_Write.getDefault, Mutation_Write.create)
+    ..a<Mutation_Write>(3, 'insertOrUpdate', PbFieldType.OM, Mutation_Write.getDefault, Mutation_Write.create)
+    ..a<Mutation_Write>(4, 'replace', PbFieldType.OM, Mutation_Write.getDefault, Mutation_Write.create)
+    ..a<Mutation_Delete>(5, 'delete', PbFieldType.OM, Mutation_Delete.getDefault, Mutation_Delete.create)
     ..hasRequiredFields = false
   ;
 
@@ -103,32 +106,32 @@ class Mutation extends GeneratedMessage {
   }
   static Mutation _defaultInstance;
   static void $checkItem(Mutation v) {
-    if (v is !Mutation) checkItemFailed(v, 'Mutation');
+    if (v is! Mutation) checkItemFailed(v, 'Mutation');
   }
 
-  Mutation_Write get insert => $_get(0, 1, null);
-  void set insert(Mutation_Write v) { setField(1, v); }
-  bool hasInsert() => $_has(0, 1);
+  Mutation_Write get insert => $_getN(0);
+  set insert(Mutation_Write v) { setField(1, v); }
+  bool hasInsert() => $_has(0);
   void clearInsert() => clearField(1);
 
-  Mutation_Write get update => $_get(1, 2, null);
-  void set update(Mutation_Write v) { setField(2, v); }
-  bool hasUpdate() => $_has(1, 2);
+  Mutation_Write get update => $_getN(1);
+  set update(Mutation_Write v) { setField(2, v); }
+  bool hasUpdate() => $_has(1);
   void clearUpdate() => clearField(2);
 
-  Mutation_Write get insertOrUpdate => $_get(2, 3, null);
-  void set insertOrUpdate(Mutation_Write v) { setField(3, v); }
-  bool hasInsertOrUpdate() => $_has(2, 3);
+  Mutation_Write get insertOrUpdate => $_getN(2);
+  set insertOrUpdate(Mutation_Write v) { setField(3, v); }
+  bool hasInsertOrUpdate() => $_has(2);
   void clearInsertOrUpdate() => clearField(3);
 
-  Mutation_Write get replace => $_get(3, 4, null);
-  void set replace(Mutation_Write v) { setField(4, v); }
-  bool hasReplace() => $_has(3, 4);
+  Mutation_Write get replace => $_getN(3);
+  set replace(Mutation_Write v) { setField(4, v); }
+  bool hasReplace() => $_has(3);
   void clearReplace() => clearField(4);
 
-  Mutation_Delete get delete => $_get(4, 5, null);
-  void set delete(Mutation_Delete v) { setField(5, v); }
-  bool hasDelete() => $_has(4, 5);
+  Mutation_Delete get delete => $_getN(4);
+  set delete(Mutation_Delete v) { setField(5, v); }
+  bool hasDelete() => $_has(4);
   void clearDelete() => clearField(5);
 }
 

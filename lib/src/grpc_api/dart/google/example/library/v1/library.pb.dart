@@ -1,20 +1,22 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.example.library.v1_library;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class Book extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Book')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'author', PbFieldType.OS)
-    ..a/*<String>*/(3, 'title', PbFieldType.OS)
-    ..a/*<bool>*/(4, 'read', PbFieldType.OB)
+    ..aOS(1, 'name')
+    ..aOS(2, 'author')
+    ..aOS(3, 'title')
+    ..aOB(4, 'read')
     ..hasRequiredFields = false
   ;
 
@@ -31,27 +33,27 @@ class Book extends GeneratedMessage {
   }
   static Book _defaultInstance;
   static void $checkItem(Book v) {
-    if (v is !Book) checkItemFailed(v, 'Book');
+    if (v is! Book) checkItemFailed(v, 'Book');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get author => $_get(1, 2, '');
-  void set author(String v) { $_setString(1, 2, v); }
-  bool hasAuthor() => $_has(1, 2);
+  String get author => $_getS(1, '');
+  set author(String v) { $_setString(1, v); }
+  bool hasAuthor() => $_has(1);
   void clearAuthor() => clearField(2);
 
-  String get title => $_get(2, 3, '');
-  void set title(String v) { $_setString(2, 3, v); }
-  bool hasTitle() => $_has(2, 3);
+  String get title => $_getS(2, '');
+  set title(String v) { $_setString(2, v); }
+  bool hasTitle() => $_has(2);
   void clearTitle() => clearField(3);
 
-  bool get read => $_get(3, 4, false);
-  void set read(bool v) { $_setBool(3, 4, v); }
-  bool hasRead() => $_has(3, 4);
+  bool get read => $_get(3, false);
+  set read(bool v) { $_setBool(3, v); }
+  bool hasRead() => $_has(3);
   void clearRead() => clearField(4);
 }
 
@@ -59,8 +61,8 @@ class _ReadonlyBook extends Book with ReadonlyMessageMixin {}
 
 class Shelf extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Shelf')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'theme', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..aOS(2, 'theme')
     ..hasRequiredFields = false
   ;
 
@@ -77,17 +79,17 @@ class Shelf extends GeneratedMessage {
   }
   static Shelf _defaultInstance;
   static void $checkItem(Shelf v) {
-    if (v is !Shelf) checkItemFailed(v, 'Shelf');
+    if (v is! Shelf) checkItemFailed(v, 'Shelf');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get theme => $_get(1, 2, '');
-  void set theme(String v) { $_setString(1, 2, v); }
-  bool hasTheme() => $_has(1, 2);
+  String get theme => $_getS(1, '');
+  set theme(String v) { $_setString(1, v); }
+  bool hasTheme() => $_has(1);
   void clearTheme() => clearField(2);
 }
 
@@ -95,7 +97,7 @@ class _ReadonlyShelf extends Shelf with ReadonlyMessageMixin {}
 
 class CreateShelfRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateShelfRequest')
-    ..a/*<Shelf>*/(1, 'shelf', PbFieldType.OM, Shelf.getDefault, Shelf.create)
+    ..a<Shelf>(1, 'shelf', PbFieldType.OM, Shelf.getDefault, Shelf.create)
     ..hasRequiredFields = false
   ;
 
@@ -112,12 +114,12 @@ class CreateShelfRequest extends GeneratedMessage {
   }
   static CreateShelfRequest _defaultInstance;
   static void $checkItem(CreateShelfRequest v) {
-    if (v is !CreateShelfRequest) checkItemFailed(v, 'CreateShelfRequest');
+    if (v is! CreateShelfRequest) checkItemFailed(v, 'CreateShelfRequest');
   }
 
-  Shelf get shelf => $_get(0, 1, null);
-  void set shelf(Shelf v) { setField(1, v); }
-  bool hasShelf() => $_has(0, 1);
+  Shelf get shelf => $_getN(0);
+  set shelf(Shelf v) { setField(1, v); }
+  bool hasShelf() => $_has(0);
   void clearShelf() => clearField(1);
 }
 
@@ -125,7 +127,7 @@ class _ReadonlyCreateShelfRequest extends CreateShelfRequest with ReadonlyMessag
 
 class GetShelfRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetShelfRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -142,12 +144,12 @@ class GetShelfRequest extends GeneratedMessage {
   }
   static GetShelfRequest _defaultInstance;
   static void $checkItem(GetShelfRequest v) {
-    if (v is !GetShelfRequest) checkItemFailed(v, 'GetShelfRequest');
+    if (v is! GetShelfRequest) checkItemFailed(v, 'GetShelfRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -155,8 +157,8 @@ class _ReadonlyGetShelfRequest extends GetShelfRequest with ReadonlyMessageMixin
 
 class ListShelvesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListShelvesRequest')
-    ..a/*<int>*/(1, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(2, 'pageToken', PbFieldType.OS)
+    ..a<int>(1, 'pageSize', PbFieldType.O3)
+    ..aOS(2, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -173,17 +175,17 @@ class ListShelvesRequest extends GeneratedMessage {
   }
   static ListShelvesRequest _defaultInstance;
   static void $checkItem(ListShelvesRequest v) {
-    if (v is !ListShelvesRequest) checkItemFailed(v, 'ListShelvesRequest');
+    if (v is! ListShelvesRequest) checkItemFailed(v, 'ListShelvesRequest');
   }
 
-  int get pageSize => $_get(0, 1, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasPageSize() => $_has(0, 1);
+  int get pageSize => $_get(0, 0);
+  set pageSize(int v) { $_setSignedInt32(0, v); }
+  bool hasPageSize() => $_has(0);
   void clearPageSize() => clearField(1);
 
-  String get pageToken => $_get(1, 2, '');
-  void set pageToken(String v) { $_setString(1, 2, v); }
-  bool hasPageToken() => $_has(1, 2);
+  String get pageToken => $_getS(1, '');
+  set pageToken(String v) { $_setString(1, v); }
+  bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 }
 
@@ -191,8 +193,8 @@ class _ReadonlyListShelvesRequest extends ListShelvesRequest with ReadonlyMessag
 
 class ListShelvesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListShelvesResponse')
-    ..pp/*<Shelf>*/(1, 'shelves', PbFieldType.PM, Shelf.$checkItem, Shelf.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Shelf>(1, 'shelves', PbFieldType.PM, Shelf.$checkItem, Shelf.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -209,14 +211,14 @@ class ListShelvesResponse extends GeneratedMessage {
   }
   static ListShelvesResponse _defaultInstance;
   static void $checkItem(ListShelvesResponse v) {
-    if (v is !ListShelvesResponse) checkItemFailed(v, 'ListShelvesResponse');
+    if (v is! ListShelvesResponse) checkItemFailed(v, 'ListShelvesResponse');
   }
 
-  List<Shelf> get shelves => $_get(0, 1, null);
+  List<Shelf> get shelves => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -224,7 +226,7 @@ class _ReadonlyListShelvesResponse extends ListShelvesResponse with ReadonlyMess
 
 class DeleteShelfRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteShelfRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -241,12 +243,12 @@ class DeleteShelfRequest extends GeneratedMessage {
   }
   static DeleteShelfRequest _defaultInstance;
   static void $checkItem(DeleteShelfRequest v) {
-    if (v is !DeleteShelfRequest) checkItemFailed(v, 'DeleteShelfRequest');
+    if (v is! DeleteShelfRequest) checkItemFailed(v, 'DeleteShelfRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -254,8 +256,8 @@ class _ReadonlyDeleteShelfRequest extends DeleteShelfRequest with ReadonlyMessag
 
 class MergeShelvesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('MergeShelvesRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'otherShelfName', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..aOS(2, 'otherShelfName')
     ..hasRequiredFields = false
   ;
 
@@ -272,17 +274,17 @@ class MergeShelvesRequest extends GeneratedMessage {
   }
   static MergeShelvesRequest _defaultInstance;
   static void $checkItem(MergeShelvesRequest v) {
-    if (v is !MergeShelvesRequest) checkItemFailed(v, 'MergeShelvesRequest');
+    if (v is! MergeShelvesRequest) checkItemFailed(v, 'MergeShelvesRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get otherShelfName => $_get(1, 2, '');
-  void set otherShelfName(String v) { $_setString(1, 2, v); }
-  bool hasOtherShelfName() => $_has(1, 2);
+  String get otherShelfName => $_getS(1, '');
+  set otherShelfName(String v) { $_setString(1, v); }
+  bool hasOtherShelfName() => $_has(1);
   void clearOtherShelfName() => clearField(2);
 }
 
@@ -290,8 +292,8 @@ class _ReadonlyMergeShelvesRequest extends MergeShelvesRequest with ReadonlyMess
 
 class CreateBookRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateBookRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<Book>*/(2, 'book', PbFieldType.OM, Book.getDefault, Book.create)
+    ..aOS(1, 'name')
+    ..a<Book>(2, 'book', PbFieldType.OM, Book.getDefault, Book.create)
     ..hasRequiredFields = false
   ;
 
@@ -308,17 +310,17 @@ class CreateBookRequest extends GeneratedMessage {
   }
   static CreateBookRequest _defaultInstance;
   static void $checkItem(CreateBookRequest v) {
-    if (v is !CreateBookRequest) checkItemFailed(v, 'CreateBookRequest');
+    if (v is! CreateBookRequest) checkItemFailed(v, 'CreateBookRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Book get book => $_get(1, 2, null);
-  void set book(Book v) { setField(2, v); }
-  bool hasBook() => $_has(1, 2);
+  Book get book => $_getN(1);
+  set book(Book v) { setField(2, v); }
+  bool hasBook() => $_has(1);
   void clearBook() => clearField(2);
 }
 
@@ -326,7 +328,7 @@ class _ReadonlyCreateBookRequest extends CreateBookRequest with ReadonlyMessageM
 
 class GetBookRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetBookRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -343,12 +345,12 @@ class GetBookRequest extends GeneratedMessage {
   }
   static GetBookRequest _defaultInstance;
   static void $checkItem(GetBookRequest v) {
-    if (v is !GetBookRequest) checkItemFailed(v, 'GetBookRequest');
+    if (v is! GetBookRequest) checkItemFailed(v, 'GetBookRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -356,9 +358,9 @@ class _ReadonlyGetBookRequest extends GetBookRequest with ReadonlyMessageMixin {
 
 class ListBooksRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListBooksRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<int>*/(2, 'pageSize', PbFieldType.O3)
-    ..a/*<String>*/(3, 'pageToken', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
     ..hasRequiredFields = false
   ;
 
@@ -375,22 +377,22 @@ class ListBooksRequest extends GeneratedMessage {
   }
   static ListBooksRequest _defaultInstance;
   static void $checkItem(ListBooksRequest v) {
-    if (v is !ListBooksRequest) checkItemFailed(v, 'ListBooksRequest');
+    if (v is! ListBooksRequest) checkItemFailed(v, 'ListBooksRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  int get pageSize => $_get(1, 2, 0);
-  void set pageSize(int v) { $_setUnsignedInt32(1, 2, v); }
-  bool hasPageSize() => $_has(1, 2);
+  int get pageSize => $_get(1, 0);
+  set pageSize(int v) { $_setSignedInt32(1, v); }
+  bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_get(2, 3, '');
-  void set pageToken(String v) { $_setString(2, 3, v); }
-  bool hasPageToken() => $_has(2, 3);
+  String get pageToken => $_getS(2, '');
+  set pageToken(String v) { $_setString(2, v); }
+  bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
@@ -398,8 +400,8 @@ class _ReadonlyListBooksRequest extends ListBooksRequest with ReadonlyMessageMix
 
 class ListBooksResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListBooksResponse')
-    ..pp/*<Book>*/(1, 'books', PbFieldType.PM, Book.$checkItem, Book.create)
-    ..a/*<String>*/(2, 'nextPageToken', PbFieldType.OS)
+    ..pp<Book>(1, 'books', PbFieldType.PM, Book.$checkItem, Book.create)
+    ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -416,14 +418,14 @@ class ListBooksResponse extends GeneratedMessage {
   }
   static ListBooksResponse _defaultInstance;
   static void $checkItem(ListBooksResponse v) {
-    if (v is !ListBooksResponse) checkItemFailed(v, 'ListBooksResponse');
+    if (v is! ListBooksResponse) checkItemFailed(v, 'ListBooksResponse');
   }
 
-  List<Book> get books => $_get(0, 1, null);
+  List<Book> get books => $_getList(0);
 
-  String get nextPageToken => $_get(1, 2, '');
-  void set nextPageToken(String v) { $_setString(1, 2, v); }
-  bool hasNextPageToken() => $_has(1, 2);
+  String get nextPageToken => $_getS(1, '');
+  set nextPageToken(String v) { $_setString(1, v); }
+  bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
@@ -431,8 +433,8 @@ class _ReadonlyListBooksResponse extends ListBooksResponse with ReadonlyMessageM
 
 class UpdateBookRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateBookRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<Book>*/(2, 'book', PbFieldType.OM, Book.getDefault, Book.create)
+    ..aOS(1, 'name')
+    ..a<Book>(2, 'book', PbFieldType.OM, Book.getDefault, Book.create)
     ..hasRequiredFields = false
   ;
 
@@ -449,17 +451,17 @@ class UpdateBookRequest extends GeneratedMessage {
   }
   static UpdateBookRequest _defaultInstance;
   static void $checkItem(UpdateBookRequest v) {
-    if (v is !UpdateBookRequest) checkItemFailed(v, 'UpdateBookRequest');
+    if (v is! UpdateBookRequest) checkItemFailed(v, 'UpdateBookRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Book get book => $_get(1, 2, null);
-  void set book(Book v) { setField(2, v); }
-  bool hasBook() => $_has(1, 2);
+  Book get book => $_getN(1);
+  set book(Book v) { setField(2, v); }
+  bool hasBook() => $_has(1);
   void clearBook() => clearField(2);
 }
 
@@ -467,7 +469,7 @@ class _ReadonlyUpdateBookRequest extends UpdateBookRequest with ReadonlyMessageM
 
 class DeleteBookRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteBookRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -484,12 +486,12 @@ class DeleteBookRequest extends GeneratedMessage {
   }
   static DeleteBookRequest _defaultInstance;
   static void $checkItem(DeleteBookRequest v) {
-    if (v is !DeleteBookRequest) checkItemFailed(v, 'DeleteBookRequest');
+    if (v is! DeleteBookRequest) checkItemFailed(v, 'DeleteBookRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -497,8 +499,8 @@ class _ReadonlyDeleteBookRequest extends DeleteBookRequest with ReadonlyMessageM
 
 class MoveBookRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('MoveBookRequest')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'otherShelfName', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..aOS(2, 'otherShelfName')
     ..hasRequiredFields = false
   ;
 
@@ -515,17 +517,17 @@ class MoveBookRequest extends GeneratedMessage {
   }
   static MoveBookRequest _defaultInstance;
   static void $checkItem(MoveBookRequest v) {
-    if (v is !MoveBookRequest) checkItemFailed(v, 'MoveBookRequest');
+    if (v is! MoveBookRequest) checkItemFailed(v, 'MoveBookRequest');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get otherShelfName => $_get(1, 2, '');
-  void set otherShelfName(String v) { $_setString(1, 2, v); }
-  bool hasOtherShelfName() => $_has(1, 2);
+  String get otherShelfName => $_getS(1, '');
+  set otherShelfName(String v) { $_setString(1, v); }
+  bool hasOtherShelfName() => $_has(1);
   void clearOtherShelfName() => clearField(2);
 }
 
@@ -537,47 +539,47 @@ class LibraryServiceApi {
 
   Future<Shelf> createShelf(ClientContext ctx, CreateShelfRequest request) {
     var emptyResponse = new Shelf();
-    return _client.invoke(ctx, 'LibraryService', 'CreateShelf', request, emptyResponse);
+    return _client.invoke<Shelf>(ctx, 'LibraryService', 'CreateShelf', request, emptyResponse);
   }
   Future<Shelf> getShelf(ClientContext ctx, GetShelfRequest request) {
     var emptyResponse = new Shelf();
-    return _client.invoke(ctx, 'LibraryService', 'GetShelf', request, emptyResponse);
+    return _client.invoke<Shelf>(ctx, 'LibraryService', 'GetShelf', request, emptyResponse);
   }
   Future<ListShelvesResponse> listShelves(ClientContext ctx, ListShelvesRequest request) {
     var emptyResponse = new ListShelvesResponse();
-    return _client.invoke(ctx, 'LibraryService', 'ListShelves', request, emptyResponse);
+    return _client.invoke<ListShelvesResponse>(ctx, 'LibraryService', 'ListShelves', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteShelf(ClientContext ctx, DeleteShelfRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'LibraryService', 'DeleteShelf', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteShelf(ClientContext ctx, DeleteShelfRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'LibraryService', 'DeleteShelf', request, emptyResponse);
   }
   Future<Shelf> mergeShelves(ClientContext ctx, MergeShelvesRequest request) {
     var emptyResponse = new Shelf();
-    return _client.invoke(ctx, 'LibraryService', 'MergeShelves', request, emptyResponse);
+    return _client.invoke<Shelf>(ctx, 'LibraryService', 'MergeShelves', request, emptyResponse);
   }
   Future<Book> createBook(ClientContext ctx, CreateBookRequest request) {
     var emptyResponse = new Book();
-    return _client.invoke(ctx, 'LibraryService', 'CreateBook', request, emptyResponse);
+    return _client.invoke<Book>(ctx, 'LibraryService', 'CreateBook', request, emptyResponse);
   }
   Future<Book> getBook(ClientContext ctx, GetBookRequest request) {
     var emptyResponse = new Book();
-    return _client.invoke(ctx, 'LibraryService', 'GetBook', request, emptyResponse);
+    return _client.invoke<Book>(ctx, 'LibraryService', 'GetBook', request, emptyResponse);
   }
   Future<ListBooksResponse> listBooks(ClientContext ctx, ListBooksRequest request) {
     var emptyResponse = new ListBooksResponse();
-    return _client.invoke(ctx, 'LibraryService', 'ListBooks', request, emptyResponse);
+    return _client.invoke<ListBooksResponse>(ctx, 'LibraryService', 'ListBooks', request, emptyResponse);
   }
-  Future<google$protobuf.Empty> deleteBook(ClientContext ctx, DeleteBookRequest request) {
-    var emptyResponse = new google$protobuf.Empty();
-    return _client.invoke(ctx, 'LibraryService', 'DeleteBook', request, emptyResponse);
+  Future<$google$protobuf.Empty> deleteBook(ClientContext ctx, DeleteBookRequest request) {
+    var emptyResponse = new $google$protobuf.Empty();
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'LibraryService', 'DeleteBook', request, emptyResponse);
   }
   Future<Book> updateBook(ClientContext ctx, UpdateBookRequest request) {
     var emptyResponse = new Book();
-    return _client.invoke(ctx, 'LibraryService', 'UpdateBook', request, emptyResponse);
+    return _client.invoke<Book>(ctx, 'LibraryService', 'UpdateBook', request, emptyResponse);
   }
   Future<Book> moveBook(ClientContext ctx, MoveBookRequest request) {
     var emptyResponse = new Book();
-    return _client.invoke(ctx, 'LibraryService', 'MoveBook', request, emptyResponse);
+    return _client.invoke<Book>(ctx, 'LibraryService', 'MoveBook', request, emptyResponse);
   }
 }
 

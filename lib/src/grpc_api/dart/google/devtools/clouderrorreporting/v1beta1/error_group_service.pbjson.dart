@@ -1,21 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouderrorreporting.v1beta1_error_group_service_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'common.pbjson.dart';
 
 const GetGroupRequest$json = const {
   '1': 'GetGroupRequest',
   '2': const [
-    const {'1': 'group_name', '3': 1, '4': 1, '5': 9},
+    const {'1': 'group_name', '3': 1, '4': 1, '5': 9, '10': 'groupName'},
   ],
 };
 
 const UpdateGroupRequest$json = const {
   '1': 'UpdateGroupRequest',
   '2': const [
-    const {'1': 'group', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.clouderrorreporting.v1beta1.ErrorGroup'},
+    const {'1': 'group', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.clouderrorreporting.v1beta1.ErrorGroup', '10': 'group'},
   ],
 };
 

@@ -220,7 +220,7 @@ runTests(db.DatastoreDB store, String namespace) {
     group('insert_lookup_delete', () {
       test('persons', () {
         var root = partition.emptyKey;
-        var persons = [];
+        var persons = <Person>[];
         for (var i = 1; i <= 10; i++) {
           persons.add(new Person()
               ..id = i
@@ -233,7 +233,7 @@ runTests(db.DatastoreDB store, String namespace) {
       });
       test('users', () {
         var root = partition.emptyKey;
-        var users = [];
+        var users = <User>[];
         for (var i = 1; i <= 10; i++) {
           users.add(new User()
               ..id = i
@@ -246,9 +246,9 @@ runTests(db.DatastoreDB store, String namespace) {
       });
       test('expando_insert', () {
         var root = partition.emptyKey;
-        var expandoPersons = [];
+        var expandoPersons = <ExpandoPerson>[];
         for (var i = 1; i <= 10; i++) {
-          var expandoPerson = new ExpandoPerson()
+          dynamic expandoPerson = new ExpandoPerson()
               ..parentKey = root
               ..id = i
               ..name = 'user$i';
@@ -262,7 +262,7 @@ runTests(db.DatastoreDB store, String namespace) {
       });
       test('transactional_insert', () {
         var root = partition.emptyKey;
-        var models = [];
+        var models = <db.Model>[];
 
         models.add(new Person()
             ..id = 1
@@ -275,7 +275,7 @@ runTests(db.DatastoreDB store, String namespace) {
             ..age = 2
             ..name = 'user2'
             ..nickname = 'nickname2');
-        var expandoPerson = new ExpandoPerson()
+        dynamic expandoPerson = new ExpandoPerson()
             ..parentKey = root
             ..id = 3
             ..name = 'user1';
@@ -316,7 +316,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
       test('auto_ids', () {
         var root = partition.emptyKey;
-        var persons = [];
+        var persons = <Person>[];
         persons.add(new Person()
             ..id = 42
             ..parentKey = root
@@ -387,9 +387,9 @@ runTests(db.DatastoreDB store, String namespace) {
 
     test('query', () {
       var root = partition.emptyKey;
-      var users = [];
+      var users = <User>[];
       for (var i = 1; i <= 10; i++) {
-        var languages = [];
+        var languages = <String>[];
         var hobbies = ['running', 'swimming'];
         if (i == 9) {
           languages = ['foo'];
@@ -407,9 +407,9 @@ runTests(db.DatastoreDB store, String namespace) {
             ..hobbies = hobbies);
       }
 
-      var expandoPersons = [];
+      var expandoPersons = <ExpandoPerson>[];
       for (var i = 1; i <= 3; i++) {
-        var expandoPerson = new ExpandoPerson()
+        dynamic expandoPerson = new ExpandoPerson()
             ..parentKey = root
             ..id = i
             ..name = 'user$i'
@@ -423,14 +423,14 @@ runTests(db.DatastoreDB store, String namespace) {
 
       var LOWER_BOUND = 'user2';
 
-      var usersSortedNameDescNicknameAsc = new List.from(users);
+      var usersSortedNameDescNicknameAsc = new List<User>.from(users);
       usersSortedNameDescNicknameAsc.sort((User a, User b) {
         var result = b.name.compareTo(a.name);
         if (result == 0) return a.nickname.compareTo(b.nickname);
         return result;
       });
 
-      var usersSortedNameDescNicknameDesc = new List.from(users);
+      var usersSortedNameDescNicknameDesc = new List<User>.from(users);
       usersSortedNameDescNicknameDesc.sort((User a, User b) {
         var result = b.name.compareTo(a.name);
         if (result == 0) return b.nickname.compareTo(a.nickname);
@@ -454,10 +454,10 @@ runTests(db.DatastoreDB store, String namespace) {
       var usersWithWife = users.where(
           (User u) => u.wife == root.append(User, id: 42 + 3)).toList();
 
-      var allInserts = []
+      var allInserts = <db.Model>[]
           ..addAll(users)
           ..addAll(expandoPersons);
-      var allKeys = allInserts.map((db.Model model) => model.key).toList();
+      var allKeys = allInserts.map((model) => model.key).toList();
       return store.commit(inserts: allInserts).then((_) {
         return waitUntilEntitiesReady(store, allKeys, partition).then((_) {
           var tests = [
@@ -592,7 +592,7 @@ runTests(db.DatastoreDB store, String namespace) {
             // Expando queries: Filter on expanded String property
             () async {
               var query = store.query(ExpandoPerson, partition: partition)
-                  ..filter('foo =', expandoPersons.last.foo)
+                  ..filter('foo =', (expandoPersons.last as dynamic).foo)
                   ..run();
               var models = await runQueryWithExponentialBackoff(query, 1);
               compareModels([expandoPersons.last], models);
@@ -600,7 +600,7 @@ runTests(db.DatastoreDB store, String namespace) {
             // Expando queries: Filter on expanded int property
             () async {
               var query = store.query(ExpandoPerson, partition: partition)
-                  ..filter('bar =', expandoPersons.last.bar)
+                  ..filter('bar =', (expandoPersons.last as dynamic).bar)
                   ..run();
               var models = await runQueryWithExponentialBackoff(query, 1);
               compareModels([expandoPersons.last], models);
@@ -675,9 +675,9 @@ Future waitUntilEntitiesHelper(db.DatastoreDB mdb,
                                List<db.Key> keys,
                                bool positive,
                                db.Partition partition) {
-  var keysByKind = {};
+  var keysByKind = <Type, List<db.Key>>{};
   for (var key in keys) {
-    keysByKind.putIfAbsent(key.type, () => []).add(key);
+    keysByKind.putIfAbsent(key.type, () => <db.Key>[]).add(key);
   }
 
   Future waitForKeys(Type kind, List<db.Key> keys) {

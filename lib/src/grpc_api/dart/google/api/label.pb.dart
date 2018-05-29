@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_label;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -11,9 +14,9 @@ export 'label.pbenum.dart';
 
 class LabelDescriptor extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('LabelDescriptor')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..e/*<LabelDescriptor_ValueType>*/(2, 'valueType', PbFieldType.OE, LabelDescriptor_ValueType.STRING, LabelDescriptor_ValueType.valueOf)
-    ..a/*<String>*/(3, 'description', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..e<LabelDescriptor_ValueType>(2, 'valueType', PbFieldType.OE, LabelDescriptor_ValueType.STRING, LabelDescriptor_ValueType.valueOf, LabelDescriptor_ValueType.values)
+    ..aOS(3, 'description')
     ..hasRequiredFields = false
   ;
 
@@ -30,22 +33,22 @@ class LabelDescriptor extends GeneratedMessage {
   }
   static LabelDescriptor _defaultInstance;
   static void $checkItem(LabelDescriptor v) {
-    if (v is !LabelDescriptor) checkItemFailed(v, 'LabelDescriptor');
+    if (v is! LabelDescriptor) checkItemFailed(v, 'LabelDescriptor');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  LabelDescriptor_ValueType get valueType => $_get(1, 2, null);
-  void set valueType(LabelDescriptor_ValueType v) { setField(2, v); }
-  bool hasValueType() => $_has(1, 2);
+  LabelDescriptor_ValueType get valueType => $_getN(1);
+  set valueType(LabelDescriptor_ValueType v) { setField(2, v); }
+  bool hasValueType() => $_has(1);
   void clearValueType() => clearField(2);
 
-  String get description => $_get(2, 3, '');
-  void set description(String v) { $_setString(2, 3, v); }
-  bool hasDescription() => $_has(2, 3);
+  String get description => $_getS(2, '');
+  set description(String v) { $_setString(2, v); }
+  bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 }
 

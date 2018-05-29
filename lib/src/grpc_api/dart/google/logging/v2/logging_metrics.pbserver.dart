@@ -1,14 +1,14 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.logging.v2_logging_metrics_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'logging_metrics.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'logging_metrics.pbjson.dart';
 
 export 'logging_metrics.pb.dart';
@@ -18,7 +18,7 @@ abstract class MetricsServiceV2ServiceBase extends GeneratedService {
   Future<LogMetric> getLogMetric(ServerContext ctx, GetLogMetricRequest request);
   Future<LogMetric> createLogMetric(ServerContext ctx, CreateLogMetricRequest request);
   Future<LogMetric> updateLogMetric(ServerContext ctx, UpdateLogMetricRequest request);
-  Future<google$protobuf.Empty> deleteLogMetric(ServerContext ctx, DeleteLogMetricRequest request);
+  Future<$google$protobuf.Empty> deleteLogMetric(ServerContext ctx, DeleteLogMetricRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
@@ -43,6 +43,6 @@ abstract class MetricsServiceV2ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => MetricsServiceV2$json;
-  Map<String, dynamic> get $messageJson => MetricsServiceV2$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => MetricsServiceV2$messageJson;
 }
 

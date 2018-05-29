@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.datastore.v1_query_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class EntityResult_ResultType extends ProtobufEnum {
@@ -21,7 +23,7 @@ class EntityResult_ResultType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static EntityResult_ResultType valueOf(int value) => _byValue[value] as EntityResult_ResultType;
   static void $checkItem(EntityResult_ResultType v) {
-    if (v is !EntityResult_ResultType) checkItemFailed(v, 'EntityResult_ResultType');
+    if (v is! EntityResult_ResultType) checkItemFailed(v, 'EntityResult_ResultType');
   }
 
   const EntityResult_ResultType._(int v, String n) : super(v, n);
@@ -41,7 +43,7 @@ class PropertyOrder_Direction extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PropertyOrder_Direction valueOf(int value) => _byValue[value] as PropertyOrder_Direction;
   static void $checkItem(PropertyOrder_Direction v) {
-    if (v is !PropertyOrder_Direction) checkItemFailed(v, 'PropertyOrder_Direction');
+    if (v is! PropertyOrder_Direction) checkItemFailed(v, 'PropertyOrder_Direction');
   }
 
   const PropertyOrder_Direction._(int v, String n) : super(v, n);
@@ -59,7 +61,7 @@ class CompositeFilter_Operator extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static CompositeFilter_Operator valueOf(int value) => _byValue[value] as CompositeFilter_Operator;
   static void $checkItem(CompositeFilter_Operator v) {
-    if (v is !CompositeFilter_Operator) checkItemFailed(v, 'CompositeFilter_Operator');
+    if (v is! CompositeFilter_Operator) checkItemFailed(v, 'CompositeFilter_Operator');
   }
 
   const CompositeFilter_Operator._(int v, String n) : super(v, n);
@@ -87,7 +89,7 @@ class PropertyFilter_Operator extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static PropertyFilter_Operator valueOf(int value) => _byValue[value] as PropertyFilter_Operator;
   static void $checkItem(PropertyFilter_Operator v) {
-    if (v is !PropertyFilter_Operator) checkItemFailed(v, 'PropertyFilter_Operator');
+    if (v is! PropertyFilter_Operator) checkItemFailed(v, 'PropertyFilter_Operator');
   }
 
   const PropertyFilter_Operator._(int v, String n) : super(v, n);
@@ -111,7 +113,7 @@ class QueryResultBatch_MoreResultsType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static QueryResultBatch_MoreResultsType valueOf(int value) => _byValue[value] as QueryResultBatch_MoreResultsType;
   static void $checkItem(QueryResultBatch_MoreResultsType v) {
-    if (v is !QueryResultBatch_MoreResultsType) checkItemFailed(v, 'QueryResultBatch_MoreResultsType');
+    if (v is! QueryResultBatch_MoreResultsType) checkItemFailed(v, 'QueryResultBatch_MoreResultsType');
   }
 
   const QueryResultBatch_MoreResultsType._(int v, String n) : super(v, n);

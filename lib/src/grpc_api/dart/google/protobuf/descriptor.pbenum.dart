@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_descriptor_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class FieldDescriptorProto_Type extends ProtobufEnum {
@@ -49,7 +51,7 @@ class FieldDescriptorProto_Type extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static FieldDescriptorProto_Type valueOf(int value) => _byValue[value] as FieldDescriptorProto_Type;
   static void $checkItem(FieldDescriptorProto_Type v) {
-    if (v is !FieldDescriptorProto_Type) checkItemFailed(v, 'FieldDescriptorProto_Type');
+    if (v is! FieldDescriptorProto_Type) checkItemFailed(v, 'FieldDescriptorProto_Type');
   }
 
   const FieldDescriptorProto_Type._(int v, String n) : super(v, n);
@@ -69,7 +71,7 @@ class FieldDescriptorProto_Label extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static FieldDescriptorProto_Label valueOf(int value) => _byValue[value] as FieldDescriptorProto_Label;
   static void $checkItem(FieldDescriptorProto_Label v) {
-    if (v is !FieldDescriptorProto_Label) checkItemFailed(v, 'FieldDescriptorProto_Label');
+    if (v is! FieldDescriptorProto_Label) checkItemFailed(v, 'FieldDescriptorProto_Label');
   }
 
   const FieldDescriptorProto_Label._(int v, String n) : super(v, n);
@@ -89,7 +91,7 @@ class FileOptions_OptimizeMode extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static FileOptions_OptimizeMode valueOf(int value) => _byValue[value] as FileOptions_OptimizeMode;
   static void $checkItem(FileOptions_OptimizeMode v) {
-    if (v is !FileOptions_OptimizeMode) checkItemFailed(v, 'FileOptions_OptimizeMode');
+    if (v is! FileOptions_OptimizeMode) checkItemFailed(v, 'FileOptions_OptimizeMode');
   }
 
   const FileOptions_OptimizeMode._(int v, String n) : super(v, n);
@@ -109,7 +111,7 @@ class FieldOptions_CType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static FieldOptions_CType valueOf(int value) => _byValue[value] as FieldOptions_CType;
   static void $checkItem(FieldOptions_CType v) {
-    if (v is !FieldOptions_CType) checkItemFailed(v, 'FieldOptions_CType');
+    if (v is! FieldOptions_CType) checkItemFailed(v, 'FieldOptions_CType');
   }
 
   const FieldOptions_CType._(int v, String n) : super(v, n);
@@ -129,7 +131,7 @@ class FieldOptions_JSType extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static FieldOptions_JSType valueOf(int value) => _byValue[value] as FieldOptions_JSType;
   static void $checkItem(FieldOptions_JSType v) {
-    if (v is !FieldOptions_JSType) checkItemFailed(v, 'FieldOptions_JSType');
+    if (v is! FieldOptions_JSType) checkItemFailed(v, 'FieldOptions_JSType');
   }
 
   const FieldOptions_JSType._(int v, String n) : super(v, n);
@@ -149,7 +151,7 @@ class MethodOptions_IdempotencyLevel extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static MethodOptions_IdempotencyLevel valueOf(int value) => _byValue[value] as MethodOptions_IdempotencyLevel;
   static void $checkItem(MethodOptions_IdempotencyLevel v) {
-    if (v is !MethodOptions_IdempotencyLevel) checkItemFailed(v, 'MethodOptions_IdempotencyLevel');
+    if (v is! MethodOptions_IdempotencyLevel) checkItemFailed(v, 'MethodOptions_IdempotencyLevel');
   }
 
   const MethodOptions_IdempotencyLevel._(int v, String n) : super(v, n);

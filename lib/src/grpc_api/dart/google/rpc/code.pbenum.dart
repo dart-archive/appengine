@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.rpc_code_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Code extends ProtobufEnum {
@@ -47,7 +49,7 @@ class Code extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static Code valueOf(int value) => _byValue[value] as Code;
   static void $checkItem(Code v) {
-    if (v is !Code) checkItemFailed(v, 'Code');
+    if (v is! Code) checkItemFailed(v, 'Code');
   }
 
   const Code._(int v, String n) : super(v, n);

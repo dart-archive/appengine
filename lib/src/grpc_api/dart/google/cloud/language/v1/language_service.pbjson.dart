@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.language.v1_language_service_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 const EncodingType$json = const {
   '1': 'EncodingType',
@@ -16,12 +16,15 @@ const EncodingType$json = const {
 const Document$json = const {
   '1': 'Document',
   '2': const [
-    const {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.language.v1.Document.Type'},
-    const {'1': 'content', '3': 2, '4': 1, '5': 9},
-    const {'1': 'gcs_content_uri', '3': 3, '4': 1, '5': 9},
-    const {'1': 'language', '3': 4, '4': 1, '5': 9},
+    const {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.language.v1.Document.Type', '10': 'type'},
+    const {'1': 'content', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'content'},
+    const {'1': 'gcs_content_uri', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'gcsContentUri'},
+    const {'1': 'language', '3': 4, '4': 1, '5': 9, '10': 'language'},
   ],
   '4': const [Document_Type$json],
+  '8': const [
+    const {'1': 'source'},
+  ],
 };
 
 const Document_Type$json = const {
@@ -36,19 +39,20 @@ const Document_Type$json = const {
 const Sentence$json = const {
   '1': 'Sentence',
   '2': const [
-    const {'1': 'text', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.TextSpan'},
-    const {'1': 'sentiment', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Sentiment'},
+    const {'1': 'text', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.TextSpan', '10': 'text'},
+    const {'1': 'sentiment', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Sentiment', '10': 'sentiment'},
   ],
 };
 
 const Entity$json = const {
   '1': 'Entity',
   '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9},
-    const {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.Entity.Type'},
-    const {'1': 'metadata', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Entity.MetadataEntry'},
-    const {'1': 'salience', '3': 4, '4': 1, '5': 2},
-    const {'1': 'mentions', '3': 5, '4': 3, '5': 11, '6': '.google.cloud.language.v1.EntityMention'},
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.Entity.Type', '10': 'type'},
+    const {'1': 'metadata', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Entity.MetadataEntry', '10': 'metadata'},
+    const {'1': 'salience', '3': 4, '4': 1, '5': 2, '10': 'salience'},
+    const {'1': 'mentions', '3': 5, '4': 3, '5': 11, '6': '.google.cloud.language.v1.EntityMention', '10': 'mentions'},
+    const {'1': 'sentiment', '3': 6, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Sentiment', '10': 'sentiment'},
   ],
   '3': const [Entity_MetadataEntry$json],
   '4': const [Entity_Type$json],
@@ -57,10 +61,10 @@ const Entity$json = const {
 const Entity_MetadataEntry$json = const {
   '1': 'MetadataEntry',
   '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9},
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {},
+  '7': const {'7': true},
 };
 
 const Entity_Type$json = const {
@@ -80,36 +84,36 @@ const Entity_Type$json = const {
 const Token$json = const {
   '1': 'Token',
   '2': const [
-    const {'1': 'text', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.TextSpan'},
-    const {'1': 'part_of_speech', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.language.v1.PartOfSpeech'},
-    const {'1': 'dependency_edge', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.language.v1.DependencyEdge'},
-    const {'1': 'lemma', '3': 4, '4': 1, '5': 9},
+    const {'1': 'text', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.TextSpan', '10': 'text'},
+    const {'1': 'part_of_speech', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.language.v1.PartOfSpeech', '10': 'partOfSpeech'},
+    const {'1': 'dependency_edge', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.language.v1.DependencyEdge', '10': 'dependencyEdge'},
+    const {'1': 'lemma', '3': 4, '4': 1, '5': 9, '10': 'lemma'},
   ],
 };
 
 const Sentiment$json = const {
   '1': 'Sentiment',
   '2': const [
-    const {'1': 'magnitude', '3': 2, '4': 1, '5': 2},
-    const {'1': 'score', '3': 3, '4': 1, '5': 2},
+    const {'1': 'magnitude', '3': 2, '4': 1, '5': 2, '10': 'magnitude'},
+    const {'1': 'score', '3': 3, '4': 1, '5': 2, '10': 'score'},
   ],
 };
 
 const PartOfSpeech$json = const {
   '1': 'PartOfSpeech',
   '2': const [
-    const {'1': 'tag', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Tag'},
-    const {'1': 'aspect', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Aspect'},
-    const {'1': 'case', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Case'},
-    const {'1': 'form', '3': 4, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Form'},
-    const {'1': 'gender', '3': 5, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Gender'},
-    const {'1': 'mood', '3': 6, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Mood'},
-    const {'1': 'number', '3': 7, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Number'},
-    const {'1': 'person', '3': 8, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Person'},
-    const {'1': 'proper', '3': 9, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Proper'},
-    const {'1': 'reciprocity', '3': 10, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Reciprocity'},
-    const {'1': 'tense', '3': 11, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Tense'},
-    const {'1': 'voice', '3': 12, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Voice'},
+    const {'1': 'tag', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Tag', '10': 'tag'},
+    const {'1': 'aspect', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Aspect', '10': 'aspect'},
+    const {'1': 'case', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Case', '10': 'case'},
+    const {'1': 'form', '3': 4, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Form', '10': 'form'},
+    const {'1': 'gender', '3': 5, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Gender', '10': 'gender'},
+    const {'1': 'mood', '3': 6, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Mood', '10': 'mood'},
+    const {'1': 'number', '3': 7, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Number', '10': 'number'},
+    const {'1': 'person', '3': 8, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Person', '10': 'person'},
+    const {'1': 'proper', '3': 9, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Proper', '10': 'proper'},
+    const {'1': 'reciprocity', '3': 10, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Reciprocity', '10': 'reciprocity'},
+    const {'1': 'tense', '3': 11, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Tense', '10': 'tense'},
+    const {'1': 'voice', '3': 12, '4': 1, '5': 14, '6': '.google.cloud.language.v1.PartOfSpeech.Voice', '10': 'voice'},
   ],
   '4': const [PartOfSpeech_Tag$json, PartOfSpeech_Aspect$json, PartOfSpeech_Case$json, PartOfSpeech_Form$json, PartOfSpeech_Gender$json, PartOfSpeech_Mood$json, PartOfSpeech_Number$json, PartOfSpeech_Person$json, PartOfSpeech_Proper$json, PartOfSpeech_Reciprocity$json, PartOfSpeech_Tense$json, PartOfSpeech_Voice$json],
 };
@@ -271,8 +275,8 @@ const PartOfSpeech_Voice$json = const {
 const DependencyEdge$json = const {
   '1': 'DependencyEdge',
   '2': const [
-    const {'1': 'head_token_index', '3': 1, '4': 1, '5': 5},
-    const {'1': 'label', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.DependencyEdge.Label'},
+    const {'1': 'head_token_index', '3': 1, '4': 1, '5': 5, '10': 'headTokenIndex'},
+    const {'1': 'label', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.DependencyEdge.Label', '10': 'label'},
   ],
   '4': const [DependencyEdge_Label$json],
 };
@@ -357,14 +361,21 @@ const DependencyEdge_Label$json = const {
     const {'1': 'NUMC', '2': 74},
     const {'1': 'COP', '2': 75},
     const {'1': 'DISLOCATED', '2': 76},
+    const {'1': 'ASP', '2': 77},
+    const {'1': 'GMOD', '2': 78},
+    const {'1': 'GOBJ', '2': 79},
+    const {'1': 'INFMOD', '2': 80},
+    const {'1': 'MES', '2': 81},
+    const {'1': 'NCOMP', '2': 82},
   ],
 };
 
 const EntityMention$json = const {
   '1': 'EntityMention',
   '2': const [
-    const {'1': 'text', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.TextSpan'},
-    const {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EntityMention.Type'},
+    const {'1': 'text', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.TextSpan', '10': 'text'},
+    const {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EntityMention.Type', '10': 'type'},
+    const {'1': 'sentiment', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Sentiment', '10': 'sentiment'},
   ],
   '4': const [EntityMention_Type$json],
 };
@@ -381,67 +392,105 @@ const EntityMention_Type$json = const {
 const TextSpan$json = const {
   '1': 'TextSpan',
   '2': const [
-    const {'1': 'content', '3': 1, '4': 1, '5': 9},
-    const {'1': 'begin_offset', '3': 2, '4': 1, '5': 5},
+    const {'1': 'content', '3': 1, '4': 1, '5': 9, '10': 'content'},
+    const {'1': 'begin_offset', '3': 2, '4': 1, '5': 5, '10': 'beginOffset'},
+  ],
+};
+
+const ClassificationCategory$json = const {
+  '1': 'ClassificationCategory',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
   ],
 };
 
 const AnalyzeSentimentRequest$json = const {
   '1': 'AnalyzeSentimentRequest',
   '2': const [
-    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document'},
-    const {'1': 'encoding_type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType'},
+    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document', '10': 'document'},
+    const {'1': 'encoding_type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType', '10': 'encodingType'},
   ],
 };
 
 const AnalyzeSentimentResponse$json = const {
   '1': 'AnalyzeSentimentResponse',
   '2': const [
-    const {'1': 'document_sentiment', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Sentiment'},
-    const {'1': 'language', '3': 2, '4': 1, '5': 9},
-    const {'1': 'sentences', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Sentence'},
+    const {'1': 'document_sentiment', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Sentiment', '10': 'documentSentiment'},
+    const {'1': 'language', '3': 2, '4': 1, '5': 9, '10': 'language'},
+    const {'1': 'sentences', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Sentence', '10': 'sentences'},
+  ],
+};
+
+const AnalyzeEntitySentimentRequest$json = const {
+  '1': 'AnalyzeEntitySentimentRequest',
+  '2': const [
+    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document', '10': 'document'},
+    const {'1': 'encoding_type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType', '10': 'encodingType'},
+  ],
+};
+
+const AnalyzeEntitySentimentResponse$json = const {
+  '1': 'AnalyzeEntitySentimentResponse',
+  '2': const [
+    const {'1': 'entities', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Entity', '10': 'entities'},
+    const {'1': 'language', '3': 2, '4': 1, '5': 9, '10': 'language'},
   ],
 };
 
 const AnalyzeEntitiesRequest$json = const {
   '1': 'AnalyzeEntitiesRequest',
   '2': const [
-    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document'},
-    const {'1': 'encoding_type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType'},
+    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document', '10': 'document'},
+    const {'1': 'encoding_type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType', '10': 'encodingType'},
   ],
 };
 
 const AnalyzeEntitiesResponse$json = const {
   '1': 'AnalyzeEntitiesResponse',
   '2': const [
-    const {'1': 'entities', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Entity'},
-    const {'1': 'language', '3': 2, '4': 1, '5': 9},
+    const {'1': 'entities', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Entity', '10': 'entities'},
+    const {'1': 'language', '3': 2, '4': 1, '5': 9, '10': 'language'},
   ],
 };
 
 const AnalyzeSyntaxRequest$json = const {
   '1': 'AnalyzeSyntaxRequest',
   '2': const [
-    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document'},
-    const {'1': 'encoding_type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType'},
+    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document', '10': 'document'},
+    const {'1': 'encoding_type', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType', '10': 'encodingType'},
   ],
 };
 
 const AnalyzeSyntaxResponse$json = const {
   '1': 'AnalyzeSyntaxResponse',
   '2': const [
-    const {'1': 'sentences', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Sentence'},
-    const {'1': 'tokens', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Token'},
-    const {'1': 'language', '3': 3, '4': 1, '5': 9},
+    const {'1': 'sentences', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Sentence', '10': 'sentences'},
+    const {'1': 'tokens', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Token', '10': 'tokens'},
+    const {'1': 'language', '3': 3, '4': 1, '5': 9, '10': 'language'},
+  ],
+};
+
+const ClassifyTextRequest$json = const {
+  '1': 'ClassifyTextRequest',
+  '2': const [
+    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document', '10': 'document'},
+  ],
+};
+
+const ClassifyTextResponse$json = const {
+  '1': 'ClassifyTextResponse',
+  '2': const [
+    const {'1': 'categories', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.language.v1.ClassificationCategory', '10': 'categories'},
   ],
 };
 
 const AnnotateTextRequest$json = const {
   '1': 'AnnotateTextRequest',
   '2': const [
-    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document'},
-    const {'1': 'features', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.language.v1.AnnotateTextRequest.Features'},
-    const {'1': 'encoding_type', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType'},
+    const {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Document', '10': 'document'},
+    const {'1': 'features', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.language.v1.AnnotateTextRequest.Features', '10': 'features'},
+    const {'1': 'encoding_type', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.language.v1.EncodingType', '10': 'encodingType'},
   ],
   '3': const [AnnotateTextRequest_Features$json],
 };
@@ -449,20 +498,23 @@ const AnnotateTextRequest$json = const {
 const AnnotateTextRequest_Features$json = const {
   '1': 'Features',
   '2': const [
-    const {'1': 'extract_syntax', '3': 1, '4': 1, '5': 8},
-    const {'1': 'extract_entities', '3': 2, '4': 1, '5': 8},
-    const {'1': 'extract_document_sentiment', '3': 3, '4': 1, '5': 8},
+    const {'1': 'extract_syntax', '3': 1, '4': 1, '5': 8, '10': 'extractSyntax'},
+    const {'1': 'extract_entities', '3': 2, '4': 1, '5': 8, '10': 'extractEntities'},
+    const {'1': 'extract_document_sentiment', '3': 3, '4': 1, '5': 8, '10': 'extractDocumentSentiment'},
+    const {'1': 'extract_entity_sentiment', '3': 4, '4': 1, '5': 8, '10': 'extractEntitySentiment'},
+    const {'1': 'classify_text', '3': 6, '4': 1, '5': 8, '10': 'classifyText'},
   ],
 };
 
 const AnnotateTextResponse$json = const {
   '1': 'AnnotateTextResponse',
   '2': const [
-    const {'1': 'sentences', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Sentence'},
-    const {'1': 'tokens', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Token'},
-    const {'1': 'entities', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Entity'},
-    const {'1': 'document_sentiment', '3': 4, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Sentiment'},
-    const {'1': 'language', '3': 5, '4': 1, '5': 9},
+    const {'1': 'sentences', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Sentence', '10': 'sentences'},
+    const {'1': 'tokens', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Token', '10': 'tokens'},
+    const {'1': 'entities', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.language.v1.Entity', '10': 'entities'},
+    const {'1': 'document_sentiment', '3': 4, '4': 1, '5': 11, '6': '.google.cloud.language.v1.Sentiment', '10': 'documentSentiment'},
+    const {'1': 'language', '3': 5, '4': 1, '5': 9, '10': 'language'},
+    const {'1': 'categories', '3': 6, '4': 3, '5': 11, '6': '.google.cloud.language.v1.ClassificationCategory', '10': 'categories'},
   ],
 };
 
@@ -471,7 +523,9 @@ const LanguageService$json = const {
   '2': const [
     const {'1': 'AnalyzeSentiment', '2': '.google.cloud.language.v1.AnalyzeSentimentRequest', '3': '.google.cloud.language.v1.AnalyzeSentimentResponse', '4': const {}},
     const {'1': 'AnalyzeEntities', '2': '.google.cloud.language.v1.AnalyzeEntitiesRequest', '3': '.google.cloud.language.v1.AnalyzeEntitiesResponse', '4': const {}},
+    const {'1': 'AnalyzeEntitySentiment', '2': '.google.cloud.language.v1.AnalyzeEntitySentimentRequest', '3': '.google.cloud.language.v1.AnalyzeEntitySentimentResponse', '4': const {}},
     const {'1': 'AnalyzeSyntax', '2': '.google.cloud.language.v1.AnalyzeSyntaxRequest', '3': '.google.cloud.language.v1.AnalyzeSyntaxResponse', '4': const {}},
+    const {'1': 'ClassifyText', '2': '.google.cloud.language.v1.ClassifyTextRequest', '3': '.google.cloud.language.v1.ClassifyTextResponse', '4': const {}},
     const {'1': 'AnnotateText', '2': '.google.cloud.language.v1.AnnotateTextRequest', '3': '.google.cloud.language.v1.AnnotateTextResponse', '4': const {}},
   ],
 };
@@ -488,11 +542,16 @@ const LanguageService$messageJson = const {
   '.google.cloud.language.v1.Entity': Entity$json,
   '.google.cloud.language.v1.Entity.MetadataEntry': Entity_MetadataEntry$json,
   '.google.cloud.language.v1.EntityMention': EntityMention$json,
+  '.google.cloud.language.v1.AnalyzeEntitySentimentRequest': AnalyzeEntitySentimentRequest$json,
+  '.google.cloud.language.v1.AnalyzeEntitySentimentResponse': AnalyzeEntitySentimentResponse$json,
   '.google.cloud.language.v1.AnalyzeSyntaxRequest': AnalyzeSyntaxRequest$json,
   '.google.cloud.language.v1.AnalyzeSyntaxResponse': AnalyzeSyntaxResponse$json,
   '.google.cloud.language.v1.Token': Token$json,
   '.google.cloud.language.v1.PartOfSpeech': PartOfSpeech$json,
   '.google.cloud.language.v1.DependencyEdge': DependencyEdge$json,
+  '.google.cloud.language.v1.ClassifyTextRequest': ClassifyTextRequest$json,
+  '.google.cloud.language.v1.ClassifyTextResponse': ClassifyTextResponse$json,
+  '.google.cloud.language.v1.ClassificationCategory': ClassificationCategory$json,
   '.google.cloud.language.v1.AnnotateTextRequest': AnnotateTextRequest$json,
   '.google.cloud.language.v1.AnnotateTextRequest.Features': AnnotateTextRequest_Features$json,
   '.google.cloud.language.v1.AnnotateTextResponse': AnnotateTextResponse$json,

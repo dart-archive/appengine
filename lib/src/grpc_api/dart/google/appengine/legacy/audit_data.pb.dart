@@ -1,14 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.legacy_audit_data;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class AuditData_EventDataEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AuditData_EventDataEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<String>*/(2, 'value', PbFieldType.OS)
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
     ..hasRequiredFields = false
   ;
 
@@ -25,17 +28,17 @@ class AuditData_EventDataEntry extends GeneratedMessage {
   }
   static AuditData_EventDataEntry _defaultInstance;
   static void $checkItem(AuditData_EventDataEntry v) {
-    if (v is !AuditData_EventDataEntry) checkItemFailed(v, 'AuditData_EventDataEntry');
+    if (v is! AuditData_EventDataEntry) checkItemFailed(v, 'AuditData_EventDataEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_get(1, 2, '');
-  void set value(String v) { $_setString(1, 2, v); }
-  bool hasValue() => $_has(1, 2);
+  String get value => $_getS(1, '');
+  set value(String v) { $_setString(1, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -43,8 +46,8 @@ class _ReadonlyAuditData_EventDataEntry extends AuditData_EventDataEntry with Re
 
 class AuditData extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AuditData')
-    ..a/*<String>*/(1, 'eventMessage', PbFieldType.OS)
-    ..pp/*<AuditData_EventDataEntry>*/(2, 'eventData', PbFieldType.PM, AuditData_EventDataEntry.$checkItem, AuditData_EventDataEntry.create)
+    ..aOS(1, 'eventMessage')
+    ..pp<AuditData_EventDataEntry>(2, 'eventData', PbFieldType.PM, AuditData_EventDataEntry.$checkItem, AuditData_EventDataEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -61,15 +64,15 @@ class AuditData extends GeneratedMessage {
   }
   static AuditData _defaultInstance;
   static void $checkItem(AuditData v) {
-    if (v is !AuditData) checkItemFailed(v, 'AuditData');
+    if (v is! AuditData) checkItemFailed(v, 'AuditData');
   }
 
-  String get eventMessage => $_get(0, 1, '');
-  void set eventMessage(String v) { $_setString(0, 1, v); }
-  bool hasEventMessage() => $_has(0, 1);
+  String get eventMessage => $_getS(0, '');
+  set eventMessage(String v) { $_setString(0, v); }
+  bool hasEventMessage() => $_has(0);
   void clearEventMessage() => clearField(1);
 
-  List<AuditData_EventDataEntry> get eventData => $_get(1, 2, null);
+  List<AuditData_EventDataEntry> get eventData => $_getList(1);
 }
 
 class _ReadonlyAuditData extends AuditData with ReadonlyMessageMixin {}

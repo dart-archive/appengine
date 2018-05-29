@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.type_money_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 export 'money.pb.dart';
 

@@ -1,37 +1,37 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.iam.v1_iam_policy_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'policy.pbjson.dart';
 
 const SetIamPolicyRequest$json = const {
   '1': 'SetIamPolicyRequest',
   '2': const [
-    const {'1': 'resource', '3': 1, '4': 1, '5': 9},
-    const {'1': 'policy', '3': 2, '4': 1, '5': 11, '6': '.google.iam.v1.Policy'},
+    const {'1': 'resource', '3': 1, '4': 1, '5': 9, '10': 'resource'},
+    const {'1': 'policy', '3': 2, '4': 1, '5': 11, '6': '.google.iam.v1.Policy', '10': 'policy'},
   ],
 };
 
 const GetIamPolicyRequest$json = const {
   '1': 'GetIamPolicyRequest',
   '2': const [
-    const {'1': 'resource', '3': 1, '4': 1, '5': 9},
+    const {'1': 'resource', '3': 1, '4': 1, '5': 9, '10': 'resource'},
   ],
 };
 
 const TestIamPermissionsRequest$json = const {
   '1': 'TestIamPermissionsRequest',
   '2': const [
-    const {'1': 'resource', '3': 1, '4': 1, '5': 9},
-    const {'1': 'permissions', '3': 2, '4': 3, '5': 9},
+    const {'1': 'resource', '3': 1, '4': 1, '5': 9, '10': 'resource'},
+    const {'1': 'permissions', '3': 2, '4': 3, '5': 9, '10': 'permissions'},
   ],
 };
 
 const TestIamPermissionsResponse$json = const {
   '1': 'TestIamPermissionsResponse',
   '2': const [
-    const {'1': 'permissions', '3': 1, '4': 3, '5': 9},
+    const {'1': 'permissions', '3': 1, '4': 3, '5': 9, '10': 'permissions'},
   ],
 };
 

@@ -1,14 +1,17 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_logging;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Logging_LoggingDestination extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Logging_LoggingDestination')
-    ..p/*<String>*/(1, 'logs', PbFieldType.PS)
-    ..a/*<String>*/(3, 'monitoredResource', PbFieldType.OS)
+    ..pPS(1, 'logs')
+    ..aOS(3, 'monitoredResource')
     ..hasRequiredFields = false
   ;
 
@@ -25,14 +28,14 @@ class Logging_LoggingDestination extends GeneratedMessage {
   }
   static Logging_LoggingDestination _defaultInstance;
   static void $checkItem(Logging_LoggingDestination v) {
-    if (v is !Logging_LoggingDestination) checkItemFailed(v, 'Logging_LoggingDestination');
+    if (v is! Logging_LoggingDestination) checkItemFailed(v, 'Logging_LoggingDestination');
   }
 
-  List<String> get logs => $_get(0, 1, null);
+  List<String> get logs => $_getList(0);
 
-  String get monitoredResource => $_get(1, 3, '');
-  void set monitoredResource(String v) { $_setString(1, 3, v); }
-  bool hasMonitoredResource() => $_has(1, 3);
+  String get monitoredResource => $_getS(1, '');
+  set monitoredResource(String v) { $_setString(1, v); }
+  bool hasMonitoredResource() => $_has(1);
   void clearMonitoredResource() => clearField(3);
 }
 
@@ -40,8 +43,8 @@ class _ReadonlyLogging_LoggingDestination extends Logging_LoggingDestination wit
 
 class Logging extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Logging')
-    ..pp/*<Logging_LoggingDestination>*/(1, 'producerDestinations', PbFieldType.PM, Logging_LoggingDestination.$checkItem, Logging_LoggingDestination.create)
-    ..pp/*<Logging_LoggingDestination>*/(2, 'consumerDestinations', PbFieldType.PM, Logging_LoggingDestination.$checkItem, Logging_LoggingDestination.create)
+    ..pp<Logging_LoggingDestination>(1, 'producerDestinations', PbFieldType.PM, Logging_LoggingDestination.$checkItem, Logging_LoggingDestination.create)
+    ..pp<Logging_LoggingDestination>(2, 'consumerDestinations', PbFieldType.PM, Logging_LoggingDestination.$checkItem, Logging_LoggingDestination.create)
     ..hasRequiredFields = false
   ;
 
@@ -58,12 +61,12 @@ class Logging extends GeneratedMessage {
   }
   static Logging _defaultInstance;
   static void $checkItem(Logging v) {
-    if (v is !Logging) checkItemFailed(v, 'Logging');
+    if (v is! Logging) checkItemFailed(v, 'Logging');
   }
 
-  List<Logging_LoggingDestination> get producerDestinations => $_get(0, 1, null);
+  List<Logging_LoggingDestination> get producerDestinations => $_getList(0);
 
-  List<Logging_LoggingDestination> get consumerDestinations => $_get(1, 2, null);
+  List<Logging_LoggingDestination> get consumerDestinations => $_getList(1);
 }
 
 class _ReadonlyLogging extends Logging with ReadonlyMessageMixin {}

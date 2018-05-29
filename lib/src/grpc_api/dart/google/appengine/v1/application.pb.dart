@@ -1,23 +1,26 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.appengine.v1_application;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
-import '../../protobuf/duration.pb.dart' as google$protobuf;
+import '../../protobuf/duration.pb.dart' as $google$protobuf;
 
 class Application extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Application')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'id', PbFieldType.OS)
-    ..pp/*<UrlDispatchRule>*/(3, 'dispatchRules', PbFieldType.PM, UrlDispatchRule.$checkItem, UrlDispatchRule.create)
-    ..a/*<String>*/(6, 'authDomain', PbFieldType.OS)
-    ..a/*<String>*/(7, 'locationId', PbFieldType.OS)
-    ..a/*<String>*/(8, 'codeBucket', PbFieldType.OS)
-    ..a/*<google$protobuf.Duration>*/(9, 'defaultCookieExpiration', PbFieldType.OM, google$protobuf.Duration.getDefault, google$protobuf.Duration.create)
-    ..a/*<String>*/(11, 'defaultHostname', PbFieldType.OS)
-    ..a/*<String>*/(12, 'defaultBucket', PbFieldType.OS)
+    ..aOS(1, 'name')
+    ..aOS(2, 'id')
+    ..pp<UrlDispatchRule>(3, 'dispatchRules', PbFieldType.PM, UrlDispatchRule.$checkItem, UrlDispatchRule.create)
+    ..aOS(6, 'authDomain')
+    ..aOS(7, 'locationId')
+    ..aOS(8, 'codeBucket')
+    ..a<$google$protobuf.Duration>(9, 'defaultCookieExpiration', PbFieldType.OM, $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..aOS(11, 'defaultHostname')
+    ..aOS(12, 'defaultBucket')
     ..hasRequiredFields = false
   ;
 
@@ -34,49 +37,49 @@ class Application extends GeneratedMessage {
   }
   static Application _defaultInstance;
   static void $checkItem(Application v) {
-    if (v is !Application) checkItemFailed(v, 'Application');
+    if (v is! Application) checkItemFailed(v, 'Application');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get id => $_get(1, 2, '');
-  void set id(String v) { $_setString(1, 2, v); }
-  bool hasId() => $_has(1, 2);
+  String get id => $_getS(1, '');
+  set id(String v) { $_setString(1, v); }
+  bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  List<UrlDispatchRule> get dispatchRules => $_get(2, 3, null);
+  List<UrlDispatchRule> get dispatchRules => $_getList(2);
 
-  String get authDomain => $_get(3, 6, '');
-  void set authDomain(String v) { $_setString(3, 6, v); }
-  bool hasAuthDomain() => $_has(3, 6);
+  String get authDomain => $_getS(3, '');
+  set authDomain(String v) { $_setString(3, v); }
+  bool hasAuthDomain() => $_has(3);
   void clearAuthDomain() => clearField(6);
 
-  String get locationId => $_get(4, 7, '');
-  void set locationId(String v) { $_setString(4, 7, v); }
-  bool hasLocationId() => $_has(4, 7);
+  String get locationId => $_getS(4, '');
+  set locationId(String v) { $_setString(4, v); }
+  bool hasLocationId() => $_has(4);
   void clearLocationId() => clearField(7);
 
-  String get codeBucket => $_get(5, 8, '');
-  void set codeBucket(String v) { $_setString(5, 8, v); }
-  bool hasCodeBucket() => $_has(5, 8);
+  String get codeBucket => $_getS(5, '');
+  set codeBucket(String v) { $_setString(5, v); }
+  bool hasCodeBucket() => $_has(5);
   void clearCodeBucket() => clearField(8);
 
-  google$protobuf.Duration get defaultCookieExpiration => $_get(6, 9, null);
-  void set defaultCookieExpiration(google$protobuf.Duration v) { setField(9, v); }
-  bool hasDefaultCookieExpiration() => $_has(6, 9);
+  $google$protobuf.Duration get defaultCookieExpiration => $_getN(6);
+  set defaultCookieExpiration($google$protobuf.Duration v) { setField(9, v); }
+  bool hasDefaultCookieExpiration() => $_has(6);
   void clearDefaultCookieExpiration() => clearField(9);
 
-  String get defaultHostname => $_get(7, 11, '');
-  void set defaultHostname(String v) { $_setString(7, 11, v); }
-  bool hasDefaultHostname() => $_has(7, 11);
+  String get defaultHostname => $_getS(7, '');
+  set defaultHostname(String v) { $_setString(7, v); }
+  bool hasDefaultHostname() => $_has(7);
   void clearDefaultHostname() => clearField(11);
 
-  String get defaultBucket => $_get(8, 12, '');
-  void set defaultBucket(String v) { $_setString(8, 12, v); }
-  bool hasDefaultBucket() => $_has(8, 12);
+  String get defaultBucket => $_getS(8, '');
+  set defaultBucket(String v) { $_setString(8, v); }
+  bool hasDefaultBucket() => $_has(8);
   void clearDefaultBucket() => clearField(12);
 }
 
@@ -84,9 +87,9 @@ class _ReadonlyApplication extends Application with ReadonlyMessageMixin {}
 
 class UrlDispatchRule extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UrlDispatchRule')
-    ..a/*<String>*/(1, 'domain', PbFieldType.OS)
-    ..a/*<String>*/(2, 'path', PbFieldType.OS)
-    ..a/*<String>*/(3, 'service', PbFieldType.OS)
+    ..aOS(1, 'domain')
+    ..aOS(2, 'path')
+    ..aOS(3, 'service')
     ..hasRequiredFields = false
   ;
 
@@ -103,22 +106,22 @@ class UrlDispatchRule extends GeneratedMessage {
   }
   static UrlDispatchRule _defaultInstance;
   static void $checkItem(UrlDispatchRule v) {
-    if (v is !UrlDispatchRule) checkItemFailed(v, 'UrlDispatchRule');
+    if (v is! UrlDispatchRule) checkItemFailed(v, 'UrlDispatchRule');
   }
 
-  String get domain => $_get(0, 1, '');
-  void set domain(String v) { $_setString(0, 1, v); }
-  bool hasDomain() => $_has(0, 1);
+  String get domain => $_getS(0, '');
+  set domain(String v) { $_setString(0, v); }
+  bool hasDomain() => $_has(0);
   void clearDomain() => clearField(1);
 
-  String get path => $_get(1, 2, '');
-  void set path(String v) { $_setString(1, 2, v); }
-  bool hasPath() => $_has(1, 2);
+  String get path => $_getS(1, '');
+  set path(String v) { $_setString(1, v); }
+  bool hasPath() => $_has(1);
   void clearPath() => clearField(2);
 
-  String get service => $_get(2, 3, '');
-  void set service(String v) { $_setString(2, 3, v); }
-  bool hasService() => $_has(2, 3);
+  String get service => $_getS(2, '');
+  set service(String v) { $_setString(2, v); }
+  bool hasService() => $_has(2);
   void clearService() => clearField(3);
 }
 

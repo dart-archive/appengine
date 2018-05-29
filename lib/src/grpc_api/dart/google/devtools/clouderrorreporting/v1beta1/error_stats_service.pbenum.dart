@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouderrorreporting.v1beta1_error_stats_service_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class TimedCountAlignment extends ProtobufEnum {
@@ -19,7 +21,7 @@ class TimedCountAlignment extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static TimedCountAlignment valueOf(int value) => _byValue[value] as TimedCountAlignment;
   static void $checkItem(TimedCountAlignment v) {
-    if (v is !TimedCountAlignment) checkItemFailed(v, 'TimedCountAlignment');
+    if (v is! TimedCountAlignment) checkItemFailed(v, 'TimedCountAlignment');
   }
 
   const TimedCountAlignment._(int v, String n) : super(v, n);
@@ -43,7 +45,7 @@ class ErrorGroupOrder extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static ErrorGroupOrder valueOf(int value) => _byValue[value] as ErrorGroupOrder;
   static void $checkItem(ErrorGroupOrder v) {
-    if (v is !ErrorGroupOrder) checkItemFailed(v, 'ErrorGroupOrder');
+    if (v is! ErrorGroupOrder) checkItemFailed(v, 'ErrorGroupOrder');
   }
 
   const ErrorGroupOrder._(int v, String n) : super(v, n);
@@ -69,7 +71,7 @@ class QueryTimeRange_Period extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static QueryTimeRange_Period valueOf(int value) => _byValue[value] as QueryTimeRange_Period;
   static void $checkItem(QueryTimeRange_Period v) {
-    if (v is !QueryTimeRange_Period) checkItemFailed(v, 'QueryTimeRange_Period');
+    if (v is! QueryTimeRange_Period) checkItemFailed(v, 'QueryTimeRange_Period');
   }
 
   const QueryTimeRange_Period._(int v, String n) : super(v, n);

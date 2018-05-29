@@ -1,13 +1,13 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.vision.v1_text_annotation_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 const TextAnnotation$json = const {
   '1': 'TextAnnotation',
   '2': const [
-    const {'1': 'pages', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Page'},
-    const {'1': 'text', '3': 2, '4': 1, '5': 9},
+    const {'1': 'pages', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Page', '10': 'pages'},
+    const {'1': 'text', '3': 2, '4': 1, '5': 9, '10': 'text'},
   ],
   '3': const [TextAnnotation_DetectedLanguage$json, TextAnnotation_DetectedBreak$json, TextAnnotation_TextProperty$json],
 };
@@ -15,16 +15,16 @@ const TextAnnotation$json = const {
 const TextAnnotation_DetectedLanguage$json = const {
   '1': 'DetectedLanguage',
   '2': const [
-    const {'1': 'language_code', '3': 1, '4': 1, '5': 9},
-    const {'1': 'confidence', '3': 2, '4': 1, '5': 2},
+    const {'1': 'language_code', '3': 1, '4': 1, '5': 9, '10': 'languageCode'},
+    const {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
   ],
 };
 
 const TextAnnotation_DetectedBreak$json = const {
   '1': 'DetectedBreak',
   '2': const [
-    const {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.TextAnnotation.DetectedBreak.BreakType'},
-    const {'1': 'is_prefix', '3': 2, '4': 1, '5': 8},
+    const {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.TextAnnotation.DetectedBreak.BreakType', '10': 'type'},
+    const {'1': 'is_prefix', '3': 2, '4': 1, '5': 8, '10': 'isPrefix'},
   ],
   '4': const [TextAnnotation_DetectedBreak_BreakType$json],
 };
@@ -44,28 +44,30 @@ const TextAnnotation_DetectedBreak_BreakType$json = const {
 const TextAnnotation_TextProperty$json = const {
   '1': 'TextProperty',
   '2': const [
-    const {'1': 'detected_languages', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.DetectedLanguage'},
-    const {'1': 'detected_break', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.DetectedBreak'},
+    const {'1': 'detected_languages', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.DetectedLanguage', '10': 'detectedLanguages'},
+    const {'1': 'detected_break', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.DetectedBreak', '10': 'detectedBreak'},
   ],
 };
 
 const Page$json = const {
   '1': 'Page',
   '2': const [
-    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty'},
-    const {'1': 'width', '3': 2, '4': 1, '5': 5},
-    const {'1': 'height', '3': 3, '4': 1, '5': 5},
-    const {'1': 'blocks', '3': 4, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Block'},
+    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty', '10': 'property'},
+    const {'1': 'width', '3': 2, '4': 1, '5': 5, '10': 'width'},
+    const {'1': 'height', '3': 3, '4': 1, '5': 5, '10': 'height'},
+    const {'1': 'blocks', '3': 4, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Block', '10': 'blocks'},
+    const {'1': 'confidence', '3': 5, '4': 1, '5': 2, '10': 'confidence'},
   ],
 };
 
 const Block$json = const {
   '1': 'Block',
   '2': const [
-    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty'},
-    const {'1': 'bounding_box', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly'},
-    const {'1': 'paragraphs', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Paragraph'},
-    const {'1': 'block_type', '3': 4, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Block.BlockType'},
+    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty', '10': 'property'},
+    const {'1': 'bounding_box', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'boundingBox'},
+    const {'1': 'paragraphs', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Paragraph', '10': 'paragraphs'},
+    const {'1': 'block_type', '3': 4, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Block.BlockType', '10': 'blockType'},
+    const {'1': 'confidence', '3': 5, '4': 1, '5': 2, '10': 'confidence'},
   ],
   '4': const [Block_BlockType$json],
 };
@@ -85,27 +87,30 @@ const Block_BlockType$json = const {
 const Paragraph$json = const {
   '1': 'Paragraph',
   '2': const [
-    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty'},
-    const {'1': 'bounding_box', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly'},
-    const {'1': 'words', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Word'},
+    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty', '10': 'property'},
+    const {'1': 'bounding_box', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'boundingBox'},
+    const {'1': 'words', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Word', '10': 'words'},
+    const {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
   ],
 };
 
 const Word$json = const {
   '1': 'Word',
   '2': const [
-    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty'},
-    const {'1': 'bounding_box', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly'},
-    const {'1': 'symbols', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Symbol'},
+    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty', '10': 'property'},
+    const {'1': 'bounding_box', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'boundingBox'},
+    const {'1': 'symbols', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Symbol', '10': 'symbols'},
+    const {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
   ],
 };
 
 const Symbol$json = const {
   '1': 'Symbol',
   '2': const [
-    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty'},
-    const {'1': 'bounding_box', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly'},
-    const {'1': 'text', '3': 3, '4': 1, '5': 9},
+    const {'1': 'property', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation.TextProperty', '10': 'property'},
+    const {'1': 'bounding_box', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'boundingBox'},
+    const {'1': 'text', '3': 3, '4': 1, '5': 9, '10': 'text'},
+    const {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
   ],
 };
 

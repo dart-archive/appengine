@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc.
+// Copyright 2017 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@ package google.api;
 import "google/api/annotations.proto";
 import "google/api/auth.proto";
 import "google/api/backend.proto";
+import "google/api/billing.proto";
 import "google/api/context.proto";
 import "google/api/control.proto";
 import "google/api/documentation.proto";
@@ -31,6 +32,8 @@ import "google/api/logging.proto";
 import "google/api/metric.proto";
 import "google/api/monitored_resource.proto";
 import "google/api/monitoring.proto";
+import "google/api/quota.proto";
+import "google/api/source_info.proto";
 import "google/api/system_parameter.proto";
 import "google/api/usage.proto";
 import "google/protobuf/any.proto";
@@ -69,10 +72,10 @@ option objc_class_prefix = "GAPI";
 //         requirements:
 //           provider_id: google_calendar_auth
 message Service {
-  // The version of the service configuration. The config version may
-  // influence interpretation of the configuration, for example, to
-  // determine defaults. This is documented together with applicable
-  // options. The current default for the config version itself is `3`.
+  // The semantic version of the service configuration. The config version
+  // affects the interpretation of the service configuration. For example,
+  // certain features are enabled by default for certain config versions.
+  // The latest config version is `3`.
   google.protobuf.UInt32Value config_version = 20;
 
   // The DNS address at which this service is available,
@@ -84,12 +87,10 @@ message Service {
   // generate one instead.
   string id = 33;
 
-  // The product title associated with this service.
+  // The product title for this service.
   string title = 2;
 
-  // The id of the Google developer project that owns the service.
-  // Members of this project can manage the service configuration,
-  // manage consumption of the service, etc.
+  // The Google project that owns this service.
   string producer_project_id = 22;
 
   // A list of API interfaces exported by this service. Only the `name` field
@@ -127,6 +128,9 @@ message Service {
   // HTTP configuration.
   Http http = 9;
 
+  // Quota configuration.
+  Quota quota = 10;
+
   // Auth configuration.
   Authentication authentication = 11;
 
@@ -154,6 +158,9 @@ message Service {
   // by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging][google.api.Service.logging] configurations.
   repeated MonitoredResourceDescriptor monitored_resources = 25;
 
+  // Billing configuration.
+  Billing billing = 26;
+
   // Logging configuration.
   Logging logging = 27;
 
@@ -162,6 +169,9 @@ message Service {
 
   // System parameter configuration.
   SystemParameters system_parameters = 29;
+
+  // Output only. The source information for this configuration if available.
+  SourceInfo source_info = 37;
 
   // Experimental configuration.
   Experimental experimental = 101;

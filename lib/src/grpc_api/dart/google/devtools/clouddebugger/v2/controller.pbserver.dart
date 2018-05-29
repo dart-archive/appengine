@@ -1,7 +1,7 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.devtools.clouddebugger.v2_controller_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
@@ -36,6 +36,6 @@ abstract class Controller2ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Controller2$json;
-  Map<String, dynamic> get $messageJson => Controller2$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Controller2$messageJson;
 }
 

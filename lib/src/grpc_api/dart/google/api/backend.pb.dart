@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_backend;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Backend extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Backend')
-    ..pp/*<BackendRule>*/(1, 'rules', PbFieldType.PM, BackendRule.$checkItem, BackendRule.create)
+    ..pp<BackendRule>(1, 'rules', PbFieldType.PM, BackendRule.$checkItem, BackendRule.create)
     ..hasRequiredFields = false
   ;
 
@@ -24,19 +27,19 @@ class Backend extends GeneratedMessage {
   }
   static Backend _defaultInstance;
   static void $checkItem(Backend v) {
-    if (v is !Backend) checkItemFailed(v, 'Backend');
+    if (v is! Backend) checkItemFailed(v, 'Backend');
   }
 
-  List<BackendRule> get rules => $_get(0, 1, null);
+  List<BackendRule> get rules => $_getList(0);
 }
 
 class _ReadonlyBackend extends Backend with ReadonlyMessageMixin {}
 
 class BackendRule extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BackendRule')
-    ..a/*<String>*/(1, 'selector', PbFieldType.OS)
-    ..a/*<String>*/(2, 'address', PbFieldType.OS)
-    ..a/*<double>*/(3, 'deadline', PbFieldType.OD)
+    ..aOS(1, 'selector')
+    ..aOS(2, 'address')
+    ..a<double>(3, 'deadline', PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -53,22 +56,22 @@ class BackendRule extends GeneratedMessage {
   }
   static BackendRule _defaultInstance;
   static void $checkItem(BackendRule v) {
-    if (v is !BackendRule) checkItemFailed(v, 'BackendRule');
+    if (v is! BackendRule) checkItemFailed(v, 'BackendRule');
   }
 
-  String get selector => $_get(0, 1, '');
-  void set selector(String v) { $_setString(0, 1, v); }
-  bool hasSelector() => $_has(0, 1);
+  String get selector => $_getS(0, '');
+  set selector(String v) { $_setString(0, v); }
+  bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  String get address => $_get(1, 2, '');
-  void set address(String v) { $_setString(1, 2, v); }
-  bool hasAddress() => $_has(1, 2);
+  String get address => $_getS(1, '');
+  set address(String v) { $_setString(1, v); }
+  bool hasAddress() => $_has(1);
   void clearAddress() => clearField(2);
 
-  double get deadline => $_get(2, 3, null);
-  void set deadline(double v) { $_setDouble(2, 3, v); }
-  bool hasDeadline() => $_has(2, 3);
+  double get deadline => $_getN(2);
+  set deadline(double v) { $_setDouble(2, v); }
+  bool hasDeadline() => $_has(2);
   void clearDeadline() => clearField(3);
 }
 

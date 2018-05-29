@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.runtimeconfig.v1beta1_resources_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class VariableState extends ProtobufEnum {
@@ -19,7 +21,7 @@ class VariableState extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static VariableState valueOf(int value) => _byValue[value] as VariableState;
   static void $checkItem(VariableState v) {
-    if (v is !VariableState) checkItemFailed(v, 'VariableState');
+    if (v is! VariableState) checkItemFailed(v, 'VariableState');
   }
 
   const VariableState._(int v, String n) : super(v, n);

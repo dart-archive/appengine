@@ -1,13 +1,16 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.datastore.v1beta3_query;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 import 'entity.pb.dart';
-import '../../protobuf/wrappers.pb.dart' as google$protobuf;
+import '../../protobuf/wrappers.pb.dart' as $google$protobuf;
 
 import 'query.pbenum.dart';
 
@@ -15,9 +18,9 @@ export 'query.pbenum.dart';
 
 class EntityResult extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('EntityResult')
-    ..a/*<Entity>*/(1, 'entity', PbFieldType.OM, Entity.getDefault, Entity.create)
-    ..a/*<List<int>>*/(3, 'cursor', PbFieldType.OY)
-    ..a/*<Int64>*/(4, 'version', PbFieldType.O6, Int64.ZERO)
+    ..a<Entity>(1, 'entity', PbFieldType.OM, Entity.getDefault, Entity.create)
+    ..a<List<int>>(3, 'cursor', PbFieldType.OY)
+    ..aInt64(4, 'version')
     ..hasRequiredFields = false
   ;
 
@@ -34,22 +37,22 @@ class EntityResult extends GeneratedMessage {
   }
   static EntityResult _defaultInstance;
   static void $checkItem(EntityResult v) {
-    if (v is !EntityResult) checkItemFailed(v, 'EntityResult');
+    if (v is! EntityResult) checkItemFailed(v, 'EntityResult');
   }
 
-  Entity get entity => $_get(0, 1, null);
-  void set entity(Entity v) { setField(1, v); }
-  bool hasEntity() => $_has(0, 1);
+  Entity get entity => $_getN(0);
+  set entity(Entity v) { setField(1, v); }
+  bool hasEntity() => $_has(0);
   void clearEntity() => clearField(1);
 
-  List<int> get cursor => $_get(1, 3, null);
-  void set cursor(List<int> v) { $_setBytes(1, 3, v); }
-  bool hasCursor() => $_has(1, 3);
+  List<int> get cursor => $_getN(1);
+  set cursor(List<int> v) { $_setBytes(1, v); }
+  bool hasCursor() => $_has(1);
   void clearCursor() => clearField(3);
 
-  Int64 get version => $_get(2, 4, null);
-  void set version(Int64 v) { $_setInt64(2, 4, v); }
-  bool hasVersion() => $_has(2, 4);
+  Int64 get version => $_getI64(2);
+  set version(Int64 v) { $_setInt64(2, v); }
+  bool hasVersion() => $_has(2);
   void clearVersion() => clearField(4);
 }
 
@@ -57,15 +60,15 @@ class _ReadonlyEntityResult extends EntityResult with ReadonlyMessageMixin {}
 
 class Query extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Query')
-    ..pp/*<Projection>*/(2, 'projection', PbFieldType.PM, Projection.$checkItem, Projection.create)
-    ..pp/*<KindExpression>*/(3, 'kind', PbFieldType.PM, KindExpression.$checkItem, KindExpression.create)
-    ..a/*<Filter>*/(4, 'filter', PbFieldType.OM, Filter.getDefault, Filter.create)
-    ..pp/*<PropertyOrder>*/(5, 'order', PbFieldType.PM, PropertyOrder.$checkItem, PropertyOrder.create)
-    ..pp/*<PropertyReference>*/(6, 'distinctOn', PbFieldType.PM, PropertyReference.$checkItem, PropertyReference.create)
-    ..a/*<List<int>>*/(7, 'startCursor', PbFieldType.OY)
-    ..a/*<List<int>>*/(8, 'endCursor', PbFieldType.OY)
-    ..a/*<int>*/(10, 'offset', PbFieldType.O3)
-    ..a/*<google$protobuf.Int32Value>*/(12, 'limit', PbFieldType.OM, google$protobuf.Int32Value.getDefault, google$protobuf.Int32Value.create)
+    ..pp<Projection>(2, 'projection', PbFieldType.PM, Projection.$checkItem, Projection.create)
+    ..pp<KindExpression>(3, 'kind', PbFieldType.PM, KindExpression.$checkItem, KindExpression.create)
+    ..a<Filter>(4, 'filter', PbFieldType.OM, Filter.getDefault, Filter.create)
+    ..pp<PropertyOrder>(5, 'order', PbFieldType.PM, PropertyOrder.$checkItem, PropertyOrder.create)
+    ..pp<PropertyReference>(6, 'distinctOn', PbFieldType.PM, PropertyReference.$checkItem, PropertyReference.create)
+    ..a<List<int>>(7, 'startCursor', PbFieldType.OY)
+    ..a<List<int>>(8, 'endCursor', PbFieldType.OY)
+    ..a<int>(10, 'offset', PbFieldType.O3)
+    ..a<$google$protobuf.Int32Value>(12, 'limit', PbFieldType.OM, $google$protobuf.Int32Value.getDefault, $google$protobuf.Int32Value.create)
     ..hasRequiredFields = false
   ;
 
@@ -82,40 +85,40 @@ class Query extends GeneratedMessage {
   }
   static Query _defaultInstance;
   static void $checkItem(Query v) {
-    if (v is !Query) checkItemFailed(v, 'Query');
+    if (v is! Query) checkItemFailed(v, 'Query');
   }
 
-  List<Projection> get projection => $_get(0, 2, null);
+  List<Projection> get projection => $_getList(0);
 
-  List<KindExpression> get kind => $_get(1, 3, null);
+  List<KindExpression> get kind => $_getList(1);
 
-  Filter get filter => $_get(2, 4, null);
-  void set filter(Filter v) { setField(4, v); }
-  bool hasFilter() => $_has(2, 4);
+  Filter get filter => $_getN(2);
+  set filter(Filter v) { setField(4, v); }
+  bool hasFilter() => $_has(2);
   void clearFilter() => clearField(4);
 
-  List<PropertyOrder> get order => $_get(3, 5, null);
+  List<PropertyOrder> get order => $_getList(3);
 
-  List<PropertyReference> get distinctOn => $_get(4, 6, null);
+  List<PropertyReference> get distinctOn => $_getList(4);
 
-  List<int> get startCursor => $_get(5, 7, null);
-  void set startCursor(List<int> v) { $_setBytes(5, 7, v); }
-  bool hasStartCursor() => $_has(5, 7);
+  List<int> get startCursor => $_getN(5);
+  set startCursor(List<int> v) { $_setBytes(5, v); }
+  bool hasStartCursor() => $_has(5);
   void clearStartCursor() => clearField(7);
 
-  List<int> get endCursor => $_get(6, 8, null);
-  void set endCursor(List<int> v) { $_setBytes(6, 8, v); }
-  bool hasEndCursor() => $_has(6, 8);
+  List<int> get endCursor => $_getN(6);
+  set endCursor(List<int> v) { $_setBytes(6, v); }
+  bool hasEndCursor() => $_has(6);
   void clearEndCursor() => clearField(8);
 
-  int get offset => $_get(7, 10, 0);
-  void set offset(int v) { $_setUnsignedInt32(7, 10, v); }
-  bool hasOffset() => $_has(7, 10);
+  int get offset => $_get(7, 0);
+  set offset(int v) { $_setSignedInt32(7, v); }
+  bool hasOffset() => $_has(7);
   void clearOffset() => clearField(10);
 
-  google$protobuf.Int32Value get limit => $_get(8, 12, null);
-  void set limit(google$protobuf.Int32Value v) { setField(12, v); }
-  bool hasLimit() => $_has(8, 12);
+  $google$protobuf.Int32Value get limit => $_getN(8);
+  set limit($google$protobuf.Int32Value v) { setField(12, v); }
+  bool hasLimit() => $_has(8);
   void clearLimit() => clearField(12);
 }
 
@@ -123,7 +126,7 @@ class _ReadonlyQuery extends Query with ReadonlyMessageMixin {}
 
 class KindExpression extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('KindExpression')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
+    ..aOS(1, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -140,12 +143,12 @@ class KindExpression extends GeneratedMessage {
   }
   static KindExpression _defaultInstance;
   static void $checkItem(KindExpression v) {
-    if (v is !KindExpression) checkItemFailed(v, 'KindExpression');
+    if (v is! KindExpression) checkItemFailed(v, 'KindExpression');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
@@ -153,7 +156,7 @@ class _ReadonlyKindExpression extends KindExpression with ReadonlyMessageMixin {
 
 class PropertyReference extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PropertyReference')
-    ..a/*<String>*/(2, 'name', PbFieldType.OS)
+    ..aOS(2, 'name')
     ..hasRequiredFields = false
   ;
 
@@ -170,12 +173,12 @@ class PropertyReference extends GeneratedMessage {
   }
   static PropertyReference _defaultInstance;
   static void $checkItem(PropertyReference v) {
-    if (v is !PropertyReference) checkItemFailed(v, 'PropertyReference');
+    if (v is! PropertyReference) checkItemFailed(v, 'PropertyReference');
   }
 
-  String get name => $_get(0, 2, '');
-  void set name(String v) { $_setString(0, 2, v); }
-  bool hasName() => $_has(0, 2);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(2);
 }
 
@@ -183,7 +186,7 @@ class _ReadonlyPropertyReference extends PropertyReference with ReadonlyMessageM
 
 class Projection extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Projection')
-    ..a/*<PropertyReference>*/(1, 'property', PbFieldType.OM, PropertyReference.getDefault, PropertyReference.create)
+    ..a<PropertyReference>(1, 'property', PbFieldType.OM, PropertyReference.getDefault, PropertyReference.create)
     ..hasRequiredFields = false
   ;
 
@@ -200,12 +203,12 @@ class Projection extends GeneratedMessage {
   }
   static Projection _defaultInstance;
   static void $checkItem(Projection v) {
-    if (v is !Projection) checkItemFailed(v, 'Projection');
+    if (v is! Projection) checkItemFailed(v, 'Projection');
   }
 
-  PropertyReference get property => $_get(0, 1, null);
-  void set property(PropertyReference v) { setField(1, v); }
-  bool hasProperty() => $_has(0, 1);
+  PropertyReference get property => $_getN(0);
+  set property(PropertyReference v) { setField(1, v); }
+  bool hasProperty() => $_has(0);
   void clearProperty() => clearField(1);
 }
 
@@ -213,8 +216,8 @@ class _ReadonlyProjection extends Projection with ReadonlyMessageMixin {}
 
 class PropertyOrder extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PropertyOrder')
-    ..a/*<PropertyReference>*/(1, 'property', PbFieldType.OM, PropertyReference.getDefault, PropertyReference.create)
-    ..e/*<PropertyOrder_Direction>*/(2, 'direction', PbFieldType.OE, PropertyOrder_Direction.DIRECTION_UNSPECIFIED, PropertyOrder_Direction.valueOf)
+    ..a<PropertyReference>(1, 'property', PbFieldType.OM, PropertyReference.getDefault, PropertyReference.create)
+    ..e<PropertyOrder_Direction>(2, 'direction', PbFieldType.OE, PropertyOrder_Direction.DIRECTION_UNSPECIFIED, PropertyOrder_Direction.valueOf, PropertyOrder_Direction.values)
     ..hasRequiredFields = false
   ;
 
@@ -231,17 +234,17 @@ class PropertyOrder extends GeneratedMessage {
   }
   static PropertyOrder _defaultInstance;
   static void $checkItem(PropertyOrder v) {
-    if (v is !PropertyOrder) checkItemFailed(v, 'PropertyOrder');
+    if (v is! PropertyOrder) checkItemFailed(v, 'PropertyOrder');
   }
 
-  PropertyReference get property => $_get(0, 1, null);
-  void set property(PropertyReference v) { setField(1, v); }
-  bool hasProperty() => $_has(0, 1);
+  PropertyReference get property => $_getN(0);
+  set property(PropertyReference v) { setField(1, v); }
+  bool hasProperty() => $_has(0);
   void clearProperty() => clearField(1);
 
-  PropertyOrder_Direction get direction => $_get(1, 2, null);
-  void set direction(PropertyOrder_Direction v) { setField(2, v); }
-  bool hasDirection() => $_has(1, 2);
+  PropertyOrder_Direction get direction => $_getN(1);
+  set direction(PropertyOrder_Direction v) { setField(2, v); }
+  bool hasDirection() => $_has(1);
   void clearDirection() => clearField(2);
 }
 
@@ -249,8 +252,8 @@ class _ReadonlyPropertyOrder extends PropertyOrder with ReadonlyMessageMixin {}
 
 class Filter extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Filter')
-    ..a/*<CompositeFilter>*/(1, 'compositeFilter', PbFieldType.OM, CompositeFilter.getDefault, CompositeFilter.create)
-    ..a/*<PropertyFilter>*/(2, 'propertyFilter', PbFieldType.OM, PropertyFilter.getDefault, PropertyFilter.create)
+    ..a<CompositeFilter>(1, 'compositeFilter', PbFieldType.OM, CompositeFilter.getDefault, CompositeFilter.create)
+    ..a<PropertyFilter>(2, 'propertyFilter', PbFieldType.OM, PropertyFilter.getDefault, PropertyFilter.create)
     ..hasRequiredFields = false
   ;
 
@@ -267,17 +270,17 @@ class Filter extends GeneratedMessage {
   }
   static Filter _defaultInstance;
   static void $checkItem(Filter v) {
-    if (v is !Filter) checkItemFailed(v, 'Filter');
+    if (v is! Filter) checkItemFailed(v, 'Filter');
   }
 
-  CompositeFilter get compositeFilter => $_get(0, 1, null);
-  void set compositeFilter(CompositeFilter v) { setField(1, v); }
-  bool hasCompositeFilter() => $_has(0, 1);
+  CompositeFilter get compositeFilter => $_getN(0);
+  set compositeFilter(CompositeFilter v) { setField(1, v); }
+  bool hasCompositeFilter() => $_has(0);
   void clearCompositeFilter() => clearField(1);
 
-  PropertyFilter get propertyFilter => $_get(1, 2, null);
-  void set propertyFilter(PropertyFilter v) { setField(2, v); }
-  bool hasPropertyFilter() => $_has(1, 2);
+  PropertyFilter get propertyFilter => $_getN(1);
+  set propertyFilter(PropertyFilter v) { setField(2, v); }
+  bool hasPropertyFilter() => $_has(1);
   void clearPropertyFilter() => clearField(2);
 }
 
@@ -285,8 +288,8 @@ class _ReadonlyFilter extends Filter with ReadonlyMessageMixin {}
 
 class CompositeFilter extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CompositeFilter')
-    ..e/*<CompositeFilter_Operator>*/(1, 'op', PbFieldType.OE, CompositeFilter_Operator.OPERATOR_UNSPECIFIED, CompositeFilter_Operator.valueOf)
-    ..pp/*<Filter>*/(2, 'filters', PbFieldType.PM, Filter.$checkItem, Filter.create)
+    ..e<CompositeFilter_Operator>(1, 'op', PbFieldType.OE, CompositeFilter_Operator.OPERATOR_UNSPECIFIED, CompositeFilter_Operator.valueOf, CompositeFilter_Operator.values)
+    ..pp<Filter>(2, 'filters', PbFieldType.PM, Filter.$checkItem, Filter.create)
     ..hasRequiredFields = false
   ;
 
@@ -303,24 +306,24 @@ class CompositeFilter extends GeneratedMessage {
   }
   static CompositeFilter _defaultInstance;
   static void $checkItem(CompositeFilter v) {
-    if (v is !CompositeFilter) checkItemFailed(v, 'CompositeFilter');
+    if (v is! CompositeFilter) checkItemFailed(v, 'CompositeFilter');
   }
 
-  CompositeFilter_Operator get op => $_get(0, 1, null);
-  void set op(CompositeFilter_Operator v) { setField(1, v); }
-  bool hasOp() => $_has(0, 1);
+  CompositeFilter_Operator get op => $_getN(0);
+  set op(CompositeFilter_Operator v) { setField(1, v); }
+  bool hasOp() => $_has(0);
   void clearOp() => clearField(1);
 
-  List<Filter> get filters => $_get(1, 2, null);
+  List<Filter> get filters => $_getList(1);
 }
 
 class _ReadonlyCompositeFilter extends CompositeFilter with ReadonlyMessageMixin {}
 
 class PropertyFilter extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('PropertyFilter')
-    ..a/*<PropertyReference>*/(1, 'property', PbFieldType.OM, PropertyReference.getDefault, PropertyReference.create)
-    ..e/*<PropertyFilter_Operator>*/(2, 'op', PbFieldType.OE, PropertyFilter_Operator.OPERATOR_UNSPECIFIED, PropertyFilter_Operator.valueOf)
-    ..a/*<Value>*/(3, 'value', PbFieldType.OM, Value.getDefault, Value.create)
+    ..a<PropertyReference>(1, 'property', PbFieldType.OM, PropertyReference.getDefault, PropertyReference.create)
+    ..e<PropertyFilter_Operator>(2, 'op', PbFieldType.OE, PropertyFilter_Operator.OPERATOR_UNSPECIFIED, PropertyFilter_Operator.valueOf, PropertyFilter_Operator.values)
+    ..a<Value>(3, 'value', PbFieldType.OM, Value.getDefault, Value.create)
     ..hasRequiredFields = false
   ;
 
@@ -337,22 +340,22 @@ class PropertyFilter extends GeneratedMessage {
   }
   static PropertyFilter _defaultInstance;
   static void $checkItem(PropertyFilter v) {
-    if (v is !PropertyFilter) checkItemFailed(v, 'PropertyFilter');
+    if (v is! PropertyFilter) checkItemFailed(v, 'PropertyFilter');
   }
 
-  PropertyReference get property => $_get(0, 1, null);
-  void set property(PropertyReference v) { setField(1, v); }
-  bool hasProperty() => $_has(0, 1);
+  PropertyReference get property => $_getN(0);
+  set property(PropertyReference v) { setField(1, v); }
+  bool hasProperty() => $_has(0);
   void clearProperty() => clearField(1);
 
-  PropertyFilter_Operator get op => $_get(1, 2, null);
-  void set op(PropertyFilter_Operator v) { setField(2, v); }
-  bool hasOp() => $_has(1, 2);
+  PropertyFilter_Operator get op => $_getN(1);
+  set op(PropertyFilter_Operator v) { setField(2, v); }
+  bool hasOp() => $_has(1);
   void clearOp() => clearField(2);
 
-  Value get value => $_get(2, 3, null);
-  void set value(Value v) { setField(3, v); }
-  bool hasValue() => $_has(2, 3);
+  Value get value => $_getN(2);
+  set value(Value v) { setField(3, v); }
+  bool hasValue() => $_has(2);
   void clearValue() => clearField(3);
 }
 
@@ -360,8 +363,8 @@ class _ReadonlyPropertyFilter extends PropertyFilter with ReadonlyMessageMixin {
 
 class GqlQuery_NamedBindingsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GqlQuery_NamedBindingsEntry')
-    ..a/*<String>*/(1, 'key', PbFieldType.OS)
-    ..a/*<GqlQueryParameter>*/(2, 'value', PbFieldType.OM, GqlQueryParameter.getDefault, GqlQueryParameter.create)
+    ..aOS(1, 'key')
+    ..a<GqlQueryParameter>(2, 'value', PbFieldType.OM, GqlQueryParameter.getDefault, GqlQueryParameter.create)
     ..hasRequiredFields = false
   ;
 
@@ -378,17 +381,17 @@ class GqlQuery_NamedBindingsEntry extends GeneratedMessage {
   }
   static GqlQuery_NamedBindingsEntry _defaultInstance;
   static void $checkItem(GqlQuery_NamedBindingsEntry v) {
-    if (v is !GqlQuery_NamedBindingsEntry) checkItemFailed(v, 'GqlQuery_NamedBindingsEntry');
+    if (v is! GqlQuery_NamedBindingsEntry) checkItemFailed(v, 'GqlQuery_NamedBindingsEntry');
   }
 
-  String get key => $_get(0, 1, '');
-  void set key(String v) { $_setString(0, 1, v); }
-  bool hasKey() => $_has(0, 1);
+  String get key => $_getS(0, '');
+  set key(String v) { $_setString(0, v); }
+  bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  GqlQueryParameter get value => $_get(1, 2, null);
-  void set value(GqlQueryParameter v) { setField(2, v); }
-  bool hasValue() => $_has(1, 2);
+  GqlQueryParameter get value => $_getN(1);
+  set value(GqlQueryParameter v) { setField(2, v); }
+  bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
@@ -396,10 +399,10 @@ class _ReadonlyGqlQuery_NamedBindingsEntry extends GqlQuery_NamedBindingsEntry w
 
 class GqlQuery extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GqlQuery')
-    ..a/*<String>*/(1, 'queryString', PbFieldType.OS)
-    ..a/*<bool>*/(2, 'allowLiterals', PbFieldType.OB)
-    ..pp/*<GqlQueryParameter>*/(4, 'positionalBindings', PbFieldType.PM, GqlQueryParameter.$checkItem, GqlQueryParameter.create)
-    ..pp/*<GqlQuery_NamedBindingsEntry>*/(5, 'namedBindings', PbFieldType.PM, GqlQuery_NamedBindingsEntry.$checkItem, GqlQuery_NamedBindingsEntry.create)
+    ..aOS(1, 'queryString')
+    ..aOB(2, 'allowLiterals')
+    ..pp<GqlQueryParameter>(4, 'positionalBindings', PbFieldType.PM, GqlQueryParameter.$checkItem, GqlQueryParameter.create)
+    ..pp<GqlQuery_NamedBindingsEntry>(5, 'namedBindings', PbFieldType.PM, GqlQuery_NamedBindingsEntry.$checkItem, GqlQuery_NamedBindingsEntry.create)
     ..hasRequiredFields = false
   ;
 
@@ -416,30 +419,30 @@ class GqlQuery extends GeneratedMessage {
   }
   static GqlQuery _defaultInstance;
   static void $checkItem(GqlQuery v) {
-    if (v is !GqlQuery) checkItemFailed(v, 'GqlQuery');
+    if (v is! GqlQuery) checkItemFailed(v, 'GqlQuery');
   }
 
-  String get queryString => $_get(0, 1, '');
-  void set queryString(String v) { $_setString(0, 1, v); }
-  bool hasQueryString() => $_has(0, 1);
+  String get queryString => $_getS(0, '');
+  set queryString(String v) { $_setString(0, v); }
+  bool hasQueryString() => $_has(0);
   void clearQueryString() => clearField(1);
 
-  bool get allowLiterals => $_get(1, 2, false);
-  void set allowLiterals(bool v) { $_setBool(1, 2, v); }
-  bool hasAllowLiterals() => $_has(1, 2);
+  bool get allowLiterals => $_get(1, false);
+  set allowLiterals(bool v) { $_setBool(1, v); }
+  bool hasAllowLiterals() => $_has(1);
   void clearAllowLiterals() => clearField(2);
 
-  List<GqlQueryParameter> get positionalBindings => $_get(2, 4, null);
+  List<GqlQueryParameter> get positionalBindings => $_getList(2);
 
-  List<GqlQuery_NamedBindingsEntry> get namedBindings => $_get(3, 5, null);
+  List<GqlQuery_NamedBindingsEntry> get namedBindings => $_getList(3);
 }
 
 class _ReadonlyGqlQuery extends GqlQuery with ReadonlyMessageMixin {}
 
 class GqlQueryParameter extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GqlQueryParameter')
-    ..a/*<Value>*/(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
-    ..a/*<List<int>>*/(3, 'cursor', PbFieldType.OY)
+    ..a<Value>(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
+    ..a<List<int>>(3, 'cursor', PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -456,17 +459,17 @@ class GqlQueryParameter extends GeneratedMessage {
   }
   static GqlQueryParameter _defaultInstance;
   static void $checkItem(GqlQueryParameter v) {
-    if (v is !GqlQueryParameter) checkItemFailed(v, 'GqlQueryParameter');
+    if (v is! GqlQueryParameter) checkItemFailed(v, 'GqlQueryParameter');
   }
 
-  Value get value => $_get(0, 2, null);
-  void set value(Value v) { setField(2, v); }
-  bool hasValue() => $_has(0, 2);
+  Value get value => $_getN(0);
+  set value(Value v) { setField(2, v); }
+  bool hasValue() => $_has(0);
   void clearValue() => clearField(2);
 
-  List<int> get cursor => $_get(1, 3, null);
-  void set cursor(List<int> v) { $_setBytes(1, 3, v); }
-  bool hasCursor() => $_has(1, 3);
+  List<int> get cursor => $_getN(1);
+  set cursor(List<int> v) { $_setBytes(1, v); }
+  bool hasCursor() => $_has(1);
   void clearCursor() => clearField(3);
 }
 
@@ -474,13 +477,13 @@ class _ReadonlyGqlQueryParameter extends GqlQueryParameter with ReadonlyMessageM
 
 class QueryResultBatch extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('QueryResultBatch')
-    ..e/*<EntityResult_ResultType>*/(1, 'entityResultType', PbFieldType.OE, EntityResult_ResultType.RESULT_TYPE_UNSPECIFIED, EntityResult_ResultType.valueOf)
-    ..pp/*<EntityResult>*/(2, 'entityResults', PbFieldType.PM, EntityResult.$checkItem, EntityResult.create)
-    ..a/*<List<int>>*/(3, 'skippedCursor', PbFieldType.OY)
-    ..a/*<List<int>>*/(4, 'endCursor', PbFieldType.OY)
-    ..e/*<QueryResultBatch_MoreResultsType>*/(5, 'moreResults', PbFieldType.OE, QueryResultBatch_MoreResultsType.MORE_RESULTS_TYPE_UNSPECIFIED, QueryResultBatch_MoreResultsType.valueOf)
-    ..a/*<int>*/(6, 'skippedResults', PbFieldType.O3)
-    ..a/*<Int64>*/(7, 'snapshotVersion', PbFieldType.O6, Int64.ZERO)
+    ..e<EntityResult_ResultType>(1, 'entityResultType', PbFieldType.OE, EntityResult_ResultType.RESULT_TYPE_UNSPECIFIED, EntityResult_ResultType.valueOf, EntityResult_ResultType.values)
+    ..pp<EntityResult>(2, 'entityResults', PbFieldType.PM, EntityResult.$checkItem, EntityResult.create)
+    ..a<List<int>>(3, 'skippedCursor', PbFieldType.OY)
+    ..a<List<int>>(4, 'endCursor', PbFieldType.OY)
+    ..e<QueryResultBatch_MoreResultsType>(5, 'moreResults', PbFieldType.OE, QueryResultBatch_MoreResultsType.MORE_RESULTS_TYPE_UNSPECIFIED, QueryResultBatch_MoreResultsType.valueOf, QueryResultBatch_MoreResultsType.values)
+    ..a<int>(6, 'skippedResults', PbFieldType.O3)
+    ..aInt64(7, 'snapshotVersion')
     ..hasRequiredFields = false
   ;
 
@@ -497,39 +500,39 @@ class QueryResultBatch extends GeneratedMessage {
   }
   static QueryResultBatch _defaultInstance;
   static void $checkItem(QueryResultBatch v) {
-    if (v is !QueryResultBatch) checkItemFailed(v, 'QueryResultBatch');
+    if (v is! QueryResultBatch) checkItemFailed(v, 'QueryResultBatch');
   }
 
-  EntityResult_ResultType get entityResultType => $_get(0, 1, null);
-  void set entityResultType(EntityResult_ResultType v) { setField(1, v); }
-  bool hasEntityResultType() => $_has(0, 1);
+  EntityResult_ResultType get entityResultType => $_getN(0);
+  set entityResultType(EntityResult_ResultType v) { setField(1, v); }
+  bool hasEntityResultType() => $_has(0);
   void clearEntityResultType() => clearField(1);
 
-  List<EntityResult> get entityResults => $_get(1, 2, null);
+  List<EntityResult> get entityResults => $_getList(1);
 
-  List<int> get skippedCursor => $_get(2, 3, null);
-  void set skippedCursor(List<int> v) { $_setBytes(2, 3, v); }
-  bool hasSkippedCursor() => $_has(2, 3);
+  List<int> get skippedCursor => $_getN(2);
+  set skippedCursor(List<int> v) { $_setBytes(2, v); }
+  bool hasSkippedCursor() => $_has(2);
   void clearSkippedCursor() => clearField(3);
 
-  List<int> get endCursor => $_get(3, 4, null);
-  void set endCursor(List<int> v) { $_setBytes(3, 4, v); }
-  bool hasEndCursor() => $_has(3, 4);
+  List<int> get endCursor => $_getN(3);
+  set endCursor(List<int> v) { $_setBytes(3, v); }
+  bool hasEndCursor() => $_has(3);
   void clearEndCursor() => clearField(4);
 
-  QueryResultBatch_MoreResultsType get moreResults => $_get(4, 5, null);
-  void set moreResults(QueryResultBatch_MoreResultsType v) { setField(5, v); }
-  bool hasMoreResults() => $_has(4, 5);
+  QueryResultBatch_MoreResultsType get moreResults => $_getN(4);
+  set moreResults(QueryResultBatch_MoreResultsType v) { setField(5, v); }
+  bool hasMoreResults() => $_has(4);
   void clearMoreResults() => clearField(5);
 
-  int get skippedResults => $_get(5, 6, 0);
-  void set skippedResults(int v) { $_setUnsignedInt32(5, 6, v); }
-  bool hasSkippedResults() => $_has(5, 6);
+  int get skippedResults => $_get(5, 0);
+  set skippedResults(int v) { $_setSignedInt32(5, v); }
+  bool hasSkippedResults() => $_has(5);
   void clearSkippedResults() => clearField(6);
 
-  Int64 get snapshotVersion => $_get(6, 7, null);
-  void set snapshotVersion(Int64 v) { $_setInt64(6, 7, v); }
-  bool hasSnapshotVersion() => $_has(6, 7);
+  Int64 get snapshotVersion => $_getI64(6);
+  set snapshotVersion(Int64 v) { $_setInt64(6, v); }
+  bool hasSnapshotVersion() => $_has(6);
   void clearSnapshotVersion() => clearField(7);
 }
 

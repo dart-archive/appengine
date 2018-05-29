@@ -1,17 +1,20 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api_documentation;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
 class Documentation extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Documentation')
-    ..a/*<String>*/(1, 'summary', PbFieldType.OS)
-    ..a/*<String>*/(2, 'overview', PbFieldType.OS)
-    ..pp/*<DocumentationRule>*/(3, 'rules', PbFieldType.PM, DocumentationRule.$checkItem, DocumentationRule.create)
-    ..a/*<String>*/(4, 'documentationRootUrl', PbFieldType.OS)
-    ..pp/*<Page>*/(5, 'pages', PbFieldType.PM, Page.$checkItem, Page.create)
+    ..aOS(1, 'summary')
+    ..aOS(2, 'overview')
+    ..pp<DocumentationRule>(3, 'rules', PbFieldType.PM, DocumentationRule.$checkItem, DocumentationRule.create)
+    ..aOS(4, 'documentationRootUrl')
+    ..pp<Page>(5, 'pages', PbFieldType.PM, Page.$checkItem, Page.create)
     ..hasRequiredFields = false
   ;
 
@@ -28,36 +31,36 @@ class Documentation extends GeneratedMessage {
   }
   static Documentation _defaultInstance;
   static void $checkItem(Documentation v) {
-    if (v is !Documentation) checkItemFailed(v, 'Documentation');
+    if (v is! Documentation) checkItemFailed(v, 'Documentation');
   }
 
-  String get summary => $_get(0, 1, '');
-  void set summary(String v) { $_setString(0, 1, v); }
-  bool hasSummary() => $_has(0, 1);
+  String get summary => $_getS(0, '');
+  set summary(String v) { $_setString(0, v); }
+  bool hasSummary() => $_has(0);
   void clearSummary() => clearField(1);
 
-  String get overview => $_get(1, 2, '');
-  void set overview(String v) { $_setString(1, 2, v); }
-  bool hasOverview() => $_has(1, 2);
+  String get overview => $_getS(1, '');
+  set overview(String v) { $_setString(1, v); }
+  bool hasOverview() => $_has(1);
   void clearOverview() => clearField(2);
 
-  List<DocumentationRule> get rules => $_get(2, 3, null);
+  List<DocumentationRule> get rules => $_getList(2);
 
-  String get documentationRootUrl => $_get(3, 4, '');
-  void set documentationRootUrl(String v) { $_setString(3, 4, v); }
-  bool hasDocumentationRootUrl() => $_has(3, 4);
+  String get documentationRootUrl => $_getS(3, '');
+  set documentationRootUrl(String v) { $_setString(3, v); }
+  bool hasDocumentationRootUrl() => $_has(3);
   void clearDocumentationRootUrl() => clearField(4);
 
-  List<Page> get pages => $_get(4, 5, null);
+  List<Page> get pages => $_getList(4);
 }
 
 class _ReadonlyDocumentation extends Documentation with ReadonlyMessageMixin {}
 
 class DocumentationRule extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DocumentationRule')
-    ..a/*<String>*/(1, 'selector', PbFieldType.OS)
-    ..a/*<String>*/(2, 'description', PbFieldType.OS)
-    ..a/*<String>*/(3, 'deprecationDescription', PbFieldType.OS)
+    ..aOS(1, 'selector')
+    ..aOS(2, 'description')
+    ..aOS(3, 'deprecationDescription')
     ..hasRequiredFields = false
   ;
 
@@ -74,22 +77,22 @@ class DocumentationRule extends GeneratedMessage {
   }
   static DocumentationRule _defaultInstance;
   static void $checkItem(DocumentationRule v) {
-    if (v is !DocumentationRule) checkItemFailed(v, 'DocumentationRule');
+    if (v is! DocumentationRule) checkItemFailed(v, 'DocumentationRule');
   }
 
-  String get selector => $_get(0, 1, '');
-  void set selector(String v) { $_setString(0, 1, v); }
-  bool hasSelector() => $_has(0, 1);
+  String get selector => $_getS(0, '');
+  set selector(String v) { $_setString(0, v); }
+  bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  String get description => $_get(1, 2, '');
-  void set description(String v) { $_setString(1, 2, v); }
-  bool hasDescription() => $_has(1, 2);
+  String get description => $_getS(1, '');
+  set description(String v) { $_setString(1, v); }
+  bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  String get deprecationDescription => $_get(2, 3, '');
-  void set deprecationDescription(String v) { $_setString(2, 3, v); }
-  bool hasDeprecationDescription() => $_has(2, 3);
+  String get deprecationDescription => $_getS(2, '');
+  set deprecationDescription(String v) { $_setString(2, v); }
+  bool hasDeprecationDescription() => $_has(2);
   void clearDeprecationDescription() => clearField(3);
 }
 
@@ -97,9 +100,9 @@ class _ReadonlyDocumentationRule extends DocumentationRule with ReadonlyMessageM
 
 class Page extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Page')
-    ..a/*<String>*/(1, 'name', PbFieldType.OS)
-    ..a/*<String>*/(2, 'content', PbFieldType.OS)
-    ..pp/*<Page>*/(3, 'subpages', PbFieldType.PM, Page.$checkItem, Page.create)
+    ..aOS(1, 'name')
+    ..aOS(2, 'content')
+    ..pp<Page>(3, 'subpages', PbFieldType.PM, Page.$checkItem, Page.create)
     ..hasRequiredFields = false
   ;
 
@@ -116,20 +119,20 @@ class Page extends GeneratedMessage {
   }
   static Page _defaultInstance;
   static void $checkItem(Page v) {
-    if (v is !Page) checkItemFailed(v, 'Page');
+    if (v is! Page) checkItemFailed(v, 'Page');
   }
 
-  String get name => $_get(0, 1, '');
-  void set name(String v) { $_setString(0, 1, v); }
-  bool hasName() => $_has(0, 1);
+  String get name => $_getS(0, '');
+  set name(String v) { $_setString(0, v); }
+  bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get content => $_get(1, 2, '');
-  void set content(String v) { $_setString(1, 2, v); }
-  bool hasContent() => $_has(1, 2);
+  String get content => $_getS(1, '');
+  set content(String v) { $_setString(1, v); }
+  bool hasContent() => $_has(1);
   void clearContent() => clearField(2);
 
-  List<Page> get subpages => $_get(2, 3, null);
+  List<Page> get subpages => $_getList(2);
 }
 
 class _ReadonlyPage extends Page with ReadonlyMessageMixin {}

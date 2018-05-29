@@ -1,7 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.protobuf_empty;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:protobuf/protobuf.dart';
 
@@ -23,7 +26,7 @@ class Empty extends GeneratedMessage {
   }
   static Empty _defaultInstance;
   static void $checkItem(Empty v) {
-    if (v is !Empty) checkItemFailed(v, 'Empty');
+    if (v is! Empty) checkItemFailed(v, 'Empty');
   }
 }
 

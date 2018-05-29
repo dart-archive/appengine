@@ -1,16 +1,19 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.api.servicecontrol.v1_distribution;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
+
+// ignore: UNUSED_SHOWN_NAME
+import 'dart:core' show int, bool, double, String, List, override;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Distribution_LinearBuckets extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Distribution_LinearBuckets')
-    ..a/*<int>*/(1, 'numFiniteBuckets', PbFieldType.O3)
-    ..a/*<double>*/(2, 'width', PbFieldType.OD)
-    ..a/*<double>*/(3, 'offset', PbFieldType.OD)
+    ..a<int>(1, 'numFiniteBuckets', PbFieldType.O3)
+    ..a<double>(2, 'width', PbFieldType.OD)
+    ..a<double>(3, 'offset', PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -27,22 +30,22 @@ class Distribution_LinearBuckets extends GeneratedMessage {
   }
   static Distribution_LinearBuckets _defaultInstance;
   static void $checkItem(Distribution_LinearBuckets v) {
-    if (v is !Distribution_LinearBuckets) checkItemFailed(v, 'Distribution_LinearBuckets');
+    if (v is! Distribution_LinearBuckets) checkItemFailed(v, 'Distribution_LinearBuckets');
   }
 
-  int get numFiniteBuckets => $_get(0, 1, 0);
-  void set numFiniteBuckets(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasNumFiniteBuckets() => $_has(0, 1);
+  int get numFiniteBuckets => $_get(0, 0);
+  set numFiniteBuckets(int v) { $_setSignedInt32(0, v); }
+  bool hasNumFiniteBuckets() => $_has(0);
   void clearNumFiniteBuckets() => clearField(1);
 
-  double get width => $_get(1, 2, null);
-  void set width(double v) { $_setDouble(1, 2, v); }
-  bool hasWidth() => $_has(1, 2);
+  double get width => $_getN(1);
+  set width(double v) { $_setDouble(1, v); }
+  bool hasWidth() => $_has(1);
   void clearWidth() => clearField(2);
 
-  double get offset => $_get(2, 3, null);
-  void set offset(double v) { $_setDouble(2, 3, v); }
-  bool hasOffset() => $_has(2, 3);
+  double get offset => $_getN(2);
+  set offset(double v) { $_setDouble(2, v); }
+  bool hasOffset() => $_has(2);
   void clearOffset() => clearField(3);
 }
 
@@ -50,9 +53,9 @@ class _ReadonlyDistribution_LinearBuckets extends Distribution_LinearBuckets wit
 
 class Distribution_ExponentialBuckets extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Distribution_ExponentialBuckets')
-    ..a/*<int>*/(1, 'numFiniteBuckets', PbFieldType.O3)
-    ..a/*<double>*/(2, 'growthFactor', PbFieldType.OD)
-    ..a/*<double>*/(3, 'scale', PbFieldType.OD)
+    ..a<int>(1, 'numFiniteBuckets', PbFieldType.O3)
+    ..a<double>(2, 'growthFactor', PbFieldType.OD)
+    ..a<double>(3, 'scale', PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -69,22 +72,22 @@ class Distribution_ExponentialBuckets extends GeneratedMessage {
   }
   static Distribution_ExponentialBuckets _defaultInstance;
   static void $checkItem(Distribution_ExponentialBuckets v) {
-    if (v is !Distribution_ExponentialBuckets) checkItemFailed(v, 'Distribution_ExponentialBuckets');
+    if (v is! Distribution_ExponentialBuckets) checkItemFailed(v, 'Distribution_ExponentialBuckets');
   }
 
-  int get numFiniteBuckets => $_get(0, 1, 0);
-  void set numFiniteBuckets(int v) { $_setUnsignedInt32(0, 1, v); }
-  bool hasNumFiniteBuckets() => $_has(0, 1);
+  int get numFiniteBuckets => $_get(0, 0);
+  set numFiniteBuckets(int v) { $_setSignedInt32(0, v); }
+  bool hasNumFiniteBuckets() => $_has(0);
   void clearNumFiniteBuckets() => clearField(1);
 
-  double get growthFactor => $_get(1, 2, null);
-  void set growthFactor(double v) { $_setDouble(1, 2, v); }
-  bool hasGrowthFactor() => $_has(1, 2);
+  double get growthFactor => $_getN(1);
+  set growthFactor(double v) { $_setDouble(1, v); }
+  bool hasGrowthFactor() => $_has(1);
   void clearGrowthFactor() => clearField(2);
 
-  double get scale => $_get(2, 3, null);
-  void set scale(double v) { $_setDouble(2, 3, v); }
-  bool hasScale() => $_has(2, 3);
+  double get scale => $_getN(2);
+  set scale(double v) { $_setDouble(2, v); }
+  bool hasScale() => $_has(2);
   void clearScale() => clearField(3);
 }
 
@@ -92,7 +95,7 @@ class _ReadonlyDistribution_ExponentialBuckets extends Distribution_ExponentialB
 
 class Distribution_ExplicitBuckets extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Distribution_ExplicitBuckets')
-    ..p/*<double>*/(1, 'bounds', PbFieldType.PD)
+    ..p<double>(1, 'bounds', PbFieldType.PD)
     ..hasRequiredFields = false
   ;
 
@@ -109,25 +112,25 @@ class Distribution_ExplicitBuckets extends GeneratedMessage {
   }
   static Distribution_ExplicitBuckets _defaultInstance;
   static void $checkItem(Distribution_ExplicitBuckets v) {
-    if (v is !Distribution_ExplicitBuckets) checkItemFailed(v, 'Distribution_ExplicitBuckets');
+    if (v is! Distribution_ExplicitBuckets) checkItemFailed(v, 'Distribution_ExplicitBuckets');
   }
 
-  List<double> get bounds => $_get(0, 1, null);
+  List<double> get bounds => $_getList(0);
 }
 
 class _ReadonlyDistribution_ExplicitBuckets extends Distribution_ExplicitBuckets with ReadonlyMessageMixin {}
 
 class Distribution extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Distribution')
-    ..a/*<Int64>*/(1, 'count', PbFieldType.O6, Int64.ZERO)
-    ..a/*<double>*/(2, 'mean', PbFieldType.OD)
-    ..a/*<double>*/(3, 'minimum', PbFieldType.OD)
-    ..a/*<double>*/(4, 'maximum', PbFieldType.OD)
-    ..a/*<double>*/(5, 'sumOfSquaredDeviation', PbFieldType.OD)
-    ..p/*<Int64>*/(6, 'bucketCounts', PbFieldType.P6)
-    ..a/*<Distribution_LinearBuckets>*/(7, 'linearBuckets', PbFieldType.OM, Distribution_LinearBuckets.getDefault, Distribution_LinearBuckets.create)
-    ..a/*<Distribution_ExponentialBuckets>*/(8, 'exponentialBuckets', PbFieldType.OM, Distribution_ExponentialBuckets.getDefault, Distribution_ExponentialBuckets.create)
-    ..a/*<Distribution_ExplicitBuckets>*/(9, 'explicitBuckets', PbFieldType.OM, Distribution_ExplicitBuckets.getDefault, Distribution_ExplicitBuckets.create)
+    ..aInt64(1, 'count')
+    ..a<double>(2, 'mean', PbFieldType.OD)
+    ..a<double>(3, 'minimum', PbFieldType.OD)
+    ..a<double>(4, 'maximum', PbFieldType.OD)
+    ..a<double>(5, 'sumOfSquaredDeviation', PbFieldType.OD)
+    ..p<Int64>(6, 'bucketCounts', PbFieldType.P6)
+    ..a<Distribution_LinearBuckets>(7, 'linearBuckets', PbFieldType.OM, Distribution_LinearBuckets.getDefault, Distribution_LinearBuckets.create)
+    ..a<Distribution_ExponentialBuckets>(8, 'exponentialBuckets', PbFieldType.OM, Distribution_ExponentialBuckets.getDefault, Distribution_ExponentialBuckets.create)
+    ..a<Distribution_ExplicitBuckets>(9, 'explicitBuckets', PbFieldType.OM, Distribution_ExplicitBuckets.getDefault, Distribution_ExplicitBuckets.create)
     ..hasRequiredFields = false
   ;
 
@@ -144,49 +147,49 @@ class Distribution extends GeneratedMessage {
   }
   static Distribution _defaultInstance;
   static void $checkItem(Distribution v) {
-    if (v is !Distribution) checkItemFailed(v, 'Distribution');
+    if (v is! Distribution) checkItemFailed(v, 'Distribution');
   }
 
-  Int64 get count => $_get(0, 1, null);
-  void set count(Int64 v) { $_setInt64(0, 1, v); }
-  bool hasCount() => $_has(0, 1);
+  Int64 get count => $_getI64(0);
+  set count(Int64 v) { $_setInt64(0, v); }
+  bool hasCount() => $_has(0);
   void clearCount() => clearField(1);
 
-  double get mean => $_get(1, 2, null);
-  void set mean(double v) { $_setDouble(1, 2, v); }
-  bool hasMean() => $_has(1, 2);
+  double get mean => $_getN(1);
+  set mean(double v) { $_setDouble(1, v); }
+  bool hasMean() => $_has(1);
   void clearMean() => clearField(2);
 
-  double get minimum => $_get(2, 3, null);
-  void set minimum(double v) { $_setDouble(2, 3, v); }
-  bool hasMinimum() => $_has(2, 3);
+  double get minimum => $_getN(2);
+  set minimum(double v) { $_setDouble(2, v); }
+  bool hasMinimum() => $_has(2);
   void clearMinimum() => clearField(3);
 
-  double get maximum => $_get(3, 4, null);
-  void set maximum(double v) { $_setDouble(3, 4, v); }
-  bool hasMaximum() => $_has(3, 4);
+  double get maximum => $_getN(3);
+  set maximum(double v) { $_setDouble(3, v); }
+  bool hasMaximum() => $_has(3);
   void clearMaximum() => clearField(4);
 
-  double get sumOfSquaredDeviation => $_get(4, 5, null);
-  void set sumOfSquaredDeviation(double v) { $_setDouble(4, 5, v); }
-  bool hasSumOfSquaredDeviation() => $_has(4, 5);
+  double get sumOfSquaredDeviation => $_getN(4);
+  set sumOfSquaredDeviation(double v) { $_setDouble(4, v); }
+  bool hasSumOfSquaredDeviation() => $_has(4);
   void clearSumOfSquaredDeviation() => clearField(5);
 
-  List<Int64> get bucketCounts => $_get(5, 6, null);
+  List<Int64> get bucketCounts => $_getList(5);
 
-  Distribution_LinearBuckets get linearBuckets => $_get(6, 7, null);
-  void set linearBuckets(Distribution_LinearBuckets v) { setField(7, v); }
-  bool hasLinearBuckets() => $_has(6, 7);
+  Distribution_LinearBuckets get linearBuckets => $_getN(6);
+  set linearBuckets(Distribution_LinearBuckets v) { setField(7, v); }
+  bool hasLinearBuckets() => $_has(6);
   void clearLinearBuckets() => clearField(7);
 
-  Distribution_ExponentialBuckets get exponentialBuckets => $_get(7, 8, null);
-  void set exponentialBuckets(Distribution_ExponentialBuckets v) { setField(8, v); }
-  bool hasExponentialBuckets() => $_has(7, 8);
+  Distribution_ExponentialBuckets get exponentialBuckets => $_getN(7);
+  set exponentialBuckets(Distribution_ExponentialBuckets v) { setField(8, v); }
+  bool hasExponentialBuckets() => $_has(7);
   void clearExponentialBuckets() => clearField(8);
 
-  Distribution_ExplicitBuckets get explicitBuckets => $_get(8, 9, null);
-  void set explicitBuckets(Distribution_ExplicitBuckets v) { setField(9, v); }
-  bool hasExplicitBuckets() => $_has(8, 9);
+  Distribution_ExplicitBuckets get explicitBuckets => $_getN(8);
+  set explicitBuckets(Distribution_ExplicitBuckets v) { setField(9, v); }
+  bool hasExplicitBuckets() => $_has(8);
   void clearExplicitBuckets() => clearField(9);
 }
 

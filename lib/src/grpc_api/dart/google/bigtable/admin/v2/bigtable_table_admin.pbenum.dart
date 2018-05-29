@@ -1,5 +1,5 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.admin.v2_bigtable_table_admin_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 

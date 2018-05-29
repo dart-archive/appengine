@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.datastore.v1_datastore_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class CommitRequest_Mode extends ProtobufEnum {
@@ -19,7 +21,7 @@ class CommitRequest_Mode extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static CommitRequest_Mode valueOf(int value) => _byValue[value] as CommitRequest_Mode;
   static void $checkItem(CommitRequest_Mode v) {
-    if (v is !CommitRequest_Mode) checkItemFailed(v, 'CommitRequest_Mode');
+    if (v is! CommitRequest_Mode) checkItemFailed(v, 'CommitRequest_Mode');
   }
 
   const CommitRequest_Mode._(int v, String n) : super(v, n);
@@ -39,7 +41,7 @@ class ReadOptions_ReadConsistency extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static ReadOptions_ReadConsistency valueOf(int value) => _byValue[value] as ReadOptions_ReadConsistency;
   static void $checkItem(ReadOptions_ReadConsistency v) {
-    if (v is !ReadOptions_ReadConsistency) checkItemFailed(v, 'ReadOptions_ReadConsistency');
+    if (v is! ReadOptions_ReadConsistency) checkItemFailed(v, 'ReadOptions_ReadConsistency');
   }
 
   const ReadOptions_ReadConsistency._(int v, String n) : super(v, n);

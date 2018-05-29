@@ -1,20 +1,20 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.logging.v2_logging_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'logging.pb.dart';
-import '../../protobuf/empty.pb.dart' as google$protobuf;
+import '../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'logging.pbjson.dart';
 
 export 'logging.pb.dart';
 
 abstract class LoggingServiceV2ServiceBase extends GeneratedService {
-  Future<google$protobuf.Empty> deleteLog(ServerContext ctx, DeleteLogRequest request);
+  Future<$google$protobuf.Empty> deleteLog(ServerContext ctx, DeleteLogRequest request);
   Future<WriteLogEntriesResponse> writeLogEntries(ServerContext ctx, WriteLogEntriesRequest request);
   Future<ListLogEntriesResponse> listLogEntries(ServerContext ctx, ListLogEntriesRequest request);
   Future<ListMonitoredResourceDescriptorsResponse> listMonitoredResourceDescriptors(ServerContext ctx, ListMonitoredResourceDescriptorsRequest request);
@@ -43,6 +43,6 @@ abstract class LoggingServiceV2ServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => LoggingServiceV2$json;
-  Map<String, dynamic> get $messageJson => LoggingServiceV2$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => LoggingServiceV2$messageJson;
 }
 

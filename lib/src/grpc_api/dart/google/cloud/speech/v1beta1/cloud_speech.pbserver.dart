@@ -1,21 +1,21 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.cloud.speech.v1beta1_cloud_speech_pbserver;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'dart:async';
 
 import 'package:protobuf/protobuf.dart';
 
 import 'cloud_speech.pb.dart';
-import '../../../longrunning/operations.pb.dart' as google$longrunning;
+import '../../../longrunning/operations.pb.dart' as $google$longrunning;
 import 'cloud_speech.pbjson.dart';
 
 export 'cloud_speech.pb.dart';
 
 abstract class SpeechServiceBase extends GeneratedService {
   Future<SyncRecognizeResponse> syncRecognize(ServerContext ctx, SyncRecognizeRequest request);
-  Future<google$longrunning.Operation> asyncRecognize(ServerContext ctx, AsyncRecognizeRequest request);
+  Future<$google$longrunning.Operation> asyncRecognize(ServerContext ctx, AsyncRecognizeRequest request);
   Future<StreamingRecognizeResponse> streamingRecognize(ServerContext ctx, StreamingRecognizeRequest request);
 
   GeneratedMessage createRequest(String method) {
@@ -37,6 +37,6 @@ abstract class SpeechServiceBase extends GeneratedService {
   }
 
   Map<String, dynamic> get $json => Speech$json;
-  Map<String, dynamic> get $messageJson => Speech$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson => Speech$messageJson;
 }
 

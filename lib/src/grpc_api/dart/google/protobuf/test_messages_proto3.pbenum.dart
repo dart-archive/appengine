@@ -1,8 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library protobuf_test_messages.proto3_test_messages_proto3_pbenum;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class ForeignEnum extends ProtobufEnum {
@@ -19,19 +21,19 @@ class ForeignEnum extends ProtobufEnum {
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
   static ForeignEnum valueOf(int value) => _byValue[value] as ForeignEnum;
   static void $checkItem(ForeignEnum v) {
-    if (v is !ForeignEnum) checkItemFailed(v, 'ForeignEnum');
+    if (v is! ForeignEnum) checkItemFailed(v, 'ForeignEnum');
   }
 
   const ForeignEnum._(int v, String n) : super(v, n);
 }
 
-class TestAllTypes_NestedEnum extends ProtobufEnum {
-  static const TestAllTypes_NestedEnum FOO = const TestAllTypes_NestedEnum._(0, 'FOO');
-  static const TestAllTypes_NestedEnum BAR = const TestAllTypes_NestedEnum._(1, 'BAR');
-  static const TestAllTypes_NestedEnum BAZ = const TestAllTypes_NestedEnum._(2, 'BAZ');
-  static const TestAllTypes_NestedEnum NEG = const TestAllTypes_NestedEnum._(-1, 'NEG');
+class TestAllTypesProto3_NestedEnum extends ProtobufEnum {
+  static const TestAllTypesProto3_NestedEnum FOO = const TestAllTypesProto3_NestedEnum._(0, 'FOO');
+  static const TestAllTypesProto3_NestedEnum BAR = const TestAllTypesProto3_NestedEnum._(1, 'BAR');
+  static const TestAllTypesProto3_NestedEnum BAZ = const TestAllTypesProto3_NestedEnum._(2, 'BAZ');
+  static const TestAllTypesProto3_NestedEnum NEG = const TestAllTypesProto3_NestedEnum._(-1, 'NEG');
 
-  static const List<TestAllTypes_NestedEnum> values = const <TestAllTypes_NestedEnum> [
+  static const List<TestAllTypesProto3_NestedEnum> values = const <TestAllTypesProto3_NestedEnum> [
     FOO,
     BAR,
     BAZ,
@@ -39,11 +41,11 @@ class TestAllTypes_NestedEnum extends ProtobufEnum {
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static TestAllTypes_NestedEnum valueOf(int value) => _byValue[value] as TestAllTypes_NestedEnum;
-  static void $checkItem(TestAllTypes_NestedEnum v) {
-    if (v is !TestAllTypes_NestedEnum) checkItemFailed(v, 'TestAllTypes_NestedEnum');
+  static TestAllTypesProto3_NestedEnum valueOf(int value) => _byValue[value] as TestAllTypesProto3_NestedEnum;
+  static void $checkItem(TestAllTypesProto3_NestedEnum v) {
+    if (v is! TestAllTypesProto3_NestedEnum) checkItemFailed(v, 'TestAllTypesProto3_NestedEnum');
   }
 
-  const TestAllTypes_NestedEnum._(int v, String n) : super(v, n);
+  const TestAllTypesProto3_NestedEnum._(int v, String n) : super(v, n);
 }
 

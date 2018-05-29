@@ -1,15 +1,15 @@
 ///
 //  Generated code. Do not modify.
 ///
-library google.bigtable.admin.table.v1_bigtable_table_service_pbjson;
+// ignore_for_file: non_constant_identifier_names,library_prefixes
 
 import 'bigtable_table_service_messages.pbjson.dart';
 import 'bigtable_table_data.pbjson.dart';
-import '../../../../longrunning/operations.pbjson.dart' as google$longrunning;
-import '../../../../protobuf/any.pbjson.dart' as google$protobuf;
-import '../../../../rpc/status.pbjson.dart' as google$rpc;
-import '../../../../protobuf/duration.pbjson.dart' as google$protobuf;
-import '../../../../protobuf/empty.pbjson.dart' as google$protobuf;
+import '../../../../longrunning/operations.pbjson.dart' as $google$longrunning;
+import '../../../../protobuf/any.pbjson.dart' as $google$protobuf;
+import '../../../../rpc/status.pbjson.dart' as $google$rpc;
+import '../../../../protobuf/duration.pbjson.dart' as $google$protobuf;
+import '../../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
 const BigtableTableService$json = const {
   '1': 'BigtableTableService',
@@ -29,20 +29,20 @@ const BigtableTableService$json = const {
 const BigtableTableService$messageJson = const {
   '.google.bigtable.admin.table.v1.CreateTableRequest': CreateTableRequest$json,
   '.google.bigtable.admin.table.v1.Table': Table$json,
-  '.google.longrunning.Operation': google$longrunning.Operation$json,
-  '.google.protobuf.Any': google$protobuf.Any$json,
-  '.google.rpc.Status': google$rpc.Status$json,
+  '.google.longrunning.Operation': $google$longrunning.Operation$json,
+  '.google.protobuf.Any': $google$protobuf.Any$json,
+  '.google.rpc.Status': $google$rpc.Status$json,
   '.google.bigtable.admin.table.v1.Table.ColumnFamiliesEntry': Table_ColumnFamiliesEntry$json,
   '.google.bigtable.admin.table.v1.ColumnFamily': ColumnFamily$json,
   '.google.bigtable.admin.table.v1.GcRule': GcRule$json,
-  '.google.protobuf.Duration': google$protobuf.Duration$json,
+  '.google.protobuf.Duration': $google$protobuf.Duration$json,
   '.google.bigtable.admin.table.v1.GcRule.Intersection': GcRule_Intersection$json,
   '.google.bigtable.admin.table.v1.GcRule.Union': GcRule_Union$json,
   '.google.bigtable.admin.table.v1.ListTablesRequest': ListTablesRequest$json,
   '.google.bigtable.admin.table.v1.ListTablesResponse': ListTablesResponse$json,
   '.google.bigtable.admin.table.v1.GetTableRequest': GetTableRequest$json,
   '.google.bigtable.admin.table.v1.DeleteTableRequest': DeleteTableRequest$json,
-  '.google.protobuf.Empty': google$protobuf.Empty$json,
+  '.google.protobuf.Empty': $google$protobuf.Empty$json,
   '.google.bigtable.admin.table.v1.RenameTableRequest': RenameTableRequest$json,
   '.google.bigtable.admin.table.v1.CreateColumnFamilyRequest': CreateColumnFamilyRequest$json,
   '.google.bigtable.admin.table.v1.DeleteColumnFamilyRequest': DeleteColumnFamilyRequest$json,
