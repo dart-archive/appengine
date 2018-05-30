@@ -1,6 +1,7 @@
 ## 0.4.4
 
 * Improve output logging when memcache connections fail.
+* Fix Dart 2 runtime issues.
 
 ## 0.4.3+1
 
