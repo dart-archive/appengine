@@ -13,13 +13,7 @@ import 'package:appengine/src/server/assets.dart';
 import 'package:path/path.dart' as p;
 import 'package:test/test.dart';
 
-
-class _AssetError extends TypeMatcher {
-  const _AssetError() : super("AssetError");
-  bool matches(item, Map matchState) => item is AssetError;
-}
-
-const isAssetError = const _AssetError();
+const isAssetError = const TypeMatcher<AssetError>();
 
 // HTTP client which requests /test and completes with the binary
 // body.

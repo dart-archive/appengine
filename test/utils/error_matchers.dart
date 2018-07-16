@@ -11,74 +11,18 @@ import 'package:gcloud/datastore.dart' as datastore;
 
 import 'package:memcache/memcache.dart' as memcache;
 
-class _NetworkError extends TypeMatcher {
-  const _NetworkError() : super("NetworkError");
-  bool matches(item, Map matchState) => item is NetworkError;
-}
+const isNetworkError = const TypeMatcher<NetworkError>();
+const isProtocolError = const TypeMatcher<ProtocolError>();
+const isServiceError = const TypeMatcher<ServiceError>();
+const isApplicationError = const TypeMatcher<AppEngineError>();
+const isAppEngineApplicationError = const TypeMatcher<ApplicationError>();
 
-class _ProtocolError extends TypeMatcher {
-  const _ProtocolError() : super("ProtocolError");
-  bool matches(item, Map matchState) => item is ProtocolError;
-}
+const isTransactionAbortedError =
+    const TypeMatcher<datastore.TransactionAbortedError>();
+const isNeedIndexError = const TypeMatcher<datastore.NeedIndexError>();
+const isTimeoutError = const TypeMatcher<datastore.TimeoutError>();
 
-class _ServiceError extends TypeMatcher {
-  const _ServiceError() : super("ServiceError");
-  bool matches(item, Map matchState) => item is ServiceError;
-}
+const isMemcacheError = const TypeMatcher<memcache.MemcacheError>();
+const isMemcacheNotStored = const TypeMatcher<memcache.NotStoredError>();
 
-class _ApplicationError extends TypeMatcher {
-  const _ApplicationError() : super("ApplicationError");
-  bool matches(item, Map matchState) => item is datastore.ApplicationError;
-}
-
-class _AppEngineApplicationError extends TypeMatcher {
-  const _AppEngineApplicationError() : super("ApplicationError");
-  bool matches(item, Map matchState) => item is ApplicationError;
-}
-
-class _TransactionAbortedError extends TypeMatcher {
-  const _TransactionAbortedError() : super("TransactionAbortedError");
-  bool matches(item, Map matchState)
-      => item is datastore.TransactionAbortedError;
-}
-
-class _NeedIndexError extends TypeMatcher {
-  const _NeedIndexError() : super("NeedIndexError");
-  bool matches(item, Map matchState) => item is datastore.NeedIndexError;
-}
-
-class _TimeoutError extends TypeMatcher {
-  const _TimeoutError() : super("TimeoutError");
-  bool matches(item, Map matchState) => item is datastore.TimeoutError;
-}
-
-class _MemcacheError extends TypeMatcher {
-  const _MemcacheError() : super("MemcacheError");
-  bool matches(item, Map matchState) => item is memcache.MemcacheError;
-}
-
-class _MemcacheNotStoredError extends TypeMatcher {
-  const _MemcacheNotStoredError() : super("NotStoredError");
-  bool matches(item, Map matchState) => item is memcache.NotStoredError;
-}
-
-
-class _IntMatcher extends TypeMatcher {
-  const _IntMatcher() : super("IntMatcher");
-  bool matches(item, Map matchState) => item is int;
-}
-
-const isNetworkError = const _NetworkError();
-const isProtocolError = const _ProtocolError();
-const isServiceError = const _ServiceError();
-const isApplicationError = const _ApplicationError();
-const isAppEngineApplicationError = const _AppEngineApplicationError();
-
-const isTransactionAbortedError = const _TransactionAbortedError();
-const isNeedIndexError = const _NeedIndexError();
-const isTimeoutError = const _TimeoutError();
-
-const isMemcacheError = const _MemcacheError();
-const isMemcacheNotStored = const _MemcacheNotStoredError();
-
-const isInt = const _IntMatcher();
+const isInt = const TypeMatcher<int>();

@@ -500,30 +500,9 @@ class ExpiredMockAccessTokenProvider implements AccessTokenProvider {
   Future close() async {}
 }
 
-class _AuthenticationException extends TypeMatcher {
-  const _AuthenticationException() : super("AuthenticationException");
-  bool matches(item, Map matchState) => item is grpc.AuthenticationException;
-}
-
-class _NetworkException extends TypeMatcher {
-  const _NetworkException() : super("NetworkException");
-  bool matches(item, Map matchState) => item is grpc.NetworkException;
-}
-
-class _ProtocolException extends TypeMatcher {
-  const _ProtocolException() : super("ProtocolException");
-  bool matches(item, Map matchState) => item is grpc.ProtocolException;
-}
-
-class _RpcException extends TypeMatcher {
-  final int expectedCode;
-  const _RpcException(this.expectedCode) : super("RpcException");
-  bool matches(item, Map matchState) {
-    return item is grpc.RpcException && item.code == expectedCode;
-  }
-}
-
-const isNetworkException = const _NetworkException();
-const isAuthenticationException = const _AuthenticationException();
-const isProtocolException = const _ProtocolException();
-isRpcException(int code) => new _RpcException(code);
+const isNetworkException = const TypeMatcher<grpc.NetworkException>();
+const isAuthenticationException =
+    const TypeMatcher<grpc.AuthenticationException>();
+const isProtocolException = const TypeMatcher<grpc.ProtocolException>();
+Matcher isRpcException(int code) =>
+    const TypeMatcher<grpc.RpcException>().having((i) => i.code, 'code', code);
