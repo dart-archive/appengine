@@ -143,8 +143,10 @@ class Client {
       _trailersHeader,
       _compressionHeader,
       _userAgentHeader,
-      _cachedAuthorizationHeader,
     ];
+    if (_cachedAuthorizationHeader != null) {
+      headers.add(_cachedAuthorizationHeader);
+    }
 
     // We remember the connection this RPC call is using since other
     // concurrent calls might change `this._connection` while this method
@@ -302,7 +304,7 @@ class Dialer {
   // possibly running over the max-concurrent-streams setting the server
   // is sending to the client (which will cause the server to terminate
   // the connection).
-  static const Duration estimatedRTT = const Duration(milliseconds: 20);
+  static const Duration _estimatedRTT = const Duration(milliseconds: 20);
 
   final Uri endpoint;
 
@@ -345,7 +347,7 @@ class Dialer {
         if (socket.selectedProtocol == 'h2') {
           final connection =
               new http2.ClientTransportConnection.viaStreams(socket, socket);
-          await new Future.delayed(estimatedRTT);
+          await new Future.delayed(_estimatedRTT);
           _completer.complete(connection);
           _completer = null;
         } else {
@@ -366,7 +368,7 @@ class Dialer {
         socket.setOption(SocketOption.TCP_NODELAY, true);
         final connection =
             new http2.ClientTransportConnection.viaStreams(socket, socket);
-        await new Future.delayed(estimatedRTT);
+        await new Future.delayed(_estimatedRTT);
         _completer.complete(connection);
         _completer = null;
       } catch (error) {
