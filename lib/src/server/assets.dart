@@ -27,13 +27,13 @@ class AssetsManager {
 
   Future _proxyToPub(HttpRequest request, String path) {
     const RESPONSE_HEADERS = const [
-        HttpHeaders.CONTENT_LENGTH,
-        HttpHeaders.CONTENT_TYPE ];
+        HttpHeaders.contentLengthHeader,
+        HttpHeaders.contentTypeHeader ];
 
     var uri = pubServeUrl.resolve(path);
     return client.openUrl(request.method, uri)
         .then((proxyRequest) {
-          proxyRequest.headers.removeAll(HttpHeaders.ACCEPT_ENCODING);
+          proxyRequest.headers.removeAll(HttpHeaders.acceptEncodingHeader);
           return proxyRequest.close();
         })
         .then((proxyResponse) {
@@ -71,7 +71,7 @@ class AssetsManager {
     return client.openUrl('GET', uri)
         .then((request) => request.close())
         .then((response) {
-          if (response.statusCode == HttpStatus.OK) {
+          if (response.statusCode == HttpStatus.ok) {
             return response;
           } else {
             throw new AssetError(
@@ -102,7 +102,7 @@ class AssetsManager {
   Future _serve404(HttpRequest request) {
     // Serve 404.
     return request.drain().then((_) {
-      request.response.statusCode = HttpStatus.NOT_FOUND;
+      request.response.statusCode = HttpStatus.notFound;
       return request.response.close();
     });
   }

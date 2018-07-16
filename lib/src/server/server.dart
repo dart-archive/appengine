@@ -82,13 +82,13 @@ class AppEngineHttpServer {
 
   void _start(HttpRequest request, _) {
     request.drain().then((_) {
-      _sendResponse(request.response, HttpStatus.OK, "ok");
+      _sendResponse(request.response, HttpStatus.ok, "ok");
     });
   }
 
   void _health(HttpRequest request, _) {
     request.drain().then((_) {
-      _sendResponse(request.response, HttpStatus.OK, "ok");
+      _sendResponse(request.response, HttpStatus.ok, "ok");
     });
   }
 
@@ -97,10 +97,10 @@ class AppEngineHttpServer {
       if (_httpServer != null) {
         _httpServer.close().then((_) {
           _httpServer = null;
-          _sendResponse(request.response, HttpStatus.OK, "ok");
+          _sendResponse(request.response, HttpStatus.ok, "ok");
         });
       } else {
-        _sendResponse(request.response, HttpStatus.CONFLICT, "fail");
+        _sendResponse(request.response, HttpStatus.conflict, "fail");
       }
     });
   }

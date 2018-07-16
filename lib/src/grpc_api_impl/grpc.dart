@@ -343,7 +343,7 @@ class Dialer {
       try {
         final socket = await SecureSocket
             .connect(endpoint.host, endpoint.port, supportedProtocols: ['h2']);
-        socket.setOption(SocketOption.TCP_NODELAY, true);
+        socket.setOption(SocketOption.tcpNoDelay, true);
         if (socket.selectedProtocol == 'h2') {
           final connection =
               new http2.ClientTransportConnection.viaStreams(socket, socket);
@@ -365,7 +365,7 @@ class Dialer {
     } else {
       try {
         final socket = await Socket.connect(endpoint.host, endpoint.port);
-        socket.setOption(SocketOption.TCP_NODELAY, true);
+        socket.setOption(SocketOption.tcpNoDelay, true);
         final connection =
             new http2.ClientTransportConnection.viaStreams(socket, socket);
         await new Future.delayed(_estimatedRTT);

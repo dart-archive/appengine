@@ -83,7 +83,7 @@ Future runAppEngine(void handler(HttpRequest request, ClientContext context),
         // preparation. In such cases we want to close the connection, since
         // user code might not be able to.
         try {
-          request.response.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
+          request.response.statusCode = HttpStatus.internalServerError;
         } on StateError catch (_) {}
         request.response.close().catchError((closeError, closeErrorStack) {
           final message = 'Forcefully closing response, due to error in request'
@@ -415,7 +415,7 @@ Future<String> _getMetadataValue(String path) async {
     var response = await client.get(
         'http://metadata.google.internal/computeMetadata/v1/instance/$path',
         headers: {'Metadata-Flavor': 'Google'});
-    if (response.statusCode == HttpStatus.OK) {
+    if (response.statusCode == HttpStatus.ok) {
       return p.split(response.body).last;
     }
 

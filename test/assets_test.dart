@@ -91,7 +91,7 @@ void main() {
       return HttpServer.bind('127.0.0.1', 0).then((server) {
         server.listen(expectAsync1((request) {
           if (request.uri.path == '/test') {
-            request.response.statusCode = HttpStatus.NOT_FOUND;
+            request.response.statusCode = HttpStatus.notFound;
           } else if (request.uri.path == '/test.html') {
             request.response.write('pub serve html');
           } else {
@@ -145,7 +145,7 @@ void main() {
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(
-            appServerPort, '/test', HttpStatus.NOT_FOUND).then((body) {
+            appServerPort, '/test', HttpStatus.notFound).then((body) {
           expect(body, isEmpty);
         });
       });
@@ -158,14 +158,14 @@ void main() {
         }).catchError((e) {
           expect(e, isAssetError);
           request.response
-              ..statusCode = HttpStatus.NOT_FOUND
+              ..statusCode = HttpStatus.notFound
               ..close();
         });
       }
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(
-            appServerPort, '/test', HttpStatus.NOT_FOUND).then((body) {
+            appServerPort, '/test', HttpStatus.notFound).then((body) {
           expect(body, isEmpty);
         });
       });
@@ -255,7 +255,7 @@ void main() {
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(
-            appServerPort, '/test', HttpStatus.NOT_FOUND).then((body) {
+            appServerPort, '/test', HttpStatus.notFound).then((body) {
           expect(body, isEmpty);
         });
       });
@@ -268,14 +268,14 @@ void main() {
         }).catchError((e) {
           expect(e, isAssetError);
           request.response
-              ..statusCode = HttpStatus.NOT_FOUND
+              ..statusCode = HttpStatus.notFound
               ..close();
         });
       }
 
       return startAppServer(requestHandler).then((_) {
         return getAsset(
-            appServerPort, '/test', HttpStatus.NOT_FOUND).then((body) {
+            appServerPort, '/test', HttpStatus.notFound).then((body) {
           expect(body, isEmpty);
         });
       });

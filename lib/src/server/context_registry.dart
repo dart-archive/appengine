@@ -85,7 +85,7 @@ class ContextRegistry {
     if (request != null) {
       final uri = request.requestedUri;
       final resource = uri.hasQuery ? '${uri.path}?${uri.query}' : uri.path;
-      final userAgent = request.headers.value(HttpHeaders.USER_AGENT);
+      final userAgent = request.headers.value(HttpHeaders.userAgentHeader);
 
       final List<String> forwardedFor = request.headers['x-forwarded-for'];
 
@@ -108,7 +108,7 @@ class ContextRegistry {
           uri.host,
           ip,
           traceId,
-          request.headers.value(HttpHeaders.REFERER));
+          request.headers.value(HttpHeaders.refererHeader));
     } else {
       loggingService = _loggingFactory.newBackgroundLogger();
     }
