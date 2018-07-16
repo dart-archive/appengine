@@ -1,3 +1,11 @@
+## 0.4.4+1
+
+* Fix race condition in gRPC client between `http2Connection.isOpen` and
+  `http2Connection.makeRequest`.
+
+* Delay http/2 connection dialer by 20 ms to give client enough time to receive
+  server settings.
+
 ## 0.4.4
 
 * Improve output logging when memcache connections fail.

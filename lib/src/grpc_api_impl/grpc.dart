@@ -100,6 +100,22 @@ class Client {
       String method,
       protobuf.GeneratedMessage request,
       T response) async {
+    // If we need authorization and the current access token is expired
+    // we'll get a new one.
+    // NOTE: Several concurrent callers will end up using the same token
+    // provider and will therefore obtain the same access token.
+    if (_accessTokenProvider != null) {
+      if (_cachedAccessToken == null || _cachedAccessToken.hasExpired) {
+        try {
+          _cachedAccessToken = await _accessTokenProvider.obtainAccessToken();
+          _cachedAuthorizationHeader = new http2.Header.ascii(
+              'authorization', 'Bearer ${_cachedAccessToken.data}');
+        } catch (error) {
+          throw new AuthenticationException(error);
+        }
+      }
+    }
+
     // If the current connection is not healthy we'll make a new one:
     // NOTE: Several concurrent callers will end up using the same dialer and
     // will therefore obtain the same connection.
@@ -128,21 +144,7 @@ class Client {
       _compressionHeader,
       _userAgentHeader,
     ];
-
-    // If we need authorization and the current access token is expired
-    // we'll get a new one.
-    // NOTE: Several concurrent callers will end up using the same token
-    // provider and will therefore obtain the same access token.
-    if (_accessTokenProvider != null) {
-      if (_cachedAccessToken == null || _cachedAccessToken.hasExpired) {
-        try {
-          _cachedAccessToken = await _accessTokenProvider.obtainAccessToken();
-          _cachedAuthorizationHeader = new http2.Header.ascii(
-              'authorization', 'Bearer ${_cachedAccessToken.data}');
-        } catch (error) {
-          throw new AuthenticationException(error);
-        }
-      }
+    if (_cachedAuthorizationHeader != null) {
       headers.add(_cachedAuthorizationHeader);
     }
 
@@ -150,6 +152,7 @@ class Client {
     // concurrent calls might change `this._connection` while this method
     // is being asynchronously executed.
     final http2.ClientTransportConnection connection = _connection;
+    assert(connection.isOpen);
     final http2.TransportStream stream = connection.makeRequest(headers);
     final messageIterator = new StreamIterator<http2.StreamMessage>(stream.incomingMessages);
 
@@ -295,6 +298,14 @@ class Client {
 class Dialer {
   static const Duration MinimumTimeBetweenConnects = const Duration(seconds: 2);
 
+  // We delay the completion slightly for our http/2 client to receive
+  // the server settings:  If there are many RPCs pending, then our
+  // client will immediatly send all of the RPCs to the connection,
+  // possibly running over the max-concurrent-streams setting the server
+  // is sending to the client (which will cause the server to terminate
+  // the connection).
+  static const Duration _estimatedRTT = const Duration(milliseconds: 20);
+
   final Uri endpoint;
 
   Completer _completer;
@@ -336,6 +347,7 @@ class Dialer {
         if (socket.selectedProtocol == 'h2') {
           final connection =
               new http2.ClientTransportConnection.viaStreams(socket, socket);
+          await new Future.delayed(_estimatedRTT);
           _completer.complete(connection);
           _completer = null;
         } else {
@@ -356,6 +368,7 @@ class Dialer {
         socket.setOption(SocketOption.TCP_NODELAY, true);
         final connection =
             new http2.ClientTransportConnection.viaStreams(socket, socket);
+        await new Future.delayed(_estimatedRTT);
         _completer.complete(connection);
         _completer = null;
       } catch (error) {
