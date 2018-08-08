@@ -193,7 +193,7 @@ runTests(Datastore datastore, String namespace) {
         test(Transaction transaction) {
           expect(datastore.commit(autoIdInserts: entities,
                                   transaction: transaction),
-                                  throwsA(isApplicationError));
+                                  throwsA(isDatastoreApplicationError));
         }
 
         if (transactional) {
@@ -242,7 +242,7 @@ runTests(Datastore datastore, String namespace) {
 
       test('negative_insert__incomplete_path', () {
         expect(datastore.commit(inserts: unnamedEntities1),
-               throwsA(isApplicationError));
+               throwsA(isDatastoreApplicationError));
       });
 
       test('negative_insert_transactional_xg', () {
@@ -252,9 +252,8 @@ runTests(Datastore datastore, String namespace) {
 
       test('negative_insert_20000_entities', () {
         // Maybe it should not be a [DataStoreError] here?
-        // FIXME/TODO: This was adapted
         expect(datastore.commit(inserts: named20000),
-               throwsA(isApplicationError));
+               throwsA(isDatastoreApplicationError));
       });
 
       // TODO: test invalid inserts (like entities without key, ...)

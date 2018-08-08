@@ -50,7 +50,7 @@ runTests(datastore, db.DatastoreDB store, String uniquePostfix) {
       await datastore.commit(inserts: entities);
       await new Future.delayed(const Duration(seconds: 10));
 
-      final namespaceQuery = store.query(Namespace);
+      final namespaceQuery = store.query<Namespace>();
       final List<Namespace> namespaces =
           await namespaceQuery.run().cast<Namespace>().toList();
 
@@ -64,7 +64,7 @@ runTests(datastore, db.DatastoreDB store, String uniquePostfix) {
       try {
         for (final namespace in [null, 'FooNamespace', 'BarNamespace']) {
           final partition = store.newPartition(namespace);
-          final kindQuery = store.query(Kind, partition: partition);
+          final kindQuery = store.query<Kind>(partition: partition);
           final List<Kind> kinds = await kindQuery.run().cast<Kind>().toList();
 
           expect(kinds.length, greaterThanOrEqualTo(2));

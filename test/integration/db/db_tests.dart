@@ -46,6 +46,7 @@ library db_impl_test;
 
 import 'dart:async';
 
+import 'package:gcloud/db.dart';
 import 'package:test/test.dart';
 
 import 'package:gcloud/db.dart' as db;
@@ -464,7 +465,7 @@ runTests(db.DatastoreDB store, String namespace) {
             // Queries for [Person] return no results, we only have [User]
             // objects.
             () {
-              return store.query(Person, partition: partition).run().toList()
+              return store.query<Person>(partition: partition).run().toList()
                   .then((List<db.Model> models) {
                 compareModels([], models);
               });
@@ -472,7 +473,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
             // All users query
             () {
-              return store.query(User, partition: partition).run().toList()
+              return store.query<User>(partition: partition).run().toList()
                   .then((List<db.Model> models) {
                 compareModels(users, models, anyOrder: true);
               });
@@ -480,7 +481,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
             // Sorted query
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..order('-name')
                   ..order('nickname');
               var models = await runQueryWithExponentialBackoff(
@@ -489,7 +490,7 @@ runTests(db.DatastoreDB store, String namespace) {
                   usersSortedNameDescNicknameAsc, models);
             },
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..order('-name')
                   ..order('-nickname')
                   ..run();
@@ -501,7 +502,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
             // Sorted query with filter
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..filter('name >=', LOWER_BOUND)
                   ..order('-name')
                   ..order('nickname');
@@ -511,7 +512,7 @@ runTests(db.DatastoreDB store, String namespace) {
                   models);
             },
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..filter('name >=', LOWER_BOUND)
                   ..order('-name')
                   ..order('-nickname')
@@ -524,7 +525,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
             // Filter lists
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..filter('languages =', 'foo')
                   ..order('name')
                   ..run();
@@ -533,7 +534,7 @@ runTests(db.DatastoreDB store, String namespace) {
               compareModels(fooUsers, models, anyOrder: true);
             },
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..filter('languages =', 'bar')
                   ..order('name')
                   ..run();
@@ -542,14 +543,14 @@ runTests(db.DatastoreDB store, String namespace) {
               compareModels(barUsers, models, anyOrder: true);
             },
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..filter('hobbies =', 'swimming')
                   ..run();
               var models = await runQueryWithExponentialBackoff(query, 0);
               expect(models, isEmpty);
             },
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..filter('hobbies =', 'running')
                   ..run();
               var models = await runQueryWithExponentialBackoff(query, 0);
@@ -559,7 +560,7 @@ runTests(db.DatastoreDB store, String namespace) {
             // Filter equals
             () async {
               var wifeKey = root.append(User, id: usersWithWife.first.wife.id);
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..filter('wife =', wifeKey)
                   ..run();
               var models = await runQueryWithExponentialBackoff(
@@ -569,7 +570,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
             // Simple limit/offset test.
             () async {
-              var query = store.query(User, partition: partition)
+              var query = store.query<User>(partition: partition)
                   ..order('-name')
                   ..order('nickname')
                   ..offset(3)
@@ -583,7 +584,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
             // Expando queries: Filter on normal property.
             () async {
-              var query = store.query(ExpandoPerson, partition: partition)
+              var query = store.query<ExpandoPerson>(partition: partition)
                   ..filter('name =', expandoPersons.last.name)
                   ..run();
               var models = await runQueryWithExponentialBackoff(query, 1);
@@ -591,7 +592,7 @@ runTests(db.DatastoreDB store, String namespace) {
             },
             // Expando queries: Filter on expanded String property
             () async {
-              var query = store.query(ExpandoPerson, partition: partition)
+              var query = store.query<ExpandoPerson>(partition: partition)
                   ..filter('foo =', (expandoPersons.last as dynamic).foo)
                   ..run();
               var models = await runQueryWithExponentialBackoff(query, 1);
@@ -599,7 +600,7 @@ runTests(db.DatastoreDB store, String namespace) {
             },
             // Expando queries: Filter on expanded int property
             () async {
-              var query = store.query(ExpandoPerson, partition: partition)
+              var query = store.query<ExpandoPerson>(partition: partition)
                   ..filter('bar =', (expandoPersons.last as dynamic).bar)
                   ..run();
               var models = await runQueryWithExponentialBackoff(query, 1);
@@ -608,7 +609,7 @@ runTests(db.DatastoreDB store, String namespace) {
             // Expando queries: Filter normal property with different
             // propertyName (datastore name is 'NN').
             () async {
-              var query = store.query(ExpandoPerson, partition: partition)
+              var query = store.query<ExpandoPerson>(partition: partition)
                   ..filter('nickname =', expandoPersons.last.nickname)
                   ..run();
               var models = await runQueryWithExponentialBackoff(query, 1);
@@ -674,14 +675,14 @@ Future waitUntilEntitiesGone(db.DatastoreDB mdb,
 Future waitUntilEntitiesHelper(db.DatastoreDB mdb,
                                List<db.Key> keys,
                                bool positive,
-                               db.Partition partition) {
+                               db.Partition partition) async {
   var keysByKind = <Type, List<db.Key>>{};
   for (var key in keys) {
     keysByKind.putIfAbsent(key.type, () => <db.Key>[]).add(key);
   }
 
-  Future waitForKeys(Type kind, List<db.Key> keys) {
-    return mdb.query(kind, partition: partition)
+  Future waitForKeys<T extends Model>(List<db.Key> keys) {
+    return mdb.query<T>(partition: partition)
         .run().toList().then((List<db.Model> models) {
       for (var key in keys) {
         bool found = false;
@@ -689,9 +690,9 @@ Future waitUntilEntitiesHelper(db.DatastoreDB mdb,
           if (key == model.key) found = true;
         }
         if (positive) {
-          if (!found) return waitForKeys(kind, keys);
+          if (!found) return waitForKeys<T>(keys);
         } else {
-          if (found) return waitForKeys(kind, keys);
+          if (found) return waitForKeys<T>(keys);
         }
       }
       return null;
@@ -699,6 +700,5 @@ Future waitUntilEntitiesHelper(db.DatastoreDB mdb,
   }
 
   return Future.forEach(keysByKind.keys.toList(), (Type kind) {
-    return waitForKeys(kind, keysByKind[kind]);
-  });
+    return waitForKeys(keysByKind[kind]);});
 }
