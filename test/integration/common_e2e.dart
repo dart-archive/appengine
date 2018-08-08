@@ -31,7 +31,7 @@ Future withServiceAccount(
   var project = Platform.environment[PROJECT_ENV];
   var serviceKeyLocation = Platform.environment[SERVICE_KEY_LOCATION_ENV];
 
-  if (onBot() && (project == null || serviceKeyLocation == null)) {
+  if (!onBot() && (project == null || serviceKeyLocation == null)) {
     throw new Exception(
         'Environment variables $PROJECT_ENV and $SERVICE_KEY_LOCATION_ENV '
         'required when not running on the package bot');
