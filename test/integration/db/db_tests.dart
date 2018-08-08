@@ -46,7 +46,6 @@ library db_impl_test;
 
 import 'dart:async';
 
-import 'package:gcloud/db.dart';
 import 'package:test/test.dart';
 
 import 'package:gcloud/db.dart' as db;
@@ -681,13 +680,12 @@ Future waitUntilEntitiesHelper(db.DatastoreDB mdb,
     keysByKind.putIfAbsent(key.type, () => <db.Key>[]).add(key);
   }
 
-  Future waitForKeys<T extends Model>(List<db.Key> keys) {
-    return mdb.query<T>(partition: partition)
-        .run().toList().then((List<db.Model> models) {
+  Future waitForKeys<T extends db.Model>(List<db.Key> keys) {
+    return mdb.lookup<T>(keys).then((List<T> models) {
       for (var key in keys) {
         bool found = false;
         for (var model in models) {
-          if (key == model.key) found = true;
+          if (key == model?.key) found = true;
         }
         if (positive) {
           if (!found) return waitForKeys<T>(keys);
@@ -695,7 +693,6 @@ Future waitUntilEntitiesHelper(db.DatastoreDB mdb,
           if (found) return waitForKeys<T>(keys);
         }
       }
-      return null;
     });
   }
 
