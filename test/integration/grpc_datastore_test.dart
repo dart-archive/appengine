@@ -18,12 +18,6 @@ import 'db/metamodel_tests.dart' as metamodel_tests;
 import 'raw_datastore_test_impl.dart' as datastore_tests;
 
 main() async {
-  // Due to package:test issue (see
-  // https://github.com/dart-lang/test/issues/578)
-  if (Platform.operatingSystem == 'macos') {
-    return;
-  }
-
   final endpoint = Uri.parse('https://datastore.googleapis.com');
   final scopes = <String>[
     'https://www.googleapis.com/auth/cloud-platform',

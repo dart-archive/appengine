@@ -519,7 +519,7 @@ runTests(Datastore datastore, String namespace) {
         expect(testEmptyCommit(
                namedEntities20Keys, transactional: true, xg: true),
                throwsA(isApplicationError));
-      }, skip: 'Existing failure');
+      });
     });
 
     group('conflicting_transaction', () {
@@ -1028,8 +1028,6 @@ runTests(Datastore datastore, String namespace) {
         });
       });
     });
-  }, onPlatform: {
-    'mac-os': new Skip('Missing ALPN support on MacOS.'),
   });
 }
 
