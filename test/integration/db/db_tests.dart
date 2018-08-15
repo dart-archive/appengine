@@ -385,7 +385,7 @@ runTests(db.DatastoreDB store, String namespace) {
       });
     });
 
-    test('query', () {
+    test('query', () async {
       var root = partition.emptyKey;
       var users = <User>[];
       for (var i = 1; i <= 10; i++) {
@@ -460,183 +460,180 @@ runTests(db.DatastoreDB store, String namespace) {
       var allKeys = allInserts.map((model) => model.key).toList();
       List<db.Key> userKeys = users.map((model) => model.key).toList();
       List<db.Key> expandoPersonsKeys = expandoPersons.map((model) => model.key).toList();
-      return store.commit(inserts: allInserts).then((_) {
-        return waitUntilEntitiesReady<User>(store, userKeys, partition).then((_) {
-          return waitUntilEntitiesReady<ExpandoPerson>(store, expandoPersonsKeys, partition).then((_) {
-            var tests = [
-              // Queries for [Person] return no results, we only have [User]
-              // objects.
-                  () {
-                return store.query<Person>(partition: partition).run().toList()
-                    .then((List<db.Model> models) {
-                  compareModels([], models);
-                });
-              },
-
-              // All users query
-                  () {
-                return store.query<User>(partition: partition).run().toList()
-                    .then((List<db.Model> models) {
-                  compareModels(users, models, anyOrder: true);
-                });
-              },
-
-              // Sorted query
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..order('-name')
-                  ..order('nickname');
-                var models = await runQueryWithExponentialBackoff(
-                    query, usersSortedNameDescNicknameAsc.length);
-                compareModels(
-                    usersSortedNameDescNicknameAsc, models);
-              },
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..order('-name')
-                  ..order('-nickname')
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(
-                    query, usersSortedNameDescNicknameDesc.length);
-                compareModels(
-                    usersSortedNameDescNicknameDesc, models);
-              },
-
-              // Sorted query with filter
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..filter('name >=', LOWER_BOUND)
-                  ..order('-name')
-                  ..order('nickname');
-                var models = await runQueryWithExponentialBackoff(
-                    query, usersSortedAndFilteredNameDescNicknameAsc.length);
-                compareModels(usersSortedAndFilteredNameDescNicknameAsc,
-                    models);
-              },
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..filter('name >=', LOWER_BOUND)
-                  ..order('-name')
-                  ..order('-nickname')
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(
-                    query, usersSortedAndFilteredNameDescNicknameDesc.length);
-                compareModels(usersSortedAndFilteredNameDescNicknameDesc,
-                    models);
-              },
-
-              // Filter lists
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..filter('languages =', 'foo')
-                  ..order('name')
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(
-                    query, fooUsers.length);
-                compareModels(fooUsers, models, anyOrder: true);
-              },
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..filter('languages =', 'bar')
-                  ..order('name')
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(
-                    query, barUsers.length);
-                compareModels(barUsers, models, anyOrder: true);
-              },
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..filter('hobbies =', 'swimming')
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(query, 0);
-                expect(models, isEmpty);
-              },
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..filter('hobbies =', 'running')
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(query, 0);
-                expect(models, isEmpty);
-              },
-
-              // Filter equals
-                  () async {
-                var wifeKey = root.append(User, id: usersWithWife.first.wife.id);
-                var query = store.query<User>(partition: partition)
-                  ..filter('wife =', wifeKey)
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(
-                    query, usersWithWife.length);
-                compareModels(usersWithWife, models, anyOrder: true);
-              },
-
-              // Simple limit/offset test.
-                  () async {
-                var query = store.query<User>(partition: partition)
-                  ..order('-name')
-                  ..order('nickname')
-                  ..offset(3)
-                  ..limit(4);
-                var expectedModels =
-                usersSortedAndFilteredNameDescNicknameAsc.sublist(3, 7);
-                var models = await runQueryWithExponentialBackoff(
-                    query, expectedModels.length);
-                compareModels(expectedModels, models);
-              },
-
-              // Expando queries: Filter on normal property.
-                  () async {
-                var query = store.query<ExpandoPerson>(partition: partition)
-                  ..filter('name =', expandoPersons.last.name)
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(query, 1);
-                compareModels([expandoPersons.last], models);
-              },
-              // Expando queries: Filter on expanded String property
-                  () async {
-                var query = store.query<ExpandoPerson>(partition: partition)
-                  ..filter('foo =', (expandoPersons.last as dynamic).foo)
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(query, 1);
-                compareModels([expandoPersons.last], models);
-              },
-              // Expando queries: Filter on expanded int property
-                  () async {
-                var query = store.query<ExpandoPerson>(partition: partition)
-                  ..filter('bar =', (expandoPersons.last as dynamic).bar)
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(query, 1);
-                compareModels([expandoPersons.last], models);
-              },
-              // Expando queries: Filter normal property with different
-              // propertyName (datastore name is 'NN').
-                  () async {
-                var query = store.query<ExpandoPerson>(partition: partition)
-                  ..filter('nickname =', expandoPersons.last.nickname)
-                  ..run();
-                var models = await runQueryWithExponentialBackoff(query, 1);
-                compareModels([expandoPersons.last], models);
-              },
-
-              // Delete results
-                  () => store.commit(deletes: allKeys),
-
-              // Wait until the entity deletes are reflected in the indices.
-                  () => waitUntilEntitiesGone<User>(store, userKeys, partition),
-                  () => waitUntilEntitiesGone<ExpandoPerson>(store, expandoPersonsKeys, partition),
-
-              // Make sure queries don't return results
-                  () => store.lookup(allKeys).then((List<db.Model> models) {
-                expect(models.length, equals(allKeys.length));
-                for (var model in models) {
-                  expect(model, isNull);
-                }
-              }),
-            ];
-            return Future.forEach(tests, (f) => f());
+      await store.commit(inserts: allInserts);
+      await waitUntilEntitiesReady<User>(store, userKeys, partition);
+      await waitUntilEntitiesReady<ExpandoPerson>(store, expandoPersonsKeys, partition);
+      var tests = [
+        // Queries for [Person] return no results, we only have [User]
+        // objects.
+        () {
+          return store.query<Person>(partition: partition).run().toList()
+              .then((List<db.Model> models) {
+            compareModels([], models);
           });
-        });
-      });
+        },
+
+        // All users query
+        () {
+          return store.query<User>(partition: partition).run().toList()
+              .then((List<db.Model> models) {
+            compareModels(users, models, anyOrder: true);
+          });
+        },
+
+        // Sorted query
+        () async {
+          var query = store.query<User>(partition: partition)
+            ..order('-name')
+            ..order('nickname');
+          var models = await runQueryWithExponentialBackoff(
+              query, usersSortedNameDescNicknameAsc.length);
+          compareModels(
+              usersSortedNameDescNicknameAsc, models);
+        },
+            () async {
+          var query = store.query<User>(partition: partition)
+            ..order('-name')
+            ..order('-nickname')
+            ..run();
+          var models = await runQueryWithExponentialBackoff(
+              query, usersSortedNameDescNicknameDesc.length);
+          compareModels(
+              usersSortedNameDescNicknameDesc, models);
+        },
+
+        // Sorted query with filter
+        () async {
+          var query = store.query<User>(partition: partition)
+            ..filter('name >=', LOWER_BOUND)
+            ..order('-name')
+            ..order('nickname');
+          var models = await runQueryWithExponentialBackoff(
+              query, usersSortedAndFilteredNameDescNicknameAsc.length);
+          compareModels(usersSortedAndFilteredNameDescNicknameAsc,
+              models);
+        },
+        () async {
+          var query = store.query<User>(partition: partition)
+            ..filter('name >=', LOWER_BOUND)
+            ..order('-name')
+            ..order('-nickname')
+            ..run();
+          var models = await runQueryWithExponentialBackoff(
+              query, usersSortedAndFilteredNameDescNicknameDesc.length);
+          compareModels(usersSortedAndFilteredNameDescNicknameDesc,
+              models);
+        },
+
+        // Filter lists
+        () async {
+          var query = store.query<User>(partition: partition)
+            ..filter('languages =', 'foo')
+            ..order('name')
+            ..run();
+          var models = await runQueryWithExponentialBackoff(
+              query, fooUsers.length);
+          compareModels(fooUsers, models, anyOrder: true);
+        },
+        () async {
+          var query = store.query<User>(partition: partition)
+            ..filter('languages =', 'bar')
+            ..order('name')
+            ..run();
+          var models = await runQueryWithExponentialBackoff(
+              query, barUsers.length);
+          compareModels(barUsers, models, anyOrder: true);
+        },
+        () async {
+          var query = store.query<User>(partition: partition)
+            ..filter('hobbies =', 'swimming')
+            ..run();
+          var models = await runQueryWithExponentialBackoff(query, 0);
+          expect(models, isEmpty);
+        },
+        () async {
+          var query = store.query<User>(partition: partition)
+            ..filter('hobbies =', 'running')
+            ..run();
+          var models = await runQueryWithExponentialBackoff(query, 0);
+          expect(models, isEmpty);
+        },
+
+        // Filter equals
+        () async {
+          var wifeKey = root.append(User, id: usersWithWife.first.wife.id);
+          var query = store.query<User>(partition: partition)
+            ..filter('wife =', wifeKey)
+            ..run();
+          var models = await runQueryWithExponentialBackoff(
+              query, usersWithWife.length);
+          compareModels(usersWithWife, models, anyOrder: true);
+        },
+
+        // Simple limit/offset test.
+        () async {
+          var query = store.query<User>(partition: partition)
+            ..order('-name')
+            ..order('nickname')
+            ..offset(3)
+            ..limit(4);
+          var expectedModels =
+          usersSortedAndFilteredNameDescNicknameAsc.sublist(3, 7);
+          var models = await runQueryWithExponentialBackoff(
+              query, expectedModels.length);
+          compareModels(expectedModels, models);
+        },
+
+        // Expando queries: Filter on normal property.
+        () async {
+          var query = store.query<ExpandoPerson>(partition: partition)
+            ..filter('name =', expandoPersons.last.name)
+            ..run();
+          var models = await runQueryWithExponentialBackoff(query, 1);
+          compareModels([expandoPersons.last], models);
+        },
+        // Expando queries: Filter on expanded String property
+        () async {
+          var query = store.query<ExpandoPerson>(partition: partition)
+            ..filter('foo =', (expandoPersons.last as dynamic).foo)
+            ..run();
+          var models = await runQueryWithExponentialBackoff(query, 1);
+          compareModels([expandoPersons.last], models);
+        },
+        // Expando queries: Filter on expanded int property
+        () async {
+          var query = store.query<ExpandoPerson>(partition: partition)
+            ..filter('bar =', (expandoPersons.last as dynamic).bar)
+            ..run();
+          var models = await runQueryWithExponentialBackoff(query, 1);
+          compareModels([expandoPersons.last], models);
+        },
+        // Expando queries: Filter normal property with different
+        // propertyName (datastore name is 'NN').
+        () async {
+          var query = store.query<ExpandoPerson>(partition: partition)
+            ..filter('nickname =', expandoPersons.last.nickname)
+            ..run();
+          var models = await runQueryWithExponentialBackoff(query, 1);
+          compareModels([expandoPersons.last], models);
+        },
+
+        // Delete results
+        () => store.commit(deletes: allKeys),
+
+        // Wait until the entity deletes are reflected in the indices.
+        () => waitUntilEntitiesGone<User>(store, userKeys, partition),
+        () => waitUntilEntitiesGone<ExpandoPerson>(store, expandoPersonsKeys, partition),
+
+        // Make sure queries don't return results
+        () => store.lookup(allKeys).then((List<db.Model> models) {
+          expect(models.length, equals(allKeys.length));
+          for (var model in models) {
+            expect(model, isNull);
+          }
+        }),
+      ];
+      return Future.forEach(tests, (f) => f());
     }, timeout: new Timeout(new Duration(minutes: 5)));
   });
 }

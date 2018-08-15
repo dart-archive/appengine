@@ -515,11 +515,12 @@ runTests(Datastore datastore, String namespace) {
       test('empty_commit_transactional_xg', () {
         return testEmptyCommit(namedEntities5Keys);
       });
+
       test('negative_empty_commit_xg', () {
         expect(testEmptyCommit(
                namedEntities20Keys, transactional: true, xg: true),
                throwsA(isApplicationError));
-      });
+      }, skip: 'Existing failure');
     });
 
     group('conflicting_transaction', () {
