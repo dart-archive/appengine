@@ -27,8 +27,8 @@ analyze_files $(find $REPO_ROOT/test -name '*.dart')
 RETURN_VALUE=$(expr $RETURN_VALUE + $?)
 
 start_phase "Starting API server"
-"$APPENGINE_API_SERVER" -A 'dev~test-application' \
-  --api_port 4444 --high_replication &
+python "$APPENGINE_API_SERVER" -A 'dev~test-application' \
+  --api_port 4444 &
 API_SERVER_PID=$!
 sleep 3
 

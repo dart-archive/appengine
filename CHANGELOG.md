@@ -1,7 +1,13 @@
-## 0.4.4+1
+## 0.5.0
+
+* Support for Dart 2.0 constants and updated gcloud.
+
+## 0.4.4+2
 
 * Fix race condition in gRPC client between `http2Connection.isOpen` and
   `http2Connection.makeRequest`.
+
+## 0.4.4+1
 
 * Delay http/2 connection dialer by 20 ms to give client enough time to receive
   server settings.
