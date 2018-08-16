@@ -11,15 +11,54 @@ const NodeConfig$json = const {
     const {'1': 'machine_type', '3': 1, '4': 1, '5': 9, '10': 'machineType'},
     const {'1': 'disk_size_gb', '3': 2, '4': 1, '5': 5, '10': 'diskSizeGb'},
     const {'1': 'oauth_scopes', '3': 3, '4': 3, '5': 9, '10': 'oauthScopes'},
-    const {'1': 'service_account', '3': 9, '4': 1, '5': 9, '10': 'serviceAccount'},
-    const {'1': 'metadata', '3': 4, '4': 3, '5': 11, '6': '.google.container.v1.NodeConfig.MetadataEntry', '10': 'metadata'},
+    const {
+      '1': 'service_account',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '10': 'serviceAccount'
+    },
+    const {
+      '1': 'metadata',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.NodeConfig.MetadataEntry',
+      '10': 'metadata'
+    },
     const {'1': 'image_type', '3': 5, '4': 1, '5': 9, '10': 'imageType'},
-    const {'1': 'labels', '3': 6, '4': 3, '5': 11, '6': '.google.container.v1.NodeConfig.LabelsEntry', '10': 'labels'},
-    const {'1': 'local_ssd_count', '3': 7, '4': 1, '5': 5, '10': 'localSsdCount'},
+    const {
+      '1': 'labels',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.NodeConfig.LabelsEntry',
+      '10': 'labels'
+    },
+    const {
+      '1': 'local_ssd_count',
+      '3': 7,
+      '4': 1,
+      '5': 5,
+      '10': 'localSsdCount'
+    },
     const {'1': 'tags', '3': 8, '4': 3, '5': 9, '10': 'tags'},
     const {'1': 'preemptible', '3': 10, '4': 1, '5': 8, '10': 'preemptible'},
-    const {'1': 'accelerators', '3': 11, '4': 3, '5': 11, '6': '.google.container.v1.AcceleratorConfig', '10': 'accelerators'},
-    const {'1': 'min_cpu_platform', '3': 13, '4': 1, '5': 9, '10': 'minCpuPlatform'},
+    const {
+      '1': 'accelerators',
+      '3': 11,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.AcceleratorConfig',
+      '10': 'accelerators'
+    },
+    const {
+      '1': 'min_cpu_platform',
+      '3': 13,
+      '4': 1,
+      '5': 9,
+      '10': 'minCpuPlatform'
+    },
   ],
   '3': const [NodeConfig_MetadataEntry$json, NodeConfig_LabelsEntry$json],
 };
@@ -47,9 +86,28 @@ const MasterAuth$json = const {
   '2': const [
     const {'1': 'username', '3': 1, '4': 1, '5': 9, '10': 'username'},
     const {'1': 'password', '3': 2, '4': 1, '5': 9, '10': 'password'},
-    const {'1': 'client_certificate_config', '3': 3, '4': 1, '5': 11, '6': '.google.container.v1.ClientCertificateConfig', '10': 'clientCertificateConfig'},
-    const {'1': 'cluster_ca_certificate', '3': 100, '4': 1, '5': 9, '10': 'clusterCaCertificate'},
-    const {'1': 'client_certificate', '3': 101, '4': 1, '5': 9, '10': 'clientCertificate'},
+    const {
+      '1': 'client_certificate_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.ClientCertificateConfig',
+      '10': 'clientCertificateConfig'
+    },
+    const {
+      '1': 'cluster_ca_certificate',
+      '3': 100,
+      '4': 1,
+      '5': 9,
+      '10': 'clusterCaCertificate'
+    },
+    const {
+      '1': 'client_certificate',
+      '3': 101,
+      '4': 1,
+      '5': 9,
+      '10': 'clientCertificate'
+    },
     const {'1': 'client_key', '3': 102, '4': 1, '5': 9, '10': 'clientKey'},
   ],
 };
@@ -57,17 +115,51 @@ const MasterAuth$json = const {
 const ClientCertificateConfig$json = const {
   '1': 'ClientCertificateConfig',
   '2': const [
-    const {'1': 'issue_client_certificate', '3': 1, '4': 1, '5': 8, '10': 'issueClientCertificate'},
+    const {
+      '1': 'issue_client_certificate',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'issueClientCertificate'
+    },
   ],
 };
 
 const AddonsConfig$json = const {
   '1': 'AddonsConfig',
   '2': const [
-    const {'1': 'http_load_balancing', '3': 1, '4': 1, '5': 11, '6': '.google.container.v1.HttpLoadBalancing', '10': 'httpLoadBalancing'},
-    const {'1': 'horizontal_pod_autoscaling', '3': 2, '4': 1, '5': 11, '6': '.google.container.v1.HorizontalPodAutoscaling', '10': 'horizontalPodAutoscaling'},
-    const {'1': 'kubernetes_dashboard', '3': 3, '4': 1, '5': 11, '6': '.google.container.v1.KubernetesDashboard', '10': 'kubernetesDashboard'},
-    const {'1': 'network_policy_config', '3': 4, '4': 1, '5': 11, '6': '.google.container.v1.NetworkPolicyConfig', '10': 'networkPolicyConfig'},
+    const {
+      '1': 'http_load_balancing',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.HttpLoadBalancing',
+      '10': 'httpLoadBalancing'
+    },
+    const {
+      '1': 'horizontal_pod_autoscaling',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.HorizontalPodAutoscaling',
+      '10': 'horizontalPodAutoscaling'
+    },
+    const {
+      '1': 'kubernetes_dashboard',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.KubernetesDashboard',
+      '10': 'kubernetesDashboard'
+    },
+    const {
+      '1': 'network_policy_config',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NetworkPolicyConfig',
+      '10': 'networkPolicyConfig'
+    },
   ],
 };
 
@@ -103,7 +195,14 @@ const MasterAuthorizedNetworksConfig$json = const {
   '1': 'MasterAuthorizedNetworksConfig',
   '2': const [
     const {'1': 'enabled', '3': 1, '4': 1, '5': 8, '10': 'enabled'},
-    const {'1': 'cidr_blocks', '3': 2, '4': 3, '5': 11, '6': '.google.container.v1.MasterAuthorizedNetworksConfig.CidrBlock', '10': 'cidrBlocks'},
+    const {
+      '1': 'cidr_blocks',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.MasterAuthorizedNetworksConfig.CidrBlock',
+      '10': 'cidrBlocks'
+    },
   ],
   '3': const [MasterAuthorizedNetworksConfig_CidrBlock$json],
 };
@@ -126,7 +225,14 @@ const LegacyAbac$json = const {
 const NetworkPolicy$json = const {
   '1': 'NetworkPolicy',
   '2': const [
-    const {'1': 'provider', '3': 1, '4': 1, '5': 14, '6': '.google.container.v1.NetworkPolicy.Provider', '10': 'provider'},
+    const {
+      '1': 'provider',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.container.v1.NetworkPolicy.Provider',
+      '10': 'provider'
+    },
     const {'1': 'enabled', '3': 2, '4': 1, '5': 8, '10': 'enabled'},
   ],
   '4': const [NetworkPolicy_Provider$json],
@@ -144,16 +250,70 @@ const IPAllocationPolicy$json = const {
   '1': 'IPAllocationPolicy',
   '2': const [
     const {'1': 'use_ip_aliases', '3': 1, '4': 1, '5': 8, '10': 'useIpAliases'},
-    const {'1': 'create_subnetwork', '3': 2, '4': 1, '5': 8, '10': 'createSubnetwork'},
-    const {'1': 'subnetwork_name', '3': 3, '4': 1, '5': 9, '10': 'subnetworkName'},
-    const {'1': 'cluster_ipv4_cidr', '3': 4, '4': 1, '5': 9, '10': 'clusterIpv4Cidr'},
+    const {
+      '1': 'create_subnetwork',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '10': 'createSubnetwork'
+    },
+    const {
+      '1': 'subnetwork_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'subnetworkName'
+    },
+    const {
+      '1': 'cluster_ipv4_cidr',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'clusterIpv4Cidr'
+    },
     const {'1': 'node_ipv4_cidr', '3': 5, '4': 1, '5': 9, '10': 'nodeIpv4Cidr'},
-    const {'1': 'services_ipv4_cidr', '3': 6, '4': 1, '5': 9, '10': 'servicesIpv4Cidr'},
-    const {'1': 'cluster_secondary_range_name', '3': 7, '4': 1, '5': 9, '10': 'clusterSecondaryRangeName'},
-    const {'1': 'services_secondary_range_name', '3': 8, '4': 1, '5': 9, '10': 'servicesSecondaryRangeName'},
-    const {'1': 'cluster_ipv4_cidr_block', '3': 9, '4': 1, '5': 9, '10': 'clusterIpv4CidrBlock'},
-    const {'1': 'node_ipv4_cidr_block', '3': 10, '4': 1, '5': 9, '10': 'nodeIpv4CidrBlock'},
-    const {'1': 'services_ipv4_cidr_block', '3': 11, '4': 1, '5': 9, '10': 'servicesIpv4CidrBlock'},
+    const {
+      '1': 'services_ipv4_cidr',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '10': 'servicesIpv4Cidr'
+    },
+    const {
+      '1': 'cluster_secondary_range_name',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '10': 'clusterSecondaryRangeName'
+    },
+    const {
+      '1': 'services_secondary_range_name',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '10': 'servicesSecondaryRangeName'
+    },
+    const {
+      '1': 'cluster_ipv4_cidr_block',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '10': 'clusterIpv4CidrBlock'
+    },
+    const {
+      '1': 'node_ipv4_cidr_block',
+      '3': 10,
+      '4': 1,
+      '5': 9,
+      '10': 'nodeIpv4CidrBlock'
+    },
+    const {
+      '1': 'services_ipv4_cidr_block',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '10': 'servicesIpv4CidrBlock'
+    },
   ],
 };
 
@@ -162,38 +322,199 @@ const Cluster$json = const {
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
-    const {'1': 'initial_node_count', '3': 3, '4': 1, '5': 5, '10': 'initialNodeCount'},
-    const {'1': 'node_config', '3': 4, '4': 1, '5': 11, '6': '.google.container.v1.NodeConfig', '10': 'nodeConfig'},
-    const {'1': 'master_auth', '3': 5, '4': 1, '5': 11, '6': '.google.container.v1.MasterAuth', '10': 'masterAuth'},
-    const {'1': 'logging_service', '3': 6, '4': 1, '5': 9, '10': 'loggingService'},
-    const {'1': 'monitoring_service', '3': 7, '4': 1, '5': 9, '10': 'monitoringService'},
+    const {
+      '1': 'initial_node_count',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '10': 'initialNodeCount'
+    },
+    const {
+      '1': 'node_config',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NodeConfig',
+      '10': 'nodeConfig'
+    },
+    const {
+      '1': 'master_auth',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.MasterAuth',
+      '10': 'masterAuth'
+    },
+    const {
+      '1': 'logging_service',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '10': 'loggingService'
+    },
+    const {
+      '1': 'monitoring_service',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '10': 'monitoringService'
+    },
     const {'1': 'network', '3': 8, '4': 1, '5': 9, '10': 'network'},
-    const {'1': 'cluster_ipv4_cidr', '3': 9, '4': 1, '5': 9, '10': 'clusterIpv4Cidr'},
-    const {'1': 'addons_config', '3': 10, '4': 1, '5': 11, '6': '.google.container.v1.AddonsConfig', '10': 'addonsConfig'},
+    const {
+      '1': 'cluster_ipv4_cidr',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '10': 'clusterIpv4Cidr'
+    },
+    const {
+      '1': 'addons_config',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.AddonsConfig',
+      '10': 'addonsConfig'
+    },
     const {'1': 'subnetwork', '3': 11, '4': 1, '5': 9, '10': 'subnetwork'},
-    const {'1': 'node_pools', '3': 12, '4': 3, '5': 11, '6': '.google.container.v1.NodePool', '10': 'nodePools'},
+    const {
+      '1': 'node_pools',
+      '3': 12,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.NodePool',
+      '10': 'nodePools'
+    },
     const {'1': 'locations', '3': 13, '4': 3, '5': 9, '10': 'locations'},
-    const {'1': 'enable_kubernetes_alpha', '3': 14, '4': 1, '5': 8, '10': 'enableKubernetesAlpha'},
-    const {'1': 'resource_labels', '3': 15, '4': 3, '5': 11, '6': '.google.container.v1.Cluster.ResourceLabelsEntry', '10': 'resourceLabels'},
-    const {'1': 'label_fingerprint', '3': 16, '4': 1, '5': 9, '10': 'labelFingerprint'},
-    const {'1': 'legacy_abac', '3': 18, '4': 1, '5': 11, '6': '.google.container.v1.LegacyAbac', '10': 'legacyAbac'},
-    const {'1': 'network_policy', '3': 19, '4': 1, '5': 11, '6': '.google.container.v1.NetworkPolicy', '10': 'networkPolicy'},
-    const {'1': 'ip_allocation_policy', '3': 20, '4': 1, '5': 11, '6': '.google.container.v1.IPAllocationPolicy', '10': 'ipAllocationPolicy'},
-    const {'1': 'master_authorized_networks_config', '3': 22, '4': 1, '5': 11, '6': '.google.container.v1.MasterAuthorizedNetworksConfig', '10': 'masterAuthorizedNetworksConfig'},
-    const {'1': 'maintenance_policy', '3': 23, '4': 1, '5': 11, '6': '.google.container.v1.MaintenancePolicy', '10': 'maintenancePolicy'},
+    const {
+      '1': 'enable_kubernetes_alpha',
+      '3': 14,
+      '4': 1,
+      '5': 8,
+      '10': 'enableKubernetesAlpha'
+    },
+    const {
+      '1': 'resource_labels',
+      '3': 15,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.Cluster.ResourceLabelsEntry',
+      '10': 'resourceLabels'
+    },
+    const {
+      '1': 'label_fingerprint',
+      '3': 16,
+      '4': 1,
+      '5': 9,
+      '10': 'labelFingerprint'
+    },
+    const {
+      '1': 'legacy_abac',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.LegacyAbac',
+      '10': 'legacyAbac'
+    },
+    const {
+      '1': 'network_policy',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NetworkPolicy',
+      '10': 'networkPolicy'
+    },
+    const {
+      '1': 'ip_allocation_policy',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.IPAllocationPolicy',
+      '10': 'ipAllocationPolicy'
+    },
+    const {
+      '1': 'master_authorized_networks_config',
+      '3': 22,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.MasterAuthorizedNetworksConfig',
+      '10': 'masterAuthorizedNetworksConfig'
+    },
+    const {
+      '1': 'maintenance_policy',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.MaintenancePolicy',
+      '10': 'maintenancePolicy'
+    },
     const {'1': 'self_link', '3': 100, '4': 1, '5': 9, '10': 'selfLink'},
     const {'1': 'zone', '3': 101, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'endpoint', '3': 102, '4': 1, '5': 9, '10': 'endpoint'},
-    const {'1': 'initial_cluster_version', '3': 103, '4': 1, '5': 9, '10': 'initialClusterVersion'},
-    const {'1': 'current_master_version', '3': 104, '4': 1, '5': 9, '10': 'currentMasterVersion'},
-    const {'1': 'current_node_version', '3': 105, '4': 1, '5': 9, '10': 'currentNodeVersion'},
+    const {
+      '1': 'initial_cluster_version',
+      '3': 103,
+      '4': 1,
+      '5': 9,
+      '10': 'initialClusterVersion'
+    },
+    const {
+      '1': 'current_master_version',
+      '3': 104,
+      '4': 1,
+      '5': 9,
+      '10': 'currentMasterVersion'
+    },
+    const {
+      '1': 'current_node_version',
+      '3': 105,
+      '4': 1,
+      '5': 9,
+      '10': 'currentNodeVersion'
+    },
     const {'1': 'create_time', '3': 106, '4': 1, '5': 9, '10': 'createTime'},
-    const {'1': 'status', '3': 107, '4': 1, '5': 14, '6': '.google.container.v1.Cluster.Status', '10': 'status'},
-    const {'1': 'status_message', '3': 108, '4': 1, '5': 9, '10': 'statusMessage'},
-    const {'1': 'node_ipv4_cidr_size', '3': 109, '4': 1, '5': 5, '10': 'nodeIpv4CidrSize'},
-    const {'1': 'services_ipv4_cidr', '3': 110, '4': 1, '5': 9, '10': 'servicesIpv4Cidr'},
-    const {'1': 'instance_group_urls', '3': 111, '4': 3, '5': 9, '10': 'instanceGroupUrls'},
-    const {'1': 'current_node_count', '3': 112, '4': 1, '5': 5, '10': 'currentNodeCount'},
+    const {
+      '1': 'status',
+      '3': 107,
+      '4': 1,
+      '5': 14,
+      '6': '.google.container.v1.Cluster.Status',
+      '10': 'status'
+    },
+    const {
+      '1': 'status_message',
+      '3': 108,
+      '4': 1,
+      '5': 9,
+      '10': 'statusMessage'
+    },
+    const {
+      '1': 'node_ipv4_cidr_size',
+      '3': 109,
+      '4': 1,
+      '5': 5,
+      '10': 'nodeIpv4CidrSize'
+    },
+    const {
+      '1': 'services_ipv4_cidr',
+      '3': 110,
+      '4': 1,
+      '5': 9,
+      '10': 'servicesIpv4Cidr'
+    },
+    const {
+      '1': 'instance_group_urls',
+      '3': 111,
+      '4': 3,
+      '5': 9,
+      '10': 'instanceGroupUrls'
+    },
+    const {
+      '1': 'current_node_count',
+      '3': 112,
+      '4': 1,
+      '5': 5,
+      '10': 'currentNodeCount'
+    },
     const {'1': 'expire_time', '3': 113, '4': 1, '5': 9, '10': 'expireTime'},
   ],
   '3': const [Cluster_ResourceLabelsEntry$json],
@@ -224,15 +545,72 @@ const Cluster_Status$json = const {
 const ClusterUpdate$json = const {
   '1': 'ClusterUpdate',
   '2': const [
-    const {'1': 'desired_node_version', '3': 4, '4': 1, '5': 9, '10': 'desiredNodeVersion'},
-    const {'1': 'desired_monitoring_service', '3': 5, '4': 1, '5': 9, '10': 'desiredMonitoringService'},
-    const {'1': 'desired_addons_config', '3': 6, '4': 1, '5': 11, '6': '.google.container.v1.AddonsConfig', '10': 'desiredAddonsConfig'},
-    const {'1': 'desired_node_pool_id', '3': 7, '4': 1, '5': 9, '10': 'desiredNodePoolId'},
-    const {'1': 'desired_image_type', '3': 8, '4': 1, '5': 9, '10': 'desiredImageType'},
-    const {'1': 'desired_node_pool_autoscaling', '3': 9, '4': 1, '5': 11, '6': '.google.container.v1.NodePoolAutoscaling', '10': 'desiredNodePoolAutoscaling'},
-    const {'1': 'desired_locations', '3': 10, '4': 3, '5': 9, '10': 'desiredLocations'},
-    const {'1': 'desired_master_authorized_networks_config', '3': 12, '4': 1, '5': 11, '6': '.google.container.v1.MasterAuthorizedNetworksConfig', '10': 'desiredMasterAuthorizedNetworksConfig'},
-    const {'1': 'desired_master_version', '3': 100, '4': 1, '5': 9, '10': 'desiredMasterVersion'},
+    const {
+      '1': 'desired_node_version',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'desiredNodeVersion'
+    },
+    const {
+      '1': 'desired_monitoring_service',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'desiredMonitoringService'
+    },
+    const {
+      '1': 'desired_addons_config',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.AddonsConfig',
+      '10': 'desiredAddonsConfig'
+    },
+    const {
+      '1': 'desired_node_pool_id',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '10': 'desiredNodePoolId'
+    },
+    const {
+      '1': 'desired_image_type',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '10': 'desiredImageType'
+    },
+    const {
+      '1': 'desired_node_pool_autoscaling',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NodePoolAutoscaling',
+      '10': 'desiredNodePoolAutoscaling'
+    },
+    const {
+      '1': 'desired_locations',
+      '3': 10,
+      '4': 3,
+      '5': 9,
+      '10': 'desiredLocations'
+    },
+    const {
+      '1': 'desired_master_authorized_networks_config',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.MasterAuthorizedNetworksConfig',
+      '10': 'desiredMasterAuthorizedNetworksConfig'
+    },
+    const {
+      '1': 'desired_master_version',
+      '3': 100,
+      '4': 1,
+      '5': 9,
+      '10': 'desiredMasterVersion'
+    },
   ],
 };
 
@@ -241,10 +619,30 @@ const Operation$json = const {
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
-    const {'1': 'operation_type', '3': 3, '4': 1, '5': 14, '6': '.google.container.v1.Operation.Type', '10': 'operationType'},
-    const {'1': 'status', '3': 4, '4': 1, '5': 14, '6': '.google.container.v1.Operation.Status', '10': 'status'},
+    const {
+      '1': 'operation_type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.container.v1.Operation.Type',
+      '10': 'operationType'
+    },
+    const {
+      '1': 'status',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.container.v1.Operation.Status',
+      '10': 'status'
+    },
     const {'1': 'detail', '3': 8, '4': 1, '5': 9, '10': 'detail'},
-    const {'1': 'status_message', '3': 5, '4': 1, '5': 9, '10': 'statusMessage'},
+    const {
+      '1': 'status_message',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'statusMessage'
+    },
     const {'1': 'self_link', '3': 6, '4': 1, '5': 9, '10': 'selfLink'},
     const {'1': 'target_link', '3': 7, '4': 1, '5': 9, '10': 'targetLink'},
     const {'1': 'start_time', '3': 10, '4': 1, '5': 9, '10': 'startTime'},
@@ -292,7 +690,14 @@ const CreateClusterRequest$json = const {
   '2': const [
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
-    const {'1': 'cluster', '3': 3, '4': 1, '5': 11, '6': '.google.container.v1.Cluster', '10': 'cluster'},
+    const {
+      '1': 'cluster',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.Cluster',
+      '10': 'cluster'
+    },
   ],
 };
 
@@ -311,7 +716,14 @@ const UpdateClusterRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'update', '3': 4, '4': 1, '5': 11, '6': '.google.container.v1.ClusterUpdate', '10': 'update'},
+    const {
+      '1': 'update',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.ClusterUpdate',
+      '10': 'update'
+    },
   ],
 };
 
@@ -334,7 +746,14 @@ const SetNodePoolAutoscalingRequest$json = const {
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
     const {'1': 'node_pool_id', '3': 4, '4': 1, '5': 9, '10': 'nodePoolId'},
-    const {'1': 'autoscaling', '3': 5, '4': 1, '5': 11, '6': '.google.container.v1.NodePoolAutoscaling', '10': 'autoscaling'},
+    const {
+      '1': 'autoscaling',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NodePoolAutoscaling',
+      '10': 'autoscaling'
+    },
   ],
 };
 
@@ -344,7 +763,13 @@ const SetLoggingServiceRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'logging_service', '3': 4, '4': 1, '5': 9, '10': 'loggingService'},
+    const {
+      '1': 'logging_service',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'loggingService'
+    },
   ],
 };
 
@@ -354,7 +779,13 @@ const SetMonitoringServiceRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'monitoring_service', '3': 4, '4': 1, '5': 9, '10': 'monitoringService'},
+    const {
+      '1': 'monitoring_service',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'monitoringService'
+    },
   ],
 };
 
@@ -364,7 +795,14 @@ const SetAddonsConfigRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'addons_config', '3': 4, '4': 1, '5': 11, '6': '.google.container.v1.AddonsConfig', '10': 'addonsConfig'},
+    const {
+      '1': 'addons_config',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.AddonsConfig',
+      '10': 'addonsConfig'
+    },
   ],
 };
 
@@ -384,7 +822,13 @@ const UpdateMasterRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'master_version', '3': 4, '4': 1, '5': 9, '10': 'masterVersion'},
+    const {
+      '1': 'master_version',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'masterVersion'
+    },
   ],
 };
 
@@ -394,8 +838,22 @@ const SetMasterAuthRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'action', '3': 4, '4': 1, '5': 14, '6': '.google.container.v1.SetMasterAuthRequest.Action', '10': 'action'},
-    const {'1': 'update', '3': 5, '4': 1, '5': 11, '6': '.google.container.v1.MasterAuth', '10': 'update'},
+    const {
+      '1': 'action',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.container.v1.SetMasterAuthRequest.Action',
+      '10': 'action'
+    },
+    const {
+      '1': 'update',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.MasterAuth',
+      '10': 'update'
+    },
   ],
   '4': const [SetMasterAuthRequest_Action$json],
 };
@@ -430,7 +888,14 @@ const ListClustersRequest$json = const {
 const ListClustersResponse$json = const {
   '1': 'ListClustersResponse',
   '2': const [
-    const {'1': 'clusters', '3': 1, '4': 3, '5': 11, '6': '.google.container.v1.Cluster', '10': 'clusters'},
+    const {
+      '1': 'clusters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.Cluster',
+      '10': 'clusters'
+    },
     const {'1': 'missing_zones', '3': 2, '4': 3, '5': 9, '10': 'missingZones'},
   ],
 };
@@ -464,7 +929,14 @@ const CancelOperationRequest$json = const {
 const ListOperationsResponse$json = const {
   '1': 'ListOperationsResponse',
   '2': const [
-    const {'1': 'operations', '3': 1, '4': 3, '5': 11, '6': '.google.container.v1.Operation', '10': 'operations'},
+    const {
+      '1': 'operations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.Operation',
+      '10': 'operations'
+    },
     const {'1': 'missing_zones', '3': 2, '4': 3, '5': 9, '10': 'missingZones'},
   ],
 };
@@ -480,11 +952,41 @@ const GetServerConfigRequest$json = const {
 const ServerConfig$json = const {
   '1': 'ServerConfig',
   '2': const [
-    const {'1': 'default_cluster_version', '3': 1, '4': 1, '5': 9, '10': 'defaultClusterVersion'},
-    const {'1': 'valid_node_versions', '3': 3, '4': 3, '5': 9, '10': 'validNodeVersions'},
-    const {'1': 'default_image_type', '3': 4, '4': 1, '5': 9, '10': 'defaultImageType'},
-    const {'1': 'valid_image_types', '3': 5, '4': 3, '5': 9, '10': 'validImageTypes'},
-    const {'1': 'valid_master_versions', '3': 6, '4': 3, '5': 9, '10': 'validMasterVersions'},
+    const {
+      '1': 'default_cluster_version',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'defaultClusterVersion'
+    },
+    const {
+      '1': 'valid_node_versions',
+      '3': 3,
+      '4': 3,
+      '5': 9,
+      '10': 'validNodeVersions'
+    },
+    const {
+      '1': 'default_image_type',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'defaultImageType'
+    },
+    const {
+      '1': 'valid_image_types',
+      '3': 5,
+      '4': 3,
+      '5': 9,
+      '10': 'validImageTypes'
+    },
+    const {
+      '1': 'valid_master_versions',
+      '3': 6,
+      '4': 3,
+      '5': 9,
+      '10': 'validMasterVersions'
+    },
   ],
 };
 
@@ -494,7 +996,14 @@ const CreateNodePoolRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'node_pool', '3': 4, '4': 1, '5': 11, '6': '.google.container.v1.NodePool', '10': 'nodePool'},
+    const {
+      '1': 'node_pool',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NodePool',
+      '10': 'nodePool'
+    },
   ],
 };
 
@@ -531,15 +1040,61 @@ const NodePool$json = const {
   '1': 'NodePool',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.google.container.v1.NodeConfig', '10': 'config'},
-    const {'1': 'initial_node_count', '3': 3, '4': 1, '5': 5, '10': 'initialNodeCount'},
+    const {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NodeConfig',
+      '10': 'config'
+    },
+    const {
+      '1': 'initial_node_count',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '10': 'initialNodeCount'
+    },
     const {'1': 'self_link', '3': 100, '4': 1, '5': 9, '10': 'selfLink'},
     const {'1': 'version', '3': 101, '4': 1, '5': 9, '10': 'version'},
-    const {'1': 'instance_group_urls', '3': 102, '4': 3, '5': 9, '10': 'instanceGroupUrls'},
-    const {'1': 'status', '3': 103, '4': 1, '5': 14, '6': '.google.container.v1.NodePool.Status', '10': 'status'},
-    const {'1': 'status_message', '3': 104, '4': 1, '5': 9, '10': 'statusMessage'},
-    const {'1': 'autoscaling', '3': 4, '4': 1, '5': 11, '6': '.google.container.v1.NodePoolAutoscaling', '10': 'autoscaling'},
-    const {'1': 'management', '3': 5, '4': 1, '5': 11, '6': '.google.container.v1.NodeManagement', '10': 'management'},
+    const {
+      '1': 'instance_group_urls',
+      '3': 102,
+      '4': 3,
+      '5': 9,
+      '10': 'instanceGroupUrls'
+    },
+    const {
+      '1': 'status',
+      '3': 103,
+      '4': 1,
+      '5': 14,
+      '6': '.google.container.v1.NodePool.Status',
+      '10': 'status'
+    },
+    const {
+      '1': 'status_message',
+      '3': 104,
+      '4': 1,
+      '5': 9,
+      '10': 'statusMessage'
+    },
+    const {
+      '1': 'autoscaling',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NodePoolAutoscaling',
+      '10': 'autoscaling'
+    },
+    const {
+      '1': 'management',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NodeManagement',
+      '10': 'management'
+    },
   ],
   '4': const [NodePool_Status$json],
 };
@@ -562,14 +1117,27 @@ const NodeManagement$json = const {
   '2': const [
     const {'1': 'auto_upgrade', '3': 1, '4': 1, '5': 8, '10': 'autoUpgrade'},
     const {'1': 'auto_repair', '3': 2, '4': 1, '5': 8, '10': 'autoRepair'},
-    const {'1': 'upgrade_options', '3': 10, '4': 1, '5': 11, '6': '.google.container.v1.AutoUpgradeOptions', '10': 'upgradeOptions'},
+    const {
+      '1': 'upgrade_options',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.AutoUpgradeOptions',
+      '10': 'upgradeOptions'
+    },
   ],
 };
 
 const AutoUpgradeOptions$json = const {
   '1': 'AutoUpgradeOptions',
   '2': const [
-    const {'1': 'auto_upgrade_start_time', '3': 1, '4': 1, '5': 9, '10': 'autoUpgradeStartTime'},
+    const {
+      '1': 'auto_upgrade_start_time',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'autoUpgradeStartTime'
+    },
     const {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
   ],
 };
@@ -577,14 +1145,29 @@ const AutoUpgradeOptions$json = const {
 const MaintenancePolicy$json = const {
   '1': 'MaintenancePolicy',
   '2': const [
-    const {'1': 'window', '3': 1, '4': 1, '5': 11, '6': '.google.container.v1.MaintenanceWindow', '10': 'window'},
+    const {
+      '1': 'window',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.MaintenanceWindow',
+      '10': 'window'
+    },
   ],
 };
 
 const MaintenanceWindow$json = const {
   '1': 'MaintenanceWindow',
   '2': const [
-    const {'1': 'daily_maintenance_window', '3': 2, '4': 1, '5': 11, '6': '.google.container.v1.DailyMaintenanceWindow', '9': 0, '10': 'dailyMaintenanceWindow'},
+    const {
+      '1': 'daily_maintenance_window',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.DailyMaintenanceWindow',
+      '9': 0,
+      '10': 'dailyMaintenanceWindow'
+    },
   ],
   '8': const [
     const {'1': 'policy'},
@@ -606,7 +1189,14 @@ const SetNodePoolManagementRequest$json = const {
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
     const {'1': 'node_pool_id', '3': 4, '4': 1, '5': 9, '10': 'nodePoolId'},
-    const {'1': 'management', '3': 5, '4': 1, '5': 11, '6': '.google.container.v1.NodeManagement', '10': 'management'},
+    const {
+      '1': 'management',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NodeManagement',
+      '10': 'management'
+    },
   ],
 };
 
@@ -634,7 +1224,14 @@ const RollbackNodePoolUpgradeRequest$json = const {
 const ListNodePoolsResponse$json = const {
   '1': 'ListNodePoolsResponse',
   '2': const [
-    const {'1': 'node_pools', '3': 1, '4': 3, '5': 11, '6': '.google.container.v1.NodePool', '10': 'nodePools'},
+    const {
+      '1': 'node_pools',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.NodePool',
+      '10': 'nodePools'
+    },
   ],
 };
 
@@ -653,8 +1250,21 @@ const SetLabelsRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'resource_labels', '3': 4, '4': 3, '5': 11, '6': '.google.container.v1.SetLabelsRequest.ResourceLabelsEntry', '10': 'resourceLabels'},
-    const {'1': 'label_fingerprint', '3': 5, '4': 1, '5': 9, '10': 'labelFingerprint'},
+    const {
+      '1': 'resource_labels',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.container.v1.SetLabelsRequest.ResourceLabelsEntry',
+      '10': 'resourceLabels'
+    },
+    const {
+      '1': 'label_fingerprint',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'labelFingerprint'
+    },
   ],
   '3': const [SetLabelsRequest_ResourceLabelsEntry$json],
 };
@@ -699,8 +1309,20 @@ const CompleteIPRotationRequest$json = const {
 const AcceleratorConfig$json = const {
   '1': 'AcceleratorConfig',
   '2': const [
-    const {'1': 'accelerator_count', '3': 1, '4': 1, '5': 3, '10': 'acceleratorCount'},
-    const {'1': 'accelerator_type', '3': 2, '4': 1, '5': 9, '10': 'acceleratorType'},
+    const {
+      '1': 'accelerator_count',
+      '3': 1,
+      '4': 1,
+      '5': 3,
+      '10': 'acceleratorCount'
+    },
+    const {
+      '1': 'accelerator_type',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'acceleratorType'
+    },
   ],
 };
 
@@ -710,7 +1332,14 @@ const SetNetworkPolicyRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'network_policy', '3': 4, '4': 1, '5': 11, '6': '.google.container.v1.NetworkPolicy', '10': 'networkPolicy'},
+    const {
+      '1': 'network_policy',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.NetworkPolicy',
+      '10': 'networkPolicy'
+    },
   ],
 };
 
@@ -720,43 +1349,200 @@ const SetMaintenancePolicyRequest$json = const {
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'zone', '3': 2, '4': 1, '5': 9, '10': 'zone'},
     const {'1': 'cluster_id', '3': 3, '4': 1, '5': 9, '10': 'clusterId'},
-    const {'1': 'maintenance_policy', '3': 4, '4': 1, '5': 11, '6': '.google.container.v1.MaintenancePolicy', '10': 'maintenancePolicy'},
+    const {
+      '1': 'maintenance_policy',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.container.v1.MaintenancePolicy',
+      '10': 'maintenancePolicy'
+    },
   ],
 };
 
 const ClusterManager$json = const {
   '1': 'ClusterManager',
   '2': const [
-    const {'1': 'ListClusters', '2': '.google.container.v1.ListClustersRequest', '3': '.google.container.v1.ListClustersResponse', '4': const {}},
-    const {'1': 'GetCluster', '2': '.google.container.v1.GetClusterRequest', '3': '.google.container.v1.Cluster', '4': const {}},
-    const {'1': 'CreateCluster', '2': '.google.container.v1.CreateClusterRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'UpdateCluster', '2': '.google.container.v1.UpdateClusterRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'UpdateNodePool', '2': '.google.container.v1.UpdateNodePoolRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetNodePoolAutoscaling', '2': '.google.container.v1.SetNodePoolAutoscalingRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetLoggingService', '2': '.google.container.v1.SetLoggingServiceRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetMonitoringService', '2': '.google.container.v1.SetMonitoringServiceRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetAddonsConfig', '2': '.google.container.v1.SetAddonsConfigRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetLocations', '2': '.google.container.v1.SetLocationsRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'UpdateMaster', '2': '.google.container.v1.UpdateMasterRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetMasterAuth', '2': '.google.container.v1.SetMasterAuthRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'DeleteCluster', '2': '.google.container.v1.DeleteClusterRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'ListOperations', '2': '.google.container.v1.ListOperationsRequest', '3': '.google.container.v1.ListOperationsResponse', '4': const {}},
-    const {'1': 'GetOperation', '2': '.google.container.v1.GetOperationRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'CancelOperation', '2': '.google.container.v1.CancelOperationRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'GetServerConfig', '2': '.google.container.v1.GetServerConfigRequest', '3': '.google.container.v1.ServerConfig', '4': const {}},
-    const {'1': 'ListNodePools', '2': '.google.container.v1.ListNodePoolsRequest', '3': '.google.container.v1.ListNodePoolsResponse', '4': const {}},
-    const {'1': 'GetNodePool', '2': '.google.container.v1.GetNodePoolRequest', '3': '.google.container.v1.NodePool', '4': const {}},
-    const {'1': 'CreateNodePool', '2': '.google.container.v1.CreateNodePoolRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'DeleteNodePool', '2': '.google.container.v1.DeleteNodePoolRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'RollbackNodePoolUpgrade', '2': '.google.container.v1.RollbackNodePoolUpgradeRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetNodePoolManagement', '2': '.google.container.v1.SetNodePoolManagementRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetLabels', '2': '.google.container.v1.SetLabelsRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetLegacyAbac', '2': '.google.container.v1.SetLegacyAbacRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'StartIPRotation', '2': '.google.container.v1.StartIPRotationRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'CompleteIPRotation', '2': '.google.container.v1.CompleteIPRotationRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetNodePoolSize', '2': '.google.container.v1.SetNodePoolSizeRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetNetworkPolicy', '2': '.google.container.v1.SetNetworkPolicyRequest', '3': '.google.container.v1.Operation', '4': const {}},
-    const {'1': 'SetMaintenancePolicy', '2': '.google.container.v1.SetMaintenancePolicyRequest', '3': '.google.container.v1.Operation', '4': const {}},
+    const {
+      '1': 'ListClusters',
+      '2': '.google.container.v1.ListClustersRequest',
+      '3': '.google.container.v1.ListClustersResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetCluster',
+      '2': '.google.container.v1.GetClusterRequest',
+      '3': '.google.container.v1.Cluster',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateCluster',
+      '2': '.google.container.v1.CreateClusterRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateCluster',
+      '2': '.google.container.v1.UpdateClusterRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateNodePool',
+      '2': '.google.container.v1.UpdateNodePoolRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetNodePoolAutoscaling',
+      '2': '.google.container.v1.SetNodePoolAutoscalingRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetLoggingService',
+      '2': '.google.container.v1.SetLoggingServiceRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetMonitoringService',
+      '2': '.google.container.v1.SetMonitoringServiceRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetAddonsConfig',
+      '2': '.google.container.v1.SetAddonsConfigRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetLocations',
+      '2': '.google.container.v1.SetLocationsRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateMaster',
+      '2': '.google.container.v1.UpdateMasterRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetMasterAuth',
+      '2': '.google.container.v1.SetMasterAuthRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteCluster',
+      '2': '.google.container.v1.DeleteClusterRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'ListOperations',
+      '2': '.google.container.v1.ListOperationsRequest',
+      '3': '.google.container.v1.ListOperationsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetOperation',
+      '2': '.google.container.v1.GetOperationRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'CancelOperation',
+      '2': '.google.container.v1.CancelOperationRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'GetServerConfig',
+      '2': '.google.container.v1.GetServerConfigRequest',
+      '3': '.google.container.v1.ServerConfig',
+      '4': const {}
+    },
+    const {
+      '1': 'ListNodePools',
+      '2': '.google.container.v1.ListNodePoolsRequest',
+      '3': '.google.container.v1.ListNodePoolsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetNodePool',
+      '2': '.google.container.v1.GetNodePoolRequest',
+      '3': '.google.container.v1.NodePool',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateNodePool',
+      '2': '.google.container.v1.CreateNodePoolRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteNodePool',
+      '2': '.google.container.v1.DeleteNodePoolRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'RollbackNodePoolUpgrade',
+      '2': '.google.container.v1.RollbackNodePoolUpgradeRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetNodePoolManagement',
+      '2': '.google.container.v1.SetNodePoolManagementRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetLabels',
+      '2': '.google.container.v1.SetLabelsRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetLegacyAbac',
+      '2': '.google.container.v1.SetLegacyAbacRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'StartIPRotation',
+      '2': '.google.container.v1.StartIPRotationRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'CompleteIPRotation',
+      '2': '.google.container.v1.CompleteIPRotationRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetNodePoolSize',
+      '2': '.google.container.v1.SetNodePoolSizeRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetNetworkPolicy',
+      '2': '.google.container.v1.SetNetworkPolicyRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'SetMaintenancePolicy',
+      '2': '.google.container.v1.SetMaintenancePolicyRequest',
+      '3': '.google.container.v1.Operation',
+      '4': const {}
+    },
   ],
 };
 
@@ -765,26 +1551,31 @@ const ClusterManager$messageJson = const {
   '.google.container.v1.ListClustersResponse': ListClustersResponse$json,
   '.google.container.v1.Cluster': Cluster$json,
   '.google.container.v1.NodeConfig': NodeConfig$json,
-  '.google.container.v1.NodeConfig.MetadataEntry': NodeConfig_MetadataEntry$json,
+  '.google.container.v1.NodeConfig.MetadataEntry':
+      NodeConfig_MetadataEntry$json,
   '.google.container.v1.NodeConfig.LabelsEntry': NodeConfig_LabelsEntry$json,
   '.google.container.v1.AcceleratorConfig': AcceleratorConfig$json,
   '.google.container.v1.MasterAuth': MasterAuth$json,
   '.google.container.v1.ClientCertificateConfig': ClientCertificateConfig$json,
   '.google.container.v1.AddonsConfig': AddonsConfig$json,
   '.google.container.v1.HttpLoadBalancing': HttpLoadBalancing$json,
-  '.google.container.v1.HorizontalPodAutoscaling': HorizontalPodAutoscaling$json,
+  '.google.container.v1.HorizontalPodAutoscaling':
+      HorizontalPodAutoscaling$json,
   '.google.container.v1.KubernetesDashboard': KubernetesDashboard$json,
   '.google.container.v1.NetworkPolicyConfig': NetworkPolicyConfig$json,
   '.google.container.v1.NodePool': NodePool$json,
   '.google.container.v1.NodePoolAutoscaling': NodePoolAutoscaling$json,
   '.google.container.v1.NodeManagement': NodeManagement$json,
   '.google.container.v1.AutoUpgradeOptions': AutoUpgradeOptions$json,
-  '.google.container.v1.Cluster.ResourceLabelsEntry': Cluster_ResourceLabelsEntry$json,
+  '.google.container.v1.Cluster.ResourceLabelsEntry':
+      Cluster_ResourceLabelsEntry$json,
   '.google.container.v1.LegacyAbac': LegacyAbac$json,
   '.google.container.v1.NetworkPolicy': NetworkPolicy$json,
   '.google.container.v1.IPAllocationPolicy': IPAllocationPolicy$json,
-  '.google.container.v1.MasterAuthorizedNetworksConfig': MasterAuthorizedNetworksConfig$json,
-  '.google.container.v1.MasterAuthorizedNetworksConfig.CidrBlock': MasterAuthorizedNetworksConfig_CidrBlock$json,
+  '.google.container.v1.MasterAuthorizedNetworksConfig':
+      MasterAuthorizedNetworksConfig$json,
+  '.google.container.v1.MasterAuthorizedNetworksConfig.CidrBlock':
+      MasterAuthorizedNetworksConfig_CidrBlock$json,
   '.google.container.v1.MaintenancePolicy': MaintenancePolicy$json,
   '.google.container.v1.MaintenanceWindow': MaintenanceWindow$json,
   '.google.container.v1.DailyMaintenanceWindow': DailyMaintenanceWindow$json,
@@ -794,9 +1585,12 @@ const ClusterManager$messageJson = const {
   '.google.container.v1.UpdateClusterRequest': UpdateClusterRequest$json,
   '.google.container.v1.ClusterUpdate': ClusterUpdate$json,
   '.google.container.v1.UpdateNodePoolRequest': UpdateNodePoolRequest$json,
-  '.google.container.v1.SetNodePoolAutoscalingRequest': SetNodePoolAutoscalingRequest$json,
-  '.google.container.v1.SetLoggingServiceRequest': SetLoggingServiceRequest$json,
-  '.google.container.v1.SetMonitoringServiceRequest': SetMonitoringServiceRequest$json,
+  '.google.container.v1.SetNodePoolAutoscalingRequest':
+      SetNodePoolAutoscalingRequest$json,
+  '.google.container.v1.SetLoggingServiceRequest':
+      SetLoggingServiceRequest$json,
+  '.google.container.v1.SetMonitoringServiceRequest':
+      SetMonitoringServiceRequest$json,
   '.google.container.v1.SetAddonsConfigRequest': SetAddonsConfigRequest$json,
   '.google.container.v1.SetLocationsRequest': SetLocationsRequest$json,
   '.google.container.v1.UpdateMasterRequest': UpdateMasterRequest$json,
@@ -814,15 +1608,19 @@ const ClusterManager$messageJson = const {
   '.google.container.v1.GetNodePoolRequest': GetNodePoolRequest$json,
   '.google.container.v1.CreateNodePoolRequest': CreateNodePoolRequest$json,
   '.google.container.v1.DeleteNodePoolRequest': DeleteNodePoolRequest$json,
-  '.google.container.v1.RollbackNodePoolUpgradeRequest': RollbackNodePoolUpgradeRequest$json,
-  '.google.container.v1.SetNodePoolManagementRequest': SetNodePoolManagementRequest$json,
+  '.google.container.v1.RollbackNodePoolUpgradeRequest':
+      RollbackNodePoolUpgradeRequest$json,
+  '.google.container.v1.SetNodePoolManagementRequest':
+      SetNodePoolManagementRequest$json,
   '.google.container.v1.SetLabelsRequest': SetLabelsRequest$json,
-  '.google.container.v1.SetLabelsRequest.ResourceLabelsEntry': SetLabelsRequest_ResourceLabelsEntry$json,
+  '.google.container.v1.SetLabelsRequest.ResourceLabelsEntry':
+      SetLabelsRequest_ResourceLabelsEntry$json,
   '.google.container.v1.SetLegacyAbacRequest': SetLegacyAbacRequest$json,
   '.google.container.v1.StartIPRotationRequest': StartIPRotationRequest$json,
-  '.google.container.v1.CompleteIPRotationRequest': CompleteIPRotationRequest$json,
+  '.google.container.v1.CompleteIPRotationRequest':
+      CompleteIPRotationRequest$json,
   '.google.container.v1.SetNodePoolSizeRequest': SetNodePoolSizeRequest$json,
   '.google.container.v1.SetNetworkPolicyRequest': SetNetworkPolicyRequest$json,
-  '.google.container.v1.SetMaintenancePolicyRequest': SetMaintenancePolicyRequest$json,
+  '.google.container.v1.SetMaintenancePolicyRequest':
+      SetMaintenancePolicyRequest$json,
 };
-

@@ -17,118 +17,176 @@ export 'metric.pbenum.dart';
 class MetricDescriptor extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('MetricDescriptor')
     ..aOS(1, 'name')
-    ..pp<LabelDescriptor>(2, 'labels', PbFieldType.PM, LabelDescriptor.$checkItem, LabelDescriptor.create)
-    ..e<MetricDescriptor_MetricKind>(3, 'metricKind', PbFieldType.OE, MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED, MetricDescriptor_MetricKind.valueOf, MetricDescriptor_MetricKind.values)
-    ..e<MetricDescriptor_ValueType>(4, 'valueType', PbFieldType.OE, MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED, MetricDescriptor_ValueType.valueOf, MetricDescriptor_ValueType.values)
+    ..pp<LabelDescriptor>(2, 'labels', PbFieldType.PM,
+        LabelDescriptor.$checkItem, LabelDescriptor.create)
+    ..e<MetricDescriptor_MetricKind>(
+        3,
+        'metricKind',
+        PbFieldType.OE,
+        MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED,
+        MetricDescriptor_MetricKind.valueOf,
+        MetricDescriptor_MetricKind.values)
+    ..e<MetricDescriptor_ValueType>(
+        4,
+        'valueType',
+        PbFieldType.OE,
+        MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED,
+        MetricDescriptor_ValueType.valueOf,
+        MetricDescriptor_ValueType.values)
     ..aOS(5, 'unit')
     ..aOS(6, 'description')
     ..aOS(7, 'displayName')
     ..aOS(8, 'type')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   MetricDescriptor() : super();
-  MetricDescriptor.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  MetricDescriptor.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  MetricDescriptor.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  MetricDescriptor.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   MetricDescriptor clone() => new MetricDescriptor()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static MetricDescriptor create() => new MetricDescriptor();
-  static PbList<MetricDescriptor> createRepeated() => new PbList<MetricDescriptor>();
+  static PbList<MetricDescriptor> createRepeated() =>
+      new PbList<MetricDescriptor>();
   static MetricDescriptor getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMetricDescriptor();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyMetricDescriptor();
     return _defaultInstance;
   }
+
   static MetricDescriptor _defaultInstance;
   static void $checkItem(MetricDescriptor v) {
     if (v is! MetricDescriptor) checkItemFailed(v, 'MetricDescriptor');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   List<LabelDescriptor> get labels => $_getList(1);
 
   MetricDescriptor_MetricKind get metricKind => $_getN(2);
-  set metricKind(MetricDescriptor_MetricKind v) { setField(3, v); }
+  set metricKind(MetricDescriptor_MetricKind v) {
+    setField(3, v);
+  }
+
   bool hasMetricKind() => $_has(2);
   void clearMetricKind() => clearField(3);
 
   MetricDescriptor_ValueType get valueType => $_getN(3);
-  set valueType(MetricDescriptor_ValueType v) { setField(4, v); }
+  set valueType(MetricDescriptor_ValueType v) {
+    setField(4, v);
+  }
+
   bool hasValueType() => $_has(3);
   void clearValueType() => clearField(4);
 
   String get unit => $_getS(4, '');
-  set unit(String v) { $_setString(4, v); }
+  set unit(String v) {
+    $_setString(4, v);
+  }
+
   bool hasUnit() => $_has(4);
   void clearUnit() => clearField(5);
 
   String get description => $_getS(5, '');
-  set description(String v) { $_setString(5, v); }
+  set description(String v) {
+    $_setString(5, v);
+  }
+
   bool hasDescription() => $_has(5);
   void clearDescription() => clearField(6);
 
   String get displayName => $_getS(6, '');
-  set displayName(String v) { $_setString(6, v); }
+  set displayName(String v) {
+    $_setString(6, v);
+  }
+
   bool hasDisplayName() => $_has(6);
   void clearDisplayName() => clearField(7);
 
   String get type => $_getS(7, '');
-  set type(String v) { $_setString(7, v); }
+  set type(String v) {
+    $_setString(7, v);
+  }
+
   bool hasType() => $_has(7);
   void clearType() => clearField(8);
 }
 
-class _ReadonlyMetricDescriptor extends MetricDescriptor with ReadonlyMessageMixin {}
+class _ReadonlyMetricDescriptor extends MetricDescriptor
+    with ReadonlyMessageMixin {}
 
 class Metric_LabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Metric_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   Metric_LabelsEntry() : super();
-  Metric_LabelsEntry.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Metric_LabelsEntry.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  Metric_LabelsEntry clone() => new Metric_LabelsEntry()..mergeFromMessage(this);
+  Metric_LabelsEntry.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Metric_LabelsEntry.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  Metric_LabelsEntry clone() =>
+      new Metric_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Metric_LabelsEntry create() => new Metric_LabelsEntry();
-  static PbList<Metric_LabelsEntry> createRepeated() => new PbList<Metric_LabelsEntry>();
+  static PbList<Metric_LabelsEntry> createRepeated() =>
+      new PbList<Metric_LabelsEntry>();
   static Metric_LabelsEntry getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMetric_LabelsEntry();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyMetric_LabelsEntry();
     return _defaultInstance;
   }
+
   static Metric_LabelsEntry _defaultInstance;
   static void $checkItem(Metric_LabelsEntry v) {
     if (v is! Metric_LabelsEntry) checkItemFailed(v, 'Metric_LabelsEntry');
   }
 
   String get key => $_getS(0, '');
-  set key(String v) { $_setString(0, v); }
+  set key(String v) {
+    $_setString(0, v);
+  }
+
   bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
   String get value => $_getS(1, '');
-  set value(String v) { $_setString(1, v); }
+  set value(String v) {
+    $_setString(1, v);
+  }
+
   bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
-class _ReadonlyMetric_LabelsEntry extends Metric_LabelsEntry with ReadonlyMessageMixin {}
+class _ReadonlyMetric_LabelsEntry extends Metric_LabelsEntry
+    with ReadonlyMessageMixin {}
 
 class Metric extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Metric')
-    ..pp<Metric_LabelsEntry>(2, 'labels', PbFieldType.PM, Metric_LabelsEntry.$checkItem, Metric_LabelsEntry.create)
+    ..pp<Metric_LabelsEntry>(2, 'labels', PbFieldType.PM,
+        Metric_LabelsEntry.$checkItem, Metric_LabelsEntry.create)
     ..aOS(3, 'type')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   Metric() : super();
-  Metric.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Metric.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Metric.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Metric.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Metric clone() => new Metric()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Metric create() => new Metric();
@@ -137,6 +195,7 @@ class Metric extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyMetric();
     return _defaultInstance;
   }
+
   static Metric _defaultInstance;
   static void $checkItem(Metric v) {
     if (v is! Metric) checkItemFailed(v, 'Metric');
@@ -145,10 +204,12 @@ class Metric extends GeneratedMessage {
   List<Metric_LabelsEntry> get labels => $_getList(0);
 
   String get type => $_getS(1, '');
-  set type(String v) { $_setString(1, v); }
+  set type(String v) {
+    $_setString(1, v);
+  }
+
   bool hasType() => $_has(1);
   void clearType() => clearField(3);
 }
 
 class _ReadonlyMetric extends Metric with ReadonlyMessageMixin {}
-

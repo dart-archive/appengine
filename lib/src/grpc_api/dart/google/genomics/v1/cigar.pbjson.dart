@@ -6,9 +6,28 @@
 const CigarUnit$json = const {
   '1': 'CigarUnit',
   '2': const [
-    const {'1': 'operation', '3': 1, '4': 1, '5': 14, '6': '.google.genomics.v1.CigarUnit.Operation', '10': 'operation'},
-    const {'1': 'operation_length', '3': 2, '4': 1, '5': 3, '10': 'operationLength'},
-    const {'1': 'reference_sequence', '3': 3, '4': 1, '5': 9, '10': 'referenceSequence'},
+    const {
+      '1': 'operation',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.genomics.v1.CigarUnit.Operation',
+      '10': 'operation'
+    },
+    const {
+      '1': 'operation_length',
+      '3': 2,
+      '4': 1,
+      '5': 3,
+      '10': 'operationLength'
+    },
+    const {
+      '1': 'reference_sequence',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'referenceSequence'
+    },
   ],
   '4': const [CigarUnit_Operation$json],
 };
@@ -28,4 +47,3 @@ const CigarUnit_Operation$json = const {
     const {'1': 'SEQUENCE_MISMATCH', '2': 9},
   ],
 };
-

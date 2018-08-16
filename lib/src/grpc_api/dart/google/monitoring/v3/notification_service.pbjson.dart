@@ -22,8 +22,21 @@ const ListNotificationChannelDescriptorsRequest$json = const {
 const ListNotificationChannelDescriptorsResponse$json = const {
   '1': 'ListNotificationChannelDescriptorsResponse',
   '2': const [
-    const {'1': 'channel_descriptors', '3': 1, '4': 3, '5': 11, '6': '.google.monitoring.v3.NotificationChannelDescriptor', '10': 'channelDescriptors'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'channel_descriptors',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.monitoring.v3.NotificationChannelDescriptor',
+      '10': 'channelDescriptors'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -38,7 +51,14 @@ const CreateNotificationChannelRequest$json = const {
   '1': 'CreateNotificationChannelRequest',
   '2': const [
     const {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'notification_channel', '3': 2, '4': 1, '5': 11, '6': '.google.monitoring.v3.NotificationChannel', '10': 'notificationChannel'},
+    const {
+      '1': 'notification_channel',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.monitoring.v3.NotificationChannel',
+      '10': 'notificationChannel'
+    },
   ],
 };
 
@@ -56,8 +76,21 @@ const ListNotificationChannelsRequest$json = const {
 const ListNotificationChannelsResponse$json = const {
   '1': 'ListNotificationChannelsResponse',
   '2': const [
-    const {'1': 'notification_channels', '3': 3, '4': 3, '5': 11, '6': '.google.monitoring.v3.NotificationChannel', '10': 'notificationChannels'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'notification_channels',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.monitoring.v3.NotificationChannel',
+      '10': 'notificationChannels'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -71,8 +104,22 @@ const GetNotificationChannelRequest$json = const {
 const UpdateNotificationChannelRequest$json = const {
   '1': 'UpdateNotificationChannelRequest',
   '2': const [
-    const {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'notification_channel', '3': 3, '4': 1, '5': 11, '6': '.google.monitoring.v3.NotificationChannel', '10': 'notificationChannel'},
+    const {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    const {
+      '1': 'notification_channel',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.monitoring.v3.NotificationChannel',
+      '10': 'notificationChannel'
+    },
   ],
 };
 
@@ -95,7 +142,14 @@ const GetNotificationChannelVerificationCodeRequest$json = const {
   '1': 'GetNotificationChannelVerificationCodeRequest',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'expire_time', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'expireTime'},
+    const {
+      '1': 'expire_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'expireTime'
+    },
   ],
 };
 
@@ -103,7 +157,14 @@ const GetNotificationChannelVerificationCodeResponse$json = const {
   '1': 'GetNotificationChannelVerificationCodeResponse',
   '2': const [
     const {'1': 'code', '3': 1, '4': 1, '5': 9, '10': 'code'},
-    const {'1': 'expire_time', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'expireTime'},
+    const {
+      '1': 'expire_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'expireTime'
+    },
   ],
 };
 
@@ -118,41 +179,109 @@ const VerifyNotificationChannelRequest$json = const {
 const NotificationChannelService$json = const {
   '1': 'NotificationChannelService',
   '2': const [
-    const {'1': 'ListNotificationChannelDescriptors', '2': '.google.monitoring.v3.ListNotificationChannelDescriptorsRequest', '3': '.google.monitoring.v3.ListNotificationChannelDescriptorsResponse', '4': const {}},
-    const {'1': 'GetNotificationChannelDescriptor', '2': '.google.monitoring.v3.GetNotificationChannelDescriptorRequest', '3': '.google.monitoring.v3.NotificationChannelDescriptor', '4': const {}},
-    const {'1': 'ListNotificationChannels', '2': '.google.monitoring.v3.ListNotificationChannelsRequest', '3': '.google.monitoring.v3.ListNotificationChannelsResponse', '4': const {}},
-    const {'1': 'GetNotificationChannel', '2': '.google.monitoring.v3.GetNotificationChannelRequest', '3': '.google.monitoring.v3.NotificationChannel', '4': const {}},
-    const {'1': 'CreateNotificationChannel', '2': '.google.monitoring.v3.CreateNotificationChannelRequest', '3': '.google.monitoring.v3.NotificationChannel', '4': const {}},
-    const {'1': 'UpdateNotificationChannel', '2': '.google.monitoring.v3.UpdateNotificationChannelRequest', '3': '.google.monitoring.v3.NotificationChannel', '4': const {}},
-    const {'1': 'DeleteNotificationChannel', '2': '.google.monitoring.v3.DeleteNotificationChannelRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'SendNotificationChannelVerificationCode', '2': '.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'GetNotificationChannelVerificationCode', '2': '.google.monitoring.v3.GetNotificationChannelVerificationCodeRequest', '3': '.google.monitoring.v3.GetNotificationChannelVerificationCodeResponse', '4': const {}},
-    const {'1': 'VerifyNotificationChannel', '2': '.google.monitoring.v3.VerifyNotificationChannelRequest', '3': '.google.monitoring.v3.NotificationChannel', '4': const {}},
+    const {
+      '1': 'ListNotificationChannelDescriptors',
+      '2': '.google.monitoring.v3.ListNotificationChannelDescriptorsRequest',
+      '3': '.google.monitoring.v3.ListNotificationChannelDescriptorsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetNotificationChannelDescriptor',
+      '2': '.google.monitoring.v3.GetNotificationChannelDescriptorRequest',
+      '3': '.google.monitoring.v3.NotificationChannelDescriptor',
+      '4': const {}
+    },
+    const {
+      '1': 'ListNotificationChannels',
+      '2': '.google.monitoring.v3.ListNotificationChannelsRequest',
+      '3': '.google.monitoring.v3.ListNotificationChannelsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetNotificationChannel',
+      '2': '.google.monitoring.v3.GetNotificationChannelRequest',
+      '3': '.google.monitoring.v3.NotificationChannel',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateNotificationChannel',
+      '2': '.google.monitoring.v3.CreateNotificationChannelRequest',
+      '3': '.google.monitoring.v3.NotificationChannel',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateNotificationChannel',
+      '2': '.google.monitoring.v3.UpdateNotificationChannelRequest',
+      '3': '.google.monitoring.v3.NotificationChannel',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteNotificationChannel',
+      '2': '.google.monitoring.v3.DeleteNotificationChannelRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'SendNotificationChannelVerificationCode',
+      '2':
+          '.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'GetNotificationChannelVerificationCode',
+      '2':
+          '.google.monitoring.v3.GetNotificationChannelVerificationCodeRequest',
+      '3':
+          '.google.monitoring.v3.GetNotificationChannelVerificationCodeResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'VerifyNotificationChannel',
+      '2': '.google.monitoring.v3.VerifyNotificationChannelRequest',
+      '3': '.google.monitoring.v3.NotificationChannel',
+      '4': const {}
+    },
   ],
 };
 
 const NotificationChannelService$messageJson = const {
-  '.google.monitoring.v3.ListNotificationChannelDescriptorsRequest': ListNotificationChannelDescriptorsRequest$json,
-  '.google.monitoring.v3.ListNotificationChannelDescriptorsResponse': ListNotificationChannelDescriptorsResponse$json,
-  '.google.monitoring.v3.NotificationChannelDescriptor': NotificationChannelDescriptor$json,
+  '.google.monitoring.v3.ListNotificationChannelDescriptorsRequest':
+      ListNotificationChannelDescriptorsRequest$json,
+  '.google.monitoring.v3.ListNotificationChannelDescriptorsResponse':
+      ListNotificationChannelDescriptorsResponse$json,
+  '.google.monitoring.v3.NotificationChannelDescriptor':
+      NotificationChannelDescriptor$json,
   '.google.api.LabelDescriptor': $google$api.LabelDescriptor$json,
-  '.google.monitoring.v3.GetNotificationChannelDescriptorRequest': GetNotificationChannelDescriptorRequest$json,
-  '.google.monitoring.v3.ListNotificationChannelsRequest': ListNotificationChannelsRequest$json,
-  '.google.monitoring.v3.ListNotificationChannelsResponse': ListNotificationChannelsResponse$json,
+  '.google.monitoring.v3.GetNotificationChannelDescriptorRequest':
+      GetNotificationChannelDescriptorRequest$json,
+  '.google.monitoring.v3.ListNotificationChannelsRequest':
+      ListNotificationChannelsRequest$json,
+  '.google.monitoring.v3.ListNotificationChannelsResponse':
+      ListNotificationChannelsResponse$json,
   '.google.monitoring.v3.NotificationChannel': NotificationChannel$json,
-  '.google.monitoring.v3.NotificationChannel.LabelsEntry': NotificationChannel_LabelsEntry$json,
-  '.google.monitoring.v3.NotificationChannel.UserLabelsEntry': NotificationChannel_UserLabelsEntry$json,
+  '.google.monitoring.v3.NotificationChannel.LabelsEntry':
+      NotificationChannel_LabelsEntry$json,
+  '.google.monitoring.v3.NotificationChannel.UserLabelsEntry':
+      NotificationChannel_UserLabelsEntry$json,
   '.google.protobuf.BoolValue': $google$protobuf.BoolValue$json,
-  '.google.monitoring.v3.GetNotificationChannelRequest': GetNotificationChannelRequest$json,
-  '.google.monitoring.v3.CreateNotificationChannelRequest': CreateNotificationChannelRequest$json,
-  '.google.monitoring.v3.UpdateNotificationChannelRequest': UpdateNotificationChannelRequest$json,
+  '.google.monitoring.v3.GetNotificationChannelRequest':
+      GetNotificationChannelRequest$json,
+  '.google.monitoring.v3.CreateNotificationChannelRequest':
+      CreateNotificationChannelRequest$json,
+  '.google.monitoring.v3.UpdateNotificationChannelRequest':
+      UpdateNotificationChannelRequest$json,
   '.google.protobuf.FieldMask': $google$protobuf.FieldMask$json,
-  '.google.monitoring.v3.DeleteNotificationChannelRequest': DeleteNotificationChannelRequest$json,
+  '.google.monitoring.v3.DeleteNotificationChannelRequest':
+      DeleteNotificationChannelRequest$json,
   '.google.protobuf.Empty': $google$protobuf.Empty$json,
-  '.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest': SendNotificationChannelVerificationCodeRequest$json,
-  '.google.monitoring.v3.GetNotificationChannelVerificationCodeRequest': GetNotificationChannelVerificationCodeRequest$json,
+  '.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest':
+      SendNotificationChannelVerificationCodeRequest$json,
+  '.google.monitoring.v3.GetNotificationChannelVerificationCodeRequest':
+      GetNotificationChannelVerificationCodeRequest$json,
   '.google.protobuf.Timestamp': $google$protobuf.Timestamp$json,
-  '.google.monitoring.v3.GetNotificationChannelVerificationCodeResponse': GetNotificationChannelVerificationCodeResponse$json,
-  '.google.monitoring.v3.VerifyNotificationChannelRequest': VerifyNotificationChannelRequest$json,
+  '.google.monitoring.v3.GetNotificationChannelVerificationCodeResponse':
+      GetNotificationChannelVerificationCodeResponse$json,
+  '.google.monitoring.v3.VerifyNotificationChannelRequest':
+      VerifyNotificationChannelRequest$json,
 };
-

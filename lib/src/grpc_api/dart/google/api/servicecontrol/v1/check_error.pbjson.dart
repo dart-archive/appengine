@@ -6,7 +6,14 @@
 const CheckError$json = const {
   '1': 'CheckError',
   '2': const [
-    const {'1': 'code', '3': 1, '4': 1, '5': 14, '6': '.google.api.servicecontrol.v1.CheckError.Code', '10': 'code'},
+    const {
+      '1': 'code',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.api.servicecontrol.v1.CheckError.Code',
+      '10': 'code'
+    },
     const {'1': 'detail', '3': 2, '4': 1, '5': 9, '10': 'detail'},
   ],
   '4': const [CheckError_Code$json],
@@ -34,4 +41,3 @@ const CheckError_Code$json = const {
     const {'1': 'BILLING_STATUS_UNAVAILABLE', '2': 302},
   ],
 };
-

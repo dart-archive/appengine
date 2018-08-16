@@ -13,12 +13,14 @@ class CrawledUrl extends GeneratedMessage {
     ..aOS(1, 'httpMethod')
     ..aOS(2, 'url')
     ..aOS(3, 'body')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   CrawledUrl() : super();
-  CrawledUrl.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CrawledUrl.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CrawledUrl.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CrawledUrl.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   CrawledUrl clone() => new CrawledUrl()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CrawledUrl create() => new CrawledUrl();
@@ -27,26 +29,35 @@ class CrawledUrl extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyCrawledUrl();
     return _defaultInstance;
   }
+
   static CrawledUrl _defaultInstance;
   static void $checkItem(CrawledUrl v) {
     if (v is! CrawledUrl) checkItemFailed(v, 'CrawledUrl');
   }
 
   String get httpMethod => $_getS(0, '');
-  set httpMethod(String v) { $_setString(0, v); }
+  set httpMethod(String v) {
+    $_setString(0, v);
+  }
+
   bool hasHttpMethod() => $_has(0);
   void clearHttpMethod() => clearField(1);
 
   String get url => $_getS(1, '');
-  set url(String v) { $_setString(1, v); }
+  set url(String v) {
+    $_setString(1, v);
+  }
+
   bool hasUrl() => $_has(1);
   void clearUrl() => clearField(2);
 
   String get body => $_getS(2, '');
-  set body(String v) { $_setString(2, v); }
+  set body(String v) {
+    $_setString(2, v);
+  }
+
   bool hasBody() => $_has(2);
   void clearBody() => clearField(3);
 }
 
 class _ReadonlyCrawledUrl extends CrawledUrl with ReadonlyMessageMixin {}
-

@@ -6,7 +6,14 @@
 const ProjectProperties$json = const {
   '1': 'ProjectProperties',
   '2': const [
-    const {'1': 'properties', '3': 1, '4': 3, '5': 11, '6': '.google.api.Property', '10': 'properties'},
+    const {
+      '1': 'properties',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.Property',
+      '10': 'properties'
+    },
   ],
 };
 
@@ -14,7 +21,14 @@ const Property$json = const {
   '1': 'Property',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.google.api.Property.PropertyType', '10': 'type'},
+    const {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.api.Property.PropertyType',
+      '10': 'type'
+    },
     const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
   ],
   '4': const [Property_PropertyType$json],
@@ -30,4 +44,3 @@ const Property_PropertyType$json = const {
     const {'1': 'DOUBLE', '2': 4},
   ],
 };
-

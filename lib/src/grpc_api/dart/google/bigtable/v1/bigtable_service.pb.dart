@@ -17,29 +17,45 @@ class BigtableServiceApi {
   RpcClient _client;
   BigtableServiceApi(this._client);
 
-  Future<ReadRowsResponse> readRows(ClientContext ctx, ReadRowsRequest request) {
+  Future<ReadRowsResponse> readRows(
+      ClientContext ctx, ReadRowsRequest request) {
     var emptyResponse = new ReadRowsResponse();
-    return _client.invoke<ReadRowsResponse>(ctx, 'BigtableService', 'ReadRows', request, emptyResponse);
+    return _client.invoke<ReadRowsResponse>(
+        ctx, 'BigtableService', 'ReadRows', request, emptyResponse);
   }
-  Future<SampleRowKeysResponse> sampleRowKeys(ClientContext ctx, SampleRowKeysRequest request) {
+
+  Future<SampleRowKeysResponse> sampleRowKeys(
+      ClientContext ctx, SampleRowKeysRequest request) {
     var emptyResponse = new SampleRowKeysResponse();
-    return _client.invoke<SampleRowKeysResponse>(ctx, 'BigtableService', 'SampleRowKeys', request, emptyResponse);
+    return _client.invoke<SampleRowKeysResponse>(
+        ctx, 'BigtableService', 'SampleRowKeys', request, emptyResponse);
   }
-  Future<$google$protobuf.Empty> mutateRow(ClientContext ctx, MutateRowRequest request) {
+
+  Future<$google$protobuf.Empty> mutateRow(
+      ClientContext ctx, MutateRowRequest request) {
     var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'BigtableService', 'MutateRow', request, emptyResponse);
+    return _client.invoke<$google$protobuf.Empty>(
+        ctx, 'BigtableService', 'MutateRow', request, emptyResponse);
   }
-  Future<MutateRowsResponse> mutateRows(ClientContext ctx, MutateRowsRequest request) {
+
+  Future<MutateRowsResponse> mutateRows(
+      ClientContext ctx, MutateRowsRequest request) {
     var emptyResponse = new MutateRowsResponse();
-    return _client.invoke<MutateRowsResponse>(ctx, 'BigtableService', 'MutateRows', request, emptyResponse);
+    return _client.invoke<MutateRowsResponse>(
+        ctx, 'BigtableService', 'MutateRows', request, emptyResponse);
   }
-  Future<CheckAndMutateRowResponse> checkAndMutateRow(ClientContext ctx, CheckAndMutateRowRequest request) {
+
+  Future<CheckAndMutateRowResponse> checkAndMutateRow(
+      ClientContext ctx, CheckAndMutateRowRequest request) {
     var emptyResponse = new CheckAndMutateRowResponse();
-    return _client.invoke<CheckAndMutateRowResponse>(ctx, 'BigtableService', 'CheckAndMutateRow', request, emptyResponse);
+    return _client.invoke<CheckAndMutateRowResponse>(
+        ctx, 'BigtableService', 'CheckAndMutateRow', request, emptyResponse);
   }
-  Future<Row> readModifyWriteRow(ClientContext ctx, ReadModifyWriteRowRequest request) {
+
+  Future<Row> readModifyWriteRow(
+      ClientContext ctx, ReadModifyWriteRowRequest request) {
     var emptyResponse = new Row();
-    return _client.invoke<Row>(ctx, 'BigtableService', 'ReadModifyWriteRow', request, emptyResponse);
+    return _client.invoke<Row>(
+        ctx, 'BigtableService', 'ReadModifyWriteRow', request, emptyResponse);
   }
 }
-

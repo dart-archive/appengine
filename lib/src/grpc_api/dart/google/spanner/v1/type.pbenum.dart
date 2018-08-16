@@ -8,7 +8,8 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class TypeCode extends ProtobufEnum {
-  static const TypeCode TYPE_CODE_UNSPECIFIED = const TypeCode._(0, 'TYPE_CODE_UNSPECIFIED');
+  static const TypeCode TYPE_CODE_UNSPECIFIED =
+      const TypeCode._(0, 'TYPE_CODE_UNSPECIFIED');
   static const TypeCode BOOL = const TypeCode._(1, 'BOOL');
   static const TypeCode INT64 = const TypeCode._(2, 'INT64');
   static const TypeCode FLOAT64 = const TypeCode._(3, 'FLOAT64');
@@ -19,7 +20,7 @@ class TypeCode extends ProtobufEnum {
   static const TypeCode ARRAY = const TypeCode._(8, 'ARRAY');
   static const TypeCode STRUCT = const TypeCode._(9, 'STRUCT');
 
-  static const List<TypeCode> values = const <TypeCode> [
+  static const List<TypeCode> values = const <TypeCode>[
     TYPE_CODE_UNSPECIFIED,
     BOOL,
     INT64,
@@ -40,4 +41,3 @@ class TypeCode extends ProtobufEnum {
 
   const TypeCode._(int v, String n) : super(v, n);
 }
-

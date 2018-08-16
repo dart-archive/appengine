@@ -6,7 +6,14 @@
 const Context$json = const {
   '1': 'Context',
   '2': const [
-    const {'1': 'rules', '3': 1, '4': 3, '5': 11, '6': '.google.api.ContextRule', '10': 'rules'},
+    const {
+      '1': 'rules',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.ContextRule',
+      '10': 'rules'
+    },
   ],
 };
 
@@ -18,4 +25,3 @@ const ContextRule$json = const {
     const {'1': 'provided', '3': 3, '4': 3, '5': 9, '10': 'provided'},
   ],
 };
-

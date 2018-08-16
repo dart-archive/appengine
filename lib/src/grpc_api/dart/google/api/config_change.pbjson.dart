@@ -19,8 +19,22 @@ const ConfigChange$json = const {
     const {'1': 'element', '3': 1, '4': 1, '5': 9, '10': 'element'},
     const {'1': 'old_value', '3': 2, '4': 1, '5': 9, '10': 'oldValue'},
     const {'1': 'new_value', '3': 3, '4': 1, '5': 9, '10': 'newValue'},
-    const {'1': 'change_type', '3': 4, '4': 1, '5': 14, '6': '.google.api.ChangeType', '10': 'changeType'},
-    const {'1': 'advices', '3': 5, '4': 3, '5': 11, '6': '.google.api.Advice', '10': 'advices'},
+    const {
+      '1': 'change_type',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.api.ChangeType',
+      '10': 'changeType'
+    },
+    const {
+      '1': 'advices',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.Advice',
+      '10': 'advices'
+    },
   ],
 };
 
@@ -30,4 +44,3 @@ const Advice$json = const {
     const {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
   ],
 };
-

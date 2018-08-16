@@ -14,13 +14,16 @@ class Status extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Status')
     ..a<int>(1, 'code', PbFieldType.O3)
     ..aOS(2, 'message')
-    ..pp<$google$protobuf.Any>(3, 'details', PbFieldType.PM, $google$protobuf.Any.$checkItem, $google$protobuf.Any.create)
-    ..hasRequiredFields = false
-  ;
+    ..pp<$google$protobuf.Any>(3, 'details', PbFieldType.PM,
+        $google$protobuf.Any.$checkItem, $google$protobuf.Any.create)
+    ..hasRequiredFields = false;
 
   Status() : super();
-  Status.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Status.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Status.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Status.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Status clone() => new Status()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Status create() => new Status();
@@ -29,18 +32,25 @@ class Status extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyStatus();
     return _defaultInstance;
   }
+
   static Status _defaultInstance;
   static void $checkItem(Status v) {
     if (v is! Status) checkItemFailed(v, 'Status');
   }
 
   int get code => $_get(0, 0);
-  set code(int v) { $_setSignedInt32(0, v); }
+  set code(int v) {
+    $_setSignedInt32(0, v);
+  }
+
   bool hasCode() => $_has(0);
   void clearCode() => clearField(1);
 
   String get message => $_getS(1, '');
-  set message(String v) { $_setString(1, v); }
+  set message(String v) {
+    $_setString(1, v);
+  }
+
   bool hasMessage() => $_has(1);
   void clearMessage() => clearField(2);
 
@@ -48,4 +58,3 @@ class Status extends GeneratedMessage {
 }
 
 class _ReadonlyStatus extends Status with ReadonlyMessageMixin {}
-

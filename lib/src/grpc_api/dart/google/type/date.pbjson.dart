@@ -11,4 +11,3 @@ const Date$json = const {
     const {'1': 'day', '3': 3, '4': 1, '5': 5, '10': 'day'},
   ],
 };
-

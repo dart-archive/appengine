@@ -18,8 +18,21 @@ const ListLocationsRequest$json = const {
 const ListLocationsResponse$json = const {
   '1': 'ListLocationsResponse',
   '2': const [
-    const {'1': 'locations', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.location.Location', '10': 'locations'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'locations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.location.Location',
+      '10': 'locations'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -36,8 +49,22 @@ const Location$json = const {
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'location_id', '3': 4, '4': 1, '5': 9, '10': 'locationId'},
     const {'1': 'display_name', '3': 5, '4': 1, '5': 9, '10': 'displayName'},
-    const {'1': 'labels', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.location.Location.LabelsEntry', '10': 'labels'},
-    const {'1': 'metadata', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Any', '10': 'metadata'},
+    const {
+      '1': 'labels',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.location.Location.LabelsEntry',
+      '10': 'labels'
+    },
+    const {
+      '1': 'metadata',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Any',
+      '10': 'metadata'
+    },
   ],
   '3': const [Location_LabelsEntry$json],
 };
@@ -54,8 +81,18 @@ const Location_LabelsEntry$json = const {
 const Locations$json = const {
   '1': 'Locations',
   '2': const [
-    const {'1': 'ListLocations', '2': '.google.cloud.location.ListLocationsRequest', '3': '.google.cloud.location.ListLocationsResponse', '4': const {}},
-    const {'1': 'GetLocation', '2': '.google.cloud.location.GetLocationRequest', '3': '.google.cloud.location.Location', '4': const {}},
+    const {
+      '1': 'ListLocations',
+      '2': '.google.cloud.location.ListLocationsRequest',
+      '3': '.google.cloud.location.ListLocationsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetLocation',
+      '2': '.google.cloud.location.GetLocationRequest',
+      '3': '.google.cloud.location.Location',
+      '4': const {}
+    },
   ],
 };
 
@@ -67,4 +104,3 @@ const Locations$messageJson = const {
   '.google.protobuf.Any': $google$protobuf.Any$json,
   '.google.cloud.location.GetLocationRequest': GetLocationRequest$json,
 };
-

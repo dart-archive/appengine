@@ -11,7 +11,7 @@ class Syntax extends ProtobufEnum {
   static const Syntax SYNTAX_PROTO2 = const Syntax._(0, 'SYNTAX_PROTO2');
   static const Syntax SYNTAX_PROTO3 = const Syntax._(1, 'SYNTAX_PROTO3');
 
-  static const List<Syntax> values = const <Syntax> [
+  static const List<Syntax> values = const <Syntax>[
     SYNTAX_PROTO2,
     SYNTAX_PROTO3,
   ];
@@ -41,12 +41,14 @@ class Field_Kind extends ProtobufEnum {
   static const Field_Kind TYPE_BYTES = const Field_Kind._(12, 'TYPE_BYTES');
   static const Field_Kind TYPE_UINT32 = const Field_Kind._(13, 'TYPE_UINT32');
   static const Field_Kind TYPE_ENUM = const Field_Kind._(14, 'TYPE_ENUM');
-  static const Field_Kind TYPE_SFIXED32 = const Field_Kind._(15, 'TYPE_SFIXED32');
-  static const Field_Kind TYPE_SFIXED64 = const Field_Kind._(16, 'TYPE_SFIXED64');
+  static const Field_Kind TYPE_SFIXED32 =
+      const Field_Kind._(15, 'TYPE_SFIXED32');
+  static const Field_Kind TYPE_SFIXED64 =
+      const Field_Kind._(16, 'TYPE_SFIXED64');
   static const Field_Kind TYPE_SINT32 = const Field_Kind._(17, 'TYPE_SINT32');
   static const Field_Kind TYPE_SINT64 = const Field_Kind._(18, 'TYPE_SINT64');
 
-  static const List<Field_Kind> values = const <Field_Kind> [
+  static const List<Field_Kind> values = const <Field_Kind>[
     TYPE_UNKNOWN,
     TYPE_DOUBLE,
     TYPE_FLOAT,
@@ -78,12 +80,16 @@ class Field_Kind extends ProtobufEnum {
 }
 
 class Field_Cardinality extends ProtobufEnum {
-  static const Field_Cardinality CARDINALITY_UNKNOWN = const Field_Cardinality._(0, 'CARDINALITY_UNKNOWN');
-  static const Field_Cardinality CARDINALITY_OPTIONAL = const Field_Cardinality._(1, 'CARDINALITY_OPTIONAL');
-  static const Field_Cardinality CARDINALITY_REQUIRED = const Field_Cardinality._(2, 'CARDINALITY_REQUIRED');
-  static const Field_Cardinality CARDINALITY_REPEATED = const Field_Cardinality._(3, 'CARDINALITY_REPEATED');
+  static const Field_Cardinality CARDINALITY_UNKNOWN =
+      const Field_Cardinality._(0, 'CARDINALITY_UNKNOWN');
+  static const Field_Cardinality CARDINALITY_OPTIONAL =
+      const Field_Cardinality._(1, 'CARDINALITY_OPTIONAL');
+  static const Field_Cardinality CARDINALITY_REQUIRED =
+      const Field_Cardinality._(2, 'CARDINALITY_REQUIRED');
+  static const Field_Cardinality CARDINALITY_REPEATED =
+      const Field_Cardinality._(3, 'CARDINALITY_REPEATED');
 
-  static const List<Field_Cardinality> values = const <Field_Cardinality> [
+  static const List<Field_Cardinality> values = const <Field_Cardinality>[
     CARDINALITY_UNKNOWN,
     CARDINALITY_OPTIONAL,
     CARDINALITY_REQUIRED,
@@ -91,11 +97,11 @@ class Field_Cardinality extends ProtobufEnum {
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Field_Cardinality valueOf(int value) => _byValue[value] as Field_Cardinality;
+  static Field_Cardinality valueOf(int value) =>
+      _byValue[value] as Field_Cardinality;
   static void $checkItem(Field_Cardinality v) {
     if (v is! Field_Cardinality) checkItemFailed(v, 'Field_Cardinality');
   }
 
   const Field_Cardinality._(int v, String n) : super(v, n);
 }
-

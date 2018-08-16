@@ -8,7 +8,14 @@ const ErrorGroup$json = const {
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'group_id', '3': 2, '4': 1, '5': 9, '10': 'groupId'},
-    const {'1': 'tracking_issues', '3': 3, '4': 3, '5': 11, '6': '.google.devtools.clouderrorreporting.v1beta1.TrackingIssue', '10': 'trackingIssues'},
+    const {
+      '1': 'tracking_issues',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.clouderrorreporting.v1beta1.TrackingIssue',
+      '10': 'trackingIssues'
+    },
   ],
 };
 
@@ -22,10 +29,31 @@ const TrackingIssue$json = const {
 const ErrorEvent$json = const {
   '1': 'ErrorEvent',
   '2': const [
-    const {'1': 'event_time', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'eventTime'},
-    const {'1': 'service_context', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.clouderrorreporting.v1beta1.ServiceContext', '10': 'serviceContext'},
+    const {
+      '1': 'event_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'eventTime'
+    },
+    const {
+      '1': 'service_context',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.clouderrorreporting.v1beta1.ServiceContext',
+      '10': 'serviceContext'
+    },
     const {'1': 'message', '3': 3, '4': 1, '5': 9, '10': 'message'},
-    const {'1': 'context', '3': 5, '4': 1, '5': 11, '6': '.google.devtools.clouderrorreporting.v1beta1.ErrorContext', '10': 'context'},
+    const {
+      '1': 'context',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.clouderrorreporting.v1beta1.ErrorContext',
+      '10': 'context'
+    },
   ],
 };
 
@@ -41,9 +69,23 @@ const ServiceContext$json = const {
 const ErrorContext$json = const {
   '1': 'ErrorContext',
   '2': const [
-    const {'1': 'http_request', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.clouderrorreporting.v1beta1.HttpRequestContext', '10': 'httpRequest'},
+    const {
+      '1': 'http_request',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.clouderrorreporting.v1beta1.HttpRequestContext',
+      '10': 'httpRequest'
+    },
     const {'1': 'user', '3': 2, '4': 1, '5': 9, '10': 'user'},
-    const {'1': 'report_location', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.clouderrorreporting.v1beta1.SourceLocation', '10': 'reportLocation'},
+    const {
+      '1': 'report_location',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.clouderrorreporting.v1beta1.SourceLocation',
+      '10': 'reportLocation'
+    },
   ],
 };
 
@@ -54,7 +96,13 @@ const HttpRequestContext$json = const {
     const {'1': 'url', '3': 2, '4': 1, '5': 9, '10': 'url'},
     const {'1': 'user_agent', '3': 3, '4': 1, '5': 9, '10': 'userAgent'},
     const {'1': 'referrer', '3': 4, '4': 1, '5': 9, '10': 'referrer'},
-    const {'1': 'response_status_code', '3': 5, '4': 1, '5': 5, '10': 'responseStatusCode'},
+    const {
+      '1': 'response_status_code',
+      '3': 5,
+      '4': 1,
+      '5': 5,
+      '10': 'responseStatusCode'
+    },
     const {'1': 'remote_ip', '3': 6, '4': 1, '5': 9, '10': 'remoteIp'},
   ],
 };
@@ -67,4 +115,3 @@ const SourceLocation$json = const {
     const {'1': 'function_name', '3': 4, '4': 1, '5': 9, '10': 'functionName'},
   ],
 };
-

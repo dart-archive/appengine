@@ -8,31 +8,40 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Span_TimeEvent_MessageEvent_Type extends ProtobufEnum {
-  static const Span_TimeEvent_MessageEvent_Type TYPE_UNSPECIFIED = const Span_TimeEvent_MessageEvent_Type._(0, 'TYPE_UNSPECIFIED');
-  static const Span_TimeEvent_MessageEvent_Type SENT = const Span_TimeEvent_MessageEvent_Type._(1, 'SENT');
-  static const Span_TimeEvent_MessageEvent_Type RECEIVED = const Span_TimeEvent_MessageEvent_Type._(2, 'RECEIVED');
+  static const Span_TimeEvent_MessageEvent_Type TYPE_UNSPECIFIED =
+      const Span_TimeEvent_MessageEvent_Type._(0, 'TYPE_UNSPECIFIED');
+  static const Span_TimeEvent_MessageEvent_Type SENT =
+      const Span_TimeEvent_MessageEvent_Type._(1, 'SENT');
+  static const Span_TimeEvent_MessageEvent_Type RECEIVED =
+      const Span_TimeEvent_MessageEvent_Type._(2, 'RECEIVED');
 
-  static const List<Span_TimeEvent_MessageEvent_Type> values = const <Span_TimeEvent_MessageEvent_Type> [
+  static const List<Span_TimeEvent_MessageEvent_Type> values =
+      const <Span_TimeEvent_MessageEvent_Type>[
     TYPE_UNSPECIFIED,
     SENT,
     RECEIVED,
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Span_TimeEvent_MessageEvent_Type valueOf(int value) => _byValue[value] as Span_TimeEvent_MessageEvent_Type;
+  static Span_TimeEvent_MessageEvent_Type valueOf(int value) =>
+      _byValue[value] as Span_TimeEvent_MessageEvent_Type;
   static void $checkItem(Span_TimeEvent_MessageEvent_Type v) {
-    if (v is! Span_TimeEvent_MessageEvent_Type) checkItemFailed(v, 'Span_TimeEvent_MessageEvent_Type');
+    if (v is! Span_TimeEvent_MessageEvent_Type)
+      checkItemFailed(v, 'Span_TimeEvent_MessageEvent_Type');
   }
 
   const Span_TimeEvent_MessageEvent_Type._(int v, String n) : super(v, n);
 }
 
 class Span_Link_Type extends ProtobufEnum {
-  static const Span_Link_Type TYPE_UNSPECIFIED = const Span_Link_Type._(0, 'TYPE_UNSPECIFIED');
-  static const Span_Link_Type CHILD_LINKED_SPAN = const Span_Link_Type._(1, 'CHILD_LINKED_SPAN');
-  static const Span_Link_Type PARENT_LINKED_SPAN = const Span_Link_Type._(2, 'PARENT_LINKED_SPAN');
+  static const Span_Link_Type TYPE_UNSPECIFIED =
+      const Span_Link_Type._(0, 'TYPE_UNSPECIFIED');
+  static const Span_Link_Type CHILD_LINKED_SPAN =
+      const Span_Link_Type._(1, 'CHILD_LINKED_SPAN');
+  static const Span_Link_Type PARENT_LINKED_SPAN =
+      const Span_Link_Type._(2, 'PARENT_LINKED_SPAN');
 
-  static const List<Span_Link_Type> values = const <Span_Link_Type> [
+  static const List<Span_Link_Type> values = const <Span_Link_Type>[
     TYPE_UNSPECIFIED,
     CHILD_LINKED_SPAN,
     PARENT_LINKED_SPAN,
@@ -46,4 +55,3 @@ class Span_Link_Type extends ProtobufEnum {
 
   const Span_Link_Type._(int v, String n) : super(v, n);
 }
-

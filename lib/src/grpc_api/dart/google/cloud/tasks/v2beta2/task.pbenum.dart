@@ -8,11 +8,12 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Task_View extends ProtobufEnum {
-  static const Task_View VIEW_UNSPECIFIED = const Task_View._(0, 'VIEW_UNSPECIFIED');
+  static const Task_View VIEW_UNSPECIFIED =
+      const Task_View._(0, 'VIEW_UNSPECIFIED');
   static const Task_View BASIC = const Task_View._(1, 'BASIC');
   static const Task_View FULL = const Task_View._(2, 'FULL');
 
-  static const List<Task_View> values = const <Task_View> [
+  static const List<Task_View> values = const <Task_View>[
     VIEW_UNSPECIFIED,
     BASIC,
     FULL,
@@ -26,4 +27,3 @@ class Task_View extends ProtobufEnum {
 
   const Task_View._(int v, String n) : super(v, n);
 }
-

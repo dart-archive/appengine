@@ -7,7 +7,14 @@ const AuditData$json = const {
   '1': 'AuditData',
   '2': const [
     const {'1': 'event_message', '3': 1, '4': 1, '5': 9, '10': 'eventMessage'},
-    const {'1': 'event_data', '3': 2, '4': 3, '5': 11, '6': '.google.appengine.legacy.AuditData.EventDataEntry', '10': 'eventData'},
+    const {
+      '1': 'event_data',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.legacy.AuditData.EventDataEntry',
+      '10': 'eventData'
+    },
   ],
   '3': const [AuditData_EventDataEntry$json],
 };
@@ -20,4 +27,3 @@ const AuditData_EventDataEntry$json = const {
   ],
   '7': const {'7': true},
 };
-

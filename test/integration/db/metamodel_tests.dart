@@ -56,10 +56,8 @@ runTests(datastore, db.DatastoreDB store, String uniquePostfix) {
 
       expect(namespaces.length, greaterThanOrEqualTo(3));
       expect(namespaces, contains(cond((ns) => ns.name == null)));
-      expect(namespaces,
-          contains(cond((ns) => ns.name == 'FooNamespace')));
-      expect(namespaces,
-          contains(cond((ns) => ns.name == 'BarNamespace')));
+      expect(namespaces, contains(cond((ns) => ns.name == 'FooNamespace')));
+      expect(namespaces, contains(cond((ns) => ns.name == 'BarNamespace')));
 
       try {
         for (final namespace in [null, 'FooNamespace', 'BarNamespace']) {

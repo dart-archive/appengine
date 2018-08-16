@@ -49,8 +49,8 @@ class StderrRequestLoggingImpl extends LoggingImpl {
 
     if (finish) {
       buffer.writeln('$now $_httpMethod $responseStatus '
-                     '${now.difference(_startTimestamp).inMilliseconds} ms'
-                     ' $_httpResource');
+          '${now.difference(_startTimestamp).inMilliseconds} ms'
+          ' $_httpResource');
     } else {
       buffer.writeln('$now $_httpMethod - - $_httpResource');
     }

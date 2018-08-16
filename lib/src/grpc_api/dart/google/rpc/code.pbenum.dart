@@ -18,7 +18,8 @@ class Code extends ProtobufEnum {
   static const Code PERMISSION_DENIED = const Code._(7, 'PERMISSION_DENIED');
   static const Code UNAUTHENTICATED = const Code._(16, 'UNAUTHENTICATED');
   static const Code RESOURCE_EXHAUSTED = const Code._(8, 'RESOURCE_EXHAUSTED');
-  static const Code FAILED_PRECONDITION = const Code._(9, 'FAILED_PRECONDITION');
+  static const Code FAILED_PRECONDITION =
+      const Code._(9, 'FAILED_PRECONDITION');
   static const Code ABORTED = const Code._(10, 'ABORTED');
   static const Code OUT_OF_RANGE = const Code._(11, 'OUT_OF_RANGE');
   static const Code UNIMPLEMENTED = const Code._(12, 'UNIMPLEMENTED');
@@ -26,7 +27,7 @@ class Code extends ProtobufEnum {
   static const Code UNAVAILABLE = const Code._(14, 'UNAVAILABLE');
   static const Code DATA_LOSS = const Code._(15, 'DATA_LOSS');
 
-  static const List<Code> values = const <Code> [
+  static const List<Code> values = const <Code>[
     OK,
     CANCELLED,
     UNKNOWN,
@@ -54,4 +55,3 @@ class Code extends ProtobufEnum {
 
   const Code._(int v, String n) : super(v, n);
 }
-

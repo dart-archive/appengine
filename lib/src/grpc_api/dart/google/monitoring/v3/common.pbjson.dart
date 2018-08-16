@@ -28,11 +28,47 @@ const ServiceTier$json = const {
 const TypedValue$json = const {
   '1': 'TypedValue',
   '2': const [
-    const {'1': 'bool_value', '3': 1, '4': 1, '5': 8, '9': 0, '10': 'boolValue'},
-    const {'1': 'int64_value', '3': 2, '4': 1, '5': 3, '9': 0, '10': 'int64Value'},
-    const {'1': 'double_value', '3': 3, '4': 1, '5': 1, '9': 0, '10': 'doubleValue'},
-    const {'1': 'string_value', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'stringValue'},
-    const {'1': 'distribution_value', '3': 5, '4': 1, '5': 11, '6': '.google.api.Distribution', '9': 0, '10': 'distributionValue'},
+    const {
+      '1': 'bool_value',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '9': 0,
+      '10': 'boolValue'
+    },
+    const {
+      '1': 'int64_value',
+      '3': 2,
+      '4': 1,
+      '5': 3,
+      '9': 0,
+      '10': 'int64Value'
+    },
+    const {
+      '1': 'double_value',
+      '3': 3,
+      '4': 1,
+      '5': 1,
+      '9': 0,
+      '10': 'doubleValue'
+    },
+    const {
+      '1': 'string_value',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'stringValue'
+    },
+    const {
+      '1': 'distribution_value',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.Distribution',
+      '9': 0,
+      '10': 'distributionValue'
+    },
   ],
   '8': const [
     const {'1': 'value'},
@@ -42,18 +78,59 @@ const TypedValue$json = const {
 const TimeInterval$json = const {
   '1': 'TimeInterval',
   '2': const [
-    const {'1': 'end_time', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'endTime'},
-    const {'1': 'start_time', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'startTime'},
+    const {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    const {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
   ],
 };
 
 const Aggregation$json = const {
   '1': 'Aggregation',
   '2': const [
-    const {'1': 'alignment_period', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'alignmentPeriod'},
-    const {'1': 'per_series_aligner', '3': 2, '4': 1, '5': 14, '6': '.google.monitoring.v3.Aggregation.Aligner', '10': 'perSeriesAligner'},
-    const {'1': 'cross_series_reducer', '3': 4, '4': 1, '5': 14, '6': '.google.monitoring.v3.Aggregation.Reducer', '10': 'crossSeriesReducer'},
-    const {'1': 'group_by_fields', '3': 5, '4': 3, '5': 9, '10': 'groupByFields'},
+    const {
+      '1': 'alignment_period',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'alignmentPeriod'
+    },
+    const {
+      '1': 'per_series_aligner',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.monitoring.v3.Aggregation.Aligner',
+      '10': 'perSeriesAligner'
+    },
+    const {
+      '1': 'cross_series_reducer',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.monitoring.v3.Aggregation.Reducer',
+      '10': 'crossSeriesReducer'
+    },
+    const {
+      '1': 'group_by_fields',
+      '3': 5,
+      '4': 3,
+      '5': 9,
+      '10': 'groupByFields'
+    },
   ],
   '4': const [Aggregation_Aligner$json, Aggregation_Reducer$json],
 };
@@ -102,4 +179,3 @@ const Aggregation_Reducer$json = const {
     const {'1': 'REDUCE_PERCENTILE_05', '2': 12},
   ],
 };
-

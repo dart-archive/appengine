@@ -18,20 +18,16 @@ const isAssetError = const TypeMatcher<AssetError>();
 // HTTP client which requests /test and completes with the binary
 // body.
 Future<List<int>> getAsset(int port, String path,
-                           [int expectedStatusCode = 200]) {
+    [int expectedStatusCode = 200]) {
   var client = new HttpClient();
-  return client.get('127.0.0.1', port, path)
-      .then((request) {
-        return request.close();
-      })
-      .then((response) {
-        expect(response.statusCode, expectedStatusCode);
-        return response
-            .fold<List<int>>([], (buf, data) => buf..addAll(data));
-      })
-      .whenComplete(() {
-        client.close();
-      });
+  return client.get('127.0.0.1', port, path).then((request) {
+    return request.close();
+  }).then((response) {
+    expect(response.statusCode, expectedStatusCode);
+    return response.fold<List<int>>([], (buf, data) => buf..addAll(data));
+  }).whenComplete(() {
+    client.close();
+  });
 }
 
 // Updates the current directory to make sure it's 'test'.
@@ -48,8 +44,8 @@ void updateCurrentDirectory() {
 
   if (!FileSystemEntity.isDirectorySync(AssetsManager.root)) {
     throw new StateError('The directory "${AssetsManager.root}" does not '
-    'exist in the current directory – "${Directory.current.path}". '
-    'Try running from the "test" directory.');
+        'exist in the current directory – "${Directory.current.path}". '
+        'Try running from the "test" directory.');
   }
 }
 
@@ -58,23 +54,19 @@ void main() {
     var uri = Uri.parse("http://localhost:9090");
     var context;
 
-    context = new AppengineContext(
-        true,  null,  null,  null,  null, null, uri);
+    context = new AppengineContext(true, null, null, null, null, null, uri);
     expect(context.isDevelopmentEnvironment, isTrue);
     expect(context.assets.usePubServe, isTrue);
 
-    context = new AppengineContext(
-        false,  null,  null,  null,  null, null, uri);
+    context = new AppengineContext(false, null, null, null, null, null, uri);
     expect(context.isDevelopmentEnvironment, isFalse);
     expect(context.assets.usePubServe, isFalse);
 
-    context = new AppengineContext(
-        true,  null,  null,  null,  null, null, null);
+    context = new AppengineContext(true, null, null, null, null, null, null);
     expect(context.isDevelopmentEnvironment, isTrue);
     expect(context.assets.usePubServe, isFalse);
 
-    context = new AppengineContext(
-        false,  null,  null,  null,  null, null, null);
+    context = new AppengineContext(false, null, null, null, null, null, null);
     expect(context.isDevelopmentEnvironment, isFalse);
     expect(context.assets.usePubServe, isFalse);
   });
@@ -110,7 +102,7 @@ void main() {
       assert(appServer == null);
       return HttpServer.bind('127.0.0.1', 0).then((server) {
         var appengineContext = new AppengineContext(
-            true,  null,  null,  null,  null, null, pubServeUri);
+            true, null, null, null, null, null, pubServeUri);
         appServer = server;
         appServerPort = server.port;
         server.listen((request) {
@@ -144,8 +136,8 @@ void main() {
       }
 
       return startAppServer(requestHandler).then((_) {
-        return getAsset(
-            appServerPort, '/test', HttpStatus.notFound).then((body) {
+        return getAsset(appServerPort, '/test', HttpStatus.notFound)
+            .then((body) {
           expect(body, isEmpty);
         });
       });
@@ -158,14 +150,14 @@ void main() {
         }).catchError((e) {
           expect(e, isAssetError);
           request.response
-              ..statusCode = HttpStatus.notFound
-              ..close();
+            ..statusCode = HttpStatus.notFound
+            ..close();
         });
       }
 
       return startAppServer(requestHandler).then((_) {
-        return getAsset(
-            appServerPort, '/test', HttpStatus.notFound).then((body) {
+        return getAsset(appServerPort, '/test', HttpStatus.notFound)
+            .then((body) {
           expect(body, isEmpty);
         });
       });
@@ -211,7 +203,6 @@ void main() {
   });
 
   group('no pub serve proxy', () {
-
     Directory startingCurrentDir = Directory.current;
     var appServer;
     var appServerPort;
@@ -221,8 +212,8 @@ void main() {
     Future startAppServer(mockRequestHandler) {
       assert(appServer == null);
       return HttpServer.bind('127.0.0.1', 0).then((server) {
-        var appengineContext = new AppengineContext(
-            true,  null,  null,  null,  null, null, null);
+        var appengineContext =
+            new AppengineContext(true, null, null, null, null, null, null);
         appServer = server;
         appServerPort = server.port;
         server.listen((request) {
@@ -254,8 +245,8 @@ void main() {
       }
 
       return startAppServer(requestHandler).then((_) {
-        return getAsset(
-            appServerPort, '/test', HttpStatus.notFound).then((body) {
+        return getAsset(appServerPort, '/test', HttpStatus.notFound)
+            .then((body) {
           expect(body, isEmpty);
         });
       });
@@ -268,14 +259,14 @@ void main() {
         }).catchError((e) {
           expect(e, isAssetError);
           request.response
-              ..statusCode = HttpStatus.notFound
-              ..close();
+            ..statusCode = HttpStatus.notFound
+            ..close();
         });
       }
 
       return startAppServer(requestHandler).then((_) {
-        return getAsset(
-            appServerPort, '/test', HttpStatus.notFound).then((body) {
+        return getAsset(appServerPort, '/test', HttpStatus.notFound)
+            .then((body) {
           expect(body, isEmpty);
         });
       });

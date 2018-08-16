@@ -9,9 +9,10 @@ import 'package:protobuf/protobuf.dart';
 
 class PhotoView extends ProtobufEnum {
   static const PhotoView BASIC = const PhotoView._(0, 'BASIC');
-  static const PhotoView INCLUDE_DOWNLOAD_URL = const PhotoView._(1, 'INCLUDE_DOWNLOAD_URL');
+  static const PhotoView INCLUDE_DOWNLOAD_URL =
+      const PhotoView._(1, 'INCLUDE_DOWNLOAD_URL');
 
-  static const List<PhotoView> values = const <PhotoView> [
+  static const List<PhotoView> values = const <PhotoView>[
     BASIC,
     INCLUDE_DOWNLOAD_URL,
   ];
@@ -24,4 +25,3 @@ class PhotoView extends ProtobufEnum {
 
   const PhotoView._(int v, String n) : super(v, n);
 }
-

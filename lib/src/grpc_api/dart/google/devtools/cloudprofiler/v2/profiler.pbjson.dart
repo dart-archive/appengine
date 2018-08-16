@@ -20,16 +20,44 @@ const ProfileType$json = const {
 const CreateProfileRequest$json = const {
   '1': 'CreateProfileRequest',
   '2': const [
-    const {'1': 'deployment', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.cloudprofiler.v2.Deployment', '10': 'deployment'},
-    const {'1': 'profile_type', '3': 2, '4': 3, '5': 14, '6': '.google.devtools.cloudprofiler.v2.ProfileType', '10': 'profileType'},
-    const {'1': 'profile', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.cloudprofiler.v2.Profile', '10': 'profile'},
+    const {
+      '1': 'deployment',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudprofiler.v2.Deployment',
+      '10': 'deployment'
+    },
+    const {
+      '1': 'profile_type',
+      '3': 2,
+      '4': 3,
+      '5': 14,
+      '6': '.google.devtools.cloudprofiler.v2.ProfileType',
+      '10': 'profileType'
+    },
+    const {
+      '1': 'profile',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudprofiler.v2.Profile',
+      '10': 'profile'
+    },
   ],
 };
 
 const UpdateProfileRequest$json = const {
   '1': 'UpdateProfileRequest',
   '2': const [
-    const {'1': 'profile', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.cloudprofiler.v2.Profile', '10': 'profile'},
+    const {
+      '1': 'profile',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudprofiler.v2.Profile',
+      '10': 'profile'
+    },
   ],
 };
 
@@ -37,11 +65,39 @@ const Profile$json = const {
   '1': 'Profile',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'profile_type', '3': 2, '4': 1, '5': 14, '6': '.google.devtools.cloudprofiler.v2.ProfileType', '10': 'profileType'},
-    const {'1': 'deployment', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.cloudprofiler.v2.Deployment', '10': 'deployment'},
-    const {'1': 'duration', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'duration'},
+    const {
+      '1': 'profile_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.devtools.cloudprofiler.v2.ProfileType',
+      '10': 'profileType'
+    },
+    const {
+      '1': 'deployment',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudprofiler.v2.Deployment',
+      '10': 'deployment'
+    },
+    const {
+      '1': 'duration',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'duration'
+    },
     const {'1': 'profile_bytes', '3': 5, '4': 1, '5': 12, '10': 'profileBytes'},
-    const {'1': 'labels', '3': 6, '4': 3, '5': 11, '6': '.google.devtools.cloudprofiler.v2.Profile.LabelsEntry', '10': 'labels'},
+    const {
+      '1': 'labels',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudprofiler.v2.Profile.LabelsEntry',
+      '10': 'labels'
+    },
   ],
   '3': const [Profile_LabelsEntry$json],
 };
@@ -60,7 +116,14 @@ const Deployment$json = const {
   '2': const [
     const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
     const {'1': 'target', '3': 2, '4': 1, '5': 9, '10': 'target'},
-    const {'1': 'labels', '3': 3, '4': 3, '5': 11, '6': '.google.devtools.cloudprofiler.v2.Deployment.LabelsEntry', '10': 'labels'},
+    const {
+      '1': 'labels',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudprofiler.v2.Deployment.LabelsEntry',
+      '10': 'labels'
+    },
   ],
   '3': const [Deployment_LabelsEntry$json],
 };
@@ -77,18 +140,31 @@ const Deployment_LabelsEntry$json = const {
 const ProfilerService$json = const {
   '1': 'ProfilerService',
   '2': const [
-    const {'1': 'CreateProfile', '2': '.google.devtools.cloudprofiler.v2.CreateProfileRequest', '3': '.google.devtools.cloudprofiler.v2.Profile', '4': const {}},
-    const {'1': 'UpdateProfile', '2': '.google.devtools.cloudprofiler.v2.UpdateProfileRequest', '3': '.google.devtools.cloudprofiler.v2.Profile', '4': const {}},
+    const {
+      '1': 'CreateProfile',
+      '2': '.google.devtools.cloudprofiler.v2.CreateProfileRequest',
+      '3': '.google.devtools.cloudprofiler.v2.Profile',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateProfile',
+      '2': '.google.devtools.cloudprofiler.v2.UpdateProfileRequest',
+      '3': '.google.devtools.cloudprofiler.v2.Profile',
+      '4': const {}
+    },
   ],
 };
 
 const ProfilerService$messageJson = const {
-  '.google.devtools.cloudprofiler.v2.CreateProfileRequest': CreateProfileRequest$json,
+  '.google.devtools.cloudprofiler.v2.CreateProfileRequest':
+      CreateProfileRequest$json,
   '.google.devtools.cloudprofiler.v2.Deployment': Deployment$json,
-  '.google.devtools.cloudprofiler.v2.Deployment.LabelsEntry': Deployment_LabelsEntry$json,
+  '.google.devtools.cloudprofiler.v2.Deployment.LabelsEntry':
+      Deployment_LabelsEntry$json,
   '.google.devtools.cloudprofiler.v2.Profile': Profile$json,
   '.google.protobuf.Duration': $google$protobuf.Duration$json,
-  '.google.devtools.cloudprofiler.v2.Profile.LabelsEntry': Profile_LabelsEntry$json,
-  '.google.devtools.cloudprofiler.v2.UpdateProfileRequest': UpdateProfileRequest$json,
+  '.google.devtools.cloudprofiler.v2.Profile.LabelsEntry':
+      Profile_LabelsEntry$json,
+  '.google.devtools.cloudprofiler.v2.UpdateProfileRequest':
+      UpdateProfileRequest$json,
 };
-

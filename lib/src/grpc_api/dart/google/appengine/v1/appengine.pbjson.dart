@@ -50,8 +50,21 @@ const ListServicesRequest$json = const {
 const ListServicesResponse$json = const {
   '1': 'ListServicesResponse',
   '2': const [
-    const {'1': 'services', '3': 1, '4': 3, '5': 11, '6': '.google.appengine.v1.Service', '10': 'services'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'services',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.v1.Service',
+      '10': 'services'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -66,9 +79,29 @@ const UpdateServiceRequest$json = const {
   '1': 'UpdateServiceRequest',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'service', '3': 2, '4': 1, '5': 11, '6': '.google.appengine.v1.Service', '10': 'service'},
-    const {'1': 'update_mask', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'migrate_traffic', '3': 4, '4': 1, '5': 8, '10': 'migrateTraffic'},
+    const {
+      '1': 'service',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.Service',
+      '10': 'service'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    const {
+      '1': 'migrate_traffic',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '10': 'migrateTraffic'
+    },
   ],
 };
 
@@ -83,7 +116,14 @@ const ListVersionsRequest$json = const {
   '1': 'ListVersionsRequest',
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'view', '3': 2, '4': 1, '5': 14, '6': '.google.appengine.v1.VersionView', '10': 'view'},
+    const {
+      '1': 'view',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.VersionView',
+      '10': 'view'
+    },
     const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -92,8 +132,21 @@ const ListVersionsRequest$json = const {
 const ListVersionsResponse$json = const {
   '1': 'ListVersionsResponse',
   '2': const [
-    const {'1': 'versions', '3': 1, '4': 3, '5': 11, '6': '.google.appengine.v1.Version', '10': 'versions'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'versions',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.v1.Version',
+      '10': 'versions'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -101,7 +154,14 @@ const GetVersionRequest$json = const {
   '1': 'GetVersionRequest',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'view', '3': 2, '4': 1, '5': 14, '6': '.google.appengine.v1.VersionView', '10': 'view'},
+    const {
+      '1': 'view',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.VersionView',
+      '10': 'view'
+    },
   ],
 };
 
@@ -109,7 +169,14 @@ const CreateVersionRequest$json = const {
   '1': 'CreateVersionRequest',
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'version', '3': 2, '4': 1, '5': 11, '6': '.google.appengine.v1.Version', '10': 'version'},
+    const {
+      '1': 'version',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.Version',
+      '10': 'version'
+    },
   ],
 };
 
@@ -117,8 +184,22 @@ const UpdateVersionRequest$json = const {
   '1': 'UpdateVersionRequest',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'version', '3': 2, '4': 1, '5': 11, '6': '.google.appengine.v1.Version', '10': 'version'},
-    const {'1': 'update_mask', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+    const {
+      '1': 'version',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.Version',
+      '10': 'version'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
@@ -141,8 +222,21 @@ const ListInstancesRequest$json = const {
 const ListInstancesResponse$json = const {
   '1': 'ListInstancesResponse',
   '2': const [
-    const {'1': 'instances', '3': 1, '4': 3, '5': 11, '6': '.google.appengine.v1.Instance', '10': 'instances'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'instances',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.v1.Instance',
+      '10': 'instances'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -170,10 +264,30 @@ const DebugInstanceRequest$json = const {
 const Instances$json = const {
   '1': 'Instances',
   '2': const [
-    const {'1': 'ListInstances', '2': '.google.appengine.v1.ListInstancesRequest', '3': '.google.appengine.v1.ListInstancesResponse', '4': const {}},
-    const {'1': 'GetInstance', '2': '.google.appengine.v1.GetInstanceRequest', '3': '.google.appengine.v1.Instance', '4': const {}},
-    const {'1': 'DeleteInstance', '2': '.google.appengine.v1.DeleteInstanceRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'DebugInstance', '2': '.google.appengine.v1.DebugInstanceRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'ListInstances',
+      '2': '.google.appengine.v1.ListInstancesRequest',
+      '3': '.google.appengine.v1.ListInstancesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetInstance',
+      '2': '.google.appengine.v1.GetInstanceRequest',
+      '3': '.google.appengine.v1.Instance',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteInstance',
+      '2': '.google.appengine.v1.DeleteInstanceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'DebugInstance',
+      '2': '.google.appengine.v1.DebugInstanceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
@@ -193,11 +307,36 @@ const Instances$messageJson = const {
 const Versions$json = const {
   '1': 'Versions',
   '2': const [
-    const {'1': 'ListVersions', '2': '.google.appengine.v1.ListVersionsRequest', '3': '.google.appengine.v1.ListVersionsResponse', '4': const {}},
-    const {'1': 'GetVersion', '2': '.google.appengine.v1.GetVersionRequest', '3': '.google.appengine.v1.Version', '4': const {}},
-    const {'1': 'CreateVersion', '2': '.google.appengine.v1.CreateVersionRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'UpdateVersion', '2': '.google.appengine.v1.UpdateVersionRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'DeleteVersion', '2': '.google.appengine.v1.DeleteVersionRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'ListVersions',
+      '2': '.google.appengine.v1.ListVersionsRequest',
+      '3': '.google.appengine.v1.ListVersionsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetVersion',
+      '2': '.google.appengine.v1.GetVersionRequest',
+      '3': '.google.appengine.v1.Version',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateVersion',
+      '2': '.google.appengine.v1.CreateVersionRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateVersion',
+      '2': '.google.appengine.v1.UpdateVersionRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteVersion',
+      '2': '.google.appengine.v1.DeleteVersionRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
@@ -215,17 +354,20 @@ const Versions$messageJson = const {
   '.google.appengine.v1.ManualScaling': ManualScaling$json,
   '.google.appengine.v1.Network': Network$json,
   '.google.appengine.v1.Resources': Resources$json,
-  '.google.appengine.v1.Version.BetaSettingsEntry': Version_BetaSettingsEntry$json,
+  '.google.appengine.v1.Version.BetaSettingsEntry':
+      Version_BetaSettingsEntry$json,
   '.google.protobuf.Timestamp': $google$protobuf.Timestamp$json,
   '.google.appengine.v1.UrlMap': UrlMap$json,
   '.google.appengine.v1.StaticFilesHandler': StaticFilesHandler$json,
-  '.google.appengine.v1.StaticFilesHandler.HttpHeadersEntry': StaticFilesHandler_HttpHeadersEntry$json,
+  '.google.appengine.v1.StaticFilesHandler.HttpHeadersEntry':
+      StaticFilesHandler_HttpHeadersEntry$json,
   '.google.appengine.v1.ScriptHandler': ScriptHandler$json,
   '.google.appengine.v1.ApiEndpointHandler': ApiEndpointHandler$json,
   '.google.appengine.v1.ErrorHandler': ErrorHandler$json,
   '.google.appengine.v1.Library': Library$json,
   '.google.appengine.v1.ApiConfigHandler': ApiConfigHandler$json,
-  '.google.appengine.v1.Version.EnvVariablesEntry': Version_EnvVariablesEntry$json,
+  '.google.appengine.v1.Version.EnvVariablesEntry':
+      Version_EnvVariablesEntry$json,
   '.google.appengine.v1.HealthCheck': HealthCheck$json,
   '.google.appengine.v1.Deployment': Deployment$json,
   '.google.appengine.v1.Deployment.FilesEntry': Deployment_FilesEntry$json,
@@ -245,10 +387,30 @@ const Versions$messageJson = const {
 const Services$json = const {
   '1': 'Services',
   '2': const [
-    const {'1': 'ListServices', '2': '.google.appengine.v1.ListServicesRequest', '3': '.google.appengine.v1.ListServicesResponse', '4': const {}},
-    const {'1': 'GetService', '2': '.google.appengine.v1.GetServiceRequest', '3': '.google.appengine.v1.Service', '4': const {}},
-    const {'1': 'UpdateService', '2': '.google.appengine.v1.UpdateServiceRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'DeleteService', '2': '.google.appengine.v1.DeleteServiceRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'ListServices',
+      '2': '.google.appengine.v1.ListServicesRequest',
+      '3': '.google.appengine.v1.ListServicesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetService',
+      '2': '.google.appengine.v1.GetServiceRequest',
+      '3': '.google.appengine.v1.Service',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateService',
+      '2': '.google.appengine.v1.UpdateServiceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteService',
+      '2': '.google.appengine.v1.DeleteServiceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
@@ -257,7 +419,8 @@ const Services$messageJson = const {
   '.google.appengine.v1.ListServicesResponse': ListServicesResponse$json,
   '.google.appengine.v1.Service': Service$json,
   '.google.appengine.v1.TrafficSplit': TrafficSplit$json,
-  '.google.appengine.v1.TrafficSplit.AllocationsEntry': TrafficSplit_AllocationsEntry$json,
+  '.google.appengine.v1.TrafficSplit.AllocationsEntry':
+      TrafficSplit_AllocationsEntry$json,
   '.google.appengine.v1.GetServiceRequest': GetServiceRequest$json,
   '.google.appengine.v1.UpdateServiceRequest': UpdateServiceRequest$json,
   '.google.protobuf.FieldMask': $google$protobuf.FieldMask$json,
@@ -270,8 +433,18 @@ const Services$messageJson = const {
 const Applications$json = const {
   '1': 'Applications',
   '2': const [
-    const {'1': 'GetApplication', '2': '.google.appengine.v1.GetApplicationRequest', '3': '.google.appengine.v1.Application', '4': const {}},
-    const {'1': 'RepairApplication', '2': '.google.appengine.v1.RepairApplicationRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'GetApplication',
+      '2': '.google.appengine.v1.GetApplicationRequest',
+      '3': '.google.appengine.v1.Application',
+      '4': const {}
+    },
+    const {
+      '1': 'RepairApplication',
+      '2': '.google.appengine.v1.RepairApplicationRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
@@ -280,9 +453,9 @@ const Applications$messageJson = const {
   '.google.appengine.v1.Application': Application$json,
   '.google.appengine.v1.UrlDispatchRule': UrlDispatchRule$json,
   '.google.protobuf.Duration': $google$protobuf.Duration$json,
-  '.google.appengine.v1.RepairApplicationRequest': RepairApplicationRequest$json,
+  '.google.appengine.v1.RepairApplicationRequest':
+      RepairApplicationRequest$json,
   '.google.longrunning.Operation': $google$longrunning.Operation$json,
   '.google.protobuf.Any': $google$protobuf.Any$json,
   '.google.rpc.Status': $google$rpc.Status$json,
 };
-

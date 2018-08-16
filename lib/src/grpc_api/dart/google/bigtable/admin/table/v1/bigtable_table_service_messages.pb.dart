@@ -16,92 +16,126 @@ class CreateTableRequest extends GeneratedMessage {
     ..aOS(2, 'tableId')
     ..a<Table>(3, 'table', PbFieldType.OM, Table.getDefault, Table.create)
     ..pPS(4, 'initialSplitKeys')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   CreateTableRequest() : super();
-  CreateTableRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CreateTableRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  CreateTableRequest clone() => new CreateTableRequest()..mergeFromMessage(this);
+  CreateTableRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CreateTableRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CreateTableRequest clone() =>
+      new CreateTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateTableRequest create() => new CreateTableRequest();
-  static PbList<CreateTableRequest> createRepeated() => new PbList<CreateTableRequest>();
+  static PbList<CreateTableRequest> createRepeated() =>
+      new PbList<CreateTableRequest>();
   static CreateTableRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCreateTableRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyCreateTableRequest();
     return _defaultInstance;
   }
+
   static CreateTableRequest _defaultInstance;
   static void $checkItem(CreateTableRequest v) {
     if (v is! CreateTableRequest) checkItemFailed(v, 'CreateTableRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   String get tableId => $_getS(1, '');
-  set tableId(String v) { $_setString(1, v); }
+  set tableId(String v) {
+    $_setString(1, v);
+  }
+
   bool hasTableId() => $_has(1);
   void clearTableId() => clearField(2);
 
   Table get table => $_getN(2);
-  set table(Table v) { setField(3, v); }
+  set table(Table v) {
+    setField(3, v);
+  }
+
   bool hasTable() => $_has(2);
   void clearTable() => clearField(3);
 
   List<String> get initialSplitKeys => $_getList(3);
 }
 
-class _ReadonlyCreateTableRequest extends CreateTableRequest with ReadonlyMessageMixin {}
+class _ReadonlyCreateTableRequest extends CreateTableRequest
+    with ReadonlyMessageMixin {}
 
 class ListTablesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTablesRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListTablesRequest() : super();
-  ListTablesRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListTablesRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListTablesRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListTablesRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   ListTablesRequest clone() => new ListTablesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListTablesRequest create() => new ListTablesRequest();
-  static PbList<ListTablesRequest> createRepeated() => new PbList<ListTablesRequest>();
+  static PbList<ListTablesRequest> createRepeated() =>
+      new PbList<ListTablesRequest>();
   static ListTablesRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyListTablesRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyListTablesRequest();
     return _defaultInstance;
   }
+
   static ListTablesRequest _defaultInstance;
   static void $checkItem(ListTablesRequest v) {
     if (v is! ListTablesRequest) checkItemFailed(v, 'ListTablesRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyListTablesRequest extends ListTablesRequest with ReadonlyMessageMixin {}
+class _ReadonlyListTablesRequest extends ListTablesRequest
+    with ReadonlyMessageMixin {}
 
 class ListTablesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListTablesResponse')
     ..pp<Table>(1, 'tables', PbFieldType.PM, Table.$checkItem, Table.create)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListTablesResponse() : super();
-  ListTablesResponse.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListTablesResponse.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListTablesResponse clone() => new ListTablesResponse()..mergeFromMessage(this);
+  ListTablesResponse.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListTablesResponse.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListTablesResponse clone() =>
+      new ListTablesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListTablesResponse create() => new ListTablesResponse();
-  static PbList<ListTablesResponse> createRepeated() => new PbList<ListTablesResponse>();
+  static PbList<ListTablesResponse> createRepeated() =>
+      new PbList<ListTablesResponse>();
   static ListTablesResponse getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyListTablesResponse();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyListTablesResponse();
     return _defaultInstance;
   }
+
   static ListTablesResponse _defaultInstance;
   static void $checkItem(ListTablesResponse v) {
     if (v is! ListTablesResponse) checkItemFailed(v, 'ListTablesResponse');
@@ -110,215 +144,299 @@ class ListTablesResponse extends GeneratedMessage {
   List<Table> get tables => $_getList(0);
 }
 
-class _ReadonlyListTablesResponse extends ListTablesResponse with ReadonlyMessageMixin {}
+class _ReadonlyListTablesResponse extends ListTablesResponse
+    with ReadonlyMessageMixin {}
 
 class GetTableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetTableRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   GetTableRequest() : super();
-  GetTableRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GetTableRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetTableRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GetTableRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   GetTableRequest clone() => new GetTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetTableRequest create() => new GetTableRequest();
-  static PbList<GetTableRequest> createRepeated() => new PbList<GetTableRequest>();
+  static PbList<GetTableRequest> createRepeated() =>
+      new PbList<GetTableRequest>();
   static GetTableRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGetTableRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyGetTableRequest();
     return _defaultInstance;
   }
+
   static GetTableRequest _defaultInstance;
   static void $checkItem(GetTableRequest v) {
     if (v is! GetTableRequest) checkItemFailed(v, 'GetTableRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetTableRequest extends GetTableRequest with ReadonlyMessageMixin {}
+class _ReadonlyGetTableRequest extends GetTableRequest
+    with ReadonlyMessageMixin {}
 
 class DeleteTableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteTableRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DeleteTableRequest() : super();
-  DeleteTableRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DeleteTableRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  DeleteTableRequest clone() => new DeleteTableRequest()..mergeFromMessage(this);
+  DeleteTableRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DeleteTableRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DeleteTableRequest clone() =>
+      new DeleteTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteTableRequest create() => new DeleteTableRequest();
-  static PbList<DeleteTableRequest> createRepeated() => new PbList<DeleteTableRequest>();
+  static PbList<DeleteTableRequest> createRepeated() =>
+      new PbList<DeleteTableRequest>();
   static DeleteTableRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeleteTableRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDeleteTableRequest();
     return _defaultInstance;
   }
+
   static DeleteTableRequest _defaultInstance;
   static void $checkItem(DeleteTableRequest v) {
     if (v is! DeleteTableRequest) checkItemFailed(v, 'DeleteTableRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteTableRequest extends DeleteTableRequest with ReadonlyMessageMixin {}
+class _ReadonlyDeleteTableRequest extends DeleteTableRequest
+    with ReadonlyMessageMixin {}
 
 class RenameTableRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RenameTableRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'newId')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   RenameTableRequest() : super();
-  RenameTableRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  RenameTableRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  RenameTableRequest clone() => new RenameTableRequest()..mergeFromMessage(this);
+  RenameTableRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  RenameTableRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  RenameTableRequest clone() =>
+      new RenameTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static RenameTableRequest create() => new RenameTableRequest();
-  static PbList<RenameTableRequest> createRepeated() => new PbList<RenameTableRequest>();
+  static PbList<RenameTableRequest> createRepeated() =>
+      new PbList<RenameTableRequest>();
   static RenameTableRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRenameTableRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyRenameTableRequest();
     return _defaultInstance;
   }
+
   static RenameTableRequest _defaultInstance;
   static void $checkItem(RenameTableRequest v) {
     if (v is! RenameTableRequest) checkItemFailed(v, 'RenameTableRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   String get newId => $_getS(1, '');
-  set newId(String v) { $_setString(1, v); }
+  set newId(String v) {
+    $_setString(1, v);
+  }
+
   bool hasNewId() => $_has(1);
   void clearNewId() => clearField(2);
 }
 
-class _ReadonlyRenameTableRequest extends RenameTableRequest with ReadonlyMessageMixin {}
+class _ReadonlyRenameTableRequest extends RenameTableRequest
+    with ReadonlyMessageMixin {}
 
 class CreateColumnFamilyRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateColumnFamilyRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'columnFamilyId')
-    ..a<ColumnFamily>(3, 'columnFamily', PbFieldType.OM, ColumnFamily.getDefault, ColumnFamily.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<ColumnFamily>(3, 'columnFamily', PbFieldType.OM,
+        ColumnFamily.getDefault, ColumnFamily.create)
+    ..hasRequiredFields = false;
 
   CreateColumnFamilyRequest() : super();
-  CreateColumnFamilyRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CreateColumnFamilyRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  CreateColumnFamilyRequest clone() => new CreateColumnFamilyRequest()..mergeFromMessage(this);
+  CreateColumnFamilyRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CreateColumnFamilyRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CreateColumnFamilyRequest clone() =>
+      new CreateColumnFamilyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateColumnFamilyRequest create() => new CreateColumnFamilyRequest();
-  static PbList<CreateColumnFamilyRequest> createRepeated() => new PbList<CreateColumnFamilyRequest>();
+  static PbList<CreateColumnFamilyRequest> createRepeated() =>
+      new PbList<CreateColumnFamilyRequest>();
   static CreateColumnFamilyRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCreateColumnFamilyRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyCreateColumnFamilyRequest();
     return _defaultInstance;
   }
+
   static CreateColumnFamilyRequest _defaultInstance;
   static void $checkItem(CreateColumnFamilyRequest v) {
-    if (v is! CreateColumnFamilyRequest) checkItemFailed(v, 'CreateColumnFamilyRequest');
+    if (v is! CreateColumnFamilyRequest)
+      checkItemFailed(v, 'CreateColumnFamilyRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   String get columnFamilyId => $_getS(1, '');
-  set columnFamilyId(String v) { $_setString(1, v); }
+  set columnFamilyId(String v) {
+    $_setString(1, v);
+  }
+
   bool hasColumnFamilyId() => $_has(1);
   void clearColumnFamilyId() => clearField(2);
 
   ColumnFamily get columnFamily => $_getN(2);
-  set columnFamily(ColumnFamily v) { setField(3, v); }
+  set columnFamily(ColumnFamily v) {
+    setField(3, v);
+  }
+
   bool hasColumnFamily() => $_has(2);
   void clearColumnFamily() => clearField(3);
 }
 
-class _ReadonlyCreateColumnFamilyRequest extends CreateColumnFamilyRequest with ReadonlyMessageMixin {}
+class _ReadonlyCreateColumnFamilyRequest extends CreateColumnFamilyRequest
+    with ReadonlyMessageMixin {}
 
 class DeleteColumnFamilyRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteColumnFamilyRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DeleteColumnFamilyRequest() : super();
-  DeleteColumnFamilyRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DeleteColumnFamilyRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  DeleteColumnFamilyRequest clone() => new DeleteColumnFamilyRequest()..mergeFromMessage(this);
+  DeleteColumnFamilyRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DeleteColumnFamilyRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DeleteColumnFamilyRequest clone() =>
+      new DeleteColumnFamilyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteColumnFamilyRequest create() => new DeleteColumnFamilyRequest();
-  static PbList<DeleteColumnFamilyRequest> createRepeated() => new PbList<DeleteColumnFamilyRequest>();
+  static PbList<DeleteColumnFamilyRequest> createRepeated() =>
+      new PbList<DeleteColumnFamilyRequest>();
   static DeleteColumnFamilyRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeleteColumnFamilyRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDeleteColumnFamilyRequest();
     return _defaultInstance;
   }
+
   static DeleteColumnFamilyRequest _defaultInstance;
   static void $checkItem(DeleteColumnFamilyRequest v) {
-    if (v is! DeleteColumnFamilyRequest) checkItemFailed(v, 'DeleteColumnFamilyRequest');
+    if (v is! DeleteColumnFamilyRequest)
+      checkItemFailed(v, 'DeleteColumnFamilyRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteColumnFamilyRequest extends DeleteColumnFamilyRequest with ReadonlyMessageMixin {}
+class _ReadonlyDeleteColumnFamilyRequest extends DeleteColumnFamilyRequest
+    with ReadonlyMessageMixin {}
 
 class BulkDeleteRowsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BulkDeleteRowsRequest')
     ..aOS(1, 'tableName')
     ..a<List<int>>(2, 'rowKeyPrefix', PbFieldType.OY)
     ..aOB(3, 'deleteAllDataFromTable')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   BulkDeleteRowsRequest() : super();
-  BulkDeleteRowsRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  BulkDeleteRowsRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  BulkDeleteRowsRequest clone() => new BulkDeleteRowsRequest()..mergeFromMessage(this);
+  BulkDeleteRowsRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  BulkDeleteRowsRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  BulkDeleteRowsRequest clone() =>
+      new BulkDeleteRowsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BulkDeleteRowsRequest create() => new BulkDeleteRowsRequest();
-  static PbList<BulkDeleteRowsRequest> createRepeated() => new PbList<BulkDeleteRowsRequest>();
+  static PbList<BulkDeleteRowsRequest> createRepeated() =>
+      new PbList<BulkDeleteRowsRequest>();
   static BulkDeleteRowsRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBulkDeleteRowsRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyBulkDeleteRowsRequest();
     return _defaultInstance;
   }
+
   static BulkDeleteRowsRequest _defaultInstance;
   static void $checkItem(BulkDeleteRowsRequest v) {
-    if (v is! BulkDeleteRowsRequest) checkItemFailed(v, 'BulkDeleteRowsRequest');
+    if (v is! BulkDeleteRowsRequest)
+      checkItemFailed(v, 'BulkDeleteRowsRequest');
   }
 
   String get tableName => $_getS(0, '');
-  set tableName(String v) { $_setString(0, v); }
+  set tableName(String v) {
+    $_setString(0, v);
+  }
+
   bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
   List<int> get rowKeyPrefix => $_getN(1);
-  set rowKeyPrefix(List<int> v) { $_setBytes(1, v); }
+  set rowKeyPrefix(List<int> v) {
+    $_setBytes(1, v);
+  }
+
   bool hasRowKeyPrefix() => $_has(1);
   void clearRowKeyPrefix() => clearField(2);
 
   bool get deleteAllDataFromTable => $_get(2, false);
-  set deleteAllDataFromTable(bool v) { $_setBool(2, v); }
+  set deleteAllDataFromTable(bool v) {
+    $_setBool(2, v);
+  }
+
   bool hasDeleteAllDataFromTable() => $_has(2);
   void clearDeleteAllDataFromTable() => clearField(3);
 }
 
-class _ReadonlyBulkDeleteRowsRequest extends BulkDeleteRowsRequest with ReadonlyMessageMixin {}
-
+class _ReadonlyBulkDeleteRowsRequest extends BulkDeleteRowsRequest
+    with ReadonlyMessageMixin {}

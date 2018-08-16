@@ -19,21 +19,28 @@ abstract class ErrorGroupServiceBase extends GeneratedService {
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'GetGroup': return new GetGroupRequest();
-      case 'UpdateGroup': return new UpdateGroupRequest();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'GetGroup':
+        return new GetGroupRequest();
+      case 'UpdateGroup':
+        return new UpdateGroupRequest();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'GetGroup': return this.getGroup(ctx, request);
-      case 'UpdateGroup': return this.updateGroup(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'GetGroup':
+        return this.getGroup(ctx, request);
+      case 'UpdateGroup':
+        return this.updateGroup(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => ErrorGroupService$json;
-  Map<String, Map<String, dynamic>> get $messageJson => ErrorGroupService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson =>
+      ErrorGroupService$messageJson;
 }
-

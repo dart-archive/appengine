@@ -8,11 +8,12 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class MqttState extends ProtobufEnum {
-  static const MqttState MQTT_STATE_UNSPECIFIED = const MqttState._(0, 'MQTT_STATE_UNSPECIFIED');
+  static const MqttState MQTT_STATE_UNSPECIFIED =
+      const MqttState._(0, 'MQTT_STATE_UNSPECIFIED');
   static const MqttState MQTT_ENABLED = const MqttState._(1, 'MQTT_ENABLED');
   static const MqttState MQTT_DISABLED = const MqttState._(2, 'MQTT_DISABLED');
 
-  static const List<MqttState> values = const <MqttState> [
+  static const List<MqttState> values = const <MqttState>[
     MQTT_STATE_UNSPECIFIED,
     MQTT_ENABLED,
     MQTT_DISABLED,
@@ -28,11 +29,12 @@ class MqttState extends ProtobufEnum {
 }
 
 class HttpState extends ProtobufEnum {
-  static const HttpState HTTP_STATE_UNSPECIFIED = const HttpState._(0, 'HTTP_STATE_UNSPECIFIED');
+  static const HttpState HTTP_STATE_UNSPECIFIED =
+      const HttpState._(0, 'HTTP_STATE_UNSPECIFIED');
   static const HttpState HTTP_ENABLED = const HttpState._(1, 'HTTP_ENABLED');
   static const HttpState HTTP_DISABLED = const HttpState._(2, 'HTTP_DISABLED');
 
-  static const List<HttpState> values = const <HttpState> [
+  static const List<HttpState> values = const <HttpState>[
     HTTP_STATE_UNSPECIFIED,
     HTTP_ENABLED,
     HTTP_DISABLED,
@@ -48,31 +50,42 @@ class HttpState extends ProtobufEnum {
 }
 
 class PublicKeyCertificateFormat extends ProtobufEnum {
-  static const PublicKeyCertificateFormat UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT = const PublicKeyCertificateFormat._(0, 'UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT');
-  static const PublicKeyCertificateFormat X509_CERTIFICATE_PEM = const PublicKeyCertificateFormat._(1, 'X509_CERTIFICATE_PEM');
+  static const PublicKeyCertificateFormat
+      UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT =
+      const PublicKeyCertificateFormat._(
+          0, 'UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT');
+  static const PublicKeyCertificateFormat X509_CERTIFICATE_PEM =
+      const PublicKeyCertificateFormat._(1, 'X509_CERTIFICATE_PEM');
 
-  static const List<PublicKeyCertificateFormat> values = const <PublicKeyCertificateFormat> [
+  static const List<PublicKeyCertificateFormat> values =
+      const <PublicKeyCertificateFormat>[
     UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT,
     X509_CERTIFICATE_PEM,
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PublicKeyCertificateFormat valueOf(int value) => _byValue[value] as PublicKeyCertificateFormat;
+  static PublicKeyCertificateFormat valueOf(int value) =>
+      _byValue[value] as PublicKeyCertificateFormat;
   static void $checkItem(PublicKeyCertificateFormat v) {
-    if (v is! PublicKeyCertificateFormat) checkItemFailed(v, 'PublicKeyCertificateFormat');
+    if (v is! PublicKeyCertificateFormat)
+      checkItemFailed(v, 'PublicKeyCertificateFormat');
   }
 
   const PublicKeyCertificateFormat._(int v, String n) : super(v, n);
 }
 
 class PublicKeyFormat extends ProtobufEnum {
-  static const PublicKeyFormat UNSPECIFIED_PUBLIC_KEY_FORMAT = const PublicKeyFormat._(0, 'UNSPECIFIED_PUBLIC_KEY_FORMAT');
+  static const PublicKeyFormat UNSPECIFIED_PUBLIC_KEY_FORMAT =
+      const PublicKeyFormat._(0, 'UNSPECIFIED_PUBLIC_KEY_FORMAT');
   static const PublicKeyFormat RSA_PEM = const PublicKeyFormat._(3, 'RSA_PEM');
-  static const PublicKeyFormat RSA_X509_PEM = const PublicKeyFormat._(1, 'RSA_X509_PEM');
-  static const PublicKeyFormat ES256_PEM = const PublicKeyFormat._(2, 'ES256_PEM');
-  static const PublicKeyFormat ES256_X509_PEM = const PublicKeyFormat._(4, 'ES256_X509_PEM');
+  static const PublicKeyFormat RSA_X509_PEM =
+      const PublicKeyFormat._(1, 'RSA_X509_PEM');
+  static const PublicKeyFormat ES256_PEM =
+      const PublicKeyFormat._(2, 'ES256_PEM');
+  static const PublicKeyFormat ES256_X509_PEM =
+      const PublicKeyFormat._(4, 'ES256_X509_PEM');
 
-  static const List<PublicKeyFormat> values = const <PublicKeyFormat> [
+  static const List<PublicKeyFormat> values = const <PublicKeyFormat>[
     UNSPECIFIED_PUBLIC_KEY_FORMAT,
     RSA_PEM,
     RSA_X509_PEM,
@@ -81,11 +94,11 @@ class PublicKeyFormat extends ProtobufEnum {
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PublicKeyFormat valueOf(int value) => _byValue[value] as PublicKeyFormat;
+  static PublicKeyFormat valueOf(int value) =>
+      _byValue[value] as PublicKeyFormat;
   static void $checkItem(PublicKeyFormat v) {
     if (v is! PublicKeyFormat) checkItemFailed(v, 'PublicKeyFormat');
   }
 
   const PublicKeyFormat._(int v, String n) : super(v, n);
 }
-

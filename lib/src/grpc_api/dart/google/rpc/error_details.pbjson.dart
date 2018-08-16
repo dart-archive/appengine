@@ -6,7 +6,14 @@
 const RetryInfo$json = const {
   '1': 'RetryInfo',
   '2': const [
-    const {'1': 'retry_delay', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'retryDelay'},
+    const {
+      '1': 'retry_delay',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'retryDelay'
+    },
   ],
 };
 
@@ -21,7 +28,14 @@ const DebugInfo$json = const {
 const QuotaFailure$json = const {
   '1': 'QuotaFailure',
   '2': const [
-    const {'1': 'violations', '3': 1, '4': 3, '5': 11, '6': '.google.rpc.QuotaFailure.Violation', '10': 'violations'},
+    const {
+      '1': 'violations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.QuotaFailure.Violation',
+      '10': 'violations'
+    },
   ],
   '3': const [QuotaFailure_Violation$json],
 };
@@ -37,7 +51,14 @@ const QuotaFailure_Violation$json = const {
 const PreconditionFailure$json = const {
   '1': 'PreconditionFailure',
   '2': const [
-    const {'1': 'violations', '3': 1, '4': 3, '5': 11, '6': '.google.rpc.PreconditionFailure.Violation', '10': 'violations'},
+    const {
+      '1': 'violations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.PreconditionFailure.Violation',
+      '10': 'violations'
+    },
   ],
   '3': const [PreconditionFailure_Violation$json],
 };
@@ -54,7 +75,14 @@ const PreconditionFailure_Violation$json = const {
 const BadRequest$json = const {
   '1': 'BadRequest',
   '2': const [
-    const {'1': 'field_violations', '3': 1, '4': 3, '5': 11, '6': '.google.rpc.BadRequest.FieldViolation', '10': 'fieldViolations'},
+    const {
+      '1': 'field_violations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.BadRequest.FieldViolation',
+      '10': 'fieldViolations'
+    },
   ],
   '3': const [BadRequest_FieldViolation$json],
 };
@@ -88,7 +116,14 @@ const ResourceInfo$json = const {
 const Help$json = const {
   '1': 'Help',
   '2': const [
-    const {'1': 'links', '3': 1, '4': 3, '5': 11, '6': '.google.rpc.Help.Link', '10': 'links'},
+    const {
+      '1': 'links',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.Help.Link',
+      '10': 'links'
+    },
   ],
   '3': const [Help_Link$json],
 };
@@ -108,4 +143,3 @@ const LocalizedMessage$json = const {
     const {'1': 'message', '3': 2, '4': 1, '5': 9, '10': 'message'},
   ],
 };
-

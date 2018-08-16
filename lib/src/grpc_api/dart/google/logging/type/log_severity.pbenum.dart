@@ -18,7 +18,7 @@ class LogSeverity extends ProtobufEnum {
   static const LogSeverity ALERT = const LogSeverity._(700, 'ALERT');
   static const LogSeverity EMERGENCY = const LogSeverity._(800, 'EMERGENCY');
 
-  static const List<LogSeverity> values = const <LogSeverity> [
+  static const List<LogSeverity> values = const <LogSeverity>[
     DEFAULT,
     DEBUG,
     INFO,
@@ -38,4 +38,3 @@ class LogSeverity extends ProtobufEnum {
 
   const LogSeverity._(int v, String n) : super(v, n);
 }
-

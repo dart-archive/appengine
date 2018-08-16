@@ -8,16 +8,24 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class AudioEncoding extends ProtobufEnum {
-  static const AudioEncoding AUDIO_ENCODING_UNSPECIFIED = const AudioEncoding._(0, 'AUDIO_ENCODING_UNSPECIFIED');
-  static const AudioEncoding AUDIO_ENCODING_LINEAR_16 = const AudioEncoding._(1, 'AUDIO_ENCODING_LINEAR_16');
-  static const AudioEncoding AUDIO_ENCODING_FLAC = const AudioEncoding._(2, 'AUDIO_ENCODING_FLAC');
-  static const AudioEncoding AUDIO_ENCODING_MULAW = const AudioEncoding._(3, 'AUDIO_ENCODING_MULAW');
-  static const AudioEncoding AUDIO_ENCODING_AMR = const AudioEncoding._(4, 'AUDIO_ENCODING_AMR');
-  static const AudioEncoding AUDIO_ENCODING_AMR_WB = const AudioEncoding._(5, 'AUDIO_ENCODING_AMR_WB');
-  static const AudioEncoding AUDIO_ENCODING_OGG_OPUS = const AudioEncoding._(6, 'AUDIO_ENCODING_OGG_OPUS');
-  static const AudioEncoding AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE = const AudioEncoding._(7, 'AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE');
+  static const AudioEncoding AUDIO_ENCODING_UNSPECIFIED =
+      const AudioEncoding._(0, 'AUDIO_ENCODING_UNSPECIFIED');
+  static const AudioEncoding AUDIO_ENCODING_LINEAR_16 =
+      const AudioEncoding._(1, 'AUDIO_ENCODING_LINEAR_16');
+  static const AudioEncoding AUDIO_ENCODING_FLAC =
+      const AudioEncoding._(2, 'AUDIO_ENCODING_FLAC');
+  static const AudioEncoding AUDIO_ENCODING_MULAW =
+      const AudioEncoding._(3, 'AUDIO_ENCODING_MULAW');
+  static const AudioEncoding AUDIO_ENCODING_AMR =
+      const AudioEncoding._(4, 'AUDIO_ENCODING_AMR');
+  static const AudioEncoding AUDIO_ENCODING_AMR_WB =
+      const AudioEncoding._(5, 'AUDIO_ENCODING_AMR_WB');
+  static const AudioEncoding AUDIO_ENCODING_OGG_OPUS =
+      const AudioEncoding._(6, 'AUDIO_ENCODING_OGG_OPUS');
+  static const AudioEncoding AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE =
+      const AudioEncoding._(7, 'AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE');
 
-  static const List<AudioEncoding> values = const <AudioEncoding> [
+  static const List<AudioEncoding> values = const <AudioEncoding>[
     AUDIO_ENCODING_UNSPECIFIED,
     AUDIO_ENCODING_LINEAR_16,
     AUDIO_ENCODING_FLAC,
@@ -38,22 +46,29 @@ class AudioEncoding extends ProtobufEnum {
 }
 
 class StreamingRecognitionResult_MessageType extends ProtobufEnum {
-  static const StreamingRecognitionResult_MessageType MESSAGE_TYPE_UNSPECIFIED = const StreamingRecognitionResult_MessageType._(0, 'MESSAGE_TYPE_UNSPECIFIED');
-  static const StreamingRecognitionResult_MessageType TRANSCRIPT = const StreamingRecognitionResult_MessageType._(1, 'TRANSCRIPT');
-  static const StreamingRecognitionResult_MessageType END_OF_SINGLE_UTTERANCE = const StreamingRecognitionResult_MessageType._(2, 'END_OF_SINGLE_UTTERANCE');
+  static const StreamingRecognitionResult_MessageType MESSAGE_TYPE_UNSPECIFIED =
+      const StreamingRecognitionResult_MessageType._(
+          0, 'MESSAGE_TYPE_UNSPECIFIED');
+  static const StreamingRecognitionResult_MessageType TRANSCRIPT =
+      const StreamingRecognitionResult_MessageType._(1, 'TRANSCRIPT');
+  static const StreamingRecognitionResult_MessageType END_OF_SINGLE_UTTERANCE =
+      const StreamingRecognitionResult_MessageType._(
+          2, 'END_OF_SINGLE_UTTERANCE');
 
-  static const List<StreamingRecognitionResult_MessageType> values = const <StreamingRecognitionResult_MessageType> [
+  static const List<StreamingRecognitionResult_MessageType> values =
+      const <StreamingRecognitionResult_MessageType>[
     MESSAGE_TYPE_UNSPECIFIED,
     TRANSCRIPT,
     END_OF_SINGLE_UTTERANCE,
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static StreamingRecognitionResult_MessageType valueOf(int value) => _byValue[value] as StreamingRecognitionResult_MessageType;
+  static StreamingRecognitionResult_MessageType valueOf(int value) =>
+      _byValue[value] as StreamingRecognitionResult_MessageType;
   static void $checkItem(StreamingRecognitionResult_MessageType v) {
-    if (v is! StreamingRecognitionResult_MessageType) checkItemFailed(v, 'StreamingRecognitionResult_MessageType');
+    if (v is! StreamingRecognitionResult_MessageType)
+      checkItemFailed(v, 'StreamingRecognitionResult_MessageType');
   }
 
   const StreamingRecognitionResult_MessageType._(int v, String n) : super(v, n);
 }
-

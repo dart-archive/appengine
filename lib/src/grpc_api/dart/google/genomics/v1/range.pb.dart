@@ -14,12 +14,13 @@ class Range extends GeneratedMessage {
     ..aOS(1, 'referenceName')
     ..aInt64(2, 'start')
     ..aInt64(3, 'end')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   Range() : super();
-  Range.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Range.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Range.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Range.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Range clone() => new Range()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Range create() => new Range();
@@ -28,26 +29,35 @@ class Range extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyRange();
     return _defaultInstance;
   }
+
   static Range _defaultInstance;
   static void $checkItem(Range v) {
     if (v is! Range) checkItemFailed(v, 'Range');
   }
 
   String get referenceName => $_getS(0, '');
-  set referenceName(String v) { $_setString(0, v); }
+  set referenceName(String v) {
+    $_setString(0, v);
+  }
+
   bool hasReferenceName() => $_has(0);
   void clearReferenceName() => clearField(1);
 
   Int64 get start => $_getI64(1);
-  set start(Int64 v) { $_setInt64(1, v); }
+  set start(Int64 v) {
+    $_setInt64(1, v);
+  }
+
   bool hasStart() => $_has(1);
   void clearStart() => clearField(2);
 
   Int64 get end => $_getI64(2);
-  set end(Int64 v) { $_setInt64(2, v); }
+  set end(Int64 v) {
+    $_setInt64(2, v);
+  }
+
   bool hasEnd() => $_has(2);
   void clearEnd() => clearField(3);
 }
 
 class _ReadonlyRange extends Range with ReadonlyMessageMixin {}
-

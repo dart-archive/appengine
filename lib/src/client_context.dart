@@ -16,6 +16,7 @@ abstract class ClientContext {
   /// Whether the application is currently running in the development
   /// environment.
   bool get isDevelopmentEnvironment;
+
   /// Whether the application is currently running in the production
   /// environment.
   bool get isProductionEnvironment;
@@ -38,7 +39,7 @@ class Services {
   final Logging logging;
   final Memcache memcache;
 
-  Services(this.db, this.storage, this.logging,this.memcache);
+  Services(this.db, this.storage, this.logging, this.memcache);
 }
 
 class AssetError implements Exception {

@@ -27,31 +27,29 @@ class AssetsManager {
 
   Future _proxyToPub(HttpRequest request, String path) {
     const RESPONSE_HEADERS = const [
-        HttpHeaders.contentLengthHeader,
-        HttpHeaders.contentTypeHeader ];
+      HttpHeaders.contentLengthHeader,
+      HttpHeaders.contentTypeHeader
+    ];
 
     var uri = pubServeUrl.resolve(path);
-    return client.openUrl(request.method, uri)
-        .then((proxyRequest) {
-          proxyRequest.headers.removeAll(HttpHeaders.acceptEncodingHeader);
-          return proxyRequest.close();
-        })
-        .then((proxyResponse) {
-          proxyResponse.headers.forEach((name, values) {
-            if (RESPONSE_HEADERS.contains(name)) {
-              request.response.headers.set(name, values);
-            }
-          });
-          request.response.statusCode = proxyResponse.statusCode;
-          request.response.reasonPhrase = proxyResponse.reasonPhrase;
-          return proxyResponse.pipe(request.response);
-        })
-        .catchError((e) {
-          // TODO(kevmoo) Use logging here
-          print("Unable to connect to 'pub serve' for '${request.uri}': $e");
-          throw new AssetError(
-              "Unable to connect to 'pub serve' for '${request.uri}': $e");
-        });
+    return client.openUrl(request.method, uri).then((proxyRequest) {
+      proxyRequest.headers.removeAll(HttpHeaders.acceptEncodingHeader);
+      return proxyRequest.close();
+    }).then((proxyResponse) {
+      proxyResponse.headers.forEach((name, values) {
+        if (RESPONSE_HEADERS.contains(name)) {
+          request.response.headers.set(name, values);
+        }
+      });
+      request.response.statusCode = proxyResponse.statusCode;
+      request.response.reasonPhrase = proxyResponse.reasonPhrase;
+      return proxyResponse.pipe(request.response);
+    }).catchError((e) {
+      // TODO(kevmoo) Use logging here
+      print("Unable to connect to 'pub serve' for '${request.uri}': $e");
+      throw new AssetError(
+          "Unable to connect to 'pub serve' for '${request.uri}': $e");
+    });
   }
 
   Future _serveFromFile(HttpRequest request, String path) {
@@ -68,24 +66,23 @@ class AssetsManager {
 
   Future<Stream<List<int>>> _readFromPub(String path) {
     var uri = pubServeUrl.resolve(path);
-    return client.openUrl('GET', uri)
+    return client
+        .openUrl('GET', uri)
         .then((request) => request.close())
         .then((response) {
-          if (response.statusCode == HttpStatus.ok) {
-            return response;
-          } else {
-            throw new AssetError(
-                "Failed to fetch asset '$path' from pub: "
-                "${response.statusCode}.");
-          }
-        })
-        .catchError((error) {
-          if (error is! AssetError) {
-            error = new AssetError(
-                "Failed to fetch asset '$path' from pub: '${path}': $error");
-          }
-          throw error;
-        });
+      if (response.statusCode == HttpStatus.ok) {
+        return response;
+      } else {
+        throw new AssetError("Failed to fetch asset '$path' from pub: "
+            "${response.statusCode}.");
+      }
+    }).catchError((error) {
+      if (error is! AssetError) {
+        error = new AssetError(
+            "Failed to fetch asset '$path' from pub: '${path}': $error");
+      }
+      throw error;
+    });
   }
 
   Future<Stream<List<int>>> _readFromFile(String path) {
@@ -131,12 +128,11 @@ class AssetsImpl implements Assets {
   AssetsImpl(this.request, this.appengineContext);
 
   Future<Stream<List<int>>> read([String path]) {
-    return appengineContext.assets.read(
-        path == null ? request.uri.path : path);
+    return appengineContext.assets.read(path == null ? request.uri.path : path);
   }
 
   void serve([String path]) {
-    appengineContext.assets.serve(request,
-        path == null ? request.uri.path : path);
+    appengineContext.assets
+        .serve(request, path == null ? request.uri.path : path);
   }
 }

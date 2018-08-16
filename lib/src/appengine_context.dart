@@ -16,8 +16,14 @@ class AppengineContext {
   final bool isDevelopmentEnvironment;
   final AssetsManager assets;
 
-  AppengineContext(this.isDevelopmentEnvironment, this.applicationID,
-      this.version, this.module, this.instance, this.instanceId, Uri pubServeUrl)
+  AppengineContext(
+      this.isDevelopmentEnvironment,
+      this.applicationID,
+      this.version,
+      this.module,
+      this.instance,
+      this.instanceId,
+      Uri pubServeUrl)
       : partition = '',
         assets = new AssetsManager(pubServeUrl, isDevelopmentEnvironment);
 

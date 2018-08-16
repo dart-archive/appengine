@@ -298,8 +298,7 @@ Future<memcache.Memcache> _tryMemcacheInstance(
       return memcacheService;
     }
   } catch (e, stack) {
-    var stackIndented = LineSplitter
-        .split(Trace.format(stack, terse: true))
+    var stackIndented = LineSplitter.split(Trace.format(stack, terse: true))
         .map((l) => '  $l')
         .join('\n');
 

@@ -6,8 +6,22 @@
 const BuildStatus$json = const {
   '1': 'BuildStatus',
   '2': const [
-    const {'1': 'result', '3': 1, '4': 1, '5': 14, '6': '.google.devtools.build.v1.BuildStatus.Result', '10': 'result'},
-    const {'1': 'details', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Any', '10': 'details'},
+    const {
+      '1': 'result',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.devtools.build.v1.BuildStatus.Result',
+      '10': 'result'
+    },
+    const {
+      '1': 'details',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Any',
+      '10': 'details'
+    },
   ],
   '4': const [BuildStatus_Result$json],
 };
@@ -26,4 +40,3 @@ const BuildStatus_Result$json = const {
     const {'1': 'CANCELLED', '2': 7},
   ],
 };
-

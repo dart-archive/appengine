@@ -14,62 +14,84 @@ import 'common.pb.dart';
 class GetGroupRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetGroupRequest')
     ..aOS(1, 'groupName')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   GetGroupRequest() : super();
-  GetGroupRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GetGroupRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetGroupRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GetGroupRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   GetGroupRequest clone() => new GetGroupRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetGroupRequest create() => new GetGroupRequest();
-  static PbList<GetGroupRequest> createRepeated() => new PbList<GetGroupRequest>();
+  static PbList<GetGroupRequest> createRepeated() =>
+      new PbList<GetGroupRequest>();
   static GetGroupRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGetGroupRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyGetGroupRequest();
     return _defaultInstance;
   }
+
   static GetGroupRequest _defaultInstance;
   static void $checkItem(GetGroupRequest v) {
     if (v is! GetGroupRequest) checkItemFailed(v, 'GetGroupRequest');
   }
 
   String get groupName => $_getS(0, '');
-  set groupName(String v) { $_setString(0, v); }
+  set groupName(String v) {
+    $_setString(0, v);
+  }
+
   bool hasGroupName() => $_has(0);
   void clearGroupName() => clearField(1);
 }
 
-class _ReadonlyGetGroupRequest extends GetGroupRequest with ReadonlyMessageMixin {}
+class _ReadonlyGetGroupRequest extends GetGroupRequest
+    with ReadonlyMessageMixin {}
 
 class UpdateGroupRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateGroupRequest')
-    ..a<ErrorGroup>(1, 'group', PbFieldType.OM, ErrorGroup.getDefault, ErrorGroup.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<ErrorGroup>(
+        1, 'group', PbFieldType.OM, ErrorGroup.getDefault, ErrorGroup.create)
+    ..hasRequiredFields = false;
 
   UpdateGroupRequest() : super();
-  UpdateGroupRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  UpdateGroupRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  UpdateGroupRequest clone() => new UpdateGroupRequest()..mergeFromMessage(this);
+  UpdateGroupRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  UpdateGroupRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  UpdateGroupRequest clone() =>
+      new UpdateGroupRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateGroupRequest create() => new UpdateGroupRequest();
-  static PbList<UpdateGroupRequest> createRepeated() => new PbList<UpdateGroupRequest>();
+  static PbList<UpdateGroupRequest> createRepeated() =>
+      new PbList<UpdateGroupRequest>();
   static UpdateGroupRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUpdateGroupRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyUpdateGroupRequest();
     return _defaultInstance;
   }
+
   static UpdateGroupRequest _defaultInstance;
   static void $checkItem(UpdateGroupRequest v) {
     if (v is! UpdateGroupRequest) checkItemFailed(v, 'UpdateGroupRequest');
   }
 
   ErrorGroup get group => $_getN(0);
-  set group(ErrorGroup v) { setField(1, v); }
+  set group(ErrorGroup v) {
+    setField(1, v);
+  }
+
   bool hasGroup() => $_has(0);
   void clearGroup() => clearField(1);
 }
 
-class _ReadonlyUpdateGroupRequest extends UpdateGroupRequest with ReadonlyMessageMixin {}
+class _ReadonlyUpdateGroupRequest extends UpdateGroupRequest
+    with ReadonlyMessageMixin {}
 
 class ErrorGroupServiceApi {
   RpcClient _client;
@@ -77,11 +99,14 @@ class ErrorGroupServiceApi {
 
   Future<ErrorGroup> getGroup(ClientContext ctx, GetGroupRequest request) {
     var emptyResponse = new ErrorGroup();
-    return _client.invoke<ErrorGroup>(ctx, 'ErrorGroupService', 'GetGroup', request, emptyResponse);
+    return _client.invoke<ErrorGroup>(
+        ctx, 'ErrorGroupService', 'GetGroup', request, emptyResponse);
   }
-  Future<ErrorGroup> updateGroup(ClientContext ctx, UpdateGroupRequest request) {
+
+  Future<ErrorGroup> updateGroup(
+      ClientContext ctx, UpdateGroupRequest request) {
     var emptyResponse = new ErrorGroup();
-    return _client.invoke<ErrorGroup>(ctx, 'ErrorGroupService', 'UpdateGroup', request, emptyResponse);
+    return _client.invoke<ErrorGroup>(
+        ctx, 'ErrorGroupService', 'UpdateGroup', request, emptyResponse);
   }
 }
-

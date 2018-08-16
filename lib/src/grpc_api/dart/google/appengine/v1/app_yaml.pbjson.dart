@@ -37,10 +37,31 @@ const SecurityLevel$json = const {
 const ApiConfigHandler$json = const {
   '1': 'ApiConfigHandler',
   '2': const [
-    const {'1': 'auth_fail_action', '3': 1, '4': 1, '5': 14, '6': '.google.appengine.v1.AuthFailAction', '10': 'authFailAction'},
-    const {'1': 'login', '3': 2, '4': 1, '5': 14, '6': '.google.appengine.v1.LoginRequirement', '10': 'login'},
+    const {
+      '1': 'auth_fail_action',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.AuthFailAction',
+      '10': 'authFailAction'
+    },
+    const {
+      '1': 'login',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.LoginRequirement',
+      '10': 'login'
+    },
     const {'1': 'script', '3': 3, '4': 1, '5': 9, '10': 'script'},
-    const {'1': 'security_level', '3': 4, '4': 1, '5': 14, '6': '.google.appengine.v1.SecurityLevel', '10': 'securityLevel'},
+    const {
+      '1': 'security_level',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.SecurityLevel',
+      '10': 'securityLevel'
+    },
     const {'1': 'url', '3': 5, '4': 1, '5': 9, '10': 'url'},
   ],
 };
@@ -48,7 +69,14 @@ const ApiConfigHandler$json = const {
 const ErrorHandler$json = const {
   '1': 'ErrorHandler',
   '2': const [
-    const {'1': 'error_code', '3': 1, '4': 1, '5': 14, '6': '.google.appengine.v1.ErrorHandler.ErrorCode', '10': 'errorCode'},
+    const {
+      '1': 'error_code',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.ErrorHandler.ErrorCode',
+      '10': 'errorCode'
+    },
     const {'1': 'static_file', '3': 2, '4': 1, '5': 9, '10': 'staticFile'},
     const {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '10': 'mimeType'},
   ],
@@ -71,13 +99,65 @@ const UrlMap$json = const {
   '1': 'UrlMap',
   '2': const [
     const {'1': 'url_regex', '3': 1, '4': 1, '5': 9, '10': 'urlRegex'},
-    const {'1': 'static_files', '3': 2, '4': 1, '5': 11, '6': '.google.appengine.v1.StaticFilesHandler', '9': 0, '10': 'staticFiles'},
-    const {'1': 'script', '3': 3, '4': 1, '5': 11, '6': '.google.appengine.v1.ScriptHandler', '9': 0, '10': 'script'},
-    const {'1': 'api_endpoint', '3': 4, '4': 1, '5': 11, '6': '.google.appengine.v1.ApiEndpointHandler', '9': 0, '10': 'apiEndpoint'},
-    const {'1': 'security_level', '3': 5, '4': 1, '5': 14, '6': '.google.appengine.v1.SecurityLevel', '10': 'securityLevel'},
-    const {'1': 'login', '3': 6, '4': 1, '5': 14, '6': '.google.appengine.v1.LoginRequirement', '10': 'login'},
-    const {'1': 'auth_fail_action', '3': 7, '4': 1, '5': 14, '6': '.google.appengine.v1.AuthFailAction', '10': 'authFailAction'},
-    const {'1': 'redirect_http_response_code', '3': 8, '4': 1, '5': 14, '6': '.google.appengine.v1.UrlMap.RedirectHttpResponseCode', '10': 'redirectHttpResponseCode'},
+    const {
+      '1': 'static_files',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.StaticFilesHandler',
+      '9': 0,
+      '10': 'staticFiles'
+    },
+    const {
+      '1': 'script',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.ScriptHandler',
+      '9': 0,
+      '10': 'script'
+    },
+    const {
+      '1': 'api_endpoint',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.ApiEndpointHandler',
+      '9': 0,
+      '10': 'apiEndpoint'
+    },
+    const {
+      '1': 'security_level',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.SecurityLevel',
+      '10': 'securityLevel'
+    },
+    const {
+      '1': 'login',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.LoginRequirement',
+      '10': 'login'
+    },
+    const {
+      '1': 'auth_fail_action',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.AuthFailAction',
+      '10': 'authFailAction'
+    },
+    const {
+      '1': 'redirect_http_response_code',
+      '3': 8,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.UrlMap.RedirectHttpResponseCode',
+      '10': 'redirectHttpResponseCode'
+    },
   ],
   '4': const [UrlMap_RedirectHttpResponseCode$json],
   '8': const [
@@ -100,12 +180,44 @@ const StaticFilesHandler$json = const {
   '1': 'StaticFilesHandler',
   '2': const [
     const {'1': 'path', '3': 1, '4': 1, '5': 9, '10': 'path'},
-    const {'1': 'upload_path_regex', '3': 2, '4': 1, '5': 9, '10': 'uploadPathRegex'},
-    const {'1': 'http_headers', '3': 3, '4': 3, '5': 11, '6': '.google.appengine.v1.StaticFilesHandler.HttpHeadersEntry', '10': 'httpHeaders'},
+    const {
+      '1': 'upload_path_regex',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'uploadPathRegex'
+    },
+    const {
+      '1': 'http_headers',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.v1.StaticFilesHandler.HttpHeadersEntry',
+      '10': 'httpHeaders'
+    },
     const {'1': 'mime_type', '3': 4, '4': 1, '5': 9, '10': 'mimeType'},
-    const {'1': 'expiration', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'expiration'},
-    const {'1': 'require_matching_file', '3': 6, '4': 1, '5': 8, '10': 'requireMatchingFile'},
-    const {'1': 'application_readable', '3': 7, '4': 1, '5': 8, '10': 'applicationReadable'},
+    const {
+      '1': 'expiration',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'expiration'
+    },
+    const {
+      '1': 'require_matching_file',
+      '3': 6,
+      '4': 1,
+      '5': 8,
+      '10': 'requireMatchingFile'
+    },
+    const {
+      '1': 'application_readable',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '10': 'applicationReadable'
+    },
   ],
   '3': const [StaticFilesHandler_HttpHeadersEntry$json],
 };
@@ -136,13 +248,51 @@ const ApiEndpointHandler$json = const {
 const HealthCheck$json = const {
   '1': 'HealthCheck',
   '2': const [
-    const {'1': 'disable_health_check', '3': 1, '4': 1, '5': 8, '10': 'disableHealthCheck'},
+    const {
+      '1': 'disable_health_check',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'disableHealthCheck'
+    },
     const {'1': 'host', '3': 2, '4': 1, '5': 9, '10': 'host'},
-    const {'1': 'healthy_threshold', '3': 3, '4': 1, '5': 13, '10': 'healthyThreshold'},
-    const {'1': 'unhealthy_threshold', '3': 4, '4': 1, '5': 13, '10': 'unhealthyThreshold'},
-    const {'1': 'restart_threshold', '3': 5, '4': 1, '5': 13, '10': 'restartThreshold'},
-    const {'1': 'check_interval', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'checkInterval'},
-    const {'1': 'timeout', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'timeout'},
+    const {
+      '1': 'healthy_threshold',
+      '3': 3,
+      '4': 1,
+      '5': 13,
+      '10': 'healthyThreshold'
+    },
+    const {
+      '1': 'unhealthy_threshold',
+      '3': 4,
+      '4': 1,
+      '5': 13,
+      '10': 'unhealthyThreshold'
+    },
+    const {
+      '1': 'restart_threshold',
+      '3': 5,
+      '4': 1,
+      '5': 13,
+      '10': 'restartThreshold'
+    },
+    const {
+      '1': 'check_interval',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'checkInterval'
+    },
+    const {
+      '1': 'timeout',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'timeout'
+    },
   ],
 };
 
@@ -153,4 +303,3 @@ const Library$json = const {
     const {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
   ],
 };
-

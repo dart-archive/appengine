@@ -6,8 +6,22 @@
 const Quota$json = const {
   '1': 'Quota',
   '2': const [
-    const {'1': 'limits', '3': 3, '4': 3, '5': 11, '6': '.google.api.QuotaLimit', '10': 'limits'},
-    const {'1': 'metric_rules', '3': 4, '4': 3, '5': 11, '6': '.google.api.MetricRule', '10': 'metricRules'},
+    const {
+      '1': 'limits',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.QuotaLimit',
+      '10': 'limits'
+    },
+    const {
+      '1': 'metric_rules',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.MetricRule',
+      '10': 'metricRules'
+    },
   ],
 };
 
@@ -15,7 +29,14 @@ const MetricRule$json = const {
   '1': 'MetricRule',
   '2': const [
     const {'1': 'selector', '3': 1, '4': 1, '5': 9, '10': 'selector'},
-    const {'1': 'metric_costs', '3': 2, '4': 3, '5': 11, '6': '.google.api.MetricRule.MetricCostsEntry', '10': 'metricCosts'},
+    const {
+      '1': 'metric_costs',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.MetricRule.MetricCostsEntry',
+      '10': 'metricCosts'
+    },
   ],
   '3': const [MetricRule_MetricCostsEntry$json],
 };
@@ -40,7 +61,14 @@ const QuotaLimit$json = const {
     const {'1': 'duration', '3': 5, '4': 1, '5': 9, '10': 'duration'},
     const {'1': 'metric', '3': 8, '4': 1, '5': 9, '10': 'metric'},
     const {'1': 'unit', '3': 9, '4': 1, '5': 9, '10': 'unit'},
-    const {'1': 'values', '3': 10, '4': 3, '5': 11, '6': '.google.api.QuotaLimit.ValuesEntry', '10': 'values'},
+    const {
+      '1': 'values',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.QuotaLimit.ValuesEntry',
+      '10': 'values'
+    },
     const {'1': 'display_name', '3': 12, '4': 1, '5': 9, '10': 'displayName'},
   ],
   '3': const [QuotaLimit_ValuesEntry$json],
@@ -54,4 +82,3 @@ const QuotaLimit_ValuesEntry$json = const {
   ],
   '7': const {'7': true},
 };
-

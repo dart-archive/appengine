@@ -8,12 +8,13 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class ChangeType extends ProtobufEnum {
-  static const ChangeType CHANGE_TYPE_UNSPECIFIED = const ChangeType._(0, 'CHANGE_TYPE_UNSPECIFIED');
+  static const ChangeType CHANGE_TYPE_UNSPECIFIED =
+      const ChangeType._(0, 'CHANGE_TYPE_UNSPECIFIED');
   static const ChangeType ADDED = const ChangeType._(1, 'ADDED');
   static const ChangeType REMOVED = const ChangeType._(2, 'REMOVED');
   static const ChangeType MODIFIED = const ChangeType._(3, 'MODIFIED');
 
-  static const List<ChangeType> values = const <ChangeType> [
+  static const List<ChangeType> values = const <ChangeType>[
     CHANGE_TYPE_UNSPECIFIED,
     ADDED,
     REMOVED,
@@ -28,4 +29,3 @@ class ChangeType extends ProtobufEnum {
 
   const ChangeType._(int v, String n) : super(v, n);
 }
-

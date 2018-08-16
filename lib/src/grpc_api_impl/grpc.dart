@@ -95,11 +95,8 @@ class Client {
             : null,
         _dialer = dialer;
 
-  Future<T> invoke<T extends protobuf.GeneratedMessage>(
-      String service,
-      String method,
-      protobuf.GeneratedMessage request,
-      T response) async {
+  Future<T> invoke<T extends protobuf.GeneratedMessage>(String service,
+      String method, protobuf.GeneratedMessage request, T response) async {
     // If we need authorization and the current access token is expired
     // we'll get a new one.
     // NOTE: Several concurrent callers will end up using the same token
@@ -154,7 +151,8 @@ class Client {
     final http2.ClientTransportConnection connection = _connection;
     assert(connection.isOpen);
     final http2.TransportStream stream = connection.makeRequest(headers);
-    final messageIterator = new StreamIterator<http2.StreamMessage>(stream.incomingMessages);
+    final messageIterator =
+        new StreamIterator<http2.StreamMessage>(stream.incomingMessages);
 
     final messageBody = request.writeToBuffer();
 
@@ -179,7 +177,8 @@ class Client {
         stream.terminate();
         throw new ProtocolException('No initial headers from server.');
       }
-      final headerMessage = messageIterator.current as http2.HeadersStreamMessage;
+      final headerMessage =
+          messageIterator.current as http2.HeadersStreamMessage;
       final Map responseHeaders = _getHeaders(headerMessage.headers);
       final status = responseHeaders[':status'];
       if (status != '200') {
@@ -211,7 +210,8 @@ class Client {
       //      'google.rpc.debuginfo-bin': ...,
       //    }
       assert(messageIterator.current is http2.HeadersStreamMessage);
-      final trailerMessage = messageIterator.current as http2.HeadersStreamMessage;
+      final trailerMessage =
+          messageIterator.current as http2.HeadersStreamMessage;
       final Map trailingHeaders = _getHeaders(trailerMessage.headers);
       final int grpcStatus = int.tryParse(trailingHeaders['grpc-status']);
       if (grpcStatus != 0) {
@@ -341,8 +341,8 @@ class Dialer {
 
     if (isHttps) {
       try {
-        final socket = await SecureSocket
-            .connect(endpoint.host, endpoint.port, supportedProtocols: ['h2']);
+        final socket = await SecureSocket.connect(endpoint.host, endpoint.port,
+            supportedProtocols: ['h2']);
         socket.setOption(SocketOption.tcpNoDelay, true);
         if (socket.selectedProtocol == 'h2') {
           final connection =

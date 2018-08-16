@@ -21,7 +21,14 @@ const GetGoogleServiceAccountRequest$json = const {
 const CreateTransferJobRequest$json = const {
   '1': 'CreateTransferJobRequest',
   '2': const [
-    const {'1': 'transfer_job', '3': 1, '4': 1, '5': 11, '6': '.google.storagetransfer.v1.TransferJob', '10': 'transferJob'},
+    const {
+      '1': 'transfer_job',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.storagetransfer.v1.TransferJob',
+      '10': 'transferJob'
+    },
   ],
 };
 
@@ -30,8 +37,22 @@ const UpdateTransferJobRequest$json = const {
   '2': const [
     const {'1': 'job_name', '3': 1, '4': 1, '5': 9, '10': 'jobName'},
     const {'1': 'project_id', '3': 2, '4': 1, '5': 9, '10': 'projectId'},
-    const {'1': 'transfer_job', '3': 3, '4': 1, '5': 11, '6': '.google.storagetransfer.v1.TransferJob', '10': 'transferJob'},
-    const {'1': 'update_transfer_job_field_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateTransferJobFieldMask'},
+    const {
+      '1': 'transfer_job',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.storagetransfer.v1.TransferJob',
+      '10': 'transferJob'
+    },
+    const {
+      '1': 'update_transfer_job_field_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateTransferJobFieldMask'
+    },
   ],
 };
 
@@ -55,8 +76,21 @@ const ListTransferJobsRequest$json = const {
 const ListTransferJobsResponse$json = const {
   '1': 'ListTransferJobsResponse',
   '2': const [
-    const {'1': 'transfer_jobs', '3': 1, '4': 3, '5': 11, '6': '.google.storagetransfer.v1.TransferJob', '10': 'transferJobs'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'transfer_jobs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.storagetransfer.v1.TransferJob',
+      '10': 'transferJobs'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -77,20 +111,57 @@ const ResumeTransferOperationRequest$json = const {
 const StorageTransferService$json = const {
   '1': 'StorageTransferService',
   '2': const [
-    const {'1': 'GetGoogleServiceAccount', '2': '.google.storagetransfer.v1.GetGoogleServiceAccountRequest', '3': '.google.storagetransfer.v1.GoogleServiceAccount', '4': const {}},
-    const {'1': 'CreateTransferJob', '2': '.google.storagetransfer.v1.CreateTransferJobRequest', '3': '.google.storagetransfer.v1.TransferJob', '4': const {}},
-    const {'1': 'UpdateTransferJob', '2': '.google.storagetransfer.v1.UpdateTransferJobRequest', '3': '.google.storagetransfer.v1.TransferJob', '4': const {}},
-    const {'1': 'GetTransferJob', '2': '.google.storagetransfer.v1.GetTransferJobRequest', '3': '.google.storagetransfer.v1.TransferJob', '4': const {}},
-    const {'1': 'ListTransferJobs', '2': '.google.storagetransfer.v1.ListTransferJobsRequest', '3': '.google.storagetransfer.v1.ListTransferJobsResponse', '4': const {}},
-    const {'1': 'PauseTransferOperation', '2': '.google.storagetransfer.v1.PauseTransferOperationRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'ResumeTransferOperation', '2': '.google.storagetransfer.v1.ResumeTransferOperationRequest', '3': '.google.protobuf.Empty', '4': const {}},
+    const {
+      '1': 'GetGoogleServiceAccount',
+      '2': '.google.storagetransfer.v1.GetGoogleServiceAccountRequest',
+      '3': '.google.storagetransfer.v1.GoogleServiceAccount',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateTransferJob',
+      '2': '.google.storagetransfer.v1.CreateTransferJobRequest',
+      '3': '.google.storagetransfer.v1.TransferJob',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateTransferJob',
+      '2': '.google.storagetransfer.v1.UpdateTransferJobRequest',
+      '3': '.google.storagetransfer.v1.TransferJob',
+      '4': const {}
+    },
+    const {
+      '1': 'GetTransferJob',
+      '2': '.google.storagetransfer.v1.GetTransferJobRequest',
+      '3': '.google.storagetransfer.v1.TransferJob',
+      '4': const {}
+    },
+    const {
+      '1': 'ListTransferJobs',
+      '2': '.google.storagetransfer.v1.ListTransferJobsRequest',
+      '3': '.google.storagetransfer.v1.ListTransferJobsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'PauseTransferOperation',
+      '2': '.google.storagetransfer.v1.PauseTransferOperationRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'ResumeTransferOperation',
+      '2': '.google.storagetransfer.v1.ResumeTransferOperationRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
   ],
 };
 
 const StorageTransferService$messageJson = const {
-  '.google.storagetransfer.v1.GetGoogleServiceAccountRequest': GetGoogleServiceAccountRequest$json,
+  '.google.storagetransfer.v1.GetGoogleServiceAccountRequest':
+      GetGoogleServiceAccountRequest$json,
   '.google.storagetransfer.v1.GoogleServiceAccount': GoogleServiceAccount$json,
-  '.google.storagetransfer.v1.CreateTransferJobRequest': CreateTransferJobRequest$json,
+  '.google.storagetransfer.v1.CreateTransferJobRequest':
+      CreateTransferJobRequest$json,
   '.google.storagetransfer.v1.TransferJob': TransferJob$json,
   '.google.storagetransfer.v1.TransferSpec': TransferSpec$json,
   '.google.storagetransfer.v1.GcsData': GcsData$json,
@@ -104,13 +175,18 @@ const StorageTransferService$messageJson = const {
   '.google.type.Date': $google$type.Date$json,
   '.google.type.TimeOfDay': $google$type.TimeOfDay$json,
   '.google.protobuf.Timestamp': $google$protobuf.Timestamp$json,
-  '.google.storagetransfer.v1.UpdateTransferJobRequest': UpdateTransferJobRequest$json,
+  '.google.storagetransfer.v1.UpdateTransferJobRequest':
+      UpdateTransferJobRequest$json,
   '.google.protobuf.FieldMask': $google$protobuf.FieldMask$json,
-  '.google.storagetransfer.v1.GetTransferJobRequest': GetTransferJobRequest$json,
-  '.google.storagetransfer.v1.ListTransferJobsRequest': ListTransferJobsRequest$json,
-  '.google.storagetransfer.v1.ListTransferJobsResponse': ListTransferJobsResponse$json,
-  '.google.storagetransfer.v1.PauseTransferOperationRequest': PauseTransferOperationRequest$json,
+  '.google.storagetransfer.v1.GetTransferJobRequest':
+      GetTransferJobRequest$json,
+  '.google.storagetransfer.v1.ListTransferJobsRequest':
+      ListTransferJobsRequest$json,
+  '.google.storagetransfer.v1.ListTransferJobsResponse':
+      ListTransferJobsResponse$json,
+  '.google.storagetransfer.v1.PauseTransferOperationRequest':
+      PauseTransferOperationRequest$json,
   '.google.protobuf.Empty': $google$protobuf.Empty$json,
-  '.google.storagetransfer.v1.ResumeTransferOperationRequest': ResumeTransferOperationRequest$json,
+  '.google.storagetransfer.v1.ResumeTransferOperationRequest':
+      ResumeTransferOperationRequest$json,
 };
-

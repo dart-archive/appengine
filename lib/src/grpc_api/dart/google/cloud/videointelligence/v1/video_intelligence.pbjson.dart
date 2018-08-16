@@ -46,8 +46,22 @@ const AnnotateVideoRequest$json = const {
   '2': const [
     const {'1': 'input_uri', '3': 1, '4': 1, '5': 9, '10': 'inputUri'},
     const {'1': 'input_content', '3': 6, '4': 1, '5': 12, '10': 'inputContent'},
-    const {'1': 'features', '3': 2, '4': 3, '5': 14, '6': '.google.cloud.videointelligence.v1.Feature', '10': 'features'},
-    const {'1': 'video_context', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.VideoContext', '10': 'videoContext'},
+    const {
+      '1': 'features',
+      '3': 2,
+      '4': 3,
+      '5': 14,
+      '6': '.google.cloud.videointelligence.v1.Feature',
+      '10': 'features'
+    },
+    const {
+      '1': 'video_context',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoContext',
+      '10': 'videoContext'
+    },
     const {'1': 'output_uri', '3': 4, '4': 1, '5': 9, '10': 'outputUri'},
     const {'1': 'location_id', '3': 5, '4': 1, '5': 9, '10': 'locationId'},
   ],
@@ -56,19 +70,67 @@ const AnnotateVideoRequest$json = const {
 const VideoContext$json = const {
   '1': 'VideoContext',
   '2': const [
-    const {'1': 'segments', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.VideoSegment', '10': 'segments'},
-    const {'1': 'label_detection_config', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.LabelDetectionConfig', '10': 'labelDetectionConfig'},
-    const {'1': 'shot_change_detection_config', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.ShotChangeDetectionConfig', '10': 'shotChangeDetectionConfig'},
-    const {'1': 'explicit_content_detection_config', '3': 4, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.ExplicitContentDetectionConfig', '10': 'explicitContentDetectionConfig'},
-    const {'1': 'face_detection_config', '3': 5, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.FaceDetectionConfig', '10': 'faceDetectionConfig'},
+    const {
+      '1': 'segments',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoSegment',
+      '10': 'segments'
+    },
+    const {
+      '1': 'label_detection_config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.LabelDetectionConfig',
+      '10': 'labelDetectionConfig'
+    },
+    const {
+      '1': 'shot_change_detection_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.ShotChangeDetectionConfig',
+      '10': 'shotChangeDetectionConfig'
+    },
+    const {
+      '1': 'explicit_content_detection_config',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.ExplicitContentDetectionConfig',
+      '10': 'explicitContentDetectionConfig'
+    },
+    const {
+      '1': 'face_detection_config',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.FaceDetectionConfig',
+      '10': 'faceDetectionConfig'
+    },
   ],
 };
 
 const LabelDetectionConfig$json = const {
   '1': 'LabelDetectionConfig',
   '2': const [
-    const {'1': 'label_detection_mode', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.videointelligence.v1.LabelDetectionMode', '10': 'labelDetectionMode'},
-    const {'1': 'stationary_camera', '3': 2, '4': 1, '5': 8, '10': 'stationaryCamera'},
+    const {
+      '1': 'label_detection_mode',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.videointelligence.v1.LabelDetectionMode',
+      '10': 'labelDetectionMode'
+    },
+    const {
+      '1': 'stationary_camera',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '10': 'stationaryCamera'
+    },
     const {'1': 'model', '3': 3, '4': 1, '5': 9, '10': 'model'},
   ],
 };
@@ -91,22 +153,49 @@ const FaceDetectionConfig$json = const {
   '1': 'FaceDetectionConfig',
   '2': const [
     const {'1': 'model', '3': 1, '4': 1, '5': 9, '10': 'model'},
-    const {'1': 'include_bounding_boxes', '3': 2, '4': 1, '5': 8, '10': 'includeBoundingBoxes'},
+    const {
+      '1': 'include_bounding_boxes',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '10': 'includeBoundingBoxes'
+    },
   ],
 };
 
 const VideoSegment$json = const {
   '1': 'VideoSegment',
   '2': const [
-    const {'1': 'start_time_offset', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'startTimeOffset'},
-    const {'1': 'end_time_offset', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'endTimeOffset'},
+    const {
+      '1': 'start_time_offset',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'startTimeOffset'
+    },
+    const {
+      '1': 'end_time_offset',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'endTimeOffset'
+    },
   ],
 };
 
 const LabelSegment$json = const {
   '1': 'LabelSegment',
   '2': const [
-    const {'1': 'segment', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.VideoSegment', '10': 'segment'},
+    const {
+      '1': 'segment',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoSegment',
+      '10': 'segment'
+    },
     const {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
   ],
 };
@@ -114,7 +203,14 @@ const LabelSegment$json = const {
 const LabelFrame$json = const {
   '1': 'LabelFrame',
   '2': const [
-    const {'1': 'time_offset', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'timeOffset'},
+    const {
+      '1': 'time_offset',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'timeOffset'
+    },
     const {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
   ],
 };
@@ -131,25 +227,74 @@ const Entity$json = const {
 const LabelAnnotation$json = const {
   '1': 'LabelAnnotation',
   '2': const [
-    const {'1': 'entity', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.Entity', '10': 'entity'},
-    const {'1': 'category_entities', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.Entity', '10': 'categoryEntities'},
-    const {'1': 'segments', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.LabelSegment', '10': 'segments'},
-    const {'1': 'frames', '3': 4, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.LabelFrame', '10': 'frames'},
+    const {
+      '1': 'entity',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.Entity',
+      '10': 'entity'
+    },
+    const {
+      '1': 'category_entities',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.Entity',
+      '10': 'categoryEntities'
+    },
+    const {
+      '1': 'segments',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.LabelSegment',
+      '10': 'segments'
+    },
+    const {
+      '1': 'frames',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.LabelFrame',
+      '10': 'frames'
+    },
   ],
 };
 
 const ExplicitContentFrame$json = const {
   '1': 'ExplicitContentFrame',
   '2': const [
-    const {'1': 'time_offset', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'timeOffset'},
-    const {'1': 'pornography_likelihood', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.videointelligence.v1.Likelihood', '10': 'pornographyLikelihood'},
+    const {
+      '1': 'time_offset',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'timeOffset'
+    },
+    const {
+      '1': 'pornography_likelihood',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.videointelligence.v1.Likelihood',
+      '10': 'pornographyLikelihood'
+    },
   ],
 };
 
 const ExplicitContentAnnotation$json = const {
   '1': 'ExplicitContentAnnotation',
   '2': const [
-    const {'1': 'frames', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.ExplicitContentFrame', '10': 'frames'},
+    const {
+      '1': 'frames',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.ExplicitContentFrame',
+      '10': 'frames'
+    },
   ],
 };
 
@@ -166,15 +311,36 @@ const NormalizedBoundingBox$json = const {
 const FaceSegment$json = const {
   '1': 'FaceSegment',
   '2': const [
-    const {'1': 'segment', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.VideoSegment', '10': 'segment'},
+    const {
+      '1': 'segment',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoSegment',
+      '10': 'segment'
+    },
   ],
 };
 
 const FaceFrame$json = const {
   '1': 'FaceFrame',
   '2': const [
-    const {'1': 'normalized_bounding_boxes', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.NormalizedBoundingBox', '10': 'normalizedBoundingBoxes'},
-    const {'1': 'time_offset', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'timeOffset'},
+    const {
+      '1': 'normalized_bounding_boxes',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.NormalizedBoundingBox',
+      '10': 'normalizedBoundingBoxes'
+    },
+    const {
+      '1': 'time_offset',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'timeOffset'
+    },
   ],
 };
 
@@ -182,8 +348,22 @@ const FaceAnnotation$json = const {
   '1': 'FaceAnnotation',
   '2': const [
     const {'1': 'thumbnail', '3': 1, '4': 1, '5': 12, '10': 'thumbnail'},
-    const {'1': 'segments', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.FaceSegment', '10': 'segments'},
-    const {'1': 'frames', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.FaceFrame', '10': 'frames'},
+    const {
+      '1': 'segments',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.FaceSegment',
+      '10': 'segments'
+    },
+    const {
+      '1': 'frames',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.FaceFrame',
+      '10': 'frames'
+    },
   ],
 };
 
@@ -191,20 +371,76 @@ const VideoAnnotationResults$json = const {
   '1': 'VideoAnnotationResults',
   '2': const [
     const {'1': 'input_uri', '3': 1, '4': 1, '5': 9, '10': 'inputUri'},
-    const {'1': 'segment_label_annotations', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.LabelAnnotation', '10': 'segmentLabelAnnotations'},
-    const {'1': 'shot_label_annotations', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.LabelAnnotation', '10': 'shotLabelAnnotations'},
-    const {'1': 'frame_label_annotations', '3': 4, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.LabelAnnotation', '10': 'frameLabelAnnotations'},
-    const {'1': 'face_annotations', '3': 5, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.FaceAnnotation', '10': 'faceAnnotations'},
-    const {'1': 'shot_annotations', '3': 6, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.VideoSegment', '10': 'shotAnnotations'},
-    const {'1': 'explicit_annotation', '3': 7, '4': 1, '5': 11, '6': '.google.cloud.videointelligence.v1.ExplicitContentAnnotation', '10': 'explicitAnnotation'},
-    const {'1': 'error', '3': 9, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'error'},
+    const {
+      '1': 'segment_label_annotations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.LabelAnnotation',
+      '10': 'segmentLabelAnnotations'
+    },
+    const {
+      '1': 'shot_label_annotations',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.LabelAnnotation',
+      '10': 'shotLabelAnnotations'
+    },
+    const {
+      '1': 'frame_label_annotations',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.LabelAnnotation',
+      '10': 'frameLabelAnnotations'
+    },
+    const {
+      '1': 'face_annotations',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.FaceAnnotation',
+      '10': 'faceAnnotations'
+    },
+    const {
+      '1': 'shot_annotations',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoSegment',
+      '10': 'shotAnnotations'
+    },
+    const {
+      '1': 'explicit_annotation',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.ExplicitContentAnnotation',
+      '10': 'explicitAnnotation'
+    },
+    const {
+      '1': 'error',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'error'
+    },
   ],
 };
 
 const AnnotateVideoResponse$json = const {
   '1': 'AnnotateVideoResponse',
   '2': const [
-    const {'1': 'annotation_results', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.VideoAnnotationResults', '10': 'annotationResults'},
+    const {
+      '1': 'annotation_results',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoAnnotationResults',
+      '10': 'annotationResults'
+    },
   ],
 };
 
@@ -212,37 +448,73 @@ const VideoAnnotationProgress$json = const {
   '1': 'VideoAnnotationProgress',
   '2': const [
     const {'1': 'input_uri', '3': 1, '4': 1, '5': 9, '10': 'inputUri'},
-    const {'1': 'progress_percent', '3': 2, '4': 1, '5': 5, '10': 'progressPercent'},
-    const {'1': 'start_time', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'startTime'},
-    const {'1': 'update_time', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'updateTime'},
+    const {
+      '1': 'progress_percent',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '10': 'progressPercent'
+    },
+    const {
+      '1': 'start_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    const {
+      '1': 'update_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
   ],
 };
 
 const AnnotateVideoProgress$json = const {
   '1': 'AnnotateVideoProgress',
   '2': const [
-    const {'1': 'annotation_progress', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.videointelligence.v1.VideoAnnotationProgress', '10': 'annotationProgress'},
+    const {
+      '1': 'annotation_progress',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoAnnotationProgress',
+      '10': 'annotationProgress'
+    },
   ],
 };
 
 const VideoIntelligenceService$json = const {
   '1': 'VideoIntelligenceService',
   '2': const [
-    const {'1': 'AnnotateVideo', '2': '.google.cloud.videointelligence.v1.AnnotateVideoRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'AnnotateVideo',
+      '2': '.google.cloud.videointelligence.v1.AnnotateVideoRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
 const VideoIntelligenceService$messageJson = const {
-  '.google.cloud.videointelligence.v1.AnnotateVideoRequest': AnnotateVideoRequest$json,
+  '.google.cloud.videointelligence.v1.AnnotateVideoRequest':
+      AnnotateVideoRequest$json,
   '.google.cloud.videointelligence.v1.VideoContext': VideoContext$json,
   '.google.cloud.videointelligence.v1.VideoSegment': VideoSegment$json,
   '.google.protobuf.Duration': $google$protobuf.Duration$json,
-  '.google.cloud.videointelligence.v1.LabelDetectionConfig': LabelDetectionConfig$json,
-  '.google.cloud.videointelligence.v1.ShotChangeDetectionConfig': ShotChangeDetectionConfig$json,
-  '.google.cloud.videointelligence.v1.ExplicitContentDetectionConfig': ExplicitContentDetectionConfig$json,
-  '.google.cloud.videointelligence.v1.FaceDetectionConfig': FaceDetectionConfig$json,
+  '.google.cloud.videointelligence.v1.LabelDetectionConfig':
+      LabelDetectionConfig$json,
+  '.google.cloud.videointelligence.v1.ShotChangeDetectionConfig':
+      ShotChangeDetectionConfig$json,
+  '.google.cloud.videointelligence.v1.ExplicitContentDetectionConfig':
+      ExplicitContentDetectionConfig$json,
+  '.google.cloud.videointelligence.v1.FaceDetectionConfig':
+      FaceDetectionConfig$json,
   '.google.longrunning.Operation': $google$longrunning.Operation$json,
   '.google.protobuf.Any': $google$protobuf.Any$json,
   '.google.rpc.Status': $google$rpc.Status$json,
 };
-

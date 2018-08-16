@@ -7,4 +7,3 @@
 import 'dart:core' show int, bool, double, String, List, override;
 
 export 'code.pbenum.dart';
-

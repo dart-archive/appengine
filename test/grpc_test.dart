@@ -51,7 +51,6 @@ main() {
   group('grpc', () {
     group('channel', () {
       test('invoke', () async {
-
         final mockClient = new MockClient();
         final channel = new grpc.Channel('<fqn>', mockClient);
         final result = await channel.invoke(null, 'service', 'method', a, b);
@@ -160,8 +159,8 @@ main() {
 
       test('http2-stream-error', () async {
         final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(buildGrpcResponseMessages(
-              failure: Failure.StreamException));
+          return new OpenMockConnection(
+              buildGrpcResponseMessages(failure: Failure.StreamException));
         });
         final client = new grpc.Client(dialer, null, timeout);
 
@@ -177,8 +176,8 @@ main() {
 
       test('http2-connection-error', () async {
         final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(buildGrpcResponseMessages(
-              failure: Failure.ConnectionException));
+          return new OpenMockConnection(
+              buildGrpcResponseMessages(failure: Failure.ConnectionException));
         });
         final client = new grpc.Client(dialer, null, timeout);
 
@@ -311,20 +310,17 @@ buildValidGrpcResponseData(
       : new MockGeneratedMessage().writeToBuffer();
   final int length = wrongLength ? 1 : message.length;
   final grpcData = new ByteData(5 + message.length)
-      ..setUint8(0, compressed ? 1 : 0)
-      ..setUint32(1, length)
-      ..buffer.asUint8List().setAll(5, message);
+    ..setUint8(0, compressed ? 1 : 0)
+    ..setUint32(1, length)
+    ..buffer.asUint8List().setAll(5, message);
   return grpcData.buffer.asUint8List();
 }
 
 class MockClient implements grpc.Client {
   var invokeService, invokeMethod, invokeRequest, invokeResponse;
 
-  Future<T> invoke<T extends protobuf.GeneratedMessage>(
-      String service,
-      String method,
-      protobuf.GeneratedMessage request,
-      T response) async {
+  Future<T> invoke<T extends protobuf.GeneratedMessage>(String service,
+      String method, protobuf.GeneratedMessage request, T response) async {
     invokeService = service;
     invokeMethod = method;
     invokeRequest = request;
@@ -332,7 +328,9 @@ class MockClient implements grpc.Client {
     return response;
   }
 
-  Future close() async { throw 'unsupported call'; }
+  Future close() async {
+    throw 'unsupported call';
+  }
 }
 
 class MockGeneratedMessage extends protobuf.GeneratedMessage {
@@ -364,15 +362,12 @@ class MockDialer implements grpc.Dialer {
   }
 }
 
-abstract class MockConnection
-    implements http2.ClientTransportConnection {
-
+abstract class MockConnection implements http2.ClientTransportConnection {
   Map<String, String> get usedHeaders => throw 'unsupported call';
   MockStream get usedMockStream => throw 'unsupported call';
   bool get wasTerminated => false;
 
-  MockStream makeRequest(List<http2.Header> headers,
-                         {bool endStream: false}) {
+  MockStream makeRequest(List<http2.Header> headers, {bool endStream: false}) {
     throw 'unsupported call';
   }
 
@@ -392,8 +387,6 @@ abstract class MockConnection
   set onActiveStateChanged(http2.ActiveStateHandler callback) {
     throw 'unsupported call';
   }
-
-
 }
 
 class OpenMockConnection extends MockConnection {
@@ -407,8 +400,7 @@ class OpenMockConnection extends MockConnection {
 
   OpenMockConnection(this.responseMessages);
 
-  MockStream makeRequest(List<http2.Header> headers,
-                         {bool endStream: false}) {
+  MockStream makeRequest(List<http2.Header> headers, {bool endStream: false}) {
     if (usedHeaders != null) throw 'Already have headers';
 
     usedHeaders = {};
@@ -469,7 +461,6 @@ class MockStream extends http2.ClientTransportStream {
   set onTerminated(void value(int v)) {
     throw 'unsupported call';
   }
-
 }
 
 class ThrowingMockAccessTokenProvider implements AccessTokenProvider {

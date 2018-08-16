@@ -8,12 +8,17 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class ScanRun_ExecutionState extends ProtobufEnum {
-  static const ScanRun_ExecutionState EXECUTION_STATE_UNSPECIFIED = const ScanRun_ExecutionState._(0, 'EXECUTION_STATE_UNSPECIFIED');
-  static const ScanRun_ExecutionState QUEUED = const ScanRun_ExecutionState._(1, 'QUEUED');
-  static const ScanRun_ExecutionState SCANNING = const ScanRun_ExecutionState._(2, 'SCANNING');
-  static const ScanRun_ExecutionState FINISHED = const ScanRun_ExecutionState._(3, 'FINISHED');
+  static const ScanRun_ExecutionState EXECUTION_STATE_UNSPECIFIED =
+      const ScanRun_ExecutionState._(0, 'EXECUTION_STATE_UNSPECIFIED');
+  static const ScanRun_ExecutionState QUEUED =
+      const ScanRun_ExecutionState._(1, 'QUEUED');
+  static const ScanRun_ExecutionState SCANNING =
+      const ScanRun_ExecutionState._(2, 'SCANNING');
+  static const ScanRun_ExecutionState FINISHED =
+      const ScanRun_ExecutionState._(3, 'FINISHED');
 
-  static const List<ScanRun_ExecutionState> values = const <ScanRun_ExecutionState> [
+  static const List<ScanRun_ExecutionState> values =
+      const <ScanRun_ExecutionState>[
     EXECUTION_STATE_UNSPECIFIED,
     QUEUED,
     SCANNING,
@@ -21,21 +26,27 @@ class ScanRun_ExecutionState extends ProtobufEnum {
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ScanRun_ExecutionState valueOf(int value) => _byValue[value] as ScanRun_ExecutionState;
+  static ScanRun_ExecutionState valueOf(int value) =>
+      _byValue[value] as ScanRun_ExecutionState;
   static void $checkItem(ScanRun_ExecutionState v) {
-    if (v is! ScanRun_ExecutionState) checkItemFailed(v, 'ScanRun_ExecutionState');
+    if (v is! ScanRun_ExecutionState)
+      checkItemFailed(v, 'ScanRun_ExecutionState');
   }
 
   const ScanRun_ExecutionState._(int v, String n) : super(v, n);
 }
 
 class ScanRun_ResultState extends ProtobufEnum {
-  static const ScanRun_ResultState RESULT_STATE_UNSPECIFIED = const ScanRun_ResultState._(0, 'RESULT_STATE_UNSPECIFIED');
-  static const ScanRun_ResultState SUCCESS = const ScanRun_ResultState._(1, 'SUCCESS');
-  static const ScanRun_ResultState ERROR = const ScanRun_ResultState._(2, 'ERROR');
-  static const ScanRun_ResultState KILLED = const ScanRun_ResultState._(3, 'KILLED');
+  static const ScanRun_ResultState RESULT_STATE_UNSPECIFIED =
+      const ScanRun_ResultState._(0, 'RESULT_STATE_UNSPECIFIED');
+  static const ScanRun_ResultState SUCCESS =
+      const ScanRun_ResultState._(1, 'SUCCESS');
+  static const ScanRun_ResultState ERROR =
+      const ScanRun_ResultState._(2, 'ERROR');
+  static const ScanRun_ResultState KILLED =
+      const ScanRun_ResultState._(3, 'KILLED');
 
-  static const List<ScanRun_ResultState> values = const <ScanRun_ResultState> [
+  static const List<ScanRun_ResultState> values = const <ScanRun_ResultState>[
     RESULT_STATE_UNSPECIFIED,
     SUCCESS,
     ERROR,
@@ -43,11 +54,11 @@ class ScanRun_ResultState extends ProtobufEnum {
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ScanRun_ResultState valueOf(int value) => _byValue[value] as ScanRun_ResultState;
+  static ScanRun_ResultState valueOf(int value) =>
+      _byValue[value] as ScanRun_ResultState;
   static void $checkItem(ScanRun_ResultState v) {
     if (v is! ScanRun_ResultState) checkItemFailed(v, 'ScanRun_ResultState');
   }
 
   const ScanRun_ResultState._(int v, String n) : super(v, n);
 }
-

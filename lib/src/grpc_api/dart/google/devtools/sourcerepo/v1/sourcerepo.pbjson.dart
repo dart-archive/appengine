@@ -13,7 +13,14 @@ const Repo$json = const {
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'size', '3': 2, '4': 1, '5': 3, '10': 'size'},
     const {'1': 'url', '3': 3, '4': 1, '5': 9, '10': 'url'},
-    const {'1': 'mirror_config', '3': 4, '4': 1, '5': 11, '6': '.google.devtools.sourcerepo.v1.MirrorConfig', '10': 'mirrorConfig'},
+    const {
+      '1': 'mirror_config',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.sourcerepo.v1.MirrorConfig',
+      '10': 'mirrorConfig'
+    },
   ],
 };
 
@@ -45,8 +52,21 @@ const ListReposRequest$json = const {
 const ListReposResponse$json = const {
   '1': 'ListReposResponse',
   '2': const [
-    const {'1': 'repos', '3': 1, '4': 3, '5': 11, '6': '.google.devtools.sourcerepo.v1.Repo', '10': 'repos'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'repos',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.sourcerepo.v1.Repo',
+      '10': 'repos'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -54,7 +74,14 @@ const CreateRepoRequest$json = const {
   '1': 'CreateRepoRequest',
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'repo', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.sourcerepo.v1.Repo', '10': 'repo'},
+    const {
+      '1': 'repo',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.sourcerepo.v1.Repo',
+      '10': 'repo'
+    },
   ],
 };
 
@@ -68,13 +95,48 @@ const DeleteRepoRequest$json = const {
 const SourceRepo$json = const {
   '1': 'SourceRepo',
   '2': const [
-    const {'1': 'ListRepos', '2': '.google.devtools.sourcerepo.v1.ListReposRequest', '3': '.google.devtools.sourcerepo.v1.ListReposResponse', '4': const {}},
-    const {'1': 'GetRepo', '2': '.google.devtools.sourcerepo.v1.GetRepoRequest', '3': '.google.devtools.sourcerepo.v1.Repo', '4': const {}},
-    const {'1': 'CreateRepo', '2': '.google.devtools.sourcerepo.v1.CreateRepoRequest', '3': '.google.devtools.sourcerepo.v1.Repo', '4': const {}},
-    const {'1': 'DeleteRepo', '2': '.google.devtools.sourcerepo.v1.DeleteRepoRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'SetIamPolicy', '2': '.google.iam.v1.SetIamPolicyRequest', '3': '.google.iam.v1.Policy', '4': const {}},
-    const {'1': 'GetIamPolicy', '2': '.google.iam.v1.GetIamPolicyRequest', '3': '.google.iam.v1.Policy', '4': const {}},
-    const {'1': 'TestIamPermissions', '2': '.google.iam.v1.TestIamPermissionsRequest', '3': '.google.iam.v1.TestIamPermissionsResponse', '4': const {}},
+    const {
+      '1': 'ListRepos',
+      '2': '.google.devtools.sourcerepo.v1.ListReposRequest',
+      '3': '.google.devtools.sourcerepo.v1.ListReposResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetRepo',
+      '2': '.google.devtools.sourcerepo.v1.GetRepoRequest',
+      '3': '.google.devtools.sourcerepo.v1.Repo',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateRepo',
+      '2': '.google.devtools.sourcerepo.v1.CreateRepoRequest',
+      '3': '.google.devtools.sourcerepo.v1.Repo',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteRepo',
+      '2': '.google.devtools.sourcerepo.v1.DeleteRepoRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'SetIamPolicy',
+      '2': '.google.iam.v1.SetIamPolicyRequest',
+      '3': '.google.iam.v1.Policy',
+      '4': const {}
+    },
+    const {
+      '1': 'GetIamPolicy',
+      '2': '.google.iam.v1.GetIamPolicyRequest',
+      '3': '.google.iam.v1.Policy',
+      '4': const {}
+    },
+    const {
+      '1': 'TestIamPermissions',
+      '2': '.google.iam.v1.TestIamPermissionsRequest',
+      '3': '.google.iam.v1.TestIamPermissionsResponse',
+      '4': const {}
+    },
   ],
 };
 
@@ -91,7 +153,8 @@ const SourceRepo$messageJson = const {
   '.google.iam.v1.Policy': $google$iam$v1.Policy$json,
   '.google.iam.v1.Binding': $google$iam$v1.Binding$json,
   '.google.iam.v1.GetIamPolicyRequest': $google$iam$v1.GetIamPolicyRequest$json,
-  '.google.iam.v1.TestIamPermissionsRequest': $google$iam$v1.TestIamPermissionsRequest$json,
-  '.google.iam.v1.TestIamPermissionsResponse': $google$iam$v1.TestIamPermissionsResponse$json,
+  '.google.iam.v1.TestIamPermissionsRequest':
+      $google$iam$v1.TestIamPermissionsRequest$json,
+  '.google.iam.v1.TestIamPermissionsResponse':
+      $google$iam$v1.TestIamPermissionsResponse$json,
 };
-

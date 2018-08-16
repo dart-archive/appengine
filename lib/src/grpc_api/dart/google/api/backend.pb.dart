@@ -10,13 +10,16 @@ import 'package:protobuf/protobuf.dart';
 
 class Backend extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Backend')
-    ..pp<BackendRule>(1, 'rules', PbFieldType.PM, BackendRule.$checkItem, BackendRule.create)
-    ..hasRequiredFields = false
-  ;
+    ..pp<BackendRule>(
+        1, 'rules', PbFieldType.PM, BackendRule.$checkItem, BackendRule.create)
+    ..hasRequiredFields = false;
 
   Backend() : super();
-  Backend.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Backend.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Backend.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Backend.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Backend clone() => new Backend()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Backend create() => new Backend();
@@ -25,6 +28,7 @@ class Backend extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyBackend();
     return _defaultInstance;
   }
+
   static Backend _defaultInstance;
   static void $checkItem(Backend v) {
     if (v is! Backend) checkItemFailed(v, 'Backend');
@@ -40,12 +44,15 @@ class BackendRule extends GeneratedMessage {
     ..aOS(1, 'selector')
     ..aOS(2, 'address')
     ..a<double>(3, 'deadline', PbFieldType.OD)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   BackendRule() : super();
-  BackendRule.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  BackendRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BackendRule.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  BackendRule.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   BackendRule clone() => new BackendRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BackendRule create() => new BackendRule();
@@ -54,26 +61,35 @@ class BackendRule extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyBackendRule();
     return _defaultInstance;
   }
+
   static BackendRule _defaultInstance;
   static void $checkItem(BackendRule v) {
     if (v is! BackendRule) checkItemFailed(v, 'BackendRule');
   }
 
   String get selector => $_getS(0, '');
-  set selector(String v) { $_setString(0, v); }
+  set selector(String v) {
+    $_setString(0, v);
+  }
+
   bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
   String get address => $_getS(1, '');
-  set address(String v) { $_setString(1, v); }
+  set address(String v) {
+    $_setString(1, v);
+  }
+
   bool hasAddress() => $_has(1);
   void clearAddress() => clearField(2);
 
   double get deadline => $_getN(2);
-  set deadline(double v) { $_setDouble(2, v); }
+  set deadline(double v) {
+    $_setDouble(2, v);
+  }
+
   bool hasDeadline() => $_has(2);
   void clearDeadline() => clearField(3);
 }
 
 class _ReadonlyBackendRule extends BackendRule with ReadonlyMessageMixin {}
-

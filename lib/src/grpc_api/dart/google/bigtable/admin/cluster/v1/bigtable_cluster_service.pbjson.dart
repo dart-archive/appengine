@@ -13,13 +13,48 @@ import '../../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 const BigtableClusterService$json = const {
   '1': 'BigtableClusterService',
   '2': const [
-    const {'1': 'ListZones', '2': '.google.bigtable.admin.cluster.v1.ListZonesRequest', '3': '.google.bigtable.admin.cluster.v1.ListZonesResponse', '4': const {}},
-    const {'1': 'GetCluster', '2': '.google.bigtable.admin.cluster.v1.GetClusterRequest', '3': '.google.bigtable.admin.cluster.v1.Cluster', '4': const {}},
-    const {'1': 'ListClusters', '2': '.google.bigtable.admin.cluster.v1.ListClustersRequest', '3': '.google.bigtable.admin.cluster.v1.ListClustersResponse', '4': const {}},
-    const {'1': 'CreateCluster', '2': '.google.bigtable.admin.cluster.v1.CreateClusterRequest', '3': '.google.bigtable.admin.cluster.v1.Cluster', '4': const {}},
-    const {'1': 'UpdateCluster', '2': '.google.bigtable.admin.cluster.v1.Cluster', '3': '.google.bigtable.admin.cluster.v1.Cluster', '4': const {}},
-    const {'1': 'DeleteCluster', '2': '.google.bigtable.admin.cluster.v1.DeleteClusterRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'UndeleteCluster', '2': '.google.bigtable.admin.cluster.v1.UndeleteClusterRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'ListZones',
+      '2': '.google.bigtable.admin.cluster.v1.ListZonesRequest',
+      '3': '.google.bigtable.admin.cluster.v1.ListZonesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetCluster',
+      '2': '.google.bigtable.admin.cluster.v1.GetClusterRequest',
+      '3': '.google.bigtable.admin.cluster.v1.Cluster',
+      '4': const {}
+    },
+    const {
+      '1': 'ListClusters',
+      '2': '.google.bigtable.admin.cluster.v1.ListClustersRequest',
+      '3': '.google.bigtable.admin.cluster.v1.ListClustersResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateCluster',
+      '2': '.google.bigtable.admin.cluster.v1.CreateClusterRequest',
+      '3': '.google.bigtable.admin.cluster.v1.Cluster',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateCluster',
+      '2': '.google.bigtable.admin.cluster.v1.Cluster',
+      '3': '.google.bigtable.admin.cluster.v1.Cluster',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteCluster',
+      '2': '.google.bigtable.admin.cluster.v1.DeleteClusterRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'UndeleteCluster',
+      '2': '.google.bigtable.admin.cluster.v1.UndeleteClusterRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
@@ -32,11 +67,15 @@ const BigtableClusterService$messageJson = const {
   '.google.longrunning.Operation': $google$longrunning.Operation$json,
   '.google.protobuf.Any': $google$protobuf.Any$json,
   '.google.rpc.Status': $google$rpc.Status$json,
-  '.google.bigtable.admin.cluster.v1.ListClustersRequest': ListClustersRequest$json,
-  '.google.bigtable.admin.cluster.v1.ListClustersResponse': ListClustersResponse$json,
-  '.google.bigtable.admin.cluster.v1.CreateClusterRequest': CreateClusterRequest$json,
-  '.google.bigtable.admin.cluster.v1.DeleteClusterRequest': DeleteClusterRequest$json,
+  '.google.bigtable.admin.cluster.v1.ListClustersRequest':
+      ListClustersRequest$json,
+  '.google.bigtable.admin.cluster.v1.ListClustersResponse':
+      ListClustersResponse$json,
+  '.google.bigtable.admin.cluster.v1.CreateClusterRequest':
+      CreateClusterRequest$json,
+  '.google.bigtable.admin.cluster.v1.DeleteClusterRequest':
+      DeleteClusterRequest$json,
   '.google.protobuf.Empty': $google$protobuf.Empty$json,
-  '.google.bigtable.admin.cluster.v1.UndeleteClusterRequest': UndeleteClusterRequest$json,
+  '.google.bigtable.admin.cluster.v1.UndeleteClusterRequest':
+      UndeleteClusterRequest$json,
 };
-

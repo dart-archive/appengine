@@ -33,26 +33,73 @@ const ListVoicesRequest$json = const {
 const ListVoicesResponse$json = const {
   '1': 'ListVoicesResponse',
   '2': const [
-    const {'1': 'voices', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.texttospeech.v1beta1.Voice', '10': 'voices'},
+    const {
+      '1': 'voices',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.texttospeech.v1beta1.Voice',
+      '10': 'voices'
+    },
   ],
 };
 
 const Voice$json = const {
   '1': 'Voice',
   '2': const [
-    const {'1': 'language_codes', '3': 1, '4': 3, '5': 9, '10': 'languageCodes'},
+    const {
+      '1': 'language_codes',
+      '3': 1,
+      '4': 3,
+      '5': 9,
+      '10': 'languageCodes'
+    },
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'ssml_gender', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.texttospeech.v1beta1.SsmlVoiceGender', '10': 'ssmlGender'},
-    const {'1': 'natural_sample_rate_hertz', '3': 4, '4': 1, '5': 5, '10': 'naturalSampleRateHertz'},
+    const {
+      '1': 'ssml_gender',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.texttospeech.v1beta1.SsmlVoiceGender',
+      '10': 'ssmlGender'
+    },
+    const {
+      '1': 'natural_sample_rate_hertz',
+      '3': 4,
+      '4': 1,
+      '5': 5,
+      '10': 'naturalSampleRateHertz'
+    },
   ],
 };
 
 const SynthesizeSpeechRequest$json = const {
   '1': 'SynthesizeSpeechRequest',
   '2': const [
-    const {'1': 'input', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.texttospeech.v1beta1.SynthesisInput', '10': 'input'},
-    const {'1': 'voice', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.texttospeech.v1beta1.VoiceSelectionParams', '10': 'voice'},
-    const {'1': 'audio_config', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.texttospeech.v1beta1.AudioConfig', '10': 'audioConfig'},
+    const {
+      '1': 'input',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.texttospeech.v1beta1.SynthesisInput',
+      '10': 'input'
+    },
+    const {
+      '1': 'voice',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.texttospeech.v1beta1.VoiceSelectionParams',
+      '10': 'voice'
+    },
+    const {
+      '1': 'audio_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.texttospeech.v1beta1.AudioConfig',
+      '10': 'audioConfig'
+    },
   ],
 };
 
@@ -72,18 +119,38 @@ const VoiceSelectionParams$json = const {
   '2': const [
     const {'1': 'language_code', '3': 1, '4': 1, '5': 9, '10': 'languageCode'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'ssml_gender', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.texttospeech.v1beta1.SsmlVoiceGender', '10': 'ssmlGender'},
+    const {
+      '1': 'ssml_gender',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.texttospeech.v1beta1.SsmlVoiceGender',
+      '10': 'ssmlGender'
+    },
   ],
 };
 
 const AudioConfig$json = const {
   '1': 'AudioConfig',
   '2': const [
-    const {'1': 'audio_encoding', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.texttospeech.v1beta1.AudioEncoding', '10': 'audioEncoding'},
+    const {
+      '1': 'audio_encoding',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.texttospeech.v1beta1.AudioEncoding',
+      '10': 'audioEncoding'
+    },
     const {'1': 'speaking_rate', '3': 2, '4': 1, '5': 1, '10': 'speakingRate'},
     const {'1': 'pitch', '3': 3, '4': 1, '5': 1, '10': 'pitch'},
     const {'1': 'volume_gain_db', '3': 4, '4': 1, '5': 1, '10': 'volumeGainDb'},
-    const {'1': 'sample_rate_hertz', '3': 5, '4': 1, '5': 5, '10': 'sampleRateHertz'},
+    const {
+      '1': 'sample_rate_hertz',
+      '3': 5,
+      '4': 1,
+      '5': 5,
+      '10': 'sampleRateHertz'
+    },
   ],
 };
 
@@ -97,19 +164,33 @@ const SynthesizeSpeechResponse$json = const {
 const TextToSpeech$json = const {
   '1': 'TextToSpeech',
   '2': const [
-    const {'1': 'ListVoices', '2': '.google.cloud.texttospeech.v1beta1.ListVoicesRequest', '3': '.google.cloud.texttospeech.v1beta1.ListVoicesResponse', '4': const {}},
-    const {'1': 'SynthesizeSpeech', '2': '.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest', '3': '.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse', '4': const {}},
+    const {
+      '1': 'ListVoices',
+      '2': '.google.cloud.texttospeech.v1beta1.ListVoicesRequest',
+      '3': '.google.cloud.texttospeech.v1beta1.ListVoicesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'SynthesizeSpeech',
+      '2': '.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest',
+      '3': '.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse',
+      '4': const {}
+    },
   ],
 };
 
 const TextToSpeech$messageJson = const {
-  '.google.cloud.texttospeech.v1beta1.ListVoicesRequest': ListVoicesRequest$json,
-  '.google.cloud.texttospeech.v1beta1.ListVoicesResponse': ListVoicesResponse$json,
+  '.google.cloud.texttospeech.v1beta1.ListVoicesRequest':
+      ListVoicesRequest$json,
+  '.google.cloud.texttospeech.v1beta1.ListVoicesResponse':
+      ListVoicesResponse$json,
   '.google.cloud.texttospeech.v1beta1.Voice': Voice$json,
-  '.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest': SynthesizeSpeechRequest$json,
+  '.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest':
+      SynthesizeSpeechRequest$json,
   '.google.cloud.texttospeech.v1beta1.SynthesisInput': SynthesisInput$json,
-  '.google.cloud.texttospeech.v1beta1.VoiceSelectionParams': VoiceSelectionParams$json,
+  '.google.cloud.texttospeech.v1beta1.VoiceSelectionParams':
+      VoiceSelectionParams$json,
   '.google.cloud.texttospeech.v1beta1.AudioConfig': AudioConfig$json,
-  '.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse': SynthesizeSpeechResponse$json,
+  '.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse':
+      SynthesizeSpeechResponse$json,
 };
-

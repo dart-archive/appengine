@@ -12,4 +12,3 @@ const TimeOfDay$json = const {
     const {'1': 'nanos', '3': 4, '4': 1, '5': 5, '10': 'nanos'},
   ],
 };
-

@@ -17,19 +17,24 @@ abstract class EmbeddedAssistantServiceBase extends GeneratedService {
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'Assist': return new AssistRequest();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'Assist':
+        return new AssistRequest();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'Assist': return this.assist(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'Assist':
+        return this.assist(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => EmbeddedAssistant$json;
-  Map<String, Map<String, dynamic>> get $messageJson => EmbeddedAssistant$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson =>
+      EmbeddedAssistant$messageJson;
 }
-

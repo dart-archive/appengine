@@ -10,12 +10,13 @@ import 'package:protobuf/protobuf.dart';
 
 class Empty extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Empty')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   Empty() : super();
-  Empty.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Empty.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Empty.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Empty.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Empty clone() => new Empty()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Empty create() => new Empty();
@@ -24,6 +25,7 @@ class Empty extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyEmpty();
     return _defaultInstance;
   }
+
   static Empty _defaultInstance;
   static void $checkItem(Empty v) {
     if (v is! Empty) checkItemFailed(v, 'Empty');
@@ -31,4 +33,3 @@ class Empty extends GeneratedMessage {
 }
 
 class _ReadonlyEmpty extends Empty with ReadonlyMessageMixin {}
-

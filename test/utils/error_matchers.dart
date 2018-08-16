@@ -17,7 +17,8 @@ const isServiceError = const TypeMatcher<ServiceError>();
 const isApplicationError = const TypeMatcher<AppEngineError>();
 const isAppEngineApplicationError = const TypeMatcher<ApplicationError>();
 
-const isDatastoreApplicationError = const TypeMatcher<datastore.ApplicationError>();
+const isDatastoreApplicationError =
+    const TypeMatcher<datastore.ApplicationError>();
 const isTransactionAbortedError =
     const TypeMatcher<datastore.TransactionAbortedError>();
 const isNeedIndexError = const TypeMatcher<datastore.NeedIndexError>();

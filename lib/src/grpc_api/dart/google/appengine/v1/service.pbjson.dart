@@ -8,15 +8,36 @@ const Service$json = const {
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'id', '3': 2, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'split', '3': 3, '4': 1, '5': 11, '6': '.google.appengine.v1.TrafficSplit', '10': 'split'},
+    const {
+      '1': 'split',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.TrafficSplit',
+      '10': 'split'
+    },
   ],
 };
 
 const TrafficSplit$json = const {
   '1': 'TrafficSplit',
   '2': const [
-    const {'1': 'shard_by', '3': 1, '4': 1, '5': 14, '6': '.google.appengine.v1.TrafficSplit.ShardBy', '10': 'shardBy'},
-    const {'1': 'allocations', '3': 2, '4': 3, '5': 11, '6': '.google.appengine.v1.TrafficSplit.AllocationsEntry', '10': 'allocations'},
+    const {
+      '1': 'shard_by',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.appengine.v1.TrafficSplit.ShardBy',
+      '10': 'shardBy'
+    },
+    const {
+      '1': 'allocations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.v1.TrafficSplit.AllocationsEntry',
+      '10': 'allocations'
+    },
   ],
   '3': const [TrafficSplit_AllocationsEntry$json],
   '4': const [TrafficSplit_ShardBy$json],
@@ -39,4 +60,3 @@ const TrafficSplit_ShardBy$json = const {
     const {'1': 'IP', '2': 2},
   ],
 };
-

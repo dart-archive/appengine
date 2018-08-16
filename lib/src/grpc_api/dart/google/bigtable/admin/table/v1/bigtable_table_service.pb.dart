@@ -19,39 +19,62 @@ class BigtableTableServiceApi {
 
   Future<Table> createTable(ClientContext ctx, CreateTableRequest request) {
     var emptyResponse = new Table();
-    return _client.invoke<Table>(ctx, 'BigtableTableService', 'CreateTable', request, emptyResponse);
+    return _client.invoke<Table>(
+        ctx, 'BigtableTableService', 'CreateTable', request, emptyResponse);
   }
-  Future<ListTablesResponse> listTables(ClientContext ctx, ListTablesRequest request) {
+
+  Future<ListTablesResponse> listTables(
+      ClientContext ctx, ListTablesRequest request) {
     var emptyResponse = new ListTablesResponse();
-    return _client.invoke<ListTablesResponse>(ctx, 'BigtableTableService', 'ListTables', request, emptyResponse);
+    return _client.invoke<ListTablesResponse>(
+        ctx, 'BigtableTableService', 'ListTables', request, emptyResponse);
   }
+
   Future<Table> getTable(ClientContext ctx, GetTableRequest request) {
     var emptyResponse = new Table();
-    return _client.invoke<Table>(ctx, 'BigtableTableService', 'GetTable', request, emptyResponse);
+    return _client.invoke<Table>(
+        ctx, 'BigtableTableService', 'GetTable', request, emptyResponse);
   }
-  Future<$google$protobuf.Empty> deleteTable(ClientContext ctx, DeleteTableRequest request) {
+
+  Future<$google$protobuf.Empty> deleteTable(
+      ClientContext ctx, DeleteTableRequest request) {
     var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'BigtableTableService', 'DeleteTable', request, emptyResponse);
+    return _client.invoke<$google$protobuf.Empty>(
+        ctx, 'BigtableTableService', 'DeleteTable', request, emptyResponse);
   }
-  Future<$google$protobuf.Empty> renameTable(ClientContext ctx, RenameTableRequest request) {
+
+  Future<$google$protobuf.Empty> renameTable(
+      ClientContext ctx, RenameTableRequest request) {
     var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'BigtableTableService', 'RenameTable', request, emptyResponse);
+    return _client.invoke<$google$protobuf.Empty>(
+        ctx, 'BigtableTableService', 'RenameTable', request, emptyResponse);
   }
-  Future<ColumnFamily> createColumnFamily(ClientContext ctx, CreateColumnFamilyRequest request) {
+
+  Future<ColumnFamily> createColumnFamily(
+      ClientContext ctx, CreateColumnFamilyRequest request) {
     var emptyResponse = new ColumnFamily();
-    return _client.invoke<ColumnFamily>(ctx, 'BigtableTableService', 'CreateColumnFamily', request, emptyResponse);
+    return _client.invoke<ColumnFamily>(ctx, 'BigtableTableService',
+        'CreateColumnFamily', request, emptyResponse);
   }
-  Future<ColumnFamily> updateColumnFamily(ClientContext ctx, ColumnFamily request) {
+
+  Future<ColumnFamily> updateColumnFamily(
+      ClientContext ctx, ColumnFamily request) {
     var emptyResponse = new ColumnFamily();
-    return _client.invoke<ColumnFamily>(ctx, 'BigtableTableService', 'UpdateColumnFamily', request, emptyResponse);
+    return _client.invoke<ColumnFamily>(ctx, 'BigtableTableService',
+        'UpdateColumnFamily', request, emptyResponse);
   }
-  Future<$google$protobuf.Empty> deleteColumnFamily(ClientContext ctx, DeleteColumnFamilyRequest request) {
+
+  Future<$google$protobuf.Empty> deleteColumnFamily(
+      ClientContext ctx, DeleteColumnFamilyRequest request) {
     var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'BigtableTableService', 'DeleteColumnFamily', request, emptyResponse);
+    return _client.invoke<$google$protobuf.Empty>(ctx, 'BigtableTableService',
+        'DeleteColumnFamily', request, emptyResponse);
   }
-  Future<$google$protobuf.Empty> bulkDeleteRows(ClientContext ctx, BulkDeleteRowsRequest request) {
+
+  Future<$google$protobuf.Empty> bulkDeleteRows(
+      ClientContext ctx, BulkDeleteRowsRequest request) {
     var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'BigtableTableService', 'BulkDeleteRows', request, emptyResponse);
+    return _client.invoke<$google$protobuf.Empty>(
+        ctx, 'BigtableTableService', 'BulkDeleteRows', request, emptyResponse);
   }
 }
-
