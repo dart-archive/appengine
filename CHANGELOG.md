@@ -1,3 +1,7 @@
+## 0.5.1
+
+* Correct root path for serving assets.
+
 ## 0.5.0
 
 * Support for Dart 2.0 constants and updated gcloud.
