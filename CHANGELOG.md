@@ -1,3 +1,7 @@
+## 0.5.1+1
+
+* Support latest `pkg:http` and `pkg:http2`.
+
 ## 0.5.1
 
 * Correct root path for serving assets.
