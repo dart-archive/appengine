@@ -1,7 +1,14 @@
 ## 0.6.0
 
- * Removed poorly documented assets support with broken tests.
-   (Users can just roll their own logic for serving static files).
+**Breaking changes:**
+ * Removed poorly documented assets support with broken tests.  
+ * Removed memcache as the service was never made it past alpha.
+
+Users of memcache should consider using
+[Cloud Memorystore](https://cloud.google.com/memorystore/) instead. This comes
+with a redis interface for which there are multiple packages available on pub.
+Serving assets is just a matter of sending a file from disk. This is easy to do
+without the logic that this package used to contain.
 
 ## 0.5.1+1
 

@@ -8,7 +8,6 @@ import 'dart:async';
 
 import 'package:gcloud/db.dart';
 import 'package:gcloud/storage.dart';
-import 'package:memcache/memcache.dart';
 
 import 'logging.dart';
 
@@ -36,7 +35,6 @@ class Services {
   final DatastoreDB db;
   final Storage storage;
   final Logging logging;
-  final Memcache memcache;
 
-  Services(this.db, this.storage, this.logging, this.memcache);
+  Services(this.db, this.storage, this.logging);
 }
