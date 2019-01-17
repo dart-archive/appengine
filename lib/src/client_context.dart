@@ -16,12 +16,12 @@ abstract class ClientContext {
   /// Whether the application is currently running in the development
   /// environment.
   bool get isDevelopmentEnvironment;
+
   /// Whether the application is currently running in the production
   /// environment.
   bool get isProductionEnvironment;
 
   Services get services;
-  Assets get assets;
 
   /// The `TRACE_ID` value from the `X-Cloud-Trace-Context` request header.
   ///
@@ -38,27 +38,5 @@ class Services {
   final Logging logging;
   final Memcache memcache;
 
-  Services(this.db, this.storage, this.logging,this.memcache);
-}
-
-class AssetError implements Exception {
-  final String message;
-
-  AssetError(this.message);
-
-  String toString() => "AssetError: $message";
-}
-
-abstract class Assets {
-  /**
-   * Read an asset. If [path] is not specified the path
-   * from the active request is used.
-   */
-  Future<Stream<List<int>>> read([String path]);
-
-  /**
-   * Serve a asset to the active response. If [path]
-   * is not specified the path from the active request is used.
-   */
-  void serve([String path]);
+  Services(this.db, this.storage, this.logging, this.memcache);
 }

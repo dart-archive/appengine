@@ -1,3 +1,8 @@
+## 0.6.0
+
+ * Removed poorly documented assets support with broken tests.
+   (Users can just roll their own logic for serving static files).
+
 ## 0.5.1+1
 
 * Support latest `pkg:http` and `pkg:http2`.
