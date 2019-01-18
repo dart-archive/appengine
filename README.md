@@ -147,34 +147,6 @@ You can find the URL to the version that got deployed
 in the output of `gcloud app deploy` (as well as via the
 [Cloud Console](https://console.cloud.google.com) under `AppEngine > Versions`).
 
-
-## Using memcache via memcached
-
-By default, the `memcacheService` in `package:appengine` is a NOP – it does not
-perform any caching – unless a memcache service is found at the default port –
-`localhost:11211`.
-
-App Engine Flexible Environment doesn't have a memcache service at the moment,
-but it is possible to simply install a `memcached` inside the Docker container.
-
-Update the `Dockerfile` with the installation of `memcached`:
-
-```Dockerfile
-FROM ...
-
-# We install memcached and remove the apt-index again to keep the
-# docker image diff small.
-RUN apt-get update && \
-    apt-get install -y memcached && \
-    rm -rf /var/lib/apt/lists/*
-
-...
-
-CMD []
-ENTRYPOINT service memcached start && sleep 1 && /bin/bash /dart_runtime/dart_run.sh
-```
-
-
 ## Using the datastore emulator
 
 The gcloud sdk provides an easy-to-use datastore emulator. The emulator can be

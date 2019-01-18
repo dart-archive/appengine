@@ -15,16 +15,12 @@ import 'package:gcloud/service_scope.dart' as ss;
 import 'package:gcloud/storage.dart' as storage;
 import 'package:googleapis_auth/auth_io.dart' as auth;
 import 'package:http/http.dart' as http;
-import 'package:memcache/memcache.dart' as memcache;
-import 'package:memcache/memcache_raw.dart' as memcache_raw;
 import 'package:path/path.dart' as p;
 import 'package:stack_trace/stack_trace.dart';
 
 import 'errors.dart' as errors;
 import 'logging.dart' as logging;
-import 'memcache.dart' as memcache_interface;
 
-import 'api_impl/nop_memcache_impl.dart' as nop_memcache_impl;
 import 'api_impl/stderr_logging_impl.dart' as stderr_logging_impl;
 import 'appengine_context.dart';
 import 'client_context.dart';
@@ -110,7 +106,6 @@ Future _withAppEngineServicesInternal(
     datastore.registerDatastoreService(bgServices.db.datastore);
     storage.registerStorageService(bgServices.storage);
     logging.registerLoggingService(bgServices.logging);
-    memcache_interface.registerMemcacheService(bgServices.memcache);
 
     return callback(contextRegistry);
   });
@@ -185,13 +180,10 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final storageService =
       await _obtainStorageService(context.applicationID, serviceAccount);
 
-  final memcacheService =
-      await _obtainMemcacheInstance(loggerFactory.newBackgroundLogger());
   final dbService = await _obtainDatastoreService(
       context.applicationID, dbEmulatorHost, serviceAccount);
 
-  return new ContextRegistry(
-      loggerFactory, dbService, storageService, memcacheService, context);
+  return new ContextRegistry(loggerFactory, dbService, storageService, context);
 }
 
 /// Obtains a gRPC-based datastore implementation.
@@ -234,86 +226,6 @@ Future<db.DatastoreDB> _obtainDatastoreService(
   final rawDatastore =
       new grpc_datastore_impl.GrpcDatastoreImpl(grpcClient, projectId);
   return new db.DatastoreDB(rawDatastore, modelDB: new db.ModelDBImpl());
-}
-
-/// Attempts to find out if there is a memcached server running on localhost
-/// with the default port (be it on compute engine or in local development).
-///
-/// If we were unable to locate a locally running memcached this function will
-/// return a dummy NOP memcache instance.
-///
-/// The returned [memcache.Memcache] will be usable within the current service
-/// scope.
-Future<memcache.Memcache> _obtainMemcacheInstance(Logging logging) async {
-  // These are the environment variables available within the AppEngine Flex
-  // Docker container when Memcache support is enabled.
-  //
-  // NOTE: As of 2017-09-08 this is an alpha feature – functionality may change.
-  const hostKey = 'GAE_MEMCACHE_HOST';
-  const portKey = 'GAE_MEMCACHE_PORT';
-  final hostVar = Platform.environment[hostKey];
-  final hostPort = Platform.environment[portKey];
-
-  if (hostVar != null && hostPort != null) {
-    final portNumber = int.parse(hostPort);
-    final instance = await _tryMemcacheInstance(hostVar, portNumber, logging);
-    if (instance != null) {
-      return instance;
-    }
-  }
-
-  const int defaultMemcachedPort = 11211;
-  final instance =
-      await _tryMemcacheInstance('localhost', defaultMemcachedPort, logging);
-  if (instance != null) {
-    return instance;
-  }
-
-  logging.debug('Falling back to non-caching memcache implementation.');
-  final nopMemcache = new nop_memcache_impl.NopMemcacheRpcImpl();
-  return new memcache.Memcache.fromRaw(nopMemcache);
-}
-
-Future<memcache.Memcache> _tryMemcacheInstance(
-    String host, int port, Logging logging) async {
-  final nowMicros = new DateTime.now().microsecondsSinceEpoch;
-  final String testKey = '__test_key_$nowMicros';
-  final testValue = 'fobar-$nowMicros';
-
-  logging.debug('Attempting to connect to memcache at $host:$port');
-  var rawMemcache = new memcache_raw.BinaryMemcacheProtocol(host, port);
-  try {
-    final memcacheService = new memcache.Memcache.fromRaw(rawMemcache);
-
-    // Do a store/read attempt (which will trigger the real tcp connection) and
-    // ensure it caches a key. If everything is successful, we'll return the
-    // instance.
-    await memcacheService.set(testKey, testValue);
-    if (await memcacheService.get(testKey) == testValue) {
-      // The test was successful, so we'll cleanup & ensure to close the client
-      // once we go out of the current service scope and return the instance.
-      await memcacheService.remove(testKey);
-      ss.registerScopeExitCallback(rawMemcache.close);
-      logging.info('Connected to memcache at $host:$port');
-      return memcacheService;
-    }
-  } catch (e, stack) {
-    var stackIndented = LineSplitter
-        .split(Trace.format(stack, terse: true))
-        .map((l) => '  $l')
-        .join('\n');
-
-    logging.warning('Could not connect to memcache instance at $host:$port\n'
-        '$e\n$stackIndented');
-  }
-
-  // We were unable to connect to a memcached server running on localhost, so
-  // we'll fall back to a dummy NOP memcache instance.
-  if (rawMemcache != null) {
-    await rawMemcache.close();
-  }
-
-  return null;
 }
 
 /// Creates a storage service using the service account credentials (if given)

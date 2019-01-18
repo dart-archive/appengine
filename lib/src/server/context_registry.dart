@@ -7,7 +7,6 @@ library appengine.context_registry;
 import 'dart:async';
 import 'dart:io';
 
-import 'package:memcache/memcache.dart' as memcache;
 import 'package:gcloud/db.dart' as db;
 import 'package:gcloud/storage.dart' as storage;
 
@@ -32,13 +31,12 @@ class ContextRegistry {
   final LoggerFactory _loggingFactory;
   final db.DatastoreDB _db;
   final storage.Storage _storage;
-  final memcache.Memcache _memcache;
   final AppengineContext _appengineContext;
 
   final Map<HttpRequest, ClientContext> _request2context = {};
 
-  ContextRegistry(this._loggingFactory, this._db, this._storage, this._memcache,
-      this._appengineContext);
+  ContextRegistry(
+      this._loggingFactory, this._db, this._storage, this._appengineContext);
 
   bool get isDevelopmentEnvironment {
     return _appengineContext.isDevelopmentEnvironment;
@@ -110,7 +108,7 @@ class ContextRegistry {
       loggingService = _loggingFactory.newBackgroundLogger();
     }
 
-    return new Services(_db, _storage, loggingService, _memcache);
+    return new Services(_db, _storage, loggingService);
   }
 }
 
