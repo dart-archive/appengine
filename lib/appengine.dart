@@ -66,6 +66,35 @@ Future runAppEngine(void handler(HttpRequest request),
 }
 
 /**
+ * Returns `true`, if the incoming request is an AppEngine cron job request.
+ * 
+ * To schedule cron jobs for your application, you must create a `cron.yaml`
+ * file in the project root alongside your `app.yaml`. The following is an
+ * example of such a `cron.yaml` file:
+ * ```yaml
+ * cron:
+ * - description: 'daily database cleanup job'
+ *   url: '/tasks/database-cleanup'
+ *   schedule: 'every 24 hours'
+ *   target: 'default'
+ * ```
+ * 
+ * When the cronjob from the example above is triggered AppEngine will send
+ * an HTTP request to the `default` service for the resource
+ * `/tasks/database-cleanup`. In practice anyone can instigate such a request,
+ * but AppEngine will send the request from `'10.0.0.1'` and include a special
+ * header. This function will validate the origin of the [request] to
+ * ensure that it does indeed originate from
+ * [AppEngine's cron job scheduler][1]. 
+ * 
+ * [1]: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#validating_cron_requests
+ */
+bool isCronJobRequest(HttpRequest request) {
+  return request.headers['X-Appengine-Cron'].contains('true') &&
+      request.connectionInfo.remoteAddress == InternetAddress('10.0.0.1');
+}
+
+/**
  * Runs [callback] inside a new service scope with appengine services added.
  *
  * The services available to `callback` are all non-request specific appengine

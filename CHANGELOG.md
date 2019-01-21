@@ -1,3 +1,8 @@
+## 0.6.1
+
+ * Added `isCronJonRequest` as a helper method for determining if a request
+   originates from the AppEngine cronjob scheduler.
+
 ## 0.6.0
 
 **Breaking changes:**
