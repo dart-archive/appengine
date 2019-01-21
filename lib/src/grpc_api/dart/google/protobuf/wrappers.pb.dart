@@ -12,12 +12,15 @@ import 'package:protobuf/protobuf.dart';
 class DoubleValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DoubleValue')
     ..a<double>(1, 'value', PbFieldType.OD)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DoubleValue() : super();
-  DoubleValue.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DoubleValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DoubleValue.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DoubleValue.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   DoubleValue clone() => new DoubleValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DoubleValue create() => new DoubleValue();
@@ -26,13 +29,17 @@ class DoubleValue extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyDoubleValue();
     return _defaultInstance;
   }
+
   static DoubleValue _defaultInstance;
   static void $checkItem(DoubleValue v) {
     if (v is! DoubleValue) checkItemFailed(v, 'DoubleValue');
   }
 
   double get value => $_getN(0);
-  set value(double v) { $_setDouble(0, v); }
+  set value(double v) {
+    $_setDouble(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
@@ -42,12 +49,14 @@ class _ReadonlyDoubleValue extends DoubleValue with ReadonlyMessageMixin {}
 class FloatValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('FloatValue')
     ..a<double>(1, 'value', PbFieldType.OF)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   FloatValue() : super();
-  FloatValue.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  FloatValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  FloatValue.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  FloatValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   FloatValue clone() => new FloatValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static FloatValue create() => new FloatValue();
@@ -56,13 +65,17 @@ class FloatValue extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyFloatValue();
     return _defaultInstance;
   }
+
   static FloatValue _defaultInstance;
   static void $checkItem(FloatValue v) {
     if (v is! FloatValue) checkItemFailed(v, 'FloatValue');
   }
 
   double get value => $_getN(0);
-  set value(double v) { $_setFloat(0, v); }
+  set value(double v) {
+    $_setFloat(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
@@ -72,12 +85,14 @@ class _ReadonlyFloatValue extends FloatValue with ReadonlyMessageMixin {}
 class Int64Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Int64Value')
     ..aInt64(1, 'value')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   Int64Value() : super();
-  Int64Value.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Int64Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Int64Value.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Int64Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Int64Value clone() => new Int64Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Int64Value create() => new Int64Value();
@@ -86,13 +101,17 @@ class Int64Value extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyInt64Value();
     return _defaultInstance;
   }
+
   static Int64Value _defaultInstance;
   static void $checkItem(Int64Value v) {
     if (v is! Int64Value) checkItemFailed(v, 'Int64Value');
   }
 
   Int64 get value => $_getI64(0);
-  set value(Int64 v) { $_setInt64(0, v); }
+  set value(Int64 v) {
+    $_setInt64(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
@@ -102,12 +121,15 @@ class _ReadonlyInt64Value extends Int64Value with ReadonlyMessageMixin {}
 class UInt64Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UInt64Value')
     ..a<Int64>(1, 'value', PbFieldType.OU6, Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   UInt64Value() : super();
-  UInt64Value.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  UInt64Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UInt64Value.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  UInt64Value.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   UInt64Value clone() => new UInt64Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UInt64Value create() => new UInt64Value();
@@ -116,13 +138,17 @@ class UInt64Value extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyUInt64Value();
     return _defaultInstance;
   }
+
   static UInt64Value _defaultInstance;
   static void $checkItem(UInt64Value v) {
     if (v is! UInt64Value) checkItemFailed(v, 'UInt64Value');
   }
 
   Int64 get value => $_getI64(0);
-  set value(Int64 v) { $_setInt64(0, v); }
+  set value(Int64 v) {
+    $_setInt64(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
@@ -132,12 +158,14 @@ class _ReadonlyUInt64Value extends UInt64Value with ReadonlyMessageMixin {}
 class Int32Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Int32Value')
     ..a<int>(1, 'value', PbFieldType.O3)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   Int32Value() : super();
-  Int32Value.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Int32Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Int32Value.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Int32Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Int32Value clone() => new Int32Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Int32Value create() => new Int32Value();
@@ -146,13 +174,17 @@ class Int32Value extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyInt32Value();
     return _defaultInstance;
   }
+
   static Int32Value _defaultInstance;
   static void $checkItem(Int32Value v) {
     if (v is! Int32Value) checkItemFailed(v, 'Int32Value');
   }
 
   int get value => $_get(0, 0);
-  set value(int v) { $_setSignedInt32(0, v); }
+  set value(int v) {
+    $_setSignedInt32(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
@@ -162,12 +194,15 @@ class _ReadonlyInt32Value extends Int32Value with ReadonlyMessageMixin {}
 class UInt32Value extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UInt32Value')
     ..a<int>(1, 'value', PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   UInt32Value() : super();
-  UInt32Value.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  UInt32Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UInt32Value.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  UInt32Value.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   UInt32Value clone() => new UInt32Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UInt32Value create() => new UInt32Value();
@@ -176,13 +211,17 @@ class UInt32Value extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyUInt32Value();
     return _defaultInstance;
   }
+
   static UInt32Value _defaultInstance;
   static void $checkItem(UInt32Value v) {
     if (v is! UInt32Value) checkItemFailed(v, 'UInt32Value');
   }
 
   int get value => $_get(0, 0);
-  set value(int v) { $_setUnsignedInt32(0, v); }
+  set value(int v) {
+    $_setUnsignedInt32(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
@@ -192,12 +231,14 @@ class _ReadonlyUInt32Value extends UInt32Value with ReadonlyMessageMixin {}
 class BoolValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BoolValue')
     ..aOB(1, 'value')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   BoolValue() : super();
-  BoolValue.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  BoolValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BoolValue.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  BoolValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   BoolValue clone() => new BoolValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BoolValue create() => new BoolValue();
@@ -206,13 +247,17 @@ class BoolValue extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyBoolValue();
     return _defaultInstance;
   }
+
   static BoolValue _defaultInstance;
   static void $checkItem(BoolValue v) {
     if (v is! BoolValue) checkItemFailed(v, 'BoolValue');
   }
 
   bool get value => $_get(0, false);
-  set value(bool v) { $_setBool(0, v); }
+  set value(bool v) {
+    $_setBool(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
@@ -222,12 +267,15 @@ class _ReadonlyBoolValue extends BoolValue with ReadonlyMessageMixin {}
 class StringValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('StringValue')
     ..aOS(1, 'value')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   StringValue() : super();
-  StringValue.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  StringValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  StringValue.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  StringValue.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   StringValue clone() => new StringValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static StringValue create() => new StringValue();
@@ -236,13 +284,17 @@ class StringValue extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyStringValue();
     return _defaultInstance;
   }
+
   static StringValue _defaultInstance;
   static void $checkItem(StringValue v) {
     if (v is! StringValue) checkItemFailed(v, 'StringValue');
   }
 
   String get value => $_getS(0, '');
-  set value(String v) { $_setString(0, v); }
+  set value(String v) {
+    $_setString(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
@@ -252,12 +304,14 @@ class _ReadonlyStringValue extends StringValue with ReadonlyMessageMixin {}
 class BytesValue extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('BytesValue')
     ..a<List<int>>(1, 'value', PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   BytesValue() : super();
-  BytesValue.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  BytesValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BytesValue.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  BytesValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   BytesValue clone() => new BytesValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BytesValue create() => new BytesValue();
@@ -266,16 +320,19 @@ class BytesValue extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyBytesValue();
     return _defaultInstance;
   }
+
   static BytesValue _defaultInstance;
   static void $checkItem(BytesValue v) {
     if (v is! BytesValue) checkItemFailed(v, 'BytesValue');
   }
 
   List<int> get value => $_getN(0);
-  set value(List<int> v) { $_setBytes(0, v); }
+  set value(List<int> v) {
+    $_setBytes(0, v);
+  }
+
   bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 }
 
 class _ReadonlyBytesValue extends BytesValue with ReadonlyMessageMixin {}
-

@@ -25,4 +25,3 @@ const Code$json = const {
     const {'1': 'DATA_LOSS', '2': 15},
   ],
 };
-

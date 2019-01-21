@@ -22,8 +22,22 @@ const NormalizedVertex$json = const {
 const BoundingPoly$json = const {
   '1': 'BoundingPoly',
   '2': const [
-    const {'1': 'vertices', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1p2beta1.Vertex', '10': 'vertices'},
-    const {'1': 'normalized_vertices', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.vision.v1p2beta1.NormalizedVertex', '10': 'normalizedVertices'},
+    const {
+      '1': 'vertices',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1p2beta1.Vertex',
+      '10': 'vertices'
+    },
+    const {
+      '1': 'normalized_vertices',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1p2beta1.NormalizedVertex',
+      '10': 'normalizedVertices'
+    },
   ],
 };
 
@@ -35,4 +49,3 @@ const Position$json = const {
     const {'1': 'z', '3': 3, '4': 1, '5': 2, '10': 'z'},
   ],
 };
-

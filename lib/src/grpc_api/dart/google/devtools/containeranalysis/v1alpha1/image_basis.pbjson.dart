@@ -5,13 +5,26 @@
 
 const DockerImage$json = const {
   '1': 'DockerImage',
-  '3': const [DockerImage_Layer$json, DockerImage_Fingerprint$json, DockerImage_Basis$json, DockerImage_Derived$json],
+  '3': const [
+    DockerImage_Layer$json,
+    DockerImage_Fingerprint$json,
+    DockerImage_Basis$json,
+    DockerImage_Derived$json
+  ],
 };
 
 const DockerImage_Layer$json = const {
   '1': 'Layer',
   '2': const [
-    const {'1': 'directive', '3': 1, '4': 1, '5': 14, '6': '.google.devtools.containeranalysis.v1alpha1.DockerImage.Layer.Directive', '10': 'directive'},
+    const {
+      '1': 'directive',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.devtools.containeranalysis.v1alpha1.DockerImage.Layer.Directive',
+      '10': 'directive'
+    },
     const {'1': 'arguments', '3': 2, '4': 1, '5': 9, '10': 'arguments'},
   ],
   '4': const [DockerImage_Layer_Directive$json],
@@ -54,17 +67,45 @@ const DockerImage_Basis$json = const {
   '1': 'Basis',
   '2': const [
     const {'1': 'resource_url', '3': 1, '4': 1, '5': 9, '10': 'resourceUrl'},
-    const {'1': 'fingerprint', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.containeranalysis.v1alpha1.DockerImage.Fingerprint', '10': 'fingerprint'},
+    const {
+      '1': 'fingerprint',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.devtools.containeranalysis.v1alpha1.DockerImage.Fingerprint',
+      '10': 'fingerprint'
+    },
   ],
 };
 
 const DockerImage_Derived$json = const {
   '1': 'Derived',
   '2': const [
-    const {'1': 'fingerprint', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.containeranalysis.v1alpha1.DockerImage.Fingerprint', '10': 'fingerprint'},
+    const {
+      '1': 'fingerprint',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.devtools.containeranalysis.v1alpha1.DockerImage.Fingerprint',
+      '10': 'fingerprint'
+    },
     const {'1': 'distance', '3': 2, '4': 1, '5': 13, '10': 'distance'},
-    const {'1': 'layer_info', '3': 3, '4': 3, '5': 11, '6': '.google.devtools.containeranalysis.v1alpha1.DockerImage.Layer', '10': 'layerInfo'},
-    const {'1': 'base_resource_url', '3': 4, '4': 1, '5': 9, '10': 'baseResourceUrl'},
+    const {
+      '1': 'layer_info',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.containeranalysis.v1alpha1.DockerImage.Layer',
+      '10': 'layerInfo'
+    },
+    const {
+      '1': 'base_resource_url',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'baseResourceUrl'
+    },
   ],
 };
-

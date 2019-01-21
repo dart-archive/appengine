@@ -11,7 +11,7 @@ class VersionView extends ProtobufEnum {
   static const VersionView BASIC = const VersionView._(0, 'BASIC');
   static const VersionView FULL = const VersionView._(1, 'FULL');
 
-  static const List<VersionView> values = const <VersionView> [
+  static const List<VersionView> values = const <VersionView>[
     BASIC,
     FULL,
   ];
@@ -24,4 +24,3 @@ class VersionView extends ProtobufEnum {
 
   const VersionView._(int v, String n) : super(v, n);
 }
-

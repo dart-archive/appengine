@@ -8,20 +8,27 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class DocumentTransform_FieldTransform_ServerValue extends ProtobufEnum {
-  static const DocumentTransform_FieldTransform_ServerValue SERVER_VALUE_UNSPECIFIED = const DocumentTransform_FieldTransform_ServerValue._(0, 'SERVER_VALUE_UNSPECIFIED');
-  static const DocumentTransform_FieldTransform_ServerValue REQUEST_TIME = const DocumentTransform_FieldTransform_ServerValue._(1, 'REQUEST_TIME');
+  static const DocumentTransform_FieldTransform_ServerValue
+      SERVER_VALUE_UNSPECIFIED =
+      const DocumentTransform_FieldTransform_ServerValue._(
+          0, 'SERVER_VALUE_UNSPECIFIED');
+  static const DocumentTransform_FieldTransform_ServerValue REQUEST_TIME =
+      const DocumentTransform_FieldTransform_ServerValue._(1, 'REQUEST_TIME');
 
-  static const List<DocumentTransform_FieldTransform_ServerValue> values = const <DocumentTransform_FieldTransform_ServerValue> [
+  static const List<DocumentTransform_FieldTransform_ServerValue> values =
+      const <DocumentTransform_FieldTransform_ServerValue>[
     SERVER_VALUE_UNSPECIFIED,
     REQUEST_TIME,
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static DocumentTransform_FieldTransform_ServerValue valueOf(int value) => _byValue[value] as DocumentTransform_FieldTransform_ServerValue;
+  static DocumentTransform_FieldTransform_ServerValue valueOf(int value) =>
+      _byValue[value] as DocumentTransform_FieldTransform_ServerValue;
   static void $checkItem(DocumentTransform_FieldTransform_ServerValue v) {
-    if (v is! DocumentTransform_FieldTransform_ServerValue) checkItemFailed(v, 'DocumentTransform_FieldTransform_ServerValue');
+    if (v is! DocumentTransform_FieldTransform_ServerValue)
+      checkItemFailed(v, 'DocumentTransform_FieldTransform_ServerValue');
   }
 
-  const DocumentTransform_FieldTransform_ServerValue._(int v, String n) : super(v, n);
+  const DocumentTransform_FieldTransform_ServerValue._(int v, String n)
+      : super(v, n);
 }
-

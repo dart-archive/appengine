@@ -14,23 +14,29 @@ import 'prediction_service.pbjson.dart';
 export 'prediction_service.pb.dart';
 
 abstract class OnlinePredictionServiceBase extends GeneratedService {
-  Future<$google$api.HttpBody> predict(ServerContext ctx, PredictRequest request);
+  Future<$google$api.HttpBody> predict(
+      ServerContext ctx, PredictRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'Predict': return new PredictRequest();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'Predict':
+        return new PredictRequest();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'Predict': return this.predict(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'Predict':
+        return this.predict(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => OnlinePredictionService$json;
-  Map<String, Map<String, dynamic>> get $messageJson => OnlinePredictionService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson =>
+      OnlinePredictionService$messageJson;
 }
-

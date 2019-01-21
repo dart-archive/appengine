@@ -11,10 +11,33 @@ const Operation$json = const {
   '1': 'Operation',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'metadata', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Any', '10': 'metadata'},
+    const {
+      '1': 'metadata',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Any',
+      '10': 'metadata'
+    },
     const {'1': 'done', '3': 3, '4': 1, '5': 8, '10': 'done'},
-    const {'1': 'error', '3': 4, '4': 1, '5': 11, '6': '.google.rpc.Status', '9': 0, '10': 'error'},
-    const {'1': 'response', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Any', '9': 0, '10': 'response'},
+    const {
+      '1': 'error',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '9': 0,
+      '10': 'error'
+    },
+    const {
+      '1': 'response',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Any',
+      '9': 0,
+      '10': 'response'
+    },
   ],
   '8': const [
     const {'1': 'result'},
@@ -41,8 +64,21 @@ const ListOperationsRequest$json = const {
 const ListOperationsResponse$json = const {
   '1': 'ListOperationsResponse',
   '2': const [
-    const {'1': 'operations', '3': 1, '4': 3, '5': 11, '6': '.google.longrunning.Operation', '10': 'operations'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'operations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.longrunning.Operation',
+      '10': 'operations'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -63,10 +99,30 @@ const DeleteOperationRequest$json = const {
 const Operations$json = const {
   '1': 'Operations',
   '2': const [
-    const {'1': 'ListOperations', '2': '.google.longrunning.ListOperationsRequest', '3': '.google.longrunning.ListOperationsResponse', '4': const {}},
-    const {'1': 'GetOperation', '2': '.google.longrunning.GetOperationRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'DeleteOperation', '2': '.google.longrunning.DeleteOperationRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'CancelOperation', '2': '.google.longrunning.CancelOperationRequest', '3': '.google.protobuf.Empty', '4': const {}},
+    const {
+      '1': 'ListOperations',
+      '2': '.google.longrunning.ListOperationsRequest',
+      '3': '.google.longrunning.ListOperationsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetOperation',
+      '2': '.google.longrunning.GetOperationRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteOperation',
+      '2': '.google.longrunning.DeleteOperationRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'CancelOperation',
+      '2': '.google.longrunning.CancelOperationRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
   ],
 };
 
@@ -81,4 +137,3 @@ const Operations$messageJson = const {
   '.google.protobuf.Empty': $google$protobuf.Empty$json,
   '.google.longrunning.CancelOperationRequest': CancelOperationRequest$json,
 };
-

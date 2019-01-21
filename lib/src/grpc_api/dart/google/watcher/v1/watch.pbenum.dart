@@ -9,11 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class Change_State extends ProtobufEnum {
   static const Change_State EXISTS = const Change_State._(0, 'EXISTS');
-  static const Change_State DOES_NOT_EXIST = const Change_State._(1, 'DOES_NOT_EXIST');
-  static const Change_State INITIAL_STATE_SKIPPED = const Change_State._(2, 'INITIAL_STATE_SKIPPED');
+  static const Change_State DOES_NOT_EXIST =
+      const Change_State._(1, 'DOES_NOT_EXIST');
+  static const Change_State INITIAL_STATE_SKIPPED =
+      const Change_State._(2, 'INITIAL_STATE_SKIPPED');
   static const Change_State ERROR = const Change_State._(3, 'ERROR');
 
-  static const List<Change_State> values = const <Change_State> [
+  static const List<Change_State> values = const <Change_State>[
     EXISTS,
     DOES_NOT_EXIST,
     INITIAL_STATE_SKIPPED,
@@ -28,4 +30,3 @@ class Change_State extends ProtobufEnum {
 
   const Change_State._(int v, String n) : super(v, n);
 }
-

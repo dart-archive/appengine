@@ -13,23 +13,29 @@ import 'quota_controller.pbjson.dart';
 export 'quota_controller.pb.dart';
 
 abstract class QuotaControllerServiceBase extends GeneratedService {
-  Future<AllocateQuotaResponse> allocateQuota(ServerContext ctx, AllocateQuotaRequest request);
+  Future<AllocateQuotaResponse> allocateQuota(
+      ServerContext ctx, AllocateQuotaRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'AllocateQuota': return new AllocateQuotaRequest();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'AllocateQuota':
+        return new AllocateQuotaRequest();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'AllocateQuota': return this.allocateQuota(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'AllocateQuota':
+        return this.allocateQuota(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => QuotaController$json;
-  Map<String, Map<String, dynamic>> get $messageJson => QuotaController$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson =>
+      QuotaController$messageJson;
 }
-

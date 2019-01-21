@@ -28,7 +28,14 @@ const Likelihood$json = const {
 const Feature$json = const {
   '1': 'Feature',
   '2': const [
-    const {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Feature.Type', '10': 'type'},
+    const {
+      '1': 'type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Feature.Type',
+      '10': 'type'
+    },
     const {'1': 'max_results', '3': 2, '4': 1, '5': 5, '10': 'maxResults'},
     const {'1': 'model', '3': 3, '4': 1, '5': 9, '10': 'model'},
   ],
@@ -64,28 +71,117 @@ const Image$json = const {
   '1': 'Image',
   '2': const [
     const {'1': 'content', '3': 1, '4': 1, '5': 12, '10': 'content'},
-    const {'1': 'source', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ImageSource', '10': 'source'},
+    const {
+      '1': 'source',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ImageSource',
+      '10': 'source'
+    },
   ],
 };
 
 const FaceAnnotation$json = const {
   '1': 'FaceAnnotation',
   '2': const [
-    const {'1': 'bounding_poly', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'boundingPoly'},
-    const {'1': 'fd_bounding_poly', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'fdBoundingPoly'},
-    const {'1': 'landmarks', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.FaceAnnotation.Landmark', '10': 'landmarks'},
+    const {
+      '1': 'bounding_poly',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.BoundingPoly',
+      '10': 'boundingPoly'
+    },
+    const {
+      '1': 'fd_bounding_poly',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.BoundingPoly',
+      '10': 'fdBoundingPoly'
+    },
+    const {
+      '1': 'landmarks',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.FaceAnnotation.Landmark',
+      '10': 'landmarks'
+    },
     const {'1': 'roll_angle', '3': 4, '4': 1, '5': 2, '10': 'rollAngle'},
     const {'1': 'pan_angle', '3': 5, '4': 1, '5': 2, '10': 'panAngle'},
     const {'1': 'tilt_angle', '3': 6, '4': 1, '5': 2, '10': 'tiltAngle'},
-    const {'1': 'detection_confidence', '3': 7, '4': 1, '5': 2, '10': 'detectionConfidence'},
-    const {'1': 'landmarking_confidence', '3': 8, '4': 1, '5': 2, '10': 'landmarkingConfidence'},
-    const {'1': 'joy_likelihood', '3': 9, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'joyLikelihood'},
-    const {'1': 'sorrow_likelihood', '3': 10, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'sorrowLikelihood'},
-    const {'1': 'anger_likelihood', '3': 11, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'angerLikelihood'},
-    const {'1': 'surprise_likelihood', '3': 12, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'surpriseLikelihood'},
-    const {'1': 'under_exposed_likelihood', '3': 13, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'underExposedLikelihood'},
-    const {'1': 'blurred_likelihood', '3': 14, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'blurredLikelihood'},
-    const {'1': 'headwear_likelihood', '3': 15, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'headwearLikelihood'},
+    const {
+      '1': 'detection_confidence',
+      '3': 7,
+      '4': 1,
+      '5': 2,
+      '10': 'detectionConfidence'
+    },
+    const {
+      '1': 'landmarking_confidence',
+      '3': 8,
+      '4': 1,
+      '5': 2,
+      '10': 'landmarkingConfidence'
+    },
+    const {
+      '1': 'joy_likelihood',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'joyLikelihood'
+    },
+    const {
+      '1': 'sorrow_likelihood',
+      '3': 10,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'sorrowLikelihood'
+    },
+    const {
+      '1': 'anger_likelihood',
+      '3': 11,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'angerLikelihood'
+    },
+    const {
+      '1': 'surprise_likelihood',
+      '3': 12,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'surpriseLikelihood'
+    },
+    const {
+      '1': 'under_exposed_likelihood',
+      '3': 13,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'underExposedLikelihood'
+    },
+    const {
+      '1': 'blurred_likelihood',
+      '3': 14,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'blurredLikelihood'
+    },
+    const {
+      '1': 'headwear_likelihood',
+      '3': 15,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'headwearLikelihood'
+    },
   ],
   '3': const [FaceAnnotation_Landmark$json],
 };
@@ -93,8 +189,22 @@ const FaceAnnotation$json = const {
 const FaceAnnotation_Landmark$json = const {
   '1': 'Landmark',
   '2': const [
-    const {'1': 'type', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.FaceAnnotation.Landmark.Type', '10': 'type'},
-    const {'1': 'position', '3': 4, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.Position', '10': 'position'},
+    const {
+      '1': 'type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.FaceAnnotation.Landmark.Type',
+      '10': 'type'
+    },
+    const {
+      '1': 'position',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Position',
+      '10': 'position'
+    },
   ],
   '4': const [FaceAnnotation_Landmark_Type$json],
 };
@@ -143,7 +253,14 @@ const FaceAnnotation_Landmark_Type$json = const {
 const LocationInfo$json = const {
   '1': 'LocationInfo',
   '2': const [
-    const {'1': 'lat_lng', '3': 1, '4': 1, '5': 11, '6': '.google.type.LatLng', '10': 'latLng'},
+    const {
+      '1': 'lat_lng',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.LatLng',
+      '10': 'latLng'
+    },
   ],
 };
 
@@ -165,67 +282,184 @@ const EntityAnnotation$json = const {
     const {'1': 'score', '3': 4, '4': 1, '5': 2, '10': 'score'},
     const {'1': 'confidence', '3': 5, '4': 1, '5': 2, '10': 'confidence'},
     const {'1': 'topicality', '3': 6, '4': 1, '5': 2, '10': 'topicality'},
-    const {'1': 'bounding_poly', '3': 7, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'boundingPoly'},
-    const {'1': 'locations', '3': 8, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.LocationInfo', '10': 'locations'},
-    const {'1': 'properties', '3': 9, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Property', '10': 'properties'},
+    const {
+      '1': 'bounding_poly',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.BoundingPoly',
+      '10': 'boundingPoly'
+    },
+    const {
+      '1': 'locations',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.LocationInfo',
+      '10': 'locations'
+    },
+    const {
+      '1': 'properties',
+      '3': 9,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Property',
+      '10': 'properties'
+    },
   ],
 };
 
 const SafeSearchAnnotation$json = const {
   '1': 'SafeSearchAnnotation',
   '2': const [
-    const {'1': 'adult', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'adult'},
-    const {'1': 'spoof', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'spoof'},
-    const {'1': 'medical', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'medical'},
-    const {'1': 'violence', '3': 4, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'violence'},
-    const {'1': 'racy', '3': 9, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.Likelihood', '10': 'racy'},
+    const {
+      '1': 'adult',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'adult'
+    },
+    const {
+      '1': 'spoof',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'spoof'
+    },
+    const {
+      '1': 'medical',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'medical'
+    },
+    const {
+      '1': 'violence',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'violence'
+    },
+    const {
+      '1': 'racy',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.Likelihood',
+      '10': 'racy'
+    },
   ],
 };
 
 const LatLongRect$json = const {
   '1': 'LatLongRect',
   '2': const [
-    const {'1': 'min_lat_lng', '3': 1, '4': 1, '5': 11, '6': '.google.type.LatLng', '10': 'minLatLng'},
-    const {'1': 'max_lat_lng', '3': 2, '4': 1, '5': 11, '6': '.google.type.LatLng', '10': 'maxLatLng'},
+    const {
+      '1': 'min_lat_lng',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.LatLng',
+      '10': 'minLatLng'
+    },
+    const {
+      '1': 'max_lat_lng',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.LatLng',
+      '10': 'maxLatLng'
+    },
   ],
 };
 
 const ColorInfo$json = const {
   '1': 'ColorInfo',
   '2': const [
-    const {'1': 'color', '3': 1, '4': 1, '5': 11, '6': '.google.type.Color', '10': 'color'},
+    const {
+      '1': 'color',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.Color',
+      '10': 'color'
+    },
     const {'1': 'score', '3': 2, '4': 1, '5': 2, '10': 'score'},
-    const {'1': 'pixel_fraction', '3': 3, '4': 1, '5': 2, '10': 'pixelFraction'},
+    const {
+      '1': 'pixel_fraction',
+      '3': 3,
+      '4': 1,
+      '5': 2,
+      '10': 'pixelFraction'
+    },
   ],
 };
 
 const DominantColorsAnnotation$json = const {
   '1': 'DominantColorsAnnotation',
   '2': const [
-    const {'1': 'colors', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.ColorInfo', '10': 'colors'},
+    const {
+      '1': 'colors',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ColorInfo',
+      '10': 'colors'
+    },
   ],
 };
 
 const ImageProperties$json = const {
   '1': 'ImageProperties',
   '2': const [
-    const {'1': 'dominant_colors', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.DominantColorsAnnotation', '10': 'dominantColors'},
+    const {
+      '1': 'dominant_colors',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.DominantColorsAnnotation',
+      '10': 'dominantColors'
+    },
   ],
 };
 
 const CropHint$json = const {
   '1': 'CropHint',
   '2': const [
-    const {'1': 'bounding_poly', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'boundingPoly'},
+    const {
+      '1': 'bounding_poly',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.BoundingPoly',
+      '10': 'boundingPoly'
+    },
     const {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
-    const {'1': 'importance_fraction', '3': 3, '4': 1, '5': 2, '10': 'importanceFraction'},
+    const {
+      '1': 'importance_fraction',
+      '3': 3,
+      '4': 1,
+      '5': 2,
+      '10': 'importanceFraction'
+    },
   ],
 };
 
 const CropHintsAnnotation$json = const {
   '1': 'CropHintsAnnotation',
   '2': const [
-    const {'1': 'crop_hints', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.CropHint', '10': 'cropHints'},
+    const {
+      '1': 'crop_hints',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.CropHint',
+      '10': 'cropHints'
+    },
   ],
 };
 
@@ -239,26 +473,80 @@ const CropHintsParams$json = const {
 const WebDetectionParams$json = const {
   '1': 'WebDetectionParams',
   '2': const [
-    const {'1': 'include_geo_results', '3': 2, '4': 1, '5': 8, '10': 'includeGeoResults'},
+    const {
+      '1': 'include_geo_results',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '10': 'includeGeoResults'
+    },
   ],
 };
 
 const ImageContext$json = const {
   '1': 'ImageContext',
   '2': const [
-    const {'1': 'lat_long_rect', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.LatLongRect', '10': 'latLongRect'},
-    const {'1': 'language_hints', '3': 2, '4': 3, '5': 9, '10': 'languageHints'},
-    const {'1': 'crop_hints_params', '3': 4, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.CropHintsParams', '10': 'cropHintsParams'},
-    const {'1': 'web_detection_params', '3': 6, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.WebDetectionParams', '10': 'webDetectionParams'},
+    const {
+      '1': 'lat_long_rect',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.LatLongRect',
+      '10': 'latLongRect'
+    },
+    const {
+      '1': 'language_hints',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '10': 'languageHints'
+    },
+    const {
+      '1': 'crop_hints_params',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.CropHintsParams',
+      '10': 'cropHintsParams'
+    },
+    const {
+      '1': 'web_detection_params',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.WebDetectionParams',
+      '10': 'webDetectionParams'
+    },
   ],
 };
 
 const AnnotateImageRequest$json = const {
   '1': 'AnnotateImageRequest',
   '2': const [
-    const {'1': 'image', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.Image', '10': 'image'},
-    const {'1': 'features', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Feature', '10': 'features'},
-    const {'1': 'image_context', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ImageContext', '10': 'imageContext'},
+    const {
+      '1': 'image',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Image',
+      '10': 'image'
+    },
+    const {
+      '1': 'features',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Feature',
+      '10': 'features'
+    },
+    const {
+      '1': 'image_context',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ImageContext',
+      '10': 'imageContext'
+    },
   ],
 };
 
@@ -273,78 +561,246 @@ const ImageAnnotationContext$json = const {
 const AnnotateImageResponse$json = const {
   '1': 'AnnotateImageResponse',
   '2': const [
-    const {'1': 'face_annotations', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.FaceAnnotation', '10': 'faceAnnotations'},
-    const {'1': 'landmark_annotations', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.EntityAnnotation', '10': 'landmarkAnnotations'},
-    const {'1': 'logo_annotations', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.EntityAnnotation', '10': 'logoAnnotations'},
-    const {'1': 'label_annotations', '3': 4, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.EntityAnnotation', '10': 'labelAnnotations'},
-    const {'1': 'text_annotations', '3': 5, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.EntityAnnotation', '10': 'textAnnotations'},
-    const {'1': 'full_text_annotation', '3': 12, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.TextAnnotation', '10': 'fullTextAnnotation'},
-    const {'1': 'safe_search_annotation', '3': 6, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.SafeSearchAnnotation', '10': 'safeSearchAnnotation'},
-    const {'1': 'image_properties_annotation', '3': 8, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ImageProperties', '10': 'imagePropertiesAnnotation'},
-    const {'1': 'crop_hints_annotation', '3': 11, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.CropHintsAnnotation', '10': 'cropHintsAnnotation'},
-    const {'1': 'web_detection', '3': 13, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.WebDetection', '10': 'webDetection'},
-    const {'1': 'error', '3': 9, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'error'},
-    const {'1': 'context', '3': 21, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ImageAnnotationContext', '10': 'context'},
+    const {
+      '1': 'face_annotations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.FaceAnnotation',
+      '10': 'faceAnnotations'
+    },
+    const {
+      '1': 'landmark_annotations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.EntityAnnotation',
+      '10': 'landmarkAnnotations'
+    },
+    const {
+      '1': 'logo_annotations',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.EntityAnnotation',
+      '10': 'logoAnnotations'
+    },
+    const {
+      '1': 'label_annotations',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.EntityAnnotation',
+      '10': 'labelAnnotations'
+    },
+    const {
+      '1': 'text_annotations',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.EntityAnnotation',
+      '10': 'textAnnotations'
+    },
+    const {
+      '1': 'full_text_annotation',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.TextAnnotation',
+      '10': 'fullTextAnnotation'
+    },
+    const {
+      '1': 'safe_search_annotation',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.SafeSearchAnnotation',
+      '10': 'safeSearchAnnotation'
+    },
+    const {
+      '1': 'image_properties_annotation',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ImageProperties',
+      '10': 'imagePropertiesAnnotation'
+    },
+    const {
+      '1': 'crop_hints_annotation',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.CropHintsAnnotation',
+      '10': 'cropHintsAnnotation'
+    },
+    const {
+      '1': 'web_detection',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.WebDetection',
+      '10': 'webDetection'
+    },
+    const {
+      '1': 'error',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'error'
+    },
+    const {
+      '1': 'context',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ImageAnnotationContext',
+      '10': 'context'
+    },
   ],
 };
 
 const AnnotateFileResponse$json = const {
   '1': 'AnnotateFileResponse',
   '2': const [
-    const {'1': 'input_config', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.InputConfig', '10': 'inputConfig'},
-    const {'1': 'responses', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.AnnotateImageResponse', '10': 'responses'},
+    const {
+      '1': 'input_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.InputConfig',
+      '10': 'inputConfig'
+    },
+    const {
+      '1': 'responses',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.AnnotateImageResponse',
+      '10': 'responses'
+    },
   ],
 };
 
 const BatchAnnotateImagesRequest$json = const {
   '1': 'BatchAnnotateImagesRequest',
   '2': const [
-    const {'1': 'requests', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.AnnotateImageRequest', '10': 'requests'},
+    const {
+      '1': 'requests',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.AnnotateImageRequest',
+      '10': 'requests'
+    },
   ],
 };
 
 const BatchAnnotateImagesResponse$json = const {
   '1': 'BatchAnnotateImagesResponse',
   '2': const [
-    const {'1': 'responses', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.AnnotateImageResponse', '10': 'responses'},
+    const {
+      '1': 'responses',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.AnnotateImageResponse',
+      '10': 'responses'
+    },
   ],
 };
 
 const AsyncAnnotateFileRequest$json = const {
   '1': 'AsyncAnnotateFileRequest',
   '2': const [
-    const {'1': 'input_config', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.InputConfig', '10': 'inputConfig'},
-    const {'1': 'features', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Feature', '10': 'features'},
-    const {'1': 'image_context', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ImageContext', '10': 'imageContext'},
-    const {'1': 'output_config', '3': 4, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.OutputConfig', '10': 'outputConfig'},
+    const {
+      '1': 'input_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.InputConfig',
+      '10': 'inputConfig'
+    },
+    const {
+      '1': 'features',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Feature',
+      '10': 'features'
+    },
+    const {
+      '1': 'image_context',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ImageContext',
+      '10': 'imageContext'
+    },
+    const {
+      '1': 'output_config',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.OutputConfig',
+      '10': 'outputConfig'
+    },
   ],
 };
 
 const AsyncAnnotateFileResponse$json = const {
   '1': 'AsyncAnnotateFileResponse',
   '2': const [
-    const {'1': 'output_config', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.OutputConfig', '10': 'outputConfig'},
+    const {
+      '1': 'output_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.OutputConfig',
+      '10': 'outputConfig'
+    },
   ],
 };
 
 const AsyncBatchAnnotateFilesRequest$json = const {
   '1': 'AsyncBatchAnnotateFilesRequest',
   '2': const [
-    const {'1': 'requests', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.AsyncAnnotateFileRequest', '10': 'requests'},
+    const {
+      '1': 'requests',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.AsyncAnnotateFileRequest',
+      '10': 'requests'
+    },
   ],
 };
 
 const AsyncBatchAnnotateFilesResponse$json = const {
   '1': 'AsyncBatchAnnotateFilesResponse',
   '2': const [
-    const {'1': 'responses', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.AsyncAnnotateFileResponse', '10': 'responses'},
+    const {
+      '1': 'responses',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.AsyncAnnotateFileResponse',
+      '10': 'responses'
+    },
   ],
 };
 
 const InputConfig$json = const {
   '1': 'InputConfig',
   '2': const [
-    const {'1': 'gcs_source', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.GcsSource', '10': 'gcsSource'},
+    const {
+      '1': 'gcs_source',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.GcsSource',
+      '10': 'gcsSource'
+    },
     const {'1': 'mime_type', '3': 2, '4': 1, '5': 9, '10': 'mimeType'},
   ],
 };
@@ -352,7 +808,14 @@ const InputConfig$json = const {
 const OutputConfig$json = const {
   '1': 'OutputConfig',
   '2': const [
-    const {'1': 'gcs_destination', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.GcsDestination', '10': 'gcsDestination'},
+    const {
+      '1': 'gcs_destination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.GcsDestination',
+      '10': 'gcsDestination'
+    },
     const {'1': 'batch_size', '3': 2, '4': 1, '5': 5, '10': 'batchSize'},
   ],
 };
@@ -374,9 +837,30 @@ const GcsDestination$json = const {
 const OperationMetadata$json = const {
   '1': 'OperationMetadata',
   '2': const [
-    const {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.OperationMetadata.State', '10': 'state'},
-    const {'1': 'create_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
-    const {'1': 'update_time', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'updateTime'},
+    const {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.OperationMetadata.State',
+      '10': 'state'
+    },
+    const {
+      '1': 'create_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    const {
+      '1': 'update_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
   ],
   '4': const [OperationMetadata_State$json],
 };
@@ -395,13 +879,24 @@ const OperationMetadata_State$json = const {
 const ImageAnnotator$json = const {
   '1': 'ImageAnnotator',
   '2': const [
-    const {'1': 'BatchAnnotateImages', '2': '.google.cloud.vision.v1.BatchAnnotateImagesRequest', '3': '.google.cloud.vision.v1.BatchAnnotateImagesResponse', '4': const {}},
-    const {'1': 'AsyncBatchAnnotateFiles', '2': '.google.cloud.vision.v1.AsyncBatchAnnotateFilesRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'BatchAnnotateImages',
+      '2': '.google.cloud.vision.v1.BatchAnnotateImagesRequest',
+      '3': '.google.cloud.vision.v1.BatchAnnotateImagesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'AsyncBatchAnnotateFiles',
+      '2': '.google.cloud.vision.v1.AsyncBatchAnnotateFilesRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
 const ImageAnnotator$messageJson = const {
-  '.google.cloud.vision.v1.BatchAnnotateImagesRequest': BatchAnnotateImagesRequest$json,
+  '.google.cloud.vision.v1.BatchAnnotateImagesRequest':
+      BatchAnnotateImagesRequest$json,
   '.google.cloud.vision.v1.AnnotateImageRequest': AnnotateImageRequest$json,
   '.google.cloud.vision.v1.Image': Image$json,
   '.google.cloud.vision.v1.ImageSource': ImageSource$json,
@@ -411,20 +906,23 @@ const ImageAnnotator$messageJson = const {
   '.google.type.LatLng': $google$type.LatLng$json,
   '.google.cloud.vision.v1.CropHintsParams': CropHintsParams$json,
   '.google.cloud.vision.v1.WebDetectionParams': WebDetectionParams$json,
-  '.google.cloud.vision.v1.BatchAnnotateImagesResponse': BatchAnnotateImagesResponse$json,
+  '.google.cloud.vision.v1.BatchAnnotateImagesResponse':
+      BatchAnnotateImagesResponse$json,
   '.google.cloud.vision.v1.AnnotateImageResponse': AnnotateImageResponse$json,
   '.google.cloud.vision.v1.FaceAnnotation': FaceAnnotation$json,
   '.google.cloud.vision.v1.BoundingPoly': BoundingPoly$json,
   '.google.cloud.vision.v1.Vertex': Vertex$json,
   '.google.cloud.vision.v1.NormalizedVertex': NormalizedVertex$json,
-  '.google.cloud.vision.v1.FaceAnnotation.Landmark': FaceAnnotation_Landmark$json,
+  '.google.cloud.vision.v1.FaceAnnotation.Landmark':
+      FaceAnnotation_Landmark$json,
   '.google.cloud.vision.v1.Position': Position$json,
   '.google.cloud.vision.v1.EntityAnnotation': EntityAnnotation$json,
   '.google.cloud.vision.v1.LocationInfo': LocationInfo$json,
   '.google.cloud.vision.v1.Property': Property$json,
   '.google.cloud.vision.v1.SafeSearchAnnotation': SafeSearchAnnotation$json,
   '.google.cloud.vision.v1.ImageProperties': ImageProperties$json,
-  '.google.cloud.vision.v1.DominantColorsAnnotation': DominantColorsAnnotation$json,
+  '.google.cloud.vision.v1.DominantColorsAnnotation':
+      DominantColorsAnnotation$json,
   '.google.cloud.vision.v1.ColorInfo': ColorInfo$json,
   '.google.type.Color': $google$type.Color$json,
   '.google.protobuf.FloatValue': $google$protobuf.FloatValue$json,
@@ -434,9 +932,12 @@ const ImageAnnotator$messageJson = const {
   '.google.cloud.vision.v1.CropHint': CropHint$json,
   '.google.cloud.vision.v1.TextAnnotation': TextAnnotation$json,
   '.google.cloud.vision.v1.Page': Page$json,
-  '.google.cloud.vision.v1.TextAnnotation.TextProperty': TextAnnotation_TextProperty$json,
-  '.google.cloud.vision.v1.TextAnnotation.DetectedLanguage': TextAnnotation_DetectedLanguage$json,
-  '.google.cloud.vision.v1.TextAnnotation.DetectedBreak': TextAnnotation_DetectedBreak$json,
+  '.google.cloud.vision.v1.TextAnnotation.TextProperty':
+      TextAnnotation_TextProperty$json,
+  '.google.cloud.vision.v1.TextAnnotation.DetectedLanguage':
+      TextAnnotation_DetectedLanguage$json,
+  '.google.cloud.vision.v1.TextAnnotation.DetectedBreak':
+      TextAnnotation_DetectedBreak$json,
   '.google.cloud.vision.v1.Block': Block$json,
   '.google.cloud.vision.v1.Paragraph': Paragraph$json,
   '.google.cloud.vision.v1.Word': Word$json,
@@ -447,12 +948,13 @@ const ImageAnnotator$messageJson = const {
   '.google.cloud.vision.v1.WebDetection.WebPage': WebDetection_WebPage$json,
   '.google.cloud.vision.v1.WebDetection.WebLabel': WebDetection_WebLabel$json,
   '.google.cloud.vision.v1.ImageAnnotationContext': ImageAnnotationContext$json,
-  '.google.cloud.vision.v1.AsyncBatchAnnotateFilesRequest': AsyncBatchAnnotateFilesRequest$json,
-  '.google.cloud.vision.v1.AsyncAnnotateFileRequest': AsyncAnnotateFileRequest$json,
+  '.google.cloud.vision.v1.AsyncBatchAnnotateFilesRequest':
+      AsyncBatchAnnotateFilesRequest$json,
+  '.google.cloud.vision.v1.AsyncAnnotateFileRequest':
+      AsyncAnnotateFileRequest$json,
   '.google.cloud.vision.v1.InputConfig': InputConfig$json,
   '.google.cloud.vision.v1.GcsSource': GcsSource$json,
   '.google.cloud.vision.v1.OutputConfig': OutputConfig$json,
   '.google.cloud.vision.v1.GcsDestination': GcsDestination$json,
   '.google.longrunning.Operation': $google$longrunning.Operation$json,
 };
-

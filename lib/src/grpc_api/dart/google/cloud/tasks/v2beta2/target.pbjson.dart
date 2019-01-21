@@ -30,17 +30,45 @@ const PullMessage$json = const {
 const AppEngineHttpTarget$json = const {
   '1': 'AppEngineHttpTarget',
   '2': const [
-    const {'1': 'app_engine_routing_override', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.tasks.v2beta2.AppEngineRouting', '10': 'appEngineRoutingOverride'},
+    const {
+      '1': 'app_engine_routing_override',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.tasks.v2beta2.AppEngineRouting',
+      '10': 'appEngineRoutingOverride'
+    },
   ],
 };
 
 const AppEngineHttpRequest$json = const {
   '1': 'AppEngineHttpRequest',
   '2': const [
-    const {'1': 'http_method', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.tasks.v2beta2.HttpMethod', '10': 'httpMethod'},
-    const {'1': 'app_engine_routing', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.tasks.v2beta2.AppEngineRouting', '10': 'appEngineRouting'},
+    const {
+      '1': 'http_method',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.tasks.v2beta2.HttpMethod',
+      '10': 'httpMethod'
+    },
+    const {
+      '1': 'app_engine_routing',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.tasks.v2beta2.AppEngineRouting',
+      '10': 'appEngineRouting'
+    },
     const {'1': 'relative_url', '3': 3, '4': 1, '5': 9, '10': 'relativeUrl'},
-    const {'1': 'headers', '3': 4, '4': 3, '5': 11, '6': '.google.cloud.tasks.v2beta2.AppEngineHttpRequest.HeadersEntry', '10': 'headers'},
+    const {
+      '1': 'headers',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.tasks.v2beta2.AppEngineHttpRequest.HeadersEntry',
+      '10': 'headers'
+    },
     const {'1': 'payload', '3': 5, '4': 1, '5': 12, '10': 'payload'},
   ],
   '3': const [AppEngineHttpRequest_HeadersEntry$json],
@@ -64,4 +92,3 @@ const AppEngineRouting$json = const {
     const {'1': 'host', '3': 4, '4': 1, '5': 9, '10': 'host'},
   ],
 };
-

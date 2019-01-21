@@ -14,46 +14,71 @@ export 'source_context.pbenum.dart';
 
 class SourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('SourceContext')
-    ..a<CloudRepoSourceContext>(1, 'cloudRepo', PbFieldType.OM, CloudRepoSourceContext.getDefault, CloudRepoSourceContext.create)
-    ..a<CloudWorkspaceSourceContext>(2, 'cloudWorkspace', PbFieldType.OM, CloudWorkspaceSourceContext.getDefault, CloudWorkspaceSourceContext.create)
-    ..a<GerritSourceContext>(3, 'gerrit', PbFieldType.OM, GerritSourceContext.getDefault, GerritSourceContext.create)
-    ..a<GitSourceContext>(6, 'git', PbFieldType.OM, GitSourceContext.getDefault, GitSourceContext.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<CloudRepoSourceContext>(1, 'cloudRepo', PbFieldType.OM,
+        CloudRepoSourceContext.getDefault, CloudRepoSourceContext.create)
+    ..a<CloudWorkspaceSourceContext>(
+        2,
+        'cloudWorkspace',
+        PbFieldType.OM,
+        CloudWorkspaceSourceContext.getDefault,
+        CloudWorkspaceSourceContext.create)
+    ..a<GerritSourceContext>(3, 'gerrit', PbFieldType.OM,
+        GerritSourceContext.getDefault, GerritSourceContext.create)
+    ..a<GitSourceContext>(6, 'git', PbFieldType.OM, GitSourceContext.getDefault,
+        GitSourceContext.create)
+    ..hasRequiredFields = false;
 
   SourceContext() : super();
-  SourceContext.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  SourceContext.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  SourceContext.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SourceContext.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   SourceContext clone() => new SourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static SourceContext create() => new SourceContext();
   static PbList<SourceContext> createRepeated() => new PbList<SourceContext>();
   static SourceContext getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySourceContext();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlySourceContext();
     return _defaultInstance;
   }
+
   static SourceContext _defaultInstance;
   static void $checkItem(SourceContext v) {
     if (v is! SourceContext) checkItemFailed(v, 'SourceContext');
   }
 
   CloudRepoSourceContext get cloudRepo => $_getN(0);
-  set cloudRepo(CloudRepoSourceContext v) { setField(1, v); }
+  set cloudRepo(CloudRepoSourceContext v) {
+    setField(1, v);
+  }
+
   bool hasCloudRepo() => $_has(0);
   void clearCloudRepo() => clearField(1);
 
   CloudWorkspaceSourceContext get cloudWorkspace => $_getN(1);
-  set cloudWorkspace(CloudWorkspaceSourceContext v) { setField(2, v); }
+  set cloudWorkspace(CloudWorkspaceSourceContext v) {
+    setField(2, v);
+  }
+
   bool hasCloudWorkspace() => $_has(1);
   void clearCloudWorkspace() => clearField(2);
 
   GerritSourceContext get gerrit => $_getN(2);
-  set gerrit(GerritSourceContext v) { setField(3, v); }
+  set gerrit(GerritSourceContext v) {
+    setField(3, v);
+  }
+
   bool hasGerrit() => $_has(2);
   void clearGerrit() => clearField(3);
 
   GitSourceContext get git => $_getN(3);
-  set git(GitSourceContext v) { setField(6, v); }
+  set git(GitSourceContext v) {
+    setField(6, v);
+  }
+
   bool hasGit() => $_has(3);
   void clearGit() => clearField(6);
 }
@@ -61,104 +86,151 @@ class SourceContext extends GeneratedMessage {
 class _ReadonlySourceContext extends SourceContext with ReadonlyMessageMixin {}
 
 class ExtendedSourceContext_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExtendedSourceContext_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false
-  ;
+  static final BuilderInfo _i =
+      new BuilderInfo('ExtendedSourceContext_LabelsEntry')
+        ..aOS(1, 'key')
+        ..aOS(2, 'value')
+        ..hasRequiredFields = false;
 
   ExtendedSourceContext_LabelsEntry() : super();
-  ExtendedSourceContext_LabelsEntry.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ExtendedSourceContext_LabelsEntry.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ExtendedSourceContext_LabelsEntry clone() => new ExtendedSourceContext_LabelsEntry()..mergeFromMessage(this);
+  ExtendedSourceContext_LabelsEntry.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ExtendedSourceContext_LabelsEntry.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ExtendedSourceContext_LabelsEntry clone() =>
+      new ExtendedSourceContext_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExtendedSourceContext_LabelsEntry create() => new ExtendedSourceContext_LabelsEntry();
-  static PbList<ExtendedSourceContext_LabelsEntry> createRepeated() => new PbList<ExtendedSourceContext_LabelsEntry>();
+  static ExtendedSourceContext_LabelsEntry create() =>
+      new ExtendedSourceContext_LabelsEntry();
+  static PbList<ExtendedSourceContext_LabelsEntry> createRepeated() =>
+      new PbList<ExtendedSourceContext_LabelsEntry>();
   static ExtendedSourceContext_LabelsEntry getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyExtendedSourceContext_LabelsEntry();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyExtendedSourceContext_LabelsEntry();
     return _defaultInstance;
   }
+
   static ExtendedSourceContext_LabelsEntry _defaultInstance;
   static void $checkItem(ExtendedSourceContext_LabelsEntry v) {
-    if (v is! ExtendedSourceContext_LabelsEntry) checkItemFailed(v, 'ExtendedSourceContext_LabelsEntry');
+    if (v is! ExtendedSourceContext_LabelsEntry)
+      checkItemFailed(v, 'ExtendedSourceContext_LabelsEntry');
   }
 
   String get key => $_getS(0, '');
-  set key(String v) { $_setString(0, v); }
+  set key(String v) {
+    $_setString(0, v);
+  }
+
   bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
   String get value => $_getS(1, '');
-  set value(String v) { $_setString(1, v); }
+  set value(String v) {
+    $_setString(1, v);
+  }
+
   bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
-class _ReadonlyExtendedSourceContext_LabelsEntry extends ExtendedSourceContext_LabelsEntry with ReadonlyMessageMixin {}
+class _ReadonlyExtendedSourceContext_LabelsEntry
+    extends ExtendedSourceContext_LabelsEntry with ReadonlyMessageMixin {}
 
 class ExtendedSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ExtendedSourceContext')
-    ..a<SourceContext>(1, 'context', PbFieldType.OM, SourceContext.getDefault, SourceContext.create)
-    ..pp<ExtendedSourceContext_LabelsEntry>(2, 'labels', PbFieldType.PM, ExtendedSourceContext_LabelsEntry.$checkItem, ExtendedSourceContext_LabelsEntry.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<SourceContext>(1, 'context', PbFieldType.OM, SourceContext.getDefault,
+        SourceContext.create)
+    ..pp<ExtendedSourceContext_LabelsEntry>(
+        2,
+        'labels',
+        PbFieldType.PM,
+        ExtendedSourceContext_LabelsEntry.$checkItem,
+        ExtendedSourceContext_LabelsEntry.create)
+    ..hasRequiredFields = false;
 
   ExtendedSourceContext() : super();
-  ExtendedSourceContext.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ExtendedSourceContext.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ExtendedSourceContext clone() => new ExtendedSourceContext()..mergeFromMessage(this);
+  ExtendedSourceContext.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ExtendedSourceContext.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ExtendedSourceContext clone() =>
+      new ExtendedSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ExtendedSourceContext create() => new ExtendedSourceContext();
-  static PbList<ExtendedSourceContext> createRepeated() => new PbList<ExtendedSourceContext>();
+  static PbList<ExtendedSourceContext> createRepeated() =>
+      new PbList<ExtendedSourceContext>();
   static ExtendedSourceContext getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyExtendedSourceContext();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyExtendedSourceContext();
     return _defaultInstance;
   }
+
   static ExtendedSourceContext _defaultInstance;
   static void $checkItem(ExtendedSourceContext v) {
-    if (v is! ExtendedSourceContext) checkItemFailed(v, 'ExtendedSourceContext');
+    if (v is! ExtendedSourceContext)
+      checkItemFailed(v, 'ExtendedSourceContext');
   }
 
   SourceContext get context => $_getN(0);
-  set context(SourceContext v) { setField(1, v); }
+  set context(SourceContext v) {
+    setField(1, v);
+  }
+
   bool hasContext() => $_has(0);
   void clearContext() => clearField(1);
 
   List<ExtendedSourceContext_LabelsEntry> get labels => $_getList(1);
 }
 
-class _ReadonlyExtendedSourceContext extends ExtendedSourceContext with ReadonlyMessageMixin {}
+class _ReadonlyExtendedSourceContext extends ExtendedSourceContext
+    with ReadonlyMessageMixin {}
 
 class AliasContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('AliasContext')
-    ..e<AliasContext_Kind>(1, 'kind', PbFieldType.OE, AliasContext_Kind.ANY, AliasContext_Kind.valueOf, AliasContext_Kind.values)
+    ..e<AliasContext_Kind>(1, 'kind', PbFieldType.OE, AliasContext_Kind.ANY,
+        AliasContext_Kind.valueOf, AliasContext_Kind.values)
     ..aOS(2, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   AliasContext() : super();
-  AliasContext.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  AliasContext.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AliasContext.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  AliasContext.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   AliasContext clone() => new AliasContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AliasContext create() => new AliasContext();
   static PbList<AliasContext> createRepeated() => new PbList<AliasContext>();
   static AliasContext getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAliasContext();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyAliasContext();
     return _defaultInstance;
   }
+
   static AliasContext _defaultInstance;
   static void $checkItem(AliasContext v) {
     if (v is! AliasContext) checkItemFailed(v, 'AliasContext');
   }
 
   AliasContext_Kind get kind => $_getN(0);
-  set kind(AliasContext_Kind v) { setField(1, v); }
+  set kind(AliasContext_Kind v) {
+    setField(1, v);
+  }
+
   bool hasKind() => $_has(0);
   void clearKind() => clearField(1);
 
   String get name => $_getS(1, '');
-  set name(String v) { $_setString(1, v); }
+  set name(String v) {
+    $_setString(1, v);
+  }
+
   bool hasName() => $_has(1);
   void clearName() => clearField(2);
 }
@@ -170,84 +242,123 @@ class CloudRepoSourceContext extends GeneratedMessage {
     ..a<RepoId>(1, 'repoId', PbFieldType.OM, RepoId.getDefault, RepoId.create)
     ..aOS(2, 'revisionId')
     ..aOS(3, 'aliasName')
-    ..a<AliasContext>(4, 'aliasContext', PbFieldType.OM, AliasContext.getDefault, AliasContext.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<AliasContext>(4, 'aliasContext', PbFieldType.OM,
+        AliasContext.getDefault, AliasContext.create)
+    ..hasRequiredFields = false;
 
   CloudRepoSourceContext() : super();
-  CloudRepoSourceContext.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CloudRepoSourceContext.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  CloudRepoSourceContext clone() => new CloudRepoSourceContext()..mergeFromMessage(this);
+  CloudRepoSourceContext.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CloudRepoSourceContext.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CloudRepoSourceContext clone() =>
+      new CloudRepoSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CloudRepoSourceContext create() => new CloudRepoSourceContext();
-  static PbList<CloudRepoSourceContext> createRepeated() => new PbList<CloudRepoSourceContext>();
+  static PbList<CloudRepoSourceContext> createRepeated() =>
+      new PbList<CloudRepoSourceContext>();
   static CloudRepoSourceContext getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCloudRepoSourceContext();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyCloudRepoSourceContext();
     return _defaultInstance;
   }
+
   static CloudRepoSourceContext _defaultInstance;
   static void $checkItem(CloudRepoSourceContext v) {
-    if (v is! CloudRepoSourceContext) checkItemFailed(v, 'CloudRepoSourceContext');
+    if (v is! CloudRepoSourceContext)
+      checkItemFailed(v, 'CloudRepoSourceContext');
   }
 
   RepoId get repoId => $_getN(0);
-  set repoId(RepoId v) { setField(1, v); }
+  set repoId(RepoId v) {
+    setField(1, v);
+  }
+
   bool hasRepoId() => $_has(0);
   void clearRepoId() => clearField(1);
 
   String get revisionId => $_getS(1, '');
-  set revisionId(String v) { $_setString(1, v); }
+  set revisionId(String v) {
+    $_setString(1, v);
+  }
+
   bool hasRevisionId() => $_has(1);
   void clearRevisionId() => clearField(2);
 
   String get aliasName => $_getS(2, '');
-  set aliasName(String v) { $_setString(2, v); }
+  set aliasName(String v) {
+    $_setString(2, v);
+  }
+
   bool hasAliasName() => $_has(2);
   void clearAliasName() => clearField(3);
 
   AliasContext get aliasContext => $_getN(3);
-  set aliasContext(AliasContext v) { setField(4, v); }
+  set aliasContext(AliasContext v) {
+    setField(4, v);
+  }
+
   bool hasAliasContext() => $_has(3);
   void clearAliasContext() => clearField(4);
 }
 
-class _ReadonlyCloudRepoSourceContext extends CloudRepoSourceContext with ReadonlyMessageMixin {}
+class _ReadonlyCloudRepoSourceContext extends CloudRepoSourceContext
+    with ReadonlyMessageMixin {}
 
 class CloudWorkspaceSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CloudWorkspaceSourceContext')
-    ..a<CloudWorkspaceId>(1, 'workspaceId', PbFieldType.OM, CloudWorkspaceId.getDefault, CloudWorkspaceId.create)
+    ..a<CloudWorkspaceId>(1, 'workspaceId', PbFieldType.OM,
+        CloudWorkspaceId.getDefault, CloudWorkspaceId.create)
     ..aOS(2, 'snapshotId')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   CloudWorkspaceSourceContext() : super();
-  CloudWorkspaceSourceContext.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CloudWorkspaceSourceContext.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  CloudWorkspaceSourceContext clone() => new CloudWorkspaceSourceContext()..mergeFromMessage(this);
+  CloudWorkspaceSourceContext.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CloudWorkspaceSourceContext.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CloudWorkspaceSourceContext clone() =>
+      new CloudWorkspaceSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CloudWorkspaceSourceContext create() => new CloudWorkspaceSourceContext();
-  static PbList<CloudWorkspaceSourceContext> createRepeated() => new PbList<CloudWorkspaceSourceContext>();
+  static CloudWorkspaceSourceContext create() =>
+      new CloudWorkspaceSourceContext();
+  static PbList<CloudWorkspaceSourceContext> createRepeated() =>
+      new PbList<CloudWorkspaceSourceContext>();
   static CloudWorkspaceSourceContext getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCloudWorkspaceSourceContext();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyCloudWorkspaceSourceContext();
     return _defaultInstance;
   }
+
   static CloudWorkspaceSourceContext _defaultInstance;
   static void $checkItem(CloudWorkspaceSourceContext v) {
-    if (v is! CloudWorkspaceSourceContext) checkItemFailed(v, 'CloudWorkspaceSourceContext');
+    if (v is! CloudWorkspaceSourceContext)
+      checkItemFailed(v, 'CloudWorkspaceSourceContext');
   }
 
   CloudWorkspaceId get workspaceId => $_getN(0);
-  set workspaceId(CloudWorkspaceId v) { setField(1, v); }
+  set workspaceId(CloudWorkspaceId v) {
+    setField(1, v);
+  }
+
   bool hasWorkspaceId() => $_has(0);
   void clearWorkspaceId() => clearField(1);
 
   String get snapshotId => $_getS(1, '');
-  set snapshotId(String v) { $_setString(1, v); }
+  set snapshotId(String v) {
+    $_setString(1, v);
+  }
+
   bool hasSnapshotId() => $_has(1);
   void clearSnapshotId() => clearField(2);
 }
 
-class _ReadonlyCloudWorkspaceSourceContext extends CloudWorkspaceSourceContext with ReadonlyMessageMixin {}
+class _ReadonlyCloudWorkspaceSourceContext extends CloudWorkspaceSourceContext
+    with ReadonlyMessageMixin {}
 
 class GerritSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GerritSourceContext')
@@ -255,100 +366,140 @@ class GerritSourceContext extends GeneratedMessage {
     ..aOS(2, 'gerritProject')
     ..aOS(3, 'revisionId')
     ..aOS(4, 'aliasName')
-    ..a<AliasContext>(5, 'aliasContext', PbFieldType.OM, AliasContext.getDefault, AliasContext.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<AliasContext>(5, 'aliasContext', PbFieldType.OM,
+        AliasContext.getDefault, AliasContext.create)
+    ..hasRequiredFields = false;
 
   GerritSourceContext() : super();
-  GerritSourceContext.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GerritSourceContext.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  GerritSourceContext clone() => new GerritSourceContext()..mergeFromMessage(this);
+  GerritSourceContext.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GerritSourceContext.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  GerritSourceContext clone() =>
+      new GerritSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GerritSourceContext create() => new GerritSourceContext();
-  static PbList<GerritSourceContext> createRepeated() => new PbList<GerritSourceContext>();
+  static PbList<GerritSourceContext> createRepeated() =>
+      new PbList<GerritSourceContext>();
   static GerritSourceContext getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGerritSourceContext();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyGerritSourceContext();
     return _defaultInstance;
   }
+
   static GerritSourceContext _defaultInstance;
   static void $checkItem(GerritSourceContext v) {
     if (v is! GerritSourceContext) checkItemFailed(v, 'GerritSourceContext');
   }
 
   String get hostUri => $_getS(0, '');
-  set hostUri(String v) { $_setString(0, v); }
+  set hostUri(String v) {
+    $_setString(0, v);
+  }
+
   bool hasHostUri() => $_has(0);
   void clearHostUri() => clearField(1);
 
   String get gerritProject => $_getS(1, '');
-  set gerritProject(String v) { $_setString(1, v); }
+  set gerritProject(String v) {
+    $_setString(1, v);
+  }
+
   bool hasGerritProject() => $_has(1);
   void clearGerritProject() => clearField(2);
 
   String get revisionId => $_getS(2, '');
-  set revisionId(String v) { $_setString(2, v); }
+  set revisionId(String v) {
+    $_setString(2, v);
+  }
+
   bool hasRevisionId() => $_has(2);
   void clearRevisionId() => clearField(3);
 
   String get aliasName => $_getS(3, '');
-  set aliasName(String v) { $_setString(3, v); }
+  set aliasName(String v) {
+    $_setString(3, v);
+  }
+
   bool hasAliasName() => $_has(3);
   void clearAliasName() => clearField(4);
 
   AliasContext get aliasContext => $_getN(4);
-  set aliasContext(AliasContext v) { setField(5, v); }
+  set aliasContext(AliasContext v) {
+    setField(5, v);
+  }
+
   bool hasAliasContext() => $_has(4);
   void clearAliasContext() => clearField(5);
 }
 
-class _ReadonlyGerritSourceContext extends GerritSourceContext with ReadonlyMessageMixin {}
+class _ReadonlyGerritSourceContext extends GerritSourceContext
+    with ReadonlyMessageMixin {}
 
 class GitSourceContext extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GitSourceContext')
     ..aOS(1, 'url')
     ..aOS(2, 'revisionId')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   GitSourceContext() : super();
-  GitSourceContext.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GitSourceContext.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GitSourceContext.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GitSourceContext.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   GitSourceContext clone() => new GitSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GitSourceContext create() => new GitSourceContext();
-  static PbList<GitSourceContext> createRepeated() => new PbList<GitSourceContext>();
+  static PbList<GitSourceContext> createRepeated() =>
+      new PbList<GitSourceContext>();
   static GitSourceContext getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGitSourceContext();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyGitSourceContext();
     return _defaultInstance;
   }
+
   static GitSourceContext _defaultInstance;
   static void $checkItem(GitSourceContext v) {
     if (v is! GitSourceContext) checkItemFailed(v, 'GitSourceContext');
   }
 
   String get url => $_getS(0, '');
-  set url(String v) { $_setString(0, v); }
+  set url(String v) {
+    $_setString(0, v);
+  }
+
   bool hasUrl() => $_has(0);
   void clearUrl() => clearField(1);
 
   String get revisionId => $_getS(1, '');
-  set revisionId(String v) { $_setString(1, v); }
+  set revisionId(String v) {
+    $_setString(1, v);
+  }
+
   bool hasRevisionId() => $_has(1);
   void clearRevisionId() => clearField(2);
 }
 
-class _ReadonlyGitSourceContext extends GitSourceContext with ReadonlyMessageMixin {}
+class _ReadonlyGitSourceContext extends GitSourceContext
+    with ReadonlyMessageMixin {}
 
 class RepoId extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RepoId')
-    ..a<ProjectRepoId>(1, 'projectRepoId', PbFieldType.OM, ProjectRepoId.getDefault, ProjectRepoId.create)
+    ..a<ProjectRepoId>(1, 'projectRepoId', PbFieldType.OM,
+        ProjectRepoId.getDefault, ProjectRepoId.create)
     ..aOS(2, 'uid')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   RepoId() : super();
-  RepoId.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  RepoId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  RepoId.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  RepoId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   RepoId clone() => new RepoId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static RepoId create() => new RepoId();
@@ -357,18 +508,25 @@ class RepoId extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyRepoId();
     return _defaultInstance;
   }
+
   static RepoId _defaultInstance;
   static void $checkItem(RepoId v) {
     if (v is! RepoId) checkItemFailed(v, 'RepoId');
   }
 
   ProjectRepoId get projectRepoId => $_getN(0);
-  set projectRepoId(ProjectRepoId v) { setField(1, v); }
+  set projectRepoId(ProjectRepoId v) {
+    setField(1, v);
+  }
+
   bool hasProjectRepoId() => $_has(0);
   void clearProjectRepoId() => clearField(1);
 
   String get uid => $_getS(1, '');
-  set uid(String v) { $_setString(1, v); }
+  set uid(String v) {
+    $_setString(1, v);
+  }
+
   bool hasUid() => $_has(1);
   void clearUid() => clearField(2);
 }
@@ -379,32 +537,43 @@ class ProjectRepoId extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ProjectRepoId')
     ..aOS(1, 'projectId')
     ..aOS(2, 'repoName')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ProjectRepoId() : super();
-  ProjectRepoId.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ProjectRepoId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ProjectRepoId.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ProjectRepoId.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   ProjectRepoId clone() => new ProjectRepoId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ProjectRepoId create() => new ProjectRepoId();
   static PbList<ProjectRepoId> createRepeated() => new PbList<ProjectRepoId>();
   static ProjectRepoId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProjectRepoId();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyProjectRepoId();
     return _defaultInstance;
   }
+
   static ProjectRepoId _defaultInstance;
   static void $checkItem(ProjectRepoId v) {
     if (v is! ProjectRepoId) checkItemFailed(v, 'ProjectRepoId');
   }
 
   String get projectId => $_getS(0, '');
-  set projectId(String v) { $_setString(0, v); }
+  set projectId(String v) {
+    $_setString(0, v);
+  }
+
   bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
   String get repoName => $_getS(1, '');
-  set repoName(String v) { $_setString(1, v); }
+  set repoName(String v) {
+    $_setString(1, v);
+  }
+
   bool hasRepoName() => $_has(1);
   void clearRepoName() => clearField(2);
 }
@@ -415,35 +584,47 @@ class CloudWorkspaceId extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CloudWorkspaceId')
     ..a<RepoId>(1, 'repoId', PbFieldType.OM, RepoId.getDefault, RepoId.create)
     ..aOS(2, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   CloudWorkspaceId() : super();
-  CloudWorkspaceId.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CloudWorkspaceId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CloudWorkspaceId.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CloudWorkspaceId.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   CloudWorkspaceId clone() => new CloudWorkspaceId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CloudWorkspaceId create() => new CloudWorkspaceId();
-  static PbList<CloudWorkspaceId> createRepeated() => new PbList<CloudWorkspaceId>();
+  static PbList<CloudWorkspaceId> createRepeated() =>
+      new PbList<CloudWorkspaceId>();
   static CloudWorkspaceId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCloudWorkspaceId();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyCloudWorkspaceId();
     return _defaultInstance;
   }
+
   static CloudWorkspaceId _defaultInstance;
   static void $checkItem(CloudWorkspaceId v) {
     if (v is! CloudWorkspaceId) checkItemFailed(v, 'CloudWorkspaceId');
   }
 
   RepoId get repoId => $_getN(0);
-  set repoId(RepoId v) { setField(1, v); }
+  set repoId(RepoId v) {
+    setField(1, v);
+  }
+
   bool hasRepoId() => $_has(0);
   void clearRepoId() => clearField(1);
 
   String get name => $_getS(1, '');
-  set name(String v) { $_setString(1, v); }
+  set name(String v) {
+    $_setString(1, v);
+  }
+
   bool hasName() => $_has(1);
   void clearName() => clearField(2);
 }
 
-class _ReadonlyCloudWorkspaceId extends CloudWorkspaceId with ReadonlyMessageMixin {}
-
+class _ReadonlyCloudWorkspaceId extends CloudWorkspaceId
+    with ReadonlyMessageMixin {}

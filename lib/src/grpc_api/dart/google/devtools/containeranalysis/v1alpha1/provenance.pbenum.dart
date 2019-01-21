@@ -11,7 +11,7 @@ class Hash_HashType extends ProtobufEnum {
   static const Hash_HashType NONE = const Hash_HashType._(0, 'NONE');
   static const Hash_HashType SHA256 = const Hash_HashType._(1, 'SHA256');
 
-  static const List<Hash_HashType> values = const <Hash_HashType> [
+  static const List<Hash_HashType> values = const <Hash_HashType>[
     NONE,
     SHA256,
   ];
@@ -24,4 +24,3 @@ class Hash_HashType extends ProtobufEnum {
 
   const Hash_HashType._(int v, String n) : super(v, n);
 }
-

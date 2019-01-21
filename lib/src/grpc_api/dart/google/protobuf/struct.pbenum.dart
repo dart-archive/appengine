@@ -10,7 +10,7 @@ import 'package:protobuf/protobuf.dart';
 class NullValue extends ProtobufEnum {
   static const NullValue NULL_VALUE = const NullValue._(0, 'NULL_VALUE');
 
-  static const List<NullValue> values = const <NullValue> [
+  static const List<NullValue> values = const <NullValue>[
     NULL_VALUE,
   ];
 
@@ -22,4 +22,3 @@ class NullValue extends ProtobufEnum {
 
   const NullValue._(int v, String n) : super(v, n);
 }
-

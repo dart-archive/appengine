@@ -17,19 +17,23 @@ abstract class WatcherServiceBase extends GeneratedService {
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'Watch': return new Request();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'Watch':
+        return new Request();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'Watch': return this.watch(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'Watch':
+        return this.watch(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => Watcher$json;
   Map<String, Map<String, dynamic>> get $messageJson => Watcher$messageJson;
 }
-

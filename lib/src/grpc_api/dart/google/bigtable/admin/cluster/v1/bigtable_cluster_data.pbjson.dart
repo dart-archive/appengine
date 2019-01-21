@@ -17,7 +17,14 @@ const Zone$json = const {
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
-    const {'1': 'status', '3': 3, '4': 1, '5': 14, '6': '.google.bigtable.admin.cluster.v1.Zone.Status', '10': 'status'},
+    const {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.bigtable.admin.cluster.v1.Zone.Status',
+      '10': 'status'
+    },
   ],
   '4': const [Zone_Status$json],
 };
@@ -36,10 +43,23 @@ const Cluster$json = const {
   '1': 'Cluster',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'current_operation', '3': 3, '4': 1, '5': 11, '6': '.google.longrunning.Operation', '10': 'currentOperation'},
+    const {
+      '1': 'current_operation',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.longrunning.Operation',
+      '10': 'currentOperation'
+    },
     const {'1': 'display_name', '3': 4, '4': 1, '5': 9, '10': 'displayName'},
     const {'1': 'serve_nodes', '3': 5, '4': 1, '5': 5, '10': 'serveNodes'},
-    const {'1': 'default_storage_type', '3': 8, '4': 1, '5': 14, '6': '.google.bigtable.admin.cluster.v1.StorageType', '10': 'defaultStorageType'},
+    const {
+      '1': 'default_storage_type',
+      '3': 8,
+      '4': 1,
+      '5': 14,
+      '6': '.google.bigtable.admin.cluster.v1.StorageType',
+      '10': 'defaultStorageType'
+    },
   ],
 };
-

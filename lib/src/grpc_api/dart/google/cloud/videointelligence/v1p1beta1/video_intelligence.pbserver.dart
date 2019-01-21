@@ -14,23 +14,29 @@ import 'video_intelligence.pbjson.dart';
 export 'video_intelligence.pb.dart';
 
 abstract class VideoIntelligenceServiceBase extends GeneratedService {
-  Future<$google$longrunning.Operation> annotateVideo(ServerContext ctx, AnnotateVideoRequest request);
+  Future<$google$longrunning.Operation> annotateVideo(
+      ServerContext ctx, AnnotateVideoRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'AnnotateVideo': return new AnnotateVideoRequest();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'AnnotateVideo':
+        return new AnnotateVideoRequest();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'AnnotateVideo': return this.annotateVideo(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'AnnotateVideo':
+        return this.annotateVideo(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => VideoIntelligenceService$json;
-  Map<String, Map<String, dynamic>> get $messageJson => VideoIntelligenceService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson =>
+      VideoIntelligenceService$messageJson;
 }
-

@@ -8,11 +8,12 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Instance_State extends ProtobufEnum {
-  static const Instance_State STATE_UNSPECIFIED = const Instance_State._(0, 'STATE_UNSPECIFIED');
+  static const Instance_State STATE_UNSPECIFIED =
+      const Instance_State._(0, 'STATE_UNSPECIFIED');
   static const Instance_State CREATING = const Instance_State._(1, 'CREATING');
   static const Instance_State READY = const Instance_State._(2, 'READY');
 
-  static const List<Instance_State> values = const <Instance_State> [
+  static const List<Instance_State> values = const <Instance_State>[
     STATE_UNSPECIFIED,
     CREATING,
     READY,
@@ -26,4 +27,3 @@ class Instance_State extends ProtobufEnum {
 
   const Instance_State._(int v, String n) : super(v, n);
 }
-

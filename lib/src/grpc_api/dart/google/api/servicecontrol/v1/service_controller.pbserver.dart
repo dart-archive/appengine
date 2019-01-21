@@ -18,21 +18,28 @@ abstract class ServiceControllerServiceBase extends GeneratedService {
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'Check': return new CheckRequest();
-      case 'Report': return new ReportRequest();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'Check':
+        return new CheckRequest();
+      case 'Report':
+        return new ReportRequest();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'Check': return this.check(ctx, request);
-      case 'Report': return this.report(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'Check':
+        return this.check(ctx, request);
+      case 'Report':
+        return this.report(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => ServiceController$json;
-  Map<String, Map<String, dynamic>> get $messageJson => ServiceController$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson =>
+      ServiceController$messageJson;
 }
-

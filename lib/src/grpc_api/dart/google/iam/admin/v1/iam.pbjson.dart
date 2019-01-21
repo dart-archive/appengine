@@ -53,7 +53,13 @@ const ServiceAccount$json = const {
     const {'1': 'email', '3': 5, '4': 1, '5': 9, '10': 'email'},
     const {'1': 'display_name', '3': 6, '4': 1, '5': 9, '10': 'displayName'},
     const {'1': 'etag', '3': 7, '4': 1, '5': 12, '10': 'etag'},
-    const {'1': 'oauth2_client_id', '3': 9, '4': 1, '5': 9, '10': 'oauth2ClientId'},
+    const {
+      '1': 'oauth2_client_id',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '10': 'oauth2ClientId'
+    },
   ],
 };
 
@@ -62,7 +68,14 @@ const CreateServiceAccountRequest$json = const {
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'account_id', '3': 2, '4': 1, '5': 9, '10': 'accountId'},
-    const {'1': 'service_account', '3': 3, '4': 1, '5': 11, '6': '.google.iam.admin.v1.ServiceAccount', '10': 'serviceAccount'},
+    const {
+      '1': 'service_account',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.iam.admin.v1.ServiceAccount',
+      '10': 'serviceAccount'
+    },
   ],
 };
 
@@ -78,8 +91,21 @@ const ListServiceAccountsRequest$json = const {
 const ListServiceAccountsResponse$json = const {
   '1': 'ListServiceAccountsResponse',
   '2': const [
-    const {'1': 'accounts', '3': 1, '4': 3, '5': 11, '6': '.google.iam.admin.v1.ServiceAccount', '10': 'accounts'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'accounts',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.iam.admin.v1.ServiceAccount',
+      '10': 'accounts'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -101,7 +127,14 @@ const ListServiceAccountKeysRequest$json = const {
   '1': 'ListServiceAccountKeysRequest',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'key_types', '3': 2, '4': 3, '5': 14, '6': '.google.iam.admin.v1.ListServiceAccountKeysRequest.KeyType', '10': 'keyTypes'},
+    const {
+      '1': 'key_types',
+      '3': 2,
+      '4': 3,
+      '5': 14,
+      '6': '.google.iam.admin.v1.ListServiceAccountKeysRequest.KeyType',
+      '10': 'keyTypes'
+    },
   ],
   '4': const [ListServiceAccountKeysRequest_KeyType$json],
 };
@@ -118,7 +151,14 @@ const ListServiceAccountKeysRequest_KeyType$json = const {
 const ListServiceAccountKeysResponse$json = const {
   '1': 'ListServiceAccountKeysResponse',
   '2': const [
-    const {'1': 'keys', '3': 1, '4': 3, '5': 11, '6': '.google.iam.admin.v1.ServiceAccountKey', '10': 'keys'},
+    const {
+      '1': 'keys',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.iam.admin.v1.ServiceAccountKey',
+      '10': 'keys'
+    },
   ],
 };
 
@@ -126,7 +166,14 @@ const GetServiceAccountKeyRequest$json = const {
   '1': 'GetServiceAccountKeyRequest',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'public_key_type', '3': 2, '4': 1, '5': 14, '6': '.google.iam.admin.v1.ServiceAccountPublicKeyType', '10': 'publicKeyType'},
+    const {
+      '1': 'public_key_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.ServiceAccountPublicKeyType',
+      '10': 'publicKeyType'
+    },
   ],
 };
 
@@ -134,12 +181,52 @@ const ServiceAccountKey$json = const {
   '1': 'ServiceAccountKey',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'private_key_type', '3': 2, '4': 1, '5': 14, '6': '.google.iam.admin.v1.ServiceAccountPrivateKeyType', '10': 'privateKeyType'},
-    const {'1': 'key_algorithm', '3': 8, '4': 1, '5': 14, '6': '.google.iam.admin.v1.ServiceAccountKeyAlgorithm', '10': 'keyAlgorithm'},
-    const {'1': 'private_key_data', '3': 3, '4': 1, '5': 12, '10': 'privateKeyData'},
-    const {'1': 'public_key_data', '3': 7, '4': 1, '5': 12, '10': 'publicKeyData'},
-    const {'1': 'valid_after_time', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'validAfterTime'},
-    const {'1': 'valid_before_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'validBeforeTime'},
+    const {
+      '1': 'private_key_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.ServiceAccountPrivateKeyType',
+      '10': 'privateKeyType'
+    },
+    const {
+      '1': 'key_algorithm',
+      '3': 8,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.ServiceAccountKeyAlgorithm',
+      '10': 'keyAlgorithm'
+    },
+    const {
+      '1': 'private_key_data',
+      '3': 3,
+      '4': 1,
+      '5': 12,
+      '10': 'privateKeyData'
+    },
+    const {
+      '1': 'public_key_data',
+      '3': 7,
+      '4': 1,
+      '5': 12,
+      '10': 'publicKeyData'
+    },
+    const {
+      '1': 'valid_after_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'validAfterTime'
+    },
+    const {
+      '1': 'valid_before_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'validBeforeTime'
+    },
   ],
 };
 
@@ -147,8 +234,22 @@ const CreateServiceAccountKeyRequest$json = const {
   '1': 'CreateServiceAccountKeyRequest',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'private_key_type', '3': 2, '4': 1, '5': 14, '6': '.google.iam.admin.v1.ServiceAccountPrivateKeyType', '10': 'privateKeyType'},
-    const {'1': 'key_algorithm', '3': 3, '4': 1, '5': 14, '6': '.google.iam.admin.v1.ServiceAccountKeyAlgorithm', '10': 'keyAlgorithm'},
+    const {
+      '1': 'private_key_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.ServiceAccountPrivateKeyType',
+      '10': 'privateKeyType'
+    },
+    const {
+      '1': 'key_algorithm',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.ServiceAccountKeyAlgorithm',
+      '10': 'keyAlgorithm'
+    },
   ],
 };
 
@@ -197,8 +298,21 @@ const Role$json = const {
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'title', '3': 2, '4': 1, '5': 9, '10': 'title'},
     const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
-    const {'1': 'included_permissions', '3': 7, '4': 3, '5': 9, '10': 'includedPermissions'},
-    const {'1': 'stage', '3': 8, '4': 1, '5': 14, '6': '.google.iam.admin.v1.Role.RoleLaunchStage', '10': 'stage'},
+    const {
+      '1': 'included_permissions',
+      '3': 7,
+      '4': 3,
+      '5': 9,
+      '10': 'includedPermissions'
+    },
+    const {
+      '1': 'stage',
+      '3': 8,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.Role.RoleLaunchStage',
+      '10': 'stage'
+    },
     const {'1': 'etag', '3': 9, '4': 1, '5': 12, '10': 'etag'},
     const {'1': 'deleted', '3': 11, '4': 1, '5': 8, '10': 'deleted'},
   ],
@@ -220,8 +334,21 @@ const Role_RoleLaunchStage$json = const {
 const QueryGrantableRolesRequest$json = const {
   '1': 'QueryGrantableRolesRequest',
   '2': const [
-    const {'1': 'full_resource_name', '3': 1, '4': 1, '5': 9, '10': 'fullResourceName'},
-    const {'1': 'view', '3': 2, '4': 1, '5': 14, '6': '.google.iam.admin.v1.RoleView', '10': 'view'},
+    const {
+      '1': 'full_resource_name',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'fullResourceName'
+    },
+    const {
+      '1': 'view',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.RoleView',
+      '10': 'view'
+    },
     const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -230,8 +357,21 @@ const QueryGrantableRolesRequest$json = const {
 const QueryGrantableRolesResponse$json = const {
   '1': 'QueryGrantableRolesResponse',
   '2': const [
-    const {'1': 'roles', '3': 1, '4': 3, '5': 11, '6': '.google.iam.admin.v1.Role', '10': 'roles'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'roles',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.iam.admin.v1.Role',
+      '10': 'roles'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -241,7 +381,14 @@ const ListRolesRequest$json = const {
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
     const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'view', '3': 4, '4': 1, '5': 14, '6': '.google.iam.admin.v1.RoleView', '10': 'view'},
+    const {
+      '1': 'view',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.RoleView',
+      '10': 'view'
+    },
     const {'1': 'show_deleted', '3': 6, '4': 1, '5': 8, '10': 'showDeleted'},
   ],
 };
@@ -249,8 +396,21 @@ const ListRolesRequest$json = const {
 const ListRolesResponse$json = const {
   '1': 'ListRolesResponse',
   '2': const [
-    const {'1': 'roles', '3': 1, '4': 3, '5': 11, '6': '.google.iam.admin.v1.Role', '10': 'roles'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'roles',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.iam.admin.v1.Role',
+      '10': 'roles'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -266,7 +426,14 @@ const CreateRoleRequest$json = const {
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
     const {'1': 'role_id', '3': 2, '4': 1, '5': 9, '10': 'roleId'},
-    const {'1': 'role', '3': 3, '4': 1, '5': 11, '6': '.google.iam.admin.v1.Role', '10': 'role'},
+    const {
+      '1': 'role',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.iam.admin.v1.Role',
+      '10': 'role'
+    },
   ],
 };
 
@@ -274,8 +441,22 @@ const UpdateRoleRequest$json = const {
   '1': 'UpdateRoleRequest',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'role', '3': 2, '4': 1, '5': 11, '6': '.google.iam.admin.v1.Role', '10': 'role'},
-    const {'1': 'update_mask', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+    const {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.iam.admin.v1.Role',
+      '10': 'role'
+    },
+    const {
+      '1': 'update_mask',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
@@ -301,11 +482,34 @@ const Permission$json = const {
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'title', '3': 2, '4': 1, '5': 9, '10': 'title'},
     const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
-    const {'1': 'only_in_predefined_roles', '3': 4, '4': 1, '5': 8, '10': 'onlyInPredefinedRoles'},
-    const {'1': 'stage', '3': 5, '4': 1, '5': 14, '6': '.google.iam.admin.v1.Permission.PermissionLaunchStage', '10': 'stage'},
-    const {'1': 'custom_roles_support_level', '3': 6, '4': 1, '5': 14, '6': '.google.iam.admin.v1.Permission.CustomRolesSupportLevel', '10': 'customRolesSupportLevel'},
+    const {
+      '1': 'only_in_predefined_roles',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '10': 'onlyInPredefinedRoles'
+    },
+    const {
+      '1': 'stage',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.Permission.PermissionLaunchStage',
+      '10': 'stage'
+    },
+    const {
+      '1': 'custom_roles_support_level',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.google.iam.admin.v1.Permission.CustomRolesSupportLevel',
+      '10': 'customRolesSupportLevel'
+    },
   ],
-  '4': const [Permission_PermissionLaunchStage$json, Permission_CustomRolesSupportLevel$json],
+  '4': const [
+    Permission_PermissionLaunchStage$json,
+    Permission_CustomRolesSupportLevel$json
+  ],
 };
 
 const Permission_PermissionLaunchStage$json = const {
@@ -330,7 +534,13 @@ const Permission_CustomRolesSupportLevel$json = const {
 const QueryTestablePermissionsRequest$json = const {
   '1': 'QueryTestablePermissionsRequest',
   '2': const [
-    const {'1': 'full_resource_name', '3': 1, '4': 1, '5': 9, '10': 'fullResourceName'},
+    const {
+      '1': 'full_resource_name',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'fullResourceName'
+    },
     const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -339,54 +549,187 @@ const QueryTestablePermissionsRequest$json = const {
 const QueryTestablePermissionsResponse$json = const {
   '1': 'QueryTestablePermissionsResponse',
   '2': const [
-    const {'1': 'permissions', '3': 1, '4': 3, '5': 11, '6': '.google.iam.admin.v1.Permission', '10': 'permissions'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'permissions',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.iam.admin.v1.Permission',
+      '10': 'permissions'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
 const IAM$json = const {
   '1': 'IAM',
   '2': const [
-    const {'1': 'ListServiceAccounts', '2': '.google.iam.admin.v1.ListServiceAccountsRequest', '3': '.google.iam.admin.v1.ListServiceAccountsResponse', '4': const {}},
-    const {'1': 'GetServiceAccount', '2': '.google.iam.admin.v1.GetServiceAccountRequest', '3': '.google.iam.admin.v1.ServiceAccount', '4': const {}},
-    const {'1': 'CreateServiceAccount', '2': '.google.iam.admin.v1.CreateServiceAccountRequest', '3': '.google.iam.admin.v1.ServiceAccount', '4': const {}},
-    const {'1': 'UpdateServiceAccount', '2': '.google.iam.admin.v1.ServiceAccount', '3': '.google.iam.admin.v1.ServiceAccount', '4': const {}},
-    const {'1': 'DeleteServiceAccount', '2': '.google.iam.admin.v1.DeleteServiceAccountRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'ListServiceAccountKeys', '2': '.google.iam.admin.v1.ListServiceAccountKeysRequest', '3': '.google.iam.admin.v1.ListServiceAccountKeysResponse', '4': const {}},
-    const {'1': 'GetServiceAccountKey', '2': '.google.iam.admin.v1.GetServiceAccountKeyRequest', '3': '.google.iam.admin.v1.ServiceAccountKey', '4': const {}},
-    const {'1': 'CreateServiceAccountKey', '2': '.google.iam.admin.v1.CreateServiceAccountKeyRequest', '3': '.google.iam.admin.v1.ServiceAccountKey', '4': const {}},
-    const {'1': 'DeleteServiceAccountKey', '2': '.google.iam.admin.v1.DeleteServiceAccountKeyRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'SignBlob', '2': '.google.iam.admin.v1.SignBlobRequest', '3': '.google.iam.admin.v1.SignBlobResponse', '4': const {}},
-    const {'1': 'SignJwt', '2': '.google.iam.admin.v1.SignJwtRequest', '3': '.google.iam.admin.v1.SignJwtResponse', '4': const {}},
-    const {'1': 'GetIamPolicy', '2': '.google.iam.v1.GetIamPolicyRequest', '3': '.google.iam.v1.Policy', '4': const {}},
-    const {'1': 'SetIamPolicy', '2': '.google.iam.v1.SetIamPolicyRequest', '3': '.google.iam.v1.Policy', '4': const {}},
-    const {'1': 'TestIamPermissions', '2': '.google.iam.v1.TestIamPermissionsRequest', '3': '.google.iam.v1.TestIamPermissionsResponse', '4': const {}},
-    const {'1': 'QueryGrantableRoles', '2': '.google.iam.admin.v1.QueryGrantableRolesRequest', '3': '.google.iam.admin.v1.QueryGrantableRolesResponse', '4': const {}},
-    const {'1': 'ListRoles', '2': '.google.iam.admin.v1.ListRolesRequest', '3': '.google.iam.admin.v1.ListRolesResponse', '4': const {}},
-    const {'1': 'GetRole', '2': '.google.iam.admin.v1.GetRoleRequest', '3': '.google.iam.admin.v1.Role', '4': const {}},
-    const {'1': 'CreateRole', '2': '.google.iam.admin.v1.CreateRoleRequest', '3': '.google.iam.admin.v1.Role', '4': const {}},
-    const {'1': 'UpdateRole', '2': '.google.iam.admin.v1.UpdateRoleRequest', '3': '.google.iam.admin.v1.Role', '4': const {}},
-    const {'1': 'DeleteRole', '2': '.google.iam.admin.v1.DeleteRoleRequest', '3': '.google.iam.admin.v1.Role', '4': const {}},
-    const {'1': 'UndeleteRole', '2': '.google.iam.admin.v1.UndeleteRoleRequest', '3': '.google.iam.admin.v1.Role', '4': const {}},
-    const {'1': 'QueryTestablePermissions', '2': '.google.iam.admin.v1.QueryTestablePermissionsRequest', '3': '.google.iam.admin.v1.QueryTestablePermissionsResponse', '4': const {}},
+    const {
+      '1': 'ListServiceAccounts',
+      '2': '.google.iam.admin.v1.ListServiceAccountsRequest',
+      '3': '.google.iam.admin.v1.ListServiceAccountsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetServiceAccount',
+      '2': '.google.iam.admin.v1.GetServiceAccountRequest',
+      '3': '.google.iam.admin.v1.ServiceAccount',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateServiceAccount',
+      '2': '.google.iam.admin.v1.CreateServiceAccountRequest',
+      '3': '.google.iam.admin.v1.ServiceAccount',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateServiceAccount',
+      '2': '.google.iam.admin.v1.ServiceAccount',
+      '3': '.google.iam.admin.v1.ServiceAccount',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteServiceAccount',
+      '2': '.google.iam.admin.v1.DeleteServiceAccountRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'ListServiceAccountKeys',
+      '2': '.google.iam.admin.v1.ListServiceAccountKeysRequest',
+      '3': '.google.iam.admin.v1.ListServiceAccountKeysResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetServiceAccountKey',
+      '2': '.google.iam.admin.v1.GetServiceAccountKeyRequest',
+      '3': '.google.iam.admin.v1.ServiceAccountKey',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateServiceAccountKey',
+      '2': '.google.iam.admin.v1.CreateServiceAccountKeyRequest',
+      '3': '.google.iam.admin.v1.ServiceAccountKey',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteServiceAccountKey',
+      '2': '.google.iam.admin.v1.DeleteServiceAccountKeyRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'SignBlob',
+      '2': '.google.iam.admin.v1.SignBlobRequest',
+      '3': '.google.iam.admin.v1.SignBlobResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'SignJwt',
+      '2': '.google.iam.admin.v1.SignJwtRequest',
+      '3': '.google.iam.admin.v1.SignJwtResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetIamPolicy',
+      '2': '.google.iam.v1.GetIamPolicyRequest',
+      '3': '.google.iam.v1.Policy',
+      '4': const {}
+    },
+    const {
+      '1': 'SetIamPolicy',
+      '2': '.google.iam.v1.SetIamPolicyRequest',
+      '3': '.google.iam.v1.Policy',
+      '4': const {}
+    },
+    const {
+      '1': 'TestIamPermissions',
+      '2': '.google.iam.v1.TestIamPermissionsRequest',
+      '3': '.google.iam.v1.TestIamPermissionsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'QueryGrantableRoles',
+      '2': '.google.iam.admin.v1.QueryGrantableRolesRequest',
+      '3': '.google.iam.admin.v1.QueryGrantableRolesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'ListRoles',
+      '2': '.google.iam.admin.v1.ListRolesRequest',
+      '3': '.google.iam.admin.v1.ListRolesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetRole',
+      '2': '.google.iam.admin.v1.GetRoleRequest',
+      '3': '.google.iam.admin.v1.Role',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateRole',
+      '2': '.google.iam.admin.v1.CreateRoleRequest',
+      '3': '.google.iam.admin.v1.Role',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateRole',
+      '2': '.google.iam.admin.v1.UpdateRoleRequest',
+      '3': '.google.iam.admin.v1.Role',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteRole',
+      '2': '.google.iam.admin.v1.DeleteRoleRequest',
+      '3': '.google.iam.admin.v1.Role',
+      '4': const {}
+    },
+    const {
+      '1': 'UndeleteRole',
+      '2': '.google.iam.admin.v1.UndeleteRoleRequest',
+      '3': '.google.iam.admin.v1.Role',
+      '4': const {}
+    },
+    const {
+      '1': 'QueryTestablePermissions',
+      '2': '.google.iam.admin.v1.QueryTestablePermissionsRequest',
+      '3': '.google.iam.admin.v1.QueryTestablePermissionsResponse',
+      '4': const {}
+    },
   ],
 };
 
 const IAM$messageJson = const {
-  '.google.iam.admin.v1.ListServiceAccountsRequest': ListServiceAccountsRequest$json,
-  '.google.iam.admin.v1.ListServiceAccountsResponse': ListServiceAccountsResponse$json,
+  '.google.iam.admin.v1.ListServiceAccountsRequest':
+      ListServiceAccountsRequest$json,
+  '.google.iam.admin.v1.ListServiceAccountsResponse':
+      ListServiceAccountsResponse$json,
   '.google.iam.admin.v1.ServiceAccount': ServiceAccount$json,
-  '.google.iam.admin.v1.GetServiceAccountRequest': GetServiceAccountRequest$json,
-  '.google.iam.admin.v1.CreateServiceAccountRequest': CreateServiceAccountRequest$json,
-  '.google.iam.admin.v1.DeleteServiceAccountRequest': DeleteServiceAccountRequest$json,
+  '.google.iam.admin.v1.GetServiceAccountRequest':
+      GetServiceAccountRequest$json,
+  '.google.iam.admin.v1.CreateServiceAccountRequest':
+      CreateServiceAccountRequest$json,
+  '.google.iam.admin.v1.DeleteServiceAccountRequest':
+      DeleteServiceAccountRequest$json,
   '.google.protobuf.Empty': $google$protobuf.Empty$json,
-  '.google.iam.admin.v1.ListServiceAccountKeysRequest': ListServiceAccountKeysRequest$json,
-  '.google.iam.admin.v1.ListServiceAccountKeysResponse': ListServiceAccountKeysResponse$json,
+  '.google.iam.admin.v1.ListServiceAccountKeysRequest':
+      ListServiceAccountKeysRequest$json,
+  '.google.iam.admin.v1.ListServiceAccountKeysResponse':
+      ListServiceAccountKeysResponse$json,
   '.google.iam.admin.v1.ServiceAccountKey': ServiceAccountKey$json,
   '.google.protobuf.Timestamp': $google$protobuf.Timestamp$json,
-  '.google.iam.admin.v1.GetServiceAccountKeyRequest': GetServiceAccountKeyRequest$json,
-  '.google.iam.admin.v1.CreateServiceAccountKeyRequest': CreateServiceAccountKeyRequest$json,
-  '.google.iam.admin.v1.DeleteServiceAccountKeyRequest': DeleteServiceAccountKeyRequest$json,
+  '.google.iam.admin.v1.GetServiceAccountKeyRequest':
+      GetServiceAccountKeyRequest$json,
+  '.google.iam.admin.v1.CreateServiceAccountKeyRequest':
+      CreateServiceAccountKeyRequest$json,
+  '.google.iam.admin.v1.DeleteServiceAccountKeyRequest':
+      DeleteServiceAccountKeyRequest$json,
   '.google.iam.admin.v1.SignBlobRequest': SignBlobRequest$json,
   '.google.iam.admin.v1.SignBlobResponse': SignBlobResponse$json,
   '.google.iam.admin.v1.SignJwtRequest': SignJwtRequest$json,
@@ -395,10 +738,14 @@ const IAM$messageJson = const {
   '.google.iam.v1.Policy': $google$iam$v1.Policy$json,
   '.google.iam.v1.Binding': $google$iam$v1.Binding$json,
   '.google.iam.v1.SetIamPolicyRequest': $google$iam$v1.SetIamPolicyRequest$json,
-  '.google.iam.v1.TestIamPermissionsRequest': $google$iam$v1.TestIamPermissionsRequest$json,
-  '.google.iam.v1.TestIamPermissionsResponse': $google$iam$v1.TestIamPermissionsResponse$json,
-  '.google.iam.admin.v1.QueryGrantableRolesRequest': QueryGrantableRolesRequest$json,
-  '.google.iam.admin.v1.QueryGrantableRolesResponse': QueryGrantableRolesResponse$json,
+  '.google.iam.v1.TestIamPermissionsRequest':
+      $google$iam$v1.TestIamPermissionsRequest$json,
+  '.google.iam.v1.TestIamPermissionsResponse':
+      $google$iam$v1.TestIamPermissionsResponse$json,
+  '.google.iam.admin.v1.QueryGrantableRolesRequest':
+      QueryGrantableRolesRequest$json,
+  '.google.iam.admin.v1.QueryGrantableRolesResponse':
+      QueryGrantableRolesResponse$json,
   '.google.iam.admin.v1.Role': Role$json,
   '.google.iam.admin.v1.ListRolesRequest': ListRolesRequest$json,
   '.google.iam.admin.v1.ListRolesResponse': ListRolesResponse$json,
@@ -408,8 +755,9 @@ const IAM$messageJson = const {
   '.google.protobuf.FieldMask': $google$protobuf.FieldMask$json,
   '.google.iam.admin.v1.DeleteRoleRequest': DeleteRoleRequest$json,
   '.google.iam.admin.v1.UndeleteRoleRequest': UndeleteRoleRequest$json,
-  '.google.iam.admin.v1.QueryTestablePermissionsRequest': QueryTestablePermissionsRequest$json,
-  '.google.iam.admin.v1.QueryTestablePermissionsResponse': QueryTestablePermissionsResponse$json,
+  '.google.iam.admin.v1.QueryTestablePermissionsRequest':
+      QueryTestablePermissionsRequest$json,
+  '.google.iam.admin.v1.QueryTestablePermissionsResponse':
+      QueryTestablePermissionsResponse$json,
   '.google.iam.admin.v1.Permission': Permission$json,
 };
-

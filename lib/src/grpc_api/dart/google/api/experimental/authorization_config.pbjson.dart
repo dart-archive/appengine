@@ -9,4 +9,3 @@ const AuthorizationConfig$json = const {
     const {'1': 'provider', '3': 1, '4': 1, '5': 9, '10': 'provider'},
   ],
 };
-

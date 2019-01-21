@@ -15,26 +15,34 @@ import 'tracing.pbjson.dart';
 export 'tracing.pb.dart';
 
 abstract class TraceServiceBase extends GeneratedService {
-  Future<$google$protobuf.Empty> batchWriteSpans(ServerContext ctx, BatchWriteSpansRequest request);
+  Future<$google$protobuf.Empty> batchWriteSpans(
+      ServerContext ctx, BatchWriteSpansRequest request);
   Future<Span> createSpan(ServerContext ctx, Span request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'BatchWriteSpans': return new BatchWriteSpansRequest();
-      case 'CreateSpan': return new Span();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'BatchWriteSpans':
+        return new BatchWriteSpansRequest();
+      case 'CreateSpan':
+        return new Span();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'BatchWriteSpans': return this.batchWriteSpans(ctx, request);
-      case 'CreateSpan': return this.createSpan(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'BatchWriteSpans':
+        return this.batchWriteSpans(ctx, request);
+      case 'CreateSpan':
+        return this.createSpan(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => TraceService$json;
-  Map<String, Map<String, dynamic>> get $messageJson => TraceService$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson =>
+      TraceService$messageJson;
 }
-

@@ -19,33 +19,49 @@ abstract class JobControllerServiceBase extends GeneratedService {
   Future<ListJobsResponse> listJobs(ServerContext ctx, ListJobsRequest request);
   Future<Job> updateJob(ServerContext ctx, UpdateJobRequest request);
   Future<Job> cancelJob(ServerContext ctx, CancelJobRequest request);
-  Future<$google$protobuf.Empty> deleteJob(ServerContext ctx, DeleteJobRequest request);
+  Future<$google$protobuf.Empty> deleteJob(
+      ServerContext ctx, DeleteJobRequest request);
 
   GeneratedMessage createRequest(String method) {
     switch (method) {
-      case 'SubmitJob': return new SubmitJobRequest();
-      case 'GetJob': return new GetJobRequest();
-      case 'ListJobs': return new ListJobsRequest();
-      case 'UpdateJob': return new UpdateJobRequest();
-      case 'CancelJob': return new CancelJobRequest();
-      case 'DeleteJob': return new DeleteJobRequest();
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'SubmitJob':
+        return new SubmitJobRequest();
+      case 'GetJob':
+        return new GetJobRequest();
+      case 'ListJobs':
+        return new ListJobsRequest();
+      case 'UpdateJob':
+        return new UpdateJobRequest();
+      case 'CancelJob':
+        return new CancelJobRequest();
+      case 'DeleteJob':
+        return new DeleteJobRequest();
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(ServerContext ctx, String method, GeneratedMessage request) {
+  Future<GeneratedMessage> handleCall(
+      ServerContext ctx, String method, GeneratedMessage request) {
     switch (method) {
-      case 'SubmitJob': return this.submitJob(ctx, request);
-      case 'GetJob': return this.getJob(ctx, request);
-      case 'ListJobs': return this.listJobs(ctx, request);
-      case 'UpdateJob': return this.updateJob(ctx, request);
-      case 'CancelJob': return this.cancelJob(ctx, request);
-      case 'DeleteJob': return this.deleteJob(ctx, request);
-      default: throw new ArgumentError('Unknown method: $method');
+      case 'SubmitJob':
+        return this.submitJob(ctx, request);
+      case 'GetJob':
+        return this.getJob(ctx, request);
+      case 'ListJobs':
+        return this.listJobs(ctx, request);
+      case 'UpdateJob':
+        return this.updateJob(ctx, request);
+      case 'CancelJob':
+        return this.cancelJob(ctx, request);
+      case 'DeleteJob':
+        return this.deleteJob(ctx, request);
+      default:
+        throw new ArgumentError('Unknown method: $method');
     }
   }
 
   Map<String, dynamic> get $json => JobController$json;
-  Map<String, Map<String, dynamic>> get $messageJson => JobController$messageJson;
+  Map<String, Map<String, dynamic>> get $messageJson =>
+      JobController$messageJson;
 }
-

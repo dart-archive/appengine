@@ -11,4 +11,3 @@ const StorageType$json = const {
     const {'1': 'HDD', '2': 2},
   ],
 };
-

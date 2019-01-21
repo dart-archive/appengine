@@ -16,4 +16,3 @@ const DayOfWeek$json = const {
     const {'1': 'SUNDAY', '2': 7},
   ],
 };
-

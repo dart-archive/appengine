@@ -18,17 +18,22 @@ export 'write.pbenum.dart';
 
 class Write extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Write')
-    ..a<Document>(1, 'update', PbFieldType.OM, Document.getDefault, Document.create)
+    ..a<Document>(
+        1, 'update', PbFieldType.OM, Document.getDefault, Document.create)
     ..aOS(2, 'delete')
-    ..a<DocumentMask>(3, 'updateMask', PbFieldType.OM, DocumentMask.getDefault, DocumentMask.create)
-    ..a<Precondition>(4, 'currentDocument', PbFieldType.OM, Precondition.getDefault, Precondition.create)
-    ..a<DocumentTransform>(6, 'transform', PbFieldType.OM, DocumentTransform.getDefault, DocumentTransform.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<DocumentMask>(3, 'updateMask', PbFieldType.OM, DocumentMask.getDefault,
+        DocumentMask.create)
+    ..a<Precondition>(4, 'currentDocument', PbFieldType.OM,
+        Precondition.getDefault, Precondition.create)
+    ..a<DocumentTransform>(6, 'transform', PbFieldType.OM,
+        DocumentTransform.getDefault, DocumentTransform.create)
+    ..hasRequiredFields = false;
 
   Write() : super();
-  Write.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Write.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Write.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Write.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Write clone() => new Write()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Write create() => new Write();
@@ -37,33 +42,49 @@ class Write extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyWrite();
     return _defaultInstance;
   }
+
   static Write _defaultInstance;
   static void $checkItem(Write v) {
     if (v is! Write) checkItemFailed(v, 'Write');
   }
 
   Document get update => $_getN(0);
-  set update(Document v) { setField(1, v); }
+  set update(Document v) {
+    setField(1, v);
+  }
+
   bool hasUpdate() => $_has(0);
   void clearUpdate() => clearField(1);
 
   String get delete => $_getS(1, '');
-  set delete(String v) { $_setString(1, v); }
+  set delete(String v) {
+    $_setString(1, v);
+  }
+
   bool hasDelete() => $_has(1);
   void clearDelete() => clearField(2);
 
   DocumentMask get updateMask => $_getN(2);
-  set updateMask(DocumentMask v) { setField(3, v); }
+  set updateMask(DocumentMask v) {
+    setField(3, v);
+  }
+
   bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 
   Precondition get currentDocument => $_getN(3);
-  set currentDocument(Precondition v) { setField(4, v); }
+  set currentDocument(Precondition v) {
+    setField(4, v);
+  }
+
   bool hasCurrentDocument() => $_has(3);
   void clearCurrentDocument() => clearField(4);
 
   DocumentTransform get transform => $_getN(4);
-  set transform(DocumentTransform v) { setField(6, v); }
+  set transform(DocumentTransform v) {
+    setField(6, v);
+  }
+
   bool hasTransform() => $_has(4);
   void clearTransform() => clearField(6);
 }
@@ -71,84 +92,132 @@ class Write extends GeneratedMessage {
 class _ReadonlyWrite extends Write with ReadonlyMessageMixin {}
 
 class DocumentTransform_FieldTransform extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DocumentTransform_FieldTransform')
+  static final BuilderInfo _i = new BuilderInfo(
+      'DocumentTransform_FieldTransform')
     ..aOS(1, 'fieldPath')
-    ..e<DocumentTransform_FieldTransform_ServerValue>(2, 'setToServerValue', PbFieldType.OE, DocumentTransform_FieldTransform_ServerValue.SERVER_VALUE_UNSPECIFIED, DocumentTransform_FieldTransform_ServerValue.valueOf, DocumentTransform_FieldTransform_ServerValue.values)
-    ..hasRequiredFields = false
-  ;
+    ..e<DocumentTransform_FieldTransform_ServerValue>(
+        2,
+        'setToServerValue',
+        PbFieldType.OE,
+        DocumentTransform_FieldTransform_ServerValue.SERVER_VALUE_UNSPECIFIED,
+        DocumentTransform_FieldTransform_ServerValue.valueOf,
+        DocumentTransform_FieldTransform_ServerValue.values)
+    ..hasRequiredFields = false;
 
   DocumentTransform_FieldTransform() : super();
-  DocumentTransform_FieldTransform.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DocumentTransform_FieldTransform.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  DocumentTransform_FieldTransform clone() => new DocumentTransform_FieldTransform()..mergeFromMessage(this);
+  DocumentTransform_FieldTransform.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DocumentTransform_FieldTransform.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DocumentTransform_FieldTransform clone() =>
+      new DocumentTransform_FieldTransform()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DocumentTransform_FieldTransform create() => new DocumentTransform_FieldTransform();
-  static PbList<DocumentTransform_FieldTransform> createRepeated() => new PbList<DocumentTransform_FieldTransform>();
+  static DocumentTransform_FieldTransform create() =>
+      new DocumentTransform_FieldTransform();
+  static PbList<DocumentTransform_FieldTransform> createRepeated() =>
+      new PbList<DocumentTransform_FieldTransform>();
   static DocumentTransform_FieldTransform getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDocumentTransform_FieldTransform();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDocumentTransform_FieldTransform();
     return _defaultInstance;
   }
+
   static DocumentTransform_FieldTransform _defaultInstance;
   static void $checkItem(DocumentTransform_FieldTransform v) {
-    if (v is! DocumentTransform_FieldTransform) checkItemFailed(v, 'DocumentTransform_FieldTransform');
+    if (v is! DocumentTransform_FieldTransform)
+      checkItemFailed(v, 'DocumentTransform_FieldTransform');
   }
 
   String get fieldPath => $_getS(0, '');
-  set fieldPath(String v) { $_setString(0, v); }
+  set fieldPath(String v) {
+    $_setString(0, v);
+  }
+
   bool hasFieldPath() => $_has(0);
   void clearFieldPath() => clearField(1);
 
-  DocumentTransform_FieldTransform_ServerValue get setToServerValue => $_getN(1);
-  set setToServerValue(DocumentTransform_FieldTransform_ServerValue v) { setField(2, v); }
+  DocumentTransform_FieldTransform_ServerValue get setToServerValue =>
+      $_getN(1);
+  set setToServerValue(DocumentTransform_FieldTransform_ServerValue v) {
+    setField(2, v);
+  }
+
   bool hasSetToServerValue() => $_has(1);
   void clearSetToServerValue() => clearField(2);
 }
 
-class _ReadonlyDocumentTransform_FieldTransform extends DocumentTransform_FieldTransform with ReadonlyMessageMixin {}
+class _ReadonlyDocumentTransform_FieldTransform
+    extends DocumentTransform_FieldTransform with ReadonlyMessageMixin {}
 
 class DocumentTransform extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DocumentTransform')
     ..aOS(1, 'document')
-    ..pp<DocumentTransform_FieldTransform>(2, 'fieldTransforms', PbFieldType.PM, DocumentTransform_FieldTransform.$checkItem, DocumentTransform_FieldTransform.create)
-    ..hasRequiredFields = false
-  ;
+    ..pp<DocumentTransform_FieldTransform>(
+        2,
+        'fieldTransforms',
+        PbFieldType.PM,
+        DocumentTransform_FieldTransform.$checkItem,
+        DocumentTransform_FieldTransform.create)
+    ..hasRequiredFields = false;
 
   DocumentTransform() : super();
-  DocumentTransform.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DocumentTransform.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DocumentTransform.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DocumentTransform.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   DocumentTransform clone() => new DocumentTransform()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DocumentTransform create() => new DocumentTransform();
-  static PbList<DocumentTransform> createRepeated() => new PbList<DocumentTransform>();
+  static PbList<DocumentTransform> createRepeated() =>
+      new PbList<DocumentTransform>();
   static DocumentTransform getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDocumentTransform();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDocumentTransform();
     return _defaultInstance;
   }
+
   static DocumentTransform _defaultInstance;
   static void $checkItem(DocumentTransform v) {
     if (v is! DocumentTransform) checkItemFailed(v, 'DocumentTransform');
   }
 
   String get document => $_getS(0, '');
-  set document(String v) { $_setString(0, v); }
+  set document(String v) {
+    $_setString(0, v);
+  }
+
   bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
   List<DocumentTransform_FieldTransform> get fieldTransforms => $_getList(1);
 }
 
-class _ReadonlyDocumentTransform extends DocumentTransform with ReadonlyMessageMixin {}
+class _ReadonlyDocumentTransform extends DocumentTransform
+    with ReadonlyMessageMixin {}
 
 class WriteResult extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('WriteResult')
-    ..a<$google$protobuf.Timestamp>(1, 'updateTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
-    ..pp<Value>(2, 'transformResults', PbFieldType.PM, Value.$checkItem, Value.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<$google$protobuf.Timestamp>(
+        1,
+        'updateTime',
+        PbFieldType.OM,
+        $google$protobuf.Timestamp.getDefault,
+        $google$protobuf.Timestamp.create)
+    ..pp<Value>(
+        2, 'transformResults', PbFieldType.PM, Value.$checkItem, Value.create)
+    ..hasRequiredFields = false;
 
   WriteResult() : super();
-  WriteResult.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  WriteResult.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  WriteResult.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  WriteResult.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   WriteResult clone() => new WriteResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static WriteResult create() => new WriteResult();
@@ -157,13 +226,17 @@ class WriteResult extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyWriteResult();
     return _defaultInstance;
   }
+
   static WriteResult _defaultInstance;
   static void $checkItem(WriteResult v) {
     if (v is! WriteResult) checkItemFailed(v, 'WriteResult');
   }
 
   $google$protobuf.Timestamp get updateTime => $_getN(0);
-  set updateTime($google$protobuf.Timestamp v) { setField(1, v); }
+  set updateTime($google$protobuf.Timestamp v) {
+    setField(1, v);
+  }
+
   bool hasUpdateTime() => $_has(0);
   void clearUpdateTime() => clearField(1);
 
@@ -174,30 +247,40 @@ class _ReadonlyWriteResult extends WriteResult with ReadonlyMessageMixin {}
 
 class DocumentChange extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DocumentChange')
-    ..a<Document>(1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
+    ..a<Document>(
+        1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
     ..p<int>(5, 'targetIds', PbFieldType.P3)
     ..p<int>(6, 'removedTargetIds', PbFieldType.P3)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DocumentChange() : super();
-  DocumentChange.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DocumentChange.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DocumentChange.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DocumentChange.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   DocumentChange clone() => new DocumentChange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DocumentChange create() => new DocumentChange();
-  static PbList<DocumentChange> createRepeated() => new PbList<DocumentChange>();
+  static PbList<DocumentChange> createRepeated() =>
+      new PbList<DocumentChange>();
   static DocumentChange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDocumentChange();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDocumentChange();
     return _defaultInstance;
   }
+
   static DocumentChange _defaultInstance;
   static void $checkItem(DocumentChange v) {
     if (v is! DocumentChange) checkItemFailed(v, 'DocumentChange');
   }
 
   Document get document => $_getN(0);
-  set document(Document v) { setField(1, v); }
+  set document(Document v) {
+    setField(1, v);
+  }
+
   bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
@@ -206,119 +289,168 @@ class DocumentChange extends GeneratedMessage {
   List<int> get removedTargetIds => $_getList(2);
 }
 
-class _ReadonlyDocumentChange extends DocumentChange with ReadonlyMessageMixin {}
+class _ReadonlyDocumentChange extends DocumentChange with ReadonlyMessageMixin {
+}
 
 class DocumentDelete extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DocumentDelete')
     ..aOS(1, 'document')
-    ..a<$google$protobuf.Timestamp>(4, 'readTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
+    ..a<$google$protobuf.Timestamp>(
+        4,
+        'readTime',
+        PbFieldType.OM,
+        $google$protobuf.Timestamp.getDefault,
+        $google$protobuf.Timestamp.create)
     ..p<int>(6, 'removedTargetIds', PbFieldType.P3)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DocumentDelete() : super();
-  DocumentDelete.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DocumentDelete.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DocumentDelete.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DocumentDelete.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   DocumentDelete clone() => new DocumentDelete()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DocumentDelete create() => new DocumentDelete();
-  static PbList<DocumentDelete> createRepeated() => new PbList<DocumentDelete>();
+  static PbList<DocumentDelete> createRepeated() =>
+      new PbList<DocumentDelete>();
   static DocumentDelete getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDocumentDelete();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDocumentDelete();
     return _defaultInstance;
   }
+
   static DocumentDelete _defaultInstance;
   static void $checkItem(DocumentDelete v) {
     if (v is! DocumentDelete) checkItemFailed(v, 'DocumentDelete');
   }
 
   String get document => $_getS(0, '');
-  set document(String v) { $_setString(0, v); }
+  set document(String v) {
+    $_setString(0, v);
+  }
+
   bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
   $google$protobuf.Timestamp get readTime => $_getN(1);
-  set readTime($google$protobuf.Timestamp v) { setField(4, v); }
+  set readTime($google$protobuf.Timestamp v) {
+    setField(4, v);
+  }
+
   bool hasReadTime() => $_has(1);
   void clearReadTime() => clearField(4);
 
   List<int> get removedTargetIds => $_getList(2);
 }
 
-class _ReadonlyDocumentDelete extends DocumentDelete with ReadonlyMessageMixin {}
+class _ReadonlyDocumentDelete extends DocumentDelete with ReadonlyMessageMixin {
+}
 
 class DocumentRemove extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DocumentRemove')
     ..aOS(1, 'document')
     ..p<int>(2, 'removedTargetIds', PbFieldType.P3)
-    ..a<$google$protobuf.Timestamp>(4, 'readTime', PbFieldType.OM, $google$protobuf.Timestamp.getDefault, $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<$google$protobuf.Timestamp>(
+        4,
+        'readTime',
+        PbFieldType.OM,
+        $google$protobuf.Timestamp.getDefault,
+        $google$protobuf.Timestamp.create)
+    ..hasRequiredFields = false;
 
   DocumentRemove() : super();
-  DocumentRemove.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DocumentRemove.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DocumentRemove.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DocumentRemove.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   DocumentRemove clone() => new DocumentRemove()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DocumentRemove create() => new DocumentRemove();
-  static PbList<DocumentRemove> createRepeated() => new PbList<DocumentRemove>();
+  static PbList<DocumentRemove> createRepeated() =>
+      new PbList<DocumentRemove>();
   static DocumentRemove getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDocumentRemove();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDocumentRemove();
     return _defaultInstance;
   }
+
   static DocumentRemove _defaultInstance;
   static void $checkItem(DocumentRemove v) {
     if (v is! DocumentRemove) checkItemFailed(v, 'DocumentRemove');
   }
 
   String get document => $_getS(0, '');
-  set document(String v) { $_setString(0, v); }
+  set document(String v) {
+    $_setString(0, v);
+  }
+
   bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
   List<int> get removedTargetIds => $_getList(1);
 
   $google$protobuf.Timestamp get readTime => $_getN(2);
-  set readTime($google$protobuf.Timestamp v) { setField(4, v); }
+  set readTime($google$protobuf.Timestamp v) {
+    setField(4, v);
+  }
+
   bool hasReadTime() => $_has(2);
   void clearReadTime() => clearField(4);
 }
 
-class _ReadonlyDocumentRemove extends DocumentRemove with ReadonlyMessageMixin {}
+class _ReadonlyDocumentRemove extends DocumentRemove with ReadonlyMessageMixin {
+}
 
 class ExistenceFilter extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ExistenceFilter')
     ..a<int>(1, 'targetId', PbFieldType.O3)
     ..a<int>(2, 'count', PbFieldType.O3)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ExistenceFilter() : super();
-  ExistenceFilter.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ExistenceFilter.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ExistenceFilter.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ExistenceFilter.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   ExistenceFilter clone() => new ExistenceFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ExistenceFilter create() => new ExistenceFilter();
-  static PbList<ExistenceFilter> createRepeated() => new PbList<ExistenceFilter>();
+  static PbList<ExistenceFilter> createRepeated() =>
+      new PbList<ExistenceFilter>();
   static ExistenceFilter getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyExistenceFilter();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyExistenceFilter();
     return _defaultInstance;
   }
+
   static ExistenceFilter _defaultInstance;
   static void $checkItem(ExistenceFilter v) {
     if (v is! ExistenceFilter) checkItemFailed(v, 'ExistenceFilter');
   }
 
   int get targetId => $_get(0, 0);
-  set targetId(int v) { $_setSignedInt32(0, v); }
+  set targetId(int v) {
+    $_setSignedInt32(0, v);
+  }
+
   bool hasTargetId() => $_has(0);
   void clearTargetId() => clearField(1);
 
   int get count => $_get(1, 0);
-  set count(int v) { $_setSignedInt32(1, v); }
+  set count(int v) {
+    $_setSignedInt32(1, v);
+  }
+
   bool hasCount() => $_has(1);
   void clearCount() => clearField(2);
 }
 
-class _ReadonlyExistenceFilter extends ExistenceFilter with ReadonlyMessageMixin {}
-
+class _ReadonlyExistenceFilter extends ExistenceFilter
+    with ReadonlyMessageMixin {}

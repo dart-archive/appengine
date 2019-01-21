@@ -10,13 +10,16 @@ import 'package:protobuf/protobuf.dart';
 
 class Context extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Context')
-    ..pp<ContextRule>(1, 'rules', PbFieldType.PM, ContextRule.$checkItem, ContextRule.create)
-    ..hasRequiredFields = false
-  ;
+    ..pp<ContextRule>(
+        1, 'rules', PbFieldType.PM, ContextRule.$checkItem, ContextRule.create)
+    ..hasRequiredFields = false;
 
   Context() : super();
-  Context.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Context.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Context.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Context.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Context clone() => new Context()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Context create() => new Context();
@@ -25,6 +28,7 @@ class Context extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyContext();
     return _defaultInstance;
   }
+
   static Context _defaultInstance;
   static void $checkItem(Context v) {
     if (v is! Context) checkItemFailed(v, 'Context');
@@ -40,12 +44,15 @@ class ContextRule extends GeneratedMessage {
     ..aOS(1, 'selector')
     ..pPS(2, 'requested')
     ..pPS(3, 'provided')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ContextRule() : super();
-  ContextRule.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ContextRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ContextRule.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ContextRule.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   ContextRule clone() => new ContextRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ContextRule create() => new ContextRule();
@@ -54,13 +61,17 @@ class ContextRule extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyContextRule();
     return _defaultInstance;
   }
+
   static ContextRule _defaultInstance;
   static void $checkItem(ContextRule v) {
     if (v is! ContextRule) checkItemFailed(v, 'ContextRule');
   }
 
   String get selector => $_getS(0, '');
-  set selector(String v) { $_setString(0, v); }
+  set selector(String v) {
+    $_setString(0, v);
+  }
+
   bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
@@ -70,4 +81,3 @@ class ContextRule extends GeneratedMessage {
 }
 
 class _ReadonlyContextRule extends ContextRule with ReadonlyMessageMixin {}
-

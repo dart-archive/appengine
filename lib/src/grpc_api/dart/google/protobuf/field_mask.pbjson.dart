@@ -9,4 +9,3 @@ const FieldMask$json = const {
     const {'1': 'paths', '3': 1, '4': 3, '5': 9, '10': 'paths'},
   ],
 };
-

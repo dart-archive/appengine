@@ -43,8 +43,7 @@ class AppEngineHttpServer {
       '/_ah/stop': _stop
     };
 
-    HttpServer
-        .bind(_hostname, _port, shared: _shared)
+    HttpServer.bind(_hostname, _port, shared: _shared)
         .then((HttpServer server) {
       _httpServer = server;
 

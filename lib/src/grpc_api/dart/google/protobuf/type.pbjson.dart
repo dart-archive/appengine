@@ -15,25 +15,74 @@ const Type$json = const {
   '1': 'Type',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'fields', '3': 2, '4': 3, '5': 11, '6': '.google.protobuf.Field', '10': 'fields'},
+    const {
+      '1': 'fields',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.Field',
+      '10': 'fields'
+    },
     const {'1': 'oneofs', '3': 3, '4': 3, '5': 9, '10': 'oneofs'},
-    const {'1': 'options', '3': 4, '4': 3, '5': 11, '6': '.google.protobuf.Option', '10': 'options'},
-    const {'1': 'source_context', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.SourceContext', '10': 'sourceContext'},
-    const {'1': 'syntax', '3': 6, '4': 1, '5': 14, '6': '.google.protobuf.Syntax', '10': 'syntax'},
+    const {
+      '1': 'options',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.Option',
+      '10': 'options'
+    },
+    const {
+      '1': 'source_context',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.SourceContext',
+      '10': 'sourceContext'
+    },
+    const {
+      '1': 'syntax',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.google.protobuf.Syntax',
+      '10': 'syntax'
+    },
   ],
 };
 
 const Field$json = const {
   '1': 'Field',
   '2': const [
-    const {'1': 'kind', '3': 1, '4': 1, '5': 14, '6': '.google.protobuf.Field.Kind', '10': 'kind'},
-    const {'1': 'cardinality', '3': 2, '4': 1, '5': 14, '6': '.google.protobuf.Field.Cardinality', '10': 'cardinality'},
+    const {
+      '1': 'kind',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.protobuf.Field.Kind',
+      '10': 'kind'
+    },
+    const {
+      '1': 'cardinality',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.protobuf.Field.Cardinality',
+      '10': 'cardinality'
+    },
     const {'1': 'number', '3': 3, '4': 1, '5': 5, '10': 'number'},
     const {'1': 'name', '3': 4, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'type_url', '3': 6, '4': 1, '5': 9, '10': 'typeUrl'},
     const {'1': 'oneof_index', '3': 7, '4': 1, '5': 5, '10': 'oneofIndex'},
     const {'1': 'packed', '3': 8, '4': 1, '5': 8, '10': 'packed'},
-    const {'1': 'options', '3': 9, '4': 3, '5': 11, '6': '.google.protobuf.Option', '10': 'options'},
+    const {
+      '1': 'options',
+      '3': 9,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.Option',
+      '10': 'options'
+    },
     const {'1': 'json_name', '3': 10, '4': 1, '5': 9, '10': 'jsonName'},
     const {'1': 'default_value', '3': 11, '4': 1, '5': 9, '10': 'defaultValue'},
   ],
@@ -79,10 +128,38 @@ const Enum$json = const {
   '1': 'Enum',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'enumvalue', '3': 2, '4': 3, '5': 11, '6': '.google.protobuf.EnumValue', '10': 'enumvalue'},
-    const {'1': 'options', '3': 3, '4': 3, '5': 11, '6': '.google.protobuf.Option', '10': 'options'},
-    const {'1': 'source_context', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.SourceContext', '10': 'sourceContext'},
-    const {'1': 'syntax', '3': 5, '4': 1, '5': 14, '6': '.google.protobuf.Syntax', '10': 'syntax'},
+    const {
+      '1': 'enumvalue',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.EnumValue',
+      '10': 'enumvalue'
+    },
+    const {
+      '1': 'options',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.Option',
+      '10': 'options'
+    },
+    const {
+      '1': 'source_context',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.SourceContext',
+      '10': 'sourceContext'
+    },
+    const {
+      '1': 'syntax',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.protobuf.Syntax',
+      '10': 'syntax'
+    },
   ],
 };
 
@@ -91,7 +168,14 @@ const EnumValue$json = const {
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'number', '3': 2, '4': 1, '5': 5, '10': 'number'},
-    const {'1': 'options', '3': 3, '4': 3, '5': 11, '6': '.google.protobuf.Option', '10': 'options'},
+    const {
+      '1': 'options',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.Option',
+      '10': 'options'
+    },
   ],
 };
 
@@ -99,7 +183,13 @@ const Option$json = const {
   '1': 'Option',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Any', '10': 'value'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Any',
+      '10': 'value'
+    },
   ],
 };
-

@@ -11,4 +11,3 @@ const Money$json = const {
     const {'1': 'nanos', '3': 3, '4': 1, '5': 5, '10': 'nanos'},
   ],
 };
-

@@ -13,4 +13,3 @@ const Group$json = const {
     const {'1': 'is_cluster', '3': 6, '4': 1, '5': 8, '10': 'isCluster'},
   ],
 };
-

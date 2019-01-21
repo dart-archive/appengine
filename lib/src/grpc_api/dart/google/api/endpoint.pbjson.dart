@@ -14,4 +14,3 @@ const Endpoint$json = const {
     const {'1': 'allow_cors', '3': 5, '4': 1, '5': 8, '10': 'allowCors'},
   ],
 };
-

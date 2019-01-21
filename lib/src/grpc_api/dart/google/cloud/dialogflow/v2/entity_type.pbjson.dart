@@ -14,9 +14,30 @@ const EntityType$json = const {
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
-    const {'1': 'kind', '3': 3, '4': 1, '5': 14, '6': '.google.cloud.dialogflow.v2.EntityType.Kind', '10': 'kind'},
-    const {'1': 'auto_expansion_mode', '3': 4, '4': 1, '5': 14, '6': '.google.cloud.dialogflow.v2.EntityType.AutoExpansionMode', '10': 'autoExpansionMode'},
-    const {'1': 'entities', '3': 6, '4': 3, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityType.Entity', '10': 'entities'},
+    const {
+      '1': 'kind',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.dialogflow.v2.EntityType.Kind',
+      '10': 'kind'
+    },
+    const {
+      '1': 'auto_expansion_mode',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.dialogflow.v2.EntityType.AutoExpansionMode',
+      '10': 'autoExpansionMode'
+    },
+    const {
+      '1': 'entities',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityType.Entity',
+      '10': 'entities'
+    },
   ],
   '3': const [EntityType_Entity$json],
   '4': const [EntityType_Kind$json, EntityType_AutoExpansionMode$json],
@@ -60,8 +81,21 @@ const ListEntityTypesRequest$json = const {
 const ListEntityTypesResponse$json = const {
   '1': 'ListEntityTypesResponse',
   '2': const [
-    const {'1': 'entity_types', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityType', '10': 'entityTypes'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'entity_types',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityType',
+      '10': 'entityTypes'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -77,7 +111,14 @@ const CreateEntityTypeRequest$json = const {
   '1': 'CreateEntityTypeRequest',
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'entity_type', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityType', '10': 'entityType'},
+    const {
+      '1': 'entity_type',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityType',
+      '10': 'entityType'
+    },
     const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
@@ -85,9 +126,23 @@ const CreateEntityTypeRequest$json = const {
 const UpdateEntityTypeRequest$json = const {
   '1': 'UpdateEntityTypeRequest',
   '2': const [
-    const {'1': 'entity_type', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityType', '10': 'entityType'},
+    const {
+      '1': 'entity_type',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityType',
+      '10': 'entityType'
+    },
     const {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
-    const {'1': 'update_mask', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+    const {
+      '1': 'update_mask',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
@@ -102,10 +157,32 @@ const BatchUpdateEntityTypesRequest$json = const {
   '1': 'BatchUpdateEntityTypesRequest',
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'entity_type_batch_uri', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'entityTypeBatchUri'},
-    const {'1': 'entity_type_batch_inline', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityTypeBatch', '9': 0, '10': 'entityTypeBatchInline'},
+    const {
+      '1': 'entity_type_batch_uri',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'entityTypeBatchUri'
+    },
+    const {
+      '1': 'entity_type_batch_inline',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityTypeBatch',
+      '9': 0,
+      '10': 'entityTypeBatchInline'
+    },
     const {'1': 'language_code', '3': 4, '4': 1, '5': 9, '10': 'languageCode'},
-    const {'1': 'update_mask', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+    const {
+      '1': 'update_mask',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
   '8': const [
     const {'1': 'entity_type_batch'},
@@ -115,7 +192,14 @@ const BatchUpdateEntityTypesRequest$json = const {
 const BatchUpdateEntityTypesResponse$json = const {
   '1': 'BatchUpdateEntityTypesResponse',
   '2': const [
-    const {'1': 'entity_types', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityType', '10': 'entityTypes'},
+    const {
+      '1': 'entity_types',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityType',
+      '10': 'entityTypes'
+    },
   ],
 };
 
@@ -123,7 +207,13 @@ const BatchDeleteEntityTypesRequest$json = const {
   '1': 'BatchDeleteEntityTypesRequest',
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'entity_type_names', '3': 2, '4': 3, '5': 9, '10': 'entityTypeNames'},
+    const {
+      '1': 'entity_type_names',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '10': 'entityTypeNames'
+    },
   ],
 };
 
@@ -131,7 +221,14 @@ const BatchCreateEntitiesRequest$json = const {
   '1': 'BatchCreateEntitiesRequest',
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'entities', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityType.Entity', '10': 'entities'},
+    const {
+      '1': 'entities',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityType.Entity',
+      '10': 'entities'
+    },
     const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
@@ -140,9 +237,23 @@ const BatchUpdateEntitiesRequest$json = const {
   '1': 'BatchUpdateEntitiesRequest',
   '2': const [
     const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'entities', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityType.Entity', '10': 'entities'},
+    const {
+      '1': 'entities',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityType.Entity',
+      '10': 'entities'
+    },
     const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
-    const {'1': 'update_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+    const {
+      '1': 'update_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
@@ -158,45 +269,111 @@ const BatchDeleteEntitiesRequest$json = const {
 const EntityTypeBatch$json = const {
   '1': 'EntityTypeBatch',
   '2': const [
-    const {'1': 'entity_types', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.dialogflow.v2.EntityType', '10': 'entityTypes'},
+    const {
+      '1': 'entity_types',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.EntityType',
+      '10': 'entityTypes'
+    },
   ],
 };
 
 const EntityTypes$json = const {
   '1': 'EntityTypes',
   '2': const [
-    const {'1': 'ListEntityTypes', '2': '.google.cloud.dialogflow.v2.ListEntityTypesRequest', '3': '.google.cloud.dialogflow.v2.ListEntityTypesResponse', '4': const {}},
-    const {'1': 'GetEntityType', '2': '.google.cloud.dialogflow.v2.GetEntityTypeRequest', '3': '.google.cloud.dialogflow.v2.EntityType', '4': const {}},
-    const {'1': 'CreateEntityType', '2': '.google.cloud.dialogflow.v2.CreateEntityTypeRequest', '3': '.google.cloud.dialogflow.v2.EntityType', '4': const {}},
-    const {'1': 'UpdateEntityType', '2': '.google.cloud.dialogflow.v2.UpdateEntityTypeRequest', '3': '.google.cloud.dialogflow.v2.EntityType', '4': const {}},
-    const {'1': 'DeleteEntityType', '2': '.google.cloud.dialogflow.v2.DeleteEntityTypeRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'BatchUpdateEntityTypes', '2': '.google.cloud.dialogflow.v2.BatchUpdateEntityTypesRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'BatchDeleteEntityTypes', '2': '.google.cloud.dialogflow.v2.BatchDeleteEntityTypesRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'BatchCreateEntities', '2': '.google.cloud.dialogflow.v2.BatchCreateEntitiesRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'BatchUpdateEntities', '2': '.google.cloud.dialogflow.v2.BatchUpdateEntitiesRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'BatchDeleteEntities', '2': '.google.cloud.dialogflow.v2.BatchDeleteEntitiesRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'ListEntityTypes',
+      '2': '.google.cloud.dialogflow.v2.ListEntityTypesRequest',
+      '3': '.google.cloud.dialogflow.v2.ListEntityTypesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetEntityType',
+      '2': '.google.cloud.dialogflow.v2.GetEntityTypeRequest',
+      '3': '.google.cloud.dialogflow.v2.EntityType',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateEntityType',
+      '2': '.google.cloud.dialogflow.v2.CreateEntityTypeRequest',
+      '3': '.google.cloud.dialogflow.v2.EntityType',
+      '4': const {}
+    },
+    const {
+      '1': 'UpdateEntityType',
+      '2': '.google.cloud.dialogflow.v2.UpdateEntityTypeRequest',
+      '3': '.google.cloud.dialogflow.v2.EntityType',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteEntityType',
+      '2': '.google.cloud.dialogflow.v2.DeleteEntityTypeRequest',
+      '3': '.google.protobuf.Empty',
+      '4': const {}
+    },
+    const {
+      '1': 'BatchUpdateEntityTypes',
+      '2': '.google.cloud.dialogflow.v2.BatchUpdateEntityTypesRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'BatchDeleteEntityTypes',
+      '2': '.google.cloud.dialogflow.v2.BatchDeleteEntityTypesRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'BatchCreateEntities',
+      '2': '.google.cloud.dialogflow.v2.BatchCreateEntitiesRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'BatchUpdateEntities',
+      '2': '.google.cloud.dialogflow.v2.BatchUpdateEntitiesRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'BatchDeleteEntities',
+      '2': '.google.cloud.dialogflow.v2.BatchDeleteEntitiesRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
 const EntityTypes$messageJson = const {
-  '.google.cloud.dialogflow.v2.ListEntityTypesRequest': ListEntityTypesRequest$json,
-  '.google.cloud.dialogflow.v2.ListEntityTypesResponse': ListEntityTypesResponse$json,
+  '.google.cloud.dialogflow.v2.ListEntityTypesRequest':
+      ListEntityTypesRequest$json,
+  '.google.cloud.dialogflow.v2.ListEntityTypesResponse':
+      ListEntityTypesResponse$json,
   '.google.cloud.dialogflow.v2.EntityType': EntityType$json,
   '.google.cloud.dialogflow.v2.EntityType.Entity': EntityType_Entity$json,
   '.google.cloud.dialogflow.v2.GetEntityTypeRequest': GetEntityTypeRequest$json,
-  '.google.cloud.dialogflow.v2.CreateEntityTypeRequest': CreateEntityTypeRequest$json,
-  '.google.cloud.dialogflow.v2.UpdateEntityTypeRequest': UpdateEntityTypeRequest$json,
+  '.google.cloud.dialogflow.v2.CreateEntityTypeRequest':
+      CreateEntityTypeRequest$json,
+  '.google.cloud.dialogflow.v2.UpdateEntityTypeRequest':
+      UpdateEntityTypeRequest$json,
   '.google.protobuf.FieldMask': $google$protobuf.FieldMask$json,
-  '.google.cloud.dialogflow.v2.DeleteEntityTypeRequest': DeleteEntityTypeRequest$json,
+  '.google.cloud.dialogflow.v2.DeleteEntityTypeRequest':
+      DeleteEntityTypeRequest$json,
   '.google.protobuf.Empty': $google$protobuf.Empty$json,
-  '.google.cloud.dialogflow.v2.BatchUpdateEntityTypesRequest': BatchUpdateEntityTypesRequest$json,
+  '.google.cloud.dialogflow.v2.BatchUpdateEntityTypesRequest':
+      BatchUpdateEntityTypesRequest$json,
   '.google.cloud.dialogflow.v2.EntityTypeBatch': EntityTypeBatch$json,
   '.google.longrunning.Operation': $google$longrunning.Operation$json,
   '.google.protobuf.Any': $google$protobuf.Any$json,
   '.google.rpc.Status': $google$rpc.Status$json,
-  '.google.cloud.dialogflow.v2.BatchDeleteEntityTypesRequest': BatchDeleteEntityTypesRequest$json,
-  '.google.cloud.dialogflow.v2.BatchCreateEntitiesRequest': BatchCreateEntitiesRequest$json,
-  '.google.cloud.dialogflow.v2.BatchUpdateEntitiesRequest': BatchUpdateEntitiesRequest$json,
-  '.google.cloud.dialogflow.v2.BatchDeleteEntitiesRequest': BatchDeleteEntitiesRequest$json,
+  '.google.cloud.dialogflow.v2.BatchDeleteEntityTypesRequest':
+      BatchDeleteEntityTypesRequest$json,
+  '.google.cloud.dialogflow.v2.BatchCreateEntitiesRequest':
+      BatchCreateEntitiesRequest$json,
+  '.google.cloud.dialogflow.v2.BatchUpdateEntitiesRequest':
+      BatchUpdateEntitiesRequest$json,
+  '.google.cloud.dialogflow.v2.BatchDeleteEntitiesRequest':
+      BatchDeleteEntitiesRequest$json,
 };
-

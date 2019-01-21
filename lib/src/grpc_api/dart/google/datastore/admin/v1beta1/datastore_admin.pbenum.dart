@@ -8,11 +8,14 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class OperationType extends ProtobufEnum {
-  static const OperationType OPERATION_TYPE_UNSPECIFIED = const OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
-  static const OperationType EXPORT_ENTITIES = const OperationType._(1, 'EXPORT_ENTITIES');
-  static const OperationType IMPORT_ENTITIES = const OperationType._(2, 'IMPORT_ENTITIES');
+  static const OperationType OPERATION_TYPE_UNSPECIFIED =
+      const OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
+  static const OperationType EXPORT_ENTITIES =
+      const OperationType._(1, 'EXPORT_ENTITIES');
+  static const OperationType IMPORT_ENTITIES =
+      const OperationType._(2, 'IMPORT_ENTITIES');
 
-  static const List<OperationType> values = const <OperationType> [
+  static const List<OperationType> values = const <OperationType>[
     OPERATION_TYPE_UNSPECIFIED,
     EXPORT_ENTITIES,
     IMPORT_ENTITIES,
@@ -28,16 +31,24 @@ class OperationType extends ProtobufEnum {
 }
 
 class CommonMetadata_State extends ProtobufEnum {
-  static const CommonMetadata_State STATE_UNSPECIFIED = const CommonMetadata_State._(0, 'STATE_UNSPECIFIED');
-  static const CommonMetadata_State INITIALIZING = const CommonMetadata_State._(1, 'INITIALIZING');
-  static const CommonMetadata_State PROCESSING = const CommonMetadata_State._(2, 'PROCESSING');
-  static const CommonMetadata_State CANCELLING = const CommonMetadata_State._(3, 'CANCELLING');
-  static const CommonMetadata_State FINALIZING = const CommonMetadata_State._(4, 'FINALIZING');
-  static const CommonMetadata_State SUCCESSFUL = const CommonMetadata_State._(5, 'SUCCESSFUL');
-  static const CommonMetadata_State FAILED = const CommonMetadata_State._(6, 'FAILED');
-  static const CommonMetadata_State CANCELLED = const CommonMetadata_State._(7, 'CANCELLED');
+  static const CommonMetadata_State STATE_UNSPECIFIED =
+      const CommonMetadata_State._(0, 'STATE_UNSPECIFIED');
+  static const CommonMetadata_State INITIALIZING =
+      const CommonMetadata_State._(1, 'INITIALIZING');
+  static const CommonMetadata_State PROCESSING =
+      const CommonMetadata_State._(2, 'PROCESSING');
+  static const CommonMetadata_State CANCELLING =
+      const CommonMetadata_State._(3, 'CANCELLING');
+  static const CommonMetadata_State FINALIZING =
+      const CommonMetadata_State._(4, 'FINALIZING');
+  static const CommonMetadata_State SUCCESSFUL =
+      const CommonMetadata_State._(5, 'SUCCESSFUL');
+  static const CommonMetadata_State FAILED =
+      const CommonMetadata_State._(6, 'FAILED');
+  static const CommonMetadata_State CANCELLED =
+      const CommonMetadata_State._(7, 'CANCELLED');
 
-  static const List<CommonMetadata_State> values = const <CommonMetadata_State> [
+  static const List<CommonMetadata_State> values = const <CommonMetadata_State>[
     STATE_UNSPECIFIED,
     INITIALIZING,
     PROCESSING,
@@ -49,11 +60,11 @@ class CommonMetadata_State extends ProtobufEnum {
   ];
 
   static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static CommonMetadata_State valueOf(int value) => _byValue[value] as CommonMetadata_State;
+  static CommonMetadata_State valueOf(int value) =>
+      _byValue[value] as CommonMetadata_State;
   static void $checkItem(CommonMetadata_State v) {
     if (v is! CommonMetadata_State) checkItemFailed(v, 'CommonMetadata_State');
   }
 
   const CommonMetadata_State._(int v, String n) : super(v, n);
 }
-

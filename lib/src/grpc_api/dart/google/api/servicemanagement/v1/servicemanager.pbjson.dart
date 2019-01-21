@@ -38,7 +38,13 @@ import '../../config_change.pbjson.dart' as $google$api;
 const ListServicesRequest$json = const {
   '1': 'ListServicesRequest',
   '2': const [
-    const {'1': 'producer_project_id', '3': 1, '4': 1, '5': 9, '10': 'producerProjectId'},
+    const {
+      '1': 'producer_project_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'producerProjectId'
+    },
     const {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
     const {'1': 'page_token', '3': 6, '4': 1, '5': 9, '10': 'pageToken'},
     const {'1': 'consumer_id', '3': 7, '4': 1, '5': 9, '10': 'consumerId'},
@@ -48,8 +54,21 @@ const ListServicesRequest$json = const {
 const ListServicesResponse$json = const {
   '1': 'ListServicesResponse',
   '2': const [
-    const {'1': 'services', '3': 1, '4': 3, '5': 11, '6': '.google.api.servicemanagement.v1.ManagedService', '10': 'services'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'services',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.servicemanagement.v1.ManagedService',
+      '10': 'services'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -63,7 +82,14 @@ const GetServiceRequest$json = const {
 const CreateServiceRequest$json = const {
   '1': 'CreateServiceRequest',
   '2': const [
-    const {'1': 'service', '3': 1, '4': 1, '5': 11, '6': '.google.api.servicemanagement.v1.ManagedService', '10': 'service'},
+    const {
+      '1': 'service',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.servicemanagement.v1.ManagedService',
+      '10': 'service'
+    },
   ],
 };
 
@@ -84,7 +110,14 @@ const UndeleteServiceRequest$json = const {
 const UndeleteServiceResponse$json = const {
   '1': 'UndeleteServiceResponse',
   '2': const [
-    const {'1': 'service', '3': 1, '4': 1, '5': 11, '6': '.google.api.servicemanagement.v1.ManagedService', '10': 'service'},
+    const {
+      '1': 'service',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.servicemanagement.v1.ManagedService',
+      '10': 'service'
+    },
   ],
 };
 
@@ -93,7 +126,15 @@ const GetServiceConfigRequest$json = const {
   '2': const [
     const {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
     const {'1': 'config_id', '3': 2, '4': 1, '5': 9, '10': 'configId'},
-    const {'1': 'view', '3': 3, '4': 1, '5': 14, '6': '.google.api.servicemanagement.v1.GetServiceConfigRequest.ConfigView', '10': 'view'},
+    const {
+      '1': 'view',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.api.servicemanagement.v1.GetServiceConfigRequest.ConfigView',
+      '10': 'view'
+    },
   ],
   '4': const [GetServiceConfigRequest_ConfigView$json],
 };
@@ -118,8 +159,21 @@ const ListServiceConfigsRequest$json = const {
 const ListServiceConfigsResponse$json = const {
   '1': 'ListServiceConfigsResponse',
   '2': const [
-    const {'1': 'service_configs', '3': 1, '4': 3, '5': 11, '6': '.google.api.Service', '10': 'serviceConfigs'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'service_configs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.Service',
+      '10': 'serviceConfigs'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -127,7 +181,14 @@ const CreateServiceConfigRequest$json = const {
   '1': 'CreateServiceConfigRequest',
   '2': const [
     const {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
-    const {'1': 'service_config', '3': 2, '4': 1, '5': 11, '6': '.google.api.Service', '10': 'serviceConfig'},
+    const {
+      '1': 'service_config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.Service',
+      '10': 'serviceConfig'
+    },
   ],
 };
 
@@ -135,7 +196,14 @@ const SubmitConfigSourceRequest$json = const {
   '1': 'SubmitConfigSourceRequest',
   '2': const [
     const {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
-    const {'1': 'config_source', '3': 2, '4': 1, '5': 11, '6': '.google.api.servicemanagement.v1.ConfigSource', '10': 'configSource'},
+    const {
+      '1': 'config_source',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.servicemanagement.v1.ConfigSource',
+      '10': 'configSource'
+    },
     const {'1': 'validate_only', '3': 3, '4': 1, '5': 8, '10': 'validateOnly'},
   ],
 };
@@ -143,7 +211,14 @@ const SubmitConfigSourceRequest$json = const {
 const SubmitConfigSourceResponse$json = const {
   '1': 'SubmitConfigSourceResponse',
   '2': const [
-    const {'1': 'service_config', '3': 1, '4': 1, '5': 11, '6': '.google.api.Service', '10': 'serviceConfig'},
+    const {
+      '1': 'service_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.Service',
+      '10': 'serviceConfig'
+    },
   ],
 };
 
@@ -151,7 +226,14 @@ const CreateServiceRolloutRequest$json = const {
   '1': 'CreateServiceRolloutRequest',
   '2': const [
     const {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
-    const {'1': 'rollout', '3': 2, '4': 1, '5': 11, '6': '.google.api.servicemanagement.v1.Rollout', '10': 'rollout'},
+    const {
+      '1': 'rollout',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.servicemanagement.v1.Rollout',
+      '10': 'rollout'
+    },
   ],
 };
 
@@ -168,8 +250,21 @@ const ListServiceRolloutsRequest$json = const {
 const ListServiceRolloutsResponse$json = const {
   '1': 'ListServiceRolloutsResponse',
   '2': const [
-    const {'1': 'rollouts', '3': 1, '4': 3, '5': 11, '6': '.google.api.servicemanagement.v1.Rollout', '10': 'rollouts'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    const {
+      '1': 'rollouts',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.servicemanagement.v1.Rollout',
+      '10': 'rollouts'
+    },
+    const {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'nextPageToken'
+    },
   ],
 };
 
@@ -200,8 +295,22 @@ const DisableServiceRequest$json = const {
 const GenerateConfigReportRequest$json = const {
   '1': 'GenerateConfigReportRequest',
   '2': const [
-    const {'1': 'new_config', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Any', '10': 'newConfig'},
-    const {'1': 'old_config', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Any', '10': 'oldConfig'},
+    const {
+      '1': 'new_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Any',
+      '10': 'newConfig'
+    },
+    const {
+      '1': 'old_config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Any',
+      '10': 'oldConfig'
+    },
   ],
 };
 
@@ -210,45 +319,141 @@ const GenerateConfigReportResponse$json = const {
   '2': const [
     const {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
     const {'1': 'id', '3': 2, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'change_reports', '3': 3, '4': 3, '5': 11, '6': '.google.api.servicemanagement.v1.ChangeReport', '10': 'changeReports'},
-    const {'1': 'diagnostics', '3': 4, '4': 3, '5': 11, '6': '.google.api.servicemanagement.v1.Diagnostic', '10': 'diagnostics'},
+    const {
+      '1': 'change_reports',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.servicemanagement.v1.ChangeReport',
+      '10': 'changeReports'
+    },
+    const {
+      '1': 'diagnostics',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.servicemanagement.v1.Diagnostic',
+      '10': 'diagnostics'
+    },
   ],
 };
 
 const ServiceManager$json = const {
   '1': 'ServiceManager',
   '2': const [
-    const {'1': 'ListServices', '2': '.google.api.servicemanagement.v1.ListServicesRequest', '3': '.google.api.servicemanagement.v1.ListServicesResponse', '4': const {}},
-    const {'1': 'GetService', '2': '.google.api.servicemanagement.v1.GetServiceRequest', '3': '.google.api.servicemanagement.v1.ManagedService', '4': const {}},
-    const {'1': 'CreateService', '2': '.google.api.servicemanagement.v1.CreateServiceRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'DeleteService', '2': '.google.api.servicemanagement.v1.DeleteServiceRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'UndeleteService', '2': '.google.api.servicemanagement.v1.UndeleteServiceRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'ListServiceConfigs', '2': '.google.api.servicemanagement.v1.ListServiceConfigsRequest', '3': '.google.api.servicemanagement.v1.ListServiceConfigsResponse', '4': const {}},
-    const {'1': 'GetServiceConfig', '2': '.google.api.servicemanagement.v1.GetServiceConfigRequest', '3': '.google.api.Service', '4': const {}},
-    const {'1': 'CreateServiceConfig', '2': '.google.api.servicemanagement.v1.CreateServiceConfigRequest', '3': '.google.api.Service', '4': const {}},
-    const {'1': 'SubmitConfigSource', '2': '.google.api.servicemanagement.v1.SubmitConfigSourceRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'ListServiceRollouts', '2': '.google.api.servicemanagement.v1.ListServiceRolloutsRequest', '3': '.google.api.servicemanagement.v1.ListServiceRolloutsResponse', '4': const {}},
-    const {'1': 'GetServiceRollout', '2': '.google.api.servicemanagement.v1.GetServiceRolloutRequest', '3': '.google.api.servicemanagement.v1.Rollout', '4': const {}},
-    const {'1': 'CreateServiceRollout', '2': '.google.api.servicemanagement.v1.CreateServiceRolloutRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'GenerateConfigReport', '2': '.google.api.servicemanagement.v1.GenerateConfigReportRequest', '3': '.google.api.servicemanagement.v1.GenerateConfigReportResponse', '4': const {}},
-    const {'1': 'EnableService', '2': '.google.api.servicemanagement.v1.EnableServiceRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'DisableService', '2': '.google.api.servicemanagement.v1.DisableServiceRequest', '3': '.google.longrunning.Operation', '4': const {}},
+    const {
+      '1': 'ListServices',
+      '2': '.google.api.servicemanagement.v1.ListServicesRequest',
+      '3': '.google.api.servicemanagement.v1.ListServicesResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetService',
+      '2': '.google.api.servicemanagement.v1.GetServiceRequest',
+      '3': '.google.api.servicemanagement.v1.ManagedService',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateService',
+      '2': '.google.api.servicemanagement.v1.CreateServiceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'DeleteService',
+      '2': '.google.api.servicemanagement.v1.DeleteServiceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'UndeleteService',
+      '2': '.google.api.servicemanagement.v1.UndeleteServiceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'ListServiceConfigs',
+      '2': '.google.api.servicemanagement.v1.ListServiceConfigsRequest',
+      '3': '.google.api.servicemanagement.v1.ListServiceConfigsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetServiceConfig',
+      '2': '.google.api.servicemanagement.v1.GetServiceConfigRequest',
+      '3': '.google.api.Service',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateServiceConfig',
+      '2': '.google.api.servicemanagement.v1.CreateServiceConfigRequest',
+      '3': '.google.api.Service',
+      '4': const {}
+    },
+    const {
+      '1': 'SubmitConfigSource',
+      '2': '.google.api.servicemanagement.v1.SubmitConfigSourceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'ListServiceRollouts',
+      '2': '.google.api.servicemanagement.v1.ListServiceRolloutsRequest',
+      '3': '.google.api.servicemanagement.v1.ListServiceRolloutsResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'GetServiceRollout',
+      '2': '.google.api.servicemanagement.v1.GetServiceRolloutRequest',
+      '3': '.google.api.servicemanagement.v1.Rollout',
+      '4': const {}
+    },
+    const {
+      '1': 'CreateServiceRollout',
+      '2': '.google.api.servicemanagement.v1.CreateServiceRolloutRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'GenerateConfigReport',
+      '2': '.google.api.servicemanagement.v1.GenerateConfigReportRequest',
+      '3': '.google.api.servicemanagement.v1.GenerateConfigReportResponse',
+      '4': const {}
+    },
+    const {
+      '1': 'EnableService',
+      '2': '.google.api.servicemanagement.v1.EnableServiceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
+    const {
+      '1': 'DisableService',
+      '2': '.google.api.servicemanagement.v1.DisableServiceRequest',
+      '3': '.google.longrunning.Operation',
+      '4': const {}
+    },
   ],
 };
 
 const ServiceManager$messageJson = const {
-  '.google.api.servicemanagement.v1.ListServicesRequest': ListServicesRequest$json,
-  '.google.api.servicemanagement.v1.ListServicesResponse': ListServicesResponse$json,
+  '.google.api.servicemanagement.v1.ListServicesRequest':
+      ListServicesRequest$json,
+  '.google.api.servicemanagement.v1.ListServicesResponse':
+      ListServicesResponse$json,
   '.google.api.servicemanagement.v1.ManagedService': ManagedService$json,
   '.google.api.servicemanagement.v1.GetServiceRequest': GetServiceRequest$json,
-  '.google.api.servicemanagement.v1.CreateServiceRequest': CreateServiceRequest$json,
+  '.google.api.servicemanagement.v1.CreateServiceRequest':
+      CreateServiceRequest$json,
   '.google.longrunning.Operation': $google$longrunning.Operation$json,
   '.google.protobuf.Any': $google$protobuf.Any$json,
   '.google.rpc.Status': $google$rpc.Status$json,
-  '.google.api.servicemanagement.v1.DeleteServiceRequest': DeleteServiceRequest$json,
-  '.google.api.servicemanagement.v1.UndeleteServiceRequest': UndeleteServiceRequest$json,
-  '.google.api.servicemanagement.v1.ListServiceConfigsRequest': ListServiceConfigsRequest$json,
-  '.google.api.servicemanagement.v1.ListServiceConfigsResponse': ListServiceConfigsResponse$json,
+  '.google.api.servicemanagement.v1.DeleteServiceRequest':
+      DeleteServiceRequest$json,
+  '.google.api.servicemanagement.v1.UndeleteServiceRequest':
+      UndeleteServiceRequest$json,
+  '.google.api.servicemanagement.v1.ListServiceConfigsRequest':
+      ListServiceConfigsRequest$json,
+  '.google.api.servicemanagement.v1.ListServiceConfigsResponse':
+      ListServiceConfigsResponse$json,
   '.google.api.Service': $google$api.Service$json,
   '.google.protobuf.Api': $google$protobuf.Api$json,
   '.google.protobuf.Method': $google$protobuf.Method$json,
@@ -271,7 +476,8 @@ const ServiceManager$messageJson = const {
   '.google.api.QuotaLimit': $google$api.QuotaLimit$json,
   '.google.api.QuotaLimit.ValuesEntry': $google$api.QuotaLimit_ValuesEntry$json,
   '.google.api.MetricRule': $google$api.MetricRule$json,
-  '.google.api.MetricRule.MetricCostsEntry': $google$api.MetricRule_MetricCostsEntry$json,
+  '.google.api.MetricRule.MetricCostsEntry':
+      $google$api.MetricRule_MetricCostsEntry$json,
   '.google.api.Authentication': $google$api.Authentication$json,
   '.google.api.AuthenticationRule': $google$api.AuthenticationRule$json,
   '.google.api.OAuthRequirements': $google$api.OAuthRequirements$json,
@@ -287,40 +493,57 @@ const ServiceManager$messageJson = const {
   '.google.api.LogDescriptor': $google$api.LogDescriptor$json,
   '.google.api.LabelDescriptor': $google$api.LabelDescriptor$json,
   '.google.api.MetricDescriptor': $google$api.MetricDescriptor$json,
-  '.google.api.MonitoredResourceDescriptor': $google$api.MonitoredResourceDescriptor$json,
+  '.google.api.MonitoredResourceDescriptor':
+      $google$api.MonitoredResourceDescriptor$json,
   '.google.api.Billing': $google$api.Billing$json,
-  '.google.api.Billing.BillingDestination': $google$api.Billing_BillingDestination$json,
+  '.google.api.Billing.BillingDestination':
+      $google$api.Billing_BillingDestination$json,
   '.google.api.Logging': $google$api.Logging$json,
-  '.google.api.Logging.LoggingDestination': $google$api.Logging_LoggingDestination$json,
+  '.google.api.Logging.LoggingDestination':
+      $google$api.Logging_LoggingDestination$json,
   '.google.api.Monitoring': $google$api.Monitoring$json,
-  '.google.api.Monitoring.MonitoringDestination': $google$api.Monitoring_MonitoringDestination$json,
+  '.google.api.Monitoring.MonitoringDestination':
+      $google$api.Monitoring_MonitoringDestination$json,
   '.google.api.SystemParameters': $google$api.SystemParameters$json,
   '.google.api.SystemParameterRule': $google$api.SystemParameterRule$json,
   '.google.api.SystemParameter': $google$api.SystemParameter$json,
   '.google.api.SourceInfo': $google$api.SourceInfo$json,
   '.google.api.Experimental': $google$api.Experimental$json,
   '.google.api.AuthorizationConfig': $google$api.AuthorizationConfig$json,
-  '.google.api.servicemanagement.v1.GetServiceConfigRequest': GetServiceConfigRequest$json,
-  '.google.api.servicemanagement.v1.CreateServiceConfigRequest': CreateServiceConfigRequest$json,
-  '.google.api.servicemanagement.v1.SubmitConfigSourceRequest': SubmitConfigSourceRequest$json,
+  '.google.api.servicemanagement.v1.GetServiceConfigRequest':
+      GetServiceConfigRequest$json,
+  '.google.api.servicemanagement.v1.CreateServiceConfigRequest':
+      CreateServiceConfigRequest$json,
+  '.google.api.servicemanagement.v1.SubmitConfigSourceRequest':
+      SubmitConfigSourceRequest$json,
   '.google.api.servicemanagement.v1.ConfigSource': ConfigSource$json,
   '.google.api.servicemanagement.v1.ConfigFile': ConfigFile$json,
-  '.google.api.servicemanagement.v1.ListServiceRolloutsRequest': ListServiceRolloutsRequest$json,
-  '.google.api.servicemanagement.v1.ListServiceRolloutsResponse': ListServiceRolloutsResponse$json,
+  '.google.api.servicemanagement.v1.ListServiceRolloutsRequest':
+      ListServiceRolloutsRequest$json,
+  '.google.api.servicemanagement.v1.ListServiceRolloutsResponse':
+      ListServiceRolloutsResponse$json,
   '.google.api.servicemanagement.v1.Rollout': Rollout$json,
   '.google.protobuf.Timestamp': $google$protobuf.Timestamp$json,
-  '.google.api.servicemanagement.v1.Rollout.TrafficPercentStrategy': Rollout_TrafficPercentStrategy$json,
-  '.google.api.servicemanagement.v1.Rollout.TrafficPercentStrategy.PercentagesEntry': Rollout_TrafficPercentStrategy_PercentagesEntry$json,
-  '.google.api.servicemanagement.v1.Rollout.DeleteServiceStrategy': Rollout_DeleteServiceStrategy$json,
-  '.google.api.servicemanagement.v1.GetServiceRolloutRequest': GetServiceRolloutRequest$json,
-  '.google.api.servicemanagement.v1.CreateServiceRolloutRequest': CreateServiceRolloutRequest$json,
-  '.google.api.servicemanagement.v1.GenerateConfigReportRequest': GenerateConfigReportRequest$json,
-  '.google.api.servicemanagement.v1.GenerateConfigReportResponse': GenerateConfigReportResponse$json,
+  '.google.api.servicemanagement.v1.Rollout.TrafficPercentStrategy':
+      Rollout_TrafficPercentStrategy$json,
+  '.google.api.servicemanagement.v1.Rollout.TrafficPercentStrategy.PercentagesEntry':
+      Rollout_TrafficPercentStrategy_PercentagesEntry$json,
+  '.google.api.servicemanagement.v1.Rollout.DeleteServiceStrategy':
+      Rollout_DeleteServiceStrategy$json,
+  '.google.api.servicemanagement.v1.GetServiceRolloutRequest':
+      GetServiceRolloutRequest$json,
+  '.google.api.servicemanagement.v1.CreateServiceRolloutRequest':
+      CreateServiceRolloutRequest$json,
+  '.google.api.servicemanagement.v1.GenerateConfigReportRequest':
+      GenerateConfigReportRequest$json,
+  '.google.api.servicemanagement.v1.GenerateConfigReportResponse':
+      GenerateConfigReportResponse$json,
   '.google.api.servicemanagement.v1.ChangeReport': ChangeReport$json,
   '.google.api.ConfigChange': $google$api.ConfigChange$json,
   '.google.api.Advice': $google$api.Advice$json,
   '.google.api.servicemanagement.v1.Diagnostic': Diagnostic$json,
-  '.google.api.servicemanagement.v1.EnableServiceRequest': EnableServiceRequest$json,
-  '.google.api.servicemanagement.v1.DisableServiceRequest': DisableServiceRequest$json,
+  '.google.api.servicemanagement.v1.EnableServiceRequest':
+      EnableServiceRequest$json,
+  '.google.api.servicemanagement.v1.DisableServiceRequest':
+      DisableServiceRequest$json,
 };
-

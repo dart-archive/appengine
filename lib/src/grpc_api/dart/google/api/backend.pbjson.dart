@@ -6,7 +6,14 @@
 const Backend$json = const {
   '1': 'Backend',
   '2': const [
-    const {'1': 'rules', '3': 1, '4': 3, '5': 11, '6': '.google.api.BackendRule', '10': 'rules'},
+    const {
+      '1': 'rules',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.BackendRule',
+      '10': 'rules'
+    },
   ],
 };
 
@@ -18,4 +25,3 @@ const BackendRule$json = const {
     const {'1': 'deadline', '3': 3, '4': 1, '5': 1, '10': 'deadline'},
   ],
 };
-

@@ -6,9 +6,30 @@
 const Deployment$json = const {
   '1': 'Deployment',
   '2': const [
-    const {'1': 'files', '3': 1, '4': 3, '5': 11, '6': '.google.appengine.v1.Deployment.FilesEntry', '10': 'files'},
-    const {'1': 'container', '3': 2, '4': 1, '5': 11, '6': '.google.appengine.v1.ContainerInfo', '10': 'container'},
-    const {'1': 'zip', '3': 3, '4': 1, '5': 11, '6': '.google.appengine.v1.ZipInfo', '10': 'zip'},
+    const {
+      '1': 'files',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.v1.Deployment.FilesEntry',
+      '10': 'files'
+    },
+    const {
+      '1': 'container',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.ContainerInfo',
+      '10': 'container'
+    },
+    const {
+      '1': 'zip',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.ZipInfo',
+      '10': 'zip'
+    },
   ],
   '3': const [Deployment_FilesEntry$json],
 };
@@ -17,7 +38,14 @@ const Deployment_FilesEntry$json = const {
   '1': 'FilesEntry',
   '2': const [
     const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.google.appengine.v1.FileInfo', '10': 'value'},
+    const {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.appengine.v1.FileInfo',
+      '10': 'value'
+    },
   ],
   '7': const {'7': true},
 };
@@ -45,4 +73,3 @@ const ZipInfo$json = const {
     const {'1': 'files_count', '3': 4, '4': 1, '5': 5, '10': 'filesCount'},
   ],
 };
-

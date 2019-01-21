@@ -29,7 +29,9 @@ class LoggingMock extends Logging {
     };
   }
 
-  Future flush() { throw "Unexpected method call"; }
+  Future flush() {
+    throw "Unexpected method call";
+  }
 }
 
 class CustomStackTrace implements StackTrace {
@@ -150,7 +152,6 @@ void main() {
         }));
       });
 
-
       test('test_error_stack', () {
         var logger = new Logger('a.b');
         var mock = new LoggingMock();
@@ -159,9 +160,11 @@ void main() {
           registerLoggingService(mock);
           mock.expect((LogLevel level, String message, DateTime ts) {
             expect(level, equals(LogLevel.INFO));
-            expect(message, equals('a.b: abc\n\n'
-                                   'Error:\n    error\n\n'
-                                   'Stack:\n    custom-stack-trace'));
+            expect(
+                message,
+                equals('a.b: abc\n\n'
+                    'Error:\n    error\n\n'
+                    'Stack:\n    custom-stack-trace'));
           });
           logger.log(Level.INFO, 'abc', 'error', new CustomStackTrace());
         }));

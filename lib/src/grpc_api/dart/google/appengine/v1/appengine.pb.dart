@@ -23,123 +23,172 @@ export 'appengine.pbenum.dart';
 class GetApplicationRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetApplicationRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   GetApplicationRequest() : super();
-  GetApplicationRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GetApplicationRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  GetApplicationRequest clone() => new GetApplicationRequest()..mergeFromMessage(this);
+  GetApplicationRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GetApplicationRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  GetApplicationRequest clone() =>
+      new GetApplicationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetApplicationRequest create() => new GetApplicationRequest();
-  static PbList<GetApplicationRequest> createRepeated() => new PbList<GetApplicationRequest>();
+  static PbList<GetApplicationRequest> createRepeated() =>
+      new PbList<GetApplicationRequest>();
   static GetApplicationRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGetApplicationRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyGetApplicationRequest();
     return _defaultInstance;
   }
+
   static GetApplicationRequest _defaultInstance;
   static void $checkItem(GetApplicationRequest v) {
-    if (v is! GetApplicationRequest) checkItemFailed(v, 'GetApplicationRequest');
+    if (v is! GetApplicationRequest)
+      checkItemFailed(v, 'GetApplicationRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetApplicationRequest extends GetApplicationRequest with ReadonlyMessageMixin {}
+class _ReadonlyGetApplicationRequest extends GetApplicationRequest
+    with ReadonlyMessageMixin {}
 
 class RepairApplicationRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('RepairApplicationRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   RepairApplicationRequest() : super();
-  RepairApplicationRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  RepairApplicationRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  RepairApplicationRequest clone() => new RepairApplicationRequest()..mergeFromMessage(this);
+  RepairApplicationRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  RepairApplicationRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  RepairApplicationRequest clone() =>
+      new RepairApplicationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static RepairApplicationRequest create() => new RepairApplicationRequest();
-  static PbList<RepairApplicationRequest> createRepeated() => new PbList<RepairApplicationRequest>();
+  static PbList<RepairApplicationRequest> createRepeated() =>
+      new PbList<RepairApplicationRequest>();
   static RepairApplicationRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRepairApplicationRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyRepairApplicationRequest();
     return _defaultInstance;
   }
+
   static RepairApplicationRequest _defaultInstance;
   static void $checkItem(RepairApplicationRequest v) {
-    if (v is! RepairApplicationRequest) checkItemFailed(v, 'RepairApplicationRequest');
+    if (v is! RepairApplicationRequest)
+      checkItemFailed(v, 'RepairApplicationRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyRepairApplicationRequest extends RepairApplicationRequest with ReadonlyMessageMixin {}
+class _ReadonlyRepairApplicationRequest extends RepairApplicationRequest
+    with ReadonlyMessageMixin {}
 
 class ListServicesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServicesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListServicesRequest() : super();
-  ListServicesRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListServicesRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListServicesRequest clone() => new ListServicesRequest()..mergeFromMessage(this);
+  ListServicesRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListServicesRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListServicesRequest clone() =>
+      new ListServicesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListServicesRequest create() => new ListServicesRequest();
-  static PbList<ListServicesRequest> createRepeated() => new PbList<ListServicesRequest>();
+  static PbList<ListServicesRequest> createRepeated() =>
+      new PbList<ListServicesRequest>();
   static ListServicesRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyListServicesRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyListServicesRequest();
     return _defaultInstance;
   }
+
   static ListServicesRequest _defaultInstance;
   static void $checkItem(ListServicesRequest v) {
     if (v is! ListServicesRequest) checkItemFailed(v, 'ListServicesRequest');
   }
 
   String get parent => $_getS(0, '');
-  set parent(String v) { $_setString(0, v); }
+  set parent(String v) {
+    $_setString(0, v);
+  }
+
   bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   int get pageSize => $_get(1, 0);
-  set pageSize(int v) { $_setSignedInt32(1, v); }
+  set pageSize(int v) {
+    $_setSignedInt32(1, v);
+  }
+
   bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
   String get pageToken => $_getS(2, '');
-  set pageToken(String v) { $_setString(2, v); }
+  set pageToken(String v) {
+    $_setString(2, v);
+  }
+
   bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListServicesRequest extends ListServicesRequest with ReadonlyMessageMixin {}
+class _ReadonlyListServicesRequest extends ListServicesRequest
+    with ReadonlyMessageMixin {}
 
 class ListServicesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListServicesResponse')
-    ..pp<Service>(1, 'services', PbFieldType.PM, Service.$checkItem, Service.create)
+    ..pp<Service>(
+        1, 'services', PbFieldType.PM, Service.$checkItem, Service.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListServicesResponse() : super();
-  ListServicesResponse.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListServicesResponse.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListServicesResponse clone() => new ListServicesResponse()..mergeFromMessage(this);
+  ListServicesResponse.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListServicesResponse.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListServicesResponse clone() =>
+      new ListServicesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListServicesResponse create() => new ListServicesResponse();
-  static PbList<ListServicesResponse> createRepeated() => new PbList<ListServicesResponse>();
+  static PbList<ListServicesResponse> createRepeated() =>
+      new PbList<ListServicesResponse>();
   static ListServicesResponse getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyListServicesResponse();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyListServicesResponse();
     return _defaultInstance;
   }
+
   static ListServicesResponse _defaultInstance;
   static void $checkItem(ListServicesResponse v) {
     if (v is! ListServicesResponse) checkItemFailed(v, 'ListServicesResponse');
@@ -148,187 +197,267 @@ class ListServicesResponse extends GeneratedMessage {
   List<Service> get services => $_getList(0);
 
   String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) { $_setString(1, v); }
+  set nextPageToken(String v) {
+    $_setString(1, v);
+  }
+
   bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListServicesResponse extends ListServicesResponse with ReadonlyMessageMixin {}
+class _ReadonlyListServicesResponse extends ListServicesResponse
+    with ReadonlyMessageMixin {}
 
 class GetServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetServiceRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   GetServiceRequest() : super();
-  GetServiceRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GetServiceRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetServiceRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GetServiceRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   GetServiceRequest clone() => new GetServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetServiceRequest create() => new GetServiceRequest();
-  static PbList<GetServiceRequest> createRepeated() => new PbList<GetServiceRequest>();
+  static PbList<GetServiceRequest> createRepeated() =>
+      new PbList<GetServiceRequest>();
   static GetServiceRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGetServiceRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyGetServiceRequest();
     return _defaultInstance;
   }
+
   static GetServiceRequest _defaultInstance;
   static void $checkItem(GetServiceRequest v) {
     if (v is! GetServiceRequest) checkItemFailed(v, 'GetServiceRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetServiceRequest extends GetServiceRequest with ReadonlyMessageMixin {}
+class _ReadonlyGetServiceRequest extends GetServiceRequest
+    with ReadonlyMessageMixin {}
 
 class UpdateServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateServiceRequest')
     ..aOS(1, 'name')
-    ..a<Service>(2, 'service', PbFieldType.OM, Service.getDefault, Service.create)
-    ..a<$google$protobuf.FieldMask>(3, 'updateMask', PbFieldType.OM, $google$protobuf.FieldMask.getDefault, $google$protobuf.FieldMask.create)
+    ..a<Service>(
+        2, 'service', PbFieldType.OM, Service.getDefault, Service.create)
+    ..a<$google$protobuf.FieldMask>(
+        3,
+        'updateMask',
+        PbFieldType.OM,
+        $google$protobuf.FieldMask.getDefault,
+        $google$protobuf.FieldMask.create)
     ..aOB(4, 'migrateTraffic')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   UpdateServiceRequest() : super();
-  UpdateServiceRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  UpdateServiceRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  UpdateServiceRequest clone() => new UpdateServiceRequest()..mergeFromMessage(this);
+  UpdateServiceRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  UpdateServiceRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  UpdateServiceRequest clone() =>
+      new UpdateServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateServiceRequest create() => new UpdateServiceRequest();
-  static PbList<UpdateServiceRequest> createRepeated() => new PbList<UpdateServiceRequest>();
+  static PbList<UpdateServiceRequest> createRepeated() =>
+      new PbList<UpdateServiceRequest>();
   static UpdateServiceRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUpdateServiceRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyUpdateServiceRequest();
     return _defaultInstance;
   }
+
   static UpdateServiceRequest _defaultInstance;
   static void $checkItem(UpdateServiceRequest v) {
     if (v is! UpdateServiceRequest) checkItemFailed(v, 'UpdateServiceRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Service get service => $_getN(1);
-  set service(Service v) { setField(2, v); }
+  set service(Service v) {
+    setField(2, v);
+  }
+
   bool hasService() => $_has(1);
   void clearService() => clearField(2);
 
   $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) { setField(3, v); }
+  set updateMask($google$protobuf.FieldMask v) {
+    setField(3, v);
+  }
+
   bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 
   bool get migrateTraffic => $_get(3, false);
-  set migrateTraffic(bool v) { $_setBool(3, v); }
+  set migrateTraffic(bool v) {
+    $_setBool(3, v);
+  }
+
   bool hasMigrateTraffic() => $_has(3);
   void clearMigrateTraffic() => clearField(4);
 }
 
-class _ReadonlyUpdateServiceRequest extends UpdateServiceRequest with ReadonlyMessageMixin {}
+class _ReadonlyUpdateServiceRequest extends UpdateServiceRequest
+    with ReadonlyMessageMixin {}
 
 class DeleteServiceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteServiceRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DeleteServiceRequest() : super();
-  DeleteServiceRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DeleteServiceRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  DeleteServiceRequest clone() => new DeleteServiceRequest()..mergeFromMessage(this);
+  DeleteServiceRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DeleteServiceRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DeleteServiceRequest clone() =>
+      new DeleteServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteServiceRequest create() => new DeleteServiceRequest();
-  static PbList<DeleteServiceRequest> createRepeated() => new PbList<DeleteServiceRequest>();
+  static PbList<DeleteServiceRequest> createRepeated() =>
+      new PbList<DeleteServiceRequest>();
   static DeleteServiceRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeleteServiceRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDeleteServiceRequest();
     return _defaultInstance;
   }
+
   static DeleteServiceRequest _defaultInstance;
   static void $checkItem(DeleteServiceRequest v) {
     if (v is! DeleteServiceRequest) checkItemFailed(v, 'DeleteServiceRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteServiceRequest extends DeleteServiceRequest with ReadonlyMessageMixin {}
+class _ReadonlyDeleteServiceRequest extends DeleteServiceRequest
+    with ReadonlyMessageMixin {}
 
 class ListVersionsRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListVersionsRequest')
     ..aOS(1, 'parent')
-    ..e<VersionView>(2, 'view', PbFieldType.OE, VersionView.BASIC, VersionView.valueOf, VersionView.values)
+    ..e<VersionView>(2, 'view', PbFieldType.OE, VersionView.BASIC,
+        VersionView.valueOf, VersionView.values)
     ..a<int>(3, 'pageSize', PbFieldType.O3)
     ..aOS(4, 'pageToken')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListVersionsRequest() : super();
-  ListVersionsRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListVersionsRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListVersionsRequest clone() => new ListVersionsRequest()..mergeFromMessage(this);
+  ListVersionsRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListVersionsRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListVersionsRequest clone() =>
+      new ListVersionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListVersionsRequest create() => new ListVersionsRequest();
-  static PbList<ListVersionsRequest> createRepeated() => new PbList<ListVersionsRequest>();
+  static PbList<ListVersionsRequest> createRepeated() =>
+      new PbList<ListVersionsRequest>();
   static ListVersionsRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyListVersionsRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyListVersionsRequest();
     return _defaultInstance;
   }
+
   static ListVersionsRequest _defaultInstance;
   static void $checkItem(ListVersionsRequest v) {
     if (v is! ListVersionsRequest) checkItemFailed(v, 'ListVersionsRequest');
   }
 
   String get parent => $_getS(0, '');
-  set parent(String v) { $_setString(0, v); }
+  set parent(String v) {
+    $_setString(0, v);
+  }
+
   bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   VersionView get view => $_getN(1);
-  set view(VersionView v) { setField(2, v); }
+  set view(VersionView v) {
+    setField(2, v);
+  }
+
   bool hasView() => $_has(1);
   void clearView() => clearField(2);
 
   int get pageSize => $_get(2, 0);
-  set pageSize(int v) { $_setSignedInt32(2, v); }
+  set pageSize(int v) {
+    $_setSignedInt32(2, v);
+  }
+
   bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
   String get pageToken => $_getS(3, '');
-  set pageToken(String v) { $_setString(3, v); }
+  set pageToken(String v) {
+    $_setString(3, v);
+  }
+
   bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 }
 
-class _ReadonlyListVersionsRequest extends ListVersionsRequest with ReadonlyMessageMixin {}
+class _ReadonlyListVersionsRequest extends ListVersionsRequest
+    with ReadonlyMessageMixin {}
 
 class ListVersionsResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListVersionsResponse')
-    ..pp<Version>(1, 'versions', PbFieldType.PM, Version.$checkItem, Version.create)
+    ..pp<Version>(
+        1, 'versions', PbFieldType.PM, Version.$checkItem, Version.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListVersionsResponse() : super();
-  ListVersionsResponse.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListVersionsResponse.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListVersionsResponse clone() => new ListVersionsResponse()..mergeFromMessage(this);
+  ListVersionsResponse.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListVersionsResponse.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListVersionsResponse clone() =>
+      new ListVersionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListVersionsResponse create() => new ListVersionsResponse();
-  static PbList<ListVersionsResponse> createRepeated() => new PbList<ListVersionsResponse>();
+  static PbList<ListVersionsResponse> createRepeated() =>
+      new PbList<ListVersionsResponse>();
   static ListVersionsResponse getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyListVersionsResponse();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyListVersionsResponse();
     return _defaultInstance;
   }
+
   static ListVersionsResponse _defaultInstance;
   static void $checkItem(ListVersionsResponse v) {
     if (v is! ListVersionsResponse) checkItemFailed(v, 'ListVersionsResponse');
@@ -337,341 +466,482 @@ class ListVersionsResponse extends GeneratedMessage {
   List<Version> get versions => $_getList(0);
 
   String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) { $_setString(1, v); }
+  set nextPageToken(String v) {
+    $_setString(1, v);
+  }
+
   bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListVersionsResponse extends ListVersionsResponse with ReadonlyMessageMixin {}
+class _ReadonlyListVersionsResponse extends ListVersionsResponse
+    with ReadonlyMessageMixin {}
 
 class GetVersionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetVersionRequest')
     ..aOS(1, 'name')
-    ..e<VersionView>(2, 'view', PbFieldType.OE, VersionView.BASIC, VersionView.valueOf, VersionView.values)
-    ..hasRequiredFields = false
-  ;
+    ..e<VersionView>(2, 'view', PbFieldType.OE, VersionView.BASIC,
+        VersionView.valueOf, VersionView.values)
+    ..hasRequiredFields = false;
 
   GetVersionRequest() : super();
-  GetVersionRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GetVersionRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetVersionRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GetVersionRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   GetVersionRequest clone() => new GetVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetVersionRequest create() => new GetVersionRequest();
-  static PbList<GetVersionRequest> createRepeated() => new PbList<GetVersionRequest>();
+  static PbList<GetVersionRequest> createRepeated() =>
+      new PbList<GetVersionRequest>();
   static GetVersionRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGetVersionRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyGetVersionRequest();
     return _defaultInstance;
   }
+
   static GetVersionRequest _defaultInstance;
   static void $checkItem(GetVersionRequest v) {
     if (v is! GetVersionRequest) checkItemFailed(v, 'GetVersionRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   VersionView get view => $_getN(1);
-  set view(VersionView v) { setField(2, v); }
+  set view(VersionView v) {
+    setField(2, v);
+  }
+
   bool hasView() => $_has(1);
   void clearView() => clearField(2);
 }
 
-class _ReadonlyGetVersionRequest extends GetVersionRequest with ReadonlyMessageMixin {}
+class _ReadonlyGetVersionRequest extends GetVersionRequest
+    with ReadonlyMessageMixin {}
 
 class CreateVersionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('CreateVersionRequest')
     ..aOS(1, 'parent')
-    ..a<Version>(2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<Version>(
+        2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
+    ..hasRequiredFields = false;
 
   CreateVersionRequest() : super();
-  CreateVersionRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CreateVersionRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  CreateVersionRequest clone() => new CreateVersionRequest()..mergeFromMessage(this);
+  CreateVersionRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CreateVersionRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CreateVersionRequest clone() =>
+      new CreateVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateVersionRequest create() => new CreateVersionRequest();
-  static PbList<CreateVersionRequest> createRepeated() => new PbList<CreateVersionRequest>();
+  static PbList<CreateVersionRequest> createRepeated() =>
+      new PbList<CreateVersionRequest>();
   static CreateVersionRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCreateVersionRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyCreateVersionRequest();
     return _defaultInstance;
   }
+
   static CreateVersionRequest _defaultInstance;
   static void $checkItem(CreateVersionRequest v) {
     if (v is! CreateVersionRequest) checkItemFailed(v, 'CreateVersionRequest');
   }
 
   String get parent => $_getS(0, '');
-  set parent(String v) { $_setString(0, v); }
+  set parent(String v) {
+    $_setString(0, v);
+  }
+
   bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   Version get version => $_getN(1);
-  set version(Version v) { setField(2, v); }
+  set version(Version v) {
+    setField(2, v);
+  }
+
   bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 }
 
-class _ReadonlyCreateVersionRequest extends CreateVersionRequest with ReadonlyMessageMixin {}
+class _ReadonlyCreateVersionRequest extends CreateVersionRequest
+    with ReadonlyMessageMixin {}
 
 class UpdateVersionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('UpdateVersionRequest')
     ..aOS(1, 'name')
-    ..a<Version>(2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
-    ..a<$google$protobuf.FieldMask>(3, 'updateMask', PbFieldType.OM, $google$protobuf.FieldMask.getDefault, $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<Version>(
+        2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
+    ..a<$google$protobuf.FieldMask>(
+        3,
+        'updateMask',
+        PbFieldType.OM,
+        $google$protobuf.FieldMask.getDefault,
+        $google$protobuf.FieldMask.create)
+    ..hasRequiredFields = false;
 
   UpdateVersionRequest() : super();
-  UpdateVersionRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  UpdateVersionRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  UpdateVersionRequest clone() => new UpdateVersionRequest()..mergeFromMessage(this);
+  UpdateVersionRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  UpdateVersionRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  UpdateVersionRequest clone() =>
+      new UpdateVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateVersionRequest create() => new UpdateVersionRequest();
-  static PbList<UpdateVersionRequest> createRepeated() => new PbList<UpdateVersionRequest>();
+  static PbList<UpdateVersionRequest> createRepeated() =>
+      new PbList<UpdateVersionRequest>();
   static UpdateVersionRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUpdateVersionRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyUpdateVersionRequest();
     return _defaultInstance;
   }
+
   static UpdateVersionRequest _defaultInstance;
   static void $checkItem(UpdateVersionRequest v) {
     if (v is! UpdateVersionRequest) checkItemFailed(v, 'UpdateVersionRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Version get version => $_getN(1);
-  set version(Version v) { setField(2, v); }
+  set version(Version v) {
+    setField(2, v);
+  }
+
   bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
   $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) { setField(3, v); }
+  set updateMask($google$protobuf.FieldMask v) {
+    setField(3, v);
+  }
+
   bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateVersionRequest extends UpdateVersionRequest with ReadonlyMessageMixin {}
+class _ReadonlyUpdateVersionRequest extends UpdateVersionRequest
+    with ReadonlyMessageMixin {}
 
 class DeleteVersionRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteVersionRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DeleteVersionRequest() : super();
-  DeleteVersionRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DeleteVersionRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  DeleteVersionRequest clone() => new DeleteVersionRequest()..mergeFromMessage(this);
+  DeleteVersionRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DeleteVersionRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DeleteVersionRequest clone() =>
+      new DeleteVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteVersionRequest create() => new DeleteVersionRequest();
-  static PbList<DeleteVersionRequest> createRepeated() => new PbList<DeleteVersionRequest>();
+  static PbList<DeleteVersionRequest> createRepeated() =>
+      new PbList<DeleteVersionRequest>();
   static DeleteVersionRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeleteVersionRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDeleteVersionRequest();
     return _defaultInstance;
   }
+
   static DeleteVersionRequest _defaultInstance;
   static void $checkItem(DeleteVersionRequest v) {
     if (v is! DeleteVersionRequest) checkItemFailed(v, 'DeleteVersionRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteVersionRequest extends DeleteVersionRequest with ReadonlyMessageMixin {}
+class _ReadonlyDeleteVersionRequest extends DeleteVersionRequest
+    with ReadonlyMessageMixin {}
 
 class ListInstancesRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListInstancesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListInstancesRequest() : super();
-  ListInstancesRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListInstancesRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListInstancesRequest clone() => new ListInstancesRequest()..mergeFromMessage(this);
+  ListInstancesRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListInstancesRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListInstancesRequest clone() =>
+      new ListInstancesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListInstancesRequest create() => new ListInstancesRequest();
-  static PbList<ListInstancesRequest> createRepeated() => new PbList<ListInstancesRequest>();
+  static PbList<ListInstancesRequest> createRepeated() =>
+      new PbList<ListInstancesRequest>();
   static ListInstancesRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyListInstancesRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyListInstancesRequest();
     return _defaultInstance;
   }
+
   static ListInstancesRequest _defaultInstance;
   static void $checkItem(ListInstancesRequest v) {
     if (v is! ListInstancesRequest) checkItemFailed(v, 'ListInstancesRequest');
   }
 
   String get parent => $_getS(0, '');
-  set parent(String v) { $_setString(0, v); }
+  set parent(String v) {
+    $_setString(0, v);
+  }
+
   bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   int get pageSize => $_get(1, 0);
-  set pageSize(int v) { $_setSignedInt32(1, v); }
+  set pageSize(int v) {
+    $_setSignedInt32(1, v);
+  }
+
   bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
   String get pageToken => $_getS(2, '');
-  set pageToken(String v) { $_setString(2, v); }
+  set pageToken(String v) {
+    $_setString(2, v);
+  }
+
   bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListInstancesRequest extends ListInstancesRequest with ReadonlyMessageMixin {}
+class _ReadonlyListInstancesRequest extends ListInstancesRequest
+    with ReadonlyMessageMixin {}
 
 class ListInstancesResponse extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('ListInstancesResponse')
-    ..pp<Instance>(1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
+    ..pp<Instance>(
+        1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListInstancesResponse() : super();
-  ListInstancesResponse.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListInstancesResponse.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListInstancesResponse clone() => new ListInstancesResponse()..mergeFromMessage(this);
+  ListInstancesResponse.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListInstancesResponse.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListInstancesResponse clone() =>
+      new ListInstancesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListInstancesResponse create() => new ListInstancesResponse();
-  static PbList<ListInstancesResponse> createRepeated() => new PbList<ListInstancesResponse>();
+  static PbList<ListInstancesResponse> createRepeated() =>
+      new PbList<ListInstancesResponse>();
   static ListInstancesResponse getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyListInstancesResponse();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyListInstancesResponse();
     return _defaultInstance;
   }
+
   static ListInstancesResponse _defaultInstance;
   static void $checkItem(ListInstancesResponse v) {
-    if (v is! ListInstancesResponse) checkItemFailed(v, 'ListInstancesResponse');
+    if (v is! ListInstancesResponse)
+      checkItemFailed(v, 'ListInstancesResponse');
   }
 
   List<Instance> get instances => $_getList(0);
 
   String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) { $_setString(1, v); }
+  set nextPageToken(String v) {
+    $_setString(1, v);
+  }
+
   bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListInstancesResponse extends ListInstancesResponse with ReadonlyMessageMixin {}
+class _ReadonlyListInstancesResponse extends ListInstancesResponse
+    with ReadonlyMessageMixin {}
 
 class GetInstanceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('GetInstanceRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   GetInstanceRequest() : super();
-  GetInstanceRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GetInstanceRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  GetInstanceRequest clone() => new GetInstanceRequest()..mergeFromMessage(this);
+  GetInstanceRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GetInstanceRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  GetInstanceRequest clone() =>
+      new GetInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetInstanceRequest create() => new GetInstanceRequest();
-  static PbList<GetInstanceRequest> createRepeated() => new PbList<GetInstanceRequest>();
+  static PbList<GetInstanceRequest> createRepeated() =>
+      new PbList<GetInstanceRequest>();
   static GetInstanceRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGetInstanceRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyGetInstanceRequest();
     return _defaultInstance;
   }
+
   static GetInstanceRequest _defaultInstance;
   static void $checkItem(GetInstanceRequest v) {
     if (v is! GetInstanceRequest) checkItemFailed(v, 'GetInstanceRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetInstanceRequest extends GetInstanceRequest with ReadonlyMessageMixin {}
+class _ReadonlyGetInstanceRequest extends GetInstanceRequest
+    with ReadonlyMessageMixin {}
 
 class DeleteInstanceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DeleteInstanceRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DeleteInstanceRequest() : super();
-  DeleteInstanceRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DeleteInstanceRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  DeleteInstanceRequest clone() => new DeleteInstanceRequest()..mergeFromMessage(this);
+  DeleteInstanceRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DeleteInstanceRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DeleteInstanceRequest clone() =>
+      new DeleteInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteInstanceRequest create() => new DeleteInstanceRequest();
-  static PbList<DeleteInstanceRequest> createRepeated() => new PbList<DeleteInstanceRequest>();
+  static PbList<DeleteInstanceRequest> createRepeated() =>
+      new PbList<DeleteInstanceRequest>();
   static DeleteInstanceRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeleteInstanceRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDeleteInstanceRequest();
     return _defaultInstance;
   }
+
   static DeleteInstanceRequest _defaultInstance;
   static void $checkItem(DeleteInstanceRequest v) {
-    if (v is! DeleteInstanceRequest) checkItemFailed(v, 'DeleteInstanceRequest');
+    if (v is! DeleteInstanceRequest)
+      checkItemFailed(v, 'DeleteInstanceRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteInstanceRequest extends DeleteInstanceRequest with ReadonlyMessageMixin {}
+class _ReadonlyDeleteInstanceRequest extends DeleteInstanceRequest
+    with ReadonlyMessageMixin {}
 
 class DebugInstanceRequest extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('DebugInstanceRequest')
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DebugInstanceRequest() : super();
-  DebugInstanceRequest.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DebugInstanceRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  DebugInstanceRequest clone() => new DebugInstanceRequest()..mergeFromMessage(this);
+  DebugInstanceRequest.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DebugInstanceRequest.fromJson(String i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DebugInstanceRequest clone() =>
+      new DebugInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DebugInstanceRequest create() => new DebugInstanceRequest();
-  static PbList<DebugInstanceRequest> createRepeated() => new PbList<DebugInstanceRequest>();
+  static PbList<DebugInstanceRequest> createRepeated() =>
+      new PbList<DebugInstanceRequest>();
   static DebugInstanceRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDebugInstanceRequest();
+    if (_defaultInstance == null)
+      _defaultInstance = new _ReadonlyDebugInstanceRequest();
     return _defaultInstance;
   }
+
   static DebugInstanceRequest _defaultInstance;
   static void $checkItem(DebugInstanceRequest v) {
     if (v is! DebugInstanceRequest) checkItemFailed(v, 'DebugInstanceRequest');
   }
 
   String get name => $_getS(0, '');
-  set name(String v) { $_setString(0, v); }
+  set name(String v) {
+    $_setString(0, v);
+  }
+
   bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDebugInstanceRequest extends DebugInstanceRequest with ReadonlyMessageMixin {}
+class _ReadonlyDebugInstanceRequest extends DebugInstanceRequest
+    with ReadonlyMessageMixin {}
 
 class InstancesApi {
   RpcClient _client;
   InstancesApi(this._client);
 
-  Future<ListInstancesResponse> listInstances(ClientContext ctx, ListInstancesRequest request) {
+  Future<ListInstancesResponse> listInstances(
+      ClientContext ctx, ListInstancesRequest request) {
     var emptyResponse = new ListInstancesResponse();
-    return _client.invoke<ListInstancesResponse>(ctx, 'Instances', 'ListInstances', request, emptyResponse);
+    return _client.invoke<ListInstancesResponse>(
+        ctx, 'Instances', 'ListInstances', request, emptyResponse);
   }
+
   Future<Instance> getInstance(ClientContext ctx, GetInstanceRequest request) {
     var emptyResponse = new Instance();
-    return _client.invoke<Instance>(ctx, 'Instances', 'GetInstance', request, emptyResponse);
+    return _client.invoke<Instance>(
+        ctx, 'Instances', 'GetInstance', request, emptyResponse);
   }
-  Future<$google$longrunning.Operation> deleteInstance(ClientContext ctx, DeleteInstanceRequest request) {
+
+  Future<$google$longrunning.Operation> deleteInstance(
+      ClientContext ctx, DeleteInstanceRequest request) {
     var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'Instances', 'DeleteInstance', request, emptyResponse);
+    return _client.invoke<$google$longrunning.Operation>(
+        ctx, 'Instances', 'DeleteInstance', request, emptyResponse);
   }
-  Future<$google$longrunning.Operation> debugInstance(ClientContext ctx, DebugInstanceRequest request) {
+
+  Future<$google$longrunning.Operation> debugInstance(
+      ClientContext ctx, DebugInstanceRequest request) {
     var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'Instances', 'DebugInstance', request, emptyResponse);
+    return _client.invoke<$google$longrunning.Operation>(
+        ctx, 'Instances', 'DebugInstance', request, emptyResponse);
   }
 }
 
@@ -679,25 +949,38 @@ class VersionsApi {
   RpcClient _client;
   VersionsApi(this._client);
 
-  Future<ListVersionsResponse> listVersions(ClientContext ctx, ListVersionsRequest request) {
+  Future<ListVersionsResponse> listVersions(
+      ClientContext ctx, ListVersionsRequest request) {
     var emptyResponse = new ListVersionsResponse();
-    return _client.invoke<ListVersionsResponse>(ctx, 'Versions', 'ListVersions', request, emptyResponse);
+    return _client.invoke<ListVersionsResponse>(
+        ctx, 'Versions', 'ListVersions', request, emptyResponse);
   }
+
   Future<Version> getVersion(ClientContext ctx, GetVersionRequest request) {
     var emptyResponse = new Version();
-    return _client.invoke<Version>(ctx, 'Versions', 'GetVersion', request, emptyResponse);
+    return _client.invoke<Version>(
+        ctx, 'Versions', 'GetVersion', request, emptyResponse);
   }
-  Future<$google$longrunning.Operation> createVersion(ClientContext ctx, CreateVersionRequest request) {
+
+  Future<$google$longrunning.Operation> createVersion(
+      ClientContext ctx, CreateVersionRequest request) {
     var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'Versions', 'CreateVersion', request, emptyResponse);
+    return _client.invoke<$google$longrunning.Operation>(
+        ctx, 'Versions', 'CreateVersion', request, emptyResponse);
   }
-  Future<$google$longrunning.Operation> updateVersion(ClientContext ctx, UpdateVersionRequest request) {
+
+  Future<$google$longrunning.Operation> updateVersion(
+      ClientContext ctx, UpdateVersionRequest request) {
     var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'Versions', 'UpdateVersion', request, emptyResponse);
+    return _client.invoke<$google$longrunning.Operation>(
+        ctx, 'Versions', 'UpdateVersion', request, emptyResponse);
   }
-  Future<$google$longrunning.Operation> deleteVersion(ClientContext ctx, DeleteVersionRequest request) {
+
+  Future<$google$longrunning.Operation> deleteVersion(
+      ClientContext ctx, DeleteVersionRequest request) {
     var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'Versions', 'DeleteVersion', request, emptyResponse);
+    return _client.invoke<$google$longrunning.Operation>(
+        ctx, 'Versions', 'DeleteVersion', request, emptyResponse);
   }
 }
 
@@ -705,21 +988,31 @@ class ServicesApi {
   RpcClient _client;
   ServicesApi(this._client);
 
-  Future<ListServicesResponse> listServices(ClientContext ctx, ListServicesRequest request) {
+  Future<ListServicesResponse> listServices(
+      ClientContext ctx, ListServicesRequest request) {
     var emptyResponse = new ListServicesResponse();
-    return _client.invoke<ListServicesResponse>(ctx, 'Services', 'ListServices', request, emptyResponse);
+    return _client.invoke<ListServicesResponse>(
+        ctx, 'Services', 'ListServices', request, emptyResponse);
   }
+
   Future<Service> getService(ClientContext ctx, GetServiceRequest request) {
     var emptyResponse = new Service();
-    return _client.invoke<Service>(ctx, 'Services', 'GetService', request, emptyResponse);
+    return _client.invoke<Service>(
+        ctx, 'Services', 'GetService', request, emptyResponse);
   }
-  Future<$google$longrunning.Operation> updateService(ClientContext ctx, UpdateServiceRequest request) {
+
+  Future<$google$longrunning.Operation> updateService(
+      ClientContext ctx, UpdateServiceRequest request) {
     var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'Services', 'UpdateService', request, emptyResponse);
+    return _client.invoke<$google$longrunning.Operation>(
+        ctx, 'Services', 'UpdateService', request, emptyResponse);
   }
-  Future<$google$longrunning.Operation> deleteService(ClientContext ctx, DeleteServiceRequest request) {
+
+  Future<$google$longrunning.Operation> deleteService(
+      ClientContext ctx, DeleteServiceRequest request) {
     var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'Services', 'DeleteService', request, emptyResponse);
+    return _client.invoke<$google$longrunning.Operation>(
+        ctx, 'Services', 'DeleteService', request, emptyResponse);
   }
 }
 
@@ -727,13 +1020,17 @@ class ApplicationsApi {
   RpcClient _client;
   ApplicationsApi(this._client);
 
-  Future<Application> getApplication(ClientContext ctx, GetApplicationRequest request) {
+  Future<Application> getApplication(
+      ClientContext ctx, GetApplicationRequest request) {
     var emptyResponse = new Application();
-    return _client.invoke<Application>(ctx, 'Applications', 'GetApplication', request, emptyResponse);
+    return _client.invoke<Application>(
+        ctx, 'Applications', 'GetApplication', request, emptyResponse);
   }
-  Future<$google$longrunning.Operation> repairApplication(ClientContext ctx, RepairApplicationRequest request) {
+
+  Future<$google$longrunning.Operation> repairApplication(
+      ClientContext ctx, RepairApplicationRequest request) {
     var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'Applications', 'RepairApplication', request, emptyResponse);
+    return _client.invoke<$google$longrunning.Operation>(
+        ctx, 'Applications', 'RepairApplication', request, emptyResponse);
   }
 }
-

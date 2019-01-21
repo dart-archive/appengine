@@ -606,9 +606,10 @@ class _Codec {
     } else if (value is List) {
       // For [ArrayValue]s we need to set the indexing-bit on the individual
       // values, not on the array!
-      pb.arrayValue = new ArrayValue()..values.addAll(value.map((value) {
-        return encodeValue(value, excludeFromIndexes);
-      }));
+      pb.arrayValue = new ArrayValue()
+        ..values.addAll(value.map((value) {
+          return encodeValue(value, excludeFromIndexes);
+        }));
     } else {
       throw new raw.ApplicationError(
           'Cannot encode unsupported ${value.runtimeType} type.');

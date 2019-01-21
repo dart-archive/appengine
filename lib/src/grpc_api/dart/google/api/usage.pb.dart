@@ -11,14 +11,16 @@ import 'package:protobuf/protobuf.dart';
 class Usage extends GeneratedMessage {
   static final BuilderInfo _i = new BuilderInfo('Usage')
     ..pPS(1, 'requirements')
-    ..pp<UsageRule>(6, 'rules', PbFieldType.PM, UsageRule.$checkItem, UsageRule.create)
+    ..pp<UsageRule>(
+        6, 'rules', PbFieldType.PM, UsageRule.$checkItem, UsageRule.create)
     ..aOS(7, 'producerNotificationChannel')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   Usage() : super();
-  Usage.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Usage.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Usage.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Usage.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Usage clone() => new Usage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Usage create() => new Usage();
@@ -27,6 +29,7 @@ class Usage extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyUsage();
     return _defaultInstance;
   }
+
   static Usage _defaultInstance;
   static void $checkItem(Usage v) {
     if (v is! Usage) checkItemFailed(v, 'Usage');
@@ -37,7 +40,10 @@ class Usage extends GeneratedMessage {
   List<UsageRule> get rules => $_getList(1);
 
   String get producerNotificationChannel => $_getS(2, '');
-  set producerNotificationChannel(String v) { $_setString(2, v); }
+  set producerNotificationChannel(String v) {
+    $_setString(2, v);
+  }
+
   bool hasProducerNotificationChannel() => $_has(2);
   void clearProducerNotificationChannel() => clearField(7);
 }
@@ -49,12 +55,14 @@ class UsageRule extends GeneratedMessage {
     ..aOS(1, 'selector')
     ..aOB(2, 'allowUnregisteredCalls')
     ..aOB(3, 'skipServiceControl')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   UsageRule() : super();
-  UsageRule.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  UsageRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UsageRule.fromBuffer(List<int> i,
+      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  UsageRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   UsageRule clone() => new UsageRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UsageRule create() => new UsageRule();
@@ -63,26 +71,35 @@ class UsageRule extends GeneratedMessage {
     if (_defaultInstance == null) _defaultInstance = new _ReadonlyUsageRule();
     return _defaultInstance;
   }
+
   static UsageRule _defaultInstance;
   static void $checkItem(UsageRule v) {
     if (v is! UsageRule) checkItemFailed(v, 'UsageRule');
   }
 
   String get selector => $_getS(0, '');
-  set selector(String v) { $_setString(0, v); }
+  set selector(String v) {
+    $_setString(0, v);
+  }
+
   bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
   bool get allowUnregisteredCalls => $_get(1, false);
-  set allowUnregisteredCalls(bool v) { $_setBool(1, v); }
+  set allowUnregisteredCalls(bool v) {
+    $_setBool(1, v);
+  }
+
   bool hasAllowUnregisteredCalls() => $_has(1);
   void clearAllowUnregisteredCalls() => clearField(2);
 
   bool get skipServiceControl => $_get(2, false);
-  set skipServiceControl(bool v) { $_setBool(2, v); }
+  set skipServiceControl(bool v) {
+    $_setBool(2, v);
+  }
+
   bool hasSkipServiceControl() => $_has(2);
   void clearSkipServiceControl() => clearField(3);
 }
 
 class _ReadonlyUsageRule extends UsageRule with ReadonlyMessageMixin {}
-
