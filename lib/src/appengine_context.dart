@@ -4,8 +4,6 @@
 
 library appengine.appengine_context;
 
-import 'server/assets.dart';
-
 class AppengineContext {
   final String applicationID;
   final String partition;
@@ -14,7 +12,6 @@ class AppengineContext {
   final String instance;
   final String instanceId;
   final bool isDevelopmentEnvironment;
-  final AssetsManager assets;
 
   AppengineContext(
       this.isDevelopmentEnvironment,
@@ -24,8 +21,7 @@ class AppengineContext {
       this.instance,
       this.instanceId,
       Uri pubServeUrl)
-      : partition = '',
-        assets = new AssetsManager(pubServeUrl, isDevelopmentEnvironment);
+      : partition = '';
 
   String get fullQualifiedApplicationId => '$partition~$applicationID';
 }

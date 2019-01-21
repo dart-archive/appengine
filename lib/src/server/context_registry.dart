@@ -7,11 +7,8 @@ library appengine.context_registry;
 import 'dart:async';
 import 'dart:io';
 
-import 'package:memcache/memcache.dart' as memcache;
 import 'package:gcloud/db.dart' as db;
 import 'package:gcloud/storage.dart' as storage;
-
-import 'assets.dart';
 
 import '../logging.dart';
 import '../client_context.dart';
@@ -34,13 +31,12 @@ class ContextRegistry {
   final LoggerFactory _loggingFactory;
   final db.DatastoreDB _db;
   final storage.Storage _storage;
-  final memcache.Memcache _memcache;
   final AppengineContext _appengineContext;
 
   final Map<HttpRequest, ClientContext> _request2context = {};
 
-  ContextRegistry(this._loggingFactory, this._db, this._storage, this._memcache,
-      this._appengineContext);
+  ContextRegistry(
+      this._loggingFactory, this._db, this._storage, this._appengineContext);
 
   bool get isDevelopmentEnvironment {
     return _appengineContext.isDevelopmentEnvironment;
@@ -55,9 +51,8 @@ class ContextRegistry {
     }
 
     final services = _getServices(request, traceId);
-    final assets = new AssetsImpl(request, _appengineContext);
     final context = new _ClientContextImpl(
-        services, assets, _appengineContext.isDevelopmentEnvironment, traceId);
+        services, _appengineContext.isDevelopmentEnvironment, traceId);
     _request2context[request] = context;
 
     request.response.done.whenComplete(() {
@@ -113,18 +108,17 @@ class ContextRegistry {
       loggingService = _loggingFactory.newBackgroundLogger();
     }
 
-    return new Services(_db, _storage, loggingService, _memcache);
+    return new Services(_db, _storage, loggingService);
   }
 }
 
 class _ClientContextImpl implements ClientContext {
   final Services services;
-  final Assets assets;
   final bool isDevelopmentEnvironment;
   final String traceId;
 
   _ClientContextImpl(
-      this.services, this.assets, this.isDevelopmentEnvironment, this.traceId);
+      this.services, this.isDevelopmentEnvironment, this.traceId);
 
   bool get isProductionEnvironment => !isDevelopmentEnvironment;
 }

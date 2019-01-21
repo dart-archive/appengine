@@ -1,3 +1,23 @@
+## 0.6.0
+
+**Breaking changes:**
+ * Removed poorly documented assets support with broken tests.  
+ * Removed memcache as the service was never made it past alpha.
+
+Users of memcache should consider using
+[Cloud Memorystore](https://cloud.google.com/memorystore/) instead. This comes
+with a redis interface for which there are multiple packages available on pub.
+Serving assets is just a matter of sending a file from disk. This is easy to do
+without the logic that this package used to contain.
+
+## 0.5.1+1
+
+* Support latest `pkg:http` and `pkg:http2`.
+
+## 0.5.1
+
+* Correct root path for serving assets.
+
 ## 0.5.0
 
 * Support for Dart 2.0 constants and updated gcloud.
