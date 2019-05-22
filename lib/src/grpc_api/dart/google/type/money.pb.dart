@@ -1,46 +1,46 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/type/money.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Money extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Money')
-    ..aOS(1, 'currencyCode')
-    ..aInt64(2, 'units')
-    ..a<int>(3, 'nanos', PbFieldType.O3)
-    ..hasRequiredFields = false;
+class Money extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('Money', package: const $pb.PackageName('google.type'))
+        ..aOS(1, 'currencyCode')
+        ..aInt64(2, 'units')
+        ..a<$core.int>(3, 'nanos', $pb.PbFieldType.O3)
+        ..hasRequiredFields = false;
 
   Money() : super();
-  Money.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Money.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Money.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Money.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Money clone() => new Money()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Money create() => new Money();
-  static PbList<Money> createRepeated() => new PbList<Money>();
-  static Money getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMoney();
-    return _defaultInstance;
-  }
-
+  Money clone() => Money()..mergeFromMessage(this);
+  Money copyWith(void Function(Money) updates) =>
+      super.copyWith((message) => updates(message as Money));
+  $pb.BuilderInfo get info_ => _i;
+  static Money create() => Money();
+  Money createEmptyInstance() => create();
+  static $pb.PbList<Money> createRepeated() => $pb.PbList<Money>();
+  static Money getDefault() => _defaultInstance ??= create()..freeze();
   static Money _defaultInstance;
-  static void $checkItem(Money v) {
-    if (v is! Money) checkItemFailed(v, 'Money');
-  }
 
-  String get currencyCode => $_getS(0, '');
-  set currencyCode(String v) {
+  $core.String get currencyCode => $_getS(0, '');
+  set currencyCode($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasCurrencyCode() => $_has(0);
+  $core.bool hasCurrencyCode() => $_has(0);
   void clearCurrencyCode() => clearField(1);
 
   Int64 get units => $_getI64(1);
@@ -48,16 +48,14 @@ class Money extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasUnits() => $_has(1);
+  $core.bool hasUnits() => $_has(1);
   void clearUnits() => clearField(2);
 
-  int get nanos => $_get(2, 0);
-  set nanos(int v) {
+  $core.int get nanos => $_get(2, 0);
+  set nanos($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasNanos() => $_has(2);
+  $core.bool hasNanos() => $_has(2);
   void clearNanos() => clearField(3);
 }
-
-class _ReadonlyMoney extends Money with ReadonlyMessageMixin {}

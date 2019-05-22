@@ -1,74 +1,73 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/v2/bigtable.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'data.pb.dart';
-import '../../protobuf/wrappers.pb.dart' as $google$protobuf;
-import '../../rpc/status.pb.dart' as $google$rpc;
+import 'data.pb.dart' as $0;
+import '../../protobuf/wrappers.pb.dart' as $1;
+import '../../rpc/status.pb.dart' as $2;
 
-class ReadRowsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRowsRequest')
+class ReadRowsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadRowsRequest',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'tableName')
-    ..a<RowSet>(2, 'rows', PbFieldType.OM, RowSet.getDefault, RowSet.create)
-    ..a<RowFilter>(
-        3, 'filter', PbFieldType.OM, RowFilter.getDefault, RowFilter.create)
+    ..a<$0.RowSet>(
+        2, 'rows', $pb.PbFieldType.OM, $0.RowSet.getDefault, $0.RowSet.create)
+    ..a<$0.RowFilter>(3, 'filter', $pb.PbFieldType.OM, $0.RowFilter.getDefault,
+        $0.RowFilter.create)
     ..aInt64(4, 'rowsLimit')
     ..aOS(5, 'appProfileId')
     ..hasRequiredFields = false;
 
   ReadRowsRequest() : super();
-  ReadRowsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadRowsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadRowsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadRowsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadRowsRequest clone() => new ReadRowsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadRowsRequest create() => new ReadRowsRequest();
-  static PbList<ReadRowsRequest> createRepeated() =>
-      new PbList<ReadRowsRequest>();
-  static ReadRowsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadRowsRequest();
-    return _defaultInstance;
-  }
-
+  ReadRowsRequest clone() => ReadRowsRequest()..mergeFromMessage(this);
+  ReadRowsRequest copyWith(void Function(ReadRowsRequest) updates) =>
+      super.copyWith((message) => updates(message as ReadRowsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadRowsRequest create() => ReadRowsRequest();
+  ReadRowsRequest createEmptyInstance() => create();
+  static $pb.PbList<ReadRowsRequest> createRepeated() =>
+      $pb.PbList<ReadRowsRequest>();
+  static ReadRowsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReadRowsRequest _defaultInstance;
-  static void $checkItem(ReadRowsRequest v) {
-    if (v is! ReadRowsRequest) checkItemFailed(v, 'ReadRowsRequest');
-  }
 
-  String get tableName => $_getS(0, '');
-  set tableName(String v) {
+  $core.String get tableName => $_getS(0, '');
+  set tableName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTableName() => $_has(0);
+  $core.bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
-  RowSet get rows => $_getN(1);
-  set rows(RowSet v) {
+  $0.RowSet get rows => $_getN(1);
+  set rows($0.RowSet v) {
     setField(2, v);
   }
 
-  bool hasRows() => $_has(1);
+  $core.bool hasRows() => $_has(1);
   void clearRows() => clearField(2);
 
-  RowFilter get filter => $_getN(2);
-  set filter(RowFilter v) {
+  $0.RowFilter get filter => $_getN(2);
+  set filter($0.RowFilter v) {
     setField(3, v);
   }
 
-  bool hasFilter() => $_has(2);
+  $core.bool hasFilter() => $_has(2);
   void clearFilter() => clearField(3);
 
   Int64 get rowsLimit => $_getI64(3);
@@ -76,92 +75,92 @@ class ReadRowsRequest extends GeneratedMessage {
     $_setInt64(3, v);
   }
 
-  bool hasRowsLimit() => $_has(3);
+  $core.bool hasRowsLimit() => $_has(3);
   void clearRowsLimit() => clearField(4);
 
-  String get appProfileId => $_getS(4, '');
-  set appProfileId(String v) {
+  $core.String get appProfileId => $_getS(4, '');
+  set appProfileId($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasAppProfileId() => $_has(4);
+  $core.bool hasAppProfileId() => $_has(4);
   void clearAppProfileId() => clearField(5);
 }
 
-class _ReadonlyReadRowsRequest extends ReadRowsRequest
-    with ReadonlyMessageMixin {}
+enum ReadRowsResponse_CellChunk_RowStatus { resetRow, commitRow, notSet }
 
-class ReadRowsResponse_CellChunk extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRowsResponse_CellChunk')
-    ..a<List<int>>(1, 'rowKey', PbFieldType.OY)
-    ..a<$google$protobuf.StringValue>(
-        2,
-        'familyName',
-        PbFieldType.OM,
-        $google$protobuf.StringValue.getDefault,
-        $google$protobuf.StringValue.create)
-    ..a<$google$protobuf.BytesValue>(
-        3,
-        'qualifier',
-        PbFieldType.OM,
-        $google$protobuf.BytesValue.getDefault,
-        $google$protobuf.BytesValue.create)
+class ReadRowsResponse_CellChunk extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ReadRowsResponse_CellChunk_RowStatus>
+      _ReadRowsResponse_CellChunk_RowStatusByTag = {
+    8: ReadRowsResponse_CellChunk_RowStatus.resetRow,
+    9: ReadRowsResponse_CellChunk_RowStatus.commitRow,
+    0: ReadRowsResponse_CellChunk_RowStatus.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ReadRowsResponse.CellChunk',
+      package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<$core.List<$core.int>>(1, 'rowKey', $pb.PbFieldType.OY)
+    ..a<$1.StringValue>(2, 'familyName', $pb.PbFieldType.OM,
+        $1.StringValue.getDefault, $1.StringValue.create)
+    ..a<$1.BytesValue>(3, 'qualifier', $pb.PbFieldType.OM,
+        $1.BytesValue.getDefault, $1.BytesValue.create)
     ..aInt64(4, 'timestampMicros')
     ..pPS(5, 'labels')
-    ..a<List<int>>(6, 'value', PbFieldType.OY)
-    ..a<int>(7, 'valueSize', PbFieldType.O3)
+    ..a<$core.List<$core.int>>(6, 'value', $pb.PbFieldType.OY)
+    ..a<$core.int>(7, 'valueSize', $pb.PbFieldType.O3)
     ..aOB(8, 'resetRow')
     ..aOB(9, 'commitRow')
+    ..oo(0, [8, 9])
     ..hasRequiredFields = false;
 
   ReadRowsResponse_CellChunk() : super();
-  ReadRowsResponse_CellChunk.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadRowsResponse_CellChunk.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadRowsResponse_CellChunk.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadRowsResponse_CellChunk.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReadRowsResponse_CellChunk clone() =>
-      new ReadRowsResponse_CellChunk()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadRowsResponse_CellChunk create() =>
-      new ReadRowsResponse_CellChunk();
-  static PbList<ReadRowsResponse_CellChunk> createRepeated() =>
-      new PbList<ReadRowsResponse_CellChunk>();
-  static ReadRowsResponse_CellChunk getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadRowsResponse_CellChunk();
-    return _defaultInstance;
-  }
-
+      ReadRowsResponse_CellChunk()..mergeFromMessage(this);
+  ReadRowsResponse_CellChunk copyWith(
+          void Function(ReadRowsResponse_CellChunk) updates) =>
+      super.copyWith(
+          (message) => updates(message as ReadRowsResponse_CellChunk));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadRowsResponse_CellChunk create() => ReadRowsResponse_CellChunk();
+  ReadRowsResponse_CellChunk createEmptyInstance() => create();
+  static $pb.PbList<ReadRowsResponse_CellChunk> createRepeated() =>
+      $pb.PbList<ReadRowsResponse_CellChunk>();
+  static ReadRowsResponse_CellChunk getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReadRowsResponse_CellChunk _defaultInstance;
-  static void $checkItem(ReadRowsResponse_CellChunk v) {
-    if (v is! ReadRowsResponse_CellChunk)
-      checkItemFailed(v, 'ReadRowsResponse_CellChunk');
-  }
 
-  List<int> get rowKey => $_getN(0);
-  set rowKey(List<int> v) {
+  ReadRowsResponse_CellChunk_RowStatus whichRowStatus() =>
+      _ReadRowsResponse_CellChunk_RowStatusByTag[$_whichOneof(0)];
+  void clearRowStatus() => clearField($_whichOneof(0));
+
+  $core.List<$core.int> get rowKey => $_getN(0);
+  set rowKey($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasRowKey() => $_has(0);
+  $core.bool hasRowKey() => $_has(0);
   void clearRowKey() => clearField(1);
 
-  $google$protobuf.StringValue get familyName => $_getN(1);
-  set familyName($google$protobuf.StringValue v) {
+  $1.StringValue get familyName => $_getN(1);
+  set familyName($1.StringValue v) {
     setField(2, v);
   }
 
-  bool hasFamilyName() => $_has(1);
+  $core.bool hasFamilyName() => $_has(1);
   void clearFamilyName() => clearField(2);
 
-  $google$protobuf.BytesValue get qualifier => $_getN(2);
-  set qualifier($google$protobuf.BytesValue v) {
+  $1.BytesValue get qualifier => $_getN(2);
+  set qualifier($1.BytesValue v) {
     setField(3, v);
   }
 
-  bool hasQualifier() => $_has(2);
+  $core.bool hasQualifier() => $_has(2);
   void clearQualifier() => clearField(3);
 
   Int64 get timestampMicros => $_getI64(3);
@@ -169,182 +168,160 @@ class ReadRowsResponse_CellChunk extends GeneratedMessage {
     $_setInt64(3, v);
   }
 
-  bool hasTimestampMicros() => $_has(3);
+  $core.bool hasTimestampMicros() => $_has(3);
   void clearTimestampMicros() => clearField(4);
 
-  List<String> get labels => $_getList(4);
+  $core.List<$core.String> get labels => $_getList(4);
 
-  List<int> get value => $_getN(5);
-  set value(List<int> v) {
+  $core.List<$core.int> get value => $_getN(5);
+  set value($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
-  bool hasValue() => $_has(5);
+  $core.bool hasValue() => $_has(5);
   void clearValue() => clearField(6);
 
-  int get valueSize => $_get(6, 0);
-  set valueSize(int v) {
+  $core.int get valueSize => $_get(6, 0);
+  set valueSize($core.int v) {
     $_setSignedInt32(6, v);
   }
 
-  bool hasValueSize() => $_has(6);
+  $core.bool hasValueSize() => $_has(6);
   void clearValueSize() => clearField(7);
 
-  bool get resetRow => $_get(7, false);
-  set resetRow(bool v) {
+  $core.bool get resetRow => $_get(7, false);
+  set resetRow($core.bool v) {
     $_setBool(7, v);
   }
 
-  bool hasResetRow() => $_has(7);
+  $core.bool hasResetRow() => $_has(7);
   void clearResetRow() => clearField(8);
 
-  bool get commitRow => $_get(8, false);
-  set commitRow(bool v) {
+  $core.bool get commitRow => $_get(8, false);
+  set commitRow($core.bool v) {
     $_setBool(8, v);
   }
 
-  bool hasCommitRow() => $_has(8);
+  $core.bool hasCommitRow() => $_has(8);
   void clearCommitRow() => clearField(9);
 }
 
-class _ReadonlyReadRowsResponse_CellChunk extends ReadRowsResponse_CellChunk
-    with ReadonlyMessageMixin {}
-
-class ReadRowsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRowsResponse')
-    ..pp<ReadRowsResponse_CellChunk>(
-        1,
-        'chunks',
-        PbFieldType.PM,
-        ReadRowsResponse_CellChunk.$checkItem,
-        ReadRowsResponse_CellChunk.create)
-    ..a<List<int>>(2, 'lastScannedRowKey', PbFieldType.OY)
+class ReadRowsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadRowsResponse',
+      package: const $pb.PackageName('google.bigtable.v2'))
+    ..pc<ReadRowsResponse_CellChunk>(
+        1, 'chunks', $pb.PbFieldType.PM, ReadRowsResponse_CellChunk.create)
+    ..a<$core.List<$core.int>>(2, 'lastScannedRowKey', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   ReadRowsResponse() : super();
-  ReadRowsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadRowsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadRowsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadRowsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadRowsResponse clone() => new ReadRowsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadRowsResponse create() => new ReadRowsResponse();
-  static PbList<ReadRowsResponse> createRepeated() =>
-      new PbList<ReadRowsResponse>();
-  static ReadRowsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadRowsResponse();
-    return _defaultInstance;
-  }
-
+  ReadRowsResponse clone() => ReadRowsResponse()..mergeFromMessage(this);
+  ReadRowsResponse copyWith(void Function(ReadRowsResponse) updates) =>
+      super.copyWith((message) => updates(message as ReadRowsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadRowsResponse create() => ReadRowsResponse();
+  ReadRowsResponse createEmptyInstance() => create();
+  static $pb.PbList<ReadRowsResponse> createRepeated() =>
+      $pb.PbList<ReadRowsResponse>();
+  static ReadRowsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReadRowsResponse _defaultInstance;
-  static void $checkItem(ReadRowsResponse v) {
-    if (v is! ReadRowsResponse) checkItemFailed(v, 'ReadRowsResponse');
-  }
 
-  List<ReadRowsResponse_CellChunk> get chunks => $_getList(0);
+  $core.List<ReadRowsResponse_CellChunk> get chunks => $_getList(0);
 
-  List<int> get lastScannedRowKey => $_getN(1);
-  set lastScannedRowKey(List<int> v) {
+  $core.List<$core.int> get lastScannedRowKey => $_getN(1);
+  set lastScannedRowKey($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasLastScannedRowKey() => $_has(1);
+  $core.bool hasLastScannedRowKey() => $_has(1);
   void clearLastScannedRowKey() => clearField(2);
 }
 
-class _ReadonlyReadRowsResponse extends ReadRowsResponse
-    with ReadonlyMessageMixin {}
-
-class SampleRowKeysRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SampleRowKeysRequest')
+class SampleRowKeysRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SampleRowKeysRequest',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'tableName')
     ..aOS(2, 'appProfileId')
     ..hasRequiredFields = false;
 
   SampleRowKeysRequest() : super();
-  SampleRowKeysRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SampleRowKeysRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SampleRowKeysRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SampleRowKeysRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SampleRowKeysRequest clone() =>
-      new SampleRowKeysRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SampleRowKeysRequest create() => new SampleRowKeysRequest();
-  static PbList<SampleRowKeysRequest> createRepeated() =>
-      new PbList<SampleRowKeysRequest>();
-  static SampleRowKeysRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySampleRowKeysRequest();
-    return _defaultInstance;
-  }
-
+      SampleRowKeysRequest()..mergeFromMessage(this);
+  SampleRowKeysRequest copyWith(void Function(SampleRowKeysRequest) updates) =>
+      super.copyWith((message) => updates(message as SampleRowKeysRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SampleRowKeysRequest create() => SampleRowKeysRequest();
+  SampleRowKeysRequest createEmptyInstance() => create();
+  static $pb.PbList<SampleRowKeysRequest> createRepeated() =>
+      $pb.PbList<SampleRowKeysRequest>();
+  static SampleRowKeysRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SampleRowKeysRequest _defaultInstance;
-  static void $checkItem(SampleRowKeysRequest v) {
-    if (v is! SampleRowKeysRequest) checkItemFailed(v, 'SampleRowKeysRequest');
-  }
 
-  String get tableName => $_getS(0, '');
-  set tableName(String v) {
+  $core.String get tableName => $_getS(0, '');
+  set tableName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTableName() => $_has(0);
+  $core.bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
-  String get appProfileId => $_getS(1, '');
-  set appProfileId(String v) {
+  $core.String get appProfileId => $_getS(1, '');
+  set appProfileId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasAppProfileId() => $_has(1);
+  $core.bool hasAppProfileId() => $_has(1);
   void clearAppProfileId() => clearField(2);
 }
 
-class _ReadonlySampleRowKeysRequest extends SampleRowKeysRequest
-    with ReadonlyMessageMixin {}
-
-class SampleRowKeysResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SampleRowKeysResponse')
-    ..a<List<int>>(1, 'rowKey', PbFieldType.OY)
+class SampleRowKeysResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SampleRowKeysResponse',
+      package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<$core.List<$core.int>>(1, 'rowKey', $pb.PbFieldType.OY)
     ..aInt64(2, 'offsetBytes')
     ..hasRequiredFields = false;
 
   SampleRowKeysResponse() : super();
-  SampleRowKeysResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SampleRowKeysResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SampleRowKeysResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SampleRowKeysResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SampleRowKeysResponse clone() =>
-      new SampleRowKeysResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SampleRowKeysResponse create() => new SampleRowKeysResponse();
-  static PbList<SampleRowKeysResponse> createRepeated() =>
-      new PbList<SampleRowKeysResponse>();
-  static SampleRowKeysResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySampleRowKeysResponse();
-    return _defaultInstance;
-  }
-
+      SampleRowKeysResponse()..mergeFromMessage(this);
+  SampleRowKeysResponse copyWith(
+          void Function(SampleRowKeysResponse) updates) =>
+      super.copyWith((message) => updates(message as SampleRowKeysResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static SampleRowKeysResponse create() => SampleRowKeysResponse();
+  SampleRowKeysResponse createEmptyInstance() => create();
+  static $pb.PbList<SampleRowKeysResponse> createRepeated() =>
+      $pb.PbList<SampleRowKeysResponse>();
+  static SampleRowKeysResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SampleRowKeysResponse _defaultInstance;
-  static void $checkItem(SampleRowKeysResponse v) {
-    if (v is! SampleRowKeysResponse)
-      checkItemFailed(v, 'SampleRowKeysResponse');
-  }
 
-  List<int> get rowKey => $_getN(0);
-  set rowKey(List<int> v) {
+  $core.List<$core.int> get rowKey => $_getN(0);
+  set rowKey($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasRowKey() => $_has(0);
+  $core.bool hasRowKey() => $_has(0);
   void clearRowKey() => clearField(1);
 
   Int64 get offsetBytes => $_getI64(1);
@@ -352,562 +329,499 @@ class SampleRowKeysResponse extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasOffsetBytes() => $_has(1);
+  $core.bool hasOffsetBytes() => $_has(1);
   void clearOffsetBytes() => clearField(2);
 }
 
-class _ReadonlySampleRowKeysResponse extends SampleRowKeysResponse
-    with ReadonlyMessageMixin {}
-
-class MutateRowRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowRequest')
+class MutateRowRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateRowRequest',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'tableName')
-    ..a<List<int>>(2, 'rowKey', PbFieldType.OY)
-    ..pp<Mutation>(
-        3, 'mutations', PbFieldType.PM, Mutation.$checkItem, Mutation.create)
+    ..a<$core.List<$core.int>>(2, 'rowKey', $pb.PbFieldType.OY)
+    ..pc<$0.Mutation>(3, 'mutations', $pb.PbFieldType.PM, $0.Mutation.create)
     ..aOS(4, 'appProfileId')
     ..hasRequiredFields = false;
 
   MutateRowRequest() : super();
-  MutateRowRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MutateRowRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutateRowRequest clone() => new MutateRowRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MutateRowRequest create() => new MutateRowRequest();
-  static PbList<MutateRowRequest> createRepeated() =>
-      new PbList<MutateRowRequest>();
-  static MutateRowRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowRequest();
-    return _defaultInstance;
-  }
-
+  MutateRowRequest clone() => MutateRowRequest()..mergeFromMessage(this);
+  MutateRowRequest copyWith(void Function(MutateRowRequest) updates) =>
+      super.copyWith((message) => updates(message as MutateRowRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static MutateRowRequest create() => MutateRowRequest();
+  MutateRowRequest createEmptyInstance() => create();
+  static $pb.PbList<MutateRowRequest> createRepeated() =>
+      $pb.PbList<MutateRowRequest>();
+  static MutateRowRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MutateRowRequest _defaultInstance;
-  static void $checkItem(MutateRowRequest v) {
-    if (v is! MutateRowRequest) checkItemFailed(v, 'MutateRowRequest');
-  }
 
-  String get tableName => $_getS(0, '');
-  set tableName(String v) {
+  $core.String get tableName => $_getS(0, '');
+  set tableName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTableName() => $_has(0);
+  $core.bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
-  List<int> get rowKey => $_getN(1);
-  set rowKey(List<int> v) {
+  $core.List<$core.int> get rowKey => $_getN(1);
+  set rowKey($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasRowKey() => $_has(1);
+  $core.bool hasRowKey() => $_has(1);
   void clearRowKey() => clearField(2);
 
-  List<Mutation> get mutations => $_getList(2);
+  $core.List<$0.Mutation> get mutations => $_getList(2);
 
-  String get appProfileId => $_getS(3, '');
-  set appProfileId(String v) {
+  $core.String get appProfileId => $_getS(3, '');
+  set appProfileId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasAppProfileId() => $_has(3);
+  $core.bool hasAppProfileId() => $_has(3);
   void clearAppProfileId() => clearField(4);
 }
 
-class _ReadonlyMutateRowRequest extends MutateRowRequest
-    with ReadonlyMessageMixin {}
-
-class MutateRowResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowResponse')
+class MutateRowResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateRowResponse',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..hasRequiredFields = false;
 
   MutateRowResponse() : super();
-  MutateRowResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MutateRowResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutateRowResponse clone() => new MutateRowResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MutateRowResponse create() => new MutateRowResponse();
-  static PbList<MutateRowResponse> createRepeated() =>
-      new PbList<MutateRowResponse>();
-  static MutateRowResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowResponse();
-    return _defaultInstance;
-  }
-
+  MutateRowResponse clone() => MutateRowResponse()..mergeFromMessage(this);
+  MutateRowResponse copyWith(void Function(MutateRowResponse) updates) =>
+      super.copyWith((message) => updates(message as MutateRowResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static MutateRowResponse create() => MutateRowResponse();
+  MutateRowResponse createEmptyInstance() => create();
+  static $pb.PbList<MutateRowResponse> createRepeated() =>
+      $pb.PbList<MutateRowResponse>();
+  static MutateRowResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MutateRowResponse _defaultInstance;
-  static void $checkItem(MutateRowResponse v) {
-    if (v is! MutateRowResponse) checkItemFailed(v, 'MutateRowResponse');
-  }
 }
 
-class _ReadonlyMutateRowResponse extends MutateRowResponse
-    with ReadonlyMessageMixin {}
-
-class MutateRowsRequest_Entry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowsRequest_Entry')
-    ..a<List<int>>(1, 'rowKey', PbFieldType.OY)
-    ..pp<Mutation>(
-        2, 'mutations', PbFieldType.PM, Mutation.$checkItem, Mutation.create)
+class MutateRowsRequest_Entry extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateRowsRequest.Entry',
+      package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<$core.List<$core.int>>(1, 'rowKey', $pb.PbFieldType.OY)
+    ..pc<$0.Mutation>(2, 'mutations', $pb.PbFieldType.PM, $0.Mutation.create)
     ..hasRequiredFields = false;
 
   MutateRowsRequest_Entry() : super();
-  MutateRowsRequest_Entry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowsRequest_Entry.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MutateRowsRequest_Entry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowsRequest_Entry.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MutateRowsRequest_Entry clone() =>
-      new MutateRowsRequest_Entry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MutateRowsRequest_Entry create() => new MutateRowsRequest_Entry();
-  static PbList<MutateRowsRequest_Entry> createRepeated() =>
-      new PbList<MutateRowsRequest_Entry>();
-  static MutateRowsRequest_Entry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowsRequest_Entry();
-    return _defaultInstance;
-  }
-
+      MutateRowsRequest_Entry()..mergeFromMessage(this);
+  MutateRowsRequest_Entry copyWith(
+          void Function(MutateRowsRequest_Entry) updates) =>
+      super.copyWith((message) => updates(message as MutateRowsRequest_Entry));
+  $pb.BuilderInfo get info_ => _i;
+  static MutateRowsRequest_Entry create() => MutateRowsRequest_Entry();
+  MutateRowsRequest_Entry createEmptyInstance() => create();
+  static $pb.PbList<MutateRowsRequest_Entry> createRepeated() =>
+      $pb.PbList<MutateRowsRequest_Entry>();
+  static MutateRowsRequest_Entry getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MutateRowsRequest_Entry _defaultInstance;
-  static void $checkItem(MutateRowsRequest_Entry v) {
-    if (v is! MutateRowsRequest_Entry)
-      checkItemFailed(v, 'MutateRowsRequest_Entry');
-  }
 
-  List<int> get rowKey => $_getN(0);
-  set rowKey(List<int> v) {
+  $core.List<$core.int> get rowKey => $_getN(0);
+  set rowKey($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasRowKey() => $_has(0);
+  $core.bool hasRowKey() => $_has(0);
   void clearRowKey() => clearField(1);
 
-  List<Mutation> get mutations => $_getList(1);
+  $core.List<$0.Mutation> get mutations => $_getList(1);
 }
 
-class _ReadonlyMutateRowsRequest_Entry extends MutateRowsRequest_Entry
-    with ReadonlyMessageMixin {}
-
-class MutateRowsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowsRequest')
+class MutateRowsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateRowsRequest',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'tableName')
-    ..pp<MutateRowsRequest_Entry>(2, 'entries', PbFieldType.PM,
-        MutateRowsRequest_Entry.$checkItem, MutateRowsRequest_Entry.create)
+    ..pc<MutateRowsRequest_Entry>(
+        2, 'entries', $pb.PbFieldType.PM, MutateRowsRequest_Entry.create)
     ..aOS(3, 'appProfileId')
     ..hasRequiredFields = false;
 
   MutateRowsRequest() : super();
-  MutateRowsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MutateRowsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutateRowsRequest clone() => new MutateRowsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MutateRowsRequest create() => new MutateRowsRequest();
-  static PbList<MutateRowsRequest> createRepeated() =>
-      new PbList<MutateRowsRequest>();
-  static MutateRowsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowsRequest();
-    return _defaultInstance;
-  }
-
+  MutateRowsRequest clone() => MutateRowsRequest()..mergeFromMessage(this);
+  MutateRowsRequest copyWith(void Function(MutateRowsRequest) updates) =>
+      super.copyWith((message) => updates(message as MutateRowsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static MutateRowsRequest create() => MutateRowsRequest();
+  MutateRowsRequest createEmptyInstance() => create();
+  static $pb.PbList<MutateRowsRequest> createRepeated() =>
+      $pb.PbList<MutateRowsRequest>();
+  static MutateRowsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MutateRowsRequest _defaultInstance;
-  static void $checkItem(MutateRowsRequest v) {
-    if (v is! MutateRowsRequest) checkItemFailed(v, 'MutateRowsRequest');
-  }
 
-  String get tableName => $_getS(0, '');
-  set tableName(String v) {
+  $core.String get tableName => $_getS(0, '');
+  set tableName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTableName() => $_has(0);
+  $core.bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
-  List<MutateRowsRequest_Entry> get entries => $_getList(1);
+  $core.List<MutateRowsRequest_Entry> get entries => $_getList(1);
 
-  String get appProfileId => $_getS(2, '');
-  set appProfileId(String v) {
+  $core.String get appProfileId => $_getS(2, '');
+  set appProfileId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasAppProfileId() => $_has(2);
+  $core.bool hasAppProfileId() => $_has(2);
   void clearAppProfileId() => clearField(3);
 }
 
-class _ReadonlyMutateRowsRequest extends MutateRowsRequest
-    with ReadonlyMessageMixin {}
-
-class MutateRowsResponse_Entry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowsResponse_Entry')
+class MutateRowsResponse_Entry extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateRowsResponse.Entry',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..aInt64(1, 'index')
-    ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
+    ..a<$2.Status>(
+        2, 'status', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
   MutateRowsResponse_Entry() : super();
-  MutateRowsResponse_Entry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowsResponse_Entry.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MutateRowsResponse_Entry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowsResponse_Entry.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MutateRowsResponse_Entry clone() =>
-      new MutateRowsResponse_Entry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MutateRowsResponse_Entry create() => new MutateRowsResponse_Entry();
-  static PbList<MutateRowsResponse_Entry> createRepeated() =>
-      new PbList<MutateRowsResponse_Entry>();
-  static MutateRowsResponse_Entry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowsResponse_Entry();
-    return _defaultInstance;
-  }
-
+      MutateRowsResponse_Entry()..mergeFromMessage(this);
+  MutateRowsResponse_Entry copyWith(
+          void Function(MutateRowsResponse_Entry) updates) =>
+      super.copyWith((message) => updates(message as MutateRowsResponse_Entry));
+  $pb.BuilderInfo get info_ => _i;
+  static MutateRowsResponse_Entry create() => MutateRowsResponse_Entry();
+  MutateRowsResponse_Entry createEmptyInstance() => create();
+  static $pb.PbList<MutateRowsResponse_Entry> createRepeated() =>
+      $pb.PbList<MutateRowsResponse_Entry>();
+  static MutateRowsResponse_Entry getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MutateRowsResponse_Entry _defaultInstance;
-  static void $checkItem(MutateRowsResponse_Entry v) {
-    if (v is! MutateRowsResponse_Entry)
-      checkItemFailed(v, 'MutateRowsResponse_Entry');
-  }
 
   Int64 get index => $_getI64(0);
   set index(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasIndex() => $_has(0);
+  $core.bool hasIndex() => $_has(0);
   void clearIndex() => clearField(1);
 
-  $google$rpc.Status get status => $_getN(1);
-  set status($google$rpc.Status v) {
+  $2.Status get status => $_getN(1);
+  set status($2.Status v) {
     setField(2, v);
   }
 
-  bool hasStatus() => $_has(1);
+  $core.bool hasStatus() => $_has(1);
   void clearStatus() => clearField(2);
 }
 
-class _ReadonlyMutateRowsResponse_Entry extends MutateRowsResponse_Entry
-    with ReadonlyMessageMixin {}
-
-class MutateRowsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowsResponse')
-    ..pp<MutateRowsResponse_Entry>(1, 'entries', PbFieldType.PM,
-        MutateRowsResponse_Entry.$checkItem, MutateRowsResponse_Entry.create)
+class MutateRowsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateRowsResponse',
+      package: const $pb.PackageName('google.bigtable.v2'))
+    ..pc<MutateRowsResponse_Entry>(
+        1, 'entries', $pb.PbFieldType.PM, MutateRowsResponse_Entry.create)
     ..hasRequiredFields = false;
 
   MutateRowsResponse() : super();
-  MutateRowsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MutateRowsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutateRowsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutateRowsResponse clone() =>
-      new MutateRowsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MutateRowsResponse create() => new MutateRowsResponse();
-  static PbList<MutateRowsResponse> createRepeated() =>
-      new PbList<MutateRowsResponse>();
-  static MutateRowsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowsResponse();
-    return _defaultInstance;
-  }
-
+  MutateRowsResponse clone() => MutateRowsResponse()..mergeFromMessage(this);
+  MutateRowsResponse copyWith(void Function(MutateRowsResponse) updates) =>
+      super.copyWith((message) => updates(message as MutateRowsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static MutateRowsResponse create() => MutateRowsResponse();
+  MutateRowsResponse createEmptyInstance() => create();
+  static $pb.PbList<MutateRowsResponse> createRepeated() =>
+      $pb.PbList<MutateRowsResponse>();
+  static MutateRowsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MutateRowsResponse _defaultInstance;
-  static void $checkItem(MutateRowsResponse v) {
-    if (v is! MutateRowsResponse) checkItemFailed(v, 'MutateRowsResponse');
-  }
 
-  List<MutateRowsResponse_Entry> get entries => $_getList(0);
+  $core.List<MutateRowsResponse_Entry> get entries => $_getList(0);
 }
 
-class _ReadonlyMutateRowsResponse extends MutateRowsResponse
-    with ReadonlyMessageMixin {}
-
-class CheckAndMutateRowRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckAndMutateRowRequest')
+class CheckAndMutateRowRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckAndMutateRowRequest',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'tableName')
-    ..a<List<int>>(2, 'rowKey', PbFieldType.OY)
-    ..pp<Mutation>(4, 'trueMutations', PbFieldType.PM, Mutation.$checkItem,
-        Mutation.create)
-    ..pp<Mutation>(5, 'falseMutations', PbFieldType.PM, Mutation.$checkItem,
-        Mutation.create)
-    ..a<RowFilter>(6, 'predicateFilter', PbFieldType.OM, RowFilter.getDefault,
-        RowFilter.create)
+    ..a<$core.List<$core.int>>(2, 'rowKey', $pb.PbFieldType.OY)
+    ..pc<$0.Mutation>(
+        4, 'trueMutations', $pb.PbFieldType.PM, $0.Mutation.create)
+    ..pc<$0.Mutation>(
+        5, 'falseMutations', $pb.PbFieldType.PM, $0.Mutation.create)
+    ..a<$0.RowFilter>(6, 'predicateFilter', $pb.PbFieldType.OM,
+        $0.RowFilter.getDefault, $0.RowFilter.create)
     ..aOS(7, 'appProfileId')
     ..hasRequiredFields = false;
 
   CheckAndMutateRowRequest() : super();
-  CheckAndMutateRowRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckAndMutateRowRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CheckAndMutateRowRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckAndMutateRowRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckAndMutateRowRequest clone() =>
-      new CheckAndMutateRowRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CheckAndMutateRowRequest create() => new CheckAndMutateRowRequest();
-  static PbList<CheckAndMutateRowRequest> createRepeated() =>
-      new PbList<CheckAndMutateRowRequest>();
-  static CheckAndMutateRowRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckAndMutateRowRequest();
-    return _defaultInstance;
-  }
-
+      CheckAndMutateRowRequest()..mergeFromMessage(this);
+  CheckAndMutateRowRequest copyWith(
+          void Function(CheckAndMutateRowRequest) updates) =>
+      super.copyWith((message) => updates(message as CheckAndMutateRowRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CheckAndMutateRowRequest create() => CheckAndMutateRowRequest();
+  CheckAndMutateRowRequest createEmptyInstance() => create();
+  static $pb.PbList<CheckAndMutateRowRequest> createRepeated() =>
+      $pb.PbList<CheckAndMutateRowRequest>();
+  static CheckAndMutateRowRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CheckAndMutateRowRequest _defaultInstance;
-  static void $checkItem(CheckAndMutateRowRequest v) {
-    if (v is! CheckAndMutateRowRequest)
-      checkItemFailed(v, 'CheckAndMutateRowRequest');
-  }
 
-  String get tableName => $_getS(0, '');
-  set tableName(String v) {
+  $core.String get tableName => $_getS(0, '');
+  set tableName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTableName() => $_has(0);
+  $core.bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
-  List<int> get rowKey => $_getN(1);
-  set rowKey(List<int> v) {
+  $core.List<$core.int> get rowKey => $_getN(1);
+  set rowKey($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasRowKey() => $_has(1);
+  $core.bool hasRowKey() => $_has(1);
   void clearRowKey() => clearField(2);
 
-  List<Mutation> get trueMutations => $_getList(2);
+  $core.List<$0.Mutation> get trueMutations => $_getList(2);
 
-  List<Mutation> get falseMutations => $_getList(3);
+  $core.List<$0.Mutation> get falseMutations => $_getList(3);
 
-  RowFilter get predicateFilter => $_getN(4);
-  set predicateFilter(RowFilter v) {
+  $0.RowFilter get predicateFilter => $_getN(4);
+  set predicateFilter($0.RowFilter v) {
     setField(6, v);
   }
 
-  bool hasPredicateFilter() => $_has(4);
+  $core.bool hasPredicateFilter() => $_has(4);
   void clearPredicateFilter() => clearField(6);
 
-  String get appProfileId => $_getS(5, '');
-  set appProfileId(String v) {
+  $core.String get appProfileId => $_getS(5, '');
+  set appProfileId($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasAppProfileId() => $_has(5);
+  $core.bool hasAppProfileId() => $_has(5);
   void clearAppProfileId() => clearField(7);
 }
 
-class _ReadonlyCheckAndMutateRowRequest extends CheckAndMutateRowRequest
-    with ReadonlyMessageMixin {}
-
-class CheckAndMutateRowResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckAndMutateRowResponse')
+class CheckAndMutateRowResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckAndMutateRowResponse',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..aOB(1, 'predicateMatched')
     ..hasRequiredFields = false;
 
   CheckAndMutateRowResponse() : super();
-  CheckAndMutateRowResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckAndMutateRowResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CheckAndMutateRowResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckAndMutateRowResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckAndMutateRowResponse clone() =>
-      new CheckAndMutateRowResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CheckAndMutateRowResponse create() => new CheckAndMutateRowResponse();
-  static PbList<CheckAndMutateRowResponse> createRepeated() =>
-      new PbList<CheckAndMutateRowResponse>();
-  static CheckAndMutateRowResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckAndMutateRowResponse();
-    return _defaultInstance;
-  }
-
+      CheckAndMutateRowResponse()..mergeFromMessage(this);
+  CheckAndMutateRowResponse copyWith(
+          void Function(CheckAndMutateRowResponse) updates) =>
+      super
+          .copyWith((message) => updates(message as CheckAndMutateRowResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static CheckAndMutateRowResponse create() => CheckAndMutateRowResponse();
+  CheckAndMutateRowResponse createEmptyInstance() => create();
+  static $pb.PbList<CheckAndMutateRowResponse> createRepeated() =>
+      $pb.PbList<CheckAndMutateRowResponse>();
+  static CheckAndMutateRowResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CheckAndMutateRowResponse _defaultInstance;
-  static void $checkItem(CheckAndMutateRowResponse v) {
-    if (v is! CheckAndMutateRowResponse)
-      checkItemFailed(v, 'CheckAndMutateRowResponse');
-  }
 
-  bool get predicateMatched => $_get(0, false);
-  set predicateMatched(bool v) {
+  $core.bool get predicateMatched => $_get(0, false);
+  set predicateMatched($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasPredicateMatched() => $_has(0);
+  $core.bool hasPredicateMatched() => $_has(0);
   void clearPredicateMatched() => clearField(1);
 }
 
-class _ReadonlyCheckAndMutateRowResponse extends CheckAndMutateRowResponse
-    with ReadonlyMessageMixin {}
-
-class ReadModifyWriteRowRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadModifyWriteRowRequest')
+class ReadModifyWriteRowRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadModifyWriteRowRequest',
+      package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'tableName')
-    ..a<List<int>>(2, 'rowKey', PbFieldType.OY)
-    ..pp<ReadModifyWriteRule>(3, 'rules', PbFieldType.PM,
-        ReadModifyWriteRule.$checkItem, ReadModifyWriteRule.create)
+    ..a<$core.List<$core.int>>(2, 'rowKey', $pb.PbFieldType.OY)
+    ..pc<$0.ReadModifyWriteRule>(
+        3, 'rules', $pb.PbFieldType.PM, $0.ReadModifyWriteRule.create)
     ..aOS(4, 'appProfileId')
     ..hasRequiredFields = false;
 
   ReadModifyWriteRowRequest() : super();
-  ReadModifyWriteRowRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadModifyWriteRowRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadModifyWriteRowRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadModifyWriteRowRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReadModifyWriteRowRequest clone() =>
-      new ReadModifyWriteRowRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadModifyWriteRowRequest create() => new ReadModifyWriteRowRequest();
-  static PbList<ReadModifyWriteRowRequest> createRepeated() =>
-      new PbList<ReadModifyWriteRowRequest>();
-  static ReadModifyWriteRowRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadModifyWriteRowRequest();
-    return _defaultInstance;
-  }
-
+      ReadModifyWriteRowRequest()..mergeFromMessage(this);
+  ReadModifyWriteRowRequest copyWith(
+          void Function(ReadModifyWriteRowRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as ReadModifyWriteRowRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadModifyWriteRowRequest create() => ReadModifyWriteRowRequest();
+  ReadModifyWriteRowRequest createEmptyInstance() => create();
+  static $pb.PbList<ReadModifyWriteRowRequest> createRepeated() =>
+      $pb.PbList<ReadModifyWriteRowRequest>();
+  static ReadModifyWriteRowRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReadModifyWriteRowRequest _defaultInstance;
-  static void $checkItem(ReadModifyWriteRowRequest v) {
-    if (v is! ReadModifyWriteRowRequest)
-      checkItemFailed(v, 'ReadModifyWriteRowRequest');
-  }
 
-  String get tableName => $_getS(0, '');
-  set tableName(String v) {
+  $core.String get tableName => $_getS(0, '');
+  set tableName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTableName() => $_has(0);
+  $core.bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
-  List<int> get rowKey => $_getN(1);
-  set rowKey(List<int> v) {
+  $core.List<$core.int> get rowKey => $_getN(1);
+  set rowKey($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasRowKey() => $_has(1);
+  $core.bool hasRowKey() => $_has(1);
   void clearRowKey() => clearField(2);
 
-  List<ReadModifyWriteRule> get rules => $_getList(2);
+  $core.List<$0.ReadModifyWriteRule> get rules => $_getList(2);
 
-  String get appProfileId => $_getS(3, '');
-  set appProfileId(String v) {
+  $core.String get appProfileId => $_getS(3, '');
+  set appProfileId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasAppProfileId() => $_has(3);
+  $core.bool hasAppProfileId() => $_has(3);
   void clearAppProfileId() => clearField(4);
 }
 
-class _ReadonlyReadModifyWriteRowRequest extends ReadModifyWriteRowRequest
-    with ReadonlyMessageMixin {}
-
-class ReadModifyWriteRowResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadModifyWriteRowResponse')
-    ..a<Row>(1, 'row', PbFieldType.OM, Row.getDefault, Row.create)
+class ReadModifyWriteRowResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ReadModifyWriteRowResponse',
+      package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<$0.Row>(1, 'row', $pb.PbFieldType.OM, $0.Row.getDefault, $0.Row.create)
     ..hasRequiredFields = false;
 
   ReadModifyWriteRowResponse() : super();
-  ReadModifyWriteRowResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadModifyWriteRowResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadModifyWriteRowResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadModifyWriteRowResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReadModifyWriteRowResponse clone() =>
-      new ReadModifyWriteRowResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadModifyWriteRowResponse create() =>
-      new ReadModifyWriteRowResponse();
-  static PbList<ReadModifyWriteRowResponse> createRepeated() =>
-      new PbList<ReadModifyWriteRowResponse>();
-  static ReadModifyWriteRowResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadModifyWriteRowResponse();
-    return _defaultInstance;
-  }
-
+      ReadModifyWriteRowResponse()..mergeFromMessage(this);
+  ReadModifyWriteRowResponse copyWith(
+          void Function(ReadModifyWriteRowResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ReadModifyWriteRowResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadModifyWriteRowResponse create() => ReadModifyWriteRowResponse();
+  ReadModifyWriteRowResponse createEmptyInstance() => create();
+  static $pb.PbList<ReadModifyWriteRowResponse> createRepeated() =>
+      $pb.PbList<ReadModifyWriteRowResponse>();
+  static ReadModifyWriteRowResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReadModifyWriteRowResponse _defaultInstance;
-  static void $checkItem(ReadModifyWriteRowResponse v) {
-    if (v is! ReadModifyWriteRowResponse)
-      checkItemFailed(v, 'ReadModifyWriteRowResponse');
-  }
 
-  Row get row => $_getN(0);
-  set row(Row v) {
+  $0.Row get row => $_getN(0);
+  set row($0.Row v) {
     setField(1, v);
   }
 
-  bool hasRow() => $_has(0);
+  $core.bool hasRow() => $_has(0);
   void clearRow() => clearField(1);
 }
 
-class _ReadonlyReadModifyWriteRowResponse extends ReadModifyWriteRowResponse
-    with ReadonlyMessageMixin {}
-
 class BigtableApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   BigtableApi(this._client);
 
-  Future<ReadRowsResponse> readRows(
-      ClientContext ctx, ReadRowsRequest request) {
-    var emptyResponse = new ReadRowsResponse();
+  $async.Future<ReadRowsResponse> readRows(
+      $pb.ClientContext ctx, ReadRowsRequest request) {
+    var emptyResponse = ReadRowsResponse();
     return _client.invoke<ReadRowsResponse>(
         ctx, 'Bigtable', 'ReadRows', request, emptyResponse);
   }
 
-  Future<SampleRowKeysResponse> sampleRowKeys(
-      ClientContext ctx, SampleRowKeysRequest request) {
-    var emptyResponse = new SampleRowKeysResponse();
+  $async.Future<SampleRowKeysResponse> sampleRowKeys(
+      $pb.ClientContext ctx, SampleRowKeysRequest request) {
+    var emptyResponse = SampleRowKeysResponse();
     return _client.invoke<SampleRowKeysResponse>(
         ctx, 'Bigtable', 'SampleRowKeys', request, emptyResponse);
   }
 
-  Future<MutateRowResponse> mutateRow(
-      ClientContext ctx, MutateRowRequest request) {
-    var emptyResponse = new MutateRowResponse();
+  $async.Future<MutateRowResponse> mutateRow(
+      $pb.ClientContext ctx, MutateRowRequest request) {
+    var emptyResponse = MutateRowResponse();
     return _client.invoke<MutateRowResponse>(
         ctx, 'Bigtable', 'MutateRow', request, emptyResponse);
   }
 
-  Future<MutateRowsResponse> mutateRows(
-      ClientContext ctx, MutateRowsRequest request) {
-    var emptyResponse = new MutateRowsResponse();
+  $async.Future<MutateRowsResponse> mutateRows(
+      $pb.ClientContext ctx, MutateRowsRequest request) {
+    var emptyResponse = MutateRowsResponse();
     return _client.invoke<MutateRowsResponse>(
         ctx, 'Bigtable', 'MutateRows', request, emptyResponse);
   }
 
-  Future<CheckAndMutateRowResponse> checkAndMutateRow(
-      ClientContext ctx, CheckAndMutateRowRequest request) {
-    var emptyResponse = new CheckAndMutateRowResponse();
+  $async.Future<CheckAndMutateRowResponse> checkAndMutateRow(
+      $pb.ClientContext ctx, CheckAndMutateRowRequest request) {
+    var emptyResponse = CheckAndMutateRowResponse();
     return _client.invoke<CheckAndMutateRowResponse>(
         ctx, 'Bigtable', 'CheckAndMutateRow', request, emptyResponse);
   }
 
-  Future<ReadModifyWriteRowResponse> readModifyWriteRow(
-      ClientContext ctx, ReadModifyWriteRowRequest request) {
-    var emptyResponse = new ReadModifyWriteRowResponse();
+  $async.Future<ReadModifyWriteRowResponse> readModifyWriteRow(
+      $pb.ClientContext ctx, ReadModifyWriteRowRequest request) {
+    var emptyResponse = ReadModifyWriteRowResponse();
     return _client.invoke<ReadModifyWriteRowResponse>(
         ctx, 'Bigtable', 'ReadModifyWriteRow', request, emptyResponse);
   }

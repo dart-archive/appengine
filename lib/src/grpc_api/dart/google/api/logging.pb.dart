@@ -1,98 +1,84 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/logging.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Logging_LoggingDestination extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Logging_LoggingDestination')
+class Logging_LoggingDestination extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Logging.LoggingDestination',
+      package: const $pb.PackageName('google.api'))
     ..pPS(1, 'logs')
     ..aOS(3, 'monitoredResource')
     ..hasRequiredFields = false;
 
   Logging_LoggingDestination() : super();
-  Logging_LoggingDestination.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Logging_LoggingDestination.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Logging_LoggingDestination.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Logging_LoggingDestination.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Logging_LoggingDestination clone() =>
-      new Logging_LoggingDestination()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Logging_LoggingDestination create() =>
-      new Logging_LoggingDestination();
-  static PbList<Logging_LoggingDestination> createRepeated() =>
-      new PbList<Logging_LoggingDestination>();
-  static Logging_LoggingDestination getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLogging_LoggingDestination();
-    return _defaultInstance;
-  }
-
+      Logging_LoggingDestination()..mergeFromMessage(this);
+  Logging_LoggingDestination copyWith(
+          void Function(Logging_LoggingDestination) updates) =>
+      super.copyWith(
+          (message) => updates(message as Logging_LoggingDestination));
+  $pb.BuilderInfo get info_ => _i;
+  static Logging_LoggingDestination create() => Logging_LoggingDestination();
+  Logging_LoggingDestination createEmptyInstance() => create();
+  static $pb.PbList<Logging_LoggingDestination> createRepeated() =>
+      $pb.PbList<Logging_LoggingDestination>();
+  static Logging_LoggingDestination getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Logging_LoggingDestination _defaultInstance;
-  static void $checkItem(Logging_LoggingDestination v) {
-    if (v is! Logging_LoggingDestination)
-      checkItemFailed(v, 'Logging_LoggingDestination');
-  }
 
-  List<String> get logs => $_getList(0);
+  $core.List<$core.String> get logs => $_getList(0);
 
-  String get monitoredResource => $_getS(1, '');
-  set monitoredResource(String v) {
+  $core.String get monitoredResource => $_getS(1, '');
+  set monitoredResource($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasMonitoredResource() => $_has(1);
+  $core.bool hasMonitoredResource() => $_has(1);
   void clearMonitoredResource() => clearField(3);
 }
 
-class _ReadonlyLogging_LoggingDestination extends Logging_LoggingDestination
-    with ReadonlyMessageMixin {}
-
-class Logging extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Logging')
-    ..pp<Logging_LoggingDestination>(
-        1,
-        'producerDestinations',
-        PbFieldType.PM,
-        Logging_LoggingDestination.$checkItem,
-        Logging_LoggingDestination.create)
-    ..pp<Logging_LoggingDestination>(
-        2,
-        'consumerDestinations',
-        PbFieldType.PM,
-        Logging_LoggingDestination.$checkItem,
-        Logging_LoggingDestination.create)
-    ..hasRequiredFields = false;
+class Logging extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('Logging', package: const $pb.PackageName('google.api'))
+        ..pc<Logging_LoggingDestination>(1, 'producerDestinations',
+            $pb.PbFieldType.PM, Logging_LoggingDestination.create)
+        ..pc<Logging_LoggingDestination>(2, 'consumerDestinations',
+            $pb.PbFieldType.PM, Logging_LoggingDestination.create)
+        ..hasRequiredFields = false;
 
   Logging() : super();
-  Logging.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Logging.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Logging.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Logging.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Logging clone() => new Logging()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Logging create() => new Logging();
-  static PbList<Logging> createRepeated() => new PbList<Logging>();
-  static Logging getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLogging();
-    return _defaultInstance;
-  }
-
+  Logging clone() => Logging()..mergeFromMessage(this);
+  Logging copyWith(void Function(Logging) updates) =>
+      super.copyWith((message) => updates(message as Logging));
+  $pb.BuilderInfo get info_ => _i;
+  static Logging create() => Logging();
+  Logging createEmptyInstance() => create();
+  static $pb.PbList<Logging> createRepeated() => $pb.PbList<Logging>();
+  static Logging getDefault() => _defaultInstance ??= create()..freeze();
   static Logging _defaultInstance;
-  static void $checkItem(Logging v) {
-    if (v is! Logging) checkItemFailed(v, 'Logging');
-  }
 
-  List<Logging_LoggingDestination> get producerDestinations => $_getList(0);
+  $core.List<Logging_LoggingDestination> get producerDestinations =>
+      $_getList(0);
 
-  List<Logging_LoggingDestination> get consumerDestinations => $_getList(1);
+  $core.List<Logging_LoggingDestination> get consumerDestinations =>
+      $_getList(1);
 }
-
-class _ReadonlyLogging extends Logging with ReadonlyMessageMixin {}

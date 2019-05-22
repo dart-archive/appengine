@@ -32,7 +32,7 @@ Future withServiceAccount(
   var serviceKeyLocation = Platform.environment[SERVICE_KEY_LOCATION_ENV];
 
   if (!onBot() && (project == null || serviceKeyLocation == null)) {
-    throw new Exception(
+    throw Exception(
         'Environment variables $PROJECT_ENV and $SERVICE_KEY_LOCATION_ENV '
         'required when not running on the package bot');
   }
@@ -41,13 +41,13 @@ Future withServiceAccount(
   serviceKeyLocation = serviceKeyLocation ?? DEFAULT_KEY_LOCATION;
 
   final keyJson = await _serviceKeyJson(serviceKeyLocation);
-  final creds = new auth.ServiceAccountCredentials.fromJson(keyJson);
+  final creds = auth.ServiceAccountCredentials.fromJson(keyJson);
   return callback(project, creds);
 }
 
 Future<String> _serviceKeyJson(String serviceKeyLocation) async {
   if (!serviceKeyLocation.startsWith('gs://')) {
-    return new File(serviceKeyLocation).readAsString();
+    return File(serviceKeyLocation).readAsString();
   } else {
     ProcessResult result;
     if (onBot()) {
@@ -63,7 +63,7 @@ Future<String> _serviceKeyJson(String serviceKeyLocation) async {
       result = await Process.run(gsutil, ['cat', serviceKeyLocation]);
     }
     if (result.exitCode != 0) {
-      throw new Exception('Failed to run gsutil, ${result.stderr}');
+      throw Exception('Failed to run gsutil, ${result.stderr}');
     }
     return result.stdout;
   }

@@ -1,92 +1,83 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/resourcemanager/v2/folders.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../../iam/v1/policy.pb.dart' as $google$iam$v1;
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../protobuf/field_mask.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../iam/v1/iam_policy.pb.dart' as $3;
+import '../../../iam/v1/policy.pb.dart' as $4;
 
 import 'folders.pbenum.dart';
 
 export 'folders.pbenum.dart';
 
-class Folder extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Folder')
+class Folder extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Folder',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'parent')
     ..aOS(3, 'displayName')
     ..e<Folder_LifecycleState>(
         4,
         'lifecycleState',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Folder_LifecycleState.LIFECYCLE_STATE_UNSPECIFIED,
         Folder_LifecycleState.valueOf,
         Folder_LifecycleState.values)
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        6,
-        'updateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(6, 'updateTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   Folder() : super();
-  Folder.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Folder.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Folder.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Folder.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Folder clone() => new Folder()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Folder create() => new Folder();
-  static PbList<Folder> createRepeated() => new PbList<Folder>();
-  static Folder getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFolder();
-    return _defaultInstance;
-  }
-
+  Folder clone() => Folder()..mergeFromMessage(this);
+  Folder copyWith(void Function(Folder) updates) =>
+      super.copyWith((message) => updates(message as Folder));
+  $pb.BuilderInfo get info_ => _i;
+  static Folder create() => Folder();
+  Folder createEmptyInstance() => create();
+  static $pb.PbList<Folder> createRepeated() => $pb.PbList<Folder>();
+  static Folder getDefault() => _defaultInstance ??= create()..freeze();
   static Folder _defaultInstance;
-  static void $checkItem(Folder v) {
-    if (v is! Folder) checkItemFailed(v, 'Folder');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get parent => $_getS(1, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(1, '');
+  set parent($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasParent() => $_has(1);
+  $core.bool hasParent() => $_has(1);
   void clearParent() => clearField(2);
 
-  String get displayName => $_getS(2, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(2, '');
+  set displayName($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDisplayName() => $_has(2);
+  $core.bool hasDisplayName() => $_has(2);
   void clearDisplayName() => clearField(3);
 
   Folder_LifecycleState get lifecycleState => $_getN(3);
@@ -94,320 +85,283 @@ class Folder extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasLifecycleState() => $_has(3);
+  $core.bool hasLifecycleState() => $_has(3);
   void clearLifecycleState() => clearField(4);
 
-  $google$protobuf.Timestamp get createTime => $_getN(4);
-  set createTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get createTime => $_getN(4);
+  set createTime($0.Timestamp v) {
     setField(5, v);
   }
 
-  bool hasCreateTime() => $_has(4);
+  $core.bool hasCreateTime() => $_has(4);
   void clearCreateTime() => clearField(5);
 
-  $google$protobuf.Timestamp get updateTime => $_getN(5);
-  set updateTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get updateTime => $_getN(5);
+  set updateTime($0.Timestamp v) {
     setField(6, v);
   }
 
-  bool hasUpdateTime() => $_has(5);
+  $core.bool hasUpdateTime() => $_has(5);
   void clearUpdateTime() => clearField(6);
 }
 
-class _ReadonlyFolder extends Folder with ReadonlyMessageMixin {}
-
-class ListFoldersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFoldersRequest')
+class ListFoldersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFoldersRequest',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..aOS(1, 'parent')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOB(4, 'showDeleted')
     ..hasRequiredFields = false;
 
   ListFoldersRequest() : super();
-  ListFoldersRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFoldersRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListFoldersRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFoldersRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListFoldersRequest clone() =>
-      new ListFoldersRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListFoldersRequest create() => new ListFoldersRequest();
-  static PbList<ListFoldersRequest> createRepeated() =>
-      new PbList<ListFoldersRequest>();
-  static ListFoldersRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFoldersRequest();
-    return _defaultInstance;
-  }
-
+  ListFoldersRequest clone() => ListFoldersRequest()..mergeFromMessage(this);
+  ListFoldersRequest copyWith(void Function(ListFoldersRequest) updates) =>
+      super.copyWith((message) => updates(message as ListFoldersRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListFoldersRequest create() => ListFoldersRequest();
+  ListFoldersRequest createEmptyInstance() => create();
+  static $pb.PbList<ListFoldersRequest> createRepeated() =>
+      $pb.PbList<ListFoldersRequest>();
+  static ListFoldersRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListFoldersRequest _defaultInstance;
-  static void $checkItem(ListFoldersRequest v) {
-    if (v is! ListFoldersRequest) checkItemFailed(v, 'ListFoldersRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  bool get showDeleted => $_get(3, false);
-  set showDeleted(bool v) {
+  $core.bool get showDeleted => $_get(3, false);
+  set showDeleted($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasShowDeleted() => $_has(3);
+  $core.bool hasShowDeleted() => $_has(3);
   void clearShowDeleted() => clearField(4);
 }
 
-class _ReadonlyListFoldersRequest extends ListFoldersRequest
-    with ReadonlyMessageMixin {}
-
-class ListFoldersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFoldersResponse')
-    ..pp<Folder>(1, 'folders', PbFieldType.PM, Folder.$checkItem, Folder.create)
+class ListFoldersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFoldersResponse',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
+    ..pc<Folder>(1, 'folders', $pb.PbFieldType.PM, Folder.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListFoldersResponse() : super();
-  ListFoldersResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFoldersResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListFoldersResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFoldersResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListFoldersResponse clone() =>
-      new ListFoldersResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListFoldersResponse create() => new ListFoldersResponse();
-  static PbList<ListFoldersResponse> createRepeated() =>
-      new PbList<ListFoldersResponse>();
-  static ListFoldersResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFoldersResponse();
-    return _defaultInstance;
-  }
-
+  ListFoldersResponse clone() => ListFoldersResponse()..mergeFromMessage(this);
+  ListFoldersResponse copyWith(void Function(ListFoldersResponse) updates) =>
+      super.copyWith((message) => updates(message as ListFoldersResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListFoldersResponse create() => ListFoldersResponse();
+  ListFoldersResponse createEmptyInstance() => create();
+  static $pb.PbList<ListFoldersResponse> createRepeated() =>
+      $pb.PbList<ListFoldersResponse>();
+  static ListFoldersResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListFoldersResponse _defaultInstance;
-  static void $checkItem(ListFoldersResponse v) {
-    if (v is! ListFoldersResponse) checkItemFailed(v, 'ListFoldersResponse');
-  }
 
-  List<Folder> get folders => $_getList(0);
+  $core.List<Folder> get folders => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListFoldersResponse extends ListFoldersResponse
-    with ReadonlyMessageMixin {}
-
-class SearchFoldersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchFoldersRequest')
-    ..a<int>(1, 'pageSize', PbFieldType.O3)
+class SearchFoldersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchFoldersRequest',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
+    ..a<$core.int>(1, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(2, 'pageToken')
     ..aOS(3, 'query')
     ..hasRequiredFields = false;
 
   SearchFoldersRequest() : super();
-  SearchFoldersRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchFoldersRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchFoldersRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchFoldersRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchFoldersRequest clone() =>
-      new SearchFoldersRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchFoldersRequest create() => new SearchFoldersRequest();
-  static PbList<SearchFoldersRequest> createRepeated() =>
-      new PbList<SearchFoldersRequest>();
-  static SearchFoldersRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchFoldersRequest();
-    return _defaultInstance;
-  }
-
+      SearchFoldersRequest()..mergeFromMessage(this);
+  SearchFoldersRequest copyWith(void Function(SearchFoldersRequest) updates) =>
+      super.copyWith((message) => updates(message as SearchFoldersRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchFoldersRequest create() => SearchFoldersRequest();
+  SearchFoldersRequest createEmptyInstance() => create();
+  static $pb.PbList<SearchFoldersRequest> createRepeated() =>
+      $pb.PbList<SearchFoldersRequest>();
+  static SearchFoldersRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchFoldersRequest _defaultInstance;
-  static void $checkItem(SearchFoldersRequest v) {
-    if (v is! SearchFoldersRequest) checkItemFailed(v, 'SearchFoldersRequest');
-  }
 
-  int get pageSize => $_get(0, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(0, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasPageSize() => $_has(0);
+  $core.bool hasPageSize() => $_has(0);
   void clearPageSize() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  String get query => $_getS(2, '');
-  set query(String v) {
+  $core.String get query => $_getS(2, '');
+  set query($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasQuery() => $_has(2);
+  $core.bool hasQuery() => $_has(2);
   void clearQuery() => clearField(3);
 }
 
-class _ReadonlySearchFoldersRequest extends SearchFoldersRequest
-    with ReadonlyMessageMixin {}
-
-class SearchFoldersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchFoldersResponse')
-    ..pp<Folder>(1, 'folders', PbFieldType.PM, Folder.$checkItem, Folder.create)
+class SearchFoldersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchFoldersResponse',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
+    ..pc<Folder>(1, 'folders', $pb.PbFieldType.PM, Folder.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   SearchFoldersResponse() : super();
-  SearchFoldersResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchFoldersResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchFoldersResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchFoldersResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchFoldersResponse clone() =>
-      new SearchFoldersResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchFoldersResponse create() => new SearchFoldersResponse();
-  static PbList<SearchFoldersResponse> createRepeated() =>
-      new PbList<SearchFoldersResponse>();
-  static SearchFoldersResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchFoldersResponse();
-    return _defaultInstance;
-  }
-
+      SearchFoldersResponse()..mergeFromMessage(this);
+  SearchFoldersResponse copyWith(
+          void Function(SearchFoldersResponse) updates) =>
+      super.copyWith((message) => updates(message as SearchFoldersResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchFoldersResponse create() => SearchFoldersResponse();
+  SearchFoldersResponse createEmptyInstance() => create();
+  static $pb.PbList<SearchFoldersResponse> createRepeated() =>
+      $pb.PbList<SearchFoldersResponse>();
+  static SearchFoldersResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchFoldersResponse _defaultInstance;
-  static void $checkItem(SearchFoldersResponse v) {
-    if (v is! SearchFoldersResponse)
-      checkItemFailed(v, 'SearchFoldersResponse');
-  }
 
-  List<Folder> get folders => $_getList(0);
+  $core.List<Folder> get folders => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlySearchFoldersResponse extends SearchFoldersResponse
-    with ReadonlyMessageMixin {}
-
-class GetFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetFolderRequest')
+class GetFolderRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFolderRequest',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetFolderRequest() : super();
-  GetFolderRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetFolderRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetFolderRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetFolderRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetFolderRequest clone() => new GetFolderRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetFolderRequest create() => new GetFolderRequest();
-  static PbList<GetFolderRequest> createRepeated() =>
-      new PbList<GetFolderRequest>();
-  static GetFolderRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetFolderRequest();
-    return _defaultInstance;
-  }
-
+  GetFolderRequest clone() => GetFolderRequest()..mergeFromMessage(this);
+  GetFolderRequest copyWith(void Function(GetFolderRequest) updates) =>
+      super.copyWith((message) => updates(message as GetFolderRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetFolderRequest create() => GetFolderRequest();
+  GetFolderRequest createEmptyInstance() => create();
+  static $pb.PbList<GetFolderRequest> createRepeated() =>
+      $pb.PbList<GetFolderRequest>();
+  static GetFolderRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetFolderRequest _defaultInstance;
-  static void $checkItem(GetFolderRequest v) {
-    if (v is! GetFolderRequest) checkItemFailed(v, 'GetFolderRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetFolderRequest extends GetFolderRequest
-    with ReadonlyMessageMixin {}
-
-class CreateFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateFolderRequest')
+class CreateFolderRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateFolderRequest',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..aOS(1, 'parent')
-    ..a<Folder>(2, 'folder', PbFieldType.OM, Folder.getDefault, Folder.create)
+    ..a<Folder>(
+        2, 'folder', $pb.PbFieldType.OM, Folder.getDefault, Folder.create)
     ..hasRequiredFields = false;
 
   CreateFolderRequest() : super();
-  CreateFolderRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateFolderRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateFolderRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateFolderRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateFolderRequest clone() =>
-      new CreateFolderRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateFolderRequest create() => new CreateFolderRequest();
-  static PbList<CreateFolderRequest> createRepeated() =>
-      new PbList<CreateFolderRequest>();
-  static CreateFolderRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateFolderRequest();
-    return _defaultInstance;
-  }
-
+  CreateFolderRequest clone() => CreateFolderRequest()..mergeFromMessage(this);
+  CreateFolderRequest copyWith(void Function(CreateFolderRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateFolderRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateFolderRequest create() => CreateFolderRequest();
+  CreateFolderRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateFolderRequest> createRepeated() =>
+      $pb.PbList<CreateFolderRequest>();
+  static CreateFolderRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateFolderRequest _defaultInstance;
-  static void $checkItem(CreateFolderRequest v) {
-    if (v is! CreateFolderRequest) checkItemFailed(v, 'CreateFolderRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   Folder get folder => $_getN(1);
@@ -415,216 +369,185 @@ class CreateFolderRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasFolder() => $_has(1);
+  $core.bool hasFolder() => $_has(1);
   void clearFolder() => clearField(2);
 }
 
-class _ReadonlyCreateFolderRequest extends CreateFolderRequest
-    with ReadonlyMessageMixin {}
-
-class MoveFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MoveFolderRequest')
+class MoveFolderRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MoveFolderRequest',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'destinationParent')
     ..hasRequiredFields = false;
 
   MoveFolderRequest() : super();
-  MoveFolderRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MoveFolderRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MoveFolderRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MoveFolderRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MoveFolderRequest clone() => new MoveFolderRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MoveFolderRequest create() => new MoveFolderRequest();
-  static PbList<MoveFolderRequest> createRepeated() =>
-      new PbList<MoveFolderRequest>();
-  static MoveFolderRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMoveFolderRequest();
-    return _defaultInstance;
-  }
-
+  MoveFolderRequest clone() => MoveFolderRequest()..mergeFromMessage(this);
+  MoveFolderRequest copyWith(void Function(MoveFolderRequest) updates) =>
+      super.copyWith((message) => updates(message as MoveFolderRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static MoveFolderRequest create() => MoveFolderRequest();
+  MoveFolderRequest createEmptyInstance() => create();
+  static $pb.PbList<MoveFolderRequest> createRepeated() =>
+      $pb.PbList<MoveFolderRequest>();
+  static MoveFolderRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MoveFolderRequest _defaultInstance;
-  static void $checkItem(MoveFolderRequest v) {
-    if (v is! MoveFolderRequest) checkItemFailed(v, 'MoveFolderRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get destinationParent => $_getS(1, '');
-  set destinationParent(String v) {
+  $core.String get destinationParent => $_getS(1, '');
+  set destinationParent($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDestinationParent() => $_has(1);
+  $core.bool hasDestinationParent() => $_has(1);
   void clearDestinationParent() => clearField(2);
 }
 
-class _ReadonlyMoveFolderRequest extends MoveFolderRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateFolderRequest')
-    ..a<Folder>(1, 'folder', PbFieldType.OM, Folder.getDefault, Folder.create)
-    ..a<$google$protobuf.FieldMask>(
-        2,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+class UpdateFolderRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateFolderRequest',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
+    ..a<Folder>(
+        1, 'folder', $pb.PbFieldType.OM, Folder.getDefault, Folder.create)
+    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateFolderRequest() : super();
-  UpdateFolderRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateFolderRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateFolderRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateFolderRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateFolderRequest clone() =>
-      new UpdateFolderRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateFolderRequest create() => new UpdateFolderRequest();
-  static PbList<UpdateFolderRequest> createRepeated() =>
-      new PbList<UpdateFolderRequest>();
-  static UpdateFolderRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateFolderRequest();
-    return _defaultInstance;
-  }
-
+  UpdateFolderRequest clone() => UpdateFolderRequest()..mergeFromMessage(this);
+  UpdateFolderRequest copyWith(void Function(UpdateFolderRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateFolderRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateFolderRequest create() => UpdateFolderRequest();
+  UpdateFolderRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateFolderRequest> createRepeated() =>
+      $pb.PbList<UpdateFolderRequest>();
+  static UpdateFolderRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateFolderRequest _defaultInstance;
-  static void $checkItem(UpdateFolderRequest v) {
-    if (v is! UpdateFolderRequest) checkItemFailed(v, 'UpdateFolderRequest');
-  }
 
   Folder get folder => $_getN(0);
   set folder(Folder v) {
     setField(1, v);
   }
 
-  bool hasFolder() => $_has(0);
+  $core.bool hasFolder() => $_has(0);
   void clearFolder() => clearField(1);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(1);
-  set updateMask($google$protobuf.FieldMask v) {
+  $1.FieldMask get updateMask => $_getN(1);
+  set updateMask($1.FieldMask v) {
     setField(2, v);
   }
 
-  bool hasUpdateMask() => $_has(1);
+  $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(2);
 }
 
-class _ReadonlyUpdateFolderRequest extends UpdateFolderRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteFolderRequest')
+class DeleteFolderRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteFolderRequest',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..aOS(1, 'name')
     ..aOB(2, 'recursiveDelete')
     ..hasRequiredFields = false;
 
   DeleteFolderRequest() : super();
-  DeleteFolderRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteFolderRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteFolderRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteFolderRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteFolderRequest clone() =>
-      new DeleteFolderRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteFolderRequest create() => new DeleteFolderRequest();
-  static PbList<DeleteFolderRequest> createRepeated() =>
-      new PbList<DeleteFolderRequest>();
-  static DeleteFolderRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteFolderRequest();
-    return _defaultInstance;
-  }
-
+  DeleteFolderRequest clone() => DeleteFolderRequest()..mergeFromMessage(this);
+  DeleteFolderRequest copyWith(void Function(DeleteFolderRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteFolderRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteFolderRequest create() => DeleteFolderRequest();
+  DeleteFolderRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteFolderRequest> createRepeated() =>
+      $pb.PbList<DeleteFolderRequest>();
+  static DeleteFolderRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteFolderRequest _defaultInstance;
-  static void $checkItem(DeleteFolderRequest v) {
-    if (v is! DeleteFolderRequest) checkItemFailed(v, 'DeleteFolderRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  bool get recursiveDelete => $_get(1, false);
-  set recursiveDelete(bool v) {
+  $core.bool get recursiveDelete => $_get(1, false);
+  set recursiveDelete($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasRecursiveDelete() => $_has(1);
+  $core.bool hasRecursiveDelete() => $_has(1);
   void clearRecursiveDelete() => clearField(2);
 }
 
-class _ReadonlyDeleteFolderRequest extends DeleteFolderRequest
-    with ReadonlyMessageMixin {}
-
-class UndeleteFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteFolderRequest')
+class UndeleteFolderRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteFolderRequest',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   UndeleteFolderRequest() : super();
-  UndeleteFolderRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UndeleteFolderRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UndeleteFolderRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UndeleteFolderRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UndeleteFolderRequest clone() =>
-      new UndeleteFolderRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UndeleteFolderRequest create() => new UndeleteFolderRequest();
-  static PbList<UndeleteFolderRequest> createRepeated() =>
-      new PbList<UndeleteFolderRequest>();
-  static UndeleteFolderRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteFolderRequest();
-    return _defaultInstance;
-  }
-
+      UndeleteFolderRequest()..mergeFromMessage(this);
+  UndeleteFolderRequest copyWith(
+          void Function(UndeleteFolderRequest) updates) =>
+      super.copyWith((message) => updates(message as UndeleteFolderRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UndeleteFolderRequest create() => UndeleteFolderRequest();
+  UndeleteFolderRequest createEmptyInstance() => create();
+  static $pb.PbList<UndeleteFolderRequest> createRepeated() =>
+      $pb.PbList<UndeleteFolderRequest>();
+  static UndeleteFolderRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UndeleteFolderRequest _defaultInstance;
-  static void $checkItem(UndeleteFolderRequest v) {
-    if (v is! UndeleteFolderRequest)
-      checkItemFailed(v, 'UndeleteFolderRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyUndeleteFolderRequest extends UndeleteFolderRequest
-    with ReadonlyMessageMixin {}
-
-class FolderOperation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FolderOperation')
+class FolderOperation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FolderOperation',
+      package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..aOS(1, 'displayName')
     ..e<FolderOperation_OperationType>(
         2,
         'operationType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         FolderOperation_OperationType.OPERATION_TYPE_UNSPECIFIED,
         FolderOperation_OperationType.valueOf,
         FolderOperation_OperationType.values)
@@ -633,34 +556,30 @@ class FolderOperation extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   FolderOperation() : super();
-  FolderOperation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FolderOperation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  FolderOperation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FolderOperation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FolderOperation clone() => new FolderOperation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static FolderOperation create() => new FolderOperation();
-  static PbList<FolderOperation> createRepeated() =>
-      new PbList<FolderOperation>();
-  static FolderOperation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFolderOperation();
-    return _defaultInstance;
-  }
-
+  FolderOperation clone() => FolderOperation()..mergeFromMessage(this);
+  FolderOperation copyWith(void Function(FolderOperation) updates) =>
+      super.copyWith((message) => updates(message as FolderOperation));
+  $pb.BuilderInfo get info_ => _i;
+  static FolderOperation create() => FolderOperation();
+  FolderOperation createEmptyInstance() => create();
+  static $pb.PbList<FolderOperation> createRepeated() =>
+      $pb.PbList<FolderOperation>();
+  static FolderOperation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static FolderOperation _defaultInstance;
-  static void $checkItem(FolderOperation v) {
-    if (v is! FolderOperation) checkItemFailed(v, 'FolderOperation');
-  }
 
-  String get displayName => $_getS(0, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(0, '');
+  set displayName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDisplayName() => $_has(0);
+  $core.bool hasDisplayName() => $_has(0);
   void clearDisplayName() => clearField(1);
 
   FolderOperation_OperationType get operationType => $_getN(1);
@@ -668,104 +587,104 @@ class FolderOperation extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasOperationType() => $_has(1);
+  $core.bool hasOperationType() => $_has(1);
   void clearOperationType() => clearField(2);
 
-  String get sourceParent => $_getS(2, '');
-  set sourceParent(String v) {
+  $core.String get sourceParent => $_getS(2, '');
+  set sourceParent($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasSourceParent() => $_has(2);
+  $core.bool hasSourceParent() => $_has(2);
   void clearSourceParent() => clearField(3);
 
-  String get destinationParent => $_getS(3, '');
-  set destinationParent(String v) {
+  $core.String get destinationParent => $_getS(3, '');
+  set destinationParent($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDestinationParent() => $_has(3);
+  $core.bool hasDestinationParent() => $_has(3);
   void clearDestinationParent() => clearField(4);
 }
 
-class _ReadonlyFolderOperation extends FolderOperation
-    with ReadonlyMessageMixin {}
-
 class FoldersApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   FoldersApi(this._client);
 
-  Future<ListFoldersResponse> listFolders(
-      ClientContext ctx, ListFoldersRequest request) {
-    var emptyResponse = new ListFoldersResponse();
+  $async.Future<ListFoldersResponse> listFolders(
+      $pb.ClientContext ctx, ListFoldersRequest request) {
+    var emptyResponse = ListFoldersResponse();
     return _client.invoke<ListFoldersResponse>(
         ctx, 'Folders', 'ListFolders', request, emptyResponse);
   }
 
-  Future<SearchFoldersResponse> searchFolders(
-      ClientContext ctx, SearchFoldersRequest request) {
-    var emptyResponse = new SearchFoldersResponse();
+  $async.Future<SearchFoldersResponse> searchFolders(
+      $pb.ClientContext ctx, SearchFoldersRequest request) {
+    var emptyResponse = SearchFoldersResponse();
     return _client.invoke<SearchFoldersResponse>(
         ctx, 'Folders', 'SearchFolders', request, emptyResponse);
   }
 
-  Future<Folder> getFolder(ClientContext ctx, GetFolderRequest request) {
-    var emptyResponse = new Folder();
+  $async.Future<Folder> getFolder(
+      $pb.ClientContext ctx, GetFolderRequest request) {
+    var emptyResponse = Folder();
     return _client.invoke<Folder>(
         ctx, 'Folders', 'GetFolder', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> createFolder(
-      ClientContext ctx, CreateFolderRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$2.Operation> createFolder(
+      $pb.ClientContext ctx, CreateFolderRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(
         ctx, 'Folders', 'CreateFolder', request, emptyResponse);
   }
 
-  Future<Folder> updateFolder(ClientContext ctx, UpdateFolderRequest request) {
-    var emptyResponse = new Folder();
+  $async.Future<Folder> updateFolder(
+      $pb.ClientContext ctx, UpdateFolderRequest request) {
+    var emptyResponse = Folder();
     return _client.invoke<Folder>(
         ctx, 'Folders', 'UpdateFolder', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> moveFolder(
-      ClientContext ctx, MoveFolderRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$2.Operation> moveFolder(
+      $pb.ClientContext ctx, MoveFolderRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(
         ctx, 'Folders', 'MoveFolder', request, emptyResponse);
   }
 
-  Future<Folder> deleteFolder(ClientContext ctx, DeleteFolderRequest request) {
-    var emptyResponse = new Folder();
+  $async.Future<Folder> deleteFolder(
+      $pb.ClientContext ctx, DeleteFolderRequest request) {
+    var emptyResponse = Folder();
     return _client.invoke<Folder>(
         ctx, 'Folders', 'DeleteFolder', request, emptyResponse);
   }
 
-  Future<Folder> undeleteFolder(
-      ClientContext ctx, UndeleteFolderRequest request) {
-    var emptyResponse = new Folder();
+  $async.Future<Folder> undeleteFolder(
+      $pb.ClientContext ctx, UndeleteFolderRequest request) {
+    var emptyResponse = Folder();
     return _client.invoke<Folder>(
         ctx, 'Folders', 'UndeleteFolder', request, emptyResponse);
   }
 
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
+  $async.Future<$4.Policy> getIamPolicy(
+      $pb.ClientContext ctx, $3.GetIamPolicyRequest request) {
+    var emptyResponse = $4.Policy();
+    return _client.invoke<$4.Policy>(
         ctx, 'Folders', 'GetIamPolicy', request, emptyResponse);
   }
 
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
+  $async.Future<$4.Policy> setIamPolicy(
+      $pb.ClientContext ctx, $3.SetIamPolicyRequest request) {
+    var emptyResponse = $4.Policy();
+    return _client.invoke<$4.Policy>(
         ctx, 'Folders', 'SetIamPolicy', request, emptyResponse);
   }
 
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
-    return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
+  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
+      $pb.ClientContext ctx, $3.TestIamPermissionsRequest request) {
+    var emptyResponse = $3.TestIamPermissionsResponse();
+    return _client.invoke<$3.TestIamPermissionsResponse>(
         ctx, 'Folders', 'TestIamPermissions', request, emptyResponse);
   }
 }

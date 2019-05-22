@@ -1,60 +1,62 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/pubsub/v1beta2/pubsub.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'pubsub.pb.dart';
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../protobuf/empty.pb.dart' as $0;
 import 'pubsub.pbjson.dart';
 
 export 'pubsub.pb.dart';
 
-abstract class SubscriberServiceBase extends GeneratedService {
-  Future<Subscription> createSubscription(
-      ServerContext ctx, Subscription request);
-  Future<Subscription> getSubscription(
-      ServerContext ctx, GetSubscriptionRequest request);
-  Future<ListSubscriptionsResponse> listSubscriptions(
-      ServerContext ctx, ListSubscriptionsRequest request);
-  Future<$google$protobuf.Empty> deleteSubscription(
-      ServerContext ctx, DeleteSubscriptionRequest request);
-  Future<$google$protobuf.Empty> modifyAckDeadline(
-      ServerContext ctx, ModifyAckDeadlineRequest request);
-  Future<$google$protobuf.Empty> acknowledge(
-      ServerContext ctx, AcknowledgeRequest request);
-  Future<PullResponse> pull(ServerContext ctx, PullRequest request);
-  Future<$google$protobuf.Empty> modifyPushConfig(
-      ServerContext ctx, ModifyPushConfigRequest request);
+abstract class SubscriberServiceBase extends $pb.GeneratedService {
+  $async.Future<Subscription> createSubscription(
+      $pb.ServerContext ctx, Subscription request);
+  $async.Future<Subscription> getSubscription(
+      $pb.ServerContext ctx, GetSubscriptionRequest request);
+  $async.Future<ListSubscriptionsResponse> listSubscriptions(
+      $pb.ServerContext ctx, ListSubscriptionsRequest request);
+  $async.Future<$0.Empty> deleteSubscription(
+      $pb.ServerContext ctx, DeleteSubscriptionRequest request);
+  $async.Future<$0.Empty> modifyAckDeadline(
+      $pb.ServerContext ctx, ModifyAckDeadlineRequest request);
+  $async.Future<$0.Empty> acknowledge(
+      $pb.ServerContext ctx, AcknowledgeRequest request);
+  $async.Future<PullResponse> pull($pb.ServerContext ctx, PullRequest request);
+  $async.Future<$0.Empty> modifyPushConfig(
+      $pb.ServerContext ctx, ModifyPushConfigRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'CreateSubscription':
-        return new Subscription();
+        return Subscription();
       case 'GetSubscription':
-        return new GetSubscriptionRequest();
+        return GetSubscriptionRequest();
       case 'ListSubscriptions':
-        return new ListSubscriptionsRequest();
+        return ListSubscriptionsRequest();
       case 'DeleteSubscription':
-        return new DeleteSubscriptionRequest();
+        return DeleteSubscriptionRequest();
       case 'ModifyAckDeadline':
-        return new ModifyAckDeadlineRequest();
+        return ModifyAckDeadlineRequest();
       case 'Acknowledge':
-        return new AcknowledgeRequest();
+        return AcknowledgeRequest();
       case 'Pull':
-        return new PullRequest();
+        return PullRequest();
       case 'ModifyPushConfig':
-        return new ModifyPushConfigRequest();
+        return ModifyPushConfigRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'CreateSubscription':
         return this.createSubscription(ctx, request);
@@ -73,46 +75,49 @@ abstract class SubscriberServiceBase extends GeneratedService {
       case 'ModifyPushConfig':
         return this.modifyPushConfig(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Subscriber$json;
-  Map<String, Map<String, dynamic>> get $messageJson => Subscriber$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      SubscriberServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => SubscriberServiceBase$messageJson;
 }
 
-abstract class PublisherServiceBase extends GeneratedService {
-  Future<Topic> createTopic(ServerContext ctx, Topic request);
-  Future<PublishResponse> publish(ServerContext ctx, PublishRequest request);
-  Future<Topic> getTopic(ServerContext ctx, GetTopicRequest request);
-  Future<ListTopicsResponse> listTopics(
-      ServerContext ctx, ListTopicsRequest request);
-  Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(
-      ServerContext ctx, ListTopicSubscriptionsRequest request);
-  Future<$google$protobuf.Empty> deleteTopic(
-      ServerContext ctx, DeleteTopicRequest request);
+abstract class PublisherServiceBase extends $pb.GeneratedService {
+  $async.Future<Topic> createTopic($pb.ServerContext ctx, Topic request);
+  $async.Future<PublishResponse> publish(
+      $pb.ServerContext ctx, PublishRequest request);
+  $async.Future<Topic> getTopic($pb.ServerContext ctx, GetTopicRequest request);
+  $async.Future<ListTopicsResponse> listTopics(
+      $pb.ServerContext ctx, ListTopicsRequest request);
+  $async.Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(
+      $pb.ServerContext ctx, ListTopicSubscriptionsRequest request);
+  $async.Future<$0.Empty> deleteTopic(
+      $pb.ServerContext ctx, DeleteTopicRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'CreateTopic':
-        return new Topic();
+        return Topic();
       case 'Publish':
-        return new PublishRequest();
+        return PublishRequest();
       case 'GetTopic':
-        return new GetTopicRequest();
+        return GetTopicRequest();
       case 'ListTopics':
-        return new ListTopicsRequest();
+        return ListTopicsRequest();
       case 'ListTopicSubscriptions':
-        return new ListTopicSubscriptionsRequest();
+        return ListTopicSubscriptionsRequest();
       case 'DeleteTopic':
-        return new DeleteTopicRequest();
+        return DeleteTopicRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'CreateTopic':
         return this.createTopic(ctx, request);
@@ -127,10 +132,11 @@ abstract class PublisherServiceBase extends GeneratedService {
       case 'DeleteTopic':
         return this.deleteTopic(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Publisher$json;
-  Map<String, Map<String, dynamic>> get $messageJson => Publisher$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => PublisherServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => PublisherServiceBase$messageJson;
 }

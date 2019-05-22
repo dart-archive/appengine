@@ -17,12 +17,6 @@ language_settings:
   nodejs:
     package_name: dataproc.v1beta2
     domain_layer_location: google-cloud
-# The configuration for the license header to put on generated files.
-license_header:
-  # The file containing the copyright line(s).
-  copyright_file: copyright-google.txt
-  # The file containing the raw license header without any copyright line(s).
-  license_file: license-header-apache-2.0.txt
 # A list of API interface configurations.
 interfaces:
   # The fully qualified name of the API interface.
@@ -48,10 +42,12 @@ interfaces:
   retry_codes_def:
   - name: idempotent
     retry_codes:
-    - UNAVAILABLE
+    - INTERNAL
     - DEADLINE_EXCEEDED
+    - UNAVAILABLE
   - name: non_idempotent
-    retry_codes: []
+    retry_codes:
+    - UNAVAILABLE
   # Definition for retry/backoff parameters.
   retry_params_def:
   - name: default
@@ -77,10 +73,6 @@ interfaces:
   #
   #   required_fields - Fields that are always required for a request to be
   #   valid.
-  #
-  #   request_object_method - Turns on or off the generation of a method whose
-  #   sole parameter is a request object. Not all languages will generate this
-  #   method.
   #
   #   resource_name_treatment - An enum that specifies how to treat the resource
   #   name formats defined in the field_name_patterns and
@@ -132,39 +124,45 @@ interfaces:
     - project_id
     - region
     - cluster
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 30000
     long_running:
       return_type: google.cloud.dataproc.v1beta2.Cluster
       metadata_type: google.cloud.dataproc.v1beta2.ClusterOperationMetadata
-      implements_delete: true
+      implements_delete: false
       implements_cancel: false
       initial_poll_delay_millis: 1000
       poll_delay_multiplier: 2
       max_poll_delay_millis: 10000
-      total_poll_timeout_millis: 300000
+      total_poll_timeout_millis: 900000
   - name: UpdateCluster
+    flattening:
+      groups:
+      - parameters:
+        - project_id
+        - region
+        - cluster_name
+        - cluster
+        - update_mask
     required_fields:
     - project_id
     - region
     - cluster_name
     - cluster
     - update_mask
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 30000
     long_running:
       return_type: google.cloud.dataproc.v1beta2.Cluster
       metadata_type: google.cloud.dataproc.v1beta2.ClusterOperationMetadata
-      implements_delete: true
+      implements_delete: false
       implements_cancel: false
       initial_poll_delay_millis: 1000
       poll_delay_multiplier: 2
       max_poll_delay_millis: 10000
-      total_poll_timeout_millis: 300000
+      total_poll_timeout_millis: 900000
   - name: DeleteCluster
     flattening:
       groups:
@@ -176,19 +174,18 @@ interfaces:
     - project_id
     - region
     - cluster_name
-    request_object_method: true
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
-    timeout_millis: 60000
+    timeout_millis: 30000
     long_running:
       return_type: google.protobuf.Empty
       metadata_type: google.cloud.dataproc.v1beta2.ClusterOperationMetadata
-      implements_delete: true
+      implements_delete: false
       implements_cancel: false
       initial_poll_delay_millis: 1000
       poll_delay_multiplier: 2
       max_poll_delay_millis: 10000
-      total_poll_timeout_millis: 300000
+      total_poll_timeout_millis: 900000
   - name: GetCluster
     flattening:
       groups:
@@ -200,7 +197,6 @@ interfaces:
     - project_id
     - region
     - cluster_name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -210,10 +206,13 @@ interfaces:
       - parameters:
         - project_id
         - region
+      - parameters:
+        - project_id
+        - region
+        - filter
     required_fields:
     - project_id
     - region
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -235,14 +234,13 @@ interfaces:
     - project_id
     - region
     - cluster_name
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
     long_running:
       return_type: google.protobuf.Empty
       metadata_type: google.cloud.dataproc.v1beta2.DiagnoseClusterResults
-      implements_delete: true
+      implements_delete: false
       implements_cancel: false
       initial_poll_delay_millis: 1000
       poll_delay_multiplier: 2
@@ -265,10 +263,12 @@ interfaces:
   retry_codes_def:
   - name: idempotent
     retry_codes:
-    - UNAVAILABLE
     - DEADLINE_EXCEEDED
+    - INTERNAL
+    - UNAVAILABLE
   - name: non_idempotent
-    retry_codes: []
+    retry_codes:
+    - UNAVAILABLE
   # Definition for retry/backoff parameters.
   retry_params_def:
   - name: default
@@ -294,10 +294,6 @@ interfaces:
   #
   #   required_fields - Fields that are always required for a request to be
   #   valid.
-  #
-  #   request_object_method - Turns on or off the generation of a method whose
-  #   sole parameter is a request object. Not all languages will generate this
-  #   method.
   #
   #   resource_name_treatment - An enum that specifies how to treat the resource
   #   name formats defined in the field_name_patterns and
@@ -349,7 +345,6 @@ interfaces:
     - project_id
     - region
     - job
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 30000
@@ -364,20 +359,22 @@ interfaces:
     - project_id
     - region
     - job_id
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
-    timeout_millis: 10000
+    timeout_millis: 30000
   - name: ListJobs
     flattening:
       groups:
       - parameters:
         - project_id
         - region
+      - parameters:
+        - project_id
+        - region
+        - filter
     required_fields:
     - project_id
     - region
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -395,7 +392,6 @@ interfaces:
     - job_id
     - job
     - update_mask
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 30000
@@ -410,8 +406,7 @@ interfaces:
     - project_id
     - region
     - job_id
-    request_object_method: true
-    retry_codes_name: non_idempotent
+    retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 30000
   - name: DeleteJob
@@ -425,8 +420,7 @@ interfaces:
     - project_id
     - region
     - job_id
-    request_object_method: true
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 30000
   # The fully qualified name of the API interface.
@@ -450,10 +444,12 @@ interfaces:
   retry_codes_def:
   - name: idempotent
     retry_codes:
-    - UNAVAILABLE
     - DEADLINE_EXCEEDED
+    - INTERNAL
+    - UNAVAILABLE
   - name: non_idempotent
-    retry_codes: []
+    retry_codes:
+    - UNAVAILABLE
   # Definition for retry/backoff parameters.
   retry_params_def:
   - name: default
@@ -479,10 +475,6 @@ interfaces:
   #
   #   required_fields - Fields that are always required for a request to be
   #   valid.
-  #
-  #   request_object_method - Turns on or off the generation of a method whose
-  #   sole parameter is a request object. Not all languages will generate this
-  #   method.
   #
   #   resource_name_treatment - An enum that specifies how to treat the resource
   #   name formats defined in the field_name_patterns and
@@ -532,21 +524,20 @@ interfaces:
     required_fields:
     - parent
     - template
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     resource_name_treatment: STATIC_TYPES
     field_name_patterns:
       parent: region
-    timeout_millis: 60000
+    timeout_millis: 30000
   - name: GetWorkflowTemplate
+    # params.
     flattening:
       groups:
       - parameters:
         - name
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     resource_name_treatment: STATIC_TYPES
@@ -558,10 +549,10 @@ interfaces:
       groups:
       - parameters:
         - name
-        - instance_id
+      - parameters:
+        - parameters
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     resource_name_treatment: STATIC_TYPES
@@ -571,8 +562,31 @@ interfaces:
     long_running:
       return_type: google.protobuf.Empty
       metadata_type: google.cloud.dataproc.v1beta2.WorkflowMetadata
-      implements_delete: true
-      implements_cancel: true
+      implements_delete: false
+      implements_cancel: false
+      initial_poll_delay_millis: 1000
+      poll_delay_multiplier: 2
+      max_poll_delay_millis: 10000
+      total_poll_timeout_millis: 43200000
+  - name: InstantiateInlineWorkflowTemplate
+    flattening:
+      groups:
+      - parameters:
+        - parent
+        - template
+    required_fields:
+    - parent
+    - template
+    retry_codes_name: non_idempotent
+    retry_params_name: default
+    field_name_patterns:
+      parent: region
+    timeout_millis: 60000
+    long_running:
+      return_type: google.protobuf.Empty
+      metadata_type: google.cloud.dataproc.v1beta2.WorkflowMetadata
+      implements_delete: false
+      implements_cancel: false
       initial_poll_delay_millis: 1000
       poll_delay_multiplier: 2
       max_poll_delay_millis: 10000
@@ -584,9 +598,10 @@ interfaces:
         - template
     required_fields:
     - template
-    request_object_method: false
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
+    field_name_patterns:
+      template.name: workflow_template
     timeout_millis: 60000
   - name: ListWorkflowTemplates
     flattening:
@@ -595,7 +610,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -616,8 +630,7 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     resource_name_treatment: STATIC_TYPES
     field_name_patterns:

@@ -1,0 +1,7 @@
+///
+//  Generated code. Do not modify.
+//  source: google/ads/googleads/v1/enums/change_status_operation.proto
+///
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+
+export 'change_status_operation.pb.dart';

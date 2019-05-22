@@ -1,56 +1,53 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/servicecontrol/v1/quota_controller.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class QuotaOperation_QuotaMode extends ProtobufEnum {
+class QuotaOperation_QuotaMode extends $pb.ProtobufEnum {
   static const QuotaOperation_QuotaMode UNSPECIFIED =
-      const QuotaOperation_QuotaMode._(0, 'UNSPECIFIED');
+      QuotaOperation_QuotaMode._(0, 'UNSPECIFIED');
   static const QuotaOperation_QuotaMode NORMAL =
-      const QuotaOperation_QuotaMode._(1, 'NORMAL');
+      QuotaOperation_QuotaMode._(1, 'NORMAL');
   static const QuotaOperation_QuotaMode BEST_EFFORT =
-      const QuotaOperation_QuotaMode._(2, 'BEST_EFFORT');
+      QuotaOperation_QuotaMode._(2, 'BEST_EFFORT');
   static const QuotaOperation_QuotaMode CHECK_ONLY =
-      const QuotaOperation_QuotaMode._(3, 'CHECK_ONLY');
+      QuotaOperation_QuotaMode._(3, 'CHECK_ONLY');
 
-  static const List<QuotaOperation_QuotaMode> values =
-      const <QuotaOperation_QuotaMode>[
+  static const $core.List<QuotaOperation_QuotaMode> values =
+      <QuotaOperation_QuotaMode>[
     UNSPECIFIED,
     NORMAL,
     BEST_EFFORT,
     CHECK_ONLY,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static QuotaOperation_QuotaMode valueOf(int value) =>
-      _byValue[value] as QuotaOperation_QuotaMode;
-  static void $checkItem(QuotaOperation_QuotaMode v) {
-    if (v is! QuotaOperation_QuotaMode)
-      checkItemFailed(v, 'QuotaOperation_QuotaMode');
-  }
+  static final $core.Map<$core.int, QuotaOperation_QuotaMode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static QuotaOperation_QuotaMode valueOf($core.int value) => _byValue[value];
 
-  const QuotaOperation_QuotaMode._(int v, String n) : super(v, n);
+  const QuotaOperation_QuotaMode._($core.int v, $core.String n) : super(v, n);
 }
 
-class QuotaError_Code extends ProtobufEnum {
+class QuotaError_Code extends $pb.ProtobufEnum {
   static const QuotaError_Code UNSPECIFIED =
-      const QuotaError_Code._(0, 'UNSPECIFIED');
+      QuotaError_Code._(0, 'UNSPECIFIED');
   static const QuotaError_Code RESOURCE_EXHAUSTED =
-      const QuotaError_Code._(8, 'RESOURCE_EXHAUSTED');
+      QuotaError_Code._(8, 'RESOURCE_EXHAUSTED');
   static const QuotaError_Code BILLING_NOT_ACTIVE =
-      const QuotaError_Code._(107, 'BILLING_NOT_ACTIVE');
+      QuotaError_Code._(107, 'BILLING_NOT_ACTIVE');
   static const QuotaError_Code PROJECT_DELETED =
-      const QuotaError_Code._(108, 'PROJECT_DELETED');
+      QuotaError_Code._(108, 'PROJECT_DELETED');
   static const QuotaError_Code API_KEY_INVALID =
-      const QuotaError_Code._(105, 'API_KEY_INVALID');
+      QuotaError_Code._(105, 'API_KEY_INVALID');
   static const QuotaError_Code API_KEY_EXPIRED =
-      const QuotaError_Code._(112, 'API_KEY_EXPIRED');
+      QuotaError_Code._(112, 'API_KEY_EXPIRED');
 
-  static const List<QuotaError_Code> values = const <QuotaError_Code>[
+  static const $core.List<QuotaError_Code> values = <QuotaError_Code>[
     UNSPECIFIED,
     RESOURCE_EXHAUSTED,
     BILLING_NOT_ACTIVE,
@@ -59,12 +56,9 @@ class QuotaError_Code extends ProtobufEnum {
     API_KEY_EXPIRED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static QuotaError_Code valueOf(int value) =>
-      _byValue[value] as QuotaError_Code;
-  static void $checkItem(QuotaError_Code v) {
-    if (v is! QuotaError_Code) checkItemFailed(v, 'QuotaError_Code');
-  }
+  static final $core.Map<$core.int, QuotaError_Code> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static QuotaError_Code valueOf($core.int value) => _byValue[value];
 
-  const QuotaError_Code._(int v, String n) : super(v, n);
+  const QuotaError_Code._($core.int v, $core.String n) : super(v, n);
 }

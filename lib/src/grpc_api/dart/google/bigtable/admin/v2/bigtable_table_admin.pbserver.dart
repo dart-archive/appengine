@@ -1,80 +1,85 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/v2/bigtable_table_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'bigtable_table_admin.pb.dart';
-import 'table.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'table.pb.dart' as $0;
+import '../../../longrunning/operations.pb.dart' as $3;
+import '../../../protobuf/empty.pb.dart' as $4;
 import 'bigtable_table_admin.pbjson.dart';
 
 export 'bigtable_table_admin.pb.dart';
 
-abstract class BigtableTableAdminServiceBase extends GeneratedService {
-  Future<Table> createTable(ServerContext ctx, CreateTableRequest request);
-  Future<$google$longrunning.Operation> createTableFromSnapshot(
-      ServerContext ctx, CreateTableFromSnapshotRequest request);
-  Future<ListTablesResponse> listTables(
-      ServerContext ctx, ListTablesRequest request);
-  Future<Table> getTable(ServerContext ctx, GetTableRequest request);
-  Future<$google$protobuf.Empty> deleteTable(
-      ServerContext ctx, DeleteTableRequest request);
-  Future<Table> modifyColumnFamilies(
-      ServerContext ctx, ModifyColumnFamiliesRequest request);
-  Future<$google$protobuf.Empty> dropRowRange(
-      ServerContext ctx, DropRowRangeRequest request);
-  Future<GenerateConsistencyTokenResponse> generateConsistencyToken(
-      ServerContext ctx, GenerateConsistencyTokenRequest request);
-  Future<CheckConsistencyResponse> checkConsistency(
-      ServerContext ctx, CheckConsistencyRequest request);
-  Future<$google$longrunning.Operation> snapshotTable(
-      ServerContext ctx, SnapshotTableRequest request);
-  Future<Snapshot> getSnapshot(ServerContext ctx, GetSnapshotRequest request);
-  Future<ListSnapshotsResponse> listSnapshots(
-      ServerContext ctx, ListSnapshotsRequest request);
-  Future<$google$protobuf.Empty> deleteSnapshot(
-      ServerContext ctx, DeleteSnapshotRequest request);
+abstract class BigtableTableAdminServiceBase extends $pb.GeneratedService {
+  $async.Future<$0.Table> createTable(
+      $pb.ServerContext ctx, CreateTableRequest request);
+  $async.Future<$3.Operation> createTableFromSnapshot(
+      $pb.ServerContext ctx, CreateTableFromSnapshotRequest request);
+  $async.Future<ListTablesResponse> listTables(
+      $pb.ServerContext ctx, ListTablesRequest request);
+  $async.Future<$0.Table> getTable(
+      $pb.ServerContext ctx, GetTableRequest request);
+  $async.Future<$4.Empty> deleteTable(
+      $pb.ServerContext ctx, DeleteTableRequest request);
+  $async.Future<$0.Table> modifyColumnFamilies(
+      $pb.ServerContext ctx, ModifyColumnFamiliesRequest request);
+  $async.Future<$4.Empty> dropRowRange(
+      $pb.ServerContext ctx, DropRowRangeRequest request);
+  $async.Future<GenerateConsistencyTokenResponse> generateConsistencyToken(
+      $pb.ServerContext ctx, GenerateConsistencyTokenRequest request);
+  $async.Future<CheckConsistencyResponse> checkConsistency(
+      $pb.ServerContext ctx, CheckConsistencyRequest request);
+  $async.Future<$3.Operation> snapshotTable(
+      $pb.ServerContext ctx, SnapshotTableRequest request);
+  $async.Future<$0.Snapshot> getSnapshot(
+      $pb.ServerContext ctx, GetSnapshotRequest request);
+  $async.Future<ListSnapshotsResponse> listSnapshots(
+      $pb.ServerContext ctx, ListSnapshotsRequest request);
+  $async.Future<$4.Empty> deleteSnapshot(
+      $pb.ServerContext ctx, DeleteSnapshotRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'CreateTable':
-        return new CreateTableRequest();
+        return CreateTableRequest();
       case 'CreateTableFromSnapshot':
-        return new CreateTableFromSnapshotRequest();
+        return CreateTableFromSnapshotRequest();
       case 'ListTables':
-        return new ListTablesRequest();
+        return ListTablesRequest();
       case 'GetTable':
-        return new GetTableRequest();
+        return GetTableRequest();
       case 'DeleteTable':
-        return new DeleteTableRequest();
+        return DeleteTableRequest();
       case 'ModifyColumnFamilies':
-        return new ModifyColumnFamiliesRequest();
+        return ModifyColumnFamiliesRequest();
       case 'DropRowRange':
-        return new DropRowRangeRequest();
+        return DropRowRangeRequest();
       case 'GenerateConsistencyToken':
-        return new GenerateConsistencyTokenRequest();
+        return GenerateConsistencyTokenRequest();
       case 'CheckConsistency':
-        return new CheckConsistencyRequest();
+        return CheckConsistencyRequest();
       case 'SnapshotTable':
-        return new SnapshotTableRequest();
+        return SnapshotTableRequest();
       case 'GetSnapshot':
-        return new GetSnapshotRequest();
+        return GetSnapshotRequest();
       case 'ListSnapshots':
-        return new ListSnapshotsRequest();
+        return ListSnapshotsRequest();
       case 'DeleteSnapshot':
-        return new DeleteSnapshotRequest();
+        return DeleteSnapshotRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'CreateTable':
         return this.createTable(ctx, request);
@@ -103,11 +108,12 @@ abstract class BigtableTableAdminServiceBase extends GeneratedService {
       case 'DeleteSnapshot':
         return this.deleteSnapshot(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => BigtableTableAdmin$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      BigtableTableAdmin$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      BigtableTableAdminServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => BigtableTableAdminServiceBase$messageJson;
 }

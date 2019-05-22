@@ -8,8 +8,6 @@ language_settings:
   go:
     package_name: cloud.google.com/go/longrunning/autogen
     domain_layer_location: cloud.google.com/go/longrunning
-    license_header_override:
-      license_file: license-header-apache-2.0.txt
   csharp:
     package_name: Google.LongRunning
   ruby:
@@ -18,9 +16,6 @@ language_settings:
     package_name: Google\ApiCore\LongRunning
   nodejs:
     package_name: longrunning
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-bsd-3-clause.txt
 interfaces:
 - name: google.longrunning.Operations
   required_constructor_params:
@@ -50,7 +45,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -63,7 +57,6 @@ interfaces:
     required_fields:
     - name
     - filter
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -81,7 +74,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -92,7 +84,17 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
+  - name: WaitOperation
+    surface_treatments:
+    - include_languages:
+      - go
+      - java
+      - csharp
+      - ruby
+      - nodejs
+      - python
+      - php
+      visibility: DISABLED

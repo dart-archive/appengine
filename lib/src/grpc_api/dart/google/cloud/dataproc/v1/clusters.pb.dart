@@ -1,125 +1,82 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dataproc/v1/clusters.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $google$protobuf;
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../protobuf/duration.pb.dart' as $0;
+import '../../../protobuf/timestamp.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $3;
 
 import 'clusters.pbenum.dart';
 
 export 'clusters.pbenum.dart';
 
-class Cluster_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cluster_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Cluster_LabelsEntry() : super();
-  Cluster_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Cluster_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Cluster_LabelsEntry clone() =>
-      new Cluster_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Cluster_LabelsEntry create() => new Cluster_LabelsEntry();
-  static PbList<Cluster_LabelsEntry> createRepeated() =>
-      new PbList<Cluster_LabelsEntry>();
-  static Cluster_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCluster_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static Cluster_LabelsEntry _defaultInstance;
-  static void $checkItem(Cluster_LabelsEntry v) {
-    if (v is! Cluster_LabelsEntry) checkItemFailed(v, 'Cluster_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyCluster_LabelsEntry extends Cluster_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class Cluster extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cluster')
+class Cluster extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cluster',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'clusterName')
-    ..a<ClusterConfig>(3, 'config', PbFieldType.OM, ClusterConfig.getDefault,
-        ClusterConfig.create)
-    ..a<ClusterStatus>(4, 'status', PbFieldType.OM, ClusterStatus.getDefault,
-        ClusterStatus.create)
+    ..a<ClusterConfig>(3, 'config', $pb.PbFieldType.OM,
+        ClusterConfig.getDefault, ClusterConfig.create)
+    ..a<ClusterStatus>(4, 'status', $pb.PbFieldType.OM,
+        ClusterStatus.getDefault, ClusterStatus.create)
     ..aOS(6, 'clusterUuid')
-    ..pp<ClusterStatus>(7, 'statusHistory', PbFieldType.PM,
-        ClusterStatus.$checkItem, ClusterStatus.create)
-    ..pp<Cluster_LabelsEntry>(8, 'labels', PbFieldType.PM,
-        Cluster_LabelsEntry.$checkItem, Cluster_LabelsEntry.create)
-    ..a<ClusterMetrics>(9, 'metrics', PbFieldType.OM, ClusterMetrics.getDefault,
-        ClusterMetrics.create)
+    ..pc<ClusterStatus>(
+        7, 'statusHistory', $pb.PbFieldType.PM, ClusterStatus.create)
+    ..m<$core.String, $core.String>(
+        8,
+        'labels',
+        'Cluster.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..a<ClusterMetrics>(9, 'metrics', $pb.PbFieldType.OM,
+        ClusterMetrics.getDefault, ClusterMetrics.create)
     ..hasRequiredFields = false;
 
   Cluster() : super();
-  Cluster.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Cluster.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Cluster.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Cluster.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Cluster clone() => new Cluster()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Cluster create() => new Cluster();
-  static PbList<Cluster> createRepeated() => new PbList<Cluster>();
-  static Cluster getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCluster();
-    return _defaultInstance;
-  }
-
+  Cluster clone() => Cluster()..mergeFromMessage(this);
+  Cluster copyWith(void Function(Cluster) updates) =>
+      super.copyWith((message) => updates(message as Cluster));
+  $pb.BuilderInfo get info_ => _i;
+  static Cluster create() => Cluster();
+  Cluster createEmptyInstance() => create();
+  static $pb.PbList<Cluster> createRepeated() => $pb.PbList<Cluster>();
+  static Cluster getDefault() => _defaultInstance ??= create()..freeze();
   static Cluster _defaultInstance;
-  static void $checkItem(Cluster v) {
-    if (v is! Cluster) checkItemFailed(v, 'Cluster');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get clusterName => $_getS(1, '');
-  set clusterName(String v) {
+  $core.String get clusterName => $_getS(1, '');
+  set clusterName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasClusterName() => $_has(1);
+  $core.bool hasClusterName() => $_has(1);
   void clearClusterName() => clearField(2);
 
   ClusterConfig get config => $_getN(2);
@@ -127,7 +84,7 @@ class Cluster extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasConfig() => $_has(2);
+  $core.bool hasConfig() => $_has(2);
   void clearConfig() => clearField(3);
 
   ClusterStatus get status => $_getN(3);
@@ -135,77 +92,74 @@ class Cluster extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasStatus() => $_has(3);
+  $core.bool hasStatus() => $_has(3);
   void clearStatus() => clearField(4);
 
-  String get clusterUuid => $_getS(4, '');
-  set clusterUuid(String v) {
+  $core.String get clusterUuid => $_getS(4, '');
+  set clusterUuid($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasClusterUuid() => $_has(4);
+  $core.bool hasClusterUuid() => $_has(4);
   void clearClusterUuid() => clearField(6);
 
-  List<ClusterStatus> get statusHistory => $_getList(5);
+  $core.List<ClusterStatus> get statusHistory => $_getList(5);
 
-  List<Cluster_LabelsEntry> get labels => $_getList(6);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(6);
 
   ClusterMetrics get metrics => $_getN(7);
   set metrics(ClusterMetrics v) {
     setField(9, v);
   }
 
-  bool hasMetrics() => $_has(7);
+  $core.bool hasMetrics() => $_has(7);
   void clearMetrics() => clearField(9);
 }
 
-class _ReadonlyCluster extends Cluster with ReadonlyMessageMixin {}
-
-class ClusterConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClusterConfig')
+class ClusterConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClusterConfig',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'configBucket')
-    ..a<GceClusterConfig>(8, 'gceClusterConfig', PbFieldType.OM,
+    ..a<GceClusterConfig>(8, 'gceClusterConfig', $pb.PbFieldType.OM,
         GceClusterConfig.getDefault, GceClusterConfig.create)
-    ..a<InstanceGroupConfig>(9, 'masterConfig', PbFieldType.OM,
+    ..a<InstanceGroupConfig>(9, 'masterConfig', $pb.PbFieldType.OM,
         InstanceGroupConfig.getDefault, InstanceGroupConfig.create)
-    ..a<InstanceGroupConfig>(10, 'workerConfig', PbFieldType.OM,
+    ..a<InstanceGroupConfig>(10, 'workerConfig', $pb.PbFieldType.OM,
         InstanceGroupConfig.getDefault, InstanceGroupConfig.create)
-    ..pp<NodeInitializationAction>(11, 'initializationActions', PbFieldType.PM,
-        NodeInitializationAction.$checkItem, NodeInitializationAction.create)
-    ..a<InstanceGroupConfig>(12, 'secondaryWorkerConfig', PbFieldType.OM,
+    ..pc<NodeInitializationAction>(11, 'initializationActions',
+        $pb.PbFieldType.PM, NodeInitializationAction.create)
+    ..a<InstanceGroupConfig>(12, 'secondaryWorkerConfig', $pb.PbFieldType.OM,
         InstanceGroupConfig.getDefault, InstanceGroupConfig.create)
-    ..a<SoftwareConfig>(13, 'softwareConfig', PbFieldType.OM,
+    ..a<SoftwareConfig>(13, 'softwareConfig', $pb.PbFieldType.OM,
         SoftwareConfig.getDefault, SoftwareConfig.create)
+    ..a<EncryptionConfig>(15, 'encryptionConfig', $pb.PbFieldType.OM,
+        EncryptionConfig.getDefault, EncryptionConfig.create)
     ..hasRequiredFields = false;
 
   ClusterConfig() : super();
-  ClusterConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClusterConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ClusterConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClusterConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ClusterConfig clone() => new ClusterConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ClusterConfig create() => new ClusterConfig();
-  static PbList<ClusterConfig> createRepeated() => new PbList<ClusterConfig>();
-  static ClusterConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterConfig();
-    return _defaultInstance;
-  }
-
+  ClusterConfig clone() => ClusterConfig()..mergeFromMessage(this);
+  ClusterConfig copyWith(void Function(ClusterConfig) updates) =>
+      super.copyWith((message) => updates(message as ClusterConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static ClusterConfig create() => ClusterConfig();
+  ClusterConfig createEmptyInstance() => create();
+  static $pb.PbList<ClusterConfig> createRepeated() =>
+      $pb.PbList<ClusterConfig>();
+  static ClusterConfig getDefault() => _defaultInstance ??= create()..freeze();
   static ClusterConfig _defaultInstance;
-  static void $checkItem(ClusterConfig v) {
-    if (v is! ClusterConfig) checkItemFailed(v, 'ClusterConfig');
-  }
 
-  String get configBucket => $_getS(0, '');
-  set configBucket(String v) {
+  $core.String get configBucket => $_getS(0, '');
+  set configBucket($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasConfigBucket() => $_has(0);
+  $core.bool hasConfigBucket() => $_has(0);
   void clearConfigBucket() => clearField(1);
 
   GceClusterConfig get gceClusterConfig => $_getN(1);
@@ -213,7 +167,7 @@ class ClusterConfig extends GeneratedMessage {
     setField(8, v);
   }
 
-  bool hasGceClusterConfig() => $_has(1);
+  $core.bool hasGceClusterConfig() => $_has(1);
   void clearGceClusterConfig() => clearField(8);
 
   InstanceGroupConfig get masterConfig => $_getN(2);
@@ -221,7 +175,7 @@ class ClusterConfig extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasMasterConfig() => $_has(2);
+  $core.bool hasMasterConfig() => $_has(2);
   void clearMasterConfig() => clearField(9);
 
   InstanceGroupConfig get workerConfig => $_getN(3);
@@ -229,17 +183,18 @@ class ClusterConfig extends GeneratedMessage {
     setField(10, v);
   }
 
-  bool hasWorkerConfig() => $_has(3);
+  $core.bool hasWorkerConfig() => $_has(3);
   void clearWorkerConfig() => clearField(10);
 
-  List<NodeInitializationAction> get initializationActions => $_getList(4);
+  $core.List<NodeInitializationAction> get initializationActions =>
+      $_getList(4);
 
   InstanceGroupConfig get secondaryWorkerConfig => $_getN(5);
   set secondaryWorkerConfig(InstanceGroupConfig v) {
     setField(12, v);
   }
 
-  bool hasSecondaryWorkerConfig() => $_has(5);
+  $core.bool hasSecondaryWorkerConfig() => $_has(5);
   void clearSecondaryWorkerConfig() => clearField(12);
 
   SoftwareConfig get softwareConfig => $_getN(6);
@@ -247,218 +202,199 @@ class ClusterConfig extends GeneratedMessage {
     setField(13, v);
   }
 
-  bool hasSoftwareConfig() => $_has(6);
+  $core.bool hasSoftwareConfig() => $_has(6);
   void clearSoftwareConfig() => clearField(13);
+
+  EncryptionConfig get encryptionConfig => $_getN(7);
+  set encryptionConfig(EncryptionConfig v) {
+    setField(15, v);
+  }
+
+  $core.bool hasEncryptionConfig() => $_has(7);
+  void clearEncryptionConfig() => clearField(15);
 }
 
-class _ReadonlyClusterConfig extends ClusterConfig with ReadonlyMessageMixin {}
+class EncryptionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EncryptionConfig',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..aOS(1, 'gcePdKmsKeyName')
+    ..hasRequiredFields = false;
 
-class GceClusterConfig_MetadataEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('GceClusterConfig_MetadataEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  GceClusterConfig_MetadataEntry() : super();
-  GceClusterConfig_MetadataEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EncryptionConfig() : super();
+  EncryptionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GceClusterConfig_MetadataEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EncryptionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GceClusterConfig_MetadataEntry clone() =>
-      new GceClusterConfig_MetadataEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GceClusterConfig_MetadataEntry create() =>
-      new GceClusterConfig_MetadataEntry();
-  static PbList<GceClusterConfig_MetadataEntry> createRepeated() =>
-      new PbList<GceClusterConfig_MetadataEntry>();
-  static GceClusterConfig_MetadataEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGceClusterConfig_MetadataEntry();
-    return _defaultInstance;
-  }
+  EncryptionConfig clone() => EncryptionConfig()..mergeFromMessage(this);
+  EncryptionConfig copyWith(void Function(EncryptionConfig) updates) =>
+      super.copyWith((message) => updates(message as EncryptionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static EncryptionConfig create() => EncryptionConfig();
+  EncryptionConfig createEmptyInstance() => create();
+  static $pb.PbList<EncryptionConfig> createRepeated() =>
+      $pb.PbList<EncryptionConfig>();
+  static EncryptionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static EncryptionConfig _defaultInstance;
 
-  static GceClusterConfig_MetadataEntry _defaultInstance;
-  static void $checkItem(GceClusterConfig_MetadataEntry v) {
-    if (v is! GceClusterConfig_MetadataEntry)
-      checkItemFailed(v, 'GceClusterConfig_MetadataEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
+  $core.String get gcePdKmsKeyName => $_getS(0, '');
+  set gcePdKmsKeyName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
+  $core.bool hasGcePdKmsKeyName() => $_has(0);
+  void clearGcePdKmsKeyName() => clearField(1);
 }
 
-class _ReadonlyGceClusterConfig_MetadataEntry
-    extends GceClusterConfig_MetadataEntry with ReadonlyMessageMixin {}
-
-class GceClusterConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GceClusterConfig')
+class GceClusterConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GceClusterConfig',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'zoneUri')
     ..aOS(2, 'networkUri')
     ..pPS(3, 'serviceAccountScopes')
     ..pPS(4, 'tags')
-    ..pp<GceClusterConfig_MetadataEntry>(
+    ..m<$core.String, $core.String>(
         5,
         'metadata',
-        PbFieldType.PM,
-        GceClusterConfig_MetadataEntry.$checkItem,
-        GceClusterConfig_MetadataEntry.create)
+        'GceClusterConfig.MetadataEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(6, 'subnetworkUri')
     ..aOB(7, 'internalIpOnly')
     ..aOS(8, 'serviceAccount')
     ..hasRequiredFields = false;
 
   GceClusterConfig() : super();
-  GceClusterConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GceClusterConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GceClusterConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GceClusterConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GceClusterConfig clone() => new GceClusterConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GceClusterConfig create() => new GceClusterConfig();
-  static PbList<GceClusterConfig> createRepeated() =>
-      new PbList<GceClusterConfig>();
-  static GceClusterConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGceClusterConfig();
-    return _defaultInstance;
-  }
-
+  GceClusterConfig clone() => GceClusterConfig()..mergeFromMessage(this);
+  GceClusterConfig copyWith(void Function(GceClusterConfig) updates) =>
+      super.copyWith((message) => updates(message as GceClusterConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static GceClusterConfig create() => GceClusterConfig();
+  GceClusterConfig createEmptyInstance() => create();
+  static $pb.PbList<GceClusterConfig> createRepeated() =>
+      $pb.PbList<GceClusterConfig>();
+  static GceClusterConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GceClusterConfig _defaultInstance;
-  static void $checkItem(GceClusterConfig v) {
-    if (v is! GceClusterConfig) checkItemFailed(v, 'GceClusterConfig');
-  }
 
-  String get zoneUri => $_getS(0, '');
-  set zoneUri(String v) {
+  $core.String get zoneUri => $_getS(0, '');
+  set zoneUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasZoneUri() => $_has(0);
+  $core.bool hasZoneUri() => $_has(0);
   void clearZoneUri() => clearField(1);
 
-  String get networkUri => $_getS(1, '');
-  set networkUri(String v) {
+  $core.String get networkUri => $_getS(1, '');
+  set networkUri($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNetworkUri() => $_has(1);
+  $core.bool hasNetworkUri() => $_has(1);
   void clearNetworkUri() => clearField(2);
 
-  List<String> get serviceAccountScopes => $_getList(2);
+  $core.List<$core.String> get serviceAccountScopes => $_getList(2);
 
-  List<String> get tags => $_getList(3);
+  $core.List<$core.String> get tags => $_getList(3);
 
-  List<GceClusterConfig_MetadataEntry> get metadata => $_getList(4);
+  $core.Map<$core.String, $core.String> get metadata => $_getMap(4);
 
-  String get subnetworkUri => $_getS(5, '');
-  set subnetworkUri(String v) {
+  $core.String get subnetworkUri => $_getS(5, '');
+  set subnetworkUri($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasSubnetworkUri() => $_has(5);
+  $core.bool hasSubnetworkUri() => $_has(5);
   void clearSubnetworkUri() => clearField(6);
 
-  bool get internalIpOnly => $_get(6, false);
-  set internalIpOnly(bool v) {
+  $core.bool get internalIpOnly => $_get(6, false);
+  set internalIpOnly($core.bool v) {
     $_setBool(6, v);
   }
 
-  bool hasInternalIpOnly() => $_has(6);
+  $core.bool hasInternalIpOnly() => $_has(6);
   void clearInternalIpOnly() => clearField(7);
 
-  String get serviceAccount => $_getS(7, '');
-  set serviceAccount(String v) {
+  $core.String get serviceAccount => $_getS(7, '');
+  set serviceAccount($core.String v) {
     $_setString(7, v);
   }
 
-  bool hasServiceAccount() => $_has(7);
+  $core.bool hasServiceAccount() => $_has(7);
   void clearServiceAccount() => clearField(8);
 }
 
-class _ReadonlyGceClusterConfig extends GceClusterConfig
-    with ReadonlyMessageMixin {}
-
-class InstanceGroupConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('InstanceGroupConfig')
-    ..a<int>(1, 'numInstances', PbFieldType.O3)
+class InstanceGroupConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('InstanceGroupConfig',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..a<$core.int>(1, 'numInstances', $pb.PbFieldType.O3)
     ..pPS(2, 'instanceNames')
     ..aOS(3, 'imageUri')
     ..aOS(4, 'machineTypeUri')
-    ..a<DiskConfig>(5, 'diskConfig', PbFieldType.OM, DiskConfig.getDefault,
+    ..a<DiskConfig>(5, 'diskConfig', $pb.PbFieldType.OM, DiskConfig.getDefault,
         DiskConfig.create)
     ..aOB(6, 'isPreemptible')
-    ..a<ManagedGroupConfig>(7, 'managedGroupConfig', PbFieldType.OM,
+    ..a<ManagedGroupConfig>(7, 'managedGroupConfig', $pb.PbFieldType.OM,
         ManagedGroupConfig.getDefault, ManagedGroupConfig.create)
-    ..pp<AcceleratorConfig>(8, 'accelerators', PbFieldType.PM,
-        AcceleratorConfig.$checkItem, AcceleratorConfig.create)
+    ..pc<AcceleratorConfig>(
+        8, 'accelerators', $pb.PbFieldType.PM, AcceleratorConfig.create)
     ..hasRequiredFields = false;
 
   InstanceGroupConfig() : super();
-  InstanceGroupConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  InstanceGroupConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  InstanceGroupConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  InstanceGroupConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  InstanceGroupConfig clone() =>
-      new InstanceGroupConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static InstanceGroupConfig create() => new InstanceGroupConfig();
-  static PbList<InstanceGroupConfig> createRepeated() =>
-      new PbList<InstanceGroupConfig>();
-  static InstanceGroupConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInstanceGroupConfig();
-    return _defaultInstance;
-  }
-
+  InstanceGroupConfig clone() => InstanceGroupConfig()..mergeFromMessage(this);
+  InstanceGroupConfig copyWith(void Function(InstanceGroupConfig) updates) =>
+      super.copyWith((message) => updates(message as InstanceGroupConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static InstanceGroupConfig create() => InstanceGroupConfig();
+  InstanceGroupConfig createEmptyInstance() => create();
+  static $pb.PbList<InstanceGroupConfig> createRepeated() =>
+      $pb.PbList<InstanceGroupConfig>();
+  static InstanceGroupConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static InstanceGroupConfig _defaultInstance;
-  static void $checkItem(InstanceGroupConfig v) {
-    if (v is! InstanceGroupConfig) checkItemFailed(v, 'InstanceGroupConfig');
-  }
 
-  int get numInstances => $_get(0, 0);
-  set numInstances(int v) {
+  $core.int get numInstances => $_get(0, 0);
+  set numInstances($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasNumInstances() => $_has(0);
+  $core.bool hasNumInstances() => $_has(0);
   void clearNumInstances() => clearField(1);
 
-  List<String> get instanceNames => $_getList(1);
+  $core.List<$core.String> get instanceNames => $_getList(1);
 
-  String get imageUri => $_getS(2, '');
-  set imageUri(String v) {
+  $core.String get imageUri => $_getS(2, '');
+  set imageUri($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasImageUri() => $_has(2);
+  $core.bool hasImageUri() => $_has(2);
   void clearImageUri() => clearField(3);
 
-  String get machineTypeUri => $_getS(3, '');
-  set machineTypeUri(String v) {
+  $core.String get machineTypeUri => $_getS(3, '');
+  set machineTypeUri($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasMachineTypeUri() => $_has(3);
+  $core.bool hasMachineTypeUri() => $_has(3);
   void clearMachineTypeUri() => clearField(4);
 
   DiskConfig get diskConfig => $_getN(4);
@@ -466,15 +402,15 @@ class InstanceGroupConfig extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasDiskConfig() => $_has(4);
+  $core.bool hasDiskConfig() => $_has(4);
   void clearDiskConfig() => clearField(5);
 
-  bool get isPreemptible => $_get(5, false);
-  set isPreemptible(bool v) {
+  $core.bool get isPreemptible => $_get(5, false);
+  set isPreemptible($core.bool v) {
     $_setBool(5, v);
   }
 
-  bool hasIsPreemptible() => $_has(5);
+  $core.bool hasIsPreemptible() => $_has(5);
   void clearIsPreemptible() => clearField(6);
 
   ManagedGroupConfig get managedGroupConfig => $_getN(6);
@@ -482,280 +418,256 @@ class InstanceGroupConfig extends GeneratedMessage {
     setField(7, v);
   }
 
-  bool hasManagedGroupConfig() => $_has(6);
+  $core.bool hasManagedGroupConfig() => $_has(6);
   void clearManagedGroupConfig() => clearField(7);
 
-  List<AcceleratorConfig> get accelerators => $_getList(7);
+  $core.List<AcceleratorConfig> get accelerators => $_getList(7);
 }
 
-class _ReadonlyInstanceGroupConfig extends InstanceGroupConfig
-    with ReadonlyMessageMixin {}
-
-class ManagedGroupConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ManagedGroupConfig')
+class ManagedGroupConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManagedGroupConfig',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'instanceTemplateName')
     ..aOS(2, 'instanceGroupManagerName')
     ..hasRequiredFields = false;
 
   ManagedGroupConfig() : super();
-  ManagedGroupConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ManagedGroupConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ManagedGroupConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ManagedGroupConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ManagedGroupConfig clone() =>
-      new ManagedGroupConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ManagedGroupConfig create() => new ManagedGroupConfig();
-  static PbList<ManagedGroupConfig> createRepeated() =>
-      new PbList<ManagedGroupConfig>();
-  static ManagedGroupConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyManagedGroupConfig();
-    return _defaultInstance;
-  }
-
+  ManagedGroupConfig clone() => ManagedGroupConfig()..mergeFromMessage(this);
+  ManagedGroupConfig copyWith(void Function(ManagedGroupConfig) updates) =>
+      super.copyWith((message) => updates(message as ManagedGroupConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static ManagedGroupConfig create() => ManagedGroupConfig();
+  ManagedGroupConfig createEmptyInstance() => create();
+  static $pb.PbList<ManagedGroupConfig> createRepeated() =>
+      $pb.PbList<ManagedGroupConfig>();
+  static ManagedGroupConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ManagedGroupConfig _defaultInstance;
-  static void $checkItem(ManagedGroupConfig v) {
-    if (v is! ManagedGroupConfig) checkItemFailed(v, 'ManagedGroupConfig');
-  }
 
-  String get instanceTemplateName => $_getS(0, '');
-  set instanceTemplateName(String v) {
+  $core.String get instanceTemplateName => $_getS(0, '');
+  set instanceTemplateName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasInstanceTemplateName() => $_has(0);
+  $core.bool hasInstanceTemplateName() => $_has(0);
   void clearInstanceTemplateName() => clearField(1);
 
-  String get instanceGroupManagerName => $_getS(1, '');
-  set instanceGroupManagerName(String v) {
+  $core.String get instanceGroupManagerName => $_getS(1, '');
+  set instanceGroupManagerName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasInstanceGroupManagerName() => $_has(1);
+  $core.bool hasInstanceGroupManagerName() => $_has(1);
   void clearInstanceGroupManagerName() => clearField(2);
 }
 
-class _ReadonlyManagedGroupConfig extends ManagedGroupConfig
-    with ReadonlyMessageMixin {}
-
-class AcceleratorConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AcceleratorConfig')
+class AcceleratorConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AcceleratorConfig',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'acceleratorTypeUri')
-    ..a<int>(2, 'acceleratorCount', PbFieldType.O3)
+    ..a<$core.int>(2, 'acceleratorCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   AcceleratorConfig() : super();
-  AcceleratorConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AcceleratorConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AcceleratorConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AcceleratorConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AcceleratorConfig clone() => new AcceleratorConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AcceleratorConfig create() => new AcceleratorConfig();
-  static PbList<AcceleratorConfig> createRepeated() =>
-      new PbList<AcceleratorConfig>();
-  static AcceleratorConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAcceleratorConfig();
-    return _defaultInstance;
-  }
-
+  AcceleratorConfig clone() => AcceleratorConfig()..mergeFromMessage(this);
+  AcceleratorConfig copyWith(void Function(AcceleratorConfig) updates) =>
+      super.copyWith((message) => updates(message as AcceleratorConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static AcceleratorConfig create() => AcceleratorConfig();
+  AcceleratorConfig createEmptyInstance() => create();
+  static $pb.PbList<AcceleratorConfig> createRepeated() =>
+      $pb.PbList<AcceleratorConfig>();
+  static AcceleratorConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AcceleratorConfig _defaultInstance;
-  static void $checkItem(AcceleratorConfig v) {
-    if (v is! AcceleratorConfig) checkItemFailed(v, 'AcceleratorConfig');
-  }
 
-  String get acceleratorTypeUri => $_getS(0, '');
-  set acceleratorTypeUri(String v) {
+  $core.String get acceleratorTypeUri => $_getS(0, '');
+  set acceleratorTypeUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAcceleratorTypeUri() => $_has(0);
+  $core.bool hasAcceleratorTypeUri() => $_has(0);
   void clearAcceleratorTypeUri() => clearField(1);
 
-  int get acceleratorCount => $_get(1, 0);
-  set acceleratorCount(int v) {
+  $core.int get acceleratorCount => $_get(1, 0);
+  set acceleratorCount($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasAcceleratorCount() => $_has(1);
+  $core.bool hasAcceleratorCount() => $_has(1);
   void clearAcceleratorCount() => clearField(2);
 }
 
-class _ReadonlyAcceleratorConfig extends AcceleratorConfig
-    with ReadonlyMessageMixin {}
-
-class DiskConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DiskConfig')
-    ..a<int>(1, 'bootDiskSizeGb', PbFieldType.O3)
-    ..a<int>(2, 'numLocalSsds', PbFieldType.O3)
+class DiskConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DiskConfig',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..a<$core.int>(1, 'bootDiskSizeGb', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, 'numLocalSsds', $pb.PbFieldType.O3)
+    ..aOS(3, 'bootDiskType')
     ..hasRequiredFields = false;
 
   DiskConfig() : super();
-  DiskConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DiskConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DiskConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DiskConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DiskConfig clone() => new DiskConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DiskConfig create() => new DiskConfig();
-  static PbList<DiskConfig> createRepeated() => new PbList<DiskConfig>();
-  static DiskConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDiskConfig();
-    return _defaultInstance;
-  }
-
+  DiskConfig clone() => DiskConfig()..mergeFromMessage(this);
+  DiskConfig copyWith(void Function(DiskConfig) updates) =>
+      super.copyWith((message) => updates(message as DiskConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static DiskConfig create() => DiskConfig();
+  DiskConfig createEmptyInstance() => create();
+  static $pb.PbList<DiskConfig> createRepeated() => $pb.PbList<DiskConfig>();
+  static DiskConfig getDefault() => _defaultInstance ??= create()..freeze();
   static DiskConfig _defaultInstance;
-  static void $checkItem(DiskConfig v) {
-    if (v is! DiskConfig) checkItemFailed(v, 'DiskConfig');
-  }
 
-  int get bootDiskSizeGb => $_get(0, 0);
-  set bootDiskSizeGb(int v) {
+  $core.int get bootDiskSizeGb => $_get(0, 0);
+  set bootDiskSizeGb($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasBootDiskSizeGb() => $_has(0);
+  $core.bool hasBootDiskSizeGb() => $_has(0);
   void clearBootDiskSizeGb() => clearField(1);
 
-  int get numLocalSsds => $_get(1, 0);
-  set numLocalSsds(int v) {
+  $core.int get numLocalSsds => $_get(1, 0);
+  set numLocalSsds($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasNumLocalSsds() => $_has(1);
+  $core.bool hasNumLocalSsds() => $_has(1);
   void clearNumLocalSsds() => clearField(2);
+
+  $core.String get bootDiskType => $_getS(2, '');
+  set bootDiskType($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasBootDiskType() => $_has(2);
+  void clearBootDiskType() => clearField(3);
 }
 
-class _ReadonlyDiskConfig extends DiskConfig with ReadonlyMessageMixin {}
-
-class NodeInitializationAction extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NodeInitializationAction')
+class NodeInitializationAction extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NodeInitializationAction',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'executableFile')
-    ..a<$google$protobuf.Duration>(2, 'executionTimeout', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..a<$0.Duration>(2, 'executionTimeout', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
     ..hasRequiredFields = false;
 
   NodeInitializationAction() : super();
-  NodeInitializationAction.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NodeInitializationAction.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  NodeInitializationAction.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NodeInitializationAction.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   NodeInitializationAction clone() =>
-      new NodeInitializationAction()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NodeInitializationAction create() => new NodeInitializationAction();
-  static PbList<NodeInitializationAction> createRepeated() =>
-      new PbList<NodeInitializationAction>();
-  static NodeInitializationAction getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNodeInitializationAction();
-    return _defaultInstance;
-  }
-
+      NodeInitializationAction()..mergeFromMessage(this);
+  NodeInitializationAction copyWith(
+          void Function(NodeInitializationAction) updates) =>
+      super.copyWith((message) => updates(message as NodeInitializationAction));
+  $pb.BuilderInfo get info_ => _i;
+  static NodeInitializationAction create() => NodeInitializationAction();
+  NodeInitializationAction createEmptyInstance() => create();
+  static $pb.PbList<NodeInitializationAction> createRepeated() =>
+      $pb.PbList<NodeInitializationAction>();
+  static NodeInitializationAction getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static NodeInitializationAction _defaultInstance;
-  static void $checkItem(NodeInitializationAction v) {
-    if (v is! NodeInitializationAction)
-      checkItemFailed(v, 'NodeInitializationAction');
-  }
 
-  String get executableFile => $_getS(0, '');
-  set executableFile(String v) {
+  $core.String get executableFile => $_getS(0, '');
+  set executableFile($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasExecutableFile() => $_has(0);
+  $core.bool hasExecutableFile() => $_has(0);
   void clearExecutableFile() => clearField(1);
 
-  $google$protobuf.Duration get executionTimeout => $_getN(1);
-  set executionTimeout($google$protobuf.Duration v) {
+  $0.Duration get executionTimeout => $_getN(1);
+  set executionTimeout($0.Duration v) {
     setField(2, v);
   }
 
-  bool hasExecutionTimeout() => $_has(1);
+  $core.bool hasExecutionTimeout() => $_has(1);
   void clearExecutionTimeout() => clearField(2);
 }
 
-class _ReadonlyNodeInitializationAction extends NodeInitializationAction
-    with ReadonlyMessageMixin {}
-
-class ClusterStatus extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClusterStatus')
+class ClusterStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClusterStatus',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..e<ClusterStatus_State>(
         1,
         'state',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ClusterStatus_State.UNKNOWN,
         ClusterStatus_State.valueOf,
         ClusterStatus_State.values)
     ..aOS(2, 'detail')
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'stateStartTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'stateStartTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..e<ClusterStatus_Substate>(
         4,
         'substate',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ClusterStatus_Substate.UNSPECIFIED,
         ClusterStatus_Substate.valueOf,
         ClusterStatus_Substate.values)
     ..hasRequiredFields = false;
 
   ClusterStatus() : super();
-  ClusterStatus.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClusterStatus.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ClusterStatus.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClusterStatus.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ClusterStatus clone() => new ClusterStatus()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ClusterStatus create() => new ClusterStatus();
-  static PbList<ClusterStatus> createRepeated() => new PbList<ClusterStatus>();
-  static ClusterStatus getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterStatus();
-    return _defaultInstance;
-  }
-
+  ClusterStatus clone() => ClusterStatus()..mergeFromMessage(this);
+  ClusterStatus copyWith(void Function(ClusterStatus) updates) =>
+      super.copyWith((message) => updates(message as ClusterStatus));
+  $pb.BuilderInfo get info_ => _i;
+  static ClusterStatus create() => ClusterStatus();
+  ClusterStatus createEmptyInstance() => create();
+  static $pb.PbList<ClusterStatus> createRepeated() =>
+      $pb.PbList<ClusterStatus>();
+  static ClusterStatus getDefault() => _defaultInstance ??= create()..freeze();
   static ClusterStatus _defaultInstance;
-  static void $checkItem(ClusterStatus v) {
-    if (v is! ClusterStatus) checkItemFailed(v, 'ClusterStatus');
-  }
 
   ClusterStatus_State get state => $_getN(0);
   set state(ClusterStatus_State v) {
     setField(1, v);
   }
 
-  bool hasState() => $_has(0);
+  $core.bool hasState() => $_has(0);
   void clearState() => clearField(1);
 
-  String get detail => $_getS(1, '');
-  set detail(String v) {
+  $core.String get detail => $_getS(1, '');
+  set detail($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDetail() => $_has(1);
+  $core.bool hasDetail() => $_has(1);
   void clearDetail() => clearField(2);
 
-  $google$protobuf.Timestamp get stateStartTime => $_getN(2);
-  set stateStartTime($google$protobuf.Timestamp v) {
+  $1.Timestamp get stateStartTime => $_getN(2);
+  set stateStartTime($1.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasStateStartTime() => $_has(2);
+  $core.bool hasStateStartTime() => $_has(2);
   void clearStateStartTime() => clearField(3);
 
   ClusterStatus_Substate get substate => $_getN(3);
@@ -763,304 +675,139 @@ class ClusterStatus extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasSubstate() => $_has(3);
+  $core.bool hasSubstate() => $_has(3);
   void clearSubstate() => clearField(4);
 }
 
-class _ReadonlyClusterStatus extends ClusterStatus with ReadonlyMessageMixin {}
-
-class SoftwareConfig_PropertiesEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('SoftwareConfig_PropertiesEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  SoftwareConfig_PropertiesEntry() : super();
-  SoftwareConfig_PropertiesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SoftwareConfig_PropertiesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  SoftwareConfig_PropertiesEntry clone() =>
-      new SoftwareConfig_PropertiesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SoftwareConfig_PropertiesEntry create() =>
-      new SoftwareConfig_PropertiesEntry();
-  static PbList<SoftwareConfig_PropertiesEntry> createRepeated() =>
-      new PbList<SoftwareConfig_PropertiesEntry>();
-  static SoftwareConfig_PropertiesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySoftwareConfig_PropertiesEntry();
-    return _defaultInstance;
-  }
-
-  static SoftwareConfig_PropertiesEntry _defaultInstance;
-  static void $checkItem(SoftwareConfig_PropertiesEntry v) {
-    if (v is! SoftwareConfig_PropertiesEntry)
-      checkItemFailed(v, 'SoftwareConfig_PropertiesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlySoftwareConfig_PropertiesEntry
-    extends SoftwareConfig_PropertiesEntry with ReadonlyMessageMixin {}
-
-class SoftwareConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SoftwareConfig')
+class SoftwareConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SoftwareConfig',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'imageVersion')
-    ..pp<SoftwareConfig_PropertiesEntry>(
+    ..m<$core.String, $core.String>(
         2,
         'properties',
-        PbFieldType.PM,
-        SoftwareConfig_PropertiesEntry.$checkItem,
-        SoftwareConfig_PropertiesEntry.create)
+        'SoftwareConfig.PropertiesEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.dataproc.v1'))
     ..hasRequiredFields = false;
 
   SoftwareConfig() : super();
-  SoftwareConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SoftwareConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SoftwareConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SoftwareConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SoftwareConfig clone() => new SoftwareConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SoftwareConfig create() => new SoftwareConfig();
-  static PbList<SoftwareConfig> createRepeated() =>
-      new PbList<SoftwareConfig>();
-  static SoftwareConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySoftwareConfig();
-    return _defaultInstance;
-  }
-
+  SoftwareConfig clone() => SoftwareConfig()..mergeFromMessage(this);
+  SoftwareConfig copyWith(void Function(SoftwareConfig) updates) =>
+      super.copyWith((message) => updates(message as SoftwareConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static SoftwareConfig create() => SoftwareConfig();
+  SoftwareConfig createEmptyInstance() => create();
+  static $pb.PbList<SoftwareConfig> createRepeated() =>
+      $pb.PbList<SoftwareConfig>();
+  static SoftwareConfig getDefault() => _defaultInstance ??= create()..freeze();
   static SoftwareConfig _defaultInstance;
-  static void $checkItem(SoftwareConfig v) {
-    if (v is! SoftwareConfig) checkItemFailed(v, 'SoftwareConfig');
-  }
 
-  String get imageVersion => $_getS(0, '');
-  set imageVersion(String v) {
+  $core.String get imageVersion => $_getS(0, '');
+  set imageVersion($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasImageVersion() => $_has(0);
+  $core.bool hasImageVersion() => $_has(0);
   void clearImageVersion() => clearField(1);
 
-  List<SoftwareConfig_PropertiesEntry> get properties => $_getList(1);
+  $core.Map<$core.String, $core.String> get properties => $_getMap(1);
 }
 
-class _ReadonlySoftwareConfig extends SoftwareConfig with ReadonlyMessageMixin {
-}
-
-class ClusterMetrics_HdfsMetricsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ClusterMetrics_HdfsMetricsEntry')
-        ..aOS(1, 'key')
-        ..aInt64(2, 'value')
-        ..hasRequiredFields = false;
-
-  ClusterMetrics_HdfsMetricsEntry() : super();
-  ClusterMetrics_HdfsMetricsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterMetrics_HdfsMetricsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ClusterMetrics_HdfsMetricsEntry clone() =>
-      new ClusterMetrics_HdfsMetricsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ClusterMetrics_HdfsMetricsEntry create() =>
-      new ClusterMetrics_HdfsMetricsEntry();
-  static PbList<ClusterMetrics_HdfsMetricsEntry> createRepeated() =>
-      new PbList<ClusterMetrics_HdfsMetricsEntry>();
-  static ClusterMetrics_HdfsMetricsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterMetrics_HdfsMetricsEntry();
-    return _defaultInstance;
-  }
-
-  static ClusterMetrics_HdfsMetricsEntry _defaultInstance;
-  static void $checkItem(ClusterMetrics_HdfsMetricsEntry v) {
-    if (v is! ClusterMetrics_HdfsMetricsEntry)
-      checkItemFailed(v, 'ClusterMetrics_HdfsMetricsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  Int64 get value => $_getI64(1);
-  set value(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyClusterMetrics_HdfsMetricsEntry
-    extends ClusterMetrics_HdfsMetricsEntry with ReadonlyMessageMixin {}
-
-class ClusterMetrics_YarnMetricsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ClusterMetrics_YarnMetricsEntry')
-        ..aOS(1, 'key')
-        ..aInt64(2, 'value')
-        ..hasRequiredFields = false;
-
-  ClusterMetrics_YarnMetricsEntry() : super();
-  ClusterMetrics_YarnMetricsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterMetrics_YarnMetricsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ClusterMetrics_YarnMetricsEntry clone() =>
-      new ClusterMetrics_YarnMetricsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ClusterMetrics_YarnMetricsEntry create() =>
-      new ClusterMetrics_YarnMetricsEntry();
-  static PbList<ClusterMetrics_YarnMetricsEntry> createRepeated() =>
-      new PbList<ClusterMetrics_YarnMetricsEntry>();
-  static ClusterMetrics_YarnMetricsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterMetrics_YarnMetricsEntry();
-    return _defaultInstance;
-  }
-
-  static ClusterMetrics_YarnMetricsEntry _defaultInstance;
-  static void $checkItem(ClusterMetrics_YarnMetricsEntry v) {
-    if (v is! ClusterMetrics_YarnMetricsEntry)
-      checkItemFailed(v, 'ClusterMetrics_YarnMetricsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  Int64 get value => $_getI64(1);
-  set value(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyClusterMetrics_YarnMetricsEntry
-    extends ClusterMetrics_YarnMetricsEntry with ReadonlyMessageMixin {}
-
-class ClusterMetrics extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClusterMetrics')
-    ..pp<ClusterMetrics_HdfsMetricsEntry>(
+class ClusterMetrics extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClusterMetrics',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..m<$core.String, Int64>(
         1,
         'hdfsMetrics',
-        PbFieldType.PM,
-        ClusterMetrics_HdfsMetricsEntry.$checkItem,
-        ClusterMetrics_HdfsMetricsEntry.create)
-    ..pp<ClusterMetrics_YarnMetricsEntry>(
+        'ClusterMetrics.HdfsMetricsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.O6,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..m<$core.String, Int64>(
         2,
         'yarnMetrics',
-        PbFieldType.PM,
-        ClusterMetrics_YarnMetricsEntry.$checkItem,
-        ClusterMetrics_YarnMetricsEntry.create)
+        'ClusterMetrics.YarnMetricsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.O6,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.dataproc.v1'))
     ..hasRequiredFields = false;
 
   ClusterMetrics() : super();
-  ClusterMetrics.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClusterMetrics.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ClusterMetrics.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClusterMetrics.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ClusterMetrics clone() => new ClusterMetrics()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ClusterMetrics create() => new ClusterMetrics();
-  static PbList<ClusterMetrics> createRepeated() =>
-      new PbList<ClusterMetrics>();
-  static ClusterMetrics getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterMetrics();
-    return _defaultInstance;
-  }
-
+  ClusterMetrics clone() => ClusterMetrics()..mergeFromMessage(this);
+  ClusterMetrics copyWith(void Function(ClusterMetrics) updates) =>
+      super.copyWith((message) => updates(message as ClusterMetrics));
+  $pb.BuilderInfo get info_ => _i;
+  static ClusterMetrics create() => ClusterMetrics();
+  ClusterMetrics createEmptyInstance() => create();
+  static $pb.PbList<ClusterMetrics> createRepeated() =>
+      $pb.PbList<ClusterMetrics>();
+  static ClusterMetrics getDefault() => _defaultInstance ??= create()..freeze();
   static ClusterMetrics _defaultInstance;
-  static void $checkItem(ClusterMetrics v) {
-    if (v is! ClusterMetrics) checkItemFailed(v, 'ClusterMetrics');
-  }
 
-  List<ClusterMetrics_HdfsMetricsEntry> get hdfsMetrics => $_getList(0);
+  $core.Map<$core.String, Int64> get hdfsMetrics => $_getMap(0);
 
-  List<ClusterMetrics_YarnMetricsEntry> get yarnMetrics => $_getList(1);
+  $core.Map<$core.String, Int64> get yarnMetrics => $_getMap(1);
 }
 
-class _ReadonlyClusterMetrics extends ClusterMetrics with ReadonlyMessageMixin {
-}
-
-class CreateClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateClusterRequest')
+class CreateClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateClusterRequest',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'projectId')
     ..a<Cluster>(
-        2, 'cluster', PbFieldType.OM, Cluster.getDefault, Cluster.create)
+        2, 'cluster', $pb.PbFieldType.OM, Cluster.getDefault, Cluster.create)
     ..aOS(3, 'region')
+    ..aOS(4, 'requestId')
     ..hasRequiredFields = false;
 
   CreateClusterRequest() : super();
-  CreateClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateClusterRequest clone() =>
-      new CreateClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateClusterRequest create() => new CreateClusterRequest();
-  static PbList<CreateClusterRequest> createRepeated() =>
-      new PbList<CreateClusterRequest>();
-  static CreateClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateClusterRequest();
-    return _defaultInstance;
-  }
-
+      CreateClusterRequest()..mergeFromMessage(this);
+  CreateClusterRequest copyWith(void Function(CreateClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateClusterRequest create() => CreateClusterRequest();
+  CreateClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateClusterRequest> createRepeated() =>
+      $pb.PbList<CreateClusterRequest>();
+  static CreateClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateClusterRequest _defaultInstance;
-  static void $checkItem(CreateClusterRequest v) {
-    if (v is! CreateClusterRequest) checkItemFailed(v, 'CreateClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
   Cluster get cluster => $_getN(1);
@@ -1068,74 +815,75 @@ class CreateClusterRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasCluster() => $_has(1);
+  $core.bool hasCluster() => $_has(1);
   void clearCluster() => clearField(2);
 
-  String get region => $_getS(2, '');
-  set region(String v) {
+  $core.String get region => $_getS(2, '');
+  set region($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasRegion() => $_has(2);
+  $core.bool hasRegion() => $_has(2);
   void clearRegion() => clearField(3);
+
+  $core.String get requestId => $_getS(3, '');
+  set requestId($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasRequestId() => $_has(3);
+  void clearRequestId() => clearField(4);
 }
 
-class _ReadonlyCreateClusterRequest extends CreateClusterRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateClusterRequest')
+class UpdateClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateClusterRequest',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'clusterName')
     ..a<Cluster>(
-        3, 'cluster', PbFieldType.OM, Cluster.getDefault, Cluster.create)
-    ..a<$google$protobuf.FieldMask>(
-        4,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+        3, 'cluster', $pb.PbFieldType.OM, Cluster.getDefault, Cluster.create)
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..aOS(5, 'region')
+    ..a<$0.Duration>(6, 'gracefulDecommissionTimeout', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
+    ..aOS(7, 'requestId')
     ..hasRequiredFields = false;
 
   UpdateClusterRequest() : super();
-  UpdateClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateClusterRequest clone() =>
-      new UpdateClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateClusterRequest create() => new UpdateClusterRequest();
-  static PbList<UpdateClusterRequest> createRepeated() =>
-      new PbList<UpdateClusterRequest>();
-  static UpdateClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateClusterRequest();
-    return _defaultInstance;
-  }
-
+      UpdateClusterRequest()..mergeFromMessage(this);
+  UpdateClusterRequest copyWith(void Function(UpdateClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateClusterRequest create() => UpdateClusterRequest();
+  UpdateClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateClusterRequest> createRepeated() =>
+      $pb.PbList<UpdateClusterRequest>();
+  static UpdateClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateClusterRequest _defaultInstance;
-  static void $checkItem(UpdateClusterRequest v) {
-    if (v is! UpdateClusterRequest) checkItemFailed(v, 'UpdateClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get clusterName => $_getS(1, '');
-  set clusterName(String v) {
+  $core.String get clusterName => $_getS(1, '');
+  set clusterName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasClusterName() => $_has(1);
+  $core.bool hasClusterName() => $_has(1);
   void clearClusterName() => clearField(2);
 
   Cluster get cluster => $_getN(2);
@@ -1143,412 +891,406 @@ class UpdateClusterRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasCluster() => $_has(2);
+  $core.bool hasCluster() => $_has(2);
   void clearCluster() => clearField(3);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(3);
-  set updateMask($google$protobuf.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
-  bool hasUpdateMask() => $_has(3);
+  $core.bool hasUpdateMask() => $_has(3);
   void clearUpdateMask() => clearField(4);
 
-  String get region => $_getS(4, '');
-  set region(String v) {
+  $core.String get region => $_getS(4, '');
+  set region($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasRegion() => $_has(4);
+  $core.bool hasRegion() => $_has(4);
   void clearRegion() => clearField(5);
+
+  $0.Duration get gracefulDecommissionTimeout => $_getN(5);
+  set gracefulDecommissionTimeout($0.Duration v) {
+    setField(6, v);
+  }
+
+  $core.bool hasGracefulDecommissionTimeout() => $_has(5);
+  void clearGracefulDecommissionTimeout() => clearField(6);
+
+  $core.String get requestId => $_getS(6, '');
+  set requestId($core.String v) {
+    $_setString(6, v);
+  }
+
+  $core.bool hasRequestId() => $_has(6);
+  void clearRequestId() => clearField(7);
 }
 
-class _ReadonlyUpdateClusterRequest extends UpdateClusterRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteClusterRequest')
+class DeleteClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteClusterRequest',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'clusterName')
     ..aOS(3, 'region')
+    ..aOS(4, 'clusterUuid')
+    ..aOS(5, 'requestId')
     ..hasRequiredFields = false;
 
   DeleteClusterRequest() : super();
-  DeleteClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteClusterRequest clone() =>
-      new DeleteClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteClusterRequest create() => new DeleteClusterRequest();
-  static PbList<DeleteClusterRequest> createRepeated() =>
-      new PbList<DeleteClusterRequest>();
-  static DeleteClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteClusterRequest();
-    return _defaultInstance;
-  }
-
+      DeleteClusterRequest()..mergeFromMessage(this);
+  DeleteClusterRequest copyWith(void Function(DeleteClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteClusterRequest create() => DeleteClusterRequest();
+  DeleteClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteClusterRequest> createRepeated() =>
+      $pb.PbList<DeleteClusterRequest>();
+  static DeleteClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteClusterRequest _defaultInstance;
-  static void $checkItem(DeleteClusterRequest v) {
-    if (v is! DeleteClusterRequest) checkItemFailed(v, 'DeleteClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get clusterName => $_getS(1, '');
-  set clusterName(String v) {
+  $core.String get clusterName => $_getS(1, '');
+  set clusterName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasClusterName() => $_has(1);
+  $core.bool hasClusterName() => $_has(1);
   void clearClusterName() => clearField(2);
 
-  String get region => $_getS(2, '');
-  set region(String v) {
+  $core.String get region => $_getS(2, '');
+  set region($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasRegion() => $_has(2);
+  $core.bool hasRegion() => $_has(2);
   void clearRegion() => clearField(3);
+
+  $core.String get clusterUuid => $_getS(3, '');
+  set clusterUuid($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasClusterUuid() => $_has(3);
+  void clearClusterUuid() => clearField(4);
+
+  $core.String get requestId => $_getS(4, '');
+  set requestId($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasRequestId() => $_has(4);
+  void clearRequestId() => clearField(5);
 }
 
-class _ReadonlyDeleteClusterRequest extends DeleteClusterRequest
-    with ReadonlyMessageMixin {}
-
-class GetClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetClusterRequest')
+class GetClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetClusterRequest',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'clusterName')
     ..aOS(3, 'region')
     ..hasRequiredFields = false;
 
   GetClusterRequest() : super();
-  GetClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetClusterRequest clone() => new GetClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetClusterRequest create() => new GetClusterRequest();
-  static PbList<GetClusterRequest> createRepeated() =>
-      new PbList<GetClusterRequest>();
-  static GetClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetClusterRequest();
-    return _defaultInstance;
-  }
-
+  GetClusterRequest clone() => GetClusterRequest()..mergeFromMessage(this);
+  GetClusterRequest copyWith(void Function(GetClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as GetClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetClusterRequest create() => GetClusterRequest();
+  GetClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<GetClusterRequest> createRepeated() =>
+      $pb.PbList<GetClusterRequest>();
+  static GetClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetClusterRequest _defaultInstance;
-  static void $checkItem(GetClusterRequest v) {
-    if (v is! GetClusterRequest) checkItemFailed(v, 'GetClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get clusterName => $_getS(1, '');
-  set clusterName(String v) {
+  $core.String get clusterName => $_getS(1, '');
+  set clusterName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasClusterName() => $_has(1);
+  $core.bool hasClusterName() => $_has(1);
   void clearClusterName() => clearField(2);
 
-  String get region => $_getS(2, '');
-  set region(String v) {
+  $core.String get region => $_getS(2, '');
+  set region($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasRegion() => $_has(2);
+  $core.bool hasRegion() => $_has(2);
   void clearRegion() => clearField(3);
 }
 
-class _ReadonlyGetClusterRequest extends GetClusterRequest
-    with ReadonlyMessageMixin {}
-
-class ListClustersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListClustersRequest')
+class ListClustersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersRequest',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'projectId')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'region')
     ..aOS(5, 'filter')
     ..hasRequiredFields = false;
 
   ListClustersRequest() : super();
-  ListClustersRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListClustersRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListClustersRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListClustersRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListClustersRequest clone() =>
-      new ListClustersRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListClustersRequest create() => new ListClustersRequest();
-  static PbList<ListClustersRequest> createRepeated() =>
-      new PbList<ListClustersRequest>();
-  static ListClustersRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListClustersRequest();
-    return _defaultInstance;
-  }
-
+  ListClustersRequest clone() => ListClustersRequest()..mergeFromMessage(this);
+  ListClustersRequest copyWith(void Function(ListClustersRequest) updates) =>
+      super.copyWith((message) => updates(message as ListClustersRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListClustersRequest create() => ListClustersRequest();
+  ListClustersRequest createEmptyInstance() => create();
+  static $pb.PbList<ListClustersRequest> createRepeated() =>
+      $pb.PbList<ListClustersRequest>();
+  static ListClustersRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListClustersRequest _defaultInstance;
-  static void $checkItem(ListClustersRequest v) {
-    if (v is! ListClustersRequest) checkItemFailed(v, 'ListClustersRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  String get region => $_getS(3, '');
-  set region(String v) {
+  $core.String get region => $_getS(3, '');
+  set region($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasRegion() => $_has(3);
+  $core.bool hasRegion() => $_has(3);
   void clearRegion() => clearField(4);
 
-  String get filter => $_getS(4, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(4, '');
+  set filter($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasFilter() => $_has(4);
+  $core.bool hasFilter() => $_has(4);
   void clearFilter() => clearField(5);
 }
 
-class _ReadonlyListClustersRequest extends ListClustersRequest
-    with ReadonlyMessageMixin {}
-
-class ListClustersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListClustersResponse')
-    ..pp<Cluster>(
-        1, 'clusters', PbFieldType.PM, Cluster.$checkItem, Cluster.create)
+class ListClustersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersResponse',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..pc<Cluster>(1, 'clusters', $pb.PbFieldType.PM, Cluster.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListClustersResponse() : super();
-  ListClustersResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListClustersResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListClustersResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListClustersResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListClustersResponse clone() =>
-      new ListClustersResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListClustersResponse create() => new ListClustersResponse();
-  static PbList<ListClustersResponse> createRepeated() =>
-      new PbList<ListClustersResponse>();
-  static ListClustersResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListClustersResponse();
-    return _defaultInstance;
-  }
-
+      ListClustersResponse()..mergeFromMessage(this);
+  ListClustersResponse copyWith(void Function(ListClustersResponse) updates) =>
+      super.copyWith((message) => updates(message as ListClustersResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListClustersResponse create() => ListClustersResponse();
+  ListClustersResponse createEmptyInstance() => create();
+  static $pb.PbList<ListClustersResponse> createRepeated() =>
+      $pb.PbList<ListClustersResponse>();
+  static ListClustersResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListClustersResponse _defaultInstance;
-  static void $checkItem(ListClustersResponse v) {
-    if (v is! ListClustersResponse) checkItemFailed(v, 'ListClustersResponse');
-  }
 
-  List<Cluster> get clusters => $_getList(0);
+  $core.List<Cluster> get clusters => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListClustersResponse extends ListClustersResponse
-    with ReadonlyMessageMixin {}
-
-class DiagnoseClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DiagnoseClusterRequest')
+class DiagnoseClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DiagnoseClusterRequest',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'clusterName')
     ..aOS(3, 'region')
     ..hasRequiredFields = false;
 
   DiagnoseClusterRequest() : super();
-  DiagnoseClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DiagnoseClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DiagnoseClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DiagnoseClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DiagnoseClusterRequest clone() =>
-      new DiagnoseClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DiagnoseClusterRequest create() => new DiagnoseClusterRequest();
-  static PbList<DiagnoseClusterRequest> createRepeated() =>
-      new PbList<DiagnoseClusterRequest>();
-  static DiagnoseClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDiagnoseClusterRequest();
-    return _defaultInstance;
-  }
-
+      DiagnoseClusterRequest()..mergeFromMessage(this);
+  DiagnoseClusterRequest copyWith(
+          void Function(DiagnoseClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as DiagnoseClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DiagnoseClusterRequest create() => DiagnoseClusterRequest();
+  DiagnoseClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<DiagnoseClusterRequest> createRepeated() =>
+      $pb.PbList<DiagnoseClusterRequest>();
+  static DiagnoseClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DiagnoseClusterRequest _defaultInstance;
-  static void $checkItem(DiagnoseClusterRequest v) {
-    if (v is! DiagnoseClusterRequest)
-      checkItemFailed(v, 'DiagnoseClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get clusterName => $_getS(1, '');
-  set clusterName(String v) {
+  $core.String get clusterName => $_getS(1, '');
+  set clusterName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasClusterName() => $_has(1);
+  $core.bool hasClusterName() => $_has(1);
   void clearClusterName() => clearField(2);
 
-  String get region => $_getS(2, '');
-  set region(String v) {
+  $core.String get region => $_getS(2, '');
+  set region($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasRegion() => $_has(2);
+  $core.bool hasRegion() => $_has(2);
   void clearRegion() => clearField(3);
 }
 
-class _ReadonlyDiagnoseClusterRequest extends DiagnoseClusterRequest
-    with ReadonlyMessageMixin {}
-
-class DiagnoseClusterResults extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DiagnoseClusterResults')
+class DiagnoseClusterResults extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DiagnoseClusterResults',
+      package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'outputUri')
     ..hasRequiredFields = false;
 
   DiagnoseClusterResults() : super();
-  DiagnoseClusterResults.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DiagnoseClusterResults.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DiagnoseClusterResults.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DiagnoseClusterResults.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DiagnoseClusterResults clone() =>
-      new DiagnoseClusterResults()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DiagnoseClusterResults create() => new DiagnoseClusterResults();
-  static PbList<DiagnoseClusterResults> createRepeated() =>
-      new PbList<DiagnoseClusterResults>();
-  static DiagnoseClusterResults getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDiagnoseClusterResults();
-    return _defaultInstance;
-  }
-
+      DiagnoseClusterResults()..mergeFromMessage(this);
+  DiagnoseClusterResults copyWith(
+          void Function(DiagnoseClusterResults) updates) =>
+      super.copyWith((message) => updates(message as DiagnoseClusterResults));
+  $pb.BuilderInfo get info_ => _i;
+  static DiagnoseClusterResults create() => DiagnoseClusterResults();
+  DiagnoseClusterResults createEmptyInstance() => create();
+  static $pb.PbList<DiagnoseClusterResults> createRepeated() =>
+      $pb.PbList<DiagnoseClusterResults>();
+  static DiagnoseClusterResults getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DiagnoseClusterResults _defaultInstance;
-  static void $checkItem(DiagnoseClusterResults v) {
-    if (v is! DiagnoseClusterResults)
-      checkItemFailed(v, 'DiagnoseClusterResults');
-  }
 
-  String get outputUri => $_getS(0, '');
-  set outputUri(String v) {
+  $core.String get outputUri => $_getS(0, '');
+  set outputUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasOutputUri() => $_has(0);
+  $core.bool hasOutputUri() => $_has(0);
   void clearOutputUri() => clearField(1);
 }
 
-class _ReadonlyDiagnoseClusterResults extends DiagnoseClusterResults
-    with ReadonlyMessageMixin {}
-
 class ClusterControllerApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   ClusterControllerApi(this._client);
 
-  Future<$google$longrunning.Operation> createCluster(
-      ClientContext ctx, CreateClusterRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$3.Operation> createCluster(
+      $pb.ClientContext ctx, CreateClusterRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(
         ctx, 'ClusterController', 'CreateCluster', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> updateCluster(
-      ClientContext ctx, UpdateClusterRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$3.Operation> updateCluster(
+      $pb.ClientContext ctx, UpdateClusterRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(
         ctx, 'ClusterController', 'UpdateCluster', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> deleteCluster(
-      ClientContext ctx, DeleteClusterRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$3.Operation> deleteCluster(
+      $pb.ClientContext ctx, DeleteClusterRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(
         ctx, 'ClusterController', 'DeleteCluster', request, emptyResponse);
   }
 
-  Future<Cluster> getCluster(ClientContext ctx, GetClusterRequest request) {
-    var emptyResponse = new Cluster();
+  $async.Future<Cluster> getCluster(
+      $pb.ClientContext ctx, GetClusterRequest request) {
+    var emptyResponse = Cluster();
     return _client.invoke<Cluster>(
         ctx, 'ClusterController', 'GetCluster', request, emptyResponse);
   }
 
-  Future<ListClustersResponse> listClusters(
-      ClientContext ctx, ListClustersRequest request) {
-    var emptyResponse = new ListClustersResponse();
+  $async.Future<ListClustersResponse> listClusters(
+      $pb.ClientContext ctx, ListClustersRequest request) {
+    var emptyResponse = ListClustersResponse();
     return _client.invoke<ListClustersResponse>(
         ctx, 'ClusterController', 'ListClusters', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> diagnoseCluster(
-      ClientContext ctx, DiagnoseClusterRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$3.Operation> diagnoseCluster(
+      $pb.ClientContext ctx, DiagnoseClusterRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(
         ctx, 'ClusterController', 'DiagnoseCluster', request, emptyResponse);
   }
 }

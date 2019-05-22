@@ -1,374 +1,299 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/logging/v2/logging_metrics.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../api/metric.pb.dart' as $google$api;
-import '../../api/distribution.pb.dart' as $google$api;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../api/metric.pb.dart' as $0;
+import '../../api/distribution.pb.dart' as $1;
+import '../../protobuf/empty.pb.dart' as $2;
 
 import 'logging_metrics.pbenum.dart';
 
 export 'logging_metrics.pbenum.dart';
 
-class LogMetric_LabelExtractorsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('LogMetric_LabelExtractorsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  LogMetric_LabelExtractorsEntry() : super();
-  LogMetric_LabelExtractorsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogMetric_LabelExtractorsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  LogMetric_LabelExtractorsEntry clone() =>
-      new LogMetric_LabelExtractorsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LogMetric_LabelExtractorsEntry create() =>
-      new LogMetric_LabelExtractorsEntry();
-  static PbList<LogMetric_LabelExtractorsEntry> createRepeated() =>
-      new PbList<LogMetric_LabelExtractorsEntry>();
-  static LogMetric_LabelExtractorsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLogMetric_LabelExtractorsEntry();
-    return _defaultInstance;
-  }
-
-  static LogMetric_LabelExtractorsEntry _defaultInstance;
-  static void $checkItem(LogMetric_LabelExtractorsEntry v) {
-    if (v is! LogMetric_LabelExtractorsEntry)
-      checkItemFailed(v, 'LogMetric_LabelExtractorsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyLogMetric_LabelExtractorsEntry
-    extends LogMetric_LabelExtractorsEntry with ReadonlyMessageMixin {}
-
-class LogMetric extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogMetric')
+class LogMetric extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogMetric',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOS(3, 'filter')
     ..e<LogMetric_ApiVersion>(
         4,
         'version',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         LogMetric_ApiVersion.V2,
         LogMetric_ApiVersion.valueOf,
         LogMetric_ApiVersion.values)
-    ..a<$google$api.MetricDescriptor>(
-        5,
-        'metricDescriptor',
-        PbFieldType.OM,
-        $google$api.MetricDescriptor.getDefault,
-        $google$api.MetricDescriptor.create)
+    ..a<$0.MetricDescriptor>(5, 'metricDescriptor', $pb.PbFieldType.OM,
+        $0.MetricDescriptor.getDefault, $0.MetricDescriptor.create)
     ..aOS(6, 'valueExtractor')
-    ..pp<LogMetric_LabelExtractorsEntry>(
+    ..m<$core.String, $core.String>(
         7,
         'labelExtractors',
-        PbFieldType.PM,
-        LogMetric_LabelExtractorsEntry.$checkItem,
-        LogMetric_LabelExtractorsEntry.create)
-    ..a<$google$api.Distribution_BucketOptions>(
+        'LogMetric.LabelExtractorsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.logging.v2'))
+    ..a<$1.Distribution_BucketOptions>(
         8,
         'bucketOptions',
-        PbFieldType.OM,
-        $google$api.Distribution_BucketOptions.getDefault,
-        $google$api.Distribution_BucketOptions.create)
+        $pb.PbFieldType.OM,
+        $1.Distribution_BucketOptions.getDefault,
+        $1.Distribution_BucketOptions.create)
     ..hasRequiredFields = false;
 
   LogMetric() : super();
-  LogMetric.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LogMetric.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LogMetric.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LogMetric.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogMetric clone() => new LogMetric()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LogMetric create() => new LogMetric();
-  static PbList<LogMetric> createRepeated() => new PbList<LogMetric>();
-  static LogMetric getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLogMetric();
-    return _defaultInstance;
-  }
-
+  LogMetric clone() => LogMetric()..mergeFromMessage(this);
+  LogMetric copyWith(void Function(LogMetric) updates) =>
+      super.copyWith((message) => updates(message as LogMetric));
+  $pb.BuilderInfo get info_ => _i;
+  static LogMetric create() => LogMetric();
+  LogMetric createEmptyInstance() => create();
+  static $pb.PbList<LogMetric> createRepeated() => $pb.PbList<LogMetric>();
+  static LogMetric getDefault() => _defaultInstance ??= create()..freeze();
   static LogMetric _defaultInstance;
-  static void $checkItem(LogMetric v) {
-    if (v is! LogMetric) checkItemFailed(v, 'LogMetric');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  String get filter => $_getS(2, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(2, '');
+  set filter($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasFilter() => $_has(2);
+  $core.bool hasFilter() => $_has(2);
   void clearFilter() => clearField(3);
 
+  @$core.Deprecated('This field is deprecated.')
   LogMetric_ApiVersion get version => $_getN(3);
+  @$core.Deprecated('This field is deprecated.')
   set version(LogMetric_ApiVersion v) {
     setField(4, v);
   }
 
-  bool hasVersion() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasVersion() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearVersion() => clearField(4);
 
-  $google$api.MetricDescriptor get metricDescriptor => $_getN(4);
-  set metricDescriptor($google$api.MetricDescriptor v) {
+  $0.MetricDescriptor get metricDescriptor => $_getN(4);
+  set metricDescriptor($0.MetricDescriptor v) {
     setField(5, v);
   }
 
-  bool hasMetricDescriptor() => $_has(4);
+  $core.bool hasMetricDescriptor() => $_has(4);
   void clearMetricDescriptor() => clearField(5);
 
-  String get valueExtractor => $_getS(5, '');
-  set valueExtractor(String v) {
+  $core.String get valueExtractor => $_getS(5, '');
+  set valueExtractor($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasValueExtractor() => $_has(5);
+  $core.bool hasValueExtractor() => $_has(5);
   void clearValueExtractor() => clearField(6);
 
-  List<LogMetric_LabelExtractorsEntry> get labelExtractors => $_getList(6);
+  $core.Map<$core.String, $core.String> get labelExtractors => $_getMap(6);
 
-  $google$api.Distribution_BucketOptions get bucketOptions => $_getN(7);
-  set bucketOptions($google$api.Distribution_BucketOptions v) {
+  $1.Distribution_BucketOptions get bucketOptions => $_getN(7);
+  set bucketOptions($1.Distribution_BucketOptions v) {
     setField(8, v);
   }
 
-  bool hasBucketOptions() => $_has(7);
+  $core.bool hasBucketOptions() => $_has(7);
   void clearBucketOptions() => clearField(8);
 }
 
-class _ReadonlyLogMetric extends LogMetric with ReadonlyMessageMixin {}
-
-class ListLogMetricsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListLogMetricsRequest')
+class ListLogMetricsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLogMetricsRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListLogMetricsRequest() : super();
-  ListLogMetricsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListLogMetricsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListLogMetricsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListLogMetricsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListLogMetricsRequest clone() =>
-      new ListLogMetricsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListLogMetricsRequest create() => new ListLogMetricsRequest();
-  static PbList<ListLogMetricsRequest> createRepeated() =>
-      new PbList<ListLogMetricsRequest>();
-  static ListLogMetricsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListLogMetricsRequest();
-    return _defaultInstance;
-  }
-
+      ListLogMetricsRequest()..mergeFromMessage(this);
+  ListLogMetricsRequest copyWith(
+          void Function(ListLogMetricsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListLogMetricsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListLogMetricsRequest create() => ListLogMetricsRequest();
+  ListLogMetricsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListLogMetricsRequest> createRepeated() =>
+      $pb.PbList<ListLogMetricsRequest>();
+  static ListLogMetricsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListLogMetricsRequest _defaultInstance;
-  static void $checkItem(ListLogMetricsRequest v) {
-    if (v is! ListLogMetricsRequest)
-      checkItemFailed(v, 'ListLogMetricsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
-class _ReadonlyListLogMetricsRequest extends ListLogMetricsRequest
-    with ReadonlyMessageMixin {}
-
-class ListLogMetricsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListLogMetricsResponse')
-    ..pp<LogMetric>(
-        1, 'metrics', PbFieldType.PM, LogMetric.$checkItem, LogMetric.create)
+class ListLogMetricsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLogMetricsResponse',
+      package: const $pb.PackageName('google.logging.v2'))
+    ..pc<LogMetric>(1, 'metrics', $pb.PbFieldType.PM, LogMetric.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListLogMetricsResponse() : super();
-  ListLogMetricsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListLogMetricsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListLogMetricsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListLogMetricsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListLogMetricsResponse clone() =>
-      new ListLogMetricsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListLogMetricsResponse create() => new ListLogMetricsResponse();
-  static PbList<ListLogMetricsResponse> createRepeated() =>
-      new PbList<ListLogMetricsResponse>();
-  static ListLogMetricsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListLogMetricsResponse();
-    return _defaultInstance;
-  }
-
+      ListLogMetricsResponse()..mergeFromMessage(this);
+  ListLogMetricsResponse copyWith(
+          void Function(ListLogMetricsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListLogMetricsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListLogMetricsResponse create() => ListLogMetricsResponse();
+  ListLogMetricsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListLogMetricsResponse> createRepeated() =>
+      $pb.PbList<ListLogMetricsResponse>();
+  static ListLogMetricsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListLogMetricsResponse _defaultInstance;
-  static void $checkItem(ListLogMetricsResponse v) {
-    if (v is! ListLogMetricsResponse)
-      checkItemFailed(v, 'ListLogMetricsResponse');
-  }
 
-  List<LogMetric> get metrics => $_getList(0);
+  $core.List<LogMetric> get metrics => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListLogMetricsResponse extends ListLogMetricsResponse
-    with ReadonlyMessageMixin {}
-
-class GetLogMetricRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetLogMetricRequest')
+class GetLogMetricRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetLogMetricRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'metricName')
     ..hasRequiredFields = false;
 
   GetLogMetricRequest() : super();
-  GetLogMetricRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetLogMetricRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetLogMetricRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetLogMetricRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetLogMetricRequest clone() =>
-      new GetLogMetricRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetLogMetricRequest create() => new GetLogMetricRequest();
-  static PbList<GetLogMetricRequest> createRepeated() =>
-      new PbList<GetLogMetricRequest>();
-  static GetLogMetricRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetLogMetricRequest();
-    return _defaultInstance;
-  }
-
+  GetLogMetricRequest clone() => GetLogMetricRequest()..mergeFromMessage(this);
+  GetLogMetricRequest copyWith(void Function(GetLogMetricRequest) updates) =>
+      super.copyWith((message) => updates(message as GetLogMetricRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetLogMetricRequest create() => GetLogMetricRequest();
+  GetLogMetricRequest createEmptyInstance() => create();
+  static $pb.PbList<GetLogMetricRequest> createRepeated() =>
+      $pb.PbList<GetLogMetricRequest>();
+  static GetLogMetricRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetLogMetricRequest _defaultInstance;
-  static void $checkItem(GetLogMetricRequest v) {
-    if (v is! GetLogMetricRequest) checkItemFailed(v, 'GetLogMetricRequest');
-  }
 
-  String get metricName => $_getS(0, '');
-  set metricName(String v) {
+  $core.String get metricName => $_getS(0, '');
+  set metricName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasMetricName() => $_has(0);
+  $core.bool hasMetricName() => $_has(0);
   void clearMetricName() => clearField(1);
 }
 
-class _ReadonlyGetLogMetricRequest extends GetLogMetricRequest
-    with ReadonlyMessageMixin {}
-
-class CreateLogMetricRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateLogMetricRequest')
+class CreateLogMetricRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateLogMetricRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'parent')
     ..a<LogMetric>(
-        2, 'metric', PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
+        2, 'metric', $pb.PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
     ..hasRequiredFields = false;
 
   CreateLogMetricRequest() : super();
-  CreateLogMetricRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateLogMetricRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateLogMetricRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateLogMetricRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateLogMetricRequest clone() =>
-      new CreateLogMetricRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateLogMetricRequest create() => new CreateLogMetricRequest();
-  static PbList<CreateLogMetricRequest> createRepeated() =>
-      new PbList<CreateLogMetricRequest>();
-  static CreateLogMetricRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateLogMetricRequest();
-    return _defaultInstance;
-  }
-
+      CreateLogMetricRequest()..mergeFromMessage(this);
+  CreateLogMetricRequest copyWith(
+          void Function(CreateLogMetricRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateLogMetricRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateLogMetricRequest create() => CreateLogMetricRequest();
+  CreateLogMetricRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateLogMetricRequest> createRepeated() =>
+      $pb.PbList<CreateLogMetricRequest>();
+  static CreateLogMetricRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateLogMetricRequest _defaultInstance;
-  static void $checkItem(CreateLogMetricRequest v) {
-    if (v is! CreateLogMetricRequest)
-      checkItemFailed(v, 'CreateLogMetricRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   LogMetric get metric => $_getN(1);
@@ -376,51 +301,45 @@ class CreateLogMetricRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasMetric() => $_has(1);
+  $core.bool hasMetric() => $_has(1);
   void clearMetric() => clearField(2);
 }
 
-class _ReadonlyCreateLogMetricRequest extends CreateLogMetricRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateLogMetricRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateLogMetricRequest')
+class UpdateLogMetricRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateLogMetricRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'metricName')
     ..a<LogMetric>(
-        2, 'metric', PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
+        2, 'metric', $pb.PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
     ..hasRequiredFields = false;
 
   UpdateLogMetricRequest() : super();
-  UpdateLogMetricRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateLogMetricRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateLogMetricRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateLogMetricRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateLogMetricRequest clone() =>
-      new UpdateLogMetricRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateLogMetricRequest create() => new UpdateLogMetricRequest();
-  static PbList<UpdateLogMetricRequest> createRepeated() =>
-      new PbList<UpdateLogMetricRequest>();
-  static UpdateLogMetricRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateLogMetricRequest();
-    return _defaultInstance;
-  }
-
+      UpdateLogMetricRequest()..mergeFromMessage(this);
+  UpdateLogMetricRequest copyWith(
+          void Function(UpdateLogMetricRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateLogMetricRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateLogMetricRequest create() => UpdateLogMetricRequest();
+  UpdateLogMetricRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateLogMetricRequest> createRepeated() =>
+      $pb.PbList<UpdateLogMetricRequest>();
+  static UpdateLogMetricRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateLogMetricRequest _defaultInstance;
-  static void $checkItem(UpdateLogMetricRequest v) {
-    if (v is! UpdateLogMetricRequest)
-      checkItemFailed(v, 'UpdateLogMetricRequest');
-  }
 
-  String get metricName => $_getS(0, '');
-  set metricName(String v) {
+  $core.String get metricName => $_getS(0, '');
+  set metricName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasMetricName() => $_has(0);
+  $core.bool hasMetricName() => $_has(0);
   void clearMetricName() => clearField(1);
 
   LogMetric get metric => $_getN(1);
@@ -428,91 +347,82 @@ class UpdateLogMetricRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasMetric() => $_has(1);
+  $core.bool hasMetric() => $_has(1);
   void clearMetric() => clearField(2);
 }
 
-class _ReadonlyUpdateLogMetricRequest extends UpdateLogMetricRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteLogMetricRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteLogMetricRequest')
+class DeleteLogMetricRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteLogMetricRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'metricName')
     ..hasRequiredFields = false;
 
   DeleteLogMetricRequest() : super();
-  DeleteLogMetricRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteLogMetricRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteLogMetricRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteLogMetricRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteLogMetricRequest clone() =>
-      new DeleteLogMetricRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteLogMetricRequest create() => new DeleteLogMetricRequest();
-  static PbList<DeleteLogMetricRequest> createRepeated() =>
-      new PbList<DeleteLogMetricRequest>();
-  static DeleteLogMetricRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteLogMetricRequest();
-    return _defaultInstance;
-  }
-
+      DeleteLogMetricRequest()..mergeFromMessage(this);
+  DeleteLogMetricRequest copyWith(
+          void Function(DeleteLogMetricRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteLogMetricRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteLogMetricRequest create() => DeleteLogMetricRequest();
+  DeleteLogMetricRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteLogMetricRequest> createRepeated() =>
+      $pb.PbList<DeleteLogMetricRequest>();
+  static DeleteLogMetricRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteLogMetricRequest _defaultInstance;
-  static void $checkItem(DeleteLogMetricRequest v) {
-    if (v is! DeleteLogMetricRequest)
-      checkItemFailed(v, 'DeleteLogMetricRequest');
-  }
 
-  String get metricName => $_getS(0, '');
-  set metricName(String v) {
+  $core.String get metricName => $_getS(0, '');
+  set metricName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasMetricName() => $_has(0);
+  $core.bool hasMetricName() => $_has(0);
   void clearMetricName() => clearField(1);
 }
 
-class _ReadonlyDeleteLogMetricRequest extends DeleteLogMetricRequest
-    with ReadonlyMessageMixin {}
-
 class MetricsServiceV2Api {
-  RpcClient _client;
+  $pb.RpcClient _client;
   MetricsServiceV2Api(this._client);
 
-  Future<ListLogMetricsResponse> listLogMetrics(
-      ClientContext ctx, ListLogMetricsRequest request) {
-    var emptyResponse = new ListLogMetricsResponse();
+  $async.Future<ListLogMetricsResponse> listLogMetrics(
+      $pb.ClientContext ctx, ListLogMetricsRequest request) {
+    var emptyResponse = ListLogMetricsResponse();
     return _client.invoke<ListLogMetricsResponse>(
         ctx, 'MetricsServiceV2', 'ListLogMetrics', request, emptyResponse);
   }
 
-  Future<LogMetric> getLogMetric(
-      ClientContext ctx, GetLogMetricRequest request) {
-    var emptyResponse = new LogMetric();
+  $async.Future<LogMetric> getLogMetric(
+      $pb.ClientContext ctx, GetLogMetricRequest request) {
+    var emptyResponse = LogMetric();
     return _client.invoke<LogMetric>(
         ctx, 'MetricsServiceV2', 'GetLogMetric', request, emptyResponse);
   }
 
-  Future<LogMetric> createLogMetric(
-      ClientContext ctx, CreateLogMetricRequest request) {
-    var emptyResponse = new LogMetric();
+  $async.Future<LogMetric> createLogMetric(
+      $pb.ClientContext ctx, CreateLogMetricRequest request) {
+    var emptyResponse = LogMetric();
     return _client.invoke<LogMetric>(
         ctx, 'MetricsServiceV2', 'CreateLogMetric', request, emptyResponse);
   }
 
-  Future<LogMetric> updateLogMetric(
-      ClientContext ctx, UpdateLogMetricRequest request) {
-    var emptyResponse = new LogMetric();
+  $async.Future<LogMetric> updateLogMetric(
+      $pb.ClientContext ctx, UpdateLogMetricRequest request) {
+    var emptyResponse = LogMetric();
     return _client.invoke<LogMetric>(
         ctx, 'MetricsServiceV2', 'UpdateLogMetric', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> deleteLogMetric(
-      ClientContext ctx, DeleteLogMetricRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$2.Empty> deleteLogMetric(
+      $pb.ClientContext ctx, DeleteLogMetricRequest request) {
+    var emptyResponse = $2.Empty();
+    return _client.invoke<$2.Empty>(
         ctx, 'MetricsServiceV2', 'DeleteLogMetric', request, emptyResponse);
   }
 }

@@ -1,34 +1,33 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/containeranalysis/v1alpha1/bill_of_materials.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class PackageManager_Architecture extends ProtobufEnum {
+class PackageManager_Architecture extends $pb.ProtobufEnum {
   static const PackageManager_Architecture ARCHITECTURE_UNSPECIFIED =
-      const PackageManager_Architecture._(0, 'ARCHITECTURE_UNSPECIFIED');
+      PackageManager_Architecture._(0, 'ARCHITECTURE_UNSPECIFIED');
   static const PackageManager_Architecture X86 =
-      const PackageManager_Architecture._(1, 'X86');
+      PackageManager_Architecture._(1, 'X86');
   static const PackageManager_Architecture X64 =
-      const PackageManager_Architecture._(2, 'X64');
+      PackageManager_Architecture._(2, 'X64');
 
-  static const List<PackageManager_Architecture> values =
-      const <PackageManager_Architecture>[
+  static const $core.List<PackageManager_Architecture> values =
+      <PackageManager_Architecture>[
     ARCHITECTURE_UNSPECIFIED,
     X86,
     X64,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PackageManager_Architecture valueOf(int value) =>
-      _byValue[value] as PackageManager_Architecture;
-  static void $checkItem(PackageManager_Architecture v) {
-    if (v is! PackageManager_Architecture)
-      checkItemFailed(v, 'PackageManager_Architecture');
-  }
+  static final $core.Map<$core.int, PackageManager_Architecture> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PackageManager_Architecture valueOf($core.int value) =>
+      _byValue[value];
 
-  const PackageManager_Architecture._(int v, String n) : super(v, n);
+  const PackageManager_Architecture._($core.int v, $core.String n)
+      : super(v, n);
 }

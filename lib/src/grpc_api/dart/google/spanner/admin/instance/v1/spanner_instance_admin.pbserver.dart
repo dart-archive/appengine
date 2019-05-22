@@ -1,71 +1,74 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/admin/instance/v1/spanner_instance_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'spanner_instance_admin.pb.dart';
-import '../../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../../../iam/v1/policy.pb.dart' as $google$iam$v1;
+import '../../../../longrunning/operations.pb.dart' as $2;
+import '../../../../protobuf/empty.pb.dart' as $3;
+import '../../../../iam/v1/iam_policy.pb.dart' as $4;
+import '../../../../iam/v1/policy.pb.dart' as $5;
 import 'spanner_instance_admin.pbjson.dart';
 
 export 'spanner_instance_admin.pb.dart';
 
-abstract class InstanceAdminServiceBase extends GeneratedService {
-  Future<ListInstanceConfigsResponse> listInstanceConfigs(
-      ServerContext ctx, ListInstanceConfigsRequest request);
-  Future<InstanceConfig> getInstanceConfig(
-      ServerContext ctx, GetInstanceConfigRequest request);
-  Future<ListInstancesResponse> listInstances(
-      ServerContext ctx, ListInstancesRequest request);
-  Future<Instance> getInstance(ServerContext ctx, GetInstanceRequest request);
-  Future<$google$longrunning.Operation> createInstance(
-      ServerContext ctx, CreateInstanceRequest request);
-  Future<$google$longrunning.Operation> updateInstance(
-      ServerContext ctx, UpdateInstanceRequest request);
-  Future<$google$protobuf.Empty> deleteInstance(
-      ServerContext ctx, DeleteInstanceRequest request);
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
+abstract class InstanceAdminServiceBase extends $pb.GeneratedService {
+  $async.Future<ListInstanceConfigsResponse> listInstanceConfigs(
+      $pb.ServerContext ctx, ListInstanceConfigsRequest request);
+  $async.Future<InstanceConfig> getInstanceConfig(
+      $pb.ServerContext ctx, GetInstanceConfigRequest request);
+  $async.Future<ListInstancesResponse> listInstances(
+      $pb.ServerContext ctx, ListInstancesRequest request);
+  $async.Future<Instance> getInstance(
+      $pb.ServerContext ctx, GetInstanceRequest request);
+  $async.Future<$2.Operation> createInstance(
+      $pb.ServerContext ctx, CreateInstanceRequest request);
+  $async.Future<$2.Operation> updateInstance(
+      $pb.ServerContext ctx, UpdateInstanceRequest request);
+  $async.Future<$3.Empty> deleteInstance(
+      $pb.ServerContext ctx, DeleteInstanceRequest request);
+  $async.Future<$5.Policy> setIamPolicy(
+      $pb.ServerContext ctx, $4.SetIamPolicyRequest request);
+  $async.Future<$5.Policy> getIamPolicy(
+      $pb.ServerContext ctx, $4.GetIamPolicyRequest request);
+  $async.Future<$4.TestIamPermissionsResponse> testIamPermissions(
+      $pb.ServerContext ctx, $4.TestIamPermissionsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListInstanceConfigs':
-        return new ListInstanceConfigsRequest();
+        return ListInstanceConfigsRequest();
       case 'GetInstanceConfig':
-        return new GetInstanceConfigRequest();
+        return GetInstanceConfigRequest();
       case 'ListInstances':
-        return new ListInstancesRequest();
+        return ListInstancesRequest();
       case 'GetInstance':
-        return new GetInstanceRequest();
+        return GetInstanceRequest();
       case 'CreateInstance':
-        return new CreateInstanceRequest();
+        return CreateInstanceRequest();
       case 'UpdateInstance':
-        return new UpdateInstanceRequest();
+        return UpdateInstanceRequest();
       case 'DeleteInstance':
-        return new DeleteInstanceRequest();
+        return DeleteInstanceRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $4.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $4.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $4.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListInstanceConfigs':
         return this.listInstanceConfigs(ctx, request);
@@ -88,11 +91,12 @@ abstract class InstanceAdminServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => InstanceAdmin$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      InstanceAdmin$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      InstanceAdminServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => InstanceAdminServiceBase$messageJson;
 }

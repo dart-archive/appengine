@@ -1,973 +1,863 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/websecurityscanner/v1alpha/web_security_scanner.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'scan_config.pb.dart';
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import 'scan_run.pb.dart';
-import 'crawled_url.pb.dart';
-import 'finding.pb.dart';
-import 'finding_type_stats.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'scan_config.pb.dart' as $0;
+import '../../../protobuf/field_mask.pb.dart' as $1;
+import 'scan_run.pb.dart' as $2;
+import 'crawled_url.pb.dart' as $3;
+import 'finding.pb.dart' as $4;
+import 'finding_type_stats.pb.dart' as $5;
+import '../../../protobuf/empty.pb.dart' as $6;
 
-class CreateScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateScanConfigRequest')
+class CreateScanConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateScanConfigRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'parent')
-    ..a<ScanConfig>(2, 'scanConfig', PbFieldType.OM, ScanConfig.getDefault,
-        ScanConfig.create)
+    ..a<$0.ScanConfig>(2, 'scanConfig', $pb.PbFieldType.OM,
+        $0.ScanConfig.getDefault, $0.ScanConfig.create)
     ..hasRequiredFields = false;
 
   CreateScanConfigRequest() : super();
-  CreateScanConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateScanConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateScanConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateScanConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateScanConfigRequest clone() =>
-      new CreateScanConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateScanConfigRequest create() => new CreateScanConfigRequest();
-  static PbList<CreateScanConfigRequest> createRepeated() =>
-      new PbList<CreateScanConfigRequest>();
-  static CreateScanConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateScanConfigRequest();
-    return _defaultInstance;
-  }
-
+      CreateScanConfigRequest()..mergeFromMessage(this);
+  CreateScanConfigRequest copyWith(
+          void Function(CreateScanConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateScanConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateScanConfigRequest create() => CreateScanConfigRequest();
+  CreateScanConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateScanConfigRequest> createRepeated() =>
+      $pb.PbList<CreateScanConfigRequest>();
+  static CreateScanConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateScanConfigRequest _defaultInstance;
-  static void $checkItem(CreateScanConfigRequest v) {
-    if (v is! CreateScanConfigRequest)
-      checkItemFailed(v, 'CreateScanConfigRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  ScanConfig get scanConfig => $_getN(1);
-  set scanConfig(ScanConfig v) {
+  $0.ScanConfig get scanConfig => $_getN(1);
+  set scanConfig($0.ScanConfig v) {
     setField(2, v);
   }
 
-  bool hasScanConfig() => $_has(1);
+  $core.bool hasScanConfig() => $_has(1);
   void clearScanConfig() => clearField(2);
 }
 
-class _ReadonlyCreateScanConfigRequest extends CreateScanConfigRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteScanConfigRequest')
+class DeleteScanConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteScanConfigRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteScanConfigRequest() : super();
-  DeleteScanConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteScanConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteScanConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteScanConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteScanConfigRequest clone() =>
-      new DeleteScanConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteScanConfigRequest create() => new DeleteScanConfigRequest();
-  static PbList<DeleteScanConfigRequest> createRepeated() =>
-      new PbList<DeleteScanConfigRequest>();
-  static DeleteScanConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteScanConfigRequest();
-    return _defaultInstance;
-  }
-
+      DeleteScanConfigRequest()..mergeFromMessage(this);
+  DeleteScanConfigRequest copyWith(
+          void Function(DeleteScanConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteScanConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteScanConfigRequest create() => DeleteScanConfigRequest();
+  DeleteScanConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteScanConfigRequest> createRepeated() =>
+      $pb.PbList<DeleteScanConfigRequest>();
+  static DeleteScanConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteScanConfigRequest _defaultInstance;
-  static void $checkItem(DeleteScanConfigRequest v) {
-    if (v is! DeleteScanConfigRequest)
-      checkItemFailed(v, 'DeleteScanConfigRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteScanConfigRequest extends DeleteScanConfigRequest
-    with ReadonlyMessageMixin {}
-
-class GetScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetScanConfigRequest')
+class GetScanConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetScanConfigRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetScanConfigRequest() : super();
-  GetScanConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetScanConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetScanConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetScanConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetScanConfigRequest clone() =>
-      new GetScanConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetScanConfigRequest create() => new GetScanConfigRequest();
-  static PbList<GetScanConfigRequest> createRepeated() =>
-      new PbList<GetScanConfigRequest>();
-  static GetScanConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetScanConfigRequest();
-    return _defaultInstance;
-  }
-
+      GetScanConfigRequest()..mergeFromMessage(this);
+  GetScanConfigRequest copyWith(void Function(GetScanConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as GetScanConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetScanConfigRequest create() => GetScanConfigRequest();
+  GetScanConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetScanConfigRequest> createRepeated() =>
+      $pb.PbList<GetScanConfigRequest>();
+  static GetScanConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetScanConfigRequest _defaultInstance;
-  static void $checkItem(GetScanConfigRequest v) {
-    if (v is! GetScanConfigRequest) checkItemFailed(v, 'GetScanConfigRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetScanConfigRequest extends GetScanConfigRequest
-    with ReadonlyMessageMixin {}
-
-class ListScanConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListScanConfigsRequest')
+class ListScanConfigsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanConfigsRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListScanConfigsRequest() : super();
-  ListScanConfigsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListScanConfigsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListScanConfigsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListScanConfigsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListScanConfigsRequest clone() =>
-      new ListScanConfigsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListScanConfigsRequest create() => new ListScanConfigsRequest();
-  static PbList<ListScanConfigsRequest> createRepeated() =>
-      new PbList<ListScanConfigsRequest>();
-  static ListScanConfigsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListScanConfigsRequest();
-    return _defaultInstance;
-  }
-
+      ListScanConfigsRequest()..mergeFromMessage(this);
+  ListScanConfigsRequest copyWith(
+          void Function(ListScanConfigsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListScanConfigsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListScanConfigsRequest create() => ListScanConfigsRequest();
+  ListScanConfigsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListScanConfigsRequest> createRepeated() =>
+      $pb.PbList<ListScanConfigsRequest>();
+  static ListScanConfigsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListScanConfigsRequest _defaultInstance;
-  static void $checkItem(ListScanConfigsRequest v) {
-    if (v is! ListScanConfigsRequest)
-      checkItemFailed(v, 'ListScanConfigsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
-class _ReadonlyListScanConfigsRequest extends ListScanConfigsRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateScanConfigRequest')
-    ..a<ScanConfig>(2, 'scanConfig', PbFieldType.OM, ScanConfig.getDefault,
-        ScanConfig.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+class UpdateScanConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateScanConfigRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+    ..a<$0.ScanConfig>(2, 'scanConfig', $pb.PbFieldType.OM,
+        $0.ScanConfig.getDefault, $0.ScanConfig.create)
+    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateScanConfigRequest() : super();
-  UpdateScanConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateScanConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateScanConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateScanConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateScanConfigRequest clone() =>
-      new UpdateScanConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateScanConfigRequest create() => new UpdateScanConfigRequest();
-  static PbList<UpdateScanConfigRequest> createRepeated() =>
-      new PbList<UpdateScanConfigRequest>();
-  static UpdateScanConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateScanConfigRequest();
-    return _defaultInstance;
-  }
-
+      UpdateScanConfigRequest()..mergeFromMessage(this);
+  UpdateScanConfigRequest copyWith(
+          void Function(UpdateScanConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateScanConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateScanConfigRequest create() => UpdateScanConfigRequest();
+  UpdateScanConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateScanConfigRequest> createRepeated() =>
+      $pb.PbList<UpdateScanConfigRequest>();
+  static UpdateScanConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateScanConfigRequest _defaultInstance;
-  static void $checkItem(UpdateScanConfigRequest v) {
-    if (v is! UpdateScanConfigRequest)
-      checkItemFailed(v, 'UpdateScanConfigRequest');
-  }
 
-  ScanConfig get scanConfig => $_getN(0);
-  set scanConfig(ScanConfig v) {
+  $0.ScanConfig get scanConfig => $_getN(0);
+  set scanConfig($0.ScanConfig v) {
     setField(2, v);
   }
 
-  bool hasScanConfig() => $_has(0);
+  $core.bool hasScanConfig() => $_has(0);
   void clearScanConfig() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(1);
-  set updateMask($google$protobuf.FieldMask v) {
+  $1.FieldMask get updateMask => $_getN(1);
+  set updateMask($1.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(1);
+  $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateScanConfigRequest extends UpdateScanConfigRequest
-    with ReadonlyMessageMixin {}
-
-class ListScanConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListScanConfigsResponse')
-    ..pp<ScanConfig>(1, 'scanConfigs', PbFieldType.PM, ScanConfig.$checkItem,
-        ScanConfig.create)
+class ListScanConfigsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanConfigsResponse',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+    ..pc<$0.ScanConfig>(
+        1, 'scanConfigs', $pb.PbFieldType.PM, $0.ScanConfig.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListScanConfigsResponse() : super();
-  ListScanConfigsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListScanConfigsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListScanConfigsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListScanConfigsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListScanConfigsResponse clone() =>
-      new ListScanConfigsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListScanConfigsResponse create() => new ListScanConfigsResponse();
-  static PbList<ListScanConfigsResponse> createRepeated() =>
-      new PbList<ListScanConfigsResponse>();
-  static ListScanConfigsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListScanConfigsResponse();
-    return _defaultInstance;
-  }
-
+      ListScanConfigsResponse()..mergeFromMessage(this);
+  ListScanConfigsResponse copyWith(
+          void Function(ListScanConfigsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListScanConfigsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListScanConfigsResponse create() => ListScanConfigsResponse();
+  ListScanConfigsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListScanConfigsResponse> createRepeated() =>
+      $pb.PbList<ListScanConfigsResponse>();
+  static ListScanConfigsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListScanConfigsResponse _defaultInstance;
-  static void $checkItem(ListScanConfigsResponse v) {
-    if (v is! ListScanConfigsResponse)
-      checkItemFailed(v, 'ListScanConfigsResponse');
-  }
 
-  List<ScanConfig> get scanConfigs => $_getList(0);
+  $core.List<$0.ScanConfig> get scanConfigs => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListScanConfigsResponse extends ListScanConfigsResponse
-    with ReadonlyMessageMixin {}
-
-class StartScanRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StartScanRunRequest')
+class StartScanRunRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StartScanRunRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   StartScanRunRequest() : super();
-  StartScanRunRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StartScanRunRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StartScanRunRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StartScanRunRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StartScanRunRequest clone() =>
-      new StartScanRunRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StartScanRunRequest create() => new StartScanRunRequest();
-  static PbList<StartScanRunRequest> createRepeated() =>
-      new PbList<StartScanRunRequest>();
-  static StartScanRunRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStartScanRunRequest();
-    return _defaultInstance;
-  }
-
+  StartScanRunRequest clone() => StartScanRunRequest()..mergeFromMessage(this);
+  StartScanRunRequest copyWith(void Function(StartScanRunRequest) updates) =>
+      super.copyWith((message) => updates(message as StartScanRunRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static StartScanRunRequest create() => StartScanRunRequest();
+  StartScanRunRequest createEmptyInstance() => create();
+  static $pb.PbList<StartScanRunRequest> createRepeated() =>
+      $pb.PbList<StartScanRunRequest>();
+  static StartScanRunRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StartScanRunRequest _defaultInstance;
-  static void $checkItem(StartScanRunRequest v) {
-    if (v is! StartScanRunRequest) checkItemFailed(v, 'StartScanRunRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyStartScanRunRequest extends StartScanRunRequest
-    with ReadonlyMessageMixin {}
-
-class GetScanRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetScanRunRequest')
+class GetScanRunRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetScanRunRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetScanRunRequest() : super();
-  GetScanRunRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetScanRunRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetScanRunRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetScanRunRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetScanRunRequest clone() => new GetScanRunRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetScanRunRequest create() => new GetScanRunRequest();
-  static PbList<GetScanRunRequest> createRepeated() =>
-      new PbList<GetScanRunRequest>();
-  static GetScanRunRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetScanRunRequest();
-    return _defaultInstance;
-  }
-
+  GetScanRunRequest clone() => GetScanRunRequest()..mergeFromMessage(this);
+  GetScanRunRequest copyWith(void Function(GetScanRunRequest) updates) =>
+      super.copyWith((message) => updates(message as GetScanRunRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetScanRunRequest create() => GetScanRunRequest();
+  GetScanRunRequest createEmptyInstance() => create();
+  static $pb.PbList<GetScanRunRequest> createRepeated() =>
+      $pb.PbList<GetScanRunRequest>();
+  static GetScanRunRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetScanRunRequest _defaultInstance;
-  static void $checkItem(GetScanRunRequest v) {
-    if (v is! GetScanRunRequest) checkItemFailed(v, 'GetScanRunRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetScanRunRequest extends GetScanRunRequest
-    with ReadonlyMessageMixin {}
-
-class ListScanRunsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListScanRunsRequest')
+class ListScanRunsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanRunsRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListScanRunsRequest() : super();
-  ListScanRunsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListScanRunsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListScanRunsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListScanRunsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListScanRunsRequest clone() =>
-      new ListScanRunsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListScanRunsRequest create() => new ListScanRunsRequest();
-  static PbList<ListScanRunsRequest> createRepeated() =>
-      new PbList<ListScanRunsRequest>();
-  static ListScanRunsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListScanRunsRequest();
-    return _defaultInstance;
-  }
-
+  ListScanRunsRequest clone() => ListScanRunsRequest()..mergeFromMessage(this);
+  ListScanRunsRequest copyWith(void Function(ListScanRunsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListScanRunsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListScanRunsRequest create() => ListScanRunsRequest();
+  ListScanRunsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListScanRunsRequest> createRepeated() =>
+      $pb.PbList<ListScanRunsRequest>();
+  static ListScanRunsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListScanRunsRequest _defaultInstance;
-  static void $checkItem(ListScanRunsRequest v) {
-    if (v is! ListScanRunsRequest) checkItemFailed(v, 'ListScanRunsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
-class _ReadonlyListScanRunsRequest extends ListScanRunsRequest
-    with ReadonlyMessageMixin {}
-
-class ListScanRunsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListScanRunsResponse')
-    ..pp<ScanRun>(
-        1, 'scanRuns', PbFieldType.PM, ScanRun.$checkItem, ScanRun.create)
+class ListScanRunsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanRunsResponse',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+    ..pc<$2.ScanRun>(1, 'scanRuns', $pb.PbFieldType.PM, $2.ScanRun.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListScanRunsResponse() : super();
-  ListScanRunsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListScanRunsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListScanRunsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListScanRunsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListScanRunsResponse clone() =>
-      new ListScanRunsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListScanRunsResponse create() => new ListScanRunsResponse();
-  static PbList<ListScanRunsResponse> createRepeated() =>
-      new PbList<ListScanRunsResponse>();
-  static ListScanRunsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListScanRunsResponse();
-    return _defaultInstance;
-  }
-
+      ListScanRunsResponse()..mergeFromMessage(this);
+  ListScanRunsResponse copyWith(void Function(ListScanRunsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListScanRunsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListScanRunsResponse create() => ListScanRunsResponse();
+  ListScanRunsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListScanRunsResponse> createRepeated() =>
+      $pb.PbList<ListScanRunsResponse>();
+  static ListScanRunsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListScanRunsResponse _defaultInstance;
-  static void $checkItem(ListScanRunsResponse v) {
-    if (v is! ListScanRunsResponse) checkItemFailed(v, 'ListScanRunsResponse');
-  }
 
-  List<ScanRun> get scanRuns => $_getList(0);
+  $core.List<$2.ScanRun> get scanRuns => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListScanRunsResponse extends ListScanRunsResponse
-    with ReadonlyMessageMixin {}
-
-class StopScanRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StopScanRunRequest')
+class StopScanRunRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StopScanRunRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   StopScanRunRequest() : super();
-  StopScanRunRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StopScanRunRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StopScanRunRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StopScanRunRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StopScanRunRequest clone() =>
-      new StopScanRunRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StopScanRunRequest create() => new StopScanRunRequest();
-  static PbList<StopScanRunRequest> createRepeated() =>
-      new PbList<StopScanRunRequest>();
-  static StopScanRunRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStopScanRunRequest();
-    return _defaultInstance;
-  }
-
+  StopScanRunRequest clone() => StopScanRunRequest()..mergeFromMessage(this);
+  StopScanRunRequest copyWith(void Function(StopScanRunRequest) updates) =>
+      super.copyWith((message) => updates(message as StopScanRunRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static StopScanRunRequest create() => StopScanRunRequest();
+  StopScanRunRequest createEmptyInstance() => create();
+  static $pb.PbList<StopScanRunRequest> createRepeated() =>
+      $pb.PbList<StopScanRunRequest>();
+  static StopScanRunRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StopScanRunRequest _defaultInstance;
-  static void $checkItem(StopScanRunRequest v) {
-    if (v is! StopScanRunRequest) checkItemFailed(v, 'StopScanRunRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyStopScanRunRequest extends StopScanRunRequest
-    with ReadonlyMessageMixin {}
-
-class ListCrawledUrlsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCrawledUrlsRequest')
+class ListCrawledUrlsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCrawledUrlsRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListCrawledUrlsRequest() : super();
-  ListCrawledUrlsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCrawledUrlsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListCrawledUrlsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCrawledUrlsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListCrawledUrlsRequest clone() =>
-      new ListCrawledUrlsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListCrawledUrlsRequest create() => new ListCrawledUrlsRequest();
-  static PbList<ListCrawledUrlsRequest> createRepeated() =>
-      new PbList<ListCrawledUrlsRequest>();
-  static ListCrawledUrlsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCrawledUrlsRequest();
-    return _defaultInstance;
-  }
-
+      ListCrawledUrlsRequest()..mergeFromMessage(this);
+  ListCrawledUrlsRequest copyWith(
+          void Function(ListCrawledUrlsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListCrawledUrlsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListCrawledUrlsRequest create() => ListCrawledUrlsRequest();
+  ListCrawledUrlsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListCrawledUrlsRequest> createRepeated() =>
+      $pb.PbList<ListCrawledUrlsRequest>();
+  static ListCrawledUrlsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListCrawledUrlsRequest _defaultInstance;
-  static void $checkItem(ListCrawledUrlsRequest v) {
-    if (v is! ListCrawledUrlsRequest)
-      checkItemFailed(v, 'ListCrawledUrlsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
-class _ReadonlyListCrawledUrlsRequest extends ListCrawledUrlsRequest
-    with ReadonlyMessageMixin {}
-
-class ListCrawledUrlsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCrawledUrlsResponse')
-    ..pp<CrawledUrl>(1, 'crawledUrls', PbFieldType.PM, CrawledUrl.$checkItem,
-        CrawledUrl.create)
+class ListCrawledUrlsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCrawledUrlsResponse',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+    ..pc<$3.CrawledUrl>(
+        1, 'crawledUrls', $pb.PbFieldType.PM, $3.CrawledUrl.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListCrawledUrlsResponse() : super();
-  ListCrawledUrlsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCrawledUrlsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListCrawledUrlsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCrawledUrlsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListCrawledUrlsResponse clone() =>
-      new ListCrawledUrlsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListCrawledUrlsResponse create() => new ListCrawledUrlsResponse();
-  static PbList<ListCrawledUrlsResponse> createRepeated() =>
-      new PbList<ListCrawledUrlsResponse>();
-  static ListCrawledUrlsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCrawledUrlsResponse();
-    return _defaultInstance;
-  }
-
+      ListCrawledUrlsResponse()..mergeFromMessage(this);
+  ListCrawledUrlsResponse copyWith(
+          void Function(ListCrawledUrlsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListCrawledUrlsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListCrawledUrlsResponse create() => ListCrawledUrlsResponse();
+  ListCrawledUrlsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListCrawledUrlsResponse> createRepeated() =>
+      $pb.PbList<ListCrawledUrlsResponse>();
+  static ListCrawledUrlsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListCrawledUrlsResponse _defaultInstance;
-  static void $checkItem(ListCrawledUrlsResponse v) {
-    if (v is! ListCrawledUrlsResponse)
-      checkItemFailed(v, 'ListCrawledUrlsResponse');
-  }
 
-  List<CrawledUrl> get crawledUrls => $_getList(0);
+  $core.List<$3.CrawledUrl> get crawledUrls => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListCrawledUrlsResponse extends ListCrawledUrlsResponse
-    with ReadonlyMessageMixin {}
-
-class GetFindingRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetFindingRequest')
+class GetFindingRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFindingRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetFindingRequest() : super();
-  GetFindingRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetFindingRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetFindingRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetFindingRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetFindingRequest clone() => new GetFindingRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetFindingRequest create() => new GetFindingRequest();
-  static PbList<GetFindingRequest> createRepeated() =>
-      new PbList<GetFindingRequest>();
-  static GetFindingRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetFindingRequest();
-    return _defaultInstance;
-  }
-
+  GetFindingRequest clone() => GetFindingRequest()..mergeFromMessage(this);
+  GetFindingRequest copyWith(void Function(GetFindingRequest) updates) =>
+      super.copyWith((message) => updates(message as GetFindingRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetFindingRequest create() => GetFindingRequest();
+  GetFindingRequest createEmptyInstance() => create();
+  static $pb.PbList<GetFindingRequest> createRepeated() =>
+      $pb.PbList<GetFindingRequest>();
+  static GetFindingRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetFindingRequest _defaultInstance;
-  static void $checkItem(GetFindingRequest v) {
-    if (v is! GetFindingRequest) checkItemFailed(v, 'GetFindingRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetFindingRequest extends GetFindingRequest
-    with ReadonlyMessageMixin {}
-
-class ListFindingsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFindingsRequest')
+class ListFindingsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFindingsRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..aOS(3, 'pageToken')
-    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListFindingsRequest() : super();
-  ListFindingsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFindingsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListFindingsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFindingsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListFindingsRequest clone() =>
-      new ListFindingsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListFindingsRequest create() => new ListFindingsRequest();
-  static PbList<ListFindingsRequest> createRepeated() =>
-      new PbList<ListFindingsRequest>();
-  static ListFindingsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFindingsRequest();
-    return _defaultInstance;
-  }
-
+  ListFindingsRequest clone() => ListFindingsRequest()..mergeFromMessage(this);
+  ListFindingsRequest copyWith(void Function(ListFindingsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListFindingsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListFindingsRequest create() => ListFindingsRequest();
+  ListFindingsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListFindingsRequest> createRepeated() =>
+      $pb.PbList<ListFindingsRequest>();
+  static ListFindingsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListFindingsRequest _defaultInstance;
-  static void $checkItem(ListFindingsRequest v) {
-    if (v is! ListFindingsRequest) checkItemFailed(v, 'ListFindingsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get filter => $_getS(1, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(1, '');
+  set filter($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasFilter() => $_has(1);
+  $core.bool hasFilter() => $_has(1);
   void clearFilter() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  int get pageSize => $_get(3, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(3, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasPageSize() => $_has(3);
+  $core.bool hasPageSize() => $_has(3);
   void clearPageSize() => clearField(4);
 }
 
-class _ReadonlyListFindingsRequest extends ListFindingsRequest
-    with ReadonlyMessageMixin {}
-
-class ListFindingsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFindingsResponse')
-    ..pp<Finding>(
-        1, 'findings', PbFieldType.PM, Finding.$checkItem, Finding.create)
+class ListFindingsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFindingsResponse',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+    ..pc<$4.Finding>(1, 'findings', $pb.PbFieldType.PM, $4.Finding.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListFindingsResponse() : super();
-  ListFindingsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFindingsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListFindingsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFindingsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListFindingsResponse clone() =>
-      new ListFindingsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListFindingsResponse create() => new ListFindingsResponse();
-  static PbList<ListFindingsResponse> createRepeated() =>
-      new PbList<ListFindingsResponse>();
-  static ListFindingsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFindingsResponse();
-    return _defaultInstance;
-  }
-
+      ListFindingsResponse()..mergeFromMessage(this);
+  ListFindingsResponse copyWith(void Function(ListFindingsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListFindingsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListFindingsResponse create() => ListFindingsResponse();
+  ListFindingsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListFindingsResponse> createRepeated() =>
+      $pb.PbList<ListFindingsResponse>();
+  static ListFindingsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListFindingsResponse _defaultInstance;
-  static void $checkItem(ListFindingsResponse v) {
-    if (v is! ListFindingsResponse) checkItemFailed(v, 'ListFindingsResponse');
-  }
 
-  List<Finding> get findings => $_getList(0);
+  $core.List<$4.Finding> get findings => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListFindingsResponse extends ListFindingsResponse
-    with ReadonlyMessageMixin {}
-
-class ListFindingTypeStatsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFindingTypeStatsRequest')
+class ListFindingTypeStatsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListFindingTypeStatsRequest',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
   ListFindingTypeStatsRequest() : super();
-  ListFindingTypeStatsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFindingTypeStatsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListFindingTypeStatsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFindingTypeStatsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListFindingTypeStatsRequest clone() =>
-      new ListFindingTypeStatsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListFindingTypeStatsRequest create() =>
-      new ListFindingTypeStatsRequest();
-  static PbList<ListFindingTypeStatsRequest> createRepeated() =>
-      new PbList<ListFindingTypeStatsRequest>();
-  static ListFindingTypeStatsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFindingTypeStatsRequest();
-    return _defaultInstance;
-  }
-
+      ListFindingTypeStatsRequest()..mergeFromMessage(this);
+  ListFindingTypeStatsRequest copyWith(
+          void Function(ListFindingTypeStatsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListFindingTypeStatsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListFindingTypeStatsRequest create() => ListFindingTypeStatsRequest();
+  ListFindingTypeStatsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListFindingTypeStatsRequest> createRepeated() =>
+      $pb.PbList<ListFindingTypeStatsRequest>();
+  static ListFindingTypeStatsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListFindingTypeStatsRequest _defaultInstance;
-  static void $checkItem(ListFindingTypeStatsRequest v) {
-    if (v is! ListFindingTypeStatsRequest)
-      checkItemFailed(v, 'ListFindingTypeStatsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 }
 
-class _ReadonlyListFindingTypeStatsRequest extends ListFindingTypeStatsRequest
-    with ReadonlyMessageMixin {}
-
-class ListFindingTypeStatsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFindingTypeStatsResponse')
-    ..pp<FindingTypeStats>(1, 'findingTypeStats', PbFieldType.PM,
-        FindingTypeStats.$checkItem, FindingTypeStats.create)
+class ListFindingTypeStatsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListFindingTypeStatsResponse',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+    ..pc<$5.FindingTypeStats>(
+        1, 'findingTypeStats', $pb.PbFieldType.PM, $5.FindingTypeStats.create)
     ..hasRequiredFields = false;
 
   ListFindingTypeStatsResponse() : super();
-  ListFindingTypeStatsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFindingTypeStatsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListFindingTypeStatsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListFindingTypeStatsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListFindingTypeStatsResponse clone() =>
-      new ListFindingTypeStatsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ListFindingTypeStatsResponse()..mergeFromMessage(this);
+  ListFindingTypeStatsResponse copyWith(
+          void Function(ListFindingTypeStatsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListFindingTypeStatsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListFindingTypeStatsResponse create() =>
-      new ListFindingTypeStatsResponse();
-  static PbList<ListFindingTypeStatsResponse> createRepeated() =>
-      new PbList<ListFindingTypeStatsResponse>();
-  static ListFindingTypeStatsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFindingTypeStatsResponse();
-    return _defaultInstance;
-  }
-
+      ListFindingTypeStatsResponse();
+  ListFindingTypeStatsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListFindingTypeStatsResponse> createRepeated() =>
+      $pb.PbList<ListFindingTypeStatsResponse>();
+  static ListFindingTypeStatsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListFindingTypeStatsResponse _defaultInstance;
-  static void $checkItem(ListFindingTypeStatsResponse v) {
-    if (v is! ListFindingTypeStatsResponse)
-      checkItemFailed(v, 'ListFindingTypeStatsResponse');
-  }
 
-  List<FindingTypeStats> get findingTypeStats => $_getList(0);
+  $core.List<$5.FindingTypeStats> get findingTypeStats => $_getList(0);
 }
 
-class _ReadonlyListFindingTypeStatsResponse extends ListFindingTypeStatsResponse
-    with ReadonlyMessageMixin {}
-
 class WebSecurityScannerApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   WebSecurityScannerApi(this._client);
 
-  Future<ScanConfig> createScanConfig(
-      ClientContext ctx, CreateScanConfigRequest request) {
-    var emptyResponse = new ScanConfig();
-    return _client.invoke<ScanConfig>(
+  $async.Future<$0.ScanConfig> createScanConfig(
+      $pb.ClientContext ctx, CreateScanConfigRequest request) {
+    var emptyResponse = $0.ScanConfig();
+    return _client.invoke<$0.ScanConfig>(
         ctx, 'WebSecurityScanner', 'CreateScanConfig', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> deleteScanConfig(
-      ClientContext ctx, DeleteScanConfigRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$6.Empty> deleteScanConfig(
+      $pb.ClientContext ctx, DeleteScanConfigRequest request) {
+    var emptyResponse = $6.Empty();
+    return _client.invoke<$6.Empty>(
         ctx, 'WebSecurityScanner', 'DeleteScanConfig', request, emptyResponse);
   }
 
-  Future<ScanConfig> getScanConfig(
-      ClientContext ctx, GetScanConfigRequest request) {
-    var emptyResponse = new ScanConfig();
-    return _client.invoke<ScanConfig>(
+  $async.Future<$0.ScanConfig> getScanConfig(
+      $pb.ClientContext ctx, GetScanConfigRequest request) {
+    var emptyResponse = $0.ScanConfig();
+    return _client.invoke<$0.ScanConfig>(
         ctx, 'WebSecurityScanner', 'GetScanConfig', request, emptyResponse);
   }
 
-  Future<ListScanConfigsResponse> listScanConfigs(
-      ClientContext ctx, ListScanConfigsRequest request) {
-    var emptyResponse = new ListScanConfigsResponse();
+  $async.Future<ListScanConfigsResponse> listScanConfigs(
+      $pb.ClientContext ctx, ListScanConfigsRequest request) {
+    var emptyResponse = ListScanConfigsResponse();
     return _client.invoke<ListScanConfigsResponse>(
         ctx, 'WebSecurityScanner', 'ListScanConfigs', request, emptyResponse);
   }
 
-  Future<ScanConfig> updateScanConfig(
-      ClientContext ctx, UpdateScanConfigRequest request) {
-    var emptyResponse = new ScanConfig();
-    return _client.invoke<ScanConfig>(
+  $async.Future<$0.ScanConfig> updateScanConfig(
+      $pb.ClientContext ctx, UpdateScanConfigRequest request) {
+    var emptyResponse = $0.ScanConfig();
+    return _client.invoke<$0.ScanConfig>(
         ctx, 'WebSecurityScanner', 'UpdateScanConfig', request, emptyResponse);
   }
 
-  Future<ScanRun> startScanRun(ClientContext ctx, StartScanRunRequest request) {
-    var emptyResponse = new ScanRun();
-    return _client.invoke<ScanRun>(
+  $async.Future<$2.ScanRun> startScanRun(
+      $pb.ClientContext ctx, StartScanRunRequest request) {
+    var emptyResponse = $2.ScanRun();
+    return _client.invoke<$2.ScanRun>(
         ctx, 'WebSecurityScanner', 'StartScanRun', request, emptyResponse);
   }
 
-  Future<ScanRun> getScanRun(ClientContext ctx, GetScanRunRequest request) {
-    var emptyResponse = new ScanRun();
-    return _client.invoke<ScanRun>(
+  $async.Future<$2.ScanRun> getScanRun(
+      $pb.ClientContext ctx, GetScanRunRequest request) {
+    var emptyResponse = $2.ScanRun();
+    return _client.invoke<$2.ScanRun>(
         ctx, 'WebSecurityScanner', 'GetScanRun', request, emptyResponse);
   }
 
-  Future<ListScanRunsResponse> listScanRuns(
-      ClientContext ctx, ListScanRunsRequest request) {
-    var emptyResponse = new ListScanRunsResponse();
+  $async.Future<ListScanRunsResponse> listScanRuns(
+      $pb.ClientContext ctx, ListScanRunsRequest request) {
+    var emptyResponse = ListScanRunsResponse();
     return _client.invoke<ListScanRunsResponse>(
         ctx, 'WebSecurityScanner', 'ListScanRuns', request, emptyResponse);
   }
 
-  Future<ScanRun> stopScanRun(ClientContext ctx, StopScanRunRequest request) {
-    var emptyResponse = new ScanRun();
-    return _client.invoke<ScanRun>(
+  $async.Future<$2.ScanRun> stopScanRun(
+      $pb.ClientContext ctx, StopScanRunRequest request) {
+    var emptyResponse = $2.ScanRun();
+    return _client.invoke<$2.ScanRun>(
         ctx, 'WebSecurityScanner', 'StopScanRun', request, emptyResponse);
   }
 
-  Future<ListCrawledUrlsResponse> listCrawledUrls(
-      ClientContext ctx, ListCrawledUrlsRequest request) {
-    var emptyResponse = new ListCrawledUrlsResponse();
+  $async.Future<ListCrawledUrlsResponse> listCrawledUrls(
+      $pb.ClientContext ctx, ListCrawledUrlsRequest request) {
+    var emptyResponse = ListCrawledUrlsResponse();
     return _client.invoke<ListCrawledUrlsResponse>(
         ctx, 'WebSecurityScanner', 'ListCrawledUrls', request, emptyResponse);
   }
 
-  Future<Finding> getFinding(ClientContext ctx, GetFindingRequest request) {
-    var emptyResponse = new Finding();
-    return _client.invoke<Finding>(
+  $async.Future<$4.Finding> getFinding(
+      $pb.ClientContext ctx, GetFindingRequest request) {
+    var emptyResponse = $4.Finding();
+    return _client.invoke<$4.Finding>(
         ctx, 'WebSecurityScanner', 'GetFinding', request, emptyResponse);
   }
 
-  Future<ListFindingsResponse> listFindings(
-      ClientContext ctx, ListFindingsRequest request) {
-    var emptyResponse = new ListFindingsResponse();
+  $async.Future<ListFindingsResponse> listFindings(
+      $pb.ClientContext ctx, ListFindingsRequest request) {
+    var emptyResponse = ListFindingsResponse();
     return _client.invoke<ListFindingsResponse>(
         ctx, 'WebSecurityScanner', 'ListFindings', request, emptyResponse);
   }
 
-  Future<ListFindingTypeStatsResponse> listFindingTypeStats(
-      ClientContext ctx, ListFindingTypeStatsRequest request) {
-    var emptyResponse = new ListFindingTypeStatsResponse();
+  $async.Future<ListFindingTypeStatsResponse> listFindingTypeStats(
+      $pb.ClientContext ctx, ListFindingTypeStatsRequest request) {
+    var emptyResponse = ListFindingTypeStatsResponse();
     return _client.invoke<ListFindingTypeStatsResponse>(ctx,
         'WebSecurityScanner', 'ListFindingTypeStats', request, emptyResponse);
   }

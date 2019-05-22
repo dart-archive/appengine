@@ -26,7 +26,7 @@ abstract class AccessTokenProvider {
 ///   https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances
 ///
 class MetadataAccessTokenProvider implements AccessTokenProvider {
-  final http.Client _httpClient = new http.Client();
+  final http.Client _httpClient = http.Client();
 
   Future<auth.AccessToken> obtainAccessToken() async {
     final auth.AccessCredentials credentials =
@@ -42,7 +42,7 @@ class MetadataAccessTokenProvider implements AccessTokenProvider {
 /// Provides oauth2 access tokens by using the provided service account
 /// credentials.
 class ServiceAccountTokenProvider implements AccessTokenProvider {
-  final http.Client _httpClient = new http.Client();
+  final http.Client _httpClient = http.Client();
   final auth.ServiceAccountCredentials _serviceAccount;
   final List<String> _scopes;
 
@@ -76,7 +76,7 @@ class LimitOutstandingRequests implements AccessTokenProvider {
   Future<auth.AccessToken> obtainAccessToken() {
     if (_completer != null) return _completer.future;
 
-    _completer = new Completer<auth.AccessToken>();
+    _completer = Completer<auth.AccessToken>();
     _provider.obtainAccessToken().then((auth.AccessToken token) {
       _completer.complete(token);
       _completer = null;

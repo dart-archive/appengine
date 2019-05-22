@@ -1,69 +1,68 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/language/v1/language_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class EncodingType extends ProtobufEnum {
-  static const EncodingType NONE = const EncodingType._(0, 'NONE');
-  static const EncodingType UTF8 = const EncodingType._(1, 'UTF8');
-  static const EncodingType UTF16 = const EncodingType._(2, 'UTF16');
-  static const EncodingType UTF32 = const EncodingType._(3, 'UTF32');
+class EncodingType extends $pb.ProtobufEnum {
+  static const EncodingType NONE = EncodingType._(0, 'NONE');
+  static const EncodingType UTF8 = EncodingType._(1, 'UTF8');
+  static const EncodingType UTF16 = EncodingType._(2, 'UTF16');
+  static const EncodingType UTF32 = EncodingType._(3, 'UTF32');
 
-  static const List<EncodingType> values = const <EncodingType>[
+  static const $core.List<EncodingType> values = <EncodingType>[
     NONE,
     UTF8,
     UTF16,
     UTF32,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static EncodingType valueOf(int value) => _byValue[value] as EncodingType;
-  static void $checkItem(EncodingType v) {
-    if (v is! EncodingType) checkItemFailed(v, 'EncodingType');
-  }
+  static final $core.Map<$core.int, EncodingType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static EncodingType valueOf($core.int value) => _byValue[value];
 
-  const EncodingType._(int v, String n) : super(v, n);
+  const EncodingType._($core.int v, $core.String n) : super(v, n);
 }
 
-class Document_Type extends ProtobufEnum {
+class Document_Type extends $pb.ProtobufEnum {
   static const Document_Type TYPE_UNSPECIFIED =
-      const Document_Type._(0, 'TYPE_UNSPECIFIED');
-  static const Document_Type PLAIN_TEXT =
-      const Document_Type._(1, 'PLAIN_TEXT');
-  static const Document_Type HTML = const Document_Type._(2, 'HTML');
+      Document_Type._(0, 'TYPE_UNSPECIFIED');
+  static const Document_Type PLAIN_TEXT = Document_Type._(1, 'PLAIN_TEXT');
+  static const Document_Type HTML = Document_Type._(2, 'HTML');
 
-  static const List<Document_Type> values = const <Document_Type>[
+  static const $core.List<Document_Type> values = <Document_Type>[
     TYPE_UNSPECIFIED,
     PLAIN_TEXT,
     HTML,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Document_Type valueOf(int value) => _byValue[value] as Document_Type;
-  static void $checkItem(Document_Type v) {
-    if (v is! Document_Type) checkItemFailed(v, 'Document_Type');
-  }
+  static final $core.Map<$core.int, Document_Type> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Document_Type valueOf($core.int value) => _byValue[value];
 
-  const Document_Type._(int v, String n) : super(v, n);
+  const Document_Type._($core.int v, $core.String n) : super(v, n);
 }
 
-class Entity_Type extends ProtobufEnum {
-  static const Entity_Type UNKNOWN = const Entity_Type._(0, 'UNKNOWN');
-  static const Entity_Type PERSON = const Entity_Type._(1, 'PERSON');
-  static const Entity_Type LOCATION = const Entity_Type._(2, 'LOCATION');
-  static const Entity_Type ORGANIZATION =
-      const Entity_Type._(3, 'ORGANIZATION');
-  static const Entity_Type EVENT = const Entity_Type._(4, 'EVENT');
-  static const Entity_Type WORK_OF_ART = const Entity_Type._(5, 'WORK_OF_ART');
-  static const Entity_Type CONSUMER_GOOD =
-      const Entity_Type._(6, 'CONSUMER_GOOD');
-  static const Entity_Type OTHER = const Entity_Type._(7, 'OTHER');
+class Entity_Type extends $pb.ProtobufEnum {
+  static const Entity_Type UNKNOWN = Entity_Type._(0, 'UNKNOWN');
+  static const Entity_Type PERSON = Entity_Type._(1, 'PERSON');
+  static const Entity_Type LOCATION = Entity_Type._(2, 'LOCATION');
+  static const Entity_Type ORGANIZATION = Entity_Type._(3, 'ORGANIZATION');
+  static const Entity_Type EVENT = Entity_Type._(4, 'EVENT');
+  static const Entity_Type WORK_OF_ART = Entity_Type._(5, 'WORK_OF_ART');
+  static const Entity_Type CONSUMER_GOOD = Entity_Type._(6, 'CONSUMER_GOOD');
+  static const Entity_Type OTHER = Entity_Type._(7, 'OTHER');
+  static const Entity_Type PHONE_NUMBER = Entity_Type._(9, 'PHONE_NUMBER');
+  static const Entity_Type ADDRESS = Entity_Type._(10, 'ADDRESS');
+  static const Entity_Type DATE = Entity_Type._(11, 'DATE');
+  static const Entity_Type NUMBER = Entity_Type._(12, 'NUMBER');
+  static const Entity_Type PRICE = Entity_Type._(13, 'PRICE');
 
-  static const List<Entity_Type> values = const <Entity_Type>[
+  static const $core.List<Entity_Type> values = <Entity_Type>[
     UNKNOWN,
     PERSON,
     LOCATION,
@@ -72,35 +71,37 @@ class Entity_Type extends ProtobufEnum {
     WORK_OF_ART,
     CONSUMER_GOOD,
     OTHER,
+    PHONE_NUMBER,
+    ADDRESS,
+    DATE,
+    NUMBER,
+    PRICE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Entity_Type valueOf(int value) => _byValue[value] as Entity_Type;
-  static void $checkItem(Entity_Type v) {
-    if (v is! Entity_Type) checkItemFailed(v, 'Entity_Type');
-  }
+  static final $core.Map<$core.int, Entity_Type> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Entity_Type valueOf($core.int value) => _byValue[value];
 
-  const Entity_Type._(int v, String n) : super(v, n);
+  const Entity_Type._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Tag extends ProtobufEnum {
-  static const PartOfSpeech_Tag UNKNOWN =
-      const PartOfSpeech_Tag._(0, 'UNKNOWN');
-  static const PartOfSpeech_Tag ADJ = const PartOfSpeech_Tag._(1, 'ADJ');
-  static const PartOfSpeech_Tag ADP = const PartOfSpeech_Tag._(2, 'ADP');
-  static const PartOfSpeech_Tag ADV = const PartOfSpeech_Tag._(3, 'ADV');
-  static const PartOfSpeech_Tag CONJ = const PartOfSpeech_Tag._(4, 'CONJ');
-  static const PartOfSpeech_Tag DET = const PartOfSpeech_Tag._(5, 'DET');
-  static const PartOfSpeech_Tag NOUN = const PartOfSpeech_Tag._(6, 'NOUN');
-  static const PartOfSpeech_Tag NUM = const PartOfSpeech_Tag._(7, 'NUM');
-  static const PartOfSpeech_Tag PRON = const PartOfSpeech_Tag._(8, 'PRON');
-  static const PartOfSpeech_Tag PRT = const PartOfSpeech_Tag._(9, 'PRT');
-  static const PartOfSpeech_Tag PUNCT = const PartOfSpeech_Tag._(10, 'PUNCT');
-  static const PartOfSpeech_Tag VERB = const PartOfSpeech_Tag._(11, 'VERB');
-  static const PartOfSpeech_Tag X = const PartOfSpeech_Tag._(12, 'X');
-  static const PartOfSpeech_Tag AFFIX = const PartOfSpeech_Tag._(13, 'AFFIX');
+class PartOfSpeech_Tag extends $pb.ProtobufEnum {
+  static const PartOfSpeech_Tag UNKNOWN = PartOfSpeech_Tag._(0, 'UNKNOWN');
+  static const PartOfSpeech_Tag ADJ = PartOfSpeech_Tag._(1, 'ADJ');
+  static const PartOfSpeech_Tag ADP = PartOfSpeech_Tag._(2, 'ADP');
+  static const PartOfSpeech_Tag ADV = PartOfSpeech_Tag._(3, 'ADV');
+  static const PartOfSpeech_Tag CONJ = PartOfSpeech_Tag._(4, 'CONJ');
+  static const PartOfSpeech_Tag DET = PartOfSpeech_Tag._(5, 'DET');
+  static const PartOfSpeech_Tag NOUN = PartOfSpeech_Tag._(6, 'NOUN');
+  static const PartOfSpeech_Tag NUM = PartOfSpeech_Tag._(7, 'NUM');
+  static const PartOfSpeech_Tag PRON = PartOfSpeech_Tag._(8, 'PRON');
+  static const PartOfSpeech_Tag PRT = PartOfSpeech_Tag._(9, 'PRT');
+  static const PartOfSpeech_Tag PUNCT = PartOfSpeech_Tag._(10, 'PUNCT');
+  static const PartOfSpeech_Tag VERB = PartOfSpeech_Tag._(11, 'VERB');
+  static const PartOfSpeech_Tag X = PartOfSpeech_Tag._(12, 'X');
+  static const PartOfSpeech_Tag AFFIX = PartOfSpeech_Tag._(13, 'AFFIX');
 
-  static const List<PartOfSpeech_Tag> values = const <PartOfSpeech_Tag>[
+  static const $core.List<PartOfSpeech_Tag> values = <PartOfSpeech_Tag>[
     UNKNOWN,
     ADJ,
     ADP,
@@ -117,76 +118,65 @@ class PartOfSpeech_Tag extends ProtobufEnum {
     AFFIX,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Tag valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Tag;
-  static void $checkItem(PartOfSpeech_Tag v) {
-    if (v is! PartOfSpeech_Tag) checkItemFailed(v, 'PartOfSpeech_Tag');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Tag> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Tag valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Tag._(int v, String n) : super(v, n);
+  const PartOfSpeech_Tag._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Aspect extends ProtobufEnum {
+class PartOfSpeech_Aspect extends $pb.ProtobufEnum {
   static const PartOfSpeech_Aspect ASPECT_UNKNOWN =
-      const PartOfSpeech_Aspect._(0, 'ASPECT_UNKNOWN');
+      PartOfSpeech_Aspect._(0, 'ASPECT_UNKNOWN');
   static const PartOfSpeech_Aspect PERFECTIVE =
-      const PartOfSpeech_Aspect._(1, 'PERFECTIVE');
+      PartOfSpeech_Aspect._(1, 'PERFECTIVE');
   static const PartOfSpeech_Aspect IMPERFECTIVE =
-      const PartOfSpeech_Aspect._(2, 'IMPERFECTIVE');
+      PartOfSpeech_Aspect._(2, 'IMPERFECTIVE');
   static const PartOfSpeech_Aspect PROGRESSIVE =
-      const PartOfSpeech_Aspect._(3, 'PROGRESSIVE');
+      PartOfSpeech_Aspect._(3, 'PROGRESSIVE');
 
-  static const List<PartOfSpeech_Aspect> values = const <PartOfSpeech_Aspect>[
+  static const $core.List<PartOfSpeech_Aspect> values = <PartOfSpeech_Aspect>[
     ASPECT_UNKNOWN,
     PERFECTIVE,
     IMPERFECTIVE,
     PROGRESSIVE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Aspect valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Aspect;
-  static void $checkItem(PartOfSpeech_Aspect v) {
-    if (v is! PartOfSpeech_Aspect) checkItemFailed(v, 'PartOfSpeech_Aspect');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Aspect> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Aspect valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Aspect._(int v, String n) : super(v, n);
+  const PartOfSpeech_Aspect._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Case extends ProtobufEnum {
+class PartOfSpeech_Case extends $pb.ProtobufEnum {
   static const PartOfSpeech_Case CASE_UNKNOWN =
-      const PartOfSpeech_Case._(0, 'CASE_UNKNOWN');
+      PartOfSpeech_Case._(0, 'CASE_UNKNOWN');
   static const PartOfSpeech_Case ACCUSATIVE =
-      const PartOfSpeech_Case._(1, 'ACCUSATIVE');
+      PartOfSpeech_Case._(1, 'ACCUSATIVE');
   static const PartOfSpeech_Case ADVERBIAL =
-      const PartOfSpeech_Case._(2, 'ADVERBIAL');
+      PartOfSpeech_Case._(2, 'ADVERBIAL');
   static const PartOfSpeech_Case COMPLEMENTIVE =
-      const PartOfSpeech_Case._(3, 'COMPLEMENTIVE');
-  static const PartOfSpeech_Case DATIVE =
-      const PartOfSpeech_Case._(4, 'DATIVE');
-  static const PartOfSpeech_Case GENITIVE =
-      const PartOfSpeech_Case._(5, 'GENITIVE');
+      PartOfSpeech_Case._(3, 'COMPLEMENTIVE');
+  static const PartOfSpeech_Case DATIVE = PartOfSpeech_Case._(4, 'DATIVE');
+  static const PartOfSpeech_Case GENITIVE = PartOfSpeech_Case._(5, 'GENITIVE');
   static const PartOfSpeech_Case INSTRUMENTAL =
-      const PartOfSpeech_Case._(6, 'INSTRUMENTAL');
-  static const PartOfSpeech_Case LOCATIVE =
-      const PartOfSpeech_Case._(7, 'LOCATIVE');
+      PartOfSpeech_Case._(6, 'INSTRUMENTAL');
+  static const PartOfSpeech_Case LOCATIVE = PartOfSpeech_Case._(7, 'LOCATIVE');
   static const PartOfSpeech_Case NOMINATIVE =
-      const PartOfSpeech_Case._(8, 'NOMINATIVE');
-  static const PartOfSpeech_Case OBLIQUE =
-      const PartOfSpeech_Case._(9, 'OBLIQUE');
+      PartOfSpeech_Case._(8, 'NOMINATIVE');
+  static const PartOfSpeech_Case OBLIQUE = PartOfSpeech_Case._(9, 'OBLIQUE');
   static const PartOfSpeech_Case PARTITIVE =
-      const PartOfSpeech_Case._(10, 'PARTITIVE');
+      PartOfSpeech_Case._(10, 'PARTITIVE');
   static const PartOfSpeech_Case PREPOSITIONAL =
-      const PartOfSpeech_Case._(11, 'PREPOSITIONAL');
+      PartOfSpeech_Case._(11, 'PREPOSITIONAL');
   static const PartOfSpeech_Case REFLEXIVE_CASE =
-      const PartOfSpeech_Case._(12, 'REFLEXIVE_CASE');
+      PartOfSpeech_Case._(12, 'REFLEXIVE_CASE');
   static const PartOfSpeech_Case RELATIVE_CASE =
-      const PartOfSpeech_Case._(13, 'RELATIVE_CASE');
-  static const PartOfSpeech_Case VOCATIVE =
-      const PartOfSpeech_Case._(14, 'VOCATIVE');
+      PartOfSpeech_Case._(13, 'RELATIVE_CASE');
+  static const PartOfSpeech_Case VOCATIVE = PartOfSpeech_Case._(14, 'VOCATIVE');
 
-  static const List<PartOfSpeech_Case> values = const <PartOfSpeech_Case>[
+  static const $core.List<PartOfSpeech_Case> values = <PartOfSpeech_Case>[
     CASE_UNKNOWN,
     ACCUSATIVE,
     ADVERBIAL,
@@ -204,40 +194,32 @@ class PartOfSpeech_Case extends ProtobufEnum {
     VOCATIVE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Case valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Case;
-  static void $checkItem(PartOfSpeech_Case v) {
-    if (v is! PartOfSpeech_Case) checkItemFailed(v, 'PartOfSpeech_Case');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Case> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Case valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Case._(int v, String n) : super(v, n);
+  const PartOfSpeech_Case._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Form extends ProtobufEnum {
+class PartOfSpeech_Form extends $pb.ProtobufEnum {
   static const PartOfSpeech_Form FORM_UNKNOWN =
-      const PartOfSpeech_Form._(0, 'FORM_UNKNOWN');
-  static const PartOfSpeech_Form ADNOMIAL =
-      const PartOfSpeech_Form._(1, 'ADNOMIAL');
+      PartOfSpeech_Form._(0, 'FORM_UNKNOWN');
+  static const PartOfSpeech_Form ADNOMIAL = PartOfSpeech_Form._(1, 'ADNOMIAL');
   static const PartOfSpeech_Form AUXILIARY =
-      const PartOfSpeech_Form._(2, 'AUXILIARY');
+      PartOfSpeech_Form._(2, 'AUXILIARY');
   static const PartOfSpeech_Form COMPLEMENTIZER =
-      const PartOfSpeech_Form._(3, 'COMPLEMENTIZER');
+      PartOfSpeech_Form._(3, 'COMPLEMENTIZER');
   static const PartOfSpeech_Form FINAL_ENDING =
-      const PartOfSpeech_Form._(4, 'FINAL_ENDING');
-  static const PartOfSpeech_Form GERUND =
-      const PartOfSpeech_Form._(5, 'GERUND');
-  static const PartOfSpeech_Form REALIS =
-      const PartOfSpeech_Form._(6, 'REALIS');
-  static const PartOfSpeech_Form IRREALIS =
-      const PartOfSpeech_Form._(7, 'IRREALIS');
-  static const PartOfSpeech_Form SHORT = const PartOfSpeech_Form._(8, 'SHORT');
-  static const PartOfSpeech_Form LONG = const PartOfSpeech_Form._(9, 'LONG');
-  static const PartOfSpeech_Form ORDER = const PartOfSpeech_Form._(10, 'ORDER');
-  static const PartOfSpeech_Form SPECIFIC =
-      const PartOfSpeech_Form._(11, 'SPECIFIC');
+      PartOfSpeech_Form._(4, 'FINAL_ENDING');
+  static const PartOfSpeech_Form GERUND = PartOfSpeech_Form._(5, 'GERUND');
+  static const PartOfSpeech_Form REALIS = PartOfSpeech_Form._(6, 'REALIS');
+  static const PartOfSpeech_Form IRREALIS = PartOfSpeech_Form._(7, 'IRREALIS');
+  static const PartOfSpeech_Form SHORT = PartOfSpeech_Form._(8, 'SHORT');
+  static const PartOfSpeech_Form LONG = PartOfSpeech_Form._(9, 'LONG');
+  static const PartOfSpeech_Form ORDER = PartOfSpeech_Form._(10, 'ORDER');
+  static const PartOfSpeech_Form SPECIFIC = PartOfSpeech_Form._(11, 'SPECIFIC');
 
-  static const List<PartOfSpeech_Form> values = const <PartOfSpeech_Form>[
+  static const $core.List<PartOfSpeech_Form> values = <PartOfSpeech_Form>[
     FORM_UNKNOWN,
     ADNOMIAL,
     AUXILIARY,
@@ -252,60 +234,52 @@ class PartOfSpeech_Form extends ProtobufEnum {
     SPECIFIC,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Form valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Form;
-  static void $checkItem(PartOfSpeech_Form v) {
-    if (v is! PartOfSpeech_Form) checkItemFailed(v, 'PartOfSpeech_Form');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Form> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Form valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Form._(int v, String n) : super(v, n);
+  const PartOfSpeech_Form._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Gender extends ProtobufEnum {
+class PartOfSpeech_Gender extends $pb.ProtobufEnum {
   static const PartOfSpeech_Gender GENDER_UNKNOWN =
-      const PartOfSpeech_Gender._(0, 'GENDER_UNKNOWN');
+      PartOfSpeech_Gender._(0, 'GENDER_UNKNOWN');
   static const PartOfSpeech_Gender FEMININE =
-      const PartOfSpeech_Gender._(1, 'FEMININE');
+      PartOfSpeech_Gender._(1, 'FEMININE');
   static const PartOfSpeech_Gender MASCULINE =
-      const PartOfSpeech_Gender._(2, 'MASCULINE');
-  static const PartOfSpeech_Gender NEUTER =
-      const PartOfSpeech_Gender._(3, 'NEUTER');
+      PartOfSpeech_Gender._(2, 'MASCULINE');
+  static const PartOfSpeech_Gender NEUTER = PartOfSpeech_Gender._(3, 'NEUTER');
 
-  static const List<PartOfSpeech_Gender> values = const <PartOfSpeech_Gender>[
+  static const $core.List<PartOfSpeech_Gender> values = <PartOfSpeech_Gender>[
     GENDER_UNKNOWN,
     FEMININE,
     MASCULINE,
     NEUTER,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Gender valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Gender;
-  static void $checkItem(PartOfSpeech_Gender v) {
-    if (v is! PartOfSpeech_Gender) checkItemFailed(v, 'PartOfSpeech_Gender');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Gender> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Gender valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Gender._(int v, String n) : super(v, n);
+  const PartOfSpeech_Gender._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Mood extends ProtobufEnum {
+class PartOfSpeech_Mood extends $pb.ProtobufEnum {
   static const PartOfSpeech_Mood MOOD_UNKNOWN =
-      const PartOfSpeech_Mood._(0, 'MOOD_UNKNOWN');
+      PartOfSpeech_Mood._(0, 'MOOD_UNKNOWN');
   static const PartOfSpeech_Mood CONDITIONAL_MOOD =
-      const PartOfSpeech_Mood._(1, 'CONDITIONAL_MOOD');
+      PartOfSpeech_Mood._(1, 'CONDITIONAL_MOOD');
   static const PartOfSpeech_Mood IMPERATIVE =
-      const PartOfSpeech_Mood._(2, 'IMPERATIVE');
+      PartOfSpeech_Mood._(2, 'IMPERATIVE');
   static const PartOfSpeech_Mood INDICATIVE =
-      const PartOfSpeech_Mood._(3, 'INDICATIVE');
+      PartOfSpeech_Mood._(3, 'INDICATIVE');
   static const PartOfSpeech_Mood INTERROGATIVE =
-      const PartOfSpeech_Mood._(4, 'INTERROGATIVE');
-  static const PartOfSpeech_Mood JUSSIVE =
-      const PartOfSpeech_Mood._(5, 'JUSSIVE');
+      PartOfSpeech_Mood._(4, 'INTERROGATIVE');
+  static const PartOfSpeech_Mood JUSSIVE = PartOfSpeech_Mood._(5, 'JUSSIVE');
   static const PartOfSpeech_Mood SUBJUNCTIVE =
-      const PartOfSpeech_Mood._(6, 'SUBJUNCTIVE');
+      PartOfSpeech_Mood._(6, 'SUBJUNCTIVE');
 
-  static const List<PartOfSpeech_Mood> values = const <PartOfSpeech_Mood>[
+  static const $core.List<PartOfSpeech_Mood> values = <PartOfSpeech_Mood>[
     MOOD_UNKNOWN,
     CONDITIONAL_MOOD,
     IMPERATIVE,
@@ -315,56 +289,45 @@ class PartOfSpeech_Mood extends ProtobufEnum {
     SUBJUNCTIVE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Mood valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Mood;
-  static void $checkItem(PartOfSpeech_Mood v) {
-    if (v is! PartOfSpeech_Mood) checkItemFailed(v, 'PartOfSpeech_Mood');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Mood> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Mood valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Mood._(int v, String n) : super(v, n);
+  const PartOfSpeech_Mood._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Number extends ProtobufEnum {
+class PartOfSpeech_Number extends $pb.ProtobufEnum {
   static const PartOfSpeech_Number NUMBER_UNKNOWN =
-      const PartOfSpeech_Number._(0, 'NUMBER_UNKNOWN');
+      PartOfSpeech_Number._(0, 'NUMBER_UNKNOWN');
   static const PartOfSpeech_Number SINGULAR =
-      const PartOfSpeech_Number._(1, 'SINGULAR');
-  static const PartOfSpeech_Number PLURAL =
-      const PartOfSpeech_Number._(2, 'PLURAL');
-  static const PartOfSpeech_Number DUAL =
-      const PartOfSpeech_Number._(3, 'DUAL');
+      PartOfSpeech_Number._(1, 'SINGULAR');
+  static const PartOfSpeech_Number PLURAL = PartOfSpeech_Number._(2, 'PLURAL');
+  static const PartOfSpeech_Number DUAL = PartOfSpeech_Number._(3, 'DUAL');
 
-  static const List<PartOfSpeech_Number> values = const <PartOfSpeech_Number>[
+  static const $core.List<PartOfSpeech_Number> values = <PartOfSpeech_Number>[
     NUMBER_UNKNOWN,
     SINGULAR,
     PLURAL,
     DUAL,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Number valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Number;
-  static void $checkItem(PartOfSpeech_Number v) {
-    if (v is! PartOfSpeech_Number) checkItemFailed(v, 'PartOfSpeech_Number');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Number> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Number valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Number._(int v, String n) : super(v, n);
+  const PartOfSpeech_Number._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Person extends ProtobufEnum {
+class PartOfSpeech_Person extends $pb.ProtobufEnum {
   static const PartOfSpeech_Person PERSON_UNKNOWN =
-      const PartOfSpeech_Person._(0, 'PERSON_UNKNOWN');
-  static const PartOfSpeech_Person FIRST =
-      const PartOfSpeech_Person._(1, 'FIRST');
-  static const PartOfSpeech_Person SECOND =
-      const PartOfSpeech_Person._(2, 'SECOND');
-  static const PartOfSpeech_Person THIRD =
-      const PartOfSpeech_Person._(3, 'THIRD');
+      PartOfSpeech_Person._(0, 'PERSON_UNKNOWN');
+  static const PartOfSpeech_Person FIRST = PartOfSpeech_Person._(1, 'FIRST');
+  static const PartOfSpeech_Person SECOND = PartOfSpeech_Person._(2, 'SECOND');
+  static const PartOfSpeech_Person THIRD = PartOfSpeech_Person._(3, 'THIRD');
   static const PartOfSpeech_Person REFLEXIVE_PERSON =
-      const PartOfSpeech_Person._(4, 'REFLEXIVE_PERSON');
+      PartOfSpeech_Person._(4, 'REFLEXIVE_PERSON');
 
-  static const List<PartOfSpeech_Person> values = const <PartOfSpeech_Person>[
+  static const $core.List<PartOfSpeech_Person> values = <PartOfSpeech_Person>[
     PERSON_UNKNOWN,
     FIRST,
     SECOND,
@@ -372,82 +335,69 @@ class PartOfSpeech_Person extends ProtobufEnum {
     REFLEXIVE_PERSON,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Person valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Person;
-  static void $checkItem(PartOfSpeech_Person v) {
-    if (v is! PartOfSpeech_Person) checkItemFailed(v, 'PartOfSpeech_Person');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Person> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Person valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Person._(int v, String n) : super(v, n);
+  const PartOfSpeech_Person._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Proper extends ProtobufEnum {
+class PartOfSpeech_Proper extends $pb.ProtobufEnum {
   static const PartOfSpeech_Proper PROPER_UNKNOWN =
-      const PartOfSpeech_Proper._(0, 'PROPER_UNKNOWN');
-  static const PartOfSpeech_Proper PROPER =
-      const PartOfSpeech_Proper._(1, 'PROPER');
+      PartOfSpeech_Proper._(0, 'PROPER_UNKNOWN');
+  static const PartOfSpeech_Proper PROPER = PartOfSpeech_Proper._(1, 'PROPER');
   static const PartOfSpeech_Proper NOT_PROPER =
-      const PartOfSpeech_Proper._(2, 'NOT_PROPER');
+      PartOfSpeech_Proper._(2, 'NOT_PROPER');
 
-  static const List<PartOfSpeech_Proper> values = const <PartOfSpeech_Proper>[
+  static const $core.List<PartOfSpeech_Proper> values = <PartOfSpeech_Proper>[
     PROPER_UNKNOWN,
     PROPER,
     NOT_PROPER,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Proper valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Proper;
-  static void $checkItem(PartOfSpeech_Proper v) {
-    if (v is! PartOfSpeech_Proper) checkItemFailed(v, 'PartOfSpeech_Proper');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Proper> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Proper valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Proper._(int v, String n) : super(v, n);
+  const PartOfSpeech_Proper._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Reciprocity extends ProtobufEnum {
+class PartOfSpeech_Reciprocity extends $pb.ProtobufEnum {
   static const PartOfSpeech_Reciprocity RECIPROCITY_UNKNOWN =
-      const PartOfSpeech_Reciprocity._(0, 'RECIPROCITY_UNKNOWN');
+      PartOfSpeech_Reciprocity._(0, 'RECIPROCITY_UNKNOWN');
   static const PartOfSpeech_Reciprocity RECIPROCAL =
-      const PartOfSpeech_Reciprocity._(1, 'RECIPROCAL');
+      PartOfSpeech_Reciprocity._(1, 'RECIPROCAL');
   static const PartOfSpeech_Reciprocity NON_RECIPROCAL =
-      const PartOfSpeech_Reciprocity._(2, 'NON_RECIPROCAL');
+      PartOfSpeech_Reciprocity._(2, 'NON_RECIPROCAL');
 
-  static const List<PartOfSpeech_Reciprocity> values =
-      const <PartOfSpeech_Reciprocity>[
+  static const $core.List<PartOfSpeech_Reciprocity> values =
+      <PartOfSpeech_Reciprocity>[
     RECIPROCITY_UNKNOWN,
     RECIPROCAL,
     NON_RECIPROCAL,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Reciprocity valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Reciprocity;
-  static void $checkItem(PartOfSpeech_Reciprocity v) {
-    if (v is! PartOfSpeech_Reciprocity)
-      checkItemFailed(v, 'PartOfSpeech_Reciprocity');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Reciprocity> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Reciprocity valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Reciprocity._(int v, String n) : super(v, n);
+  const PartOfSpeech_Reciprocity._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Tense extends ProtobufEnum {
+class PartOfSpeech_Tense extends $pb.ProtobufEnum {
   static const PartOfSpeech_Tense TENSE_UNKNOWN =
-      const PartOfSpeech_Tense._(0, 'TENSE_UNKNOWN');
+      PartOfSpeech_Tense._(0, 'TENSE_UNKNOWN');
   static const PartOfSpeech_Tense CONDITIONAL_TENSE =
-      const PartOfSpeech_Tense._(1, 'CONDITIONAL_TENSE');
-  static const PartOfSpeech_Tense FUTURE =
-      const PartOfSpeech_Tense._(2, 'FUTURE');
-  static const PartOfSpeech_Tense PAST = const PartOfSpeech_Tense._(3, 'PAST');
-  static const PartOfSpeech_Tense PRESENT =
-      const PartOfSpeech_Tense._(4, 'PRESENT');
+      PartOfSpeech_Tense._(1, 'CONDITIONAL_TENSE');
+  static const PartOfSpeech_Tense FUTURE = PartOfSpeech_Tense._(2, 'FUTURE');
+  static const PartOfSpeech_Tense PAST = PartOfSpeech_Tense._(3, 'PAST');
+  static const PartOfSpeech_Tense PRESENT = PartOfSpeech_Tense._(4, 'PRESENT');
   static const PartOfSpeech_Tense IMPERFECT =
-      const PartOfSpeech_Tense._(5, 'IMPERFECT');
+      PartOfSpeech_Tense._(5, 'IMPERFECT');
   static const PartOfSpeech_Tense PLUPERFECT =
-      const PartOfSpeech_Tense._(6, 'PLUPERFECT');
+      PartOfSpeech_Tense._(6, 'PLUPERFECT');
 
-  static const List<PartOfSpeech_Tense> values = const <PartOfSpeech_Tense>[
+  static const $core.List<PartOfSpeech_Tense> values = <PartOfSpeech_Tense>[
     TENSE_UNKNOWN,
     CONDITIONAL_TENSE,
     FUTURE,
@@ -457,207 +407,150 @@ class PartOfSpeech_Tense extends ProtobufEnum {
     PLUPERFECT,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Tense valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Tense;
-  static void $checkItem(PartOfSpeech_Tense v) {
-    if (v is! PartOfSpeech_Tense) checkItemFailed(v, 'PartOfSpeech_Tense');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Tense> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Tense valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Tense._(int v, String n) : super(v, n);
+  const PartOfSpeech_Tense._($core.int v, $core.String n) : super(v, n);
 }
 
-class PartOfSpeech_Voice extends ProtobufEnum {
+class PartOfSpeech_Voice extends $pb.ProtobufEnum {
   static const PartOfSpeech_Voice VOICE_UNKNOWN =
-      const PartOfSpeech_Voice._(0, 'VOICE_UNKNOWN');
-  static const PartOfSpeech_Voice ACTIVE =
-      const PartOfSpeech_Voice._(1, 'ACTIVE');
+      PartOfSpeech_Voice._(0, 'VOICE_UNKNOWN');
+  static const PartOfSpeech_Voice ACTIVE = PartOfSpeech_Voice._(1, 'ACTIVE');
   static const PartOfSpeech_Voice CAUSATIVE =
-      const PartOfSpeech_Voice._(2, 'CAUSATIVE');
-  static const PartOfSpeech_Voice PASSIVE =
-      const PartOfSpeech_Voice._(3, 'PASSIVE');
+      PartOfSpeech_Voice._(2, 'CAUSATIVE');
+  static const PartOfSpeech_Voice PASSIVE = PartOfSpeech_Voice._(3, 'PASSIVE');
 
-  static const List<PartOfSpeech_Voice> values = const <PartOfSpeech_Voice>[
+  static const $core.List<PartOfSpeech_Voice> values = <PartOfSpeech_Voice>[
     VOICE_UNKNOWN,
     ACTIVE,
     CAUSATIVE,
     PASSIVE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static PartOfSpeech_Voice valueOf(int value) =>
-      _byValue[value] as PartOfSpeech_Voice;
-  static void $checkItem(PartOfSpeech_Voice v) {
-    if (v is! PartOfSpeech_Voice) checkItemFailed(v, 'PartOfSpeech_Voice');
-  }
+  static final $core.Map<$core.int, PartOfSpeech_Voice> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PartOfSpeech_Voice valueOf($core.int value) => _byValue[value];
 
-  const PartOfSpeech_Voice._(int v, String n) : super(v, n);
+  const PartOfSpeech_Voice._($core.int v, $core.String n) : super(v, n);
 }
 
-class DependencyEdge_Label extends ProtobufEnum {
+class DependencyEdge_Label extends $pb.ProtobufEnum {
   static const DependencyEdge_Label UNKNOWN =
-      const DependencyEdge_Label._(0, 'UNKNOWN');
+      DependencyEdge_Label._(0, 'UNKNOWN');
   static const DependencyEdge_Label ABBREV =
-      const DependencyEdge_Label._(1, 'ABBREV');
-  static const DependencyEdge_Label ACOMP =
-      const DependencyEdge_Label._(2, 'ACOMP');
-  static const DependencyEdge_Label ADVCL =
-      const DependencyEdge_Label._(3, 'ADVCL');
+      DependencyEdge_Label._(1, 'ABBREV');
+  static const DependencyEdge_Label ACOMP = DependencyEdge_Label._(2, 'ACOMP');
+  static const DependencyEdge_Label ADVCL = DependencyEdge_Label._(3, 'ADVCL');
   static const DependencyEdge_Label ADVMOD =
-      const DependencyEdge_Label._(4, 'ADVMOD');
-  static const DependencyEdge_Label AMOD =
-      const DependencyEdge_Label._(5, 'AMOD');
-  static const DependencyEdge_Label APPOS =
-      const DependencyEdge_Label._(6, 'APPOS');
-  static const DependencyEdge_Label ATTR =
-      const DependencyEdge_Label._(7, 'ATTR');
-  static const DependencyEdge_Label AUX =
-      const DependencyEdge_Label._(8, 'AUX');
+      DependencyEdge_Label._(4, 'ADVMOD');
+  static const DependencyEdge_Label AMOD = DependencyEdge_Label._(5, 'AMOD');
+  static const DependencyEdge_Label APPOS = DependencyEdge_Label._(6, 'APPOS');
+  static const DependencyEdge_Label ATTR = DependencyEdge_Label._(7, 'ATTR');
+  static const DependencyEdge_Label AUX = DependencyEdge_Label._(8, 'AUX');
   static const DependencyEdge_Label AUXPASS =
-      const DependencyEdge_Label._(9, 'AUXPASS');
-  static const DependencyEdge_Label CC = const DependencyEdge_Label._(10, 'CC');
-  static const DependencyEdge_Label CCOMP =
-      const DependencyEdge_Label._(11, 'CCOMP');
-  static const DependencyEdge_Label CONJ =
-      const DependencyEdge_Label._(12, 'CONJ');
-  static const DependencyEdge_Label CSUBJ =
-      const DependencyEdge_Label._(13, 'CSUBJ');
+      DependencyEdge_Label._(9, 'AUXPASS');
+  static const DependencyEdge_Label CC = DependencyEdge_Label._(10, 'CC');
+  static const DependencyEdge_Label CCOMP = DependencyEdge_Label._(11, 'CCOMP');
+  static const DependencyEdge_Label CONJ = DependencyEdge_Label._(12, 'CONJ');
+  static const DependencyEdge_Label CSUBJ = DependencyEdge_Label._(13, 'CSUBJ');
   static const DependencyEdge_Label CSUBJPASS =
-      const DependencyEdge_Label._(14, 'CSUBJPASS');
-  static const DependencyEdge_Label DEP =
-      const DependencyEdge_Label._(15, 'DEP');
-  static const DependencyEdge_Label DET =
-      const DependencyEdge_Label._(16, 'DET');
+      DependencyEdge_Label._(14, 'CSUBJPASS');
+  static const DependencyEdge_Label DEP = DependencyEdge_Label._(15, 'DEP');
+  static const DependencyEdge_Label DET = DependencyEdge_Label._(16, 'DET');
   static const DependencyEdge_Label DISCOURSE =
-      const DependencyEdge_Label._(17, 'DISCOURSE');
-  static const DependencyEdge_Label DOBJ =
-      const DependencyEdge_Label._(18, 'DOBJ');
-  static const DependencyEdge_Label EXPL =
-      const DependencyEdge_Label._(19, 'EXPL');
+      DependencyEdge_Label._(17, 'DISCOURSE');
+  static const DependencyEdge_Label DOBJ = DependencyEdge_Label._(18, 'DOBJ');
+  static const DependencyEdge_Label EXPL = DependencyEdge_Label._(19, 'EXPL');
   static const DependencyEdge_Label GOESWITH =
-      const DependencyEdge_Label._(20, 'GOESWITH');
-  static const DependencyEdge_Label IOBJ =
-      const DependencyEdge_Label._(21, 'IOBJ');
-  static const DependencyEdge_Label MARK =
-      const DependencyEdge_Label._(22, 'MARK');
-  static const DependencyEdge_Label MWE =
-      const DependencyEdge_Label._(23, 'MWE');
-  static const DependencyEdge_Label MWV =
-      const DependencyEdge_Label._(24, 'MWV');
-  static const DependencyEdge_Label NEG =
-      const DependencyEdge_Label._(25, 'NEG');
-  static const DependencyEdge_Label NN = const DependencyEdge_Label._(26, 'NN');
+      DependencyEdge_Label._(20, 'GOESWITH');
+  static const DependencyEdge_Label IOBJ = DependencyEdge_Label._(21, 'IOBJ');
+  static const DependencyEdge_Label MARK = DependencyEdge_Label._(22, 'MARK');
+  static const DependencyEdge_Label MWE = DependencyEdge_Label._(23, 'MWE');
+  static const DependencyEdge_Label MWV = DependencyEdge_Label._(24, 'MWV');
+  static const DependencyEdge_Label NEG = DependencyEdge_Label._(25, 'NEG');
+  static const DependencyEdge_Label NN = DependencyEdge_Label._(26, 'NN');
   static const DependencyEdge_Label NPADVMOD =
-      const DependencyEdge_Label._(27, 'NPADVMOD');
-  static const DependencyEdge_Label NSUBJ =
-      const DependencyEdge_Label._(28, 'NSUBJ');
+      DependencyEdge_Label._(27, 'NPADVMOD');
+  static const DependencyEdge_Label NSUBJ = DependencyEdge_Label._(28, 'NSUBJ');
   static const DependencyEdge_Label NSUBJPASS =
-      const DependencyEdge_Label._(29, 'NSUBJPASS');
-  static const DependencyEdge_Label NUM =
-      const DependencyEdge_Label._(30, 'NUM');
+      DependencyEdge_Label._(29, 'NSUBJPASS');
+  static const DependencyEdge_Label NUM = DependencyEdge_Label._(30, 'NUM');
   static const DependencyEdge_Label NUMBER =
-      const DependencyEdge_Label._(31, 'NUMBER');
-  static const DependencyEdge_Label P = const DependencyEdge_Label._(32, 'P');
+      DependencyEdge_Label._(31, 'NUMBER');
+  static const DependencyEdge_Label P = DependencyEdge_Label._(32, 'P');
   static const DependencyEdge_Label PARATAXIS =
-      const DependencyEdge_Label._(33, 'PARATAXIS');
+      DependencyEdge_Label._(33, 'PARATAXIS');
   static const DependencyEdge_Label PARTMOD =
-      const DependencyEdge_Label._(34, 'PARTMOD');
-  static const DependencyEdge_Label PCOMP =
-      const DependencyEdge_Label._(35, 'PCOMP');
-  static const DependencyEdge_Label POBJ =
-      const DependencyEdge_Label._(36, 'POBJ');
-  static const DependencyEdge_Label POSS =
-      const DependencyEdge_Label._(37, 'POSS');
+      DependencyEdge_Label._(34, 'PARTMOD');
+  static const DependencyEdge_Label PCOMP = DependencyEdge_Label._(35, 'PCOMP');
+  static const DependencyEdge_Label POBJ = DependencyEdge_Label._(36, 'POBJ');
+  static const DependencyEdge_Label POSS = DependencyEdge_Label._(37, 'POSS');
   static const DependencyEdge_Label POSTNEG =
-      const DependencyEdge_Label._(38, 'POSTNEG');
+      DependencyEdge_Label._(38, 'POSTNEG');
   static const DependencyEdge_Label PRECOMP =
-      const DependencyEdge_Label._(39, 'PRECOMP');
+      DependencyEdge_Label._(39, 'PRECOMP');
   static const DependencyEdge_Label PRECONJ =
-      const DependencyEdge_Label._(40, 'PRECONJ');
+      DependencyEdge_Label._(40, 'PRECONJ');
   static const DependencyEdge_Label PREDET =
-      const DependencyEdge_Label._(41, 'PREDET');
-  static const DependencyEdge_Label PREF =
-      const DependencyEdge_Label._(42, 'PREF');
-  static const DependencyEdge_Label PREP =
-      const DependencyEdge_Label._(43, 'PREP');
-  static const DependencyEdge_Label PRONL =
-      const DependencyEdge_Label._(44, 'PRONL');
-  static const DependencyEdge_Label PRT =
-      const DependencyEdge_Label._(45, 'PRT');
-  static const DependencyEdge_Label PS = const DependencyEdge_Label._(46, 'PS');
+      DependencyEdge_Label._(41, 'PREDET');
+  static const DependencyEdge_Label PREF = DependencyEdge_Label._(42, 'PREF');
+  static const DependencyEdge_Label PREP = DependencyEdge_Label._(43, 'PREP');
+  static const DependencyEdge_Label PRONL = DependencyEdge_Label._(44, 'PRONL');
+  static const DependencyEdge_Label PRT = DependencyEdge_Label._(45, 'PRT');
+  static const DependencyEdge_Label PS = DependencyEdge_Label._(46, 'PS');
   static const DependencyEdge_Label QUANTMOD =
-      const DependencyEdge_Label._(47, 'QUANTMOD');
-  static const DependencyEdge_Label RCMOD =
-      const DependencyEdge_Label._(48, 'RCMOD');
+      DependencyEdge_Label._(47, 'QUANTMOD');
+  static const DependencyEdge_Label RCMOD = DependencyEdge_Label._(48, 'RCMOD');
   static const DependencyEdge_Label RCMODREL =
-      const DependencyEdge_Label._(49, 'RCMODREL');
-  static const DependencyEdge_Label RDROP =
-      const DependencyEdge_Label._(50, 'RDROP');
-  static const DependencyEdge_Label REF =
-      const DependencyEdge_Label._(51, 'REF');
+      DependencyEdge_Label._(49, 'RCMODREL');
+  static const DependencyEdge_Label RDROP = DependencyEdge_Label._(50, 'RDROP');
+  static const DependencyEdge_Label REF = DependencyEdge_Label._(51, 'REF');
   static const DependencyEdge_Label REMNANT =
-      const DependencyEdge_Label._(52, 'REMNANT');
+      DependencyEdge_Label._(52, 'REMNANT');
   static const DependencyEdge_Label REPARANDUM =
-      const DependencyEdge_Label._(53, 'REPARANDUM');
-  static const DependencyEdge_Label ROOT =
-      const DependencyEdge_Label._(54, 'ROOT');
-  static const DependencyEdge_Label SNUM =
-      const DependencyEdge_Label._(55, 'SNUM');
-  static const DependencyEdge_Label SUFF =
-      const DependencyEdge_Label._(56, 'SUFF');
-  static const DependencyEdge_Label TMOD =
-      const DependencyEdge_Label._(57, 'TMOD');
-  static const DependencyEdge_Label TOPIC =
-      const DependencyEdge_Label._(58, 'TOPIC');
-  static const DependencyEdge_Label VMOD =
-      const DependencyEdge_Label._(59, 'VMOD');
+      DependencyEdge_Label._(53, 'REPARANDUM');
+  static const DependencyEdge_Label ROOT = DependencyEdge_Label._(54, 'ROOT');
+  static const DependencyEdge_Label SNUM = DependencyEdge_Label._(55, 'SNUM');
+  static const DependencyEdge_Label SUFF = DependencyEdge_Label._(56, 'SUFF');
+  static const DependencyEdge_Label TMOD = DependencyEdge_Label._(57, 'TMOD');
+  static const DependencyEdge_Label TOPIC = DependencyEdge_Label._(58, 'TOPIC');
+  static const DependencyEdge_Label VMOD = DependencyEdge_Label._(59, 'VMOD');
   static const DependencyEdge_Label VOCATIVE =
-      const DependencyEdge_Label._(60, 'VOCATIVE');
-  static const DependencyEdge_Label XCOMP =
-      const DependencyEdge_Label._(61, 'XCOMP');
+      DependencyEdge_Label._(60, 'VOCATIVE');
+  static const DependencyEdge_Label XCOMP = DependencyEdge_Label._(61, 'XCOMP');
   static const DependencyEdge_Label SUFFIX =
-      const DependencyEdge_Label._(62, 'SUFFIX');
-  static const DependencyEdge_Label TITLE =
-      const DependencyEdge_Label._(63, 'TITLE');
+      DependencyEdge_Label._(62, 'SUFFIX');
+  static const DependencyEdge_Label TITLE = DependencyEdge_Label._(63, 'TITLE');
   static const DependencyEdge_Label ADVPHMOD =
-      const DependencyEdge_Label._(64, 'ADVPHMOD');
+      DependencyEdge_Label._(64, 'ADVPHMOD');
   static const DependencyEdge_Label AUXCAUS =
-      const DependencyEdge_Label._(65, 'AUXCAUS');
-  static const DependencyEdge_Label AUXVV =
-      const DependencyEdge_Label._(66, 'AUXVV');
-  static const DependencyEdge_Label DTMOD =
-      const DependencyEdge_Label._(67, 'DTMOD');
+      DependencyEdge_Label._(65, 'AUXCAUS');
+  static const DependencyEdge_Label AUXVV = DependencyEdge_Label._(66, 'AUXVV');
+  static const DependencyEdge_Label DTMOD = DependencyEdge_Label._(67, 'DTMOD');
   static const DependencyEdge_Label FOREIGN =
-      const DependencyEdge_Label._(68, 'FOREIGN');
-  static const DependencyEdge_Label KW = const DependencyEdge_Label._(69, 'KW');
-  static const DependencyEdge_Label LIST =
-      const DependencyEdge_Label._(70, 'LIST');
-  static const DependencyEdge_Label NOMC =
-      const DependencyEdge_Label._(71, 'NOMC');
+      DependencyEdge_Label._(68, 'FOREIGN');
+  static const DependencyEdge_Label KW = DependencyEdge_Label._(69, 'KW');
+  static const DependencyEdge_Label LIST = DependencyEdge_Label._(70, 'LIST');
+  static const DependencyEdge_Label NOMC = DependencyEdge_Label._(71, 'NOMC');
   static const DependencyEdge_Label NOMCSUBJ =
-      const DependencyEdge_Label._(72, 'NOMCSUBJ');
+      DependencyEdge_Label._(72, 'NOMCSUBJ');
   static const DependencyEdge_Label NOMCSUBJPASS =
-      const DependencyEdge_Label._(73, 'NOMCSUBJPASS');
-  static const DependencyEdge_Label NUMC =
-      const DependencyEdge_Label._(74, 'NUMC');
-  static const DependencyEdge_Label COP =
-      const DependencyEdge_Label._(75, 'COP');
+      DependencyEdge_Label._(73, 'NOMCSUBJPASS');
+  static const DependencyEdge_Label NUMC = DependencyEdge_Label._(74, 'NUMC');
+  static const DependencyEdge_Label COP = DependencyEdge_Label._(75, 'COP');
   static const DependencyEdge_Label DISLOCATED =
-      const DependencyEdge_Label._(76, 'DISLOCATED');
-  static const DependencyEdge_Label ASP =
-      const DependencyEdge_Label._(77, 'ASP');
-  static const DependencyEdge_Label GMOD =
-      const DependencyEdge_Label._(78, 'GMOD');
-  static const DependencyEdge_Label GOBJ =
-      const DependencyEdge_Label._(79, 'GOBJ');
+      DependencyEdge_Label._(76, 'DISLOCATED');
+  static const DependencyEdge_Label ASP = DependencyEdge_Label._(77, 'ASP');
+  static const DependencyEdge_Label GMOD = DependencyEdge_Label._(78, 'GMOD');
+  static const DependencyEdge_Label GOBJ = DependencyEdge_Label._(79, 'GOBJ');
   static const DependencyEdge_Label INFMOD =
-      const DependencyEdge_Label._(80, 'INFMOD');
-  static const DependencyEdge_Label MES =
-      const DependencyEdge_Label._(81, 'MES');
-  static const DependencyEdge_Label NCOMP =
-      const DependencyEdge_Label._(82, 'NCOMP');
+      DependencyEdge_Label._(80, 'INFMOD');
+  static const DependencyEdge_Label MES = DependencyEdge_Label._(81, 'MES');
+  static const DependencyEdge_Label NCOMP = DependencyEdge_Label._(82, 'NCOMP');
 
-  static const List<DependencyEdge_Label> values = const <DependencyEdge_Label>[
+  static const $core.List<DependencyEdge_Label> values = <DependencyEdge_Label>[
     UNKNOWN,
     ABBREV,
     ACOMP,
@@ -743,36 +636,28 @@ class DependencyEdge_Label extends ProtobufEnum {
     NCOMP,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static DependencyEdge_Label valueOf(int value) =>
-      _byValue[value] as DependencyEdge_Label;
-  static void $checkItem(DependencyEdge_Label v) {
-    if (v is! DependencyEdge_Label) checkItemFailed(v, 'DependencyEdge_Label');
-  }
+  static final $core.Map<$core.int, DependencyEdge_Label> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DependencyEdge_Label valueOf($core.int value) => _byValue[value];
 
-  const DependencyEdge_Label._(int v, String n) : super(v, n);
+  const DependencyEdge_Label._($core.int v, $core.String n) : super(v, n);
 }
 
-class EntityMention_Type extends ProtobufEnum {
+class EntityMention_Type extends $pb.ProtobufEnum {
   static const EntityMention_Type TYPE_UNKNOWN =
-      const EntityMention_Type._(0, 'TYPE_UNKNOWN');
-  static const EntityMention_Type PROPER =
-      const EntityMention_Type._(1, 'PROPER');
-  static const EntityMention_Type COMMON =
-      const EntityMention_Type._(2, 'COMMON');
+      EntityMention_Type._(0, 'TYPE_UNKNOWN');
+  static const EntityMention_Type PROPER = EntityMention_Type._(1, 'PROPER');
+  static const EntityMention_Type COMMON = EntityMention_Type._(2, 'COMMON');
 
-  static const List<EntityMention_Type> values = const <EntityMention_Type>[
+  static const $core.List<EntityMention_Type> values = <EntityMention_Type>[
     TYPE_UNKNOWN,
     PROPER,
     COMMON,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static EntityMention_Type valueOf(int value) =>
-      _byValue[value] as EntityMention_Type;
-  static void $checkItem(EntityMention_Type v) {
-    if (v is! EntityMention_Type) checkItemFailed(v, 'EntityMention_Type');
-  }
+  static final $core.Map<$core.int, EntityMention_Type> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static EntityMention_Type valueOf($core.int value) => _byValue[value];
 
-  const EntityMention_Type._(int v, String n) : super(v, n);
+  const EntityMention_Type._($core.int v, $core.String n) : super(v, n);
 }

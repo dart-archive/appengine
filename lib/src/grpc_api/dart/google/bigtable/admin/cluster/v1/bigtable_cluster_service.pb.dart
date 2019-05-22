@@ -1,67 +1,70 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/cluster/v1/bigtable_cluster_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'bigtable_cluster_service_messages.pb.dart';
-import 'bigtable_cluster_data.pb.dart';
-import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../../longrunning/operations.pb.dart' as $google$longrunning;
+import 'bigtable_cluster_service_messages.pb.dart' as $0;
+import 'bigtable_cluster_data.pb.dart' as $1;
+import '../../../../protobuf/empty.pb.dart' as $2;
+import '../../../../longrunning/operations.pb.dart' as $3;
 
 class BigtableClusterServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   BigtableClusterServiceApi(this._client);
 
-  Future<ListZonesResponse> listZones(
-      ClientContext ctx, ListZonesRequest request) {
-    var emptyResponse = new ListZonesResponse();
-    return _client.invoke<ListZonesResponse>(
+  $async.Future<$0.ListZonesResponse> listZones(
+      $pb.ClientContext ctx, $0.ListZonesRequest request) {
+    var emptyResponse = $0.ListZonesResponse();
+    return _client.invoke<$0.ListZonesResponse>(
         ctx, 'BigtableClusterService', 'ListZones', request, emptyResponse);
   }
 
-  Future<Cluster> getCluster(ClientContext ctx, GetClusterRequest request) {
-    var emptyResponse = new Cluster();
-    return _client.invoke<Cluster>(
+  $async.Future<$1.Cluster> getCluster(
+      $pb.ClientContext ctx, $0.GetClusterRequest request) {
+    var emptyResponse = $1.Cluster();
+    return _client.invoke<$1.Cluster>(
         ctx, 'BigtableClusterService', 'GetCluster', request, emptyResponse);
   }
 
-  Future<ListClustersResponse> listClusters(
-      ClientContext ctx, ListClustersRequest request) {
-    var emptyResponse = new ListClustersResponse();
-    return _client.invoke<ListClustersResponse>(
+  $async.Future<$0.ListClustersResponse> listClusters(
+      $pb.ClientContext ctx, $0.ListClustersRequest request) {
+    var emptyResponse = $0.ListClustersResponse();
+    return _client.invoke<$0.ListClustersResponse>(
         ctx, 'BigtableClusterService', 'ListClusters', request, emptyResponse);
   }
 
-  Future<Cluster> createCluster(
-      ClientContext ctx, CreateClusterRequest request) {
-    var emptyResponse = new Cluster();
-    return _client.invoke<Cluster>(
+  $async.Future<$1.Cluster> createCluster(
+      $pb.ClientContext ctx, $0.CreateClusterRequest request) {
+    var emptyResponse = $1.Cluster();
+    return _client.invoke<$1.Cluster>(
         ctx, 'BigtableClusterService', 'CreateCluster', request, emptyResponse);
   }
 
-  Future<Cluster> updateCluster(ClientContext ctx, Cluster request) {
-    var emptyResponse = new Cluster();
-    return _client.invoke<Cluster>(
+  $async.Future<$1.Cluster> updateCluster(
+      $pb.ClientContext ctx, $1.Cluster request) {
+    var emptyResponse = $1.Cluster();
+    return _client.invoke<$1.Cluster>(
         ctx, 'BigtableClusterService', 'UpdateCluster', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> deleteCluster(
-      ClientContext ctx, DeleteClusterRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$2.Empty> deleteCluster(
+      $pb.ClientContext ctx, $0.DeleteClusterRequest request) {
+    var emptyResponse = $2.Empty();
+    return _client.invoke<$2.Empty>(
         ctx, 'BigtableClusterService', 'DeleteCluster', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> undeleteCluster(
-      ClientContext ctx, UndeleteClusterRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx,
-        'BigtableClusterService', 'UndeleteCluster', request, emptyResponse);
+  $async.Future<$3.Operation> undeleteCluster(
+      $pb.ClientContext ctx, $0.UndeleteClusterRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'BigtableClusterService',
+        'UndeleteCluster', request, emptyResponse);
   }
 }

@@ -1,88 +1,93 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/runtimeconfig/v1beta1/runtimeconfig.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'runtimeconfig.pb.dart';
-import 'resources.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import 'resources.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $3;
 import 'runtimeconfig.pbjson.dart';
 
 export 'runtimeconfig.pb.dart';
 
-abstract class RuntimeConfigManagerServiceBase extends GeneratedService {
-  Future<ListConfigsResponse> listConfigs(
-      ServerContext ctx, ListConfigsRequest request);
-  Future<RuntimeConfig> getConfig(ServerContext ctx, GetConfigRequest request);
-  Future<RuntimeConfig> createConfig(
-      ServerContext ctx, CreateConfigRequest request);
-  Future<RuntimeConfig> updateConfig(
-      ServerContext ctx, UpdateConfigRequest request);
-  Future<$google$protobuf.Empty> deleteConfig(
-      ServerContext ctx, DeleteConfigRequest request);
-  Future<ListVariablesResponse> listVariables(
-      ServerContext ctx, ListVariablesRequest request);
-  Future<Variable> getVariable(ServerContext ctx, GetVariableRequest request);
-  Future<Variable> watchVariable(
-      ServerContext ctx, WatchVariableRequest request);
-  Future<Variable> createVariable(
-      ServerContext ctx, CreateVariableRequest request);
-  Future<Variable> updateVariable(
-      ServerContext ctx, UpdateVariableRequest request);
-  Future<$google$protobuf.Empty> deleteVariable(
-      ServerContext ctx, DeleteVariableRequest request);
-  Future<ListWaitersResponse> listWaiters(
-      ServerContext ctx, ListWaitersRequest request);
-  Future<Waiter> getWaiter(ServerContext ctx, GetWaiterRequest request);
-  Future<$google$longrunning.Operation> createWaiter(
-      ServerContext ctx, CreateWaiterRequest request);
-  Future<$google$protobuf.Empty> deleteWaiter(
-      ServerContext ctx, DeleteWaiterRequest request);
+abstract class RuntimeConfigManagerServiceBase extends $pb.GeneratedService {
+  $async.Future<ListConfigsResponse> listConfigs(
+      $pb.ServerContext ctx, ListConfigsRequest request);
+  $async.Future<$0.RuntimeConfig> getConfig(
+      $pb.ServerContext ctx, GetConfigRequest request);
+  $async.Future<$0.RuntimeConfig> createConfig(
+      $pb.ServerContext ctx, CreateConfigRequest request);
+  $async.Future<$0.RuntimeConfig> updateConfig(
+      $pb.ServerContext ctx, UpdateConfigRequest request);
+  $async.Future<$2.Empty> deleteConfig(
+      $pb.ServerContext ctx, DeleteConfigRequest request);
+  $async.Future<ListVariablesResponse> listVariables(
+      $pb.ServerContext ctx, ListVariablesRequest request);
+  $async.Future<$0.Variable> getVariable(
+      $pb.ServerContext ctx, GetVariableRequest request);
+  $async.Future<$0.Variable> watchVariable(
+      $pb.ServerContext ctx, WatchVariableRequest request);
+  $async.Future<$0.Variable> createVariable(
+      $pb.ServerContext ctx, CreateVariableRequest request);
+  $async.Future<$0.Variable> updateVariable(
+      $pb.ServerContext ctx, UpdateVariableRequest request);
+  $async.Future<$2.Empty> deleteVariable(
+      $pb.ServerContext ctx, DeleteVariableRequest request);
+  $async.Future<ListWaitersResponse> listWaiters(
+      $pb.ServerContext ctx, ListWaitersRequest request);
+  $async.Future<$0.Waiter> getWaiter(
+      $pb.ServerContext ctx, GetWaiterRequest request);
+  $async.Future<$3.Operation> createWaiter(
+      $pb.ServerContext ctx, CreateWaiterRequest request);
+  $async.Future<$2.Empty> deleteWaiter(
+      $pb.ServerContext ctx, DeleteWaiterRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListConfigs':
-        return new ListConfigsRequest();
+        return ListConfigsRequest();
       case 'GetConfig':
-        return new GetConfigRequest();
+        return GetConfigRequest();
       case 'CreateConfig':
-        return new CreateConfigRequest();
+        return CreateConfigRequest();
       case 'UpdateConfig':
-        return new UpdateConfigRequest();
+        return UpdateConfigRequest();
       case 'DeleteConfig':
-        return new DeleteConfigRequest();
+        return DeleteConfigRequest();
       case 'ListVariables':
-        return new ListVariablesRequest();
+        return ListVariablesRequest();
       case 'GetVariable':
-        return new GetVariableRequest();
+        return GetVariableRequest();
       case 'WatchVariable':
-        return new WatchVariableRequest();
+        return WatchVariableRequest();
       case 'CreateVariable':
-        return new CreateVariableRequest();
+        return CreateVariableRequest();
       case 'UpdateVariable':
-        return new UpdateVariableRequest();
+        return UpdateVariableRequest();
       case 'DeleteVariable':
-        return new DeleteVariableRequest();
+        return DeleteVariableRequest();
       case 'ListWaiters':
-        return new ListWaitersRequest();
+        return ListWaitersRequest();
       case 'GetWaiter':
-        return new GetWaiterRequest();
+        return GetWaiterRequest();
       case 'CreateWaiter':
-        return new CreateWaiterRequest();
+        return CreateWaiterRequest();
       case 'DeleteWaiter':
-        return new DeleteWaiterRequest();
+        return DeleteWaiterRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListConfigs':
         return this.listConfigs(ctx, request);
@@ -115,11 +120,12 @@ abstract class RuntimeConfigManagerServiceBase extends GeneratedService {
       case 'DeleteWaiter':
         return this.deleteWaiter(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => RuntimeConfigManager$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      RuntimeConfigManager$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      RuntimeConfigManagerServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => RuntimeConfigManagerServiceBase$messageJson;
 }

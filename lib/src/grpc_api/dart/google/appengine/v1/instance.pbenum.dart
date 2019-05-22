@@ -1,34 +1,31 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/instance.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Instance_Availability extends ProtobufEnum {
+class Instance_Availability extends $pb.ProtobufEnum {
   static const Instance_Availability UNSPECIFIED =
-      const Instance_Availability._(0, 'UNSPECIFIED');
+      Instance_Availability._(0, 'UNSPECIFIED');
   static const Instance_Availability RESIDENT =
-      const Instance_Availability._(1, 'RESIDENT');
+      Instance_Availability._(1, 'RESIDENT');
   static const Instance_Availability DYNAMIC =
-      const Instance_Availability._(2, 'DYNAMIC');
+      Instance_Availability._(2, 'DYNAMIC');
 
-  static const List<Instance_Availability> values =
-      const <Instance_Availability>[
+  static const $core.List<Instance_Availability> values =
+      <Instance_Availability>[
     UNSPECIFIED,
     RESIDENT,
     DYNAMIC,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Instance_Availability valueOf(int value) =>
-      _byValue[value] as Instance_Availability;
-  static void $checkItem(Instance_Availability v) {
-    if (v is! Instance_Availability)
-      checkItemFailed(v, 'Instance_Availability');
-  }
+  static final $core.Map<$core.int, Instance_Availability> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Instance_Availability valueOf($core.int value) => _byValue[value];
 
-  const Instance_Availability._(int v, String n) : super(v, n);
+  const Instance_Availability._($core.int v, $core.String n) : super(v, n);
 }

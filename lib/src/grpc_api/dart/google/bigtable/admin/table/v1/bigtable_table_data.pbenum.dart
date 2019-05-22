@@ -1,28 +1,25 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/table/v1/bigtable_table_data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Table_TimestampGranularity extends ProtobufEnum {
+class Table_TimestampGranularity extends $pb.ProtobufEnum {
   static const Table_TimestampGranularity MILLIS =
-      const Table_TimestampGranularity._(0, 'MILLIS');
+      Table_TimestampGranularity._(0, 'MILLIS');
 
-  static const List<Table_TimestampGranularity> values =
-      const <Table_TimestampGranularity>[
+  static const $core.List<Table_TimestampGranularity> values =
+      <Table_TimestampGranularity>[
     MILLIS,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Table_TimestampGranularity valueOf(int value) =>
-      _byValue[value] as Table_TimestampGranularity;
-  static void $checkItem(Table_TimestampGranularity v) {
-    if (v is! Table_TimestampGranularity)
-      checkItemFailed(v, 'Table_TimestampGranularity');
-  }
+  static final $core.Map<$core.int, Table_TimestampGranularity> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Table_TimestampGranularity valueOf($core.int value) => _byValue[value];
 
-  const Table_TimestampGranularity._(int v, String n) : super(v, n);
+  const Table_TimestampGranularity._($core.int v, $core.String n) : super(v, n);
 }

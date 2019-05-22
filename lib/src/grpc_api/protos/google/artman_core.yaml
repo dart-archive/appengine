@@ -11,27 +11,12 @@ common:
   # Exclusions
   - -api/servicemanagement
   - -api/servicecontrol
+  - -api/expr
 artifacts:
 - name: java_grpc
   type: GRPC
   language: JAVA
   release_level: GA
-  publish_targets:
-  - name: staging
-    type: GITHUB
-    location: git@github.com:googleapis/api-client-staging.git
-    directory_mappings:
-    - name: grpc
-      dest: generated/java/grpc-google-common-protos
-    - name: proto
-      dest: generated/java/proto-google-common-protos
 - name: php_grpc
   type: GRPC
   language: PHP
-  publish_targets:
-  - name: staging
-    type: GITHUB
-    location: git@github.com:googleapis/api-client-staging.git
-    directory_mappings:
-    - name: grpc
-      dest: generated/php/google-common-protos

@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/remoteexecution/v1test/remote_execution.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $google$protobuf;
-import '../../../longrunning/operations.pbjson.dart' as $google$longrunning;
-import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
-import '../../../rpc/status.pbjson.dart' as $google$rpc;
+import '../../../protobuf/duration.pbjson.dart' as $0;
+import '../../../longrunning/operations.pbjson.dart' as $2;
+import '../../../protobuf/any.pbjson.dart' as $3;
+import '../../../rpc/status.pbjson.dart' as $1;
 
-const Action$json = const {
+const Action$json = {
   '1': 'Action',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'command_digest',
       '3': 1,
       '4': 1,
@@ -19,7 +20,7 @@ const Action$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'commandDigest'
     },
-    const {
+    {
       '1': 'input_root_digest',
       '3': 2,
       '4': 1,
@@ -27,15 +28,15 @@ const Action$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'inputRootDigest'
     },
-    const {'1': 'output_files', '3': 3, '4': 3, '5': 9, '10': 'outputFiles'},
-    const {
+    {'1': 'output_files', '3': 3, '4': 3, '5': 9, '10': 'outputFiles'},
+    {
       '1': 'output_directories',
       '3': 4,
       '4': 3,
       '5': 9,
       '10': 'outputDirectories'
     },
-    const {
+    {
       '1': 'platform',
       '3': 5,
       '4': 1,
@@ -43,7 +44,7 @@ const Action$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Platform',
       '10': 'platform'
     },
-    const {
+    {
       '1': 'timeout',
       '3': 6,
       '4': 1,
@@ -51,15 +52,15 @@ const Action$json = const {
       '6': '.google.protobuf.Duration',
       '10': 'timeout'
     },
-    const {'1': 'do_not_cache', '3': 7, '4': 1, '5': 8, '10': 'doNotCache'},
+    {'1': 'do_not_cache', '3': 7, '4': 1, '5': 8, '10': 'doNotCache'},
   ],
 };
 
-const Command$json = const {
+const Command$json = {
   '1': 'Command',
-  '2': const [
-    const {'1': 'arguments', '3': 1, '4': 3, '5': 9, '10': 'arguments'},
-    const {
+  '2': [
+    {'1': 'arguments', '3': 1, '4': 3, '5': 9, '10': 'arguments'},
+    {
       '1': 'environment_variables',
       '3': 2,
       '4': 3,
@@ -69,21 +70,21 @@ const Command$json = const {
       '10': 'environmentVariables'
     },
   ],
-  '3': const [Command_EnvironmentVariable$json],
+  '3': [Command_EnvironmentVariable$json],
 };
 
-const Command_EnvironmentVariable$json = const {
+const Command_EnvironmentVariable$json = {
   '1': 'EnvironmentVariable',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
 };
 
-const Platform$json = const {
+const Platform$json = {
   '1': 'Platform',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'properties',
       '3': 1,
       '4': 3,
@@ -92,21 +93,21 @@ const Platform$json = const {
       '10': 'properties'
     },
   ],
-  '3': const [Platform_Property$json],
+  '3': [Platform_Property$json],
 };
 
-const Platform_Property$json = const {
+const Platform_Property$json = {
   '1': 'Property',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
 };
 
-const Directory$json = const {
+const Directory$json = {
   '1': 'Directory',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'files',
       '3': 1,
       '4': 3,
@@ -114,7 +115,7 @@ const Directory$json = const {
       '6': '.google.devtools.remoteexecution.v1test.FileNode',
       '10': 'files'
     },
-    const {
+    {
       '1': 'directories',
       '3': 2,
       '4': 3,
@@ -125,11 +126,11 @@ const Directory$json = const {
   ],
 };
 
-const FileNode$json = const {
+const FileNode$json = {
   '1': 'FileNode',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'digest',
       '3': 2,
       '4': 1,
@@ -137,15 +138,15 @@ const FileNode$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'digest'
     },
-    const {'1': 'is_executable', '3': 4, '4': 1, '5': 8, '10': 'isExecutable'},
+    {'1': 'is_executable', '3': 4, '4': 1, '5': 8, '10': 'isExecutable'},
   ],
 };
 
-const DirectoryNode$json = const {
+const DirectoryNode$json = {
   '1': 'DirectoryNode',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'digest',
       '3': 2,
       '4': 1,
@@ -156,18 +157,18 @@ const DirectoryNode$json = const {
   ],
 };
 
-const Digest$json = const {
+const Digest$json = {
   '1': 'Digest',
-  '2': const [
-    const {'1': 'hash', '3': 1, '4': 1, '5': 9, '10': 'hash'},
-    const {'1': 'size_bytes', '3': 2, '4': 1, '5': 3, '10': 'sizeBytes'},
+  '2': [
+    {'1': 'hash', '3': 1, '4': 1, '5': 9, '10': 'hash'},
+    {'1': 'size_bytes', '3': 2, '4': 1, '5': 3, '10': 'sizeBytes'},
   ],
 };
 
-const ActionResult$json = const {
+const ActionResult$json = {
   '1': 'ActionResult',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'output_files',
       '3': 2,
       '4': 3,
@@ -175,7 +176,7 @@ const ActionResult$json = const {
       '6': '.google.devtools.remoteexecution.v1test.OutputFile',
       '10': 'outputFiles'
     },
-    const {
+    {
       '1': 'output_directories',
       '3': 3,
       '4': 3,
@@ -183,9 +184,9 @@ const ActionResult$json = const {
       '6': '.google.devtools.remoteexecution.v1test.OutputDirectory',
       '10': 'outputDirectories'
     },
-    const {'1': 'exit_code', '3': 4, '4': 1, '5': 5, '10': 'exitCode'},
-    const {'1': 'stdout_raw', '3': 5, '4': 1, '5': 12, '10': 'stdoutRaw'},
-    const {
+    {'1': 'exit_code', '3': 4, '4': 1, '5': 5, '10': 'exitCode'},
+    {'1': 'stdout_raw', '3': 5, '4': 1, '5': 12, '10': 'stdoutRaw'},
+    {
       '1': 'stdout_digest',
       '3': 6,
       '4': 1,
@@ -193,8 +194,8 @@ const ActionResult$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'stdoutDigest'
     },
-    const {'1': 'stderr_raw', '3': 7, '4': 1, '5': 12, '10': 'stderrRaw'},
-    const {
+    {'1': 'stderr_raw', '3': 7, '4': 1, '5': 12, '10': 'stderrRaw'},
+    {
       '1': 'stderr_digest',
       '3': 8,
       '4': 1,
@@ -205,11 +206,11 @@ const ActionResult$json = const {
   ],
 };
 
-const OutputFile$json = const {
+const OutputFile$json = {
   '1': 'OutputFile',
-  '2': const [
-    const {'1': 'path', '3': 1, '4': 1, '5': 9, '10': 'path'},
-    const {
+  '2': [
+    {'1': 'path', '3': 1, '4': 1, '5': 9, '10': 'path'},
+    {
       '1': 'digest',
       '3': 2,
       '4': 1,
@@ -217,15 +218,15 @@ const OutputFile$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'digest'
     },
-    const {'1': 'content', '3': 3, '4': 1, '5': 12, '10': 'content'},
-    const {'1': 'is_executable', '3': 4, '4': 1, '5': 8, '10': 'isExecutable'},
+    {'1': 'content', '3': 3, '4': 1, '5': 12, '10': 'content'},
+    {'1': 'is_executable', '3': 4, '4': 1, '5': 8, '10': 'isExecutable'},
   ],
 };
 
-const Tree$json = const {
+const Tree$json = {
   '1': 'Tree',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'root',
       '3': 1,
       '4': 1,
@@ -233,7 +234,7 @@ const Tree$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Directory',
       '10': 'root'
     },
-    const {
+    {
       '1': 'children',
       '3': 2,
       '4': 3,
@@ -244,11 +245,11 @@ const Tree$json = const {
   ],
 };
 
-const OutputDirectory$json = const {
+const OutputDirectory$json = {
   '1': 'OutputDirectory',
-  '2': const [
-    const {'1': 'path', '3': 1, '4': 1, '5': 9, '10': 'path'},
-    const {
+  '2': [
+    {'1': 'path', '3': 1, '4': 1, '5': 9, '10': 'path'},
+    {
       '1': 'digest',
       '3': 2,
       '4': 1,
@@ -256,7 +257,7 @@ const OutputDirectory$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'digest'
     },
-    const {
+    {
       '1': 'tree_digest',
       '3': 3,
       '4': 1,
@@ -267,11 +268,11 @@ const OutputDirectory$json = const {
   ],
 };
 
-const ExecuteRequest$json = const {
+const ExecuteRequest$json = {
   '1': 'ExecuteRequest',
-  '2': const [
-    const {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
-    const {
+  '2': [
+    {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
+    {
       '1': 'action',
       '3': 2,
       '4': 1,
@@ -279,21 +280,15 @@ const ExecuteRequest$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Action',
       '10': 'action'
     },
-    const {
-      '1': 'skip_cache_lookup',
-      '3': 3,
-      '4': 1,
-      '5': 8,
-      '10': 'skipCacheLookup'
-    },
-    const {
+    {'1': 'skip_cache_lookup', '3': 3, '4': 1, '5': 8, '10': 'skipCacheLookup'},
+    {
       '1': 'total_input_file_count',
       '3': 4,
       '4': 1,
       '5': 5,
       '10': 'totalInputFileCount'
     },
-    const {
+    {
       '1': 'total_input_file_bytes',
       '3': 5,
       '4': 1,
@@ -303,10 +298,10 @@ const ExecuteRequest$json = const {
   ],
 };
 
-const LogFile$json = const {
+const LogFile$json = {
   '1': 'LogFile',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'digest',
       '3': 1,
       '4': 1,
@@ -314,20 +309,14 @@ const LogFile$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'digest'
     },
-    const {
-      '1': 'human_readable',
-      '3': 2,
-      '4': 1,
-      '5': 8,
-      '10': 'humanReadable'
-    },
+    {'1': 'human_readable', '3': 2, '4': 1, '5': 8, '10': 'humanReadable'},
   ],
 };
 
-const ExecuteResponse$json = const {
+const ExecuteResponse$json = {
   '1': 'ExecuteResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'result',
       '3': 1,
       '4': 1,
@@ -335,8 +324,8 @@ const ExecuteResponse$json = const {
       '6': '.google.devtools.remoteexecution.v1test.ActionResult',
       '10': 'result'
     },
-    const {'1': 'cached_result', '3': 2, '4': 1, '5': 8, '10': 'cachedResult'},
-    const {
+    {'1': 'cached_result', '3': 2, '4': 1, '5': 8, '10': 'cachedResult'},
+    {
       '1': 'status',
       '3': 3,
       '4': 1,
@@ -344,7 +333,7 @@ const ExecuteResponse$json = const {
       '6': '.google.rpc.Status',
       '10': 'status'
     },
-    const {
+    {
       '1': 'server_logs',
       '3': 4,
       '4': 3,
@@ -354,14 +343,14 @@ const ExecuteResponse$json = const {
       '10': 'serverLogs'
     },
   ],
-  '3': const [ExecuteResponse_ServerLogsEntry$json],
+  '3': [ExecuteResponse_ServerLogsEntry$json],
 };
 
-const ExecuteResponse_ServerLogsEntry$json = const {
+const ExecuteResponse_ServerLogsEntry$json = {
   '1': 'ServerLogsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
       '1': 'value',
       '3': 2,
       '4': 1,
@@ -370,13 +359,13 @@ const ExecuteResponse_ServerLogsEntry$json = const {
       '10': 'value'
     },
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const ExecuteOperationMetadata$json = const {
+const ExecuteOperationMetadata$json = {
   '1': 'ExecuteOperationMetadata',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'stage',
       '3': 1,
       '4': 1,
@@ -385,7 +374,7 @@ const ExecuteOperationMetadata$json = const {
           '.google.devtools.remoteexecution.v1test.ExecuteOperationMetadata.Stage',
       '10': 'stage'
     },
-    const {
+    {
       '1': 'action_digest',
       '3': 2,
       '4': 1,
@@ -393,14 +382,14 @@ const ExecuteOperationMetadata$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'actionDigest'
     },
-    const {
+    {
       '1': 'stdout_stream_name',
       '3': 3,
       '4': 1,
       '5': 9,
       '10': 'stdoutStreamName'
     },
-    const {
+    {
       '1': 'stderr_stream_name',
       '3': 4,
       '4': 1,
@@ -408,25 +397,25 @@ const ExecuteOperationMetadata$json = const {
       '10': 'stderrStreamName'
     },
   ],
-  '4': const [ExecuteOperationMetadata_Stage$json],
+  '4': [ExecuteOperationMetadata_Stage$json],
 };
 
-const ExecuteOperationMetadata_Stage$json = const {
+const ExecuteOperationMetadata_Stage$json = {
   '1': 'Stage',
-  '2': const [
-    const {'1': 'UNKNOWN', '2': 0},
-    const {'1': 'CACHE_CHECK', '2': 1},
-    const {'1': 'QUEUED', '2': 2},
-    const {'1': 'EXECUTING', '2': 3},
-    const {'1': 'COMPLETED', '2': 4},
+  '2': [
+    {'1': 'UNKNOWN', '2': 0},
+    {'1': 'CACHE_CHECK', '2': 1},
+    {'1': 'QUEUED', '2': 2},
+    {'1': 'EXECUTING', '2': 3},
+    {'1': 'COMPLETED', '2': 4},
   ],
 };
 
-const GetActionResultRequest$json = const {
+const GetActionResultRequest$json = {
   '1': 'GetActionResultRequest',
-  '2': const [
-    const {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
-    const {
+  '2': [
+    {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
+    {
       '1': 'action_digest',
       '3': 2,
       '4': 1,
@@ -437,11 +426,11 @@ const GetActionResultRequest$json = const {
   ],
 };
 
-const UpdateActionResultRequest$json = const {
+const UpdateActionResultRequest$json = {
   '1': 'UpdateActionResultRequest',
-  '2': const [
-    const {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
-    const {
+  '2': [
+    {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
+    {
       '1': 'action_digest',
       '3': 2,
       '4': 1,
@@ -449,7 +438,7 @@ const UpdateActionResultRequest$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'actionDigest'
     },
-    const {
+    {
       '1': 'action_result',
       '3': 3,
       '4': 1,
@@ -460,11 +449,11 @@ const UpdateActionResultRequest$json = const {
   ],
 };
 
-const FindMissingBlobsRequest$json = const {
+const FindMissingBlobsRequest$json = {
   '1': 'FindMissingBlobsRequest',
-  '2': const [
-    const {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
-    const {
+  '2': [
+    {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
+    {
       '1': 'blob_digests',
       '3': 2,
       '4': 3,
@@ -475,10 +464,10 @@ const FindMissingBlobsRequest$json = const {
   ],
 };
 
-const FindMissingBlobsResponse$json = const {
+const FindMissingBlobsResponse$json = {
   '1': 'FindMissingBlobsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'missing_blob_digests',
       '3': 2,
       '4': 3,
@@ -489,10 +478,10 @@ const FindMissingBlobsResponse$json = const {
   ],
 };
 
-const UpdateBlobRequest$json = const {
+const UpdateBlobRequest$json = {
   '1': 'UpdateBlobRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'content_digest',
       '3': 1,
       '4': 1,
@@ -500,15 +489,15 @@ const UpdateBlobRequest$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'contentDigest'
     },
-    const {'1': 'data', '3': 2, '4': 1, '5': 12, '10': 'data'},
+    {'1': 'data', '3': 2, '4': 1, '5': 12, '10': 'data'},
   ],
 };
 
-const BatchUpdateBlobsRequest$json = const {
+const BatchUpdateBlobsRequest$json = {
   '1': 'BatchUpdateBlobsRequest',
-  '2': const [
-    const {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
-    const {
+  '2': [
+    {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
+    {
       '1': 'requests',
       '3': 2,
       '4': 3,
@@ -519,10 +508,10 @@ const BatchUpdateBlobsRequest$json = const {
   ],
 };
 
-const BatchUpdateBlobsResponse$json = const {
+const BatchUpdateBlobsResponse$json = {
   '1': 'BatchUpdateBlobsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'responses',
       '3': 1,
       '4': 3,
@@ -532,13 +521,13 @@ const BatchUpdateBlobsResponse$json = const {
       '10': 'responses'
     },
   ],
-  '3': const [BatchUpdateBlobsResponse_Response$json],
+  '3': [BatchUpdateBlobsResponse_Response$json],
 };
 
-const BatchUpdateBlobsResponse_Response$json = const {
+const BatchUpdateBlobsResponse_Response$json = {
   '1': 'Response',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'blob_digest',
       '3': 1,
       '4': 1,
@@ -546,7 +535,7 @@ const BatchUpdateBlobsResponse_Response$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'blobDigest'
     },
-    const {
+    {
       '1': 'status',
       '3': 2,
       '4': 1,
@@ -557,11 +546,11 @@ const BatchUpdateBlobsResponse_Response$json = const {
   ],
 };
 
-const GetTreeRequest$json = const {
+const GetTreeRequest$json = {
   '1': 'GetTreeRequest',
-  '2': const [
-    const {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
-    const {
+  '2': [
+    {'1': 'instance_name', '3': 1, '4': 1, '5': 9, '10': 'instanceName'},
+    {
       '1': 'root_digest',
       '3': 2,
       '4': 1,
@@ -569,15 +558,15 @@ const GetTreeRequest$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Digest',
       '10': 'rootDigest'
     },
-    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const GetTreeResponse$json = const {
+const GetTreeResponse$json = {
   '1': 'GetTreeResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'directories',
       '3': 1,
       '4': 3,
@@ -585,28 +574,22 @@ const GetTreeResponse$json = const {
       '6': '.google.devtools.remoteexecution.v1test.Directory',
       '10': 'directories'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const ToolDetails$json = const {
+const ToolDetails$json = {
   '1': 'ToolDetails',
-  '2': const [
-    const {'1': 'tool_name', '3': 1, '4': 1, '5': 9, '10': 'toolName'},
-    const {'1': 'tool_version', '3': 2, '4': 1, '5': 9, '10': 'toolVersion'},
+  '2': [
+    {'1': 'tool_name', '3': 1, '4': 1, '5': 9, '10': 'toolName'},
+    {'1': 'tool_version', '3': 2, '4': 1, '5': 9, '10': 'toolVersion'},
   ],
 };
 
-const RequestMetadata$json = const {
+const RequestMetadata$json = {
   '1': 'RequestMetadata',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'tool_details',
       '3': 1,
       '4': 1,
@@ -614,15 +597,15 @@ const RequestMetadata$json = const {
       '6': '.google.devtools.remoteexecution.v1test.ToolDetails',
       '10': 'toolDetails'
     },
-    const {'1': 'action_id', '3': 2, '4': 1, '5': 9, '10': 'actionId'},
-    const {
+    {'1': 'action_id', '3': 2, '4': 1, '5': 9, '10': 'actionId'},
+    {
       '1': 'tool_invocation_id',
       '3': 3,
       '4': 1,
       '5': 9,
       '10': 'toolInvocationId'
     },
-    const {
+    {
       '1': 'correlated_invocations_id',
       '3': 4,
       '4': 1,
@@ -632,50 +615,50 @@ const RequestMetadata$json = const {
   ],
 };
 
-const Execution$json = const {
+const ExecutionServiceBase$json = {
   '1': 'Execution',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'Execute',
       '2': '.google.devtools.remoteexecution.v1test.ExecuteRequest',
       '3': '.google.longrunning.Operation',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const Execution$messageJson = const {
+const ExecutionServiceBase$messageJson = {
   '.google.devtools.remoteexecution.v1test.ExecuteRequest': ExecuteRequest$json,
   '.google.devtools.remoteexecution.v1test.Action': Action$json,
   '.google.devtools.remoteexecution.v1test.Digest': Digest$json,
   '.google.devtools.remoteexecution.v1test.Platform': Platform$json,
   '.google.devtools.remoteexecution.v1test.Platform.Property':
       Platform_Property$json,
-  '.google.protobuf.Duration': $google$protobuf.Duration$json,
-  '.google.longrunning.Operation': $google$longrunning.Operation$json,
-  '.google.protobuf.Any': $google$protobuf.Any$json,
-  '.google.rpc.Status': $google$rpc.Status$json,
+  '.google.protobuf.Duration': $0.Duration$json,
+  '.google.longrunning.Operation': $2.Operation$json,
+  '.google.protobuf.Any': $3.Any$json,
+  '.google.rpc.Status': $1.Status$json,
 };
 
-const ActionCache$json = const {
+const ActionCacheServiceBase$json = {
   '1': 'ActionCache',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'GetActionResult',
       '2': '.google.devtools.remoteexecution.v1test.GetActionResultRequest',
       '3': '.google.devtools.remoteexecution.v1test.ActionResult',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateActionResult',
       '2': '.google.devtools.remoteexecution.v1test.UpdateActionResultRequest',
       '3': '.google.devtools.remoteexecution.v1test.ActionResult',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const ActionCache$messageJson = const {
+const ActionCacheServiceBase$messageJson = {
   '.google.devtools.remoteexecution.v1test.GetActionResultRequest':
       GetActionResultRequest$json,
   '.google.devtools.remoteexecution.v1test.Digest': Digest$json,
@@ -687,31 +670,31 @@ const ActionCache$messageJson = const {
       UpdateActionResultRequest$json,
 };
 
-const ContentAddressableStorage$json = const {
+const ContentAddressableStorageServiceBase$json = {
   '1': 'ContentAddressableStorage',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'FindMissingBlobs',
       '2': '.google.devtools.remoteexecution.v1test.FindMissingBlobsRequest',
       '3': '.google.devtools.remoteexecution.v1test.FindMissingBlobsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'BatchUpdateBlobs',
       '2': '.google.devtools.remoteexecution.v1test.BatchUpdateBlobsRequest',
       '3': '.google.devtools.remoteexecution.v1test.BatchUpdateBlobsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetTree',
       '2': '.google.devtools.remoteexecution.v1test.GetTreeRequest',
       '3': '.google.devtools.remoteexecution.v1test.GetTreeResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const ContentAddressableStorage$messageJson = const {
+const ContentAddressableStorageServiceBase$messageJson = {
   '.google.devtools.remoteexecution.v1test.FindMissingBlobsRequest':
       FindMissingBlobsRequest$json,
   '.google.devtools.remoteexecution.v1test.Digest': Digest$json,
@@ -725,8 +708,8 @@ const ContentAddressableStorage$messageJson = const {
       BatchUpdateBlobsResponse$json,
   '.google.devtools.remoteexecution.v1test.BatchUpdateBlobsResponse.Response':
       BatchUpdateBlobsResponse_Response$json,
-  '.google.rpc.Status': $google$rpc.Status$json,
-  '.google.protobuf.Any': $google$protobuf.Any$json,
+  '.google.rpc.Status': $1.Status$json,
+  '.google.protobuf.Any': $3.Any$json,
   '.google.devtools.remoteexecution.v1test.GetTreeRequest': GetTreeRequest$json,
   '.google.devtools.remoteexecution.v1test.GetTreeResponse':
       GetTreeResponse$json,

@@ -1,31 +1,30 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/config_change.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class ChangeType extends ProtobufEnum {
+class ChangeType extends $pb.ProtobufEnum {
   static const ChangeType CHANGE_TYPE_UNSPECIFIED =
-      const ChangeType._(0, 'CHANGE_TYPE_UNSPECIFIED');
-  static const ChangeType ADDED = const ChangeType._(1, 'ADDED');
-  static const ChangeType REMOVED = const ChangeType._(2, 'REMOVED');
-  static const ChangeType MODIFIED = const ChangeType._(3, 'MODIFIED');
+      ChangeType._(0, 'CHANGE_TYPE_UNSPECIFIED');
+  static const ChangeType ADDED = ChangeType._(1, 'ADDED');
+  static const ChangeType REMOVED = ChangeType._(2, 'REMOVED');
+  static const ChangeType MODIFIED = ChangeType._(3, 'MODIFIED');
 
-  static const List<ChangeType> values = const <ChangeType>[
+  static const $core.List<ChangeType> values = <ChangeType>[
     CHANGE_TYPE_UNSPECIFIED,
     ADDED,
     REMOVED,
     MODIFIED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ChangeType valueOf(int value) => _byValue[value] as ChangeType;
-  static void $checkItem(ChangeType v) {
-    if (v is! ChangeType) checkItemFailed(v, 'ChangeType');
-  }
+  static final $core.Map<$core.int, ChangeType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ChangeType valueOf($core.int value) => _byValue[value];
 
-  const ChangeType._(int v, String n) : super(v, n);
+  const ChangeType._($core.int v, $core.String n) : super(v, n);
 }

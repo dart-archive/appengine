@@ -15,7 +15,7 @@ import '../grpc_api/dart/google/appengine/logging/v1/request_log.pb.dart'
 import 'grpc.dart' as grpc;
 import '../logging_impl.dart';
 
-const List<String> OAuth2Scopes = const <String>[
+const List<String> OAuth2Scopes = <String>[
   "https://www.googleapis.com/auth/cloud-platform",
   "https://www.googleapis.com/auth/logging.write",
 ];
@@ -57,7 +57,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
       this._ip,
       this._traceId,
       this._referrer)
-      : _startTimestamp = new DateTime.now().toUtc().millisecondsSinceEpoch {
+      : _startTimestamp = DateTime.now().toUtc().millisecondsSinceEpoch {
     _resetState();
     _isFirst = true;
   }
@@ -77,11 +77,11 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
     _estimatedSize += 25 + message.length;
 
     final timestampInMs =
-        (timestamp ?? new DateTime.now().toUtc()).millisecondsSinceEpoch;
+        (timestamp ?? DateTime.now().toUtc()).millisecondsSinceEpoch;
     final api.Timestamp startTimestamp =
         _protobufTimestampFromMilliseconds(timestampInMs);
 
-    final logLine = new gae_log.LogLine()
+    final logLine = gae_log.LogLine()
       ..time = startTimestamp
       ..severity = _currentSeverity
       ..logMessage = message;
@@ -100,7 +100,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   /// [SharedLoggingService]. There is no guarantee that it will immediately be
   /// sent to the server.
   Future flush() async {
-    if (_gaeLogLines.length > 0) {
+    if (_gaeLogLines.isNotEmpty) {
       _enqueue(finish: false);
     }
   }
@@ -108,7 +108,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   /// Finishes the request-specific logs with the given HTTP [responseStatus]
   /// and [responseSize].
   void finish(int responseStatus, int responseSize) {
-    if (_gaeLogLines.length > 0) {
+    if (_gaeLogLines.isNotEmpty) {
       _enqueue(
           finish: true,
           responseStatus: responseStatus,
@@ -118,28 +118,28 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
   /// Builds up the combined [api.LogEntry] and enqueues it in the underlying
   /// [SharedLoggingService].
-  void _enqueue({bool finish: false, int responseStatus, int responseSize}) {
+  void _enqueue({bool finish = false, int responseStatus, int responseSize}) {
     final api.Timestamp startTimestamp =
         _protobufTimestampFromMilliseconds(_startTimestamp);
 
-    final int now = new DateTime.now().toUtc().millisecondsSinceEpoch;
+    final int now = DateTime.now().toUtc().millisecondsSinceEpoch;
     final api.Timestamp nowTimestamp = _protobufTimestampFromMilliseconds(now);
 
-    final protoPayload = new api.Any()
+    final protoPayload = api.Any()
       ..typeUrl = 'type.googleapis.com/google.appengine.logging.v1.RequestLog';
 
-    final gaeResource = new api.MonitoredResource()
+    final gaeResource = api.MonitoredResource()
       ..type = 'gae_app'
       ..labels.addAll(_sharedLoggingService.resourceLabels);
 
-    final logEntry = new api.LogEntry()
+    final logEntry = api.LogEntry()
       ..protoPayload = protoPayload
       ..resource = gaeResource
       ..timestamp = nowTimestamp
       ..severity = _currentSeverity
       ..logName = _sharedLoggingService.requestLogName;
 
-    final appengineRequestLog = new gae_log.RequestLog()
+    final appengineRequestLog = gae_log.RequestLog()
       ..appId = 's~${_sharedLoggingService.projectId}'
       ..versionId = _sharedLoggingService.versionId
       ..method = _httpMethod
@@ -165,8 +165,8 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
     if (finish) {
       final int diff = now - _startTimestamp;
-      final latency = new api.Duration()
-        ..seconds = new api.Int64(diff ~/ 1000)
+      final latency = api.Duration()
+        ..seconds = api.Int64(diff ~/ 1000)
         ..nanos = 1000 * 1000 * (diff % 1000);
 
       appengineRequestLog
@@ -175,10 +175,10 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
         ..status = responseStatus;
 
       if (responseSize != null) {
-        appengineRequestLog.responseSize = new api.Int64(responseSize);
+        appengineRequestLog.responseSize = api.Int64(responseSize);
       }
 
-      final httpRequest = new api.HttpRequest()..status = responseStatus;
+      final httpRequest = api.HttpRequest()..status = responseStatus;
 
       logEntry..httpRequest = httpRequest;
     }
@@ -206,14 +206,14 @@ class GrpcBackgroundLoggingImpl extends Logging {
   void log(LogLevel level, String message, {DateTime timestamp}) {
     api.LogSeverity severity = _severityFromLogLevel(level);
 
-    final int now = new DateTime.now().toUtc().millisecondsSinceEpoch;
+    final int now = DateTime.now().toUtc().millisecondsSinceEpoch;
     final api.Timestamp nowTimestamp = _protobufTimestampFromMilliseconds(now);
 
-    final gaeResource = new api.MonitoredResource()
+    final gaeResource = api.MonitoredResource()
       ..type = 'gae_app'
       ..labels.addAll(_sharedLoggingService.resourceLabels);
 
-    final logEntry = new api.LogEntry()
+    final logEntry = api.LogEntry()
       ..textPayload = message
       ..resource = gaeResource
       ..timestamp = nowTimestamp
@@ -223,13 +223,13 @@ class GrpcBackgroundLoggingImpl extends Logging {
     _sharedLoggingService.enqueue(logEntry);
   }
 
-  Future flush() => new Future.value();
+  Future flush() => Future.value();
 }
 
 /// A [appengine.Logging] adapter which uses the gRPC logging API to send
 /// logs asynchronously to the Stackdriver logging service.
 class SharedLoggingService {
-  static const Duration FLUSH_DURATION = const Duration(seconds: 3);
+  static const Duration FLUSH_DURATION = Duration(seconds: 3);
   static const int MAX_LOGENTRIES = 25;
 
   final api.LoggingServiceV2Api _clientStub;
@@ -237,7 +237,7 @@ class SharedLoggingService {
   final String versionId;
   final String instanceId;
   final String _instanceName;
-  final List<api.MonitoredResource_LabelsEntry> resourceLabels;
+  final Map<String, String> resourceLabels;
   final String requestLogName;
   final String backgroundLogName;
 
@@ -249,26 +249,20 @@ class SharedLoggingService {
 
   SharedLoggingService(grpc.Client client, String projectId, String serviceId,
       String versionId, String zoneId, this._instanceName, this.instanceId)
-      : _clientStub = new api.LoggingServiceV2Api(
-            new grpc.Channel('google.logging.v2', client)),
+      : _clientStub =
+            api.LoggingServiceV2Api(grpc.Channel('google.logging.v2', client)),
         projectId = projectId,
         versionId = versionId,
-        resourceLabels = <api.MonitoredResource_LabelsEntry>[
-          _makeLabel('project_id', projectId),
-          _makeLabel('version_id', versionId),
-          _makeLabel('module_id', serviceId),
-          _makeLabel('zone', zoneId),
-        ],
+        resourceLabels = <String, String>{
+          'project_id': projectId,
+          'version_id': versionId,
+          'module_id': serviceId,
+          'zone': zoneId,
+        },
         requestLogName =
             'projects/$projectId/logs/appengine.googleapis.com%2Frequest_log',
         backgroundLogName =
             'projects/$projectId/logs/appengine.googleapis.com%2Fstderr';
-
-  static _makeLabel(String key, String value) {
-    return new api.MonitoredResource_LabelsEntry()
-      ..key = key
-      ..value = value;
-  }
 
   void enqueue(api.LogEntry entry) {
     _addLabel(entry, 'appengine.googleapis.com/instance_name', _instanceName);
@@ -280,7 +274,7 @@ class SharedLoggingService {
     if (_entries.length > 25) {
       flush();
     } else if (_timer == null) {
-      _timer = new Timer(FLUSH_DURATION, flush);
+      _timer = Timer(FLUSH_DURATION, flush);
     }
   }
 
@@ -289,12 +283,12 @@ class SharedLoggingService {
       _timer.cancel();
       _timer = null;
     }
-    if (_entries.length == 0) {
+    if (_entries.isEmpty) {
       return;
     }
 
     _outstandingRequests++;
-    final request = new api.WriteLogEntriesRequest()
+    final request = api.WriteLogEntriesRequest()
       ..entries.addAll(_entries)
       ..partialSuccess =
           false /* for now we want to get notified if something goes wrong */;
@@ -314,7 +308,7 @@ class SharedLoggingService {
 
   Future close() {
     assert(_closeCompleter == null);
-    _closeCompleter = new Completer();
+    _closeCompleter = Completer();
 
     // Trigger a last flush which will write out remaining data (if necessary)
     // and try to complete the completer if all work was already done.
@@ -334,15 +328,12 @@ class SharedLoggingService {
 }
 
 void _addLabel(api.LogEntry entry, String key, String value) {
-  entry
-    ..labels.add(new api.LogEntry_LabelsEntry()
-      ..key = key
-      ..value = value);
+  entry..labels[key] = value;
 }
 
 api.Timestamp _protobufTimestampFromMilliseconds(int ms) {
-  return new api.Timestamp()
-    ..seconds = new api.Int64(ms ~/ 1000)
+  return api.Timestamp()
+    ..seconds = api.Int64(ms ~/ 1000)
     ..nanos = 1000 * 1000 * (ms % 1000);
 }
 
@@ -359,5 +350,5 @@ api.LogSeverity _severityFromLogLevel(LogLevel level) {
     case LogLevel.DEBUG:
       return api.LogSeverity.DEBUG;
   }
-  throw new ArgumentError('Unknown logevel $level');
+  throw ArgumentError('Unknown logevel $level');
 }

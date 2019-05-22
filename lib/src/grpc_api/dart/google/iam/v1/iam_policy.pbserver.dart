@@ -1,39 +1,43 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/iam/v1/iam_policy.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'iam_policy.pb.dart';
-import 'policy.pb.dart';
+import 'policy.pb.dart' as $0;
 import 'iam_policy.pbjson.dart';
 
 export 'iam_policy.pb.dart';
 
-abstract class IAMPolicyServiceBase extends GeneratedService {
-  Future<Policy> setIamPolicy(ServerContext ctx, SetIamPolicyRequest request);
-  Future<Policy> getIamPolicy(ServerContext ctx, GetIamPolicyRequest request);
-  Future<TestIamPermissionsResponse> testIamPermissions(
-      ServerContext ctx, TestIamPermissionsRequest request);
+abstract class IAMPolicyServiceBase extends $pb.GeneratedService {
+  $async.Future<$0.Policy> setIamPolicy(
+      $pb.ServerContext ctx, SetIamPolicyRequest request);
+  $async.Future<$0.Policy> getIamPolicy(
+      $pb.ServerContext ctx, GetIamPolicyRequest request);
+  $async.Future<TestIamPermissionsResponse> testIamPermissions(
+      $pb.ServerContext ctx, TestIamPermissionsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'SetIamPolicy':
-        return new SetIamPolicyRequest();
+        return SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new GetIamPolicyRequest();
+        return GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new TestIamPermissionsRequest();
+        return TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'SetIamPolicy':
         return this.setIamPolicy(ctx, request);
@@ -42,10 +46,11 @@ abstract class IAMPolicyServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => IAMPolicy$json;
-  Map<String, Map<String, dynamic>> get $messageJson => IAMPolicy$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => IAMPolicyServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => IAMPolicyServiceBase$messageJson;
 }

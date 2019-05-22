@@ -12,15 +12,12 @@ language_settings:
     package_name: Google.Cloud.Vision.V1P1Beta1
     release_level: BETA
   ruby:
-    package_name: Google::Cloud::Vision::V1P1Beta1
+    package_name: Google::Cloud::Vision::V1p1beta1
   php:
     package_name: Google\Cloud\Vision\V1p1beta1
   nodejs:
     package_name: vision.v1p1beta1
     domain_layer_location: google-cloud
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
 interfaces:
 - name: google.cloud.vision.v1p1beta1.ImageAnnotator
   smoke_test:
@@ -53,7 +50,6 @@ interfaces:
         - requests
     required_fields:
     - requests
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000

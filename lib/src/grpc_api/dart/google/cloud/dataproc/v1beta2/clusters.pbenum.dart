@@ -1,27 +1,27 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dataproc/v1beta2/clusters.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class ClusterStatus_State extends ProtobufEnum {
+class ClusterStatus_State extends $pb.ProtobufEnum {
   static const ClusterStatus_State UNKNOWN =
-      const ClusterStatus_State._(0, 'UNKNOWN');
+      ClusterStatus_State._(0, 'UNKNOWN');
   static const ClusterStatus_State CREATING =
-      const ClusterStatus_State._(1, 'CREATING');
+      ClusterStatus_State._(1, 'CREATING');
   static const ClusterStatus_State RUNNING =
-      const ClusterStatus_State._(2, 'RUNNING');
-  static const ClusterStatus_State ERROR =
-      const ClusterStatus_State._(3, 'ERROR');
+      ClusterStatus_State._(2, 'RUNNING');
+  static const ClusterStatus_State ERROR = ClusterStatus_State._(3, 'ERROR');
   static const ClusterStatus_State DELETING =
-      const ClusterStatus_State._(4, 'DELETING');
+      ClusterStatus_State._(4, 'DELETING');
   static const ClusterStatus_State UPDATING =
-      const ClusterStatus_State._(5, 'UPDATING');
+      ClusterStatus_State._(5, 'UPDATING');
 
-  static const List<ClusterStatus_State> values = const <ClusterStatus_State>[
+  static const $core.List<ClusterStatus_State> values = <ClusterStatus_State>[
     UNKNOWN,
     CREATING,
     RUNNING,
@@ -30,38 +30,31 @@ class ClusterStatus_State extends ProtobufEnum {
     UPDATING,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ClusterStatus_State valueOf(int value) =>
-      _byValue[value] as ClusterStatus_State;
-  static void $checkItem(ClusterStatus_State v) {
-    if (v is! ClusterStatus_State) checkItemFailed(v, 'ClusterStatus_State');
-  }
+  static final $core.Map<$core.int, ClusterStatus_State> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ClusterStatus_State valueOf($core.int value) => _byValue[value];
 
-  const ClusterStatus_State._(int v, String n) : super(v, n);
+  const ClusterStatus_State._($core.int v, $core.String n) : super(v, n);
 }
 
-class ClusterStatus_Substate extends ProtobufEnum {
+class ClusterStatus_Substate extends $pb.ProtobufEnum {
   static const ClusterStatus_Substate UNSPECIFIED =
-      const ClusterStatus_Substate._(0, 'UNSPECIFIED');
+      ClusterStatus_Substate._(0, 'UNSPECIFIED');
   static const ClusterStatus_Substate UNHEALTHY =
-      const ClusterStatus_Substate._(1, 'UNHEALTHY');
+      ClusterStatus_Substate._(1, 'UNHEALTHY');
   static const ClusterStatus_Substate STALE_STATUS =
-      const ClusterStatus_Substate._(2, 'STALE_STATUS');
+      ClusterStatus_Substate._(2, 'STALE_STATUS');
 
-  static const List<ClusterStatus_Substate> values =
-      const <ClusterStatus_Substate>[
+  static const $core.List<ClusterStatus_Substate> values =
+      <ClusterStatus_Substate>[
     UNSPECIFIED,
     UNHEALTHY,
     STALE_STATUS,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ClusterStatus_Substate valueOf(int value) =>
-      _byValue[value] as ClusterStatus_Substate;
-  static void $checkItem(ClusterStatus_Substate v) {
-    if (v is! ClusterStatus_Substate)
-      checkItemFailed(v, 'ClusterStatus_Substate');
-  }
+  static final $core.Map<$core.int, ClusterStatus_Substate> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ClusterStatus_Substate valueOf($core.int value) => _byValue[value];
 
-  const ClusterStatus_Substate._(int v, String n) : super(v, n);
+  const ClusterStatus_Substate._($core.int v, $core.String n) : super(v, n);
 }

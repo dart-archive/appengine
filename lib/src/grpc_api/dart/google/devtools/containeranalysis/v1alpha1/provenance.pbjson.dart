@@ -1,14 +1,15 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/containeranalysis/v1alpha1/provenance.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const BuildProvenance$json = const {
+const BuildProvenance$json = {
   '1': 'BuildProvenance',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'project_id', '3': 2, '4': 1, '5': 9, '10': 'projectId'},
-    const {
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'project_id', '3': 2, '4': 1, '5': 9, '10': 'projectId'},
+    {
       '1': 'commands',
       '3': 5,
       '4': 3,
@@ -16,7 +17,7 @@ const BuildProvenance$json = const {
       '6': '.google.devtools.containeranalysis.v1alpha1.Command',
       '10': 'commands'
     },
-    const {
+    {
       '1': 'built_artifacts',
       '3': 6,
       '4': 3,
@@ -24,7 +25,7 @@ const BuildProvenance$json = const {
       '6': '.google.devtools.containeranalysis.v1alpha1.Artifact',
       '10': 'builtArtifacts'
     },
-    const {
+    {
       '1': 'create_time',
       '3': 7,
       '4': 1,
@@ -32,7 +33,7 @@ const BuildProvenance$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'createTime'
     },
-    const {
+    {
       '1': 'start_time',
       '3': 8,
       '4': 1,
@@ -40,7 +41,7 @@ const BuildProvenance$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'startTime'
     },
-    const {
+    {
       '1': 'finish_time',
       '3': 9,
       '4': 1,
@@ -48,9 +49,9 @@ const BuildProvenance$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'finishTime'
     },
-    const {'1': 'creator', '3': 11, '4': 1, '5': 9, '10': 'creator'},
-    const {'1': 'logs_bucket', '3': 13, '4': 1, '5': 9, '10': 'logsBucket'},
-    const {
+    {'1': 'creator', '3': 11, '4': 1, '5': 9, '10': 'creator'},
+    {'1': 'logs_bucket', '3': 13, '4': 1, '5': 9, '10': 'logsBucket'},
+    {
       '1': 'source_provenance',
       '3': 14,
       '4': 1,
@@ -58,8 +59,8 @@ const BuildProvenance$json = const {
       '6': '.google.devtools.containeranalysis.v1alpha1.Source',
       '10': 'sourceProvenance'
     },
-    const {'1': 'trigger_id', '3': 15, '4': 1, '5': 9, '10': 'triggerId'},
-    const {
+    {'1': 'trigger_id', '3': 15, '4': 1, '5': 9, '10': 'triggerId'},
+    {
       '1': 'build_options',
       '3': 16,
       '4': 3,
@@ -68,30 +69,24 @@ const BuildProvenance$json = const {
           '.google.devtools.containeranalysis.v1alpha1.BuildProvenance.BuildOptionsEntry',
       '10': 'buildOptions'
     },
-    const {
-      '1': 'builder_version',
-      '3': 17,
-      '4': 1,
-      '5': 9,
-      '10': 'builderVersion'
-    },
+    {'1': 'builder_version', '3': 17, '4': 1, '5': 9, '10': 'builderVersion'},
   ],
-  '3': const [BuildProvenance_BuildOptionsEntry$json],
+  '3': [BuildProvenance_BuildOptionsEntry$json],
 };
 
-const BuildProvenance_BuildOptionsEntry$json = const {
+const BuildProvenance_BuildOptionsEntry$json = {
   '1': 'BuildOptionsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const Source$json = const {
+const Source$json = {
   '1': 'Source',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'storage_source',
       '3': 1,
       '4': 1,
@@ -100,7 +95,7 @@ const Source$json = const {
       '9': 0,
       '10': 'storageSource'
     },
-    const {
+    {
       '1': 'repo_source',
       '3': 2,
       '4': 1,
@@ -109,7 +104,7 @@ const Source$json = const {
       '9': 0,
       '10': 'repoSource'
     },
-    const {
+    {
       '1': 'artifact_storage_source',
       '3': 4,
       '4': 1,
@@ -117,7 +112,7 @@ const Source$json = const {
       '6': '.google.devtools.containeranalysis.v1alpha1.StorageSource',
       '10': 'artifactStorageSource'
     },
-    const {
+    {
       '1': 'file_hashes',
       '3': 3,
       '4': 3,
@@ -125,7 +120,7 @@ const Source$json = const {
       '6': '.google.devtools.containeranalysis.v1alpha1.Source.FileHashesEntry',
       '10': 'fileHashes'
     },
-    const {
+    {
       '1': 'context',
       '3': 7,
       '4': 1,
@@ -133,7 +128,7 @@ const Source$json = const {
       '6': '.google.devtools.containeranalysis.v1alpha1.SourceContext',
       '10': 'context'
     },
-    const {
+    {
       '1': 'additional_contexts',
       '3': 8,
       '4': 3,
@@ -142,17 +137,17 @@ const Source$json = const {
       '10': 'additionalContexts'
     },
   ],
-  '3': const [Source_FileHashesEntry$json],
-  '8': const [
-    const {'1': 'source'},
+  '3': [Source_FileHashesEntry$json],
+  '8': [
+    {'1': 'source'},
   ],
 };
 
-const Source_FileHashesEntry$json = const {
+const Source_FileHashesEntry$json = {
   '1': 'FileHashesEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
       '1': 'value',
       '3': 2,
       '4': 1,
@@ -161,13 +156,13 @@ const Source_FileHashesEntry$json = const {
       '10': 'value'
     },
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const FileHashes$json = const {
+const FileHashes$json = {
   '1': 'FileHashes',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'file_hash',
       '3': 1,
       '4': 3,
@@ -178,10 +173,10 @@ const FileHashes$json = const {
   ],
 };
 
-const Hash$json = const {
+const Hash$json = {
   '1': 'Hash',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'type',
       '3': 1,
       '4': 1,
@@ -189,74 +184,60 @@ const Hash$json = const {
       '6': '.google.devtools.containeranalysis.v1alpha1.Hash.HashType',
       '10': 'type'
     },
-    const {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
+    {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
   ],
-  '4': const [Hash_HashType$json],
+  '4': [Hash_HashType$json],
 };
 
-const Hash_HashType$json = const {
+const Hash_HashType$json = {
   '1': 'HashType',
-  '2': const [
-    const {'1': 'NONE', '2': 0},
-    const {'1': 'SHA256', '2': 1},
+  '2': [
+    {'1': 'NONE', '2': 0},
+    {'1': 'SHA256', '2': 1},
   ],
 };
 
-const StorageSource$json = const {
+const StorageSource$json = {
   '1': 'StorageSource',
-  '2': const [
-    const {'1': 'bucket', '3': 1, '4': 1, '5': 9, '10': 'bucket'},
-    const {'1': 'object', '3': 2, '4': 1, '5': 9, '10': 'object'},
-    const {'1': 'generation', '3': 3, '4': 1, '5': 3, '10': 'generation'},
+  '2': [
+    {'1': 'bucket', '3': 1, '4': 1, '5': 9, '10': 'bucket'},
+    {'1': 'object', '3': 2, '4': 1, '5': 9, '10': 'object'},
+    {'1': 'generation', '3': 3, '4': 1, '5': 3, '10': 'generation'},
   ],
 };
 
-const RepoSource$json = const {
+const RepoSource$json = {
   '1': 'RepoSource',
-  '2': const [
-    const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    const {'1': 'repo_name', '3': 2, '4': 1, '5': 9, '10': 'repoName'},
-    const {
-      '1': 'branch_name',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'branchName'
-    },
-    const {'1': 'tag_name', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'tagName'},
-    const {
-      '1': 'commit_sha',
-      '3': 5,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'commitSha'
-    },
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'repo_name', '3': 2, '4': 1, '5': 9, '10': 'repoName'},
+    {'1': 'branch_name', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'branchName'},
+    {'1': 'tag_name', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'tagName'},
+    {'1': 'commit_sha', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'commitSha'},
   ],
-  '8': const [
-    const {'1': 'revision'},
+  '8': [
+    {'1': 'revision'},
   ],
 };
 
-const Command$json = const {
+const Command$json = {
   '1': 'Command',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'env', '3': 2, '4': 3, '5': 9, '10': 'env'},
-    const {'1': 'args', '3': 3, '4': 3, '5': 9, '10': 'args'},
-    const {'1': 'dir', '3': 4, '4': 1, '5': 9, '10': 'dir'},
-    const {'1': 'id', '3': 5, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'wait_for', '3': 6, '4': 3, '5': 9, '10': 'waitFor'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'env', '3': 2, '4': 3, '5': 9, '10': 'env'},
+    {'1': 'args', '3': 3, '4': 3, '5': 9, '10': 'args'},
+    {'1': 'dir', '3': 4, '4': 1, '5': 9, '10': 'dir'},
+    {'1': 'id', '3': 5, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'wait_for', '3': 6, '4': 3, '5': 9, '10': 'waitFor'},
   ],
 };
 
-const Artifact$json = const {
+const Artifact$json = {
   '1': 'Artifact',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'checksum', '3': 2, '4': 1, '5': 9, '10': 'checksum'},
-    const {'1': 'id', '3': 3, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'names', '3': 4, '4': 3, '5': 9, '10': 'names'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'checksum', '3': 2, '4': 1, '5': 9, '10': 'checksum'},
+    {'1': 'id', '3': 3, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'names', '3': 4, '4': 3, '5': 9, '10': 'names'},
   ],
 };

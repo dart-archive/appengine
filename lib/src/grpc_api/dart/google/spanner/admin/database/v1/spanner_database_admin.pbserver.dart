@@ -1,67 +1,70 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/admin/database/v1/spanner_database_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'spanner_database_admin.pb.dart';
-import '../../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../../../iam/v1/policy.pb.dart' as $google$iam$v1;
+import '../../../../longrunning/operations.pb.dart' as $1;
+import '../../../../protobuf/empty.pb.dart' as $2;
+import '../../../../iam/v1/iam_policy.pb.dart' as $3;
+import '../../../../iam/v1/policy.pb.dart' as $4;
 import 'spanner_database_admin.pbjson.dart';
 
 export 'spanner_database_admin.pb.dart';
 
-abstract class DatabaseAdminServiceBase extends GeneratedService {
-  Future<ListDatabasesResponse> listDatabases(
-      ServerContext ctx, ListDatabasesRequest request);
-  Future<$google$longrunning.Operation> createDatabase(
-      ServerContext ctx, CreateDatabaseRequest request);
-  Future<Database> getDatabase(ServerContext ctx, GetDatabaseRequest request);
-  Future<$google$longrunning.Operation> updateDatabaseDdl(
-      ServerContext ctx, UpdateDatabaseDdlRequest request);
-  Future<$google$protobuf.Empty> dropDatabase(
-      ServerContext ctx, DropDatabaseRequest request);
-  Future<GetDatabaseDdlResponse> getDatabaseDdl(
-      ServerContext ctx, GetDatabaseDdlRequest request);
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
+abstract class DatabaseAdminServiceBase extends $pb.GeneratedService {
+  $async.Future<ListDatabasesResponse> listDatabases(
+      $pb.ServerContext ctx, ListDatabasesRequest request);
+  $async.Future<$1.Operation> createDatabase(
+      $pb.ServerContext ctx, CreateDatabaseRequest request);
+  $async.Future<Database> getDatabase(
+      $pb.ServerContext ctx, GetDatabaseRequest request);
+  $async.Future<$1.Operation> updateDatabaseDdl(
+      $pb.ServerContext ctx, UpdateDatabaseDdlRequest request);
+  $async.Future<$2.Empty> dropDatabase(
+      $pb.ServerContext ctx, DropDatabaseRequest request);
+  $async.Future<GetDatabaseDdlResponse> getDatabaseDdl(
+      $pb.ServerContext ctx, GetDatabaseDdlRequest request);
+  $async.Future<$4.Policy> setIamPolicy(
+      $pb.ServerContext ctx, $3.SetIamPolicyRequest request);
+  $async.Future<$4.Policy> getIamPolicy(
+      $pb.ServerContext ctx, $3.GetIamPolicyRequest request);
+  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
+      $pb.ServerContext ctx, $3.TestIamPermissionsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListDatabases':
-        return new ListDatabasesRequest();
+        return ListDatabasesRequest();
       case 'CreateDatabase':
-        return new CreateDatabaseRequest();
+        return CreateDatabaseRequest();
       case 'GetDatabase':
-        return new GetDatabaseRequest();
+        return GetDatabaseRequest();
       case 'UpdateDatabaseDdl':
-        return new UpdateDatabaseDdlRequest();
+        return UpdateDatabaseDdlRequest();
       case 'DropDatabase':
-        return new DropDatabaseRequest();
+        return DropDatabaseRequest();
       case 'GetDatabaseDdl':
-        return new GetDatabaseDdlRequest();
+        return GetDatabaseDdlRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $3.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $3.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $3.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListDatabases':
         return this.listDatabases(ctx, request);
@@ -82,11 +85,12 @@ abstract class DatabaseAdminServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => DatabaseAdmin$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      DatabaseAdmin$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      DatabaseAdminServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DatabaseAdminServiceBase$messageJson;
 }

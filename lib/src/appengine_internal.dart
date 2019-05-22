@@ -5,7 +5,6 @@
 library appengine.internal;
 
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:gcloud/datastore.dart' as datastore;
@@ -16,7 +15,6 @@ import 'package:gcloud/storage.dart' as storage;
 import 'package:googleapis_auth/auth_io.dart' as auth;
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
-import 'package:stack_trace/stack_trace.dart';
 
 import 'errors.dart' as errors;
 import 'logging.dart' as logging;
@@ -28,7 +26,6 @@ import 'grpc_api_impl/auth_utils.dart' as auth_utils;
 import 'grpc_api_impl/datastore_impl.dart' as grpc_datastore_impl;
 import 'grpc_api_impl/grpc.dart' as grpc;
 import 'grpc_api_impl/logging_impl.dart' as grpc_logging_impl;
-import 'logging.dart';
 import 'logging_impl.dart';
 import 'server/context_registry.dart';
 import 'server/logging_package_adaptor.dart';
@@ -48,10 +45,10 @@ Future withAppEngineServices(Future callback()) =>
 /// AppEngine services available within that scope.
 Future runAppEngine(void handler(HttpRequest request, ClientContext context),
     void onError(Object e, StackTrace s),
-    {int port: 8080, bool shared: false}) {
+    {int port = 8080, bool shared = false}) {
   return _withAppEngineServicesInternal((ContextRegistry contextRegistry) {
     var appengineServer =
-        new AppEngineHttpServer(contextRegistry, port: port, shared: shared);
+        AppEngineHttpServer(contextRegistry, port: port, shared: shared);
     appengineServer.run((request, context) {
       ss.fork(() {
         logging.registerLoggingService(context.services.logging);
@@ -131,13 +128,13 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final bool isProdEnvironment = !isDevEnvironment;
 
   String _findEnvironmentVariable(String name,
-      {bool onlyInProd: false, bool onlyInDev: false, bool needed: true}) {
+      {bool onlyInProd = false, bool onlyInDev = false, bool needed = true}) {
     if (onlyInProd && !isProdEnvironment) return null;
     if (onlyInDev && !isDevEnvironment) return null;
 
     final value = Platform.environment[name];
     if (value == null && needed) {
-      throw new StateError('Expected environment variable $name to be set!');
+      throw StateError('Expected environment variable $name to be set!');
     }
     return value;
   }
@@ -171,7 +168,7 @@ Future<ContextRegistry> _initializeAppEngine() async {
 
   final instanceId = await _getInstanceid();
 
-  final context = new AppengineContext(isDevEnvironment, projectId, versionId,
+  final context = AppengineContext(isDevEnvironment, projectId, versionId,
       serviceId, instance, instanceId, pubServeUrl);
 
   final serviceAccount = _obtainServiceAccountCredentials(gcloudKey);
@@ -183,7 +180,7 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final dbService = await _obtainDatastoreService(
       context.applicationID, dbEmulatorHost, serviceAccount);
 
-  return new ContextRegistry(loggerFactory, dbService, storageService, context);
+  return ContextRegistry(loggerFactory, dbService, storageService, context);
 }
 
 /// Obtains a gRPC-based datastore implementation.
@@ -224,8 +221,8 @@ Future<db.DatastoreDB> _obtainDatastoreService(
       grpc_datastore_impl.OAuth2Scopes, needAuthorization);
   ss.registerScopeExitCallback(grpcClient.close);
   final rawDatastore =
-      new grpc_datastore_impl.GrpcDatastoreImpl(grpcClient, projectId);
-  return new db.DatastoreDB(rawDatastore, modelDB: new db.ModelDBImpl());
+      grpc_datastore_impl.GrpcDatastoreImpl(grpcClient, projectId);
+  return db.DatastoreDB(rawDatastore, modelDB: db.ModelDBImpl());
 }
 
 /// Creates a storage service using the service account credentials (if given)
@@ -234,7 +231,7 @@ Future<storage.Storage> _obtainStorageService(
     String projectId, auth.ServiceAccountCredentials serviceAccount) async {
   final authClient =
       await _getAuthClient(serviceAccount, storage.Storage.SCOPES);
-  return new storage.Storage(authClient, projectId);
+  return storage.Storage(authClient, projectId);
 }
 
 /// Creates a closure function which can be used for
@@ -244,9 +241,9 @@ Future<storage.Storage> _obtainStorageService(
 Future<LoggerFactory> _obtainLoggerFactory(AppengineContext context,
     auth.ServiceAccountCredentials serviceAccount, String zoneId) async {
   if (context.isDevelopmentEnvironment) {
-    return new StderrLoggerFactory();
+    return StderrLoggerFactory();
   } else {
-    final sharedLoggingService = new grpc_logging_impl.SharedLoggingService(
+    final sharedLoggingService = grpc_logging_impl.SharedLoggingService(
         await _getGrpcClient(serviceAccount, 'https://logging.googleapis.com',
             grpc_logging_impl.OAuth2Scopes, true),
         context.applicationID,
@@ -256,7 +253,7 @@ Future<LoggerFactory> _obtainLoggerFactory(AppengineContext context,
         context.instance,
         context.instanceId);
     ss.registerScopeExitCallback(sharedLoggingService.close);
-    return new GrpcLoggerFactory(sharedLoggingService);
+    return GrpcLoggerFactory(sharedLoggingService);
   }
 }
 
@@ -290,9 +287,9 @@ Future<grpc.Client> _getGrpcClient(
   if (needAuthorization) {
     if (serviceAccount != null) {
       accessTokenProvider =
-          new auth_utils.ServiceAccountTokenProvider(serviceAccount, scopes);
+          auth_utils.ServiceAccountTokenProvider(serviceAccount, scopes);
     } else {
-      accessTokenProvider = new auth_utils.MetadataAccessTokenProvider();
+      accessTokenProvider = auth_utils.MetadataAccessTokenProvider();
     }
   }
   final client = await grpc.connectToEndpoint(Uri.parse(url),
@@ -305,10 +302,10 @@ auth.ServiceAccountCredentials _obtainServiceAccountCredentials(
     String gcloudKey) {
   if (gcloudKey != null && gcloudKey != '') {
     try {
-      final serviceAccountJson = new File(gcloudKey).readAsStringSync();
-      return new auth.ServiceAccountCredentials.fromJson(serviceAccountJson);
+      final serviceAccountJson = File(gcloudKey).readAsStringSync();
+      return auth.ServiceAccountCredentials.fromJson(serviceAccountJson);
     } catch (e) {
-      throw new errors.AppEngineError(
+      throw errors.AppEngineError(
           'There was problem using the GCLOUD_KEY "$gcloudKey". '
           'It might be an invalid service account key in json form.\n'
           '$e');
@@ -322,7 +319,7 @@ Future<String> _getZoneInProduction() => _getMetadataValue('zone');
 Future<String> _getInstanceid() => _getMetadataValue('id');
 
 Future<String> _getMetadataValue(String path) async {
-  final client = new http.Client();
+  final client = http.Client();
   try {
     var response = await client.get(
         'http://metadata.google.internal/computeMetadata/v1/instance/$path',
@@ -364,12 +361,12 @@ class GrpcLoggerFactory implements LoggerFactory {
       String ip,
       String traceId,
       String referrer) {
-    return new grpc_logging_impl.GrpcRequestLoggingImpl(
+    return grpc_logging_impl.GrpcRequestLoggingImpl(
         _shared, method, resource, userAgent, host, ip, traceId, referrer);
   }
 
   logging.Logging newBackgroundLogger() {
-    return new grpc_logging_impl.GrpcBackgroundLoggingImpl(_shared);
+    return grpc_logging_impl.GrpcBackgroundLoggingImpl(_shared);
   }
 }
 
@@ -385,10 +382,10 @@ class StderrLoggerFactory implements LoggerFactory {
       String ip,
       String traceId,
       String referrer) {
-    return new stderr_logging_impl.StderrRequestLoggingImpl(method, resource);
+    return stderr_logging_impl.StderrRequestLoggingImpl(method, resource);
   }
 
   logging.Logging newBackgroundLogger() {
-    return new stderr_logging_impl.StderrBackgroundLoggingImpl();
+    return stderr_logging_impl.StderrBackgroundLoggingImpl();
   }
 }

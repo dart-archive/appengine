@@ -1,12 +1,13 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/v1/mutation.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const Mutation$json = const {
+const Mutation$json = {
   '1': 'Mutation',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'insert',
       '3': 1,
       '4': 1,
@@ -15,7 +16,7 @@ const Mutation$json = const {
       '9': 0,
       '10': 'insert'
     },
-    const {
+    {
       '1': 'update',
       '3': 2,
       '4': 1,
@@ -24,7 +25,7 @@ const Mutation$json = const {
       '9': 0,
       '10': 'update'
     },
-    const {
+    {
       '1': 'insert_or_update',
       '3': 3,
       '4': 1,
@@ -33,7 +34,7 @@ const Mutation$json = const {
       '9': 0,
       '10': 'insertOrUpdate'
     },
-    const {
+    {
       '1': 'replace',
       '3': 4,
       '4': 1,
@@ -42,7 +43,7 @@ const Mutation$json = const {
       '9': 0,
       '10': 'replace'
     },
-    const {
+    {
       '1': 'delete',
       '3': 5,
       '4': 1,
@@ -52,18 +53,18 @@ const Mutation$json = const {
       '10': 'delete'
     },
   ],
-  '3': const [Mutation_Write$json, Mutation_Delete$json],
-  '8': const [
-    const {'1': 'operation'},
+  '3': [Mutation_Write$json, Mutation_Delete$json],
+  '8': [
+    {'1': 'operation'},
   ],
 };
 
-const Mutation_Write$json = const {
+const Mutation_Write$json = {
   '1': 'Write',
-  '2': const [
-    const {'1': 'table', '3': 1, '4': 1, '5': 9, '10': 'table'},
-    const {'1': 'columns', '3': 2, '4': 3, '5': 9, '10': 'columns'},
-    const {
+  '2': [
+    {'1': 'table', '3': 1, '4': 1, '5': 9, '10': 'table'},
+    {'1': 'columns', '3': 2, '4': 3, '5': 9, '10': 'columns'},
+    {
       '1': 'values',
       '3': 3,
       '4': 3,
@@ -74,11 +75,11 @@ const Mutation_Write$json = const {
   ],
 };
 
-const Mutation_Delete$json = const {
+const Mutation_Delete$json = {
   '1': 'Delete',
-  '2': const [
-    const {'1': 'table', '3': 1, '4': 1, '5': 9, '10': 'table'},
-    const {
+  '2': [
+    {'1': 'table', '3': 1, '4': 1, '5': 9, '10': 'table'},
+    {
       '1': 'key_set',
       '3': 2,
       '4': 1,

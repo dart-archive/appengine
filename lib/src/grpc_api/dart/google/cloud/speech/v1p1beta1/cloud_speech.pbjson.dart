@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/speech/v1p1beta1/cloud_speech.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $google$protobuf;
-import '../../../longrunning/operations.pbjson.dart' as $google$longrunning;
-import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
-import '../../../rpc/status.pbjson.dart' as $google$rpc;
+import '../../../protobuf/duration.pbjson.dart' as $2;
+import '../../../longrunning/operations.pbjson.dart' as $3;
+import '../../../protobuf/any.pbjson.dart' as $4;
+import '../../../rpc/status.pbjson.dart' as $1;
 
-const RecognizeRequest$json = const {
+const RecognizeRequest$json = {
   '1': 'RecognizeRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'config',
       '3': 1,
       '4': 1,
@@ -19,7 +20,7 @@ const RecognizeRequest$json = const {
       '6': '.google.cloud.speech.v1p1beta1.RecognitionConfig',
       '10': 'config'
     },
-    const {
+    {
       '1': 'audio',
       '3': 2,
       '4': 1,
@@ -30,10 +31,10 @@ const RecognizeRequest$json = const {
   ],
 };
 
-const LongRunningRecognizeRequest$json = const {
+const LongRunningRecognizeRequest$json = {
   '1': 'LongRunningRecognizeRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'config',
       '3': 1,
       '4': 1,
@@ -41,7 +42,7 @@ const LongRunningRecognizeRequest$json = const {
       '6': '.google.cloud.speech.v1p1beta1.RecognitionConfig',
       '10': 'config'
     },
-    const {
+    {
       '1': 'audio',
       '3': 2,
       '4': 1,
@@ -52,10 +53,10 @@ const LongRunningRecognizeRequest$json = const {
   ],
 };
 
-const StreamingRecognizeRequest$json = const {
+const StreamingRecognizeRequest$json = {
   '1': 'StreamingRecognizeRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'streaming_config',
       '3': 1,
       '4': 1,
@@ -64,7 +65,7 @@ const StreamingRecognizeRequest$json = const {
       '9': 0,
       '10': 'streamingConfig'
     },
-    const {
+    {
       '1': 'audio_content',
       '3': 2,
       '4': 1,
@@ -73,15 +74,15 @@ const StreamingRecognizeRequest$json = const {
       '10': 'audioContent'
     },
   ],
-  '8': const [
-    const {'1': 'streaming_request'},
+  '8': [
+    {'1': 'streaming_request'},
   ],
 };
 
-const StreamingRecognitionConfig$json = const {
+const StreamingRecognitionConfig$json = {
   '1': 'StreamingRecognitionConfig',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'config',
       '3': 1,
       '4': 1,
@@ -89,27 +90,15 @@ const StreamingRecognitionConfig$json = const {
       '6': '.google.cloud.speech.v1p1beta1.RecognitionConfig',
       '10': 'config'
     },
-    const {
-      '1': 'single_utterance',
-      '3': 2,
-      '4': 1,
-      '5': 8,
-      '10': 'singleUtterance'
-    },
-    const {
-      '1': 'interim_results',
-      '3': 3,
-      '4': 1,
-      '5': 8,
-      '10': 'interimResults'
-    },
+    {'1': 'single_utterance', '3': 2, '4': 1, '5': 8, '10': 'singleUtterance'},
+    {'1': 'interim_results', '3': 3, '4': 1, '5': 8, '10': 'interimResults'},
   ],
 };
 
-const RecognitionConfig$json = const {
+const RecognitionConfig$json = {
   '1': 'RecognitionConfig',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'encoding',
       '3': 1,
       '4': 1,
@@ -117,50 +106,32 @@ const RecognitionConfig$json = const {
       '6': '.google.cloud.speech.v1p1beta1.RecognitionConfig.AudioEncoding',
       '10': 'encoding'
     },
-    const {
-      '1': 'sample_rate_hertz',
-      '3': 2,
-      '4': 1,
-      '5': 5,
-      '10': 'sampleRateHertz'
-    },
-    const {
+    {'1': 'sample_rate_hertz', '3': 2, '4': 1, '5': 5, '10': 'sampleRateHertz'},
+    {
       '1': 'audio_channel_count',
       '3': 7,
       '4': 1,
       '5': 5,
       '10': 'audioChannelCount'
     },
-    const {
+    {
       '1': 'enable_separate_recognition_per_channel',
       '3': 12,
       '4': 1,
       '5': 8,
       '10': 'enableSeparateRecognitionPerChannel'
     },
-    const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
-    const {
+    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {
       '1': 'alternative_language_codes',
       '3': 18,
       '4': 3,
       '5': 9,
       '10': 'alternativeLanguageCodes'
     },
-    const {
-      '1': 'max_alternatives',
-      '3': 4,
-      '4': 1,
-      '5': 5,
-      '10': 'maxAlternatives'
-    },
-    const {
-      '1': 'profanity_filter',
-      '3': 5,
-      '4': 1,
-      '5': 8,
-      '10': 'profanityFilter'
-    },
-    const {
+    {'1': 'max_alternatives', '3': 4, '4': 1, '5': 5, '10': 'maxAlternatives'},
+    {'1': 'profanity_filter', '3': 5, '4': 1, '5': 8, '10': 'profanityFilter'},
+    {
       '1': 'speech_contexts',
       '3': 6,
       '4': 3,
@@ -168,42 +139,42 @@ const RecognitionConfig$json = const {
       '6': '.google.cloud.speech.v1p1beta1.SpeechContext',
       '10': 'speechContexts'
     },
-    const {
+    {
       '1': 'enable_word_time_offsets',
       '3': 8,
       '4': 1,
       '5': 8,
       '10': 'enableWordTimeOffsets'
     },
-    const {
+    {
       '1': 'enable_word_confidence',
       '3': 15,
       '4': 1,
       '5': 8,
       '10': 'enableWordConfidence'
     },
-    const {
+    {
       '1': 'enable_automatic_punctuation',
       '3': 11,
       '4': 1,
       '5': 8,
       '10': 'enableAutomaticPunctuation'
     },
-    const {
+    {
       '1': 'enable_speaker_diarization',
       '3': 16,
       '4': 1,
       '5': 8,
       '10': 'enableSpeakerDiarization'
     },
-    const {
+    {
       '1': 'diarization_speaker_count',
       '3': 17,
       '4': 1,
       '5': 5,
       '10': 'diarizationSpeakerCount'
     },
-    const {
+    {
       '1': 'metadata',
       '3': 9,
       '4': 1,
@@ -211,30 +182,30 @@ const RecognitionConfig$json = const {
       '6': '.google.cloud.speech.v1p1beta1.RecognitionMetadata',
       '10': 'metadata'
     },
-    const {'1': 'model', '3': 13, '4': 1, '5': 9, '10': 'model'},
-    const {'1': 'use_enhanced', '3': 14, '4': 1, '5': 8, '10': 'useEnhanced'},
+    {'1': 'model', '3': 13, '4': 1, '5': 9, '10': 'model'},
+    {'1': 'use_enhanced', '3': 14, '4': 1, '5': 8, '10': 'useEnhanced'},
   ],
-  '4': const [RecognitionConfig_AudioEncoding$json],
+  '4': [RecognitionConfig_AudioEncoding$json],
 };
 
-const RecognitionConfig_AudioEncoding$json = const {
+const RecognitionConfig_AudioEncoding$json = {
   '1': 'AudioEncoding',
-  '2': const [
-    const {'1': 'ENCODING_UNSPECIFIED', '2': 0},
-    const {'1': 'LINEAR16', '2': 1},
-    const {'1': 'FLAC', '2': 2},
-    const {'1': 'MULAW', '2': 3},
-    const {'1': 'AMR', '2': 4},
-    const {'1': 'AMR_WB', '2': 5},
-    const {'1': 'OGG_OPUS', '2': 6},
-    const {'1': 'SPEEX_WITH_HEADER_BYTE', '2': 7},
+  '2': [
+    {'1': 'ENCODING_UNSPECIFIED', '2': 0},
+    {'1': 'LINEAR16', '2': 1},
+    {'1': 'FLAC', '2': 2},
+    {'1': 'MULAW', '2': 3},
+    {'1': 'AMR', '2': 4},
+    {'1': 'AMR_WB', '2': 5},
+    {'1': 'OGG_OPUS', '2': 6},
+    {'1': 'SPEEX_WITH_HEADER_BYTE', '2': 7},
   ],
 };
 
-const RecognitionMetadata$json = const {
+const RecognitionMetadata$json = {
   '1': 'RecognitionMetadata',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'interaction_type',
       '3': 1,
       '4': 1,
@@ -242,14 +213,14 @@ const RecognitionMetadata$json = const {
       '6': '.google.cloud.speech.v1p1beta1.RecognitionMetadata.InteractionType',
       '10': 'interactionType'
     },
-    const {
+    {
       '1': 'industry_naics_code_of_audio',
       '3': 3,
       '4': 1,
       '5': 13,
       '10': 'industryNaicsCodeOfAudio'
     },
-    const {
+    {
       '1': 'microphone_distance',
       '3': 4,
       '4': 1,
@@ -258,7 +229,7 @@ const RecognitionMetadata$json = const {
           '.google.cloud.speech.v1p1beta1.RecognitionMetadata.MicrophoneDistance',
       '10': 'microphoneDistance'
     },
-    const {
+    {
       '1': 'original_media_type',
       '3': 5,
       '4': 1,
@@ -267,7 +238,7 @@ const RecognitionMetadata$json = const {
           '.google.cloud.speech.v1p1beta1.RecognitionMetadata.OriginalMediaType',
       '10': 'originalMediaType'
     },
-    const {
+    {
       '1': 'recording_device_type',
       '3': 6,
       '4': 1,
@@ -276,24 +247,24 @@ const RecognitionMetadata$json = const {
           '.google.cloud.speech.v1p1beta1.RecognitionMetadata.RecordingDeviceType',
       '10': 'recordingDeviceType'
     },
-    const {
+    {
       '1': 'recording_device_name',
       '3': 7,
       '4': 1,
       '5': 9,
       '10': 'recordingDeviceName'
     },
-    const {
+    {
       '1': 'original_mime_type',
       '3': 8,
       '4': 1,
       '5': 9,
       '10': 'originalMimeType'
     },
-    const {'1': 'obfuscated_id', '3': 9, '4': 1, '5': 3, '10': 'obfuscatedId'},
-    const {'1': 'audio_topic', '3': 10, '4': 1, '5': 9, '10': 'audioTopic'},
+    {'1': 'obfuscated_id', '3': 9, '4': 1, '5': 3, '10': 'obfuscatedId'},
+    {'1': 'audio_topic', '3': 10, '4': 1, '5': 9, '10': 'audioTopic'},
   ],
-  '4': const [
+  '4': [
     RecognitionMetadata_InteractionType$json,
     RecognitionMetadata_MicrophoneDistance$json,
     RecognitionMetadata_OriginalMediaType$json,
@@ -301,75 +272,75 @@ const RecognitionMetadata$json = const {
   ],
 };
 
-const RecognitionMetadata_InteractionType$json = const {
+const RecognitionMetadata_InteractionType$json = {
   '1': 'InteractionType',
-  '2': const [
-    const {'1': 'INTERACTION_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'DISCUSSION', '2': 1},
-    const {'1': 'PRESENTATION', '2': 2},
-    const {'1': 'PHONE_CALL', '2': 3},
-    const {'1': 'VOICEMAIL', '2': 4},
-    const {'1': 'PROFESSIONALLY_PRODUCED', '2': 5},
-    const {'1': 'VOICE_SEARCH', '2': 6},
-    const {'1': 'VOICE_COMMAND', '2': 7},
-    const {'1': 'DICTATION', '2': 8},
+  '2': [
+    {'1': 'INTERACTION_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'DISCUSSION', '2': 1},
+    {'1': 'PRESENTATION', '2': 2},
+    {'1': 'PHONE_CALL', '2': 3},
+    {'1': 'VOICEMAIL', '2': 4},
+    {'1': 'PROFESSIONALLY_PRODUCED', '2': 5},
+    {'1': 'VOICE_SEARCH', '2': 6},
+    {'1': 'VOICE_COMMAND', '2': 7},
+    {'1': 'DICTATION', '2': 8},
   ],
 };
 
-const RecognitionMetadata_MicrophoneDistance$json = const {
+const RecognitionMetadata_MicrophoneDistance$json = {
   '1': 'MicrophoneDistance',
-  '2': const [
-    const {'1': 'MICROPHONE_DISTANCE_UNSPECIFIED', '2': 0},
-    const {'1': 'NEARFIELD', '2': 1},
-    const {'1': 'MIDFIELD', '2': 2},
-    const {'1': 'FARFIELD', '2': 3},
+  '2': [
+    {'1': 'MICROPHONE_DISTANCE_UNSPECIFIED', '2': 0},
+    {'1': 'NEARFIELD', '2': 1},
+    {'1': 'MIDFIELD', '2': 2},
+    {'1': 'FARFIELD', '2': 3},
   ],
 };
 
-const RecognitionMetadata_OriginalMediaType$json = const {
+const RecognitionMetadata_OriginalMediaType$json = {
   '1': 'OriginalMediaType',
-  '2': const [
-    const {'1': 'ORIGINAL_MEDIA_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'AUDIO', '2': 1},
-    const {'1': 'VIDEO', '2': 2},
+  '2': [
+    {'1': 'ORIGINAL_MEDIA_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'AUDIO', '2': 1},
+    {'1': 'VIDEO', '2': 2},
   ],
 };
 
-const RecognitionMetadata_RecordingDeviceType$json = const {
+const RecognitionMetadata_RecordingDeviceType$json = {
   '1': 'RecordingDeviceType',
-  '2': const [
-    const {'1': 'RECORDING_DEVICE_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'SMARTPHONE', '2': 1},
-    const {'1': 'PC', '2': 2},
-    const {'1': 'PHONE_LINE', '2': 3},
-    const {'1': 'VEHICLE', '2': 4},
-    const {'1': 'OTHER_OUTDOOR_DEVICE', '2': 5},
-    const {'1': 'OTHER_INDOOR_DEVICE', '2': 6},
+  '2': [
+    {'1': 'RECORDING_DEVICE_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'SMARTPHONE', '2': 1},
+    {'1': 'PC', '2': 2},
+    {'1': 'PHONE_LINE', '2': 3},
+    {'1': 'VEHICLE', '2': 4},
+    {'1': 'OTHER_OUTDOOR_DEVICE', '2': 5},
+    {'1': 'OTHER_INDOOR_DEVICE', '2': 6},
   ],
 };
 
-const SpeechContext$json = const {
+const SpeechContext$json = {
   '1': 'SpeechContext',
-  '2': const [
-    const {'1': 'phrases', '3': 1, '4': 3, '5': 9, '10': 'phrases'},
+  '2': [
+    {'1': 'phrases', '3': 1, '4': 3, '5': 9, '10': 'phrases'},
   ],
 };
 
-const RecognitionAudio$json = const {
+const RecognitionAudio$json = {
   '1': 'RecognitionAudio',
-  '2': const [
-    const {'1': 'content', '3': 1, '4': 1, '5': 12, '9': 0, '10': 'content'},
-    const {'1': 'uri', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'uri'},
+  '2': [
+    {'1': 'content', '3': 1, '4': 1, '5': 12, '9': 0, '10': 'content'},
+    {'1': 'uri', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'uri'},
   ],
-  '8': const [
-    const {'1': 'audio_source'},
+  '8': [
+    {'1': 'audio_source'},
   ],
 };
 
-const RecognizeResponse$json = const {
+const RecognizeResponse$json = {
   '1': 'RecognizeResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'results',
       '3': 2,
       '4': 3,
@@ -380,10 +351,10 @@ const RecognizeResponse$json = const {
   ],
 };
 
-const LongRunningRecognizeResponse$json = const {
+const LongRunningRecognizeResponse$json = {
   '1': 'LongRunningRecognizeResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'results',
       '3': 2,
       '4': 3,
@@ -394,17 +365,11 @@ const LongRunningRecognizeResponse$json = const {
   ],
 };
 
-const LongRunningRecognizeMetadata$json = const {
+const LongRunningRecognizeMetadata$json = {
   '1': 'LongRunningRecognizeMetadata',
-  '2': const [
-    const {
-      '1': 'progress_percent',
-      '3': 1,
-      '4': 1,
-      '5': 5,
-      '10': 'progressPercent'
-    },
-    const {
+  '2': [
+    {'1': 'progress_percent', '3': 1, '4': 1, '5': 5, '10': 'progressPercent'},
+    {
       '1': 'start_time',
       '3': 2,
       '4': 1,
@@ -412,7 +377,7 @@ const LongRunningRecognizeMetadata$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'startTime'
     },
-    const {
+    {
       '1': 'last_update_time',
       '3': 3,
       '4': 1,
@@ -423,10 +388,10 @@ const LongRunningRecognizeMetadata$json = const {
   ],
 };
 
-const StreamingRecognizeResponse$json = const {
+const StreamingRecognizeResponse$json = {
   '1': 'StreamingRecognizeResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'error',
       '3': 1,
       '4': 1,
@@ -434,7 +399,7 @@ const StreamingRecognizeResponse$json = const {
       '6': '.google.rpc.Status',
       '10': 'error'
     },
-    const {
+    {
       '1': 'results',
       '3': 2,
       '4': 3,
@@ -442,7 +407,7 @@ const StreamingRecognizeResponse$json = const {
       '6': '.google.cloud.speech.v1p1beta1.StreamingRecognitionResult',
       '10': 'results'
     },
-    const {
+    {
       '1': 'speech_event_type',
       '3': 4,
       '4': 1,
@@ -452,21 +417,21 @@ const StreamingRecognizeResponse$json = const {
       '10': 'speechEventType'
     },
   ],
-  '4': const [StreamingRecognizeResponse_SpeechEventType$json],
+  '4': [StreamingRecognizeResponse_SpeechEventType$json],
 };
 
-const StreamingRecognizeResponse_SpeechEventType$json = const {
+const StreamingRecognizeResponse_SpeechEventType$json = {
   '1': 'SpeechEventType',
-  '2': const [
-    const {'1': 'SPEECH_EVENT_UNSPECIFIED', '2': 0},
-    const {'1': 'END_OF_SINGLE_UTTERANCE', '2': 1},
+  '2': [
+    {'1': 'SPEECH_EVENT_UNSPECIFIED', '2': 0},
+    {'1': 'END_OF_SINGLE_UTTERANCE', '2': 1},
   ],
 };
 
-const StreamingRecognitionResult$json = const {
+const StreamingRecognitionResult$json = {
   '1': 'StreamingRecognitionResult',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'alternatives',
       '3': 1,
       '4': 3,
@@ -474,17 +439,25 @@ const StreamingRecognitionResult$json = const {
       '6': '.google.cloud.speech.v1p1beta1.SpeechRecognitionAlternative',
       '10': 'alternatives'
     },
-    const {'1': 'is_final', '3': 2, '4': 1, '5': 8, '10': 'isFinal'},
-    const {'1': 'stability', '3': 3, '4': 1, '5': 2, '10': 'stability'},
-    const {'1': 'channel_tag', '3': 5, '4': 1, '5': 5, '10': 'channelTag'},
-    const {'1': 'language_code', '3': 6, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'is_final', '3': 2, '4': 1, '5': 8, '10': 'isFinal'},
+    {'1': 'stability', '3': 3, '4': 1, '5': 2, '10': 'stability'},
+    {
+      '1': 'result_end_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'resultEndTime'
+    },
+    {'1': 'channel_tag', '3': 5, '4': 1, '5': 5, '10': 'channelTag'},
+    {'1': 'language_code', '3': 6, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
 
-const SpeechRecognitionResult$json = const {
+const SpeechRecognitionResult$json = {
   '1': 'SpeechRecognitionResult',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'alternatives',
       '3': 1,
       '4': 3,
@@ -492,17 +465,17 @@ const SpeechRecognitionResult$json = const {
       '6': '.google.cloud.speech.v1p1beta1.SpeechRecognitionAlternative',
       '10': 'alternatives'
     },
-    const {'1': 'channel_tag', '3': 2, '4': 1, '5': 5, '10': 'channelTag'},
-    const {'1': 'language_code', '3': 5, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'channel_tag', '3': 2, '4': 1, '5': 5, '10': 'channelTag'},
+    {'1': 'language_code', '3': 5, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
 
-const SpeechRecognitionAlternative$json = const {
+const SpeechRecognitionAlternative$json = {
   '1': 'SpeechRecognitionAlternative',
-  '2': const [
-    const {'1': 'transcript', '3': 1, '4': 1, '5': 9, '10': 'transcript'},
-    const {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
-    const {
+  '2': [
+    {'1': 'transcript', '3': 1, '4': 1, '5': 9, '10': 'transcript'},
+    {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
+    {
       '1': 'words',
       '3': 3,
       '4': 3,
@@ -513,10 +486,10 @@ const SpeechRecognitionAlternative$json = const {
   ],
 };
 
-const WordInfo$json = const {
+const WordInfo$json = {
   '1': 'WordInfo',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'start_time',
       '3': 1,
       '4': 1,
@@ -524,7 +497,7 @@ const WordInfo$json = const {
       '6': '.google.protobuf.Duration',
       '10': 'startTime'
     },
-    const {
+    {
       '1': 'end_time',
       '3': 2,
       '4': 1,
@@ -532,38 +505,39 @@ const WordInfo$json = const {
       '6': '.google.protobuf.Duration',
       '10': 'endTime'
     },
-    const {'1': 'word', '3': 3, '4': 1, '5': 9, '10': 'word'},
-    const {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
-    const {'1': 'speaker_tag', '3': 5, '4': 1, '5': 5, '10': 'speakerTag'},
+    {'1': 'word', '3': 3, '4': 1, '5': 9, '10': 'word'},
+    {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
+    {'1': 'speaker_tag', '3': 5, '4': 1, '5': 5, '10': 'speakerTag'},
   ],
 };
 
-const Speech$json = const {
+const SpeechServiceBase$json = {
   '1': 'Speech',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'Recognize',
       '2': '.google.cloud.speech.v1p1beta1.RecognizeRequest',
       '3': '.google.cloud.speech.v1p1beta1.RecognizeResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'LongRunningRecognize',
       '2': '.google.cloud.speech.v1p1beta1.LongRunningRecognizeRequest',
       '3': '.google.longrunning.Operation',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'StreamingRecognize',
       '2': '.google.cloud.speech.v1p1beta1.StreamingRecognizeRequest',
       '3': '.google.cloud.speech.v1p1beta1.StreamingRecognizeResponse',
+      '4': {},
       '5': true,
       '6': true
     },
   ],
 };
 
-const Speech$messageJson = const {
+const SpeechServiceBase$messageJson = {
   '.google.cloud.speech.v1p1beta1.RecognizeRequest': RecognizeRequest$json,
   '.google.cloud.speech.v1p1beta1.RecognitionConfig': RecognitionConfig$json,
   '.google.cloud.speech.v1p1beta1.SpeechContext': SpeechContext$json,
@@ -576,12 +550,12 @@ const Speech$messageJson = const {
   '.google.cloud.speech.v1p1beta1.SpeechRecognitionAlternative':
       SpeechRecognitionAlternative$json,
   '.google.cloud.speech.v1p1beta1.WordInfo': WordInfo$json,
-  '.google.protobuf.Duration': $google$protobuf.Duration$json,
+  '.google.protobuf.Duration': $2.Duration$json,
   '.google.cloud.speech.v1p1beta1.LongRunningRecognizeRequest':
       LongRunningRecognizeRequest$json,
-  '.google.longrunning.Operation': $google$longrunning.Operation$json,
-  '.google.protobuf.Any': $google$protobuf.Any$json,
-  '.google.rpc.Status': $google$rpc.Status$json,
+  '.google.longrunning.Operation': $3.Operation$json,
+  '.google.protobuf.Any': $4.Any$json,
+  '.google.rpc.Status': $1.Status$json,
   '.google.cloud.speech.v1p1beta1.StreamingRecognizeRequest':
       StreamingRecognizeRequest$json,
   '.google.cloud.speech.v1p1beta1.StreamingRecognitionConfig':

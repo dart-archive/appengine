@@ -1,42 +1,45 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/videointelligence/v1beta1/video_intelligence.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'video_intelligence.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../longrunning/operations.pb.dart' as $2;
 import 'video_intelligence.pbjson.dart';
 
 export 'video_intelligence.pb.dart';
 
-abstract class VideoIntelligenceServiceBase extends GeneratedService {
-  Future<$google$longrunning.Operation> annotateVideo(
-      ServerContext ctx, AnnotateVideoRequest request);
+abstract class VideoIntelligenceServiceBase extends $pb.GeneratedService {
+  $async.Future<$2.Operation> annotateVideo(
+      $pb.ServerContext ctx, AnnotateVideoRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'AnnotateVideo':
-        return new AnnotateVideoRequest();
+        return AnnotateVideoRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'AnnotateVideo':
         return this.annotateVideo(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => VideoIntelligenceService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      VideoIntelligenceService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      VideoIntelligenceServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => VideoIntelligenceServiceBase$messageJson;
 }

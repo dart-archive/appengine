@@ -1,48 +1,50 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/references.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'references.pb.dart';
 import 'references.pbjson.dart';
 
 export 'references.pb.dart';
 
-abstract class ReferenceServiceV1ServiceBase extends GeneratedService {
-  Future<SearchReferenceSetsResponse> searchReferenceSets(
-      ServerContext ctx, SearchReferenceSetsRequest request);
-  Future<ReferenceSet> getReferenceSet(
-      ServerContext ctx, GetReferenceSetRequest request);
-  Future<SearchReferencesResponse> searchReferences(
-      ServerContext ctx, SearchReferencesRequest request);
-  Future<Reference> getReference(
-      ServerContext ctx, GetReferenceRequest request);
-  Future<ListBasesResponse> listBases(
-      ServerContext ctx, ListBasesRequest request);
+abstract class ReferenceServiceV1ServiceBase extends $pb.GeneratedService {
+  $async.Future<SearchReferenceSetsResponse> searchReferenceSets(
+      $pb.ServerContext ctx, SearchReferenceSetsRequest request);
+  $async.Future<ReferenceSet> getReferenceSet(
+      $pb.ServerContext ctx, GetReferenceSetRequest request);
+  $async.Future<SearchReferencesResponse> searchReferences(
+      $pb.ServerContext ctx, SearchReferencesRequest request);
+  $async.Future<Reference> getReference(
+      $pb.ServerContext ctx, GetReferenceRequest request);
+  $async.Future<ListBasesResponse> listBases(
+      $pb.ServerContext ctx, ListBasesRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'SearchReferenceSets':
-        return new SearchReferenceSetsRequest();
+        return SearchReferenceSetsRequest();
       case 'GetReferenceSet':
-        return new GetReferenceSetRequest();
+        return GetReferenceSetRequest();
       case 'SearchReferences':
-        return new SearchReferencesRequest();
+        return SearchReferencesRequest();
       case 'GetReference':
-        return new GetReferenceRequest();
+        return GetReferenceRequest();
       case 'ListBases':
-        return new ListBasesRequest();
+        return ListBasesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'SearchReferenceSets':
         return this.searchReferenceSets(ctx, request);
@@ -55,11 +57,12 @@ abstract class ReferenceServiceV1ServiceBase extends GeneratedService {
       case 'ListBases':
         return this.listBases(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => ReferenceServiceV1$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      ReferenceServiceV1$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ReferenceServiceV1ServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ReferenceServiceV1ServiceBase$messageJson;
 }

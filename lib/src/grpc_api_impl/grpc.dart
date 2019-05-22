@@ -17,8 +17,8 @@ import 'auth_utils.dart';
 
 Future<Client> connectToEndpoint(Uri uri,
     {AccessTokenProvider accessTokenProvider, int timeout}) async {
-  final Dialer dialer = new Dialer(uri);
-  return new Client(dialer, accessTokenProvider, timeout);
+  final Dialer dialer = Dialer(uri);
+  return Client(dialer, accessTokenProvider, timeout);
 }
 
 /// Represents a grpc channel which client stubs will use to make RPCs.
@@ -51,20 +51,19 @@ class Channel extends protobuf.RpcClient {
 ///
 /// If the underlying http/2 connection has issues it will create a new one.
 class Client {
-  static final http2.Header _postHeader =
-      new http2.Header.ascii(':method', 'POST');
+  static final http2.Header _postHeader = http2.Header.ascii(':method', 'POST');
   static final http2.Header _httpSchemeHeader =
-      new http2.Header.ascii(':scheme', 'http');
+      http2.Header.ascii(':scheme', 'http');
   static final http2.Header _httpsSchemeHeader =
-      new http2.Header.ascii(':scheme', 'https');
+      http2.Header.ascii(':scheme', 'https');
   static final http2.Header _contentTypeHeader =
-      new http2.Header.ascii('content-type', 'application/grpc');
+      http2.Header.ascii('content-type', 'application/grpc');
   static final http2.Header _trailersHeader =
-      new http2.Header.ascii('te', 'trailers');
+      http2.Header.ascii('te', 'trailers');
   static final http2.Header _compressionHeader =
-      new http2.Header.ascii('grpc-accept-encoding', 'identity');
+      http2.Header.ascii('grpc-accept-encoding', 'identity');
   static final http2.Header _userAgentHeader =
-      new http2.Header.ascii('user-agent', 'dart-grpc/0.1.0');
+      http2.Header.ascii('user-agent', 'dart-grpc/0.1.0');
 
   http2.Header _authorityHeader;
   http2.Header _timeoutHeader;
@@ -76,22 +75,21 @@ class Client {
   // ids ... we will use the [Dialer] to make a new connection.
   // While the connection is being made, all callers should wait on the
   // [_connectionCompleter].
-  final Stopwatch _stopwatch = new Stopwatch()..start();
+  final Stopwatch _stopwatch = Stopwatch()..start();
   http2.ClientTransportConnection _connection;
 
   // In case a [AccessTokenProvider] was given we cache the access token and
   // a [http2.Header] object while it is valid.
-  auth.AccessToken _cachedAccessToken = null;
-  http2.Header _cachedAuthorizationHeader = null;
+  auth.AccessToken _cachedAccessToken;
+  http2.Header _cachedAuthorizationHeader;
 
   Client(Dialer dialer, AccessTokenProvider accessTokenProvider, int timeout)
       : _authorityHeader =
-            new http2.Header.ascii(':authority', dialer.endpoint.host),
-        _timeoutHeader =
-            new http2.Header.ascii('grpc-timeout', '${timeout ?? 5}S'),
+            http2.Header.ascii(':authority', dialer.endpoint.host),
+        _timeoutHeader = http2.Header.ascii('grpc-timeout', '${timeout ?? 5}S'),
         _schemeHeader = dialer.isHttps ? _httpsSchemeHeader : _httpSchemeHeader,
         _accessTokenProvider = accessTokenProvider != null
-            ? new LimitOutstandingRequests(accessTokenProvider)
+            ? LimitOutstandingRequests(accessTokenProvider)
             : null,
         _dialer = dialer;
 
@@ -105,10 +103,10 @@ class Client {
       if (_cachedAccessToken == null || _cachedAccessToken.hasExpired) {
         try {
           _cachedAccessToken = await _accessTokenProvider.obtainAccessToken();
-          _cachedAuthorizationHeader = new http2.Header.ascii(
+          _cachedAuthorizationHeader = http2.Header.ascii(
               'authorization', 'Bearer ${_cachedAccessToken.data}');
         } catch (error) {
-          throw new AuthenticationException(error);
+          throw AuthenticationException(error);
         }
       }
     }
@@ -122,18 +120,18 @@ class Client {
     final bool isHealthy = _connection != null && _connection.isOpen;
     final bool shouldRefresh = _stopwatch.elapsed.inMinutes > 50;
     if (!isHealthy || shouldRefresh) {
-      if (isHealthy) _connection.finish();
+      if (isHealthy) await _connection.finish();
       _connection = await _dialer.dial();
       _stopwatch.reset();
     }
 
     if (!_connection.isOpen) {
-      throw new NetworkException('The http/2 connection is no longer open.');
+      throw NetworkException('The http/2 connection is no longer open.');
     }
     final headers = [
       _postHeader,
       _schemeHeader,
-      new http2.Header.ascii(':path', '/$service/$method'),
+      http2.Header.ascii(':path', '/$service/$method'),
       _authorityHeader,
       _timeoutHeader,
       _contentTypeHeader,
@@ -152,12 +150,12 @@ class Client {
     assert(connection.isOpen);
     final http2.TransportStream stream = connection.makeRequest(headers);
     final messageIterator =
-        new StreamIterator<http2.StreamMessage>(stream.incomingMessages);
+        StreamIterator<http2.StreamMessage>(stream.incomingMessages);
 
     final messageBody = request.writeToBuffer();
 
-    final messageHeader = new Uint8List(1 + 4);
-    final bytedata = new ByteData.view(messageHeader.buffer);
+    final messageHeader = Uint8List(1 + 4);
+    final bytedata = ByteData.view(messageHeader.buffer);
     // Byte [0]:   Is Compressed (0/1).
     // Byte [1-4]: Length in big endian.
     bytedata.setUint8(0, 0);
@@ -175,7 +173,7 @@ class Client {
       //    }
       if (!await messageIterator.moveNext()) {
         stream.terminate();
-        throw new ProtocolException('No initial headers from server.');
+        throw ProtocolException('No initial headers from server.');
       }
       final headerMessage =
           messageIterator.current as http2.HeadersStreamMessage;
@@ -183,16 +181,16 @@ class Client {
       final status = responseHeaders[':status'];
       if (status != '200') {
         stream.terminate();
-        throw new ProtocolException('Unexpected response status "$status".');
+        throw ProtocolException('Unexpected response status "$status".');
       }
       final contentType = responseHeaders['content-type'];
       if (contentType.toLowerCase() != 'application/grpc') {
         stream.terminate();
-        throw new ProtocolException('Unknown response type "$contentType".');
+        throw ProtocolException('Unknown response type "$contentType".');
       }
 
       // Part 2: Get the data.
-      final resultBytes = new BytesBuilder(copy: false);
+      final resultBytes = BytesBuilder(copy: false);
       while (await messageIterator.moveNext() &&
           messageIterator.current is http2.DataStreamMessage) {
         final dataMessage = messageIterator.current as http2.DataStreamMessage;
@@ -200,7 +198,7 @@ class Client {
       }
       if (messageIterator.current == null) {
         stream.terminate();
-        throw new ProtocolException('No trailing headers from server.');
+        throw ProtocolException('No trailing headers from server.');
       }
 
       // Part 3: Get the trailing headers.
@@ -218,14 +216,13 @@ class Client {
         stream.terminate();
         final message =
             trailingHeaders['grpc-message'] ?? 'Missing "grpc-message".';
-        throw new RpcException(message, grpcStatus);
+        throw RpcException(message, grpcStatus);
       }
 
       final List<int> responseData = resultBytes.takeBytes();
       if (responseData.length < 5) {
         stream.terminate();
-        throw new ProtocolException(
-            'Response data was an invalid grpc message.');
+        throw ProtocolException('Response data was an invalid grpc message.');
       }
 
       final bool compressed = responseData[0] == 1;
@@ -237,36 +234,35 @@ class Client {
       final int expectedLength = responseData.length - 5;
       if (compressed) {
         stream.terminate();
-        throw new ProtocolException(
+        throw ProtocolException(
             'Grpc response was compressed and this library does '
             'not handle compression yet.');
       }
       if (lengthBytes != expectedLength) {
         stream.terminate();
-        throw new ProtocolException('Unexpected length in grpc response '
+        throw ProtocolException('Unexpected length in grpc response '
             '(was: $lengthBytes, expected: $expectedLength).');
       }
 
       final List<int> realData = responseData is Uint8List
-          ? new Uint8List.view(responseData.buffer,
-              responseData.offsetInBytes + 5, responseData.length - 5)
+          ? Uint8List.view(responseData.buffer, responseData.offsetInBytes + 5,
+              responseData.length - 5)
           : responseData.sublist(5);
       try {
         response.mergeFromBuffer(realData);
       } catch (_) {
         stream.terminate();
-        throw new ProtocolException(
+        throw ProtocolException(
             'Failed to decode grpc response protobuf message.');
       }
     } on http2.StreamTransportException catch (error) {
       // If there was a stream error, we'll just kill the whole connection.
       // There is a high chance that something is not right.
       if (connection.isOpen) await connection.terminate();
-      throw new NetworkException('Stream error during grpc call', error: error);
+      throw NetworkException('Stream error during grpc call', error: error);
     } on http2.TransportConnectionException catch (error) {
       if (connection.isOpen) await connection.terminate();
-      throw new NetworkException('Connection error during grpc call',
-          error: error);
+      throw NetworkException('Connection error during grpc call', error: error);
     }
 
     return response;
@@ -296,7 +292,7 @@ class Client {
 /// flood the server and avoid busy loops where callers constantly attempt
 /// to dial a nonexistent/down peer.
 class Dialer {
-  static const Duration MinimumTimeBetweenConnects = const Duration(seconds: 2);
+  static const Duration MinimumTimeBetweenConnects = Duration(seconds: 2);
 
   // We delay the completion slightly for our http/2 client to receive
   // the server settings:  If there are many RPCs pending, then our
@@ -304,7 +300,7 @@ class Dialer {
   // possibly running over the max-concurrent-streams setting the server
   // is sending to the client (which will cause the server to terminate
   // the connection).
-  static const Duration _estimatedRTT = const Duration(milliseconds: 20);
+  static const Duration _estimatedRTT = Duration(milliseconds: 20);
 
   final Uri endpoint;
 
@@ -323,7 +319,7 @@ class Dialer {
   /// The number of dials a second is rate-limited.
   Future<http2.TransportConnection> dial() {
     if (_completer != null) return _completer.future;
-    _completer = new Completer<http2.TransportConnection>();
+    _completer = Completer<http2.TransportConnection>();
     _performSingleDial();
     return _completer.future;
   }
@@ -331,13 +327,13 @@ class Dialer {
   _performSingleDial() async {
     // We rate-limit the number of dials to `1/MinimumTimeBetweenConnects`.
     if (_lastDial != null) {
-      final now = new DateTime.now();
+      final now = DateTime.now();
       final duration = now.difference(_lastDial);
       if (duration < MinimumTimeBetweenConnects) {
-        await new Future.delayed(MinimumTimeBetweenConnects - duration);
+        await Future.delayed(MinimumTimeBetweenConnects - duration);
       }
     }
-    _lastDial = new DateTime.now();
+    _lastDial = DateTime.now();
 
     if (isHttps) {
       try {
@@ -346,18 +342,18 @@ class Dialer {
         socket.setOption(SocketOption.tcpNoDelay, true);
         if (socket.selectedProtocol == 'h2') {
           final connection =
-              new http2.ClientTransportConnection.viaStreams(socket, socket);
-          await new Future.delayed(_estimatedRTT);
+              http2.ClientTransportConnection.viaStreams(socket, socket);
+          await Future.delayed(_estimatedRTT);
           _completer.complete(connection);
           _completer = null;
         } else {
           socket.destroy();
-          _completer.completeError(new NetworkException(
+          _completer.completeError(NetworkException(
               'Endpoint $endpoint does not support http/2 via ALPN'));
           _completer = null;
         }
       } catch (error) {
-        _completer.completeError(new NetworkException(
+        _completer.completeError(NetworkException(
             'Could not connect to endpoint "$endpoint"',
             error: error));
         _completer = null;
@@ -367,12 +363,12 @@ class Dialer {
         final socket = await Socket.connect(endpoint.host, endpoint.port);
         socket.setOption(SocketOption.tcpNoDelay, true);
         final connection =
-            new http2.ClientTransportConnection.viaStreams(socket, socket);
-        await new Future.delayed(_estimatedRTT);
+            http2.ClientTransportConnection.viaStreams(socket, socket);
+        await Future.delayed(_estimatedRTT);
         _completer.complete(connection);
         _completer = null;
       } catch (error) {
-        _completer.completeError(new NetworkException(
+        _completer.completeError(NetworkException(
             'Could not connect to endpoint "$endpoint"',
             error: error));
         _completer = null;

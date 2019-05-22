@@ -1,24 +1,26 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/label.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'label.pbenum.dart';
 
 export 'label.pbenum.dart';
 
-class LabelDescriptor extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LabelDescriptor')
+class LabelDescriptor extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelDescriptor',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'key')
     ..e<LabelDescriptor_ValueType>(
         2,
         'valueType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         LabelDescriptor_ValueType.STRING,
         LabelDescriptor_ValueType.valueOf,
         LabelDescriptor_ValueType.values)
@@ -26,34 +28,30 @@ class LabelDescriptor extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   LabelDescriptor() : super();
-  LabelDescriptor.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelDescriptor.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LabelDescriptor.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelDescriptor.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LabelDescriptor clone() => new LabelDescriptor()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LabelDescriptor create() => new LabelDescriptor();
-  static PbList<LabelDescriptor> createRepeated() =>
-      new PbList<LabelDescriptor>();
-  static LabelDescriptor getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLabelDescriptor();
-    return _defaultInstance;
-  }
-
+  LabelDescriptor clone() => LabelDescriptor()..mergeFromMessage(this);
+  LabelDescriptor copyWith(void Function(LabelDescriptor) updates) =>
+      super.copyWith((message) => updates(message as LabelDescriptor));
+  $pb.BuilderInfo get info_ => _i;
+  static LabelDescriptor create() => LabelDescriptor();
+  LabelDescriptor createEmptyInstance() => create();
+  static $pb.PbList<LabelDescriptor> createRepeated() =>
+      $pb.PbList<LabelDescriptor>();
+  static LabelDescriptor getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LabelDescriptor _defaultInstance;
-  static void $checkItem(LabelDescriptor v) {
-    if (v is! LabelDescriptor) checkItemFailed(v, 'LabelDescriptor');
-  }
 
-  String get key => $_getS(0, '');
-  set key(String v) {
+  $core.String get key => $_getS(0, '');
+  set key($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasKey() => $_has(0);
+  $core.bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
   LabelDescriptor_ValueType get valueType => $_getN(1);
@@ -61,17 +59,14 @@ class LabelDescriptor extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasValueType() => $_has(1);
+  $core.bool hasValueType() => $_has(1);
   void clearValueType() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDescription() => $_has(2);
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 }
-
-class _ReadonlyLabelDescriptor extends LabelDescriptor
-    with ReadonlyMessageMixin {}

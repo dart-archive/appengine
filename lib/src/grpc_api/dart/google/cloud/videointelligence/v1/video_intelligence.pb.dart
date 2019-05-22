@@ -1,157 +1,157 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/videointelligence/v1/video_intelligence.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:fixnum/fixnum.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $google$protobuf;
-import '../../../rpc/status.pb.dart' as $google$rpc;
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../protobuf/duration.pb.dart' as $0;
+import '../../../rpc/status.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $3;
 
 import 'video_intelligence.pbenum.dart';
 
 export 'video_intelligence.pbenum.dart';
 
-class AnnotateVideoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateVideoRequest')
+class AnnotateVideoRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateVideoRequest',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
     ..aOS(1, 'inputUri')
-    ..pp<Feature>(2, 'features', PbFieldType.PE, Feature.$checkItem, null,
-        Feature.valueOf, Feature.values)
-    ..a<VideoContext>(3, 'videoContext', PbFieldType.OM,
+    ..pc<Feature>(2, 'features', $pb.PbFieldType.PE, null, Feature.valueOf,
+        Feature.values)
+    ..a<VideoContext>(3, 'videoContext', $pb.PbFieldType.OM,
         VideoContext.getDefault, VideoContext.create)
     ..aOS(4, 'outputUri')
     ..aOS(5, 'locationId')
-    ..a<List<int>>(6, 'inputContent', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(6, 'inputContent', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   AnnotateVideoRequest() : super();
-  AnnotateVideoRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateVideoRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AnnotateVideoRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateVideoRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateVideoRequest clone() =>
-      new AnnotateVideoRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotateVideoRequest create() => new AnnotateVideoRequest();
-  static PbList<AnnotateVideoRequest> createRepeated() =>
-      new PbList<AnnotateVideoRequest>();
-  static AnnotateVideoRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateVideoRequest();
-    return _defaultInstance;
-  }
-
+      AnnotateVideoRequest()..mergeFromMessage(this);
+  AnnotateVideoRequest copyWith(void Function(AnnotateVideoRequest) updates) =>
+      super.copyWith((message) => updates(message as AnnotateVideoRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotateVideoRequest create() => AnnotateVideoRequest();
+  AnnotateVideoRequest createEmptyInstance() => create();
+  static $pb.PbList<AnnotateVideoRequest> createRepeated() =>
+      $pb.PbList<AnnotateVideoRequest>();
+  static AnnotateVideoRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AnnotateVideoRequest _defaultInstance;
-  static void $checkItem(AnnotateVideoRequest v) {
-    if (v is! AnnotateVideoRequest) checkItemFailed(v, 'AnnotateVideoRequest');
-  }
 
-  String get inputUri => $_getS(0, '');
-  set inputUri(String v) {
+  $core.String get inputUri => $_getS(0, '');
+  set inputUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasInputUri() => $_has(0);
+  $core.bool hasInputUri() => $_has(0);
   void clearInputUri() => clearField(1);
 
-  List<Feature> get features => $_getList(1);
+  $core.List<Feature> get features => $_getList(1);
 
   VideoContext get videoContext => $_getN(2);
   set videoContext(VideoContext v) {
     setField(3, v);
   }
 
-  bool hasVideoContext() => $_has(2);
+  $core.bool hasVideoContext() => $_has(2);
   void clearVideoContext() => clearField(3);
 
-  String get outputUri => $_getS(3, '');
-  set outputUri(String v) {
+  $core.String get outputUri => $_getS(3, '');
+  set outputUri($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasOutputUri() => $_has(3);
+  $core.bool hasOutputUri() => $_has(3);
   void clearOutputUri() => clearField(4);
 
-  String get locationId => $_getS(4, '');
-  set locationId(String v) {
+  $core.String get locationId => $_getS(4, '');
+  set locationId($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasLocationId() => $_has(4);
+  $core.bool hasLocationId() => $_has(4);
   void clearLocationId() => clearField(5);
 
-  List<int> get inputContent => $_getN(5);
-  set inputContent(List<int> v) {
+  $core.List<$core.int> get inputContent => $_getN(5);
+  set inputContent($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
-  bool hasInputContent() => $_has(5);
+  $core.bool hasInputContent() => $_has(5);
   void clearInputContent() => clearField(6);
 }
 
-class _ReadonlyAnnotateVideoRequest extends AnnotateVideoRequest
-    with ReadonlyMessageMixin {}
-
-class VideoContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VideoContext')
-    ..pp<VideoSegment>(1, 'segments', PbFieldType.PM, VideoSegment.$checkItem,
-        VideoSegment.create)
-    ..a<LabelDetectionConfig>(2, 'labelDetectionConfig', PbFieldType.OM,
+class VideoContext extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoContext',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pc<VideoSegment>(1, 'segments', $pb.PbFieldType.PM, VideoSegment.create)
+    ..a<LabelDetectionConfig>(2, 'labelDetectionConfig', $pb.PbFieldType.OM,
         LabelDetectionConfig.getDefault, LabelDetectionConfig.create)
     ..a<ShotChangeDetectionConfig>(
         3,
         'shotChangeDetectionConfig',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         ShotChangeDetectionConfig.getDefault,
         ShotChangeDetectionConfig.create)
     ..a<ExplicitContentDetectionConfig>(
         4,
         'explicitContentDetectionConfig',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         ExplicitContentDetectionConfig.getDefault,
         ExplicitContentDetectionConfig.create)
-    ..a<FaceDetectionConfig>(5, 'faceDetectionConfig', PbFieldType.OM,
+    ..a<FaceDetectionConfig>(5, 'faceDetectionConfig', $pb.PbFieldType.OM,
         FaceDetectionConfig.getDefault, FaceDetectionConfig.create)
+    ..a<SpeechTranscriptionConfig>(
+        6,
+        'speechTranscriptionConfig',
+        $pb.PbFieldType.OM,
+        SpeechTranscriptionConfig.getDefault,
+        SpeechTranscriptionConfig.create)
+    ..a<TextDetectionConfig>(8, 'textDetectionConfig', $pb.PbFieldType.OM,
+        TextDetectionConfig.getDefault, TextDetectionConfig.create)
     ..hasRequiredFields = false;
 
   VideoContext() : super();
-  VideoContext.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VideoContext.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VideoContext.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VideoContext.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VideoContext clone() => new VideoContext()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VideoContext create() => new VideoContext();
-  static PbList<VideoContext> createRepeated() => new PbList<VideoContext>();
-  static VideoContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVideoContext();
-    return _defaultInstance;
-  }
-
+  VideoContext clone() => VideoContext()..mergeFromMessage(this);
+  VideoContext copyWith(void Function(VideoContext) updates) =>
+      super.copyWith((message) => updates(message as VideoContext));
+  $pb.BuilderInfo get info_ => _i;
+  static VideoContext create() => VideoContext();
+  VideoContext createEmptyInstance() => create();
+  static $pb.PbList<VideoContext> createRepeated() =>
+      $pb.PbList<VideoContext>();
+  static VideoContext getDefault() => _defaultInstance ??= create()..freeze();
   static VideoContext _defaultInstance;
-  static void $checkItem(VideoContext v) {
-    if (v is! VideoContext) checkItemFailed(v, 'VideoContext');
-  }
 
-  List<VideoSegment> get segments => $_getList(0);
+  $core.List<VideoSegment> get segments => $_getList(0);
 
   LabelDetectionConfig get labelDetectionConfig => $_getN(1);
   set labelDetectionConfig(LabelDetectionConfig v) {
     setField(2, v);
   }
 
-  bool hasLabelDetectionConfig() => $_has(1);
+  $core.bool hasLabelDetectionConfig() => $_has(1);
   void clearLabelDetectionConfig() => clearField(2);
 
   ShotChangeDetectionConfig get shotChangeDetectionConfig => $_getN(2);
@@ -159,7 +159,7 @@ class VideoContext extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasShotChangeDetectionConfig() => $_has(2);
+  $core.bool hasShotChangeDetectionConfig() => $_has(2);
   void clearShotChangeDetectionConfig() => clearField(3);
 
   ExplicitContentDetectionConfig get explicitContentDetectionConfig =>
@@ -168,7 +168,7 @@ class VideoContext extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasExplicitContentDetectionConfig() => $_has(3);
+  $core.bool hasExplicitContentDetectionConfig() => $_has(3);
   void clearExplicitContentDetectionConfig() => clearField(4);
 
   FaceDetectionConfig get faceDetectionConfig => $_getN(4);
@@ -176,18 +176,33 @@ class VideoContext extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasFaceDetectionConfig() => $_has(4);
+  $core.bool hasFaceDetectionConfig() => $_has(4);
   void clearFaceDetectionConfig() => clearField(5);
+
+  SpeechTranscriptionConfig get speechTranscriptionConfig => $_getN(5);
+  set speechTranscriptionConfig(SpeechTranscriptionConfig v) {
+    setField(6, v);
+  }
+
+  $core.bool hasSpeechTranscriptionConfig() => $_has(5);
+  void clearSpeechTranscriptionConfig() => clearField(6);
+
+  TextDetectionConfig get textDetectionConfig => $_getN(6);
+  set textDetectionConfig(TextDetectionConfig v) {
+    setField(8, v);
+  }
+
+  $core.bool hasTextDetectionConfig() => $_has(6);
+  void clearTextDetectionConfig() => clearField(8);
 }
 
-class _ReadonlyVideoContext extends VideoContext with ReadonlyMessageMixin {}
-
-class LabelDetectionConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LabelDetectionConfig')
+class LabelDetectionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelDetectionConfig',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
     ..e<LabelDetectionMode>(
         1,
         'labelDetectionMode',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         LabelDetectionMode.LABEL_DETECTION_MODE_UNSPECIFIED,
         LabelDetectionMode.valueOf,
         LabelDetectionMode.values)
@@ -196,485 +211,460 @@ class LabelDetectionConfig extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   LabelDetectionConfig() : super();
-  LabelDetectionConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelDetectionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LabelDetectionConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelDetectionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LabelDetectionConfig clone() =>
-      new LabelDetectionConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LabelDetectionConfig create() => new LabelDetectionConfig();
-  static PbList<LabelDetectionConfig> createRepeated() =>
-      new PbList<LabelDetectionConfig>();
-  static LabelDetectionConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLabelDetectionConfig();
-    return _defaultInstance;
-  }
-
+      LabelDetectionConfig()..mergeFromMessage(this);
+  LabelDetectionConfig copyWith(void Function(LabelDetectionConfig) updates) =>
+      super.copyWith((message) => updates(message as LabelDetectionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static LabelDetectionConfig create() => LabelDetectionConfig();
+  LabelDetectionConfig createEmptyInstance() => create();
+  static $pb.PbList<LabelDetectionConfig> createRepeated() =>
+      $pb.PbList<LabelDetectionConfig>();
+  static LabelDetectionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LabelDetectionConfig _defaultInstance;
-  static void $checkItem(LabelDetectionConfig v) {
-    if (v is! LabelDetectionConfig) checkItemFailed(v, 'LabelDetectionConfig');
-  }
 
   LabelDetectionMode get labelDetectionMode => $_getN(0);
   set labelDetectionMode(LabelDetectionMode v) {
     setField(1, v);
   }
 
-  bool hasLabelDetectionMode() => $_has(0);
+  $core.bool hasLabelDetectionMode() => $_has(0);
   void clearLabelDetectionMode() => clearField(1);
 
-  bool get stationaryCamera => $_get(1, false);
-  set stationaryCamera(bool v) {
+  $core.bool get stationaryCamera => $_get(1, false);
+  set stationaryCamera($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasStationaryCamera() => $_has(1);
+  $core.bool hasStationaryCamera() => $_has(1);
   void clearStationaryCamera() => clearField(2);
 
-  String get model => $_getS(2, '');
-  set model(String v) {
+  $core.String get model => $_getS(2, '');
+  set model($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasModel() => $_has(2);
+  $core.bool hasModel() => $_has(2);
   void clearModel() => clearField(3);
 }
 
-class _ReadonlyLabelDetectionConfig extends LabelDetectionConfig
-    with ReadonlyMessageMixin {}
-
-class ShotChangeDetectionConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ShotChangeDetectionConfig')
+class ShotChangeDetectionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ShotChangeDetectionConfig',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
     ..aOS(1, 'model')
     ..hasRequiredFields = false;
 
   ShotChangeDetectionConfig() : super();
-  ShotChangeDetectionConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ShotChangeDetectionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ShotChangeDetectionConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ShotChangeDetectionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ShotChangeDetectionConfig clone() =>
-      new ShotChangeDetectionConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ShotChangeDetectionConfig create() => new ShotChangeDetectionConfig();
-  static PbList<ShotChangeDetectionConfig> createRepeated() =>
-      new PbList<ShotChangeDetectionConfig>();
-  static ShotChangeDetectionConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyShotChangeDetectionConfig();
-    return _defaultInstance;
-  }
-
+      ShotChangeDetectionConfig()..mergeFromMessage(this);
+  ShotChangeDetectionConfig copyWith(
+          void Function(ShotChangeDetectionConfig) updates) =>
+      super
+          .copyWith((message) => updates(message as ShotChangeDetectionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static ShotChangeDetectionConfig create() => ShotChangeDetectionConfig();
+  ShotChangeDetectionConfig createEmptyInstance() => create();
+  static $pb.PbList<ShotChangeDetectionConfig> createRepeated() =>
+      $pb.PbList<ShotChangeDetectionConfig>();
+  static ShotChangeDetectionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ShotChangeDetectionConfig _defaultInstance;
-  static void $checkItem(ShotChangeDetectionConfig v) {
-    if (v is! ShotChangeDetectionConfig)
-      checkItemFailed(v, 'ShotChangeDetectionConfig');
-  }
 
-  String get model => $_getS(0, '');
-  set model(String v) {
+  $core.String get model => $_getS(0, '');
+  set model($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasModel() => $_has(0);
+  $core.bool hasModel() => $_has(0);
   void clearModel() => clearField(1);
 }
 
-class _ReadonlyShotChangeDetectionConfig extends ShotChangeDetectionConfig
-    with ReadonlyMessageMixin {}
-
-class ExplicitContentDetectionConfig extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ExplicitContentDetectionConfig')
-        ..aOS(1, 'model')
-        ..hasRequiredFields = false;
+class ExplicitContentDetectionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ExplicitContentDetectionConfig',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..aOS(1, 'model')
+    ..hasRequiredFields = false;
 
   ExplicitContentDetectionConfig() : super();
-  ExplicitContentDetectionConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExplicitContentDetectionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExplicitContentDetectionConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExplicitContentDetectionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExplicitContentDetectionConfig clone() =>
-      new ExplicitContentDetectionConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ExplicitContentDetectionConfig()..mergeFromMessage(this);
+  ExplicitContentDetectionConfig copyWith(
+          void Function(ExplicitContentDetectionConfig) updates) =>
+      super.copyWith(
+          (message) => updates(message as ExplicitContentDetectionConfig));
+  $pb.BuilderInfo get info_ => _i;
   static ExplicitContentDetectionConfig create() =>
-      new ExplicitContentDetectionConfig();
-  static PbList<ExplicitContentDetectionConfig> createRepeated() =>
-      new PbList<ExplicitContentDetectionConfig>();
-  static ExplicitContentDetectionConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExplicitContentDetectionConfig();
-    return _defaultInstance;
-  }
-
+      ExplicitContentDetectionConfig();
+  ExplicitContentDetectionConfig createEmptyInstance() => create();
+  static $pb.PbList<ExplicitContentDetectionConfig> createRepeated() =>
+      $pb.PbList<ExplicitContentDetectionConfig>();
+  static ExplicitContentDetectionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ExplicitContentDetectionConfig _defaultInstance;
-  static void $checkItem(ExplicitContentDetectionConfig v) {
-    if (v is! ExplicitContentDetectionConfig)
-      checkItemFailed(v, 'ExplicitContentDetectionConfig');
-  }
 
-  String get model => $_getS(0, '');
-  set model(String v) {
+  $core.String get model => $_getS(0, '');
+  set model($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasModel() => $_has(0);
+  $core.bool hasModel() => $_has(0);
   void clearModel() => clearField(1);
 }
 
-class _ReadonlyExplicitContentDetectionConfig
-    extends ExplicitContentDetectionConfig with ReadonlyMessageMixin {}
-
-class FaceDetectionConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceDetectionConfig')
+class FaceDetectionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FaceDetectionConfig',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
     ..aOS(1, 'model')
     ..aOB(2, 'includeBoundingBoxes')
     ..hasRequiredFields = false;
 
   FaceDetectionConfig() : super();
-  FaceDetectionConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceDetectionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  FaceDetectionConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceDetectionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FaceDetectionConfig clone() =>
-      new FaceDetectionConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static FaceDetectionConfig create() => new FaceDetectionConfig();
-  static PbList<FaceDetectionConfig> createRepeated() =>
-      new PbList<FaceDetectionConfig>();
-  static FaceDetectionConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFaceDetectionConfig();
-    return _defaultInstance;
-  }
-
+  FaceDetectionConfig clone() => FaceDetectionConfig()..mergeFromMessage(this);
+  FaceDetectionConfig copyWith(void Function(FaceDetectionConfig) updates) =>
+      super.copyWith((message) => updates(message as FaceDetectionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static FaceDetectionConfig create() => FaceDetectionConfig();
+  FaceDetectionConfig createEmptyInstance() => create();
+  static $pb.PbList<FaceDetectionConfig> createRepeated() =>
+      $pb.PbList<FaceDetectionConfig>();
+  static FaceDetectionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static FaceDetectionConfig _defaultInstance;
-  static void $checkItem(FaceDetectionConfig v) {
-    if (v is! FaceDetectionConfig) checkItemFailed(v, 'FaceDetectionConfig');
-  }
 
-  String get model => $_getS(0, '');
-  set model(String v) {
+  $core.String get model => $_getS(0, '');
+  set model($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasModel() => $_has(0);
+  $core.bool hasModel() => $_has(0);
   void clearModel() => clearField(1);
 
-  bool get includeBoundingBoxes => $_get(1, false);
-  set includeBoundingBoxes(bool v) {
+  $core.bool get includeBoundingBoxes => $_get(1, false);
+  set includeBoundingBoxes($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasIncludeBoundingBoxes() => $_has(1);
+  $core.bool hasIncludeBoundingBoxes() => $_has(1);
   void clearIncludeBoundingBoxes() => clearField(2);
 }
 
-class _ReadonlyFaceDetectionConfig extends FaceDetectionConfig
-    with ReadonlyMessageMixin {}
+class TextDetectionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextDetectionConfig',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pPS(1, 'languageHints')
+    ..hasRequiredFields = false;
 
-class VideoSegment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VideoSegment')
-    ..a<$google$protobuf.Duration>(1, 'startTimeOffset', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<$google$protobuf.Duration>(2, 'endTimeOffset', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+  TextDetectionConfig() : super();
+  TextDetectionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  TextDetectionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  TextDetectionConfig clone() => TextDetectionConfig()..mergeFromMessage(this);
+  TextDetectionConfig copyWith(void Function(TextDetectionConfig) updates) =>
+      super.copyWith((message) => updates(message as TextDetectionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static TextDetectionConfig create() => TextDetectionConfig();
+  TextDetectionConfig createEmptyInstance() => create();
+  static $pb.PbList<TextDetectionConfig> createRepeated() =>
+      $pb.PbList<TextDetectionConfig>();
+  static TextDetectionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static TextDetectionConfig _defaultInstance;
+
+  $core.List<$core.String> get languageHints => $_getList(0);
+}
+
+class VideoSegment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoSegment',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<$0.Duration>(1, 'startTimeOffset', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$0.Duration>(2, 'endTimeOffset', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
     ..hasRequiredFields = false;
 
   VideoSegment() : super();
-  VideoSegment.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VideoSegment.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VideoSegment.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VideoSegment.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VideoSegment clone() => new VideoSegment()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VideoSegment create() => new VideoSegment();
-  static PbList<VideoSegment> createRepeated() => new PbList<VideoSegment>();
-  static VideoSegment getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVideoSegment();
-    return _defaultInstance;
-  }
-
+  VideoSegment clone() => VideoSegment()..mergeFromMessage(this);
+  VideoSegment copyWith(void Function(VideoSegment) updates) =>
+      super.copyWith((message) => updates(message as VideoSegment));
+  $pb.BuilderInfo get info_ => _i;
+  static VideoSegment create() => VideoSegment();
+  VideoSegment createEmptyInstance() => create();
+  static $pb.PbList<VideoSegment> createRepeated() =>
+      $pb.PbList<VideoSegment>();
+  static VideoSegment getDefault() => _defaultInstance ??= create()..freeze();
   static VideoSegment _defaultInstance;
-  static void $checkItem(VideoSegment v) {
-    if (v is! VideoSegment) checkItemFailed(v, 'VideoSegment');
-  }
 
-  $google$protobuf.Duration get startTimeOffset => $_getN(0);
-  set startTimeOffset($google$protobuf.Duration v) {
+  $0.Duration get startTimeOffset => $_getN(0);
+  set startTimeOffset($0.Duration v) {
     setField(1, v);
   }
 
-  bool hasStartTimeOffset() => $_has(0);
+  $core.bool hasStartTimeOffset() => $_has(0);
   void clearStartTimeOffset() => clearField(1);
 
-  $google$protobuf.Duration get endTimeOffset => $_getN(1);
-  set endTimeOffset($google$protobuf.Duration v) {
+  $0.Duration get endTimeOffset => $_getN(1);
+  set endTimeOffset($0.Duration v) {
     setField(2, v);
   }
 
-  bool hasEndTimeOffset() => $_has(1);
+  $core.bool hasEndTimeOffset() => $_has(1);
   void clearEndTimeOffset() => clearField(2);
 }
 
-class _ReadonlyVideoSegment extends VideoSegment with ReadonlyMessageMixin {}
-
-class LabelSegment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LabelSegment')
-    ..a<VideoSegment>(1, 'segment', PbFieldType.OM, VideoSegment.getDefault,
+class LabelSegment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelSegment',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<VideoSegment>(1, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
         VideoSegment.create)
-    ..a<double>(2, 'confidence', PbFieldType.OF)
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   LabelSegment() : super();
-  LabelSegment.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelSegment.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LabelSegment.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelSegment.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LabelSegment clone() => new LabelSegment()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LabelSegment create() => new LabelSegment();
-  static PbList<LabelSegment> createRepeated() => new PbList<LabelSegment>();
-  static LabelSegment getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLabelSegment();
-    return _defaultInstance;
-  }
-
+  LabelSegment clone() => LabelSegment()..mergeFromMessage(this);
+  LabelSegment copyWith(void Function(LabelSegment) updates) =>
+      super.copyWith((message) => updates(message as LabelSegment));
+  $pb.BuilderInfo get info_ => _i;
+  static LabelSegment create() => LabelSegment();
+  LabelSegment createEmptyInstance() => create();
+  static $pb.PbList<LabelSegment> createRepeated() =>
+      $pb.PbList<LabelSegment>();
+  static LabelSegment getDefault() => _defaultInstance ??= create()..freeze();
   static LabelSegment _defaultInstance;
-  static void $checkItem(LabelSegment v) {
-    if (v is! LabelSegment) checkItemFailed(v, 'LabelSegment');
-  }
 
   VideoSegment get segment => $_getN(0);
   set segment(VideoSegment v) {
     setField(1, v);
   }
 
-  bool hasSegment() => $_has(0);
+  $core.bool hasSegment() => $_has(0);
   void clearSegment() => clearField(1);
 
-  double get confidence => $_getN(1);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasConfidence() => $_has(1);
+  $core.bool hasConfidence() => $_has(1);
   void clearConfidence() => clearField(2);
 }
 
-class _ReadonlyLabelSegment extends LabelSegment with ReadonlyMessageMixin {}
-
-class LabelFrame extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LabelFrame')
-    ..a<$google$protobuf.Duration>(1, 'timeOffset', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<double>(2, 'confidence', PbFieldType.OF)
+class LabelFrame extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelFrame',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<$0.Duration>(1, 'timeOffset', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   LabelFrame() : super();
-  LabelFrame.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelFrame.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LabelFrame.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelFrame.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LabelFrame clone() => new LabelFrame()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LabelFrame create() => new LabelFrame();
-  static PbList<LabelFrame> createRepeated() => new PbList<LabelFrame>();
-  static LabelFrame getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLabelFrame();
-    return _defaultInstance;
-  }
-
+  LabelFrame clone() => LabelFrame()..mergeFromMessage(this);
+  LabelFrame copyWith(void Function(LabelFrame) updates) =>
+      super.copyWith((message) => updates(message as LabelFrame));
+  $pb.BuilderInfo get info_ => _i;
+  static LabelFrame create() => LabelFrame();
+  LabelFrame createEmptyInstance() => create();
+  static $pb.PbList<LabelFrame> createRepeated() => $pb.PbList<LabelFrame>();
+  static LabelFrame getDefault() => _defaultInstance ??= create()..freeze();
   static LabelFrame _defaultInstance;
-  static void $checkItem(LabelFrame v) {
-    if (v is! LabelFrame) checkItemFailed(v, 'LabelFrame');
-  }
 
-  $google$protobuf.Duration get timeOffset => $_getN(0);
-  set timeOffset($google$protobuf.Duration v) {
+  $0.Duration get timeOffset => $_getN(0);
+  set timeOffset($0.Duration v) {
     setField(1, v);
   }
 
-  bool hasTimeOffset() => $_has(0);
+  $core.bool hasTimeOffset() => $_has(0);
   void clearTimeOffset() => clearField(1);
 
-  double get confidence => $_getN(1);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasConfidence() => $_has(1);
+  $core.bool hasConfidence() => $_has(1);
   void clearConfidence() => clearField(2);
 }
 
-class _ReadonlyLabelFrame extends LabelFrame with ReadonlyMessageMixin {}
-
-class Entity extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Entity')
+class Entity extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Entity',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
     ..aOS(1, 'entityId')
     ..aOS(2, 'description')
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
   Entity() : super();
-  Entity.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Entity.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Entity.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Entity.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Entity clone() => new Entity()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Entity create() => new Entity();
-  static PbList<Entity> createRepeated() => new PbList<Entity>();
-  static Entity getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEntity();
-    return _defaultInstance;
-  }
-
+  Entity clone() => Entity()..mergeFromMessage(this);
+  Entity copyWith(void Function(Entity) updates) =>
+      super.copyWith((message) => updates(message as Entity));
+  $pb.BuilderInfo get info_ => _i;
+  static Entity create() => Entity();
+  Entity createEmptyInstance() => create();
+  static $pb.PbList<Entity> createRepeated() => $pb.PbList<Entity>();
+  static Entity getDefault() => _defaultInstance ??= create()..freeze();
   static Entity _defaultInstance;
-  static void $checkItem(Entity v) {
-    if (v is! Entity) checkItemFailed(v, 'Entity');
-  }
 
-  String get entityId => $_getS(0, '');
-  set entityId(String v) {
+  $core.String get entityId => $_getS(0, '');
+  set entityId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasEntityId() => $_has(0);
+  $core.bool hasEntityId() => $_has(0);
   void clearEntityId() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasLanguageCode() => $_has(2);
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 }
 
-class _ReadonlyEntity extends Entity with ReadonlyMessageMixin {}
-
-class LabelAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LabelAnnotation')
-    ..a<Entity>(1, 'entity', PbFieldType.OM, Entity.getDefault, Entity.create)
-    ..pp<Entity>(
-        2, 'categoryEntities', PbFieldType.PM, Entity.$checkItem, Entity.create)
-    ..pp<LabelSegment>(3, 'segments', PbFieldType.PM, LabelSegment.$checkItem,
-        LabelSegment.create)
-    ..pp<LabelFrame>(
-        4, 'frames', PbFieldType.PM, LabelFrame.$checkItem, LabelFrame.create)
+class LabelAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelAnnotation',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<Entity>(
+        1, 'entity', $pb.PbFieldType.OM, Entity.getDefault, Entity.create)
+    ..pc<Entity>(2, 'categoryEntities', $pb.PbFieldType.PM, Entity.create)
+    ..pc<LabelSegment>(3, 'segments', $pb.PbFieldType.PM, LabelSegment.create)
+    ..pc<LabelFrame>(4, 'frames', $pb.PbFieldType.PM, LabelFrame.create)
     ..hasRequiredFields = false;
 
   LabelAnnotation() : super();
-  LabelAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LabelAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LabelAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LabelAnnotation clone() => new LabelAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LabelAnnotation create() => new LabelAnnotation();
-  static PbList<LabelAnnotation> createRepeated() =>
-      new PbList<LabelAnnotation>();
-  static LabelAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLabelAnnotation();
-    return _defaultInstance;
-  }
-
+  LabelAnnotation clone() => LabelAnnotation()..mergeFromMessage(this);
+  LabelAnnotation copyWith(void Function(LabelAnnotation) updates) =>
+      super.copyWith((message) => updates(message as LabelAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static LabelAnnotation create() => LabelAnnotation();
+  LabelAnnotation createEmptyInstance() => create();
+  static $pb.PbList<LabelAnnotation> createRepeated() =>
+      $pb.PbList<LabelAnnotation>();
+  static LabelAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LabelAnnotation _defaultInstance;
-  static void $checkItem(LabelAnnotation v) {
-    if (v is! LabelAnnotation) checkItemFailed(v, 'LabelAnnotation');
-  }
 
   Entity get entity => $_getN(0);
   set entity(Entity v) {
     setField(1, v);
   }
 
-  bool hasEntity() => $_has(0);
+  $core.bool hasEntity() => $_has(0);
   void clearEntity() => clearField(1);
 
-  List<Entity> get categoryEntities => $_getList(1);
+  $core.List<Entity> get categoryEntities => $_getList(1);
 
-  List<LabelSegment> get segments => $_getList(2);
+  $core.List<LabelSegment> get segments => $_getList(2);
 
-  List<LabelFrame> get frames => $_getList(3);
+  $core.List<LabelFrame> get frames => $_getList(3);
 }
 
-class _ReadonlyLabelAnnotation extends LabelAnnotation
-    with ReadonlyMessageMixin {}
-
-class ExplicitContentFrame extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExplicitContentFrame')
-    ..a<$google$protobuf.Duration>(1, 'timeOffset', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+class ExplicitContentFrame extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExplicitContentFrame',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<$0.Duration>(1, 'timeOffset', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
     ..e<Likelihood>(
         2,
         'pornographyLikelihood',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Likelihood.LIKELIHOOD_UNSPECIFIED,
         Likelihood.valueOf,
         Likelihood.values)
     ..hasRequiredFields = false;
 
   ExplicitContentFrame() : super();
-  ExplicitContentFrame.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExplicitContentFrame.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExplicitContentFrame.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExplicitContentFrame.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExplicitContentFrame clone() =>
-      new ExplicitContentFrame()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExplicitContentFrame create() => new ExplicitContentFrame();
-  static PbList<ExplicitContentFrame> createRepeated() =>
-      new PbList<ExplicitContentFrame>();
-  static ExplicitContentFrame getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExplicitContentFrame();
-    return _defaultInstance;
-  }
-
+      ExplicitContentFrame()..mergeFromMessage(this);
+  ExplicitContentFrame copyWith(void Function(ExplicitContentFrame) updates) =>
+      super.copyWith((message) => updates(message as ExplicitContentFrame));
+  $pb.BuilderInfo get info_ => _i;
+  static ExplicitContentFrame create() => ExplicitContentFrame();
+  ExplicitContentFrame createEmptyInstance() => create();
+  static $pb.PbList<ExplicitContentFrame> createRepeated() =>
+      $pb.PbList<ExplicitContentFrame>();
+  static ExplicitContentFrame getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ExplicitContentFrame _defaultInstance;
-  static void $checkItem(ExplicitContentFrame v) {
-    if (v is! ExplicitContentFrame) checkItemFailed(v, 'ExplicitContentFrame');
-  }
 
-  $google$protobuf.Duration get timeOffset => $_getN(0);
-  set timeOffset($google$protobuf.Duration v) {
+  $0.Duration get timeOffset => $_getN(0);
+  set timeOffset($0.Duration v) {
     setField(1, v);
   }
 
-  bool hasTimeOffset() => $_has(0);
+  $core.bool hasTimeOffset() => $_has(0);
   void clearTimeOffset() => clearField(1);
 
   Likelihood get pornographyLikelihood => $_getN(1);
@@ -682,489 +672,1046 @@ class ExplicitContentFrame extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasPornographyLikelihood() => $_has(1);
+  $core.bool hasPornographyLikelihood() => $_has(1);
   void clearPornographyLikelihood() => clearField(2);
 }
 
-class _ReadonlyExplicitContentFrame extends ExplicitContentFrame
-    with ReadonlyMessageMixin {}
-
-class ExplicitContentAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExplicitContentAnnotation')
-    ..pp<ExplicitContentFrame>(1, 'frames', PbFieldType.PM,
-        ExplicitContentFrame.$checkItem, ExplicitContentFrame.create)
+class ExplicitContentAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExplicitContentAnnotation',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pc<ExplicitContentFrame>(
+        1, 'frames', $pb.PbFieldType.PM, ExplicitContentFrame.create)
     ..hasRequiredFields = false;
 
   ExplicitContentAnnotation() : super();
-  ExplicitContentAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExplicitContentAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExplicitContentAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExplicitContentAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExplicitContentAnnotation clone() =>
-      new ExplicitContentAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExplicitContentAnnotation create() => new ExplicitContentAnnotation();
-  static PbList<ExplicitContentAnnotation> createRepeated() =>
-      new PbList<ExplicitContentAnnotation>();
-  static ExplicitContentAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExplicitContentAnnotation();
-    return _defaultInstance;
-  }
-
+      ExplicitContentAnnotation()..mergeFromMessage(this);
+  ExplicitContentAnnotation copyWith(
+          void Function(ExplicitContentAnnotation) updates) =>
+      super
+          .copyWith((message) => updates(message as ExplicitContentAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static ExplicitContentAnnotation create() => ExplicitContentAnnotation();
+  ExplicitContentAnnotation createEmptyInstance() => create();
+  static $pb.PbList<ExplicitContentAnnotation> createRepeated() =>
+      $pb.PbList<ExplicitContentAnnotation>();
+  static ExplicitContentAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ExplicitContentAnnotation _defaultInstance;
-  static void $checkItem(ExplicitContentAnnotation v) {
-    if (v is! ExplicitContentAnnotation)
-      checkItemFailed(v, 'ExplicitContentAnnotation');
-  }
 
-  List<ExplicitContentFrame> get frames => $_getList(0);
+  $core.List<ExplicitContentFrame> get frames => $_getList(0);
 }
 
-class _ReadonlyExplicitContentAnnotation extends ExplicitContentAnnotation
-    with ReadonlyMessageMixin {}
-
-class NormalizedBoundingBox extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NormalizedBoundingBox')
-    ..a<double>(1, 'left', PbFieldType.OF)
-    ..a<double>(2, 'top', PbFieldType.OF)
-    ..a<double>(3, 'right', PbFieldType.OF)
-    ..a<double>(4, 'bottom', PbFieldType.OF)
+class NormalizedBoundingBox extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NormalizedBoundingBox',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<$core.double>(1, 'left', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, 'top', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, 'right', $pb.PbFieldType.OF)
+    ..a<$core.double>(4, 'bottom', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   NormalizedBoundingBox() : super();
-  NormalizedBoundingBox.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NormalizedBoundingBox.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  NormalizedBoundingBox.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NormalizedBoundingBox.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   NormalizedBoundingBox clone() =>
-      new NormalizedBoundingBox()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NormalizedBoundingBox create() => new NormalizedBoundingBox();
-  static PbList<NormalizedBoundingBox> createRepeated() =>
-      new PbList<NormalizedBoundingBox>();
-  static NormalizedBoundingBox getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNormalizedBoundingBox();
-    return _defaultInstance;
-  }
-
+      NormalizedBoundingBox()..mergeFromMessage(this);
+  NormalizedBoundingBox copyWith(
+          void Function(NormalizedBoundingBox) updates) =>
+      super.copyWith((message) => updates(message as NormalizedBoundingBox));
+  $pb.BuilderInfo get info_ => _i;
+  static NormalizedBoundingBox create() => NormalizedBoundingBox();
+  NormalizedBoundingBox createEmptyInstance() => create();
+  static $pb.PbList<NormalizedBoundingBox> createRepeated() =>
+      $pb.PbList<NormalizedBoundingBox>();
+  static NormalizedBoundingBox getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static NormalizedBoundingBox _defaultInstance;
-  static void $checkItem(NormalizedBoundingBox v) {
-    if (v is! NormalizedBoundingBox)
-      checkItemFailed(v, 'NormalizedBoundingBox');
-  }
 
-  double get left => $_getN(0);
-  set left(double v) {
+  $core.double get left => $_getN(0);
+  set left($core.double v) {
     $_setFloat(0, v);
   }
 
-  bool hasLeft() => $_has(0);
+  $core.bool hasLeft() => $_has(0);
   void clearLeft() => clearField(1);
 
-  double get top => $_getN(1);
-  set top(double v) {
+  $core.double get top => $_getN(1);
+  set top($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasTop() => $_has(1);
+  $core.bool hasTop() => $_has(1);
   void clearTop() => clearField(2);
 
-  double get right => $_getN(2);
-  set right(double v) {
+  $core.double get right => $_getN(2);
+  set right($core.double v) {
     $_setFloat(2, v);
   }
 
-  bool hasRight() => $_has(2);
+  $core.bool hasRight() => $_has(2);
   void clearRight() => clearField(3);
 
-  double get bottom => $_getN(3);
-  set bottom(double v) {
+  $core.double get bottom => $_getN(3);
+  set bottom($core.double v) {
     $_setFloat(3, v);
   }
 
-  bool hasBottom() => $_has(3);
+  $core.bool hasBottom() => $_has(3);
   void clearBottom() => clearField(4);
 }
 
-class _ReadonlyNormalizedBoundingBox extends NormalizedBoundingBox
-    with ReadonlyMessageMixin {}
-
-class FaceSegment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceSegment')
-    ..a<VideoSegment>(1, 'segment', PbFieldType.OM, VideoSegment.getDefault,
+class FaceSegment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FaceSegment',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<VideoSegment>(1, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
         VideoSegment.create)
     ..hasRequiredFields = false;
 
   FaceSegment() : super();
-  FaceSegment.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceSegment.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  FaceSegment.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceSegment.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FaceSegment clone() => new FaceSegment()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static FaceSegment create() => new FaceSegment();
-  static PbList<FaceSegment> createRepeated() => new PbList<FaceSegment>();
-  static FaceSegment getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFaceSegment();
-    return _defaultInstance;
-  }
-
+  FaceSegment clone() => FaceSegment()..mergeFromMessage(this);
+  FaceSegment copyWith(void Function(FaceSegment) updates) =>
+      super.copyWith((message) => updates(message as FaceSegment));
+  $pb.BuilderInfo get info_ => _i;
+  static FaceSegment create() => FaceSegment();
+  FaceSegment createEmptyInstance() => create();
+  static $pb.PbList<FaceSegment> createRepeated() => $pb.PbList<FaceSegment>();
+  static FaceSegment getDefault() => _defaultInstance ??= create()..freeze();
   static FaceSegment _defaultInstance;
-  static void $checkItem(FaceSegment v) {
-    if (v is! FaceSegment) checkItemFailed(v, 'FaceSegment');
-  }
 
   VideoSegment get segment => $_getN(0);
   set segment(VideoSegment v) {
     setField(1, v);
   }
 
-  bool hasSegment() => $_has(0);
+  $core.bool hasSegment() => $_has(0);
   void clearSegment() => clearField(1);
 }
 
-class _ReadonlyFaceSegment extends FaceSegment with ReadonlyMessageMixin {}
-
-class FaceFrame extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceFrame')
-    ..pp<NormalizedBoundingBox>(1, 'normalizedBoundingBoxes', PbFieldType.PM,
-        NormalizedBoundingBox.$checkItem, NormalizedBoundingBox.create)
-    ..a<$google$protobuf.Duration>(2, 'timeOffset', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+class FaceFrame extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FaceFrame',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pc<NormalizedBoundingBox>(1, 'normalizedBoundingBoxes',
+        $pb.PbFieldType.PM, NormalizedBoundingBox.create)
+    ..a<$0.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
     ..hasRequiredFields = false;
 
   FaceFrame() : super();
-  FaceFrame.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceFrame.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  FaceFrame.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceFrame.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FaceFrame clone() => new FaceFrame()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static FaceFrame create() => new FaceFrame();
-  static PbList<FaceFrame> createRepeated() => new PbList<FaceFrame>();
-  static FaceFrame getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFaceFrame();
-    return _defaultInstance;
-  }
-
+  FaceFrame clone() => FaceFrame()..mergeFromMessage(this);
+  FaceFrame copyWith(void Function(FaceFrame) updates) =>
+      super.copyWith((message) => updates(message as FaceFrame));
+  $pb.BuilderInfo get info_ => _i;
+  static FaceFrame create() => FaceFrame();
+  FaceFrame createEmptyInstance() => create();
+  static $pb.PbList<FaceFrame> createRepeated() => $pb.PbList<FaceFrame>();
+  static FaceFrame getDefault() => _defaultInstance ??= create()..freeze();
   static FaceFrame _defaultInstance;
-  static void $checkItem(FaceFrame v) {
-    if (v is! FaceFrame) checkItemFailed(v, 'FaceFrame');
-  }
 
-  List<NormalizedBoundingBox> get normalizedBoundingBoxes => $_getList(0);
+  $core.List<NormalizedBoundingBox> get normalizedBoundingBoxes => $_getList(0);
 
-  $google$protobuf.Duration get timeOffset => $_getN(1);
-  set timeOffset($google$protobuf.Duration v) {
+  $0.Duration get timeOffset => $_getN(1);
+  set timeOffset($0.Duration v) {
     setField(2, v);
   }
 
-  bool hasTimeOffset() => $_has(1);
+  $core.bool hasTimeOffset() => $_has(1);
   void clearTimeOffset() => clearField(2);
 }
 
-class _ReadonlyFaceFrame extends FaceFrame with ReadonlyMessageMixin {}
-
-class FaceAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceAnnotation')
-    ..a<List<int>>(1, 'thumbnail', PbFieldType.OY)
-    ..pp<FaceSegment>(2, 'segments', PbFieldType.PM, FaceSegment.$checkItem,
-        FaceSegment.create)
-    ..pp<FaceFrame>(
-        3, 'frames', PbFieldType.PM, FaceFrame.$checkItem, FaceFrame.create)
+class FaceAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FaceAnnotation',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<$core.List<$core.int>>(1, 'thumbnail', $pb.PbFieldType.OY)
+    ..pc<FaceSegment>(2, 'segments', $pb.PbFieldType.PM, FaceSegment.create)
+    ..pc<FaceFrame>(3, 'frames', $pb.PbFieldType.PM, FaceFrame.create)
     ..hasRequiredFields = false;
 
   FaceAnnotation() : super();
-  FaceAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  FaceAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FaceAnnotation clone() => new FaceAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static FaceAnnotation create() => new FaceAnnotation();
-  static PbList<FaceAnnotation> createRepeated() =>
-      new PbList<FaceAnnotation>();
-  static FaceAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFaceAnnotation();
-    return _defaultInstance;
-  }
-
+  FaceAnnotation clone() => FaceAnnotation()..mergeFromMessage(this);
+  FaceAnnotation copyWith(void Function(FaceAnnotation) updates) =>
+      super.copyWith((message) => updates(message as FaceAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static FaceAnnotation create() => FaceAnnotation();
+  FaceAnnotation createEmptyInstance() => create();
+  static $pb.PbList<FaceAnnotation> createRepeated() =>
+      $pb.PbList<FaceAnnotation>();
+  static FaceAnnotation getDefault() => _defaultInstance ??= create()..freeze();
   static FaceAnnotation _defaultInstance;
-  static void $checkItem(FaceAnnotation v) {
-    if (v is! FaceAnnotation) checkItemFailed(v, 'FaceAnnotation');
-  }
 
-  List<int> get thumbnail => $_getN(0);
-  set thumbnail(List<int> v) {
+  $core.List<$core.int> get thumbnail => $_getN(0);
+  set thumbnail($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasThumbnail() => $_has(0);
+  $core.bool hasThumbnail() => $_has(0);
   void clearThumbnail() => clearField(1);
 
-  List<FaceSegment> get segments => $_getList(1);
+  $core.List<FaceSegment> get segments => $_getList(1);
 
-  List<FaceFrame> get frames => $_getList(2);
+  $core.List<FaceFrame> get frames => $_getList(2);
 }
 
-class _ReadonlyFaceAnnotation extends FaceAnnotation with ReadonlyMessageMixin {
-}
-
-class VideoAnnotationResults extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VideoAnnotationResults')
+class VideoAnnotationResults extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoAnnotationResults',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
     ..aOS(1, 'inputUri')
-    ..pp<LabelAnnotation>(2, 'segmentLabelAnnotations', PbFieldType.PM,
-        LabelAnnotation.$checkItem, LabelAnnotation.create)
-    ..pp<LabelAnnotation>(3, 'shotLabelAnnotations', PbFieldType.PM,
-        LabelAnnotation.$checkItem, LabelAnnotation.create)
-    ..pp<LabelAnnotation>(4, 'frameLabelAnnotations', PbFieldType.PM,
-        LabelAnnotation.$checkItem, LabelAnnotation.create)
-    ..pp<FaceAnnotation>(5, 'faceAnnotations', PbFieldType.PM,
-        FaceAnnotation.$checkItem, FaceAnnotation.create)
-    ..pp<VideoSegment>(6, 'shotAnnotations', PbFieldType.PM,
-        VideoSegment.$checkItem, VideoSegment.create)
-    ..a<ExplicitContentAnnotation>(7, 'explicitAnnotation', PbFieldType.OM,
+    ..pc<LabelAnnotation>(2, 'segmentLabelAnnotations', $pb.PbFieldType.PM,
+        LabelAnnotation.create)
+    ..pc<LabelAnnotation>(
+        3, 'shotLabelAnnotations', $pb.PbFieldType.PM, LabelAnnotation.create)
+    ..pc<LabelAnnotation>(
+        4, 'frameLabelAnnotations', $pb.PbFieldType.PM, LabelAnnotation.create)
+    ..pc<FaceAnnotation>(
+        5, 'faceAnnotations', $pb.PbFieldType.PM, FaceAnnotation.create)
+    ..pc<VideoSegment>(
+        6, 'shotAnnotations', $pb.PbFieldType.PM, VideoSegment.create)
+    ..a<ExplicitContentAnnotation>(7, 'explicitAnnotation', $pb.PbFieldType.OM,
         ExplicitContentAnnotation.getDefault, ExplicitContentAnnotation.create)
-    ..a<$google$rpc.Status>(9, 'error', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
+    ..a<$1.Status>(
+        9, 'error', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
+    ..pc<SpeechTranscription>(11, 'speechTranscriptions', $pb.PbFieldType.PM,
+        SpeechTranscription.create)
+    ..pc<TextAnnotation>(
+        12, 'textAnnotations', $pb.PbFieldType.PM, TextAnnotation.create)
+    ..pc<ObjectTrackingAnnotation>(14, 'objectAnnotations', $pb.PbFieldType.PM,
+        ObjectTrackingAnnotation.create)
     ..hasRequiredFields = false;
 
   VideoAnnotationResults() : super();
-  VideoAnnotationResults.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VideoAnnotationResults.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VideoAnnotationResults.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VideoAnnotationResults.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VideoAnnotationResults clone() =>
-      new VideoAnnotationResults()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VideoAnnotationResults create() => new VideoAnnotationResults();
-  static PbList<VideoAnnotationResults> createRepeated() =>
-      new PbList<VideoAnnotationResults>();
-  static VideoAnnotationResults getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVideoAnnotationResults();
-    return _defaultInstance;
-  }
-
+      VideoAnnotationResults()..mergeFromMessage(this);
+  VideoAnnotationResults copyWith(
+          void Function(VideoAnnotationResults) updates) =>
+      super.copyWith((message) => updates(message as VideoAnnotationResults));
+  $pb.BuilderInfo get info_ => _i;
+  static VideoAnnotationResults create() => VideoAnnotationResults();
+  VideoAnnotationResults createEmptyInstance() => create();
+  static $pb.PbList<VideoAnnotationResults> createRepeated() =>
+      $pb.PbList<VideoAnnotationResults>();
+  static VideoAnnotationResults getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static VideoAnnotationResults _defaultInstance;
-  static void $checkItem(VideoAnnotationResults v) {
-    if (v is! VideoAnnotationResults)
-      checkItemFailed(v, 'VideoAnnotationResults');
-  }
 
-  String get inputUri => $_getS(0, '');
-  set inputUri(String v) {
+  $core.String get inputUri => $_getS(0, '');
+  set inputUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasInputUri() => $_has(0);
+  $core.bool hasInputUri() => $_has(0);
   void clearInputUri() => clearField(1);
 
-  List<LabelAnnotation> get segmentLabelAnnotations => $_getList(1);
+  $core.List<LabelAnnotation> get segmentLabelAnnotations => $_getList(1);
 
-  List<LabelAnnotation> get shotLabelAnnotations => $_getList(2);
+  $core.List<LabelAnnotation> get shotLabelAnnotations => $_getList(2);
 
-  List<LabelAnnotation> get frameLabelAnnotations => $_getList(3);
+  $core.List<LabelAnnotation> get frameLabelAnnotations => $_getList(3);
 
-  List<FaceAnnotation> get faceAnnotations => $_getList(4);
+  $core.List<FaceAnnotation> get faceAnnotations => $_getList(4);
 
-  List<VideoSegment> get shotAnnotations => $_getList(5);
+  $core.List<VideoSegment> get shotAnnotations => $_getList(5);
 
   ExplicitContentAnnotation get explicitAnnotation => $_getN(6);
   set explicitAnnotation(ExplicitContentAnnotation v) {
     setField(7, v);
   }
 
-  bool hasExplicitAnnotation() => $_has(6);
+  $core.bool hasExplicitAnnotation() => $_has(6);
   void clearExplicitAnnotation() => clearField(7);
 
-  $google$rpc.Status get error => $_getN(7);
-  set error($google$rpc.Status v) {
+  $1.Status get error => $_getN(7);
+  set error($1.Status v) {
     setField(9, v);
   }
 
-  bool hasError() => $_has(7);
+  $core.bool hasError() => $_has(7);
   void clearError() => clearField(9);
+
+  $core.List<SpeechTranscription> get speechTranscriptions => $_getList(8);
+
+  $core.List<TextAnnotation> get textAnnotations => $_getList(9);
+
+  $core.List<ObjectTrackingAnnotation> get objectAnnotations => $_getList(10);
 }
 
-class _ReadonlyVideoAnnotationResults extends VideoAnnotationResults
-    with ReadonlyMessageMixin {}
-
-class AnnotateVideoResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateVideoResponse')
-    ..pp<VideoAnnotationResults>(1, 'annotationResults', PbFieldType.PM,
-        VideoAnnotationResults.$checkItem, VideoAnnotationResults.create)
+class AnnotateVideoResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateVideoResponse',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pc<VideoAnnotationResults>(1, 'annotationResults', $pb.PbFieldType.PM,
+        VideoAnnotationResults.create)
     ..hasRequiredFields = false;
 
   AnnotateVideoResponse() : super();
-  AnnotateVideoResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateVideoResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AnnotateVideoResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateVideoResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateVideoResponse clone() =>
-      new AnnotateVideoResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotateVideoResponse create() => new AnnotateVideoResponse();
-  static PbList<AnnotateVideoResponse> createRepeated() =>
-      new PbList<AnnotateVideoResponse>();
-  static AnnotateVideoResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateVideoResponse();
-    return _defaultInstance;
-  }
-
+      AnnotateVideoResponse()..mergeFromMessage(this);
+  AnnotateVideoResponse copyWith(
+          void Function(AnnotateVideoResponse) updates) =>
+      super.copyWith((message) => updates(message as AnnotateVideoResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotateVideoResponse create() => AnnotateVideoResponse();
+  AnnotateVideoResponse createEmptyInstance() => create();
+  static $pb.PbList<AnnotateVideoResponse> createRepeated() =>
+      $pb.PbList<AnnotateVideoResponse>();
+  static AnnotateVideoResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AnnotateVideoResponse _defaultInstance;
-  static void $checkItem(AnnotateVideoResponse v) {
-    if (v is! AnnotateVideoResponse)
-      checkItemFailed(v, 'AnnotateVideoResponse');
-  }
 
-  List<VideoAnnotationResults> get annotationResults => $_getList(0);
+  $core.List<VideoAnnotationResults> get annotationResults => $_getList(0);
 }
 
-class _ReadonlyAnnotateVideoResponse extends AnnotateVideoResponse
-    with ReadonlyMessageMixin {}
-
-class VideoAnnotationProgress extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VideoAnnotationProgress')
+class VideoAnnotationProgress extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoAnnotationProgress',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
     ..aOS(1, 'inputUri')
-    ..a<int>(2, 'progressPercent', PbFieldType.O3)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'updateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$core.int>(2, 'progressPercent', $pb.PbFieldType.O3)
+    ..a<$2.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   VideoAnnotationProgress() : super();
-  VideoAnnotationProgress.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VideoAnnotationProgress.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VideoAnnotationProgress.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VideoAnnotationProgress.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VideoAnnotationProgress clone() =>
-      new VideoAnnotationProgress()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VideoAnnotationProgress create() => new VideoAnnotationProgress();
-  static PbList<VideoAnnotationProgress> createRepeated() =>
-      new PbList<VideoAnnotationProgress>();
-  static VideoAnnotationProgress getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVideoAnnotationProgress();
-    return _defaultInstance;
-  }
-
+      VideoAnnotationProgress()..mergeFromMessage(this);
+  VideoAnnotationProgress copyWith(
+          void Function(VideoAnnotationProgress) updates) =>
+      super.copyWith((message) => updates(message as VideoAnnotationProgress));
+  $pb.BuilderInfo get info_ => _i;
+  static VideoAnnotationProgress create() => VideoAnnotationProgress();
+  VideoAnnotationProgress createEmptyInstance() => create();
+  static $pb.PbList<VideoAnnotationProgress> createRepeated() =>
+      $pb.PbList<VideoAnnotationProgress>();
+  static VideoAnnotationProgress getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static VideoAnnotationProgress _defaultInstance;
-  static void $checkItem(VideoAnnotationProgress v) {
-    if (v is! VideoAnnotationProgress)
-      checkItemFailed(v, 'VideoAnnotationProgress');
-  }
 
-  String get inputUri => $_getS(0, '');
-  set inputUri(String v) {
+  $core.String get inputUri => $_getS(0, '');
+  set inputUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasInputUri() => $_has(0);
+  $core.bool hasInputUri() => $_has(0);
   void clearInputUri() => clearField(1);
 
-  int get progressPercent => $_get(1, 0);
-  set progressPercent(int v) {
+  $core.int get progressPercent => $_get(1, 0);
+  set progressPercent($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasProgressPercent() => $_has(1);
+  $core.bool hasProgressPercent() => $_has(1);
   void clearProgressPercent() => clearField(2);
 
-  $google$protobuf.Timestamp get startTime => $_getN(2);
-  set startTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(2);
+  set startTime($2.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasStartTime() => $_has(2);
+  $core.bool hasStartTime() => $_has(2);
   void clearStartTime() => clearField(3);
 
-  $google$protobuf.Timestamp get updateTime => $_getN(3);
-  set updateTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get updateTime => $_getN(3);
+  set updateTime($2.Timestamp v) {
     setField(4, v);
   }
 
-  bool hasUpdateTime() => $_has(3);
+  $core.bool hasUpdateTime() => $_has(3);
   void clearUpdateTime() => clearField(4);
 }
 
-class _ReadonlyVideoAnnotationProgress extends VideoAnnotationProgress
-    with ReadonlyMessageMixin {}
-
-class AnnotateVideoProgress extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateVideoProgress')
-    ..pp<VideoAnnotationProgress>(1, 'annotationProgress', PbFieldType.PM,
-        VideoAnnotationProgress.$checkItem, VideoAnnotationProgress.create)
+class AnnotateVideoProgress extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateVideoProgress',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pc<VideoAnnotationProgress>(1, 'annotationProgress', $pb.PbFieldType.PM,
+        VideoAnnotationProgress.create)
     ..hasRequiredFields = false;
 
   AnnotateVideoProgress() : super();
-  AnnotateVideoProgress.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateVideoProgress.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AnnotateVideoProgress.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateVideoProgress.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateVideoProgress clone() =>
-      new AnnotateVideoProgress()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotateVideoProgress create() => new AnnotateVideoProgress();
-  static PbList<AnnotateVideoProgress> createRepeated() =>
-      new PbList<AnnotateVideoProgress>();
-  static AnnotateVideoProgress getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateVideoProgress();
-    return _defaultInstance;
-  }
-
+      AnnotateVideoProgress()..mergeFromMessage(this);
+  AnnotateVideoProgress copyWith(
+          void Function(AnnotateVideoProgress) updates) =>
+      super.copyWith((message) => updates(message as AnnotateVideoProgress));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotateVideoProgress create() => AnnotateVideoProgress();
+  AnnotateVideoProgress createEmptyInstance() => create();
+  static $pb.PbList<AnnotateVideoProgress> createRepeated() =>
+      $pb.PbList<AnnotateVideoProgress>();
+  static AnnotateVideoProgress getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AnnotateVideoProgress _defaultInstance;
-  static void $checkItem(AnnotateVideoProgress v) {
-    if (v is! AnnotateVideoProgress)
-      checkItemFailed(v, 'AnnotateVideoProgress');
-  }
 
-  List<VideoAnnotationProgress> get annotationProgress => $_getList(0);
+  $core.List<VideoAnnotationProgress> get annotationProgress => $_getList(0);
 }
 
-class _ReadonlyAnnotateVideoProgress extends AnnotateVideoProgress
-    with ReadonlyMessageMixin {}
+class SpeechTranscriptionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechTranscriptionConfig',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..aOS(1, 'languageCode')
+    ..a<$core.int>(2, 'maxAlternatives', $pb.PbFieldType.O3)
+    ..aOB(3, 'filterProfanity')
+    ..pc<SpeechContext>(
+        4, 'speechContexts', $pb.PbFieldType.PM, SpeechContext.create)
+    ..aOB(5, 'enableAutomaticPunctuation')
+    ..p<$core.int>(6, 'audioTracks', $pb.PbFieldType.P3)
+    ..aOB(7, 'enableSpeakerDiarization')
+    ..a<$core.int>(8, 'diarizationSpeakerCount', $pb.PbFieldType.O3)
+    ..aOB(9, 'enableWordConfidence')
+    ..hasRequiredFields = false;
+
+  SpeechTranscriptionConfig() : super();
+  SpeechTranscriptionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SpeechTranscriptionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SpeechTranscriptionConfig clone() =>
+      SpeechTranscriptionConfig()..mergeFromMessage(this);
+  SpeechTranscriptionConfig copyWith(
+          void Function(SpeechTranscriptionConfig) updates) =>
+      super
+          .copyWith((message) => updates(message as SpeechTranscriptionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechTranscriptionConfig create() => SpeechTranscriptionConfig();
+  SpeechTranscriptionConfig createEmptyInstance() => create();
+  static $pb.PbList<SpeechTranscriptionConfig> createRepeated() =>
+      $pb.PbList<SpeechTranscriptionConfig>();
+  static SpeechTranscriptionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SpeechTranscriptionConfig _defaultInstance;
+
+  $core.String get languageCode => $_getS(0, '');
+  set languageCode($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(0);
+  void clearLanguageCode() => clearField(1);
+
+  $core.int get maxAlternatives => $_get(1, 0);
+  set maxAlternatives($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  $core.bool hasMaxAlternatives() => $_has(1);
+  void clearMaxAlternatives() => clearField(2);
+
+  $core.bool get filterProfanity => $_get(2, false);
+  set filterProfanity($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  $core.bool hasFilterProfanity() => $_has(2);
+  void clearFilterProfanity() => clearField(3);
+
+  $core.List<SpeechContext> get speechContexts => $_getList(3);
+
+  $core.bool get enableAutomaticPunctuation => $_get(4, false);
+  set enableAutomaticPunctuation($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  $core.bool hasEnableAutomaticPunctuation() => $_has(4);
+  void clearEnableAutomaticPunctuation() => clearField(5);
+
+  $core.List<$core.int> get audioTracks => $_getList(5);
+
+  $core.bool get enableSpeakerDiarization => $_get(6, false);
+  set enableSpeakerDiarization($core.bool v) {
+    $_setBool(6, v);
+  }
+
+  $core.bool hasEnableSpeakerDiarization() => $_has(6);
+  void clearEnableSpeakerDiarization() => clearField(7);
+
+  $core.int get diarizationSpeakerCount => $_get(7, 0);
+  set diarizationSpeakerCount($core.int v) {
+    $_setSignedInt32(7, v);
+  }
+
+  $core.bool hasDiarizationSpeakerCount() => $_has(7);
+  void clearDiarizationSpeakerCount() => clearField(8);
+
+  $core.bool get enableWordConfidence => $_get(8, false);
+  set enableWordConfidence($core.bool v) {
+    $_setBool(8, v);
+  }
+
+  $core.bool hasEnableWordConfidence() => $_has(8);
+  void clearEnableWordConfidence() => clearField(9);
+}
+
+class SpeechContext extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechContext',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pPS(1, 'phrases')
+    ..hasRequiredFields = false;
+
+  SpeechContext() : super();
+  SpeechContext.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SpeechContext.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SpeechContext clone() => SpeechContext()..mergeFromMessage(this);
+  SpeechContext copyWith(void Function(SpeechContext) updates) =>
+      super.copyWith((message) => updates(message as SpeechContext));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechContext create() => SpeechContext();
+  SpeechContext createEmptyInstance() => create();
+  static $pb.PbList<SpeechContext> createRepeated() =>
+      $pb.PbList<SpeechContext>();
+  static SpeechContext getDefault() => _defaultInstance ??= create()..freeze();
+  static SpeechContext _defaultInstance;
+
+  $core.List<$core.String> get phrases => $_getList(0);
+}
+
+class SpeechTranscription extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechTranscription',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pc<SpeechRecognitionAlternative>(1, 'alternatives', $pb.PbFieldType.PM,
+        SpeechRecognitionAlternative.create)
+    ..aOS(2, 'languageCode')
+    ..hasRequiredFields = false;
+
+  SpeechTranscription() : super();
+  SpeechTranscription.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SpeechTranscription.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SpeechTranscription clone() => SpeechTranscription()..mergeFromMessage(this);
+  SpeechTranscription copyWith(void Function(SpeechTranscription) updates) =>
+      super.copyWith((message) => updates(message as SpeechTranscription));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechTranscription create() => SpeechTranscription();
+  SpeechTranscription createEmptyInstance() => create();
+  static $pb.PbList<SpeechTranscription> createRepeated() =>
+      $pb.PbList<SpeechTranscription>();
+  static SpeechTranscription getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SpeechTranscription _defaultInstance;
+
+  $core.List<SpeechRecognitionAlternative> get alternatives => $_getList(0);
+
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(1);
+  void clearLanguageCode() => clearField(2);
+}
+
+class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SpeechRecognitionAlternative',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..aOS(1, 'transcript')
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
+    ..pc<WordInfo>(3, 'words', $pb.PbFieldType.PM, WordInfo.create)
+    ..hasRequiredFields = false;
+
+  SpeechRecognitionAlternative() : super();
+  SpeechRecognitionAlternative.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SpeechRecognitionAlternative.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SpeechRecognitionAlternative clone() =>
+      SpeechRecognitionAlternative()..mergeFromMessage(this);
+  SpeechRecognitionAlternative copyWith(
+          void Function(SpeechRecognitionAlternative) updates) =>
+      super.copyWith(
+          (message) => updates(message as SpeechRecognitionAlternative));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechRecognitionAlternative create() =>
+      SpeechRecognitionAlternative();
+  SpeechRecognitionAlternative createEmptyInstance() => create();
+  static $pb.PbList<SpeechRecognitionAlternative> createRepeated() =>
+      $pb.PbList<SpeechRecognitionAlternative>();
+  static SpeechRecognitionAlternative getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SpeechRecognitionAlternative _defaultInstance;
+
+  $core.String get transcript => $_getS(0, '');
+  set transcript($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasTranscript() => $_has(0);
+  void clearTranscript() => clearField(1);
+
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  $core.bool hasConfidence() => $_has(1);
+  void clearConfidence() => clearField(2);
+
+  $core.List<WordInfo> get words => $_getList(2);
+}
+
+class WordInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WordInfo',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<$0.Duration>(1, 'startTime', $pb.PbFieldType.OM, $0.Duration.getDefault,
+        $0.Duration.create)
+    ..a<$0.Duration>(2, 'endTime', $pb.PbFieldType.OM, $0.Duration.getDefault,
+        $0.Duration.create)
+    ..aOS(3, 'word')
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
+    ..a<$core.int>(5, 'speakerTag', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  WordInfo() : super();
+  WordInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  WordInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  WordInfo clone() => WordInfo()..mergeFromMessage(this);
+  WordInfo copyWith(void Function(WordInfo) updates) =>
+      super.copyWith((message) => updates(message as WordInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static WordInfo create() => WordInfo();
+  WordInfo createEmptyInstance() => create();
+  static $pb.PbList<WordInfo> createRepeated() => $pb.PbList<WordInfo>();
+  static WordInfo getDefault() => _defaultInstance ??= create()..freeze();
+  static WordInfo _defaultInstance;
+
+  $0.Duration get startTime => $_getN(0);
+  set startTime($0.Duration v) {
+    setField(1, v);
+  }
+
+  $core.bool hasStartTime() => $_has(0);
+  void clearStartTime() => clearField(1);
+
+  $0.Duration get endTime => $_getN(1);
+  set endTime($0.Duration v) {
+    setField(2, v);
+  }
+
+  $core.bool hasEndTime() => $_has(1);
+  void clearEndTime() => clearField(2);
+
+  $core.String get word => $_getS(2, '');
+  set word($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasWord() => $_has(2);
+  void clearWord() => clearField(3);
+
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasConfidence() => $_has(3);
+  void clearConfidence() => clearField(4);
+
+  $core.int get speakerTag => $_get(4, 0);
+  set speakerTag($core.int v) {
+    $_setSignedInt32(4, v);
+  }
+
+  $core.bool hasSpeakerTag() => $_has(4);
+  void clearSpeakerTag() => clearField(5);
+}
+
+class NormalizedVertex extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NormalizedVertex',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<$core.double>(1, 'x', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, 'y', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  NormalizedVertex() : super();
+  NormalizedVertex.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  NormalizedVertex.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  NormalizedVertex clone() => NormalizedVertex()..mergeFromMessage(this);
+  NormalizedVertex copyWith(void Function(NormalizedVertex) updates) =>
+      super.copyWith((message) => updates(message as NormalizedVertex));
+  $pb.BuilderInfo get info_ => _i;
+  static NormalizedVertex create() => NormalizedVertex();
+  NormalizedVertex createEmptyInstance() => create();
+  static $pb.PbList<NormalizedVertex> createRepeated() =>
+      $pb.PbList<NormalizedVertex>();
+  static NormalizedVertex getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static NormalizedVertex _defaultInstance;
+
+  $core.double get x => $_getN(0);
+  set x($core.double v) {
+    $_setFloat(0, v);
+  }
+
+  $core.bool hasX() => $_has(0);
+  void clearX() => clearField(1);
+
+  $core.double get y => $_getN(1);
+  set y($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  $core.bool hasY() => $_has(1);
+  void clearY() => clearField(2);
+}
+
+class NormalizedBoundingPoly extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NormalizedBoundingPoly',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..pc<NormalizedVertex>(
+        1, 'vertices', $pb.PbFieldType.PM, NormalizedVertex.create)
+    ..hasRequiredFields = false;
+
+  NormalizedBoundingPoly() : super();
+  NormalizedBoundingPoly.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  NormalizedBoundingPoly.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  NormalizedBoundingPoly clone() =>
+      NormalizedBoundingPoly()..mergeFromMessage(this);
+  NormalizedBoundingPoly copyWith(
+          void Function(NormalizedBoundingPoly) updates) =>
+      super.copyWith((message) => updates(message as NormalizedBoundingPoly));
+  $pb.BuilderInfo get info_ => _i;
+  static NormalizedBoundingPoly create() => NormalizedBoundingPoly();
+  NormalizedBoundingPoly createEmptyInstance() => create();
+  static $pb.PbList<NormalizedBoundingPoly> createRepeated() =>
+      $pb.PbList<NormalizedBoundingPoly>();
+  static NormalizedBoundingPoly getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static NormalizedBoundingPoly _defaultInstance;
+
+  $core.List<NormalizedVertex> get vertices => $_getList(0);
+}
+
+class TextSegment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextSegment',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<VideoSegment>(1, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
+        VideoSegment.create)
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
+    ..pc<TextFrame>(3, 'frames', $pb.PbFieldType.PM, TextFrame.create)
+    ..hasRequiredFields = false;
+
+  TextSegment() : super();
+  TextSegment.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  TextSegment.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  TextSegment clone() => TextSegment()..mergeFromMessage(this);
+  TextSegment copyWith(void Function(TextSegment) updates) =>
+      super.copyWith((message) => updates(message as TextSegment));
+  $pb.BuilderInfo get info_ => _i;
+  static TextSegment create() => TextSegment();
+  TextSegment createEmptyInstance() => create();
+  static $pb.PbList<TextSegment> createRepeated() => $pb.PbList<TextSegment>();
+  static TextSegment getDefault() => _defaultInstance ??= create()..freeze();
+  static TextSegment _defaultInstance;
+
+  VideoSegment get segment => $_getN(0);
+  set segment(VideoSegment v) {
+    setField(1, v);
+  }
+
+  $core.bool hasSegment() => $_has(0);
+  void clearSegment() => clearField(1);
+
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  $core.bool hasConfidence() => $_has(1);
+  void clearConfidence() => clearField(2);
+
+  $core.List<TextFrame> get frames => $_getList(2);
+}
+
+class TextFrame extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextFrame',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<NormalizedBoundingPoly>(1, 'rotatedBoundingBox', $pb.PbFieldType.OM,
+        NormalizedBoundingPoly.getDefault, NormalizedBoundingPoly.create)
+    ..a<$0.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
+    ..hasRequiredFields = false;
+
+  TextFrame() : super();
+  TextFrame.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  TextFrame.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  TextFrame clone() => TextFrame()..mergeFromMessage(this);
+  TextFrame copyWith(void Function(TextFrame) updates) =>
+      super.copyWith((message) => updates(message as TextFrame));
+  $pb.BuilderInfo get info_ => _i;
+  static TextFrame create() => TextFrame();
+  TextFrame createEmptyInstance() => create();
+  static $pb.PbList<TextFrame> createRepeated() => $pb.PbList<TextFrame>();
+  static TextFrame getDefault() => _defaultInstance ??= create()..freeze();
+  static TextFrame _defaultInstance;
+
+  NormalizedBoundingPoly get rotatedBoundingBox => $_getN(0);
+  set rotatedBoundingBox(NormalizedBoundingPoly v) {
+    setField(1, v);
+  }
+
+  $core.bool hasRotatedBoundingBox() => $_has(0);
+  void clearRotatedBoundingBox() => clearField(1);
+
+  $0.Duration get timeOffset => $_getN(1);
+  set timeOffset($0.Duration v) {
+    setField(2, v);
+  }
+
+  $core.bool hasTimeOffset() => $_has(1);
+  void clearTimeOffset() => clearField(2);
+}
+
+class TextAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextAnnotation',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..aOS(1, 'text')
+    ..pc<TextSegment>(2, 'segments', $pb.PbFieldType.PM, TextSegment.create)
+    ..hasRequiredFields = false;
+
+  TextAnnotation() : super();
+  TextAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  TextAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  TextAnnotation clone() => TextAnnotation()..mergeFromMessage(this);
+  TextAnnotation copyWith(void Function(TextAnnotation) updates) =>
+      super.copyWith((message) => updates(message as TextAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static TextAnnotation create() => TextAnnotation();
+  TextAnnotation createEmptyInstance() => create();
+  static $pb.PbList<TextAnnotation> createRepeated() =>
+      $pb.PbList<TextAnnotation>();
+  static TextAnnotation getDefault() => _defaultInstance ??= create()..freeze();
+  static TextAnnotation _defaultInstance;
+
+  $core.String get text => $_getS(0, '');
+  set text($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasText() => $_has(0);
+  void clearText() => clearField(1);
+
+  $core.List<TextSegment> get segments => $_getList(1);
+}
+
+class ObjectTrackingFrame extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ObjectTrackingFrame',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<NormalizedBoundingBox>(1, 'normalizedBoundingBox', $pb.PbFieldType.OM,
+        NormalizedBoundingBox.getDefault, NormalizedBoundingBox.create)
+    ..a<$0.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
+    ..hasRequiredFields = false;
+
+  ObjectTrackingFrame() : super();
+  ObjectTrackingFrame.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ObjectTrackingFrame.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ObjectTrackingFrame clone() => ObjectTrackingFrame()..mergeFromMessage(this);
+  ObjectTrackingFrame copyWith(void Function(ObjectTrackingFrame) updates) =>
+      super.copyWith((message) => updates(message as ObjectTrackingFrame));
+  $pb.BuilderInfo get info_ => _i;
+  static ObjectTrackingFrame create() => ObjectTrackingFrame();
+  ObjectTrackingFrame createEmptyInstance() => create();
+  static $pb.PbList<ObjectTrackingFrame> createRepeated() =>
+      $pb.PbList<ObjectTrackingFrame>();
+  static ObjectTrackingFrame getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ObjectTrackingFrame _defaultInstance;
+
+  NormalizedBoundingBox get normalizedBoundingBox => $_getN(0);
+  set normalizedBoundingBox(NormalizedBoundingBox v) {
+    setField(1, v);
+  }
+
+  $core.bool hasNormalizedBoundingBox() => $_has(0);
+  void clearNormalizedBoundingBox() => clearField(1);
+
+  $0.Duration get timeOffset => $_getN(1);
+  set timeOffset($0.Duration v) {
+    setField(2, v);
+  }
+
+  $core.bool hasTimeOffset() => $_has(1);
+  void clearTimeOffset() => clearField(2);
+}
+
+enum ObjectTrackingAnnotation_TrackInfo { segment, trackId, notSet }
+
+class ObjectTrackingAnnotation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ObjectTrackingAnnotation_TrackInfo>
+      _ObjectTrackingAnnotation_TrackInfoByTag = {
+    3: ObjectTrackingAnnotation_TrackInfo.segment,
+    5: ObjectTrackingAnnotation_TrackInfo.trackId,
+    0: ObjectTrackingAnnotation_TrackInfo.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ObjectTrackingAnnotation',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..a<Entity>(
+        1, 'entity', $pb.PbFieldType.OM, Entity.getDefault, Entity.create)
+    ..pc<ObjectTrackingFrame>(
+        2, 'frames', $pb.PbFieldType.PM, ObjectTrackingFrame.create)
+    ..a<VideoSegment>(3, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
+        VideoSegment.create)
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
+    ..aInt64(5, 'trackId')
+    ..oo(0, [3, 5])
+    ..hasRequiredFields = false;
+
+  ObjectTrackingAnnotation() : super();
+  ObjectTrackingAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ObjectTrackingAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ObjectTrackingAnnotation clone() =>
+      ObjectTrackingAnnotation()..mergeFromMessage(this);
+  ObjectTrackingAnnotation copyWith(
+          void Function(ObjectTrackingAnnotation) updates) =>
+      super.copyWith((message) => updates(message as ObjectTrackingAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static ObjectTrackingAnnotation create() => ObjectTrackingAnnotation();
+  ObjectTrackingAnnotation createEmptyInstance() => create();
+  static $pb.PbList<ObjectTrackingAnnotation> createRepeated() =>
+      $pb.PbList<ObjectTrackingAnnotation>();
+  static ObjectTrackingAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ObjectTrackingAnnotation _defaultInstance;
+
+  ObjectTrackingAnnotation_TrackInfo whichTrackInfo() =>
+      _ObjectTrackingAnnotation_TrackInfoByTag[$_whichOneof(0)];
+  void clearTrackInfo() => clearField($_whichOneof(0));
+
+  Entity get entity => $_getN(0);
+  set entity(Entity v) {
+    setField(1, v);
+  }
+
+  $core.bool hasEntity() => $_has(0);
+  void clearEntity() => clearField(1);
+
+  $core.List<ObjectTrackingFrame> get frames => $_getList(1);
+
+  VideoSegment get segment => $_getN(2);
+  set segment(VideoSegment v) {
+    setField(3, v);
+  }
+
+  $core.bool hasSegment() => $_has(2);
+  void clearSegment() => clearField(3);
+
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasConfidence() => $_has(3);
+  void clearConfidence() => clearField(4);
+
+  Int64 get trackId => $_getI64(4);
+  set trackId(Int64 v) {
+    $_setInt64(4, v);
+  }
+
+  $core.bool hasTrackId() => $_has(4);
+  void clearTrackId() => clearField(5);
+}
 
 class VideoIntelligenceServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   VideoIntelligenceServiceApi(this._client);
 
-  Future<$google$longrunning.Operation> annotateVideo(
-      ClientContext ctx, AnnotateVideoRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx,
-        'VideoIntelligenceService', 'AnnotateVideo', request, emptyResponse);
+  $async.Future<$3.Operation> annotateVideo(
+      $pb.ClientContext ctx, AnnotateVideoRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'VideoIntelligenceService',
+        'AnnotateVideo', request, emptyResponse);
   }
 }

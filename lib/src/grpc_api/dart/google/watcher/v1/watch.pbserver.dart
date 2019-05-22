@@ -1,39 +1,42 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/watcher/v1/watch.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'watch.pb.dart';
 import 'watch.pbjson.dart';
 
 export 'watch.pb.dart';
 
-abstract class WatcherServiceBase extends GeneratedService {
-  Future<ChangeBatch> watch(ServerContext ctx, Request request);
+abstract class WatcherServiceBase extends $pb.GeneratedService {
+  $async.Future<ChangeBatch> watch($pb.ServerContext ctx, Request request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'Watch':
-        return new Request();
+        return Request();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'Watch':
         return this.watch(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Watcher$json;
-  Map<String, Map<String, dynamic>> get $messageJson => Watcher$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => WatcherServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => WatcherServiceBase$messageJson;
 }

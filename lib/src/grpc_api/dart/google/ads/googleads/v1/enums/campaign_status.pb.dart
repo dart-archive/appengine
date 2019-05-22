@@ -1,0 +1,37 @@
+///
+//  Generated code. Do not modify.
+//  source: google/ads/googleads/v1/enums/campaign_status.proto
+///
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
+
+import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'campaign_status.pbenum.dart';
+
+class CampaignStatusEnum extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignStatusEnum',
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+    ..hasRequiredFields = false;
+
+  CampaignStatusEnum() : super();
+  CampaignStatusEnum.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CampaignStatusEnum.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CampaignStatusEnum clone() => CampaignStatusEnum()..mergeFromMessage(this);
+  CampaignStatusEnum copyWith(void Function(CampaignStatusEnum) updates) =>
+      super.copyWith((message) => updates(message as CampaignStatusEnum));
+  $pb.BuilderInfo get info_ => _i;
+  static CampaignStatusEnum create() => CampaignStatusEnum();
+  CampaignStatusEnum createEmptyInstance() => create();
+  static $pb.PbList<CampaignStatusEnum> createRepeated() =>
+      $pb.PbList<CampaignStatusEnum>();
+  static CampaignStatusEnum getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static CampaignStatusEnum _defaultInstance;
+}

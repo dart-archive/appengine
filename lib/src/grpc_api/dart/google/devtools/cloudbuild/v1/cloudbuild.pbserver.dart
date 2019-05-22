@@ -1,72 +1,75 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/cloudbuild/v1/cloudbuild.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'cloudbuild.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/empty.pb.dart' as $3;
 import 'cloudbuild.pbjson.dart';
 
 export 'cloudbuild.pb.dart';
 
-abstract class CloudBuildServiceBase extends GeneratedService {
-  Future<$google$longrunning.Operation> createBuild(
-      ServerContext ctx, CreateBuildRequest request);
-  Future<Build> getBuild(ServerContext ctx, GetBuildRequest request);
-  Future<ListBuildsResponse> listBuilds(
-      ServerContext ctx, ListBuildsRequest request);
-  Future<Build> cancelBuild(ServerContext ctx, CancelBuildRequest request);
-  Future<$google$longrunning.Operation> retryBuild(
-      ServerContext ctx, RetryBuildRequest request);
-  Future<BuildTrigger> createBuildTrigger(
-      ServerContext ctx, CreateBuildTriggerRequest request);
-  Future<BuildTrigger> getBuildTrigger(
-      ServerContext ctx, GetBuildTriggerRequest request);
-  Future<ListBuildTriggersResponse> listBuildTriggers(
-      ServerContext ctx, ListBuildTriggersRequest request);
-  Future<$google$protobuf.Empty> deleteBuildTrigger(
-      ServerContext ctx, DeleteBuildTriggerRequest request);
-  Future<BuildTrigger> updateBuildTrigger(
-      ServerContext ctx, UpdateBuildTriggerRequest request);
-  Future<$google$longrunning.Operation> runBuildTrigger(
-      ServerContext ctx, RunBuildTriggerRequest request);
+abstract class CloudBuildServiceBase extends $pb.GeneratedService {
+  $async.Future<$2.Operation> createBuild(
+      $pb.ServerContext ctx, CreateBuildRequest request);
+  $async.Future<Build> getBuild($pb.ServerContext ctx, GetBuildRequest request);
+  $async.Future<ListBuildsResponse> listBuilds(
+      $pb.ServerContext ctx, ListBuildsRequest request);
+  $async.Future<Build> cancelBuild(
+      $pb.ServerContext ctx, CancelBuildRequest request);
+  $async.Future<$2.Operation> retryBuild(
+      $pb.ServerContext ctx, RetryBuildRequest request);
+  $async.Future<BuildTrigger> createBuildTrigger(
+      $pb.ServerContext ctx, CreateBuildTriggerRequest request);
+  $async.Future<BuildTrigger> getBuildTrigger(
+      $pb.ServerContext ctx, GetBuildTriggerRequest request);
+  $async.Future<ListBuildTriggersResponse> listBuildTriggers(
+      $pb.ServerContext ctx, ListBuildTriggersRequest request);
+  $async.Future<$3.Empty> deleteBuildTrigger(
+      $pb.ServerContext ctx, DeleteBuildTriggerRequest request);
+  $async.Future<BuildTrigger> updateBuildTrigger(
+      $pb.ServerContext ctx, UpdateBuildTriggerRequest request);
+  $async.Future<$2.Operation> runBuildTrigger(
+      $pb.ServerContext ctx, RunBuildTriggerRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'CreateBuild':
-        return new CreateBuildRequest();
+        return CreateBuildRequest();
       case 'GetBuild':
-        return new GetBuildRequest();
+        return GetBuildRequest();
       case 'ListBuilds':
-        return new ListBuildsRequest();
+        return ListBuildsRequest();
       case 'CancelBuild':
-        return new CancelBuildRequest();
+        return CancelBuildRequest();
       case 'RetryBuild':
-        return new RetryBuildRequest();
+        return RetryBuildRequest();
       case 'CreateBuildTrigger':
-        return new CreateBuildTriggerRequest();
+        return CreateBuildTriggerRequest();
       case 'GetBuildTrigger':
-        return new GetBuildTriggerRequest();
+        return GetBuildTriggerRequest();
       case 'ListBuildTriggers':
-        return new ListBuildTriggersRequest();
+        return ListBuildTriggersRequest();
       case 'DeleteBuildTrigger':
-        return new DeleteBuildTriggerRequest();
+        return DeleteBuildTriggerRequest();
       case 'UpdateBuildTrigger':
-        return new UpdateBuildTriggerRequest();
+        return UpdateBuildTriggerRequest();
       case 'RunBuildTrigger':
-        return new RunBuildTriggerRequest();
+        return RunBuildTriggerRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'CreateBuild':
         return this.createBuild(ctx, request);
@@ -91,10 +94,12 @@ abstract class CloudBuildServiceBase extends GeneratedService {
       case 'RunBuildTrigger':
         return this.runBuildTrigger(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => CloudBuild$json;
-  Map<String, Map<String, dynamic>> get $messageJson => CloudBuild$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CloudBuildServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CloudBuildServiceBase$messageJson;
 }

@@ -16,9 +16,6 @@ language_settings:
   nodejs:
     package_name: spanner.v1
     domain_layer_location: google-cloud
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
 interfaces:
 - name: google.spanner.admin.database.v1.DatabaseAdmin
   collections:
@@ -56,7 +53,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
@@ -79,7 +75,6 @@ interfaces:
     required_fields:
     - parent
     - create_statement
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: non_idempotent
     retry_params_name: default
@@ -100,7 +95,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -116,7 +110,6 @@ interfaces:
     required_fields:
     - database
     - statements
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -137,7 +130,6 @@ interfaces:
         - database
     required_fields:
     - database
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -151,7 +143,6 @@ interfaces:
         - database
     required_fields:
     - database
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -167,7 +158,6 @@ interfaces:
     required_fields:
     - resource
     - policy
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -180,7 +170,6 @@ interfaces:
         - resource
     required_fields:
     - resource
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -195,7 +184,6 @@ interfaces:
     required_fields:
     - resource
     - permissions
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -226,3 +214,6 @@ resource_name_generation:
 - message_name: GetDatabaseDdlRequest
   field_entity_map:
     database: database
+- message_name: Database
+  field_entity_map:
+    name: database

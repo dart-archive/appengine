@@ -1,52 +1,58 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/datastore/v1/datastore.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'datastore.pb.dart';
 import 'datastore.pbjson.dart';
 
 export 'datastore.pb.dart';
 
-abstract class DatastoreServiceBase extends GeneratedService {
-  Future<LookupResponse> lookup(ServerContext ctx, LookupRequest request);
-  Future<RunQueryResponse> runQuery(ServerContext ctx, RunQueryRequest request);
-  Future<BeginTransactionResponse> beginTransaction(
-      ServerContext ctx, BeginTransactionRequest request);
-  Future<CommitResponse> commit(ServerContext ctx, CommitRequest request);
-  Future<RollbackResponse> rollback(ServerContext ctx, RollbackRequest request);
-  Future<AllocateIdsResponse> allocateIds(
-      ServerContext ctx, AllocateIdsRequest request);
-  Future<ReserveIdsResponse> reserveIds(
-      ServerContext ctx, ReserveIdsRequest request);
+abstract class DatastoreServiceBase extends $pb.GeneratedService {
+  $async.Future<LookupResponse> lookup(
+      $pb.ServerContext ctx, LookupRequest request);
+  $async.Future<RunQueryResponse> runQuery(
+      $pb.ServerContext ctx, RunQueryRequest request);
+  $async.Future<BeginTransactionResponse> beginTransaction(
+      $pb.ServerContext ctx, BeginTransactionRequest request);
+  $async.Future<CommitResponse> commit(
+      $pb.ServerContext ctx, CommitRequest request);
+  $async.Future<RollbackResponse> rollback(
+      $pb.ServerContext ctx, RollbackRequest request);
+  $async.Future<AllocateIdsResponse> allocateIds(
+      $pb.ServerContext ctx, AllocateIdsRequest request);
+  $async.Future<ReserveIdsResponse> reserveIds(
+      $pb.ServerContext ctx, ReserveIdsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'Lookup':
-        return new LookupRequest();
+        return LookupRequest();
       case 'RunQuery':
-        return new RunQueryRequest();
+        return RunQueryRequest();
       case 'BeginTransaction':
-        return new BeginTransactionRequest();
+        return BeginTransactionRequest();
       case 'Commit':
-        return new CommitRequest();
+        return CommitRequest();
       case 'Rollback':
-        return new RollbackRequest();
+        return RollbackRequest();
       case 'AllocateIds':
-        return new AllocateIdsRequest();
+        return AllocateIdsRequest();
       case 'ReserveIds':
-        return new ReserveIdsRequest();
+        return ReserveIdsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'Lookup':
         return this.lookup(ctx, request);
@@ -63,10 +69,11 @@ abstract class DatastoreServiceBase extends GeneratedService {
       case 'ReserveIds':
         return this.reserveIds(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Datastore$json;
-  Map<String, Map<String, dynamic>> get $messageJson => Datastore$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => DatastoreServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DatastoreServiceBase$messageJson;
 }

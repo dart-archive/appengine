@@ -1,48 +1,51 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/appengine.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'appengine.pb.dart';
-import 'instance.pb.dart';
-import '../../longrunning/operations.pb.dart' as $google$longrunning;
-import 'version.pb.dart';
-import 'service.pb.dart';
-import 'application.pb.dart';
+import 'instance.pb.dart' as $3;
+import '../../longrunning/operations.pb.dart' as $4;
+import 'version.pb.dart' as $2;
+import 'service.pb.dart' as $0;
+import 'application.pb.dart' as $5;
 import 'appengine.pbjson.dart';
 
 export 'appengine.pb.dart';
 
-abstract class InstancesServiceBase extends GeneratedService {
-  Future<ListInstancesResponse> listInstances(
-      ServerContext ctx, ListInstancesRequest request);
-  Future<Instance> getInstance(ServerContext ctx, GetInstanceRequest request);
-  Future<$google$longrunning.Operation> deleteInstance(
-      ServerContext ctx, DeleteInstanceRequest request);
-  Future<$google$longrunning.Operation> debugInstance(
-      ServerContext ctx, DebugInstanceRequest request);
+abstract class InstancesServiceBase extends $pb.GeneratedService {
+  $async.Future<ListInstancesResponse> listInstances(
+      $pb.ServerContext ctx, ListInstancesRequest request);
+  $async.Future<$3.Instance> getInstance(
+      $pb.ServerContext ctx, GetInstanceRequest request);
+  $async.Future<$4.Operation> deleteInstance(
+      $pb.ServerContext ctx, DeleteInstanceRequest request);
+  $async.Future<$4.Operation> debugInstance(
+      $pb.ServerContext ctx, DebugInstanceRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListInstances':
-        return new ListInstancesRequest();
+        return ListInstancesRequest();
       case 'GetInstance':
-        return new GetInstanceRequest();
+        return GetInstanceRequest();
       case 'DeleteInstance':
-        return new DeleteInstanceRequest();
+        return DeleteInstanceRequest();
       case 'DebugInstance':
-        return new DebugInstanceRequest();
+        return DebugInstanceRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListInstances':
         return this.listInstances(ctx, request);
@@ -53,44 +56,46 @@ abstract class InstancesServiceBase extends GeneratedService {
       case 'DebugInstance':
         return this.debugInstance(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Instances$json;
-  Map<String, Map<String, dynamic>> get $messageJson => Instances$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => InstancesServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => InstancesServiceBase$messageJson;
 }
 
-abstract class VersionsServiceBase extends GeneratedService {
-  Future<ListVersionsResponse> listVersions(
-      ServerContext ctx, ListVersionsRequest request);
-  Future<Version> getVersion(ServerContext ctx, GetVersionRequest request);
-  Future<$google$longrunning.Operation> createVersion(
-      ServerContext ctx, CreateVersionRequest request);
-  Future<$google$longrunning.Operation> updateVersion(
-      ServerContext ctx, UpdateVersionRequest request);
-  Future<$google$longrunning.Operation> deleteVersion(
-      ServerContext ctx, DeleteVersionRequest request);
+abstract class VersionsServiceBase extends $pb.GeneratedService {
+  $async.Future<ListVersionsResponse> listVersions(
+      $pb.ServerContext ctx, ListVersionsRequest request);
+  $async.Future<$2.Version> getVersion(
+      $pb.ServerContext ctx, GetVersionRequest request);
+  $async.Future<$4.Operation> createVersion(
+      $pb.ServerContext ctx, CreateVersionRequest request);
+  $async.Future<$4.Operation> updateVersion(
+      $pb.ServerContext ctx, UpdateVersionRequest request);
+  $async.Future<$4.Operation> deleteVersion(
+      $pb.ServerContext ctx, DeleteVersionRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListVersions':
-        return new ListVersionsRequest();
+        return ListVersionsRequest();
       case 'GetVersion':
-        return new GetVersionRequest();
+        return GetVersionRequest();
       case 'CreateVersion':
-        return new CreateVersionRequest();
+        return CreateVersionRequest();
       case 'UpdateVersion':
-        return new UpdateVersionRequest();
+        return UpdateVersionRequest();
       case 'DeleteVersion':
-        return new DeleteVersionRequest();
+        return DeleteVersionRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListVersions':
         return this.listVersions(ctx, request);
@@ -103,40 +108,42 @@ abstract class VersionsServiceBase extends GeneratedService {
       case 'DeleteVersion':
         return this.deleteVersion(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Versions$json;
-  Map<String, Map<String, dynamic>> get $messageJson => Versions$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => VersionsServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => VersionsServiceBase$messageJson;
 }
 
-abstract class ServicesServiceBase extends GeneratedService {
-  Future<ListServicesResponse> listServices(
-      ServerContext ctx, ListServicesRequest request);
-  Future<Service> getService(ServerContext ctx, GetServiceRequest request);
-  Future<$google$longrunning.Operation> updateService(
-      ServerContext ctx, UpdateServiceRequest request);
-  Future<$google$longrunning.Operation> deleteService(
-      ServerContext ctx, DeleteServiceRequest request);
+abstract class ServicesServiceBase extends $pb.GeneratedService {
+  $async.Future<ListServicesResponse> listServices(
+      $pb.ServerContext ctx, ListServicesRequest request);
+  $async.Future<$0.Service> getService(
+      $pb.ServerContext ctx, GetServiceRequest request);
+  $async.Future<$4.Operation> updateService(
+      $pb.ServerContext ctx, UpdateServiceRequest request);
+  $async.Future<$4.Operation> deleteService(
+      $pb.ServerContext ctx, DeleteServiceRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListServices':
-        return new ListServicesRequest();
+        return ListServicesRequest();
       case 'GetService':
-        return new GetServiceRequest();
+        return GetServiceRequest();
       case 'UpdateService':
-        return new UpdateServiceRequest();
+        return UpdateServiceRequest();
       case 'DeleteService':
-        return new DeleteServiceRequest();
+        return DeleteServiceRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListServices':
         return this.listServices(ctx, request);
@@ -147,44 +154,46 @@ abstract class ServicesServiceBase extends GeneratedService {
       case 'DeleteService':
         return this.deleteService(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Services$json;
-  Map<String, Map<String, dynamic>> get $messageJson => Services$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => ServicesServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ServicesServiceBase$messageJson;
 }
 
-abstract class ApplicationsServiceBase extends GeneratedService {
-  Future<Application> getApplication(
-      ServerContext ctx, GetApplicationRequest request);
-  Future<$google$longrunning.Operation> repairApplication(
-      ServerContext ctx, RepairApplicationRequest request);
+abstract class ApplicationsServiceBase extends $pb.GeneratedService {
+  $async.Future<$5.Application> getApplication(
+      $pb.ServerContext ctx, GetApplicationRequest request);
+  $async.Future<$4.Operation> repairApplication(
+      $pb.ServerContext ctx, RepairApplicationRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'GetApplication':
-        return new GetApplicationRequest();
+        return GetApplicationRequest();
       case 'RepairApplication':
-        return new RepairApplicationRequest();
+        return RepairApplicationRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'GetApplication':
         return this.getApplication(ctx, request);
       case 'RepairApplication':
         return this.repairApplication(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Applications$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      Applications$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ApplicationsServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ApplicationsServiceBase$messageJson;
 }

@@ -1,54 +1,56 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/uptime_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'uptime_service.pb.dart';
-import 'uptime.pb.dart';
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'uptime.pb.dart' as $0;
+import '../../protobuf/empty.pb.dart' as $2;
 import 'uptime_service.pbjson.dart';
 
 export 'uptime_service.pb.dart';
 
-abstract class UptimeCheckServiceBase extends GeneratedService {
-  Future<ListUptimeCheckConfigsResponse> listUptimeCheckConfigs(
-      ServerContext ctx, ListUptimeCheckConfigsRequest request);
-  Future<UptimeCheckConfig> getUptimeCheckConfig(
-      ServerContext ctx, GetUptimeCheckConfigRequest request);
-  Future<UptimeCheckConfig> createUptimeCheckConfig(
-      ServerContext ctx, CreateUptimeCheckConfigRequest request);
-  Future<UptimeCheckConfig> updateUptimeCheckConfig(
-      ServerContext ctx, UpdateUptimeCheckConfigRequest request);
-  Future<$google$protobuf.Empty> deleteUptimeCheckConfig(
-      ServerContext ctx, DeleteUptimeCheckConfigRequest request);
-  Future<ListUptimeCheckIpsResponse> listUptimeCheckIps(
-      ServerContext ctx, ListUptimeCheckIpsRequest request);
+abstract class UptimeCheckServiceBase extends $pb.GeneratedService {
+  $async.Future<ListUptimeCheckConfigsResponse> listUptimeCheckConfigs(
+      $pb.ServerContext ctx, ListUptimeCheckConfigsRequest request);
+  $async.Future<$0.UptimeCheckConfig> getUptimeCheckConfig(
+      $pb.ServerContext ctx, GetUptimeCheckConfigRequest request);
+  $async.Future<$0.UptimeCheckConfig> createUptimeCheckConfig(
+      $pb.ServerContext ctx, CreateUptimeCheckConfigRequest request);
+  $async.Future<$0.UptimeCheckConfig> updateUptimeCheckConfig(
+      $pb.ServerContext ctx, UpdateUptimeCheckConfigRequest request);
+  $async.Future<$2.Empty> deleteUptimeCheckConfig(
+      $pb.ServerContext ctx, DeleteUptimeCheckConfigRequest request);
+  $async.Future<ListUptimeCheckIpsResponse> listUptimeCheckIps(
+      $pb.ServerContext ctx, ListUptimeCheckIpsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListUptimeCheckConfigs':
-        return new ListUptimeCheckConfigsRequest();
+        return ListUptimeCheckConfigsRequest();
       case 'GetUptimeCheckConfig':
-        return new GetUptimeCheckConfigRequest();
+        return GetUptimeCheckConfigRequest();
       case 'CreateUptimeCheckConfig':
-        return new CreateUptimeCheckConfigRequest();
+        return CreateUptimeCheckConfigRequest();
       case 'UpdateUptimeCheckConfig':
-        return new UpdateUptimeCheckConfigRequest();
+        return UpdateUptimeCheckConfigRequest();
       case 'DeleteUptimeCheckConfig':
-        return new DeleteUptimeCheckConfigRequest();
+        return DeleteUptimeCheckConfigRequest();
       case 'ListUptimeCheckIps':
-        return new ListUptimeCheckIpsRequest();
+        return ListUptimeCheckIpsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListUptimeCheckConfigs':
         return this.listUptimeCheckConfigs(ctx, request);
@@ -63,11 +65,12 @@ abstract class UptimeCheckServiceBase extends GeneratedService {
       case 'ListUptimeCheckIps':
         return this.listUptimeCheckIps(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => UptimeCheckService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      UptimeCheckService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      UptimeCheckServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => UptimeCheckServiceBase$messageJson;
 }

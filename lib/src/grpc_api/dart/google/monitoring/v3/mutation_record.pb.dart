@@ -1,65 +1,55 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/mutation_record.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../protobuf/timestamp.pb.dart' as $0;
 
-class MutationRecord extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutationRecord')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'mutateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+class MutationRecord extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutationRecord',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$0.Timestamp>(1, 'mutateTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
     ..aOS(2, 'mutatedBy')
     ..hasRequiredFields = false;
 
   MutationRecord() : super();
-  MutationRecord.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutationRecord.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MutationRecord.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutationRecord.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutationRecord clone() => new MutationRecord()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MutationRecord create() => new MutationRecord();
-  static PbList<MutationRecord> createRepeated() =>
-      new PbList<MutationRecord>();
-  static MutationRecord getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutationRecord();
-    return _defaultInstance;
-  }
-
+  MutationRecord clone() => MutationRecord()..mergeFromMessage(this);
+  MutationRecord copyWith(void Function(MutationRecord) updates) =>
+      super.copyWith((message) => updates(message as MutationRecord));
+  $pb.BuilderInfo get info_ => _i;
+  static MutationRecord create() => MutationRecord();
+  MutationRecord createEmptyInstance() => create();
+  static $pb.PbList<MutationRecord> createRepeated() =>
+      $pb.PbList<MutationRecord>();
+  static MutationRecord getDefault() => _defaultInstance ??= create()..freeze();
   static MutationRecord _defaultInstance;
-  static void $checkItem(MutationRecord v) {
-    if (v is! MutationRecord) checkItemFailed(v, 'MutationRecord');
-  }
 
-  $google$protobuf.Timestamp get mutateTime => $_getN(0);
-  set mutateTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get mutateTime => $_getN(0);
+  set mutateTime($0.Timestamp v) {
     setField(1, v);
   }
 
-  bool hasMutateTime() => $_has(0);
+  $core.bool hasMutateTime() => $_has(0);
   void clearMutateTime() => clearField(1);
 
-  String get mutatedBy => $_getS(1, '');
-  set mutatedBy(String v) {
+  $core.String get mutatedBy => $_getS(1, '');
+  set mutatedBy($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasMutatedBy() => $_has(1);
+  $core.bool hasMutatedBy() => $_has(1);
   void clearMutatedBy() => clearField(2);
-}
-
-class _ReadonlyMutationRecord extends MutationRecord with ReadonlyMessageMixin {
 }

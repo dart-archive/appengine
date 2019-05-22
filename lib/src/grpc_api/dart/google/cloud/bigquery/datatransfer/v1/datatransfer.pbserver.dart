@@ -1,82 +1,84 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/bigquery/datatransfer/v1/datatransfer.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'datatransfer.pb.dart';
-import 'transfer.pb.dart';
-import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'transfer.pb.dart' as $2;
+import '../../../../protobuf/empty.pb.dart' as $5;
 import 'datatransfer.pbjson.dart';
 
 export 'datatransfer.pb.dart';
 
-abstract class DataTransferServiceBase extends GeneratedService {
-  Future<DataSource> getDataSource(
-      ServerContext ctx, GetDataSourceRequest request);
-  Future<ListDataSourcesResponse> listDataSources(
-      ServerContext ctx, ListDataSourcesRequest request);
-  Future<TransferConfig> createTransferConfig(
-      ServerContext ctx, CreateTransferConfigRequest request);
-  Future<TransferConfig> updateTransferConfig(
-      ServerContext ctx, UpdateTransferConfigRequest request);
-  Future<$google$protobuf.Empty> deleteTransferConfig(
-      ServerContext ctx, DeleteTransferConfigRequest request);
-  Future<TransferConfig> getTransferConfig(
-      ServerContext ctx, GetTransferConfigRequest request);
-  Future<ListTransferConfigsResponse> listTransferConfigs(
-      ServerContext ctx, ListTransferConfigsRequest request);
-  Future<ScheduleTransferRunsResponse> scheduleTransferRuns(
-      ServerContext ctx, ScheduleTransferRunsRequest request);
-  Future<TransferRun> getTransferRun(
-      ServerContext ctx, GetTransferRunRequest request);
-  Future<$google$protobuf.Empty> deleteTransferRun(
-      ServerContext ctx, DeleteTransferRunRequest request);
-  Future<ListTransferRunsResponse> listTransferRuns(
-      ServerContext ctx, ListTransferRunsRequest request);
-  Future<ListTransferLogsResponse> listTransferLogs(
-      ServerContext ctx, ListTransferLogsRequest request);
-  Future<CheckValidCredsResponse> checkValidCreds(
-      ServerContext ctx, CheckValidCredsRequest request);
+abstract class DataTransferServiceBase extends $pb.GeneratedService {
+  $async.Future<DataSource> getDataSource(
+      $pb.ServerContext ctx, GetDataSourceRequest request);
+  $async.Future<ListDataSourcesResponse> listDataSources(
+      $pb.ServerContext ctx, ListDataSourcesRequest request);
+  $async.Future<$2.TransferConfig> createTransferConfig(
+      $pb.ServerContext ctx, CreateTransferConfigRequest request);
+  $async.Future<$2.TransferConfig> updateTransferConfig(
+      $pb.ServerContext ctx, UpdateTransferConfigRequest request);
+  $async.Future<$5.Empty> deleteTransferConfig(
+      $pb.ServerContext ctx, DeleteTransferConfigRequest request);
+  $async.Future<$2.TransferConfig> getTransferConfig(
+      $pb.ServerContext ctx, GetTransferConfigRequest request);
+  $async.Future<ListTransferConfigsResponse> listTransferConfigs(
+      $pb.ServerContext ctx, ListTransferConfigsRequest request);
+  $async.Future<ScheduleTransferRunsResponse> scheduleTransferRuns(
+      $pb.ServerContext ctx, ScheduleTransferRunsRequest request);
+  $async.Future<$2.TransferRun> getTransferRun(
+      $pb.ServerContext ctx, GetTransferRunRequest request);
+  $async.Future<$5.Empty> deleteTransferRun(
+      $pb.ServerContext ctx, DeleteTransferRunRequest request);
+  $async.Future<ListTransferRunsResponse> listTransferRuns(
+      $pb.ServerContext ctx, ListTransferRunsRequest request);
+  $async.Future<ListTransferLogsResponse> listTransferLogs(
+      $pb.ServerContext ctx, ListTransferLogsRequest request);
+  $async.Future<CheckValidCredsResponse> checkValidCreds(
+      $pb.ServerContext ctx, CheckValidCredsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'GetDataSource':
-        return new GetDataSourceRequest();
+        return GetDataSourceRequest();
       case 'ListDataSources':
-        return new ListDataSourcesRequest();
+        return ListDataSourcesRequest();
       case 'CreateTransferConfig':
-        return new CreateTransferConfigRequest();
+        return CreateTransferConfigRequest();
       case 'UpdateTransferConfig':
-        return new UpdateTransferConfigRequest();
+        return UpdateTransferConfigRequest();
       case 'DeleteTransferConfig':
-        return new DeleteTransferConfigRequest();
+        return DeleteTransferConfigRequest();
       case 'GetTransferConfig':
-        return new GetTransferConfigRequest();
+        return GetTransferConfigRequest();
       case 'ListTransferConfigs':
-        return new ListTransferConfigsRequest();
+        return ListTransferConfigsRequest();
       case 'ScheduleTransferRuns':
-        return new ScheduleTransferRunsRequest();
+        return ScheduleTransferRunsRequest();
       case 'GetTransferRun':
-        return new GetTransferRunRequest();
+        return GetTransferRunRequest();
       case 'DeleteTransferRun':
-        return new DeleteTransferRunRequest();
+        return DeleteTransferRunRequest();
       case 'ListTransferRuns':
-        return new ListTransferRunsRequest();
+        return ListTransferRunsRequest();
       case 'ListTransferLogs':
-        return new ListTransferLogsRequest();
+        return ListTransferLogsRequest();
       case 'CheckValidCreds':
-        return new CheckValidCredsRequest();
+        return CheckValidCredsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'GetDataSource':
         return this.getDataSource(ctx, request);
@@ -105,11 +107,12 @@ abstract class DataTransferServiceBase extends GeneratedService {
       case 'CheckValidCreds':
         return this.checkValidCreds(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => DataTransferService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      DataTransferService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      DataTransferServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DataTransferServiceBase$messageJson;
 }

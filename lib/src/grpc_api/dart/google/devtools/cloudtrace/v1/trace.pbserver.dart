@@ -1,40 +1,42 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/cloudtrace/v1/trace.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'trace.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../protobuf/empty.pb.dart' as $1;
 import 'trace.pbjson.dart';
 
 export 'trace.pb.dart';
 
-abstract class TraceServiceBase extends GeneratedService {
-  Future<ListTracesResponse> listTraces(
-      ServerContext ctx, ListTracesRequest request);
-  Future<Trace> getTrace(ServerContext ctx, GetTraceRequest request);
-  Future<$google$protobuf.Empty> patchTraces(
-      ServerContext ctx, PatchTracesRequest request);
+abstract class TraceServiceBase extends $pb.GeneratedService {
+  $async.Future<ListTracesResponse> listTraces(
+      $pb.ServerContext ctx, ListTracesRequest request);
+  $async.Future<Trace> getTrace($pb.ServerContext ctx, GetTraceRequest request);
+  $async.Future<$1.Empty> patchTraces(
+      $pb.ServerContext ctx, PatchTracesRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListTraces':
-        return new ListTracesRequest();
+        return ListTracesRequest();
       case 'GetTrace':
-        return new GetTraceRequest();
+        return GetTraceRequest();
       case 'PatchTraces':
-        return new PatchTracesRequest();
+        return PatchTracesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListTraces':
         return this.listTraces(ctx, request);
@@ -43,11 +45,11 @@ abstract class TraceServiceBase extends GeneratedService {
       case 'PatchTraces':
         return this.patchTraces(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => TraceService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      TraceService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => TraceServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => TraceServiceBase$messageJson;
 }

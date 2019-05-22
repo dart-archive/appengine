@@ -12,14 +12,12 @@ language_settings:
     release_level: GA
   ruby:
     package_name: Google::Cloud::Datastore::V1
+    release_level: GA
   php:
     package_name: Google\Cloud\Datastore\V1
   nodejs:
     package_name: datastore.v1
     domain_layer_location: google-cloud
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
 interfaces:
 - name: google.datastore.v1.Datastore
   collections: []
@@ -50,7 +48,6 @@ interfaces:
     required_fields:
     - project_id
     - keys
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -59,7 +56,6 @@ interfaces:
     required_fields:
     - project_id
     - partition_id
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -70,7 +66,6 @@ interfaces:
         - project_id
     required_fields:
     - project_id
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -90,7 +85,6 @@ interfaces:
     - project_id
     - mode
     - mutations
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -103,7 +97,6 @@ interfaces:
     required_fields:
     - project_id
     - transaction
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -116,7 +109,6 @@ interfaces:
     required_fields:
     - project_id
     - keys
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -129,7 +121,6 @@ interfaces:
     required_fields:
     - project_id
     - keys
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000

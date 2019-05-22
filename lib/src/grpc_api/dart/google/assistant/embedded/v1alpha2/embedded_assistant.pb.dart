@@ -1,128 +1,134 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/assistant/embedded/v1alpha2/embedded_assistant.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../type/latlng.pb.dart' as $google$type;
+import '../../../type/latlng.pb.dart' as $0;
 
 import 'embedded_assistant.pbenum.dart';
 
 export 'embedded_assistant.pbenum.dart';
 
-class AssistRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AssistRequest')
-    ..a<AssistConfig>(1, 'config', PbFieldType.OM, AssistConfig.getDefault,
+enum AssistRequest_Type { config, audioIn, notSet }
+
+class AssistRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AssistRequest_Type>
+      _AssistRequest_TypeByTag = {
+    1: AssistRequest_Type.config,
+    2: AssistRequest_Type.audioIn,
+    0: AssistRequest_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssistRequest',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..a<AssistConfig>(1, 'config', $pb.PbFieldType.OM, AssistConfig.getDefault,
         AssistConfig.create)
-    ..a<List<int>>(2, 'audioIn', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'audioIn', $pb.PbFieldType.OY)
+    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
   AssistRequest() : super();
-  AssistRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AssistRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AssistRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AssistRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AssistRequest clone() => new AssistRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AssistRequest create() => new AssistRequest();
-  static PbList<AssistRequest> createRepeated() => new PbList<AssistRequest>();
-  static AssistRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAssistRequest();
-    return _defaultInstance;
-  }
-
+  AssistRequest clone() => AssistRequest()..mergeFromMessage(this);
+  AssistRequest copyWith(void Function(AssistRequest) updates) =>
+      super.copyWith((message) => updates(message as AssistRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AssistRequest create() => AssistRequest();
+  AssistRequest createEmptyInstance() => create();
+  static $pb.PbList<AssistRequest> createRepeated() =>
+      $pb.PbList<AssistRequest>();
+  static AssistRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AssistRequest _defaultInstance;
-  static void $checkItem(AssistRequest v) {
-    if (v is! AssistRequest) checkItemFailed(v, 'AssistRequest');
-  }
+
+  AssistRequest_Type whichType() => _AssistRequest_TypeByTag[$_whichOneof(0)];
+  void clearType() => clearField($_whichOneof(0));
 
   AssistConfig get config => $_getN(0);
   set config(AssistConfig v) {
     setField(1, v);
   }
 
-  bool hasConfig() => $_has(0);
+  $core.bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
-  List<int> get audioIn => $_getN(1);
-  set audioIn(List<int> v) {
+  $core.List<$core.int> get audioIn => $_getN(1);
+  set audioIn($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasAudioIn() => $_has(1);
+  $core.bool hasAudioIn() => $_has(1);
   void clearAudioIn() => clearField(2);
 }
 
-class _ReadonlyAssistRequest extends AssistRequest with ReadonlyMessageMixin {}
-
-class AssistResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AssistResponse')
+class AssistResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssistResponse',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..e<AssistResponse_EventType>(
         1,
         'eventType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         AssistResponse_EventType.EVENT_TYPE_UNSPECIFIED,
         AssistResponse_EventType.valueOf,
         AssistResponse_EventType.values)
-    ..pp<SpeechRecognitionResult>(2, 'speechResults', PbFieldType.PM,
-        SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
+    ..pc<SpeechRecognitionResult>(
+        2, 'speechResults', $pb.PbFieldType.PM, SpeechRecognitionResult.create)
     ..a<AudioOut>(
-        3, 'audioOut', PbFieldType.OM, AudioOut.getDefault, AudioOut.create)
-    ..a<ScreenOut>(
-        4, 'screenOut', PbFieldType.OM, ScreenOut.getDefault, ScreenOut.create)
-    ..a<DialogStateOut>(5, 'dialogStateOut', PbFieldType.OM,
+        3, 'audioOut', $pb.PbFieldType.OM, AudioOut.getDefault, AudioOut.create)
+    ..a<ScreenOut>(4, 'screenOut', $pb.PbFieldType.OM, ScreenOut.getDefault,
+        ScreenOut.create)
+    ..a<DialogStateOut>(5, 'dialogStateOut', $pb.PbFieldType.OM,
         DialogStateOut.getDefault, DialogStateOut.create)
-    ..a<DeviceAction>(6, 'deviceAction', PbFieldType.OM,
+    ..a<DeviceAction>(6, 'deviceAction', $pb.PbFieldType.OM,
         DeviceAction.getDefault, DeviceAction.create)
+    ..a<DebugInfo>(8, 'debugInfo', $pb.PbFieldType.OM, DebugInfo.getDefault,
+        DebugInfo.create)
     ..hasRequiredFields = false;
 
   AssistResponse() : super();
-  AssistResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AssistResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AssistResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AssistResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AssistResponse clone() => new AssistResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AssistResponse create() => new AssistResponse();
-  static PbList<AssistResponse> createRepeated() =>
-      new PbList<AssistResponse>();
-  static AssistResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAssistResponse();
-    return _defaultInstance;
-  }
-
+  AssistResponse clone() => AssistResponse()..mergeFromMessage(this);
+  AssistResponse copyWith(void Function(AssistResponse) updates) =>
+      super.copyWith((message) => updates(message as AssistResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static AssistResponse create() => AssistResponse();
+  AssistResponse createEmptyInstance() => create();
+  static $pb.PbList<AssistResponse> createRepeated() =>
+      $pb.PbList<AssistResponse>();
+  static AssistResponse getDefault() => _defaultInstance ??= create()..freeze();
   static AssistResponse _defaultInstance;
-  static void $checkItem(AssistResponse v) {
-    if (v is! AssistResponse) checkItemFailed(v, 'AssistResponse');
-  }
 
   AssistResponse_EventType get eventType => $_getN(0);
   set eventType(AssistResponse_EventType v) {
     setField(1, v);
   }
 
-  bool hasEventType() => $_has(0);
+  $core.bool hasEventType() => $_has(0);
   void clearEventType() => clearField(1);
 
-  List<SpeechRecognitionResult> get speechResults => $_getList(1);
+  $core.List<SpeechRecognitionResult> get speechResults => $_getList(1);
 
   AudioOut get audioOut => $_getN(2);
   set audioOut(AudioOut v) {
     setField(3, v);
   }
 
-  bool hasAudioOut() => $_has(2);
+  $core.bool hasAudioOut() => $_has(2);
   void clearAudioOut() => clearField(3);
 
   ScreenOut get screenOut => $_getN(3);
@@ -130,7 +136,7 @@ class AssistResponse extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasScreenOut() => $_has(3);
+  $core.bool hasScreenOut() => $_has(3);
   void clearScreenOut() => clearField(4);
 
   DialogStateOut get dialogStateOut => $_getN(4);
@@ -138,7 +144,7 @@ class AssistResponse extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasDialogStateOut() => $_has(4);
+  $core.bool hasDialogStateOut() => $_has(4);
   void clearDialogStateOut() => clearField(5);
 
   DeviceAction get deviceAction => $_getN(5);
@@ -146,56 +152,104 @@ class AssistResponse extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasDeviceAction() => $_has(5);
+  $core.bool hasDeviceAction() => $_has(5);
   void clearDeviceAction() => clearField(6);
+
+  DebugInfo get debugInfo => $_getN(6);
+  set debugInfo(DebugInfo v) {
+    setField(8, v);
+  }
+
+  $core.bool hasDebugInfo() => $_has(6);
+  void clearDebugInfo() => clearField(8);
 }
 
-class _ReadonlyAssistResponse extends AssistResponse with ReadonlyMessageMixin {
+class DebugInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DebugInfo',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..aOS(1, 'aogAgentToAssistantJson')
+    ..hasRequiredFields = false;
+
+  DebugInfo() : super();
+  DebugInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DebugInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DebugInfo clone() => DebugInfo()..mergeFromMessage(this);
+  DebugInfo copyWith(void Function(DebugInfo) updates) =>
+      super.copyWith((message) => updates(message as DebugInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static DebugInfo create() => DebugInfo();
+  DebugInfo createEmptyInstance() => create();
+  static $pb.PbList<DebugInfo> createRepeated() => $pb.PbList<DebugInfo>();
+  static DebugInfo getDefault() => _defaultInstance ??= create()..freeze();
+  static DebugInfo _defaultInstance;
+
+  $core.String get aogAgentToAssistantJson => $_getS(0, '');
+  set aogAgentToAssistantJson($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasAogAgentToAssistantJson() => $_has(0);
+  void clearAogAgentToAssistantJson() => clearField(1);
 }
 
-class AssistConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AssistConfig')
-    ..a<AudioInConfig>(1, 'audioInConfig', PbFieldType.OM,
+enum AssistConfig_Type { audioInConfig, textQuery, notSet }
+
+class AssistConfig extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AssistConfig_Type> _AssistConfig_TypeByTag =
+      {
+    1: AssistConfig_Type.audioInConfig,
+    6: AssistConfig_Type.textQuery,
+    0: AssistConfig_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssistConfig',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..a<AudioInConfig>(1, 'audioInConfig', $pb.PbFieldType.OM,
         AudioInConfig.getDefault, AudioInConfig.create)
-    ..a<AudioOutConfig>(2, 'audioOutConfig', PbFieldType.OM,
+    ..a<AudioOutConfig>(2, 'audioOutConfig', $pb.PbFieldType.OM,
         AudioOutConfig.getDefault, AudioOutConfig.create)
-    ..a<DialogStateIn>(3, 'dialogStateIn', PbFieldType.OM,
+    ..a<DialogStateIn>(3, 'dialogStateIn', $pb.PbFieldType.OM,
         DialogStateIn.getDefault, DialogStateIn.create)
-    ..a<DeviceConfig>(4, 'deviceConfig', PbFieldType.OM,
+    ..a<DeviceConfig>(4, 'deviceConfig', $pb.PbFieldType.OM,
         DeviceConfig.getDefault, DeviceConfig.create)
+    ..a<DebugConfig>(5, 'debugConfig', $pb.PbFieldType.OM,
+        DebugConfig.getDefault, DebugConfig.create)
     ..aOS(6, 'textQuery')
-    ..a<ScreenOutConfig>(8, 'screenOutConfig', PbFieldType.OM,
+    ..a<ScreenOutConfig>(8, 'screenOutConfig', $pb.PbFieldType.OM,
         ScreenOutConfig.getDefault, ScreenOutConfig.create)
+    ..oo(0, [1, 6])
     ..hasRequiredFields = false;
 
   AssistConfig() : super();
-  AssistConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AssistConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AssistConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AssistConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AssistConfig clone() => new AssistConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AssistConfig create() => new AssistConfig();
-  static PbList<AssistConfig> createRepeated() => new PbList<AssistConfig>();
-  static AssistConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAssistConfig();
-    return _defaultInstance;
-  }
-
+  AssistConfig clone() => AssistConfig()..mergeFromMessage(this);
+  AssistConfig copyWith(void Function(AssistConfig) updates) =>
+      super.copyWith((message) => updates(message as AssistConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static AssistConfig create() => AssistConfig();
+  AssistConfig createEmptyInstance() => create();
+  static $pb.PbList<AssistConfig> createRepeated() =>
+      $pb.PbList<AssistConfig>();
+  static AssistConfig getDefault() => _defaultInstance ??= create()..freeze();
   static AssistConfig _defaultInstance;
-  static void $checkItem(AssistConfig v) {
-    if (v is! AssistConfig) checkItemFailed(v, 'AssistConfig');
-  }
+
+  AssistConfig_Type whichType() => _AssistConfig_TypeByTag[$_whichOneof(0)];
+  void clearType() => clearField($_whichOneof(0));
 
   AudioInConfig get audioInConfig => $_getN(0);
   set audioInConfig(AudioInConfig v) {
     setField(1, v);
   }
 
-  bool hasAudioInConfig() => $_has(0);
+  $core.bool hasAudioInConfig() => $_has(0);
   void clearAudioInConfig() => clearField(1);
 
   AudioOutConfig get audioOutConfig => $_getN(1);
@@ -203,7 +257,7 @@ class AssistConfig extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasAudioOutConfig() => $_has(1);
+  $core.bool hasAudioOutConfig() => $_has(1);
   void clearAudioOutConfig() => clearField(2);
 
   DialogStateIn get dialogStateIn => $_getN(2);
@@ -211,7 +265,7 @@ class AssistConfig extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasDialogStateIn() => $_has(2);
+  $core.bool hasDialogStateIn() => $_has(2);
   void clearDialogStateIn() => clearField(3);
 
   DeviceConfig get deviceConfig => $_getN(3);
@@ -219,236 +273,221 @@ class AssistConfig extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasDeviceConfig() => $_has(3);
+  $core.bool hasDeviceConfig() => $_has(3);
   void clearDeviceConfig() => clearField(4);
 
-  String get textQuery => $_getS(4, '');
-  set textQuery(String v) {
-    $_setString(4, v);
+  DebugConfig get debugConfig => $_getN(4);
+  set debugConfig(DebugConfig v) {
+    setField(5, v);
   }
 
-  bool hasTextQuery() => $_has(4);
+  $core.bool hasDebugConfig() => $_has(4);
+  void clearDebugConfig() => clearField(5);
+
+  $core.String get textQuery => $_getS(5, '');
+  set textQuery($core.String v) {
+    $_setString(5, v);
+  }
+
+  $core.bool hasTextQuery() => $_has(5);
   void clearTextQuery() => clearField(6);
 
-  ScreenOutConfig get screenOutConfig => $_getN(5);
+  ScreenOutConfig get screenOutConfig => $_getN(6);
   set screenOutConfig(ScreenOutConfig v) {
     setField(8, v);
   }
 
-  bool hasScreenOutConfig() => $_has(5);
+  $core.bool hasScreenOutConfig() => $_has(6);
   void clearScreenOutConfig() => clearField(8);
 }
 
-class _ReadonlyAssistConfig extends AssistConfig with ReadonlyMessageMixin {}
-
-class AudioInConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioInConfig')
+class AudioInConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioInConfig',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..e<AudioInConfig_Encoding>(
         1,
         'encoding',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         AudioInConfig_Encoding.ENCODING_UNSPECIFIED,
         AudioInConfig_Encoding.valueOf,
         AudioInConfig_Encoding.values)
-    ..a<int>(2, 'sampleRateHertz', PbFieldType.O3)
+    ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   AudioInConfig() : super();
-  AudioInConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AudioInConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AudioInConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AudioInConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioInConfig clone() => new AudioInConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AudioInConfig create() => new AudioInConfig();
-  static PbList<AudioInConfig> createRepeated() => new PbList<AudioInConfig>();
-  static AudioInConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAudioInConfig();
-    return _defaultInstance;
-  }
-
+  AudioInConfig clone() => AudioInConfig()..mergeFromMessage(this);
+  AudioInConfig copyWith(void Function(AudioInConfig) updates) =>
+      super.copyWith((message) => updates(message as AudioInConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static AudioInConfig create() => AudioInConfig();
+  AudioInConfig createEmptyInstance() => create();
+  static $pb.PbList<AudioInConfig> createRepeated() =>
+      $pb.PbList<AudioInConfig>();
+  static AudioInConfig getDefault() => _defaultInstance ??= create()..freeze();
   static AudioInConfig _defaultInstance;
-  static void $checkItem(AudioInConfig v) {
-    if (v is! AudioInConfig) checkItemFailed(v, 'AudioInConfig');
-  }
 
   AudioInConfig_Encoding get encoding => $_getN(0);
   set encoding(AudioInConfig_Encoding v) {
     setField(1, v);
   }
 
-  bool hasEncoding() => $_has(0);
+  $core.bool hasEncoding() => $_has(0);
   void clearEncoding() => clearField(1);
 
-  int get sampleRateHertz => $_get(1, 0);
-  set sampleRateHertz(int v) {
+  $core.int get sampleRateHertz => $_get(1, 0);
+  set sampleRateHertz($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasSampleRateHertz() => $_has(1);
+  $core.bool hasSampleRateHertz() => $_has(1);
   void clearSampleRateHertz() => clearField(2);
 }
 
-class _ReadonlyAudioInConfig extends AudioInConfig with ReadonlyMessageMixin {}
-
-class AudioOutConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioOutConfig')
+class AudioOutConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioOutConfig',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..e<AudioOutConfig_Encoding>(
         1,
         'encoding',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         AudioOutConfig_Encoding.ENCODING_UNSPECIFIED,
         AudioOutConfig_Encoding.valueOf,
         AudioOutConfig_Encoding.values)
-    ..a<int>(2, 'sampleRateHertz', PbFieldType.O3)
-    ..a<int>(3, 'volumePercentage', PbFieldType.O3)
+    ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   AudioOutConfig() : super();
-  AudioOutConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AudioOutConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AudioOutConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AudioOutConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioOutConfig clone() => new AudioOutConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AudioOutConfig create() => new AudioOutConfig();
-  static PbList<AudioOutConfig> createRepeated() =>
-      new PbList<AudioOutConfig>();
-  static AudioOutConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAudioOutConfig();
-    return _defaultInstance;
-  }
-
+  AudioOutConfig clone() => AudioOutConfig()..mergeFromMessage(this);
+  AudioOutConfig copyWith(void Function(AudioOutConfig) updates) =>
+      super.copyWith((message) => updates(message as AudioOutConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static AudioOutConfig create() => AudioOutConfig();
+  AudioOutConfig createEmptyInstance() => create();
+  static $pb.PbList<AudioOutConfig> createRepeated() =>
+      $pb.PbList<AudioOutConfig>();
+  static AudioOutConfig getDefault() => _defaultInstance ??= create()..freeze();
   static AudioOutConfig _defaultInstance;
-  static void $checkItem(AudioOutConfig v) {
-    if (v is! AudioOutConfig) checkItemFailed(v, 'AudioOutConfig');
-  }
 
   AudioOutConfig_Encoding get encoding => $_getN(0);
   set encoding(AudioOutConfig_Encoding v) {
     setField(1, v);
   }
 
-  bool hasEncoding() => $_has(0);
+  $core.bool hasEncoding() => $_has(0);
   void clearEncoding() => clearField(1);
 
-  int get sampleRateHertz => $_get(1, 0);
-  set sampleRateHertz(int v) {
+  $core.int get sampleRateHertz => $_get(1, 0);
+  set sampleRateHertz($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasSampleRateHertz() => $_has(1);
+  $core.bool hasSampleRateHertz() => $_has(1);
   void clearSampleRateHertz() => clearField(2);
 
-  int get volumePercentage => $_get(2, 0);
-  set volumePercentage(int v) {
+  $core.int get volumePercentage => $_get(2, 0);
+  set volumePercentage($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasVolumePercentage() => $_has(2);
+  $core.bool hasVolumePercentage() => $_has(2);
   void clearVolumePercentage() => clearField(3);
 }
 
-class _ReadonlyAudioOutConfig extends AudioOutConfig with ReadonlyMessageMixin {
-}
-
-class ScreenOutConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScreenOutConfig')
+class ScreenOutConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScreenOutConfig',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..e<ScreenOutConfig_ScreenMode>(
         1,
         'screenMode',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ScreenOutConfig_ScreenMode.SCREEN_MODE_UNSPECIFIED,
         ScreenOutConfig_ScreenMode.valueOf,
         ScreenOutConfig_ScreenMode.values)
     ..hasRequiredFields = false;
 
   ScreenOutConfig() : super();
-  ScreenOutConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScreenOutConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ScreenOutConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScreenOutConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScreenOutConfig clone() => new ScreenOutConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ScreenOutConfig create() => new ScreenOutConfig();
-  static PbList<ScreenOutConfig> createRepeated() =>
-      new PbList<ScreenOutConfig>();
-  static ScreenOutConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScreenOutConfig();
-    return _defaultInstance;
-  }
-
+  ScreenOutConfig clone() => ScreenOutConfig()..mergeFromMessage(this);
+  ScreenOutConfig copyWith(void Function(ScreenOutConfig) updates) =>
+      super.copyWith((message) => updates(message as ScreenOutConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static ScreenOutConfig create() => ScreenOutConfig();
+  ScreenOutConfig createEmptyInstance() => create();
+  static $pb.PbList<ScreenOutConfig> createRepeated() =>
+      $pb.PbList<ScreenOutConfig>();
+  static ScreenOutConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ScreenOutConfig _defaultInstance;
-  static void $checkItem(ScreenOutConfig v) {
-    if (v is! ScreenOutConfig) checkItemFailed(v, 'ScreenOutConfig');
-  }
 
   ScreenOutConfig_ScreenMode get screenMode => $_getN(0);
   set screenMode(ScreenOutConfig_ScreenMode v) {
     setField(1, v);
   }
 
-  bool hasScreenMode() => $_has(0);
+  $core.bool hasScreenMode() => $_has(0);
   void clearScreenMode() => clearField(1);
 }
 
-class _ReadonlyScreenOutConfig extends ScreenOutConfig
-    with ReadonlyMessageMixin {}
-
-class DialogStateIn extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DialogStateIn')
-    ..a<List<int>>(1, 'conversationState', PbFieldType.OY)
+class DialogStateIn extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DialogStateIn',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..a<$core.List<$core.int>>(1, 'conversationState', $pb.PbFieldType.OY)
     ..aOS(2, 'languageCode')
-    ..a<DeviceLocation>(5, 'deviceLocation', PbFieldType.OM,
+    ..a<DeviceLocation>(5, 'deviceLocation', $pb.PbFieldType.OM,
         DeviceLocation.getDefault, DeviceLocation.create)
     ..aOB(7, 'isNewConversation')
     ..hasRequiredFields = false;
 
   DialogStateIn() : super();
-  DialogStateIn.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DialogStateIn.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DialogStateIn.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DialogStateIn.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DialogStateIn clone() => new DialogStateIn()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DialogStateIn create() => new DialogStateIn();
-  static PbList<DialogStateIn> createRepeated() => new PbList<DialogStateIn>();
-  static DialogStateIn getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDialogStateIn();
-    return _defaultInstance;
-  }
-
+  DialogStateIn clone() => DialogStateIn()..mergeFromMessage(this);
+  DialogStateIn copyWith(void Function(DialogStateIn) updates) =>
+      super.copyWith((message) => updates(message as DialogStateIn));
+  $pb.BuilderInfo get info_ => _i;
+  static DialogStateIn create() => DialogStateIn();
+  DialogStateIn createEmptyInstance() => create();
+  static $pb.PbList<DialogStateIn> createRepeated() =>
+      $pb.PbList<DialogStateIn>();
+  static DialogStateIn getDefault() => _defaultInstance ??= create()..freeze();
   static DialogStateIn _defaultInstance;
-  static void $checkItem(DialogStateIn v) {
-    if (v is! DialogStateIn) checkItemFailed(v, 'DialogStateIn');
-  }
 
-  List<int> get conversationState => $_getN(0);
-  set conversationState(List<int> v) {
+  $core.List<$core.int> get conversationState => $_getN(0);
+  set conversationState($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasConversationState() => $_has(0);
+  $core.bool hasConversationState() => $_has(0);
   void clearConversationState() => clearField(1);
 
-  String get languageCode => $_getS(1, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasLanguageCode() => $_has(1);
+  $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
   DeviceLocation get deviceLocation => $_getN(2);
@@ -456,294 +495,264 @@ class DialogStateIn extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasDeviceLocation() => $_has(2);
+  $core.bool hasDeviceLocation() => $_has(2);
   void clearDeviceLocation() => clearField(5);
 
-  bool get isNewConversation => $_get(3, false);
-  set isNewConversation(bool v) {
+  $core.bool get isNewConversation => $_get(3, false);
+  set isNewConversation($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasIsNewConversation() => $_has(3);
+  $core.bool hasIsNewConversation() => $_has(3);
   void clearIsNewConversation() => clearField(7);
 }
 
-class _ReadonlyDialogStateIn extends DialogStateIn with ReadonlyMessageMixin {}
-
-class DeviceConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceConfig')
+class DeviceConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceConfig',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..aOS(1, 'deviceId')
     ..aOS(3, 'deviceModelId')
     ..hasRequiredFields = false;
 
   DeviceConfig() : super();
-  DeviceConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeviceConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceConfig clone() => new DeviceConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeviceConfig create() => new DeviceConfig();
-  static PbList<DeviceConfig> createRepeated() => new PbList<DeviceConfig>();
-  static DeviceConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceConfig();
-    return _defaultInstance;
-  }
-
+  DeviceConfig clone() => DeviceConfig()..mergeFromMessage(this);
+  DeviceConfig copyWith(void Function(DeviceConfig) updates) =>
+      super.copyWith((message) => updates(message as DeviceConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static DeviceConfig create() => DeviceConfig();
+  DeviceConfig createEmptyInstance() => create();
+  static $pb.PbList<DeviceConfig> createRepeated() =>
+      $pb.PbList<DeviceConfig>();
+  static DeviceConfig getDefault() => _defaultInstance ??= create()..freeze();
   static DeviceConfig _defaultInstance;
-  static void $checkItem(DeviceConfig v) {
-    if (v is! DeviceConfig) checkItemFailed(v, 'DeviceConfig');
-  }
 
-  String get deviceId => $_getS(0, '');
-  set deviceId(String v) {
+  $core.String get deviceId => $_getS(0, '');
+  set deviceId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDeviceId() => $_has(0);
+  $core.bool hasDeviceId() => $_has(0);
   void clearDeviceId() => clearField(1);
 
-  String get deviceModelId => $_getS(1, '');
-  set deviceModelId(String v) {
+  $core.String get deviceModelId => $_getS(1, '');
+  set deviceModelId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDeviceModelId() => $_has(1);
+  $core.bool hasDeviceModelId() => $_has(1);
   void clearDeviceModelId() => clearField(3);
 }
 
-class _ReadonlyDeviceConfig extends DeviceConfig with ReadonlyMessageMixin {}
-
-class AudioOut extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioOut')
-    ..a<List<int>>(1, 'audioData', PbFieldType.OY)
+class AudioOut extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioOut',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..a<$core.List<$core.int>>(1, 'audioData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   AudioOut() : super();
-  AudioOut.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AudioOut.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AudioOut.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AudioOut.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioOut clone() => new AudioOut()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AudioOut create() => new AudioOut();
-  static PbList<AudioOut> createRepeated() => new PbList<AudioOut>();
-  static AudioOut getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAudioOut();
-    return _defaultInstance;
-  }
-
+  AudioOut clone() => AudioOut()..mergeFromMessage(this);
+  AudioOut copyWith(void Function(AudioOut) updates) =>
+      super.copyWith((message) => updates(message as AudioOut));
+  $pb.BuilderInfo get info_ => _i;
+  static AudioOut create() => AudioOut();
+  AudioOut createEmptyInstance() => create();
+  static $pb.PbList<AudioOut> createRepeated() => $pb.PbList<AudioOut>();
+  static AudioOut getDefault() => _defaultInstance ??= create()..freeze();
   static AudioOut _defaultInstance;
-  static void $checkItem(AudioOut v) {
-    if (v is! AudioOut) checkItemFailed(v, 'AudioOut');
-  }
 
-  List<int> get audioData => $_getN(0);
-  set audioData(List<int> v) {
+  $core.List<$core.int> get audioData => $_getN(0);
+  set audioData($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasAudioData() => $_has(0);
+  $core.bool hasAudioData() => $_has(0);
   void clearAudioData() => clearField(1);
 }
 
-class _ReadonlyAudioOut extends AudioOut with ReadonlyMessageMixin {}
-
-class ScreenOut extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScreenOut')
+class ScreenOut extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScreenOut',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..e<ScreenOut_Format>(
         1,
         'format',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ScreenOut_Format.FORMAT_UNSPECIFIED,
         ScreenOut_Format.valueOf,
         ScreenOut_Format.values)
-    ..a<List<int>>(2, 'data', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   ScreenOut() : super();
-  ScreenOut.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScreenOut.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ScreenOut.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScreenOut.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScreenOut clone() => new ScreenOut()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ScreenOut create() => new ScreenOut();
-  static PbList<ScreenOut> createRepeated() => new PbList<ScreenOut>();
-  static ScreenOut getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyScreenOut();
-    return _defaultInstance;
-  }
-
+  ScreenOut clone() => ScreenOut()..mergeFromMessage(this);
+  ScreenOut copyWith(void Function(ScreenOut) updates) =>
+      super.copyWith((message) => updates(message as ScreenOut));
+  $pb.BuilderInfo get info_ => _i;
+  static ScreenOut create() => ScreenOut();
+  ScreenOut createEmptyInstance() => create();
+  static $pb.PbList<ScreenOut> createRepeated() => $pb.PbList<ScreenOut>();
+  static ScreenOut getDefault() => _defaultInstance ??= create()..freeze();
   static ScreenOut _defaultInstance;
-  static void $checkItem(ScreenOut v) {
-    if (v is! ScreenOut) checkItemFailed(v, 'ScreenOut');
-  }
 
   ScreenOut_Format get format => $_getN(0);
   set format(ScreenOut_Format v) {
     setField(1, v);
   }
 
-  bool hasFormat() => $_has(0);
+  $core.bool hasFormat() => $_has(0);
   void clearFormat() => clearField(1);
 
-  List<int> get data => $_getN(1);
-  set data(List<int> v) {
+  $core.List<$core.int> get data => $_getN(1);
+  set data($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasData() => $_has(1);
+  $core.bool hasData() => $_has(1);
   void clearData() => clearField(2);
 }
 
-class _ReadonlyScreenOut extends ScreenOut with ReadonlyMessageMixin {}
-
-class DeviceAction extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceAction')
+class DeviceAction extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceAction',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..aOS(1, 'deviceRequestJson')
     ..hasRequiredFields = false;
 
   DeviceAction() : super();
-  DeviceAction.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceAction.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeviceAction.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceAction.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceAction clone() => new DeviceAction()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeviceAction create() => new DeviceAction();
-  static PbList<DeviceAction> createRepeated() => new PbList<DeviceAction>();
-  static DeviceAction getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceAction();
-    return _defaultInstance;
-  }
-
+  DeviceAction clone() => DeviceAction()..mergeFromMessage(this);
+  DeviceAction copyWith(void Function(DeviceAction) updates) =>
+      super.copyWith((message) => updates(message as DeviceAction));
+  $pb.BuilderInfo get info_ => _i;
+  static DeviceAction create() => DeviceAction();
+  DeviceAction createEmptyInstance() => create();
+  static $pb.PbList<DeviceAction> createRepeated() =>
+      $pb.PbList<DeviceAction>();
+  static DeviceAction getDefault() => _defaultInstance ??= create()..freeze();
   static DeviceAction _defaultInstance;
-  static void $checkItem(DeviceAction v) {
-    if (v is! DeviceAction) checkItemFailed(v, 'DeviceAction');
-  }
 
-  String get deviceRequestJson => $_getS(0, '');
-  set deviceRequestJson(String v) {
+  $core.String get deviceRequestJson => $_getS(0, '');
+  set deviceRequestJson($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDeviceRequestJson() => $_has(0);
+  $core.bool hasDeviceRequestJson() => $_has(0);
   void clearDeviceRequestJson() => clearField(1);
 }
 
-class _ReadonlyDeviceAction extends DeviceAction with ReadonlyMessageMixin {}
-
-class SpeechRecognitionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SpeechRecognitionResult')
+class SpeechRecognitionResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechRecognitionResult',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..aOS(1, 'transcript')
-    ..a<double>(2, 'stability', PbFieldType.OF)
+    ..a<$core.double>(2, 'stability', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   SpeechRecognitionResult() : super();
-  SpeechRecognitionResult.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SpeechRecognitionResult.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SpeechRecognitionResult.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SpeechRecognitionResult.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SpeechRecognitionResult clone() =>
-      new SpeechRecognitionResult()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SpeechRecognitionResult create() => new SpeechRecognitionResult();
-  static PbList<SpeechRecognitionResult> createRepeated() =>
-      new PbList<SpeechRecognitionResult>();
-  static SpeechRecognitionResult getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpeechRecognitionResult();
-    return _defaultInstance;
-  }
-
+      SpeechRecognitionResult()..mergeFromMessage(this);
+  SpeechRecognitionResult copyWith(
+          void Function(SpeechRecognitionResult) updates) =>
+      super.copyWith((message) => updates(message as SpeechRecognitionResult));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechRecognitionResult create() => SpeechRecognitionResult();
+  SpeechRecognitionResult createEmptyInstance() => create();
+  static $pb.PbList<SpeechRecognitionResult> createRepeated() =>
+      $pb.PbList<SpeechRecognitionResult>();
+  static SpeechRecognitionResult getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SpeechRecognitionResult _defaultInstance;
-  static void $checkItem(SpeechRecognitionResult v) {
-    if (v is! SpeechRecognitionResult)
-      checkItemFailed(v, 'SpeechRecognitionResult');
-  }
 
-  String get transcript => $_getS(0, '');
-  set transcript(String v) {
+  $core.String get transcript => $_getS(0, '');
+  set transcript($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTranscript() => $_has(0);
+  $core.bool hasTranscript() => $_has(0);
   void clearTranscript() => clearField(1);
 
-  double get stability => $_getN(1);
-  set stability(double v) {
+  $core.double get stability => $_getN(1);
+  set stability($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasStability() => $_has(1);
+  $core.bool hasStability() => $_has(1);
   void clearStability() => clearField(2);
 }
 
-class _ReadonlySpeechRecognitionResult extends SpeechRecognitionResult
-    with ReadonlyMessageMixin {}
-
-class DialogStateOut extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DialogStateOut')
+class DialogStateOut extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DialogStateOut',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
     ..aOS(1, 'supplementalDisplayText')
-    ..a<List<int>>(2, 'conversationState', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'conversationState', $pb.PbFieldType.OY)
     ..e<DialogStateOut_MicrophoneMode>(
         3,
         'microphoneMode',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         DialogStateOut_MicrophoneMode.MICROPHONE_MODE_UNSPECIFIED,
         DialogStateOut_MicrophoneMode.valueOf,
         DialogStateOut_MicrophoneMode.values)
-    ..a<int>(4, 'volumePercentage', PbFieldType.O3)
+    ..a<$core.int>(4, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   DialogStateOut() : super();
-  DialogStateOut.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DialogStateOut.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DialogStateOut.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DialogStateOut.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DialogStateOut clone() => new DialogStateOut()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DialogStateOut create() => new DialogStateOut();
-  static PbList<DialogStateOut> createRepeated() =>
-      new PbList<DialogStateOut>();
-  static DialogStateOut getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDialogStateOut();
-    return _defaultInstance;
-  }
-
+  DialogStateOut clone() => DialogStateOut()..mergeFromMessage(this);
+  DialogStateOut copyWith(void Function(DialogStateOut) updates) =>
+      super.copyWith((message) => updates(message as DialogStateOut));
+  $pb.BuilderInfo get info_ => _i;
+  static DialogStateOut create() => DialogStateOut();
+  DialogStateOut createEmptyInstance() => create();
+  static $pb.PbList<DialogStateOut> createRepeated() =>
+      $pb.PbList<DialogStateOut>();
+  static DialogStateOut getDefault() => _defaultInstance ??= create()..freeze();
   static DialogStateOut _defaultInstance;
-  static void $checkItem(DialogStateOut v) {
-    if (v is! DialogStateOut) checkItemFailed(v, 'DialogStateOut');
-  }
 
-  String get supplementalDisplayText => $_getS(0, '');
-  set supplementalDisplayText(String v) {
+  $core.String get supplementalDisplayText => $_getS(0, '');
+  set supplementalDisplayText($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSupplementalDisplayText() => $_has(0);
+  $core.bool hasSupplementalDisplayText() => $_has(0);
   void clearSupplementalDisplayText() => clearField(1);
 
-  List<int> get conversationState => $_getN(1);
-  set conversationState(List<int> v) {
+  $core.List<$core.int> get conversationState => $_getN(1);
+  set conversationState($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasConversationState() => $_has(1);
+  $core.bool hasConversationState() => $_has(1);
   void clearConversationState() => clearField(2);
 
   DialogStateOut_MicrophoneMode get microphoneMode => $_getN(2);
@@ -751,68 +760,102 @@ class DialogStateOut extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasMicrophoneMode() => $_has(2);
+  $core.bool hasMicrophoneMode() => $_has(2);
   void clearMicrophoneMode() => clearField(3);
 
-  int get volumePercentage => $_get(3, 0);
-  set volumePercentage(int v) {
+  $core.int get volumePercentage => $_get(3, 0);
+  set volumePercentage($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasVolumePercentage() => $_has(3);
+  $core.bool hasVolumePercentage() => $_has(3);
   void clearVolumePercentage() => clearField(4);
 }
 
-class _ReadonlyDialogStateOut extends DialogStateOut with ReadonlyMessageMixin {
+class DebugConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DebugConfig',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..aOB(6, 'returnDebugInfo')
+    ..hasRequiredFields = false;
+
+  DebugConfig() : super();
+  DebugConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DebugConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DebugConfig clone() => DebugConfig()..mergeFromMessage(this);
+  DebugConfig copyWith(void Function(DebugConfig) updates) =>
+      super.copyWith((message) => updates(message as DebugConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static DebugConfig create() => DebugConfig();
+  DebugConfig createEmptyInstance() => create();
+  static $pb.PbList<DebugConfig> createRepeated() => $pb.PbList<DebugConfig>();
+  static DebugConfig getDefault() => _defaultInstance ??= create()..freeze();
+  static DebugConfig _defaultInstance;
+
+  $core.bool get returnDebugInfo => $_get(0, false);
+  set returnDebugInfo($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  $core.bool hasReturnDebugInfo() => $_has(0);
+  void clearReturnDebugInfo() => clearField(6);
 }
 
-class DeviceLocation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceLocation')
-    ..a<$google$type.LatLng>(1, 'coordinates', PbFieldType.OM,
-        $google$type.LatLng.getDefault, $google$type.LatLng.create)
+enum DeviceLocation_Type { coordinates, notSet }
+
+class DeviceLocation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, DeviceLocation_Type>
+      _DeviceLocation_TypeByTag = {
+    1: DeviceLocation_Type.coordinates,
+    0: DeviceLocation_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceLocation',
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..a<$0.LatLng>(1, 'coordinates', $pb.PbFieldType.OM, $0.LatLng.getDefault,
+        $0.LatLng.create)
+    ..oo(0, [1])
     ..hasRequiredFields = false;
 
   DeviceLocation() : super();
-  DeviceLocation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceLocation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeviceLocation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceLocation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceLocation clone() => new DeviceLocation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeviceLocation create() => new DeviceLocation();
-  static PbList<DeviceLocation> createRepeated() =>
-      new PbList<DeviceLocation>();
-  static DeviceLocation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceLocation();
-    return _defaultInstance;
-  }
-
+  DeviceLocation clone() => DeviceLocation()..mergeFromMessage(this);
+  DeviceLocation copyWith(void Function(DeviceLocation) updates) =>
+      super.copyWith((message) => updates(message as DeviceLocation));
+  $pb.BuilderInfo get info_ => _i;
+  static DeviceLocation create() => DeviceLocation();
+  DeviceLocation createEmptyInstance() => create();
+  static $pb.PbList<DeviceLocation> createRepeated() =>
+      $pb.PbList<DeviceLocation>();
+  static DeviceLocation getDefault() => _defaultInstance ??= create()..freeze();
   static DeviceLocation _defaultInstance;
-  static void $checkItem(DeviceLocation v) {
-    if (v is! DeviceLocation) checkItemFailed(v, 'DeviceLocation');
-  }
 
-  $google$type.LatLng get coordinates => $_getN(0);
-  set coordinates($google$type.LatLng v) {
+  DeviceLocation_Type whichType() => _DeviceLocation_TypeByTag[$_whichOneof(0)];
+  void clearType() => clearField($_whichOneof(0));
+
+  $0.LatLng get coordinates => $_getN(0);
+  set coordinates($0.LatLng v) {
     setField(1, v);
   }
 
-  bool hasCoordinates() => $_has(0);
+  $core.bool hasCoordinates() => $_has(0);
   void clearCoordinates() => clearField(1);
 }
 
-class _ReadonlyDeviceLocation extends DeviceLocation with ReadonlyMessageMixin {
-}
-
 class EmbeddedAssistantApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   EmbeddedAssistantApi(this._client);
 
-  Future<AssistResponse> assist(ClientContext ctx, AssistRequest request) {
-    var emptyResponse = new AssistResponse();
+  $async.Future<AssistResponse> assist(
+      $pb.ClientContext ctx, AssistRequest request) {
+    var emptyResponse = AssistResponse();
     return _client.invoke<AssistResponse>(
         ctx, 'EmbeddedAssistant', 'Assist', request, emptyResponse);
   }

@@ -1,29 +1,28 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/admin/instance/v1/spanner_instance_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Instance_State extends ProtobufEnum {
+class Instance_State extends $pb.ProtobufEnum {
   static const Instance_State STATE_UNSPECIFIED =
-      const Instance_State._(0, 'STATE_UNSPECIFIED');
-  static const Instance_State CREATING = const Instance_State._(1, 'CREATING');
-  static const Instance_State READY = const Instance_State._(2, 'READY');
+      Instance_State._(0, 'STATE_UNSPECIFIED');
+  static const Instance_State CREATING = Instance_State._(1, 'CREATING');
+  static const Instance_State READY = Instance_State._(2, 'READY');
 
-  static const List<Instance_State> values = const <Instance_State>[
+  static const $core.List<Instance_State> values = <Instance_State>[
     STATE_UNSPECIFIED,
     CREATING,
     READY,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Instance_State valueOf(int value) => _byValue[value] as Instance_State;
-  static void $checkItem(Instance_State v) {
-    if (v is! Instance_State) checkItemFailed(v, 'Instance_State');
-  }
+  static final $core.Map<$core.int, Instance_State> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Instance_State valueOf($core.int value) => _byValue[value];
 
-  const Instance_State._(int v, String n) : super(v, n);
+  const Instance_State._($core.int v, $core.String n) : super(v, n);
 }

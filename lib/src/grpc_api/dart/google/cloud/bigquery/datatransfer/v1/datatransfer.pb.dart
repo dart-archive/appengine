@@ -1,35 +1,37 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/bigquery/datatransfer/v1/datatransfer.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/wrappers.pb.dart' as $google$protobuf;
-import '../../../../protobuf/duration.pb.dart' as $google$protobuf;
-import 'transfer.pb.dart';
-import '../../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../../protobuf/wrappers.pb.dart' as $0;
+import '../../../../protobuf/duration.pb.dart' as $1;
+import 'transfer.pb.dart' as $2;
+import '../../../../protobuf/field_mask.pb.dart' as $3;
+import '../../../../protobuf/timestamp.pb.dart' as $4;
+import '../../../../protobuf/empty.pb.dart' as $5;
 
 import 'datatransfer.pbenum.dart';
-import 'transfer.pbenum.dart';
+import 'transfer.pbenum.dart' as $2;
 
 export 'datatransfer.pbenum.dart';
 
-class DataSourceParameter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DataSourceParameter')
+class DataSourceParameter extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DataSourceParameter',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'paramId')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
     ..e<DataSourceParameter_Type>(
         4,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         DataSourceParameter_Type.TYPE_UNSPECIFIED,
         DataSourceParameter_Type.valueOf,
         DataSourceParameter_Type.values)
@@ -37,20 +39,12 @@ class DataSourceParameter extends GeneratedMessage {
     ..aOB(6, 'repeated')
     ..aOS(7, 'validationRegex')
     ..pPS(8, 'allowedValues')
-    ..a<$google$protobuf.DoubleValue>(
-        9,
-        'minValue',
-        PbFieldType.OM,
-        $google$protobuf.DoubleValue.getDefault,
-        $google$protobuf.DoubleValue.create)
-    ..a<$google$protobuf.DoubleValue>(
-        10,
-        'maxValue',
-        PbFieldType.OM,
-        $google$protobuf.DoubleValue.getDefault,
-        $google$protobuf.DoubleValue.create)
-    ..pp<DataSourceParameter>(11, 'fields', PbFieldType.PM,
-        DataSourceParameter.$checkItem, DataSourceParameter.create)
+    ..a<$0.DoubleValue>(9, 'minValue', $pb.PbFieldType.OM,
+        $0.DoubleValue.getDefault, $0.DoubleValue.create)
+    ..a<$0.DoubleValue>(10, 'maxValue', $pb.PbFieldType.OM,
+        $0.DoubleValue.getDefault, $0.DoubleValue.create)
+    ..pc<DataSourceParameter>(
+        11, 'fields', $pb.PbFieldType.PM, DataSourceParameter.create)
     ..aOS(12, 'validationDescription')
     ..aOS(13, 'validationHelpUrl')
     ..aOB(14, 'immutable')
@@ -58,51 +52,46 @@ class DataSourceParameter extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   DataSourceParameter() : super();
-  DataSourceParameter.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DataSourceParameter.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DataSourceParameter.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DataSourceParameter.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DataSourceParameter clone() =>
-      new DataSourceParameter()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DataSourceParameter create() => new DataSourceParameter();
-  static PbList<DataSourceParameter> createRepeated() =>
-      new PbList<DataSourceParameter>();
-  static DataSourceParameter getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDataSourceParameter();
-    return _defaultInstance;
-  }
-
+  DataSourceParameter clone() => DataSourceParameter()..mergeFromMessage(this);
+  DataSourceParameter copyWith(void Function(DataSourceParameter) updates) =>
+      super.copyWith((message) => updates(message as DataSourceParameter));
+  $pb.BuilderInfo get info_ => _i;
+  static DataSourceParameter create() => DataSourceParameter();
+  DataSourceParameter createEmptyInstance() => create();
+  static $pb.PbList<DataSourceParameter> createRepeated() =>
+      $pb.PbList<DataSourceParameter>();
+  static DataSourceParameter getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DataSourceParameter _defaultInstance;
-  static void $checkItem(DataSourceParameter v) {
-    if (v is! DataSourceParameter) checkItemFailed(v, 'DataSourceParameter');
-  }
 
-  String get paramId => $_getS(0, '');
-  set paramId(String v) {
+  $core.String get paramId => $_getS(0, '');
+  set paramId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParamId() => $_has(0);
+  $core.bool hasParamId() => $_has(0);
   void clearParamId() => clearField(1);
 
-  String get displayName => $_getS(1, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(1, '');
+  set displayName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDisplayName() => $_has(1);
+  $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDescription() => $_has(2);
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
   DataSourceParameter_Type get type => $_getN(3);
@@ -110,245 +99,236 @@ class DataSourceParameter extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasType() => $_has(3);
+  $core.bool hasType() => $_has(3);
   void clearType() => clearField(4);
 
-  bool get required => $_get(4, false);
-  set required(bool v) {
+  $core.bool get required => $_get(4, false);
+  set required($core.bool v) {
     $_setBool(4, v);
   }
 
-  bool hasRequired() => $_has(4);
+  $core.bool hasRequired() => $_has(4);
   void clearRequired() => clearField(5);
 
-  bool get repeated => $_get(5, false);
-  set repeated(bool v) {
+  $core.bool get repeated => $_get(5, false);
+  set repeated($core.bool v) {
     $_setBool(5, v);
   }
 
-  bool hasRepeated() => $_has(5);
+  $core.bool hasRepeated() => $_has(5);
   void clearRepeated() => clearField(6);
 
-  String get validationRegex => $_getS(6, '');
-  set validationRegex(String v) {
+  $core.String get validationRegex => $_getS(6, '');
+  set validationRegex($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasValidationRegex() => $_has(6);
+  $core.bool hasValidationRegex() => $_has(6);
   void clearValidationRegex() => clearField(7);
 
-  List<String> get allowedValues => $_getList(7);
+  $core.List<$core.String> get allowedValues => $_getList(7);
 
-  $google$protobuf.DoubleValue get minValue => $_getN(8);
-  set minValue($google$protobuf.DoubleValue v) {
+  $0.DoubleValue get minValue => $_getN(8);
+  set minValue($0.DoubleValue v) {
     setField(9, v);
   }
 
-  bool hasMinValue() => $_has(8);
+  $core.bool hasMinValue() => $_has(8);
   void clearMinValue() => clearField(9);
 
-  $google$protobuf.DoubleValue get maxValue => $_getN(9);
-  set maxValue($google$protobuf.DoubleValue v) {
+  $0.DoubleValue get maxValue => $_getN(9);
+  set maxValue($0.DoubleValue v) {
     setField(10, v);
   }
 
-  bool hasMaxValue() => $_has(9);
+  $core.bool hasMaxValue() => $_has(9);
   void clearMaxValue() => clearField(10);
 
-  List<DataSourceParameter> get fields => $_getList(10);
+  $core.List<DataSourceParameter> get fields => $_getList(10);
 
-  String get validationDescription => $_getS(11, '');
-  set validationDescription(String v) {
+  $core.String get validationDescription => $_getS(11, '');
+  set validationDescription($core.String v) {
     $_setString(11, v);
   }
 
-  bool hasValidationDescription() => $_has(11);
+  $core.bool hasValidationDescription() => $_has(11);
   void clearValidationDescription() => clearField(12);
 
-  String get validationHelpUrl => $_getS(12, '');
-  set validationHelpUrl(String v) {
+  $core.String get validationHelpUrl => $_getS(12, '');
+  set validationHelpUrl($core.String v) {
     $_setString(12, v);
   }
 
-  bool hasValidationHelpUrl() => $_has(12);
+  $core.bool hasValidationHelpUrl() => $_has(12);
   void clearValidationHelpUrl() => clearField(13);
 
-  bool get immutable => $_get(13, false);
-  set immutable(bool v) {
+  $core.bool get immutable => $_get(13, false);
+  set immutable($core.bool v) {
     $_setBool(13, v);
   }
 
-  bool hasImmutable() => $_has(13);
+  $core.bool hasImmutable() => $_has(13);
   void clearImmutable() => clearField(14);
 
-  bool get recurse => $_get(14, false);
-  set recurse(bool v) {
+  $core.bool get recurse => $_get(14, false);
+  set recurse($core.bool v) {
     $_setBool(14, v);
   }
 
-  bool hasRecurse() => $_has(14);
+  $core.bool hasRecurse() => $_has(14);
   void clearRecurse() => clearField(15);
 }
 
-class _ReadonlyDataSourceParameter extends DataSourceParameter
-    with ReadonlyMessageMixin {}
-
-class DataSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DataSource')
+class DataSource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DataSource',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'dataSourceId')
     ..aOS(3, 'displayName')
     ..aOS(4, 'description')
     ..aOS(5, 'clientId')
     ..pPS(6, 'scopes')
-    ..e<TransferType>(
+    ..e<$2.TransferType>(
         7,
         'transferType',
-        PbFieldType.OE,
-        TransferType.TRANSFER_TYPE_UNSPECIFIED,
-        TransferType.valueOf,
-        TransferType.values)
+        $pb.PbFieldType.OE,
+        $2.TransferType.TRANSFER_TYPE_UNSPECIFIED,
+        $2.TransferType.valueOf,
+        $2.TransferType.values)
     ..aOB(8, 'supportsMultipleTransfers')
-    ..a<int>(9, 'updateDeadlineSeconds', PbFieldType.O3)
+    ..a<$core.int>(9, 'updateDeadlineSeconds', $pb.PbFieldType.O3)
     ..aOS(10, 'defaultSchedule')
     ..aOB(11, 'supportsCustomSchedule')
-    ..pp<DataSourceParameter>(12, 'parameters', PbFieldType.PM,
-        DataSourceParameter.$checkItem, DataSourceParameter.create)
+    ..pc<DataSourceParameter>(
+        12, 'parameters', $pb.PbFieldType.PM, DataSourceParameter.create)
     ..aOS(13, 'helpUrl')
     ..e<DataSource_AuthorizationType>(
         14,
         'authorizationType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         DataSource_AuthorizationType.AUTHORIZATION_TYPE_UNSPECIFIED,
         DataSource_AuthorizationType.valueOf,
         DataSource_AuthorizationType.values)
     ..e<DataSource_DataRefreshType>(
         15,
         'dataRefreshType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         DataSource_DataRefreshType.DATA_REFRESH_TYPE_UNSPECIFIED,
         DataSource_DataRefreshType.valueOf,
         DataSource_DataRefreshType.values)
-    ..a<int>(16, 'defaultDataRefreshWindowDays', PbFieldType.O3)
+    ..a<$core.int>(16, 'defaultDataRefreshWindowDays', $pb.PbFieldType.O3)
     ..aOB(17, 'manualRunsDisabled')
-    ..a<$google$protobuf.Duration>(
-        18,
-        'minimumScheduleInterval',
-        PbFieldType.OM,
-        $google$protobuf.Duration.getDefault,
-        $google$protobuf.Duration.create)
+    ..a<$1.Duration>(18, 'minimumScheduleInterval', $pb.PbFieldType.OM,
+        $1.Duration.getDefault, $1.Duration.create)
     ..hasRequiredFields = false;
 
   DataSource() : super();
-  DataSource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DataSource.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DataSource.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DataSource.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DataSource clone() => new DataSource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DataSource create() => new DataSource();
-  static PbList<DataSource> createRepeated() => new PbList<DataSource>();
-  static DataSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDataSource();
-    return _defaultInstance;
-  }
-
+  DataSource clone() => DataSource()..mergeFromMessage(this);
+  DataSource copyWith(void Function(DataSource) updates) =>
+      super.copyWith((message) => updates(message as DataSource));
+  $pb.BuilderInfo get info_ => _i;
+  static DataSource create() => DataSource();
+  DataSource createEmptyInstance() => create();
+  static $pb.PbList<DataSource> createRepeated() => $pb.PbList<DataSource>();
+  static DataSource getDefault() => _defaultInstance ??= create()..freeze();
   static DataSource _defaultInstance;
-  static void $checkItem(DataSource v) {
-    if (v is! DataSource) checkItemFailed(v, 'DataSource');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get dataSourceId => $_getS(1, '');
-  set dataSourceId(String v) {
+  $core.String get dataSourceId => $_getS(1, '');
+  set dataSourceId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDataSourceId() => $_has(1);
+  $core.bool hasDataSourceId() => $_has(1);
   void clearDataSourceId() => clearField(2);
 
-  String get displayName => $_getS(2, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(2, '');
+  set displayName($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDisplayName() => $_has(2);
+  $core.bool hasDisplayName() => $_has(2);
   void clearDisplayName() => clearField(3);
 
-  String get description => $_getS(3, '');
-  set description(String v) {
+  $core.String get description => $_getS(3, '');
+  set description($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDescription() => $_has(3);
+  $core.bool hasDescription() => $_has(3);
   void clearDescription() => clearField(4);
 
-  String get clientId => $_getS(4, '');
-  set clientId(String v) {
+  $core.String get clientId => $_getS(4, '');
+  set clientId($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasClientId() => $_has(4);
+  $core.bool hasClientId() => $_has(4);
   void clearClientId() => clearField(5);
 
-  List<String> get scopes => $_getList(5);
+  $core.List<$core.String> get scopes => $_getList(5);
 
-  TransferType get transferType => $_getN(6);
-  set transferType(TransferType v) {
+  $2.TransferType get transferType => $_getN(6);
+  set transferType($2.TransferType v) {
     setField(7, v);
   }
 
-  bool hasTransferType() => $_has(6);
+  $core.bool hasTransferType() => $_has(6);
   void clearTransferType() => clearField(7);
 
-  bool get supportsMultipleTransfers => $_get(7, false);
-  set supportsMultipleTransfers(bool v) {
+  $core.bool get supportsMultipleTransfers => $_get(7, false);
+  set supportsMultipleTransfers($core.bool v) {
     $_setBool(7, v);
   }
 
-  bool hasSupportsMultipleTransfers() => $_has(7);
+  $core.bool hasSupportsMultipleTransfers() => $_has(7);
   void clearSupportsMultipleTransfers() => clearField(8);
 
-  int get updateDeadlineSeconds => $_get(8, 0);
-  set updateDeadlineSeconds(int v) {
+  $core.int get updateDeadlineSeconds => $_get(8, 0);
+  set updateDeadlineSeconds($core.int v) {
     $_setSignedInt32(8, v);
   }
 
-  bool hasUpdateDeadlineSeconds() => $_has(8);
+  $core.bool hasUpdateDeadlineSeconds() => $_has(8);
   void clearUpdateDeadlineSeconds() => clearField(9);
 
-  String get defaultSchedule => $_getS(9, '');
-  set defaultSchedule(String v) {
+  $core.String get defaultSchedule => $_getS(9, '');
+  set defaultSchedule($core.String v) {
     $_setString(9, v);
   }
 
-  bool hasDefaultSchedule() => $_has(9);
+  $core.bool hasDefaultSchedule() => $_has(9);
   void clearDefaultSchedule() => clearField(10);
 
-  bool get supportsCustomSchedule => $_get(10, false);
-  set supportsCustomSchedule(bool v) {
+  $core.bool get supportsCustomSchedule => $_get(10, false);
+  set supportsCustomSchedule($core.bool v) {
     $_setBool(10, v);
   }
 
-  bool hasSupportsCustomSchedule() => $_has(10);
+  $core.bool hasSupportsCustomSchedule() => $_has(10);
   void clearSupportsCustomSchedule() => clearField(11);
 
-  List<DataSourceParameter> get parameters => $_getList(11);
+  $core.List<DataSourceParameter> get parameters => $_getList(11);
 
-  String get helpUrl => $_getS(12, '');
-  set helpUrl(String v) {
+  $core.String get helpUrl => $_getS(12, '');
+  set helpUrl($core.String v) {
     $_setString(12, v);
   }
 
-  bool hasHelpUrl() => $_has(12);
+  $core.bool hasHelpUrl() => $_has(12);
   void clearHelpUrl() => clearField(13);
 
   DataSource_AuthorizationType get authorizationType => $_getN(13);
@@ -356,7 +336,7 @@ class DataSource extends GeneratedMessage {
     setField(14, v);
   }
 
-  bool hasAuthorizationType() => $_has(13);
+  $core.bool hasAuthorizationType() => $_has(13);
   void clearAuthorizationType() => clearField(14);
 
   DataSource_DataRefreshType get dataRefreshType => $_getN(14);
@@ -364,657 +344,586 @@ class DataSource extends GeneratedMessage {
     setField(15, v);
   }
 
-  bool hasDataRefreshType() => $_has(14);
+  $core.bool hasDataRefreshType() => $_has(14);
   void clearDataRefreshType() => clearField(15);
 
-  int get defaultDataRefreshWindowDays => $_get(15, 0);
-  set defaultDataRefreshWindowDays(int v) {
+  $core.int get defaultDataRefreshWindowDays => $_get(15, 0);
+  set defaultDataRefreshWindowDays($core.int v) {
     $_setSignedInt32(15, v);
   }
 
-  bool hasDefaultDataRefreshWindowDays() => $_has(15);
+  $core.bool hasDefaultDataRefreshWindowDays() => $_has(15);
   void clearDefaultDataRefreshWindowDays() => clearField(16);
 
-  bool get manualRunsDisabled => $_get(16, false);
-  set manualRunsDisabled(bool v) {
+  $core.bool get manualRunsDisabled => $_get(16, false);
+  set manualRunsDisabled($core.bool v) {
     $_setBool(16, v);
   }
 
-  bool hasManualRunsDisabled() => $_has(16);
+  $core.bool hasManualRunsDisabled() => $_has(16);
   void clearManualRunsDisabled() => clearField(17);
 
-  $google$protobuf.Duration get minimumScheduleInterval => $_getN(17);
-  set minimumScheduleInterval($google$protobuf.Duration v) {
+  $1.Duration get minimumScheduleInterval => $_getN(17);
+  set minimumScheduleInterval($1.Duration v) {
     setField(18, v);
   }
 
-  bool hasMinimumScheduleInterval() => $_has(17);
+  $core.bool hasMinimumScheduleInterval() => $_has(17);
   void clearMinimumScheduleInterval() => clearField(18);
 }
 
-class _ReadonlyDataSource extends DataSource with ReadonlyMessageMixin {}
-
-class GetDataSourceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDataSourceRequest')
+class GetDataSourceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDataSourceRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetDataSourceRequest() : super();
-  GetDataSourceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetDataSourceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetDataSourceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetDataSourceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetDataSourceRequest clone() =>
-      new GetDataSourceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetDataSourceRequest create() => new GetDataSourceRequest();
-  static PbList<GetDataSourceRequest> createRepeated() =>
-      new PbList<GetDataSourceRequest>();
-  static GetDataSourceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDataSourceRequest();
-    return _defaultInstance;
-  }
-
+      GetDataSourceRequest()..mergeFromMessage(this);
+  GetDataSourceRequest copyWith(void Function(GetDataSourceRequest) updates) =>
+      super.copyWith((message) => updates(message as GetDataSourceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetDataSourceRequest create() => GetDataSourceRequest();
+  GetDataSourceRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDataSourceRequest> createRepeated() =>
+      $pb.PbList<GetDataSourceRequest>();
+  static GetDataSourceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetDataSourceRequest _defaultInstance;
-  static void $checkItem(GetDataSourceRequest v) {
-    if (v is! GetDataSourceRequest) checkItemFailed(v, 'GetDataSourceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetDataSourceRequest extends GetDataSourceRequest
-    with ReadonlyMessageMixin {}
-
-class ListDataSourcesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDataSourcesRequest')
+class ListDataSourcesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDataSourcesRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
     ..aOS(3, 'pageToken')
-    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListDataSourcesRequest() : super();
-  ListDataSourcesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListDataSourcesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListDataSourcesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListDataSourcesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDataSourcesRequest clone() =>
-      new ListDataSourcesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListDataSourcesRequest create() => new ListDataSourcesRequest();
-  static PbList<ListDataSourcesRequest> createRepeated() =>
-      new PbList<ListDataSourcesRequest>();
-  static ListDataSourcesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDataSourcesRequest();
-    return _defaultInstance;
-  }
-
+      ListDataSourcesRequest()..mergeFromMessage(this);
+  ListDataSourcesRequest copyWith(
+          void Function(ListDataSourcesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListDataSourcesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListDataSourcesRequest create() => ListDataSourcesRequest();
+  ListDataSourcesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListDataSourcesRequest> createRepeated() =>
+      $pb.PbList<ListDataSourcesRequest>();
+  static ListDataSourcesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListDataSourcesRequest _defaultInstance;
-  static void $checkItem(ListDataSourcesRequest v) {
-    if (v is! ListDataSourcesRequest)
-      checkItemFailed(v, 'ListDataSourcesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(3);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(4);
 }
 
-class _ReadonlyListDataSourcesRequest extends ListDataSourcesRequest
-    with ReadonlyMessageMixin {}
-
-class ListDataSourcesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDataSourcesResponse')
-    ..pp<DataSource>(1, 'dataSources', PbFieldType.PM, DataSource.$checkItem,
-        DataSource.create)
+class ListDataSourcesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDataSourcesResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..pc<DataSource>(1, 'dataSources', $pb.PbFieldType.PM, DataSource.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListDataSourcesResponse() : super();
-  ListDataSourcesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListDataSourcesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListDataSourcesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListDataSourcesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDataSourcesResponse clone() =>
-      new ListDataSourcesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListDataSourcesResponse create() => new ListDataSourcesResponse();
-  static PbList<ListDataSourcesResponse> createRepeated() =>
-      new PbList<ListDataSourcesResponse>();
-  static ListDataSourcesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDataSourcesResponse();
-    return _defaultInstance;
-  }
-
+      ListDataSourcesResponse()..mergeFromMessage(this);
+  ListDataSourcesResponse copyWith(
+          void Function(ListDataSourcesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListDataSourcesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListDataSourcesResponse create() => ListDataSourcesResponse();
+  ListDataSourcesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListDataSourcesResponse> createRepeated() =>
+      $pb.PbList<ListDataSourcesResponse>();
+  static ListDataSourcesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListDataSourcesResponse _defaultInstance;
-  static void $checkItem(ListDataSourcesResponse v) {
-    if (v is! ListDataSourcesResponse)
-      checkItemFailed(v, 'ListDataSourcesResponse');
-  }
 
-  List<DataSource> get dataSources => $_getList(0);
+  $core.List<DataSource> get dataSources => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListDataSourcesResponse extends ListDataSourcesResponse
-    with ReadonlyMessageMixin {}
-
-class CreateTransferConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTransferConfigRequest')
+class CreateTransferConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'CreateTransferConfigRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
-    ..a<TransferConfig>(2, 'transferConfig', PbFieldType.OM,
-        TransferConfig.getDefault, TransferConfig.create)
+    ..a<$2.TransferConfig>(2, 'transferConfig', $pb.PbFieldType.OM,
+        $2.TransferConfig.getDefault, $2.TransferConfig.create)
     ..aOS(3, 'authorizationCode')
     ..hasRequiredFields = false;
 
   CreateTransferConfigRequest() : super();
-  CreateTransferConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTransferConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateTransferConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTransferConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTransferConfigRequest clone() =>
-      new CreateTransferConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateTransferConfigRequest create() =>
-      new CreateTransferConfigRequest();
-  static PbList<CreateTransferConfigRequest> createRepeated() =>
-      new PbList<CreateTransferConfigRequest>();
-  static CreateTransferConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTransferConfigRequest();
-    return _defaultInstance;
-  }
-
+      CreateTransferConfigRequest()..mergeFromMessage(this);
+  CreateTransferConfigRequest copyWith(
+          void Function(CreateTransferConfigRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as CreateTransferConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateTransferConfigRequest create() => CreateTransferConfigRequest();
+  CreateTransferConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateTransferConfigRequest> createRepeated() =>
+      $pb.PbList<CreateTransferConfigRequest>();
+  static CreateTransferConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateTransferConfigRequest _defaultInstance;
-  static void $checkItem(CreateTransferConfigRequest v) {
-    if (v is! CreateTransferConfigRequest)
-      checkItemFailed(v, 'CreateTransferConfigRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  TransferConfig get transferConfig => $_getN(1);
-  set transferConfig(TransferConfig v) {
+  $2.TransferConfig get transferConfig => $_getN(1);
+  set transferConfig($2.TransferConfig v) {
     setField(2, v);
   }
 
-  bool hasTransferConfig() => $_has(1);
+  $core.bool hasTransferConfig() => $_has(1);
   void clearTransferConfig() => clearField(2);
 
-  String get authorizationCode => $_getS(2, '');
-  set authorizationCode(String v) {
+  $core.String get authorizationCode => $_getS(2, '');
+  set authorizationCode($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasAuthorizationCode() => $_has(2);
+  $core.bool hasAuthorizationCode() => $_has(2);
   void clearAuthorizationCode() => clearField(3);
 }
 
-class _ReadonlyCreateTransferConfigRequest extends CreateTransferConfigRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateTransferConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateTransferConfigRequest')
-    ..a<TransferConfig>(1, 'transferConfig', PbFieldType.OM,
-        TransferConfig.getDefault, TransferConfig.create)
+class UpdateTransferConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'UpdateTransferConfigRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..a<$2.TransferConfig>(1, 'transferConfig', $pb.PbFieldType.OM,
+        $2.TransferConfig.getDefault, $2.TransferConfig.create)
     ..aOS(3, 'authorizationCode')
-    ..a<$google$protobuf.FieldMask>(
-        4,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$3.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTransferConfigRequest() : super();
-  UpdateTransferConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateTransferConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateTransferConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateTransferConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateTransferConfigRequest clone() =>
-      new UpdateTransferConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateTransferConfigRequest create() =>
-      new UpdateTransferConfigRequest();
-  static PbList<UpdateTransferConfigRequest> createRepeated() =>
-      new PbList<UpdateTransferConfigRequest>();
-  static UpdateTransferConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateTransferConfigRequest();
-    return _defaultInstance;
-  }
-
+      UpdateTransferConfigRequest()..mergeFromMessage(this);
+  UpdateTransferConfigRequest copyWith(
+          void Function(UpdateTransferConfigRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as UpdateTransferConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateTransferConfigRequest create() => UpdateTransferConfigRequest();
+  UpdateTransferConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateTransferConfigRequest> createRepeated() =>
+      $pb.PbList<UpdateTransferConfigRequest>();
+  static UpdateTransferConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateTransferConfigRequest _defaultInstance;
-  static void $checkItem(UpdateTransferConfigRequest v) {
-    if (v is! UpdateTransferConfigRequest)
-      checkItemFailed(v, 'UpdateTransferConfigRequest');
-  }
 
-  TransferConfig get transferConfig => $_getN(0);
-  set transferConfig(TransferConfig v) {
+  $2.TransferConfig get transferConfig => $_getN(0);
+  set transferConfig($2.TransferConfig v) {
     setField(1, v);
   }
 
-  bool hasTransferConfig() => $_has(0);
+  $core.bool hasTransferConfig() => $_has(0);
   void clearTransferConfig() => clearField(1);
 
-  String get authorizationCode => $_getS(1, '');
-  set authorizationCode(String v) {
+  $core.String get authorizationCode => $_getS(1, '');
+  set authorizationCode($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasAuthorizationCode() => $_has(1);
+  $core.bool hasAuthorizationCode() => $_has(1);
   void clearAuthorizationCode() => clearField(3);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(4, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(4);
 }
 
-class _ReadonlyUpdateTransferConfigRequest extends UpdateTransferConfigRequest
-    with ReadonlyMessageMixin {}
-
-class GetTransferConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTransferConfigRequest')
+class GetTransferConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTransferConfigRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetTransferConfigRequest() : super();
-  GetTransferConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTransferConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetTransferConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTransferConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetTransferConfigRequest clone() =>
-      new GetTransferConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetTransferConfigRequest create() => new GetTransferConfigRequest();
-  static PbList<GetTransferConfigRequest> createRepeated() =>
-      new PbList<GetTransferConfigRequest>();
-  static GetTransferConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTransferConfigRequest();
-    return _defaultInstance;
-  }
-
+      GetTransferConfigRequest()..mergeFromMessage(this);
+  GetTransferConfigRequest copyWith(
+          void Function(GetTransferConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as GetTransferConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetTransferConfigRequest create() => GetTransferConfigRequest();
+  GetTransferConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetTransferConfigRequest> createRepeated() =>
+      $pb.PbList<GetTransferConfigRequest>();
+  static GetTransferConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetTransferConfigRequest _defaultInstance;
-  static void $checkItem(GetTransferConfigRequest v) {
-    if (v is! GetTransferConfigRequest)
-      checkItemFailed(v, 'GetTransferConfigRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetTransferConfigRequest extends GetTransferConfigRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteTransferConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTransferConfigRequest')
+class DeleteTransferConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DeleteTransferConfigRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteTransferConfigRequest() : super();
-  DeleteTransferConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteTransferConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteTransferConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteTransferConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteTransferConfigRequest clone() =>
-      new DeleteTransferConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteTransferConfigRequest create() =>
-      new DeleteTransferConfigRequest();
-  static PbList<DeleteTransferConfigRequest> createRepeated() =>
-      new PbList<DeleteTransferConfigRequest>();
-  static DeleteTransferConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTransferConfigRequest();
-    return _defaultInstance;
-  }
-
+      DeleteTransferConfigRequest()..mergeFromMessage(this);
+  DeleteTransferConfigRequest copyWith(
+          void Function(DeleteTransferConfigRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as DeleteTransferConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteTransferConfigRequest create() => DeleteTransferConfigRequest();
+  DeleteTransferConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteTransferConfigRequest> createRepeated() =>
+      $pb.PbList<DeleteTransferConfigRequest>();
+  static DeleteTransferConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteTransferConfigRequest _defaultInstance;
-  static void $checkItem(DeleteTransferConfigRequest v) {
-    if (v is! DeleteTransferConfigRequest)
-      checkItemFailed(v, 'DeleteTransferConfigRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteTransferConfigRequest extends DeleteTransferConfigRequest
-    with ReadonlyMessageMixin {}
-
-class GetTransferRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTransferRunRequest')
+class GetTransferRunRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTransferRunRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetTransferRunRequest() : super();
-  GetTransferRunRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTransferRunRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetTransferRunRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTransferRunRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetTransferRunRequest clone() =>
-      new GetTransferRunRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetTransferRunRequest create() => new GetTransferRunRequest();
-  static PbList<GetTransferRunRequest> createRepeated() =>
-      new PbList<GetTransferRunRequest>();
-  static GetTransferRunRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTransferRunRequest();
-    return _defaultInstance;
-  }
-
+      GetTransferRunRequest()..mergeFromMessage(this);
+  GetTransferRunRequest copyWith(
+          void Function(GetTransferRunRequest) updates) =>
+      super.copyWith((message) => updates(message as GetTransferRunRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetTransferRunRequest create() => GetTransferRunRequest();
+  GetTransferRunRequest createEmptyInstance() => create();
+  static $pb.PbList<GetTransferRunRequest> createRepeated() =>
+      $pb.PbList<GetTransferRunRequest>();
+  static GetTransferRunRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetTransferRunRequest _defaultInstance;
-  static void $checkItem(GetTransferRunRequest v) {
-    if (v is! GetTransferRunRequest)
-      checkItemFailed(v, 'GetTransferRunRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetTransferRunRequest extends GetTransferRunRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteTransferRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTransferRunRequest')
+class DeleteTransferRunRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteTransferRunRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteTransferRunRequest() : super();
-  DeleteTransferRunRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteTransferRunRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteTransferRunRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteTransferRunRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteTransferRunRequest clone() =>
-      new DeleteTransferRunRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteTransferRunRequest create() => new DeleteTransferRunRequest();
-  static PbList<DeleteTransferRunRequest> createRepeated() =>
-      new PbList<DeleteTransferRunRequest>();
-  static DeleteTransferRunRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTransferRunRequest();
-    return _defaultInstance;
-  }
-
+      DeleteTransferRunRequest()..mergeFromMessage(this);
+  DeleteTransferRunRequest copyWith(
+          void Function(DeleteTransferRunRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteTransferRunRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteTransferRunRequest create() => DeleteTransferRunRequest();
+  DeleteTransferRunRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteTransferRunRequest> createRepeated() =>
+      $pb.PbList<DeleteTransferRunRequest>();
+  static DeleteTransferRunRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteTransferRunRequest _defaultInstance;
-  static void $checkItem(DeleteTransferRunRequest v) {
-    if (v is! DeleteTransferRunRequest)
-      checkItemFailed(v, 'DeleteTransferRunRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteTransferRunRequest extends DeleteTransferRunRequest
-    with ReadonlyMessageMixin {}
-
-class ListTransferConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferConfigsRequest')
+class ListTransferConfigsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListTransferConfigsRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
     ..pPS(2, 'dataSourceIds')
     ..aOS(3, 'pageToken')
-    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListTransferConfigsRequest() : super();
-  ListTransferConfigsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferConfigsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTransferConfigsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferConfigsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferConfigsRequest clone() =>
-      new ListTransferConfigsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTransferConfigsRequest create() =>
-      new ListTransferConfigsRequest();
-  static PbList<ListTransferConfigsRequest> createRepeated() =>
-      new PbList<ListTransferConfigsRequest>();
-  static ListTransferConfigsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferConfigsRequest();
-    return _defaultInstance;
-  }
-
+      ListTransferConfigsRequest()..mergeFromMessage(this);
+  ListTransferConfigsRequest copyWith(
+          void Function(ListTransferConfigsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListTransferConfigsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTransferConfigsRequest create() => ListTransferConfigsRequest();
+  ListTransferConfigsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTransferConfigsRequest> createRepeated() =>
+      $pb.PbList<ListTransferConfigsRequest>();
+  static ListTransferConfigsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTransferConfigsRequest _defaultInstance;
-  static void $checkItem(ListTransferConfigsRequest v) {
-    if (v is! ListTransferConfigsRequest)
-      checkItemFailed(v, 'ListTransferConfigsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  List<String> get dataSourceIds => $_getList(1);
+  $core.List<$core.String> get dataSourceIds => $_getList(1);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  int get pageSize => $_get(3, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(3, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasPageSize() => $_has(3);
+  $core.bool hasPageSize() => $_has(3);
   void clearPageSize() => clearField(4);
 }
 
-class _ReadonlyListTransferConfigsRequest extends ListTransferConfigsRequest
-    with ReadonlyMessageMixin {}
-
-class ListTransferConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferConfigsResponse')
-    ..pp<TransferConfig>(1, 'transferConfigs', PbFieldType.PM,
-        TransferConfig.$checkItem, TransferConfig.create)
+class ListTransferConfigsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListTransferConfigsResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..pc<$2.TransferConfig>(
+        1, 'transferConfigs', $pb.PbFieldType.PM, $2.TransferConfig.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListTransferConfigsResponse() : super();
-  ListTransferConfigsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferConfigsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTransferConfigsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferConfigsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferConfigsResponse clone() =>
-      new ListTransferConfigsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTransferConfigsResponse create() =>
-      new ListTransferConfigsResponse();
-  static PbList<ListTransferConfigsResponse> createRepeated() =>
-      new PbList<ListTransferConfigsResponse>();
-  static ListTransferConfigsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferConfigsResponse();
-    return _defaultInstance;
-  }
-
+      ListTransferConfigsResponse()..mergeFromMessage(this);
+  ListTransferConfigsResponse copyWith(
+          void Function(ListTransferConfigsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListTransferConfigsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTransferConfigsResponse create() => ListTransferConfigsResponse();
+  ListTransferConfigsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTransferConfigsResponse> createRepeated() =>
+      $pb.PbList<ListTransferConfigsResponse>();
+  static ListTransferConfigsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTransferConfigsResponse _defaultInstance;
-  static void $checkItem(ListTransferConfigsResponse v) {
-    if (v is! ListTransferConfigsResponse)
-      checkItemFailed(v, 'ListTransferConfigsResponse');
-  }
 
-  List<TransferConfig> get transferConfigs => $_getList(0);
+  $core.List<$2.TransferConfig> get transferConfigs => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListTransferConfigsResponse extends ListTransferConfigsResponse
-    with ReadonlyMessageMixin {}
-
-class ListTransferRunsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferRunsRequest')
+class ListTransferRunsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferRunsRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
-    ..pp<TransferState>(2, 'states', PbFieldType.PE, TransferState.$checkItem,
-        null, TransferState.valueOf, TransferState.values)
+    ..pc<$2.TransferState>(2, 'states', $pb.PbFieldType.PE, null,
+        $2.TransferState.valueOf, $2.TransferState.values)
     ..aOS(3, 'pageToken')
-    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..e<ListTransferRunsRequest_RunAttempt>(
         5,
         'runAttempt',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ListTransferRunsRequest_RunAttempt.RUN_ATTEMPT_UNSPECIFIED,
         ListTransferRunsRequest_RunAttempt.valueOf,
         ListTransferRunsRequest_RunAttempt.values)
     ..hasRequiredFields = false;
 
   ListTransferRunsRequest() : super();
-  ListTransferRunsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferRunsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTransferRunsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferRunsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferRunsRequest clone() =>
-      new ListTransferRunsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTransferRunsRequest create() => new ListTransferRunsRequest();
-  static PbList<ListTransferRunsRequest> createRepeated() =>
-      new PbList<ListTransferRunsRequest>();
-  static ListTransferRunsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferRunsRequest();
-    return _defaultInstance;
-  }
-
+      ListTransferRunsRequest()..mergeFromMessage(this);
+  ListTransferRunsRequest copyWith(
+          void Function(ListTransferRunsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListTransferRunsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTransferRunsRequest create() => ListTransferRunsRequest();
+  ListTransferRunsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTransferRunsRequest> createRepeated() =>
+      $pb.PbList<ListTransferRunsRequest>();
+  static ListTransferRunsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTransferRunsRequest _defaultInstance;
-  static void $checkItem(ListTransferRunsRequest v) {
-    if (v is! ListTransferRunsRequest)
-      checkItemFailed(v, 'ListTransferRunsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  List<TransferState> get states => $_getList(1);
+  $core.List<$2.TransferState> get states => $_getList(1);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  int get pageSize => $_get(3, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(3, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasPageSize() => $_has(3);
+  $core.bool hasPageSize() => $_has(3);
   void clearPageSize() => clearField(4);
 
   ListTransferRunsRequest_RunAttempt get runAttempt => $_getN(4);
@@ -1022,459 +931,408 @@ class ListTransferRunsRequest extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasRunAttempt() => $_has(4);
+  $core.bool hasRunAttempt() => $_has(4);
   void clearRunAttempt() => clearField(5);
 }
 
-class _ReadonlyListTransferRunsRequest extends ListTransferRunsRequest
-    with ReadonlyMessageMixin {}
-
-class ListTransferRunsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferRunsResponse')
-    ..pp<TransferRun>(1, 'transferRuns', PbFieldType.PM, TransferRun.$checkItem,
-        TransferRun.create)
+class ListTransferRunsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferRunsResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..pc<$2.TransferRun>(
+        1, 'transferRuns', $pb.PbFieldType.PM, $2.TransferRun.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListTransferRunsResponse() : super();
-  ListTransferRunsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferRunsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTransferRunsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferRunsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferRunsResponse clone() =>
-      new ListTransferRunsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTransferRunsResponse create() => new ListTransferRunsResponse();
-  static PbList<ListTransferRunsResponse> createRepeated() =>
-      new PbList<ListTransferRunsResponse>();
-  static ListTransferRunsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferRunsResponse();
-    return _defaultInstance;
-  }
-
+      ListTransferRunsResponse()..mergeFromMessage(this);
+  ListTransferRunsResponse copyWith(
+          void Function(ListTransferRunsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListTransferRunsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTransferRunsResponse create() => ListTransferRunsResponse();
+  ListTransferRunsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTransferRunsResponse> createRepeated() =>
+      $pb.PbList<ListTransferRunsResponse>();
+  static ListTransferRunsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTransferRunsResponse _defaultInstance;
-  static void $checkItem(ListTransferRunsResponse v) {
-    if (v is! ListTransferRunsResponse)
-      checkItemFailed(v, 'ListTransferRunsResponse');
-  }
 
-  List<TransferRun> get transferRuns => $_getList(0);
+  $core.List<$2.TransferRun> get transferRuns => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListTransferRunsResponse extends ListTransferRunsResponse
-    with ReadonlyMessageMixin {}
-
-class ListTransferLogsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferLogsRequest')
+class ListTransferLogsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferLogsRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
-    ..a<int>(5, 'pageSize', PbFieldType.O3)
-    ..pp<TransferMessage_MessageSeverity>(
+    ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
+    ..pc<$2.TransferMessage_MessageSeverity>(
         6,
         'messageTypes',
-        PbFieldType.PE,
-        TransferMessage_MessageSeverity.$checkItem,
+        $pb.PbFieldType.PE,
         null,
-        TransferMessage_MessageSeverity.valueOf,
-        TransferMessage_MessageSeverity.values)
+        $2.TransferMessage_MessageSeverity.valueOf,
+        $2.TransferMessage_MessageSeverity.values)
     ..hasRequiredFields = false;
 
   ListTransferLogsRequest() : super();
-  ListTransferLogsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferLogsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTransferLogsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferLogsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferLogsRequest clone() =>
-      new ListTransferLogsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTransferLogsRequest create() => new ListTransferLogsRequest();
-  static PbList<ListTransferLogsRequest> createRepeated() =>
-      new PbList<ListTransferLogsRequest>();
-  static ListTransferLogsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferLogsRequest();
-    return _defaultInstance;
-  }
-
+      ListTransferLogsRequest()..mergeFromMessage(this);
+  ListTransferLogsRequest copyWith(
+          void Function(ListTransferLogsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListTransferLogsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTransferLogsRequest create() => ListTransferLogsRequest();
+  ListTransferLogsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTransferLogsRequest> createRepeated() =>
+      $pb.PbList<ListTransferLogsRequest>();
+  static ListTransferLogsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTransferLogsRequest _defaultInstance;
-  static void $checkItem(ListTransferLogsRequest v) {
-    if (v is! ListTransferLogsRequest)
-      checkItemFailed(v, 'ListTransferLogsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(4);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(5);
 
-  List<TransferMessage_MessageSeverity> get messageTypes => $_getList(3);
+  $core.List<$2.TransferMessage_MessageSeverity> get messageTypes =>
+      $_getList(3);
 }
 
-class _ReadonlyListTransferLogsRequest extends ListTransferLogsRequest
-    with ReadonlyMessageMixin {}
-
-class ListTransferLogsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferLogsResponse')
-    ..pp<TransferMessage>(1, 'transferMessages', PbFieldType.PM,
-        TransferMessage.$checkItem, TransferMessage.create)
+class ListTransferLogsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferLogsResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..pc<$2.TransferMessage>(
+        1, 'transferMessages', $pb.PbFieldType.PM, $2.TransferMessage.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListTransferLogsResponse() : super();
-  ListTransferLogsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferLogsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTransferLogsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferLogsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferLogsResponse clone() =>
-      new ListTransferLogsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTransferLogsResponse create() => new ListTransferLogsResponse();
-  static PbList<ListTransferLogsResponse> createRepeated() =>
-      new PbList<ListTransferLogsResponse>();
-  static ListTransferLogsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferLogsResponse();
-    return _defaultInstance;
-  }
-
+      ListTransferLogsResponse()..mergeFromMessage(this);
+  ListTransferLogsResponse copyWith(
+          void Function(ListTransferLogsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListTransferLogsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTransferLogsResponse create() => ListTransferLogsResponse();
+  ListTransferLogsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTransferLogsResponse> createRepeated() =>
+      $pb.PbList<ListTransferLogsResponse>();
+  static ListTransferLogsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTransferLogsResponse _defaultInstance;
-  static void $checkItem(ListTransferLogsResponse v) {
-    if (v is! ListTransferLogsResponse)
-      checkItemFailed(v, 'ListTransferLogsResponse');
-  }
 
-  List<TransferMessage> get transferMessages => $_getList(0);
+  $core.List<$2.TransferMessage> get transferMessages => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListTransferLogsResponse extends ListTransferLogsResponse
-    with ReadonlyMessageMixin {}
-
-class CheckValidCredsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckValidCredsRequest')
+class CheckValidCredsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckValidCredsRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   CheckValidCredsRequest() : super();
-  CheckValidCredsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckValidCredsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CheckValidCredsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckValidCredsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckValidCredsRequest clone() =>
-      new CheckValidCredsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CheckValidCredsRequest create() => new CheckValidCredsRequest();
-  static PbList<CheckValidCredsRequest> createRepeated() =>
-      new PbList<CheckValidCredsRequest>();
-  static CheckValidCredsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckValidCredsRequest();
-    return _defaultInstance;
-  }
-
+      CheckValidCredsRequest()..mergeFromMessage(this);
+  CheckValidCredsRequest copyWith(
+          void Function(CheckValidCredsRequest) updates) =>
+      super.copyWith((message) => updates(message as CheckValidCredsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CheckValidCredsRequest create() => CheckValidCredsRequest();
+  CheckValidCredsRequest createEmptyInstance() => create();
+  static $pb.PbList<CheckValidCredsRequest> createRepeated() =>
+      $pb.PbList<CheckValidCredsRequest>();
+  static CheckValidCredsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CheckValidCredsRequest _defaultInstance;
-  static void $checkItem(CheckValidCredsRequest v) {
-    if (v is! CheckValidCredsRequest)
-      checkItemFailed(v, 'CheckValidCredsRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyCheckValidCredsRequest extends CheckValidCredsRequest
-    with ReadonlyMessageMixin {}
-
-class CheckValidCredsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckValidCredsResponse')
+class CheckValidCredsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckValidCredsResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOB(1, 'hasValidCreds')
     ..hasRequiredFields = false;
 
   CheckValidCredsResponse() : super();
-  CheckValidCredsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckValidCredsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CheckValidCredsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckValidCredsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckValidCredsResponse clone() =>
-      new CheckValidCredsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CheckValidCredsResponse create() => new CheckValidCredsResponse();
-  static PbList<CheckValidCredsResponse> createRepeated() =>
-      new PbList<CheckValidCredsResponse>();
-  static CheckValidCredsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckValidCredsResponse();
-    return _defaultInstance;
-  }
-
+      CheckValidCredsResponse()..mergeFromMessage(this);
+  CheckValidCredsResponse copyWith(
+          void Function(CheckValidCredsResponse) updates) =>
+      super.copyWith((message) => updates(message as CheckValidCredsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static CheckValidCredsResponse create() => CheckValidCredsResponse();
+  CheckValidCredsResponse createEmptyInstance() => create();
+  static $pb.PbList<CheckValidCredsResponse> createRepeated() =>
+      $pb.PbList<CheckValidCredsResponse>();
+  static CheckValidCredsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CheckValidCredsResponse _defaultInstance;
-  static void $checkItem(CheckValidCredsResponse v) {
-    if (v is! CheckValidCredsResponse)
-      checkItemFailed(v, 'CheckValidCredsResponse');
-  }
 
-  bool get hasValidCreds => $_get(0, false);
-  set hasValidCreds(bool v) {
+  $core.bool get hasValidCreds => $_get(0, false);
+  set hasValidCreds($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasHasValidCreds() => $_has(0);
+  $core.bool hasHasValidCreds() => $_has(0);
   void clearHasValidCreds() => clearField(1);
 }
 
-class _ReadonlyCheckValidCredsResponse extends CheckValidCredsResponse
-    with ReadonlyMessageMixin {}
-
-class ScheduleTransferRunsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScheduleTransferRunsRequest')
+class ScheduleTransferRunsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ScheduleTransferRunsRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$4.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $4.Timestamp.getDefault,
+        $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   ScheduleTransferRunsRequest() : super();
-  ScheduleTransferRunsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScheduleTransferRunsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ScheduleTransferRunsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScheduleTransferRunsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ScheduleTransferRunsRequest clone() =>
-      new ScheduleTransferRunsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ScheduleTransferRunsRequest create() =>
-      new ScheduleTransferRunsRequest();
-  static PbList<ScheduleTransferRunsRequest> createRepeated() =>
-      new PbList<ScheduleTransferRunsRequest>();
-  static ScheduleTransferRunsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScheduleTransferRunsRequest();
-    return _defaultInstance;
-  }
-
+      ScheduleTransferRunsRequest()..mergeFromMessage(this);
+  ScheduleTransferRunsRequest copyWith(
+          void Function(ScheduleTransferRunsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ScheduleTransferRunsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ScheduleTransferRunsRequest create() => ScheduleTransferRunsRequest();
+  ScheduleTransferRunsRequest createEmptyInstance() => create();
+  static $pb.PbList<ScheduleTransferRunsRequest> createRepeated() =>
+      $pb.PbList<ScheduleTransferRunsRequest>();
+  static ScheduleTransferRunsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ScheduleTransferRunsRequest _defaultInstance;
-  static void $checkItem(ScheduleTransferRunsRequest v) {
-    if (v is! ScheduleTransferRunsRequest)
-      checkItemFailed(v, 'ScheduleTransferRunsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $google$protobuf.Timestamp get startTime => $_getN(1);
-  set startTime($google$protobuf.Timestamp v) {
+  $4.Timestamp get startTime => $_getN(1);
+  set startTime($4.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasStartTime() => $_has(1);
+  $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $google$protobuf.Timestamp get endTime => $_getN(2);
-  set endTime($google$protobuf.Timestamp v) {
+  $4.Timestamp get endTime => $_getN(2);
+  set endTime($4.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasEndTime() => $_has(2);
+  $core.bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
 }
 
-class _ReadonlyScheduleTransferRunsRequest extends ScheduleTransferRunsRequest
-    with ReadonlyMessageMixin {}
-
-class ScheduleTransferRunsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScheduleTransferRunsResponse')
-    ..pp<TransferRun>(
-        1, 'runs', PbFieldType.PM, TransferRun.$checkItem, TransferRun.create)
+class ScheduleTransferRunsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ScheduleTransferRunsResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..pc<$2.TransferRun>(1, 'runs', $pb.PbFieldType.PM, $2.TransferRun.create)
     ..hasRequiredFields = false;
 
   ScheduleTransferRunsResponse() : super();
-  ScheduleTransferRunsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScheduleTransferRunsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ScheduleTransferRunsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScheduleTransferRunsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ScheduleTransferRunsResponse clone() =>
-      new ScheduleTransferRunsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ScheduleTransferRunsResponse()..mergeFromMessage(this);
+  ScheduleTransferRunsResponse copyWith(
+          void Function(ScheduleTransferRunsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ScheduleTransferRunsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ScheduleTransferRunsResponse create() =>
-      new ScheduleTransferRunsResponse();
-  static PbList<ScheduleTransferRunsResponse> createRepeated() =>
-      new PbList<ScheduleTransferRunsResponse>();
-  static ScheduleTransferRunsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScheduleTransferRunsResponse();
-    return _defaultInstance;
-  }
-
+      ScheduleTransferRunsResponse();
+  ScheduleTransferRunsResponse createEmptyInstance() => create();
+  static $pb.PbList<ScheduleTransferRunsResponse> createRepeated() =>
+      $pb.PbList<ScheduleTransferRunsResponse>();
+  static ScheduleTransferRunsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ScheduleTransferRunsResponse _defaultInstance;
-  static void $checkItem(ScheduleTransferRunsResponse v) {
-    if (v is! ScheduleTransferRunsResponse)
-      checkItemFailed(v, 'ScheduleTransferRunsResponse');
-  }
 
-  List<TransferRun> get runs => $_getList(0);
+  $core.List<$2.TransferRun> get runs => $_getList(0);
 }
 
-class _ReadonlyScheduleTransferRunsResponse extends ScheduleTransferRunsResponse
-    with ReadonlyMessageMixin {}
-
 class DataTransferServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   DataTransferServiceApi(this._client);
 
-  Future<DataSource> getDataSource(
-      ClientContext ctx, GetDataSourceRequest request) {
-    var emptyResponse = new DataSource();
+  $async.Future<DataSource> getDataSource(
+      $pb.ClientContext ctx, GetDataSourceRequest request) {
+    var emptyResponse = DataSource();
     return _client.invoke<DataSource>(
         ctx, 'DataTransferService', 'GetDataSource', request, emptyResponse);
   }
 
-  Future<ListDataSourcesResponse> listDataSources(
-      ClientContext ctx, ListDataSourcesRequest request) {
-    var emptyResponse = new ListDataSourcesResponse();
+  $async.Future<ListDataSourcesResponse> listDataSources(
+      $pb.ClientContext ctx, ListDataSourcesRequest request) {
+    var emptyResponse = ListDataSourcesResponse();
     return _client.invoke<ListDataSourcesResponse>(
         ctx, 'DataTransferService', 'ListDataSources', request, emptyResponse);
   }
 
-  Future<TransferConfig> createTransferConfig(
-      ClientContext ctx, CreateTransferConfigRequest request) {
-    var emptyResponse = new TransferConfig();
-    return _client.invoke<TransferConfig>(ctx, 'DataTransferService',
+  $async.Future<$2.TransferConfig> createTransferConfig(
+      $pb.ClientContext ctx, CreateTransferConfigRequest request) {
+    var emptyResponse = $2.TransferConfig();
+    return _client.invoke<$2.TransferConfig>(ctx, 'DataTransferService',
         'CreateTransferConfig', request, emptyResponse);
   }
 
-  Future<TransferConfig> updateTransferConfig(
-      ClientContext ctx, UpdateTransferConfigRequest request) {
-    var emptyResponse = new TransferConfig();
-    return _client.invoke<TransferConfig>(ctx, 'DataTransferService',
+  $async.Future<$2.TransferConfig> updateTransferConfig(
+      $pb.ClientContext ctx, UpdateTransferConfigRequest request) {
+    var emptyResponse = $2.TransferConfig();
+    return _client.invoke<$2.TransferConfig>(ctx, 'DataTransferService',
         'UpdateTransferConfig', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> deleteTransferConfig(
-      ClientContext ctx, DeleteTransferConfigRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'DataTransferService',
+  $async.Future<$5.Empty> deleteTransferConfig(
+      $pb.ClientContext ctx, DeleteTransferConfigRequest request) {
+    var emptyResponse = $5.Empty();
+    return _client.invoke<$5.Empty>(ctx, 'DataTransferService',
         'DeleteTransferConfig', request, emptyResponse);
   }
 
-  Future<TransferConfig> getTransferConfig(
-      ClientContext ctx, GetTransferConfigRequest request) {
-    var emptyResponse = new TransferConfig();
-    return _client.invoke<TransferConfig>(ctx, 'DataTransferService',
+  $async.Future<$2.TransferConfig> getTransferConfig(
+      $pb.ClientContext ctx, GetTransferConfigRequest request) {
+    var emptyResponse = $2.TransferConfig();
+    return _client.invoke<$2.TransferConfig>(ctx, 'DataTransferService',
         'GetTransferConfig', request, emptyResponse);
   }
 
-  Future<ListTransferConfigsResponse> listTransferConfigs(
-      ClientContext ctx, ListTransferConfigsRequest request) {
-    var emptyResponse = new ListTransferConfigsResponse();
+  $async.Future<ListTransferConfigsResponse> listTransferConfigs(
+      $pb.ClientContext ctx, ListTransferConfigsRequest request) {
+    var emptyResponse = ListTransferConfigsResponse();
     return _client.invoke<ListTransferConfigsResponse>(ctx,
         'DataTransferService', 'ListTransferConfigs', request, emptyResponse);
   }
 
-  Future<ScheduleTransferRunsResponse> scheduleTransferRuns(
-      ClientContext ctx, ScheduleTransferRunsRequest request) {
-    var emptyResponse = new ScheduleTransferRunsResponse();
+  $async.Future<ScheduleTransferRunsResponse> scheduleTransferRuns(
+      $pb.ClientContext ctx, ScheduleTransferRunsRequest request) {
+    var emptyResponse = ScheduleTransferRunsResponse();
     return _client.invoke<ScheduleTransferRunsResponse>(ctx,
         'DataTransferService', 'ScheduleTransferRuns', request, emptyResponse);
   }
 
-  Future<TransferRun> getTransferRun(
-      ClientContext ctx, GetTransferRunRequest request) {
-    var emptyResponse = new TransferRun();
-    return _client.invoke<TransferRun>(
+  $async.Future<$2.TransferRun> getTransferRun(
+      $pb.ClientContext ctx, GetTransferRunRequest request) {
+    var emptyResponse = $2.TransferRun();
+    return _client.invoke<$2.TransferRun>(
         ctx, 'DataTransferService', 'GetTransferRun', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> deleteTransferRun(
-      ClientContext ctx, DeleteTransferRunRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'DataTransferService',
+  $async.Future<$5.Empty> deleteTransferRun(
+      $pb.ClientContext ctx, DeleteTransferRunRequest request) {
+    var emptyResponse = $5.Empty();
+    return _client.invoke<$5.Empty>(ctx, 'DataTransferService',
         'DeleteTransferRun', request, emptyResponse);
   }
 
-  Future<ListTransferRunsResponse> listTransferRuns(
-      ClientContext ctx, ListTransferRunsRequest request) {
-    var emptyResponse = new ListTransferRunsResponse();
+  $async.Future<ListTransferRunsResponse> listTransferRuns(
+      $pb.ClientContext ctx, ListTransferRunsRequest request) {
+    var emptyResponse = ListTransferRunsResponse();
     return _client.invoke<ListTransferRunsResponse>(
         ctx, 'DataTransferService', 'ListTransferRuns', request, emptyResponse);
   }
 
-  Future<ListTransferLogsResponse> listTransferLogs(
-      ClientContext ctx, ListTransferLogsRequest request) {
-    var emptyResponse = new ListTransferLogsResponse();
+  $async.Future<ListTransferLogsResponse> listTransferLogs(
+      $pb.ClientContext ctx, ListTransferLogsRequest request) {
+    var emptyResponse = ListTransferLogsResponse();
     return _client.invoke<ListTransferLogsResponse>(
         ctx, 'DataTransferService', 'ListTransferLogs', request, emptyResponse);
   }
 
-  Future<CheckValidCredsResponse> checkValidCreds(
-      ClientContext ctx, CheckValidCredsRequest request) {
-    var emptyResponse = new CheckValidCredsResponse();
+  $async.Future<CheckValidCredsResponse> checkValidCreds(
+      $pb.ClientContext ctx, CheckValidCredsRequest request) {
+    var emptyResponse = CheckValidCredsResponse();
     return _client.invoke<CheckValidCredsResponse>(
         ctx, 'DataTransferService', 'CheckValidCreds', request, emptyResponse);
   }

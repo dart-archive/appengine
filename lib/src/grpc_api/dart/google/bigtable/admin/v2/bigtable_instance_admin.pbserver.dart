@@ -1,106 +1,111 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'bigtable_instance_admin.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
-import 'instance.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../../iam/v1/policy.pb.dart' as $google$iam$v1;
+import '../../../longrunning/operations.pb.dart' as $3;
+import 'instance.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $4;
+import '../../../iam/v1/iam_policy.pb.dart' as $5;
+import '../../../iam/v1/policy.pb.dart' as $6;
 import 'bigtable_instance_admin.pbjson.dart';
 
 export 'bigtable_instance_admin.pb.dart';
 
-abstract class BigtableInstanceAdminServiceBase extends GeneratedService {
-  Future<$google$longrunning.Operation> createInstance(
-      ServerContext ctx, CreateInstanceRequest request);
-  Future<Instance> getInstance(ServerContext ctx, GetInstanceRequest request);
-  Future<ListInstancesResponse> listInstances(
-      ServerContext ctx, ListInstancesRequest request);
-  Future<Instance> updateInstance(ServerContext ctx, Instance request);
-  Future<$google$longrunning.Operation> partialUpdateInstance(
-      ServerContext ctx, PartialUpdateInstanceRequest request);
-  Future<$google$protobuf.Empty> deleteInstance(
-      ServerContext ctx, DeleteInstanceRequest request);
-  Future<$google$longrunning.Operation> createCluster(
-      ServerContext ctx, CreateClusterRequest request);
-  Future<Cluster> getCluster(ServerContext ctx, GetClusterRequest request);
-  Future<ListClustersResponse> listClusters(
-      ServerContext ctx, ListClustersRequest request);
-  Future<$google$longrunning.Operation> updateCluster(
-      ServerContext ctx, Cluster request);
-  Future<$google$protobuf.Empty> deleteCluster(
-      ServerContext ctx, DeleteClusterRequest request);
-  Future<AppProfile> createAppProfile(
-      ServerContext ctx, CreateAppProfileRequest request);
-  Future<AppProfile> getAppProfile(
-      ServerContext ctx, GetAppProfileRequest request);
-  Future<ListAppProfilesResponse> listAppProfiles(
-      ServerContext ctx, ListAppProfilesRequest request);
-  Future<$google$longrunning.Operation> updateAppProfile(
-      ServerContext ctx, UpdateAppProfileRequest request);
-  Future<$google$protobuf.Empty> deleteAppProfile(
-      ServerContext ctx, DeleteAppProfileRequest request);
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
+abstract class BigtableInstanceAdminServiceBase extends $pb.GeneratedService {
+  $async.Future<$3.Operation> createInstance(
+      $pb.ServerContext ctx, CreateInstanceRequest request);
+  $async.Future<$0.Instance> getInstance(
+      $pb.ServerContext ctx, GetInstanceRequest request);
+  $async.Future<ListInstancesResponse> listInstances(
+      $pb.ServerContext ctx, ListInstancesRequest request);
+  $async.Future<$0.Instance> updateInstance(
+      $pb.ServerContext ctx, $0.Instance request);
+  $async.Future<$3.Operation> partialUpdateInstance(
+      $pb.ServerContext ctx, PartialUpdateInstanceRequest request);
+  $async.Future<$4.Empty> deleteInstance(
+      $pb.ServerContext ctx, DeleteInstanceRequest request);
+  $async.Future<$3.Operation> createCluster(
+      $pb.ServerContext ctx, CreateClusterRequest request);
+  $async.Future<$0.Cluster> getCluster(
+      $pb.ServerContext ctx, GetClusterRequest request);
+  $async.Future<ListClustersResponse> listClusters(
+      $pb.ServerContext ctx, ListClustersRequest request);
+  $async.Future<$3.Operation> updateCluster(
+      $pb.ServerContext ctx, $0.Cluster request);
+  $async.Future<$4.Empty> deleteCluster(
+      $pb.ServerContext ctx, DeleteClusterRequest request);
+  $async.Future<$0.AppProfile> createAppProfile(
+      $pb.ServerContext ctx, CreateAppProfileRequest request);
+  $async.Future<$0.AppProfile> getAppProfile(
+      $pb.ServerContext ctx, GetAppProfileRequest request);
+  $async.Future<ListAppProfilesResponse> listAppProfiles(
+      $pb.ServerContext ctx, ListAppProfilesRequest request);
+  $async.Future<$3.Operation> updateAppProfile(
+      $pb.ServerContext ctx, UpdateAppProfileRequest request);
+  $async.Future<$4.Empty> deleteAppProfile(
+      $pb.ServerContext ctx, DeleteAppProfileRequest request);
+  $async.Future<$6.Policy> getIamPolicy(
+      $pb.ServerContext ctx, $5.GetIamPolicyRequest request);
+  $async.Future<$6.Policy> setIamPolicy(
+      $pb.ServerContext ctx, $5.SetIamPolicyRequest request);
+  $async.Future<$5.TestIamPermissionsResponse> testIamPermissions(
+      $pb.ServerContext ctx, $5.TestIamPermissionsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'CreateInstance':
-        return new CreateInstanceRequest();
+        return CreateInstanceRequest();
       case 'GetInstance':
-        return new GetInstanceRequest();
+        return GetInstanceRequest();
       case 'ListInstances':
-        return new ListInstancesRequest();
+        return ListInstancesRequest();
       case 'UpdateInstance':
-        return new Instance();
+        return $0.Instance();
       case 'PartialUpdateInstance':
-        return new PartialUpdateInstanceRequest();
+        return PartialUpdateInstanceRequest();
       case 'DeleteInstance':
-        return new DeleteInstanceRequest();
+        return DeleteInstanceRequest();
       case 'CreateCluster':
-        return new CreateClusterRequest();
+        return CreateClusterRequest();
       case 'GetCluster':
-        return new GetClusterRequest();
+        return GetClusterRequest();
       case 'ListClusters':
-        return new ListClustersRequest();
+        return ListClustersRequest();
       case 'UpdateCluster':
-        return new Cluster();
+        return $0.Cluster();
       case 'DeleteCluster':
-        return new DeleteClusterRequest();
+        return DeleteClusterRequest();
       case 'CreateAppProfile':
-        return new CreateAppProfileRequest();
+        return CreateAppProfileRequest();
       case 'GetAppProfile':
-        return new GetAppProfileRequest();
+        return GetAppProfileRequest();
       case 'ListAppProfiles':
-        return new ListAppProfilesRequest();
+        return ListAppProfilesRequest();
       case 'UpdateAppProfile':
-        return new UpdateAppProfileRequest();
+        return UpdateAppProfileRequest();
       case 'DeleteAppProfile':
-        return new DeleteAppProfileRequest();
+        return DeleteAppProfileRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $5.GetIamPolicyRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $5.SetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $5.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'CreateInstance':
         return this.createInstance(ctx, request);
@@ -141,11 +146,12 @@ abstract class BigtableInstanceAdminServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => BigtableInstanceAdmin$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      BigtableInstanceAdmin$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      BigtableInstanceAdminServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => BigtableInstanceAdminServiceBase$messageJson;
 }

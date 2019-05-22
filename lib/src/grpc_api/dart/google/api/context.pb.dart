@@ -1,83 +1,80 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/context.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Context extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Context')
-    ..pp<ContextRule>(
-        1, 'rules', PbFieldType.PM, ContextRule.$checkItem, ContextRule.create)
-    ..hasRequiredFields = false;
+class Context extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('Context', package: const $pb.PackageName('google.api'))
+        ..pc<ContextRule>(1, 'rules', $pb.PbFieldType.PM, ContextRule.create)
+        ..hasRequiredFields = false;
 
   Context() : super();
-  Context.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Context.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Context.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Context.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Context clone() => new Context()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Context create() => new Context();
-  static PbList<Context> createRepeated() => new PbList<Context>();
-  static Context getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyContext();
-    return _defaultInstance;
-  }
-
+  Context clone() => Context()..mergeFromMessage(this);
+  Context copyWith(void Function(Context) updates) =>
+      super.copyWith((message) => updates(message as Context));
+  $pb.BuilderInfo get info_ => _i;
+  static Context create() => Context();
+  Context createEmptyInstance() => create();
+  static $pb.PbList<Context> createRepeated() => $pb.PbList<Context>();
+  static Context getDefault() => _defaultInstance ??= create()..freeze();
   static Context _defaultInstance;
-  static void $checkItem(Context v) {
-    if (v is! Context) checkItemFailed(v, 'Context');
-  }
 
-  List<ContextRule> get rules => $_getList(0);
+  $core.List<ContextRule> get rules => $_getList(0);
 }
 
-class _ReadonlyContext extends Context with ReadonlyMessageMixin {}
-
-class ContextRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ContextRule')
+class ContextRule extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ContextRule',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'selector')
     ..pPS(2, 'requested')
     ..pPS(3, 'provided')
+    ..pPS(4, 'allowedRequestExtensions')
+    ..pPS(5, 'allowedResponseExtensions')
     ..hasRequiredFields = false;
 
   ContextRule() : super();
-  ContextRule.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ContextRule.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ContextRule.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ContextRule.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ContextRule clone() => new ContextRule()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ContextRule create() => new ContextRule();
-  static PbList<ContextRule> createRepeated() => new PbList<ContextRule>();
-  static ContextRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyContextRule();
-    return _defaultInstance;
-  }
-
+  ContextRule clone() => ContextRule()..mergeFromMessage(this);
+  ContextRule copyWith(void Function(ContextRule) updates) =>
+      super.copyWith((message) => updates(message as ContextRule));
+  $pb.BuilderInfo get info_ => _i;
+  static ContextRule create() => ContextRule();
+  ContextRule createEmptyInstance() => create();
+  static $pb.PbList<ContextRule> createRepeated() => $pb.PbList<ContextRule>();
+  static ContextRule getDefault() => _defaultInstance ??= create()..freeze();
   static ContextRule _defaultInstance;
-  static void $checkItem(ContextRule v) {
-    if (v is! ContextRule) checkItemFailed(v, 'ContextRule');
-  }
 
-  String get selector => $_getS(0, '');
-  set selector(String v) {
+  $core.String get selector => $_getS(0, '');
+  set selector($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSelector() => $_has(0);
+  $core.bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  List<String> get requested => $_getList(1);
+  $core.List<$core.String> get requested => $_getList(1);
 
-  List<String> get provided => $_getList(2);
+  $core.List<$core.String> get provided => $_getList(2);
+
+  $core.List<$core.String> get allowedRequestExtensions => $_getList(3);
+
+  $core.List<$core.String> get allowedResponseExtensions => $_getList(4);
 }
-
-class _ReadonlyContextRule extends ContextRule with ReadonlyMessageMixin {}

@@ -1,213 +1,216 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/cloudprofiler/v2/profiler.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $google$protobuf;
+import '../../../protobuf/field_mask.pb.dart' as $0;
+import '../../../protobuf/duration.pb.dart' as $1;
 
 import 'profiler.pbenum.dart';
 
 export 'profiler.pbenum.dart';
 
-class CreateProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateProfileRequest')
-    ..a<Deployment>(1, 'deployment', PbFieldType.OM, Deployment.getDefault,
+class CreateProfileRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateProfileRequest',
+      package: const $pb.PackageName('google.devtools.cloudprofiler.v2'))
+    ..a<Deployment>(1, 'deployment', $pb.PbFieldType.OM, Deployment.getDefault,
         Deployment.create)
-    ..pp<ProfileType>(2, 'profileType', PbFieldType.PE, ProfileType.$checkItem,
-        null, ProfileType.valueOf, ProfileType.values)
-    ..a<Profile>(
-        3, 'profile', PbFieldType.OM, Profile.getDefault, Profile.create)
+    ..pc<ProfileType>(2, 'profileType', $pb.PbFieldType.PE, null,
+        ProfileType.valueOf, ProfileType.values)
+    ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
   CreateProfileRequest() : super();
-  CreateProfileRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateProfileRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateProfileRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateProfileRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateProfileRequest clone() =>
-      new CreateProfileRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateProfileRequest create() => new CreateProfileRequest();
-  static PbList<CreateProfileRequest> createRepeated() =>
-      new PbList<CreateProfileRequest>();
-  static CreateProfileRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateProfileRequest();
-    return _defaultInstance;
-  }
-
+      CreateProfileRequest()..mergeFromMessage(this);
+  CreateProfileRequest copyWith(void Function(CreateProfileRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateProfileRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateProfileRequest create() => CreateProfileRequest();
+  CreateProfileRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateProfileRequest> createRepeated() =>
+      $pb.PbList<CreateProfileRequest>();
+  static CreateProfileRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateProfileRequest _defaultInstance;
-  static void $checkItem(CreateProfileRequest v) {
-    if (v is! CreateProfileRequest) checkItemFailed(v, 'CreateProfileRequest');
-  }
 
   Deployment get deployment => $_getN(0);
   set deployment(Deployment v) {
     setField(1, v);
   }
 
-  bool hasDeployment() => $_has(0);
+  $core.bool hasDeployment() => $_has(0);
   void clearDeployment() => clearField(1);
 
-  List<ProfileType> get profileType => $_getList(1);
+  $core.List<ProfileType> get profileType => $_getList(1);
 
-  Profile get profile => $_getN(2);
-  set profile(Profile v) {
-    setField(3, v);
+  $core.String get parent => $_getS(2, '');
+  set parent($core.String v) {
+    $_setString(2, v);
   }
 
-  bool hasProfile() => $_has(2);
-  void clearProfile() => clearField(3);
+  $core.bool hasParent() => $_has(2);
+  void clearParent() => clearField(4);
 }
 
-class _ReadonlyCreateProfileRequest extends CreateProfileRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateProfileRequest')
+class CreateOfflineProfileRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'CreateOfflineProfileRequest',
+      package: const $pb.PackageName('google.devtools.cloudprofiler.v2'))
+    ..aOS(1, 'parent')
     ..a<Profile>(
-        1, 'profile', PbFieldType.OM, Profile.getDefault, Profile.create)
+        2, 'profile', $pb.PbFieldType.OM, Profile.getDefault, Profile.create)
+    ..hasRequiredFields = false;
+
+  CreateOfflineProfileRequest() : super();
+  CreateOfflineProfileRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CreateOfflineProfileRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CreateOfflineProfileRequest clone() =>
+      CreateOfflineProfileRequest()..mergeFromMessage(this);
+  CreateOfflineProfileRequest copyWith(
+          void Function(CreateOfflineProfileRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as CreateOfflineProfileRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateOfflineProfileRequest create() => CreateOfflineProfileRequest();
+  CreateOfflineProfileRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateOfflineProfileRequest> createRepeated() =>
+      $pb.PbList<CreateOfflineProfileRequest>();
+  static CreateOfflineProfileRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static CreateOfflineProfileRequest _defaultInstance;
+
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasParent() => $_has(0);
+  void clearParent() => clearField(1);
+
+  Profile get profile => $_getN(1);
+  set profile(Profile v) {
+    setField(2, v);
+  }
+
+  $core.bool hasProfile() => $_has(1);
+  void clearProfile() => clearField(2);
+}
+
+class UpdateProfileRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateProfileRequest',
+      package: const $pb.PackageName('google.devtools.cloudprofiler.v2'))
+    ..a<Profile>(
+        1, 'profile', $pb.PbFieldType.OM, Profile.getDefault, Profile.create)
+    ..a<$0.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $0.FieldMask.getDefault, $0.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateProfileRequest() : super();
-  UpdateProfileRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateProfileRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateProfileRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateProfileRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateProfileRequest clone() =>
-      new UpdateProfileRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateProfileRequest create() => new UpdateProfileRequest();
-  static PbList<UpdateProfileRequest> createRepeated() =>
-      new PbList<UpdateProfileRequest>();
-  static UpdateProfileRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateProfileRequest();
-    return _defaultInstance;
-  }
-
+      UpdateProfileRequest()..mergeFromMessage(this);
+  UpdateProfileRequest copyWith(void Function(UpdateProfileRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateProfileRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateProfileRequest create() => UpdateProfileRequest();
+  UpdateProfileRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateProfileRequest> createRepeated() =>
+      $pb.PbList<UpdateProfileRequest>();
+  static UpdateProfileRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateProfileRequest _defaultInstance;
-  static void $checkItem(UpdateProfileRequest v) {
-    if (v is! UpdateProfileRequest) checkItemFailed(v, 'UpdateProfileRequest');
-  }
 
   Profile get profile => $_getN(0);
   set profile(Profile v) {
     setField(1, v);
   }
 
-  bool hasProfile() => $_has(0);
+  $core.bool hasProfile() => $_has(0);
   void clearProfile() => clearField(1);
+
+  $0.FieldMask get updateMask => $_getN(1);
+  set updateMask($0.FieldMask v) {
+    setField(2, v);
+  }
+
+  $core.bool hasUpdateMask() => $_has(1);
+  void clearUpdateMask() => clearField(2);
 }
 
-class _ReadonlyUpdateProfileRequest extends UpdateProfileRequest
-    with ReadonlyMessageMixin {}
-
-class Profile_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Profile_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Profile_LabelsEntry() : super();
-  Profile_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Profile_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Profile_LabelsEntry clone() =>
-      new Profile_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Profile_LabelsEntry create() => new Profile_LabelsEntry();
-  static PbList<Profile_LabelsEntry> createRepeated() =>
-      new PbList<Profile_LabelsEntry>();
-  static Profile_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyProfile_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static Profile_LabelsEntry _defaultInstance;
-  static void $checkItem(Profile_LabelsEntry v) {
-    if (v is! Profile_LabelsEntry) checkItemFailed(v, 'Profile_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyProfile_LabelsEntry extends Profile_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class Profile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Profile')
+class Profile extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Profile',
+      package: const $pb.PackageName('google.devtools.cloudprofiler.v2'))
     ..aOS(1, 'name')
     ..e<ProfileType>(
         2,
         'profileType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ProfileType.PROFILE_TYPE_UNSPECIFIED,
         ProfileType.valueOf,
         ProfileType.values)
-    ..a<Deployment>(3, 'deployment', PbFieldType.OM, Deployment.getDefault,
+    ..a<Deployment>(3, 'deployment', $pb.PbFieldType.OM, Deployment.getDefault,
         Deployment.create)
-    ..a<$google$protobuf.Duration>(4, 'duration', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<List<int>>(5, 'profileBytes', PbFieldType.OY)
-    ..pp<Profile_LabelsEntry>(6, 'labels', PbFieldType.PM,
-        Profile_LabelsEntry.$checkItem, Profile_LabelsEntry.create)
+    ..a<$1.Duration>(4, 'duration', $pb.PbFieldType.OM, $1.Duration.getDefault,
+        $1.Duration.create)
+    ..a<$core.List<$core.int>>(5, 'profileBytes', $pb.PbFieldType.OY)
+    ..m<$core.String, $core.String>(
+        6,
+        'labels',
+        'Profile.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.devtools.cloudprofiler.v2'))
     ..hasRequiredFields = false;
 
   Profile() : super();
-  Profile.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Profile.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Profile.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Profile.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Profile clone() => new Profile()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Profile create() => new Profile();
-  static PbList<Profile> createRepeated() => new PbList<Profile>();
-  static Profile getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProfile();
-    return _defaultInstance;
-  }
-
+  Profile clone() => Profile()..mergeFromMessage(this);
+  Profile copyWith(void Function(Profile) updates) =>
+      super.copyWith((message) => updates(message as Profile));
+  $pb.BuilderInfo get info_ => _i;
+  static Profile create() => Profile();
+  Profile createEmptyInstance() => create();
+  static $pb.PbList<Profile> createRepeated() => $pb.PbList<Profile>();
+  static Profile getDefault() => _defaultInstance ??= create()..freeze();
   static Profile _defaultInstance;
-  static void $checkItem(Profile v) {
-    if (v is! Profile) checkItemFailed(v, 'Profile');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   ProfileType get profileType => $_getN(1);
@@ -215,7 +218,7 @@ class Profile extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasProfileType() => $_has(1);
+  $core.bool hasProfileType() => $_has(1);
   void clearProfileType() => clearField(2);
 
   Deployment get deployment => $_getN(2);
@@ -223,144 +226,102 @@ class Profile extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasDeployment() => $_has(2);
+  $core.bool hasDeployment() => $_has(2);
   void clearDeployment() => clearField(3);
 
-  $google$protobuf.Duration get duration => $_getN(3);
-  set duration($google$protobuf.Duration v) {
+  $1.Duration get duration => $_getN(3);
+  set duration($1.Duration v) {
     setField(4, v);
   }
 
-  bool hasDuration() => $_has(3);
+  $core.bool hasDuration() => $_has(3);
   void clearDuration() => clearField(4);
 
-  List<int> get profileBytes => $_getN(4);
-  set profileBytes(List<int> v) {
+  $core.List<$core.int> get profileBytes => $_getN(4);
+  set profileBytes($core.List<$core.int> v) {
     $_setBytes(4, v);
   }
 
-  bool hasProfileBytes() => $_has(4);
+  $core.bool hasProfileBytes() => $_has(4);
   void clearProfileBytes() => clearField(5);
 
-  List<Profile_LabelsEntry> get labels => $_getList(5);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(5);
 }
 
-class _ReadonlyProfile extends Profile with ReadonlyMessageMixin {}
-
-class Deployment_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Deployment_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Deployment_LabelsEntry() : super();
-  Deployment_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Deployment_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Deployment_LabelsEntry clone() =>
-      new Deployment_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Deployment_LabelsEntry create() => new Deployment_LabelsEntry();
-  static PbList<Deployment_LabelsEntry> createRepeated() =>
-      new PbList<Deployment_LabelsEntry>();
-  static Deployment_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeployment_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static Deployment_LabelsEntry _defaultInstance;
-  static void $checkItem(Deployment_LabelsEntry v) {
-    if (v is! Deployment_LabelsEntry)
-      checkItemFailed(v, 'Deployment_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyDeployment_LabelsEntry extends Deployment_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class Deployment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Deployment')
+class Deployment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Deployment',
+      package: const $pb.PackageName('google.devtools.cloudprofiler.v2'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'target')
-    ..pp<Deployment_LabelsEntry>(3, 'labels', PbFieldType.PM,
-        Deployment_LabelsEntry.$checkItem, Deployment_LabelsEntry.create)
+    ..m<$core.String, $core.String>(
+        3,
+        'labels',
+        'Deployment.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.devtools.cloudprofiler.v2'))
     ..hasRequiredFields = false;
 
   Deployment() : super();
-  Deployment.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Deployment.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Deployment.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Deployment.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Deployment clone() => new Deployment()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Deployment create() => new Deployment();
-  static PbList<Deployment> createRepeated() => new PbList<Deployment>();
-  static Deployment getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeployment();
-    return _defaultInstance;
-  }
-
+  Deployment clone() => Deployment()..mergeFromMessage(this);
+  Deployment copyWith(void Function(Deployment) updates) =>
+      super.copyWith((message) => updates(message as Deployment));
+  $pb.BuilderInfo get info_ => _i;
+  static Deployment create() => Deployment();
+  Deployment createEmptyInstance() => create();
+  static $pb.PbList<Deployment> createRepeated() => $pb.PbList<Deployment>();
+  static Deployment getDefault() => _defaultInstance ??= create()..freeze();
   static Deployment _defaultInstance;
-  static void $checkItem(Deployment v) {
-    if (v is! Deployment) checkItemFailed(v, 'Deployment');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get target => $_getS(1, '');
-  set target(String v) {
+  $core.String get target => $_getS(1, '');
+  set target($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasTarget() => $_has(1);
+  $core.bool hasTarget() => $_has(1);
   void clearTarget() => clearField(2);
 
-  List<Deployment_LabelsEntry> get labels => $_getList(2);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(2);
 }
 
-class _ReadonlyDeployment extends Deployment with ReadonlyMessageMixin {}
-
 class ProfilerServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   ProfilerServiceApi(this._client);
 
-  Future<Profile> createProfile(
-      ClientContext ctx, CreateProfileRequest request) {
-    var emptyResponse = new Profile();
+  $async.Future<Profile> createProfile(
+      $pb.ClientContext ctx, CreateProfileRequest request) {
+    var emptyResponse = Profile();
     return _client.invoke<Profile>(
         ctx, 'ProfilerService', 'CreateProfile', request, emptyResponse);
   }
 
-  Future<Profile> updateProfile(
-      ClientContext ctx, UpdateProfileRequest request) {
-    var emptyResponse = new Profile();
+  $async.Future<Profile> createOfflineProfile(
+      $pb.ClientContext ctx, CreateOfflineProfileRequest request) {
+    var emptyResponse = Profile();
+    return _client.invoke<Profile>(
+        ctx, 'ProfilerService', 'CreateOfflineProfile', request, emptyResponse);
+  }
+
+  $async.Future<Profile> updateProfile(
+      $pb.ClientContext ctx, UpdateProfileRequest request) {
+    var emptyResponse = Profile();
     return _client.invoke<Profile>(
         ctx, 'ProfilerService', 'UpdateProfile', request, emptyResponse);
   }

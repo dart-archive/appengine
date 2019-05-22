@@ -38,21 +38,23 @@ asyncExpect(Future future, matcher) async {
   // without.
   try {
     await future;
-  } catch (error) {}
+  } catch (error) {
+    print('Uncaught error: $error');
+  }
 
   // Validate the result, where [match]er can check for an error or a value.
   expect(future, matcher);
 }
 
 main() {
-  final a = new MockGeneratedMessage();
-  final b = new MockGeneratedMessage();
+  final a = MockGeneratedMessage();
+  final b = MockGeneratedMessage();
 
   group('grpc', () {
     group('channel', () {
       test('invoke', () async {
-        final mockClient = new MockClient();
-        final channel = new grpc.Channel('<fqn>', mockClient);
+        final mockClient = MockClient();
+        final channel = grpc.Channel('<fqn>', mockClient);
         final result = await channel.invoke(null, 'service', 'method', a, b);
 
         expect(mockClient.invokeService, '<fqn>.service');
@@ -67,30 +69,30 @@ main() {
       final timeout = 42;
 
       test('dialing-error', () {
-        final dialer = new MockDialer(true);
-        final tokenProvider = new ValidMockAccessTokenProvider();
-        final client = new grpc.Client(dialer, tokenProvider, timeout);
+        final dialer = MockDialer(true);
+        final tokenProvider = ValidMockAccessTokenProvider();
+        final client = grpc.Client(dialer, tokenProvider, timeout);
 
         expect(client.invoke('a', 'b', a, b), throwsA(isNetworkException));
       });
 
       test('token-provider-error', () {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
-              (new StreamController<http2.StreamMessage>()..close()).stream);
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
+              (StreamController<http2.StreamMessage>()..close()).stream);
         });
-        final tokenProvider = new ThrowingMockAccessTokenProvider();
-        final client = new grpc.Client(dialer, tokenProvider, timeout);
+        final tokenProvider = ThrowingMockAccessTokenProvider();
+        final client = grpc.Client(dialer, tokenProvider, timeout);
 
         expect(
             client.invoke('a', 'b', a, b), throwsA(isAuthenticationException));
       });
 
       test('wrong-status', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(buildGrpcResponseMessages(status: 400));
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(buildGrpcResponseMessages(status: 400));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isProtocolException));
@@ -98,11 +100,11 @@ main() {
       });
 
       test('wrong-content-type', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
               buildGrpcResponseMessages(contentType: 'foobar'));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isProtocolException));
@@ -110,11 +112,11 @@ main() {
       });
 
       test('wrong-length', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
               buildGrpcResponseMessages(wrongLength: true));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isProtocolException));
@@ -122,11 +124,11 @@ main() {
       });
 
       test('invalid-proto', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
               buildGrpcResponseMessages(invalidProto: true));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isProtocolException));
@@ -134,11 +136,11 @@ main() {
       });
 
       test('unsupported-compressed', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
               buildGrpcResponseMessages(compressed: true));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isProtocolException));
@@ -146,11 +148,11 @@ main() {
       });
 
       test('missing-trailing-headers', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
               buildGrpcResponseMessages(failure: Failure.MissingTrailers));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isProtocolException));
@@ -158,11 +160,11 @@ main() {
       });
 
       test('http2-stream-error', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
               buildGrpcResponseMessages(failure: Failure.StreamException));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isNetworkException));
@@ -175,11 +177,11 @@ main() {
       });
 
       test('http2-connection-error', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
               buildGrpcResponseMessages(failure: Failure.ConnectionException));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isNetworkException));
@@ -192,22 +194,22 @@ main() {
       });
 
       test('rpc-error', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(
               buildGrpcResponseMessages(grpcStatus: grpc.ErrorCode.Aborted));
         });
-        final client = new grpc.Client(dialer, null, timeout);
+        final client = grpc.Client(dialer, null, timeout);
 
         expect(client.invoke('a', 'b', a, b),
             throwsA(isRpcException(grpc.ErrorCode.Aborted)));
       });
 
       test('successful-grpc-call', () async {
-        final dialer = new MockDialer(false, () {
-          return new OpenMockConnection(buildGrpcResponseMessages());
+        final dialer = MockDialer(false, () {
+          return OpenMockConnection(buildGrpcResponseMessages());
         });
-        final tokenProvider = new ValidMockAccessTokenProvider();
-        final client = new grpc.Client(dialer, tokenProvider, timeout);
+        final tokenProvider = ValidMockAccessTokenProvider();
+        final client = grpc.Client(dialer, tokenProvider, timeout);
 
         final result = await client.invoke('a', 'b', a, b);
         expect(identical(result, b), true);
@@ -228,14 +230,14 @@ main() {
 
       test('successful-grpc-call--with-reconnect', () async {
         int attempt = 0;
-        final dialer = new MockDialer(false, () {
+        final dialer = MockDialer(false, () {
           if (attempt++ < 1) {
-            return new ClosedMockConnection();
+            return ClosedMockConnection();
           }
-          return new OpenMockConnection(buildGrpcResponseMessages());
+          return OpenMockConnection(buildGrpcResponseMessages());
         });
-        final tokenProvider = new ValidMockAccessTokenProvider();
-        final client = new grpc.Client(dialer, tokenProvider, timeout);
+        final tokenProvider = ValidMockAccessTokenProvider();
+        final client = grpc.Client(dialer, tokenProvider, timeout);
 
         await asyncExpect(
             client.invoke('a', 'b', a, b), throwsA(isNetworkException));
@@ -266,34 +268,34 @@ enum Failure {
 }
 
 buildGrpcResponseMessages(
-    {int status: 200,
-    int grpcStatus: 0,
-    String contentType: 'application/grpc',
-    bool wrongLength: false,
-    bool invalidProto: false,
-    bool compressed: false,
-    Failure failure: Failure.None}) {
-  final controller = new StreamController<http2.StreamMessage>();
+    {int status = 200,
+    int grpcStatus = 0,
+    String contentType = 'application/grpc',
+    bool wrongLength = false,
+    bool invalidProto = false,
+    bool compressed = false,
+    Failure failure = Failure.None}) {
+  final controller = StreamController<http2.StreamMessage>();
   final responseMessages = <http2.StreamMessage>[
-    new http2.HeadersStreamMessage([
-      new http2.Header.ascii(':status', '$status'),
-      new http2.Header.ascii('content-type', contentType),
+    http2.HeadersStreamMessage([
+      http2.Header.ascii(':status', '$status'),
+      http2.Header.ascii('content-type', contentType),
     ]),
-    new http2.DataStreamMessage(
+    http2.DataStreamMessage(
         buildValidGrpcResponseData(compressed, wrongLength, invalidProto)),
   ];
   switch (failure) {
     case Failure.MissingTrailers:
       break;
     case Failure.StreamException:
-      controller.addError(new http2.StreamTransportException('42'));
+      controller.addError(http2.StreamTransportException('42'));
       break;
     case Failure.ConnectionException:
-      controller.addError(new http2.TransportConnectionException(42, '42'));
+      controller.addError(http2.TransportConnectionException(42, '42'));
       break;
     case Failure.None:
-      responseMessages.add(new http2.HeadersStreamMessage(
-          [new http2.Header.ascii('grpc-status', '$grpcStatus')]));
+      responseMessages.add(http2.HeadersStreamMessage(
+          [http2.Header.ascii('grpc-status', '$grpcStatus')]));
       break;
   }
 
@@ -305,11 +307,10 @@ buildGrpcResponseMessages(
 
 buildValidGrpcResponseData(
     bool compressed, bool wrongLength, bool invalidProto) {
-  final message = invalidProto
-      ? [99, 88, 77, 66]
-      : new MockGeneratedMessage().writeToBuffer();
+  final message =
+      invalidProto ? [99, 88, 77, 66] : MockGeneratedMessage().writeToBuffer();
   final int length = wrongLength ? 1 : message.length;
-  final grpcData = new ByteData(5 + message.length)
+  final grpcData = ByteData(5 + message.length)
     ..setUint8(0, compressed ? 1 : 0)
     ..setUint32(1, length)
     ..buffer.asUint8List().setAll(5, message);
@@ -334,13 +335,18 @@ class MockClient implements grpc.Client {
 }
 
 class MockGeneratedMessage extends protobuf.GeneratedMessage {
-  static final protobuf.BuilderInfo _i = new protobuf.BuilderInfo('VoidProto')
+  static final protobuf.BuilderInfo _i = protobuf.BuilderInfo('VoidProto')
     ..hasRequiredFields = false;
 
   MockGeneratedMessage() : super();
   MockGeneratedMessage clone() =>
-      new MockGeneratedMessage()..mergeFromMessage(this);
+      MockGeneratedMessage()..mergeFromMessage(this);
   protobuf.BuilderInfo get info_ => _i;
+
+  @override
+  MockGeneratedMessage createEmptyInstance() {
+    return MockGeneratedMessage();
+  }
 }
 
 class MockDialer implements grpc.Dialer {
@@ -356,7 +362,7 @@ class MockDialer implements grpc.Dialer {
 
   Future<http2.TransportConnection> dial() async {
     if (throwOnDial) {
-      throw new grpc.NetworkException('dialing error');
+      throw grpc.NetworkException('dialing error');
     }
     return usedConnection = connectionCreator();
   }
@@ -367,7 +373,7 @@ abstract class MockConnection implements http2.ClientTransportConnection {
   MockStream get usedMockStream => throw 'unsupported call';
   bool get wasTerminated => false;
 
-  MockStream makeRequest(List<http2.Header> headers, {bool endStream: false}) {
+  MockStream makeRequest(List<http2.Header> headers, {bool endStream = false}) {
     throw 'unsupported call';
   }
 
@@ -400,7 +406,7 @@ class OpenMockConnection extends MockConnection {
 
   OpenMockConnection(this.responseMessages);
 
-  MockStream makeRequest(List<http2.Header> headers, {bool endStream: false}) {
+  MockStream makeRequest(List<http2.Header> headers, {bool endStream = false}) {
     if (usedHeaders != null) throw 'Already have headers';
 
     usedHeaders = {};
@@ -408,7 +414,7 @@ class OpenMockConnection extends MockConnection {
       usedHeaders[ascii.decode(h.name)] = ascii.decode(h.value);
     }
 
-    return usedMockStream = new MockStream(responseMessages);
+    return usedMockStream = MockStream(responseMessages);
   }
 
   Future terminate() async {
@@ -423,9 +429,9 @@ class ClosedMockConnection extends MockConnection {
 
 class MockStream extends http2.ClientTransportStream {
   final StreamController<http2.StreamMessage> _outgoingMessages =
-      new StreamController<http2.StreamMessage>();
+      StreamController<http2.StreamMessage>();
   final StreamController<http2.StreamMessage> _incomingMessages =
-      new StreamController<http2.StreamMessage>();
+      StreamController<http2.StreamMessage>();
   final Stream<http2.StreamMessage> responseMessages;
 
   List<int> usedData = [];
@@ -475,8 +481,8 @@ class ThrowingMockAccessTokenProvider implements AccessTokenProvider {
 
 class ValidMockAccessTokenProvider implements AccessTokenProvider {
   Future<auth.AccessToken> obtainAccessToken() async {
-    return new auth.AccessToken('Bearer', 'xxx',
-        new DateTime.now().toUtc().add(const Duration(hours: 1)));
+    return auth.AccessToken(
+        'Bearer', 'xxx', DateTime.now().toUtc().add(const Duration(hours: 1)));
   }
 
   Future close() async {}
@@ -484,16 +490,15 @@ class ValidMockAccessTokenProvider implements AccessTokenProvider {
 
 class ExpiredMockAccessTokenProvider implements AccessTokenProvider {
   Future<auth.AccessToken> obtainAccessToken() async {
-    return new auth.AccessToken('Bearer', 'xxx',
-        new DateTime.now().toUtc().subtract(const Duration(hours: 1)));
+    return auth.AccessToken('Bearer', 'xxx',
+        DateTime.now().toUtc().subtract(const Duration(hours: 1)));
   }
 
   Future close() async {}
 }
 
-const isNetworkException = const TypeMatcher<grpc.NetworkException>();
-const isAuthenticationException =
-    const TypeMatcher<grpc.AuthenticationException>();
-const isProtocolException = const TypeMatcher<grpc.ProtocolException>();
+const isNetworkException = TypeMatcher<grpc.NetworkException>();
+const isAuthenticationException = TypeMatcher<grpc.AuthenticationException>();
+const isProtocolException = TypeMatcher<grpc.ProtocolException>();
 Matcher isRpcException(int code) =>
     const TypeMatcher<grpc.RpcException>().having((i) => i.code, 'code', code);

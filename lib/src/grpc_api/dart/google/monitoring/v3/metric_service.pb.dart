@@ -1,534 +1,483 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/metric_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../api/monitored_resource.pb.dart' as $google$api;
-import '../../api/metric.pb.dart' as $google$api;
-import 'common.pb.dart';
-import 'metric.pb.dart';
-import '../../rpc/status.pb.dart' as $google$rpc;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../api/monitored_resource.pb.dart' as $0;
+import '../../api/metric.pb.dart' as $1;
+import 'common.pb.dart' as $2;
+import 'metric.pb.dart' as $3;
+import '../../rpc/status.pb.dart' as $4;
+import '../../protobuf/empty.pb.dart' as $5;
 
 import 'metric_service.pbenum.dart';
 
 export 'metric_service.pbenum.dart';
 
-class ListMonitoredResourceDescriptorsRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListMonitoredResourceDescriptorsRequest')
-        ..aOS(2, 'filter')
-        ..a<int>(3, 'pageSize', PbFieldType.O3)
-        ..aOS(4, 'pageToken')
-        ..aOS(5, 'name')
-        ..hasRequiredFields = false;
+class ListMonitoredResourceDescriptorsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListMonitoredResourceDescriptorsRequest',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..aOS(2, 'filter')
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, 'pageToken')
+    ..aOS(5, 'name')
+    ..hasRequiredFields = false;
 
   ListMonitoredResourceDescriptorsRequest() : super();
-  ListMonitoredResourceDescriptorsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListMonitoredResourceDescriptorsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListMonitoredResourceDescriptorsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListMonitoredResourceDescriptorsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListMonitoredResourceDescriptorsRequest clone() =>
-      new ListMonitoredResourceDescriptorsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ListMonitoredResourceDescriptorsRequest()..mergeFromMessage(this);
+  ListMonitoredResourceDescriptorsRequest copyWith(
+          void Function(ListMonitoredResourceDescriptorsRequest) updates) =>
+      super.copyWith((message) =>
+          updates(message as ListMonitoredResourceDescriptorsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListMonitoredResourceDescriptorsRequest create() =>
-      new ListMonitoredResourceDescriptorsRequest();
-  static PbList<ListMonitoredResourceDescriptorsRequest> createRepeated() =>
-      new PbList<ListMonitoredResourceDescriptorsRequest>();
-  static ListMonitoredResourceDescriptorsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListMonitoredResourceDescriptorsRequest();
-    return _defaultInstance;
-  }
-
+      ListMonitoredResourceDescriptorsRequest();
+  ListMonitoredResourceDescriptorsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListMonitoredResourceDescriptorsRequest> createRepeated() =>
+      $pb.PbList<ListMonitoredResourceDescriptorsRequest>();
+  static ListMonitoredResourceDescriptorsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListMonitoredResourceDescriptorsRequest _defaultInstance;
-  static void $checkItem(ListMonitoredResourceDescriptorsRequest v) {
-    if (v is! ListMonitoredResourceDescriptorsRequest)
-      checkItemFailed(v, 'ListMonitoredResourceDescriptorsRequest');
-  }
 
-  String get filter => $_getS(0, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(0, '');
+  set filter($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFilter() => $_has(0);
+  $core.bool hasFilter() => $_has(0);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(4);
 
-  String get name => $_getS(3, '');
-  set name(String v) {
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasName() => $_has(3);
+  $core.bool hasName() => $_has(3);
   void clearName() => clearField(5);
 }
 
-class _ReadonlyListMonitoredResourceDescriptorsRequest
-    extends ListMonitoredResourceDescriptorsRequest with ReadonlyMessageMixin {}
-
-class ListMonitoredResourceDescriptorsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListMonitoredResourceDescriptorsResponse')
-        ..pp<$google$api.MonitoredResourceDescriptor>(
-            1,
-            'resourceDescriptors',
-            PbFieldType.PM,
-            $google$api.MonitoredResourceDescriptor.$checkItem,
-            $google$api.MonitoredResourceDescriptor.create)
-        ..aOS(2, 'nextPageToken')
-        ..hasRequiredFields = false;
+class ListMonitoredResourceDescriptorsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListMonitoredResourceDescriptorsResponse',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..pc<$0.MonitoredResourceDescriptor>(1, 'resourceDescriptors',
+        $pb.PbFieldType.PM, $0.MonitoredResourceDescriptor.create)
+    ..aOS(2, 'nextPageToken')
+    ..hasRequiredFields = false;
 
   ListMonitoredResourceDescriptorsResponse() : super();
-  ListMonitoredResourceDescriptorsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListMonitoredResourceDescriptorsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListMonitoredResourceDescriptorsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListMonitoredResourceDescriptorsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListMonitoredResourceDescriptorsResponse clone() =>
-      new ListMonitoredResourceDescriptorsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ListMonitoredResourceDescriptorsResponse()..mergeFromMessage(this);
+  ListMonitoredResourceDescriptorsResponse copyWith(
+          void Function(ListMonitoredResourceDescriptorsResponse) updates) =>
+      super.copyWith((message) =>
+          updates(message as ListMonitoredResourceDescriptorsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListMonitoredResourceDescriptorsResponse create() =>
-      new ListMonitoredResourceDescriptorsResponse();
-  static PbList<ListMonitoredResourceDescriptorsResponse> createRepeated() =>
-      new PbList<ListMonitoredResourceDescriptorsResponse>();
-  static ListMonitoredResourceDescriptorsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyListMonitoredResourceDescriptorsResponse();
-    return _defaultInstance;
-  }
-
+      ListMonitoredResourceDescriptorsResponse();
+  ListMonitoredResourceDescriptorsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListMonitoredResourceDescriptorsResponse>
+      createRepeated() =>
+          $pb.PbList<ListMonitoredResourceDescriptorsResponse>();
+  static ListMonitoredResourceDescriptorsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListMonitoredResourceDescriptorsResponse _defaultInstance;
-  static void $checkItem(ListMonitoredResourceDescriptorsResponse v) {
-    if (v is! ListMonitoredResourceDescriptorsResponse)
-      checkItemFailed(v, 'ListMonitoredResourceDescriptorsResponse');
-  }
 
-  List<$google$api.MonitoredResourceDescriptor> get resourceDescriptors =>
+  $core.List<$0.MonitoredResourceDescriptor> get resourceDescriptors =>
       $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListMonitoredResourceDescriptorsResponse
-    extends ListMonitoredResourceDescriptorsResponse with ReadonlyMessageMixin {
-}
-
-class GetMonitoredResourceDescriptorRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('GetMonitoredResourceDescriptorRequest')
-        ..aOS(3, 'name')
-        ..hasRequiredFields = false;
+class GetMonitoredResourceDescriptorRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GetMonitoredResourceDescriptorRequest',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..aOS(3, 'name')
+    ..hasRequiredFields = false;
 
   GetMonitoredResourceDescriptorRequest() : super();
-  GetMonitoredResourceDescriptorRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetMonitoredResourceDescriptorRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetMonitoredResourceDescriptorRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetMonitoredResourceDescriptorRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetMonitoredResourceDescriptorRequest clone() =>
-      new GetMonitoredResourceDescriptorRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      GetMonitoredResourceDescriptorRequest()..mergeFromMessage(this);
+  GetMonitoredResourceDescriptorRequest copyWith(
+          void Function(GetMonitoredResourceDescriptorRequest) updates) =>
+      super.copyWith((message) =>
+          updates(message as GetMonitoredResourceDescriptorRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetMonitoredResourceDescriptorRequest create() =>
-      new GetMonitoredResourceDescriptorRequest();
-  static PbList<GetMonitoredResourceDescriptorRequest> createRepeated() =>
-      new PbList<GetMonitoredResourceDescriptorRequest>();
-  static GetMonitoredResourceDescriptorRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetMonitoredResourceDescriptorRequest();
-    return _defaultInstance;
-  }
-
+      GetMonitoredResourceDescriptorRequest();
+  GetMonitoredResourceDescriptorRequest createEmptyInstance() => create();
+  static $pb.PbList<GetMonitoredResourceDescriptorRequest> createRepeated() =>
+      $pb.PbList<GetMonitoredResourceDescriptorRequest>();
+  static GetMonitoredResourceDescriptorRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetMonitoredResourceDescriptorRequest _defaultInstance;
-  static void $checkItem(GetMonitoredResourceDescriptorRequest v) {
-    if (v is! GetMonitoredResourceDescriptorRequest)
-      checkItemFailed(v, 'GetMonitoredResourceDescriptorRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyGetMonitoredResourceDescriptorRequest
-    extends GetMonitoredResourceDescriptorRequest with ReadonlyMessageMixin {}
-
-class ListMetricDescriptorsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListMetricDescriptorsRequest')
+class ListMetricDescriptorsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListMetricDescriptorsRequest',
+      package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(2, 'filter')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
   ListMetricDescriptorsRequest() : super();
-  ListMetricDescriptorsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListMetricDescriptorsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListMetricDescriptorsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListMetricDescriptorsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListMetricDescriptorsRequest clone() =>
-      new ListMetricDescriptorsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ListMetricDescriptorsRequest()..mergeFromMessage(this);
+  ListMetricDescriptorsRequest copyWith(
+          void Function(ListMetricDescriptorsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListMetricDescriptorsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListMetricDescriptorsRequest create() =>
-      new ListMetricDescriptorsRequest();
-  static PbList<ListMetricDescriptorsRequest> createRepeated() =>
-      new PbList<ListMetricDescriptorsRequest>();
-  static ListMetricDescriptorsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListMetricDescriptorsRequest();
-    return _defaultInstance;
-  }
-
+      ListMetricDescriptorsRequest();
+  ListMetricDescriptorsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListMetricDescriptorsRequest> createRepeated() =>
+      $pb.PbList<ListMetricDescriptorsRequest>();
+  static ListMetricDescriptorsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListMetricDescriptorsRequest _defaultInstance;
-  static void $checkItem(ListMetricDescriptorsRequest v) {
-    if (v is! ListMetricDescriptorsRequest)
-      checkItemFailed(v, 'ListMetricDescriptorsRequest');
-  }
 
-  String get filter => $_getS(0, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(0, '');
+  set filter($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFilter() => $_has(0);
+  $core.bool hasFilter() => $_has(0);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(4);
 
-  String get name => $_getS(3, '');
-  set name(String v) {
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasName() => $_has(3);
+  $core.bool hasName() => $_has(3);
   void clearName() => clearField(5);
 }
 
-class _ReadonlyListMetricDescriptorsRequest extends ListMetricDescriptorsRequest
-    with ReadonlyMessageMixin {}
-
-class ListMetricDescriptorsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListMetricDescriptorsResponse')
-    ..pp<$google$api.MetricDescriptor>(
-        1,
-        'metricDescriptors',
-        PbFieldType.PM,
-        $google$api.MetricDescriptor.$checkItem,
-        $google$api.MetricDescriptor.create)
+class ListMetricDescriptorsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListMetricDescriptorsResponse',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..pc<$1.MetricDescriptor>(
+        1, 'metricDescriptors', $pb.PbFieldType.PM, $1.MetricDescriptor.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListMetricDescriptorsResponse() : super();
-  ListMetricDescriptorsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListMetricDescriptorsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListMetricDescriptorsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListMetricDescriptorsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListMetricDescriptorsResponse clone() =>
-      new ListMetricDescriptorsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ListMetricDescriptorsResponse()..mergeFromMessage(this);
+  ListMetricDescriptorsResponse copyWith(
+          void Function(ListMetricDescriptorsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListMetricDescriptorsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListMetricDescriptorsResponse create() =>
-      new ListMetricDescriptorsResponse();
-  static PbList<ListMetricDescriptorsResponse> createRepeated() =>
-      new PbList<ListMetricDescriptorsResponse>();
-  static ListMetricDescriptorsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListMetricDescriptorsResponse();
-    return _defaultInstance;
-  }
-
+      ListMetricDescriptorsResponse();
+  ListMetricDescriptorsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListMetricDescriptorsResponse> createRepeated() =>
+      $pb.PbList<ListMetricDescriptorsResponse>();
+  static ListMetricDescriptorsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListMetricDescriptorsResponse _defaultInstance;
-  static void $checkItem(ListMetricDescriptorsResponse v) {
-    if (v is! ListMetricDescriptorsResponse)
-      checkItemFailed(v, 'ListMetricDescriptorsResponse');
-  }
 
-  List<$google$api.MetricDescriptor> get metricDescriptors => $_getList(0);
+  $core.List<$1.MetricDescriptor> get metricDescriptors => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListMetricDescriptorsResponse
-    extends ListMetricDescriptorsResponse with ReadonlyMessageMixin {}
-
-class GetMetricDescriptorRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetMetricDescriptorRequest')
+class GetMetricDescriptorRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GetMetricDescriptorRequest',
+      package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
   GetMetricDescriptorRequest() : super();
-  GetMetricDescriptorRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetMetricDescriptorRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetMetricDescriptorRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetMetricDescriptorRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetMetricDescriptorRequest clone() =>
-      new GetMetricDescriptorRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetMetricDescriptorRequest create() =>
-      new GetMetricDescriptorRequest();
-  static PbList<GetMetricDescriptorRequest> createRepeated() =>
-      new PbList<GetMetricDescriptorRequest>();
-  static GetMetricDescriptorRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetMetricDescriptorRequest();
-    return _defaultInstance;
-  }
-
+      GetMetricDescriptorRequest()..mergeFromMessage(this);
+  GetMetricDescriptorRequest copyWith(
+          void Function(GetMetricDescriptorRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as GetMetricDescriptorRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetMetricDescriptorRequest create() => GetMetricDescriptorRequest();
+  GetMetricDescriptorRequest createEmptyInstance() => create();
+  static $pb.PbList<GetMetricDescriptorRequest> createRepeated() =>
+      $pb.PbList<GetMetricDescriptorRequest>();
+  static GetMetricDescriptorRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetMetricDescriptorRequest _defaultInstance;
-  static void $checkItem(GetMetricDescriptorRequest v) {
-    if (v is! GetMetricDescriptorRequest)
-      checkItemFailed(v, 'GetMetricDescriptorRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyGetMetricDescriptorRequest extends GetMetricDescriptorRequest
-    with ReadonlyMessageMixin {}
-
-class CreateMetricDescriptorRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateMetricDescriptorRequest')
-    ..a<$google$api.MetricDescriptor>(
-        2,
-        'metricDescriptor',
-        PbFieldType.OM,
-        $google$api.MetricDescriptor.getDefault,
-        $google$api.MetricDescriptor.create)
+class CreateMetricDescriptorRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'CreateMetricDescriptorRequest',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$1.MetricDescriptor>(2, 'metricDescriptor', $pb.PbFieldType.OM,
+        $1.MetricDescriptor.getDefault, $1.MetricDescriptor.create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
   CreateMetricDescriptorRequest() : super();
-  CreateMetricDescriptorRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateMetricDescriptorRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateMetricDescriptorRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateMetricDescriptorRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateMetricDescriptorRequest clone() =>
-      new CreateMetricDescriptorRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      CreateMetricDescriptorRequest()..mergeFromMessage(this);
+  CreateMetricDescriptorRequest copyWith(
+          void Function(CreateMetricDescriptorRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as CreateMetricDescriptorRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateMetricDescriptorRequest create() =>
-      new CreateMetricDescriptorRequest();
-  static PbList<CreateMetricDescriptorRequest> createRepeated() =>
-      new PbList<CreateMetricDescriptorRequest>();
-  static CreateMetricDescriptorRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateMetricDescriptorRequest();
-    return _defaultInstance;
-  }
-
+      CreateMetricDescriptorRequest();
+  CreateMetricDescriptorRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateMetricDescriptorRequest> createRepeated() =>
+      $pb.PbList<CreateMetricDescriptorRequest>();
+  static CreateMetricDescriptorRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateMetricDescriptorRequest _defaultInstance;
-  static void $checkItem(CreateMetricDescriptorRequest v) {
-    if (v is! CreateMetricDescriptorRequest)
-      checkItemFailed(v, 'CreateMetricDescriptorRequest');
-  }
 
-  $google$api.MetricDescriptor get metricDescriptor => $_getN(0);
-  set metricDescriptor($google$api.MetricDescriptor v) {
+  $1.MetricDescriptor get metricDescriptor => $_getN(0);
+  set metricDescriptor($1.MetricDescriptor v) {
     setField(2, v);
   }
 
-  bool hasMetricDescriptor() => $_has(0);
+  $core.bool hasMetricDescriptor() => $_has(0);
   void clearMetricDescriptor() => clearField(2);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasName() => $_has(1);
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyCreateMetricDescriptorRequest
-    extends CreateMetricDescriptorRequest with ReadonlyMessageMixin {}
-
-class DeleteMetricDescriptorRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteMetricDescriptorRequest')
+class DeleteMetricDescriptorRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DeleteMetricDescriptorRequest',
+      package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
   DeleteMetricDescriptorRequest() : super();
-  DeleteMetricDescriptorRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteMetricDescriptorRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteMetricDescriptorRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteMetricDescriptorRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteMetricDescriptorRequest clone() =>
-      new DeleteMetricDescriptorRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      DeleteMetricDescriptorRequest()..mergeFromMessage(this);
+  DeleteMetricDescriptorRequest copyWith(
+          void Function(DeleteMetricDescriptorRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as DeleteMetricDescriptorRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteMetricDescriptorRequest create() =>
-      new DeleteMetricDescriptorRequest();
-  static PbList<DeleteMetricDescriptorRequest> createRepeated() =>
-      new PbList<DeleteMetricDescriptorRequest>();
-  static DeleteMetricDescriptorRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteMetricDescriptorRequest();
-    return _defaultInstance;
-  }
-
+      DeleteMetricDescriptorRequest();
+  DeleteMetricDescriptorRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteMetricDescriptorRequest> createRepeated() =>
+      $pb.PbList<DeleteMetricDescriptorRequest>();
+  static DeleteMetricDescriptorRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteMetricDescriptorRequest _defaultInstance;
-  static void $checkItem(DeleteMetricDescriptorRequest v) {
-    if (v is! DeleteMetricDescriptorRequest)
-      checkItemFailed(v, 'DeleteMetricDescriptorRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyDeleteMetricDescriptorRequest
-    extends DeleteMetricDescriptorRequest with ReadonlyMessageMixin {}
-
-class ListTimeSeriesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTimeSeriesRequest')
+class ListTimeSeriesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTimeSeriesRequest',
+      package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(2, 'filter')
-    ..a<TimeInterval>(4, 'interval', PbFieldType.OM, TimeInterval.getDefault,
-        TimeInterval.create)
-    ..a<Aggregation>(5, 'aggregation', PbFieldType.OM, Aggregation.getDefault,
-        Aggregation.create)
+    ..a<$2.TimeInterval>(4, 'interval', $pb.PbFieldType.OM,
+        $2.TimeInterval.getDefault, $2.TimeInterval.create)
+    ..a<$2.Aggregation>(5, 'aggregation', $pb.PbFieldType.OM,
+        $2.Aggregation.getDefault, $2.Aggregation.create)
     ..aOS(6, 'orderBy')
     ..e<ListTimeSeriesRequest_TimeSeriesView>(
         7,
         'view',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ListTimeSeriesRequest_TimeSeriesView.FULL,
         ListTimeSeriesRequest_TimeSeriesView.valueOf,
         ListTimeSeriesRequest_TimeSeriesView.values)
-    ..a<int>(8, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(8, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(9, 'pageToken')
     ..aOS(10, 'name')
     ..hasRequiredFields = false;
 
   ListTimeSeriesRequest() : super();
-  ListTimeSeriesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTimeSeriesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTimeSeriesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTimeSeriesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTimeSeriesRequest clone() =>
-      new ListTimeSeriesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTimeSeriesRequest create() => new ListTimeSeriesRequest();
-  static PbList<ListTimeSeriesRequest> createRepeated() =>
-      new PbList<ListTimeSeriesRequest>();
-  static ListTimeSeriesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTimeSeriesRequest();
-    return _defaultInstance;
-  }
-
+      ListTimeSeriesRequest()..mergeFromMessage(this);
+  ListTimeSeriesRequest copyWith(
+          void Function(ListTimeSeriesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListTimeSeriesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTimeSeriesRequest create() => ListTimeSeriesRequest();
+  ListTimeSeriesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTimeSeriesRequest> createRepeated() =>
+      $pb.PbList<ListTimeSeriesRequest>();
+  static ListTimeSeriesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTimeSeriesRequest _defaultInstance;
-  static void $checkItem(ListTimeSeriesRequest v) {
-    if (v is! ListTimeSeriesRequest)
-      checkItemFailed(v, 'ListTimeSeriesRequest');
-  }
 
-  String get filter => $_getS(0, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(0, '');
+  set filter($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFilter() => $_has(0);
+  $core.bool hasFilter() => $_has(0);
   void clearFilter() => clearField(2);
 
-  TimeInterval get interval => $_getN(1);
-  set interval(TimeInterval v) {
+  $2.TimeInterval get interval => $_getN(1);
+  set interval($2.TimeInterval v) {
     setField(4, v);
   }
 
-  bool hasInterval() => $_has(1);
+  $core.bool hasInterval() => $_has(1);
   void clearInterval() => clearField(4);
 
-  Aggregation get aggregation => $_getN(2);
-  set aggregation(Aggregation v) {
+  $2.Aggregation get aggregation => $_getN(2);
+  set aggregation($2.Aggregation v) {
     setField(5, v);
   }
 
-  bool hasAggregation() => $_has(2);
+  $core.bool hasAggregation() => $_has(2);
   void clearAggregation() => clearField(5);
 
-  String get orderBy => $_getS(3, '');
-  set orderBy(String v) {
+  $core.String get orderBy => $_getS(3, '');
+  set orderBy($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasOrderBy() => $_has(3);
+  $core.bool hasOrderBy() => $_has(3);
   void clearOrderBy() => clearField(6);
 
   ListTimeSeriesRequest_TimeSeriesView get view => $_getN(4);
@@ -536,190 +485,172 @@ class ListTimeSeriesRequest extends GeneratedMessage {
     setField(7, v);
   }
 
-  bool hasView() => $_has(4);
+  $core.bool hasView() => $_has(4);
   void clearView() => clearField(7);
 
-  int get pageSize => $_get(5, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(5, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(5, v);
   }
 
-  bool hasPageSize() => $_has(5);
+  $core.bool hasPageSize() => $_has(5);
   void clearPageSize() => clearField(8);
 
-  String get pageToken => $_getS(6, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(6, '');
+  set pageToken($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasPageToken() => $_has(6);
+  $core.bool hasPageToken() => $_has(6);
   void clearPageToken() => clearField(9);
 
-  String get name => $_getS(7, '');
-  set name(String v) {
+  $core.String get name => $_getS(7, '');
+  set name($core.String v) {
     $_setString(7, v);
   }
 
-  bool hasName() => $_has(7);
+  $core.bool hasName() => $_has(7);
   void clearName() => clearField(10);
 }
 
-class _ReadonlyListTimeSeriesRequest extends ListTimeSeriesRequest
-    with ReadonlyMessageMixin {}
-
-class ListTimeSeriesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTimeSeriesResponse')
-    ..pp<TimeSeries>(1, 'timeSeries', PbFieldType.PM, TimeSeries.$checkItem,
-        TimeSeries.create)
+class ListTimeSeriesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTimeSeriesResponse',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..pc<$3.TimeSeries>(
+        1, 'timeSeries', $pb.PbFieldType.PM, $3.TimeSeries.create)
     ..aOS(2, 'nextPageToken')
+    ..pc<$4.Status>(3, 'executionErrors', $pb.PbFieldType.PM, $4.Status.create)
     ..hasRequiredFields = false;
 
   ListTimeSeriesResponse() : super();
-  ListTimeSeriesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTimeSeriesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTimeSeriesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTimeSeriesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTimeSeriesResponse clone() =>
-      new ListTimeSeriesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTimeSeriesResponse create() => new ListTimeSeriesResponse();
-  static PbList<ListTimeSeriesResponse> createRepeated() =>
-      new PbList<ListTimeSeriesResponse>();
-  static ListTimeSeriesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTimeSeriesResponse();
-    return _defaultInstance;
-  }
-
+      ListTimeSeriesResponse()..mergeFromMessage(this);
+  ListTimeSeriesResponse copyWith(
+          void Function(ListTimeSeriesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListTimeSeriesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTimeSeriesResponse create() => ListTimeSeriesResponse();
+  ListTimeSeriesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTimeSeriesResponse> createRepeated() =>
+      $pb.PbList<ListTimeSeriesResponse>();
+  static ListTimeSeriesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTimeSeriesResponse _defaultInstance;
-  static void $checkItem(ListTimeSeriesResponse v) {
-    if (v is! ListTimeSeriesResponse)
-      checkItemFailed(v, 'ListTimeSeriesResponse');
-  }
 
-  List<TimeSeries> get timeSeries => $_getList(0);
+  $core.List<$3.TimeSeries> get timeSeries => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
+
+  $core.List<$4.Status> get executionErrors => $_getList(2);
 }
 
-class _ReadonlyListTimeSeriesResponse extends ListTimeSeriesResponse
-    with ReadonlyMessageMixin {}
-
-class CreateTimeSeriesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTimeSeriesRequest')
-    ..pp<TimeSeries>(2, 'timeSeries', PbFieldType.PM, TimeSeries.$checkItem,
-        TimeSeries.create)
+class CreateTimeSeriesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTimeSeriesRequest',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..pc<$3.TimeSeries>(
+        2, 'timeSeries', $pb.PbFieldType.PM, $3.TimeSeries.create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
   CreateTimeSeriesRequest() : super();
-  CreateTimeSeriesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTimeSeriesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateTimeSeriesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTimeSeriesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTimeSeriesRequest clone() =>
-      new CreateTimeSeriesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateTimeSeriesRequest create() => new CreateTimeSeriesRequest();
-  static PbList<CreateTimeSeriesRequest> createRepeated() =>
-      new PbList<CreateTimeSeriesRequest>();
-  static CreateTimeSeriesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTimeSeriesRequest();
-    return _defaultInstance;
-  }
-
+      CreateTimeSeriesRequest()..mergeFromMessage(this);
+  CreateTimeSeriesRequest copyWith(
+          void Function(CreateTimeSeriesRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateTimeSeriesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateTimeSeriesRequest create() => CreateTimeSeriesRequest();
+  CreateTimeSeriesRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateTimeSeriesRequest> createRepeated() =>
+      $pb.PbList<CreateTimeSeriesRequest>();
+  static CreateTimeSeriesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateTimeSeriesRequest _defaultInstance;
-  static void $checkItem(CreateTimeSeriesRequest v) {
-    if (v is! CreateTimeSeriesRequest)
-      checkItemFailed(v, 'CreateTimeSeriesRequest');
-  }
 
-  List<TimeSeries> get timeSeries => $_getList(0);
+  $core.List<$3.TimeSeries> get timeSeries => $_getList(0);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasName() => $_has(1);
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyCreateTimeSeriesRequest extends CreateTimeSeriesRequest
-    with ReadonlyMessageMixin {}
-
-class CreateTimeSeriesError extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTimeSeriesError')
-    ..a<TimeSeries>(1, 'timeSeries', PbFieldType.OM, TimeSeries.getDefault,
-        TimeSeries.create)
-    ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
+class CreateTimeSeriesError extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTimeSeriesError',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$3.TimeSeries>(1, 'timeSeries', $pb.PbFieldType.OM,
+        $3.TimeSeries.getDefault, $3.TimeSeries.create)
+    ..a<$4.Status>(
+        2, 'status', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
     ..hasRequiredFields = false;
 
   CreateTimeSeriesError() : super();
-  CreateTimeSeriesError.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTimeSeriesError.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateTimeSeriesError.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTimeSeriesError.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTimeSeriesError clone() =>
-      new CreateTimeSeriesError()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateTimeSeriesError create() => new CreateTimeSeriesError();
-  static PbList<CreateTimeSeriesError> createRepeated() =>
-      new PbList<CreateTimeSeriesError>();
-  static CreateTimeSeriesError getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTimeSeriesError();
-    return _defaultInstance;
-  }
-
+      CreateTimeSeriesError()..mergeFromMessage(this);
+  CreateTimeSeriesError copyWith(
+          void Function(CreateTimeSeriesError) updates) =>
+      super.copyWith((message) => updates(message as CreateTimeSeriesError));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateTimeSeriesError create() => CreateTimeSeriesError();
+  CreateTimeSeriesError createEmptyInstance() => create();
+  static $pb.PbList<CreateTimeSeriesError> createRepeated() =>
+      $pb.PbList<CreateTimeSeriesError>();
+  static CreateTimeSeriesError getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateTimeSeriesError _defaultInstance;
-  static void $checkItem(CreateTimeSeriesError v) {
-    if (v is! CreateTimeSeriesError)
-      checkItemFailed(v, 'CreateTimeSeriesError');
-  }
 
-  TimeSeries get timeSeries => $_getN(0);
-  set timeSeries(TimeSeries v) {
+  $3.TimeSeries get timeSeries => $_getN(0);
+  set timeSeries($3.TimeSeries v) {
     setField(1, v);
   }
 
-  bool hasTimeSeries() => $_has(0);
+  $core.bool hasTimeSeries() => $_has(0);
   void clearTimeSeries() => clearField(1);
 
-  $google$rpc.Status get status => $_getN(1);
-  set status($google$rpc.Status v) {
+  $4.Status get status => $_getN(1);
+  set status($4.Status v) {
     setField(2, v);
   }
 
-  bool hasStatus() => $_has(1);
+  $core.bool hasStatus() => $_has(1);
   void clearStatus() => clearField(2);
 }
 
-class _ReadonlyCreateTimeSeriesError extends CreateTimeSeriesError
-    with ReadonlyMessageMixin {}
-
 class MetricServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   MetricServiceApi(this._client);
 
-  Future<ListMonitoredResourceDescriptorsResponse>
-      listMonitoredResourceDescriptors(
-          ClientContext ctx, ListMonitoredResourceDescriptorsRequest request) {
-    var emptyResponse = new ListMonitoredResourceDescriptorsResponse();
+  $async.Future<ListMonitoredResourceDescriptorsResponse>
+      listMonitoredResourceDescriptors($pb.ClientContext ctx,
+          ListMonitoredResourceDescriptorsRequest request) {
+    var emptyResponse = ListMonitoredResourceDescriptorsResponse();
     return _client.invoke<ListMonitoredResourceDescriptorsResponse>(
         ctx,
         'MetricService',
@@ -728,57 +659,52 @@ class MetricServiceApi {
         emptyResponse);
   }
 
-  Future<$google$api.MonitoredResourceDescriptor>
-      getMonitoredResourceDescriptor(
-          ClientContext ctx, GetMonitoredResourceDescriptorRequest request) {
-    var emptyResponse = new $google$api.MonitoredResourceDescriptor();
-    return _client.invoke<$google$api.MonitoredResourceDescriptor>(
-        ctx,
-        'MetricService',
-        'GetMonitoredResourceDescriptor',
-        request,
-        emptyResponse);
+  $async.Future<$0.MonitoredResourceDescriptor> getMonitoredResourceDescriptor(
+      $pb.ClientContext ctx, GetMonitoredResourceDescriptorRequest request) {
+    var emptyResponse = $0.MonitoredResourceDescriptor();
+    return _client.invoke<$0.MonitoredResourceDescriptor>(ctx, 'MetricService',
+        'GetMonitoredResourceDescriptor', request, emptyResponse);
   }
 
-  Future<ListMetricDescriptorsResponse> listMetricDescriptors(
-      ClientContext ctx, ListMetricDescriptorsRequest request) {
-    var emptyResponse = new ListMetricDescriptorsResponse();
+  $async.Future<ListMetricDescriptorsResponse> listMetricDescriptors(
+      $pb.ClientContext ctx, ListMetricDescriptorsRequest request) {
+    var emptyResponse = ListMetricDescriptorsResponse();
     return _client.invoke<ListMetricDescriptorsResponse>(
         ctx, 'MetricService', 'ListMetricDescriptors', request, emptyResponse);
   }
 
-  Future<$google$api.MetricDescriptor> getMetricDescriptor(
-      ClientContext ctx, GetMetricDescriptorRequest request) {
-    var emptyResponse = new $google$api.MetricDescriptor();
-    return _client.invoke<$google$api.MetricDescriptor>(
+  $async.Future<$1.MetricDescriptor> getMetricDescriptor(
+      $pb.ClientContext ctx, GetMetricDescriptorRequest request) {
+    var emptyResponse = $1.MetricDescriptor();
+    return _client.invoke<$1.MetricDescriptor>(
         ctx, 'MetricService', 'GetMetricDescriptor', request, emptyResponse);
   }
 
-  Future<$google$api.MetricDescriptor> createMetricDescriptor(
-      ClientContext ctx, CreateMetricDescriptorRequest request) {
-    var emptyResponse = new $google$api.MetricDescriptor();
-    return _client.invoke<$google$api.MetricDescriptor>(
+  $async.Future<$1.MetricDescriptor> createMetricDescriptor(
+      $pb.ClientContext ctx, CreateMetricDescriptorRequest request) {
+    var emptyResponse = $1.MetricDescriptor();
+    return _client.invoke<$1.MetricDescriptor>(
         ctx, 'MetricService', 'CreateMetricDescriptor', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> deleteMetricDescriptor(
-      ClientContext ctx, DeleteMetricDescriptorRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$5.Empty> deleteMetricDescriptor(
+      $pb.ClientContext ctx, DeleteMetricDescriptorRequest request) {
+    var emptyResponse = $5.Empty();
+    return _client.invoke<$5.Empty>(
         ctx, 'MetricService', 'DeleteMetricDescriptor', request, emptyResponse);
   }
 
-  Future<ListTimeSeriesResponse> listTimeSeries(
-      ClientContext ctx, ListTimeSeriesRequest request) {
-    var emptyResponse = new ListTimeSeriesResponse();
+  $async.Future<ListTimeSeriesResponse> listTimeSeries(
+      $pb.ClientContext ctx, ListTimeSeriesRequest request) {
+    var emptyResponse = ListTimeSeriesResponse();
     return _client.invoke<ListTimeSeriesResponse>(
         ctx, 'MetricService', 'ListTimeSeries', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> createTimeSeries(
-      ClientContext ctx, CreateTimeSeriesRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$5.Empty> createTimeSeries(
+      $pb.ClientContext ctx, CreateTimeSeriesRequest request) {
+    var emptyResponse = $5.Empty();
+    return _client.invoke<$5.Empty>(
         ctx, 'MetricService', 'CreateTimeSeries', request, emptyResponse);
   }
 }

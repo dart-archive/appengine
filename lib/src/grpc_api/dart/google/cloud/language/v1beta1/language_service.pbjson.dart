@@ -1,22 +1,23 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/language/v1beta1/language_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const EncodingType$json = const {
+const EncodingType$json = {
   '1': 'EncodingType',
-  '2': const [
-    const {'1': 'NONE', '2': 0},
-    const {'1': 'UTF8', '2': 1},
-    const {'1': 'UTF16', '2': 2},
-    const {'1': 'UTF32', '2': 3},
+  '2': [
+    {'1': 'NONE', '2': 0},
+    {'1': 'UTF8', '2': 1},
+    {'1': 'UTF16', '2': 2},
+    {'1': 'UTF32', '2': 3},
   ],
 };
 
-const Document$json = const {
+const Document$json = {
   '1': 'Document',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'type',
       '3': 1,
       '4': 1,
@@ -24,8 +25,8 @@ const Document$json = const {
       '6': '.google.cloud.language.v1beta1.Document.Type',
       '10': 'type'
     },
-    const {'1': 'content', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'content'},
-    const {
+    {'1': 'content', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'content'},
+    {
       '1': 'gcs_content_uri',
       '3': 3,
       '4': 1,
@@ -33,27 +34,27 @@ const Document$json = const {
       '9': 0,
       '10': 'gcsContentUri'
     },
-    const {'1': 'language', '3': 4, '4': 1, '5': 9, '10': 'language'},
+    {'1': 'language', '3': 4, '4': 1, '5': 9, '10': 'language'},
   ],
-  '4': const [Document_Type$json],
-  '8': const [
-    const {'1': 'source'},
+  '4': [Document_Type$json],
+  '8': [
+    {'1': 'source'},
   ],
 };
 
-const Document_Type$json = const {
+const Document_Type$json = {
   '1': 'Type',
-  '2': const [
-    const {'1': 'TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'PLAIN_TEXT', '2': 1},
-    const {'1': 'HTML', '2': 2},
+  '2': [
+    {'1': 'TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'PLAIN_TEXT', '2': 1},
+    {'1': 'HTML', '2': 2},
   ],
 };
 
-const Sentence$json = const {
+const Sentence$json = {
   '1': 'Sentence',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'text',
       '3': 1,
       '4': 1,
@@ -61,7 +62,7 @@ const Sentence$json = const {
       '6': '.google.cloud.language.v1beta1.TextSpan',
       '10': 'text'
     },
-    const {
+    {
       '1': 'sentiment',
       '3': 2,
       '4': 1,
@@ -72,11 +73,11 @@ const Sentence$json = const {
   ],
 };
 
-const Entity$json = const {
+const Entity$json = {
   '1': 'Entity',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'type',
       '3': 2,
       '4': 1,
@@ -84,7 +85,7 @@ const Entity$json = const {
       '6': '.google.cloud.language.v1beta1.Entity.Type',
       '10': 'type'
     },
-    const {
+    {
       '1': 'metadata',
       '3': 3,
       '4': 3,
@@ -92,8 +93,8 @@ const Entity$json = const {
       '6': '.google.cloud.language.v1beta1.Entity.MetadataEntry',
       '10': 'metadata'
     },
-    const {'1': 'salience', '3': 4, '4': 1, '5': 2, '10': 'salience'},
-    const {
+    {'1': 'salience', '3': 4, '4': 1, '5': 2, '10': 'salience'},
+    {
       '1': 'mentions',
       '3': 5,
       '4': 3,
@@ -102,37 +103,37 @@ const Entity$json = const {
       '10': 'mentions'
     },
   ],
-  '3': const [Entity_MetadataEntry$json],
-  '4': const [Entity_Type$json],
+  '3': [Entity_MetadataEntry$json],
+  '4': [Entity_Type$json],
 };
 
-const Entity_MetadataEntry$json = const {
+const Entity_MetadataEntry$json = {
   '1': 'MetadataEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const Entity_Type$json = const {
+const Entity_Type$json = {
   '1': 'Type',
-  '2': const [
-    const {'1': 'UNKNOWN', '2': 0},
-    const {'1': 'PERSON', '2': 1},
-    const {'1': 'LOCATION', '2': 2},
-    const {'1': 'ORGANIZATION', '2': 3},
-    const {'1': 'EVENT', '2': 4},
-    const {'1': 'WORK_OF_ART', '2': 5},
-    const {'1': 'CONSUMER_GOOD', '2': 6},
-    const {'1': 'OTHER', '2': 7},
+  '2': [
+    {'1': 'UNKNOWN', '2': 0},
+    {'1': 'PERSON', '2': 1},
+    {'1': 'LOCATION', '2': 2},
+    {'1': 'ORGANIZATION', '2': 3},
+    {'1': 'EVENT', '2': 4},
+    {'1': 'WORK_OF_ART', '2': 5},
+    {'1': 'CONSUMER_GOOD', '2': 6},
+    {'1': 'OTHER', '2': 7},
   ],
 };
 
-const Token$json = const {
+const Token$json = {
   '1': 'Token',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'text',
       '3': 1,
       '4': 1,
@@ -140,7 +141,7 @@ const Token$json = const {
       '6': '.google.cloud.language.v1beta1.TextSpan',
       '10': 'text'
     },
-    const {
+    {
       '1': 'part_of_speech',
       '3': 2,
       '4': 1,
@@ -148,7 +149,7 @@ const Token$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech',
       '10': 'partOfSpeech'
     },
-    const {
+    {
       '1': 'dependency_edge',
       '3': 3,
       '4': 1,
@@ -156,23 +157,23 @@ const Token$json = const {
       '6': '.google.cloud.language.v1beta1.DependencyEdge',
       '10': 'dependencyEdge'
     },
-    const {'1': 'lemma', '3': 4, '4': 1, '5': 9, '10': 'lemma'},
+    {'1': 'lemma', '3': 4, '4': 1, '5': 9, '10': 'lemma'},
   ],
 };
 
-const Sentiment$json = const {
+const Sentiment$json = {
   '1': 'Sentiment',
-  '2': const [
-    const {'1': 'polarity', '3': 1, '4': 1, '5': 2, '10': 'polarity'},
-    const {'1': 'magnitude', '3': 2, '4': 1, '5': 2, '10': 'magnitude'},
-    const {'1': 'score', '3': 3, '4': 1, '5': 2, '10': 'score'},
+  '2': [
+    {'1': 'polarity', '3': 1, '4': 1, '5': 2, '10': 'polarity'},
+    {'1': 'magnitude', '3': 2, '4': 1, '5': 2, '10': 'magnitude'},
+    {'1': 'score', '3': 3, '4': 1, '5': 2, '10': 'score'},
   ],
 };
 
-const PartOfSpeech$json = const {
+const PartOfSpeech$json = {
   '1': 'PartOfSpeech',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'tag',
       '3': 1,
       '4': 1,
@@ -180,7 +181,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Tag',
       '10': 'tag'
     },
-    const {
+    {
       '1': 'aspect',
       '3': 2,
       '4': 1,
@@ -188,7 +189,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Aspect',
       '10': 'aspect'
     },
-    const {
+    {
       '1': 'case',
       '3': 3,
       '4': 1,
@@ -196,7 +197,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Case',
       '10': 'case'
     },
-    const {
+    {
       '1': 'form',
       '3': 4,
       '4': 1,
@@ -204,7 +205,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Form',
       '10': 'form'
     },
-    const {
+    {
       '1': 'gender',
       '3': 5,
       '4': 1,
@@ -212,7 +213,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Gender',
       '10': 'gender'
     },
-    const {
+    {
       '1': 'mood',
       '3': 6,
       '4': 1,
@@ -220,7 +221,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Mood',
       '10': 'mood'
     },
-    const {
+    {
       '1': 'number',
       '3': 7,
       '4': 1,
@@ -228,7 +229,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Number',
       '10': 'number'
     },
-    const {
+    {
       '1': 'person',
       '3': 8,
       '4': 1,
@@ -236,7 +237,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Person',
       '10': 'person'
     },
-    const {
+    {
       '1': 'proper',
       '3': 9,
       '4': 1,
@@ -244,7 +245,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Proper',
       '10': 'proper'
     },
-    const {
+    {
       '1': 'reciprocity',
       '3': 10,
       '4': 1,
@@ -252,7 +253,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Reciprocity',
       '10': 'reciprocity'
     },
-    const {
+    {
       '1': 'tense',
       '3': 11,
       '4': 1,
@@ -260,7 +261,7 @@ const PartOfSpeech$json = const {
       '6': '.google.cloud.language.v1beta1.PartOfSpeech.Tense',
       '10': 'tense'
     },
-    const {
+    {
       '1': 'voice',
       '3': 12,
       '4': 1,
@@ -269,7 +270,7 @@ const PartOfSpeech$json = const {
       '10': 'voice'
     },
   ],
-  '4': const [
+  '4': [
     PartOfSpeech_Tag$json,
     PartOfSpeech_Aspect$json,
     PartOfSpeech_Case$json,
@@ -285,171 +286,165 @@ const PartOfSpeech$json = const {
   ],
 };
 
-const PartOfSpeech_Tag$json = const {
+const PartOfSpeech_Tag$json = {
   '1': 'Tag',
-  '2': const [
-    const {'1': 'UNKNOWN', '2': 0},
-    const {'1': 'ADJ', '2': 1},
-    const {'1': 'ADP', '2': 2},
-    const {'1': 'ADV', '2': 3},
-    const {'1': 'CONJ', '2': 4},
-    const {'1': 'DET', '2': 5},
-    const {'1': 'NOUN', '2': 6},
-    const {'1': 'NUM', '2': 7},
-    const {'1': 'PRON', '2': 8},
-    const {'1': 'PRT', '2': 9},
-    const {'1': 'PUNCT', '2': 10},
-    const {'1': 'VERB', '2': 11},
-    const {'1': 'X', '2': 12},
-    const {'1': 'AFFIX', '2': 13},
+  '2': [
+    {'1': 'UNKNOWN', '2': 0},
+    {'1': 'ADJ', '2': 1},
+    {'1': 'ADP', '2': 2},
+    {'1': 'ADV', '2': 3},
+    {'1': 'CONJ', '2': 4},
+    {'1': 'DET', '2': 5},
+    {'1': 'NOUN', '2': 6},
+    {'1': 'NUM', '2': 7},
+    {'1': 'PRON', '2': 8},
+    {'1': 'PRT', '2': 9},
+    {'1': 'PUNCT', '2': 10},
+    {'1': 'VERB', '2': 11},
+    {'1': 'X', '2': 12},
+    {'1': 'AFFIX', '2': 13},
   ],
 };
 
-const PartOfSpeech_Aspect$json = const {
+const PartOfSpeech_Aspect$json = {
   '1': 'Aspect',
-  '2': const [
-    const {'1': 'ASPECT_UNKNOWN', '2': 0},
-    const {'1': 'PERFECTIVE', '2': 1},
-    const {'1': 'IMPERFECTIVE', '2': 2},
-    const {'1': 'PROGRESSIVE', '2': 3},
+  '2': [
+    {'1': 'ASPECT_UNKNOWN', '2': 0},
+    {'1': 'PERFECTIVE', '2': 1},
+    {'1': 'IMPERFECTIVE', '2': 2},
+    {'1': 'PROGRESSIVE', '2': 3},
   ],
 };
 
-const PartOfSpeech_Case$json = const {
+const PartOfSpeech_Case$json = {
   '1': 'Case',
-  '2': const [
-    const {'1': 'CASE_UNKNOWN', '2': 0},
-    const {'1': 'ACCUSATIVE', '2': 1},
-    const {'1': 'ADVERBIAL', '2': 2},
-    const {'1': 'COMPLEMENTIVE', '2': 3},
-    const {'1': 'DATIVE', '2': 4},
-    const {'1': 'GENITIVE', '2': 5},
-    const {'1': 'INSTRUMENTAL', '2': 6},
-    const {'1': 'LOCATIVE', '2': 7},
-    const {'1': 'NOMINATIVE', '2': 8},
-    const {'1': 'OBLIQUE', '2': 9},
-    const {'1': 'PARTITIVE', '2': 10},
-    const {'1': 'PREPOSITIONAL', '2': 11},
-    const {'1': 'REFLEXIVE_CASE', '2': 12},
-    const {'1': 'RELATIVE_CASE', '2': 13},
-    const {'1': 'VOCATIVE', '2': 14},
+  '2': [
+    {'1': 'CASE_UNKNOWN', '2': 0},
+    {'1': 'ACCUSATIVE', '2': 1},
+    {'1': 'ADVERBIAL', '2': 2},
+    {'1': 'COMPLEMENTIVE', '2': 3},
+    {'1': 'DATIVE', '2': 4},
+    {'1': 'GENITIVE', '2': 5},
+    {'1': 'INSTRUMENTAL', '2': 6},
+    {'1': 'LOCATIVE', '2': 7},
+    {'1': 'NOMINATIVE', '2': 8},
+    {'1': 'OBLIQUE', '2': 9},
+    {'1': 'PARTITIVE', '2': 10},
+    {'1': 'PREPOSITIONAL', '2': 11},
+    {'1': 'REFLEXIVE_CASE', '2': 12},
+    {'1': 'RELATIVE_CASE', '2': 13},
+    {'1': 'VOCATIVE', '2': 14},
   ],
 };
 
-const PartOfSpeech_Form$json = const {
+const PartOfSpeech_Form$json = {
   '1': 'Form',
-  '2': const [
-    const {'1': 'FORM_UNKNOWN', '2': 0},
-    const {'1': 'ADNOMIAL', '2': 1},
-    const {'1': 'AUXILIARY', '2': 2},
-    const {'1': 'COMPLEMENTIZER', '2': 3},
-    const {'1': 'FINAL_ENDING', '2': 4},
-    const {'1': 'GERUND', '2': 5},
-    const {'1': 'REALIS', '2': 6},
-    const {'1': 'IRREALIS', '2': 7},
-    const {'1': 'SHORT', '2': 8},
-    const {'1': 'LONG', '2': 9},
-    const {'1': 'ORDER', '2': 10},
-    const {'1': 'SPECIFIC', '2': 11},
+  '2': [
+    {'1': 'FORM_UNKNOWN', '2': 0},
+    {'1': 'ADNOMIAL', '2': 1},
+    {'1': 'AUXILIARY', '2': 2},
+    {'1': 'COMPLEMENTIZER', '2': 3},
+    {'1': 'FINAL_ENDING', '2': 4},
+    {'1': 'GERUND', '2': 5},
+    {'1': 'REALIS', '2': 6},
+    {'1': 'IRREALIS', '2': 7},
+    {'1': 'SHORT', '2': 8},
+    {'1': 'LONG', '2': 9},
+    {'1': 'ORDER', '2': 10},
+    {'1': 'SPECIFIC', '2': 11},
   ],
 };
 
-const PartOfSpeech_Gender$json = const {
+const PartOfSpeech_Gender$json = {
   '1': 'Gender',
-  '2': const [
-    const {'1': 'GENDER_UNKNOWN', '2': 0},
-    const {'1': 'FEMININE', '2': 1},
-    const {'1': 'MASCULINE', '2': 2},
-    const {'1': 'NEUTER', '2': 3},
+  '2': [
+    {'1': 'GENDER_UNKNOWN', '2': 0},
+    {'1': 'FEMININE', '2': 1},
+    {'1': 'MASCULINE', '2': 2},
+    {'1': 'NEUTER', '2': 3},
   ],
 };
 
-const PartOfSpeech_Mood$json = const {
+const PartOfSpeech_Mood$json = {
   '1': 'Mood',
-  '2': const [
-    const {'1': 'MOOD_UNKNOWN', '2': 0},
-    const {'1': 'CONDITIONAL_MOOD', '2': 1},
-    const {'1': 'IMPERATIVE', '2': 2},
-    const {'1': 'INDICATIVE', '2': 3},
-    const {'1': 'INTERROGATIVE', '2': 4},
-    const {'1': 'JUSSIVE', '2': 5},
-    const {'1': 'SUBJUNCTIVE', '2': 6},
+  '2': [
+    {'1': 'MOOD_UNKNOWN', '2': 0},
+    {'1': 'CONDITIONAL_MOOD', '2': 1},
+    {'1': 'IMPERATIVE', '2': 2},
+    {'1': 'INDICATIVE', '2': 3},
+    {'1': 'INTERROGATIVE', '2': 4},
+    {'1': 'JUSSIVE', '2': 5},
+    {'1': 'SUBJUNCTIVE', '2': 6},
   ],
 };
 
-const PartOfSpeech_Number$json = const {
+const PartOfSpeech_Number$json = {
   '1': 'Number',
-  '2': const [
-    const {'1': 'NUMBER_UNKNOWN', '2': 0},
-    const {'1': 'SINGULAR', '2': 1},
-    const {'1': 'PLURAL', '2': 2},
-    const {'1': 'DUAL', '2': 3},
+  '2': [
+    {'1': 'NUMBER_UNKNOWN', '2': 0},
+    {'1': 'SINGULAR', '2': 1},
+    {'1': 'PLURAL', '2': 2},
+    {'1': 'DUAL', '2': 3},
   ],
 };
 
-const PartOfSpeech_Person$json = const {
+const PartOfSpeech_Person$json = {
   '1': 'Person',
-  '2': const [
-    const {'1': 'PERSON_UNKNOWN', '2': 0},
-    const {'1': 'FIRST', '2': 1},
-    const {'1': 'SECOND', '2': 2},
-    const {'1': 'THIRD', '2': 3},
-    const {'1': 'REFLEXIVE_PERSON', '2': 4},
+  '2': [
+    {'1': 'PERSON_UNKNOWN', '2': 0},
+    {'1': 'FIRST', '2': 1},
+    {'1': 'SECOND', '2': 2},
+    {'1': 'THIRD', '2': 3},
+    {'1': 'REFLEXIVE_PERSON', '2': 4},
   ],
 };
 
-const PartOfSpeech_Proper$json = const {
+const PartOfSpeech_Proper$json = {
   '1': 'Proper',
-  '2': const [
-    const {'1': 'PROPER_UNKNOWN', '2': 0},
-    const {'1': 'PROPER', '2': 1},
-    const {'1': 'NOT_PROPER', '2': 2},
+  '2': [
+    {'1': 'PROPER_UNKNOWN', '2': 0},
+    {'1': 'PROPER', '2': 1},
+    {'1': 'NOT_PROPER', '2': 2},
   ],
 };
 
-const PartOfSpeech_Reciprocity$json = const {
+const PartOfSpeech_Reciprocity$json = {
   '1': 'Reciprocity',
-  '2': const [
-    const {'1': 'RECIPROCITY_UNKNOWN', '2': 0},
-    const {'1': 'RECIPROCAL', '2': 1},
-    const {'1': 'NON_RECIPROCAL', '2': 2},
+  '2': [
+    {'1': 'RECIPROCITY_UNKNOWN', '2': 0},
+    {'1': 'RECIPROCAL', '2': 1},
+    {'1': 'NON_RECIPROCAL', '2': 2},
   ],
 };
 
-const PartOfSpeech_Tense$json = const {
+const PartOfSpeech_Tense$json = {
   '1': 'Tense',
-  '2': const [
-    const {'1': 'TENSE_UNKNOWN', '2': 0},
-    const {'1': 'CONDITIONAL_TENSE', '2': 1},
-    const {'1': 'FUTURE', '2': 2},
-    const {'1': 'PAST', '2': 3},
-    const {'1': 'PRESENT', '2': 4},
-    const {'1': 'IMPERFECT', '2': 5},
-    const {'1': 'PLUPERFECT', '2': 6},
+  '2': [
+    {'1': 'TENSE_UNKNOWN', '2': 0},
+    {'1': 'CONDITIONAL_TENSE', '2': 1},
+    {'1': 'FUTURE', '2': 2},
+    {'1': 'PAST', '2': 3},
+    {'1': 'PRESENT', '2': 4},
+    {'1': 'IMPERFECT', '2': 5},
+    {'1': 'PLUPERFECT', '2': 6},
   ],
 };
 
-const PartOfSpeech_Voice$json = const {
+const PartOfSpeech_Voice$json = {
   '1': 'Voice',
-  '2': const [
-    const {'1': 'VOICE_UNKNOWN', '2': 0},
-    const {'1': 'ACTIVE', '2': 1},
-    const {'1': 'CAUSATIVE', '2': 2},
-    const {'1': 'PASSIVE', '2': 3},
+  '2': [
+    {'1': 'VOICE_UNKNOWN', '2': 0},
+    {'1': 'ACTIVE', '2': 1},
+    {'1': 'CAUSATIVE', '2': 2},
+    {'1': 'PASSIVE', '2': 3},
   ],
 };
 
-const DependencyEdge$json = const {
+const DependencyEdge$json = {
   '1': 'DependencyEdge',
-  '2': const [
-    const {
-      '1': 'head_token_index',
-      '3': 1,
-      '4': 1,
-      '5': 5,
-      '10': 'headTokenIndex'
-    },
-    const {
+  '2': [
+    {'1': 'head_token_index', '3': 1, '4': 1, '5': 5, '10': 'headTokenIndex'},
+    {
       '1': 'label',
       '3': 2,
       '4': 1,
@@ -458,96 +453,96 @@ const DependencyEdge$json = const {
       '10': 'label'
     },
   ],
-  '4': const [DependencyEdge_Label$json],
+  '4': [DependencyEdge_Label$json],
 };
 
-const DependencyEdge_Label$json = const {
+const DependencyEdge_Label$json = {
   '1': 'Label',
-  '2': const [
-    const {'1': 'UNKNOWN', '2': 0},
-    const {'1': 'ABBREV', '2': 1},
-    const {'1': 'ACOMP', '2': 2},
-    const {'1': 'ADVCL', '2': 3},
-    const {'1': 'ADVMOD', '2': 4},
-    const {'1': 'AMOD', '2': 5},
-    const {'1': 'APPOS', '2': 6},
-    const {'1': 'ATTR', '2': 7},
-    const {'1': 'AUX', '2': 8},
-    const {'1': 'AUXPASS', '2': 9},
-    const {'1': 'CC', '2': 10},
-    const {'1': 'CCOMP', '2': 11},
-    const {'1': 'CONJ', '2': 12},
-    const {'1': 'CSUBJ', '2': 13},
-    const {'1': 'CSUBJPASS', '2': 14},
-    const {'1': 'DEP', '2': 15},
-    const {'1': 'DET', '2': 16},
-    const {'1': 'DISCOURSE', '2': 17},
-    const {'1': 'DOBJ', '2': 18},
-    const {'1': 'EXPL', '2': 19},
-    const {'1': 'GOESWITH', '2': 20},
-    const {'1': 'IOBJ', '2': 21},
-    const {'1': 'MARK', '2': 22},
-    const {'1': 'MWE', '2': 23},
-    const {'1': 'MWV', '2': 24},
-    const {'1': 'NEG', '2': 25},
-    const {'1': 'NN', '2': 26},
-    const {'1': 'NPADVMOD', '2': 27},
-    const {'1': 'NSUBJ', '2': 28},
-    const {'1': 'NSUBJPASS', '2': 29},
-    const {'1': 'NUM', '2': 30},
-    const {'1': 'NUMBER', '2': 31},
-    const {'1': 'P', '2': 32},
-    const {'1': 'PARATAXIS', '2': 33},
-    const {'1': 'PARTMOD', '2': 34},
-    const {'1': 'PCOMP', '2': 35},
-    const {'1': 'POBJ', '2': 36},
-    const {'1': 'POSS', '2': 37},
-    const {'1': 'POSTNEG', '2': 38},
-    const {'1': 'PRECOMP', '2': 39},
-    const {'1': 'PRECONJ', '2': 40},
-    const {'1': 'PREDET', '2': 41},
-    const {'1': 'PREF', '2': 42},
-    const {'1': 'PREP', '2': 43},
-    const {'1': 'PRONL', '2': 44},
-    const {'1': 'PRT', '2': 45},
-    const {'1': 'PS', '2': 46},
-    const {'1': 'QUANTMOD', '2': 47},
-    const {'1': 'RCMOD', '2': 48},
-    const {'1': 'RCMODREL', '2': 49},
-    const {'1': 'RDROP', '2': 50},
-    const {'1': 'REF', '2': 51},
-    const {'1': 'REMNANT', '2': 52},
-    const {'1': 'REPARANDUM', '2': 53},
-    const {'1': 'ROOT', '2': 54},
-    const {'1': 'SNUM', '2': 55},
-    const {'1': 'SUFF', '2': 56},
-    const {'1': 'TMOD', '2': 57},
-    const {'1': 'TOPIC', '2': 58},
-    const {'1': 'VMOD', '2': 59},
-    const {'1': 'VOCATIVE', '2': 60},
-    const {'1': 'XCOMP', '2': 61},
-    const {'1': 'SUFFIX', '2': 62},
-    const {'1': 'TITLE', '2': 63},
-    const {'1': 'ADVPHMOD', '2': 64},
-    const {'1': 'AUXCAUS', '2': 65},
-    const {'1': 'AUXVV', '2': 66},
-    const {'1': 'DTMOD', '2': 67},
-    const {'1': 'FOREIGN', '2': 68},
-    const {'1': 'KW', '2': 69},
-    const {'1': 'LIST', '2': 70},
-    const {'1': 'NOMC', '2': 71},
-    const {'1': 'NOMCSUBJ', '2': 72},
-    const {'1': 'NOMCSUBJPASS', '2': 73},
-    const {'1': 'NUMC', '2': 74},
-    const {'1': 'COP', '2': 75},
-    const {'1': 'DISLOCATED', '2': 76},
+  '2': [
+    {'1': 'UNKNOWN', '2': 0},
+    {'1': 'ABBREV', '2': 1},
+    {'1': 'ACOMP', '2': 2},
+    {'1': 'ADVCL', '2': 3},
+    {'1': 'ADVMOD', '2': 4},
+    {'1': 'AMOD', '2': 5},
+    {'1': 'APPOS', '2': 6},
+    {'1': 'ATTR', '2': 7},
+    {'1': 'AUX', '2': 8},
+    {'1': 'AUXPASS', '2': 9},
+    {'1': 'CC', '2': 10},
+    {'1': 'CCOMP', '2': 11},
+    {'1': 'CONJ', '2': 12},
+    {'1': 'CSUBJ', '2': 13},
+    {'1': 'CSUBJPASS', '2': 14},
+    {'1': 'DEP', '2': 15},
+    {'1': 'DET', '2': 16},
+    {'1': 'DISCOURSE', '2': 17},
+    {'1': 'DOBJ', '2': 18},
+    {'1': 'EXPL', '2': 19},
+    {'1': 'GOESWITH', '2': 20},
+    {'1': 'IOBJ', '2': 21},
+    {'1': 'MARK', '2': 22},
+    {'1': 'MWE', '2': 23},
+    {'1': 'MWV', '2': 24},
+    {'1': 'NEG', '2': 25},
+    {'1': 'NN', '2': 26},
+    {'1': 'NPADVMOD', '2': 27},
+    {'1': 'NSUBJ', '2': 28},
+    {'1': 'NSUBJPASS', '2': 29},
+    {'1': 'NUM', '2': 30},
+    {'1': 'NUMBER', '2': 31},
+    {'1': 'P', '2': 32},
+    {'1': 'PARATAXIS', '2': 33},
+    {'1': 'PARTMOD', '2': 34},
+    {'1': 'PCOMP', '2': 35},
+    {'1': 'POBJ', '2': 36},
+    {'1': 'POSS', '2': 37},
+    {'1': 'POSTNEG', '2': 38},
+    {'1': 'PRECOMP', '2': 39},
+    {'1': 'PRECONJ', '2': 40},
+    {'1': 'PREDET', '2': 41},
+    {'1': 'PREF', '2': 42},
+    {'1': 'PREP', '2': 43},
+    {'1': 'PRONL', '2': 44},
+    {'1': 'PRT', '2': 45},
+    {'1': 'PS', '2': 46},
+    {'1': 'QUANTMOD', '2': 47},
+    {'1': 'RCMOD', '2': 48},
+    {'1': 'RCMODREL', '2': 49},
+    {'1': 'RDROP', '2': 50},
+    {'1': 'REF', '2': 51},
+    {'1': 'REMNANT', '2': 52},
+    {'1': 'REPARANDUM', '2': 53},
+    {'1': 'ROOT', '2': 54},
+    {'1': 'SNUM', '2': 55},
+    {'1': 'SUFF', '2': 56},
+    {'1': 'TMOD', '2': 57},
+    {'1': 'TOPIC', '2': 58},
+    {'1': 'VMOD', '2': 59},
+    {'1': 'VOCATIVE', '2': 60},
+    {'1': 'XCOMP', '2': 61},
+    {'1': 'SUFFIX', '2': 62},
+    {'1': 'TITLE', '2': 63},
+    {'1': 'ADVPHMOD', '2': 64},
+    {'1': 'AUXCAUS', '2': 65},
+    {'1': 'AUXVV', '2': 66},
+    {'1': 'DTMOD', '2': 67},
+    {'1': 'FOREIGN', '2': 68},
+    {'1': 'KW', '2': 69},
+    {'1': 'LIST', '2': 70},
+    {'1': 'NOMC', '2': 71},
+    {'1': 'NOMCSUBJ', '2': 72},
+    {'1': 'NOMCSUBJPASS', '2': 73},
+    {'1': 'NUMC', '2': 74},
+    {'1': 'COP', '2': 75},
+    {'1': 'DISLOCATED', '2': 76},
   ],
 };
 
-const EntityMention$json = const {
+const EntityMention$json = {
   '1': 'EntityMention',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'text',
       '3': 1,
       '4': 1,
@@ -555,7 +550,7 @@ const EntityMention$json = const {
       '6': '.google.cloud.language.v1beta1.TextSpan',
       '10': 'text'
     },
-    const {
+    {
       '1': 'type',
       '3': 2,
       '4': 1,
@@ -564,30 +559,30 @@ const EntityMention$json = const {
       '10': 'type'
     },
   ],
-  '4': const [EntityMention_Type$json],
+  '4': [EntityMention_Type$json],
 };
 
-const EntityMention_Type$json = const {
+const EntityMention_Type$json = {
   '1': 'Type',
-  '2': const [
-    const {'1': 'TYPE_UNKNOWN', '2': 0},
-    const {'1': 'PROPER', '2': 1},
-    const {'1': 'COMMON', '2': 2},
+  '2': [
+    {'1': 'TYPE_UNKNOWN', '2': 0},
+    {'1': 'PROPER', '2': 1},
+    {'1': 'COMMON', '2': 2},
   ],
 };
 
-const TextSpan$json = const {
+const TextSpan$json = {
   '1': 'TextSpan',
-  '2': const [
-    const {'1': 'content', '3': 1, '4': 1, '5': 9, '10': 'content'},
-    const {'1': 'begin_offset', '3': 2, '4': 1, '5': 5, '10': 'beginOffset'},
+  '2': [
+    {'1': 'content', '3': 1, '4': 1, '5': 9, '10': 'content'},
+    {'1': 'begin_offset', '3': 2, '4': 1, '5': 5, '10': 'beginOffset'},
   ],
 };
 
-const AnalyzeSentimentRequest$json = const {
+const AnalyzeSentimentRequest$json = {
   '1': 'AnalyzeSentimentRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'document',
       '3': 1,
       '4': 1,
@@ -595,7 +590,7 @@ const AnalyzeSentimentRequest$json = const {
       '6': '.google.cloud.language.v1beta1.Document',
       '10': 'document'
     },
-    const {
+    {
       '1': 'encoding_type',
       '3': 2,
       '4': 1,
@@ -606,10 +601,10 @@ const AnalyzeSentimentRequest$json = const {
   ],
 };
 
-const AnalyzeSentimentResponse$json = const {
+const AnalyzeSentimentResponse$json = {
   '1': 'AnalyzeSentimentResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'document_sentiment',
       '3': 1,
       '4': 1,
@@ -617,8 +612,8 @@ const AnalyzeSentimentResponse$json = const {
       '6': '.google.cloud.language.v1beta1.Sentiment',
       '10': 'documentSentiment'
     },
-    const {'1': 'language', '3': 2, '4': 1, '5': 9, '10': 'language'},
-    const {
+    {'1': 'language', '3': 2, '4': 1, '5': 9, '10': 'language'},
+    {
       '1': 'sentences',
       '3': 3,
       '4': 3,
@@ -629,10 +624,10 @@ const AnalyzeSentimentResponse$json = const {
   ],
 };
 
-const AnalyzeEntitiesRequest$json = const {
+const AnalyzeEntitiesRequest$json = {
   '1': 'AnalyzeEntitiesRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'document',
       '3': 1,
       '4': 1,
@@ -640,7 +635,7 @@ const AnalyzeEntitiesRequest$json = const {
       '6': '.google.cloud.language.v1beta1.Document',
       '10': 'document'
     },
-    const {
+    {
       '1': 'encoding_type',
       '3': 2,
       '4': 1,
@@ -651,10 +646,10 @@ const AnalyzeEntitiesRequest$json = const {
   ],
 };
 
-const AnalyzeEntitiesResponse$json = const {
+const AnalyzeEntitiesResponse$json = {
   '1': 'AnalyzeEntitiesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'entities',
       '3': 1,
       '4': 3,
@@ -662,14 +657,14 @@ const AnalyzeEntitiesResponse$json = const {
       '6': '.google.cloud.language.v1beta1.Entity',
       '10': 'entities'
     },
-    const {'1': 'language', '3': 2, '4': 1, '5': 9, '10': 'language'},
+    {'1': 'language', '3': 2, '4': 1, '5': 9, '10': 'language'},
   ],
 };
 
-const AnalyzeSyntaxRequest$json = const {
+const AnalyzeSyntaxRequest$json = {
   '1': 'AnalyzeSyntaxRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'document',
       '3': 1,
       '4': 1,
@@ -677,7 +672,7 @@ const AnalyzeSyntaxRequest$json = const {
       '6': '.google.cloud.language.v1beta1.Document',
       '10': 'document'
     },
-    const {
+    {
       '1': 'encoding_type',
       '3': 2,
       '4': 1,
@@ -688,10 +683,10 @@ const AnalyzeSyntaxRequest$json = const {
   ],
 };
 
-const AnalyzeSyntaxResponse$json = const {
+const AnalyzeSyntaxResponse$json = {
   '1': 'AnalyzeSyntaxResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'sentences',
       '3': 1,
       '4': 3,
@@ -699,7 +694,7 @@ const AnalyzeSyntaxResponse$json = const {
       '6': '.google.cloud.language.v1beta1.Sentence',
       '10': 'sentences'
     },
-    const {
+    {
       '1': 'tokens',
       '3': 2,
       '4': 3,
@@ -707,14 +702,14 @@ const AnalyzeSyntaxResponse$json = const {
       '6': '.google.cloud.language.v1beta1.Token',
       '10': 'tokens'
     },
-    const {'1': 'language', '3': 3, '4': 1, '5': 9, '10': 'language'},
+    {'1': 'language', '3': 3, '4': 1, '5': 9, '10': 'language'},
   ],
 };
 
-const AnnotateTextRequest$json = const {
+const AnnotateTextRequest$json = {
   '1': 'AnnotateTextRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'document',
       '3': 1,
       '4': 1,
@@ -722,7 +717,7 @@ const AnnotateTextRequest$json = const {
       '6': '.google.cloud.language.v1beta1.Document',
       '10': 'document'
     },
-    const {
+    {
       '1': 'features',
       '3': 2,
       '4': 1,
@@ -730,7 +725,7 @@ const AnnotateTextRequest$json = const {
       '6': '.google.cloud.language.v1beta1.AnnotateTextRequest.Features',
       '10': 'features'
     },
-    const {
+    {
       '1': 'encoding_type',
       '3': 3,
       '4': 1,
@@ -739,27 +734,15 @@ const AnnotateTextRequest$json = const {
       '10': 'encodingType'
     },
   ],
-  '3': const [AnnotateTextRequest_Features$json],
+  '3': [AnnotateTextRequest_Features$json],
 };
 
-const AnnotateTextRequest_Features$json = const {
+const AnnotateTextRequest_Features$json = {
   '1': 'Features',
-  '2': const [
-    const {
-      '1': 'extract_syntax',
-      '3': 1,
-      '4': 1,
-      '5': 8,
-      '10': 'extractSyntax'
-    },
-    const {
-      '1': 'extract_entities',
-      '3': 2,
-      '4': 1,
-      '5': 8,
-      '10': 'extractEntities'
-    },
-    const {
+  '2': [
+    {'1': 'extract_syntax', '3': 1, '4': 1, '5': 8, '10': 'extractSyntax'},
+    {'1': 'extract_entities', '3': 2, '4': 1, '5': 8, '10': 'extractEntities'},
+    {
       '1': 'extract_document_sentiment',
       '3': 3,
       '4': 1,
@@ -769,10 +752,10 @@ const AnnotateTextRequest_Features$json = const {
   ],
 };
 
-const AnnotateTextResponse$json = const {
+const AnnotateTextResponse$json = {
   '1': 'AnnotateTextResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'sentences',
       '3': 1,
       '4': 3,
@@ -780,7 +763,7 @@ const AnnotateTextResponse$json = const {
       '6': '.google.cloud.language.v1beta1.Sentence',
       '10': 'sentences'
     },
-    const {
+    {
       '1': 'tokens',
       '3': 2,
       '4': 3,
@@ -788,7 +771,7 @@ const AnnotateTextResponse$json = const {
       '6': '.google.cloud.language.v1beta1.Token',
       '10': 'tokens'
     },
-    const {
+    {
       '1': 'entities',
       '3': 3,
       '4': 3,
@@ -796,7 +779,7 @@ const AnnotateTextResponse$json = const {
       '6': '.google.cloud.language.v1beta1.Entity',
       '10': 'entities'
     },
-    const {
+    {
       '1': 'document_sentiment',
       '3': 4,
       '4': 1,
@@ -804,41 +787,41 @@ const AnnotateTextResponse$json = const {
       '6': '.google.cloud.language.v1beta1.Sentiment',
       '10': 'documentSentiment'
     },
-    const {'1': 'language', '3': 5, '4': 1, '5': 9, '10': 'language'},
+    {'1': 'language', '3': 5, '4': 1, '5': 9, '10': 'language'},
   ],
 };
 
-const LanguageService$json = const {
+const LanguageServiceBase$json = {
   '1': 'LanguageService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'AnalyzeSentiment',
       '2': '.google.cloud.language.v1beta1.AnalyzeSentimentRequest',
       '3': '.google.cloud.language.v1beta1.AnalyzeSentimentResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'AnalyzeEntities',
       '2': '.google.cloud.language.v1beta1.AnalyzeEntitiesRequest',
       '3': '.google.cloud.language.v1beta1.AnalyzeEntitiesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'AnalyzeSyntax',
       '2': '.google.cloud.language.v1beta1.AnalyzeSyntaxRequest',
       '3': '.google.cloud.language.v1beta1.AnalyzeSyntaxResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'AnnotateText',
       '2': '.google.cloud.language.v1beta1.AnnotateTextRequest',
       '3': '.google.cloud.language.v1beta1.AnnotateTextResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const LanguageService$messageJson = const {
+const LanguageServiceBase$messageJson = {
   '.google.cloud.language.v1beta1.AnalyzeSentimentRequest':
       AnalyzeSentimentRequest$json,
   '.google.cloud.language.v1beta1.Document': Document$json,

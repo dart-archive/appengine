@@ -3,6 +3,7 @@ config_schema_version: 1.0.0
 language_settings:
   java:
     package_name: com.google.cloud.monitoring.v3
+    release_level: GA
   python:
     package_name: google.cloud.monitoring_v3.gapic
   go:
@@ -18,14 +19,12 @@ language_settings:
   nodejs:
     package_name: monitoring.v3
     domain_layer_location: google-cloud
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
 interfaces:
 - name: google.monitoring.v3.AlertPolicyService
   collections:
   - name_pattern: projects/{project}
     entity_name: project
+    # C#: Already GA, do not use common resource name for 'project'
   - name_pattern: projects/{project}/alertPolicies/{alert_policy}
     entity_name: alert_policy
   - name_pattern: projects/{project}/alertPolicies/{alert_policy}/conditions/{condition}
@@ -54,7 +53,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -75,7 +73,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -91,7 +88,6 @@ interfaces:
     required_fields:
     - name
     - alert_policy
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -105,7 +101,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -120,7 +115,6 @@ interfaces:
         - alert_policy
     required_fields:
     - alert_policy
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -131,6 +125,7 @@ interfaces:
   collections:
   - name_pattern: projects/{project}
     entity_name: project
+    # C#: Already GA, do not use common resource name for 'project'
   - name_pattern: projects/{project}/groups/{group}
     entity_name: group
   retry_codes_def:
@@ -154,7 +149,6 @@ interfaces:
     # Removing flattening until we figure out how to deal with oneof
     required_fields:
     - name
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -175,7 +169,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -191,7 +184,6 @@ interfaces:
     required_fields:
     - name
     - group
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -205,7 +197,6 @@ interfaces:
         - group
     required_fields:
     - group
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -219,7 +210,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -233,7 +223,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -255,6 +244,7 @@ interfaces:
   collections:
   - name_pattern: projects/{project}
     entity_name: project
+    # C#: Already GA, do not use common resource name for 'project'
   - name_pattern: projects/{project}/metricDescriptors/{metric_descriptor=**}
     entity_name: metric_descriptor
   - name_pattern: projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}
@@ -283,7 +273,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -304,7 +293,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -318,7 +306,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -339,7 +326,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -355,7 +341,6 @@ interfaces:
     required_fields:
     - name
     - metric_descriptor
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -369,7 +354,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -389,7 +373,6 @@ interfaces:
     - filter
     - interval
     - view
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -412,7 +395,6 @@ interfaces:
     required_fields:
     - name
     - time_series
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -423,6 +405,7 @@ interfaces:
   collections:
   - name_pattern: projects/{project}
     entity_name: project
+    # C#: Already GA, do not use common resource name for 'project'
   - name_pattern: projects/{project}/notificationChannels/{notification_channel}
     entity_name: notification_channel
   - name_pattern: projects/{project}/notificationChannelDescriptors/{channel_descriptor}
@@ -451,7 +434,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -472,7 +454,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -486,7 +467,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -507,7 +487,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -523,7 +502,6 @@ interfaces:
     required_fields:
     - name
     - notification_channel
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -538,7 +516,6 @@ interfaces:
         - notification_channel
     required_fields:
     - notification_channel
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -552,17 +529,50 @@ interfaces:
         - force
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: notification_channel
     resource_name_treatment: STATIC_TYPES
     timeout_millis: 60000
+  - name: SendNotificationChannelVerificationCode
+    surface_treatments:
+    - include_languages:
+      - go
+      - java
+      - csharp
+      - ruby
+      - nodejs
+      - python
+      - php
+      visibility: DISABLED
+  - name: GetNotificationChannelVerificationCode
+    surface_treatments:
+    - include_languages:
+      - go
+      - java
+      - csharp
+      - ruby
+      - nodejs
+      - python
+      - php
+      visibility: DISABLED
+  - name: VerifyNotificationChannel
+    surface_treatments:
+    - include_languages:
+      - go
+      - java
+      - csharp
+      - ruby
+      - nodejs
+      - python
+      - php
+      visibility: DISABLED
 - name: google.monitoring.v3.UptimeCheckService
   collections:
   - name_pattern: projects/{project}
     entity_name: project
+    # C#: Already GA, do not use common resource name for 'project'
   - name_pattern: projects/{project}/uptimeCheckConfigs/{uptime_check_config}
     entity_name: uptime_check_config
   retry_codes_def:
@@ -589,7 +599,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -609,12 +618,12 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: uptime_check_config
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: CreateUptimeCheckConfig
     flattening:
       groups:
@@ -624,7 +633,6 @@ interfaces:
     required_fields:
     - parent
     - uptime_check_config
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -637,7 +645,6 @@ interfaces:
         - uptime_check_config
     required_fields:
     - uptime_check_config
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -650,14 +657,13 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: uptime_check_config
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: ListUptimeCheckIps
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -754,3 +760,9 @@ resource_name_generation:
 - message_name: VerifyNotificationChannelRequest
   field_entity_map:
     name: notification_channel
+- message_name: GetUptimeCheckConfigRequest
+  field_entity_map:
+    name: uptime_check_config
+- message_name: DeleteUptimeCheckConfigRequest
+  field_entity_map:
+    name: uptime_check_config

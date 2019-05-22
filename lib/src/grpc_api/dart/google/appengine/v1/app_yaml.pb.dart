@@ -1,32 +1,34 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/app_yaml.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/duration.pb.dart' as $google$protobuf;
+import '../../protobuf/duration.pb.dart' as $0;
 
 import 'app_yaml.pbenum.dart';
 
 export 'app_yaml.pbenum.dart';
 
-class ApiConfigHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ApiConfigHandler')
+class ApiConfigHandler extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ApiConfigHandler',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..e<AuthFailAction>(
         1,
         'authFailAction',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         AuthFailAction.AUTH_FAIL_ACTION_UNSPECIFIED,
         AuthFailAction.valueOf,
         AuthFailAction.values)
     ..e<LoginRequirement>(
         2,
         'login',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         LoginRequirement.LOGIN_UNSPECIFIED,
         LoginRequirement.valueOf,
         LoginRequirement.values)
@@ -34,7 +36,7 @@ class ApiConfigHandler extends GeneratedMessage {
     ..e<SecurityLevel>(
         4,
         'securityLevel',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         SecurityLevel.SECURE_UNSPECIFIED,
         SecurityLevel.valueOf,
         SecurityLevel.values)
@@ -42,34 +44,30 @@ class ApiConfigHandler extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   ApiConfigHandler() : super();
-  ApiConfigHandler.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ApiConfigHandler.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ApiConfigHandler.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ApiConfigHandler.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ApiConfigHandler clone() => new ApiConfigHandler()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ApiConfigHandler create() => new ApiConfigHandler();
-  static PbList<ApiConfigHandler> createRepeated() =>
-      new PbList<ApiConfigHandler>();
-  static ApiConfigHandler getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyApiConfigHandler();
-    return _defaultInstance;
-  }
-
+  ApiConfigHandler clone() => ApiConfigHandler()..mergeFromMessage(this);
+  ApiConfigHandler copyWith(void Function(ApiConfigHandler) updates) =>
+      super.copyWith((message) => updates(message as ApiConfigHandler));
+  $pb.BuilderInfo get info_ => _i;
+  static ApiConfigHandler create() => ApiConfigHandler();
+  ApiConfigHandler createEmptyInstance() => create();
+  static $pb.PbList<ApiConfigHandler> createRepeated() =>
+      $pb.PbList<ApiConfigHandler>();
+  static ApiConfigHandler getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ApiConfigHandler _defaultInstance;
-  static void $checkItem(ApiConfigHandler v) {
-    if (v is! ApiConfigHandler) checkItemFailed(v, 'ApiConfigHandler');
-  }
 
   AuthFailAction get authFailAction => $_getN(0);
   set authFailAction(AuthFailAction v) {
     setField(1, v);
   }
 
-  bool hasAuthFailAction() => $_has(0);
+  $core.bool hasAuthFailAction() => $_has(0);
   void clearAuthFailAction() => clearField(1);
 
   LoginRequirement get login => $_getN(1);
@@ -77,15 +75,15 @@ class ApiConfigHandler extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasLogin() => $_has(1);
+  $core.bool hasLogin() => $_has(1);
   void clearLogin() => clearField(2);
 
-  String get script => $_getS(2, '');
-  set script(String v) {
+  $core.String get script => $_getS(2, '');
+  set script($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasScript() => $_has(2);
+  $core.bool hasScript() => $_has(2);
   void clearScript() => clearField(3);
 
   SecurityLevel get securityLevel => $_getN(3);
@@ -93,27 +91,25 @@ class ApiConfigHandler extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasSecurityLevel() => $_has(3);
+  $core.bool hasSecurityLevel() => $_has(3);
   void clearSecurityLevel() => clearField(4);
 
-  String get url => $_getS(4, '');
-  set url(String v) {
+  $core.String get url => $_getS(4, '');
+  set url($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasUrl() => $_has(4);
+  $core.bool hasUrl() => $_has(4);
   void clearUrl() => clearField(5);
 }
 
-class _ReadonlyApiConfigHandler extends ApiConfigHandler
-    with ReadonlyMessageMixin {}
-
-class ErrorHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ErrorHandler')
+class ErrorHandler extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ErrorHandler',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..e<ErrorHandler_ErrorCode>(
         1,
         'errorCode',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ErrorHandler_ErrorCode.ERROR_CODE_UNSPECIFIED,
         ErrorHandler_ErrorCode.valueOf,
         ErrorHandler_ErrorCode.values)
@@ -122,119 +118,125 @@ class ErrorHandler extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   ErrorHandler() : super();
-  ErrorHandler.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ErrorHandler.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ErrorHandler.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ErrorHandler.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ErrorHandler clone() => new ErrorHandler()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ErrorHandler create() => new ErrorHandler();
-  static PbList<ErrorHandler> createRepeated() => new PbList<ErrorHandler>();
-  static ErrorHandler getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyErrorHandler();
-    return _defaultInstance;
-  }
-
+  ErrorHandler clone() => ErrorHandler()..mergeFromMessage(this);
+  ErrorHandler copyWith(void Function(ErrorHandler) updates) =>
+      super.copyWith((message) => updates(message as ErrorHandler));
+  $pb.BuilderInfo get info_ => _i;
+  static ErrorHandler create() => ErrorHandler();
+  ErrorHandler createEmptyInstance() => create();
+  static $pb.PbList<ErrorHandler> createRepeated() =>
+      $pb.PbList<ErrorHandler>();
+  static ErrorHandler getDefault() => _defaultInstance ??= create()..freeze();
   static ErrorHandler _defaultInstance;
-  static void $checkItem(ErrorHandler v) {
-    if (v is! ErrorHandler) checkItemFailed(v, 'ErrorHandler');
-  }
 
   ErrorHandler_ErrorCode get errorCode => $_getN(0);
   set errorCode(ErrorHandler_ErrorCode v) {
     setField(1, v);
   }
 
-  bool hasErrorCode() => $_has(0);
+  $core.bool hasErrorCode() => $_has(0);
   void clearErrorCode() => clearField(1);
 
-  String get staticFile => $_getS(1, '');
-  set staticFile(String v) {
+  $core.String get staticFile => $_getS(1, '');
+  set staticFile($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasStaticFile() => $_has(1);
+  $core.bool hasStaticFile() => $_has(1);
   void clearStaticFile() => clearField(2);
 
-  String get mimeType => $_getS(2, '');
-  set mimeType(String v) {
+  $core.String get mimeType => $_getS(2, '');
+  set mimeType($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasMimeType() => $_has(2);
+  $core.bool hasMimeType() => $_has(2);
   void clearMimeType() => clearField(3);
 }
 
-class _ReadonlyErrorHandler extends ErrorHandler with ReadonlyMessageMixin {}
+enum UrlMap_HandlerType { staticFiles, script, apiEndpoint, notSet }
 
-class UrlMap extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UrlMap')
+class UrlMap extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, UrlMap_HandlerType>
+      _UrlMap_HandlerTypeByTag = {
+    2: UrlMap_HandlerType.staticFiles,
+    3: UrlMap_HandlerType.script,
+    4: UrlMap_HandlerType.apiEndpoint,
+    0: UrlMap_HandlerType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UrlMap',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'urlRegex')
-    ..a<StaticFilesHandler>(2, 'staticFiles', PbFieldType.OM,
+    ..a<StaticFilesHandler>(2, 'staticFiles', $pb.PbFieldType.OM,
         StaticFilesHandler.getDefault, StaticFilesHandler.create)
-    ..a<ScriptHandler>(3, 'script', PbFieldType.OM, ScriptHandler.getDefault,
-        ScriptHandler.create)
-    ..a<ApiEndpointHandler>(4, 'apiEndpoint', PbFieldType.OM,
+    ..a<ScriptHandler>(3, 'script', $pb.PbFieldType.OM,
+        ScriptHandler.getDefault, ScriptHandler.create)
+    ..a<ApiEndpointHandler>(4, 'apiEndpoint', $pb.PbFieldType.OM,
         ApiEndpointHandler.getDefault, ApiEndpointHandler.create)
     ..e<SecurityLevel>(
         5,
         'securityLevel',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         SecurityLevel.SECURE_UNSPECIFIED,
         SecurityLevel.valueOf,
         SecurityLevel.values)
     ..e<LoginRequirement>(
         6,
         'login',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         LoginRequirement.LOGIN_UNSPECIFIED,
         LoginRequirement.valueOf,
         LoginRequirement.values)
     ..e<AuthFailAction>(
         7,
         'authFailAction',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         AuthFailAction.AUTH_FAIL_ACTION_UNSPECIFIED,
         AuthFailAction.valueOf,
         AuthFailAction.values)
     ..e<UrlMap_RedirectHttpResponseCode>(
         8,
         'redirectHttpResponseCode',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         UrlMap_RedirectHttpResponseCode.REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED,
         UrlMap_RedirectHttpResponseCode.valueOf,
         UrlMap_RedirectHttpResponseCode.values)
+    ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
   UrlMap() : super();
-  UrlMap.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UrlMap.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UrlMap.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UrlMap.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UrlMap clone() => new UrlMap()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UrlMap create() => new UrlMap();
-  static PbList<UrlMap> createRepeated() => new PbList<UrlMap>();
-  static UrlMap getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUrlMap();
-    return _defaultInstance;
-  }
-
+  UrlMap clone() => UrlMap()..mergeFromMessage(this);
+  UrlMap copyWith(void Function(UrlMap) updates) =>
+      super.copyWith((message) => updates(message as UrlMap));
+  $pb.BuilderInfo get info_ => _i;
+  static UrlMap create() => UrlMap();
+  UrlMap createEmptyInstance() => create();
+  static $pb.PbList<UrlMap> createRepeated() => $pb.PbList<UrlMap>();
+  static UrlMap getDefault() => _defaultInstance ??= create()..freeze();
   static UrlMap _defaultInstance;
-  static void $checkItem(UrlMap v) {
-    if (v is! UrlMap) checkItemFailed(v, 'UrlMap');
-  }
 
-  String get urlRegex => $_getS(0, '');
-  set urlRegex(String v) {
+  UrlMap_HandlerType whichHandlerType() =>
+      _UrlMap_HandlerTypeByTag[$_whichOneof(0)];
+  void clearHandlerType() => clearField($_whichOneof(0));
+
+  $core.String get urlRegex => $_getS(0, '');
+  set urlRegex($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasUrlRegex() => $_has(0);
+  $core.bool hasUrlRegex() => $_has(0);
   void clearUrlRegex() => clearField(1);
 
   StaticFilesHandler get staticFiles => $_getN(1);
@@ -242,7 +244,7 @@ class UrlMap extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasStaticFiles() => $_has(1);
+  $core.bool hasStaticFiles() => $_has(1);
   void clearStaticFiles() => clearField(2);
 
   ScriptHandler get script => $_getN(2);
@@ -250,7 +252,7 @@ class UrlMap extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasScript() => $_has(2);
+  $core.bool hasScript() => $_has(2);
   void clearScript() => clearField(3);
 
   ApiEndpointHandler get apiEndpoint => $_getN(3);
@@ -258,7 +260,7 @@ class UrlMap extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasApiEndpoint() => $_has(3);
+  $core.bool hasApiEndpoint() => $_has(3);
   void clearApiEndpoint() => clearField(4);
 
   SecurityLevel get securityLevel => $_getN(4);
@@ -266,7 +268,7 @@ class UrlMap extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasSecurityLevel() => $_has(4);
+  $core.bool hasSecurityLevel() => $_has(4);
   void clearSecurityLevel() => clearField(5);
 
   LoginRequirement get login => $_getN(5);
@@ -274,7 +276,7 @@ class UrlMap extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasLogin() => $_has(5);
+  $core.bool hasLogin() => $_has(5);
   void clearLogin() => clearField(6);
 
   AuthFailAction get authFailAction => $_getN(6);
@@ -282,7 +284,7 @@ class UrlMap extends GeneratedMessage {
     setField(7, v);
   }
 
-  bool hasAuthFailAction() => $_has(6);
+  $core.bool hasAuthFailAction() => $_has(6);
   void clearAuthFailAction() => clearField(7);
 
   UrlMap_RedirectHttpResponseCode get redirectHttpResponseCode => $_getN(7);
@@ -290,373 +292,294 @@ class UrlMap extends GeneratedMessage {
     setField(8, v);
   }
 
-  bool hasRedirectHttpResponseCode() => $_has(7);
+  $core.bool hasRedirectHttpResponseCode() => $_has(7);
   void clearRedirectHttpResponseCode() => clearField(8);
 }
 
-class _ReadonlyUrlMap extends UrlMap with ReadonlyMessageMixin {}
-
-class StaticFilesHandler_HttpHeadersEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('StaticFilesHandler_HttpHeadersEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  StaticFilesHandler_HttpHeadersEntry() : super();
-  StaticFilesHandler_HttpHeadersEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StaticFilesHandler_HttpHeadersEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  StaticFilesHandler_HttpHeadersEntry clone() =>
-      new StaticFilesHandler_HttpHeadersEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StaticFilesHandler_HttpHeadersEntry create() =>
-      new StaticFilesHandler_HttpHeadersEntry();
-  static PbList<StaticFilesHandler_HttpHeadersEntry> createRepeated() =>
-      new PbList<StaticFilesHandler_HttpHeadersEntry>();
-  static StaticFilesHandler_HttpHeadersEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStaticFilesHandler_HttpHeadersEntry();
-    return _defaultInstance;
-  }
-
-  static StaticFilesHandler_HttpHeadersEntry _defaultInstance;
-  static void $checkItem(StaticFilesHandler_HttpHeadersEntry v) {
-    if (v is! StaticFilesHandler_HttpHeadersEntry)
-      checkItemFailed(v, 'StaticFilesHandler_HttpHeadersEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyStaticFilesHandler_HttpHeadersEntry
-    extends StaticFilesHandler_HttpHeadersEntry with ReadonlyMessageMixin {}
-
-class StaticFilesHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StaticFilesHandler')
+class StaticFilesHandler extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StaticFilesHandler',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'path')
     ..aOS(2, 'uploadPathRegex')
-    ..pp<StaticFilesHandler_HttpHeadersEntry>(
+    ..m<$core.String, $core.String>(
         3,
         'httpHeaders',
-        PbFieldType.PM,
-        StaticFilesHandler_HttpHeadersEntry.$checkItem,
-        StaticFilesHandler_HttpHeadersEntry.create)
+        'StaticFilesHandler.HttpHeadersEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.appengine.v1'))
     ..aOS(4, 'mimeType')
-    ..a<$google$protobuf.Duration>(5, 'expiration', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..a<$0.Duration>(5, 'expiration', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
     ..aOB(6, 'requireMatchingFile')
     ..aOB(7, 'applicationReadable')
     ..hasRequiredFields = false;
 
   StaticFilesHandler() : super();
-  StaticFilesHandler.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StaticFilesHandler.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StaticFilesHandler.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StaticFilesHandler.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StaticFilesHandler clone() =>
-      new StaticFilesHandler()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StaticFilesHandler create() => new StaticFilesHandler();
-  static PbList<StaticFilesHandler> createRepeated() =>
-      new PbList<StaticFilesHandler>();
-  static StaticFilesHandler getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStaticFilesHandler();
-    return _defaultInstance;
-  }
-
+  StaticFilesHandler clone() => StaticFilesHandler()..mergeFromMessage(this);
+  StaticFilesHandler copyWith(void Function(StaticFilesHandler) updates) =>
+      super.copyWith((message) => updates(message as StaticFilesHandler));
+  $pb.BuilderInfo get info_ => _i;
+  static StaticFilesHandler create() => StaticFilesHandler();
+  StaticFilesHandler createEmptyInstance() => create();
+  static $pb.PbList<StaticFilesHandler> createRepeated() =>
+      $pb.PbList<StaticFilesHandler>();
+  static StaticFilesHandler getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StaticFilesHandler _defaultInstance;
-  static void $checkItem(StaticFilesHandler v) {
-    if (v is! StaticFilesHandler) checkItemFailed(v, 'StaticFilesHandler');
-  }
 
-  String get path => $_getS(0, '');
-  set path(String v) {
+  $core.String get path => $_getS(0, '');
+  set path($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasPath() => $_has(0);
+  $core.bool hasPath() => $_has(0);
   void clearPath() => clearField(1);
 
-  String get uploadPathRegex => $_getS(1, '');
-  set uploadPathRegex(String v) {
+  $core.String get uploadPathRegex => $_getS(1, '');
+  set uploadPathRegex($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasUploadPathRegex() => $_has(1);
+  $core.bool hasUploadPathRegex() => $_has(1);
   void clearUploadPathRegex() => clearField(2);
 
-  List<StaticFilesHandler_HttpHeadersEntry> get httpHeaders => $_getList(2);
+  $core.Map<$core.String, $core.String> get httpHeaders => $_getMap(2);
 
-  String get mimeType => $_getS(3, '');
-  set mimeType(String v) {
+  $core.String get mimeType => $_getS(3, '');
+  set mimeType($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasMimeType() => $_has(3);
+  $core.bool hasMimeType() => $_has(3);
   void clearMimeType() => clearField(4);
 
-  $google$protobuf.Duration get expiration => $_getN(4);
-  set expiration($google$protobuf.Duration v) {
+  $0.Duration get expiration => $_getN(4);
+  set expiration($0.Duration v) {
     setField(5, v);
   }
 
-  bool hasExpiration() => $_has(4);
+  $core.bool hasExpiration() => $_has(4);
   void clearExpiration() => clearField(5);
 
-  bool get requireMatchingFile => $_get(5, false);
-  set requireMatchingFile(bool v) {
+  $core.bool get requireMatchingFile => $_get(5, false);
+  set requireMatchingFile($core.bool v) {
     $_setBool(5, v);
   }
 
-  bool hasRequireMatchingFile() => $_has(5);
+  $core.bool hasRequireMatchingFile() => $_has(5);
   void clearRequireMatchingFile() => clearField(6);
 
-  bool get applicationReadable => $_get(6, false);
-  set applicationReadable(bool v) {
+  $core.bool get applicationReadable => $_get(6, false);
+  set applicationReadable($core.bool v) {
     $_setBool(6, v);
   }
 
-  bool hasApplicationReadable() => $_has(6);
+  $core.bool hasApplicationReadable() => $_has(6);
   void clearApplicationReadable() => clearField(7);
 }
 
-class _ReadonlyStaticFilesHandler extends StaticFilesHandler
-    with ReadonlyMessageMixin {}
-
-class ScriptHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScriptHandler')
+class ScriptHandler extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScriptHandler',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'scriptPath')
     ..hasRequiredFields = false;
 
   ScriptHandler() : super();
-  ScriptHandler.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScriptHandler.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ScriptHandler.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ScriptHandler.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScriptHandler clone() => new ScriptHandler()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ScriptHandler create() => new ScriptHandler();
-  static PbList<ScriptHandler> createRepeated() => new PbList<ScriptHandler>();
-  static ScriptHandler getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScriptHandler();
-    return _defaultInstance;
-  }
-
+  ScriptHandler clone() => ScriptHandler()..mergeFromMessage(this);
+  ScriptHandler copyWith(void Function(ScriptHandler) updates) =>
+      super.copyWith((message) => updates(message as ScriptHandler));
+  $pb.BuilderInfo get info_ => _i;
+  static ScriptHandler create() => ScriptHandler();
+  ScriptHandler createEmptyInstance() => create();
+  static $pb.PbList<ScriptHandler> createRepeated() =>
+      $pb.PbList<ScriptHandler>();
+  static ScriptHandler getDefault() => _defaultInstance ??= create()..freeze();
   static ScriptHandler _defaultInstance;
-  static void $checkItem(ScriptHandler v) {
-    if (v is! ScriptHandler) checkItemFailed(v, 'ScriptHandler');
-  }
 
-  String get scriptPath => $_getS(0, '');
-  set scriptPath(String v) {
+  $core.String get scriptPath => $_getS(0, '');
+  set scriptPath($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasScriptPath() => $_has(0);
+  $core.bool hasScriptPath() => $_has(0);
   void clearScriptPath() => clearField(1);
 }
 
-class _ReadonlyScriptHandler extends ScriptHandler with ReadonlyMessageMixin {}
-
-class ApiEndpointHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ApiEndpointHandler')
+class ApiEndpointHandler extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ApiEndpointHandler',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'scriptPath')
     ..hasRequiredFields = false;
 
   ApiEndpointHandler() : super();
-  ApiEndpointHandler.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ApiEndpointHandler.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ApiEndpointHandler.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ApiEndpointHandler.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ApiEndpointHandler clone() =>
-      new ApiEndpointHandler()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ApiEndpointHandler create() => new ApiEndpointHandler();
-  static PbList<ApiEndpointHandler> createRepeated() =>
-      new PbList<ApiEndpointHandler>();
-  static ApiEndpointHandler getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyApiEndpointHandler();
-    return _defaultInstance;
-  }
-
+  ApiEndpointHandler clone() => ApiEndpointHandler()..mergeFromMessage(this);
+  ApiEndpointHandler copyWith(void Function(ApiEndpointHandler) updates) =>
+      super.copyWith((message) => updates(message as ApiEndpointHandler));
+  $pb.BuilderInfo get info_ => _i;
+  static ApiEndpointHandler create() => ApiEndpointHandler();
+  ApiEndpointHandler createEmptyInstance() => create();
+  static $pb.PbList<ApiEndpointHandler> createRepeated() =>
+      $pb.PbList<ApiEndpointHandler>();
+  static ApiEndpointHandler getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ApiEndpointHandler _defaultInstance;
-  static void $checkItem(ApiEndpointHandler v) {
-    if (v is! ApiEndpointHandler) checkItemFailed(v, 'ApiEndpointHandler');
-  }
 
-  String get scriptPath => $_getS(0, '');
-  set scriptPath(String v) {
+  $core.String get scriptPath => $_getS(0, '');
+  set scriptPath($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasScriptPath() => $_has(0);
+  $core.bool hasScriptPath() => $_has(0);
   void clearScriptPath() => clearField(1);
 }
 
-class _ReadonlyApiEndpointHandler extends ApiEndpointHandler
-    with ReadonlyMessageMixin {}
-
-class HealthCheck extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HealthCheck')
+class HealthCheck extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HealthCheck',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..aOB(1, 'disableHealthCheck')
     ..aOS(2, 'host')
-    ..a<int>(3, 'healthyThreshold', PbFieldType.OU3)
-    ..a<int>(4, 'unhealthyThreshold', PbFieldType.OU3)
-    ..a<int>(5, 'restartThreshold', PbFieldType.OU3)
-    ..a<$google$protobuf.Duration>(6, 'checkInterval', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<$google$protobuf.Duration>(7, 'timeout', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..a<$core.int>(3, 'healthyThreshold', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, 'unhealthyThreshold', $pb.PbFieldType.OU3)
+    ..a<$core.int>(5, 'restartThreshold', $pb.PbFieldType.OU3)
+    ..a<$0.Duration>(6, 'checkInterval', $pb.PbFieldType.OM,
+        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$0.Duration>(7, 'timeout', $pb.PbFieldType.OM, $0.Duration.getDefault,
+        $0.Duration.create)
     ..hasRequiredFields = false;
 
   HealthCheck() : super();
-  HealthCheck.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  HealthCheck.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  HealthCheck.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  HealthCheck.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HealthCheck clone() => new HealthCheck()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static HealthCheck create() => new HealthCheck();
-  static PbList<HealthCheck> createRepeated() => new PbList<HealthCheck>();
-  static HealthCheck getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHealthCheck();
-    return _defaultInstance;
-  }
-
+  HealthCheck clone() => HealthCheck()..mergeFromMessage(this);
+  HealthCheck copyWith(void Function(HealthCheck) updates) =>
+      super.copyWith((message) => updates(message as HealthCheck));
+  $pb.BuilderInfo get info_ => _i;
+  static HealthCheck create() => HealthCheck();
+  HealthCheck createEmptyInstance() => create();
+  static $pb.PbList<HealthCheck> createRepeated() => $pb.PbList<HealthCheck>();
+  static HealthCheck getDefault() => _defaultInstance ??= create()..freeze();
   static HealthCheck _defaultInstance;
-  static void $checkItem(HealthCheck v) {
-    if (v is! HealthCheck) checkItemFailed(v, 'HealthCheck');
-  }
 
-  bool get disableHealthCheck => $_get(0, false);
-  set disableHealthCheck(bool v) {
+  $core.bool get disableHealthCheck => $_get(0, false);
+  set disableHealthCheck($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasDisableHealthCheck() => $_has(0);
+  $core.bool hasDisableHealthCheck() => $_has(0);
   void clearDisableHealthCheck() => clearField(1);
 
-  String get host => $_getS(1, '');
-  set host(String v) {
+  $core.String get host => $_getS(1, '');
+  set host($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasHost() => $_has(1);
+  $core.bool hasHost() => $_has(1);
   void clearHost() => clearField(2);
 
-  int get healthyThreshold => $_get(2, 0);
-  set healthyThreshold(int v) {
+  $core.int get healthyThreshold => $_get(2, 0);
+  set healthyThreshold($core.int v) {
     $_setUnsignedInt32(2, v);
   }
 
-  bool hasHealthyThreshold() => $_has(2);
+  $core.bool hasHealthyThreshold() => $_has(2);
   void clearHealthyThreshold() => clearField(3);
 
-  int get unhealthyThreshold => $_get(3, 0);
-  set unhealthyThreshold(int v) {
+  $core.int get unhealthyThreshold => $_get(3, 0);
+  set unhealthyThreshold($core.int v) {
     $_setUnsignedInt32(3, v);
   }
 
-  bool hasUnhealthyThreshold() => $_has(3);
+  $core.bool hasUnhealthyThreshold() => $_has(3);
   void clearUnhealthyThreshold() => clearField(4);
 
-  int get restartThreshold => $_get(4, 0);
-  set restartThreshold(int v) {
+  $core.int get restartThreshold => $_get(4, 0);
+  set restartThreshold($core.int v) {
     $_setUnsignedInt32(4, v);
   }
 
-  bool hasRestartThreshold() => $_has(4);
+  $core.bool hasRestartThreshold() => $_has(4);
   void clearRestartThreshold() => clearField(5);
 
-  $google$protobuf.Duration get checkInterval => $_getN(5);
-  set checkInterval($google$protobuf.Duration v) {
+  $0.Duration get checkInterval => $_getN(5);
+  set checkInterval($0.Duration v) {
     setField(6, v);
   }
 
-  bool hasCheckInterval() => $_has(5);
+  $core.bool hasCheckInterval() => $_has(5);
   void clearCheckInterval() => clearField(6);
 
-  $google$protobuf.Duration get timeout => $_getN(6);
-  set timeout($google$protobuf.Duration v) {
+  $0.Duration get timeout => $_getN(6);
+  set timeout($0.Duration v) {
     setField(7, v);
   }
 
-  bool hasTimeout() => $_has(6);
+  $core.bool hasTimeout() => $_has(6);
   void clearTimeout() => clearField(7);
 }
 
-class _ReadonlyHealthCheck extends HealthCheck with ReadonlyMessageMixin {}
-
-class Library extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Library')
+class Library extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Library',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'version')
     ..hasRequiredFields = false;
 
   Library() : super();
-  Library.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Library.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Library.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Library.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Library clone() => new Library()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Library create() => new Library();
-  static PbList<Library> createRepeated() => new PbList<Library>();
-  static Library getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLibrary();
-    return _defaultInstance;
-  }
-
+  Library clone() => Library()..mergeFromMessage(this);
+  Library copyWith(void Function(Library) updates) =>
+      super.copyWith((message) => updates(message as Library));
+  $pb.BuilderInfo get info_ => _i;
+  static Library create() => Library();
+  Library createEmptyInstance() => create();
+  static $pb.PbList<Library> createRepeated() => $pb.PbList<Library>();
+  static Library getDefault() => _defaultInstance ??= create()..freeze();
   static Library _defaultInstance;
-  static void $checkItem(Library v) {
-    if (v is! Library) checkItemFailed(v, 'Library');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get version => $_getS(1, '');
-  set version(String v) {
+  $core.String get version => $_getS(1, '');
+  set version($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasVersion() => $_has(1);
+  $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 }
-
-class _ReadonlyLibrary extends Library with ReadonlyMessageMixin {}

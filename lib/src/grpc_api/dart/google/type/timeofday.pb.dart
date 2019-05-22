@@ -1,72 +1,69 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/type/timeofday.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class TimeOfDay extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TimeOfDay')
-    ..a<int>(1, 'hours', PbFieldType.O3)
-    ..a<int>(2, 'minutes', PbFieldType.O3)
-    ..a<int>(3, 'seconds', PbFieldType.O3)
-    ..a<int>(4, 'nanos', PbFieldType.O3)
+class TimeOfDay extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeOfDay',
+      package: const $pb.PackageName('google.type'))
+    ..a<$core.int>(1, 'hours', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, 'minutes', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, 'seconds', $pb.PbFieldType.O3)
+    ..a<$core.int>(4, 'nanos', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   TimeOfDay() : super();
-  TimeOfDay.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TimeOfDay.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TimeOfDay.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TimeOfDay.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TimeOfDay clone() => new TimeOfDay()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TimeOfDay create() => new TimeOfDay();
-  static PbList<TimeOfDay> createRepeated() => new PbList<TimeOfDay>();
-  static TimeOfDay getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTimeOfDay();
-    return _defaultInstance;
-  }
-
+  TimeOfDay clone() => TimeOfDay()..mergeFromMessage(this);
+  TimeOfDay copyWith(void Function(TimeOfDay) updates) =>
+      super.copyWith((message) => updates(message as TimeOfDay));
+  $pb.BuilderInfo get info_ => _i;
+  static TimeOfDay create() => TimeOfDay();
+  TimeOfDay createEmptyInstance() => create();
+  static $pb.PbList<TimeOfDay> createRepeated() => $pb.PbList<TimeOfDay>();
+  static TimeOfDay getDefault() => _defaultInstance ??= create()..freeze();
   static TimeOfDay _defaultInstance;
-  static void $checkItem(TimeOfDay v) {
-    if (v is! TimeOfDay) checkItemFailed(v, 'TimeOfDay');
-  }
 
-  int get hours => $_get(0, 0);
-  set hours(int v) {
+  $core.int get hours => $_get(0, 0);
+  set hours($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasHours() => $_has(0);
+  $core.bool hasHours() => $_has(0);
   void clearHours() => clearField(1);
 
-  int get minutes => $_get(1, 0);
-  set minutes(int v) {
+  $core.int get minutes => $_get(1, 0);
+  set minutes($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasMinutes() => $_has(1);
+  $core.bool hasMinutes() => $_has(1);
   void clearMinutes() => clearField(2);
 
-  int get seconds => $_get(2, 0);
-  set seconds(int v) {
+  $core.int get seconds => $_get(2, 0);
+  set seconds($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasSeconds() => $_has(2);
+  $core.bool hasSeconds() => $_has(2);
   void clearSeconds() => clearField(3);
 
-  int get nanos => $_get(3, 0);
-  set nanos(int v) {
+  $core.int get nanos => $_get(3, 0);
+  set nanos($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasNanos() => $_has(3);
+  $core.bool hasNanos() => $_has(3);
   void clearNanos() => clearField(4);
 }
-
-class _ReadonlyTimeOfDay extends TimeOfDay with ReadonlyMessageMixin {}

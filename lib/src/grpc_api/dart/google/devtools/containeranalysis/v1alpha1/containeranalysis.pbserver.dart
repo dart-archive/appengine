@@ -1,113 +1,117 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/containeranalysis/v1alpha1/containeranalysis.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'containeranalysis.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../../iam/v1/policy.pb.dart' as $google$iam$v1;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../protobuf/empty.pb.dart' as $8;
+import '../../../iam/v1/iam_policy.pb.dart' as $9;
+import '../../../iam/v1/policy.pb.dart' as $10;
+import '../../../longrunning/operations.pb.dart' as $5;
 import 'containeranalysis.pbjson.dart';
 
 export 'containeranalysis.pb.dart';
 
-abstract class ContainerAnalysisServiceBase extends GeneratedService {
-  Future<Occurrence> getOccurrence(
-      ServerContext ctx, GetOccurrenceRequest request);
-  Future<ListOccurrencesResponse> listOccurrences(
-      ServerContext ctx, ListOccurrencesRequest request);
-  Future<$google$protobuf.Empty> deleteOccurrence(
-      ServerContext ctx, DeleteOccurrenceRequest request);
-  Future<Occurrence> createOccurrence(
-      ServerContext ctx, CreateOccurrenceRequest request);
-  Future<Occurrence> updateOccurrence(
-      ServerContext ctx, UpdateOccurrenceRequest request);
-  Future<Note> getOccurrenceNote(
-      ServerContext ctx, GetOccurrenceNoteRequest request);
-  Future<Note> getNote(ServerContext ctx, GetNoteRequest request);
-  Future<ListNotesResponse> listNotes(
-      ServerContext ctx, ListNotesRequest request);
-  Future<$google$protobuf.Empty> deleteNote(
-      ServerContext ctx, DeleteNoteRequest request);
-  Future<Note> createNote(ServerContext ctx, CreateNoteRequest request);
-  Future<Note> updateNote(ServerContext ctx, UpdateNoteRequest request);
-  Future<ListNoteOccurrencesResponse> listNoteOccurrences(
-      ServerContext ctx, ListNoteOccurrencesRequest request);
-  Future<GetVulnzOccurrencesSummaryResponse> getVulnzOccurrencesSummary(
-      ServerContext ctx, GetVulnzOccurrencesSummaryRequest request);
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
-  Future<$google$longrunning.Operation> createOperation(
-      ServerContext ctx, CreateOperationRequest request);
-  Future<$google$longrunning.Operation> updateOperation(
-      ServerContext ctx, UpdateOperationRequest request);
-  Future<ScanConfig> getScanConfig(
-      ServerContext ctx, GetScanConfigRequest request);
-  Future<ListScanConfigsResponse> listScanConfigs(
-      ServerContext ctx, ListScanConfigsRequest request);
-  Future<ScanConfig> updateScanConfig(
-      ServerContext ctx, UpdateScanConfigRequest request);
+abstract class ContainerAnalysisServiceBase extends $pb.GeneratedService {
+  $async.Future<Occurrence> getOccurrence(
+      $pb.ServerContext ctx, GetOccurrenceRequest request);
+  $async.Future<ListOccurrencesResponse> listOccurrences(
+      $pb.ServerContext ctx, ListOccurrencesRequest request);
+  $async.Future<$8.Empty> deleteOccurrence(
+      $pb.ServerContext ctx, DeleteOccurrenceRequest request);
+  $async.Future<Occurrence> createOccurrence(
+      $pb.ServerContext ctx, CreateOccurrenceRequest request);
+  $async.Future<Occurrence> updateOccurrence(
+      $pb.ServerContext ctx, UpdateOccurrenceRequest request);
+  $async.Future<Note> getOccurrenceNote(
+      $pb.ServerContext ctx, GetOccurrenceNoteRequest request);
+  $async.Future<Note> getNote($pb.ServerContext ctx, GetNoteRequest request);
+  $async.Future<ListNotesResponse> listNotes(
+      $pb.ServerContext ctx, ListNotesRequest request);
+  $async.Future<$8.Empty> deleteNote(
+      $pb.ServerContext ctx, DeleteNoteRequest request);
+  $async.Future<Note> createNote(
+      $pb.ServerContext ctx, CreateNoteRequest request);
+  $async.Future<Note> updateNote(
+      $pb.ServerContext ctx, UpdateNoteRequest request);
+  $async.Future<ListNoteOccurrencesResponse> listNoteOccurrences(
+      $pb.ServerContext ctx, ListNoteOccurrencesRequest request);
+  $async.Future<GetVulnzOccurrencesSummaryResponse> getVulnzOccurrencesSummary(
+      $pb.ServerContext ctx, GetVulnzOccurrencesSummaryRequest request);
+  $async.Future<$10.Policy> setIamPolicy(
+      $pb.ServerContext ctx, $9.SetIamPolicyRequest request);
+  $async.Future<$10.Policy> getIamPolicy(
+      $pb.ServerContext ctx, $9.GetIamPolicyRequest request);
+  $async.Future<$9.TestIamPermissionsResponse> testIamPermissions(
+      $pb.ServerContext ctx, $9.TestIamPermissionsRequest request);
+  $async.Future<$5.Operation> createOperation(
+      $pb.ServerContext ctx, CreateOperationRequest request);
+  $async.Future<$5.Operation> updateOperation(
+      $pb.ServerContext ctx, UpdateOperationRequest request);
+  $async.Future<ScanConfig> getScanConfig(
+      $pb.ServerContext ctx, GetScanConfigRequest request);
+  $async.Future<ListScanConfigsResponse> listScanConfigs(
+      $pb.ServerContext ctx, ListScanConfigsRequest request);
+  $async.Future<ScanConfig> updateScanConfig(
+      $pb.ServerContext ctx, UpdateScanConfigRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'GetOccurrence':
-        return new GetOccurrenceRequest();
+        return GetOccurrenceRequest();
       case 'ListOccurrences':
-        return new ListOccurrencesRequest();
+        return ListOccurrencesRequest();
       case 'DeleteOccurrence':
-        return new DeleteOccurrenceRequest();
+        return DeleteOccurrenceRequest();
       case 'CreateOccurrence':
-        return new CreateOccurrenceRequest();
+        return CreateOccurrenceRequest();
       case 'UpdateOccurrence':
-        return new UpdateOccurrenceRequest();
+        return UpdateOccurrenceRequest();
       case 'GetOccurrenceNote':
-        return new GetOccurrenceNoteRequest();
+        return GetOccurrenceNoteRequest();
       case 'GetNote':
-        return new GetNoteRequest();
+        return GetNoteRequest();
       case 'ListNotes':
-        return new ListNotesRequest();
+        return ListNotesRequest();
       case 'DeleteNote':
-        return new DeleteNoteRequest();
+        return DeleteNoteRequest();
       case 'CreateNote':
-        return new CreateNoteRequest();
+        return CreateNoteRequest();
       case 'UpdateNote':
-        return new UpdateNoteRequest();
+        return UpdateNoteRequest();
       case 'ListNoteOccurrences':
-        return new ListNoteOccurrencesRequest();
+        return ListNoteOccurrencesRequest();
       case 'GetVulnzOccurrencesSummary':
-        return new GetVulnzOccurrencesSummaryRequest();
+        return GetVulnzOccurrencesSummaryRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $9.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $9.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $9.TestIamPermissionsRequest();
       case 'CreateOperation':
-        return new CreateOperationRequest();
+        return CreateOperationRequest();
       case 'UpdateOperation':
-        return new UpdateOperationRequest();
+        return UpdateOperationRequest();
       case 'GetScanConfig':
-        return new GetScanConfigRequest();
+        return GetScanConfigRequest();
       case 'ListScanConfigs':
-        return new ListScanConfigsRequest();
+        return ListScanConfigsRequest();
       case 'UpdateScanConfig':
-        return new UpdateScanConfigRequest();
+        return UpdateScanConfigRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'GetOccurrence':
         return this.getOccurrence(ctx, request);
@@ -152,11 +156,12 @@ abstract class ContainerAnalysisServiceBase extends GeneratedService {
       case 'UpdateScanConfig':
         return this.updateScanConfig(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => ContainerAnalysis$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      ContainerAnalysis$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ContainerAnalysisServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ContainerAnalysisServiceBase$messageJson;
 }

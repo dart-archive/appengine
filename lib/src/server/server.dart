@@ -12,7 +12,7 @@ import 'context_registry.dart';
 import '../client_context.dart';
 
 void _info(String message) {
-  var formattedMessage = "${new DateTime.now()}: " + message;
+  var formattedMessage = "${DateTime.now()}: " + message;
   stderr.writeln(formattedMessage);
 }
 
@@ -23,13 +23,13 @@ class AppEngineHttpServer {
   final int _port;
   final bool _shared;
 
-  final Completer _shutdownCompleter = new Completer();
+  final Completer _shutdownCompleter = Completer();
   int _pendingRequests = 0;
 
   HttpServer _httpServer;
 
   AppEngineHttpServer(this._contextRegistry,
-      {String hostname: '0.0.0.0', int port: 8080, bool shared: false})
+      {String hostname = '0.0.0.0', int port = 8080, bool shared = false})
       : _hostname = hostname,
         _port = port,
         _shared = shared;
@@ -113,7 +113,7 @@ class AppEngineHttpServer {
   void _sendResponse(HttpResponse response, int statusCode, String message) {
     var data = utf8.encode(message);
     response.headers.contentType =
-        new ContentType('text', 'plain', charset: 'utf-8');
+        ContentType('text', 'plain', charset: 'utf-8');
     response.headers.set("Cache-Control", "no-cache");
     response.headers.set("Server", _hostname);
     response.contentLength = data.length;

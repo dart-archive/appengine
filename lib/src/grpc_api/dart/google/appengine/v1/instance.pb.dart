@@ -1,92 +1,87 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/instance.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../protobuf/timestamp.pb.dart' as $0;
 
 import 'instance.pbenum.dart';
 
 export 'instance.pbenum.dart';
 
-class Instance extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance')
+class Instance extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Instance',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..aOS(3, 'appEngineRelease')
     ..e<Instance_Availability>(
         4,
         'availability',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Instance_Availability.UNSPECIFIED,
         Instance_Availability.valueOf,
         Instance_Availability.values)
     ..aOS(5, 'vmName')
     ..aOS(6, 'vmZoneName')
     ..aOS(7, 'vmId')
-    ..a<$google$protobuf.Timestamp>(
-        8,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<int>(9, 'requests', PbFieldType.O3)
-    ..a<int>(10, 'errors', PbFieldType.O3)
-    ..a<double>(11, 'qps', PbFieldType.OF)
-    ..a<int>(12, 'averageLatency', PbFieldType.O3)
+    ..a<$0.Timestamp>(8, 'startTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$core.int>(9, 'requests', $pb.PbFieldType.O3)
+    ..a<$core.int>(10, 'errors', $pb.PbFieldType.O3)
+    ..a<$core.double>(11, 'qps', $pb.PbFieldType.OF)
+    ..a<$core.int>(12, 'averageLatency', $pb.PbFieldType.O3)
     ..aInt64(13, 'memoryUsage')
     ..aOS(14, 'vmStatus')
     ..aOB(15, 'vmDebugEnabled')
     ..hasRequiredFields = false;
 
   Instance() : super();
-  Instance.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Instance.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Instance.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Instance.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Instance clone() => new Instance()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Instance create() => new Instance();
-  static PbList<Instance> createRepeated() => new PbList<Instance>();
-  static Instance getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInstance();
-    return _defaultInstance;
-  }
-
+  Instance clone() => Instance()..mergeFromMessage(this);
+  Instance copyWith(void Function(Instance) updates) =>
+      super.copyWith((message) => updates(message as Instance));
+  $pb.BuilderInfo get info_ => _i;
+  static Instance create() => Instance();
+  Instance createEmptyInstance() => create();
+  static $pb.PbList<Instance> createRepeated() => $pb.PbList<Instance>();
+  static Instance getDefault() => _defaultInstance ??= create()..freeze();
   static Instance _defaultInstance;
-  static void $checkItem(Instance v) {
-    if (v is! Instance) checkItemFailed(v, 'Instance');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get id => $_getS(1, '');
-  set id(String v) {
+  $core.String get id => $_getS(1, '');
+  set id($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasId() => $_has(1);
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  String get appEngineRelease => $_getS(2, '');
-  set appEngineRelease(String v) {
+  $core.String get appEngineRelease => $_getS(2, '');
+  set appEngineRelease($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasAppEngineRelease() => $_has(2);
+  $core.bool hasAppEngineRelease() => $_has(2);
   void clearAppEngineRelease() => clearField(3);
 
   Instance_Availability get availability => $_getN(3);
@@ -94,71 +89,71 @@ class Instance extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasAvailability() => $_has(3);
+  $core.bool hasAvailability() => $_has(3);
   void clearAvailability() => clearField(4);
 
-  String get vmName => $_getS(4, '');
-  set vmName(String v) {
+  $core.String get vmName => $_getS(4, '');
+  set vmName($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasVmName() => $_has(4);
+  $core.bool hasVmName() => $_has(4);
   void clearVmName() => clearField(5);
 
-  String get vmZoneName => $_getS(5, '');
-  set vmZoneName(String v) {
+  $core.String get vmZoneName => $_getS(5, '');
+  set vmZoneName($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasVmZoneName() => $_has(5);
+  $core.bool hasVmZoneName() => $_has(5);
   void clearVmZoneName() => clearField(6);
 
-  String get vmId => $_getS(6, '');
-  set vmId(String v) {
+  $core.String get vmId => $_getS(6, '');
+  set vmId($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasVmId() => $_has(6);
+  $core.bool hasVmId() => $_has(6);
   void clearVmId() => clearField(7);
 
-  $google$protobuf.Timestamp get startTime => $_getN(7);
-  set startTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get startTime => $_getN(7);
+  set startTime($0.Timestamp v) {
     setField(8, v);
   }
 
-  bool hasStartTime() => $_has(7);
+  $core.bool hasStartTime() => $_has(7);
   void clearStartTime() => clearField(8);
 
-  int get requests => $_get(8, 0);
-  set requests(int v) {
+  $core.int get requests => $_get(8, 0);
+  set requests($core.int v) {
     $_setSignedInt32(8, v);
   }
 
-  bool hasRequests() => $_has(8);
+  $core.bool hasRequests() => $_has(8);
   void clearRequests() => clearField(9);
 
-  int get errors => $_get(9, 0);
-  set errors(int v) {
+  $core.int get errors => $_get(9, 0);
+  set errors($core.int v) {
     $_setSignedInt32(9, v);
   }
 
-  bool hasErrors() => $_has(9);
+  $core.bool hasErrors() => $_has(9);
   void clearErrors() => clearField(10);
 
-  double get qps => $_getN(10);
-  set qps(double v) {
+  $core.double get qps => $_getN(10);
+  set qps($core.double v) {
     $_setFloat(10, v);
   }
 
-  bool hasQps() => $_has(10);
+  $core.bool hasQps() => $_has(10);
   void clearQps() => clearField(11);
 
-  int get averageLatency => $_get(11, 0);
-  set averageLatency(int v) {
+  $core.int get averageLatency => $_get(11, 0);
+  set averageLatency($core.int v) {
     $_setSignedInt32(11, v);
   }
 
-  bool hasAverageLatency() => $_has(11);
+  $core.bool hasAverageLatency() => $_has(11);
   void clearAverageLatency() => clearField(12);
 
   Int64 get memoryUsage => $_getI64(12);
@@ -166,24 +161,22 @@ class Instance extends GeneratedMessage {
     $_setInt64(12, v);
   }
 
-  bool hasMemoryUsage() => $_has(12);
+  $core.bool hasMemoryUsage() => $_has(12);
   void clearMemoryUsage() => clearField(13);
 
-  String get vmStatus => $_getS(13, '');
-  set vmStatus(String v) {
+  $core.String get vmStatus => $_getS(13, '');
+  set vmStatus($core.String v) {
     $_setString(13, v);
   }
 
-  bool hasVmStatus() => $_has(13);
+  $core.bool hasVmStatus() => $_has(13);
   void clearVmStatus() => clearField(14);
 
-  bool get vmDebugEnabled => $_get(14, false);
-  set vmDebugEnabled(bool v) {
+  $core.bool get vmDebugEnabled => $_get(14, false);
+  set vmDebugEnabled($core.bool v) {
     $_setBool(14, v);
   }
 
-  bool hasVmDebugEnabled() => $_has(14);
+  $core.bool hasVmDebugEnabled() => $_has(14);
   void clearVmDebugEnabled() => clearField(15);
 }
-
-class _ReadonlyInstance extends Instance with ReadonlyMessageMixin {}

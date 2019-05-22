@@ -1,64 +1,68 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/table/v1/bigtable_table_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'bigtable_table_service_messages.pb.dart';
-import 'bigtable_table_data.pb.dart';
-import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
+import 'bigtable_table_service_messages.pb.dart' as $0;
+import 'bigtable_table_data.pb.dart' as $1;
+import '../../../../protobuf/empty.pb.dart' as $2;
 import 'bigtable_table_service.pbjson.dart';
 
 export 'bigtable_table_service.pb.dart';
 
-abstract class BigtableTableServiceBase extends GeneratedService {
-  Future<Table> createTable(ServerContext ctx, CreateTableRequest request);
-  Future<ListTablesResponse> listTables(
-      ServerContext ctx, ListTablesRequest request);
-  Future<Table> getTable(ServerContext ctx, GetTableRequest request);
-  Future<$google$protobuf.Empty> deleteTable(
-      ServerContext ctx, DeleteTableRequest request);
-  Future<$google$protobuf.Empty> renameTable(
-      ServerContext ctx, RenameTableRequest request);
-  Future<ColumnFamily> createColumnFamily(
-      ServerContext ctx, CreateColumnFamilyRequest request);
-  Future<ColumnFamily> updateColumnFamily(
-      ServerContext ctx, ColumnFamily request);
-  Future<$google$protobuf.Empty> deleteColumnFamily(
-      ServerContext ctx, DeleteColumnFamilyRequest request);
-  Future<$google$protobuf.Empty> bulkDeleteRows(
-      ServerContext ctx, BulkDeleteRowsRequest request);
+abstract class BigtableTableServiceBase extends $pb.GeneratedService {
+  $async.Future<$1.Table> createTable(
+      $pb.ServerContext ctx, $0.CreateTableRequest request);
+  $async.Future<$0.ListTablesResponse> listTables(
+      $pb.ServerContext ctx, $0.ListTablesRequest request);
+  $async.Future<$1.Table> getTable(
+      $pb.ServerContext ctx, $0.GetTableRequest request);
+  $async.Future<$2.Empty> deleteTable(
+      $pb.ServerContext ctx, $0.DeleteTableRequest request);
+  $async.Future<$2.Empty> renameTable(
+      $pb.ServerContext ctx, $0.RenameTableRequest request);
+  $async.Future<$1.ColumnFamily> createColumnFamily(
+      $pb.ServerContext ctx, $0.CreateColumnFamilyRequest request);
+  $async.Future<$1.ColumnFamily> updateColumnFamily(
+      $pb.ServerContext ctx, $1.ColumnFamily request);
+  $async.Future<$2.Empty> deleteColumnFamily(
+      $pb.ServerContext ctx, $0.DeleteColumnFamilyRequest request);
+  $async.Future<$2.Empty> bulkDeleteRows(
+      $pb.ServerContext ctx, $0.BulkDeleteRowsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'CreateTable':
-        return new CreateTableRequest();
+        return $0.CreateTableRequest();
       case 'ListTables':
-        return new ListTablesRequest();
+        return $0.ListTablesRequest();
       case 'GetTable':
-        return new GetTableRequest();
+        return $0.GetTableRequest();
       case 'DeleteTable':
-        return new DeleteTableRequest();
+        return $0.DeleteTableRequest();
       case 'RenameTable':
-        return new RenameTableRequest();
+        return $0.RenameTableRequest();
       case 'CreateColumnFamily':
-        return new CreateColumnFamilyRequest();
+        return $0.CreateColumnFamilyRequest();
       case 'UpdateColumnFamily':
-        return new ColumnFamily();
+        return $1.ColumnFamily();
       case 'DeleteColumnFamily':
-        return new DeleteColumnFamilyRequest();
+        return $0.DeleteColumnFamilyRequest();
       case 'BulkDeleteRows':
-        return new BulkDeleteRowsRequest();
+        return $0.BulkDeleteRowsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'CreateTable':
         return this.createTable(ctx, request);
@@ -79,11 +83,12 @@ abstract class BigtableTableServiceBase extends GeneratedService {
       case 'BulkDeleteRows':
         return this.bulkDeleteRows(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => BigtableTableService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      BigtableTableService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      BigtableTableServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => BigtableTableServiceBase$messageJson;
 }

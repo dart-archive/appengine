@@ -1,0 +1,34 @@
+///
+//  Generated code. Do not modify.
+//  source: google/ads/googleads/v1/errors/range_error.proto
+///
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+
+// ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
+
+class RangeErrorEnum_RangeError extends $pb.ProtobufEnum {
+  static const RangeErrorEnum_RangeError UNSPECIFIED =
+      RangeErrorEnum_RangeError._(0, 'UNSPECIFIED');
+  static const RangeErrorEnum_RangeError UNKNOWN =
+      RangeErrorEnum_RangeError._(1, 'UNKNOWN');
+  static const RangeErrorEnum_RangeError TOO_LOW =
+      RangeErrorEnum_RangeError._(2, 'TOO_LOW');
+  static const RangeErrorEnum_RangeError TOO_HIGH =
+      RangeErrorEnum_RangeError._(3, 'TOO_HIGH');
+
+  static const $core.List<RangeErrorEnum_RangeError> values =
+      <RangeErrorEnum_RangeError>[
+    UNSPECIFIED,
+    UNKNOWN,
+    TOO_LOW,
+    TOO_HIGH,
+  ];
+
+  static final $core.Map<$core.int, RangeErrorEnum_RangeError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static RangeErrorEnum_RangeError valueOf($core.int value) => _byValue[value];
+
+  const RangeErrorEnum_RangeError._($core.int v, $core.String n) : super(v, n);
+}

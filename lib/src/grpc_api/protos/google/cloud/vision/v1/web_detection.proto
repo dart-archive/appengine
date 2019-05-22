@@ -1,4 +1,4 @@
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 
 syntax = "proto3";
 
@@ -23,7 +24,7 @@ option go_package = "google.golang.org/genproto/googleapis/cloud/vision/v1;visio
 option java_multiple_files = true;
 option java_outer_classname = "WebDetectionProto";
 option java_package = "com.google.cloud.vision.v1";
-
+option objc_class_prefix = "GCVN";
 
 // Relevant information for the image from the Internet.
 message WebDetection {
@@ -49,6 +50,17 @@ message WebDetection {
     float score = 2;
   }
 
+  // Label to provide extra metadata for the web detection.
+  message WebLabel {
+    // Label for extra metadata.
+    string label = 1;
+
+    // The BCP-47 language code for `label`, such as "en-US" or "sr-Latn".
+    // For more information, see
+    // http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+    string language_code = 2;
+  }
+
   // Metadata for web pages.
   message WebPage {
     // The result web page URL.
@@ -71,17 +83,6 @@ message WebDetection {
     repeated WebImage partial_matching_images = 5;
   }
 
-  // Label to provide extra metadata for the web detection.
-  message WebLabel {
-    // Label for extra metadata.
-    string label = 1;
-
-    // The BCP-47 language code for `label`, such as "en-US" or "sr-Latn".
-    // For more information, see
-    // http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
-    string language_code = 2;
-  }
-
   // Deduced entities from similar images on the Internet.
   repeated WebEntity web_entities = 1;
 
@@ -100,6 +101,7 @@ message WebDetection {
   // The visually similar image results.
   repeated WebImage visually_similar_images = 6;
 
-  // Best guess text labels for the request image.
+  // The service's best guess as to the topic of the request image.
+  // Inferred from similar images on the open web.
   repeated WebLabel best_guess_labels = 8;
 }

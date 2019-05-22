@@ -1,145 +1,149 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/metric.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'common.pb.dart';
-import '../../api/metric.pb.dart' as $google$api;
-import '../../api/monitored_resource.pb.dart' as $google$api;
+import 'common.pb.dart' as $0;
+import '../../api/metric.pb.dart' as $1;
+import '../../api/monitored_resource.pb.dart' as $2;
 
-import '../../api/metric.pbenum.dart' as $google$api;
+import '../../api/metric.pbenum.dart' as $1;
 
-class Point extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Point')
-    ..a<TimeInterval>(1, 'interval', PbFieldType.OM, TimeInterval.getDefault,
-        TimeInterval.create)
-    ..a<TypedValue>(
-        2, 'value', PbFieldType.OM, TypedValue.getDefault, TypedValue.create)
+class Point extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Point',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$0.TimeInterval>(1, 'interval', $pb.PbFieldType.OM,
+        $0.TimeInterval.getDefault, $0.TimeInterval.create)
+    ..a<$0.TypedValue>(2, 'value', $pb.PbFieldType.OM, $0.TypedValue.getDefault,
+        $0.TypedValue.create)
     ..hasRequiredFields = false;
 
   Point() : super();
-  Point.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Point.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Point.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Point.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Point clone() => new Point()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Point create() => new Point();
-  static PbList<Point> createRepeated() => new PbList<Point>();
-  static Point getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPoint();
-    return _defaultInstance;
-  }
-
+  Point clone() => Point()..mergeFromMessage(this);
+  Point copyWith(void Function(Point) updates) =>
+      super.copyWith((message) => updates(message as Point));
+  $pb.BuilderInfo get info_ => _i;
+  static Point create() => Point();
+  Point createEmptyInstance() => create();
+  static $pb.PbList<Point> createRepeated() => $pb.PbList<Point>();
+  static Point getDefault() => _defaultInstance ??= create()..freeze();
   static Point _defaultInstance;
-  static void $checkItem(Point v) {
-    if (v is! Point) checkItemFailed(v, 'Point');
-  }
 
-  TimeInterval get interval => $_getN(0);
-  set interval(TimeInterval v) {
+  $0.TimeInterval get interval => $_getN(0);
+  set interval($0.TimeInterval v) {
     setField(1, v);
   }
 
-  bool hasInterval() => $_has(0);
+  $core.bool hasInterval() => $_has(0);
   void clearInterval() => clearField(1);
 
-  TypedValue get value => $_getN(1);
-  set value(TypedValue v) {
+  $0.TypedValue get value => $_getN(1);
+  set value($0.TypedValue v) {
     setField(2, v);
   }
 
-  bool hasValue() => $_has(1);
+  $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
-class _ReadonlyPoint extends Point with ReadonlyMessageMixin {}
-
-class TimeSeries extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TimeSeries')
-    ..a<$google$api.Metric>(1, 'metric', PbFieldType.OM,
-        $google$api.Metric.getDefault, $google$api.Metric.create)
-    ..a<$google$api.MonitoredResource>(
-        2,
-        'resource',
-        PbFieldType.OM,
-        $google$api.MonitoredResource.getDefault,
-        $google$api.MonitoredResource.create)
-    ..e<$google$api.MetricDescriptor_MetricKind>(
+class TimeSeries extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeSeries',
+      package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$1.Metric>(
+        1, 'metric', $pb.PbFieldType.OM, $1.Metric.getDefault, $1.Metric.create)
+    ..a<$2.MonitoredResource>(2, 'resource', $pb.PbFieldType.OM,
+        $2.MonitoredResource.getDefault, $2.MonitoredResource.create)
+    ..e<$1.MetricDescriptor_MetricKind>(
         3,
         'metricKind',
-        PbFieldType.OE,
-        $google$api.MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED,
-        $google$api.MetricDescriptor_MetricKind.valueOf,
-        $google$api.MetricDescriptor_MetricKind.values)
-    ..e<$google$api.MetricDescriptor_ValueType>(
+        $pb.PbFieldType.OE,
+        $1.MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED,
+        $1.MetricDescriptor_MetricKind.valueOf,
+        $1.MetricDescriptor_MetricKind.values)
+    ..e<$1.MetricDescriptor_ValueType>(
         4,
         'valueType',
-        PbFieldType.OE,
-        $google$api.MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED,
-        $google$api.MetricDescriptor_ValueType.valueOf,
-        $google$api.MetricDescriptor_ValueType.values)
-    ..pp<Point>(5, 'points', PbFieldType.PM, Point.$checkItem, Point.create)
+        $pb.PbFieldType.OE,
+        $1.MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED,
+        $1.MetricDescriptor_ValueType.valueOf,
+        $1.MetricDescriptor_ValueType.values)
+    ..pc<Point>(5, 'points', $pb.PbFieldType.PM, Point.create)
+    ..a<$2.MonitoredResourceMetadata>(
+        7,
+        'metadata',
+        $pb.PbFieldType.OM,
+        $2.MonitoredResourceMetadata.getDefault,
+        $2.MonitoredResourceMetadata.create)
     ..hasRequiredFields = false;
 
   TimeSeries() : super();
-  TimeSeries.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TimeSeries.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TimeSeries.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TimeSeries.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TimeSeries clone() => new TimeSeries()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TimeSeries create() => new TimeSeries();
-  static PbList<TimeSeries> createRepeated() => new PbList<TimeSeries>();
-  static TimeSeries getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTimeSeries();
-    return _defaultInstance;
-  }
-
+  TimeSeries clone() => TimeSeries()..mergeFromMessage(this);
+  TimeSeries copyWith(void Function(TimeSeries) updates) =>
+      super.copyWith((message) => updates(message as TimeSeries));
+  $pb.BuilderInfo get info_ => _i;
+  static TimeSeries create() => TimeSeries();
+  TimeSeries createEmptyInstance() => create();
+  static $pb.PbList<TimeSeries> createRepeated() => $pb.PbList<TimeSeries>();
+  static TimeSeries getDefault() => _defaultInstance ??= create()..freeze();
   static TimeSeries _defaultInstance;
-  static void $checkItem(TimeSeries v) {
-    if (v is! TimeSeries) checkItemFailed(v, 'TimeSeries');
-  }
 
-  $google$api.Metric get metric => $_getN(0);
-  set metric($google$api.Metric v) {
+  $1.Metric get metric => $_getN(0);
+  set metric($1.Metric v) {
     setField(1, v);
   }
 
-  bool hasMetric() => $_has(0);
+  $core.bool hasMetric() => $_has(0);
   void clearMetric() => clearField(1);
 
-  $google$api.MonitoredResource get resource => $_getN(1);
-  set resource($google$api.MonitoredResource v) {
+  $2.MonitoredResource get resource => $_getN(1);
+  set resource($2.MonitoredResource v) {
     setField(2, v);
   }
 
-  bool hasResource() => $_has(1);
+  $core.bool hasResource() => $_has(1);
   void clearResource() => clearField(2);
 
-  $google$api.MetricDescriptor_MetricKind get metricKind => $_getN(2);
-  set metricKind($google$api.MetricDescriptor_MetricKind v) {
+  $1.MetricDescriptor_MetricKind get metricKind => $_getN(2);
+  set metricKind($1.MetricDescriptor_MetricKind v) {
     setField(3, v);
   }
 
-  bool hasMetricKind() => $_has(2);
+  $core.bool hasMetricKind() => $_has(2);
   void clearMetricKind() => clearField(3);
 
-  $google$api.MetricDescriptor_ValueType get valueType => $_getN(3);
-  set valueType($google$api.MetricDescriptor_ValueType v) {
+  $1.MetricDescriptor_ValueType get valueType => $_getN(3);
+  set valueType($1.MetricDescriptor_ValueType v) {
     setField(4, v);
   }
 
-  bool hasValueType() => $_has(3);
+  $core.bool hasValueType() => $_has(3);
   void clearValueType() => clearField(4);
 
-  List<Point> get points => $_getList(4);
-}
+  $core.List<Point> get points => $_getList(4);
 
-class _ReadonlyTimeSeries extends TimeSeries with ReadonlyMessageMixin {}
+  $2.MonitoredResourceMetadata get metadata => $_getN(5);
+  set metadata($2.MonitoredResourceMetadata v) {
+    setField(7, v);
+  }
+
+  $core.bool hasMetadata() => $_has(5);
+  void clearMetadata() => clearField(7);
+}

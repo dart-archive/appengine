@@ -1,127 +1,155 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/privacy/dlp/v2/dlp.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'dlp.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../protobuf/empty.pb.dart' as $2;
 import 'dlp.pbjson.dart';
 
 export 'dlp.pb.dart';
 
-abstract class DlpServiceBase extends GeneratedService {
-  Future<InspectContentResponse> inspectContent(
-      ServerContext ctx, InspectContentRequest request);
-  Future<RedactImageResponse> redactImage(
-      ServerContext ctx, RedactImageRequest request);
-  Future<DeidentifyContentResponse> deidentifyContent(
-      ServerContext ctx, DeidentifyContentRequest request);
-  Future<ReidentifyContentResponse> reidentifyContent(
-      ServerContext ctx, ReidentifyContentRequest request);
-  Future<ListInfoTypesResponse> listInfoTypes(
-      ServerContext ctx, ListInfoTypesRequest request);
-  Future<InspectTemplate> createInspectTemplate(
-      ServerContext ctx, CreateInspectTemplateRequest request);
-  Future<InspectTemplate> updateInspectTemplate(
-      ServerContext ctx, UpdateInspectTemplateRequest request);
-  Future<InspectTemplate> getInspectTemplate(
-      ServerContext ctx, GetInspectTemplateRequest request);
-  Future<ListInspectTemplatesResponse> listInspectTemplates(
-      ServerContext ctx, ListInspectTemplatesRequest request);
-  Future<$google$protobuf.Empty> deleteInspectTemplate(
-      ServerContext ctx, DeleteInspectTemplateRequest request);
-  Future<DeidentifyTemplate> createDeidentifyTemplate(
-      ServerContext ctx, CreateDeidentifyTemplateRequest request);
-  Future<DeidentifyTemplate> updateDeidentifyTemplate(
-      ServerContext ctx, UpdateDeidentifyTemplateRequest request);
-  Future<DeidentifyTemplate> getDeidentifyTemplate(
-      ServerContext ctx, GetDeidentifyTemplateRequest request);
-  Future<ListDeidentifyTemplatesResponse> listDeidentifyTemplates(
-      ServerContext ctx, ListDeidentifyTemplatesRequest request);
-  Future<$google$protobuf.Empty> deleteDeidentifyTemplate(
-      ServerContext ctx, DeleteDeidentifyTemplateRequest request);
-  Future<JobTrigger> createJobTrigger(
-      ServerContext ctx, CreateJobTriggerRequest request);
-  Future<JobTrigger> updateJobTrigger(
-      ServerContext ctx, UpdateJobTriggerRequest request);
-  Future<JobTrigger> getJobTrigger(
-      ServerContext ctx, GetJobTriggerRequest request);
-  Future<ListJobTriggersResponse> listJobTriggers(
-      ServerContext ctx, ListJobTriggersRequest request);
-  Future<$google$protobuf.Empty> deleteJobTrigger(
-      ServerContext ctx, DeleteJobTriggerRequest request);
-  Future<DlpJob> createDlpJob(ServerContext ctx, CreateDlpJobRequest request);
-  Future<ListDlpJobsResponse> listDlpJobs(
-      ServerContext ctx, ListDlpJobsRequest request);
-  Future<DlpJob> getDlpJob(ServerContext ctx, GetDlpJobRequest request);
-  Future<$google$protobuf.Empty> deleteDlpJob(
-      ServerContext ctx, DeleteDlpJobRequest request);
-  Future<$google$protobuf.Empty> cancelDlpJob(
-      ServerContext ctx, CancelDlpJobRequest request);
+abstract class DlpServiceBase extends $pb.GeneratedService {
+  $async.Future<InspectContentResponse> inspectContent(
+      $pb.ServerContext ctx, InspectContentRequest request);
+  $async.Future<RedactImageResponse> redactImage(
+      $pb.ServerContext ctx, RedactImageRequest request);
+  $async.Future<DeidentifyContentResponse> deidentifyContent(
+      $pb.ServerContext ctx, DeidentifyContentRequest request);
+  $async.Future<ReidentifyContentResponse> reidentifyContent(
+      $pb.ServerContext ctx, ReidentifyContentRequest request);
+  $async.Future<ListInfoTypesResponse> listInfoTypes(
+      $pb.ServerContext ctx, ListInfoTypesRequest request);
+  $async.Future<InspectTemplate> createInspectTemplate(
+      $pb.ServerContext ctx, CreateInspectTemplateRequest request);
+  $async.Future<InspectTemplate> updateInspectTemplate(
+      $pb.ServerContext ctx, UpdateInspectTemplateRequest request);
+  $async.Future<InspectTemplate> getInspectTemplate(
+      $pb.ServerContext ctx, GetInspectTemplateRequest request);
+  $async.Future<ListInspectTemplatesResponse> listInspectTemplates(
+      $pb.ServerContext ctx, ListInspectTemplatesRequest request);
+  $async.Future<$2.Empty> deleteInspectTemplate(
+      $pb.ServerContext ctx, DeleteInspectTemplateRequest request);
+  $async.Future<DeidentifyTemplate> createDeidentifyTemplate(
+      $pb.ServerContext ctx, CreateDeidentifyTemplateRequest request);
+  $async.Future<DeidentifyTemplate> updateDeidentifyTemplate(
+      $pb.ServerContext ctx, UpdateDeidentifyTemplateRequest request);
+  $async.Future<DeidentifyTemplate> getDeidentifyTemplate(
+      $pb.ServerContext ctx, GetDeidentifyTemplateRequest request);
+  $async.Future<ListDeidentifyTemplatesResponse> listDeidentifyTemplates(
+      $pb.ServerContext ctx, ListDeidentifyTemplatesRequest request);
+  $async.Future<$2.Empty> deleteDeidentifyTemplate(
+      $pb.ServerContext ctx, DeleteDeidentifyTemplateRequest request);
+  $async.Future<JobTrigger> createJobTrigger(
+      $pb.ServerContext ctx, CreateJobTriggerRequest request);
+  $async.Future<JobTrigger> updateJobTrigger(
+      $pb.ServerContext ctx, UpdateJobTriggerRequest request);
+  $async.Future<JobTrigger> getJobTrigger(
+      $pb.ServerContext ctx, GetJobTriggerRequest request);
+  $async.Future<ListJobTriggersResponse> listJobTriggers(
+      $pb.ServerContext ctx, ListJobTriggersRequest request);
+  $async.Future<$2.Empty> deleteJobTrigger(
+      $pb.ServerContext ctx, DeleteJobTriggerRequest request);
+  $async.Future<DlpJob> activateJobTrigger(
+      $pb.ServerContext ctx, ActivateJobTriggerRequest request);
+  $async.Future<DlpJob> createDlpJob(
+      $pb.ServerContext ctx, CreateDlpJobRequest request);
+  $async.Future<ListDlpJobsResponse> listDlpJobs(
+      $pb.ServerContext ctx, ListDlpJobsRequest request);
+  $async.Future<DlpJob> getDlpJob(
+      $pb.ServerContext ctx, GetDlpJobRequest request);
+  $async.Future<$2.Empty> deleteDlpJob(
+      $pb.ServerContext ctx, DeleteDlpJobRequest request);
+  $async.Future<$2.Empty> cancelDlpJob(
+      $pb.ServerContext ctx, CancelDlpJobRequest request);
+  $async.Future<StoredInfoType> createStoredInfoType(
+      $pb.ServerContext ctx, CreateStoredInfoTypeRequest request);
+  $async.Future<StoredInfoType> updateStoredInfoType(
+      $pb.ServerContext ctx, UpdateStoredInfoTypeRequest request);
+  $async.Future<StoredInfoType> getStoredInfoType(
+      $pb.ServerContext ctx, GetStoredInfoTypeRequest request);
+  $async.Future<ListStoredInfoTypesResponse> listStoredInfoTypes(
+      $pb.ServerContext ctx, ListStoredInfoTypesRequest request);
+  $async.Future<$2.Empty> deleteStoredInfoType(
+      $pb.ServerContext ctx, DeleteStoredInfoTypeRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'InspectContent':
-        return new InspectContentRequest();
+        return InspectContentRequest();
       case 'RedactImage':
-        return new RedactImageRequest();
+        return RedactImageRequest();
       case 'DeidentifyContent':
-        return new DeidentifyContentRequest();
+        return DeidentifyContentRequest();
       case 'ReidentifyContent':
-        return new ReidentifyContentRequest();
+        return ReidentifyContentRequest();
       case 'ListInfoTypes':
-        return new ListInfoTypesRequest();
+        return ListInfoTypesRequest();
       case 'CreateInspectTemplate':
-        return new CreateInspectTemplateRequest();
+        return CreateInspectTemplateRequest();
       case 'UpdateInspectTemplate':
-        return new UpdateInspectTemplateRequest();
+        return UpdateInspectTemplateRequest();
       case 'GetInspectTemplate':
-        return new GetInspectTemplateRequest();
+        return GetInspectTemplateRequest();
       case 'ListInspectTemplates':
-        return new ListInspectTemplatesRequest();
+        return ListInspectTemplatesRequest();
       case 'DeleteInspectTemplate':
-        return new DeleteInspectTemplateRequest();
+        return DeleteInspectTemplateRequest();
       case 'CreateDeidentifyTemplate':
-        return new CreateDeidentifyTemplateRequest();
+        return CreateDeidentifyTemplateRequest();
       case 'UpdateDeidentifyTemplate':
-        return new UpdateDeidentifyTemplateRequest();
+        return UpdateDeidentifyTemplateRequest();
       case 'GetDeidentifyTemplate':
-        return new GetDeidentifyTemplateRequest();
+        return GetDeidentifyTemplateRequest();
       case 'ListDeidentifyTemplates':
-        return new ListDeidentifyTemplatesRequest();
+        return ListDeidentifyTemplatesRequest();
       case 'DeleteDeidentifyTemplate':
-        return new DeleteDeidentifyTemplateRequest();
+        return DeleteDeidentifyTemplateRequest();
       case 'CreateJobTrigger':
-        return new CreateJobTriggerRequest();
+        return CreateJobTriggerRequest();
       case 'UpdateJobTrigger':
-        return new UpdateJobTriggerRequest();
+        return UpdateJobTriggerRequest();
       case 'GetJobTrigger':
-        return new GetJobTriggerRequest();
+        return GetJobTriggerRequest();
       case 'ListJobTriggers':
-        return new ListJobTriggersRequest();
+        return ListJobTriggersRequest();
       case 'DeleteJobTrigger':
-        return new DeleteJobTriggerRequest();
+        return DeleteJobTriggerRequest();
+      case 'ActivateJobTrigger':
+        return ActivateJobTriggerRequest();
       case 'CreateDlpJob':
-        return new CreateDlpJobRequest();
+        return CreateDlpJobRequest();
       case 'ListDlpJobs':
-        return new ListDlpJobsRequest();
+        return ListDlpJobsRequest();
       case 'GetDlpJob':
-        return new GetDlpJobRequest();
+        return GetDlpJobRequest();
       case 'DeleteDlpJob':
-        return new DeleteDlpJobRequest();
+        return DeleteDlpJobRequest();
       case 'CancelDlpJob':
-        return new CancelDlpJobRequest();
+        return CancelDlpJobRequest();
+      case 'CreateStoredInfoType':
+        return CreateStoredInfoTypeRequest();
+      case 'UpdateStoredInfoType':
+        return UpdateStoredInfoTypeRequest();
+      case 'GetStoredInfoType':
+        return GetStoredInfoTypeRequest();
+      case 'ListStoredInfoTypes':
+        return ListStoredInfoTypesRequest();
+      case 'DeleteStoredInfoType':
+        return DeleteStoredInfoTypeRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'InspectContent':
         return this.inspectContent(ctx, request);
@@ -163,6 +191,8 @@ abstract class DlpServiceBase extends GeneratedService {
         return this.listJobTriggers(ctx, request);
       case 'DeleteJobTrigger':
         return this.deleteJobTrigger(ctx, request);
+      case 'ActivateJobTrigger':
+        return this.activateJobTrigger(ctx, request);
       case 'CreateDlpJob':
         return this.createDlpJob(ctx, request);
       case 'ListDlpJobs':
@@ -173,11 +203,22 @@ abstract class DlpServiceBase extends GeneratedService {
         return this.deleteDlpJob(ctx, request);
       case 'CancelDlpJob':
         return this.cancelDlpJob(ctx, request);
+      case 'CreateStoredInfoType':
+        return this.createStoredInfoType(ctx, request);
+      case 'UpdateStoredInfoType':
+        return this.updateStoredInfoType(ctx, request);
+      case 'GetStoredInfoType':
+        return this.getStoredInfoType(ctx, request);
+      case 'ListStoredInfoTypes':
+        return this.listStoredInfoTypes(ctx, request);
+      case 'DeleteStoredInfoType':
+        return this.deleteStoredInfoType(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => DlpService$json;
-  Map<String, Map<String, dynamic>> get $messageJson => DlpService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => DlpServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DlpServiceBase$messageJson;
 }

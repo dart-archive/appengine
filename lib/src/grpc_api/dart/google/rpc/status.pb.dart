@@ -1,60 +1,56 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/rpc/status.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../protobuf/any.pb.dart' as $google$protobuf;
+import '../protobuf/any.pb.dart' as $0;
 
-class Status extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Status')
-    ..a<int>(1, 'code', PbFieldType.O3)
-    ..aOS(2, 'message')
-    ..pp<$google$protobuf.Any>(3, 'details', PbFieldType.PM,
-        $google$protobuf.Any.$checkItem, $google$protobuf.Any.create)
-    ..hasRequiredFields = false;
+class Status extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('Status', package: const $pb.PackageName('google.rpc'))
+        ..a<$core.int>(1, 'code', $pb.PbFieldType.O3)
+        ..aOS(2, 'message')
+        ..pc<$0.Any>(3, 'details', $pb.PbFieldType.PM, $0.Any.create)
+        ..hasRequiredFields = false;
 
   Status() : super();
-  Status.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Status.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Status.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Status.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Status clone() => new Status()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Status create() => new Status();
-  static PbList<Status> createRepeated() => new PbList<Status>();
-  static Status getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyStatus();
-    return _defaultInstance;
-  }
-
+  Status clone() => Status()..mergeFromMessage(this);
+  Status copyWith(void Function(Status) updates) =>
+      super.copyWith((message) => updates(message as Status));
+  $pb.BuilderInfo get info_ => _i;
+  static Status create() => Status();
+  Status createEmptyInstance() => create();
+  static $pb.PbList<Status> createRepeated() => $pb.PbList<Status>();
+  static Status getDefault() => _defaultInstance ??= create()..freeze();
   static Status _defaultInstance;
-  static void $checkItem(Status v) {
-    if (v is! Status) checkItemFailed(v, 'Status');
-  }
 
-  int get code => $_get(0, 0);
-  set code(int v) {
+  $core.int get code => $_get(0, 0);
+  set code($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasCode() => $_has(0);
+  $core.bool hasCode() => $_has(0);
   void clearCode() => clearField(1);
 
-  String get message => $_getS(1, '');
-  set message(String v) {
+  $core.String get message => $_getS(1, '');
+  set message($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasMessage() => $_has(1);
+  $core.bool hasMessage() => $_has(1);
   void clearMessage() => clearField(2);
 
-  List<$google$protobuf.Any> get details => $_getList(2);
+  $core.List<$0.Any> get details => $_getList(2);
 }
-
-class _ReadonlyStatus extends Status with ReadonlyMessageMixin {}

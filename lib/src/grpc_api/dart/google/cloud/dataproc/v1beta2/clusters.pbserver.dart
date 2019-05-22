@@ -1,52 +1,55 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dataproc/v1beta2/clusters.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'clusters.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../longrunning/operations.pb.dart' as $3;
 import 'clusters.pbjson.dart';
 
 export 'clusters.pb.dart';
 
-abstract class ClusterControllerServiceBase extends GeneratedService {
-  Future<$google$longrunning.Operation> createCluster(
-      ServerContext ctx, CreateClusterRequest request);
-  Future<$google$longrunning.Operation> updateCluster(
-      ServerContext ctx, UpdateClusterRequest request);
-  Future<$google$longrunning.Operation> deleteCluster(
-      ServerContext ctx, DeleteClusterRequest request);
-  Future<Cluster> getCluster(ServerContext ctx, GetClusterRequest request);
-  Future<ListClustersResponse> listClusters(
-      ServerContext ctx, ListClustersRequest request);
-  Future<$google$longrunning.Operation> diagnoseCluster(
-      ServerContext ctx, DiagnoseClusterRequest request);
+abstract class ClusterControllerServiceBase extends $pb.GeneratedService {
+  $async.Future<$3.Operation> createCluster(
+      $pb.ServerContext ctx, CreateClusterRequest request);
+  $async.Future<$3.Operation> updateCluster(
+      $pb.ServerContext ctx, UpdateClusterRequest request);
+  $async.Future<$3.Operation> deleteCluster(
+      $pb.ServerContext ctx, DeleteClusterRequest request);
+  $async.Future<Cluster> getCluster(
+      $pb.ServerContext ctx, GetClusterRequest request);
+  $async.Future<ListClustersResponse> listClusters(
+      $pb.ServerContext ctx, ListClustersRequest request);
+  $async.Future<$3.Operation> diagnoseCluster(
+      $pb.ServerContext ctx, DiagnoseClusterRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'CreateCluster':
-        return new CreateClusterRequest();
+        return CreateClusterRequest();
       case 'UpdateCluster':
-        return new UpdateClusterRequest();
+        return UpdateClusterRequest();
       case 'DeleteCluster':
-        return new DeleteClusterRequest();
+        return DeleteClusterRequest();
       case 'GetCluster':
-        return new GetClusterRequest();
+        return GetClusterRequest();
       case 'ListClusters':
-        return new ListClustersRequest();
+        return ListClustersRequest();
       case 'DiagnoseCluster':
-        return new DiagnoseClusterRequest();
+        return DiagnoseClusterRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'CreateCluster':
         return this.createCluster(ctx, request);
@@ -61,11 +64,12 @@ abstract class ClusterControllerServiceBase extends GeneratedService {
       case 'DiagnoseCluster':
         return this.diagnoseCluster(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => ClusterController$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      ClusterController$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ClusterControllerServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ClusterControllerServiceBase$messageJson;
 }

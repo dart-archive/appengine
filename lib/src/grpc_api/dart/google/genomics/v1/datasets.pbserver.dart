@@ -1,66 +1,69 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/datasets.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'datasets.pb.dart';
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../iam/v1/policy.pb.dart' as $google$iam$v1;
+import '../../protobuf/empty.pb.dart' as $2;
+import '../../iam/v1/iam_policy.pb.dart' as $3;
+import '../../iam/v1/policy.pb.dart' as $4;
 import 'datasets.pbjson.dart';
 
 export 'datasets.pb.dart';
 
-abstract class DatasetServiceV1ServiceBase extends GeneratedService {
-  Future<ListDatasetsResponse> listDatasets(
-      ServerContext ctx, ListDatasetsRequest request);
-  Future<Dataset> createDataset(
-      ServerContext ctx, CreateDatasetRequest request);
-  Future<Dataset> getDataset(ServerContext ctx, GetDatasetRequest request);
-  Future<Dataset> updateDataset(
-      ServerContext ctx, UpdateDatasetRequest request);
-  Future<$google$protobuf.Empty> deleteDataset(
-      ServerContext ctx, DeleteDatasetRequest request);
-  Future<Dataset> undeleteDataset(
-      ServerContext ctx, UndeleteDatasetRequest request);
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
+abstract class DatasetServiceV1ServiceBase extends $pb.GeneratedService {
+  $async.Future<ListDatasetsResponse> listDatasets(
+      $pb.ServerContext ctx, ListDatasetsRequest request);
+  $async.Future<Dataset> createDataset(
+      $pb.ServerContext ctx, CreateDatasetRequest request);
+  $async.Future<Dataset> getDataset(
+      $pb.ServerContext ctx, GetDatasetRequest request);
+  $async.Future<Dataset> updateDataset(
+      $pb.ServerContext ctx, UpdateDatasetRequest request);
+  $async.Future<$2.Empty> deleteDataset(
+      $pb.ServerContext ctx, DeleteDatasetRequest request);
+  $async.Future<Dataset> undeleteDataset(
+      $pb.ServerContext ctx, UndeleteDatasetRequest request);
+  $async.Future<$4.Policy> setIamPolicy(
+      $pb.ServerContext ctx, $3.SetIamPolicyRequest request);
+  $async.Future<$4.Policy> getIamPolicy(
+      $pb.ServerContext ctx, $3.GetIamPolicyRequest request);
+  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
+      $pb.ServerContext ctx, $3.TestIamPermissionsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListDatasets':
-        return new ListDatasetsRequest();
+        return ListDatasetsRequest();
       case 'CreateDataset':
-        return new CreateDatasetRequest();
+        return CreateDatasetRequest();
       case 'GetDataset':
-        return new GetDatasetRequest();
+        return GetDatasetRequest();
       case 'UpdateDataset':
-        return new UpdateDatasetRequest();
+        return UpdateDatasetRequest();
       case 'DeleteDataset':
-        return new DeleteDatasetRequest();
+        return DeleteDatasetRequest();
       case 'UndeleteDataset':
-        return new UndeleteDatasetRequest();
+        return UndeleteDatasetRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $3.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $3.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $3.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListDatasets':
         return this.listDatasets(ctx, request);
@@ -81,11 +84,12 @@ abstract class DatasetServiceV1ServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => DatasetServiceV1$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      DatasetServiceV1$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      DatasetServiceV1ServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DatasetServiceV1ServiceBase$messageJson;
 }

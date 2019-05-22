@@ -1,41 +1,43 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/speech/v1p1beta1/cloud_speech.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'cloud_speech.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../longrunning/operations.pb.dart' as $3;
 import 'cloud_speech.pbjson.dart';
 
 export 'cloud_speech.pb.dart';
 
-abstract class SpeechServiceBase extends GeneratedService {
-  Future<RecognizeResponse> recognize(
-      ServerContext ctx, RecognizeRequest request);
-  Future<$google$longrunning.Operation> longRunningRecognize(
-      ServerContext ctx, LongRunningRecognizeRequest request);
-  Future<StreamingRecognizeResponse> streamingRecognize(
-      ServerContext ctx, StreamingRecognizeRequest request);
+abstract class SpeechServiceBase extends $pb.GeneratedService {
+  $async.Future<RecognizeResponse> recognize(
+      $pb.ServerContext ctx, RecognizeRequest request);
+  $async.Future<$3.Operation> longRunningRecognize(
+      $pb.ServerContext ctx, LongRunningRecognizeRequest request);
+  $async.Future<StreamingRecognizeResponse> streamingRecognize(
+      $pb.ServerContext ctx, StreamingRecognizeRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'Recognize':
-        return new RecognizeRequest();
+        return RecognizeRequest();
       case 'LongRunningRecognize':
-        return new LongRunningRecognizeRequest();
+        return LongRunningRecognizeRequest();
       case 'StreamingRecognize':
-        return new StreamingRecognizeRequest();
+        return StreamingRecognizeRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'Recognize':
         return this.recognize(ctx, request);
@@ -44,10 +46,11 @@ abstract class SpeechServiceBase extends GeneratedService {
       case 'StreamingRecognize':
         return this.streamingRecognize(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => Speech$json;
-  Map<String, Map<String, dynamic>> get $messageJson => Speech$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => SpeechServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => SpeechServiceBase$messageJson;
 }

@@ -1,137 +1,106 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/servicecontrol/v1/metric_value.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import 'distribution.pb.dart';
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import 'distribution.pb.dart' as $1;
 
-class MetricValue_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricValue_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  MetricValue_LabelsEntry() : super();
-  MetricValue_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MetricValue_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  MetricValue_LabelsEntry clone() =>
-      new MetricValue_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MetricValue_LabelsEntry create() => new MetricValue_LabelsEntry();
-  static PbList<MetricValue_LabelsEntry> createRepeated() =>
-      new PbList<MetricValue_LabelsEntry>();
-  static MetricValue_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMetricValue_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static MetricValue_LabelsEntry _defaultInstance;
-  static void $checkItem(MetricValue_LabelsEntry v) {
-    if (v is! MetricValue_LabelsEntry)
-      checkItemFailed(v, 'MetricValue_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
+enum MetricValue_Value {
+  boolValue,
+  int64Value,
+  doubleValue,
+  stringValue,
+  distributionValue,
+  notSet
 }
 
-class _ReadonlyMetricValue_LabelsEntry extends MetricValue_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class MetricValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricValue')
-    ..pp<MetricValue_LabelsEntry>(1, 'labels', PbFieldType.PM,
-        MetricValue_LabelsEntry.$checkItem, MetricValue_LabelsEntry.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+class MetricValue extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, MetricValue_Value> _MetricValue_ValueByTag =
+      {
+    4: MetricValue_Value.boolValue,
+    5: MetricValue_Value.int64Value,
+    6: MetricValue_Value.doubleValue,
+    7: MetricValue_Value.stringValue,
+    8: MetricValue_Value.distributionValue,
+    0: MetricValue_Value.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MetricValue',
+      package: const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..m<$core.String, $core.String>(
+        1,
+        'labels',
+        'MetricValue.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..a<$0.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
+        $0.Timestamp.create)
     ..aOB(4, 'boolValue')
     ..aInt64(5, 'int64Value')
-    ..a<double>(6, 'doubleValue', PbFieldType.OD)
+    ..a<$core.double>(6, 'doubleValue', $pb.PbFieldType.OD)
     ..aOS(7, 'stringValue')
-    ..a<Distribution>(8, 'distributionValue', PbFieldType.OM,
-        Distribution.getDefault, Distribution.create)
+    ..a<$1.Distribution>(8, 'distributionValue', $pb.PbFieldType.OM,
+        $1.Distribution.getDefault, $1.Distribution.create)
+    ..oo(0, [4, 5, 6, 7, 8])
     ..hasRequiredFields = false;
 
   MetricValue() : super();
-  MetricValue.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MetricValue.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MetricValue.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MetricValue.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MetricValue clone() => new MetricValue()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MetricValue create() => new MetricValue();
-  static PbList<MetricValue> createRepeated() => new PbList<MetricValue>();
-  static MetricValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMetricValue();
-    return _defaultInstance;
-  }
-
+  MetricValue clone() => MetricValue()..mergeFromMessage(this);
+  MetricValue copyWith(void Function(MetricValue) updates) =>
+      super.copyWith((message) => updates(message as MetricValue));
+  $pb.BuilderInfo get info_ => _i;
+  static MetricValue create() => MetricValue();
+  MetricValue createEmptyInstance() => create();
+  static $pb.PbList<MetricValue> createRepeated() => $pb.PbList<MetricValue>();
+  static MetricValue getDefault() => _defaultInstance ??= create()..freeze();
   static MetricValue _defaultInstance;
-  static void $checkItem(MetricValue v) {
-    if (v is! MetricValue) checkItemFailed(v, 'MetricValue');
-  }
 
-  List<MetricValue_LabelsEntry> get labels => $_getList(0);
+  MetricValue_Value whichValue() => _MetricValue_ValueByTag[$_whichOneof(0)];
+  void clearValue() => clearField($_whichOneof(0));
 
-  $google$protobuf.Timestamp get startTime => $_getN(1);
-  set startTime($google$protobuf.Timestamp v) {
+  $core.Map<$core.String, $core.String> get labels => $_getMap(0);
+
+  $0.Timestamp get startTime => $_getN(1);
+  set startTime($0.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasStartTime() => $_has(1);
+  $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $google$protobuf.Timestamp get endTime => $_getN(2);
-  set endTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get endTime => $_getN(2);
+  set endTime($0.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasEndTime() => $_has(2);
+  $core.bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
 
-  bool get boolValue => $_get(3, false);
-  set boolValue(bool v) {
+  $core.bool get boolValue => $_get(3, false);
+  set boolValue($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasBoolValue() => $_has(3);
+  $core.bool hasBoolValue() => $_has(3);
   void clearBoolValue() => clearField(4);
 
   Int64 get int64Value => $_getI64(4);
@@ -139,76 +108,66 @@ class MetricValue extends GeneratedMessage {
     $_setInt64(4, v);
   }
 
-  bool hasInt64Value() => $_has(4);
+  $core.bool hasInt64Value() => $_has(4);
   void clearInt64Value() => clearField(5);
 
-  double get doubleValue => $_getN(5);
-  set doubleValue(double v) {
+  $core.double get doubleValue => $_getN(5);
+  set doubleValue($core.double v) {
     $_setDouble(5, v);
   }
 
-  bool hasDoubleValue() => $_has(5);
+  $core.bool hasDoubleValue() => $_has(5);
   void clearDoubleValue() => clearField(6);
 
-  String get stringValue => $_getS(6, '');
-  set stringValue(String v) {
+  $core.String get stringValue => $_getS(6, '');
+  set stringValue($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasStringValue() => $_has(6);
+  $core.bool hasStringValue() => $_has(6);
   void clearStringValue() => clearField(7);
 
-  Distribution get distributionValue => $_getN(7);
-  set distributionValue(Distribution v) {
+  $1.Distribution get distributionValue => $_getN(7);
+  set distributionValue($1.Distribution v) {
     setField(8, v);
   }
 
-  bool hasDistributionValue() => $_has(7);
+  $core.bool hasDistributionValue() => $_has(7);
   void clearDistributionValue() => clearField(8);
 }
 
-class _ReadonlyMetricValue extends MetricValue with ReadonlyMessageMixin {}
-
-class MetricValueSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricValueSet')
+class MetricValueSet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MetricValueSet',
+      package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'metricName')
-    ..pp<MetricValue>(2, 'metricValues', PbFieldType.PM, MetricValue.$checkItem,
-        MetricValue.create)
+    ..pc<MetricValue>(2, 'metricValues', $pb.PbFieldType.PM, MetricValue.create)
     ..hasRequiredFields = false;
 
   MetricValueSet() : super();
-  MetricValueSet.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MetricValueSet.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MetricValueSet.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MetricValueSet.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MetricValueSet clone() => new MetricValueSet()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MetricValueSet create() => new MetricValueSet();
-  static PbList<MetricValueSet> createRepeated() =>
-      new PbList<MetricValueSet>();
-  static MetricValueSet getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMetricValueSet();
-    return _defaultInstance;
-  }
-
+  MetricValueSet clone() => MetricValueSet()..mergeFromMessage(this);
+  MetricValueSet copyWith(void Function(MetricValueSet) updates) =>
+      super.copyWith((message) => updates(message as MetricValueSet));
+  $pb.BuilderInfo get info_ => _i;
+  static MetricValueSet create() => MetricValueSet();
+  MetricValueSet createEmptyInstance() => create();
+  static $pb.PbList<MetricValueSet> createRepeated() =>
+      $pb.PbList<MetricValueSet>();
+  static MetricValueSet getDefault() => _defaultInstance ??= create()..freeze();
   static MetricValueSet _defaultInstance;
-  static void $checkItem(MetricValueSet v) {
-    if (v is! MetricValueSet) checkItemFailed(v, 'MetricValueSet');
-  }
 
-  String get metricName => $_getS(0, '');
-  set metricName(String v) {
+  $core.String get metricName => $_getS(0, '');
+  set metricName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasMetricName() => $_has(0);
+  $core.bool hasMetricName() => $_has(0);
   void clearMetricName() => clearField(1);
 
-  List<MetricValue> get metricValues => $_getList(1);
-}
-
-class _ReadonlyMetricValueSet extends MetricValueSet with ReadonlyMessageMixin {
+  $core.List<MetricValue> get metricValues => $_getList(1);
 }

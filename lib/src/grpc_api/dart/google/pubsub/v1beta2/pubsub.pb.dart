@@ -1,572 +1,465 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/pubsub/v1beta2/pubsub.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../protobuf/empty.pb.dart' as $0;
 
-class Topic extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Topic')
+class Topic extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Topic',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   Topic() : super();
-  Topic.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Topic.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Topic.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Topic.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Topic clone() => new Topic()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Topic create() => new Topic();
-  static PbList<Topic> createRepeated() => new PbList<Topic>();
-  static Topic getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTopic();
-    return _defaultInstance;
-  }
-
+  Topic clone() => Topic()..mergeFromMessage(this);
+  Topic copyWith(void Function(Topic) updates) =>
+      super.copyWith((message) => updates(message as Topic));
+  $pb.BuilderInfo get info_ => _i;
+  static Topic create() => Topic();
+  Topic createEmptyInstance() => create();
+  static $pb.PbList<Topic> createRepeated() => $pb.PbList<Topic>();
+  static Topic getDefault() => _defaultInstance ??= create()..freeze();
   static Topic _defaultInstance;
-  static void $checkItem(Topic v) {
-    if (v is! Topic) checkItemFailed(v, 'Topic');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyTopic extends Topic with ReadonlyMessageMixin {}
-
-class PubsubMessage_AttributesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PubsubMessage_AttributesEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  PubsubMessage_AttributesEntry() : super();
-  PubsubMessage_AttributesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PubsubMessage_AttributesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  PubsubMessage_AttributesEntry clone() =>
-      new PubsubMessage_AttributesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PubsubMessage_AttributesEntry create() =>
-      new PubsubMessage_AttributesEntry();
-  static PbList<PubsubMessage_AttributesEntry> createRepeated() =>
-      new PbList<PubsubMessage_AttributesEntry>();
-  static PubsubMessage_AttributesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPubsubMessage_AttributesEntry();
-    return _defaultInstance;
-  }
-
-  static PubsubMessage_AttributesEntry _defaultInstance;
-  static void $checkItem(PubsubMessage_AttributesEntry v) {
-    if (v is! PubsubMessage_AttributesEntry)
-      checkItemFailed(v, 'PubsubMessage_AttributesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyPubsubMessage_AttributesEntry
-    extends PubsubMessage_AttributesEntry with ReadonlyMessageMixin {}
-
-class PubsubMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PubsubMessage')
-    ..a<List<int>>(1, 'data', PbFieldType.OY)
-    ..pp<PubsubMessage_AttributesEntry>(
+class PubsubMessage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PubsubMessage',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
+    ..a<$core.List<$core.int>>(1, 'data', $pb.PbFieldType.OY)
+    ..m<$core.String, $core.String>(
         2,
         'attributes',
-        PbFieldType.PM,
-        PubsubMessage_AttributesEntry.$checkItem,
-        PubsubMessage_AttributesEntry.create)
+        'PubsubMessage.AttributesEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(3, 'messageId')
     ..hasRequiredFields = false;
 
   PubsubMessage() : super();
-  PubsubMessage.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PubsubMessage.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PubsubMessage.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PubsubMessage.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PubsubMessage clone() => new PubsubMessage()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PubsubMessage create() => new PubsubMessage();
-  static PbList<PubsubMessage> createRepeated() => new PbList<PubsubMessage>();
-  static PubsubMessage getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPubsubMessage();
-    return _defaultInstance;
-  }
-
+  PubsubMessage clone() => PubsubMessage()..mergeFromMessage(this);
+  PubsubMessage copyWith(void Function(PubsubMessage) updates) =>
+      super.copyWith((message) => updates(message as PubsubMessage));
+  $pb.BuilderInfo get info_ => _i;
+  static PubsubMessage create() => PubsubMessage();
+  PubsubMessage createEmptyInstance() => create();
+  static $pb.PbList<PubsubMessage> createRepeated() =>
+      $pb.PbList<PubsubMessage>();
+  static PubsubMessage getDefault() => _defaultInstance ??= create()..freeze();
   static PubsubMessage _defaultInstance;
-  static void $checkItem(PubsubMessage v) {
-    if (v is! PubsubMessage) checkItemFailed(v, 'PubsubMessage');
-  }
 
-  List<int> get data => $_getN(0);
-  set data(List<int> v) {
+  $core.List<$core.int> get data => $_getN(0);
+  set data($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasData() => $_has(0);
+  $core.bool hasData() => $_has(0);
   void clearData() => clearField(1);
 
-  List<PubsubMessage_AttributesEntry> get attributes => $_getList(1);
+  $core.Map<$core.String, $core.String> get attributes => $_getMap(1);
 
-  String get messageId => $_getS(2, '');
-  set messageId(String v) {
+  $core.String get messageId => $_getS(2, '');
+  set messageId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasMessageId() => $_has(2);
+  $core.bool hasMessageId() => $_has(2);
   void clearMessageId() => clearField(3);
 }
 
-class _ReadonlyPubsubMessage extends PubsubMessage with ReadonlyMessageMixin {}
-
-class GetTopicRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTopicRequest')
+class GetTopicRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTopicRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'topic')
     ..hasRequiredFields = false;
 
   GetTopicRequest() : super();
-  GetTopicRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTopicRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetTopicRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTopicRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTopicRequest clone() => new GetTopicRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetTopicRequest create() => new GetTopicRequest();
-  static PbList<GetTopicRequest> createRepeated() =>
-      new PbList<GetTopicRequest>();
-  static GetTopicRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTopicRequest();
-    return _defaultInstance;
-  }
-
+  GetTopicRequest clone() => GetTopicRequest()..mergeFromMessage(this);
+  GetTopicRequest copyWith(void Function(GetTopicRequest) updates) =>
+      super.copyWith((message) => updates(message as GetTopicRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetTopicRequest create() => GetTopicRequest();
+  GetTopicRequest createEmptyInstance() => create();
+  static $pb.PbList<GetTopicRequest> createRepeated() =>
+      $pb.PbList<GetTopicRequest>();
+  static GetTopicRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetTopicRequest _defaultInstance;
-  static void $checkItem(GetTopicRequest v) {
-    if (v is! GetTopicRequest) checkItemFailed(v, 'GetTopicRequest');
-  }
 
-  String get topic => $_getS(0, '');
-  set topic(String v) {
+  $core.String get topic => $_getS(0, '');
+  set topic($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTopic() => $_has(0);
+  $core.bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 }
 
-class _ReadonlyGetTopicRequest extends GetTopicRequest
-    with ReadonlyMessageMixin {}
-
-class PublishRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PublishRequest')
+class PublishRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PublishRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'topic')
-    ..pp<PubsubMessage>(2, 'messages', PbFieldType.PM, PubsubMessage.$checkItem,
-        PubsubMessage.create)
+    ..pc<PubsubMessage>(2, 'messages', $pb.PbFieldType.PM, PubsubMessage.create)
     ..hasRequiredFields = false;
 
   PublishRequest() : super();
-  PublishRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PublishRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PublishRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PublishRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PublishRequest clone() => new PublishRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PublishRequest create() => new PublishRequest();
-  static PbList<PublishRequest> createRepeated() =>
-      new PbList<PublishRequest>();
-  static PublishRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublishRequest();
-    return _defaultInstance;
-  }
-
+  PublishRequest clone() => PublishRequest()..mergeFromMessage(this);
+  PublishRequest copyWith(void Function(PublishRequest) updates) =>
+      super.copyWith((message) => updates(message as PublishRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static PublishRequest create() => PublishRequest();
+  PublishRequest createEmptyInstance() => create();
+  static $pb.PbList<PublishRequest> createRepeated() =>
+      $pb.PbList<PublishRequest>();
+  static PublishRequest getDefault() => _defaultInstance ??= create()..freeze();
   static PublishRequest _defaultInstance;
-  static void $checkItem(PublishRequest v) {
-    if (v is! PublishRequest) checkItemFailed(v, 'PublishRequest');
-  }
 
-  String get topic => $_getS(0, '');
-  set topic(String v) {
+  $core.String get topic => $_getS(0, '');
+  set topic($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTopic() => $_has(0);
+  $core.bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 
-  List<PubsubMessage> get messages => $_getList(1);
+  $core.List<PubsubMessage> get messages => $_getList(1);
 }
 
-class _ReadonlyPublishRequest extends PublishRequest with ReadonlyMessageMixin {
-}
-
-class PublishResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PublishResponse')
+class PublishResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PublishResponse',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..pPS(1, 'messageIds')
     ..hasRequiredFields = false;
 
   PublishResponse() : super();
-  PublishResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PublishResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PublishResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PublishResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PublishResponse clone() => new PublishResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PublishResponse create() => new PublishResponse();
-  static PbList<PublishResponse> createRepeated() =>
-      new PbList<PublishResponse>();
-  static PublishResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublishResponse();
-    return _defaultInstance;
-  }
-
+  PublishResponse clone() => PublishResponse()..mergeFromMessage(this);
+  PublishResponse copyWith(void Function(PublishResponse) updates) =>
+      super.copyWith((message) => updates(message as PublishResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static PublishResponse create() => PublishResponse();
+  PublishResponse createEmptyInstance() => create();
+  static $pb.PbList<PublishResponse> createRepeated() =>
+      $pb.PbList<PublishResponse>();
+  static PublishResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PublishResponse _defaultInstance;
-  static void $checkItem(PublishResponse v) {
-    if (v is! PublishResponse) checkItemFailed(v, 'PublishResponse');
-  }
 
-  List<String> get messageIds => $_getList(0);
+  $core.List<$core.String> get messageIds => $_getList(0);
 }
 
-class _ReadonlyPublishResponse extends PublishResponse
-    with ReadonlyMessageMixin {}
-
-class ListTopicsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTopicsRequest')
+class ListTopicsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTopicsRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'project')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
   ListTopicsRequest() : super();
-  ListTopicsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTopicsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTopicsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTopicsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTopicsRequest clone() => new ListTopicsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTopicsRequest create() => new ListTopicsRequest();
-  static PbList<ListTopicsRequest> createRepeated() =>
-      new PbList<ListTopicsRequest>();
-  static ListTopicsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTopicsRequest();
-    return _defaultInstance;
-  }
-
+  ListTopicsRequest clone() => ListTopicsRequest()..mergeFromMessage(this);
+  ListTopicsRequest copyWith(void Function(ListTopicsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListTopicsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTopicsRequest create() => ListTopicsRequest();
+  ListTopicsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTopicsRequest> createRepeated() =>
+      $pb.PbList<ListTopicsRequest>();
+  static ListTopicsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTopicsRequest _defaultInstance;
-  static void $checkItem(ListTopicsRequest v) {
-    if (v is! ListTopicsRequest) checkItemFailed(v, 'ListTopicsRequest');
-  }
 
-  String get project => $_getS(0, '');
-  set project(String v) {
+  $core.String get project => $_getS(0, '');
+  set project($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProject() => $_has(0);
+  $core.bool hasProject() => $_has(0);
   void clearProject() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListTopicsRequest extends ListTopicsRequest
-    with ReadonlyMessageMixin {}
-
-class ListTopicsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTopicsResponse')
-    ..pp<Topic>(1, 'topics', PbFieldType.PM, Topic.$checkItem, Topic.create)
+class ListTopicsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTopicsResponse',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
+    ..pc<Topic>(1, 'topics', $pb.PbFieldType.PM, Topic.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListTopicsResponse() : super();
-  ListTopicsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTopicsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTopicsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTopicsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTopicsResponse clone() =>
-      new ListTopicsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTopicsResponse create() => new ListTopicsResponse();
-  static PbList<ListTopicsResponse> createRepeated() =>
-      new PbList<ListTopicsResponse>();
-  static ListTopicsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTopicsResponse();
-    return _defaultInstance;
-  }
-
+  ListTopicsResponse clone() => ListTopicsResponse()..mergeFromMessage(this);
+  ListTopicsResponse copyWith(void Function(ListTopicsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListTopicsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTopicsResponse create() => ListTopicsResponse();
+  ListTopicsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTopicsResponse> createRepeated() =>
+      $pb.PbList<ListTopicsResponse>();
+  static ListTopicsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTopicsResponse _defaultInstance;
-  static void $checkItem(ListTopicsResponse v) {
-    if (v is! ListTopicsResponse) checkItemFailed(v, 'ListTopicsResponse');
-  }
 
-  List<Topic> get topics => $_getList(0);
+  $core.List<Topic> get topics => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListTopicsResponse extends ListTopicsResponse
-    with ReadonlyMessageMixin {}
-
-class ListTopicSubscriptionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTopicSubscriptionsRequest')
+class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListTopicSubscriptionsRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'topic')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
   ListTopicSubscriptionsRequest() : super();
-  ListTopicSubscriptionsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTopicSubscriptionsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTopicSubscriptionsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTopicSubscriptionsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTopicSubscriptionsRequest clone() =>
-      new ListTopicSubscriptionsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ListTopicSubscriptionsRequest()..mergeFromMessage(this);
+  ListTopicSubscriptionsRequest copyWith(
+          void Function(ListTopicSubscriptionsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListTopicSubscriptionsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListTopicSubscriptionsRequest create() =>
-      new ListTopicSubscriptionsRequest();
-  static PbList<ListTopicSubscriptionsRequest> createRepeated() =>
-      new PbList<ListTopicSubscriptionsRequest>();
-  static ListTopicSubscriptionsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTopicSubscriptionsRequest();
-    return _defaultInstance;
-  }
-
+      ListTopicSubscriptionsRequest();
+  ListTopicSubscriptionsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTopicSubscriptionsRequest> createRepeated() =>
+      $pb.PbList<ListTopicSubscriptionsRequest>();
+  static ListTopicSubscriptionsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTopicSubscriptionsRequest _defaultInstance;
-  static void $checkItem(ListTopicSubscriptionsRequest v) {
-    if (v is! ListTopicSubscriptionsRequest)
-      checkItemFailed(v, 'ListTopicSubscriptionsRequest');
-  }
 
-  String get topic => $_getS(0, '');
-  set topic(String v) {
+  $core.String get topic => $_getS(0, '');
+  set topic($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTopic() => $_has(0);
+  $core.bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListTopicSubscriptionsRequest
-    extends ListTopicSubscriptionsRequest with ReadonlyMessageMixin {}
-
-class ListTopicSubscriptionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListTopicSubscriptionsResponse')
-        ..pPS(1, 'subscriptions')
-        ..aOS(2, 'nextPageToken')
-        ..hasRequiredFields = false;
+class ListTopicSubscriptionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListTopicSubscriptionsResponse',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
+    ..pPS(1, 'subscriptions')
+    ..aOS(2, 'nextPageToken')
+    ..hasRequiredFields = false;
 
   ListTopicSubscriptionsResponse() : super();
-  ListTopicSubscriptionsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTopicSubscriptionsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTopicSubscriptionsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTopicSubscriptionsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTopicSubscriptionsResponse clone() =>
-      new ListTopicSubscriptionsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ListTopicSubscriptionsResponse()..mergeFromMessage(this);
+  ListTopicSubscriptionsResponse copyWith(
+          void Function(ListTopicSubscriptionsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListTopicSubscriptionsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListTopicSubscriptionsResponse create() =>
-      new ListTopicSubscriptionsResponse();
-  static PbList<ListTopicSubscriptionsResponse> createRepeated() =>
-      new PbList<ListTopicSubscriptionsResponse>();
-  static ListTopicSubscriptionsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTopicSubscriptionsResponse();
-    return _defaultInstance;
-  }
-
+      ListTopicSubscriptionsResponse();
+  ListTopicSubscriptionsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTopicSubscriptionsResponse> createRepeated() =>
+      $pb.PbList<ListTopicSubscriptionsResponse>();
+  static ListTopicSubscriptionsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTopicSubscriptionsResponse _defaultInstance;
-  static void $checkItem(ListTopicSubscriptionsResponse v) {
-    if (v is! ListTopicSubscriptionsResponse)
-      checkItemFailed(v, 'ListTopicSubscriptionsResponse');
-  }
 
-  List<String> get subscriptions => $_getList(0);
+  $core.List<$core.String> get subscriptions => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListTopicSubscriptionsResponse
-    extends ListTopicSubscriptionsResponse with ReadonlyMessageMixin {}
-
-class DeleteTopicRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTopicRequest')
+class DeleteTopicRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteTopicRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'topic')
     ..hasRequiredFields = false;
 
   DeleteTopicRequest() : super();
-  DeleteTopicRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteTopicRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteTopicRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteTopicRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteTopicRequest clone() =>
-      new DeleteTopicRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteTopicRequest create() => new DeleteTopicRequest();
-  static PbList<DeleteTopicRequest> createRepeated() =>
-      new PbList<DeleteTopicRequest>();
-  static DeleteTopicRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTopicRequest();
-    return _defaultInstance;
-  }
-
+  DeleteTopicRequest clone() => DeleteTopicRequest()..mergeFromMessage(this);
+  DeleteTopicRequest copyWith(void Function(DeleteTopicRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteTopicRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteTopicRequest create() => DeleteTopicRequest();
+  DeleteTopicRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteTopicRequest> createRepeated() =>
+      $pb.PbList<DeleteTopicRequest>();
+  static DeleteTopicRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteTopicRequest _defaultInstance;
-  static void $checkItem(DeleteTopicRequest v) {
-    if (v is! DeleteTopicRequest) checkItemFailed(v, 'DeleteTopicRequest');
-  }
 
-  String get topic => $_getS(0, '');
-  set topic(String v) {
+  $core.String get topic => $_getS(0, '');
+  set topic($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTopic() => $_has(0);
+  $core.bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 }
 
-class _ReadonlyDeleteTopicRequest extends DeleteTopicRequest
-    with ReadonlyMessageMixin {}
-
-class Subscription extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Subscription')
+class Subscription extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Subscription',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'name')
     ..aOS(2, 'topic')
-    ..a<PushConfig>(4, 'pushConfig', PbFieldType.OM, PushConfig.getDefault,
+    ..a<PushConfig>(4, 'pushConfig', $pb.PbFieldType.OM, PushConfig.getDefault,
         PushConfig.create)
-    ..a<int>(5, 'ackDeadlineSeconds', PbFieldType.O3)
+    ..a<$core.int>(5, 'ackDeadlineSeconds', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   Subscription() : super();
-  Subscription.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Subscription.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Subscription.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Subscription.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Subscription clone() => new Subscription()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Subscription create() => new Subscription();
-  static PbList<Subscription> createRepeated() => new PbList<Subscription>();
-  static Subscription getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySubscription();
-    return _defaultInstance;
-  }
-
+  Subscription clone() => Subscription()..mergeFromMessage(this);
+  Subscription copyWith(void Function(Subscription) updates) =>
+      super.copyWith((message) => updates(message as Subscription));
+  $pb.BuilderInfo get info_ => _i;
+  static Subscription create() => Subscription();
+  Subscription createEmptyInstance() => create();
+  static $pb.PbList<Subscription> createRepeated() =>
+      $pb.PbList<Subscription>();
+  static Subscription getDefault() => _defaultInstance ??= create()..freeze();
   static Subscription _defaultInstance;
-  static void $checkItem(Subscription v) {
-    if (v is! Subscription) checkItemFailed(v, 'Subscription');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get topic => $_getS(1, '');
-  set topic(String v) {
+  $core.String get topic => $_getS(1, '');
+  set topic($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasTopic() => $_has(1);
+  $core.bool hasTopic() => $_has(1);
   void clearTopic() => clearField(2);
 
   PushConfig get pushConfig => $_getN(2);
@@ -574,152 +467,95 @@ class Subscription extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasPushConfig() => $_has(2);
+  $core.bool hasPushConfig() => $_has(2);
   void clearPushConfig() => clearField(4);
 
-  int get ackDeadlineSeconds => $_get(3, 0);
-  set ackDeadlineSeconds(int v) {
+  $core.int get ackDeadlineSeconds => $_get(3, 0);
+  set ackDeadlineSeconds($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasAckDeadlineSeconds() => $_has(3);
+  $core.bool hasAckDeadlineSeconds() => $_has(3);
   void clearAckDeadlineSeconds() => clearField(5);
 }
 
-class _ReadonlySubscription extends Subscription with ReadonlyMessageMixin {}
-
-class PushConfig_AttributesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PushConfig_AttributesEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  PushConfig_AttributesEntry() : super();
-  PushConfig_AttributesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PushConfig_AttributesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  PushConfig_AttributesEntry clone() =>
-      new PushConfig_AttributesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PushConfig_AttributesEntry create() =>
-      new PushConfig_AttributesEntry();
-  static PbList<PushConfig_AttributesEntry> createRepeated() =>
-      new PbList<PushConfig_AttributesEntry>();
-  static PushConfig_AttributesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPushConfig_AttributesEntry();
-    return _defaultInstance;
-  }
-
-  static PushConfig_AttributesEntry _defaultInstance;
-  static void $checkItem(PushConfig_AttributesEntry v) {
-    if (v is! PushConfig_AttributesEntry)
-      checkItemFailed(v, 'PushConfig_AttributesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyPushConfig_AttributesEntry extends PushConfig_AttributesEntry
-    with ReadonlyMessageMixin {}
-
-class PushConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PushConfig')
+class PushConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PushConfig',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'pushEndpoint')
-    ..pp<PushConfig_AttributesEntry>(
+    ..m<$core.String, $core.String>(
         2,
         'attributes',
-        PbFieldType.PM,
-        PushConfig_AttributesEntry.$checkItem,
-        PushConfig_AttributesEntry.create)
+        'PushConfig.AttributesEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.pubsub.v1beta2'))
     ..hasRequiredFields = false;
 
   PushConfig() : super();
-  PushConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PushConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PushConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PushConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PushConfig clone() => new PushConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PushConfig create() => new PushConfig();
-  static PbList<PushConfig> createRepeated() => new PbList<PushConfig>();
-  static PushConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPushConfig();
-    return _defaultInstance;
-  }
-
+  PushConfig clone() => PushConfig()..mergeFromMessage(this);
+  PushConfig copyWith(void Function(PushConfig) updates) =>
+      super.copyWith((message) => updates(message as PushConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static PushConfig create() => PushConfig();
+  PushConfig createEmptyInstance() => create();
+  static $pb.PbList<PushConfig> createRepeated() => $pb.PbList<PushConfig>();
+  static PushConfig getDefault() => _defaultInstance ??= create()..freeze();
   static PushConfig _defaultInstance;
-  static void $checkItem(PushConfig v) {
-    if (v is! PushConfig) checkItemFailed(v, 'PushConfig');
-  }
 
-  String get pushEndpoint => $_getS(0, '');
-  set pushEndpoint(String v) {
+  $core.String get pushEndpoint => $_getS(0, '');
+  set pushEndpoint($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasPushEndpoint() => $_has(0);
+  $core.bool hasPushEndpoint() => $_has(0);
   void clearPushEndpoint() => clearField(1);
 
-  List<PushConfig_AttributesEntry> get attributes => $_getList(1);
+  $core.Map<$core.String, $core.String> get attributes => $_getMap(1);
 }
 
-class _ReadonlyPushConfig extends PushConfig with ReadonlyMessageMixin {}
-
-class ReceivedMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReceivedMessage')
+class ReceivedMessage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReceivedMessage',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'ackId')
-    ..a<PubsubMessage>(2, 'message', PbFieldType.OM, PubsubMessage.getDefault,
-        PubsubMessage.create)
+    ..a<PubsubMessage>(2, 'message', $pb.PbFieldType.OM,
+        PubsubMessage.getDefault, PubsubMessage.create)
     ..hasRequiredFields = false;
 
   ReceivedMessage() : super();
-  ReceivedMessage.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReceivedMessage.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReceivedMessage.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReceivedMessage.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReceivedMessage clone() => new ReceivedMessage()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReceivedMessage create() => new ReceivedMessage();
-  static PbList<ReceivedMessage> createRepeated() =>
-      new PbList<ReceivedMessage>();
-  static ReceivedMessage getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReceivedMessage();
-    return _defaultInstance;
-  }
-
+  ReceivedMessage clone() => ReceivedMessage()..mergeFromMessage(this);
+  ReceivedMessage copyWith(void Function(ReceivedMessage) updates) =>
+      super.copyWith((message) => updates(message as ReceivedMessage));
+  $pb.BuilderInfo get info_ => _i;
+  static ReceivedMessage create() => ReceivedMessage();
+  ReceivedMessage createEmptyInstance() => create();
+  static $pb.PbList<ReceivedMessage> createRepeated() =>
+      $pb.PbList<ReceivedMessage>();
+  static ReceivedMessage getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReceivedMessage _defaultInstance;
-  static void $checkItem(ReceivedMessage v) {
-    if (v is! ReceivedMessage) checkItemFailed(v, 'ReceivedMessage');
-  }
 
-  String get ackId => $_getS(0, '');
-  set ackId(String v) {
+  $core.String get ackId => $_getS(0, '');
+  set ackId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAckId() => $_has(0);
+  $core.bool hasAckId() => $_has(0);
   void clearAckId() => clearField(1);
 
   PubsubMessage get message => $_getN(1);
@@ -727,241 +563,213 @@ class ReceivedMessage extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasMessage() => $_has(1);
+  $core.bool hasMessage() => $_has(1);
   void clearMessage() => clearField(2);
 }
 
-class _ReadonlyReceivedMessage extends ReceivedMessage
-    with ReadonlyMessageMixin {}
-
-class GetSubscriptionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSubscriptionRequest')
+class GetSubscriptionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSubscriptionRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'subscription')
     ..hasRequiredFields = false;
 
   GetSubscriptionRequest() : super();
-  GetSubscriptionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSubscriptionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetSubscriptionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSubscriptionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetSubscriptionRequest clone() =>
-      new GetSubscriptionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetSubscriptionRequest create() => new GetSubscriptionRequest();
-  static PbList<GetSubscriptionRequest> createRepeated() =>
-      new PbList<GetSubscriptionRequest>();
-  static GetSubscriptionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSubscriptionRequest();
-    return _defaultInstance;
-  }
-
+      GetSubscriptionRequest()..mergeFromMessage(this);
+  GetSubscriptionRequest copyWith(
+          void Function(GetSubscriptionRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSubscriptionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetSubscriptionRequest create() => GetSubscriptionRequest();
+  GetSubscriptionRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSubscriptionRequest> createRepeated() =>
+      $pb.PbList<GetSubscriptionRequest>();
+  static GetSubscriptionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetSubscriptionRequest _defaultInstance;
-  static void $checkItem(GetSubscriptionRequest v) {
-    if (v is! GetSubscriptionRequest)
-      checkItemFailed(v, 'GetSubscriptionRequest');
-  }
 
-  String get subscription => $_getS(0, '');
-  set subscription(String v) {
+  $core.String get subscription => $_getS(0, '');
+  set subscription($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSubscription() => $_has(0);
+  $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 }
 
-class _ReadonlyGetSubscriptionRequest extends GetSubscriptionRequest
-    with ReadonlyMessageMixin {}
-
-class ListSubscriptionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSubscriptionsRequest')
+class ListSubscriptionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSubscriptionsRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'project')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
   ListSubscriptionsRequest() : super();
-  ListSubscriptionsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSubscriptionsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSubscriptionsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSubscriptionsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSubscriptionsRequest clone() =>
-      new ListSubscriptionsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSubscriptionsRequest create() => new ListSubscriptionsRequest();
-  static PbList<ListSubscriptionsRequest> createRepeated() =>
-      new PbList<ListSubscriptionsRequest>();
-  static ListSubscriptionsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSubscriptionsRequest();
-    return _defaultInstance;
-  }
-
+      ListSubscriptionsRequest()..mergeFromMessage(this);
+  ListSubscriptionsRequest copyWith(
+          void Function(ListSubscriptionsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListSubscriptionsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSubscriptionsRequest create() => ListSubscriptionsRequest();
+  ListSubscriptionsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListSubscriptionsRequest> createRepeated() =>
+      $pb.PbList<ListSubscriptionsRequest>();
+  static ListSubscriptionsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSubscriptionsRequest _defaultInstance;
-  static void $checkItem(ListSubscriptionsRequest v) {
-    if (v is! ListSubscriptionsRequest)
-      checkItemFailed(v, 'ListSubscriptionsRequest');
-  }
 
-  String get project => $_getS(0, '');
-  set project(String v) {
+  $core.String get project => $_getS(0, '');
+  set project($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProject() => $_has(0);
+  $core.bool hasProject() => $_has(0);
   void clearProject() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListSubscriptionsRequest extends ListSubscriptionsRequest
-    with ReadonlyMessageMixin {}
-
-class ListSubscriptionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSubscriptionsResponse')
-    ..pp<Subscription>(1, 'subscriptions', PbFieldType.PM,
-        Subscription.$checkItem, Subscription.create)
+class ListSubscriptionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSubscriptionsResponse',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
+    ..pc<Subscription>(
+        1, 'subscriptions', $pb.PbFieldType.PM, Subscription.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListSubscriptionsResponse() : super();
-  ListSubscriptionsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSubscriptionsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSubscriptionsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSubscriptionsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSubscriptionsResponse clone() =>
-      new ListSubscriptionsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSubscriptionsResponse create() => new ListSubscriptionsResponse();
-  static PbList<ListSubscriptionsResponse> createRepeated() =>
-      new PbList<ListSubscriptionsResponse>();
-  static ListSubscriptionsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSubscriptionsResponse();
-    return _defaultInstance;
-  }
-
+      ListSubscriptionsResponse()..mergeFromMessage(this);
+  ListSubscriptionsResponse copyWith(
+          void Function(ListSubscriptionsResponse) updates) =>
+      super
+          .copyWith((message) => updates(message as ListSubscriptionsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSubscriptionsResponse create() => ListSubscriptionsResponse();
+  ListSubscriptionsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListSubscriptionsResponse> createRepeated() =>
+      $pb.PbList<ListSubscriptionsResponse>();
+  static ListSubscriptionsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSubscriptionsResponse _defaultInstance;
-  static void $checkItem(ListSubscriptionsResponse v) {
-    if (v is! ListSubscriptionsResponse)
-      checkItemFailed(v, 'ListSubscriptionsResponse');
-  }
 
-  List<Subscription> get subscriptions => $_getList(0);
+  $core.List<Subscription> get subscriptions => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListSubscriptionsResponse extends ListSubscriptionsResponse
-    with ReadonlyMessageMixin {}
-
-class DeleteSubscriptionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSubscriptionRequest')
+class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSubscriptionRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'subscription')
     ..hasRequiredFields = false;
 
   DeleteSubscriptionRequest() : super();
-  DeleteSubscriptionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSubscriptionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteSubscriptionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSubscriptionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteSubscriptionRequest clone() =>
-      new DeleteSubscriptionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteSubscriptionRequest create() => new DeleteSubscriptionRequest();
-  static PbList<DeleteSubscriptionRequest> createRepeated() =>
-      new PbList<DeleteSubscriptionRequest>();
-  static DeleteSubscriptionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSubscriptionRequest();
-    return _defaultInstance;
-  }
-
+      DeleteSubscriptionRequest()..mergeFromMessage(this);
+  DeleteSubscriptionRequest copyWith(
+          void Function(DeleteSubscriptionRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as DeleteSubscriptionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteSubscriptionRequest create() => DeleteSubscriptionRequest();
+  DeleteSubscriptionRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSubscriptionRequest> createRepeated() =>
+      $pb.PbList<DeleteSubscriptionRequest>();
+  static DeleteSubscriptionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteSubscriptionRequest _defaultInstance;
-  static void $checkItem(DeleteSubscriptionRequest v) {
-    if (v is! DeleteSubscriptionRequest)
-      checkItemFailed(v, 'DeleteSubscriptionRequest');
-  }
 
-  String get subscription => $_getS(0, '');
-  set subscription(String v) {
+  $core.String get subscription => $_getS(0, '');
+  set subscription($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSubscription() => $_has(0);
+  $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 }
 
-class _ReadonlyDeleteSubscriptionRequest extends DeleteSubscriptionRequest
-    with ReadonlyMessageMixin {}
-
-class ModifyPushConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ModifyPushConfigRequest')
+class ModifyPushConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModifyPushConfigRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'subscription')
-    ..a<PushConfig>(2, 'pushConfig', PbFieldType.OM, PushConfig.getDefault,
+    ..a<PushConfig>(2, 'pushConfig', $pb.PbFieldType.OM, PushConfig.getDefault,
         PushConfig.create)
     ..hasRequiredFields = false;
 
   ModifyPushConfigRequest() : super();
-  ModifyPushConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ModifyPushConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ModifyPushConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ModifyPushConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ModifyPushConfigRequest clone() =>
-      new ModifyPushConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ModifyPushConfigRequest create() => new ModifyPushConfigRequest();
-  static PbList<ModifyPushConfigRequest> createRepeated() =>
-      new PbList<ModifyPushConfigRequest>();
-  static ModifyPushConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyModifyPushConfigRequest();
-    return _defaultInstance;
-  }
-
+      ModifyPushConfigRequest()..mergeFromMessage(this);
+  ModifyPushConfigRequest copyWith(
+          void Function(ModifyPushConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as ModifyPushConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ModifyPushConfigRequest create() => ModifyPushConfigRequest();
+  ModifyPushConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<ModifyPushConfigRequest> createRepeated() =>
+      $pb.PbList<ModifyPushConfigRequest>();
+  static ModifyPushConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ModifyPushConfigRequest _defaultInstance;
-  static void $checkItem(ModifyPushConfigRequest v) {
-    if (v is! ModifyPushConfigRequest)
-      checkItemFailed(v, 'ModifyPushConfigRequest');
-  }
 
-  String get subscription => $_getS(0, '');
-  set subscription(String v) {
+  $core.String get subscription => $_getS(0, '');
+  set subscription($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSubscription() => $_has(0);
+  $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
   PushConfig get pushConfig => $_getN(1);
@@ -969,305 +777,281 @@ class ModifyPushConfigRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasPushConfig() => $_has(1);
+  $core.bool hasPushConfig() => $_has(1);
   void clearPushConfig() => clearField(2);
 }
 
-class _ReadonlyModifyPushConfigRequest extends ModifyPushConfigRequest
-    with ReadonlyMessageMixin {}
-
-class PullRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PullRequest')
+class PullRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PullRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'subscription')
     ..aOB(2, 'returnImmediately')
-    ..a<int>(3, 'maxMessages', PbFieldType.O3)
+    ..a<$core.int>(3, 'maxMessages', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   PullRequest() : super();
-  PullRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PullRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PullRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PullRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PullRequest clone() => new PullRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PullRequest create() => new PullRequest();
-  static PbList<PullRequest> createRepeated() => new PbList<PullRequest>();
-  static PullRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPullRequest();
-    return _defaultInstance;
-  }
-
+  PullRequest clone() => PullRequest()..mergeFromMessage(this);
+  PullRequest copyWith(void Function(PullRequest) updates) =>
+      super.copyWith((message) => updates(message as PullRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static PullRequest create() => PullRequest();
+  PullRequest createEmptyInstance() => create();
+  static $pb.PbList<PullRequest> createRepeated() => $pb.PbList<PullRequest>();
+  static PullRequest getDefault() => _defaultInstance ??= create()..freeze();
   static PullRequest _defaultInstance;
-  static void $checkItem(PullRequest v) {
-    if (v is! PullRequest) checkItemFailed(v, 'PullRequest');
-  }
 
-  String get subscription => $_getS(0, '');
-  set subscription(String v) {
+  $core.String get subscription => $_getS(0, '');
+  set subscription($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSubscription() => $_has(0);
+  $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  bool get returnImmediately => $_get(1, false);
-  set returnImmediately(bool v) {
+  $core.bool get returnImmediately => $_get(1, false);
+  set returnImmediately($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasReturnImmediately() => $_has(1);
+  $core.bool hasReturnImmediately() => $_has(1);
   void clearReturnImmediately() => clearField(2);
 
-  int get maxMessages => $_get(2, 0);
-  set maxMessages(int v) {
+  $core.int get maxMessages => $_get(2, 0);
+  set maxMessages($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasMaxMessages() => $_has(2);
+  $core.bool hasMaxMessages() => $_has(2);
   void clearMaxMessages() => clearField(3);
 }
 
-class _ReadonlyPullRequest extends PullRequest with ReadonlyMessageMixin {}
-
-class PullResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PullResponse')
-    ..pp<ReceivedMessage>(1, 'receivedMessages', PbFieldType.PM,
-        ReceivedMessage.$checkItem, ReceivedMessage.create)
+class PullResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PullResponse',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
+    ..pc<ReceivedMessage>(
+        1, 'receivedMessages', $pb.PbFieldType.PM, ReceivedMessage.create)
     ..hasRequiredFields = false;
 
   PullResponse() : super();
-  PullResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PullResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PullResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PullResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PullResponse clone() => new PullResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PullResponse create() => new PullResponse();
-  static PbList<PullResponse> createRepeated() => new PbList<PullResponse>();
-  static PullResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPullResponse();
-    return _defaultInstance;
-  }
-
+  PullResponse clone() => PullResponse()..mergeFromMessage(this);
+  PullResponse copyWith(void Function(PullResponse) updates) =>
+      super.copyWith((message) => updates(message as PullResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static PullResponse create() => PullResponse();
+  PullResponse createEmptyInstance() => create();
+  static $pb.PbList<PullResponse> createRepeated() =>
+      $pb.PbList<PullResponse>();
+  static PullResponse getDefault() => _defaultInstance ??= create()..freeze();
   static PullResponse _defaultInstance;
-  static void $checkItem(PullResponse v) {
-    if (v is! PullResponse) checkItemFailed(v, 'PullResponse');
-  }
 
-  List<ReceivedMessage> get receivedMessages => $_getList(0);
+  $core.List<ReceivedMessage> get receivedMessages => $_getList(0);
 }
 
-class _ReadonlyPullResponse extends PullResponse with ReadonlyMessageMixin {}
-
-class ModifyAckDeadlineRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ModifyAckDeadlineRequest')
+class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModifyAckDeadlineRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'subscription')
     ..aOS(2, 'ackId')
-    ..a<int>(3, 'ackDeadlineSeconds', PbFieldType.O3)
+    ..a<$core.int>(3, 'ackDeadlineSeconds', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ModifyAckDeadlineRequest() : super();
-  ModifyAckDeadlineRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ModifyAckDeadlineRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ModifyAckDeadlineRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ModifyAckDeadlineRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ModifyAckDeadlineRequest clone() =>
-      new ModifyAckDeadlineRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ModifyAckDeadlineRequest create() => new ModifyAckDeadlineRequest();
-  static PbList<ModifyAckDeadlineRequest> createRepeated() =>
-      new PbList<ModifyAckDeadlineRequest>();
-  static ModifyAckDeadlineRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyModifyAckDeadlineRequest();
-    return _defaultInstance;
-  }
-
+      ModifyAckDeadlineRequest()..mergeFromMessage(this);
+  ModifyAckDeadlineRequest copyWith(
+          void Function(ModifyAckDeadlineRequest) updates) =>
+      super.copyWith((message) => updates(message as ModifyAckDeadlineRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ModifyAckDeadlineRequest create() => ModifyAckDeadlineRequest();
+  ModifyAckDeadlineRequest createEmptyInstance() => create();
+  static $pb.PbList<ModifyAckDeadlineRequest> createRepeated() =>
+      $pb.PbList<ModifyAckDeadlineRequest>();
+  static ModifyAckDeadlineRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ModifyAckDeadlineRequest _defaultInstance;
-  static void $checkItem(ModifyAckDeadlineRequest v) {
-    if (v is! ModifyAckDeadlineRequest)
-      checkItemFailed(v, 'ModifyAckDeadlineRequest');
-  }
 
-  String get subscription => $_getS(0, '');
-  set subscription(String v) {
+  $core.String get subscription => $_getS(0, '');
+  set subscription($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSubscription() => $_has(0);
+  $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  String get ackId => $_getS(1, '');
-  set ackId(String v) {
+  $core.String get ackId => $_getS(1, '');
+  set ackId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasAckId() => $_has(1);
+  $core.bool hasAckId() => $_has(1);
   void clearAckId() => clearField(2);
 
-  int get ackDeadlineSeconds => $_get(2, 0);
-  set ackDeadlineSeconds(int v) {
+  $core.int get ackDeadlineSeconds => $_get(2, 0);
+  set ackDeadlineSeconds($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasAckDeadlineSeconds() => $_has(2);
+  $core.bool hasAckDeadlineSeconds() => $_has(2);
   void clearAckDeadlineSeconds() => clearField(3);
 }
 
-class _ReadonlyModifyAckDeadlineRequest extends ModifyAckDeadlineRequest
-    with ReadonlyMessageMixin {}
-
-class AcknowledgeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AcknowledgeRequest')
+class AcknowledgeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AcknowledgeRequest',
+      package: const $pb.PackageName('google.pubsub.v1beta2'))
     ..aOS(1, 'subscription')
     ..pPS(2, 'ackIds')
     ..hasRequiredFields = false;
 
   AcknowledgeRequest() : super();
-  AcknowledgeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AcknowledgeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AcknowledgeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AcknowledgeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AcknowledgeRequest clone() =>
-      new AcknowledgeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AcknowledgeRequest create() => new AcknowledgeRequest();
-  static PbList<AcknowledgeRequest> createRepeated() =>
-      new PbList<AcknowledgeRequest>();
-  static AcknowledgeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAcknowledgeRequest();
-    return _defaultInstance;
-  }
-
+  AcknowledgeRequest clone() => AcknowledgeRequest()..mergeFromMessage(this);
+  AcknowledgeRequest copyWith(void Function(AcknowledgeRequest) updates) =>
+      super.copyWith((message) => updates(message as AcknowledgeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AcknowledgeRequest create() => AcknowledgeRequest();
+  AcknowledgeRequest createEmptyInstance() => create();
+  static $pb.PbList<AcknowledgeRequest> createRepeated() =>
+      $pb.PbList<AcknowledgeRequest>();
+  static AcknowledgeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AcknowledgeRequest _defaultInstance;
-  static void $checkItem(AcknowledgeRequest v) {
-    if (v is! AcknowledgeRequest) checkItemFailed(v, 'AcknowledgeRequest');
-  }
 
-  String get subscription => $_getS(0, '');
-  set subscription(String v) {
+  $core.String get subscription => $_getS(0, '');
+  set subscription($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSubscription() => $_has(0);
+  $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  List<String> get ackIds => $_getList(1);
+  $core.List<$core.String> get ackIds => $_getList(1);
 }
 
-class _ReadonlyAcknowledgeRequest extends AcknowledgeRequest
-    with ReadonlyMessageMixin {}
-
 class SubscriberApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   SubscriberApi(this._client);
 
-  Future<Subscription> createSubscription(
-      ClientContext ctx, Subscription request) {
-    var emptyResponse = new Subscription();
+  $async.Future<Subscription> createSubscription(
+      $pb.ClientContext ctx, Subscription request) {
+    var emptyResponse = Subscription();
     return _client.invoke<Subscription>(
         ctx, 'Subscriber', 'CreateSubscription', request, emptyResponse);
   }
 
-  Future<Subscription> getSubscription(
-      ClientContext ctx, GetSubscriptionRequest request) {
-    var emptyResponse = new Subscription();
+  $async.Future<Subscription> getSubscription(
+      $pb.ClientContext ctx, GetSubscriptionRequest request) {
+    var emptyResponse = Subscription();
     return _client.invoke<Subscription>(
         ctx, 'Subscriber', 'GetSubscription', request, emptyResponse);
   }
 
-  Future<ListSubscriptionsResponse> listSubscriptions(
-      ClientContext ctx, ListSubscriptionsRequest request) {
-    var emptyResponse = new ListSubscriptionsResponse();
+  $async.Future<ListSubscriptionsResponse> listSubscriptions(
+      $pb.ClientContext ctx, ListSubscriptionsRequest request) {
+    var emptyResponse = ListSubscriptionsResponse();
     return _client.invoke<ListSubscriptionsResponse>(
         ctx, 'Subscriber', 'ListSubscriptions', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> deleteSubscription(
-      ClientContext ctx, DeleteSubscriptionRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$0.Empty> deleteSubscription(
+      $pb.ClientContext ctx, DeleteSubscriptionRequest request) {
+    var emptyResponse = $0.Empty();
+    return _client.invoke<$0.Empty>(
         ctx, 'Subscriber', 'DeleteSubscription', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> modifyAckDeadline(
-      ClientContext ctx, ModifyAckDeadlineRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$0.Empty> modifyAckDeadline(
+      $pb.ClientContext ctx, ModifyAckDeadlineRequest request) {
+    var emptyResponse = $0.Empty();
+    return _client.invoke<$0.Empty>(
         ctx, 'Subscriber', 'ModifyAckDeadline', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> acknowledge(
-      ClientContext ctx, AcknowledgeRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$0.Empty> acknowledge(
+      $pb.ClientContext ctx, AcknowledgeRequest request) {
+    var emptyResponse = $0.Empty();
+    return _client.invoke<$0.Empty>(
         ctx, 'Subscriber', 'Acknowledge', request, emptyResponse);
   }
 
-  Future<PullResponse> pull(ClientContext ctx, PullRequest request) {
-    var emptyResponse = new PullResponse();
+  $async.Future<PullResponse> pull($pb.ClientContext ctx, PullRequest request) {
+    var emptyResponse = PullResponse();
     return _client.invoke<PullResponse>(
         ctx, 'Subscriber', 'Pull', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> modifyPushConfig(
-      ClientContext ctx, ModifyPushConfigRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$0.Empty> modifyPushConfig(
+      $pb.ClientContext ctx, ModifyPushConfigRequest request) {
+    var emptyResponse = $0.Empty();
+    return _client.invoke<$0.Empty>(
         ctx, 'Subscriber', 'ModifyPushConfig', request, emptyResponse);
   }
 }
 
 class PublisherApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   PublisherApi(this._client);
 
-  Future<Topic> createTopic(ClientContext ctx, Topic request) {
-    var emptyResponse = new Topic();
+  $async.Future<Topic> createTopic($pb.ClientContext ctx, Topic request) {
+    var emptyResponse = Topic();
     return _client.invoke<Topic>(
         ctx, 'Publisher', 'CreateTopic', request, emptyResponse);
   }
 
-  Future<PublishResponse> publish(ClientContext ctx, PublishRequest request) {
-    var emptyResponse = new PublishResponse();
+  $async.Future<PublishResponse> publish(
+      $pb.ClientContext ctx, PublishRequest request) {
+    var emptyResponse = PublishResponse();
     return _client.invoke<PublishResponse>(
         ctx, 'Publisher', 'Publish', request, emptyResponse);
   }
 
-  Future<Topic> getTopic(ClientContext ctx, GetTopicRequest request) {
-    var emptyResponse = new Topic();
+  $async.Future<Topic> getTopic(
+      $pb.ClientContext ctx, GetTopicRequest request) {
+    var emptyResponse = Topic();
     return _client.invoke<Topic>(
         ctx, 'Publisher', 'GetTopic', request, emptyResponse);
   }
 
-  Future<ListTopicsResponse> listTopics(
-      ClientContext ctx, ListTopicsRequest request) {
-    var emptyResponse = new ListTopicsResponse();
+  $async.Future<ListTopicsResponse> listTopics(
+      $pb.ClientContext ctx, ListTopicsRequest request) {
+    var emptyResponse = ListTopicsResponse();
     return _client.invoke<ListTopicsResponse>(
         ctx, 'Publisher', 'ListTopics', request, emptyResponse);
   }
 
-  Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(
-      ClientContext ctx, ListTopicSubscriptionsRequest request) {
-    var emptyResponse = new ListTopicSubscriptionsResponse();
+  $async.Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(
+      $pb.ClientContext ctx, ListTopicSubscriptionsRequest request) {
+    var emptyResponse = ListTopicSubscriptionsResponse();
     return _client.invoke<ListTopicSubscriptionsResponse>(
         ctx, 'Publisher', 'ListTopicSubscriptions', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> deleteTopic(
-      ClientContext ctx, DeleteTopicRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$0.Empty> deleteTopic(
+      $pb.ClientContext ctx, DeleteTopicRequest request) {
+    var emptyResponse = $0.Empty();
+    return _client.invoke<$0.Empty>(
         ctx, 'Publisher', 'DeleteTopic', request, emptyResponse);
   }
 }

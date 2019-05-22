@@ -1,13 +1,14 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/table/v1/bigtable_table_data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const Table$json = const {
+const Table$json = {
   '1': 'Table',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'current_operation',
       '3': 2,
       '4': 1,
@@ -15,7 +16,7 @@ const Table$json = const {
       '6': '.google.longrunning.Operation',
       '10': 'currentOperation'
     },
-    const {
+    {
       '1': 'column_families',
       '3': 3,
       '4': 3,
@@ -23,7 +24,7 @@ const Table$json = const {
       '6': '.google.bigtable.admin.table.v1.Table.ColumnFamiliesEntry',
       '10': 'columnFamilies'
     },
-    const {
+    {
       '1': 'granularity',
       '3': 4,
       '4': 1,
@@ -32,15 +33,15 @@ const Table$json = const {
       '10': 'granularity'
     },
   ],
-  '3': const [Table_ColumnFamiliesEntry$json],
-  '4': const [Table_TimestampGranularity$json],
+  '3': [Table_ColumnFamiliesEntry$json],
+  '4': [Table_TimestampGranularity$json],
 };
 
-const Table_ColumnFamiliesEntry$json = const {
+const Table_ColumnFamiliesEntry$json = {
   '1': 'ColumnFamiliesEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
       '1': 'value',
       '3': 2,
       '4': 1,
@@ -49,22 +50,22 @@ const Table_ColumnFamiliesEntry$json = const {
       '10': 'value'
     },
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const Table_TimestampGranularity$json = const {
+const Table_TimestampGranularity$json = {
   '1': 'TimestampGranularity',
-  '2': const [
-    const {'1': 'MILLIS', '2': 0},
+  '2': [
+    {'1': 'MILLIS', '2': 0},
   ],
 };
 
-const ColumnFamily$json = const {
+const ColumnFamily$json = {
   '1': 'ColumnFamily',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'gc_expression', '3': 2, '4': 1, '5': 9, '10': 'gcExpression'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'gc_expression', '3': 2, '4': 1, '5': 9, '10': 'gcExpression'},
+    {
       '1': 'gc_rule',
       '3': 3,
       '4': 1,
@@ -75,10 +76,10 @@ const ColumnFamily$json = const {
   ],
 };
 
-const GcRule$json = const {
+const GcRule$json = {
   '1': 'GcRule',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'max_num_versions',
       '3': 1,
       '4': 1,
@@ -86,7 +87,7 @@ const GcRule$json = const {
       '9': 0,
       '10': 'maxNumVersions'
     },
-    const {
+    {
       '1': 'max_age',
       '3': 2,
       '4': 1,
@@ -95,7 +96,7 @@ const GcRule$json = const {
       '9': 0,
       '10': 'maxAge'
     },
-    const {
+    {
       '1': 'intersection',
       '3': 3,
       '4': 1,
@@ -104,7 +105,7 @@ const GcRule$json = const {
       '9': 0,
       '10': 'intersection'
     },
-    const {
+    {
       '1': 'union',
       '3': 4,
       '4': 1,
@@ -114,16 +115,16 @@ const GcRule$json = const {
       '10': 'union'
     },
   ],
-  '3': const [GcRule_Intersection$json, GcRule_Union$json],
-  '8': const [
-    const {'1': 'rule'},
+  '3': [GcRule_Intersection$json, GcRule_Union$json],
+  '8': [
+    {'1': 'rule'},
   ],
 };
 
-const GcRule_Intersection$json = const {
+const GcRule_Intersection$json = {
   '1': 'Intersection',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'rules',
       '3': 1,
       '4': 3,
@@ -134,10 +135,10 @@ const GcRule_Intersection$json = const {
   ],
 };
 
-const GcRule_Union$json = const {
+const GcRule_Union$json = {
   '1': 'Union',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'rules',
       '3': 1,
       '4': 3,

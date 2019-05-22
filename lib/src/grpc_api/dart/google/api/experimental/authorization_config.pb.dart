@@ -1,50 +1,44 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/experimental/authorization_config.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class AuthorizationConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthorizationConfig')
+class AuthorizationConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuthorizationConfig',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'provider')
     ..hasRequiredFields = false;
 
   AuthorizationConfig() : super();
-  AuthorizationConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuthorizationConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AuthorizationConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuthorizationConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthorizationConfig clone() =>
-      new AuthorizationConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AuthorizationConfig create() => new AuthorizationConfig();
-  static PbList<AuthorizationConfig> createRepeated() =>
-      new PbList<AuthorizationConfig>();
-  static AuthorizationConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthorizationConfig();
-    return _defaultInstance;
-  }
-
+  AuthorizationConfig clone() => AuthorizationConfig()..mergeFromMessage(this);
+  AuthorizationConfig copyWith(void Function(AuthorizationConfig) updates) =>
+      super.copyWith((message) => updates(message as AuthorizationConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static AuthorizationConfig create() => AuthorizationConfig();
+  AuthorizationConfig createEmptyInstance() => create();
+  static $pb.PbList<AuthorizationConfig> createRepeated() =>
+      $pb.PbList<AuthorizationConfig>();
+  static AuthorizationConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AuthorizationConfig _defaultInstance;
-  static void $checkItem(AuthorizationConfig v) {
-    if (v is! AuthorizationConfig) checkItemFailed(v, 'AuthorizationConfig');
-  }
 
-  String get provider => $_getS(0, '');
-  set provider(String v) {
+  $core.String get provider => $_getS(0, '');
+  set provider($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProvider() => $_has(0);
+  $core.bool hasProvider() => $_has(0);
   void clearProvider() => clearField(1);
 }
-
-class _ReadonlyAuthorizationConfig extends AuthorizationConfig
-    with ReadonlyMessageMixin {}

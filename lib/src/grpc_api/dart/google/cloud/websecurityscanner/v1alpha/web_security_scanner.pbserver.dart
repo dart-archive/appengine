@@ -1,80 +1,86 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/websecurityscanner/v1alpha/web_security_scanner.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'web_security_scanner.pb.dart';
-import 'scan_config.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import 'scan_run.pb.dart';
-import 'finding.pb.dart';
+import 'scan_config.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $6;
+import 'scan_run.pb.dart' as $2;
+import 'finding.pb.dart' as $4;
 import 'web_security_scanner.pbjson.dart';
 
 export 'web_security_scanner.pb.dart';
 
-abstract class WebSecurityScannerServiceBase extends GeneratedService {
-  Future<ScanConfig> createScanConfig(
-      ServerContext ctx, CreateScanConfigRequest request);
-  Future<$google$protobuf.Empty> deleteScanConfig(
-      ServerContext ctx, DeleteScanConfigRequest request);
-  Future<ScanConfig> getScanConfig(
-      ServerContext ctx, GetScanConfigRequest request);
-  Future<ListScanConfigsResponse> listScanConfigs(
-      ServerContext ctx, ListScanConfigsRequest request);
-  Future<ScanConfig> updateScanConfig(
-      ServerContext ctx, UpdateScanConfigRequest request);
-  Future<ScanRun> startScanRun(ServerContext ctx, StartScanRunRequest request);
-  Future<ScanRun> getScanRun(ServerContext ctx, GetScanRunRequest request);
-  Future<ListScanRunsResponse> listScanRuns(
-      ServerContext ctx, ListScanRunsRequest request);
-  Future<ScanRun> stopScanRun(ServerContext ctx, StopScanRunRequest request);
-  Future<ListCrawledUrlsResponse> listCrawledUrls(
-      ServerContext ctx, ListCrawledUrlsRequest request);
-  Future<Finding> getFinding(ServerContext ctx, GetFindingRequest request);
-  Future<ListFindingsResponse> listFindings(
-      ServerContext ctx, ListFindingsRequest request);
-  Future<ListFindingTypeStatsResponse> listFindingTypeStats(
-      ServerContext ctx, ListFindingTypeStatsRequest request);
+abstract class WebSecurityScannerServiceBase extends $pb.GeneratedService {
+  $async.Future<$0.ScanConfig> createScanConfig(
+      $pb.ServerContext ctx, CreateScanConfigRequest request);
+  $async.Future<$6.Empty> deleteScanConfig(
+      $pb.ServerContext ctx, DeleteScanConfigRequest request);
+  $async.Future<$0.ScanConfig> getScanConfig(
+      $pb.ServerContext ctx, GetScanConfigRequest request);
+  $async.Future<ListScanConfigsResponse> listScanConfigs(
+      $pb.ServerContext ctx, ListScanConfigsRequest request);
+  $async.Future<$0.ScanConfig> updateScanConfig(
+      $pb.ServerContext ctx, UpdateScanConfigRequest request);
+  $async.Future<$2.ScanRun> startScanRun(
+      $pb.ServerContext ctx, StartScanRunRequest request);
+  $async.Future<$2.ScanRun> getScanRun(
+      $pb.ServerContext ctx, GetScanRunRequest request);
+  $async.Future<ListScanRunsResponse> listScanRuns(
+      $pb.ServerContext ctx, ListScanRunsRequest request);
+  $async.Future<$2.ScanRun> stopScanRun(
+      $pb.ServerContext ctx, StopScanRunRequest request);
+  $async.Future<ListCrawledUrlsResponse> listCrawledUrls(
+      $pb.ServerContext ctx, ListCrawledUrlsRequest request);
+  $async.Future<$4.Finding> getFinding(
+      $pb.ServerContext ctx, GetFindingRequest request);
+  $async.Future<ListFindingsResponse> listFindings(
+      $pb.ServerContext ctx, ListFindingsRequest request);
+  $async.Future<ListFindingTypeStatsResponse> listFindingTypeStats(
+      $pb.ServerContext ctx, ListFindingTypeStatsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'CreateScanConfig':
-        return new CreateScanConfigRequest();
+        return CreateScanConfigRequest();
       case 'DeleteScanConfig':
-        return new DeleteScanConfigRequest();
+        return DeleteScanConfigRequest();
       case 'GetScanConfig':
-        return new GetScanConfigRequest();
+        return GetScanConfigRequest();
       case 'ListScanConfigs':
-        return new ListScanConfigsRequest();
+        return ListScanConfigsRequest();
       case 'UpdateScanConfig':
-        return new UpdateScanConfigRequest();
+        return UpdateScanConfigRequest();
       case 'StartScanRun':
-        return new StartScanRunRequest();
+        return StartScanRunRequest();
       case 'GetScanRun':
-        return new GetScanRunRequest();
+        return GetScanRunRequest();
       case 'ListScanRuns':
-        return new ListScanRunsRequest();
+        return ListScanRunsRequest();
       case 'StopScanRun':
-        return new StopScanRunRequest();
+        return StopScanRunRequest();
       case 'ListCrawledUrls':
-        return new ListCrawledUrlsRequest();
+        return ListCrawledUrlsRequest();
       case 'GetFinding':
-        return new GetFindingRequest();
+        return GetFindingRequest();
       case 'ListFindings':
-        return new ListFindingsRequest();
+        return ListFindingsRequest();
       case 'ListFindingTypeStats':
-        return new ListFindingTypeStatsRequest();
+        return ListFindingTypeStatsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'CreateScanConfig':
         return this.createScanConfig(ctx, request);
@@ -103,11 +109,12 @@ abstract class WebSecurityScannerServiceBase extends GeneratedService {
       case 'ListFindingTypeStats':
         return this.listFindingTypeStats(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => WebSecurityScanner$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      WebSecurityScanner$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      WebSecurityScannerServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => WebSecurityScannerServiceBase$messageJson;
 }

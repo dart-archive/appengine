@@ -1,38 +1,39 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/references.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const Reference$json = const {
+const Reference$json = {
   '1': 'Reference',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'length', '3': 2, '4': 1, '5': 3, '10': 'length'},
-    const {'1': 'md5checksum', '3': 3, '4': 1, '5': 9, '10': 'md5checksum'},
-    const {'1': 'name', '3': 4, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'source_uri', '3': 5, '4': 1, '5': 9, '10': 'sourceUri'},
-    const {
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'length', '3': 2, '4': 1, '5': 3, '10': 'length'},
+    {'1': 'md5checksum', '3': 3, '4': 1, '5': 9, '10': 'md5checksum'},
+    {'1': 'name', '3': 4, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'source_uri', '3': 5, '4': 1, '5': 9, '10': 'sourceUri'},
+    {
       '1': 'source_accessions',
       '3': 6,
       '4': 3,
       '5': 9,
       '10': 'sourceAccessions'
     },
-    const {'1': 'ncbi_taxon_id', '3': 7, '4': 1, '5': 5, '10': 'ncbiTaxonId'},
+    {'1': 'ncbi_taxon_id', '3': 7, '4': 1, '5': 5, '10': 'ncbiTaxonId'},
   ],
 };
 
-const ReferenceSet$json = const {
+const ReferenceSet$json = {
   '1': 'ReferenceSet',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'reference_ids', '3': 2, '4': 3, '5': 9, '10': 'referenceIds'},
-    const {'1': 'md5checksum', '3': 3, '4': 1, '5': 9, '10': 'md5checksum'},
-    const {'1': 'ncbi_taxon_id', '3': 4, '4': 1, '5': 5, '10': 'ncbiTaxonId'},
-    const {'1': 'description', '3': 5, '4': 1, '5': 9, '10': 'description'},
-    const {'1': 'assembly_id', '3': 6, '4': 1, '5': 9, '10': 'assemblyId'},
-    const {'1': 'source_uri', '3': 7, '4': 1, '5': 9, '10': 'sourceUri'},
-    const {
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'reference_ids', '3': 2, '4': 3, '5': 9, '10': 'referenceIds'},
+    {'1': 'md5checksum', '3': 3, '4': 1, '5': 9, '10': 'md5checksum'},
+    {'1': 'ncbi_taxon_id', '3': 4, '4': 1, '5': 5, '10': 'ncbiTaxonId'},
+    {'1': 'description', '3': 5, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'assembly_id', '3': 6, '4': 1, '5': 9, '10': 'assemblyId'},
+    {'1': 'source_uri', '3': 7, '4': 1, '5': 9, '10': 'sourceUri'},
+    {
       '1': 'source_accessions',
       '3': 8,
       '4': 3,
@@ -42,21 +43,21 @@ const ReferenceSet$json = const {
   ],
 };
 
-const SearchReferenceSetsRequest$json = const {
+const SearchReferenceSetsRequest$json = {
   '1': 'SearchReferenceSetsRequest',
-  '2': const [
-    const {'1': 'md5checksums', '3': 1, '4': 3, '5': 9, '10': 'md5checksums'},
-    const {'1': 'accessions', '3': 2, '4': 3, '5': 9, '10': 'accessions'},
-    const {'1': 'assembly_id', '3': 3, '4': 1, '5': 9, '10': 'assemblyId'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
+  '2': [
+    {'1': 'md5checksums', '3': 1, '4': 3, '5': 9, '10': 'md5checksums'},
+    {'1': 'accessions', '3': 2, '4': 3, '5': 9, '10': 'accessions'},
+    {'1': 'assembly_id', '3': 3, '4': 1, '5': 9, '10': 'assemblyId'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
   ],
 };
 
-const SearchReferenceSetsResponse$json = const {
+const SearchReferenceSetsResponse$json = {
   '1': 'SearchReferenceSetsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'reference_sets',
       '3': 1,
       '4': 3,
@@ -64,50 +65,32 @@ const SearchReferenceSetsResponse$json = const {
       '6': '.google.genomics.v1.ReferenceSet',
       '10': 'referenceSets'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetReferenceSetRequest$json = const {
+const GetReferenceSetRequest$json = {
   '1': 'GetReferenceSetRequest',
-  '2': const [
-    const {
-      '1': 'reference_set_id',
-      '3': 1,
-      '4': 1,
-      '5': 9,
-      '10': 'referenceSetId'
-    },
+  '2': [
+    {'1': 'reference_set_id', '3': 1, '4': 1, '5': 9, '10': 'referenceSetId'},
   ],
 };
 
-const SearchReferencesRequest$json = const {
+const SearchReferencesRequest$json = {
   '1': 'SearchReferencesRequest',
-  '2': const [
-    const {'1': 'md5checksums', '3': 1, '4': 3, '5': 9, '10': 'md5checksums'},
-    const {'1': 'accessions', '3': 2, '4': 3, '5': 9, '10': 'accessions'},
-    const {
-      '1': 'reference_set_id',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '10': 'referenceSetId'
-    },
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
+  '2': [
+    {'1': 'md5checksums', '3': 1, '4': 3, '5': 9, '10': 'md5checksums'},
+    {'1': 'accessions', '3': 2, '4': 3, '5': 9, '10': 'accessions'},
+    {'1': 'reference_set_id', '3': 3, '4': 1, '5': 9, '10': 'referenceSetId'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
   ],
 };
 
-const SearchReferencesResponse$json = const {
+const SearchReferencesResponse$json = {
   '1': 'SearchReferencesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'references',
       '3': 1,
       '4': 3,
@@ -115,86 +98,74 @@ const SearchReferencesResponse$json = const {
       '6': '.google.genomics.v1.Reference',
       '10': 'references'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetReferenceRequest$json = const {
+const GetReferenceRequest$json = {
   '1': 'GetReferenceRequest',
-  '2': const [
-    const {'1': 'reference_id', '3': 1, '4': 1, '5': 9, '10': 'referenceId'},
+  '2': [
+    {'1': 'reference_id', '3': 1, '4': 1, '5': 9, '10': 'referenceId'},
   ],
 };
 
-const ListBasesRequest$json = const {
+const ListBasesRequest$json = {
   '1': 'ListBasesRequest',
-  '2': const [
-    const {'1': 'reference_id', '3': 1, '4': 1, '5': 9, '10': 'referenceId'},
-    const {'1': 'start', '3': 2, '4': 1, '5': 3, '10': 'start'},
-    const {'1': 'end', '3': 3, '4': 1, '5': 3, '10': 'end'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
+  '2': [
+    {'1': 'reference_id', '3': 1, '4': 1, '5': 9, '10': 'referenceId'},
+    {'1': 'start', '3': 2, '4': 1, '5': 3, '10': 'start'},
+    {'1': 'end', '3': 3, '4': 1, '5': 3, '10': 'end'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
   ],
 };
 
-const ListBasesResponse$json = const {
+const ListBasesResponse$json = {
   '1': 'ListBasesResponse',
-  '2': const [
-    const {'1': 'offset', '3': 1, '4': 1, '5': 3, '10': 'offset'},
-    const {'1': 'sequence', '3': 2, '4': 1, '5': 9, '10': 'sequence'},
-    const {
-      '1': 'next_page_token',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+  '2': [
+    {'1': 'offset', '3': 1, '4': 1, '5': 3, '10': 'offset'},
+    {'1': 'sequence', '3': 2, '4': 1, '5': 9, '10': 'sequence'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const ReferenceServiceV1$json = const {
+const ReferenceServiceV1ServiceBase$json = {
   '1': 'ReferenceServiceV1',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'SearchReferenceSets',
       '2': '.google.genomics.v1.SearchReferenceSetsRequest',
       '3': '.google.genomics.v1.SearchReferenceSetsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetReferenceSet',
       '2': '.google.genomics.v1.GetReferenceSetRequest',
       '3': '.google.genomics.v1.ReferenceSet',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'SearchReferences',
       '2': '.google.genomics.v1.SearchReferencesRequest',
       '3': '.google.genomics.v1.SearchReferencesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetReference',
       '2': '.google.genomics.v1.GetReferenceRequest',
       '3': '.google.genomics.v1.Reference',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListBases',
       '2': '.google.genomics.v1.ListBasesRequest',
       '3': '.google.genomics.v1.ListBasesResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const ReferenceServiceV1$messageJson = const {
+const ReferenceServiceV1ServiceBase$messageJson = {
   '.google.genomics.v1.SearchReferenceSetsRequest':
       SearchReferenceSetsRequest$json,
   '.google.genomics.v1.SearchReferenceSetsResponse':

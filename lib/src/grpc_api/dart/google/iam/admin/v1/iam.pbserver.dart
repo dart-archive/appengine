@@ -1,112 +1,120 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/iam/admin/v1/iam.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'iam.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../v1/policy.pb.dart' as $google$iam$v1;
+import '../../../protobuf/empty.pb.dart' as $2;
+import '../../v1/iam_policy.pb.dart' as $3;
+import '../../v1/policy.pb.dart' as $4;
 import 'iam.pbjson.dart';
 
 export 'iam.pb.dart';
 
-abstract class IAMServiceBase extends GeneratedService {
-  Future<ListServiceAccountsResponse> listServiceAccounts(
-      ServerContext ctx, ListServiceAccountsRequest request);
-  Future<ServiceAccount> getServiceAccount(
-      ServerContext ctx, GetServiceAccountRequest request);
-  Future<ServiceAccount> createServiceAccount(
-      ServerContext ctx, CreateServiceAccountRequest request);
-  Future<ServiceAccount> updateServiceAccount(
-      ServerContext ctx, ServiceAccount request);
-  Future<$google$protobuf.Empty> deleteServiceAccount(
-      ServerContext ctx, DeleteServiceAccountRequest request);
-  Future<ListServiceAccountKeysResponse> listServiceAccountKeys(
-      ServerContext ctx, ListServiceAccountKeysRequest request);
-  Future<ServiceAccountKey> getServiceAccountKey(
-      ServerContext ctx, GetServiceAccountKeyRequest request);
-  Future<ServiceAccountKey> createServiceAccountKey(
-      ServerContext ctx, CreateServiceAccountKeyRequest request);
-  Future<$google$protobuf.Empty> deleteServiceAccountKey(
-      ServerContext ctx, DeleteServiceAccountKeyRequest request);
-  Future<SignBlobResponse> signBlob(ServerContext ctx, SignBlobRequest request);
-  Future<SignJwtResponse> signJwt(ServerContext ctx, SignJwtRequest request);
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ServerContext ctx, $google$iam$v1.GetIamPolicyRequest request);
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ServerContext ctx, $google$iam$v1.SetIamPolicyRequest request);
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ServerContext ctx, $google$iam$v1.TestIamPermissionsRequest request);
-  Future<QueryGrantableRolesResponse> queryGrantableRoles(
-      ServerContext ctx, QueryGrantableRolesRequest request);
-  Future<ListRolesResponse> listRoles(
-      ServerContext ctx, ListRolesRequest request);
-  Future<Role> getRole(ServerContext ctx, GetRoleRequest request);
-  Future<Role> createRole(ServerContext ctx, CreateRoleRequest request);
-  Future<Role> updateRole(ServerContext ctx, UpdateRoleRequest request);
-  Future<Role> deleteRole(ServerContext ctx, DeleteRoleRequest request);
-  Future<Role> undeleteRole(ServerContext ctx, UndeleteRoleRequest request);
-  Future<QueryTestablePermissionsResponse> queryTestablePermissions(
-      ServerContext ctx, QueryTestablePermissionsRequest request);
+abstract class IAMServiceBase extends $pb.GeneratedService {
+  $async.Future<ListServiceAccountsResponse> listServiceAccounts(
+      $pb.ServerContext ctx, ListServiceAccountsRequest request);
+  $async.Future<ServiceAccount> getServiceAccount(
+      $pb.ServerContext ctx, GetServiceAccountRequest request);
+  $async.Future<ServiceAccount> createServiceAccount(
+      $pb.ServerContext ctx, CreateServiceAccountRequest request);
+  $async.Future<ServiceAccount> updateServiceAccount(
+      $pb.ServerContext ctx, ServiceAccount request);
+  $async.Future<$2.Empty> deleteServiceAccount(
+      $pb.ServerContext ctx, DeleteServiceAccountRequest request);
+  $async.Future<ListServiceAccountKeysResponse> listServiceAccountKeys(
+      $pb.ServerContext ctx, ListServiceAccountKeysRequest request);
+  $async.Future<ServiceAccountKey> getServiceAccountKey(
+      $pb.ServerContext ctx, GetServiceAccountKeyRequest request);
+  $async.Future<ServiceAccountKey> createServiceAccountKey(
+      $pb.ServerContext ctx, CreateServiceAccountKeyRequest request);
+  $async.Future<$2.Empty> deleteServiceAccountKey(
+      $pb.ServerContext ctx, DeleteServiceAccountKeyRequest request);
+  $async.Future<SignBlobResponse> signBlob(
+      $pb.ServerContext ctx, SignBlobRequest request);
+  $async.Future<SignJwtResponse> signJwt(
+      $pb.ServerContext ctx, SignJwtRequest request);
+  $async.Future<$4.Policy> getIamPolicy(
+      $pb.ServerContext ctx, $3.GetIamPolicyRequest request);
+  $async.Future<$4.Policy> setIamPolicy(
+      $pb.ServerContext ctx, $3.SetIamPolicyRequest request);
+  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
+      $pb.ServerContext ctx, $3.TestIamPermissionsRequest request);
+  $async.Future<QueryGrantableRolesResponse> queryGrantableRoles(
+      $pb.ServerContext ctx, QueryGrantableRolesRequest request);
+  $async.Future<ListRolesResponse> listRoles(
+      $pb.ServerContext ctx, ListRolesRequest request);
+  $async.Future<Role> getRole($pb.ServerContext ctx, GetRoleRequest request);
+  $async.Future<Role> createRole(
+      $pb.ServerContext ctx, CreateRoleRequest request);
+  $async.Future<Role> updateRole(
+      $pb.ServerContext ctx, UpdateRoleRequest request);
+  $async.Future<Role> deleteRole(
+      $pb.ServerContext ctx, DeleteRoleRequest request);
+  $async.Future<Role> undeleteRole(
+      $pb.ServerContext ctx, UndeleteRoleRequest request);
+  $async.Future<QueryTestablePermissionsResponse> queryTestablePermissions(
+      $pb.ServerContext ctx, QueryTestablePermissionsRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListServiceAccounts':
-        return new ListServiceAccountsRequest();
+        return ListServiceAccountsRequest();
       case 'GetServiceAccount':
-        return new GetServiceAccountRequest();
+        return GetServiceAccountRequest();
       case 'CreateServiceAccount':
-        return new CreateServiceAccountRequest();
+        return CreateServiceAccountRequest();
       case 'UpdateServiceAccount':
-        return new ServiceAccount();
+        return ServiceAccount();
       case 'DeleteServiceAccount':
-        return new DeleteServiceAccountRequest();
+        return DeleteServiceAccountRequest();
       case 'ListServiceAccountKeys':
-        return new ListServiceAccountKeysRequest();
+        return ListServiceAccountKeysRequest();
       case 'GetServiceAccountKey':
-        return new GetServiceAccountKeyRequest();
+        return GetServiceAccountKeyRequest();
       case 'CreateServiceAccountKey':
-        return new CreateServiceAccountKeyRequest();
+        return CreateServiceAccountKeyRequest();
       case 'DeleteServiceAccountKey':
-        return new DeleteServiceAccountKeyRequest();
+        return DeleteServiceAccountKeyRequest();
       case 'SignBlob':
-        return new SignBlobRequest();
+        return SignBlobRequest();
       case 'SignJwt':
-        return new SignJwtRequest();
+        return SignJwtRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $3.GetIamPolicyRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $3.SetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $3.TestIamPermissionsRequest();
       case 'QueryGrantableRoles':
-        return new QueryGrantableRolesRequest();
+        return QueryGrantableRolesRequest();
       case 'ListRoles':
-        return new ListRolesRequest();
+        return ListRolesRequest();
       case 'GetRole':
-        return new GetRoleRequest();
+        return GetRoleRequest();
       case 'CreateRole':
-        return new CreateRoleRequest();
+        return CreateRoleRequest();
       case 'UpdateRole':
-        return new UpdateRoleRequest();
+        return UpdateRoleRequest();
       case 'DeleteRole':
-        return new DeleteRoleRequest();
+        return DeleteRoleRequest();
       case 'UndeleteRole':
-        return new UndeleteRoleRequest();
+        return UndeleteRoleRequest();
       case 'QueryTestablePermissions':
-        return new QueryTestablePermissionsRequest();
+        return QueryTestablePermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListServiceAccounts':
         return this.listServiceAccounts(ctx, request);
@@ -153,10 +161,11 @@ abstract class IAMServiceBase extends GeneratedService {
       case 'QueryTestablePermissions':
         return this.queryTestablePermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => IAM$json;
-  Map<String, Map<String, dynamic>> get $messageJson => IAM$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => IAMServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => IAMServiceBase$messageJson;
 }

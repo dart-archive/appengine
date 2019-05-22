@@ -1,50 +1,52 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/alert_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'alert_service.pb.dart';
-import 'alert.pb.dart';
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'alert.pb.dart' as $0;
+import '../../protobuf/empty.pb.dart' as $2;
 import 'alert_service.pbjson.dart';
 
 export 'alert_service.pb.dart';
 
-abstract class AlertPolicyServiceBase extends GeneratedService {
-  Future<ListAlertPoliciesResponse> listAlertPolicies(
-      ServerContext ctx, ListAlertPoliciesRequest request);
-  Future<AlertPolicy> getAlertPolicy(
-      ServerContext ctx, GetAlertPolicyRequest request);
-  Future<AlertPolicy> createAlertPolicy(
-      ServerContext ctx, CreateAlertPolicyRequest request);
-  Future<$google$protobuf.Empty> deleteAlertPolicy(
-      ServerContext ctx, DeleteAlertPolicyRequest request);
-  Future<AlertPolicy> updateAlertPolicy(
-      ServerContext ctx, UpdateAlertPolicyRequest request);
+abstract class AlertPolicyServiceBase extends $pb.GeneratedService {
+  $async.Future<ListAlertPoliciesResponse> listAlertPolicies(
+      $pb.ServerContext ctx, ListAlertPoliciesRequest request);
+  $async.Future<$0.AlertPolicy> getAlertPolicy(
+      $pb.ServerContext ctx, GetAlertPolicyRequest request);
+  $async.Future<$0.AlertPolicy> createAlertPolicy(
+      $pb.ServerContext ctx, CreateAlertPolicyRequest request);
+  $async.Future<$2.Empty> deleteAlertPolicy(
+      $pb.ServerContext ctx, DeleteAlertPolicyRequest request);
+  $async.Future<$0.AlertPolicy> updateAlertPolicy(
+      $pb.ServerContext ctx, UpdateAlertPolicyRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListAlertPolicies':
-        return new ListAlertPoliciesRequest();
+        return ListAlertPoliciesRequest();
       case 'GetAlertPolicy':
-        return new GetAlertPolicyRequest();
+        return GetAlertPolicyRequest();
       case 'CreateAlertPolicy':
-        return new CreateAlertPolicyRequest();
+        return CreateAlertPolicyRequest();
       case 'DeleteAlertPolicy':
-        return new DeleteAlertPolicyRequest();
+        return DeleteAlertPolicyRequest();
       case 'UpdateAlertPolicy':
-        return new UpdateAlertPolicyRequest();
+        return UpdateAlertPolicyRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListAlertPolicies':
         return this.listAlertPolicies(ctx, request);
@@ -57,11 +59,12 @@ abstract class AlertPolicyServiceBase extends GeneratedService {
       case 'UpdateAlertPolicy':
         return this.updateAlertPolicy(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => AlertPolicyService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      AlertPolicyService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      AlertPolicyServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AlertPolicyServiceBase$messageJson;
 }

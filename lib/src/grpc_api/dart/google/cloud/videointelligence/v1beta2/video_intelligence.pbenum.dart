@@ -1,23 +1,24 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/videointelligence/v1beta2/video_intelligence.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Feature extends ProtobufEnum {
+class Feature extends $pb.ProtobufEnum {
   static const Feature FEATURE_UNSPECIFIED =
-      const Feature._(0, 'FEATURE_UNSPECIFIED');
-  static const Feature LABEL_DETECTION = const Feature._(1, 'LABEL_DETECTION');
+      Feature._(0, 'FEATURE_UNSPECIFIED');
+  static const Feature LABEL_DETECTION = Feature._(1, 'LABEL_DETECTION');
   static const Feature SHOT_CHANGE_DETECTION =
-      const Feature._(2, 'SHOT_CHANGE_DETECTION');
+      Feature._(2, 'SHOT_CHANGE_DETECTION');
   static const Feature EXPLICIT_CONTENT_DETECTION =
-      const Feature._(3, 'EXPLICIT_CONTENT_DETECTION');
-  static const Feature FACE_DETECTION = const Feature._(4, 'FACE_DETECTION');
+      Feature._(3, 'EXPLICIT_CONTENT_DETECTION');
+  static const Feature FACE_DETECTION = Feature._(4, 'FACE_DETECTION');
 
-  static const List<Feature> values = const <Feature>[
+  static const $core.List<Feature> values = <Feature>[
     FEATURE_UNSPECIFIED,
     LABEL_DETECTION,
     SHOT_CHANGE_DETECTION,
@@ -25,53 +26,47 @@ class Feature extends ProtobufEnum {
     FACE_DETECTION,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Feature valueOf(int value) => _byValue[value] as Feature;
-  static void $checkItem(Feature v) {
-    if (v is! Feature) checkItemFailed(v, 'Feature');
-  }
+  static final $core.Map<$core.int, Feature> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Feature valueOf($core.int value) => _byValue[value];
 
-  const Feature._(int v, String n) : super(v, n);
+  const Feature._($core.int v, $core.String n) : super(v, n);
 }
 
-class LabelDetectionMode extends ProtobufEnum {
+class LabelDetectionMode extends $pb.ProtobufEnum {
   static const LabelDetectionMode LABEL_DETECTION_MODE_UNSPECIFIED =
-      const LabelDetectionMode._(0, 'LABEL_DETECTION_MODE_UNSPECIFIED');
+      LabelDetectionMode._(0, 'LABEL_DETECTION_MODE_UNSPECIFIED');
   static const LabelDetectionMode SHOT_MODE =
-      const LabelDetectionMode._(1, 'SHOT_MODE');
+      LabelDetectionMode._(1, 'SHOT_MODE');
   static const LabelDetectionMode FRAME_MODE =
-      const LabelDetectionMode._(2, 'FRAME_MODE');
+      LabelDetectionMode._(2, 'FRAME_MODE');
   static const LabelDetectionMode SHOT_AND_FRAME_MODE =
-      const LabelDetectionMode._(3, 'SHOT_AND_FRAME_MODE');
+      LabelDetectionMode._(3, 'SHOT_AND_FRAME_MODE');
 
-  static const List<LabelDetectionMode> values = const <LabelDetectionMode>[
+  static const $core.List<LabelDetectionMode> values = <LabelDetectionMode>[
     LABEL_DETECTION_MODE_UNSPECIFIED,
     SHOT_MODE,
     FRAME_MODE,
     SHOT_AND_FRAME_MODE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static LabelDetectionMode valueOf(int value) =>
-      _byValue[value] as LabelDetectionMode;
-  static void $checkItem(LabelDetectionMode v) {
-    if (v is! LabelDetectionMode) checkItemFailed(v, 'LabelDetectionMode');
-  }
+  static final $core.Map<$core.int, LabelDetectionMode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static LabelDetectionMode valueOf($core.int value) => _byValue[value];
 
-  const LabelDetectionMode._(int v, String n) : super(v, n);
+  const LabelDetectionMode._($core.int v, $core.String n) : super(v, n);
 }
 
-class Likelihood extends ProtobufEnum {
+class Likelihood extends $pb.ProtobufEnum {
   static const Likelihood LIKELIHOOD_UNSPECIFIED =
-      const Likelihood._(0, 'LIKELIHOOD_UNSPECIFIED');
-  static const Likelihood VERY_UNLIKELY =
-      const Likelihood._(1, 'VERY_UNLIKELY');
-  static const Likelihood UNLIKELY = const Likelihood._(2, 'UNLIKELY');
-  static const Likelihood POSSIBLE = const Likelihood._(3, 'POSSIBLE');
-  static const Likelihood LIKELY = const Likelihood._(4, 'LIKELY');
-  static const Likelihood VERY_LIKELY = const Likelihood._(5, 'VERY_LIKELY');
+      Likelihood._(0, 'LIKELIHOOD_UNSPECIFIED');
+  static const Likelihood VERY_UNLIKELY = Likelihood._(1, 'VERY_UNLIKELY');
+  static const Likelihood UNLIKELY = Likelihood._(2, 'UNLIKELY');
+  static const Likelihood POSSIBLE = Likelihood._(3, 'POSSIBLE');
+  static const Likelihood LIKELY = Likelihood._(4, 'LIKELY');
+  static const Likelihood VERY_LIKELY = Likelihood._(5, 'VERY_LIKELY');
 
-  static const List<Likelihood> values = const <Likelihood>[
+  static const $core.List<Likelihood> values = <Likelihood>[
     LIKELIHOOD_UNSPECIFIED,
     VERY_UNLIKELY,
     UNLIKELY,
@@ -80,11 +75,9 @@ class Likelihood extends ProtobufEnum {
     VERY_LIKELY,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Likelihood valueOf(int value) => _byValue[value] as Likelihood;
-  static void $checkItem(Likelihood v) {
-    if (v is! Likelihood) checkItemFailed(v, 'Likelihood');
-  }
+  static final $core.Map<$core.int, Likelihood> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Likelihood valueOf($core.int value) => _byValue[value];
 
-  const Likelihood._(int v, String n) : super(v, n);
+  const Likelihood._($core.int v, $core.String n) : super(v, n);
 }

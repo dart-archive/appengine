@@ -1,73 +1,76 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/notification_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'notification_service.pb.dart';
-import 'notification.pb.dart';
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'notification.pb.dart' as $0;
+import '../../protobuf/empty.pb.dart' as $3;
 import 'notification_service.pbjson.dart';
 
 export 'notification_service.pb.dart';
 
-abstract class NotificationChannelServiceBase extends GeneratedService {
-  Future<ListNotificationChannelDescriptorsResponse>
-      listNotificationChannelDescriptors(
-          ServerContext ctx, ListNotificationChannelDescriptorsRequest request);
-  Future<NotificationChannelDescriptor> getNotificationChannelDescriptor(
-      ServerContext ctx, GetNotificationChannelDescriptorRequest request);
-  Future<ListNotificationChannelsResponse> listNotificationChannels(
-      ServerContext ctx, ListNotificationChannelsRequest request);
-  Future<NotificationChannel> getNotificationChannel(
-      ServerContext ctx, GetNotificationChannelRequest request);
-  Future<NotificationChannel> createNotificationChannel(
-      ServerContext ctx, CreateNotificationChannelRequest request);
-  Future<NotificationChannel> updateNotificationChannel(
-      ServerContext ctx, UpdateNotificationChannelRequest request);
-  Future<$google$protobuf.Empty> deleteNotificationChannel(
-      ServerContext ctx, DeleteNotificationChannelRequest request);
-  Future<$google$protobuf.Empty> sendNotificationChannelVerificationCode(
-      ServerContext ctx,
+abstract class NotificationChannelServiceBase extends $pb.GeneratedService {
+  $async.Future<ListNotificationChannelDescriptorsResponse>
+      listNotificationChannelDescriptors($pb.ServerContext ctx,
+          ListNotificationChannelDescriptorsRequest request);
+  $async.Future<$0.NotificationChannelDescriptor>
+      getNotificationChannelDescriptor($pb.ServerContext ctx,
+          GetNotificationChannelDescriptorRequest request);
+  $async.Future<ListNotificationChannelsResponse> listNotificationChannels(
+      $pb.ServerContext ctx, ListNotificationChannelsRequest request);
+  $async.Future<$0.NotificationChannel> getNotificationChannel(
+      $pb.ServerContext ctx, GetNotificationChannelRequest request);
+  $async.Future<$0.NotificationChannel> createNotificationChannel(
+      $pb.ServerContext ctx, CreateNotificationChannelRequest request);
+  $async.Future<$0.NotificationChannel> updateNotificationChannel(
+      $pb.ServerContext ctx, UpdateNotificationChannelRequest request);
+  $async.Future<$3.Empty> deleteNotificationChannel(
+      $pb.ServerContext ctx, DeleteNotificationChannelRequest request);
+  $async.Future<$3.Empty> sendNotificationChannelVerificationCode(
+      $pb.ServerContext ctx,
       SendNotificationChannelVerificationCodeRequest request);
-  Future<GetNotificationChannelVerificationCodeResponse>
-      getNotificationChannelVerificationCode(ServerContext ctx,
+  $async.Future<GetNotificationChannelVerificationCodeResponse>
+      getNotificationChannelVerificationCode($pb.ServerContext ctx,
           GetNotificationChannelVerificationCodeRequest request);
-  Future<NotificationChannel> verifyNotificationChannel(
-      ServerContext ctx, VerifyNotificationChannelRequest request);
+  $async.Future<$0.NotificationChannel> verifyNotificationChannel(
+      $pb.ServerContext ctx, VerifyNotificationChannelRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ListNotificationChannelDescriptors':
-        return new ListNotificationChannelDescriptorsRequest();
+        return ListNotificationChannelDescriptorsRequest();
       case 'GetNotificationChannelDescriptor':
-        return new GetNotificationChannelDescriptorRequest();
+        return GetNotificationChannelDescriptorRequest();
       case 'ListNotificationChannels':
-        return new ListNotificationChannelsRequest();
+        return ListNotificationChannelsRequest();
       case 'GetNotificationChannel':
-        return new GetNotificationChannelRequest();
+        return GetNotificationChannelRequest();
       case 'CreateNotificationChannel':
-        return new CreateNotificationChannelRequest();
+        return CreateNotificationChannelRequest();
       case 'UpdateNotificationChannel':
-        return new UpdateNotificationChannelRequest();
+        return UpdateNotificationChannelRequest();
       case 'DeleteNotificationChannel':
-        return new DeleteNotificationChannelRequest();
+        return DeleteNotificationChannelRequest();
       case 'SendNotificationChannelVerificationCode':
-        return new SendNotificationChannelVerificationCodeRequest();
+        return SendNotificationChannelVerificationCodeRequest();
       case 'GetNotificationChannelVerificationCode':
-        return new GetNotificationChannelVerificationCodeRequest();
+        return GetNotificationChannelVerificationCodeRequest();
       case 'VerifyNotificationChannel':
-        return new VerifyNotificationChannelRequest();
+        return VerifyNotificationChannelRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ListNotificationChannelDescriptors':
         return this.listNotificationChannelDescriptors(ctx, request);
@@ -90,11 +93,12 @@ abstract class NotificationChannelServiceBase extends GeneratedService {
       case 'VerifyNotificationChannel':
         return this.verifyNotificationChannel(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => NotificationChannelService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      NotificationChannelService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      NotificationChannelServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => NotificationChannelServiceBase$messageJson;
 }

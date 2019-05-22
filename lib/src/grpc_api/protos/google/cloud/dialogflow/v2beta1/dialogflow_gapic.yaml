@@ -4,6 +4,7 @@ config_schema_version: 1.0.0
 language_settings:
   java:
     package_name: com.google.cloud.dialogflow.v2beta1
+    release_level: BETA
   python:
     package_name: google.cloud.dialogflow_v2beta1.gapic
   go:
@@ -16,12 +17,7 @@ language_settings:
     package_name: Google\Cloud\Dialogflow\V2beta1
   nodejs:
     package_name: dialogflow.v2beta1
-# The configuration for the license header to put on generated files.
-license_header:
-  # The file containing the copyright line(s).
-  copyright_file: copyright-google.txt
-  # The file containing the raw license header without any copyright line(s).
-  license_file: license-header-apache-2.0.txt
+    domain_layer_location: google-cloud
 # A list of API interface configurations.
 interfaces:
   # The fully qualified name of the API interface.
@@ -70,9 +66,7 @@ interfaces:
   #       message.
   #   required_fields - Fields that are always required for a request to be
   #       valid.
-  #   request_object_method - Turns on or off the generation of a method whose
-  #       sole parameter is a request object. Not all languages will generate
-  #       this method.
+  #
   #   page_streaming - Specifies the configuration for paging.
   #       Describes information for generating a method which transforms a
   #       paging list RPC into a stream of resources.
@@ -107,7 +101,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -121,7 +114,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -142,15 +134,16 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       parent: project
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(train_agent_long_running_operation)
       return_type: google.protobuf.Empty
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -163,15 +156,16 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       parent: project
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(export_agent_long_running_operation)
       return_type: google.cloud.dialogflow.v2beta1.ExportAgentResponse
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -180,33 +174,34 @@ interfaces:
   - name: ImportAgent
     required_fields:
     - parent
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       parent: project
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(import_agent_long_running_operation)
       return_type: google.protobuf.Empty
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
       total_poll_timeout_millis: 300000
     resource_name_treatment: STATIC_TYPES
   - name: RestoreAgent
-
     required_fields:
     - parent
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       parent: project
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(restore_agent_long_running_operation)
       return_type: google.protobuf.Empty
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -264,9 +259,7 @@ interfaces:
   #       message.
   #   required_fields - Fields that are always required for a request to be
   #       valid.
-  #   request_object_method - Turns on or off the generation of a method whose
-  #       sole parameter is a request object. Not all languages will generate
-  #       this method.
+  #
   #   page_streaming - Specifies the configuration for paging.
   #       Describes information for generating a method which transforms a
   #       paging list RPC into a stream of resources.
@@ -301,7 +294,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -322,7 +314,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -338,7 +329,6 @@ interfaces:
     required_fields:
     - parent
     - context
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -352,7 +342,6 @@ interfaces:
         - context
     required_fields:
     - context
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -366,7 +355,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -380,7 +368,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -435,9 +422,7 @@ interfaces:
   #       message.
   #   required_fields - Fields that are always required for a request to be
   #       valid.
-  #   request_object_method - Turns on or off the generation of a method whose
-  #       sole parameter is a request object. Not all languages will generate
-  #       this method.
+  #
   #   page_streaming - Specifies the configuration for paging.
   #       Describes information for generating a method which transforms a
   #       paging list RPC into a stream of resources.
@@ -475,7 +460,6 @@ interfaces:
         - language_code
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -499,7 +483,6 @@ interfaces:
         - language_code
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -519,7 +502,6 @@ interfaces:
     required_fields:
     - parent
     - entity_type
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -536,7 +518,6 @@ interfaces:
         - language_code
     required_fields:
     - entity_type
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -550,7 +531,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -560,15 +540,16 @@ interfaces:
   - name: BatchUpdateEntityTypes
     required_fields:
     - parent
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       parent: project_agent
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(batch_update_entity_types_long_running_operation)
       return_type: google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -583,15 +564,16 @@ interfaces:
     required_fields:
     - parent
     - entity_type_names
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       parent: project_agent
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(batch_delete_entity_types_long_running_operation)
       return_type: google.protobuf.Empty
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -610,15 +592,16 @@ interfaces:
     required_fields:
     - parent
     - entities
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       parent: entity_type
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(batch_create_entities_long_running_operation)
       return_type: google.protobuf.Empty
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -637,15 +620,16 @@ interfaces:
     required_fields:
     - parent
     - entities
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       parent: entity_type
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(batch_update_entities_long_running_operation)
       return_type: google.protobuf.Empty
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -664,15 +648,16 @@ interfaces:
     required_fields:
     - parent
     - entity_values
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       parent: entity_type
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(batch_delete_entities_long_running_operation)
       return_type: google.protobuf.Empty
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -695,8 +680,6 @@ interfaces:
     entity_name: project_agent
   - name_pattern: projects/{project}/agent/intents/{intent}
     entity_name: intent
-  - name_pattern: projects/{project}/agents/{agent}
-    entity_name: agent
   # Definition for retryable codes.
   retry_codes_def:
   - name: idempotent
@@ -728,9 +711,7 @@ interfaces:
   #       message.
   #   required_fields - Fields that are always required for a request to be
   #       valid.
-  #   request_object_method - Turns on or off the generation of a method whose
-  #       sole parameter is a request object. Not all languages will generate
-  #       this method.
+  #
   #   page_streaming - Specifies the configuration for paging.
   #       Describes information for generating a method which transforms a
   #       paging list RPC into a stream of resources.
@@ -768,7 +749,6 @@ interfaces:
         - language_code
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -792,7 +772,6 @@ interfaces:
         - language_code
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -812,7 +791,6 @@ interfaces:
     required_fields:
     - parent
     - intent
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -832,7 +810,6 @@ interfaces:
     required_fields:
     - intent
     - language_code
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -846,7 +823,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -857,15 +833,16 @@ interfaces:
     required_fields:
     - parent
     - language_code
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
-      parent: agent
+      parent: project_agent
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(batch_update_intents_long_running_operation)
       return_type: google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -880,15 +857,16 @@ interfaces:
     required_fields:
     - parent
     - intents
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
-      parent: project
+      parent: project_agent
     timeout_millis: 60000
     long_running:
+      # LINT.IfChange(batch_delete_intents_long_running_operation)
       return_type: google.protobuf.Empty
       metadata_type: google.protobuf.Struct
+      # LINT.ThenChange()
       initial_poll_delay_millis: 500
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 5000
@@ -946,9 +924,7 @@ interfaces:
   #       message.
   #   required_fields - Fields that are always required for a request to be
   #       valid.
-  #   request_object_method - Turns on or off the generation of a method whose
-  #       sole parameter is a request object. Not all languages will generate
-  #       this method.
+  #
   #   page_streaming - Specifies the configuration for paging.
   #       Describes information for generating a method which transforms a
   #       paging list RPC into a stream of resources.
@@ -983,7 +959,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -1004,7 +979,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -1020,7 +994,6 @@ interfaces:
     required_fields:
     - parent
     - session_entity_type
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -1034,7 +1007,6 @@ interfaces:
         - session_entity_type
     required_fields:
     - session_entity_type
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -1048,7 +1020,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -1103,9 +1074,7 @@ interfaces:
   #       message.
   #   required_fields - Fields that are always required for a request to be
   #       valid.
-  #   request_object_method - Turns on or off the generation of a method whose
-  #       sole parameter is a request object. Not all languages will generate
-  #       this method.
+  #
   #   page_streaming - Specifies the configuration for paging.
   #       Describes information for generating a method which transforms a
   #       paging list RPC into a stream of resources.
@@ -1142,7 +1111,6 @@ interfaces:
     required_fields:
     - session
     - query_input
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -1153,10 +1121,364 @@ interfaces:
     required_fields:
     - session
     - query_input
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 220000
+  # The fully qualified name of the API interface.
+- name: google.cloud.dialogflow.v2beta1.KnowledgeBases
+  # A list of resource collection configurations.
+  # Consists of a name_pattern and an entity_name.
+  # The name_pattern is a pattern to describe the names of the resources of this
+  # collection, using the platform's conventions for URI patterns. A generator
+  # may use this to generate methods to compose and decompose such names. The
+  # pattern should use named placeholders as in `shelves/{shelf}/books/{book}`;
+  # those will be taken as hints for the parameter names of the generated
+  # methods. If empty, no name methods are generated.
+  # The entity_name is the name to be used as a basis for generated methods and
+  # classes.
+  collections:
+  - name_pattern: projects/{project}
+    entity_name: project
+  - name_pattern: projects/{project}/knowledgeBases/{knowledge_base}
+    entity_name: knowledge_base
+  # Definition for retryable codes.
+  retry_codes_def:
+  - name: idempotent
+    retry_codes:
+    - UNAVAILABLE
+    - DEADLINE_EXCEEDED
+  - name: non_idempotent
+    retry_codes: []
+  # Definition for retry/backoff parameters.
+  retry_params_def:
+  - name: default
+    initial_retry_delay_millis: 100
+    retry_delay_multiplier: 1.3
+    max_retry_delay_millis: 60000
+    initial_rpc_timeout_millis: 20000
+    rpc_timeout_multiplier: 1
+    max_rpc_timeout_millis: 20000
+    total_timeout_millis: 600000
+  # A list of method configurations.
+  # Common properties:
+  #
+  #   name - The simple name of the method.
+  #
+  #   flattening - Specifies the configuration for parameter flattening.
+  #   Describes the parameter groups for which a generator should produce method
+  #   overloads which allow a client to directly pass request message fields as
+  #   method parameters. This information may or may not be used, depending on
+  #   the target language.
+  #   Consists of groups, which each represent a list of parameters to be
+  #   flattened. Each parameter listed must be a field of the request message.
+  #
+  #   required_fields - Fields that are always required for a request to be
+  #   valid.
+  #
+  #   resource_name_treatment - An enum that specifies how to treat the resource
+  #   name formats defined in the field_name_patterns and
+  #   response_field_name_patterns fields.
+  #   UNSET: default value
+  #   NONE: the collection configs will not be used by the generated code.
+  #   VALIDATE: string fields will be validated by the client against the
+  #   specified resource name formats.
+  #   STATIC_TYPES: the client will use generated types for resource names.
+  #
+  #   page_streaming - Specifies the configuration for paging.
+  #   Describes information for generating a method which transforms a paging
+  #   list RPC into a stream of resources.
+  #   Consists of a request and a response.
+  #   The request specifies request information of the list method. It defines
+  #   which fields match the paging pattern in the request. The request consists
+  #   of a page_size_field and a token_field. The page_size_field is the name of
+  #   the optional field specifying the maximum number of elements to be
+  #   returned in the response. The token_field is the name of the field in the
+  #   request containing the page token.
+  #   The response specifies response information of the list method. It defines
+  #   which fields match the paging pattern in the response. The response
+  #   consists of a token_field and a resources_field. The token_field is the
+  #   name of the field in the response containing the next page token. The
+  #   resources_field is the name of the field in the response containing the
+  #   list of resources belonging to the page.
+  #
+  #   retry_codes_name - Specifies the configuration for retryable codes. The
+  #   name must be defined in interfaces.retry_codes_def.
+  #
+  #   retry_params_name - Specifies the configuration for retry/backoff
+  #   parameters. The name must be defined in interfaces.retry_params_def.
+  #
+  #   field_name_patterns - Maps the field name of the request type to
+  #   entity_name of interfaces.collections.
+  #   Specifies the string pattern that the field must follow.
+  #
+  #   timeout_millis - Specifies the default timeout for a non-retrying call. If
+  #   the call is retrying, refer to retry_params_name instead.
+  methods:
+  - name: ListKnowledgeBases
+    flattening:
+      groups:
+      - parameters:
+        - parent
+    required_fields:
+    - parent
+    page_streaming:
+      request:
+        page_size_field: page_size
+        token_field: page_token
+      response:
+        token_field: next_page_token
+        resources_field: knowledge_bases
+    retry_codes_name: idempotent
+    retry_params_name: default
+    field_name_patterns:
+      parent: project
+    timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
+  - name: GetKnowledgeBase
+    flattening:
+      groups:
+      - parameters:
+        - name
+    required_fields:
+    - name
+    retry_codes_name: idempotent
+    retry_params_name: default
+    field_name_patterns:
+      name: knowledge_base
+    timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
+  - name: CreateKnowledgeBase
+    flattening:
+      groups:
+      - parameters:
+        - parent
+        - knowledge_base
+    required_fields:
+    - parent
+    - knowledge_base
+    retry_codes_name: non_idempotent
+    retry_params_name: default
+    field_name_patterns:
+      parent: project
+    timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
+  - name: DeleteKnowledgeBase
+    flattening:
+      groups:
+      - parameters:
+        - name
+    required_fields:
+    - name
+    retry_codes_name: idempotent
+    retry_params_name: default
+    field_name_patterns:
+      name: knowledge_base
+    timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
+  - name: UpdateKnowledgeBase
+    flattening:
+      groups:
+      - parameters:
+        - knowledge_base
+    required_fields:
+    - knowledge_base
+    retry_codes_name: non_idempotent
+    retry_params_name: default
+    field_name_patterns:
+      knowledge_base.name: knowledge_base
+    timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
+  # The fully qualified name of the API interface.
+- name: google.cloud.dialogflow.v2beta1.Documents
+  # A list of resource collection configurations.
+  # Consists of a name_pattern and an entity_name.
+  # The name_pattern is a pattern to describe the names of the resources of this
+  # collection, using the platform's conventions for URI patterns. A generator
+  # may use this to generate methods to compose and decompose such names. The
+  # pattern should use named placeholders as in `shelves/{shelf}/books/{book}`;
+  # those will be taken as hints for the parameter names of the generated
+  # methods. If empty, no name methods are generated.
+  # The entity_name is the name to be used as a basis for generated methods and
+  # classes.
+  collections:
+  - name_pattern: projects/{project}/knowledgeBases/{knowledge_base}
+    entity_name: knowledge_base
+  - name_pattern: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+    entity_name: document
+  # Definition for retryable codes.
+  retry_codes_def:
+  - name: idempotent
+    retry_codes:
+    - UNAVAILABLE
+    - DEADLINE_EXCEEDED
+  - name: non_idempotent
+    retry_codes: []
+  # Definition for retry/backoff parameters.
+  retry_params_def:
+  - name: default
+    initial_retry_delay_millis: 100
+    retry_delay_multiplier: 1.3
+    max_retry_delay_millis: 60000
+    initial_rpc_timeout_millis: 20000
+    rpc_timeout_multiplier: 1
+    max_rpc_timeout_millis: 20000
+    total_timeout_millis: 600000
+  # A list of method configurations.
+  # Common properties:
+  #
+  #   name - The simple name of the method.
+  #
+  #   flattening - Specifies the configuration for parameter flattening.
+  #   Describes the parameter groups for which a generator should produce method
+  #   overloads which allow a client to directly pass request message fields as
+  #   method parameters. This information may or may not be used, depending on
+  #   the target language.
+  #   Consists of groups, which each represent a list of parameters to be
+  #   flattened. Each parameter listed must be a field of the request message.
+  #
+  #   required_fields - Fields that are always required for a request to be
+  #   valid.
+  #
+  #   resource_name_treatment - An enum that specifies how to treat the resource
+  #   name formats defined in the field_name_patterns and
+  #   response_field_name_patterns fields.
+  #   UNSET: default value
+  #   NONE: the collection configs will not be used by the generated code.
+  #   VALIDATE: string fields will be validated by the client against the
+  #   specified resource name formats.
+  #   STATIC_TYPES: the client will use generated types for resource names.
+  #
+  #   page_streaming - Specifies the configuration for paging.
+  #   Describes information for generating a method which transforms a paging
+  #   list RPC into a stream of resources.
+  #   Consists of a request and a response.
+  #   The request specifies request information of the list method. It defines
+  #   which fields match the paging pattern in the request. The request consists
+  #   of a page_size_field and a token_field. The page_size_field is the name of
+  #   the optional field specifying the maximum number of elements to be
+  #   returned in the response. The token_field is the name of the field in the
+  #   request containing the page token.
+  #   The response specifies response information of the list method. It defines
+  #   which fields match the paging pattern in the response. The response
+  #   consists of a token_field and a resources_field. The token_field is the
+  #   name of the field in the response containing the next page token. The
+  #   resources_field is the name of the field in the response containing the
+  #   list of resources belonging to the page.
+  #
+  #   retry_codes_name - Specifies the configuration for retryable codes. The
+  #   name must be defined in interfaces.retry_codes_def.
+  #
+  #   retry_params_name - Specifies the configuration for retry/backoff
+  #   parameters. The name must be defined in interfaces.retry_params_def.
+  #
+  #   field_name_patterns - Maps the field name of the request type to
+  #   entity_name of interfaces.collections.
+  #   Specifies the string pattern that the field must follow.
+  #
+  #   timeout_millis - Specifies the default timeout for a non-retrying call. If
+  #   the call is retrying, refer to retry_params_name instead.
+  methods:
+  - name: ListDocuments
+    flattening:
+      groups:
+      - parameters:
+        - parent
+    required_fields:
+    - parent
+    page_streaming:
+      request:
+        page_size_field: page_size
+        token_field: page_token
+      response:
+        token_field: next_page_token
+        resources_field: documents
+    retry_codes_name: idempotent
+    retry_params_name: default
+    field_name_patterns:
+      parent: knowledge_base
+    timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
+  - name: GetDocument
+    flattening:
+      groups:
+      - parameters:
+        - name
+    required_fields:
+    - name
+    retry_codes_name: idempotent
+    retry_params_name: default
+    field_name_patterns:
+      name: document
+    timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
+  - name: CreateDocument
+    flattening:
+      groups:
+      - parameters:
+        - parent
+        - document
+    required_fields:
+    - parent
+    - document
+    retry_codes_name: non_idempotent
+    retry_params_name: default
+    field_name_patterns:
+      parent: knowledge_base
+    timeout_millis: 60000
+    long_running:
+      # LINT.IfChange(create_document_long_running_operation)
+      return_type: google.cloud.dialogflow.v2beta1.Document
+      metadata_type: google.cloud.dialogflow.v2beta1.KnowledgeOperationMetadata
+      # LINT.ThenChange()
+      initial_poll_delay_millis: 500
+      poll_delay_multiplier: 1.5
+      max_poll_delay_millis: 5000
+      total_poll_timeout_millis: 300000
+    resource_name_treatment: STATIC_TYPES
+  - name: DeleteDocument
+    flattening:
+      groups:
+      - parameters:
+        - name
+    required_fields:
+    - name
+    retry_codes_name: idempotent
+    retry_params_name: default
+    field_name_patterns:
+      name: document
+    timeout_millis: 60000
+    long_running:
+      # LINT.IfChange(delete_document_long_running_operation)
+      return_type: google.protobuf.Empty
+      metadata_type: google.cloud.dialogflow.v2beta1.KnowledgeOperationMetadata
+      # LINT.ThenChange()
+      initial_poll_delay_millis: 500
+      poll_delay_multiplier: 1.5
+      max_poll_delay_millis: 5000
+      total_poll_timeout_millis: 300000
+    resource_name_treatment: STATIC_TYPES
+  - name: UpdateDocument
+    flattening:
+      groups:
+      - parameters:
+        - document
+    required_fields:
+    - document
+    retry_codes_name: non_idempotent
+    retry_params_name: default
+    field_name_patterns:
+      document.name: document
+    timeout_millis: 60000
+    long_running:
+      # LINT.IfChange(create_document_long_running_operation)
+      return_type: google.cloud.dialogflow.v2beta1.Document
+      metadata_type: google.cloud.dialogflow.v2beta1.KnowledgeOperationMetadata
+      # LINT.ThenChange()
+      initial_poll_delay_millis: 500
+      poll_delay_multiplier: 1.5
+      max_poll_delay_millis: 5000
+      total_poll_timeout_millis: 300000
+    resource_name_treatment: STATIC_TYPES
 resource_name_generation:
 - message_name: GetAgentRequest
   field_entity_map:
@@ -1174,6 +1496,12 @@ resource_name_generation:
   field_entity_map:
     parent: project
 - message_name: RestoreAgentRequest
+  field_entity_map:
+    parent: project
+- message_name: CreateAogVersionRequest
+  field_entity_map:
+    parent: project
+- message_name: WarmUpAogVersionRequest
   field_entity_map:
     parent: project
 - message_name: ListContextsRequest
@@ -1241,10 +1569,10 @@ resource_name_generation:
     name: intent
 - message_name: BatchUpdateIntentsRequest
   field_entity_map:
-    parent: agent
+    parent: project_agent
 - message_name: BatchDeleteIntentsRequest
   field_entity_map:
-    parent: project
+    parent: project_agent
 - message_name: ListSessionEntityTypesRequest
   field_entity_map:
     parent: session
@@ -1263,3 +1591,33 @@ resource_name_generation:
 - message_name: DetectIntentRequest
   field_entity_map:
     session: session
+- message_name: ListKnowledgeBasesRequest
+  field_entity_map:
+    parent: project
+- message_name: GetKnowledgeBaseRequest
+  field_entity_map:
+    name: knowledge_base
+- message_name: CreateKnowledgeBaseRequest
+  field_entity_map:
+    parent: project
+- message_name: KnowledgeBase
+  field_entity_map:
+    name: knowledge_base
+- message_name: DeleteKnowledgeBaseRequest
+  field_entity_map:
+    name: knowledge_base
+- message_name: ListDocumentsRequest
+  field_entity_map:
+    parent: knowledge_base
+- message_name: GetDocumentRequest
+  field_entity_map:
+    name: document
+- message_name: CreateDocumentRequest
+  field_entity_map:
+    parent: knowledge_base
+- message_name: Document
+  field_entity_map:
+    name: document
+- message_name: DeleteDocumentRequest
+  field_entity_map:
+    name: document

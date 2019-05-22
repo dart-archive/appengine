@@ -1,65 +1,65 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dialogflow/v2/session.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../rpc/status.pb.dart' as $google$rpc;
-import '../../../type/latlng.pb.dart' as $google$type;
-import 'context.pb.dart';
-import 'session_entity_type.pb.dart';
-import '../../../protobuf/struct.pb.dart' as $google$protobuf;
-import 'intent.pb.dart';
+import 'audio_config.pb.dart' as $0;
+import '../../../rpc/status.pb.dart' as $1;
+import '../../../type/latlng.pb.dart' as $2;
+import 'context.pb.dart' as $3;
+import 'session_entity_type.pb.dart' as $4;
+import '../../../protobuf/struct.pb.dart' as $5;
+import 'intent.pb.dart' as $6;
 
 import 'session.pbenum.dart';
 
 export 'session.pbenum.dart';
 
-class DetectIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DetectIntentRequest')
+class DetectIntentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DetectIntentRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'session')
-    ..a<QueryParameters>(2, 'queryParams', PbFieldType.OM,
+    ..a<QueryParameters>(2, 'queryParams', $pb.PbFieldType.OM,
         QueryParameters.getDefault, QueryParameters.create)
-    ..a<QueryInput>(3, 'queryInput', PbFieldType.OM, QueryInput.getDefault,
+    ..a<QueryInput>(3, 'queryInput', $pb.PbFieldType.OM, QueryInput.getDefault,
         QueryInput.create)
-    ..a<List<int>>(5, 'inputAudio', PbFieldType.OY)
+    ..a<$0.OutputAudioConfig>(4, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $0.OutputAudioConfig.getDefault, $0.OutputAudioConfig.create)
+    ..a<$core.List<$core.int>>(5, 'inputAudio', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   DetectIntentRequest() : super();
-  DetectIntentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DetectIntentRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DetectIntentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DetectIntentRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DetectIntentRequest clone() =>
-      new DetectIntentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DetectIntentRequest create() => new DetectIntentRequest();
-  static PbList<DetectIntentRequest> createRepeated() =>
-      new PbList<DetectIntentRequest>();
-  static DetectIntentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDetectIntentRequest();
-    return _defaultInstance;
-  }
-
+  DetectIntentRequest clone() => DetectIntentRequest()..mergeFromMessage(this);
+  DetectIntentRequest copyWith(void Function(DetectIntentRequest) updates) =>
+      super.copyWith((message) => updates(message as DetectIntentRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DetectIntentRequest create() => DetectIntentRequest();
+  DetectIntentRequest createEmptyInstance() => create();
+  static $pb.PbList<DetectIntentRequest> createRepeated() =>
+      $pb.PbList<DetectIntentRequest>();
+  static DetectIntentRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DetectIntentRequest _defaultInstance;
-  static void $checkItem(DetectIntentRequest v) {
-    if (v is! DetectIntentRequest) checkItemFailed(v, 'DetectIntentRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
   QueryParameters get queryParams => $_getN(1);
@@ -67,7 +67,7 @@ class DetectIntentRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasQueryParams() => $_has(1);
+  $core.bool hasQueryParams() => $_has(1);
   void clearQueryParams() => clearField(2);
 
   QueryInput get queryInput => $_getN(2);
@@ -75,60 +75,65 @@ class DetectIntentRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasQueryInput() => $_has(2);
+  $core.bool hasQueryInput() => $_has(2);
   void clearQueryInput() => clearField(3);
 
-  List<int> get inputAudio => $_getN(3);
-  set inputAudio(List<int> v) {
-    $_setBytes(3, v);
+  $0.OutputAudioConfig get outputAudioConfig => $_getN(3);
+  set outputAudioConfig($0.OutputAudioConfig v) {
+    setField(4, v);
   }
 
-  bool hasInputAudio() => $_has(3);
+  $core.bool hasOutputAudioConfig() => $_has(3);
+  void clearOutputAudioConfig() => clearField(4);
+
+  $core.List<$core.int> get inputAudio => $_getN(4);
+  set inputAudio($core.List<$core.int> v) {
+    $_setBytes(4, v);
+  }
+
+  $core.bool hasInputAudio() => $_has(4);
   void clearInputAudio() => clearField(5);
 }
 
-class _ReadonlyDetectIntentRequest extends DetectIntentRequest
-    with ReadonlyMessageMixin {}
-
-class DetectIntentResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DetectIntentResponse')
+class DetectIntentResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DetectIntentResponse',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'responseId')
-    ..a<QueryResult>(2, 'queryResult', PbFieldType.OM, QueryResult.getDefault,
-        QueryResult.create)
-    ..a<$google$rpc.Status>(3, 'webhookStatus', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
+    ..a<QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
+        QueryResult.getDefault, QueryResult.create)
+    ..a<$1.Status>(3, 'webhookStatus', $pb.PbFieldType.OM, $1.Status.getDefault,
+        $1.Status.create)
+    ..a<$core.List<$core.int>>(4, 'outputAudio', $pb.PbFieldType.OY)
+    ..a<$0.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $0.OutputAudioConfig.getDefault, $0.OutputAudioConfig.create)
     ..hasRequiredFields = false;
 
   DetectIntentResponse() : super();
-  DetectIntentResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DetectIntentResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DetectIntentResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DetectIntentResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DetectIntentResponse clone() =>
-      new DetectIntentResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DetectIntentResponse create() => new DetectIntentResponse();
-  static PbList<DetectIntentResponse> createRepeated() =>
-      new PbList<DetectIntentResponse>();
-  static DetectIntentResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDetectIntentResponse();
-    return _defaultInstance;
-  }
-
+      DetectIntentResponse()..mergeFromMessage(this);
+  DetectIntentResponse copyWith(void Function(DetectIntentResponse) updates) =>
+      super.copyWith((message) => updates(message as DetectIntentResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static DetectIntentResponse create() => DetectIntentResponse();
+  DetectIntentResponse createEmptyInstance() => create();
+  static $pb.PbList<DetectIntentResponse> createRepeated() =>
+      $pb.PbList<DetectIntentResponse>();
+  static DetectIntentResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DetectIntentResponse _defaultInstance;
-  static void $checkItem(DetectIntentResponse v) {
-    if (v is! DetectIntentResponse) checkItemFailed(v, 'DetectIntentResponse');
-  }
 
-  String get responseId => $_getS(0, '');
-  set responseId(String v) {
+  $core.String get responseId => $_getS(0, '');
+  set responseId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasResponseId() => $_has(0);
+  $core.bool hasResponseId() => $_has(0);
   void clearResponseId() => clearField(1);
 
   QueryResult get queryResult => $_getN(1);
@@ -136,134 +141,165 @@ class DetectIntentResponse extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasQueryResult() => $_has(1);
+  $core.bool hasQueryResult() => $_has(1);
   void clearQueryResult() => clearField(2);
 
-  $google$rpc.Status get webhookStatus => $_getN(2);
-  set webhookStatus($google$rpc.Status v) {
+  $1.Status get webhookStatus => $_getN(2);
+  set webhookStatus($1.Status v) {
     setField(3, v);
   }
 
-  bool hasWebhookStatus() => $_has(2);
+  $core.bool hasWebhookStatus() => $_has(2);
   void clearWebhookStatus() => clearField(3);
-}
 
-class _ReadonlyDetectIntentResponse extends DetectIntentResponse
-    with ReadonlyMessageMixin {}
-
-class QueryParameters extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryParameters')
-    ..aOS(1, 'timeZone')
-    ..a<$google$type.LatLng>(2, 'geoLocation', PbFieldType.OM,
-        $google$type.LatLng.getDefault, $google$type.LatLng.create)
-    ..pp<Context>(
-        3, 'contexts', PbFieldType.PM, Context.$checkItem, Context.create)
-    ..aOB(4, 'resetContexts')
-    ..pp<SessionEntityType>(5, 'sessionEntityTypes', PbFieldType.PM,
-        SessionEntityType.$checkItem, SessionEntityType.create)
-    ..a<$google$protobuf.Struct>(6, 'payload', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
-    ..hasRequiredFields = false;
-
-  QueryParameters() : super();
-  QueryParameters.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryParameters.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  QueryParameters clone() => new QueryParameters()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static QueryParameters create() => new QueryParameters();
-  static PbList<QueryParameters> createRepeated() =>
-      new PbList<QueryParameters>();
-  static QueryParameters getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryParameters();
-    return _defaultInstance;
+  $core.List<$core.int> get outputAudio => $_getN(3);
+  set outputAudio($core.List<$core.int> v) {
+    $_setBytes(3, v);
   }
 
-  static QueryParameters _defaultInstance;
-  static void $checkItem(QueryParameters v) {
-    if (v is! QueryParameters) checkItemFailed(v, 'QueryParameters');
-  }
+  $core.bool hasOutputAudio() => $_has(3);
+  void clearOutputAudio() => clearField(4);
 
-  String get timeZone => $_getS(0, '');
-  set timeZone(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasTimeZone() => $_has(0);
-  void clearTimeZone() => clearField(1);
-
-  $google$type.LatLng get geoLocation => $_getN(1);
-  set geoLocation($google$type.LatLng v) {
-    setField(2, v);
-  }
-
-  bool hasGeoLocation() => $_has(1);
-  void clearGeoLocation() => clearField(2);
-
-  List<Context> get contexts => $_getList(2);
-
-  bool get resetContexts => $_get(3, false);
-  set resetContexts(bool v) {
-    $_setBool(3, v);
-  }
-
-  bool hasResetContexts() => $_has(3);
-  void clearResetContexts() => clearField(4);
-
-  List<SessionEntityType> get sessionEntityTypes => $_getList(4);
-
-  $google$protobuf.Struct get payload => $_getN(5);
-  set payload($google$protobuf.Struct v) {
+  $0.OutputAudioConfig get outputAudioConfig => $_getN(4);
+  set outputAudioConfig($0.OutputAudioConfig v) {
     setField(6, v);
   }
 
-  bool hasPayload() => $_has(5);
-  void clearPayload() => clearField(6);
+  $core.bool hasOutputAudioConfig() => $_has(4);
+  void clearOutputAudioConfig() => clearField(6);
 }
 
-class _ReadonlyQueryParameters extends QueryParameters
-    with ReadonlyMessageMixin {}
+class QueryParameters extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryParameters',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..aOS(1, 'timeZone')
+    ..a<$2.LatLng>(2, 'geoLocation', $pb.PbFieldType.OM, $2.LatLng.getDefault,
+        $2.LatLng.create)
+    ..pc<$3.Context>(3, 'contexts', $pb.PbFieldType.PM, $3.Context.create)
+    ..aOB(4, 'resetContexts')
+    ..pc<$4.SessionEntityType>(5, 'sessionEntityTypes', $pb.PbFieldType.PM,
+        $4.SessionEntityType.create)
+    ..a<$5.Struct>(6, 'payload', $pb.PbFieldType.OM, $5.Struct.getDefault,
+        $5.Struct.create)
+    ..a<SentimentAnalysisRequestConfig>(
+        10,
+        'sentimentAnalysisRequestConfig',
+        $pb.PbFieldType.OM,
+        SentimentAnalysisRequestConfig.getDefault,
+        SentimentAnalysisRequestConfig.create)
+    ..hasRequiredFields = false;
 
-class QueryInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryInput')
-    ..a<InputAudioConfig>(1, 'audioConfig', PbFieldType.OM,
-        InputAudioConfig.getDefault, InputAudioConfig.create)
+  QueryParameters() : super();
+  QueryParameters.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  QueryParameters.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  QueryParameters clone() => QueryParameters()..mergeFromMessage(this);
+  QueryParameters copyWith(void Function(QueryParameters) updates) =>
+      super.copyWith((message) => updates(message as QueryParameters));
+  $pb.BuilderInfo get info_ => _i;
+  static QueryParameters create() => QueryParameters();
+  QueryParameters createEmptyInstance() => create();
+  static $pb.PbList<QueryParameters> createRepeated() =>
+      $pb.PbList<QueryParameters>();
+  static QueryParameters getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static QueryParameters _defaultInstance;
+
+  $core.String get timeZone => $_getS(0, '');
+  set timeZone($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasTimeZone() => $_has(0);
+  void clearTimeZone() => clearField(1);
+
+  $2.LatLng get geoLocation => $_getN(1);
+  set geoLocation($2.LatLng v) {
+    setField(2, v);
+  }
+
+  $core.bool hasGeoLocation() => $_has(1);
+  void clearGeoLocation() => clearField(2);
+
+  $core.List<$3.Context> get contexts => $_getList(2);
+
+  $core.bool get resetContexts => $_get(3, false);
+  set resetContexts($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  $core.bool hasResetContexts() => $_has(3);
+  void clearResetContexts() => clearField(4);
+
+  $core.List<$4.SessionEntityType> get sessionEntityTypes => $_getList(4);
+
+  $5.Struct get payload => $_getN(5);
+  set payload($5.Struct v) {
+    setField(6, v);
+  }
+
+  $core.bool hasPayload() => $_has(5);
+  void clearPayload() => clearField(6);
+
+  SentimentAnalysisRequestConfig get sentimentAnalysisRequestConfig =>
+      $_getN(6);
+  set sentimentAnalysisRequestConfig(SentimentAnalysisRequestConfig v) {
+    setField(10, v);
+  }
+
+  $core.bool hasSentimentAnalysisRequestConfig() => $_has(6);
+  void clearSentimentAnalysisRequestConfig() => clearField(10);
+}
+
+enum QueryInput_Input { audioConfig, text, event, notSet }
+
+class QueryInput extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, QueryInput_Input> _QueryInput_InputByTag = {
+    1: QueryInput_Input.audioConfig,
+    2: QueryInput_Input.text,
+    3: QueryInput_Input.event,
+    0: QueryInput_Input.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryInput',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..a<$0.InputAudioConfig>(1, 'audioConfig', $pb.PbFieldType.OM,
+        $0.InputAudioConfig.getDefault, $0.InputAudioConfig.create)
     ..a<TextInput>(
-        2, 'text', PbFieldType.OM, TextInput.getDefault, TextInput.create)
-    ..a<EventInput>(
-        3, 'event', PbFieldType.OM, EventInput.getDefault, EventInput.create)
+        2, 'text', $pb.PbFieldType.OM, TextInput.getDefault, TextInput.create)
+    ..a<EventInput>(3, 'event', $pb.PbFieldType.OM, EventInput.getDefault,
+        EventInput.create)
+    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
   QueryInput() : super();
-  QueryInput.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  QueryInput.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  QueryInput.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  QueryInput.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QueryInput clone() => new QueryInput()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static QueryInput create() => new QueryInput();
-  static PbList<QueryInput> createRepeated() => new PbList<QueryInput>();
-  static QueryInput getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQueryInput();
-    return _defaultInstance;
-  }
-
+  QueryInput clone() => QueryInput()..mergeFromMessage(this);
+  QueryInput copyWith(void Function(QueryInput) updates) =>
+      super.copyWith((message) => updates(message as QueryInput));
+  $pb.BuilderInfo get info_ => _i;
+  static QueryInput create() => QueryInput();
+  QueryInput createEmptyInstance() => create();
+  static $pb.PbList<QueryInput> createRepeated() => $pb.PbList<QueryInput>();
+  static QueryInput getDefault() => _defaultInstance ??= create()..freeze();
   static QueryInput _defaultInstance;
-  static void $checkItem(QueryInput v) {
-    if (v is! QueryInput) checkItemFailed(v, 'QueryInput');
-  }
 
-  InputAudioConfig get audioConfig => $_getN(0);
-  set audioConfig(InputAudioConfig v) {
+  QueryInput_Input whichInput() => _QueryInput_InputByTag[$_whichOneof(0)];
+  void clearInput() => clearField($_whichOneof(0));
+
+  $0.InputAudioConfig get audioConfig => $_getN(0);
+  set audioConfig($0.InputAudioConfig v) {
     setField(1, v);
   }
 
-  bool hasAudioConfig() => $_has(0);
+  $core.bool hasAudioConfig() => $_has(0);
   void clearAudioConfig() => clearField(1);
 
   TextInput get text => $_getN(1);
@@ -271,7 +307,7 @@ class QueryInput extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasText() => $_has(1);
+  $core.bool hasText() => $_has(1);
   void clearText() => clearField(2);
 
   EventInput get event => $_getN(2);
@@ -279,202 +315,211 @@ class QueryInput extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasEvent() => $_has(2);
+  $core.bool hasEvent() => $_has(2);
   void clearEvent() => clearField(3);
 }
 
-class _ReadonlyQueryInput extends QueryInput with ReadonlyMessageMixin {}
-
-class QueryResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryResult')
+class QueryResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryResult',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'queryText')
-    ..a<double>(2, 'speechRecognitionConfidence', PbFieldType.OF)
+    ..a<$core.double>(2, 'speechRecognitionConfidence', $pb.PbFieldType.OF)
     ..aOS(3, 'action')
-    ..a<$google$protobuf.Struct>(4, 'parameters', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
+    ..a<$5.Struct>(4, 'parameters', $pb.PbFieldType.OM, $5.Struct.getDefault,
+        $5.Struct.create)
     ..aOB(5, 'allRequiredParamsPresent')
     ..aOS(6, 'fulfillmentText')
-    ..pp<Intent_Message>(7, 'fulfillmentMessages', PbFieldType.PM,
-        Intent_Message.$checkItem, Intent_Message.create)
+    ..pc<$6.Intent_Message>(
+        7, 'fulfillmentMessages', $pb.PbFieldType.PM, $6.Intent_Message.create)
     ..aOS(8, 'webhookSource')
-    ..a<$google$protobuf.Struct>(9, 'webhookPayload', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
-    ..pp<Context>(10, 'outputContexts', PbFieldType.PM, Context.$checkItem,
-        Context.create)
-    ..a<Intent>(11, 'intent', PbFieldType.OM, Intent.getDefault, Intent.create)
-    ..a<double>(12, 'intentDetectionConfidence', PbFieldType.OF)
-    ..a<$google$protobuf.Struct>(14, 'diagnosticInfo', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
+    ..a<$5.Struct>(9, 'webhookPayload', $pb.PbFieldType.OM,
+        $5.Struct.getDefault, $5.Struct.create)
+    ..pc<$3.Context>(
+        10, 'outputContexts', $pb.PbFieldType.PM, $3.Context.create)
+    ..a<$6.Intent>(11, 'intent', $pb.PbFieldType.OM, $6.Intent.getDefault,
+        $6.Intent.create)
+    ..a<$core.double>(12, 'intentDetectionConfidence', $pb.PbFieldType.OF)
+    ..a<$5.Struct>(14, 'diagnosticInfo', $pb.PbFieldType.OM,
+        $5.Struct.getDefault, $5.Struct.create)
     ..aOS(15, 'languageCode')
+    ..a<SentimentAnalysisResult>(
+        17,
+        'sentimentAnalysisResult',
+        $pb.PbFieldType.OM,
+        SentimentAnalysisResult.getDefault,
+        SentimentAnalysisResult.create)
     ..hasRequiredFields = false;
 
   QueryResult() : super();
-  QueryResult.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  QueryResult.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  QueryResult.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  QueryResult.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QueryResult clone() => new QueryResult()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static QueryResult create() => new QueryResult();
-  static PbList<QueryResult> createRepeated() => new PbList<QueryResult>();
-  static QueryResult getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQueryResult();
-    return _defaultInstance;
-  }
-
+  QueryResult clone() => QueryResult()..mergeFromMessage(this);
+  QueryResult copyWith(void Function(QueryResult) updates) =>
+      super.copyWith((message) => updates(message as QueryResult));
+  $pb.BuilderInfo get info_ => _i;
+  static QueryResult create() => QueryResult();
+  QueryResult createEmptyInstance() => create();
+  static $pb.PbList<QueryResult> createRepeated() => $pb.PbList<QueryResult>();
+  static QueryResult getDefault() => _defaultInstance ??= create()..freeze();
   static QueryResult _defaultInstance;
-  static void $checkItem(QueryResult v) {
-    if (v is! QueryResult) checkItemFailed(v, 'QueryResult');
-  }
 
-  String get queryText => $_getS(0, '');
-  set queryText(String v) {
+  $core.String get queryText => $_getS(0, '');
+  set queryText($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasQueryText() => $_has(0);
+  $core.bool hasQueryText() => $_has(0);
   void clearQueryText() => clearField(1);
 
-  double get speechRecognitionConfidence => $_getN(1);
-  set speechRecognitionConfidence(double v) {
+  $core.double get speechRecognitionConfidence => $_getN(1);
+  set speechRecognitionConfidence($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasSpeechRecognitionConfidence() => $_has(1);
+  $core.bool hasSpeechRecognitionConfidence() => $_has(1);
   void clearSpeechRecognitionConfidence() => clearField(2);
 
-  String get action => $_getS(2, '');
-  set action(String v) {
+  $core.String get action => $_getS(2, '');
+  set action($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasAction() => $_has(2);
+  $core.bool hasAction() => $_has(2);
   void clearAction() => clearField(3);
 
-  $google$protobuf.Struct get parameters => $_getN(3);
-  set parameters($google$protobuf.Struct v) {
+  $5.Struct get parameters => $_getN(3);
+  set parameters($5.Struct v) {
     setField(4, v);
   }
 
-  bool hasParameters() => $_has(3);
+  $core.bool hasParameters() => $_has(3);
   void clearParameters() => clearField(4);
 
-  bool get allRequiredParamsPresent => $_get(4, false);
-  set allRequiredParamsPresent(bool v) {
+  $core.bool get allRequiredParamsPresent => $_get(4, false);
+  set allRequiredParamsPresent($core.bool v) {
     $_setBool(4, v);
   }
 
-  bool hasAllRequiredParamsPresent() => $_has(4);
+  $core.bool hasAllRequiredParamsPresent() => $_has(4);
   void clearAllRequiredParamsPresent() => clearField(5);
 
-  String get fulfillmentText => $_getS(5, '');
-  set fulfillmentText(String v) {
+  $core.String get fulfillmentText => $_getS(5, '');
+  set fulfillmentText($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasFulfillmentText() => $_has(5);
+  $core.bool hasFulfillmentText() => $_has(5);
   void clearFulfillmentText() => clearField(6);
 
-  List<Intent_Message> get fulfillmentMessages => $_getList(6);
+  $core.List<$6.Intent_Message> get fulfillmentMessages => $_getList(6);
 
-  String get webhookSource => $_getS(7, '');
-  set webhookSource(String v) {
+  $core.String get webhookSource => $_getS(7, '');
+  set webhookSource($core.String v) {
     $_setString(7, v);
   }
 
-  bool hasWebhookSource() => $_has(7);
+  $core.bool hasWebhookSource() => $_has(7);
   void clearWebhookSource() => clearField(8);
 
-  $google$protobuf.Struct get webhookPayload => $_getN(8);
-  set webhookPayload($google$protobuf.Struct v) {
+  $5.Struct get webhookPayload => $_getN(8);
+  set webhookPayload($5.Struct v) {
     setField(9, v);
   }
 
-  bool hasWebhookPayload() => $_has(8);
+  $core.bool hasWebhookPayload() => $_has(8);
   void clearWebhookPayload() => clearField(9);
 
-  List<Context> get outputContexts => $_getList(9);
+  $core.List<$3.Context> get outputContexts => $_getList(9);
 
-  Intent get intent => $_getN(10);
-  set intent(Intent v) {
+  $6.Intent get intent => $_getN(10);
+  set intent($6.Intent v) {
     setField(11, v);
   }
 
-  bool hasIntent() => $_has(10);
+  $core.bool hasIntent() => $_has(10);
   void clearIntent() => clearField(11);
 
-  double get intentDetectionConfidence => $_getN(11);
-  set intentDetectionConfidence(double v) {
+  $core.double get intentDetectionConfidence => $_getN(11);
+  set intentDetectionConfidence($core.double v) {
     $_setFloat(11, v);
   }
 
-  bool hasIntentDetectionConfidence() => $_has(11);
+  $core.bool hasIntentDetectionConfidence() => $_has(11);
   void clearIntentDetectionConfidence() => clearField(12);
 
-  $google$protobuf.Struct get diagnosticInfo => $_getN(12);
-  set diagnosticInfo($google$protobuf.Struct v) {
+  $5.Struct get diagnosticInfo => $_getN(12);
+  set diagnosticInfo($5.Struct v) {
     setField(14, v);
   }
 
-  bool hasDiagnosticInfo() => $_has(12);
+  $core.bool hasDiagnosticInfo() => $_has(12);
   void clearDiagnosticInfo() => clearField(14);
 
-  String get languageCode => $_getS(13, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(13, '');
+  set languageCode($core.String v) {
     $_setString(13, v);
   }
 
-  bool hasLanguageCode() => $_has(13);
+  $core.bool hasLanguageCode() => $_has(13);
   void clearLanguageCode() => clearField(15);
+
+  SentimentAnalysisResult get sentimentAnalysisResult => $_getN(14);
+  set sentimentAnalysisResult(SentimentAnalysisResult v) {
+    setField(17, v);
+  }
+
+  $core.bool hasSentimentAnalysisResult() => $_has(14);
+  void clearSentimentAnalysisResult() => clearField(17);
 }
 
-class _ReadonlyQueryResult extends QueryResult with ReadonlyMessageMixin {}
-
-class StreamingDetectIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingDetectIntentRequest')
+class StreamingDetectIntentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StreamingDetectIntentRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'session')
-    ..a<QueryParameters>(2, 'queryParams', PbFieldType.OM,
+    ..a<QueryParameters>(2, 'queryParams', $pb.PbFieldType.OM,
         QueryParameters.getDefault, QueryParameters.create)
-    ..a<QueryInput>(3, 'queryInput', PbFieldType.OM, QueryInput.getDefault,
+    ..a<QueryInput>(3, 'queryInput', $pb.PbFieldType.OM, QueryInput.getDefault,
         QueryInput.create)
     ..aOB(4, 'singleUtterance')
-    ..a<List<int>>(6, 'inputAudio', PbFieldType.OY)
+    ..a<$0.OutputAudioConfig>(5, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $0.OutputAudioConfig.getDefault, $0.OutputAudioConfig.create)
+    ..a<$core.List<$core.int>>(6, 'inputAudio', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   StreamingDetectIntentRequest() : super();
-  StreamingDetectIntentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingDetectIntentRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamingDetectIntentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingDetectIntentRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingDetectIntentRequest clone() =>
-      new StreamingDetectIntentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      StreamingDetectIntentRequest()..mergeFromMessage(this);
+  StreamingDetectIntentRequest copyWith(
+          void Function(StreamingDetectIntentRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as StreamingDetectIntentRequest));
+  $pb.BuilderInfo get info_ => _i;
   static StreamingDetectIntentRequest create() =>
-      new StreamingDetectIntentRequest();
-  static PbList<StreamingDetectIntentRequest> createRepeated() =>
-      new PbList<StreamingDetectIntentRequest>();
-  static StreamingDetectIntentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingDetectIntentRequest();
-    return _defaultInstance;
-  }
-
+      StreamingDetectIntentRequest();
+  StreamingDetectIntentRequest createEmptyInstance() => create();
+  static $pb.PbList<StreamingDetectIntentRequest> createRepeated() =>
+      $pb.PbList<StreamingDetectIntentRequest>();
+  static StreamingDetectIntentRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamingDetectIntentRequest _defaultInstance;
-  static void $checkItem(StreamingDetectIntentRequest v) {
-    if (v is! StreamingDetectIntentRequest)
-      checkItemFailed(v, 'StreamingDetectIntentRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
   QueryParameters get queryParams => $_getN(1);
@@ -482,7 +527,7 @@ class StreamingDetectIntentRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasQueryParams() => $_has(1);
+  $core.bool hasQueryParams() => $_has(1);
   void clearQueryParams() => clearField(2);
 
   QueryInput get queryInput => $_getN(2);
@@ -490,76 +535,83 @@ class StreamingDetectIntentRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasQueryInput() => $_has(2);
+  $core.bool hasQueryInput() => $_has(2);
   void clearQueryInput() => clearField(3);
 
-  bool get singleUtterance => $_get(3, false);
-  set singleUtterance(bool v) {
+  $core.bool get singleUtterance => $_get(3, false);
+  set singleUtterance($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasSingleUtterance() => $_has(3);
+  $core.bool hasSingleUtterance() => $_has(3);
   void clearSingleUtterance() => clearField(4);
 
-  List<int> get inputAudio => $_getN(4);
-  set inputAudio(List<int> v) {
-    $_setBytes(4, v);
+  $0.OutputAudioConfig get outputAudioConfig => $_getN(4);
+  set outputAudioConfig($0.OutputAudioConfig v) {
+    setField(5, v);
   }
 
-  bool hasInputAudio() => $_has(4);
+  $core.bool hasOutputAudioConfig() => $_has(4);
+  void clearOutputAudioConfig() => clearField(5);
+
+  $core.List<$core.int> get inputAudio => $_getN(5);
+  set inputAudio($core.List<$core.int> v) {
+    $_setBytes(5, v);
+  }
+
+  $core.bool hasInputAudio() => $_has(5);
   void clearInputAudio() => clearField(6);
 }
 
-class _ReadonlyStreamingDetectIntentRequest extends StreamingDetectIntentRequest
-    with ReadonlyMessageMixin {}
-
-class StreamingDetectIntentResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingDetectIntentResponse')
+class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StreamingDetectIntentResponse',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'responseId')
     ..a<StreamingRecognitionResult>(
         2,
         'recognitionResult',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         StreamingRecognitionResult.getDefault,
         StreamingRecognitionResult.create)
-    ..a<QueryResult>(3, 'queryResult', PbFieldType.OM, QueryResult.getDefault,
-        QueryResult.create)
-    ..a<$google$rpc.Status>(4, 'webhookStatus', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
+    ..a<QueryResult>(3, 'queryResult', $pb.PbFieldType.OM,
+        QueryResult.getDefault, QueryResult.create)
+    ..a<$1.Status>(4, 'webhookStatus', $pb.PbFieldType.OM, $1.Status.getDefault,
+        $1.Status.create)
+    ..a<$core.List<$core.int>>(5, 'outputAudio', $pb.PbFieldType.OY)
+    ..a<$0.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $0.OutputAudioConfig.getDefault, $0.OutputAudioConfig.create)
     ..hasRequiredFields = false;
 
   StreamingDetectIntentResponse() : super();
-  StreamingDetectIntentResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingDetectIntentResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamingDetectIntentResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingDetectIntentResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingDetectIntentResponse clone() =>
-      new StreamingDetectIntentResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      StreamingDetectIntentResponse()..mergeFromMessage(this);
+  StreamingDetectIntentResponse copyWith(
+          void Function(StreamingDetectIntentResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as StreamingDetectIntentResponse));
+  $pb.BuilderInfo get info_ => _i;
   static StreamingDetectIntentResponse create() =>
-      new StreamingDetectIntentResponse();
-  static PbList<StreamingDetectIntentResponse> createRepeated() =>
-      new PbList<StreamingDetectIntentResponse>();
-  static StreamingDetectIntentResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingDetectIntentResponse();
-    return _defaultInstance;
-  }
-
+      StreamingDetectIntentResponse();
+  StreamingDetectIntentResponse createEmptyInstance() => create();
+  static $pb.PbList<StreamingDetectIntentResponse> createRepeated() =>
+      $pb.PbList<StreamingDetectIntentResponse>();
+  static StreamingDetectIntentResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamingDetectIntentResponse _defaultInstance;
-  static void $checkItem(StreamingDetectIntentResponse v) {
-    if (v is! StreamingDetectIntentResponse)
-      checkItemFailed(v, 'StreamingDetectIntentResponse');
-  }
 
-  String get responseId => $_getS(0, '');
-  set responseId(String v) {
+  $core.String get responseId => $_getS(0, '');
+  set responseId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasResponseId() => $_has(0);
+  $core.bool hasResponseId() => $_has(0);
   void clearResponseId() => clearField(1);
 
   StreamingRecognitionResult get recognitionResult => $_getN(1);
@@ -567,7 +619,7 @@ class StreamingDetectIntentResponse extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasRecognitionResult() => $_has(1);
+  $core.bool hasRecognitionResult() => $_has(1);
   void clearRecognitionResult() => clearField(2);
 
   QueryResult get queryResult => $_getN(2);
@@ -575,278 +627,328 @@ class StreamingDetectIntentResponse extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasQueryResult() => $_has(2);
+  $core.bool hasQueryResult() => $_has(2);
   void clearQueryResult() => clearField(3);
 
-  $google$rpc.Status get webhookStatus => $_getN(3);
-  set webhookStatus($google$rpc.Status v) {
+  $1.Status get webhookStatus => $_getN(3);
+  set webhookStatus($1.Status v) {
     setField(4, v);
   }
 
-  bool hasWebhookStatus() => $_has(3);
+  $core.bool hasWebhookStatus() => $_has(3);
   void clearWebhookStatus() => clearField(4);
+
+  $core.List<$core.int> get outputAudio => $_getN(4);
+  set outputAudio($core.List<$core.int> v) {
+    $_setBytes(4, v);
+  }
+
+  $core.bool hasOutputAudio() => $_has(4);
+  void clearOutputAudio() => clearField(5);
+
+  $0.OutputAudioConfig get outputAudioConfig => $_getN(5);
+  set outputAudioConfig($0.OutputAudioConfig v) {
+    setField(6, v);
+  }
+
+  $core.bool hasOutputAudioConfig() => $_has(5);
+  void clearOutputAudioConfig() => clearField(6);
 }
 
-class _ReadonlyStreamingDetectIntentResponse
-    extends StreamingDetectIntentResponse with ReadonlyMessageMixin {}
-
-class StreamingRecognitionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognitionResult')
+class StreamingRecognitionResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StreamingRecognitionResult',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..e<StreamingRecognitionResult_MessageType>(
         1,
         'messageType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         StreamingRecognitionResult_MessageType.MESSAGE_TYPE_UNSPECIFIED,
         StreamingRecognitionResult_MessageType.valueOf,
         StreamingRecognitionResult_MessageType.values)
     ..aOS(2, 'transcript')
     ..aOB(3, 'isFinal')
-    ..a<double>(4, 'confidence', PbFieldType.OF)
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   StreamingRecognitionResult() : super();
-  StreamingRecognitionResult.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognitionResult.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamingRecognitionResult.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognitionResult.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognitionResult clone() =>
-      new StreamingRecognitionResult()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StreamingRecognitionResult create() =>
-      new StreamingRecognitionResult();
-  static PbList<StreamingRecognitionResult> createRepeated() =>
-      new PbList<StreamingRecognitionResult>();
-  static StreamingRecognitionResult getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognitionResult();
-    return _defaultInstance;
-  }
-
+      StreamingRecognitionResult()..mergeFromMessage(this);
+  StreamingRecognitionResult copyWith(
+          void Function(StreamingRecognitionResult) updates) =>
+      super.copyWith(
+          (message) => updates(message as StreamingRecognitionResult));
+  $pb.BuilderInfo get info_ => _i;
+  static StreamingRecognitionResult create() => StreamingRecognitionResult();
+  StreamingRecognitionResult createEmptyInstance() => create();
+  static $pb.PbList<StreamingRecognitionResult> createRepeated() =>
+      $pb.PbList<StreamingRecognitionResult>();
+  static StreamingRecognitionResult getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamingRecognitionResult _defaultInstance;
-  static void $checkItem(StreamingRecognitionResult v) {
-    if (v is! StreamingRecognitionResult)
-      checkItemFailed(v, 'StreamingRecognitionResult');
-  }
 
   StreamingRecognitionResult_MessageType get messageType => $_getN(0);
   set messageType(StreamingRecognitionResult_MessageType v) {
     setField(1, v);
   }
 
-  bool hasMessageType() => $_has(0);
+  $core.bool hasMessageType() => $_has(0);
   void clearMessageType() => clearField(1);
 
-  String get transcript => $_getS(1, '');
-  set transcript(String v) {
+  $core.String get transcript => $_getS(1, '');
+  set transcript($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasTranscript() => $_has(1);
+  $core.bool hasTranscript() => $_has(1);
   void clearTranscript() => clearField(2);
 
-  bool get isFinal => $_get(2, false);
-  set isFinal(bool v) {
+  $core.bool get isFinal => $_get(2, false);
+  set isFinal($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasIsFinal() => $_has(2);
+  $core.bool hasIsFinal() => $_has(2);
   void clearIsFinal() => clearField(3);
 
-  double get confidence => $_getN(3);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
     $_setFloat(3, v);
   }
 
-  bool hasConfidence() => $_has(3);
+  $core.bool hasConfidence() => $_has(3);
   void clearConfidence() => clearField(4);
 }
 
-class _ReadonlyStreamingRecognitionResult extends StreamingRecognitionResult
-    with ReadonlyMessageMixin {}
-
-class InputAudioConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('InputAudioConfig')
-    ..e<AudioEncoding>(
-        1,
-        'audioEncoding',
-        PbFieldType.OE,
-        AudioEncoding.AUDIO_ENCODING_UNSPECIFIED,
-        AudioEncoding.valueOf,
-        AudioEncoding.values)
-    ..a<int>(2, 'sampleRateHertz', PbFieldType.O3)
-    ..aOS(3, 'languageCode')
-    ..pPS(4, 'phraseHints')
-    ..hasRequiredFields = false;
-
-  InputAudioConfig() : super();
-  InputAudioConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InputAudioConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  InputAudioConfig clone() => new InputAudioConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static InputAudioConfig create() => new InputAudioConfig();
-  static PbList<InputAudioConfig> createRepeated() =>
-      new PbList<InputAudioConfig>();
-  static InputAudioConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInputAudioConfig();
-    return _defaultInstance;
-  }
-
-  static InputAudioConfig _defaultInstance;
-  static void $checkItem(InputAudioConfig v) {
-    if (v is! InputAudioConfig) checkItemFailed(v, 'InputAudioConfig');
-  }
-
-  AudioEncoding get audioEncoding => $_getN(0);
-  set audioEncoding(AudioEncoding v) {
-    setField(1, v);
-  }
-
-  bool hasAudioEncoding() => $_has(0);
-  void clearAudioEncoding() => clearField(1);
-
-  int get sampleRateHertz => $_get(1, 0);
-  set sampleRateHertz(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasSampleRateHertz() => $_has(1);
-  void clearSampleRateHertz() => clearField(2);
-
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasLanguageCode() => $_has(2);
-  void clearLanguageCode() => clearField(3);
-
-  List<String> get phraseHints => $_getList(3);
-}
-
-class _ReadonlyInputAudioConfig extends InputAudioConfig
-    with ReadonlyMessageMixin {}
-
-class TextInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextInput')
+class TextInput extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextInput',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'text')
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
 
   TextInput() : super();
-  TextInput.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextInput.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TextInput.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextInput.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TextInput clone() => new TextInput()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TextInput create() => new TextInput();
-  static PbList<TextInput> createRepeated() => new PbList<TextInput>();
-  static TextInput getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTextInput();
-    return _defaultInstance;
-  }
-
+  TextInput clone() => TextInput()..mergeFromMessage(this);
+  TextInput copyWith(void Function(TextInput) updates) =>
+      super.copyWith((message) => updates(message as TextInput));
+  $pb.BuilderInfo get info_ => _i;
+  static TextInput create() => TextInput();
+  TextInput createEmptyInstance() => create();
+  static $pb.PbList<TextInput> createRepeated() => $pb.PbList<TextInput>();
+  static TextInput getDefault() => _defaultInstance ??= create()..freeze();
   static TextInput _defaultInstance;
-  static void $checkItem(TextInput v) {
-    if (v is! TextInput) checkItemFailed(v, 'TextInput');
-  }
 
-  String get text => $_getS(0, '');
-  set text(String v) {
+  $core.String get text => $_getS(0, '');
+  set text($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasText() => $_has(0);
+  $core.bool hasText() => $_has(0);
   void clearText() => clearField(1);
 
-  String get languageCode => $_getS(1, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasLanguageCode() => $_has(1);
+  $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 }
 
-class _ReadonlyTextInput extends TextInput with ReadonlyMessageMixin {}
-
-class EventInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EventInput')
+class EventInput extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EventInput',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
-    ..a<$google$protobuf.Struct>(2, 'parameters', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
+    ..a<$5.Struct>(2, 'parameters', $pb.PbFieldType.OM, $5.Struct.getDefault,
+        $5.Struct.create)
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
   EventInput() : super();
-  EventInput.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EventInput.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  EventInput.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EventInput.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EventInput clone() => new EventInput()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static EventInput create() => new EventInput();
-  static PbList<EventInput> createRepeated() => new PbList<EventInput>();
-  static EventInput getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEventInput();
-    return _defaultInstance;
-  }
-
+  EventInput clone() => EventInput()..mergeFromMessage(this);
+  EventInput copyWith(void Function(EventInput) updates) =>
+      super.copyWith((message) => updates(message as EventInput));
+  $pb.BuilderInfo get info_ => _i;
+  static EventInput create() => EventInput();
+  EventInput createEmptyInstance() => create();
+  static $pb.PbList<EventInput> createRepeated() => $pb.PbList<EventInput>();
+  static EventInput getDefault() => _defaultInstance ??= create()..freeze();
   static EventInput _defaultInstance;
-  static void $checkItem(EventInput v) {
-    if (v is! EventInput) checkItemFailed(v, 'EventInput');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $google$protobuf.Struct get parameters => $_getN(1);
-  set parameters($google$protobuf.Struct v) {
+  $5.Struct get parameters => $_getN(1);
+  set parameters($5.Struct v) {
     setField(2, v);
   }
 
-  bool hasParameters() => $_has(1);
+  $core.bool hasParameters() => $_has(1);
   void clearParameters() => clearField(2);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasLanguageCode() => $_has(2);
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 }
 
-class _ReadonlyEventInput extends EventInput with ReadonlyMessageMixin {}
+class SentimentAnalysisRequestConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SentimentAnalysisRequestConfig',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..aOB(1, 'analyzeQueryTextSentiment')
+    ..hasRequiredFields = false;
+
+  SentimentAnalysisRequestConfig() : super();
+  SentimentAnalysisRequestConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SentimentAnalysisRequestConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SentimentAnalysisRequestConfig clone() =>
+      SentimentAnalysisRequestConfig()..mergeFromMessage(this);
+  SentimentAnalysisRequestConfig copyWith(
+          void Function(SentimentAnalysisRequestConfig) updates) =>
+      super.copyWith(
+          (message) => updates(message as SentimentAnalysisRequestConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static SentimentAnalysisRequestConfig create() =>
+      SentimentAnalysisRequestConfig();
+  SentimentAnalysisRequestConfig createEmptyInstance() => create();
+  static $pb.PbList<SentimentAnalysisRequestConfig> createRepeated() =>
+      $pb.PbList<SentimentAnalysisRequestConfig>();
+  static SentimentAnalysisRequestConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SentimentAnalysisRequestConfig _defaultInstance;
+
+  $core.bool get analyzeQueryTextSentiment => $_get(0, false);
+  set analyzeQueryTextSentiment($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  $core.bool hasAnalyzeQueryTextSentiment() => $_has(0);
+  void clearAnalyzeQueryTextSentiment() => clearField(1);
+}
+
+class SentimentAnalysisResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SentimentAnalysisResult',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..a<Sentiment>(1, 'queryTextSentiment', $pb.PbFieldType.OM,
+        Sentiment.getDefault, Sentiment.create)
+    ..hasRequiredFields = false;
+
+  SentimentAnalysisResult() : super();
+  SentimentAnalysisResult.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SentimentAnalysisResult.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SentimentAnalysisResult clone() =>
+      SentimentAnalysisResult()..mergeFromMessage(this);
+  SentimentAnalysisResult copyWith(
+          void Function(SentimentAnalysisResult) updates) =>
+      super.copyWith((message) => updates(message as SentimentAnalysisResult));
+  $pb.BuilderInfo get info_ => _i;
+  static SentimentAnalysisResult create() => SentimentAnalysisResult();
+  SentimentAnalysisResult createEmptyInstance() => create();
+  static $pb.PbList<SentimentAnalysisResult> createRepeated() =>
+      $pb.PbList<SentimentAnalysisResult>();
+  static SentimentAnalysisResult getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SentimentAnalysisResult _defaultInstance;
+
+  Sentiment get queryTextSentiment => $_getN(0);
+  set queryTextSentiment(Sentiment v) {
+    setField(1, v);
+  }
+
+  $core.bool hasQueryTextSentiment() => $_has(0);
+  void clearQueryTextSentiment() => clearField(1);
+}
+
+class Sentiment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Sentiment',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..a<$core.double>(1, 'score', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, 'magnitude', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  Sentiment() : super();
+  Sentiment.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Sentiment.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  Sentiment clone() => Sentiment()..mergeFromMessage(this);
+  Sentiment copyWith(void Function(Sentiment) updates) =>
+      super.copyWith((message) => updates(message as Sentiment));
+  $pb.BuilderInfo get info_ => _i;
+  static Sentiment create() => Sentiment();
+  Sentiment createEmptyInstance() => create();
+  static $pb.PbList<Sentiment> createRepeated() => $pb.PbList<Sentiment>();
+  static Sentiment getDefault() => _defaultInstance ??= create()..freeze();
+  static Sentiment _defaultInstance;
+
+  $core.double get score => $_getN(0);
+  set score($core.double v) {
+    $_setFloat(0, v);
+  }
+
+  $core.bool hasScore() => $_has(0);
+  void clearScore() => clearField(1);
+
+  $core.double get magnitude => $_getN(1);
+  set magnitude($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  $core.bool hasMagnitude() => $_has(1);
+  void clearMagnitude() => clearField(2);
+}
 
 class SessionsApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   SessionsApi(this._client);
 
-  Future<DetectIntentResponse> detectIntent(
-      ClientContext ctx, DetectIntentRequest request) {
-    var emptyResponse = new DetectIntentResponse();
+  $async.Future<DetectIntentResponse> detectIntent(
+      $pb.ClientContext ctx, DetectIntentRequest request) {
+    var emptyResponse = DetectIntentResponse();
     return _client.invoke<DetectIntentResponse>(
         ctx, 'Sessions', 'DetectIntent', request, emptyResponse);
   }
 
-  Future<StreamingDetectIntentResponse> streamingDetectIntent(
-      ClientContext ctx, StreamingDetectIntentRequest request) {
-    var emptyResponse = new StreamingDetectIntentResponse();
+  $async.Future<StreamingDetectIntentResponse> streamingDetectIntent(
+      $pb.ClientContext ctx, StreamingDetectIntentRequest request) {
+    var emptyResponse = StreamingDetectIntentResponse();
     return _client.invoke<StreamingDetectIntentResponse>(
         ctx, 'Sessions', 'StreamingDetectIntent', request, emptyResponse);
   }

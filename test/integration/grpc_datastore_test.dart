@@ -29,11 +29,11 @@ main() async {
   await withServiceAccount(
       (String project, ServiceAccountCredentials serviceAccount) async {
     final accessTokenProvider =
-        new ServiceAccountTokenProvider(serviceAccount, scopes);
-    final dialer = new grpc.Dialer(endpoint);
-    final client = new grpc.Client(dialer, accessTokenProvider, 10);
-    final datastore = new GrpcDatastoreImpl(client, project);
-    final dbService = new db.DatastoreDB(datastore);
+        ServiceAccountTokenProvider(serviceAccount, scopes);
+    final dialer = grpc.Dialer(endpoint);
+    final client = grpc.Client(dialer, accessTokenProvider, 10);
+    final datastore = GrpcDatastoreImpl(client, project);
+    final dbService = db.DatastoreDB(datastore);
 
     // Once all tests are done we'll close the resources.
     test.tearDownAll(() async {
@@ -43,14 +43,14 @@ main() async {
 
     // Run low-level datastore tests.
     datastore_tests.runTests(
-        datastore, '${nsPrefix}${new DateTime.now().millisecondsSinceEpoch}');
+        datastore, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
 
     // Run high-level db tests.
     db_tests.runTests(
-        dbService, '${nsPrefix}${new DateTime.now().millisecondsSinceEpoch}');
+        dbService, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
 
     // Run metamodel tests.
     metamodel_tests.runTests(datastore, dbService,
-        '${nsPrefix}${new DateTime.now().millisecondsSinceEpoch}');
+        '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
   });
 }

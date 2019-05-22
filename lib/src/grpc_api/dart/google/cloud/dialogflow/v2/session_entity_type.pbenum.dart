@@ -1,40 +1,36 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dialogflow/v2/session_entity_type.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class SessionEntityType_EntityOverrideMode extends ProtobufEnum {
+class SessionEntityType_EntityOverrideMode extends $pb.ProtobufEnum {
   static const SessionEntityType_EntityOverrideMode
-      ENTITY_OVERRIDE_MODE_UNSPECIFIED =
-      const SessionEntityType_EntityOverrideMode._(
+      ENTITY_OVERRIDE_MODE_UNSPECIFIED = SessionEntityType_EntityOverrideMode._(
           0, 'ENTITY_OVERRIDE_MODE_UNSPECIFIED');
   static const SessionEntityType_EntityOverrideMode
-      ENTITY_OVERRIDE_MODE_OVERRIDE =
-      const SessionEntityType_EntityOverrideMode._(
+      ENTITY_OVERRIDE_MODE_OVERRIDE = SessionEntityType_EntityOverrideMode._(
           1, 'ENTITY_OVERRIDE_MODE_OVERRIDE');
   static const SessionEntityType_EntityOverrideMode
-      ENTITY_OVERRIDE_MODE_SUPPLEMENT =
-      const SessionEntityType_EntityOverrideMode._(
+      ENTITY_OVERRIDE_MODE_SUPPLEMENT = SessionEntityType_EntityOverrideMode._(
           2, 'ENTITY_OVERRIDE_MODE_SUPPLEMENT');
 
-  static const List<SessionEntityType_EntityOverrideMode> values =
-      const <SessionEntityType_EntityOverrideMode>[
+  static const $core.List<SessionEntityType_EntityOverrideMode> values =
+      <SessionEntityType_EntityOverrideMode>[
     ENTITY_OVERRIDE_MODE_UNSPECIFIED,
     ENTITY_OVERRIDE_MODE_OVERRIDE,
     ENTITY_OVERRIDE_MODE_SUPPLEMENT,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static SessionEntityType_EntityOverrideMode valueOf(int value) =>
-      _byValue[value] as SessionEntityType_EntityOverrideMode;
-  static void $checkItem(SessionEntityType_EntityOverrideMode v) {
-    if (v is! SessionEntityType_EntityOverrideMode)
-      checkItemFailed(v, 'SessionEntityType_EntityOverrideMode');
-  }
+  static final $core.Map<$core.int, SessionEntityType_EntityOverrideMode>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SessionEntityType_EntityOverrideMode valueOf($core.int value) =>
+      _byValue[value];
 
-  const SessionEntityType_EntityOverrideMode._(int v, String n) : super(v, n);
+  const SessionEntityType_EntityOverrideMode._($core.int v, $core.String n)
+      : super(v, n);
 }

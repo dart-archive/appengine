@@ -1,48 +1,51 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/datastore/admin/v1beta1/datastore_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'datastore_admin.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../longrunning/operations.pb.dart' as $1;
 import 'datastore_admin.pbjson.dart';
 
 export 'datastore_admin.pb.dart';
 
-abstract class DatastoreAdminServiceBase extends GeneratedService {
-  Future<$google$longrunning.Operation> exportEntities(
-      ServerContext ctx, ExportEntitiesRequest request);
-  Future<$google$longrunning.Operation> importEntities(
-      ServerContext ctx, ImportEntitiesRequest request);
+abstract class DatastoreAdminServiceBase extends $pb.GeneratedService {
+  $async.Future<$1.Operation> exportEntities(
+      $pb.ServerContext ctx, ExportEntitiesRequest request);
+  $async.Future<$1.Operation> importEntities(
+      $pb.ServerContext ctx, ImportEntitiesRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'ExportEntities':
-        return new ExportEntitiesRequest();
+        return ExportEntitiesRequest();
       case 'ImportEntities':
-        return new ImportEntitiesRequest();
+        return ImportEntitiesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'ExportEntities':
         return this.exportEntities(ctx, request);
       case 'ImportEntities':
         return this.importEntities(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => DatastoreAdmin$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      DatastoreAdmin$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      DatastoreAdminServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DatastoreAdminServiceBase$messageJson;
 }

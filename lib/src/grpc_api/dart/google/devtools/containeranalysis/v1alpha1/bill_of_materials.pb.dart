@@ -1,68 +1,72 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/containeranalysis/v1alpha1/bill_of_materials.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'package_vulnerability.pb.dart';
+import 'package_vulnerability.pb.dart' as $0;
 
 import 'bill_of_materials.pbenum.dart';
 
 export 'bill_of_materials.pbenum.dart';
 
-class PackageManager_Distribution extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager_Distribution')
+class PackageManager_Distribution extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'PackageManager.Distribution',
+      package:
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'cpeUri')
     ..e<PackageManager_Architecture>(
         2,
         'architecture',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         PackageManager_Architecture.ARCHITECTURE_UNSPECIFIED,
         PackageManager_Architecture.valueOf,
         PackageManager_Architecture.values)
-    ..a<VulnerabilityType_Version>(3, 'latestVersion', PbFieldType.OM,
-        VulnerabilityType_Version.getDefault, VulnerabilityType_Version.create)
+    ..a<$0.VulnerabilityType_Version>(
+        3,
+        'latestVersion',
+        $pb.PbFieldType.OM,
+        $0.VulnerabilityType_Version.getDefault,
+        $0.VulnerabilityType_Version.create)
     ..aOS(4, 'maintainer')
     ..aOS(6, 'url')
     ..aOS(7, 'description')
     ..hasRequiredFields = false;
 
   PackageManager_Distribution() : super();
-  PackageManager_Distribution.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager_Distribution.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PackageManager_Distribution.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager_Distribution.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PackageManager_Distribution clone() =>
-      new PackageManager_Distribution()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PackageManager_Distribution create() =>
-      new PackageManager_Distribution();
-  static PbList<PackageManager_Distribution> createRepeated() =>
-      new PbList<PackageManager_Distribution>();
-  static PackageManager_Distribution getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager_Distribution();
-    return _defaultInstance;
-  }
-
+      PackageManager_Distribution()..mergeFromMessage(this);
+  PackageManager_Distribution copyWith(
+          void Function(PackageManager_Distribution) updates) =>
+      super.copyWith(
+          (message) => updates(message as PackageManager_Distribution));
+  $pb.BuilderInfo get info_ => _i;
+  static PackageManager_Distribution create() => PackageManager_Distribution();
+  PackageManager_Distribution createEmptyInstance() => create();
+  static $pb.PbList<PackageManager_Distribution> createRepeated() =>
+      $pb.PbList<PackageManager_Distribution>();
+  static PackageManager_Distribution getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PackageManager_Distribution _defaultInstance;
-  static void $checkItem(PackageManager_Distribution v) {
-    if (v is! PackageManager_Distribution)
-      checkItemFailed(v, 'PackageManager_Distribution');
-  }
 
-  String get cpeUri => $_getS(0, '');
-  set cpeUri(String v) {
+  $core.String get cpeUri => $_getS(0, '');
+  set cpeUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasCpeUri() => $_has(0);
+  $core.bool hasCpeUri() => $_has(0);
   void clearCpeUri() => clearField(1);
 
   PackageManager_Architecture get architecture => $_getN(1);
@@ -70,230 +74,207 @@ class PackageManager_Distribution extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasArchitecture() => $_has(1);
+  $core.bool hasArchitecture() => $_has(1);
   void clearArchitecture() => clearField(2);
 
-  VulnerabilityType_Version get latestVersion => $_getN(2);
-  set latestVersion(VulnerabilityType_Version v) {
+  $0.VulnerabilityType_Version get latestVersion => $_getN(2);
+  set latestVersion($0.VulnerabilityType_Version v) {
     setField(3, v);
   }
 
-  bool hasLatestVersion() => $_has(2);
+  $core.bool hasLatestVersion() => $_has(2);
   void clearLatestVersion() => clearField(3);
 
-  String get maintainer => $_getS(3, '');
-  set maintainer(String v) {
+  $core.String get maintainer => $_getS(3, '');
+  set maintainer($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasMaintainer() => $_has(3);
+  $core.bool hasMaintainer() => $_has(3);
   void clearMaintainer() => clearField(4);
 
-  String get url => $_getS(4, '');
-  set url(String v) {
+  $core.String get url => $_getS(4, '');
+  set url($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasUrl() => $_has(4);
+  $core.bool hasUrl() => $_has(4);
   void clearUrl() => clearField(6);
 
-  String get description => $_getS(5, '');
-  set description(String v) {
+  $core.String get description => $_getS(5, '');
+  set description($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasDescription() => $_has(5);
+  $core.bool hasDescription() => $_has(5);
   void clearDescription() => clearField(7);
 }
 
-class _ReadonlyPackageManager_Distribution extends PackageManager_Distribution
-    with ReadonlyMessageMixin {}
-
-class PackageManager_Location extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager_Location')
+class PackageManager_Location extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PackageManager.Location',
+      package:
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'cpeUri')
-    ..a<VulnerabilityType_Version>(2, 'version', PbFieldType.OM,
-        VulnerabilityType_Version.getDefault, VulnerabilityType_Version.create)
+    ..a<$0.VulnerabilityType_Version>(
+        2,
+        'version',
+        $pb.PbFieldType.OM,
+        $0.VulnerabilityType_Version.getDefault,
+        $0.VulnerabilityType_Version.create)
     ..aOS(3, 'path')
     ..hasRequiredFields = false;
 
   PackageManager_Location() : super();
-  PackageManager_Location.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager_Location.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PackageManager_Location.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager_Location.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PackageManager_Location clone() =>
-      new PackageManager_Location()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PackageManager_Location create() => new PackageManager_Location();
-  static PbList<PackageManager_Location> createRepeated() =>
-      new PbList<PackageManager_Location>();
-  static PackageManager_Location getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager_Location();
-    return _defaultInstance;
-  }
-
+      PackageManager_Location()..mergeFromMessage(this);
+  PackageManager_Location copyWith(
+          void Function(PackageManager_Location) updates) =>
+      super.copyWith((message) => updates(message as PackageManager_Location));
+  $pb.BuilderInfo get info_ => _i;
+  static PackageManager_Location create() => PackageManager_Location();
+  PackageManager_Location createEmptyInstance() => create();
+  static $pb.PbList<PackageManager_Location> createRepeated() =>
+      $pb.PbList<PackageManager_Location>();
+  static PackageManager_Location getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PackageManager_Location _defaultInstance;
-  static void $checkItem(PackageManager_Location v) {
-    if (v is! PackageManager_Location)
-      checkItemFailed(v, 'PackageManager_Location');
-  }
 
-  String get cpeUri => $_getS(0, '');
-  set cpeUri(String v) {
+  $core.String get cpeUri => $_getS(0, '');
+  set cpeUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasCpeUri() => $_has(0);
+  $core.bool hasCpeUri() => $_has(0);
   void clearCpeUri() => clearField(1);
 
-  VulnerabilityType_Version get version => $_getN(1);
-  set version(VulnerabilityType_Version v) {
+  $0.VulnerabilityType_Version get version => $_getN(1);
+  set version($0.VulnerabilityType_Version v) {
     setField(2, v);
   }
 
-  bool hasVersion() => $_has(1);
+  $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
-  String get path => $_getS(2, '');
-  set path(String v) {
+  $core.String get path => $_getS(2, '');
+  set path($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPath() => $_has(2);
+  $core.bool hasPath() => $_has(2);
   void clearPath() => clearField(3);
 }
 
-class _ReadonlyPackageManager_Location extends PackageManager_Location
-    with ReadonlyMessageMixin {}
-
-class PackageManager_Package extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager_Package')
+class PackageManager_Package extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PackageManager.Package',
+      package:
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..pp<PackageManager_Distribution>(
-        10,
-        'distribution',
-        PbFieldType.PM,
-        PackageManager_Distribution.$checkItem,
+    ..pc<PackageManager_Distribution>(10, 'distribution', $pb.PbFieldType.PM,
         PackageManager_Distribution.create)
     ..hasRequiredFields = false;
 
   PackageManager_Package() : super();
-  PackageManager_Package.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager_Package.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PackageManager_Package.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager_Package.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PackageManager_Package clone() =>
-      new PackageManager_Package()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PackageManager_Package create() => new PackageManager_Package();
-  static PbList<PackageManager_Package> createRepeated() =>
-      new PbList<PackageManager_Package>();
-  static PackageManager_Package getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager_Package();
-    return _defaultInstance;
-  }
-
+      PackageManager_Package()..mergeFromMessage(this);
+  PackageManager_Package copyWith(
+          void Function(PackageManager_Package) updates) =>
+      super.copyWith((message) => updates(message as PackageManager_Package));
+  $pb.BuilderInfo get info_ => _i;
+  static PackageManager_Package create() => PackageManager_Package();
+  PackageManager_Package createEmptyInstance() => create();
+  static $pb.PbList<PackageManager_Package> createRepeated() =>
+      $pb.PbList<PackageManager_Package>();
+  static PackageManager_Package getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PackageManager_Package _defaultInstance;
-  static void $checkItem(PackageManager_Package v) {
-    if (v is! PackageManager_Package)
-      checkItemFailed(v, 'PackageManager_Package');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<PackageManager_Distribution> get distribution => $_getList(1);
+  $core.List<PackageManager_Distribution> get distribution => $_getList(1);
 }
 
-class _ReadonlyPackageManager_Package extends PackageManager_Package
-    with ReadonlyMessageMixin {}
-
-class PackageManager_Installation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager_Installation')
+class PackageManager_Installation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'PackageManager.Installation',
+      package:
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..pp<PackageManager_Location>(2, 'location', PbFieldType.PM,
-        PackageManager_Location.$checkItem, PackageManager_Location.create)
+    ..pc<PackageManager_Location>(
+        2, 'location', $pb.PbFieldType.PM, PackageManager_Location.create)
     ..hasRequiredFields = false;
 
   PackageManager_Installation() : super();
-  PackageManager_Installation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager_Installation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PackageManager_Installation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager_Installation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PackageManager_Installation clone() =>
-      new PackageManager_Installation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PackageManager_Installation create() =>
-      new PackageManager_Installation();
-  static PbList<PackageManager_Installation> createRepeated() =>
-      new PbList<PackageManager_Installation>();
-  static PackageManager_Installation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager_Installation();
-    return _defaultInstance;
-  }
-
+      PackageManager_Installation()..mergeFromMessage(this);
+  PackageManager_Installation copyWith(
+          void Function(PackageManager_Installation) updates) =>
+      super.copyWith(
+          (message) => updates(message as PackageManager_Installation));
+  $pb.BuilderInfo get info_ => _i;
+  static PackageManager_Installation create() => PackageManager_Installation();
+  PackageManager_Installation createEmptyInstance() => create();
+  static $pb.PbList<PackageManager_Installation> createRepeated() =>
+      $pb.PbList<PackageManager_Installation>();
+  static PackageManager_Installation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PackageManager_Installation _defaultInstance;
-  static void $checkItem(PackageManager_Installation v) {
-    if (v is! PackageManager_Installation)
-      checkItemFailed(v, 'PackageManager_Installation');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<PackageManager_Location> get location => $_getList(1);
+  $core.List<PackageManager_Location> get location => $_getList(1);
 }
 
-class _ReadonlyPackageManager_Installation extends PackageManager_Installation
-    with ReadonlyMessageMixin {}
-
-class PackageManager extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager')
+class PackageManager extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PackageManager',
+      package:
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..hasRequiredFields = false;
 
   PackageManager() : super();
-  PackageManager.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PackageManager.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PackageManager.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PackageManager clone() => new PackageManager()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PackageManager create() => new PackageManager();
-  static PbList<PackageManager> createRepeated() =>
-      new PbList<PackageManager>();
-  static PackageManager getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager();
-    return _defaultInstance;
-  }
-
+  PackageManager clone() => PackageManager()..mergeFromMessage(this);
+  PackageManager copyWith(void Function(PackageManager) updates) =>
+      super.copyWith((message) => updates(message as PackageManager));
+  $pb.BuilderInfo get info_ => _i;
+  static PackageManager create() => PackageManager();
+  PackageManager createEmptyInstance() => create();
+  static $pb.PbList<PackageManager> createRepeated() =>
+      $pb.PbList<PackageManager>();
+  static PackageManager getDefault() => _defaultInstance ??= create()..freeze();
   static PackageManager _defaultInstance;
-  static void $checkItem(PackageManager v) {
-    if (v is! PackageManager) checkItemFailed(v, 'PackageManager');
-  }
-}
-
-class _ReadonlyPackageManager extends PackageManager with ReadonlyMessageMixin {
 }

@@ -1,268 +1,173 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/redis/v1beta1/cloud_redis.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../protobuf/field_mask.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
 
 import 'cloud_redis.pbenum.dart';
 
 export 'cloud_redis.pbenum.dart';
 
-class Instance_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Instance_LabelsEntry() : super();
-  Instance_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Instance_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Instance_LabelsEntry clone() =>
-      new Instance_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Instance_LabelsEntry create() => new Instance_LabelsEntry();
-  static PbList<Instance_LabelsEntry> createRepeated() =>
-      new PbList<Instance_LabelsEntry>();
-  static Instance_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInstance_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static Instance_LabelsEntry _defaultInstance;
-  static void $checkItem(Instance_LabelsEntry v) {
-    if (v is! Instance_LabelsEntry) checkItemFailed(v, 'Instance_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyInstance_LabelsEntry extends Instance_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class Instance_RedisConfigsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance_RedisConfigsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Instance_RedisConfigsEntry() : super();
-  Instance_RedisConfigsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Instance_RedisConfigsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Instance_RedisConfigsEntry clone() =>
-      new Instance_RedisConfigsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Instance_RedisConfigsEntry create() =>
-      new Instance_RedisConfigsEntry();
-  static PbList<Instance_RedisConfigsEntry> createRepeated() =>
-      new PbList<Instance_RedisConfigsEntry>();
-  static Instance_RedisConfigsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInstance_RedisConfigsEntry();
-    return _defaultInstance;
-  }
-
-  static Instance_RedisConfigsEntry _defaultInstance;
-  static void $checkItem(Instance_RedisConfigsEntry v) {
-    if (v is! Instance_RedisConfigsEntry)
-      checkItemFailed(v, 'Instance_RedisConfigsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyInstance_RedisConfigsEntry extends Instance_RedisConfigsEntry
-    with ReadonlyMessageMixin {}
-
-class Instance extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance')
+class Instance extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Instance',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..pp<Instance_LabelsEntry>(3, 'labels', PbFieldType.PM,
-        Instance_LabelsEntry.$checkItem, Instance_LabelsEntry.create)
+    ..m<$core.String, $core.String>(
+        3,
+        'labels',
+        'Instance.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..aOS(4, 'locationId')
     ..aOS(5, 'alternativeLocationId')
     ..aOS(7, 'redisVersion')
     ..aOS(9, 'reservedIpRange')
     ..aOS(10, 'host')
-    ..a<int>(11, 'port', PbFieldType.O3)
+    ..a<$core.int>(11, 'port', $pb.PbFieldType.O3)
     ..aOS(12, 'currentLocationId')
-    ..a<$google$protobuf.Timestamp>(
-        13,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(13, 'createTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
     ..e<Instance_State>(
         14,
         'state',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Instance_State.STATE_UNSPECIFIED,
         Instance_State.valueOf,
         Instance_State.values)
     ..aOS(15, 'statusMessage')
-    ..pp<Instance_RedisConfigsEntry>(
+    ..m<$core.String, $core.String>(
         16,
         'redisConfigs',
-        PbFieldType.PM,
-        Instance_RedisConfigsEntry.$checkItem,
-        Instance_RedisConfigsEntry.create)
+        'Instance.RedisConfigsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..e<Instance_Tier>(
         17,
         'tier',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Instance_Tier.TIER_UNSPECIFIED,
         Instance_Tier.valueOf,
         Instance_Tier.values)
-    ..a<int>(18, 'memorySizeGb', PbFieldType.O3)
+    ..a<$core.int>(18, 'memorySizeGb', $pb.PbFieldType.O3)
     ..aOS(20, 'authorizedNetwork')
     ..hasRequiredFields = false;
 
   Instance() : super();
-  Instance.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Instance.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Instance.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Instance.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Instance clone() => new Instance()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Instance create() => new Instance();
-  static PbList<Instance> createRepeated() => new PbList<Instance>();
-  static Instance getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInstance();
-    return _defaultInstance;
-  }
-
+  Instance clone() => Instance()..mergeFromMessage(this);
+  Instance copyWith(void Function(Instance) updates) =>
+      super.copyWith((message) => updates(message as Instance));
+  $pb.BuilderInfo get info_ => _i;
+  static Instance create() => Instance();
+  Instance createEmptyInstance() => create();
+  static $pb.PbList<Instance> createRepeated() => $pb.PbList<Instance>();
+  static Instance getDefault() => _defaultInstance ??= create()..freeze();
   static Instance _defaultInstance;
-  static void $checkItem(Instance v) {
-    if (v is! Instance) checkItemFailed(v, 'Instance');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get displayName => $_getS(1, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(1, '');
+  set displayName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDisplayName() => $_has(1);
+  $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
-  List<Instance_LabelsEntry> get labels => $_getList(2);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(2);
 
-  String get locationId => $_getS(3, '');
-  set locationId(String v) {
+  $core.String get locationId => $_getS(3, '');
+  set locationId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasLocationId() => $_has(3);
+  $core.bool hasLocationId() => $_has(3);
   void clearLocationId() => clearField(4);
 
-  String get alternativeLocationId => $_getS(4, '');
-  set alternativeLocationId(String v) {
+  $core.String get alternativeLocationId => $_getS(4, '');
+  set alternativeLocationId($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasAlternativeLocationId() => $_has(4);
+  $core.bool hasAlternativeLocationId() => $_has(4);
   void clearAlternativeLocationId() => clearField(5);
 
-  String get redisVersion => $_getS(5, '');
-  set redisVersion(String v) {
+  $core.String get redisVersion => $_getS(5, '');
+  set redisVersion($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasRedisVersion() => $_has(5);
+  $core.bool hasRedisVersion() => $_has(5);
   void clearRedisVersion() => clearField(7);
 
-  String get reservedIpRange => $_getS(6, '');
-  set reservedIpRange(String v) {
+  $core.String get reservedIpRange => $_getS(6, '');
+  set reservedIpRange($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasReservedIpRange() => $_has(6);
+  $core.bool hasReservedIpRange() => $_has(6);
   void clearReservedIpRange() => clearField(9);
 
-  String get host => $_getS(7, '');
-  set host(String v) {
+  $core.String get host => $_getS(7, '');
+  set host($core.String v) {
     $_setString(7, v);
   }
 
-  bool hasHost() => $_has(7);
+  $core.bool hasHost() => $_has(7);
   void clearHost() => clearField(10);
 
-  int get port => $_get(8, 0);
-  set port(int v) {
+  $core.int get port => $_get(8, 0);
+  set port($core.int v) {
     $_setSignedInt32(8, v);
   }
 
-  bool hasPort() => $_has(8);
+  $core.bool hasPort() => $_has(8);
   void clearPort() => clearField(11);
 
-  String get currentLocationId => $_getS(9, '');
-  set currentLocationId(String v) {
+  $core.String get currentLocationId => $_getS(9, '');
+  set currentLocationId($core.String v) {
     $_setString(9, v);
   }
 
-  bool hasCurrentLocationId() => $_has(9);
+  $core.bool hasCurrentLocationId() => $_has(9);
   void clearCurrentLocationId() => clearField(12);
 
-  $google$protobuf.Timestamp get createTime => $_getN(10);
-  set createTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get createTime => $_getN(10);
+  set createTime($0.Timestamp v) {
     setField(13, v);
   }
 
-  bool hasCreateTime() => $_has(10);
+  $core.bool hasCreateTime() => $_has(10);
   void clearCreateTime() => clearField(13);
 
   Instance_State get state => $_getN(11);
@@ -270,239 +175,217 @@ class Instance extends GeneratedMessage {
     setField(14, v);
   }
 
-  bool hasState() => $_has(11);
+  $core.bool hasState() => $_has(11);
   void clearState() => clearField(14);
 
-  String get statusMessage => $_getS(12, '');
-  set statusMessage(String v) {
+  $core.String get statusMessage => $_getS(12, '');
+  set statusMessage($core.String v) {
     $_setString(12, v);
   }
 
-  bool hasStatusMessage() => $_has(12);
+  $core.bool hasStatusMessage() => $_has(12);
   void clearStatusMessage() => clearField(15);
 
-  List<Instance_RedisConfigsEntry> get redisConfigs => $_getList(13);
+  $core.Map<$core.String, $core.String> get redisConfigs => $_getMap(13);
 
   Instance_Tier get tier => $_getN(14);
   set tier(Instance_Tier v) {
     setField(17, v);
   }
 
-  bool hasTier() => $_has(14);
+  $core.bool hasTier() => $_has(14);
   void clearTier() => clearField(17);
 
-  int get memorySizeGb => $_get(15, 0);
-  set memorySizeGb(int v) {
+  $core.int get memorySizeGb => $_get(15, 0);
+  set memorySizeGb($core.int v) {
     $_setSignedInt32(15, v);
   }
 
-  bool hasMemorySizeGb() => $_has(15);
+  $core.bool hasMemorySizeGb() => $_has(15);
   void clearMemorySizeGb() => clearField(18);
 
-  String get authorizedNetwork => $_getS(16, '');
-  set authorizedNetwork(String v) {
+  $core.String get authorizedNetwork => $_getS(16, '');
+  set authorizedNetwork($core.String v) {
     $_setString(16, v);
   }
 
-  bool hasAuthorizedNetwork() => $_has(16);
+  $core.bool hasAuthorizedNetwork() => $_has(16);
   void clearAuthorizedNetwork() => clearField(20);
 }
 
-class _ReadonlyInstance extends Instance with ReadonlyMessageMixin {}
-
-class ListInstancesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListInstancesRequest')
+class ListInstancesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesRequest',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
   ListInstancesRequest() : super();
-  ListInstancesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListInstancesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListInstancesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListInstancesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListInstancesRequest clone() =>
-      new ListInstancesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListInstancesRequest create() => new ListInstancesRequest();
-  static PbList<ListInstancesRequest> createRepeated() =>
-      new PbList<ListInstancesRequest>();
-  static ListInstancesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListInstancesRequest();
-    return _defaultInstance;
-  }
-
+      ListInstancesRequest()..mergeFromMessage(this);
+  ListInstancesRequest copyWith(void Function(ListInstancesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListInstancesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListInstancesRequest create() => ListInstancesRequest();
+  ListInstancesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListInstancesRequest> createRepeated() =>
+      $pb.PbList<ListInstancesRequest>();
+  static ListInstancesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListInstancesRequest _defaultInstance;
-  static void $checkItem(ListInstancesRequest v) {
-    if (v is! ListInstancesRequest) checkItemFailed(v, 'ListInstancesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListInstancesRequest extends ListInstancesRequest
-    with ReadonlyMessageMixin {}
-
-class ListInstancesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListInstancesResponse')
-    ..pp<Instance>(
-        1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
+class ListInstancesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesResponse',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..pc<Instance>(1, 'instances', $pb.PbFieldType.PM, Instance.create)
     ..aOS(2, 'nextPageToken')
+    ..pPS(3, 'unreachable')
     ..hasRequiredFields = false;
 
   ListInstancesResponse() : super();
-  ListInstancesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListInstancesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListInstancesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListInstancesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListInstancesResponse clone() =>
-      new ListInstancesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListInstancesResponse create() => new ListInstancesResponse();
-  static PbList<ListInstancesResponse> createRepeated() =>
-      new PbList<ListInstancesResponse>();
-  static ListInstancesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListInstancesResponse();
-    return _defaultInstance;
-  }
-
+      ListInstancesResponse()..mergeFromMessage(this);
+  ListInstancesResponse copyWith(
+          void Function(ListInstancesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListInstancesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListInstancesResponse create() => ListInstancesResponse();
+  ListInstancesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListInstancesResponse> createRepeated() =>
+      $pb.PbList<ListInstancesResponse>();
+  static ListInstancesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListInstancesResponse _defaultInstance;
-  static void $checkItem(ListInstancesResponse v) {
-    if (v is! ListInstancesResponse)
-      checkItemFailed(v, 'ListInstancesResponse');
-  }
 
-  List<Instance> get instances => $_getList(0);
+  $core.List<Instance> get instances => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
+
+  $core.List<$core.String> get unreachable => $_getList(2);
 }
 
-class _ReadonlyListInstancesResponse extends ListInstancesResponse
-    with ReadonlyMessageMixin {}
-
-class GetInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetInstanceRequest')
+class GetInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInstanceRequest',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetInstanceRequest() : super();
-  GetInstanceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetInstanceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetInstanceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetInstanceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetInstanceRequest clone() =>
-      new GetInstanceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetInstanceRequest create() => new GetInstanceRequest();
-  static PbList<GetInstanceRequest> createRepeated() =>
-      new PbList<GetInstanceRequest>();
-  static GetInstanceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetInstanceRequest();
-    return _defaultInstance;
-  }
-
+  GetInstanceRequest clone() => GetInstanceRequest()..mergeFromMessage(this);
+  GetInstanceRequest copyWith(void Function(GetInstanceRequest) updates) =>
+      super.copyWith((message) => updates(message as GetInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetInstanceRequest create() => GetInstanceRequest();
+  GetInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<GetInstanceRequest> createRepeated() =>
+      $pb.PbList<GetInstanceRequest>();
+  static GetInstanceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetInstanceRequest _defaultInstance;
-  static void $checkItem(GetInstanceRequest v) {
-    if (v is! GetInstanceRequest) checkItemFailed(v, 'GetInstanceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetInstanceRequest extends GetInstanceRequest
-    with ReadonlyMessageMixin {}
-
-class CreateInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateInstanceRequest')
+class CreateInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInstanceRequest',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'instanceId')
     ..a<Instance>(
-        3, 'instance', PbFieldType.OM, Instance.getDefault, Instance.create)
+        3, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
     ..hasRequiredFields = false;
 
   CreateInstanceRequest() : super();
-  CreateInstanceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateInstanceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateInstanceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateInstanceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateInstanceRequest clone() =>
-      new CreateInstanceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateInstanceRequest create() => new CreateInstanceRequest();
-  static PbList<CreateInstanceRequest> createRepeated() =>
-      new PbList<CreateInstanceRequest>();
-  static CreateInstanceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateInstanceRequest();
-    return _defaultInstance;
-  }
-
+      CreateInstanceRequest()..mergeFromMessage(this);
+  CreateInstanceRequest copyWith(
+          void Function(CreateInstanceRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateInstanceRequest create() => CreateInstanceRequest();
+  CreateInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateInstanceRequest> createRepeated() =>
+      $pb.PbList<CreateInstanceRequest>();
+  static CreateInstanceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateInstanceRequest _defaultInstance;
-  static void $checkItem(CreateInstanceRequest v) {
-    if (v is! CreateInstanceRequest)
-      checkItemFailed(v, 'CreateInstanceRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get instanceId => $_getS(1, '');
-  set instanceId(String v) {
+  $core.String get instanceId => $_getS(1, '');
+  set instanceId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasInstanceId() => $_has(1);
+  $core.bool hasInstanceId() => $_has(1);
   void clearInstanceId() => clearField(2);
 
   Instance get instance => $_getN(2);
@@ -510,56 +393,46 @@ class CreateInstanceRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasInstance() => $_has(2);
+  $core.bool hasInstance() => $_has(2);
   void clearInstance() => clearField(3);
 }
 
-class _ReadonlyCreateInstanceRequest extends CreateInstanceRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateInstanceRequest')
-    ..a<$google$protobuf.FieldMask>(
-        1,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+class UpdateInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateInstanceRequest',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..a<$1.FieldMask>(1, 'updateMask', $pb.PbFieldType.OM,
+        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..a<Instance>(
-        2, 'instance', PbFieldType.OM, Instance.getDefault, Instance.create)
+        2, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
     ..hasRequiredFields = false;
 
   UpdateInstanceRequest() : super();
-  UpdateInstanceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateInstanceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateInstanceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateInstanceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateInstanceRequest clone() =>
-      new UpdateInstanceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateInstanceRequest create() => new UpdateInstanceRequest();
-  static PbList<UpdateInstanceRequest> createRepeated() =>
-      new PbList<UpdateInstanceRequest>();
-  static UpdateInstanceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateInstanceRequest();
-    return _defaultInstance;
-  }
-
+      UpdateInstanceRequest()..mergeFromMessage(this);
+  UpdateInstanceRequest copyWith(
+          void Function(UpdateInstanceRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateInstanceRequest create() => UpdateInstanceRequest();
+  UpdateInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateInstanceRequest> createRepeated() =>
+      $pb.PbList<UpdateInstanceRequest>();
+  static UpdateInstanceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateInstanceRequest _defaultInstance;
-  static void $checkItem(UpdateInstanceRequest v) {
-    if (v is! UpdateInstanceRequest)
-      checkItemFailed(v, 'UpdateInstanceRequest');
-  }
 
-  $google$protobuf.FieldMask get updateMask => $_getN(0);
-  set updateMask($google$protobuf.FieldMask v) {
+  $1.FieldMask get updateMask => $_getN(0);
+  set updateMask($1.FieldMask v) {
     setField(1, v);
   }
 
-  bool hasUpdateMask() => $_has(0);
+  $core.bool hasUpdateMask() => $_has(0);
   void clearUpdateMask() => clearField(1);
 
   Instance get instance => $_getN(1);
@@ -567,212 +440,203 @@ class UpdateInstanceRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasInstance() => $_has(1);
+  $core.bool hasInstance() => $_has(1);
   void clearInstance() => clearField(2);
 }
 
-class _ReadonlyUpdateInstanceRequest extends UpdateInstanceRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteInstanceRequest')
+class DeleteInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteInstanceRequest',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteInstanceRequest() : super();
-  DeleteInstanceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteInstanceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteInstanceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteInstanceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteInstanceRequest clone() =>
-      new DeleteInstanceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteInstanceRequest create() => new DeleteInstanceRequest();
-  static PbList<DeleteInstanceRequest> createRepeated() =>
-      new PbList<DeleteInstanceRequest>();
-  static DeleteInstanceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteInstanceRequest();
-    return _defaultInstance;
-  }
-
+      DeleteInstanceRequest()..mergeFromMessage(this);
+  DeleteInstanceRequest copyWith(
+          void Function(DeleteInstanceRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteInstanceRequest create() => DeleteInstanceRequest();
+  DeleteInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteInstanceRequest> createRepeated() =>
+      $pb.PbList<DeleteInstanceRequest>();
+  static DeleteInstanceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteInstanceRequest _defaultInstance;
-  static void $checkItem(DeleteInstanceRequest v) {
-    if (v is! DeleteInstanceRequest)
-      checkItemFailed(v, 'DeleteInstanceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteInstanceRequest extends DeleteInstanceRequest
-    with ReadonlyMessageMixin {}
+class FailoverInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FailoverInstanceRequest',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..aOS(1, 'name')
+    ..e<FailoverInstanceRequest_DataProtectionMode>(
+        2,
+        'dataProtectionMode',
+        $pb.PbFieldType.OE,
+        FailoverInstanceRequest_DataProtectionMode
+            .DATA_PROTECTION_MODE_UNSPECIFIED,
+        FailoverInstanceRequest_DataProtectionMode.valueOf,
+        FailoverInstanceRequest_DataProtectionMode.values)
+    ..hasRequiredFields = false;
 
-class LocationMetadata_AvailableZonesEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('LocationMetadata_AvailableZonesEntry')
-        ..aOS(1, 'key')
-        ..a<ZoneMetadata>(2, 'value', PbFieldType.OM, ZoneMetadata.getDefault,
-            ZoneMetadata.create)
-        ..hasRequiredFields = false;
-
-  LocationMetadata_AvailableZonesEntry() : super();
-  LocationMetadata_AvailableZonesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FailoverInstanceRequest() : super();
+  FailoverInstanceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LocationMetadata_AvailableZonesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FailoverInstanceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LocationMetadata_AvailableZonesEntry clone() =>
-      new LocationMetadata_AvailableZonesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LocationMetadata_AvailableZonesEntry create() =>
-      new LocationMetadata_AvailableZonesEntry();
-  static PbList<LocationMetadata_AvailableZonesEntry> createRepeated() =>
-      new PbList<LocationMetadata_AvailableZonesEntry>();
-  static LocationMetadata_AvailableZonesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocationMetadata_AvailableZonesEntry();
-    return _defaultInstance;
-  }
+  FailoverInstanceRequest clone() =>
+      FailoverInstanceRequest()..mergeFromMessage(this);
+  FailoverInstanceRequest copyWith(
+          void Function(FailoverInstanceRequest) updates) =>
+      super.copyWith((message) => updates(message as FailoverInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static FailoverInstanceRequest create() => FailoverInstanceRequest();
+  FailoverInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<FailoverInstanceRequest> createRepeated() =>
+      $pb.PbList<FailoverInstanceRequest>();
+  static FailoverInstanceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static FailoverInstanceRequest _defaultInstance;
 
-  static LocationMetadata_AvailableZonesEntry _defaultInstance;
-  static void $checkItem(LocationMetadata_AvailableZonesEntry v) {
-    if (v is! LocationMetadata_AvailableZonesEntry)
-      checkItemFailed(v, 'LocationMetadata_AvailableZonesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
+  $core.bool hasName() => $_has(0);
+  void clearName() => clearField(1);
 
-  ZoneMetadata get value => $_getN(1);
-  set value(ZoneMetadata v) {
+  FailoverInstanceRequest_DataProtectionMode get dataProtectionMode =>
+      $_getN(1);
+  set dataProtectionMode(FailoverInstanceRequest_DataProtectionMode v) {
     setField(2, v);
   }
 
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
+  $core.bool hasDataProtectionMode() => $_has(1);
+  void clearDataProtectionMode() => clearField(2);
 }
 
-class _ReadonlyLocationMetadata_AvailableZonesEntry
-    extends LocationMetadata_AvailableZonesEntry with ReadonlyMessageMixin {}
-
-class LocationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LocationMetadata')
-    ..pp<LocationMetadata_AvailableZonesEntry>(
+class LocationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocationMetadata',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..m<$core.String, ZoneMetadata>(
         1,
         'availableZones',
-        PbFieldType.PM,
-        LocationMetadata_AvailableZonesEntry.$checkItem,
-        LocationMetadata_AvailableZonesEntry.create)
+        'LocationMetadata.AvailableZonesEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        ZoneMetadata.create,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..hasRequiredFields = false;
 
   LocationMetadata() : super();
-  LocationMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LocationMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LocationMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LocationMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LocationMetadata clone() => new LocationMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LocationMetadata create() => new LocationMetadata();
-  static PbList<LocationMetadata> createRepeated() =>
-      new PbList<LocationMetadata>();
-  static LocationMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocationMetadata();
-    return _defaultInstance;
-  }
-
+  LocationMetadata clone() => LocationMetadata()..mergeFromMessage(this);
+  LocationMetadata copyWith(void Function(LocationMetadata) updates) =>
+      super.copyWith((message) => updates(message as LocationMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static LocationMetadata create() => LocationMetadata();
+  LocationMetadata createEmptyInstance() => create();
+  static $pb.PbList<LocationMetadata> createRepeated() =>
+      $pb.PbList<LocationMetadata>();
+  static LocationMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LocationMetadata _defaultInstance;
-  static void $checkItem(LocationMetadata v) {
-    if (v is! LocationMetadata) checkItemFailed(v, 'LocationMetadata');
-  }
 
-  List<LocationMetadata_AvailableZonesEntry> get availableZones => $_getList(0);
+  $core.Map<$core.String, ZoneMetadata> get availableZones => $_getMap(0);
 }
 
-class _ReadonlyLocationMetadata extends LocationMetadata
-    with ReadonlyMessageMixin {}
-
-class ZoneMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ZoneMetadata')
+class ZoneMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ZoneMetadata',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
     ..hasRequiredFields = false;
 
   ZoneMetadata() : super();
-  ZoneMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ZoneMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ZoneMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ZoneMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ZoneMetadata clone() => new ZoneMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ZoneMetadata create() => new ZoneMetadata();
-  static PbList<ZoneMetadata> createRepeated() => new PbList<ZoneMetadata>();
-  static ZoneMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyZoneMetadata();
-    return _defaultInstance;
-  }
-
+  ZoneMetadata clone() => ZoneMetadata()..mergeFromMessage(this);
+  ZoneMetadata copyWith(void Function(ZoneMetadata) updates) =>
+      super.copyWith((message) => updates(message as ZoneMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static ZoneMetadata create() => ZoneMetadata();
+  ZoneMetadata createEmptyInstance() => create();
+  static $pb.PbList<ZoneMetadata> createRepeated() =>
+      $pb.PbList<ZoneMetadata>();
+  static ZoneMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static ZoneMetadata _defaultInstance;
-  static void $checkItem(ZoneMetadata v) {
-    if (v is! ZoneMetadata) checkItemFailed(v, 'ZoneMetadata');
-  }
 }
 
-class _ReadonlyZoneMetadata extends ZoneMetadata with ReadonlyMessageMixin {}
-
 class CloudRedisApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   CloudRedisApi(this._client);
 
-  Future<ListInstancesResponse> listInstances(
-      ClientContext ctx, ListInstancesRequest request) {
-    var emptyResponse = new ListInstancesResponse();
+  $async.Future<ListInstancesResponse> listInstances(
+      $pb.ClientContext ctx, ListInstancesRequest request) {
+    var emptyResponse = ListInstancesResponse();
     return _client.invoke<ListInstancesResponse>(
         ctx, 'CloudRedis', 'ListInstances', request, emptyResponse);
   }
 
-  Future<Instance> getInstance(ClientContext ctx, GetInstanceRequest request) {
-    var emptyResponse = new Instance();
+  $async.Future<Instance> getInstance(
+      $pb.ClientContext ctx, GetInstanceRequest request) {
+    var emptyResponse = Instance();
     return _client.invoke<Instance>(
         ctx, 'CloudRedis', 'GetInstance', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> createInstance(
-      ClientContext ctx, CreateInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$2.Operation> createInstance(
+      $pb.ClientContext ctx, CreateInstanceRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(
         ctx, 'CloudRedis', 'CreateInstance', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> updateInstance(
-      ClientContext ctx, UpdateInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$2.Operation> updateInstance(
+      $pb.ClientContext ctx, UpdateInstanceRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(
         ctx, 'CloudRedis', 'UpdateInstance', request, emptyResponse);
   }
 
-  Future<$google$longrunning.Operation> deleteInstance(
-      ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
+  $async.Future<$2.Operation> failoverInstance(
+      $pb.ClientContext ctx, FailoverInstanceRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(
+        ctx, 'CloudRedis', 'FailoverInstance', request, emptyResponse);
+  }
+
+  $async.Future<$2.Operation> deleteInstance(
+      $pb.ClientContext ctx, DeleteInstanceRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(
         ctx, 'CloudRedis', 'DeleteInstance', request, emptyResponse);
   }
 }

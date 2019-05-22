@@ -1,54 +1,51 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/type/latlng.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class LatLng extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LatLng')
-    ..a<double>(1, 'latitude', PbFieldType.OD)
-    ..a<double>(2, 'longitude', PbFieldType.OD)
-    ..hasRequiredFields = false;
+class LatLng extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('LatLng', package: const $pb.PackageName('google.type'))
+        ..a<$core.double>(1, 'latitude', $pb.PbFieldType.OD)
+        ..a<$core.double>(2, 'longitude', $pb.PbFieldType.OD)
+        ..hasRequiredFields = false;
 
   LatLng() : super();
-  LatLng.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LatLng.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LatLng.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LatLng.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LatLng clone() => new LatLng()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LatLng create() => new LatLng();
-  static PbList<LatLng> createRepeated() => new PbList<LatLng>();
-  static LatLng getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLatLng();
-    return _defaultInstance;
-  }
-
+  LatLng clone() => LatLng()..mergeFromMessage(this);
+  LatLng copyWith(void Function(LatLng) updates) =>
+      super.copyWith((message) => updates(message as LatLng));
+  $pb.BuilderInfo get info_ => _i;
+  static LatLng create() => LatLng();
+  LatLng createEmptyInstance() => create();
+  static $pb.PbList<LatLng> createRepeated() => $pb.PbList<LatLng>();
+  static LatLng getDefault() => _defaultInstance ??= create()..freeze();
   static LatLng _defaultInstance;
-  static void $checkItem(LatLng v) {
-    if (v is! LatLng) checkItemFailed(v, 'LatLng');
-  }
 
-  double get latitude => $_getN(0);
-  set latitude(double v) {
+  $core.double get latitude => $_getN(0);
+  set latitude($core.double v) {
     $_setDouble(0, v);
   }
 
-  bool hasLatitude() => $_has(0);
+  $core.bool hasLatitude() => $_has(0);
   void clearLatitude() => clearField(1);
 
-  double get longitude => $_getN(1);
-  set longitude(double v) {
+  $core.double get longitude => $_getN(1);
+  set longitude($core.double v) {
     $_setDouble(1, v);
   }
 
-  bool hasLongitude() => $_has(1);
+  $core.bool hasLongitude() => $_has(1);
   void clearLongitude() => clearField(2);
 }
-
-class _ReadonlyLatLng extends LatLng with ReadonlyMessageMixin {}

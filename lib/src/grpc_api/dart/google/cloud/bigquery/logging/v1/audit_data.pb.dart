@@ -1,92 +1,146 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/bigquery/logging/v1/audit_data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../../protobuf/duration.pb.dart' as $google$protobuf;
-import '../../../../rpc/status.pb.dart' as $google$rpc;
+import '../../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../../protobuf/duration.pb.dart' as $1;
+import '../../../../rpc/status.pb.dart' as $2;
 
-class AuditData extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditData')
-    ..a<TableInsertRequest>(1, 'tableInsertRequest', PbFieldType.OM,
+enum AuditData_Request {
+  tableInsertRequest,
+  datasetListRequest,
+  datasetInsertRequest,
+  datasetUpdateRequest,
+  jobInsertRequest,
+  jobQueryRequest,
+  jobGetQueryResultsRequest,
+  tableDataListRequest,
+  tableUpdateRequest,
+  notSet
+}
+
+enum AuditData_Response {
+  tableInsertResponse,
+  tableUpdateResponse,
+  datasetInsertResponse,
+  datasetUpdateResponse,
+  jobQueryResponse,
+  jobGetQueryResultsResponse,
+  jobQueryDoneResponse,
+  jobInsertResponse,
+  notSet
+}
+
+class AuditData extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AuditData_Request> _AuditData_RequestByTag =
+      {
+    1: AuditData_Request.tableInsertRequest,
+    2: AuditData_Request.datasetListRequest,
+    3: AuditData_Request.datasetInsertRequest,
+    4: AuditData_Request.datasetUpdateRequest,
+    5: AuditData_Request.jobInsertRequest,
+    6: AuditData_Request.jobQueryRequest,
+    7: AuditData_Request.jobGetQueryResultsRequest,
+    8: AuditData_Request.tableDataListRequest,
+    16: AuditData_Request.tableUpdateRequest,
+    0: AuditData_Request.notSet
+  };
+  static const $core.Map<$core.int, AuditData_Response>
+      _AuditData_ResponseByTag = {
+    9: AuditData_Response.tableInsertResponse,
+    10: AuditData_Response.tableUpdateResponse,
+    11: AuditData_Response.datasetInsertResponse,
+    12: AuditData_Response.datasetUpdateResponse,
+    13: AuditData_Response.jobQueryResponse,
+    14: AuditData_Response.jobGetQueryResultsResponse,
+    15: AuditData_Response.jobQueryDoneResponse,
+    18: AuditData_Response.jobInsertResponse,
+    0: AuditData_Response.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuditData',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<TableInsertRequest>(1, 'tableInsertRequest', $pb.PbFieldType.OM,
         TableInsertRequest.getDefault, TableInsertRequest.create)
-    ..a<DatasetListRequest>(2, 'datasetListRequest', PbFieldType.OM,
+    ..a<DatasetListRequest>(2, 'datasetListRequest', $pb.PbFieldType.OM,
         DatasetListRequest.getDefault, DatasetListRequest.create)
-    ..a<DatasetInsertRequest>(3, 'datasetInsertRequest', PbFieldType.OM,
+    ..a<DatasetInsertRequest>(3, 'datasetInsertRequest', $pb.PbFieldType.OM,
         DatasetInsertRequest.getDefault, DatasetInsertRequest.create)
-    ..a<DatasetUpdateRequest>(4, 'datasetUpdateRequest', PbFieldType.OM,
+    ..a<DatasetUpdateRequest>(4, 'datasetUpdateRequest', $pb.PbFieldType.OM,
         DatasetUpdateRequest.getDefault, DatasetUpdateRequest.create)
-    ..a<JobInsertRequest>(5, 'jobInsertRequest', PbFieldType.OM,
+    ..a<JobInsertRequest>(5, 'jobInsertRequest', $pb.PbFieldType.OM,
         JobInsertRequest.getDefault, JobInsertRequest.create)
-    ..a<JobQueryRequest>(6, 'jobQueryRequest', PbFieldType.OM,
+    ..a<JobQueryRequest>(6, 'jobQueryRequest', $pb.PbFieldType.OM,
         JobQueryRequest.getDefault, JobQueryRequest.create)
     ..a<JobGetQueryResultsRequest>(
         7,
         'jobGetQueryResultsRequest',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         JobGetQueryResultsRequest.getDefault,
         JobGetQueryResultsRequest.create)
-    ..a<TableDataListRequest>(8, 'tableDataListRequest', PbFieldType.OM,
+    ..a<TableDataListRequest>(8, 'tableDataListRequest', $pb.PbFieldType.OM,
         TableDataListRequest.getDefault, TableDataListRequest.create)
-    ..a<TableInsertResponse>(9, 'tableInsertResponse', PbFieldType.OM,
+    ..a<TableInsertResponse>(9, 'tableInsertResponse', $pb.PbFieldType.OM,
         TableInsertResponse.getDefault, TableInsertResponse.create)
-    ..a<TableUpdateResponse>(10, 'tableUpdateResponse', PbFieldType.OM,
+    ..a<TableUpdateResponse>(10, 'tableUpdateResponse', $pb.PbFieldType.OM,
         TableUpdateResponse.getDefault, TableUpdateResponse.create)
-    ..a<DatasetInsertResponse>(11, 'datasetInsertResponse', PbFieldType.OM,
+    ..a<DatasetInsertResponse>(11, 'datasetInsertResponse', $pb.PbFieldType.OM,
         DatasetInsertResponse.getDefault, DatasetInsertResponse.create)
-    ..a<DatasetUpdateResponse>(12, 'datasetUpdateResponse', PbFieldType.OM,
+    ..a<DatasetUpdateResponse>(12, 'datasetUpdateResponse', $pb.PbFieldType.OM,
         DatasetUpdateResponse.getDefault, DatasetUpdateResponse.create)
-    ..a<JobQueryResponse>(13, 'jobQueryResponse', PbFieldType.OM,
+    ..a<JobQueryResponse>(13, 'jobQueryResponse', $pb.PbFieldType.OM,
         JobQueryResponse.getDefault, JobQueryResponse.create)
     ..a<JobGetQueryResultsResponse>(
         14,
         'jobGetQueryResultsResponse',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         JobGetQueryResultsResponse.getDefault,
         JobGetQueryResultsResponse.create)
-    ..a<JobQueryDoneResponse>(15, 'jobQueryDoneResponse', PbFieldType.OM,
-        JobQueryDoneResponse.getDefault, JobQueryDoneResponse.create)
-    ..a<TableUpdateRequest>(16, 'tableUpdateRequest', PbFieldType.OM,
-        TableUpdateRequest.getDefault, TableUpdateRequest.create)
-    ..a<JobCompletedEvent>(17, 'jobCompletedEvent', PbFieldType.OM,
-        JobCompletedEvent.getDefault, JobCompletedEvent.create)
-    ..a<JobInsertResponse>(18, 'jobInsertResponse', PbFieldType.OM,
-        JobInsertResponse.getDefault, JobInsertResponse.create)
+    ..a<JobQueryDoneResponse>(15, 'jobQueryDoneResponse', $pb.PbFieldType.OM, JobQueryDoneResponse.getDefault, JobQueryDoneResponse.create)
+    ..a<TableUpdateRequest>(16, 'tableUpdateRequest', $pb.PbFieldType.OM, TableUpdateRequest.getDefault, TableUpdateRequest.create)
+    ..a<JobCompletedEvent>(17, 'jobCompletedEvent', $pb.PbFieldType.OM, JobCompletedEvent.getDefault, JobCompletedEvent.create)
+    ..a<JobInsertResponse>(18, 'jobInsertResponse', $pb.PbFieldType.OM, JobInsertResponse.getDefault, JobInsertResponse.create)
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 16])
+    ..oo(1, [9, 10, 11, 12, 13, 14, 15, 18])
     ..hasRequiredFields = false;
 
   AuditData() : super();
-  AuditData.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuditData.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AuditData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuditData.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuditData clone() => new AuditData()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AuditData create() => new AuditData();
-  static PbList<AuditData> createRepeated() => new PbList<AuditData>();
-  static AuditData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAuditData();
-    return _defaultInstance;
-  }
-
+  AuditData clone() => AuditData()..mergeFromMessage(this);
+  AuditData copyWith(void Function(AuditData) updates) =>
+      super.copyWith((message) => updates(message as AuditData));
+  $pb.BuilderInfo get info_ => _i;
+  static AuditData create() => AuditData();
+  AuditData createEmptyInstance() => create();
+  static $pb.PbList<AuditData> createRepeated() => $pb.PbList<AuditData>();
+  static AuditData getDefault() => _defaultInstance ??= create()..freeze();
   static AuditData _defaultInstance;
-  static void $checkItem(AuditData v) {
-    if (v is! AuditData) checkItemFailed(v, 'AuditData');
-  }
+
+  AuditData_Request whichRequest() => _AuditData_RequestByTag[$_whichOneof(0)];
+  void clearRequest() => clearField($_whichOneof(0));
+
+  AuditData_Response whichResponse() =>
+      _AuditData_ResponseByTag[$_whichOneof(1)];
+  void clearResponse() => clearField($_whichOneof(1));
 
   TableInsertRequest get tableInsertRequest => $_getN(0);
   set tableInsertRequest(TableInsertRequest v) {
     setField(1, v);
   }
 
-  bool hasTableInsertRequest() => $_has(0);
+  $core.bool hasTableInsertRequest() => $_has(0);
   void clearTableInsertRequest() => clearField(1);
 
   DatasetListRequest get datasetListRequest => $_getN(1);
@@ -94,7 +148,7 @@ class AuditData extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasDatasetListRequest() => $_has(1);
+  $core.bool hasDatasetListRequest() => $_has(1);
   void clearDatasetListRequest() => clearField(2);
 
   DatasetInsertRequest get datasetInsertRequest => $_getN(2);
@@ -102,7 +156,7 @@ class AuditData extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasDatasetInsertRequest() => $_has(2);
+  $core.bool hasDatasetInsertRequest() => $_has(2);
   void clearDatasetInsertRequest() => clearField(3);
 
   DatasetUpdateRequest get datasetUpdateRequest => $_getN(3);
@@ -110,7 +164,7 @@ class AuditData extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasDatasetUpdateRequest() => $_has(3);
+  $core.bool hasDatasetUpdateRequest() => $_has(3);
   void clearDatasetUpdateRequest() => clearField(4);
 
   JobInsertRequest get jobInsertRequest => $_getN(4);
@@ -118,7 +172,7 @@ class AuditData extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasJobInsertRequest() => $_has(4);
+  $core.bool hasJobInsertRequest() => $_has(4);
   void clearJobInsertRequest() => clearField(5);
 
   JobQueryRequest get jobQueryRequest => $_getN(5);
@@ -126,7 +180,7 @@ class AuditData extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasJobQueryRequest() => $_has(5);
+  $core.bool hasJobQueryRequest() => $_has(5);
   void clearJobQueryRequest() => clearField(6);
 
   JobGetQueryResultsRequest get jobGetQueryResultsRequest => $_getN(6);
@@ -134,7 +188,7 @@ class AuditData extends GeneratedMessage {
     setField(7, v);
   }
 
-  bool hasJobGetQueryResultsRequest() => $_has(6);
+  $core.bool hasJobGetQueryResultsRequest() => $_has(6);
   void clearJobGetQueryResultsRequest() => clearField(7);
 
   TableDataListRequest get tableDataListRequest => $_getN(7);
@@ -142,7 +196,7 @@ class AuditData extends GeneratedMessage {
     setField(8, v);
   }
 
-  bool hasTableDataListRequest() => $_has(7);
+  $core.bool hasTableDataListRequest() => $_has(7);
   void clearTableDataListRequest() => clearField(8);
 
   TableInsertResponse get tableInsertResponse => $_getN(8);
@@ -150,7 +204,7 @@ class AuditData extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasTableInsertResponse() => $_has(8);
+  $core.bool hasTableInsertResponse() => $_has(8);
   void clearTableInsertResponse() => clearField(9);
 
   TableUpdateResponse get tableUpdateResponse => $_getN(9);
@@ -158,7 +212,7 @@ class AuditData extends GeneratedMessage {
     setField(10, v);
   }
 
-  bool hasTableUpdateResponse() => $_has(9);
+  $core.bool hasTableUpdateResponse() => $_has(9);
   void clearTableUpdateResponse() => clearField(10);
 
   DatasetInsertResponse get datasetInsertResponse => $_getN(10);
@@ -166,7 +220,7 @@ class AuditData extends GeneratedMessage {
     setField(11, v);
   }
 
-  bool hasDatasetInsertResponse() => $_has(10);
+  $core.bool hasDatasetInsertResponse() => $_has(10);
   void clearDatasetInsertResponse() => clearField(11);
 
   DatasetUpdateResponse get datasetUpdateResponse => $_getN(11);
@@ -174,7 +228,7 @@ class AuditData extends GeneratedMessage {
     setField(12, v);
   }
 
-  bool hasDatasetUpdateResponse() => $_has(11);
+  $core.bool hasDatasetUpdateResponse() => $_has(11);
   void clearDatasetUpdateResponse() => clearField(12);
 
   JobQueryResponse get jobQueryResponse => $_getN(12);
@@ -182,7 +236,7 @@ class AuditData extends GeneratedMessage {
     setField(13, v);
   }
 
-  bool hasJobQueryResponse() => $_has(12);
+  $core.bool hasJobQueryResponse() => $_has(12);
   void clearJobQueryResponse() => clearField(13);
 
   JobGetQueryResultsResponse get jobGetQueryResultsResponse => $_getN(13);
@@ -190,7 +244,7 @@ class AuditData extends GeneratedMessage {
     setField(14, v);
   }
 
-  bool hasJobGetQueryResultsResponse() => $_has(13);
+  $core.bool hasJobGetQueryResultsResponse() => $_has(13);
   void clearJobGetQueryResultsResponse() => clearField(14);
 
   JobQueryDoneResponse get jobQueryDoneResponse => $_getN(14);
@@ -198,7 +252,7 @@ class AuditData extends GeneratedMessage {
     setField(15, v);
   }
 
-  bool hasJobQueryDoneResponse() => $_has(14);
+  $core.bool hasJobQueryDoneResponse() => $_has(14);
   void clearJobQueryDoneResponse() => clearField(15);
 
   TableUpdateRequest get tableUpdateRequest => $_getN(15);
@@ -206,7 +260,7 @@ class AuditData extends GeneratedMessage {
     setField(16, v);
   }
 
-  bool hasTableUpdateRequest() => $_has(15);
+  $core.bool hasTableUpdateRequest() => $_has(15);
   void clearTableUpdateRequest() => clearField(16);
 
   JobCompletedEvent get jobCompletedEvent => $_getN(16);
@@ -214,7 +268,7 @@ class AuditData extends GeneratedMessage {
     setField(17, v);
   }
 
-  bool hasJobCompletedEvent() => $_has(16);
+  $core.bool hasJobCompletedEvent() => $_has(16);
   void clearJobCompletedEvent() => clearField(17);
 
   JobInsertResponse get jobInsertResponse => $_getN(17);
@@ -222,514 +276,442 @@ class AuditData extends GeneratedMessage {
     setField(18, v);
   }
 
-  bool hasJobInsertResponse() => $_has(17);
+  $core.bool hasJobInsertResponse() => $_has(17);
   void clearJobInsertResponse() => clearField(18);
 }
 
-class _ReadonlyAuditData extends AuditData with ReadonlyMessageMixin {}
-
-class TableInsertRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableInsertRequest')
-    ..a<Table>(1, 'resource', PbFieldType.OM, Table.getDefault, Table.create)
+class TableInsertRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableInsertRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Table>(
+        1, 'resource', $pb.PbFieldType.OM, Table.getDefault, Table.create)
     ..hasRequiredFields = false;
 
   TableInsertRequest() : super();
-  TableInsertRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableInsertRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableInsertRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableInsertRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableInsertRequest clone() =>
-      new TableInsertRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableInsertRequest create() => new TableInsertRequest();
-  static PbList<TableInsertRequest> createRepeated() =>
-      new PbList<TableInsertRequest>();
-  static TableInsertRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableInsertRequest();
-    return _defaultInstance;
-  }
-
+  TableInsertRequest clone() => TableInsertRequest()..mergeFromMessage(this);
+  TableInsertRequest copyWith(void Function(TableInsertRequest) updates) =>
+      super.copyWith((message) => updates(message as TableInsertRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static TableInsertRequest create() => TableInsertRequest();
+  TableInsertRequest createEmptyInstance() => create();
+  static $pb.PbList<TableInsertRequest> createRepeated() =>
+      $pb.PbList<TableInsertRequest>();
+  static TableInsertRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TableInsertRequest _defaultInstance;
-  static void $checkItem(TableInsertRequest v) {
-    if (v is! TableInsertRequest) checkItemFailed(v, 'TableInsertRequest');
-  }
 
   Table get resource => $_getN(0);
   set resource(Table v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyTableInsertRequest extends TableInsertRequest
-    with ReadonlyMessageMixin {}
-
-class TableUpdateRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableUpdateRequest')
-    ..a<Table>(1, 'resource', PbFieldType.OM, Table.getDefault, Table.create)
+class TableUpdateRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableUpdateRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Table>(
+        1, 'resource', $pb.PbFieldType.OM, Table.getDefault, Table.create)
     ..hasRequiredFields = false;
 
   TableUpdateRequest() : super();
-  TableUpdateRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableUpdateRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableUpdateRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableUpdateRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableUpdateRequest clone() =>
-      new TableUpdateRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableUpdateRequest create() => new TableUpdateRequest();
-  static PbList<TableUpdateRequest> createRepeated() =>
-      new PbList<TableUpdateRequest>();
-  static TableUpdateRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableUpdateRequest();
-    return _defaultInstance;
-  }
-
+  TableUpdateRequest clone() => TableUpdateRequest()..mergeFromMessage(this);
+  TableUpdateRequest copyWith(void Function(TableUpdateRequest) updates) =>
+      super.copyWith((message) => updates(message as TableUpdateRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static TableUpdateRequest create() => TableUpdateRequest();
+  TableUpdateRequest createEmptyInstance() => create();
+  static $pb.PbList<TableUpdateRequest> createRepeated() =>
+      $pb.PbList<TableUpdateRequest>();
+  static TableUpdateRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TableUpdateRequest _defaultInstance;
-  static void $checkItem(TableUpdateRequest v) {
-    if (v is! TableUpdateRequest) checkItemFailed(v, 'TableUpdateRequest');
-  }
 
   Table get resource => $_getN(0);
   set resource(Table v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyTableUpdateRequest extends TableUpdateRequest
-    with ReadonlyMessageMixin {}
-
-class TableInsertResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableInsertResponse')
-    ..a<Table>(1, 'resource', PbFieldType.OM, Table.getDefault, Table.create)
+class TableInsertResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableInsertResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Table>(
+        1, 'resource', $pb.PbFieldType.OM, Table.getDefault, Table.create)
     ..hasRequiredFields = false;
 
   TableInsertResponse() : super();
-  TableInsertResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableInsertResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableInsertResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableInsertResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableInsertResponse clone() =>
-      new TableInsertResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableInsertResponse create() => new TableInsertResponse();
-  static PbList<TableInsertResponse> createRepeated() =>
-      new PbList<TableInsertResponse>();
-  static TableInsertResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableInsertResponse();
-    return _defaultInstance;
-  }
-
+  TableInsertResponse clone() => TableInsertResponse()..mergeFromMessage(this);
+  TableInsertResponse copyWith(void Function(TableInsertResponse) updates) =>
+      super.copyWith((message) => updates(message as TableInsertResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static TableInsertResponse create() => TableInsertResponse();
+  TableInsertResponse createEmptyInstance() => create();
+  static $pb.PbList<TableInsertResponse> createRepeated() =>
+      $pb.PbList<TableInsertResponse>();
+  static TableInsertResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TableInsertResponse _defaultInstance;
-  static void $checkItem(TableInsertResponse v) {
-    if (v is! TableInsertResponse) checkItemFailed(v, 'TableInsertResponse');
-  }
 
   Table get resource => $_getN(0);
   set resource(Table v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyTableInsertResponse extends TableInsertResponse
-    with ReadonlyMessageMixin {}
-
-class TableUpdateResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableUpdateResponse')
-    ..a<Table>(1, 'resource', PbFieldType.OM, Table.getDefault, Table.create)
+class TableUpdateResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableUpdateResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Table>(
+        1, 'resource', $pb.PbFieldType.OM, Table.getDefault, Table.create)
     ..hasRequiredFields = false;
 
   TableUpdateResponse() : super();
-  TableUpdateResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableUpdateResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableUpdateResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableUpdateResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableUpdateResponse clone() =>
-      new TableUpdateResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableUpdateResponse create() => new TableUpdateResponse();
-  static PbList<TableUpdateResponse> createRepeated() =>
-      new PbList<TableUpdateResponse>();
-  static TableUpdateResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableUpdateResponse();
-    return _defaultInstance;
-  }
-
+  TableUpdateResponse clone() => TableUpdateResponse()..mergeFromMessage(this);
+  TableUpdateResponse copyWith(void Function(TableUpdateResponse) updates) =>
+      super.copyWith((message) => updates(message as TableUpdateResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static TableUpdateResponse create() => TableUpdateResponse();
+  TableUpdateResponse createEmptyInstance() => create();
+  static $pb.PbList<TableUpdateResponse> createRepeated() =>
+      $pb.PbList<TableUpdateResponse>();
+  static TableUpdateResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TableUpdateResponse _defaultInstance;
-  static void $checkItem(TableUpdateResponse v) {
-    if (v is! TableUpdateResponse) checkItemFailed(v, 'TableUpdateResponse');
-  }
 
   Table get resource => $_getN(0);
   set resource(Table v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyTableUpdateResponse extends TableUpdateResponse
-    with ReadonlyMessageMixin {}
-
-class DatasetListRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetListRequest')
+class DatasetListRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetListRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOB(1, 'listAll')
     ..hasRequiredFields = false;
 
   DatasetListRequest() : super();
-  DatasetListRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetListRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DatasetListRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetListRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DatasetListRequest clone() =>
-      new DatasetListRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DatasetListRequest create() => new DatasetListRequest();
-  static PbList<DatasetListRequest> createRepeated() =>
-      new PbList<DatasetListRequest>();
-  static DatasetListRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetListRequest();
-    return _defaultInstance;
-  }
-
+  DatasetListRequest clone() => DatasetListRequest()..mergeFromMessage(this);
+  DatasetListRequest copyWith(void Function(DatasetListRequest) updates) =>
+      super.copyWith((message) => updates(message as DatasetListRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DatasetListRequest create() => DatasetListRequest();
+  DatasetListRequest createEmptyInstance() => create();
+  static $pb.PbList<DatasetListRequest> createRepeated() =>
+      $pb.PbList<DatasetListRequest>();
+  static DatasetListRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DatasetListRequest _defaultInstance;
-  static void $checkItem(DatasetListRequest v) {
-    if (v is! DatasetListRequest) checkItemFailed(v, 'DatasetListRequest');
-  }
 
-  bool get listAll => $_get(0, false);
-  set listAll(bool v) {
+  $core.bool get listAll => $_get(0, false);
+  set listAll($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasListAll() => $_has(0);
+  $core.bool hasListAll() => $_has(0);
   void clearListAll() => clearField(1);
 }
 
-class _ReadonlyDatasetListRequest extends DatasetListRequest
-    with ReadonlyMessageMixin {}
-
-class DatasetInsertRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetInsertRequest')
+class DatasetInsertRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetInsertRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..a<Dataset>(
-        1, 'resource', PbFieldType.OM, Dataset.getDefault, Dataset.create)
+        1, 'resource', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
 
   DatasetInsertRequest() : super();
-  DatasetInsertRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetInsertRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DatasetInsertRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetInsertRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DatasetInsertRequest clone() =>
-      new DatasetInsertRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DatasetInsertRequest create() => new DatasetInsertRequest();
-  static PbList<DatasetInsertRequest> createRepeated() =>
-      new PbList<DatasetInsertRequest>();
-  static DatasetInsertRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetInsertRequest();
-    return _defaultInstance;
-  }
-
+      DatasetInsertRequest()..mergeFromMessage(this);
+  DatasetInsertRequest copyWith(void Function(DatasetInsertRequest) updates) =>
+      super.copyWith((message) => updates(message as DatasetInsertRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DatasetInsertRequest create() => DatasetInsertRequest();
+  DatasetInsertRequest createEmptyInstance() => create();
+  static $pb.PbList<DatasetInsertRequest> createRepeated() =>
+      $pb.PbList<DatasetInsertRequest>();
+  static DatasetInsertRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DatasetInsertRequest _defaultInstance;
-  static void $checkItem(DatasetInsertRequest v) {
-    if (v is! DatasetInsertRequest) checkItemFailed(v, 'DatasetInsertRequest');
-  }
 
   Dataset get resource => $_getN(0);
   set resource(Dataset v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyDatasetInsertRequest extends DatasetInsertRequest
-    with ReadonlyMessageMixin {}
-
-class DatasetInsertResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetInsertResponse')
+class DatasetInsertResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetInsertResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..a<Dataset>(
-        1, 'resource', PbFieldType.OM, Dataset.getDefault, Dataset.create)
+        1, 'resource', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
 
   DatasetInsertResponse() : super();
-  DatasetInsertResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetInsertResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DatasetInsertResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetInsertResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DatasetInsertResponse clone() =>
-      new DatasetInsertResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DatasetInsertResponse create() => new DatasetInsertResponse();
-  static PbList<DatasetInsertResponse> createRepeated() =>
-      new PbList<DatasetInsertResponse>();
-  static DatasetInsertResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetInsertResponse();
-    return _defaultInstance;
-  }
-
+      DatasetInsertResponse()..mergeFromMessage(this);
+  DatasetInsertResponse copyWith(
+          void Function(DatasetInsertResponse) updates) =>
+      super.copyWith((message) => updates(message as DatasetInsertResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static DatasetInsertResponse create() => DatasetInsertResponse();
+  DatasetInsertResponse createEmptyInstance() => create();
+  static $pb.PbList<DatasetInsertResponse> createRepeated() =>
+      $pb.PbList<DatasetInsertResponse>();
+  static DatasetInsertResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DatasetInsertResponse _defaultInstance;
-  static void $checkItem(DatasetInsertResponse v) {
-    if (v is! DatasetInsertResponse)
-      checkItemFailed(v, 'DatasetInsertResponse');
-  }
 
   Dataset get resource => $_getN(0);
   set resource(Dataset v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyDatasetInsertResponse extends DatasetInsertResponse
-    with ReadonlyMessageMixin {}
-
-class DatasetUpdateRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetUpdateRequest')
+class DatasetUpdateRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetUpdateRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..a<Dataset>(
-        1, 'resource', PbFieldType.OM, Dataset.getDefault, Dataset.create)
+        1, 'resource', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
 
   DatasetUpdateRequest() : super();
-  DatasetUpdateRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetUpdateRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DatasetUpdateRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetUpdateRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DatasetUpdateRequest clone() =>
-      new DatasetUpdateRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DatasetUpdateRequest create() => new DatasetUpdateRequest();
-  static PbList<DatasetUpdateRequest> createRepeated() =>
-      new PbList<DatasetUpdateRequest>();
-  static DatasetUpdateRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetUpdateRequest();
-    return _defaultInstance;
-  }
-
+      DatasetUpdateRequest()..mergeFromMessage(this);
+  DatasetUpdateRequest copyWith(void Function(DatasetUpdateRequest) updates) =>
+      super.copyWith((message) => updates(message as DatasetUpdateRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DatasetUpdateRequest create() => DatasetUpdateRequest();
+  DatasetUpdateRequest createEmptyInstance() => create();
+  static $pb.PbList<DatasetUpdateRequest> createRepeated() =>
+      $pb.PbList<DatasetUpdateRequest>();
+  static DatasetUpdateRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DatasetUpdateRequest _defaultInstance;
-  static void $checkItem(DatasetUpdateRequest v) {
-    if (v is! DatasetUpdateRequest) checkItemFailed(v, 'DatasetUpdateRequest');
-  }
 
   Dataset get resource => $_getN(0);
   set resource(Dataset v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyDatasetUpdateRequest extends DatasetUpdateRequest
-    with ReadonlyMessageMixin {}
-
-class DatasetUpdateResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetUpdateResponse')
+class DatasetUpdateResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetUpdateResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..a<Dataset>(
-        1, 'resource', PbFieldType.OM, Dataset.getDefault, Dataset.create)
+        1, 'resource', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
 
   DatasetUpdateResponse() : super();
-  DatasetUpdateResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetUpdateResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DatasetUpdateResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetUpdateResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DatasetUpdateResponse clone() =>
-      new DatasetUpdateResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DatasetUpdateResponse create() => new DatasetUpdateResponse();
-  static PbList<DatasetUpdateResponse> createRepeated() =>
-      new PbList<DatasetUpdateResponse>();
-  static DatasetUpdateResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetUpdateResponse();
-    return _defaultInstance;
-  }
-
+      DatasetUpdateResponse()..mergeFromMessage(this);
+  DatasetUpdateResponse copyWith(
+          void Function(DatasetUpdateResponse) updates) =>
+      super.copyWith((message) => updates(message as DatasetUpdateResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static DatasetUpdateResponse create() => DatasetUpdateResponse();
+  DatasetUpdateResponse createEmptyInstance() => create();
+  static $pb.PbList<DatasetUpdateResponse> createRepeated() =>
+      $pb.PbList<DatasetUpdateResponse>();
+  static DatasetUpdateResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DatasetUpdateResponse _defaultInstance;
-  static void $checkItem(DatasetUpdateResponse v) {
-    if (v is! DatasetUpdateResponse)
-      checkItemFailed(v, 'DatasetUpdateResponse');
-  }
 
   Dataset get resource => $_getN(0);
   set resource(Dataset v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyDatasetUpdateResponse extends DatasetUpdateResponse
-    with ReadonlyMessageMixin {}
-
-class JobInsertRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobInsertRequest')
-    ..a<Job>(1, 'resource', PbFieldType.OM, Job.getDefault, Job.create)
+class JobInsertRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobInsertRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Job>(1, 'resource', $pb.PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
   JobInsertRequest() : super();
-  JobInsertRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobInsertRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobInsertRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobInsertRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobInsertRequest clone() => new JobInsertRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobInsertRequest create() => new JobInsertRequest();
-  static PbList<JobInsertRequest> createRepeated() =>
-      new PbList<JobInsertRequest>();
-  static JobInsertRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobInsertRequest();
-    return _defaultInstance;
-  }
-
+  JobInsertRequest clone() => JobInsertRequest()..mergeFromMessage(this);
+  JobInsertRequest copyWith(void Function(JobInsertRequest) updates) =>
+      super.copyWith((message) => updates(message as JobInsertRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static JobInsertRequest create() => JobInsertRequest();
+  JobInsertRequest createEmptyInstance() => create();
+  static $pb.PbList<JobInsertRequest> createRepeated() =>
+      $pb.PbList<JobInsertRequest>();
+  static JobInsertRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobInsertRequest _defaultInstance;
-  static void $checkItem(JobInsertRequest v) {
-    if (v is! JobInsertRequest) checkItemFailed(v, 'JobInsertRequest');
-  }
 
   Job get resource => $_getN(0);
   set resource(Job v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyJobInsertRequest extends JobInsertRequest
-    with ReadonlyMessageMixin {}
-
-class JobInsertResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobInsertResponse')
-    ..a<Job>(1, 'resource', PbFieldType.OM, Job.getDefault, Job.create)
+class JobInsertResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobInsertResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Job>(1, 'resource', $pb.PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
   JobInsertResponse() : super();
-  JobInsertResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobInsertResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobInsertResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobInsertResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobInsertResponse clone() => new JobInsertResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobInsertResponse create() => new JobInsertResponse();
-  static PbList<JobInsertResponse> createRepeated() =>
-      new PbList<JobInsertResponse>();
-  static JobInsertResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobInsertResponse();
-    return _defaultInstance;
-  }
-
+  JobInsertResponse clone() => JobInsertResponse()..mergeFromMessage(this);
+  JobInsertResponse copyWith(void Function(JobInsertResponse) updates) =>
+      super.copyWith((message) => updates(message as JobInsertResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static JobInsertResponse create() => JobInsertResponse();
+  JobInsertResponse createEmptyInstance() => create();
+  static $pb.PbList<JobInsertResponse> createRepeated() =>
+      $pb.PbList<JobInsertResponse>();
+  static JobInsertResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobInsertResponse _defaultInstance;
-  static void $checkItem(JobInsertResponse v) {
-    if (v is! JobInsertResponse) checkItemFailed(v, 'JobInsertResponse');
-  }
 
   Job get resource => $_getN(0);
   set resource(Job v) {
     setField(1, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyJobInsertResponse extends JobInsertResponse
-    with ReadonlyMessageMixin {}
-
-class JobQueryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobQueryRequest')
+class JobQueryRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobQueryRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'query')
-    ..a<int>(2, 'maxResults', PbFieldType.OU3)
-    ..a<DatasetName>(3, 'defaultDataset', PbFieldType.OM,
+    ..a<$core.int>(2, 'maxResults', $pb.PbFieldType.OU3)
+    ..a<DatasetName>(3, 'defaultDataset', $pb.PbFieldType.OM,
         DatasetName.getDefault, DatasetName.create)
     ..aOS(4, 'projectId')
     ..aOB(5, 'dryRun')
     ..hasRequiredFields = false;
 
   JobQueryRequest() : super();
-  JobQueryRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobQueryRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobQueryRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobQueryRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobQueryRequest clone() => new JobQueryRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobQueryRequest create() => new JobQueryRequest();
-  static PbList<JobQueryRequest> createRepeated() =>
-      new PbList<JobQueryRequest>();
-  static JobQueryRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobQueryRequest();
-    return _defaultInstance;
-  }
-
+  JobQueryRequest clone() => JobQueryRequest()..mergeFromMessage(this);
+  JobQueryRequest copyWith(void Function(JobQueryRequest) updates) =>
+      super.copyWith((message) => updates(message as JobQueryRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static JobQueryRequest create() => JobQueryRequest();
+  JobQueryRequest createEmptyInstance() => create();
+  static $pb.PbList<JobQueryRequest> createRepeated() =>
+      $pb.PbList<JobQueryRequest>();
+  static JobQueryRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobQueryRequest _defaultInstance;
-  static void $checkItem(JobQueryRequest v) {
-    if (v is! JobQueryRequest) checkItemFailed(v, 'JobQueryRequest');
-  }
 
-  String get query => $_getS(0, '');
-  set query(String v) {
+  $core.String get query => $_getS(0, '');
+  set query($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasQuery() => $_has(0);
+  $core.bool hasQuery() => $_has(0);
   void clearQuery() => clearField(1);
 
-  int get maxResults => $_get(1, 0);
-  set maxResults(int v) {
+  $core.int get maxResults => $_get(1, 0);
+  set maxResults($core.int v) {
     $_setUnsignedInt32(1, v);
   }
 
-  bool hasMaxResults() => $_has(1);
+  $core.bool hasMaxResults() => $_has(1);
   void clearMaxResults() => clearField(2);
 
   DatasetName get defaultDataset => $_getN(2);
@@ -737,64 +719,58 @@ class JobQueryRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasDefaultDataset() => $_has(2);
+  $core.bool hasDefaultDataset() => $_has(2);
   void clearDefaultDataset() => clearField(3);
 
-  String get projectId => $_getS(3, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(3, '');
+  set projectId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasProjectId() => $_has(3);
+  $core.bool hasProjectId() => $_has(3);
   void clearProjectId() => clearField(4);
 
-  bool get dryRun => $_get(4, false);
-  set dryRun(bool v) {
+  $core.bool get dryRun => $_get(4, false);
+  set dryRun($core.bool v) {
     $_setBool(4, v);
   }
 
-  bool hasDryRun() => $_has(4);
+  $core.bool hasDryRun() => $_has(4);
   void clearDryRun() => clearField(5);
 }
 
-class _ReadonlyJobQueryRequest extends JobQueryRequest
-    with ReadonlyMessageMixin {}
-
-class JobQueryResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobQueryResponse')
-    ..a<Int64>(1, 'totalResults', PbFieldType.OU6, Int64.ZERO)
-    ..a<Job>(2, 'job', PbFieldType.OM, Job.getDefault, Job.create)
+class JobQueryResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobQueryResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Int64>(1, 'totalResults', $pb.PbFieldType.OU6, Int64.ZERO)
+    ..a<Job>(2, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
   JobQueryResponse() : super();
-  JobQueryResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobQueryResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobQueryResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobQueryResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobQueryResponse clone() => new JobQueryResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobQueryResponse create() => new JobQueryResponse();
-  static PbList<JobQueryResponse> createRepeated() =>
-      new PbList<JobQueryResponse>();
-  static JobQueryResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobQueryResponse();
-    return _defaultInstance;
-  }
-
+  JobQueryResponse clone() => JobQueryResponse()..mergeFromMessage(this);
+  JobQueryResponse copyWith(void Function(JobQueryResponse) updates) =>
+      super.copyWith((message) => updates(message as JobQueryResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static JobQueryResponse create() => JobQueryResponse();
+  JobQueryResponse createEmptyInstance() => create();
+  static $pb.PbList<JobQueryResponse> createRepeated() =>
+      $pb.PbList<JobQueryResponse>();
+  static JobQueryResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobQueryResponse _defaultInstance;
-  static void $checkItem(JobQueryResponse v) {
-    if (v is! JobQueryResponse) checkItemFailed(v, 'JobQueryResponse');
-  }
 
   Int64 get totalResults => $_getI64(0);
   set totalResults(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasTotalResults() => $_has(0);
+  $core.bool hasTotalResults() => $_has(0);
   void clearTotalResults() => clearField(1);
 
   Job get job => $_getN(1);
@@ -802,50 +778,45 @@ class JobQueryResponse extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasJob() => $_has(1);
+  $core.bool hasJob() => $_has(1);
   void clearJob() => clearField(2);
 }
 
-class _ReadonlyJobQueryResponse extends JobQueryResponse
-    with ReadonlyMessageMixin {}
-
-class JobGetQueryResultsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobGetQueryResultsRequest')
-    ..a<int>(1, 'maxResults', PbFieldType.OU3)
-    ..a<Int64>(2, 'startRow', PbFieldType.OU6, Int64.ZERO)
+class JobGetQueryResultsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobGetQueryResultsRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<$core.int>(1, 'maxResults', $pb.PbFieldType.OU3)
+    ..a<Int64>(2, 'startRow', $pb.PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false;
 
   JobGetQueryResultsRequest() : super();
-  JobGetQueryResultsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobGetQueryResultsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobGetQueryResultsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobGetQueryResultsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobGetQueryResultsRequest clone() =>
-      new JobGetQueryResultsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobGetQueryResultsRequest create() => new JobGetQueryResultsRequest();
-  static PbList<JobGetQueryResultsRequest> createRepeated() =>
-      new PbList<JobGetQueryResultsRequest>();
-  static JobGetQueryResultsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobGetQueryResultsRequest();
-    return _defaultInstance;
-  }
-
+      JobGetQueryResultsRequest()..mergeFromMessage(this);
+  JobGetQueryResultsRequest copyWith(
+          void Function(JobGetQueryResultsRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as JobGetQueryResultsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static JobGetQueryResultsRequest create() => JobGetQueryResultsRequest();
+  JobGetQueryResultsRequest createEmptyInstance() => create();
+  static $pb.PbList<JobGetQueryResultsRequest> createRepeated() =>
+      $pb.PbList<JobGetQueryResultsRequest>();
+  static JobGetQueryResultsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobGetQueryResultsRequest _defaultInstance;
-  static void $checkItem(JobGetQueryResultsRequest v) {
-    if (v is! JobGetQueryResultsRequest)
-      checkItemFailed(v, 'JobGetQueryResultsRequest');
-  }
 
-  int get maxResults => $_get(0, 0);
-  set maxResults(int v) {
+  $core.int get maxResults => $_get(0, 0);
+  set maxResults($core.int v) {
     $_setUnsignedInt32(0, v);
   }
 
-  bool hasMaxResults() => $_has(0);
+  $core.bool hasMaxResults() => $_has(0);
   void clearMaxResults() => clearField(1);
 
   Int64 get startRow => $_getI64(1);
@@ -853,51 +824,46 @@ class JobGetQueryResultsRequest extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasStartRow() => $_has(1);
+  $core.bool hasStartRow() => $_has(1);
   void clearStartRow() => clearField(2);
 }
 
-class _ReadonlyJobGetQueryResultsRequest extends JobGetQueryResultsRequest
-    with ReadonlyMessageMixin {}
-
-class JobGetQueryResultsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobGetQueryResultsResponse')
-    ..a<Int64>(1, 'totalResults', PbFieldType.OU6, Int64.ZERO)
-    ..a<Job>(2, 'job', PbFieldType.OM, Job.getDefault, Job.create)
+class JobGetQueryResultsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'JobGetQueryResultsResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Int64>(1, 'totalResults', $pb.PbFieldType.OU6, Int64.ZERO)
+    ..a<Job>(2, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
   JobGetQueryResultsResponse() : super();
-  JobGetQueryResultsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobGetQueryResultsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobGetQueryResultsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobGetQueryResultsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobGetQueryResultsResponse clone() =>
-      new JobGetQueryResultsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobGetQueryResultsResponse create() =>
-      new JobGetQueryResultsResponse();
-  static PbList<JobGetQueryResultsResponse> createRepeated() =>
-      new PbList<JobGetQueryResultsResponse>();
-  static JobGetQueryResultsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobGetQueryResultsResponse();
-    return _defaultInstance;
-  }
-
+      JobGetQueryResultsResponse()..mergeFromMessage(this);
+  JobGetQueryResultsResponse copyWith(
+          void Function(JobGetQueryResultsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as JobGetQueryResultsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static JobGetQueryResultsResponse create() => JobGetQueryResultsResponse();
+  JobGetQueryResultsResponse createEmptyInstance() => create();
+  static $pb.PbList<JobGetQueryResultsResponse> createRepeated() =>
+      $pb.PbList<JobGetQueryResultsResponse>();
+  static JobGetQueryResultsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobGetQueryResultsResponse _defaultInstance;
-  static void $checkItem(JobGetQueryResultsResponse v) {
-    if (v is! JobGetQueryResultsResponse)
-      checkItemFailed(v, 'JobGetQueryResultsResponse');
-  }
 
   Int64 get totalResults => $_getI64(0);
   set totalResults(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasTotalResults() => $_has(0);
+  $core.bool hasTotalResults() => $_has(0);
   void clearTotalResults() => clearField(1);
 
   Job get job => $_getN(1);
@@ -905,89 +871,77 @@ class JobGetQueryResultsResponse extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasJob() => $_has(1);
+  $core.bool hasJob() => $_has(1);
   void clearJob() => clearField(2);
 }
 
-class _ReadonlyJobGetQueryResultsResponse extends JobGetQueryResultsResponse
-    with ReadonlyMessageMixin {}
-
-class JobQueryDoneResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobQueryDoneResponse')
-    ..a<Job>(1, 'job', PbFieldType.OM, Job.getDefault, Job.create)
+class JobQueryDoneResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobQueryDoneResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Job>(1, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
   JobQueryDoneResponse() : super();
-  JobQueryDoneResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobQueryDoneResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobQueryDoneResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobQueryDoneResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobQueryDoneResponse clone() =>
-      new JobQueryDoneResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobQueryDoneResponse create() => new JobQueryDoneResponse();
-  static PbList<JobQueryDoneResponse> createRepeated() =>
-      new PbList<JobQueryDoneResponse>();
-  static JobQueryDoneResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobQueryDoneResponse();
-    return _defaultInstance;
-  }
-
+      JobQueryDoneResponse()..mergeFromMessage(this);
+  JobQueryDoneResponse copyWith(void Function(JobQueryDoneResponse) updates) =>
+      super.copyWith((message) => updates(message as JobQueryDoneResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static JobQueryDoneResponse create() => JobQueryDoneResponse();
+  JobQueryDoneResponse createEmptyInstance() => create();
+  static $pb.PbList<JobQueryDoneResponse> createRepeated() =>
+      $pb.PbList<JobQueryDoneResponse>();
+  static JobQueryDoneResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobQueryDoneResponse _defaultInstance;
-  static void $checkItem(JobQueryDoneResponse v) {
-    if (v is! JobQueryDoneResponse) checkItemFailed(v, 'JobQueryDoneResponse');
-  }
 
   Job get job => $_getN(0);
   set job(Job v) {
     setField(1, v);
   }
 
-  bool hasJob() => $_has(0);
+  $core.bool hasJob() => $_has(0);
   void clearJob() => clearField(1);
 }
 
-class _ReadonlyJobQueryDoneResponse extends JobQueryDoneResponse
-    with ReadonlyMessageMixin {}
-
-class JobCompletedEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobCompletedEvent')
+class JobCompletedEvent extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobCompletedEvent',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'eventName')
-    ..a<Job>(2, 'job', PbFieldType.OM, Job.getDefault, Job.create)
+    ..a<Job>(2, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
   JobCompletedEvent() : super();
-  JobCompletedEvent.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobCompletedEvent.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobCompletedEvent.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobCompletedEvent.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobCompletedEvent clone() => new JobCompletedEvent()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobCompletedEvent create() => new JobCompletedEvent();
-  static PbList<JobCompletedEvent> createRepeated() =>
-      new PbList<JobCompletedEvent>();
-  static JobCompletedEvent getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobCompletedEvent();
-    return _defaultInstance;
-  }
-
+  JobCompletedEvent clone() => JobCompletedEvent()..mergeFromMessage(this);
+  JobCompletedEvent copyWith(void Function(JobCompletedEvent) updates) =>
+      super.copyWith((message) => updates(message as JobCompletedEvent));
+  $pb.BuilderInfo get info_ => _i;
+  static JobCompletedEvent create() => JobCompletedEvent();
+  JobCompletedEvent createEmptyInstance() => create();
+  static $pb.PbList<JobCompletedEvent> createRepeated() =>
+      $pb.PbList<JobCompletedEvent>();
+  static JobCompletedEvent getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobCompletedEvent _defaultInstance;
-  static void $checkItem(JobCompletedEvent v) {
-    if (v is! JobCompletedEvent) checkItemFailed(v, 'JobCompletedEvent');
-  }
 
-  String get eventName => $_getS(0, '');
-  set eventName(String v) {
+  $core.String get eventName => $_getS(0, '');
+  set eventName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasEventName() => $_has(0);
+  $core.bool hasEventName() => $_has(0);
   void clearEventName() => clearField(1);
 
   Job get job => $_getN(1);
@@ -995,117 +949,95 @@ class JobCompletedEvent extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasJob() => $_has(1);
+  $core.bool hasJob() => $_has(1);
   void clearJob() => clearField(2);
 }
 
-class _ReadonlyJobCompletedEvent extends JobCompletedEvent
-    with ReadonlyMessageMixin {}
-
-class TableDataListRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableDataListRequest')
-    ..a<Int64>(1, 'startRow', PbFieldType.OU6, Int64.ZERO)
-    ..a<int>(2, 'maxResults', PbFieldType.OU3)
+class TableDataListRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableDataListRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<Int64>(1, 'startRow', $pb.PbFieldType.OU6, Int64.ZERO)
+    ..a<$core.int>(2, 'maxResults', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
   TableDataListRequest() : super();
-  TableDataListRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableDataListRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableDataListRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableDataListRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TableDataListRequest clone() =>
-      new TableDataListRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableDataListRequest create() => new TableDataListRequest();
-  static PbList<TableDataListRequest> createRepeated() =>
-      new PbList<TableDataListRequest>();
-  static TableDataListRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableDataListRequest();
-    return _defaultInstance;
-  }
-
+      TableDataListRequest()..mergeFromMessage(this);
+  TableDataListRequest copyWith(void Function(TableDataListRequest) updates) =>
+      super.copyWith((message) => updates(message as TableDataListRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static TableDataListRequest create() => TableDataListRequest();
+  TableDataListRequest createEmptyInstance() => create();
+  static $pb.PbList<TableDataListRequest> createRepeated() =>
+      $pb.PbList<TableDataListRequest>();
+  static TableDataListRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TableDataListRequest _defaultInstance;
-  static void $checkItem(TableDataListRequest v) {
-    if (v is! TableDataListRequest) checkItemFailed(v, 'TableDataListRequest');
-  }
 
   Int64 get startRow => $_getI64(0);
   set startRow(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasStartRow() => $_has(0);
+  $core.bool hasStartRow() => $_has(0);
   void clearStartRow() => clearField(1);
 
-  int get maxResults => $_get(1, 0);
-  set maxResults(int v) {
+  $core.int get maxResults => $_get(1, 0);
+  set maxResults($core.int v) {
     $_setUnsignedInt32(1, v);
   }
 
-  bool hasMaxResults() => $_has(1);
+  $core.bool hasMaxResults() => $_has(1);
   void clearMaxResults() => clearField(2);
 }
 
-class _ReadonlyTableDataListRequest extends TableDataListRequest
-    with ReadonlyMessageMixin {}
-
-class Table extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Table')
-    ..a<TableName>(
-        1, 'tableName', PbFieldType.OM, TableName.getDefault, TableName.create)
+class Table extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Table',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<TableName>(1, 'tableName', $pb.PbFieldType.OM, TableName.getDefault,
+        TableName.create)
     ..a<TableInfo>(
-        2, 'info', PbFieldType.OM, TableInfo.getDefault, TableInfo.create)
-    ..a<TableViewDefinition>(4, 'view', PbFieldType.OM,
+        2, 'info', $pb.PbFieldType.OM, TableInfo.getDefault, TableInfo.create)
+    ..a<TableViewDefinition>(4, 'view', $pb.PbFieldType.OM,
         TableViewDefinition.getDefault, TableViewDefinition.create)
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'expireTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        6,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        7,
-        'truncateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'expireTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(7, 'truncateTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
     ..aOS(8, 'schemaJson')
     ..hasRequiredFields = false;
 
   Table() : super();
-  Table.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Table.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Table.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Table.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Table clone() => new Table()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Table create() => new Table();
-  static PbList<Table> createRepeated() => new PbList<Table>();
-  static Table getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTable();
-    return _defaultInstance;
-  }
-
+  Table clone() => Table()..mergeFromMessage(this);
+  Table copyWith(void Function(Table) updates) =>
+      super.copyWith((message) => updates(message as Table));
+  $pb.BuilderInfo get info_ => _i;
+  static Table create() => Table();
+  Table createEmptyInstance() => create();
+  static $pb.PbList<Table> createRepeated() => $pb.PbList<Table>();
+  static Table getDefault() => _defaultInstance ??= create()..freeze();
   static Table _defaultInstance;
-  static void $checkItem(Table v) {
-    if (v is! Table) checkItemFailed(v, 'Table');
-  }
 
   TableName get tableName => $_getN(0);
   set tableName(TableName v) {
     setField(1, v);
   }
 
-  bool hasTableName() => $_has(0);
+  $core.bool hasTableName() => $_has(0);
   void clearTableName() => clearField(1);
 
   TableInfo get info => $_getN(1);
@@ -1113,7 +1045,7 @@ class Table extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasInfo() => $_has(1);
+  $core.bool hasInfo() => $_has(1);
   void clearInfo() => clearField(2);
 
   TableViewDefinition get view => $_getN(2);
@@ -1121,184 +1053,157 @@ class Table extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasView() => $_has(2);
+  $core.bool hasView() => $_has(2);
   void clearView() => clearField(4);
 
-  $google$protobuf.Timestamp get expireTime => $_getN(3);
-  set expireTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get expireTime => $_getN(3);
+  set expireTime($0.Timestamp v) {
     setField(5, v);
   }
 
-  bool hasExpireTime() => $_has(3);
+  $core.bool hasExpireTime() => $_has(3);
   void clearExpireTime() => clearField(5);
 
-  $google$protobuf.Timestamp get createTime => $_getN(4);
-  set createTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get createTime => $_getN(4);
+  set createTime($0.Timestamp v) {
     setField(6, v);
   }
 
-  bool hasCreateTime() => $_has(4);
+  $core.bool hasCreateTime() => $_has(4);
   void clearCreateTime() => clearField(6);
 
-  $google$protobuf.Timestamp get truncateTime => $_getN(5);
-  set truncateTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get truncateTime => $_getN(5);
+  set truncateTime($0.Timestamp v) {
     setField(7, v);
   }
 
-  bool hasTruncateTime() => $_has(5);
+  $core.bool hasTruncateTime() => $_has(5);
   void clearTruncateTime() => clearField(7);
 
-  String get schemaJson => $_getS(6, '');
-  set schemaJson(String v) {
+  $core.String get schemaJson => $_getS(6, '');
+  set schemaJson($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasSchemaJson() => $_has(6);
+  $core.bool hasSchemaJson() => $_has(6);
   void clearSchemaJson() => clearField(8);
 }
 
-class _ReadonlyTable extends Table with ReadonlyMessageMixin {}
-
-class TableInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableInfo')
+class TableInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableInfo',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'friendlyName')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
   TableInfo() : super();
-  TableInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableInfo clone() => new TableInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableInfo create() => new TableInfo();
-  static PbList<TableInfo> createRepeated() => new PbList<TableInfo>();
-  static TableInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTableInfo();
-    return _defaultInstance;
-  }
-
+  TableInfo clone() => TableInfo()..mergeFromMessage(this);
+  TableInfo copyWith(void Function(TableInfo) updates) =>
+      super.copyWith((message) => updates(message as TableInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static TableInfo create() => TableInfo();
+  TableInfo createEmptyInstance() => create();
+  static $pb.PbList<TableInfo> createRepeated() => $pb.PbList<TableInfo>();
+  static TableInfo getDefault() => _defaultInstance ??= create()..freeze();
   static TableInfo _defaultInstance;
-  static void $checkItem(TableInfo v) {
-    if (v is! TableInfo) checkItemFailed(v, 'TableInfo');
-  }
 
-  String get friendlyName => $_getS(0, '');
-  set friendlyName(String v) {
+  $core.String get friendlyName => $_getS(0, '');
+  set friendlyName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFriendlyName() => $_has(0);
+  $core.bool hasFriendlyName() => $_has(0);
   void clearFriendlyName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 }
 
-class _ReadonlyTableInfo extends TableInfo with ReadonlyMessageMixin {}
-
-class TableViewDefinition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableViewDefinition')
+class TableViewDefinition extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableViewDefinition',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'query')
     ..hasRequiredFields = false;
 
   TableViewDefinition() : super();
-  TableViewDefinition.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableViewDefinition.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableViewDefinition.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableViewDefinition.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableViewDefinition clone() =>
-      new TableViewDefinition()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableViewDefinition create() => new TableViewDefinition();
-  static PbList<TableViewDefinition> createRepeated() =>
-      new PbList<TableViewDefinition>();
-  static TableViewDefinition getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableViewDefinition();
-    return _defaultInstance;
-  }
-
+  TableViewDefinition clone() => TableViewDefinition()..mergeFromMessage(this);
+  TableViewDefinition copyWith(void Function(TableViewDefinition) updates) =>
+      super.copyWith((message) => updates(message as TableViewDefinition));
+  $pb.BuilderInfo get info_ => _i;
+  static TableViewDefinition create() => TableViewDefinition();
+  TableViewDefinition createEmptyInstance() => create();
+  static $pb.PbList<TableViewDefinition> createRepeated() =>
+      $pb.PbList<TableViewDefinition>();
+  static TableViewDefinition getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TableViewDefinition _defaultInstance;
-  static void $checkItem(TableViewDefinition v) {
-    if (v is! TableViewDefinition) checkItemFailed(v, 'TableViewDefinition');
-  }
 
-  String get query => $_getS(0, '');
-  set query(String v) {
+  $core.String get query => $_getS(0, '');
+  set query($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasQuery() => $_has(0);
+  $core.bool hasQuery() => $_has(0);
   void clearQuery() => clearField(1);
 }
 
-class _ReadonlyTableViewDefinition extends TableViewDefinition
-    with ReadonlyMessageMixin {}
-
-class Dataset extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Dataset')
-    ..a<DatasetName>(1, 'datasetName', PbFieldType.OM, DatasetName.getDefault,
-        DatasetName.create)
-    ..a<DatasetInfo>(
-        2, 'info', PbFieldType.OM, DatasetInfo.getDefault, DatasetInfo.create)
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'updateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<BigQueryAcl>(
-        6, 'acl', PbFieldType.OM, BigQueryAcl.getDefault, BigQueryAcl.create)
-    ..a<$google$protobuf.Duration>(
-        8,
-        'defaultTableExpireDuration',
-        PbFieldType.OM,
-        $google$protobuf.Duration.getDefault,
-        $google$protobuf.Duration.create)
+class Dataset extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Dataset',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<DatasetName>(1, 'datasetName', $pb.PbFieldType.OM,
+        DatasetName.getDefault, DatasetName.create)
+    ..a<DatasetInfo>(2, 'info', $pb.PbFieldType.OM, DatasetInfo.getDefault,
+        DatasetInfo.create)
+    ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<BigQueryAcl>(6, 'acl', $pb.PbFieldType.OM, BigQueryAcl.getDefault,
+        BigQueryAcl.create)
+    ..a<$1.Duration>(8, 'defaultTableExpireDuration', $pb.PbFieldType.OM,
+        $1.Duration.getDefault, $1.Duration.create)
     ..hasRequiredFields = false;
 
   Dataset() : super();
-  Dataset.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Dataset.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Dataset.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Dataset.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Dataset clone() => new Dataset()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Dataset create() => new Dataset();
-  static PbList<Dataset> createRepeated() => new PbList<Dataset>();
-  static Dataset getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDataset();
-    return _defaultInstance;
-  }
-
+  Dataset clone() => Dataset()..mergeFromMessage(this);
+  Dataset copyWith(void Function(Dataset) updates) =>
+      super.copyWith((message) => updates(message as Dataset));
+  $pb.BuilderInfo get info_ => _i;
+  static Dataset create() => Dataset();
+  Dataset createEmptyInstance() => create();
+  static $pb.PbList<Dataset> createRepeated() => $pb.PbList<Dataset>();
+  static Dataset getDefault() => _defaultInstance ??= create()..freeze();
   static Dataset _defaultInstance;
-  static void $checkItem(Dataset v) {
-    if (v is! Dataset) checkItemFailed(v, 'Dataset');
-  }
 
   DatasetName get datasetName => $_getN(0);
   set datasetName(DatasetName v) {
     setField(1, v);
   }
 
-  bool hasDatasetName() => $_has(0);
+  $core.bool hasDatasetName() => $_has(0);
   void clearDatasetName() => clearField(1);
 
   DatasetInfo get info => $_getN(1);
@@ -1306,23 +1211,23 @@ class Dataset extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasInfo() => $_has(1);
+  $core.bool hasInfo() => $_has(1);
   void clearInfo() => clearField(2);
 
-  $google$protobuf.Timestamp get createTime => $_getN(2);
-  set createTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get createTime => $_getN(2);
+  set createTime($0.Timestamp v) {
     setField(4, v);
   }
 
-  bool hasCreateTime() => $_has(2);
+  $core.bool hasCreateTime() => $_has(2);
   void clearCreateTime() => clearField(4);
 
-  $google$protobuf.Timestamp get updateTime => $_getN(3);
-  set updateTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get updateTime => $_getN(3);
+  set updateTime($0.Timestamp v) {
     setField(5, v);
   }
 
-  bool hasUpdateTime() => $_has(3);
+  $core.bool hasUpdateTime() => $_has(3);
   void clearUpdateTime() => clearField(5);
 
   BigQueryAcl get acl => $_getN(4);
@@ -1330,138 +1235,128 @@ class Dataset extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasAcl() => $_has(4);
+  $core.bool hasAcl() => $_has(4);
   void clearAcl() => clearField(6);
 
-  $google$protobuf.Duration get defaultTableExpireDuration => $_getN(5);
-  set defaultTableExpireDuration($google$protobuf.Duration v) {
+  $1.Duration get defaultTableExpireDuration => $_getN(5);
+  set defaultTableExpireDuration($1.Duration v) {
     setField(8, v);
   }
 
-  bool hasDefaultTableExpireDuration() => $_has(5);
+  $core.bool hasDefaultTableExpireDuration() => $_has(5);
   void clearDefaultTableExpireDuration() => clearField(8);
 }
 
-class _ReadonlyDataset extends Dataset with ReadonlyMessageMixin {}
-
-class DatasetInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetInfo')
+class DatasetInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetInfo',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'friendlyName')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
   DatasetInfo() : super();
-  DatasetInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DatasetInfo.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DatasetInfo clone() => new DatasetInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DatasetInfo create() => new DatasetInfo();
-  static PbList<DatasetInfo> createRepeated() => new PbList<DatasetInfo>();
-  static DatasetInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDatasetInfo();
-    return _defaultInstance;
-  }
-
+  DatasetInfo clone() => DatasetInfo()..mergeFromMessage(this);
+  DatasetInfo copyWith(void Function(DatasetInfo) updates) =>
+      super.copyWith((message) => updates(message as DatasetInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static DatasetInfo create() => DatasetInfo();
+  DatasetInfo createEmptyInstance() => create();
+  static $pb.PbList<DatasetInfo> createRepeated() => $pb.PbList<DatasetInfo>();
+  static DatasetInfo getDefault() => _defaultInstance ??= create()..freeze();
   static DatasetInfo _defaultInstance;
-  static void $checkItem(DatasetInfo v) {
-    if (v is! DatasetInfo) checkItemFailed(v, 'DatasetInfo');
-  }
 
-  String get friendlyName => $_getS(0, '');
-  set friendlyName(String v) {
+  $core.String get friendlyName => $_getS(0, '');
+  set friendlyName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFriendlyName() => $_has(0);
+  $core.bool hasFriendlyName() => $_has(0);
   void clearFriendlyName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 }
 
-class _ReadonlyDatasetInfo extends DatasetInfo with ReadonlyMessageMixin {}
-
-class BigQueryAcl_Entry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BigQueryAcl_Entry')
+class BigQueryAcl_Entry extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BigQueryAcl.Entry',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'role')
     ..aOS(2, 'groupEmail')
     ..aOS(3, 'userEmail')
     ..aOS(4, 'domain')
     ..aOS(5, 'specialGroup')
-    ..a<TableName>(
-        6, 'viewName', PbFieldType.OM, TableName.getDefault, TableName.create)
+    ..a<TableName>(6, 'viewName', $pb.PbFieldType.OM, TableName.getDefault,
+        TableName.create)
     ..hasRequiredFields = false;
 
   BigQueryAcl_Entry() : super();
-  BigQueryAcl_Entry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BigQueryAcl_Entry.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BigQueryAcl_Entry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BigQueryAcl_Entry.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BigQueryAcl_Entry clone() => new BigQueryAcl_Entry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BigQueryAcl_Entry create() => new BigQueryAcl_Entry();
-  static PbList<BigQueryAcl_Entry> createRepeated() =>
-      new PbList<BigQueryAcl_Entry>();
-  static BigQueryAcl_Entry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBigQueryAcl_Entry();
-    return _defaultInstance;
-  }
-
+  BigQueryAcl_Entry clone() => BigQueryAcl_Entry()..mergeFromMessage(this);
+  BigQueryAcl_Entry copyWith(void Function(BigQueryAcl_Entry) updates) =>
+      super.copyWith((message) => updates(message as BigQueryAcl_Entry));
+  $pb.BuilderInfo get info_ => _i;
+  static BigQueryAcl_Entry create() => BigQueryAcl_Entry();
+  BigQueryAcl_Entry createEmptyInstance() => create();
+  static $pb.PbList<BigQueryAcl_Entry> createRepeated() =>
+      $pb.PbList<BigQueryAcl_Entry>();
+  static BigQueryAcl_Entry getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BigQueryAcl_Entry _defaultInstance;
-  static void $checkItem(BigQueryAcl_Entry v) {
-    if (v is! BigQueryAcl_Entry) checkItemFailed(v, 'BigQueryAcl_Entry');
-  }
 
-  String get role => $_getS(0, '');
-  set role(String v) {
+  $core.String get role => $_getS(0, '');
+  set role($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasRole() => $_has(0);
+  $core.bool hasRole() => $_has(0);
   void clearRole() => clearField(1);
 
-  String get groupEmail => $_getS(1, '');
-  set groupEmail(String v) {
+  $core.String get groupEmail => $_getS(1, '');
+  set groupEmail($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasGroupEmail() => $_has(1);
+  $core.bool hasGroupEmail() => $_has(1);
   void clearGroupEmail() => clearField(2);
 
-  String get userEmail => $_getS(2, '');
-  set userEmail(String v) {
+  $core.String get userEmail => $_getS(2, '');
+  set userEmail($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasUserEmail() => $_has(2);
+  $core.bool hasUserEmail() => $_has(2);
   void clearUserEmail() => clearField(3);
 
-  String get domain => $_getS(3, '');
-  set domain(String v) {
+  $core.String get domain => $_getS(3, '');
+  set domain($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDomain() => $_has(3);
+  $core.bool hasDomain() => $_has(3);
   void clearDomain() => clearField(4);
 
-  String get specialGroup => $_getS(4, '');
-  set specialGroup(String v) {
+  $core.String get specialGroup => $_getS(4, '');
+  set specialGroup($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasSpecialGroup() => $_has(4);
+  $core.bool hasSpecialGroup() => $_has(4);
   void clearSpecialGroup() => clearField(5);
 
   TableName get viewName => $_getN(5);
@@ -1469,82 +1364,73 @@ class BigQueryAcl_Entry extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasViewName() => $_has(5);
+  $core.bool hasViewName() => $_has(5);
   void clearViewName() => clearField(6);
 }
 
-class _ReadonlyBigQueryAcl_Entry extends BigQueryAcl_Entry
-    with ReadonlyMessageMixin {}
-
-class BigQueryAcl extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BigQueryAcl')
-    ..pp<BigQueryAcl_Entry>(1, 'entries', PbFieldType.PM,
-        BigQueryAcl_Entry.$checkItem, BigQueryAcl_Entry.create)
+class BigQueryAcl extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BigQueryAcl',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..pc<BigQueryAcl_Entry>(
+        1, 'entries', $pb.PbFieldType.PM, BigQueryAcl_Entry.create)
     ..hasRequiredFields = false;
 
   BigQueryAcl() : super();
-  BigQueryAcl.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BigQueryAcl.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BigQueryAcl.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BigQueryAcl.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BigQueryAcl clone() => new BigQueryAcl()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BigQueryAcl create() => new BigQueryAcl();
-  static PbList<BigQueryAcl> createRepeated() => new PbList<BigQueryAcl>();
-  static BigQueryAcl getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBigQueryAcl();
-    return _defaultInstance;
-  }
-
+  BigQueryAcl clone() => BigQueryAcl()..mergeFromMessage(this);
+  BigQueryAcl copyWith(void Function(BigQueryAcl) updates) =>
+      super.copyWith((message) => updates(message as BigQueryAcl));
+  $pb.BuilderInfo get info_ => _i;
+  static BigQueryAcl create() => BigQueryAcl();
+  BigQueryAcl createEmptyInstance() => create();
+  static $pb.PbList<BigQueryAcl> createRepeated() => $pb.PbList<BigQueryAcl>();
+  static BigQueryAcl getDefault() => _defaultInstance ??= create()..freeze();
   static BigQueryAcl _defaultInstance;
-  static void $checkItem(BigQueryAcl v) {
-    if (v is! BigQueryAcl) checkItemFailed(v, 'BigQueryAcl');
-  }
 
-  List<BigQueryAcl_Entry> get entries => $_getList(0);
+  $core.List<BigQueryAcl_Entry> get entries => $_getList(0);
 }
 
-class _ReadonlyBigQueryAcl extends BigQueryAcl with ReadonlyMessageMixin {}
-
-class Job extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Job')
+class Job extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Job',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..a<JobName>(
-        1, 'jobName', PbFieldType.OM, JobName.getDefault, JobName.create)
-    ..a<JobConfiguration>(2, 'jobConfiguration', PbFieldType.OM,
+        1, 'jobName', $pb.PbFieldType.OM, JobName.getDefault, JobName.create)
+    ..a<JobConfiguration>(2, 'jobConfiguration', $pb.PbFieldType.OM,
         JobConfiguration.getDefault, JobConfiguration.create)
-    ..a<JobStatus>(
-        3, 'jobStatus', PbFieldType.OM, JobStatus.getDefault, JobStatus.create)
-    ..a<JobStatistics>(4, 'jobStatistics', PbFieldType.OM,
+    ..a<JobStatus>(3, 'jobStatus', $pb.PbFieldType.OM, JobStatus.getDefault,
+        JobStatus.create)
+    ..a<JobStatistics>(4, 'jobStatistics', $pb.PbFieldType.OM,
         JobStatistics.getDefault, JobStatistics.create)
     ..hasRequiredFields = false;
 
   Job() : super();
-  Job.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Job.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Job.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Job.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Job clone() => new Job()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Job create() => new Job();
-  static PbList<Job> createRepeated() => new PbList<Job>();
-  static Job getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyJob();
-    return _defaultInstance;
-  }
-
+  Job clone() => Job()..mergeFromMessage(this);
+  Job copyWith(void Function(Job) updates) =>
+      super.copyWith((message) => updates(message as Job));
+  $pb.BuilderInfo get info_ => _i;
+  static Job create() => Job();
+  Job createEmptyInstance() => create();
+  static $pb.PbList<Job> createRepeated() => $pb.PbList<Job>();
+  static Job getDefault() => _defaultInstance ??= create()..freeze();
   static Job _defaultInstance;
-  static void $checkItem(Job v) {
-    if (v is! Job) checkItemFailed(v, 'Job');
-  }
 
   JobName get jobName => $_getN(0);
   set jobName(JobName v) {
     setField(1, v);
   }
 
-  bool hasJobName() => $_has(0);
+  $core.bool hasJobName() => $_has(0);
   void clearJobName() => clearField(1);
 
   JobConfiguration get jobConfiguration => $_getN(1);
@@ -1552,7 +1438,7 @@ class Job extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasJobConfiguration() => $_has(1);
+  $core.bool hasJobConfiguration() => $_has(1);
   void clearJobConfiguration() => clearField(2);
 
   JobStatus get jobStatus => $_getN(2);
@@ -1560,7 +1446,7 @@ class Job extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasJobStatus() => $_has(2);
+  $core.bool hasJobStatus() => $_has(2);
   void clearJobStatus() => clearField(3);
 
   JobStatistics get jobStatistics => $_getN(3);
@@ -1568,56 +1454,51 @@ class Job extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasJobStatistics() => $_has(3);
+  $core.bool hasJobStatistics() => $_has(3);
   void clearJobStatistics() => clearField(4);
 }
 
-class _ReadonlyJob extends Job with ReadonlyMessageMixin {}
-
-class JobConfiguration_Query extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration_Query')
+class JobConfiguration_Query extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobConfiguration.Query',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'query')
-    ..a<TableName>(2, 'destinationTable', PbFieldType.OM, TableName.getDefault,
-        TableName.create)
+    ..a<TableName>(2, 'destinationTable', $pb.PbFieldType.OM,
+        TableName.getDefault, TableName.create)
     ..aOS(3, 'createDisposition')
     ..aOS(4, 'writeDisposition')
-    ..a<DatasetName>(5, 'defaultDataset', PbFieldType.OM,
+    ..a<DatasetName>(5, 'defaultDataset', $pb.PbFieldType.OM,
         DatasetName.getDefault, DatasetName.create)
-    ..pp<TableDefinition>(6, 'tableDefinitions', PbFieldType.PM,
-        TableDefinition.$checkItem, TableDefinition.create)
+    ..pc<TableDefinition>(
+        6, 'tableDefinitions', $pb.PbFieldType.PM, TableDefinition.create)
     ..hasRequiredFields = false;
 
   JobConfiguration_Query() : super();
-  JobConfiguration_Query.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration_Query.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobConfiguration_Query.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration_Query.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobConfiguration_Query clone() =>
-      new JobConfiguration_Query()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobConfiguration_Query create() => new JobConfiguration_Query();
-  static PbList<JobConfiguration_Query> createRepeated() =>
-      new PbList<JobConfiguration_Query>();
-  static JobConfiguration_Query getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration_Query();
-    return _defaultInstance;
-  }
-
+      JobConfiguration_Query()..mergeFromMessage(this);
+  JobConfiguration_Query copyWith(
+          void Function(JobConfiguration_Query) updates) =>
+      super.copyWith((message) => updates(message as JobConfiguration_Query));
+  $pb.BuilderInfo get info_ => _i;
+  static JobConfiguration_Query create() => JobConfiguration_Query();
+  JobConfiguration_Query createEmptyInstance() => create();
+  static $pb.PbList<JobConfiguration_Query> createRepeated() =>
+      $pb.PbList<JobConfiguration_Query>();
+  static JobConfiguration_Query getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobConfiguration_Query _defaultInstance;
-  static void $checkItem(JobConfiguration_Query v) {
-    if (v is! JobConfiguration_Query)
-      checkItemFailed(v, 'JobConfiguration_Query');
-  }
 
-  String get query => $_getS(0, '');
-  set query(String v) {
+  $core.String get query => $_getS(0, '');
+  set query($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasQuery() => $_has(0);
+  $core.bool hasQuery() => $_has(0);
   void clearQuery() => clearField(1);
 
   TableName get destinationTable => $_getN(1);
@@ -1625,23 +1506,23 @@ class JobConfiguration_Query extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasDestinationTable() => $_has(1);
+  $core.bool hasDestinationTable() => $_has(1);
   void clearDestinationTable() => clearField(2);
 
-  String get createDisposition => $_getS(2, '');
-  set createDisposition(String v) {
+  $core.String get createDisposition => $_getS(2, '');
+  set createDisposition($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasCreateDisposition() => $_has(2);
+  $core.bool hasCreateDisposition() => $_has(2);
   void clearCreateDisposition() => clearField(3);
 
-  String get writeDisposition => $_getS(3, '');
-  set writeDisposition(String v) {
+  $core.String get writeDisposition => $_getS(3, '');
+  set writeDisposition($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasWriteDisposition() => $_has(3);
+  $core.bool hasWriteDisposition() => $_has(3);
   void clearWriteDisposition() => clearField(4);
 
   DatasetName get defaultDataset => $_getN(4);
@@ -1649,246 +1530,237 @@ class JobConfiguration_Query extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasDefaultDataset() => $_has(4);
+  $core.bool hasDefaultDataset() => $_has(4);
   void clearDefaultDataset() => clearField(5);
 
-  List<TableDefinition> get tableDefinitions => $_getList(5);
+  $core.List<TableDefinition> get tableDefinitions => $_getList(5);
 }
 
-class _ReadonlyJobConfiguration_Query extends JobConfiguration_Query
-    with ReadonlyMessageMixin {}
-
-class JobConfiguration_Load extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration_Load')
+class JobConfiguration_Load extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobConfiguration.Load',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..pPS(1, 'sourceUris')
-    ..a<TableName>(3, 'destinationTable', PbFieldType.OM, TableName.getDefault,
-        TableName.create)
+    ..a<TableName>(3, 'destinationTable', $pb.PbFieldType.OM,
+        TableName.getDefault, TableName.create)
     ..aOS(4, 'createDisposition')
     ..aOS(5, 'writeDisposition')
     ..aOS(6, 'schemaJson')
     ..hasRequiredFields = false;
 
   JobConfiguration_Load() : super();
-  JobConfiguration_Load.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration_Load.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobConfiguration_Load.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration_Load.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobConfiguration_Load clone() =>
-      new JobConfiguration_Load()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobConfiguration_Load create() => new JobConfiguration_Load();
-  static PbList<JobConfiguration_Load> createRepeated() =>
-      new PbList<JobConfiguration_Load>();
-  static JobConfiguration_Load getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration_Load();
-    return _defaultInstance;
-  }
-
+      JobConfiguration_Load()..mergeFromMessage(this);
+  JobConfiguration_Load copyWith(
+          void Function(JobConfiguration_Load) updates) =>
+      super.copyWith((message) => updates(message as JobConfiguration_Load));
+  $pb.BuilderInfo get info_ => _i;
+  static JobConfiguration_Load create() => JobConfiguration_Load();
+  JobConfiguration_Load createEmptyInstance() => create();
+  static $pb.PbList<JobConfiguration_Load> createRepeated() =>
+      $pb.PbList<JobConfiguration_Load>();
+  static JobConfiguration_Load getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobConfiguration_Load _defaultInstance;
-  static void $checkItem(JobConfiguration_Load v) {
-    if (v is! JobConfiguration_Load)
-      checkItemFailed(v, 'JobConfiguration_Load');
-  }
 
-  List<String> get sourceUris => $_getList(0);
+  $core.List<$core.String> get sourceUris => $_getList(0);
 
   TableName get destinationTable => $_getN(1);
   set destinationTable(TableName v) {
     setField(3, v);
   }
 
-  bool hasDestinationTable() => $_has(1);
+  $core.bool hasDestinationTable() => $_has(1);
   void clearDestinationTable() => clearField(3);
 
-  String get createDisposition => $_getS(2, '');
-  set createDisposition(String v) {
+  $core.String get createDisposition => $_getS(2, '');
+  set createDisposition($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasCreateDisposition() => $_has(2);
+  $core.bool hasCreateDisposition() => $_has(2);
   void clearCreateDisposition() => clearField(4);
 
-  String get writeDisposition => $_getS(3, '');
-  set writeDisposition(String v) {
+  $core.String get writeDisposition => $_getS(3, '');
+  set writeDisposition($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasWriteDisposition() => $_has(3);
+  $core.bool hasWriteDisposition() => $_has(3);
   void clearWriteDisposition() => clearField(5);
 
-  String get schemaJson => $_getS(4, '');
-  set schemaJson(String v) {
+  $core.String get schemaJson => $_getS(4, '');
+  set schemaJson($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasSchemaJson() => $_has(4);
+  $core.bool hasSchemaJson() => $_has(4);
   void clearSchemaJson() => clearField(6);
 }
 
-class _ReadonlyJobConfiguration_Load extends JobConfiguration_Load
-    with ReadonlyMessageMixin {}
-
-class JobConfiguration_Extract extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration_Extract')
+class JobConfiguration_Extract extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobConfiguration.Extract',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..pPS(1, 'destinationUris')
-    ..a<TableName>(2, 'sourceTable', PbFieldType.OM, TableName.getDefault,
+    ..a<TableName>(2, 'sourceTable', $pb.PbFieldType.OM, TableName.getDefault,
         TableName.create)
     ..hasRequiredFields = false;
 
   JobConfiguration_Extract() : super();
-  JobConfiguration_Extract.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration_Extract.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobConfiguration_Extract.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration_Extract.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobConfiguration_Extract clone() =>
-      new JobConfiguration_Extract()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobConfiguration_Extract create() => new JobConfiguration_Extract();
-  static PbList<JobConfiguration_Extract> createRepeated() =>
-      new PbList<JobConfiguration_Extract>();
-  static JobConfiguration_Extract getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration_Extract();
-    return _defaultInstance;
-  }
-
+      JobConfiguration_Extract()..mergeFromMessage(this);
+  JobConfiguration_Extract copyWith(
+          void Function(JobConfiguration_Extract) updates) =>
+      super.copyWith((message) => updates(message as JobConfiguration_Extract));
+  $pb.BuilderInfo get info_ => _i;
+  static JobConfiguration_Extract create() => JobConfiguration_Extract();
+  JobConfiguration_Extract createEmptyInstance() => create();
+  static $pb.PbList<JobConfiguration_Extract> createRepeated() =>
+      $pb.PbList<JobConfiguration_Extract>();
+  static JobConfiguration_Extract getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobConfiguration_Extract _defaultInstance;
-  static void $checkItem(JobConfiguration_Extract v) {
-    if (v is! JobConfiguration_Extract)
-      checkItemFailed(v, 'JobConfiguration_Extract');
-  }
 
-  List<String> get destinationUris => $_getList(0);
+  $core.List<$core.String> get destinationUris => $_getList(0);
 
   TableName get sourceTable => $_getN(1);
   set sourceTable(TableName v) {
     setField(2, v);
   }
 
-  bool hasSourceTable() => $_has(1);
+  $core.bool hasSourceTable() => $_has(1);
   void clearSourceTable() => clearField(2);
 }
 
-class _ReadonlyJobConfiguration_Extract extends JobConfiguration_Extract
-    with ReadonlyMessageMixin {}
-
-class JobConfiguration_TableCopy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration_TableCopy')
-    ..pp<TableName>(1, 'sourceTables', PbFieldType.PM, TableName.$checkItem,
-        TableName.create)
-    ..a<TableName>(2, 'destinationTable', PbFieldType.OM, TableName.getDefault,
-        TableName.create)
+class JobConfiguration_TableCopy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'JobConfiguration.TableCopy',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..pc<TableName>(1, 'sourceTables', $pb.PbFieldType.PM, TableName.create)
+    ..a<TableName>(2, 'destinationTable', $pb.PbFieldType.OM,
+        TableName.getDefault, TableName.create)
     ..aOS(3, 'createDisposition')
     ..aOS(4, 'writeDisposition')
     ..hasRequiredFields = false;
 
   JobConfiguration_TableCopy() : super();
-  JobConfiguration_TableCopy.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration_TableCopy.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobConfiguration_TableCopy.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration_TableCopy.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobConfiguration_TableCopy clone() =>
-      new JobConfiguration_TableCopy()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobConfiguration_TableCopy create() =>
-      new JobConfiguration_TableCopy();
-  static PbList<JobConfiguration_TableCopy> createRepeated() =>
-      new PbList<JobConfiguration_TableCopy>();
-  static JobConfiguration_TableCopy getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration_TableCopy();
-    return _defaultInstance;
-  }
-
+      JobConfiguration_TableCopy()..mergeFromMessage(this);
+  JobConfiguration_TableCopy copyWith(
+          void Function(JobConfiguration_TableCopy) updates) =>
+      super.copyWith(
+          (message) => updates(message as JobConfiguration_TableCopy));
+  $pb.BuilderInfo get info_ => _i;
+  static JobConfiguration_TableCopy create() => JobConfiguration_TableCopy();
+  JobConfiguration_TableCopy createEmptyInstance() => create();
+  static $pb.PbList<JobConfiguration_TableCopy> createRepeated() =>
+      $pb.PbList<JobConfiguration_TableCopy>();
+  static JobConfiguration_TableCopy getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobConfiguration_TableCopy _defaultInstance;
-  static void $checkItem(JobConfiguration_TableCopy v) {
-    if (v is! JobConfiguration_TableCopy)
-      checkItemFailed(v, 'JobConfiguration_TableCopy');
-  }
 
-  List<TableName> get sourceTables => $_getList(0);
+  $core.List<TableName> get sourceTables => $_getList(0);
 
   TableName get destinationTable => $_getN(1);
   set destinationTable(TableName v) {
     setField(2, v);
   }
 
-  bool hasDestinationTable() => $_has(1);
+  $core.bool hasDestinationTable() => $_has(1);
   void clearDestinationTable() => clearField(2);
 
-  String get createDisposition => $_getS(2, '');
-  set createDisposition(String v) {
+  $core.String get createDisposition => $_getS(2, '');
+  set createDisposition($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasCreateDisposition() => $_has(2);
+  $core.bool hasCreateDisposition() => $_has(2);
   void clearCreateDisposition() => clearField(3);
 
-  String get writeDisposition => $_getS(3, '');
-  set writeDisposition(String v) {
+  $core.String get writeDisposition => $_getS(3, '');
+  set writeDisposition($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasWriteDisposition() => $_has(3);
+  $core.bool hasWriteDisposition() => $_has(3);
   void clearWriteDisposition() => clearField(4);
 }
 
-class _ReadonlyJobConfiguration_TableCopy extends JobConfiguration_TableCopy
-    with ReadonlyMessageMixin {}
+enum JobConfiguration_Configuration { query, load, extract, tableCopy, notSet }
 
-class JobConfiguration extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration')
-    ..a<JobConfiguration_Query>(5, 'query', PbFieldType.OM,
+class JobConfiguration extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, JobConfiguration_Configuration>
+      _JobConfiguration_ConfigurationByTag = {
+    5: JobConfiguration_Configuration.query,
+    6: JobConfiguration_Configuration.load,
+    7: JobConfiguration_Configuration.extract,
+    8: JobConfiguration_Configuration.tableCopy,
+    0: JobConfiguration_Configuration.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobConfiguration',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<JobConfiguration_Query>(5, 'query', $pb.PbFieldType.OM,
         JobConfiguration_Query.getDefault, JobConfiguration_Query.create)
-    ..a<JobConfiguration_Load>(6, 'load', PbFieldType.OM,
+    ..a<JobConfiguration_Load>(6, 'load', $pb.PbFieldType.OM,
         JobConfiguration_Load.getDefault, JobConfiguration_Load.create)
-    ..a<JobConfiguration_Extract>(7, 'extract', PbFieldType.OM,
+    ..a<JobConfiguration_Extract>(7, 'extract', $pb.PbFieldType.OM,
         JobConfiguration_Extract.getDefault, JobConfiguration_Extract.create)
     ..a<JobConfiguration_TableCopy>(
         8,
         'tableCopy',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         JobConfiguration_TableCopy.getDefault,
         JobConfiguration_TableCopy.create)
     ..aOB(9, 'dryRun')
+    ..oo(0, [5, 6, 7, 8])
     ..hasRequiredFields = false;
 
   JobConfiguration() : super();
-  JobConfiguration.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobConfiguration.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobConfiguration.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobConfiguration clone() => new JobConfiguration()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobConfiguration create() => new JobConfiguration();
-  static PbList<JobConfiguration> createRepeated() =>
-      new PbList<JobConfiguration>();
-  static JobConfiguration getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration();
-    return _defaultInstance;
-  }
-
+  JobConfiguration clone() => JobConfiguration()..mergeFromMessage(this);
+  JobConfiguration copyWith(void Function(JobConfiguration) updates) =>
+      super.copyWith((message) => updates(message as JobConfiguration));
+  $pb.BuilderInfo get info_ => _i;
+  static JobConfiguration create() => JobConfiguration();
+  JobConfiguration createEmptyInstance() => create();
+  static $pb.PbList<JobConfiguration> createRepeated() =>
+      $pb.PbList<JobConfiguration>();
+  static JobConfiguration getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static JobConfiguration _defaultInstance;
-  static void $checkItem(JobConfiguration v) {
-    if (v is! JobConfiguration) checkItemFailed(v, 'JobConfiguration');
-  }
+
+  JobConfiguration_Configuration whichConfiguration() =>
+      _JobConfiguration_ConfigurationByTag[$_whichOneof(0)];
+  void clearConfiguration() => clearField($_whichOneof(0));
 
   JobConfiguration_Query get query => $_getN(0);
   set query(JobConfiguration_Query v) {
     setField(5, v);
   }
 
-  bool hasQuery() => $_has(0);
+  $core.bool hasQuery() => $_has(0);
   void clearQuery() => clearField(5);
 
   JobConfiguration_Load get load => $_getN(1);
@@ -1896,7 +1768,7 @@ class JobConfiguration extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasLoad() => $_has(1);
+  $core.bool hasLoad() => $_has(1);
   void clearLoad() => clearField(6);
 
   JobConfiguration_Extract get extract => $_getN(2);
@@ -1904,7 +1776,7 @@ class JobConfiguration extends GeneratedMessage {
     setField(7, v);
   }
 
-  bool hasExtract() => $_has(2);
+  $core.bool hasExtract() => $_has(2);
   void clearExtract() => clearField(7);
 
   JobConfiguration_TableCopy get tableCopy => $_getN(3);
@@ -1912,179 +1784,151 @@ class JobConfiguration extends GeneratedMessage {
     setField(8, v);
   }
 
-  bool hasTableCopy() => $_has(3);
+  $core.bool hasTableCopy() => $_has(3);
   void clearTableCopy() => clearField(8);
 
-  bool get dryRun => $_get(4, false);
-  set dryRun(bool v) {
+  $core.bool get dryRun => $_get(4, false);
+  set dryRun($core.bool v) {
     $_setBool(4, v);
   }
 
-  bool hasDryRun() => $_has(4);
+  $core.bool hasDryRun() => $_has(4);
   void clearDryRun() => clearField(9);
 }
 
-class _ReadonlyJobConfiguration extends JobConfiguration
-    with ReadonlyMessageMixin {}
-
-class TableDefinition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableDefinition')
+class TableDefinition extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableDefinition',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'name')
     ..pPS(2, 'sourceUris')
     ..hasRequiredFields = false;
 
   TableDefinition() : super();
-  TableDefinition.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableDefinition.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableDefinition.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableDefinition.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableDefinition clone() => new TableDefinition()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableDefinition create() => new TableDefinition();
-  static PbList<TableDefinition> createRepeated() =>
-      new PbList<TableDefinition>();
-  static TableDefinition getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableDefinition();
-    return _defaultInstance;
-  }
-
+  TableDefinition clone() => TableDefinition()..mergeFromMessage(this);
+  TableDefinition copyWith(void Function(TableDefinition) updates) =>
+      super.copyWith((message) => updates(message as TableDefinition));
+  $pb.BuilderInfo get info_ => _i;
+  static TableDefinition create() => TableDefinition();
+  TableDefinition createEmptyInstance() => create();
+  static $pb.PbList<TableDefinition> createRepeated() =>
+      $pb.PbList<TableDefinition>();
+  static TableDefinition getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TableDefinition _defaultInstance;
-  static void $checkItem(TableDefinition v) {
-    if (v is! TableDefinition) checkItemFailed(v, 'TableDefinition');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<String> get sourceUris => $_getList(1);
+  $core.List<$core.String> get sourceUris => $_getList(1);
 }
 
-class _ReadonlyTableDefinition extends TableDefinition
-    with ReadonlyMessageMixin {}
-
-class JobStatus extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobStatus')
+class JobStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobStatus',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'state')
-    ..a<$google$rpc.Status>(2, 'error', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
+    ..a<$2.Status>(
+        2, 'error', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
   JobStatus() : super();
-  JobStatus.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobStatus.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobStatus.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobStatus.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobStatus clone() => new JobStatus()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobStatus create() => new JobStatus();
-  static PbList<JobStatus> createRepeated() => new PbList<JobStatus>();
-  static JobStatus getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyJobStatus();
-    return _defaultInstance;
-  }
-
+  JobStatus clone() => JobStatus()..mergeFromMessage(this);
+  JobStatus copyWith(void Function(JobStatus) updates) =>
+      super.copyWith((message) => updates(message as JobStatus));
+  $pb.BuilderInfo get info_ => _i;
+  static JobStatus create() => JobStatus();
+  JobStatus createEmptyInstance() => create();
+  static $pb.PbList<JobStatus> createRepeated() => $pb.PbList<JobStatus>();
+  static JobStatus getDefault() => _defaultInstance ??= create()..freeze();
   static JobStatus _defaultInstance;
-  static void $checkItem(JobStatus v) {
-    if (v is! JobStatus) checkItemFailed(v, 'JobStatus');
-  }
 
-  String get state => $_getS(0, '');
-  set state(String v) {
+  $core.String get state => $_getS(0, '');
+  set state($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasState() => $_has(0);
+  $core.bool hasState() => $_has(0);
   void clearState() => clearField(1);
 
-  $google$rpc.Status get error => $_getN(1);
-  set error($google$rpc.Status v) {
+  $2.Status get error => $_getN(1);
+  set error($2.Status v) {
     setField(2, v);
   }
 
-  bool hasError() => $_has(1);
+  $core.bool hasError() => $_has(1);
   void clearError() => clearField(2);
 }
 
-class _ReadonlyJobStatus extends JobStatus with ReadonlyMessageMixin {}
-
-class JobStatistics extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobStatistics')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+class JobStatistics extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobStatistics',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+    ..a<$0.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
+        $0.Timestamp.create)
     ..aInt64(4, 'totalProcessedBytes')
     ..aInt64(5, 'totalBilledBytes')
-    ..a<int>(7, 'billingTier', PbFieldType.O3)
+    ..a<$core.int>(7, 'billingTier', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   JobStatistics() : super();
-  JobStatistics.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobStatistics.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobStatistics.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobStatistics.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobStatistics clone() => new JobStatistics()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobStatistics create() => new JobStatistics();
-  static PbList<JobStatistics> createRepeated() => new PbList<JobStatistics>();
-  static JobStatistics getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobStatistics();
-    return _defaultInstance;
-  }
-
+  JobStatistics clone() => JobStatistics()..mergeFromMessage(this);
+  JobStatistics copyWith(void Function(JobStatistics) updates) =>
+      super.copyWith((message) => updates(message as JobStatistics));
+  $pb.BuilderInfo get info_ => _i;
+  static JobStatistics create() => JobStatistics();
+  JobStatistics createEmptyInstance() => create();
+  static $pb.PbList<JobStatistics> createRepeated() =>
+      $pb.PbList<JobStatistics>();
+  static JobStatistics getDefault() => _defaultInstance ??= create()..freeze();
   static JobStatistics _defaultInstance;
-  static void $checkItem(JobStatistics v) {
-    if (v is! JobStatistics) checkItemFailed(v, 'JobStatistics');
-  }
 
-  $google$protobuf.Timestamp get createTime => $_getN(0);
-  set createTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get createTime => $_getN(0);
+  set createTime($0.Timestamp v) {
     setField(1, v);
   }
 
-  bool hasCreateTime() => $_has(0);
+  $core.bool hasCreateTime() => $_has(0);
   void clearCreateTime() => clearField(1);
 
-  $google$protobuf.Timestamp get startTime => $_getN(1);
-  set startTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get startTime => $_getN(1);
+  set startTime($0.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasStartTime() => $_has(1);
+  $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $google$protobuf.Timestamp get endTime => $_getN(2);
-  set endTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get endTime => $_getN(2);
+  set endTime($0.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasEndTime() => $_has(2);
+  $core.bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
 
   Int64 get totalProcessedBytes => $_getI64(3);
@@ -2092,7 +1936,7 @@ class JobStatistics extends GeneratedMessage {
     $_setInt64(3, v);
   }
 
-  bool hasTotalProcessedBytes() => $_has(3);
+  $core.bool hasTotalProcessedBytes() => $_has(3);
   void clearTotalProcessedBytes() => clearField(4);
 
   Int64 get totalBilledBytes => $_getI64(4);
@@ -2100,161 +1944,146 @@ class JobStatistics extends GeneratedMessage {
     $_setInt64(4, v);
   }
 
-  bool hasTotalBilledBytes() => $_has(4);
+  $core.bool hasTotalBilledBytes() => $_has(4);
   void clearTotalBilledBytes() => clearField(5);
 
-  int get billingTier => $_get(5, 0);
-  set billingTier(int v) {
+  $core.int get billingTier => $_get(5, 0);
+  set billingTier($core.int v) {
     $_setSignedInt32(5, v);
   }
 
-  bool hasBillingTier() => $_has(5);
+  $core.bool hasBillingTier() => $_has(5);
   void clearBillingTier() => clearField(7);
 }
 
-class _ReadonlyJobStatistics extends JobStatistics with ReadonlyMessageMixin {}
-
-class DatasetName extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetName')
+class DatasetName extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetName',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'datasetId')
     ..hasRequiredFields = false;
 
   DatasetName() : super();
-  DatasetName.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetName.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DatasetName.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DatasetName.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DatasetName clone() => new DatasetName()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DatasetName create() => new DatasetName();
-  static PbList<DatasetName> createRepeated() => new PbList<DatasetName>();
-  static DatasetName getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDatasetName();
-    return _defaultInstance;
-  }
-
+  DatasetName clone() => DatasetName()..mergeFromMessage(this);
+  DatasetName copyWith(void Function(DatasetName) updates) =>
+      super.copyWith((message) => updates(message as DatasetName));
+  $pb.BuilderInfo get info_ => _i;
+  static DatasetName create() => DatasetName();
+  DatasetName createEmptyInstance() => create();
+  static $pb.PbList<DatasetName> createRepeated() => $pb.PbList<DatasetName>();
+  static DatasetName getDefault() => _defaultInstance ??= create()..freeze();
   static DatasetName _defaultInstance;
-  static void $checkItem(DatasetName v) {
-    if (v is! DatasetName) checkItemFailed(v, 'DatasetName');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get datasetId => $_getS(1, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(1, '');
+  set datasetId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDatasetId() => $_has(1);
+  $core.bool hasDatasetId() => $_has(1);
   void clearDatasetId() => clearField(2);
 }
 
-class _ReadonlyDatasetName extends DatasetName with ReadonlyMessageMixin {}
-
-class TableName extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableName')
+class TableName extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableName',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'tableId')
     ..hasRequiredFields = false;
 
   TableName() : super();
-  TableName.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableName.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TableName.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TableName.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableName clone() => new TableName()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TableName create() => new TableName();
-  static PbList<TableName> createRepeated() => new PbList<TableName>();
-  static TableName getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTableName();
-    return _defaultInstance;
-  }
-
+  TableName clone() => TableName()..mergeFromMessage(this);
+  TableName copyWith(void Function(TableName) updates) =>
+      super.copyWith((message) => updates(message as TableName));
+  $pb.BuilderInfo get info_ => _i;
+  static TableName create() => TableName();
+  TableName createEmptyInstance() => create();
+  static $pb.PbList<TableName> createRepeated() => $pb.PbList<TableName>();
+  static TableName getDefault() => _defaultInstance ??= create()..freeze();
   static TableName _defaultInstance;
-  static void $checkItem(TableName v) {
-    if (v is! TableName) checkItemFailed(v, 'TableName');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get datasetId => $_getS(1, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(1, '');
+  set datasetId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDatasetId() => $_has(1);
+  $core.bool hasDatasetId() => $_has(1);
   void clearDatasetId() => clearField(2);
 
-  String get tableId => $_getS(2, '');
-  set tableId(String v) {
+  $core.String get tableId => $_getS(2, '');
+  set tableId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasTableId() => $_has(2);
+  $core.bool hasTableId() => $_has(2);
   void clearTableId() => clearField(3);
 }
 
-class _ReadonlyTableName extends TableName with ReadonlyMessageMixin {}
-
-class JobName extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobName')
+class JobName extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobName',
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'jobId')
     ..hasRequiredFields = false;
 
   JobName() : super();
-  JobName.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobName.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  JobName.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  JobName.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobName clone() => new JobName()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static JobName create() => new JobName();
-  static PbList<JobName> createRepeated() => new PbList<JobName>();
-  static JobName getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyJobName();
-    return _defaultInstance;
-  }
-
+  JobName clone() => JobName()..mergeFromMessage(this);
+  JobName copyWith(void Function(JobName) updates) =>
+      super.copyWith((message) => updates(message as JobName));
+  $pb.BuilderInfo get info_ => _i;
+  static JobName create() => JobName();
+  JobName createEmptyInstance() => create();
+  static $pb.PbList<JobName> createRepeated() => $pb.PbList<JobName>();
+  static JobName getDefault() => _defaultInstance ??= create()..freeze();
   static JobName _defaultInstance;
-  static void $checkItem(JobName v) {
-    if (v is! JobName) checkItemFailed(v, 'JobName');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get jobId => $_getS(1, '');
-  set jobId(String v) {
+  $core.String get jobId => $_getS(1, '');
+  set jobId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasJobId() => $_has(1);
+  $core.bool hasJobId() => $_has(1);
   void clearJobId() => clearField(2);
 }
-
-class _ReadonlyJobName extends JobName with ReadonlyMessageMixin {}

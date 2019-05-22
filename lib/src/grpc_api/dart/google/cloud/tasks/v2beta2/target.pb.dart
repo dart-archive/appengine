@@ -1,236 +1,169 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/tasks/v2beta2/target.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'target.pbenum.dart';
 
 export 'target.pbenum.dart';
 
-class PullTarget extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PullTarget')
+class PullTarget extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PullTarget',
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..hasRequiredFields = false;
 
   PullTarget() : super();
-  PullTarget.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PullTarget.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PullTarget.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PullTarget.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PullTarget clone() => new PullTarget()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PullTarget create() => new PullTarget();
-  static PbList<PullTarget> createRepeated() => new PbList<PullTarget>();
-  static PullTarget getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPullTarget();
-    return _defaultInstance;
-  }
-
+  PullTarget clone() => PullTarget()..mergeFromMessage(this);
+  PullTarget copyWith(void Function(PullTarget) updates) =>
+      super.copyWith((message) => updates(message as PullTarget));
+  $pb.BuilderInfo get info_ => _i;
+  static PullTarget create() => PullTarget();
+  PullTarget createEmptyInstance() => create();
+  static $pb.PbList<PullTarget> createRepeated() => $pb.PbList<PullTarget>();
+  static PullTarget getDefault() => _defaultInstance ??= create()..freeze();
   static PullTarget _defaultInstance;
-  static void $checkItem(PullTarget v) {
-    if (v is! PullTarget) checkItemFailed(v, 'PullTarget');
-  }
 }
 
-class _ReadonlyPullTarget extends PullTarget with ReadonlyMessageMixin {}
-
-class PullMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PullMessage')
-    ..a<List<int>>(1, 'payload', PbFieldType.OY)
+class PullMessage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PullMessage',
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+    ..a<$core.List<$core.int>>(1, 'payload', $pb.PbFieldType.OY)
     ..aOS(2, 'tag')
     ..hasRequiredFields = false;
 
   PullMessage() : super();
-  PullMessage.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PullMessage.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PullMessage.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PullMessage.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PullMessage clone() => new PullMessage()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PullMessage create() => new PullMessage();
-  static PbList<PullMessage> createRepeated() => new PbList<PullMessage>();
-  static PullMessage getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPullMessage();
-    return _defaultInstance;
-  }
-
+  PullMessage clone() => PullMessage()..mergeFromMessage(this);
+  PullMessage copyWith(void Function(PullMessage) updates) =>
+      super.copyWith((message) => updates(message as PullMessage));
+  $pb.BuilderInfo get info_ => _i;
+  static PullMessage create() => PullMessage();
+  PullMessage createEmptyInstance() => create();
+  static $pb.PbList<PullMessage> createRepeated() => $pb.PbList<PullMessage>();
+  static PullMessage getDefault() => _defaultInstance ??= create()..freeze();
   static PullMessage _defaultInstance;
-  static void $checkItem(PullMessage v) {
-    if (v is! PullMessage) checkItemFailed(v, 'PullMessage');
-  }
 
-  List<int> get payload => $_getN(0);
-  set payload(List<int> v) {
+  $core.List<$core.int> get payload => $_getN(0);
+  set payload($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasPayload() => $_has(0);
+  $core.bool hasPayload() => $_has(0);
   void clearPayload() => clearField(1);
 
-  String get tag => $_getS(1, '');
-  set tag(String v) {
+  $core.String get tag => $_getS(1, '');
+  set tag($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasTag() => $_has(1);
+  $core.bool hasTag() => $_has(1);
   void clearTag() => clearField(2);
 }
 
-class _ReadonlyPullMessage extends PullMessage with ReadonlyMessageMixin {}
-
-class AppEngineHttpTarget extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AppEngineHttpTarget')
-    ..a<AppEngineRouting>(1, 'appEngineRoutingOverride', PbFieldType.OM,
+class AppEngineHttpTarget extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppEngineHttpTarget',
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+    ..a<AppEngineRouting>(1, 'appEngineRoutingOverride', $pb.PbFieldType.OM,
         AppEngineRouting.getDefault, AppEngineRouting.create)
     ..hasRequiredFields = false;
 
   AppEngineHttpTarget() : super();
-  AppEngineHttpTarget.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppEngineHttpTarget.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AppEngineHttpTarget.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppEngineHttpTarget.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AppEngineHttpTarget clone() =>
-      new AppEngineHttpTarget()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AppEngineHttpTarget create() => new AppEngineHttpTarget();
-  static PbList<AppEngineHttpTarget> createRepeated() =>
-      new PbList<AppEngineHttpTarget>();
-  static AppEngineHttpTarget getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppEngineHttpTarget();
-    return _defaultInstance;
-  }
-
+  AppEngineHttpTarget clone() => AppEngineHttpTarget()..mergeFromMessage(this);
+  AppEngineHttpTarget copyWith(void Function(AppEngineHttpTarget) updates) =>
+      super.copyWith((message) => updates(message as AppEngineHttpTarget));
+  $pb.BuilderInfo get info_ => _i;
+  static AppEngineHttpTarget create() => AppEngineHttpTarget();
+  AppEngineHttpTarget createEmptyInstance() => create();
+  static $pb.PbList<AppEngineHttpTarget> createRepeated() =>
+      $pb.PbList<AppEngineHttpTarget>();
+  static AppEngineHttpTarget getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AppEngineHttpTarget _defaultInstance;
-  static void $checkItem(AppEngineHttpTarget v) {
-    if (v is! AppEngineHttpTarget) checkItemFailed(v, 'AppEngineHttpTarget');
-  }
 
   AppEngineRouting get appEngineRoutingOverride => $_getN(0);
   set appEngineRoutingOverride(AppEngineRouting v) {
     setField(1, v);
   }
 
-  bool hasAppEngineRoutingOverride() => $_has(0);
+  $core.bool hasAppEngineRoutingOverride() => $_has(0);
   void clearAppEngineRoutingOverride() => clearField(1);
 }
 
-class _ReadonlyAppEngineHttpTarget extends AppEngineHttpTarget
-    with ReadonlyMessageMixin {}
-
-class AppEngineHttpRequest_HeadersEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AppEngineHttpRequest_HeadersEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  AppEngineHttpRequest_HeadersEntry() : super();
-  AppEngineHttpRequest_HeadersEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngineHttpRequest_HeadersEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AppEngineHttpRequest_HeadersEntry clone() =>
-      new AppEngineHttpRequest_HeadersEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AppEngineHttpRequest_HeadersEntry create() =>
-      new AppEngineHttpRequest_HeadersEntry();
-  static PbList<AppEngineHttpRequest_HeadersEntry> createRepeated() =>
-      new PbList<AppEngineHttpRequest_HeadersEntry>();
-  static AppEngineHttpRequest_HeadersEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppEngineHttpRequest_HeadersEntry();
-    return _defaultInstance;
-  }
-
-  static AppEngineHttpRequest_HeadersEntry _defaultInstance;
-  static void $checkItem(AppEngineHttpRequest_HeadersEntry v) {
-    if (v is! AppEngineHttpRequest_HeadersEntry)
-      checkItemFailed(v, 'AppEngineHttpRequest_HeadersEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyAppEngineHttpRequest_HeadersEntry
-    extends AppEngineHttpRequest_HeadersEntry with ReadonlyMessageMixin {}
-
-class AppEngineHttpRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AppEngineHttpRequest')
+class AppEngineHttpRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppEngineHttpRequest',
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..e<HttpMethod>(
         1,
         'httpMethod',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         HttpMethod.HTTP_METHOD_UNSPECIFIED,
         HttpMethod.valueOf,
         HttpMethod.values)
-    ..a<AppEngineRouting>(2, 'appEngineRouting', PbFieldType.OM,
+    ..a<AppEngineRouting>(2, 'appEngineRouting', $pb.PbFieldType.OM,
         AppEngineRouting.getDefault, AppEngineRouting.create)
     ..aOS(3, 'relativeUrl')
-    ..pp<AppEngineHttpRequest_HeadersEntry>(
+    ..m<$core.String, $core.String>(
         4,
         'headers',
-        PbFieldType.PM,
-        AppEngineHttpRequest_HeadersEntry.$checkItem,
-        AppEngineHttpRequest_HeadersEntry.create)
-    ..a<List<int>>(5, 'payload', PbFieldType.OY)
+        'AppEngineHttpRequest.HeadersEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.tasks.v2beta2'))
+    ..a<$core.List<$core.int>>(5, 'payload', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   AppEngineHttpRequest() : super();
-  AppEngineHttpRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppEngineHttpRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AppEngineHttpRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppEngineHttpRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AppEngineHttpRequest clone() =>
-      new AppEngineHttpRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AppEngineHttpRequest create() => new AppEngineHttpRequest();
-  static PbList<AppEngineHttpRequest> createRepeated() =>
-      new PbList<AppEngineHttpRequest>();
-  static AppEngineHttpRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppEngineHttpRequest();
-    return _defaultInstance;
-  }
-
+      AppEngineHttpRequest()..mergeFromMessage(this);
+  AppEngineHttpRequest copyWith(void Function(AppEngineHttpRequest) updates) =>
+      super.copyWith((message) => updates(message as AppEngineHttpRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AppEngineHttpRequest create() => AppEngineHttpRequest();
+  AppEngineHttpRequest createEmptyInstance() => create();
+  static $pb.PbList<AppEngineHttpRequest> createRepeated() =>
+      $pb.PbList<AppEngineHttpRequest>();
+  static AppEngineHttpRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AppEngineHttpRequest _defaultInstance;
-  static void $checkItem(AppEngineHttpRequest v) {
-    if (v is! AppEngineHttpRequest) checkItemFailed(v, 'AppEngineHttpRequest');
-  }
 
   HttpMethod get httpMethod => $_getN(0);
   set httpMethod(HttpMethod v) {
     setField(1, v);
   }
 
-  bool hasHttpMethod() => $_has(0);
+  $core.bool hasHttpMethod() => $_has(0);
   void clearHttpMethod() => clearField(1);
 
   AppEngineRouting get appEngineRouting => $_getN(1);
@@ -238,33 +171,31 @@ class AppEngineHttpRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasAppEngineRouting() => $_has(1);
+  $core.bool hasAppEngineRouting() => $_has(1);
   void clearAppEngineRouting() => clearField(2);
 
-  String get relativeUrl => $_getS(2, '');
-  set relativeUrl(String v) {
+  $core.String get relativeUrl => $_getS(2, '');
+  set relativeUrl($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasRelativeUrl() => $_has(2);
+  $core.bool hasRelativeUrl() => $_has(2);
   void clearRelativeUrl() => clearField(3);
 
-  List<AppEngineHttpRequest_HeadersEntry> get headers => $_getList(3);
+  $core.Map<$core.String, $core.String> get headers => $_getMap(3);
 
-  List<int> get payload => $_getN(4);
-  set payload(List<int> v) {
+  $core.List<$core.int> get payload => $_getN(4);
+  set payload($core.List<$core.int> v) {
     $_setBytes(4, v);
   }
 
-  bool hasPayload() => $_has(4);
+  $core.bool hasPayload() => $_has(4);
   void clearPayload() => clearField(5);
 }
 
-class _ReadonlyAppEngineHttpRequest extends AppEngineHttpRequest
-    with ReadonlyMessageMixin {}
-
-class AppEngineRouting extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AppEngineRouting')
+class AppEngineRouting extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppEngineRouting',
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'service')
     ..aOS(2, 'version')
     ..aOS(3, 'instance')
@@ -272,60 +203,53 @@ class AppEngineRouting extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   AppEngineRouting() : super();
-  AppEngineRouting.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppEngineRouting.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AppEngineRouting.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppEngineRouting.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AppEngineRouting clone() => new AppEngineRouting()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AppEngineRouting create() => new AppEngineRouting();
-  static PbList<AppEngineRouting> createRepeated() =>
-      new PbList<AppEngineRouting>();
-  static AppEngineRouting getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppEngineRouting();
-    return _defaultInstance;
-  }
-
+  AppEngineRouting clone() => AppEngineRouting()..mergeFromMessage(this);
+  AppEngineRouting copyWith(void Function(AppEngineRouting) updates) =>
+      super.copyWith((message) => updates(message as AppEngineRouting));
+  $pb.BuilderInfo get info_ => _i;
+  static AppEngineRouting create() => AppEngineRouting();
+  AppEngineRouting createEmptyInstance() => create();
+  static $pb.PbList<AppEngineRouting> createRepeated() =>
+      $pb.PbList<AppEngineRouting>();
+  static AppEngineRouting getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AppEngineRouting _defaultInstance;
-  static void $checkItem(AppEngineRouting v) {
-    if (v is! AppEngineRouting) checkItemFailed(v, 'AppEngineRouting');
-  }
 
-  String get service => $_getS(0, '');
-  set service(String v) {
+  $core.String get service => $_getS(0, '');
+  set service($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasService() => $_has(0);
+  $core.bool hasService() => $_has(0);
   void clearService() => clearField(1);
 
-  String get version => $_getS(1, '');
-  set version(String v) {
+  $core.String get version => $_getS(1, '');
+  set version($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasVersion() => $_has(1);
+  $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
-  String get instance => $_getS(2, '');
-  set instance(String v) {
+  $core.String get instance => $_getS(2, '');
+  set instance($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasInstance() => $_has(2);
+  $core.bool hasInstance() => $_has(2);
   void clearInstance() => clearField(3);
 
-  String get host => $_getS(3, '');
-  set host(String v) {
+  $core.String get host => $_getS(3, '');
+  set host($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasHost() => $_has(3);
+  $core.bool hasHost() => $_has(3);
   void clearHost() => clearField(4);
 }
-
-class _ReadonlyAppEngineRouting extends AppEngineRouting
-    with ReadonlyMessageMixin {}

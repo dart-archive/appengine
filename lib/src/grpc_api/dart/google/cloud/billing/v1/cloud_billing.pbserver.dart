@@ -1,48 +1,50 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/billing/v1/cloud_billing.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'cloud_billing.pb.dart';
 import 'cloud_billing.pbjson.dart';
 
 export 'cloud_billing.pb.dart';
 
-abstract class CloudBillingServiceBase extends GeneratedService {
-  Future<BillingAccount> getBillingAccount(
-      ServerContext ctx, GetBillingAccountRequest request);
-  Future<ListBillingAccountsResponse> listBillingAccounts(
-      ServerContext ctx, ListBillingAccountsRequest request);
-  Future<ListProjectBillingInfoResponse> listProjectBillingInfo(
-      ServerContext ctx, ListProjectBillingInfoRequest request);
-  Future<ProjectBillingInfo> getProjectBillingInfo(
-      ServerContext ctx, GetProjectBillingInfoRequest request);
-  Future<ProjectBillingInfo> updateProjectBillingInfo(
-      ServerContext ctx, UpdateProjectBillingInfoRequest request);
+abstract class CloudBillingServiceBase extends $pb.GeneratedService {
+  $async.Future<BillingAccount> getBillingAccount(
+      $pb.ServerContext ctx, GetBillingAccountRequest request);
+  $async.Future<ListBillingAccountsResponse> listBillingAccounts(
+      $pb.ServerContext ctx, ListBillingAccountsRequest request);
+  $async.Future<ListProjectBillingInfoResponse> listProjectBillingInfo(
+      $pb.ServerContext ctx, ListProjectBillingInfoRequest request);
+  $async.Future<ProjectBillingInfo> getProjectBillingInfo(
+      $pb.ServerContext ctx, GetProjectBillingInfoRequest request);
+  $async.Future<ProjectBillingInfo> updateProjectBillingInfo(
+      $pb.ServerContext ctx, UpdateProjectBillingInfoRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
       case 'GetBillingAccount':
-        return new GetBillingAccountRequest();
+        return GetBillingAccountRequest();
       case 'ListBillingAccounts':
-        return new ListBillingAccountsRequest();
+        return ListBillingAccountsRequest();
       case 'ListProjectBillingInfo':
-        return new ListProjectBillingInfoRequest();
+        return ListProjectBillingInfoRequest();
       case 'GetProjectBillingInfo':
-        return new GetProjectBillingInfoRequest();
+        return GetProjectBillingInfoRequest();
       case 'UpdateProjectBillingInfo':
-        return new UpdateProjectBillingInfoRequest();
+        return UpdateProjectBillingInfoRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
       case 'GetBillingAccount':
         return this.getBillingAccount(ctx, request);
@@ -55,11 +57,12 @@ abstract class CloudBillingServiceBase extends GeneratedService {
       case 'UpdateProjectBillingInfo':
         return this.updateProjectBillingInfo(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => CloudBilling$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      CloudBilling$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CloudBillingServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CloudBillingServiceBase$messageJson;
 }

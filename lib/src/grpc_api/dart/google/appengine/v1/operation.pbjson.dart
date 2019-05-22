@@ -1,13 +1,14 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/operation.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const OperationMetadataV1$json = const {
+const OperationMetadataV1$json = {
   '1': 'OperationMetadataV1',
-  '2': const [
-    const {'1': 'method', '3': 1, '4': 1, '5': 9, '10': 'method'},
-    const {
+  '2': [
+    {'1': 'method', '3': 1, '4': 1, '5': 9, '10': 'method'},
+    {
       '1': 'insert_time',
       '3': 2,
       '4': 1,
@@ -15,7 +16,7 @@ const OperationMetadataV1$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'insertTime'
     },
-    const {
+    {
       '1': 'end_time',
       '3': 3,
       '4': 1,
@@ -23,7 +24,7 @@ const OperationMetadataV1$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'endTime'
     },
-    const {'1': 'user', '3': 4, '4': 1, '5': 9, '10': 'user'},
-    const {'1': 'target', '3': 5, '4': 1, '5': 9, '10': 'target'},
+    {'1': 'user', '3': 4, '4': 1, '5': 9, '10': 'user'},
+    {'1': 'target', '3': 5, '4': 1, '5': 9, '10': 'target'},
   ],
 };

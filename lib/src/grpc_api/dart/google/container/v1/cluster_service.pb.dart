@@ -1,276 +1,198 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/container/v1/cluster_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../protobuf/empty.pb.dart' as $0;
 
 import 'cluster_service.pbenum.dart';
 
 export 'cluster_service.pbenum.dart';
 
-class NodeConfig_MetadataEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NodeConfig_MetadataEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  NodeConfig_MetadataEntry() : super();
-  NodeConfig_MetadataEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NodeConfig_MetadataEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  NodeConfig_MetadataEntry clone() =>
-      new NodeConfig_MetadataEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NodeConfig_MetadataEntry create() => new NodeConfig_MetadataEntry();
-  static PbList<NodeConfig_MetadataEntry> createRepeated() =>
-      new PbList<NodeConfig_MetadataEntry>();
-  static NodeConfig_MetadataEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNodeConfig_MetadataEntry();
-    return _defaultInstance;
-  }
-
-  static NodeConfig_MetadataEntry _defaultInstance;
-  static void $checkItem(NodeConfig_MetadataEntry v) {
-    if (v is! NodeConfig_MetadataEntry)
-      checkItemFailed(v, 'NodeConfig_MetadataEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyNodeConfig_MetadataEntry extends NodeConfig_MetadataEntry
-    with ReadonlyMessageMixin {}
-
-class NodeConfig_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NodeConfig_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  NodeConfig_LabelsEntry() : super();
-  NodeConfig_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NodeConfig_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  NodeConfig_LabelsEntry clone() =>
-      new NodeConfig_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NodeConfig_LabelsEntry create() => new NodeConfig_LabelsEntry();
-  static PbList<NodeConfig_LabelsEntry> createRepeated() =>
-      new PbList<NodeConfig_LabelsEntry>();
-  static NodeConfig_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNodeConfig_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static NodeConfig_LabelsEntry _defaultInstance;
-  static void $checkItem(NodeConfig_LabelsEntry v) {
-    if (v is! NodeConfig_LabelsEntry)
-      checkItemFailed(v, 'NodeConfig_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyNodeConfig_LabelsEntry extends NodeConfig_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class NodeConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NodeConfig')
+class NodeConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NodeConfig',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'machineType')
-    ..a<int>(2, 'diskSizeGb', PbFieldType.O3)
+    ..a<$core.int>(2, 'diskSizeGb', $pb.PbFieldType.O3)
     ..pPS(3, 'oauthScopes')
-    ..pp<NodeConfig_MetadataEntry>(4, 'metadata', PbFieldType.PM,
-        NodeConfig_MetadataEntry.$checkItem, NodeConfig_MetadataEntry.create)
+    ..m<$core.String, $core.String>(
+        4,
+        'metadata',
+        'NodeConfig.MetadataEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.container.v1'))
     ..aOS(5, 'imageType')
-    ..pp<NodeConfig_LabelsEntry>(6, 'labels', PbFieldType.PM,
-        NodeConfig_LabelsEntry.$checkItem, NodeConfig_LabelsEntry.create)
-    ..a<int>(7, 'localSsdCount', PbFieldType.O3)
+    ..m<$core.String, $core.String>(
+        6,
+        'labels',
+        'NodeConfig.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.container.v1'))
+    ..a<$core.int>(7, 'localSsdCount', $pb.PbFieldType.O3)
     ..pPS(8, 'tags')
     ..aOS(9, 'serviceAccount')
     ..aOB(10, 'preemptible')
-    ..pp<AcceleratorConfig>(11, 'accelerators', PbFieldType.PM,
-        AcceleratorConfig.$checkItem, AcceleratorConfig.create)
+    ..pc<AcceleratorConfig>(
+        11, 'accelerators', $pb.PbFieldType.PM, AcceleratorConfig.create)
+    ..aOS(12, 'diskType')
     ..aOS(13, 'minCpuPlatform')
     ..hasRequiredFields = false;
 
   NodeConfig() : super();
-  NodeConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NodeConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  NodeConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NodeConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  NodeConfig clone() => new NodeConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NodeConfig create() => new NodeConfig();
-  static PbList<NodeConfig> createRepeated() => new PbList<NodeConfig>();
-  static NodeConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyNodeConfig();
-    return _defaultInstance;
-  }
-
+  NodeConfig clone() => NodeConfig()..mergeFromMessage(this);
+  NodeConfig copyWith(void Function(NodeConfig) updates) =>
+      super.copyWith((message) => updates(message as NodeConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static NodeConfig create() => NodeConfig();
+  NodeConfig createEmptyInstance() => create();
+  static $pb.PbList<NodeConfig> createRepeated() => $pb.PbList<NodeConfig>();
+  static NodeConfig getDefault() => _defaultInstance ??= create()..freeze();
   static NodeConfig _defaultInstance;
-  static void $checkItem(NodeConfig v) {
-    if (v is! NodeConfig) checkItemFailed(v, 'NodeConfig');
-  }
 
-  String get machineType => $_getS(0, '');
-  set machineType(String v) {
+  $core.String get machineType => $_getS(0, '');
+  set machineType($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasMachineType() => $_has(0);
+  $core.bool hasMachineType() => $_has(0);
   void clearMachineType() => clearField(1);
 
-  int get diskSizeGb => $_get(1, 0);
-  set diskSizeGb(int v) {
+  $core.int get diskSizeGb => $_get(1, 0);
+  set diskSizeGb($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasDiskSizeGb() => $_has(1);
+  $core.bool hasDiskSizeGb() => $_has(1);
   void clearDiskSizeGb() => clearField(2);
 
-  List<String> get oauthScopes => $_getList(2);
+  $core.List<$core.String> get oauthScopes => $_getList(2);
 
-  List<NodeConfig_MetadataEntry> get metadata => $_getList(3);
+  $core.Map<$core.String, $core.String> get metadata => $_getMap(3);
 
-  String get imageType => $_getS(4, '');
-  set imageType(String v) {
+  $core.String get imageType => $_getS(4, '');
+  set imageType($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasImageType() => $_has(4);
+  $core.bool hasImageType() => $_has(4);
   void clearImageType() => clearField(5);
 
-  List<NodeConfig_LabelsEntry> get labels => $_getList(5);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(5);
 
-  int get localSsdCount => $_get(6, 0);
-  set localSsdCount(int v) {
+  $core.int get localSsdCount => $_get(6, 0);
+  set localSsdCount($core.int v) {
     $_setSignedInt32(6, v);
   }
 
-  bool hasLocalSsdCount() => $_has(6);
+  $core.bool hasLocalSsdCount() => $_has(6);
   void clearLocalSsdCount() => clearField(7);
 
-  List<String> get tags => $_getList(7);
+  $core.List<$core.String> get tags => $_getList(7);
 
-  String get serviceAccount => $_getS(8, '');
-  set serviceAccount(String v) {
+  $core.String get serviceAccount => $_getS(8, '');
+  set serviceAccount($core.String v) {
     $_setString(8, v);
   }
 
-  bool hasServiceAccount() => $_has(8);
+  $core.bool hasServiceAccount() => $_has(8);
   void clearServiceAccount() => clearField(9);
 
-  bool get preemptible => $_get(9, false);
-  set preemptible(bool v) {
+  $core.bool get preemptible => $_get(9, false);
+  set preemptible($core.bool v) {
     $_setBool(9, v);
   }
 
-  bool hasPreemptible() => $_has(9);
+  $core.bool hasPreemptible() => $_has(9);
   void clearPreemptible() => clearField(10);
 
-  List<AcceleratorConfig> get accelerators => $_getList(10);
+  $core.List<AcceleratorConfig> get accelerators => $_getList(10);
 
-  String get minCpuPlatform => $_getS(11, '');
-  set minCpuPlatform(String v) {
+  $core.String get diskType => $_getS(11, '');
+  set diskType($core.String v) {
     $_setString(11, v);
   }
 
-  bool hasMinCpuPlatform() => $_has(11);
+  $core.bool hasDiskType() => $_has(11);
+  void clearDiskType() => clearField(12);
+
+  $core.String get minCpuPlatform => $_getS(12, '');
+  set minCpuPlatform($core.String v) {
+    $_setString(12, v);
+  }
+
+  $core.bool hasMinCpuPlatform() => $_has(12);
   void clearMinCpuPlatform() => clearField(13);
 }
 
-class _ReadonlyNodeConfig extends NodeConfig with ReadonlyMessageMixin {}
-
-class MasterAuth extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MasterAuth')
+class MasterAuth extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MasterAuth',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'username')
     ..aOS(2, 'password')
-    ..a<ClientCertificateConfig>(3, 'clientCertificateConfig', PbFieldType.OM,
-        ClientCertificateConfig.getDefault, ClientCertificateConfig.create)
+    ..a<ClientCertificateConfig>(
+        3,
+        'clientCertificateConfig',
+        $pb.PbFieldType.OM,
+        ClientCertificateConfig.getDefault,
+        ClientCertificateConfig.create)
     ..aOS(100, 'clusterCaCertificate')
     ..aOS(101, 'clientCertificate')
     ..aOS(102, 'clientKey')
     ..hasRequiredFields = false;
 
   MasterAuth() : super();
-  MasterAuth.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MasterAuth.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MasterAuth.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MasterAuth.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MasterAuth clone() => new MasterAuth()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MasterAuth create() => new MasterAuth();
-  static PbList<MasterAuth> createRepeated() => new PbList<MasterAuth>();
-  static MasterAuth getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMasterAuth();
-    return _defaultInstance;
-  }
-
+  MasterAuth clone() => MasterAuth()..mergeFromMessage(this);
+  MasterAuth copyWith(void Function(MasterAuth) updates) =>
+      super.copyWith((message) => updates(message as MasterAuth));
+  $pb.BuilderInfo get info_ => _i;
+  static MasterAuth create() => MasterAuth();
+  MasterAuth createEmptyInstance() => create();
+  static $pb.PbList<MasterAuth> createRepeated() => $pb.PbList<MasterAuth>();
+  static MasterAuth getDefault() => _defaultInstance ??= create()..freeze();
   static MasterAuth _defaultInstance;
-  static void $checkItem(MasterAuth v) {
-    if (v is! MasterAuth) checkItemFailed(v, 'MasterAuth');
-  }
 
-  String get username => $_getS(0, '');
-  set username(String v) {
+  $core.String get username => $_getS(0, '');
+  set username($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasUsername() => $_has(0);
+  $core.bool hasUsername() => $_has(0);
   void clearUsername() => clearField(1);
 
-  String get password => $_getS(1, '');
-  set password(String v) {
+  $core.String get password => $_getS(1, '');
+  set password($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPassword() => $_has(1);
+  $core.bool hasPassword() => $_has(1);
   void clearPassword() => clearField(2);
 
   ClientCertificateConfig get clientCertificateConfig => $_getN(2);
@@ -278,118 +200,111 @@ class MasterAuth extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasClientCertificateConfig() => $_has(2);
+  $core.bool hasClientCertificateConfig() => $_has(2);
   void clearClientCertificateConfig() => clearField(3);
 
-  String get clusterCaCertificate => $_getS(3, '');
-  set clusterCaCertificate(String v) {
+  $core.String get clusterCaCertificate => $_getS(3, '');
+  set clusterCaCertificate($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasClusterCaCertificate() => $_has(3);
+  $core.bool hasClusterCaCertificate() => $_has(3);
   void clearClusterCaCertificate() => clearField(100);
 
-  String get clientCertificate => $_getS(4, '');
-  set clientCertificate(String v) {
+  $core.String get clientCertificate => $_getS(4, '');
+  set clientCertificate($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasClientCertificate() => $_has(4);
+  $core.bool hasClientCertificate() => $_has(4);
   void clearClientCertificate() => clearField(101);
 
-  String get clientKey => $_getS(5, '');
-  set clientKey(String v) {
+  $core.String get clientKey => $_getS(5, '');
+  set clientKey($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasClientKey() => $_has(5);
+  $core.bool hasClientKey() => $_has(5);
   void clearClientKey() => clearField(102);
 }
 
-class _ReadonlyMasterAuth extends MasterAuth with ReadonlyMessageMixin {}
-
-class ClientCertificateConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClientCertificateConfig')
+class ClientCertificateConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClientCertificateConfig',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOB(1, 'issueClientCertificate')
     ..hasRequiredFields = false;
 
   ClientCertificateConfig() : super();
-  ClientCertificateConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClientCertificateConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ClientCertificateConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClientCertificateConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ClientCertificateConfig clone() =>
-      new ClientCertificateConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ClientCertificateConfig create() => new ClientCertificateConfig();
-  static PbList<ClientCertificateConfig> createRepeated() =>
-      new PbList<ClientCertificateConfig>();
-  static ClientCertificateConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClientCertificateConfig();
-    return _defaultInstance;
-  }
-
+      ClientCertificateConfig()..mergeFromMessage(this);
+  ClientCertificateConfig copyWith(
+          void Function(ClientCertificateConfig) updates) =>
+      super.copyWith((message) => updates(message as ClientCertificateConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static ClientCertificateConfig create() => ClientCertificateConfig();
+  ClientCertificateConfig createEmptyInstance() => create();
+  static $pb.PbList<ClientCertificateConfig> createRepeated() =>
+      $pb.PbList<ClientCertificateConfig>();
+  static ClientCertificateConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ClientCertificateConfig _defaultInstance;
-  static void $checkItem(ClientCertificateConfig v) {
-    if (v is! ClientCertificateConfig)
-      checkItemFailed(v, 'ClientCertificateConfig');
-  }
 
-  bool get issueClientCertificate => $_get(0, false);
-  set issueClientCertificate(bool v) {
+  $core.bool get issueClientCertificate => $_get(0, false);
+  set issueClientCertificate($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasIssueClientCertificate() => $_has(0);
+  $core.bool hasIssueClientCertificate() => $_has(0);
   void clearIssueClientCertificate() => clearField(1);
 }
 
-class _ReadonlyClientCertificateConfig extends ClientCertificateConfig
-    with ReadonlyMessageMixin {}
-
-class AddonsConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AddonsConfig')
-    ..a<HttpLoadBalancing>(1, 'httpLoadBalancing', PbFieldType.OM,
+class AddonsConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AddonsConfig',
+      package: const $pb.PackageName('google.container.v1'))
+    ..a<HttpLoadBalancing>(1, 'httpLoadBalancing', $pb.PbFieldType.OM,
         HttpLoadBalancing.getDefault, HttpLoadBalancing.create)
-    ..a<HorizontalPodAutoscaling>(2, 'horizontalPodAutoscaling', PbFieldType.OM,
-        HorizontalPodAutoscaling.getDefault, HorizontalPodAutoscaling.create)
-    ..a<KubernetesDashboard>(3, 'kubernetesDashboard', PbFieldType.OM,
+    ..a<HorizontalPodAutoscaling>(
+        2,
+        'horizontalPodAutoscaling',
+        $pb.PbFieldType.OM,
+        HorizontalPodAutoscaling.getDefault,
+        HorizontalPodAutoscaling.create)
+    ..a<KubernetesDashboard>(3, 'kubernetesDashboard', $pb.PbFieldType.OM,
         KubernetesDashboard.getDefault, KubernetesDashboard.create)
-    ..a<NetworkPolicyConfig>(4, 'networkPolicyConfig', PbFieldType.OM,
+    ..a<NetworkPolicyConfig>(4, 'networkPolicyConfig', $pb.PbFieldType.OM,
         NetworkPolicyConfig.getDefault, NetworkPolicyConfig.create)
     ..hasRequiredFields = false;
 
   AddonsConfig() : super();
-  AddonsConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AddonsConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AddonsConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AddonsConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AddonsConfig clone() => new AddonsConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AddonsConfig create() => new AddonsConfig();
-  static PbList<AddonsConfig> createRepeated() => new PbList<AddonsConfig>();
-  static AddonsConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAddonsConfig();
-    return _defaultInstance;
-  }
-
+  AddonsConfig clone() => AddonsConfig()..mergeFromMessage(this);
+  AddonsConfig copyWith(void Function(AddonsConfig) updates) =>
+      super.copyWith((message) => updates(message as AddonsConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static AddonsConfig create() => AddonsConfig();
+  AddonsConfig createEmptyInstance() => create();
+  static $pb.PbList<AddonsConfig> createRepeated() =>
+      $pb.PbList<AddonsConfig>();
+  static AddonsConfig getDefault() => _defaultInstance ??= create()..freeze();
   static AddonsConfig _defaultInstance;
-  static void $checkItem(AddonsConfig v) {
-    if (v is! AddonsConfig) checkItemFailed(v, 'AddonsConfig');
-  }
 
   HttpLoadBalancing get httpLoadBalancing => $_getN(0);
   set httpLoadBalancing(HttpLoadBalancing v) {
     setField(1, v);
   }
 
-  bool hasHttpLoadBalancing() => $_has(0);
+  $core.bool hasHttpLoadBalancing() => $_has(0);
   void clearHttpLoadBalancing() => clearField(1);
 
   HorizontalPodAutoscaling get horizontalPodAutoscaling => $_getN(1);
@@ -397,7 +312,7 @@ class AddonsConfig extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasHorizontalPodAutoscaling() => $_has(1);
+  $core.bool hasHorizontalPodAutoscaling() => $_has(1);
   void clearHorizontalPodAutoscaling() => clearField(2);
 
   KubernetesDashboard get kubernetesDashboard => $_getN(2);
@@ -405,7 +320,7 @@ class AddonsConfig extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasKubernetesDashboard() => $_has(2);
+  $core.bool hasKubernetesDashboard() => $_has(2);
   void clearKubernetesDashboard() => clearField(3);
 
   NetworkPolicyConfig get networkPolicyConfig => $_getN(3);
@@ -413,325 +328,351 @@ class AddonsConfig extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasNetworkPolicyConfig() => $_has(3);
+  $core.bool hasNetworkPolicyConfig() => $_has(3);
   void clearNetworkPolicyConfig() => clearField(4);
 }
 
-class _ReadonlyAddonsConfig extends AddonsConfig with ReadonlyMessageMixin {}
-
-class HttpLoadBalancing extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HttpLoadBalancing')
+class HttpLoadBalancing extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HttpLoadBalancing',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
   HttpLoadBalancing() : super();
-  HttpLoadBalancing.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  HttpLoadBalancing.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  HttpLoadBalancing.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  HttpLoadBalancing.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HttpLoadBalancing clone() => new HttpLoadBalancing()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static HttpLoadBalancing create() => new HttpLoadBalancing();
-  static PbList<HttpLoadBalancing> createRepeated() =>
-      new PbList<HttpLoadBalancing>();
-  static HttpLoadBalancing getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyHttpLoadBalancing();
-    return _defaultInstance;
-  }
-
+  HttpLoadBalancing clone() => HttpLoadBalancing()..mergeFromMessage(this);
+  HttpLoadBalancing copyWith(void Function(HttpLoadBalancing) updates) =>
+      super.copyWith((message) => updates(message as HttpLoadBalancing));
+  $pb.BuilderInfo get info_ => _i;
+  static HttpLoadBalancing create() => HttpLoadBalancing();
+  HttpLoadBalancing createEmptyInstance() => create();
+  static $pb.PbList<HttpLoadBalancing> createRepeated() =>
+      $pb.PbList<HttpLoadBalancing>();
+  static HttpLoadBalancing getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static HttpLoadBalancing _defaultInstance;
-  static void $checkItem(HttpLoadBalancing v) {
-    if (v is! HttpLoadBalancing) checkItemFailed(v, 'HttpLoadBalancing');
-  }
 
-  bool get disabled => $_get(0, false);
-  set disabled(bool v) {
+  $core.bool get disabled => $_get(0, false);
+  set disabled($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasDisabled() => $_has(0);
+  $core.bool hasDisabled() => $_has(0);
   void clearDisabled() => clearField(1);
 }
 
-class _ReadonlyHttpLoadBalancing extends HttpLoadBalancing
-    with ReadonlyMessageMixin {}
-
-class HorizontalPodAutoscaling extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HorizontalPodAutoscaling')
+class HorizontalPodAutoscaling extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HorizontalPodAutoscaling',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
   HorizontalPodAutoscaling() : super();
-  HorizontalPodAutoscaling.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  HorizontalPodAutoscaling.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  HorizontalPodAutoscaling.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  HorizontalPodAutoscaling.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   HorizontalPodAutoscaling clone() =>
-      new HorizontalPodAutoscaling()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static HorizontalPodAutoscaling create() => new HorizontalPodAutoscaling();
-  static PbList<HorizontalPodAutoscaling> createRepeated() =>
-      new PbList<HorizontalPodAutoscaling>();
-  static HorizontalPodAutoscaling getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyHorizontalPodAutoscaling();
-    return _defaultInstance;
-  }
-
+      HorizontalPodAutoscaling()..mergeFromMessage(this);
+  HorizontalPodAutoscaling copyWith(
+          void Function(HorizontalPodAutoscaling) updates) =>
+      super.copyWith((message) => updates(message as HorizontalPodAutoscaling));
+  $pb.BuilderInfo get info_ => _i;
+  static HorizontalPodAutoscaling create() => HorizontalPodAutoscaling();
+  HorizontalPodAutoscaling createEmptyInstance() => create();
+  static $pb.PbList<HorizontalPodAutoscaling> createRepeated() =>
+      $pb.PbList<HorizontalPodAutoscaling>();
+  static HorizontalPodAutoscaling getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static HorizontalPodAutoscaling _defaultInstance;
-  static void $checkItem(HorizontalPodAutoscaling v) {
-    if (v is! HorizontalPodAutoscaling)
-      checkItemFailed(v, 'HorizontalPodAutoscaling');
-  }
 
-  bool get disabled => $_get(0, false);
-  set disabled(bool v) {
+  $core.bool get disabled => $_get(0, false);
+  set disabled($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasDisabled() => $_has(0);
+  $core.bool hasDisabled() => $_has(0);
   void clearDisabled() => clearField(1);
 }
 
-class _ReadonlyHorizontalPodAutoscaling extends HorizontalPodAutoscaling
-    with ReadonlyMessageMixin {}
-
-class KubernetesDashboard extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('KubernetesDashboard')
+class KubernetesDashboard extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('KubernetesDashboard',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
   KubernetesDashboard() : super();
-  KubernetesDashboard.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  KubernetesDashboard.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  KubernetesDashboard.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  KubernetesDashboard.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  KubernetesDashboard clone() =>
-      new KubernetesDashboard()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static KubernetesDashboard create() => new KubernetesDashboard();
-  static PbList<KubernetesDashboard> createRepeated() =>
-      new PbList<KubernetesDashboard>();
-  static KubernetesDashboard getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyKubernetesDashboard();
-    return _defaultInstance;
-  }
-
+  KubernetesDashboard clone() => KubernetesDashboard()..mergeFromMessage(this);
+  KubernetesDashboard copyWith(void Function(KubernetesDashboard) updates) =>
+      super.copyWith((message) => updates(message as KubernetesDashboard));
+  $pb.BuilderInfo get info_ => _i;
+  static KubernetesDashboard create() => KubernetesDashboard();
+  KubernetesDashboard createEmptyInstance() => create();
+  static $pb.PbList<KubernetesDashboard> createRepeated() =>
+      $pb.PbList<KubernetesDashboard>();
+  static KubernetesDashboard getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static KubernetesDashboard _defaultInstance;
-  static void $checkItem(KubernetesDashboard v) {
-    if (v is! KubernetesDashboard) checkItemFailed(v, 'KubernetesDashboard');
-  }
 
-  bool get disabled => $_get(0, false);
-  set disabled(bool v) {
+  $core.bool get disabled => $_get(0, false);
+  set disabled($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasDisabled() => $_has(0);
+  $core.bool hasDisabled() => $_has(0);
   void clearDisabled() => clearField(1);
 }
 
-class _ReadonlyKubernetesDashboard extends KubernetesDashboard
-    with ReadonlyMessageMixin {}
-
-class NetworkPolicyConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NetworkPolicyConfig')
+class NetworkPolicyConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NetworkPolicyConfig',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
   NetworkPolicyConfig() : super();
-  NetworkPolicyConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NetworkPolicyConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  NetworkPolicyConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NetworkPolicyConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  NetworkPolicyConfig clone() =>
-      new NetworkPolicyConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NetworkPolicyConfig create() => new NetworkPolicyConfig();
-  static PbList<NetworkPolicyConfig> createRepeated() =>
-      new PbList<NetworkPolicyConfig>();
-  static NetworkPolicyConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNetworkPolicyConfig();
-    return _defaultInstance;
-  }
-
+  NetworkPolicyConfig clone() => NetworkPolicyConfig()..mergeFromMessage(this);
+  NetworkPolicyConfig copyWith(void Function(NetworkPolicyConfig) updates) =>
+      super.copyWith((message) => updates(message as NetworkPolicyConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static NetworkPolicyConfig create() => NetworkPolicyConfig();
+  NetworkPolicyConfig createEmptyInstance() => create();
+  static $pb.PbList<NetworkPolicyConfig> createRepeated() =>
+      $pb.PbList<NetworkPolicyConfig>();
+  static NetworkPolicyConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static NetworkPolicyConfig _defaultInstance;
-  static void $checkItem(NetworkPolicyConfig v) {
-    if (v is! NetworkPolicyConfig) checkItemFailed(v, 'NetworkPolicyConfig');
-  }
 
-  bool get disabled => $_get(0, false);
-  set disabled(bool v) {
+  $core.bool get disabled => $_get(0, false);
+  set disabled($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasDisabled() => $_has(0);
+  $core.bool hasDisabled() => $_has(0);
   void clearDisabled() => clearField(1);
 }
 
-class _ReadonlyNetworkPolicyConfig extends NetworkPolicyConfig
-    with ReadonlyMessageMixin {}
+class PrivateClusterConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PrivateClusterConfig',
+      package: const $pb.PackageName('google.container.v1'))
+    ..aOB(1, 'enablePrivateNodes')
+    ..aOB(2, 'enablePrivateEndpoint')
+    ..aOS(3, 'masterIpv4CidrBlock')
+    ..aOS(4, 'privateEndpoint')
+    ..aOS(5, 'publicEndpoint')
+    ..hasRequiredFields = false;
 
-class MasterAuthorizedNetworksConfig_CidrBlock extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('MasterAuthorizedNetworksConfig_CidrBlock')
-        ..aOS(1, 'displayName')
-        ..aOS(2, 'cidrBlock')
-        ..hasRequiredFields = false;
-
-  MasterAuthorizedNetworksConfig_CidrBlock() : super();
-  MasterAuthorizedNetworksConfig_CidrBlock.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PrivateClusterConfig() : super();
+  PrivateClusterConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MasterAuthorizedNetworksConfig_CidrBlock.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PrivateClusterConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MasterAuthorizedNetworksConfig_CidrBlock clone() =>
-      new MasterAuthorizedNetworksConfig_CidrBlock()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MasterAuthorizedNetworksConfig_CidrBlock create() =>
-      new MasterAuthorizedNetworksConfig_CidrBlock();
-  static PbList<MasterAuthorizedNetworksConfig_CidrBlock> createRepeated() =>
-      new PbList<MasterAuthorizedNetworksConfig_CidrBlock>();
-  static MasterAuthorizedNetworksConfig_CidrBlock getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyMasterAuthorizedNetworksConfig_CidrBlock();
-    return _defaultInstance;
-  }
+  PrivateClusterConfig clone() =>
+      PrivateClusterConfig()..mergeFromMessage(this);
+  PrivateClusterConfig copyWith(void Function(PrivateClusterConfig) updates) =>
+      super.copyWith((message) => updates(message as PrivateClusterConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static PrivateClusterConfig create() => PrivateClusterConfig();
+  PrivateClusterConfig createEmptyInstance() => create();
+  static $pb.PbList<PrivateClusterConfig> createRepeated() =>
+      $pb.PbList<PrivateClusterConfig>();
+  static PrivateClusterConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static PrivateClusterConfig _defaultInstance;
 
-  static MasterAuthorizedNetworksConfig_CidrBlock _defaultInstance;
-  static void $checkItem(MasterAuthorizedNetworksConfig_CidrBlock v) {
-    if (v is! MasterAuthorizedNetworksConfig_CidrBlock)
-      checkItemFailed(v, 'MasterAuthorizedNetworksConfig_CidrBlock');
-  }
-
-  String get displayName => $_getS(0, '');
-  set displayName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasDisplayName() => $_has(0);
-  void clearDisplayName() => clearField(1);
-
-  String get cidrBlock => $_getS(1, '');
-  set cidrBlock(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasCidrBlock() => $_has(1);
-  void clearCidrBlock() => clearField(2);
-}
-
-class _ReadonlyMasterAuthorizedNetworksConfig_CidrBlock
-    extends MasterAuthorizedNetworksConfig_CidrBlock with ReadonlyMessageMixin {
-}
-
-class MasterAuthorizedNetworksConfig extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('MasterAuthorizedNetworksConfig')
-        ..aOB(1, 'enabled')
-        ..pp<MasterAuthorizedNetworksConfig_CidrBlock>(
-            2,
-            'cidrBlocks',
-            PbFieldType.PM,
-            MasterAuthorizedNetworksConfig_CidrBlock.$checkItem,
-            MasterAuthorizedNetworksConfig_CidrBlock.create)
-        ..hasRequiredFields = false;
-
-  MasterAuthorizedNetworksConfig() : super();
-  MasterAuthorizedNetworksConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MasterAuthorizedNetworksConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  MasterAuthorizedNetworksConfig clone() =>
-      new MasterAuthorizedNetworksConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MasterAuthorizedNetworksConfig create() =>
-      new MasterAuthorizedNetworksConfig();
-  static PbList<MasterAuthorizedNetworksConfig> createRepeated() =>
-      new PbList<MasterAuthorizedNetworksConfig>();
-  static MasterAuthorizedNetworksConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMasterAuthorizedNetworksConfig();
-    return _defaultInstance;
-  }
-
-  static MasterAuthorizedNetworksConfig _defaultInstance;
-  static void $checkItem(MasterAuthorizedNetworksConfig v) {
-    if (v is! MasterAuthorizedNetworksConfig)
-      checkItemFailed(v, 'MasterAuthorizedNetworksConfig');
-  }
-
-  bool get enabled => $_get(0, false);
-  set enabled(bool v) {
+  $core.bool get enablePrivateNodes => $_get(0, false);
+  set enablePrivateNodes($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasEnabled() => $_has(0);
-  void clearEnabled() => clearField(1);
+  $core.bool hasEnablePrivateNodes() => $_has(0);
+  void clearEnablePrivateNodes() => clearField(1);
 
-  List<MasterAuthorizedNetworksConfig_CidrBlock> get cidrBlocks => $_getList(1);
+  $core.bool get enablePrivateEndpoint => $_get(1, false);
+  set enablePrivateEndpoint($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  $core.bool hasEnablePrivateEndpoint() => $_has(1);
+  void clearEnablePrivateEndpoint() => clearField(2);
+
+  $core.String get masterIpv4CidrBlock => $_getS(2, '');
+  set masterIpv4CidrBlock($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasMasterIpv4CidrBlock() => $_has(2);
+  void clearMasterIpv4CidrBlock() => clearField(3);
+
+  $core.String get privateEndpoint => $_getS(3, '');
+  set privateEndpoint($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasPrivateEndpoint() => $_has(3);
+  void clearPrivateEndpoint() => clearField(4);
+
+  $core.String get publicEndpoint => $_getS(4, '');
+  set publicEndpoint($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasPublicEndpoint() => $_has(4);
+  void clearPublicEndpoint() => clearField(5);
 }
 
-class _ReadonlyMasterAuthorizedNetworksConfig
-    extends MasterAuthorizedNetworksConfig with ReadonlyMessageMixin {}
+class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'MasterAuthorizedNetworksConfig.CidrBlock',
+      package: const $pb.PackageName('google.container.v1'))
+    ..aOS(1, 'displayName')
+    ..aOS(2, 'cidrBlock')
+    ..hasRequiredFields = false;
 
-class LegacyAbac extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LegacyAbac')
+  MasterAuthorizedNetworksConfig_CidrBlock() : super();
+  MasterAuthorizedNetworksConfig_CidrBlock.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  MasterAuthorizedNetworksConfig_CidrBlock.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  MasterAuthorizedNetworksConfig_CidrBlock clone() =>
+      MasterAuthorizedNetworksConfig_CidrBlock()..mergeFromMessage(this);
+  MasterAuthorizedNetworksConfig_CidrBlock copyWith(
+          void Function(MasterAuthorizedNetworksConfig_CidrBlock) updates) =>
+      super.copyWith((message) =>
+          updates(message as MasterAuthorizedNetworksConfig_CidrBlock));
+  $pb.BuilderInfo get info_ => _i;
+  static MasterAuthorizedNetworksConfig_CidrBlock create() =>
+      MasterAuthorizedNetworksConfig_CidrBlock();
+  MasterAuthorizedNetworksConfig_CidrBlock createEmptyInstance() => create();
+  static $pb.PbList<MasterAuthorizedNetworksConfig_CidrBlock>
+      createRepeated() =>
+          $pb.PbList<MasterAuthorizedNetworksConfig_CidrBlock>();
+  static MasterAuthorizedNetworksConfig_CidrBlock getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static MasterAuthorizedNetworksConfig_CidrBlock _defaultInstance;
+
+  $core.String get displayName => $_getS(0, '');
+  set displayName($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasDisplayName() => $_has(0);
+  void clearDisplayName() => clearField(1);
+
+  $core.String get cidrBlock => $_getS(1, '');
+  set cidrBlock($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasCidrBlock() => $_has(1);
+  void clearCidrBlock() => clearField(2);
+}
+
+class MasterAuthorizedNetworksConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'MasterAuthorizedNetworksConfig',
+      package: const $pb.PackageName('google.container.v1'))
+    ..aOB(1, 'enabled')
+    ..pc<MasterAuthorizedNetworksConfig_CidrBlock>(2, 'cidrBlocks',
+        $pb.PbFieldType.PM, MasterAuthorizedNetworksConfig_CidrBlock.create)
+    ..hasRequiredFields = false;
+
+  MasterAuthorizedNetworksConfig() : super();
+  MasterAuthorizedNetworksConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  MasterAuthorizedNetworksConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  MasterAuthorizedNetworksConfig clone() =>
+      MasterAuthorizedNetworksConfig()..mergeFromMessage(this);
+  MasterAuthorizedNetworksConfig copyWith(
+          void Function(MasterAuthorizedNetworksConfig) updates) =>
+      super.copyWith(
+          (message) => updates(message as MasterAuthorizedNetworksConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static MasterAuthorizedNetworksConfig create() =>
+      MasterAuthorizedNetworksConfig();
+  MasterAuthorizedNetworksConfig createEmptyInstance() => create();
+  static $pb.PbList<MasterAuthorizedNetworksConfig> createRepeated() =>
+      $pb.PbList<MasterAuthorizedNetworksConfig>();
+  static MasterAuthorizedNetworksConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static MasterAuthorizedNetworksConfig _defaultInstance;
+
+  $core.bool get enabled => $_get(0, false);
+  set enabled($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  $core.bool hasEnabled() => $_has(0);
+  void clearEnabled() => clearField(1);
+
+  $core.List<MasterAuthorizedNetworksConfig_CidrBlock> get cidrBlocks =>
+      $_getList(1);
+}
+
+class LegacyAbac extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LegacyAbac',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOB(1, 'enabled')
     ..hasRequiredFields = false;
 
   LegacyAbac() : super();
-  LegacyAbac.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LegacyAbac.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LegacyAbac.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LegacyAbac.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LegacyAbac clone() => new LegacyAbac()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LegacyAbac create() => new LegacyAbac();
-  static PbList<LegacyAbac> createRepeated() => new PbList<LegacyAbac>();
-  static LegacyAbac getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLegacyAbac();
-    return _defaultInstance;
-  }
-
+  LegacyAbac clone() => LegacyAbac()..mergeFromMessage(this);
+  LegacyAbac copyWith(void Function(LegacyAbac) updates) =>
+      super.copyWith((message) => updates(message as LegacyAbac));
+  $pb.BuilderInfo get info_ => _i;
+  static LegacyAbac create() => LegacyAbac();
+  LegacyAbac createEmptyInstance() => create();
+  static $pb.PbList<LegacyAbac> createRepeated() => $pb.PbList<LegacyAbac>();
+  static LegacyAbac getDefault() => _defaultInstance ??= create()..freeze();
   static LegacyAbac _defaultInstance;
-  static void $checkItem(LegacyAbac v) {
-    if (v is! LegacyAbac) checkItemFailed(v, 'LegacyAbac');
-  }
 
-  bool get enabled => $_get(0, false);
-  set enabled(bool v) {
+  $core.bool get enabled => $_get(0, false);
+  set enabled($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasEnabled() => $_has(0);
+  $core.bool hasEnabled() => $_has(0);
   void clearEnabled() => clearField(1);
 }
 
-class _ReadonlyLegacyAbac extends LegacyAbac with ReadonlyMessageMixin {}
-
-class NetworkPolicy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NetworkPolicy')
+class NetworkPolicy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NetworkPolicy',
+      package: const $pb.PackageName('google.container.v1'))
     ..e<NetworkPolicy_Provider>(
         1,
         'provider',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         NetworkPolicy_Provider.PROVIDER_UNSPECIFIED,
         NetworkPolicy_Provider.valueOf,
         NetworkPolicy_Provider.values)
@@ -739,48 +680,43 @@ class NetworkPolicy extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   NetworkPolicy() : super();
-  NetworkPolicy.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NetworkPolicy.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  NetworkPolicy.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NetworkPolicy.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  NetworkPolicy clone() => new NetworkPolicy()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NetworkPolicy create() => new NetworkPolicy();
-  static PbList<NetworkPolicy> createRepeated() => new PbList<NetworkPolicy>();
-  static NetworkPolicy getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNetworkPolicy();
-    return _defaultInstance;
-  }
-
+  NetworkPolicy clone() => NetworkPolicy()..mergeFromMessage(this);
+  NetworkPolicy copyWith(void Function(NetworkPolicy) updates) =>
+      super.copyWith((message) => updates(message as NetworkPolicy));
+  $pb.BuilderInfo get info_ => _i;
+  static NetworkPolicy create() => NetworkPolicy();
+  NetworkPolicy createEmptyInstance() => create();
+  static $pb.PbList<NetworkPolicy> createRepeated() =>
+      $pb.PbList<NetworkPolicy>();
+  static NetworkPolicy getDefault() => _defaultInstance ??= create()..freeze();
   static NetworkPolicy _defaultInstance;
-  static void $checkItem(NetworkPolicy v) {
-    if (v is! NetworkPolicy) checkItemFailed(v, 'NetworkPolicy');
-  }
 
   NetworkPolicy_Provider get provider => $_getN(0);
   set provider(NetworkPolicy_Provider v) {
     setField(1, v);
   }
 
-  bool hasProvider() => $_has(0);
+  $core.bool hasProvider() => $_has(0);
   void clearProvider() => clearField(1);
 
-  bool get enabled => $_get(1, false);
-  set enabled(bool v) {
+  $core.bool get enabled => $_get(1, false);
+  set enabled($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasEnabled() => $_has(1);
+  $core.bool hasEnabled() => $_has(1);
   void clearEnabled() => clearField(2);
 }
 
-class _ReadonlyNetworkPolicy extends NetworkPolicy with ReadonlyMessageMixin {}
-
-class IPAllocationPolicy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IPAllocationPolicy')
+class IPAllocationPolicy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('IPAllocationPolicy',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOB(1, 'useIpAliases')
     ..aOB(2, 'createSubnetwork')
     ..aOS(3, 'subnetworkName')
@@ -795,214 +731,174 @@ class IPAllocationPolicy extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   IPAllocationPolicy() : super();
-  IPAllocationPolicy.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  IPAllocationPolicy.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  IPAllocationPolicy.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  IPAllocationPolicy.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  IPAllocationPolicy clone() =>
-      new IPAllocationPolicy()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static IPAllocationPolicy create() => new IPAllocationPolicy();
-  static PbList<IPAllocationPolicy> createRepeated() =>
-      new PbList<IPAllocationPolicy>();
-  static IPAllocationPolicy getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIPAllocationPolicy();
-    return _defaultInstance;
-  }
-
+  IPAllocationPolicy clone() => IPAllocationPolicy()..mergeFromMessage(this);
+  IPAllocationPolicy copyWith(void Function(IPAllocationPolicy) updates) =>
+      super.copyWith((message) => updates(message as IPAllocationPolicy));
+  $pb.BuilderInfo get info_ => _i;
+  static IPAllocationPolicy create() => IPAllocationPolicy();
+  IPAllocationPolicy createEmptyInstance() => create();
+  static $pb.PbList<IPAllocationPolicy> createRepeated() =>
+      $pb.PbList<IPAllocationPolicy>();
+  static IPAllocationPolicy getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static IPAllocationPolicy _defaultInstance;
-  static void $checkItem(IPAllocationPolicy v) {
-    if (v is! IPAllocationPolicy) checkItemFailed(v, 'IPAllocationPolicy');
-  }
 
-  bool get useIpAliases => $_get(0, false);
-  set useIpAliases(bool v) {
+  $core.bool get useIpAliases => $_get(0, false);
+  set useIpAliases($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasUseIpAliases() => $_has(0);
+  $core.bool hasUseIpAliases() => $_has(0);
   void clearUseIpAliases() => clearField(1);
 
-  bool get createSubnetwork => $_get(1, false);
-  set createSubnetwork(bool v) {
+  $core.bool get createSubnetwork => $_get(1, false);
+  set createSubnetwork($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasCreateSubnetwork() => $_has(1);
+  $core.bool hasCreateSubnetwork() => $_has(1);
   void clearCreateSubnetwork() => clearField(2);
 
-  String get subnetworkName => $_getS(2, '');
-  set subnetworkName(String v) {
+  $core.String get subnetworkName => $_getS(2, '');
+  set subnetworkName($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasSubnetworkName() => $_has(2);
+  $core.bool hasSubnetworkName() => $_has(2);
   void clearSubnetworkName() => clearField(3);
 
-  String get clusterIpv4Cidr => $_getS(3, '');
-  set clusterIpv4Cidr(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterIpv4Cidr => $_getS(3, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterIpv4Cidr($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasClusterIpv4Cidr() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterIpv4Cidr() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterIpv4Cidr() => clearField(4);
 
-  String get nodeIpv4Cidr => $_getS(4, '');
-  set nodeIpv4Cidr(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get nodeIpv4Cidr => $_getS(4, '');
+  @$core.Deprecated('This field is deprecated.')
+  set nodeIpv4Cidr($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasNodeIpv4Cidr() => $_has(4);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasNodeIpv4Cidr() => $_has(4);
+  @$core.Deprecated('This field is deprecated.')
   void clearNodeIpv4Cidr() => clearField(5);
 
-  String get servicesIpv4Cidr => $_getS(5, '');
-  set servicesIpv4Cidr(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get servicesIpv4Cidr => $_getS(5, '');
+  @$core.Deprecated('This field is deprecated.')
+  set servicesIpv4Cidr($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasServicesIpv4Cidr() => $_has(5);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasServicesIpv4Cidr() => $_has(5);
+  @$core.Deprecated('This field is deprecated.')
   void clearServicesIpv4Cidr() => clearField(6);
 
-  String get clusterSecondaryRangeName => $_getS(6, '');
-  set clusterSecondaryRangeName(String v) {
+  $core.String get clusterSecondaryRangeName => $_getS(6, '');
+  set clusterSecondaryRangeName($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasClusterSecondaryRangeName() => $_has(6);
+  $core.bool hasClusterSecondaryRangeName() => $_has(6);
   void clearClusterSecondaryRangeName() => clearField(7);
 
-  String get servicesSecondaryRangeName => $_getS(7, '');
-  set servicesSecondaryRangeName(String v) {
+  $core.String get servicesSecondaryRangeName => $_getS(7, '');
+  set servicesSecondaryRangeName($core.String v) {
     $_setString(7, v);
   }
 
-  bool hasServicesSecondaryRangeName() => $_has(7);
+  $core.bool hasServicesSecondaryRangeName() => $_has(7);
   void clearServicesSecondaryRangeName() => clearField(8);
 
-  String get clusterIpv4CidrBlock => $_getS(8, '');
-  set clusterIpv4CidrBlock(String v) {
+  $core.String get clusterIpv4CidrBlock => $_getS(8, '');
+  set clusterIpv4CidrBlock($core.String v) {
     $_setString(8, v);
   }
 
-  bool hasClusterIpv4CidrBlock() => $_has(8);
+  $core.bool hasClusterIpv4CidrBlock() => $_has(8);
   void clearClusterIpv4CidrBlock() => clearField(9);
 
-  String get nodeIpv4CidrBlock => $_getS(9, '');
-  set nodeIpv4CidrBlock(String v) {
+  $core.String get nodeIpv4CidrBlock => $_getS(9, '');
+  set nodeIpv4CidrBlock($core.String v) {
     $_setString(9, v);
   }
 
-  bool hasNodeIpv4CidrBlock() => $_has(9);
+  $core.bool hasNodeIpv4CidrBlock() => $_has(9);
   void clearNodeIpv4CidrBlock() => clearField(10);
 
-  String get servicesIpv4CidrBlock => $_getS(10, '');
-  set servicesIpv4CidrBlock(String v) {
+  $core.String get servicesIpv4CidrBlock => $_getS(10, '');
+  set servicesIpv4CidrBlock($core.String v) {
     $_setString(10, v);
   }
 
-  bool hasServicesIpv4CidrBlock() => $_has(10);
+  $core.bool hasServicesIpv4CidrBlock() => $_has(10);
   void clearServicesIpv4CidrBlock() => clearField(11);
 }
 
-class _ReadonlyIPAllocationPolicy extends IPAllocationPolicy
-    with ReadonlyMessageMixin {}
-
-class Cluster_ResourceLabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cluster_ResourceLabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Cluster_ResourceLabelsEntry() : super();
-  Cluster_ResourceLabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Cluster_ResourceLabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Cluster_ResourceLabelsEntry clone() =>
-      new Cluster_ResourceLabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Cluster_ResourceLabelsEntry create() =>
-      new Cluster_ResourceLabelsEntry();
-  static PbList<Cluster_ResourceLabelsEntry> createRepeated() =>
-      new PbList<Cluster_ResourceLabelsEntry>();
-  static Cluster_ResourceLabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCluster_ResourceLabelsEntry();
-    return _defaultInstance;
-  }
-
-  static Cluster_ResourceLabelsEntry _defaultInstance;
-  static void $checkItem(Cluster_ResourceLabelsEntry v) {
-    if (v is! Cluster_ResourceLabelsEntry)
-      checkItemFailed(v, 'Cluster_ResourceLabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyCluster_ResourceLabelsEntry extends Cluster_ResourceLabelsEntry
-    with ReadonlyMessageMixin {}
-
-class Cluster extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cluster')
+class Cluster extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cluster',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'description')
-    ..a<int>(3, 'initialNodeCount', PbFieldType.O3)
-    ..a<NodeConfig>(4, 'nodeConfig', PbFieldType.OM, NodeConfig.getDefault,
+    ..a<$core.int>(3, 'initialNodeCount', $pb.PbFieldType.O3)
+    ..a<NodeConfig>(4, 'nodeConfig', $pb.PbFieldType.OM, NodeConfig.getDefault,
         NodeConfig.create)
-    ..a<MasterAuth>(5, 'masterAuth', PbFieldType.OM, MasterAuth.getDefault,
+    ..a<MasterAuth>(5, 'masterAuth', $pb.PbFieldType.OM, MasterAuth.getDefault,
         MasterAuth.create)
     ..aOS(6, 'loggingService')
     ..aOS(7, 'monitoringService')
     ..aOS(8, 'network')
     ..aOS(9, 'clusterIpv4Cidr')
-    ..a<AddonsConfig>(10, 'addonsConfig', PbFieldType.OM,
+    ..a<AddonsConfig>(10, 'addonsConfig', $pb.PbFieldType.OM,
         AddonsConfig.getDefault, AddonsConfig.create)
     ..aOS(11, 'subnetwork')
-    ..pp<NodePool>(
-        12, 'nodePools', PbFieldType.PM, NodePool.$checkItem, NodePool.create)
+    ..pc<NodePool>(12, 'nodePools', $pb.PbFieldType.PM, NodePool.create)
     ..pPS(13, 'locations')
     ..aOB(14, 'enableKubernetesAlpha')
-    ..pp<Cluster_ResourceLabelsEntry>(
+    ..m<$core.String, $core.String>(
         15,
         'resourceLabels',
-        PbFieldType.PM,
-        Cluster_ResourceLabelsEntry.$checkItem,
-        Cluster_ResourceLabelsEntry.create)
+        'Cluster.ResourceLabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.container.v1'))
     ..aOS(16, 'labelFingerprint')
-    ..a<LegacyAbac>(18, 'legacyAbac', PbFieldType.OM, LegacyAbac.getDefault,
+    ..a<LegacyAbac>(18, 'legacyAbac', $pb.PbFieldType.OM, LegacyAbac.getDefault,
         LegacyAbac.create)
-    ..a<NetworkPolicy>(19, 'networkPolicy', PbFieldType.OM,
+    ..a<NetworkPolicy>(19, 'networkPolicy', $pb.PbFieldType.OM,
         NetworkPolicy.getDefault, NetworkPolicy.create)
-    ..a<IPAllocationPolicy>(20, 'ipAllocationPolicy', PbFieldType.OM,
+    ..a<IPAllocationPolicy>(20, 'ipAllocationPolicy', $pb.PbFieldType.OM,
         IPAllocationPolicy.getDefault, IPAllocationPolicy.create)
     ..a<MasterAuthorizedNetworksConfig>(
         22,
         'masterAuthorizedNetworksConfig',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         MasterAuthorizedNetworksConfig.getDefault,
         MasterAuthorizedNetworksConfig.create)
-    ..a<MaintenancePolicy>(23, 'maintenancePolicy', PbFieldType.OM,
+    ..a<MaintenancePolicy>(23, 'maintenancePolicy', $pb.PbFieldType.OM,
         MaintenancePolicy.getDefault, MaintenancePolicy.create)
+    ..a<NetworkConfig>(27, 'networkConfig', $pb.PbFieldType.OM,
+        NetworkConfig.getDefault, NetworkConfig.create)
+    ..a<PrivateClusterConfig>(37, 'privateClusterConfig', $pb.PbFieldType.OM,
+        PrivateClusterConfig.getDefault, PrivateClusterConfig.create)
     ..aOS(100, 'selfLink')
     ..aOS(101, 'zone')
     ..aOS(102, 'endpoint')
@@ -1010,63 +906,55 @@ class Cluster extends GeneratedMessage {
     ..aOS(104, 'currentMasterVersion')
     ..aOS(105, 'currentNodeVersion')
     ..aOS(106, 'createTime')
-    ..e<Cluster_Status>(
-        107,
-        'status',
-        PbFieldType.OE,
-        Cluster_Status.STATUS_UNSPECIFIED,
-        Cluster_Status.valueOf,
-        Cluster_Status.values)
+    ..e<Cluster_Status>(107, 'status', $pb.PbFieldType.OE, Cluster_Status.STATUS_UNSPECIFIED, Cluster_Status.valueOf, Cluster_Status.values)
     ..aOS(108, 'statusMessage')
-    ..a<int>(109, 'nodeIpv4CidrSize', PbFieldType.O3)
+    ..a<$core.int>(109, 'nodeIpv4CidrSize', $pb.PbFieldType.O3)
     ..aOS(110, 'servicesIpv4Cidr')
     ..pPS(111, 'instanceGroupUrls')
-    ..a<int>(112, 'currentNodeCount', PbFieldType.O3)
+    ..a<$core.int>(112, 'currentNodeCount', $pb.PbFieldType.O3)
     ..aOS(113, 'expireTime')
+    ..aOS(114, 'location')
     ..hasRequiredFields = false;
 
   Cluster() : super();
-  Cluster.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Cluster.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Cluster.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Cluster.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Cluster clone() => new Cluster()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Cluster create() => new Cluster();
-  static PbList<Cluster> createRepeated() => new PbList<Cluster>();
-  static Cluster getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCluster();
-    return _defaultInstance;
-  }
-
+  Cluster clone() => Cluster()..mergeFromMessage(this);
+  Cluster copyWith(void Function(Cluster) updates) =>
+      super.copyWith((message) => updates(message as Cluster));
+  $pb.BuilderInfo get info_ => _i;
+  static Cluster create() => Cluster();
+  Cluster createEmptyInstance() => create();
+  static $pb.PbList<Cluster> createRepeated() => $pb.PbList<Cluster>();
+  static Cluster getDefault() => _defaultInstance ??= create()..freeze();
   static Cluster _defaultInstance;
-  static void $checkItem(Cluster v) {
-    if (v is! Cluster) checkItemFailed(v, 'Cluster');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  int get initialNodeCount => $_get(2, 0);
-  set initialNodeCount(int v) {
+  $core.int get initialNodeCount => $_get(2, 0);
+  set initialNodeCount($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasInitialNodeCount() => $_has(2);
+  $core.bool hasInitialNodeCount() => $_has(2);
   void clearInitialNodeCount() => clearField(3);
 
   NodeConfig get nodeConfig => $_getN(3);
@@ -1074,7 +962,7 @@ class Cluster extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasNodeConfig() => $_has(3);
+  $core.bool hasNodeConfig() => $_has(3);
   void clearNodeConfig() => clearField(4);
 
   MasterAuth get masterAuth => $_getN(4);
@@ -1082,39 +970,39 @@ class Cluster extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasMasterAuth() => $_has(4);
+  $core.bool hasMasterAuth() => $_has(4);
   void clearMasterAuth() => clearField(5);
 
-  String get loggingService => $_getS(5, '');
-  set loggingService(String v) {
+  $core.String get loggingService => $_getS(5, '');
+  set loggingService($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasLoggingService() => $_has(5);
+  $core.bool hasLoggingService() => $_has(5);
   void clearLoggingService() => clearField(6);
 
-  String get monitoringService => $_getS(6, '');
-  set monitoringService(String v) {
+  $core.String get monitoringService => $_getS(6, '');
+  set monitoringService($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasMonitoringService() => $_has(6);
+  $core.bool hasMonitoringService() => $_has(6);
   void clearMonitoringService() => clearField(7);
 
-  String get network => $_getS(7, '');
-  set network(String v) {
+  $core.String get network => $_getS(7, '');
+  set network($core.String v) {
     $_setString(7, v);
   }
 
-  bool hasNetwork() => $_has(7);
+  $core.bool hasNetwork() => $_has(7);
   void clearNetwork() => clearField(8);
 
-  String get clusterIpv4Cidr => $_getS(8, '');
-  set clusterIpv4Cidr(String v) {
+  $core.String get clusterIpv4Cidr => $_getS(8, '');
+  set clusterIpv4Cidr($core.String v) {
     $_setString(8, v);
   }
 
-  bool hasClusterIpv4Cidr() => $_has(8);
+  $core.bool hasClusterIpv4Cidr() => $_has(8);
   void clearClusterIpv4Cidr() => clearField(9);
 
   AddonsConfig get addonsConfig => $_getN(9);
@@ -1122,37 +1010,37 @@ class Cluster extends GeneratedMessage {
     setField(10, v);
   }
 
-  bool hasAddonsConfig() => $_has(9);
+  $core.bool hasAddonsConfig() => $_has(9);
   void clearAddonsConfig() => clearField(10);
 
-  String get subnetwork => $_getS(10, '');
-  set subnetwork(String v) {
+  $core.String get subnetwork => $_getS(10, '');
+  set subnetwork($core.String v) {
     $_setString(10, v);
   }
 
-  bool hasSubnetwork() => $_has(10);
+  $core.bool hasSubnetwork() => $_has(10);
   void clearSubnetwork() => clearField(11);
 
-  List<NodePool> get nodePools => $_getList(11);
+  $core.List<NodePool> get nodePools => $_getList(11);
 
-  List<String> get locations => $_getList(12);
+  $core.List<$core.String> get locations => $_getList(12);
 
-  bool get enableKubernetesAlpha => $_get(13, false);
-  set enableKubernetesAlpha(bool v) {
+  $core.bool get enableKubernetesAlpha => $_get(13, false);
+  set enableKubernetesAlpha($core.bool v) {
     $_setBool(13, v);
   }
 
-  bool hasEnableKubernetesAlpha() => $_has(13);
+  $core.bool hasEnableKubernetesAlpha() => $_has(13);
   void clearEnableKubernetesAlpha() => clearField(14);
 
-  List<Cluster_ResourceLabelsEntry> get resourceLabels => $_getList(14);
+  $core.Map<$core.String, $core.String> get resourceLabels => $_getMap(14);
 
-  String get labelFingerprint => $_getS(15, '');
-  set labelFingerprint(String v) {
+  $core.String get labelFingerprint => $_getS(15, '');
+  set labelFingerprint($core.String v) {
     $_setString(15, v);
   }
 
-  bool hasLabelFingerprint() => $_has(15);
+  $core.bool hasLabelFingerprint() => $_has(15);
   void clearLabelFingerprint() => clearField(16);
 
   LegacyAbac get legacyAbac => $_getN(16);
@@ -1160,7 +1048,7 @@ class Cluster extends GeneratedMessage {
     setField(18, v);
   }
 
-  bool hasLegacyAbac() => $_has(16);
+  $core.bool hasLegacyAbac() => $_has(16);
   void clearLegacyAbac() => clearField(18);
 
   NetworkPolicy get networkPolicy => $_getN(17);
@@ -1168,7 +1056,7 @@ class Cluster extends GeneratedMessage {
     setField(19, v);
   }
 
-  bool hasNetworkPolicy() => $_has(17);
+  $core.bool hasNetworkPolicy() => $_has(17);
   void clearNetworkPolicy() => clearField(19);
 
   IPAllocationPolicy get ipAllocationPolicy => $_getN(18);
@@ -1176,7 +1064,7 @@ class Cluster extends GeneratedMessage {
     setField(20, v);
   }
 
-  bool hasIpAllocationPolicy() => $_has(18);
+  $core.bool hasIpAllocationPolicy() => $_has(18);
   void clearIpAllocationPolicy() => clearField(20);
 
   MasterAuthorizedNetworksConfig get masterAuthorizedNetworksConfig =>
@@ -1185,7 +1073,7 @@ class Cluster extends GeneratedMessage {
     setField(22, v);
   }
 
-  bool hasMasterAuthorizedNetworksConfig() => $_has(19);
+  $core.bool hasMasterAuthorizedNetworksConfig() => $_has(19);
   void clearMasterAuthorizedNetworksConfig() => clearField(22);
 
   MaintenancePolicy get maintenancePolicy => $_getN(20);
@@ -1193,174 +1081,206 @@ class Cluster extends GeneratedMessage {
     setField(23, v);
   }
 
-  bool hasMaintenancePolicy() => $_has(20);
+  $core.bool hasMaintenancePolicy() => $_has(20);
   void clearMaintenancePolicy() => clearField(23);
 
-  String get selfLink => $_getS(21, '');
-  set selfLink(String v) {
-    $_setString(21, v);
+  NetworkConfig get networkConfig => $_getN(21);
+  set networkConfig(NetworkConfig v) {
+    setField(27, v);
   }
 
-  bool hasSelfLink() => $_has(21);
-  void clearSelfLink() => clearField(100);
+  $core.bool hasNetworkConfig() => $_has(21);
+  void clearNetworkConfig() => clearField(27);
 
-  String get zone => $_getS(22, '');
-  set zone(String v) {
-    $_setString(22, v);
+  PrivateClusterConfig get privateClusterConfig => $_getN(22);
+  set privateClusterConfig(PrivateClusterConfig v) {
+    setField(37, v);
   }
 
-  bool hasZone() => $_has(22);
-  void clearZone() => clearField(101);
+  $core.bool hasPrivateClusterConfig() => $_has(22);
+  void clearPrivateClusterConfig() => clearField(37);
 
-  String get endpoint => $_getS(23, '');
-  set endpoint(String v) {
+  $core.String get selfLink => $_getS(23, '');
+  set selfLink($core.String v) {
     $_setString(23, v);
   }
 
-  bool hasEndpoint() => $_has(23);
-  void clearEndpoint() => clearField(102);
+  $core.bool hasSelfLink() => $_has(23);
+  void clearSelfLink() => clearField(100);
 
-  String get initialClusterVersion => $_getS(24, '');
-  set initialClusterVersion(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(24, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(24, v);
   }
 
-  bool hasInitialClusterVersion() => $_has(24);
-  void clearInitialClusterVersion() => clearField(103);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(24);
+  @$core.Deprecated('This field is deprecated.')
+  void clearZone() => clearField(101);
 
-  String get currentMasterVersion => $_getS(25, '');
-  set currentMasterVersion(String v) {
+  $core.String get endpoint => $_getS(25, '');
+  set endpoint($core.String v) {
     $_setString(25, v);
   }
 
-  bool hasCurrentMasterVersion() => $_has(25);
-  void clearCurrentMasterVersion() => clearField(104);
+  $core.bool hasEndpoint() => $_has(25);
+  void clearEndpoint() => clearField(102);
 
-  String get currentNodeVersion => $_getS(26, '');
-  set currentNodeVersion(String v) {
+  $core.String get initialClusterVersion => $_getS(26, '');
+  set initialClusterVersion($core.String v) {
     $_setString(26, v);
   }
 
-  bool hasCurrentNodeVersion() => $_has(26);
-  void clearCurrentNodeVersion() => clearField(105);
+  $core.bool hasInitialClusterVersion() => $_has(26);
+  void clearInitialClusterVersion() => clearField(103);
 
-  String get createTime => $_getS(27, '');
-  set createTime(String v) {
+  $core.String get currentMasterVersion => $_getS(27, '');
+  set currentMasterVersion($core.String v) {
     $_setString(27, v);
   }
 
-  bool hasCreateTime() => $_has(27);
+  $core.bool hasCurrentMasterVersion() => $_has(27);
+  void clearCurrentMasterVersion() => clearField(104);
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get currentNodeVersion => $_getS(28, '');
+  @$core.Deprecated('This field is deprecated.')
+  set currentNodeVersion($core.String v) {
+    $_setString(28, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasCurrentNodeVersion() => $_has(28);
+  @$core.Deprecated('This field is deprecated.')
+  void clearCurrentNodeVersion() => clearField(105);
+
+  $core.String get createTime => $_getS(29, '');
+  set createTime($core.String v) {
+    $_setString(29, v);
+  }
+
+  $core.bool hasCreateTime() => $_has(29);
   void clearCreateTime() => clearField(106);
 
-  Cluster_Status get status => $_getN(28);
+  Cluster_Status get status => $_getN(30);
   set status(Cluster_Status v) {
     setField(107, v);
   }
 
-  bool hasStatus() => $_has(28);
+  $core.bool hasStatus() => $_has(30);
   void clearStatus() => clearField(107);
 
-  String get statusMessage => $_getS(29, '');
-  set statusMessage(String v) {
-    $_setString(29, v);
-  }
-
-  bool hasStatusMessage() => $_has(29);
-  void clearStatusMessage() => clearField(108);
-
-  int get nodeIpv4CidrSize => $_get(30, 0);
-  set nodeIpv4CidrSize(int v) {
-    $_setSignedInt32(30, v);
-  }
-
-  bool hasNodeIpv4CidrSize() => $_has(30);
-  void clearNodeIpv4CidrSize() => clearField(109);
-
-  String get servicesIpv4Cidr => $_getS(31, '');
-  set servicesIpv4Cidr(String v) {
+  $core.String get statusMessage => $_getS(31, '');
+  set statusMessage($core.String v) {
     $_setString(31, v);
   }
 
-  bool hasServicesIpv4Cidr() => $_has(31);
+  $core.bool hasStatusMessage() => $_has(31);
+  void clearStatusMessage() => clearField(108);
+
+  $core.int get nodeIpv4CidrSize => $_get(32, 0);
+  set nodeIpv4CidrSize($core.int v) {
+    $_setSignedInt32(32, v);
+  }
+
+  $core.bool hasNodeIpv4CidrSize() => $_has(32);
+  void clearNodeIpv4CidrSize() => clearField(109);
+
+  $core.String get servicesIpv4Cidr => $_getS(33, '');
+  set servicesIpv4Cidr($core.String v) {
+    $_setString(33, v);
+  }
+
+  $core.bool hasServicesIpv4Cidr() => $_has(33);
   void clearServicesIpv4Cidr() => clearField(110);
 
-  List<String> get instanceGroupUrls => $_getList(32);
+  @$core.Deprecated('This field is deprecated.')
+  $core.List<$core.String> get instanceGroupUrls => $_getList(34);
 
-  int get currentNodeCount => $_get(33, 0);
-  set currentNodeCount(int v) {
-    $_setSignedInt32(33, v);
+  $core.int get currentNodeCount => $_get(35, 0);
+  set currentNodeCount($core.int v) {
+    $_setSignedInt32(35, v);
   }
 
-  bool hasCurrentNodeCount() => $_has(33);
+  $core.bool hasCurrentNodeCount() => $_has(35);
   void clearCurrentNodeCount() => clearField(112);
 
-  String get expireTime => $_getS(34, '');
-  set expireTime(String v) {
-    $_setString(34, v);
+  $core.String get expireTime => $_getS(36, '');
+  set expireTime($core.String v) {
+    $_setString(36, v);
   }
 
-  bool hasExpireTime() => $_has(34);
+  $core.bool hasExpireTime() => $_has(36);
   void clearExpireTime() => clearField(113);
+
+  $core.String get location => $_getS(37, '');
+  set location($core.String v) {
+    $_setString(37, v);
+  }
+
+  $core.bool hasLocation() => $_has(37);
+  void clearLocation() => clearField(114);
 }
 
-class _ReadonlyCluster extends Cluster with ReadonlyMessageMixin {}
-
-class ClusterUpdate extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClusterUpdate')
+class ClusterUpdate extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClusterUpdate',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(4, 'desiredNodeVersion')
     ..aOS(5, 'desiredMonitoringService')
-    ..a<AddonsConfig>(6, 'desiredAddonsConfig', PbFieldType.OM,
+    ..a<AddonsConfig>(6, 'desiredAddonsConfig', $pb.PbFieldType.OM,
         AddonsConfig.getDefault, AddonsConfig.create)
     ..aOS(7, 'desiredNodePoolId')
     ..aOS(8, 'desiredImageType')
-    ..a<NodePoolAutoscaling>(9, 'desiredNodePoolAutoscaling', PbFieldType.OM,
-        NodePoolAutoscaling.getDefault, NodePoolAutoscaling.create)
+    ..a<NodePoolAutoscaling>(
+        9,
+        'desiredNodePoolAutoscaling',
+        $pb.PbFieldType.OM,
+        NodePoolAutoscaling.getDefault,
+        NodePoolAutoscaling.create)
     ..pPS(10, 'desiredLocations')
     ..a<MasterAuthorizedNetworksConfig>(
         12,
         'desiredMasterAuthorizedNetworksConfig',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         MasterAuthorizedNetworksConfig.getDefault,
         MasterAuthorizedNetworksConfig.create)
     ..aOS(100, 'desiredMasterVersion')
     ..hasRequiredFields = false;
 
   ClusterUpdate() : super();
-  ClusterUpdate.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClusterUpdate.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ClusterUpdate.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ClusterUpdate.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ClusterUpdate clone() => new ClusterUpdate()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ClusterUpdate create() => new ClusterUpdate();
-  static PbList<ClusterUpdate> createRepeated() => new PbList<ClusterUpdate>();
-  static ClusterUpdate getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterUpdate();
-    return _defaultInstance;
-  }
-
+  ClusterUpdate clone() => ClusterUpdate()..mergeFromMessage(this);
+  ClusterUpdate copyWith(void Function(ClusterUpdate) updates) =>
+      super.copyWith((message) => updates(message as ClusterUpdate));
+  $pb.BuilderInfo get info_ => _i;
+  static ClusterUpdate create() => ClusterUpdate();
+  ClusterUpdate createEmptyInstance() => create();
+  static $pb.PbList<ClusterUpdate> createRepeated() =>
+      $pb.PbList<ClusterUpdate>();
+  static ClusterUpdate getDefault() => _defaultInstance ??= create()..freeze();
   static ClusterUpdate _defaultInstance;
-  static void $checkItem(ClusterUpdate v) {
-    if (v is! ClusterUpdate) checkItemFailed(v, 'ClusterUpdate');
-  }
 
-  String get desiredNodeVersion => $_getS(0, '');
-  set desiredNodeVersion(String v) {
+  $core.String get desiredNodeVersion => $_getS(0, '');
+  set desiredNodeVersion($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDesiredNodeVersion() => $_has(0);
+  $core.bool hasDesiredNodeVersion() => $_has(0);
   void clearDesiredNodeVersion() => clearField(4);
 
-  String get desiredMonitoringService => $_getS(1, '');
-  set desiredMonitoringService(String v) {
+  $core.String get desiredMonitoringService => $_getS(1, '');
+  set desiredMonitoringService($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDesiredMonitoringService() => $_has(1);
+  $core.bool hasDesiredMonitoringService() => $_has(1);
   void clearDesiredMonitoringService() => clearField(5);
 
   AddonsConfig get desiredAddonsConfig => $_getN(2);
@@ -1368,23 +1288,23 @@ class ClusterUpdate extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasDesiredAddonsConfig() => $_has(2);
+  $core.bool hasDesiredAddonsConfig() => $_has(2);
   void clearDesiredAddonsConfig() => clearField(6);
 
-  String get desiredNodePoolId => $_getS(3, '');
-  set desiredNodePoolId(String v) {
+  $core.String get desiredNodePoolId => $_getS(3, '');
+  set desiredNodePoolId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDesiredNodePoolId() => $_has(3);
+  $core.bool hasDesiredNodePoolId() => $_has(3);
   void clearDesiredNodePoolId() => clearField(7);
 
-  String get desiredImageType => $_getS(4, '');
-  set desiredImageType(String v) {
+  $core.String get desiredImageType => $_getS(4, '');
+  set desiredImageType($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasDesiredImageType() => $_has(4);
+  $core.bool hasDesiredImageType() => $_has(4);
   void clearDesiredImageType() => clearField(8);
 
   NodePoolAutoscaling get desiredNodePoolAutoscaling => $_getN(5);
@@ -1392,10 +1312,10 @@ class ClusterUpdate extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasDesiredNodePoolAutoscaling() => $_has(5);
+  $core.bool hasDesiredNodePoolAutoscaling() => $_has(5);
   void clearDesiredNodePoolAutoscaling() => clearField(9);
 
-  List<String> get desiredLocations => $_getList(6);
+  $core.List<$core.String> get desiredLocations => $_getList(6);
 
   MasterAuthorizedNetworksConfig get desiredMasterAuthorizedNetworksConfig =>
       $_getN(7);
@@ -1403,35 +1323,34 @@ class ClusterUpdate extends GeneratedMessage {
     setField(12, v);
   }
 
-  bool hasDesiredMasterAuthorizedNetworksConfig() => $_has(7);
+  $core.bool hasDesiredMasterAuthorizedNetworksConfig() => $_has(7);
   void clearDesiredMasterAuthorizedNetworksConfig() => clearField(12);
 
-  String get desiredMasterVersion => $_getS(8, '');
-  set desiredMasterVersion(String v) {
+  $core.String get desiredMasterVersion => $_getS(8, '');
+  set desiredMasterVersion($core.String v) {
     $_setString(8, v);
   }
 
-  bool hasDesiredMasterVersion() => $_has(8);
+  $core.bool hasDesiredMasterVersion() => $_has(8);
   void clearDesiredMasterVersion() => clearField(100);
 }
 
-class _ReadonlyClusterUpdate extends ClusterUpdate with ReadonlyMessageMixin {}
-
-class Operation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Operation')
+class Operation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Operation',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'zone')
     ..e<Operation_Type>(
         3,
         'operationType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Operation_Type.TYPE_UNSPECIFIED,
         Operation_Type.valueOf,
         Operation_Type.values)
     ..e<Operation_Status>(
         4,
         'status',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Operation_Status.STATUS_UNSPECIFIED,
         Operation_Status.valueOf,
         Operation_Status.values)
@@ -1439,44 +1358,46 @@ class Operation extends GeneratedMessage {
     ..aOS(6, 'selfLink')
     ..aOS(7, 'targetLink')
     ..aOS(8, 'detail')
+    ..aOS(9, 'location')
     ..aOS(10, 'startTime')
     ..aOS(11, 'endTime')
     ..hasRequiredFields = false;
 
   Operation() : super();
-  Operation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Operation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Operation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Operation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Operation clone() => new Operation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Operation create() => new Operation();
-  static PbList<Operation> createRepeated() => new PbList<Operation>();
-  static Operation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyOperation();
-    return _defaultInstance;
-  }
-
+  Operation clone() => Operation()..mergeFromMessage(this);
+  Operation copyWith(void Function(Operation) updates) =>
+      super.copyWith((message) => updates(message as Operation));
+  $pb.BuilderInfo get info_ => _i;
+  static Operation create() => Operation();
+  Operation createEmptyInstance() => create();
+  static $pb.PbList<Operation> createRepeated() => $pb.PbList<Operation>();
+  static Operation getDefault() => _defaultInstance ??= create()..freeze();
   static Operation _defaultInstance;
-  static void $checkItem(Operation v) {
-    if (v is! Operation) checkItemFailed(v, 'Operation');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
   Operation_Type get operationType => $_getN(2);
@@ -1484,7 +1405,7 @@ class Operation extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasOperationType() => $_has(2);
+  $core.bool hasOperationType() => $_has(2);
   void clearOperationType() => clearField(3);
 
   Operation_Status get status => $_getN(3);
@@ -1492,106 +1413,118 @@ class Operation extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasStatus() => $_has(3);
+  $core.bool hasStatus() => $_has(3);
   void clearStatus() => clearField(4);
 
-  String get statusMessage => $_getS(4, '');
-  set statusMessage(String v) {
+  $core.String get statusMessage => $_getS(4, '');
+  set statusMessage($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasStatusMessage() => $_has(4);
+  $core.bool hasStatusMessage() => $_has(4);
   void clearStatusMessage() => clearField(5);
 
-  String get selfLink => $_getS(5, '');
-  set selfLink(String v) {
+  $core.String get selfLink => $_getS(5, '');
+  set selfLink($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasSelfLink() => $_has(5);
+  $core.bool hasSelfLink() => $_has(5);
   void clearSelfLink() => clearField(6);
 
-  String get targetLink => $_getS(6, '');
-  set targetLink(String v) {
+  $core.String get targetLink => $_getS(6, '');
+  set targetLink($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasTargetLink() => $_has(6);
+  $core.bool hasTargetLink() => $_has(6);
   void clearTargetLink() => clearField(7);
 
-  String get detail => $_getS(7, '');
-  set detail(String v) {
+  $core.String get detail => $_getS(7, '');
+  set detail($core.String v) {
     $_setString(7, v);
   }
 
-  bool hasDetail() => $_has(7);
+  $core.bool hasDetail() => $_has(7);
   void clearDetail() => clearField(8);
 
-  String get startTime => $_getS(8, '');
-  set startTime(String v) {
+  $core.String get location => $_getS(8, '');
+  set location($core.String v) {
     $_setString(8, v);
   }
 
-  bool hasStartTime() => $_has(8);
-  void clearStartTime() => clearField(10);
+  $core.bool hasLocation() => $_has(8);
+  void clearLocation() => clearField(9);
 
-  String get endTime => $_getS(9, '');
-  set endTime(String v) {
+  $core.String get startTime => $_getS(9, '');
+  set startTime($core.String v) {
     $_setString(9, v);
   }
 
-  bool hasEndTime() => $_has(9);
+  $core.bool hasStartTime() => $_has(9);
+  void clearStartTime() => clearField(10);
+
+  $core.String get endTime => $_getS(10, '');
+  set endTime($core.String v) {
+    $_setString(10, v);
+  }
+
+  $core.bool hasEndTime() => $_has(10);
   void clearEndTime() => clearField(11);
 }
 
-class _ReadonlyOperation extends Operation with ReadonlyMessageMixin {}
-
-class CreateClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateClusterRequest')
+class CreateClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateClusterRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..a<Cluster>(
-        3, 'cluster', PbFieldType.OM, Cluster.getDefault, Cluster.create)
+        3, 'cluster', $pb.PbFieldType.OM, Cluster.getDefault, Cluster.create)
+    ..aOS(5, 'parent')
     ..hasRequiredFields = false;
 
   CreateClusterRequest() : super();
-  CreateClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateClusterRequest clone() =>
-      new CreateClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateClusterRequest create() => new CreateClusterRequest();
-  static PbList<CreateClusterRequest> createRepeated() =>
-      new PbList<CreateClusterRequest>();
-  static CreateClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateClusterRequest();
-    return _defaultInstance;
-  }
-
+      CreateClusterRequest()..mergeFromMessage(this);
+  CreateClusterRequest copyWith(void Function(CreateClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateClusterRequest create() => CreateClusterRequest();
+  CreateClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateClusterRequest> createRepeated() =>
+      $pb.PbList<CreateClusterRequest>();
+  static CreateClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateClusterRequest _defaultInstance;
-  static void $checkItem(CreateClusterRequest v) {
-    if (v is! CreateClusterRequest) checkItemFailed(v, 'CreateClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
   Cluster get cluster => $_getN(2);
@@ -1599,126 +1532,156 @@ class CreateClusterRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasCluster() => $_has(2);
+  $core.bool hasCluster() => $_has(2);
   void clearCluster() => clearField(3);
+
+  $core.String get parent => $_getS(3, '');
+  set parent($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasParent() => $_has(3);
+  void clearParent() => clearField(5);
 }
 
-class _ReadonlyCreateClusterRequest extends CreateClusterRequest
-    with ReadonlyMessageMixin {}
-
-class GetClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetClusterRequest')
+class GetClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetClusterRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
+    ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
   GetClusterRequest() : super();
-  GetClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetClusterRequest clone() => new GetClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetClusterRequest create() => new GetClusterRequest();
-  static PbList<GetClusterRequest> createRepeated() =>
-      new PbList<GetClusterRequest>();
-  static GetClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetClusterRequest();
-    return _defaultInstance;
-  }
-
+  GetClusterRequest clone() => GetClusterRequest()..mergeFromMessage(this);
+  GetClusterRequest copyWith(void Function(GetClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as GetClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetClusterRequest create() => GetClusterRequest();
+  GetClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<GetClusterRequest> createRepeated() =>
+      $pb.PbList<GetClusterRequest>();
+  static GetClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetClusterRequest _defaultInstance;
-  static void $checkItem(GetClusterRequest v) {
-    if (v is! GetClusterRequest) checkItemFailed(v, 'GetClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
+
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasName() => $_has(3);
+  void clearName() => clearField(5);
 }
 
-class _ReadonlyGetClusterRequest extends GetClusterRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateClusterRequest')
+class UpdateClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateClusterRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
-    ..a<ClusterUpdate>(4, 'update', PbFieldType.OM, ClusterUpdate.getDefault,
-        ClusterUpdate.create)
+    ..a<ClusterUpdate>(4, 'update', $pb.PbFieldType.OM,
+        ClusterUpdate.getDefault, ClusterUpdate.create)
+    ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
   UpdateClusterRequest() : super();
-  UpdateClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateClusterRequest clone() =>
-      new UpdateClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateClusterRequest create() => new UpdateClusterRequest();
-  static PbList<UpdateClusterRequest> createRepeated() =>
-      new PbList<UpdateClusterRequest>();
-  static UpdateClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateClusterRequest();
-    return _defaultInstance;
-  }
-
+      UpdateClusterRequest()..mergeFromMessage(this);
+  UpdateClusterRequest copyWith(void Function(UpdateClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateClusterRequest create() => UpdateClusterRequest();
+  UpdateClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateClusterRequest> createRepeated() =>
+      $pb.PbList<UpdateClusterRequest>();
+  static UpdateClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateClusterRequest _defaultInstance;
-  static void $checkItem(UpdateClusterRequest v) {
-    if (v is! UpdateClusterRequest) checkItemFailed(v, 'UpdateClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
   ClusterUpdate get update => $_getN(3);
@@ -1726,166 +1689,206 @@ class UpdateClusterRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasUpdate() => $_has(3);
+  $core.bool hasUpdate() => $_has(3);
   void clearUpdate() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(5);
 }
 
-class _ReadonlyUpdateClusterRequest extends UpdateClusterRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateNodePoolRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateNodePoolRequest')
+class UpdateNodePoolRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateNodePoolRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'nodePoolId')
     ..aOS(5, 'nodeVersion')
     ..aOS(6, 'imageType')
+    ..aOS(8, 'name')
     ..hasRequiredFields = false;
 
   UpdateNodePoolRequest() : super();
-  UpdateNodePoolRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateNodePoolRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateNodePoolRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateNodePoolRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateNodePoolRequest clone() =>
-      new UpdateNodePoolRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateNodePoolRequest create() => new UpdateNodePoolRequest();
-  static PbList<UpdateNodePoolRequest> createRepeated() =>
-      new PbList<UpdateNodePoolRequest>();
-  static UpdateNodePoolRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateNodePoolRequest();
-    return _defaultInstance;
-  }
-
+      UpdateNodePoolRequest()..mergeFromMessage(this);
+  UpdateNodePoolRequest copyWith(
+          void Function(UpdateNodePoolRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateNodePoolRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateNodePoolRequest create() => UpdateNodePoolRequest();
+  UpdateNodePoolRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateNodePoolRequest> createRepeated() =>
+      $pb.PbList<UpdateNodePoolRequest>();
+  static UpdateNodePoolRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateNodePoolRequest _defaultInstance;
-  static void $checkItem(UpdateNodePoolRequest v) {
-    if (v is! UpdateNodePoolRequest)
-      checkItemFailed(v, 'UpdateNodePoolRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get nodePoolId => $_getS(3, '');
-  set nodePoolId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get nodePoolId => $_getS(3, '');
+  @$core.Deprecated('This field is deprecated.')
+  set nodePoolId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearNodePoolId() => clearField(4);
 
-  String get nodeVersion => $_getS(4, '');
-  set nodeVersion(String v) {
+  $core.String get nodeVersion => $_getS(4, '');
+  set nodeVersion($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasNodeVersion() => $_has(4);
+  $core.bool hasNodeVersion() => $_has(4);
   void clearNodeVersion() => clearField(5);
 
-  String get imageType => $_getS(5, '');
-  set imageType(String v) {
+  $core.String get imageType => $_getS(5, '');
+  set imageType($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasImageType() => $_has(5);
+  $core.bool hasImageType() => $_has(5);
   void clearImageType() => clearField(6);
+
+  $core.String get name => $_getS(6, '');
+  set name($core.String v) {
+    $_setString(6, v);
+  }
+
+  $core.bool hasName() => $_has(6);
+  void clearName() => clearField(8);
 }
 
-class _ReadonlyUpdateNodePoolRequest extends UpdateNodePoolRequest
-    with ReadonlyMessageMixin {}
-
-class SetNodePoolAutoscalingRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetNodePoolAutoscalingRequest')
+class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SetNodePoolAutoscalingRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'nodePoolId')
-    ..a<NodePoolAutoscaling>(5, 'autoscaling', PbFieldType.OM,
+    ..a<NodePoolAutoscaling>(5, 'autoscaling', $pb.PbFieldType.OM,
         NodePoolAutoscaling.getDefault, NodePoolAutoscaling.create)
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
   SetNodePoolAutoscalingRequest() : super();
-  SetNodePoolAutoscalingRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetNodePoolAutoscalingRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetNodePoolAutoscalingRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetNodePoolAutoscalingRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetNodePoolAutoscalingRequest clone() =>
-      new SetNodePoolAutoscalingRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      SetNodePoolAutoscalingRequest()..mergeFromMessage(this);
+  SetNodePoolAutoscalingRequest copyWith(
+          void Function(SetNodePoolAutoscalingRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as SetNodePoolAutoscalingRequest));
+  $pb.BuilderInfo get info_ => _i;
   static SetNodePoolAutoscalingRequest create() =>
-      new SetNodePoolAutoscalingRequest();
-  static PbList<SetNodePoolAutoscalingRequest> createRepeated() =>
-      new PbList<SetNodePoolAutoscalingRequest>();
-  static SetNodePoolAutoscalingRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetNodePoolAutoscalingRequest();
-    return _defaultInstance;
-  }
-
+      SetNodePoolAutoscalingRequest();
+  SetNodePoolAutoscalingRequest createEmptyInstance() => create();
+  static $pb.PbList<SetNodePoolAutoscalingRequest> createRepeated() =>
+      $pb.PbList<SetNodePoolAutoscalingRequest>();
+  static SetNodePoolAutoscalingRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetNodePoolAutoscalingRequest _defaultInstance;
-  static void $checkItem(SetNodePoolAutoscalingRequest v) {
-    if (v is! SetNodePoolAutoscalingRequest)
-      checkItemFailed(v, 'SetNodePoolAutoscalingRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get nodePoolId => $_getS(3, '');
-  set nodePoolId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get nodePoolId => $_getS(3, '');
+  @$core.Deprecated('This field is deprecated.')
+  set nodePoolId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearNodePoolId() => clearField(4);
 
   NodePoolAutoscaling get autoscaling => $_getN(4);
@@ -1893,208 +1896,250 @@ class SetNodePoolAutoscalingRequest extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasAutoscaling() => $_has(4);
+  $core.bool hasAutoscaling() => $_has(4);
   void clearAutoscaling() => clearField(5);
+
+  $core.String get name => $_getS(5, '');
+  set name($core.String v) {
+    $_setString(5, v);
+  }
+
+  $core.bool hasName() => $_has(5);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlySetNodePoolAutoscalingRequest
-    extends SetNodePoolAutoscalingRequest with ReadonlyMessageMixin {}
-
-class SetLoggingServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetLoggingServiceRequest')
+class SetLoggingServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetLoggingServiceRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'loggingService')
+    ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
   SetLoggingServiceRequest() : super();
-  SetLoggingServiceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetLoggingServiceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetLoggingServiceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetLoggingServiceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetLoggingServiceRequest clone() =>
-      new SetLoggingServiceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetLoggingServiceRequest create() => new SetLoggingServiceRequest();
-  static PbList<SetLoggingServiceRequest> createRepeated() =>
-      new PbList<SetLoggingServiceRequest>();
-  static SetLoggingServiceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetLoggingServiceRequest();
-    return _defaultInstance;
-  }
-
+      SetLoggingServiceRequest()..mergeFromMessage(this);
+  SetLoggingServiceRequest copyWith(
+          void Function(SetLoggingServiceRequest) updates) =>
+      super.copyWith((message) => updates(message as SetLoggingServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetLoggingServiceRequest create() => SetLoggingServiceRequest();
+  SetLoggingServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<SetLoggingServiceRequest> createRepeated() =>
+      $pb.PbList<SetLoggingServiceRequest>();
+  static SetLoggingServiceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetLoggingServiceRequest _defaultInstance;
-  static void $checkItem(SetLoggingServiceRequest v) {
-    if (v is! SetLoggingServiceRequest)
-      checkItemFailed(v, 'SetLoggingServiceRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  $core.String get zone => $_getS(1, '');
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  $core.bool hasZone() => $_has(1);
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get loggingService => $_getS(3, '');
-  set loggingService(String v) {
+  $core.String get loggingService => $_getS(3, '');
+  set loggingService($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasLoggingService() => $_has(3);
+  $core.bool hasLoggingService() => $_has(3);
   void clearLoggingService() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(5);
 }
 
-class _ReadonlySetLoggingServiceRequest extends SetLoggingServiceRequest
-    with ReadonlyMessageMixin {}
-
-class SetMonitoringServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetMonitoringServiceRequest')
+class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SetMonitoringServiceRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'monitoringService')
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
   SetMonitoringServiceRequest() : super();
-  SetMonitoringServiceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetMonitoringServiceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetMonitoringServiceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetMonitoringServiceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetMonitoringServiceRequest clone() =>
-      new SetMonitoringServiceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetMonitoringServiceRequest create() =>
-      new SetMonitoringServiceRequest();
-  static PbList<SetMonitoringServiceRequest> createRepeated() =>
-      new PbList<SetMonitoringServiceRequest>();
-  static SetMonitoringServiceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetMonitoringServiceRequest();
-    return _defaultInstance;
-  }
-
+      SetMonitoringServiceRequest()..mergeFromMessage(this);
+  SetMonitoringServiceRequest copyWith(
+          void Function(SetMonitoringServiceRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as SetMonitoringServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetMonitoringServiceRequest create() => SetMonitoringServiceRequest();
+  SetMonitoringServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<SetMonitoringServiceRequest> createRepeated() =>
+      $pb.PbList<SetMonitoringServiceRequest>();
+  static SetMonitoringServiceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetMonitoringServiceRequest _defaultInstance;
-  static void $checkItem(SetMonitoringServiceRequest v) {
-    if (v is! SetMonitoringServiceRequest)
-      checkItemFailed(v, 'SetMonitoringServiceRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get monitoringService => $_getS(3, '');
-  set monitoringService(String v) {
+  $core.String get monitoringService => $_getS(3, '');
+  set monitoringService($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasMonitoringService() => $_has(3);
+  $core.bool hasMonitoringService() => $_has(3);
   void clearMonitoringService() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlySetMonitoringServiceRequest extends SetMonitoringServiceRequest
-    with ReadonlyMessageMixin {}
-
-class SetAddonsConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetAddonsConfigRequest')
+class SetAddonsConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetAddonsConfigRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
-    ..a<AddonsConfig>(4, 'addonsConfig', PbFieldType.OM,
+    ..a<AddonsConfig>(4, 'addonsConfig', $pb.PbFieldType.OM,
         AddonsConfig.getDefault, AddonsConfig.create)
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
   SetAddonsConfigRequest() : super();
-  SetAddonsConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetAddonsConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetAddonsConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetAddonsConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetAddonsConfigRequest clone() =>
-      new SetAddonsConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetAddonsConfigRequest create() => new SetAddonsConfigRequest();
-  static PbList<SetAddonsConfigRequest> createRepeated() =>
-      new PbList<SetAddonsConfigRequest>();
-  static SetAddonsConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetAddonsConfigRequest();
-    return _defaultInstance;
-  }
-
+      SetAddonsConfigRequest()..mergeFromMessage(this);
+  SetAddonsConfigRequest copyWith(
+          void Function(SetAddonsConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as SetAddonsConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetAddonsConfigRequest create() => SetAddonsConfigRequest();
+  SetAddonsConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<SetAddonsConfigRequest> createRepeated() =>
+      $pb.PbList<SetAddonsConfigRequest>();
+  static SetAddonsConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetAddonsConfigRequest _defaultInstance;
-  static void $checkItem(SetAddonsConfigRequest v) {
-    if (v is! SetAddonsConfigRequest)
-      checkItemFailed(v, 'SetAddonsConfigRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
   AddonsConfig get addonsConfig => $_getN(3);
@@ -2102,205 +2147,248 @@ class SetAddonsConfigRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasAddonsConfig() => $_has(3);
+  $core.bool hasAddonsConfig() => $_has(3);
   void clearAddonsConfig() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlySetAddonsConfigRequest extends SetAddonsConfigRequest
-    with ReadonlyMessageMixin {}
-
-class SetLocationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetLocationsRequest')
+class SetLocationsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetLocationsRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..pPS(4, 'locations')
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
   SetLocationsRequest() : super();
-  SetLocationsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetLocationsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetLocationsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetLocationsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SetLocationsRequest clone() =>
-      new SetLocationsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetLocationsRequest create() => new SetLocationsRequest();
-  static PbList<SetLocationsRequest> createRepeated() =>
-      new PbList<SetLocationsRequest>();
-  static SetLocationsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetLocationsRequest();
-    return _defaultInstance;
-  }
-
+  SetLocationsRequest clone() => SetLocationsRequest()..mergeFromMessage(this);
+  SetLocationsRequest copyWith(void Function(SetLocationsRequest) updates) =>
+      super.copyWith((message) => updates(message as SetLocationsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetLocationsRequest create() => SetLocationsRequest();
+  SetLocationsRequest createEmptyInstance() => create();
+  static $pb.PbList<SetLocationsRequest> createRepeated() =>
+      $pb.PbList<SetLocationsRequest>();
+  static SetLocationsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetLocationsRequest _defaultInstance;
-  static void $checkItem(SetLocationsRequest v) {
-    if (v is! SetLocationsRequest) checkItemFailed(v, 'SetLocationsRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  List<String> get locations => $_getList(3);
+  $core.List<$core.String> get locations => $_getList(3);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlySetLocationsRequest extends SetLocationsRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateMasterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateMasterRequest')
+class UpdateMasterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateMasterRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'masterVersion')
+    ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
   UpdateMasterRequest() : super();
-  UpdateMasterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateMasterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateMasterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateMasterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateMasterRequest clone() =>
-      new UpdateMasterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateMasterRequest create() => new UpdateMasterRequest();
-  static PbList<UpdateMasterRequest> createRepeated() =>
-      new PbList<UpdateMasterRequest>();
-  static UpdateMasterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateMasterRequest();
-    return _defaultInstance;
-  }
-
+  UpdateMasterRequest clone() => UpdateMasterRequest()..mergeFromMessage(this);
+  UpdateMasterRequest copyWith(void Function(UpdateMasterRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateMasterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateMasterRequest create() => UpdateMasterRequest();
+  UpdateMasterRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateMasterRequest> createRepeated() =>
+      $pb.PbList<UpdateMasterRequest>();
+  static UpdateMasterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateMasterRequest _defaultInstance;
-  static void $checkItem(UpdateMasterRequest v) {
-    if (v is! UpdateMasterRequest) checkItemFailed(v, 'UpdateMasterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get masterVersion => $_getS(3, '');
-  set masterVersion(String v) {
+  $core.String get masterVersion => $_getS(3, '');
+  set masterVersion($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasMasterVersion() => $_has(3);
+  $core.bool hasMasterVersion() => $_has(3);
   void clearMasterVersion() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(7);
 }
 
-class _ReadonlyUpdateMasterRequest extends UpdateMasterRequest
-    with ReadonlyMessageMixin {}
-
-class SetMasterAuthRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetMasterAuthRequest')
+class SetMasterAuthRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetMasterAuthRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..e<SetMasterAuthRequest_Action>(
         4,
         'action',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         SetMasterAuthRequest_Action.UNKNOWN,
         SetMasterAuthRequest_Action.valueOf,
         SetMasterAuthRequest_Action.values)
-    ..a<MasterAuth>(
-        5, 'update', PbFieldType.OM, MasterAuth.getDefault, MasterAuth.create)
+    ..a<MasterAuth>(5, 'update', $pb.PbFieldType.OM, MasterAuth.getDefault,
+        MasterAuth.create)
+    ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
   SetMasterAuthRequest() : super();
-  SetMasterAuthRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetMasterAuthRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetMasterAuthRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetMasterAuthRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetMasterAuthRequest clone() =>
-      new SetMasterAuthRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetMasterAuthRequest create() => new SetMasterAuthRequest();
-  static PbList<SetMasterAuthRequest> createRepeated() =>
-      new PbList<SetMasterAuthRequest>();
-  static SetMasterAuthRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetMasterAuthRequest();
-    return _defaultInstance;
-  }
-
+      SetMasterAuthRequest()..mergeFromMessage(this);
+  SetMasterAuthRequest copyWith(void Function(SetMasterAuthRequest) updates) =>
+      super.copyWith((message) => updates(message as SetMasterAuthRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetMasterAuthRequest create() => SetMasterAuthRequest();
+  SetMasterAuthRequest createEmptyInstance() => create();
+  static $pb.PbList<SetMasterAuthRequest> createRepeated() =>
+      $pb.PbList<SetMasterAuthRequest>();
+  static SetMasterAuthRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetMasterAuthRequest _defaultInstance;
-  static void $checkItem(SetMasterAuthRequest v) {
-    if (v is! SetMasterAuthRequest) checkItemFailed(v, 'SetMasterAuthRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
   SetMasterAuthRequest_Action get action => $_getN(3);
@@ -2308,7 +2396,7 @@ class SetMasterAuthRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasAction() => $_has(3);
+  $core.bool hasAction() => $_has(3);
   void clearAction() => clearField(4);
 
   MasterAuth get update => $_getN(4);
@@ -2316,424 +2404,492 @@ class SetMasterAuthRequest extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasUpdate() => $_has(4);
+  $core.bool hasUpdate() => $_has(4);
   void clearUpdate() => clearField(5);
+
+  $core.String get name => $_getS(5, '');
+  set name($core.String v) {
+    $_setString(5, v);
+  }
+
+  $core.bool hasName() => $_has(5);
+  void clearName() => clearField(7);
 }
 
-class _ReadonlySetMasterAuthRequest extends SetMasterAuthRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteClusterRequest')
+class DeleteClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteClusterRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
+    ..aOS(4, 'name')
     ..hasRequiredFields = false;
 
   DeleteClusterRequest() : super();
-  DeleteClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteClusterRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteClusterRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteClusterRequest clone() =>
-      new DeleteClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteClusterRequest create() => new DeleteClusterRequest();
-  static PbList<DeleteClusterRequest> createRepeated() =>
-      new PbList<DeleteClusterRequest>();
-  static DeleteClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteClusterRequest();
-    return _defaultInstance;
-  }
-
+      DeleteClusterRequest()..mergeFromMessage(this);
+  DeleteClusterRequest copyWith(void Function(DeleteClusterRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteClusterRequest create() => DeleteClusterRequest();
+  DeleteClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteClusterRequest> createRepeated() =>
+      $pb.PbList<DeleteClusterRequest>();
+  static DeleteClusterRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteClusterRequest _defaultInstance;
-  static void $checkItem(DeleteClusterRequest v) {
-    if (v is! DeleteClusterRequest) checkItemFailed(v, 'DeleteClusterRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
+
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasName() => $_has(3);
+  void clearName() => clearField(4);
 }
 
-class _ReadonlyDeleteClusterRequest extends DeleteClusterRequest
-    with ReadonlyMessageMixin {}
-
-class ListClustersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListClustersRequest')
+class ListClustersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
+    ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
   ListClustersRequest() : super();
-  ListClustersRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListClustersRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListClustersRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListClustersRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListClustersRequest clone() =>
-      new ListClustersRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListClustersRequest create() => new ListClustersRequest();
-  static PbList<ListClustersRequest> createRepeated() =>
-      new PbList<ListClustersRequest>();
-  static ListClustersRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListClustersRequest();
-    return _defaultInstance;
-  }
-
+  ListClustersRequest clone() => ListClustersRequest()..mergeFromMessage(this);
+  ListClustersRequest copyWith(void Function(ListClustersRequest) updates) =>
+      super.copyWith((message) => updates(message as ListClustersRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListClustersRequest create() => ListClustersRequest();
+  ListClustersRequest createEmptyInstance() => create();
+  static $pb.PbList<ListClustersRequest> createRepeated() =>
+      $pb.PbList<ListClustersRequest>();
+  static ListClustersRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListClustersRequest _defaultInstance;
-  static void $checkItem(ListClustersRequest v) {
-    if (v is! ListClustersRequest) checkItemFailed(v, 'ListClustersRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
+
+  $core.String get parent => $_getS(2, '');
+  set parent($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasParent() => $_has(2);
+  void clearParent() => clearField(4);
 }
 
-class _ReadonlyListClustersRequest extends ListClustersRequest
-    with ReadonlyMessageMixin {}
-
-class ListClustersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListClustersResponse')
-    ..pp<Cluster>(
-        1, 'clusters', PbFieldType.PM, Cluster.$checkItem, Cluster.create)
+class ListClustersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersResponse',
+      package: const $pb.PackageName('google.container.v1'))
+    ..pc<Cluster>(1, 'clusters', $pb.PbFieldType.PM, Cluster.create)
     ..pPS(2, 'missingZones')
     ..hasRequiredFields = false;
 
   ListClustersResponse() : super();
-  ListClustersResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListClustersResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListClustersResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListClustersResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListClustersResponse clone() =>
-      new ListClustersResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListClustersResponse create() => new ListClustersResponse();
-  static PbList<ListClustersResponse> createRepeated() =>
-      new PbList<ListClustersResponse>();
-  static ListClustersResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListClustersResponse();
-    return _defaultInstance;
-  }
-
+      ListClustersResponse()..mergeFromMessage(this);
+  ListClustersResponse copyWith(void Function(ListClustersResponse) updates) =>
+      super.copyWith((message) => updates(message as ListClustersResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListClustersResponse create() => ListClustersResponse();
+  ListClustersResponse createEmptyInstance() => create();
+  static $pb.PbList<ListClustersResponse> createRepeated() =>
+      $pb.PbList<ListClustersResponse>();
+  static ListClustersResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListClustersResponse _defaultInstance;
-  static void $checkItem(ListClustersResponse v) {
-    if (v is! ListClustersResponse) checkItemFailed(v, 'ListClustersResponse');
-  }
 
-  List<Cluster> get clusters => $_getList(0);
+  $core.List<Cluster> get clusters => $_getList(0);
 
-  List<String> get missingZones => $_getList(1);
+  $core.List<$core.String> get missingZones => $_getList(1);
 }
 
-class _ReadonlyListClustersResponse extends ListClustersResponse
-    with ReadonlyMessageMixin {}
-
-class GetOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetOperationRequest')
+class GetOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetOperationRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'operationId')
+    ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
   GetOperationRequest() : super();
-  GetOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetOperationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetOperationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetOperationRequest clone() =>
-      new GetOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetOperationRequest create() => new GetOperationRequest();
-  static PbList<GetOperationRequest> createRepeated() =>
-      new PbList<GetOperationRequest>();
-  static GetOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetOperationRequest();
-    return _defaultInstance;
-  }
-
+  GetOperationRequest clone() => GetOperationRequest()..mergeFromMessage(this);
+  GetOperationRequest copyWith(void Function(GetOperationRequest) updates) =>
+      super.copyWith((message) => updates(message as GetOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetOperationRequest create() => GetOperationRequest();
+  GetOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<GetOperationRequest> createRepeated() =>
+      $pb.PbList<GetOperationRequest>();
+  static GetOperationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetOperationRequest _defaultInstance;
-  static void $checkItem(GetOperationRequest v) {
-    if (v is! GetOperationRequest) checkItemFailed(v, 'GetOperationRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get operationId => $_getS(2, '');
-  set operationId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get operationId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set operationId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasOperationId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasOperationId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearOperationId() => clearField(3);
+
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasName() => $_has(3);
+  void clearName() => clearField(5);
 }
 
-class _ReadonlyGetOperationRequest extends GetOperationRequest
-    with ReadonlyMessageMixin {}
-
-class ListOperationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListOperationsRequest')
+class ListOperationsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListOperationsRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
+    ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
   ListOperationsRequest() : super();
-  ListOperationsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListOperationsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListOperationsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListOperationsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListOperationsRequest clone() =>
-      new ListOperationsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListOperationsRequest create() => new ListOperationsRequest();
-  static PbList<ListOperationsRequest> createRepeated() =>
-      new PbList<ListOperationsRequest>();
-  static ListOperationsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListOperationsRequest();
-    return _defaultInstance;
-  }
-
+      ListOperationsRequest()..mergeFromMessage(this);
+  ListOperationsRequest copyWith(
+          void Function(ListOperationsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListOperationsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListOperationsRequest create() => ListOperationsRequest();
+  ListOperationsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListOperationsRequest> createRepeated() =>
+      $pb.PbList<ListOperationsRequest>();
+  static ListOperationsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListOperationsRequest _defaultInstance;
-  static void $checkItem(ListOperationsRequest v) {
-    if (v is! ListOperationsRequest)
-      checkItemFailed(v, 'ListOperationsRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
-  void clearZone() => clearField(2);
-}
-
-class _ReadonlyListOperationsRequest extends ListOperationsRequest
-    with ReadonlyMessageMixin {}
-
-class CancelOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CancelOperationRequest')
-    ..aOS(1, 'projectId')
-    ..aOS(2, 'zone')
-    ..aOS(3, 'operationId')
-    ..hasRequiredFields = false;
-
-  CancelOperationRequest() : super();
-  CancelOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CancelOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CancelOperationRequest clone() =>
-      new CancelOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CancelOperationRequest create() => new CancelOperationRequest();
-  static PbList<CancelOperationRequest> createRepeated() =>
-      new PbList<CancelOperationRequest>();
-  static CancelOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCancelOperationRequest();
-    return _defaultInstance;
-  }
-
-  static CancelOperationRequest _defaultInstance;
-  static void $checkItem(CancelOperationRequest v) {
-    if (v is! CancelOperationRequest)
-      checkItemFailed(v, 'CancelOperationRequest');
-  }
-
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
-  void clearProjectId() => clearField(1);
-
-  String get zone => $_getS(1, '');
-  set zone(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get operationId => $_getS(2, '');
-  set operationId(String v) {
+  $core.String get parent => $_getS(2, '');
+  set parent($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasOperationId() => $_has(2);
-  void clearOperationId() => clearField(3);
+  $core.bool hasParent() => $_has(2);
+  void clearParent() => clearField(4);
 }
 
-class _ReadonlyCancelOperationRequest extends CancelOperationRequest
-    with ReadonlyMessageMixin {}
+class CancelOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancelOperationRequest',
+      package: const $pb.PackageName('google.container.v1'))
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'zone')
+    ..aOS(3, 'operationId')
+    ..aOS(4, 'name')
+    ..hasRequiredFields = false;
 
-class ListOperationsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListOperationsResponse')
-    ..pp<Operation>(
-        1, 'operations', PbFieldType.PM, Operation.$checkItem, Operation.create)
+  CancelOperationRequest() : super();
+  CancelOperationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CancelOperationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CancelOperationRequest clone() =>
+      CancelOperationRequest()..mergeFromMessage(this);
+  CancelOperationRequest copyWith(
+          void Function(CancelOperationRequest) updates) =>
+      super.copyWith((message) => updates(message as CancelOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CancelOperationRequest create() => CancelOperationRequest();
+  CancelOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<CancelOperationRequest> createRepeated() =>
+      $pb.PbList<CancelOperationRequest>();
+  static CancelOperationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static CancelOperationRequest _defaultInstance;
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  void clearProjectId() => clearField(1);
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  void clearZone() => clearField(2);
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get operationId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set operationId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasOperationId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  void clearOperationId() => clearField(3);
+
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasName() => $_has(3);
+  void clearName() => clearField(4);
+}
+
+class ListOperationsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListOperationsResponse',
+      package: const $pb.PackageName('google.container.v1'))
+    ..pc<Operation>(1, 'operations', $pb.PbFieldType.PM, Operation.create)
     ..pPS(2, 'missingZones')
     ..hasRequiredFields = false;
 
   ListOperationsResponse() : super();
-  ListOperationsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListOperationsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListOperationsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListOperationsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListOperationsResponse clone() =>
-      new ListOperationsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListOperationsResponse create() => new ListOperationsResponse();
-  static PbList<ListOperationsResponse> createRepeated() =>
-      new PbList<ListOperationsResponse>();
-  static ListOperationsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListOperationsResponse();
-    return _defaultInstance;
-  }
-
+      ListOperationsResponse()..mergeFromMessage(this);
+  ListOperationsResponse copyWith(
+          void Function(ListOperationsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListOperationsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListOperationsResponse create() => ListOperationsResponse();
+  ListOperationsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListOperationsResponse> createRepeated() =>
+      $pb.PbList<ListOperationsResponse>();
+  static ListOperationsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListOperationsResponse _defaultInstance;
-  static void $checkItem(ListOperationsResponse v) {
-    if (v is! ListOperationsResponse)
-      checkItemFailed(v, 'ListOperationsResponse');
-  }
 
-  List<Operation> get operations => $_getList(0);
+  $core.List<Operation> get operations => $_getList(0);
 
-  List<String> get missingZones => $_getList(1);
+  $core.List<$core.String> get missingZones => $_getList(1);
 }
 
-class _ReadonlyListOperationsResponse extends ListOperationsResponse
-    with ReadonlyMessageMixin {}
-
-class GetServerConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetServerConfigRequest')
+class GetServerConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServerConfigRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
+    ..aOS(4, 'name')
     ..hasRequiredFields = false;
 
   GetServerConfigRequest() : super();
-  GetServerConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetServerConfigRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetServerConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetServerConfigRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetServerConfigRequest clone() =>
-      new GetServerConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetServerConfigRequest create() => new GetServerConfigRequest();
-  static PbList<GetServerConfigRequest> createRepeated() =>
-      new PbList<GetServerConfigRequest>();
-  static GetServerConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetServerConfigRequest();
-    return _defaultInstance;
-  }
-
+      GetServerConfigRequest()..mergeFromMessage(this);
+  GetServerConfigRequest copyWith(
+          void Function(GetServerConfigRequest) updates) =>
+      super.copyWith((message) => updates(message as GetServerConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetServerConfigRequest create() => GetServerConfigRequest();
+  GetServerConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetServerConfigRequest> createRepeated() =>
+      $pb.PbList<GetServerConfigRequest>();
+  static GetServerConfigRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetServerConfigRequest _defaultInstance;
-  static void $checkItem(GetServerConfigRequest v) {
-    if (v is! GetServerConfigRequest)
-      checkItemFailed(v, 'GetServerConfigRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
+
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasName() => $_has(2);
+  void clearName() => clearField(4);
 }
 
-class _ReadonlyGetServerConfigRequest extends GetServerConfigRequest
-    with ReadonlyMessageMixin {}
-
-class ServerConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ServerConfig')
+class ServerConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerConfig',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'defaultClusterVersion')
     ..pPS(3, 'validNodeVersions')
     ..aOS(4, 'defaultImageType')
@@ -2742,108 +2898,112 @@ class ServerConfig extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   ServerConfig() : super();
-  ServerConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ServerConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ServerConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ServerConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ServerConfig clone() => new ServerConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ServerConfig create() => new ServerConfig();
-  static PbList<ServerConfig> createRepeated() => new PbList<ServerConfig>();
-  static ServerConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyServerConfig();
-    return _defaultInstance;
-  }
-
+  ServerConfig clone() => ServerConfig()..mergeFromMessage(this);
+  ServerConfig copyWith(void Function(ServerConfig) updates) =>
+      super.copyWith((message) => updates(message as ServerConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static ServerConfig create() => ServerConfig();
+  ServerConfig createEmptyInstance() => create();
+  static $pb.PbList<ServerConfig> createRepeated() =>
+      $pb.PbList<ServerConfig>();
+  static ServerConfig getDefault() => _defaultInstance ??= create()..freeze();
   static ServerConfig _defaultInstance;
-  static void $checkItem(ServerConfig v) {
-    if (v is! ServerConfig) checkItemFailed(v, 'ServerConfig');
-  }
 
-  String get defaultClusterVersion => $_getS(0, '');
-  set defaultClusterVersion(String v) {
+  $core.String get defaultClusterVersion => $_getS(0, '');
+  set defaultClusterVersion($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDefaultClusterVersion() => $_has(0);
+  $core.bool hasDefaultClusterVersion() => $_has(0);
   void clearDefaultClusterVersion() => clearField(1);
 
-  List<String> get validNodeVersions => $_getList(1);
+  $core.List<$core.String> get validNodeVersions => $_getList(1);
 
-  String get defaultImageType => $_getS(2, '');
-  set defaultImageType(String v) {
+  $core.String get defaultImageType => $_getS(2, '');
+  set defaultImageType($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDefaultImageType() => $_has(2);
+  $core.bool hasDefaultImageType() => $_has(2);
   void clearDefaultImageType() => clearField(4);
 
-  List<String> get validImageTypes => $_getList(3);
+  $core.List<$core.String> get validImageTypes => $_getList(3);
 
-  List<String> get validMasterVersions => $_getList(4);
+  $core.List<$core.String> get validMasterVersions => $_getList(4);
 }
 
-class _ReadonlyServerConfig extends ServerConfig with ReadonlyMessageMixin {}
-
-class CreateNodePoolRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateNodePoolRequest')
+class CreateNodePoolRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateNodePoolRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..a<NodePool>(
-        4, 'nodePool', PbFieldType.OM, NodePool.getDefault, NodePool.create)
+        4, 'nodePool', $pb.PbFieldType.OM, NodePool.getDefault, NodePool.create)
+    ..aOS(6, 'parent')
     ..hasRequiredFields = false;
 
   CreateNodePoolRequest() : super();
-  CreateNodePoolRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateNodePoolRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateNodePoolRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateNodePoolRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateNodePoolRequest clone() =>
-      new CreateNodePoolRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateNodePoolRequest create() => new CreateNodePoolRequest();
-  static PbList<CreateNodePoolRequest> createRepeated() =>
-      new PbList<CreateNodePoolRequest>();
-  static CreateNodePoolRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateNodePoolRequest();
-    return _defaultInstance;
-  }
-
+      CreateNodePoolRequest()..mergeFromMessage(this);
+  CreateNodePoolRequest copyWith(
+          void Function(CreateNodePoolRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateNodePoolRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateNodePoolRequest create() => CreateNodePoolRequest();
+  CreateNodePoolRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateNodePoolRequest> createRepeated() =>
+      $pb.PbList<CreateNodePoolRequest>();
+  static CreateNodePoolRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateNodePoolRequest _defaultInstance;
-  static void $checkItem(CreateNodePoolRequest v) {
-    if (v is! CreateNodePoolRequest)
-      checkItemFailed(v, 'CreateNodePoolRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
   NodePool get nodePool => $_getN(3);
@@ -2851,218 +3011,276 @@ class CreateNodePoolRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasNodePool() => $_has(3);
+  $core.bool hasNodePool() => $_has(3);
   void clearNodePool() => clearField(4);
+
+  $core.String get parent => $_getS(4, '');
+  set parent($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasParent() => $_has(4);
+  void clearParent() => clearField(6);
 }
 
-class _ReadonlyCreateNodePoolRequest extends CreateNodePoolRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteNodePoolRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteNodePoolRequest')
+class DeleteNodePoolRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteNodePoolRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'nodePoolId')
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
   DeleteNodePoolRequest() : super();
-  DeleteNodePoolRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteNodePoolRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteNodePoolRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteNodePoolRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteNodePoolRequest clone() =>
-      new DeleteNodePoolRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteNodePoolRequest create() => new DeleteNodePoolRequest();
-  static PbList<DeleteNodePoolRequest> createRepeated() =>
-      new PbList<DeleteNodePoolRequest>();
-  static DeleteNodePoolRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteNodePoolRequest();
-    return _defaultInstance;
-  }
-
+      DeleteNodePoolRequest()..mergeFromMessage(this);
+  DeleteNodePoolRequest copyWith(
+          void Function(DeleteNodePoolRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteNodePoolRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteNodePoolRequest create() => DeleteNodePoolRequest();
+  DeleteNodePoolRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteNodePoolRequest> createRepeated() =>
+      $pb.PbList<DeleteNodePoolRequest>();
+  static DeleteNodePoolRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteNodePoolRequest _defaultInstance;
-  static void $checkItem(DeleteNodePoolRequest v) {
-    if (v is! DeleteNodePoolRequest)
-      checkItemFailed(v, 'DeleteNodePoolRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get nodePoolId => $_getS(3, '');
-  set nodePoolId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get nodePoolId => $_getS(3, '');
+  @$core.Deprecated('This field is deprecated.')
+  set nodePoolId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearNodePoolId() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlyDeleteNodePoolRequest extends DeleteNodePoolRequest
-    with ReadonlyMessageMixin {}
-
-class ListNodePoolsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListNodePoolsRequest')
+class ListNodePoolsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNodePoolsRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
+    ..aOS(5, 'parent')
     ..hasRequiredFields = false;
 
   ListNodePoolsRequest() : super();
-  ListNodePoolsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListNodePoolsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListNodePoolsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListNodePoolsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListNodePoolsRequest clone() =>
-      new ListNodePoolsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListNodePoolsRequest create() => new ListNodePoolsRequest();
-  static PbList<ListNodePoolsRequest> createRepeated() =>
-      new PbList<ListNodePoolsRequest>();
-  static ListNodePoolsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListNodePoolsRequest();
-    return _defaultInstance;
-  }
-
+      ListNodePoolsRequest()..mergeFromMessage(this);
+  ListNodePoolsRequest copyWith(void Function(ListNodePoolsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListNodePoolsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListNodePoolsRequest create() => ListNodePoolsRequest();
+  ListNodePoolsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListNodePoolsRequest> createRepeated() =>
+      $pb.PbList<ListNodePoolsRequest>();
+  static ListNodePoolsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListNodePoolsRequest _defaultInstance;
-  static void $checkItem(ListNodePoolsRequest v) {
-    if (v is! ListNodePoolsRequest) checkItemFailed(v, 'ListNodePoolsRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
+
+  $core.String get parent => $_getS(3, '');
+  set parent($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasParent() => $_has(3);
+  void clearParent() => clearField(5);
 }
 
-class _ReadonlyListNodePoolsRequest extends ListNodePoolsRequest
-    with ReadonlyMessageMixin {}
-
-class GetNodePoolRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetNodePoolRequest')
+class GetNodePoolRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetNodePoolRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'nodePoolId')
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
   GetNodePoolRequest() : super();
-  GetNodePoolRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetNodePoolRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetNodePoolRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetNodePoolRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetNodePoolRequest clone() =>
-      new GetNodePoolRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetNodePoolRequest create() => new GetNodePoolRequest();
-  static PbList<GetNodePoolRequest> createRepeated() =>
-      new PbList<GetNodePoolRequest>();
-  static GetNodePoolRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetNodePoolRequest();
-    return _defaultInstance;
-  }
-
+  GetNodePoolRequest clone() => GetNodePoolRequest()..mergeFromMessage(this);
+  GetNodePoolRequest copyWith(void Function(GetNodePoolRequest) updates) =>
+      super.copyWith((message) => updates(message as GetNodePoolRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetNodePoolRequest create() => GetNodePoolRequest();
+  GetNodePoolRequest createEmptyInstance() => create();
+  static $pb.PbList<GetNodePoolRequest> createRepeated() =>
+      $pb.PbList<GetNodePoolRequest>();
+  static GetNodePoolRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetNodePoolRequest _defaultInstance;
-  static void $checkItem(GetNodePoolRequest v) {
-    if (v is! GetNodePoolRequest) checkItemFailed(v, 'GetNodePoolRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get nodePoolId => $_getS(3, '');
-  set nodePoolId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get nodePoolId => $_getS(3, '');
+  @$core.Deprecated('This field is deprecated.')
+  set nodePoolId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearNodePoolId() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlyGetNodePoolRequest extends GetNodePoolRequest
-    with ReadonlyMessageMixin {}
-
-class NodePool extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NodePool')
+class NodePool extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NodePool',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'name')
-    ..a<NodeConfig>(
-        2, 'config', PbFieldType.OM, NodeConfig.getDefault, NodeConfig.create)
-    ..a<int>(3, 'initialNodeCount', PbFieldType.O3)
-    ..a<NodePoolAutoscaling>(4, 'autoscaling', PbFieldType.OM,
+    ..a<NodeConfig>(2, 'config', $pb.PbFieldType.OM, NodeConfig.getDefault,
+        NodeConfig.create)
+    ..a<$core.int>(3, 'initialNodeCount', $pb.PbFieldType.O3)
+    ..a<NodePoolAutoscaling>(4, 'autoscaling', $pb.PbFieldType.OM,
         NodePoolAutoscaling.getDefault, NodePoolAutoscaling.create)
-    ..a<NodeManagement>(5, 'management', PbFieldType.OM,
+    ..a<NodeManagement>(5, 'management', $pb.PbFieldType.OM,
         NodeManagement.getDefault, NodeManagement.create)
     ..aOS(100, 'selfLink')
     ..aOS(101, 'version')
@@ -3070,7 +3288,7 @@ class NodePool extends GeneratedMessage {
     ..e<NodePool_Status>(
         103,
         'status',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         NodePool_Status.STATUS_UNSPECIFIED,
         NodePool_Status.valueOf,
         NodePool_Status.values)
@@ -3078,31 +3296,28 @@ class NodePool extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   NodePool() : super();
-  NodePool.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NodePool.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  NodePool.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NodePool.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  NodePool clone() => new NodePool()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NodePool create() => new NodePool();
-  static PbList<NodePool> createRepeated() => new PbList<NodePool>();
-  static NodePool getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyNodePool();
-    return _defaultInstance;
-  }
-
+  NodePool clone() => NodePool()..mergeFromMessage(this);
+  NodePool copyWith(void Function(NodePool) updates) =>
+      super.copyWith((message) => updates(message as NodePool));
+  $pb.BuilderInfo get info_ => _i;
+  static NodePool create() => NodePool();
+  NodePool createEmptyInstance() => create();
+  static $pb.PbList<NodePool> createRepeated() => $pb.PbList<NodePool>();
+  static NodePool getDefault() => _defaultInstance ??= create()..freeze();
   static NodePool _defaultInstance;
-  static void $checkItem(NodePool v) {
-    if (v is! NodePool) checkItemFailed(v, 'NodePool');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   NodeConfig get config => $_getN(1);
@@ -3110,15 +3325,15 @@ class NodePool extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasConfig() => $_has(1);
+  $core.bool hasConfig() => $_has(1);
   void clearConfig() => clearField(2);
 
-  int get initialNodeCount => $_get(2, 0);
-  set initialNodeCount(int v) {
+  $core.int get initialNodeCount => $_get(2, 0);
+  set initialNodeCount($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasInitialNodeCount() => $_has(2);
+  $core.bool hasInitialNodeCount() => $_has(2);
   void clearInitialNodeCount() => clearField(3);
 
   NodePoolAutoscaling get autoscaling => $_getN(3);
@@ -3126,7 +3341,7 @@ class NodePool extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasAutoscaling() => $_has(3);
+  $core.bool hasAutoscaling() => $_has(3);
   void clearAutoscaling() => clearField(4);
 
   NodeManagement get management => $_getN(4);
@@ -3134,91 +3349,85 @@ class NodePool extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasManagement() => $_has(4);
+  $core.bool hasManagement() => $_has(4);
   void clearManagement() => clearField(5);
 
-  String get selfLink => $_getS(5, '');
-  set selfLink(String v) {
+  $core.String get selfLink => $_getS(5, '');
+  set selfLink($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasSelfLink() => $_has(5);
+  $core.bool hasSelfLink() => $_has(5);
   void clearSelfLink() => clearField(100);
 
-  String get version => $_getS(6, '');
-  set version(String v) {
+  $core.String get version => $_getS(6, '');
+  set version($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasVersion() => $_has(6);
+  $core.bool hasVersion() => $_has(6);
   void clearVersion() => clearField(101);
 
-  List<String> get instanceGroupUrls => $_getList(7);
+  $core.List<$core.String> get instanceGroupUrls => $_getList(7);
 
   NodePool_Status get status => $_getN(8);
   set status(NodePool_Status v) {
     setField(103, v);
   }
 
-  bool hasStatus() => $_has(8);
+  $core.bool hasStatus() => $_has(8);
   void clearStatus() => clearField(103);
 
-  String get statusMessage => $_getS(9, '');
-  set statusMessage(String v) {
+  $core.String get statusMessage => $_getS(9, '');
+  set statusMessage($core.String v) {
     $_setString(9, v);
   }
 
-  bool hasStatusMessage() => $_has(9);
+  $core.bool hasStatusMessage() => $_has(9);
   void clearStatusMessage() => clearField(104);
 }
 
-class _ReadonlyNodePool extends NodePool with ReadonlyMessageMixin {}
-
-class NodeManagement extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NodeManagement')
+class NodeManagement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NodeManagement',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOB(1, 'autoUpgrade')
     ..aOB(2, 'autoRepair')
-    ..a<AutoUpgradeOptions>(10, 'upgradeOptions', PbFieldType.OM,
+    ..a<AutoUpgradeOptions>(10, 'upgradeOptions', $pb.PbFieldType.OM,
         AutoUpgradeOptions.getDefault, AutoUpgradeOptions.create)
     ..hasRequiredFields = false;
 
   NodeManagement() : super();
-  NodeManagement.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NodeManagement.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  NodeManagement.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  NodeManagement.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  NodeManagement clone() => new NodeManagement()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NodeManagement create() => new NodeManagement();
-  static PbList<NodeManagement> createRepeated() =>
-      new PbList<NodeManagement>();
-  static NodeManagement getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNodeManagement();
-    return _defaultInstance;
-  }
-
+  NodeManagement clone() => NodeManagement()..mergeFromMessage(this);
+  NodeManagement copyWith(void Function(NodeManagement) updates) =>
+      super.copyWith((message) => updates(message as NodeManagement));
+  $pb.BuilderInfo get info_ => _i;
+  static NodeManagement create() => NodeManagement();
+  NodeManagement createEmptyInstance() => create();
+  static $pb.PbList<NodeManagement> createRepeated() =>
+      $pb.PbList<NodeManagement>();
+  static NodeManagement getDefault() => _defaultInstance ??= create()..freeze();
   static NodeManagement _defaultInstance;
-  static void $checkItem(NodeManagement v) {
-    if (v is! NodeManagement) checkItemFailed(v, 'NodeManagement');
-  }
 
-  bool get autoUpgrade => $_get(0, false);
-  set autoUpgrade(bool v) {
+  $core.bool get autoUpgrade => $_get(0, false);
+  set autoUpgrade($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasAutoUpgrade() => $_has(0);
+  $core.bool hasAutoUpgrade() => $_has(0);
   void clearAutoUpgrade() => clearField(1);
 
-  bool get autoRepair => $_get(1, false);
-  set autoRepair(bool v) {
+  $core.bool get autoRepair => $_get(1, false);
+  set autoRepair($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasAutoRepair() => $_has(1);
+  $core.bool hasAutoRepair() => $_has(1);
   void clearAutoRepair() => clearField(2);
 
   AutoUpgradeOptions get upgradeOptions => $_getN(2);
@@ -3226,262 +3435,262 @@ class NodeManagement extends GeneratedMessage {
     setField(10, v);
   }
 
-  bool hasUpgradeOptions() => $_has(2);
+  $core.bool hasUpgradeOptions() => $_has(2);
   void clearUpgradeOptions() => clearField(10);
 }
 
-class _ReadonlyNodeManagement extends NodeManagement with ReadonlyMessageMixin {
-}
-
-class AutoUpgradeOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AutoUpgradeOptions')
+class AutoUpgradeOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AutoUpgradeOptions',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'autoUpgradeStartTime')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
   AutoUpgradeOptions() : super();
-  AutoUpgradeOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AutoUpgradeOptions.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AutoUpgradeOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AutoUpgradeOptions.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AutoUpgradeOptions clone() =>
-      new AutoUpgradeOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AutoUpgradeOptions create() => new AutoUpgradeOptions();
-  static PbList<AutoUpgradeOptions> createRepeated() =>
-      new PbList<AutoUpgradeOptions>();
-  static AutoUpgradeOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAutoUpgradeOptions();
-    return _defaultInstance;
-  }
-
+  AutoUpgradeOptions clone() => AutoUpgradeOptions()..mergeFromMessage(this);
+  AutoUpgradeOptions copyWith(void Function(AutoUpgradeOptions) updates) =>
+      super.copyWith((message) => updates(message as AutoUpgradeOptions));
+  $pb.BuilderInfo get info_ => _i;
+  static AutoUpgradeOptions create() => AutoUpgradeOptions();
+  AutoUpgradeOptions createEmptyInstance() => create();
+  static $pb.PbList<AutoUpgradeOptions> createRepeated() =>
+      $pb.PbList<AutoUpgradeOptions>();
+  static AutoUpgradeOptions getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AutoUpgradeOptions _defaultInstance;
-  static void $checkItem(AutoUpgradeOptions v) {
-    if (v is! AutoUpgradeOptions) checkItemFailed(v, 'AutoUpgradeOptions');
-  }
 
-  String get autoUpgradeStartTime => $_getS(0, '');
-  set autoUpgradeStartTime(String v) {
+  $core.String get autoUpgradeStartTime => $_getS(0, '');
+  set autoUpgradeStartTime($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAutoUpgradeStartTime() => $_has(0);
+  $core.bool hasAutoUpgradeStartTime() => $_has(0);
   void clearAutoUpgradeStartTime() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 }
 
-class _ReadonlyAutoUpgradeOptions extends AutoUpgradeOptions
-    with ReadonlyMessageMixin {}
-
-class MaintenancePolicy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MaintenancePolicy')
-    ..a<MaintenanceWindow>(1, 'window', PbFieldType.OM,
+class MaintenancePolicy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MaintenancePolicy',
+      package: const $pb.PackageName('google.container.v1'))
+    ..a<MaintenanceWindow>(1, 'window', $pb.PbFieldType.OM,
         MaintenanceWindow.getDefault, MaintenanceWindow.create)
     ..hasRequiredFields = false;
 
   MaintenancePolicy() : super();
-  MaintenancePolicy.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MaintenancePolicy.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MaintenancePolicy.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MaintenancePolicy.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MaintenancePolicy clone() => new MaintenancePolicy()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MaintenancePolicy create() => new MaintenancePolicy();
-  static PbList<MaintenancePolicy> createRepeated() =>
-      new PbList<MaintenancePolicy>();
-  static MaintenancePolicy getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMaintenancePolicy();
-    return _defaultInstance;
-  }
-
+  MaintenancePolicy clone() => MaintenancePolicy()..mergeFromMessage(this);
+  MaintenancePolicy copyWith(void Function(MaintenancePolicy) updates) =>
+      super.copyWith((message) => updates(message as MaintenancePolicy));
+  $pb.BuilderInfo get info_ => _i;
+  static MaintenancePolicy create() => MaintenancePolicy();
+  MaintenancePolicy createEmptyInstance() => create();
+  static $pb.PbList<MaintenancePolicy> createRepeated() =>
+      $pb.PbList<MaintenancePolicy>();
+  static MaintenancePolicy getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MaintenancePolicy _defaultInstance;
-  static void $checkItem(MaintenancePolicy v) {
-    if (v is! MaintenancePolicy) checkItemFailed(v, 'MaintenancePolicy');
-  }
 
   MaintenanceWindow get window => $_getN(0);
   set window(MaintenanceWindow v) {
     setField(1, v);
   }
 
-  bool hasWindow() => $_has(0);
+  $core.bool hasWindow() => $_has(0);
   void clearWindow() => clearField(1);
 }
 
-class _ReadonlyMaintenancePolicy extends MaintenancePolicy
-    with ReadonlyMessageMixin {}
+enum MaintenanceWindow_Policy { dailyMaintenanceWindow, notSet }
 
-class MaintenanceWindow extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MaintenanceWindow')
-    ..a<DailyMaintenanceWindow>(2, 'dailyMaintenanceWindow', PbFieldType.OM,
+class MaintenanceWindow extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, MaintenanceWindow_Policy>
+      _MaintenanceWindow_PolicyByTag = {
+    2: MaintenanceWindow_Policy.dailyMaintenanceWindow,
+    0: MaintenanceWindow_Policy.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MaintenanceWindow',
+      package: const $pb.PackageName('google.container.v1'))
+    ..a<DailyMaintenanceWindow>(2, 'dailyMaintenanceWindow', $pb.PbFieldType.OM,
         DailyMaintenanceWindow.getDefault, DailyMaintenanceWindow.create)
+    ..oo(0, [2])
     ..hasRequiredFields = false;
 
   MaintenanceWindow() : super();
-  MaintenanceWindow.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MaintenanceWindow.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MaintenanceWindow.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MaintenanceWindow.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MaintenanceWindow clone() => new MaintenanceWindow()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MaintenanceWindow create() => new MaintenanceWindow();
-  static PbList<MaintenanceWindow> createRepeated() =>
-      new PbList<MaintenanceWindow>();
-  static MaintenanceWindow getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMaintenanceWindow();
-    return _defaultInstance;
-  }
-
+  MaintenanceWindow clone() => MaintenanceWindow()..mergeFromMessage(this);
+  MaintenanceWindow copyWith(void Function(MaintenanceWindow) updates) =>
+      super.copyWith((message) => updates(message as MaintenanceWindow));
+  $pb.BuilderInfo get info_ => _i;
+  static MaintenanceWindow create() => MaintenanceWindow();
+  MaintenanceWindow createEmptyInstance() => create();
+  static $pb.PbList<MaintenanceWindow> createRepeated() =>
+      $pb.PbList<MaintenanceWindow>();
+  static MaintenanceWindow getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MaintenanceWindow _defaultInstance;
-  static void $checkItem(MaintenanceWindow v) {
-    if (v is! MaintenanceWindow) checkItemFailed(v, 'MaintenanceWindow');
-  }
+
+  MaintenanceWindow_Policy whichPolicy() =>
+      _MaintenanceWindow_PolicyByTag[$_whichOneof(0)];
+  void clearPolicy() => clearField($_whichOneof(0));
 
   DailyMaintenanceWindow get dailyMaintenanceWindow => $_getN(0);
   set dailyMaintenanceWindow(DailyMaintenanceWindow v) {
     setField(2, v);
   }
 
-  bool hasDailyMaintenanceWindow() => $_has(0);
+  $core.bool hasDailyMaintenanceWindow() => $_has(0);
   void clearDailyMaintenanceWindow() => clearField(2);
 }
 
-class _ReadonlyMaintenanceWindow extends MaintenanceWindow
-    with ReadonlyMessageMixin {}
-
-class DailyMaintenanceWindow extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DailyMaintenanceWindow')
+class DailyMaintenanceWindow extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DailyMaintenanceWindow',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(2, 'startTime')
     ..aOS(3, 'duration')
     ..hasRequiredFields = false;
 
   DailyMaintenanceWindow() : super();
-  DailyMaintenanceWindow.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DailyMaintenanceWindow.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DailyMaintenanceWindow.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DailyMaintenanceWindow.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DailyMaintenanceWindow clone() =>
-      new DailyMaintenanceWindow()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DailyMaintenanceWindow create() => new DailyMaintenanceWindow();
-  static PbList<DailyMaintenanceWindow> createRepeated() =>
-      new PbList<DailyMaintenanceWindow>();
-  static DailyMaintenanceWindow getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDailyMaintenanceWindow();
-    return _defaultInstance;
-  }
-
+      DailyMaintenanceWindow()..mergeFromMessage(this);
+  DailyMaintenanceWindow copyWith(
+          void Function(DailyMaintenanceWindow) updates) =>
+      super.copyWith((message) => updates(message as DailyMaintenanceWindow));
+  $pb.BuilderInfo get info_ => _i;
+  static DailyMaintenanceWindow create() => DailyMaintenanceWindow();
+  DailyMaintenanceWindow createEmptyInstance() => create();
+  static $pb.PbList<DailyMaintenanceWindow> createRepeated() =>
+      $pb.PbList<DailyMaintenanceWindow>();
+  static DailyMaintenanceWindow getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DailyMaintenanceWindow _defaultInstance;
-  static void $checkItem(DailyMaintenanceWindow v) {
-    if (v is! DailyMaintenanceWindow)
-      checkItemFailed(v, 'DailyMaintenanceWindow');
-  }
 
-  String get startTime => $_getS(0, '');
-  set startTime(String v) {
+  $core.String get startTime => $_getS(0, '');
+  set startTime($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasStartTime() => $_has(0);
+  $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(2);
 
-  String get duration => $_getS(1, '');
-  set duration(String v) {
+  $core.String get duration => $_getS(1, '');
+  set duration($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDuration() => $_has(1);
+  $core.bool hasDuration() => $_has(1);
   void clearDuration() => clearField(3);
 }
 
-class _ReadonlyDailyMaintenanceWindow extends DailyMaintenanceWindow
-    with ReadonlyMessageMixin {}
-
-class SetNodePoolManagementRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetNodePoolManagementRequest')
+class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SetNodePoolManagementRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'nodePoolId')
-    ..a<NodeManagement>(5, 'management', PbFieldType.OM,
+    ..a<NodeManagement>(5, 'management', $pb.PbFieldType.OM,
         NodeManagement.getDefault, NodeManagement.create)
+    ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
   SetNodePoolManagementRequest() : super();
-  SetNodePoolManagementRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetNodePoolManagementRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetNodePoolManagementRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetNodePoolManagementRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetNodePoolManagementRequest clone() =>
-      new SetNodePoolManagementRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      SetNodePoolManagementRequest()..mergeFromMessage(this);
+  SetNodePoolManagementRequest copyWith(
+          void Function(SetNodePoolManagementRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as SetNodePoolManagementRequest));
+  $pb.BuilderInfo get info_ => _i;
   static SetNodePoolManagementRequest create() =>
-      new SetNodePoolManagementRequest();
-  static PbList<SetNodePoolManagementRequest> createRepeated() =>
-      new PbList<SetNodePoolManagementRequest>();
-  static SetNodePoolManagementRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetNodePoolManagementRequest();
-    return _defaultInstance;
-  }
-
+      SetNodePoolManagementRequest();
+  SetNodePoolManagementRequest createEmptyInstance() => create();
+  static $pb.PbList<SetNodePoolManagementRequest> createRepeated() =>
+      $pb.PbList<SetNodePoolManagementRequest>();
+  static SetNodePoolManagementRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetNodePoolManagementRequest _defaultInstance;
-  static void $checkItem(SetNodePoolManagementRequest v) {
-    if (v is! SetNodePoolManagementRequest)
-      checkItemFailed(v, 'SetNodePoolManagementRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get nodePoolId => $_getS(3, '');
-  set nodePoolId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get nodePoolId => $_getS(3, '');
+  @$core.Deprecated('This field is deprecated.')
+  set nodePoolId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearNodePoolId() => clearField(4);
 
   NodeManagement get management => $_getN(4);
@@ -3489,679 +3698,734 @@ class SetNodePoolManagementRequest extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasManagement() => $_has(4);
+  $core.bool hasManagement() => $_has(4);
   void clearManagement() => clearField(5);
+
+  $core.String get name => $_getS(5, '');
+  set name($core.String v) {
+    $_setString(5, v);
+  }
+
+  $core.bool hasName() => $_has(5);
+  void clearName() => clearField(7);
 }
 
-class _ReadonlySetNodePoolManagementRequest extends SetNodePoolManagementRequest
-    with ReadonlyMessageMixin {}
-
-class SetNodePoolSizeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetNodePoolSizeRequest')
+class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetNodePoolSizeRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOS(4, 'nodePoolId')
-    ..a<int>(5, 'nodeCount', PbFieldType.O3)
+    ..a<$core.int>(5, 'nodeCount', $pb.PbFieldType.O3)
+    ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
   SetNodePoolSizeRequest() : super();
-  SetNodePoolSizeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetNodePoolSizeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetNodePoolSizeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetNodePoolSizeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetNodePoolSizeRequest clone() =>
-      new SetNodePoolSizeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetNodePoolSizeRequest create() => new SetNodePoolSizeRequest();
-  static PbList<SetNodePoolSizeRequest> createRepeated() =>
-      new PbList<SetNodePoolSizeRequest>();
-  static SetNodePoolSizeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetNodePoolSizeRequest();
-    return _defaultInstance;
-  }
-
+      SetNodePoolSizeRequest()..mergeFromMessage(this);
+  SetNodePoolSizeRequest copyWith(
+          void Function(SetNodePoolSizeRequest) updates) =>
+      super.copyWith((message) => updates(message as SetNodePoolSizeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetNodePoolSizeRequest create() => SetNodePoolSizeRequest();
+  SetNodePoolSizeRequest createEmptyInstance() => create();
+  static $pb.PbList<SetNodePoolSizeRequest> createRepeated() =>
+      $pb.PbList<SetNodePoolSizeRequest>();
+  static SetNodePoolSizeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetNodePoolSizeRequest _defaultInstance;
-  static void $checkItem(SetNodePoolSizeRequest v) {
-    if (v is! SetNodePoolSizeRequest)
-      checkItemFailed(v, 'SetNodePoolSizeRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  String get nodePoolId => $_getS(3, '');
-  set nodePoolId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get nodePoolId => $_getS(3, '');
+  @$core.Deprecated('This field is deprecated.')
+  set nodePoolId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearNodePoolId() => clearField(4);
 
-  int get nodeCount => $_get(4, 0);
-  set nodeCount(int v) {
+  $core.int get nodeCount => $_get(4, 0);
+  set nodeCount($core.int v) {
     $_setSignedInt32(4, v);
   }
 
-  bool hasNodeCount() => $_has(4);
+  $core.bool hasNodeCount() => $_has(4);
   void clearNodeCount() => clearField(5);
+
+  $core.String get name => $_getS(5, '');
+  set name($core.String v) {
+    $_setString(5, v);
+  }
+
+  $core.bool hasName() => $_has(5);
+  void clearName() => clearField(7);
 }
 
-class _ReadonlySetNodePoolSizeRequest extends SetNodePoolSizeRequest
-    with ReadonlyMessageMixin {}
-
-class RollbackNodePoolUpgradeRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('RollbackNodePoolUpgradeRequest')
-        ..aOS(1, 'projectId')
-        ..aOS(2, 'zone')
-        ..aOS(3, 'clusterId')
-        ..aOS(4, 'nodePoolId')
-        ..hasRequiredFields = false;
-
-  RollbackNodePoolUpgradeRequest() : super();
-  RollbackNodePoolUpgradeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RollbackNodePoolUpgradeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  RollbackNodePoolUpgradeRequest clone() =>
-      new RollbackNodePoolUpgradeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RollbackNodePoolUpgradeRequest create() =>
-      new RollbackNodePoolUpgradeRequest();
-  static PbList<RollbackNodePoolUpgradeRequest> createRepeated() =>
-      new PbList<RollbackNodePoolUpgradeRequest>();
-  static RollbackNodePoolUpgradeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRollbackNodePoolUpgradeRequest();
-    return _defaultInstance;
-  }
-
-  static RollbackNodePoolUpgradeRequest _defaultInstance;
-  static void $checkItem(RollbackNodePoolUpgradeRequest v) {
-    if (v is! RollbackNodePoolUpgradeRequest)
-      checkItemFailed(v, 'RollbackNodePoolUpgradeRequest');
-  }
-
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
-  void clearProjectId() => clearField(1);
-
-  String get zone => $_getS(1, '');
-  set zone(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasZone() => $_has(1);
-  void clearZone() => clearField(2);
-
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasClusterId() => $_has(2);
-  void clearClusterId() => clearField(3);
-
-  String get nodePoolId => $_getS(3, '');
-  set nodePoolId(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasNodePoolId() => $_has(3);
-  void clearNodePoolId() => clearField(4);
-}
-
-class _ReadonlyRollbackNodePoolUpgradeRequest
-    extends RollbackNodePoolUpgradeRequest with ReadonlyMessageMixin {}
-
-class ListNodePoolsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListNodePoolsResponse')
-    ..pp<NodePool>(
-        1, 'nodePools', PbFieldType.PM, NodePool.$checkItem, NodePool.create)
-    ..hasRequiredFields = false;
-
-  ListNodePoolsResponse() : super();
-  ListNodePoolsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNodePoolsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListNodePoolsResponse clone() =>
-      new ListNodePoolsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListNodePoolsResponse create() => new ListNodePoolsResponse();
-  static PbList<ListNodePoolsResponse> createRepeated() =>
-      new PbList<ListNodePoolsResponse>();
-  static ListNodePoolsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListNodePoolsResponse();
-    return _defaultInstance;
-  }
-
-  static ListNodePoolsResponse _defaultInstance;
-  static void $checkItem(ListNodePoolsResponse v) {
-    if (v is! ListNodePoolsResponse)
-      checkItemFailed(v, 'ListNodePoolsResponse');
-  }
-
-  List<NodePool> get nodePools => $_getList(0);
-}
-
-class _ReadonlyListNodePoolsResponse extends ListNodePoolsResponse
-    with ReadonlyMessageMixin {}
-
-class NodePoolAutoscaling extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NodePoolAutoscaling')
-    ..aOB(1, 'enabled')
-    ..a<int>(2, 'minNodeCount', PbFieldType.O3)
-    ..a<int>(3, 'maxNodeCount', PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  NodePoolAutoscaling() : super();
-  NodePoolAutoscaling.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NodePoolAutoscaling.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  NodePoolAutoscaling clone() =>
-      new NodePoolAutoscaling()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static NodePoolAutoscaling create() => new NodePoolAutoscaling();
-  static PbList<NodePoolAutoscaling> createRepeated() =>
-      new PbList<NodePoolAutoscaling>();
-  static NodePoolAutoscaling getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNodePoolAutoscaling();
-    return _defaultInstance;
-  }
-
-  static NodePoolAutoscaling _defaultInstance;
-  static void $checkItem(NodePoolAutoscaling v) {
-    if (v is! NodePoolAutoscaling) checkItemFailed(v, 'NodePoolAutoscaling');
-  }
-
-  bool get enabled => $_get(0, false);
-  set enabled(bool v) {
-    $_setBool(0, v);
-  }
-
-  bool hasEnabled() => $_has(0);
-  void clearEnabled() => clearField(1);
-
-  int get minNodeCount => $_get(1, 0);
-  set minNodeCount(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasMinNodeCount() => $_has(1);
-  void clearMinNodeCount() => clearField(2);
-
-  int get maxNodeCount => $_get(2, 0);
-  set maxNodeCount(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasMaxNodeCount() => $_has(2);
-  void clearMaxNodeCount() => clearField(3);
-}
-
-class _ReadonlyNodePoolAutoscaling extends NodePoolAutoscaling
-    with ReadonlyMessageMixin {}
-
-class SetLabelsRequest_ResourceLabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('SetLabelsRequest_ResourceLabelsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  SetLabelsRequest_ResourceLabelsEntry() : super();
-  SetLabelsRequest_ResourceLabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetLabelsRequest_ResourceLabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  SetLabelsRequest_ResourceLabelsEntry clone() =>
-      new SetLabelsRequest_ResourceLabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetLabelsRequest_ResourceLabelsEntry create() =>
-      new SetLabelsRequest_ResourceLabelsEntry();
-  static PbList<SetLabelsRequest_ResourceLabelsEntry> createRepeated() =>
-      new PbList<SetLabelsRequest_ResourceLabelsEntry>();
-  static SetLabelsRequest_ResourceLabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetLabelsRequest_ResourceLabelsEntry();
-    return _defaultInstance;
-  }
-
-  static SetLabelsRequest_ResourceLabelsEntry _defaultInstance;
-  static void $checkItem(SetLabelsRequest_ResourceLabelsEntry v) {
-    if (v is! SetLabelsRequest_ResourceLabelsEntry)
-      checkItemFailed(v, 'SetLabelsRequest_ResourceLabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlySetLabelsRequest_ResourceLabelsEntry
-    extends SetLabelsRequest_ResourceLabelsEntry with ReadonlyMessageMixin {}
-
-class SetLabelsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetLabelsRequest')
+class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'RollbackNodePoolUpgradeRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
-    ..pp<SetLabelsRequest_ResourceLabelsEntry>(
-        4,
-        'resourceLabels',
-        PbFieldType.PM,
-        SetLabelsRequest_ResourceLabelsEntry.$checkItem,
-        SetLabelsRequest_ResourceLabelsEntry.create)
-    ..aOS(5, 'labelFingerprint')
+    ..aOS(4, 'nodePoolId')
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  SetLabelsRequest() : super();
-  SetLabelsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RollbackNodePoolUpgradeRequest() : super();
+  RollbackNodePoolUpgradeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetLabelsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RollbackNodePoolUpgradeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SetLabelsRequest clone() => new SetLabelsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetLabelsRequest create() => new SetLabelsRequest();
-  static PbList<SetLabelsRequest> createRepeated() =>
-      new PbList<SetLabelsRequest>();
-  static SetLabelsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetLabelsRequest();
-    return _defaultInstance;
-  }
+  RollbackNodePoolUpgradeRequest clone() =>
+      RollbackNodePoolUpgradeRequest()..mergeFromMessage(this);
+  RollbackNodePoolUpgradeRequest copyWith(
+          void Function(RollbackNodePoolUpgradeRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as RollbackNodePoolUpgradeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static RollbackNodePoolUpgradeRequest create() =>
+      RollbackNodePoolUpgradeRequest();
+  RollbackNodePoolUpgradeRequest createEmptyInstance() => create();
+  static $pb.PbList<RollbackNodePoolUpgradeRequest> createRepeated() =>
+      $pb.PbList<RollbackNodePoolUpgradeRequest>();
+  static RollbackNodePoolUpgradeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static RollbackNodePoolUpgradeRequest _defaultInstance;
 
-  static SetLabelsRequest _defaultInstance;
-  static void $checkItem(SetLabelsRequest v) {
-    if (v is! SetLabelsRequest) checkItemFailed(v, 'SetLabelsRequest');
-  }
-
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  List<SetLabelsRequest_ResourceLabelsEntry> get resourceLabels => $_getList(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get nodePoolId => $_getS(3, '');
+  @$core.Deprecated('This field is deprecated.')
+  set nodePoolId($core.String v) {
+    $_setString(3, v);
+  }
 
-  String get labelFingerprint => $_getS(4, '');
-  set labelFingerprint(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasNodePoolId() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  void clearNodePoolId() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasLabelFingerprint() => $_has(4);
-  void clearLabelFingerprint() => clearField(5);
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlySetLabelsRequest extends SetLabelsRequest
-    with ReadonlyMessageMixin {}
+class ListNodePoolsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNodePoolsResponse',
+      package: const $pb.PackageName('google.container.v1'))
+    ..pc<NodePool>(1, 'nodePools', $pb.PbFieldType.PM, NodePool.create)
+    ..hasRequiredFields = false;
 
-class SetLegacyAbacRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetLegacyAbacRequest')
+  ListNodePoolsResponse() : super();
+  ListNodePoolsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListNodePoolsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListNodePoolsResponse clone() =>
+      ListNodePoolsResponse()..mergeFromMessage(this);
+  ListNodePoolsResponse copyWith(
+          void Function(ListNodePoolsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListNodePoolsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListNodePoolsResponse create() => ListNodePoolsResponse();
+  ListNodePoolsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListNodePoolsResponse> createRepeated() =>
+      $pb.PbList<ListNodePoolsResponse>();
+  static ListNodePoolsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ListNodePoolsResponse _defaultInstance;
+
+  $core.List<NodePool> get nodePools => $_getList(0);
+}
+
+class NodePoolAutoscaling extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NodePoolAutoscaling',
+      package: const $pb.PackageName('google.container.v1'))
+    ..aOB(1, 'enabled')
+    ..a<$core.int>(2, 'minNodeCount', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, 'maxNodeCount', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  NodePoolAutoscaling() : super();
+  NodePoolAutoscaling.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  NodePoolAutoscaling.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  NodePoolAutoscaling clone() => NodePoolAutoscaling()..mergeFromMessage(this);
+  NodePoolAutoscaling copyWith(void Function(NodePoolAutoscaling) updates) =>
+      super.copyWith((message) => updates(message as NodePoolAutoscaling));
+  $pb.BuilderInfo get info_ => _i;
+  static NodePoolAutoscaling create() => NodePoolAutoscaling();
+  NodePoolAutoscaling createEmptyInstance() => create();
+  static $pb.PbList<NodePoolAutoscaling> createRepeated() =>
+      $pb.PbList<NodePoolAutoscaling>();
+  static NodePoolAutoscaling getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static NodePoolAutoscaling _defaultInstance;
+
+  $core.bool get enabled => $_get(0, false);
+  set enabled($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  $core.bool hasEnabled() => $_has(0);
+  void clearEnabled() => clearField(1);
+
+  $core.int get minNodeCount => $_get(1, 0);
+  set minNodeCount($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  $core.bool hasMinNodeCount() => $_has(1);
+  void clearMinNodeCount() => clearField(2);
+
+  $core.int get maxNodeCount => $_get(2, 0);
+  set maxNodeCount($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  $core.bool hasMaxNodeCount() => $_has(2);
+  void clearMaxNodeCount() => clearField(3);
+}
+
+class SetLabelsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetLabelsRequest',
+      package: const $pb.PackageName('google.container.v1'))
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'zone')
+    ..aOS(3, 'clusterId')
+    ..m<$core.String, $core.String>(
+        4,
+        'resourceLabels',
+        'SetLabelsRequest.ResourceLabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.container.v1'))
+    ..aOS(5, 'labelFingerprint')
+    ..aOS(7, 'name')
+    ..hasRequiredFields = false;
+
+  SetLabelsRequest() : super();
+  SetLabelsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SetLabelsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SetLabelsRequest clone() => SetLabelsRequest()..mergeFromMessage(this);
+  SetLabelsRequest copyWith(void Function(SetLabelsRequest) updates) =>
+      super.copyWith((message) => updates(message as SetLabelsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetLabelsRequest create() => SetLabelsRequest();
+  SetLabelsRequest createEmptyInstance() => create();
+  static $pb.PbList<SetLabelsRequest> createRepeated() =>
+      $pb.PbList<SetLabelsRequest>();
+  static SetLabelsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SetLabelsRequest _defaultInstance;
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  void clearProjectId() => clearField(1);
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  void clearZone() => clearField(2);
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  void clearClusterId() => clearField(3);
+
+  $core.Map<$core.String, $core.String> get resourceLabels => $_getMap(3);
+
+  $core.String get labelFingerprint => $_getS(4, '');
+  set labelFingerprint($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasLabelFingerprint() => $_has(4);
+  void clearLabelFingerprint() => clearField(5);
+
+  $core.String get name => $_getS(5, '');
+  set name($core.String v) {
+    $_setString(5, v);
+  }
+
+  $core.bool hasName() => $_has(5);
+  void clearName() => clearField(7);
+}
+
+class SetLegacyAbacRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetLegacyAbacRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
     ..aOB(4, 'enabled')
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
   SetLegacyAbacRequest() : super();
-  SetLegacyAbacRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetLegacyAbacRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetLegacyAbacRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetLegacyAbacRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetLegacyAbacRequest clone() =>
-      new SetLegacyAbacRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetLegacyAbacRequest create() => new SetLegacyAbacRequest();
-  static PbList<SetLegacyAbacRequest> createRepeated() =>
-      new PbList<SetLegacyAbacRequest>();
-  static SetLegacyAbacRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetLegacyAbacRequest();
-    return _defaultInstance;
-  }
-
+      SetLegacyAbacRequest()..mergeFromMessage(this);
+  SetLegacyAbacRequest copyWith(void Function(SetLegacyAbacRequest) updates) =>
+      super.copyWith((message) => updates(message as SetLegacyAbacRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetLegacyAbacRequest create() => SetLegacyAbacRequest();
+  SetLegacyAbacRequest createEmptyInstance() => create();
+  static $pb.PbList<SetLegacyAbacRequest> createRepeated() =>
+      $pb.PbList<SetLegacyAbacRequest>();
+  static SetLegacyAbacRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetLegacyAbacRequest _defaultInstance;
-  static void $checkItem(SetLegacyAbacRequest v) {
-    if (v is! SetLegacyAbacRequest) checkItemFailed(v, 'SetLegacyAbacRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
-  bool get enabled => $_get(3, false);
-  set enabled(bool v) {
+  $core.bool get enabled => $_get(3, false);
+  set enabled($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasEnabled() => $_has(3);
+  $core.bool hasEnabled() => $_has(3);
   void clearEnabled() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlySetLegacyAbacRequest extends SetLegacyAbacRequest
-    with ReadonlyMessageMixin {}
-
-class StartIPRotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StartIPRotationRequest')
+class StartIPRotationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StartIPRotationRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
+    ..aOS(6, 'name')
+    ..aOB(7, 'rotateCredentials')
     ..hasRequiredFields = false;
 
   StartIPRotationRequest() : super();
-  StartIPRotationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StartIPRotationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StartIPRotationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StartIPRotationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StartIPRotationRequest clone() =>
-      new StartIPRotationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StartIPRotationRequest create() => new StartIPRotationRequest();
-  static PbList<StartIPRotationRequest> createRepeated() =>
-      new PbList<StartIPRotationRequest>();
-  static StartIPRotationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStartIPRotationRequest();
-    return _defaultInstance;
-  }
-
+      StartIPRotationRequest()..mergeFromMessage(this);
+  StartIPRotationRequest copyWith(
+          void Function(StartIPRotationRequest) updates) =>
+      super.copyWith((message) => updates(message as StartIPRotationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static StartIPRotationRequest create() => StartIPRotationRequest();
+  StartIPRotationRequest createEmptyInstance() => create();
+  static $pb.PbList<StartIPRotationRequest> createRepeated() =>
+      $pb.PbList<StartIPRotationRequest>();
+  static StartIPRotationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StartIPRotationRequest _defaultInstance;
-  static void $checkItem(StartIPRotationRequest v) {
-    if (v is! StartIPRotationRequest)
-      checkItemFailed(v, 'StartIPRotationRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
+
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasName() => $_has(3);
+  void clearName() => clearField(6);
+
+  $core.bool get rotateCredentials => $_get(4, false);
+  set rotateCredentials($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  $core.bool hasRotateCredentials() => $_has(4);
+  void clearRotateCredentials() => clearField(7);
 }
 
-class _ReadonlyStartIPRotationRequest extends StartIPRotationRequest
-    with ReadonlyMessageMixin {}
-
-class CompleteIPRotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CompleteIPRotationRequest')
+class CompleteIPRotationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CompleteIPRotationRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
+    ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
   CompleteIPRotationRequest() : super();
-  CompleteIPRotationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CompleteIPRotationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CompleteIPRotationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CompleteIPRotationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CompleteIPRotationRequest clone() =>
-      new CompleteIPRotationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CompleteIPRotationRequest create() => new CompleteIPRotationRequest();
-  static PbList<CompleteIPRotationRequest> createRepeated() =>
-      new PbList<CompleteIPRotationRequest>();
-  static CompleteIPRotationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCompleteIPRotationRequest();
-    return _defaultInstance;
-  }
-
+      CompleteIPRotationRequest()..mergeFromMessage(this);
+  CompleteIPRotationRequest copyWith(
+          void Function(CompleteIPRotationRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as CompleteIPRotationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CompleteIPRotationRequest create() => CompleteIPRotationRequest();
+  CompleteIPRotationRequest createEmptyInstance() => create();
+  static $pb.PbList<CompleteIPRotationRequest> createRepeated() =>
+      $pb.PbList<CompleteIPRotationRequest>();
+  static CompleteIPRotationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CompleteIPRotationRequest _defaultInstance;
-  static void $checkItem(CompleteIPRotationRequest v) {
-    if (v is! CompleteIPRotationRequest)
-      checkItemFailed(v, 'CompleteIPRotationRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
+
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasName() => $_has(3);
+  void clearName() => clearField(7);
 }
 
-class _ReadonlyCompleteIPRotationRequest extends CompleteIPRotationRequest
-    with ReadonlyMessageMixin {}
-
-class AcceleratorConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AcceleratorConfig')
+class AcceleratorConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AcceleratorConfig',
+      package: const $pb.PackageName('google.container.v1'))
     ..aInt64(1, 'acceleratorCount')
     ..aOS(2, 'acceleratorType')
     ..hasRequiredFields = false;
 
   AcceleratorConfig() : super();
-  AcceleratorConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AcceleratorConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AcceleratorConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AcceleratorConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AcceleratorConfig clone() => new AcceleratorConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AcceleratorConfig create() => new AcceleratorConfig();
-  static PbList<AcceleratorConfig> createRepeated() =>
-      new PbList<AcceleratorConfig>();
-  static AcceleratorConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAcceleratorConfig();
-    return _defaultInstance;
-  }
-
+  AcceleratorConfig clone() => AcceleratorConfig()..mergeFromMessage(this);
+  AcceleratorConfig copyWith(void Function(AcceleratorConfig) updates) =>
+      super.copyWith((message) => updates(message as AcceleratorConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static AcceleratorConfig create() => AcceleratorConfig();
+  AcceleratorConfig createEmptyInstance() => create();
+  static $pb.PbList<AcceleratorConfig> createRepeated() =>
+      $pb.PbList<AcceleratorConfig>();
+  static AcceleratorConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AcceleratorConfig _defaultInstance;
-  static void $checkItem(AcceleratorConfig v) {
-    if (v is! AcceleratorConfig) checkItemFailed(v, 'AcceleratorConfig');
-  }
 
   Int64 get acceleratorCount => $_getI64(0);
   set acceleratorCount(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasAcceleratorCount() => $_has(0);
+  $core.bool hasAcceleratorCount() => $_has(0);
   void clearAcceleratorCount() => clearField(1);
 
-  String get acceleratorType => $_getS(1, '');
-  set acceleratorType(String v) {
+  $core.String get acceleratorType => $_getS(1, '');
+  set acceleratorType($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasAcceleratorType() => $_has(1);
+  $core.bool hasAcceleratorType() => $_has(1);
   void clearAcceleratorType() => clearField(2);
 }
 
-class _ReadonlyAcceleratorConfig extends AcceleratorConfig
-    with ReadonlyMessageMixin {}
-
-class SetNetworkPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetNetworkPolicyRequest')
+class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetNetworkPolicyRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
-    ..a<NetworkPolicy>(4, 'networkPolicy', PbFieldType.OM,
+    ..a<NetworkPolicy>(4, 'networkPolicy', $pb.PbFieldType.OM,
         NetworkPolicy.getDefault, NetworkPolicy.create)
+    ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
   SetNetworkPolicyRequest() : super();
-  SetNetworkPolicyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetNetworkPolicyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetNetworkPolicyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetNetworkPolicyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetNetworkPolicyRequest clone() =>
-      new SetNetworkPolicyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetNetworkPolicyRequest create() => new SetNetworkPolicyRequest();
-  static PbList<SetNetworkPolicyRequest> createRepeated() =>
-      new PbList<SetNetworkPolicyRequest>();
-  static SetNetworkPolicyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetNetworkPolicyRequest();
-    return _defaultInstance;
-  }
-
+      SetNetworkPolicyRequest()..mergeFromMessage(this);
+  SetNetworkPolicyRequest copyWith(
+          void Function(SetNetworkPolicyRequest) updates) =>
+      super.copyWith((message) => updates(message as SetNetworkPolicyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetNetworkPolicyRequest create() => SetNetworkPolicyRequest();
+  SetNetworkPolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<SetNetworkPolicyRequest> createRepeated() =>
+      $pb.PbList<SetNetworkPolicyRequest>();
+  static SetNetworkPolicyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetNetworkPolicyRequest _defaultInstance;
-  static void $checkItem(SetNetworkPolicyRequest v) {
-    if (v is! SetNetworkPolicyRequest)
-      checkItemFailed(v, 'SetNetworkPolicyRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get projectId => $_getS(0, '');
+  @$core.Deprecated('This field is deprecated.')
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasProjectId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get zone => $_getS(1, '');
+  @$core.Deprecated('This field is deprecated.')
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasZone() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.String get clusterId => $_getS(2, '');
+  @$core.Deprecated('This field is deprecated.')
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasClusterId() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   void clearClusterId() => clearField(3);
 
   NetworkPolicy get networkPolicy => $_getN(3);
@@ -4169,70 +4433,74 @@ class SetNetworkPolicyRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasNetworkPolicy() => $_has(3);
+  $core.bool hasNetworkPolicy() => $_has(3);
   void clearNetworkPolicy() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(6);
 }
 
-class _ReadonlySetNetworkPolicyRequest extends SetNetworkPolicyRequest
-    with ReadonlyMessageMixin {}
-
-class SetMaintenancePolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetMaintenancePolicyRequest')
+class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SetMaintenancePolicyRequest',
+      package: const $pb.PackageName('google.container.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'zone')
     ..aOS(3, 'clusterId')
-    ..a<MaintenancePolicy>(4, 'maintenancePolicy', PbFieldType.OM,
+    ..a<MaintenancePolicy>(4, 'maintenancePolicy', $pb.PbFieldType.OM,
         MaintenancePolicy.getDefault, MaintenancePolicy.create)
+    ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
   SetMaintenancePolicyRequest() : super();
-  SetMaintenancePolicyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetMaintenancePolicyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetMaintenancePolicyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetMaintenancePolicyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetMaintenancePolicyRequest clone() =>
-      new SetMaintenancePolicyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetMaintenancePolicyRequest create() =>
-      new SetMaintenancePolicyRequest();
-  static PbList<SetMaintenancePolicyRequest> createRepeated() =>
-      new PbList<SetMaintenancePolicyRequest>();
-  static SetMaintenancePolicyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetMaintenancePolicyRequest();
-    return _defaultInstance;
-  }
-
+      SetMaintenancePolicyRequest()..mergeFromMessage(this);
+  SetMaintenancePolicyRequest copyWith(
+          void Function(SetMaintenancePolicyRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as SetMaintenancePolicyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetMaintenancePolicyRequest create() => SetMaintenancePolicyRequest();
+  SetMaintenancePolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<SetMaintenancePolicyRequest> createRepeated() =>
+      $pb.PbList<SetMaintenancePolicyRequest>();
+  static SetMaintenancePolicyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetMaintenancePolicyRequest _defaultInstance;
-  static void $checkItem(SetMaintenancePolicyRequest v) {
-    if (v is! SetMaintenancePolicyRequest)
-      checkItemFailed(v, 'SetMaintenancePolicyRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get zone => $_getS(1, '');
-  set zone(String v) {
+  $core.String get zone => $_getS(1, '');
+  set zone($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasZone() => $_has(1);
+  $core.bool hasZone() => $_has(1);
   void clearZone() => clearField(2);
 
-  String get clusterId => $_getS(2, '');
-  set clusterId(String v) {
+  $core.String get clusterId => $_getS(2, '');
+  set clusterId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasClusterId() => $_has(2);
+  $core.bool hasClusterId() => $_has(2);
   void clearClusterId() => clearField(3);
 
   MaintenancePolicy get maintenancePolicy => $_getN(3);
@@ -4240,220 +4508,270 @@ class SetMaintenancePolicyRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasMaintenancePolicy() => $_has(3);
+  $core.bool hasMaintenancePolicy() => $_has(3);
   void clearMaintenancePolicy() => clearField(4);
+
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasName() => $_has(4);
+  void clearName() => clearField(5);
 }
 
-class _ReadonlySetMaintenancePolicyRequest extends SetMaintenancePolicyRequest
-    with ReadonlyMessageMixin {}
+class NetworkConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NetworkConfig',
+      package: const $pb.PackageName('google.container.v1'))
+    ..aOS(1, 'network')
+    ..aOS(2, 'subnetwork')
+    ..hasRequiredFields = false;
+
+  NetworkConfig() : super();
+  NetworkConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  NetworkConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  NetworkConfig clone() => NetworkConfig()..mergeFromMessage(this);
+  NetworkConfig copyWith(void Function(NetworkConfig) updates) =>
+      super.copyWith((message) => updates(message as NetworkConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static NetworkConfig create() => NetworkConfig();
+  NetworkConfig createEmptyInstance() => create();
+  static $pb.PbList<NetworkConfig> createRepeated() =>
+      $pb.PbList<NetworkConfig>();
+  static NetworkConfig getDefault() => _defaultInstance ??= create()..freeze();
+  static NetworkConfig _defaultInstance;
+
+  $core.String get network => $_getS(0, '');
+  set network($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasNetwork() => $_has(0);
+  void clearNetwork() => clearField(1);
+
+  $core.String get subnetwork => $_getS(1, '');
+  set subnetwork($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasSubnetwork() => $_has(1);
+  void clearSubnetwork() => clearField(2);
+}
 
 class ClusterManagerApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   ClusterManagerApi(this._client);
 
-  Future<ListClustersResponse> listClusters(
-      ClientContext ctx, ListClustersRequest request) {
-    var emptyResponse = new ListClustersResponse();
+  $async.Future<ListClustersResponse> listClusters(
+      $pb.ClientContext ctx, ListClustersRequest request) {
+    var emptyResponse = ListClustersResponse();
     return _client.invoke<ListClustersResponse>(
         ctx, 'ClusterManager', 'ListClusters', request, emptyResponse);
   }
 
-  Future<Cluster> getCluster(ClientContext ctx, GetClusterRequest request) {
-    var emptyResponse = new Cluster();
+  $async.Future<Cluster> getCluster(
+      $pb.ClientContext ctx, GetClusterRequest request) {
+    var emptyResponse = Cluster();
     return _client.invoke<Cluster>(
         ctx, 'ClusterManager', 'GetCluster', request, emptyResponse);
   }
 
-  Future<Operation> createCluster(
-      ClientContext ctx, CreateClusterRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> createCluster(
+      $pb.ClientContext ctx, CreateClusterRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'CreateCluster', request, emptyResponse);
   }
 
-  Future<Operation> updateCluster(
-      ClientContext ctx, UpdateClusterRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> updateCluster(
+      $pb.ClientContext ctx, UpdateClusterRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'UpdateCluster', request, emptyResponse);
   }
 
-  Future<Operation> updateNodePool(
-      ClientContext ctx, UpdateNodePoolRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> updateNodePool(
+      $pb.ClientContext ctx, UpdateNodePoolRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'UpdateNodePool', request, emptyResponse);
   }
 
-  Future<Operation> setNodePoolAutoscaling(
-      ClientContext ctx, SetNodePoolAutoscalingRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setNodePoolAutoscaling(
+      $pb.ClientContext ctx, SetNodePoolAutoscalingRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(ctx, 'ClusterManager',
         'SetNodePoolAutoscaling', request, emptyResponse);
   }
 
-  Future<Operation> setLoggingService(
-      ClientContext ctx, SetLoggingServiceRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setLoggingService(
+      $pb.ClientContext ctx, SetLoggingServiceRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetLoggingService', request, emptyResponse);
   }
 
-  Future<Operation> setMonitoringService(
-      ClientContext ctx, SetMonitoringServiceRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setMonitoringService(
+      $pb.ClientContext ctx, SetMonitoringServiceRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetMonitoringService', request, emptyResponse);
   }
 
-  Future<Operation> setAddonsConfig(
-      ClientContext ctx, SetAddonsConfigRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setAddonsConfig(
+      $pb.ClientContext ctx, SetAddonsConfigRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetAddonsConfig', request, emptyResponse);
   }
 
-  Future<Operation> setLocations(
-      ClientContext ctx, SetLocationsRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setLocations(
+      $pb.ClientContext ctx, SetLocationsRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetLocations', request, emptyResponse);
   }
 
-  Future<Operation> updateMaster(
-      ClientContext ctx, UpdateMasterRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> updateMaster(
+      $pb.ClientContext ctx, UpdateMasterRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'UpdateMaster', request, emptyResponse);
   }
 
-  Future<Operation> setMasterAuth(
-      ClientContext ctx, SetMasterAuthRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setMasterAuth(
+      $pb.ClientContext ctx, SetMasterAuthRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetMasterAuth', request, emptyResponse);
   }
 
-  Future<Operation> deleteCluster(
-      ClientContext ctx, DeleteClusterRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> deleteCluster(
+      $pb.ClientContext ctx, DeleteClusterRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'DeleteCluster', request, emptyResponse);
   }
 
-  Future<ListOperationsResponse> listOperations(
-      ClientContext ctx, ListOperationsRequest request) {
-    var emptyResponse = new ListOperationsResponse();
+  $async.Future<ListOperationsResponse> listOperations(
+      $pb.ClientContext ctx, ListOperationsRequest request) {
+    var emptyResponse = ListOperationsResponse();
     return _client.invoke<ListOperationsResponse>(
         ctx, 'ClusterManager', 'ListOperations', request, emptyResponse);
   }
 
-  Future<Operation> getOperation(
-      ClientContext ctx, GetOperationRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> getOperation(
+      $pb.ClientContext ctx, GetOperationRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'GetOperation', request, emptyResponse);
   }
 
-  Future<$google$protobuf.Empty> cancelOperation(
-      ClientContext ctx, CancelOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
+  $async.Future<$0.Empty> cancelOperation(
+      $pb.ClientContext ctx, CancelOperationRequest request) {
+    var emptyResponse = $0.Empty();
+    return _client.invoke<$0.Empty>(
         ctx, 'ClusterManager', 'CancelOperation', request, emptyResponse);
   }
 
-  Future<ServerConfig> getServerConfig(
-      ClientContext ctx, GetServerConfigRequest request) {
-    var emptyResponse = new ServerConfig();
+  $async.Future<ServerConfig> getServerConfig(
+      $pb.ClientContext ctx, GetServerConfigRequest request) {
+    var emptyResponse = ServerConfig();
     return _client.invoke<ServerConfig>(
         ctx, 'ClusterManager', 'GetServerConfig', request, emptyResponse);
   }
 
-  Future<ListNodePoolsResponse> listNodePools(
-      ClientContext ctx, ListNodePoolsRequest request) {
-    var emptyResponse = new ListNodePoolsResponse();
+  $async.Future<ListNodePoolsResponse> listNodePools(
+      $pb.ClientContext ctx, ListNodePoolsRequest request) {
+    var emptyResponse = ListNodePoolsResponse();
     return _client.invoke<ListNodePoolsResponse>(
         ctx, 'ClusterManager', 'ListNodePools', request, emptyResponse);
   }
 
-  Future<NodePool> getNodePool(ClientContext ctx, GetNodePoolRequest request) {
-    var emptyResponse = new NodePool();
+  $async.Future<NodePool> getNodePool(
+      $pb.ClientContext ctx, GetNodePoolRequest request) {
+    var emptyResponse = NodePool();
     return _client.invoke<NodePool>(
         ctx, 'ClusterManager', 'GetNodePool', request, emptyResponse);
   }
 
-  Future<Operation> createNodePool(
-      ClientContext ctx, CreateNodePoolRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> createNodePool(
+      $pb.ClientContext ctx, CreateNodePoolRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'CreateNodePool', request, emptyResponse);
   }
 
-  Future<Operation> deleteNodePool(
-      ClientContext ctx, DeleteNodePoolRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> deleteNodePool(
+      $pb.ClientContext ctx, DeleteNodePoolRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'DeleteNodePool', request, emptyResponse);
   }
 
-  Future<Operation> rollbackNodePoolUpgrade(
-      ClientContext ctx, RollbackNodePoolUpgradeRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> rollbackNodePoolUpgrade(
+      $pb.ClientContext ctx, RollbackNodePoolUpgradeRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(ctx, 'ClusterManager',
         'RollbackNodePoolUpgrade', request, emptyResponse);
   }
 
-  Future<Operation> setNodePoolManagement(
-      ClientContext ctx, SetNodePoolManagementRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setNodePoolManagement(
+      $pb.ClientContext ctx, SetNodePoolManagementRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetNodePoolManagement', request, emptyResponse);
   }
 
-  Future<Operation> setLabels(ClientContext ctx, SetLabelsRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setLabels(
+      $pb.ClientContext ctx, SetLabelsRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetLabels', request, emptyResponse);
   }
 
-  Future<Operation> setLegacyAbac(
-      ClientContext ctx, SetLegacyAbacRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setLegacyAbac(
+      $pb.ClientContext ctx, SetLegacyAbacRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetLegacyAbac', request, emptyResponse);
   }
 
-  Future<Operation> startIPRotation(
-      ClientContext ctx, StartIPRotationRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> startIPRotation(
+      $pb.ClientContext ctx, StartIPRotationRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'StartIPRotation', request, emptyResponse);
   }
 
-  Future<Operation> completeIPRotation(
-      ClientContext ctx, CompleteIPRotationRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> completeIPRotation(
+      $pb.ClientContext ctx, CompleteIPRotationRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'CompleteIPRotation', request, emptyResponse);
   }
 
-  Future<Operation> setNodePoolSize(
-      ClientContext ctx, SetNodePoolSizeRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setNodePoolSize(
+      $pb.ClientContext ctx, SetNodePoolSizeRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetNodePoolSize', request, emptyResponse);
   }
 
-  Future<Operation> setNetworkPolicy(
-      ClientContext ctx, SetNetworkPolicyRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setNetworkPolicy(
+      $pb.ClientContext ctx, SetNetworkPolicyRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetNetworkPolicy', request, emptyResponse);
   }
 
-  Future<Operation> setMaintenancePolicy(
-      ClientContext ctx, SetMaintenancePolicyRequest request) {
-    var emptyResponse = new Operation();
+  $async.Future<Operation> setMaintenancePolicy(
+      $pb.ClientContext ctx, SetMaintenancePolicyRequest request) {
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'ClusterManager', 'SetMaintenancePolicy', request, emptyResponse);
   }

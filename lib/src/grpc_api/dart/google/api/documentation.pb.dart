@@ -1,177 +1,164 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/documentation.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Documentation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Documentation')
+class Documentation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Documentation',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'summary')
     ..aOS(2, 'overview')
-    ..pp<DocumentationRule>(3, 'rules', PbFieldType.PM,
-        DocumentationRule.$checkItem, DocumentationRule.create)
+    ..pc<DocumentationRule>(
+        3, 'rules', $pb.PbFieldType.PM, DocumentationRule.create)
     ..aOS(4, 'documentationRootUrl')
-    ..pp<Page>(5, 'pages', PbFieldType.PM, Page.$checkItem, Page.create)
+    ..pc<Page>(5, 'pages', $pb.PbFieldType.PM, Page.create)
     ..hasRequiredFields = false;
 
   Documentation() : super();
-  Documentation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Documentation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Documentation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Documentation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Documentation clone() => new Documentation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Documentation create() => new Documentation();
-  static PbList<Documentation> createRepeated() => new PbList<Documentation>();
-  static Documentation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentation();
-    return _defaultInstance;
-  }
-
+  Documentation clone() => Documentation()..mergeFromMessage(this);
+  Documentation copyWith(void Function(Documentation) updates) =>
+      super.copyWith((message) => updates(message as Documentation));
+  $pb.BuilderInfo get info_ => _i;
+  static Documentation create() => Documentation();
+  Documentation createEmptyInstance() => create();
+  static $pb.PbList<Documentation> createRepeated() =>
+      $pb.PbList<Documentation>();
+  static Documentation getDefault() => _defaultInstance ??= create()..freeze();
   static Documentation _defaultInstance;
-  static void $checkItem(Documentation v) {
-    if (v is! Documentation) checkItemFailed(v, 'Documentation');
-  }
 
-  String get summary => $_getS(0, '');
-  set summary(String v) {
+  $core.String get summary => $_getS(0, '');
+  set summary($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSummary() => $_has(0);
+  $core.bool hasSummary() => $_has(0);
   void clearSummary() => clearField(1);
 
-  String get overview => $_getS(1, '');
-  set overview(String v) {
+  $core.String get overview => $_getS(1, '');
+  set overview($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasOverview() => $_has(1);
+  $core.bool hasOverview() => $_has(1);
   void clearOverview() => clearField(2);
 
-  List<DocumentationRule> get rules => $_getList(2);
+  $core.List<DocumentationRule> get rules => $_getList(2);
 
-  String get documentationRootUrl => $_getS(3, '');
-  set documentationRootUrl(String v) {
+  $core.String get documentationRootUrl => $_getS(3, '');
+  set documentationRootUrl($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDocumentationRootUrl() => $_has(3);
+  $core.bool hasDocumentationRootUrl() => $_has(3);
   void clearDocumentationRootUrl() => clearField(4);
 
-  List<Page> get pages => $_getList(4);
+  $core.List<Page> get pages => $_getList(4);
 }
 
-class _ReadonlyDocumentation extends Documentation with ReadonlyMessageMixin {}
-
-class DocumentationRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DocumentationRule')
+class DocumentationRule extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DocumentationRule',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'selector')
     ..aOS(2, 'description')
     ..aOS(3, 'deprecationDescription')
     ..hasRequiredFields = false;
 
   DocumentationRule() : super();
-  DocumentationRule.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DocumentationRule.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DocumentationRule.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DocumentationRule.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DocumentationRule clone() => new DocumentationRule()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DocumentationRule create() => new DocumentationRule();
-  static PbList<DocumentationRule> createRepeated() =>
-      new PbList<DocumentationRule>();
-  static DocumentationRule getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentationRule();
-    return _defaultInstance;
-  }
-
+  DocumentationRule clone() => DocumentationRule()..mergeFromMessage(this);
+  DocumentationRule copyWith(void Function(DocumentationRule) updates) =>
+      super.copyWith((message) => updates(message as DocumentationRule));
+  $pb.BuilderInfo get info_ => _i;
+  static DocumentationRule create() => DocumentationRule();
+  DocumentationRule createEmptyInstance() => create();
+  static $pb.PbList<DocumentationRule> createRepeated() =>
+      $pb.PbList<DocumentationRule>();
+  static DocumentationRule getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DocumentationRule _defaultInstance;
-  static void $checkItem(DocumentationRule v) {
-    if (v is! DocumentationRule) checkItemFailed(v, 'DocumentationRule');
-  }
 
-  String get selector => $_getS(0, '');
-  set selector(String v) {
+  $core.String get selector => $_getS(0, '');
+  set selector($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSelector() => $_has(0);
+  $core.bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  String get deprecationDescription => $_getS(2, '');
-  set deprecationDescription(String v) {
+  $core.String get deprecationDescription => $_getS(2, '');
+  set deprecationDescription($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDeprecationDescription() => $_has(2);
+  $core.bool hasDeprecationDescription() => $_has(2);
   void clearDeprecationDescription() => clearField(3);
 }
 
-class _ReadonlyDocumentationRule extends DocumentationRule
-    with ReadonlyMessageMixin {}
-
-class Page extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Page')
-    ..aOS(1, 'name')
-    ..aOS(2, 'content')
-    ..pp<Page>(3, 'subpages', PbFieldType.PM, Page.$checkItem, Page.create)
-    ..hasRequiredFields = false;
+class Page extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('Page', package: const $pb.PackageName('google.api'))
+        ..aOS(1, 'name')
+        ..aOS(2, 'content')
+        ..pc<Page>(3, 'subpages', $pb.PbFieldType.PM, Page.create)
+        ..hasRequiredFields = false;
 
   Page() : super();
-  Page.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Page.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Page.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Page.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Page clone() => new Page()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Page create() => new Page();
-  static PbList<Page> createRepeated() => new PbList<Page>();
-  static Page getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPage();
-    return _defaultInstance;
-  }
-
+  Page clone() => Page()..mergeFromMessage(this);
+  Page copyWith(void Function(Page) updates) =>
+      super.copyWith((message) => updates(message as Page));
+  $pb.BuilderInfo get info_ => _i;
+  static Page create() => Page();
+  Page createEmptyInstance() => create();
+  static $pb.PbList<Page> createRepeated() => $pb.PbList<Page>();
+  static Page getDefault() => _defaultInstance ??= create()..freeze();
   static Page _defaultInstance;
-  static void $checkItem(Page v) {
-    if (v is! Page) checkItemFailed(v, 'Page');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get content => $_getS(1, '');
-  set content(String v) {
+  $core.String get content => $_getS(1, '');
+  set content($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasContent() => $_has(1);
+  $core.bool hasContent() => $_has(1);
   void clearContent() => clearField(2);
 
-  List<Page> get subpages => $_getList(2);
+  $core.List<Page> get subpages => $_getList(2);
 }
-
-class _ReadonlyPage extends Page with ReadonlyMessageMixin {}
