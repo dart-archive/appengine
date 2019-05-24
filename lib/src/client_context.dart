@@ -4,8 +4,6 @@
 
 library appengine.client_context;
 
-import 'dart:async';
-
 import 'package:gcloud/db.dart';
 import 'package:gcloud/storage.dart';
 

@@ -2403,20 +2403,21 @@ class _ReadonlyPrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
 
 class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable
     extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo(
-      'PrivacyMetric_KMapEstimationConfig_AuxiliaryTable')
-    ..pp<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>(
-        1,
-        'quasiIds',
-        PbFieldType.PM,
-        PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
-            .$checkItem,
-        PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField.create)
-    ..a<FieldId>(2, 'relativeFrequency', PbFieldType.OM, FieldId.getDefault,
-        FieldId.create)
-    ..a<BigQueryTable>(3, 'table', PbFieldType.OM, BigQueryTable.getDefault,
-        BigQueryTable.create)
-    ..hasRequiredFields = false;
+  static final BuilderInfo _i =
+      BuilderInfo('PrivacyMetric_KMapEstimationConfig_AuxiliaryTable')
+        ..pp<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>(
+            1,
+            'quasiIds',
+            PbFieldType.PM,
+            PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
+                .$checkItem,
+            PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
+                .create)
+        ..a<FieldId>(2, 'relativeFrequency', PbFieldType.OM, FieldId.getDefault,
+            FieldId.create)
+        ..a<BigQueryTable>(3, 'table', PbFieldType.OM, BigQueryTable.getDefault,
+            BigQueryTable.create)
+        ..hasRequiredFields = false;
 
   PrivacyMetric_KMapEstimationConfig_AuxiliaryTable() : super();
   PrivacyMetric_KMapEstimationConfig_AuxiliaryTable.fromBuffer(List<int> i,
@@ -4928,13 +4929,17 @@ class _ReadonlyDateShiftConfig extends DateShiftConfig
     with ReadonlyMessageMixin {}
 
 class InfoTypeTransformations_InfoTypeTransformation extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo(
-      'InfoTypeTransformations_InfoTypeTransformation')
-    ..pp<InfoType>(
-        1, 'infoTypes', PbFieldType.PM, InfoType.$checkItem, InfoType.create)
-    ..a<PrimitiveTransformation>(2, 'primitiveTransformation', PbFieldType.OM,
-        PrimitiveTransformation.getDefault, PrimitiveTransformation.create)
-    ..hasRequiredFields = false;
+  static final BuilderInfo _i =
+      BuilderInfo('InfoTypeTransformations_InfoTypeTransformation')
+        ..pp<InfoType>(1, 'infoTypes', PbFieldType.PM, InfoType.$checkItem,
+            InfoType.create)
+        ..a<PrimitiveTransformation>(
+            2,
+            'primitiveTransformation',
+            PbFieldType.OM,
+            PrimitiveTransformation.getDefault,
+            PrimitiveTransformation.create)
+        ..hasRequiredFields = false;
 
   InfoTypeTransformations_InfoTypeTransformation() : super();
   InfoTypeTransformations_InfoTypeTransformation.fromBuffer(List<int> i,

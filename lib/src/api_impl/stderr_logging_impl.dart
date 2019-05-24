@@ -31,7 +31,7 @@ class StderrRequestLoggingImpl extends LoggingImpl {
   }
 
   Future flush() async {
-    if (_gaeLogLines.length > 0) {
+    if (_gaeLogLines.isNotEmpty) {
       _enqueue(finish: false);
     }
   }

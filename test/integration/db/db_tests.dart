@@ -102,8 +102,9 @@ class User extends Person {
   List<String> hobbies = const [];
 
   sameAs(Object other) {
-    if (!(super.sameAs(other) && other is User && nickname == other.nickname))
+    if (!(super.sameAs(other) && other is User && nickname == other.nickname)) {
       return false;
+    }
 
     User user = other;
     return areStringListsEqual(languages, user?.languages) &&

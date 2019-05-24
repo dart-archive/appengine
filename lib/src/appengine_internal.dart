@@ -5,7 +5,6 @@
 library appengine.internal;
 
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:gcloud/datastore.dart' as datastore;
@@ -16,7 +15,6 @@ import 'package:gcloud/storage.dart' as storage;
 import 'package:googleapis_auth/auth_io.dart' as auth;
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
-import 'package:stack_trace/stack_trace.dart';
 
 import 'errors.dart' as errors;
 import 'logging.dart' as logging;
@@ -28,7 +26,6 @@ import 'grpc_api_impl/auth_utils.dart' as auth_utils;
 import 'grpc_api_impl/datastore_impl.dart' as grpc_datastore_impl;
 import 'grpc_api_impl/grpc.dart' as grpc;
 import 'grpc_api_impl/logging_impl.dart' as grpc_logging_impl;
-import 'logging.dart';
 import 'logging_impl.dart';
 import 'server/context_registry.dart';
 import 'server/logging_package_adaptor.dart';

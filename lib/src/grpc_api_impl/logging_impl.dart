@@ -100,7 +100,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   /// [SharedLoggingService]. There is no guarantee that it will immediately be
   /// sent to the server.
   Future flush() async {
-    if (_gaeLogLines.length > 0) {
+    if (_gaeLogLines.isNotEmpty) {
       _enqueue(finish: false);
     }
   }
@@ -108,7 +108,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   /// Finishes the request-specific logs with the given HTTP [responseStatus]
   /// and [responseSize].
   void finish(int responseStatus, int responseSize) {
-    if (_gaeLogLines.length > 0) {
+    if (_gaeLogLines.isNotEmpty) {
       _enqueue(
           finish: true,
           responseStatus: responseStatus,
@@ -289,7 +289,7 @@ class SharedLoggingService {
       _timer.cancel();
       _timer = null;
     }
-    if (_entries.length == 0) {
+    if (_entries.isEmpty) {
       return;
     }
 

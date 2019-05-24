@@ -80,8 +80,8 @@ class Client {
 
   // In case a [AccessTokenProvider] was given we cache the access token and
   // a [http2.Header] object while it is valid.
-  auth.AccessToken _cachedAccessToken = null;
-  http2.Header _cachedAuthorizationHeader = null;
+  auth.AccessToken _cachedAccessToken;
+  http2.Header _cachedAuthorizationHeader;
 
   Client(Dialer dialer, AccessTokenProvider accessTokenProvider, int timeout)
       : _authorityHeader =
@@ -120,7 +120,7 @@ class Client {
     final bool isHealthy = _connection != null && _connection.isOpen;
     final bool shouldRefresh = _stopwatch.elapsed.inMinutes > 50;
     if (!isHealthy || shouldRefresh) {
-      if (isHealthy) _connection.finish();
+      if (isHealthy) await _connection.finish();
       _connection = await _dialer.dial();
       _stopwatch.reset();
     }

@@ -38,7 +38,9 @@ asyncExpect(Future future, matcher) async {
   // without.
   try {
     await future;
-  } catch (error) {}
+  } catch (error) {
+    print(error);
+  }
 
   // Validate the result, where [match]er can check for an error or a value.
   expect(future, matcher);

@@ -138,7 +138,7 @@ class GrpcDatastoreImpl implements raw.Datastore {
     try {
       final LookupResponse response =
           await _clientRPCStub.lookup(null, request);
-      if (response.deferred != null && response.deferred.length > 0) {
+      if (response.deferred != null && response.deferred.isNotEmpty) {
         throw raw.DatastoreError(
             'Could not successfully look up all keys due to resource '
             'constraints.');
@@ -200,7 +200,7 @@ class GrpcDatastoreImpl implements raw.Datastore {
     // Build a list of property and ancestor query filters. The entries in this
     // list will be combined with an AND filter.
     final List<Filter> filters = <Filter>[];
-    if (query.filters != null && query.filters.length > 0) {
+    if (query.filters != null && query.filters.isNotEmpty) {
       for (final filter in query.filters) {
         final operation = _Codec.FILTER_RELATION_MAPPING[filter.relation];
         final value = filter.value;

@@ -214,17 +214,17 @@ class _ReadonlyOrderedBuildEvent extends OrderedBuildEvent
     with ReadonlyMessageMixin {}
 
 class PublishBuildToolEventStreamRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo(
-      'PublishBuildToolEventStreamRequest')
-    ..a<StreamId>(
-        1, 'streamId', PbFieldType.OM, StreamId.getDefault, StreamId.create)
-    ..aInt64(2, 'sequenceNumber')
-    ..a<BuildEvent>(
-        3, 'event', PbFieldType.OM, BuildEvent.getDefault, BuildEvent.create)
-    ..a<OrderedBuildEvent>(4, 'orderedBuildEvent', PbFieldType.OM,
-        OrderedBuildEvent.getDefault, OrderedBuildEvent.create)
-    ..pPS(5, 'notificationKeywords')
-    ..hasRequiredFields = false;
+  static final BuilderInfo _i =
+      BuilderInfo('PublishBuildToolEventStreamRequest')
+        ..a<StreamId>(
+            1, 'streamId', PbFieldType.OM, StreamId.getDefault, StreamId.create)
+        ..aInt64(2, 'sequenceNumber')
+        ..a<BuildEvent>(3, 'event', PbFieldType.OM, BuildEvent.getDefault,
+            BuildEvent.create)
+        ..a<OrderedBuildEvent>(4, 'orderedBuildEvent', PbFieldType.OM,
+            OrderedBuildEvent.getDefault, OrderedBuildEvent.create)
+        ..pPS(5, 'notificationKeywords')
+        ..hasRequiredFields = false;
 
   PublishBuildToolEventStreamRequest() : super();
   PublishBuildToolEventStreamRequest.fromBuffer(List<int> i,

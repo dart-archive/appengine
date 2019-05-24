@@ -62,7 +62,7 @@ runTests(Datastore datastore, String namespace) {
                 autoIdInserts: autoIdEntities,
                 transaction: transaction)
             .then((result) {
-          if (autoIdEntities != null && autoIdEntities.length > 0) {
+          if (autoIdEntities != null && autoIdEntities.isNotEmpty) {
             expect(
                 result.autoIdInsertKeys.length, equals(autoIdEntities.length));
           }
@@ -73,7 +73,7 @@ runTests(Datastore datastore, String namespace) {
       return datastore
           .commit(inserts: entities, autoIdInserts: autoIdEntities)
           .then((result) {
-        if (autoIdEntities != null && autoIdEntities.length > 0) {
+        if (autoIdEntities != null && autoIdEntities.isNotEmpty) {
           expect(result.autoIdInsertKeys.length, equals(autoIdEntities.length));
         }
         return result.autoIdInsertKeys;
@@ -104,7 +104,7 @@ runTests(Datastore datastore, String namespace) {
   }
 
   bool isValidKey(Key key, {bool ignoreIds = false}) {
-    if (key.elements.length == 0) return false;
+    if (key.elements.isEmpty) return false;
 
     for (var element in key.elements) {
       if (element.kind == null || element.kind is! String) return false;
@@ -1037,7 +1037,7 @@ Future cleanupDB(Datastore db, String namespace) {
     var q = Query(kind: kind, limit: 500);
     return consumePages((_) => db.query(q, partition: partition))
         .then((List<Entity> entities) {
-      if (entities.length == 0) return null;
+      if (entities.isEmpty) return null;
 
       print('[cleanupDB]: Removing left-over ${entities.length} entities');
       var deletes = entities.map((e) => e.key).toList();
