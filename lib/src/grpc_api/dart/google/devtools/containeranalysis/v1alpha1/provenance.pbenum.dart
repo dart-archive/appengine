@@ -8,10 +8,10 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Hash_HashType extends ProtobufEnum {
-  static const Hash_HashType NONE = const Hash_HashType._(0, 'NONE');
-  static const Hash_HashType SHA256 = const Hash_HashType._(1, 'SHA256');
+  static const Hash_HashType NONE = Hash_HashType._(0, 'NONE');
+  static const Hash_HashType SHA256 = Hash_HashType._(1, 'SHA256');
 
-  static const List<Hash_HashType> values = const <Hash_HashType>[
+  static const List<Hash_HashType> values = <Hash_HashType>[
     NONE,
     SHA256,
   ];

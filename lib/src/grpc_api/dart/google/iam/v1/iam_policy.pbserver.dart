@@ -22,13 +22,13 @@ abstract class IAMPolicyServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'SetIamPolicy':
-        return new SetIamPolicyRequest();
+        return SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new GetIamPolicyRequest();
+        return GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new TestIamPermissionsRequest();
+        return TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -42,7 +42,7 @@ abstract class IAMPolicyServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

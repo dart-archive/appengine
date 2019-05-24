@@ -20,11 +20,11 @@ abstract class LocationsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListLocations':
-        return new ListLocationsRequest();
+        return ListLocationsRequest();
       case 'GetLocation':
-        return new GetLocationRequest();
+        return GetLocationRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -36,7 +36,7 @@ abstract class LocationsServiceBase extends GeneratedService {
       case 'GetLocation':
         return this.getLocation(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

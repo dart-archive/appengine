@@ -17,7 +17,7 @@ import 'notification.pbenum.dart';
 export 'notification.pbenum.dart';
 
 class NotificationChannelDescriptor extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NotificationChannelDescriptor')
+  static final BuilderInfo _i = BuilderInfo('NotificationChannelDescriptor')
     ..aOS(1, 'type')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
@@ -40,15 +40,15 @@ class NotificationChannelDescriptor extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   NotificationChannelDescriptor clone() =>
-      new NotificationChannelDescriptor()..mergeFromMessage(this);
+      NotificationChannelDescriptor()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static NotificationChannelDescriptor create() =>
-      new NotificationChannelDescriptor();
+      NotificationChannelDescriptor();
   static PbList<NotificationChannelDescriptor> createRepeated() =>
-      new PbList<NotificationChannelDescriptor>();
+      PbList<NotificationChannelDescriptor>();
   static NotificationChannelDescriptor getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNotificationChannelDescriptor();
+      _defaultInstance = _ReadonlyNotificationChannelDescriptor();
     return _defaultInstance;
   }
 
@@ -99,11 +99,10 @@ class _ReadonlyNotificationChannelDescriptor
     extends NotificationChannelDescriptor with ReadonlyMessageMixin {}
 
 class NotificationChannel_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('NotificationChannel_LabelsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('NotificationChannel_LabelsEntry')
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
+    ..hasRequiredFields = false;
 
   NotificationChannel_LabelsEntry() : super();
   NotificationChannel_LabelsEntry.fromBuffer(List<int> i,
@@ -113,15 +112,15 @@ class NotificationChannel_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   NotificationChannel_LabelsEntry clone() =>
-      new NotificationChannel_LabelsEntry()..mergeFromMessage(this);
+      NotificationChannel_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static NotificationChannel_LabelsEntry create() =>
-      new NotificationChannel_LabelsEntry();
+      NotificationChannel_LabelsEntry();
   static PbList<NotificationChannel_LabelsEntry> createRepeated() =>
-      new PbList<NotificationChannel_LabelsEntry>();
+      PbList<NotificationChannel_LabelsEntry>();
   static NotificationChannel_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNotificationChannel_LabelsEntry();
+      _defaultInstance = _ReadonlyNotificationChannel_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -153,7 +152,7 @@ class _ReadonlyNotificationChannel_LabelsEntry
 
 class NotificationChannel_UserLabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('NotificationChannel_UserLabelsEntry')
+      BuilderInfo('NotificationChannel_UserLabelsEntry')
         ..aOS(1, 'key')
         ..aOS(2, 'value')
         ..hasRequiredFields = false;
@@ -166,15 +165,15 @@ class NotificationChannel_UserLabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   NotificationChannel_UserLabelsEntry clone() =>
-      new NotificationChannel_UserLabelsEntry()..mergeFromMessage(this);
+      NotificationChannel_UserLabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static NotificationChannel_UserLabelsEntry create() =>
-      new NotificationChannel_UserLabelsEntry();
+      NotificationChannel_UserLabelsEntry();
   static PbList<NotificationChannel_UserLabelsEntry> createRepeated() =>
-      new PbList<NotificationChannel_UserLabelsEntry>();
+      PbList<NotificationChannel_UserLabelsEntry>();
   static NotificationChannel_UserLabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNotificationChannel_UserLabelsEntry();
+      _defaultInstance = _ReadonlyNotificationChannel_UserLabelsEntry();
     return _defaultInstance;
   }
 
@@ -205,7 +204,7 @@ class _ReadonlyNotificationChannel_UserLabelsEntry
     extends NotificationChannel_UserLabelsEntry with ReadonlyMessageMixin {}
 
 class NotificationChannel extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NotificationChannel')
+  static final BuilderInfo _i = BuilderInfo('NotificationChannel')
     ..aOS(1, 'type')
     ..aOS(3, 'displayName')
     ..aOS(4, 'description')
@@ -244,15 +243,14 @@ class NotificationChannel extends GeneratedMessage {
   NotificationChannel.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  NotificationChannel clone() =>
-      new NotificationChannel()..mergeFromMessage(this);
+  NotificationChannel clone() => NotificationChannel()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static NotificationChannel create() => new NotificationChannel();
+  static NotificationChannel create() => NotificationChannel();
   static PbList<NotificationChannel> createRepeated() =>
-      new PbList<NotificationChannel>();
+      PbList<NotificationChannel>();
   static NotificationChannel getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNotificationChannel();
+      _defaultInstance = _ReadonlyNotificationChannel();
     return _defaultInstance;
   }
 

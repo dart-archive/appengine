@@ -13,7 +13,7 @@ import 'cigar.pb.dart';
 import '../../protobuf/struct.pb.dart' as $google$protobuf;
 
 class LinearAlignment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LinearAlignment')
+  static final BuilderInfo _i = BuilderInfo('LinearAlignment')
     ..a<Position>(
         1, 'position', PbFieldType.OM, Position.getDefault, Position.create)
     ..a<int>(2, 'mappingQuality', PbFieldType.O3)
@@ -28,14 +28,12 @@ class LinearAlignment extends GeneratedMessage {
   LinearAlignment.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LinearAlignment clone() => new LinearAlignment()..mergeFromMessage(this);
+  LinearAlignment clone() => LinearAlignment()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LinearAlignment create() => new LinearAlignment();
-  static PbList<LinearAlignment> createRepeated() =>
-      new PbList<LinearAlignment>();
+  static LinearAlignment create() => LinearAlignment();
+  static PbList<LinearAlignment> createRepeated() => PbList<LinearAlignment>();
   static LinearAlignment getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLinearAlignment();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLinearAlignment();
     return _defaultInstance;
   }
 
@@ -67,7 +65,7 @@ class _ReadonlyLinearAlignment extends LinearAlignment
     with ReadonlyMessageMixin {}
 
 class Read_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Read_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('Read_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -84,14 +82,12 @@ class Read_InfoEntry extends GeneratedMessage {
   Read_InfoEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Read_InfoEntry clone() => new Read_InfoEntry()..mergeFromMessage(this);
+  Read_InfoEntry clone() => Read_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Read_InfoEntry create() => new Read_InfoEntry();
-  static PbList<Read_InfoEntry> createRepeated() =>
-      new PbList<Read_InfoEntry>();
+  static Read_InfoEntry create() => Read_InfoEntry();
+  static PbList<Read_InfoEntry> createRepeated() => PbList<Read_InfoEntry>();
   static Read_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRead_InfoEntry();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRead_InfoEntry();
     return _defaultInstance;
   }
 
@@ -121,7 +117,7 @@ class _ReadonlyRead_InfoEntry extends Read_InfoEntry with ReadonlyMessageMixin {
 }
 
 class Read extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Read')
+  static final BuilderInfo _i = BuilderInfo('Read')
     ..aOS(1, 'id')
     ..aOS(2, 'readGroupId')
     ..aOS(3, 'readGroupSetId')
@@ -149,12 +145,12 @@ class Read extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Read.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Read clone() => new Read()..mergeFromMessage(this);
+  Read clone() => Read()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Read create() => new Read();
-  static PbList<Read> createRepeated() => new PbList<Read>();
+  static Read create() => Read();
+  static PbList<Read> createRepeated() => PbList<Read>();
   static Read getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRead();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRead();
     return _defaultInstance;
   }
 

@@ -18,7 +18,7 @@ import 'trace.pbenum.dart';
 export 'trace.pbenum.dart';
 
 class Trace extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Trace')
+  static final BuilderInfo _i = BuilderInfo('Trace')
     ..aOS(1, 'projectId')
     ..aOS(2, 'traceId')
     ..pp<TraceSpan>(
@@ -30,12 +30,12 @@ class Trace extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Trace.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Trace clone() => new Trace()..mergeFromMessage(this);
+  Trace clone() => Trace()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Trace create() => new Trace();
-  static PbList<Trace> createRepeated() => new PbList<Trace>();
+  static Trace create() => Trace();
+  static PbList<Trace> createRepeated() => PbList<Trace>();
   static Trace getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTrace();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTrace();
     return _defaultInstance;
   }
 
@@ -66,7 +66,7 @@ class Trace extends GeneratedMessage {
 class _ReadonlyTrace extends Trace with ReadonlyMessageMixin {}
 
 class Traces extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Traces')
+  static final BuilderInfo _i = BuilderInfo('Traces')
     ..pp<Trace>(1, 'traces', PbFieldType.PM, Trace.$checkItem, Trace.create)
     ..hasRequiredFields = false;
 
@@ -76,12 +76,12 @@ class Traces extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Traces.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Traces clone() => new Traces()..mergeFromMessage(this);
+  Traces clone() => Traces()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Traces create() => new Traces();
-  static PbList<Traces> createRepeated() => new PbList<Traces>();
+  static Traces create() => Traces();
+  static PbList<Traces> createRepeated() => PbList<Traces>();
   static Traces getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTraces();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTraces();
     return _defaultInstance;
   }
 
@@ -96,7 +96,7 @@ class Traces extends GeneratedMessage {
 class _ReadonlyTraces extends Traces with ReadonlyMessageMixin {}
 
 class TraceSpan_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TraceSpan_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('TraceSpan_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -109,14 +109,14 @@ class TraceSpan_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TraceSpan_LabelsEntry clone() =>
-      new TraceSpan_LabelsEntry()..mergeFromMessage(this);
+      TraceSpan_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TraceSpan_LabelsEntry create() => new TraceSpan_LabelsEntry();
+  static TraceSpan_LabelsEntry create() => TraceSpan_LabelsEntry();
   static PbList<TraceSpan_LabelsEntry> createRepeated() =>
-      new PbList<TraceSpan_LabelsEntry>();
+      PbList<TraceSpan_LabelsEntry>();
   static TraceSpan_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTraceSpan_LabelsEntry();
+      _defaultInstance = _ReadonlyTraceSpan_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -147,7 +147,7 @@ class _ReadonlyTraceSpan_LabelsEntry extends TraceSpan_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class TraceSpan extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TraceSpan')
+  static final BuilderInfo _i = BuilderInfo('TraceSpan')
     ..a<Int64>(1, 'spanId', PbFieldType.OF6, Int64.ZERO)
     ..e<TraceSpan_SpanKind>(
         2,
@@ -180,12 +180,12 @@ class TraceSpan extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TraceSpan.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TraceSpan clone() => new TraceSpan()..mergeFromMessage(this);
+  TraceSpan clone() => TraceSpan()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TraceSpan create() => new TraceSpan();
-  static PbList<TraceSpan> createRepeated() => new PbList<TraceSpan>();
+  static TraceSpan create() => TraceSpan();
+  static PbList<TraceSpan> createRepeated() => PbList<TraceSpan>();
   static TraceSpan getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTraceSpan();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTraceSpan();
     return _defaultInstance;
   }
 
@@ -248,7 +248,7 @@ class TraceSpan extends GeneratedMessage {
 class _ReadonlyTraceSpan extends TraceSpan with ReadonlyMessageMixin {}
 
 class ListTracesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTracesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTracesRequest')
     ..aOS(1, 'projectId')
     ..e<ListTracesRequest_ViewType>(
         2,
@@ -282,14 +282,14 @@ class ListTracesRequest extends GeneratedMessage {
   ListTracesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTracesRequest clone() => new ListTracesRequest()..mergeFromMessage(this);
+  ListTracesRequest clone() => ListTracesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTracesRequest create() => new ListTracesRequest();
+  static ListTracesRequest create() => ListTracesRequest();
   static PbList<ListTracesRequest> createRepeated() =>
-      new PbList<ListTracesRequest>();
+      PbList<ListTracesRequest>();
   static ListTracesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTracesRequest();
+      _defaultInstance = _ReadonlyListTracesRequest();
     return _defaultInstance;
   }
 
@@ -367,7 +367,7 @@ class _ReadonlyListTracesRequest extends ListTracesRequest
     with ReadonlyMessageMixin {}
 
 class ListTracesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTracesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTracesResponse')
     ..pp<Trace>(1, 'traces', PbFieldType.PM, Trace.$checkItem, Trace.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -379,15 +379,14 @@ class ListTracesResponse extends GeneratedMessage {
   ListTracesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTracesResponse clone() =>
-      new ListTracesResponse()..mergeFromMessage(this);
+  ListTracesResponse clone() => ListTracesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTracesResponse create() => new ListTracesResponse();
+  static ListTracesResponse create() => ListTracesResponse();
   static PbList<ListTracesResponse> createRepeated() =>
-      new PbList<ListTracesResponse>();
+      PbList<ListTracesResponse>();
   static ListTracesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTracesResponse();
+      _defaultInstance = _ReadonlyListTracesResponse();
     return _defaultInstance;
   }
 
@@ -411,7 +410,7 @@ class _ReadonlyListTracesResponse extends ListTracesResponse
     with ReadonlyMessageMixin {}
 
 class GetTraceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTraceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTraceRequest')
     ..aOS(1, 'projectId')
     ..aOS(2, 'traceId')
     ..hasRequiredFields = false;
@@ -423,14 +422,12 @@ class GetTraceRequest extends GeneratedMessage {
   GetTraceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTraceRequest clone() => new GetTraceRequest()..mergeFromMessage(this);
+  GetTraceRequest clone() => GetTraceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTraceRequest create() => new GetTraceRequest();
-  static PbList<GetTraceRequest> createRepeated() =>
-      new PbList<GetTraceRequest>();
+  static GetTraceRequest create() => GetTraceRequest();
+  static PbList<GetTraceRequest> createRepeated() => PbList<GetTraceRequest>();
   static GetTraceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTraceRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetTraceRequest();
     return _defaultInstance;
   }
 
@@ -460,7 +457,7 @@ class _ReadonlyGetTraceRequest extends GetTraceRequest
     with ReadonlyMessageMixin {}
 
 class PatchTracesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PatchTracesRequest')
+  static final BuilderInfo _i = BuilderInfo('PatchTracesRequest')
     ..aOS(1, 'projectId')
     ..a<Traces>(2, 'traces', PbFieldType.OM, Traces.getDefault, Traces.create)
     ..hasRequiredFields = false;
@@ -472,15 +469,14 @@ class PatchTracesRequest extends GeneratedMessage {
   PatchTracesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PatchTracesRequest clone() =>
-      new PatchTracesRequest()..mergeFromMessage(this);
+  PatchTracesRequest clone() => PatchTracesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PatchTracesRequest create() => new PatchTracesRequest();
+  static PatchTracesRequest create() => PatchTracesRequest();
   static PbList<PatchTracesRequest> createRepeated() =>
-      new PbList<PatchTracesRequest>();
+      PbList<PatchTracesRequest>();
   static PatchTracesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPatchTracesRequest();
+      _defaultInstance = _ReadonlyPatchTracesRequest();
     return _defaultInstance;
   }
 
@@ -515,20 +511,20 @@ class TraceServiceApi {
 
   Future<ListTracesResponse> listTraces(
       ClientContext ctx, ListTracesRequest request) {
-    var emptyResponse = new ListTracesResponse();
+    var emptyResponse = ListTracesResponse();
     return _client.invoke<ListTracesResponse>(
         ctx, 'TraceService', 'ListTraces', request, emptyResponse);
   }
 
   Future<Trace> getTrace(ClientContext ctx, GetTraceRequest request) {
-    var emptyResponse = new Trace();
+    var emptyResponse = Trace();
     return _client.invoke<Trace>(
         ctx, 'TraceService', 'GetTrace', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> patchTraces(
       ClientContext ctx, PatchTracesRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'TraceService', 'PatchTraces', request, emptyResponse);
   }

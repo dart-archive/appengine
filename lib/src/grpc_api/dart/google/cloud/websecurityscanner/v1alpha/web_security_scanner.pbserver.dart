@@ -43,33 +43,33 @@ abstract class WebSecurityScannerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateScanConfig':
-        return new CreateScanConfigRequest();
+        return CreateScanConfigRequest();
       case 'DeleteScanConfig':
-        return new DeleteScanConfigRequest();
+        return DeleteScanConfigRequest();
       case 'GetScanConfig':
-        return new GetScanConfigRequest();
+        return GetScanConfigRequest();
       case 'ListScanConfigs':
-        return new ListScanConfigsRequest();
+        return ListScanConfigsRequest();
       case 'UpdateScanConfig':
-        return new UpdateScanConfigRequest();
+        return UpdateScanConfigRequest();
       case 'StartScanRun':
-        return new StartScanRunRequest();
+        return StartScanRunRequest();
       case 'GetScanRun':
-        return new GetScanRunRequest();
+        return GetScanRunRequest();
       case 'ListScanRuns':
-        return new ListScanRunsRequest();
+        return ListScanRunsRequest();
       case 'StopScanRun':
-        return new StopScanRunRequest();
+        return StopScanRunRequest();
       case 'ListCrawledUrls':
-        return new ListCrawledUrlsRequest();
+        return ListCrawledUrlsRequest();
       case 'GetFinding':
-        return new GetFindingRequest();
+        return GetFindingRequest();
       case 'ListFindings':
-        return new ListFindingsRequest();
+        return ListFindingsRequest();
       case 'ListFindingTypeStats':
-        return new ListFindingTypeStatsRequest();
+        return ListFindingTypeStatsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -103,7 +103,7 @@ abstract class WebSecurityScannerServiceBase extends GeneratedService {
       case 'ListFindingTypeStats':
         return this.listFindingTypeStats(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

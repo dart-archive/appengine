@@ -8,11 +8,11 @@ import '../../protobuf/field_mask.pbjson.dart' as $google$protobuf;
 import '../../protobuf/empty.pbjson.dart' as $google$protobuf;
 import '../../protobuf/timestamp.pbjson.dart' as $google$protobuf;
 
-const Topic$json = const {
+const Topic$json = {
   '1': 'Topic',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'labels',
       '3': 2,
       '4': 3,
@@ -21,23 +21,23 @@ const Topic$json = const {
       '10': 'labels'
     },
   ],
-  '3': const [Topic_LabelsEntry$json],
+  '3': [Topic_LabelsEntry$json],
 };
 
-const Topic_LabelsEntry$json = const {
+const Topic_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const PubsubMessage$json = const {
+const PubsubMessage$json = {
   '1': 'PubsubMessage',
-  '2': const [
-    const {'1': 'data', '3': 1, '4': 1, '5': 12, '10': 'data'},
-    const {
+  '2': [
+    {'1': 'data', '3': 1, '4': 1, '5': 12, '10': 'data'},
+    {
       '1': 'attributes',
       '3': 2,
       '4': 3,
@@ -45,8 +45,8 @@ const PubsubMessage$json = const {
       '6': '.google.pubsub.v1.PubsubMessage.AttributesEntry',
       '10': 'attributes'
     },
-    const {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
-    const {
+    {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
+    {
       '1': 'publish_time',
       '3': 4,
       '4': 1,
@@ -55,29 +55,29 @@ const PubsubMessage$json = const {
       '10': 'publishTime'
     },
   ],
-  '3': const [PubsubMessage_AttributesEntry$json],
+  '3': [PubsubMessage_AttributesEntry$json],
 };
 
-const PubsubMessage_AttributesEntry$json = const {
+const PubsubMessage_AttributesEntry$json = {
   '1': 'AttributesEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const GetTopicRequest$json = const {
+const GetTopicRequest$json = {
   '1': 'GetTopicRequest',
-  '2': const [
-    const {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
+  '2': [
+    {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
   ],
 };
 
-const UpdateTopicRequest$json = const {
+const UpdateTopicRequest$json = {
   '1': 'UpdateTopicRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'topic',
       '3': 1,
       '4': 1,
@@ -85,7 +85,7 @@ const UpdateTopicRequest$json = const {
       '6': '.google.pubsub.v1.Topic',
       '10': 'topic'
     },
-    const {
+    {
       '1': 'update_mask',
       '3': 2,
       '4': 1,
@@ -96,11 +96,11 @@ const UpdateTopicRequest$json = const {
   ],
 };
 
-const PublishRequest$json = const {
+const PublishRequest$json = {
   '1': 'PublishRequest',
-  '2': const [
-    const {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
-    const {
+  '2': [
+    {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
+    {
       '1': 'messages',
       '3': 2,
       '4': 3,
@@ -111,26 +111,26 @@ const PublishRequest$json = const {
   ],
 };
 
-const PublishResponse$json = const {
+const PublishResponse$json = {
   '1': 'PublishResponse',
-  '2': const [
-    const {'1': 'message_ids', '3': 1, '4': 3, '5': 9, '10': 'messageIds'},
+  '2': [
+    {'1': 'message_ids', '3': 1, '4': 3, '5': 9, '10': 'messageIds'},
   ],
 };
 
-const ListTopicsRequest$json = const {
+const ListTopicsRequest$json = {
   '1': 'ListTopicsRequest',
-  '2': const [
-    const {'1': 'project', '3': 1, '4': 1, '5': 9, '10': 'project'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'project', '3': 1, '4': 1, '5': 9, '10': 'project'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListTopicsResponse$json = const {
+const ListTopicsResponse$json = {
   '1': 'ListTopicsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'topics',
       '3': 1,
       '4': 3,
@@ -138,52 +138,40 @@ const ListTopicsResponse$json = const {
       '6': '.google.pubsub.v1.Topic',
       '10': 'topics'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const ListTopicSubscriptionsRequest$json = const {
+const ListTopicSubscriptionsRequest$json = {
   '1': 'ListTopicSubscriptionsRequest',
-  '2': const [
-    const {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListTopicSubscriptionsResponse$json = const {
+const ListTopicSubscriptionsResponse$json = {
   '1': 'ListTopicSubscriptionsResponse',
-  '2': const [
-    const {'1': 'subscriptions', '3': 1, '4': 3, '5': 9, '10': 'subscriptions'},
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+  '2': [
+    {'1': 'subscriptions', '3': 1, '4': 3, '5': 9, '10': 'subscriptions'},
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const DeleteTopicRequest$json = const {
+const DeleteTopicRequest$json = {
   '1': 'DeleteTopicRequest',
-  '2': const [
-    const {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
+  '2': [
+    {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
   ],
 };
 
-const Subscription$json = const {
+const Subscription$json = {
   '1': 'Subscription',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'topic', '3': 2, '4': 1, '5': 9, '10': 'topic'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'topic', '3': 2, '4': 1, '5': 9, '10': 'topic'},
+    {
       '1': 'push_config',
       '3': 4,
       '4': 1,
@@ -191,21 +179,21 @@ const Subscription$json = const {
       '6': '.google.pubsub.v1.PushConfig',
       '10': 'pushConfig'
     },
-    const {
+    {
       '1': 'ack_deadline_seconds',
       '3': 5,
       '4': 1,
       '5': 5,
       '10': 'ackDeadlineSeconds'
     },
-    const {
+    {
       '1': 'retain_acked_messages',
       '3': 7,
       '4': 1,
       '5': 8,
       '10': 'retainAckedMessages'
     },
-    const {
+    {
       '1': 'message_retention_duration',
       '3': 8,
       '4': 1,
@@ -213,7 +201,7 @@ const Subscription$json = const {
       '6': '.google.protobuf.Duration',
       '10': 'messageRetentionDuration'
     },
-    const {
+    {
       '1': 'labels',
       '3': 9,
       '4': 3,
@@ -222,23 +210,23 @@ const Subscription$json = const {
       '10': 'labels'
     },
   ],
-  '3': const [Subscription_LabelsEntry$json],
+  '3': [Subscription_LabelsEntry$json],
 };
 
-const Subscription_LabelsEntry$json = const {
+const Subscription_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const PushConfig$json = const {
+const PushConfig$json = {
   '1': 'PushConfig',
-  '2': const [
-    const {'1': 'push_endpoint', '3': 1, '4': 1, '5': 9, '10': 'pushEndpoint'},
-    const {
+  '2': [
+    {'1': 'push_endpoint', '3': 1, '4': 1, '5': 9, '10': 'pushEndpoint'},
+    {
       '1': 'attributes',
       '3': 2,
       '4': 3,
@@ -247,23 +235,23 @@ const PushConfig$json = const {
       '10': 'attributes'
     },
   ],
-  '3': const [PushConfig_AttributesEntry$json],
+  '3': [PushConfig_AttributesEntry$json],
 };
 
-const PushConfig_AttributesEntry$json = const {
+const PushConfig_AttributesEntry$json = {
   '1': 'AttributesEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const ReceivedMessage$json = const {
+const ReceivedMessage$json = {
   '1': 'ReceivedMessage',
-  '2': const [
-    const {'1': 'ack_id', '3': 1, '4': 1, '5': 9, '10': 'ackId'},
-    const {
+  '2': [
+    {'1': 'ack_id', '3': 1, '4': 1, '5': 9, '10': 'ackId'},
+    {
       '1': 'message',
       '3': 2,
       '4': 1,
@@ -274,17 +262,17 @@ const ReceivedMessage$json = const {
   ],
 };
 
-const GetSubscriptionRequest$json = const {
+const GetSubscriptionRequest$json = {
   '1': 'GetSubscriptionRequest',
-  '2': const [
-    const {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
+  '2': [
+    {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
   ],
 };
 
-const UpdateSubscriptionRequest$json = const {
+const UpdateSubscriptionRequest$json = {
   '1': 'UpdateSubscriptionRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'subscription',
       '3': 1,
       '4': 1,
@@ -292,7 +280,7 @@ const UpdateSubscriptionRequest$json = const {
       '6': '.google.pubsub.v1.Subscription',
       '10': 'subscription'
     },
-    const {
+    {
       '1': 'update_mask',
       '3': 2,
       '4': 1,
@@ -303,19 +291,19 @@ const UpdateSubscriptionRequest$json = const {
   ],
 };
 
-const ListSubscriptionsRequest$json = const {
+const ListSubscriptionsRequest$json = {
   '1': 'ListSubscriptionsRequest',
-  '2': const [
-    const {'1': 'project', '3': 1, '4': 1, '5': 9, '10': 'project'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'project', '3': 1, '4': 1, '5': 9, '10': 'project'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListSubscriptionsResponse$json = const {
+const ListSubscriptionsResponse$json = {
   '1': 'ListSubscriptionsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'subscriptions',
       '3': 1,
       '4': 3,
@@ -323,28 +311,22 @@ const ListSubscriptionsResponse$json = const {
       '6': '.google.pubsub.v1.Subscription',
       '10': 'subscriptions'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const DeleteSubscriptionRequest$json = const {
+const DeleteSubscriptionRequest$json = {
   '1': 'DeleteSubscriptionRequest',
-  '2': const [
-    const {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
+  '2': [
+    {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
   ],
 };
 
-const ModifyPushConfigRequest$json = const {
+const ModifyPushConfigRequest$json = {
   '1': 'ModifyPushConfigRequest',
-  '2': const [
-    const {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
-    const {
+  '2': [
+    {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
+    {
       '1': 'push_config',
       '3': 2,
       '4': 1,
@@ -355,25 +337,25 @@ const ModifyPushConfigRequest$json = const {
   ],
 };
 
-const PullRequest$json = const {
+const PullRequest$json = {
   '1': 'PullRequest',
-  '2': const [
-    const {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
-    const {
+  '2': [
+    {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
+    {
       '1': 'return_immediately',
       '3': 2,
       '4': 1,
       '5': 8,
       '10': 'returnImmediately'
     },
-    const {'1': 'max_messages', '3': 3, '4': 1, '5': 5, '10': 'maxMessages'},
+    {'1': 'max_messages', '3': 3, '4': 1, '5': 5, '10': 'maxMessages'},
   ],
 };
 
-const PullResponse$json = const {
+const PullResponse$json = {
   '1': 'PullResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'received_messages',
       '3': 1,
       '4': 3,
@@ -384,12 +366,12 @@ const PullResponse$json = const {
   ],
 };
 
-const ModifyAckDeadlineRequest$json = const {
+const ModifyAckDeadlineRequest$json = {
   '1': 'ModifyAckDeadlineRequest',
-  '2': const [
-    const {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
-    const {'1': 'ack_ids', '3': 4, '4': 3, '5': 9, '10': 'ackIds'},
-    const {
+  '2': [
+    {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
+    {'1': 'ack_ids', '3': 4, '4': 3, '5': 9, '10': 'ackIds'},
+    {
       '1': 'ack_deadline_seconds',
       '3': 3,
       '4': 1,
@@ -399,34 +381,34 @@ const ModifyAckDeadlineRequest$json = const {
   ],
 };
 
-const AcknowledgeRequest$json = const {
+const AcknowledgeRequest$json = {
   '1': 'AcknowledgeRequest',
-  '2': const [
-    const {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
-    const {'1': 'ack_ids', '3': 2, '4': 3, '5': 9, '10': 'ackIds'},
+  '2': [
+    {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
+    {'1': 'ack_ids', '3': 2, '4': 3, '5': 9, '10': 'ackIds'},
   ],
 };
 
-const StreamingPullRequest$json = const {
+const StreamingPullRequest$json = {
   '1': 'StreamingPullRequest',
-  '2': const [
-    const {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
-    const {'1': 'ack_ids', '3': 2, '4': 3, '5': 9, '10': 'ackIds'},
-    const {
+  '2': [
+    {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
+    {'1': 'ack_ids', '3': 2, '4': 3, '5': 9, '10': 'ackIds'},
+    {
       '1': 'modify_deadline_seconds',
       '3': 3,
       '4': 3,
       '5': 5,
       '10': 'modifyDeadlineSeconds'
     },
-    const {
+    {
       '1': 'modify_deadline_ack_ids',
       '3': 4,
       '4': 3,
       '5': 9,
       '10': 'modifyDeadlineAckIds'
     },
-    const {
+    {
       '1': 'stream_ack_deadline_seconds',
       '3': 5,
       '4': 1,
@@ -436,10 +418,10 @@ const StreamingPullRequest$json = const {
   ],
 };
 
-const StreamingPullResponse$json = const {
+const StreamingPullResponse$json = {
   '1': 'StreamingPullResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'received_messages',
       '3': 1,
       '4': 3,
@@ -450,18 +432,18 @@ const StreamingPullResponse$json = const {
   ],
 };
 
-const CreateSnapshotRequest$json = const {
+const CreateSnapshotRequest$json = {
   '1': 'CreateSnapshotRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'subscription', '3': 2, '4': 1, '5': 9, '10': 'subscription'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'subscription', '3': 2, '4': 1, '5': 9, '10': 'subscription'},
   ],
 };
 
-const UpdateSnapshotRequest$json = const {
+const UpdateSnapshotRequest$json = {
   '1': 'UpdateSnapshotRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'snapshot',
       '3': 1,
       '4': 1,
@@ -469,7 +451,7 @@ const UpdateSnapshotRequest$json = const {
       '6': '.google.pubsub.v1.Snapshot',
       '10': 'snapshot'
     },
-    const {
+    {
       '1': 'update_mask',
       '3': 2,
       '4': 1,
@@ -480,12 +462,12 @@ const UpdateSnapshotRequest$json = const {
   ],
 };
 
-const Snapshot$json = const {
+const Snapshot$json = {
   '1': 'Snapshot',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'topic', '3': 2, '4': 1, '5': 9, '10': 'topic'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'topic', '3': 2, '4': 1, '5': 9, '10': 'topic'},
+    {
       '1': 'expire_time',
       '3': 3,
       '4': 1,
@@ -493,7 +475,7 @@ const Snapshot$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'expireTime'
     },
-    const {
+    {
       '1': 'labels',
       '3': 4,
       '4': 3,
@@ -502,31 +484,31 @@ const Snapshot$json = const {
       '10': 'labels'
     },
   ],
-  '3': const [Snapshot_LabelsEntry$json],
+  '3': [Snapshot_LabelsEntry$json],
 };
 
-const Snapshot_LabelsEntry$json = const {
+const Snapshot_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const ListSnapshotsRequest$json = const {
+const ListSnapshotsRequest$json = {
   '1': 'ListSnapshotsRequest',
-  '2': const [
-    const {'1': 'project', '3': 1, '4': 1, '5': 9, '10': 'project'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'project', '3': 1, '4': 1, '5': 9, '10': 'project'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListSnapshotsResponse$json = const {
+const ListSnapshotsResponse$json = {
   '1': 'ListSnapshotsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'snapshots',
       '3': 1,
       '4': 3,
@@ -534,28 +516,22 @@ const ListSnapshotsResponse$json = const {
       '6': '.google.pubsub.v1.Snapshot',
       '10': 'snapshots'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const DeleteSnapshotRequest$json = const {
+const DeleteSnapshotRequest$json = {
   '1': 'DeleteSnapshotRequest',
-  '2': const [
-    const {'1': 'snapshot', '3': 1, '4': 1, '5': 9, '10': 'snapshot'},
+  '2': [
+    {'1': 'snapshot', '3': 1, '4': 1, '5': 9, '10': 'snapshot'},
   ],
 };
 
-const SeekRequest$json = const {
+const SeekRequest$json = {
   '1': 'SeekRequest',
-  '2': const [
-    const {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
-    const {
+  '2': [
+    {'1': 'subscription', '3': 1, '4': 1, '5': 9, '10': 'subscription'},
+    {
       '1': 'time',
       '3': 2,
       '4': 1,
@@ -564,115 +540,115 @@ const SeekRequest$json = const {
       '9': 0,
       '10': 'time'
     },
-    const {'1': 'snapshot', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'snapshot'},
+    {'1': 'snapshot', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'snapshot'},
   ],
-  '8': const [
-    const {'1': 'target'},
+  '8': [
+    {'1': 'target'},
   ],
 };
 
-const SeekResponse$json = const {
+const SeekResponse$json = {
   '1': 'SeekResponse',
 };
 
-const Subscriber$json = const {
+const Subscriber$json = {
   '1': 'Subscriber',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateSubscription',
       '2': '.google.pubsub.v1.Subscription',
       '3': '.google.pubsub.v1.Subscription',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetSubscription',
       '2': '.google.pubsub.v1.GetSubscriptionRequest',
       '3': '.google.pubsub.v1.Subscription',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateSubscription',
       '2': '.google.pubsub.v1.UpdateSubscriptionRequest',
       '3': '.google.pubsub.v1.Subscription',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListSubscriptions',
       '2': '.google.pubsub.v1.ListSubscriptionsRequest',
       '3': '.google.pubsub.v1.ListSubscriptionsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteSubscription',
       '2': '.google.pubsub.v1.DeleteSubscriptionRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ModifyAckDeadline',
       '2': '.google.pubsub.v1.ModifyAckDeadlineRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'Acknowledge',
       '2': '.google.pubsub.v1.AcknowledgeRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'Pull',
       '2': '.google.pubsub.v1.PullRequest',
       '3': '.google.pubsub.v1.PullResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'StreamingPull',
       '2': '.google.pubsub.v1.StreamingPullRequest',
       '3': '.google.pubsub.v1.StreamingPullResponse',
       '5': true,
       '6': true
     },
-    const {
+    {
       '1': 'ModifyPushConfig',
       '2': '.google.pubsub.v1.ModifyPushConfigRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListSnapshots',
       '2': '.google.pubsub.v1.ListSnapshotsRequest',
       '3': '.google.pubsub.v1.ListSnapshotsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateSnapshot',
       '2': '.google.pubsub.v1.CreateSnapshotRequest',
       '3': '.google.pubsub.v1.Snapshot',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateSnapshot',
       '2': '.google.pubsub.v1.UpdateSnapshotRequest',
       '3': '.google.pubsub.v1.Snapshot',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteSnapshot',
       '2': '.google.pubsub.v1.DeleteSnapshotRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'Seek',
       '2': '.google.pubsub.v1.SeekRequest',
       '3': '.google.pubsub.v1.SeekResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const Subscriber$messageJson = const {
+const Subscriber$messageJson = {
   '.google.pubsub.v1.Subscription': Subscription$json,
   '.google.pubsub.v1.PushConfig': PushConfig$json,
   '.google.pubsub.v1.PushConfig.AttributesEntry':
@@ -709,55 +685,55 @@ const Subscriber$messageJson = const {
   '.google.pubsub.v1.SeekResponse': SeekResponse$json,
 };
 
-const Publisher$json = const {
+const Publisher$json = {
   '1': 'Publisher',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateTopic',
       '2': '.google.pubsub.v1.Topic',
       '3': '.google.pubsub.v1.Topic',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateTopic',
       '2': '.google.pubsub.v1.UpdateTopicRequest',
       '3': '.google.pubsub.v1.Topic',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'Publish',
       '2': '.google.pubsub.v1.PublishRequest',
       '3': '.google.pubsub.v1.PublishResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetTopic',
       '2': '.google.pubsub.v1.GetTopicRequest',
       '3': '.google.pubsub.v1.Topic',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListTopics',
       '2': '.google.pubsub.v1.ListTopicsRequest',
       '3': '.google.pubsub.v1.ListTopicsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListTopicSubscriptions',
       '2': '.google.pubsub.v1.ListTopicSubscriptionsRequest',
       '3': '.google.pubsub.v1.ListTopicSubscriptionsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteTopic',
       '2': '.google.pubsub.v1.DeleteTopicRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const Publisher$messageJson = const {
+const Publisher$messageJson = {
   '.google.pubsub.v1.Topic': Topic$json,
   '.google.pubsub.v1.Topic.LabelsEntry': Topic_LabelsEntry$json,
   '.google.pubsub.v1.UpdateTopicRequest': UpdateTopicRequest$json,

@@ -32,21 +32,21 @@ abstract class SourceRepoServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListRepos':
-        return new ListReposRequest();
+        return ListReposRequest();
       case 'GetRepo':
-        return new GetRepoRequest();
+        return GetRepoRequest();
       case 'CreateRepo':
-        return new CreateRepoRequest();
+        return CreateRepoRequest();
       case 'DeleteRepo':
-        return new DeleteRepoRequest();
+        return DeleteRepoRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -68,7 +68,7 @@ abstract class SourceRepoServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

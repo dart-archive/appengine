@@ -29,19 +29,19 @@ abstract class ContextsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListContexts':
-        return new ListContextsRequest();
+        return ListContextsRequest();
       case 'GetContext':
-        return new GetContextRequest();
+        return GetContextRequest();
       case 'CreateContext':
-        return new CreateContextRequest();
+        return CreateContextRequest();
       case 'UpdateContext':
-        return new UpdateContextRequest();
+        return UpdateContextRequest();
       case 'DeleteContext':
-        return new DeleteContextRequest();
+        return DeleteContextRequest();
       case 'DeleteAllContexts':
-        return new DeleteAllContextsRequest();
+        return DeleteAllContextsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -61,7 +61,7 @@ abstract class ContextsServiceBase extends GeneratedService {
       case 'DeleteAllContexts':
         return this.deleteAllContexts(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

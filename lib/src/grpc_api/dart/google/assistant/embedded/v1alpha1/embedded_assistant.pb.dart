@@ -16,7 +16,7 @@ import 'embedded_assistant.pbenum.dart';
 export 'embedded_assistant.pbenum.dart';
 
 class ConverseConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConverseConfig')
+  static final BuilderInfo _i = BuilderInfo('ConverseConfig')
     ..a<AudioInConfig>(1, 'audioInConfig', PbFieldType.OM,
         AudioInConfig.getDefault, AudioInConfig.create)
     ..a<AudioOutConfig>(2, 'audioOutConfig', PbFieldType.OM,
@@ -32,14 +32,12 @@ class ConverseConfig extends GeneratedMessage {
   ConverseConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConverseConfig clone() => new ConverseConfig()..mergeFromMessage(this);
+  ConverseConfig clone() => ConverseConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConverseConfig create() => new ConverseConfig();
-  static PbList<ConverseConfig> createRepeated() =>
-      new PbList<ConverseConfig>();
+  static ConverseConfig create() => ConverseConfig();
+  static PbList<ConverseConfig> createRepeated() => PbList<ConverseConfig>();
   static ConverseConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyConverseConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConverseConfig();
     return _defaultInstance;
   }
 
@@ -77,7 +75,7 @@ class _ReadonlyConverseConfig extends ConverseConfig with ReadonlyMessageMixin {
 }
 
 class AudioInConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioInConfig')
+  static final BuilderInfo _i = BuilderInfo('AudioInConfig')
     ..e<AudioInConfig_Encoding>(
         1,
         'encoding',
@@ -95,13 +93,12 @@ class AudioInConfig extends GeneratedMessage {
   AudioInConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioInConfig clone() => new AudioInConfig()..mergeFromMessage(this);
+  AudioInConfig clone() => AudioInConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AudioInConfig create() => new AudioInConfig();
-  static PbList<AudioInConfig> createRepeated() => new PbList<AudioInConfig>();
+  static AudioInConfig create() => AudioInConfig();
+  static PbList<AudioInConfig> createRepeated() => PbList<AudioInConfig>();
   static AudioInConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAudioInConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAudioInConfig();
     return _defaultInstance;
   }
 
@@ -130,7 +127,7 @@ class AudioInConfig extends GeneratedMessage {
 class _ReadonlyAudioInConfig extends AudioInConfig with ReadonlyMessageMixin {}
 
 class AudioOutConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioOutConfig')
+  static final BuilderInfo _i = BuilderInfo('AudioOutConfig')
     ..e<AudioOutConfig_Encoding>(
         1,
         'encoding',
@@ -149,14 +146,12 @@ class AudioOutConfig extends GeneratedMessage {
   AudioOutConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioOutConfig clone() => new AudioOutConfig()..mergeFromMessage(this);
+  AudioOutConfig clone() => AudioOutConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AudioOutConfig create() => new AudioOutConfig();
-  static PbList<AudioOutConfig> createRepeated() =>
-      new PbList<AudioOutConfig>();
+  static AudioOutConfig create() => AudioOutConfig();
+  static PbList<AudioOutConfig> createRepeated() => PbList<AudioOutConfig>();
   static AudioOutConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAudioOutConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAudioOutConfig();
     return _defaultInstance;
   }
 
@@ -194,7 +189,7 @@ class _ReadonlyAudioOutConfig extends AudioOutConfig with ReadonlyMessageMixin {
 }
 
 class ConverseState extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConverseState')
+  static final BuilderInfo _i = BuilderInfo('ConverseState')
     ..a<List<int>>(1, 'conversationState', PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -205,13 +200,12 @@ class ConverseState extends GeneratedMessage {
   ConverseState.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConverseState clone() => new ConverseState()..mergeFromMessage(this);
+  ConverseState clone() => ConverseState()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConverseState create() => new ConverseState();
-  static PbList<ConverseState> createRepeated() => new PbList<ConverseState>();
+  static ConverseState create() => ConverseState();
+  static PbList<ConverseState> createRepeated() => PbList<ConverseState>();
   static ConverseState getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyConverseState();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConverseState();
     return _defaultInstance;
   }
 
@@ -232,7 +226,7 @@ class ConverseState extends GeneratedMessage {
 class _ReadonlyConverseState extends ConverseState with ReadonlyMessageMixin {}
 
 class AudioOut extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioOut')
+  static final BuilderInfo _i = BuilderInfo('AudioOut')
     ..a<List<int>>(1, 'audioData', PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -242,12 +236,12 @@ class AudioOut extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AudioOut.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioOut clone() => new AudioOut()..mergeFromMessage(this);
+  AudioOut clone() => AudioOut()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AudioOut create() => new AudioOut();
-  static PbList<AudioOut> createRepeated() => new PbList<AudioOut>();
+  static AudioOut create() => AudioOut();
+  static PbList<AudioOut> createRepeated() => PbList<AudioOut>();
   static AudioOut getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAudioOut();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAudioOut();
     return _defaultInstance;
   }
 
@@ -268,7 +262,7 @@ class AudioOut extends GeneratedMessage {
 class _ReadonlyAudioOut extends AudioOut with ReadonlyMessageMixin {}
 
 class ConverseResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConverseResult')
+  static final BuilderInfo _i = BuilderInfo('ConverseResult')
     ..aOS(1, 'spokenRequestText')
     ..aOS(2, 'spokenResponseText')
     ..a<List<int>>(3, 'conversationState', PbFieldType.OY)
@@ -289,14 +283,12 @@ class ConverseResult extends GeneratedMessage {
   ConverseResult.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConverseResult clone() => new ConverseResult()..mergeFromMessage(this);
+  ConverseResult clone() => ConverseResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConverseResult create() => new ConverseResult();
-  static PbList<ConverseResult> createRepeated() =>
-      new PbList<ConverseResult>();
+  static ConverseResult create() => ConverseResult();
+  static PbList<ConverseResult> createRepeated() => PbList<ConverseResult>();
   static ConverseResult getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyConverseResult();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConverseResult();
     return _defaultInstance;
   }
 
@@ -350,7 +342,7 @@ class _ReadonlyConverseResult extends ConverseResult with ReadonlyMessageMixin {
 }
 
 class ConverseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConverseRequest')
+  static final BuilderInfo _i = BuilderInfo('ConverseRequest')
     ..a<ConverseConfig>(1, 'config', PbFieldType.OM, ConverseConfig.getDefault,
         ConverseConfig.create)
     ..a<List<int>>(2, 'audioIn', PbFieldType.OY)
@@ -363,14 +355,12 @@ class ConverseRequest extends GeneratedMessage {
   ConverseRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConverseRequest clone() => new ConverseRequest()..mergeFromMessage(this);
+  ConverseRequest clone() => ConverseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConverseRequest create() => new ConverseRequest();
-  static PbList<ConverseRequest> createRepeated() =>
-      new PbList<ConverseRequest>();
+  static ConverseRequest create() => ConverseRequest();
+  static PbList<ConverseRequest> createRepeated() => PbList<ConverseRequest>();
   static ConverseRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyConverseRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConverseRequest();
     return _defaultInstance;
   }
 
@@ -400,7 +390,7 @@ class _ReadonlyConverseRequest extends ConverseRequest
     with ReadonlyMessageMixin {}
 
 class ConverseResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConverseResponse')
+  static final BuilderInfo _i = BuilderInfo('ConverseResponse')
     ..a<$google$rpc.Status>(1, 'error', PbFieldType.OM,
         $google$rpc.Status.getDefault, $google$rpc.Status.create)
     ..e<ConverseResponse_EventType>(
@@ -423,14 +413,14 @@ class ConverseResponse extends GeneratedMessage {
   ConverseResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConverseResponse clone() => new ConverseResponse()..mergeFromMessage(this);
+  ConverseResponse clone() => ConverseResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConverseResponse create() => new ConverseResponse();
+  static ConverseResponse create() => ConverseResponse();
   static PbList<ConverseResponse> createRepeated() =>
-      new PbList<ConverseResponse>();
+      PbList<ConverseResponse>();
   static ConverseResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyConverseResponse();
+      _defaultInstance = _ReadonlyConverseResponse();
     return _defaultInstance;
   }
 
@@ -481,7 +471,7 @@ class EmbeddedAssistantApi {
 
   Future<ConverseResponse> converse(
       ClientContext ctx, ConverseRequest request) {
-    var emptyResponse = new ConverseResponse();
+    var emptyResponse = ConverseResponse();
     return _client.invoke<ConverseResponse>(
         ctx, 'EmbeddedAssistant', 'Converse', request, emptyResponse);
   }

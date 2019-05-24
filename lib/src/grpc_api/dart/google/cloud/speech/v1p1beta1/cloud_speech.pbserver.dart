@@ -24,13 +24,13 @@ abstract class SpeechServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'Recognize':
-        return new RecognizeRequest();
+        return RecognizeRequest();
       case 'LongRunningRecognize':
-        return new LongRunningRecognizeRequest();
+        return LongRunningRecognizeRequest();
       case 'StreamingRecognize':
-        return new StreamingRecognizeRequest();
+        return StreamingRecognizeRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -44,7 +44,7 @@ abstract class SpeechServiceBase extends GeneratedService {
       case 'StreamingRecognize':
         return this.streamingRecognize(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

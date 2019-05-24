@@ -3,34 +3,34 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const HttpMethod$json = const {
+const HttpMethod$json = {
   '1': 'HttpMethod',
-  '2': const [
-    const {'1': 'HTTP_METHOD_UNSPECIFIED', '2': 0},
-    const {'1': 'POST', '2': 1},
-    const {'1': 'GET', '2': 2},
-    const {'1': 'HEAD', '2': 3},
-    const {'1': 'PUT', '2': 4},
-    const {'1': 'DELETE', '2': 5},
+  '2': [
+    {'1': 'HTTP_METHOD_UNSPECIFIED', '2': 0},
+    {'1': 'POST', '2': 1},
+    {'1': 'GET', '2': 2},
+    {'1': 'HEAD', '2': 3},
+    {'1': 'PUT', '2': 4},
+    {'1': 'DELETE', '2': 5},
   ],
 };
 
-const PullTarget$json = const {
+const PullTarget$json = {
   '1': 'PullTarget',
 };
 
-const PullMessage$json = const {
+const PullMessage$json = {
   '1': 'PullMessage',
-  '2': const [
-    const {'1': 'payload', '3': 1, '4': 1, '5': 12, '10': 'payload'},
-    const {'1': 'tag', '3': 2, '4': 1, '5': 9, '10': 'tag'},
+  '2': [
+    {'1': 'payload', '3': 1, '4': 1, '5': 12, '10': 'payload'},
+    {'1': 'tag', '3': 2, '4': 1, '5': 9, '10': 'tag'},
   ],
 };
 
-const AppEngineHttpTarget$json = const {
+const AppEngineHttpTarget$json = {
   '1': 'AppEngineHttpTarget',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'app_engine_routing_override',
       '3': 1,
       '4': 1,
@@ -41,10 +41,10 @@ const AppEngineHttpTarget$json = const {
   ],
 };
 
-const AppEngineHttpRequest$json = const {
+const AppEngineHttpRequest$json = {
   '1': 'AppEngineHttpRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'http_method',
       '3': 1,
       '4': 1,
@@ -52,7 +52,7 @@ const AppEngineHttpRequest$json = const {
       '6': '.google.cloud.tasks.v2beta2.HttpMethod',
       '10': 'httpMethod'
     },
-    const {
+    {
       '1': 'app_engine_routing',
       '3': 2,
       '4': 1,
@@ -60,8 +60,8 @@ const AppEngineHttpRequest$json = const {
       '6': '.google.cloud.tasks.v2beta2.AppEngineRouting',
       '10': 'appEngineRouting'
     },
-    const {'1': 'relative_url', '3': 3, '4': 1, '5': 9, '10': 'relativeUrl'},
-    const {
+    {'1': 'relative_url', '3': 3, '4': 1, '5': 9, '10': 'relativeUrl'},
+    {
       '1': 'headers',
       '3': 4,
       '4': 3,
@@ -69,26 +69,26 @@ const AppEngineHttpRequest$json = const {
       '6': '.google.cloud.tasks.v2beta2.AppEngineHttpRequest.HeadersEntry',
       '10': 'headers'
     },
-    const {'1': 'payload', '3': 5, '4': 1, '5': 12, '10': 'payload'},
+    {'1': 'payload', '3': 5, '4': 1, '5': 12, '10': 'payload'},
   ],
-  '3': const [AppEngineHttpRequest_HeadersEntry$json],
+  '3': [AppEngineHttpRequest_HeadersEntry$json],
 };
 
-const AppEngineHttpRequest_HeadersEntry$json = const {
+const AppEngineHttpRequest_HeadersEntry$json = {
   '1': 'HeadersEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const AppEngineRouting$json = const {
+const AppEngineRouting$json = {
   '1': 'AppEngineRouting',
-  '2': const [
-    const {'1': 'service', '3': 1, '4': 1, '5': 9, '10': 'service'},
-    const {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
-    const {'1': 'instance', '3': 3, '4': 1, '5': 9, '10': 'instance'},
-    const {'1': 'host', '3': 4, '4': 1, '5': 9, '10': 'host'},
+  '2': [
+    {'1': 'service', '3': 1, '4': 1, '5': 9, '10': 'service'},
+    {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
+    {'1': 'instance', '3': 3, '4': 1, '5': 9, '10': 'instance'},
+    {'1': 'host', '3': 4, '4': 1, '5': 9, '10': 'host'},
   ],
 };

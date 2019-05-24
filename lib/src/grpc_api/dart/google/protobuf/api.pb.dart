@@ -14,7 +14,7 @@ import 'source_context.pb.dart';
 import 'type.pbenum.dart';
 
 class Api extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Api')
+  static final BuilderInfo _i = BuilderInfo('Api')
     ..aOS(1, 'name')
     ..pp<Method>(2, 'methods', PbFieldType.PM, Method.$checkItem, Method.create)
     ..pp<Option>(3, 'options', PbFieldType.PM, Option.$checkItem, Option.create)
@@ -31,12 +31,12 @@ class Api extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Api.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Api clone() => new Api()..mergeFromMessage(this);
+  Api clone() => Api()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Api create() => new Api();
-  static PbList<Api> createRepeated() => new PbList<Api>();
+  static Api create() => Api();
+  static PbList<Api> createRepeated() => PbList<Api>();
   static Api getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyApi();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyApi();
     return _defaultInstance;
   }
 
@@ -87,7 +87,7 @@ class Api extends GeneratedMessage {
 class _ReadonlyApi extends Api with ReadonlyMessageMixin {}
 
 class Method extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Method')
+  static final BuilderInfo _i = BuilderInfo('Method')
     ..aOS(1, 'name')
     ..aOS(2, 'requestTypeUrl')
     ..aOB(3, 'requestStreaming')
@@ -104,12 +104,12 @@ class Method extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Method.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Method clone() => new Method()..mergeFromMessage(this);
+  Method clone() => Method()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Method create() => new Method();
-  static PbList<Method> createRepeated() => new PbList<Method>();
+  static Method create() => Method();
+  static PbList<Method> createRepeated() => PbList<Method>();
   static Method getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMethod();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMethod();
     return _defaultInstance;
   }
 
@@ -172,7 +172,7 @@ class Method extends GeneratedMessage {
 class _ReadonlyMethod extends Method with ReadonlyMessageMixin {}
 
 class Mixin extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mixin')
+  static final BuilderInfo _i = BuilderInfo('Mixin')
     ..aOS(1, 'name')
     ..aOS(2, 'root')
     ..hasRequiredFields = false;
@@ -182,12 +182,12 @@ class Mixin extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Mixin.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Mixin clone() => new Mixin()..mergeFromMessage(this);
+  Mixin clone() => Mixin()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mixin create() => new Mixin();
-  static PbList<Mixin> createRepeated() => new PbList<Mixin>();
+  static Mixin create() => Mixin();
+  static PbList<Mixin> createRepeated() => PbList<Mixin>();
   static Mixin getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMixin();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMixin();
     return _defaultInstance;
   }
 

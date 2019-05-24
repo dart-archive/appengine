@@ -9,11 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class Database_State extends ProtobufEnum {
   static const Database_State STATE_UNSPECIFIED =
-      const Database_State._(0, 'STATE_UNSPECIFIED');
-  static const Database_State CREATING = const Database_State._(1, 'CREATING');
-  static const Database_State READY = const Database_State._(2, 'READY');
+      Database_State._(0, 'STATE_UNSPECIFIED');
+  static const Database_State CREATING = Database_State._(1, 'CREATING');
+  static const Database_State READY = Database_State._(2, 'READY');
 
-  static const List<Database_State> values = const <Database_State>[
+  static const List<Database_State> values = <Database_State>[
     STATE_UNSPECIFIED,
     CREATING,
     READY,

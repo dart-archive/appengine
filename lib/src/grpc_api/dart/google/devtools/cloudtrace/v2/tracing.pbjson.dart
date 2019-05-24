@@ -10,11 +10,11 @@ import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
 import '../../../protobuf/wrappers.pbjson.dart' as $google$protobuf;
 import '../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const BatchWriteSpansRequest$json = const {
+const BatchWriteSpansRequest$json = {
   '1': 'BatchWriteSpansRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'spans',
       '3': 2,
       '4': 3,
@@ -25,25 +25,25 @@ const BatchWriteSpansRequest$json = const {
   ],
 };
 
-const TraceService$json = const {
+const TraceService$json = {
   '1': 'TraceService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'BatchWriteSpans',
       '2': '.google.devtools.cloudtrace.v2.BatchWriteSpansRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateSpan',
       '2': '.google.devtools.cloudtrace.v2.Span',
       '3': '.google.devtools.cloudtrace.v2.Span',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const TraceService$messageJson = const {
+const TraceService$messageJson = {
   '.google.devtools.cloudtrace.v2.BatchWriteSpansRequest':
       BatchWriteSpansRequest$json,
   '.google.devtools.cloudtrace.v2.Span': Span$json,

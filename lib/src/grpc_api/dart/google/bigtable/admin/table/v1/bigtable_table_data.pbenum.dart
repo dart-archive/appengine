@@ -9,10 +9,10 @@ import 'package:protobuf/protobuf.dart';
 
 class Table_TimestampGranularity extends ProtobufEnum {
   static const Table_TimestampGranularity MILLIS =
-      const Table_TimestampGranularity._(0, 'MILLIS');
+      Table_TimestampGranularity._(0, 'MILLIS');
 
   static const List<Table_TimestampGranularity> values =
-      const <Table_TimestampGranularity>[
+      <Table_TimestampGranularity>[
     MILLIS,
   ];
 

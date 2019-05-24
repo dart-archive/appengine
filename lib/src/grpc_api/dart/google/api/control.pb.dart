@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Control extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Control')
+  static final BuilderInfo _i = BuilderInfo('Control')
     ..aOS(1, 'environment')
     ..hasRequiredFields = false;
 
@@ -19,12 +19,12 @@ class Control extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Control.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Control clone() => new Control()..mergeFromMessage(this);
+  Control clone() => Control()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Control create() => new Control();
-  static PbList<Control> createRepeated() => new PbList<Control>();
+  static Control create() => Control();
+  static PbList<Control> createRepeated() => PbList<Control>();
   static Control getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyControl();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyControl();
     return _defaultInstance;
   }
 

@@ -20,7 +20,7 @@ import 'intent.pbenum.dart';
 export 'intent.pbenum.dart';
 
 class Intent_TrainingPhrase_Part extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_TrainingPhrase_Part')
+  static final BuilderInfo _i = BuilderInfo('Intent_TrainingPhrase_Part')
     ..aOS(1, 'text')
     ..aOS(2, 'entityType')
     ..aOS(3, 'alias')
@@ -35,15 +35,14 @@ class Intent_TrainingPhrase_Part extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_TrainingPhrase_Part clone() =>
-      new Intent_TrainingPhrase_Part()..mergeFromMessage(this);
+      Intent_TrainingPhrase_Part()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_TrainingPhrase_Part create() =>
-      new Intent_TrainingPhrase_Part();
+  static Intent_TrainingPhrase_Part create() => Intent_TrainingPhrase_Part();
   static PbList<Intent_TrainingPhrase_Part> createRepeated() =>
-      new PbList<Intent_TrainingPhrase_Part>();
+      PbList<Intent_TrainingPhrase_Part>();
   static Intent_TrainingPhrase_Part getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_TrainingPhrase_Part();
+      _defaultInstance = _ReadonlyIntent_TrainingPhrase_Part();
     return _defaultInstance;
   }
 
@@ -90,7 +89,7 @@ class _ReadonlyIntent_TrainingPhrase_Part extends Intent_TrainingPhrase_Part
     with ReadonlyMessageMixin {}
 
 class Intent_TrainingPhrase extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_TrainingPhrase')
+  static final BuilderInfo _i = BuilderInfo('Intent_TrainingPhrase')
     ..aOS(1, 'name')
     ..e<Intent_TrainingPhrase_Type>(
         2,
@@ -116,14 +115,14 @@ class Intent_TrainingPhrase extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_TrainingPhrase clone() =>
-      new Intent_TrainingPhrase()..mergeFromMessage(this);
+      Intent_TrainingPhrase()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_TrainingPhrase create() => new Intent_TrainingPhrase();
+  static Intent_TrainingPhrase create() => Intent_TrainingPhrase();
   static PbList<Intent_TrainingPhrase> createRepeated() =>
-      new PbList<Intent_TrainingPhrase>();
+      PbList<Intent_TrainingPhrase>();
   static Intent_TrainingPhrase getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_TrainingPhrase();
+      _defaultInstance = _ReadonlyIntent_TrainingPhrase();
     return _defaultInstance;
   }
 
@@ -164,7 +163,7 @@ class _ReadonlyIntent_TrainingPhrase extends Intent_TrainingPhrase
     with ReadonlyMessageMixin {}
 
 class Intent_Parameter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Parameter')
+  static final BuilderInfo _i = BuilderInfo('Intent_Parameter')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'value')
@@ -182,14 +181,14 @@ class Intent_Parameter extends GeneratedMessage {
   Intent_Parameter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent_Parameter clone() => new Intent_Parameter()..mergeFromMessage(this);
+  Intent_Parameter clone() => Intent_Parameter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Parameter create() => new Intent_Parameter();
+  static Intent_Parameter create() => Intent_Parameter();
   static PbList<Intent_Parameter> createRepeated() =>
-      new PbList<Intent_Parameter>();
+      PbList<Intent_Parameter>();
   static Intent_Parameter getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Parameter();
+      _defaultInstance = _ReadonlyIntent_Parameter();
     return _defaultInstance;
   }
 
@@ -261,7 +260,7 @@ class _ReadonlyIntent_Parameter extends Intent_Parameter
     with ReadonlyMessageMixin {}
 
 class Intent_Message_Text extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Text')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_Text')
     ..pPS(1, 'text')
     ..hasRequiredFields = false;
 
@@ -272,15 +271,14 @@ class Intent_Message_Text extends GeneratedMessage {
   Intent_Message_Text.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent_Message_Text clone() =>
-      new Intent_Message_Text()..mergeFromMessage(this);
+  Intent_Message_Text clone() => Intent_Message_Text()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_Text create() => new Intent_Message_Text();
+  static Intent_Message_Text create() => Intent_Message_Text();
   static PbList<Intent_Message_Text> createRepeated() =>
-      new PbList<Intent_Message_Text>();
+      PbList<Intent_Message_Text>();
   static Intent_Message_Text getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Text();
+      _defaultInstance = _ReadonlyIntent_Message_Text();
     return _defaultInstance;
   }
 
@@ -296,7 +294,7 @@ class _ReadonlyIntent_Message_Text extends Intent_Message_Text
     with ReadonlyMessageMixin {}
 
 class Intent_Message_Image extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Image')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_Image')
     ..aOS(1, 'imageUri')
     ..aOS(2, 'accessibilityText')
     ..hasRequiredFields = false;
@@ -309,14 +307,14 @@ class Intent_Message_Image extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_Image clone() =>
-      new Intent_Message_Image()..mergeFromMessage(this);
+      Intent_Message_Image()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_Image create() => new Intent_Message_Image();
+  static Intent_Message_Image create() => Intent_Message_Image();
   static PbList<Intent_Message_Image> createRepeated() =>
-      new PbList<Intent_Message_Image>();
+      PbList<Intent_Message_Image>();
   static Intent_Message_Image getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Image();
+      _defaultInstance = _ReadonlyIntent_Message_Image();
     return _defaultInstance;
   }
 
@@ -346,7 +344,7 @@ class _ReadonlyIntent_Message_Image extends Intent_Message_Image
     with ReadonlyMessageMixin {}
 
 class Intent_Message_QuickReplies extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_QuickReplies')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_QuickReplies')
     ..aOS(1, 'title')
     ..pPS(2, 'quickReplies')
     ..hasRequiredFields = false;
@@ -359,15 +357,14 @@ class Intent_Message_QuickReplies extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_QuickReplies clone() =>
-      new Intent_Message_QuickReplies()..mergeFromMessage(this);
+      Intent_Message_QuickReplies()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_QuickReplies create() =>
-      new Intent_Message_QuickReplies();
+  static Intent_Message_QuickReplies create() => Intent_Message_QuickReplies();
   static PbList<Intent_Message_QuickReplies> createRepeated() =>
-      new PbList<Intent_Message_QuickReplies>();
+      PbList<Intent_Message_QuickReplies>();
   static Intent_Message_QuickReplies getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_QuickReplies();
+      _defaultInstance = _ReadonlyIntent_Message_QuickReplies();
     return _defaultInstance;
   }
 
@@ -392,7 +389,7 @@ class _ReadonlyIntent_Message_QuickReplies extends Intent_Message_QuickReplies
     with ReadonlyMessageMixin {}
 
 class Intent_Message_Card_Button extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Card_Button')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_Card_Button')
     ..aOS(1, 'text')
     ..aOS(2, 'postback')
     ..hasRequiredFields = false;
@@ -405,15 +402,14 @@ class Intent_Message_Card_Button extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_Card_Button clone() =>
-      new Intent_Message_Card_Button()..mergeFromMessage(this);
+      Intent_Message_Card_Button()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_Card_Button create() =>
-      new Intent_Message_Card_Button();
+  static Intent_Message_Card_Button create() => Intent_Message_Card_Button();
   static PbList<Intent_Message_Card_Button> createRepeated() =>
-      new PbList<Intent_Message_Card_Button>();
+      PbList<Intent_Message_Card_Button>();
   static Intent_Message_Card_Button getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Card_Button();
+      _defaultInstance = _ReadonlyIntent_Message_Card_Button();
     return _defaultInstance;
   }
 
@@ -444,7 +440,7 @@ class _ReadonlyIntent_Message_Card_Button extends Intent_Message_Card_Button
     with ReadonlyMessageMixin {}
 
 class Intent_Message_Card extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Card')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_Card')
     ..aOS(1, 'title')
     ..aOS(2, 'subtitle')
     ..aOS(3, 'imageUri')
@@ -463,15 +459,14 @@ class Intent_Message_Card extends GeneratedMessage {
   Intent_Message_Card.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent_Message_Card clone() =>
-      new Intent_Message_Card()..mergeFromMessage(this);
+  Intent_Message_Card clone() => Intent_Message_Card()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_Card create() => new Intent_Message_Card();
+  static Intent_Message_Card create() => Intent_Message_Card();
   static PbList<Intent_Message_Card> createRepeated() =>
-      new PbList<Intent_Message_Card>();
+      PbList<Intent_Message_Card>();
   static Intent_Message_Card getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Card();
+      _defaultInstance = _ReadonlyIntent_Message_Card();
     return _defaultInstance;
   }
 
@@ -511,7 +506,7 @@ class _ReadonlyIntent_Message_Card extends Intent_Message_Card
     with ReadonlyMessageMixin {}
 
 class Intent_Message_SimpleResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_SimpleResponse')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_SimpleResponse')
     ..aOS(1, 'textToSpeech')
     ..aOS(2, 'ssml')
     ..aOS(3, 'displayText')
@@ -525,15 +520,15 @@ class Intent_Message_SimpleResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_SimpleResponse clone() =>
-      new Intent_Message_SimpleResponse()..mergeFromMessage(this);
+      Intent_Message_SimpleResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_SimpleResponse create() =>
-      new Intent_Message_SimpleResponse();
+      Intent_Message_SimpleResponse();
   static PbList<Intent_Message_SimpleResponse> createRepeated() =>
-      new PbList<Intent_Message_SimpleResponse>();
+      PbList<Intent_Message_SimpleResponse>();
   static Intent_Message_SimpleResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_SimpleResponse();
+      _defaultInstance = _ReadonlyIntent_Message_SimpleResponse();
     return _defaultInstance;
   }
 
@@ -572,15 +567,14 @@ class _ReadonlyIntent_Message_SimpleResponse
     extends Intent_Message_SimpleResponse with ReadonlyMessageMixin {}
 
 class Intent_Message_SimpleResponses extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_SimpleResponses')
-        ..pp<Intent_Message_SimpleResponse>(
-            1,
-            'simpleResponses',
-            PbFieldType.PM,
-            Intent_Message_SimpleResponse.$checkItem,
-            Intent_Message_SimpleResponse.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_SimpleResponses')
+    ..pp<Intent_Message_SimpleResponse>(
+        1,
+        'simpleResponses',
+        PbFieldType.PM,
+        Intent_Message_SimpleResponse.$checkItem,
+        Intent_Message_SimpleResponse.create)
+    ..hasRequiredFields = false;
 
   Intent_Message_SimpleResponses() : super();
   Intent_Message_SimpleResponses.fromBuffer(List<int> i,
@@ -590,15 +584,15 @@ class Intent_Message_SimpleResponses extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_SimpleResponses clone() =>
-      new Intent_Message_SimpleResponses()..mergeFromMessage(this);
+      Intent_Message_SimpleResponses()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_SimpleResponses create() =>
-      new Intent_Message_SimpleResponses();
+      Intent_Message_SimpleResponses();
   static PbList<Intent_Message_SimpleResponses> createRepeated() =>
-      new PbList<Intent_Message_SimpleResponses>();
+      PbList<Intent_Message_SimpleResponses>();
   static Intent_Message_SimpleResponses getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_SimpleResponses();
+      _defaultInstance = _ReadonlyIntent_Message_SimpleResponses();
     return _defaultInstance;
   }
 
@@ -616,7 +610,7 @@ class _ReadonlyIntent_Message_SimpleResponses
 
 class Intent_Message_BasicCard_Button_OpenUriAction extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_BasicCard_Button_OpenUriAction')
+      BuilderInfo('Intent_Message_BasicCard_Button_OpenUriAction')
         ..aOS(1, 'uri')
         ..hasRequiredFields = false;
 
@@ -628,18 +622,17 @@ class Intent_Message_BasicCard_Button_OpenUriAction extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_BasicCard_Button_OpenUriAction clone() =>
-      new Intent_Message_BasicCard_Button_OpenUriAction()
-        ..mergeFromMessage(this);
+      Intent_Message_BasicCard_Button_OpenUriAction()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_BasicCard_Button_OpenUriAction create() =>
-      new Intent_Message_BasicCard_Button_OpenUriAction();
+      Intent_Message_BasicCard_Button_OpenUriAction();
   static PbList<Intent_Message_BasicCard_Button_OpenUriAction>
       createRepeated() =>
-          new PbList<Intent_Message_BasicCard_Button_OpenUriAction>();
+          PbList<Intent_Message_BasicCard_Button_OpenUriAction>();
   static Intent_Message_BasicCard_Button_OpenUriAction getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyIntent_Message_BasicCard_Button_OpenUriAction();
+          _ReadonlyIntent_Message_BasicCard_Button_OpenUriAction();
     return _defaultInstance;
   }
 
@@ -663,16 +656,15 @@ class _ReadonlyIntent_Message_BasicCard_Button_OpenUriAction
     with ReadonlyMessageMixin {}
 
 class Intent_Message_BasicCard_Button extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_BasicCard_Button')
-        ..aOS(1, 'title')
-        ..a<Intent_Message_BasicCard_Button_OpenUriAction>(
-            2,
-            'openUriAction',
-            PbFieldType.OM,
-            Intent_Message_BasicCard_Button_OpenUriAction.getDefault,
-            Intent_Message_BasicCard_Button_OpenUriAction.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_BasicCard_Button')
+    ..aOS(1, 'title')
+    ..a<Intent_Message_BasicCard_Button_OpenUriAction>(
+        2,
+        'openUriAction',
+        PbFieldType.OM,
+        Intent_Message_BasicCard_Button_OpenUriAction.getDefault,
+        Intent_Message_BasicCard_Button_OpenUriAction.create)
+    ..hasRequiredFields = false;
 
   Intent_Message_BasicCard_Button() : super();
   Intent_Message_BasicCard_Button.fromBuffer(List<int> i,
@@ -682,15 +674,15 @@ class Intent_Message_BasicCard_Button extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_BasicCard_Button clone() =>
-      new Intent_Message_BasicCard_Button()..mergeFromMessage(this);
+      Intent_Message_BasicCard_Button()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_BasicCard_Button create() =>
-      new Intent_Message_BasicCard_Button();
+      Intent_Message_BasicCard_Button();
   static PbList<Intent_Message_BasicCard_Button> createRepeated() =>
-      new PbList<Intent_Message_BasicCard_Button>();
+      PbList<Intent_Message_BasicCard_Button>();
   static Intent_Message_BasicCard_Button getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_BasicCard_Button();
+      _defaultInstance = _ReadonlyIntent_Message_BasicCard_Button();
     return _defaultInstance;
   }
 
@@ -721,7 +713,7 @@ class _ReadonlyIntent_Message_BasicCard_Button
     extends Intent_Message_BasicCard_Button with ReadonlyMessageMixin {}
 
 class Intent_Message_BasicCard extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_BasicCard')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_BasicCard')
     ..aOS(1, 'title')
     ..aOS(2, 'subtitle')
     ..aOS(3, 'formattedText')
@@ -743,14 +735,14 @@ class Intent_Message_BasicCard extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_BasicCard clone() =>
-      new Intent_Message_BasicCard()..mergeFromMessage(this);
+      Intent_Message_BasicCard()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_BasicCard create() => new Intent_Message_BasicCard();
+  static Intent_Message_BasicCard create() => Intent_Message_BasicCard();
   static PbList<Intent_Message_BasicCard> createRepeated() =>
-      new PbList<Intent_Message_BasicCard>();
+      PbList<Intent_Message_BasicCard>();
   static Intent_Message_BasicCard getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_BasicCard();
+      _defaultInstance = _ReadonlyIntent_Message_BasicCard();
     return _defaultInstance;
   }
 
@@ -799,7 +791,7 @@ class _ReadonlyIntent_Message_BasicCard extends Intent_Message_BasicCard
     with ReadonlyMessageMixin {}
 
 class Intent_Message_Suggestion extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Suggestion')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_Suggestion')
     ..aOS(1, 'title')
     ..hasRequiredFields = false;
 
@@ -811,14 +803,14 @@ class Intent_Message_Suggestion extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_Suggestion clone() =>
-      new Intent_Message_Suggestion()..mergeFromMessage(this);
+      Intent_Message_Suggestion()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_Suggestion create() => new Intent_Message_Suggestion();
+  static Intent_Message_Suggestion create() => Intent_Message_Suggestion();
   static PbList<Intent_Message_Suggestion> createRepeated() =>
-      new PbList<Intent_Message_Suggestion>();
+      PbList<Intent_Message_Suggestion>();
   static Intent_Message_Suggestion getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Suggestion();
+      _defaultInstance = _ReadonlyIntent_Message_Suggestion();
     return _defaultInstance;
   }
 
@@ -841,7 +833,7 @@ class _ReadonlyIntent_Message_Suggestion extends Intent_Message_Suggestion
     with ReadonlyMessageMixin {}
 
 class Intent_Message_Suggestions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Suggestions')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_Suggestions')
     ..pp<Intent_Message_Suggestion>(1, 'suggestions', PbFieldType.PM,
         Intent_Message_Suggestion.$checkItem, Intent_Message_Suggestion.create)
     ..hasRequiredFields = false;
@@ -854,15 +846,14 @@ class Intent_Message_Suggestions extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_Suggestions clone() =>
-      new Intent_Message_Suggestions()..mergeFromMessage(this);
+      Intent_Message_Suggestions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_Suggestions create() =>
-      new Intent_Message_Suggestions();
+  static Intent_Message_Suggestions create() => Intent_Message_Suggestions();
   static PbList<Intent_Message_Suggestions> createRepeated() =>
-      new PbList<Intent_Message_Suggestions>();
+      PbList<Intent_Message_Suggestions>();
   static Intent_Message_Suggestions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Suggestions();
+      _defaultInstance = _ReadonlyIntent_Message_Suggestions();
     return _defaultInstance;
   }
 
@@ -879,11 +870,10 @@ class _ReadonlyIntent_Message_Suggestions extends Intent_Message_Suggestions
     with ReadonlyMessageMixin {}
 
 class Intent_Message_LinkOutSuggestion extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_LinkOutSuggestion')
-        ..aOS(1, 'destinationName')
-        ..aOS(2, 'uri')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_LinkOutSuggestion')
+    ..aOS(1, 'destinationName')
+    ..aOS(2, 'uri')
+    ..hasRequiredFields = false;
 
   Intent_Message_LinkOutSuggestion() : super();
   Intent_Message_LinkOutSuggestion.fromBuffer(List<int> i,
@@ -893,15 +883,15 @@ class Intent_Message_LinkOutSuggestion extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_LinkOutSuggestion clone() =>
-      new Intent_Message_LinkOutSuggestion()..mergeFromMessage(this);
+      Intent_Message_LinkOutSuggestion()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_LinkOutSuggestion create() =>
-      new Intent_Message_LinkOutSuggestion();
+      Intent_Message_LinkOutSuggestion();
   static PbList<Intent_Message_LinkOutSuggestion> createRepeated() =>
-      new PbList<Intent_Message_LinkOutSuggestion>();
+      PbList<Intent_Message_LinkOutSuggestion>();
   static Intent_Message_LinkOutSuggestion getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_LinkOutSuggestion();
+      _defaultInstance = _ReadonlyIntent_Message_LinkOutSuggestion();
     return _defaultInstance;
   }
 
@@ -932,19 +922,18 @@ class _ReadonlyIntent_Message_LinkOutSuggestion
     extends Intent_Message_LinkOutSuggestion with ReadonlyMessageMixin {}
 
 class Intent_Message_ListSelect_Item extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_ListSelect_Item')
-        ..a<Intent_Message_SelectItemInfo>(
-            1,
-            'info',
-            PbFieldType.OM,
-            Intent_Message_SelectItemInfo.getDefault,
-            Intent_Message_SelectItemInfo.create)
-        ..aOS(2, 'title')
-        ..aOS(3, 'description')
-        ..a<Intent_Message_Image>(4, 'image', PbFieldType.OM,
-            Intent_Message_Image.getDefault, Intent_Message_Image.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_ListSelect_Item')
+    ..a<Intent_Message_SelectItemInfo>(
+        1,
+        'info',
+        PbFieldType.OM,
+        Intent_Message_SelectItemInfo.getDefault,
+        Intent_Message_SelectItemInfo.create)
+    ..aOS(2, 'title')
+    ..aOS(3, 'description')
+    ..a<Intent_Message_Image>(4, 'image', PbFieldType.OM,
+        Intent_Message_Image.getDefault, Intent_Message_Image.create)
+    ..hasRequiredFields = false;
 
   Intent_Message_ListSelect_Item() : super();
   Intent_Message_ListSelect_Item.fromBuffer(List<int> i,
@@ -954,15 +943,15 @@ class Intent_Message_ListSelect_Item extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_ListSelect_Item clone() =>
-      new Intent_Message_ListSelect_Item()..mergeFromMessage(this);
+      Intent_Message_ListSelect_Item()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_ListSelect_Item create() =>
-      new Intent_Message_ListSelect_Item();
+      Intent_Message_ListSelect_Item();
   static PbList<Intent_Message_ListSelect_Item> createRepeated() =>
-      new PbList<Intent_Message_ListSelect_Item>();
+      PbList<Intent_Message_ListSelect_Item>();
   static Intent_Message_ListSelect_Item getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_ListSelect_Item();
+      _defaultInstance = _ReadonlyIntent_Message_ListSelect_Item();
     return _defaultInstance;
   }
 
@@ -1009,7 +998,7 @@ class _ReadonlyIntent_Message_ListSelect_Item
     extends Intent_Message_ListSelect_Item with ReadonlyMessageMixin {}
 
 class Intent_Message_ListSelect extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_ListSelect')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_ListSelect')
     ..aOS(1, 'title')
     ..pp<Intent_Message_ListSelect_Item>(
         2,
@@ -1027,14 +1016,14 @@ class Intent_Message_ListSelect extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_ListSelect clone() =>
-      new Intent_Message_ListSelect()..mergeFromMessage(this);
+      Intent_Message_ListSelect()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message_ListSelect create() => new Intent_Message_ListSelect();
+  static Intent_Message_ListSelect create() => Intent_Message_ListSelect();
   static PbList<Intent_Message_ListSelect> createRepeated() =>
-      new PbList<Intent_Message_ListSelect>();
+      PbList<Intent_Message_ListSelect>();
   static Intent_Message_ListSelect getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_ListSelect();
+      _defaultInstance = _ReadonlyIntent_Message_ListSelect();
     return _defaultInstance;
   }
 
@@ -1060,7 +1049,7 @@ class _ReadonlyIntent_Message_ListSelect extends Intent_Message_ListSelect
 
 class Intent_Message_CarouselSelect_Item extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_CarouselSelect_Item')
+      BuilderInfo('Intent_Message_CarouselSelect_Item')
         ..a<Intent_Message_SelectItemInfo>(
             1,
             'info',
@@ -1081,15 +1070,15 @@ class Intent_Message_CarouselSelect_Item extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_CarouselSelect_Item clone() =>
-      new Intent_Message_CarouselSelect_Item()..mergeFromMessage(this);
+      Intent_Message_CarouselSelect_Item()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_CarouselSelect_Item create() =>
-      new Intent_Message_CarouselSelect_Item();
+      Intent_Message_CarouselSelect_Item();
   static PbList<Intent_Message_CarouselSelect_Item> createRepeated() =>
-      new PbList<Intent_Message_CarouselSelect_Item>();
+      PbList<Intent_Message_CarouselSelect_Item>();
   static Intent_Message_CarouselSelect_Item getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_CarouselSelect_Item();
+      _defaultInstance = _ReadonlyIntent_Message_CarouselSelect_Item();
     return _defaultInstance;
   }
 
@@ -1136,7 +1125,7 @@ class _ReadonlyIntent_Message_CarouselSelect_Item
     extends Intent_Message_CarouselSelect_Item with ReadonlyMessageMixin {}
 
 class Intent_Message_CarouselSelect extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_CarouselSelect')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_CarouselSelect')
     ..pp<Intent_Message_CarouselSelect_Item>(
         1,
         'items',
@@ -1153,15 +1142,15 @@ class Intent_Message_CarouselSelect extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_CarouselSelect clone() =>
-      new Intent_Message_CarouselSelect()..mergeFromMessage(this);
+      Intent_Message_CarouselSelect()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_CarouselSelect create() =>
-      new Intent_Message_CarouselSelect();
+      Intent_Message_CarouselSelect();
   static PbList<Intent_Message_CarouselSelect> createRepeated() =>
-      new PbList<Intent_Message_CarouselSelect>();
+      PbList<Intent_Message_CarouselSelect>();
   static Intent_Message_CarouselSelect getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_CarouselSelect();
+      _defaultInstance = _ReadonlyIntent_Message_CarouselSelect();
     return _defaultInstance;
   }
 
@@ -1178,7 +1167,7 @@ class _ReadonlyIntent_Message_CarouselSelect
     extends Intent_Message_CarouselSelect with ReadonlyMessageMixin {}
 
 class Intent_Message_SelectItemInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_SelectItemInfo')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message_SelectItemInfo')
     ..aOS(1, 'key')
     ..pPS(2, 'synonyms')
     ..hasRequiredFields = false;
@@ -1191,15 +1180,15 @@ class Intent_Message_SelectItemInfo extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_SelectItemInfo clone() =>
-      new Intent_Message_SelectItemInfo()..mergeFromMessage(this);
+      Intent_Message_SelectItemInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Intent_Message_SelectItemInfo create() =>
-      new Intent_Message_SelectItemInfo();
+      Intent_Message_SelectItemInfo();
   static PbList<Intent_Message_SelectItemInfo> createRepeated() =>
-      new PbList<Intent_Message_SelectItemInfo>();
+      PbList<Intent_Message_SelectItemInfo>();
   static Intent_Message_SelectItemInfo getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_SelectItemInfo();
+      _defaultInstance = _ReadonlyIntent_Message_SelectItemInfo();
     return _defaultInstance;
   }
 
@@ -1224,7 +1213,7 @@ class _ReadonlyIntent_Message_SelectItemInfo
     extends Intent_Message_SelectItemInfo with ReadonlyMessageMixin {}
 
 class Intent_Message extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message')
+  static final BuilderInfo _i = BuilderInfo('Intent_Message')
     ..a<Intent_Message_Text>(1, 'text', PbFieldType.OM,
         Intent_Message_Text.getDefault, Intent_Message_Text.create)
     ..a<Intent_Message_Image>(2, 'image', PbFieldType.OM,
@@ -1283,14 +1272,12 @@ class Intent_Message extends GeneratedMessage {
   Intent_Message.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent_Message clone() => new Intent_Message()..mergeFromMessage(this);
+  Intent_Message clone() => Intent_Message()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_Message create() => new Intent_Message();
-  static PbList<Intent_Message> createRepeated() =>
-      new PbList<Intent_Message>();
+  static Intent_Message create() => Intent_Message();
+  static PbList<Intent_Message> createRepeated() => PbList<Intent_Message>();
   static Intent_Message getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyIntent_Message();
     return _defaultInstance;
   }
 
@@ -1400,7 +1387,7 @@ class _ReadonlyIntent_Message extends Intent_Message with ReadonlyMessageMixin {
 }
 
 class Intent_FollowupIntentInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_FollowupIntentInfo')
+  static final BuilderInfo _i = BuilderInfo('Intent_FollowupIntentInfo')
     ..aOS(1, 'followupIntentName')
     ..aOS(2, 'parentFollowupIntentName')
     ..hasRequiredFields = false;
@@ -1413,14 +1400,14 @@ class Intent_FollowupIntentInfo extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_FollowupIntentInfo clone() =>
-      new Intent_FollowupIntentInfo()..mergeFromMessage(this);
+      Intent_FollowupIntentInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent_FollowupIntentInfo create() => new Intent_FollowupIntentInfo();
+  static Intent_FollowupIntentInfo create() => Intent_FollowupIntentInfo();
   static PbList<Intent_FollowupIntentInfo> createRepeated() =>
-      new PbList<Intent_FollowupIntentInfo>();
+      PbList<Intent_FollowupIntentInfo>();
   static Intent_FollowupIntentInfo getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_FollowupIntentInfo();
+      _defaultInstance = _ReadonlyIntent_FollowupIntentInfo();
     return _defaultInstance;
   }
 
@@ -1451,7 +1438,7 @@ class _ReadonlyIntent_FollowupIntentInfo extends Intent_FollowupIntentInfo
     with ReadonlyMessageMixin {}
 
 class Intent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent')
+  static final BuilderInfo _i = BuilderInfo('Intent')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..a<int>(3, 'priority', PbFieldType.O3)
@@ -1496,12 +1483,12 @@ class Intent extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Intent.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent clone() => new Intent()..mergeFromMessage(this);
+  Intent clone() => Intent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Intent create() => new Intent();
-  static PbList<Intent> createRepeated() => new PbList<Intent>();
+  static Intent create() => Intent();
+  static PbList<Intent> createRepeated() => PbList<Intent>();
   static Intent getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyIntent();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyIntent();
     return _defaultInstance;
   }
 
@@ -1610,7 +1597,7 @@ class Intent extends GeneratedMessage {
 class _ReadonlyIntent extends Intent with ReadonlyMessageMixin {}
 
 class ListIntentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListIntentsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListIntentsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'languageCode')
     ..e<IntentView>(
@@ -1631,15 +1618,14 @@ class ListIntentsRequest extends GeneratedMessage {
   ListIntentsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListIntentsRequest clone() =>
-      new ListIntentsRequest()..mergeFromMessage(this);
+  ListIntentsRequest clone() => ListIntentsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListIntentsRequest create() => new ListIntentsRequest();
+  static ListIntentsRequest create() => ListIntentsRequest();
   static PbList<ListIntentsRequest> createRepeated() =>
-      new PbList<ListIntentsRequest>();
+      PbList<ListIntentsRequest>();
   static ListIntentsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListIntentsRequest();
+      _defaultInstance = _ReadonlyListIntentsRequest();
     return _defaultInstance;
   }
 
@@ -1693,7 +1679,7 @@ class _ReadonlyListIntentsRequest extends ListIntentsRequest
     with ReadonlyMessageMixin {}
 
 class ListIntentsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListIntentsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListIntentsResponse')
     ..pp<Intent>(1, 'intents', PbFieldType.PM, Intent.$checkItem, Intent.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -1705,15 +1691,14 @@ class ListIntentsResponse extends GeneratedMessage {
   ListIntentsResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListIntentsResponse clone() =>
-      new ListIntentsResponse()..mergeFromMessage(this);
+  ListIntentsResponse clone() => ListIntentsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListIntentsResponse create() => new ListIntentsResponse();
+  static ListIntentsResponse create() => ListIntentsResponse();
   static PbList<ListIntentsResponse> createRepeated() =>
-      new PbList<ListIntentsResponse>();
+      PbList<ListIntentsResponse>();
   static ListIntentsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListIntentsResponse();
+      _defaultInstance = _ReadonlyListIntentsResponse();
     return _defaultInstance;
   }
 
@@ -1737,7 +1722,7 @@ class _ReadonlyListIntentsResponse extends ListIntentsResponse
     with ReadonlyMessageMixin {}
 
 class GetIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetIntentRequest')
+  static final BuilderInfo _i = BuilderInfo('GetIntentRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'languageCode')
     ..e<IntentView>(
@@ -1756,14 +1741,14 @@ class GetIntentRequest extends GeneratedMessage {
   GetIntentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetIntentRequest clone() => new GetIntentRequest()..mergeFromMessage(this);
+  GetIntentRequest clone() => GetIntentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetIntentRequest create() => new GetIntentRequest();
+  static GetIntentRequest create() => GetIntentRequest();
   static PbList<GetIntentRequest> createRepeated() =>
-      new PbList<GetIntentRequest>();
+      PbList<GetIntentRequest>();
   static GetIntentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetIntentRequest();
+      _defaultInstance = _ReadonlyGetIntentRequest();
     return _defaultInstance;
   }
 
@@ -1801,7 +1786,7 @@ class _ReadonlyGetIntentRequest extends GetIntentRequest
     with ReadonlyMessageMixin {}
 
 class CreateIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateIntentRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateIntentRequest')
     ..aOS(1, 'parent')
     ..a<Intent>(2, 'intent', PbFieldType.OM, Intent.getDefault, Intent.create)
     ..aOS(3, 'languageCode')
@@ -1821,15 +1806,14 @@ class CreateIntentRequest extends GeneratedMessage {
   CreateIntentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateIntentRequest clone() =>
-      new CreateIntentRequest()..mergeFromMessage(this);
+  CreateIntentRequest clone() => CreateIntentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateIntentRequest create() => new CreateIntentRequest();
+  static CreateIntentRequest create() => CreateIntentRequest();
   static PbList<CreateIntentRequest> createRepeated() =>
-      new PbList<CreateIntentRequest>();
+      PbList<CreateIntentRequest>();
   static CreateIntentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateIntentRequest();
+      _defaultInstance = _ReadonlyCreateIntentRequest();
     return _defaultInstance;
   }
 
@@ -1875,7 +1859,7 @@ class _ReadonlyCreateIntentRequest extends CreateIntentRequest
     with ReadonlyMessageMixin {}
 
 class UpdateIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateIntentRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateIntentRequest')
     ..a<Intent>(1, 'intent', PbFieldType.OM, Intent.getDefault, Intent.create)
     ..aOS(2, 'languageCode')
     ..a<$google$protobuf.FieldMask>(
@@ -1900,15 +1884,14 @@ class UpdateIntentRequest extends GeneratedMessage {
   UpdateIntentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateIntentRequest clone() =>
-      new UpdateIntentRequest()..mergeFromMessage(this);
+  UpdateIntentRequest clone() => UpdateIntentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateIntentRequest create() => new UpdateIntentRequest();
+  static UpdateIntentRequest create() => UpdateIntentRequest();
   static PbList<UpdateIntentRequest> createRepeated() =>
-      new PbList<UpdateIntentRequest>();
+      PbList<UpdateIntentRequest>();
   static UpdateIntentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateIntentRequest();
+      _defaultInstance = _ReadonlyUpdateIntentRequest();
     return _defaultInstance;
   }
 
@@ -1954,7 +1937,7 @@ class _ReadonlyUpdateIntentRequest extends UpdateIntentRequest
     with ReadonlyMessageMixin {}
 
 class DeleteIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteIntentRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteIntentRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1965,15 +1948,14 @@ class DeleteIntentRequest extends GeneratedMessage {
   DeleteIntentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteIntentRequest clone() =>
-      new DeleteIntentRequest()..mergeFromMessage(this);
+  DeleteIntentRequest clone() => DeleteIntentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteIntentRequest create() => new DeleteIntentRequest();
+  static DeleteIntentRequest create() => DeleteIntentRequest();
   static PbList<DeleteIntentRequest> createRepeated() =>
-      new PbList<DeleteIntentRequest>();
+      PbList<DeleteIntentRequest>();
   static DeleteIntentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteIntentRequest();
+      _defaultInstance = _ReadonlyDeleteIntentRequest();
     return _defaultInstance;
   }
 
@@ -1995,7 +1977,7 @@ class _ReadonlyDeleteIntentRequest extends DeleteIntentRequest
     with ReadonlyMessageMixin {}
 
 class BatchUpdateIntentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdateIntentsRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchUpdateIntentsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'intentBatchUri')
     ..a<IntentBatch>(3, 'intentBatchInline', PbFieldType.OM,
@@ -2024,14 +2006,14 @@ class BatchUpdateIntentsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateIntentsRequest clone() =>
-      new BatchUpdateIntentsRequest()..mergeFromMessage(this);
+      BatchUpdateIntentsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchUpdateIntentsRequest create() => new BatchUpdateIntentsRequest();
+  static BatchUpdateIntentsRequest create() => BatchUpdateIntentsRequest();
   static PbList<BatchUpdateIntentsRequest> createRepeated() =>
-      new PbList<BatchUpdateIntentsRequest>();
+      PbList<BatchUpdateIntentsRequest>();
   static BatchUpdateIntentsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateIntentsRequest();
+      _defaultInstance = _ReadonlyBatchUpdateIntentsRequest();
     return _defaultInstance;
   }
 
@@ -2094,7 +2076,7 @@ class _ReadonlyBatchUpdateIntentsRequest extends BatchUpdateIntentsRequest
     with ReadonlyMessageMixin {}
 
 class BatchUpdateIntentsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdateIntentsResponse')
+  static final BuilderInfo _i = BuilderInfo('BatchUpdateIntentsResponse')
     ..pp<Intent>(1, 'intents', PbFieldType.PM, Intent.$checkItem, Intent.create)
     ..hasRequiredFields = false;
 
@@ -2106,15 +2088,14 @@ class BatchUpdateIntentsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateIntentsResponse clone() =>
-      new BatchUpdateIntentsResponse()..mergeFromMessage(this);
+      BatchUpdateIntentsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchUpdateIntentsResponse create() =>
-      new BatchUpdateIntentsResponse();
+  static BatchUpdateIntentsResponse create() => BatchUpdateIntentsResponse();
   static PbList<BatchUpdateIntentsResponse> createRepeated() =>
-      new PbList<BatchUpdateIntentsResponse>();
+      PbList<BatchUpdateIntentsResponse>();
   static BatchUpdateIntentsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateIntentsResponse();
+      _defaultInstance = _ReadonlyBatchUpdateIntentsResponse();
     return _defaultInstance;
   }
 
@@ -2131,7 +2112,7 @@ class _ReadonlyBatchUpdateIntentsResponse extends BatchUpdateIntentsResponse
     with ReadonlyMessageMixin {}
 
 class BatchDeleteIntentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchDeleteIntentsRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchDeleteIntentsRequest')
     ..aOS(1, 'parent')
     ..pp<Intent>(2, 'intents', PbFieldType.PM, Intent.$checkItem, Intent.create)
     ..hasRequiredFields = false;
@@ -2144,14 +2125,14 @@ class BatchDeleteIntentsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchDeleteIntentsRequest clone() =>
-      new BatchDeleteIntentsRequest()..mergeFromMessage(this);
+      BatchDeleteIntentsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchDeleteIntentsRequest create() => new BatchDeleteIntentsRequest();
+  static BatchDeleteIntentsRequest create() => BatchDeleteIntentsRequest();
   static PbList<BatchDeleteIntentsRequest> createRepeated() =>
-      new PbList<BatchDeleteIntentsRequest>();
+      PbList<BatchDeleteIntentsRequest>();
   static BatchDeleteIntentsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchDeleteIntentsRequest();
+      _defaultInstance = _ReadonlyBatchDeleteIntentsRequest();
     return _defaultInstance;
   }
 
@@ -2176,7 +2157,7 @@ class _ReadonlyBatchDeleteIntentsRequest extends BatchDeleteIntentsRequest
     with ReadonlyMessageMixin {}
 
 class IntentBatch extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IntentBatch')
+  static final BuilderInfo _i = BuilderInfo('IntentBatch')
     ..pp<Intent>(1, 'intents', PbFieldType.PM, Intent.$checkItem, Intent.create)
     ..hasRequiredFields = false;
 
@@ -2187,12 +2168,12 @@ class IntentBatch extends GeneratedMessage {
   IntentBatch.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  IntentBatch clone() => new IntentBatch()..mergeFromMessage(this);
+  IntentBatch clone() => IntentBatch()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static IntentBatch create() => new IntentBatch();
-  static PbList<IntentBatch> createRepeated() => new PbList<IntentBatch>();
+  static IntentBatch create() => IntentBatch();
+  static PbList<IntentBatch> createRepeated() => PbList<IntentBatch>();
   static IntentBatch getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyIntentBatch();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyIntentBatch();
     return _defaultInstance;
   }
 
@@ -2212,46 +2193,46 @@ class IntentsApi {
 
   Future<ListIntentsResponse> listIntents(
       ClientContext ctx, ListIntentsRequest request) {
-    var emptyResponse = new ListIntentsResponse();
+    var emptyResponse = ListIntentsResponse();
     return _client.invoke<ListIntentsResponse>(
         ctx, 'Intents', 'ListIntents', request, emptyResponse);
   }
 
   Future<Intent> getIntent(ClientContext ctx, GetIntentRequest request) {
-    var emptyResponse = new Intent();
+    var emptyResponse = Intent();
     return _client.invoke<Intent>(
         ctx, 'Intents', 'GetIntent', request, emptyResponse);
   }
 
   Future<Intent> createIntent(ClientContext ctx, CreateIntentRequest request) {
-    var emptyResponse = new Intent();
+    var emptyResponse = Intent();
     return _client.invoke<Intent>(
         ctx, 'Intents', 'CreateIntent', request, emptyResponse);
   }
 
   Future<Intent> updateIntent(ClientContext ctx, UpdateIntentRequest request) {
-    var emptyResponse = new Intent();
+    var emptyResponse = Intent();
     return _client.invoke<Intent>(
         ctx, 'Intents', 'UpdateIntent', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteIntent(
       ClientContext ctx, DeleteIntentRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Intents', 'DeleteIntent', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> batchUpdateIntents(
       ClientContext ctx, BatchUpdateIntentsRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Intents', 'BatchUpdateIntents', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> batchDeleteIntents(
       ClientContext ctx, BatchDeleteIntentsRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Intents', 'BatchDeleteIntents', request, emptyResponse);
   }

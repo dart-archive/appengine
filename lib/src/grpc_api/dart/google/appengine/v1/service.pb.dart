@@ -13,7 +13,7 @@ import 'service.pbenum.dart';
 export 'service.pbenum.dart';
 
 class Service extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Service')
+  static final BuilderInfo _i = BuilderInfo('Service')
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..a<TrafficSplit>(3, 'split', PbFieldType.OM, TrafficSplit.getDefault,
@@ -26,12 +26,12 @@ class Service extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Service.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Service clone() => new Service()..mergeFromMessage(this);
+  Service clone() => Service()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Service create() => new Service();
-  static PbList<Service> createRepeated() => new PbList<Service>();
+  static Service create() => Service();
+  static PbList<Service> createRepeated() => PbList<Service>();
   static Service getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyService();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyService();
     return _defaultInstance;
   }
 
@@ -68,7 +68,7 @@ class Service extends GeneratedMessage {
 class _ReadonlyService extends Service with ReadonlyMessageMixin {}
 
 class TrafficSplit_AllocationsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TrafficSplit_AllocationsEntry')
+  static final BuilderInfo _i = BuilderInfo('TrafficSplit_AllocationsEntry')
     ..aOS(1, 'key')
     ..a<double>(2, 'value', PbFieldType.OD)
     ..hasRequiredFields = false;
@@ -81,15 +81,15 @@ class TrafficSplit_AllocationsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TrafficSplit_AllocationsEntry clone() =>
-      new TrafficSplit_AllocationsEntry()..mergeFromMessage(this);
+      TrafficSplit_AllocationsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TrafficSplit_AllocationsEntry create() =>
-      new TrafficSplit_AllocationsEntry();
+      TrafficSplit_AllocationsEntry();
   static PbList<TrafficSplit_AllocationsEntry> createRepeated() =>
-      new PbList<TrafficSplit_AllocationsEntry>();
+      PbList<TrafficSplit_AllocationsEntry>();
   static TrafficSplit_AllocationsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTrafficSplit_AllocationsEntry();
+      _defaultInstance = _ReadonlyTrafficSplit_AllocationsEntry();
     return _defaultInstance;
   }
 
@@ -120,7 +120,7 @@ class _ReadonlyTrafficSplit_AllocationsEntry
     extends TrafficSplit_AllocationsEntry with ReadonlyMessageMixin {}
 
 class TrafficSplit extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TrafficSplit')
+  static final BuilderInfo _i = BuilderInfo('TrafficSplit')
     ..e<TrafficSplit_ShardBy>(
         1,
         'shardBy',
@@ -143,13 +143,12 @@ class TrafficSplit extends GeneratedMessage {
   TrafficSplit.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TrafficSplit clone() => new TrafficSplit()..mergeFromMessage(this);
+  TrafficSplit clone() => TrafficSplit()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TrafficSplit create() => new TrafficSplit();
-  static PbList<TrafficSplit> createRepeated() => new PbList<TrafficSplit>();
+  static TrafficSplit create() => TrafficSplit();
+  static PbList<TrafficSplit> createRepeated() => PbList<TrafficSplit>();
   static TrafficSplit getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTrafficSplit();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTrafficSplit();
     return _defaultInstance;
   }
 

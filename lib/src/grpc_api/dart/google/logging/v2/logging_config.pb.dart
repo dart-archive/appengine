@@ -18,7 +18,7 @@ import 'logging_config.pbenum.dart';
 export 'logging_config.pbenum.dart';
 
 class LogSink extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogSink')
+  static final BuilderInfo _i = BuilderInfo('LogSink')
     ..aOS(1, 'name')
     ..aOS(3, 'destination')
     ..aOS(5, 'filter')
@@ -51,12 +51,12 @@ class LogSink extends GeneratedMessage {
       : super.fromBuffer(i, r);
   LogSink.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogSink clone() => new LogSink()..mergeFromMessage(this);
+  LogSink clone() => LogSink()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LogSink create() => new LogSink();
-  static PbList<LogSink> createRepeated() => new PbList<LogSink>();
+  static LogSink create() => LogSink();
+  static PbList<LogSink> createRepeated() => PbList<LogSink>();
   static LogSink getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLogSink();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLogSink();
     return _defaultInstance;
   }
 
@@ -133,7 +133,7 @@ class LogSink extends GeneratedMessage {
 class _ReadonlyLogSink extends LogSink with ReadonlyMessageMixin {}
 
 class ListSinksRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSinksRequest')
+  static final BuilderInfo _i = BuilderInfo('ListSinksRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -146,14 +146,14 @@ class ListSinksRequest extends GeneratedMessage {
   ListSinksRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListSinksRequest clone() => new ListSinksRequest()..mergeFromMessage(this);
+  ListSinksRequest clone() => ListSinksRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListSinksRequest create() => new ListSinksRequest();
+  static ListSinksRequest create() => ListSinksRequest();
   static PbList<ListSinksRequest> createRepeated() =>
-      new PbList<ListSinksRequest>();
+      PbList<ListSinksRequest>();
   static ListSinksRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSinksRequest();
+      _defaultInstance = _ReadonlyListSinksRequest();
     return _defaultInstance;
   }
 
@@ -191,7 +191,7 @@ class _ReadonlyListSinksRequest extends ListSinksRequest
     with ReadonlyMessageMixin {}
 
 class ListSinksResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSinksResponse')
+  static final BuilderInfo _i = BuilderInfo('ListSinksResponse')
     ..pp<LogSink>(
         1, 'sinks', PbFieldType.PM, LogSink.$checkItem, LogSink.create)
     ..aOS(2, 'nextPageToken')
@@ -204,14 +204,14 @@ class ListSinksResponse extends GeneratedMessage {
   ListSinksResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListSinksResponse clone() => new ListSinksResponse()..mergeFromMessage(this);
+  ListSinksResponse clone() => ListSinksResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListSinksResponse create() => new ListSinksResponse();
+  static ListSinksResponse create() => ListSinksResponse();
   static PbList<ListSinksResponse> createRepeated() =>
-      new PbList<ListSinksResponse>();
+      PbList<ListSinksResponse>();
   static ListSinksResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSinksResponse();
+      _defaultInstance = _ReadonlyListSinksResponse();
     return _defaultInstance;
   }
 
@@ -235,7 +235,7 @@ class _ReadonlyListSinksResponse extends ListSinksResponse
     with ReadonlyMessageMixin {}
 
 class GetSinkRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSinkRequest')
+  static final BuilderInfo _i = BuilderInfo('GetSinkRequest')
     ..aOS(1, 'sinkName')
     ..hasRequiredFields = false;
 
@@ -246,14 +246,12 @@ class GetSinkRequest extends GeneratedMessage {
   GetSinkRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetSinkRequest clone() => new GetSinkRequest()..mergeFromMessage(this);
+  GetSinkRequest clone() => GetSinkRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetSinkRequest create() => new GetSinkRequest();
-  static PbList<GetSinkRequest> createRepeated() =>
-      new PbList<GetSinkRequest>();
+  static GetSinkRequest create() => GetSinkRequest();
+  static PbList<GetSinkRequest> createRepeated() => PbList<GetSinkRequest>();
   static GetSinkRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSinkRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetSinkRequest();
     return _defaultInstance;
   }
 
@@ -275,7 +273,7 @@ class _ReadonlyGetSinkRequest extends GetSinkRequest with ReadonlyMessageMixin {
 }
 
 class CreateSinkRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateSinkRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateSinkRequest')
     ..aOS(1, 'parent')
     ..a<LogSink>(2, 'sink', PbFieldType.OM, LogSink.getDefault, LogSink.create)
     ..aOB(3, 'uniqueWriterIdentity')
@@ -288,14 +286,14 @@ class CreateSinkRequest extends GeneratedMessage {
   CreateSinkRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateSinkRequest clone() => new CreateSinkRequest()..mergeFromMessage(this);
+  CreateSinkRequest clone() => CreateSinkRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateSinkRequest create() => new CreateSinkRequest();
+  static CreateSinkRequest create() => CreateSinkRequest();
   static PbList<CreateSinkRequest> createRepeated() =>
-      new PbList<CreateSinkRequest>();
+      PbList<CreateSinkRequest>();
   static CreateSinkRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateSinkRequest();
+      _defaultInstance = _ReadonlyCreateSinkRequest();
     return _defaultInstance;
   }
 
@@ -333,7 +331,7 @@ class _ReadonlyCreateSinkRequest extends CreateSinkRequest
     with ReadonlyMessageMixin {}
 
 class UpdateSinkRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateSinkRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateSinkRequest')
     ..aOS(1, 'sinkName')
     ..a<LogSink>(2, 'sink', PbFieldType.OM, LogSink.getDefault, LogSink.create)
     ..aOB(3, 'uniqueWriterIdentity')
@@ -352,14 +350,14 @@ class UpdateSinkRequest extends GeneratedMessage {
   UpdateSinkRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateSinkRequest clone() => new UpdateSinkRequest()..mergeFromMessage(this);
+  UpdateSinkRequest clone() => UpdateSinkRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateSinkRequest create() => new UpdateSinkRequest();
+  static UpdateSinkRequest create() => UpdateSinkRequest();
   static PbList<UpdateSinkRequest> createRepeated() =>
-      new PbList<UpdateSinkRequest>();
+      PbList<UpdateSinkRequest>();
   static UpdateSinkRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateSinkRequest();
+      _defaultInstance = _ReadonlyUpdateSinkRequest();
     return _defaultInstance;
   }
 
@@ -405,7 +403,7 @@ class _ReadonlyUpdateSinkRequest extends UpdateSinkRequest
     with ReadonlyMessageMixin {}
 
 class DeleteSinkRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSinkRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteSinkRequest')
     ..aOS(1, 'sinkName')
     ..hasRequiredFields = false;
 
@@ -416,14 +414,14 @@ class DeleteSinkRequest extends GeneratedMessage {
   DeleteSinkRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteSinkRequest clone() => new DeleteSinkRequest()..mergeFromMessage(this);
+  DeleteSinkRequest clone() => DeleteSinkRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteSinkRequest create() => new DeleteSinkRequest();
+  static DeleteSinkRequest create() => DeleteSinkRequest();
   static PbList<DeleteSinkRequest> createRepeated() =>
-      new PbList<DeleteSinkRequest>();
+      PbList<DeleteSinkRequest>();
   static DeleteSinkRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSinkRequest();
+      _defaultInstance = _ReadonlyDeleteSinkRequest();
     return _defaultInstance;
   }
 
@@ -445,7 +443,7 @@ class _ReadonlyDeleteSinkRequest extends DeleteSinkRequest
     with ReadonlyMessageMixin {}
 
 class LogExclusion extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogExclusion')
+  static final BuilderInfo _i = BuilderInfo('LogExclusion')
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOS(3, 'filter')
@@ -459,13 +457,12 @@ class LogExclusion extends GeneratedMessage {
   LogExclusion.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogExclusion clone() => new LogExclusion()..mergeFromMessage(this);
+  LogExclusion clone() => LogExclusion()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LogExclusion create() => new LogExclusion();
-  static PbList<LogExclusion> createRepeated() => new PbList<LogExclusion>();
+  static LogExclusion create() => LogExclusion();
+  static PbList<LogExclusion> createRepeated() => PbList<LogExclusion>();
   static LogExclusion getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLogExclusion();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLogExclusion();
     return _defaultInstance;
   }
 
@@ -510,7 +507,7 @@ class LogExclusion extends GeneratedMessage {
 class _ReadonlyLogExclusion extends LogExclusion with ReadonlyMessageMixin {}
 
 class ListExclusionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListExclusionsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListExclusionsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -524,14 +521,14 @@ class ListExclusionsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListExclusionsRequest clone() =>
-      new ListExclusionsRequest()..mergeFromMessage(this);
+      ListExclusionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListExclusionsRequest create() => new ListExclusionsRequest();
+  static ListExclusionsRequest create() => ListExclusionsRequest();
   static PbList<ListExclusionsRequest> createRepeated() =>
-      new PbList<ListExclusionsRequest>();
+      PbList<ListExclusionsRequest>();
   static ListExclusionsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListExclusionsRequest();
+      _defaultInstance = _ReadonlyListExclusionsRequest();
     return _defaultInstance;
   }
 
@@ -570,7 +567,7 @@ class _ReadonlyListExclusionsRequest extends ListExclusionsRequest
     with ReadonlyMessageMixin {}
 
 class ListExclusionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListExclusionsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListExclusionsResponse')
     ..pp<LogExclusion>(1, 'exclusions', PbFieldType.PM, LogExclusion.$checkItem,
         LogExclusion.create)
     ..aOS(2, 'nextPageToken')
@@ -584,14 +581,14 @@ class ListExclusionsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListExclusionsResponse clone() =>
-      new ListExclusionsResponse()..mergeFromMessage(this);
+      ListExclusionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListExclusionsResponse create() => new ListExclusionsResponse();
+  static ListExclusionsResponse create() => ListExclusionsResponse();
   static PbList<ListExclusionsResponse> createRepeated() =>
-      new PbList<ListExclusionsResponse>();
+      PbList<ListExclusionsResponse>();
   static ListExclusionsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListExclusionsResponse();
+      _defaultInstance = _ReadonlyListExclusionsResponse();
     return _defaultInstance;
   }
 
@@ -616,7 +613,7 @@ class _ReadonlyListExclusionsResponse extends ListExclusionsResponse
     with ReadonlyMessageMixin {}
 
 class GetExclusionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetExclusionRequest')
+  static final BuilderInfo _i = BuilderInfo('GetExclusionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -627,15 +624,14 @@ class GetExclusionRequest extends GeneratedMessage {
   GetExclusionRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetExclusionRequest clone() =>
-      new GetExclusionRequest()..mergeFromMessage(this);
+  GetExclusionRequest clone() => GetExclusionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetExclusionRequest create() => new GetExclusionRequest();
+  static GetExclusionRequest create() => GetExclusionRequest();
   static PbList<GetExclusionRequest> createRepeated() =>
-      new PbList<GetExclusionRequest>();
+      PbList<GetExclusionRequest>();
   static GetExclusionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetExclusionRequest();
+      _defaultInstance = _ReadonlyGetExclusionRequest();
     return _defaultInstance;
   }
 
@@ -657,7 +653,7 @@ class _ReadonlyGetExclusionRequest extends GetExclusionRequest
     with ReadonlyMessageMixin {}
 
 class CreateExclusionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateExclusionRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateExclusionRequest')
     ..aOS(1, 'parent')
     ..a<LogExclusion>(2, 'exclusion', PbFieldType.OM, LogExclusion.getDefault,
         LogExclusion.create)
@@ -671,14 +667,14 @@ class CreateExclusionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateExclusionRequest clone() =>
-      new CreateExclusionRequest()..mergeFromMessage(this);
+      CreateExclusionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateExclusionRequest create() => new CreateExclusionRequest();
+  static CreateExclusionRequest create() => CreateExclusionRequest();
   static PbList<CreateExclusionRequest> createRepeated() =>
-      new PbList<CreateExclusionRequest>();
+      PbList<CreateExclusionRequest>();
   static CreateExclusionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateExclusionRequest();
+      _defaultInstance = _ReadonlyCreateExclusionRequest();
     return _defaultInstance;
   }
 
@@ -709,7 +705,7 @@ class _ReadonlyCreateExclusionRequest extends CreateExclusionRequest
     with ReadonlyMessageMixin {}
 
 class UpdateExclusionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateExclusionRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateExclusionRequest')
     ..aOS(1, 'name')
     ..a<LogExclusion>(2, 'exclusion', PbFieldType.OM, LogExclusion.getDefault,
         LogExclusion.create)
@@ -729,14 +725,14 @@ class UpdateExclusionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateExclusionRequest clone() =>
-      new UpdateExclusionRequest()..mergeFromMessage(this);
+      UpdateExclusionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateExclusionRequest create() => new UpdateExclusionRequest();
+  static UpdateExclusionRequest create() => UpdateExclusionRequest();
   static PbList<UpdateExclusionRequest> createRepeated() =>
-      new PbList<UpdateExclusionRequest>();
+      PbList<UpdateExclusionRequest>();
   static UpdateExclusionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateExclusionRequest();
+      _defaultInstance = _ReadonlyUpdateExclusionRequest();
     return _defaultInstance;
   }
 
@@ -775,7 +771,7 @@ class _ReadonlyUpdateExclusionRequest extends UpdateExclusionRequest
     with ReadonlyMessageMixin {}
 
 class DeleteExclusionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteExclusionRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteExclusionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -787,14 +783,14 @@ class DeleteExclusionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteExclusionRequest clone() =>
-      new DeleteExclusionRequest()..mergeFromMessage(this);
+      DeleteExclusionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteExclusionRequest create() => new DeleteExclusionRequest();
+  static DeleteExclusionRequest create() => DeleteExclusionRequest();
   static PbList<DeleteExclusionRequest> createRepeated() =>
-      new PbList<DeleteExclusionRequest>();
+      PbList<DeleteExclusionRequest>();
   static DeleteExclusionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteExclusionRequest();
+      _defaultInstance = _ReadonlyDeleteExclusionRequest();
     return _defaultInstance;
   }
 
@@ -822,67 +818,67 @@ class ConfigServiceV2Api {
 
   Future<ListSinksResponse> listSinks(
       ClientContext ctx, ListSinksRequest request) {
-    var emptyResponse = new ListSinksResponse();
+    var emptyResponse = ListSinksResponse();
     return _client.invoke<ListSinksResponse>(
         ctx, 'ConfigServiceV2', 'ListSinks', request, emptyResponse);
   }
 
   Future<LogSink> getSink(ClientContext ctx, GetSinkRequest request) {
-    var emptyResponse = new LogSink();
+    var emptyResponse = LogSink();
     return _client.invoke<LogSink>(
         ctx, 'ConfigServiceV2', 'GetSink', request, emptyResponse);
   }
 
   Future<LogSink> createSink(ClientContext ctx, CreateSinkRequest request) {
-    var emptyResponse = new LogSink();
+    var emptyResponse = LogSink();
     return _client.invoke<LogSink>(
         ctx, 'ConfigServiceV2', 'CreateSink', request, emptyResponse);
   }
 
   Future<LogSink> updateSink(ClientContext ctx, UpdateSinkRequest request) {
-    var emptyResponse = new LogSink();
+    var emptyResponse = LogSink();
     return _client.invoke<LogSink>(
         ctx, 'ConfigServiceV2', 'UpdateSink', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteSink(
       ClientContext ctx, DeleteSinkRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'ConfigServiceV2', 'DeleteSink', request, emptyResponse);
   }
 
   Future<ListExclusionsResponse> listExclusions(
       ClientContext ctx, ListExclusionsRequest request) {
-    var emptyResponse = new ListExclusionsResponse();
+    var emptyResponse = ListExclusionsResponse();
     return _client.invoke<ListExclusionsResponse>(
         ctx, 'ConfigServiceV2', 'ListExclusions', request, emptyResponse);
   }
 
   Future<LogExclusion> getExclusion(
       ClientContext ctx, GetExclusionRequest request) {
-    var emptyResponse = new LogExclusion();
+    var emptyResponse = LogExclusion();
     return _client.invoke<LogExclusion>(
         ctx, 'ConfigServiceV2', 'GetExclusion', request, emptyResponse);
   }
 
   Future<LogExclusion> createExclusion(
       ClientContext ctx, CreateExclusionRequest request) {
-    var emptyResponse = new LogExclusion();
+    var emptyResponse = LogExclusion();
     return _client.invoke<LogExclusion>(
         ctx, 'ConfigServiceV2', 'CreateExclusion', request, emptyResponse);
   }
 
   Future<LogExclusion> updateExclusion(
       ClientContext ctx, UpdateExclusionRequest request) {
-    var emptyResponse = new LogExclusion();
+    var emptyResponse = LogExclusion();
     return _client.invoke<LogExclusion>(
         ctx, 'ConfigServiceV2', 'UpdateExclusion', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteExclusion(
       ClientContext ctx, DeleteExclusionRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'ConfigServiceV2', 'DeleteExclusion', request, emptyResponse);
   }

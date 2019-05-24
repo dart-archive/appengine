@@ -8,10 +8,10 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class VersionView extends ProtobufEnum {
-  static const VersionView BASIC = const VersionView._(0, 'BASIC');
-  static const VersionView FULL = const VersionView._(1, 'FULL');
+  static const VersionView BASIC = VersionView._(0, 'BASIC');
+  static const VersionView FULL = VersionView._(1, 'FULL');
 
-  static const List<VersionView> values = const <VersionView>[
+  static const List<VersionView> values = <VersionView>[
     BASIC,
     FULL,
   ];

@@ -3,10 +3,10 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const FileDescriptorSet$json = const {
+const FileDescriptorSet$json = {
   '1': 'FileDescriptorSet',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'file',
       '3': 1,
       '4': 3,
@@ -17,27 +17,21 @@ const FileDescriptorSet$json = const {
   ],
 };
 
-const FileDescriptorProto$json = const {
+const FileDescriptorProto$json = {
   '1': 'FileDescriptorProto',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'package', '3': 2, '4': 1, '5': 9, '10': 'package'},
-    const {'1': 'dependency', '3': 3, '4': 3, '5': 9, '10': 'dependency'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'package', '3': 2, '4': 1, '5': 9, '10': 'package'},
+    {'1': 'dependency', '3': 3, '4': 3, '5': 9, '10': 'dependency'},
+    {
       '1': 'public_dependency',
       '3': 10,
       '4': 3,
       '5': 5,
       '10': 'publicDependency'
     },
-    const {
-      '1': 'weak_dependency',
-      '3': 11,
-      '4': 3,
-      '5': 5,
-      '10': 'weakDependency'
-    },
-    const {
+    {'1': 'weak_dependency', '3': 11, '4': 3, '5': 5, '10': 'weakDependency'},
+    {
       '1': 'message_type',
       '3': 4,
       '4': 3,
@@ -45,7 +39,7 @@ const FileDescriptorProto$json = const {
       '6': '.google.protobuf.DescriptorProto',
       '10': 'messageType'
     },
-    const {
+    {
       '1': 'enum_type',
       '3': 5,
       '4': 3,
@@ -53,7 +47,7 @@ const FileDescriptorProto$json = const {
       '6': '.google.protobuf.EnumDescriptorProto',
       '10': 'enumType'
     },
-    const {
+    {
       '1': 'service',
       '3': 6,
       '4': 3,
@@ -61,7 +55,7 @@ const FileDescriptorProto$json = const {
       '6': '.google.protobuf.ServiceDescriptorProto',
       '10': 'service'
     },
-    const {
+    {
       '1': 'extension',
       '3': 7,
       '4': 3,
@@ -69,7 +63,7 @@ const FileDescriptorProto$json = const {
       '6': '.google.protobuf.FieldDescriptorProto',
       '10': 'extension'
     },
-    const {
+    {
       '1': 'options',
       '3': 8,
       '4': 1,
@@ -77,7 +71,7 @@ const FileDescriptorProto$json = const {
       '6': '.google.protobuf.FileOptions',
       '10': 'options'
     },
-    const {
+    {
       '1': 'source_code_info',
       '3': 9,
       '4': 1,
@@ -85,15 +79,15 @@ const FileDescriptorProto$json = const {
       '6': '.google.protobuf.SourceCodeInfo',
       '10': 'sourceCodeInfo'
     },
-    const {'1': 'syntax', '3': 12, '4': 1, '5': 9, '10': 'syntax'},
+    {'1': 'syntax', '3': 12, '4': 1, '5': 9, '10': 'syntax'},
   ],
 };
 
-const DescriptorProto$json = const {
+const DescriptorProto$json = {
   '1': 'DescriptorProto',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'field',
       '3': 2,
       '4': 3,
@@ -101,7 +95,7 @@ const DescriptorProto$json = const {
       '6': '.google.protobuf.FieldDescriptorProto',
       '10': 'field'
     },
-    const {
+    {
       '1': 'extension',
       '3': 6,
       '4': 3,
@@ -109,7 +103,7 @@ const DescriptorProto$json = const {
       '6': '.google.protobuf.FieldDescriptorProto',
       '10': 'extension'
     },
-    const {
+    {
       '1': 'nested_type',
       '3': 3,
       '4': 3,
@@ -117,7 +111,7 @@ const DescriptorProto$json = const {
       '6': '.google.protobuf.DescriptorProto',
       '10': 'nestedType'
     },
-    const {
+    {
       '1': 'enum_type',
       '3': 4,
       '4': 3,
@@ -125,7 +119,7 @@ const DescriptorProto$json = const {
       '6': '.google.protobuf.EnumDescriptorProto',
       '10': 'enumType'
     },
-    const {
+    {
       '1': 'extension_range',
       '3': 5,
       '4': 3,
@@ -133,7 +127,7 @@ const DescriptorProto$json = const {
       '6': '.google.protobuf.DescriptorProto.ExtensionRange',
       '10': 'extensionRange'
     },
-    const {
+    {
       '1': 'oneof_decl',
       '3': 8,
       '4': 3,
@@ -141,7 +135,7 @@ const DescriptorProto$json = const {
       '6': '.google.protobuf.OneofDescriptorProto',
       '10': 'oneofDecl'
     },
-    const {
+    {
       '1': 'options',
       '3': 7,
       '4': 1,
@@ -149,7 +143,7 @@ const DescriptorProto$json = const {
       '6': '.google.protobuf.MessageOptions',
       '10': 'options'
     },
-    const {
+    {
       '1': 'reserved_range',
       '3': 9,
       '4': 3,
@@ -157,20 +151,20 @@ const DescriptorProto$json = const {
       '6': '.google.protobuf.DescriptorProto.ReservedRange',
       '10': 'reservedRange'
     },
-    const {'1': 'reserved_name', '3': 10, '4': 3, '5': 9, '10': 'reservedName'},
+    {'1': 'reserved_name', '3': 10, '4': 3, '5': 9, '10': 'reservedName'},
   ],
-  '3': const [
+  '3': [
     DescriptorProto_ExtensionRange$json,
     DescriptorProto_ReservedRange$json
   ],
 };
 
-const DescriptorProto_ExtensionRange$json = const {
+const DescriptorProto_ExtensionRange$json = {
   '1': 'ExtensionRange',
-  '2': const [
-    const {'1': 'start', '3': 1, '4': 1, '5': 5, '10': 'start'},
-    const {'1': 'end', '3': 2, '4': 1, '5': 5, '10': 'end'},
-    const {
+  '2': [
+    {'1': 'start', '3': 1, '4': 1, '5': 5, '10': 'start'},
+    {'1': 'end', '3': 2, '4': 1, '5': 5, '10': 'end'},
+    {
       '1': 'options',
       '3': 3,
       '4': 1,
@@ -181,18 +175,18 @@ const DescriptorProto_ExtensionRange$json = const {
   ],
 };
 
-const DescriptorProto_ReservedRange$json = const {
+const DescriptorProto_ReservedRange$json = {
   '1': 'ReservedRange',
-  '2': const [
-    const {'1': 'start', '3': 1, '4': 1, '5': 5, '10': 'start'},
-    const {'1': 'end', '3': 2, '4': 1, '5': 5, '10': 'end'},
+  '2': [
+    {'1': 'start', '3': 1, '4': 1, '5': 5, '10': 'start'},
+    {'1': 'end', '3': 2, '4': 1, '5': 5, '10': 'end'},
   ],
 };
 
-const ExtensionRangeOptions$json = const {
+const ExtensionRangeOptions$json = {
   '1': 'ExtensionRangeOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -201,17 +195,17 @@ const ExtensionRangeOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
 };
 
-const FieldDescriptorProto$json = const {
+const FieldDescriptorProto$json = {
   '1': 'FieldDescriptorProto',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'number', '3': 3, '4': 1, '5': 5, '10': 'number'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'number', '3': 3, '4': 1, '5': 5, '10': 'number'},
+    {
       '1': 'label',
       '3': 4,
       '4': 1,
@@ -219,7 +213,7 @@ const FieldDescriptorProto$json = const {
       '6': '.google.protobuf.FieldDescriptorProto.Label',
       '10': 'label'
     },
-    const {
+    {
       '1': 'type',
       '3': 5,
       '4': 1,
@@ -227,12 +221,12 @@ const FieldDescriptorProto$json = const {
       '6': '.google.protobuf.FieldDescriptorProto.Type',
       '10': 'type'
     },
-    const {'1': 'type_name', '3': 6, '4': 1, '5': 9, '10': 'typeName'},
-    const {'1': 'extendee', '3': 2, '4': 1, '5': 9, '10': 'extendee'},
-    const {'1': 'default_value', '3': 7, '4': 1, '5': 9, '10': 'defaultValue'},
-    const {'1': 'oneof_index', '3': 9, '4': 1, '5': 5, '10': 'oneofIndex'},
-    const {'1': 'json_name', '3': 10, '4': 1, '5': 9, '10': 'jsonName'},
-    const {
+    {'1': 'type_name', '3': 6, '4': 1, '5': 9, '10': 'typeName'},
+    {'1': 'extendee', '3': 2, '4': 1, '5': 9, '10': 'extendee'},
+    {'1': 'default_value', '3': 7, '4': 1, '5': 9, '10': 'defaultValue'},
+    {'1': 'oneof_index', '3': 9, '4': 1, '5': 5, '10': 'oneofIndex'},
+    {'1': 'json_name', '3': 10, '4': 1, '5': 9, '10': 'jsonName'},
+    {
       '1': 'options',
       '3': 8,
       '4': 1,
@@ -241,47 +235,47 @@ const FieldDescriptorProto$json = const {
       '10': 'options'
     },
   ],
-  '4': const [FieldDescriptorProto_Type$json, FieldDescriptorProto_Label$json],
+  '4': [FieldDescriptorProto_Type$json, FieldDescriptorProto_Label$json],
 };
 
-const FieldDescriptorProto_Type$json = const {
+const FieldDescriptorProto_Type$json = {
   '1': 'Type',
-  '2': const [
-    const {'1': 'TYPE_DOUBLE', '2': 1},
-    const {'1': 'TYPE_FLOAT', '2': 2},
-    const {'1': 'TYPE_INT64', '2': 3},
-    const {'1': 'TYPE_UINT64', '2': 4},
-    const {'1': 'TYPE_INT32', '2': 5},
-    const {'1': 'TYPE_FIXED64', '2': 6},
-    const {'1': 'TYPE_FIXED32', '2': 7},
-    const {'1': 'TYPE_BOOL', '2': 8},
-    const {'1': 'TYPE_STRING', '2': 9},
-    const {'1': 'TYPE_GROUP', '2': 10},
-    const {'1': 'TYPE_MESSAGE', '2': 11},
-    const {'1': 'TYPE_BYTES', '2': 12},
-    const {'1': 'TYPE_UINT32', '2': 13},
-    const {'1': 'TYPE_ENUM', '2': 14},
-    const {'1': 'TYPE_SFIXED32', '2': 15},
-    const {'1': 'TYPE_SFIXED64', '2': 16},
-    const {'1': 'TYPE_SINT32', '2': 17},
-    const {'1': 'TYPE_SINT64', '2': 18},
+  '2': [
+    {'1': 'TYPE_DOUBLE', '2': 1},
+    {'1': 'TYPE_FLOAT', '2': 2},
+    {'1': 'TYPE_INT64', '2': 3},
+    {'1': 'TYPE_UINT64', '2': 4},
+    {'1': 'TYPE_INT32', '2': 5},
+    {'1': 'TYPE_FIXED64', '2': 6},
+    {'1': 'TYPE_FIXED32', '2': 7},
+    {'1': 'TYPE_BOOL', '2': 8},
+    {'1': 'TYPE_STRING', '2': 9},
+    {'1': 'TYPE_GROUP', '2': 10},
+    {'1': 'TYPE_MESSAGE', '2': 11},
+    {'1': 'TYPE_BYTES', '2': 12},
+    {'1': 'TYPE_UINT32', '2': 13},
+    {'1': 'TYPE_ENUM', '2': 14},
+    {'1': 'TYPE_SFIXED32', '2': 15},
+    {'1': 'TYPE_SFIXED64', '2': 16},
+    {'1': 'TYPE_SINT32', '2': 17},
+    {'1': 'TYPE_SINT64', '2': 18},
   ],
 };
 
-const FieldDescriptorProto_Label$json = const {
+const FieldDescriptorProto_Label$json = {
   '1': 'Label',
-  '2': const [
-    const {'1': 'LABEL_OPTIONAL', '2': 1},
-    const {'1': 'LABEL_REQUIRED', '2': 2},
-    const {'1': 'LABEL_REPEATED', '2': 3},
+  '2': [
+    {'1': 'LABEL_OPTIONAL', '2': 1},
+    {'1': 'LABEL_REQUIRED', '2': 2},
+    {'1': 'LABEL_REPEATED', '2': 3},
   ],
 };
 
-const OneofDescriptorProto$json = const {
+const OneofDescriptorProto$json = {
   '1': 'OneofDescriptorProto',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'options',
       '3': 2,
       '4': 1,
@@ -292,11 +286,11 @@ const OneofDescriptorProto$json = const {
   ],
 };
 
-const EnumDescriptorProto$json = const {
+const EnumDescriptorProto$json = {
   '1': 'EnumDescriptorProto',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'value',
       '3': 2,
       '4': 3,
@@ -304,7 +298,7 @@ const EnumDescriptorProto$json = const {
       '6': '.google.protobuf.EnumValueDescriptorProto',
       '10': 'value'
     },
-    const {
+    {
       '1': 'options',
       '3': 3,
       '4': 1,
@@ -312,7 +306,7 @@ const EnumDescriptorProto$json = const {
       '6': '.google.protobuf.EnumOptions',
       '10': 'options'
     },
-    const {
+    {
       '1': 'reserved_range',
       '3': 4,
       '4': 3,
@@ -320,25 +314,25 @@ const EnumDescriptorProto$json = const {
       '6': '.google.protobuf.EnumDescriptorProto.EnumReservedRange',
       '10': 'reservedRange'
     },
-    const {'1': 'reserved_name', '3': 5, '4': 3, '5': 9, '10': 'reservedName'},
+    {'1': 'reserved_name', '3': 5, '4': 3, '5': 9, '10': 'reservedName'},
   ],
-  '3': const [EnumDescriptorProto_EnumReservedRange$json],
+  '3': [EnumDescriptorProto_EnumReservedRange$json],
 };
 
-const EnumDescriptorProto_EnumReservedRange$json = const {
+const EnumDescriptorProto_EnumReservedRange$json = {
   '1': 'EnumReservedRange',
-  '2': const [
-    const {'1': 'start', '3': 1, '4': 1, '5': 5, '10': 'start'},
-    const {'1': 'end', '3': 2, '4': 1, '5': 5, '10': 'end'},
+  '2': [
+    {'1': 'start', '3': 1, '4': 1, '5': 5, '10': 'start'},
+    {'1': 'end', '3': 2, '4': 1, '5': 5, '10': 'end'},
   ],
 };
 
-const EnumValueDescriptorProto$json = const {
+const EnumValueDescriptorProto$json = {
   '1': 'EnumValueDescriptorProto',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'number', '3': 2, '4': 1, '5': 5, '10': 'number'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'number', '3': 2, '4': 1, '5': 5, '10': 'number'},
+    {
       '1': 'options',
       '3': 3,
       '4': 1,
@@ -349,11 +343,11 @@ const EnumValueDescriptorProto$json = const {
   ],
 };
 
-const ServiceDescriptorProto$json = const {
+const ServiceDescriptorProto$json = {
   '1': 'ServiceDescriptorProto',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'method',
       '3': 2,
       '4': 3,
@@ -361,7 +355,7 @@ const ServiceDescriptorProto$json = const {
       '6': '.google.protobuf.MethodDescriptorProto',
       '10': 'method'
     },
-    const {
+    {
       '1': 'options',
       '3': 3,
       '4': 1,
@@ -372,13 +366,13 @@ const ServiceDescriptorProto$json = const {
   ],
 };
 
-const MethodDescriptorProto$json = const {
+const MethodDescriptorProto$json = {
   '1': 'MethodDescriptorProto',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'input_type', '3': 2, '4': 1, '5': 9, '10': 'inputType'},
-    const {'1': 'output_type', '3': 3, '4': 1, '5': 9, '10': 'outputType'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'input_type', '3': 2, '4': 1, '5': 9, '10': 'inputType'},
+    {'1': 'output_type', '3': 3, '4': 1, '5': 9, '10': 'outputType'},
+    {
       '1': 'options',
       '3': 4,
       '4': 1,
@@ -386,7 +380,7 @@ const MethodDescriptorProto$json = const {
       '6': '.google.protobuf.MethodOptions',
       '10': 'options'
     },
-    const {
+    {
       '1': 'client_streaming',
       '3': 5,
       '4': 1,
@@ -394,7 +388,7 @@ const MethodDescriptorProto$json = const {
       '7': 'false',
       '10': 'clientStreaming'
     },
-    const {
+    {
       '1': 'server_streaming',
       '3': 6,
       '4': 1,
@@ -405,18 +399,18 @@ const MethodDescriptorProto$json = const {
   ],
 };
 
-const FileOptions$json = const {
+const FileOptions$json = {
   '1': 'FileOptions',
-  '2': const [
-    const {'1': 'java_package', '3': 1, '4': 1, '5': 9, '10': 'javaPackage'},
-    const {
+  '2': [
+    {'1': 'java_package', '3': 1, '4': 1, '5': 9, '10': 'javaPackage'},
+    {
       '1': 'java_outer_classname',
       '3': 8,
       '4': 1,
       '5': 9,
       '10': 'javaOuterClassname'
     },
-    const {
+    {
       '1': 'java_multiple_files',
       '3': 10,
       '4': 1,
@@ -424,15 +418,15 @@ const FileOptions$json = const {
       '7': 'false',
       '10': 'javaMultipleFiles'
     },
-    const {
+    {
       '1': 'java_generate_equals_and_hash',
       '3': 20,
       '4': 1,
       '5': 8,
-      '8': const {'3': true},
+      '8': {'3': true},
       '10': 'javaGenerateEqualsAndHash',
     },
-    const {
+    {
       '1': 'java_string_check_utf8',
       '3': 27,
       '4': 1,
@@ -440,7 +434,7 @@ const FileOptions$json = const {
       '7': 'false',
       '10': 'javaStringCheckUtf8'
     },
-    const {
+    {
       '1': 'optimize_for',
       '3': 9,
       '4': 1,
@@ -449,8 +443,8 @@ const FileOptions$json = const {
       '7': 'SPEED',
       '10': 'optimizeFor'
     },
-    const {'1': 'go_package', '3': 11, '4': 1, '5': 9, '10': 'goPackage'},
-    const {
+    {'1': 'go_package', '3': 11, '4': 1, '5': 9, '10': 'goPackage'},
+    {
       '1': 'cc_generic_services',
       '3': 16,
       '4': 1,
@@ -458,7 +452,7 @@ const FileOptions$json = const {
       '7': 'false',
       '10': 'ccGenericServices'
     },
-    const {
+    {
       '1': 'java_generic_services',
       '3': 17,
       '4': 1,
@@ -466,7 +460,7 @@ const FileOptions$json = const {
       '7': 'false',
       '10': 'javaGenericServices'
     },
-    const {
+    {
       '1': 'py_generic_services',
       '3': 18,
       '4': 1,
@@ -474,7 +468,7 @@ const FileOptions$json = const {
       '7': 'false',
       '10': 'pyGenericServices'
     },
-    const {
+    {
       '1': 'php_generic_services',
       '3': 42,
       '4': 1,
@@ -482,7 +476,7 @@ const FileOptions$json = const {
       '7': 'false',
       '10': 'phpGenericServices'
     },
-    const {
+    {
       '1': 'deprecated',
       '3': 23,
       '4': 1,
@@ -490,7 +484,7 @@ const FileOptions$json = const {
       '7': 'false',
       '10': 'deprecated'
     },
-    const {
+    {
       '1': 'cc_enable_arenas',
       '3': 31,
       '4': 1,
@@ -498,38 +492,26 @@ const FileOptions$json = const {
       '7': 'false',
       '10': 'ccEnableArenas'
     },
-    const {
+    {
       '1': 'objc_class_prefix',
       '3': 36,
       '4': 1,
       '5': 9,
       '10': 'objcClassPrefix'
     },
-    const {
-      '1': 'csharp_namespace',
-      '3': 37,
-      '4': 1,
-      '5': 9,
-      '10': 'csharpNamespace'
-    },
-    const {'1': 'swift_prefix', '3': 39, '4': 1, '5': 9, '10': 'swiftPrefix'},
-    const {
-      '1': 'php_class_prefix',
-      '3': 40,
-      '4': 1,
-      '5': 9,
-      '10': 'phpClassPrefix'
-    },
-    const {'1': 'php_namespace', '3': 41, '4': 1, '5': 9, '10': 'phpNamespace'},
-    const {
+    {'1': 'csharp_namespace', '3': 37, '4': 1, '5': 9, '10': 'csharpNamespace'},
+    {'1': 'swift_prefix', '3': 39, '4': 1, '5': 9, '10': 'swiftPrefix'},
+    {'1': 'php_class_prefix', '3': 40, '4': 1, '5': 9, '10': 'phpClassPrefix'},
+    {'1': 'php_namespace', '3': 41, '4': 1, '5': 9, '10': 'phpNamespace'},
+    {
       '1': 'php_metadata_namespace',
       '3': 44,
       '4': 1,
       '5': 9,
       '10': 'phpMetadataNamespace'
     },
-    const {'1': 'ruby_package', '3': 45, '4': 1, '5': 9, '10': 'rubyPackage'},
-    const {
+    {'1': 'ruby_package', '3': 45, '4': 1, '5': 9, '10': 'rubyPackage'},
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -538,28 +520,28 @@ const FileOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '4': const [FileOptions_OptimizeMode$json],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '4': [FileOptions_OptimizeMode$json],
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
-  '9': const [
-    const {'1': 38, '2': 39},
+  '9': [
+    {'1': 38, '2': 39},
   ],
 };
 
-const FileOptions_OptimizeMode$json = const {
+const FileOptions_OptimizeMode$json = {
   '1': 'OptimizeMode',
-  '2': const [
-    const {'1': 'SPEED', '2': 1},
-    const {'1': 'CODE_SIZE', '2': 2},
-    const {'1': 'LITE_RUNTIME', '2': 3},
+  '2': [
+    {'1': 'SPEED', '2': 1},
+    {'1': 'CODE_SIZE', '2': 2},
+    {'1': 'LITE_RUNTIME', '2': 3},
   ],
 };
 
-const MessageOptions$json = const {
+const MessageOptions$json = {
   '1': 'MessageOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'message_set_wire_format',
       '3': 1,
       '4': 1,
@@ -567,7 +549,7 @@ const MessageOptions$json = const {
       '7': 'false',
       '10': 'messageSetWireFormat'
     },
-    const {
+    {
       '1': 'no_standard_descriptor_accessor',
       '3': 2,
       '4': 1,
@@ -575,7 +557,7 @@ const MessageOptions$json = const {
       '7': 'false',
       '10': 'noStandardDescriptorAccessor'
     },
-    const {
+    {
       '1': 'deprecated',
       '3': 3,
       '4': 1,
@@ -583,8 +565,8 @@ const MessageOptions$json = const {
       '7': 'false',
       '10': 'deprecated'
     },
-    const {'1': 'map_entry', '3': 7, '4': 1, '5': 8, '10': 'mapEntry'},
-    const {
+    {'1': 'map_entry', '3': 7, '4': 1, '5': 8, '10': 'mapEntry'},
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -593,19 +575,19 @@ const MessageOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
-  '9': const [
-    const {'1': 8, '2': 9},
-    const {'1': 9, '2': 10},
+  '9': [
+    {'1': 8, '2': 9},
+    {'1': 9, '2': 10},
   ],
 };
 
-const FieldOptions$json = const {
+const FieldOptions$json = {
   '1': 'FieldOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'ctype',
       '3': 1,
       '4': 1,
@@ -614,8 +596,8 @@ const FieldOptions$json = const {
       '7': 'STRING',
       '10': 'ctype'
     },
-    const {'1': 'packed', '3': 2, '4': 1, '5': 8, '10': 'packed'},
-    const {
+    {'1': 'packed', '3': 2, '4': 1, '5': 8, '10': 'packed'},
+    {
       '1': 'jstype',
       '3': 6,
       '4': 1,
@@ -624,8 +606,8 @@ const FieldOptions$json = const {
       '7': 'JS_NORMAL',
       '10': 'jstype'
     },
-    const {'1': 'lazy', '3': 5, '4': 1, '5': 8, '7': 'false', '10': 'lazy'},
-    const {
+    {'1': 'lazy', '3': 5, '4': 1, '5': 8, '7': 'false', '10': 'lazy'},
+    {
       '1': 'deprecated',
       '3': 3,
       '4': 1,
@@ -633,8 +615,8 @@ const FieldOptions$json = const {
       '7': 'false',
       '10': 'deprecated'
     },
-    const {'1': 'weak', '3': 10, '4': 1, '5': 8, '7': 'false', '10': 'weak'},
-    const {
+    {'1': 'weak', '3': 10, '4': 1, '5': 8, '7': 'false', '10': 'weak'},
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -643,37 +625,37 @@ const FieldOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '4': const [FieldOptions_CType$json, FieldOptions_JSType$json],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '4': [FieldOptions_CType$json, FieldOptions_JSType$json],
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
-  '9': const [
-    const {'1': 4, '2': 5},
+  '9': [
+    {'1': 4, '2': 5},
   ],
 };
 
-const FieldOptions_CType$json = const {
+const FieldOptions_CType$json = {
   '1': 'CType',
-  '2': const [
-    const {'1': 'STRING', '2': 0},
-    const {'1': 'CORD', '2': 1},
-    const {'1': 'STRING_PIECE', '2': 2},
+  '2': [
+    {'1': 'STRING', '2': 0},
+    {'1': 'CORD', '2': 1},
+    {'1': 'STRING_PIECE', '2': 2},
   ],
 };
 
-const FieldOptions_JSType$json = const {
+const FieldOptions_JSType$json = {
   '1': 'JSType',
-  '2': const [
-    const {'1': 'JS_NORMAL', '2': 0},
-    const {'1': 'JS_STRING', '2': 1},
-    const {'1': 'JS_NUMBER', '2': 2},
+  '2': [
+    {'1': 'JS_NORMAL', '2': 0},
+    {'1': 'JS_STRING', '2': 1},
+    {'1': 'JS_NUMBER', '2': 2},
   ],
 };
 
-const OneofOptions$json = const {
+const OneofOptions$json = {
   '1': 'OneofOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -682,16 +664,16 @@ const OneofOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
 };
 
-const EnumOptions$json = const {
+const EnumOptions$json = {
   '1': 'EnumOptions',
-  '2': const [
-    const {'1': 'allow_alias', '3': 2, '4': 1, '5': 8, '10': 'allowAlias'},
-    const {
+  '2': [
+    {'1': 'allow_alias', '3': 2, '4': 1, '5': 8, '10': 'allowAlias'},
+    {
       '1': 'deprecated',
       '3': 3,
       '4': 1,
@@ -699,7 +681,7 @@ const EnumOptions$json = const {
       '7': 'false',
       '10': 'deprecated'
     },
-    const {
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -708,18 +690,18 @@ const EnumOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
-  '9': const [
-    const {'1': 5, '2': 6},
+  '9': [
+    {'1': 5, '2': 6},
   ],
 };
 
-const EnumValueOptions$json = const {
+const EnumValueOptions$json = {
   '1': 'EnumValueOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'deprecated',
       '3': 1,
       '4': 1,
@@ -727,7 +709,7 @@ const EnumValueOptions$json = const {
       '7': 'false',
       '10': 'deprecated'
     },
-    const {
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -736,15 +718,15 @@ const EnumValueOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
 };
 
-const ServiceOptions$json = const {
+const ServiceOptions$json = {
   '1': 'ServiceOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'deprecated',
       '3': 33,
       '4': 1,
@@ -752,7 +734,7 @@ const ServiceOptions$json = const {
       '7': 'false',
       '10': 'deprecated'
     },
-    const {
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -761,15 +743,15 @@ const ServiceOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
 };
 
-const MethodOptions$json = const {
+const MethodOptions$json = {
   '1': 'MethodOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'deprecated',
       '3': 33,
       '4': 1,
@@ -777,7 +759,7 @@ const MethodOptions$json = const {
       '7': 'false',
       '10': 'deprecated'
     },
-    const {
+    {
       '1': 'idempotency_level',
       '3': 34,
       '4': 1,
@@ -786,7 +768,7 @@ const MethodOptions$json = const {
       '7': 'IDEMPOTENCY_UNKNOWN',
       '10': 'idempotencyLevel'
     },
-    const {
+    {
       '1': 'uninterpreted_option',
       '3': 999,
       '4': 3,
@@ -795,25 +777,25 @@ const MethodOptions$json = const {
       '10': 'uninterpretedOption'
     },
   ],
-  '4': const [MethodOptions_IdempotencyLevel$json],
-  '5': const [
-    const {'1': 1000, '2': 536870912},
+  '4': [MethodOptions_IdempotencyLevel$json],
+  '5': [
+    {'1': 1000, '2': 536870912},
   ],
 };
 
-const MethodOptions_IdempotencyLevel$json = const {
+const MethodOptions_IdempotencyLevel$json = {
   '1': 'IdempotencyLevel',
-  '2': const [
-    const {'1': 'IDEMPOTENCY_UNKNOWN', '2': 0},
-    const {'1': 'NO_SIDE_EFFECTS', '2': 1},
-    const {'1': 'IDEMPOTENT', '2': 2},
+  '2': [
+    {'1': 'IDEMPOTENCY_UNKNOWN', '2': 0},
+    {'1': 'NO_SIDE_EFFECTS', '2': 1},
+    {'1': 'IDEMPOTENT', '2': 2},
   ],
 };
 
-const UninterpretedOption$json = const {
+const UninterpretedOption$json = {
   '1': 'UninterpretedOption',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'name',
       '3': 2,
       '4': 3,
@@ -821,52 +803,40 @@ const UninterpretedOption$json = const {
       '6': '.google.protobuf.UninterpretedOption.NamePart',
       '10': 'name'
     },
-    const {
-      '1': 'identifier_value',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '10': 'identifierValue'
-    },
-    const {
+    {'1': 'identifier_value', '3': 3, '4': 1, '5': 9, '10': 'identifierValue'},
+    {
       '1': 'positive_int_value',
       '3': 4,
       '4': 1,
       '5': 4,
       '10': 'positiveIntValue'
     },
-    const {
+    {
       '1': 'negative_int_value',
       '3': 5,
       '4': 1,
       '5': 3,
       '10': 'negativeIntValue'
     },
-    const {'1': 'double_value', '3': 6, '4': 1, '5': 1, '10': 'doubleValue'},
-    const {'1': 'string_value', '3': 7, '4': 1, '5': 12, '10': 'stringValue'},
-    const {
-      '1': 'aggregate_value',
-      '3': 8,
-      '4': 1,
-      '5': 9,
-      '10': 'aggregateValue'
-    },
+    {'1': 'double_value', '3': 6, '4': 1, '5': 1, '10': 'doubleValue'},
+    {'1': 'string_value', '3': 7, '4': 1, '5': 12, '10': 'stringValue'},
+    {'1': 'aggregate_value', '3': 8, '4': 1, '5': 9, '10': 'aggregateValue'},
   ],
-  '3': const [UninterpretedOption_NamePart$json],
+  '3': [UninterpretedOption_NamePart$json],
 };
 
-const UninterpretedOption_NamePart$json = const {
+const UninterpretedOption_NamePart$json = {
   '1': 'NamePart',
-  '2': const [
-    const {'1': 'name_part', '3': 1, '4': 2, '5': 9, '10': 'namePart'},
-    const {'1': 'is_extension', '3': 2, '4': 2, '5': 8, '10': 'isExtension'},
+  '2': [
+    {'1': 'name_part', '3': 1, '4': 2, '5': 9, '10': 'namePart'},
+    {'1': 'is_extension', '3': 2, '4': 2, '5': 8, '10': 'isExtension'},
   ],
 };
 
-const SourceCodeInfo$json = const {
+const SourceCodeInfo$json = {
   '1': 'SourceCodeInfo',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'location',
       '3': 1,
       '4': 3,
@@ -875,43 +845,37 @@ const SourceCodeInfo$json = const {
       '10': 'location'
     },
   ],
-  '3': const [SourceCodeInfo_Location$json],
+  '3': [SourceCodeInfo_Location$json],
 };
 
-const SourceCodeInfo_Location$json = const {
+const SourceCodeInfo_Location$json = {
   '1': 'Location',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'path',
       '3': 1,
       '4': 3,
       '5': 5,
-      '8': const {'2': true},
+      '8': {'2': true},
       '10': 'path',
     },
-    const {
+    {
       '1': 'span',
       '3': 2,
       '4': 3,
       '5': 5,
-      '8': const {'2': true},
+      '8': {'2': true},
       '10': 'span',
     },
-    const {
-      '1': 'leading_comments',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '10': 'leadingComments'
-    },
-    const {
+    {'1': 'leading_comments', '3': 3, '4': 1, '5': 9, '10': 'leadingComments'},
+    {
       '1': 'trailing_comments',
       '3': 4,
       '4': 1,
       '5': 9,
       '10': 'trailingComments'
     },
-    const {
+    {
       '1': 'leading_detached_comments',
       '3': 6,
       '4': 3,
@@ -921,10 +885,10 @@ const SourceCodeInfo_Location$json = const {
   ],
 };
 
-const GeneratedCodeInfo$json = const {
+const GeneratedCodeInfo$json = {
   '1': 'GeneratedCodeInfo',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'annotation',
       '3': 1,
       '4': 3,
@@ -933,22 +897,22 @@ const GeneratedCodeInfo$json = const {
       '10': 'annotation'
     },
   ],
-  '3': const [GeneratedCodeInfo_Annotation$json],
+  '3': [GeneratedCodeInfo_Annotation$json],
 };
 
-const GeneratedCodeInfo_Annotation$json = const {
+const GeneratedCodeInfo_Annotation$json = {
   '1': 'Annotation',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'path',
       '3': 1,
       '4': 3,
       '5': 5,
-      '8': const {'2': true},
+      '8': {'2': true},
       '10': 'path',
     },
-    const {'1': 'source_file', '3': 2, '4': 1, '5': 9, '10': 'sourceFile'},
-    const {'1': 'begin', '3': 3, '4': 1, '5': 5, '10': 'begin'},
-    const {'1': 'end', '3': 4, '4': 1, '5': 5, '10': 'end'},
+    {'1': 'source_file', '3': 2, '4': 1, '5': 9, '10': 'sourceFile'},
+    {'1': 'begin', '3': 3, '4': 1, '5': 5, '10': 'begin'},
+    {'1': 'end', '3': 4, '4': 1, '5': 5, '10': 'end'},
   ],
 };

@@ -23,15 +23,15 @@ abstract class JobServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateJob':
-        return new CreateJobRequest();
+        return CreateJobRequest();
       case 'ListJobs':
-        return new ListJobsRequest();
+        return ListJobsRequest();
       case 'GetJob':
-        return new GetJobRequest();
+        return GetJobRequest();
       case 'CancelJob':
-        return new CancelJobRequest();
+        return CancelJobRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -47,7 +47,7 @@ abstract class JobServiceBase extends GeneratedService {
       case 'CancelJob':
         return this.cancelJob(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

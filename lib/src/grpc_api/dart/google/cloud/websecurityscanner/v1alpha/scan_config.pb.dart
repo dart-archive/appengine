@@ -16,7 +16,7 @@ export 'scan_config.pbenum.dart';
 
 class ScanConfig_Authentication_GoogleAccount extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ScanConfig_Authentication_GoogleAccount')
+      BuilderInfo('ScanConfig_Authentication_GoogleAccount')
         ..aOS(1, 'username')
         ..aOS(2, 'password')
         ..hasRequiredFields = false;
@@ -29,15 +29,15 @@ class ScanConfig_Authentication_GoogleAccount extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ScanConfig_Authentication_GoogleAccount clone() =>
-      new ScanConfig_Authentication_GoogleAccount()..mergeFromMessage(this);
+      ScanConfig_Authentication_GoogleAccount()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ScanConfig_Authentication_GoogleAccount create() =>
-      new ScanConfig_Authentication_GoogleAccount();
+      ScanConfig_Authentication_GoogleAccount();
   static PbList<ScanConfig_Authentication_GoogleAccount> createRepeated() =>
-      new PbList<ScanConfig_Authentication_GoogleAccount>();
+      PbList<ScanConfig_Authentication_GoogleAccount>();
   static ScanConfig_Authentication_GoogleAccount getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScanConfig_Authentication_GoogleAccount();
+      _defaultInstance = _ReadonlyScanConfig_Authentication_GoogleAccount();
     return _defaultInstance;
   }
 
@@ -69,7 +69,7 @@ class _ReadonlyScanConfig_Authentication_GoogleAccount
 
 class ScanConfig_Authentication_CustomAccount extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ScanConfig_Authentication_CustomAccount')
+      BuilderInfo('ScanConfig_Authentication_CustomAccount')
         ..aOS(1, 'username')
         ..aOS(2, 'password')
         ..aOS(3, 'loginUrl')
@@ -83,15 +83,15 @@ class ScanConfig_Authentication_CustomAccount extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ScanConfig_Authentication_CustomAccount clone() =>
-      new ScanConfig_Authentication_CustomAccount()..mergeFromMessage(this);
+      ScanConfig_Authentication_CustomAccount()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ScanConfig_Authentication_CustomAccount create() =>
-      new ScanConfig_Authentication_CustomAccount();
+      ScanConfig_Authentication_CustomAccount();
   static PbList<ScanConfig_Authentication_CustomAccount> createRepeated() =>
-      new PbList<ScanConfig_Authentication_CustomAccount>();
+      PbList<ScanConfig_Authentication_CustomAccount>();
   static ScanConfig_Authentication_CustomAccount getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScanConfig_Authentication_CustomAccount();
+      _defaultInstance = _ReadonlyScanConfig_Authentication_CustomAccount();
     return _defaultInstance;
   }
 
@@ -130,7 +130,7 @@ class _ReadonlyScanConfig_Authentication_CustomAccount
     extends ScanConfig_Authentication_CustomAccount with ReadonlyMessageMixin {}
 
 class ScanConfig_Authentication extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScanConfig_Authentication')
+  static final BuilderInfo _i = BuilderInfo('ScanConfig_Authentication')
     ..a<ScanConfig_Authentication_GoogleAccount>(
         1,
         'googleAccount',
@@ -153,14 +153,14 @@ class ScanConfig_Authentication extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ScanConfig_Authentication clone() =>
-      new ScanConfig_Authentication()..mergeFromMessage(this);
+      ScanConfig_Authentication()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ScanConfig_Authentication create() => new ScanConfig_Authentication();
+  static ScanConfig_Authentication create() => ScanConfig_Authentication();
   static PbList<ScanConfig_Authentication> createRepeated() =>
-      new PbList<ScanConfig_Authentication>();
+      PbList<ScanConfig_Authentication>();
   static ScanConfig_Authentication getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScanConfig_Authentication();
+      _defaultInstance = _ReadonlyScanConfig_Authentication();
     return _defaultInstance;
   }
 
@@ -191,7 +191,7 @@ class _ReadonlyScanConfig_Authentication extends ScanConfig_Authentication
     with ReadonlyMessageMixin {}
 
 class ScanConfig_Schedule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScanConfig_Schedule')
+  static final BuilderInfo _i = BuilderInfo('ScanConfig_Schedule')
     ..a<$google$protobuf.Timestamp>(
         1,
         'scheduleTime',
@@ -208,15 +208,14 @@ class ScanConfig_Schedule extends GeneratedMessage {
   ScanConfig_Schedule.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScanConfig_Schedule clone() =>
-      new ScanConfig_Schedule()..mergeFromMessage(this);
+  ScanConfig_Schedule clone() => ScanConfig_Schedule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ScanConfig_Schedule create() => new ScanConfig_Schedule();
+  static ScanConfig_Schedule create() => ScanConfig_Schedule();
   static PbList<ScanConfig_Schedule> createRepeated() =>
-      new PbList<ScanConfig_Schedule>();
+      PbList<ScanConfig_Schedule>();
   static ScanConfig_Schedule getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScanConfig_Schedule();
+      _defaultInstance = _ReadonlyScanConfig_Schedule();
     return _defaultInstance;
   }
 
@@ -246,7 +245,7 @@ class _ReadonlyScanConfig_Schedule extends ScanConfig_Schedule
     with ReadonlyMessageMixin {}
 
 class ScanConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScanConfig')
+  static final BuilderInfo _i = BuilderInfo('ScanConfig')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..a<int>(3, 'maxQps', PbFieldType.O3)
@@ -279,12 +278,12 @@ class ScanConfig extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ScanConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScanConfig clone() => new ScanConfig()..mergeFromMessage(this);
+  ScanConfig clone() => ScanConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ScanConfig create() => new ScanConfig();
-  static PbList<ScanConfig> createRepeated() => new PbList<ScanConfig>();
+  static ScanConfig create() => ScanConfig();
+  static PbList<ScanConfig> createRepeated() => PbList<ScanConfig>();
   static ScanConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyScanConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyScanConfig();
     return _defaultInstance;
   }
 

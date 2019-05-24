@@ -9,14 +9,14 @@ import 'package:protobuf/protobuf.dart';
 
 class HttpMethod extends ProtobufEnum {
   static const HttpMethod HTTP_METHOD_UNSPECIFIED =
-      const HttpMethod._(0, 'HTTP_METHOD_UNSPECIFIED');
-  static const HttpMethod POST = const HttpMethod._(1, 'POST');
-  static const HttpMethod GET = const HttpMethod._(2, 'GET');
-  static const HttpMethod HEAD = const HttpMethod._(3, 'HEAD');
-  static const HttpMethod PUT = const HttpMethod._(4, 'PUT');
-  static const HttpMethod DELETE = const HttpMethod._(5, 'DELETE');
+      HttpMethod._(0, 'HTTP_METHOD_UNSPECIFIED');
+  static const HttpMethod POST = HttpMethod._(1, 'POST');
+  static const HttpMethod GET = HttpMethod._(2, 'GET');
+  static const HttpMethod HEAD = HttpMethod._(3, 'HEAD');
+  static const HttpMethod PUT = HttpMethod._(4, 'PUT');
+  static const HttpMethod DELETE = HttpMethod._(5, 'DELETE');
 
-  static const List<HttpMethod> values = const <HttpMethod>[
+  static const List<HttpMethod> values = <HttpMethod>[
     HTTP_METHOD_UNSPECIFIED,
     POST,
     GET,

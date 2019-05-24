@@ -42,27 +42,27 @@ abstract class NotificationChannelServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListNotificationChannelDescriptors':
-        return new ListNotificationChannelDescriptorsRequest();
+        return ListNotificationChannelDescriptorsRequest();
       case 'GetNotificationChannelDescriptor':
-        return new GetNotificationChannelDescriptorRequest();
+        return GetNotificationChannelDescriptorRequest();
       case 'ListNotificationChannels':
-        return new ListNotificationChannelsRequest();
+        return ListNotificationChannelsRequest();
       case 'GetNotificationChannel':
-        return new GetNotificationChannelRequest();
+        return GetNotificationChannelRequest();
       case 'CreateNotificationChannel':
-        return new CreateNotificationChannelRequest();
+        return CreateNotificationChannelRequest();
       case 'UpdateNotificationChannel':
-        return new UpdateNotificationChannelRequest();
+        return UpdateNotificationChannelRequest();
       case 'DeleteNotificationChannel':
-        return new DeleteNotificationChannelRequest();
+        return DeleteNotificationChannelRequest();
       case 'SendNotificationChannelVerificationCode':
-        return new SendNotificationChannelVerificationCodeRequest();
+        return SendNotificationChannelVerificationCodeRequest();
       case 'GetNotificationChannelVerificationCode':
-        return new GetNotificationChannelVerificationCodeRequest();
+        return GetNotificationChannelVerificationCodeRequest();
       case 'VerifyNotificationChannel':
-        return new VerifyNotificationChannelRequest();
+        return VerifyNotificationChannelRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -90,7 +90,7 @@ abstract class NotificationChannelServiceBase extends GeneratedService {
       case 'VerifyNotificationChannel':
         return this.verifyNotificationChannel(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

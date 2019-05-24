@@ -12,11 +12,11 @@ import '../../protobuf/wrappers.pbjson.dart' as $google$protobuf;
 import '../../protobuf/empty.pbjson.dart' as $google$protobuf;
 import '../../protobuf/field_mask.pbjson.dart' as $google$protobuf;
 
-const CreateAlertPolicyRequest$json = const {
+const CreateAlertPolicyRequest$json = {
   '1': 'CreateAlertPolicyRequest',
-  '2': const [
-    const {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'alert_policy',
       '3': 2,
       '4': 1,
@@ -27,28 +27,28 @@ const CreateAlertPolicyRequest$json = const {
   ],
 };
 
-const GetAlertPolicyRequest$json = const {
+const GetAlertPolicyRequest$json = {
   '1': 'GetAlertPolicyRequest',
-  '2': const [
-    const {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListAlertPoliciesRequest$json = const {
+const ListAlertPoliciesRequest$json = {
   '1': 'ListAlertPoliciesRequest',
-  '2': const [
-    const {'1': 'name', '3': 4, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
-    const {'1': 'order_by', '3': 6, '4': 1, '5': 9, '10': 'orderBy'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'name', '3': 4, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'order_by', '3': 6, '4': 1, '5': 9, '10': 'orderBy'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListAlertPoliciesResponse$json = const {
+const ListAlertPoliciesResponse$json = {
   '1': 'ListAlertPoliciesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'alert_policies',
       '3': 3,
       '4': 3,
@@ -56,20 +56,14 @@ const ListAlertPoliciesResponse$json = const {
       '6': '.google.monitoring.v3.AlertPolicy',
       '10': 'alertPolicies'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const UpdateAlertPolicyRequest$json = const {
+const UpdateAlertPolicyRequest$json = {
   '1': 'UpdateAlertPolicyRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'update_mask',
       '3': 2,
       '4': 1,
@@ -77,7 +71,7 @@ const UpdateAlertPolicyRequest$json = const {
       '6': '.google.protobuf.FieldMask',
       '10': 'updateMask'
     },
-    const {
+    {
       '1': 'alert_policy',
       '3': 3,
       '4': 1,
@@ -88,50 +82,50 @@ const UpdateAlertPolicyRequest$json = const {
   ],
 };
 
-const DeleteAlertPolicyRequest$json = const {
+const DeleteAlertPolicyRequest$json = {
   '1': 'DeleteAlertPolicyRequest',
-  '2': const [
-    const {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const AlertPolicyService$json = const {
+const AlertPolicyService$json = {
   '1': 'AlertPolicyService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'ListAlertPolicies',
       '2': '.google.monitoring.v3.ListAlertPoliciesRequest',
       '3': '.google.monitoring.v3.ListAlertPoliciesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetAlertPolicy',
       '2': '.google.monitoring.v3.GetAlertPolicyRequest',
       '3': '.google.monitoring.v3.AlertPolicy',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateAlertPolicy',
       '2': '.google.monitoring.v3.CreateAlertPolicyRequest',
       '3': '.google.monitoring.v3.AlertPolicy',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteAlertPolicy',
       '2': '.google.monitoring.v3.DeleteAlertPolicyRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateAlertPolicy',
       '2': '.google.monitoring.v3.UpdateAlertPolicyRequest',
       '3': '.google.monitoring.v3.AlertPolicy',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const AlertPolicyService$messageJson = const {
+const AlertPolicyService$messageJson = {
   '.google.monitoring.v3.ListAlertPoliciesRequest':
       ListAlertPoliciesRequest$json,
   '.google.monitoring.v3.ListAlertPoliciesResponse':

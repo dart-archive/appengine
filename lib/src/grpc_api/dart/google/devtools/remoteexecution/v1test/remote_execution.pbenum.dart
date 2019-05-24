@@ -9,18 +9,18 @@ import 'package:protobuf/protobuf.dart';
 
 class ExecuteOperationMetadata_Stage extends ProtobufEnum {
   static const ExecuteOperationMetadata_Stage UNKNOWN =
-      const ExecuteOperationMetadata_Stage._(0, 'UNKNOWN');
+      ExecuteOperationMetadata_Stage._(0, 'UNKNOWN');
   static const ExecuteOperationMetadata_Stage CACHE_CHECK =
-      const ExecuteOperationMetadata_Stage._(1, 'CACHE_CHECK');
+      ExecuteOperationMetadata_Stage._(1, 'CACHE_CHECK');
   static const ExecuteOperationMetadata_Stage QUEUED =
-      const ExecuteOperationMetadata_Stage._(2, 'QUEUED');
+      ExecuteOperationMetadata_Stage._(2, 'QUEUED');
   static const ExecuteOperationMetadata_Stage EXECUTING =
-      const ExecuteOperationMetadata_Stage._(3, 'EXECUTING');
+      ExecuteOperationMetadata_Stage._(3, 'EXECUTING');
   static const ExecuteOperationMetadata_Stage COMPLETED =
-      const ExecuteOperationMetadata_Stage._(4, 'COMPLETED');
+      ExecuteOperationMetadata_Stage._(4, 'COMPLETED');
 
   static const List<ExecuteOperationMetadata_Stage> values =
-      const <ExecuteOperationMetadata_Stage>[
+      <ExecuteOperationMetadata_Stage>[
     UNKNOWN,
     CACHE_CHECK,
     QUEUED,

@@ -28,17 +28,17 @@ abstract class SessionEntityTypesServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListSessionEntityTypes':
-        return new ListSessionEntityTypesRequest();
+        return ListSessionEntityTypesRequest();
       case 'GetSessionEntityType':
-        return new GetSessionEntityTypeRequest();
+        return GetSessionEntityTypeRequest();
       case 'CreateSessionEntityType':
-        return new CreateSessionEntityTypeRequest();
+        return CreateSessionEntityTypeRequest();
       case 'UpdateSessionEntityType':
-        return new UpdateSessionEntityTypeRequest();
+        return UpdateSessionEntityTypeRequest();
       case 'DeleteSessionEntityType':
-        return new DeleteSessionEntityTypeRequest();
+        return DeleteSessionEntityTypeRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -56,7 +56,7 @@ abstract class SessionEntityTypesServiceBase extends GeneratedService {
       case 'DeleteSessionEntityType':
         return this.deleteSessionEntityType(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

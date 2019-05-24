@@ -14,7 +14,7 @@ import 'cigar.pbenum.dart';
 export 'cigar.pbenum.dart';
 
 class CigarUnit extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CigarUnit')
+  static final BuilderInfo _i = BuilderInfo('CigarUnit')
     ..e<CigarUnit_Operation>(
         1,
         'operation',
@@ -32,12 +32,12 @@ class CigarUnit extends GeneratedMessage {
       : super.fromBuffer(i, r);
   CigarUnit.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CigarUnit clone() => new CigarUnit()..mergeFromMessage(this);
+  CigarUnit clone() => CigarUnit()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CigarUnit create() => new CigarUnit();
-  static PbList<CigarUnit> createRepeated() => new PbList<CigarUnit>();
+  static CigarUnit create() => CigarUnit();
+  static PbList<CigarUnit> createRepeated() => PbList<CigarUnit>();
   static CigarUnit getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCigarUnit();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCigarUnit();
     return _defaultInstance;
   }
 

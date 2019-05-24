@@ -39,29 +39,29 @@ abstract class CloudBuildServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateBuild':
-        return new CreateBuildRequest();
+        return CreateBuildRequest();
       case 'GetBuild':
-        return new GetBuildRequest();
+        return GetBuildRequest();
       case 'ListBuilds':
-        return new ListBuildsRequest();
+        return ListBuildsRequest();
       case 'CancelBuild':
-        return new CancelBuildRequest();
+        return CancelBuildRequest();
       case 'RetryBuild':
-        return new RetryBuildRequest();
+        return RetryBuildRequest();
       case 'CreateBuildTrigger':
-        return new CreateBuildTriggerRequest();
+        return CreateBuildTriggerRequest();
       case 'GetBuildTrigger':
-        return new GetBuildTriggerRequest();
+        return GetBuildTriggerRequest();
       case 'ListBuildTriggers':
-        return new ListBuildTriggersRequest();
+        return ListBuildTriggersRequest();
       case 'DeleteBuildTrigger':
-        return new DeleteBuildTriggerRequest();
+        return DeleteBuildTriggerRequest();
       case 'UpdateBuildTrigger':
-        return new UpdateBuildTriggerRequest();
+        return UpdateBuildTriggerRequest();
       case 'RunBuildTrigger':
-        return new RunBuildTriggerRequest();
+        return RunBuildTriggerRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -91,7 +91,7 @@ abstract class CloudBuildServiceBase extends GeneratedService {
       case 'RunBuildTrigger':
         return this.runBuildTrigger(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

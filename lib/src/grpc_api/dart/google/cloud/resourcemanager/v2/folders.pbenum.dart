@@ -9,14 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class Folder_LifecycleState extends ProtobufEnum {
   static const Folder_LifecycleState LIFECYCLE_STATE_UNSPECIFIED =
-      const Folder_LifecycleState._(0, 'LIFECYCLE_STATE_UNSPECIFIED');
+      Folder_LifecycleState._(0, 'LIFECYCLE_STATE_UNSPECIFIED');
   static const Folder_LifecycleState ACTIVE =
-      const Folder_LifecycleState._(1, 'ACTIVE');
+      Folder_LifecycleState._(1, 'ACTIVE');
   static const Folder_LifecycleState DELETE_REQUESTED =
-      const Folder_LifecycleState._(2, 'DELETE_REQUESTED');
+      Folder_LifecycleState._(2, 'DELETE_REQUESTED');
 
-  static const List<Folder_LifecycleState> values =
-      const <Folder_LifecycleState>[
+  static const List<Folder_LifecycleState> values = <Folder_LifecycleState>[
     LIFECYCLE_STATE_UNSPECIFIED,
     ACTIVE,
     DELETE_REQUESTED,
@@ -35,14 +34,14 @@ class Folder_LifecycleState extends ProtobufEnum {
 
 class FolderOperation_OperationType extends ProtobufEnum {
   static const FolderOperation_OperationType OPERATION_TYPE_UNSPECIFIED =
-      const FolderOperation_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
+      FolderOperation_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
   static const FolderOperation_OperationType CREATE =
-      const FolderOperation_OperationType._(1, 'CREATE');
+      FolderOperation_OperationType._(1, 'CREATE');
   static const FolderOperation_OperationType MOVE =
-      const FolderOperation_OperationType._(2, 'MOVE');
+      FolderOperation_OperationType._(2, 'MOVE');
 
   static const List<FolderOperation_OperationType> values =
-      const <FolderOperation_OperationType>[
+      <FolderOperation_OperationType>[
     OPERATION_TYPE_UNSPECIFIED,
     CREATE,
     MOVE,

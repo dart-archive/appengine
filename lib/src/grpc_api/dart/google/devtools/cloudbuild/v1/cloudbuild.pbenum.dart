@@ -9,17 +9,17 @@ import 'package:protobuf/protobuf.dart';
 
 class Build_Status extends ProtobufEnum {
   static const Build_Status STATUS_UNKNOWN =
-      const Build_Status._(0, 'STATUS_UNKNOWN');
-  static const Build_Status QUEUED = const Build_Status._(1, 'QUEUED');
-  static const Build_Status WORKING = const Build_Status._(2, 'WORKING');
-  static const Build_Status SUCCESS = const Build_Status._(3, 'SUCCESS');
-  static const Build_Status FAILURE = const Build_Status._(4, 'FAILURE');
+      Build_Status._(0, 'STATUS_UNKNOWN');
+  static const Build_Status QUEUED = Build_Status._(1, 'QUEUED');
+  static const Build_Status WORKING = Build_Status._(2, 'WORKING');
+  static const Build_Status SUCCESS = Build_Status._(3, 'SUCCESS');
+  static const Build_Status FAILURE = Build_Status._(4, 'FAILURE');
   static const Build_Status INTERNAL_ERROR =
-      const Build_Status._(5, 'INTERNAL_ERROR');
-  static const Build_Status TIMEOUT = const Build_Status._(6, 'TIMEOUT');
-  static const Build_Status CANCELLED = const Build_Status._(7, 'CANCELLED');
+      Build_Status._(5, 'INTERNAL_ERROR');
+  static const Build_Status TIMEOUT = Build_Status._(6, 'TIMEOUT');
+  static const Build_Status CANCELLED = Build_Status._(7, 'CANCELLED');
 
-  static const List<Build_Status> values = const <Build_Status>[
+  static const List<Build_Status> values = <Build_Status>[
     STATUS_UNKNOWN,
     QUEUED,
     WORKING,
@@ -40,11 +40,11 @@ class Build_Status extends ProtobufEnum {
 }
 
 class Hash_HashType extends ProtobufEnum {
-  static const Hash_HashType NONE = const Hash_HashType._(0, 'NONE');
-  static const Hash_HashType SHA256 = const Hash_HashType._(1, 'SHA256');
-  static const Hash_HashType MD5 = const Hash_HashType._(2, 'MD5');
+  static const Hash_HashType NONE = Hash_HashType._(0, 'NONE');
+  static const Hash_HashType SHA256 = Hash_HashType._(1, 'SHA256');
+  static const Hash_HashType MD5 = Hash_HashType._(2, 'MD5');
 
-  static const List<Hash_HashType> values = const <Hash_HashType>[
+  static const List<Hash_HashType> values = <Hash_HashType>[
     NONE,
     SHA256,
     MD5,
@@ -61,12 +61,12 @@ class Hash_HashType extends ProtobufEnum {
 
 class BuildOptions_VerifyOption extends ProtobufEnum {
   static const BuildOptions_VerifyOption NOT_VERIFIED =
-      const BuildOptions_VerifyOption._(0, 'NOT_VERIFIED');
+      BuildOptions_VerifyOption._(0, 'NOT_VERIFIED');
   static const BuildOptions_VerifyOption VERIFIED =
-      const BuildOptions_VerifyOption._(1, 'VERIFIED');
+      BuildOptions_VerifyOption._(1, 'VERIFIED');
 
   static const List<BuildOptions_VerifyOption> values =
-      const <BuildOptions_VerifyOption>[
+      <BuildOptions_VerifyOption>[
     NOT_VERIFIED,
     VERIFIED,
   ];
@@ -84,14 +84,14 @@ class BuildOptions_VerifyOption extends ProtobufEnum {
 
 class BuildOptions_MachineType extends ProtobufEnum {
   static const BuildOptions_MachineType UNSPECIFIED =
-      const BuildOptions_MachineType._(0, 'UNSPECIFIED');
+      BuildOptions_MachineType._(0, 'UNSPECIFIED');
   static const BuildOptions_MachineType N1_HIGHCPU_8 =
-      const BuildOptions_MachineType._(1, 'N1_HIGHCPU_8');
+      BuildOptions_MachineType._(1, 'N1_HIGHCPU_8');
   static const BuildOptions_MachineType N1_HIGHCPU_32 =
-      const BuildOptions_MachineType._(2, 'N1_HIGHCPU_32');
+      BuildOptions_MachineType._(2, 'N1_HIGHCPU_32');
 
   static const List<BuildOptions_MachineType> values =
-      const <BuildOptions_MachineType>[
+      <BuildOptions_MachineType>[
     UNSPECIFIED,
     N1_HIGHCPU_8,
     N1_HIGHCPU_32,
@@ -110,12 +110,12 @@ class BuildOptions_MachineType extends ProtobufEnum {
 
 class BuildOptions_SubstitutionOption extends ProtobufEnum {
   static const BuildOptions_SubstitutionOption MUST_MATCH =
-      const BuildOptions_SubstitutionOption._(0, 'MUST_MATCH');
+      BuildOptions_SubstitutionOption._(0, 'MUST_MATCH');
   static const BuildOptions_SubstitutionOption ALLOW_LOOSE =
-      const BuildOptions_SubstitutionOption._(1, 'ALLOW_LOOSE');
+      BuildOptions_SubstitutionOption._(1, 'ALLOW_LOOSE');
 
   static const List<BuildOptions_SubstitutionOption> values =
-      const <BuildOptions_SubstitutionOption>[
+      <BuildOptions_SubstitutionOption>[
     MUST_MATCH,
     ALLOW_LOOSE,
   ];
@@ -133,14 +133,14 @@ class BuildOptions_SubstitutionOption extends ProtobufEnum {
 
 class BuildOptions_LogStreamingOption extends ProtobufEnum {
   static const BuildOptions_LogStreamingOption STREAM_DEFAULT =
-      const BuildOptions_LogStreamingOption._(0, 'STREAM_DEFAULT');
+      BuildOptions_LogStreamingOption._(0, 'STREAM_DEFAULT');
   static const BuildOptions_LogStreamingOption STREAM_ON =
-      const BuildOptions_LogStreamingOption._(1, 'STREAM_ON');
+      BuildOptions_LogStreamingOption._(1, 'STREAM_ON');
   static const BuildOptions_LogStreamingOption STREAM_OFF =
-      const BuildOptions_LogStreamingOption._(2, 'STREAM_OFF');
+      BuildOptions_LogStreamingOption._(2, 'STREAM_OFF');
 
   static const List<BuildOptions_LogStreamingOption> values =
-      const <BuildOptions_LogStreamingOption>[
+      <BuildOptions_LogStreamingOption>[
     STREAM_DEFAULT,
     STREAM_ON,
     STREAM_OFF,

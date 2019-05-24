@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../protobuf/wrappers.pb.dart' as $google$protobuf;
 
 class Color extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Color')
+  static final BuilderInfo _i = BuilderInfo('Color')
     ..a<double>(1, 'red', PbFieldType.OF)
     ..a<double>(2, 'green', PbFieldType.OF)
     ..a<double>(3, 'blue', PbFieldType.OF)
@@ -28,12 +28,12 @@ class Color extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Color.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Color clone() => new Color()..mergeFromMessage(this);
+  Color clone() => Color()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Color create() => new Color();
-  static PbList<Color> createRepeated() => new PbList<Color>();
+  static Color create() => Color();
+  static PbList<Color> createRepeated() => PbList<Color>();
   static Color getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyColor();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyColor();
     return _defaultInstance;
   }
 

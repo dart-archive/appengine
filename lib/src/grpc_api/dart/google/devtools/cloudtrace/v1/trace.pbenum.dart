@@ -9,13 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class TraceSpan_SpanKind extends ProtobufEnum {
   static const TraceSpan_SpanKind SPAN_KIND_UNSPECIFIED =
-      const TraceSpan_SpanKind._(0, 'SPAN_KIND_UNSPECIFIED');
+      TraceSpan_SpanKind._(0, 'SPAN_KIND_UNSPECIFIED');
   static const TraceSpan_SpanKind RPC_SERVER =
-      const TraceSpan_SpanKind._(1, 'RPC_SERVER');
+      TraceSpan_SpanKind._(1, 'RPC_SERVER');
   static const TraceSpan_SpanKind RPC_CLIENT =
-      const TraceSpan_SpanKind._(2, 'RPC_CLIENT');
+      TraceSpan_SpanKind._(2, 'RPC_CLIENT');
 
-  static const List<TraceSpan_SpanKind> values = const <TraceSpan_SpanKind>[
+  static const List<TraceSpan_SpanKind> values = <TraceSpan_SpanKind>[
     SPAN_KIND_UNSPECIFIED,
     RPC_SERVER,
     RPC_CLIENT,
@@ -33,16 +33,16 @@ class TraceSpan_SpanKind extends ProtobufEnum {
 
 class ListTracesRequest_ViewType extends ProtobufEnum {
   static const ListTracesRequest_ViewType VIEW_TYPE_UNSPECIFIED =
-      const ListTracesRequest_ViewType._(0, 'VIEW_TYPE_UNSPECIFIED');
+      ListTracesRequest_ViewType._(0, 'VIEW_TYPE_UNSPECIFIED');
   static const ListTracesRequest_ViewType MINIMAL =
-      const ListTracesRequest_ViewType._(1, 'MINIMAL');
+      ListTracesRequest_ViewType._(1, 'MINIMAL');
   static const ListTracesRequest_ViewType ROOTSPAN =
-      const ListTracesRequest_ViewType._(2, 'ROOTSPAN');
+      ListTracesRequest_ViewType._(2, 'ROOTSPAN');
   static const ListTracesRequest_ViewType COMPLETE =
-      const ListTracesRequest_ViewType._(3, 'COMPLETE');
+      ListTracesRequest_ViewType._(3, 'COMPLETE');
 
   static const List<ListTracesRequest_ViewType> values =
-      const <ListTracesRequest_ViewType>[
+      <ListTracesRequest_ViewType>[
     VIEW_TYPE_UNSPECIFIED,
     MINIMAL,
     ROOTSPAN,

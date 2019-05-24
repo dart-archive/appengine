@@ -9,15 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class BotStatus extends ProtobufEnum {
   static const BotStatus BOT_STATUS_UNSPECIFIED =
-      const BotStatus._(0, 'BOT_STATUS_UNSPECIFIED');
-  static const BotStatus OK = const BotStatus._(1, 'OK');
-  static const BotStatus UNHEALTHY = const BotStatus._(2, 'UNHEALTHY');
-  static const BotStatus HOST_REBOOTING =
-      const BotStatus._(3, 'HOST_REBOOTING');
-  static const BotStatus BOT_TERMINATING =
-      const BotStatus._(4, 'BOT_TERMINATING');
+      BotStatus._(0, 'BOT_STATUS_UNSPECIFIED');
+  static const BotStatus OK = BotStatus._(1, 'OK');
+  static const BotStatus UNHEALTHY = BotStatus._(2, 'UNHEALTHY');
+  static const BotStatus HOST_REBOOTING = BotStatus._(3, 'HOST_REBOOTING');
+  static const BotStatus BOT_TERMINATING = BotStatus._(4, 'BOT_TERMINATING');
 
-  static const List<BotStatus> values = const <BotStatus>[
+  static const List<BotStatus> values = <BotStatus>[
     BOT_STATUS_UNSPECIFIED,
     OK,
     UNHEALTHY,
@@ -36,13 +34,13 @@ class BotStatus extends ProtobufEnum {
 
 class LeaseState extends ProtobufEnum {
   static const LeaseState LEASE_STATE_UNSPECIFIED =
-      const LeaseState._(0, 'LEASE_STATE_UNSPECIFIED');
-  static const LeaseState PENDING = const LeaseState._(1, 'PENDING');
-  static const LeaseState ACTIVE = const LeaseState._(2, 'ACTIVE');
-  static const LeaseState COMPLETED = const LeaseState._(4, 'COMPLETED');
-  static const LeaseState CANCELLED = const LeaseState._(5, 'CANCELLED');
+      LeaseState._(0, 'LEASE_STATE_UNSPECIFIED');
+  static const LeaseState PENDING = LeaseState._(1, 'PENDING');
+  static const LeaseState ACTIVE = LeaseState._(2, 'ACTIVE');
+  static const LeaseState COMPLETED = LeaseState._(4, 'COMPLETED');
+  static const LeaseState CANCELLED = LeaseState._(5, 'CANCELLED');
 
-  static const List<LeaseState> values = const <LeaseState>[
+  static const List<LeaseState> values = <LeaseState>[
     LEASE_STATE_UNSPECIFIED,
     PENDING,
     ACTIVE,
@@ -61,17 +59,17 @@ class LeaseState extends ProtobufEnum {
 
 class AdminTemp_Command extends ProtobufEnum {
   static const AdminTemp_Command UNSPECIFIED =
-      const AdminTemp_Command._(0, 'UNSPECIFIED');
+      AdminTemp_Command._(0, 'UNSPECIFIED');
   static const AdminTemp_Command BOT_UPDATE =
-      const AdminTemp_Command._(1, 'BOT_UPDATE');
+      AdminTemp_Command._(1, 'BOT_UPDATE');
   static const AdminTemp_Command BOT_RESTART =
-      const AdminTemp_Command._(2, 'BOT_RESTART');
+      AdminTemp_Command._(2, 'BOT_RESTART');
   static const AdminTemp_Command BOT_TERMINATE =
-      const AdminTemp_Command._(3, 'BOT_TERMINATE');
+      AdminTemp_Command._(3, 'BOT_TERMINATE');
   static const AdminTemp_Command HOST_RESTART =
-      const AdminTemp_Command._(4, 'HOST_RESTART');
+      AdminTemp_Command._(4, 'HOST_RESTART');
 
-  static const List<AdminTemp_Command> values = const <AdminTemp_Command>[
+  static const List<AdminTemp_Command> values = <AdminTemp_Command>[
     UNSPECIFIED,
     BOT_UPDATE,
     BOT_RESTART,
@@ -91,14 +89,14 @@ class AdminTemp_Command extends ProtobufEnum {
 
 class PostBotEventTempRequest_Type extends ProtobufEnum {
   static const PostBotEventTempRequest_Type UNSPECIFIED =
-      const PostBotEventTempRequest_Type._(0, 'UNSPECIFIED');
+      PostBotEventTempRequest_Type._(0, 'UNSPECIFIED');
   static const PostBotEventTempRequest_Type INFO =
-      const PostBotEventTempRequest_Type._(1, 'INFO');
+      PostBotEventTempRequest_Type._(1, 'INFO');
   static const PostBotEventTempRequest_Type ERROR =
-      const PostBotEventTempRequest_Type._(2, 'ERROR');
+      PostBotEventTempRequest_Type._(2, 'ERROR');
 
   static const List<PostBotEventTempRequest_Type> values =
-      const <PostBotEventTempRequest_Type>[
+      <PostBotEventTempRequest_Type>[
     UNSPECIFIED,
     INFO,
     ERROR,

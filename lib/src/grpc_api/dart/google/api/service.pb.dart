@@ -31,7 +31,7 @@ import 'source_info.pb.dart';
 import 'experimental/experimental.pb.dart';
 
 class Service extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Service')
+  static final BuilderInfo _i = BuilderInfo('Service')
     ..aOS(1, 'name')
     ..aOS(2, 'title')
     ..pp<$google$protobuf.Api>(3, 'apis', PbFieldType.PM,
@@ -93,12 +93,12 @@ class Service extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Service.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Service clone() => new Service()..mergeFromMessage(this);
+  Service clone() => Service()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Service create() => new Service();
-  static PbList<Service> createRepeated() => new PbList<Service>();
+  static Service create() => Service();
+  static PbList<Service> createRepeated() => PbList<Service>();
   static Service getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyService();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyService();
     return _defaultInstance;
   }
 

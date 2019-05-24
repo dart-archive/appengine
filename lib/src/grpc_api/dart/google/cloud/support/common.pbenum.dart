@@ -9,15 +9,15 @@ import 'package:protobuf/protobuf.dart';
 
 class SupportAccount_State extends ProtobufEnum {
   static const SupportAccount_State STATE_UNSPECIFIED =
-      const SupportAccount_State._(0, 'STATE_UNSPECIFIED');
+      SupportAccount_State._(0, 'STATE_UNSPECIFIED');
   static const SupportAccount_State ACTIVE =
-      const SupportAccount_State._(1, 'ACTIVE');
+      SupportAccount_State._(1, 'ACTIVE');
   static const SupportAccount_State PENDING =
-      const SupportAccount_State._(2, 'PENDING');
+      SupportAccount_State._(2, 'PENDING');
   static const SupportAccount_State PENDING_DELETION =
-      const SupportAccount_State._(3, 'PENDING_DELETION');
+      SupportAccount_State._(3, 'PENDING_DELETION');
 
-  static const List<SupportAccount_State> values = const <SupportAccount_State>[
+  static const List<SupportAccount_State> values = <SupportAccount_State>[
     STATE_UNSPECIFIED,
     ACTIVE,
     PENDING,
@@ -36,14 +36,14 @@ class SupportAccount_State extends ProtobufEnum {
 
 class SupportAccount_PricingModel extends ProtobufEnum {
   static const SupportAccount_PricingModel PRICING_MODEL_UNKNOWN =
-      const SupportAccount_PricingModel._(0, 'PRICING_MODEL_UNKNOWN');
+      SupportAccount_PricingModel._(0, 'PRICING_MODEL_UNKNOWN');
   static const SupportAccount_PricingModel PACKAGES =
-      const SupportAccount_PricingModel._(1, 'PACKAGES');
+      SupportAccount_PricingModel._(1, 'PACKAGES');
   static const SupportAccount_PricingModel USER_ROLES =
-      const SupportAccount_PricingModel._(2, 'USER_ROLES');
+      SupportAccount_PricingModel._(2, 'USER_ROLES');
 
   static const List<SupportAccount_PricingModel> values =
-      const <SupportAccount_PricingModel>[
+      <SupportAccount_PricingModel>[
     PRICING_MODEL_UNKNOWN,
     PACKAGES,
     USER_ROLES,
@@ -62,14 +62,14 @@ class SupportAccount_PricingModel extends ProtobufEnum {
 
 class Case_Priority extends ProtobufEnum {
   static const Case_Priority PRIORITY_UNSPECIFIED =
-      const Case_Priority._(0, 'PRIORITY_UNSPECIFIED');
-  static const Case_Priority P0 = const Case_Priority._(1, 'P0');
-  static const Case_Priority P1 = const Case_Priority._(2, 'P1');
-  static const Case_Priority P2 = const Case_Priority._(3, 'P2');
-  static const Case_Priority P3 = const Case_Priority._(4, 'P3');
-  static const Case_Priority P4 = const Case_Priority._(5, 'P4');
+      Case_Priority._(0, 'PRIORITY_UNSPECIFIED');
+  static const Case_Priority P0 = Case_Priority._(1, 'P0');
+  static const Case_Priority P1 = Case_Priority._(2, 'P1');
+  static const Case_Priority P2 = Case_Priority._(3, 'P2');
+  static const Case_Priority P3 = Case_Priority._(4, 'P3');
+  static const Case_Priority P4 = Case_Priority._(5, 'P4');
 
-  static const List<Case_Priority> values = const <Case_Priority>[
+  static const List<Case_Priority> values = <Case_Priority>[
     PRIORITY_UNSPECIFIED,
     P0,
     P1,
@@ -89,22 +89,22 @@ class Case_Priority extends ProtobufEnum {
 
 class Case_State extends ProtobufEnum {
   static const Case_State STATE_UNSPECIFIED =
-      const Case_State._(0, 'STATE_UNSPECIFIED');
-  static const Case_State NEW = const Case_State._(1, 'NEW');
-  static const Case_State ASSIGNED = const Case_State._(2, 'ASSIGNED');
+      Case_State._(0, 'STATE_UNSPECIFIED');
+  static const Case_State NEW = Case_State._(1, 'NEW');
+  static const Case_State ASSIGNED = Case_State._(2, 'ASSIGNED');
   static const Case_State IN_PROGRESS_GOOGLE_SUPPORT =
-      const Case_State._(3, 'IN_PROGRESS_GOOGLE_SUPPORT');
+      Case_State._(3, 'IN_PROGRESS_GOOGLE_SUPPORT');
   static const Case_State IN_PROGRESS_GOOGLE_ENG =
-      const Case_State._(4, 'IN_PROGRESS_GOOGLE_ENG');
+      Case_State._(4, 'IN_PROGRESS_GOOGLE_ENG');
   static const Case_State IN_PROGRESS_KNOWN_ISSUE =
-      const Case_State._(5, 'IN_PROGRESS_KNOWN_ISSUE');
+      Case_State._(5, 'IN_PROGRESS_KNOWN_ISSUE');
   static const Case_State WAITING_FOR_CUSTOMER_RESPONSE =
-      const Case_State._(6, 'WAITING_FOR_CUSTOMER_RESPONSE');
+      Case_State._(6, 'WAITING_FOR_CUSTOMER_RESPONSE');
   static const Case_State SOLUTION_OFFERED =
-      const Case_State._(7, 'SOLUTION_OFFERED');
-  static const Case_State CLOSED = const Case_State._(8, 'CLOSED');
+      Case_State._(7, 'SOLUTION_OFFERED');
+  static const Case_State CLOSED = Case_State._(8, 'CLOSED');
 
-  static const List<Case_State> values = const <Case_State>[
+  static const List<Case_State> values = <Case_State>[
     STATE_UNSPECIFIED,
     NEW,
     ASSIGNED,
@@ -127,20 +127,20 @@ class Case_State extends ProtobufEnum {
 
 class CustomerIssue_IssueState extends ProtobufEnum {
   static const CustomerIssue_IssueState ISSUE_STATE_UNSPECIFIED =
-      const CustomerIssue_IssueState._(0, 'ISSUE_STATE_UNSPECIFIED');
+      CustomerIssue_IssueState._(0, 'ISSUE_STATE_UNSPECIFIED');
   static const CustomerIssue_IssueState OPEN =
-      const CustomerIssue_IssueState._(1, 'OPEN');
+      CustomerIssue_IssueState._(1, 'OPEN');
   static const CustomerIssue_IssueState IN_PROGRESS =
-      const CustomerIssue_IssueState._(2, 'IN_PROGRESS');
+      CustomerIssue_IssueState._(2, 'IN_PROGRESS');
   static const CustomerIssue_IssueState FIXED =
-      const CustomerIssue_IssueState._(3, 'FIXED');
+      CustomerIssue_IssueState._(3, 'FIXED');
   static const CustomerIssue_IssueState WONT_FIX =
-      const CustomerIssue_IssueState._(4, 'WONT_FIX');
+      CustomerIssue_IssueState._(4, 'WONT_FIX');
   static const CustomerIssue_IssueState VERIFIED =
-      const CustomerIssue_IssueState._(5, 'VERIFIED');
+      CustomerIssue_IssueState._(5, 'VERIFIED');
 
   static const List<CustomerIssue_IssueState> values =
-      const <CustomerIssue_IssueState>[
+      <CustomerIssue_IssueState>[
     ISSUE_STATE_UNSPECIFIED,
     OPEN,
     IN_PROGRESS,
@@ -162,16 +162,14 @@ class CustomerIssue_IssueState extends ProtobufEnum {
 
 class SupportRole_Role extends ProtobufEnum {
   static const SupportRole_Role ROLE_UNSPECIFIED =
-      const SupportRole_Role._(0, 'ROLE_UNSPECIFIED');
-  static const SupportRole_Role BASIC = const SupportRole_Role._(1, 'BASIC');
-  static const SupportRole_Role DEVELOPER =
-      const SupportRole_Role._(2, 'DEVELOPER');
-  static const SupportRole_Role OPERATION =
-      const SupportRole_Role._(3, 'OPERATION');
+      SupportRole_Role._(0, 'ROLE_UNSPECIFIED');
+  static const SupportRole_Role BASIC = SupportRole_Role._(1, 'BASIC');
+  static const SupportRole_Role DEVELOPER = SupportRole_Role._(2, 'DEVELOPER');
+  static const SupportRole_Role OPERATION = SupportRole_Role._(3, 'OPERATION');
   static const SupportRole_Role SITE_RELIABILITY =
-      const SupportRole_Role._(4, 'SITE_RELIABILITY');
+      SupportRole_Role._(4, 'SITE_RELIABILITY');
 
-  static const List<SupportRole_Role> values = const <SupportRole_Role>[
+  static const List<SupportRole_Role> values = <SupportRole_Role>[
     ROLE_UNSPECIFIED,
     BASIC,
     DEVELOPER,

@@ -22,7 +22,7 @@ import 'reads.pbenum.dart';
 export 'reads.pbenum.dart';
 
 class SearchReadGroupSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchReadGroupSetsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchReadGroupSetsRequest')
     ..pPS(1, 'datasetIds')
     ..aOS(2, 'pageToken')
     ..aOS(3, 'name')
@@ -37,15 +37,14 @@ class SearchReadGroupSetsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchReadGroupSetsRequest clone() =>
-      new SearchReadGroupSetsRequest()..mergeFromMessage(this);
+      SearchReadGroupSetsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchReadGroupSetsRequest create() =>
-      new SearchReadGroupSetsRequest();
+  static SearchReadGroupSetsRequest create() => SearchReadGroupSetsRequest();
   static PbList<SearchReadGroupSetsRequest> createRepeated() =>
-      new PbList<SearchReadGroupSetsRequest>();
+      PbList<SearchReadGroupSetsRequest>();
   static SearchReadGroupSetsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchReadGroupSetsRequest();
+      _defaultInstance = _ReadonlySearchReadGroupSetsRequest();
     return _defaultInstance;
   }
 
@@ -86,7 +85,7 @@ class _ReadonlySearchReadGroupSetsRequest extends SearchReadGroupSetsRequest
     with ReadonlyMessageMixin {}
 
 class SearchReadGroupSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchReadGroupSetsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchReadGroupSetsResponse')
     ..pp<ReadGroupSet>(1, 'readGroupSets', PbFieldType.PM,
         ReadGroupSet.$checkItem, ReadGroupSet.create)
     ..aOS(2, 'nextPageToken')
@@ -100,15 +99,14 @@ class SearchReadGroupSetsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchReadGroupSetsResponse clone() =>
-      new SearchReadGroupSetsResponse()..mergeFromMessage(this);
+      SearchReadGroupSetsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchReadGroupSetsResponse create() =>
-      new SearchReadGroupSetsResponse();
+  static SearchReadGroupSetsResponse create() => SearchReadGroupSetsResponse();
   static PbList<SearchReadGroupSetsResponse> createRepeated() =>
-      new PbList<SearchReadGroupSetsResponse>();
+      PbList<SearchReadGroupSetsResponse>();
   static SearchReadGroupSetsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchReadGroupSetsResponse();
+      _defaultInstance = _ReadonlySearchReadGroupSetsResponse();
     return _defaultInstance;
   }
 
@@ -133,7 +131,7 @@ class _ReadonlySearchReadGroupSetsResponse extends SearchReadGroupSetsResponse
     with ReadonlyMessageMixin {}
 
 class ImportReadGroupSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportReadGroupSetsRequest')
+  static final BuilderInfo _i = BuilderInfo('ImportReadGroupSetsRequest')
     ..aOS(1, 'datasetId')
     ..pPS(2, 'sourceUris')
     ..aOS(4, 'referenceSetId')
@@ -155,15 +153,14 @@ class ImportReadGroupSetsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportReadGroupSetsRequest clone() =>
-      new ImportReadGroupSetsRequest()..mergeFromMessage(this);
+      ImportReadGroupSetsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportReadGroupSetsRequest create() =>
-      new ImportReadGroupSetsRequest();
+  static ImportReadGroupSetsRequest create() => ImportReadGroupSetsRequest();
   static PbList<ImportReadGroupSetsRequest> createRepeated() =>
-      new PbList<ImportReadGroupSetsRequest>();
+      PbList<ImportReadGroupSetsRequest>();
   static ImportReadGroupSetsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportReadGroupSetsRequest();
+      _defaultInstance = _ReadonlyImportReadGroupSetsRequest();
     return _defaultInstance;
   }
 
@@ -205,7 +202,7 @@ class _ReadonlyImportReadGroupSetsRequest extends ImportReadGroupSetsRequest
     with ReadonlyMessageMixin {}
 
 class ImportReadGroupSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportReadGroupSetsResponse')
+  static final BuilderInfo _i = BuilderInfo('ImportReadGroupSetsResponse')
     ..pPS(1, 'readGroupSetIds')
     ..hasRequiredFields = false;
 
@@ -217,15 +214,14 @@ class ImportReadGroupSetsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportReadGroupSetsResponse clone() =>
-      new ImportReadGroupSetsResponse()..mergeFromMessage(this);
+      ImportReadGroupSetsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportReadGroupSetsResponse create() =>
-      new ImportReadGroupSetsResponse();
+  static ImportReadGroupSetsResponse create() => ImportReadGroupSetsResponse();
   static PbList<ImportReadGroupSetsResponse> createRepeated() =>
-      new PbList<ImportReadGroupSetsResponse>();
+      PbList<ImportReadGroupSetsResponse>();
   static ImportReadGroupSetsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportReadGroupSetsResponse();
+      _defaultInstance = _ReadonlyImportReadGroupSetsResponse();
     return _defaultInstance;
   }
 
@@ -242,7 +238,7 @@ class _ReadonlyImportReadGroupSetsResponse extends ImportReadGroupSetsResponse
     with ReadonlyMessageMixin {}
 
 class ExportReadGroupSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportReadGroupSetRequest')
+  static final BuilderInfo _i = BuilderInfo('ExportReadGroupSetRequest')
     ..aOS(1, 'projectId')
     ..aOS(2, 'exportUri')
     ..aOS(3, 'readGroupSetId')
@@ -257,14 +253,14 @@ class ExportReadGroupSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportReadGroupSetRequest clone() =>
-      new ExportReadGroupSetRequest()..mergeFromMessage(this);
+      ExportReadGroupSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExportReadGroupSetRequest create() => new ExportReadGroupSetRequest();
+  static ExportReadGroupSetRequest create() => ExportReadGroupSetRequest();
   static PbList<ExportReadGroupSetRequest> createRepeated() =>
-      new PbList<ExportReadGroupSetRequest>();
+      PbList<ExportReadGroupSetRequest>();
   static ExportReadGroupSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportReadGroupSetRequest();
+      _defaultInstance = _ReadonlyExportReadGroupSetRequest();
     return _defaultInstance;
   }
 
@@ -305,7 +301,7 @@ class _ReadonlyExportReadGroupSetRequest extends ExportReadGroupSetRequest
     with ReadonlyMessageMixin {}
 
 class UpdateReadGroupSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateReadGroupSetRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateReadGroupSetRequest')
     ..aOS(1, 'readGroupSetId')
     ..a<ReadGroupSet>(2, 'readGroupSet', PbFieldType.OM,
         ReadGroupSet.getDefault, ReadGroupSet.create)
@@ -325,14 +321,14 @@ class UpdateReadGroupSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateReadGroupSetRequest clone() =>
-      new UpdateReadGroupSetRequest()..mergeFromMessage(this);
+      UpdateReadGroupSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateReadGroupSetRequest create() => new UpdateReadGroupSetRequest();
+  static UpdateReadGroupSetRequest create() => UpdateReadGroupSetRequest();
   static PbList<UpdateReadGroupSetRequest> createRepeated() =>
-      new PbList<UpdateReadGroupSetRequest>();
+      PbList<UpdateReadGroupSetRequest>();
   static UpdateReadGroupSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateReadGroupSetRequest();
+      _defaultInstance = _ReadonlyUpdateReadGroupSetRequest();
     return _defaultInstance;
   }
 
@@ -371,7 +367,7 @@ class _ReadonlyUpdateReadGroupSetRequest extends UpdateReadGroupSetRequest
     with ReadonlyMessageMixin {}
 
 class DeleteReadGroupSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteReadGroupSetRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteReadGroupSetRequest')
     ..aOS(1, 'readGroupSetId')
     ..hasRequiredFields = false;
 
@@ -383,14 +379,14 @@ class DeleteReadGroupSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteReadGroupSetRequest clone() =>
-      new DeleteReadGroupSetRequest()..mergeFromMessage(this);
+      DeleteReadGroupSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteReadGroupSetRequest create() => new DeleteReadGroupSetRequest();
+  static DeleteReadGroupSetRequest create() => DeleteReadGroupSetRequest();
   static PbList<DeleteReadGroupSetRequest> createRepeated() =>
-      new PbList<DeleteReadGroupSetRequest>();
+      PbList<DeleteReadGroupSetRequest>();
   static DeleteReadGroupSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteReadGroupSetRequest();
+      _defaultInstance = _ReadonlyDeleteReadGroupSetRequest();
     return _defaultInstance;
   }
 
@@ -413,7 +409,7 @@ class _ReadonlyDeleteReadGroupSetRequest extends DeleteReadGroupSetRequest
     with ReadonlyMessageMixin {}
 
 class GetReadGroupSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetReadGroupSetRequest')
+  static final BuilderInfo _i = BuilderInfo('GetReadGroupSetRequest')
     ..aOS(1, 'readGroupSetId')
     ..hasRequiredFields = false;
 
@@ -425,14 +421,14 @@ class GetReadGroupSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetReadGroupSetRequest clone() =>
-      new GetReadGroupSetRequest()..mergeFromMessage(this);
+      GetReadGroupSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetReadGroupSetRequest create() => new GetReadGroupSetRequest();
+  static GetReadGroupSetRequest create() => GetReadGroupSetRequest();
   static PbList<GetReadGroupSetRequest> createRepeated() =>
-      new PbList<GetReadGroupSetRequest>();
+      PbList<GetReadGroupSetRequest>();
   static GetReadGroupSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetReadGroupSetRequest();
+      _defaultInstance = _ReadonlyGetReadGroupSetRequest();
     return _defaultInstance;
   }
 
@@ -455,7 +451,7 @@ class _ReadonlyGetReadGroupSetRequest extends GetReadGroupSetRequest
     with ReadonlyMessageMixin {}
 
 class ListCoverageBucketsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCoverageBucketsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListCoverageBucketsRequest')
     ..aOS(1, 'readGroupSetId')
     ..aOS(3, 'referenceName')
     ..aInt64(4, 'start')
@@ -473,15 +469,14 @@ class ListCoverageBucketsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListCoverageBucketsRequest clone() =>
-      new ListCoverageBucketsRequest()..mergeFromMessage(this);
+      ListCoverageBucketsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListCoverageBucketsRequest create() =>
-      new ListCoverageBucketsRequest();
+  static ListCoverageBucketsRequest create() => ListCoverageBucketsRequest();
   static PbList<ListCoverageBucketsRequest> createRepeated() =>
-      new PbList<ListCoverageBucketsRequest>();
+      PbList<ListCoverageBucketsRequest>();
   static ListCoverageBucketsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCoverageBucketsRequest();
+      _defaultInstance = _ReadonlyListCoverageBucketsRequest();
     return _defaultInstance;
   }
 
@@ -552,7 +547,7 @@ class _ReadonlyListCoverageBucketsRequest extends ListCoverageBucketsRequest
     with ReadonlyMessageMixin {}
 
 class CoverageBucket extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CoverageBucket')
+  static final BuilderInfo _i = BuilderInfo('CoverageBucket')
     ..a<Range>(1, 'range', PbFieldType.OM, Range.getDefault, Range.create)
     ..a<double>(2, 'meanCoverage', PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -564,14 +559,12 @@ class CoverageBucket extends GeneratedMessage {
   CoverageBucket.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CoverageBucket clone() => new CoverageBucket()..mergeFromMessage(this);
+  CoverageBucket clone() => CoverageBucket()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CoverageBucket create() => new CoverageBucket();
-  static PbList<CoverageBucket> createRepeated() =>
-      new PbList<CoverageBucket>();
+  static CoverageBucket create() => CoverageBucket();
+  static PbList<CoverageBucket> createRepeated() => PbList<CoverageBucket>();
   static CoverageBucket getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCoverageBucket();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCoverageBucket();
     return _defaultInstance;
   }
 
@@ -601,7 +594,7 @@ class _ReadonlyCoverageBucket extends CoverageBucket with ReadonlyMessageMixin {
 }
 
 class ListCoverageBucketsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCoverageBucketsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListCoverageBucketsResponse')
     ..aInt64(1, 'bucketWidth')
     ..pp<CoverageBucket>(2, 'coverageBuckets', PbFieldType.PM,
         CoverageBucket.$checkItem, CoverageBucket.create)
@@ -616,15 +609,14 @@ class ListCoverageBucketsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListCoverageBucketsResponse clone() =>
-      new ListCoverageBucketsResponse()..mergeFromMessage(this);
+      ListCoverageBucketsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListCoverageBucketsResponse create() =>
-      new ListCoverageBucketsResponse();
+  static ListCoverageBucketsResponse create() => ListCoverageBucketsResponse();
   static PbList<ListCoverageBucketsResponse> createRepeated() =>
-      new PbList<ListCoverageBucketsResponse>();
+      PbList<ListCoverageBucketsResponse>();
   static ListCoverageBucketsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCoverageBucketsResponse();
+      _defaultInstance = _ReadonlyListCoverageBucketsResponse();
     return _defaultInstance;
   }
 
@@ -657,7 +649,7 @@ class _ReadonlyListCoverageBucketsResponse extends ListCoverageBucketsResponse
     with ReadonlyMessageMixin {}
 
 class SearchReadsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchReadsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchReadsRequest')
     ..pPS(1, 'readGroupSetIds')
     ..aOS(3, 'pageToken')
     ..a<int>(4, 'pageSize', PbFieldType.O3)
@@ -674,15 +666,14 @@ class SearchReadsRequest extends GeneratedMessage {
   SearchReadsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SearchReadsRequest clone() =>
-      new SearchReadsRequest()..mergeFromMessage(this);
+  SearchReadsRequest clone() => SearchReadsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchReadsRequest create() => new SearchReadsRequest();
+  static SearchReadsRequest create() => SearchReadsRequest();
   static PbList<SearchReadsRequest> createRepeated() =>
-      new PbList<SearchReadsRequest>();
+      PbList<SearchReadsRequest>();
   static SearchReadsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchReadsRequest();
+      _defaultInstance = _ReadonlySearchReadsRequest();
     return _defaultInstance;
   }
 
@@ -740,7 +731,7 @@ class _ReadonlySearchReadsRequest extends SearchReadsRequest
     with ReadonlyMessageMixin {}
 
 class SearchReadsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchReadsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchReadsResponse')
     ..pp<Read>(1, 'alignments', PbFieldType.PM, Read.$checkItem, Read.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -752,15 +743,14 @@ class SearchReadsResponse extends GeneratedMessage {
   SearchReadsResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SearchReadsResponse clone() =>
-      new SearchReadsResponse()..mergeFromMessage(this);
+  SearchReadsResponse clone() => SearchReadsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchReadsResponse create() => new SearchReadsResponse();
+  static SearchReadsResponse create() => SearchReadsResponse();
   static PbList<SearchReadsResponse> createRepeated() =>
-      new PbList<SearchReadsResponse>();
+      PbList<SearchReadsResponse>();
   static SearchReadsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchReadsResponse();
+      _defaultInstance = _ReadonlySearchReadsResponse();
     return _defaultInstance;
   }
 
@@ -784,7 +774,7 @@ class _ReadonlySearchReadsResponse extends SearchReadsResponse
     with ReadonlyMessageMixin {}
 
 class StreamReadsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamReadsRequest')
+  static final BuilderInfo _i = BuilderInfo('StreamReadsRequest')
     ..aOS(1, 'projectId')
     ..aOS(2, 'readGroupSetId')
     ..aOS(3, 'referenceName')
@@ -801,15 +791,14 @@ class StreamReadsRequest extends GeneratedMessage {
   StreamReadsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StreamReadsRequest clone() =>
-      new StreamReadsRequest()..mergeFromMessage(this);
+  StreamReadsRequest clone() => StreamReadsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamReadsRequest create() => new StreamReadsRequest();
+  static StreamReadsRequest create() => StreamReadsRequest();
   static PbList<StreamReadsRequest> createRepeated() =>
-      new PbList<StreamReadsRequest>();
+      PbList<StreamReadsRequest>();
   static StreamReadsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamReadsRequest();
+      _defaultInstance = _ReadonlyStreamReadsRequest();
     return _defaultInstance;
   }
 
@@ -879,7 +868,7 @@ class _ReadonlyStreamReadsRequest extends StreamReadsRequest
     with ReadonlyMessageMixin {}
 
 class StreamReadsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamReadsResponse')
+  static final BuilderInfo _i = BuilderInfo('StreamReadsResponse')
     ..pp<Read>(1, 'alignments', PbFieldType.PM, Read.$checkItem, Read.create)
     ..hasRequiredFields = false;
 
@@ -890,15 +879,14 @@ class StreamReadsResponse extends GeneratedMessage {
   StreamReadsResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StreamReadsResponse clone() =>
-      new StreamReadsResponse()..mergeFromMessage(this);
+  StreamReadsResponse clone() => StreamReadsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamReadsResponse create() => new StreamReadsResponse();
+  static StreamReadsResponse create() => StreamReadsResponse();
   static PbList<StreamReadsResponse> createRepeated() =>
-      new PbList<StreamReadsResponse>();
+      PbList<StreamReadsResponse>();
   static StreamReadsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamReadsResponse();
+      _defaultInstance = _ReadonlyStreamReadsResponse();
     return _defaultInstance;
   }
 
@@ -919,7 +907,7 @@ class StreamingReadServiceApi {
 
   Future<StreamReadsResponse> streamReads(
       ClientContext ctx, StreamReadsRequest request) {
-    var emptyResponse = new StreamReadsResponse();
+    var emptyResponse = StreamReadsResponse();
     return _client.invoke<StreamReadsResponse>(
         ctx, 'StreamingReadService', 'StreamReads', request, emptyResponse);
   }
@@ -931,56 +919,56 @@ class ReadServiceV1Api {
 
   Future<$google$longrunning.Operation> importReadGroupSets(
       ClientContext ctx, ImportReadGroupSetsRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ReadServiceV1', 'ImportReadGroupSets', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> exportReadGroupSet(
       ClientContext ctx, ExportReadGroupSetRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ReadServiceV1', 'ExportReadGroupSet', request, emptyResponse);
   }
 
   Future<SearchReadGroupSetsResponse> searchReadGroupSets(
       ClientContext ctx, SearchReadGroupSetsRequest request) {
-    var emptyResponse = new SearchReadGroupSetsResponse();
+    var emptyResponse = SearchReadGroupSetsResponse();
     return _client.invoke<SearchReadGroupSetsResponse>(
         ctx, 'ReadServiceV1', 'SearchReadGroupSets', request, emptyResponse);
   }
 
   Future<ReadGroupSet> updateReadGroupSet(
       ClientContext ctx, UpdateReadGroupSetRequest request) {
-    var emptyResponse = new ReadGroupSet();
+    var emptyResponse = ReadGroupSet();
     return _client.invoke<ReadGroupSet>(
         ctx, 'ReadServiceV1', 'UpdateReadGroupSet', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteReadGroupSet(
       ClientContext ctx, DeleteReadGroupSetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'ReadServiceV1', 'DeleteReadGroupSet', request, emptyResponse);
   }
 
   Future<ReadGroupSet> getReadGroupSet(
       ClientContext ctx, GetReadGroupSetRequest request) {
-    var emptyResponse = new ReadGroupSet();
+    var emptyResponse = ReadGroupSet();
     return _client.invoke<ReadGroupSet>(
         ctx, 'ReadServiceV1', 'GetReadGroupSet', request, emptyResponse);
   }
 
   Future<ListCoverageBucketsResponse> listCoverageBuckets(
       ClientContext ctx, ListCoverageBucketsRequest request) {
-    var emptyResponse = new ListCoverageBucketsResponse();
+    var emptyResponse = ListCoverageBucketsResponse();
     return _client.invoke<ListCoverageBucketsResponse>(
         ctx, 'ReadServiceV1', 'ListCoverageBuckets', request, emptyResponse);
   }
 
   Future<SearchReadsResponse> searchReads(
       ClientContext ctx, SearchReadsRequest request) {
-    var emptyResponse = new SearchReadsResponse();
+    var emptyResponse = SearchReadsResponse();
     return _client.invoke<SearchReadsResponse>(
         ctx, 'ReadServiceV1', 'SearchReads', request, emptyResponse);
   }

@@ -9,12 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class NetworkPolicy_Provider extends ProtobufEnum {
   static const NetworkPolicy_Provider PROVIDER_UNSPECIFIED =
-      const NetworkPolicy_Provider._(0, 'PROVIDER_UNSPECIFIED');
+      NetworkPolicy_Provider._(0, 'PROVIDER_UNSPECIFIED');
   static const NetworkPolicy_Provider CALICO =
-      const NetworkPolicy_Provider._(1, 'CALICO');
+      NetworkPolicy_Provider._(1, 'CALICO');
 
-  static const List<NetworkPolicy_Provider> values =
-      const <NetworkPolicy_Provider>[
+  static const List<NetworkPolicy_Provider> values = <NetworkPolicy_Provider>[
     PROVIDER_UNSPECIFIED,
     CALICO,
   ];
@@ -32,16 +31,15 @@ class NetworkPolicy_Provider extends ProtobufEnum {
 
 class Cluster_Status extends ProtobufEnum {
   static const Cluster_Status STATUS_UNSPECIFIED =
-      const Cluster_Status._(0, 'STATUS_UNSPECIFIED');
+      Cluster_Status._(0, 'STATUS_UNSPECIFIED');
   static const Cluster_Status PROVISIONING =
-      const Cluster_Status._(1, 'PROVISIONING');
-  static const Cluster_Status RUNNING = const Cluster_Status._(2, 'RUNNING');
-  static const Cluster_Status RECONCILING =
-      const Cluster_Status._(3, 'RECONCILING');
-  static const Cluster_Status STOPPING = const Cluster_Status._(4, 'STOPPING');
-  static const Cluster_Status ERROR = const Cluster_Status._(5, 'ERROR');
+      Cluster_Status._(1, 'PROVISIONING');
+  static const Cluster_Status RUNNING = Cluster_Status._(2, 'RUNNING');
+  static const Cluster_Status RECONCILING = Cluster_Status._(3, 'RECONCILING');
+  static const Cluster_Status STOPPING = Cluster_Status._(4, 'STOPPING');
+  static const Cluster_Status ERROR = Cluster_Status._(5, 'ERROR');
 
-  static const List<Cluster_Status> values = const <Cluster_Status>[
+  static const List<Cluster_Status> values = <Cluster_Status>[
     STATUS_UNSPECIFIED,
     PROVISIONING,
     RUNNING,
@@ -61,16 +59,13 @@ class Cluster_Status extends ProtobufEnum {
 
 class Operation_Status extends ProtobufEnum {
   static const Operation_Status STATUS_UNSPECIFIED =
-      const Operation_Status._(0, 'STATUS_UNSPECIFIED');
-  static const Operation_Status PENDING =
-      const Operation_Status._(1, 'PENDING');
-  static const Operation_Status RUNNING =
-      const Operation_Status._(2, 'RUNNING');
-  static const Operation_Status DONE = const Operation_Status._(3, 'DONE');
-  static const Operation_Status ABORTING =
-      const Operation_Status._(4, 'ABORTING');
+      Operation_Status._(0, 'STATUS_UNSPECIFIED');
+  static const Operation_Status PENDING = Operation_Status._(1, 'PENDING');
+  static const Operation_Status RUNNING = Operation_Status._(2, 'RUNNING');
+  static const Operation_Status DONE = Operation_Status._(3, 'DONE');
+  static const Operation_Status ABORTING = Operation_Status._(4, 'ABORTING');
 
-  static const List<Operation_Status> values = const <Operation_Status>[
+  static const List<Operation_Status> values = <Operation_Status>[
     STATUS_UNSPECIFIED,
     PENDING,
     RUNNING,
@@ -90,41 +85,40 @@ class Operation_Status extends ProtobufEnum {
 
 class Operation_Type extends ProtobufEnum {
   static const Operation_Type TYPE_UNSPECIFIED =
-      const Operation_Type._(0, 'TYPE_UNSPECIFIED');
+      Operation_Type._(0, 'TYPE_UNSPECIFIED');
   static const Operation_Type CREATE_CLUSTER =
-      const Operation_Type._(1, 'CREATE_CLUSTER');
+      Operation_Type._(1, 'CREATE_CLUSTER');
   static const Operation_Type DELETE_CLUSTER =
-      const Operation_Type._(2, 'DELETE_CLUSTER');
+      Operation_Type._(2, 'DELETE_CLUSTER');
   static const Operation_Type UPGRADE_MASTER =
-      const Operation_Type._(3, 'UPGRADE_MASTER');
+      Operation_Type._(3, 'UPGRADE_MASTER');
   static const Operation_Type UPGRADE_NODES =
-      const Operation_Type._(4, 'UPGRADE_NODES');
+      Operation_Type._(4, 'UPGRADE_NODES');
   static const Operation_Type REPAIR_CLUSTER =
-      const Operation_Type._(5, 'REPAIR_CLUSTER');
+      Operation_Type._(5, 'REPAIR_CLUSTER');
   static const Operation_Type UPDATE_CLUSTER =
-      const Operation_Type._(6, 'UPDATE_CLUSTER');
+      Operation_Type._(6, 'UPDATE_CLUSTER');
   static const Operation_Type CREATE_NODE_POOL =
-      const Operation_Type._(7, 'CREATE_NODE_POOL');
+      Operation_Type._(7, 'CREATE_NODE_POOL');
   static const Operation_Type DELETE_NODE_POOL =
-      const Operation_Type._(8, 'DELETE_NODE_POOL');
+      Operation_Type._(8, 'DELETE_NODE_POOL');
   static const Operation_Type SET_NODE_POOL_MANAGEMENT =
-      const Operation_Type._(9, 'SET_NODE_POOL_MANAGEMENT');
+      Operation_Type._(9, 'SET_NODE_POOL_MANAGEMENT');
   static const Operation_Type AUTO_REPAIR_NODES =
-      const Operation_Type._(10, 'AUTO_REPAIR_NODES');
+      Operation_Type._(10, 'AUTO_REPAIR_NODES');
   static const Operation_Type AUTO_UPGRADE_NODES =
-      const Operation_Type._(11, 'AUTO_UPGRADE_NODES');
-  static const Operation_Type SET_LABELS =
-      const Operation_Type._(12, 'SET_LABELS');
+      Operation_Type._(11, 'AUTO_UPGRADE_NODES');
+  static const Operation_Type SET_LABELS = Operation_Type._(12, 'SET_LABELS');
   static const Operation_Type SET_MASTER_AUTH =
-      const Operation_Type._(13, 'SET_MASTER_AUTH');
+      Operation_Type._(13, 'SET_MASTER_AUTH');
   static const Operation_Type SET_NODE_POOL_SIZE =
-      const Operation_Type._(14, 'SET_NODE_POOL_SIZE');
+      Operation_Type._(14, 'SET_NODE_POOL_SIZE');
   static const Operation_Type SET_NETWORK_POLICY =
-      const Operation_Type._(15, 'SET_NETWORK_POLICY');
+      Operation_Type._(15, 'SET_NETWORK_POLICY');
   static const Operation_Type SET_MAINTENANCE_POLICY =
-      const Operation_Type._(16, 'SET_MAINTENANCE_POLICY');
+      Operation_Type._(16, 'SET_MAINTENANCE_POLICY');
 
-  static const List<Operation_Type> values = const <Operation_Type>[
+  static const List<Operation_Type> values = <Operation_Type>[
     TYPE_UNSPECIFIED,
     CREATE_CLUSTER,
     DELETE_CLUSTER,
@@ -155,16 +149,16 @@ class Operation_Type extends ProtobufEnum {
 
 class SetMasterAuthRequest_Action extends ProtobufEnum {
   static const SetMasterAuthRequest_Action UNKNOWN =
-      const SetMasterAuthRequest_Action._(0, 'UNKNOWN');
+      SetMasterAuthRequest_Action._(0, 'UNKNOWN');
   static const SetMasterAuthRequest_Action SET_PASSWORD =
-      const SetMasterAuthRequest_Action._(1, 'SET_PASSWORD');
+      SetMasterAuthRequest_Action._(1, 'SET_PASSWORD');
   static const SetMasterAuthRequest_Action GENERATE_PASSWORD =
-      const SetMasterAuthRequest_Action._(2, 'GENERATE_PASSWORD');
+      SetMasterAuthRequest_Action._(2, 'GENERATE_PASSWORD');
   static const SetMasterAuthRequest_Action SET_USERNAME =
-      const SetMasterAuthRequest_Action._(3, 'SET_USERNAME');
+      SetMasterAuthRequest_Action._(3, 'SET_USERNAME');
 
   static const List<SetMasterAuthRequest_Action> values =
-      const <SetMasterAuthRequest_Action>[
+      <SetMasterAuthRequest_Action>[
     UNKNOWN,
     SET_PASSWORD,
     GENERATE_PASSWORD,
@@ -184,19 +178,18 @@ class SetMasterAuthRequest_Action extends ProtobufEnum {
 
 class NodePool_Status extends ProtobufEnum {
   static const NodePool_Status STATUS_UNSPECIFIED =
-      const NodePool_Status._(0, 'STATUS_UNSPECIFIED');
+      NodePool_Status._(0, 'STATUS_UNSPECIFIED');
   static const NodePool_Status PROVISIONING =
-      const NodePool_Status._(1, 'PROVISIONING');
-  static const NodePool_Status RUNNING = const NodePool_Status._(2, 'RUNNING');
+      NodePool_Status._(1, 'PROVISIONING');
+  static const NodePool_Status RUNNING = NodePool_Status._(2, 'RUNNING');
   static const NodePool_Status RUNNING_WITH_ERROR =
-      const NodePool_Status._(3, 'RUNNING_WITH_ERROR');
+      NodePool_Status._(3, 'RUNNING_WITH_ERROR');
   static const NodePool_Status RECONCILING =
-      const NodePool_Status._(4, 'RECONCILING');
-  static const NodePool_Status STOPPING =
-      const NodePool_Status._(5, 'STOPPING');
-  static const NodePool_Status ERROR = const NodePool_Status._(6, 'ERROR');
+      NodePool_Status._(4, 'RECONCILING');
+  static const NodePool_Status STOPPING = NodePool_Status._(5, 'STOPPING');
+  static const NodePool_Status ERROR = NodePool_Status._(6, 'ERROR');
 
-  static const List<NodePool_Status> values = const <NodePool_Status>[
+  static const List<NodePool_Status> values = <NodePool_Status>[
     STATUS_UNSPECIFIED,
     PROVISIONING,
     RUNNING,

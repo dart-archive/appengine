@@ -27,17 +27,17 @@ abstract class ReferenceServiceV1ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'SearchReferenceSets':
-        return new SearchReferenceSetsRequest();
+        return SearchReferenceSetsRequest();
       case 'GetReferenceSet':
-        return new GetReferenceSetRequest();
+        return GetReferenceSetRequest();
       case 'SearchReferences':
-        return new SearchReferencesRequest();
+        return SearchReferencesRequest();
       case 'GetReference':
-        return new GetReferenceRequest();
+        return GetReferenceRequest();
       case 'ListBases':
-        return new ListBasesRequest();
+        return ListBasesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -55,7 +55,7 @@ abstract class ReferenceServiceV1ServiceBase extends GeneratedService {
       case 'ListBases':
         return this.listBases(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

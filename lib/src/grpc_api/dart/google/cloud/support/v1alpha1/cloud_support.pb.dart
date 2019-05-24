@@ -14,7 +14,7 @@ import '../common.pb.dart' as $google$cloud$support$common;
 import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
 
 class GetSupportAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSupportAccountRequest')
+  static final BuilderInfo _i = BuilderInfo('GetSupportAccountRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -26,14 +26,14 @@ class GetSupportAccountRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetSupportAccountRequest clone() =>
-      new GetSupportAccountRequest()..mergeFromMessage(this);
+      GetSupportAccountRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetSupportAccountRequest create() => new GetSupportAccountRequest();
+  static GetSupportAccountRequest create() => GetSupportAccountRequest();
   static PbList<GetSupportAccountRequest> createRepeated() =>
-      new PbList<GetSupportAccountRequest>();
+      PbList<GetSupportAccountRequest>();
   static GetSupportAccountRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSupportAccountRequest();
+      _defaultInstance = _ReadonlyGetSupportAccountRequest();
     return _defaultInstance;
   }
 
@@ -56,7 +56,7 @@ class _ReadonlyGetSupportAccountRequest extends GetSupportAccountRequest
     with ReadonlyMessageMixin {}
 
 class ListSupportAccountsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSupportAccountsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListSupportAccountsRequest')
     ..aOS(1, 'filter')
     ..aInt64(2, 'pageSize')
     ..aOS(3, 'pageToken')
@@ -70,15 +70,14 @@ class ListSupportAccountsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSupportAccountsRequest clone() =>
-      new ListSupportAccountsRequest()..mergeFromMessage(this);
+      ListSupportAccountsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListSupportAccountsRequest create() =>
-      new ListSupportAccountsRequest();
+  static ListSupportAccountsRequest create() => ListSupportAccountsRequest();
   static PbList<ListSupportAccountsRequest> createRepeated() =>
-      new PbList<ListSupportAccountsRequest>();
+      PbList<ListSupportAccountsRequest>();
   static ListSupportAccountsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSupportAccountsRequest();
+      _defaultInstance = _ReadonlyListSupportAccountsRequest();
     return _defaultInstance;
   }
 
@@ -117,7 +116,7 @@ class _ReadonlyListSupportAccountsRequest extends ListSupportAccountsRequest
     with ReadonlyMessageMixin {}
 
 class ListSupportAccountsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSupportAccountsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListSupportAccountsResponse')
     ..pp<$google$cloud$support$common.SupportAccount>(
         1,
         'accounts',
@@ -135,15 +134,14 @@ class ListSupportAccountsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSupportAccountsResponse clone() =>
-      new ListSupportAccountsResponse()..mergeFromMessage(this);
+      ListSupportAccountsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListSupportAccountsResponse create() =>
-      new ListSupportAccountsResponse();
+  static ListSupportAccountsResponse create() => ListSupportAccountsResponse();
   static PbList<ListSupportAccountsResponse> createRepeated() =>
-      new PbList<ListSupportAccountsResponse>();
+      PbList<ListSupportAccountsResponse>();
   static ListSupportAccountsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSupportAccountsResponse();
+      _defaultInstance = _ReadonlyListSupportAccountsResponse();
     return _defaultInstance;
   }
 
@@ -169,7 +167,7 @@ class _ReadonlyListSupportAccountsResponse extends ListSupportAccountsResponse
     with ReadonlyMessageMixin {}
 
 class GetCaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetCaseRequest')
+  static final BuilderInfo _i = BuilderInfo('GetCaseRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -180,14 +178,12 @@ class GetCaseRequest extends GeneratedMessage {
   GetCaseRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetCaseRequest clone() => new GetCaseRequest()..mergeFromMessage(this);
+  GetCaseRequest clone() => GetCaseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetCaseRequest create() => new GetCaseRequest();
-  static PbList<GetCaseRequest> createRepeated() =>
-      new PbList<GetCaseRequest>();
+  static GetCaseRequest create() => GetCaseRequest();
+  static PbList<GetCaseRequest> createRepeated() => PbList<GetCaseRequest>();
   static GetCaseRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetCaseRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetCaseRequest();
     return _defaultInstance;
   }
 
@@ -209,7 +205,7 @@ class _ReadonlyGetCaseRequest extends GetCaseRequest with ReadonlyMessageMixin {
 }
 
 class ListCasesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCasesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListCasesRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
     ..aInt64(3, 'pageSize')
@@ -223,14 +219,14 @@ class ListCasesRequest extends GeneratedMessage {
   ListCasesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListCasesRequest clone() => new ListCasesRequest()..mergeFromMessage(this);
+  ListCasesRequest clone() => ListCasesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListCasesRequest create() => new ListCasesRequest();
+  static ListCasesRequest create() => ListCasesRequest();
   static PbList<ListCasesRequest> createRepeated() =>
-      new PbList<ListCasesRequest>();
+      PbList<ListCasesRequest>();
   static ListCasesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCasesRequest();
+      _defaultInstance = _ReadonlyListCasesRequest();
     return _defaultInstance;
   }
 
@@ -276,7 +272,7 @@ class _ReadonlyListCasesRequest extends ListCasesRequest
     with ReadonlyMessageMixin {}
 
 class ListCasesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCasesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListCasesResponse')
     ..pp<$google$cloud$support$common.Case>(
         1,
         'cases',
@@ -293,14 +289,14 @@ class ListCasesResponse extends GeneratedMessage {
   ListCasesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListCasesResponse clone() => new ListCasesResponse()..mergeFromMessage(this);
+  ListCasesResponse clone() => ListCasesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListCasesResponse create() => new ListCasesResponse();
+  static ListCasesResponse create() => ListCasesResponse();
   static PbList<ListCasesResponse> createRepeated() =>
-      new PbList<ListCasesResponse>();
+      PbList<ListCasesResponse>();
   static ListCasesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCasesResponse();
+      _defaultInstance = _ReadonlyListCasesResponse();
     return _defaultInstance;
   }
 
@@ -324,7 +320,7 @@ class _ReadonlyListCasesResponse extends ListCasesResponse
     with ReadonlyMessageMixin {}
 
 class ListCommentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCommentsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListCommentsRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -335,15 +331,14 @@ class ListCommentsRequest extends GeneratedMessage {
   ListCommentsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListCommentsRequest clone() =>
-      new ListCommentsRequest()..mergeFromMessage(this);
+  ListCommentsRequest clone() => ListCommentsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListCommentsRequest create() => new ListCommentsRequest();
+  static ListCommentsRequest create() => ListCommentsRequest();
   static PbList<ListCommentsRequest> createRepeated() =>
-      new PbList<ListCommentsRequest>();
+      PbList<ListCommentsRequest>();
   static ListCommentsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCommentsRequest();
+      _defaultInstance = _ReadonlyListCommentsRequest();
     return _defaultInstance;
   }
 
@@ -365,7 +360,7 @@ class _ReadonlyListCommentsRequest extends ListCommentsRequest
     with ReadonlyMessageMixin {}
 
 class ListCommentsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCommentsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListCommentsResponse')
     ..pp<$google$cloud$support$common.Comment>(
         1,
         'comments',
@@ -382,14 +377,14 @@ class ListCommentsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListCommentsResponse clone() =>
-      new ListCommentsResponse()..mergeFromMessage(this);
+      ListCommentsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListCommentsResponse create() => new ListCommentsResponse();
+  static ListCommentsResponse create() => ListCommentsResponse();
   static PbList<ListCommentsResponse> createRepeated() =>
-      new PbList<ListCommentsResponse>();
+      PbList<ListCommentsResponse>();
   static ListCommentsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCommentsResponse();
+      _defaultInstance = _ReadonlyListCommentsResponse();
     return _defaultInstance;
   }
 
@@ -405,7 +400,7 @@ class _ReadonlyListCommentsResponse extends ListCommentsResponse
     with ReadonlyMessageMixin {}
 
 class CreateCaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateCaseRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateCaseRequest')
     ..aOS(1, 'parent')
     ..a<$google$cloud$support$common.Case>(
         2,
@@ -422,14 +417,14 @@ class CreateCaseRequest extends GeneratedMessage {
   CreateCaseRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateCaseRequest clone() => new CreateCaseRequest()..mergeFromMessage(this);
+  CreateCaseRequest clone() => CreateCaseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateCaseRequest create() => new CreateCaseRequest();
+  static CreateCaseRequest create() => CreateCaseRequest();
   static PbList<CreateCaseRequest> createRepeated() =>
-      new PbList<CreateCaseRequest>();
+      PbList<CreateCaseRequest>();
   static CreateCaseRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateCaseRequest();
+      _defaultInstance = _ReadonlyCreateCaseRequest();
     return _defaultInstance;
   }
 
@@ -459,7 +454,7 @@ class _ReadonlyCreateCaseRequest extends CreateCaseRequest
     with ReadonlyMessageMixin {}
 
 class UpdateCaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateCaseRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateCaseRequest')
     ..a<$google$cloud$support$common.Case>(
         1,
         'case_1',
@@ -481,14 +476,14 @@ class UpdateCaseRequest extends GeneratedMessage {
   UpdateCaseRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateCaseRequest clone() => new UpdateCaseRequest()..mergeFromMessage(this);
+  UpdateCaseRequest clone() => UpdateCaseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateCaseRequest create() => new UpdateCaseRequest();
+  static UpdateCaseRequest create() => UpdateCaseRequest();
   static PbList<UpdateCaseRequest> createRepeated() =>
-      new PbList<UpdateCaseRequest>();
+      PbList<UpdateCaseRequest>();
   static UpdateCaseRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateCaseRequest();
+      _defaultInstance = _ReadonlyUpdateCaseRequest();
     return _defaultInstance;
   }
 
@@ -518,7 +513,7 @@ class _ReadonlyUpdateCaseRequest extends UpdateCaseRequest
     with ReadonlyMessageMixin {}
 
 class CreateCommentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateCommentRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateCommentRequest')
     ..aOS(1, 'name')
     ..a<$google$cloud$support$common.Comment>(
         2,
@@ -536,14 +531,14 @@ class CreateCommentRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateCommentRequest clone() =>
-      new CreateCommentRequest()..mergeFromMessage(this);
+      CreateCommentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateCommentRequest create() => new CreateCommentRequest();
+  static CreateCommentRequest create() => CreateCommentRequest();
   static PbList<CreateCommentRequest> createRepeated() =>
-      new PbList<CreateCommentRequest>();
+      PbList<CreateCommentRequest>();
   static CreateCommentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateCommentRequest();
+      _defaultInstance = _ReadonlyCreateCommentRequest();
     return _defaultInstance;
   }
 
@@ -573,7 +568,7 @@ class _ReadonlyCreateCommentRequest extends CreateCommentRequest
     with ReadonlyMessageMixin {}
 
 class GetIssueTaxonomyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetIssueTaxonomyRequest')
+  static final BuilderInfo _i = BuilderInfo('GetIssueTaxonomyRequest')
     ..hasRequiredFields = false;
 
   GetIssueTaxonomyRequest() : super();
@@ -584,14 +579,14 @@ class GetIssueTaxonomyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetIssueTaxonomyRequest clone() =>
-      new GetIssueTaxonomyRequest()..mergeFromMessage(this);
+      GetIssueTaxonomyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetIssueTaxonomyRequest create() => new GetIssueTaxonomyRequest();
+  static GetIssueTaxonomyRequest create() => GetIssueTaxonomyRequest();
   static PbList<GetIssueTaxonomyRequest> createRepeated() =>
-      new PbList<GetIssueTaxonomyRequest>();
+      PbList<GetIssueTaxonomyRequest>();
   static GetIssueTaxonomyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetIssueTaxonomyRequest();
+      _defaultInstance = _ReadonlyGetIssueTaxonomyRequest();
     return _defaultInstance;
   }
 
@@ -611,63 +606,63 @@ class CloudSupportApi {
 
   Future<$google$cloud$support$common.SupportAccount> getSupportAccount(
       ClientContext ctx, GetSupportAccountRequest request) {
-    var emptyResponse = new $google$cloud$support$common.SupportAccount();
+    var emptyResponse = $google$cloud$support$common.SupportAccount();
     return _client.invoke<$google$cloud$support$common.SupportAccount>(
         ctx, 'CloudSupport', 'GetSupportAccount', request, emptyResponse);
   }
 
   Future<ListSupportAccountsResponse> listSupportAccounts(
       ClientContext ctx, ListSupportAccountsRequest request) {
-    var emptyResponse = new ListSupportAccountsResponse();
+    var emptyResponse = ListSupportAccountsResponse();
     return _client.invoke<ListSupportAccountsResponse>(
         ctx, 'CloudSupport', 'ListSupportAccounts', request, emptyResponse);
   }
 
   Future<$google$cloud$support$common.Case> getCase(
       ClientContext ctx, GetCaseRequest request) {
-    var emptyResponse = new $google$cloud$support$common.Case();
+    var emptyResponse = $google$cloud$support$common.Case();
     return _client.invoke<$google$cloud$support$common.Case>(
         ctx, 'CloudSupport', 'GetCase', request, emptyResponse);
   }
 
   Future<ListCasesResponse> listCases(
       ClientContext ctx, ListCasesRequest request) {
-    var emptyResponse = new ListCasesResponse();
+    var emptyResponse = ListCasesResponse();
     return _client.invoke<ListCasesResponse>(
         ctx, 'CloudSupport', 'ListCases', request, emptyResponse);
   }
 
   Future<ListCommentsResponse> listComments(
       ClientContext ctx, ListCommentsRequest request) {
-    var emptyResponse = new ListCommentsResponse();
+    var emptyResponse = ListCommentsResponse();
     return _client.invoke<ListCommentsResponse>(
         ctx, 'CloudSupport', 'ListComments', request, emptyResponse);
   }
 
   Future<$google$cloud$support$common.Case> createCase(
       ClientContext ctx, CreateCaseRequest request) {
-    var emptyResponse = new $google$cloud$support$common.Case();
+    var emptyResponse = $google$cloud$support$common.Case();
     return _client.invoke<$google$cloud$support$common.Case>(
         ctx, 'CloudSupport', 'CreateCase', request, emptyResponse);
   }
 
   Future<$google$cloud$support$common.Case> updateCase(
       ClientContext ctx, UpdateCaseRequest request) {
-    var emptyResponse = new $google$cloud$support$common.Case();
+    var emptyResponse = $google$cloud$support$common.Case();
     return _client.invoke<$google$cloud$support$common.Case>(
         ctx, 'CloudSupport', 'UpdateCase', request, emptyResponse);
   }
 
   Future<$google$cloud$support$common.Comment> createComment(
       ClientContext ctx, CreateCommentRequest request) {
-    var emptyResponse = new $google$cloud$support$common.Comment();
+    var emptyResponse = $google$cloud$support$common.Comment();
     return _client.invoke<$google$cloud$support$common.Comment>(
         ctx, 'CloudSupport', 'CreateComment', request, emptyResponse);
   }
 
   Future<$google$cloud$support$common.IssueTaxonomy> getIssueTaxonomy(
       ClientContext ctx, GetIssueTaxonomyRequest request) {
-    var emptyResponse = new $google$cloud$support$common.IssueTaxonomy();
+    var emptyResponse = $google$cloud$support$common.IssueTaxonomy();
     return _client.invoke<$google$cloud$support$common.IssueTaxonomy>(
         ctx, 'CloudSupport', 'GetIssueTaxonomy', request, emptyResponse);
   }

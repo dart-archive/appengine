@@ -8,10 +8,10 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class LogMetric_ApiVersion extends ProtobufEnum {
-  static const LogMetric_ApiVersion V2 = const LogMetric_ApiVersion._(0, 'V2');
-  static const LogMetric_ApiVersion V1 = const LogMetric_ApiVersion._(1, 'V1');
+  static const LogMetric_ApiVersion V2 = LogMetric_ApiVersion._(0, 'V2');
+  static const LogMetric_ApiVersion V1 = LogMetric_ApiVersion._(1, 'V1');
 
-  static const List<LogMetric_ApiVersion> values = const <LogMetric_ApiVersion>[
+  static const List<LogMetric_ApiVersion> values = <LogMetric_ApiVersion>[
     V2,
     V1,
   ];

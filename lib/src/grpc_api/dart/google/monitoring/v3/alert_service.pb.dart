@@ -14,7 +14,7 @@ import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
 import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class CreateAlertPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateAlertPolicyRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateAlertPolicyRequest')
     ..a<AlertPolicy>(2, 'alertPolicy', PbFieldType.OM, AlertPolicy.getDefault,
         AlertPolicy.create)
     ..aOS(3, 'name')
@@ -28,14 +28,14 @@ class CreateAlertPolicyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateAlertPolicyRequest clone() =>
-      new CreateAlertPolicyRequest()..mergeFromMessage(this);
+      CreateAlertPolicyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateAlertPolicyRequest create() => new CreateAlertPolicyRequest();
+  static CreateAlertPolicyRequest create() => CreateAlertPolicyRequest();
   static PbList<CreateAlertPolicyRequest> createRepeated() =>
-      new PbList<CreateAlertPolicyRequest>();
+      PbList<CreateAlertPolicyRequest>();
   static CreateAlertPolicyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateAlertPolicyRequest();
+      _defaultInstance = _ReadonlyCreateAlertPolicyRequest();
     return _defaultInstance;
   }
 
@@ -66,7 +66,7 @@ class _ReadonlyCreateAlertPolicyRequest extends CreateAlertPolicyRequest
     with ReadonlyMessageMixin {}
 
 class GetAlertPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetAlertPolicyRequest')
+  static final BuilderInfo _i = BuilderInfo('GetAlertPolicyRequest')
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -78,14 +78,14 @@ class GetAlertPolicyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetAlertPolicyRequest clone() =>
-      new GetAlertPolicyRequest()..mergeFromMessage(this);
+      GetAlertPolicyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetAlertPolicyRequest create() => new GetAlertPolicyRequest();
+  static GetAlertPolicyRequest create() => GetAlertPolicyRequest();
   static PbList<GetAlertPolicyRequest> createRepeated() =>
-      new PbList<GetAlertPolicyRequest>();
+      PbList<GetAlertPolicyRequest>();
   static GetAlertPolicyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetAlertPolicyRequest();
+      _defaultInstance = _ReadonlyGetAlertPolicyRequest();
     return _defaultInstance;
   }
 
@@ -108,7 +108,7 @@ class _ReadonlyGetAlertPolicyRequest extends GetAlertPolicyRequest
     with ReadonlyMessageMixin {}
 
 class ListAlertPoliciesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListAlertPoliciesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListAlertPoliciesRequest')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'name')
@@ -124,14 +124,14 @@ class ListAlertPoliciesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListAlertPoliciesRequest clone() =>
-      new ListAlertPoliciesRequest()..mergeFromMessage(this);
+      ListAlertPoliciesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListAlertPoliciesRequest create() => new ListAlertPoliciesRequest();
+  static ListAlertPoliciesRequest create() => ListAlertPoliciesRequest();
   static PbList<ListAlertPoliciesRequest> createRepeated() =>
-      new PbList<ListAlertPoliciesRequest>();
+      PbList<ListAlertPoliciesRequest>();
   static ListAlertPoliciesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListAlertPoliciesRequest();
+      _defaultInstance = _ReadonlyListAlertPoliciesRequest();
     return _defaultInstance;
   }
 
@@ -186,7 +186,7 @@ class _ReadonlyListAlertPoliciesRequest extends ListAlertPoliciesRequest
     with ReadonlyMessageMixin {}
 
 class ListAlertPoliciesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListAlertPoliciesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListAlertPoliciesResponse')
     ..aOS(2, 'nextPageToken')
     ..pp<AlertPolicy>(3, 'alertPolicies', PbFieldType.PM,
         AlertPolicy.$checkItem, AlertPolicy.create)
@@ -200,14 +200,14 @@ class ListAlertPoliciesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListAlertPoliciesResponse clone() =>
-      new ListAlertPoliciesResponse()..mergeFromMessage(this);
+      ListAlertPoliciesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListAlertPoliciesResponse create() => new ListAlertPoliciesResponse();
+  static ListAlertPoliciesResponse create() => ListAlertPoliciesResponse();
   static PbList<ListAlertPoliciesResponse> createRepeated() =>
-      new PbList<ListAlertPoliciesResponse>();
+      PbList<ListAlertPoliciesResponse>();
   static ListAlertPoliciesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListAlertPoliciesResponse();
+      _defaultInstance = _ReadonlyListAlertPoliciesResponse();
     return _defaultInstance;
   }
 
@@ -232,7 +232,7 @@ class _ReadonlyListAlertPoliciesResponse extends ListAlertPoliciesResponse
     with ReadonlyMessageMixin {}
 
 class UpdateAlertPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateAlertPolicyRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateAlertPolicyRequest')
     ..a<$google$protobuf.FieldMask>(
         2,
         'updateMask',
@@ -251,14 +251,14 @@ class UpdateAlertPolicyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateAlertPolicyRequest clone() =>
-      new UpdateAlertPolicyRequest()..mergeFromMessage(this);
+      UpdateAlertPolicyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateAlertPolicyRequest create() => new UpdateAlertPolicyRequest();
+  static UpdateAlertPolicyRequest create() => UpdateAlertPolicyRequest();
   static PbList<UpdateAlertPolicyRequest> createRepeated() =>
-      new PbList<UpdateAlertPolicyRequest>();
+      PbList<UpdateAlertPolicyRequest>();
   static UpdateAlertPolicyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateAlertPolicyRequest();
+      _defaultInstance = _ReadonlyUpdateAlertPolicyRequest();
     return _defaultInstance;
   }
 
@@ -289,7 +289,7 @@ class _ReadonlyUpdateAlertPolicyRequest extends UpdateAlertPolicyRequest
     with ReadonlyMessageMixin {}
 
 class DeleteAlertPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteAlertPolicyRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteAlertPolicyRequest')
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -301,14 +301,14 @@ class DeleteAlertPolicyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteAlertPolicyRequest clone() =>
-      new DeleteAlertPolicyRequest()..mergeFromMessage(this);
+      DeleteAlertPolicyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteAlertPolicyRequest create() => new DeleteAlertPolicyRequest();
+  static DeleteAlertPolicyRequest create() => DeleteAlertPolicyRequest();
   static PbList<DeleteAlertPolicyRequest> createRepeated() =>
-      new PbList<DeleteAlertPolicyRequest>();
+      PbList<DeleteAlertPolicyRequest>();
   static DeleteAlertPolicyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteAlertPolicyRequest();
+      _defaultInstance = _ReadonlyDeleteAlertPolicyRequest();
     return _defaultInstance;
   }
 
@@ -336,35 +336,35 @@ class AlertPolicyServiceApi {
 
   Future<ListAlertPoliciesResponse> listAlertPolicies(
       ClientContext ctx, ListAlertPoliciesRequest request) {
-    var emptyResponse = new ListAlertPoliciesResponse();
+    var emptyResponse = ListAlertPoliciesResponse();
     return _client.invoke<ListAlertPoliciesResponse>(
         ctx, 'AlertPolicyService', 'ListAlertPolicies', request, emptyResponse);
   }
 
   Future<AlertPolicy> getAlertPolicy(
       ClientContext ctx, GetAlertPolicyRequest request) {
-    var emptyResponse = new AlertPolicy();
+    var emptyResponse = AlertPolicy();
     return _client.invoke<AlertPolicy>(
         ctx, 'AlertPolicyService', 'GetAlertPolicy', request, emptyResponse);
   }
 
   Future<AlertPolicy> createAlertPolicy(
       ClientContext ctx, CreateAlertPolicyRequest request) {
-    var emptyResponse = new AlertPolicy();
+    var emptyResponse = AlertPolicy();
     return _client.invoke<AlertPolicy>(
         ctx, 'AlertPolicyService', 'CreateAlertPolicy', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteAlertPolicy(
       ClientContext ctx, DeleteAlertPolicyRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'AlertPolicyService', 'DeleteAlertPolicy', request, emptyResponse);
   }
 
   Future<AlertPolicy> updateAlertPolicy(
       ClientContext ctx, UpdateAlertPolicyRequest request) {
-    var emptyResponse = new AlertPolicy();
+    var emptyResponse = AlertPolicy();
     return _client.invoke<AlertPolicy>(
         ctx, 'AlertPolicyService', 'UpdateAlertPolicy', request, emptyResponse);
   }

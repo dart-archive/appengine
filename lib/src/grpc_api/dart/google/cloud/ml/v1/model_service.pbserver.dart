@@ -33,25 +33,25 @@ abstract class ModelServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateModel':
-        return new CreateModelRequest();
+        return CreateModelRequest();
       case 'ListModels':
-        return new ListModelsRequest();
+        return ListModelsRequest();
       case 'GetModel':
-        return new GetModelRequest();
+        return GetModelRequest();
       case 'DeleteModel':
-        return new DeleteModelRequest();
+        return DeleteModelRequest();
       case 'CreateVersion':
-        return new CreateVersionRequest();
+        return CreateVersionRequest();
       case 'ListVersions':
-        return new ListVersionsRequest();
+        return ListVersionsRequest();
       case 'GetVersion':
-        return new GetVersionRequest();
+        return GetVersionRequest();
       case 'DeleteVersion':
-        return new DeleteVersionRequest();
+        return DeleteVersionRequest();
       case 'SetDefaultVersion':
-        return new SetDefaultVersionRequest();
+        return SetDefaultVersionRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -77,7 +77,7 @@ abstract class ModelServiceBase extends GeneratedService {
       case 'SetDefaultVersion':
         return this.setDefaultVersion(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

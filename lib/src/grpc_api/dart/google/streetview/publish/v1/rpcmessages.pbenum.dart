@@ -8,11 +8,11 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class PhotoView extends ProtobufEnum {
-  static const PhotoView BASIC = const PhotoView._(0, 'BASIC');
+  static const PhotoView BASIC = PhotoView._(0, 'BASIC');
   static const PhotoView INCLUDE_DOWNLOAD_URL =
-      const PhotoView._(1, 'INCLUDE_DOWNLOAD_URL');
+      PhotoView._(1, 'INCLUDE_DOWNLOAD_URL');
 
-  static const List<PhotoView> values = const <PhotoView>[
+  static const List<PhotoView> values = <PhotoView>[
     BASIC,
     INCLUDE_DOWNLOAD_URL,
   ];

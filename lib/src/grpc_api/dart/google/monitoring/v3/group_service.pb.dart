@@ -15,7 +15,7 @@ import '../../api/monitored_resource.pb.dart' as $google$api;
 import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class ListGroupsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListGroupsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListGroupsRequest')
     ..aOS(2, 'childrenOfGroup')
     ..aOS(3, 'ancestorsOfGroup')
     ..aOS(4, 'descendantsOfGroup')
@@ -31,14 +31,14 @@ class ListGroupsRequest extends GeneratedMessage {
   ListGroupsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListGroupsRequest clone() => new ListGroupsRequest()..mergeFromMessage(this);
+  ListGroupsRequest clone() => ListGroupsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListGroupsRequest create() => new ListGroupsRequest();
+  static ListGroupsRequest create() => ListGroupsRequest();
   static PbList<ListGroupsRequest> createRepeated() =>
-      new PbList<ListGroupsRequest>();
+      PbList<ListGroupsRequest>();
   static ListGroupsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListGroupsRequest();
+      _defaultInstance = _ReadonlyListGroupsRequest();
     return _defaultInstance;
   }
 
@@ -100,7 +100,7 @@ class _ReadonlyListGroupsRequest extends ListGroupsRequest
     with ReadonlyMessageMixin {}
 
 class ListGroupsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListGroupsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListGroupsResponse')
     ..pp<Group>(1, 'group', PbFieldType.PM, Group.$checkItem, Group.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -112,15 +112,14 @@ class ListGroupsResponse extends GeneratedMessage {
   ListGroupsResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListGroupsResponse clone() =>
-      new ListGroupsResponse()..mergeFromMessage(this);
+  ListGroupsResponse clone() => ListGroupsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListGroupsResponse create() => new ListGroupsResponse();
+  static ListGroupsResponse create() => ListGroupsResponse();
   static PbList<ListGroupsResponse> createRepeated() =>
-      new PbList<ListGroupsResponse>();
+      PbList<ListGroupsResponse>();
   static ListGroupsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListGroupsResponse();
+      _defaultInstance = _ReadonlyListGroupsResponse();
     return _defaultInstance;
   }
 
@@ -144,7 +143,7 @@ class _ReadonlyListGroupsResponse extends ListGroupsResponse
     with ReadonlyMessageMixin {}
 
 class GetGroupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetGroupRequest')
+  static final BuilderInfo _i = BuilderInfo('GetGroupRequest')
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -155,14 +154,12 @@ class GetGroupRequest extends GeneratedMessage {
   GetGroupRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetGroupRequest clone() => new GetGroupRequest()..mergeFromMessage(this);
+  GetGroupRequest clone() => GetGroupRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetGroupRequest create() => new GetGroupRequest();
-  static PbList<GetGroupRequest> createRepeated() =>
-      new PbList<GetGroupRequest>();
+  static GetGroupRequest create() => GetGroupRequest();
+  static PbList<GetGroupRequest> createRepeated() => PbList<GetGroupRequest>();
   static GetGroupRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetGroupRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetGroupRequest();
     return _defaultInstance;
   }
 
@@ -184,7 +181,7 @@ class _ReadonlyGetGroupRequest extends GetGroupRequest
     with ReadonlyMessageMixin {}
 
 class CreateGroupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateGroupRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateGroupRequest')
     ..a<Group>(2, 'group', PbFieldType.OM, Group.getDefault, Group.create)
     ..aOB(3, 'validateOnly')
     ..aOS(4, 'name')
@@ -197,15 +194,14 @@ class CreateGroupRequest extends GeneratedMessage {
   CreateGroupRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateGroupRequest clone() =>
-      new CreateGroupRequest()..mergeFromMessage(this);
+  CreateGroupRequest clone() => CreateGroupRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateGroupRequest create() => new CreateGroupRequest();
+  static CreateGroupRequest create() => CreateGroupRequest();
   static PbList<CreateGroupRequest> createRepeated() =>
-      new PbList<CreateGroupRequest>();
+      PbList<CreateGroupRequest>();
   static CreateGroupRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateGroupRequest();
+      _defaultInstance = _ReadonlyCreateGroupRequest();
     return _defaultInstance;
   }
 
@@ -243,7 +239,7 @@ class _ReadonlyCreateGroupRequest extends CreateGroupRequest
     with ReadonlyMessageMixin {}
 
 class UpdateGroupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateGroupRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateGroupRequest')
     ..a<Group>(2, 'group', PbFieldType.OM, Group.getDefault, Group.create)
     ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false;
@@ -255,15 +251,14 @@ class UpdateGroupRequest extends GeneratedMessage {
   UpdateGroupRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateGroupRequest clone() =>
-      new UpdateGroupRequest()..mergeFromMessage(this);
+  UpdateGroupRequest clone() => UpdateGroupRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateGroupRequest create() => new UpdateGroupRequest();
+  static UpdateGroupRequest create() => UpdateGroupRequest();
   static PbList<UpdateGroupRequest> createRepeated() =>
-      new PbList<UpdateGroupRequest>();
+      PbList<UpdateGroupRequest>();
   static UpdateGroupRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateGroupRequest();
+      _defaultInstance = _ReadonlyUpdateGroupRequest();
     return _defaultInstance;
   }
 
@@ -293,7 +288,7 @@ class _ReadonlyUpdateGroupRequest extends UpdateGroupRequest
     with ReadonlyMessageMixin {}
 
 class DeleteGroupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteGroupRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteGroupRequest')
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -304,15 +299,14 @@ class DeleteGroupRequest extends GeneratedMessage {
   DeleteGroupRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteGroupRequest clone() =>
-      new DeleteGroupRequest()..mergeFromMessage(this);
+  DeleteGroupRequest clone() => DeleteGroupRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteGroupRequest create() => new DeleteGroupRequest();
+  static DeleteGroupRequest create() => DeleteGroupRequest();
   static PbList<DeleteGroupRequest> createRepeated() =>
-      new PbList<DeleteGroupRequest>();
+      PbList<DeleteGroupRequest>();
   static DeleteGroupRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteGroupRequest();
+      _defaultInstance = _ReadonlyDeleteGroupRequest();
     return _defaultInstance;
   }
 
@@ -334,7 +328,7 @@ class _ReadonlyDeleteGroupRequest extends DeleteGroupRequest
     with ReadonlyMessageMixin {}
 
 class ListGroupMembersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListGroupMembersRequest')
+  static final BuilderInfo _i = BuilderInfo('ListGroupMembersRequest')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'filter')
@@ -351,14 +345,14 @@ class ListGroupMembersRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListGroupMembersRequest clone() =>
-      new ListGroupMembersRequest()..mergeFromMessage(this);
+      ListGroupMembersRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListGroupMembersRequest create() => new ListGroupMembersRequest();
+  static ListGroupMembersRequest create() => ListGroupMembersRequest();
   static PbList<ListGroupMembersRequest> createRepeated() =>
-      new PbList<ListGroupMembersRequest>();
+      PbList<ListGroupMembersRequest>();
   static ListGroupMembersRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListGroupMembersRequest();
+      _defaultInstance = _ReadonlyListGroupMembersRequest();
     return _defaultInstance;
   }
 
@@ -413,7 +407,7 @@ class _ReadonlyListGroupMembersRequest extends ListGroupMembersRequest
     with ReadonlyMessageMixin {}
 
 class ListGroupMembersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListGroupMembersResponse')
+  static final BuilderInfo _i = BuilderInfo('ListGroupMembersResponse')
     ..pp<$google$api.MonitoredResource>(
         1,
         'members',
@@ -432,14 +426,14 @@ class ListGroupMembersResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListGroupMembersResponse clone() =>
-      new ListGroupMembersResponse()..mergeFromMessage(this);
+      ListGroupMembersResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListGroupMembersResponse create() => new ListGroupMembersResponse();
+  static ListGroupMembersResponse create() => ListGroupMembersResponse();
   static PbList<ListGroupMembersResponse> createRepeated() =>
-      new PbList<ListGroupMembersResponse>();
+      PbList<ListGroupMembersResponse>();
   static ListGroupMembersResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListGroupMembersResponse();
+      _defaultInstance = _ReadonlyListGroupMembersResponse();
     return _defaultInstance;
   }
 
@@ -477,39 +471,39 @@ class GroupServiceApi {
 
   Future<ListGroupsResponse> listGroups(
       ClientContext ctx, ListGroupsRequest request) {
-    var emptyResponse = new ListGroupsResponse();
+    var emptyResponse = ListGroupsResponse();
     return _client.invoke<ListGroupsResponse>(
         ctx, 'GroupService', 'ListGroups', request, emptyResponse);
   }
 
   Future<Group> getGroup(ClientContext ctx, GetGroupRequest request) {
-    var emptyResponse = new Group();
+    var emptyResponse = Group();
     return _client.invoke<Group>(
         ctx, 'GroupService', 'GetGroup', request, emptyResponse);
   }
 
   Future<Group> createGroup(ClientContext ctx, CreateGroupRequest request) {
-    var emptyResponse = new Group();
+    var emptyResponse = Group();
     return _client.invoke<Group>(
         ctx, 'GroupService', 'CreateGroup', request, emptyResponse);
   }
 
   Future<Group> updateGroup(ClientContext ctx, UpdateGroupRequest request) {
-    var emptyResponse = new Group();
+    var emptyResponse = Group();
     return _client.invoke<Group>(
         ctx, 'GroupService', 'UpdateGroup', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteGroup(
       ClientContext ctx, DeleteGroupRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'GroupService', 'DeleteGroup', request, emptyResponse);
   }
 
   Future<ListGroupMembersResponse> listGroupMembers(
       ClientContext ctx, ListGroupMembersRequest request) {
-    var emptyResponse = new ListGroupMembersResponse();
+    var emptyResponse = ListGroupMembersResponse();
     return _client.invoke<ListGroupMembersResponse>(
         ctx, 'GroupService', 'ListGroupMembers', request, emptyResponse);
   }

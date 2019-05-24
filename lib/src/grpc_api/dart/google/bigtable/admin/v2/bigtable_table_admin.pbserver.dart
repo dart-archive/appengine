@@ -43,33 +43,33 @@ abstract class BigtableTableAdminServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateTable':
-        return new CreateTableRequest();
+        return CreateTableRequest();
       case 'CreateTableFromSnapshot':
-        return new CreateTableFromSnapshotRequest();
+        return CreateTableFromSnapshotRequest();
       case 'ListTables':
-        return new ListTablesRequest();
+        return ListTablesRequest();
       case 'GetTable':
-        return new GetTableRequest();
+        return GetTableRequest();
       case 'DeleteTable':
-        return new DeleteTableRequest();
+        return DeleteTableRequest();
       case 'ModifyColumnFamilies':
-        return new ModifyColumnFamiliesRequest();
+        return ModifyColumnFamiliesRequest();
       case 'DropRowRange':
-        return new DropRowRangeRequest();
+        return DropRowRangeRequest();
       case 'GenerateConsistencyToken':
-        return new GenerateConsistencyTokenRequest();
+        return GenerateConsistencyTokenRequest();
       case 'CheckConsistency':
-        return new CheckConsistencyRequest();
+        return CheckConsistencyRequest();
       case 'SnapshotTable':
-        return new SnapshotTableRequest();
+        return SnapshotTableRequest();
       case 'GetSnapshot':
-        return new GetSnapshotRequest();
+        return GetSnapshotRequest();
       case 'ListSnapshots':
-        return new ListSnapshotsRequest();
+        return ListSnapshotsRequest();
       case 'DeleteSnapshot':
-        return new DeleteSnapshotRequest();
+        return DeleteSnapshotRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -103,7 +103,7 @@ abstract class BigtableTableAdminServiceBase extends GeneratedService {
       case 'DeleteSnapshot':
         return this.deleteSnapshot(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -21,7 +21,7 @@ import 'appengine.pbenum.dart';
 export 'appengine.pbenum.dart';
 
 class GetApplicationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetApplicationRequest')
+  static final BuilderInfo _i = BuilderInfo('GetApplicationRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -33,14 +33,14 @@ class GetApplicationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetApplicationRequest clone() =>
-      new GetApplicationRequest()..mergeFromMessage(this);
+      GetApplicationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetApplicationRequest create() => new GetApplicationRequest();
+  static GetApplicationRequest create() => GetApplicationRequest();
   static PbList<GetApplicationRequest> createRepeated() =>
-      new PbList<GetApplicationRequest>();
+      PbList<GetApplicationRequest>();
   static GetApplicationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetApplicationRequest();
+      _defaultInstance = _ReadonlyGetApplicationRequest();
     return _defaultInstance;
   }
 
@@ -63,7 +63,7 @@ class _ReadonlyGetApplicationRequest extends GetApplicationRequest
     with ReadonlyMessageMixin {}
 
 class RepairApplicationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RepairApplicationRequest')
+  static final BuilderInfo _i = BuilderInfo('RepairApplicationRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -75,14 +75,14 @@ class RepairApplicationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RepairApplicationRequest clone() =>
-      new RepairApplicationRequest()..mergeFromMessage(this);
+      RepairApplicationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RepairApplicationRequest create() => new RepairApplicationRequest();
+  static RepairApplicationRequest create() => RepairApplicationRequest();
   static PbList<RepairApplicationRequest> createRepeated() =>
-      new PbList<RepairApplicationRequest>();
+      PbList<RepairApplicationRequest>();
   static RepairApplicationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRepairApplicationRequest();
+      _defaultInstance = _ReadonlyRepairApplicationRequest();
     return _defaultInstance;
   }
 
@@ -105,7 +105,7 @@ class _ReadonlyRepairApplicationRequest extends RepairApplicationRequest
     with ReadonlyMessageMixin {}
 
 class ListServicesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServicesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListServicesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -118,15 +118,14 @@ class ListServicesRequest extends GeneratedMessage {
   ListServicesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListServicesRequest clone() =>
-      new ListServicesRequest()..mergeFromMessage(this);
+  ListServicesRequest clone() => ListServicesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServicesRequest create() => new ListServicesRequest();
+  static ListServicesRequest create() => ListServicesRequest();
   static PbList<ListServicesRequest> createRepeated() =>
-      new PbList<ListServicesRequest>();
+      PbList<ListServicesRequest>();
   static ListServicesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServicesRequest();
+      _defaultInstance = _ReadonlyListServicesRequest();
     return _defaultInstance;
   }
 
@@ -164,7 +163,7 @@ class _ReadonlyListServicesRequest extends ListServicesRequest
     with ReadonlyMessageMixin {}
 
 class ListServicesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServicesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListServicesResponse')
     ..pp<Service>(
         1, 'services', PbFieldType.PM, Service.$checkItem, Service.create)
     ..aOS(2, 'nextPageToken')
@@ -178,14 +177,14 @@ class ListServicesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServicesResponse clone() =>
-      new ListServicesResponse()..mergeFromMessage(this);
+      ListServicesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServicesResponse create() => new ListServicesResponse();
+  static ListServicesResponse create() => ListServicesResponse();
   static PbList<ListServicesResponse> createRepeated() =>
-      new PbList<ListServicesResponse>();
+      PbList<ListServicesResponse>();
   static ListServicesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServicesResponse();
+      _defaultInstance = _ReadonlyListServicesResponse();
     return _defaultInstance;
   }
 
@@ -209,7 +208,7 @@ class _ReadonlyListServicesResponse extends ListServicesResponse
     with ReadonlyMessageMixin {}
 
 class GetServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetServiceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -220,14 +219,14 @@ class GetServiceRequest extends GeneratedMessage {
   GetServiceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetServiceRequest clone() => new GetServiceRequest()..mergeFromMessage(this);
+  GetServiceRequest clone() => GetServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetServiceRequest create() => new GetServiceRequest();
+  static GetServiceRequest create() => GetServiceRequest();
   static PbList<GetServiceRequest> createRepeated() =>
-      new PbList<GetServiceRequest>();
+      PbList<GetServiceRequest>();
   static GetServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetServiceRequest();
+      _defaultInstance = _ReadonlyGetServiceRequest();
     return _defaultInstance;
   }
 
@@ -249,7 +248,7 @@ class _ReadonlyGetServiceRequest extends GetServiceRequest
     with ReadonlyMessageMixin {}
 
 class UpdateServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateServiceRequest')
     ..aOS(1, 'name')
     ..a<Service>(
         2, 'service', PbFieldType.OM, Service.getDefault, Service.create)
@@ -270,14 +269,14 @@ class UpdateServiceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateServiceRequest clone() =>
-      new UpdateServiceRequest()..mergeFromMessage(this);
+      UpdateServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateServiceRequest create() => new UpdateServiceRequest();
+  static UpdateServiceRequest create() => UpdateServiceRequest();
   static PbList<UpdateServiceRequest> createRepeated() =>
-      new PbList<UpdateServiceRequest>();
+      PbList<UpdateServiceRequest>();
   static UpdateServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateServiceRequest();
+      _defaultInstance = _ReadonlyUpdateServiceRequest();
     return _defaultInstance;
   }
 
@@ -323,7 +322,7 @@ class _ReadonlyUpdateServiceRequest extends UpdateServiceRequest
     with ReadonlyMessageMixin {}
 
 class DeleteServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteServiceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -335,14 +334,14 @@ class DeleteServiceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteServiceRequest clone() =>
-      new DeleteServiceRequest()..mergeFromMessage(this);
+      DeleteServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteServiceRequest create() => new DeleteServiceRequest();
+  static DeleteServiceRequest create() => DeleteServiceRequest();
   static PbList<DeleteServiceRequest> createRepeated() =>
-      new PbList<DeleteServiceRequest>();
+      PbList<DeleteServiceRequest>();
   static DeleteServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteServiceRequest();
+      _defaultInstance = _ReadonlyDeleteServiceRequest();
     return _defaultInstance;
   }
 
@@ -364,7 +363,7 @@ class _ReadonlyDeleteServiceRequest extends DeleteServiceRequest
     with ReadonlyMessageMixin {}
 
 class ListVersionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVersionsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListVersionsRequest')
     ..aOS(1, 'parent')
     ..e<VersionView>(2, 'view', PbFieldType.OE, VersionView.BASIC,
         VersionView.valueOf, VersionView.values)
@@ -379,15 +378,14 @@ class ListVersionsRequest extends GeneratedMessage {
   ListVersionsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListVersionsRequest clone() =>
-      new ListVersionsRequest()..mergeFromMessage(this);
+  ListVersionsRequest clone() => ListVersionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListVersionsRequest create() => new ListVersionsRequest();
+  static ListVersionsRequest create() => ListVersionsRequest();
   static PbList<ListVersionsRequest> createRepeated() =>
-      new PbList<ListVersionsRequest>();
+      PbList<ListVersionsRequest>();
   static ListVersionsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVersionsRequest();
+      _defaultInstance = _ReadonlyListVersionsRequest();
     return _defaultInstance;
   }
 
@@ -433,7 +431,7 @@ class _ReadonlyListVersionsRequest extends ListVersionsRequest
     with ReadonlyMessageMixin {}
 
 class ListVersionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVersionsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListVersionsResponse')
     ..pp<Version>(
         1, 'versions', PbFieldType.PM, Version.$checkItem, Version.create)
     ..aOS(2, 'nextPageToken')
@@ -447,14 +445,14 @@ class ListVersionsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListVersionsResponse clone() =>
-      new ListVersionsResponse()..mergeFromMessage(this);
+      ListVersionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListVersionsResponse create() => new ListVersionsResponse();
+  static ListVersionsResponse create() => ListVersionsResponse();
   static PbList<ListVersionsResponse> createRepeated() =>
-      new PbList<ListVersionsResponse>();
+      PbList<ListVersionsResponse>();
   static ListVersionsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVersionsResponse();
+      _defaultInstance = _ReadonlyListVersionsResponse();
     return _defaultInstance;
   }
 
@@ -478,7 +476,7 @@ class _ReadonlyListVersionsResponse extends ListVersionsResponse
     with ReadonlyMessageMixin {}
 
 class GetVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetVersionRequest')
+  static final BuilderInfo _i = BuilderInfo('GetVersionRequest')
     ..aOS(1, 'name')
     ..e<VersionView>(2, 'view', PbFieldType.OE, VersionView.BASIC,
         VersionView.valueOf, VersionView.values)
@@ -491,14 +489,14 @@ class GetVersionRequest extends GeneratedMessage {
   GetVersionRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetVersionRequest clone() => new GetVersionRequest()..mergeFromMessage(this);
+  GetVersionRequest clone() => GetVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetVersionRequest create() => new GetVersionRequest();
+  static GetVersionRequest create() => GetVersionRequest();
   static PbList<GetVersionRequest> createRepeated() =>
-      new PbList<GetVersionRequest>();
+      PbList<GetVersionRequest>();
   static GetVersionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetVersionRequest();
+      _defaultInstance = _ReadonlyGetVersionRequest();
     return _defaultInstance;
   }
 
@@ -528,7 +526,7 @@ class _ReadonlyGetVersionRequest extends GetVersionRequest
     with ReadonlyMessageMixin {}
 
 class CreateVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateVersionRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateVersionRequest')
     ..aOS(1, 'parent')
     ..a<Version>(
         2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
@@ -542,14 +540,14 @@ class CreateVersionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateVersionRequest clone() =>
-      new CreateVersionRequest()..mergeFromMessage(this);
+      CreateVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateVersionRequest create() => new CreateVersionRequest();
+  static CreateVersionRequest create() => CreateVersionRequest();
   static PbList<CreateVersionRequest> createRepeated() =>
-      new PbList<CreateVersionRequest>();
+      PbList<CreateVersionRequest>();
   static CreateVersionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateVersionRequest();
+      _defaultInstance = _ReadonlyCreateVersionRequest();
     return _defaultInstance;
   }
 
@@ -579,7 +577,7 @@ class _ReadonlyCreateVersionRequest extends CreateVersionRequest
     with ReadonlyMessageMixin {}
 
 class UpdateVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateVersionRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateVersionRequest')
     ..aOS(1, 'name')
     ..a<Version>(
         2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
@@ -599,14 +597,14 @@ class UpdateVersionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateVersionRequest clone() =>
-      new UpdateVersionRequest()..mergeFromMessage(this);
+      UpdateVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateVersionRequest create() => new UpdateVersionRequest();
+  static UpdateVersionRequest create() => UpdateVersionRequest();
   static PbList<UpdateVersionRequest> createRepeated() =>
-      new PbList<UpdateVersionRequest>();
+      PbList<UpdateVersionRequest>();
   static UpdateVersionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateVersionRequest();
+      _defaultInstance = _ReadonlyUpdateVersionRequest();
     return _defaultInstance;
   }
 
@@ -644,7 +642,7 @@ class _ReadonlyUpdateVersionRequest extends UpdateVersionRequest
     with ReadonlyMessageMixin {}
 
 class DeleteVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteVersionRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteVersionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -656,14 +654,14 @@ class DeleteVersionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteVersionRequest clone() =>
-      new DeleteVersionRequest()..mergeFromMessage(this);
+      DeleteVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteVersionRequest create() => new DeleteVersionRequest();
+  static DeleteVersionRequest create() => DeleteVersionRequest();
   static PbList<DeleteVersionRequest> createRepeated() =>
-      new PbList<DeleteVersionRequest>();
+      PbList<DeleteVersionRequest>();
   static DeleteVersionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteVersionRequest();
+      _defaultInstance = _ReadonlyDeleteVersionRequest();
     return _defaultInstance;
   }
 
@@ -685,7 +683,7 @@ class _ReadonlyDeleteVersionRequest extends DeleteVersionRequest
     with ReadonlyMessageMixin {}
 
 class ListInstancesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListInstancesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListInstancesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -699,14 +697,14 @@ class ListInstancesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListInstancesRequest clone() =>
-      new ListInstancesRequest()..mergeFromMessage(this);
+      ListInstancesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListInstancesRequest create() => new ListInstancesRequest();
+  static ListInstancesRequest create() => ListInstancesRequest();
   static PbList<ListInstancesRequest> createRepeated() =>
-      new PbList<ListInstancesRequest>();
+      PbList<ListInstancesRequest>();
   static ListInstancesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListInstancesRequest();
+      _defaultInstance = _ReadonlyListInstancesRequest();
     return _defaultInstance;
   }
 
@@ -744,7 +742,7 @@ class _ReadonlyListInstancesRequest extends ListInstancesRequest
     with ReadonlyMessageMixin {}
 
 class ListInstancesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListInstancesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListInstancesResponse')
     ..pp<Instance>(
         1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
     ..aOS(2, 'nextPageToken')
@@ -758,14 +756,14 @@ class ListInstancesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListInstancesResponse clone() =>
-      new ListInstancesResponse()..mergeFromMessage(this);
+      ListInstancesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListInstancesResponse create() => new ListInstancesResponse();
+  static ListInstancesResponse create() => ListInstancesResponse();
   static PbList<ListInstancesResponse> createRepeated() =>
-      new PbList<ListInstancesResponse>();
+      PbList<ListInstancesResponse>();
   static ListInstancesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListInstancesResponse();
+      _defaultInstance = _ReadonlyListInstancesResponse();
     return _defaultInstance;
   }
 
@@ -790,7 +788,7 @@ class _ReadonlyListInstancesResponse extends ListInstancesResponse
     with ReadonlyMessageMixin {}
 
 class GetInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetInstanceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -801,15 +799,14 @@ class GetInstanceRequest extends GeneratedMessage {
   GetInstanceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetInstanceRequest clone() =>
-      new GetInstanceRequest()..mergeFromMessage(this);
+  GetInstanceRequest clone() => GetInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetInstanceRequest create() => new GetInstanceRequest();
+  static GetInstanceRequest create() => GetInstanceRequest();
   static PbList<GetInstanceRequest> createRepeated() =>
-      new PbList<GetInstanceRequest>();
+      PbList<GetInstanceRequest>();
   static GetInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetInstanceRequest();
+      _defaultInstance = _ReadonlyGetInstanceRequest();
     return _defaultInstance;
   }
 
@@ -831,7 +828,7 @@ class _ReadonlyGetInstanceRequest extends GetInstanceRequest
     with ReadonlyMessageMixin {}
 
 class DeleteInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteInstanceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -843,14 +840,14 @@ class DeleteInstanceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteInstanceRequest clone() =>
-      new DeleteInstanceRequest()..mergeFromMessage(this);
+      DeleteInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteInstanceRequest create() => new DeleteInstanceRequest();
+  static DeleteInstanceRequest create() => DeleteInstanceRequest();
   static PbList<DeleteInstanceRequest> createRepeated() =>
-      new PbList<DeleteInstanceRequest>();
+      PbList<DeleteInstanceRequest>();
   static DeleteInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteInstanceRequest();
+      _defaultInstance = _ReadonlyDeleteInstanceRequest();
     return _defaultInstance;
   }
 
@@ -873,7 +870,7 @@ class _ReadonlyDeleteInstanceRequest extends DeleteInstanceRequest
     with ReadonlyMessageMixin {}
 
 class DebugInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DebugInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('DebugInstanceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -885,14 +882,14 @@ class DebugInstanceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DebugInstanceRequest clone() =>
-      new DebugInstanceRequest()..mergeFromMessage(this);
+      DebugInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DebugInstanceRequest create() => new DebugInstanceRequest();
+  static DebugInstanceRequest create() => DebugInstanceRequest();
   static PbList<DebugInstanceRequest> createRepeated() =>
-      new PbList<DebugInstanceRequest>();
+      PbList<DebugInstanceRequest>();
   static DebugInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDebugInstanceRequest();
+      _defaultInstance = _ReadonlyDebugInstanceRequest();
     return _defaultInstance;
   }
 
@@ -919,27 +916,27 @@ class InstancesApi {
 
   Future<ListInstancesResponse> listInstances(
       ClientContext ctx, ListInstancesRequest request) {
-    var emptyResponse = new ListInstancesResponse();
+    var emptyResponse = ListInstancesResponse();
     return _client.invoke<ListInstancesResponse>(
         ctx, 'Instances', 'ListInstances', request, emptyResponse);
   }
 
   Future<Instance> getInstance(ClientContext ctx, GetInstanceRequest request) {
-    var emptyResponse = new Instance();
+    var emptyResponse = Instance();
     return _client.invoke<Instance>(
         ctx, 'Instances', 'GetInstance', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> deleteInstance(
       ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Instances', 'DeleteInstance', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> debugInstance(
       ClientContext ctx, DebugInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Instances', 'DebugInstance', request, emptyResponse);
   }
@@ -951,34 +948,34 @@ class VersionsApi {
 
   Future<ListVersionsResponse> listVersions(
       ClientContext ctx, ListVersionsRequest request) {
-    var emptyResponse = new ListVersionsResponse();
+    var emptyResponse = ListVersionsResponse();
     return _client.invoke<ListVersionsResponse>(
         ctx, 'Versions', 'ListVersions', request, emptyResponse);
   }
 
   Future<Version> getVersion(ClientContext ctx, GetVersionRequest request) {
-    var emptyResponse = new Version();
+    var emptyResponse = Version();
     return _client.invoke<Version>(
         ctx, 'Versions', 'GetVersion', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createVersion(
       ClientContext ctx, CreateVersionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Versions', 'CreateVersion', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> updateVersion(
       ClientContext ctx, UpdateVersionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Versions', 'UpdateVersion', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> deleteVersion(
       ClientContext ctx, DeleteVersionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Versions', 'DeleteVersion', request, emptyResponse);
   }
@@ -990,27 +987,27 @@ class ServicesApi {
 
   Future<ListServicesResponse> listServices(
       ClientContext ctx, ListServicesRequest request) {
-    var emptyResponse = new ListServicesResponse();
+    var emptyResponse = ListServicesResponse();
     return _client.invoke<ListServicesResponse>(
         ctx, 'Services', 'ListServices', request, emptyResponse);
   }
 
   Future<Service> getService(ClientContext ctx, GetServiceRequest request) {
-    var emptyResponse = new Service();
+    var emptyResponse = Service();
     return _client.invoke<Service>(
         ctx, 'Services', 'GetService', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> updateService(
       ClientContext ctx, UpdateServiceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Services', 'UpdateService', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> deleteService(
       ClientContext ctx, DeleteServiceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Services', 'DeleteService', request, emptyResponse);
   }
@@ -1022,14 +1019,14 @@ class ApplicationsApi {
 
   Future<Application> getApplication(
       ClientContext ctx, GetApplicationRequest request) {
-    var emptyResponse = new Application();
+    var emptyResponse = Application();
     return _client.invoke<Application>(
         ctx, 'Applications', 'GetApplication', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> repairApplication(
       ClientContext ctx, RepairApplicationRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Applications', 'RepairApplication', request, emptyResponse);
   }

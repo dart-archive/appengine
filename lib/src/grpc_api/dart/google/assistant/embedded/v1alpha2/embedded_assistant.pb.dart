@@ -16,7 +16,7 @@ import 'embedded_assistant.pbenum.dart';
 export 'embedded_assistant.pbenum.dart';
 
 class AssistRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AssistRequest')
+  static final BuilderInfo _i = BuilderInfo('AssistRequest')
     ..a<AssistConfig>(1, 'config', PbFieldType.OM, AssistConfig.getDefault,
         AssistConfig.create)
     ..a<List<int>>(2, 'audioIn', PbFieldType.OY)
@@ -29,13 +29,12 @@ class AssistRequest extends GeneratedMessage {
   AssistRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AssistRequest clone() => new AssistRequest()..mergeFromMessage(this);
+  AssistRequest clone() => AssistRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AssistRequest create() => new AssistRequest();
-  static PbList<AssistRequest> createRepeated() => new PbList<AssistRequest>();
+  static AssistRequest create() => AssistRequest();
+  static PbList<AssistRequest> createRepeated() => PbList<AssistRequest>();
   static AssistRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAssistRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAssistRequest();
     return _defaultInstance;
   }
 
@@ -64,7 +63,7 @@ class AssistRequest extends GeneratedMessage {
 class _ReadonlyAssistRequest extends AssistRequest with ReadonlyMessageMixin {}
 
 class AssistResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AssistResponse')
+  static final BuilderInfo _i = BuilderInfo('AssistResponse')
     ..e<AssistResponse_EventType>(
         1,
         'eventType',
@@ -91,14 +90,12 @@ class AssistResponse extends GeneratedMessage {
   AssistResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AssistResponse clone() => new AssistResponse()..mergeFromMessage(this);
+  AssistResponse clone() => AssistResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AssistResponse create() => new AssistResponse();
-  static PbList<AssistResponse> createRepeated() =>
-      new PbList<AssistResponse>();
+  static AssistResponse create() => AssistResponse();
+  static PbList<AssistResponse> createRepeated() => PbList<AssistResponse>();
   static AssistResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAssistResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAssistResponse();
     return _defaultInstance;
   }
 
@@ -154,7 +151,7 @@ class _ReadonlyAssistResponse extends AssistResponse with ReadonlyMessageMixin {
 }
 
 class AssistConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AssistConfig')
+  static final BuilderInfo _i = BuilderInfo('AssistConfig')
     ..a<AudioInConfig>(1, 'audioInConfig', PbFieldType.OM,
         AudioInConfig.getDefault, AudioInConfig.create)
     ..a<AudioOutConfig>(2, 'audioOutConfig', PbFieldType.OM,
@@ -175,13 +172,12 @@ class AssistConfig extends GeneratedMessage {
   AssistConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AssistConfig clone() => new AssistConfig()..mergeFromMessage(this);
+  AssistConfig clone() => AssistConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AssistConfig create() => new AssistConfig();
-  static PbList<AssistConfig> createRepeated() => new PbList<AssistConfig>();
+  static AssistConfig create() => AssistConfig();
+  static PbList<AssistConfig> createRepeated() => PbList<AssistConfig>();
   static AssistConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAssistConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAssistConfig();
     return _defaultInstance;
   }
 
@@ -242,7 +238,7 @@ class AssistConfig extends GeneratedMessage {
 class _ReadonlyAssistConfig extends AssistConfig with ReadonlyMessageMixin {}
 
 class AudioInConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioInConfig')
+  static final BuilderInfo _i = BuilderInfo('AudioInConfig')
     ..e<AudioInConfig_Encoding>(
         1,
         'encoding',
@@ -260,13 +256,12 @@ class AudioInConfig extends GeneratedMessage {
   AudioInConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioInConfig clone() => new AudioInConfig()..mergeFromMessage(this);
+  AudioInConfig clone() => AudioInConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AudioInConfig create() => new AudioInConfig();
-  static PbList<AudioInConfig> createRepeated() => new PbList<AudioInConfig>();
+  static AudioInConfig create() => AudioInConfig();
+  static PbList<AudioInConfig> createRepeated() => PbList<AudioInConfig>();
   static AudioInConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAudioInConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAudioInConfig();
     return _defaultInstance;
   }
 
@@ -295,7 +290,7 @@ class AudioInConfig extends GeneratedMessage {
 class _ReadonlyAudioInConfig extends AudioInConfig with ReadonlyMessageMixin {}
 
 class AudioOutConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioOutConfig')
+  static final BuilderInfo _i = BuilderInfo('AudioOutConfig')
     ..e<AudioOutConfig_Encoding>(
         1,
         'encoding',
@@ -314,14 +309,12 @@ class AudioOutConfig extends GeneratedMessage {
   AudioOutConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioOutConfig clone() => new AudioOutConfig()..mergeFromMessage(this);
+  AudioOutConfig clone() => AudioOutConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AudioOutConfig create() => new AudioOutConfig();
-  static PbList<AudioOutConfig> createRepeated() =>
-      new PbList<AudioOutConfig>();
+  static AudioOutConfig create() => AudioOutConfig();
+  static PbList<AudioOutConfig> createRepeated() => PbList<AudioOutConfig>();
   static AudioOutConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAudioOutConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAudioOutConfig();
     return _defaultInstance;
   }
 
@@ -359,7 +352,7 @@ class _ReadonlyAudioOutConfig extends AudioOutConfig with ReadonlyMessageMixin {
 }
 
 class ScreenOutConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScreenOutConfig')
+  static final BuilderInfo _i = BuilderInfo('ScreenOutConfig')
     ..e<ScreenOutConfig_ScreenMode>(
         1,
         'screenMode',
@@ -376,14 +369,12 @@ class ScreenOutConfig extends GeneratedMessage {
   ScreenOutConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScreenOutConfig clone() => new ScreenOutConfig()..mergeFromMessage(this);
+  ScreenOutConfig clone() => ScreenOutConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ScreenOutConfig create() => new ScreenOutConfig();
-  static PbList<ScreenOutConfig> createRepeated() =>
-      new PbList<ScreenOutConfig>();
+  static ScreenOutConfig create() => ScreenOutConfig();
+  static PbList<ScreenOutConfig> createRepeated() => PbList<ScreenOutConfig>();
   static ScreenOutConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScreenOutConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyScreenOutConfig();
     return _defaultInstance;
   }
 
@@ -405,7 +396,7 @@ class _ReadonlyScreenOutConfig extends ScreenOutConfig
     with ReadonlyMessageMixin {}
 
 class DialogStateIn extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DialogStateIn')
+  static final BuilderInfo _i = BuilderInfo('DialogStateIn')
     ..a<List<int>>(1, 'conversationState', PbFieldType.OY)
     ..aOS(2, 'languageCode')
     ..a<DeviceLocation>(5, 'deviceLocation', PbFieldType.OM,
@@ -420,13 +411,12 @@ class DialogStateIn extends GeneratedMessage {
   DialogStateIn.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DialogStateIn clone() => new DialogStateIn()..mergeFromMessage(this);
+  DialogStateIn clone() => DialogStateIn()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DialogStateIn create() => new DialogStateIn();
-  static PbList<DialogStateIn> createRepeated() => new PbList<DialogStateIn>();
+  static DialogStateIn create() => DialogStateIn();
+  static PbList<DialogStateIn> createRepeated() => PbList<DialogStateIn>();
   static DialogStateIn getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDialogStateIn();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDialogStateIn();
     return _defaultInstance;
   }
 
@@ -471,7 +461,7 @@ class DialogStateIn extends GeneratedMessage {
 class _ReadonlyDialogStateIn extends DialogStateIn with ReadonlyMessageMixin {}
 
 class DeviceConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceConfig')
+  static final BuilderInfo _i = BuilderInfo('DeviceConfig')
     ..aOS(1, 'deviceId')
     ..aOS(3, 'deviceModelId')
     ..hasRequiredFields = false;
@@ -483,13 +473,12 @@ class DeviceConfig extends GeneratedMessage {
   DeviceConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceConfig clone() => new DeviceConfig()..mergeFromMessage(this);
+  DeviceConfig clone() => DeviceConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeviceConfig create() => new DeviceConfig();
-  static PbList<DeviceConfig> createRepeated() => new PbList<DeviceConfig>();
+  static DeviceConfig create() => DeviceConfig();
+  static PbList<DeviceConfig> createRepeated() => PbList<DeviceConfig>();
   static DeviceConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeviceConfig();
     return _defaultInstance;
   }
 
@@ -518,7 +507,7 @@ class DeviceConfig extends GeneratedMessage {
 class _ReadonlyDeviceConfig extends DeviceConfig with ReadonlyMessageMixin {}
 
 class AudioOut extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioOut')
+  static final BuilderInfo _i = BuilderInfo('AudioOut')
     ..a<List<int>>(1, 'audioData', PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -528,12 +517,12 @@ class AudioOut extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AudioOut.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioOut clone() => new AudioOut()..mergeFromMessage(this);
+  AudioOut clone() => AudioOut()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AudioOut create() => new AudioOut();
-  static PbList<AudioOut> createRepeated() => new PbList<AudioOut>();
+  static AudioOut create() => AudioOut();
+  static PbList<AudioOut> createRepeated() => PbList<AudioOut>();
   static AudioOut getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAudioOut();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAudioOut();
     return _defaultInstance;
   }
 
@@ -554,7 +543,7 @@ class AudioOut extends GeneratedMessage {
 class _ReadonlyAudioOut extends AudioOut with ReadonlyMessageMixin {}
 
 class ScreenOut extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScreenOut')
+  static final BuilderInfo _i = BuilderInfo('ScreenOut')
     ..e<ScreenOut_Format>(
         1,
         'format',
@@ -571,12 +560,12 @@ class ScreenOut extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ScreenOut.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScreenOut clone() => new ScreenOut()..mergeFromMessage(this);
+  ScreenOut clone() => ScreenOut()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ScreenOut create() => new ScreenOut();
-  static PbList<ScreenOut> createRepeated() => new PbList<ScreenOut>();
+  static ScreenOut create() => ScreenOut();
+  static PbList<ScreenOut> createRepeated() => PbList<ScreenOut>();
   static ScreenOut getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyScreenOut();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyScreenOut();
     return _defaultInstance;
   }
 
@@ -605,7 +594,7 @@ class ScreenOut extends GeneratedMessage {
 class _ReadonlyScreenOut extends ScreenOut with ReadonlyMessageMixin {}
 
 class DeviceAction extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceAction')
+  static final BuilderInfo _i = BuilderInfo('DeviceAction')
     ..aOS(1, 'deviceRequestJson')
     ..hasRequiredFields = false;
 
@@ -616,13 +605,12 @@ class DeviceAction extends GeneratedMessage {
   DeviceAction.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceAction clone() => new DeviceAction()..mergeFromMessage(this);
+  DeviceAction clone() => DeviceAction()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeviceAction create() => new DeviceAction();
-  static PbList<DeviceAction> createRepeated() => new PbList<DeviceAction>();
+  static DeviceAction create() => DeviceAction();
+  static PbList<DeviceAction> createRepeated() => PbList<DeviceAction>();
   static DeviceAction getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceAction();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeviceAction();
     return _defaultInstance;
   }
 
@@ -643,7 +631,7 @@ class DeviceAction extends GeneratedMessage {
 class _ReadonlyDeviceAction extends DeviceAction with ReadonlyMessageMixin {}
 
 class SpeechRecognitionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SpeechRecognitionResult')
+  static final BuilderInfo _i = BuilderInfo('SpeechRecognitionResult')
     ..aOS(1, 'transcript')
     ..a<double>(2, 'stability', PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -656,14 +644,14 @@ class SpeechRecognitionResult extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SpeechRecognitionResult clone() =>
-      new SpeechRecognitionResult()..mergeFromMessage(this);
+      SpeechRecognitionResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SpeechRecognitionResult create() => new SpeechRecognitionResult();
+  static SpeechRecognitionResult create() => SpeechRecognitionResult();
   static PbList<SpeechRecognitionResult> createRepeated() =>
-      new PbList<SpeechRecognitionResult>();
+      PbList<SpeechRecognitionResult>();
   static SpeechRecognitionResult getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpeechRecognitionResult();
+      _defaultInstance = _ReadonlySpeechRecognitionResult();
     return _defaultInstance;
   }
 
@@ -694,7 +682,7 @@ class _ReadonlySpeechRecognitionResult extends SpeechRecognitionResult
     with ReadonlyMessageMixin {}
 
 class DialogStateOut extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DialogStateOut')
+  static final BuilderInfo _i = BuilderInfo('DialogStateOut')
     ..aOS(1, 'supplementalDisplayText')
     ..a<List<int>>(2, 'conversationState', PbFieldType.OY)
     ..e<DialogStateOut_MicrophoneMode>(
@@ -714,14 +702,12 @@ class DialogStateOut extends GeneratedMessage {
   DialogStateOut.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DialogStateOut clone() => new DialogStateOut()..mergeFromMessage(this);
+  DialogStateOut clone() => DialogStateOut()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DialogStateOut create() => new DialogStateOut();
-  static PbList<DialogStateOut> createRepeated() =>
-      new PbList<DialogStateOut>();
+  static DialogStateOut create() => DialogStateOut();
+  static PbList<DialogStateOut> createRepeated() => PbList<DialogStateOut>();
   static DialogStateOut getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDialogStateOut();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDialogStateOut();
     return _defaultInstance;
   }
 
@@ -767,7 +753,7 @@ class _ReadonlyDialogStateOut extends DialogStateOut with ReadonlyMessageMixin {
 }
 
 class DeviceLocation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceLocation')
+  static final BuilderInfo _i = BuilderInfo('DeviceLocation')
     ..a<$google$type.LatLng>(1, 'coordinates', PbFieldType.OM,
         $google$type.LatLng.getDefault, $google$type.LatLng.create)
     ..hasRequiredFields = false;
@@ -779,14 +765,12 @@ class DeviceLocation extends GeneratedMessage {
   DeviceLocation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceLocation clone() => new DeviceLocation()..mergeFromMessage(this);
+  DeviceLocation clone() => DeviceLocation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeviceLocation create() => new DeviceLocation();
-  static PbList<DeviceLocation> createRepeated() =>
-      new PbList<DeviceLocation>();
+  static DeviceLocation create() => DeviceLocation();
+  static PbList<DeviceLocation> createRepeated() => PbList<DeviceLocation>();
   static DeviceLocation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceLocation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeviceLocation();
     return _defaultInstance;
   }
 
@@ -812,7 +796,7 @@ class EmbeddedAssistantApi {
   EmbeddedAssistantApi(this._client);
 
   Future<AssistResponse> assist(ClientContext ctx, AssistRequest request) {
-    var emptyResponse = new AssistResponse();
+    var emptyResponse = AssistResponse();
     return _client.invoke<AssistResponse>(
         ctx, 'EmbeddedAssistant', 'Assist', request, emptyResponse);
   }

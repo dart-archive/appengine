@@ -9,13 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class CommitRequest_Mode extends ProtobufEnum {
   static const CommitRequest_Mode MODE_UNSPECIFIED =
-      const CommitRequest_Mode._(0, 'MODE_UNSPECIFIED');
+      CommitRequest_Mode._(0, 'MODE_UNSPECIFIED');
   static const CommitRequest_Mode TRANSACTIONAL =
-      const CommitRequest_Mode._(1, 'TRANSACTIONAL');
+      CommitRequest_Mode._(1, 'TRANSACTIONAL');
   static const CommitRequest_Mode NON_TRANSACTIONAL =
-      const CommitRequest_Mode._(2, 'NON_TRANSACTIONAL');
+      CommitRequest_Mode._(2, 'NON_TRANSACTIONAL');
 
-  static const List<CommitRequest_Mode> values = const <CommitRequest_Mode>[
+  static const List<CommitRequest_Mode> values = <CommitRequest_Mode>[
     MODE_UNSPECIFIED,
     TRANSACTIONAL,
     NON_TRANSACTIONAL,
@@ -33,14 +33,14 @@ class CommitRequest_Mode extends ProtobufEnum {
 
 class ReadOptions_ReadConsistency extends ProtobufEnum {
   static const ReadOptions_ReadConsistency READ_CONSISTENCY_UNSPECIFIED =
-      const ReadOptions_ReadConsistency._(0, 'READ_CONSISTENCY_UNSPECIFIED');
+      ReadOptions_ReadConsistency._(0, 'READ_CONSISTENCY_UNSPECIFIED');
   static const ReadOptions_ReadConsistency STRONG =
-      const ReadOptions_ReadConsistency._(1, 'STRONG');
+      ReadOptions_ReadConsistency._(1, 'STRONG');
   static const ReadOptions_ReadConsistency EVENTUAL =
-      const ReadOptions_ReadConsistency._(2, 'EVENTUAL');
+      ReadOptions_ReadConsistency._(2, 'EVENTUAL');
 
   static const List<ReadOptions_ReadConsistency> values =
-      const <ReadOptions_ReadConsistency>[
+      <ReadOptions_ReadConsistency>[
     READ_CONSISTENCY_UNSPECIFIED,
     STRONG,
     EVENTUAL,

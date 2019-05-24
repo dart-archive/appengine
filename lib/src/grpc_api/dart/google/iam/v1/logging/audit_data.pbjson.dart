@@ -3,10 +3,10 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const AuditData$json = const {
+const AuditData$json = {
   '1': 'AuditData',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'policy_delta',
       '3': 2,
       '4': 1,

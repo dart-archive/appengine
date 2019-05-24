@@ -40,33 +40,33 @@ abstract class FirestoreServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetDocument':
-        return new GetDocumentRequest();
+        return GetDocumentRequest();
       case 'ListDocuments':
-        return new ListDocumentsRequest();
+        return ListDocumentsRequest();
       case 'CreateDocument':
-        return new CreateDocumentRequest();
+        return CreateDocumentRequest();
       case 'UpdateDocument':
-        return new UpdateDocumentRequest();
+        return UpdateDocumentRequest();
       case 'DeleteDocument':
-        return new DeleteDocumentRequest();
+        return DeleteDocumentRequest();
       case 'BatchGetDocuments':
-        return new BatchGetDocumentsRequest();
+        return BatchGetDocumentsRequest();
       case 'BeginTransaction':
-        return new BeginTransactionRequest();
+        return BeginTransactionRequest();
       case 'Commit':
-        return new CommitRequest();
+        return CommitRequest();
       case 'Rollback':
-        return new RollbackRequest();
+        return RollbackRequest();
       case 'RunQuery':
-        return new RunQueryRequest();
+        return RunQueryRequest();
       case 'Write':
-        return new WriteRequest();
+        return WriteRequest();
       case 'Listen':
-        return new ListenRequest();
+        return ListenRequest();
       case 'ListCollectionIds':
-        return new ListCollectionIdsRequest();
+        return ListCollectionIdsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -100,7 +100,7 @@ abstract class FirestoreServiceBase extends GeneratedService {
       case 'ListCollectionIds':
         return this.listCollectionIds(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

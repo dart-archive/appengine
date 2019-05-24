@@ -34,25 +34,25 @@ abstract class StreetViewPublishServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'StartUpload':
-        return new $google$protobuf.Empty();
+        return $google$protobuf.Empty();
       case 'CreatePhoto':
-        return new CreatePhotoRequest();
+        return CreatePhotoRequest();
       case 'GetPhoto':
-        return new GetPhotoRequest();
+        return GetPhotoRequest();
       case 'BatchGetPhotos':
-        return new BatchGetPhotosRequest();
+        return BatchGetPhotosRequest();
       case 'ListPhotos':
-        return new ListPhotosRequest();
+        return ListPhotosRequest();
       case 'UpdatePhoto':
-        return new UpdatePhotoRequest();
+        return UpdatePhotoRequest();
       case 'BatchUpdatePhotos':
-        return new BatchUpdatePhotosRequest();
+        return BatchUpdatePhotosRequest();
       case 'DeletePhoto':
-        return new DeletePhotoRequest();
+        return DeletePhotoRequest();
       case 'BatchDeletePhotos':
-        return new BatchDeletePhotosRequest();
+        return BatchDeletePhotosRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -78,7 +78,7 @@ abstract class StreetViewPublishServiceBase extends GeneratedService {
       case 'BatchDeletePhotos':
         return this.batchDeletePhotos(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

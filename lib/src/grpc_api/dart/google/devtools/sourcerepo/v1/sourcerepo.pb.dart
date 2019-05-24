@@ -15,7 +15,7 @@ import '../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
 import '../../../iam/v1/policy.pb.dart' as $google$iam$v1;
 
 class Repo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Repo')
+  static final BuilderInfo _i = BuilderInfo('Repo')
     ..aOS(1, 'name')
     ..aInt64(2, 'size')
     ..aOS(3, 'url')
@@ -28,12 +28,12 @@ class Repo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Repo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Repo clone() => new Repo()..mergeFromMessage(this);
+  Repo clone() => Repo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Repo create() => new Repo();
-  static PbList<Repo> createRepeated() => new PbList<Repo>();
+  static Repo create() => Repo();
+  static PbList<Repo> createRepeated() => PbList<Repo>();
   static Repo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRepo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRepo();
     return _defaultInstance;
   }
 
@@ -78,7 +78,7 @@ class Repo extends GeneratedMessage {
 class _ReadonlyRepo extends Repo with ReadonlyMessageMixin {}
 
 class MirrorConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MirrorConfig')
+  static final BuilderInfo _i = BuilderInfo('MirrorConfig')
     ..aOS(1, 'url')
     ..aOS(2, 'webhookId')
     ..aOS(3, 'deployKeyId')
@@ -91,13 +91,12 @@ class MirrorConfig extends GeneratedMessage {
   MirrorConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MirrorConfig clone() => new MirrorConfig()..mergeFromMessage(this);
+  MirrorConfig clone() => MirrorConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MirrorConfig create() => new MirrorConfig();
-  static PbList<MirrorConfig> createRepeated() => new PbList<MirrorConfig>();
+  static MirrorConfig create() => MirrorConfig();
+  static PbList<MirrorConfig> createRepeated() => PbList<MirrorConfig>();
   static MirrorConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMirrorConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMirrorConfig();
     return _defaultInstance;
   }
 
@@ -134,7 +133,7 @@ class MirrorConfig extends GeneratedMessage {
 class _ReadonlyMirrorConfig extends MirrorConfig with ReadonlyMessageMixin {}
 
 class GetRepoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetRepoRequest')
+  static final BuilderInfo _i = BuilderInfo('GetRepoRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -145,14 +144,12 @@ class GetRepoRequest extends GeneratedMessage {
   GetRepoRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetRepoRequest clone() => new GetRepoRequest()..mergeFromMessage(this);
+  GetRepoRequest clone() => GetRepoRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetRepoRequest create() => new GetRepoRequest();
-  static PbList<GetRepoRequest> createRepeated() =>
-      new PbList<GetRepoRequest>();
+  static GetRepoRequest create() => GetRepoRequest();
+  static PbList<GetRepoRequest> createRepeated() => PbList<GetRepoRequest>();
   static GetRepoRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetRepoRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetRepoRequest();
     return _defaultInstance;
   }
 
@@ -174,7 +171,7 @@ class _ReadonlyGetRepoRequest extends GetRepoRequest with ReadonlyMessageMixin {
 }
 
 class ListReposRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListReposRequest')
+  static final BuilderInfo _i = BuilderInfo('ListReposRequest')
     ..aOS(1, 'name')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -187,14 +184,14 @@ class ListReposRequest extends GeneratedMessage {
   ListReposRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListReposRequest clone() => new ListReposRequest()..mergeFromMessage(this);
+  ListReposRequest clone() => ListReposRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListReposRequest create() => new ListReposRequest();
+  static ListReposRequest create() => ListReposRequest();
   static PbList<ListReposRequest> createRepeated() =>
-      new PbList<ListReposRequest>();
+      PbList<ListReposRequest>();
   static ListReposRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListReposRequest();
+      _defaultInstance = _ReadonlyListReposRequest();
     return _defaultInstance;
   }
 
@@ -232,7 +229,7 @@ class _ReadonlyListReposRequest extends ListReposRequest
     with ReadonlyMessageMixin {}
 
 class ListReposResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListReposResponse')
+  static final BuilderInfo _i = BuilderInfo('ListReposResponse')
     ..pp<Repo>(1, 'repos', PbFieldType.PM, Repo.$checkItem, Repo.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -244,14 +241,14 @@ class ListReposResponse extends GeneratedMessage {
   ListReposResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListReposResponse clone() => new ListReposResponse()..mergeFromMessage(this);
+  ListReposResponse clone() => ListReposResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListReposResponse create() => new ListReposResponse();
+  static ListReposResponse create() => ListReposResponse();
   static PbList<ListReposResponse> createRepeated() =>
-      new PbList<ListReposResponse>();
+      PbList<ListReposResponse>();
   static ListReposResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListReposResponse();
+      _defaultInstance = _ReadonlyListReposResponse();
     return _defaultInstance;
   }
 
@@ -275,7 +272,7 @@ class _ReadonlyListReposResponse extends ListReposResponse
     with ReadonlyMessageMixin {}
 
 class CreateRepoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateRepoRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateRepoRequest')
     ..aOS(1, 'parent')
     ..a<Repo>(2, 'repo', PbFieldType.OM, Repo.getDefault, Repo.create)
     ..hasRequiredFields = false;
@@ -287,14 +284,14 @@ class CreateRepoRequest extends GeneratedMessage {
   CreateRepoRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateRepoRequest clone() => new CreateRepoRequest()..mergeFromMessage(this);
+  CreateRepoRequest clone() => CreateRepoRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateRepoRequest create() => new CreateRepoRequest();
+  static CreateRepoRequest create() => CreateRepoRequest();
   static PbList<CreateRepoRequest> createRepeated() =>
-      new PbList<CreateRepoRequest>();
+      PbList<CreateRepoRequest>();
   static CreateRepoRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateRepoRequest();
+      _defaultInstance = _ReadonlyCreateRepoRequest();
     return _defaultInstance;
   }
 
@@ -324,7 +321,7 @@ class _ReadonlyCreateRepoRequest extends CreateRepoRequest
     with ReadonlyMessageMixin {}
 
 class DeleteRepoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteRepoRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteRepoRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -335,14 +332,14 @@ class DeleteRepoRequest extends GeneratedMessage {
   DeleteRepoRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteRepoRequest clone() => new DeleteRepoRequest()..mergeFromMessage(this);
+  DeleteRepoRequest clone() => DeleteRepoRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteRepoRequest create() => new DeleteRepoRequest();
+  static DeleteRepoRequest create() => DeleteRepoRequest();
   static PbList<DeleteRepoRequest> createRepeated() =>
-      new PbList<DeleteRepoRequest>();
+      PbList<DeleteRepoRequest>();
   static DeleteRepoRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteRepoRequest();
+      _defaultInstance = _ReadonlyDeleteRepoRequest();
     return _defaultInstance;
   }
 
@@ -369,47 +366,47 @@ class SourceRepoApi {
 
   Future<ListReposResponse> listRepos(
       ClientContext ctx, ListReposRequest request) {
-    var emptyResponse = new ListReposResponse();
+    var emptyResponse = ListReposResponse();
     return _client.invoke<ListReposResponse>(
         ctx, 'SourceRepo', 'ListRepos', request, emptyResponse);
   }
 
   Future<Repo> getRepo(ClientContext ctx, GetRepoRequest request) {
-    var emptyResponse = new Repo();
+    var emptyResponse = Repo();
     return _client.invoke<Repo>(
         ctx, 'SourceRepo', 'GetRepo', request, emptyResponse);
   }
 
   Future<Repo> createRepo(ClientContext ctx, CreateRepoRequest request) {
-    var emptyResponse = new Repo();
+    var emptyResponse = Repo();
     return _client.invoke<Repo>(
         ctx, 'SourceRepo', 'CreateRepo', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteRepo(
       ClientContext ctx, DeleteRepoRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'SourceRepo', 'DeleteRepo', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> setIamPolicy(
       ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'SourceRepo', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> getIamPolicy(
       ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'SourceRepo', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
     return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
         ctx, 'SourceRepo', 'TestIamPermissions', request, emptyResponse);
   }

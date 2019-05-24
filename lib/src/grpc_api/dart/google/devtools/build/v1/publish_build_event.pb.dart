@@ -19,7 +19,7 @@ import 'publish_build_event.pbenum.dart';
 export 'publish_build_event.pbenum.dart';
 
 class PublishLifecycleEventRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PublishLifecycleEventRequest')
+  static final BuilderInfo _i = BuilderInfo('PublishLifecycleEventRequest')
     ..e<PublishLifecycleEventRequest_ServiceLevel>(
         1,
         'serviceLevel',
@@ -43,15 +43,15 @@ class PublishLifecycleEventRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PublishLifecycleEventRequest clone() =>
-      new PublishLifecycleEventRequest()..mergeFromMessage(this);
+      PublishLifecycleEventRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PublishLifecycleEventRequest create() =>
-      new PublishLifecycleEventRequest();
+      PublishLifecycleEventRequest();
   static PbList<PublishLifecycleEventRequest> createRepeated() =>
-      new PbList<PublishLifecycleEventRequest>();
+      PbList<PublishLifecycleEventRequest>();
   static PublishLifecycleEventRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublishLifecycleEventRequest();
+      _defaultInstance = _ReadonlyPublishLifecycleEventRequest();
     return _defaultInstance;
   }
 
@@ -101,7 +101,7 @@ class _ReadonlyPublishLifecycleEventRequest extends PublishLifecycleEventRequest
 
 class PublishBuildToolEventStreamResponse extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('PublishBuildToolEventStreamResponse')
+      BuilderInfo('PublishBuildToolEventStreamResponse')
         ..a<StreamId>(
             1, 'streamId', PbFieldType.OM, StreamId.getDefault, StreamId.create)
         ..aInt64(2, 'sequenceNumber')
@@ -115,15 +115,15 @@ class PublishBuildToolEventStreamResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PublishBuildToolEventStreamResponse clone() =>
-      new PublishBuildToolEventStreamResponse()..mergeFromMessage(this);
+      PublishBuildToolEventStreamResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PublishBuildToolEventStreamResponse create() =>
-      new PublishBuildToolEventStreamResponse();
+      PublishBuildToolEventStreamResponse();
   static PbList<PublishBuildToolEventStreamResponse> createRepeated() =>
-      new PbList<PublishBuildToolEventStreamResponse>();
+      PbList<PublishBuildToolEventStreamResponse>();
   static PublishBuildToolEventStreamResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublishBuildToolEventStreamResponse();
+      _defaultInstance = _ReadonlyPublishBuildToolEventStreamResponse();
     return _defaultInstance;
   }
 
@@ -154,7 +154,7 @@ class _ReadonlyPublishBuildToolEventStreamResponse
     extends PublishBuildToolEventStreamResponse with ReadonlyMessageMixin {}
 
 class OrderedBuildEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OrderedBuildEvent')
+  static final BuilderInfo _i = BuilderInfo('OrderedBuildEvent')
     ..a<StreamId>(
         1, 'streamId', PbFieldType.OM, StreamId.getDefault, StreamId.create)
     ..aInt64(2, 'sequenceNumber')
@@ -169,14 +169,14 @@ class OrderedBuildEvent extends GeneratedMessage {
   OrderedBuildEvent.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OrderedBuildEvent clone() => new OrderedBuildEvent()..mergeFromMessage(this);
+  OrderedBuildEvent clone() => OrderedBuildEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OrderedBuildEvent create() => new OrderedBuildEvent();
+  static OrderedBuildEvent create() => OrderedBuildEvent();
   static PbList<OrderedBuildEvent> createRepeated() =>
-      new PbList<OrderedBuildEvent>();
+      PbList<OrderedBuildEvent>();
   static OrderedBuildEvent getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOrderedBuildEvent();
+      _defaultInstance = _ReadonlyOrderedBuildEvent();
     return _defaultInstance;
   }
 
@@ -214,7 +214,7 @@ class _ReadonlyOrderedBuildEvent extends OrderedBuildEvent
     with ReadonlyMessageMixin {}
 
 class PublishBuildToolEventStreamRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo(
+  static final BuilderInfo _i = BuilderInfo(
       'PublishBuildToolEventStreamRequest')
     ..a<StreamId>(
         1, 'streamId', PbFieldType.OM, StreamId.getDefault, StreamId.create)
@@ -234,15 +234,15 @@ class PublishBuildToolEventStreamRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PublishBuildToolEventStreamRequest clone() =>
-      new PublishBuildToolEventStreamRequest()..mergeFromMessage(this);
+      PublishBuildToolEventStreamRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PublishBuildToolEventStreamRequest create() =>
-      new PublishBuildToolEventStreamRequest();
+      PublishBuildToolEventStreamRequest();
   static PbList<PublishBuildToolEventStreamRequest> createRepeated() =>
-      new PbList<PublishBuildToolEventStreamRequest>();
+      PbList<PublishBuildToolEventStreamRequest>();
   static PublishBuildToolEventStreamRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublishBuildToolEventStreamRequest();
+      _defaultInstance = _ReadonlyPublishBuildToolEventStreamRequest();
     return _defaultInstance;
   }
 
@@ -296,14 +296,14 @@ class PublishBuildEventApi {
 
   Future<$google$protobuf.Empty> publishLifecycleEvent(
       ClientContext ctx, PublishLifecycleEventRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'PublishBuildEvent',
         'PublishLifecycleEvent', request, emptyResponse);
   }
 
   Future<PublishBuildToolEventStreamResponse> publishBuildToolEventStream(
       ClientContext ctx, PublishBuildToolEventStreamRequest request) {
-    var emptyResponse = new PublishBuildToolEventStreamResponse();
+    var emptyResponse = PublishBuildToolEventStreamResponse();
     return _client.invoke<PublishBuildToolEventStreamResponse>(
         ctx,
         'PublishBuildEvent',

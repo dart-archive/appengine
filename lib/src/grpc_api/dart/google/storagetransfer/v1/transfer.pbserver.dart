@@ -33,21 +33,21 @@ abstract class StorageTransferServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetGoogleServiceAccount':
-        return new GetGoogleServiceAccountRequest();
+        return GetGoogleServiceAccountRequest();
       case 'CreateTransferJob':
-        return new CreateTransferJobRequest();
+        return CreateTransferJobRequest();
       case 'UpdateTransferJob':
-        return new UpdateTransferJobRequest();
+        return UpdateTransferJobRequest();
       case 'GetTransferJob':
-        return new GetTransferJobRequest();
+        return GetTransferJobRequest();
       case 'ListTransferJobs':
-        return new ListTransferJobsRequest();
+        return ListTransferJobsRequest();
       case 'PauseTransferOperation':
-        return new PauseTransferOperationRequest();
+        return PauseTransferOperationRequest();
       case 'ResumeTransferOperation':
-        return new ResumeTransferOperationRequest();
+        return ResumeTransferOperationRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -69,7 +69,7 @@ abstract class StorageTransferServiceBase extends GeneratedService {
       case 'ResumeTransferOperation':
         return this.resumeTransferOperation(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -15,7 +15,7 @@ import 'bill_of_materials.pbenum.dart';
 export 'bill_of_materials.pbenum.dart';
 
 class PackageManager_Distribution extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager_Distribution')
+  static final BuilderInfo _i = BuilderInfo('PackageManager_Distribution')
     ..aOS(1, 'cpeUri')
     ..e<PackageManager_Architecture>(
         2,
@@ -39,15 +39,14 @@ class PackageManager_Distribution extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PackageManager_Distribution clone() =>
-      new PackageManager_Distribution()..mergeFromMessage(this);
+      PackageManager_Distribution()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PackageManager_Distribution create() =>
-      new PackageManager_Distribution();
+  static PackageManager_Distribution create() => PackageManager_Distribution();
   static PbList<PackageManager_Distribution> createRepeated() =>
-      new PbList<PackageManager_Distribution>();
+      PbList<PackageManager_Distribution>();
   static PackageManager_Distribution getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager_Distribution();
+      _defaultInstance = _ReadonlyPackageManager_Distribution();
     return _defaultInstance;
   }
 
@@ -110,7 +109,7 @@ class _ReadonlyPackageManager_Distribution extends PackageManager_Distribution
     with ReadonlyMessageMixin {}
 
 class PackageManager_Location extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager_Location')
+  static final BuilderInfo _i = BuilderInfo('PackageManager_Location')
     ..aOS(1, 'cpeUri')
     ..a<VulnerabilityType_Version>(2, 'version', PbFieldType.OM,
         VulnerabilityType_Version.getDefault, VulnerabilityType_Version.create)
@@ -125,14 +124,14 @@ class PackageManager_Location extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PackageManager_Location clone() =>
-      new PackageManager_Location()..mergeFromMessage(this);
+      PackageManager_Location()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PackageManager_Location create() => new PackageManager_Location();
+  static PackageManager_Location create() => PackageManager_Location();
   static PbList<PackageManager_Location> createRepeated() =>
-      new PbList<PackageManager_Location>();
+      PbList<PackageManager_Location>();
   static PackageManager_Location getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager_Location();
+      _defaultInstance = _ReadonlyPackageManager_Location();
     return _defaultInstance;
   }
 
@@ -171,7 +170,7 @@ class _ReadonlyPackageManager_Location extends PackageManager_Location
     with ReadonlyMessageMixin {}
 
 class PackageManager_Package extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager_Package')
+  static final BuilderInfo _i = BuilderInfo('PackageManager_Package')
     ..aOS(1, 'name')
     ..pp<PackageManager_Distribution>(
         10,
@@ -189,14 +188,14 @@ class PackageManager_Package extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PackageManager_Package clone() =>
-      new PackageManager_Package()..mergeFromMessage(this);
+      PackageManager_Package()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PackageManager_Package create() => new PackageManager_Package();
+  static PackageManager_Package create() => PackageManager_Package();
   static PbList<PackageManager_Package> createRepeated() =>
-      new PbList<PackageManager_Package>();
+      PbList<PackageManager_Package>();
   static PackageManager_Package getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager_Package();
+      _defaultInstance = _ReadonlyPackageManager_Package();
     return _defaultInstance;
   }
 
@@ -221,7 +220,7 @@ class _ReadonlyPackageManager_Package extends PackageManager_Package
     with ReadonlyMessageMixin {}
 
 class PackageManager_Installation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager_Installation')
+  static final BuilderInfo _i = BuilderInfo('PackageManager_Installation')
     ..aOS(1, 'name')
     ..pp<PackageManager_Location>(2, 'location', PbFieldType.PM,
         PackageManager_Location.$checkItem, PackageManager_Location.create)
@@ -235,15 +234,14 @@ class PackageManager_Installation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PackageManager_Installation clone() =>
-      new PackageManager_Installation()..mergeFromMessage(this);
+      PackageManager_Installation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PackageManager_Installation create() =>
-      new PackageManager_Installation();
+  static PackageManager_Installation create() => PackageManager_Installation();
   static PbList<PackageManager_Installation> createRepeated() =>
-      new PbList<PackageManager_Installation>();
+      PbList<PackageManager_Installation>();
   static PackageManager_Installation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager_Installation();
+      _defaultInstance = _ReadonlyPackageManager_Installation();
     return _defaultInstance;
   }
 
@@ -268,7 +266,7 @@ class _ReadonlyPackageManager_Installation extends PackageManager_Installation
     with ReadonlyMessageMixin {}
 
 class PackageManager extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PackageManager')
+  static final BuilderInfo _i = BuilderInfo('PackageManager')
     ..hasRequiredFields = false;
 
   PackageManager() : super();
@@ -278,14 +276,12 @@ class PackageManager extends GeneratedMessage {
   PackageManager.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PackageManager clone() => new PackageManager()..mergeFromMessage(this);
+  PackageManager clone() => PackageManager()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PackageManager create() => new PackageManager();
-  static PbList<PackageManager> createRepeated() =>
-      new PbList<PackageManager>();
+  static PackageManager create() => PackageManager();
+  static PbList<PackageManager> createRepeated() => PbList<PackageManager>();
   static PackageManager getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPackageManager();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPackageManager();
     return _defaultInstance;
   }
 

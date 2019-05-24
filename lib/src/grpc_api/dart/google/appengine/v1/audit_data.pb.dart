@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import 'appengine.pb.dart';
 
 class AuditData extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditData')
+  static final BuilderInfo _i = BuilderInfo('AuditData')
     ..a<UpdateServiceMethod>(1, 'updateService', PbFieldType.OM,
         UpdateServiceMethod.getDefault, UpdateServiceMethod.create)
     ..a<CreateVersionMethod>(2, 'createVersion', PbFieldType.OM,
@@ -24,12 +24,12 @@ class AuditData extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AuditData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuditData clone() => new AuditData()..mergeFromMessage(this);
+  AuditData clone() => AuditData()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuditData create() => new AuditData();
-  static PbList<AuditData> createRepeated() => new PbList<AuditData>();
+  static AuditData create() => AuditData();
+  static PbList<AuditData> createRepeated() => PbList<AuditData>();
   static AuditData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAuditData();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuditData();
     return _defaultInstance;
   }
 
@@ -58,7 +58,7 @@ class AuditData extends GeneratedMessage {
 class _ReadonlyAuditData extends AuditData with ReadonlyMessageMixin {}
 
 class UpdateServiceMethod extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateServiceMethod')
+  static final BuilderInfo _i = BuilderInfo('UpdateServiceMethod')
     ..a<UpdateServiceRequest>(1, 'request', PbFieldType.OM,
         UpdateServiceRequest.getDefault, UpdateServiceRequest.create)
     ..hasRequiredFields = false;
@@ -70,15 +70,14 @@ class UpdateServiceMethod extends GeneratedMessage {
   UpdateServiceMethod.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateServiceMethod clone() =>
-      new UpdateServiceMethod()..mergeFromMessage(this);
+  UpdateServiceMethod clone() => UpdateServiceMethod()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateServiceMethod create() => new UpdateServiceMethod();
+  static UpdateServiceMethod create() => UpdateServiceMethod();
   static PbList<UpdateServiceMethod> createRepeated() =>
-      new PbList<UpdateServiceMethod>();
+      PbList<UpdateServiceMethod>();
   static UpdateServiceMethod getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateServiceMethod();
+      _defaultInstance = _ReadonlyUpdateServiceMethod();
     return _defaultInstance;
   }
 
@@ -100,7 +99,7 @@ class _ReadonlyUpdateServiceMethod extends UpdateServiceMethod
     with ReadonlyMessageMixin {}
 
 class CreateVersionMethod extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateVersionMethod')
+  static final BuilderInfo _i = BuilderInfo('CreateVersionMethod')
     ..a<CreateVersionRequest>(1, 'request', PbFieldType.OM,
         CreateVersionRequest.getDefault, CreateVersionRequest.create)
     ..hasRequiredFields = false;
@@ -112,15 +111,14 @@ class CreateVersionMethod extends GeneratedMessage {
   CreateVersionMethod.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateVersionMethod clone() =>
-      new CreateVersionMethod()..mergeFromMessage(this);
+  CreateVersionMethod clone() => CreateVersionMethod()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateVersionMethod create() => new CreateVersionMethod();
+  static CreateVersionMethod create() => CreateVersionMethod();
   static PbList<CreateVersionMethod> createRepeated() =>
-      new PbList<CreateVersionMethod>();
+      PbList<CreateVersionMethod>();
   static CreateVersionMethod getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateVersionMethod();
+      _defaultInstance = _ReadonlyCreateVersionMethod();
     return _defaultInstance;
   }
 

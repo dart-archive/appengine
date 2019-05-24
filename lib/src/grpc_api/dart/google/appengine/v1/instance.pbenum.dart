@@ -9,14 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class Instance_Availability extends ProtobufEnum {
   static const Instance_Availability UNSPECIFIED =
-      const Instance_Availability._(0, 'UNSPECIFIED');
+      Instance_Availability._(0, 'UNSPECIFIED');
   static const Instance_Availability RESIDENT =
-      const Instance_Availability._(1, 'RESIDENT');
+      Instance_Availability._(1, 'RESIDENT');
   static const Instance_Availability DYNAMIC =
-      const Instance_Availability._(2, 'DYNAMIC');
+      Instance_Availability._(2, 'DYNAMIC');
 
-  static const List<Instance_Availability> values =
-      const <Instance_Availability>[
+  static const List<Instance_Availability> values = <Instance_Availability>[
     UNSPECIFIED,
     RESIDENT,
     DYNAMIC,

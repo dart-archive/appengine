@@ -39,27 +39,27 @@ abstract class EntityTypesServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListEntityTypes':
-        return new ListEntityTypesRequest();
+        return ListEntityTypesRequest();
       case 'GetEntityType':
-        return new GetEntityTypeRequest();
+        return GetEntityTypeRequest();
       case 'CreateEntityType':
-        return new CreateEntityTypeRequest();
+        return CreateEntityTypeRequest();
       case 'UpdateEntityType':
-        return new UpdateEntityTypeRequest();
+        return UpdateEntityTypeRequest();
       case 'DeleteEntityType':
-        return new DeleteEntityTypeRequest();
+        return DeleteEntityTypeRequest();
       case 'BatchUpdateEntityTypes':
-        return new BatchUpdateEntityTypesRequest();
+        return BatchUpdateEntityTypesRequest();
       case 'BatchDeleteEntityTypes':
-        return new BatchDeleteEntityTypesRequest();
+        return BatchDeleteEntityTypesRequest();
       case 'BatchCreateEntities':
-        return new BatchCreateEntitiesRequest();
+        return BatchCreateEntitiesRequest();
       case 'BatchUpdateEntities':
-        return new BatchUpdateEntitiesRequest();
+        return BatchUpdateEntitiesRequest();
       case 'BatchDeleteEntities':
-        return new BatchDeleteEntitiesRequest();
+        return BatchDeleteEntitiesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -87,7 +87,7 @@ abstract class EntityTypesServiceBase extends GeneratedService {
       case 'BatchDeleteEntities':
         return this.batchDeleteEntities(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

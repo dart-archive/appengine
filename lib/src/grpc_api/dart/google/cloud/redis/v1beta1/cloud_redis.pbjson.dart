@@ -9,12 +9,12 @@ import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
 import '../../../rpc/status.pbjson.dart' as $google$rpc;
 import '../../../protobuf/field_mask.pbjson.dart' as $google$protobuf;
 
-const Instance$json = const {
+const Instance$json = {
   '1': 'Instance',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    {
       '1': 'labels',
       '3': 3,
       '4': 3,
@@ -22,32 +22,26 @@ const Instance$json = const {
       '6': '.google.cloud.redis.v1beta1.Instance.LabelsEntry',
       '10': 'labels'
     },
-    const {'1': 'location_id', '3': 4, '4': 1, '5': 9, '10': 'locationId'},
-    const {
+    {'1': 'location_id', '3': 4, '4': 1, '5': 9, '10': 'locationId'},
+    {
       '1': 'alternative_location_id',
       '3': 5,
       '4': 1,
       '5': 9,
       '10': 'alternativeLocationId'
     },
-    const {'1': 'redis_version', '3': 7, '4': 1, '5': 9, '10': 'redisVersion'},
-    const {
-      '1': 'reserved_ip_range',
-      '3': 9,
-      '4': 1,
-      '5': 9,
-      '10': 'reservedIpRange'
-    },
-    const {'1': 'host', '3': 10, '4': 1, '5': 9, '10': 'host'},
-    const {'1': 'port', '3': 11, '4': 1, '5': 5, '10': 'port'},
-    const {
+    {'1': 'redis_version', '3': 7, '4': 1, '5': 9, '10': 'redisVersion'},
+    {'1': 'reserved_ip_range', '3': 9, '4': 1, '5': 9, '10': 'reservedIpRange'},
+    {'1': 'host', '3': 10, '4': 1, '5': 9, '10': 'host'},
+    {'1': 'port', '3': 11, '4': 1, '5': 5, '10': 'port'},
+    {
       '1': 'current_location_id',
       '3': 12,
       '4': 1,
       '5': 9,
       '10': 'currentLocationId'
     },
-    const {
+    {
       '1': 'create_time',
       '3': 13,
       '4': 1,
@@ -55,7 +49,7 @@ const Instance$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'createTime'
     },
-    const {
+    {
       '1': 'state',
       '3': 14,
       '4': 1,
@@ -63,14 +57,8 @@ const Instance$json = const {
       '6': '.google.cloud.redis.v1beta1.Instance.State',
       '10': 'state'
     },
-    const {
-      '1': 'status_message',
-      '3': 15,
-      '4': 1,
-      '5': 9,
-      '10': 'statusMessage'
-    },
-    const {
+    {'1': 'status_message', '3': 15, '4': 1, '5': 9, '10': 'statusMessage'},
+    {
       '1': 'redis_configs',
       '3': 16,
       '4': 3,
@@ -78,7 +66,7 @@ const Instance$json = const {
       '6': '.google.cloud.redis.v1beta1.Instance.RedisConfigsEntry',
       '10': 'redisConfigs'
     },
-    const {
+    {
       '1': 'tier',
       '3': 17,
       '4': 1,
@@ -86,14 +74,8 @@ const Instance$json = const {
       '6': '.google.cloud.redis.v1beta1.Instance.Tier',
       '10': 'tier'
     },
-    const {
-      '1': 'memory_size_gb',
-      '3': 18,
-      '4': 1,
-      '5': 5,
-      '10': 'memorySizeGb'
-    },
-    const {
+    {'1': 'memory_size_gb', '3': 18, '4': 1, '5': 5, '10': 'memorySizeGb'},
+    {
       '1': 'authorized_network',
       '3': 20,
       '4': 1,
@@ -101,63 +83,63 @@ const Instance$json = const {
       '10': 'authorizedNetwork'
     },
   ],
-  '3': const [Instance_LabelsEntry$json, Instance_RedisConfigsEntry$json],
-  '4': const [Instance_State$json, Instance_Tier$json],
+  '3': [Instance_LabelsEntry$json, Instance_RedisConfigsEntry$json],
+  '4': [Instance_State$json, Instance_Tier$json],
 };
 
-const Instance_LabelsEntry$json = const {
+const Instance_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const Instance_RedisConfigsEntry$json = const {
+const Instance_RedisConfigsEntry$json = {
   '1': 'RedisConfigsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const Instance_State$json = const {
+const Instance_State$json = {
   '1': 'State',
-  '2': const [
-    const {'1': 'STATE_UNSPECIFIED', '2': 0},
-    const {'1': 'CREATING', '2': 1},
-    const {'1': 'READY', '2': 2},
-    const {'1': 'UPDATING', '2': 3},
-    const {'1': 'DELETING', '2': 4},
-    const {'1': 'REPAIRING', '2': 5},
-    const {'1': 'MAINTENANCE', '2': 6},
+  '2': [
+    {'1': 'STATE_UNSPECIFIED', '2': 0},
+    {'1': 'CREATING', '2': 1},
+    {'1': 'READY', '2': 2},
+    {'1': 'UPDATING', '2': 3},
+    {'1': 'DELETING', '2': 4},
+    {'1': 'REPAIRING', '2': 5},
+    {'1': 'MAINTENANCE', '2': 6},
   ],
 };
 
-const Instance_Tier$json = const {
+const Instance_Tier$json = {
   '1': 'Tier',
-  '2': const [
-    const {'1': 'TIER_UNSPECIFIED', '2': 0},
-    const {'1': 'BASIC', '2': 1},
-    const {'1': 'STANDARD_HA', '2': 3},
+  '2': [
+    {'1': 'TIER_UNSPECIFIED', '2': 0},
+    {'1': 'BASIC', '2': 1},
+    {'1': 'STANDARD_HA', '2': 3},
   ],
 };
 
-const ListInstancesRequest$json = const {
+const ListInstancesRequest$json = {
   '1': 'ListInstancesRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListInstancesResponse$json = const {
+const ListInstancesResponse$json = {
   '1': 'ListInstancesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'instances',
       '3': 1,
       '4': 3,
@@ -165,29 +147,23 @@ const ListInstancesResponse$json = const {
       '6': '.google.cloud.redis.v1beta1.Instance',
       '10': 'instances'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetInstanceRequest$json = const {
+const GetInstanceRequest$json = {
   '1': 'GetInstanceRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const CreateInstanceRequest$json = const {
+const CreateInstanceRequest$json = {
   '1': 'CreateInstanceRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'instance_id', '3': 2, '4': 1, '5': 9, '10': 'instanceId'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'instance_id', '3': 2, '4': 1, '5': 9, '10': 'instanceId'},
+    {
       '1': 'instance',
       '3': 3,
       '4': 1,
@@ -198,10 +174,10 @@ const CreateInstanceRequest$json = const {
   ],
 };
 
-const UpdateInstanceRequest$json = const {
+const UpdateInstanceRequest$json = {
   '1': 'UpdateInstanceRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'update_mask',
       '3': 1,
       '4': 1,
@@ -209,7 +185,7 @@ const UpdateInstanceRequest$json = const {
       '6': '.google.protobuf.FieldMask',
       '10': 'updateMask'
     },
-    const {
+    {
       '1': 'instance',
       '3': 2,
       '4': 1,
@@ -220,17 +196,17 @@ const UpdateInstanceRequest$json = const {
   ],
 };
 
-const DeleteInstanceRequest$json = const {
+const DeleteInstanceRequest$json = {
   '1': 'DeleteInstanceRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const LocationMetadata$json = const {
+const LocationMetadata$json = {
   '1': 'LocationMetadata',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'available_zones',
       '3': 1,
       '4': 3,
@@ -239,14 +215,14 @@ const LocationMetadata$json = const {
       '10': 'availableZones'
     },
   ],
-  '3': const [LocationMetadata_AvailableZonesEntry$json],
+  '3': [LocationMetadata_AvailableZonesEntry$json],
 };
 
-const LocationMetadata_AvailableZonesEntry$json = const {
+const LocationMetadata_AvailableZonesEntry$json = {
   '1': 'AvailableZonesEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
       '1': 'value',
       '3': 2,
       '4': 1,
@@ -255,50 +231,50 @@ const LocationMetadata_AvailableZonesEntry$json = const {
       '10': 'value'
     },
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const ZoneMetadata$json = const {
+const ZoneMetadata$json = {
   '1': 'ZoneMetadata',
 };
 
-const CloudRedis$json = const {
+const CloudRedis$json = {
   '1': 'CloudRedis',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'ListInstances',
       '2': '.google.cloud.redis.v1beta1.ListInstancesRequest',
       '3': '.google.cloud.redis.v1beta1.ListInstancesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetInstance',
       '2': '.google.cloud.redis.v1beta1.GetInstanceRequest',
       '3': '.google.cloud.redis.v1beta1.Instance',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateInstance',
       '2': '.google.cloud.redis.v1beta1.CreateInstanceRequest',
       '3': '.google.longrunning.Operation',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateInstance',
       '2': '.google.cloud.redis.v1beta1.UpdateInstanceRequest',
       '3': '.google.longrunning.Operation',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteInstance',
       '2': '.google.cloud.redis.v1beta1.DeleteInstanceRequest',
       '3': '.google.longrunning.Operation',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const CloudRedis$messageJson = const {
+const CloudRedis$messageJson = {
   '.google.cloud.redis.v1beta1.ListInstancesRequest': ListInstancesRequest$json,
   '.google.cloud.redis.v1beta1.ListInstancesResponse':
       ListInstancesResponse$json,

@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Group extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Group')
+  static final BuilderInfo _i = BuilderInfo('Group')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'parentName')
@@ -22,12 +22,12 @@ class Group extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Group.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Group clone() => new Group()..mergeFromMessage(this);
+  Group clone() => Group()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Group create() => new Group();
-  static PbList<Group> createRepeated() => new PbList<Group>();
+  static Group create() => Group();
+  static PbList<Group> createRepeated() => PbList<Group>();
   static Group getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGroup();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGroup();
     return _defaultInstance;
   }
 

@@ -16,7 +16,7 @@ import 'resources.pbenum.dart';
 export 'resources.pbenum.dart';
 
 class ManagedService extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ManagedService')
+  static final BuilderInfo _i = BuilderInfo('ManagedService')
     ..aOS(2, 'serviceName')
     ..aOS(3, 'producerProjectId')
     ..hasRequiredFields = false;
@@ -28,14 +28,12 @@ class ManagedService extends GeneratedMessage {
   ManagedService.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ManagedService clone() => new ManagedService()..mergeFromMessage(this);
+  ManagedService clone() => ManagedService()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ManagedService create() => new ManagedService();
-  static PbList<ManagedService> createRepeated() =>
-      new PbList<ManagedService>();
+  static ManagedService create() => ManagedService();
+  static PbList<ManagedService> createRepeated() => PbList<ManagedService>();
   static ManagedService getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyManagedService();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyManagedService();
     return _defaultInstance;
   }
 
@@ -65,7 +63,7 @@ class _ReadonlyManagedService extends ManagedService with ReadonlyMessageMixin {
 }
 
 class OperationMetadata_Step extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadata_Step')
+  static final BuilderInfo _i = BuilderInfo('OperationMetadata_Step')
     ..aOS(2, 'description')
     ..e<OperationMetadata_Status>(
         4,
@@ -84,14 +82,14 @@ class OperationMetadata_Step extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   OperationMetadata_Step clone() =>
-      new OperationMetadata_Step()..mergeFromMessage(this);
+      OperationMetadata_Step()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OperationMetadata_Step create() => new OperationMetadata_Step();
+  static OperationMetadata_Step create() => OperationMetadata_Step();
   static PbList<OperationMetadata_Step> createRepeated() =>
-      new PbList<OperationMetadata_Step>();
+      PbList<OperationMetadata_Step>();
   static OperationMetadata_Step getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadata_Step();
+      _defaultInstance = _ReadonlyOperationMetadata_Step();
     return _defaultInstance;
   }
 
@@ -122,7 +120,7 @@ class _ReadonlyOperationMetadata_Step extends OperationMetadata_Step
     with ReadonlyMessageMixin {}
 
 class OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadata')
+  static final BuilderInfo _i = BuilderInfo('OperationMetadata')
     ..pPS(1, 'resourceNames')
     ..pp<OperationMetadata_Step>(2, 'steps', PbFieldType.PM,
         OperationMetadata_Step.$checkItem, OperationMetadata_Step.create)
@@ -142,14 +140,14 @@ class OperationMetadata extends GeneratedMessage {
   OperationMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OperationMetadata clone() => new OperationMetadata()..mergeFromMessage(this);
+  OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OperationMetadata create() => new OperationMetadata();
+  static OperationMetadata create() => OperationMetadata();
   static PbList<OperationMetadata> createRepeated() =>
-      new PbList<OperationMetadata>();
+      PbList<OperationMetadata>();
   static OperationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadata();
+      _defaultInstance = _ReadonlyOperationMetadata();
     return _defaultInstance;
   }
 
@@ -183,7 +181,7 @@ class _ReadonlyOperationMetadata extends OperationMetadata
     with ReadonlyMessageMixin {}
 
 class Diagnostic extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Diagnostic')
+  static final BuilderInfo _i = BuilderInfo('Diagnostic')
     ..aOS(1, 'location')
     ..e<Diagnostic_Kind>(2, 'kind', PbFieldType.OE, Diagnostic_Kind.WARNING,
         Diagnostic_Kind.valueOf, Diagnostic_Kind.values)
@@ -196,12 +194,12 @@ class Diagnostic extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Diagnostic.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Diagnostic clone() => new Diagnostic()..mergeFromMessage(this);
+  Diagnostic clone() => Diagnostic()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Diagnostic create() => new Diagnostic();
-  static PbList<Diagnostic> createRepeated() => new PbList<Diagnostic>();
+  static Diagnostic create() => Diagnostic();
+  static PbList<Diagnostic> createRepeated() => PbList<Diagnostic>();
   static Diagnostic getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDiagnostic();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDiagnostic();
     return _defaultInstance;
   }
 
@@ -238,7 +236,7 @@ class Diagnostic extends GeneratedMessage {
 class _ReadonlyDiagnostic extends Diagnostic with ReadonlyMessageMixin {}
 
 class ConfigSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConfigSource')
+  static final BuilderInfo _i = BuilderInfo('ConfigSource')
     ..pp<ConfigFile>(
         2, 'files', PbFieldType.PM, ConfigFile.$checkItem, ConfigFile.create)
     ..aOS(5, 'id')
@@ -251,13 +249,12 @@ class ConfigSource extends GeneratedMessage {
   ConfigSource.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConfigSource clone() => new ConfigSource()..mergeFromMessage(this);
+  ConfigSource clone() => ConfigSource()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConfigSource create() => new ConfigSource();
-  static PbList<ConfigSource> createRepeated() => new PbList<ConfigSource>();
+  static ConfigSource create() => ConfigSource();
+  static PbList<ConfigSource> createRepeated() => PbList<ConfigSource>();
   static ConfigSource getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyConfigSource();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConfigSource();
     return _defaultInstance;
   }
 
@@ -280,7 +277,7 @@ class ConfigSource extends GeneratedMessage {
 class _ReadonlyConfigSource extends ConfigSource with ReadonlyMessageMixin {}
 
 class ConfigFile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConfigFile')
+  static final BuilderInfo _i = BuilderInfo('ConfigFile')
     ..aOS(1, 'filePath')
     ..a<List<int>>(3, 'fileContents', PbFieldType.OY)
     ..e<ConfigFile_FileType>(
@@ -298,12 +295,12 @@ class ConfigFile extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ConfigFile.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConfigFile clone() => new ConfigFile()..mergeFromMessage(this);
+  ConfigFile clone() => ConfigFile()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConfigFile create() => new ConfigFile();
-  static PbList<ConfigFile> createRepeated() => new PbList<ConfigFile>();
+  static ConfigFile create() => ConfigFile();
+  static PbList<ConfigFile> createRepeated() => PbList<ConfigFile>();
   static ConfigFile getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyConfigFile();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConfigFile();
     return _defaultInstance;
   }
 
@@ -340,7 +337,7 @@ class ConfigFile extends GeneratedMessage {
 class _ReadonlyConfigFile extends ConfigFile with ReadonlyMessageMixin {}
 
 class ConfigRef extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConfigRef')
+  static final BuilderInfo _i = BuilderInfo('ConfigRef')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -350,12 +347,12 @@ class ConfigRef extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ConfigRef.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConfigRef clone() => new ConfigRef()..mergeFromMessage(this);
+  ConfigRef clone() => ConfigRef()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConfigRef create() => new ConfigRef();
-  static PbList<ConfigRef> createRepeated() => new PbList<ConfigRef>();
+  static ConfigRef create() => ConfigRef();
+  static PbList<ConfigRef> createRepeated() => PbList<ConfigRef>();
   static ConfigRef getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyConfigRef();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConfigRef();
     return _defaultInstance;
   }
 
@@ -376,7 +373,7 @@ class ConfigRef extends GeneratedMessage {
 class _ReadonlyConfigRef extends ConfigRef with ReadonlyMessageMixin {}
 
 class ChangeReport extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ChangeReport')
+  static final BuilderInfo _i = BuilderInfo('ChangeReport')
     ..pp<$google$api.ConfigChange>(1, 'configChanges', PbFieldType.PM,
         $google$api.ConfigChange.$checkItem, $google$api.ConfigChange.create)
     ..hasRequiredFields = false;
@@ -388,13 +385,12 @@ class ChangeReport extends GeneratedMessage {
   ChangeReport.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ChangeReport clone() => new ChangeReport()..mergeFromMessage(this);
+  ChangeReport clone() => ChangeReport()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ChangeReport create() => new ChangeReport();
-  static PbList<ChangeReport> createRepeated() => new PbList<ChangeReport>();
+  static ChangeReport create() => ChangeReport();
+  static PbList<ChangeReport> createRepeated() => PbList<ChangeReport>();
   static ChangeReport getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyChangeReport();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyChangeReport();
     return _defaultInstance;
   }
 
@@ -410,7 +406,7 @@ class _ReadonlyChangeReport extends ChangeReport with ReadonlyMessageMixin {}
 
 class Rollout_TrafficPercentStrategy_PercentagesEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('Rollout_TrafficPercentStrategy_PercentagesEntry')
+      BuilderInfo('Rollout_TrafficPercentStrategy_PercentagesEntry')
         ..aOS(1, 'key')
         ..a<double>(2, 'value', PbFieldType.OD)
         ..hasRequiredFields = false;
@@ -423,18 +419,17 @@ class Rollout_TrafficPercentStrategy_PercentagesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Rollout_TrafficPercentStrategy_PercentagesEntry clone() =>
-      new Rollout_TrafficPercentStrategy_PercentagesEntry()
-        ..mergeFromMessage(this);
+      Rollout_TrafficPercentStrategy_PercentagesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Rollout_TrafficPercentStrategy_PercentagesEntry create() =>
-      new Rollout_TrafficPercentStrategy_PercentagesEntry();
+      Rollout_TrafficPercentStrategy_PercentagesEntry();
   static PbList<Rollout_TrafficPercentStrategy_PercentagesEntry>
       createRepeated() =>
-          new PbList<Rollout_TrafficPercentStrategy_PercentagesEntry>();
+          PbList<Rollout_TrafficPercentStrategy_PercentagesEntry>();
   static Rollout_TrafficPercentStrategy_PercentagesEntry getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyRollout_TrafficPercentStrategy_PercentagesEntry();
+          _ReadonlyRollout_TrafficPercentStrategy_PercentagesEntry();
     return _defaultInstance;
   }
 
@@ -466,15 +461,14 @@ class _ReadonlyRollout_TrafficPercentStrategy_PercentagesEntry
     with ReadonlyMessageMixin {}
 
 class Rollout_TrafficPercentStrategy extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Rollout_TrafficPercentStrategy')
-        ..pp<Rollout_TrafficPercentStrategy_PercentagesEntry>(
-            1,
-            'percentages',
-            PbFieldType.PM,
-            Rollout_TrafficPercentStrategy_PercentagesEntry.$checkItem,
-            Rollout_TrafficPercentStrategy_PercentagesEntry.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Rollout_TrafficPercentStrategy')
+    ..pp<Rollout_TrafficPercentStrategy_PercentagesEntry>(
+        1,
+        'percentages',
+        PbFieldType.PM,
+        Rollout_TrafficPercentStrategy_PercentagesEntry.$checkItem,
+        Rollout_TrafficPercentStrategy_PercentagesEntry.create)
+    ..hasRequiredFields = false;
 
   Rollout_TrafficPercentStrategy() : super();
   Rollout_TrafficPercentStrategy.fromBuffer(List<int> i,
@@ -484,15 +478,15 @@ class Rollout_TrafficPercentStrategy extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Rollout_TrafficPercentStrategy clone() =>
-      new Rollout_TrafficPercentStrategy()..mergeFromMessage(this);
+      Rollout_TrafficPercentStrategy()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Rollout_TrafficPercentStrategy create() =>
-      new Rollout_TrafficPercentStrategy();
+      Rollout_TrafficPercentStrategy();
   static PbList<Rollout_TrafficPercentStrategy> createRepeated() =>
-      new PbList<Rollout_TrafficPercentStrategy>();
+      PbList<Rollout_TrafficPercentStrategy>();
   static Rollout_TrafficPercentStrategy getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRollout_TrafficPercentStrategy();
+      _defaultInstance = _ReadonlyRollout_TrafficPercentStrategy();
     return _defaultInstance;
   }
 
@@ -510,7 +504,7 @@ class _ReadonlyRollout_TrafficPercentStrategy
     extends Rollout_TrafficPercentStrategy with ReadonlyMessageMixin {}
 
 class Rollout_DeleteServiceStrategy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Rollout_DeleteServiceStrategy')
+  static final BuilderInfo _i = BuilderInfo('Rollout_DeleteServiceStrategy')
     ..hasRequiredFields = false;
 
   Rollout_DeleteServiceStrategy() : super();
@@ -521,15 +515,15 @@ class Rollout_DeleteServiceStrategy extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Rollout_DeleteServiceStrategy clone() =>
-      new Rollout_DeleteServiceStrategy()..mergeFromMessage(this);
+      Rollout_DeleteServiceStrategy()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Rollout_DeleteServiceStrategy create() =>
-      new Rollout_DeleteServiceStrategy();
+      Rollout_DeleteServiceStrategy();
   static PbList<Rollout_DeleteServiceStrategy> createRepeated() =>
-      new PbList<Rollout_DeleteServiceStrategy>();
+      PbList<Rollout_DeleteServiceStrategy>();
   static Rollout_DeleteServiceStrategy getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRollout_DeleteServiceStrategy();
+      _defaultInstance = _ReadonlyRollout_DeleteServiceStrategy();
     return _defaultInstance;
   }
 
@@ -544,7 +538,7 @@ class _ReadonlyRollout_DeleteServiceStrategy
     extends Rollout_DeleteServiceStrategy with ReadonlyMessageMixin {}
 
 class Rollout extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Rollout')
+  static final BuilderInfo _i = BuilderInfo('Rollout')
     ..aOS(1, 'rolloutId')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -581,12 +575,12 @@ class Rollout extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Rollout.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Rollout clone() => new Rollout()..mergeFromMessage(this);
+  Rollout clone() => Rollout()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Rollout create() => new Rollout();
-  static PbList<Rollout> createRepeated() => new PbList<Rollout>();
+  static Rollout create() => Rollout();
+  static PbList<Rollout> createRepeated() => PbList<Rollout>();
   static Rollout getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRollout();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRollout();
     return _defaultInstance;
   }
 

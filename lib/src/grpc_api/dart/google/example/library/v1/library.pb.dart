@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class Book extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Book')
+  static final BuilderInfo _i = BuilderInfo('Book')
     ..aOS(1, 'name')
     ..aOS(2, 'author')
     ..aOS(3, 'title')
@@ -24,12 +24,12 @@ class Book extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Book.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Book clone() => new Book()..mergeFromMessage(this);
+  Book clone() => Book()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Book create() => new Book();
-  static PbList<Book> createRepeated() => new PbList<Book>();
+  static Book create() => Book();
+  static PbList<Book> createRepeated() => PbList<Book>();
   static Book getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBook();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBook();
     return _defaultInstance;
   }
 
@@ -74,7 +74,7 @@ class Book extends GeneratedMessage {
 class _ReadonlyBook extends Book with ReadonlyMessageMixin {}
 
 class Shelf extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Shelf')
+  static final BuilderInfo _i = BuilderInfo('Shelf')
     ..aOS(1, 'name')
     ..aOS(2, 'theme')
     ..hasRequiredFields = false;
@@ -84,12 +84,12 @@ class Shelf extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Shelf.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Shelf clone() => new Shelf()..mergeFromMessage(this);
+  Shelf clone() => Shelf()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Shelf create() => new Shelf();
-  static PbList<Shelf> createRepeated() => new PbList<Shelf>();
+  static Shelf create() => Shelf();
+  static PbList<Shelf> createRepeated() => PbList<Shelf>();
   static Shelf getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyShelf();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyShelf();
     return _defaultInstance;
   }
 
@@ -118,7 +118,7 @@ class Shelf extends GeneratedMessage {
 class _ReadonlyShelf extends Shelf with ReadonlyMessageMixin {}
 
 class CreateShelfRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateShelfRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateShelfRequest')
     ..a<Shelf>(1, 'shelf', PbFieldType.OM, Shelf.getDefault, Shelf.create)
     ..hasRequiredFields = false;
 
@@ -129,15 +129,14 @@ class CreateShelfRequest extends GeneratedMessage {
   CreateShelfRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateShelfRequest clone() =>
-      new CreateShelfRequest()..mergeFromMessage(this);
+  CreateShelfRequest clone() => CreateShelfRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateShelfRequest create() => new CreateShelfRequest();
+  static CreateShelfRequest create() => CreateShelfRequest();
   static PbList<CreateShelfRequest> createRepeated() =>
-      new PbList<CreateShelfRequest>();
+      PbList<CreateShelfRequest>();
   static CreateShelfRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateShelfRequest();
+      _defaultInstance = _ReadonlyCreateShelfRequest();
     return _defaultInstance;
   }
 
@@ -159,7 +158,7 @@ class _ReadonlyCreateShelfRequest extends CreateShelfRequest
     with ReadonlyMessageMixin {}
 
 class GetShelfRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetShelfRequest')
+  static final BuilderInfo _i = BuilderInfo('GetShelfRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -170,14 +169,12 @@ class GetShelfRequest extends GeneratedMessage {
   GetShelfRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetShelfRequest clone() => new GetShelfRequest()..mergeFromMessage(this);
+  GetShelfRequest clone() => GetShelfRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetShelfRequest create() => new GetShelfRequest();
-  static PbList<GetShelfRequest> createRepeated() =>
-      new PbList<GetShelfRequest>();
+  static GetShelfRequest create() => GetShelfRequest();
+  static PbList<GetShelfRequest> createRepeated() => PbList<GetShelfRequest>();
   static GetShelfRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetShelfRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetShelfRequest();
     return _defaultInstance;
   }
 
@@ -199,7 +196,7 @@ class _ReadonlyGetShelfRequest extends GetShelfRequest
     with ReadonlyMessageMixin {}
 
 class ListShelvesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListShelvesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListShelvesRequest')
     ..a<int>(1, 'pageSize', PbFieldType.O3)
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
@@ -211,15 +208,14 @@ class ListShelvesRequest extends GeneratedMessage {
   ListShelvesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListShelvesRequest clone() =>
-      new ListShelvesRequest()..mergeFromMessage(this);
+  ListShelvesRequest clone() => ListShelvesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListShelvesRequest create() => new ListShelvesRequest();
+  static ListShelvesRequest create() => ListShelvesRequest();
   static PbList<ListShelvesRequest> createRepeated() =>
-      new PbList<ListShelvesRequest>();
+      PbList<ListShelvesRequest>();
   static ListShelvesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListShelvesRequest();
+      _defaultInstance = _ReadonlyListShelvesRequest();
     return _defaultInstance;
   }
 
@@ -249,7 +245,7 @@ class _ReadonlyListShelvesRequest extends ListShelvesRequest
     with ReadonlyMessageMixin {}
 
 class ListShelvesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListShelvesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListShelvesResponse')
     ..pp<Shelf>(1, 'shelves', PbFieldType.PM, Shelf.$checkItem, Shelf.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -261,15 +257,14 @@ class ListShelvesResponse extends GeneratedMessage {
   ListShelvesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListShelvesResponse clone() =>
-      new ListShelvesResponse()..mergeFromMessage(this);
+  ListShelvesResponse clone() => ListShelvesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListShelvesResponse create() => new ListShelvesResponse();
+  static ListShelvesResponse create() => ListShelvesResponse();
   static PbList<ListShelvesResponse> createRepeated() =>
-      new PbList<ListShelvesResponse>();
+      PbList<ListShelvesResponse>();
   static ListShelvesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListShelvesResponse();
+      _defaultInstance = _ReadonlyListShelvesResponse();
     return _defaultInstance;
   }
 
@@ -293,7 +288,7 @@ class _ReadonlyListShelvesResponse extends ListShelvesResponse
     with ReadonlyMessageMixin {}
 
 class DeleteShelfRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteShelfRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteShelfRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -304,15 +299,14 @@ class DeleteShelfRequest extends GeneratedMessage {
   DeleteShelfRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteShelfRequest clone() =>
-      new DeleteShelfRequest()..mergeFromMessage(this);
+  DeleteShelfRequest clone() => DeleteShelfRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteShelfRequest create() => new DeleteShelfRequest();
+  static DeleteShelfRequest create() => DeleteShelfRequest();
   static PbList<DeleteShelfRequest> createRepeated() =>
-      new PbList<DeleteShelfRequest>();
+      PbList<DeleteShelfRequest>();
   static DeleteShelfRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteShelfRequest();
+      _defaultInstance = _ReadonlyDeleteShelfRequest();
     return _defaultInstance;
   }
 
@@ -334,7 +328,7 @@ class _ReadonlyDeleteShelfRequest extends DeleteShelfRequest
     with ReadonlyMessageMixin {}
 
 class MergeShelvesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MergeShelvesRequest')
+  static final BuilderInfo _i = BuilderInfo('MergeShelvesRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'otherShelfName')
     ..hasRequiredFields = false;
@@ -346,15 +340,14 @@ class MergeShelvesRequest extends GeneratedMessage {
   MergeShelvesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MergeShelvesRequest clone() =>
-      new MergeShelvesRequest()..mergeFromMessage(this);
+  MergeShelvesRequest clone() => MergeShelvesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MergeShelvesRequest create() => new MergeShelvesRequest();
+  static MergeShelvesRequest create() => MergeShelvesRequest();
   static PbList<MergeShelvesRequest> createRepeated() =>
-      new PbList<MergeShelvesRequest>();
+      PbList<MergeShelvesRequest>();
   static MergeShelvesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMergeShelvesRequest();
+      _defaultInstance = _ReadonlyMergeShelvesRequest();
     return _defaultInstance;
   }
 
@@ -384,7 +377,7 @@ class _ReadonlyMergeShelvesRequest extends MergeShelvesRequest
     with ReadonlyMessageMixin {}
 
 class CreateBookRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateBookRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateBookRequest')
     ..aOS(1, 'name')
     ..a<Book>(2, 'book', PbFieldType.OM, Book.getDefault, Book.create)
     ..hasRequiredFields = false;
@@ -396,14 +389,14 @@ class CreateBookRequest extends GeneratedMessage {
   CreateBookRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateBookRequest clone() => new CreateBookRequest()..mergeFromMessage(this);
+  CreateBookRequest clone() => CreateBookRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateBookRequest create() => new CreateBookRequest();
+  static CreateBookRequest create() => CreateBookRequest();
   static PbList<CreateBookRequest> createRepeated() =>
-      new PbList<CreateBookRequest>();
+      PbList<CreateBookRequest>();
   static CreateBookRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateBookRequest();
+      _defaultInstance = _ReadonlyCreateBookRequest();
     return _defaultInstance;
   }
 
@@ -433,7 +426,7 @@ class _ReadonlyCreateBookRequest extends CreateBookRequest
     with ReadonlyMessageMixin {}
 
 class GetBookRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetBookRequest')
+  static final BuilderInfo _i = BuilderInfo('GetBookRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -444,14 +437,12 @@ class GetBookRequest extends GeneratedMessage {
   GetBookRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetBookRequest clone() => new GetBookRequest()..mergeFromMessage(this);
+  GetBookRequest clone() => GetBookRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetBookRequest create() => new GetBookRequest();
-  static PbList<GetBookRequest> createRepeated() =>
-      new PbList<GetBookRequest>();
+  static GetBookRequest create() => GetBookRequest();
+  static PbList<GetBookRequest> createRepeated() => PbList<GetBookRequest>();
   static GetBookRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetBookRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetBookRequest();
     return _defaultInstance;
   }
 
@@ -473,7 +464,7 @@ class _ReadonlyGetBookRequest extends GetBookRequest with ReadonlyMessageMixin {
 }
 
 class ListBooksRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListBooksRequest')
+  static final BuilderInfo _i = BuilderInfo('ListBooksRequest')
     ..aOS(1, 'name')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -486,14 +477,14 @@ class ListBooksRequest extends GeneratedMessage {
   ListBooksRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListBooksRequest clone() => new ListBooksRequest()..mergeFromMessage(this);
+  ListBooksRequest clone() => ListBooksRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListBooksRequest create() => new ListBooksRequest();
+  static ListBooksRequest create() => ListBooksRequest();
   static PbList<ListBooksRequest> createRepeated() =>
-      new PbList<ListBooksRequest>();
+      PbList<ListBooksRequest>();
   static ListBooksRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListBooksRequest();
+      _defaultInstance = _ReadonlyListBooksRequest();
     return _defaultInstance;
   }
 
@@ -531,7 +522,7 @@ class _ReadonlyListBooksRequest extends ListBooksRequest
     with ReadonlyMessageMixin {}
 
 class ListBooksResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListBooksResponse')
+  static final BuilderInfo _i = BuilderInfo('ListBooksResponse')
     ..pp<Book>(1, 'books', PbFieldType.PM, Book.$checkItem, Book.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -543,14 +534,14 @@ class ListBooksResponse extends GeneratedMessage {
   ListBooksResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListBooksResponse clone() => new ListBooksResponse()..mergeFromMessage(this);
+  ListBooksResponse clone() => ListBooksResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListBooksResponse create() => new ListBooksResponse();
+  static ListBooksResponse create() => ListBooksResponse();
   static PbList<ListBooksResponse> createRepeated() =>
-      new PbList<ListBooksResponse>();
+      PbList<ListBooksResponse>();
   static ListBooksResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListBooksResponse();
+      _defaultInstance = _ReadonlyListBooksResponse();
     return _defaultInstance;
   }
 
@@ -574,7 +565,7 @@ class _ReadonlyListBooksResponse extends ListBooksResponse
     with ReadonlyMessageMixin {}
 
 class UpdateBookRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateBookRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateBookRequest')
     ..aOS(1, 'name')
     ..a<Book>(2, 'book', PbFieldType.OM, Book.getDefault, Book.create)
     ..hasRequiredFields = false;
@@ -586,14 +577,14 @@ class UpdateBookRequest extends GeneratedMessage {
   UpdateBookRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateBookRequest clone() => new UpdateBookRequest()..mergeFromMessage(this);
+  UpdateBookRequest clone() => UpdateBookRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateBookRequest create() => new UpdateBookRequest();
+  static UpdateBookRequest create() => UpdateBookRequest();
   static PbList<UpdateBookRequest> createRepeated() =>
-      new PbList<UpdateBookRequest>();
+      PbList<UpdateBookRequest>();
   static UpdateBookRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateBookRequest();
+      _defaultInstance = _ReadonlyUpdateBookRequest();
     return _defaultInstance;
   }
 
@@ -623,7 +614,7 @@ class _ReadonlyUpdateBookRequest extends UpdateBookRequest
     with ReadonlyMessageMixin {}
 
 class DeleteBookRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteBookRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteBookRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -634,14 +625,14 @@ class DeleteBookRequest extends GeneratedMessage {
   DeleteBookRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteBookRequest clone() => new DeleteBookRequest()..mergeFromMessage(this);
+  DeleteBookRequest clone() => DeleteBookRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteBookRequest create() => new DeleteBookRequest();
+  static DeleteBookRequest create() => DeleteBookRequest();
   static PbList<DeleteBookRequest> createRepeated() =>
-      new PbList<DeleteBookRequest>();
+      PbList<DeleteBookRequest>();
   static DeleteBookRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteBookRequest();
+      _defaultInstance = _ReadonlyDeleteBookRequest();
     return _defaultInstance;
   }
 
@@ -663,7 +654,7 @@ class _ReadonlyDeleteBookRequest extends DeleteBookRequest
     with ReadonlyMessageMixin {}
 
 class MoveBookRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MoveBookRequest')
+  static final BuilderInfo _i = BuilderInfo('MoveBookRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'otherShelfName')
     ..hasRequiredFields = false;
@@ -675,14 +666,12 @@ class MoveBookRequest extends GeneratedMessage {
   MoveBookRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MoveBookRequest clone() => new MoveBookRequest()..mergeFromMessage(this);
+  MoveBookRequest clone() => MoveBookRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MoveBookRequest create() => new MoveBookRequest();
-  static PbList<MoveBookRequest> createRepeated() =>
-      new PbList<MoveBookRequest>();
+  static MoveBookRequest create() => MoveBookRequest();
+  static PbList<MoveBookRequest> createRepeated() => PbList<MoveBookRequest>();
   static MoveBookRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMoveBookRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMoveBookRequest();
     return _defaultInstance;
   }
 
@@ -716,71 +705,71 @@ class LibraryServiceApi {
   LibraryServiceApi(this._client);
 
   Future<Shelf> createShelf(ClientContext ctx, CreateShelfRequest request) {
-    var emptyResponse = new Shelf();
+    var emptyResponse = Shelf();
     return _client.invoke<Shelf>(
         ctx, 'LibraryService', 'CreateShelf', request, emptyResponse);
   }
 
   Future<Shelf> getShelf(ClientContext ctx, GetShelfRequest request) {
-    var emptyResponse = new Shelf();
+    var emptyResponse = Shelf();
     return _client.invoke<Shelf>(
         ctx, 'LibraryService', 'GetShelf', request, emptyResponse);
   }
 
   Future<ListShelvesResponse> listShelves(
       ClientContext ctx, ListShelvesRequest request) {
-    var emptyResponse = new ListShelvesResponse();
+    var emptyResponse = ListShelvesResponse();
     return _client.invoke<ListShelvesResponse>(
         ctx, 'LibraryService', 'ListShelves', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteShelf(
       ClientContext ctx, DeleteShelfRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'LibraryService', 'DeleteShelf', request, emptyResponse);
   }
 
   Future<Shelf> mergeShelves(ClientContext ctx, MergeShelvesRequest request) {
-    var emptyResponse = new Shelf();
+    var emptyResponse = Shelf();
     return _client.invoke<Shelf>(
         ctx, 'LibraryService', 'MergeShelves', request, emptyResponse);
   }
 
   Future<Book> createBook(ClientContext ctx, CreateBookRequest request) {
-    var emptyResponse = new Book();
+    var emptyResponse = Book();
     return _client.invoke<Book>(
         ctx, 'LibraryService', 'CreateBook', request, emptyResponse);
   }
 
   Future<Book> getBook(ClientContext ctx, GetBookRequest request) {
-    var emptyResponse = new Book();
+    var emptyResponse = Book();
     return _client.invoke<Book>(
         ctx, 'LibraryService', 'GetBook', request, emptyResponse);
   }
 
   Future<ListBooksResponse> listBooks(
       ClientContext ctx, ListBooksRequest request) {
-    var emptyResponse = new ListBooksResponse();
+    var emptyResponse = ListBooksResponse();
     return _client.invoke<ListBooksResponse>(
         ctx, 'LibraryService', 'ListBooks', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteBook(
       ClientContext ctx, DeleteBookRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'LibraryService', 'DeleteBook', request, emptyResponse);
   }
 
   Future<Book> updateBook(ClientContext ctx, UpdateBookRequest request) {
-    var emptyResponse = new Book();
+    var emptyResponse = Book();
     return _client.invoke<Book>(
         ctx, 'LibraryService', 'UpdateBook', request, emptyResponse);
   }
 
   Future<Book> moveBook(ClientContext ctx, MoveBookRequest request) {
-    var emptyResponse = new Book();
+    var emptyResponse = Book();
     return _client.invoke<Book>(
         ctx, 'LibraryService', 'MoveBook', request, emptyResponse);
   }

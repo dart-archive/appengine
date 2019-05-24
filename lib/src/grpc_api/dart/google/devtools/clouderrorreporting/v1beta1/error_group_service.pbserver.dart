@@ -20,11 +20,11 @@ abstract class ErrorGroupServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetGroup':
-        return new GetGroupRequest();
+        return GetGroupRequest();
       case 'UpdateGroup':
-        return new UpdateGroupRequest();
+        return UpdateGroupRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -36,7 +36,7 @@ abstract class ErrorGroupServiceBase extends GeneratedService {
       case 'UpdateGroup':
         return this.updateGroup(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

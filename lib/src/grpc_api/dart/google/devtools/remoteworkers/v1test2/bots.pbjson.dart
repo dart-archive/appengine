@@ -10,34 +10,34 @@ import '../../../protobuf/timestamp.pbjson.dart' as $google$protobuf;
 import '../../../protobuf/field_mask.pbjson.dart' as $google$protobuf;
 import '../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const BotStatus$json = const {
+const BotStatus$json = {
   '1': 'BotStatus',
-  '2': const [
-    const {'1': 'BOT_STATUS_UNSPECIFIED', '2': 0},
-    const {'1': 'OK', '2': 1},
-    const {'1': 'UNHEALTHY', '2': 2},
-    const {'1': 'HOST_REBOOTING', '2': 3},
-    const {'1': 'BOT_TERMINATING', '2': 4},
+  '2': [
+    {'1': 'BOT_STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'OK', '2': 1},
+    {'1': 'UNHEALTHY', '2': 2},
+    {'1': 'HOST_REBOOTING', '2': 3},
+    {'1': 'BOT_TERMINATING', '2': 4},
   ],
 };
 
-const LeaseState$json = const {
+const LeaseState$json = {
   '1': 'LeaseState',
-  '2': const [
-    const {'1': 'LEASE_STATE_UNSPECIFIED', '2': 0},
-    const {'1': 'PENDING', '2': 1},
-    const {'1': 'ACTIVE', '2': 2},
-    const {'1': 'COMPLETED', '2': 4},
-    const {'1': 'CANCELLED', '2': 5},
+  '2': [
+    {'1': 'LEASE_STATE_UNSPECIFIED', '2': 0},
+    {'1': 'PENDING', '2': 1},
+    {'1': 'ACTIVE', '2': 2},
+    {'1': 'COMPLETED', '2': 4},
+    {'1': 'CANCELLED', '2': 5},
   ],
 };
 
-const BotSession$json = const {
+const BotSession$json = {
   '1': 'BotSession',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'bot_id', '3': 2, '4': 1, '5': 9, '10': 'botId'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'bot_id', '3': 2, '4': 1, '5': 9, '10': 'botId'},
+    {
       '1': 'status',
       '3': 3,
       '4': 1,
@@ -45,7 +45,7 @@ const BotSession$json = const {
       '6': '.google.devtools.remoteworkers.v1test2.BotStatus',
       '10': 'status'
     },
-    const {
+    {
       '1': 'worker',
       '3': 4,
       '4': 1,
@@ -53,7 +53,7 @@ const BotSession$json = const {
       '6': '.google.devtools.remoteworkers.v1test2.Worker',
       '10': 'worker'
     },
-    const {
+    {
       '1': 'leases',
       '3': 5,
       '4': 3,
@@ -61,7 +61,7 @@ const BotSession$json = const {
       '6': '.google.devtools.remoteworkers.v1test2.Lease',
       '10': 'leases'
     },
-    const {
+    {
       '1': 'expire_time',
       '3': 6,
       '4': 1,
@@ -69,15 +69,15 @@ const BotSession$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'expireTime'
     },
-    const {'1': 'version', '3': 7, '4': 1, '5': 9, '10': 'version'},
+    {'1': 'version', '3': 7, '4': 1, '5': 9, '10': 'version'},
   ],
 };
 
-const Lease$json = const {
+const Lease$json = {
   '1': 'Lease',
-  '2': const [
-    const {'1': 'assignment', '3': 1, '4': 1, '5': 9, '10': 'assignment'},
-    const {
+  '2': [
+    {'1': 'assignment', '3': 1, '4': 1, '5': 9, '10': 'assignment'},
+    {
       '1': 'state',
       '3': 2,
       '4': 1,
@@ -85,7 +85,7 @@ const Lease$json = const {
       '6': '.google.devtools.remoteworkers.v1test2.LeaseState',
       '10': 'state'
     },
-    const {
+    {
       '1': 'status',
       '3': 3,
       '4': 1,
@@ -93,7 +93,7 @@ const Lease$json = const {
       '6': '.google.rpc.Status',
       '10': 'status'
     },
-    const {
+    {
       '1': 'requirements',
       '3': 4,
       '4': 1,
@@ -101,7 +101,7 @@ const Lease$json = const {
       '6': '.google.devtools.remoteworkers.v1test2.Worker',
       '10': 'requirements'
     },
-    const {
+    {
       '1': 'expire_time',
       '3': 5,
       '4': 1,
@@ -109,7 +109,7 @@ const Lease$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'expireTime'
     },
-    const {
+    {
       '1': 'inline_assignment',
       '3': 6,
       '4': 1,
@@ -120,10 +120,10 @@ const Lease$json = const {
   ],
 };
 
-const AdminTemp$json = const {
+const AdminTemp$json = {
   '1': 'AdminTemp',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'command',
       '3': 1,
       '4': 1,
@@ -131,27 +131,27 @@ const AdminTemp$json = const {
       '6': '.google.devtools.remoteworkers.v1test2.AdminTemp.Command',
       '10': 'command'
     },
-    const {'1': 'arg', '3': 2, '4': 1, '5': 9, '10': 'arg'},
+    {'1': 'arg', '3': 2, '4': 1, '5': 9, '10': 'arg'},
   ],
-  '4': const [AdminTemp_Command$json],
+  '4': [AdminTemp_Command$json],
 };
 
-const AdminTemp_Command$json = const {
+const AdminTemp_Command$json = {
   '1': 'Command',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'BOT_UPDATE', '2': 1},
-    const {'1': 'BOT_RESTART', '2': 2},
-    const {'1': 'BOT_TERMINATE', '2': 3},
-    const {'1': 'HOST_RESTART', '2': 4},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'BOT_UPDATE', '2': 1},
+    {'1': 'BOT_RESTART', '2': 2},
+    {'1': 'BOT_TERMINATE', '2': 3},
+    {'1': 'HOST_RESTART', '2': 4},
   ],
 };
 
-const CreateBotSessionRequest$json = const {
+const CreateBotSessionRequest$json = {
   '1': 'CreateBotSessionRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
       '1': 'bot_session',
       '3': 2,
       '4': 1,
@@ -162,11 +162,11 @@ const CreateBotSessionRequest$json = const {
   ],
 };
 
-const UpdateBotSessionRequest$json = const {
+const UpdateBotSessionRequest$json = {
   '1': 'UpdateBotSessionRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'bot_session',
       '3': 2,
       '4': 1,
@@ -174,7 +174,7 @@ const UpdateBotSessionRequest$json = const {
       '6': '.google.devtools.remoteworkers.v1test2.BotSession',
       '10': 'botSession'
     },
-    const {
+    {
       '1': 'update_mask',
       '3': 3,
       '4': 1,
@@ -185,11 +185,11 @@ const UpdateBotSessionRequest$json = const {
   ],
 };
 
-const PostBotEventTempRequest$json = const {
+const PostBotEventTempRequest$json = {
   '1': 'PostBotEventTempRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'type',
       '3': 2,
       '4': 1,
@@ -198,45 +198,45 @@ const PostBotEventTempRequest$json = const {
           '.google.devtools.remoteworkers.v1test2.PostBotEventTempRequest.Type',
       '10': 'type'
     },
-    const {'1': 'msg', '3': 3, '4': 1, '5': 9, '10': 'msg'},
+    {'1': 'msg', '3': 3, '4': 1, '5': 9, '10': 'msg'},
   ],
-  '4': const [PostBotEventTempRequest_Type$json],
+  '4': [PostBotEventTempRequest_Type$json],
 };
 
-const PostBotEventTempRequest_Type$json = const {
+const PostBotEventTempRequest_Type$json = {
   '1': 'Type',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'INFO', '2': 1},
-    const {'1': 'ERROR', '2': 2},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'INFO', '2': 1},
+    {'1': 'ERROR', '2': 2},
   ],
 };
 
-const Bots$json = const {
+const Bots$json = {
   '1': 'Bots',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateBotSession',
       '2': '.google.devtools.remoteworkers.v1test2.CreateBotSessionRequest',
       '3': '.google.devtools.remoteworkers.v1test2.BotSession',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateBotSession',
       '2': '.google.devtools.remoteworkers.v1test2.UpdateBotSessionRequest',
       '3': '.google.devtools.remoteworkers.v1test2.BotSession',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'PostBotEventTemp',
       '2': '.google.devtools.remoteworkers.v1test2.PostBotEventTempRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const Bots$messageJson = const {
+const Bots$messageJson = {
   '.google.devtools.remoteworkers.v1test2.CreateBotSessionRequest':
       CreateBotSessionRequest$json,
   '.google.devtools.remoteworkers.v1test2.BotSession': BotSession$json,

@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class OutdatedLibrary extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OutdatedLibrary')
+  static final BuilderInfo _i = BuilderInfo('OutdatedLibrary')
     ..aOS(1, 'libraryName')
     ..aOS(2, 'version')
     ..pPS(3, 'learnMoreUrls')
@@ -22,14 +22,12 @@ class OutdatedLibrary extends GeneratedMessage {
   OutdatedLibrary.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OutdatedLibrary clone() => new OutdatedLibrary()..mergeFromMessage(this);
+  OutdatedLibrary clone() => OutdatedLibrary()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OutdatedLibrary create() => new OutdatedLibrary();
-  static PbList<OutdatedLibrary> createRepeated() =>
-      new PbList<OutdatedLibrary>();
+  static OutdatedLibrary create() => OutdatedLibrary();
+  static PbList<OutdatedLibrary> createRepeated() => PbList<OutdatedLibrary>();
   static OutdatedLibrary getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOutdatedLibrary();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOutdatedLibrary();
     return _defaultInstance;
   }
 
@@ -61,7 +59,7 @@ class _ReadonlyOutdatedLibrary extends OutdatedLibrary
     with ReadonlyMessageMixin {}
 
 class ViolatingResource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ViolatingResource')
+  static final BuilderInfo _i = BuilderInfo('ViolatingResource')
     ..aOS(1, 'contentType')
     ..aOS(2, 'resourceUrl')
     ..hasRequiredFields = false;
@@ -73,14 +71,14 @@ class ViolatingResource extends GeneratedMessage {
   ViolatingResource.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ViolatingResource clone() => new ViolatingResource()..mergeFromMessage(this);
+  ViolatingResource clone() => ViolatingResource()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ViolatingResource create() => new ViolatingResource();
+  static ViolatingResource create() => ViolatingResource();
   static PbList<ViolatingResource> createRepeated() =>
-      new PbList<ViolatingResource>();
+      PbList<ViolatingResource>();
   static ViolatingResource getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyViolatingResource();
+      _defaultInstance = _ReadonlyViolatingResource();
     return _defaultInstance;
   }
 
@@ -110,7 +108,7 @@ class _ReadonlyViolatingResource extends ViolatingResource
     with ReadonlyMessageMixin {}
 
 class VulnerableParameters extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VulnerableParameters')
+  static final BuilderInfo _i = BuilderInfo('VulnerableParameters')
     ..pPS(1, 'parameterNames')
     ..hasRequiredFields = false;
 
@@ -122,14 +120,14 @@ class VulnerableParameters extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VulnerableParameters clone() =>
-      new VulnerableParameters()..mergeFromMessage(this);
+      VulnerableParameters()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VulnerableParameters create() => new VulnerableParameters();
+  static VulnerableParameters create() => VulnerableParameters();
   static PbList<VulnerableParameters> createRepeated() =>
-      new PbList<VulnerableParameters>();
+      PbList<VulnerableParameters>();
   static VulnerableParameters getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVulnerableParameters();
+      _defaultInstance = _ReadonlyVulnerableParameters();
     return _defaultInstance;
   }
 
@@ -145,7 +143,7 @@ class _ReadonlyVulnerableParameters extends VulnerableParameters
     with ReadonlyMessageMixin {}
 
 class Xss extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Xss')
+  static final BuilderInfo _i = BuilderInfo('Xss')
     ..pPS(1, 'stackTraces')
     ..aOS(2, 'errorMessage')
     ..hasRequiredFields = false;
@@ -155,12 +153,12 @@ class Xss extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Xss.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Xss clone() => new Xss()..mergeFromMessage(this);
+  Xss clone() => Xss()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Xss create() => new Xss();
-  static PbList<Xss> createRepeated() => new PbList<Xss>();
+  static Xss create() => Xss();
+  static PbList<Xss> createRepeated() => PbList<Xss>();
   static Xss getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyXss();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyXss();
     return _defaultInstance;
   }
 

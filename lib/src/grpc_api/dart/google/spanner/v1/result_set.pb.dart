@@ -14,7 +14,7 @@ import 'transaction.pb.dart';
 import 'query_plan.pb.dart';
 
 class ResultSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ResultSet')
+  static final BuilderInfo _i = BuilderInfo('ResultSet')
     ..a<ResultSetMetadata>(1, 'metadata', PbFieldType.OM,
         ResultSetMetadata.getDefault, ResultSetMetadata.create)
     ..pp<$google$protobuf.ListValue>(
@@ -33,12 +33,12 @@ class ResultSet extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ResultSet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ResultSet clone() => new ResultSet()..mergeFromMessage(this);
+  ResultSet clone() => ResultSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ResultSet create() => new ResultSet();
-  static PbList<ResultSet> createRepeated() => new PbList<ResultSet>();
+  static ResultSet create() => ResultSet();
+  static PbList<ResultSet> createRepeated() => PbList<ResultSet>();
   static ResultSet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyResultSet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyResultSet();
     return _defaultInstance;
   }
 
@@ -69,7 +69,7 @@ class ResultSet extends GeneratedMessage {
 class _ReadonlyResultSet extends ResultSet with ReadonlyMessageMixin {}
 
 class PartialResultSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartialResultSet')
+  static final BuilderInfo _i = BuilderInfo('PartialResultSet')
     ..a<ResultSetMetadata>(1, 'metadata', PbFieldType.OM,
         ResultSetMetadata.getDefault, ResultSetMetadata.create)
     ..pp<$google$protobuf.Value>(2, 'values', PbFieldType.PM,
@@ -87,14 +87,14 @@ class PartialResultSet extends GeneratedMessage {
   PartialResultSet.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PartialResultSet clone() => new PartialResultSet()..mergeFromMessage(this);
+  PartialResultSet clone() => PartialResultSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PartialResultSet create() => new PartialResultSet();
+  static PartialResultSet create() => PartialResultSet();
   static PbList<PartialResultSet> createRepeated() =>
-      new PbList<PartialResultSet>();
+      PbList<PartialResultSet>();
   static PartialResultSet getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartialResultSet();
+      _defaultInstance = _ReadonlyPartialResultSet();
     return _defaultInstance;
   }
 
@@ -142,7 +142,7 @@ class _ReadonlyPartialResultSet extends PartialResultSet
     with ReadonlyMessageMixin {}
 
 class ResultSetMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ResultSetMetadata')
+  static final BuilderInfo _i = BuilderInfo('ResultSetMetadata')
     ..a<StructType>(
         1, 'rowType', PbFieldType.OM, StructType.getDefault, StructType.create)
     ..a<Transaction>(2, 'transaction', PbFieldType.OM, Transaction.getDefault,
@@ -156,14 +156,14 @@ class ResultSetMetadata extends GeneratedMessage {
   ResultSetMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ResultSetMetadata clone() => new ResultSetMetadata()..mergeFromMessage(this);
+  ResultSetMetadata clone() => ResultSetMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ResultSetMetadata create() => new ResultSetMetadata();
+  static ResultSetMetadata create() => ResultSetMetadata();
   static PbList<ResultSetMetadata> createRepeated() =>
-      new PbList<ResultSetMetadata>();
+      PbList<ResultSetMetadata>();
   static ResultSetMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyResultSetMetadata();
+      _defaultInstance = _ReadonlyResultSetMetadata();
     return _defaultInstance;
   }
 
@@ -193,7 +193,7 @@ class _ReadonlyResultSetMetadata extends ResultSetMetadata
     with ReadonlyMessageMixin {}
 
 class ResultSetStats extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ResultSetStats')
+  static final BuilderInfo _i = BuilderInfo('ResultSetStats')
     ..a<QueryPlan>(
         1, 'queryPlan', PbFieldType.OM, QueryPlan.getDefault, QueryPlan.create)
     ..a<$google$protobuf.Struct>(2, 'queryStats', PbFieldType.OM,
@@ -207,14 +207,12 @@ class ResultSetStats extends GeneratedMessage {
   ResultSetStats.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ResultSetStats clone() => new ResultSetStats()..mergeFromMessage(this);
+  ResultSetStats clone() => ResultSetStats()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ResultSetStats create() => new ResultSetStats();
-  static PbList<ResultSetStats> createRepeated() =>
-      new PbList<ResultSetStats>();
+  static ResultSetStats create() => ResultSetStats();
+  static PbList<ResultSetStats> createRepeated() => PbList<ResultSetStats>();
   static ResultSetStats getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyResultSetStats();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyResultSetStats();
     return _defaultInstance;
   }
 

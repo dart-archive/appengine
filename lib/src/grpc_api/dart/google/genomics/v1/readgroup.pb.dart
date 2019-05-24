@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../protobuf/struct.pb.dart' as $google$protobuf;
 
 class ReadGroup_Experiment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroup_Experiment')
+  static final BuilderInfo _i = BuilderInfo('ReadGroup_Experiment')
     ..aOS(1, 'libraryId')
     ..aOS(2, 'platformUnit')
     ..aOS(3, 'sequencingCenter')
@@ -26,14 +26,14 @@ class ReadGroup_Experiment extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReadGroup_Experiment clone() =>
-      new ReadGroup_Experiment()..mergeFromMessage(this);
+      ReadGroup_Experiment()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadGroup_Experiment create() => new ReadGroup_Experiment();
+  static ReadGroup_Experiment create() => ReadGroup_Experiment();
   static PbList<ReadGroup_Experiment> createRepeated() =>
-      new PbList<ReadGroup_Experiment>();
+      PbList<ReadGroup_Experiment>();
   static ReadGroup_Experiment getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadGroup_Experiment();
+      _defaultInstance = _ReadonlyReadGroup_Experiment();
     return _defaultInstance;
   }
 
@@ -79,7 +79,7 @@ class _ReadonlyReadGroup_Experiment extends ReadGroup_Experiment
     with ReadonlyMessageMixin {}
 
 class ReadGroup_Program extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroup_Program')
+  static final BuilderInfo _i = BuilderInfo('ReadGroup_Program')
     ..aOS(1, 'commandLine')
     ..aOS(2, 'id')
     ..aOS(3, 'name')
@@ -94,14 +94,14 @@ class ReadGroup_Program extends GeneratedMessage {
   ReadGroup_Program.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadGroup_Program clone() => new ReadGroup_Program()..mergeFromMessage(this);
+  ReadGroup_Program clone() => ReadGroup_Program()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadGroup_Program create() => new ReadGroup_Program();
+  static ReadGroup_Program create() => ReadGroup_Program();
   static PbList<ReadGroup_Program> createRepeated() =>
-      new PbList<ReadGroup_Program>();
+      PbList<ReadGroup_Program>();
   static ReadGroup_Program getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadGroup_Program();
+      _defaultInstance = _ReadonlyReadGroup_Program();
     return _defaultInstance;
   }
 
@@ -155,7 +155,7 @@ class _ReadonlyReadGroup_Program extends ReadGroup_Program
     with ReadonlyMessageMixin {}
 
 class ReadGroup_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroup_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('ReadGroup_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -172,15 +172,14 @@ class ReadGroup_InfoEntry extends GeneratedMessage {
   ReadGroup_InfoEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadGroup_InfoEntry clone() =>
-      new ReadGroup_InfoEntry()..mergeFromMessage(this);
+  ReadGroup_InfoEntry clone() => ReadGroup_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadGroup_InfoEntry create() => new ReadGroup_InfoEntry();
+  static ReadGroup_InfoEntry create() => ReadGroup_InfoEntry();
   static PbList<ReadGroup_InfoEntry> createRepeated() =>
-      new PbList<ReadGroup_InfoEntry>();
+      PbList<ReadGroup_InfoEntry>();
   static ReadGroup_InfoEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadGroup_InfoEntry();
+      _defaultInstance = _ReadonlyReadGroup_InfoEntry();
     return _defaultInstance;
   }
 
@@ -210,7 +209,7 @@ class _ReadonlyReadGroup_InfoEntry extends ReadGroup_InfoEntry
     with ReadonlyMessageMixin {}
 
 class ReadGroup extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroup')
+  static final BuilderInfo _i = BuilderInfo('ReadGroup')
     ..aOS(1, 'id')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'name')
@@ -232,12 +231,12 @@ class ReadGroup extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ReadGroup.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadGroup clone() => new ReadGroup()..mergeFromMessage(this);
+  ReadGroup clone() => ReadGroup()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadGroup create() => new ReadGroup();
-  static PbList<ReadGroup> createRepeated() => new PbList<ReadGroup>();
+  static ReadGroup create() => ReadGroup();
+  static PbList<ReadGroup> createRepeated() => PbList<ReadGroup>();
   static ReadGroup getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyReadGroup();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReadGroup();
     return _defaultInstance;
   }
 

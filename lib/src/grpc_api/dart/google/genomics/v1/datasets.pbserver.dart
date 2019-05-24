@@ -37,25 +37,25 @@ abstract class DatasetServiceV1ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListDatasets':
-        return new ListDatasetsRequest();
+        return ListDatasetsRequest();
       case 'CreateDataset':
-        return new CreateDatasetRequest();
+        return CreateDatasetRequest();
       case 'GetDataset':
-        return new GetDatasetRequest();
+        return GetDatasetRequest();
       case 'UpdateDataset':
-        return new UpdateDatasetRequest();
+        return UpdateDatasetRequest();
       case 'DeleteDataset':
-        return new DeleteDatasetRequest();
+        return DeleteDatasetRequest();
       case 'UndeleteDataset':
-        return new UndeleteDatasetRequest();
+        return UndeleteDatasetRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -81,7 +81,7 @@ abstract class DatasetServiceV1ServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

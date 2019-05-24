@@ -9,13 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class ForeignEnumProto2 extends ProtobufEnum {
   static const ForeignEnumProto2 FOREIGN_FOO =
-      const ForeignEnumProto2._(0, 'FOREIGN_FOO');
+      ForeignEnumProto2._(0, 'FOREIGN_FOO');
   static const ForeignEnumProto2 FOREIGN_BAR =
-      const ForeignEnumProto2._(1, 'FOREIGN_BAR');
+      ForeignEnumProto2._(1, 'FOREIGN_BAR');
   static const ForeignEnumProto2 FOREIGN_BAZ =
-      const ForeignEnumProto2._(2, 'FOREIGN_BAZ');
+      ForeignEnumProto2._(2, 'FOREIGN_BAZ');
 
-  static const List<ForeignEnumProto2> values = const <ForeignEnumProto2>[
+  static const List<ForeignEnumProto2> values = <ForeignEnumProto2>[
     FOREIGN_FOO,
     FOREIGN_BAR,
     FOREIGN_BAZ,
@@ -33,16 +33,16 @@ class ForeignEnumProto2 extends ProtobufEnum {
 
 class TestAllTypesProto2_NestedEnum extends ProtobufEnum {
   static const TestAllTypesProto2_NestedEnum FOO =
-      const TestAllTypesProto2_NestedEnum._(0, 'FOO');
+      TestAllTypesProto2_NestedEnum._(0, 'FOO');
   static const TestAllTypesProto2_NestedEnum BAR =
-      const TestAllTypesProto2_NestedEnum._(1, 'BAR');
+      TestAllTypesProto2_NestedEnum._(1, 'BAR');
   static const TestAllTypesProto2_NestedEnum BAZ =
-      const TestAllTypesProto2_NestedEnum._(2, 'BAZ');
+      TestAllTypesProto2_NestedEnum._(2, 'BAZ');
   static const TestAllTypesProto2_NestedEnum NEG =
-      const TestAllTypesProto2_NestedEnum._(-1, 'NEG');
+      TestAllTypesProto2_NestedEnum._(-1, 'NEG');
 
   static const List<TestAllTypesProto2_NestedEnum> values =
-      const <TestAllTypesProto2_NestedEnum>[
+      <TestAllTypesProto2_NestedEnum>[
     FOO,
     BAR,
     BAZ,

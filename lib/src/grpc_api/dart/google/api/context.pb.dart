@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Context extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Context')
+  static final BuilderInfo _i = BuilderInfo('Context')
     ..pp<ContextRule>(
         1, 'rules', PbFieldType.PM, ContextRule.$checkItem, ContextRule.create)
     ..hasRequiredFields = false;
@@ -20,12 +20,12 @@ class Context extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Context.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Context clone() => new Context()..mergeFromMessage(this);
+  Context clone() => Context()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Context create() => new Context();
-  static PbList<Context> createRepeated() => new PbList<Context>();
+  static Context create() => Context();
+  static PbList<Context> createRepeated() => PbList<Context>();
   static Context getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyContext();
     return _defaultInstance;
   }
 
@@ -40,7 +40,7 @@ class Context extends GeneratedMessage {
 class _ReadonlyContext extends Context with ReadonlyMessageMixin {}
 
 class ContextRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ContextRule')
+  static final BuilderInfo _i = BuilderInfo('ContextRule')
     ..aOS(1, 'selector')
     ..pPS(2, 'requested')
     ..pPS(3, 'provided')
@@ -53,12 +53,12 @@ class ContextRule extends GeneratedMessage {
   ContextRule.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ContextRule clone() => new ContextRule()..mergeFromMessage(this);
+  ContextRule clone() => ContextRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ContextRule create() => new ContextRule();
-  static PbList<ContextRule> createRepeated() => new PbList<ContextRule>();
+  static ContextRule create() => ContextRule();
+  static PbList<ContextRule> createRepeated() => PbList<ContextRule>();
   static ContextRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyContextRule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyContextRule();
     return _defaultInstance;
   }
 

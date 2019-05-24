@@ -3,11 +3,11 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const Usage$json = const {
+const Usage$json = {
   '1': 'Usage',
-  '2': const [
-    const {'1': 'requirements', '3': 1, '4': 3, '5': 9, '10': 'requirements'},
-    const {
+  '2': [
+    {'1': 'requirements', '3': 1, '4': 3, '5': 9, '10': 'requirements'},
+    {
       '1': 'rules',
       '3': 6,
       '4': 3,
@@ -15,7 +15,7 @@ const Usage$json = const {
       '6': '.google.api.UsageRule',
       '10': 'rules'
     },
-    const {
+    {
       '1': 'producer_notification_channel',
       '3': 7,
       '4': 1,
@@ -25,18 +25,18 @@ const Usage$json = const {
   ],
 };
 
-const UsageRule$json = const {
+const UsageRule$json = {
   '1': 'UsageRule',
-  '2': const [
-    const {'1': 'selector', '3': 1, '4': 1, '5': 9, '10': 'selector'},
-    const {
+  '2': [
+    {'1': 'selector', '3': 1, '4': 1, '5': 9, '10': 'selector'},
+    {
       '1': 'allow_unregistered_calls',
       '3': 2,
       '4': 1,
       '5': 8,
       '10': 'allowUnregisteredCalls'
     },
-    const {
+    {
       '1': 'skip_service_control',
       '3': 3,
       '4': 1,

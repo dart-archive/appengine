@@ -10,55 +10,55 @@ import '../../../../protobuf/any.pbjson.dart' as $google$protobuf;
 import '../../../../rpc/status.pbjson.dart' as $google$rpc;
 import '../../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const BigtableClusterService$json = const {
+const BigtableClusterService$json = {
   '1': 'BigtableClusterService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'ListZones',
       '2': '.google.bigtable.admin.cluster.v1.ListZonesRequest',
       '3': '.google.bigtable.admin.cluster.v1.ListZonesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetCluster',
       '2': '.google.bigtable.admin.cluster.v1.GetClusterRequest',
       '3': '.google.bigtable.admin.cluster.v1.Cluster',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListClusters',
       '2': '.google.bigtable.admin.cluster.v1.ListClustersRequest',
       '3': '.google.bigtable.admin.cluster.v1.ListClustersResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateCluster',
       '2': '.google.bigtable.admin.cluster.v1.CreateClusterRequest',
       '3': '.google.bigtable.admin.cluster.v1.Cluster',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateCluster',
       '2': '.google.bigtable.admin.cluster.v1.Cluster',
       '3': '.google.bigtable.admin.cluster.v1.Cluster',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteCluster',
       '2': '.google.bigtable.admin.cluster.v1.DeleteClusterRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UndeleteCluster',
       '2': '.google.bigtable.admin.cluster.v1.UndeleteClusterRequest',
       '3': '.google.longrunning.Operation',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const BigtableClusterService$messageJson = const {
+const BigtableClusterService$messageJson = {
   '.google.bigtable.admin.cluster.v1.ListZonesRequest': ListZonesRequest$json,
   '.google.bigtable.admin.cluster.v1.ListZonesResponse': ListZonesResponse$json,
   '.google.bigtable.admin.cluster.v1.Zone': Zone$json,

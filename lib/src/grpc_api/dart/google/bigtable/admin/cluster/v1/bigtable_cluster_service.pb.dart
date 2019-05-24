@@ -20,47 +20,47 @@ class BigtableClusterServiceApi {
 
   Future<ListZonesResponse> listZones(
       ClientContext ctx, ListZonesRequest request) {
-    var emptyResponse = new ListZonesResponse();
+    var emptyResponse = ListZonesResponse();
     return _client.invoke<ListZonesResponse>(
         ctx, 'BigtableClusterService', 'ListZones', request, emptyResponse);
   }
 
   Future<Cluster> getCluster(ClientContext ctx, GetClusterRequest request) {
-    var emptyResponse = new Cluster();
+    var emptyResponse = Cluster();
     return _client.invoke<Cluster>(
         ctx, 'BigtableClusterService', 'GetCluster', request, emptyResponse);
   }
 
   Future<ListClustersResponse> listClusters(
       ClientContext ctx, ListClustersRequest request) {
-    var emptyResponse = new ListClustersResponse();
+    var emptyResponse = ListClustersResponse();
     return _client.invoke<ListClustersResponse>(
         ctx, 'BigtableClusterService', 'ListClusters', request, emptyResponse);
   }
 
   Future<Cluster> createCluster(
       ClientContext ctx, CreateClusterRequest request) {
-    var emptyResponse = new Cluster();
+    var emptyResponse = Cluster();
     return _client.invoke<Cluster>(
         ctx, 'BigtableClusterService', 'CreateCluster', request, emptyResponse);
   }
 
   Future<Cluster> updateCluster(ClientContext ctx, Cluster request) {
-    var emptyResponse = new Cluster();
+    var emptyResponse = Cluster();
     return _client.invoke<Cluster>(
         ctx, 'BigtableClusterService', 'UpdateCluster', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteCluster(
       ClientContext ctx, DeleteClusterRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'BigtableClusterService', 'DeleteCluster', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> undeleteCluster(
       ClientContext ctx, UndeleteClusterRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(ctx,
         'BigtableClusterService', 'UndeleteCluster', request, emptyResponse);
   }

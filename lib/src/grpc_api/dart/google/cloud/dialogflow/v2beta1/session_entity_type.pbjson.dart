@@ -7,11 +7,11 @@ import 'entity_type.pbjson.dart';
 import '../../../protobuf/field_mask.pbjson.dart' as $google$protobuf;
 import '../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const SessionEntityType$json = const {
+const SessionEntityType$json = {
   '1': 'SessionEntityType',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'entity_override_mode',
       '3': 2,
       '4': 1,
@@ -20,7 +20,7 @@ const SessionEntityType$json = const {
           '.google.cloud.dialogflow.v2beta1.SessionEntityType.EntityOverrideMode',
       '10': 'entityOverrideMode'
     },
-    const {
+    {
       '1': 'entities',
       '3': 3,
       '4': 3,
@@ -29,31 +29,31 @@ const SessionEntityType$json = const {
       '10': 'entities'
     },
   ],
-  '4': const [SessionEntityType_EntityOverrideMode$json],
+  '4': [SessionEntityType_EntityOverrideMode$json],
 };
 
-const SessionEntityType_EntityOverrideMode$json = const {
+const SessionEntityType_EntityOverrideMode$json = {
   '1': 'EntityOverrideMode',
-  '2': const [
-    const {'1': 'ENTITY_OVERRIDE_MODE_UNSPECIFIED', '2': 0},
-    const {'1': 'ENTITY_OVERRIDE_MODE_OVERRIDE', '2': 1},
-    const {'1': 'ENTITY_OVERRIDE_MODE_SUPPLEMENT', '2': 2},
+  '2': [
+    {'1': 'ENTITY_OVERRIDE_MODE_UNSPECIFIED', '2': 0},
+    {'1': 'ENTITY_OVERRIDE_MODE_OVERRIDE', '2': 1},
+    {'1': 'ENTITY_OVERRIDE_MODE_SUPPLEMENT', '2': 2},
   ],
 };
 
-const ListSessionEntityTypesRequest$json = const {
+const ListSessionEntityTypesRequest$json = {
   '1': 'ListSessionEntityTypesRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListSessionEntityTypesResponse$json = const {
+const ListSessionEntityTypesResponse$json = {
   '1': 'ListSessionEntityTypesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'session_entity_types',
       '3': 1,
       '4': 3,
@@ -61,28 +61,22 @@ const ListSessionEntityTypesResponse$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
       '10': 'sessionEntityTypes'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetSessionEntityTypeRequest$json = const {
+const GetSessionEntityTypeRequest$json = {
   '1': 'GetSessionEntityTypeRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const CreateSessionEntityTypeRequest$json = const {
+const CreateSessionEntityTypeRequest$json = {
   '1': 'CreateSessionEntityTypeRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
       '1': 'session_entity_type',
       '3': 2,
       '4': 1,
@@ -93,10 +87,10 @@ const CreateSessionEntityTypeRequest$json = const {
   ],
 };
 
-const UpdateSessionEntityTypeRequest$json = const {
+const UpdateSessionEntityTypeRequest$json = {
   '1': 'UpdateSessionEntityTypeRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'session_entity_type',
       '3': 1,
       '4': 1,
@@ -104,7 +98,7 @@ const UpdateSessionEntityTypeRequest$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
       '10': 'sessionEntityType'
     },
-    const {
+    {
       '1': 'update_mask',
       '3': 2,
       '4': 1,
@@ -115,50 +109,50 @@ const UpdateSessionEntityTypeRequest$json = const {
   ],
 };
 
-const DeleteSessionEntityTypeRequest$json = const {
+const DeleteSessionEntityTypeRequest$json = {
   '1': 'DeleteSessionEntityTypeRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const SessionEntityTypes$json = const {
+const SessionEntityTypes$json = {
   '1': 'SessionEntityTypes',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'ListSessionEntityTypes',
       '2': '.google.cloud.dialogflow.v2beta1.ListSessionEntityTypesRequest',
       '3': '.google.cloud.dialogflow.v2beta1.ListSessionEntityTypesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetSessionEntityType',
       '2': '.google.cloud.dialogflow.v2beta1.GetSessionEntityTypeRequest',
       '3': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateSessionEntityType',
       '2': '.google.cloud.dialogflow.v2beta1.CreateSessionEntityTypeRequest',
       '3': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateSessionEntityType',
       '2': '.google.cloud.dialogflow.v2beta1.UpdateSessionEntityTypeRequest',
       '3': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteSessionEntityType',
       '2': '.google.cloud.dialogflow.v2beta1.DeleteSessionEntityTypeRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const SessionEntityTypes$messageJson = const {
+const SessionEntityTypes$messageJson = {
   '.google.cloud.dialogflow.v2beta1.ListSessionEntityTypesRequest':
       ListSessionEntityTypesRequest$json,
   '.google.cloud.dialogflow.v2beta1.ListSessionEntityTypesResponse':

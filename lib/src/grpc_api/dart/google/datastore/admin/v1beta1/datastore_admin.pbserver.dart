@@ -22,11 +22,11 @@ abstract class DatastoreAdminServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ExportEntities':
-        return new ExportEntitiesRequest();
+        return ExportEntitiesRequest();
       case 'ImportEntities':
-        return new ImportEntitiesRequest();
+        return ImportEntitiesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -38,7 +38,7 @@ abstract class DatastoreAdminServiceBase extends GeneratedService {
       case 'ImportEntities':
         return this.importEntities(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

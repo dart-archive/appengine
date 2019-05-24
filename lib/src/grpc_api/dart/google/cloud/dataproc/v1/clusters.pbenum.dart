@@ -9,19 +9,18 @@ import 'package:protobuf/protobuf.dart';
 
 class ClusterStatus_State extends ProtobufEnum {
   static const ClusterStatus_State UNKNOWN =
-      const ClusterStatus_State._(0, 'UNKNOWN');
+      ClusterStatus_State._(0, 'UNKNOWN');
   static const ClusterStatus_State CREATING =
-      const ClusterStatus_State._(1, 'CREATING');
+      ClusterStatus_State._(1, 'CREATING');
   static const ClusterStatus_State RUNNING =
-      const ClusterStatus_State._(2, 'RUNNING');
-  static const ClusterStatus_State ERROR =
-      const ClusterStatus_State._(3, 'ERROR');
+      ClusterStatus_State._(2, 'RUNNING');
+  static const ClusterStatus_State ERROR = ClusterStatus_State._(3, 'ERROR');
   static const ClusterStatus_State DELETING =
-      const ClusterStatus_State._(4, 'DELETING');
+      ClusterStatus_State._(4, 'DELETING');
   static const ClusterStatus_State UPDATING =
-      const ClusterStatus_State._(5, 'UPDATING');
+      ClusterStatus_State._(5, 'UPDATING');
 
-  static const List<ClusterStatus_State> values = const <ClusterStatus_State>[
+  static const List<ClusterStatus_State> values = <ClusterStatus_State>[
     UNKNOWN,
     CREATING,
     RUNNING,
@@ -42,14 +41,13 @@ class ClusterStatus_State extends ProtobufEnum {
 
 class ClusterStatus_Substate extends ProtobufEnum {
   static const ClusterStatus_Substate UNSPECIFIED =
-      const ClusterStatus_Substate._(0, 'UNSPECIFIED');
+      ClusterStatus_Substate._(0, 'UNSPECIFIED');
   static const ClusterStatus_Substate UNHEALTHY =
-      const ClusterStatus_Substate._(1, 'UNHEALTHY');
+      ClusterStatus_Substate._(1, 'UNHEALTHY');
   static const ClusterStatus_Substate STALE_STATUS =
-      const ClusterStatus_Substate._(2, 'STALE_STATUS');
+      ClusterStatus_Substate._(2, 'STALE_STATUS');
 
-  static const List<ClusterStatus_Substate> values =
-      const <ClusterStatus_Substate>[
+  static const List<ClusterStatus_Substate> values = <ClusterStatus_Substate>[
     UNSPECIFIED,
     UNHEALTHY,
     STALE_STATUS,

@@ -13,7 +13,7 @@ import 'index.pbenum.dart';
 export 'index.pbenum.dart';
 
 class IndexField extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IndexField')
+  static final BuilderInfo _i = BuilderInfo('IndexField')
     ..aOS(1, 'fieldPath')
     ..e<IndexField_Mode>(
         2,
@@ -30,12 +30,12 @@ class IndexField extends GeneratedMessage {
       : super.fromBuffer(i, r);
   IndexField.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  IndexField clone() => new IndexField()..mergeFromMessage(this);
+  IndexField clone() => IndexField()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static IndexField create() => new IndexField();
-  static PbList<IndexField> createRepeated() => new PbList<IndexField>();
+  static IndexField create() => IndexField();
+  static PbList<IndexField> createRepeated() => PbList<IndexField>();
   static IndexField getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyIndexField();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyIndexField();
     return _defaultInstance;
   }
 
@@ -64,7 +64,7 @@ class IndexField extends GeneratedMessage {
 class _ReadonlyIndexField extends IndexField with ReadonlyMessageMixin {}
 
 class Index extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Index')
+  static final BuilderInfo _i = BuilderInfo('Index')
     ..aOS(1, 'name')
     ..aOS(2, 'collectionId')
     ..pp<IndexField>(
@@ -78,12 +78,12 @@ class Index extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Index.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Index clone() => new Index()..mergeFromMessage(this);
+  Index clone() => Index()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Index create() => new Index();
-  static PbList<Index> createRepeated() => new PbList<Index>();
+  static Index create() => Index();
+  static PbList<Index> createRepeated() => PbList<Index>();
   static Index getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyIndex();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyIndex();
     return _defaultInstance;
   }
 

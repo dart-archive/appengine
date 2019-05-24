@@ -23,13 +23,13 @@ abstract class ErrorStatsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListGroupStats':
-        return new ListGroupStatsRequest();
+        return ListGroupStatsRequest();
       case 'ListEvents':
-        return new ListEventsRequest();
+        return ListEventsRequest();
       case 'DeleteEvents':
-        return new DeleteEventsRequest();
+        return DeleteEventsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -43,7 +43,7 @@ abstract class ErrorStatsServiceBase extends GeneratedService {
       case 'DeleteEvents':
         return this.deleteEvents(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

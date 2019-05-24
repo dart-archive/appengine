@@ -9,12 +9,12 @@ import 'package:protobuf/protobuf.dart';
 
 class PublishLifecycleEventRequest_ServiceLevel extends ProtobufEnum {
   static const PublishLifecycleEventRequest_ServiceLevel NONINTERACTIVE =
-      const PublishLifecycleEventRequest_ServiceLevel._(0, 'NONINTERACTIVE');
+      PublishLifecycleEventRequest_ServiceLevel._(0, 'NONINTERACTIVE');
   static const PublishLifecycleEventRequest_ServiceLevel INTERACTIVE =
-      const PublishLifecycleEventRequest_ServiceLevel._(1, 'INTERACTIVE');
+      PublishLifecycleEventRequest_ServiceLevel._(1, 'INTERACTIVE');
 
   static const List<PublishLifecycleEventRequest_ServiceLevel> values =
-      const <PublishLifecycleEventRequest_ServiceLevel>[
+      <PublishLifecycleEventRequest_ServiceLevel>[
     NONINTERACTIVE,
     INTERACTIVE,
   ];

@@ -31,19 +31,19 @@ abstract class OsLoginServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'DeletePosixAccount':
-        return new DeletePosixAccountRequest();
+        return DeletePosixAccountRequest();
       case 'DeleteSshPublicKey':
-        return new DeleteSshPublicKeyRequest();
+        return DeleteSshPublicKeyRequest();
       case 'GetLoginProfile':
-        return new GetLoginProfileRequest();
+        return GetLoginProfileRequest();
       case 'GetSshPublicKey':
-        return new GetSshPublicKeyRequest();
+        return GetSshPublicKeyRequest();
       case 'ImportSshPublicKey':
-        return new ImportSshPublicKeyRequest();
+        return ImportSshPublicKeyRequest();
       case 'UpdateSshPublicKey':
-        return new UpdateSshPublicKeyRequest();
+        return UpdateSshPublicKeyRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -63,7 +63,7 @@ abstract class OsLoginServiceBase extends GeneratedService {
       case 'UpdateSshPublicKey':
         return this.updateSshPublicKey(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

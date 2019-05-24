@@ -22,13 +22,13 @@ abstract class TasksServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetTask':
-        return new GetTaskRequest();
+        return GetTaskRequest();
       case 'UpdateTaskResult':
-        return new UpdateTaskResultRequest();
+        return UpdateTaskResultRequest();
       case 'AddTaskLog':
-        return new AddTaskLogRequest();
+        return AddTaskLogRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -42,7 +42,7 @@ abstract class TasksServiceBase extends GeneratedService {
       case 'AddTaskLog':
         return this.addTaskLog(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

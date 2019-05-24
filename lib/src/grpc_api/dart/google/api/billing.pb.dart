@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Billing_BillingDestination extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Billing_BillingDestination')
+  static final BuilderInfo _i = BuilderInfo('Billing_BillingDestination')
     ..aOS(1, 'monitoredResource')
     ..pPS(2, 'metrics')
     ..hasRequiredFields = false;
@@ -22,15 +22,14 @@ class Billing_BillingDestination extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Billing_BillingDestination clone() =>
-      new Billing_BillingDestination()..mergeFromMessage(this);
+      Billing_BillingDestination()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Billing_BillingDestination create() =>
-      new Billing_BillingDestination();
+  static Billing_BillingDestination create() => Billing_BillingDestination();
   static PbList<Billing_BillingDestination> createRepeated() =>
-      new PbList<Billing_BillingDestination>();
+      PbList<Billing_BillingDestination>();
   static Billing_BillingDestination getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBilling_BillingDestination();
+      _defaultInstance = _ReadonlyBilling_BillingDestination();
     return _defaultInstance;
   }
 
@@ -55,7 +54,7 @@ class _ReadonlyBilling_BillingDestination extends Billing_BillingDestination
     with ReadonlyMessageMixin {}
 
 class Billing extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Billing')
+  static final BuilderInfo _i = BuilderInfo('Billing')
     ..pp<Billing_BillingDestination>(
         8,
         'consumerDestinations',
@@ -70,12 +69,12 @@ class Billing extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Billing.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Billing clone() => new Billing()..mergeFromMessage(this);
+  Billing clone() => Billing()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Billing create() => new Billing();
-  static PbList<Billing> createRepeated() => new PbList<Billing>();
+  static Billing create() => Billing();
+  static PbList<Billing> createRepeated() => PbList<Billing>();
   static Billing getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBilling();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBilling();
     return _defaultInstance;
   }
 

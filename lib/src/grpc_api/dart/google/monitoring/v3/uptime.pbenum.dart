@@ -9,16 +9,15 @@ import 'package:protobuf/protobuf.dart';
 
 class UptimeCheckRegion extends ProtobufEnum {
   static const UptimeCheckRegion REGION_UNSPECIFIED =
-      const UptimeCheckRegion._(0, 'REGION_UNSPECIFIED');
-  static const UptimeCheckRegion USA = const UptimeCheckRegion._(1, 'USA');
-  static const UptimeCheckRegion EUROPE =
-      const UptimeCheckRegion._(2, 'EUROPE');
+      UptimeCheckRegion._(0, 'REGION_UNSPECIFIED');
+  static const UptimeCheckRegion USA = UptimeCheckRegion._(1, 'USA');
+  static const UptimeCheckRegion EUROPE = UptimeCheckRegion._(2, 'EUROPE');
   static const UptimeCheckRegion SOUTH_AMERICA =
-      const UptimeCheckRegion._(3, 'SOUTH_AMERICA');
+      UptimeCheckRegion._(3, 'SOUTH_AMERICA');
   static const UptimeCheckRegion ASIA_PACIFIC =
-      const UptimeCheckRegion._(4, 'ASIA_PACIFIC');
+      UptimeCheckRegion._(4, 'ASIA_PACIFIC');
 
-  static const List<UptimeCheckRegion> values = const <UptimeCheckRegion>[
+  static const List<UptimeCheckRegion> values = <UptimeCheckRegion>[
     REGION_UNSPECIFIED,
     USA,
     EUROPE,
@@ -38,13 +37,12 @@ class UptimeCheckRegion extends ProtobufEnum {
 
 class GroupResourceType extends ProtobufEnum {
   static const GroupResourceType RESOURCE_TYPE_UNSPECIFIED =
-      const GroupResourceType._(0, 'RESOURCE_TYPE_UNSPECIFIED');
-  static const GroupResourceType INSTANCE =
-      const GroupResourceType._(1, 'INSTANCE');
+      GroupResourceType._(0, 'RESOURCE_TYPE_UNSPECIFIED');
+  static const GroupResourceType INSTANCE = GroupResourceType._(1, 'INSTANCE');
   static const GroupResourceType AWS_ELB_LOAD_BALANCER =
-      const GroupResourceType._(2, 'AWS_ELB_LOAD_BALANCER');
+      GroupResourceType._(2, 'AWS_ELB_LOAD_BALANCER');
 
-  static const List<GroupResourceType> values = const <GroupResourceType>[
+  static const List<GroupResourceType> values = <GroupResourceType>[
     RESOURCE_TYPE_UNSPECIFIED,
     INSTANCE,
     AWS_ELB_LOAD_BALANCER,

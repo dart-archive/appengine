@@ -19,9 +19,9 @@ abstract class ReportErrorsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ReportErrorEvent':
-        return new ReportErrorEventRequest();
+        return ReportErrorEventRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -31,7 +31,7 @@ abstract class ReportErrorsServiceBase extends GeneratedService {
       case 'ReportErrorEvent':
         return this.reportErrorEvent(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -18,7 +18,7 @@ import 'cloud_redis.pbenum.dart';
 export 'cloud_redis.pbenum.dart';
 
 class Instance_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Instance_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -31,14 +31,14 @@ class Instance_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Instance_LabelsEntry clone() =>
-      new Instance_LabelsEntry()..mergeFromMessage(this);
+      Instance_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Instance_LabelsEntry create() => new Instance_LabelsEntry();
+  static Instance_LabelsEntry create() => Instance_LabelsEntry();
   static PbList<Instance_LabelsEntry> createRepeated() =>
-      new PbList<Instance_LabelsEntry>();
+      PbList<Instance_LabelsEntry>();
   static Instance_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInstance_LabelsEntry();
+      _defaultInstance = _ReadonlyInstance_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -68,7 +68,7 @@ class _ReadonlyInstance_LabelsEntry extends Instance_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Instance_RedisConfigsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance_RedisConfigsEntry')
+  static final BuilderInfo _i = BuilderInfo('Instance_RedisConfigsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -81,15 +81,14 @@ class Instance_RedisConfigsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Instance_RedisConfigsEntry clone() =>
-      new Instance_RedisConfigsEntry()..mergeFromMessage(this);
+      Instance_RedisConfigsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Instance_RedisConfigsEntry create() =>
-      new Instance_RedisConfigsEntry();
+  static Instance_RedisConfigsEntry create() => Instance_RedisConfigsEntry();
   static PbList<Instance_RedisConfigsEntry> createRepeated() =>
-      new PbList<Instance_RedisConfigsEntry>();
+      PbList<Instance_RedisConfigsEntry>();
   static Instance_RedisConfigsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInstance_RedisConfigsEntry();
+      _defaultInstance = _ReadonlyInstance_RedisConfigsEntry();
     return _defaultInstance;
   }
 
@@ -120,7 +119,7 @@ class _ReadonlyInstance_RedisConfigsEntry extends Instance_RedisConfigsEntry
     with ReadonlyMessageMixin {}
 
 class Instance extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance')
+  static final BuilderInfo _i = BuilderInfo('Instance')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..pp<Instance_LabelsEntry>(3, 'labels', PbFieldType.PM,
@@ -169,12 +168,12 @@ class Instance extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Instance.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Instance clone() => new Instance()..mergeFromMessage(this);
+  Instance clone() => Instance()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Instance create() => new Instance();
-  static PbList<Instance> createRepeated() => new PbList<Instance>();
+  static Instance create() => Instance();
+  static PbList<Instance> createRepeated() => PbList<Instance>();
   static Instance getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInstance();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyInstance();
     return _defaultInstance;
   }
 
@@ -311,7 +310,7 @@ class Instance extends GeneratedMessage {
 class _ReadonlyInstance extends Instance with ReadonlyMessageMixin {}
 
 class ListInstancesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListInstancesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListInstancesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -325,14 +324,14 @@ class ListInstancesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListInstancesRequest clone() =>
-      new ListInstancesRequest()..mergeFromMessage(this);
+      ListInstancesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListInstancesRequest create() => new ListInstancesRequest();
+  static ListInstancesRequest create() => ListInstancesRequest();
   static PbList<ListInstancesRequest> createRepeated() =>
-      new PbList<ListInstancesRequest>();
+      PbList<ListInstancesRequest>();
   static ListInstancesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListInstancesRequest();
+      _defaultInstance = _ReadonlyListInstancesRequest();
     return _defaultInstance;
   }
 
@@ -370,7 +369,7 @@ class _ReadonlyListInstancesRequest extends ListInstancesRequest
     with ReadonlyMessageMixin {}
 
 class ListInstancesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListInstancesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListInstancesResponse')
     ..pp<Instance>(
         1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
     ..aOS(2, 'nextPageToken')
@@ -384,14 +383,14 @@ class ListInstancesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListInstancesResponse clone() =>
-      new ListInstancesResponse()..mergeFromMessage(this);
+      ListInstancesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListInstancesResponse create() => new ListInstancesResponse();
+  static ListInstancesResponse create() => ListInstancesResponse();
   static PbList<ListInstancesResponse> createRepeated() =>
-      new PbList<ListInstancesResponse>();
+      PbList<ListInstancesResponse>();
   static ListInstancesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListInstancesResponse();
+      _defaultInstance = _ReadonlyListInstancesResponse();
     return _defaultInstance;
   }
 
@@ -416,7 +415,7 @@ class _ReadonlyListInstancesResponse extends ListInstancesResponse
     with ReadonlyMessageMixin {}
 
 class GetInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetInstanceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -427,15 +426,14 @@ class GetInstanceRequest extends GeneratedMessage {
   GetInstanceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetInstanceRequest clone() =>
-      new GetInstanceRequest()..mergeFromMessage(this);
+  GetInstanceRequest clone() => GetInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetInstanceRequest create() => new GetInstanceRequest();
+  static GetInstanceRequest create() => GetInstanceRequest();
   static PbList<GetInstanceRequest> createRepeated() =>
-      new PbList<GetInstanceRequest>();
+      PbList<GetInstanceRequest>();
   static GetInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetInstanceRequest();
+      _defaultInstance = _ReadonlyGetInstanceRequest();
     return _defaultInstance;
   }
 
@@ -457,7 +455,7 @@ class _ReadonlyGetInstanceRequest extends GetInstanceRequest
     with ReadonlyMessageMixin {}
 
 class CreateInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateInstanceRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'instanceId')
     ..a<Instance>(
@@ -472,14 +470,14 @@ class CreateInstanceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateInstanceRequest clone() =>
-      new CreateInstanceRequest()..mergeFromMessage(this);
+      CreateInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateInstanceRequest create() => new CreateInstanceRequest();
+  static CreateInstanceRequest create() => CreateInstanceRequest();
   static PbList<CreateInstanceRequest> createRepeated() =>
-      new PbList<CreateInstanceRequest>();
+      PbList<CreateInstanceRequest>();
   static CreateInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateInstanceRequest();
+      _defaultInstance = _ReadonlyCreateInstanceRequest();
     return _defaultInstance;
   }
 
@@ -518,7 +516,7 @@ class _ReadonlyCreateInstanceRequest extends CreateInstanceRequest
     with ReadonlyMessageMixin {}
 
 class UpdateInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateInstanceRequest')
     ..a<$google$protobuf.FieldMask>(
         1,
         'updateMask',
@@ -537,14 +535,14 @@ class UpdateInstanceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateInstanceRequest clone() =>
-      new UpdateInstanceRequest()..mergeFromMessage(this);
+      UpdateInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateInstanceRequest create() => new UpdateInstanceRequest();
+  static UpdateInstanceRequest create() => UpdateInstanceRequest();
   static PbList<UpdateInstanceRequest> createRepeated() =>
-      new PbList<UpdateInstanceRequest>();
+      PbList<UpdateInstanceRequest>();
   static UpdateInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateInstanceRequest();
+      _defaultInstance = _ReadonlyUpdateInstanceRequest();
     return _defaultInstance;
   }
 
@@ -575,7 +573,7 @@ class _ReadonlyUpdateInstanceRequest extends UpdateInstanceRequest
     with ReadonlyMessageMixin {}
 
 class DeleteInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteInstanceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -587,14 +585,14 @@ class DeleteInstanceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteInstanceRequest clone() =>
-      new DeleteInstanceRequest()..mergeFromMessage(this);
+      DeleteInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteInstanceRequest create() => new DeleteInstanceRequest();
+  static DeleteInstanceRequest create() => DeleteInstanceRequest();
   static PbList<DeleteInstanceRequest> createRepeated() =>
-      new PbList<DeleteInstanceRequest>();
+      PbList<DeleteInstanceRequest>();
   static DeleteInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteInstanceRequest();
+      _defaultInstance = _ReadonlyDeleteInstanceRequest();
     return _defaultInstance;
   }
 
@@ -618,7 +616,7 @@ class _ReadonlyDeleteInstanceRequest extends DeleteInstanceRequest
 
 class LocationMetadata_AvailableZonesEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('LocationMetadata_AvailableZonesEntry')
+      BuilderInfo('LocationMetadata_AvailableZonesEntry')
         ..aOS(1, 'key')
         ..a<ZoneMetadata>(2, 'value', PbFieldType.OM, ZoneMetadata.getDefault,
             ZoneMetadata.create)
@@ -632,15 +630,15 @@ class LocationMetadata_AvailableZonesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LocationMetadata_AvailableZonesEntry clone() =>
-      new LocationMetadata_AvailableZonesEntry()..mergeFromMessage(this);
+      LocationMetadata_AvailableZonesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static LocationMetadata_AvailableZonesEntry create() =>
-      new LocationMetadata_AvailableZonesEntry();
+      LocationMetadata_AvailableZonesEntry();
   static PbList<LocationMetadata_AvailableZonesEntry> createRepeated() =>
-      new PbList<LocationMetadata_AvailableZonesEntry>();
+      PbList<LocationMetadata_AvailableZonesEntry>();
   static LocationMetadata_AvailableZonesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocationMetadata_AvailableZonesEntry();
+      _defaultInstance = _ReadonlyLocationMetadata_AvailableZonesEntry();
     return _defaultInstance;
   }
 
@@ -671,7 +669,7 @@ class _ReadonlyLocationMetadata_AvailableZonesEntry
     extends LocationMetadata_AvailableZonesEntry with ReadonlyMessageMixin {}
 
 class LocationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LocationMetadata')
+  static final BuilderInfo _i = BuilderInfo('LocationMetadata')
     ..pp<LocationMetadata_AvailableZonesEntry>(
         1,
         'availableZones',
@@ -687,14 +685,14 @@ class LocationMetadata extends GeneratedMessage {
   LocationMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LocationMetadata clone() => new LocationMetadata()..mergeFromMessage(this);
+  LocationMetadata clone() => LocationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LocationMetadata create() => new LocationMetadata();
+  static LocationMetadata create() => LocationMetadata();
   static PbList<LocationMetadata> createRepeated() =>
-      new PbList<LocationMetadata>();
+      PbList<LocationMetadata>();
   static LocationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocationMetadata();
+      _defaultInstance = _ReadonlyLocationMetadata();
     return _defaultInstance;
   }
 
@@ -710,7 +708,7 @@ class _ReadonlyLocationMetadata extends LocationMetadata
     with ReadonlyMessageMixin {}
 
 class ZoneMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ZoneMetadata')
+  static final BuilderInfo _i = BuilderInfo('ZoneMetadata')
     ..hasRequiredFields = false;
 
   ZoneMetadata() : super();
@@ -720,13 +718,12 @@ class ZoneMetadata extends GeneratedMessage {
   ZoneMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ZoneMetadata clone() => new ZoneMetadata()..mergeFromMessage(this);
+  ZoneMetadata clone() => ZoneMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ZoneMetadata create() => new ZoneMetadata();
-  static PbList<ZoneMetadata> createRepeated() => new PbList<ZoneMetadata>();
+  static ZoneMetadata create() => ZoneMetadata();
+  static PbList<ZoneMetadata> createRepeated() => PbList<ZoneMetadata>();
   static ZoneMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyZoneMetadata();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyZoneMetadata();
     return _defaultInstance;
   }
 
@@ -744,34 +741,34 @@ class CloudRedisApi {
 
   Future<ListInstancesResponse> listInstances(
       ClientContext ctx, ListInstancesRequest request) {
-    var emptyResponse = new ListInstancesResponse();
+    var emptyResponse = ListInstancesResponse();
     return _client.invoke<ListInstancesResponse>(
         ctx, 'CloudRedis', 'ListInstances', request, emptyResponse);
   }
 
   Future<Instance> getInstance(ClientContext ctx, GetInstanceRequest request) {
-    var emptyResponse = new Instance();
+    var emptyResponse = Instance();
     return _client.invoke<Instance>(
         ctx, 'CloudRedis', 'GetInstance', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createInstance(
       ClientContext ctx, CreateInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'CloudRedis', 'CreateInstance', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> updateInstance(
       ClientContext ctx, UpdateInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'CloudRedis', 'UpdateInstance', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> deleteInstance(
       ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'CloudRedis', 'DeleteInstance', request, emptyResponse);
   }

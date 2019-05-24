@@ -39,29 +39,29 @@ abstract class FoldersServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListFolders':
-        return new ListFoldersRequest();
+        return ListFoldersRequest();
       case 'SearchFolders':
-        return new SearchFoldersRequest();
+        return SearchFoldersRequest();
       case 'GetFolder':
-        return new GetFolderRequest();
+        return GetFolderRequest();
       case 'CreateFolder':
-        return new CreateFolderRequest();
+        return CreateFolderRequest();
       case 'UpdateFolder':
-        return new UpdateFolderRequest();
+        return UpdateFolderRequest();
       case 'MoveFolder':
-        return new MoveFolderRequest();
+        return MoveFolderRequest();
       case 'DeleteFolder':
-        return new DeleteFolderRequest();
+        return DeleteFolderRequest();
       case 'UndeleteFolder':
-        return new UndeleteFolderRequest();
+        return UndeleteFolderRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -91,7 +91,7 @@ abstract class FoldersServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

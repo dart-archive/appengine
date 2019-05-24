@@ -5,11 +5,11 @@
 
 import '../../../api/httpbody.pbjson.dart' as $google$api;
 
-const PredictRequest$json = const {
+const PredictRequest$json = {
   '1': 'PredictRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'http_body',
       '3': 2,
       '4': 1,
@@ -20,19 +20,19 @@ const PredictRequest$json = const {
   ],
 };
 
-const OnlinePredictionService$json = const {
+const OnlinePredictionService$json = {
   '1': 'OnlinePredictionService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'Predict',
       '2': '.google.cloud.ml.v1.PredictRequest',
       '3': '.google.api.HttpBody',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const OnlinePredictionService$messageJson = const {
+const OnlinePredictionService$messageJson = {
   '.google.cloud.ml.v1.PredictRequest': PredictRequest$json,
   '.google.api.HttpBody': $google$api.HttpBody$json,
 };

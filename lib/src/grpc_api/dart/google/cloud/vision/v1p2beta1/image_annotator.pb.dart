@@ -24,7 +24,7 @@ import 'image_annotator.pbenum.dart';
 export 'image_annotator.pbenum.dart';
 
 class Feature extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Feature')
+  static final BuilderInfo _i = BuilderInfo('Feature')
     ..e<Feature_Type>(1, 'type', PbFieldType.OE, Feature_Type.TYPE_UNSPECIFIED,
         Feature_Type.valueOf, Feature_Type.values)
     ..a<int>(2, 'maxResults', PbFieldType.O3)
@@ -37,12 +37,12 @@ class Feature extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Feature.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Feature clone() => new Feature()..mergeFromMessage(this);
+  Feature clone() => Feature()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Feature create() => new Feature();
-  static PbList<Feature> createRepeated() => new PbList<Feature>();
+  static Feature create() => Feature();
+  static PbList<Feature> createRepeated() => PbList<Feature>();
   static Feature getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFeature();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFeature();
     return _defaultInstance;
   }
 
@@ -79,7 +79,7 @@ class Feature extends GeneratedMessage {
 class _ReadonlyFeature extends Feature with ReadonlyMessageMixin {}
 
 class ImageSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImageSource')
+  static final BuilderInfo _i = BuilderInfo('ImageSource')
     ..aOS(1, 'gcsImageUri')
     ..aOS(2, 'imageUri')
     ..hasRequiredFields = false;
@@ -91,12 +91,12 @@ class ImageSource extends GeneratedMessage {
   ImageSource.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ImageSource clone() => new ImageSource()..mergeFromMessage(this);
+  ImageSource clone() => ImageSource()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImageSource create() => new ImageSource();
-  static PbList<ImageSource> createRepeated() => new PbList<ImageSource>();
+  static ImageSource create() => ImageSource();
+  static PbList<ImageSource> createRepeated() => PbList<ImageSource>();
   static ImageSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyImageSource();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyImageSource();
     return _defaultInstance;
   }
 
@@ -125,7 +125,7 @@ class ImageSource extends GeneratedMessage {
 class _ReadonlyImageSource extends ImageSource with ReadonlyMessageMixin {}
 
 class Image extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Image')
+  static final BuilderInfo _i = BuilderInfo('Image')
     ..a<List<int>>(1, 'content', PbFieldType.OY)
     ..a<ImageSource>(
         2, 'source', PbFieldType.OM, ImageSource.getDefault, ImageSource.create)
@@ -136,12 +136,12 @@ class Image extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Image.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Image clone() => new Image()..mergeFromMessage(this);
+  Image clone() => Image()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Image create() => new Image();
-  static PbList<Image> createRepeated() => new PbList<Image>();
+  static Image create() => Image();
+  static PbList<Image> createRepeated() => PbList<Image>();
   static Image getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyImage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyImage();
     return _defaultInstance;
   }
 
@@ -170,7 +170,7 @@ class Image extends GeneratedMessage {
 class _ReadonlyImage extends Image with ReadonlyMessageMixin {}
 
 class FaceAnnotation_Landmark extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceAnnotation_Landmark')
+  static final BuilderInfo _i = BuilderInfo('FaceAnnotation_Landmark')
     ..e<FaceAnnotation_Landmark_Type>(
         3,
         'type',
@@ -190,14 +190,14 @@ class FaceAnnotation_Landmark extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   FaceAnnotation_Landmark clone() =>
-      new FaceAnnotation_Landmark()..mergeFromMessage(this);
+      FaceAnnotation_Landmark()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FaceAnnotation_Landmark create() => new FaceAnnotation_Landmark();
+  static FaceAnnotation_Landmark create() => FaceAnnotation_Landmark();
   static PbList<FaceAnnotation_Landmark> createRepeated() =>
-      new PbList<FaceAnnotation_Landmark>();
+      PbList<FaceAnnotation_Landmark>();
   static FaceAnnotation_Landmark getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFaceAnnotation_Landmark();
+      _defaultInstance = _ReadonlyFaceAnnotation_Landmark();
     return _defaultInstance;
   }
 
@@ -228,7 +228,7 @@ class _ReadonlyFaceAnnotation_Landmark extends FaceAnnotation_Landmark
     with ReadonlyMessageMixin {}
 
 class FaceAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceAnnotation')
+  static final BuilderInfo _i = BuilderInfo('FaceAnnotation')
     ..a<BoundingPoly>(1, 'boundingPoly', PbFieldType.OM,
         BoundingPoly.getDefault, BoundingPoly.create)
     ..a<BoundingPoly>(2, 'fdBoundingPoly', PbFieldType.OM,
@@ -263,14 +263,12 @@ class FaceAnnotation extends GeneratedMessage {
   FaceAnnotation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FaceAnnotation clone() => new FaceAnnotation()..mergeFromMessage(this);
+  FaceAnnotation clone() => FaceAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FaceAnnotation create() => new FaceAnnotation();
-  static PbList<FaceAnnotation> createRepeated() =>
-      new PbList<FaceAnnotation>();
+  static FaceAnnotation create() => FaceAnnotation();
+  static PbList<FaceAnnotation> createRepeated() => PbList<FaceAnnotation>();
   static FaceAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFaceAnnotation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFaceAnnotation();
     return _defaultInstance;
   }
 
@@ -398,7 +396,7 @@ class _ReadonlyFaceAnnotation extends FaceAnnotation with ReadonlyMessageMixin {
 }
 
 class LocationInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LocationInfo')
+  static final BuilderInfo _i = BuilderInfo('LocationInfo')
     ..a<$google$type.LatLng>(1, 'latLng', PbFieldType.OM,
         $google$type.LatLng.getDefault, $google$type.LatLng.create)
     ..hasRequiredFields = false;
@@ -410,13 +408,12 @@ class LocationInfo extends GeneratedMessage {
   LocationInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LocationInfo clone() => new LocationInfo()..mergeFromMessage(this);
+  LocationInfo clone() => LocationInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LocationInfo create() => new LocationInfo();
-  static PbList<LocationInfo> createRepeated() => new PbList<LocationInfo>();
+  static LocationInfo create() => LocationInfo();
+  static PbList<LocationInfo> createRepeated() => PbList<LocationInfo>();
   static LocationInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocationInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLocationInfo();
     return _defaultInstance;
   }
 
@@ -437,7 +434,7 @@ class LocationInfo extends GeneratedMessage {
 class _ReadonlyLocationInfo extends LocationInfo with ReadonlyMessageMixin {}
 
 class Property extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Property')
+  static final BuilderInfo _i = BuilderInfo('Property')
     ..aOS(1, 'name')
     ..aOS(2, 'value')
     ..a<Int64>(3, 'uint64Value', PbFieldType.OU6, Int64.ZERO)
@@ -449,12 +446,12 @@ class Property extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Property.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Property clone() => new Property()..mergeFromMessage(this);
+  Property clone() => Property()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Property create() => new Property();
-  static PbList<Property> createRepeated() => new PbList<Property>();
+  static Property create() => Property();
+  static PbList<Property> createRepeated() => PbList<Property>();
   static Property getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProperty();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyProperty();
     return _defaultInstance;
   }
 
@@ -491,7 +488,7 @@ class Property extends GeneratedMessage {
 class _ReadonlyProperty extends Property with ReadonlyMessageMixin {}
 
 class EntityAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityAnnotation')
+  static final BuilderInfo _i = BuilderInfo('EntityAnnotation')
     ..aOS(1, 'mid')
     ..aOS(2, 'locale')
     ..aOS(3, 'description')
@@ -513,14 +510,14 @@ class EntityAnnotation extends GeneratedMessage {
   EntityAnnotation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityAnnotation clone() => new EntityAnnotation()..mergeFromMessage(this);
+  EntityAnnotation clone() => EntityAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EntityAnnotation create() => new EntityAnnotation();
+  static EntityAnnotation create() => EntityAnnotation();
   static PbList<EntityAnnotation> createRepeated() =>
-      new PbList<EntityAnnotation>();
+      PbList<EntityAnnotation>();
   static EntityAnnotation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntityAnnotation();
+      _defaultInstance = _ReadonlyEntityAnnotation();
     return _defaultInstance;
   }
 
@@ -594,7 +591,7 @@ class _ReadonlyEntityAnnotation extends EntityAnnotation
     with ReadonlyMessageMixin {}
 
 class SafeSearchAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SafeSearchAnnotation')
+  static final BuilderInfo _i = BuilderInfo('SafeSearchAnnotation')
     ..e<Likelihood>(1, 'adult', PbFieldType.OE, Likelihood.UNKNOWN,
         Likelihood.valueOf, Likelihood.values)
     ..e<Likelihood>(2, 'spoof', PbFieldType.OE, Likelihood.UNKNOWN,
@@ -615,14 +612,14 @@ class SafeSearchAnnotation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SafeSearchAnnotation clone() =>
-      new SafeSearchAnnotation()..mergeFromMessage(this);
+      SafeSearchAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SafeSearchAnnotation create() => new SafeSearchAnnotation();
+  static SafeSearchAnnotation create() => SafeSearchAnnotation();
   static PbList<SafeSearchAnnotation> createRepeated() =>
-      new PbList<SafeSearchAnnotation>();
+      PbList<SafeSearchAnnotation>();
   static SafeSearchAnnotation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySafeSearchAnnotation();
+      _defaultInstance = _ReadonlySafeSearchAnnotation();
     return _defaultInstance;
   }
 
@@ -676,7 +673,7 @@ class _ReadonlySafeSearchAnnotation extends SafeSearchAnnotation
     with ReadonlyMessageMixin {}
 
 class LatLongRect extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LatLongRect')
+  static final BuilderInfo _i = BuilderInfo('LatLongRect')
     ..a<$google$type.LatLng>(1, 'minLatLng', PbFieldType.OM,
         $google$type.LatLng.getDefault, $google$type.LatLng.create)
     ..a<$google$type.LatLng>(2, 'maxLatLng', PbFieldType.OM,
@@ -690,12 +687,12 @@ class LatLongRect extends GeneratedMessage {
   LatLongRect.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LatLongRect clone() => new LatLongRect()..mergeFromMessage(this);
+  LatLongRect clone() => LatLongRect()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LatLongRect create() => new LatLongRect();
-  static PbList<LatLongRect> createRepeated() => new PbList<LatLongRect>();
+  static LatLongRect create() => LatLongRect();
+  static PbList<LatLongRect> createRepeated() => PbList<LatLongRect>();
   static LatLongRect getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLatLongRect();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLatLongRect();
     return _defaultInstance;
   }
 
@@ -724,7 +721,7 @@ class LatLongRect extends GeneratedMessage {
 class _ReadonlyLatLongRect extends LatLongRect with ReadonlyMessageMixin {}
 
 class ColorInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ColorInfo')
+  static final BuilderInfo _i = BuilderInfo('ColorInfo')
     ..a<$google$type.Color>(1, 'color', PbFieldType.OM,
         $google$type.Color.getDefault, $google$type.Color.create)
     ..a<double>(2, 'score', PbFieldType.OF)
@@ -737,12 +734,12 @@ class ColorInfo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ColorInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ColorInfo clone() => new ColorInfo()..mergeFromMessage(this);
+  ColorInfo clone() => ColorInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ColorInfo create() => new ColorInfo();
-  static PbList<ColorInfo> createRepeated() => new PbList<ColorInfo>();
+  static ColorInfo create() => ColorInfo();
+  static PbList<ColorInfo> createRepeated() => PbList<ColorInfo>();
   static ColorInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyColorInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyColorInfo();
     return _defaultInstance;
   }
 
@@ -779,7 +776,7 @@ class ColorInfo extends GeneratedMessage {
 class _ReadonlyColorInfo extends ColorInfo with ReadonlyMessageMixin {}
 
 class DominantColorsAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DominantColorsAnnotation')
+  static final BuilderInfo _i = BuilderInfo('DominantColorsAnnotation')
     ..pp<ColorInfo>(
         1, 'colors', PbFieldType.PM, ColorInfo.$checkItem, ColorInfo.create)
     ..hasRequiredFields = false;
@@ -792,14 +789,14 @@ class DominantColorsAnnotation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DominantColorsAnnotation clone() =>
-      new DominantColorsAnnotation()..mergeFromMessage(this);
+      DominantColorsAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DominantColorsAnnotation create() => new DominantColorsAnnotation();
+  static DominantColorsAnnotation create() => DominantColorsAnnotation();
   static PbList<DominantColorsAnnotation> createRepeated() =>
-      new PbList<DominantColorsAnnotation>();
+      PbList<DominantColorsAnnotation>();
   static DominantColorsAnnotation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDominantColorsAnnotation();
+      _defaultInstance = _ReadonlyDominantColorsAnnotation();
     return _defaultInstance;
   }
 
@@ -816,7 +813,7 @@ class _ReadonlyDominantColorsAnnotation extends DominantColorsAnnotation
     with ReadonlyMessageMixin {}
 
 class ImageProperties extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImageProperties')
+  static final BuilderInfo _i = BuilderInfo('ImageProperties')
     ..a<DominantColorsAnnotation>(1, 'dominantColors', PbFieldType.OM,
         DominantColorsAnnotation.getDefault, DominantColorsAnnotation.create)
     ..hasRequiredFields = false;
@@ -828,14 +825,12 @@ class ImageProperties extends GeneratedMessage {
   ImageProperties.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ImageProperties clone() => new ImageProperties()..mergeFromMessage(this);
+  ImageProperties clone() => ImageProperties()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImageProperties create() => new ImageProperties();
-  static PbList<ImageProperties> createRepeated() =>
-      new PbList<ImageProperties>();
+  static ImageProperties create() => ImageProperties();
+  static PbList<ImageProperties> createRepeated() => PbList<ImageProperties>();
   static ImageProperties getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImageProperties();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyImageProperties();
     return _defaultInstance;
   }
 
@@ -857,7 +852,7 @@ class _ReadonlyImageProperties extends ImageProperties
     with ReadonlyMessageMixin {}
 
 class CropHint extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CropHint')
+  static final BuilderInfo _i = BuilderInfo('CropHint')
     ..a<BoundingPoly>(1, 'boundingPoly', PbFieldType.OM,
         BoundingPoly.getDefault, BoundingPoly.create)
     ..a<double>(2, 'confidence', PbFieldType.OF)
@@ -870,12 +865,12 @@ class CropHint extends GeneratedMessage {
       : super.fromBuffer(i, r);
   CropHint.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CropHint clone() => new CropHint()..mergeFromMessage(this);
+  CropHint clone() => CropHint()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CropHint create() => new CropHint();
-  static PbList<CropHint> createRepeated() => new PbList<CropHint>();
+  static CropHint create() => CropHint();
+  static PbList<CropHint> createRepeated() => PbList<CropHint>();
   static CropHint getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCropHint();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCropHint();
     return _defaultInstance;
   }
 
@@ -912,7 +907,7 @@ class CropHint extends GeneratedMessage {
 class _ReadonlyCropHint extends CropHint with ReadonlyMessageMixin {}
 
 class CropHintsAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CropHintsAnnotation')
+  static final BuilderInfo _i = BuilderInfo('CropHintsAnnotation')
     ..pp<CropHint>(
         1, 'cropHints', PbFieldType.PM, CropHint.$checkItem, CropHint.create)
     ..hasRequiredFields = false;
@@ -924,15 +919,14 @@ class CropHintsAnnotation extends GeneratedMessage {
   CropHintsAnnotation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CropHintsAnnotation clone() =>
-      new CropHintsAnnotation()..mergeFromMessage(this);
+  CropHintsAnnotation clone() => CropHintsAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CropHintsAnnotation create() => new CropHintsAnnotation();
+  static CropHintsAnnotation create() => CropHintsAnnotation();
   static PbList<CropHintsAnnotation> createRepeated() =>
-      new PbList<CropHintsAnnotation>();
+      PbList<CropHintsAnnotation>();
   static CropHintsAnnotation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCropHintsAnnotation();
+      _defaultInstance = _ReadonlyCropHintsAnnotation();
     return _defaultInstance;
   }
 
@@ -948,7 +942,7 @@ class _ReadonlyCropHintsAnnotation extends CropHintsAnnotation
     with ReadonlyMessageMixin {}
 
 class CropHintsParams extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CropHintsParams')
+  static final BuilderInfo _i = BuilderInfo('CropHintsParams')
     ..p<double>(1, 'aspectRatios', PbFieldType.PF)
     ..hasRequiredFields = false;
 
@@ -959,14 +953,12 @@ class CropHintsParams extends GeneratedMessage {
   CropHintsParams.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CropHintsParams clone() => new CropHintsParams()..mergeFromMessage(this);
+  CropHintsParams clone() => CropHintsParams()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CropHintsParams create() => new CropHintsParams();
-  static PbList<CropHintsParams> createRepeated() =>
-      new PbList<CropHintsParams>();
+  static CropHintsParams create() => CropHintsParams();
+  static PbList<CropHintsParams> createRepeated() => PbList<CropHintsParams>();
   static CropHintsParams getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCropHintsParams();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCropHintsParams();
     return _defaultInstance;
   }
 
@@ -982,7 +974,7 @@ class _ReadonlyCropHintsParams extends CropHintsParams
     with ReadonlyMessageMixin {}
 
 class WebDetectionParams extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebDetectionParams')
+  static final BuilderInfo _i = BuilderInfo('WebDetectionParams')
     ..aOB(2, 'includeGeoResults')
     ..hasRequiredFields = false;
 
@@ -993,15 +985,14 @@ class WebDetectionParams extends GeneratedMessage {
   WebDetectionParams.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WebDetectionParams clone() =>
-      new WebDetectionParams()..mergeFromMessage(this);
+  WebDetectionParams clone() => WebDetectionParams()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WebDetectionParams create() => new WebDetectionParams();
+  static WebDetectionParams create() => WebDetectionParams();
   static PbList<WebDetectionParams> createRepeated() =>
-      new PbList<WebDetectionParams>();
+      PbList<WebDetectionParams>();
   static WebDetectionParams getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebDetectionParams();
+      _defaultInstance = _ReadonlyWebDetectionParams();
     return _defaultInstance;
   }
 
@@ -1023,7 +1014,7 @@ class _ReadonlyWebDetectionParams extends WebDetectionParams
     with ReadonlyMessageMixin {}
 
 class ImageContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImageContext')
+  static final BuilderInfo _i = BuilderInfo('ImageContext')
     ..a<LatLongRect>(1, 'latLongRect', PbFieldType.OM, LatLongRect.getDefault,
         LatLongRect.create)
     ..pPS(2, 'languageHints')
@@ -1040,13 +1031,12 @@ class ImageContext extends GeneratedMessage {
   ImageContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ImageContext clone() => new ImageContext()..mergeFromMessage(this);
+  ImageContext clone() => ImageContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImageContext create() => new ImageContext();
-  static PbList<ImageContext> createRepeated() => new PbList<ImageContext>();
+  static ImageContext create() => ImageContext();
+  static PbList<ImageContext> createRepeated() => PbList<ImageContext>();
   static ImageContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImageContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyImageContext();
     return _defaultInstance;
   }
 
@@ -1085,7 +1075,7 @@ class ImageContext extends GeneratedMessage {
 class _ReadonlyImageContext extends ImageContext with ReadonlyMessageMixin {}
 
 class AnnotateImageRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateImageRequest')
+  static final BuilderInfo _i = BuilderInfo('AnnotateImageRequest')
     ..a<Image>(1, 'image', PbFieldType.OM, Image.getDefault, Image.create)
     ..pp<Feature>(
         2, 'features', PbFieldType.PM, Feature.$checkItem, Feature.create)
@@ -1101,14 +1091,14 @@ class AnnotateImageRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateImageRequest clone() =>
-      new AnnotateImageRequest()..mergeFromMessage(this);
+      AnnotateImageRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotateImageRequest create() => new AnnotateImageRequest();
+  static AnnotateImageRequest create() => AnnotateImageRequest();
   static PbList<AnnotateImageRequest> createRepeated() =>
-      new PbList<AnnotateImageRequest>();
+      PbList<AnnotateImageRequest>();
   static AnnotateImageRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateImageRequest();
+      _defaultInstance = _ReadonlyAnnotateImageRequest();
     return _defaultInstance;
   }
 
@@ -1140,7 +1130,7 @@ class _ReadonlyAnnotateImageRequest extends AnnotateImageRequest
     with ReadonlyMessageMixin {}
 
 class ImageAnnotationContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImageAnnotationContext')
+  static final BuilderInfo _i = BuilderInfo('ImageAnnotationContext')
     ..aOS(1, 'uri')
     ..a<int>(2, 'pageNumber', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -1153,14 +1143,14 @@ class ImageAnnotationContext extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImageAnnotationContext clone() =>
-      new ImageAnnotationContext()..mergeFromMessage(this);
+      ImageAnnotationContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImageAnnotationContext create() => new ImageAnnotationContext();
+  static ImageAnnotationContext create() => ImageAnnotationContext();
   static PbList<ImageAnnotationContext> createRepeated() =>
-      new PbList<ImageAnnotationContext>();
+      PbList<ImageAnnotationContext>();
   static ImageAnnotationContext getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImageAnnotationContext();
+      _defaultInstance = _ReadonlyImageAnnotationContext();
     return _defaultInstance;
   }
 
@@ -1191,7 +1181,7 @@ class _ReadonlyImageAnnotationContext extends ImageAnnotationContext
     with ReadonlyMessageMixin {}
 
 class AnnotateImageResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateImageResponse')
+  static final BuilderInfo _i = BuilderInfo('AnnotateImageResponse')
     ..pp<FaceAnnotation>(1, 'faceAnnotations', PbFieldType.PM,
         FaceAnnotation.$checkItem, FaceAnnotation.create)
     ..pp<EntityAnnotation>(2, 'landmarkAnnotations', PbFieldType.PM,
@@ -1226,14 +1216,14 @@ class AnnotateImageResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateImageResponse clone() =>
-      new AnnotateImageResponse()..mergeFromMessage(this);
+      AnnotateImageResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotateImageResponse create() => new AnnotateImageResponse();
+  static AnnotateImageResponse create() => AnnotateImageResponse();
   static PbList<AnnotateImageResponse> createRepeated() =>
-      new PbList<AnnotateImageResponse>();
+      PbList<AnnotateImageResponse>();
   static AnnotateImageResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateImageResponse();
+      _defaultInstance = _ReadonlyAnnotateImageResponse();
     return _defaultInstance;
   }
 
@@ -1314,7 +1304,7 @@ class _ReadonlyAnnotateImageResponse extends AnnotateImageResponse
     with ReadonlyMessageMixin {}
 
 class AnnotateFileResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateFileResponse')
+  static final BuilderInfo _i = BuilderInfo('AnnotateFileResponse')
     ..a<InputConfig>(1, 'inputConfig', PbFieldType.OM, InputConfig.getDefault,
         InputConfig.create)
     ..pp<AnnotateImageResponse>(2, 'responses', PbFieldType.PM,
@@ -1329,14 +1319,14 @@ class AnnotateFileResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateFileResponse clone() =>
-      new AnnotateFileResponse()..mergeFromMessage(this);
+      AnnotateFileResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotateFileResponse create() => new AnnotateFileResponse();
+  static AnnotateFileResponse create() => AnnotateFileResponse();
   static PbList<AnnotateFileResponse> createRepeated() =>
-      new PbList<AnnotateFileResponse>();
+      PbList<AnnotateFileResponse>();
   static AnnotateFileResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateFileResponse();
+      _defaultInstance = _ReadonlyAnnotateFileResponse();
     return _defaultInstance;
   }
 
@@ -1360,7 +1350,7 @@ class _ReadonlyAnnotateFileResponse extends AnnotateFileResponse
     with ReadonlyMessageMixin {}
 
 class BatchAnnotateImagesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchAnnotateImagesRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchAnnotateImagesRequest')
     ..pp<AnnotateImageRequest>(1, 'requests', PbFieldType.PM,
         AnnotateImageRequest.$checkItem, AnnotateImageRequest.create)
     ..hasRequiredFields = false;
@@ -1373,15 +1363,14 @@ class BatchAnnotateImagesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchAnnotateImagesRequest clone() =>
-      new BatchAnnotateImagesRequest()..mergeFromMessage(this);
+      BatchAnnotateImagesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchAnnotateImagesRequest create() =>
-      new BatchAnnotateImagesRequest();
+  static BatchAnnotateImagesRequest create() => BatchAnnotateImagesRequest();
   static PbList<BatchAnnotateImagesRequest> createRepeated() =>
-      new PbList<BatchAnnotateImagesRequest>();
+      PbList<BatchAnnotateImagesRequest>();
   static BatchAnnotateImagesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchAnnotateImagesRequest();
+      _defaultInstance = _ReadonlyBatchAnnotateImagesRequest();
     return _defaultInstance;
   }
 
@@ -1398,7 +1387,7 @@ class _ReadonlyBatchAnnotateImagesRequest extends BatchAnnotateImagesRequest
     with ReadonlyMessageMixin {}
 
 class BatchAnnotateImagesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchAnnotateImagesResponse')
+  static final BuilderInfo _i = BuilderInfo('BatchAnnotateImagesResponse')
     ..pp<AnnotateImageResponse>(1, 'responses', PbFieldType.PM,
         AnnotateImageResponse.$checkItem, AnnotateImageResponse.create)
     ..hasRequiredFields = false;
@@ -1411,15 +1400,14 @@ class BatchAnnotateImagesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchAnnotateImagesResponse clone() =>
-      new BatchAnnotateImagesResponse()..mergeFromMessage(this);
+      BatchAnnotateImagesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchAnnotateImagesResponse create() =>
-      new BatchAnnotateImagesResponse();
+  static BatchAnnotateImagesResponse create() => BatchAnnotateImagesResponse();
   static PbList<BatchAnnotateImagesResponse> createRepeated() =>
-      new PbList<BatchAnnotateImagesResponse>();
+      PbList<BatchAnnotateImagesResponse>();
   static BatchAnnotateImagesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchAnnotateImagesResponse();
+      _defaultInstance = _ReadonlyBatchAnnotateImagesResponse();
     return _defaultInstance;
   }
 
@@ -1436,7 +1424,7 @@ class _ReadonlyBatchAnnotateImagesResponse extends BatchAnnotateImagesResponse
     with ReadonlyMessageMixin {}
 
 class AsyncAnnotateFileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AsyncAnnotateFileRequest')
+  static final BuilderInfo _i = BuilderInfo('AsyncAnnotateFileRequest')
     ..a<InputConfig>(1, 'inputConfig', PbFieldType.OM, InputConfig.getDefault,
         InputConfig.create)
     ..pp<Feature>(
@@ -1455,14 +1443,14 @@ class AsyncAnnotateFileRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AsyncAnnotateFileRequest clone() =>
-      new AsyncAnnotateFileRequest()..mergeFromMessage(this);
+      AsyncAnnotateFileRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AsyncAnnotateFileRequest create() => new AsyncAnnotateFileRequest();
+  static AsyncAnnotateFileRequest create() => AsyncAnnotateFileRequest();
   static PbList<AsyncAnnotateFileRequest> createRepeated() =>
-      new PbList<AsyncAnnotateFileRequest>();
+      PbList<AsyncAnnotateFileRequest>();
   static AsyncAnnotateFileRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAsyncAnnotateFileRequest();
+      _defaultInstance = _ReadonlyAsyncAnnotateFileRequest();
     return _defaultInstance;
   }
 
@@ -1503,7 +1491,7 @@ class _ReadonlyAsyncAnnotateFileRequest extends AsyncAnnotateFileRequest
     with ReadonlyMessageMixin {}
 
 class AsyncAnnotateFileResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AsyncAnnotateFileResponse')
+  static final BuilderInfo _i = BuilderInfo('AsyncAnnotateFileResponse')
     ..a<OutputConfig>(1, 'outputConfig', PbFieldType.OM,
         OutputConfig.getDefault, OutputConfig.create)
     ..hasRequiredFields = false;
@@ -1516,14 +1504,14 @@ class AsyncAnnotateFileResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AsyncAnnotateFileResponse clone() =>
-      new AsyncAnnotateFileResponse()..mergeFromMessage(this);
+      AsyncAnnotateFileResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AsyncAnnotateFileResponse create() => new AsyncAnnotateFileResponse();
+  static AsyncAnnotateFileResponse create() => AsyncAnnotateFileResponse();
   static PbList<AsyncAnnotateFileResponse> createRepeated() =>
-      new PbList<AsyncAnnotateFileResponse>();
+      PbList<AsyncAnnotateFileResponse>();
   static AsyncAnnotateFileResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAsyncAnnotateFileResponse();
+      _defaultInstance = _ReadonlyAsyncAnnotateFileResponse();
     return _defaultInstance;
   }
 
@@ -1546,15 +1534,10 @@ class _ReadonlyAsyncAnnotateFileResponse extends AsyncAnnotateFileResponse
     with ReadonlyMessageMixin {}
 
 class AsyncBatchAnnotateFilesRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AsyncBatchAnnotateFilesRequest')
-        ..pp<AsyncAnnotateFileRequest>(
-            1,
-            'requests',
-            PbFieldType.PM,
-            AsyncAnnotateFileRequest.$checkItem,
-            AsyncAnnotateFileRequest.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('AsyncBatchAnnotateFilesRequest')
+    ..pp<AsyncAnnotateFileRequest>(1, 'requests', PbFieldType.PM,
+        AsyncAnnotateFileRequest.$checkItem, AsyncAnnotateFileRequest.create)
+    ..hasRequiredFields = false;
 
   AsyncBatchAnnotateFilesRequest() : super();
   AsyncBatchAnnotateFilesRequest.fromBuffer(List<int> i,
@@ -1564,15 +1547,15 @@ class AsyncBatchAnnotateFilesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AsyncBatchAnnotateFilesRequest clone() =>
-      new AsyncBatchAnnotateFilesRequest()..mergeFromMessage(this);
+      AsyncBatchAnnotateFilesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AsyncBatchAnnotateFilesRequest create() =>
-      new AsyncBatchAnnotateFilesRequest();
+      AsyncBatchAnnotateFilesRequest();
   static PbList<AsyncBatchAnnotateFilesRequest> createRepeated() =>
-      new PbList<AsyncBatchAnnotateFilesRequest>();
+      PbList<AsyncBatchAnnotateFilesRequest>();
   static AsyncBatchAnnotateFilesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAsyncBatchAnnotateFilesRequest();
+      _defaultInstance = _ReadonlyAsyncBatchAnnotateFilesRequest();
     return _defaultInstance;
   }
 
@@ -1589,15 +1572,10 @@ class _ReadonlyAsyncBatchAnnotateFilesRequest
     extends AsyncBatchAnnotateFilesRequest with ReadonlyMessageMixin {}
 
 class AsyncBatchAnnotateFilesResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AsyncBatchAnnotateFilesResponse')
-        ..pp<AsyncAnnotateFileResponse>(
-            1,
-            'responses',
-            PbFieldType.PM,
-            AsyncAnnotateFileResponse.$checkItem,
-            AsyncAnnotateFileResponse.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('AsyncBatchAnnotateFilesResponse')
+    ..pp<AsyncAnnotateFileResponse>(1, 'responses', PbFieldType.PM,
+        AsyncAnnotateFileResponse.$checkItem, AsyncAnnotateFileResponse.create)
+    ..hasRequiredFields = false;
 
   AsyncBatchAnnotateFilesResponse() : super();
   AsyncBatchAnnotateFilesResponse.fromBuffer(List<int> i,
@@ -1607,15 +1585,15 @@ class AsyncBatchAnnotateFilesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AsyncBatchAnnotateFilesResponse clone() =>
-      new AsyncBatchAnnotateFilesResponse()..mergeFromMessage(this);
+      AsyncBatchAnnotateFilesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AsyncBatchAnnotateFilesResponse create() =>
-      new AsyncBatchAnnotateFilesResponse();
+      AsyncBatchAnnotateFilesResponse();
   static PbList<AsyncBatchAnnotateFilesResponse> createRepeated() =>
-      new PbList<AsyncBatchAnnotateFilesResponse>();
+      PbList<AsyncBatchAnnotateFilesResponse>();
   static AsyncBatchAnnotateFilesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAsyncBatchAnnotateFilesResponse();
+      _defaultInstance = _ReadonlyAsyncBatchAnnotateFilesResponse();
     return _defaultInstance;
   }
 
@@ -1632,7 +1610,7 @@ class _ReadonlyAsyncBatchAnnotateFilesResponse
     extends AsyncBatchAnnotateFilesResponse with ReadonlyMessageMixin {}
 
 class InputConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('InputConfig')
+  static final BuilderInfo _i = BuilderInfo('InputConfig')
     ..a<GcsSource>(
         1, 'gcsSource', PbFieldType.OM, GcsSource.getDefault, GcsSource.create)
     ..aOS(2, 'mimeType')
@@ -1645,12 +1623,12 @@ class InputConfig extends GeneratedMessage {
   InputConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  InputConfig clone() => new InputConfig()..mergeFromMessage(this);
+  InputConfig clone() => InputConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static InputConfig create() => new InputConfig();
-  static PbList<InputConfig> createRepeated() => new PbList<InputConfig>();
+  static InputConfig create() => InputConfig();
+  static PbList<InputConfig> createRepeated() => PbList<InputConfig>();
   static InputConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInputConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyInputConfig();
     return _defaultInstance;
   }
 
@@ -1679,7 +1657,7 @@ class InputConfig extends GeneratedMessage {
 class _ReadonlyInputConfig extends InputConfig with ReadonlyMessageMixin {}
 
 class OutputConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OutputConfig')
+  static final BuilderInfo _i = BuilderInfo('OutputConfig')
     ..a<GcsDestination>(1, 'gcsDestination', PbFieldType.OM,
         GcsDestination.getDefault, GcsDestination.create)
     ..a<int>(2, 'batchSize', PbFieldType.O3)
@@ -1692,13 +1670,12 @@ class OutputConfig extends GeneratedMessage {
   OutputConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OutputConfig clone() => new OutputConfig()..mergeFromMessage(this);
+  OutputConfig clone() => OutputConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OutputConfig create() => new OutputConfig();
-  static PbList<OutputConfig> createRepeated() => new PbList<OutputConfig>();
+  static OutputConfig create() => OutputConfig();
+  static PbList<OutputConfig> createRepeated() => PbList<OutputConfig>();
   static OutputConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOutputConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOutputConfig();
     return _defaultInstance;
   }
 
@@ -1727,7 +1704,7 @@ class OutputConfig extends GeneratedMessage {
 class _ReadonlyOutputConfig extends OutputConfig with ReadonlyMessageMixin {}
 
 class GcsSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GcsSource')
+  static final BuilderInfo _i = BuilderInfo('GcsSource')
     ..aOS(1, 'uri')
     ..hasRequiredFields = false;
 
@@ -1737,12 +1714,12 @@ class GcsSource extends GeneratedMessage {
       : super.fromBuffer(i, r);
   GcsSource.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GcsSource clone() => new GcsSource()..mergeFromMessage(this);
+  GcsSource clone() => GcsSource()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GcsSource create() => new GcsSource();
-  static PbList<GcsSource> createRepeated() => new PbList<GcsSource>();
+  static GcsSource create() => GcsSource();
+  static PbList<GcsSource> createRepeated() => PbList<GcsSource>();
   static GcsSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGcsSource();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGcsSource();
     return _defaultInstance;
   }
 
@@ -1763,7 +1740,7 @@ class GcsSource extends GeneratedMessage {
 class _ReadonlyGcsSource extends GcsSource with ReadonlyMessageMixin {}
 
 class GcsDestination extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GcsDestination')
+  static final BuilderInfo _i = BuilderInfo('GcsDestination')
     ..aOS(1, 'uri')
     ..hasRequiredFields = false;
 
@@ -1774,14 +1751,12 @@ class GcsDestination extends GeneratedMessage {
   GcsDestination.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GcsDestination clone() => new GcsDestination()..mergeFromMessage(this);
+  GcsDestination clone() => GcsDestination()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GcsDestination create() => new GcsDestination();
-  static PbList<GcsDestination> createRepeated() =>
-      new PbList<GcsDestination>();
+  static GcsDestination create() => GcsDestination();
+  static PbList<GcsDestination> createRepeated() => PbList<GcsDestination>();
   static GcsDestination getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGcsDestination();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGcsDestination();
     return _defaultInstance;
   }
 
@@ -1803,7 +1778,7 @@ class _ReadonlyGcsDestination extends GcsDestination with ReadonlyMessageMixin {
 }
 
 class OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadata')
+  static final BuilderInfo _i = BuilderInfo('OperationMetadata')
     ..e<OperationMetadata_State>(
         1,
         'state',
@@ -1832,14 +1807,14 @@ class OperationMetadata extends GeneratedMessage {
   OperationMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OperationMetadata clone() => new OperationMetadata()..mergeFromMessage(this);
+  OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OperationMetadata create() => new OperationMetadata();
+  static OperationMetadata create() => OperationMetadata();
   static PbList<OperationMetadata> createRepeated() =>
-      new PbList<OperationMetadata>();
+      PbList<OperationMetadata>();
   static OperationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadata();
+      _defaultInstance = _ReadonlyOperationMetadata();
     return _defaultInstance;
   }
 
@@ -1882,14 +1857,14 @@ class ImageAnnotatorApi {
 
   Future<BatchAnnotateImagesResponse> batchAnnotateImages(
       ClientContext ctx, BatchAnnotateImagesRequest request) {
-    var emptyResponse = new BatchAnnotateImagesResponse();
+    var emptyResponse = BatchAnnotateImagesResponse();
     return _client.invoke<BatchAnnotateImagesResponse>(
         ctx, 'ImageAnnotator', 'BatchAnnotateImages', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> asyncBatchAnnotateFiles(
       ClientContext ctx, AsyncBatchAnnotateFilesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(ctx, 'ImageAnnotator',
         'AsyncBatchAnnotateFiles', request, emptyResponse);
   }

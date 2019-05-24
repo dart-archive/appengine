@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Http extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Http')
+  static final BuilderInfo _i = BuilderInfo('Http')
     ..pp<HttpRule>(
         1, 'rules', PbFieldType.PM, HttpRule.$checkItem, HttpRule.create)
     ..aOB(2, 'fullyDecodeReservedExpansion')
@@ -20,12 +20,12 @@ class Http extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Http.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Http clone() => new Http()..mergeFromMessage(this);
+  Http clone() => Http()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Http create() => new Http();
-  static PbList<Http> createRepeated() => new PbList<Http>();
+  static Http create() => Http();
+  static PbList<Http> createRepeated() => PbList<Http>();
   static Http getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHttp();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHttp();
     return _defaultInstance;
   }
 
@@ -48,7 +48,7 @@ class Http extends GeneratedMessage {
 class _ReadonlyHttp extends Http with ReadonlyMessageMixin {}
 
 class HttpRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HttpRule')
+  static final BuilderInfo _i = BuilderInfo('HttpRule')
     ..aOS(1, 'selector')
     ..aOS(2, 'get')
     ..aOS(3, 'put')
@@ -68,12 +68,12 @@ class HttpRule extends GeneratedMessage {
       : super.fromBuffer(i, r);
   HttpRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HttpRule clone() => new HttpRule()..mergeFromMessage(this);
+  HttpRule clone() => HttpRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HttpRule create() => new HttpRule();
-  static PbList<HttpRule> createRepeated() => new PbList<HttpRule>();
+  static HttpRule create() => HttpRule();
+  static PbList<HttpRule> createRepeated() => PbList<HttpRule>();
   static HttpRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHttpRule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHttpRule();
     return _defaultInstance;
   }
 
@@ -152,7 +152,7 @@ class HttpRule extends GeneratedMessage {
 class _ReadonlyHttpRule extends HttpRule with ReadonlyMessageMixin {}
 
 class CustomHttpPattern extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CustomHttpPattern')
+  static final BuilderInfo _i = BuilderInfo('CustomHttpPattern')
     ..aOS(1, 'kind')
     ..aOS(2, 'path')
     ..hasRequiredFields = false;
@@ -164,14 +164,14 @@ class CustomHttpPattern extends GeneratedMessage {
   CustomHttpPattern.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CustomHttpPattern clone() => new CustomHttpPattern()..mergeFromMessage(this);
+  CustomHttpPattern clone() => CustomHttpPattern()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CustomHttpPattern create() => new CustomHttpPattern();
+  static CustomHttpPattern create() => CustomHttpPattern();
   static PbList<CustomHttpPattern> createRepeated() =>
-      new PbList<CustomHttpPattern>();
+      PbList<CustomHttpPattern>();
   static CustomHttpPattern getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomHttpPattern();
+      _defaultInstance = _ReadonlyCustomHttpPattern();
     return _defaultInstance;
   }
 

@@ -19,7 +19,7 @@ import 'servicemanager.pbenum.dart';
 export 'servicemanager.pbenum.dart';
 
 class ListServicesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServicesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListServicesRequest')
     ..aOS(1, 'producerProjectId')
     ..a<int>(5, 'pageSize', PbFieldType.O3)
     ..aOS(6, 'pageToken')
@@ -33,15 +33,14 @@ class ListServicesRequest extends GeneratedMessage {
   ListServicesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListServicesRequest clone() =>
-      new ListServicesRequest()..mergeFromMessage(this);
+  ListServicesRequest clone() => ListServicesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServicesRequest create() => new ListServicesRequest();
+  static ListServicesRequest create() => ListServicesRequest();
   static PbList<ListServicesRequest> createRepeated() =>
-      new PbList<ListServicesRequest>();
+      PbList<ListServicesRequest>();
   static ListServicesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServicesRequest();
+      _defaultInstance = _ReadonlyListServicesRequest();
     return _defaultInstance;
   }
 
@@ -87,7 +86,7 @@ class _ReadonlyListServicesRequest extends ListServicesRequest
     with ReadonlyMessageMixin {}
 
 class ListServicesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServicesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListServicesResponse')
     ..pp<ManagedService>(1, 'services', PbFieldType.PM,
         ManagedService.$checkItem, ManagedService.create)
     ..aOS(2, 'nextPageToken')
@@ -101,14 +100,14 @@ class ListServicesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServicesResponse clone() =>
-      new ListServicesResponse()..mergeFromMessage(this);
+      ListServicesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServicesResponse create() => new ListServicesResponse();
+  static ListServicesResponse create() => ListServicesResponse();
   static PbList<ListServicesResponse> createRepeated() =>
-      new PbList<ListServicesResponse>();
+      PbList<ListServicesResponse>();
   static ListServicesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServicesResponse();
+      _defaultInstance = _ReadonlyListServicesResponse();
     return _defaultInstance;
   }
 
@@ -132,7 +131,7 @@ class _ReadonlyListServicesResponse extends ListServicesResponse
     with ReadonlyMessageMixin {}
 
 class GetServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetServiceRequest')
     ..aOS(1, 'serviceName')
     ..hasRequiredFields = false;
 
@@ -143,14 +142,14 @@ class GetServiceRequest extends GeneratedMessage {
   GetServiceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetServiceRequest clone() => new GetServiceRequest()..mergeFromMessage(this);
+  GetServiceRequest clone() => GetServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetServiceRequest create() => new GetServiceRequest();
+  static GetServiceRequest create() => GetServiceRequest();
   static PbList<GetServiceRequest> createRepeated() =>
-      new PbList<GetServiceRequest>();
+      PbList<GetServiceRequest>();
   static GetServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetServiceRequest();
+      _defaultInstance = _ReadonlyGetServiceRequest();
     return _defaultInstance;
   }
 
@@ -172,7 +171,7 @@ class _ReadonlyGetServiceRequest extends GetServiceRequest
     with ReadonlyMessageMixin {}
 
 class CreateServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateServiceRequest')
     ..a<ManagedService>(1, 'service', PbFieldType.OM, ManagedService.getDefault,
         ManagedService.create)
     ..hasRequiredFields = false;
@@ -185,14 +184,14 @@ class CreateServiceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateServiceRequest clone() =>
-      new CreateServiceRequest()..mergeFromMessage(this);
+      CreateServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateServiceRequest create() => new CreateServiceRequest();
+  static CreateServiceRequest create() => CreateServiceRequest();
   static PbList<CreateServiceRequest> createRepeated() =>
-      new PbList<CreateServiceRequest>();
+      PbList<CreateServiceRequest>();
   static CreateServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateServiceRequest();
+      _defaultInstance = _ReadonlyCreateServiceRequest();
     return _defaultInstance;
   }
 
@@ -214,7 +213,7 @@ class _ReadonlyCreateServiceRequest extends CreateServiceRequest
     with ReadonlyMessageMixin {}
 
 class DeleteServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteServiceRequest')
     ..aOS(1, 'serviceName')
     ..hasRequiredFields = false;
 
@@ -226,14 +225,14 @@ class DeleteServiceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteServiceRequest clone() =>
-      new DeleteServiceRequest()..mergeFromMessage(this);
+      DeleteServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteServiceRequest create() => new DeleteServiceRequest();
+  static DeleteServiceRequest create() => DeleteServiceRequest();
   static PbList<DeleteServiceRequest> createRepeated() =>
-      new PbList<DeleteServiceRequest>();
+      PbList<DeleteServiceRequest>();
   static DeleteServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteServiceRequest();
+      _defaultInstance = _ReadonlyDeleteServiceRequest();
     return _defaultInstance;
   }
 
@@ -255,7 +254,7 @@ class _ReadonlyDeleteServiceRequest extends DeleteServiceRequest
     with ReadonlyMessageMixin {}
 
 class UndeleteServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('UndeleteServiceRequest')
     ..aOS(1, 'serviceName')
     ..hasRequiredFields = false;
 
@@ -267,14 +266,14 @@ class UndeleteServiceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UndeleteServiceRequest clone() =>
-      new UndeleteServiceRequest()..mergeFromMessage(this);
+      UndeleteServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UndeleteServiceRequest create() => new UndeleteServiceRequest();
+  static UndeleteServiceRequest create() => UndeleteServiceRequest();
   static PbList<UndeleteServiceRequest> createRepeated() =>
-      new PbList<UndeleteServiceRequest>();
+      PbList<UndeleteServiceRequest>();
   static UndeleteServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteServiceRequest();
+      _defaultInstance = _ReadonlyUndeleteServiceRequest();
     return _defaultInstance;
   }
 
@@ -297,7 +296,7 @@ class _ReadonlyUndeleteServiceRequest extends UndeleteServiceRequest
     with ReadonlyMessageMixin {}
 
 class UndeleteServiceResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteServiceResponse')
+  static final BuilderInfo _i = BuilderInfo('UndeleteServiceResponse')
     ..a<ManagedService>(1, 'service', PbFieldType.OM, ManagedService.getDefault,
         ManagedService.create)
     ..hasRequiredFields = false;
@@ -310,14 +309,14 @@ class UndeleteServiceResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UndeleteServiceResponse clone() =>
-      new UndeleteServiceResponse()..mergeFromMessage(this);
+      UndeleteServiceResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UndeleteServiceResponse create() => new UndeleteServiceResponse();
+  static UndeleteServiceResponse create() => UndeleteServiceResponse();
   static PbList<UndeleteServiceResponse> createRepeated() =>
-      new PbList<UndeleteServiceResponse>();
+      PbList<UndeleteServiceResponse>();
   static UndeleteServiceResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteServiceResponse();
+      _defaultInstance = _ReadonlyUndeleteServiceResponse();
     return _defaultInstance;
   }
 
@@ -340,7 +339,7 @@ class _ReadonlyUndeleteServiceResponse extends UndeleteServiceResponse
     with ReadonlyMessageMixin {}
 
 class GetServiceConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetServiceConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('GetServiceConfigRequest')
     ..aOS(1, 'serviceName')
     ..aOS(2, 'configId')
     ..e<GetServiceConfigRequest_ConfigView>(
@@ -360,14 +359,14 @@ class GetServiceConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetServiceConfigRequest clone() =>
-      new GetServiceConfigRequest()..mergeFromMessage(this);
+      GetServiceConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetServiceConfigRequest create() => new GetServiceConfigRequest();
+  static GetServiceConfigRequest create() => GetServiceConfigRequest();
   static PbList<GetServiceConfigRequest> createRepeated() =>
-      new PbList<GetServiceConfigRequest>();
+      PbList<GetServiceConfigRequest>();
   static GetServiceConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetServiceConfigRequest();
+      _defaultInstance = _ReadonlyGetServiceConfigRequest();
     return _defaultInstance;
   }
 
@@ -406,7 +405,7 @@ class _ReadonlyGetServiceConfigRequest extends GetServiceConfigRequest
     with ReadonlyMessageMixin {}
 
 class ListServiceConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServiceConfigsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListServiceConfigsRequest')
     ..aOS(1, 'serviceName')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -420,14 +419,14 @@ class ListServiceConfigsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServiceConfigsRequest clone() =>
-      new ListServiceConfigsRequest()..mergeFromMessage(this);
+      ListServiceConfigsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServiceConfigsRequest create() => new ListServiceConfigsRequest();
+  static ListServiceConfigsRequest create() => ListServiceConfigsRequest();
   static PbList<ListServiceConfigsRequest> createRepeated() =>
-      new PbList<ListServiceConfigsRequest>();
+      PbList<ListServiceConfigsRequest>();
   static ListServiceConfigsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServiceConfigsRequest();
+      _defaultInstance = _ReadonlyListServiceConfigsRequest();
     return _defaultInstance;
   }
 
@@ -466,7 +465,7 @@ class _ReadonlyListServiceConfigsRequest extends ListServiceConfigsRequest
     with ReadonlyMessageMixin {}
 
 class ListServiceConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServiceConfigsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListServiceConfigsResponse')
     ..pp<$google$api.Service>(1, 'serviceConfigs', PbFieldType.PM,
         $google$api.Service.$checkItem, $google$api.Service.create)
     ..aOS(2, 'nextPageToken')
@@ -480,15 +479,14 @@ class ListServiceConfigsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServiceConfigsResponse clone() =>
-      new ListServiceConfigsResponse()..mergeFromMessage(this);
+      ListServiceConfigsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServiceConfigsResponse create() =>
-      new ListServiceConfigsResponse();
+  static ListServiceConfigsResponse create() => ListServiceConfigsResponse();
   static PbList<ListServiceConfigsResponse> createRepeated() =>
-      new PbList<ListServiceConfigsResponse>();
+      PbList<ListServiceConfigsResponse>();
   static ListServiceConfigsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServiceConfigsResponse();
+      _defaultInstance = _ReadonlyListServiceConfigsResponse();
     return _defaultInstance;
   }
 
@@ -513,7 +511,7 @@ class _ReadonlyListServiceConfigsResponse extends ListServiceConfigsResponse
     with ReadonlyMessageMixin {}
 
 class CreateServiceConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateServiceConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateServiceConfigRequest')
     ..aOS(1, 'serviceName')
     ..a<$google$api.Service>(2, 'serviceConfig', PbFieldType.OM,
         $google$api.Service.getDefault, $google$api.Service.create)
@@ -527,15 +525,14 @@ class CreateServiceConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateServiceConfigRequest clone() =>
-      new CreateServiceConfigRequest()..mergeFromMessage(this);
+      CreateServiceConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateServiceConfigRequest create() =>
-      new CreateServiceConfigRequest();
+  static CreateServiceConfigRequest create() => CreateServiceConfigRequest();
   static PbList<CreateServiceConfigRequest> createRepeated() =>
-      new PbList<CreateServiceConfigRequest>();
+      PbList<CreateServiceConfigRequest>();
   static CreateServiceConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateServiceConfigRequest();
+      _defaultInstance = _ReadonlyCreateServiceConfigRequest();
     return _defaultInstance;
   }
 
@@ -566,7 +563,7 @@ class _ReadonlyCreateServiceConfigRequest extends CreateServiceConfigRequest
     with ReadonlyMessageMixin {}
 
 class SubmitConfigSourceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SubmitConfigSourceRequest')
+  static final BuilderInfo _i = BuilderInfo('SubmitConfigSourceRequest')
     ..aOS(1, 'serviceName')
     ..a<ConfigSource>(2, 'configSource', PbFieldType.OM,
         ConfigSource.getDefault, ConfigSource.create)
@@ -581,14 +578,14 @@ class SubmitConfigSourceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SubmitConfigSourceRequest clone() =>
-      new SubmitConfigSourceRequest()..mergeFromMessage(this);
+      SubmitConfigSourceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SubmitConfigSourceRequest create() => new SubmitConfigSourceRequest();
+  static SubmitConfigSourceRequest create() => SubmitConfigSourceRequest();
   static PbList<SubmitConfigSourceRequest> createRepeated() =>
-      new PbList<SubmitConfigSourceRequest>();
+      PbList<SubmitConfigSourceRequest>();
   static SubmitConfigSourceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySubmitConfigSourceRequest();
+      _defaultInstance = _ReadonlySubmitConfigSourceRequest();
     return _defaultInstance;
   }
 
@@ -627,7 +624,7 @@ class _ReadonlySubmitConfigSourceRequest extends SubmitConfigSourceRequest
     with ReadonlyMessageMixin {}
 
 class SubmitConfigSourceResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SubmitConfigSourceResponse')
+  static final BuilderInfo _i = BuilderInfo('SubmitConfigSourceResponse')
     ..a<$google$api.Service>(1, 'serviceConfig', PbFieldType.OM,
         $google$api.Service.getDefault, $google$api.Service.create)
     ..hasRequiredFields = false;
@@ -640,15 +637,14 @@ class SubmitConfigSourceResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SubmitConfigSourceResponse clone() =>
-      new SubmitConfigSourceResponse()..mergeFromMessage(this);
+      SubmitConfigSourceResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SubmitConfigSourceResponse create() =>
-      new SubmitConfigSourceResponse();
+  static SubmitConfigSourceResponse create() => SubmitConfigSourceResponse();
   static PbList<SubmitConfigSourceResponse> createRepeated() =>
-      new PbList<SubmitConfigSourceResponse>();
+      PbList<SubmitConfigSourceResponse>();
   static SubmitConfigSourceResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySubmitConfigSourceResponse();
+      _defaultInstance = _ReadonlySubmitConfigSourceResponse();
     return _defaultInstance;
   }
 
@@ -671,7 +667,7 @@ class _ReadonlySubmitConfigSourceResponse extends SubmitConfigSourceResponse
     with ReadonlyMessageMixin {}
 
 class CreateServiceRolloutRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateServiceRolloutRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateServiceRolloutRequest')
     ..aOS(1, 'serviceName')
     ..a<Rollout>(
         2, 'rollout', PbFieldType.OM, Rollout.getDefault, Rollout.create)
@@ -685,15 +681,14 @@ class CreateServiceRolloutRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateServiceRolloutRequest clone() =>
-      new CreateServiceRolloutRequest()..mergeFromMessage(this);
+      CreateServiceRolloutRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateServiceRolloutRequest create() =>
-      new CreateServiceRolloutRequest();
+  static CreateServiceRolloutRequest create() => CreateServiceRolloutRequest();
   static PbList<CreateServiceRolloutRequest> createRepeated() =>
-      new PbList<CreateServiceRolloutRequest>();
+      PbList<CreateServiceRolloutRequest>();
   static CreateServiceRolloutRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateServiceRolloutRequest();
+      _defaultInstance = _ReadonlyCreateServiceRolloutRequest();
     return _defaultInstance;
   }
 
@@ -724,7 +719,7 @@ class _ReadonlyCreateServiceRolloutRequest extends CreateServiceRolloutRequest
     with ReadonlyMessageMixin {}
 
 class ListServiceRolloutsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServiceRolloutsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListServiceRolloutsRequest')
     ..aOS(1, 'serviceName')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -739,15 +734,14 @@ class ListServiceRolloutsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServiceRolloutsRequest clone() =>
-      new ListServiceRolloutsRequest()..mergeFromMessage(this);
+      ListServiceRolloutsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServiceRolloutsRequest create() =>
-      new ListServiceRolloutsRequest();
+  static ListServiceRolloutsRequest create() => ListServiceRolloutsRequest();
   static PbList<ListServiceRolloutsRequest> createRepeated() =>
-      new PbList<ListServiceRolloutsRequest>();
+      PbList<ListServiceRolloutsRequest>();
   static ListServiceRolloutsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServiceRolloutsRequest();
+      _defaultInstance = _ReadonlyListServiceRolloutsRequest();
     return _defaultInstance;
   }
 
@@ -794,7 +788,7 @@ class _ReadonlyListServiceRolloutsRequest extends ListServiceRolloutsRequest
     with ReadonlyMessageMixin {}
 
 class ListServiceRolloutsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServiceRolloutsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListServiceRolloutsResponse')
     ..pp<Rollout>(
         1, 'rollouts', PbFieldType.PM, Rollout.$checkItem, Rollout.create)
     ..aOS(2, 'nextPageToken')
@@ -808,15 +802,14 @@ class ListServiceRolloutsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServiceRolloutsResponse clone() =>
-      new ListServiceRolloutsResponse()..mergeFromMessage(this);
+      ListServiceRolloutsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServiceRolloutsResponse create() =>
-      new ListServiceRolloutsResponse();
+  static ListServiceRolloutsResponse create() => ListServiceRolloutsResponse();
   static PbList<ListServiceRolloutsResponse> createRepeated() =>
-      new PbList<ListServiceRolloutsResponse>();
+      PbList<ListServiceRolloutsResponse>();
   static ListServiceRolloutsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServiceRolloutsResponse();
+      _defaultInstance = _ReadonlyListServiceRolloutsResponse();
     return _defaultInstance;
   }
 
@@ -841,7 +834,7 @@ class _ReadonlyListServiceRolloutsResponse extends ListServiceRolloutsResponse
     with ReadonlyMessageMixin {}
 
 class GetServiceRolloutRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetServiceRolloutRequest')
+  static final BuilderInfo _i = BuilderInfo('GetServiceRolloutRequest')
     ..aOS(1, 'serviceName')
     ..aOS(2, 'rolloutId')
     ..hasRequiredFields = false;
@@ -854,14 +847,14 @@ class GetServiceRolloutRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetServiceRolloutRequest clone() =>
-      new GetServiceRolloutRequest()..mergeFromMessage(this);
+      GetServiceRolloutRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetServiceRolloutRequest create() => new GetServiceRolloutRequest();
+  static GetServiceRolloutRequest create() => GetServiceRolloutRequest();
   static PbList<GetServiceRolloutRequest> createRepeated() =>
-      new PbList<GetServiceRolloutRequest>();
+      PbList<GetServiceRolloutRequest>();
   static GetServiceRolloutRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetServiceRolloutRequest();
+      _defaultInstance = _ReadonlyGetServiceRolloutRequest();
     return _defaultInstance;
   }
 
@@ -892,7 +885,7 @@ class _ReadonlyGetServiceRolloutRequest extends GetServiceRolloutRequest
     with ReadonlyMessageMixin {}
 
 class EnableServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EnableServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('EnableServiceRequest')
     ..aOS(1, 'serviceName')
     ..aOS(2, 'consumerId')
     ..hasRequiredFields = false;
@@ -905,14 +898,14 @@ class EnableServiceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   EnableServiceRequest clone() =>
-      new EnableServiceRequest()..mergeFromMessage(this);
+      EnableServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EnableServiceRequest create() => new EnableServiceRequest();
+  static EnableServiceRequest create() => EnableServiceRequest();
   static PbList<EnableServiceRequest> createRepeated() =>
-      new PbList<EnableServiceRequest>();
+      PbList<EnableServiceRequest>();
   static EnableServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEnableServiceRequest();
+      _defaultInstance = _ReadonlyEnableServiceRequest();
     return _defaultInstance;
   }
 
@@ -942,7 +935,7 @@ class _ReadonlyEnableServiceRequest extends EnableServiceRequest
     with ReadonlyMessageMixin {}
 
 class DisableServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DisableServiceRequest')
+  static final BuilderInfo _i = BuilderInfo('DisableServiceRequest')
     ..aOS(1, 'serviceName')
     ..aOS(2, 'consumerId')
     ..hasRequiredFields = false;
@@ -955,14 +948,14 @@ class DisableServiceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DisableServiceRequest clone() =>
-      new DisableServiceRequest()..mergeFromMessage(this);
+      DisableServiceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DisableServiceRequest create() => new DisableServiceRequest();
+  static DisableServiceRequest create() => DisableServiceRequest();
   static PbList<DisableServiceRequest> createRepeated() =>
-      new PbList<DisableServiceRequest>();
+      PbList<DisableServiceRequest>();
   static DisableServiceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDisableServiceRequest();
+      _defaultInstance = _ReadonlyDisableServiceRequest();
     return _defaultInstance;
   }
 
@@ -993,7 +986,7 @@ class _ReadonlyDisableServiceRequest extends DisableServiceRequest
     with ReadonlyMessageMixin {}
 
 class GenerateConfigReportRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GenerateConfigReportRequest')
+  static final BuilderInfo _i = BuilderInfo('GenerateConfigReportRequest')
     ..a<$google$protobuf.Any>(1, 'newConfig', PbFieldType.OM,
         $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
     ..a<$google$protobuf.Any>(2, 'oldConfig', PbFieldType.OM,
@@ -1008,15 +1001,14 @@ class GenerateConfigReportRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GenerateConfigReportRequest clone() =>
-      new GenerateConfigReportRequest()..mergeFromMessage(this);
+      GenerateConfigReportRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GenerateConfigReportRequest create() =>
-      new GenerateConfigReportRequest();
+  static GenerateConfigReportRequest create() => GenerateConfigReportRequest();
   static PbList<GenerateConfigReportRequest> createRepeated() =>
-      new PbList<GenerateConfigReportRequest>();
+      PbList<GenerateConfigReportRequest>();
   static GenerateConfigReportRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGenerateConfigReportRequest();
+      _defaultInstance = _ReadonlyGenerateConfigReportRequest();
     return _defaultInstance;
   }
 
@@ -1047,7 +1039,7 @@ class _ReadonlyGenerateConfigReportRequest extends GenerateConfigReportRequest
     with ReadonlyMessageMixin {}
 
 class GenerateConfigReportResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GenerateConfigReportResponse')
+  static final BuilderInfo _i = BuilderInfo('GenerateConfigReportResponse')
     ..aOS(1, 'serviceName')
     ..aOS(2, 'id')
     ..pp<ChangeReport>(3, 'changeReports', PbFieldType.PM,
@@ -1064,15 +1056,15 @@ class GenerateConfigReportResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GenerateConfigReportResponse clone() =>
-      new GenerateConfigReportResponse()..mergeFromMessage(this);
+      GenerateConfigReportResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GenerateConfigReportResponse create() =>
-      new GenerateConfigReportResponse();
+      GenerateConfigReportResponse();
   static PbList<GenerateConfigReportResponse> createRepeated() =>
-      new PbList<GenerateConfigReportResponse>();
+      PbList<GenerateConfigReportResponse>();
   static GenerateConfigReportResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGenerateConfigReportResponse();
+      _defaultInstance = _ReadonlyGenerateConfigReportResponse();
     return _defaultInstance;
   }
 
@@ -1112,105 +1104,105 @@ class ServiceManagerApi {
 
   Future<ListServicesResponse> listServices(
       ClientContext ctx, ListServicesRequest request) {
-    var emptyResponse = new ListServicesResponse();
+    var emptyResponse = ListServicesResponse();
     return _client.invoke<ListServicesResponse>(
         ctx, 'ServiceManager', 'ListServices', request, emptyResponse);
   }
 
   Future<ManagedService> getService(
       ClientContext ctx, GetServiceRequest request) {
-    var emptyResponse = new ManagedService();
+    var emptyResponse = ManagedService();
     return _client.invoke<ManagedService>(
         ctx, 'ServiceManager', 'GetService', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createService(
       ClientContext ctx, CreateServiceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ServiceManager', 'CreateService', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> deleteService(
       ClientContext ctx, DeleteServiceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ServiceManager', 'DeleteService', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> undeleteService(
       ClientContext ctx, UndeleteServiceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ServiceManager', 'UndeleteService', request, emptyResponse);
   }
 
   Future<ListServiceConfigsResponse> listServiceConfigs(
       ClientContext ctx, ListServiceConfigsRequest request) {
-    var emptyResponse = new ListServiceConfigsResponse();
+    var emptyResponse = ListServiceConfigsResponse();
     return _client.invoke<ListServiceConfigsResponse>(
         ctx, 'ServiceManager', 'ListServiceConfigs', request, emptyResponse);
   }
 
   Future<$google$api.Service> getServiceConfig(
       ClientContext ctx, GetServiceConfigRequest request) {
-    var emptyResponse = new $google$api.Service();
+    var emptyResponse = $google$api.Service();
     return _client.invoke<$google$api.Service>(
         ctx, 'ServiceManager', 'GetServiceConfig', request, emptyResponse);
   }
 
   Future<$google$api.Service> createServiceConfig(
       ClientContext ctx, CreateServiceConfigRequest request) {
-    var emptyResponse = new $google$api.Service();
+    var emptyResponse = $google$api.Service();
     return _client.invoke<$google$api.Service>(
         ctx, 'ServiceManager', 'CreateServiceConfig', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> submitConfigSource(
       ClientContext ctx, SubmitConfigSourceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ServiceManager', 'SubmitConfigSource', request, emptyResponse);
   }
 
   Future<ListServiceRolloutsResponse> listServiceRollouts(
       ClientContext ctx, ListServiceRolloutsRequest request) {
-    var emptyResponse = new ListServiceRolloutsResponse();
+    var emptyResponse = ListServiceRolloutsResponse();
     return _client.invoke<ListServiceRolloutsResponse>(
         ctx, 'ServiceManager', 'ListServiceRollouts', request, emptyResponse);
   }
 
   Future<Rollout> getServiceRollout(
       ClientContext ctx, GetServiceRolloutRequest request) {
-    var emptyResponse = new Rollout();
+    var emptyResponse = Rollout();
     return _client.invoke<Rollout>(
         ctx, 'ServiceManager', 'GetServiceRollout', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createServiceRollout(
       ClientContext ctx, CreateServiceRolloutRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ServiceManager', 'CreateServiceRollout', request, emptyResponse);
   }
 
   Future<GenerateConfigReportResponse> generateConfigReport(
       ClientContext ctx, GenerateConfigReportRequest request) {
-    var emptyResponse = new GenerateConfigReportResponse();
+    var emptyResponse = GenerateConfigReportResponse();
     return _client.invoke<GenerateConfigReportResponse>(
         ctx, 'ServiceManager', 'GenerateConfigReport', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> enableService(
       ClientContext ctx, EnableServiceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ServiceManager', 'EnableService', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> disableService(
       ClientContext ctx, DisableServiceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ServiceManager', 'DisableService', request, emptyResponse);
   }

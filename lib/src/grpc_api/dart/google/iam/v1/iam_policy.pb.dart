@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart';
 import 'policy.pb.dart';
 
 class SetIamPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetIamPolicyRequest')
+  static final BuilderInfo _i = BuilderInfo('SetIamPolicyRequest')
     ..aOS(1, 'resource')
     ..a<Policy>(2, 'policy', PbFieldType.OM, Policy.getDefault, Policy.create)
     ..hasRequiredFields = false;
@@ -24,15 +24,14 @@ class SetIamPolicyRequest extends GeneratedMessage {
   SetIamPolicyRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SetIamPolicyRequest clone() =>
-      new SetIamPolicyRequest()..mergeFromMessage(this);
+  SetIamPolicyRequest clone() => SetIamPolicyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SetIamPolicyRequest create() => new SetIamPolicyRequest();
+  static SetIamPolicyRequest create() => SetIamPolicyRequest();
   static PbList<SetIamPolicyRequest> createRepeated() =>
-      new PbList<SetIamPolicyRequest>();
+      PbList<SetIamPolicyRequest>();
   static SetIamPolicyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetIamPolicyRequest();
+      _defaultInstance = _ReadonlySetIamPolicyRequest();
     return _defaultInstance;
   }
 
@@ -62,7 +61,7 @@ class _ReadonlySetIamPolicyRequest extends SetIamPolicyRequest
     with ReadonlyMessageMixin {}
 
 class GetIamPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetIamPolicyRequest')
+  static final BuilderInfo _i = BuilderInfo('GetIamPolicyRequest')
     ..aOS(1, 'resource')
     ..hasRequiredFields = false;
 
@@ -73,15 +72,14 @@ class GetIamPolicyRequest extends GeneratedMessage {
   GetIamPolicyRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetIamPolicyRequest clone() =>
-      new GetIamPolicyRequest()..mergeFromMessage(this);
+  GetIamPolicyRequest clone() => GetIamPolicyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetIamPolicyRequest create() => new GetIamPolicyRequest();
+  static GetIamPolicyRequest create() => GetIamPolicyRequest();
   static PbList<GetIamPolicyRequest> createRepeated() =>
-      new PbList<GetIamPolicyRequest>();
+      PbList<GetIamPolicyRequest>();
   static GetIamPolicyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetIamPolicyRequest();
+      _defaultInstance = _ReadonlyGetIamPolicyRequest();
     return _defaultInstance;
   }
 
@@ -103,7 +101,7 @@ class _ReadonlyGetIamPolicyRequest extends GetIamPolicyRequest
     with ReadonlyMessageMixin {}
 
 class TestIamPermissionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TestIamPermissionsRequest')
+  static final BuilderInfo _i = BuilderInfo('TestIamPermissionsRequest')
     ..aOS(1, 'resource')
     ..pPS(2, 'permissions')
     ..hasRequiredFields = false;
@@ -116,14 +114,14 @@ class TestIamPermissionsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestIamPermissionsRequest clone() =>
-      new TestIamPermissionsRequest()..mergeFromMessage(this);
+      TestIamPermissionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TestIamPermissionsRequest create() => new TestIamPermissionsRequest();
+  static TestIamPermissionsRequest create() => TestIamPermissionsRequest();
   static PbList<TestIamPermissionsRequest> createRepeated() =>
-      new PbList<TestIamPermissionsRequest>();
+      PbList<TestIamPermissionsRequest>();
   static TestIamPermissionsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestIamPermissionsRequest();
+      _defaultInstance = _ReadonlyTestIamPermissionsRequest();
     return _defaultInstance;
   }
 
@@ -148,7 +146,7 @@ class _ReadonlyTestIamPermissionsRequest extends TestIamPermissionsRequest
     with ReadonlyMessageMixin {}
 
 class TestIamPermissionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TestIamPermissionsResponse')
+  static final BuilderInfo _i = BuilderInfo('TestIamPermissionsResponse')
     ..pPS(1, 'permissions')
     ..hasRequiredFields = false;
 
@@ -160,15 +158,14 @@ class TestIamPermissionsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestIamPermissionsResponse clone() =>
-      new TestIamPermissionsResponse()..mergeFromMessage(this);
+      TestIamPermissionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TestIamPermissionsResponse create() =>
-      new TestIamPermissionsResponse();
+  static TestIamPermissionsResponse create() => TestIamPermissionsResponse();
   static PbList<TestIamPermissionsResponse> createRepeated() =>
-      new PbList<TestIamPermissionsResponse>();
+      PbList<TestIamPermissionsResponse>();
   static TestIamPermissionsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestIamPermissionsResponse();
+      _defaultInstance = _ReadonlyTestIamPermissionsResponse();
     return _defaultInstance;
   }
 
@@ -189,20 +186,20 @@ class IAMPolicyApi {
   IAMPolicyApi(this._client);
 
   Future<Policy> setIamPolicy(ClientContext ctx, SetIamPolicyRequest request) {
-    var emptyResponse = new Policy();
+    var emptyResponse = Policy();
     return _client.invoke<Policy>(
         ctx, 'IAMPolicy', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<Policy> getIamPolicy(ClientContext ctx, GetIamPolicyRequest request) {
-    var emptyResponse = new Policy();
+    var emptyResponse = Policy();
     return _client.invoke<Policy>(
         ctx, 'IAMPolicy', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, TestIamPermissionsRequest request) {
-    var emptyResponse = new TestIamPermissionsResponse();
+    var emptyResponse = TestIamPermissionsResponse();
     return _client.invoke<TestIamPermissionsResponse>(
         ctx, 'IAMPolicy', 'TestIamPermissions', request, emptyResponse);
   }

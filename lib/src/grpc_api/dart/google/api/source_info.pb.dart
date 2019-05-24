@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../protobuf/any.pb.dart' as $google$protobuf;
 
 class SourceInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceInfo')
+  static final BuilderInfo _i = BuilderInfo('SourceInfo')
     ..pp<$google$protobuf.Any>(1, 'sourceFiles', PbFieldType.PM,
         $google$protobuf.Any.$checkItem, $google$protobuf.Any.create)
     ..hasRequiredFields = false;
@@ -22,12 +22,12 @@ class SourceInfo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   SourceInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceInfo clone() => new SourceInfo()..mergeFromMessage(this);
+  SourceInfo clone() => SourceInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceInfo create() => new SourceInfo();
-  static PbList<SourceInfo> createRepeated() => new PbList<SourceInfo>();
+  static SourceInfo create() => SourceInfo();
+  static PbList<SourceInfo> createRepeated() => PbList<SourceInfo>();
   static SourceInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySourceInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceInfo();
     return _defaultInstance;
   }
 

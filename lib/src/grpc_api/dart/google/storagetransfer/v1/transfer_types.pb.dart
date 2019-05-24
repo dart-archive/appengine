@@ -20,7 +20,7 @@ import '../../rpc/code.pbenum.dart' as $google$rpc;
 export 'transfer_types.pbenum.dart';
 
 class GoogleServiceAccount extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GoogleServiceAccount')
+  static final BuilderInfo _i = BuilderInfo('GoogleServiceAccount')
     ..aOS(1, 'accountEmail')
     ..hasRequiredFields = false;
 
@@ -32,14 +32,14 @@ class GoogleServiceAccount extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GoogleServiceAccount clone() =>
-      new GoogleServiceAccount()..mergeFromMessage(this);
+      GoogleServiceAccount()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GoogleServiceAccount create() => new GoogleServiceAccount();
+  static GoogleServiceAccount create() => GoogleServiceAccount();
   static PbList<GoogleServiceAccount> createRepeated() =>
-      new PbList<GoogleServiceAccount>();
+      PbList<GoogleServiceAccount>();
   static GoogleServiceAccount getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGoogleServiceAccount();
+      _defaultInstance = _ReadonlyGoogleServiceAccount();
     return _defaultInstance;
   }
 
@@ -61,7 +61,7 @@ class _ReadonlyGoogleServiceAccount extends GoogleServiceAccount
     with ReadonlyMessageMixin {}
 
 class AwsAccessKey extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AwsAccessKey')
+  static final BuilderInfo _i = BuilderInfo('AwsAccessKey')
     ..aOS(1, 'accessKeyId')
     ..aOS(2, 'secretAccessKey')
     ..hasRequiredFields = false;
@@ -73,13 +73,12 @@ class AwsAccessKey extends GeneratedMessage {
   AwsAccessKey.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AwsAccessKey clone() => new AwsAccessKey()..mergeFromMessage(this);
+  AwsAccessKey clone() => AwsAccessKey()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AwsAccessKey create() => new AwsAccessKey();
-  static PbList<AwsAccessKey> createRepeated() => new PbList<AwsAccessKey>();
+  static AwsAccessKey create() => AwsAccessKey();
+  static PbList<AwsAccessKey> createRepeated() => PbList<AwsAccessKey>();
   static AwsAccessKey getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAwsAccessKey();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAwsAccessKey();
     return _defaultInstance;
   }
 
@@ -108,7 +107,7 @@ class AwsAccessKey extends GeneratedMessage {
 class _ReadonlyAwsAccessKey extends AwsAccessKey with ReadonlyMessageMixin {}
 
 class ObjectConditions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ObjectConditions')
+  static final BuilderInfo _i = BuilderInfo('ObjectConditions')
     ..a<$google$protobuf.Duration>(
         1,
         'minTimeElapsedSinceLastModification',
@@ -132,14 +131,14 @@ class ObjectConditions extends GeneratedMessage {
   ObjectConditions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ObjectConditions clone() => new ObjectConditions()..mergeFromMessage(this);
+  ObjectConditions clone() => ObjectConditions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ObjectConditions create() => new ObjectConditions();
+  static ObjectConditions create() => ObjectConditions();
   static PbList<ObjectConditions> createRepeated() =>
-      new PbList<ObjectConditions>();
+      PbList<ObjectConditions>();
   static ObjectConditions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyObjectConditions();
+      _defaultInstance = _ReadonlyObjectConditions();
     return _defaultInstance;
   }
 
@@ -175,7 +174,7 @@ class _ReadonlyObjectConditions extends ObjectConditions
     with ReadonlyMessageMixin {}
 
 class GcsData extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GcsData')
+  static final BuilderInfo _i = BuilderInfo('GcsData')
     ..aOS(1, 'bucketName')
     ..hasRequiredFields = false;
 
@@ -185,12 +184,12 @@ class GcsData extends GeneratedMessage {
       : super.fromBuffer(i, r);
   GcsData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GcsData clone() => new GcsData()..mergeFromMessage(this);
+  GcsData clone() => GcsData()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GcsData create() => new GcsData();
-  static PbList<GcsData> createRepeated() => new PbList<GcsData>();
+  static GcsData create() => GcsData();
+  static PbList<GcsData> createRepeated() => PbList<GcsData>();
   static GcsData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGcsData();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGcsData();
     return _defaultInstance;
   }
 
@@ -211,7 +210,7 @@ class GcsData extends GeneratedMessage {
 class _ReadonlyGcsData extends GcsData with ReadonlyMessageMixin {}
 
 class AwsS3Data extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AwsS3Data')
+  static final BuilderInfo _i = BuilderInfo('AwsS3Data')
     ..aOS(1, 'bucketName')
     ..a<AwsAccessKey>(2, 'awsAccessKey', PbFieldType.OM,
         AwsAccessKey.getDefault, AwsAccessKey.create)
@@ -223,12 +222,12 @@ class AwsS3Data extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AwsS3Data.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AwsS3Data clone() => new AwsS3Data()..mergeFromMessage(this);
+  AwsS3Data clone() => AwsS3Data()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AwsS3Data create() => new AwsS3Data();
-  static PbList<AwsS3Data> createRepeated() => new PbList<AwsS3Data>();
+  static AwsS3Data create() => AwsS3Data();
+  static PbList<AwsS3Data> createRepeated() => PbList<AwsS3Data>();
   static AwsS3Data getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAwsS3Data();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAwsS3Data();
     return _defaultInstance;
   }
 
@@ -257,7 +256,7 @@ class AwsS3Data extends GeneratedMessage {
 class _ReadonlyAwsS3Data extends AwsS3Data with ReadonlyMessageMixin {}
 
 class HttpData extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HttpData')
+  static final BuilderInfo _i = BuilderInfo('HttpData')
     ..aOS(1, 'listUrl')
     ..hasRequiredFields = false;
 
@@ -267,12 +266,12 @@ class HttpData extends GeneratedMessage {
       : super.fromBuffer(i, r);
   HttpData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HttpData clone() => new HttpData()..mergeFromMessage(this);
+  HttpData clone() => HttpData()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HttpData create() => new HttpData();
-  static PbList<HttpData> createRepeated() => new PbList<HttpData>();
+  static HttpData create() => HttpData();
+  static PbList<HttpData> createRepeated() => PbList<HttpData>();
   static HttpData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHttpData();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHttpData();
     return _defaultInstance;
   }
 
@@ -293,7 +292,7 @@ class HttpData extends GeneratedMessage {
 class _ReadonlyHttpData extends HttpData with ReadonlyMessageMixin {}
 
 class TransferOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransferOptions')
+  static final BuilderInfo _i = BuilderInfo('TransferOptions')
     ..aOB(1, 'overwriteObjectsAlreadyExistingInSink')
     ..aOB(2, 'deleteObjectsUniqueInSink')
     ..aOB(3, 'deleteObjectsFromSourceAfterTransfer')
@@ -306,14 +305,12 @@ class TransferOptions extends GeneratedMessage {
   TransferOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransferOptions clone() => new TransferOptions()..mergeFromMessage(this);
+  TransferOptions clone() => TransferOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransferOptions create() => new TransferOptions();
-  static PbList<TransferOptions> createRepeated() =>
-      new PbList<TransferOptions>();
+  static TransferOptions create() => TransferOptions();
+  static PbList<TransferOptions> createRepeated() => PbList<TransferOptions>();
   static TransferOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransferOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTransferOptions();
     return _defaultInstance;
   }
 
@@ -351,7 +348,7 @@ class _ReadonlyTransferOptions extends TransferOptions
     with ReadonlyMessageMixin {}
 
 class TransferSpec extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransferSpec')
+  static final BuilderInfo _i = BuilderInfo('TransferSpec')
     ..a<GcsData>(
         1, 'gcsDataSource', PbFieldType.OM, GcsData.getDefault, GcsData.create)
     ..a<AwsS3Data>(2, 'awsS3DataSource', PbFieldType.OM, AwsS3Data.getDefault,
@@ -373,13 +370,12 @@ class TransferSpec extends GeneratedMessage {
   TransferSpec.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransferSpec clone() => new TransferSpec()..mergeFromMessage(this);
+  TransferSpec clone() => TransferSpec()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransferSpec create() => new TransferSpec();
-  static PbList<TransferSpec> createRepeated() => new PbList<TransferSpec>();
+  static TransferSpec create() => TransferSpec();
+  static PbList<TransferSpec> createRepeated() => PbList<TransferSpec>();
   static TransferSpec getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransferSpec();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTransferSpec();
     return _defaultInstance;
   }
 
@@ -440,7 +436,7 @@ class TransferSpec extends GeneratedMessage {
 class _ReadonlyTransferSpec extends TransferSpec with ReadonlyMessageMixin {}
 
 class Schedule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Schedule')
+  static final BuilderInfo _i = BuilderInfo('Schedule')
     ..a<$google$type.Date>(1, 'scheduleStartDate', PbFieldType.OM,
         $google$type.Date.getDefault, $google$type.Date.create)
     ..a<$google$type.Date>(2, 'scheduleEndDate', PbFieldType.OM,
@@ -455,12 +451,12 @@ class Schedule extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Schedule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Schedule clone() => new Schedule()..mergeFromMessage(this);
+  Schedule clone() => Schedule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Schedule create() => new Schedule();
-  static PbList<Schedule> createRepeated() => new PbList<Schedule>();
+  static Schedule create() => Schedule();
+  static PbList<Schedule> createRepeated() => PbList<Schedule>();
   static Schedule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySchedule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySchedule();
     return _defaultInstance;
   }
 
@@ -497,7 +493,7 @@ class Schedule extends GeneratedMessage {
 class _ReadonlySchedule extends Schedule with ReadonlyMessageMixin {}
 
 class TransferJob extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransferJob')
+  static final BuilderInfo _i = BuilderInfo('TransferJob')
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOS(3, 'projectId')
@@ -539,12 +535,12 @@ class TransferJob extends GeneratedMessage {
   TransferJob.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransferJob clone() => new TransferJob()..mergeFromMessage(this);
+  TransferJob clone() => TransferJob()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransferJob create() => new TransferJob();
-  static PbList<TransferJob> createRepeated() => new PbList<TransferJob>();
+  static TransferJob create() => TransferJob();
+  static PbList<TransferJob> createRepeated() => PbList<TransferJob>();
   static TransferJob getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTransferJob();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTransferJob();
     return _defaultInstance;
   }
 
@@ -629,7 +625,7 @@ class TransferJob extends GeneratedMessage {
 class _ReadonlyTransferJob extends TransferJob with ReadonlyMessageMixin {}
 
 class ErrorLogEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ErrorLogEntry')
+  static final BuilderInfo _i = BuilderInfo('ErrorLogEntry')
     ..aOS(1, 'url')
     ..pPS(3, 'errorDetails')
     ..hasRequiredFields = false;
@@ -641,13 +637,12 @@ class ErrorLogEntry extends GeneratedMessage {
   ErrorLogEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ErrorLogEntry clone() => new ErrorLogEntry()..mergeFromMessage(this);
+  ErrorLogEntry clone() => ErrorLogEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ErrorLogEntry create() => new ErrorLogEntry();
-  static PbList<ErrorLogEntry> createRepeated() => new PbList<ErrorLogEntry>();
+  static ErrorLogEntry create() => ErrorLogEntry();
+  static PbList<ErrorLogEntry> createRepeated() => PbList<ErrorLogEntry>();
   static ErrorLogEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyErrorLogEntry();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyErrorLogEntry();
     return _defaultInstance;
   }
 
@@ -670,7 +665,7 @@ class ErrorLogEntry extends GeneratedMessage {
 class _ReadonlyErrorLogEntry extends ErrorLogEntry with ReadonlyMessageMixin {}
 
 class ErrorSummary extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ErrorSummary')
+  static final BuilderInfo _i = BuilderInfo('ErrorSummary')
     ..e<$google$rpc.Code>(1, 'errorCode', PbFieldType.OE, $google$rpc.Code.OK,
         $google$rpc.Code.valueOf, $google$rpc.Code.values)
     ..aInt64(2, 'errorCount')
@@ -685,13 +680,12 @@ class ErrorSummary extends GeneratedMessage {
   ErrorSummary.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ErrorSummary clone() => new ErrorSummary()..mergeFromMessage(this);
+  ErrorSummary clone() => ErrorSummary()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ErrorSummary create() => new ErrorSummary();
-  static PbList<ErrorSummary> createRepeated() => new PbList<ErrorSummary>();
+  static ErrorSummary create() => ErrorSummary();
+  static PbList<ErrorSummary> createRepeated() => PbList<ErrorSummary>();
   static ErrorSummary getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyErrorSummary();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyErrorSummary();
     return _defaultInstance;
   }
 
@@ -722,7 +716,7 @@ class ErrorSummary extends GeneratedMessage {
 class _ReadonlyErrorSummary extends ErrorSummary with ReadonlyMessageMixin {}
 
 class TransferCounters extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransferCounters')
+  static final BuilderInfo _i = BuilderInfo('TransferCounters')
     ..aInt64(1, 'objectsFoundFromSource')
     ..aInt64(2, 'bytesFoundFromSource')
     ..aInt64(3, 'objectsFoundOnlyFromSink')
@@ -748,14 +742,14 @@ class TransferCounters extends GeneratedMessage {
   TransferCounters.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransferCounters clone() => new TransferCounters()..mergeFromMessage(this);
+  TransferCounters clone() => TransferCounters()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransferCounters create() => new TransferCounters();
+  static TransferCounters create() => TransferCounters();
   static PbList<TransferCounters> createRepeated() =>
-      new PbList<TransferCounters>();
+      PbList<TransferCounters>();
   static TransferCounters getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransferCounters();
+      _defaultInstance = _ReadonlyTransferCounters();
     return _defaultInstance;
   }
 
@@ -897,7 +891,7 @@ class _ReadonlyTransferCounters extends TransferCounters
     with ReadonlyMessageMixin {}
 
 class TransferOperation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransferOperation')
+  static final BuilderInfo _i = BuilderInfo('TransferOperation')
     ..aOS(1, 'name')
     ..aOS(2, 'projectId')
     ..a<TransferSpec>(3, 'transferSpec', PbFieldType.OM,
@@ -935,14 +929,14 @@ class TransferOperation extends GeneratedMessage {
   TransferOperation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransferOperation clone() => new TransferOperation()..mergeFromMessage(this);
+  TransferOperation clone() => TransferOperation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransferOperation create() => new TransferOperation();
+  static TransferOperation create() => TransferOperation();
   static PbList<TransferOperation> createRepeated() =>
-      new PbList<TransferOperation>();
+      PbList<TransferOperation>();
   static TransferOperation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransferOperation();
+      _defaultInstance = _ReadonlyTransferOperation();
     return _defaultInstance;
   }
 

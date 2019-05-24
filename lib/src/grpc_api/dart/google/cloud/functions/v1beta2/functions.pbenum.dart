@@ -9,17 +9,15 @@ import 'package:protobuf/protobuf.dart';
 
 class CloudFunctionStatus extends ProtobufEnum {
   static const CloudFunctionStatus STATUS_UNSPECIFIED =
-      const CloudFunctionStatus._(0, 'STATUS_UNSPECIFIED');
-  static const CloudFunctionStatus READY =
-      const CloudFunctionStatus._(1, 'READY');
-  static const CloudFunctionStatus FAILED =
-      const CloudFunctionStatus._(2, 'FAILED');
+      CloudFunctionStatus._(0, 'STATUS_UNSPECIFIED');
+  static const CloudFunctionStatus READY = CloudFunctionStatus._(1, 'READY');
+  static const CloudFunctionStatus FAILED = CloudFunctionStatus._(2, 'FAILED');
   static const CloudFunctionStatus DEPLOYING =
-      const CloudFunctionStatus._(3, 'DEPLOYING');
+      CloudFunctionStatus._(3, 'DEPLOYING');
   static const CloudFunctionStatus DELETING =
-      const CloudFunctionStatus._(4, 'DELETING');
+      CloudFunctionStatus._(4, 'DELETING');
 
-  static const List<CloudFunctionStatus> values = const <CloudFunctionStatus>[
+  static const List<CloudFunctionStatus> values = <CloudFunctionStatus>[
     STATUS_UNSPECIFIED,
     READY,
     FAILED,

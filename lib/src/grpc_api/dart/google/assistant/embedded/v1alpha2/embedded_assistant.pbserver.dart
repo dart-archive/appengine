@@ -18,9 +18,9 @@ abstract class EmbeddedAssistantServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'Assist':
-        return new AssistRequest();
+        return AssistRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -30,7 +30,7 @@ abstract class EmbeddedAssistantServiceBase extends GeneratedService {
       case 'Assist':
         return this.assist(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

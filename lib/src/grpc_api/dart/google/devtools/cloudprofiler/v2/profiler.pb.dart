@@ -16,7 +16,7 @@ import 'profiler.pbenum.dart';
 export 'profiler.pbenum.dart';
 
 class CreateProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateProfileRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateProfileRequest')
     ..a<Deployment>(1, 'deployment', PbFieldType.OM, Deployment.getDefault,
         Deployment.create)
     ..pp<ProfileType>(2, 'profileType', PbFieldType.PE, ProfileType.$checkItem,
@@ -33,14 +33,14 @@ class CreateProfileRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateProfileRequest clone() =>
-      new CreateProfileRequest()..mergeFromMessage(this);
+      CreateProfileRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateProfileRequest create() => new CreateProfileRequest();
+  static CreateProfileRequest create() => CreateProfileRequest();
   static PbList<CreateProfileRequest> createRepeated() =>
-      new PbList<CreateProfileRequest>();
+      PbList<CreateProfileRequest>();
   static CreateProfileRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateProfileRequest();
+      _defaultInstance = _ReadonlyCreateProfileRequest();
     return _defaultInstance;
   }
 
@@ -72,7 +72,7 @@ class _ReadonlyCreateProfileRequest extends CreateProfileRequest
     with ReadonlyMessageMixin {}
 
 class UpdateProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateProfileRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateProfileRequest')
     ..a<Profile>(
         1, 'profile', PbFieldType.OM, Profile.getDefault, Profile.create)
     ..hasRequiredFields = false;
@@ -85,14 +85,14 @@ class UpdateProfileRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateProfileRequest clone() =>
-      new UpdateProfileRequest()..mergeFromMessage(this);
+      UpdateProfileRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateProfileRequest create() => new UpdateProfileRequest();
+  static UpdateProfileRequest create() => UpdateProfileRequest();
   static PbList<UpdateProfileRequest> createRepeated() =>
-      new PbList<UpdateProfileRequest>();
+      PbList<UpdateProfileRequest>();
   static UpdateProfileRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateProfileRequest();
+      _defaultInstance = _ReadonlyUpdateProfileRequest();
     return _defaultInstance;
   }
 
@@ -114,7 +114,7 @@ class _ReadonlyUpdateProfileRequest extends UpdateProfileRequest
     with ReadonlyMessageMixin {}
 
 class Profile_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Profile_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Profile_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -126,15 +126,14 @@ class Profile_LabelsEntry extends GeneratedMessage {
   Profile_LabelsEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Profile_LabelsEntry clone() =>
-      new Profile_LabelsEntry()..mergeFromMessage(this);
+  Profile_LabelsEntry clone() => Profile_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Profile_LabelsEntry create() => new Profile_LabelsEntry();
+  static Profile_LabelsEntry create() => Profile_LabelsEntry();
   static PbList<Profile_LabelsEntry> createRepeated() =>
-      new PbList<Profile_LabelsEntry>();
+      PbList<Profile_LabelsEntry>();
   static Profile_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyProfile_LabelsEntry();
+      _defaultInstance = _ReadonlyProfile_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -164,7 +163,7 @@ class _ReadonlyProfile_LabelsEntry extends Profile_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Profile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Profile')
+  static final BuilderInfo _i = BuilderInfo('Profile')
     ..aOS(1, 'name')
     ..e<ProfileType>(
         2,
@@ -188,12 +187,12 @@ class Profile extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Profile.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Profile clone() => new Profile()..mergeFromMessage(this);
+  Profile clone() => Profile()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Profile create() => new Profile();
-  static PbList<Profile> createRepeated() => new PbList<Profile>();
+  static Profile create() => Profile();
+  static PbList<Profile> createRepeated() => PbList<Profile>();
   static Profile getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProfile();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyProfile();
     return _defaultInstance;
   }
 
@@ -248,7 +247,7 @@ class Profile extends GeneratedMessage {
 class _ReadonlyProfile extends Profile with ReadonlyMessageMixin {}
 
 class Deployment_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Deployment_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Deployment_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -261,14 +260,14 @@ class Deployment_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Deployment_LabelsEntry clone() =>
-      new Deployment_LabelsEntry()..mergeFromMessage(this);
+      Deployment_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Deployment_LabelsEntry create() => new Deployment_LabelsEntry();
+  static Deployment_LabelsEntry create() => Deployment_LabelsEntry();
   static PbList<Deployment_LabelsEntry> createRepeated() =>
-      new PbList<Deployment_LabelsEntry>();
+      PbList<Deployment_LabelsEntry>();
   static Deployment_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeployment_LabelsEntry();
+      _defaultInstance = _ReadonlyDeployment_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -299,7 +298,7 @@ class _ReadonlyDeployment_LabelsEntry extends Deployment_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Deployment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Deployment')
+  static final BuilderInfo _i = BuilderInfo('Deployment')
     ..aOS(1, 'projectId')
     ..aOS(2, 'target')
     ..pp<Deployment_LabelsEntry>(3, 'labels', PbFieldType.PM,
@@ -312,12 +311,12 @@ class Deployment extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Deployment.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Deployment clone() => new Deployment()..mergeFromMessage(this);
+  Deployment clone() => Deployment()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Deployment create() => new Deployment();
-  static PbList<Deployment> createRepeated() => new PbList<Deployment>();
+  static Deployment create() => Deployment();
+  static PbList<Deployment> createRepeated() => PbList<Deployment>();
   static Deployment getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeployment();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeployment();
     return _defaultInstance;
   }
 
@@ -353,14 +352,14 @@ class ProfilerServiceApi {
 
   Future<Profile> createProfile(
       ClientContext ctx, CreateProfileRequest request) {
-    var emptyResponse = new Profile();
+    var emptyResponse = Profile();
     return _client.invoke<Profile>(
         ctx, 'ProfilerService', 'CreateProfile', request, emptyResponse);
   }
 
   Future<Profile> updateProfile(
       ClientContext ctx, UpdateProfileRequest request) {
-    var emptyResponse = new Profile();
+    var emptyResponse = Profile();
     return _client.invoke<Profile>(
         ctx, 'ProfilerService', 'UpdateProfile', request, emptyResponse);
   }

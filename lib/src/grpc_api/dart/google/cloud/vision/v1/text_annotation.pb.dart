@@ -15,11 +15,10 @@ import 'text_annotation.pbenum.dart';
 export 'text_annotation.pbenum.dart';
 
 class TextAnnotation_DetectedLanguage extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('TextAnnotation_DetectedLanguage')
-        ..aOS(1, 'languageCode')
-        ..a<double>(2, 'confidence', PbFieldType.OF)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('TextAnnotation_DetectedLanguage')
+    ..aOS(1, 'languageCode')
+    ..a<double>(2, 'confidence', PbFieldType.OF)
+    ..hasRequiredFields = false;
 
   TextAnnotation_DetectedLanguage() : super();
   TextAnnotation_DetectedLanguage.fromBuffer(List<int> i,
@@ -29,15 +28,15 @@ class TextAnnotation_DetectedLanguage extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TextAnnotation_DetectedLanguage clone() =>
-      new TextAnnotation_DetectedLanguage()..mergeFromMessage(this);
+      TextAnnotation_DetectedLanguage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TextAnnotation_DetectedLanguage create() =>
-      new TextAnnotation_DetectedLanguage();
+      TextAnnotation_DetectedLanguage();
   static PbList<TextAnnotation_DetectedLanguage> createRepeated() =>
-      new PbList<TextAnnotation_DetectedLanguage>();
+      PbList<TextAnnotation_DetectedLanguage>();
   static TextAnnotation_DetectedLanguage getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTextAnnotation_DetectedLanguage();
+      _defaultInstance = _ReadonlyTextAnnotation_DetectedLanguage();
     return _defaultInstance;
   }
 
@@ -68,7 +67,7 @@ class _ReadonlyTextAnnotation_DetectedLanguage
     extends TextAnnotation_DetectedLanguage with ReadonlyMessageMixin {}
 
 class TextAnnotation_DetectedBreak extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextAnnotation_DetectedBreak')
+  static final BuilderInfo _i = BuilderInfo('TextAnnotation_DetectedBreak')
     ..e<TextAnnotation_DetectedBreak_BreakType>(
         1,
         'type',
@@ -87,15 +86,15 @@ class TextAnnotation_DetectedBreak extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TextAnnotation_DetectedBreak clone() =>
-      new TextAnnotation_DetectedBreak()..mergeFromMessage(this);
+      TextAnnotation_DetectedBreak()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TextAnnotation_DetectedBreak create() =>
-      new TextAnnotation_DetectedBreak();
+      TextAnnotation_DetectedBreak();
   static PbList<TextAnnotation_DetectedBreak> createRepeated() =>
-      new PbList<TextAnnotation_DetectedBreak>();
+      PbList<TextAnnotation_DetectedBreak>();
   static TextAnnotation_DetectedBreak getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTextAnnotation_DetectedBreak();
+      _defaultInstance = _ReadonlyTextAnnotation_DetectedBreak();
     return _defaultInstance;
   }
 
@@ -126,7 +125,7 @@ class _ReadonlyTextAnnotation_DetectedBreak extends TextAnnotation_DetectedBreak
     with ReadonlyMessageMixin {}
 
 class TextAnnotation_TextProperty extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextAnnotation_TextProperty')
+  static final BuilderInfo _i = BuilderInfo('TextAnnotation_TextProperty')
     ..pp<TextAnnotation_DetectedLanguage>(
         1,
         'detectedLanguages',
@@ -149,15 +148,14 @@ class TextAnnotation_TextProperty extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TextAnnotation_TextProperty clone() =>
-      new TextAnnotation_TextProperty()..mergeFromMessage(this);
+      TextAnnotation_TextProperty()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TextAnnotation_TextProperty create() =>
-      new TextAnnotation_TextProperty();
+  static TextAnnotation_TextProperty create() => TextAnnotation_TextProperty();
   static PbList<TextAnnotation_TextProperty> createRepeated() =>
-      new PbList<TextAnnotation_TextProperty>();
+      PbList<TextAnnotation_TextProperty>();
   static TextAnnotation_TextProperty getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTextAnnotation_TextProperty();
+      _defaultInstance = _ReadonlyTextAnnotation_TextProperty();
     return _defaultInstance;
   }
 
@@ -182,7 +180,7 @@ class _ReadonlyTextAnnotation_TextProperty extends TextAnnotation_TextProperty
     with ReadonlyMessageMixin {}
 
 class TextAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextAnnotation')
+  static final BuilderInfo _i = BuilderInfo('TextAnnotation')
     ..pp<Page>(1, 'pages', PbFieldType.PM, Page.$checkItem, Page.create)
     ..aOS(2, 'text')
     ..hasRequiredFields = false;
@@ -194,14 +192,12 @@ class TextAnnotation extends GeneratedMessage {
   TextAnnotation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TextAnnotation clone() => new TextAnnotation()..mergeFromMessage(this);
+  TextAnnotation clone() => TextAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TextAnnotation create() => new TextAnnotation();
-  static PbList<TextAnnotation> createRepeated() =>
-      new PbList<TextAnnotation>();
+  static TextAnnotation create() => TextAnnotation();
+  static PbList<TextAnnotation> createRepeated() => PbList<TextAnnotation>();
   static TextAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTextAnnotation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTextAnnotation();
     return _defaultInstance;
   }
 
@@ -225,7 +221,7 @@ class _ReadonlyTextAnnotation extends TextAnnotation with ReadonlyMessageMixin {
 }
 
 class Page extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Page')
+  static final BuilderInfo _i = BuilderInfo('Page')
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
@@ -243,12 +239,12 @@ class Page extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Page.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Page clone() => new Page()..mergeFromMessage(this);
+  Page clone() => Page()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Page create() => new Page();
-  static PbList<Page> createRepeated() => new PbList<Page>();
+  static Page create() => Page();
+  static PbList<Page> createRepeated() => PbList<Page>();
   static Page getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPage();
     return _defaultInstance;
   }
 
@@ -295,7 +291,7 @@ class Page extends GeneratedMessage {
 class _ReadonlyPage extends Page with ReadonlyMessageMixin {}
 
 class Block extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Block')
+  static final BuilderInfo _i = BuilderInfo('Block')
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
@@ -321,12 +317,12 @@ class Block extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Block.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Block clone() => new Block()..mergeFromMessage(this);
+  Block clone() => Block()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Block create() => new Block();
-  static PbList<Block> createRepeated() => new PbList<Block>();
+  static Block create() => Block();
+  static PbList<Block> createRepeated() => PbList<Block>();
   static Block getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBlock();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBlock();
     return _defaultInstance;
   }
 
@@ -373,7 +369,7 @@ class Block extends GeneratedMessage {
 class _ReadonlyBlock extends Block with ReadonlyMessageMixin {}
 
 class Paragraph extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Paragraph')
+  static final BuilderInfo _i = BuilderInfo('Paragraph')
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
@@ -392,12 +388,12 @@ class Paragraph extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Paragraph.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Paragraph clone() => new Paragraph()..mergeFromMessage(this);
+  Paragraph clone() => Paragraph()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Paragraph create() => new Paragraph();
-  static PbList<Paragraph> createRepeated() => new PbList<Paragraph>();
+  static Paragraph create() => Paragraph();
+  static PbList<Paragraph> createRepeated() => PbList<Paragraph>();
   static Paragraph getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyParagraph();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyParagraph();
     return _defaultInstance;
   }
 
@@ -436,7 +432,7 @@ class Paragraph extends GeneratedMessage {
 class _ReadonlyParagraph extends Paragraph with ReadonlyMessageMixin {}
 
 class Word extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Word')
+  static final BuilderInfo _i = BuilderInfo('Word')
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
@@ -454,12 +450,12 @@ class Word extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Word.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Word clone() => new Word()..mergeFromMessage(this);
+  Word clone() => Word()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Word create() => new Word();
-  static PbList<Word> createRepeated() => new PbList<Word>();
+  static Word create() => Word();
+  static PbList<Word> createRepeated() => PbList<Word>();
   static Word getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWord();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWord();
     return _defaultInstance;
   }
 
@@ -498,7 +494,7 @@ class Word extends GeneratedMessage {
 class _ReadonlyWord extends Word with ReadonlyMessageMixin {}
 
 class Symbol extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Symbol')
+  static final BuilderInfo _i = BuilderInfo('Symbol')
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
@@ -517,12 +513,12 @@ class Symbol extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Symbol.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Symbol clone() => new Symbol()..mergeFromMessage(this);
+  Symbol clone() => Symbol()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Symbol create() => new Symbol();
-  static PbList<Symbol> createRepeated() => new PbList<Symbol>();
+  static Symbol create() => Symbol();
+  static PbList<Symbol> createRepeated() => PbList<Symbol>();
   static Symbol getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySymbol();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySymbol();
     return _defaultInstance;
   }
 

@@ -28,17 +28,17 @@ abstract class Debugger2ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'SetBreakpoint':
-        return new SetBreakpointRequest();
+        return SetBreakpointRequest();
       case 'GetBreakpoint':
-        return new GetBreakpointRequest();
+        return GetBreakpointRequest();
       case 'DeleteBreakpoint':
-        return new DeleteBreakpointRequest();
+        return DeleteBreakpointRequest();
       case 'ListBreakpoints':
-        return new ListBreakpointsRequest();
+        return ListBreakpointsRequest();
       case 'ListDebuggees':
-        return new ListDebuggeesRequest();
+        return ListDebuggeesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -56,7 +56,7 @@ abstract class Debugger2ServiceBase extends GeneratedService {
       case 'ListDebuggees':
         return this.listDebuggees(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

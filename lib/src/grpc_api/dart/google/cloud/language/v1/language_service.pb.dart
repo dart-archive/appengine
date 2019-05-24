@@ -14,7 +14,7 @@ import 'language_service.pbenum.dart';
 export 'language_service.pbenum.dart';
 
 class Document extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Document')
+  static final BuilderInfo _i = BuilderInfo('Document')
     ..e<Document_Type>(
         1,
         'type',
@@ -33,12 +33,12 @@ class Document extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Document.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Document clone() => new Document()..mergeFromMessage(this);
+  Document clone() => Document()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Document create() => new Document();
-  static PbList<Document> createRepeated() => new PbList<Document>();
+  static Document create() => Document();
+  static PbList<Document> createRepeated() => PbList<Document>();
   static Document getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDocument();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDocument();
     return _defaultInstance;
   }
 
@@ -83,7 +83,7 @@ class Document extends GeneratedMessage {
 class _ReadonlyDocument extends Document with ReadonlyMessageMixin {}
 
 class Sentence extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Sentence')
+  static final BuilderInfo _i = BuilderInfo('Sentence')
     ..a<TextSpan>(
         1, 'text', PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
     ..a<Sentiment>(
@@ -96,12 +96,12 @@ class Sentence extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Sentence.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Sentence clone() => new Sentence()..mergeFromMessage(this);
+  Sentence clone() => Sentence()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Sentence create() => new Sentence();
-  static PbList<Sentence> createRepeated() => new PbList<Sentence>();
+  static Sentence create() => Sentence();
+  static PbList<Sentence> createRepeated() => PbList<Sentence>();
   static Sentence getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySentence();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySentence();
     return _defaultInstance;
   }
 
@@ -130,7 +130,7 @@ class Sentence extends GeneratedMessage {
 class _ReadonlySentence extends Sentence with ReadonlyMessageMixin {}
 
 class Entity_MetadataEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Entity_MetadataEntry')
+  static final BuilderInfo _i = BuilderInfo('Entity_MetadataEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -143,14 +143,14 @@ class Entity_MetadataEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Entity_MetadataEntry clone() =>
-      new Entity_MetadataEntry()..mergeFromMessage(this);
+      Entity_MetadataEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Entity_MetadataEntry create() => new Entity_MetadataEntry();
+  static Entity_MetadataEntry create() => Entity_MetadataEntry();
   static PbList<Entity_MetadataEntry> createRepeated() =>
-      new PbList<Entity_MetadataEntry>();
+      PbList<Entity_MetadataEntry>();
   static Entity_MetadataEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntity_MetadataEntry();
+      _defaultInstance = _ReadonlyEntity_MetadataEntry();
     return _defaultInstance;
   }
 
@@ -180,7 +180,7 @@ class _ReadonlyEntity_MetadataEntry extends Entity_MetadataEntry
     with ReadonlyMessageMixin {}
 
 class Entity extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Entity')
+  static final BuilderInfo _i = BuilderInfo('Entity')
     ..aOS(1, 'name')
     ..e<Entity_Type>(2, 'type', PbFieldType.OE, Entity_Type.UNKNOWN,
         Entity_Type.valueOf, Entity_Type.values)
@@ -199,12 +199,12 @@ class Entity extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Entity.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Entity clone() => new Entity()..mergeFromMessage(this);
+  Entity clone() => Entity()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Entity create() => new Entity();
-  static PbList<Entity> createRepeated() => new PbList<Entity>();
+  static Entity create() => Entity();
+  static PbList<Entity> createRepeated() => PbList<Entity>();
   static Entity getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEntity();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntity();
     return _defaultInstance;
   }
 
@@ -253,7 +253,7 @@ class Entity extends GeneratedMessage {
 class _ReadonlyEntity extends Entity with ReadonlyMessageMixin {}
 
 class Token extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Token')
+  static final BuilderInfo _i = BuilderInfo('Token')
     ..a<TextSpan>(
         1, 'text', PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
     ..a<PartOfSpeech>(2, 'partOfSpeech', PbFieldType.OM,
@@ -268,12 +268,12 @@ class Token extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Token.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Token clone() => new Token()..mergeFromMessage(this);
+  Token clone() => Token()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Token create() => new Token();
-  static PbList<Token> createRepeated() => new PbList<Token>();
+  static Token create() => Token();
+  static PbList<Token> createRepeated() => PbList<Token>();
   static Token getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyToken();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyToken();
     return _defaultInstance;
   }
 
@@ -318,7 +318,7 @@ class Token extends GeneratedMessage {
 class _ReadonlyToken extends Token with ReadonlyMessageMixin {}
 
 class Sentiment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Sentiment')
+  static final BuilderInfo _i = BuilderInfo('Sentiment')
     ..a<double>(2, 'magnitude', PbFieldType.OF)
     ..a<double>(3, 'score', PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -329,12 +329,12 @@ class Sentiment extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Sentiment.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Sentiment clone() => new Sentiment()..mergeFromMessage(this);
+  Sentiment clone() => Sentiment()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Sentiment create() => new Sentiment();
-  static PbList<Sentiment> createRepeated() => new PbList<Sentiment>();
+  static Sentiment create() => Sentiment();
+  static PbList<Sentiment> createRepeated() => PbList<Sentiment>();
   static Sentiment getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySentiment();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySentiment();
     return _defaultInstance;
   }
 
@@ -363,7 +363,7 @@ class Sentiment extends GeneratedMessage {
 class _ReadonlySentiment extends Sentiment with ReadonlyMessageMixin {}
 
 class PartOfSpeech extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartOfSpeech')
+  static final BuilderInfo _i = BuilderInfo('PartOfSpeech')
     ..e<PartOfSpeech_Tag>(1, 'tag', PbFieldType.OE, PartOfSpeech_Tag.UNKNOWN,
         PartOfSpeech_Tag.valueOf, PartOfSpeech_Tag.values)
     ..e<PartOfSpeech_Aspect>(
@@ -452,13 +452,12 @@ class PartOfSpeech extends GeneratedMessage {
   PartOfSpeech.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PartOfSpeech clone() => new PartOfSpeech()..mergeFromMessage(this);
+  PartOfSpeech clone() => PartOfSpeech()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PartOfSpeech create() => new PartOfSpeech();
-  static PbList<PartOfSpeech> createRepeated() => new PbList<PartOfSpeech>();
+  static PartOfSpeech create() => PartOfSpeech();
+  static PbList<PartOfSpeech> createRepeated() => PbList<PartOfSpeech>();
   static PartOfSpeech getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartOfSpeech();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPartOfSpeech();
     return _defaultInstance;
   }
 
@@ -567,7 +566,7 @@ class PartOfSpeech extends GeneratedMessage {
 class _ReadonlyPartOfSpeech extends PartOfSpeech with ReadonlyMessageMixin {}
 
 class DependencyEdge extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DependencyEdge')
+  static final BuilderInfo _i = BuilderInfo('DependencyEdge')
     ..a<int>(1, 'headTokenIndex', PbFieldType.O3)
     ..e<DependencyEdge_Label>(
         2,
@@ -585,14 +584,12 @@ class DependencyEdge extends GeneratedMessage {
   DependencyEdge.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DependencyEdge clone() => new DependencyEdge()..mergeFromMessage(this);
+  DependencyEdge clone() => DependencyEdge()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DependencyEdge create() => new DependencyEdge();
-  static PbList<DependencyEdge> createRepeated() =>
-      new PbList<DependencyEdge>();
+  static DependencyEdge create() => DependencyEdge();
+  static PbList<DependencyEdge> createRepeated() => PbList<DependencyEdge>();
   static DependencyEdge getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDependencyEdge();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDependencyEdge();
     return _defaultInstance;
   }
 
@@ -622,7 +619,7 @@ class _ReadonlyDependencyEdge extends DependencyEdge with ReadonlyMessageMixin {
 }
 
 class EntityMention extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityMention')
+  static final BuilderInfo _i = BuilderInfo('EntityMention')
     ..a<TextSpan>(
         1, 'text', PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
     ..e<EntityMention_Type>(
@@ -643,13 +640,12 @@ class EntityMention extends GeneratedMessage {
   EntityMention.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityMention clone() => new EntityMention()..mergeFromMessage(this);
+  EntityMention clone() => EntityMention()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EntityMention create() => new EntityMention();
-  static PbList<EntityMention> createRepeated() => new PbList<EntityMention>();
+  static EntityMention create() => EntityMention();
+  static PbList<EntityMention> createRepeated() => PbList<EntityMention>();
   static EntityMention getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntityMention();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityMention();
     return _defaultInstance;
   }
 
@@ -686,7 +682,7 @@ class EntityMention extends GeneratedMessage {
 class _ReadonlyEntityMention extends EntityMention with ReadonlyMessageMixin {}
 
 class TextSpan extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextSpan')
+  static final BuilderInfo _i = BuilderInfo('TextSpan')
     ..aOS(1, 'content')
     ..a<int>(2, 'beginOffset', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -697,12 +693,12 @@ class TextSpan extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TextSpan.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TextSpan clone() => new TextSpan()..mergeFromMessage(this);
+  TextSpan clone() => TextSpan()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TextSpan create() => new TextSpan();
-  static PbList<TextSpan> createRepeated() => new PbList<TextSpan>();
+  static TextSpan create() => TextSpan();
+  static PbList<TextSpan> createRepeated() => PbList<TextSpan>();
   static TextSpan getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTextSpan();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTextSpan();
     return _defaultInstance;
   }
 
@@ -731,7 +727,7 @@ class TextSpan extends GeneratedMessage {
 class _ReadonlyTextSpan extends TextSpan with ReadonlyMessageMixin {}
 
 class ClassificationCategory extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClassificationCategory')
+  static final BuilderInfo _i = BuilderInfo('ClassificationCategory')
     ..aOS(1, 'name')
     ..a<double>(2, 'confidence', PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -744,14 +740,14 @@ class ClassificationCategory extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ClassificationCategory clone() =>
-      new ClassificationCategory()..mergeFromMessage(this);
+      ClassificationCategory()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ClassificationCategory create() => new ClassificationCategory();
+  static ClassificationCategory create() => ClassificationCategory();
   static PbList<ClassificationCategory> createRepeated() =>
-      new PbList<ClassificationCategory>();
+      PbList<ClassificationCategory>();
   static ClassificationCategory getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClassificationCategory();
+      _defaultInstance = _ReadonlyClassificationCategory();
     return _defaultInstance;
   }
 
@@ -782,7 +778,7 @@ class _ReadonlyClassificationCategory extends ClassificationCategory
     with ReadonlyMessageMixin {}
 
 class AnalyzeSentimentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnalyzeSentimentRequest')
+  static final BuilderInfo _i = BuilderInfo('AnalyzeSentimentRequest')
     ..a<Document>(
         1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
     ..e<EncodingType>(2, 'encodingType', PbFieldType.OE, EncodingType.NONE,
@@ -797,14 +793,14 @@ class AnalyzeSentimentRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnalyzeSentimentRequest clone() =>
-      new AnalyzeSentimentRequest()..mergeFromMessage(this);
+      AnalyzeSentimentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnalyzeSentimentRequest create() => new AnalyzeSentimentRequest();
+  static AnalyzeSentimentRequest create() => AnalyzeSentimentRequest();
   static PbList<AnalyzeSentimentRequest> createRepeated() =>
-      new PbList<AnalyzeSentimentRequest>();
+      PbList<AnalyzeSentimentRequest>();
   static AnalyzeSentimentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnalyzeSentimentRequest();
+      _defaultInstance = _ReadonlyAnalyzeSentimentRequest();
     return _defaultInstance;
   }
 
@@ -835,7 +831,7 @@ class _ReadonlyAnalyzeSentimentRequest extends AnalyzeSentimentRequest
     with ReadonlyMessageMixin {}
 
 class AnalyzeSentimentResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnalyzeSentimentResponse')
+  static final BuilderInfo _i = BuilderInfo('AnalyzeSentimentResponse')
     ..a<Sentiment>(1, 'documentSentiment', PbFieldType.OM, Sentiment.getDefault,
         Sentiment.create)
     ..aOS(2, 'language')
@@ -851,14 +847,14 @@ class AnalyzeSentimentResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnalyzeSentimentResponse clone() =>
-      new AnalyzeSentimentResponse()..mergeFromMessage(this);
+      AnalyzeSentimentResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnalyzeSentimentResponse create() => new AnalyzeSentimentResponse();
+  static AnalyzeSentimentResponse create() => AnalyzeSentimentResponse();
   static PbList<AnalyzeSentimentResponse> createRepeated() =>
-      new PbList<AnalyzeSentimentResponse>();
+      PbList<AnalyzeSentimentResponse>();
   static AnalyzeSentimentResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnalyzeSentimentResponse();
+      _defaultInstance = _ReadonlyAnalyzeSentimentResponse();
     return _defaultInstance;
   }
 
@@ -891,7 +887,7 @@ class _ReadonlyAnalyzeSentimentResponse extends AnalyzeSentimentResponse
     with ReadonlyMessageMixin {}
 
 class AnalyzeEntitySentimentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnalyzeEntitySentimentRequest')
+  static final BuilderInfo _i = BuilderInfo('AnalyzeEntitySentimentRequest')
     ..a<Document>(
         1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
     ..e<EncodingType>(2, 'encodingType', PbFieldType.OE, EncodingType.NONE,
@@ -906,15 +902,15 @@ class AnalyzeEntitySentimentRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnalyzeEntitySentimentRequest clone() =>
-      new AnalyzeEntitySentimentRequest()..mergeFromMessage(this);
+      AnalyzeEntitySentimentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AnalyzeEntitySentimentRequest create() =>
-      new AnalyzeEntitySentimentRequest();
+      AnalyzeEntitySentimentRequest();
   static PbList<AnalyzeEntitySentimentRequest> createRepeated() =>
-      new PbList<AnalyzeEntitySentimentRequest>();
+      PbList<AnalyzeEntitySentimentRequest>();
   static AnalyzeEntitySentimentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnalyzeEntitySentimentRequest();
+      _defaultInstance = _ReadonlyAnalyzeEntitySentimentRequest();
     return _defaultInstance;
   }
 
@@ -945,12 +941,11 @@ class _ReadonlyAnalyzeEntitySentimentRequest
     extends AnalyzeEntitySentimentRequest with ReadonlyMessageMixin {}
 
 class AnalyzeEntitySentimentResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AnalyzeEntitySentimentResponse')
-        ..pp<Entity>(
-            1, 'entities', PbFieldType.PM, Entity.$checkItem, Entity.create)
-        ..aOS(2, 'language')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('AnalyzeEntitySentimentResponse')
+    ..pp<Entity>(
+        1, 'entities', PbFieldType.PM, Entity.$checkItem, Entity.create)
+    ..aOS(2, 'language')
+    ..hasRequiredFields = false;
 
   AnalyzeEntitySentimentResponse() : super();
   AnalyzeEntitySentimentResponse.fromBuffer(List<int> i,
@@ -960,15 +955,15 @@ class AnalyzeEntitySentimentResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnalyzeEntitySentimentResponse clone() =>
-      new AnalyzeEntitySentimentResponse()..mergeFromMessage(this);
+      AnalyzeEntitySentimentResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AnalyzeEntitySentimentResponse create() =>
-      new AnalyzeEntitySentimentResponse();
+      AnalyzeEntitySentimentResponse();
   static PbList<AnalyzeEntitySentimentResponse> createRepeated() =>
-      new PbList<AnalyzeEntitySentimentResponse>();
+      PbList<AnalyzeEntitySentimentResponse>();
   static AnalyzeEntitySentimentResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnalyzeEntitySentimentResponse();
+      _defaultInstance = _ReadonlyAnalyzeEntitySentimentResponse();
     return _defaultInstance;
   }
 
@@ -993,7 +988,7 @@ class _ReadonlyAnalyzeEntitySentimentResponse
     extends AnalyzeEntitySentimentResponse with ReadonlyMessageMixin {}
 
 class AnalyzeEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnalyzeEntitiesRequest')
+  static final BuilderInfo _i = BuilderInfo('AnalyzeEntitiesRequest')
     ..a<Document>(
         1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
     ..e<EncodingType>(2, 'encodingType', PbFieldType.OE, EncodingType.NONE,
@@ -1008,14 +1003,14 @@ class AnalyzeEntitiesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnalyzeEntitiesRequest clone() =>
-      new AnalyzeEntitiesRequest()..mergeFromMessage(this);
+      AnalyzeEntitiesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnalyzeEntitiesRequest create() => new AnalyzeEntitiesRequest();
+  static AnalyzeEntitiesRequest create() => AnalyzeEntitiesRequest();
   static PbList<AnalyzeEntitiesRequest> createRepeated() =>
-      new PbList<AnalyzeEntitiesRequest>();
+      PbList<AnalyzeEntitiesRequest>();
   static AnalyzeEntitiesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnalyzeEntitiesRequest();
+      _defaultInstance = _ReadonlyAnalyzeEntitiesRequest();
     return _defaultInstance;
   }
 
@@ -1046,7 +1041,7 @@ class _ReadonlyAnalyzeEntitiesRequest extends AnalyzeEntitiesRequest
     with ReadonlyMessageMixin {}
 
 class AnalyzeEntitiesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnalyzeEntitiesResponse')
+  static final BuilderInfo _i = BuilderInfo('AnalyzeEntitiesResponse')
     ..pp<Entity>(
         1, 'entities', PbFieldType.PM, Entity.$checkItem, Entity.create)
     ..aOS(2, 'language')
@@ -1060,14 +1055,14 @@ class AnalyzeEntitiesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnalyzeEntitiesResponse clone() =>
-      new AnalyzeEntitiesResponse()..mergeFromMessage(this);
+      AnalyzeEntitiesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnalyzeEntitiesResponse create() => new AnalyzeEntitiesResponse();
+  static AnalyzeEntitiesResponse create() => AnalyzeEntitiesResponse();
   static PbList<AnalyzeEntitiesResponse> createRepeated() =>
-      new PbList<AnalyzeEntitiesResponse>();
+      PbList<AnalyzeEntitiesResponse>();
   static AnalyzeEntitiesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnalyzeEntitiesResponse();
+      _defaultInstance = _ReadonlyAnalyzeEntitiesResponse();
     return _defaultInstance;
   }
 
@@ -1092,7 +1087,7 @@ class _ReadonlyAnalyzeEntitiesResponse extends AnalyzeEntitiesResponse
     with ReadonlyMessageMixin {}
 
 class AnalyzeSyntaxRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnalyzeSyntaxRequest')
+  static final BuilderInfo _i = BuilderInfo('AnalyzeSyntaxRequest')
     ..a<Document>(
         1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
     ..e<EncodingType>(2, 'encodingType', PbFieldType.OE, EncodingType.NONE,
@@ -1107,14 +1102,14 @@ class AnalyzeSyntaxRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnalyzeSyntaxRequest clone() =>
-      new AnalyzeSyntaxRequest()..mergeFromMessage(this);
+      AnalyzeSyntaxRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnalyzeSyntaxRequest create() => new AnalyzeSyntaxRequest();
+  static AnalyzeSyntaxRequest create() => AnalyzeSyntaxRequest();
   static PbList<AnalyzeSyntaxRequest> createRepeated() =>
-      new PbList<AnalyzeSyntaxRequest>();
+      PbList<AnalyzeSyntaxRequest>();
   static AnalyzeSyntaxRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnalyzeSyntaxRequest();
+      _defaultInstance = _ReadonlyAnalyzeSyntaxRequest();
     return _defaultInstance;
   }
 
@@ -1144,7 +1139,7 @@ class _ReadonlyAnalyzeSyntaxRequest extends AnalyzeSyntaxRequest
     with ReadonlyMessageMixin {}
 
 class AnalyzeSyntaxResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnalyzeSyntaxResponse')
+  static final BuilderInfo _i = BuilderInfo('AnalyzeSyntaxResponse')
     ..pp<Sentence>(
         1, 'sentences', PbFieldType.PM, Sentence.$checkItem, Sentence.create)
     ..pp<Token>(2, 'tokens', PbFieldType.PM, Token.$checkItem, Token.create)
@@ -1159,14 +1154,14 @@ class AnalyzeSyntaxResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnalyzeSyntaxResponse clone() =>
-      new AnalyzeSyntaxResponse()..mergeFromMessage(this);
+      AnalyzeSyntaxResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnalyzeSyntaxResponse create() => new AnalyzeSyntaxResponse();
+  static AnalyzeSyntaxResponse create() => AnalyzeSyntaxResponse();
   static PbList<AnalyzeSyntaxResponse> createRepeated() =>
-      new PbList<AnalyzeSyntaxResponse>();
+      PbList<AnalyzeSyntaxResponse>();
   static AnalyzeSyntaxResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnalyzeSyntaxResponse();
+      _defaultInstance = _ReadonlyAnalyzeSyntaxResponse();
     return _defaultInstance;
   }
 
@@ -1193,7 +1188,7 @@ class _ReadonlyAnalyzeSyntaxResponse extends AnalyzeSyntaxResponse
     with ReadonlyMessageMixin {}
 
 class ClassifyTextRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClassifyTextRequest')
+  static final BuilderInfo _i = BuilderInfo('ClassifyTextRequest')
     ..a<Document>(
         1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
     ..hasRequiredFields = false;
@@ -1205,15 +1200,14 @@ class ClassifyTextRequest extends GeneratedMessage {
   ClassifyTextRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ClassifyTextRequest clone() =>
-      new ClassifyTextRequest()..mergeFromMessage(this);
+  ClassifyTextRequest clone() => ClassifyTextRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ClassifyTextRequest create() => new ClassifyTextRequest();
+  static ClassifyTextRequest create() => ClassifyTextRequest();
   static PbList<ClassifyTextRequest> createRepeated() =>
-      new PbList<ClassifyTextRequest>();
+      PbList<ClassifyTextRequest>();
   static ClassifyTextRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClassifyTextRequest();
+      _defaultInstance = _ReadonlyClassifyTextRequest();
     return _defaultInstance;
   }
 
@@ -1235,7 +1229,7 @@ class _ReadonlyClassifyTextRequest extends ClassifyTextRequest
     with ReadonlyMessageMixin {}
 
 class ClassifyTextResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClassifyTextResponse')
+  static final BuilderInfo _i = BuilderInfo('ClassifyTextResponse')
     ..pp<ClassificationCategory>(1, 'categories', PbFieldType.PM,
         ClassificationCategory.$checkItem, ClassificationCategory.create)
     ..hasRequiredFields = false;
@@ -1248,14 +1242,14 @@ class ClassifyTextResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ClassifyTextResponse clone() =>
-      new ClassifyTextResponse()..mergeFromMessage(this);
+      ClassifyTextResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ClassifyTextResponse create() => new ClassifyTextResponse();
+  static ClassifyTextResponse create() => ClassifyTextResponse();
   static PbList<ClassifyTextResponse> createRepeated() =>
-      new PbList<ClassifyTextResponse>();
+      PbList<ClassifyTextResponse>();
   static ClassifyTextResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClassifyTextResponse();
+      _defaultInstance = _ReadonlyClassifyTextResponse();
     return _defaultInstance;
   }
 
@@ -1271,7 +1265,7 @@ class _ReadonlyClassifyTextResponse extends ClassifyTextResponse
     with ReadonlyMessageMixin {}
 
 class AnnotateTextRequest_Features extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateTextRequest_Features')
+  static final BuilderInfo _i = BuilderInfo('AnnotateTextRequest_Features')
     ..aOB(1, 'extractSyntax')
     ..aOB(2, 'extractEntities')
     ..aOB(3, 'extractDocumentSentiment')
@@ -1287,15 +1281,15 @@ class AnnotateTextRequest_Features extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateTextRequest_Features clone() =>
-      new AnnotateTextRequest_Features()..mergeFromMessage(this);
+      AnnotateTextRequest_Features()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AnnotateTextRequest_Features create() =>
-      new AnnotateTextRequest_Features();
+      AnnotateTextRequest_Features();
   static PbList<AnnotateTextRequest_Features> createRepeated() =>
-      new PbList<AnnotateTextRequest_Features>();
+      PbList<AnnotateTextRequest_Features>();
   static AnnotateTextRequest_Features getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateTextRequest_Features();
+      _defaultInstance = _ReadonlyAnnotateTextRequest_Features();
     return _defaultInstance;
   }
 
@@ -1350,7 +1344,7 @@ class _ReadonlyAnnotateTextRequest_Features extends AnnotateTextRequest_Features
     with ReadonlyMessageMixin {}
 
 class AnnotateTextRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateTextRequest')
+  static final BuilderInfo _i = BuilderInfo('AnnotateTextRequest')
     ..a<Document>(
         1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
     ..a<AnnotateTextRequest_Features>(
@@ -1370,15 +1364,14 @@ class AnnotateTextRequest extends GeneratedMessage {
   AnnotateTextRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AnnotateTextRequest clone() =>
-      new AnnotateTextRequest()..mergeFromMessage(this);
+  AnnotateTextRequest clone() => AnnotateTextRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotateTextRequest create() => new AnnotateTextRequest();
+  static AnnotateTextRequest create() => AnnotateTextRequest();
   static PbList<AnnotateTextRequest> createRepeated() =>
-      new PbList<AnnotateTextRequest>();
+      PbList<AnnotateTextRequest>();
   static AnnotateTextRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateTextRequest();
+      _defaultInstance = _ReadonlyAnnotateTextRequest();
     return _defaultInstance;
   }
 
@@ -1416,7 +1409,7 @@ class _ReadonlyAnnotateTextRequest extends AnnotateTextRequest
     with ReadonlyMessageMixin {}
 
 class AnnotateTextResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateTextResponse')
+  static final BuilderInfo _i = BuilderInfo('AnnotateTextResponse')
     ..pp<Sentence>(
         1, 'sentences', PbFieldType.PM, Sentence.$checkItem, Sentence.create)
     ..pp<Token>(2, 'tokens', PbFieldType.PM, Token.$checkItem, Token.create)
@@ -1437,14 +1430,14 @@ class AnnotateTextResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateTextResponse clone() =>
-      new AnnotateTextResponse()..mergeFromMessage(this);
+      AnnotateTextResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotateTextResponse create() => new AnnotateTextResponse();
+  static AnnotateTextResponse create() => AnnotateTextResponse();
   static PbList<AnnotateTextResponse> createRepeated() =>
-      new PbList<AnnotateTextResponse>();
+      PbList<AnnotateTextResponse>();
   static AnnotateTextResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateTextResponse();
+      _defaultInstance = _ReadonlyAnnotateTextResponse();
     return _defaultInstance;
   }
 
@@ -1487,42 +1480,42 @@ class LanguageServiceApi {
 
   Future<AnalyzeSentimentResponse> analyzeSentiment(
       ClientContext ctx, AnalyzeSentimentRequest request) {
-    var emptyResponse = new AnalyzeSentimentResponse();
+    var emptyResponse = AnalyzeSentimentResponse();
     return _client.invoke<AnalyzeSentimentResponse>(
         ctx, 'LanguageService', 'AnalyzeSentiment', request, emptyResponse);
   }
 
   Future<AnalyzeEntitiesResponse> analyzeEntities(
       ClientContext ctx, AnalyzeEntitiesRequest request) {
-    var emptyResponse = new AnalyzeEntitiesResponse();
+    var emptyResponse = AnalyzeEntitiesResponse();
     return _client.invoke<AnalyzeEntitiesResponse>(
         ctx, 'LanguageService', 'AnalyzeEntities', request, emptyResponse);
   }
 
   Future<AnalyzeEntitySentimentResponse> analyzeEntitySentiment(
       ClientContext ctx, AnalyzeEntitySentimentRequest request) {
-    var emptyResponse = new AnalyzeEntitySentimentResponse();
+    var emptyResponse = AnalyzeEntitySentimentResponse();
     return _client.invoke<AnalyzeEntitySentimentResponse>(ctx,
         'LanguageService', 'AnalyzeEntitySentiment', request, emptyResponse);
   }
 
   Future<AnalyzeSyntaxResponse> analyzeSyntax(
       ClientContext ctx, AnalyzeSyntaxRequest request) {
-    var emptyResponse = new AnalyzeSyntaxResponse();
+    var emptyResponse = AnalyzeSyntaxResponse();
     return _client.invoke<AnalyzeSyntaxResponse>(
         ctx, 'LanguageService', 'AnalyzeSyntax', request, emptyResponse);
   }
 
   Future<ClassifyTextResponse> classifyText(
       ClientContext ctx, ClassifyTextRequest request) {
-    var emptyResponse = new ClassifyTextResponse();
+    var emptyResponse = ClassifyTextResponse();
     return _client.invoke<ClassifyTextResponse>(
         ctx, 'LanguageService', 'ClassifyText', request, emptyResponse);
   }
 
   Future<AnnotateTextResponse> annotateText(
       ClientContext ctx, AnnotateTextRequest request) {
-    var emptyResponse = new AnnotateTextResponse();
+    var emptyResponse = AnnotateTextResponse();
     return _client.invoke<AnnotateTextResponse>(
         ctx, 'LanguageService', 'AnnotateText', request, emptyResponse);
   }

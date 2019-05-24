@@ -22,7 +22,7 @@ export 'metric_service.pbenum.dart';
 
 class ListMonitoredResourceDescriptorsRequest extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ListMonitoredResourceDescriptorsRequest')
+      BuilderInfo('ListMonitoredResourceDescriptorsRequest')
         ..aOS(2, 'filter')
         ..a<int>(3, 'pageSize', PbFieldType.O3)
         ..aOS(4, 'pageToken')
@@ -37,15 +37,15 @@ class ListMonitoredResourceDescriptorsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListMonitoredResourceDescriptorsRequest clone() =>
-      new ListMonitoredResourceDescriptorsRequest()..mergeFromMessage(this);
+      ListMonitoredResourceDescriptorsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListMonitoredResourceDescriptorsRequest create() =>
-      new ListMonitoredResourceDescriptorsRequest();
+      ListMonitoredResourceDescriptorsRequest();
   static PbList<ListMonitoredResourceDescriptorsRequest> createRepeated() =>
-      new PbList<ListMonitoredResourceDescriptorsRequest>();
+      PbList<ListMonitoredResourceDescriptorsRequest>();
   static ListMonitoredResourceDescriptorsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListMonitoredResourceDescriptorsRequest();
+      _defaultInstance = _ReadonlyListMonitoredResourceDescriptorsRequest();
     return _defaultInstance;
   }
 
@@ -93,7 +93,7 @@ class _ReadonlyListMonitoredResourceDescriptorsRequest
 
 class ListMonitoredResourceDescriptorsResponse extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ListMonitoredResourceDescriptorsResponse')
+      BuilderInfo('ListMonitoredResourceDescriptorsResponse')
         ..pp<$google$api.MonitoredResourceDescriptor>(
             1,
             'resourceDescriptors',
@@ -111,16 +111,15 @@ class ListMonitoredResourceDescriptorsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListMonitoredResourceDescriptorsResponse clone() =>
-      new ListMonitoredResourceDescriptorsResponse()..mergeFromMessage(this);
+      ListMonitoredResourceDescriptorsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListMonitoredResourceDescriptorsResponse create() =>
-      new ListMonitoredResourceDescriptorsResponse();
+      ListMonitoredResourceDescriptorsResponse();
   static PbList<ListMonitoredResourceDescriptorsResponse> createRepeated() =>
-      new PbList<ListMonitoredResourceDescriptorsResponse>();
+      PbList<ListMonitoredResourceDescriptorsResponse>();
   static ListMonitoredResourceDescriptorsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyListMonitoredResourceDescriptorsResponse();
+      _defaultInstance = _ReadonlyListMonitoredResourceDescriptorsResponse();
     return _defaultInstance;
   }
 
@@ -148,7 +147,7 @@ class _ReadonlyListMonitoredResourceDescriptorsResponse
 
 class GetMonitoredResourceDescriptorRequest extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('GetMonitoredResourceDescriptorRequest')
+      BuilderInfo('GetMonitoredResourceDescriptorRequest')
         ..aOS(3, 'name')
         ..hasRequiredFields = false;
 
@@ -160,15 +159,15 @@ class GetMonitoredResourceDescriptorRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetMonitoredResourceDescriptorRequest clone() =>
-      new GetMonitoredResourceDescriptorRequest()..mergeFromMessage(this);
+      GetMonitoredResourceDescriptorRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetMonitoredResourceDescriptorRequest create() =>
-      new GetMonitoredResourceDescriptorRequest();
+      GetMonitoredResourceDescriptorRequest();
   static PbList<GetMonitoredResourceDescriptorRequest> createRepeated() =>
-      new PbList<GetMonitoredResourceDescriptorRequest>();
+      PbList<GetMonitoredResourceDescriptorRequest>();
   static GetMonitoredResourceDescriptorRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetMonitoredResourceDescriptorRequest();
+      _defaultInstance = _ReadonlyGetMonitoredResourceDescriptorRequest();
     return _defaultInstance;
   }
 
@@ -191,7 +190,7 @@ class _ReadonlyGetMonitoredResourceDescriptorRequest
     extends GetMonitoredResourceDescriptorRequest with ReadonlyMessageMixin {}
 
 class ListMetricDescriptorsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListMetricDescriptorsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListMetricDescriptorsRequest')
     ..aOS(2, 'filter')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
     ..aOS(4, 'pageToken')
@@ -206,15 +205,15 @@ class ListMetricDescriptorsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListMetricDescriptorsRequest clone() =>
-      new ListMetricDescriptorsRequest()..mergeFromMessage(this);
+      ListMetricDescriptorsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListMetricDescriptorsRequest create() =>
-      new ListMetricDescriptorsRequest();
+      ListMetricDescriptorsRequest();
   static PbList<ListMetricDescriptorsRequest> createRepeated() =>
-      new PbList<ListMetricDescriptorsRequest>();
+      PbList<ListMetricDescriptorsRequest>();
   static ListMetricDescriptorsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListMetricDescriptorsRequest();
+      _defaultInstance = _ReadonlyListMetricDescriptorsRequest();
     return _defaultInstance;
   }
 
@@ -261,7 +260,7 @@ class _ReadonlyListMetricDescriptorsRequest extends ListMetricDescriptorsRequest
     with ReadonlyMessageMixin {}
 
 class ListMetricDescriptorsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListMetricDescriptorsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListMetricDescriptorsResponse')
     ..pp<$google$api.MetricDescriptor>(
         1,
         'metricDescriptors',
@@ -279,15 +278,15 @@ class ListMetricDescriptorsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListMetricDescriptorsResponse clone() =>
-      new ListMetricDescriptorsResponse()..mergeFromMessage(this);
+      ListMetricDescriptorsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListMetricDescriptorsResponse create() =>
-      new ListMetricDescriptorsResponse();
+      ListMetricDescriptorsResponse();
   static PbList<ListMetricDescriptorsResponse> createRepeated() =>
-      new PbList<ListMetricDescriptorsResponse>();
+      PbList<ListMetricDescriptorsResponse>();
   static ListMetricDescriptorsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListMetricDescriptorsResponse();
+      _defaultInstance = _ReadonlyListMetricDescriptorsResponse();
     return _defaultInstance;
   }
 
@@ -312,7 +311,7 @@ class _ReadonlyListMetricDescriptorsResponse
     extends ListMetricDescriptorsResponse with ReadonlyMessageMixin {}
 
 class GetMetricDescriptorRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetMetricDescriptorRequest')
+  static final BuilderInfo _i = BuilderInfo('GetMetricDescriptorRequest')
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -324,15 +323,14 @@ class GetMetricDescriptorRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetMetricDescriptorRequest clone() =>
-      new GetMetricDescriptorRequest()..mergeFromMessage(this);
+      GetMetricDescriptorRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetMetricDescriptorRequest create() =>
-      new GetMetricDescriptorRequest();
+  static GetMetricDescriptorRequest create() => GetMetricDescriptorRequest();
   static PbList<GetMetricDescriptorRequest> createRepeated() =>
-      new PbList<GetMetricDescriptorRequest>();
+      PbList<GetMetricDescriptorRequest>();
   static GetMetricDescriptorRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetMetricDescriptorRequest();
+      _defaultInstance = _ReadonlyGetMetricDescriptorRequest();
     return _defaultInstance;
   }
 
@@ -355,7 +353,7 @@ class _ReadonlyGetMetricDescriptorRequest extends GetMetricDescriptorRequest
     with ReadonlyMessageMixin {}
 
 class CreateMetricDescriptorRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateMetricDescriptorRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateMetricDescriptorRequest')
     ..a<$google$api.MetricDescriptor>(
         2,
         'metricDescriptor',
@@ -373,15 +371,15 @@ class CreateMetricDescriptorRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateMetricDescriptorRequest clone() =>
-      new CreateMetricDescriptorRequest()..mergeFromMessage(this);
+      CreateMetricDescriptorRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateMetricDescriptorRequest create() =>
-      new CreateMetricDescriptorRequest();
+      CreateMetricDescriptorRequest();
   static PbList<CreateMetricDescriptorRequest> createRepeated() =>
-      new PbList<CreateMetricDescriptorRequest>();
+      PbList<CreateMetricDescriptorRequest>();
   static CreateMetricDescriptorRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateMetricDescriptorRequest();
+      _defaultInstance = _ReadonlyCreateMetricDescriptorRequest();
     return _defaultInstance;
   }
 
@@ -412,7 +410,7 @@ class _ReadonlyCreateMetricDescriptorRequest
     extends CreateMetricDescriptorRequest with ReadonlyMessageMixin {}
 
 class DeleteMetricDescriptorRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteMetricDescriptorRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteMetricDescriptorRequest')
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -424,15 +422,15 @@ class DeleteMetricDescriptorRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteMetricDescriptorRequest clone() =>
-      new DeleteMetricDescriptorRequest()..mergeFromMessage(this);
+      DeleteMetricDescriptorRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteMetricDescriptorRequest create() =>
-      new DeleteMetricDescriptorRequest();
+      DeleteMetricDescriptorRequest();
   static PbList<DeleteMetricDescriptorRequest> createRepeated() =>
-      new PbList<DeleteMetricDescriptorRequest>();
+      PbList<DeleteMetricDescriptorRequest>();
   static DeleteMetricDescriptorRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteMetricDescriptorRequest();
+      _defaultInstance = _ReadonlyDeleteMetricDescriptorRequest();
     return _defaultInstance;
   }
 
@@ -455,7 +453,7 @@ class _ReadonlyDeleteMetricDescriptorRequest
     extends DeleteMetricDescriptorRequest with ReadonlyMessageMixin {}
 
 class ListTimeSeriesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTimeSeriesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTimeSeriesRequest')
     ..aOS(2, 'filter')
     ..a<TimeInterval>(4, 'interval', PbFieldType.OM, TimeInterval.getDefault,
         TimeInterval.create)
@@ -482,14 +480,14 @@ class ListTimeSeriesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTimeSeriesRequest clone() =>
-      new ListTimeSeriesRequest()..mergeFromMessage(this);
+      ListTimeSeriesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTimeSeriesRequest create() => new ListTimeSeriesRequest();
+  static ListTimeSeriesRequest create() => ListTimeSeriesRequest();
   static PbList<ListTimeSeriesRequest> createRepeated() =>
-      new PbList<ListTimeSeriesRequest>();
+      PbList<ListTimeSeriesRequest>();
   static ListTimeSeriesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTimeSeriesRequest();
+      _defaultInstance = _ReadonlyListTimeSeriesRequest();
     return _defaultInstance;
   }
 
@@ -568,7 +566,7 @@ class _ReadonlyListTimeSeriesRequest extends ListTimeSeriesRequest
     with ReadonlyMessageMixin {}
 
 class ListTimeSeriesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTimeSeriesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTimeSeriesResponse')
     ..pp<TimeSeries>(1, 'timeSeries', PbFieldType.PM, TimeSeries.$checkItem,
         TimeSeries.create)
     ..aOS(2, 'nextPageToken')
@@ -582,14 +580,14 @@ class ListTimeSeriesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTimeSeriesResponse clone() =>
-      new ListTimeSeriesResponse()..mergeFromMessage(this);
+      ListTimeSeriesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTimeSeriesResponse create() => new ListTimeSeriesResponse();
+  static ListTimeSeriesResponse create() => ListTimeSeriesResponse();
   static PbList<ListTimeSeriesResponse> createRepeated() =>
-      new PbList<ListTimeSeriesResponse>();
+      PbList<ListTimeSeriesResponse>();
   static ListTimeSeriesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTimeSeriesResponse();
+      _defaultInstance = _ReadonlyListTimeSeriesResponse();
     return _defaultInstance;
   }
 
@@ -614,7 +612,7 @@ class _ReadonlyListTimeSeriesResponse extends ListTimeSeriesResponse
     with ReadonlyMessageMixin {}
 
 class CreateTimeSeriesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTimeSeriesRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateTimeSeriesRequest')
     ..pp<TimeSeries>(2, 'timeSeries', PbFieldType.PM, TimeSeries.$checkItem,
         TimeSeries.create)
     ..aOS(3, 'name')
@@ -628,14 +626,14 @@ class CreateTimeSeriesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTimeSeriesRequest clone() =>
-      new CreateTimeSeriesRequest()..mergeFromMessage(this);
+      CreateTimeSeriesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateTimeSeriesRequest create() => new CreateTimeSeriesRequest();
+  static CreateTimeSeriesRequest create() => CreateTimeSeriesRequest();
   static PbList<CreateTimeSeriesRequest> createRepeated() =>
-      new PbList<CreateTimeSeriesRequest>();
+      PbList<CreateTimeSeriesRequest>();
   static CreateTimeSeriesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTimeSeriesRequest();
+      _defaultInstance = _ReadonlyCreateTimeSeriesRequest();
     return _defaultInstance;
   }
 
@@ -660,7 +658,7 @@ class _ReadonlyCreateTimeSeriesRequest extends CreateTimeSeriesRequest
     with ReadonlyMessageMixin {}
 
 class CreateTimeSeriesError extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTimeSeriesError')
+  static final BuilderInfo _i = BuilderInfo('CreateTimeSeriesError')
     ..a<TimeSeries>(1, 'timeSeries', PbFieldType.OM, TimeSeries.getDefault,
         TimeSeries.create)
     ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM,
@@ -675,14 +673,14 @@ class CreateTimeSeriesError extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTimeSeriesError clone() =>
-      new CreateTimeSeriesError()..mergeFromMessage(this);
+      CreateTimeSeriesError()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateTimeSeriesError create() => new CreateTimeSeriesError();
+  static CreateTimeSeriesError create() => CreateTimeSeriesError();
   static PbList<CreateTimeSeriesError> createRepeated() =>
-      new PbList<CreateTimeSeriesError>();
+      PbList<CreateTimeSeriesError>();
   static CreateTimeSeriesError getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTimeSeriesError();
+      _defaultInstance = _ReadonlyCreateTimeSeriesError();
     return _defaultInstance;
   }
 
@@ -719,7 +717,7 @@ class MetricServiceApi {
   Future<ListMonitoredResourceDescriptorsResponse>
       listMonitoredResourceDescriptors(
           ClientContext ctx, ListMonitoredResourceDescriptorsRequest request) {
-    var emptyResponse = new ListMonitoredResourceDescriptorsResponse();
+    var emptyResponse = ListMonitoredResourceDescriptorsResponse();
     return _client.invoke<ListMonitoredResourceDescriptorsResponse>(
         ctx,
         'MetricService',
@@ -731,7 +729,7 @@ class MetricServiceApi {
   Future<$google$api.MonitoredResourceDescriptor>
       getMonitoredResourceDescriptor(
           ClientContext ctx, GetMonitoredResourceDescriptorRequest request) {
-    var emptyResponse = new $google$api.MonitoredResourceDescriptor();
+    var emptyResponse = $google$api.MonitoredResourceDescriptor();
     return _client.invoke<$google$api.MonitoredResourceDescriptor>(
         ctx,
         'MetricService',
@@ -742,42 +740,42 @@ class MetricServiceApi {
 
   Future<ListMetricDescriptorsResponse> listMetricDescriptors(
       ClientContext ctx, ListMetricDescriptorsRequest request) {
-    var emptyResponse = new ListMetricDescriptorsResponse();
+    var emptyResponse = ListMetricDescriptorsResponse();
     return _client.invoke<ListMetricDescriptorsResponse>(
         ctx, 'MetricService', 'ListMetricDescriptors', request, emptyResponse);
   }
 
   Future<$google$api.MetricDescriptor> getMetricDescriptor(
       ClientContext ctx, GetMetricDescriptorRequest request) {
-    var emptyResponse = new $google$api.MetricDescriptor();
+    var emptyResponse = $google$api.MetricDescriptor();
     return _client.invoke<$google$api.MetricDescriptor>(
         ctx, 'MetricService', 'GetMetricDescriptor', request, emptyResponse);
   }
 
   Future<$google$api.MetricDescriptor> createMetricDescriptor(
       ClientContext ctx, CreateMetricDescriptorRequest request) {
-    var emptyResponse = new $google$api.MetricDescriptor();
+    var emptyResponse = $google$api.MetricDescriptor();
     return _client.invoke<$google$api.MetricDescriptor>(
         ctx, 'MetricService', 'CreateMetricDescriptor', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteMetricDescriptor(
       ClientContext ctx, DeleteMetricDescriptorRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'MetricService', 'DeleteMetricDescriptor', request, emptyResponse);
   }
 
   Future<ListTimeSeriesResponse> listTimeSeries(
       ClientContext ctx, ListTimeSeriesRequest request) {
-    var emptyResponse = new ListTimeSeriesResponse();
+    var emptyResponse = ListTimeSeriesResponse();
     return _client.invoke<ListTimeSeriesResponse>(
         ctx, 'MetricService', 'ListTimeSeries', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> createTimeSeries(
       ClientContext ctx, CreateTimeSeriesRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'MetricService', 'CreateTimeSeries', request, emptyResponse);
   }

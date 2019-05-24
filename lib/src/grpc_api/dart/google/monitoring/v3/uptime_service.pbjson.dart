@@ -9,19 +9,19 @@ import '../../protobuf/duration.pbjson.dart' as $google$protobuf;
 import '../../protobuf/field_mask.pbjson.dart' as $google$protobuf;
 import '../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const ListUptimeCheckConfigsRequest$json = const {
+const ListUptimeCheckConfigsRequest$json = {
   '1': 'ListUptimeCheckConfigsRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListUptimeCheckConfigsResponse$json = const {
+const ListUptimeCheckConfigsResponse$json = {
   '1': 'ListUptimeCheckConfigsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'uptime_check_configs',
       '3': 1,
       '4': 3,
@@ -29,28 +29,22 @@ const ListUptimeCheckConfigsResponse$json = const {
       '6': '.google.monitoring.v3.UptimeCheckConfig',
       '10': 'uptimeCheckConfigs'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetUptimeCheckConfigRequest$json = const {
+const GetUptimeCheckConfigRequest$json = {
   '1': 'GetUptimeCheckConfigRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const CreateUptimeCheckConfigRequest$json = const {
+const CreateUptimeCheckConfigRequest$json = {
   '1': 'CreateUptimeCheckConfigRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
       '1': 'uptime_check_config',
       '3': 2,
       '4': 1,
@@ -61,10 +55,10 @@ const CreateUptimeCheckConfigRequest$json = const {
   ],
 };
 
-const UpdateUptimeCheckConfigRequest$json = const {
+const UpdateUptimeCheckConfigRequest$json = {
   '1': 'UpdateUptimeCheckConfigRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'update_mask',
       '3': 2,
       '4': 1,
@@ -72,7 +66,7 @@ const UpdateUptimeCheckConfigRequest$json = const {
       '6': '.google.protobuf.FieldMask',
       '10': 'updateMask'
     },
-    const {
+    {
       '1': 'uptime_check_config',
       '3': 3,
       '4': 1,
@@ -83,25 +77,25 @@ const UpdateUptimeCheckConfigRequest$json = const {
   ],
 };
 
-const DeleteUptimeCheckConfigRequest$json = const {
+const DeleteUptimeCheckConfigRequest$json = {
   '1': 'DeleteUptimeCheckConfigRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListUptimeCheckIpsRequest$json = const {
+const ListUptimeCheckIpsRequest$json = {
   '1': 'ListUptimeCheckIpsRequest',
-  '2': const [
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListUptimeCheckIpsResponse$json = const {
+const ListUptimeCheckIpsResponse$json = {
   '1': 'ListUptimeCheckIpsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'uptime_check_ips',
       '3': 1,
       '4': 3,
@@ -109,59 +103,53 @@ const ListUptimeCheckIpsResponse$json = const {
       '6': '.google.monitoring.v3.UptimeCheckIp',
       '10': 'uptimeCheckIps'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const UptimeCheckService$json = const {
+const UptimeCheckService$json = {
   '1': 'UptimeCheckService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'ListUptimeCheckConfigs',
       '2': '.google.monitoring.v3.ListUptimeCheckConfigsRequest',
       '3': '.google.monitoring.v3.ListUptimeCheckConfigsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetUptimeCheckConfig',
       '2': '.google.monitoring.v3.GetUptimeCheckConfigRequest',
       '3': '.google.monitoring.v3.UptimeCheckConfig',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateUptimeCheckConfig',
       '2': '.google.monitoring.v3.CreateUptimeCheckConfigRequest',
       '3': '.google.monitoring.v3.UptimeCheckConfig',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateUptimeCheckConfig',
       '2': '.google.monitoring.v3.UpdateUptimeCheckConfigRequest',
       '3': '.google.monitoring.v3.UptimeCheckConfig',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteUptimeCheckConfig',
       '2': '.google.monitoring.v3.DeleteUptimeCheckConfigRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListUptimeCheckIps',
       '2': '.google.monitoring.v3.ListUptimeCheckIpsRequest',
       '3': '.google.monitoring.v3.ListUptimeCheckIpsResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const UptimeCheckService$messageJson = const {
+const UptimeCheckService$messageJson = {
   '.google.monitoring.v3.ListUptimeCheckConfigsRequest':
       ListUptimeCheckConfigsRequest$json,
   '.google.monitoring.v3.ListUptimeCheckConfigsResponse':

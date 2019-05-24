@@ -14,11 +14,11 @@ import 'query_plan.pbjson.dart';
 import 'keys.pbjson.dart';
 import 'mutation.pbjson.dart';
 
-const CreateSessionRequest$json = const {
+const CreateSessionRequest$json = {
   '1': 'CreateSessionRequest',
-  '2': const [
-    const {'1': 'database', '3': 1, '4': 1, '5': 9, '10': 'database'},
-    const {
+  '2': [
+    {'1': 'database', '3': 1, '4': 1, '5': 9, '10': 'database'},
+    {
       '1': 'session',
       '3': 2,
       '4': 1,
@@ -29,11 +29,11 @@ const CreateSessionRequest$json = const {
   ],
 };
 
-const Session$json = const {
+const Session$json = {
   '1': 'Session',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'labels',
       '3': 2,
       '4': 3,
@@ -41,7 +41,7 @@ const Session$json = const {
       '6': '.google.spanner.v1.Session.LabelsEntry',
       '10': 'labels'
     },
-    const {
+    {
       '1': 'create_time',
       '3': 3,
       '4': 1,
@@ -49,7 +49,7 @@ const Session$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'createTime'
     },
-    const {
+    {
       '1': 'approximate_last_use_time',
       '3': 4,
       '4': 1,
@@ -58,39 +58,39 @@ const Session$json = const {
       '10': 'approximateLastUseTime'
     },
   ],
-  '3': const [Session_LabelsEntry$json],
+  '3': [Session_LabelsEntry$json],
 };
 
-const Session_LabelsEntry$json = const {
+const Session_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const GetSessionRequest$json = const {
+const GetSessionRequest$json = {
   '1': 'GetSessionRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListSessionsRequest$json = const {
+const ListSessionsRequest$json = {
   '1': 'ListSessionsRequest',
-  '2': const [
-    const {'1': 'database', '3': 1, '4': 1, '5': 9, '10': 'database'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
+  '2': [
+    {'1': 'database', '3': 1, '4': 1, '5': 9, '10': 'database'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
   ],
 };
 
-const ListSessionsResponse$json = const {
+const ListSessionsResponse$json = {
   '1': 'ListSessionsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'sessions',
       '3': 1,
       '4': 3,
@@ -98,28 +98,22 @@ const ListSessionsResponse$json = const {
       '6': '.google.spanner.v1.Session',
       '10': 'sessions'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const DeleteSessionRequest$json = const {
+const DeleteSessionRequest$json = {
   '1': 'DeleteSessionRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ExecuteSqlRequest$json = const {
+const ExecuteSqlRequest$json = {
   '1': 'ExecuteSqlRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {
       '1': 'transaction',
       '3': 2,
       '4': 1,
@@ -127,8 +121,8 @@ const ExecuteSqlRequest$json = const {
       '6': '.google.spanner.v1.TransactionSelector',
       '10': 'transaction'
     },
-    const {'1': 'sql', '3': 3, '4': 1, '5': 9, '10': 'sql'},
-    const {
+    {'1': 'sql', '3': 3, '4': 1, '5': 9, '10': 'sql'},
+    {
       '1': 'params',
       '3': 4,
       '4': 1,
@@ -136,7 +130,7 @@ const ExecuteSqlRequest$json = const {
       '6': '.google.protobuf.Struct',
       '10': 'params'
     },
-    const {
+    {
       '1': 'param_types',
       '3': 5,
       '4': 3,
@@ -144,8 +138,8 @@ const ExecuteSqlRequest$json = const {
       '6': '.google.spanner.v1.ExecuteSqlRequest.ParamTypesEntry',
       '10': 'paramTypes'
     },
-    const {'1': 'resume_token', '3': 6, '4': 1, '5': 12, '10': 'resumeToken'},
-    const {
+    {'1': 'resume_token', '3': 6, '4': 1, '5': 12, '10': 'resumeToken'},
+    {
       '1': 'query_mode',
       '3': 7,
       '4': 1,
@@ -153,23 +147,17 @@ const ExecuteSqlRequest$json = const {
       '6': '.google.spanner.v1.ExecuteSqlRequest.QueryMode',
       '10': 'queryMode'
     },
-    const {
-      '1': 'partition_token',
-      '3': 8,
-      '4': 1,
-      '5': 12,
-      '10': 'partitionToken'
-    },
+    {'1': 'partition_token', '3': 8, '4': 1, '5': 12, '10': 'partitionToken'},
   ],
-  '3': const [ExecuteSqlRequest_ParamTypesEntry$json],
-  '4': const [ExecuteSqlRequest_QueryMode$json],
+  '3': [ExecuteSqlRequest_ParamTypesEntry$json],
+  '4': [ExecuteSqlRequest_QueryMode$json],
 };
 
-const ExecuteSqlRequest_ParamTypesEntry$json = const {
+const ExecuteSqlRequest_ParamTypesEntry$json = {
   '1': 'ParamTypesEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
       '1': 'value',
       '3': 2,
       '4': 1,
@@ -178,43 +166,37 @@ const ExecuteSqlRequest_ParamTypesEntry$json = const {
       '10': 'value'
     },
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const ExecuteSqlRequest_QueryMode$json = const {
+const ExecuteSqlRequest_QueryMode$json = {
   '1': 'QueryMode',
-  '2': const [
-    const {'1': 'NORMAL', '2': 0},
-    const {'1': 'PLAN', '2': 1},
-    const {'1': 'PROFILE', '2': 2},
+  '2': [
+    {'1': 'NORMAL', '2': 0},
+    {'1': 'PLAN', '2': 1},
+    {'1': 'PROFILE', '2': 2},
   ],
 };
 
-const PartitionOptions$json = const {
+const PartitionOptions$json = {
   '1': 'PartitionOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'partition_size_bytes',
       '3': 1,
       '4': 1,
       '5': 3,
       '10': 'partitionSizeBytes'
     },
-    const {
-      '1': 'max_partitions',
-      '3': 2,
-      '4': 1,
-      '5': 3,
-      '10': 'maxPartitions'
-    },
+    {'1': 'max_partitions', '3': 2, '4': 1, '5': 3, '10': 'maxPartitions'},
   ],
 };
 
-const PartitionQueryRequest$json = const {
+const PartitionQueryRequest$json = {
   '1': 'PartitionQueryRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {
       '1': 'transaction',
       '3': 2,
       '4': 1,
@@ -222,8 +204,8 @@ const PartitionQueryRequest$json = const {
       '6': '.google.spanner.v1.TransactionSelector',
       '10': 'transaction'
     },
-    const {'1': 'sql', '3': 3, '4': 1, '5': 9, '10': 'sql'},
-    const {
+    {'1': 'sql', '3': 3, '4': 1, '5': 9, '10': 'sql'},
+    {
       '1': 'params',
       '3': 4,
       '4': 1,
@@ -231,7 +213,7 @@ const PartitionQueryRequest$json = const {
       '6': '.google.protobuf.Struct',
       '10': 'params'
     },
-    const {
+    {
       '1': 'param_types',
       '3': 5,
       '4': 3,
@@ -239,7 +221,7 @@ const PartitionQueryRequest$json = const {
       '6': '.google.spanner.v1.PartitionQueryRequest.ParamTypesEntry',
       '10': 'paramTypes'
     },
-    const {
+    {
       '1': 'partition_options',
       '3': 6,
       '4': 1,
@@ -248,14 +230,14 @@ const PartitionQueryRequest$json = const {
       '10': 'partitionOptions'
     },
   ],
-  '3': const [PartitionQueryRequest_ParamTypesEntry$json],
+  '3': [PartitionQueryRequest_ParamTypesEntry$json],
 };
 
-const PartitionQueryRequest_ParamTypesEntry$json = const {
+const PartitionQueryRequest_ParamTypesEntry$json = {
   '1': 'ParamTypesEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
       '1': 'value',
       '3': 2,
       '4': 1,
@@ -264,14 +246,14 @@ const PartitionQueryRequest_ParamTypesEntry$json = const {
       '10': 'value'
     },
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const PartitionReadRequest$json = const {
+const PartitionReadRequest$json = {
   '1': 'PartitionReadRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {
       '1': 'transaction',
       '3': 2,
       '4': 1,
@@ -279,10 +261,10 @@ const PartitionReadRequest$json = const {
       '6': '.google.spanner.v1.TransactionSelector',
       '10': 'transaction'
     },
-    const {'1': 'table', '3': 3, '4': 1, '5': 9, '10': 'table'},
-    const {'1': 'index', '3': 4, '4': 1, '5': 9, '10': 'index'},
-    const {'1': 'columns', '3': 5, '4': 3, '5': 9, '10': 'columns'},
-    const {
+    {'1': 'table', '3': 3, '4': 1, '5': 9, '10': 'table'},
+    {'1': 'index', '3': 4, '4': 1, '5': 9, '10': 'index'},
+    {'1': 'columns', '3': 5, '4': 3, '5': 9, '10': 'columns'},
+    {
       '1': 'key_set',
       '3': 6,
       '4': 1,
@@ -290,7 +272,7 @@ const PartitionReadRequest$json = const {
       '6': '.google.spanner.v1.KeySet',
       '10': 'keySet'
     },
-    const {
+    {
       '1': 'partition_options',
       '3': 9,
       '4': 1,
@@ -301,23 +283,17 @@ const PartitionReadRequest$json = const {
   ],
 };
 
-const Partition$json = const {
+const Partition$json = {
   '1': 'Partition',
-  '2': const [
-    const {
-      '1': 'partition_token',
-      '3': 1,
-      '4': 1,
-      '5': 12,
-      '10': 'partitionToken'
-    },
+  '2': [
+    {'1': 'partition_token', '3': 1, '4': 1, '5': 12, '10': 'partitionToken'},
   ],
 };
 
-const PartitionResponse$json = const {
+const PartitionResponse$json = {
   '1': 'PartitionResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'partitions',
       '3': 1,
       '4': 3,
@@ -325,7 +301,7 @@ const PartitionResponse$json = const {
       '6': '.google.spanner.v1.Partition',
       '10': 'partitions'
     },
-    const {
+    {
       '1': 'transaction',
       '3': 2,
       '4': 1,
@@ -336,11 +312,11 @@ const PartitionResponse$json = const {
   ],
 };
 
-const ReadRequest$json = const {
+const ReadRequest$json = {
   '1': 'ReadRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {
       '1': 'transaction',
       '3': 2,
       '4': 1,
@@ -348,10 +324,10 @@ const ReadRequest$json = const {
       '6': '.google.spanner.v1.TransactionSelector',
       '10': 'transaction'
     },
-    const {'1': 'table', '3': 3, '4': 1, '5': 9, '10': 'table'},
-    const {'1': 'index', '3': 4, '4': 1, '5': 9, '10': 'index'},
-    const {'1': 'columns', '3': 5, '4': 3, '5': 9, '10': 'columns'},
-    const {
+    {'1': 'table', '3': 3, '4': 1, '5': 9, '10': 'table'},
+    {'1': 'index', '3': 4, '4': 1, '5': 9, '10': 'index'},
+    {'1': 'columns', '3': 5, '4': 3, '5': 9, '10': 'columns'},
+    {
       '1': 'key_set',
       '3': 6,
       '4': 1,
@@ -359,23 +335,17 @@ const ReadRequest$json = const {
       '6': '.google.spanner.v1.KeySet',
       '10': 'keySet'
     },
-    const {'1': 'limit', '3': 8, '4': 1, '5': 3, '10': 'limit'},
-    const {'1': 'resume_token', '3': 9, '4': 1, '5': 12, '10': 'resumeToken'},
-    const {
-      '1': 'partition_token',
-      '3': 10,
-      '4': 1,
-      '5': 12,
-      '10': 'partitionToken'
-    },
+    {'1': 'limit', '3': 8, '4': 1, '5': 3, '10': 'limit'},
+    {'1': 'resume_token', '3': 9, '4': 1, '5': 12, '10': 'resumeToken'},
+    {'1': 'partition_token', '3': 10, '4': 1, '5': 12, '10': 'partitionToken'},
   ],
 };
 
-const BeginTransactionRequest$json = const {
+const BeginTransactionRequest$json = {
   '1': 'BeginTransactionRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {
       '1': 'options',
       '3': 2,
       '4': 1,
@@ -386,11 +356,11 @@ const BeginTransactionRequest$json = const {
   ],
 };
 
-const CommitRequest$json = const {
+const CommitRequest$json = {
   '1': 'CommitRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {
       '1': 'transaction_id',
       '3': 2,
       '4': 1,
@@ -398,7 +368,7 @@ const CommitRequest$json = const {
       '9': 0,
       '10': 'transactionId'
     },
-    const {
+    {
       '1': 'single_use_transaction',
       '3': 3,
       '4': 1,
@@ -407,7 +377,7 @@ const CommitRequest$json = const {
       '9': 0,
       '10': 'singleUseTransaction'
     },
-    const {
+    {
       '1': 'mutations',
       '3': 4,
       '4': 3,
@@ -416,15 +386,15 @@ const CommitRequest$json = const {
       '10': 'mutations'
     },
   ],
-  '8': const [
-    const {'1': 'transaction'},
+  '8': [
+    {'1': 'transaction'},
   ],
 };
 
-const CommitResponse$json = const {
+const CommitResponse$json = {
   '1': 'CommitResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'commit_timestamp',
       '3': 1,
       '4': 1,
@@ -435,107 +405,101 @@ const CommitResponse$json = const {
   ],
 };
 
-const RollbackRequest$json = const {
+const RollbackRequest$json = {
   '1': 'RollbackRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
-      '1': 'transaction_id',
-      '3': 2,
-      '4': 1,
-      '5': 12,
-      '10': 'transactionId'
-    },
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {'1': 'transaction_id', '3': 2, '4': 1, '5': 12, '10': 'transactionId'},
   ],
 };
 
-const Spanner$json = const {
+const Spanner$json = {
   '1': 'Spanner',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateSession',
       '2': '.google.spanner.v1.CreateSessionRequest',
       '3': '.google.spanner.v1.Session',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetSession',
       '2': '.google.spanner.v1.GetSessionRequest',
       '3': '.google.spanner.v1.Session',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListSessions',
       '2': '.google.spanner.v1.ListSessionsRequest',
       '3': '.google.spanner.v1.ListSessionsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteSession',
       '2': '.google.spanner.v1.DeleteSessionRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ExecuteSql',
       '2': '.google.spanner.v1.ExecuteSqlRequest',
       '3': '.google.spanner.v1.ResultSet',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ExecuteStreamingSql',
       '2': '.google.spanner.v1.ExecuteSqlRequest',
       '3': '.google.spanner.v1.PartialResultSet',
-      '4': const {},
+      '4': {},
       '6': true
     },
-    const {
+    {
       '1': 'Read',
       '2': '.google.spanner.v1.ReadRequest',
       '3': '.google.spanner.v1.ResultSet',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'StreamingRead',
       '2': '.google.spanner.v1.ReadRequest',
       '3': '.google.spanner.v1.PartialResultSet',
-      '4': const {},
+      '4': {},
       '6': true
     },
-    const {
+    {
       '1': 'BeginTransaction',
       '2': '.google.spanner.v1.BeginTransactionRequest',
       '3': '.google.spanner.v1.Transaction',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'Commit',
       '2': '.google.spanner.v1.CommitRequest',
       '3': '.google.spanner.v1.CommitResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'Rollback',
       '2': '.google.spanner.v1.RollbackRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'PartitionQuery',
       '2': '.google.spanner.v1.PartitionQueryRequest',
       '3': '.google.spanner.v1.PartitionResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'PartitionRead',
       '2': '.google.spanner.v1.PartitionReadRequest',
       '3': '.google.spanner.v1.PartitionResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const Spanner$messageJson = const {
+const Spanner$messageJson = {
   '.google.spanner.v1.CreateSessionRequest': CreateSessionRequest$json,
   '.google.spanner.v1.Session': Session$json,
   '.google.spanner.v1.Session.LabelsEntry': Session_LabelsEntry$json,

@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Deployment_FilesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Deployment_FilesEntry')
+  static final BuilderInfo _i = BuilderInfo('Deployment_FilesEntry')
     ..aOS(1, 'key')
     ..a<FileInfo>(
         2, 'value', PbFieldType.OM, FileInfo.getDefault, FileInfo.create)
@@ -23,14 +23,14 @@ class Deployment_FilesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Deployment_FilesEntry clone() =>
-      new Deployment_FilesEntry()..mergeFromMessage(this);
+      Deployment_FilesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Deployment_FilesEntry create() => new Deployment_FilesEntry();
+  static Deployment_FilesEntry create() => Deployment_FilesEntry();
   static PbList<Deployment_FilesEntry> createRepeated() =>
-      new PbList<Deployment_FilesEntry>();
+      PbList<Deployment_FilesEntry>();
   static Deployment_FilesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeployment_FilesEntry();
+      _defaultInstance = _ReadonlyDeployment_FilesEntry();
     return _defaultInstance;
   }
 
@@ -61,7 +61,7 @@ class _ReadonlyDeployment_FilesEntry extends Deployment_FilesEntry
     with ReadonlyMessageMixin {}
 
 class Deployment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Deployment')
+  static final BuilderInfo _i = BuilderInfo('Deployment')
     ..pp<Deployment_FilesEntry>(1, 'files', PbFieldType.PM,
         Deployment_FilesEntry.$checkItem, Deployment_FilesEntry.create)
     ..a<ContainerInfo>(2, 'container', PbFieldType.OM, ContainerInfo.getDefault,
@@ -75,12 +75,12 @@ class Deployment extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Deployment.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Deployment clone() => new Deployment()..mergeFromMessage(this);
+  Deployment clone() => Deployment()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Deployment create() => new Deployment();
-  static PbList<Deployment> createRepeated() => new PbList<Deployment>();
+  static Deployment create() => Deployment();
+  static PbList<Deployment> createRepeated() => PbList<Deployment>();
   static Deployment getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeployment();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeployment();
     return _defaultInstance;
   }
 
@@ -111,7 +111,7 @@ class Deployment extends GeneratedMessage {
 class _ReadonlyDeployment extends Deployment with ReadonlyMessageMixin {}
 
 class FileInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FileInfo')
+  static final BuilderInfo _i = BuilderInfo('FileInfo')
     ..aOS(1, 'sourceUrl')
     ..aOS(2, 'sha1Sum')
     ..aOS(3, 'mimeType')
@@ -123,12 +123,12 @@ class FileInfo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   FileInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FileInfo clone() => new FileInfo()..mergeFromMessage(this);
+  FileInfo clone() => FileInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FileInfo create() => new FileInfo();
-  static PbList<FileInfo> createRepeated() => new PbList<FileInfo>();
+  static FileInfo create() => FileInfo();
+  static PbList<FileInfo> createRepeated() => PbList<FileInfo>();
   static FileInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFileInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileInfo();
     return _defaultInstance;
   }
 
@@ -165,7 +165,7 @@ class FileInfo extends GeneratedMessage {
 class _ReadonlyFileInfo extends FileInfo with ReadonlyMessageMixin {}
 
 class ContainerInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ContainerInfo')
+  static final BuilderInfo _i = BuilderInfo('ContainerInfo')
     ..aOS(1, 'image')
     ..hasRequiredFields = false;
 
@@ -176,13 +176,12 @@ class ContainerInfo extends GeneratedMessage {
   ContainerInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ContainerInfo clone() => new ContainerInfo()..mergeFromMessage(this);
+  ContainerInfo clone() => ContainerInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ContainerInfo create() => new ContainerInfo();
-  static PbList<ContainerInfo> createRepeated() => new PbList<ContainerInfo>();
+  static ContainerInfo create() => ContainerInfo();
+  static PbList<ContainerInfo> createRepeated() => PbList<ContainerInfo>();
   static ContainerInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyContainerInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyContainerInfo();
     return _defaultInstance;
   }
 
@@ -203,7 +202,7 @@ class ContainerInfo extends GeneratedMessage {
 class _ReadonlyContainerInfo extends ContainerInfo with ReadonlyMessageMixin {}
 
 class ZipInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ZipInfo')
+  static final BuilderInfo _i = BuilderInfo('ZipInfo')
     ..aOS(3, 'sourceUrl')
     ..a<int>(4, 'filesCount', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -214,12 +213,12 @@ class ZipInfo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ZipInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ZipInfo clone() => new ZipInfo()..mergeFromMessage(this);
+  ZipInfo clone() => ZipInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ZipInfo create() => new ZipInfo();
-  static PbList<ZipInfo> createRepeated() => new PbList<ZipInfo>();
+  static ZipInfo create() => ZipInfo();
+  static PbList<ZipInfo> createRepeated() => PbList<ZipInfo>();
   static ZipInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyZipInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyZipInfo();
     return _defaultInstance;
   }
 

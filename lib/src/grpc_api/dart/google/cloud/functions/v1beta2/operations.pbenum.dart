@@ -9,15 +9,15 @@ import 'package:protobuf/protobuf.dart';
 
 class OperationType extends ProtobufEnum {
   static const OperationType OPERATION_UNSPECIFIED =
-      const OperationType._(0, 'OPERATION_UNSPECIFIED');
+      OperationType._(0, 'OPERATION_UNSPECIFIED');
   static const OperationType CREATE_FUNCTION =
-      const OperationType._(1, 'CREATE_FUNCTION');
+      OperationType._(1, 'CREATE_FUNCTION');
   static const OperationType UPDATE_FUNCTION =
-      const OperationType._(2, 'UPDATE_FUNCTION');
+      OperationType._(2, 'UPDATE_FUNCTION');
   static const OperationType DELETE_FUNCTION =
-      const OperationType._(3, 'DELETE_FUNCTION');
+      OperationType._(3, 'DELETE_FUNCTION');
 
-  static const List<OperationType> values = const <OperationType>[
+  static const List<OperationType> values = <OperationType>[
     OPERATION_UNSPECIFIED,
     CREATE_FUNCTION,
     UPDATE_FUNCTION,

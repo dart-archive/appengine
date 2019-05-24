@@ -21,9 +21,9 @@ abstract class StreamingVariantServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'StreamVariants':
-        return new StreamVariantsRequest();
+        return StreamVariantsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -33,7 +33,7 @@ abstract class StreamingVariantServiceBase extends GeneratedService {
       case 'StreamVariants':
         return this.streamVariants(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -81,43 +81,43 @@ abstract class VariantServiceV1ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ImportVariants':
-        return new ImportVariantsRequest();
+        return ImportVariantsRequest();
       case 'CreateVariantSet':
-        return new CreateVariantSetRequest();
+        return CreateVariantSetRequest();
       case 'ExportVariantSet':
-        return new ExportVariantSetRequest();
+        return ExportVariantSetRequest();
       case 'GetVariantSet':
-        return new GetVariantSetRequest();
+        return GetVariantSetRequest();
       case 'SearchVariantSets':
-        return new SearchVariantSetsRequest();
+        return SearchVariantSetsRequest();
       case 'DeleteVariantSet':
-        return new DeleteVariantSetRequest();
+        return DeleteVariantSetRequest();
       case 'UpdateVariantSet':
-        return new UpdateVariantSetRequest();
+        return UpdateVariantSetRequest();
       case 'SearchVariants':
-        return new SearchVariantsRequest();
+        return SearchVariantsRequest();
       case 'CreateVariant':
-        return new CreateVariantRequest();
+        return CreateVariantRequest();
       case 'UpdateVariant':
-        return new UpdateVariantRequest();
+        return UpdateVariantRequest();
       case 'DeleteVariant':
-        return new DeleteVariantRequest();
+        return DeleteVariantRequest();
       case 'GetVariant':
-        return new GetVariantRequest();
+        return GetVariantRequest();
       case 'MergeVariants':
-        return new MergeVariantsRequest();
+        return MergeVariantsRequest();
       case 'SearchCallSets':
-        return new SearchCallSetsRequest();
+        return SearchCallSetsRequest();
       case 'CreateCallSet':
-        return new CreateCallSetRequest();
+        return CreateCallSetRequest();
       case 'UpdateCallSet':
-        return new UpdateCallSetRequest();
+        return UpdateCallSetRequest();
       case 'DeleteCallSet':
-        return new DeleteCallSetRequest();
+        return DeleteCallSetRequest();
       case 'GetCallSet':
-        return new GetCallSetRequest();
+        return GetCallSetRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -161,7 +161,7 @@ abstract class VariantServiceV1ServiceBase extends GeneratedService {
       case 'GetCallSet':
         return this.getCallSet(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

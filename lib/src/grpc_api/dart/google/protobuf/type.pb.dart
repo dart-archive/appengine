@@ -16,7 +16,7 @@ import 'type.pbenum.dart';
 export 'type.pbenum.dart';
 
 class Type extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Type')
+  static final BuilderInfo _i = BuilderInfo('Type')
     ..aOS(1, 'name')
     ..pp<Field>(2, 'fields', PbFieldType.PM, Field.$checkItem, Field.create)
     ..pPS(3, 'oneofs')
@@ -32,12 +32,12 @@ class Type extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Type.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Type clone() => new Type()..mergeFromMessage(this);
+  Type clone() => Type()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Type create() => new Type();
-  static PbList<Type> createRepeated() => new PbList<Type>();
+  static Type create() => Type();
+  static PbList<Type> createRepeated() => PbList<Type>();
   static Type getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyType();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyType();
     return _defaultInstance;
   }
 
@@ -80,7 +80,7 @@ class Type extends GeneratedMessage {
 class _ReadonlyType extends Type with ReadonlyMessageMixin {}
 
 class Field extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Field')
+  static final BuilderInfo _i = BuilderInfo('Field')
     ..e<Field_Kind>(1, 'kind', PbFieldType.OE, Field_Kind.TYPE_UNKNOWN,
         Field_Kind.valueOf, Field_Kind.values)
     ..e<Field_Cardinality>(
@@ -105,12 +105,12 @@ class Field extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Field.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Field clone() => new Field()..mergeFromMessage(this);
+  Field clone() => Field()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Field create() => new Field();
-  static PbList<Field> createRepeated() => new PbList<Field>();
+  static Field create() => Field();
+  static PbList<Field> createRepeated() => PbList<Field>();
   static Field getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyField();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyField();
     return _defaultInstance;
   }
 
@@ -197,7 +197,7 @@ class Field extends GeneratedMessage {
 class _ReadonlyField extends Field with ReadonlyMessageMixin {}
 
 class Enum extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Enum')
+  static final BuilderInfo _i = BuilderInfo('Enum')
     ..aOS(1, 'name')
     ..pp<EnumValue>(
         2, 'enumvalue', PbFieldType.PM, EnumValue.$checkItem, EnumValue.create)
@@ -213,12 +213,12 @@ class Enum extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Enum.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Enum clone() => new Enum()..mergeFromMessage(this);
+  Enum clone() => Enum()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Enum create() => new Enum();
-  static PbList<Enum> createRepeated() => new PbList<Enum>();
+  static Enum create() => Enum();
+  static PbList<Enum> createRepeated() => PbList<Enum>();
   static Enum getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEnum();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEnum();
     return _defaultInstance;
   }
 
@@ -259,7 +259,7 @@ class Enum extends GeneratedMessage {
 class _ReadonlyEnum extends Enum with ReadonlyMessageMixin {}
 
 class EnumValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EnumValue')
+  static final BuilderInfo _i = BuilderInfo('EnumValue')
     ..aOS(1, 'name')
     ..a<int>(2, 'number', PbFieldType.O3)
     ..pp<Option>(3, 'options', PbFieldType.PM, Option.$checkItem, Option.create)
@@ -271,12 +271,12 @@ class EnumValue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   EnumValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EnumValue clone() => new EnumValue()..mergeFromMessage(this);
+  EnumValue clone() => EnumValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EnumValue create() => new EnumValue();
-  static PbList<EnumValue> createRepeated() => new PbList<EnumValue>();
+  static EnumValue create() => EnumValue();
+  static PbList<EnumValue> createRepeated() => PbList<EnumValue>();
   static EnumValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEnumValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEnumValue();
     return _defaultInstance;
   }
 
@@ -307,7 +307,7 @@ class EnumValue extends GeneratedMessage {
 class _ReadonlyEnumValue extends EnumValue with ReadonlyMessageMixin {}
 
 class Option extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Option')
+  static final BuilderInfo _i = BuilderInfo('Option')
     ..aOS(1, 'name')
     ..a<Any>(2, 'value', PbFieldType.OM, Any.getDefault, Any.create)
     ..hasRequiredFields = false;
@@ -318,12 +318,12 @@ class Option extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Option.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Option clone() => new Option()..mergeFromMessage(this);
+  Option clone() => Option()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Option create() => new Option();
-  static PbList<Option> createRepeated() => new PbList<Option>();
+  static Option create() => Option();
+  static PbList<Option> createRepeated() => PbList<Option>();
   static Option getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyOption();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOption();
     return _defaultInstance;
   }
 

@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import 'bigtable_table_data.pb.dart';
 
 class CreateTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTableRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateTableRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'tableId')
     ..a<Table>(3, 'table', PbFieldType.OM, Table.getDefault, Table.create)
@@ -25,15 +25,14 @@ class CreateTableRequest extends GeneratedMessage {
   CreateTableRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateTableRequest clone() =>
-      new CreateTableRequest()..mergeFromMessage(this);
+  CreateTableRequest clone() => CreateTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateTableRequest create() => new CreateTableRequest();
+  static CreateTableRequest create() => CreateTableRequest();
   static PbList<CreateTableRequest> createRepeated() =>
-      new PbList<CreateTableRequest>();
+      PbList<CreateTableRequest>();
   static CreateTableRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableRequest();
+      _defaultInstance = _ReadonlyCreateTableRequest();
     return _defaultInstance;
   }
 
@@ -73,7 +72,7 @@ class _ReadonlyCreateTableRequest extends CreateTableRequest
     with ReadonlyMessageMixin {}
 
 class ListTablesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTablesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTablesRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -84,14 +83,14 @@ class ListTablesRequest extends GeneratedMessage {
   ListTablesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTablesRequest clone() => new ListTablesRequest()..mergeFromMessage(this);
+  ListTablesRequest clone() => ListTablesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTablesRequest create() => new ListTablesRequest();
+  static ListTablesRequest create() => ListTablesRequest();
   static PbList<ListTablesRequest> createRepeated() =>
-      new PbList<ListTablesRequest>();
+      PbList<ListTablesRequest>();
   static ListTablesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTablesRequest();
+      _defaultInstance = _ReadonlyListTablesRequest();
     return _defaultInstance;
   }
 
@@ -113,7 +112,7 @@ class _ReadonlyListTablesRequest extends ListTablesRequest
     with ReadonlyMessageMixin {}
 
 class ListTablesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTablesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTablesResponse')
     ..pp<Table>(1, 'tables', PbFieldType.PM, Table.$checkItem, Table.create)
     ..hasRequiredFields = false;
 
@@ -124,15 +123,14 @@ class ListTablesResponse extends GeneratedMessage {
   ListTablesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTablesResponse clone() =>
-      new ListTablesResponse()..mergeFromMessage(this);
+  ListTablesResponse clone() => ListTablesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTablesResponse create() => new ListTablesResponse();
+  static ListTablesResponse create() => ListTablesResponse();
   static PbList<ListTablesResponse> createRepeated() =>
-      new PbList<ListTablesResponse>();
+      PbList<ListTablesResponse>();
   static ListTablesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTablesResponse();
+      _defaultInstance = _ReadonlyListTablesResponse();
     return _defaultInstance;
   }
 
@@ -148,7 +146,7 @@ class _ReadonlyListTablesResponse extends ListTablesResponse
     with ReadonlyMessageMixin {}
 
 class GetTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTableRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTableRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -159,14 +157,12 @@ class GetTableRequest extends GeneratedMessage {
   GetTableRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTableRequest clone() => new GetTableRequest()..mergeFromMessage(this);
+  GetTableRequest clone() => GetTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTableRequest create() => new GetTableRequest();
-  static PbList<GetTableRequest> createRepeated() =>
-      new PbList<GetTableRequest>();
+  static GetTableRequest create() => GetTableRequest();
+  static PbList<GetTableRequest> createRepeated() => PbList<GetTableRequest>();
   static GetTableRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTableRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetTableRequest();
     return _defaultInstance;
   }
 
@@ -188,7 +184,7 @@ class _ReadonlyGetTableRequest extends GetTableRequest
     with ReadonlyMessageMixin {}
 
 class DeleteTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTableRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteTableRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -199,15 +195,14 @@ class DeleteTableRequest extends GeneratedMessage {
   DeleteTableRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteTableRequest clone() =>
-      new DeleteTableRequest()..mergeFromMessage(this);
+  DeleteTableRequest clone() => DeleteTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteTableRequest create() => new DeleteTableRequest();
+  static DeleteTableRequest create() => DeleteTableRequest();
   static PbList<DeleteTableRequest> createRepeated() =>
-      new PbList<DeleteTableRequest>();
+      PbList<DeleteTableRequest>();
   static DeleteTableRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTableRequest();
+      _defaultInstance = _ReadonlyDeleteTableRequest();
     return _defaultInstance;
   }
 
@@ -229,7 +224,7 @@ class _ReadonlyDeleteTableRequest extends DeleteTableRequest
     with ReadonlyMessageMixin {}
 
 class RenameTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RenameTableRequest')
+  static final BuilderInfo _i = BuilderInfo('RenameTableRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'newId')
     ..hasRequiredFields = false;
@@ -241,15 +236,14 @@ class RenameTableRequest extends GeneratedMessage {
   RenameTableRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RenameTableRequest clone() =>
-      new RenameTableRequest()..mergeFromMessage(this);
+  RenameTableRequest clone() => RenameTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RenameTableRequest create() => new RenameTableRequest();
+  static RenameTableRequest create() => RenameTableRequest();
   static PbList<RenameTableRequest> createRepeated() =>
-      new PbList<RenameTableRequest>();
+      PbList<RenameTableRequest>();
   static RenameTableRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRenameTableRequest();
+      _defaultInstance = _ReadonlyRenameTableRequest();
     return _defaultInstance;
   }
 
@@ -279,7 +273,7 @@ class _ReadonlyRenameTableRequest extends RenameTableRequest
     with ReadonlyMessageMixin {}
 
 class CreateColumnFamilyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateColumnFamilyRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateColumnFamilyRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'columnFamilyId')
     ..a<ColumnFamily>(3, 'columnFamily', PbFieldType.OM,
@@ -294,14 +288,14 @@ class CreateColumnFamilyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateColumnFamilyRequest clone() =>
-      new CreateColumnFamilyRequest()..mergeFromMessage(this);
+      CreateColumnFamilyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateColumnFamilyRequest create() => new CreateColumnFamilyRequest();
+  static CreateColumnFamilyRequest create() => CreateColumnFamilyRequest();
   static PbList<CreateColumnFamilyRequest> createRepeated() =>
-      new PbList<CreateColumnFamilyRequest>();
+      PbList<CreateColumnFamilyRequest>();
   static CreateColumnFamilyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateColumnFamilyRequest();
+      _defaultInstance = _ReadonlyCreateColumnFamilyRequest();
     return _defaultInstance;
   }
 
@@ -340,7 +334,7 @@ class _ReadonlyCreateColumnFamilyRequest extends CreateColumnFamilyRequest
     with ReadonlyMessageMixin {}
 
 class DeleteColumnFamilyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteColumnFamilyRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteColumnFamilyRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -352,14 +346,14 @@ class DeleteColumnFamilyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteColumnFamilyRequest clone() =>
-      new DeleteColumnFamilyRequest()..mergeFromMessage(this);
+      DeleteColumnFamilyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteColumnFamilyRequest create() => new DeleteColumnFamilyRequest();
+  static DeleteColumnFamilyRequest create() => DeleteColumnFamilyRequest();
   static PbList<DeleteColumnFamilyRequest> createRepeated() =>
-      new PbList<DeleteColumnFamilyRequest>();
+      PbList<DeleteColumnFamilyRequest>();
   static DeleteColumnFamilyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteColumnFamilyRequest();
+      _defaultInstance = _ReadonlyDeleteColumnFamilyRequest();
     return _defaultInstance;
   }
 
@@ -382,7 +376,7 @@ class _ReadonlyDeleteColumnFamilyRequest extends DeleteColumnFamilyRequest
     with ReadonlyMessageMixin {}
 
 class BulkDeleteRowsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BulkDeleteRowsRequest')
+  static final BuilderInfo _i = BuilderInfo('BulkDeleteRowsRequest')
     ..aOS(1, 'tableName')
     ..a<List<int>>(2, 'rowKeyPrefix', PbFieldType.OY)
     ..aOB(3, 'deleteAllDataFromTable')
@@ -396,14 +390,14 @@ class BulkDeleteRowsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BulkDeleteRowsRequest clone() =>
-      new BulkDeleteRowsRequest()..mergeFromMessage(this);
+      BulkDeleteRowsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BulkDeleteRowsRequest create() => new BulkDeleteRowsRequest();
+  static BulkDeleteRowsRequest create() => BulkDeleteRowsRequest();
   static PbList<BulkDeleteRowsRequest> createRepeated() =>
-      new PbList<BulkDeleteRowsRequest>();
+      PbList<BulkDeleteRowsRequest>();
   static BulkDeleteRowsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBulkDeleteRowsRequest();
+      _defaultInstance = _ReadonlyBulkDeleteRowsRequest();
     return _defaultInstance;
   }
 

@@ -19,9 +19,9 @@ abstract class ProjectManagementServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetConfig':
-        return new GetConfigRequest();
+        return GetConfigRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -31,7 +31,7 @@ abstract class ProjectManagementServiceBase extends GeneratedService {
       case 'GetConfig':
         return this.getConfig(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

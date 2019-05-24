@@ -27,15 +27,15 @@ abstract class FirestoreAdminServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateIndex':
-        return new CreateIndexRequest();
+        return CreateIndexRequest();
       case 'ListIndexes':
-        return new ListIndexesRequest();
+        return ListIndexesRequest();
       case 'GetIndex':
-        return new GetIndexRequest();
+        return GetIndexRequest();
       case 'DeleteIndex':
-        return new DeleteIndexRequest();
+        return DeleteIndexRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -51,7 +51,7 @@ abstract class FirestoreAdminServiceBase extends GeneratedService {
       case 'DeleteIndex':
         return this.deleteIndex(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

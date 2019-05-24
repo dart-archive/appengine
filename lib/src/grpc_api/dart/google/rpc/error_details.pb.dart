@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../protobuf/duration.pb.dart' as $google$protobuf;
 
 class RetryInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RetryInfo')
+  static final BuilderInfo _i = BuilderInfo('RetryInfo')
     ..a<$google$protobuf.Duration>(1, 'retryDelay', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..hasRequiredFields = false;
@@ -22,12 +22,12 @@ class RetryInfo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RetryInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RetryInfo clone() => new RetryInfo()..mergeFromMessage(this);
+  RetryInfo clone() => RetryInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RetryInfo create() => new RetryInfo();
-  static PbList<RetryInfo> createRepeated() => new PbList<RetryInfo>();
+  static RetryInfo create() => RetryInfo();
+  static PbList<RetryInfo> createRepeated() => PbList<RetryInfo>();
   static RetryInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRetryInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRetryInfo();
     return _defaultInstance;
   }
 
@@ -48,7 +48,7 @@ class RetryInfo extends GeneratedMessage {
 class _ReadonlyRetryInfo extends RetryInfo with ReadonlyMessageMixin {}
 
 class DebugInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DebugInfo')
+  static final BuilderInfo _i = BuilderInfo('DebugInfo')
     ..pPS(1, 'stackEntries')
     ..aOS(2, 'detail')
     ..hasRequiredFields = false;
@@ -59,12 +59,12 @@ class DebugInfo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   DebugInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DebugInfo clone() => new DebugInfo()..mergeFromMessage(this);
+  DebugInfo clone() => DebugInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DebugInfo create() => new DebugInfo();
-  static PbList<DebugInfo> createRepeated() => new PbList<DebugInfo>();
+  static DebugInfo create() => DebugInfo();
+  static PbList<DebugInfo> createRepeated() => PbList<DebugInfo>();
   static DebugInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDebugInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDebugInfo();
     return _defaultInstance;
   }
 
@@ -87,7 +87,7 @@ class DebugInfo extends GeneratedMessage {
 class _ReadonlyDebugInfo extends DebugInfo with ReadonlyMessageMixin {}
 
 class QuotaFailure_Violation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaFailure_Violation')
+  static final BuilderInfo _i = BuilderInfo('QuotaFailure_Violation')
     ..aOS(1, 'subject')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
@@ -100,14 +100,14 @@ class QuotaFailure_Violation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QuotaFailure_Violation clone() =>
-      new QuotaFailure_Violation()..mergeFromMessage(this);
+      QuotaFailure_Violation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QuotaFailure_Violation create() => new QuotaFailure_Violation();
+  static QuotaFailure_Violation create() => QuotaFailure_Violation();
   static PbList<QuotaFailure_Violation> createRepeated() =>
-      new PbList<QuotaFailure_Violation>();
+      PbList<QuotaFailure_Violation>();
   static QuotaFailure_Violation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQuotaFailure_Violation();
+      _defaultInstance = _ReadonlyQuotaFailure_Violation();
     return _defaultInstance;
   }
 
@@ -138,7 +138,7 @@ class _ReadonlyQuotaFailure_Violation extends QuotaFailure_Violation
     with ReadonlyMessageMixin {}
 
 class QuotaFailure extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaFailure')
+  static final BuilderInfo _i = BuilderInfo('QuotaFailure')
     ..pp<QuotaFailure_Violation>(1, 'violations', PbFieldType.PM,
         QuotaFailure_Violation.$checkItem, QuotaFailure_Violation.create)
     ..hasRequiredFields = false;
@@ -150,13 +150,12 @@ class QuotaFailure extends GeneratedMessage {
   QuotaFailure.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QuotaFailure clone() => new QuotaFailure()..mergeFromMessage(this);
+  QuotaFailure clone() => QuotaFailure()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QuotaFailure create() => new QuotaFailure();
-  static PbList<QuotaFailure> createRepeated() => new PbList<QuotaFailure>();
+  static QuotaFailure create() => QuotaFailure();
+  static PbList<QuotaFailure> createRepeated() => PbList<QuotaFailure>();
   static QuotaFailure getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQuotaFailure();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQuotaFailure();
     return _defaultInstance;
   }
 
@@ -171,7 +170,7 @@ class QuotaFailure extends GeneratedMessage {
 class _ReadonlyQuotaFailure extends QuotaFailure with ReadonlyMessageMixin {}
 
 class PreconditionFailure_Violation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PreconditionFailure_Violation')
+  static final BuilderInfo _i = BuilderInfo('PreconditionFailure_Violation')
     ..aOS(1, 'type')
     ..aOS(2, 'subject')
     ..aOS(3, 'description')
@@ -185,15 +184,15 @@ class PreconditionFailure_Violation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PreconditionFailure_Violation clone() =>
-      new PreconditionFailure_Violation()..mergeFromMessage(this);
+      PreconditionFailure_Violation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PreconditionFailure_Violation create() =>
-      new PreconditionFailure_Violation();
+      PreconditionFailure_Violation();
   static PbList<PreconditionFailure_Violation> createRepeated() =>
-      new PbList<PreconditionFailure_Violation>();
+      PbList<PreconditionFailure_Violation>();
   static PreconditionFailure_Violation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPreconditionFailure_Violation();
+      _defaultInstance = _ReadonlyPreconditionFailure_Violation();
     return _defaultInstance;
   }
 
@@ -232,7 +231,7 @@ class _ReadonlyPreconditionFailure_Violation
     extends PreconditionFailure_Violation with ReadonlyMessageMixin {}
 
 class PreconditionFailure extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PreconditionFailure')
+  static final BuilderInfo _i = BuilderInfo('PreconditionFailure')
     ..pp<PreconditionFailure_Violation>(
         1,
         'violations',
@@ -248,15 +247,14 @@ class PreconditionFailure extends GeneratedMessage {
   PreconditionFailure.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PreconditionFailure clone() =>
-      new PreconditionFailure()..mergeFromMessage(this);
+  PreconditionFailure clone() => PreconditionFailure()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PreconditionFailure create() => new PreconditionFailure();
+  static PreconditionFailure create() => PreconditionFailure();
   static PbList<PreconditionFailure> createRepeated() =>
-      new PbList<PreconditionFailure>();
+      PbList<PreconditionFailure>();
   static PreconditionFailure getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPreconditionFailure();
+      _defaultInstance = _ReadonlyPreconditionFailure();
     return _defaultInstance;
   }
 
@@ -272,7 +270,7 @@ class _ReadonlyPreconditionFailure extends PreconditionFailure
     with ReadonlyMessageMixin {}
 
 class BadRequest_FieldViolation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BadRequest_FieldViolation')
+  static final BuilderInfo _i = BuilderInfo('BadRequest_FieldViolation')
     ..aOS(1, 'field_1')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
@@ -285,14 +283,14 @@ class BadRequest_FieldViolation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BadRequest_FieldViolation clone() =>
-      new BadRequest_FieldViolation()..mergeFromMessage(this);
+      BadRequest_FieldViolation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BadRequest_FieldViolation create() => new BadRequest_FieldViolation();
+  static BadRequest_FieldViolation create() => BadRequest_FieldViolation();
   static PbList<BadRequest_FieldViolation> createRepeated() =>
-      new PbList<BadRequest_FieldViolation>();
+      PbList<BadRequest_FieldViolation>();
   static BadRequest_FieldViolation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBadRequest_FieldViolation();
+      _defaultInstance = _ReadonlyBadRequest_FieldViolation();
     return _defaultInstance;
   }
 
@@ -323,7 +321,7 @@ class _ReadonlyBadRequest_FieldViolation extends BadRequest_FieldViolation
     with ReadonlyMessageMixin {}
 
 class BadRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BadRequest')
+  static final BuilderInfo _i = BuilderInfo('BadRequest')
     ..pp<BadRequest_FieldViolation>(1, 'fieldViolations', PbFieldType.PM,
         BadRequest_FieldViolation.$checkItem, BadRequest_FieldViolation.create)
     ..hasRequiredFields = false;
@@ -334,12 +332,12 @@ class BadRequest extends GeneratedMessage {
       : super.fromBuffer(i, r);
   BadRequest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BadRequest clone() => new BadRequest()..mergeFromMessage(this);
+  BadRequest clone() => BadRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BadRequest create() => new BadRequest();
-  static PbList<BadRequest> createRepeated() => new PbList<BadRequest>();
+  static BadRequest create() => BadRequest();
+  static PbList<BadRequest> createRepeated() => PbList<BadRequest>();
   static BadRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBadRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBadRequest();
     return _defaultInstance;
   }
 
@@ -354,7 +352,7 @@ class BadRequest extends GeneratedMessage {
 class _ReadonlyBadRequest extends BadRequest with ReadonlyMessageMixin {}
 
 class RequestInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RequestInfo')
+  static final BuilderInfo _i = BuilderInfo('RequestInfo')
     ..aOS(1, 'requestId')
     ..aOS(2, 'servingData')
     ..hasRequiredFields = false;
@@ -366,12 +364,12 @@ class RequestInfo extends GeneratedMessage {
   RequestInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RequestInfo clone() => new RequestInfo()..mergeFromMessage(this);
+  RequestInfo clone() => RequestInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RequestInfo create() => new RequestInfo();
-  static PbList<RequestInfo> createRepeated() => new PbList<RequestInfo>();
+  static RequestInfo create() => RequestInfo();
+  static PbList<RequestInfo> createRepeated() => PbList<RequestInfo>();
   static RequestInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRequestInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRequestInfo();
     return _defaultInstance;
   }
 
@@ -400,7 +398,7 @@ class RequestInfo extends GeneratedMessage {
 class _ReadonlyRequestInfo extends RequestInfo with ReadonlyMessageMixin {}
 
 class ResourceInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ResourceInfo')
+  static final BuilderInfo _i = BuilderInfo('ResourceInfo')
     ..aOS(1, 'resourceType')
     ..aOS(2, 'resourceName')
     ..aOS(3, 'owner')
@@ -414,13 +412,12 @@ class ResourceInfo extends GeneratedMessage {
   ResourceInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ResourceInfo clone() => new ResourceInfo()..mergeFromMessage(this);
+  ResourceInfo clone() => ResourceInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ResourceInfo create() => new ResourceInfo();
-  static PbList<ResourceInfo> createRepeated() => new PbList<ResourceInfo>();
+  static ResourceInfo create() => ResourceInfo();
+  static PbList<ResourceInfo> createRepeated() => PbList<ResourceInfo>();
   static ResourceInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyResourceInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyResourceInfo();
     return _defaultInstance;
   }
 
@@ -465,7 +462,7 @@ class ResourceInfo extends GeneratedMessage {
 class _ReadonlyResourceInfo extends ResourceInfo with ReadonlyMessageMixin {}
 
 class Help_Link extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Help_Link')
+  static final BuilderInfo _i = BuilderInfo('Help_Link')
     ..aOS(1, 'description')
     ..aOS(2, 'url')
     ..hasRequiredFields = false;
@@ -476,12 +473,12 @@ class Help_Link extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Help_Link.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Help_Link clone() => new Help_Link()..mergeFromMessage(this);
+  Help_Link clone() => Help_Link()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Help_Link create() => new Help_Link();
-  static PbList<Help_Link> createRepeated() => new PbList<Help_Link>();
+  static Help_Link create() => Help_Link();
+  static PbList<Help_Link> createRepeated() => PbList<Help_Link>();
   static Help_Link getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHelp_Link();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHelp_Link();
     return _defaultInstance;
   }
 
@@ -510,7 +507,7 @@ class Help_Link extends GeneratedMessage {
 class _ReadonlyHelp_Link extends Help_Link with ReadonlyMessageMixin {}
 
 class Help extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Help')
+  static final BuilderInfo _i = BuilderInfo('Help')
     ..pp<Help_Link>(
         1, 'links', PbFieldType.PM, Help_Link.$checkItem, Help_Link.create)
     ..hasRequiredFields = false;
@@ -520,12 +517,12 @@ class Help extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Help.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Help clone() => new Help()..mergeFromMessage(this);
+  Help clone() => Help()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Help create() => new Help();
-  static PbList<Help> createRepeated() => new PbList<Help>();
+  static Help create() => Help();
+  static PbList<Help> createRepeated() => PbList<Help>();
   static Help getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHelp();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHelp();
     return _defaultInstance;
   }
 
@@ -540,7 +537,7 @@ class Help extends GeneratedMessage {
 class _ReadonlyHelp extends Help with ReadonlyMessageMixin {}
 
 class LocalizedMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LocalizedMessage')
+  static final BuilderInfo _i = BuilderInfo('LocalizedMessage')
     ..aOS(1, 'locale')
     ..aOS(2, 'message')
     ..hasRequiredFields = false;
@@ -552,14 +549,14 @@ class LocalizedMessage extends GeneratedMessage {
   LocalizedMessage.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LocalizedMessage clone() => new LocalizedMessage()..mergeFromMessage(this);
+  LocalizedMessage clone() => LocalizedMessage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LocalizedMessage create() => new LocalizedMessage();
+  static LocalizedMessage create() => LocalizedMessage();
   static PbList<LocalizedMessage> createRepeated() =>
-      new PbList<LocalizedMessage>();
+      PbList<LocalizedMessage>();
   static LocalizedMessage getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocalizedMessage();
+      _defaultInstance = _ReadonlyLocalizedMessage();
     return _defaultInstance;
   }
 

@@ -45,33 +45,33 @@ abstract class DataTransferServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetDataSource':
-        return new GetDataSourceRequest();
+        return GetDataSourceRequest();
       case 'ListDataSources':
-        return new ListDataSourcesRequest();
+        return ListDataSourcesRequest();
       case 'CreateTransferConfig':
-        return new CreateTransferConfigRequest();
+        return CreateTransferConfigRequest();
       case 'UpdateTransferConfig':
-        return new UpdateTransferConfigRequest();
+        return UpdateTransferConfigRequest();
       case 'DeleteTransferConfig':
-        return new DeleteTransferConfigRequest();
+        return DeleteTransferConfigRequest();
       case 'GetTransferConfig':
-        return new GetTransferConfigRequest();
+        return GetTransferConfigRequest();
       case 'ListTransferConfigs':
-        return new ListTransferConfigsRequest();
+        return ListTransferConfigsRequest();
       case 'ScheduleTransferRuns':
-        return new ScheduleTransferRunsRequest();
+        return ScheduleTransferRunsRequest();
       case 'GetTransferRun':
-        return new GetTransferRunRequest();
+        return GetTransferRunRequest();
       case 'DeleteTransferRun':
-        return new DeleteTransferRunRequest();
+        return DeleteTransferRunRequest();
       case 'ListTransferRuns':
-        return new ListTransferRunsRequest();
+        return ListTransferRunsRequest();
       case 'ListTransferLogs':
-        return new ListTransferLogsRequest();
+        return ListTransferLogsRequest();
       case 'CheckValidCreds':
-        return new CheckValidCredsRequest();
+        return CheckValidCredsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -105,7 +105,7 @@ abstract class DataTransferServiceBase extends GeneratedService {
       case 'CheckValidCreds':
         return this.checkValidCreds(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

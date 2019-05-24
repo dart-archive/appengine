@@ -17,7 +17,7 @@ import 'resources.pbenum.dart';
 export 'resources.pbenum.dart';
 
 class Device_MetadataEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Device_MetadataEntry')
+  static final BuilderInfo _i = BuilderInfo('Device_MetadataEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -30,14 +30,14 @@ class Device_MetadataEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Device_MetadataEntry clone() =>
-      new Device_MetadataEntry()..mergeFromMessage(this);
+      Device_MetadataEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Device_MetadataEntry create() => new Device_MetadataEntry();
+  static Device_MetadataEntry create() => Device_MetadataEntry();
   static PbList<Device_MetadataEntry> createRepeated() =>
-      new PbList<Device_MetadataEntry>();
+      PbList<Device_MetadataEntry>();
   static Device_MetadataEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDevice_MetadataEntry();
+      _defaultInstance = _ReadonlyDevice_MetadataEntry();
     return _defaultInstance;
   }
 
@@ -67,7 +67,7 @@ class _ReadonlyDevice_MetadataEntry extends Device_MetadataEntry
     with ReadonlyMessageMixin {}
 
 class Device extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Device')
+  static final BuilderInfo _i = BuilderInfo('Device')
     ..aOS(1, 'id')
     ..aOS(2, 'name')
     ..a<Int64>(3, 'numId', PbFieldType.OU6, Int64.ZERO)
@@ -126,12 +126,12 @@ class Device extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Device.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Device clone() => new Device()..mergeFromMessage(this);
+  Device clone() => Device()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Device create() => new Device();
-  static PbList<Device> createRepeated() => new PbList<Device>();
+  static Device create() => Device();
+  static PbList<Device> createRepeated() => PbList<Device>();
   static Device getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDevice();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDevice();
     return _defaultInstance;
   }
 
@@ -252,7 +252,7 @@ class Device extends GeneratedMessage {
 class _ReadonlyDevice extends Device with ReadonlyMessageMixin {}
 
 class DeviceRegistry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceRegistry')
+  static final BuilderInfo _i = BuilderInfo('DeviceRegistry')
     ..aOS(1, 'id')
     ..aOS(2, 'name')
     ..a<MqttConfig>(4, 'mqttConfig', PbFieldType.OM, MqttConfig.getDefault,
@@ -278,14 +278,12 @@ class DeviceRegistry extends GeneratedMessage {
   DeviceRegistry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceRegistry clone() => new DeviceRegistry()..mergeFromMessage(this);
+  DeviceRegistry clone() => DeviceRegistry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeviceRegistry create() => new DeviceRegistry();
-  static PbList<DeviceRegistry> createRepeated() =>
-      new PbList<DeviceRegistry>();
+  static DeviceRegistry create() => DeviceRegistry();
+  static PbList<DeviceRegistry> createRepeated() => PbList<DeviceRegistry>();
   static DeviceRegistry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceRegistry();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeviceRegistry();
     return _defaultInstance;
   }
 
@@ -343,7 +341,7 @@ class _ReadonlyDeviceRegistry extends DeviceRegistry with ReadonlyMessageMixin {
 }
 
 class MqttConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MqttConfig')
+  static final BuilderInfo _i = BuilderInfo('MqttConfig')
     ..e<MqttState>(1, 'mqttEnabledState', PbFieldType.OE,
         MqttState.MQTT_STATE_UNSPECIFIED, MqttState.valueOf, MqttState.values)
     ..hasRequiredFields = false;
@@ -354,12 +352,12 @@ class MqttConfig extends GeneratedMessage {
       : super.fromBuffer(i, r);
   MqttConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MqttConfig clone() => new MqttConfig()..mergeFromMessage(this);
+  MqttConfig clone() => MqttConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MqttConfig create() => new MqttConfig();
-  static PbList<MqttConfig> createRepeated() => new PbList<MqttConfig>();
+  static MqttConfig create() => MqttConfig();
+  static PbList<MqttConfig> createRepeated() => PbList<MqttConfig>();
   static MqttConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMqttConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMqttConfig();
     return _defaultInstance;
   }
 
@@ -380,7 +378,7 @@ class MqttConfig extends GeneratedMessage {
 class _ReadonlyMqttConfig extends MqttConfig with ReadonlyMessageMixin {}
 
 class HttpConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HttpConfig')
+  static final BuilderInfo _i = BuilderInfo('HttpConfig')
     ..e<HttpState>(1, 'httpEnabledState', PbFieldType.OE,
         HttpState.HTTP_STATE_UNSPECIFIED, HttpState.valueOf, HttpState.values)
     ..hasRequiredFields = false;
@@ -391,12 +389,12 @@ class HttpConfig extends GeneratedMessage {
       : super.fromBuffer(i, r);
   HttpConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HttpConfig clone() => new HttpConfig()..mergeFromMessage(this);
+  HttpConfig clone() => HttpConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HttpConfig create() => new HttpConfig();
-  static PbList<HttpConfig> createRepeated() => new PbList<HttpConfig>();
+  static HttpConfig create() => HttpConfig();
+  static PbList<HttpConfig> createRepeated() => PbList<HttpConfig>();
   static HttpConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHttpConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHttpConfig();
     return _defaultInstance;
   }
 
@@ -417,7 +415,7 @@ class HttpConfig extends GeneratedMessage {
 class _ReadonlyHttpConfig extends HttpConfig with ReadonlyMessageMixin {}
 
 class EventNotificationConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EventNotificationConfig')
+  static final BuilderInfo _i = BuilderInfo('EventNotificationConfig')
     ..aOS(1, 'pubsubTopicName')
     ..aOS(2, 'subfolderMatches')
     ..hasRequiredFields = false;
@@ -430,14 +428,14 @@ class EventNotificationConfig extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   EventNotificationConfig clone() =>
-      new EventNotificationConfig()..mergeFromMessage(this);
+      EventNotificationConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EventNotificationConfig create() => new EventNotificationConfig();
+  static EventNotificationConfig create() => EventNotificationConfig();
   static PbList<EventNotificationConfig> createRepeated() =>
-      new PbList<EventNotificationConfig>();
+      PbList<EventNotificationConfig>();
   static EventNotificationConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEventNotificationConfig();
+      _defaultInstance = _ReadonlyEventNotificationConfig();
     return _defaultInstance;
   }
 
@@ -468,7 +466,7 @@ class _ReadonlyEventNotificationConfig extends EventNotificationConfig
     with ReadonlyMessageMixin {}
 
 class StateNotificationConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StateNotificationConfig')
+  static final BuilderInfo _i = BuilderInfo('StateNotificationConfig')
     ..aOS(1, 'pubsubTopicName')
     ..hasRequiredFields = false;
 
@@ -480,14 +478,14 @@ class StateNotificationConfig extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StateNotificationConfig clone() =>
-      new StateNotificationConfig()..mergeFromMessage(this);
+      StateNotificationConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StateNotificationConfig create() => new StateNotificationConfig();
+  static StateNotificationConfig create() => StateNotificationConfig();
   static PbList<StateNotificationConfig> createRepeated() =>
-      new PbList<StateNotificationConfig>();
+      PbList<StateNotificationConfig>();
   static StateNotificationConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStateNotificationConfig();
+      _defaultInstance = _ReadonlyStateNotificationConfig();
     return _defaultInstance;
   }
 
@@ -510,7 +508,7 @@ class _ReadonlyStateNotificationConfig extends StateNotificationConfig
     with ReadonlyMessageMixin {}
 
 class RegistryCredential extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RegistryCredential')
+  static final BuilderInfo _i = BuilderInfo('RegistryCredential')
     ..a<PublicKeyCertificate>(1, 'publicKeyCertificate', PbFieldType.OM,
         PublicKeyCertificate.getDefault, PublicKeyCertificate.create)
     ..hasRequiredFields = false;
@@ -522,15 +520,14 @@ class RegistryCredential extends GeneratedMessage {
   RegistryCredential.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RegistryCredential clone() =>
-      new RegistryCredential()..mergeFromMessage(this);
+  RegistryCredential clone() => RegistryCredential()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RegistryCredential create() => new RegistryCredential();
+  static RegistryCredential create() => RegistryCredential();
   static PbList<RegistryCredential> createRepeated() =>
-      new PbList<RegistryCredential>();
+      PbList<RegistryCredential>();
   static RegistryCredential getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRegistryCredential();
+      _defaultInstance = _ReadonlyRegistryCredential();
     return _defaultInstance;
   }
 
@@ -552,7 +549,7 @@ class _ReadonlyRegistryCredential extends RegistryCredential
     with ReadonlyMessageMixin {}
 
 class X509CertificateDetails extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('X509CertificateDetails')
+  static final BuilderInfo _i = BuilderInfo('X509CertificateDetails')
     ..aOS(1, 'issuer')
     ..aOS(2, 'subject')
     ..a<$google$protobuf.Timestamp>(
@@ -579,14 +576,14 @@ class X509CertificateDetails extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   X509CertificateDetails clone() =>
-      new X509CertificateDetails()..mergeFromMessage(this);
+      X509CertificateDetails()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static X509CertificateDetails create() => new X509CertificateDetails();
+  static X509CertificateDetails create() => X509CertificateDetails();
   static PbList<X509CertificateDetails> createRepeated() =>
-      new PbList<X509CertificateDetails>();
+      PbList<X509CertificateDetails>();
   static X509CertificateDetails getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyX509CertificateDetails();
+      _defaultInstance = _ReadonlyX509CertificateDetails();
     return _defaultInstance;
   }
 
@@ -649,7 +646,7 @@ class _ReadonlyX509CertificateDetails extends X509CertificateDetails
     with ReadonlyMessageMixin {}
 
 class PublicKeyCertificate extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PublicKeyCertificate')
+  static final BuilderInfo _i = BuilderInfo('PublicKeyCertificate')
     ..e<PublicKeyCertificateFormat>(
         1,
         'format',
@@ -670,14 +667,14 @@ class PublicKeyCertificate extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PublicKeyCertificate clone() =>
-      new PublicKeyCertificate()..mergeFromMessage(this);
+      PublicKeyCertificate()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PublicKeyCertificate create() => new PublicKeyCertificate();
+  static PublicKeyCertificate create() => PublicKeyCertificate();
   static PbList<PublicKeyCertificate> createRepeated() =>
-      new PbList<PublicKeyCertificate>();
+      PbList<PublicKeyCertificate>();
   static PublicKeyCertificate getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublicKeyCertificate();
+      _defaultInstance = _ReadonlyPublicKeyCertificate();
     return _defaultInstance;
   }
 
@@ -715,7 +712,7 @@ class _ReadonlyPublicKeyCertificate extends PublicKeyCertificate
     with ReadonlyMessageMixin {}
 
 class DeviceCredential extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceCredential')
+  static final BuilderInfo _i = BuilderInfo('DeviceCredential')
     ..a<PublicKeyCredential>(2, 'publicKey', PbFieldType.OM,
         PublicKeyCredential.getDefault, PublicKeyCredential.create)
     ..a<$google$protobuf.Timestamp>(
@@ -733,14 +730,14 @@ class DeviceCredential extends GeneratedMessage {
   DeviceCredential.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceCredential clone() => new DeviceCredential()..mergeFromMessage(this);
+  DeviceCredential clone() => DeviceCredential()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeviceCredential create() => new DeviceCredential();
+  static DeviceCredential create() => DeviceCredential();
   static PbList<DeviceCredential> createRepeated() =>
-      new PbList<DeviceCredential>();
+      PbList<DeviceCredential>();
   static DeviceCredential getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceCredential();
+      _defaultInstance = _ReadonlyDeviceCredential();
     return _defaultInstance;
   }
 
@@ -770,7 +767,7 @@ class _ReadonlyDeviceCredential extends DeviceCredential
     with ReadonlyMessageMixin {}
 
 class PublicKeyCredential extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PublicKeyCredential')
+  static final BuilderInfo _i = BuilderInfo('PublicKeyCredential')
     ..e<PublicKeyFormat>(
         1,
         'format',
@@ -788,15 +785,14 @@ class PublicKeyCredential extends GeneratedMessage {
   PublicKeyCredential.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PublicKeyCredential clone() =>
-      new PublicKeyCredential()..mergeFromMessage(this);
+  PublicKeyCredential clone() => PublicKeyCredential()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PublicKeyCredential create() => new PublicKeyCredential();
+  static PublicKeyCredential create() => PublicKeyCredential();
   static PbList<PublicKeyCredential> createRepeated() =>
-      new PbList<PublicKeyCredential>();
+      PbList<PublicKeyCredential>();
   static PublicKeyCredential getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublicKeyCredential();
+      _defaultInstance = _ReadonlyPublicKeyCredential();
     return _defaultInstance;
   }
 
@@ -826,7 +822,7 @@ class _ReadonlyPublicKeyCredential extends PublicKeyCredential
     with ReadonlyMessageMixin {}
 
 class DeviceConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceConfig')
+  static final BuilderInfo _i = BuilderInfo('DeviceConfig')
     ..aInt64(1, 'version')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -850,13 +846,12 @@ class DeviceConfig extends GeneratedMessage {
   DeviceConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceConfig clone() => new DeviceConfig()..mergeFromMessage(this);
+  DeviceConfig clone() => DeviceConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeviceConfig create() => new DeviceConfig();
-  static PbList<DeviceConfig> createRepeated() => new PbList<DeviceConfig>();
+  static DeviceConfig create() => DeviceConfig();
+  static PbList<DeviceConfig> createRepeated() => PbList<DeviceConfig>();
   static DeviceConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeviceConfig();
     return _defaultInstance;
   }
 
@@ -901,7 +896,7 @@ class DeviceConfig extends GeneratedMessage {
 class _ReadonlyDeviceConfig extends DeviceConfig with ReadonlyMessageMixin {}
 
 class DeviceState extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceState')
+  static final BuilderInfo _i = BuilderInfo('DeviceState')
     ..a<$google$protobuf.Timestamp>(
         1,
         'updateTime',
@@ -918,12 +913,12 @@ class DeviceState extends GeneratedMessage {
   DeviceState.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceState clone() => new DeviceState()..mergeFromMessage(this);
+  DeviceState clone() => DeviceState()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeviceState create() => new DeviceState();
-  static PbList<DeviceState> createRepeated() => new PbList<DeviceState>();
+  static DeviceState create() => DeviceState();
+  static PbList<DeviceState> createRepeated() => PbList<DeviceState>();
   static DeviceState getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeviceState();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeviceState();
     return _defaultInstance;
   }
 

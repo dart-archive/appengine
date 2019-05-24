@@ -31,19 +31,19 @@ abstract class WorkflowTemplateServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateWorkflowTemplate':
-        return new CreateWorkflowTemplateRequest();
+        return CreateWorkflowTemplateRequest();
       case 'GetWorkflowTemplate':
-        return new GetWorkflowTemplateRequest();
+        return GetWorkflowTemplateRequest();
       case 'InstantiateWorkflowTemplate':
-        return new InstantiateWorkflowTemplateRequest();
+        return InstantiateWorkflowTemplateRequest();
       case 'UpdateWorkflowTemplate':
-        return new UpdateWorkflowTemplateRequest();
+        return UpdateWorkflowTemplateRequest();
       case 'ListWorkflowTemplates':
-        return new ListWorkflowTemplatesRequest();
+        return ListWorkflowTemplatesRequest();
       case 'DeleteWorkflowTemplate':
-        return new DeleteWorkflowTemplateRequest();
+        return DeleteWorkflowTemplateRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -63,7 +63,7 @@ abstract class WorkflowTemplateServiceBase extends GeneratedService {
       case 'DeleteWorkflowTemplate':
         return this.deleteWorkflowTemplate(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -10,7 +10,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Row extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Row')
+  static final BuilderInfo _i = BuilderInfo('Row')
     ..a<List<int>>(1, 'key', PbFieldType.OY)
     ..pp<Family>(
         2, 'families', PbFieldType.PM, Family.$checkItem, Family.create)
@@ -21,12 +21,12 @@ class Row extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Row.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Row clone() => new Row()..mergeFromMessage(this);
+  Row clone() => Row()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Row create() => new Row();
-  static PbList<Row> createRepeated() => new PbList<Row>();
+  static Row create() => Row();
+  static PbList<Row> createRepeated() => PbList<Row>();
   static Row getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRow();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRow();
     return _defaultInstance;
   }
 
@@ -49,7 +49,7 @@ class Row extends GeneratedMessage {
 class _ReadonlyRow extends Row with ReadonlyMessageMixin {}
 
 class Family extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Family')
+  static final BuilderInfo _i = BuilderInfo('Family')
     ..aOS(1, 'name')
     ..pp<Column>(2, 'columns', PbFieldType.PM, Column.$checkItem, Column.create)
     ..hasRequiredFields = false;
@@ -60,12 +60,12 @@ class Family extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Family.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Family clone() => new Family()..mergeFromMessage(this);
+  Family clone() => Family()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Family create() => new Family();
-  static PbList<Family> createRepeated() => new PbList<Family>();
+  static Family create() => Family();
+  static PbList<Family> createRepeated() => PbList<Family>();
   static Family getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFamily();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFamily();
     return _defaultInstance;
   }
 
@@ -88,7 +88,7 @@ class Family extends GeneratedMessage {
 class _ReadonlyFamily extends Family with ReadonlyMessageMixin {}
 
 class Column extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Column')
+  static final BuilderInfo _i = BuilderInfo('Column')
     ..a<List<int>>(1, 'qualifier', PbFieldType.OY)
     ..pp<Cell>(2, 'cells', PbFieldType.PM, Cell.$checkItem, Cell.create)
     ..hasRequiredFields = false;
@@ -99,12 +99,12 @@ class Column extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Column.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Column clone() => new Column()..mergeFromMessage(this);
+  Column clone() => Column()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Column create() => new Column();
-  static PbList<Column> createRepeated() => new PbList<Column>();
+  static Column create() => Column();
+  static PbList<Column> createRepeated() => PbList<Column>();
   static Column getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyColumn();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyColumn();
     return _defaultInstance;
   }
 
@@ -127,7 +127,7 @@ class Column extends GeneratedMessage {
 class _ReadonlyColumn extends Column with ReadonlyMessageMixin {}
 
 class Cell extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cell')
+  static final BuilderInfo _i = BuilderInfo('Cell')
     ..aInt64(1, 'timestampMicros')
     ..a<List<int>>(2, 'value', PbFieldType.OY)
     ..pPS(3, 'labels')
@@ -138,12 +138,12 @@ class Cell extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Cell.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Cell clone() => new Cell()..mergeFromMessage(this);
+  Cell clone() => Cell()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Cell create() => new Cell();
-  static PbList<Cell> createRepeated() => new PbList<Cell>();
+  static Cell create() => Cell();
+  static PbList<Cell> createRepeated() => PbList<Cell>();
   static Cell getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCell();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCell();
     return _defaultInstance;
   }
 
@@ -174,7 +174,7 @@ class Cell extends GeneratedMessage {
 class _ReadonlyCell extends Cell with ReadonlyMessageMixin {}
 
 class RowRange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RowRange')
+  static final BuilderInfo _i = BuilderInfo('RowRange')
     ..a<List<int>>(1, 'startKeyClosed', PbFieldType.OY)
     ..a<List<int>>(2, 'startKeyOpen', PbFieldType.OY)
     ..a<List<int>>(3, 'endKeyOpen', PbFieldType.OY)
@@ -187,12 +187,12 @@ class RowRange extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RowRange.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RowRange clone() => new RowRange()..mergeFromMessage(this);
+  RowRange clone() => RowRange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RowRange create() => new RowRange();
-  static PbList<RowRange> createRepeated() => new PbList<RowRange>();
+  static RowRange create() => RowRange();
+  static PbList<RowRange> createRepeated() => PbList<RowRange>();
   static RowRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRowRange();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRowRange();
     return _defaultInstance;
   }
 
@@ -237,7 +237,7 @@ class RowRange extends GeneratedMessage {
 class _ReadonlyRowRange extends RowRange with ReadonlyMessageMixin {}
 
 class RowSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RowSet')
+  static final BuilderInfo _i = BuilderInfo('RowSet')
     ..p<List<int>>(1, 'rowKeys', PbFieldType.PY)
     ..pp<RowRange>(
         2, 'rowRanges', PbFieldType.PM, RowRange.$checkItem, RowRange.create)
@@ -249,12 +249,12 @@ class RowSet extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RowSet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RowSet clone() => new RowSet()..mergeFromMessage(this);
+  RowSet clone() => RowSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RowSet create() => new RowSet();
-  static PbList<RowSet> createRepeated() => new PbList<RowSet>();
+  static RowSet create() => RowSet();
+  static PbList<RowSet> createRepeated() => PbList<RowSet>();
   static RowSet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRowSet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRowSet();
     return _defaultInstance;
   }
 
@@ -271,7 +271,7 @@ class RowSet extends GeneratedMessage {
 class _ReadonlyRowSet extends RowSet with ReadonlyMessageMixin {}
 
 class ColumnRange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ColumnRange')
+  static final BuilderInfo _i = BuilderInfo('ColumnRange')
     ..aOS(1, 'familyName')
     ..a<List<int>>(2, 'startQualifierClosed', PbFieldType.OY)
     ..a<List<int>>(3, 'startQualifierOpen', PbFieldType.OY)
@@ -286,12 +286,12 @@ class ColumnRange extends GeneratedMessage {
   ColumnRange.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ColumnRange clone() => new ColumnRange()..mergeFromMessage(this);
+  ColumnRange clone() => ColumnRange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ColumnRange create() => new ColumnRange();
-  static PbList<ColumnRange> createRepeated() => new PbList<ColumnRange>();
+  static ColumnRange create() => ColumnRange();
+  static PbList<ColumnRange> createRepeated() => PbList<ColumnRange>();
   static ColumnRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyColumnRange();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyColumnRange();
     return _defaultInstance;
   }
 
@@ -344,7 +344,7 @@ class ColumnRange extends GeneratedMessage {
 class _ReadonlyColumnRange extends ColumnRange with ReadonlyMessageMixin {}
 
 class TimestampRange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TimestampRange')
+  static final BuilderInfo _i = BuilderInfo('TimestampRange')
     ..aInt64(1, 'startTimestampMicros')
     ..aInt64(2, 'endTimestampMicros')
     ..hasRequiredFields = false;
@@ -356,14 +356,12 @@ class TimestampRange extends GeneratedMessage {
   TimestampRange.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TimestampRange clone() => new TimestampRange()..mergeFromMessage(this);
+  TimestampRange clone() => TimestampRange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TimestampRange create() => new TimestampRange();
-  static PbList<TimestampRange> createRepeated() =>
-      new PbList<TimestampRange>();
+  static TimestampRange create() => TimestampRange();
+  static PbList<TimestampRange> createRepeated() => PbList<TimestampRange>();
   static TimestampRange getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTimestampRange();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTimestampRange();
     return _defaultInstance;
   }
 
@@ -393,7 +391,7 @@ class _ReadonlyTimestampRange extends TimestampRange with ReadonlyMessageMixin {
 }
 
 class ValueRange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ValueRange')
+  static final BuilderInfo _i = BuilderInfo('ValueRange')
     ..a<List<int>>(1, 'startValueClosed', PbFieldType.OY)
     ..a<List<int>>(2, 'startValueOpen', PbFieldType.OY)
     ..a<List<int>>(3, 'endValueClosed', PbFieldType.OY)
@@ -406,12 +404,12 @@ class ValueRange extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ValueRange.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ValueRange clone() => new ValueRange()..mergeFromMessage(this);
+  ValueRange clone() => ValueRange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ValueRange create() => new ValueRange();
-  static PbList<ValueRange> createRepeated() => new PbList<ValueRange>();
+  static ValueRange create() => ValueRange();
+  static PbList<ValueRange> createRepeated() => PbList<ValueRange>();
   static ValueRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyValueRange();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyValueRange();
     return _defaultInstance;
   }
 
@@ -456,7 +454,7 @@ class ValueRange extends GeneratedMessage {
 class _ReadonlyValueRange extends ValueRange with ReadonlyMessageMixin {}
 
 class RowFilter_Chain extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RowFilter_Chain')
+  static final BuilderInfo _i = BuilderInfo('RowFilter_Chain')
     ..pp<RowFilter>(
         1, 'filters', PbFieldType.PM, RowFilter.$checkItem, RowFilter.create)
     ..hasRequiredFields = false;
@@ -468,14 +466,12 @@ class RowFilter_Chain extends GeneratedMessage {
   RowFilter_Chain.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RowFilter_Chain clone() => new RowFilter_Chain()..mergeFromMessage(this);
+  RowFilter_Chain clone() => RowFilter_Chain()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RowFilter_Chain create() => new RowFilter_Chain();
-  static PbList<RowFilter_Chain> createRepeated() =>
-      new PbList<RowFilter_Chain>();
+  static RowFilter_Chain create() => RowFilter_Chain();
+  static PbList<RowFilter_Chain> createRepeated() => PbList<RowFilter_Chain>();
   static RowFilter_Chain getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRowFilter_Chain();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRowFilter_Chain();
     return _defaultInstance;
   }
 
@@ -491,7 +487,7 @@ class _ReadonlyRowFilter_Chain extends RowFilter_Chain
     with ReadonlyMessageMixin {}
 
 class RowFilter_Interleave extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RowFilter_Interleave')
+  static final BuilderInfo _i = BuilderInfo('RowFilter_Interleave')
     ..pp<RowFilter>(
         1, 'filters', PbFieldType.PM, RowFilter.$checkItem, RowFilter.create)
     ..hasRequiredFields = false;
@@ -504,14 +500,14 @@ class RowFilter_Interleave extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RowFilter_Interleave clone() =>
-      new RowFilter_Interleave()..mergeFromMessage(this);
+      RowFilter_Interleave()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RowFilter_Interleave create() => new RowFilter_Interleave();
+  static RowFilter_Interleave create() => RowFilter_Interleave();
   static PbList<RowFilter_Interleave> createRepeated() =>
-      new PbList<RowFilter_Interleave>();
+      PbList<RowFilter_Interleave>();
   static RowFilter_Interleave getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRowFilter_Interleave();
+      _defaultInstance = _ReadonlyRowFilter_Interleave();
     return _defaultInstance;
   }
 
@@ -527,7 +523,7 @@ class _ReadonlyRowFilter_Interleave extends RowFilter_Interleave
     with ReadonlyMessageMixin {}
 
 class RowFilter_Condition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RowFilter_Condition')
+  static final BuilderInfo _i = BuilderInfo('RowFilter_Condition')
     ..a<RowFilter>(1, 'predicateFilter', PbFieldType.OM, RowFilter.getDefault,
         RowFilter.create)
     ..a<RowFilter>(
@@ -543,15 +539,14 @@ class RowFilter_Condition extends GeneratedMessage {
   RowFilter_Condition.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RowFilter_Condition clone() =>
-      new RowFilter_Condition()..mergeFromMessage(this);
+  RowFilter_Condition clone() => RowFilter_Condition()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RowFilter_Condition create() => new RowFilter_Condition();
+  static RowFilter_Condition create() => RowFilter_Condition();
   static PbList<RowFilter_Condition> createRepeated() =>
-      new PbList<RowFilter_Condition>();
+      PbList<RowFilter_Condition>();
   static RowFilter_Condition getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRowFilter_Condition();
+      _defaultInstance = _ReadonlyRowFilter_Condition();
     return _defaultInstance;
   }
 
@@ -589,7 +584,7 @@ class _ReadonlyRowFilter_Condition extends RowFilter_Condition
     with ReadonlyMessageMixin {}
 
 class RowFilter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RowFilter')
+  static final BuilderInfo _i = BuilderInfo('RowFilter')
     ..a<RowFilter_Chain>(1, 'chain', PbFieldType.OM, RowFilter_Chain.getDefault,
         RowFilter_Chain.create)
     ..a<RowFilter_Interleave>(2, 'interleave', PbFieldType.OM,
@@ -623,12 +618,12 @@ class RowFilter extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RowFilter.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RowFilter clone() => new RowFilter()..mergeFromMessage(this);
+  RowFilter clone() => RowFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RowFilter create() => new RowFilter();
-  static PbList<RowFilter> createRepeated() => new PbList<RowFilter>();
+  static RowFilter create() => RowFilter();
+  static PbList<RowFilter> createRepeated() => PbList<RowFilter>();
   static RowFilter getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRowFilter();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRowFilter();
     return _defaultInstance;
   }
 
@@ -793,7 +788,7 @@ class RowFilter extends GeneratedMessage {
 class _ReadonlyRowFilter extends RowFilter with ReadonlyMessageMixin {}
 
 class Mutation_SetCell extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation_SetCell')
+  static final BuilderInfo _i = BuilderInfo('Mutation_SetCell')
     ..aOS(1, 'familyName')
     ..a<List<int>>(2, 'columnQualifier', PbFieldType.OY)
     ..aInt64(3, 'timestampMicros')
@@ -807,14 +802,14 @@ class Mutation_SetCell extends GeneratedMessage {
   Mutation_SetCell.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Mutation_SetCell clone() => new Mutation_SetCell()..mergeFromMessage(this);
+  Mutation_SetCell clone() => Mutation_SetCell()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mutation_SetCell create() => new Mutation_SetCell();
+  static Mutation_SetCell create() => Mutation_SetCell();
   static PbList<Mutation_SetCell> createRepeated() =>
-      new PbList<Mutation_SetCell>();
+      PbList<Mutation_SetCell>();
   static Mutation_SetCell getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutation_SetCell();
+      _defaultInstance = _ReadonlyMutation_SetCell();
     return _defaultInstance;
   }
 
@@ -860,7 +855,7 @@ class _ReadonlyMutation_SetCell extends Mutation_SetCell
     with ReadonlyMessageMixin {}
 
 class Mutation_DeleteFromColumn extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation_DeleteFromColumn')
+  static final BuilderInfo _i = BuilderInfo('Mutation_DeleteFromColumn')
     ..aOS(1, 'familyName')
     ..a<List<int>>(2, 'columnQualifier', PbFieldType.OY)
     ..a<TimestampRange>(3, 'timeRange', PbFieldType.OM,
@@ -875,14 +870,14 @@ class Mutation_DeleteFromColumn extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Mutation_DeleteFromColumn clone() =>
-      new Mutation_DeleteFromColumn()..mergeFromMessage(this);
+      Mutation_DeleteFromColumn()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mutation_DeleteFromColumn create() => new Mutation_DeleteFromColumn();
+  static Mutation_DeleteFromColumn create() => Mutation_DeleteFromColumn();
   static PbList<Mutation_DeleteFromColumn> createRepeated() =>
-      new PbList<Mutation_DeleteFromColumn>();
+      PbList<Mutation_DeleteFromColumn>();
   static Mutation_DeleteFromColumn getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutation_DeleteFromColumn();
+      _defaultInstance = _ReadonlyMutation_DeleteFromColumn();
     return _defaultInstance;
   }
 
@@ -921,7 +916,7 @@ class _ReadonlyMutation_DeleteFromColumn extends Mutation_DeleteFromColumn
     with ReadonlyMessageMixin {}
 
 class Mutation_DeleteFromFamily extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation_DeleteFromFamily')
+  static final BuilderInfo _i = BuilderInfo('Mutation_DeleteFromFamily')
     ..aOS(1, 'familyName')
     ..hasRequiredFields = false;
 
@@ -933,14 +928,14 @@ class Mutation_DeleteFromFamily extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Mutation_DeleteFromFamily clone() =>
-      new Mutation_DeleteFromFamily()..mergeFromMessage(this);
+      Mutation_DeleteFromFamily()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mutation_DeleteFromFamily create() => new Mutation_DeleteFromFamily();
+  static Mutation_DeleteFromFamily create() => Mutation_DeleteFromFamily();
   static PbList<Mutation_DeleteFromFamily> createRepeated() =>
-      new PbList<Mutation_DeleteFromFamily>();
+      PbList<Mutation_DeleteFromFamily>();
   static Mutation_DeleteFromFamily getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutation_DeleteFromFamily();
+      _defaultInstance = _ReadonlyMutation_DeleteFromFamily();
     return _defaultInstance;
   }
 
@@ -963,7 +958,7 @@ class _ReadonlyMutation_DeleteFromFamily extends Mutation_DeleteFromFamily
     with ReadonlyMessageMixin {}
 
 class Mutation_DeleteFromRow extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation_DeleteFromRow')
+  static final BuilderInfo _i = BuilderInfo('Mutation_DeleteFromRow')
     ..hasRequiredFields = false;
 
   Mutation_DeleteFromRow() : super();
@@ -974,14 +969,14 @@ class Mutation_DeleteFromRow extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Mutation_DeleteFromRow clone() =>
-      new Mutation_DeleteFromRow()..mergeFromMessage(this);
+      Mutation_DeleteFromRow()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mutation_DeleteFromRow create() => new Mutation_DeleteFromRow();
+  static Mutation_DeleteFromRow create() => Mutation_DeleteFromRow();
   static PbList<Mutation_DeleteFromRow> createRepeated() =>
-      new PbList<Mutation_DeleteFromRow>();
+      PbList<Mutation_DeleteFromRow>();
   static Mutation_DeleteFromRow getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutation_DeleteFromRow();
+      _defaultInstance = _ReadonlyMutation_DeleteFromRow();
     return _defaultInstance;
   }
 
@@ -996,7 +991,7 @@ class _ReadonlyMutation_DeleteFromRow extends Mutation_DeleteFromRow
     with ReadonlyMessageMixin {}
 
 class Mutation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation')
+  static final BuilderInfo _i = BuilderInfo('Mutation')
     ..a<Mutation_SetCell>(1, 'setCell', PbFieldType.OM,
         Mutation_SetCell.getDefault, Mutation_SetCell.create)
     ..a<Mutation_DeleteFromColumn>(2, 'deleteFromColumn', PbFieldType.OM,
@@ -1013,12 +1008,12 @@ class Mutation extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Mutation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Mutation clone() => new Mutation()..mergeFromMessage(this);
+  Mutation clone() => Mutation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mutation create() => new Mutation();
-  static PbList<Mutation> createRepeated() => new PbList<Mutation>();
+  static Mutation create() => Mutation();
+  static PbList<Mutation> createRepeated() => PbList<Mutation>();
   static Mutation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMutation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMutation();
     return _defaultInstance;
   }
 
@@ -1063,7 +1058,7 @@ class Mutation extends GeneratedMessage {
 class _ReadonlyMutation extends Mutation with ReadonlyMessageMixin {}
 
 class ReadModifyWriteRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadModifyWriteRule')
+  static final BuilderInfo _i = BuilderInfo('ReadModifyWriteRule')
     ..aOS(1, 'familyName')
     ..a<List<int>>(2, 'columnQualifier', PbFieldType.OY)
     ..a<List<int>>(3, 'appendValue', PbFieldType.OY)
@@ -1077,15 +1072,14 @@ class ReadModifyWriteRule extends GeneratedMessage {
   ReadModifyWriteRule.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadModifyWriteRule clone() =>
-      new ReadModifyWriteRule()..mergeFromMessage(this);
+  ReadModifyWriteRule clone() => ReadModifyWriteRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadModifyWriteRule create() => new ReadModifyWriteRule();
+  static ReadModifyWriteRule create() => ReadModifyWriteRule();
   static PbList<ReadModifyWriteRule> createRepeated() =>
-      new PbList<ReadModifyWriteRule>();
+      PbList<ReadModifyWriteRule>();
   static ReadModifyWriteRule getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadModifyWriteRule();
+      _defaultInstance = _ReadonlyReadModifyWriteRule();
     return _defaultInstance;
   }
 

@@ -20,9 +20,9 @@ abstract class ExecutionServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'Execute':
-        return new ExecuteRequest();
+        return ExecuteRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -32,7 +32,7 @@ abstract class ExecutionServiceBase extends GeneratedService {
       case 'Execute':
         return this.execute(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -49,11 +49,11 @@ abstract class ActionCacheServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetActionResult':
-        return new GetActionResultRequest();
+        return GetActionResultRequest();
       case 'UpdateActionResult':
-        return new UpdateActionResultRequest();
+        return UpdateActionResultRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -65,7 +65,7 @@ abstract class ActionCacheServiceBase extends GeneratedService {
       case 'UpdateActionResult':
         return this.updateActionResult(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -83,13 +83,13 @@ abstract class ContentAddressableStorageServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'FindMissingBlobs':
-        return new FindMissingBlobsRequest();
+        return FindMissingBlobsRequest();
       case 'BatchUpdateBlobs':
-        return new BatchUpdateBlobsRequest();
+        return BatchUpdateBlobsRequest();
       case 'GetTree':
-        return new GetTreeRequest();
+        return GetTreeRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -103,7 +103,7 @@ abstract class ContentAddressableStorageServiceBase extends GeneratedService {
       case 'GetTree':
         return this.getTree(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

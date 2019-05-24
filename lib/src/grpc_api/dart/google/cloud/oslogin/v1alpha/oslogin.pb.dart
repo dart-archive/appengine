@@ -14,16 +14,15 @@ import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
 import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class LoginProfile_SshPublicKeysEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('LoginProfile_SshPublicKeysEntry')
-        ..aOS(1, 'key')
-        ..a<$google$cloud$oslogin$common.SshPublicKey>(
-            2,
-            'value',
-            PbFieldType.OM,
-            $google$cloud$oslogin$common.SshPublicKey.getDefault,
-            $google$cloud$oslogin$common.SshPublicKey.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('LoginProfile_SshPublicKeysEntry')
+    ..aOS(1, 'key')
+    ..a<$google$cloud$oslogin$common.SshPublicKey>(
+        2,
+        'value',
+        PbFieldType.OM,
+        $google$cloud$oslogin$common.SshPublicKey.getDefault,
+        $google$cloud$oslogin$common.SshPublicKey.create)
+    ..hasRequiredFields = false;
 
   LoginProfile_SshPublicKeysEntry() : super();
   LoginProfile_SshPublicKeysEntry.fromBuffer(List<int> i,
@@ -33,15 +32,15 @@ class LoginProfile_SshPublicKeysEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LoginProfile_SshPublicKeysEntry clone() =>
-      new LoginProfile_SshPublicKeysEntry()..mergeFromMessage(this);
+      LoginProfile_SshPublicKeysEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static LoginProfile_SshPublicKeysEntry create() =>
-      new LoginProfile_SshPublicKeysEntry();
+      LoginProfile_SshPublicKeysEntry();
   static PbList<LoginProfile_SshPublicKeysEntry> createRepeated() =>
-      new PbList<LoginProfile_SshPublicKeysEntry>();
+      PbList<LoginProfile_SshPublicKeysEntry>();
   static LoginProfile_SshPublicKeysEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLoginProfile_SshPublicKeysEntry();
+      _defaultInstance = _ReadonlyLoginProfile_SshPublicKeysEntry();
     return _defaultInstance;
   }
 
@@ -72,7 +71,7 @@ class _ReadonlyLoginProfile_SshPublicKeysEntry
     extends LoginProfile_SshPublicKeysEntry with ReadonlyMessageMixin {}
 
 class LoginProfile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LoginProfile')
+  static final BuilderInfo _i = BuilderInfo('LoginProfile')
     ..aOS(1, 'name')
     ..pp<$google$cloud$oslogin$common.PosixAccount>(
         2,
@@ -96,13 +95,12 @@ class LoginProfile extends GeneratedMessage {
   LoginProfile.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LoginProfile clone() => new LoginProfile()..mergeFromMessage(this);
+  LoginProfile clone() => LoginProfile()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LoginProfile create() => new LoginProfile();
-  static PbList<LoginProfile> createRepeated() => new PbList<LoginProfile>();
+  static LoginProfile create() => LoginProfile();
+  static PbList<LoginProfile> createRepeated() => PbList<LoginProfile>();
   static LoginProfile getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLoginProfile();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLoginProfile();
     return _defaultInstance;
   }
 
@@ -136,7 +134,7 @@ class LoginProfile extends GeneratedMessage {
 class _ReadonlyLoginProfile extends LoginProfile with ReadonlyMessageMixin {}
 
 class DeletePosixAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeletePosixAccountRequest')
+  static final BuilderInfo _i = BuilderInfo('DeletePosixAccountRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -148,14 +146,14 @@ class DeletePosixAccountRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeletePosixAccountRequest clone() =>
-      new DeletePosixAccountRequest()..mergeFromMessage(this);
+      DeletePosixAccountRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeletePosixAccountRequest create() => new DeletePosixAccountRequest();
+  static DeletePosixAccountRequest create() => DeletePosixAccountRequest();
   static PbList<DeletePosixAccountRequest> createRepeated() =>
-      new PbList<DeletePosixAccountRequest>();
+      PbList<DeletePosixAccountRequest>();
   static DeletePosixAccountRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeletePosixAccountRequest();
+      _defaultInstance = _ReadonlyDeletePosixAccountRequest();
     return _defaultInstance;
   }
 
@@ -178,7 +176,7 @@ class _ReadonlyDeletePosixAccountRequest extends DeletePosixAccountRequest
     with ReadonlyMessageMixin {}
 
 class DeleteSshPublicKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSshPublicKeyRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteSshPublicKeyRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -190,14 +188,14 @@ class DeleteSshPublicKeyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteSshPublicKeyRequest clone() =>
-      new DeleteSshPublicKeyRequest()..mergeFromMessage(this);
+      DeleteSshPublicKeyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteSshPublicKeyRequest create() => new DeleteSshPublicKeyRequest();
+  static DeleteSshPublicKeyRequest create() => DeleteSshPublicKeyRequest();
   static PbList<DeleteSshPublicKeyRequest> createRepeated() =>
-      new PbList<DeleteSshPublicKeyRequest>();
+      PbList<DeleteSshPublicKeyRequest>();
   static DeleteSshPublicKeyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSshPublicKeyRequest();
+      _defaultInstance = _ReadonlyDeleteSshPublicKeyRequest();
     return _defaultInstance;
   }
 
@@ -220,7 +218,7 @@ class _ReadonlyDeleteSshPublicKeyRequest extends DeleteSshPublicKeyRequest
     with ReadonlyMessageMixin {}
 
 class GetLoginProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetLoginProfileRequest')
+  static final BuilderInfo _i = BuilderInfo('GetLoginProfileRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -232,14 +230,14 @@ class GetLoginProfileRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetLoginProfileRequest clone() =>
-      new GetLoginProfileRequest()..mergeFromMessage(this);
+      GetLoginProfileRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetLoginProfileRequest create() => new GetLoginProfileRequest();
+  static GetLoginProfileRequest create() => GetLoginProfileRequest();
   static PbList<GetLoginProfileRequest> createRepeated() =>
-      new PbList<GetLoginProfileRequest>();
+      PbList<GetLoginProfileRequest>();
   static GetLoginProfileRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetLoginProfileRequest();
+      _defaultInstance = _ReadonlyGetLoginProfileRequest();
     return _defaultInstance;
   }
 
@@ -262,7 +260,7 @@ class _ReadonlyGetLoginProfileRequest extends GetLoginProfileRequest
     with ReadonlyMessageMixin {}
 
 class GetSshPublicKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSshPublicKeyRequest')
+  static final BuilderInfo _i = BuilderInfo('GetSshPublicKeyRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -274,14 +272,14 @@ class GetSshPublicKeyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetSshPublicKeyRequest clone() =>
-      new GetSshPublicKeyRequest()..mergeFromMessage(this);
+      GetSshPublicKeyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetSshPublicKeyRequest create() => new GetSshPublicKeyRequest();
+  static GetSshPublicKeyRequest create() => GetSshPublicKeyRequest();
   static PbList<GetSshPublicKeyRequest> createRepeated() =>
-      new PbList<GetSshPublicKeyRequest>();
+      PbList<GetSshPublicKeyRequest>();
   static GetSshPublicKeyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSshPublicKeyRequest();
+      _defaultInstance = _ReadonlyGetSshPublicKeyRequest();
     return _defaultInstance;
   }
 
@@ -304,7 +302,7 @@ class _ReadonlyGetSshPublicKeyRequest extends GetSshPublicKeyRequest
     with ReadonlyMessageMixin {}
 
 class ImportSshPublicKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportSshPublicKeyRequest')
+  static final BuilderInfo _i = BuilderInfo('ImportSshPublicKeyRequest')
     ..aOS(1, 'parent')
     ..a<$google$cloud$oslogin$common.SshPublicKey>(
         2,
@@ -323,14 +321,14 @@ class ImportSshPublicKeyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportSshPublicKeyRequest clone() =>
-      new ImportSshPublicKeyRequest()..mergeFromMessage(this);
+      ImportSshPublicKeyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportSshPublicKeyRequest create() => new ImportSshPublicKeyRequest();
+  static ImportSshPublicKeyRequest create() => ImportSshPublicKeyRequest();
   static PbList<ImportSshPublicKeyRequest> createRepeated() =>
-      new PbList<ImportSshPublicKeyRequest>();
+      PbList<ImportSshPublicKeyRequest>();
   static ImportSshPublicKeyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportSshPublicKeyRequest();
+      _defaultInstance = _ReadonlyImportSshPublicKeyRequest();
     return _defaultInstance;
   }
 
@@ -369,7 +367,7 @@ class _ReadonlyImportSshPublicKeyRequest extends ImportSshPublicKeyRequest
     with ReadonlyMessageMixin {}
 
 class ImportSshPublicKeyResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportSshPublicKeyResponse')
+  static final BuilderInfo _i = BuilderInfo('ImportSshPublicKeyResponse')
     ..a<LoginProfile>(1, 'loginProfile', PbFieldType.OM,
         LoginProfile.getDefault, LoginProfile.create)
     ..hasRequiredFields = false;
@@ -382,15 +380,14 @@ class ImportSshPublicKeyResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportSshPublicKeyResponse clone() =>
-      new ImportSshPublicKeyResponse()..mergeFromMessage(this);
+      ImportSshPublicKeyResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportSshPublicKeyResponse create() =>
-      new ImportSshPublicKeyResponse();
+  static ImportSshPublicKeyResponse create() => ImportSshPublicKeyResponse();
   static PbList<ImportSshPublicKeyResponse> createRepeated() =>
-      new PbList<ImportSshPublicKeyResponse>();
+      PbList<ImportSshPublicKeyResponse>();
   static ImportSshPublicKeyResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportSshPublicKeyResponse();
+      _defaultInstance = _ReadonlyImportSshPublicKeyResponse();
     return _defaultInstance;
   }
 
@@ -413,7 +410,7 @@ class _ReadonlyImportSshPublicKeyResponse extends ImportSshPublicKeyResponse
     with ReadonlyMessageMixin {}
 
 class UpdateSshPublicKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateSshPublicKeyRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateSshPublicKeyRequest')
     ..aOS(1, 'name')
     ..a<$google$cloud$oslogin$common.SshPublicKey>(
         2,
@@ -437,14 +434,14 @@ class UpdateSshPublicKeyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateSshPublicKeyRequest clone() =>
-      new UpdateSshPublicKeyRequest()..mergeFromMessage(this);
+      UpdateSshPublicKeyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateSshPublicKeyRequest create() => new UpdateSshPublicKeyRequest();
+  static UpdateSshPublicKeyRequest create() => UpdateSshPublicKeyRequest();
   static PbList<UpdateSshPublicKeyRequest> createRepeated() =>
-      new PbList<UpdateSshPublicKeyRequest>();
+      PbList<UpdateSshPublicKeyRequest>();
   static UpdateSshPublicKeyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateSshPublicKeyRequest();
+      _defaultInstance = _ReadonlyUpdateSshPublicKeyRequest();
     return _defaultInstance;
   }
 
@@ -488,42 +485,42 @@ class OsLoginServiceApi {
 
   Future<$google$protobuf.Empty> deletePosixAccount(
       ClientContext ctx, DeletePosixAccountRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'OsLoginService', 'DeletePosixAccount', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteSshPublicKey(
       ClientContext ctx, DeleteSshPublicKeyRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'OsLoginService', 'DeleteSshPublicKey', request, emptyResponse);
   }
 
   Future<LoginProfile> getLoginProfile(
       ClientContext ctx, GetLoginProfileRequest request) {
-    var emptyResponse = new LoginProfile();
+    var emptyResponse = LoginProfile();
     return _client.invoke<LoginProfile>(
         ctx, 'OsLoginService', 'GetLoginProfile', request, emptyResponse);
   }
 
   Future<$google$cloud$oslogin$common.SshPublicKey> getSshPublicKey(
       ClientContext ctx, GetSshPublicKeyRequest request) {
-    var emptyResponse = new $google$cloud$oslogin$common.SshPublicKey();
+    var emptyResponse = $google$cloud$oslogin$common.SshPublicKey();
     return _client.invoke<$google$cloud$oslogin$common.SshPublicKey>(
         ctx, 'OsLoginService', 'GetSshPublicKey', request, emptyResponse);
   }
 
   Future<ImportSshPublicKeyResponse> importSshPublicKey(
       ClientContext ctx, ImportSshPublicKeyRequest request) {
-    var emptyResponse = new ImportSshPublicKeyResponse();
+    var emptyResponse = ImportSshPublicKeyResponse();
     return _client.invoke<ImportSshPublicKeyResponse>(
         ctx, 'OsLoginService', 'ImportSshPublicKey', request, emptyResponse);
   }
 
   Future<$google$cloud$oslogin$common.SshPublicKey> updateSshPublicKey(
       ClientContext ctx, UpdateSshPublicKeyRequest request) {
-    var emptyResponse = new $google$cloud$oslogin$common.SshPublicKey();
+    var emptyResponse = $google$cloud$oslogin$common.SshPublicKey();
     return _client.invoke<$google$cloud$oslogin$common.SshPublicKey>(
         ctx, 'OsLoginService', 'UpdateSshPublicKey', request, emptyResponse);
   }

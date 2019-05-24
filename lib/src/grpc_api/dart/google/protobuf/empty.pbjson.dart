@@ -3,6 +3,6 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const Empty$json = const {
+const Empty$json = {
   '1': 'Empty',
 };

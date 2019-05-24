@@ -16,17 +16,16 @@ import 'uptime.pbenum.dart';
 export 'uptime.pbenum.dart';
 
 class UptimeCheckConfig_ResourceGroup extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('UptimeCheckConfig_ResourceGroup')
-        ..aOS(1, 'groupId')
-        ..e<GroupResourceType>(
-            2,
-            'resourceType',
-            PbFieldType.OE,
-            GroupResourceType.RESOURCE_TYPE_UNSPECIFIED,
-            GroupResourceType.valueOf,
-            GroupResourceType.values)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('UptimeCheckConfig_ResourceGroup')
+    ..aOS(1, 'groupId')
+    ..e<GroupResourceType>(
+        2,
+        'resourceType',
+        PbFieldType.OE,
+        GroupResourceType.RESOURCE_TYPE_UNSPECIFIED,
+        GroupResourceType.valueOf,
+        GroupResourceType.values)
+    ..hasRequiredFields = false;
 
   UptimeCheckConfig_ResourceGroup() : super();
   UptimeCheckConfig_ResourceGroup.fromBuffer(List<int> i,
@@ -36,15 +35,15 @@ class UptimeCheckConfig_ResourceGroup extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UptimeCheckConfig_ResourceGroup clone() =>
-      new UptimeCheckConfig_ResourceGroup()..mergeFromMessage(this);
+      UptimeCheckConfig_ResourceGroup()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UptimeCheckConfig_ResourceGroup create() =>
-      new UptimeCheckConfig_ResourceGroup();
+      UptimeCheckConfig_ResourceGroup();
   static PbList<UptimeCheckConfig_ResourceGroup> createRepeated() =>
-      new PbList<UptimeCheckConfig_ResourceGroup>();
+      PbList<UptimeCheckConfig_ResourceGroup>();
   static UptimeCheckConfig_ResourceGroup getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUptimeCheckConfig_ResourceGroup();
+      _defaultInstance = _ReadonlyUptimeCheckConfig_ResourceGroup();
     return _defaultInstance;
   }
 
@@ -76,7 +75,7 @@ class _ReadonlyUptimeCheckConfig_ResourceGroup
 
 class UptimeCheckConfig_HttpCheck_BasicAuthentication extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('UptimeCheckConfig_HttpCheck_BasicAuthentication')
+      BuilderInfo('UptimeCheckConfig_HttpCheck_BasicAuthentication')
         ..aOS(1, 'username')
         ..aOS(2, 'password')
         ..hasRequiredFields = false;
@@ -89,18 +88,17 @@ class UptimeCheckConfig_HttpCheck_BasicAuthentication extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UptimeCheckConfig_HttpCheck_BasicAuthentication clone() =>
-      new UptimeCheckConfig_HttpCheck_BasicAuthentication()
-        ..mergeFromMessage(this);
+      UptimeCheckConfig_HttpCheck_BasicAuthentication()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UptimeCheckConfig_HttpCheck_BasicAuthentication create() =>
-      new UptimeCheckConfig_HttpCheck_BasicAuthentication();
+      UptimeCheckConfig_HttpCheck_BasicAuthentication();
   static PbList<UptimeCheckConfig_HttpCheck_BasicAuthentication>
       createRepeated() =>
-          new PbList<UptimeCheckConfig_HttpCheck_BasicAuthentication>();
+          PbList<UptimeCheckConfig_HttpCheck_BasicAuthentication>();
   static UptimeCheckConfig_HttpCheck_BasicAuthentication getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyUptimeCheckConfig_HttpCheck_BasicAuthentication();
+          _ReadonlyUptimeCheckConfig_HttpCheck_BasicAuthentication();
     return _defaultInstance;
   }
 
@@ -133,7 +131,7 @@ class _ReadonlyUptimeCheckConfig_HttpCheck_BasicAuthentication
 
 class UptimeCheckConfig_HttpCheck_HeadersEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('UptimeCheckConfig_HttpCheck_HeadersEntry')
+      BuilderInfo('UptimeCheckConfig_HttpCheck_HeadersEntry')
         ..aOS(1, 'key')
         ..aOS(2, 'value')
         ..hasRequiredFields = false;
@@ -146,16 +144,15 @@ class UptimeCheckConfig_HttpCheck_HeadersEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UptimeCheckConfig_HttpCheck_HeadersEntry clone() =>
-      new UptimeCheckConfig_HttpCheck_HeadersEntry()..mergeFromMessage(this);
+      UptimeCheckConfig_HttpCheck_HeadersEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UptimeCheckConfig_HttpCheck_HeadersEntry create() =>
-      new UptimeCheckConfig_HttpCheck_HeadersEntry();
+      UptimeCheckConfig_HttpCheck_HeadersEntry();
   static PbList<UptimeCheckConfig_HttpCheck_HeadersEntry> createRepeated() =>
-      new PbList<UptimeCheckConfig_HttpCheck_HeadersEntry>();
+      PbList<UptimeCheckConfig_HttpCheck_HeadersEntry>();
   static UptimeCheckConfig_HttpCheck_HeadersEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyUptimeCheckConfig_HttpCheck_HeadersEntry();
+      _defaultInstance = _ReadonlyUptimeCheckConfig_HttpCheck_HeadersEntry();
     return _defaultInstance;
   }
 
@@ -187,7 +184,7 @@ class _ReadonlyUptimeCheckConfig_HttpCheck_HeadersEntry
 }
 
 class UptimeCheckConfig_HttpCheck extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UptimeCheckConfig_HttpCheck')
+  static final BuilderInfo _i = BuilderInfo('UptimeCheckConfig_HttpCheck')
     ..aOB(1, 'useSsl')
     ..aOS(2, 'path')
     ..a<int>(3, 'port', PbFieldType.O3)
@@ -214,15 +211,14 @@ class UptimeCheckConfig_HttpCheck extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UptimeCheckConfig_HttpCheck clone() =>
-      new UptimeCheckConfig_HttpCheck()..mergeFromMessage(this);
+      UptimeCheckConfig_HttpCheck()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UptimeCheckConfig_HttpCheck create() =>
-      new UptimeCheckConfig_HttpCheck();
+  static UptimeCheckConfig_HttpCheck create() => UptimeCheckConfig_HttpCheck();
   static PbList<UptimeCheckConfig_HttpCheck> createRepeated() =>
-      new PbList<UptimeCheckConfig_HttpCheck>();
+      PbList<UptimeCheckConfig_HttpCheck>();
   static UptimeCheckConfig_HttpCheck getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUptimeCheckConfig_HttpCheck();
+      _defaultInstance = _ReadonlyUptimeCheckConfig_HttpCheck();
     return _defaultInstance;
   }
 
@@ -279,7 +275,7 @@ class _ReadonlyUptimeCheckConfig_HttpCheck extends UptimeCheckConfig_HttpCheck
     with ReadonlyMessageMixin {}
 
 class UptimeCheckConfig_TcpCheck extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UptimeCheckConfig_TcpCheck')
+  static final BuilderInfo _i = BuilderInfo('UptimeCheckConfig_TcpCheck')
     ..a<int>(1, 'port', PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -291,15 +287,14 @@ class UptimeCheckConfig_TcpCheck extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UptimeCheckConfig_TcpCheck clone() =>
-      new UptimeCheckConfig_TcpCheck()..mergeFromMessage(this);
+      UptimeCheckConfig_TcpCheck()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UptimeCheckConfig_TcpCheck create() =>
-      new UptimeCheckConfig_TcpCheck();
+  static UptimeCheckConfig_TcpCheck create() => UptimeCheckConfig_TcpCheck();
   static PbList<UptimeCheckConfig_TcpCheck> createRepeated() =>
-      new PbList<UptimeCheckConfig_TcpCheck>();
+      PbList<UptimeCheckConfig_TcpCheck>();
   static UptimeCheckConfig_TcpCheck getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUptimeCheckConfig_TcpCheck();
+      _defaultInstance = _ReadonlyUptimeCheckConfig_TcpCheck();
     return _defaultInstance;
   }
 
@@ -322,10 +317,9 @@ class _ReadonlyUptimeCheckConfig_TcpCheck extends UptimeCheckConfig_TcpCheck
     with ReadonlyMessageMixin {}
 
 class UptimeCheckConfig_ContentMatcher extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('UptimeCheckConfig_ContentMatcher')
-        ..aOS(1, 'content')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('UptimeCheckConfig_ContentMatcher')
+    ..aOS(1, 'content')
+    ..hasRequiredFields = false;
 
   UptimeCheckConfig_ContentMatcher() : super();
   UptimeCheckConfig_ContentMatcher.fromBuffer(List<int> i,
@@ -335,15 +329,15 @@ class UptimeCheckConfig_ContentMatcher extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UptimeCheckConfig_ContentMatcher clone() =>
-      new UptimeCheckConfig_ContentMatcher()..mergeFromMessage(this);
+      UptimeCheckConfig_ContentMatcher()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UptimeCheckConfig_ContentMatcher create() =>
-      new UptimeCheckConfig_ContentMatcher();
+      UptimeCheckConfig_ContentMatcher();
   static PbList<UptimeCheckConfig_ContentMatcher> createRepeated() =>
-      new PbList<UptimeCheckConfig_ContentMatcher>();
+      PbList<UptimeCheckConfig_ContentMatcher>();
   static UptimeCheckConfig_ContentMatcher getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUptimeCheckConfig_ContentMatcher();
+      _defaultInstance = _ReadonlyUptimeCheckConfig_ContentMatcher();
     return _defaultInstance;
   }
 
@@ -366,14 +360,13 @@ class _ReadonlyUptimeCheckConfig_ContentMatcher
     extends UptimeCheckConfig_ContentMatcher with ReadonlyMessageMixin {}
 
 class UptimeCheckConfig_InternalChecker extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('UptimeCheckConfig_InternalChecker')
-        ..aOS(1, 'projectId')
-        ..aOS(2, 'network')
-        ..aOS(3, 'gcpZone')
-        ..aOS(4, 'checkerId')
-        ..aOS(5, 'displayName')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('UptimeCheckConfig_InternalChecker')
+    ..aOS(1, 'projectId')
+    ..aOS(2, 'network')
+    ..aOS(3, 'gcpZone')
+    ..aOS(4, 'checkerId')
+    ..aOS(5, 'displayName')
+    ..hasRequiredFields = false;
 
   UptimeCheckConfig_InternalChecker() : super();
   UptimeCheckConfig_InternalChecker.fromBuffer(List<int> i,
@@ -383,15 +376,15 @@ class UptimeCheckConfig_InternalChecker extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UptimeCheckConfig_InternalChecker clone() =>
-      new UptimeCheckConfig_InternalChecker()..mergeFromMessage(this);
+      UptimeCheckConfig_InternalChecker()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UptimeCheckConfig_InternalChecker create() =>
-      new UptimeCheckConfig_InternalChecker();
+      UptimeCheckConfig_InternalChecker();
   static PbList<UptimeCheckConfig_InternalChecker> createRepeated() =>
-      new PbList<UptimeCheckConfig_InternalChecker>();
+      PbList<UptimeCheckConfig_InternalChecker>();
   static UptimeCheckConfig_InternalChecker getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUptimeCheckConfig_InternalChecker();
+      _defaultInstance = _ReadonlyUptimeCheckConfig_InternalChecker();
     return _defaultInstance;
   }
 
@@ -446,7 +439,7 @@ class _ReadonlyUptimeCheckConfig_InternalChecker
     extends UptimeCheckConfig_InternalChecker with ReadonlyMessageMixin {}
 
 class UptimeCheckConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UptimeCheckConfig')
+  static final BuilderInfo _i = BuilderInfo('UptimeCheckConfig')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..a<$google$api.MonitoredResource>(
@@ -506,14 +499,14 @@ class UptimeCheckConfig extends GeneratedMessage {
   UptimeCheckConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UptimeCheckConfig clone() => new UptimeCheckConfig()..mergeFromMessage(this);
+  UptimeCheckConfig clone() => UptimeCheckConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UptimeCheckConfig create() => new UptimeCheckConfig();
+  static UptimeCheckConfig create() => UptimeCheckConfig();
   static PbList<UptimeCheckConfig> createRepeated() =>
-      new PbList<UptimeCheckConfig>();
+      PbList<UptimeCheckConfig>();
   static UptimeCheckConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUptimeCheckConfig();
+      _defaultInstance = _ReadonlyUptimeCheckConfig();
     return _defaultInstance;
   }
 
@@ -597,7 +590,7 @@ class _ReadonlyUptimeCheckConfig extends UptimeCheckConfig
     with ReadonlyMessageMixin {}
 
 class UptimeCheckIp extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UptimeCheckIp')
+  static final BuilderInfo _i = BuilderInfo('UptimeCheckIp')
     ..e<UptimeCheckRegion>(
         1,
         'region',
@@ -616,13 +609,12 @@ class UptimeCheckIp extends GeneratedMessage {
   UptimeCheckIp.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UptimeCheckIp clone() => new UptimeCheckIp()..mergeFromMessage(this);
+  UptimeCheckIp clone() => UptimeCheckIp()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UptimeCheckIp create() => new UptimeCheckIp();
-  static PbList<UptimeCheckIp> createRepeated() => new PbList<UptimeCheckIp>();
+  static UptimeCheckIp create() => UptimeCheckIp();
+  static PbList<UptimeCheckIp> createRepeated() => PbList<UptimeCheckIp>();
   static UptimeCheckIp getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUptimeCheckIp();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyUptimeCheckIp();
     return _defaultInstance;
   }
 

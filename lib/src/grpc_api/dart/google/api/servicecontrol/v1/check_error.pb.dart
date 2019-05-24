@@ -13,7 +13,7 @@ import 'check_error.pbenum.dart';
 export 'check_error.pbenum.dart';
 
 class CheckError extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckError')
+  static final BuilderInfo _i = BuilderInfo('CheckError')
     ..e<CheckError_Code>(
         1,
         'code',
@@ -30,12 +30,12 @@ class CheckError extends GeneratedMessage {
       : super.fromBuffer(i, r);
   CheckError.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CheckError clone() => new CheckError()..mergeFromMessage(this);
+  CheckError clone() => CheckError()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckError create() => new CheckError();
-  static PbList<CheckError> createRepeated() => new PbList<CheckError>();
+  static CheckError create() => CheckError();
+  static PbList<CheckError> createRepeated() => PbList<CheckError>();
   static CheckError getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCheckError();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCheckError();
     return _defaultInstance;
   }
 

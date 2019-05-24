@@ -18,7 +18,7 @@ import 'transfer.pbenum.dart';
 export 'transfer.pbenum.dart';
 
 class TransferConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransferConfig')
+  static final BuilderInfo _i = BuilderInfo('TransferConfig')
     ..aOS(1, 'name')
     ..aOS(2, 'destinationDatasetId')
     ..aOS(3, 'displayName')
@@ -58,14 +58,12 @@ class TransferConfig extends GeneratedMessage {
   TransferConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransferConfig clone() => new TransferConfig()..mergeFromMessage(this);
+  TransferConfig clone() => TransferConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransferConfig create() => new TransferConfig();
-  static PbList<TransferConfig> createRepeated() =>
-      new PbList<TransferConfig>();
+  static TransferConfig create() => TransferConfig();
+  static PbList<TransferConfig> createRepeated() => PbList<TransferConfig>();
   static TransferConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransferConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTransferConfig();
     return _defaultInstance;
   }
 
@@ -183,7 +181,7 @@ class _ReadonlyTransferConfig extends TransferConfig with ReadonlyMessageMixin {
 }
 
 class TransferRun extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransferRun')
+  static final BuilderInfo _i = BuilderInfo('TransferRun')
     ..aOS(1, 'name')
     ..aOS(2, 'destinationDatasetId')
     ..a<$google$protobuf.Timestamp>(
@@ -239,12 +237,12 @@ class TransferRun extends GeneratedMessage {
   TransferRun.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransferRun clone() => new TransferRun()..mergeFromMessage(this);
+  TransferRun clone() => TransferRun()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransferRun create() => new TransferRun();
-  static PbList<TransferRun> createRepeated() => new PbList<TransferRun>();
+  static TransferRun create() => TransferRun();
+  static PbList<TransferRun> createRepeated() => PbList<TransferRun>();
   static TransferRun getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTransferRun();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTransferRun();
     return _defaultInstance;
   }
 
@@ -361,7 +359,7 @@ class TransferRun extends GeneratedMessage {
 class _ReadonlyTransferRun extends TransferRun with ReadonlyMessageMixin {}
 
 class TransferMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransferMessage')
+  static final BuilderInfo _i = BuilderInfo('TransferMessage')
     ..a<$google$protobuf.Timestamp>(
         1,
         'messageTime',
@@ -385,14 +383,12 @@ class TransferMessage extends GeneratedMessage {
   TransferMessage.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransferMessage clone() => new TransferMessage()..mergeFromMessage(this);
+  TransferMessage clone() => TransferMessage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransferMessage create() => new TransferMessage();
-  static PbList<TransferMessage> createRepeated() =>
-      new PbList<TransferMessage>();
+  static TransferMessage create() => TransferMessage();
+  static PbList<TransferMessage> createRepeated() => PbList<TransferMessage>();
   static TransferMessage getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransferMessage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTransferMessage();
     return _defaultInstance;
   }
 

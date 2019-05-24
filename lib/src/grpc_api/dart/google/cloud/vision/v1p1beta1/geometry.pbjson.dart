@@ -3,18 +3,18 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const Vertex$json = const {
+const Vertex$json = {
   '1': 'Vertex',
-  '2': const [
-    const {'1': 'x', '3': 1, '4': 1, '5': 5, '10': 'x'},
-    const {'1': 'y', '3': 2, '4': 1, '5': 5, '10': 'y'},
+  '2': [
+    {'1': 'x', '3': 1, '4': 1, '5': 5, '10': 'x'},
+    {'1': 'y', '3': 2, '4': 1, '5': 5, '10': 'y'},
   ],
 };
 
-const BoundingPoly$json = const {
+const BoundingPoly$json = {
   '1': 'BoundingPoly',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'vertices',
       '3': 1,
       '4': 3,
@@ -25,11 +25,11 @@ const BoundingPoly$json = const {
   ],
 };
 
-const Position$json = const {
+const Position$json = {
   '1': 'Position',
-  '2': const [
-    const {'1': 'x', '3': 1, '4': 1, '5': 2, '10': 'x'},
-    const {'1': 'y', '3': 2, '4': 1, '5': 2, '10': 'y'},
-    const {'1': 'z', '3': 3, '4': 1, '5': 2, '10': 'z'},
+  '2': [
+    {'1': 'x', '3': 1, '4': 1, '5': 2, '10': 'x'},
+    {'1': 'y', '3': 2, '4': 1, '5': 2, '10': 'y'},
+    {'1': 'z', '3': 3, '4': 1, '5': 2, '10': 'z'},
   ],
 };

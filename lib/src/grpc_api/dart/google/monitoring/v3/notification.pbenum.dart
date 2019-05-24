@@ -10,15 +10,15 @@ import 'package:protobuf/protobuf.dart';
 class NotificationChannel_VerificationStatus extends ProtobufEnum {
   static const NotificationChannel_VerificationStatus
       VERIFICATION_STATUS_UNSPECIFIED =
-      const NotificationChannel_VerificationStatus._(
+      NotificationChannel_VerificationStatus._(
           0, 'VERIFICATION_STATUS_UNSPECIFIED');
   static const NotificationChannel_VerificationStatus UNVERIFIED =
-      const NotificationChannel_VerificationStatus._(1, 'UNVERIFIED');
+      NotificationChannel_VerificationStatus._(1, 'UNVERIFIED');
   static const NotificationChannel_VerificationStatus VERIFIED =
-      const NotificationChannel_VerificationStatus._(2, 'VERIFIED');
+      NotificationChannel_VerificationStatus._(2, 'VERIFIED');
 
   static const List<NotificationChannel_VerificationStatus> values =
-      const <NotificationChannel_VerificationStatus>[
+      <NotificationChannel_VerificationStatus>[
     VERIFICATION_STATUS_UNSPECIFIED,
     UNVERIFIED,
     VERIFIED,

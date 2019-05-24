@@ -21,7 +21,7 @@ import 'annotations.pbenum.dart';
 export 'annotations.pbenum.dart';
 
 class AnnotationSet_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotationSet_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('AnnotationSet_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -39,14 +39,14 @@ class AnnotationSet_InfoEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotationSet_InfoEntry clone() =>
-      new AnnotationSet_InfoEntry()..mergeFromMessage(this);
+      AnnotationSet_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotationSet_InfoEntry create() => new AnnotationSet_InfoEntry();
+  static AnnotationSet_InfoEntry create() => AnnotationSet_InfoEntry();
   static PbList<AnnotationSet_InfoEntry> createRepeated() =>
-      new PbList<AnnotationSet_InfoEntry>();
+      PbList<AnnotationSet_InfoEntry>();
   static AnnotationSet_InfoEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotationSet_InfoEntry();
+      _defaultInstance = _ReadonlyAnnotationSet_InfoEntry();
     return _defaultInstance;
   }
 
@@ -77,7 +77,7 @@ class _ReadonlyAnnotationSet_InfoEntry extends AnnotationSet_InfoEntry
     with ReadonlyMessageMixin {}
 
 class AnnotationSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotationSet')
+  static final BuilderInfo _i = BuilderInfo('AnnotationSet')
     ..aOS(1, 'id')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'referenceSetId')
@@ -101,13 +101,12 @@ class AnnotationSet extends GeneratedMessage {
   AnnotationSet.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AnnotationSet clone() => new AnnotationSet()..mergeFromMessage(this);
+  AnnotationSet clone() => AnnotationSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotationSet create() => new AnnotationSet();
-  static PbList<AnnotationSet> createRepeated() => new PbList<AnnotationSet>();
+  static AnnotationSet create() => AnnotationSet();
+  static PbList<AnnotationSet> createRepeated() => PbList<AnnotationSet>();
   static AnnotationSet getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotationSet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAnnotationSet();
     return _defaultInstance;
   }
 
@@ -170,7 +169,7 @@ class AnnotationSet extends GeneratedMessage {
 class _ReadonlyAnnotationSet extends AnnotationSet with ReadonlyMessageMixin {}
 
 class Annotation_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Annotation_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('Annotation_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -188,14 +187,14 @@ class Annotation_InfoEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Annotation_InfoEntry clone() =>
-      new Annotation_InfoEntry()..mergeFromMessage(this);
+      Annotation_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Annotation_InfoEntry create() => new Annotation_InfoEntry();
+  static Annotation_InfoEntry create() => Annotation_InfoEntry();
   static PbList<Annotation_InfoEntry> createRepeated() =>
-      new PbList<Annotation_InfoEntry>();
+      PbList<Annotation_InfoEntry>();
   static Annotation_InfoEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotation_InfoEntry();
+      _defaultInstance = _ReadonlyAnnotation_InfoEntry();
     return _defaultInstance;
   }
 
@@ -225,7 +224,7 @@ class _ReadonlyAnnotation_InfoEntry extends Annotation_InfoEntry
     with ReadonlyMessageMixin {}
 
 class Annotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Annotation')
+  static final BuilderInfo _i = BuilderInfo('Annotation')
     ..aOS(1, 'id')
     ..aOS(2, 'annotationSetId')
     ..aOS(3, 'name')
@@ -255,12 +254,12 @@ class Annotation extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Annotation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Annotation clone() => new Annotation()..mergeFromMessage(this);
+  Annotation clone() => Annotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Annotation create() => new Annotation();
-  static PbList<Annotation> createRepeated() => new PbList<Annotation>();
+  static Annotation create() => Annotation();
+  static PbList<Annotation> createRepeated() => PbList<Annotation>();
   static Annotation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAnnotation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAnnotation();
     return _defaultInstance;
   }
 
@@ -364,7 +363,7 @@ class _ReadonlyAnnotation extends Annotation with ReadonlyMessageMixin {}
 
 class VariantAnnotation_ClinicalCondition extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('VariantAnnotation_ClinicalCondition')
+      BuilderInfo('VariantAnnotation_ClinicalCondition')
         ..pPS(1, 'names')
         ..pp<ExternalId>(2, 'externalIds', PbFieldType.PM,
             ExternalId.$checkItem, ExternalId.create)
@@ -380,15 +379,15 @@ class VariantAnnotation_ClinicalCondition extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VariantAnnotation_ClinicalCondition clone() =>
-      new VariantAnnotation_ClinicalCondition()..mergeFromMessage(this);
+      VariantAnnotation_ClinicalCondition()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static VariantAnnotation_ClinicalCondition create() =>
-      new VariantAnnotation_ClinicalCondition();
+      VariantAnnotation_ClinicalCondition();
   static PbList<VariantAnnotation_ClinicalCondition> createRepeated() =>
-      new PbList<VariantAnnotation_ClinicalCondition>();
+      PbList<VariantAnnotation_ClinicalCondition>();
   static VariantAnnotation_ClinicalCondition getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantAnnotation_ClinicalCondition();
+      _defaultInstance = _ReadonlyVariantAnnotation_ClinicalCondition();
     return _defaultInstance;
   }
 
@@ -423,7 +422,7 @@ class _ReadonlyVariantAnnotation_ClinicalCondition
     extends VariantAnnotation_ClinicalCondition with ReadonlyMessageMixin {}
 
 class VariantAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantAnnotation')
+  static final BuilderInfo _i = BuilderInfo('VariantAnnotation')
     ..e<VariantAnnotation_Type>(
         1,
         'type',
@@ -464,14 +463,14 @@ class VariantAnnotation extends GeneratedMessage {
   VariantAnnotation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VariantAnnotation clone() => new VariantAnnotation()..mergeFromMessage(this);
+  VariantAnnotation clone() => VariantAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VariantAnnotation create() => new VariantAnnotation();
+  static VariantAnnotation create() => VariantAnnotation();
   static PbList<VariantAnnotation> createRepeated() =>
-      new PbList<VariantAnnotation>();
+      PbList<VariantAnnotation>();
   static VariantAnnotation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantAnnotation();
+      _defaultInstance = _ReadonlyVariantAnnotation();
     return _defaultInstance;
   }
 
@@ -529,7 +528,7 @@ class _ReadonlyVariantAnnotation extends VariantAnnotation
     with ReadonlyMessageMixin {}
 
 class Transcript_Exon extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Transcript_Exon')
+  static final BuilderInfo _i = BuilderInfo('Transcript_Exon')
     ..aInt64(1, 'start')
     ..aInt64(2, 'end')
     ..a<$google$protobuf.Int32Value>(
@@ -547,14 +546,12 @@ class Transcript_Exon extends GeneratedMessage {
   Transcript_Exon.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Transcript_Exon clone() => new Transcript_Exon()..mergeFromMessage(this);
+  Transcript_Exon clone() => Transcript_Exon()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Transcript_Exon create() => new Transcript_Exon();
-  static PbList<Transcript_Exon> createRepeated() =>
-      new PbList<Transcript_Exon>();
+  static Transcript_Exon create() => Transcript_Exon();
+  static PbList<Transcript_Exon> createRepeated() => PbList<Transcript_Exon>();
   static Transcript_Exon getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTranscript_Exon();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTranscript_Exon();
     return _defaultInstance;
   }
 
@@ -592,7 +589,7 @@ class _ReadonlyTranscript_Exon extends Transcript_Exon
     with ReadonlyMessageMixin {}
 
 class Transcript_CodingSequence extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Transcript_CodingSequence')
+  static final BuilderInfo _i = BuilderInfo('Transcript_CodingSequence')
     ..aInt64(1, 'start')
     ..aInt64(2, 'end')
     ..hasRequiredFields = false;
@@ -605,14 +602,14 @@ class Transcript_CodingSequence extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Transcript_CodingSequence clone() =>
-      new Transcript_CodingSequence()..mergeFromMessage(this);
+      Transcript_CodingSequence()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Transcript_CodingSequence create() => new Transcript_CodingSequence();
+  static Transcript_CodingSequence create() => Transcript_CodingSequence();
   static PbList<Transcript_CodingSequence> createRepeated() =>
-      new PbList<Transcript_CodingSequence>();
+      PbList<Transcript_CodingSequence>();
   static Transcript_CodingSequence getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTranscript_CodingSequence();
+      _defaultInstance = _ReadonlyTranscript_CodingSequence();
     return _defaultInstance;
   }
 
@@ -643,7 +640,7 @@ class _ReadonlyTranscript_CodingSequence extends Transcript_CodingSequence
     with ReadonlyMessageMixin {}
 
 class Transcript extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Transcript')
+  static final BuilderInfo _i = BuilderInfo('Transcript')
     ..aOS(1, 'geneId')
     ..pp<Transcript_Exon>(2, 'exons', PbFieldType.PM,
         Transcript_Exon.$checkItem, Transcript_Exon.create)
@@ -657,12 +654,12 @@ class Transcript extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Transcript.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Transcript clone() => new Transcript()..mergeFromMessage(this);
+  Transcript clone() => Transcript()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Transcript create() => new Transcript();
-  static PbList<Transcript> createRepeated() => new PbList<Transcript>();
+  static Transcript create() => Transcript();
+  static PbList<Transcript> createRepeated() => PbList<Transcript>();
   static Transcript getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTranscript();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTranscript();
     return _defaultInstance;
   }
 
@@ -693,7 +690,7 @@ class Transcript extends GeneratedMessage {
 class _ReadonlyTranscript extends Transcript with ReadonlyMessageMixin {}
 
 class ExternalId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExternalId')
+  static final BuilderInfo _i = BuilderInfo('ExternalId')
     ..aOS(1, 'sourceName')
     ..aOS(2, 'id')
     ..hasRequiredFields = false;
@@ -704,12 +701,12 @@ class ExternalId extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ExternalId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExternalId clone() => new ExternalId()..mergeFromMessage(this);
+  ExternalId clone() => ExternalId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExternalId create() => new ExternalId();
-  static PbList<ExternalId> createRepeated() => new PbList<ExternalId>();
+  static ExternalId create() => ExternalId();
+  static PbList<ExternalId> createRepeated() => PbList<ExternalId>();
   static ExternalId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyExternalId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyExternalId();
     return _defaultInstance;
   }
 
@@ -738,7 +735,7 @@ class ExternalId extends GeneratedMessage {
 class _ReadonlyExternalId extends ExternalId with ReadonlyMessageMixin {}
 
 class CreateAnnotationSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateAnnotationSetRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateAnnotationSetRequest')
     ..a<AnnotationSet>(1, 'annotationSet', PbFieldType.OM,
         AnnotationSet.getDefault, AnnotationSet.create)
     ..hasRequiredFields = false;
@@ -751,15 +748,14 @@ class CreateAnnotationSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateAnnotationSetRequest clone() =>
-      new CreateAnnotationSetRequest()..mergeFromMessage(this);
+      CreateAnnotationSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateAnnotationSetRequest create() =>
-      new CreateAnnotationSetRequest();
+  static CreateAnnotationSetRequest create() => CreateAnnotationSetRequest();
   static PbList<CreateAnnotationSetRequest> createRepeated() =>
-      new PbList<CreateAnnotationSetRequest>();
+      PbList<CreateAnnotationSetRequest>();
   static CreateAnnotationSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateAnnotationSetRequest();
+      _defaultInstance = _ReadonlyCreateAnnotationSetRequest();
     return _defaultInstance;
   }
 
@@ -782,7 +778,7 @@ class _ReadonlyCreateAnnotationSetRequest extends CreateAnnotationSetRequest
     with ReadonlyMessageMixin {}
 
 class GetAnnotationSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetAnnotationSetRequest')
+  static final BuilderInfo _i = BuilderInfo('GetAnnotationSetRequest')
     ..aOS(1, 'annotationSetId')
     ..hasRequiredFields = false;
 
@@ -794,14 +790,14 @@ class GetAnnotationSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetAnnotationSetRequest clone() =>
-      new GetAnnotationSetRequest()..mergeFromMessage(this);
+      GetAnnotationSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetAnnotationSetRequest create() => new GetAnnotationSetRequest();
+  static GetAnnotationSetRequest create() => GetAnnotationSetRequest();
   static PbList<GetAnnotationSetRequest> createRepeated() =>
-      new PbList<GetAnnotationSetRequest>();
+      PbList<GetAnnotationSetRequest>();
   static GetAnnotationSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetAnnotationSetRequest();
+      _defaultInstance = _ReadonlyGetAnnotationSetRequest();
     return _defaultInstance;
   }
 
@@ -824,7 +820,7 @@ class _ReadonlyGetAnnotationSetRequest extends GetAnnotationSetRequest
     with ReadonlyMessageMixin {}
 
 class UpdateAnnotationSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateAnnotationSetRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateAnnotationSetRequest')
     ..aOS(1, 'annotationSetId')
     ..a<AnnotationSet>(2, 'annotationSet', PbFieldType.OM,
         AnnotationSet.getDefault, AnnotationSet.create)
@@ -844,15 +840,14 @@ class UpdateAnnotationSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateAnnotationSetRequest clone() =>
-      new UpdateAnnotationSetRequest()..mergeFromMessage(this);
+      UpdateAnnotationSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateAnnotationSetRequest create() =>
-      new UpdateAnnotationSetRequest();
+  static UpdateAnnotationSetRequest create() => UpdateAnnotationSetRequest();
   static PbList<UpdateAnnotationSetRequest> createRepeated() =>
-      new PbList<UpdateAnnotationSetRequest>();
+      PbList<UpdateAnnotationSetRequest>();
   static UpdateAnnotationSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateAnnotationSetRequest();
+      _defaultInstance = _ReadonlyUpdateAnnotationSetRequest();
     return _defaultInstance;
   }
 
@@ -891,7 +886,7 @@ class _ReadonlyUpdateAnnotationSetRequest extends UpdateAnnotationSetRequest
     with ReadonlyMessageMixin {}
 
 class DeleteAnnotationSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteAnnotationSetRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteAnnotationSetRequest')
     ..aOS(1, 'annotationSetId')
     ..hasRequiredFields = false;
 
@@ -903,15 +898,14 @@ class DeleteAnnotationSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteAnnotationSetRequest clone() =>
-      new DeleteAnnotationSetRequest()..mergeFromMessage(this);
+      DeleteAnnotationSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteAnnotationSetRequest create() =>
-      new DeleteAnnotationSetRequest();
+  static DeleteAnnotationSetRequest create() => DeleteAnnotationSetRequest();
   static PbList<DeleteAnnotationSetRequest> createRepeated() =>
-      new PbList<DeleteAnnotationSetRequest>();
+      PbList<DeleteAnnotationSetRequest>();
   static DeleteAnnotationSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteAnnotationSetRequest();
+      _defaultInstance = _ReadonlyDeleteAnnotationSetRequest();
     return _defaultInstance;
   }
 
@@ -934,7 +928,7 @@ class _ReadonlyDeleteAnnotationSetRequest extends DeleteAnnotationSetRequest
     with ReadonlyMessageMixin {}
 
 class SearchAnnotationSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAnnotationSetsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchAnnotationSetsRequest')
     ..pPS(1, 'datasetIds')
     ..aOS(2, 'referenceSetId')
     ..aOS(3, 'name')
@@ -952,15 +946,14 @@ class SearchAnnotationSetsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAnnotationSetsRequest clone() =>
-      new SearchAnnotationSetsRequest()..mergeFromMessage(this);
+      SearchAnnotationSetsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchAnnotationSetsRequest create() =>
-      new SearchAnnotationSetsRequest();
+  static SearchAnnotationSetsRequest create() => SearchAnnotationSetsRequest();
   static PbList<SearchAnnotationSetsRequest> createRepeated() =>
-      new PbList<SearchAnnotationSetsRequest>();
+      PbList<SearchAnnotationSetsRequest>();
   static SearchAnnotationSetsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAnnotationSetsRequest();
+      _defaultInstance = _ReadonlySearchAnnotationSetsRequest();
     return _defaultInstance;
   }
 
@@ -1011,7 +1004,7 @@ class _ReadonlySearchAnnotationSetsRequest extends SearchAnnotationSetsRequest
     with ReadonlyMessageMixin {}
 
 class SearchAnnotationSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAnnotationSetsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchAnnotationSetsResponse')
     ..pp<AnnotationSet>(1, 'annotationSets', PbFieldType.PM,
         AnnotationSet.$checkItem, AnnotationSet.create)
     ..aOS(2, 'nextPageToken')
@@ -1025,15 +1018,15 @@ class SearchAnnotationSetsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAnnotationSetsResponse clone() =>
-      new SearchAnnotationSetsResponse()..mergeFromMessage(this);
+      SearchAnnotationSetsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static SearchAnnotationSetsResponse create() =>
-      new SearchAnnotationSetsResponse();
+      SearchAnnotationSetsResponse();
   static PbList<SearchAnnotationSetsResponse> createRepeated() =>
-      new PbList<SearchAnnotationSetsResponse>();
+      PbList<SearchAnnotationSetsResponse>();
   static SearchAnnotationSetsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAnnotationSetsResponse();
+      _defaultInstance = _ReadonlySearchAnnotationSetsResponse();
     return _defaultInstance;
   }
 
@@ -1058,7 +1051,7 @@ class _ReadonlySearchAnnotationSetsResponse extends SearchAnnotationSetsResponse
     with ReadonlyMessageMixin {}
 
 class CreateAnnotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateAnnotationRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateAnnotationRequest')
     ..a<Annotation>(1, 'annotation', PbFieldType.OM, Annotation.getDefault,
         Annotation.create)
     ..hasRequiredFields = false;
@@ -1071,14 +1064,14 @@ class CreateAnnotationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateAnnotationRequest clone() =>
-      new CreateAnnotationRequest()..mergeFromMessage(this);
+      CreateAnnotationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateAnnotationRequest create() => new CreateAnnotationRequest();
+  static CreateAnnotationRequest create() => CreateAnnotationRequest();
   static PbList<CreateAnnotationRequest> createRepeated() =>
-      new PbList<CreateAnnotationRequest>();
+      PbList<CreateAnnotationRequest>();
   static CreateAnnotationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateAnnotationRequest();
+      _defaultInstance = _ReadonlyCreateAnnotationRequest();
     return _defaultInstance;
   }
 
@@ -1101,7 +1094,7 @@ class _ReadonlyCreateAnnotationRequest extends CreateAnnotationRequest
     with ReadonlyMessageMixin {}
 
 class BatchCreateAnnotationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchCreateAnnotationsRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchCreateAnnotationsRequest')
     ..pp<Annotation>(1, 'annotations', PbFieldType.PM, Annotation.$checkItem,
         Annotation.create)
     ..aOS(2, 'requestId')
@@ -1115,15 +1108,15 @@ class BatchCreateAnnotationsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchCreateAnnotationsRequest clone() =>
-      new BatchCreateAnnotationsRequest()..mergeFromMessage(this);
+      BatchCreateAnnotationsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BatchCreateAnnotationsRequest create() =>
-      new BatchCreateAnnotationsRequest();
+      BatchCreateAnnotationsRequest();
   static PbList<BatchCreateAnnotationsRequest> createRepeated() =>
-      new PbList<BatchCreateAnnotationsRequest>();
+      PbList<BatchCreateAnnotationsRequest>();
   static BatchCreateAnnotationsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchCreateAnnotationsRequest();
+      _defaultInstance = _ReadonlyBatchCreateAnnotationsRequest();
     return _defaultInstance;
   }
 
@@ -1149,7 +1142,7 @@ class _ReadonlyBatchCreateAnnotationsRequest
 
 class BatchCreateAnnotationsResponse_Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('BatchCreateAnnotationsResponse_Entry')
+      BuilderInfo('BatchCreateAnnotationsResponse_Entry')
         ..a<$google$rpc.Status>(1, 'status', PbFieldType.OM,
             $google$rpc.Status.getDefault, $google$rpc.Status.create)
         ..a<Annotation>(2, 'annotation', PbFieldType.OM, Annotation.getDefault,
@@ -1164,15 +1157,15 @@ class BatchCreateAnnotationsResponse_Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchCreateAnnotationsResponse_Entry clone() =>
-      new BatchCreateAnnotationsResponse_Entry()..mergeFromMessage(this);
+      BatchCreateAnnotationsResponse_Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BatchCreateAnnotationsResponse_Entry create() =>
-      new BatchCreateAnnotationsResponse_Entry();
+      BatchCreateAnnotationsResponse_Entry();
   static PbList<BatchCreateAnnotationsResponse_Entry> createRepeated() =>
-      new PbList<BatchCreateAnnotationsResponse_Entry>();
+      PbList<BatchCreateAnnotationsResponse_Entry>();
   static BatchCreateAnnotationsResponse_Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchCreateAnnotationsResponse_Entry();
+      _defaultInstance = _ReadonlyBatchCreateAnnotationsResponse_Entry();
     return _defaultInstance;
   }
 
@@ -1203,15 +1196,14 @@ class _ReadonlyBatchCreateAnnotationsResponse_Entry
     extends BatchCreateAnnotationsResponse_Entry with ReadonlyMessageMixin {}
 
 class BatchCreateAnnotationsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('BatchCreateAnnotationsResponse')
-        ..pp<BatchCreateAnnotationsResponse_Entry>(
-            1,
-            'entries',
-            PbFieldType.PM,
-            BatchCreateAnnotationsResponse_Entry.$checkItem,
-            BatchCreateAnnotationsResponse_Entry.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('BatchCreateAnnotationsResponse')
+    ..pp<BatchCreateAnnotationsResponse_Entry>(
+        1,
+        'entries',
+        PbFieldType.PM,
+        BatchCreateAnnotationsResponse_Entry.$checkItem,
+        BatchCreateAnnotationsResponse_Entry.create)
+    ..hasRequiredFields = false;
 
   BatchCreateAnnotationsResponse() : super();
   BatchCreateAnnotationsResponse.fromBuffer(List<int> i,
@@ -1221,15 +1213,15 @@ class BatchCreateAnnotationsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchCreateAnnotationsResponse clone() =>
-      new BatchCreateAnnotationsResponse()..mergeFromMessage(this);
+      BatchCreateAnnotationsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BatchCreateAnnotationsResponse create() =>
-      new BatchCreateAnnotationsResponse();
+      BatchCreateAnnotationsResponse();
   static PbList<BatchCreateAnnotationsResponse> createRepeated() =>
-      new PbList<BatchCreateAnnotationsResponse>();
+      PbList<BatchCreateAnnotationsResponse>();
   static BatchCreateAnnotationsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchCreateAnnotationsResponse();
+      _defaultInstance = _ReadonlyBatchCreateAnnotationsResponse();
     return _defaultInstance;
   }
 
@@ -1246,7 +1238,7 @@ class _ReadonlyBatchCreateAnnotationsResponse
     extends BatchCreateAnnotationsResponse with ReadonlyMessageMixin {}
 
 class GetAnnotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetAnnotationRequest')
+  static final BuilderInfo _i = BuilderInfo('GetAnnotationRequest')
     ..aOS(1, 'annotationId')
     ..hasRequiredFields = false;
 
@@ -1258,14 +1250,14 @@ class GetAnnotationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetAnnotationRequest clone() =>
-      new GetAnnotationRequest()..mergeFromMessage(this);
+      GetAnnotationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetAnnotationRequest create() => new GetAnnotationRequest();
+  static GetAnnotationRequest create() => GetAnnotationRequest();
   static PbList<GetAnnotationRequest> createRepeated() =>
-      new PbList<GetAnnotationRequest>();
+      PbList<GetAnnotationRequest>();
   static GetAnnotationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetAnnotationRequest();
+      _defaultInstance = _ReadonlyGetAnnotationRequest();
     return _defaultInstance;
   }
 
@@ -1287,7 +1279,7 @@ class _ReadonlyGetAnnotationRequest extends GetAnnotationRequest
     with ReadonlyMessageMixin {}
 
 class UpdateAnnotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateAnnotationRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateAnnotationRequest')
     ..aOS(1, 'annotationId')
     ..a<Annotation>(2, 'annotation', PbFieldType.OM, Annotation.getDefault,
         Annotation.create)
@@ -1307,14 +1299,14 @@ class UpdateAnnotationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateAnnotationRequest clone() =>
-      new UpdateAnnotationRequest()..mergeFromMessage(this);
+      UpdateAnnotationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateAnnotationRequest create() => new UpdateAnnotationRequest();
+  static UpdateAnnotationRequest create() => UpdateAnnotationRequest();
   static PbList<UpdateAnnotationRequest> createRepeated() =>
-      new PbList<UpdateAnnotationRequest>();
+      PbList<UpdateAnnotationRequest>();
   static UpdateAnnotationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateAnnotationRequest();
+      _defaultInstance = _ReadonlyUpdateAnnotationRequest();
     return _defaultInstance;
   }
 
@@ -1353,7 +1345,7 @@ class _ReadonlyUpdateAnnotationRequest extends UpdateAnnotationRequest
     with ReadonlyMessageMixin {}
 
 class DeleteAnnotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteAnnotationRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteAnnotationRequest')
     ..aOS(1, 'annotationId')
     ..hasRequiredFields = false;
 
@@ -1365,14 +1357,14 @@ class DeleteAnnotationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteAnnotationRequest clone() =>
-      new DeleteAnnotationRequest()..mergeFromMessage(this);
+      DeleteAnnotationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteAnnotationRequest create() => new DeleteAnnotationRequest();
+  static DeleteAnnotationRequest create() => DeleteAnnotationRequest();
   static PbList<DeleteAnnotationRequest> createRepeated() =>
-      new PbList<DeleteAnnotationRequest>();
+      PbList<DeleteAnnotationRequest>();
   static DeleteAnnotationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteAnnotationRequest();
+      _defaultInstance = _ReadonlyDeleteAnnotationRequest();
     return _defaultInstance;
   }
 
@@ -1395,7 +1387,7 @@ class _ReadonlyDeleteAnnotationRequest extends DeleteAnnotationRequest
     with ReadonlyMessageMixin {}
 
 class SearchAnnotationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAnnotationsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchAnnotationsRequest')
     ..pPS(1, 'annotationSetIds')
     ..aOS(2, 'referenceId')
     ..aOS(3, 'referenceName')
@@ -1413,14 +1405,14 @@ class SearchAnnotationsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAnnotationsRequest clone() =>
-      new SearchAnnotationsRequest()..mergeFromMessage(this);
+      SearchAnnotationsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchAnnotationsRequest create() => new SearchAnnotationsRequest();
+  static SearchAnnotationsRequest create() => SearchAnnotationsRequest();
   static PbList<SearchAnnotationsRequest> createRepeated() =>
-      new PbList<SearchAnnotationsRequest>();
+      PbList<SearchAnnotationsRequest>();
   static SearchAnnotationsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAnnotationsRequest();
+      _defaultInstance = _ReadonlySearchAnnotationsRequest();
     return _defaultInstance;
   }
 
@@ -1485,7 +1477,7 @@ class _ReadonlySearchAnnotationsRequest extends SearchAnnotationsRequest
     with ReadonlyMessageMixin {}
 
 class SearchAnnotationsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAnnotationsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchAnnotationsResponse')
     ..pp<Annotation>(1, 'annotations', PbFieldType.PM, Annotation.$checkItem,
         Annotation.create)
     ..aOS(2, 'nextPageToken')
@@ -1499,14 +1491,14 @@ class SearchAnnotationsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAnnotationsResponse clone() =>
-      new SearchAnnotationsResponse()..mergeFromMessage(this);
+      SearchAnnotationsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchAnnotationsResponse create() => new SearchAnnotationsResponse();
+  static SearchAnnotationsResponse create() => SearchAnnotationsResponse();
   static PbList<SearchAnnotationsResponse> createRepeated() =>
-      new PbList<SearchAnnotationsResponse>();
+      PbList<SearchAnnotationsResponse>();
   static SearchAnnotationsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAnnotationsResponse();
+      _defaultInstance = _ReadonlySearchAnnotationsResponse();
     return _defaultInstance;
   }
 
@@ -1536,49 +1528,49 @@ class AnnotationServiceV1Api {
 
   Future<AnnotationSet> createAnnotationSet(
       ClientContext ctx, CreateAnnotationSetRequest request) {
-    var emptyResponse = new AnnotationSet();
+    var emptyResponse = AnnotationSet();
     return _client.invoke<AnnotationSet>(ctx, 'AnnotationServiceV1',
         'CreateAnnotationSet', request, emptyResponse);
   }
 
   Future<AnnotationSet> getAnnotationSet(
       ClientContext ctx, GetAnnotationSetRequest request) {
-    var emptyResponse = new AnnotationSet();
+    var emptyResponse = AnnotationSet();
     return _client.invoke<AnnotationSet>(
         ctx, 'AnnotationServiceV1', 'GetAnnotationSet', request, emptyResponse);
   }
 
   Future<AnnotationSet> updateAnnotationSet(
       ClientContext ctx, UpdateAnnotationSetRequest request) {
-    var emptyResponse = new AnnotationSet();
+    var emptyResponse = AnnotationSet();
     return _client.invoke<AnnotationSet>(ctx, 'AnnotationServiceV1',
         'UpdateAnnotationSet', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteAnnotationSet(
       ClientContext ctx, DeleteAnnotationSetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'AnnotationServiceV1',
         'DeleteAnnotationSet', request, emptyResponse);
   }
 
   Future<SearchAnnotationSetsResponse> searchAnnotationSets(
       ClientContext ctx, SearchAnnotationSetsRequest request) {
-    var emptyResponse = new SearchAnnotationSetsResponse();
+    var emptyResponse = SearchAnnotationSetsResponse();
     return _client.invoke<SearchAnnotationSetsResponse>(ctx,
         'AnnotationServiceV1', 'SearchAnnotationSets', request, emptyResponse);
   }
 
   Future<Annotation> createAnnotation(
       ClientContext ctx, CreateAnnotationRequest request) {
-    var emptyResponse = new Annotation();
+    var emptyResponse = Annotation();
     return _client.invoke<Annotation>(
         ctx, 'AnnotationServiceV1', 'CreateAnnotation', request, emptyResponse);
   }
 
   Future<BatchCreateAnnotationsResponse> batchCreateAnnotations(
       ClientContext ctx, BatchCreateAnnotationsRequest request) {
-    var emptyResponse = new BatchCreateAnnotationsResponse();
+    var emptyResponse = BatchCreateAnnotationsResponse();
     return _client.invoke<BatchCreateAnnotationsResponse>(
         ctx,
         'AnnotationServiceV1',
@@ -1589,28 +1581,28 @@ class AnnotationServiceV1Api {
 
   Future<Annotation> getAnnotation(
       ClientContext ctx, GetAnnotationRequest request) {
-    var emptyResponse = new Annotation();
+    var emptyResponse = Annotation();
     return _client.invoke<Annotation>(
         ctx, 'AnnotationServiceV1', 'GetAnnotation', request, emptyResponse);
   }
 
   Future<Annotation> updateAnnotation(
       ClientContext ctx, UpdateAnnotationRequest request) {
-    var emptyResponse = new Annotation();
+    var emptyResponse = Annotation();
     return _client.invoke<Annotation>(
         ctx, 'AnnotationServiceV1', 'UpdateAnnotation', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteAnnotation(
       ClientContext ctx, DeleteAnnotationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'AnnotationServiceV1', 'DeleteAnnotation', request, emptyResponse);
   }
 
   Future<SearchAnnotationsResponse> searchAnnotations(
       ClientContext ctx, SearchAnnotationsRequest request) {
-    var emptyResponse = new SearchAnnotationsResponse();
+    var emptyResponse = SearchAnnotationsResponse();
     return _client.invoke<SearchAnnotationsResponse>(ctx, 'AnnotationServiceV1',
         'SearchAnnotations', request, emptyResponse);
   }

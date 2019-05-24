@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class AuditData_EventDataEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditData_EventDataEntry')
+  static final BuilderInfo _i = BuilderInfo('AuditData_EventDataEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -22,14 +22,14 @@ class AuditData_EventDataEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AuditData_EventDataEntry clone() =>
-      new AuditData_EventDataEntry()..mergeFromMessage(this);
+      AuditData_EventDataEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuditData_EventDataEntry create() => new AuditData_EventDataEntry();
+  static AuditData_EventDataEntry create() => AuditData_EventDataEntry();
   static PbList<AuditData_EventDataEntry> createRepeated() =>
-      new PbList<AuditData_EventDataEntry>();
+      PbList<AuditData_EventDataEntry>();
   static AuditData_EventDataEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuditData_EventDataEntry();
+      _defaultInstance = _ReadonlyAuditData_EventDataEntry();
     return _defaultInstance;
   }
 
@@ -60,7 +60,7 @@ class _ReadonlyAuditData_EventDataEntry extends AuditData_EventDataEntry
     with ReadonlyMessageMixin {}
 
 class AuditData extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditData')
+  static final BuilderInfo _i = BuilderInfo('AuditData')
     ..aOS(1, 'eventMessage')
     ..pp<AuditData_EventDataEntry>(2, 'eventData', PbFieldType.PM,
         AuditData_EventDataEntry.$checkItem, AuditData_EventDataEntry.create)
@@ -72,12 +72,12 @@ class AuditData extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AuditData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuditData clone() => new AuditData()..mergeFromMessage(this);
+  AuditData clone() => AuditData()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuditData create() => new AuditData();
-  static PbList<AuditData> createRepeated() => new PbList<AuditData>();
+  static AuditData create() => AuditData();
+  static PbList<AuditData> createRepeated() => PbList<AuditData>();
   static AuditData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAuditData();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuditData();
     return _defaultInstance;
   }
 

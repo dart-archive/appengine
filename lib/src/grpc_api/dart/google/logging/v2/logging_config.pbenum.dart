@@ -9,14 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class LogSink_VersionFormat extends ProtobufEnum {
   static const LogSink_VersionFormat VERSION_FORMAT_UNSPECIFIED =
-      const LogSink_VersionFormat._(0, 'VERSION_FORMAT_UNSPECIFIED');
-  static const LogSink_VersionFormat V2 =
-      const LogSink_VersionFormat._(1, 'V2');
-  static const LogSink_VersionFormat V1 =
-      const LogSink_VersionFormat._(2, 'V1');
+      LogSink_VersionFormat._(0, 'VERSION_FORMAT_UNSPECIFIED');
+  static const LogSink_VersionFormat V2 = LogSink_VersionFormat._(1, 'V2');
+  static const LogSink_VersionFormat V1 = LogSink_VersionFormat._(2, 'V1');
 
-  static const List<LogSink_VersionFormat> values =
-      const <LogSink_VersionFormat>[
+  static const List<LogSink_VersionFormat> values = <LogSink_VersionFormat>[
     VERSION_FORMAT_UNSPECIFIED,
     V2,
     V1,

@@ -11,7 +11,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class GetConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('GetConfigRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -22,14 +22,14 @@ class GetConfigRequest extends GeneratedMessage {
   GetConfigRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetConfigRequest clone() => new GetConfigRequest()..mergeFromMessage(this);
+  GetConfigRequest clone() => GetConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetConfigRequest create() => new GetConfigRequest();
+  static GetConfigRequest create() => GetConfigRequest();
   static PbList<GetConfigRequest> createRepeated() =>
-      new PbList<GetConfigRequest>();
+      PbList<GetConfigRequest>();
   static GetConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetConfigRequest();
+      _defaultInstance = _ReadonlyGetConfigRequest();
     return _defaultInstance;
   }
 
@@ -51,7 +51,7 @@ class _ReadonlyGetConfigRequest extends GetConfigRequest
     with ReadonlyMessageMixin {}
 
 class GetConfigResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetConfigResponse')
+  static final BuilderInfo _i = BuilderInfo('GetConfigResponse')
     ..aOS(1, 'serviceAccount')
     ..aInt64(2, 'serviceAccountProject')
     ..hasRequiredFields = false;
@@ -63,14 +63,14 @@ class GetConfigResponse extends GeneratedMessage {
   GetConfigResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetConfigResponse clone() => new GetConfigResponse()..mergeFromMessage(this);
+  GetConfigResponse clone() => GetConfigResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetConfigResponse create() => new GetConfigResponse();
+  static GetConfigResponse create() => GetConfigResponse();
   static PbList<GetConfigResponse> createRepeated() =>
-      new PbList<GetConfigResponse>();
+      PbList<GetConfigResponse>();
   static GetConfigResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetConfigResponse();
+      _defaultInstance = _ReadonlyGetConfigResponse();
     return _defaultInstance;
   }
 
@@ -105,7 +105,7 @@ class ProjectManagementServiceApi {
 
   Future<GetConfigResponse> getConfig(
       ClientContext ctx, GetConfigRequest request) {
-    var emptyResponse = new GetConfigResponse();
+    var emptyResponse = GetConfigResponse();
     return _client.invoke<GetConfigResponse>(
         ctx, 'ProjectManagementService', 'GetConfig', request, emptyResponse);
   }

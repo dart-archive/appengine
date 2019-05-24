@@ -11,7 +11,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class ReadRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRequest')
+  static final BuilderInfo _i = BuilderInfo('ReadRequest')
     ..aOS(1, 'resourceName')
     ..aInt64(2, 'readOffset')
     ..aInt64(3, 'readLimit')
@@ -24,12 +24,12 @@ class ReadRequest extends GeneratedMessage {
   ReadRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadRequest clone() => new ReadRequest()..mergeFromMessage(this);
+  ReadRequest clone() => ReadRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadRequest create() => new ReadRequest();
-  static PbList<ReadRequest> createRepeated() => new PbList<ReadRequest>();
+  static ReadRequest create() => ReadRequest();
+  static PbList<ReadRequest> createRepeated() => PbList<ReadRequest>();
   static ReadRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyReadRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReadRequest();
     return _defaultInstance;
   }
 
@@ -66,7 +66,7 @@ class ReadRequest extends GeneratedMessage {
 class _ReadonlyReadRequest extends ReadRequest with ReadonlyMessageMixin {}
 
 class ReadResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadResponse')
+  static final BuilderInfo _i = BuilderInfo('ReadResponse')
     ..a<List<int>>(10, 'data', PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -77,13 +77,12 @@ class ReadResponse extends GeneratedMessage {
   ReadResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadResponse clone() => new ReadResponse()..mergeFromMessage(this);
+  ReadResponse clone() => ReadResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadResponse create() => new ReadResponse();
-  static PbList<ReadResponse> createRepeated() => new PbList<ReadResponse>();
+  static ReadResponse create() => ReadResponse();
+  static PbList<ReadResponse> createRepeated() => PbList<ReadResponse>();
   static ReadResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReadResponse();
     return _defaultInstance;
   }
 
@@ -104,7 +103,7 @@ class ReadResponse extends GeneratedMessage {
 class _ReadonlyReadResponse extends ReadResponse with ReadonlyMessageMixin {}
 
 class WriteRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WriteRequest')
+  static final BuilderInfo _i = BuilderInfo('WriteRequest')
     ..aOS(1, 'resourceName')
     ..aInt64(2, 'writeOffset')
     ..aOB(3, 'finishWrite')
@@ -118,13 +117,12 @@ class WriteRequest extends GeneratedMessage {
   WriteRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WriteRequest clone() => new WriteRequest()..mergeFromMessage(this);
+  WriteRequest clone() => WriteRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WriteRequest create() => new WriteRequest();
-  static PbList<WriteRequest> createRepeated() => new PbList<WriteRequest>();
+  static WriteRequest create() => WriteRequest();
+  static PbList<WriteRequest> createRepeated() => PbList<WriteRequest>();
   static WriteRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWriteRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWriteRequest();
     return _defaultInstance;
   }
 
@@ -169,7 +167,7 @@ class WriteRequest extends GeneratedMessage {
 class _ReadonlyWriteRequest extends WriteRequest with ReadonlyMessageMixin {}
 
 class WriteResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WriteResponse')
+  static final BuilderInfo _i = BuilderInfo('WriteResponse')
     ..aInt64(1, 'committedSize')
     ..hasRequiredFields = false;
 
@@ -180,13 +178,12 @@ class WriteResponse extends GeneratedMessage {
   WriteResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WriteResponse clone() => new WriteResponse()..mergeFromMessage(this);
+  WriteResponse clone() => WriteResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WriteResponse create() => new WriteResponse();
-  static PbList<WriteResponse> createRepeated() => new PbList<WriteResponse>();
+  static WriteResponse create() => WriteResponse();
+  static PbList<WriteResponse> createRepeated() => PbList<WriteResponse>();
   static WriteResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWriteResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWriteResponse();
     return _defaultInstance;
   }
 
@@ -207,7 +204,7 @@ class WriteResponse extends GeneratedMessage {
 class _ReadonlyWriteResponse extends WriteResponse with ReadonlyMessageMixin {}
 
 class QueryWriteStatusRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryWriteStatusRequest')
+  static final BuilderInfo _i = BuilderInfo('QueryWriteStatusRequest')
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -219,14 +216,14 @@ class QueryWriteStatusRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QueryWriteStatusRequest clone() =>
-      new QueryWriteStatusRequest()..mergeFromMessage(this);
+      QueryWriteStatusRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryWriteStatusRequest create() => new QueryWriteStatusRequest();
+  static QueryWriteStatusRequest create() => QueryWriteStatusRequest();
   static PbList<QueryWriteStatusRequest> createRepeated() =>
-      new PbList<QueryWriteStatusRequest>();
+      PbList<QueryWriteStatusRequest>();
   static QueryWriteStatusRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryWriteStatusRequest();
+      _defaultInstance = _ReadonlyQueryWriteStatusRequest();
     return _defaultInstance;
   }
 
@@ -249,7 +246,7 @@ class _ReadonlyQueryWriteStatusRequest extends QueryWriteStatusRequest
     with ReadonlyMessageMixin {}
 
 class QueryWriteStatusResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryWriteStatusResponse')
+  static final BuilderInfo _i = BuilderInfo('QueryWriteStatusResponse')
     ..aInt64(1, 'committedSize')
     ..aOB(2, 'complete')
     ..hasRequiredFields = false;
@@ -262,14 +259,14 @@ class QueryWriteStatusResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QueryWriteStatusResponse clone() =>
-      new QueryWriteStatusResponse()..mergeFromMessage(this);
+      QueryWriteStatusResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryWriteStatusResponse create() => new QueryWriteStatusResponse();
+  static QueryWriteStatusResponse create() => QueryWriteStatusResponse();
   static PbList<QueryWriteStatusResponse> createRepeated() =>
-      new PbList<QueryWriteStatusResponse>();
+      PbList<QueryWriteStatusResponse>();
   static QueryWriteStatusResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryWriteStatusResponse();
+      _defaultInstance = _ReadonlyQueryWriteStatusResponse();
     return _defaultInstance;
   }
 
@@ -304,20 +301,20 @@ class ByteStreamApi {
   ByteStreamApi(this._client);
 
   Future<ReadResponse> read(ClientContext ctx, ReadRequest request) {
-    var emptyResponse = new ReadResponse();
+    var emptyResponse = ReadResponse();
     return _client.invoke<ReadResponse>(
         ctx, 'ByteStream', 'Read', request, emptyResponse);
   }
 
   Future<WriteResponse> write(ClientContext ctx, WriteRequest request) {
-    var emptyResponse = new WriteResponse();
+    var emptyResponse = WriteResponse();
     return _client.invoke<WriteResponse>(
         ctx, 'ByteStream', 'Write', request, emptyResponse);
   }
 
   Future<QueryWriteStatusResponse> queryWriteStatus(
       ClientContext ctx, QueryWriteStatusRequest request) {
-    var emptyResponse = new QueryWriteStatusResponse();
+    var emptyResponse = QueryWriteStatusResponse();
     return _client.invoke<QueryWriteStatusResponse>(
         ctx, 'ByteStream', 'QueryWriteStatus', request, emptyResponse);
   }

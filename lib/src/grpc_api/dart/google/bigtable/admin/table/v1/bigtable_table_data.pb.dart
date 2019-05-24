@@ -16,7 +16,7 @@ import 'bigtable_table_data.pbenum.dart';
 export 'bigtable_table_data.pbenum.dart';
 
 class Table_ColumnFamiliesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Table_ColumnFamiliesEntry')
+  static final BuilderInfo _i = BuilderInfo('Table_ColumnFamiliesEntry')
     ..aOS(1, 'key')
     ..a<ColumnFamily>(2, 'value', PbFieldType.OM, ColumnFamily.getDefault,
         ColumnFamily.create)
@@ -30,14 +30,14 @@ class Table_ColumnFamiliesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Table_ColumnFamiliesEntry clone() =>
-      new Table_ColumnFamiliesEntry()..mergeFromMessage(this);
+      Table_ColumnFamiliesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Table_ColumnFamiliesEntry create() => new Table_ColumnFamiliesEntry();
+  static Table_ColumnFamiliesEntry create() => Table_ColumnFamiliesEntry();
   static PbList<Table_ColumnFamiliesEntry> createRepeated() =>
-      new PbList<Table_ColumnFamiliesEntry>();
+      PbList<Table_ColumnFamiliesEntry>();
   static Table_ColumnFamiliesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTable_ColumnFamiliesEntry();
+      _defaultInstance = _ReadonlyTable_ColumnFamiliesEntry();
     return _defaultInstance;
   }
 
@@ -68,7 +68,7 @@ class _ReadonlyTable_ColumnFamiliesEntry extends Table_ColumnFamiliesEntry
     with ReadonlyMessageMixin {}
 
 class Table extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Table')
+  static final BuilderInfo _i = BuilderInfo('Table')
     ..aOS(1, 'name')
     ..a<$google$longrunning.Operation>(
         2,
@@ -92,12 +92,12 @@ class Table extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Table.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Table clone() => new Table()..mergeFromMessage(this);
+  Table clone() => Table()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Table create() => new Table();
-  static PbList<Table> createRepeated() => new PbList<Table>();
+  static Table create() => Table();
+  static PbList<Table> createRepeated() => PbList<Table>();
   static Table getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTable();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTable();
     return _defaultInstance;
   }
 
@@ -136,7 +136,7 @@ class Table extends GeneratedMessage {
 class _ReadonlyTable extends Table with ReadonlyMessageMixin {}
 
 class ColumnFamily extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ColumnFamily')
+  static final BuilderInfo _i = BuilderInfo('ColumnFamily')
     ..aOS(1, 'name')
     ..aOS(2, 'gcExpression')
     ..a<GcRule>(3, 'gcRule', PbFieldType.OM, GcRule.getDefault, GcRule.create)
@@ -149,13 +149,12 @@ class ColumnFamily extends GeneratedMessage {
   ColumnFamily.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ColumnFamily clone() => new ColumnFamily()..mergeFromMessage(this);
+  ColumnFamily clone() => ColumnFamily()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ColumnFamily create() => new ColumnFamily();
-  static PbList<ColumnFamily> createRepeated() => new PbList<ColumnFamily>();
+  static ColumnFamily create() => ColumnFamily();
+  static PbList<ColumnFamily> createRepeated() => PbList<ColumnFamily>();
   static ColumnFamily getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyColumnFamily();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyColumnFamily();
     return _defaultInstance;
   }
 
@@ -192,7 +191,7 @@ class ColumnFamily extends GeneratedMessage {
 class _ReadonlyColumnFamily extends ColumnFamily with ReadonlyMessageMixin {}
 
 class GcRule_Intersection extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GcRule_Intersection')
+  static final BuilderInfo _i = BuilderInfo('GcRule_Intersection')
     ..pp<GcRule>(1, 'rules', PbFieldType.PM, GcRule.$checkItem, GcRule.create)
     ..hasRequiredFields = false;
 
@@ -203,15 +202,14 @@ class GcRule_Intersection extends GeneratedMessage {
   GcRule_Intersection.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GcRule_Intersection clone() =>
-      new GcRule_Intersection()..mergeFromMessage(this);
+  GcRule_Intersection clone() => GcRule_Intersection()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GcRule_Intersection create() => new GcRule_Intersection();
+  static GcRule_Intersection create() => GcRule_Intersection();
   static PbList<GcRule_Intersection> createRepeated() =>
-      new PbList<GcRule_Intersection>();
+      PbList<GcRule_Intersection>();
   static GcRule_Intersection getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGcRule_Intersection();
+      _defaultInstance = _ReadonlyGcRule_Intersection();
     return _defaultInstance;
   }
 
@@ -227,7 +225,7 @@ class _ReadonlyGcRule_Intersection extends GcRule_Intersection
     with ReadonlyMessageMixin {}
 
 class GcRule_Union extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GcRule_Union')
+  static final BuilderInfo _i = BuilderInfo('GcRule_Union')
     ..pp<GcRule>(1, 'rules', PbFieldType.PM, GcRule.$checkItem, GcRule.create)
     ..hasRequiredFields = false;
 
@@ -238,13 +236,12 @@ class GcRule_Union extends GeneratedMessage {
   GcRule_Union.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GcRule_Union clone() => new GcRule_Union()..mergeFromMessage(this);
+  GcRule_Union clone() => GcRule_Union()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GcRule_Union create() => new GcRule_Union();
-  static PbList<GcRule_Union> createRepeated() => new PbList<GcRule_Union>();
+  static GcRule_Union create() => GcRule_Union();
+  static PbList<GcRule_Union> createRepeated() => PbList<GcRule_Union>();
   static GcRule_Union getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGcRule_Union();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGcRule_Union();
     return _defaultInstance;
   }
 
@@ -259,7 +256,7 @@ class GcRule_Union extends GeneratedMessage {
 class _ReadonlyGcRule_Union extends GcRule_Union with ReadonlyMessageMixin {}
 
 class GcRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GcRule')
+  static final BuilderInfo _i = BuilderInfo('GcRule')
     ..a<int>(1, 'maxNumVersions', PbFieldType.O3)
     ..a<$google$protobuf.Duration>(2, 'maxAge', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
@@ -275,12 +272,12 @@ class GcRule extends GeneratedMessage {
       : super.fromBuffer(i, r);
   GcRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GcRule clone() => new GcRule()..mergeFromMessage(this);
+  GcRule clone() => GcRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GcRule create() => new GcRule();
-  static PbList<GcRule> createRepeated() => new PbList<GcRule>();
+  static GcRule create() => GcRule();
+  static PbList<GcRule> createRepeated() => PbList<GcRule>();
   static GcRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGcRule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGcRule();
     return _defaultInstance;
   }
 

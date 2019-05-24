@@ -9,17 +9,16 @@ import 'package:protobuf/protobuf.dart';
 
 class AlertPolicy_ConditionCombinerType extends ProtobufEnum {
   static const AlertPolicy_ConditionCombinerType COMBINE_UNSPECIFIED =
-      const AlertPolicy_ConditionCombinerType._(0, 'COMBINE_UNSPECIFIED');
+      AlertPolicy_ConditionCombinerType._(0, 'COMBINE_UNSPECIFIED');
   static const AlertPolicy_ConditionCombinerType AND =
-      const AlertPolicy_ConditionCombinerType._(1, 'AND');
+      AlertPolicy_ConditionCombinerType._(1, 'AND');
   static const AlertPolicy_ConditionCombinerType OR =
-      const AlertPolicy_ConditionCombinerType._(2, 'OR');
+      AlertPolicy_ConditionCombinerType._(2, 'OR');
   static const AlertPolicy_ConditionCombinerType AND_WITH_MATCHING_RESOURCE =
-      const AlertPolicy_ConditionCombinerType._(
-          3, 'AND_WITH_MATCHING_RESOURCE');
+      AlertPolicy_ConditionCombinerType._(3, 'AND_WITH_MATCHING_RESOURCE');
 
   static const List<AlertPolicy_ConditionCombinerType> values =
-      const <AlertPolicy_ConditionCombinerType>[
+      <AlertPolicy_ConditionCombinerType>[
     COMBINE_UNSPECIFIED,
     AND,
     OR,

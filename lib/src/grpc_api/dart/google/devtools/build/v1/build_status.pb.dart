@@ -15,7 +15,7 @@ import 'build_status.pbenum.dart';
 export 'build_status.pbenum.dart';
 
 class BuildStatus extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BuildStatus')
+  static final BuilderInfo _i = BuilderInfo('BuildStatus')
     ..e<BuildStatus_Result>(
         1,
         'result',
@@ -34,12 +34,12 @@ class BuildStatus extends GeneratedMessage {
   BuildStatus.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BuildStatus clone() => new BuildStatus()..mergeFromMessage(this);
+  BuildStatus clone() => BuildStatus()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BuildStatus create() => new BuildStatus();
-  static PbList<BuildStatus> createRepeated() => new PbList<BuildStatus>();
+  static BuildStatus create() => BuildStatus();
+  static PbList<BuildStatus> createRepeated() => PbList<BuildStatus>();
   static BuildStatus getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBuildStatus();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildStatus();
     return _defaultInstance;
   }
 

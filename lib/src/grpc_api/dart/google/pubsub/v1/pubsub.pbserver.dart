@@ -46,37 +46,37 @@ abstract class SubscriberServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateSubscription':
-        return new Subscription();
+        return Subscription();
       case 'GetSubscription':
-        return new GetSubscriptionRequest();
+        return GetSubscriptionRequest();
       case 'UpdateSubscription':
-        return new UpdateSubscriptionRequest();
+        return UpdateSubscriptionRequest();
       case 'ListSubscriptions':
-        return new ListSubscriptionsRequest();
+        return ListSubscriptionsRequest();
       case 'DeleteSubscription':
-        return new DeleteSubscriptionRequest();
+        return DeleteSubscriptionRequest();
       case 'ModifyAckDeadline':
-        return new ModifyAckDeadlineRequest();
+        return ModifyAckDeadlineRequest();
       case 'Acknowledge':
-        return new AcknowledgeRequest();
+        return AcknowledgeRequest();
       case 'Pull':
-        return new PullRequest();
+        return PullRequest();
       case 'StreamingPull':
-        return new StreamingPullRequest();
+        return StreamingPullRequest();
       case 'ModifyPushConfig':
-        return new ModifyPushConfigRequest();
+        return ModifyPushConfigRequest();
       case 'ListSnapshots':
-        return new ListSnapshotsRequest();
+        return ListSnapshotsRequest();
       case 'CreateSnapshot':
-        return new CreateSnapshotRequest();
+        return CreateSnapshotRequest();
       case 'UpdateSnapshot':
-        return new UpdateSnapshotRequest();
+        return UpdateSnapshotRequest();
       case 'DeleteSnapshot':
-        return new DeleteSnapshotRequest();
+        return DeleteSnapshotRequest();
       case 'Seek':
-        return new SeekRequest();
+        return SeekRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -114,7 +114,7 @@ abstract class SubscriberServiceBase extends GeneratedService {
       case 'Seek':
         return this.seek(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -137,21 +137,21 @@ abstract class PublisherServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateTopic':
-        return new Topic();
+        return Topic();
       case 'UpdateTopic':
-        return new UpdateTopicRequest();
+        return UpdateTopicRequest();
       case 'Publish':
-        return new PublishRequest();
+        return PublishRequest();
       case 'GetTopic':
-        return new GetTopicRequest();
+        return GetTopicRequest();
       case 'ListTopics':
-        return new ListTopicsRequest();
+        return ListTopicsRequest();
       case 'ListTopicSubscriptions':
-        return new ListTopicSubscriptionsRequest();
+        return ListTopicSubscriptionsRequest();
       case 'DeleteTopic':
-        return new DeleteTopicRequest();
+        return DeleteTopicRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -173,7 +173,7 @@ abstract class PublisherServiceBase extends GeneratedService {
       case 'DeleteTopic':
         return this.deleteTopic(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

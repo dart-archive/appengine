@@ -47,37 +47,37 @@ abstract class RuntimeConfigManagerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListConfigs':
-        return new ListConfigsRequest();
+        return ListConfigsRequest();
       case 'GetConfig':
-        return new GetConfigRequest();
+        return GetConfigRequest();
       case 'CreateConfig':
-        return new CreateConfigRequest();
+        return CreateConfigRequest();
       case 'UpdateConfig':
-        return new UpdateConfigRequest();
+        return UpdateConfigRequest();
       case 'DeleteConfig':
-        return new DeleteConfigRequest();
+        return DeleteConfigRequest();
       case 'ListVariables':
-        return new ListVariablesRequest();
+        return ListVariablesRequest();
       case 'GetVariable':
-        return new GetVariableRequest();
+        return GetVariableRequest();
       case 'WatchVariable':
-        return new WatchVariableRequest();
+        return WatchVariableRequest();
       case 'CreateVariable':
-        return new CreateVariableRequest();
+        return CreateVariableRequest();
       case 'UpdateVariable':
-        return new UpdateVariableRequest();
+        return UpdateVariableRequest();
       case 'DeleteVariable':
-        return new DeleteVariableRequest();
+        return DeleteVariableRequest();
       case 'ListWaiters':
-        return new ListWaitersRequest();
+        return ListWaitersRequest();
       case 'GetWaiter':
-        return new GetWaiterRequest();
+        return GetWaiterRequest();
       case 'CreateWaiter':
-        return new CreateWaiterRequest();
+        return CreateWaiterRequest();
       case 'DeleteWaiter':
-        return new DeleteWaiterRequest();
+        return DeleteWaiterRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -115,7 +115,7 @@ abstract class RuntimeConfigManagerServiceBase extends GeneratedService {
       case 'DeleteWaiter':
         return this.deleteWaiter(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

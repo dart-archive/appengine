@@ -9,11 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class IntentView extends ProtobufEnum {
   static const IntentView INTENT_VIEW_UNSPECIFIED =
-      const IntentView._(0, 'INTENT_VIEW_UNSPECIFIED');
+      IntentView._(0, 'INTENT_VIEW_UNSPECIFIED');
   static const IntentView INTENT_VIEW_FULL =
-      const IntentView._(1, 'INTENT_VIEW_FULL');
+      IntentView._(1, 'INTENT_VIEW_FULL');
 
-  static const List<IntentView> values = const <IntentView>[
+  static const List<IntentView> values = <IntentView>[
     INTENT_VIEW_UNSPECIFIED,
     INTENT_VIEW_FULL,
   ];
@@ -29,13 +29,13 @@ class IntentView extends ProtobufEnum {
 
 class Intent_WebhookState extends ProtobufEnum {
   static const Intent_WebhookState WEBHOOK_STATE_UNSPECIFIED =
-      const Intent_WebhookState._(0, 'WEBHOOK_STATE_UNSPECIFIED');
+      Intent_WebhookState._(0, 'WEBHOOK_STATE_UNSPECIFIED');
   static const Intent_WebhookState WEBHOOK_STATE_ENABLED =
-      const Intent_WebhookState._(1, 'WEBHOOK_STATE_ENABLED');
+      Intent_WebhookState._(1, 'WEBHOOK_STATE_ENABLED');
   static const Intent_WebhookState WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING =
-      const Intent_WebhookState._(2, 'WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING');
+      Intent_WebhookState._(2, 'WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING');
 
-  static const List<Intent_WebhookState> values = const <Intent_WebhookState>[
+  static const List<Intent_WebhookState> values = <Intent_WebhookState>[
     WEBHOOK_STATE_UNSPECIFIED,
     WEBHOOK_STATE_ENABLED,
     WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING,
@@ -53,14 +53,14 @@ class Intent_WebhookState extends ProtobufEnum {
 
 class Intent_TrainingPhrase_Type extends ProtobufEnum {
   static const Intent_TrainingPhrase_Type TYPE_UNSPECIFIED =
-      const Intent_TrainingPhrase_Type._(0, 'TYPE_UNSPECIFIED');
+      Intent_TrainingPhrase_Type._(0, 'TYPE_UNSPECIFIED');
   static const Intent_TrainingPhrase_Type EXAMPLE =
-      const Intent_TrainingPhrase_Type._(1, 'EXAMPLE');
+      Intent_TrainingPhrase_Type._(1, 'EXAMPLE');
   static const Intent_TrainingPhrase_Type TEMPLATE =
-      const Intent_TrainingPhrase_Type._(2, 'TEMPLATE');
+      Intent_TrainingPhrase_Type._(2, 'TEMPLATE');
 
   static const List<Intent_TrainingPhrase_Type> values =
-      const <Intent_TrainingPhrase_Type>[
+      <Intent_TrainingPhrase_Type>[
     TYPE_UNSPECIFIED,
     EXAMPLE,
     TEMPLATE,
@@ -79,26 +79,25 @@ class Intent_TrainingPhrase_Type extends ProtobufEnum {
 
 class Intent_Message_Platform extends ProtobufEnum {
   static const Intent_Message_Platform PLATFORM_UNSPECIFIED =
-      const Intent_Message_Platform._(0, 'PLATFORM_UNSPECIFIED');
+      Intent_Message_Platform._(0, 'PLATFORM_UNSPECIFIED');
   static const Intent_Message_Platform FACEBOOK =
-      const Intent_Message_Platform._(1, 'FACEBOOK');
+      Intent_Message_Platform._(1, 'FACEBOOK');
   static const Intent_Message_Platform SLACK =
-      const Intent_Message_Platform._(2, 'SLACK');
+      Intent_Message_Platform._(2, 'SLACK');
   static const Intent_Message_Platform TELEGRAM =
-      const Intent_Message_Platform._(3, 'TELEGRAM');
+      Intent_Message_Platform._(3, 'TELEGRAM');
   static const Intent_Message_Platform KIK =
-      const Intent_Message_Platform._(4, 'KIK');
+      Intent_Message_Platform._(4, 'KIK');
   static const Intent_Message_Platform SKYPE =
-      const Intent_Message_Platform._(5, 'SKYPE');
+      Intent_Message_Platform._(5, 'SKYPE');
   static const Intent_Message_Platform LINE =
-      const Intent_Message_Platform._(6, 'LINE');
+      Intent_Message_Platform._(6, 'LINE');
   static const Intent_Message_Platform VIBER =
-      const Intent_Message_Platform._(7, 'VIBER');
+      Intent_Message_Platform._(7, 'VIBER');
   static const Intent_Message_Platform ACTIONS_ON_GOOGLE =
-      const Intent_Message_Platform._(8, 'ACTIONS_ON_GOOGLE');
+      Intent_Message_Platform._(8, 'ACTIONS_ON_GOOGLE');
 
-  static const List<Intent_Message_Platform> values =
-      const <Intent_Message_Platform>[
+  static const List<Intent_Message_Platform> values = <Intent_Message_Platform>[
     PLATFORM_UNSPECIFIED,
     FACEBOOK,
     SLACK,

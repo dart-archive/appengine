@@ -3,10 +3,10 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const Context$json = const {
+const Context$json = {
   '1': 'Context',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'rules',
       '3': 1,
       '4': 3,
@@ -17,11 +17,11 @@ const Context$json = const {
   ],
 };
 
-const ContextRule$json = const {
+const ContextRule$json = {
   '1': 'ContextRule',
-  '2': const [
-    const {'1': 'selector', '3': 1, '4': 1, '5': 9, '10': 'selector'},
-    const {'1': 'requested', '3': 2, '4': 3, '5': 9, '10': 'requested'},
-    const {'1': 'provided', '3': 3, '4': 3, '5': 9, '10': 'provided'},
+  '2': [
+    {'1': 'selector', '3': 1, '4': 1, '5': 9, '10': 'selector'},
+    {'1': 'requested', '3': 2, '4': 3, '5': 9, '10': 'requested'},
+    {'1': 'provided', '3': 3, '4': 3, '5': 9, '10': 'provided'},
   ],
 };

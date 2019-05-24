@@ -20,7 +20,7 @@ import 'folders.pbenum.dart';
 export 'folders.pbenum.dart';
 
 class Folder extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Folder')
+  static final BuilderInfo _i = BuilderInfo('Folder')
     ..aOS(1, 'name')
     ..aOS(2, 'parent')
     ..aOS(3, 'displayName')
@@ -51,12 +51,12 @@ class Folder extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Folder.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Folder clone() => new Folder()..mergeFromMessage(this);
+  Folder clone() => Folder()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Folder create() => new Folder();
-  static PbList<Folder> createRepeated() => new PbList<Folder>();
+  static Folder create() => Folder();
+  static PbList<Folder> createRepeated() => PbList<Folder>();
   static Folder getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFolder();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFolder();
     return _defaultInstance;
   }
 
@@ -117,7 +117,7 @@ class Folder extends GeneratedMessage {
 class _ReadonlyFolder extends Folder with ReadonlyMessageMixin {}
 
 class ListFoldersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFoldersRequest')
+  static final BuilderInfo _i = BuilderInfo('ListFoldersRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -131,15 +131,14 @@ class ListFoldersRequest extends GeneratedMessage {
   ListFoldersRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListFoldersRequest clone() =>
-      new ListFoldersRequest()..mergeFromMessage(this);
+  ListFoldersRequest clone() => ListFoldersRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListFoldersRequest create() => new ListFoldersRequest();
+  static ListFoldersRequest create() => ListFoldersRequest();
   static PbList<ListFoldersRequest> createRepeated() =>
-      new PbList<ListFoldersRequest>();
+      PbList<ListFoldersRequest>();
   static ListFoldersRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFoldersRequest();
+      _defaultInstance = _ReadonlyListFoldersRequest();
     return _defaultInstance;
   }
 
@@ -185,7 +184,7 @@ class _ReadonlyListFoldersRequest extends ListFoldersRequest
     with ReadonlyMessageMixin {}
 
 class ListFoldersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFoldersResponse')
+  static final BuilderInfo _i = BuilderInfo('ListFoldersResponse')
     ..pp<Folder>(1, 'folders', PbFieldType.PM, Folder.$checkItem, Folder.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -197,15 +196,14 @@ class ListFoldersResponse extends GeneratedMessage {
   ListFoldersResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListFoldersResponse clone() =>
-      new ListFoldersResponse()..mergeFromMessage(this);
+  ListFoldersResponse clone() => ListFoldersResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListFoldersResponse create() => new ListFoldersResponse();
+  static ListFoldersResponse create() => ListFoldersResponse();
   static PbList<ListFoldersResponse> createRepeated() =>
-      new PbList<ListFoldersResponse>();
+      PbList<ListFoldersResponse>();
   static ListFoldersResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFoldersResponse();
+      _defaultInstance = _ReadonlyListFoldersResponse();
     return _defaultInstance;
   }
 
@@ -229,7 +227,7 @@ class _ReadonlyListFoldersResponse extends ListFoldersResponse
     with ReadonlyMessageMixin {}
 
 class SearchFoldersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchFoldersRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchFoldersRequest')
     ..a<int>(1, 'pageSize', PbFieldType.O3)
     ..aOS(2, 'pageToken')
     ..aOS(3, 'query')
@@ -243,14 +241,14 @@ class SearchFoldersRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchFoldersRequest clone() =>
-      new SearchFoldersRequest()..mergeFromMessage(this);
+      SearchFoldersRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchFoldersRequest create() => new SearchFoldersRequest();
+  static SearchFoldersRequest create() => SearchFoldersRequest();
   static PbList<SearchFoldersRequest> createRepeated() =>
-      new PbList<SearchFoldersRequest>();
+      PbList<SearchFoldersRequest>();
   static SearchFoldersRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchFoldersRequest();
+      _defaultInstance = _ReadonlySearchFoldersRequest();
     return _defaultInstance;
   }
 
@@ -288,7 +286,7 @@ class _ReadonlySearchFoldersRequest extends SearchFoldersRequest
     with ReadonlyMessageMixin {}
 
 class SearchFoldersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchFoldersResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchFoldersResponse')
     ..pp<Folder>(1, 'folders', PbFieldType.PM, Folder.$checkItem, Folder.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -301,14 +299,14 @@ class SearchFoldersResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchFoldersResponse clone() =>
-      new SearchFoldersResponse()..mergeFromMessage(this);
+      SearchFoldersResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchFoldersResponse create() => new SearchFoldersResponse();
+  static SearchFoldersResponse create() => SearchFoldersResponse();
   static PbList<SearchFoldersResponse> createRepeated() =>
-      new PbList<SearchFoldersResponse>();
+      PbList<SearchFoldersResponse>();
   static SearchFoldersResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchFoldersResponse();
+      _defaultInstance = _ReadonlySearchFoldersResponse();
     return _defaultInstance;
   }
 
@@ -333,7 +331,7 @@ class _ReadonlySearchFoldersResponse extends SearchFoldersResponse
     with ReadonlyMessageMixin {}
 
 class GetFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetFolderRequest')
+  static final BuilderInfo _i = BuilderInfo('GetFolderRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -344,14 +342,14 @@ class GetFolderRequest extends GeneratedMessage {
   GetFolderRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetFolderRequest clone() => new GetFolderRequest()..mergeFromMessage(this);
+  GetFolderRequest clone() => GetFolderRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetFolderRequest create() => new GetFolderRequest();
+  static GetFolderRequest create() => GetFolderRequest();
   static PbList<GetFolderRequest> createRepeated() =>
-      new PbList<GetFolderRequest>();
+      PbList<GetFolderRequest>();
   static GetFolderRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetFolderRequest();
+      _defaultInstance = _ReadonlyGetFolderRequest();
     return _defaultInstance;
   }
 
@@ -373,7 +371,7 @@ class _ReadonlyGetFolderRequest extends GetFolderRequest
     with ReadonlyMessageMixin {}
 
 class CreateFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateFolderRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateFolderRequest')
     ..aOS(1, 'parent')
     ..a<Folder>(2, 'folder', PbFieldType.OM, Folder.getDefault, Folder.create)
     ..hasRequiredFields = false;
@@ -385,15 +383,14 @@ class CreateFolderRequest extends GeneratedMessage {
   CreateFolderRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateFolderRequest clone() =>
-      new CreateFolderRequest()..mergeFromMessage(this);
+  CreateFolderRequest clone() => CreateFolderRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateFolderRequest create() => new CreateFolderRequest();
+  static CreateFolderRequest create() => CreateFolderRequest();
   static PbList<CreateFolderRequest> createRepeated() =>
-      new PbList<CreateFolderRequest>();
+      PbList<CreateFolderRequest>();
   static CreateFolderRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateFolderRequest();
+      _defaultInstance = _ReadonlyCreateFolderRequest();
     return _defaultInstance;
   }
 
@@ -423,7 +420,7 @@ class _ReadonlyCreateFolderRequest extends CreateFolderRequest
     with ReadonlyMessageMixin {}
 
 class MoveFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MoveFolderRequest')
+  static final BuilderInfo _i = BuilderInfo('MoveFolderRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'destinationParent')
     ..hasRequiredFields = false;
@@ -435,14 +432,14 @@ class MoveFolderRequest extends GeneratedMessage {
   MoveFolderRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MoveFolderRequest clone() => new MoveFolderRequest()..mergeFromMessage(this);
+  MoveFolderRequest clone() => MoveFolderRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MoveFolderRequest create() => new MoveFolderRequest();
+  static MoveFolderRequest create() => MoveFolderRequest();
   static PbList<MoveFolderRequest> createRepeated() =>
-      new PbList<MoveFolderRequest>();
+      PbList<MoveFolderRequest>();
   static MoveFolderRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMoveFolderRequest();
+      _defaultInstance = _ReadonlyMoveFolderRequest();
     return _defaultInstance;
   }
 
@@ -472,7 +469,7 @@ class _ReadonlyMoveFolderRequest extends MoveFolderRequest
     with ReadonlyMessageMixin {}
 
 class UpdateFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateFolderRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateFolderRequest')
     ..a<Folder>(1, 'folder', PbFieldType.OM, Folder.getDefault, Folder.create)
     ..a<$google$protobuf.FieldMask>(
         2,
@@ -489,15 +486,14 @@ class UpdateFolderRequest extends GeneratedMessage {
   UpdateFolderRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateFolderRequest clone() =>
-      new UpdateFolderRequest()..mergeFromMessage(this);
+  UpdateFolderRequest clone() => UpdateFolderRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateFolderRequest create() => new UpdateFolderRequest();
+  static UpdateFolderRequest create() => UpdateFolderRequest();
   static PbList<UpdateFolderRequest> createRepeated() =>
-      new PbList<UpdateFolderRequest>();
+      PbList<UpdateFolderRequest>();
   static UpdateFolderRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateFolderRequest();
+      _defaultInstance = _ReadonlyUpdateFolderRequest();
     return _defaultInstance;
   }
 
@@ -527,7 +523,7 @@ class _ReadonlyUpdateFolderRequest extends UpdateFolderRequest
     with ReadonlyMessageMixin {}
 
 class DeleteFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteFolderRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteFolderRequest')
     ..aOS(1, 'name')
     ..aOB(2, 'recursiveDelete')
     ..hasRequiredFields = false;
@@ -539,15 +535,14 @@ class DeleteFolderRequest extends GeneratedMessage {
   DeleteFolderRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteFolderRequest clone() =>
-      new DeleteFolderRequest()..mergeFromMessage(this);
+  DeleteFolderRequest clone() => DeleteFolderRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteFolderRequest create() => new DeleteFolderRequest();
+  static DeleteFolderRequest create() => DeleteFolderRequest();
   static PbList<DeleteFolderRequest> createRepeated() =>
-      new PbList<DeleteFolderRequest>();
+      PbList<DeleteFolderRequest>();
   static DeleteFolderRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteFolderRequest();
+      _defaultInstance = _ReadonlyDeleteFolderRequest();
     return _defaultInstance;
   }
 
@@ -577,7 +572,7 @@ class _ReadonlyDeleteFolderRequest extends DeleteFolderRequest
     with ReadonlyMessageMixin {}
 
 class UndeleteFolderRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteFolderRequest')
+  static final BuilderInfo _i = BuilderInfo('UndeleteFolderRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -589,14 +584,14 @@ class UndeleteFolderRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UndeleteFolderRequest clone() =>
-      new UndeleteFolderRequest()..mergeFromMessage(this);
+      UndeleteFolderRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UndeleteFolderRequest create() => new UndeleteFolderRequest();
+  static UndeleteFolderRequest create() => UndeleteFolderRequest();
   static PbList<UndeleteFolderRequest> createRepeated() =>
-      new PbList<UndeleteFolderRequest>();
+      PbList<UndeleteFolderRequest>();
   static UndeleteFolderRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteFolderRequest();
+      _defaultInstance = _ReadonlyUndeleteFolderRequest();
     return _defaultInstance;
   }
 
@@ -619,7 +614,7 @@ class _ReadonlyUndeleteFolderRequest extends UndeleteFolderRequest
     with ReadonlyMessageMixin {}
 
 class FolderOperation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FolderOperation')
+  static final BuilderInfo _i = BuilderInfo('FolderOperation')
     ..aOS(1, 'displayName')
     ..e<FolderOperation_OperationType>(
         2,
@@ -639,14 +634,12 @@ class FolderOperation extends GeneratedMessage {
   FolderOperation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FolderOperation clone() => new FolderOperation()..mergeFromMessage(this);
+  FolderOperation clone() => FolderOperation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FolderOperation create() => new FolderOperation();
-  static PbList<FolderOperation> createRepeated() =>
-      new PbList<FolderOperation>();
+  static FolderOperation create() => FolderOperation();
+  static PbList<FolderOperation> createRepeated() => PbList<FolderOperation>();
   static FolderOperation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFolderOperation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFolderOperation();
     return _defaultInstance;
   }
 
@@ -697,74 +690,74 @@ class FoldersApi {
 
   Future<ListFoldersResponse> listFolders(
       ClientContext ctx, ListFoldersRequest request) {
-    var emptyResponse = new ListFoldersResponse();
+    var emptyResponse = ListFoldersResponse();
     return _client.invoke<ListFoldersResponse>(
         ctx, 'Folders', 'ListFolders', request, emptyResponse);
   }
 
   Future<SearchFoldersResponse> searchFolders(
       ClientContext ctx, SearchFoldersRequest request) {
-    var emptyResponse = new SearchFoldersResponse();
+    var emptyResponse = SearchFoldersResponse();
     return _client.invoke<SearchFoldersResponse>(
         ctx, 'Folders', 'SearchFolders', request, emptyResponse);
   }
 
   Future<Folder> getFolder(ClientContext ctx, GetFolderRequest request) {
-    var emptyResponse = new Folder();
+    var emptyResponse = Folder();
     return _client.invoke<Folder>(
         ctx, 'Folders', 'GetFolder', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createFolder(
       ClientContext ctx, CreateFolderRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Folders', 'CreateFolder', request, emptyResponse);
   }
 
   Future<Folder> updateFolder(ClientContext ctx, UpdateFolderRequest request) {
-    var emptyResponse = new Folder();
+    var emptyResponse = Folder();
     return _client.invoke<Folder>(
         ctx, 'Folders', 'UpdateFolder', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> moveFolder(
       ClientContext ctx, MoveFolderRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Folders', 'MoveFolder', request, emptyResponse);
   }
 
   Future<Folder> deleteFolder(ClientContext ctx, DeleteFolderRequest request) {
-    var emptyResponse = new Folder();
+    var emptyResponse = Folder();
     return _client.invoke<Folder>(
         ctx, 'Folders', 'DeleteFolder', request, emptyResponse);
   }
 
   Future<Folder> undeleteFolder(
       ClientContext ctx, UndeleteFolderRequest request) {
-    var emptyResponse = new Folder();
+    var emptyResponse = Folder();
     return _client.invoke<Folder>(
         ctx, 'Folders', 'UndeleteFolder', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> getIamPolicy(
       ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'Folders', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> setIamPolicy(
       ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'Folders', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
     return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
         ctx, 'Folders', 'TestIamPermissions', request, emptyResponse);
   }

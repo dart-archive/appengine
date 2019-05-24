@@ -6,25 +6,25 @@
 import '../../../protobuf/struct.pbjson.dart' as $google$protobuf;
 import '../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const RequestSyncDevicesRequest$json = const {
+const RequestSyncDevicesRequest$json = {
   '1': 'RequestSyncDevicesRequest',
-  '2': const [
-    const {'1': 'agent_user_id', '3': 1, '4': 1, '5': 9, '10': 'agentUserId'},
-    const {'1': 'async', '3': 2, '4': 1, '5': 8, '10': 'async'},
+  '2': [
+    {'1': 'agent_user_id', '3': 1, '4': 1, '5': 9, '10': 'agentUserId'},
+    {'1': 'async', '3': 2, '4': 1, '5': 8, '10': 'async'},
   ],
 };
 
-const RequestSyncDevicesResponse$json = const {
+const RequestSyncDevicesResponse$json = {
   '1': 'RequestSyncDevicesResponse',
 };
 
-const ReportStateAndNotificationRequest$json = const {
+const ReportStateAndNotificationRequest$json = {
   '1': 'ReportStateAndNotificationRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'event_id', '3': 4, '4': 1, '5': 9, '10': 'eventId'},
-    const {'1': 'agent_user_id', '3': 2, '4': 1, '5': 9, '10': 'agentUserId'},
-    const {
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'event_id', '3': 4, '4': 1, '5': 9, '10': 'eventId'},
+    {'1': 'agent_user_id', '3': 2, '4': 1, '5': 9, '10': 'agentUserId'},
+    {
       '1': 'payload',
       '3': 3,
       '4': 1,
@@ -35,17 +35,17 @@ const ReportStateAndNotificationRequest$json = const {
   ],
 };
 
-const ReportStateAndNotificationResponse$json = const {
+const ReportStateAndNotificationResponse$json = {
   '1': 'ReportStateAndNotificationResponse',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
   ],
 };
 
-const StateAndNotificationPayload$json = const {
+const StateAndNotificationPayload$json = {
   '1': 'StateAndNotificationPayload',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'devices',
       '3': 1,
       '4': 1,
@@ -56,10 +56,10 @@ const StateAndNotificationPayload$json = const {
   ],
 };
 
-const ReportStateAndNotificationDevice$json = const {
+const ReportStateAndNotificationDevice$json = {
   '1': 'ReportStateAndNotificationDevice',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'states',
       '3': 1,
       '4': 1,
@@ -67,7 +67,7 @@ const ReportStateAndNotificationDevice$json = const {
       '6': '.google.protobuf.Struct',
       '10': 'states'
     },
-    const {
+    {
       '1': 'notifications',
       '3': 2,
       '4': 1,
@@ -78,39 +78,39 @@ const ReportStateAndNotificationDevice$json = const {
   ],
 };
 
-const DeleteAgentUserRequest$json = const {
+const DeleteAgentUserRequest$json = {
   '1': 'DeleteAgentUserRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'agent_user_id', '3': 2, '4': 1, '5': 9, '10': 'agentUserId'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'agent_user_id', '3': 2, '4': 1, '5': 9, '10': 'agentUserId'},
   ],
 };
 
-const HomeGraphApiService$json = const {
+const HomeGraphApiService$json = {
   '1': 'HomeGraphApiService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'RequestSyncDevices',
       '2': '.google.home.graph.v1.RequestSyncDevicesRequest',
       '3': '.google.home.graph.v1.RequestSyncDevicesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ReportStateAndNotification',
       '2': '.google.home.graph.v1.ReportStateAndNotificationRequest',
       '3': '.google.home.graph.v1.ReportStateAndNotificationResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteAgentUser',
       '2': '.google.home.graph.v1.DeleteAgentUserRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const HomeGraphApiService$messageJson = const {
+const HomeGraphApiService$messageJson = {
   '.google.home.graph.v1.RequestSyncDevicesRequest':
       RequestSyncDevicesRequest$json,
   '.google.home.graph.v1.RequestSyncDevicesResponse':

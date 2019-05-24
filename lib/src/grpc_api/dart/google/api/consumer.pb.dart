@@ -13,7 +13,7 @@ import 'consumer.pbenum.dart';
 export 'consumer.pbenum.dart';
 
 class ProjectProperties extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ProjectProperties')
+  static final BuilderInfo _i = BuilderInfo('ProjectProperties')
     ..pp<Property>(
         1, 'properties', PbFieldType.PM, Property.$checkItem, Property.create)
     ..hasRequiredFields = false;
@@ -25,14 +25,14 @@ class ProjectProperties extends GeneratedMessage {
   ProjectProperties.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ProjectProperties clone() => new ProjectProperties()..mergeFromMessage(this);
+  ProjectProperties clone() => ProjectProperties()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ProjectProperties create() => new ProjectProperties();
+  static ProjectProperties create() => ProjectProperties();
   static PbList<ProjectProperties> createRepeated() =>
-      new PbList<ProjectProperties>();
+      PbList<ProjectProperties>();
   static ProjectProperties getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyProjectProperties();
+      _defaultInstance = _ReadonlyProjectProperties();
     return _defaultInstance;
   }
 
@@ -48,7 +48,7 @@ class _ReadonlyProjectProperties extends ProjectProperties
     with ReadonlyMessageMixin {}
 
 class Property extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Property')
+  static final BuilderInfo _i = BuilderInfo('Property')
     ..aOS(1, 'name')
     ..e<Property_PropertyType>(
         2,
@@ -66,12 +66,12 @@ class Property extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Property.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Property clone() => new Property()..mergeFromMessage(this);
+  Property clone() => Property()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Property create() => new Property();
-  static PbList<Property> createRepeated() => new PbList<Property>();
+  static Property create() => Property();
+  static PbList<Property> createRepeated() => PbList<Property>();
   static Property getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProperty();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyProperty();
     return _defaultInstance;
   }
 

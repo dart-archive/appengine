@@ -13,7 +13,7 @@ import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 import 'common.pb.dart';
 
 class ReportErrorEventRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReportErrorEventRequest')
+  static final BuilderInfo _i = BuilderInfo('ReportErrorEventRequest')
     ..aOS(1, 'projectName')
     ..a<ReportedErrorEvent>(2, 'event', PbFieldType.OM,
         ReportedErrorEvent.getDefault, ReportedErrorEvent.create)
@@ -27,14 +27,14 @@ class ReportErrorEventRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReportErrorEventRequest clone() =>
-      new ReportErrorEventRequest()..mergeFromMessage(this);
+      ReportErrorEventRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReportErrorEventRequest create() => new ReportErrorEventRequest();
+  static ReportErrorEventRequest create() => ReportErrorEventRequest();
   static PbList<ReportErrorEventRequest> createRepeated() =>
-      new PbList<ReportErrorEventRequest>();
+      PbList<ReportErrorEventRequest>();
   static ReportErrorEventRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportErrorEventRequest();
+      _defaultInstance = _ReadonlyReportErrorEventRequest();
     return _defaultInstance;
   }
 
@@ -65,7 +65,7 @@ class _ReadonlyReportErrorEventRequest extends ReportErrorEventRequest
     with ReadonlyMessageMixin {}
 
 class ReportErrorEventResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReportErrorEventResponse')
+  static final BuilderInfo _i = BuilderInfo('ReportErrorEventResponse')
     ..hasRequiredFields = false;
 
   ReportErrorEventResponse() : super();
@@ -76,14 +76,14 @@ class ReportErrorEventResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReportErrorEventResponse clone() =>
-      new ReportErrorEventResponse()..mergeFromMessage(this);
+      ReportErrorEventResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReportErrorEventResponse create() => new ReportErrorEventResponse();
+  static ReportErrorEventResponse create() => ReportErrorEventResponse();
   static PbList<ReportErrorEventResponse> createRepeated() =>
-      new PbList<ReportErrorEventResponse>();
+      PbList<ReportErrorEventResponse>();
   static ReportErrorEventResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportErrorEventResponse();
+      _defaultInstance = _ReadonlyReportErrorEventResponse();
     return _defaultInstance;
   }
 
@@ -98,7 +98,7 @@ class _ReadonlyReportErrorEventResponse extends ReportErrorEventResponse
     with ReadonlyMessageMixin {}
 
 class ReportedErrorEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReportedErrorEvent')
+  static final BuilderInfo _i = BuilderInfo('ReportedErrorEvent')
     ..a<$google$protobuf.Timestamp>(
         1,
         'eventTime',
@@ -119,15 +119,14 @@ class ReportedErrorEvent extends GeneratedMessage {
   ReportedErrorEvent.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReportedErrorEvent clone() =>
-      new ReportedErrorEvent()..mergeFromMessage(this);
+  ReportedErrorEvent clone() => ReportedErrorEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReportedErrorEvent create() => new ReportedErrorEvent();
+  static ReportedErrorEvent create() => ReportedErrorEvent();
   static PbList<ReportedErrorEvent> createRepeated() =>
-      new PbList<ReportedErrorEvent>();
+      PbList<ReportedErrorEvent>();
   static ReportedErrorEvent getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportedErrorEvent();
+      _defaultInstance = _ReadonlyReportedErrorEvent();
     return _defaultInstance;
   }
 
@@ -178,7 +177,7 @@ class ReportErrorsServiceApi {
 
   Future<ReportErrorEventResponse> reportErrorEvent(
       ClientContext ctx, ReportErrorEventRequest request) {
-    var emptyResponse = new ReportErrorEventResponse();
+    var emptyResponse = ReportErrorEventResponse();
     return _client.invoke<ReportErrorEventResponse>(
         ctx, 'ReportErrorsService', 'ReportErrorEvent', request, emptyResponse);
   }

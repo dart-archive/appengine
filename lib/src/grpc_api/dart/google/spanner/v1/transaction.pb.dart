@@ -12,7 +12,7 @@ import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
 import '../../protobuf/duration.pb.dart' as $google$protobuf;
 
 class TransactionOptions_ReadWrite extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransactionOptions_ReadWrite')
+  static final BuilderInfo _i = BuilderInfo('TransactionOptions_ReadWrite')
     ..hasRequiredFields = false;
 
   TransactionOptions_ReadWrite() : super();
@@ -23,15 +23,15 @@ class TransactionOptions_ReadWrite extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TransactionOptions_ReadWrite clone() =>
-      new TransactionOptions_ReadWrite()..mergeFromMessage(this);
+      TransactionOptions_ReadWrite()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TransactionOptions_ReadWrite create() =>
-      new TransactionOptions_ReadWrite();
+      TransactionOptions_ReadWrite();
   static PbList<TransactionOptions_ReadWrite> createRepeated() =>
-      new PbList<TransactionOptions_ReadWrite>();
+      PbList<TransactionOptions_ReadWrite>();
   static TransactionOptions_ReadWrite getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransactionOptions_ReadWrite();
+      _defaultInstance = _ReadonlyTransactionOptions_ReadWrite();
     return _defaultInstance;
   }
 
@@ -46,7 +46,7 @@ class _ReadonlyTransactionOptions_ReadWrite extends TransactionOptions_ReadWrite
     with ReadonlyMessageMixin {}
 
 class TransactionOptions_ReadOnly extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransactionOptions_ReadOnly')
+  static final BuilderInfo _i = BuilderInfo('TransactionOptions_ReadOnly')
     ..aOB(1, 'strong')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -75,15 +75,14 @@ class TransactionOptions_ReadOnly extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TransactionOptions_ReadOnly clone() =>
-      new TransactionOptions_ReadOnly()..mergeFromMessage(this);
+      TransactionOptions_ReadOnly()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransactionOptions_ReadOnly create() =>
-      new TransactionOptions_ReadOnly();
+  static TransactionOptions_ReadOnly create() => TransactionOptions_ReadOnly();
   static PbList<TransactionOptions_ReadOnly> createRepeated() =>
-      new PbList<TransactionOptions_ReadOnly>();
+      PbList<TransactionOptions_ReadOnly>();
   static TransactionOptions_ReadOnly getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransactionOptions_ReadOnly();
+      _defaultInstance = _ReadonlyTransactionOptions_ReadOnly();
     return _defaultInstance;
   }
 
@@ -146,7 +145,7 @@ class _ReadonlyTransactionOptions_ReadOnly extends TransactionOptions_ReadOnly
     with ReadonlyMessageMixin {}
 
 class TransactionOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransactionOptions')
+  static final BuilderInfo _i = BuilderInfo('TransactionOptions')
     ..a<TransactionOptions_ReadWrite>(
         1,
         'readWrite',
@@ -168,15 +167,14 @@ class TransactionOptions extends GeneratedMessage {
   TransactionOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransactionOptions clone() =>
-      new TransactionOptions()..mergeFromMessage(this);
+  TransactionOptions clone() => TransactionOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransactionOptions create() => new TransactionOptions();
+  static TransactionOptions create() => TransactionOptions();
   static PbList<TransactionOptions> createRepeated() =>
-      new PbList<TransactionOptions>();
+      PbList<TransactionOptions>();
   static TransactionOptions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransactionOptions();
+      _defaultInstance = _ReadonlyTransactionOptions();
     return _defaultInstance;
   }
 
@@ -206,7 +204,7 @@ class _ReadonlyTransactionOptions extends TransactionOptions
     with ReadonlyMessageMixin {}
 
 class Transaction extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Transaction')
+  static final BuilderInfo _i = BuilderInfo('Transaction')
     ..a<List<int>>(1, 'id', PbFieldType.OY)
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -223,12 +221,12 @@ class Transaction extends GeneratedMessage {
   Transaction.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Transaction clone() => new Transaction()..mergeFromMessage(this);
+  Transaction clone() => Transaction()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Transaction create() => new Transaction();
-  static PbList<Transaction> createRepeated() => new PbList<Transaction>();
+  static Transaction create() => Transaction();
+  static PbList<Transaction> createRepeated() => PbList<Transaction>();
   static Transaction getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTransaction();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTransaction();
     return _defaultInstance;
   }
 
@@ -257,7 +255,7 @@ class Transaction extends GeneratedMessage {
 class _ReadonlyTransaction extends Transaction with ReadonlyMessageMixin {}
 
 class TransactionSelector extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransactionSelector')
+  static final BuilderInfo _i = BuilderInfo('TransactionSelector')
     ..a<TransactionOptions>(1, 'singleUse', PbFieldType.OM,
         TransactionOptions.getDefault, TransactionOptions.create)
     ..a<List<int>>(2, 'id', PbFieldType.OY)
@@ -272,15 +270,14 @@ class TransactionSelector extends GeneratedMessage {
   TransactionSelector.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransactionSelector clone() =>
-      new TransactionSelector()..mergeFromMessage(this);
+  TransactionSelector clone() => TransactionSelector()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TransactionSelector create() => new TransactionSelector();
+  static TransactionSelector create() => TransactionSelector();
   static PbList<TransactionSelector> createRepeated() =>
-      new PbList<TransactionSelector>();
+      PbList<TransactionSelector>();
   static TransactionSelector getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransactionSelector();
+      _defaultInstance = _ReadonlyTransactionSelector();
     return _defaultInstance;
   }
 

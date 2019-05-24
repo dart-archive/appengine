@@ -9,10 +9,10 @@ import '../../source/v1/source_context.pbjson.dart'
 import '../../../protobuf/wrappers.pbjson.dart' as $google$protobuf;
 import '../../../protobuf/timestamp.pbjson.dart' as $google$protobuf;
 
-const RegisterDebuggeeRequest$json = const {
+const RegisterDebuggeeRequest$json = {
   '1': 'RegisterDebuggeeRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'debuggee',
       '3': 1,
       '4': 1,
@@ -23,10 +23,10 @@ const RegisterDebuggeeRequest$json = const {
   ],
 };
 
-const RegisterDebuggeeResponse$json = const {
+const RegisterDebuggeeResponse$json = {
   '1': 'RegisterDebuggeeResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'debuggee',
       '3': 1,
       '4': 1,
@@ -37,12 +37,12 @@ const RegisterDebuggeeResponse$json = const {
   ],
 };
 
-const ListActiveBreakpointsRequest$json = const {
+const ListActiveBreakpointsRequest$json = {
   '1': 'ListActiveBreakpointsRequest',
-  '2': const [
-    const {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
-    const {'1': 'wait_token', '3': 2, '4': 1, '5': 9, '10': 'waitToken'},
-    const {
+  '2': [
+    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
+    {'1': 'wait_token', '3': 2, '4': 1, '5': 9, '10': 'waitToken'},
+    {
       '1': 'success_on_timeout',
       '3': 3,
       '4': 1,
@@ -52,10 +52,10 @@ const ListActiveBreakpointsRequest$json = const {
   ],
 };
 
-const ListActiveBreakpointsResponse$json = const {
+const ListActiveBreakpointsResponse$json = {
   '1': 'ListActiveBreakpointsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'breakpoints',
       '3': 1,
       '4': 3,
@@ -63,22 +63,16 @@ const ListActiveBreakpointsResponse$json = const {
       '6': '.google.devtools.clouddebugger.v2.Breakpoint',
       '10': 'breakpoints'
     },
-    const {
-      '1': 'next_wait_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextWaitToken'
-    },
-    const {'1': 'wait_expired', '3': 3, '4': 1, '5': 8, '10': 'waitExpired'},
+    {'1': 'next_wait_token', '3': 2, '4': 1, '5': 9, '10': 'nextWaitToken'},
+    {'1': 'wait_expired', '3': 3, '4': 1, '5': 8, '10': 'waitExpired'},
   ],
 };
 
-const UpdateActiveBreakpointRequest$json = const {
+const UpdateActiveBreakpointRequest$json = {
   '1': 'UpdateActiveBreakpointRequest',
-  '2': const [
-    const {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
-    const {
+  '2': [
+    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
+    {
       '1': 'breakpoint',
       '3': 2,
       '4': 1,
@@ -89,35 +83,35 @@ const UpdateActiveBreakpointRequest$json = const {
   ],
 };
 
-const UpdateActiveBreakpointResponse$json = const {
+const UpdateActiveBreakpointResponse$json = {
   '1': 'UpdateActiveBreakpointResponse',
 };
 
-const Controller2$json = const {
+const Controller2$json = {
   '1': 'Controller2',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'RegisterDebuggee',
       '2': '.google.devtools.clouddebugger.v2.RegisterDebuggeeRequest',
       '3': '.google.devtools.clouddebugger.v2.RegisterDebuggeeResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListActiveBreakpoints',
       '2': '.google.devtools.clouddebugger.v2.ListActiveBreakpointsRequest',
       '3': '.google.devtools.clouddebugger.v2.ListActiveBreakpointsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateActiveBreakpoint',
       '2': '.google.devtools.clouddebugger.v2.UpdateActiveBreakpointRequest',
       '3': '.google.devtools.clouddebugger.v2.UpdateActiveBreakpointResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const Controller2$messageJson = const {
+const Controller2$messageJson = {
   '.google.devtools.clouddebugger.v2.RegisterDebuggeeRequest':
       RegisterDebuggeeRequest$json,
   '.google.devtools.clouddebugger.v2.Debuggee': Debuggee$json,

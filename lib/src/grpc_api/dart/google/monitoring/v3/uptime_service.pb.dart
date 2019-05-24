@@ -14,7 +14,7 @@ import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
 import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class ListUptimeCheckConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListUptimeCheckConfigsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListUptimeCheckConfigsRequest')
     ..aOS(1, 'parent')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
     ..aOS(4, 'pageToken')
@@ -28,15 +28,15 @@ class ListUptimeCheckConfigsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListUptimeCheckConfigsRequest clone() =>
-      new ListUptimeCheckConfigsRequest()..mergeFromMessage(this);
+      ListUptimeCheckConfigsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListUptimeCheckConfigsRequest create() =>
-      new ListUptimeCheckConfigsRequest();
+      ListUptimeCheckConfigsRequest();
   static PbList<ListUptimeCheckConfigsRequest> createRepeated() =>
-      new PbList<ListUptimeCheckConfigsRequest>();
+      PbList<ListUptimeCheckConfigsRequest>();
   static ListUptimeCheckConfigsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListUptimeCheckConfigsRequest();
+      _defaultInstance = _ReadonlyListUptimeCheckConfigsRequest();
     return _defaultInstance;
   }
 
@@ -75,12 +75,11 @@ class _ReadonlyListUptimeCheckConfigsRequest
     extends ListUptimeCheckConfigsRequest with ReadonlyMessageMixin {}
 
 class ListUptimeCheckConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListUptimeCheckConfigsResponse')
-        ..pp<UptimeCheckConfig>(1, 'uptimeCheckConfigs', PbFieldType.PM,
-            UptimeCheckConfig.$checkItem, UptimeCheckConfig.create)
-        ..aOS(2, 'nextPageToken')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ListUptimeCheckConfigsResponse')
+    ..pp<UptimeCheckConfig>(1, 'uptimeCheckConfigs', PbFieldType.PM,
+        UptimeCheckConfig.$checkItem, UptimeCheckConfig.create)
+    ..aOS(2, 'nextPageToken')
+    ..hasRequiredFields = false;
 
   ListUptimeCheckConfigsResponse() : super();
   ListUptimeCheckConfigsResponse.fromBuffer(List<int> i,
@@ -90,15 +89,15 @@ class ListUptimeCheckConfigsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListUptimeCheckConfigsResponse clone() =>
-      new ListUptimeCheckConfigsResponse()..mergeFromMessage(this);
+      ListUptimeCheckConfigsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListUptimeCheckConfigsResponse create() =>
-      new ListUptimeCheckConfigsResponse();
+      ListUptimeCheckConfigsResponse();
   static PbList<ListUptimeCheckConfigsResponse> createRepeated() =>
-      new PbList<ListUptimeCheckConfigsResponse>();
+      PbList<ListUptimeCheckConfigsResponse>();
   static ListUptimeCheckConfigsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListUptimeCheckConfigsResponse();
+      _defaultInstance = _ReadonlyListUptimeCheckConfigsResponse();
     return _defaultInstance;
   }
 
@@ -123,7 +122,7 @@ class _ReadonlyListUptimeCheckConfigsResponse
     extends ListUptimeCheckConfigsResponse with ReadonlyMessageMixin {}
 
 class GetUptimeCheckConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetUptimeCheckConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('GetUptimeCheckConfigRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -135,15 +134,14 @@ class GetUptimeCheckConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetUptimeCheckConfigRequest clone() =>
-      new GetUptimeCheckConfigRequest()..mergeFromMessage(this);
+      GetUptimeCheckConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetUptimeCheckConfigRequest create() =>
-      new GetUptimeCheckConfigRequest();
+  static GetUptimeCheckConfigRequest create() => GetUptimeCheckConfigRequest();
   static PbList<GetUptimeCheckConfigRequest> createRepeated() =>
-      new PbList<GetUptimeCheckConfigRequest>();
+      PbList<GetUptimeCheckConfigRequest>();
   static GetUptimeCheckConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetUptimeCheckConfigRequest();
+      _defaultInstance = _ReadonlyGetUptimeCheckConfigRequest();
     return _defaultInstance;
   }
 
@@ -166,12 +164,11 @@ class _ReadonlyGetUptimeCheckConfigRequest extends GetUptimeCheckConfigRequest
     with ReadonlyMessageMixin {}
 
 class CreateUptimeCheckConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('CreateUptimeCheckConfigRequest')
-        ..aOS(1, 'parent')
-        ..a<UptimeCheckConfig>(2, 'uptimeCheckConfig', PbFieldType.OM,
-            UptimeCheckConfig.getDefault, UptimeCheckConfig.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('CreateUptimeCheckConfigRequest')
+    ..aOS(1, 'parent')
+    ..a<UptimeCheckConfig>(2, 'uptimeCheckConfig', PbFieldType.OM,
+        UptimeCheckConfig.getDefault, UptimeCheckConfig.create)
+    ..hasRequiredFields = false;
 
   CreateUptimeCheckConfigRequest() : super();
   CreateUptimeCheckConfigRequest.fromBuffer(List<int> i,
@@ -181,15 +178,15 @@ class CreateUptimeCheckConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateUptimeCheckConfigRequest clone() =>
-      new CreateUptimeCheckConfigRequest()..mergeFromMessage(this);
+      CreateUptimeCheckConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateUptimeCheckConfigRequest create() =>
-      new CreateUptimeCheckConfigRequest();
+      CreateUptimeCheckConfigRequest();
   static PbList<CreateUptimeCheckConfigRequest> createRepeated() =>
-      new PbList<CreateUptimeCheckConfigRequest>();
+      PbList<CreateUptimeCheckConfigRequest>();
   static CreateUptimeCheckConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateUptimeCheckConfigRequest();
+      _defaultInstance = _ReadonlyCreateUptimeCheckConfigRequest();
     return _defaultInstance;
   }
 
@@ -220,17 +217,16 @@ class _ReadonlyCreateUptimeCheckConfigRequest
     extends CreateUptimeCheckConfigRequest with ReadonlyMessageMixin {}
 
 class UpdateUptimeCheckConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('UpdateUptimeCheckConfigRequest')
-        ..a<$google$protobuf.FieldMask>(
-            2,
-            'updateMask',
-            PbFieldType.OM,
-            $google$protobuf.FieldMask.getDefault,
-            $google$protobuf.FieldMask.create)
-        ..a<UptimeCheckConfig>(3, 'uptimeCheckConfig', PbFieldType.OM,
-            UptimeCheckConfig.getDefault, UptimeCheckConfig.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('UpdateUptimeCheckConfigRequest')
+    ..a<$google$protobuf.FieldMask>(
+        2,
+        'updateMask',
+        PbFieldType.OM,
+        $google$protobuf.FieldMask.getDefault,
+        $google$protobuf.FieldMask.create)
+    ..a<UptimeCheckConfig>(3, 'uptimeCheckConfig', PbFieldType.OM,
+        UptimeCheckConfig.getDefault, UptimeCheckConfig.create)
+    ..hasRequiredFields = false;
 
   UpdateUptimeCheckConfigRequest() : super();
   UpdateUptimeCheckConfigRequest.fromBuffer(List<int> i,
@@ -240,15 +236,15 @@ class UpdateUptimeCheckConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateUptimeCheckConfigRequest clone() =>
-      new UpdateUptimeCheckConfigRequest()..mergeFromMessage(this);
+      UpdateUptimeCheckConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateUptimeCheckConfigRequest create() =>
-      new UpdateUptimeCheckConfigRequest();
+      UpdateUptimeCheckConfigRequest();
   static PbList<UpdateUptimeCheckConfigRequest> createRepeated() =>
-      new PbList<UpdateUptimeCheckConfigRequest>();
+      PbList<UpdateUptimeCheckConfigRequest>();
   static UpdateUptimeCheckConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateUptimeCheckConfigRequest();
+      _defaultInstance = _ReadonlyUpdateUptimeCheckConfigRequest();
     return _defaultInstance;
   }
 
@@ -279,10 +275,9 @@ class _ReadonlyUpdateUptimeCheckConfigRequest
     extends UpdateUptimeCheckConfigRequest with ReadonlyMessageMixin {}
 
 class DeleteUptimeCheckConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('DeleteUptimeCheckConfigRequest')
-        ..aOS(1, 'name')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('DeleteUptimeCheckConfigRequest')
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
 
   DeleteUptimeCheckConfigRequest() : super();
   DeleteUptimeCheckConfigRequest.fromBuffer(List<int> i,
@@ -292,15 +287,15 @@ class DeleteUptimeCheckConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteUptimeCheckConfigRequest clone() =>
-      new DeleteUptimeCheckConfigRequest()..mergeFromMessage(this);
+      DeleteUptimeCheckConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteUptimeCheckConfigRequest create() =>
-      new DeleteUptimeCheckConfigRequest();
+      DeleteUptimeCheckConfigRequest();
   static PbList<DeleteUptimeCheckConfigRequest> createRepeated() =>
-      new PbList<DeleteUptimeCheckConfigRequest>();
+      PbList<DeleteUptimeCheckConfigRequest>();
   static DeleteUptimeCheckConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteUptimeCheckConfigRequest();
+      _defaultInstance = _ReadonlyDeleteUptimeCheckConfigRequest();
     return _defaultInstance;
   }
 
@@ -323,7 +318,7 @@ class _ReadonlyDeleteUptimeCheckConfigRequest
     extends DeleteUptimeCheckConfigRequest with ReadonlyMessageMixin {}
 
 class ListUptimeCheckIpsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListUptimeCheckIpsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListUptimeCheckIpsRequest')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
@@ -336,14 +331,14 @@ class ListUptimeCheckIpsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListUptimeCheckIpsRequest clone() =>
-      new ListUptimeCheckIpsRequest()..mergeFromMessage(this);
+      ListUptimeCheckIpsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListUptimeCheckIpsRequest create() => new ListUptimeCheckIpsRequest();
+  static ListUptimeCheckIpsRequest create() => ListUptimeCheckIpsRequest();
   static PbList<ListUptimeCheckIpsRequest> createRepeated() =>
-      new PbList<ListUptimeCheckIpsRequest>();
+      PbList<ListUptimeCheckIpsRequest>();
   static ListUptimeCheckIpsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListUptimeCheckIpsRequest();
+      _defaultInstance = _ReadonlyListUptimeCheckIpsRequest();
     return _defaultInstance;
   }
 
@@ -374,7 +369,7 @@ class _ReadonlyListUptimeCheckIpsRequest extends ListUptimeCheckIpsRequest
     with ReadonlyMessageMixin {}
 
 class ListUptimeCheckIpsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListUptimeCheckIpsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListUptimeCheckIpsResponse')
     ..pp<UptimeCheckIp>(1, 'uptimeCheckIps', PbFieldType.PM,
         UptimeCheckIp.$checkItem, UptimeCheckIp.create)
     ..aOS(2, 'nextPageToken')
@@ -388,15 +383,14 @@ class ListUptimeCheckIpsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListUptimeCheckIpsResponse clone() =>
-      new ListUptimeCheckIpsResponse()..mergeFromMessage(this);
+      ListUptimeCheckIpsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListUptimeCheckIpsResponse create() =>
-      new ListUptimeCheckIpsResponse();
+  static ListUptimeCheckIpsResponse create() => ListUptimeCheckIpsResponse();
   static PbList<ListUptimeCheckIpsResponse> createRepeated() =>
-      new PbList<ListUptimeCheckIpsResponse>();
+      PbList<ListUptimeCheckIpsResponse>();
   static ListUptimeCheckIpsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListUptimeCheckIpsResponse();
+      _defaultInstance = _ReadonlyListUptimeCheckIpsResponse();
     return _defaultInstance;
   }
 
@@ -426,42 +420,42 @@ class UptimeCheckServiceApi {
 
   Future<ListUptimeCheckConfigsResponse> listUptimeCheckConfigs(
       ClientContext ctx, ListUptimeCheckConfigsRequest request) {
-    var emptyResponse = new ListUptimeCheckConfigsResponse();
+    var emptyResponse = ListUptimeCheckConfigsResponse();
     return _client.invoke<ListUptimeCheckConfigsResponse>(ctx,
         'UptimeCheckService', 'ListUptimeCheckConfigs', request, emptyResponse);
   }
 
   Future<UptimeCheckConfig> getUptimeCheckConfig(
       ClientContext ctx, GetUptimeCheckConfigRequest request) {
-    var emptyResponse = new UptimeCheckConfig();
+    var emptyResponse = UptimeCheckConfig();
     return _client.invoke<UptimeCheckConfig>(ctx, 'UptimeCheckService',
         'GetUptimeCheckConfig', request, emptyResponse);
   }
 
   Future<UptimeCheckConfig> createUptimeCheckConfig(
       ClientContext ctx, CreateUptimeCheckConfigRequest request) {
-    var emptyResponse = new UptimeCheckConfig();
+    var emptyResponse = UptimeCheckConfig();
     return _client.invoke<UptimeCheckConfig>(ctx, 'UptimeCheckService',
         'CreateUptimeCheckConfig', request, emptyResponse);
   }
 
   Future<UptimeCheckConfig> updateUptimeCheckConfig(
       ClientContext ctx, UpdateUptimeCheckConfigRequest request) {
-    var emptyResponse = new UptimeCheckConfig();
+    var emptyResponse = UptimeCheckConfig();
     return _client.invoke<UptimeCheckConfig>(ctx, 'UptimeCheckService',
         'UpdateUptimeCheckConfig', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteUptimeCheckConfig(
       ClientContext ctx, DeleteUptimeCheckConfigRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'UptimeCheckService',
         'DeleteUptimeCheckConfig', request, emptyResponse);
   }
 
   Future<ListUptimeCheckIpsResponse> listUptimeCheckIps(
       ClientContext ctx, ListUptimeCheckIpsRequest request) {
-    var emptyResponse = new ListUptimeCheckIpsResponse();
+    var emptyResponse = ListUptimeCheckIpsResponse();
     return _client.invoke<ListUptimeCheckIpsResponse>(ctx, 'UptimeCheckService',
         'ListUptimeCheckIps', request, emptyResponse);
   }

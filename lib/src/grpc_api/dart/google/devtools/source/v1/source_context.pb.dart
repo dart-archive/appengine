@@ -13,7 +13,7 @@ import 'source_context.pbenum.dart';
 export 'source_context.pbenum.dart';
 
 class SourceContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceContext')
+  static final BuilderInfo _i = BuilderInfo('SourceContext')
     ..a<CloudRepoSourceContext>(1, 'cloudRepo', PbFieldType.OM,
         CloudRepoSourceContext.getDefault, CloudRepoSourceContext.create)
     ..a<CloudWorkspaceSourceContext>(
@@ -35,13 +35,12 @@ class SourceContext extends GeneratedMessage {
   SourceContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceContext clone() => new SourceContext()..mergeFromMessage(this);
+  SourceContext clone() => SourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceContext create() => new SourceContext();
-  static PbList<SourceContext> createRepeated() => new PbList<SourceContext>();
+  static SourceContext create() => SourceContext();
+  static PbList<SourceContext> createRepeated() => PbList<SourceContext>();
   static SourceContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceContext();
     return _defaultInstance;
   }
 
@@ -86,11 +85,10 @@ class SourceContext extends GeneratedMessage {
 class _ReadonlySourceContext extends SourceContext with ReadonlyMessageMixin {}
 
 class ExtendedSourceContext_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ExtendedSourceContext_LabelsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ExtendedSourceContext_LabelsEntry')
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
+    ..hasRequiredFields = false;
 
   ExtendedSourceContext_LabelsEntry() : super();
   ExtendedSourceContext_LabelsEntry.fromBuffer(List<int> i,
@@ -100,15 +98,15 @@ class ExtendedSourceContext_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExtendedSourceContext_LabelsEntry clone() =>
-      new ExtendedSourceContext_LabelsEntry()..mergeFromMessage(this);
+      ExtendedSourceContext_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ExtendedSourceContext_LabelsEntry create() =>
-      new ExtendedSourceContext_LabelsEntry();
+      ExtendedSourceContext_LabelsEntry();
   static PbList<ExtendedSourceContext_LabelsEntry> createRepeated() =>
-      new PbList<ExtendedSourceContext_LabelsEntry>();
+      PbList<ExtendedSourceContext_LabelsEntry>();
   static ExtendedSourceContext_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExtendedSourceContext_LabelsEntry();
+      _defaultInstance = _ReadonlyExtendedSourceContext_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -139,7 +137,7 @@ class _ReadonlyExtendedSourceContext_LabelsEntry
     extends ExtendedSourceContext_LabelsEntry with ReadonlyMessageMixin {}
 
 class ExtendedSourceContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExtendedSourceContext')
+  static final BuilderInfo _i = BuilderInfo('ExtendedSourceContext')
     ..a<SourceContext>(1, 'context', PbFieldType.OM, SourceContext.getDefault,
         SourceContext.create)
     ..pp<ExtendedSourceContext_LabelsEntry>(
@@ -158,14 +156,14 @@ class ExtendedSourceContext extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExtendedSourceContext clone() =>
-      new ExtendedSourceContext()..mergeFromMessage(this);
+      ExtendedSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExtendedSourceContext create() => new ExtendedSourceContext();
+  static ExtendedSourceContext create() => ExtendedSourceContext();
   static PbList<ExtendedSourceContext> createRepeated() =>
-      new PbList<ExtendedSourceContext>();
+      PbList<ExtendedSourceContext>();
   static ExtendedSourceContext getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExtendedSourceContext();
+      _defaultInstance = _ReadonlyExtendedSourceContext();
     return _defaultInstance;
   }
 
@@ -190,7 +188,7 @@ class _ReadonlyExtendedSourceContext extends ExtendedSourceContext
     with ReadonlyMessageMixin {}
 
 class AliasContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AliasContext')
+  static final BuilderInfo _i = BuilderInfo('AliasContext')
     ..e<AliasContext_Kind>(1, 'kind', PbFieldType.OE, AliasContext_Kind.ANY,
         AliasContext_Kind.valueOf, AliasContext_Kind.values)
     ..aOS(2, 'name')
@@ -203,13 +201,12 @@ class AliasContext extends GeneratedMessage {
   AliasContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AliasContext clone() => new AliasContext()..mergeFromMessage(this);
+  AliasContext clone() => AliasContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AliasContext create() => new AliasContext();
-  static PbList<AliasContext> createRepeated() => new PbList<AliasContext>();
+  static AliasContext create() => AliasContext();
+  static PbList<AliasContext> createRepeated() => PbList<AliasContext>();
   static AliasContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAliasContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAliasContext();
     return _defaultInstance;
   }
 
@@ -238,7 +235,7 @@ class AliasContext extends GeneratedMessage {
 class _ReadonlyAliasContext extends AliasContext with ReadonlyMessageMixin {}
 
 class CloudRepoSourceContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CloudRepoSourceContext')
+  static final BuilderInfo _i = BuilderInfo('CloudRepoSourceContext')
     ..a<RepoId>(1, 'repoId', PbFieldType.OM, RepoId.getDefault, RepoId.create)
     ..aOS(2, 'revisionId')
     ..aOS(3, 'aliasName')
@@ -254,14 +251,14 @@ class CloudRepoSourceContext extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CloudRepoSourceContext clone() =>
-      new CloudRepoSourceContext()..mergeFromMessage(this);
+      CloudRepoSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CloudRepoSourceContext create() => new CloudRepoSourceContext();
+  static CloudRepoSourceContext create() => CloudRepoSourceContext();
   static PbList<CloudRepoSourceContext> createRepeated() =>
-      new PbList<CloudRepoSourceContext>();
+      PbList<CloudRepoSourceContext>();
   static CloudRepoSourceContext getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCloudRepoSourceContext();
+      _defaultInstance = _ReadonlyCloudRepoSourceContext();
     return _defaultInstance;
   }
 
@@ -308,7 +305,7 @@ class _ReadonlyCloudRepoSourceContext extends CloudRepoSourceContext
     with ReadonlyMessageMixin {}
 
 class CloudWorkspaceSourceContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CloudWorkspaceSourceContext')
+  static final BuilderInfo _i = BuilderInfo('CloudWorkspaceSourceContext')
     ..a<CloudWorkspaceId>(1, 'workspaceId', PbFieldType.OM,
         CloudWorkspaceId.getDefault, CloudWorkspaceId.create)
     ..aOS(2, 'snapshotId')
@@ -322,15 +319,14 @@ class CloudWorkspaceSourceContext extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CloudWorkspaceSourceContext clone() =>
-      new CloudWorkspaceSourceContext()..mergeFromMessage(this);
+      CloudWorkspaceSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CloudWorkspaceSourceContext create() =>
-      new CloudWorkspaceSourceContext();
+  static CloudWorkspaceSourceContext create() => CloudWorkspaceSourceContext();
   static PbList<CloudWorkspaceSourceContext> createRepeated() =>
-      new PbList<CloudWorkspaceSourceContext>();
+      PbList<CloudWorkspaceSourceContext>();
   static CloudWorkspaceSourceContext getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCloudWorkspaceSourceContext();
+      _defaultInstance = _ReadonlyCloudWorkspaceSourceContext();
     return _defaultInstance;
   }
 
@@ -361,7 +357,7 @@ class _ReadonlyCloudWorkspaceSourceContext extends CloudWorkspaceSourceContext
     with ReadonlyMessageMixin {}
 
 class GerritSourceContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GerritSourceContext')
+  static final BuilderInfo _i = BuilderInfo('GerritSourceContext')
     ..aOS(1, 'hostUri')
     ..aOS(2, 'gerritProject')
     ..aOS(3, 'revisionId')
@@ -377,15 +373,14 @@ class GerritSourceContext extends GeneratedMessage {
   GerritSourceContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GerritSourceContext clone() =>
-      new GerritSourceContext()..mergeFromMessage(this);
+  GerritSourceContext clone() => GerritSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GerritSourceContext create() => new GerritSourceContext();
+  static GerritSourceContext create() => GerritSourceContext();
   static PbList<GerritSourceContext> createRepeated() =>
-      new PbList<GerritSourceContext>();
+      PbList<GerritSourceContext>();
   static GerritSourceContext getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGerritSourceContext();
+      _defaultInstance = _ReadonlyGerritSourceContext();
     return _defaultInstance;
   }
 
@@ -439,7 +434,7 @@ class _ReadonlyGerritSourceContext extends GerritSourceContext
     with ReadonlyMessageMixin {}
 
 class GitSourceContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GitSourceContext')
+  static final BuilderInfo _i = BuilderInfo('GitSourceContext')
     ..aOS(1, 'url')
     ..aOS(2, 'revisionId')
     ..hasRequiredFields = false;
@@ -451,14 +446,14 @@ class GitSourceContext extends GeneratedMessage {
   GitSourceContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GitSourceContext clone() => new GitSourceContext()..mergeFromMessage(this);
+  GitSourceContext clone() => GitSourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GitSourceContext create() => new GitSourceContext();
+  static GitSourceContext create() => GitSourceContext();
   static PbList<GitSourceContext> createRepeated() =>
-      new PbList<GitSourceContext>();
+      PbList<GitSourceContext>();
   static GitSourceContext getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGitSourceContext();
+      _defaultInstance = _ReadonlyGitSourceContext();
     return _defaultInstance;
   }
 
@@ -488,7 +483,7 @@ class _ReadonlyGitSourceContext extends GitSourceContext
     with ReadonlyMessageMixin {}
 
 class RepoId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RepoId')
+  static final BuilderInfo _i = BuilderInfo('RepoId')
     ..a<ProjectRepoId>(1, 'projectRepoId', PbFieldType.OM,
         ProjectRepoId.getDefault, ProjectRepoId.create)
     ..aOS(2, 'uid')
@@ -500,12 +495,12 @@ class RepoId extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RepoId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RepoId clone() => new RepoId()..mergeFromMessage(this);
+  RepoId clone() => RepoId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RepoId create() => new RepoId();
-  static PbList<RepoId> createRepeated() => new PbList<RepoId>();
+  static RepoId create() => RepoId();
+  static PbList<RepoId> createRepeated() => PbList<RepoId>();
   static RepoId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRepoId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRepoId();
     return _defaultInstance;
   }
 
@@ -534,7 +529,7 @@ class RepoId extends GeneratedMessage {
 class _ReadonlyRepoId extends RepoId with ReadonlyMessageMixin {}
 
 class ProjectRepoId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ProjectRepoId')
+  static final BuilderInfo _i = BuilderInfo('ProjectRepoId')
     ..aOS(1, 'projectId')
     ..aOS(2, 'repoName')
     ..hasRequiredFields = false;
@@ -546,13 +541,12 @@ class ProjectRepoId extends GeneratedMessage {
   ProjectRepoId.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ProjectRepoId clone() => new ProjectRepoId()..mergeFromMessage(this);
+  ProjectRepoId clone() => ProjectRepoId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ProjectRepoId create() => new ProjectRepoId();
-  static PbList<ProjectRepoId> createRepeated() => new PbList<ProjectRepoId>();
+  static ProjectRepoId create() => ProjectRepoId();
+  static PbList<ProjectRepoId> createRepeated() => PbList<ProjectRepoId>();
   static ProjectRepoId getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyProjectRepoId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyProjectRepoId();
     return _defaultInstance;
   }
 
@@ -581,7 +575,7 @@ class ProjectRepoId extends GeneratedMessage {
 class _ReadonlyProjectRepoId extends ProjectRepoId with ReadonlyMessageMixin {}
 
 class CloudWorkspaceId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CloudWorkspaceId')
+  static final BuilderInfo _i = BuilderInfo('CloudWorkspaceId')
     ..a<RepoId>(1, 'repoId', PbFieldType.OM, RepoId.getDefault, RepoId.create)
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
@@ -593,14 +587,14 @@ class CloudWorkspaceId extends GeneratedMessage {
   CloudWorkspaceId.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CloudWorkspaceId clone() => new CloudWorkspaceId()..mergeFromMessage(this);
+  CloudWorkspaceId clone() => CloudWorkspaceId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CloudWorkspaceId create() => new CloudWorkspaceId();
+  static CloudWorkspaceId create() => CloudWorkspaceId();
   static PbList<CloudWorkspaceId> createRepeated() =>
-      new PbList<CloudWorkspaceId>();
+      PbList<CloudWorkspaceId>();
   static CloudWorkspaceId getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCloudWorkspaceId();
+      _defaultInstance = _ReadonlyCloudWorkspaceId();
     return _defaultInstance;
   }
 

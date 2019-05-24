@@ -19,9 +19,9 @@ abstract class ImageAnnotatorServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'BatchAnnotateImages':
-        return new BatchAnnotateImagesRequest();
+        return BatchAnnotateImagesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -31,7 +31,7 @@ abstract class ImageAnnotatorServiceBase extends GeneratedService {
       case 'BatchAnnotateImages':
         return this.batchAnnotateImages(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

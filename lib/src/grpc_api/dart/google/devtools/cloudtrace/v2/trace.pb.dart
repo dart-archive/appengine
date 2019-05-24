@@ -18,12 +18,11 @@ import 'trace.pbenum.dart';
 export 'trace.pbenum.dart';
 
 class Span_Attributes_AttributeMapEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Span_Attributes_AttributeMapEntry')
-        ..aOS(1, 'key')
-        ..a<AttributeValue>(2, 'value', PbFieldType.OM,
-            AttributeValue.getDefault, AttributeValue.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Span_Attributes_AttributeMapEntry')
+    ..aOS(1, 'key')
+    ..a<AttributeValue>(2, 'value', PbFieldType.OM, AttributeValue.getDefault,
+        AttributeValue.create)
+    ..hasRequiredFields = false;
 
   Span_Attributes_AttributeMapEntry() : super();
   Span_Attributes_AttributeMapEntry.fromBuffer(List<int> i,
@@ -33,15 +32,15 @@ class Span_Attributes_AttributeMapEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Span_Attributes_AttributeMapEntry clone() =>
-      new Span_Attributes_AttributeMapEntry()..mergeFromMessage(this);
+      Span_Attributes_AttributeMapEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Span_Attributes_AttributeMapEntry create() =>
-      new Span_Attributes_AttributeMapEntry();
+      Span_Attributes_AttributeMapEntry();
   static PbList<Span_Attributes_AttributeMapEntry> createRepeated() =>
-      new PbList<Span_Attributes_AttributeMapEntry>();
+      PbList<Span_Attributes_AttributeMapEntry>();
   static Span_Attributes_AttributeMapEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpan_Attributes_AttributeMapEntry();
+      _defaultInstance = _ReadonlySpan_Attributes_AttributeMapEntry();
     return _defaultInstance;
   }
 
@@ -72,7 +71,7 @@ class _ReadonlySpan_Attributes_AttributeMapEntry
     extends Span_Attributes_AttributeMapEntry with ReadonlyMessageMixin {}
 
 class Span_Attributes extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Span_Attributes')
+  static final BuilderInfo _i = BuilderInfo('Span_Attributes')
     ..pp<Span_Attributes_AttributeMapEntry>(
         1,
         'attributeMap',
@@ -89,14 +88,12 @@ class Span_Attributes extends GeneratedMessage {
   Span_Attributes.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Span_Attributes clone() => new Span_Attributes()..mergeFromMessage(this);
+  Span_Attributes clone() => Span_Attributes()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Span_Attributes create() => new Span_Attributes();
-  static PbList<Span_Attributes> createRepeated() =>
-      new PbList<Span_Attributes>();
+  static Span_Attributes create() => Span_Attributes();
+  static PbList<Span_Attributes> createRepeated() => PbList<Span_Attributes>();
   static Span_Attributes getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpan_Attributes();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySpan_Attributes();
     return _defaultInstance;
   }
 
@@ -120,7 +117,7 @@ class _ReadonlySpan_Attributes extends Span_Attributes
     with ReadonlyMessageMixin {}
 
 class Span_TimeEvent_Annotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Span_TimeEvent_Annotation')
+  static final BuilderInfo _i = BuilderInfo('Span_TimeEvent_Annotation')
     ..a<TruncatableString>(1, 'description', PbFieldType.OM,
         TruncatableString.getDefault, TruncatableString.create)
     ..a<Span_Attributes>(2, 'attributes', PbFieldType.OM,
@@ -135,14 +132,14 @@ class Span_TimeEvent_Annotation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Span_TimeEvent_Annotation clone() =>
-      new Span_TimeEvent_Annotation()..mergeFromMessage(this);
+      Span_TimeEvent_Annotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Span_TimeEvent_Annotation create() => new Span_TimeEvent_Annotation();
+  static Span_TimeEvent_Annotation create() => Span_TimeEvent_Annotation();
   static PbList<Span_TimeEvent_Annotation> createRepeated() =>
-      new PbList<Span_TimeEvent_Annotation>();
+      PbList<Span_TimeEvent_Annotation>();
   static Span_TimeEvent_Annotation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpan_TimeEvent_Annotation();
+      _defaultInstance = _ReadonlySpan_TimeEvent_Annotation();
     return _defaultInstance;
   }
 
@@ -173,7 +170,7 @@ class _ReadonlySpan_TimeEvent_Annotation extends Span_TimeEvent_Annotation
     with ReadonlyMessageMixin {}
 
 class Span_TimeEvent_MessageEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Span_TimeEvent_MessageEvent')
+  static final BuilderInfo _i = BuilderInfo('Span_TimeEvent_MessageEvent')
     ..e<Span_TimeEvent_MessageEvent_Type>(
         1,
         'type',
@@ -194,15 +191,14 @@ class Span_TimeEvent_MessageEvent extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Span_TimeEvent_MessageEvent clone() =>
-      new Span_TimeEvent_MessageEvent()..mergeFromMessage(this);
+      Span_TimeEvent_MessageEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Span_TimeEvent_MessageEvent create() =>
-      new Span_TimeEvent_MessageEvent();
+  static Span_TimeEvent_MessageEvent create() => Span_TimeEvent_MessageEvent();
   static PbList<Span_TimeEvent_MessageEvent> createRepeated() =>
-      new PbList<Span_TimeEvent_MessageEvent>();
+      PbList<Span_TimeEvent_MessageEvent>();
   static Span_TimeEvent_MessageEvent getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpan_TimeEvent_MessageEvent();
+      _defaultInstance = _ReadonlySpan_TimeEvent_MessageEvent();
     return _defaultInstance;
   }
 
@@ -249,7 +245,7 @@ class _ReadonlySpan_TimeEvent_MessageEvent extends Span_TimeEvent_MessageEvent
     with ReadonlyMessageMixin {}
 
 class Span_TimeEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Span_TimeEvent')
+  static final BuilderInfo _i = BuilderInfo('Span_TimeEvent')
     ..a<$google$protobuf.Timestamp>(
         1,
         'time',
@@ -273,14 +269,12 @@ class Span_TimeEvent extends GeneratedMessage {
   Span_TimeEvent.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Span_TimeEvent clone() => new Span_TimeEvent()..mergeFromMessage(this);
+  Span_TimeEvent clone() => Span_TimeEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Span_TimeEvent create() => new Span_TimeEvent();
-  static PbList<Span_TimeEvent> createRepeated() =>
-      new PbList<Span_TimeEvent>();
+  static Span_TimeEvent create() => Span_TimeEvent();
+  static PbList<Span_TimeEvent> createRepeated() => PbList<Span_TimeEvent>();
   static Span_TimeEvent getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpan_TimeEvent();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySpan_TimeEvent();
     return _defaultInstance;
   }
 
@@ -318,7 +312,7 @@ class _ReadonlySpan_TimeEvent extends Span_TimeEvent with ReadonlyMessageMixin {
 }
 
 class Span_TimeEvents extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Span_TimeEvents')
+  static final BuilderInfo _i = BuilderInfo('Span_TimeEvents')
     ..pp<Span_TimeEvent>(1, 'timeEvent', PbFieldType.PM,
         Span_TimeEvent.$checkItem, Span_TimeEvent.create)
     ..a<int>(2, 'droppedAnnotationsCount', PbFieldType.O3)
@@ -332,14 +326,12 @@ class Span_TimeEvents extends GeneratedMessage {
   Span_TimeEvents.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Span_TimeEvents clone() => new Span_TimeEvents()..mergeFromMessage(this);
+  Span_TimeEvents clone() => Span_TimeEvents()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Span_TimeEvents create() => new Span_TimeEvents();
-  static PbList<Span_TimeEvents> createRepeated() =>
-      new PbList<Span_TimeEvents>();
+  static Span_TimeEvents create() => Span_TimeEvents();
+  static PbList<Span_TimeEvents> createRepeated() => PbList<Span_TimeEvents>();
   static Span_TimeEvents getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpan_TimeEvents();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySpan_TimeEvents();
     return _defaultInstance;
   }
 
@@ -371,7 +363,7 @@ class _ReadonlySpan_TimeEvents extends Span_TimeEvents
     with ReadonlyMessageMixin {}
 
 class Span_Link extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Span_Link')
+  static final BuilderInfo _i = BuilderInfo('Span_Link')
     ..aOS(1, 'traceId')
     ..aOS(2, 'spanId')
     ..e<Span_Link_Type>(
@@ -391,12 +383,12 @@ class Span_Link extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Span_Link.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Span_Link clone() => new Span_Link()..mergeFromMessage(this);
+  Span_Link clone() => Span_Link()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Span_Link create() => new Span_Link();
-  static PbList<Span_Link> createRepeated() => new PbList<Span_Link>();
+  static Span_Link create() => Span_Link();
+  static PbList<Span_Link> createRepeated() => PbList<Span_Link>();
   static Span_Link getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySpan_Link();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySpan_Link();
     return _defaultInstance;
   }
 
@@ -441,7 +433,7 @@ class Span_Link extends GeneratedMessage {
 class _ReadonlySpan_Link extends Span_Link with ReadonlyMessageMixin {}
 
 class Span_Links extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Span_Links')
+  static final BuilderInfo _i = BuilderInfo('Span_Links')
     ..pp<Span_Link>(
         1, 'link', PbFieldType.PM, Span_Link.$checkItem, Span_Link.create)
     ..a<int>(2, 'droppedLinksCount', PbFieldType.O3)
@@ -453,12 +445,12 @@ class Span_Links extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Span_Links.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Span_Links clone() => new Span_Links()..mergeFromMessage(this);
+  Span_Links clone() => Span_Links()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Span_Links create() => new Span_Links();
-  static PbList<Span_Links> createRepeated() => new PbList<Span_Links>();
+  static Span_Links create() => Span_Links();
+  static PbList<Span_Links> createRepeated() => PbList<Span_Links>();
   static Span_Links getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySpan_Links();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySpan_Links();
     return _defaultInstance;
   }
 
@@ -481,7 +473,7 @@ class Span_Links extends GeneratedMessage {
 class _ReadonlySpan_Links extends Span_Links with ReadonlyMessageMixin {}
 
 class Span extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Span')
+  static final BuilderInfo _i = BuilderInfo('Span')
     ..aOS(1, 'name')
     ..aOS(2, 'spanId')
     ..aOS(3, 'parentSpanId')
@@ -528,12 +520,12 @@ class Span extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Span.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Span clone() => new Span()..mergeFromMessage(this);
+  Span clone() => Span()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Span create() => new Span();
-  static PbList<Span> createRepeated() => new PbList<Span>();
+  static Span create() => Span();
+  static PbList<Span> createRepeated() => PbList<Span>();
   static Span getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySpan();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySpan();
     return _defaultInstance;
   }
 
@@ -650,7 +642,7 @@ class Span extends GeneratedMessage {
 class _ReadonlySpan extends Span with ReadonlyMessageMixin {}
 
 class AttributeValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AttributeValue')
+  static final BuilderInfo _i = BuilderInfo('AttributeValue')
     ..a<TruncatableString>(1, 'stringValue', PbFieldType.OM,
         TruncatableString.getDefault, TruncatableString.create)
     ..aInt64(2, 'intValue')
@@ -664,14 +656,12 @@ class AttributeValue extends GeneratedMessage {
   AttributeValue.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AttributeValue clone() => new AttributeValue()..mergeFromMessage(this);
+  AttributeValue clone() => AttributeValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AttributeValue create() => new AttributeValue();
-  static PbList<AttributeValue> createRepeated() =>
-      new PbList<AttributeValue>();
+  static AttributeValue create() => AttributeValue();
+  static PbList<AttributeValue> createRepeated() => PbList<AttributeValue>();
   static AttributeValue getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAttributeValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAttributeValue();
     return _defaultInstance;
   }
 
@@ -709,7 +699,7 @@ class _ReadonlyAttributeValue extends AttributeValue with ReadonlyMessageMixin {
 }
 
 class StackTrace_StackFrame extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StackTrace_StackFrame')
+  static final BuilderInfo _i = BuilderInfo('StackTrace_StackFrame')
     ..a<TruncatableString>(1, 'functionName', PbFieldType.OM,
         TruncatableString.getDefault, TruncatableString.create)
     ..a<TruncatableString>(2, 'originalFunctionName', PbFieldType.OM,
@@ -732,14 +722,14 @@ class StackTrace_StackFrame extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StackTrace_StackFrame clone() =>
-      new StackTrace_StackFrame()..mergeFromMessage(this);
+      StackTrace_StackFrame()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StackTrace_StackFrame create() => new StackTrace_StackFrame();
+  static StackTrace_StackFrame create() => StackTrace_StackFrame();
   static PbList<StackTrace_StackFrame> createRepeated() =>
-      new PbList<StackTrace_StackFrame>();
+      PbList<StackTrace_StackFrame>();
   static StackTrace_StackFrame getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStackTrace_StackFrame();
+      _defaultInstance = _ReadonlyStackTrace_StackFrame();
     return _defaultInstance;
   }
 
@@ -810,7 +800,7 @@ class _ReadonlyStackTrace_StackFrame extends StackTrace_StackFrame
     with ReadonlyMessageMixin {}
 
 class StackTrace_StackFrames extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StackTrace_StackFrames')
+  static final BuilderInfo _i = BuilderInfo('StackTrace_StackFrames')
     ..pp<StackTrace_StackFrame>(1, 'frame', PbFieldType.PM,
         StackTrace_StackFrame.$checkItem, StackTrace_StackFrame.create)
     ..a<int>(2, 'droppedFramesCount', PbFieldType.O3)
@@ -824,14 +814,14 @@ class StackTrace_StackFrames extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StackTrace_StackFrames clone() =>
-      new StackTrace_StackFrames()..mergeFromMessage(this);
+      StackTrace_StackFrames()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StackTrace_StackFrames create() => new StackTrace_StackFrames();
+  static StackTrace_StackFrames create() => StackTrace_StackFrames();
   static PbList<StackTrace_StackFrames> createRepeated() =>
-      new PbList<StackTrace_StackFrames>();
+      PbList<StackTrace_StackFrames>();
   static StackTrace_StackFrames getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStackTrace_StackFrames();
+      _defaultInstance = _ReadonlyStackTrace_StackFrames();
     return _defaultInstance;
   }
 
@@ -856,7 +846,7 @@ class _ReadonlyStackTrace_StackFrames extends StackTrace_StackFrames
     with ReadonlyMessageMixin {}
 
 class StackTrace extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StackTrace')
+  static final BuilderInfo _i = BuilderInfo('StackTrace')
     ..a<StackTrace_StackFrames>(1, 'stackFrames', PbFieldType.OM,
         StackTrace_StackFrames.getDefault, StackTrace_StackFrames.create)
     ..aInt64(2, 'stackTraceHashId')
@@ -868,12 +858,12 @@ class StackTrace extends GeneratedMessage {
       : super.fromBuffer(i, r);
   StackTrace.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StackTrace clone() => new StackTrace()..mergeFromMessage(this);
+  StackTrace clone() => StackTrace()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StackTrace create() => new StackTrace();
-  static PbList<StackTrace> createRepeated() => new PbList<StackTrace>();
+  static StackTrace create() => StackTrace();
+  static PbList<StackTrace> createRepeated() => PbList<StackTrace>();
   static StackTrace getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyStackTrace();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStackTrace();
     return _defaultInstance;
   }
 
@@ -902,7 +892,7 @@ class StackTrace extends GeneratedMessage {
 class _ReadonlyStackTrace extends StackTrace with ReadonlyMessageMixin {}
 
 class Module extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Module')
+  static final BuilderInfo _i = BuilderInfo('Module')
     ..a<TruncatableString>(1, 'module', PbFieldType.OM,
         TruncatableString.getDefault, TruncatableString.create)
     ..a<TruncatableString>(2, 'buildId', PbFieldType.OM,
@@ -915,12 +905,12 @@ class Module extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Module.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Module clone() => new Module()..mergeFromMessage(this);
+  Module clone() => Module()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Module create() => new Module();
-  static PbList<Module> createRepeated() => new PbList<Module>();
+  static Module create() => Module();
+  static PbList<Module> createRepeated() => PbList<Module>();
   static Module getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyModule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyModule();
     return _defaultInstance;
   }
 
@@ -949,7 +939,7 @@ class Module extends GeneratedMessage {
 class _ReadonlyModule extends Module with ReadonlyMessageMixin {}
 
 class TruncatableString extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TruncatableString')
+  static final BuilderInfo _i = BuilderInfo('TruncatableString')
     ..aOS(1, 'value')
     ..a<int>(2, 'truncatedByteCount', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -961,14 +951,14 @@ class TruncatableString extends GeneratedMessage {
   TruncatableString.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TruncatableString clone() => new TruncatableString()..mergeFromMessage(this);
+  TruncatableString clone() => TruncatableString()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TruncatableString create() => new TruncatableString();
+  static TruncatableString create() => TruncatableString();
   static PbList<TruncatableString> createRepeated() =>
-      new PbList<TruncatableString>();
+      PbList<TruncatableString>();
   static TruncatableString getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTruncatableString();
+      _defaultInstance = _ReadonlyTruncatableString();
     return _defaultInstance;
   }
 

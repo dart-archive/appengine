@@ -9,14 +9,14 @@ import 'package:protobuf/protobuf.dart';
 
 class ExecuteSqlRequest_QueryMode extends ProtobufEnum {
   static const ExecuteSqlRequest_QueryMode NORMAL =
-      const ExecuteSqlRequest_QueryMode._(0, 'NORMAL');
+      ExecuteSqlRequest_QueryMode._(0, 'NORMAL');
   static const ExecuteSqlRequest_QueryMode PLAN =
-      const ExecuteSqlRequest_QueryMode._(1, 'PLAN');
+      ExecuteSqlRequest_QueryMode._(1, 'PLAN');
   static const ExecuteSqlRequest_QueryMode PROFILE =
-      const ExecuteSqlRequest_QueryMode._(2, 'PROFILE');
+      ExecuteSqlRequest_QueryMode._(2, 'PROFILE');
 
   static const List<ExecuteSqlRequest_QueryMode> values =
-      const <ExecuteSqlRequest_QueryMode>[
+      <ExecuteSqlRequest_QueryMode>[
     NORMAL,
     PLAN,
     PROFILE,

@@ -21,7 +21,7 @@ import '../../../iam/v1/policy.pb.dart' as $google$iam$v1;
 import 'task.pbenum.dart';
 
 class ListQueuesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListQueuesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListQueuesRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -35,14 +35,14 @@ class ListQueuesRequest extends GeneratedMessage {
   ListQueuesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListQueuesRequest clone() => new ListQueuesRequest()..mergeFromMessage(this);
+  ListQueuesRequest clone() => ListQueuesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListQueuesRequest create() => new ListQueuesRequest();
+  static ListQueuesRequest create() => ListQueuesRequest();
   static PbList<ListQueuesRequest> createRepeated() =>
-      new PbList<ListQueuesRequest>();
+      PbList<ListQueuesRequest>();
   static ListQueuesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListQueuesRequest();
+      _defaultInstance = _ReadonlyListQueuesRequest();
     return _defaultInstance;
   }
 
@@ -88,7 +88,7 @@ class _ReadonlyListQueuesRequest extends ListQueuesRequest
     with ReadonlyMessageMixin {}
 
 class ListQueuesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListQueuesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListQueuesResponse')
     ..pp<Queue>(1, 'queues', PbFieldType.PM, Queue.$checkItem, Queue.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -100,15 +100,14 @@ class ListQueuesResponse extends GeneratedMessage {
   ListQueuesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListQueuesResponse clone() =>
-      new ListQueuesResponse()..mergeFromMessage(this);
+  ListQueuesResponse clone() => ListQueuesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListQueuesResponse create() => new ListQueuesResponse();
+  static ListQueuesResponse create() => ListQueuesResponse();
   static PbList<ListQueuesResponse> createRepeated() =>
-      new PbList<ListQueuesResponse>();
+      PbList<ListQueuesResponse>();
   static ListQueuesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListQueuesResponse();
+      _defaultInstance = _ReadonlyListQueuesResponse();
     return _defaultInstance;
   }
 
@@ -132,7 +131,7 @@ class _ReadonlyListQueuesResponse extends ListQueuesResponse
     with ReadonlyMessageMixin {}
 
 class GetQueueRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetQueueRequest')
+  static final BuilderInfo _i = BuilderInfo('GetQueueRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -143,14 +142,12 @@ class GetQueueRequest extends GeneratedMessage {
   GetQueueRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetQueueRequest clone() => new GetQueueRequest()..mergeFromMessage(this);
+  GetQueueRequest clone() => GetQueueRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetQueueRequest create() => new GetQueueRequest();
-  static PbList<GetQueueRequest> createRepeated() =>
-      new PbList<GetQueueRequest>();
+  static GetQueueRequest create() => GetQueueRequest();
+  static PbList<GetQueueRequest> createRepeated() => PbList<GetQueueRequest>();
   static GetQueueRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetQueueRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetQueueRequest();
     return _defaultInstance;
   }
 
@@ -172,7 +169,7 @@ class _ReadonlyGetQueueRequest extends GetQueueRequest
     with ReadonlyMessageMixin {}
 
 class CreateQueueRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateQueueRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateQueueRequest')
     ..aOS(1, 'parent')
     ..a<Queue>(2, 'queue', PbFieldType.OM, Queue.getDefault, Queue.create)
     ..hasRequiredFields = false;
@@ -184,15 +181,14 @@ class CreateQueueRequest extends GeneratedMessage {
   CreateQueueRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateQueueRequest clone() =>
-      new CreateQueueRequest()..mergeFromMessage(this);
+  CreateQueueRequest clone() => CreateQueueRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateQueueRequest create() => new CreateQueueRequest();
+  static CreateQueueRequest create() => CreateQueueRequest();
   static PbList<CreateQueueRequest> createRepeated() =>
-      new PbList<CreateQueueRequest>();
+      PbList<CreateQueueRequest>();
   static CreateQueueRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateQueueRequest();
+      _defaultInstance = _ReadonlyCreateQueueRequest();
     return _defaultInstance;
   }
 
@@ -222,7 +218,7 @@ class _ReadonlyCreateQueueRequest extends CreateQueueRequest
     with ReadonlyMessageMixin {}
 
 class UpdateQueueRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateQueueRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateQueueRequest')
     ..a<Queue>(1, 'queue', PbFieldType.OM, Queue.getDefault, Queue.create)
     ..a<$google$protobuf.FieldMask>(
         2,
@@ -239,15 +235,14 @@ class UpdateQueueRequest extends GeneratedMessage {
   UpdateQueueRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateQueueRequest clone() =>
-      new UpdateQueueRequest()..mergeFromMessage(this);
+  UpdateQueueRequest clone() => UpdateQueueRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateQueueRequest create() => new UpdateQueueRequest();
+  static UpdateQueueRequest create() => UpdateQueueRequest();
   static PbList<UpdateQueueRequest> createRepeated() =>
-      new PbList<UpdateQueueRequest>();
+      PbList<UpdateQueueRequest>();
   static UpdateQueueRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateQueueRequest();
+      _defaultInstance = _ReadonlyUpdateQueueRequest();
     return _defaultInstance;
   }
 
@@ -277,7 +272,7 @@ class _ReadonlyUpdateQueueRequest extends UpdateQueueRequest
     with ReadonlyMessageMixin {}
 
 class DeleteQueueRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteQueueRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteQueueRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -288,15 +283,14 @@ class DeleteQueueRequest extends GeneratedMessage {
   DeleteQueueRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteQueueRequest clone() =>
-      new DeleteQueueRequest()..mergeFromMessage(this);
+  DeleteQueueRequest clone() => DeleteQueueRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteQueueRequest create() => new DeleteQueueRequest();
+  static DeleteQueueRequest create() => DeleteQueueRequest();
   static PbList<DeleteQueueRequest> createRepeated() =>
-      new PbList<DeleteQueueRequest>();
+      PbList<DeleteQueueRequest>();
   static DeleteQueueRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteQueueRequest();
+      _defaultInstance = _ReadonlyDeleteQueueRequest();
     return _defaultInstance;
   }
 
@@ -318,7 +312,7 @@ class _ReadonlyDeleteQueueRequest extends DeleteQueueRequest
     with ReadonlyMessageMixin {}
 
 class PurgeQueueRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PurgeQueueRequest')
+  static final BuilderInfo _i = BuilderInfo('PurgeQueueRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -329,14 +323,14 @@ class PurgeQueueRequest extends GeneratedMessage {
   PurgeQueueRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PurgeQueueRequest clone() => new PurgeQueueRequest()..mergeFromMessage(this);
+  PurgeQueueRequest clone() => PurgeQueueRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PurgeQueueRequest create() => new PurgeQueueRequest();
+  static PurgeQueueRequest create() => PurgeQueueRequest();
   static PbList<PurgeQueueRequest> createRepeated() =>
-      new PbList<PurgeQueueRequest>();
+      PbList<PurgeQueueRequest>();
   static PurgeQueueRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPurgeQueueRequest();
+      _defaultInstance = _ReadonlyPurgeQueueRequest();
     return _defaultInstance;
   }
 
@@ -358,7 +352,7 @@ class _ReadonlyPurgeQueueRequest extends PurgeQueueRequest
     with ReadonlyMessageMixin {}
 
 class PauseQueueRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PauseQueueRequest')
+  static final BuilderInfo _i = BuilderInfo('PauseQueueRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -369,14 +363,14 @@ class PauseQueueRequest extends GeneratedMessage {
   PauseQueueRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PauseQueueRequest clone() => new PauseQueueRequest()..mergeFromMessage(this);
+  PauseQueueRequest clone() => PauseQueueRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PauseQueueRequest create() => new PauseQueueRequest();
+  static PauseQueueRequest create() => PauseQueueRequest();
   static PbList<PauseQueueRequest> createRepeated() =>
-      new PbList<PauseQueueRequest>();
+      PbList<PauseQueueRequest>();
   static PauseQueueRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPauseQueueRequest();
+      _defaultInstance = _ReadonlyPauseQueueRequest();
     return _defaultInstance;
   }
 
@@ -398,7 +392,7 @@ class _ReadonlyPauseQueueRequest extends PauseQueueRequest
     with ReadonlyMessageMixin {}
 
 class ResumeQueueRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ResumeQueueRequest')
+  static final BuilderInfo _i = BuilderInfo('ResumeQueueRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -409,15 +403,14 @@ class ResumeQueueRequest extends GeneratedMessage {
   ResumeQueueRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ResumeQueueRequest clone() =>
-      new ResumeQueueRequest()..mergeFromMessage(this);
+  ResumeQueueRequest clone() => ResumeQueueRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ResumeQueueRequest create() => new ResumeQueueRequest();
+  static ResumeQueueRequest create() => ResumeQueueRequest();
   static PbList<ResumeQueueRequest> createRepeated() =>
-      new PbList<ResumeQueueRequest>();
+      PbList<ResumeQueueRequest>();
   static ResumeQueueRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyResumeQueueRequest();
+      _defaultInstance = _ReadonlyResumeQueueRequest();
     return _defaultInstance;
   }
 
@@ -439,7 +432,7 @@ class _ReadonlyResumeQueueRequest extends ResumeQueueRequest
     with ReadonlyMessageMixin {}
 
 class ListTasksRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTasksRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTasksRequest')
     ..aOS(1, 'parent')
     ..e<Task_View>(2, 'responseView', PbFieldType.OE,
         Task_View.VIEW_UNSPECIFIED, Task_View.valueOf, Task_View.values)
@@ -455,14 +448,14 @@ class ListTasksRequest extends GeneratedMessage {
   ListTasksRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTasksRequest clone() => new ListTasksRequest()..mergeFromMessage(this);
+  ListTasksRequest clone() => ListTasksRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTasksRequest create() => new ListTasksRequest();
+  static ListTasksRequest create() => ListTasksRequest();
   static PbList<ListTasksRequest> createRepeated() =>
-      new PbList<ListTasksRequest>();
+      PbList<ListTasksRequest>();
   static ListTasksRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTasksRequest();
+      _defaultInstance = _ReadonlyListTasksRequest();
     return _defaultInstance;
   }
 
@@ -516,7 +509,7 @@ class _ReadonlyListTasksRequest extends ListTasksRequest
     with ReadonlyMessageMixin {}
 
 class ListTasksResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTasksResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTasksResponse')
     ..pp<Task>(1, 'tasks', PbFieldType.PM, Task.$checkItem, Task.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -528,14 +521,14 @@ class ListTasksResponse extends GeneratedMessage {
   ListTasksResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTasksResponse clone() => new ListTasksResponse()..mergeFromMessage(this);
+  ListTasksResponse clone() => ListTasksResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTasksResponse create() => new ListTasksResponse();
+  static ListTasksResponse create() => ListTasksResponse();
   static PbList<ListTasksResponse> createRepeated() =>
-      new PbList<ListTasksResponse>();
+      PbList<ListTasksResponse>();
   static ListTasksResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTasksResponse();
+      _defaultInstance = _ReadonlyListTasksResponse();
     return _defaultInstance;
   }
 
@@ -559,7 +552,7 @@ class _ReadonlyListTasksResponse extends ListTasksResponse
     with ReadonlyMessageMixin {}
 
 class GetTaskRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTaskRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTaskRequest')
     ..aOS(1, 'name')
     ..e<Task_View>(2, 'responseView', PbFieldType.OE,
         Task_View.VIEW_UNSPECIFIED, Task_View.valueOf, Task_View.values)
@@ -572,14 +565,12 @@ class GetTaskRequest extends GeneratedMessage {
   GetTaskRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTaskRequest clone() => new GetTaskRequest()..mergeFromMessage(this);
+  GetTaskRequest clone() => GetTaskRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTaskRequest create() => new GetTaskRequest();
-  static PbList<GetTaskRequest> createRepeated() =>
-      new PbList<GetTaskRequest>();
+  static GetTaskRequest create() => GetTaskRequest();
+  static PbList<GetTaskRequest> createRepeated() => PbList<GetTaskRequest>();
   static GetTaskRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTaskRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetTaskRequest();
     return _defaultInstance;
   }
 
@@ -609,7 +600,7 @@ class _ReadonlyGetTaskRequest extends GetTaskRequest with ReadonlyMessageMixin {
 }
 
 class CreateTaskRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTaskRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateTaskRequest')
     ..aOS(1, 'parent')
     ..a<Task>(2, 'task', PbFieldType.OM, Task.getDefault, Task.create)
     ..e<Task_View>(3, 'responseView', PbFieldType.OE,
@@ -623,14 +614,14 @@ class CreateTaskRequest extends GeneratedMessage {
   CreateTaskRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateTaskRequest clone() => new CreateTaskRequest()..mergeFromMessage(this);
+  CreateTaskRequest clone() => CreateTaskRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateTaskRequest create() => new CreateTaskRequest();
+  static CreateTaskRequest create() => CreateTaskRequest();
   static PbList<CreateTaskRequest> createRepeated() =>
-      new PbList<CreateTaskRequest>();
+      PbList<CreateTaskRequest>();
   static CreateTaskRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTaskRequest();
+      _defaultInstance = _ReadonlyCreateTaskRequest();
     return _defaultInstance;
   }
 
@@ -668,7 +659,7 @@ class _ReadonlyCreateTaskRequest extends CreateTaskRequest
     with ReadonlyMessageMixin {}
 
 class DeleteTaskRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTaskRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteTaskRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -679,14 +670,14 @@ class DeleteTaskRequest extends GeneratedMessage {
   DeleteTaskRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteTaskRequest clone() => new DeleteTaskRequest()..mergeFromMessage(this);
+  DeleteTaskRequest clone() => DeleteTaskRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteTaskRequest create() => new DeleteTaskRequest();
+  static DeleteTaskRequest create() => DeleteTaskRequest();
   static PbList<DeleteTaskRequest> createRepeated() =>
-      new PbList<DeleteTaskRequest>();
+      PbList<DeleteTaskRequest>();
   static DeleteTaskRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTaskRequest();
+      _defaultInstance = _ReadonlyDeleteTaskRequest();
     return _defaultInstance;
   }
 
@@ -708,7 +699,7 @@ class _ReadonlyDeleteTaskRequest extends DeleteTaskRequest
     with ReadonlyMessageMixin {}
 
 class LeaseTasksRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LeaseTasksRequest')
+  static final BuilderInfo _i = BuilderInfo('LeaseTasksRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'maxTasks', PbFieldType.O3)
     ..a<$google$protobuf.Duration>(3, 'leaseDuration', PbFieldType.OM,
@@ -725,14 +716,14 @@ class LeaseTasksRequest extends GeneratedMessage {
   LeaseTasksRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LeaseTasksRequest clone() => new LeaseTasksRequest()..mergeFromMessage(this);
+  LeaseTasksRequest clone() => LeaseTasksRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LeaseTasksRequest create() => new LeaseTasksRequest();
+  static LeaseTasksRequest create() => LeaseTasksRequest();
   static PbList<LeaseTasksRequest> createRepeated() =>
-      new PbList<LeaseTasksRequest>();
+      PbList<LeaseTasksRequest>();
   static LeaseTasksRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLeaseTasksRequest();
+      _defaultInstance = _ReadonlyLeaseTasksRequest();
     return _defaultInstance;
   }
 
@@ -786,7 +777,7 @@ class _ReadonlyLeaseTasksRequest extends LeaseTasksRequest
     with ReadonlyMessageMixin {}
 
 class LeaseTasksResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LeaseTasksResponse')
+  static final BuilderInfo _i = BuilderInfo('LeaseTasksResponse')
     ..pp<Task>(1, 'tasks', PbFieldType.PM, Task.$checkItem, Task.create)
     ..hasRequiredFields = false;
 
@@ -797,15 +788,14 @@ class LeaseTasksResponse extends GeneratedMessage {
   LeaseTasksResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LeaseTasksResponse clone() =>
-      new LeaseTasksResponse()..mergeFromMessage(this);
+  LeaseTasksResponse clone() => LeaseTasksResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LeaseTasksResponse create() => new LeaseTasksResponse();
+  static LeaseTasksResponse create() => LeaseTasksResponse();
   static PbList<LeaseTasksResponse> createRepeated() =>
-      new PbList<LeaseTasksResponse>();
+      PbList<LeaseTasksResponse>();
   static LeaseTasksResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLeaseTasksResponse();
+      _defaultInstance = _ReadonlyLeaseTasksResponse();
     return _defaultInstance;
   }
 
@@ -821,7 +811,7 @@ class _ReadonlyLeaseTasksResponse extends LeaseTasksResponse
     with ReadonlyMessageMixin {}
 
 class AcknowledgeTaskRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AcknowledgeTaskRequest')
+  static final BuilderInfo _i = BuilderInfo('AcknowledgeTaskRequest')
     ..aOS(1, 'name')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -839,14 +829,14 @@ class AcknowledgeTaskRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AcknowledgeTaskRequest clone() =>
-      new AcknowledgeTaskRequest()..mergeFromMessage(this);
+      AcknowledgeTaskRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AcknowledgeTaskRequest create() => new AcknowledgeTaskRequest();
+  static AcknowledgeTaskRequest create() => AcknowledgeTaskRequest();
   static PbList<AcknowledgeTaskRequest> createRepeated() =>
-      new PbList<AcknowledgeTaskRequest>();
+      PbList<AcknowledgeTaskRequest>();
   static AcknowledgeTaskRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAcknowledgeTaskRequest();
+      _defaultInstance = _ReadonlyAcknowledgeTaskRequest();
     return _defaultInstance;
   }
 
@@ -877,7 +867,7 @@ class _ReadonlyAcknowledgeTaskRequest extends AcknowledgeTaskRequest
     with ReadonlyMessageMixin {}
 
 class RenewLeaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RenewLeaseRequest')
+  static final BuilderInfo _i = BuilderInfo('RenewLeaseRequest')
     ..aOS(1, 'name')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -898,14 +888,14 @@ class RenewLeaseRequest extends GeneratedMessage {
   RenewLeaseRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RenewLeaseRequest clone() => new RenewLeaseRequest()..mergeFromMessage(this);
+  RenewLeaseRequest clone() => RenewLeaseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RenewLeaseRequest create() => new RenewLeaseRequest();
+  static RenewLeaseRequest create() => RenewLeaseRequest();
   static PbList<RenewLeaseRequest> createRepeated() =>
-      new PbList<RenewLeaseRequest>();
+      PbList<RenewLeaseRequest>();
   static RenewLeaseRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRenewLeaseRequest();
+      _defaultInstance = _ReadonlyRenewLeaseRequest();
     return _defaultInstance;
   }
 
@@ -951,7 +941,7 @@ class _ReadonlyRenewLeaseRequest extends RenewLeaseRequest
     with ReadonlyMessageMixin {}
 
 class CancelLeaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CancelLeaseRequest')
+  static final BuilderInfo _i = BuilderInfo('CancelLeaseRequest')
     ..aOS(1, 'name')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -970,15 +960,14 @@ class CancelLeaseRequest extends GeneratedMessage {
   CancelLeaseRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CancelLeaseRequest clone() =>
-      new CancelLeaseRequest()..mergeFromMessage(this);
+  CancelLeaseRequest clone() => CancelLeaseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CancelLeaseRequest create() => new CancelLeaseRequest();
+  static CancelLeaseRequest create() => CancelLeaseRequest();
   static PbList<CancelLeaseRequest> createRepeated() =>
-      new PbList<CancelLeaseRequest>();
+      PbList<CancelLeaseRequest>();
   static CancelLeaseRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCancelLeaseRequest();
+      _defaultInstance = _ReadonlyCancelLeaseRequest();
     return _defaultInstance;
   }
 
@@ -1016,7 +1005,7 @@ class _ReadonlyCancelLeaseRequest extends CancelLeaseRequest
     with ReadonlyMessageMixin {}
 
 class RunTaskRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RunTaskRequest')
+  static final BuilderInfo _i = BuilderInfo('RunTaskRequest')
     ..aOS(1, 'name')
     ..e<Task_View>(2, 'responseView', PbFieldType.OE,
         Task_View.VIEW_UNSPECIFIED, Task_View.valueOf, Task_View.values)
@@ -1029,14 +1018,12 @@ class RunTaskRequest extends GeneratedMessage {
   RunTaskRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RunTaskRequest clone() => new RunTaskRequest()..mergeFromMessage(this);
+  RunTaskRequest clone() => RunTaskRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RunTaskRequest create() => new RunTaskRequest();
-  static PbList<RunTaskRequest> createRepeated() =>
-      new PbList<RunTaskRequest>();
+  static RunTaskRequest create() => RunTaskRequest();
+  static PbList<RunTaskRequest> createRepeated() => PbList<RunTaskRequest>();
   static RunTaskRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRunTaskRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRunTaskRequest();
     return _defaultInstance;
   }
 
@@ -1071,129 +1058,129 @@ class CloudTasksApi {
 
   Future<ListQueuesResponse> listQueues(
       ClientContext ctx, ListQueuesRequest request) {
-    var emptyResponse = new ListQueuesResponse();
+    var emptyResponse = ListQueuesResponse();
     return _client.invoke<ListQueuesResponse>(
         ctx, 'CloudTasks', 'ListQueues', request, emptyResponse);
   }
 
   Future<Queue> getQueue(ClientContext ctx, GetQueueRequest request) {
-    var emptyResponse = new Queue();
+    var emptyResponse = Queue();
     return _client.invoke<Queue>(
         ctx, 'CloudTasks', 'GetQueue', request, emptyResponse);
   }
 
   Future<Queue> createQueue(ClientContext ctx, CreateQueueRequest request) {
-    var emptyResponse = new Queue();
+    var emptyResponse = Queue();
     return _client.invoke<Queue>(
         ctx, 'CloudTasks', 'CreateQueue', request, emptyResponse);
   }
 
   Future<Queue> updateQueue(ClientContext ctx, UpdateQueueRequest request) {
-    var emptyResponse = new Queue();
+    var emptyResponse = Queue();
     return _client.invoke<Queue>(
         ctx, 'CloudTasks', 'UpdateQueue', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteQueue(
       ClientContext ctx, DeleteQueueRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'CloudTasks', 'DeleteQueue', request, emptyResponse);
   }
 
   Future<Queue> purgeQueue(ClientContext ctx, PurgeQueueRequest request) {
-    var emptyResponse = new Queue();
+    var emptyResponse = Queue();
     return _client.invoke<Queue>(
         ctx, 'CloudTasks', 'PurgeQueue', request, emptyResponse);
   }
 
   Future<Queue> pauseQueue(ClientContext ctx, PauseQueueRequest request) {
-    var emptyResponse = new Queue();
+    var emptyResponse = Queue();
     return _client.invoke<Queue>(
         ctx, 'CloudTasks', 'PauseQueue', request, emptyResponse);
   }
 
   Future<Queue> resumeQueue(ClientContext ctx, ResumeQueueRequest request) {
-    var emptyResponse = new Queue();
+    var emptyResponse = Queue();
     return _client.invoke<Queue>(
         ctx, 'CloudTasks', 'ResumeQueue', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> getIamPolicy(
       ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'CloudTasks', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> setIamPolicy(
       ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'CloudTasks', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
     return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
         ctx, 'CloudTasks', 'TestIamPermissions', request, emptyResponse);
   }
 
   Future<ListTasksResponse> listTasks(
       ClientContext ctx, ListTasksRequest request) {
-    var emptyResponse = new ListTasksResponse();
+    var emptyResponse = ListTasksResponse();
     return _client.invoke<ListTasksResponse>(
         ctx, 'CloudTasks', 'ListTasks', request, emptyResponse);
   }
 
   Future<Task> getTask(ClientContext ctx, GetTaskRequest request) {
-    var emptyResponse = new Task();
+    var emptyResponse = Task();
     return _client.invoke<Task>(
         ctx, 'CloudTasks', 'GetTask', request, emptyResponse);
   }
 
   Future<Task> createTask(ClientContext ctx, CreateTaskRequest request) {
-    var emptyResponse = new Task();
+    var emptyResponse = Task();
     return _client.invoke<Task>(
         ctx, 'CloudTasks', 'CreateTask', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteTask(
       ClientContext ctx, DeleteTaskRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'CloudTasks', 'DeleteTask', request, emptyResponse);
   }
 
   Future<LeaseTasksResponse> leaseTasks(
       ClientContext ctx, LeaseTasksRequest request) {
-    var emptyResponse = new LeaseTasksResponse();
+    var emptyResponse = LeaseTasksResponse();
     return _client.invoke<LeaseTasksResponse>(
         ctx, 'CloudTasks', 'LeaseTasks', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> acknowledgeTask(
       ClientContext ctx, AcknowledgeTaskRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'CloudTasks', 'AcknowledgeTask', request, emptyResponse);
   }
 
   Future<Task> renewLease(ClientContext ctx, RenewLeaseRequest request) {
-    var emptyResponse = new Task();
+    var emptyResponse = Task();
     return _client.invoke<Task>(
         ctx, 'CloudTasks', 'RenewLease', request, emptyResponse);
   }
 
   Future<Task> cancelLease(ClientContext ctx, CancelLeaseRequest request) {
-    var emptyResponse = new Task();
+    var emptyResponse = Task();
     return _client.invoke<Task>(
         ctx, 'CloudTasks', 'CancelLease', request, emptyResponse);
   }
 
   Future<Task> runTask(ClientContext ctx, RunTaskRequest request) {
-    var emptyResponse = new Task();
+    var emptyResponse = Task();
     return _client.invoke<Task>(
         ctx, 'CloudTasks', 'RunTask', request, emptyResponse);
   }

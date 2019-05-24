@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import 'authorization_config.pb.dart';
 
 class Experimental extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Experimental')
+  static final BuilderInfo _i = BuilderInfo('Experimental')
     ..a<AuthorizationConfig>(8, 'authorization', PbFieldType.OM,
         AuthorizationConfig.getDefault, AuthorizationConfig.create)
     ..hasRequiredFields = false;
@@ -23,13 +23,12 @@ class Experimental extends GeneratedMessage {
   Experimental.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Experimental clone() => new Experimental()..mergeFromMessage(this);
+  Experimental clone() => Experimental()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Experimental create() => new Experimental();
-  static PbList<Experimental> createRepeated() => new PbList<Experimental>();
+  static Experimental create() => Experimental();
+  static PbList<Experimental> createRepeated() => PbList<Experimental>();
   static Experimental getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExperimental();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyExperimental();
     return _defaultInstance;
   }
 

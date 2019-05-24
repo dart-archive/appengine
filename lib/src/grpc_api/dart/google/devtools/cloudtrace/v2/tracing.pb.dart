@@ -13,7 +13,7 @@ import 'trace.pb.dart';
 import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class BatchWriteSpansRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchWriteSpansRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchWriteSpansRequest')
     ..aOS(1, 'name')
     ..pp<Span>(2, 'spans', PbFieldType.PM, Span.$checkItem, Span.create)
     ..hasRequiredFields = false;
@@ -26,14 +26,14 @@ class BatchWriteSpansRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchWriteSpansRequest clone() =>
-      new BatchWriteSpansRequest()..mergeFromMessage(this);
+      BatchWriteSpansRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchWriteSpansRequest create() => new BatchWriteSpansRequest();
+  static BatchWriteSpansRequest create() => BatchWriteSpansRequest();
   static PbList<BatchWriteSpansRequest> createRepeated() =>
-      new PbList<BatchWriteSpansRequest>();
+      PbList<BatchWriteSpansRequest>();
   static BatchWriteSpansRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchWriteSpansRequest();
+      _defaultInstance = _ReadonlyBatchWriteSpansRequest();
     return _defaultInstance;
   }
 
@@ -63,13 +63,13 @@ class TraceServiceApi {
 
   Future<$google$protobuf.Empty> batchWriteSpans(
       ClientContext ctx, BatchWriteSpansRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'TraceService', 'BatchWriteSpans', request, emptyResponse);
   }
 
   Future<Span> createSpan(ClientContext ctx, Span request) {
-    var emptyResponse = new Span();
+    var emptyResponse = Span();
     return _client.invoke<Span>(
         ctx, 'TraceService', 'CreateSpan', request, emptyResponse);
   }

@@ -9,21 +9,21 @@ import 'package:protobuf/protobuf.dart';
 
 class ComparisonType extends ProtobufEnum {
   static const ComparisonType COMPARISON_UNSPECIFIED =
-      const ComparisonType._(0, 'COMPARISON_UNSPECIFIED');
+      ComparisonType._(0, 'COMPARISON_UNSPECIFIED');
   static const ComparisonType COMPARISON_GT =
-      const ComparisonType._(1, 'COMPARISON_GT');
+      ComparisonType._(1, 'COMPARISON_GT');
   static const ComparisonType COMPARISON_GE =
-      const ComparisonType._(2, 'COMPARISON_GE');
+      ComparisonType._(2, 'COMPARISON_GE');
   static const ComparisonType COMPARISON_LT =
-      const ComparisonType._(3, 'COMPARISON_LT');
+      ComparisonType._(3, 'COMPARISON_LT');
   static const ComparisonType COMPARISON_LE =
-      const ComparisonType._(4, 'COMPARISON_LE');
+      ComparisonType._(4, 'COMPARISON_LE');
   static const ComparisonType COMPARISON_EQ =
-      const ComparisonType._(5, 'COMPARISON_EQ');
+      ComparisonType._(5, 'COMPARISON_EQ');
   static const ComparisonType COMPARISON_NE =
-      const ComparisonType._(6, 'COMPARISON_NE');
+      ComparisonType._(6, 'COMPARISON_NE');
 
-  static const List<ComparisonType> values = const <ComparisonType>[
+  static const List<ComparisonType> values = <ComparisonType>[
     COMPARISON_UNSPECIFIED,
     COMPARISON_GT,
     COMPARISON_GE,
@@ -44,13 +44,13 @@ class ComparisonType extends ProtobufEnum {
 
 class ServiceTier extends ProtobufEnum {
   static const ServiceTier SERVICE_TIER_UNSPECIFIED =
-      const ServiceTier._(0, 'SERVICE_TIER_UNSPECIFIED');
+      ServiceTier._(0, 'SERVICE_TIER_UNSPECIFIED');
   static const ServiceTier SERVICE_TIER_BASIC =
-      const ServiceTier._(1, 'SERVICE_TIER_BASIC');
+      ServiceTier._(1, 'SERVICE_TIER_BASIC');
   static const ServiceTier SERVICE_TIER_PREMIUM =
-      const ServiceTier._(2, 'SERVICE_TIER_PREMIUM');
+      ServiceTier._(2, 'SERVICE_TIER_PREMIUM');
 
-  static const List<ServiceTier> values = const <ServiceTier>[
+  static const List<ServiceTier> values = <ServiceTier>[
     SERVICE_TIER_UNSPECIFIED,
     SERVICE_TIER_BASIC,
     SERVICE_TIER_PREMIUM,
@@ -67,45 +67,45 @@ class ServiceTier extends ProtobufEnum {
 
 class Aggregation_Aligner extends ProtobufEnum {
   static const Aggregation_Aligner ALIGN_NONE =
-      const Aggregation_Aligner._(0, 'ALIGN_NONE');
+      Aggregation_Aligner._(0, 'ALIGN_NONE');
   static const Aggregation_Aligner ALIGN_DELTA =
-      const Aggregation_Aligner._(1, 'ALIGN_DELTA');
+      Aggregation_Aligner._(1, 'ALIGN_DELTA');
   static const Aggregation_Aligner ALIGN_RATE =
-      const Aggregation_Aligner._(2, 'ALIGN_RATE');
+      Aggregation_Aligner._(2, 'ALIGN_RATE');
   static const Aggregation_Aligner ALIGN_INTERPOLATE =
-      const Aggregation_Aligner._(3, 'ALIGN_INTERPOLATE');
+      Aggregation_Aligner._(3, 'ALIGN_INTERPOLATE');
   static const Aggregation_Aligner ALIGN_NEXT_OLDER =
-      const Aggregation_Aligner._(4, 'ALIGN_NEXT_OLDER');
+      Aggregation_Aligner._(4, 'ALIGN_NEXT_OLDER');
   static const Aggregation_Aligner ALIGN_MIN =
-      const Aggregation_Aligner._(10, 'ALIGN_MIN');
+      Aggregation_Aligner._(10, 'ALIGN_MIN');
   static const Aggregation_Aligner ALIGN_MAX =
-      const Aggregation_Aligner._(11, 'ALIGN_MAX');
+      Aggregation_Aligner._(11, 'ALIGN_MAX');
   static const Aggregation_Aligner ALIGN_MEAN =
-      const Aggregation_Aligner._(12, 'ALIGN_MEAN');
+      Aggregation_Aligner._(12, 'ALIGN_MEAN');
   static const Aggregation_Aligner ALIGN_COUNT =
-      const Aggregation_Aligner._(13, 'ALIGN_COUNT');
+      Aggregation_Aligner._(13, 'ALIGN_COUNT');
   static const Aggregation_Aligner ALIGN_SUM =
-      const Aggregation_Aligner._(14, 'ALIGN_SUM');
+      Aggregation_Aligner._(14, 'ALIGN_SUM');
   static const Aggregation_Aligner ALIGN_STDDEV =
-      const Aggregation_Aligner._(15, 'ALIGN_STDDEV');
+      Aggregation_Aligner._(15, 'ALIGN_STDDEV');
   static const Aggregation_Aligner ALIGN_COUNT_TRUE =
-      const Aggregation_Aligner._(16, 'ALIGN_COUNT_TRUE');
+      Aggregation_Aligner._(16, 'ALIGN_COUNT_TRUE');
   static const Aggregation_Aligner ALIGN_COUNT_FALSE =
-      const Aggregation_Aligner._(24, 'ALIGN_COUNT_FALSE');
+      Aggregation_Aligner._(24, 'ALIGN_COUNT_FALSE');
   static const Aggregation_Aligner ALIGN_FRACTION_TRUE =
-      const Aggregation_Aligner._(17, 'ALIGN_FRACTION_TRUE');
+      Aggregation_Aligner._(17, 'ALIGN_FRACTION_TRUE');
   static const Aggregation_Aligner ALIGN_PERCENTILE_99 =
-      const Aggregation_Aligner._(18, 'ALIGN_PERCENTILE_99');
+      Aggregation_Aligner._(18, 'ALIGN_PERCENTILE_99');
   static const Aggregation_Aligner ALIGN_PERCENTILE_95 =
-      const Aggregation_Aligner._(19, 'ALIGN_PERCENTILE_95');
+      Aggregation_Aligner._(19, 'ALIGN_PERCENTILE_95');
   static const Aggregation_Aligner ALIGN_PERCENTILE_50 =
-      const Aggregation_Aligner._(20, 'ALIGN_PERCENTILE_50');
+      Aggregation_Aligner._(20, 'ALIGN_PERCENTILE_50');
   static const Aggregation_Aligner ALIGN_PERCENTILE_05 =
-      const Aggregation_Aligner._(21, 'ALIGN_PERCENTILE_05');
+      Aggregation_Aligner._(21, 'ALIGN_PERCENTILE_05');
   static const Aggregation_Aligner ALIGN_PERCENT_CHANGE =
-      const Aggregation_Aligner._(23, 'ALIGN_PERCENT_CHANGE');
+      Aggregation_Aligner._(23, 'ALIGN_PERCENT_CHANGE');
 
-  static const List<Aggregation_Aligner> values = const <Aggregation_Aligner>[
+  static const List<Aggregation_Aligner> values = <Aggregation_Aligner>[
     ALIGN_NONE,
     ALIGN_DELTA,
     ALIGN_RATE,
@@ -139,35 +139,35 @@ class Aggregation_Aligner extends ProtobufEnum {
 
 class Aggregation_Reducer extends ProtobufEnum {
   static const Aggregation_Reducer REDUCE_NONE =
-      const Aggregation_Reducer._(0, 'REDUCE_NONE');
+      Aggregation_Reducer._(0, 'REDUCE_NONE');
   static const Aggregation_Reducer REDUCE_MEAN =
-      const Aggregation_Reducer._(1, 'REDUCE_MEAN');
+      Aggregation_Reducer._(1, 'REDUCE_MEAN');
   static const Aggregation_Reducer REDUCE_MIN =
-      const Aggregation_Reducer._(2, 'REDUCE_MIN');
+      Aggregation_Reducer._(2, 'REDUCE_MIN');
   static const Aggregation_Reducer REDUCE_MAX =
-      const Aggregation_Reducer._(3, 'REDUCE_MAX');
+      Aggregation_Reducer._(3, 'REDUCE_MAX');
   static const Aggregation_Reducer REDUCE_SUM =
-      const Aggregation_Reducer._(4, 'REDUCE_SUM');
+      Aggregation_Reducer._(4, 'REDUCE_SUM');
   static const Aggregation_Reducer REDUCE_STDDEV =
-      const Aggregation_Reducer._(5, 'REDUCE_STDDEV');
+      Aggregation_Reducer._(5, 'REDUCE_STDDEV');
   static const Aggregation_Reducer REDUCE_COUNT =
-      const Aggregation_Reducer._(6, 'REDUCE_COUNT');
+      Aggregation_Reducer._(6, 'REDUCE_COUNT');
   static const Aggregation_Reducer REDUCE_COUNT_TRUE =
-      const Aggregation_Reducer._(7, 'REDUCE_COUNT_TRUE');
+      Aggregation_Reducer._(7, 'REDUCE_COUNT_TRUE');
   static const Aggregation_Reducer REDUCE_COUNT_FALSE =
-      const Aggregation_Reducer._(15, 'REDUCE_COUNT_FALSE');
+      Aggregation_Reducer._(15, 'REDUCE_COUNT_FALSE');
   static const Aggregation_Reducer REDUCE_FRACTION_TRUE =
-      const Aggregation_Reducer._(8, 'REDUCE_FRACTION_TRUE');
+      Aggregation_Reducer._(8, 'REDUCE_FRACTION_TRUE');
   static const Aggregation_Reducer REDUCE_PERCENTILE_99 =
-      const Aggregation_Reducer._(9, 'REDUCE_PERCENTILE_99');
+      Aggregation_Reducer._(9, 'REDUCE_PERCENTILE_99');
   static const Aggregation_Reducer REDUCE_PERCENTILE_95 =
-      const Aggregation_Reducer._(10, 'REDUCE_PERCENTILE_95');
+      Aggregation_Reducer._(10, 'REDUCE_PERCENTILE_95');
   static const Aggregation_Reducer REDUCE_PERCENTILE_50 =
-      const Aggregation_Reducer._(11, 'REDUCE_PERCENTILE_50');
+      Aggregation_Reducer._(11, 'REDUCE_PERCENTILE_50');
   static const Aggregation_Reducer REDUCE_PERCENTILE_05 =
-      const Aggregation_Reducer._(12, 'REDUCE_PERCENTILE_05');
+      Aggregation_Reducer._(12, 'REDUCE_PERCENTILE_05');
 
-  static const List<Aggregation_Reducer> values = const <Aggregation_Reducer>[
+  static const List<Aggregation_Reducer> values = <Aggregation_Reducer>[
     REDUCE_NONE,
     REDUCE_MEAN,
     REDUCE_MIN,

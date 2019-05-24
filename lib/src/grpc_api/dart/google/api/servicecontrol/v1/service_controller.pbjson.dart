@@ -13,11 +13,11 @@ import '../../../protobuf/struct.pbjson.dart' as $google$protobuf;
 import 'check_error.pbjson.dart';
 import '../../../rpc/status.pbjson.dart' as $google$rpc;
 
-const CheckRequest$json = const {
+const CheckRequest$json = {
   '1': 'CheckRequest',
-  '2': const [
-    const {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
-    const {
+  '2': [
+    {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
+    {
       '1': 'operation',
       '3': 2,
       '4': 1,
@@ -25,21 +25,15 @@ const CheckRequest$json = const {
       '6': '.google.api.servicecontrol.v1.Operation',
       '10': 'operation'
     },
-    const {
-      '1': 'service_config_id',
-      '3': 4,
-      '4': 1,
-      '5': 9,
-      '10': 'serviceConfigId'
-    },
+    {'1': 'service_config_id', '3': 4, '4': 1, '5': 9, '10': 'serviceConfigId'},
   ],
 };
 
-const CheckResponse$json = const {
+const CheckResponse$json = {
   '1': 'CheckResponse',
-  '2': const [
-    const {'1': 'operation_id', '3': 1, '4': 1, '5': 9, '10': 'operationId'},
-    const {
+  '2': [
+    {'1': 'operation_id', '3': 1, '4': 1, '5': 9, '10': 'operationId'},
+    {
       '1': 'check_errors',
       '3': 2,
       '4': 3,
@@ -47,14 +41,8 @@ const CheckResponse$json = const {
       '6': '.google.api.servicecontrol.v1.CheckError',
       '10': 'checkErrors'
     },
-    const {
-      '1': 'service_config_id',
-      '3': 5,
-      '4': 1,
-      '5': 9,
-      '10': 'serviceConfigId'
-    },
-    const {
+    {'1': 'service_config_id', '3': 5, '4': 1, '5': 9, '10': 'serviceConfigId'},
+    {
       '1': 'check_info',
       '3': 6,
       '4': 1,
@@ -63,13 +51,13 @@ const CheckResponse$json = const {
       '10': 'checkInfo'
     },
   ],
-  '3': const [CheckResponse_CheckInfo$json, CheckResponse_ConsumerInfo$json],
+  '3': [CheckResponse_CheckInfo$json, CheckResponse_ConsumerInfo$json],
 };
 
-const CheckResponse_CheckInfo$json = const {
+const CheckResponse_CheckInfo$json = {
   '1': 'CheckInfo',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'consumer_info',
       '3': 2,
       '4': 1,
@@ -80,24 +68,18 @@ const CheckResponse_CheckInfo$json = const {
   ],
 };
 
-const CheckResponse_ConsumerInfo$json = const {
+const CheckResponse_ConsumerInfo$json = {
   '1': 'ConsumerInfo',
-  '2': const [
-    const {
-      '1': 'project_number',
-      '3': 1,
-      '4': 1,
-      '5': 3,
-      '10': 'projectNumber'
-    },
+  '2': [
+    {'1': 'project_number', '3': 1, '4': 1, '5': 3, '10': 'projectNumber'},
   ],
 };
 
-const ReportRequest$json = const {
+const ReportRequest$json = {
   '1': 'ReportRequest',
-  '2': const [
-    const {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
-    const {
+  '2': [
+    {'1': 'service_name', '3': 1, '4': 1, '5': 9, '10': 'serviceName'},
+    {
       '1': 'operations',
       '3': 2,
       '4': 3,
@@ -105,20 +87,14 @@ const ReportRequest$json = const {
       '6': '.google.api.servicecontrol.v1.Operation',
       '10': 'operations'
     },
-    const {
-      '1': 'service_config_id',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '10': 'serviceConfigId'
-    },
+    {'1': 'service_config_id', '3': 3, '4': 1, '5': 9, '10': 'serviceConfigId'},
   ],
 };
 
-const ReportResponse$json = const {
+const ReportResponse$json = {
   '1': 'ReportResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'report_errors',
       '3': 1,
       '4': 3,
@@ -126,22 +102,16 @@ const ReportResponse$json = const {
       '6': '.google.api.servicecontrol.v1.ReportResponse.ReportError',
       '10': 'reportErrors'
     },
-    const {
-      '1': 'service_config_id',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'serviceConfigId'
-    },
+    {'1': 'service_config_id', '3': 2, '4': 1, '5': 9, '10': 'serviceConfigId'},
   ],
-  '3': const [ReportResponse_ReportError$json],
+  '3': [ReportResponse_ReportError$json],
 };
 
-const ReportResponse_ReportError$json = const {
+const ReportResponse_ReportError$json = {
   '1': 'ReportError',
-  '2': const [
-    const {'1': 'operation_id', '3': 1, '4': 1, '5': 9, '10': 'operationId'},
-    const {
+  '2': [
+    {'1': 'operation_id', '3': 1, '4': 1, '5': 9, '10': 'operationId'},
+    {
       '1': 'status',
       '3': 2,
       '4': 1,
@@ -152,25 +122,25 @@ const ReportResponse_ReportError$json = const {
   ],
 };
 
-const ServiceController$json = const {
+const ServiceController$json = {
   '1': 'ServiceController',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'Check',
       '2': '.google.api.servicecontrol.v1.CheckRequest',
       '3': '.google.api.servicecontrol.v1.CheckResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'Report',
       '2': '.google.api.servicecontrol.v1.ReportRequest',
       '3': '.google.api.servicecontrol.v1.ReportResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const ServiceController$messageJson = const {
+const ServiceController$messageJson = {
   '.google.api.servicecontrol.v1.CheckRequest': CheckRequest$json,
   '.google.api.servicecontrol.v1.Operation': Operation$json,
   '.google.protobuf.Timestamp': $google$protobuf.Timestamp$json,

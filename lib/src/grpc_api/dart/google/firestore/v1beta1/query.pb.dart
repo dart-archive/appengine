@@ -17,7 +17,7 @@ export 'query.pbenum.dart';
 
 class StructuredQuery_CollectionSelector extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('StructuredQuery_CollectionSelector')
+      BuilderInfo('StructuredQuery_CollectionSelector')
         ..aOS(2, 'collectionId')
         ..aOB(3, 'allDescendants')
         ..hasRequiredFields = false;
@@ -30,15 +30,15 @@ class StructuredQuery_CollectionSelector extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StructuredQuery_CollectionSelector clone() =>
-      new StructuredQuery_CollectionSelector()..mergeFromMessage(this);
+      StructuredQuery_CollectionSelector()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static StructuredQuery_CollectionSelector create() =>
-      new StructuredQuery_CollectionSelector();
+      StructuredQuery_CollectionSelector();
   static PbList<StructuredQuery_CollectionSelector> createRepeated() =>
-      new PbList<StructuredQuery_CollectionSelector>();
+      PbList<StructuredQuery_CollectionSelector>();
   static StructuredQuery_CollectionSelector getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery_CollectionSelector();
+      _defaultInstance = _ReadonlyStructuredQuery_CollectionSelector();
     return _defaultInstance;
   }
 
@@ -69,7 +69,7 @@ class _ReadonlyStructuredQuery_CollectionSelector
     extends StructuredQuery_CollectionSelector with ReadonlyMessageMixin {}
 
 class StructuredQuery_Filter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StructuredQuery_Filter')
+  static final BuilderInfo _i = BuilderInfo('StructuredQuery_Filter')
     ..a<StructuredQuery_CompositeFilter>(
         1,
         'compositeFilter',
@@ -98,14 +98,14 @@ class StructuredQuery_Filter extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StructuredQuery_Filter clone() =>
-      new StructuredQuery_Filter()..mergeFromMessage(this);
+      StructuredQuery_Filter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StructuredQuery_Filter create() => new StructuredQuery_Filter();
+  static StructuredQuery_Filter create() => StructuredQuery_Filter();
   static PbList<StructuredQuery_Filter> createRepeated() =>
-      new PbList<StructuredQuery_Filter>();
+      PbList<StructuredQuery_Filter>();
   static StructuredQuery_Filter getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery_Filter();
+      _defaultInstance = _ReadonlyStructuredQuery_Filter();
     return _defaultInstance;
   }
 
@@ -144,18 +144,17 @@ class _ReadonlyStructuredQuery_Filter extends StructuredQuery_Filter
     with ReadonlyMessageMixin {}
 
 class StructuredQuery_CompositeFilter extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('StructuredQuery_CompositeFilter')
-        ..e<StructuredQuery_CompositeFilter_Operator>(
-            1,
-            'op',
-            PbFieldType.OE,
-            StructuredQuery_CompositeFilter_Operator.OPERATOR_UNSPECIFIED,
-            StructuredQuery_CompositeFilter_Operator.valueOf,
-            StructuredQuery_CompositeFilter_Operator.values)
-        ..pp<StructuredQuery_Filter>(2, 'filters', PbFieldType.PM,
-            StructuredQuery_Filter.$checkItem, StructuredQuery_Filter.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('StructuredQuery_CompositeFilter')
+    ..e<StructuredQuery_CompositeFilter_Operator>(
+        1,
+        'op',
+        PbFieldType.OE,
+        StructuredQuery_CompositeFilter_Operator.OPERATOR_UNSPECIFIED,
+        StructuredQuery_CompositeFilter_Operator.valueOf,
+        StructuredQuery_CompositeFilter_Operator.values)
+    ..pp<StructuredQuery_Filter>(2, 'filters', PbFieldType.PM,
+        StructuredQuery_Filter.$checkItem, StructuredQuery_Filter.create)
+    ..hasRequiredFields = false;
 
   StructuredQuery_CompositeFilter() : super();
   StructuredQuery_CompositeFilter.fromBuffer(List<int> i,
@@ -165,15 +164,15 @@ class StructuredQuery_CompositeFilter extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StructuredQuery_CompositeFilter clone() =>
-      new StructuredQuery_CompositeFilter()..mergeFromMessage(this);
+      StructuredQuery_CompositeFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static StructuredQuery_CompositeFilter create() =>
-      new StructuredQuery_CompositeFilter();
+      StructuredQuery_CompositeFilter();
   static PbList<StructuredQuery_CompositeFilter> createRepeated() =>
-      new PbList<StructuredQuery_CompositeFilter>();
+      PbList<StructuredQuery_CompositeFilter>();
   static StructuredQuery_CompositeFilter getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery_CompositeFilter();
+      _defaultInstance = _ReadonlyStructuredQuery_CompositeFilter();
     return _defaultInstance;
   }
 
@@ -198,7 +197,7 @@ class _ReadonlyStructuredQuery_CompositeFilter
     extends StructuredQuery_CompositeFilter with ReadonlyMessageMixin {}
 
 class StructuredQuery_FieldFilter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StructuredQuery_FieldFilter')
+  static final BuilderInfo _i = BuilderInfo('StructuredQuery_FieldFilter')
     ..a<StructuredQuery_FieldReference>(
         1,
         'field_1',
@@ -223,15 +222,14 @@ class StructuredQuery_FieldFilter extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StructuredQuery_FieldFilter clone() =>
-      new StructuredQuery_FieldFilter()..mergeFromMessage(this);
+      StructuredQuery_FieldFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StructuredQuery_FieldFilter create() =>
-      new StructuredQuery_FieldFilter();
+  static StructuredQuery_FieldFilter create() => StructuredQuery_FieldFilter();
   static PbList<StructuredQuery_FieldFilter> createRepeated() =>
-      new PbList<StructuredQuery_FieldFilter>();
+      PbList<StructuredQuery_FieldFilter>();
   static StructuredQuery_FieldFilter getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery_FieldFilter();
+      _defaultInstance = _ReadonlyStructuredQuery_FieldFilter();
     return _defaultInstance;
   }
 
@@ -270,7 +268,7 @@ class _ReadonlyStructuredQuery_FieldFilter extends StructuredQuery_FieldFilter
     with ReadonlyMessageMixin {}
 
 class StructuredQuery_UnaryFilter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StructuredQuery_UnaryFilter')
+  static final BuilderInfo _i = BuilderInfo('StructuredQuery_UnaryFilter')
     ..e<StructuredQuery_UnaryFilter_Operator>(
         1,
         'op',
@@ -294,15 +292,14 @@ class StructuredQuery_UnaryFilter extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StructuredQuery_UnaryFilter clone() =>
-      new StructuredQuery_UnaryFilter()..mergeFromMessage(this);
+      StructuredQuery_UnaryFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StructuredQuery_UnaryFilter create() =>
-      new StructuredQuery_UnaryFilter();
+  static StructuredQuery_UnaryFilter create() => StructuredQuery_UnaryFilter();
   static PbList<StructuredQuery_UnaryFilter> createRepeated() =>
-      new PbList<StructuredQuery_UnaryFilter>();
+      PbList<StructuredQuery_UnaryFilter>();
   static StructuredQuery_UnaryFilter getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery_UnaryFilter();
+      _defaultInstance = _ReadonlyStructuredQuery_UnaryFilter();
     return _defaultInstance;
   }
 
@@ -333,7 +330,7 @@ class _ReadonlyStructuredQuery_UnaryFilter extends StructuredQuery_UnaryFilter
     with ReadonlyMessageMixin {}
 
 class StructuredQuery_Order extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StructuredQuery_Order')
+  static final BuilderInfo _i = BuilderInfo('StructuredQuery_Order')
     ..a<StructuredQuery_FieldReference>(
         1,
         'field_1',
@@ -357,14 +354,14 @@ class StructuredQuery_Order extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StructuredQuery_Order clone() =>
-      new StructuredQuery_Order()..mergeFromMessage(this);
+      StructuredQuery_Order()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StructuredQuery_Order create() => new StructuredQuery_Order();
+  static StructuredQuery_Order create() => StructuredQuery_Order();
   static PbList<StructuredQuery_Order> createRepeated() =>
-      new PbList<StructuredQuery_Order>();
+      PbList<StructuredQuery_Order>();
   static StructuredQuery_Order getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery_Order();
+      _defaultInstance = _ReadonlyStructuredQuery_Order();
     return _defaultInstance;
   }
 
@@ -395,10 +392,9 @@ class _ReadonlyStructuredQuery_Order extends StructuredQuery_Order
     with ReadonlyMessageMixin {}
 
 class StructuredQuery_FieldReference extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('StructuredQuery_FieldReference')
-        ..aOS(2, 'fieldPath')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('StructuredQuery_FieldReference')
+    ..aOS(2, 'fieldPath')
+    ..hasRequiredFields = false;
 
   StructuredQuery_FieldReference() : super();
   StructuredQuery_FieldReference.fromBuffer(List<int> i,
@@ -408,15 +404,15 @@ class StructuredQuery_FieldReference extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StructuredQuery_FieldReference clone() =>
-      new StructuredQuery_FieldReference()..mergeFromMessage(this);
+      StructuredQuery_FieldReference()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static StructuredQuery_FieldReference create() =>
-      new StructuredQuery_FieldReference();
+      StructuredQuery_FieldReference();
   static PbList<StructuredQuery_FieldReference> createRepeated() =>
-      new PbList<StructuredQuery_FieldReference>();
+      PbList<StructuredQuery_FieldReference>();
   static StructuredQuery_FieldReference getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery_FieldReference();
+      _defaultInstance = _ReadonlyStructuredQuery_FieldReference();
     return _defaultInstance;
   }
 
@@ -439,7 +435,7 @@ class _ReadonlyStructuredQuery_FieldReference
     extends StructuredQuery_FieldReference with ReadonlyMessageMixin {}
 
 class StructuredQuery_Projection extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StructuredQuery_Projection')
+  static final BuilderInfo _i = BuilderInfo('StructuredQuery_Projection')
     ..pp<StructuredQuery_FieldReference>(
         2,
         'fields',
@@ -456,15 +452,14 @@ class StructuredQuery_Projection extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StructuredQuery_Projection clone() =>
-      new StructuredQuery_Projection()..mergeFromMessage(this);
+      StructuredQuery_Projection()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StructuredQuery_Projection create() =>
-      new StructuredQuery_Projection();
+  static StructuredQuery_Projection create() => StructuredQuery_Projection();
   static PbList<StructuredQuery_Projection> createRepeated() =>
-      new PbList<StructuredQuery_Projection>();
+      PbList<StructuredQuery_Projection>();
   static StructuredQuery_Projection getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery_Projection();
+      _defaultInstance = _ReadonlyStructuredQuery_Projection();
     return _defaultInstance;
   }
 
@@ -481,7 +476,7 @@ class _ReadonlyStructuredQuery_Projection extends StructuredQuery_Projection
     with ReadonlyMessageMixin {}
 
 class StructuredQuery extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StructuredQuery')
+  static final BuilderInfo _i = BuilderInfo('StructuredQuery')
     ..a<StructuredQuery_Projection>(
         1,
         'select',
@@ -516,14 +511,12 @@ class StructuredQuery extends GeneratedMessage {
   StructuredQuery.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StructuredQuery clone() => new StructuredQuery()..mergeFromMessage(this);
+  StructuredQuery clone() => StructuredQuery()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StructuredQuery create() => new StructuredQuery();
-  static PbList<StructuredQuery> createRepeated() =>
-      new PbList<StructuredQuery>();
+  static StructuredQuery create() => StructuredQuery();
+  static PbList<StructuredQuery> createRepeated() => PbList<StructuredQuery>();
   static StructuredQuery getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructuredQuery();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStructuredQuery();
     return _defaultInstance;
   }
 
@@ -589,7 +582,7 @@ class _ReadonlyStructuredQuery extends StructuredQuery
     with ReadonlyMessageMixin {}
 
 class Cursor extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cursor')
+  static final BuilderInfo _i = BuilderInfo('Cursor')
     ..pp<Value>(1, 'values', PbFieldType.PM, Value.$checkItem, Value.create)
     ..aOB(2, 'before')
     ..hasRequiredFields = false;
@@ -600,12 +593,12 @@ class Cursor extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Cursor.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Cursor clone() => new Cursor()..mergeFromMessage(this);
+  Cursor clone() => Cursor()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Cursor create() => new Cursor();
-  static PbList<Cursor> createRepeated() => new PbList<Cursor>();
+  static Cursor create() => Cursor();
+  static PbList<Cursor> createRepeated() => PbList<Cursor>();
   static Cursor getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCursor();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCursor();
     return _defaultInstance;
   }
 

@@ -11,67 +11,67 @@ import '../../../../rpc/status.pbjson.dart' as $google$rpc;
 import '../../../../protobuf/duration.pbjson.dart' as $google$protobuf;
 import '../../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const BigtableTableService$json = const {
+const BigtableTableService$json = {
   '1': 'BigtableTableService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateTable',
       '2': '.google.bigtable.admin.table.v1.CreateTableRequest',
       '3': '.google.bigtable.admin.table.v1.Table',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListTables',
       '2': '.google.bigtable.admin.table.v1.ListTablesRequest',
       '3': '.google.bigtable.admin.table.v1.ListTablesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetTable',
       '2': '.google.bigtable.admin.table.v1.GetTableRequest',
       '3': '.google.bigtable.admin.table.v1.Table',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteTable',
       '2': '.google.bigtable.admin.table.v1.DeleteTableRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'RenameTable',
       '2': '.google.bigtable.admin.table.v1.RenameTableRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateColumnFamily',
       '2': '.google.bigtable.admin.table.v1.CreateColumnFamilyRequest',
       '3': '.google.bigtable.admin.table.v1.ColumnFamily',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateColumnFamily',
       '2': '.google.bigtable.admin.table.v1.ColumnFamily',
       '3': '.google.bigtable.admin.table.v1.ColumnFamily',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteColumnFamily',
       '2': '.google.bigtable.admin.table.v1.DeleteColumnFamilyRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'BulkDeleteRows',
       '2': '.google.bigtable.admin.table.v1.BulkDeleteRowsRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const BigtableTableService$messageJson = const {
+const BigtableTableService$messageJson = {
   '.google.bigtable.admin.table.v1.CreateTableRequest': CreateTableRequest$json,
   '.google.bigtable.admin.table.v1.Table': Table$json,
   '.google.longrunning.Operation': $google$longrunning.Operation$json,

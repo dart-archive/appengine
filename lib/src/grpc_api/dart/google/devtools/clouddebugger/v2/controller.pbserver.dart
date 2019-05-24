@@ -23,13 +23,13 @@ abstract class Controller2ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'RegisterDebuggee':
-        return new RegisterDebuggeeRequest();
+        return RegisterDebuggeeRequest();
       case 'ListActiveBreakpoints':
-        return new ListActiveBreakpointsRequest();
+        return ListActiveBreakpointsRequest();
       case 'UpdateActiveBreakpoint':
-        return new UpdateActiveBreakpointRequest();
+        return UpdateActiveBreakpointRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -43,7 +43,7 @@ abstract class Controller2ServiceBase extends GeneratedService {
       case 'UpdateActiveBreakpoint':
         return this.updateActiveBreakpoint(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -9,13 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class EntityType_Kind extends ProtobufEnum {
   static const EntityType_Kind KIND_UNSPECIFIED =
-      const EntityType_Kind._(0, 'KIND_UNSPECIFIED');
-  static const EntityType_Kind KIND_MAP =
-      const EntityType_Kind._(1, 'KIND_MAP');
-  static const EntityType_Kind KIND_LIST =
-      const EntityType_Kind._(2, 'KIND_LIST');
+      EntityType_Kind._(0, 'KIND_UNSPECIFIED');
+  static const EntityType_Kind KIND_MAP = EntityType_Kind._(1, 'KIND_MAP');
+  static const EntityType_Kind KIND_LIST = EntityType_Kind._(2, 'KIND_LIST');
 
-  static const List<EntityType_Kind> values = const <EntityType_Kind>[
+  static const List<EntityType_Kind> values = <EntityType_Kind>[
     KIND_UNSPECIFIED,
     KIND_MAP,
     KIND_LIST,
@@ -33,13 +31,12 @@ class EntityType_Kind extends ProtobufEnum {
 
 class EntityType_AutoExpansionMode extends ProtobufEnum {
   static const EntityType_AutoExpansionMode AUTO_EXPANSION_MODE_UNSPECIFIED =
-      const EntityType_AutoExpansionMode._(
-          0, 'AUTO_EXPANSION_MODE_UNSPECIFIED');
+      EntityType_AutoExpansionMode._(0, 'AUTO_EXPANSION_MODE_UNSPECIFIED');
   static const EntityType_AutoExpansionMode AUTO_EXPANSION_MODE_DEFAULT =
-      const EntityType_AutoExpansionMode._(1, 'AUTO_EXPANSION_MODE_DEFAULT');
+      EntityType_AutoExpansionMode._(1, 'AUTO_EXPANSION_MODE_DEFAULT');
 
   static const List<EntityType_AutoExpansionMode> values =
-      const <EntityType_AutoExpansionMode>[
+      <EntityType_AutoExpansionMode>[
     AUTO_EXPANSION_MODE_UNSPECIFIED,
     AUTO_EXPANSION_MODE_DEFAULT,
   ];

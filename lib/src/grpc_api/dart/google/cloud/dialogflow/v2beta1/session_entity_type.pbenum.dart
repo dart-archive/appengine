@@ -9,20 +9,17 @@ import 'package:protobuf/protobuf.dart';
 
 class SessionEntityType_EntityOverrideMode extends ProtobufEnum {
   static const SessionEntityType_EntityOverrideMode
-      ENTITY_OVERRIDE_MODE_UNSPECIFIED =
-      const SessionEntityType_EntityOverrideMode._(
+      ENTITY_OVERRIDE_MODE_UNSPECIFIED = SessionEntityType_EntityOverrideMode._(
           0, 'ENTITY_OVERRIDE_MODE_UNSPECIFIED');
   static const SessionEntityType_EntityOverrideMode
-      ENTITY_OVERRIDE_MODE_OVERRIDE =
-      const SessionEntityType_EntityOverrideMode._(
+      ENTITY_OVERRIDE_MODE_OVERRIDE = SessionEntityType_EntityOverrideMode._(
           1, 'ENTITY_OVERRIDE_MODE_OVERRIDE');
   static const SessionEntityType_EntityOverrideMode
-      ENTITY_OVERRIDE_MODE_SUPPLEMENT =
-      const SessionEntityType_EntityOverrideMode._(
+      ENTITY_OVERRIDE_MODE_SUPPLEMENT = SessionEntityType_EntityOverrideMode._(
           2, 'ENTITY_OVERRIDE_MODE_SUPPLEMENT');
 
   static const List<SessionEntityType_EntityOverrideMode> values =
-      const <SessionEntityType_EntityOverrideMode>[
+      <SessionEntityType_EntityOverrideMode>[
     ENTITY_OVERRIDE_MODE_UNSPECIFIED,
     ENTITY_OVERRIDE_MODE_OVERRIDE,
     ENTITY_OVERRIDE_MODE_SUPPLEMENT,

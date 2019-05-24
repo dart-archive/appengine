@@ -75,67 +75,67 @@ abstract class ClusterManagerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListClusters':
-        return new ListClustersRequest();
+        return ListClustersRequest();
       case 'GetCluster':
-        return new GetClusterRequest();
+        return GetClusterRequest();
       case 'CreateCluster':
-        return new CreateClusterRequest();
+        return CreateClusterRequest();
       case 'UpdateCluster':
-        return new UpdateClusterRequest();
+        return UpdateClusterRequest();
       case 'UpdateNodePool':
-        return new UpdateNodePoolRequest();
+        return UpdateNodePoolRequest();
       case 'SetNodePoolAutoscaling':
-        return new SetNodePoolAutoscalingRequest();
+        return SetNodePoolAutoscalingRequest();
       case 'SetLoggingService':
-        return new SetLoggingServiceRequest();
+        return SetLoggingServiceRequest();
       case 'SetMonitoringService':
-        return new SetMonitoringServiceRequest();
+        return SetMonitoringServiceRequest();
       case 'SetAddonsConfig':
-        return new SetAddonsConfigRequest();
+        return SetAddonsConfigRequest();
       case 'SetLocations':
-        return new SetLocationsRequest();
+        return SetLocationsRequest();
       case 'UpdateMaster':
-        return new UpdateMasterRequest();
+        return UpdateMasterRequest();
       case 'SetMasterAuth':
-        return new SetMasterAuthRequest();
+        return SetMasterAuthRequest();
       case 'DeleteCluster':
-        return new DeleteClusterRequest();
+        return DeleteClusterRequest();
       case 'ListOperations':
-        return new ListOperationsRequest();
+        return ListOperationsRequest();
       case 'GetOperation':
-        return new GetOperationRequest();
+        return GetOperationRequest();
       case 'CancelOperation':
-        return new CancelOperationRequest();
+        return CancelOperationRequest();
       case 'GetServerConfig':
-        return new GetServerConfigRequest();
+        return GetServerConfigRequest();
       case 'ListNodePools':
-        return new ListNodePoolsRequest();
+        return ListNodePoolsRequest();
       case 'GetNodePool':
-        return new GetNodePoolRequest();
+        return GetNodePoolRequest();
       case 'CreateNodePool':
-        return new CreateNodePoolRequest();
+        return CreateNodePoolRequest();
       case 'DeleteNodePool':
-        return new DeleteNodePoolRequest();
+        return DeleteNodePoolRequest();
       case 'RollbackNodePoolUpgrade':
-        return new RollbackNodePoolUpgradeRequest();
+        return RollbackNodePoolUpgradeRequest();
       case 'SetNodePoolManagement':
-        return new SetNodePoolManagementRequest();
+        return SetNodePoolManagementRequest();
       case 'SetLabels':
-        return new SetLabelsRequest();
+        return SetLabelsRequest();
       case 'SetLegacyAbac':
-        return new SetLegacyAbacRequest();
+        return SetLegacyAbacRequest();
       case 'StartIPRotation':
-        return new StartIPRotationRequest();
+        return StartIPRotationRequest();
       case 'CompleteIPRotation':
-        return new CompleteIPRotationRequest();
+        return CompleteIPRotationRequest();
       case 'SetNodePoolSize':
-        return new SetNodePoolSizeRequest();
+        return SetNodePoolSizeRequest();
       case 'SetNetworkPolicy':
-        return new SetNetworkPolicyRequest();
+        return SetNetworkPolicyRequest();
       case 'SetMaintenancePolicy':
-        return new SetMaintenancePolicyRequest();
+        return SetMaintenancePolicyRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -203,7 +203,7 @@ abstract class ClusterManagerServiceBase extends GeneratedService {
       case 'SetMaintenancePolicy':
         return this.setMaintenancePolicy(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

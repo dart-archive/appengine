@@ -25,15 +25,15 @@ abstract class LanguageServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'AnalyzeSentiment':
-        return new AnalyzeSentimentRequest();
+        return AnalyzeSentimentRequest();
       case 'AnalyzeEntities':
-        return new AnalyzeEntitiesRequest();
+        return AnalyzeEntitiesRequest();
       case 'AnalyzeSyntax':
-        return new AnalyzeSyntaxRequest();
+        return AnalyzeSyntaxRequest();
       case 'AnnotateText':
-        return new AnnotateTextRequest();
+        return AnnotateTextRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -49,7 +49,7 @@ abstract class LanguageServiceBase extends GeneratedService {
       case 'AnnotateText':
         return this.annotateText(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

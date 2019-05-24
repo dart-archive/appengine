@@ -30,19 +30,19 @@ abstract class BigtableServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ReadRows':
-        return new ReadRowsRequest();
+        return ReadRowsRequest();
       case 'SampleRowKeys':
-        return new SampleRowKeysRequest();
+        return SampleRowKeysRequest();
       case 'MutateRow':
-        return new MutateRowRequest();
+        return MutateRowRequest();
       case 'MutateRows':
-        return new MutateRowsRequest();
+        return MutateRowsRequest();
       case 'CheckAndMutateRow':
-        return new CheckAndMutateRowRequest();
+        return CheckAndMutateRowRequest();
       case 'ReadModifyWriteRow':
-        return new ReadModifyWriteRowRequest();
+        return ReadModifyWriteRowRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -62,7 +62,7 @@ abstract class BigtableServiceBase extends GeneratedService {
       case 'ReadModifyWriteRow':
         return this.readModifyWriteRow(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

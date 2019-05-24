@@ -15,7 +15,7 @@ import '../../../protobuf/duration.pb.dart' as $google$protobuf;
 import '../../../logging/type/log_severity.pbenum.dart' as $google$logging$type;
 
 class LogLine extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogLine')
+  static final BuilderInfo _i = BuilderInfo('LogLine')
     ..a<$google$protobuf.Timestamp>(
         1,
         'time',
@@ -40,12 +40,12 @@ class LogLine extends GeneratedMessage {
       : super.fromBuffer(i, r);
   LogLine.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogLine clone() => new LogLine()..mergeFromMessage(this);
+  LogLine clone() => LogLine()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LogLine create() => new LogLine();
-  static PbList<LogLine> createRepeated() => new PbList<LogLine>();
+  static LogLine create() => LogLine();
+  static PbList<LogLine> createRepeated() => PbList<LogLine>();
   static LogLine getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLogLine();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLogLine();
     return _defaultInstance;
   }
 
@@ -90,7 +90,7 @@ class LogLine extends GeneratedMessage {
 class _ReadonlyLogLine extends LogLine with ReadonlyMessageMixin {}
 
 class SourceLocation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceLocation')
+  static final BuilderInfo _i = BuilderInfo('SourceLocation')
     ..aOS(1, 'file')
     ..aInt64(2, 'line')
     ..aOS(3, 'functionName')
@@ -103,14 +103,12 @@ class SourceLocation extends GeneratedMessage {
   SourceLocation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceLocation clone() => new SourceLocation()..mergeFromMessage(this);
+  SourceLocation clone() => SourceLocation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceLocation create() => new SourceLocation();
-  static PbList<SourceLocation> createRepeated() =>
-      new PbList<SourceLocation>();
+  static SourceLocation create() => SourceLocation();
+  static PbList<SourceLocation> createRepeated() => PbList<SourceLocation>();
   static SourceLocation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceLocation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceLocation();
     return _defaultInstance;
   }
 
@@ -148,7 +146,7 @@ class _ReadonlySourceLocation extends SourceLocation with ReadonlyMessageMixin {
 }
 
 class SourceReference extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceReference')
+  static final BuilderInfo _i = BuilderInfo('SourceReference')
     ..aOS(1, 'repository')
     ..aOS(2, 'revisionId')
     ..hasRequiredFields = false;
@@ -160,14 +158,12 @@ class SourceReference extends GeneratedMessage {
   SourceReference.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceReference clone() => new SourceReference()..mergeFromMessage(this);
+  SourceReference clone() => SourceReference()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceReference create() => new SourceReference();
-  static PbList<SourceReference> createRepeated() =>
-      new PbList<SourceReference>();
+  static SourceReference create() => SourceReference();
+  static PbList<SourceReference> createRepeated() => PbList<SourceReference>();
   static SourceReference getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceReference();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceReference();
     return _defaultInstance;
   }
 
@@ -197,7 +193,7 @@ class _ReadonlySourceReference extends SourceReference
     with ReadonlyMessageMixin {}
 
 class RequestLog extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RequestLog')
+  static final BuilderInfo _i = BuilderInfo('RequestLog')
     ..aOS(1, 'appId')
     ..aOS(2, 'versionId')
     ..aOS(3, 'requestId')
@@ -252,12 +248,12 @@ class RequestLog extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RequestLog.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RequestLog clone() => new RequestLog()..mergeFromMessage(this);
+  RequestLog clone() => RequestLog()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RequestLog create() => new RequestLog();
-  static PbList<RequestLog> createRepeated() => new PbList<RequestLog>();
+  static RequestLog create() => RequestLog();
+  static PbList<RequestLog> createRepeated() => PbList<RequestLog>();
   static RequestLog getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRequestLog();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRequestLog();
     return _defaultInstance;
   }
 

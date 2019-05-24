@@ -5,22 +5,22 @@
 
 import '../../../protobuf/duration.pbjson.dart' as $google$protobuf;
 
-const ProfileType$json = const {
+const ProfileType$json = {
   '1': 'ProfileType',
-  '2': const [
-    const {'1': 'PROFILE_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'CPU', '2': 1},
-    const {'1': 'WALL', '2': 2},
-    const {'1': 'HEAP', '2': 3},
-    const {'1': 'THREADS', '2': 4},
-    const {'1': 'CONTENTION', '2': 5},
+  '2': [
+    {'1': 'PROFILE_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'CPU', '2': 1},
+    {'1': 'WALL', '2': 2},
+    {'1': 'HEAP', '2': 3},
+    {'1': 'THREADS', '2': 4},
+    {'1': 'CONTENTION', '2': 5},
   ],
 };
 
-const CreateProfileRequest$json = const {
+const CreateProfileRequest$json = {
   '1': 'CreateProfileRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'deployment',
       '3': 1,
       '4': 1,
@@ -28,7 +28,7 @@ const CreateProfileRequest$json = const {
       '6': '.google.devtools.cloudprofiler.v2.Deployment',
       '10': 'deployment'
     },
-    const {
+    {
       '1': 'profile_type',
       '3': 2,
       '4': 3,
@@ -36,7 +36,7 @@ const CreateProfileRequest$json = const {
       '6': '.google.devtools.cloudprofiler.v2.ProfileType',
       '10': 'profileType'
     },
-    const {
+    {
       '1': 'profile',
       '3': 3,
       '4': 1,
@@ -47,10 +47,10 @@ const CreateProfileRequest$json = const {
   ],
 };
 
-const UpdateProfileRequest$json = const {
+const UpdateProfileRequest$json = {
   '1': 'UpdateProfileRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'profile',
       '3': 1,
       '4': 1,
@@ -61,11 +61,11 @@ const UpdateProfileRequest$json = const {
   ],
 };
 
-const Profile$json = const {
+const Profile$json = {
   '1': 'Profile',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'profile_type',
       '3': 2,
       '4': 1,
@@ -73,7 +73,7 @@ const Profile$json = const {
       '6': '.google.devtools.cloudprofiler.v2.ProfileType',
       '10': 'profileType'
     },
-    const {
+    {
       '1': 'deployment',
       '3': 3,
       '4': 1,
@@ -81,7 +81,7 @@ const Profile$json = const {
       '6': '.google.devtools.cloudprofiler.v2.Deployment',
       '10': 'deployment'
     },
-    const {
+    {
       '1': 'duration',
       '3': 4,
       '4': 1,
@@ -89,8 +89,8 @@ const Profile$json = const {
       '6': '.google.protobuf.Duration',
       '10': 'duration'
     },
-    const {'1': 'profile_bytes', '3': 5, '4': 1, '5': 12, '10': 'profileBytes'},
-    const {
+    {'1': 'profile_bytes', '3': 5, '4': 1, '5': 12, '10': 'profileBytes'},
+    {
       '1': 'labels',
       '3': 6,
       '4': 3,
@@ -99,24 +99,24 @@ const Profile$json = const {
       '10': 'labels'
     },
   ],
-  '3': const [Profile_LabelsEntry$json],
+  '3': [Profile_LabelsEntry$json],
 };
 
-const Profile_LabelsEntry$json = const {
+const Profile_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const Deployment$json = const {
+const Deployment$json = {
   '1': 'Deployment',
-  '2': const [
-    const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    const {'1': 'target', '3': 2, '4': 1, '5': 9, '10': 'target'},
-    const {
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'target', '3': 2, '4': 1, '5': 9, '10': 'target'},
+    {
       '1': 'labels',
       '3': 3,
       '4': 3,
@@ -125,37 +125,37 @@ const Deployment$json = const {
       '10': 'labels'
     },
   ],
-  '3': const [Deployment_LabelsEntry$json],
+  '3': [Deployment_LabelsEntry$json],
 };
 
-const Deployment_LabelsEntry$json = const {
+const Deployment_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const ProfilerService$json = const {
+const ProfilerService$json = {
   '1': 'ProfilerService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateProfile',
       '2': '.google.devtools.cloudprofiler.v2.CreateProfileRequest',
       '3': '.google.devtools.cloudprofiler.v2.Profile',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateProfile',
       '2': '.google.devtools.cloudprofiler.v2.UpdateProfileRequest',
       '3': '.google.devtools.cloudprofiler.v2.Profile',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const ProfilerService$messageJson = const {
+const ProfilerService$messageJson = {
   '.google.devtools.cloudprofiler.v2.CreateProfileRequest':
       CreateProfileRequest$json,
   '.google.devtools.cloudprofiler.v2.Deployment': Deployment$json,

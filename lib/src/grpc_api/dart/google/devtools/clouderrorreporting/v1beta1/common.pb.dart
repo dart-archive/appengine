@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 
 class ErrorGroup extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ErrorGroup')
+  static final BuilderInfo _i = BuilderInfo('ErrorGroup')
     ..aOS(1, 'name')
     ..aOS(2, 'groupId')
     ..pp<TrackingIssue>(3, 'trackingIssues', PbFieldType.PM,
@@ -24,12 +24,12 @@ class ErrorGroup extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ErrorGroup.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ErrorGroup clone() => new ErrorGroup()..mergeFromMessage(this);
+  ErrorGroup clone() => ErrorGroup()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ErrorGroup create() => new ErrorGroup();
-  static PbList<ErrorGroup> createRepeated() => new PbList<ErrorGroup>();
+  static ErrorGroup create() => ErrorGroup();
+  static PbList<ErrorGroup> createRepeated() => PbList<ErrorGroup>();
   static ErrorGroup getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyErrorGroup();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyErrorGroup();
     return _defaultInstance;
   }
 
@@ -60,7 +60,7 @@ class ErrorGroup extends GeneratedMessage {
 class _ReadonlyErrorGroup extends ErrorGroup with ReadonlyMessageMixin {}
 
 class TrackingIssue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TrackingIssue')
+  static final BuilderInfo _i = BuilderInfo('TrackingIssue')
     ..aOS(1, 'url')
     ..hasRequiredFields = false;
 
@@ -71,13 +71,12 @@ class TrackingIssue extends GeneratedMessage {
   TrackingIssue.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TrackingIssue clone() => new TrackingIssue()..mergeFromMessage(this);
+  TrackingIssue clone() => TrackingIssue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TrackingIssue create() => new TrackingIssue();
-  static PbList<TrackingIssue> createRepeated() => new PbList<TrackingIssue>();
+  static TrackingIssue create() => TrackingIssue();
+  static PbList<TrackingIssue> createRepeated() => PbList<TrackingIssue>();
   static TrackingIssue getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTrackingIssue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTrackingIssue();
     return _defaultInstance;
   }
 
@@ -98,7 +97,7 @@ class TrackingIssue extends GeneratedMessage {
 class _ReadonlyTrackingIssue extends TrackingIssue with ReadonlyMessageMixin {}
 
 class ErrorEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ErrorEvent')
+  static final BuilderInfo _i = BuilderInfo('ErrorEvent')
     ..a<$google$protobuf.Timestamp>(
         1,
         'eventTime',
@@ -118,12 +117,12 @@ class ErrorEvent extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ErrorEvent.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ErrorEvent clone() => new ErrorEvent()..mergeFromMessage(this);
+  ErrorEvent clone() => ErrorEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ErrorEvent create() => new ErrorEvent();
-  static PbList<ErrorEvent> createRepeated() => new PbList<ErrorEvent>();
+  static ErrorEvent create() => ErrorEvent();
+  static PbList<ErrorEvent> createRepeated() => PbList<ErrorEvent>();
   static ErrorEvent getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyErrorEvent();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyErrorEvent();
     return _defaultInstance;
   }
 
@@ -168,7 +167,7 @@ class ErrorEvent extends GeneratedMessage {
 class _ReadonlyErrorEvent extends ErrorEvent with ReadonlyMessageMixin {}
 
 class ServiceContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ServiceContext')
+  static final BuilderInfo _i = BuilderInfo('ServiceContext')
     ..aOS(2, 'service')
     ..aOS(3, 'version')
     ..aOS(4, 'resourceType')
@@ -181,14 +180,12 @@ class ServiceContext extends GeneratedMessage {
   ServiceContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ServiceContext clone() => new ServiceContext()..mergeFromMessage(this);
+  ServiceContext clone() => ServiceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ServiceContext create() => new ServiceContext();
-  static PbList<ServiceContext> createRepeated() =>
-      new PbList<ServiceContext>();
+  static ServiceContext create() => ServiceContext();
+  static PbList<ServiceContext> createRepeated() => PbList<ServiceContext>();
   static ServiceContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyServiceContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyServiceContext();
     return _defaultInstance;
   }
 
@@ -226,7 +223,7 @@ class _ReadonlyServiceContext extends ServiceContext with ReadonlyMessageMixin {
 }
 
 class ErrorContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ErrorContext')
+  static final BuilderInfo _i = BuilderInfo('ErrorContext')
     ..a<HttpRequestContext>(1, 'httpRequest', PbFieldType.OM,
         HttpRequestContext.getDefault, HttpRequestContext.create)
     ..aOS(2, 'user')
@@ -241,13 +238,12 @@ class ErrorContext extends GeneratedMessage {
   ErrorContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ErrorContext clone() => new ErrorContext()..mergeFromMessage(this);
+  ErrorContext clone() => ErrorContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ErrorContext create() => new ErrorContext();
-  static PbList<ErrorContext> createRepeated() => new PbList<ErrorContext>();
+  static ErrorContext create() => ErrorContext();
+  static PbList<ErrorContext> createRepeated() => PbList<ErrorContext>();
   static ErrorContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyErrorContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyErrorContext();
     return _defaultInstance;
   }
 
@@ -284,7 +280,7 @@ class ErrorContext extends GeneratedMessage {
 class _ReadonlyErrorContext extends ErrorContext with ReadonlyMessageMixin {}
 
 class HttpRequestContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HttpRequestContext')
+  static final BuilderInfo _i = BuilderInfo('HttpRequestContext')
     ..aOS(1, 'method')
     ..aOS(2, 'url')
     ..aOS(3, 'userAgent')
@@ -300,15 +296,14 @@ class HttpRequestContext extends GeneratedMessage {
   HttpRequestContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HttpRequestContext clone() =>
-      new HttpRequestContext()..mergeFromMessage(this);
+  HttpRequestContext clone() => HttpRequestContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HttpRequestContext create() => new HttpRequestContext();
+  static HttpRequestContext create() => HttpRequestContext();
   static PbList<HttpRequestContext> createRepeated() =>
-      new PbList<HttpRequestContext>();
+      PbList<HttpRequestContext>();
   static HttpRequestContext getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyHttpRequestContext();
+      _defaultInstance = _ReadonlyHttpRequestContext();
     return _defaultInstance;
   }
 
@@ -370,7 +365,7 @@ class _ReadonlyHttpRequestContext extends HttpRequestContext
     with ReadonlyMessageMixin {}
 
 class SourceLocation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceLocation')
+  static final BuilderInfo _i = BuilderInfo('SourceLocation')
     ..aOS(1, 'filePath')
     ..a<int>(2, 'lineNumber', PbFieldType.O3)
     ..aOS(4, 'functionName')
@@ -383,14 +378,12 @@ class SourceLocation extends GeneratedMessage {
   SourceLocation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceLocation clone() => new SourceLocation()..mergeFromMessage(this);
+  SourceLocation clone() => SourceLocation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceLocation create() => new SourceLocation();
-  static PbList<SourceLocation> createRepeated() =>
-      new PbList<SourceLocation>();
+  static SourceLocation create() => SourceLocation();
+  static PbList<SourceLocation> createRepeated() => PbList<SourceLocation>();
   static SourceLocation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceLocation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceLocation();
     return _defaultInstance;
   }
 

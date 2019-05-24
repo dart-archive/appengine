@@ -16,7 +16,7 @@ import 'agent.pbenum.dart';
 export 'agent.pbenum.dart';
 
 class Agent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Agent')
+  static final BuilderInfo _i = BuilderInfo('Agent')
     ..aOS(1, 'parent')
     ..aOS(2, 'displayName')
     ..aOS(3, 'defaultLanguageCode')
@@ -40,12 +40,12 @@ class Agent extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Agent.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Agent clone() => new Agent()..mergeFromMessage(this);
+  Agent clone() => Agent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Agent create() => new Agent();
-  static PbList<Agent> createRepeated() => new PbList<Agent>();
+  static Agent create() => Agent();
+  static PbList<Agent> createRepeated() => PbList<Agent>();
   static Agent getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAgent();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAgent();
     return _defaultInstance;
   }
 
@@ -132,7 +132,7 @@ class Agent extends GeneratedMessage {
 class _ReadonlyAgent extends Agent with ReadonlyMessageMixin {}
 
 class GetAgentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetAgentRequest')
+  static final BuilderInfo _i = BuilderInfo('GetAgentRequest')
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
@@ -143,14 +143,12 @@ class GetAgentRequest extends GeneratedMessage {
   GetAgentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetAgentRequest clone() => new GetAgentRequest()..mergeFromMessage(this);
+  GetAgentRequest clone() => GetAgentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetAgentRequest create() => new GetAgentRequest();
-  static PbList<GetAgentRequest> createRepeated() =>
-      new PbList<GetAgentRequest>();
+  static GetAgentRequest create() => GetAgentRequest();
+  static PbList<GetAgentRequest> createRepeated() => PbList<GetAgentRequest>();
   static GetAgentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetAgentRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetAgentRequest();
     return _defaultInstance;
   }
 
@@ -172,7 +170,7 @@ class _ReadonlyGetAgentRequest extends GetAgentRequest
     with ReadonlyMessageMixin {}
 
 class SearchAgentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAgentsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchAgentsRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -185,15 +183,14 @@ class SearchAgentsRequest extends GeneratedMessage {
   SearchAgentsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SearchAgentsRequest clone() =>
-      new SearchAgentsRequest()..mergeFromMessage(this);
+  SearchAgentsRequest clone() => SearchAgentsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchAgentsRequest create() => new SearchAgentsRequest();
+  static SearchAgentsRequest create() => SearchAgentsRequest();
   static PbList<SearchAgentsRequest> createRepeated() =>
-      new PbList<SearchAgentsRequest>();
+      PbList<SearchAgentsRequest>();
   static SearchAgentsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAgentsRequest();
+      _defaultInstance = _ReadonlySearchAgentsRequest();
     return _defaultInstance;
   }
 
@@ -231,7 +228,7 @@ class _ReadonlySearchAgentsRequest extends SearchAgentsRequest
     with ReadonlyMessageMixin {}
 
 class SearchAgentsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAgentsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchAgentsResponse')
     ..pp<Agent>(1, 'agents', PbFieldType.PM, Agent.$checkItem, Agent.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -244,14 +241,14 @@ class SearchAgentsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAgentsResponse clone() =>
-      new SearchAgentsResponse()..mergeFromMessage(this);
+      SearchAgentsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchAgentsResponse create() => new SearchAgentsResponse();
+  static SearchAgentsResponse create() => SearchAgentsResponse();
   static PbList<SearchAgentsResponse> createRepeated() =>
-      new PbList<SearchAgentsResponse>();
+      PbList<SearchAgentsResponse>();
   static SearchAgentsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAgentsResponse();
+      _defaultInstance = _ReadonlySearchAgentsResponse();
     return _defaultInstance;
   }
 
@@ -275,7 +272,7 @@ class _ReadonlySearchAgentsResponse extends SearchAgentsResponse
     with ReadonlyMessageMixin {}
 
 class TrainAgentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TrainAgentRequest')
+  static final BuilderInfo _i = BuilderInfo('TrainAgentRequest')
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
@@ -286,14 +283,14 @@ class TrainAgentRequest extends GeneratedMessage {
   TrainAgentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TrainAgentRequest clone() => new TrainAgentRequest()..mergeFromMessage(this);
+  TrainAgentRequest clone() => TrainAgentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TrainAgentRequest create() => new TrainAgentRequest();
+  static TrainAgentRequest create() => TrainAgentRequest();
   static PbList<TrainAgentRequest> createRepeated() =>
-      new PbList<TrainAgentRequest>();
+      PbList<TrainAgentRequest>();
   static TrainAgentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTrainAgentRequest();
+      _defaultInstance = _ReadonlyTrainAgentRequest();
     return _defaultInstance;
   }
 
@@ -315,7 +312,7 @@ class _ReadonlyTrainAgentRequest extends TrainAgentRequest
     with ReadonlyMessageMixin {}
 
 class ExportAgentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportAgentRequest')
+  static final BuilderInfo _i = BuilderInfo('ExportAgentRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'agentUri')
     ..hasRequiredFields = false;
@@ -327,15 +324,14 @@ class ExportAgentRequest extends GeneratedMessage {
   ExportAgentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExportAgentRequest clone() =>
-      new ExportAgentRequest()..mergeFromMessage(this);
+  ExportAgentRequest clone() => ExportAgentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExportAgentRequest create() => new ExportAgentRequest();
+  static ExportAgentRequest create() => ExportAgentRequest();
   static PbList<ExportAgentRequest> createRepeated() =>
-      new PbList<ExportAgentRequest>();
+      PbList<ExportAgentRequest>();
   static ExportAgentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportAgentRequest();
+      _defaultInstance = _ReadonlyExportAgentRequest();
     return _defaultInstance;
   }
 
@@ -365,7 +361,7 @@ class _ReadonlyExportAgentRequest extends ExportAgentRequest
     with ReadonlyMessageMixin {}
 
 class ExportAgentResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportAgentResponse')
+  static final BuilderInfo _i = BuilderInfo('ExportAgentResponse')
     ..aOS(1, 'agentUri')
     ..a<List<int>>(2, 'agentContent', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -377,15 +373,14 @@ class ExportAgentResponse extends GeneratedMessage {
   ExportAgentResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExportAgentResponse clone() =>
-      new ExportAgentResponse()..mergeFromMessage(this);
+  ExportAgentResponse clone() => ExportAgentResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExportAgentResponse create() => new ExportAgentResponse();
+  static ExportAgentResponse create() => ExportAgentResponse();
   static PbList<ExportAgentResponse> createRepeated() =>
-      new PbList<ExportAgentResponse>();
+      PbList<ExportAgentResponse>();
   static ExportAgentResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportAgentResponse();
+      _defaultInstance = _ReadonlyExportAgentResponse();
     return _defaultInstance;
   }
 
@@ -415,7 +410,7 @@ class _ReadonlyExportAgentResponse extends ExportAgentResponse
     with ReadonlyMessageMixin {}
 
 class ImportAgentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportAgentRequest')
+  static final BuilderInfo _i = BuilderInfo('ImportAgentRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'agentUri')
     ..a<List<int>>(3, 'agentContent', PbFieldType.OY)
@@ -428,15 +423,14 @@ class ImportAgentRequest extends GeneratedMessage {
   ImportAgentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ImportAgentRequest clone() =>
-      new ImportAgentRequest()..mergeFromMessage(this);
+  ImportAgentRequest clone() => ImportAgentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportAgentRequest create() => new ImportAgentRequest();
+  static ImportAgentRequest create() => ImportAgentRequest();
   static PbList<ImportAgentRequest> createRepeated() =>
-      new PbList<ImportAgentRequest>();
+      PbList<ImportAgentRequest>();
   static ImportAgentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportAgentRequest();
+      _defaultInstance = _ReadonlyImportAgentRequest();
     return _defaultInstance;
   }
 
@@ -474,7 +468,7 @@ class _ReadonlyImportAgentRequest extends ImportAgentRequest
     with ReadonlyMessageMixin {}
 
 class RestoreAgentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RestoreAgentRequest')
+  static final BuilderInfo _i = BuilderInfo('RestoreAgentRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'agentUri')
     ..a<List<int>>(3, 'agentContent', PbFieldType.OY)
@@ -487,15 +481,14 @@ class RestoreAgentRequest extends GeneratedMessage {
   RestoreAgentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RestoreAgentRequest clone() =>
-      new RestoreAgentRequest()..mergeFromMessage(this);
+  RestoreAgentRequest clone() => RestoreAgentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RestoreAgentRequest create() => new RestoreAgentRequest();
+  static RestoreAgentRequest create() => RestoreAgentRequest();
   static PbList<RestoreAgentRequest> createRepeated() =>
-      new PbList<RestoreAgentRequest>();
+      PbList<RestoreAgentRequest>();
   static RestoreAgentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRestoreAgentRequest();
+      _defaultInstance = _ReadonlyRestoreAgentRequest();
     return _defaultInstance;
   }
 
@@ -537,42 +530,42 @@ class AgentsApi {
   AgentsApi(this._client);
 
   Future<Agent> getAgent(ClientContext ctx, GetAgentRequest request) {
-    var emptyResponse = new Agent();
+    var emptyResponse = Agent();
     return _client.invoke<Agent>(
         ctx, 'Agents', 'GetAgent', request, emptyResponse);
   }
 
   Future<SearchAgentsResponse> searchAgents(
       ClientContext ctx, SearchAgentsRequest request) {
-    var emptyResponse = new SearchAgentsResponse();
+    var emptyResponse = SearchAgentsResponse();
     return _client.invoke<SearchAgentsResponse>(
         ctx, 'Agents', 'SearchAgents', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> trainAgent(
       ClientContext ctx, TrainAgentRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Agents', 'TrainAgent', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> exportAgent(
       ClientContext ctx, ExportAgentRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Agents', 'ExportAgent', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> importAgent(
       ClientContext ctx, ImportAgentRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Agents', 'ImportAgent', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> restoreAgent(
       ClientContext ctx, RestoreAgentRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Agents', 'RestoreAgent', request, emptyResponse);
   }

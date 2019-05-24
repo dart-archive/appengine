@@ -9,12 +9,12 @@ import 'package:protobuf/protobuf.dart';
 
 class Queue_State extends ProtobufEnum {
   static const Queue_State STATE_UNSPECIFIED =
-      const Queue_State._(0, 'STATE_UNSPECIFIED');
-  static const Queue_State RUNNING = const Queue_State._(1, 'RUNNING');
-  static const Queue_State PAUSED = const Queue_State._(2, 'PAUSED');
-  static const Queue_State DISABLED = const Queue_State._(3, 'DISABLED');
+      Queue_State._(0, 'STATE_UNSPECIFIED');
+  static const Queue_State RUNNING = Queue_State._(1, 'RUNNING');
+  static const Queue_State PAUSED = Queue_State._(2, 'PAUSED');
+  static const Queue_State DISABLED = Queue_State._(3, 'DISABLED');
 
-  static const List<Queue_State> values = const <Queue_State>[
+  static const List<Queue_State> values = <Queue_State>[
     STATE_UNSPECIFIED,
     RUNNING,
     PAUSED,

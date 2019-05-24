@@ -9,13 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class Agent_MatchMode extends ProtobufEnum {
   static const Agent_MatchMode MATCH_MODE_UNSPECIFIED =
-      const Agent_MatchMode._(0, 'MATCH_MODE_UNSPECIFIED');
+      Agent_MatchMode._(0, 'MATCH_MODE_UNSPECIFIED');
   static const Agent_MatchMode MATCH_MODE_HYBRID =
-      const Agent_MatchMode._(1, 'MATCH_MODE_HYBRID');
+      Agent_MatchMode._(1, 'MATCH_MODE_HYBRID');
   static const Agent_MatchMode MATCH_MODE_ML_ONLY =
-      const Agent_MatchMode._(2, 'MATCH_MODE_ML_ONLY');
+      Agent_MatchMode._(2, 'MATCH_MODE_ML_ONLY');
 
-  static const List<Agent_MatchMode> values = const <Agent_MatchMode>[
+  static const List<Agent_MatchMode> values = <Agent_MatchMode>[
     MATCH_MODE_UNSPECIFIED,
     MATCH_MODE_HYBRID,
     MATCH_MODE_ML_ONLY,

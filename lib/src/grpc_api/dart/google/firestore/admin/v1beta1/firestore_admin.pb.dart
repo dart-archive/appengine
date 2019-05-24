@@ -20,7 +20,7 @@ import 'firestore_admin.pbenum.dart';
 export 'firestore_admin.pbenum.dart';
 
 class IndexOperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IndexOperationMetadata')
+  static final BuilderInfo _i = BuilderInfo('IndexOperationMetadata')
     ..a<$google$protobuf.Timestamp>(
         1,
         'startTime',
@@ -54,14 +54,14 @@ class IndexOperationMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   IndexOperationMetadata clone() =>
-      new IndexOperationMetadata()..mergeFromMessage(this);
+      IndexOperationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static IndexOperationMetadata create() => new IndexOperationMetadata();
+  static IndexOperationMetadata create() => IndexOperationMetadata();
   static PbList<IndexOperationMetadata> createRepeated() =>
-      new PbList<IndexOperationMetadata>();
+      PbList<IndexOperationMetadata>();
   static IndexOperationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIndexOperationMetadata();
+      _defaultInstance = _ReadonlyIndexOperationMetadata();
     return _defaultInstance;
   }
 
@@ -124,7 +124,7 @@ class _ReadonlyIndexOperationMetadata extends IndexOperationMetadata
     with ReadonlyMessageMixin {}
 
 class Progress extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Progress')
+  static final BuilderInfo _i = BuilderInfo('Progress')
     ..aInt64(1, 'workCompleted')
     ..aInt64(2, 'workEstimated')
     ..hasRequiredFields = false;
@@ -135,12 +135,12 @@ class Progress extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Progress.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Progress clone() => new Progress()..mergeFromMessage(this);
+  Progress clone() => Progress()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Progress create() => new Progress();
-  static PbList<Progress> createRepeated() => new PbList<Progress>();
+  static Progress create() => Progress();
+  static PbList<Progress> createRepeated() => PbList<Progress>();
   static Progress getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProgress();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyProgress();
     return _defaultInstance;
   }
 
@@ -169,7 +169,7 @@ class Progress extends GeneratedMessage {
 class _ReadonlyProgress extends Progress with ReadonlyMessageMixin {}
 
 class CreateIndexRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateIndexRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateIndexRequest')
     ..aOS(1, 'parent')
     ..a<Index>(2, 'index', PbFieldType.OM, Index.getDefault, Index.create)
     ..hasRequiredFields = false;
@@ -181,15 +181,14 @@ class CreateIndexRequest extends GeneratedMessage {
   CreateIndexRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateIndexRequest clone() =>
-      new CreateIndexRequest()..mergeFromMessage(this);
+  CreateIndexRequest clone() => CreateIndexRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateIndexRequest create() => new CreateIndexRequest();
+  static CreateIndexRequest create() => CreateIndexRequest();
   static PbList<CreateIndexRequest> createRepeated() =>
-      new PbList<CreateIndexRequest>();
+      PbList<CreateIndexRequest>();
   static CreateIndexRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateIndexRequest();
+      _defaultInstance = _ReadonlyCreateIndexRequest();
     return _defaultInstance;
   }
 
@@ -219,7 +218,7 @@ class _ReadonlyCreateIndexRequest extends CreateIndexRequest
     with ReadonlyMessageMixin {}
 
 class GetIndexRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetIndexRequest')
+  static final BuilderInfo _i = BuilderInfo('GetIndexRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -230,14 +229,12 @@ class GetIndexRequest extends GeneratedMessage {
   GetIndexRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetIndexRequest clone() => new GetIndexRequest()..mergeFromMessage(this);
+  GetIndexRequest clone() => GetIndexRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetIndexRequest create() => new GetIndexRequest();
-  static PbList<GetIndexRequest> createRepeated() =>
-      new PbList<GetIndexRequest>();
+  static GetIndexRequest create() => GetIndexRequest();
+  static PbList<GetIndexRequest> createRepeated() => PbList<GetIndexRequest>();
   static GetIndexRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetIndexRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetIndexRequest();
     return _defaultInstance;
   }
 
@@ -259,7 +256,7 @@ class _ReadonlyGetIndexRequest extends GetIndexRequest
     with ReadonlyMessageMixin {}
 
 class ListIndexesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListIndexesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListIndexesRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -273,15 +270,14 @@ class ListIndexesRequest extends GeneratedMessage {
   ListIndexesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListIndexesRequest clone() =>
-      new ListIndexesRequest()..mergeFromMessage(this);
+  ListIndexesRequest clone() => ListIndexesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListIndexesRequest create() => new ListIndexesRequest();
+  static ListIndexesRequest create() => ListIndexesRequest();
   static PbList<ListIndexesRequest> createRepeated() =>
-      new PbList<ListIndexesRequest>();
+      PbList<ListIndexesRequest>();
   static ListIndexesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListIndexesRequest();
+      _defaultInstance = _ReadonlyListIndexesRequest();
     return _defaultInstance;
   }
 
@@ -327,7 +323,7 @@ class _ReadonlyListIndexesRequest extends ListIndexesRequest
     with ReadonlyMessageMixin {}
 
 class DeleteIndexRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteIndexRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteIndexRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -338,15 +334,14 @@ class DeleteIndexRequest extends GeneratedMessage {
   DeleteIndexRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteIndexRequest clone() =>
-      new DeleteIndexRequest()..mergeFromMessage(this);
+  DeleteIndexRequest clone() => DeleteIndexRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteIndexRequest create() => new DeleteIndexRequest();
+  static DeleteIndexRequest create() => DeleteIndexRequest();
   static PbList<DeleteIndexRequest> createRepeated() =>
-      new PbList<DeleteIndexRequest>();
+      PbList<DeleteIndexRequest>();
   static DeleteIndexRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteIndexRequest();
+      _defaultInstance = _ReadonlyDeleteIndexRequest();
     return _defaultInstance;
   }
 
@@ -368,7 +363,7 @@ class _ReadonlyDeleteIndexRequest extends DeleteIndexRequest
     with ReadonlyMessageMixin {}
 
 class ListIndexesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListIndexesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListIndexesResponse')
     ..pp<Index>(1, 'indexes', PbFieldType.PM, Index.$checkItem, Index.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -380,15 +375,14 @@ class ListIndexesResponse extends GeneratedMessage {
   ListIndexesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListIndexesResponse clone() =>
-      new ListIndexesResponse()..mergeFromMessage(this);
+  ListIndexesResponse clone() => ListIndexesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListIndexesResponse create() => new ListIndexesResponse();
+  static ListIndexesResponse create() => ListIndexesResponse();
   static PbList<ListIndexesResponse> createRepeated() =>
-      new PbList<ListIndexesResponse>();
+      PbList<ListIndexesResponse>();
   static ListIndexesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListIndexesResponse();
+      _defaultInstance = _ReadonlyListIndexesResponse();
     return _defaultInstance;
   }
 
@@ -417,27 +411,27 @@ class FirestoreAdminApi {
 
   Future<$google$longrunning.Operation> createIndex(
       ClientContext ctx, CreateIndexRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'FirestoreAdmin', 'CreateIndex', request, emptyResponse);
   }
 
   Future<ListIndexesResponse> listIndexes(
       ClientContext ctx, ListIndexesRequest request) {
-    var emptyResponse = new ListIndexesResponse();
+    var emptyResponse = ListIndexesResponse();
     return _client.invoke<ListIndexesResponse>(
         ctx, 'FirestoreAdmin', 'ListIndexes', request, emptyResponse);
   }
 
   Future<Index> getIndex(ClientContext ctx, GetIndexRequest request) {
-    var emptyResponse = new Index();
+    var emptyResponse = Index();
     return _client.invoke<Index>(
         ctx, 'FirestoreAdmin', 'GetIndex', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteIndex(
       ClientContext ctx, DeleteIndexRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'FirestoreAdmin', 'DeleteIndex', request, emptyResponse);
   }

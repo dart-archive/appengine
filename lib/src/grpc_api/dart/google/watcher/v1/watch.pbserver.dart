@@ -18,9 +18,9 @@ abstract class WatcherServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'Watch':
-        return new Request();
+        return Request();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -30,7 +30,7 @@ abstract class WatcherServiceBase extends GeneratedService {
       case 'Watch':
         return this.watch(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

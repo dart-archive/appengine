@@ -13,7 +13,7 @@ import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 import 'distribution.pb.dart';
 
 class MetricValue_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricValue_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('MetricValue_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -26,14 +26,14 @@ class MetricValue_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MetricValue_LabelsEntry clone() =>
-      new MetricValue_LabelsEntry()..mergeFromMessage(this);
+      MetricValue_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MetricValue_LabelsEntry create() => new MetricValue_LabelsEntry();
+  static MetricValue_LabelsEntry create() => MetricValue_LabelsEntry();
   static PbList<MetricValue_LabelsEntry> createRepeated() =>
-      new PbList<MetricValue_LabelsEntry>();
+      PbList<MetricValue_LabelsEntry>();
   static MetricValue_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMetricValue_LabelsEntry();
+      _defaultInstance = _ReadonlyMetricValue_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -64,7 +64,7 @@ class _ReadonlyMetricValue_LabelsEntry extends MetricValue_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class MetricValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricValue')
+  static final BuilderInfo _i = BuilderInfo('MetricValue')
     ..pp<MetricValue_LabelsEntry>(1, 'labels', PbFieldType.PM,
         MetricValue_LabelsEntry.$checkItem, MetricValue_LabelsEntry.create)
     ..a<$google$protobuf.Timestamp>(
@@ -94,12 +94,12 @@ class MetricValue extends GeneratedMessage {
   MetricValue.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MetricValue clone() => new MetricValue()..mergeFromMessage(this);
+  MetricValue clone() => MetricValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MetricValue create() => new MetricValue();
-  static PbList<MetricValue> createRepeated() => new PbList<MetricValue>();
+  static MetricValue create() => MetricValue();
+  static PbList<MetricValue> createRepeated() => PbList<MetricValue>();
   static MetricValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMetricValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMetricValue();
     return _defaultInstance;
   }
 
@@ -170,7 +170,7 @@ class MetricValue extends GeneratedMessage {
 class _ReadonlyMetricValue extends MetricValue with ReadonlyMessageMixin {}
 
 class MetricValueSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricValueSet')
+  static final BuilderInfo _i = BuilderInfo('MetricValueSet')
     ..aOS(1, 'metricName')
     ..pp<MetricValue>(2, 'metricValues', PbFieldType.PM, MetricValue.$checkItem,
         MetricValue.create)
@@ -183,14 +183,12 @@ class MetricValueSet extends GeneratedMessage {
   MetricValueSet.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MetricValueSet clone() => new MetricValueSet()..mergeFromMessage(this);
+  MetricValueSet clone() => MetricValueSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MetricValueSet create() => new MetricValueSet();
-  static PbList<MetricValueSet> createRepeated() =>
-      new PbList<MetricValueSet>();
+  static MetricValueSet create() => MetricValueSet();
+  static PbList<MetricValueSet> createRepeated() => PbList<MetricValueSet>();
   static MetricValueSet getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMetricValueSet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMetricValueSet();
     return _defaultInstance;
   }
 

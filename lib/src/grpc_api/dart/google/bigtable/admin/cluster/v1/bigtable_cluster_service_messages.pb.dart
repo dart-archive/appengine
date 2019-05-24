@@ -12,7 +12,7 @@ import 'bigtable_cluster_data.pb.dart';
 import '../../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 
 class ListZonesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListZonesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListZonesRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -23,14 +23,14 @@ class ListZonesRequest extends GeneratedMessage {
   ListZonesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListZonesRequest clone() => new ListZonesRequest()..mergeFromMessage(this);
+  ListZonesRequest clone() => ListZonesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListZonesRequest create() => new ListZonesRequest();
+  static ListZonesRequest create() => ListZonesRequest();
   static PbList<ListZonesRequest> createRepeated() =>
-      new PbList<ListZonesRequest>();
+      PbList<ListZonesRequest>();
   static ListZonesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListZonesRequest();
+      _defaultInstance = _ReadonlyListZonesRequest();
     return _defaultInstance;
   }
 
@@ -52,7 +52,7 @@ class _ReadonlyListZonesRequest extends ListZonesRequest
     with ReadonlyMessageMixin {}
 
 class ListZonesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListZonesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListZonesResponse')
     ..pp<Zone>(1, 'zones', PbFieldType.PM, Zone.$checkItem, Zone.create)
     ..hasRequiredFields = false;
 
@@ -63,14 +63,14 @@ class ListZonesResponse extends GeneratedMessage {
   ListZonesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListZonesResponse clone() => new ListZonesResponse()..mergeFromMessage(this);
+  ListZonesResponse clone() => ListZonesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListZonesResponse create() => new ListZonesResponse();
+  static ListZonesResponse create() => ListZonesResponse();
   static PbList<ListZonesResponse> createRepeated() =>
-      new PbList<ListZonesResponse>();
+      PbList<ListZonesResponse>();
   static ListZonesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListZonesResponse();
+      _defaultInstance = _ReadonlyListZonesResponse();
     return _defaultInstance;
   }
 
@@ -86,7 +86,7 @@ class _ReadonlyListZonesResponse extends ListZonesResponse
     with ReadonlyMessageMixin {}
 
 class GetClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetClusterRequest')
+  static final BuilderInfo _i = BuilderInfo('GetClusterRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -97,14 +97,14 @@ class GetClusterRequest extends GeneratedMessage {
   GetClusterRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetClusterRequest clone() => new GetClusterRequest()..mergeFromMessage(this);
+  GetClusterRequest clone() => GetClusterRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetClusterRequest create() => new GetClusterRequest();
+  static GetClusterRequest create() => GetClusterRequest();
   static PbList<GetClusterRequest> createRepeated() =>
-      new PbList<GetClusterRequest>();
+      PbList<GetClusterRequest>();
   static GetClusterRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetClusterRequest();
+      _defaultInstance = _ReadonlyGetClusterRequest();
     return _defaultInstance;
   }
 
@@ -126,7 +126,7 @@ class _ReadonlyGetClusterRequest extends GetClusterRequest
     with ReadonlyMessageMixin {}
 
 class ListClustersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListClustersRequest')
+  static final BuilderInfo _i = BuilderInfo('ListClustersRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -137,15 +137,14 @@ class ListClustersRequest extends GeneratedMessage {
   ListClustersRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListClustersRequest clone() =>
-      new ListClustersRequest()..mergeFromMessage(this);
+  ListClustersRequest clone() => ListClustersRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListClustersRequest create() => new ListClustersRequest();
+  static ListClustersRequest create() => ListClustersRequest();
   static PbList<ListClustersRequest> createRepeated() =>
-      new PbList<ListClustersRequest>();
+      PbList<ListClustersRequest>();
   static ListClustersRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListClustersRequest();
+      _defaultInstance = _ReadonlyListClustersRequest();
     return _defaultInstance;
   }
 
@@ -167,7 +166,7 @@ class _ReadonlyListClustersRequest extends ListClustersRequest
     with ReadonlyMessageMixin {}
 
 class ListClustersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListClustersResponse')
+  static final BuilderInfo _i = BuilderInfo('ListClustersResponse')
     ..pp<Cluster>(
         1, 'clusters', PbFieldType.PM, Cluster.$checkItem, Cluster.create)
     ..pp<Zone>(2, 'failedZones', PbFieldType.PM, Zone.$checkItem, Zone.create)
@@ -181,14 +180,14 @@ class ListClustersResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListClustersResponse clone() =>
-      new ListClustersResponse()..mergeFromMessage(this);
+      ListClustersResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListClustersResponse create() => new ListClustersResponse();
+  static ListClustersResponse create() => ListClustersResponse();
   static PbList<ListClustersResponse> createRepeated() =>
-      new PbList<ListClustersResponse>();
+      PbList<ListClustersResponse>();
   static ListClustersResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListClustersResponse();
+      _defaultInstance = _ReadonlyListClustersResponse();
     return _defaultInstance;
   }
 
@@ -206,7 +205,7 @@ class _ReadonlyListClustersResponse extends ListClustersResponse
     with ReadonlyMessageMixin {}
 
 class CreateClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateClusterRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateClusterRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'clusterId')
     ..a<Cluster>(
@@ -221,14 +220,14 @@ class CreateClusterRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateClusterRequest clone() =>
-      new CreateClusterRequest()..mergeFromMessage(this);
+      CreateClusterRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateClusterRequest create() => new CreateClusterRequest();
+  static CreateClusterRequest create() => CreateClusterRequest();
   static PbList<CreateClusterRequest> createRepeated() =>
-      new PbList<CreateClusterRequest>();
+      PbList<CreateClusterRequest>();
   static CreateClusterRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateClusterRequest();
+      _defaultInstance = _ReadonlyCreateClusterRequest();
     return _defaultInstance;
   }
 
@@ -266,7 +265,7 @@ class _ReadonlyCreateClusterRequest extends CreateClusterRequest
     with ReadonlyMessageMixin {}
 
 class CreateClusterMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateClusterMetadata')
+  static final BuilderInfo _i = BuilderInfo('CreateClusterMetadata')
     ..a<CreateClusterRequest>(1, 'originalRequest', PbFieldType.OM,
         CreateClusterRequest.getDefault, CreateClusterRequest.create)
     ..a<$google$protobuf.Timestamp>(
@@ -291,14 +290,14 @@ class CreateClusterMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateClusterMetadata clone() =>
-      new CreateClusterMetadata()..mergeFromMessage(this);
+      CreateClusterMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateClusterMetadata create() => new CreateClusterMetadata();
+  static CreateClusterMetadata create() => CreateClusterMetadata();
   static PbList<CreateClusterMetadata> createRepeated() =>
-      new PbList<CreateClusterMetadata>();
+      PbList<CreateClusterMetadata>();
   static CreateClusterMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateClusterMetadata();
+      _defaultInstance = _ReadonlyCreateClusterMetadata();
     return _defaultInstance;
   }
 
@@ -337,7 +336,7 @@ class _ReadonlyCreateClusterMetadata extends CreateClusterMetadata
     with ReadonlyMessageMixin {}
 
 class UpdateClusterMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateClusterMetadata')
+  static final BuilderInfo _i = BuilderInfo('UpdateClusterMetadata')
     ..a<Cluster>(1, 'originalRequest', PbFieldType.OM, Cluster.getDefault,
         Cluster.create)
     ..a<$google$protobuf.Timestamp>(
@@ -368,14 +367,14 @@ class UpdateClusterMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateClusterMetadata clone() =>
-      new UpdateClusterMetadata()..mergeFromMessage(this);
+      UpdateClusterMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateClusterMetadata create() => new UpdateClusterMetadata();
+  static UpdateClusterMetadata create() => UpdateClusterMetadata();
   static PbList<UpdateClusterMetadata> createRepeated() =>
-      new PbList<UpdateClusterMetadata>();
+      PbList<UpdateClusterMetadata>();
   static UpdateClusterMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateClusterMetadata();
+      _defaultInstance = _ReadonlyUpdateClusterMetadata();
     return _defaultInstance;
   }
 
@@ -422,7 +421,7 @@ class _ReadonlyUpdateClusterMetadata extends UpdateClusterMetadata
     with ReadonlyMessageMixin {}
 
 class DeleteClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteClusterRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteClusterRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -434,14 +433,14 @@ class DeleteClusterRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteClusterRequest clone() =>
-      new DeleteClusterRequest()..mergeFromMessage(this);
+      DeleteClusterRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteClusterRequest create() => new DeleteClusterRequest();
+  static DeleteClusterRequest create() => DeleteClusterRequest();
   static PbList<DeleteClusterRequest> createRepeated() =>
-      new PbList<DeleteClusterRequest>();
+      PbList<DeleteClusterRequest>();
   static DeleteClusterRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteClusterRequest();
+      _defaultInstance = _ReadonlyDeleteClusterRequest();
     return _defaultInstance;
   }
 
@@ -463,7 +462,7 @@ class _ReadonlyDeleteClusterRequest extends DeleteClusterRequest
     with ReadonlyMessageMixin {}
 
 class UndeleteClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteClusterRequest')
+  static final BuilderInfo _i = BuilderInfo('UndeleteClusterRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -475,14 +474,14 @@ class UndeleteClusterRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UndeleteClusterRequest clone() =>
-      new UndeleteClusterRequest()..mergeFromMessage(this);
+      UndeleteClusterRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UndeleteClusterRequest create() => new UndeleteClusterRequest();
+  static UndeleteClusterRequest create() => UndeleteClusterRequest();
   static PbList<UndeleteClusterRequest> createRepeated() =>
-      new PbList<UndeleteClusterRequest>();
+      PbList<UndeleteClusterRequest>();
   static UndeleteClusterRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteClusterRequest();
+      _defaultInstance = _ReadonlyUndeleteClusterRequest();
     return _defaultInstance;
   }
 
@@ -505,7 +504,7 @@ class _ReadonlyUndeleteClusterRequest extends UndeleteClusterRequest
     with ReadonlyMessageMixin {}
 
 class UndeleteClusterMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteClusterMetadata')
+  static final BuilderInfo _i = BuilderInfo('UndeleteClusterMetadata')
     ..a<$google$protobuf.Timestamp>(
         1,
         'requestTime',
@@ -528,14 +527,14 @@ class UndeleteClusterMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UndeleteClusterMetadata clone() =>
-      new UndeleteClusterMetadata()..mergeFromMessage(this);
+      UndeleteClusterMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UndeleteClusterMetadata create() => new UndeleteClusterMetadata();
+  static UndeleteClusterMetadata create() => UndeleteClusterMetadata();
   static PbList<UndeleteClusterMetadata> createRepeated() =>
-      new PbList<UndeleteClusterMetadata>();
+      PbList<UndeleteClusterMetadata>();
   static UndeleteClusterMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteClusterMetadata();
+      _defaultInstance = _ReadonlyUndeleteClusterMetadata();
     return _defaultInstance;
   }
 
@@ -566,7 +565,7 @@ class _ReadonlyUndeleteClusterMetadata extends UndeleteClusterMetadata
     with ReadonlyMessageMixin {}
 
 class V2OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('V2OperationMetadata')
+  static final BuilderInfo _i = BuilderInfo('V2OperationMetadata')
     ..hasRequiredFields = false;
 
   V2OperationMetadata() : super();
@@ -576,15 +575,14 @@ class V2OperationMetadata extends GeneratedMessage {
   V2OperationMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  V2OperationMetadata clone() =>
-      new V2OperationMetadata()..mergeFromMessage(this);
+  V2OperationMetadata clone() => V2OperationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static V2OperationMetadata create() => new V2OperationMetadata();
+  static V2OperationMetadata create() => V2OperationMetadata();
   static PbList<V2OperationMetadata> createRepeated() =>
-      new PbList<V2OperationMetadata>();
+      PbList<V2OperationMetadata>();
   static V2OperationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyV2OperationMetadata();
+      _defaultInstance = _ReadonlyV2OperationMetadata();
     return _defaultInstance;
   }
 

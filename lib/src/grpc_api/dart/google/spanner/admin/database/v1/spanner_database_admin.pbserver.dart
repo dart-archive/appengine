@@ -38,25 +38,25 @@ abstract class DatabaseAdminServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListDatabases':
-        return new ListDatabasesRequest();
+        return ListDatabasesRequest();
       case 'CreateDatabase':
-        return new CreateDatabaseRequest();
+        return CreateDatabaseRequest();
       case 'GetDatabase':
-        return new GetDatabaseRequest();
+        return GetDatabaseRequest();
       case 'UpdateDatabaseDdl':
-        return new UpdateDatabaseDdlRequest();
+        return UpdateDatabaseDdlRequest();
       case 'DropDatabase':
-        return new DropDatabaseRequest();
+        return DropDatabaseRequest();
       case 'GetDatabaseDdl':
-        return new GetDatabaseDdlRequest();
+        return GetDatabaseDdlRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -82,7 +82,7 @@ abstract class DatabaseAdminServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

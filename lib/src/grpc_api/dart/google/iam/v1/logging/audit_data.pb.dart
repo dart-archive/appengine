@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../policy.pb.dart' as $google$iam$v1;
 
 class AuditData extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditData')
+  static final BuilderInfo _i = BuilderInfo('AuditData')
     ..a<$google$iam$v1.PolicyDelta>(
         2,
         'policyDelta',
@@ -26,12 +26,12 @@ class AuditData extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AuditData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuditData clone() => new AuditData()..mergeFromMessage(this);
+  AuditData clone() => AuditData()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuditData create() => new AuditData();
-  static PbList<AuditData> createRepeated() => new PbList<AuditData>();
+  static AuditData create() => AuditData();
+  static PbList<AuditData> createRepeated() => PbList<AuditData>();
   static AuditData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAuditData();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuditData();
     return _defaultInstance;
   }
 

@@ -26,15 +26,15 @@ abstract class OperationsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListOperations':
-        return new ListOperationsRequest();
+        return ListOperationsRequest();
       case 'GetOperation':
-        return new GetOperationRequest();
+        return GetOperationRequest();
       case 'DeleteOperation':
-        return new DeleteOperationRequest();
+        return DeleteOperationRequest();
       case 'CancelOperation':
-        return new CancelOperationRequest();
+        return CancelOperationRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -50,7 +50,7 @@ abstract class OperationsServiceBase extends GeneratedService {
       case 'CancelOperation':
         return this.cancelOperation(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -13,7 +13,7 @@ import 'type.pbenum.dart';
 export 'type.pbenum.dart';
 
 class Type extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Type')
+  static final BuilderInfo _i = BuilderInfo('Type')
     ..e<TypeCode>(1, 'code', PbFieldType.OE, TypeCode.TYPE_CODE_UNSPECIFIED,
         TypeCode.valueOf, TypeCode.values)
     ..a<Type>(
@@ -27,12 +27,12 @@ class Type extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Type.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Type clone() => new Type()..mergeFromMessage(this);
+  Type clone() => Type()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Type create() => new Type();
-  static PbList<Type> createRepeated() => new PbList<Type>();
+  static Type create() => Type();
+  static PbList<Type> createRepeated() => PbList<Type>();
   static Type getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyType();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyType();
     return _defaultInstance;
   }
 
@@ -69,7 +69,7 @@ class Type extends GeneratedMessage {
 class _ReadonlyType extends Type with ReadonlyMessageMixin {}
 
 class StructType_Field extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StructType_Field')
+  static final BuilderInfo _i = BuilderInfo('StructType_Field')
     ..aOS(1, 'name')
     ..a<Type>(2, 'type', PbFieldType.OM, Type.getDefault, Type.create)
     ..hasRequiredFields = false;
@@ -81,14 +81,14 @@ class StructType_Field extends GeneratedMessage {
   StructType_Field.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StructType_Field clone() => new StructType_Field()..mergeFromMessage(this);
+  StructType_Field clone() => StructType_Field()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StructType_Field create() => new StructType_Field();
+  static StructType_Field create() => StructType_Field();
   static PbList<StructType_Field> createRepeated() =>
-      new PbList<StructType_Field>();
+      PbList<StructType_Field>();
   static StructType_Field getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStructType_Field();
+      _defaultInstance = _ReadonlyStructType_Field();
     return _defaultInstance;
   }
 
@@ -118,7 +118,7 @@ class _ReadonlyStructType_Field extends StructType_Field
     with ReadonlyMessageMixin {}
 
 class StructType extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StructType')
+  static final BuilderInfo _i = BuilderInfo('StructType')
     ..pp<StructType_Field>(1, 'fields', PbFieldType.PM,
         StructType_Field.$checkItem, StructType_Field.create)
     ..hasRequiredFields = false;
@@ -129,12 +129,12 @@ class StructType extends GeneratedMessage {
       : super.fromBuffer(i, r);
   StructType.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StructType clone() => new StructType()..mergeFromMessage(this);
+  StructType clone() => StructType()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StructType create() => new StructType();
-  static PbList<StructType> createRepeated() => new PbList<StructType>();
+  static StructType create() => StructType();
+  static PbList<StructType> createRepeated() => PbList<StructType>();
   static StructType getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyStructType();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStructType();
     return _defaultInstance;
   }
 

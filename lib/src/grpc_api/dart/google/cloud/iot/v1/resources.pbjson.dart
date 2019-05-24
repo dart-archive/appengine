@@ -3,50 +3,50 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const MqttState$json = const {
+const MqttState$json = {
   '1': 'MqttState',
-  '2': const [
-    const {'1': 'MQTT_STATE_UNSPECIFIED', '2': 0},
-    const {'1': 'MQTT_ENABLED', '2': 1},
-    const {'1': 'MQTT_DISABLED', '2': 2},
+  '2': [
+    {'1': 'MQTT_STATE_UNSPECIFIED', '2': 0},
+    {'1': 'MQTT_ENABLED', '2': 1},
+    {'1': 'MQTT_DISABLED', '2': 2},
   ],
 };
 
-const HttpState$json = const {
+const HttpState$json = {
   '1': 'HttpState',
-  '2': const [
-    const {'1': 'HTTP_STATE_UNSPECIFIED', '2': 0},
-    const {'1': 'HTTP_ENABLED', '2': 1},
-    const {'1': 'HTTP_DISABLED', '2': 2},
+  '2': [
+    {'1': 'HTTP_STATE_UNSPECIFIED', '2': 0},
+    {'1': 'HTTP_ENABLED', '2': 1},
+    {'1': 'HTTP_DISABLED', '2': 2},
   ],
 };
 
-const PublicKeyCertificateFormat$json = const {
+const PublicKeyCertificateFormat$json = {
   '1': 'PublicKeyCertificateFormat',
-  '2': const [
-    const {'1': 'UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT', '2': 0},
-    const {'1': 'X509_CERTIFICATE_PEM', '2': 1},
+  '2': [
+    {'1': 'UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT', '2': 0},
+    {'1': 'X509_CERTIFICATE_PEM', '2': 1},
   ],
 };
 
-const PublicKeyFormat$json = const {
+const PublicKeyFormat$json = {
   '1': 'PublicKeyFormat',
-  '2': const [
-    const {'1': 'UNSPECIFIED_PUBLIC_KEY_FORMAT', '2': 0},
-    const {'1': 'RSA_PEM', '2': 3},
-    const {'1': 'RSA_X509_PEM', '2': 1},
-    const {'1': 'ES256_PEM', '2': 2},
-    const {'1': 'ES256_X509_PEM', '2': 4},
+  '2': [
+    {'1': 'UNSPECIFIED_PUBLIC_KEY_FORMAT', '2': 0},
+    {'1': 'RSA_PEM', '2': 3},
+    {'1': 'RSA_X509_PEM', '2': 1},
+    {'1': 'ES256_PEM', '2': 2},
+    {'1': 'ES256_X509_PEM', '2': 4},
   ],
 };
 
-const Device$json = const {
+const Device$json = {
   '1': 'Device',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'num_id', '3': 3, '4': 1, '5': 4, '10': 'numId'},
-    const {
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'num_id', '3': 3, '4': 1, '5': 4, '10': 'numId'},
+    {
       '1': 'credentials',
       '3': 12,
       '4': 3,
@@ -54,7 +54,7 @@ const Device$json = const {
       '6': '.google.cloud.iot.v1.DeviceCredential',
       '10': 'credentials'
     },
-    const {
+    {
       '1': 'last_heartbeat_time',
       '3': 7,
       '4': 1,
@@ -62,7 +62,7 @@ const Device$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'lastHeartbeatTime'
     },
-    const {
+    {
       '1': 'last_event_time',
       '3': 8,
       '4': 1,
@@ -70,7 +70,7 @@ const Device$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'lastEventTime'
     },
-    const {
+    {
       '1': 'last_state_time',
       '3': 20,
       '4': 1,
@@ -78,7 +78,7 @@ const Device$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'lastStateTime'
     },
-    const {
+    {
       '1': 'last_config_ack_time',
       '3': 14,
       '4': 1,
@@ -86,7 +86,7 @@ const Device$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'lastConfigAckTime'
     },
-    const {
+    {
       '1': 'last_config_send_time',
       '3': 18,
       '4': 1,
@@ -94,8 +94,8 @@ const Device$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'lastConfigSendTime'
     },
-    const {'1': 'blocked', '3': 19, '4': 1, '5': 8, '10': 'blocked'},
-    const {
+    {'1': 'blocked', '3': 19, '4': 1, '5': 8, '10': 'blocked'},
+    {
       '1': 'last_error_time',
       '3': 10,
       '4': 1,
@@ -103,7 +103,7 @@ const Device$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'lastErrorTime'
     },
-    const {
+    {
       '1': 'last_error_status',
       '3': 11,
       '4': 1,
@@ -111,7 +111,7 @@ const Device$json = const {
       '6': '.google.rpc.Status',
       '10': 'lastErrorStatus'
     },
-    const {
+    {
       '1': 'config',
       '3': 13,
       '4': 1,
@@ -119,7 +119,7 @@ const Device$json = const {
       '6': '.google.cloud.iot.v1.DeviceConfig',
       '10': 'config'
     },
-    const {
+    {
       '1': 'state',
       '3': 16,
       '4': 1,
@@ -127,7 +127,7 @@ const Device$json = const {
       '6': '.google.cloud.iot.v1.DeviceState',
       '10': 'state'
     },
-    const {
+    {
       '1': 'metadata',
       '3': 17,
       '4': 3,
@@ -136,24 +136,24 @@ const Device$json = const {
       '10': 'metadata'
     },
   ],
-  '3': const [Device_MetadataEntry$json],
+  '3': [Device_MetadataEntry$json],
 };
 
-const Device_MetadataEntry$json = const {
+const Device_MetadataEntry$json = {
   '1': 'MetadataEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const DeviceRegistry$json = const {
+const DeviceRegistry$json = {
   '1': 'DeviceRegistry',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'event_notification_configs',
       '3': 10,
       '4': 3,
@@ -161,7 +161,7 @@ const DeviceRegistry$json = const {
       '6': '.google.cloud.iot.v1.EventNotificationConfig',
       '10': 'eventNotificationConfigs'
     },
-    const {
+    {
       '1': 'state_notification_config',
       '3': 7,
       '4': 1,
@@ -169,7 +169,7 @@ const DeviceRegistry$json = const {
       '6': '.google.cloud.iot.v1.StateNotificationConfig',
       '10': 'stateNotificationConfig'
     },
-    const {
+    {
       '1': 'mqtt_config',
       '3': 4,
       '4': 1,
@@ -177,7 +177,7 @@ const DeviceRegistry$json = const {
       '6': '.google.cloud.iot.v1.MqttConfig',
       '10': 'mqttConfig'
     },
-    const {
+    {
       '1': 'http_config',
       '3': 9,
       '4': 1,
@@ -185,7 +185,7 @@ const DeviceRegistry$json = const {
       '6': '.google.cloud.iot.v1.HttpConfig',
       '10': 'httpConfig'
     },
-    const {
+    {
       '1': 'credentials',
       '3': 8,
       '4': 3,
@@ -196,10 +196,10 @@ const DeviceRegistry$json = const {
   ],
 };
 
-const MqttConfig$json = const {
+const MqttConfig$json = {
   '1': 'MqttConfig',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'mqtt_enabled_state',
       '3': 1,
       '4': 1,
@@ -210,10 +210,10 @@ const MqttConfig$json = const {
   ],
 };
 
-const HttpConfig$json = const {
+const HttpConfig$json = {
   '1': 'HttpConfig',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'http_enabled_state',
       '3': 1,
       '4': 1,
@@ -224,43 +224,31 @@ const HttpConfig$json = const {
   ],
 };
 
-const EventNotificationConfig$json = const {
+const EventNotificationConfig$json = {
   '1': 'EventNotificationConfig',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'subfolder_matches',
       '3': 2,
       '4': 1,
       '5': 9,
       '10': 'subfolderMatches'
     },
-    const {
-      '1': 'pubsub_topic_name',
-      '3': 1,
-      '4': 1,
-      '5': 9,
-      '10': 'pubsubTopicName'
-    },
+    {'1': 'pubsub_topic_name', '3': 1, '4': 1, '5': 9, '10': 'pubsubTopicName'},
   ],
 };
 
-const StateNotificationConfig$json = const {
+const StateNotificationConfig$json = {
   '1': 'StateNotificationConfig',
-  '2': const [
-    const {
-      '1': 'pubsub_topic_name',
-      '3': 1,
-      '4': 1,
-      '5': 9,
-      '10': 'pubsubTopicName'
-    },
+  '2': [
+    {'1': 'pubsub_topic_name', '3': 1, '4': 1, '5': 9, '10': 'pubsubTopicName'},
   ],
 };
 
-const RegistryCredential$json = const {
+const RegistryCredential$json = {
   '1': 'RegistryCredential',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'public_key_certificate',
       '3': 1,
       '4': 1,
@@ -270,17 +258,17 @@ const RegistryCredential$json = const {
       '10': 'publicKeyCertificate'
     },
   ],
-  '8': const [
-    const {'1': 'credential'},
+  '8': [
+    {'1': 'credential'},
   ],
 };
 
-const X509CertificateDetails$json = const {
+const X509CertificateDetails$json = {
   '1': 'X509CertificateDetails',
-  '2': const [
-    const {'1': 'issuer', '3': 1, '4': 1, '5': 9, '10': 'issuer'},
-    const {'1': 'subject', '3': 2, '4': 1, '5': 9, '10': 'subject'},
-    const {
+  '2': [
+    {'1': 'issuer', '3': 1, '4': 1, '5': 9, '10': 'issuer'},
+    {'1': 'subject', '3': 2, '4': 1, '5': 9, '10': 'subject'},
+    {
       '1': 'start_time',
       '3': 3,
       '4': 1,
@@ -288,7 +276,7 @@ const X509CertificateDetails$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'startTime'
     },
-    const {
+    {
       '1': 'expiry_time',
       '3': 4,
       '4': 1,
@@ -296,27 +284,21 @@ const X509CertificateDetails$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'expiryTime'
     },
-    const {
+    {
       '1': 'signature_algorithm',
       '3': 5,
       '4': 1,
       '5': 9,
       '10': 'signatureAlgorithm'
     },
-    const {
-      '1': 'public_key_type',
-      '3': 6,
-      '4': 1,
-      '5': 9,
-      '10': 'publicKeyType'
-    },
+    {'1': 'public_key_type', '3': 6, '4': 1, '5': 9, '10': 'publicKeyType'},
   ],
 };
 
-const PublicKeyCertificate$json = const {
+const PublicKeyCertificate$json = {
   '1': 'PublicKeyCertificate',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'format',
       '3': 1,
       '4': 1,
@@ -324,8 +306,8 @@ const PublicKeyCertificate$json = const {
       '6': '.google.cloud.iot.v1.PublicKeyCertificateFormat',
       '10': 'format'
     },
-    const {'1': 'certificate', '3': 2, '4': 1, '5': 9, '10': 'certificate'},
-    const {
+    {'1': 'certificate', '3': 2, '4': 1, '5': 9, '10': 'certificate'},
+    {
       '1': 'x509_details',
       '3': 3,
       '4': 1,
@@ -336,10 +318,10 @@ const PublicKeyCertificate$json = const {
   ],
 };
 
-const DeviceCredential$json = const {
+const DeviceCredential$json = {
   '1': 'DeviceCredential',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'public_key',
       '3': 2,
       '4': 1,
@@ -348,7 +330,7 @@ const DeviceCredential$json = const {
       '9': 0,
       '10': 'publicKey'
     },
-    const {
+    {
       '1': 'expiration_time',
       '3': 6,
       '4': 1,
@@ -357,15 +339,15 @@ const DeviceCredential$json = const {
       '10': 'expirationTime'
     },
   ],
-  '8': const [
-    const {'1': 'credential'},
+  '8': [
+    {'1': 'credential'},
   ],
 };
 
-const PublicKeyCredential$json = const {
+const PublicKeyCredential$json = {
   '1': 'PublicKeyCredential',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'format',
       '3': 1,
       '4': 1,
@@ -373,15 +355,15 @@ const PublicKeyCredential$json = const {
       '6': '.google.cloud.iot.v1.PublicKeyFormat',
       '10': 'format'
     },
-    const {'1': 'key', '3': 2, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'key', '3': 2, '4': 1, '5': 9, '10': 'key'},
   ],
 };
 
-const DeviceConfig$json = const {
+const DeviceConfig$json = {
   '1': 'DeviceConfig',
-  '2': const [
-    const {'1': 'version', '3': 1, '4': 1, '5': 3, '10': 'version'},
-    const {
+  '2': [
+    {'1': 'version', '3': 1, '4': 1, '5': 3, '10': 'version'},
+    {
       '1': 'cloud_update_time',
       '3': 2,
       '4': 1,
@@ -389,7 +371,7 @@ const DeviceConfig$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'cloudUpdateTime'
     },
-    const {
+    {
       '1': 'device_ack_time',
       '3': 3,
       '4': 1,
@@ -397,14 +379,14 @@ const DeviceConfig$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'deviceAckTime'
     },
-    const {'1': 'binary_data', '3': 4, '4': 1, '5': 12, '10': 'binaryData'},
+    {'1': 'binary_data', '3': 4, '4': 1, '5': 12, '10': 'binaryData'},
   ],
 };
 
-const DeviceState$json = const {
+const DeviceState$json = {
   '1': 'DeviceState',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'update_time',
       '3': 1,
       '4': 1,
@@ -412,6 +394,6 @@ const DeviceState$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'updateTime'
     },
-    const {'1': 'binary_data', '3': 2, '4': 1, '5': 12, '10': 'binaryData'},
+    {'1': 'binary_data', '3': 2, '4': 1, '5': 12, '10': 'binaryData'},
   ],
 };

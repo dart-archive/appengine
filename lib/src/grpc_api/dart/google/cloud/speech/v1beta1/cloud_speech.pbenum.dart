@@ -9,20 +9,20 @@ import 'package:protobuf/protobuf.dart';
 
 class RecognitionConfig_AudioEncoding extends ProtobufEnum {
   static const RecognitionConfig_AudioEncoding ENCODING_UNSPECIFIED =
-      const RecognitionConfig_AudioEncoding._(0, 'ENCODING_UNSPECIFIED');
+      RecognitionConfig_AudioEncoding._(0, 'ENCODING_UNSPECIFIED');
   static const RecognitionConfig_AudioEncoding LINEAR16 =
-      const RecognitionConfig_AudioEncoding._(1, 'LINEAR16');
+      RecognitionConfig_AudioEncoding._(1, 'LINEAR16');
   static const RecognitionConfig_AudioEncoding FLAC =
-      const RecognitionConfig_AudioEncoding._(2, 'FLAC');
+      RecognitionConfig_AudioEncoding._(2, 'FLAC');
   static const RecognitionConfig_AudioEncoding MULAW =
-      const RecognitionConfig_AudioEncoding._(3, 'MULAW');
+      RecognitionConfig_AudioEncoding._(3, 'MULAW');
   static const RecognitionConfig_AudioEncoding AMR =
-      const RecognitionConfig_AudioEncoding._(4, 'AMR');
+      RecognitionConfig_AudioEncoding._(4, 'AMR');
   static const RecognitionConfig_AudioEncoding AMR_WB =
-      const RecognitionConfig_AudioEncoding._(5, 'AMR_WB');
+      RecognitionConfig_AudioEncoding._(5, 'AMR_WB');
 
   static const List<RecognitionConfig_AudioEncoding> values =
-      const <RecognitionConfig_AudioEncoding>[
+      <RecognitionConfig_AudioEncoding>[
     ENCODING_UNSPECIFIED,
     LINEAR16,
     FLAC,
@@ -45,19 +45,19 @@ class RecognitionConfig_AudioEncoding extends ProtobufEnum {
 class StreamingRecognizeResponse_EndpointerType extends ProtobufEnum {
   static const StreamingRecognizeResponse_EndpointerType
       ENDPOINTER_EVENT_UNSPECIFIED =
-      const StreamingRecognizeResponse_EndpointerType._(
+      StreamingRecognizeResponse_EndpointerType._(
           0, 'ENDPOINTER_EVENT_UNSPECIFIED');
   static const StreamingRecognizeResponse_EndpointerType START_OF_SPEECH =
-      const StreamingRecognizeResponse_EndpointerType._(1, 'START_OF_SPEECH');
+      StreamingRecognizeResponse_EndpointerType._(1, 'START_OF_SPEECH');
   static const StreamingRecognizeResponse_EndpointerType END_OF_SPEECH =
-      const StreamingRecognizeResponse_EndpointerType._(2, 'END_OF_SPEECH');
+      StreamingRecognizeResponse_EndpointerType._(2, 'END_OF_SPEECH');
   static const StreamingRecognizeResponse_EndpointerType END_OF_AUDIO =
-      const StreamingRecognizeResponse_EndpointerType._(3, 'END_OF_AUDIO');
+      StreamingRecognizeResponse_EndpointerType._(3, 'END_OF_AUDIO');
   static const StreamingRecognizeResponse_EndpointerType END_OF_UTTERANCE =
-      const StreamingRecognizeResponse_EndpointerType._(4, 'END_OF_UTTERANCE');
+      StreamingRecognizeResponse_EndpointerType._(4, 'END_OF_UTTERANCE');
 
   static const List<StreamingRecognizeResponse_EndpointerType> values =
-      const <StreamingRecognizeResponse_EndpointerType>[
+      <StreamingRecognizeResponse_EndpointerType>[
     ENDPOINTER_EVENT_UNSPECIFIED,
     START_OF_SPEECH,
     END_OF_SPEECH,

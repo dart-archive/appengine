@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class SystemParameters extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SystemParameters')
+  static final BuilderInfo _i = BuilderInfo('SystemParameters')
     ..pp<SystemParameterRule>(1, 'rules', PbFieldType.PM,
         SystemParameterRule.$checkItem, SystemParameterRule.create)
     ..hasRequiredFields = false;
@@ -21,14 +21,14 @@ class SystemParameters extends GeneratedMessage {
   SystemParameters.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SystemParameters clone() => new SystemParameters()..mergeFromMessage(this);
+  SystemParameters clone() => SystemParameters()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SystemParameters create() => new SystemParameters();
+  static SystemParameters create() => SystemParameters();
   static PbList<SystemParameters> createRepeated() =>
-      new PbList<SystemParameters>();
+      PbList<SystemParameters>();
   static SystemParameters getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySystemParameters();
+      _defaultInstance = _ReadonlySystemParameters();
     return _defaultInstance;
   }
 
@@ -44,7 +44,7 @@ class _ReadonlySystemParameters extends SystemParameters
     with ReadonlyMessageMixin {}
 
 class SystemParameterRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SystemParameterRule')
+  static final BuilderInfo _i = BuilderInfo('SystemParameterRule')
     ..aOS(1, 'selector')
     ..pp<SystemParameter>(2, 'parameters', PbFieldType.PM,
         SystemParameter.$checkItem, SystemParameter.create)
@@ -57,15 +57,14 @@ class SystemParameterRule extends GeneratedMessage {
   SystemParameterRule.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SystemParameterRule clone() =>
-      new SystemParameterRule()..mergeFromMessage(this);
+  SystemParameterRule clone() => SystemParameterRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SystemParameterRule create() => new SystemParameterRule();
+  static SystemParameterRule create() => SystemParameterRule();
   static PbList<SystemParameterRule> createRepeated() =>
-      new PbList<SystemParameterRule>();
+      PbList<SystemParameterRule>();
   static SystemParameterRule getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySystemParameterRule();
+      _defaultInstance = _ReadonlySystemParameterRule();
     return _defaultInstance;
   }
 
@@ -89,7 +88,7 @@ class _ReadonlySystemParameterRule extends SystemParameterRule
     with ReadonlyMessageMixin {}
 
 class SystemParameter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SystemParameter')
+  static final BuilderInfo _i = BuilderInfo('SystemParameter')
     ..aOS(1, 'name')
     ..aOS(2, 'httpHeader')
     ..aOS(3, 'urlQueryParameter')
@@ -102,14 +101,12 @@ class SystemParameter extends GeneratedMessage {
   SystemParameter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SystemParameter clone() => new SystemParameter()..mergeFromMessage(this);
+  SystemParameter clone() => SystemParameter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SystemParameter create() => new SystemParameter();
-  static PbList<SystemParameter> createRepeated() =>
-      new PbList<SystemParameter>();
+  static SystemParameter create() => SystemParameter();
+  static PbList<SystemParameter> createRepeated() => PbList<SystemParameter>();
   static SystemParameter getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySystemParameter();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySystemParameter();
     return _defaultInstance;
   }
 

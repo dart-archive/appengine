@@ -15,7 +15,7 @@ import 'common.pbenum.dart';
 export 'common.pbenum.dart';
 
 class SupportAccount extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SupportAccount')
+  static final BuilderInfo _i = BuilderInfo('SupportAccount')
     ..aOS(1, 'name')
     ..aOS(2, 'accountId')
     ..aOS(3, 'cloudResource')
@@ -51,14 +51,12 @@ class SupportAccount extends GeneratedMessage {
   SupportAccount.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SupportAccount clone() => new SupportAccount()..mergeFromMessage(this);
+  SupportAccount clone() => SupportAccount()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SupportAccount create() => new SupportAccount();
-  static PbList<SupportAccount> createRepeated() =>
-      new PbList<SupportAccount>();
+  static SupportAccount create() => SupportAccount();
+  static PbList<SupportAccount> createRepeated() => PbList<SupportAccount>();
   static SupportAccount getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySupportAccount();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySupportAccount();
     return _defaultInstance;
   }
 
@@ -144,7 +142,7 @@ class _ReadonlySupportAccount extends SupportAccount with ReadonlyMessageMixin {
 }
 
 class Case extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Case')
+  static final BuilderInfo _i = BuilderInfo('Case')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
@@ -185,12 +183,12 @@ class Case extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Case.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Case clone() => new Case()..mergeFromMessage(this);
+  Case clone() => Case()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Case create() => new Case();
-  static PbList<Case> createRepeated() => new PbList<Case>();
+  static Case create() => Case();
+  static PbList<Case> createRepeated() => PbList<Case>();
   static Case getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCase();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCase();
     return _defaultInstance;
   }
 
@@ -311,7 +309,7 @@ class Case extends GeneratedMessage {
 class _ReadonlyCase extends Case with ReadonlyMessageMixin {}
 
 class CustomerIssue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CustomerIssue')
+  static final BuilderInfo _i = BuilderInfo('CustomerIssue')
     ..aOS(1, 'issueId')
     ..e<CustomerIssue_IssueState>(
         2,
@@ -347,13 +345,12 @@ class CustomerIssue extends GeneratedMessage {
   CustomerIssue.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CustomerIssue clone() => new CustomerIssue()..mergeFromMessage(this);
+  CustomerIssue clone() => CustomerIssue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CustomerIssue create() => new CustomerIssue();
-  static PbList<CustomerIssue> createRepeated() => new PbList<CustomerIssue>();
+  static CustomerIssue create() => CustomerIssue();
+  static PbList<CustomerIssue> createRepeated() => PbList<CustomerIssue>();
   static CustomerIssue getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomerIssue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCustomerIssue();
     return _defaultInstance;
   }
 
@@ -406,7 +403,7 @@ class CustomerIssue extends GeneratedMessage {
 class _ReadonlyCustomerIssue extends CustomerIssue with ReadonlyMessageMixin {}
 
 class SupportRole extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SupportRole')
+  static final BuilderInfo _i = BuilderInfo('SupportRole')
     ..aOS(1, 'email')
     ..e<SupportRole_Role>(
         2,
@@ -424,12 +421,12 @@ class SupportRole extends GeneratedMessage {
   SupportRole.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SupportRole clone() => new SupportRole()..mergeFromMessage(this);
+  SupportRole clone() => SupportRole()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SupportRole create() => new SupportRole();
-  static PbList<SupportRole> createRepeated() => new PbList<SupportRole>();
+  static SupportRole create() => SupportRole();
+  static PbList<SupportRole> createRepeated() => PbList<SupportRole>();
   static SupportRole getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySupportRole();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySupportRole();
     return _defaultInstance;
   }
 
@@ -458,7 +455,7 @@ class SupportRole extends GeneratedMessage {
 class _ReadonlySupportRole extends SupportRole with ReadonlyMessageMixin {}
 
 class Comment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Comment')
+  static final BuilderInfo _i = BuilderInfo('Comment')
     ..aOS(1, 'text')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -476,12 +473,12 @@ class Comment extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Comment.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Comment clone() => new Comment()..mergeFromMessage(this);
+  Comment clone() => Comment()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Comment create() => new Comment();
-  static PbList<Comment> createRepeated() => new PbList<Comment>();
+  static Comment create() => Comment();
+  static PbList<Comment> createRepeated() => PbList<Comment>();
   static Comment getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyComment();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyComment();
     return _defaultInstance;
   }
 
@@ -526,7 +523,7 @@ class Comment extends GeneratedMessage {
 class _ReadonlyComment extends Comment with ReadonlyMessageMixin {}
 
 class IssueTaxonomy_Component extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IssueTaxonomy_Component')
+  static final BuilderInfo _i = BuilderInfo('IssueTaxonomy_Component')
     ..aOS(1, 'displayName')
     ..pPS(2, 'languages')
     ..aOS(3, 'template')
@@ -542,14 +539,14 @@ class IssueTaxonomy_Component extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   IssueTaxonomy_Component clone() =>
-      new IssueTaxonomy_Component()..mergeFromMessage(this);
+      IssueTaxonomy_Component()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static IssueTaxonomy_Component create() => new IssueTaxonomy_Component();
+  static IssueTaxonomy_Component create() => IssueTaxonomy_Component();
   static PbList<IssueTaxonomy_Component> createRepeated() =>
-      new PbList<IssueTaxonomy_Component>();
+      PbList<IssueTaxonomy_Component>();
   static IssueTaxonomy_Component getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIssueTaxonomy_Component();
+      _defaultInstance = _ReadonlyIssueTaxonomy_Component();
     return _defaultInstance;
   }
 
@@ -585,7 +582,7 @@ class _ReadonlyIssueTaxonomy_Component extends IssueTaxonomy_Component
 
 class IssueTaxonomy_Category_ComponentsEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('IssueTaxonomy_Category_ComponentsEntry')
+      BuilderInfo('IssueTaxonomy_Category_ComponentsEntry')
         ..aOS(1, 'key')
         ..a<IssueTaxonomy_Component>(2, 'value', PbFieldType.OM,
             IssueTaxonomy_Component.getDefault, IssueTaxonomy_Component.create)
@@ -599,15 +596,15 @@ class IssueTaxonomy_Category_ComponentsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   IssueTaxonomy_Category_ComponentsEntry clone() =>
-      new IssueTaxonomy_Category_ComponentsEntry()..mergeFromMessage(this);
+      IssueTaxonomy_Category_ComponentsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static IssueTaxonomy_Category_ComponentsEntry create() =>
-      new IssueTaxonomy_Category_ComponentsEntry();
+      IssueTaxonomy_Category_ComponentsEntry();
   static PbList<IssueTaxonomy_Category_ComponentsEntry> createRepeated() =>
-      new PbList<IssueTaxonomy_Category_ComponentsEntry>();
+      PbList<IssueTaxonomy_Category_ComponentsEntry>();
   static IssueTaxonomy_Category_ComponentsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIssueTaxonomy_Category_ComponentsEntry();
+      _defaultInstance = _ReadonlyIssueTaxonomy_Category_ComponentsEntry();
     return _defaultInstance;
   }
 
@@ -638,7 +635,7 @@ class _ReadonlyIssueTaxonomy_Category_ComponentsEntry
     extends IssueTaxonomy_Category_ComponentsEntry with ReadonlyMessageMixin {}
 
 class IssueTaxonomy_Category extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IssueTaxonomy_Category')
+  static final BuilderInfo _i = BuilderInfo('IssueTaxonomy_Category')
     ..aOS(1, 'displayName')
     ..pp<IssueTaxonomy_Category_ComponentsEntry>(
         2,
@@ -656,14 +653,14 @@ class IssueTaxonomy_Category extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   IssueTaxonomy_Category clone() =>
-      new IssueTaxonomy_Category()..mergeFromMessage(this);
+      IssueTaxonomy_Category()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static IssueTaxonomy_Category create() => new IssueTaxonomy_Category();
+  static IssueTaxonomy_Category create() => IssueTaxonomy_Category();
   static PbList<IssueTaxonomy_Category> createRepeated() =>
-      new PbList<IssueTaxonomy_Category>();
+      PbList<IssueTaxonomy_Category>();
   static IssueTaxonomy_Category getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIssueTaxonomy_Category();
+      _defaultInstance = _ReadonlyIssueTaxonomy_Category();
     return _defaultInstance;
   }
 
@@ -688,7 +685,7 @@ class _ReadonlyIssueTaxonomy_Category extends IssueTaxonomy_Category
     with ReadonlyMessageMixin {}
 
 class IssueTaxonomy_CategoriesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IssueTaxonomy_CategoriesEntry')
+  static final BuilderInfo _i = BuilderInfo('IssueTaxonomy_CategoriesEntry')
     ..aOS(1, 'key')
     ..a<IssueTaxonomy_Category>(2, 'value', PbFieldType.OM,
         IssueTaxonomy_Category.getDefault, IssueTaxonomy_Category.create)
@@ -702,15 +699,15 @@ class IssueTaxonomy_CategoriesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   IssueTaxonomy_CategoriesEntry clone() =>
-      new IssueTaxonomy_CategoriesEntry()..mergeFromMessage(this);
+      IssueTaxonomy_CategoriesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static IssueTaxonomy_CategoriesEntry create() =>
-      new IssueTaxonomy_CategoriesEntry();
+      IssueTaxonomy_CategoriesEntry();
   static PbList<IssueTaxonomy_CategoriesEntry> createRepeated() =>
-      new PbList<IssueTaxonomy_CategoriesEntry>();
+      PbList<IssueTaxonomy_CategoriesEntry>();
   static IssueTaxonomy_CategoriesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIssueTaxonomy_CategoriesEntry();
+      _defaultInstance = _ReadonlyIssueTaxonomy_CategoriesEntry();
     return _defaultInstance;
   }
 
@@ -741,7 +738,7 @@ class _ReadonlyIssueTaxonomy_CategoriesEntry
     extends IssueTaxonomy_CategoriesEntry with ReadonlyMessageMixin {}
 
 class IssueTaxonomy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IssueTaxonomy')
+  static final BuilderInfo _i = BuilderInfo('IssueTaxonomy')
     ..pp<IssueTaxonomy_CategoriesEntry>(
         1,
         'categories',
@@ -757,13 +754,12 @@ class IssueTaxonomy extends GeneratedMessage {
   IssueTaxonomy.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  IssueTaxonomy clone() => new IssueTaxonomy()..mergeFromMessage(this);
+  IssueTaxonomy clone() => IssueTaxonomy()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static IssueTaxonomy create() => new IssueTaxonomy();
-  static PbList<IssueTaxonomy> createRepeated() => new PbList<IssueTaxonomy>();
+  static IssueTaxonomy create() => IssueTaxonomy();
+  static PbList<IssueTaxonomy> createRepeated() => PbList<IssueTaxonomy>();
   static IssueTaxonomy getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIssueTaxonomy();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyIssueTaxonomy();
     return _defaultInstance;
   }
 

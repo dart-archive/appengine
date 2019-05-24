@@ -21,11 +21,11 @@ abstract class TextToSpeechServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListVoices':
-        return new ListVoicesRequest();
+        return ListVoicesRequest();
       case 'SynthesizeSpeech':
-        return new SynthesizeSpeechRequest();
+        return SynthesizeSpeechRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -37,7 +37,7 @@ abstract class TextToSpeechServiceBase extends GeneratedService {
       case 'SynthesizeSpeech':
         return this.synthesizeSpeech(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

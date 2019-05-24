@@ -17,7 +17,7 @@ import 'operation.pbenum.dart';
 export 'operation.pbenum.dart';
 
 class Operation_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Operation_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Operation_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -30,14 +30,14 @@ class Operation_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Operation_LabelsEntry clone() =>
-      new Operation_LabelsEntry()..mergeFromMessage(this);
+      Operation_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Operation_LabelsEntry create() => new Operation_LabelsEntry();
+  static Operation_LabelsEntry create() => Operation_LabelsEntry();
   static PbList<Operation_LabelsEntry> createRepeated() =>
-      new PbList<Operation_LabelsEntry>();
+      PbList<Operation_LabelsEntry>();
   static Operation_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperation_LabelsEntry();
+      _defaultInstance = _ReadonlyOperation_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -68,7 +68,7 @@ class _ReadonlyOperation_LabelsEntry extends Operation_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Operation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Operation')
+  static final BuilderInfo _i = BuilderInfo('Operation')
     ..aOS(1, 'operationId')
     ..aOS(2, 'operationName')
     ..aOS(3, 'consumerId')
@@ -105,12 +105,12 @@ class Operation extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Operation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Operation clone() => new Operation()..mergeFromMessage(this);
+  Operation clone() => Operation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Operation create() => new Operation();
-  static PbList<Operation> createRepeated() => new PbList<Operation>();
+  static Operation create() => Operation();
+  static PbList<Operation> createRepeated() => PbList<Operation>();
   static Operation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyOperation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOperation();
     return _defaultInstance;
   }
 

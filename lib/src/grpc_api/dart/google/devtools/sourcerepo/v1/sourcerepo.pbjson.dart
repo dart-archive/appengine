@@ -7,13 +7,13 @@ import '../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 import '../../../iam/v1/iam_policy.pbjson.dart' as $google$iam$v1;
 import '../../../iam/v1/policy.pbjson.dart' as $google$iam$v1;
 
-const Repo$json = const {
+const Repo$json = {
   '1': 'Repo',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'size', '3': 2, '4': 1, '5': 3, '10': 'size'},
-    const {'1': 'url', '3': 3, '4': 1, '5': 9, '10': 'url'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'size', '3': 2, '4': 1, '5': 3, '10': 'size'},
+    {'1': 'url', '3': 3, '4': 1, '5': 9, '10': 'url'},
+    {
       '1': 'mirror_config',
       '3': 4,
       '4': 1,
@@ -24,35 +24,35 @@ const Repo$json = const {
   ],
 };
 
-const MirrorConfig$json = const {
+const MirrorConfig$json = {
   '1': 'MirrorConfig',
-  '2': const [
-    const {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
-    const {'1': 'webhook_id', '3': 2, '4': 1, '5': 9, '10': 'webhookId'},
-    const {'1': 'deploy_key_id', '3': 3, '4': 1, '5': 9, '10': 'deployKeyId'},
+  '2': [
+    {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
+    {'1': 'webhook_id', '3': 2, '4': 1, '5': 9, '10': 'webhookId'},
+    {'1': 'deploy_key_id', '3': 3, '4': 1, '5': 9, '10': 'deployKeyId'},
   ],
 };
 
-const GetRepoRequest$json = const {
+const GetRepoRequest$json = {
   '1': 'GetRepoRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListReposRequest$json = const {
+const ListReposRequest$json = {
   '1': 'ListReposRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListReposResponse$json = const {
+const ListReposResponse$json = {
   '1': 'ListReposResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'repos',
       '3': 1,
       '4': 3,
@@ -60,21 +60,15 @@ const ListReposResponse$json = const {
       '6': '.google.devtools.sourcerepo.v1.Repo',
       '10': 'repos'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const CreateRepoRequest$json = const {
+const CreateRepoRequest$json = {
   '1': 'CreateRepoRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
       '1': 'repo',
       '3': 2,
       '4': 1,
@@ -85,62 +79,62 @@ const CreateRepoRequest$json = const {
   ],
 };
 
-const DeleteRepoRequest$json = const {
+const DeleteRepoRequest$json = {
   '1': 'DeleteRepoRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const SourceRepo$json = const {
+const SourceRepo$json = {
   '1': 'SourceRepo',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'ListRepos',
       '2': '.google.devtools.sourcerepo.v1.ListReposRequest',
       '3': '.google.devtools.sourcerepo.v1.ListReposResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetRepo',
       '2': '.google.devtools.sourcerepo.v1.GetRepoRequest',
       '3': '.google.devtools.sourcerepo.v1.Repo',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateRepo',
       '2': '.google.devtools.sourcerepo.v1.CreateRepoRequest',
       '3': '.google.devtools.sourcerepo.v1.Repo',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteRepo',
       '2': '.google.devtools.sourcerepo.v1.DeleteRepoRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'SetIamPolicy',
       '2': '.google.iam.v1.SetIamPolicyRequest',
       '3': '.google.iam.v1.Policy',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetIamPolicy',
       '2': '.google.iam.v1.GetIamPolicyRequest',
       '3': '.google.iam.v1.Policy',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'TestIamPermissions',
       '2': '.google.iam.v1.TestIamPermissionsRequest',
       '3': '.google.iam.v1.TestIamPermissionsResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const SourceRepo$messageJson = const {
+const SourceRepo$messageJson = {
   '.google.devtools.sourcerepo.v1.ListReposRequest': ListReposRequest$json,
   '.google.devtools.sourcerepo.v1.ListReposResponse': ListReposResponse$json,
   '.google.devtools.sourcerepo.v1.Repo': Repo$json,

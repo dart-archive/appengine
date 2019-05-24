@@ -9,12 +9,12 @@ import 'package:protobuf/protobuf.dart';
 
 class GetServiceConfigRequest_ConfigView extends ProtobufEnum {
   static const GetServiceConfigRequest_ConfigView BASIC =
-      const GetServiceConfigRequest_ConfigView._(0, 'BASIC');
+      GetServiceConfigRequest_ConfigView._(0, 'BASIC');
   static const GetServiceConfigRequest_ConfigView FULL =
-      const GetServiceConfigRequest_ConfigView._(1, 'FULL');
+      GetServiceConfigRequest_ConfigView._(1, 'FULL');
 
   static const List<GetServiceConfigRequest_ConfigView> values =
-      const <GetServiceConfigRequest_ConfigView>[
+      <GetServiceConfigRequest_ConfigView>[
     BASIC,
     FULL,
   ];

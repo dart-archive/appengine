@@ -17,7 +17,7 @@ import 'query.pbenum.dart';
 export 'query.pbenum.dart';
 
 class EntityResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityResult')
+  static final BuilderInfo _i = BuilderInfo('EntityResult')
     ..a<Entity>(1, 'entity', PbFieldType.OM, Entity.getDefault, Entity.create)
     ..a<List<int>>(3, 'cursor', PbFieldType.OY)
     ..aInt64(4, 'version')
@@ -30,13 +30,12 @@ class EntityResult extends GeneratedMessage {
   EntityResult.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityResult clone() => new EntityResult()..mergeFromMessage(this);
+  EntityResult clone() => EntityResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EntityResult create() => new EntityResult();
-  static PbList<EntityResult> createRepeated() => new PbList<EntityResult>();
+  static EntityResult create() => EntityResult();
+  static PbList<EntityResult> createRepeated() => PbList<EntityResult>();
   static EntityResult getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntityResult();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityResult();
     return _defaultInstance;
   }
 
@@ -73,7 +72,7 @@ class EntityResult extends GeneratedMessage {
 class _ReadonlyEntityResult extends EntityResult with ReadonlyMessageMixin {}
 
 class Query extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Query')
+  static final BuilderInfo _i = BuilderInfo('Query')
     ..pp<Projection>(2, 'projection', PbFieldType.PM, Projection.$checkItem,
         Projection.create)
     ..pp<KindExpression>(3, 'kind', PbFieldType.PM, KindExpression.$checkItem,
@@ -99,12 +98,12 @@ class Query extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Query.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Query clone() => new Query()..mergeFromMessage(this);
+  Query clone() => Query()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Query create() => new Query();
-  static PbList<Query> createRepeated() => new PbList<Query>();
+  static Query create() => Query();
+  static PbList<Query> createRepeated() => PbList<Query>();
   static Query getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQuery();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQuery();
     return _defaultInstance;
   }
 
@@ -165,7 +164,7 @@ class Query extends GeneratedMessage {
 class _ReadonlyQuery extends Query with ReadonlyMessageMixin {}
 
 class KindExpression extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('KindExpression')
+  static final BuilderInfo _i = BuilderInfo('KindExpression')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -176,14 +175,12 @@ class KindExpression extends GeneratedMessage {
   KindExpression.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  KindExpression clone() => new KindExpression()..mergeFromMessage(this);
+  KindExpression clone() => KindExpression()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static KindExpression create() => new KindExpression();
-  static PbList<KindExpression> createRepeated() =>
-      new PbList<KindExpression>();
+  static KindExpression create() => KindExpression();
+  static PbList<KindExpression> createRepeated() => PbList<KindExpression>();
   static KindExpression getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyKindExpression();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyKindExpression();
     return _defaultInstance;
   }
 
@@ -205,7 +202,7 @@ class _ReadonlyKindExpression extends KindExpression with ReadonlyMessageMixin {
 }
 
 class PropertyReference extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PropertyReference')
+  static final BuilderInfo _i = BuilderInfo('PropertyReference')
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
 
@@ -216,14 +213,14 @@ class PropertyReference extends GeneratedMessage {
   PropertyReference.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PropertyReference clone() => new PropertyReference()..mergeFromMessage(this);
+  PropertyReference clone() => PropertyReference()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PropertyReference create() => new PropertyReference();
+  static PropertyReference create() => PropertyReference();
   static PbList<PropertyReference> createRepeated() =>
-      new PbList<PropertyReference>();
+      PbList<PropertyReference>();
   static PropertyReference getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPropertyReference();
+      _defaultInstance = _ReadonlyPropertyReference();
     return _defaultInstance;
   }
 
@@ -245,7 +242,7 @@ class _ReadonlyPropertyReference extends PropertyReference
     with ReadonlyMessageMixin {}
 
 class Projection extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Projection')
+  static final BuilderInfo _i = BuilderInfo('Projection')
     ..a<PropertyReference>(1, 'property', PbFieldType.OM,
         PropertyReference.getDefault, PropertyReference.create)
     ..hasRequiredFields = false;
@@ -256,12 +253,12 @@ class Projection extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Projection.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Projection clone() => new Projection()..mergeFromMessage(this);
+  Projection clone() => Projection()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Projection create() => new Projection();
-  static PbList<Projection> createRepeated() => new PbList<Projection>();
+  static Projection create() => Projection();
+  static PbList<Projection> createRepeated() => PbList<Projection>();
   static Projection getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProjection();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyProjection();
     return _defaultInstance;
   }
 
@@ -282,7 +279,7 @@ class Projection extends GeneratedMessage {
 class _ReadonlyProjection extends Projection with ReadonlyMessageMixin {}
 
 class PropertyOrder extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PropertyOrder')
+  static final BuilderInfo _i = BuilderInfo('PropertyOrder')
     ..a<PropertyReference>(1, 'property', PbFieldType.OM,
         PropertyReference.getDefault, PropertyReference.create)
     ..e<PropertyOrder_Direction>(
@@ -301,13 +298,12 @@ class PropertyOrder extends GeneratedMessage {
   PropertyOrder.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PropertyOrder clone() => new PropertyOrder()..mergeFromMessage(this);
+  PropertyOrder clone() => PropertyOrder()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PropertyOrder create() => new PropertyOrder();
-  static PbList<PropertyOrder> createRepeated() => new PbList<PropertyOrder>();
+  static PropertyOrder create() => PropertyOrder();
+  static PbList<PropertyOrder> createRepeated() => PbList<PropertyOrder>();
   static PropertyOrder getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPropertyOrder();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPropertyOrder();
     return _defaultInstance;
   }
 
@@ -336,7 +332,7 @@ class PropertyOrder extends GeneratedMessage {
 class _ReadonlyPropertyOrder extends PropertyOrder with ReadonlyMessageMixin {}
 
 class Filter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Filter')
+  static final BuilderInfo _i = BuilderInfo('Filter')
     ..a<CompositeFilter>(1, 'compositeFilter', PbFieldType.OM,
         CompositeFilter.getDefault, CompositeFilter.create)
     ..a<PropertyFilter>(2, 'propertyFilter', PbFieldType.OM,
@@ -349,12 +345,12 @@ class Filter extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Filter.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Filter clone() => new Filter()..mergeFromMessage(this);
+  Filter clone() => Filter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Filter create() => new Filter();
-  static PbList<Filter> createRepeated() => new PbList<Filter>();
+  static Filter create() => Filter();
+  static PbList<Filter> createRepeated() => PbList<Filter>();
   static Filter getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFilter();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFilter();
     return _defaultInstance;
   }
 
@@ -383,7 +379,7 @@ class Filter extends GeneratedMessage {
 class _ReadonlyFilter extends Filter with ReadonlyMessageMixin {}
 
 class CompositeFilter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CompositeFilter')
+  static final BuilderInfo _i = BuilderInfo('CompositeFilter')
     ..e<CompositeFilter_Operator>(
         1,
         'op',
@@ -401,14 +397,12 @@ class CompositeFilter extends GeneratedMessage {
   CompositeFilter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CompositeFilter clone() => new CompositeFilter()..mergeFromMessage(this);
+  CompositeFilter clone() => CompositeFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CompositeFilter create() => new CompositeFilter();
-  static PbList<CompositeFilter> createRepeated() =>
-      new PbList<CompositeFilter>();
+  static CompositeFilter create() => CompositeFilter();
+  static PbList<CompositeFilter> createRepeated() => PbList<CompositeFilter>();
   static CompositeFilter getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCompositeFilter();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCompositeFilter();
     return _defaultInstance;
   }
 
@@ -432,7 +426,7 @@ class _ReadonlyCompositeFilter extends CompositeFilter
     with ReadonlyMessageMixin {}
 
 class PropertyFilter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PropertyFilter')
+  static final BuilderInfo _i = BuilderInfo('PropertyFilter')
     ..a<PropertyReference>(1, 'property', PbFieldType.OM,
         PropertyReference.getDefault, PropertyReference.create)
     ..e<PropertyFilter_Operator>(
@@ -452,14 +446,12 @@ class PropertyFilter extends GeneratedMessage {
   PropertyFilter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PropertyFilter clone() => new PropertyFilter()..mergeFromMessage(this);
+  PropertyFilter clone() => PropertyFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PropertyFilter create() => new PropertyFilter();
-  static PbList<PropertyFilter> createRepeated() =>
-      new PbList<PropertyFilter>();
+  static PropertyFilter create() => PropertyFilter();
+  static PbList<PropertyFilter> createRepeated() => PbList<PropertyFilter>();
   static PropertyFilter getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPropertyFilter();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPropertyFilter();
     return _defaultInstance;
   }
 
@@ -497,7 +489,7 @@ class _ReadonlyPropertyFilter extends PropertyFilter with ReadonlyMessageMixin {
 }
 
 class GqlQuery_NamedBindingsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GqlQuery_NamedBindingsEntry')
+  static final BuilderInfo _i = BuilderInfo('GqlQuery_NamedBindingsEntry')
     ..aOS(1, 'key')
     ..a<GqlQueryParameter>(2, 'value', PbFieldType.OM,
         GqlQueryParameter.getDefault, GqlQueryParameter.create)
@@ -511,15 +503,14 @@ class GqlQuery_NamedBindingsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GqlQuery_NamedBindingsEntry clone() =>
-      new GqlQuery_NamedBindingsEntry()..mergeFromMessage(this);
+      GqlQuery_NamedBindingsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GqlQuery_NamedBindingsEntry create() =>
-      new GqlQuery_NamedBindingsEntry();
+  static GqlQuery_NamedBindingsEntry create() => GqlQuery_NamedBindingsEntry();
   static PbList<GqlQuery_NamedBindingsEntry> createRepeated() =>
-      new PbList<GqlQuery_NamedBindingsEntry>();
+      PbList<GqlQuery_NamedBindingsEntry>();
   static GqlQuery_NamedBindingsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGqlQuery_NamedBindingsEntry();
+      _defaultInstance = _ReadonlyGqlQuery_NamedBindingsEntry();
     return _defaultInstance;
   }
 
@@ -550,7 +541,7 @@ class _ReadonlyGqlQuery_NamedBindingsEntry extends GqlQuery_NamedBindingsEntry
     with ReadonlyMessageMixin {}
 
 class GqlQuery extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GqlQuery')
+  static final BuilderInfo _i = BuilderInfo('GqlQuery')
     ..aOS(1, 'queryString')
     ..aOB(2, 'allowLiterals')
     ..pp<GqlQueryParameter>(4, 'positionalBindings', PbFieldType.PM,
@@ -569,12 +560,12 @@ class GqlQuery extends GeneratedMessage {
       : super.fromBuffer(i, r);
   GqlQuery.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GqlQuery clone() => new GqlQuery()..mergeFromMessage(this);
+  GqlQuery clone() => GqlQuery()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GqlQuery create() => new GqlQuery();
-  static PbList<GqlQuery> createRepeated() => new PbList<GqlQuery>();
+  static GqlQuery create() => GqlQuery();
+  static PbList<GqlQuery> createRepeated() => PbList<GqlQuery>();
   static GqlQuery getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGqlQuery();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGqlQuery();
     return _defaultInstance;
   }
 
@@ -607,7 +598,7 @@ class GqlQuery extends GeneratedMessage {
 class _ReadonlyGqlQuery extends GqlQuery with ReadonlyMessageMixin {}
 
 class GqlQueryParameter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GqlQueryParameter')
+  static final BuilderInfo _i = BuilderInfo('GqlQueryParameter')
     ..a<Value>(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
     ..a<List<int>>(3, 'cursor', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -619,14 +610,14 @@ class GqlQueryParameter extends GeneratedMessage {
   GqlQueryParameter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GqlQueryParameter clone() => new GqlQueryParameter()..mergeFromMessage(this);
+  GqlQueryParameter clone() => GqlQueryParameter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GqlQueryParameter create() => new GqlQueryParameter();
+  static GqlQueryParameter create() => GqlQueryParameter();
   static PbList<GqlQueryParameter> createRepeated() =>
-      new PbList<GqlQueryParameter>();
+      PbList<GqlQueryParameter>();
   static GqlQueryParameter getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGqlQueryParameter();
+      _defaultInstance = _ReadonlyGqlQueryParameter();
     return _defaultInstance;
   }
 
@@ -656,7 +647,7 @@ class _ReadonlyGqlQueryParameter extends GqlQueryParameter
     with ReadonlyMessageMixin {}
 
 class QueryResultBatch extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryResultBatch')
+  static final BuilderInfo _i = BuilderInfo('QueryResultBatch')
     ..e<EntityResult_ResultType>(
         1,
         'entityResultType',
@@ -686,14 +677,14 @@ class QueryResultBatch extends GeneratedMessage {
   QueryResultBatch.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QueryResultBatch clone() => new QueryResultBatch()..mergeFromMessage(this);
+  QueryResultBatch clone() => QueryResultBatch()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryResultBatch create() => new QueryResultBatch();
+  static QueryResultBatch create() => QueryResultBatch();
   static PbList<QueryResultBatch> createRepeated() =>
-      new PbList<QueryResultBatch>();
+      PbList<QueryResultBatch>();
   static QueryResultBatch getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryResultBatch();
+      _defaultInstance = _ReadonlyQueryResultBatch();
     return _defaultInstance;
   }
 

@@ -14,7 +14,7 @@ import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
 import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class Context extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Context')
+  static final BuilderInfo _i = BuilderInfo('Context')
     ..aOS(1, 'name')
     ..a<int>(2, 'lifespanCount', PbFieldType.O3)
     ..a<$google$protobuf.Struct>(3, 'parameters', PbFieldType.OM,
@@ -27,12 +27,12 @@ class Context extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Context.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Context clone() => new Context()..mergeFromMessage(this);
+  Context clone() => Context()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Context create() => new Context();
-  static PbList<Context> createRepeated() => new PbList<Context>();
+  static Context create() => Context();
+  static PbList<Context> createRepeated() => PbList<Context>();
   static Context getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyContext();
     return _defaultInstance;
   }
 
@@ -69,7 +69,7 @@ class Context extends GeneratedMessage {
 class _ReadonlyContext extends Context with ReadonlyMessageMixin {}
 
 class ListContextsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListContextsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListContextsRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -82,15 +82,14 @@ class ListContextsRequest extends GeneratedMessage {
   ListContextsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListContextsRequest clone() =>
-      new ListContextsRequest()..mergeFromMessage(this);
+  ListContextsRequest clone() => ListContextsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListContextsRequest create() => new ListContextsRequest();
+  static ListContextsRequest create() => ListContextsRequest();
   static PbList<ListContextsRequest> createRepeated() =>
-      new PbList<ListContextsRequest>();
+      PbList<ListContextsRequest>();
   static ListContextsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListContextsRequest();
+      _defaultInstance = _ReadonlyListContextsRequest();
     return _defaultInstance;
   }
 
@@ -128,7 +127,7 @@ class _ReadonlyListContextsRequest extends ListContextsRequest
     with ReadonlyMessageMixin {}
 
 class ListContextsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListContextsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListContextsResponse')
     ..pp<Context>(
         1, 'contexts', PbFieldType.PM, Context.$checkItem, Context.create)
     ..aOS(2, 'nextPageToken')
@@ -142,14 +141,14 @@ class ListContextsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListContextsResponse clone() =>
-      new ListContextsResponse()..mergeFromMessage(this);
+      ListContextsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListContextsResponse create() => new ListContextsResponse();
+  static ListContextsResponse create() => ListContextsResponse();
   static PbList<ListContextsResponse> createRepeated() =>
-      new PbList<ListContextsResponse>();
+      PbList<ListContextsResponse>();
   static ListContextsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListContextsResponse();
+      _defaultInstance = _ReadonlyListContextsResponse();
     return _defaultInstance;
   }
 
@@ -173,7 +172,7 @@ class _ReadonlyListContextsResponse extends ListContextsResponse
     with ReadonlyMessageMixin {}
 
 class GetContextRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetContextRequest')
+  static final BuilderInfo _i = BuilderInfo('GetContextRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -184,14 +183,14 @@ class GetContextRequest extends GeneratedMessage {
   GetContextRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetContextRequest clone() => new GetContextRequest()..mergeFromMessage(this);
+  GetContextRequest clone() => GetContextRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetContextRequest create() => new GetContextRequest();
+  static GetContextRequest create() => GetContextRequest();
   static PbList<GetContextRequest> createRepeated() =>
-      new PbList<GetContextRequest>();
+      PbList<GetContextRequest>();
   static GetContextRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetContextRequest();
+      _defaultInstance = _ReadonlyGetContextRequest();
     return _defaultInstance;
   }
 
@@ -213,7 +212,7 @@ class _ReadonlyGetContextRequest extends GetContextRequest
     with ReadonlyMessageMixin {}
 
 class CreateContextRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateContextRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateContextRequest')
     ..aOS(1, 'parent')
     ..a<Context>(
         2, 'context', PbFieldType.OM, Context.getDefault, Context.create)
@@ -227,14 +226,14 @@ class CreateContextRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateContextRequest clone() =>
-      new CreateContextRequest()..mergeFromMessage(this);
+      CreateContextRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateContextRequest create() => new CreateContextRequest();
+  static CreateContextRequest create() => CreateContextRequest();
   static PbList<CreateContextRequest> createRepeated() =>
-      new PbList<CreateContextRequest>();
+      PbList<CreateContextRequest>();
   static CreateContextRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateContextRequest();
+      _defaultInstance = _ReadonlyCreateContextRequest();
     return _defaultInstance;
   }
 
@@ -264,7 +263,7 @@ class _ReadonlyCreateContextRequest extends CreateContextRequest
     with ReadonlyMessageMixin {}
 
 class UpdateContextRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateContextRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateContextRequest')
     ..a<Context>(
         1, 'context', PbFieldType.OM, Context.getDefault, Context.create)
     ..a<$google$protobuf.FieldMask>(
@@ -283,14 +282,14 @@ class UpdateContextRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateContextRequest clone() =>
-      new UpdateContextRequest()..mergeFromMessage(this);
+      UpdateContextRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateContextRequest create() => new UpdateContextRequest();
+  static UpdateContextRequest create() => UpdateContextRequest();
   static PbList<UpdateContextRequest> createRepeated() =>
-      new PbList<UpdateContextRequest>();
+      PbList<UpdateContextRequest>();
   static UpdateContextRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateContextRequest();
+      _defaultInstance = _ReadonlyUpdateContextRequest();
     return _defaultInstance;
   }
 
@@ -320,7 +319,7 @@ class _ReadonlyUpdateContextRequest extends UpdateContextRequest
     with ReadonlyMessageMixin {}
 
 class DeleteContextRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteContextRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteContextRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -332,14 +331,14 @@ class DeleteContextRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteContextRequest clone() =>
-      new DeleteContextRequest()..mergeFromMessage(this);
+      DeleteContextRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteContextRequest create() => new DeleteContextRequest();
+  static DeleteContextRequest create() => DeleteContextRequest();
   static PbList<DeleteContextRequest> createRepeated() =>
-      new PbList<DeleteContextRequest>();
+      PbList<DeleteContextRequest>();
   static DeleteContextRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteContextRequest();
+      _defaultInstance = _ReadonlyDeleteContextRequest();
     return _defaultInstance;
   }
 
@@ -361,7 +360,7 @@ class _ReadonlyDeleteContextRequest extends DeleteContextRequest
     with ReadonlyMessageMixin {}
 
 class DeleteAllContextsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteAllContextsRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteAllContextsRequest')
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
@@ -373,14 +372,14 @@ class DeleteAllContextsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteAllContextsRequest clone() =>
-      new DeleteAllContextsRequest()..mergeFromMessage(this);
+      DeleteAllContextsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteAllContextsRequest create() => new DeleteAllContextsRequest();
+  static DeleteAllContextsRequest create() => DeleteAllContextsRequest();
   static PbList<DeleteAllContextsRequest> createRepeated() =>
-      new PbList<DeleteAllContextsRequest>();
+      PbList<DeleteAllContextsRequest>();
   static DeleteAllContextsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteAllContextsRequest();
+      _defaultInstance = _ReadonlyDeleteAllContextsRequest();
     return _defaultInstance;
   }
 
@@ -408,41 +407,41 @@ class ContextsApi {
 
   Future<ListContextsResponse> listContexts(
       ClientContext ctx, ListContextsRequest request) {
-    var emptyResponse = new ListContextsResponse();
+    var emptyResponse = ListContextsResponse();
     return _client.invoke<ListContextsResponse>(
         ctx, 'Contexts', 'ListContexts', request, emptyResponse);
   }
 
   Future<Context> getContext(ClientContext ctx, GetContextRequest request) {
-    var emptyResponse = new Context();
+    var emptyResponse = Context();
     return _client.invoke<Context>(
         ctx, 'Contexts', 'GetContext', request, emptyResponse);
   }
 
   Future<Context> createContext(
       ClientContext ctx, CreateContextRequest request) {
-    var emptyResponse = new Context();
+    var emptyResponse = Context();
     return _client.invoke<Context>(
         ctx, 'Contexts', 'CreateContext', request, emptyResponse);
   }
 
   Future<Context> updateContext(
       ClientContext ctx, UpdateContextRequest request) {
-    var emptyResponse = new Context();
+    var emptyResponse = Context();
     return _client.invoke<Context>(
         ctx, 'Contexts', 'UpdateContext', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteContext(
       ClientContext ctx, DeleteContextRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Contexts', 'DeleteContext', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteAllContexts(
       ClientContext ctx, DeleteAllContextsRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Contexts', 'DeleteAllContexts', request, emptyResponse);
   }

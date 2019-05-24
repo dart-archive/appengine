@@ -18,7 +18,7 @@ import 'functions.pbenum.dart';
 export 'functions.pbenum.dart';
 
 class CloudFunction extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CloudFunction')
+  static final BuilderInfo _i = BuilderInfo('CloudFunction')
     ..aOS(1, 'name')
     ..a<SourceRepository>(3, 'sourceRepository', PbFieldType.OM,
         SourceRepository.getDefault, SourceRepository.create)
@@ -55,13 +55,12 @@ class CloudFunction extends GeneratedMessage {
   CloudFunction.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CloudFunction clone() => new CloudFunction()..mergeFromMessage(this);
+  CloudFunction clone() => CloudFunction()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CloudFunction create() => new CloudFunction();
-  static PbList<CloudFunction> createRepeated() => new PbList<CloudFunction>();
+  static CloudFunction create() => CloudFunction();
+  static PbList<CloudFunction> createRepeated() => PbList<CloudFunction>();
   static CloudFunction getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCloudFunction();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCloudFunction();
     return _defaultInstance;
   }
 
@@ -170,7 +169,7 @@ class CloudFunction extends GeneratedMessage {
 class _ReadonlyCloudFunction extends CloudFunction with ReadonlyMessageMixin {}
 
 class HTTPSTrigger extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HTTPSTrigger')
+  static final BuilderInfo _i = BuilderInfo('HTTPSTrigger')
     ..aOS(1, 'url')
     ..hasRequiredFields = false;
 
@@ -181,13 +180,12 @@ class HTTPSTrigger extends GeneratedMessage {
   HTTPSTrigger.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HTTPSTrigger clone() => new HTTPSTrigger()..mergeFromMessage(this);
+  HTTPSTrigger clone() => HTTPSTrigger()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HTTPSTrigger create() => new HTTPSTrigger();
-  static PbList<HTTPSTrigger> createRepeated() => new PbList<HTTPSTrigger>();
+  static HTTPSTrigger create() => HTTPSTrigger();
+  static PbList<HTTPSTrigger> createRepeated() => PbList<HTTPSTrigger>();
   static HTTPSTrigger getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyHTTPSTrigger();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHTTPSTrigger();
     return _defaultInstance;
   }
 
@@ -208,7 +206,7 @@ class HTTPSTrigger extends GeneratedMessage {
 class _ReadonlyHTTPSTrigger extends HTTPSTrigger with ReadonlyMessageMixin {}
 
 class EventTrigger extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EventTrigger')
+  static final BuilderInfo _i = BuilderInfo('EventTrigger')
     ..aOS(1, 'eventType')
     ..aOS(2, 'resource')
     ..hasRequiredFields = false;
@@ -220,13 +218,12 @@ class EventTrigger extends GeneratedMessage {
   EventTrigger.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EventTrigger clone() => new EventTrigger()..mergeFromMessage(this);
+  EventTrigger clone() => EventTrigger()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EventTrigger create() => new EventTrigger();
-  static PbList<EventTrigger> createRepeated() => new PbList<EventTrigger>();
+  static EventTrigger create() => EventTrigger();
+  static PbList<EventTrigger> createRepeated() => PbList<EventTrigger>();
   static EventTrigger getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEventTrigger();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEventTrigger();
     return _defaultInstance;
   }
 
@@ -255,7 +252,7 @@ class EventTrigger extends GeneratedMessage {
 class _ReadonlyEventTrigger extends EventTrigger with ReadonlyMessageMixin {}
 
 class SourceRepository extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceRepository')
+  static final BuilderInfo _i = BuilderInfo('SourceRepository')
     ..aOS(1, 'repositoryUrl')
     ..aOS(2, 'sourcePath')
     ..aOS(3, 'branch')
@@ -271,14 +268,14 @@ class SourceRepository extends GeneratedMessage {
   SourceRepository.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceRepository clone() => new SourceRepository()..mergeFromMessage(this);
+  SourceRepository clone() => SourceRepository()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceRepository create() => new SourceRepository();
+  static SourceRepository create() => SourceRepository();
   static PbList<SourceRepository> createRepeated() =>
-      new PbList<SourceRepository>();
+      PbList<SourceRepository>();
   static SourceRepository getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceRepository();
+      _defaultInstance = _ReadonlySourceRepository();
     return _defaultInstance;
   }
 
@@ -340,7 +337,7 @@ class _ReadonlySourceRepository extends SourceRepository
     with ReadonlyMessageMixin {}
 
 class CreateFunctionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateFunctionRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateFunctionRequest')
     ..aOS(1, 'location')
     ..a<CloudFunction>(2, 'function', PbFieldType.OM, CloudFunction.getDefault,
         CloudFunction.create)
@@ -354,14 +351,14 @@ class CreateFunctionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateFunctionRequest clone() =>
-      new CreateFunctionRequest()..mergeFromMessage(this);
+      CreateFunctionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateFunctionRequest create() => new CreateFunctionRequest();
+  static CreateFunctionRequest create() => CreateFunctionRequest();
   static PbList<CreateFunctionRequest> createRepeated() =>
-      new PbList<CreateFunctionRequest>();
+      PbList<CreateFunctionRequest>();
   static CreateFunctionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateFunctionRequest();
+      _defaultInstance = _ReadonlyCreateFunctionRequest();
     return _defaultInstance;
   }
 
@@ -392,7 +389,7 @@ class _ReadonlyCreateFunctionRequest extends CreateFunctionRequest
     with ReadonlyMessageMixin {}
 
 class UpdateFunctionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateFunctionRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateFunctionRequest')
     ..aOS(1, 'name')
     ..a<CloudFunction>(2, 'function', PbFieldType.OM, CloudFunction.getDefault,
         CloudFunction.create)
@@ -406,14 +403,14 @@ class UpdateFunctionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateFunctionRequest clone() =>
-      new UpdateFunctionRequest()..mergeFromMessage(this);
+      UpdateFunctionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateFunctionRequest create() => new UpdateFunctionRequest();
+  static UpdateFunctionRequest create() => UpdateFunctionRequest();
   static PbList<UpdateFunctionRequest> createRepeated() =>
-      new PbList<UpdateFunctionRequest>();
+      PbList<UpdateFunctionRequest>();
   static UpdateFunctionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateFunctionRequest();
+      _defaultInstance = _ReadonlyUpdateFunctionRequest();
     return _defaultInstance;
   }
 
@@ -444,7 +441,7 @@ class _ReadonlyUpdateFunctionRequest extends UpdateFunctionRequest
     with ReadonlyMessageMixin {}
 
 class GetFunctionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetFunctionRequest')
+  static final BuilderInfo _i = BuilderInfo('GetFunctionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -455,15 +452,14 @@ class GetFunctionRequest extends GeneratedMessage {
   GetFunctionRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetFunctionRequest clone() =>
-      new GetFunctionRequest()..mergeFromMessage(this);
+  GetFunctionRequest clone() => GetFunctionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetFunctionRequest create() => new GetFunctionRequest();
+  static GetFunctionRequest create() => GetFunctionRequest();
   static PbList<GetFunctionRequest> createRepeated() =>
-      new PbList<GetFunctionRequest>();
+      PbList<GetFunctionRequest>();
   static GetFunctionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetFunctionRequest();
+      _defaultInstance = _ReadonlyGetFunctionRequest();
     return _defaultInstance;
   }
 
@@ -485,7 +481,7 @@ class _ReadonlyGetFunctionRequest extends GetFunctionRequest
     with ReadonlyMessageMixin {}
 
 class ListFunctionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFunctionsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListFunctionsRequest')
     ..aOS(1, 'location')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -499,14 +495,14 @@ class ListFunctionsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListFunctionsRequest clone() =>
-      new ListFunctionsRequest()..mergeFromMessage(this);
+      ListFunctionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListFunctionsRequest create() => new ListFunctionsRequest();
+  static ListFunctionsRequest create() => ListFunctionsRequest();
   static PbList<ListFunctionsRequest> createRepeated() =>
-      new PbList<ListFunctionsRequest>();
+      PbList<ListFunctionsRequest>();
   static ListFunctionsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFunctionsRequest();
+      _defaultInstance = _ReadonlyListFunctionsRequest();
     return _defaultInstance;
   }
 
@@ -544,7 +540,7 @@ class _ReadonlyListFunctionsRequest extends ListFunctionsRequest
     with ReadonlyMessageMixin {}
 
 class ListFunctionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFunctionsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListFunctionsResponse')
     ..pp<CloudFunction>(1, 'functions', PbFieldType.PM,
         CloudFunction.$checkItem, CloudFunction.create)
     ..aOS(2, 'nextPageToken')
@@ -558,14 +554,14 @@ class ListFunctionsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListFunctionsResponse clone() =>
-      new ListFunctionsResponse()..mergeFromMessage(this);
+      ListFunctionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListFunctionsResponse create() => new ListFunctionsResponse();
+  static ListFunctionsResponse create() => ListFunctionsResponse();
   static PbList<ListFunctionsResponse> createRepeated() =>
-      new PbList<ListFunctionsResponse>();
+      PbList<ListFunctionsResponse>();
   static ListFunctionsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFunctionsResponse();
+      _defaultInstance = _ReadonlyListFunctionsResponse();
     return _defaultInstance;
   }
 
@@ -590,7 +586,7 @@ class _ReadonlyListFunctionsResponse extends ListFunctionsResponse
     with ReadonlyMessageMixin {}
 
 class DeleteFunctionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteFunctionRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteFunctionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -602,14 +598,14 @@ class DeleteFunctionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteFunctionRequest clone() =>
-      new DeleteFunctionRequest()..mergeFromMessage(this);
+      DeleteFunctionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteFunctionRequest create() => new DeleteFunctionRequest();
+  static DeleteFunctionRequest create() => DeleteFunctionRequest();
   static PbList<DeleteFunctionRequest> createRepeated() =>
-      new PbList<DeleteFunctionRequest>();
+      PbList<DeleteFunctionRequest>();
   static DeleteFunctionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteFunctionRequest();
+      _defaultInstance = _ReadonlyDeleteFunctionRequest();
     return _defaultInstance;
   }
 
@@ -632,7 +628,7 @@ class _ReadonlyDeleteFunctionRequest extends DeleteFunctionRequest
     with ReadonlyMessageMixin {}
 
 class CallFunctionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CallFunctionRequest')
+  static final BuilderInfo _i = BuilderInfo('CallFunctionRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'data')
     ..hasRequiredFields = false;
@@ -644,15 +640,14 @@ class CallFunctionRequest extends GeneratedMessage {
   CallFunctionRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CallFunctionRequest clone() =>
-      new CallFunctionRequest()..mergeFromMessage(this);
+  CallFunctionRequest clone() => CallFunctionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CallFunctionRequest create() => new CallFunctionRequest();
+  static CallFunctionRequest create() => CallFunctionRequest();
   static PbList<CallFunctionRequest> createRepeated() =>
-      new PbList<CallFunctionRequest>();
+      PbList<CallFunctionRequest>();
   static CallFunctionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCallFunctionRequest();
+      _defaultInstance = _ReadonlyCallFunctionRequest();
     return _defaultInstance;
   }
 
@@ -682,7 +677,7 @@ class _ReadonlyCallFunctionRequest extends CallFunctionRequest
     with ReadonlyMessageMixin {}
 
 class CallFunctionResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CallFunctionResponse')
+  static final BuilderInfo _i = BuilderInfo('CallFunctionResponse')
     ..aOS(1, 'executionId')
     ..aOS(2, 'result')
     ..aOS(3, 'error')
@@ -696,14 +691,14 @@ class CallFunctionResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CallFunctionResponse clone() =>
-      new CallFunctionResponse()..mergeFromMessage(this);
+      CallFunctionResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CallFunctionResponse create() => new CallFunctionResponse();
+  static CallFunctionResponse create() => CallFunctionResponse();
   static PbList<CallFunctionResponse> createRepeated() =>
-      new PbList<CallFunctionResponse>();
+      PbList<CallFunctionResponse>();
   static CallFunctionResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCallFunctionResponse();
+      _defaultInstance = _ReadonlyCallFunctionResponse();
     return _defaultInstance;
   }
 
@@ -746,42 +741,42 @@ class CloudFunctionsServiceApi {
 
   Future<ListFunctionsResponse> listFunctions(
       ClientContext ctx, ListFunctionsRequest request) {
-    var emptyResponse = new ListFunctionsResponse();
+    var emptyResponse = ListFunctionsResponse();
     return _client.invoke<ListFunctionsResponse>(
         ctx, 'CloudFunctionsService', 'ListFunctions', request, emptyResponse);
   }
 
   Future<CloudFunction> getFunction(
       ClientContext ctx, GetFunctionRequest request) {
-    var emptyResponse = new CloudFunction();
+    var emptyResponse = CloudFunction();
     return _client.invoke<CloudFunction>(
         ctx, 'CloudFunctionsService', 'GetFunction', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createFunction(
       ClientContext ctx, CreateFunctionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'CloudFunctionsService', 'CreateFunction', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> updateFunction(
       ClientContext ctx, UpdateFunctionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'CloudFunctionsService', 'UpdateFunction', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> deleteFunction(
       ClientContext ctx, DeleteFunctionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'CloudFunctionsService', 'DeleteFunction', request, emptyResponse);
   }
 
   Future<CallFunctionResponse> callFunction(
       ClientContext ctx, CallFunctionRequest request) {
-    var emptyResponse = new CallFunctionResponse();
+    var emptyResponse = CallFunctionResponse();
     return _client.invoke<CallFunctionResponse>(
         ctx, 'CloudFunctionsService', 'CallFunction', request, emptyResponse);
   }

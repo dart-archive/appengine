@@ -17,7 +17,7 @@ import 'queue.pbenum.dart';
 export 'queue.pbenum.dart';
 
 class Queue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Queue')
+  static final BuilderInfo _i = BuilderInfo('Queue')
     ..aOS(1, 'name')
     ..a<AppEngineHttpTarget>(3, 'appEngineHttpTarget', PbFieldType.OM,
         AppEngineHttpTarget.getDefault, AppEngineHttpTarget.create)
@@ -42,12 +42,12 @@ class Queue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Queue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Queue clone() => new Queue()..mergeFromMessage(this);
+  Queue clone() => Queue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Queue create() => new Queue();
-  static PbList<Queue> createRepeated() => new PbList<Queue>();
+  static Queue create() => Queue();
+  static PbList<Queue> createRepeated() => PbList<Queue>();
   static Queue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQueue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQueue();
     return _defaultInstance;
   }
 
@@ -116,7 +116,7 @@ class Queue extends GeneratedMessage {
 class _ReadonlyQueue extends Queue with ReadonlyMessageMixin {}
 
 class RateLimits extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RateLimits')
+  static final BuilderInfo _i = BuilderInfo('RateLimits')
     ..a<double>(1, 'maxTasksDispatchedPerSecond', PbFieldType.OD)
     ..a<int>(2, 'maxBurstSize', PbFieldType.O3)
     ..a<int>(3, 'maxConcurrentTasks', PbFieldType.O3)
@@ -128,12 +128,12 @@ class RateLimits extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RateLimits.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RateLimits clone() => new RateLimits()..mergeFromMessage(this);
+  RateLimits clone() => RateLimits()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RateLimits create() => new RateLimits();
-  static PbList<RateLimits> createRepeated() => new PbList<RateLimits>();
+  static RateLimits create() => RateLimits();
+  static PbList<RateLimits> createRepeated() => PbList<RateLimits>();
   static RateLimits getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRateLimits();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRateLimits();
     return _defaultInstance;
   }
 
@@ -170,7 +170,7 @@ class RateLimits extends GeneratedMessage {
 class _ReadonlyRateLimits extends RateLimits with ReadonlyMessageMixin {}
 
 class RetryConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RetryConfig')
+  static final BuilderInfo _i = BuilderInfo('RetryConfig')
     ..a<int>(1, 'maxAttempts', PbFieldType.O3)
     ..aOB(2, 'unlimitedAttempts')
     ..a<$google$protobuf.Duration>(3, 'maxRetryDuration', PbFieldType.OM,
@@ -189,12 +189,12 @@ class RetryConfig extends GeneratedMessage {
   RetryConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RetryConfig clone() => new RetryConfig()..mergeFromMessage(this);
+  RetryConfig clone() => RetryConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RetryConfig create() => new RetryConfig();
-  static PbList<RetryConfig> createRepeated() => new PbList<RetryConfig>();
+  static RetryConfig create() => RetryConfig();
+  static PbList<RetryConfig> createRepeated() => PbList<RetryConfig>();
   static RetryConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRetryConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRetryConfig();
     return _defaultInstance;
   }
 

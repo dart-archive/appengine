@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class SourceContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceContext')
+  static final BuilderInfo _i = BuilderInfo('SourceContext')
     ..aOS(1, 'fileName')
     ..hasRequiredFields = false;
 
@@ -20,13 +20,12 @@ class SourceContext extends GeneratedMessage {
   SourceContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceContext clone() => new SourceContext()..mergeFromMessage(this);
+  SourceContext clone() => SourceContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceContext create() => new SourceContext();
-  static PbList<SourceContext> createRepeated() => new PbList<SourceContext>();
+  static SourceContext create() => SourceContext();
+  static PbList<SourceContext> createRepeated() => PbList<SourceContext>();
   static SourceContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceContext();
     return _defaultInstance;
   }
 

@@ -8,10 +8,10 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Syntax extends ProtobufEnum {
-  static const Syntax SYNTAX_PROTO2 = const Syntax._(0, 'SYNTAX_PROTO2');
-  static const Syntax SYNTAX_PROTO3 = const Syntax._(1, 'SYNTAX_PROTO3');
+  static const Syntax SYNTAX_PROTO2 = Syntax._(0, 'SYNTAX_PROTO2');
+  static const Syntax SYNTAX_PROTO3 = Syntax._(1, 'SYNTAX_PROTO3');
 
-  static const List<Syntax> values = const <Syntax>[
+  static const List<Syntax> values = <Syntax>[
     SYNTAX_PROTO2,
     SYNTAX_PROTO3,
   ];
@@ -26,29 +26,27 @@ class Syntax extends ProtobufEnum {
 }
 
 class Field_Kind extends ProtobufEnum {
-  static const Field_Kind TYPE_UNKNOWN = const Field_Kind._(0, 'TYPE_UNKNOWN');
-  static const Field_Kind TYPE_DOUBLE = const Field_Kind._(1, 'TYPE_DOUBLE');
-  static const Field_Kind TYPE_FLOAT = const Field_Kind._(2, 'TYPE_FLOAT');
-  static const Field_Kind TYPE_INT64 = const Field_Kind._(3, 'TYPE_INT64');
-  static const Field_Kind TYPE_UINT64 = const Field_Kind._(4, 'TYPE_UINT64');
-  static const Field_Kind TYPE_INT32 = const Field_Kind._(5, 'TYPE_INT32');
-  static const Field_Kind TYPE_FIXED64 = const Field_Kind._(6, 'TYPE_FIXED64');
-  static const Field_Kind TYPE_FIXED32 = const Field_Kind._(7, 'TYPE_FIXED32');
-  static const Field_Kind TYPE_BOOL = const Field_Kind._(8, 'TYPE_BOOL');
-  static const Field_Kind TYPE_STRING = const Field_Kind._(9, 'TYPE_STRING');
-  static const Field_Kind TYPE_GROUP = const Field_Kind._(10, 'TYPE_GROUP');
-  static const Field_Kind TYPE_MESSAGE = const Field_Kind._(11, 'TYPE_MESSAGE');
-  static const Field_Kind TYPE_BYTES = const Field_Kind._(12, 'TYPE_BYTES');
-  static const Field_Kind TYPE_UINT32 = const Field_Kind._(13, 'TYPE_UINT32');
-  static const Field_Kind TYPE_ENUM = const Field_Kind._(14, 'TYPE_ENUM');
-  static const Field_Kind TYPE_SFIXED32 =
-      const Field_Kind._(15, 'TYPE_SFIXED32');
-  static const Field_Kind TYPE_SFIXED64 =
-      const Field_Kind._(16, 'TYPE_SFIXED64');
-  static const Field_Kind TYPE_SINT32 = const Field_Kind._(17, 'TYPE_SINT32');
-  static const Field_Kind TYPE_SINT64 = const Field_Kind._(18, 'TYPE_SINT64');
+  static const Field_Kind TYPE_UNKNOWN = Field_Kind._(0, 'TYPE_UNKNOWN');
+  static const Field_Kind TYPE_DOUBLE = Field_Kind._(1, 'TYPE_DOUBLE');
+  static const Field_Kind TYPE_FLOAT = Field_Kind._(2, 'TYPE_FLOAT');
+  static const Field_Kind TYPE_INT64 = Field_Kind._(3, 'TYPE_INT64');
+  static const Field_Kind TYPE_UINT64 = Field_Kind._(4, 'TYPE_UINT64');
+  static const Field_Kind TYPE_INT32 = Field_Kind._(5, 'TYPE_INT32');
+  static const Field_Kind TYPE_FIXED64 = Field_Kind._(6, 'TYPE_FIXED64');
+  static const Field_Kind TYPE_FIXED32 = Field_Kind._(7, 'TYPE_FIXED32');
+  static const Field_Kind TYPE_BOOL = Field_Kind._(8, 'TYPE_BOOL');
+  static const Field_Kind TYPE_STRING = Field_Kind._(9, 'TYPE_STRING');
+  static const Field_Kind TYPE_GROUP = Field_Kind._(10, 'TYPE_GROUP');
+  static const Field_Kind TYPE_MESSAGE = Field_Kind._(11, 'TYPE_MESSAGE');
+  static const Field_Kind TYPE_BYTES = Field_Kind._(12, 'TYPE_BYTES');
+  static const Field_Kind TYPE_UINT32 = Field_Kind._(13, 'TYPE_UINT32');
+  static const Field_Kind TYPE_ENUM = Field_Kind._(14, 'TYPE_ENUM');
+  static const Field_Kind TYPE_SFIXED32 = Field_Kind._(15, 'TYPE_SFIXED32');
+  static const Field_Kind TYPE_SFIXED64 = Field_Kind._(16, 'TYPE_SFIXED64');
+  static const Field_Kind TYPE_SINT32 = Field_Kind._(17, 'TYPE_SINT32');
+  static const Field_Kind TYPE_SINT64 = Field_Kind._(18, 'TYPE_SINT64');
 
-  static const List<Field_Kind> values = const <Field_Kind>[
+  static const List<Field_Kind> values = <Field_Kind>[
     TYPE_UNKNOWN,
     TYPE_DOUBLE,
     TYPE_FLOAT,
@@ -81,15 +79,15 @@ class Field_Kind extends ProtobufEnum {
 
 class Field_Cardinality extends ProtobufEnum {
   static const Field_Cardinality CARDINALITY_UNKNOWN =
-      const Field_Cardinality._(0, 'CARDINALITY_UNKNOWN');
+      Field_Cardinality._(0, 'CARDINALITY_UNKNOWN');
   static const Field_Cardinality CARDINALITY_OPTIONAL =
-      const Field_Cardinality._(1, 'CARDINALITY_OPTIONAL');
+      Field_Cardinality._(1, 'CARDINALITY_OPTIONAL');
   static const Field_Cardinality CARDINALITY_REQUIRED =
-      const Field_Cardinality._(2, 'CARDINALITY_REQUIRED');
+      Field_Cardinality._(2, 'CARDINALITY_REQUIRED');
   static const Field_Cardinality CARDINALITY_REPEATED =
-      const Field_Cardinality._(3, 'CARDINALITY_REPEATED');
+      Field_Cardinality._(3, 'CARDINALITY_REPEATED');
 
-  static const List<Field_Cardinality> values = const <Field_Cardinality>[
+  static const List<Field_Cardinality> values = <Field_Cardinality>[
     CARDINALITY_UNKNOWN,
     CARDINALITY_OPTIONAL,
     CARDINALITY_REQUIRED,

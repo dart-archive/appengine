@@ -15,7 +15,7 @@ import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
 import '../../protobuf/struct.pbenum.dart' as $google$protobuf;
 
 class PartitionId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionId')
+  static final BuilderInfo _i = BuilderInfo('PartitionId')
     ..aOS(2, 'projectId')
     ..aOS(4, 'namespaceId')
     ..hasRequiredFields = false;
@@ -27,12 +27,12 @@ class PartitionId extends GeneratedMessage {
   PartitionId.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PartitionId clone() => new PartitionId()..mergeFromMessage(this);
+  PartitionId clone() => PartitionId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PartitionId create() => new PartitionId();
-  static PbList<PartitionId> createRepeated() => new PbList<PartitionId>();
+  static PartitionId create() => PartitionId();
+  static PbList<PartitionId> createRepeated() => PbList<PartitionId>();
   static PartitionId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPartitionId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPartitionId();
     return _defaultInstance;
   }
 
@@ -61,7 +61,7 @@ class PartitionId extends GeneratedMessage {
 class _ReadonlyPartitionId extends PartitionId with ReadonlyMessageMixin {}
 
 class Key_PathElement extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Key_PathElement')
+  static final BuilderInfo _i = BuilderInfo('Key_PathElement')
     ..aOS(1, 'kind')
     ..aInt64(2, 'id')
     ..aOS(3, 'name')
@@ -74,14 +74,12 @@ class Key_PathElement extends GeneratedMessage {
   Key_PathElement.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Key_PathElement clone() => new Key_PathElement()..mergeFromMessage(this);
+  Key_PathElement clone() => Key_PathElement()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Key_PathElement create() => new Key_PathElement();
-  static PbList<Key_PathElement> createRepeated() =>
-      new PbList<Key_PathElement>();
+  static Key_PathElement create() => Key_PathElement();
+  static PbList<Key_PathElement> createRepeated() => PbList<Key_PathElement>();
   static Key_PathElement getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyKey_PathElement();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyKey_PathElement();
     return _defaultInstance;
   }
 
@@ -119,7 +117,7 @@ class _ReadonlyKey_PathElement extends Key_PathElement
     with ReadonlyMessageMixin {}
 
 class Key extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Key')
+  static final BuilderInfo _i = BuilderInfo('Key')
     ..a<PartitionId>(1, 'partitionId', PbFieldType.OM, PartitionId.getDefault,
         PartitionId.create)
     ..pp<Key_PathElement>(2, 'path', PbFieldType.PM, Key_PathElement.$checkItem,
@@ -131,12 +129,12 @@ class Key extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Key.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Key clone() => new Key()..mergeFromMessage(this);
+  Key clone() => Key()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Key create() => new Key();
-  static PbList<Key> createRepeated() => new PbList<Key>();
+  static Key create() => Key();
+  static PbList<Key> createRepeated() => PbList<Key>();
   static Key getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyKey();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyKey();
     return _defaultInstance;
   }
 
@@ -159,7 +157,7 @@ class Key extends GeneratedMessage {
 class _ReadonlyKey extends Key with ReadonlyMessageMixin {}
 
 class ArrayValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ArrayValue')
+  static final BuilderInfo _i = BuilderInfo('ArrayValue')
     ..pp<Value>(1, 'values', PbFieldType.PM, Value.$checkItem, Value.create)
     ..hasRequiredFields = false;
 
@@ -169,12 +167,12 @@ class ArrayValue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ArrayValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ArrayValue clone() => new ArrayValue()..mergeFromMessage(this);
+  ArrayValue clone() => ArrayValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ArrayValue create() => new ArrayValue();
-  static PbList<ArrayValue> createRepeated() => new PbList<ArrayValue>();
+  static ArrayValue create() => ArrayValue();
+  static PbList<ArrayValue> createRepeated() => PbList<ArrayValue>();
   static ArrayValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyArrayValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyArrayValue();
     return _defaultInstance;
   }
 
@@ -189,7 +187,7 @@ class ArrayValue extends GeneratedMessage {
 class _ReadonlyArrayValue extends ArrayValue with ReadonlyMessageMixin {}
 
 class Value extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Value')
+  static final BuilderInfo _i = BuilderInfo('Value')
     ..aOB(1, 'booleanValue')
     ..aInt64(2, 'integerValue')
     ..a<double>(3, 'doubleValue', PbFieldType.OD)
@@ -224,12 +222,12 @@ class Value extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Value clone() => new Value()..mergeFromMessage(this);
+  Value clone() => Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Value create() => new Value();
-  static PbList<Value> createRepeated() => new PbList<Value>();
+  static Value create() => Value();
+  static PbList<Value> createRepeated() => PbList<Value>();
   static Value getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyValue();
     return _defaultInstance;
   }
 
@@ -346,7 +344,7 @@ class Value extends GeneratedMessage {
 class _ReadonlyValue extends Value with ReadonlyMessageMixin {}
 
 class Entity_PropertiesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Entity_PropertiesEntry')
+  static final BuilderInfo _i = BuilderInfo('Entity_PropertiesEntry')
     ..aOS(1, 'key')
     ..a<Value>(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
     ..hasRequiredFields = false;
@@ -359,14 +357,14 @@ class Entity_PropertiesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Entity_PropertiesEntry clone() =>
-      new Entity_PropertiesEntry()..mergeFromMessage(this);
+      Entity_PropertiesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Entity_PropertiesEntry create() => new Entity_PropertiesEntry();
+  static Entity_PropertiesEntry create() => Entity_PropertiesEntry();
   static PbList<Entity_PropertiesEntry> createRepeated() =>
-      new PbList<Entity_PropertiesEntry>();
+      PbList<Entity_PropertiesEntry>();
   static Entity_PropertiesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntity_PropertiesEntry();
+      _defaultInstance = _ReadonlyEntity_PropertiesEntry();
     return _defaultInstance;
   }
 
@@ -397,7 +395,7 @@ class _ReadonlyEntity_PropertiesEntry extends Entity_PropertiesEntry
     with ReadonlyMessageMixin {}
 
 class Entity extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Entity')
+  static final BuilderInfo _i = BuilderInfo('Entity')
     ..a<Key>(1, 'key', PbFieldType.OM, Key.getDefault, Key.create)
     ..pp<Entity_PropertiesEntry>(3, 'properties', PbFieldType.PM,
         Entity_PropertiesEntry.$checkItem, Entity_PropertiesEntry.create)
@@ -409,12 +407,12 @@ class Entity extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Entity.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Entity clone() => new Entity()..mergeFromMessage(this);
+  Entity clone() => Entity()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Entity create() => new Entity();
-  static PbList<Entity> createRepeated() => new PbList<Entity>();
+  static Entity create() => Entity();
+  static PbList<Entity> createRepeated() => PbList<Entity>();
   static Entity getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEntity();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntity();
     return _defaultInstance;
   }
 

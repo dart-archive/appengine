@@ -9,11 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class VariableState extends ProtobufEnum {
   static const VariableState VARIABLE_STATE_UNSPECIFIED =
-      const VariableState._(0, 'VARIABLE_STATE_UNSPECIFIED');
-  static const VariableState UPDATED = const VariableState._(1, 'UPDATED');
-  static const VariableState DELETED = const VariableState._(2, 'DELETED');
+      VariableState._(0, 'VARIABLE_STATE_UNSPECIFIED');
+  static const VariableState UPDATED = VariableState._(1, 'UPDATED');
+  static const VariableState DELETED = VariableState._(2, 'DELETED');
 
-  static const List<VariableState> values = const <VariableState>[
+  static const List<VariableState> values = <VariableState>[
     VARIABLE_STATE_UNSPECIFIED,
     UPDATED,
     DELETED,

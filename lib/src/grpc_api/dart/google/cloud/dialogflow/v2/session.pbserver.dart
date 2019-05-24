@@ -21,11 +21,11 @@ abstract class SessionsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'DetectIntent':
-        return new DetectIntentRequest();
+        return DetectIntentRequest();
       case 'StreamingDetectIntent':
-        return new StreamingDetectIntentRequest();
+        return StreamingDetectIntentRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -37,7 +37,7 @@ abstract class SessionsServiceBase extends GeneratedService {
       case 'StreamingDetectIntent':
         return this.streamingDetectIntent(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -20,7 +20,7 @@ export 'build_events.pbenum.dart';
 
 class BuildEvent_InvocationAttemptStarted extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('BuildEvent_InvocationAttemptStarted')
+      BuilderInfo('BuildEvent_InvocationAttemptStarted')
         ..aInt64(1, 'attemptNumber')
         ..hasRequiredFields = false;
 
@@ -32,15 +32,15 @@ class BuildEvent_InvocationAttemptStarted extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BuildEvent_InvocationAttemptStarted clone() =>
-      new BuildEvent_InvocationAttemptStarted()..mergeFromMessage(this);
+      BuildEvent_InvocationAttemptStarted()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BuildEvent_InvocationAttemptStarted create() =>
-      new BuildEvent_InvocationAttemptStarted();
+      BuildEvent_InvocationAttemptStarted();
   static PbList<BuildEvent_InvocationAttemptStarted> createRepeated() =>
-      new PbList<BuildEvent_InvocationAttemptStarted>();
+      PbList<BuildEvent_InvocationAttemptStarted>();
   static BuildEvent_InvocationAttemptStarted getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBuildEvent_InvocationAttemptStarted();
+      _defaultInstance = _ReadonlyBuildEvent_InvocationAttemptStarted();
     return _defaultInstance;
   }
 
@@ -64,7 +64,7 @@ class _ReadonlyBuildEvent_InvocationAttemptStarted
 
 class BuildEvent_InvocationAttemptFinished extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('BuildEvent_InvocationAttemptFinished')
+      BuilderInfo('BuildEvent_InvocationAttemptFinished')
         ..a<$google$protobuf.Int32Value>(
             2,
             'exitCode',
@@ -83,15 +83,15 @@ class BuildEvent_InvocationAttemptFinished extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BuildEvent_InvocationAttemptFinished clone() =>
-      new BuildEvent_InvocationAttemptFinished()..mergeFromMessage(this);
+      BuildEvent_InvocationAttemptFinished()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BuildEvent_InvocationAttemptFinished create() =>
-      new BuildEvent_InvocationAttemptFinished();
+      BuildEvent_InvocationAttemptFinished();
   static PbList<BuildEvent_InvocationAttemptFinished> createRepeated() =>
-      new PbList<BuildEvent_InvocationAttemptFinished>();
+      PbList<BuildEvent_InvocationAttemptFinished>();
   static BuildEvent_InvocationAttemptFinished getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBuildEvent_InvocationAttemptFinished();
+      _defaultInstance = _ReadonlyBuildEvent_InvocationAttemptFinished();
     return _defaultInstance;
   }
 
@@ -122,7 +122,7 @@ class _ReadonlyBuildEvent_InvocationAttemptFinished
     extends BuildEvent_InvocationAttemptFinished with ReadonlyMessageMixin {}
 
 class BuildEvent_BuildEnqueued extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BuildEvent_BuildEnqueued')
+  static final BuilderInfo _i = BuilderInfo('BuildEvent_BuildEnqueued')
     ..hasRequiredFields = false;
 
   BuildEvent_BuildEnqueued() : super();
@@ -133,14 +133,14 @@ class BuildEvent_BuildEnqueued extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BuildEvent_BuildEnqueued clone() =>
-      new BuildEvent_BuildEnqueued()..mergeFromMessage(this);
+      BuildEvent_BuildEnqueued()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BuildEvent_BuildEnqueued create() => new BuildEvent_BuildEnqueued();
+  static BuildEvent_BuildEnqueued create() => BuildEvent_BuildEnqueued();
   static PbList<BuildEvent_BuildEnqueued> createRepeated() =>
-      new PbList<BuildEvent_BuildEnqueued>();
+      PbList<BuildEvent_BuildEnqueued>();
   static BuildEvent_BuildEnqueued getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBuildEvent_BuildEnqueued();
+      _defaultInstance = _ReadonlyBuildEvent_BuildEnqueued();
     return _defaultInstance;
   }
 
@@ -155,7 +155,7 @@ class _ReadonlyBuildEvent_BuildEnqueued extends BuildEvent_BuildEnqueued
     with ReadonlyMessageMixin {}
 
 class BuildEvent_BuildFinished extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BuildEvent_BuildFinished')
+  static final BuilderInfo _i = BuilderInfo('BuildEvent_BuildFinished')
     ..a<BuildStatus>(
         1, 'status', PbFieldType.OM, BuildStatus.getDefault, BuildStatus.create)
     ..hasRequiredFields = false;
@@ -168,14 +168,14 @@ class BuildEvent_BuildFinished extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BuildEvent_BuildFinished clone() =>
-      new BuildEvent_BuildFinished()..mergeFromMessage(this);
+      BuildEvent_BuildFinished()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BuildEvent_BuildFinished create() => new BuildEvent_BuildFinished();
+  static BuildEvent_BuildFinished create() => BuildEvent_BuildFinished();
   static PbList<BuildEvent_BuildFinished> createRepeated() =>
-      new PbList<BuildEvent_BuildFinished>();
+      PbList<BuildEvent_BuildFinished>();
   static BuildEvent_BuildFinished getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBuildEvent_BuildFinished();
+      _defaultInstance = _ReadonlyBuildEvent_BuildFinished();
     return _defaultInstance;
   }
 
@@ -198,7 +198,7 @@ class _ReadonlyBuildEvent_BuildFinished extends BuildEvent_BuildFinished
     with ReadonlyMessageMixin {}
 
 class BuildEvent_ConsoleOutput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BuildEvent_ConsoleOutput')
+  static final BuilderInfo _i = BuilderInfo('BuildEvent_ConsoleOutput')
     ..e<ConsoleOutputStream>(
         1,
         'type',
@@ -218,14 +218,14 @@ class BuildEvent_ConsoleOutput extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BuildEvent_ConsoleOutput clone() =>
-      new BuildEvent_ConsoleOutput()..mergeFromMessage(this);
+      BuildEvent_ConsoleOutput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BuildEvent_ConsoleOutput create() => new BuildEvent_ConsoleOutput();
+  static BuildEvent_ConsoleOutput create() => BuildEvent_ConsoleOutput();
   static PbList<BuildEvent_ConsoleOutput> createRepeated() =>
-      new PbList<BuildEvent_ConsoleOutput>();
+      PbList<BuildEvent_ConsoleOutput>();
   static BuildEvent_ConsoleOutput getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBuildEvent_ConsoleOutput();
+      _defaultInstance = _ReadonlyBuildEvent_ConsoleOutput();
     return _defaultInstance;
   }
 
@@ -265,7 +265,7 @@ class _ReadonlyBuildEvent_ConsoleOutput extends BuildEvent_ConsoleOutput
 
 class BuildEvent_BuildComponentStreamFinished extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('BuildEvent_BuildComponentStreamFinished')
+      BuilderInfo('BuildEvent_BuildComponentStreamFinished')
         ..e<BuildEvent_BuildComponentStreamFinished_FinishType>(
             1,
             'type',
@@ -284,15 +284,15 @@ class BuildEvent_BuildComponentStreamFinished extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BuildEvent_BuildComponentStreamFinished clone() =>
-      new BuildEvent_BuildComponentStreamFinished()..mergeFromMessage(this);
+      BuildEvent_BuildComponentStreamFinished()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BuildEvent_BuildComponentStreamFinished create() =>
-      new BuildEvent_BuildComponentStreamFinished();
+      BuildEvent_BuildComponentStreamFinished();
   static PbList<BuildEvent_BuildComponentStreamFinished> createRepeated() =>
-      new PbList<BuildEvent_BuildComponentStreamFinished>();
+      PbList<BuildEvent_BuildComponentStreamFinished>();
   static BuildEvent_BuildComponentStreamFinished getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBuildEvent_BuildComponentStreamFinished();
+      _defaultInstance = _ReadonlyBuildEvent_BuildComponentStreamFinished();
     return _defaultInstance;
   }
 
@@ -315,7 +315,7 @@ class _ReadonlyBuildEvent_BuildComponentStreamFinished
     extends BuildEvent_BuildComponentStreamFinished with ReadonlyMessageMixin {}
 
 class BuildEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BuildEvent')
+  static final BuilderInfo _i = BuilderInfo('BuildEvent')
     ..a<$google$protobuf.Timestamp>(
         1,
         'eventTime',
@@ -360,12 +360,12 @@ class BuildEvent extends GeneratedMessage {
       : super.fromBuffer(i, r);
   BuildEvent.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BuildEvent clone() => new BuildEvent()..mergeFromMessage(this);
+  BuildEvent clone() => BuildEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BuildEvent create() => new BuildEvent();
-  static PbList<BuildEvent> createRepeated() => new PbList<BuildEvent>();
+  static BuildEvent create() => BuildEvent();
+  static PbList<BuildEvent> createRepeated() => PbList<BuildEvent>();
   static BuildEvent getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBuildEvent();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildEvent();
     return _defaultInstance;
   }
 
@@ -460,7 +460,7 @@ class BuildEvent extends GeneratedMessage {
 class _ReadonlyBuildEvent extends BuildEvent with ReadonlyMessageMixin {}
 
 class StreamId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamId')
+  static final BuilderInfo _i = BuilderInfo('StreamId')
     ..aOS(1, 'buildId')
     ..e<StreamId_BuildComponent>(
         3,
@@ -478,12 +478,12 @@ class StreamId extends GeneratedMessage {
       : super.fromBuffer(i, r);
   StreamId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StreamId clone() => new StreamId()..mergeFromMessage(this);
+  StreamId clone() => StreamId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamId create() => new StreamId();
-  static PbList<StreamId> createRepeated() => new PbList<StreamId>();
+  static StreamId create() => StreamId();
+  static PbList<StreamId> createRepeated() => PbList<StreamId>();
   static StreamId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyStreamId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStreamId();
     return _defaultInstance;
   }
 

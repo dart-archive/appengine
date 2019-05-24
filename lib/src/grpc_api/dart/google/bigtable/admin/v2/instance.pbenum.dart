@@ -9,11 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class Instance_State extends ProtobufEnum {
   static const Instance_State STATE_NOT_KNOWN =
-      const Instance_State._(0, 'STATE_NOT_KNOWN');
-  static const Instance_State READY = const Instance_State._(1, 'READY');
-  static const Instance_State CREATING = const Instance_State._(2, 'CREATING');
+      Instance_State._(0, 'STATE_NOT_KNOWN');
+  static const Instance_State READY = Instance_State._(1, 'READY');
+  static const Instance_State CREATING = Instance_State._(2, 'CREATING');
 
-  static const List<Instance_State> values = const <Instance_State>[
+  static const List<Instance_State> values = <Instance_State>[
     STATE_NOT_KNOWN,
     READY,
     CREATING,
@@ -30,13 +30,11 @@ class Instance_State extends ProtobufEnum {
 
 class Instance_Type extends ProtobufEnum {
   static const Instance_Type TYPE_UNSPECIFIED =
-      const Instance_Type._(0, 'TYPE_UNSPECIFIED');
-  static const Instance_Type PRODUCTION =
-      const Instance_Type._(1, 'PRODUCTION');
-  static const Instance_Type DEVELOPMENT =
-      const Instance_Type._(2, 'DEVELOPMENT');
+      Instance_Type._(0, 'TYPE_UNSPECIFIED');
+  static const Instance_Type PRODUCTION = Instance_Type._(1, 'PRODUCTION');
+  static const Instance_Type DEVELOPMENT = Instance_Type._(2, 'DEVELOPMENT');
 
-  static const List<Instance_Type> values = const <Instance_Type>[
+  static const List<Instance_Type> values = <Instance_Type>[
     TYPE_UNSPECIFIED,
     PRODUCTION,
     DEVELOPMENT,
@@ -53,13 +51,13 @@ class Instance_Type extends ProtobufEnum {
 
 class Cluster_State extends ProtobufEnum {
   static const Cluster_State STATE_NOT_KNOWN =
-      const Cluster_State._(0, 'STATE_NOT_KNOWN');
-  static const Cluster_State READY = const Cluster_State._(1, 'READY');
-  static const Cluster_State CREATING = const Cluster_State._(2, 'CREATING');
-  static const Cluster_State RESIZING = const Cluster_State._(3, 'RESIZING');
-  static const Cluster_State DISABLED = const Cluster_State._(4, 'DISABLED');
+      Cluster_State._(0, 'STATE_NOT_KNOWN');
+  static const Cluster_State READY = Cluster_State._(1, 'READY');
+  static const Cluster_State CREATING = Cluster_State._(2, 'CREATING');
+  static const Cluster_State RESIZING = Cluster_State._(3, 'RESIZING');
+  static const Cluster_State DISABLED = Cluster_State._(4, 'DISABLED');
 
-  static const List<Cluster_State> values = const <Cluster_State>[
+  static const List<Cluster_State> values = <Cluster_State>[
     STATE_NOT_KNOWN,
     READY,
     CREATING,

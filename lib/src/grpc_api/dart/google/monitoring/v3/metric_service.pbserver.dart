@@ -38,23 +38,23 @@ abstract class MetricServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListMonitoredResourceDescriptors':
-        return new ListMonitoredResourceDescriptorsRequest();
+        return ListMonitoredResourceDescriptorsRequest();
       case 'GetMonitoredResourceDescriptor':
-        return new GetMonitoredResourceDescriptorRequest();
+        return GetMonitoredResourceDescriptorRequest();
       case 'ListMetricDescriptors':
-        return new ListMetricDescriptorsRequest();
+        return ListMetricDescriptorsRequest();
       case 'GetMetricDescriptor':
-        return new GetMetricDescriptorRequest();
+        return GetMetricDescriptorRequest();
       case 'CreateMetricDescriptor':
-        return new CreateMetricDescriptorRequest();
+        return CreateMetricDescriptorRequest();
       case 'DeleteMetricDescriptor':
-        return new DeleteMetricDescriptorRequest();
+        return DeleteMetricDescriptorRequest();
       case 'ListTimeSeries':
-        return new ListTimeSeriesRequest();
+        return ListTimeSeriesRequest();
       case 'CreateTimeSeries':
-        return new CreateTimeSeriesRequest();
+        return CreateTimeSeriesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -78,7 +78,7 @@ abstract class MetricServiceBase extends GeneratedService {
       case 'CreateTimeSeries':
         return this.createTimeSeries(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

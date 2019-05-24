@@ -29,17 +29,17 @@ abstract class AlertPolicyServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListAlertPolicies':
-        return new ListAlertPoliciesRequest();
+        return ListAlertPoliciesRequest();
       case 'GetAlertPolicy':
-        return new GetAlertPolicyRequest();
+        return GetAlertPolicyRequest();
       case 'CreateAlertPolicy':
-        return new CreateAlertPolicyRequest();
+        return CreateAlertPolicyRequest();
       case 'DeleteAlertPolicy':
-        return new DeleteAlertPolicyRequest();
+        return DeleteAlertPolicyRequest();
       case 'UpdateAlertPolicy':
-        return new UpdateAlertPolicyRequest();
+        return UpdateAlertPolicyRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -57,7 +57,7 @@ abstract class AlertPolicyServiceBase extends GeneratedService {
       case 'UpdateAlertPolicy':
         return this.updateAlertPolicy(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

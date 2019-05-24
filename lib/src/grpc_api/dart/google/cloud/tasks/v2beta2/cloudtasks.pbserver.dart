@@ -51,47 +51,47 @@ abstract class CloudTasksServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListQueues':
-        return new ListQueuesRequest();
+        return ListQueuesRequest();
       case 'GetQueue':
-        return new GetQueueRequest();
+        return GetQueueRequest();
       case 'CreateQueue':
-        return new CreateQueueRequest();
+        return CreateQueueRequest();
       case 'UpdateQueue':
-        return new UpdateQueueRequest();
+        return UpdateQueueRequest();
       case 'DeleteQueue':
-        return new DeleteQueueRequest();
+        return DeleteQueueRequest();
       case 'PurgeQueue':
-        return new PurgeQueueRequest();
+        return PurgeQueueRequest();
       case 'PauseQueue':
-        return new PauseQueueRequest();
+        return PauseQueueRequest();
       case 'ResumeQueue':
-        return new ResumeQueueRequest();
+        return ResumeQueueRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       case 'ListTasks':
-        return new ListTasksRequest();
+        return ListTasksRequest();
       case 'GetTask':
-        return new GetTaskRequest();
+        return GetTaskRequest();
       case 'CreateTask':
-        return new CreateTaskRequest();
+        return CreateTaskRequest();
       case 'DeleteTask':
-        return new DeleteTaskRequest();
+        return DeleteTaskRequest();
       case 'LeaseTasks':
-        return new LeaseTasksRequest();
+        return LeaseTasksRequest();
       case 'AcknowledgeTask':
-        return new AcknowledgeTaskRequest();
+        return AcknowledgeTaskRequest();
       case 'RenewLease':
-        return new RenewLeaseRequest();
+        return RenewLeaseRequest();
       case 'CancelLease':
-        return new CancelLeaseRequest();
+        return CancelLeaseRequest();
       case 'RunTask':
-        return new RunTaskRequest();
+        return RunTaskRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -139,7 +139,7 @@ abstract class CloudTasksServiceBase extends GeneratedService {
       case 'RunTask':
         return this.runTask(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

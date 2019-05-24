@@ -28,17 +28,17 @@ abstract class MetricsServiceV2ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListLogMetrics':
-        return new ListLogMetricsRequest();
+        return ListLogMetricsRequest();
       case 'GetLogMetric':
-        return new GetLogMetricRequest();
+        return GetLogMetricRequest();
       case 'CreateLogMetric':
-        return new CreateLogMetricRequest();
+        return CreateLogMetricRequest();
       case 'UpdateLogMetric':
-        return new UpdateLogMetricRequest();
+        return UpdateLogMetricRequest();
       case 'DeleteLogMetric':
-        return new DeleteLogMetricRequest();
+        return DeleteLogMetricRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -56,7 +56,7 @@ abstract class MetricsServiceV2ServiceBase extends GeneratedService {
       case 'DeleteLogMetric':
         return this.deleteLogMetric(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

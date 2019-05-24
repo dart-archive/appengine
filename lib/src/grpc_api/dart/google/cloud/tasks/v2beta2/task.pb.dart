@@ -17,7 +17,7 @@ import 'task.pbenum.dart';
 export 'task.pbenum.dart';
 
 class Task extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Task')
+  static final BuilderInfo _i = BuilderInfo('Task')
     ..aOS(1, 'name')
     ..a<AppEngineHttpRequest>(3, 'appEngineHttpRequest', PbFieldType.OM,
         AppEngineHttpRequest.getDefault, AppEngineHttpRequest.create)
@@ -46,12 +46,12 @@ class Task extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Task.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Task clone() => new Task()..mergeFromMessage(this);
+  Task clone() => Task()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Task create() => new Task();
-  static PbList<Task> createRepeated() => new PbList<Task>();
+  static Task create() => Task();
+  static PbList<Task> createRepeated() => PbList<Task>();
   static Task getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTask();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTask();
     return _defaultInstance;
   }
 
@@ -120,7 +120,7 @@ class Task extends GeneratedMessage {
 class _ReadonlyTask extends Task with ReadonlyMessageMixin {}
 
 class TaskStatus extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TaskStatus')
+  static final BuilderInfo _i = BuilderInfo('TaskStatus')
     ..a<int>(1, 'attemptDispatchCount', PbFieldType.O3)
     ..a<int>(2, 'attemptResponseCount', PbFieldType.O3)
     ..a<AttemptStatus>(3, 'firstAttemptStatus', PbFieldType.OM,
@@ -135,12 +135,12 @@ class TaskStatus extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TaskStatus.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TaskStatus clone() => new TaskStatus()..mergeFromMessage(this);
+  TaskStatus clone() => TaskStatus()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TaskStatus create() => new TaskStatus();
-  static PbList<TaskStatus> createRepeated() => new PbList<TaskStatus>();
+  static TaskStatus create() => TaskStatus();
+  static PbList<TaskStatus> createRepeated() => PbList<TaskStatus>();
   static TaskStatus getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTaskStatus();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTaskStatus();
     return _defaultInstance;
   }
 
@@ -185,7 +185,7 @@ class TaskStatus extends GeneratedMessage {
 class _ReadonlyTaskStatus extends TaskStatus with ReadonlyMessageMixin {}
 
 class AttemptStatus extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AttemptStatus')
+  static final BuilderInfo _i = BuilderInfo('AttemptStatus')
     ..a<$google$protobuf.Timestamp>(
         1,
         'scheduleTime',
@@ -215,13 +215,12 @@ class AttemptStatus extends GeneratedMessage {
   AttemptStatus.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AttemptStatus clone() => new AttemptStatus()..mergeFromMessage(this);
+  AttemptStatus clone() => AttemptStatus()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AttemptStatus create() => new AttemptStatus();
-  static PbList<AttemptStatus> createRepeated() => new PbList<AttemptStatus>();
+  static AttemptStatus create() => AttemptStatus();
+  static PbList<AttemptStatus> createRepeated() => PbList<AttemptStatus>();
   static AttemptStatus getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAttemptStatus();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAttemptStatus();
     return _defaultInstance;
   }
 

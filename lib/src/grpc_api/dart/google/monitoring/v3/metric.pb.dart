@@ -15,7 +15,7 @@ import '../../api/monitored_resource.pb.dart' as $google$api;
 import '../../api/metric.pbenum.dart' as $google$api;
 
 class Point extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Point')
+  static final BuilderInfo _i = BuilderInfo('Point')
     ..a<TimeInterval>(1, 'interval', PbFieldType.OM, TimeInterval.getDefault,
         TimeInterval.create)
     ..a<TypedValue>(
@@ -27,12 +27,12 @@ class Point extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Point.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Point clone() => new Point()..mergeFromMessage(this);
+  Point clone() => Point()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Point create() => new Point();
-  static PbList<Point> createRepeated() => new PbList<Point>();
+  static Point create() => Point();
+  static PbList<Point> createRepeated() => PbList<Point>();
   static Point getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPoint();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPoint();
     return _defaultInstance;
   }
 
@@ -61,7 +61,7 @@ class Point extends GeneratedMessage {
 class _ReadonlyPoint extends Point with ReadonlyMessageMixin {}
 
 class TimeSeries extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TimeSeries')
+  static final BuilderInfo _i = BuilderInfo('TimeSeries')
     ..a<$google$api.Metric>(1, 'metric', PbFieldType.OM,
         $google$api.Metric.getDefault, $google$api.Metric.create)
     ..a<$google$api.MonitoredResource>(
@@ -93,12 +93,12 @@ class TimeSeries extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TimeSeries.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TimeSeries clone() => new TimeSeries()..mergeFromMessage(this);
+  TimeSeries clone() => TimeSeries()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TimeSeries create() => new TimeSeries();
-  static PbList<TimeSeries> createRepeated() => new PbList<TimeSeries>();
+  static TimeSeries create() => TimeSeries();
+  static PbList<TimeSeries> createRepeated() => PbList<TimeSeries>();
   static TimeSeries getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTimeSeries();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTimeSeries();
     return _defaultInstance;
   }
 

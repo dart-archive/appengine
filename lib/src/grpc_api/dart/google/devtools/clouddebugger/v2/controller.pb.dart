@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart';
 import 'data.pb.dart';
 
 class RegisterDebuggeeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RegisterDebuggeeRequest')
+  static final BuilderInfo _i = BuilderInfo('RegisterDebuggeeRequest')
     ..a<Debuggee>(
         1, 'debuggee', PbFieldType.OM, Debuggee.getDefault, Debuggee.create)
     ..hasRequiredFields = false;
@@ -25,14 +25,14 @@ class RegisterDebuggeeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RegisterDebuggeeRequest clone() =>
-      new RegisterDebuggeeRequest()..mergeFromMessage(this);
+      RegisterDebuggeeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RegisterDebuggeeRequest create() => new RegisterDebuggeeRequest();
+  static RegisterDebuggeeRequest create() => RegisterDebuggeeRequest();
   static PbList<RegisterDebuggeeRequest> createRepeated() =>
-      new PbList<RegisterDebuggeeRequest>();
+      PbList<RegisterDebuggeeRequest>();
   static RegisterDebuggeeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRegisterDebuggeeRequest();
+      _defaultInstance = _ReadonlyRegisterDebuggeeRequest();
     return _defaultInstance;
   }
 
@@ -55,7 +55,7 @@ class _ReadonlyRegisterDebuggeeRequest extends RegisterDebuggeeRequest
     with ReadonlyMessageMixin {}
 
 class RegisterDebuggeeResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RegisterDebuggeeResponse')
+  static final BuilderInfo _i = BuilderInfo('RegisterDebuggeeResponse')
     ..a<Debuggee>(
         1, 'debuggee', PbFieldType.OM, Debuggee.getDefault, Debuggee.create)
     ..hasRequiredFields = false;
@@ -68,14 +68,14 @@ class RegisterDebuggeeResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RegisterDebuggeeResponse clone() =>
-      new RegisterDebuggeeResponse()..mergeFromMessage(this);
+      RegisterDebuggeeResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RegisterDebuggeeResponse create() => new RegisterDebuggeeResponse();
+  static RegisterDebuggeeResponse create() => RegisterDebuggeeResponse();
   static PbList<RegisterDebuggeeResponse> createRepeated() =>
-      new PbList<RegisterDebuggeeResponse>();
+      PbList<RegisterDebuggeeResponse>();
   static RegisterDebuggeeResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRegisterDebuggeeResponse();
+      _defaultInstance = _ReadonlyRegisterDebuggeeResponse();
     return _defaultInstance;
   }
 
@@ -98,7 +98,7 @@ class _ReadonlyRegisterDebuggeeResponse extends RegisterDebuggeeResponse
     with ReadonlyMessageMixin {}
 
 class ListActiveBreakpointsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListActiveBreakpointsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListActiveBreakpointsRequest')
     ..aOS(1, 'debuggeeId')
     ..aOS(2, 'waitToken')
     ..aOB(3, 'successOnTimeout')
@@ -112,15 +112,15 @@ class ListActiveBreakpointsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListActiveBreakpointsRequest clone() =>
-      new ListActiveBreakpointsRequest()..mergeFromMessage(this);
+      ListActiveBreakpointsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListActiveBreakpointsRequest create() =>
-      new ListActiveBreakpointsRequest();
+      ListActiveBreakpointsRequest();
   static PbList<ListActiveBreakpointsRequest> createRepeated() =>
-      new PbList<ListActiveBreakpointsRequest>();
+      PbList<ListActiveBreakpointsRequest>();
   static ListActiveBreakpointsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListActiveBreakpointsRequest();
+      _defaultInstance = _ReadonlyListActiveBreakpointsRequest();
     return _defaultInstance;
   }
 
@@ -159,7 +159,7 @@ class _ReadonlyListActiveBreakpointsRequest extends ListActiveBreakpointsRequest
     with ReadonlyMessageMixin {}
 
 class ListActiveBreakpointsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListActiveBreakpointsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListActiveBreakpointsResponse')
     ..pp<Breakpoint>(1, 'breakpoints', PbFieldType.PM, Breakpoint.$checkItem,
         Breakpoint.create)
     ..aOS(2, 'nextWaitToken')
@@ -174,15 +174,15 @@ class ListActiveBreakpointsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListActiveBreakpointsResponse clone() =>
-      new ListActiveBreakpointsResponse()..mergeFromMessage(this);
+      ListActiveBreakpointsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListActiveBreakpointsResponse create() =>
-      new ListActiveBreakpointsResponse();
+      ListActiveBreakpointsResponse();
   static PbList<ListActiveBreakpointsResponse> createRepeated() =>
-      new PbList<ListActiveBreakpointsResponse>();
+      PbList<ListActiveBreakpointsResponse>();
   static ListActiveBreakpointsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListActiveBreakpointsResponse();
+      _defaultInstance = _ReadonlyListActiveBreakpointsResponse();
     return _defaultInstance;
   }
 
@@ -215,7 +215,7 @@ class _ReadonlyListActiveBreakpointsResponse
     extends ListActiveBreakpointsResponse with ReadonlyMessageMixin {}
 
 class UpdateActiveBreakpointRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateActiveBreakpointRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateActiveBreakpointRequest')
     ..aOS(1, 'debuggeeId')
     ..a<Breakpoint>(2, 'breakpoint', PbFieldType.OM, Breakpoint.getDefault,
         Breakpoint.create)
@@ -229,15 +229,15 @@ class UpdateActiveBreakpointRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateActiveBreakpointRequest clone() =>
-      new UpdateActiveBreakpointRequest()..mergeFromMessage(this);
+      UpdateActiveBreakpointRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateActiveBreakpointRequest create() =>
-      new UpdateActiveBreakpointRequest();
+      UpdateActiveBreakpointRequest();
   static PbList<UpdateActiveBreakpointRequest> createRepeated() =>
-      new PbList<UpdateActiveBreakpointRequest>();
+      PbList<UpdateActiveBreakpointRequest>();
   static UpdateActiveBreakpointRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateActiveBreakpointRequest();
+      _defaultInstance = _ReadonlyUpdateActiveBreakpointRequest();
     return _defaultInstance;
   }
 
@@ -268,9 +268,8 @@ class _ReadonlyUpdateActiveBreakpointRequest
     extends UpdateActiveBreakpointRequest with ReadonlyMessageMixin {}
 
 class UpdateActiveBreakpointResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('UpdateActiveBreakpointResponse')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('UpdateActiveBreakpointResponse')
+    ..hasRequiredFields = false;
 
   UpdateActiveBreakpointResponse() : super();
   UpdateActiveBreakpointResponse.fromBuffer(List<int> i,
@@ -280,15 +279,15 @@ class UpdateActiveBreakpointResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateActiveBreakpointResponse clone() =>
-      new UpdateActiveBreakpointResponse()..mergeFromMessage(this);
+      UpdateActiveBreakpointResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateActiveBreakpointResponse create() =>
-      new UpdateActiveBreakpointResponse();
+      UpdateActiveBreakpointResponse();
   static PbList<UpdateActiveBreakpointResponse> createRepeated() =>
-      new PbList<UpdateActiveBreakpointResponse>();
+      PbList<UpdateActiveBreakpointResponse>();
   static UpdateActiveBreakpointResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateActiveBreakpointResponse();
+      _defaultInstance = _ReadonlyUpdateActiveBreakpointResponse();
     return _defaultInstance;
   }
 
@@ -308,21 +307,21 @@ class Controller2Api {
 
   Future<RegisterDebuggeeResponse> registerDebuggee(
       ClientContext ctx, RegisterDebuggeeRequest request) {
-    var emptyResponse = new RegisterDebuggeeResponse();
+    var emptyResponse = RegisterDebuggeeResponse();
     return _client.invoke<RegisterDebuggeeResponse>(
         ctx, 'Controller2', 'RegisterDebuggee', request, emptyResponse);
   }
 
   Future<ListActiveBreakpointsResponse> listActiveBreakpoints(
       ClientContext ctx, ListActiveBreakpointsRequest request) {
-    var emptyResponse = new ListActiveBreakpointsResponse();
+    var emptyResponse = ListActiveBreakpointsResponse();
     return _client.invoke<ListActiveBreakpointsResponse>(
         ctx, 'Controller2', 'ListActiveBreakpoints', request, emptyResponse);
   }
 
   Future<UpdateActiveBreakpointResponse> updateActiveBreakpoint(
       ClientContext ctx, UpdateActiveBreakpointRequest request) {
-    var emptyResponse = new UpdateActiveBreakpointResponse();
+    var emptyResponse = UpdateActiveBreakpointResponse();
     return _client.invoke<UpdateActiveBreakpointResponse>(
         ctx, 'Controller2', 'UpdateActiveBreakpoint', request, emptyResponse);
   }

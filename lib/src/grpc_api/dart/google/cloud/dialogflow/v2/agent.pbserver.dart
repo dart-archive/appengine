@@ -29,19 +29,19 @@ abstract class AgentsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetAgent':
-        return new GetAgentRequest();
+        return GetAgentRequest();
       case 'SearchAgents':
-        return new SearchAgentsRequest();
+        return SearchAgentsRequest();
       case 'TrainAgent':
-        return new TrainAgentRequest();
+        return TrainAgentRequest();
       case 'ExportAgent':
-        return new ExportAgentRequest();
+        return ExportAgentRequest();
       case 'ImportAgent':
-        return new ImportAgentRequest();
+        return ImportAgentRequest();
       case 'RestoreAgent':
-        return new RestoreAgentRequest();
+        return RestoreAgentRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -61,7 +61,7 @@ abstract class AgentsServiceBase extends GeneratedService {
       case 'RestoreAgent':
         return this.restoreAgent(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

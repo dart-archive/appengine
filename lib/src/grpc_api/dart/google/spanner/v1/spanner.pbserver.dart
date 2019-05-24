@@ -42,33 +42,33 @@ abstract class SpannerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateSession':
-        return new CreateSessionRequest();
+        return CreateSessionRequest();
       case 'GetSession':
-        return new GetSessionRequest();
+        return GetSessionRequest();
       case 'ListSessions':
-        return new ListSessionsRequest();
+        return ListSessionsRequest();
       case 'DeleteSession':
-        return new DeleteSessionRequest();
+        return DeleteSessionRequest();
       case 'ExecuteSql':
-        return new ExecuteSqlRequest();
+        return ExecuteSqlRequest();
       case 'ExecuteStreamingSql':
-        return new ExecuteSqlRequest();
+        return ExecuteSqlRequest();
       case 'Read':
-        return new ReadRequest();
+        return ReadRequest();
       case 'StreamingRead':
-        return new ReadRequest();
+        return ReadRequest();
       case 'BeginTransaction':
-        return new BeginTransactionRequest();
+        return BeginTransactionRequest();
       case 'Commit':
-        return new CommitRequest();
+        return CommitRequest();
       case 'Rollback':
-        return new RollbackRequest();
+        return RollbackRequest();
       case 'PartitionQuery':
-        return new PartitionQueryRequest();
+        return PartitionQueryRequest();
       case 'PartitionRead':
-        return new PartitionReadRequest();
+        return PartitionReadRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -102,7 +102,7 @@ abstract class SpannerServiceBase extends GeneratedService {
       case 'PartitionRead':
         return this.partitionRead(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../protobuf/struct.pb.dart' as $google$protobuf;
 
 class KeyRange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('KeyRange')
+  static final BuilderInfo _i = BuilderInfo('KeyRange')
     ..a<$google$protobuf.ListValue>(
         1,
         'startClosed',
@@ -44,12 +44,12 @@ class KeyRange extends GeneratedMessage {
       : super.fromBuffer(i, r);
   KeyRange.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  KeyRange clone() => new KeyRange()..mergeFromMessage(this);
+  KeyRange clone() => KeyRange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static KeyRange create() => new KeyRange();
-  static PbList<KeyRange> createRepeated() => new PbList<KeyRange>();
+  static KeyRange create() => KeyRange();
+  static PbList<KeyRange> createRepeated() => PbList<KeyRange>();
   static KeyRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyKeyRange();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyKeyRange();
     return _defaultInstance;
   }
 
@@ -94,7 +94,7 @@ class KeyRange extends GeneratedMessage {
 class _ReadonlyKeyRange extends KeyRange with ReadonlyMessageMixin {}
 
 class KeySet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('KeySet')
+  static final BuilderInfo _i = BuilderInfo('KeySet')
     ..pp<$google$protobuf.ListValue>(
         1,
         'keys',
@@ -112,12 +112,12 @@ class KeySet extends GeneratedMessage {
       : super.fromBuffer(i, r);
   KeySet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  KeySet clone() => new KeySet()..mergeFromMessage(this);
+  KeySet clone() => KeySet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static KeySet create() => new KeySet();
-  static PbList<KeySet> createRepeated() => new PbList<KeySet>();
+  static KeySet create() => KeySet();
+  static PbList<KeySet> createRepeated() => PbList<KeySet>();
   static KeySet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyKeySet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyKeySet();
     return _defaultInstance;
   }
 

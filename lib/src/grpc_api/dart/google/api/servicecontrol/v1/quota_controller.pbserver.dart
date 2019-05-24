@@ -19,9 +19,9 @@ abstract class QuotaControllerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'AllocateQuota':
-        return new AllocateQuotaRequest();
+        return AllocateQuotaRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -31,7 +31,7 @@ abstract class QuotaControllerServiceBase extends GeneratedService {
       case 'AllocateQuota':
         return this.allocateQuota(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

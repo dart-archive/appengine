@@ -9,10 +9,10 @@ import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
 import '../../../rpc/status.pbjson.dart' as $google$rpc;
 import '../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const IndexOperationMetadata$json = const {
+const IndexOperationMetadata$json = {
   '1': 'IndexOperationMetadata',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'start_time',
       '3': 1,
       '4': 1,
@@ -20,7 +20,7 @@ const IndexOperationMetadata$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'startTime'
     },
-    const {
+    {
       '1': 'end_time',
       '3': 2,
       '4': 1,
@@ -28,8 +28,8 @@ const IndexOperationMetadata$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'endTime'
     },
-    const {'1': 'index', '3': 3, '4': 1, '5': 9, '10': 'index'},
-    const {
+    {'1': 'index', '3': 3, '4': 1, '5': 9, '10': 'index'},
+    {
       '1': 'operation_type',
       '3': 4,
       '4': 1,
@@ -38,8 +38,8 @@ const IndexOperationMetadata$json = const {
           '.google.firestore.admin.v1beta1.IndexOperationMetadata.OperationType',
       '10': 'operationType'
     },
-    const {'1': 'cancelled', '3': 5, '4': 1, '5': 8, '10': 'cancelled'},
-    const {
+    {'1': 'cancelled', '3': 5, '4': 1, '5': 8, '10': 'cancelled'},
+    {
       '1': 'document_progress',
       '3': 6,
       '4': 1,
@@ -48,42 +48,30 @@ const IndexOperationMetadata$json = const {
       '10': 'documentProgress'
     },
   ],
-  '4': const [IndexOperationMetadata_OperationType$json],
+  '4': [IndexOperationMetadata_OperationType$json],
 };
 
-const IndexOperationMetadata_OperationType$json = const {
+const IndexOperationMetadata_OperationType$json = {
   '1': 'OperationType',
-  '2': const [
-    const {'1': 'OPERATION_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'CREATING_INDEX', '2': 1},
+  '2': [
+    {'1': 'OPERATION_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'CREATING_INDEX', '2': 1},
   ],
 };
 
-const Progress$json = const {
+const Progress$json = {
   '1': 'Progress',
-  '2': const [
-    const {
-      '1': 'work_completed',
-      '3': 1,
-      '4': 1,
-      '5': 3,
-      '10': 'workCompleted'
-    },
-    const {
-      '1': 'work_estimated',
-      '3': 2,
-      '4': 1,
-      '5': 3,
-      '10': 'workEstimated'
-    },
+  '2': [
+    {'1': 'work_completed', '3': 1, '4': 1, '5': 3, '10': 'workCompleted'},
+    {'1': 'work_estimated', '3': 2, '4': 1, '5': 3, '10': 'workEstimated'},
   ],
 };
 
-const CreateIndexRequest$json = const {
+const CreateIndexRequest$json = {
   '1': 'CreateIndexRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
       '1': 'index',
       '3': 2,
       '4': 1,
@@ -94,34 +82,34 @@ const CreateIndexRequest$json = const {
   ],
 };
 
-const GetIndexRequest$json = const {
+const GetIndexRequest$json = {
   '1': 'GetIndexRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListIndexesRequest$json = const {
+const ListIndexesRequest$json = {
   '1': 'ListIndexesRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
-    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const DeleteIndexRequest$json = const {
+const DeleteIndexRequest$json = {
   '1': 'DeleteIndexRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListIndexesResponse$json = const {
+const ListIndexesResponse$json = {
   '1': 'ListIndexesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'indexes',
       '3': 1,
       '4': 3,
@@ -129,47 +117,41 @@ const ListIndexesResponse$json = const {
       '6': '.google.firestore.admin.v1beta1.Index',
       '10': 'indexes'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const FirestoreAdmin$json = const {
+const FirestoreAdmin$json = {
   '1': 'FirestoreAdmin',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateIndex',
       '2': '.google.firestore.admin.v1beta1.CreateIndexRequest',
       '3': '.google.longrunning.Operation',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListIndexes',
       '2': '.google.firestore.admin.v1beta1.ListIndexesRequest',
       '3': '.google.firestore.admin.v1beta1.ListIndexesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetIndex',
       '2': '.google.firestore.admin.v1beta1.GetIndexRequest',
       '3': '.google.firestore.admin.v1beta1.Index',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteIndex',
       '2': '.google.firestore.admin.v1beta1.DeleteIndexRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const FirestoreAdmin$messageJson = const {
+const FirestoreAdmin$messageJson = {
   '.google.firestore.admin.v1beta1.CreateIndexRequest': CreateIndexRequest$json,
   '.google.firestore.admin.v1beta1.Index': Index$json,
   '.google.firestore.admin.v1beta1.IndexField': IndexField$json,

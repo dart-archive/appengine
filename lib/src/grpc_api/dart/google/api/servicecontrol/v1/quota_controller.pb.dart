@@ -16,7 +16,7 @@ import 'quota_controller.pbenum.dart';
 export 'quota_controller.pbenum.dart';
 
 class AllocateQuotaRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AllocateQuotaRequest')
+  static final BuilderInfo _i = BuilderInfo('AllocateQuotaRequest')
     ..aOS(1, 'serviceName')
     ..a<QuotaOperation>(2, 'allocateOperation', PbFieldType.OM,
         QuotaOperation.getDefault, QuotaOperation.create)
@@ -31,14 +31,14 @@ class AllocateQuotaRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AllocateQuotaRequest clone() =>
-      new AllocateQuotaRequest()..mergeFromMessage(this);
+      AllocateQuotaRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AllocateQuotaRequest create() => new AllocateQuotaRequest();
+  static AllocateQuotaRequest create() => AllocateQuotaRequest();
   static PbList<AllocateQuotaRequest> createRepeated() =>
-      new PbList<AllocateQuotaRequest>();
+      PbList<AllocateQuotaRequest>();
   static AllocateQuotaRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAllocateQuotaRequest();
+      _defaultInstance = _ReadonlyAllocateQuotaRequest();
     return _defaultInstance;
   }
 
@@ -76,7 +76,7 @@ class _ReadonlyAllocateQuotaRequest extends AllocateQuotaRequest
     with ReadonlyMessageMixin {}
 
 class QuotaOperation_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaOperation_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('QuotaOperation_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -89,15 +89,14 @@ class QuotaOperation_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QuotaOperation_LabelsEntry clone() =>
-      new QuotaOperation_LabelsEntry()..mergeFromMessage(this);
+      QuotaOperation_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QuotaOperation_LabelsEntry create() =>
-      new QuotaOperation_LabelsEntry();
+  static QuotaOperation_LabelsEntry create() => QuotaOperation_LabelsEntry();
   static PbList<QuotaOperation_LabelsEntry> createRepeated() =>
-      new PbList<QuotaOperation_LabelsEntry>();
+      PbList<QuotaOperation_LabelsEntry>();
   static QuotaOperation_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQuotaOperation_LabelsEntry();
+      _defaultInstance = _ReadonlyQuotaOperation_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -128,7 +127,7 @@ class _ReadonlyQuotaOperation_LabelsEntry extends QuotaOperation_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class QuotaOperation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaOperation')
+  static final BuilderInfo _i = BuilderInfo('QuotaOperation')
     ..aOS(1, 'operationId')
     ..aOS(2, 'methodName')
     ..aOS(3, 'consumerId')
@@ -156,14 +155,12 @@ class QuotaOperation extends GeneratedMessage {
   QuotaOperation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QuotaOperation clone() => new QuotaOperation()..mergeFromMessage(this);
+  QuotaOperation clone() => QuotaOperation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QuotaOperation create() => new QuotaOperation();
-  static PbList<QuotaOperation> createRepeated() =>
-      new PbList<QuotaOperation>();
+  static QuotaOperation create() => QuotaOperation();
+  static PbList<QuotaOperation> createRepeated() => PbList<QuotaOperation>();
   static QuotaOperation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQuotaOperation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQuotaOperation();
     return _defaultInstance;
   }
 
@@ -213,7 +210,7 @@ class _ReadonlyQuotaOperation extends QuotaOperation with ReadonlyMessageMixin {
 }
 
 class AllocateQuotaResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AllocateQuotaResponse')
+  static final BuilderInfo _i = BuilderInfo('AllocateQuotaResponse')
     ..aOS(1, 'operationId')
     ..pp<QuotaError>(2, 'allocateErrors', PbFieldType.PM, QuotaError.$checkItem,
         QuotaError.create)
@@ -230,14 +227,14 @@ class AllocateQuotaResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AllocateQuotaResponse clone() =>
-      new AllocateQuotaResponse()..mergeFromMessage(this);
+      AllocateQuotaResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AllocateQuotaResponse create() => new AllocateQuotaResponse();
+  static AllocateQuotaResponse create() => AllocateQuotaResponse();
   static PbList<AllocateQuotaResponse> createRepeated() =>
-      new PbList<AllocateQuotaResponse>();
+      PbList<AllocateQuotaResponse>();
   static AllocateQuotaResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAllocateQuotaResponse();
+      _defaultInstance = _ReadonlyAllocateQuotaResponse();
     return _defaultInstance;
   }
 
@@ -272,7 +269,7 @@ class _ReadonlyAllocateQuotaResponse extends AllocateQuotaResponse
     with ReadonlyMessageMixin {}
 
 class QuotaError extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaError')
+  static final BuilderInfo _i = BuilderInfo('QuotaError')
     ..e<QuotaError_Code>(1, 'code', PbFieldType.OE, QuotaError_Code.UNSPECIFIED,
         QuotaError_Code.valueOf, QuotaError_Code.values)
     ..aOS(2, 'subject')
@@ -285,12 +282,12 @@ class QuotaError extends GeneratedMessage {
       : super.fromBuffer(i, r);
   QuotaError.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QuotaError clone() => new QuotaError()..mergeFromMessage(this);
+  QuotaError clone() => QuotaError()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QuotaError create() => new QuotaError();
-  static PbList<QuotaError> createRepeated() => new PbList<QuotaError>();
+  static QuotaError create() => QuotaError();
+  static PbList<QuotaError> createRepeated() => PbList<QuotaError>();
   static QuotaError getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQuotaError();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQuotaError();
     return _defaultInstance;
   }
 
@@ -332,7 +329,7 @@ class QuotaControllerApi {
 
   Future<AllocateQuotaResponse> allocateQuota(
       ClientContext ctx, AllocateQuotaRequest request) {
-    var emptyResponse = new AllocateQuotaResponse();
+    var emptyResponse = AllocateQuotaResponse();
     return _client.invoke<AllocateQuotaResponse>(
         ctx, 'QuotaController', 'AllocateQuota', request, emptyResponse);
   }

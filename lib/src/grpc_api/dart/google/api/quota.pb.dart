@@ -10,7 +10,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Quota extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Quota')
+  static final BuilderInfo _i = BuilderInfo('Quota')
     ..pp<QuotaLimit>(
         3, 'limits', PbFieldType.PM, QuotaLimit.$checkItem, QuotaLimit.create)
     ..pp<MetricRule>(4, 'metricRules', PbFieldType.PM, MetricRule.$checkItem,
@@ -22,12 +22,12 @@ class Quota extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Quota.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Quota clone() => new Quota()..mergeFromMessage(this);
+  Quota clone() => Quota()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Quota create() => new Quota();
-  static PbList<Quota> createRepeated() => new PbList<Quota>();
+  static Quota create() => Quota();
+  static PbList<Quota> createRepeated() => PbList<Quota>();
   static Quota getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQuota();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQuota();
     return _defaultInstance;
   }
 
@@ -44,7 +44,7 @@ class Quota extends GeneratedMessage {
 class _ReadonlyQuota extends Quota with ReadonlyMessageMixin {}
 
 class MetricRule_MetricCostsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricRule_MetricCostsEntry')
+  static final BuilderInfo _i = BuilderInfo('MetricRule_MetricCostsEntry')
     ..aOS(1, 'key')
     ..aInt64(2, 'value')
     ..hasRequiredFields = false;
@@ -57,15 +57,14 @@ class MetricRule_MetricCostsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MetricRule_MetricCostsEntry clone() =>
-      new MetricRule_MetricCostsEntry()..mergeFromMessage(this);
+      MetricRule_MetricCostsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MetricRule_MetricCostsEntry create() =>
-      new MetricRule_MetricCostsEntry();
+  static MetricRule_MetricCostsEntry create() => MetricRule_MetricCostsEntry();
   static PbList<MetricRule_MetricCostsEntry> createRepeated() =>
-      new PbList<MetricRule_MetricCostsEntry>();
+      PbList<MetricRule_MetricCostsEntry>();
   static MetricRule_MetricCostsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMetricRule_MetricCostsEntry();
+      _defaultInstance = _ReadonlyMetricRule_MetricCostsEntry();
     return _defaultInstance;
   }
 
@@ -96,7 +95,7 @@ class _ReadonlyMetricRule_MetricCostsEntry extends MetricRule_MetricCostsEntry
     with ReadonlyMessageMixin {}
 
 class MetricRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricRule')
+  static final BuilderInfo _i = BuilderInfo('MetricRule')
     ..aOS(1, 'selector')
     ..pp<MetricRule_MetricCostsEntry>(
         2,
@@ -112,12 +111,12 @@ class MetricRule extends GeneratedMessage {
       : super.fromBuffer(i, r);
   MetricRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MetricRule clone() => new MetricRule()..mergeFromMessage(this);
+  MetricRule clone() => MetricRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MetricRule create() => new MetricRule();
-  static PbList<MetricRule> createRepeated() => new PbList<MetricRule>();
+  static MetricRule create() => MetricRule();
+  static PbList<MetricRule> createRepeated() => PbList<MetricRule>();
   static MetricRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMetricRule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMetricRule();
     return _defaultInstance;
   }
 
@@ -140,7 +139,7 @@ class MetricRule extends GeneratedMessage {
 class _ReadonlyMetricRule extends MetricRule with ReadonlyMessageMixin {}
 
 class QuotaLimit_ValuesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaLimit_ValuesEntry')
+  static final BuilderInfo _i = BuilderInfo('QuotaLimit_ValuesEntry')
     ..aOS(1, 'key')
     ..aInt64(2, 'value')
     ..hasRequiredFields = false;
@@ -153,14 +152,14 @@ class QuotaLimit_ValuesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QuotaLimit_ValuesEntry clone() =>
-      new QuotaLimit_ValuesEntry()..mergeFromMessage(this);
+      QuotaLimit_ValuesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QuotaLimit_ValuesEntry create() => new QuotaLimit_ValuesEntry();
+  static QuotaLimit_ValuesEntry create() => QuotaLimit_ValuesEntry();
   static PbList<QuotaLimit_ValuesEntry> createRepeated() =>
-      new PbList<QuotaLimit_ValuesEntry>();
+      PbList<QuotaLimit_ValuesEntry>();
   static QuotaLimit_ValuesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQuotaLimit_ValuesEntry();
+      _defaultInstance = _ReadonlyQuotaLimit_ValuesEntry();
     return _defaultInstance;
   }
 
@@ -191,7 +190,7 @@ class _ReadonlyQuotaLimit_ValuesEntry extends QuotaLimit_ValuesEntry
     with ReadonlyMessageMixin {}
 
 class QuotaLimit extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaLimit')
+  static final BuilderInfo _i = BuilderInfo('QuotaLimit')
     ..aOS(2, 'description')
     ..aInt64(3, 'defaultLimit')
     ..aInt64(4, 'maxLimit')
@@ -211,12 +210,12 @@ class QuotaLimit extends GeneratedMessage {
       : super.fromBuffer(i, r);
   QuotaLimit.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QuotaLimit clone() => new QuotaLimit()..mergeFromMessage(this);
+  QuotaLimit clone() => QuotaLimit()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QuotaLimit create() => new QuotaLimit();
-  static PbList<QuotaLimit> createRepeated() => new PbList<QuotaLimit>();
+  static QuotaLimit create() => QuotaLimit();
+  static PbList<QuotaLimit> createRepeated() => PbList<QuotaLimit>();
   static QuotaLimit getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQuotaLimit();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQuotaLimit();
     return _defaultInstance;
   }
 

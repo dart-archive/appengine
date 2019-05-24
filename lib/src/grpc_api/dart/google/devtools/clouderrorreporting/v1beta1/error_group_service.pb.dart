@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart';
 import 'common.pb.dart';
 
 class GetGroupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetGroupRequest')
+  static final BuilderInfo _i = BuilderInfo('GetGroupRequest')
     ..aOS(1, 'groupName')
     ..hasRequiredFields = false;
 
@@ -23,14 +23,12 @@ class GetGroupRequest extends GeneratedMessage {
   GetGroupRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetGroupRequest clone() => new GetGroupRequest()..mergeFromMessage(this);
+  GetGroupRequest clone() => GetGroupRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetGroupRequest create() => new GetGroupRequest();
-  static PbList<GetGroupRequest> createRepeated() =>
-      new PbList<GetGroupRequest>();
+  static GetGroupRequest create() => GetGroupRequest();
+  static PbList<GetGroupRequest> createRepeated() => PbList<GetGroupRequest>();
   static GetGroupRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetGroupRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetGroupRequest();
     return _defaultInstance;
   }
 
@@ -52,7 +50,7 @@ class _ReadonlyGetGroupRequest extends GetGroupRequest
     with ReadonlyMessageMixin {}
 
 class UpdateGroupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateGroupRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateGroupRequest')
     ..a<ErrorGroup>(
         1, 'group', PbFieldType.OM, ErrorGroup.getDefault, ErrorGroup.create)
     ..hasRequiredFields = false;
@@ -64,15 +62,14 @@ class UpdateGroupRequest extends GeneratedMessage {
   UpdateGroupRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateGroupRequest clone() =>
-      new UpdateGroupRequest()..mergeFromMessage(this);
+  UpdateGroupRequest clone() => UpdateGroupRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateGroupRequest create() => new UpdateGroupRequest();
+  static UpdateGroupRequest create() => UpdateGroupRequest();
   static PbList<UpdateGroupRequest> createRepeated() =>
-      new PbList<UpdateGroupRequest>();
+      PbList<UpdateGroupRequest>();
   static UpdateGroupRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateGroupRequest();
+      _defaultInstance = _ReadonlyUpdateGroupRequest();
     return _defaultInstance;
   }
 
@@ -98,14 +95,14 @@ class ErrorGroupServiceApi {
   ErrorGroupServiceApi(this._client);
 
   Future<ErrorGroup> getGroup(ClientContext ctx, GetGroupRequest request) {
-    var emptyResponse = new ErrorGroup();
+    var emptyResponse = ErrorGroup();
     return _client.invoke<ErrorGroup>(
         ctx, 'ErrorGroupService', 'GetGroup', request, emptyResponse);
   }
 
   Future<ErrorGroup> updateGroup(
       ClientContext ctx, UpdateGroupRequest request) {
-    var emptyResponse = new ErrorGroup();
+    var emptyResponse = ErrorGroup();
     return _client.invoke<ErrorGroup>(
         ctx, 'ErrorGroupService', 'UpdateGroup', request, emptyResponse);
   }

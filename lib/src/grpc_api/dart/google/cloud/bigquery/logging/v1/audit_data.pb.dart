@@ -14,7 +14,7 @@ import '../../../../protobuf/duration.pb.dart' as $google$protobuf;
 import '../../../../rpc/status.pb.dart' as $google$rpc;
 
 class AuditData extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditData')
+  static final BuilderInfo _i = BuilderInfo('AuditData')
     ..a<TableInsertRequest>(1, 'tableInsertRequest', PbFieldType.OM,
         TableInsertRequest.getDefault, TableInsertRequest.create)
     ..a<DatasetListRequest>(2, 'datasetListRequest', PbFieldType.OM,
@@ -67,12 +67,12 @@ class AuditData extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AuditData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuditData clone() => new AuditData()..mergeFromMessage(this);
+  AuditData clone() => AuditData()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuditData create() => new AuditData();
-  static PbList<AuditData> createRepeated() => new PbList<AuditData>();
+  static AuditData create() => AuditData();
+  static PbList<AuditData> createRepeated() => PbList<AuditData>();
   static AuditData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAuditData();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuditData();
     return _defaultInstance;
   }
 
@@ -229,7 +229,7 @@ class AuditData extends GeneratedMessage {
 class _ReadonlyAuditData extends AuditData with ReadonlyMessageMixin {}
 
 class TableInsertRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableInsertRequest')
+  static final BuilderInfo _i = BuilderInfo('TableInsertRequest')
     ..a<Table>(1, 'resource', PbFieldType.OM, Table.getDefault, Table.create)
     ..hasRequiredFields = false;
 
@@ -240,15 +240,14 @@ class TableInsertRequest extends GeneratedMessage {
   TableInsertRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableInsertRequest clone() =>
-      new TableInsertRequest()..mergeFromMessage(this);
+  TableInsertRequest clone() => TableInsertRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableInsertRequest create() => new TableInsertRequest();
+  static TableInsertRequest create() => TableInsertRequest();
   static PbList<TableInsertRequest> createRepeated() =>
-      new PbList<TableInsertRequest>();
+      PbList<TableInsertRequest>();
   static TableInsertRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableInsertRequest();
+      _defaultInstance = _ReadonlyTableInsertRequest();
     return _defaultInstance;
   }
 
@@ -270,7 +269,7 @@ class _ReadonlyTableInsertRequest extends TableInsertRequest
     with ReadonlyMessageMixin {}
 
 class TableUpdateRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableUpdateRequest')
+  static final BuilderInfo _i = BuilderInfo('TableUpdateRequest')
     ..a<Table>(1, 'resource', PbFieldType.OM, Table.getDefault, Table.create)
     ..hasRequiredFields = false;
 
@@ -281,15 +280,14 @@ class TableUpdateRequest extends GeneratedMessage {
   TableUpdateRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableUpdateRequest clone() =>
-      new TableUpdateRequest()..mergeFromMessage(this);
+  TableUpdateRequest clone() => TableUpdateRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableUpdateRequest create() => new TableUpdateRequest();
+  static TableUpdateRequest create() => TableUpdateRequest();
   static PbList<TableUpdateRequest> createRepeated() =>
-      new PbList<TableUpdateRequest>();
+      PbList<TableUpdateRequest>();
   static TableUpdateRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableUpdateRequest();
+      _defaultInstance = _ReadonlyTableUpdateRequest();
     return _defaultInstance;
   }
 
@@ -311,7 +309,7 @@ class _ReadonlyTableUpdateRequest extends TableUpdateRequest
     with ReadonlyMessageMixin {}
 
 class TableInsertResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableInsertResponse')
+  static final BuilderInfo _i = BuilderInfo('TableInsertResponse')
     ..a<Table>(1, 'resource', PbFieldType.OM, Table.getDefault, Table.create)
     ..hasRequiredFields = false;
 
@@ -322,15 +320,14 @@ class TableInsertResponse extends GeneratedMessage {
   TableInsertResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableInsertResponse clone() =>
-      new TableInsertResponse()..mergeFromMessage(this);
+  TableInsertResponse clone() => TableInsertResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableInsertResponse create() => new TableInsertResponse();
+  static TableInsertResponse create() => TableInsertResponse();
   static PbList<TableInsertResponse> createRepeated() =>
-      new PbList<TableInsertResponse>();
+      PbList<TableInsertResponse>();
   static TableInsertResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableInsertResponse();
+      _defaultInstance = _ReadonlyTableInsertResponse();
     return _defaultInstance;
   }
 
@@ -352,7 +349,7 @@ class _ReadonlyTableInsertResponse extends TableInsertResponse
     with ReadonlyMessageMixin {}
 
 class TableUpdateResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableUpdateResponse')
+  static final BuilderInfo _i = BuilderInfo('TableUpdateResponse')
     ..a<Table>(1, 'resource', PbFieldType.OM, Table.getDefault, Table.create)
     ..hasRequiredFields = false;
 
@@ -363,15 +360,14 @@ class TableUpdateResponse extends GeneratedMessage {
   TableUpdateResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableUpdateResponse clone() =>
-      new TableUpdateResponse()..mergeFromMessage(this);
+  TableUpdateResponse clone() => TableUpdateResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableUpdateResponse create() => new TableUpdateResponse();
+  static TableUpdateResponse create() => TableUpdateResponse();
   static PbList<TableUpdateResponse> createRepeated() =>
-      new PbList<TableUpdateResponse>();
+      PbList<TableUpdateResponse>();
   static TableUpdateResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableUpdateResponse();
+      _defaultInstance = _ReadonlyTableUpdateResponse();
     return _defaultInstance;
   }
 
@@ -393,7 +389,7 @@ class _ReadonlyTableUpdateResponse extends TableUpdateResponse
     with ReadonlyMessageMixin {}
 
 class DatasetListRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetListRequest')
+  static final BuilderInfo _i = BuilderInfo('DatasetListRequest')
     ..aOB(1, 'listAll')
     ..hasRequiredFields = false;
 
@@ -404,15 +400,14 @@ class DatasetListRequest extends GeneratedMessage {
   DatasetListRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DatasetListRequest clone() =>
-      new DatasetListRequest()..mergeFromMessage(this);
+  DatasetListRequest clone() => DatasetListRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatasetListRequest create() => new DatasetListRequest();
+  static DatasetListRequest create() => DatasetListRequest();
   static PbList<DatasetListRequest> createRepeated() =>
-      new PbList<DatasetListRequest>();
+      PbList<DatasetListRequest>();
   static DatasetListRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetListRequest();
+      _defaultInstance = _ReadonlyDatasetListRequest();
     return _defaultInstance;
   }
 
@@ -434,7 +429,7 @@ class _ReadonlyDatasetListRequest extends DatasetListRequest
     with ReadonlyMessageMixin {}
 
 class DatasetInsertRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetInsertRequest')
+  static final BuilderInfo _i = BuilderInfo('DatasetInsertRequest')
     ..a<Dataset>(
         1, 'resource', PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
@@ -447,14 +442,14 @@ class DatasetInsertRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DatasetInsertRequest clone() =>
-      new DatasetInsertRequest()..mergeFromMessage(this);
+      DatasetInsertRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatasetInsertRequest create() => new DatasetInsertRequest();
+  static DatasetInsertRequest create() => DatasetInsertRequest();
   static PbList<DatasetInsertRequest> createRepeated() =>
-      new PbList<DatasetInsertRequest>();
+      PbList<DatasetInsertRequest>();
   static DatasetInsertRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetInsertRequest();
+      _defaultInstance = _ReadonlyDatasetInsertRequest();
     return _defaultInstance;
   }
 
@@ -476,7 +471,7 @@ class _ReadonlyDatasetInsertRequest extends DatasetInsertRequest
     with ReadonlyMessageMixin {}
 
 class DatasetInsertResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetInsertResponse')
+  static final BuilderInfo _i = BuilderInfo('DatasetInsertResponse')
     ..a<Dataset>(
         1, 'resource', PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
@@ -489,14 +484,14 @@ class DatasetInsertResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DatasetInsertResponse clone() =>
-      new DatasetInsertResponse()..mergeFromMessage(this);
+      DatasetInsertResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatasetInsertResponse create() => new DatasetInsertResponse();
+  static DatasetInsertResponse create() => DatasetInsertResponse();
   static PbList<DatasetInsertResponse> createRepeated() =>
-      new PbList<DatasetInsertResponse>();
+      PbList<DatasetInsertResponse>();
   static DatasetInsertResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetInsertResponse();
+      _defaultInstance = _ReadonlyDatasetInsertResponse();
     return _defaultInstance;
   }
 
@@ -519,7 +514,7 @@ class _ReadonlyDatasetInsertResponse extends DatasetInsertResponse
     with ReadonlyMessageMixin {}
 
 class DatasetUpdateRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetUpdateRequest')
+  static final BuilderInfo _i = BuilderInfo('DatasetUpdateRequest')
     ..a<Dataset>(
         1, 'resource', PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
@@ -532,14 +527,14 @@ class DatasetUpdateRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DatasetUpdateRequest clone() =>
-      new DatasetUpdateRequest()..mergeFromMessage(this);
+      DatasetUpdateRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatasetUpdateRequest create() => new DatasetUpdateRequest();
+  static DatasetUpdateRequest create() => DatasetUpdateRequest();
   static PbList<DatasetUpdateRequest> createRepeated() =>
-      new PbList<DatasetUpdateRequest>();
+      PbList<DatasetUpdateRequest>();
   static DatasetUpdateRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetUpdateRequest();
+      _defaultInstance = _ReadonlyDatasetUpdateRequest();
     return _defaultInstance;
   }
 
@@ -561,7 +556,7 @@ class _ReadonlyDatasetUpdateRequest extends DatasetUpdateRequest
     with ReadonlyMessageMixin {}
 
 class DatasetUpdateResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetUpdateResponse')
+  static final BuilderInfo _i = BuilderInfo('DatasetUpdateResponse')
     ..a<Dataset>(
         1, 'resource', PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
@@ -574,14 +569,14 @@ class DatasetUpdateResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DatasetUpdateResponse clone() =>
-      new DatasetUpdateResponse()..mergeFromMessage(this);
+      DatasetUpdateResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatasetUpdateResponse create() => new DatasetUpdateResponse();
+  static DatasetUpdateResponse create() => DatasetUpdateResponse();
   static PbList<DatasetUpdateResponse> createRepeated() =>
-      new PbList<DatasetUpdateResponse>();
+      PbList<DatasetUpdateResponse>();
   static DatasetUpdateResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatasetUpdateResponse();
+      _defaultInstance = _ReadonlyDatasetUpdateResponse();
     return _defaultInstance;
   }
 
@@ -604,7 +599,7 @@ class _ReadonlyDatasetUpdateResponse extends DatasetUpdateResponse
     with ReadonlyMessageMixin {}
 
 class JobInsertRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobInsertRequest')
+  static final BuilderInfo _i = BuilderInfo('JobInsertRequest')
     ..a<Job>(1, 'resource', PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
@@ -615,14 +610,14 @@ class JobInsertRequest extends GeneratedMessage {
   JobInsertRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobInsertRequest clone() => new JobInsertRequest()..mergeFromMessage(this);
+  JobInsertRequest clone() => JobInsertRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobInsertRequest create() => new JobInsertRequest();
+  static JobInsertRequest create() => JobInsertRequest();
   static PbList<JobInsertRequest> createRepeated() =>
-      new PbList<JobInsertRequest>();
+      PbList<JobInsertRequest>();
   static JobInsertRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobInsertRequest();
+      _defaultInstance = _ReadonlyJobInsertRequest();
     return _defaultInstance;
   }
 
@@ -644,7 +639,7 @@ class _ReadonlyJobInsertRequest extends JobInsertRequest
     with ReadonlyMessageMixin {}
 
 class JobInsertResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobInsertResponse')
+  static final BuilderInfo _i = BuilderInfo('JobInsertResponse')
     ..a<Job>(1, 'resource', PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
@@ -655,14 +650,14 @@ class JobInsertResponse extends GeneratedMessage {
   JobInsertResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobInsertResponse clone() => new JobInsertResponse()..mergeFromMessage(this);
+  JobInsertResponse clone() => JobInsertResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobInsertResponse create() => new JobInsertResponse();
+  static JobInsertResponse create() => JobInsertResponse();
   static PbList<JobInsertResponse> createRepeated() =>
-      new PbList<JobInsertResponse>();
+      PbList<JobInsertResponse>();
   static JobInsertResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobInsertResponse();
+      _defaultInstance = _ReadonlyJobInsertResponse();
     return _defaultInstance;
   }
 
@@ -684,7 +679,7 @@ class _ReadonlyJobInsertResponse extends JobInsertResponse
     with ReadonlyMessageMixin {}
 
 class JobQueryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobQueryRequest')
+  static final BuilderInfo _i = BuilderInfo('JobQueryRequest')
     ..aOS(1, 'query')
     ..a<int>(2, 'maxResults', PbFieldType.OU3)
     ..a<DatasetName>(3, 'defaultDataset', PbFieldType.OM,
@@ -700,14 +695,12 @@ class JobQueryRequest extends GeneratedMessage {
   JobQueryRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobQueryRequest clone() => new JobQueryRequest()..mergeFromMessage(this);
+  JobQueryRequest clone() => JobQueryRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobQueryRequest create() => new JobQueryRequest();
-  static PbList<JobQueryRequest> createRepeated() =>
-      new PbList<JobQueryRequest>();
+  static JobQueryRequest create() => JobQueryRequest();
+  static PbList<JobQueryRequest> createRepeated() => PbList<JobQueryRequest>();
   static JobQueryRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobQueryRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyJobQueryRequest();
     return _defaultInstance;
   }
 
@@ -761,7 +754,7 @@ class _ReadonlyJobQueryRequest extends JobQueryRequest
     with ReadonlyMessageMixin {}
 
 class JobQueryResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobQueryResponse')
+  static final BuilderInfo _i = BuilderInfo('JobQueryResponse')
     ..a<Int64>(1, 'totalResults', PbFieldType.OU6, Int64.ZERO)
     ..a<Job>(2, 'job', PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
@@ -773,14 +766,14 @@ class JobQueryResponse extends GeneratedMessage {
   JobQueryResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobQueryResponse clone() => new JobQueryResponse()..mergeFromMessage(this);
+  JobQueryResponse clone() => JobQueryResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobQueryResponse create() => new JobQueryResponse();
+  static JobQueryResponse create() => JobQueryResponse();
   static PbList<JobQueryResponse> createRepeated() =>
-      new PbList<JobQueryResponse>();
+      PbList<JobQueryResponse>();
   static JobQueryResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobQueryResponse();
+      _defaultInstance = _ReadonlyJobQueryResponse();
     return _defaultInstance;
   }
 
@@ -810,7 +803,7 @@ class _ReadonlyJobQueryResponse extends JobQueryResponse
     with ReadonlyMessageMixin {}
 
 class JobGetQueryResultsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobGetQueryResultsRequest')
+  static final BuilderInfo _i = BuilderInfo('JobGetQueryResultsRequest')
     ..a<int>(1, 'maxResults', PbFieldType.OU3)
     ..a<Int64>(2, 'startRow', PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false;
@@ -823,14 +816,14 @@ class JobGetQueryResultsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobGetQueryResultsRequest clone() =>
-      new JobGetQueryResultsRequest()..mergeFromMessage(this);
+      JobGetQueryResultsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobGetQueryResultsRequest create() => new JobGetQueryResultsRequest();
+  static JobGetQueryResultsRequest create() => JobGetQueryResultsRequest();
   static PbList<JobGetQueryResultsRequest> createRepeated() =>
-      new PbList<JobGetQueryResultsRequest>();
+      PbList<JobGetQueryResultsRequest>();
   static JobGetQueryResultsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobGetQueryResultsRequest();
+      _defaultInstance = _ReadonlyJobGetQueryResultsRequest();
     return _defaultInstance;
   }
 
@@ -861,7 +854,7 @@ class _ReadonlyJobGetQueryResultsRequest extends JobGetQueryResultsRequest
     with ReadonlyMessageMixin {}
 
 class JobGetQueryResultsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobGetQueryResultsResponse')
+  static final BuilderInfo _i = BuilderInfo('JobGetQueryResultsResponse')
     ..a<Int64>(1, 'totalResults', PbFieldType.OU6, Int64.ZERO)
     ..a<Job>(2, 'job', PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
@@ -874,15 +867,14 @@ class JobGetQueryResultsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobGetQueryResultsResponse clone() =>
-      new JobGetQueryResultsResponse()..mergeFromMessage(this);
+      JobGetQueryResultsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobGetQueryResultsResponse create() =>
-      new JobGetQueryResultsResponse();
+  static JobGetQueryResultsResponse create() => JobGetQueryResultsResponse();
   static PbList<JobGetQueryResultsResponse> createRepeated() =>
-      new PbList<JobGetQueryResultsResponse>();
+      PbList<JobGetQueryResultsResponse>();
   static JobGetQueryResultsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobGetQueryResultsResponse();
+      _defaultInstance = _ReadonlyJobGetQueryResultsResponse();
     return _defaultInstance;
   }
 
@@ -913,7 +905,7 @@ class _ReadonlyJobGetQueryResultsResponse extends JobGetQueryResultsResponse
     with ReadonlyMessageMixin {}
 
 class JobQueryDoneResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobQueryDoneResponse')
+  static final BuilderInfo _i = BuilderInfo('JobQueryDoneResponse')
     ..a<Job>(1, 'job', PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
@@ -925,14 +917,14 @@ class JobQueryDoneResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobQueryDoneResponse clone() =>
-      new JobQueryDoneResponse()..mergeFromMessage(this);
+      JobQueryDoneResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobQueryDoneResponse create() => new JobQueryDoneResponse();
+  static JobQueryDoneResponse create() => JobQueryDoneResponse();
   static PbList<JobQueryDoneResponse> createRepeated() =>
-      new PbList<JobQueryDoneResponse>();
+      PbList<JobQueryDoneResponse>();
   static JobQueryDoneResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobQueryDoneResponse();
+      _defaultInstance = _ReadonlyJobQueryDoneResponse();
     return _defaultInstance;
   }
 
@@ -954,7 +946,7 @@ class _ReadonlyJobQueryDoneResponse extends JobQueryDoneResponse
     with ReadonlyMessageMixin {}
 
 class JobCompletedEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobCompletedEvent')
+  static final BuilderInfo _i = BuilderInfo('JobCompletedEvent')
     ..aOS(1, 'eventName')
     ..a<Job>(2, 'job', PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
@@ -966,14 +958,14 @@ class JobCompletedEvent extends GeneratedMessage {
   JobCompletedEvent.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobCompletedEvent clone() => new JobCompletedEvent()..mergeFromMessage(this);
+  JobCompletedEvent clone() => JobCompletedEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobCompletedEvent create() => new JobCompletedEvent();
+  static JobCompletedEvent create() => JobCompletedEvent();
   static PbList<JobCompletedEvent> createRepeated() =>
-      new PbList<JobCompletedEvent>();
+      PbList<JobCompletedEvent>();
   static JobCompletedEvent getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobCompletedEvent();
+      _defaultInstance = _ReadonlyJobCompletedEvent();
     return _defaultInstance;
   }
 
@@ -1003,7 +995,7 @@ class _ReadonlyJobCompletedEvent extends JobCompletedEvent
     with ReadonlyMessageMixin {}
 
 class TableDataListRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableDataListRequest')
+  static final BuilderInfo _i = BuilderInfo('TableDataListRequest')
     ..a<Int64>(1, 'startRow', PbFieldType.OU6, Int64.ZERO)
     ..a<int>(2, 'maxResults', PbFieldType.OU3)
     ..hasRequiredFields = false;
@@ -1016,14 +1008,14 @@ class TableDataListRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TableDataListRequest clone() =>
-      new TableDataListRequest()..mergeFromMessage(this);
+      TableDataListRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableDataListRequest create() => new TableDataListRequest();
+  static TableDataListRequest create() => TableDataListRequest();
   static PbList<TableDataListRequest> createRepeated() =>
-      new PbList<TableDataListRequest>();
+      PbList<TableDataListRequest>();
   static TableDataListRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableDataListRequest();
+      _defaultInstance = _ReadonlyTableDataListRequest();
     return _defaultInstance;
   }
 
@@ -1053,7 +1045,7 @@ class _ReadonlyTableDataListRequest extends TableDataListRequest
     with ReadonlyMessageMixin {}
 
 class Table extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Table')
+  static final BuilderInfo _i = BuilderInfo('Table')
     ..a<TableName>(
         1, 'tableName', PbFieldType.OM, TableName.getDefault, TableName.create)
     ..a<TableInfo>(
@@ -1086,12 +1078,12 @@ class Table extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Table.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Table clone() => new Table()..mergeFromMessage(this);
+  Table clone() => Table()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Table create() => new Table();
-  static PbList<Table> createRepeated() => new PbList<Table>();
+  static Table create() => Table();
+  static PbList<Table> createRepeated() => PbList<Table>();
   static Table getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTable();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTable();
     return _defaultInstance;
   }
 
@@ -1160,7 +1152,7 @@ class Table extends GeneratedMessage {
 class _ReadonlyTable extends Table with ReadonlyMessageMixin {}
 
 class TableInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableInfo')
+  static final BuilderInfo _i = BuilderInfo('TableInfo')
     ..aOS(1, 'friendlyName')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
@@ -1171,12 +1163,12 @@ class TableInfo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TableInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableInfo clone() => new TableInfo()..mergeFromMessage(this);
+  TableInfo clone() => TableInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableInfo create() => new TableInfo();
-  static PbList<TableInfo> createRepeated() => new PbList<TableInfo>();
+  static TableInfo create() => TableInfo();
+  static PbList<TableInfo> createRepeated() => PbList<TableInfo>();
   static TableInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTableInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTableInfo();
     return _defaultInstance;
   }
 
@@ -1205,7 +1197,7 @@ class TableInfo extends GeneratedMessage {
 class _ReadonlyTableInfo extends TableInfo with ReadonlyMessageMixin {}
 
 class TableViewDefinition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableViewDefinition')
+  static final BuilderInfo _i = BuilderInfo('TableViewDefinition')
     ..aOS(1, 'query')
     ..hasRequiredFields = false;
 
@@ -1216,15 +1208,14 @@ class TableViewDefinition extends GeneratedMessage {
   TableViewDefinition.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableViewDefinition clone() =>
-      new TableViewDefinition()..mergeFromMessage(this);
+  TableViewDefinition clone() => TableViewDefinition()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableViewDefinition create() => new TableViewDefinition();
+  static TableViewDefinition create() => TableViewDefinition();
   static PbList<TableViewDefinition> createRepeated() =>
-      new PbList<TableViewDefinition>();
+      PbList<TableViewDefinition>();
   static TableViewDefinition getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableViewDefinition();
+      _defaultInstance = _ReadonlyTableViewDefinition();
     return _defaultInstance;
   }
 
@@ -1246,7 +1237,7 @@ class _ReadonlyTableViewDefinition extends TableViewDefinition
     with ReadonlyMessageMixin {}
 
 class Dataset extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Dataset')
+  static final BuilderInfo _i = BuilderInfo('Dataset')
     ..a<DatasetName>(1, 'datasetName', PbFieldType.OM, DatasetName.getDefault,
         DatasetName.create)
     ..a<DatasetInfo>(
@@ -1279,12 +1270,12 @@ class Dataset extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Dataset.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Dataset clone() => new Dataset()..mergeFromMessage(this);
+  Dataset clone() => Dataset()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Dataset create() => new Dataset();
-  static PbList<Dataset> createRepeated() => new PbList<Dataset>();
+  static Dataset create() => Dataset();
+  static PbList<Dataset> createRepeated() => PbList<Dataset>();
   static Dataset getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDataset();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDataset();
     return _defaultInstance;
   }
 
@@ -1345,7 +1336,7 @@ class Dataset extends GeneratedMessage {
 class _ReadonlyDataset extends Dataset with ReadonlyMessageMixin {}
 
 class DatasetInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetInfo')
+  static final BuilderInfo _i = BuilderInfo('DatasetInfo')
     ..aOS(1, 'friendlyName')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
@@ -1357,12 +1348,12 @@ class DatasetInfo extends GeneratedMessage {
   DatasetInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DatasetInfo clone() => new DatasetInfo()..mergeFromMessage(this);
+  DatasetInfo clone() => DatasetInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatasetInfo create() => new DatasetInfo();
-  static PbList<DatasetInfo> createRepeated() => new PbList<DatasetInfo>();
+  static DatasetInfo create() => DatasetInfo();
+  static PbList<DatasetInfo> createRepeated() => PbList<DatasetInfo>();
   static DatasetInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDatasetInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDatasetInfo();
     return _defaultInstance;
   }
 
@@ -1391,7 +1382,7 @@ class DatasetInfo extends GeneratedMessage {
 class _ReadonlyDatasetInfo extends DatasetInfo with ReadonlyMessageMixin {}
 
 class BigQueryAcl_Entry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BigQueryAcl_Entry')
+  static final BuilderInfo _i = BuilderInfo('BigQueryAcl_Entry')
     ..aOS(1, 'role')
     ..aOS(2, 'groupEmail')
     ..aOS(3, 'userEmail')
@@ -1408,14 +1399,14 @@ class BigQueryAcl_Entry extends GeneratedMessage {
   BigQueryAcl_Entry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BigQueryAcl_Entry clone() => new BigQueryAcl_Entry()..mergeFromMessage(this);
+  BigQueryAcl_Entry clone() => BigQueryAcl_Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BigQueryAcl_Entry create() => new BigQueryAcl_Entry();
+  static BigQueryAcl_Entry create() => BigQueryAcl_Entry();
   static PbList<BigQueryAcl_Entry> createRepeated() =>
-      new PbList<BigQueryAcl_Entry>();
+      PbList<BigQueryAcl_Entry>();
   static BigQueryAcl_Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBigQueryAcl_Entry();
+      _defaultInstance = _ReadonlyBigQueryAcl_Entry();
     return _defaultInstance;
   }
 
@@ -1477,7 +1468,7 @@ class _ReadonlyBigQueryAcl_Entry extends BigQueryAcl_Entry
     with ReadonlyMessageMixin {}
 
 class BigQueryAcl extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BigQueryAcl')
+  static final BuilderInfo _i = BuilderInfo('BigQueryAcl')
     ..pp<BigQueryAcl_Entry>(1, 'entries', PbFieldType.PM,
         BigQueryAcl_Entry.$checkItem, BigQueryAcl_Entry.create)
     ..hasRequiredFields = false;
@@ -1489,12 +1480,12 @@ class BigQueryAcl extends GeneratedMessage {
   BigQueryAcl.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BigQueryAcl clone() => new BigQueryAcl()..mergeFromMessage(this);
+  BigQueryAcl clone() => BigQueryAcl()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BigQueryAcl create() => new BigQueryAcl();
-  static PbList<BigQueryAcl> createRepeated() => new PbList<BigQueryAcl>();
+  static BigQueryAcl create() => BigQueryAcl();
+  static PbList<BigQueryAcl> createRepeated() => PbList<BigQueryAcl>();
   static BigQueryAcl getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBigQueryAcl();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBigQueryAcl();
     return _defaultInstance;
   }
 
@@ -1509,7 +1500,7 @@ class BigQueryAcl extends GeneratedMessage {
 class _ReadonlyBigQueryAcl extends BigQueryAcl with ReadonlyMessageMixin {}
 
 class Job extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Job')
+  static final BuilderInfo _i = BuilderInfo('Job')
     ..a<JobName>(
         1, 'jobName', PbFieldType.OM, JobName.getDefault, JobName.create)
     ..a<JobConfiguration>(2, 'jobConfiguration', PbFieldType.OM,
@@ -1525,12 +1516,12 @@ class Job extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Job.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Job clone() => new Job()..mergeFromMessage(this);
+  Job clone() => Job()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Job create() => new Job();
-  static PbList<Job> createRepeated() => new PbList<Job>();
+  static Job create() => Job();
+  static PbList<Job> createRepeated() => PbList<Job>();
   static Job getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyJob();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyJob();
     return _defaultInstance;
   }
 
@@ -1575,7 +1566,7 @@ class Job extends GeneratedMessage {
 class _ReadonlyJob extends Job with ReadonlyMessageMixin {}
 
 class JobConfiguration_Query extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration_Query')
+  static final BuilderInfo _i = BuilderInfo('JobConfiguration_Query')
     ..aOS(1, 'query')
     ..a<TableName>(2, 'destinationTable', PbFieldType.OM, TableName.getDefault,
         TableName.create)
@@ -1595,14 +1586,14 @@ class JobConfiguration_Query extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobConfiguration_Query clone() =>
-      new JobConfiguration_Query()..mergeFromMessage(this);
+      JobConfiguration_Query()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobConfiguration_Query create() => new JobConfiguration_Query();
+  static JobConfiguration_Query create() => JobConfiguration_Query();
   static PbList<JobConfiguration_Query> createRepeated() =>
-      new PbList<JobConfiguration_Query>();
+      PbList<JobConfiguration_Query>();
   static JobConfiguration_Query getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration_Query();
+      _defaultInstance = _ReadonlyJobConfiguration_Query();
     return _defaultInstance;
   }
 
@@ -1659,7 +1650,7 @@ class _ReadonlyJobConfiguration_Query extends JobConfiguration_Query
     with ReadonlyMessageMixin {}
 
 class JobConfiguration_Load extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration_Load')
+  static final BuilderInfo _i = BuilderInfo('JobConfiguration_Load')
     ..pPS(1, 'sourceUris')
     ..a<TableName>(3, 'destinationTable', PbFieldType.OM, TableName.getDefault,
         TableName.create)
@@ -1676,14 +1667,14 @@ class JobConfiguration_Load extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobConfiguration_Load clone() =>
-      new JobConfiguration_Load()..mergeFromMessage(this);
+      JobConfiguration_Load()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobConfiguration_Load create() => new JobConfiguration_Load();
+  static JobConfiguration_Load create() => JobConfiguration_Load();
   static PbList<JobConfiguration_Load> createRepeated() =>
-      new PbList<JobConfiguration_Load>();
+      PbList<JobConfiguration_Load>();
   static JobConfiguration_Load getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration_Load();
+      _defaultInstance = _ReadonlyJobConfiguration_Load();
     return _defaultInstance;
   }
 
@@ -1732,7 +1723,7 @@ class _ReadonlyJobConfiguration_Load extends JobConfiguration_Load
     with ReadonlyMessageMixin {}
 
 class JobConfiguration_Extract extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration_Extract')
+  static final BuilderInfo _i = BuilderInfo('JobConfiguration_Extract')
     ..pPS(1, 'destinationUris')
     ..a<TableName>(2, 'sourceTable', PbFieldType.OM, TableName.getDefault,
         TableName.create)
@@ -1746,14 +1737,14 @@ class JobConfiguration_Extract extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobConfiguration_Extract clone() =>
-      new JobConfiguration_Extract()..mergeFromMessage(this);
+      JobConfiguration_Extract()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobConfiguration_Extract create() => new JobConfiguration_Extract();
+  static JobConfiguration_Extract create() => JobConfiguration_Extract();
   static PbList<JobConfiguration_Extract> createRepeated() =>
-      new PbList<JobConfiguration_Extract>();
+      PbList<JobConfiguration_Extract>();
   static JobConfiguration_Extract getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration_Extract();
+      _defaultInstance = _ReadonlyJobConfiguration_Extract();
     return _defaultInstance;
   }
 
@@ -1778,7 +1769,7 @@ class _ReadonlyJobConfiguration_Extract extends JobConfiguration_Extract
     with ReadonlyMessageMixin {}
 
 class JobConfiguration_TableCopy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration_TableCopy')
+  static final BuilderInfo _i = BuilderInfo('JobConfiguration_TableCopy')
     ..pp<TableName>(1, 'sourceTables', PbFieldType.PM, TableName.$checkItem,
         TableName.create)
     ..a<TableName>(2, 'destinationTable', PbFieldType.OM, TableName.getDefault,
@@ -1795,15 +1786,14 @@ class JobConfiguration_TableCopy extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   JobConfiguration_TableCopy clone() =>
-      new JobConfiguration_TableCopy()..mergeFromMessage(this);
+      JobConfiguration_TableCopy()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobConfiguration_TableCopy create() =>
-      new JobConfiguration_TableCopy();
+  static JobConfiguration_TableCopy create() => JobConfiguration_TableCopy();
   static PbList<JobConfiguration_TableCopy> createRepeated() =>
-      new PbList<JobConfiguration_TableCopy>();
+      PbList<JobConfiguration_TableCopy>();
   static JobConfiguration_TableCopy getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration_TableCopy();
+      _defaultInstance = _ReadonlyJobConfiguration_TableCopy();
     return _defaultInstance;
   }
 
@@ -1844,7 +1834,7 @@ class _ReadonlyJobConfiguration_TableCopy extends JobConfiguration_TableCopy
     with ReadonlyMessageMixin {}
 
 class JobConfiguration extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobConfiguration')
+  static final BuilderInfo _i = BuilderInfo('JobConfiguration')
     ..a<JobConfiguration_Query>(5, 'query', PbFieldType.OM,
         JobConfiguration_Query.getDefault, JobConfiguration_Query.create)
     ..a<JobConfiguration_Load>(6, 'load', PbFieldType.OM,
@@ -1867,14 +1857,14 @@ class JobConfiguration extends GeneratedMessage {
   JobConfiguration.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobConfiguration clone() => new JobConfiguration()..mergeFromMessage(this);
+  JobConfiguration clone() => JobConfiguration()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobConfiguration create() => new JobConfiguration();
+  static JobConfiguration create() => JobConfiguration();
   static PbList<JobConfiguration> createRepeated() =>
-      new PbList<JobConfiguration>();
+      PbList<JobConfiguration>();
   static JobConfiguration getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobConfiguration();
+      _defaultInstance = _ReadonlyJobConfiguration();
     return _defaultInstance;
   }
 
@@ -1928,7 +1918,7 @@ class _ReadonlyJobConfiguration extends JobConfiguration
     with ReadonlyMessageMixin {}
 
 class TableDefinition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableDefinition')
+  static final BuilderInfo _i = BuilderInfo('TableDefinition')
     ..aOS(1, 'name')
     ..pPS(2, 'sourceUris')
     ..hasRequiredFields = false;
@@ -1940,14 +1930,12 @@ class TableDefinition extends GeneratedMessage {
   TableDefinition.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableDefinition clone() => new TableDefinition()..mergeFromMessage(this);
+  TableDefinition clone() => TableDefinition()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableDefinition create() => new TableDefinition();
-  static PbList<TableDefinition> createRepeated() =>
-      new PbList<TableDefinition>();
+  static TableDefinition create() => TableDefinition();
+  static PbList<TableDefinition> createRepeated() => PbList<TableDefinition>();
   static TableDefinition getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTableDefinition();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTableDefinition();
     return _defaultInstance;
   }
 
@@ -1971,7 +1959,7 @@ class _ReadonlyTableDefinition extends TableDefinition
     with ReadonlyMessageMixin {}
 
 class JobStatus extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobStatus')
+  static final BuilderInfo _i = BuilderInfo('JobStatus')
     ..aOS(1, 'state')
     ..a<$google$rpc.Status>(2, 'error', PbFieldType.OM,
         $google$rpc.Status.getDefault, $google$rpc.Status.create)
@@ -1983,12 +1971,12 @@ class JobStatus extends GeneratedMessage {
       : super.fromBuffer(i, r);
   JobStatus.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobStatus clone() => new JobStatus()..mergeFromMessage(this);
+  JobStatus clone() => JobStatus()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobStatus create() => new JobStatus();
-  static PbList<JobStatus> createRepeated() => new PbList<JobStatus>();
+  static JobStatus create() => JobStatus();
+  static PbList<JobStatus> createRepeated() => PbList<JobStatus>();
   static JobStatus getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyJobStatus();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyJobStatus();
     return _defaultInstance;
   }
 
@@ -2017,7 +2005,7 @@ class JobStatus extends GeneratedMessage {
 class _ReadonlyJobStatus extends JobStatus with ReadonlyMessageMixin {}
 
 class JobStatistics extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobStatistics')
+  static final BuilderInfo _i = BuilderInfo('JobStatistics')
     ..a<$google$protobuf.Timestamp>(
         1,
         'createTime',
@@ -2048,13 +2036,12 @@ class JobStatistics extends GeneratedMessage {
   JobStatistics.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobStatistics clone() => new JobStatistics()..mergeFromMessage(this);
+  JobStatistics clone() => JobStatistics()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobStatistics create() => new JobStatistics();
-  static PbList<JobStatistics> createRepeated() => new PbList<JobStatistics>();
+  static JobStatistics create() => JobStatistics();
+  static PbList<JobStatistics> createRepeated() => PbList<JobStatistics>();
   static JobStatistics getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyJobStatistics();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyJobStatistics();
     return _defaultInstance;
   }
 
@@ -2115,7 +2102,7 @@ class JobStatistics extends GeneratedMessage {
 class _ReadonlyJobStatistics extends JobStatistics with ReadonlyMessageMixin {}
 
 class DatasetName extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatasetName')
+  static final BuilderInfo _i = BuilderInfo('DatasetName')
     ..aOS(1, 'projectId')
     ..aOS(2, 'datasetId')
     ..hasRequiredFields = false;
@@ -2127,12 +2114,12 @@ class DatasetName extends GeneratedMessage {
   DatasetName.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DatasetName clone() => new DatasetName()..mergeFromMessage(this);
+  DatasetName clone() => DatasetName()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatasetName create() => new DatasetName();
-  static PbList<DatasetName> createRepeated() => new PbList<DatasetName>();
+  static DatasetName create() => DatasetName();
+  static PbList<DatasetName> createRepeated() => PbList<DatasetName>();
   static DatasetName getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDatasetName();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDatasetName();
     return _defaultInstance;
   }
 
@@ -2161,7 +2148,7 @@ class DatasetName extends GeneratedMessage {
 class _ReadonlyDatasetName extends DatasetName with ReadonlyMessageMixin {}
 
 class TableName extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TableName')
+  static final BuilderInfo _i = BuilderInfo('TableName')
     ..aOS(1, 'projectId')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'tableId')
@@ -2173,12 +2160,12 @@ class TableName extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TableName.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TableName clone() => new TableName()..mergeFromMessage(this);
+  TableName clone() => TableName()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TableName create() => new TableName();
-  static PbList<TableName> createRepeated() => new PbList<TableName>();
+  static TableName create() => TableName();
+  static PbList<TableName> createRepeated() => PbList<TableName>();
   static TableName getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTableName();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTableName();
     return _defaultInstance;
   }
 
@@ -2215,7 +2202,7 @@ class TableName extends GeneratedMessage {
 class _ReadonlyTableName extends TableName with ReadonlyMessageMixin {}
 
 class JobName extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('JobName')
+  static final BuilderInfo _i = BuilderInfo('JobName')
     ..aOS(1, 'projectId')
     ..aOS(2, 'jobId')
     ..hasRequiredFields = false;
@@ -2226,12 +2213,12 @@ class JobName extends GeneratedMessage {
       : super.fromBuffer(i, r);
   JobName.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  JobName clone() => new JobName()..mergeFromMessage(this);
+  JobName clone() => JobName()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static JobName create() => new JobName();
-  static PbList<JobName> createRepeated() => new PbList<JobName>();
+  static JobName create() => JobName();
+  static PbList<JobName> createRepeated() => PbList<JobName>();
   static JobName getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyJobName();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyJobName();
     return _defaultInstance;
   }
 

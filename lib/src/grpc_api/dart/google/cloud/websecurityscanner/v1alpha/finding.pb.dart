@@ -15,7 +15,7 @@ import 'finding.pbenum.dart';
 export 'finding.pbenum.dart';
 
 class Finding extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Finding')
+  static final BuilderInfo _i = BuilderInfo('Finding')
     ..aOS(1, 'name')
     ..e<Finding_FindingType>(
         2,
@@ -47,12 +47,12 @@ class Finding extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Finding.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Finding clone() => new Finding()..mergeFromMessage(this);
+  Finding clone() => Finding()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Finding create() => new Finding();
-  static PbList<Finding> createRepeated() => new PbList<Finding>();
+  static Finding create() => Finding();
+  static PbList<Finding> createRepeated() => PbList<Finding>();
   static Finding getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFinding();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFinding();
     return _defaultInstance;
   }
 

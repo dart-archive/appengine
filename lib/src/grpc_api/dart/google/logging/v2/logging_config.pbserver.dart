@@ -35,27 +35,27 @@ abstract class ConfigServiceV2ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListSinks':
-        return new ListSinksRequest();
+        return ListSinksRequest();
       case 'GetSink':
-        return new GetSinkRequest();
+        return GetSinkRequest();
       case 'CreateSink':
-        return new CreateSinkRequest();
+        return CreateSinkRequest();
       case 'UpdateSink':
-        return new UpdateSinkRequest();
+        return UpdateSinkRequest();
       case 'DeleteSink':
-        return new DeleteSinkRequest();
+        return DeleteSinkRequest();
       case 'ListExclusions':
-        return new ListExclusionsRequest();
+        return ListExclusionsRequest();
       case 'GetExclusion':
-        return new GetExclusionRequest();
+        return GetExclusionRequest();
       case 'CreateExclusion':
-        return new CreateExclusionRequest();
+        return CreateExclusionRequest();
       case 'UpdateExclusion':
-        return new UpdateExclusionRequest();
+        return UpdateExclusionRequest();
       case 'DeleteExclusion':
-        return new DeleteExclusionRequest();
+        return DeleteExclusionRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -83,7 +83,7 @@ abstract class ConfigServiceV2ServiceBase extends GeneratedService {
       case 'DeleteExclusion':
         return this.deleteExclusion(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

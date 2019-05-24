@@ -19,7 +19,7 @@ import 'video_intelligence.pbenum.dart';
 export 'video_intelligence.pbenum.dart';
 
 class AnnotateVideoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateVideoRequest')
+  static final BuilderInfo _i = BuilderInfo('AnnotateVideoRequest')
     ..aOS(1, 'inputUri')
     ..pp<Feature>(2, 'features', PbFieldType.PE, Feature.$checkItem, null,
         Feature.valueOf, Feature.values)
@@ -38,14 +38,14 @@ class AnnotateVideoRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateVideoRequest clone() =>
-      new AnnotateVideoRequest()..mergeFromMessage(this);
+      AnnotateVideoRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotateVideoRequest create() => new AnnotateVideoRequest();
+  static AnnotateVideoRequest create() => AnnotateVideoRequest();
   static PbList<AnnotateVideoRequest> createRepeated() =>
-      new PbList<AnnotateVideoRequest>();
+      PbList<AnnotateVideoRequest>();
   static AnnotateVideoRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateVideoRequest();
+      _defaultInstance = _ReadonlyAnnotateVideoRequest();
     return _defaultInstance;
   }
 
@@ -101,7 +101,7 @@ class _ReadonlyAnnotateVideoRequest extends AnnotateVideoRequest
     with ReadonlyMessageMixin {}
 
 class VideoContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VideoContext')
+  static final BuilderInfo _i = BuilderInfo('VideoContext')
     ..pp<VideoSegment>(1, 'segments', PbFieldType.PM, VideoSegment.$checkItem,
         VideoSegment.create)
     ..e<LabelDetectionMode>(
@@ -125,13 +125,12 @@ class VideoContext extends GeneratedMessage {
   VideoContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VideoContext clone() => new VideoContext()..mergeFromMessage(this);
+  VideoContext clone() => VideoContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VideoContext create() => new VideoContext();
-  static PbList<VideoContext> createRepeated() => new PbList<VideoContext>();
+  static VideoContext create() => VideoContext();
+  static PbList<VideoContext> createRepeated() => PbList<VideoContext>();
   static VideoContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVideoContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVideoContext();
     return _defaultInstance;
   }
 
@@ -194,7 +193,7 @@ class VideoContext extends GeneratedMessage {
 class _ReadonlyVideoContext extends VideoContext with ReadonlyMessageMixin {}
 
 class VideoSegment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VideoSegment')
+  static final BuilderInfo _i = BuilderInfo('VideoSegment')
     ..aInt64(1, 'startTimeOffset')
     ..aInt64(2, 'endTimeOffset')
     ..hasRequiredFields = false;
@@ -206,13 +205,12 @@ class VideoSegment extends GeneratedMessage {
   VideoSegment.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VideoSegment clone() => new VideoSegment()..mergeFromMessage(this);
+  VideoSegment clone() => VideoSegment()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VideoSegment create() => new VideoSegment();
-  static PbList<VideoSegment> createRepeated() => new PbList<VideoSegment>();
+  static VideoSegment create() => VideoSegment();
+  static PbList<VideoSegment> createRepeated() => PbList<VideoSegment>();
   static VideoSegment getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVideoSegment();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVideoSegment();
     return _defaultInstance;
   }
 
@@ -241,7 +239,7 @@ class VideoSegment extends GeneratedMessage {
 class _ReadonlyVideoSegment extends VideoSegment with ReadonlyMessageMixin {}
 
 class LabelLocation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LabelLocation')
+  static final BuilderInfo _i = BuilderInfo('LabelLocation')
     ..a<VideoSegment>(1, 'segment', PbFieldType.OM, VideoSegment.getDefault,
         VideoSegment.create)
     ..a<double>(2, 'confidence', PbFieldType.OF)
@@ -261,13 +259,12 @@ class LabelLocation extends GeneratedMessage {
   LabelLocation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LabelLocation clone() => new LabelLocation()..mergeFromMessage(this);
+  LabelLocation clone() => LabelLocation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LabelLocation create() => new LabelLocation();
-  static PbList<LabelLocation> createRepeated() => new PbList<LabelLocation>();
+  static LabelLocation create() => LabelLocation();
+  static PbList<LabelLocation> createRepeated() => PbList<LabelLocation>();
   static LabelLocation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLabelLocation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLabelLocation();
     return _defaultInstance;
   }
 
@@ -304,7 +301,7 @@ class LabelLocation extends GeneratedMessage {
 class _ReadonlyLabelLocation extends LabelLocation with ReadonlyMessageMixin {}
 
 class LabelAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LabelAnnotation')
+  static final BuilderInfo _i = BuilderInfo('LabelAnnotation')
     ..aOS(1, 'description')
     ..aOS(2, 'languageCode')
     ..pp<LabelLocation>(3, 'locations', PbFieldType.PM,
@@ -318,14 +315,12 @@ class LabelAnnotation extends GeneratedMessage {
   LabelAnnotation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LabelAnnotation clone() => new LabelAnnotation()..mergeFromMessage(this);
+  LabelAnnotation clone() => LabelAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LabelAnnotation create() => new LabelAnnotation();
-  static PbList<LabelAnnotation> createRepeated() =>
-      new PbList<LabelAnnotation>();
+  static LabelAnnotation create() => LabelAnnotation();
+  static PbList<LabelAnnotation> createRepeated() => PbList<LabelAnnotation>();
   static LabelAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLabelAnnotation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLabelAnnotation();
     return _defaultInstance;
   }
 
@@ -357,7 +352,7 @@ class _ReadonlyLabelAnnotation extends LabelAnnotation
     with ReadonlyMessageMixin {}
 
 class SafeSearchAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SafeSearchAnnotation')
+  static final BuilderInfo _i = BuilderInfo('SafeSearchAnnotation')
     ..e<Likelihood>(1, 'adult', PbFieldType.OE, Likelihood.UNKNOWN,
         Likelihood.valueOf, Likelihood.values)
     ..e<Likelihood>(2, 'spoof', PbFieldType.OE, Likelihood.UNKNOWN,
@@ -379,14 +374,14 @@ class SafeSearchAnnotation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SafeSearchAnnotation clone() =>
-      new SafeSearchAnnotation()..mergeFromMessage(this);
+      SafeSearchAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SafeSearchAnnotation create() => new SafeSearchAnnotation();
+  static SafeSearchAnnotation create() => SafeSearchAnnotation();
   static PbList<SafeSearchAnnotation> createRepeated() =>
-      new PbList<SafeSearchAnnotation>();
+      PbList<SafeSearchAnnotation>();
   static SafeSearchAnnotation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySafeSearchAnnotation();
+      _defaultInstance = _ReadonlySafeSearchAnnotation();
     return _defaultInstance;
   }
 
@@ -448,7 +443,7 @@ class _ReadonlySafeSearchAnnotation extends SafeSearchAnnotation
     with ReadonlyMessageMixin {}
 
 class BoundingBox extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BoundingBox')
+  static final BuilderInfo _i = BuilderInfo('BoundingBox')
     ..a<int>(1, 'left', PbFieldType.O3)
     ..a<int>(2, 'right', PbFieldType.O3)
     ..a<int>(3, 'bottom', PbFieldType.O3)
@@ -462,12 +457,12 @@ class BoundingBox extends GeneratedMessage {
   BoundingBox.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BoundingBox clone() => new BoundingBox()..mergeFromMessage(this);
+  BoundingBox clone() => BoundingBox()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BoundingBox create() => new BoundingBox();
-  static PbList<BoundingBox> createRepeated() => new PbList<BoundingBox>();
+  static BoundingBox create() => BoundingBox();
+  static PbList<BoundingBox> createRepeated() => PbList<BoundingBox>();
   static BoundingBox getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBoundingBox();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBoundingBox();
     return _defaultInstance;
   }
 
@@ -512,7 +507,7 @@ class BoundingBox extends GeneratedMessage {
 class _ReadonlyBoundingBox extends BoundingBox with ReadonlyMessageMixin {}
 
 class FaceLocation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceLocation')
+  static final BuilderInfo _i = BuilderInfo('FaceLocation')
     ..a<BoundingBox>(1, 'boundingBox', PbFieldType.OM, BoundingBox.getDefault,
         BoundingBox.create)
     ..aInt64(2, 'timeOffset')
@@ -525,13 +520,12 @@ class FaceLocation extends GeneratedMessage {
   FaceLocation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FaceLocation clone() => new FaceLocation()..mergeFromMessage(this);
+  FaceLocation clone() => FaceLocation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FaceLocation create() => new FaceLocation();
-  static PbList<FaceLocation> createRepeated() => new PbList<FaceLocation>();
+  static FaceLocation create() => FaceLocation();
+  static PbList<FaceLocation> createRepeated() => PbList<FaceLocation>();
   static FaceLocation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFaceLocation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFaceLocation();
     return _defaultInstance;
   }
 
@@ -560,7 +554,7 @@ class FaceLocation extends GeneratedMessage {
 class _ReadonlyFaceLocation extends FaceLocation with ReadonlyMessageMixin {}
 
 class FaceAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceAnnotation')
+  static final BuilderInfo _i = BuilderInfo('FaceAnnotation')
     ..aOS(1, 'thumbnail')
     ..pp<VideoSegment>(2, 'segments', PbFieldType.PM, VideoSegment.$checkItem,
         VideoSegment.create)
@@ -575,14 +569,12 @@ class FaceAnnotation extends GeneratedMessage {
   FaceAnnotation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FaceAnnotation clone() => new FaceAnnotation()..mergeFromMessage(this);
+  FaceAnnotation clone() => FaceAnnotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FaceAnnotation create() => new FaceAnnotation();
-  static PbList<FaceAnnotation> createRepeated() =>
-      new PbList<FaceAnnotation>();
+  static FaceAnnotation create() => FaceAnnotation();
+  static PbList<FaceAnnotation> createRepeated() => PbList<FaceAnnotation>();
   static FaceAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFaceAnnotation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFaceAnnotation();
     return _defaultInstance;
   }
 
@@ -608,7 +600,7 @@ class _ReadonlyFaceAnnotation extends FaceAnnotation with ReadonlyMessageMixin {
 }
 
 class VideoAnnotationResults extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VideoAnnotationResults')
+  static final BuilderInfo _i = BuilderInfo('VideoAnnotationResults')
     ..aOS(1, 'inputUri')
     ..pp<LabelAnnotation>(2, 'labelAnnotations', PbFieldType.PM,
         LabelAnnotation.$checkItem, LabelAnnotation.create)
@@ -630,14 +622,14 @@ class VideoAnnotationResults extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VideoAnnotationResults clone() =>
-      new VideoAnnotationResults()..mergeFromMessage(this);
+      VideoAnnotationResults()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VideoAnnotationResults create() => new VideoAnnotationResults();
+  static VideoAnnotationResults create() => VideoAnnotationResults();
   static PbList<VideoAnnotationResults> createRepeated() =>
-      new PbList<VideoAnnotationResults>();
+      PbList<VideoAnnotationResults>();
   static VideoAnnotationResults getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVideoAnnotationResults();
+      _defaultInstance = _ReadonlyVideoAnnotationResults();
     return _defaultInstance;
   }
 
@@ -676,7 +668,7 @@ class _ReadonlyVideoAnnotationResults extends VideoAnnotationResults
     with ReadonlyMessageMixin {}
 
 class AnnotateVideoResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateVideoResponse')
+  static final BuilderInfo _i = BuilderInfo('AnnotateVideoResponse')
     ..pp<VideoAnnotationResults>(1, 'annotationResults', PbFieldType.PM,
         VideoAnnotationResults.$checkItem, VideoAnnotationResults.create)
     ..hasRequiredFields = false;
@@ -689,14 +681,14 @@ class AnnotateVideoResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateVideoResponse clone() =>
-      new AnnotateVideoResponse()..mergeFromMessage(this);
+      AnnotateVideoResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotateVideoResponse create() => new AnnotateVideoResponse();
+  static AnnotateVideoResponse create() => AnnotateVideoResponse();
   static PbList<AnnotateVideoResponse> createRepeated() =>
-      new PbList<AnnotateVideoResponse>();
+      PbList<AnnotateVideoResponse>();
   static AnnotateVideoResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateVideoResponse();
+      _defaultInstance = _ReadonlyAnnotateVideoResponse();
     return _defaultInstance;
   }
 
@@ -713,7 +705,7 @@ class _ReadonlyAnnotateVideoResponse extends AnnotateVideoResponse
     with ReadonlyMessageMixin {}
 
 class VideoAnnotationProgress extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VideoAnnotationProgress')
+  static final BuilderInfo _i = BuilderInfo('VideoAnnotationProgress')
     ..aOS(1, 'inputUri')
     ..a<int>(2, 'progressPercent', PbFieldType.O3)
     ..a<$google$protobuf.Timestamp>(
@@ -738,14 +730,14 @@ class VideoAnnotationProgress extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VideoAnnotationProgress clone() =>
-      new VideoAnnotationProgress()..mergeFromMessage(this);
+      VideoAnnotationProgress()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VideoAnnotationProgress create() => new VideoAnnotationProgress();
+  static VideoAnnotationProgress create() => VideoAnnotationProgress();
   static PbList<VideoAnnotationProgress> createRepeated() =>
-      new PbList<VideoAnnotationProgress>();
+      PbList<VideoAnnotationProgress>();
   static VideoAnnotationProgress getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVideoAnnotationProgress();
+      _defaultInstance = _ReadonlyVideoAnnotationProgress();
     return _defaultInstance;
   }
 
@@ -792,7 +784,7 @@ class _ReadonlyVideoAnnotationProgress extends VideoAnnotationProgress
     with ReadonlyMessageMixin {}
 
 class AnnotateVideoProgress extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateVideoProgress')
+  static final BuilderInfo _i = BuilderInfo('AnnotateVideoProgress')
     ..pp<VideoAnnotationProgress>(1, 'annotationProgress', PbFieldType.PM,
         VideoAnnotationProgress.$checkItem, VideoAnnotationProgress.create)
     ..hasRequiredFields = false;
@@ -805,14 +797,14 @@ class AnnotateVideoProgress extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateVideoProgress clone() =>
-      new AnnotateVideoProgress()..mergeFromMessage(this);
+      AnnotateVideoProgress()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AnnotateVideoProgress create() => new AnnotateVideoProgress();
+  static AnnotateVideoProgress create() => AnnotateVideoProgress();
   static PbList<AnnotateVideoProgress> createRepeated() =>
-      new PbList<AnnotateVideoProgress>();
+      PbList<AnnotateVideoProgress>();
   static AnnotateVideoProgress getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateVideoProgress();
+      _defaultInstance = _ReadonlyAnnotateVideoProgress();
     return _defaultInstance;
   }
 
@@ -834,7 +826,7 @@ class VideoIntelligenceServiceApi {
 
   Future<$google$longrunning.Operation> annotateVideo(
       ClientContext ctx, AnnotateVideoRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(ctx,
         'VideoIntelligenceService', 'AnnotateVideo', request, emptyResponse);
   }

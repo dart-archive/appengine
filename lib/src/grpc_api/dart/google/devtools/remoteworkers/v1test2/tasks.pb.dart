@@ -14,7 +14,7 @@ import '../../../rpc/status.pb.dart' as $google$rpc;
 import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
 
 class Task_LogsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Task_LogsEntry')
+  static final BuilderInfo _i = BuilderInfo('Task_LogsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -26,14 +26,12 @@ class Task_LogsEntry extends GeneratedMessage {
   Task_LogsEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Task_LogsEntry clone() => new Task_LogsEntry()..mergeFromMessage(this);
+  Task_LogsEntry clone() => Task_LogsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Task_LogsEntry create() => new Task_LogsEntry();
-  static PbList<Task_LogsEntry> createRepeated() =>
-      new PbList<Task_LogsEntry>();
+  static Task_LogsEntry create() => Task_LogsEntry();
+  static PbList<Task_LogsEntry> createRepeated() => PbList<Task_LogsEntry>();
   static Task_LogsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTask_LogsEntry();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTask_LogsEntry();
     return _defaultInstance;
   }
 
@@ -63,7 +61,7 @@ class _ReadonlyTask_LogsEntry extends Task_LogsEntry with ReadonlyMessageMixin {
 }
 
 class Task extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Task')
+  static final BuilderInfo _i = BuilderInfo('Task')
     ..aOS(1, 'name')
     ..a<$google$protobuf.Any>(2, 'description', PbFieldType.OM,
         $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
@@ -76,12 +74,12 @@ class Task extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Task.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Task clone() => new Task()..mergeFromMessage(this);
+  Task clone() => Task()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Task create() => new Task();
-  static PbList<Task> createRepeated() => new PbList<Task>();
+  static Task create() => Task();
+  static PbList<Task> createRepeated() => PbList<Task>();
   static Task getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTask();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTask();
     return _defaultInstance;
   }
 
@@ -112,7 +110,7 @@ class Task extends GeneratedMessage {
 class _ReadonlyTask extends Task with ReadonlyMessageMixin {}
 
 class TaskResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TaskResult')
+  static final BuilderInfo _i = BuilderInfo('TaskResult')
     ..aOS(1, 'name')
     ..aOB(2, 'complete')
     ..a<$google$rpc.Status>(3, 'status', PbFieldType.OM,
@@ -129,12 +127,12 @@ class TaskResult extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TaskResult.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TaskResult clone() => new TaskResult()..mergeFromMessage(this);
+  TaskResult clone() => TaskResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TaskResult create() => new TaskResult();
-  static PbList<TaskResult> createRepeated() => new PbList<TaskResult>();
+  static TaskResult create() => TaskResult();
+  static PbList<TaskResult> createRepeated() => PbList<TaskResult>();
   static TaskResult getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTaskResult();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTaskResult();
     return _defaultInstance;
   }
 
@@ -187,7 +185,7 @@ class TaskResult extends GeneratedMessage {
 class _ReadonlyTaskResult extends TaskResult with ReadonlyMessageMixin {}
 
 class GetTaskRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTaskRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTaskRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -198,14 +196,12 @@ class GetTaskRequest extends GeneratedMessage {
   GetTaskRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTaskRequest clone() => new GetTaskRequest()..mergeFromMessage(this);
+  GetTaskRequest clone() => GetTaskRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTaskRequest create() => new GetTaskRequest();
-  static PbList<GetTaskRequest> createRepeated() =>
-      new PbList<GetTaskRequest>();
+  static GetTaskRequest create() => GetTaskRequest();
+  static PbList<GetTaskRequest> createRepeated() => PbList<GetTaskRequest>();
   static GetTaskRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTaskRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetTaskRequest();
     return _defaultInstance;
   }
 
@@ -227,7 +223,7 @@ class _ReadonlyGetTaskRequest extends GetTaskRequest with ReadonlyMessageMixin {
 }
 
 class UpdateTaskResultRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateTaskResultRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateTaskResultRequest')
     ..aOS(1, 'name')
     ..a<TaskResult>(
         2, 'result', PbFieldType.OM, TaskResult.getDefault, TaskResult.create)
@@ -248,14 +244,14 @@ class UpdateTaskResultRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateTaskResultRequest clone() =>
-      new UpdateTaskResultRequest()..mergeFromMessage(this);
+      UpdateTaskResultRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateTaskResultRequest create() => new UpdateTaskResultRequest();
+  static UpdateTaskResultRequest create() => UpdateTaskResultRequest();
   static PbList<UpdateTaskResultRequest> createRepeated() =>
-      new PbList<UpdateTaskResultRequest>();
+      PbList<UpdateTaskResultRequest>();
   static UpdateTaskResultRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateTaskResultRequest();
+      _defaultInstance = _ReadonlyUpdateTaskResultRequest();
     return _defaultInstance;
   }
 
@@ -302,7 +298,7 @@ class _ReadonlyUpdateTaskResultRequest extends UpdateTaskResultRequest
     with ReadonlyMessageMixin {}
 
 class AddTaskLogRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AddTaskLogRequest')
+  static final BuilderInfo _i = BuilderInfo('AddTaskLogRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'logId')
     ..hasRequiredFields = false;
@@ -314,14 +310,14 @@ class AddTaskLogRequest extends GeneratedMessage {
   AddTaskLogRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AddTaskLogRequest clone() => new AddTaskLogRequest()..mergeFromMessage(this);
+  AddTaskLogRequest clone() => AddTaskLogRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AddTaskLogRequest create() => new AddTaskLogRequest();
+  static AddTaskLogRequest create() => AddTaskLogRequest();
   static PbList<AddTaskLogRequest> createRepeated() =>
-      new PbList<AddTaskLogRequest>();
+      PbList<AddTaskLogRequest>();
   static AddTaskLogRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAddTaskLogRequest();
+      _defaultInstance = _ReadonlyAddTaskLogRequest();
     return _defaultInstance;
   }
 
@@ -351,7 +347,7 @@ class _ReadonlyAddTaskLogRequest extends AddTaskLogRequest
     with ReadonlyMessageMixin {}
 
 class AddTaskLogResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AddTaskLogResponse')
+  static final BuilderInfo _i = BuilderInfo('AddTaskLogResponse')
     ..aOS(1, 'handle')
     ..hasRequiredFields = false;
 
@@ -362,15 +358,14 @@ class AddTaskLogResponse extends GeneratedMessage {
   AddTaskLogResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AddTaskLogResponse clone() =>
-      new AddTaskLogResponse()..mergeFromMessage(this);
+  AddTaskLogResponse clone() => AddTaskLogResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AddTaskLogResponse create() => new AddTaskLogResponse();
+  static AddTaskLogResponse create() => AddTaskLogResponse();
   static PbList<AddTaskLogResponse> createRepeated() =>
-      new PbList<AddTaskLogResponse>();
+      PbList<AddTaskLogResponse>();
   static AddTaskLogResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAddTaskLogResponse();
+      _defaultInstance = _ReadonlyAddTaskLogResponse();
     return _defaultInstance;
   }
 
@@ -396,21 +391,21 @@ class TasksApi {
   TasksApi(this._client);
 
   Future<Task> getTask(ClientContext ctx, GetTaskRequest request) {
-    var emptyResponse = new Task();
+    var emptyResponse = Task();
     return _client.invoke<Task>(
         ctx, 'Tasks', 'GetTask', request, emptyResponse);
   }
 
   Future<TaskResult> updateTaskResult(
       ClientContext ctx, UpdateTaskResultRequest request) {
-    var emptyResponse = new TaskResult();
+    var emptyResponse = TaskResult();
     return _client.invoke<TaskResult>(
         ctx, 'Tasks', 'UpdateTaskResult', request, emptyResponse);
   }
 
   Future<AddTaskLogResponse> addTaskLog(
       ClientContext ctx, AddTaskLogRequest request) {
-    var emptyResponse = new AddTaskLogResponse();
+    var emptyResponse = AddTaskLogResponse();
     return _client.invoke<AddTaskLogResponse>(
         ctx, 'Tasks', 'AddTaskLog', request, emptyResponse);
   }

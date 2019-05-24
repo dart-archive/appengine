@@ -30,21 +30,21 @@ abstract class IntentsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListIntents':
-        return new ListIntentsRequest();
+        return ListIntentsRequest();
       case 'GetIntent':
-        return new GetIntentRequest();
+        return GetIntentRequest();
       case 'CreateIntent':
-        return new CreateIntentRequest();
+        return CreateIntentRequest();
       case 'UpdateIntent':
-        return new UpdateIntentRequest();
+        return UpdateIntentRequest();
       case 'DeleteIntent':
-        return new DeleteIntentRequest();
+        return DeleteIntentRequest();
       case 'BatchUpdateIntents':
-        return new BatchUpdateIntentsRequest();
+        return BatchUpdateIntentsRequest();
       case 'BatchDeleteIntents':
-        return new BatchDeleteIntentsRequest();
+        return BatchDeleteIntentsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -66,7 +66,7 @@ abstract class IntentsServiceBase extends GeneratedService {
       case 'BatchDeleteIntents':
         return this.batchDeleteIntents(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -28,17 +28,17 @@ abstract class LoggingServiceV2ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'DeleteLog':
-        return new DeleteLogRequest();
+        return DeleteLogRequest();
       case 'WriteLogEntries':
-        return new WriteLogEntriesRequest();
+        return WriteLogEntriesRequest();
       case 'ListLogEntries':
-        return new ListLogEntriesRequest();
+        return ListLogEntriesRequest();
       case 'ListMonitoredResourceDescriptors':
-        return new ListMonitoredResourceDescriptorsRequest();
+        return ListMonitoredResourceDescriptorsRequest();
       case 'ListLogs':
-        return new ListLogsRequest();
+        return ListLogsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -56,7 +56,7 @@ abstract class LoggingServiceV2ServiceBase extends GeneratedService {
       case 'ListLogs':
         return this.listLogs(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

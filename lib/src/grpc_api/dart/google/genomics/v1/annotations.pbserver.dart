@@ -40,29 +40,29 @@ abstract class AnnotationServiceV1ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateAnnotationSet':
-        return new CreateAnnotationSetRequest();
+        return CreateAnnotationSetRequest();
       case 'GetAnnotationSet':
-        return new GetAnnotationSetRequest();
+        return GetAnnotationSetRequest();
       case 'UpdateAnnotationSet':
-        return new UpdateAnnotationSetRequest();
+        return UpdateAnnotationSetRequest();
       case 'DeleteAnnotationSet':
-        return new DeleteAnnotationSetRequest();
+        return DeleteAnnotationSetRequest();
       case 'SearchAnnotationSets':
-        return new SearchAnnotationSetsRequest();
+        return SearchAnnotationSetsRequest();
       case 'CreateAnnotation':
-        return new CreateAnnotationRequest();
+        return CreateAnnotationRequest();
       case 'BatchCreateAnnotations':
-        return new BatchCreateAnnotationsRequest();
+        return BatchCreateAnnotationsRequest();
       case 'GetAnnotation':
-        return new GetAnnotationRequest();
+        return GetAnnotationRequest();
       case 'UpdateAnnotation':
-        return new UpdateAnnotationRequest();
+        return UpdateAnnotationRequest();
       case 'DeleteAnnotation':
-        return new DeleteAnnotationRequest();
+        return DeleteAnnotationRequest();
       case 'SearchAnnotations':
-        return new SearchAnnotationsRequest();
+        return SearchAnnotationsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -92,7 +92,7 @@ abstract class AnnotationServiceV1ServiceBase extends GeneratedService {
       case 'SearchAnnotations':
         return this.searchAnnotations(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

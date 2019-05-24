@@ -19,11 +19,11 @@ abstract class ServiceControllerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'Check':
-        return new CheckRequest();
+        return CheckRequest();
       case 'Report':
-        return new ReportRequest();
+        return ReportRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -35,7 +35,7 @@ abstract class ServiceControllerServiceBase extends GeneratedService {
       case 'Report':
         return this.report(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

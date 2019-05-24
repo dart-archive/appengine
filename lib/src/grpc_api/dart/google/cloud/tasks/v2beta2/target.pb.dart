@@ -13,7 +13,7 @@ import 'target.pbenum.dart';
 export 'target.pbenum.dart';
 
 class PullTarget extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PullTarget')
+  static final BuilderInfo _i = BuilderInfo('PullTarget')
     ..hasRequiredFields = false;
 
   PullTarget() : super();
@@ -22,12 +22,12 @@ class PullTarget extends GeneratedMessage {
       : super.fromBuffer(i, r);
   PullTarget.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PullTarget clone() => new PullTarget()..mergeFromMessage(this);
+  PullTarget clone() => PullTarget()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PullTarget create() => new PullTarget();
-  static PbList<PullTarget> createRepeated() => new PbList<PullTarget>();
+  static PullTarget create() => PullTarget();
+  static PbList<PullTarget> createRepeated() => PbList<PullTarget>();
   static PullTarget getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPullTarget();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPullTarget();
     return _defaultInstance;
   }
 
@@ -40,7 +40,7 @@ class PullTarget extends GeneratedMessage {
 class _ReadonlyPullTarget extends PullTarget with ReadonlyMessageMixin {}
 
 class PullMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PullMessage')
+  static final BuilderInfo _i = BuilderInfo('PullMessage')
     ..a<List<int>>(1, 'payload', PbFieldType.OY)
     ..aOS(2, 'tag')
     ..hasRequiredFields = false;
@@ -52,12 +52,12 @@ class PullMessage extends GeneratedMessage {
   PullMessage.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PullMessage clone() => new PullMessage()..mergeFromMessage(this);
+  PullMessage clone() => PullMessage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PullMessage create() => new PullMessage();
-  static PbList<PullMessage> createRepeated() => new PbList<PullMessage>();
+  static PullMessage create() => PullMessage();
+  static PbList<PullMessage> createRepeated() => PbList<PullMessage>();
   static PullMessage getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPullMessage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPullMessage();
     return _defaultInstance;
   }
 
@@ -86,7 +86,7 @@ class PullMessage extends GeneratedMessage {
 class _ReadonlyPullMessage extends PullMessage with ReadonlyMessageMixin {}
 
 class AppEngineHttpTarget extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AppEngineHttpTarget')
+  static final BuilderInfo _i = BuilderInfo('AppEngineHttpTarget')
     ..a<AppEngineRouting>(1, 'appEngineRoutingOverride', PbFieldType.OM,
         AppEngineRouting.getDefault, AppEngineRouting.create)
     ..hasRequiredFields = false;
@@ -98,15 +98,14 @@ class AppEngineHttpTarget extends GeneratedMessage {
   AppEngineHttpTarget.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AppEngineHttpTarget clone() =>
-      new AppEngineHttpTarget()..mergeFromMessage(this);
+  AppEngineHttpTarget clone() => AppEngineHttpTarget()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AppEngineHttpTarget create() => new AppEngineHttpTarget();
+  static AppEngineHttpTarget create() => AppEngineHttpTarget();
   static PbList<AppEngineHttpTarget> createRepeated() =>
-      new PbList<AppEngineHttpTarget>();
+      PbList<AppEngineHttpTarget>();
   static AppEngineHttpTarget getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppEngineHttpTarget();
+      _defaultInstance = _ReadonlyAppEngineHttpTarget();
     return _defaultInstance;
   }
 
@@ -128,11 +127,10 @@ class _ReadonlyAppEngineHttpTarget extends AppEngineHttpTarget
     with ReadonlyMessageMixin {}
 
 class AppEngineHttpRequest_HeadersEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AppEngineHttpRequest_HeadersEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('AppEngineHttpRequest_HeadersEntry')
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
+    ..hasRequiredFields = false;
 
   AppEngineHttpRequest_HeadersEntry() : super();
   AppEngineHttpRequest_HeadersEntry.fromBuffer(List<int> i,
@@ -142,15 +140,15 @@ class AppEngineHttpRequest_HeadersEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AppEngineHttpRequest_HeadersEntry clone() =>
-      new AppEngineHttpRequest_HeadersEntry()..mergeFromMessage(this);
+      AppEngineHttpRequest_HeadersEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AppEngineHttpRequest_HeadersEntry create() =>
-      new AppEngineHttpRequest_HeadersEntry();
+      AppEngineHttpRequest_HeadersEntry();
   static PbList<AppEngineHttpRequest_HeadersEntry> createRepeated() =>
-      new PbList<AppEngineHttpRequest_HeadersEntry>();
+      PbList<AppEngineHttpRequest_HeadersEntry>();
   static AppEngineHttpRequest_HeadersEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppEngineHttpRequest_HeadersEntry();
+      _defaultInstance = _ReadonlyAppEngineHttpRequest_HeadersEntry();
     return _defaultInstance;
   }
 
@@ -181,7 +179,7 @@ class _ReadonlyAppEngineHttpRequest_HeadersEntry
     extends AppEngineHttpRequest_HeadersEntry with ReadonlyMessageMixin {}
 
 class AppEngineHttpRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AppEngineHttpRequest')
+  static final BuilderInfo _i = BuilderInfo('AppEngineHttpRequest')
     ..e<HttpMethod>(
         1,
         'httpMethod',
@@ -209,14 +207,14 @@ class AppEngineHttpRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AppEngineHttpRequest clone() =>
-      new AppEngineHttpRequest()..mergeFromMessage(this);
+      AppEngineHttpRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AppEngineHttpRequest create() => new AppEngineHttpRequest();
+  static AppEngineHttpRequest create() => AppEngineHttpRequest();
   static PbList<AppEngineHttpRequest> createRepeated() =>
-      new PbList<AppEngineHttpRequest>();
+      PbList<AppEngineHttpRequest>();
   static AppEngineHttpRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppEngineHttpRequest();
+      _defaultInstance = _ReadonlyAppEngineHttpRequest();
     return _defaultInstance;
   }
 
@@ -264,7 +262,7 @@ class _ReadonlyAppEngineHttpRequest extends AppEngineHttpRequest
     with ReadonlyMessageMixin {}
 
 class AppEngineRouting extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AppEngineRouting')
+  static final BuilderInfo _i = BuilderInfo('AppEngineRouting')
     ..aOS(1, 'service')
     ..aOS(2, 'version')
     ..aOS(3, 'instance')
@@ -278,14 +276,14 @@ class AppEngineRouting extends GeneratedMessage {
   AppEngineRouting.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AppEngineRouting clone() => new AppEngineRouting()..mergeFromMessage(this);
+  AppEngineRouting clone() => AppEngineRouting()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AppEngineRouting create() => new AppEngineRouting();
+  static AppEngineRouting create() => AppEngineRouting();
   static PbList<AppEngineRouting> createRepeated() =>
-      new PbList<AppEngineRouting>();
+      PbList<AppEngineRouting>();
   static AppEngineRouting getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppEngineRouting();
+      _defaultInstance = _ReadonlyAppEngineRouting();
     return _defaultInstance;
   }
 

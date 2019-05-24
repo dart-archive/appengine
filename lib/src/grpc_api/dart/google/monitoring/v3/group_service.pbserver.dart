@@ -28,19 +28,19 @@ abstract class GroupServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListGroups':
-        return new ListGroupsRequest();
+        return ListGroupsRequest();
       case 'GetGroup':
-        return new GetGroupRequest();
+        return GetGroupRequest();
       case 'CreateGroup':
-        return new CreateGroupRequest();
+        return CreateGroupRequest();
       case 'UpdateGroup':
-        return new UpdateGroupRequest();
+        return UpdateGroupRequest();
       case 'DeleteGroup':
-        return new DeleteGroupRequest();
+        return DeleteGroupRequest();
       case 'ListGroupMembers':
-        return new ListGroupMembersRequest();
+        return ListGroupMembersRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -60,7 +60,7 @@ abstract class GroupServiceBase extends GeneratedService {
       case 'ListGroupMembers':
         return this.listGroupMembers(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

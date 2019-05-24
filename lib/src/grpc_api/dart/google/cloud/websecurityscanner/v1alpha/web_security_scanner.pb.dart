@@ -18,7 +18,7 @@ import 'finding_type_stats.pb.dart';
 import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class CreateScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateScanConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateScanConfigRequest')
     ..aOS(1, 'parent')
     ..a<ScanConfig>(2, 'scanConfig', PbFieldType.OM, ScanConfig.getDefault,
         ScanConfig.create)
@@ -32,14 +32,14 @@ class CreateScanConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateScanConfigRequest clone() =>
-      new CreateScanConfigRequest()..mergeFromMessage(this);
+      CreateScanConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateScanConfigRequest create() => new CreateScanConfigRequest();
+  static CreateScanConfigRequest create() => CreateScanConfigRequest();
   static PbList<CreateScanConfigRequest> createRepeated() =>
-      new PbList<CreateScanConfigRequest>();
+      PbList<CreateScanConfigRequest>();
   static CreateScanConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateScanConfigRequest();
+      _defaultInstance = _ReadonlyCreateScanConfigRequest();
     return _defaultInstance;
   }
 
@@ -70,7 +70,7 @@ class _ReadonlyCreateScanConfigRequest extends CreateScanConfigRequest
     with ReadonlyMessageMixin {}
 
 class DeleteScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteScanConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteScanConfigRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -82,14 +82,14 @@ class DeleteScanConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteScanConfigRequest clone() =>
-      new DeleteScanConfigRequest()..mergeFromMessage(this);
+      DeleteScanConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteScanConfigRequest create() => new DeleteScanConfigRequest();
+  static DeleteScanConfigRequest create() => DeleteScanConfigRequest();
   static PbList<DeleteScanConfigRequest> createRepeated() =>
-      new PbList<DeleteScanConfigRequest>();
+      PbList<DeleteScanConfigRequest>();
   static DeleteScanConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteScanConfigRequest();
+      _defaultInstance = _ReadonlyDeleteScanConfigRequest();
     return _defaultInstance;
   }
 
@@ -112,7 +112,7 @@ class _ReadonlyDeleteScanConfigRequest extends DeleteScanConfigRequest
     with ReadonlyMessageMixin {}
 
 class GetScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetScanConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('GetScanConfigRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -124,14 +124,14 @@ class GetScanConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetScanConfigRequest clone() =>
-      new GetScanConfigRequest()..mergeFromMessage(this);
+      GetScanConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetScanConfigRequest create() => new GetScanConfigRequest();
+  static GetScanConfigRequest create() => GetScanConfigRequest();
   static PbList<GetScanConfigRequest> createRepeated() =>
-      new PbList<GetScanConfigRequest>();
+      PbList<GetScanConfigRequest>();
   static GetScanConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetScanConfigRequest();
+      _defaultInstance = _ReadonlyGetScanConfigRequest();
     return _defaultInstance;
   }
 
@@ -153,7 +153,7 @@ class _ReadonlyGetScanConfigRequest extends GetScanConfigRequest
     with ReadonlyMessageMixin {}
 
 class ListScanConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListScanConfigsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListScanConfigsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -167,14 +167,14 @@ class ListScanConfigsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListScanConfigsRequest clone() =>
-      new ListScanConfigsRequest()..mergeFromMessage(this);
+      ListScanConfigsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListScanConfigsRequest create() => new ListScanConfigsRequest();
+  static ListScanConfigsRequest create() => ListScanConfigsRequest();
   static PbList<ListScanConfigsRequest> createRepeated() =>
-      new PbList<ListScanConfigsRequest>();
+      PbList<ListScanConfigsRequest>();
   static ListScanConfigsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListScanConfigsRequest();
+      _defaultInstance = _ReadonlyListScanConfigsRequest();
     return _defaultInstance;
   }
 
@@ -213,7 +213,7 @@ class _ReadonlyListScanConfigsRequest extends ListScanConfigsRequest
     with ReadonlyMessageMixin {}
 
 class UpdateScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateScanConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateScanConfigRequest')
     ..a<ScanConfig>(2, 'scanConfig', PbFieldType.OM, ScanConfig.getDefault,
         ScanConfig.create)
     ..a<$google$protobuf.FieldMask>(
@@ -232,14 +232,14 @@ class UpdateScanConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateScanConfigRequest clone() =>
-      new UpdateScanConfigRequest()..mergeFromMessage(this);
+      UpdateScanConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateScanConfigRequest create() => new UpdateScanConfigRequest();
+  static UpdateScanConfigRequest create() => UpdateScanConfigRequest();
   static PbList<UpdateScanConfigRequest> createRepeated() =>
-      new PbList<UpdateScanConfigRequest>();
+      PbList<UpdateScanConfigRequest>();
   static UpdateScanConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateScanConfigRequest();
+      _defaultInstance = _ReadonlyUpdateScanConfigRequest();
     return _defaultInstance;
   }
 
@@ -270,7 +270,7 @@ class _ReadonlyUpdateScanConfigRequest extends UpdateScanConfigRequest
     with ReadonlyMessageMixin {}
 
 class ListScanConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListScanConfigsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListScanConfigsResponse')
     ..pp<ScanConfig>(1, 'scanConfigs', PbFieldType.PM, ScanConfig.$checkItem,
         ScanConfig.create)
     ..aOS(2, 'nextPageToken')
@@ -284,14 +284,14 @@ class ListScanConfigsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListScanConfigsResponse clone() =>
-      new ListScanConfigsResponse()..mergeFromMessage(this);
+      ListScanConfigsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListScanConfigsResponse create() => new ListScanConfigsResponse();
+  static ListScanConfigsResponse create() => ListScanConfigsResponse();
   static PbList<ListScanConfigsResponse> createRepeated() =>
-      new PbList<ListScanConfigsResponse>();
+      PbList<ListScanConfigsResponse>();
   static ListScanConfigsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListScanConfigsResponse();
+      _defaultInstance = _ReadonlyListScanConfigsResponse();
     return _defaultInstance;
   }
 
@@ -316,7 +316,7 @@ class _ReadonlyListScanConfigsResponse extends ListScanConfigsResponse
     with ReadonlyMessageMixin {}
 
 class StartScanRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StartScanRunRequest')
+  static final BuilderInfo _i = BuilderInfo('StartScanRunRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -327,15 +327,14 @@ class StartScanRunRequest extends GeneratedMessage {
   StartScanRunRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StartScanRunRequest clone() =>
-      new StartScanRunRequest()..mergeFromMessage(this);
+  StartScanRunRequest clone() => StartScanRunRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StartScanRunRequest create() => new StartScanRunRequest();
+  static StartScanRunRequest create() => StartScanRunRequest();
   static PbList<StartScanRunRequest> createRepeated() =>
-      new PbList<StartScanRunRequest>();
+      PbList<StartScanRunRequest>();
   static StartScanRunRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStartScanRunRequest();
+      _defaultInstance = _ReadonlyStartScanRunRequest();
     return _defaultInstance;
   }
 
@@ -357,7 +356,7 @@ class _ReadonlyStartScanRunRequest extends StartScanRunRequest
     with ReadonlyMessageMixin {}
 
 class GetScanRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetScanRunRequest')
+  static final BuilderInfo _i = BuilderInfo('GetScanRunRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -368,14 +367,14 @@ class GetScanRunRequest extends GeneratedMessage {
   GetScanRunRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetScanRunRequest clone() => new GetScanRunRequest()..mergeFromMessage(this);
+  GetScanRunRequest clone() => GetScanRunRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetScanRunRequest create() => new GetScanRunRequest();
+  static GetScanRunRequest create() => GetScanRunRequest();
   static PbList<GetScanRunRequest> createRepeated() =>
-      new PbList<GetScanRunRequest>();
+      PbList<GetScanRunRequest>();
   static GetScanRunRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetScanRunRequest();
+      _defaultInstance = _ReadonlyGetScanRunRequest();
     return _defaultInstance;
   }
 
@@ -397,7 +396,7 @@ class _ReadonlyGetScanRunRequest extends GetScanRunRequest
     with ReadonlyMessageMixin {}
 
 class ListScanRunsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListScanRunsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListScanRunsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -410,15 +409,14 @@ class ListScanRunsRequest extends GeneratedMessage {
   ListScanRunsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListScanRunsRequest clone() =>
-      new ListScanRunsRequest()..mergeFromMessage(this);
+  ListScanRunsRequest clone() => ListScanRunsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListScanRunsRequest create() => new ListScanRunsRequest();
+  static ListScanRunsRequest create() => ListScanRunsRequest();
   static PbList<ListScanRunsRequest> createRepeated() =>
-      new PbList<ListScanRunsRequest>();
+      PbList<ListScanRunsRequest>();
   static ListScanRunsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListScanRunsRequest();
+      _defaultInstance = _ReadonlyListScanRunsRequest();
     return _defaultInstance;
   }
 
@@ -456,7 +454,7 @@ class _ReadonlyListScanRunsRequest extends ListScanRunsRequest
     with ReadonlyMessageMixin {}
 
 class ListScanRunsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListScanRunsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListScanRunsResponse')
     ..pp<ScanRun>(
         1, 'scanRuns', PbFieldType.PM, ScanRun.$checkItem, ScanRun.create)
     ..aOS(2, 'nextPageToken')
@@ -470,14 +468,14 @@ class ListScanRunsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListScanRunsResponse clone() =>
-      new ListScanRunsResponse()..mergeFromMessage(this);
+      ListScanRunsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListScanRunsResponse create() => new ListScanRunsResponse();
+  static ListScanRunsResponse create() => ListScanRunsResponse();
   static PbList<ListScanRunsResponse> createRepeated() =>
-      new PbList<ListScanRunsResponse>();
+      PbList<ListScanRunsResponse>();
   static ListScanRunsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListScanRunsResponse();
+      _defaultInstance = _ReadonlyListScanRunsResponse();
     return _defaultInstance;
   }
 
@@ -501,7 +499,7 @@ class _ReadonlyListScanRunsResponse extends ListScanRunsResponse
     with ReadonlyMessageMixin {}
 
 class StopScanRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StopScanRunRequest')
+  static final BuilderInfo _i = BuilderInfo('StopScanRunRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -512,15 +510,14 @@ class StopScanRunRequest extends GeneratedMessage {
   StopScanRunRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StopScanRunRequest clone() =>
-      new StopScanRunRequest()..mergeFromMessage(this);
+  StopScanRunRequest clone() => StopScanRunRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StopScanRunRequest create() => new StopScanRunRequest();
+  static StopScanRunRequest create() => StopScanRunRequest();
   static PbList<StopScanRunRequest> createRepeated() =>
-      new PbList<StopScanRunRequest>();
+      PbList<StopScanRunRequest>();
   static StopScanRunRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStopScanRunRequest();
+      _defaultInstance = _ReadonlyStopScanRunRequest();
     return _defaultInstance;
   }
 
@@ -542,7 +539,7 @@ class _ReadonlyStopScanRunRequest extends StopScanRunRequest
     with ReadonlyMessageMixin {}
 
 class ListCrawledUrlsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCrawledUrlsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListCrawledUrlsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -556,14 +553,14 @@ class ListCrawledUrlsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListCrawledUrlsRequest clone() =>
-      new ListCrawledUrlsRequest()..mergeFromMessage(this);
+      ListCrawledUrlsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListCrawledUrlsRequest create() => new ListCrawledUrlsRequest();
+  static ListCrawledUrlsRequest create() => ListCrawledUrlsRequest();
   static PbList<ListCrawledUrlsRequest> createRepeated() =>
-      new PbList<ListCrawledUrlsRequest>();
+      PbList<ListCrawledUrlsRequest>();
   static ListCrawledUrlsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCrawledUrlsRequest();
+      _defaultInstance = _ReadonlyListCrawledUrlsRequest();
     return _defaultInstance;
   }
 
@@ -602,7 +599,7 @@ class _ReadonlyListCrawledUrlsRequest extends ListCrawledUrlsRequest
     with ReadonlyMessageMixin {}
 
 class ListCrawledUrlsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCrawledUrlsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListCrawledUrlsResponse')
     ..pp<CrawledUrl>(1, 'crawledUrls', PbFieldType.PM, CrawledUrl.$checkItem,
         CrawledUrl.create)
     ..aOS(2, 'nextPageToken')
@@ -616,14 +613,14 @@ class ListCrawledUrlsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListCrawledUrlsResponse clone() =>
-      new ListCrawledUrlsResponse()..mergeFromMessage(this);
+      ListCrawledUrlsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListCrawledUrlsResponse create() => new ListCrawledUrlsResponse();
+  static ListCrawledUrlsResponse create() => ListCrawledUrlsResponse();
   static PbList<ListCrawledUrlsResponse> createRepeated() =>
-      new PbList<ListCrawledUrlsResponse>();
+      PbList<ListCrawledUrlsResponse>();
   static ListCrawledUrlsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCrawledUrlsResponse();
+      _defaultInstance = _ReadonlyListCrawledUrlsResponse();
     return _defaultInstance;
   }
 
@@ -648,7 +645,7 @@ class _ReadonlyListCrawledUrlsResponse extends ListCrawledUrlsResponse
     with ReadonlyMessageMixin {}
 
 class GetFindingRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetFindingRequest')
+  static final BuilderInfo _i = BuilderInfo('GetFindingRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -659,14 +656,14 @@ class GetFindingRequest extends GeneratedMessage {
   GetFindingRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetFindingRequest clone() => new GetFindingRequest()..mergeFromMessage(this);
+  GetFindingRequest clone() => GetFindingRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetFindingRequest create() => new GetFindingRequest();
+  static GetFindingRequest create() => GetFindingRequest();
   static PbList<GetFindingRequest> createRepeated() =>
-      new PbList<GetFindingRequest>();
+      PbList<GetFindingRequest>();
   static GetFindingRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetFindingRequest();
+      _defaultInstance = _ReadonlyGetFindingRequest();
     return _defaultInstance;
   }
 
@@ -688,7 +685,7 @@ class _ReadonlyGetFindingRequest extends GetFindingRequest
     with ReadonlyMessageMixin {}
 
 class ListFindingsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFindingsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListFindingsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..aOS(3, 'pageToken')
@@ -702,15 +699,14 @@ class ListFindingsRequest extends GeneratedMessage {
   ListFindingsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListFindingsRequest clone() =>
-      new ListFindingsRequest()..mergeFromMessage(this);
+  ListFindingsRequest clone() => ListFindingsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListFindingsRequest create() => new ListFindingsRequest();
+  static ListFindingsRequest create() => ListFindingsRequest();
   static PbList<ListFindingsRequest> createRepeated() =>
-      new PbList<ListFindingsRequest>();
+      PbList<ListFindingsRequest>();
   static ListFindingsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFindingsRequest();
+      _defaultInstance = _ReadonlyListFindingsRequest();
     return _defaultInstance;
   }
 
@@ -756,7 +752,7 @@ class _ReadonlyListFindingsRequest extends ListFindingsRequest
     with ReadonlyMessageMixin {}
 
 class ListFindingsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFindingsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListFindingsResponse')
     ..pp<Finding>(
         1, 'findings', PbFieldType.PM, Finding.$checkItem, Finding.create)
     ..aOS(2, 'nextPageToken')
@@ -770,14 +766,14 @@ class ListFindingsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListFindingsResponse clone() =>
-      new ListFindingsResponse()..mergeFromMessage(this);
+      ListFindingsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListFindingsResponse create() => new ListFindingsResponse();
+  static ListFindingsResponse create() => ListFindingsResponse();
   static PbList<ListFindingsResponse> createRepeated() =>
-      new PbList<ListFindingsResponse>();
+      PbList<ListFindingsResponse>();
   static ListFindingsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFindingsResponse();
+      _defaultInstance = _ReadonlyListFindingsResponse();
     return _defaultInstance;
   }
 
@@ -801,7 +797,7 @@ class _ReadonlyListFindingsResponse extends ListFindingsResponse
     with ReadonlyMessageMixin {}
 
 class ListFindingTypeStatsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFindingTypeStatsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListFindingTypeStatsRequest')
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
@@ -813,15 +809,14 @@ class ListFindingTypeStatsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListFindingTypeStatsRequest clone() =>
-      new ListFindingTypeStatsRequest()..mergeFromMessage(this);
+      ListFindingTypeStatsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListFindingTypeStatsRequest create() =>
-      new ListFindingTypeStatsRequest();
+  static ListFindingTypeStatsRequest create() => ListFindingTypeStatsRequest();
   static PbList<ListFindingTypeStatsRequest> createRepeated() =>
-      new PbList<ListFindingTypeStatsRequest>();
+      PbList<ListFindingTypeStatsRequest>();
   static ListFindingTypeStatsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFindingTypeStatsRequest();
+      _defaultInstance = _ReadonlyListFindingTypeStatsRequest();
     return _defaultInstance;
   }
 
@@ -844,7 +839,7 @@ class _ReadonlyListFindingTypeStatsRequest extends ListFindingTypeStatsRequest
     with ReadonlyMessageMixin {}
 
 class ListFindingTypeStatsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListFindingTypeStatsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListFindingTypeStatsResponse')
     ..pp<FindingTypeStats>(1, 'findingTypeStats', PbFieldType.PM,
         FindingTypeStats.$checkItem, FindingTypeStats.create)
     ..hasRequiredFields = false;
@@ -857,15 +852,15 @@ class ListFindingTypeStatsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListFindingTypeStatsResponse clone() =>
-      new ListFindingTypeStatsResponse()..mergeFromMessage(this);
+      ListFindingTypeStatsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListFindingTypeStatsResponse create() =>
-      new ListFindingTypeStatsResponse();
+      ListFindingTypeStatsResponse();
   static PbList<ListFindingTypeStatsResponse> createRepeated() =>
-      new PbList<ListFindingTypeStatsResponse>();
+      PbList<ListFindingTypeStatsResponse>();
   static ListFindingTypeStatsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListFindingTypeStatsResponse();
+      _defaultInstance = _ReadonlyListFindingTypeStatsResponse();
     return _defaultInstance;
   }
 
@@ -887,87 +882,87 @@ class WebSecurityScannerApi {
 
   Future<ScanConfig> createScanConfig(
       ClientContext ctx, CreateScanConfigRequest request) {
-    var emptyResponse = new ScanConfig();
+    var emptyResponse = ScanConfig();
     return _client.invoke<ScanConfig>(
         ctx, 'WebSecurityScanner', 'CreateScanConfig', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteScanConfig(
       ClientContext ctx, DeleteScanConfigRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'WebSecurityScanner', 'DeleteScanConfig', request, emptyResponse);
   }
 
   Future<ScanConfig> getScanConfig(
       ClientContext ctx, GetScanConfigRequest request) {
-    var emptyResponse = new ScanConfig();
+    var emptyResponse = ScanConfig();
     return _client.invoke<ScanConfig>(
         ctx, 'WebSecurityScanner', 'GetScanConfig', request, emptyResponse);
   }
 
   Future<ListScanConfigsResponse> listScanConfigs(
       ClientContext ctx, ListScanConfigsRequest request) {
-    var emptyResponse = new ListScanConfigsResponse();
+    var emptyResponse = ListScanConfigsResponse();
     return _client.invoke<ListScanConfigsResponse>(
         ctx, 'WebSecurityScanner', 'ListScanConfigs', request, emptyResponse);
   }
 
   Future<ScanConfig> updateScanConfig(
       ClientContext ctx, UpdateScanConfigRequest request) {
-    var emptyResponse = new ScanConfig();
+    var emptyResponse = ScanConfig();
     return _client.invoke<ScanConfig>(
         ctx, 'WebSecurityScanner', 'UpdateScanConfig', request, emptyResponse);
   }
 
   Future<ScanRun> startScanRun(ClientContext ctx, StartScanRunRequest request) {
-    var emptyResponse = new ScanRun();
+    var emptyResponse = ScanRun();
     return _client.invoke<ScanRun>(
         ctx, 'WebSecurityScanner', 'StartScanRun', request, emptyResponse);
   }
 
   Future<ScanRun> getScanRun(ClientContext ctx, GetScanRunRequest request) {
-    var emptyResponse = new ScanRun();
+    var emptyResponse = ScanRun();
     return _client.invoke<ScanRun>(
         ctx, 'WebSecurityScanner', 'GetScanRun', request, emptyResponse);
   }
 
   Future<ListScanRunsResponse> listScanRuns(
       ClientContext ctx, ListScanRunsRequest request) {
-    var emptyResponse = new ListScanRunsResponse();
+    var emptyResponse = ListScanRunsResponse();
     return _client.invoke<ListScanRunsResponse>(
         ctx, 'WebSecurityScanner', 'ListScanRuns', request, emptyResponse);
   }
 
   Future<ScanRun> stopScanRun(ClientContext ctx, StopScanRunRequest request) {
-    var emptyResponse = new ScanRun();
+    var emptyResponse = ScanRun();
     return _client.invoke<ScanRun>(
         ctx, 'WebSecurityScanner', 'StopScanRun', request, emptyResponse);
   }
 
   Future<ListCrawledUrlsResponse> listCrawledUrls(
       ClientContext ctx, ListCrawledUrlsRequest request) {
-    var emptyResponse = new ListCrawledUrlsResponse();
+    var emptyResponse = ListCrawledUrlsResponse();
     return _client.invoke<ListCrawledUrlsResponse>(
         ctx, 'WebSecurityScanner', 'ListCrawledUrls', request, emptyResponse);
   }
 
   Future<Finding> getFinding(ClientContext ctx, GetFindingRequest request) {
-    var emptyResponse = new Finding();
+    var emptyResponse = Finding();
     return _client.invoke<Finding>(
         ctx, 'WebSecurityScanner', 'GetFinding', request, emptyResponse);
   }
 
   Future<ListFindingsResponse> listFindings(
       ClientContext ctx, ListFindingsRequest request) {
-    var emptyResponse = new ListFindingsResponse();
+    var emptyResponse = ListFindingsResponse();
     return _client.invoke<ListFindingsResponse>(
         ctx, 'WebSecurityScanner', 'ListFindings', request, emptyResponse);
   }
 
   Future<ListFindingTypeStatsResponse> listFindingTypeStats(
       ClientContext ctx, ListFindingTypeStatsRequest request) {
-    var emptyResponse = new ListFindingTypeStatsResponse();
+    var emptyResponse = ListFindingTypeStatsResponse();
     return _client.invoke<ListFindingTypeStatsResponse>(ctx,
         'WebSecurityScanner', 'ListFindingTypeStats', request, emptyResponse);
   }

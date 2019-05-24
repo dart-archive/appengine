@@ -19,7 +19,7 @@ import 'version.pbenum.dart';
 export 'version.pbenum.dart';
 
 class Version_BetaSettingsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Version_BetaSettingsEntry')
+  static final BuilderInfo _i = BuilderInfo('Version_BetaSettingsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -32,14 +32,14 @@ class Version_BetaSettingsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Version_BetaSettingsEntry clone() =>
-      new Version_BetaSettingsEntry()..mergeFromMessage(this);
+      Version_BetaSettingsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Version_BetaSettingsEntry create() => new Version_BetaSettingsEntry();
+  static Version_BetaSettingsEntry create() => Version_BetaSettingsEntry();
   static PbList<Version_BetaSettingsEntry> createRepeated() =>
-      new PbList<Version_BetaSettingsEntry>();
+      PbList<Version_BetaSettingsEntry>();
   static Version_BetaSettingsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVersion_BetaSettingsEntry();
+      _defaultInstance = _ReadonlyVersion_BetaSettingsEntry();
     return _defaultInstance;
   }
 
@@ -70,7 +70,7 @@ class _ReadonlyVersion_BetaSettingsEntry extends Version_BetaSettingsEntry
     with ReadonlyMessageMixin {}
 
 class Version_EnvVariablesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Version_EnvVariablesEntry')
+  static final BuilderInfo _i = BuilderInfo('Version_EnvVariablesEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -83,14 +83,14 @@ class Version_EnvVariablesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Version_EnvVariablesEntry clone() =>
-      new Version_EnvVariablesEntry()..mergeFromMessage(this);
+      Version_EnvVariablesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Version_EnvVariablesEntry create() => new Version_EnvVariablesEntry();
+  static Version_EnvVariablesEntry create() => Version_EnvVariablesEntry();
   static PbList<Version_EnvVariablesEntry> createRepeated() =>
-      new PbList<Version_EnvVariablesEntry>();
+      PbList<Version_EnvVariablesEntry>();
   static Version_EnvVariablesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVersion_EnvVariablesEntry();
+      _defaultInstance = _ReadonlyVersion_EnvVariablesEntry();
     return _defaultInstance;
   }
 
@@ -121,7 +121,7 @@ class _ReadonlyVersion_EnvVariablesEntry extends Version_EnvVariablesEntry
     with ReadonlyMessageMixin {}
 
 class Version extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Version')
+  static final BuilderInfo _i = BuilderInfo('Version')
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..a<AutomaticScaling>(3, 'automaticScaling', PbFieldType.OM,
@@ -190,12 +190,12 @@ class Version extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Version.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Version clone() => new Version()..mergeFromMessage(this);
+  Version clone() => Version()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Version create() => new Version();
-  static PbList<Version> createRepeated() => new PbList<Version>();
+  static Version create() => Version();
+  static PbList<Version> createRepeated() => PbList<Version>();
   static Version getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVersion();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVersion();
     return _defaultInstance;
   }
 
@@ -396,7 +396,7 @@ class Version extends GeneratedMessage {
 class _ReadonlyVersion extends Version with ReadonlyMessageMixin {}
 
 class AutomaticScaling extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AutomaticScaling')
+  static final BuilderInfo _i = BuilderInfo('AutomaticScaling')
     ..a<$google$protobuf.Duration>(1, 'coolDownPeriod', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..a<CpuUtilization>(2, 'cpuUtilization', PbFieldType.OM,
@@ -425,14 +425,14 @@ class AutomaticScaling extends GeneratedMessage {
   AutomaticScaling.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AutomaticScaling clone() => new AutomaticScaling()..mergeFromMessage(this);
+  AutomaticScaling clone() => AutomaticScaling()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AutomaticScaling create() => new AutomaticScaling();
+  static AutomaticScaling create() => AutomaticScaling();
   static PbList<AutomaticScaling> createRepeated() =>
-      new PbList<AutomaticScaling>();
+      PbList<AutomaticScaling>();
   static AutomaticScaling getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAutomaticScaling();
+      _defaultInstance = _ReadonlyAutomaticScaling();
     return _defaultInstance;
   }
 
@@ -542,7 +542,7 @@ class _ReadonlyAutomaticScaling extends AutomaticScaling
     with ReadonlyMessageMixin {}
 
 class BasicScaling extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BasicScaling')
+  static final BuilderInfo _i = BuilderInfo('BasicScaling')
     ..a<$google$protobuf.Duration>(1, 'idleTimeout', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..a<int>(2, 'maxInstances', PbFieldType.O3)
@@ -555,13 +555,12 @@ class BasicScaling extends GeneratedMessage {
   BasicScaling.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BasicScaling clone() => new BasicScaling()..mergeFromMessage(this);
+  BasicScaling clone() => BasicScaling()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BasicScaling create() => new BasicScaling();
-  static PbList<BasicScaling> createRepeated() => new PbList<BasicScaling>();
+  static BasicScaling create() => BasicScaling();
+  static PbList<BasicScaling> createRepeated() => PbList<BasicScaling>();
   static BasicScaling getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBasicScaling();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBasicScaling();
     return _defaultInstance;
   }
 
@@ -590,7 +589,7 @@ class BasicScaling extends GeneratedMessage {
 class _ReadonlyBasicScaling extends BasicScaling with ReadonlyMessageMixin {}
 
 class ManualScaling extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ManualScaling')
+  static final BuilderInfo _i = BuilderInfo('ManualScaling')
     ..a<int>(1, 'instances', PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -601,13 +600,12 @@ class ManualScaling extends GeneratedMessage {
   ManualScaling.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ManualScaling clone() => new ManualScaling()..mergeFromMessage(this);
+  ManualScaling clone() => ManualScaling()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ManualScaling create() => new ManualScaling();
-  static PbList<ManualScaling> createRepeated() => new PbList<ManualScaling>();
+  static ManualScaling create() => ManualScaling();
+  static PbList<ManualScaling> createRepeated() => PbList<ManualScaling>();
   static ManualScaling getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyManualScaling();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyManualScaling();
     return _defaultInstance;
   }
 
@@ -628,7 +626,7 @@ class ManualScaling extends GeneratedMessage {
 class _ReadonlyManualScaling extends ManualScaling with ReadonlyMessageMixin {}
 
 class CpuUtilization extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CpuUtilization')
+  static final BuilderInfo _i = BuilderInfo('CpuUtilization')
     ..a<$google$protobuf.Duration>(1, 'aggregationWindowLength', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..a<double>(2, 'targetUtilization', PbFieldType.OD)
@@ -641,14 +639,12 @@ class CpuUtilization extends GeneratedMessage {
   CpuUtilization.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CpuUtilization clone() => new CpuUtilization()..mergeFromMessage(this);
+  CpuUtilization clone() => CpuUtilization()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CpuUtilization create() => new CpuUtilization();
-  static PbList<CpuUtilization> createRepeated() =>
-      new PbList<CpuUtilization>();
+  static CpuUtilization create() => CpuUtilization();
+  static PbList<CpuUtilization> createRepeated() => PbList<CpuUtilization>();
   static CpuUtilization getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCpuUtilization();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCpuUtilization();
     return _defaultInstance;
   }
 
@@ -678,7 +674,7 @@ class _ReadonlyCpuUtilization extends CpuUtilization with ReadonlyMessageMixin {
 }
 
 class RequestUtilization extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RequestUtilization')
+  static final BuilderInfo _i = BuilderInfo('RequestUtilization')
     ..a<int>(1, 'targetRequestCountPerSecond', PbFieldType.O3)
     ..a<int>(2, 'targetConcurrentRequests', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -690,15 +686,14 @@ class RequestUtilization extends GeneratedMessage {
   RequestUtilization.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RequestUtilization clone() =>
-      new RequestUtilization()..mergeFromMessage(this);
+  RequestUtilization clone() => RequestUtilization()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RequestUtilization create() => new RequestUtilization();
+  static RequestUtilization create() => RequestUtilization();
   static PbList<RequestUtilization> createRepeated() =>
-      new PbList<RequestUtilization>();
+      PbList<RequestUtilization>();
   static RequestUtilization getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRequestUtilization();
+      _defaultInstance = _ReadonlyRequestUtilization();
     return _defaultInstance;
   }
 
@@ -728,7 +723,7 @@ class _ReadonlyRequestUtilization extends RequestUtilization
     with ReadonlyMessageMixin {}
 
 class DiskUtilization extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DiskUtilization')
+  static final BuilderInfo _i = BuilderInfo('DiskUtilization')
     ..a<int>(14, 'targetWriteBytesPerSecond', PbFieldType.O3)
     ..a<int>(15, 'targetWriteOpsPerSecond', PbFieldType.O3)
     ..a<int>(16, 'targetReadBytesPerSecond', PbFieldType.O3)
@@ -742,14 +737,12 @@ class DiskUtilization extends GeneratedMessage {
   DiskUtilization.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DiskUtilization clone() => new DiskUtilization()..mergeFromMessage(this);
+  DiskUtilization clone() => DiskUtilization()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DiskUtilization create() => new DiskUtilization();
-  static PbList<DiskUtilization> createRepeated() =>
-      new PbList<DiskUtilization>();
+  static DiskUtilization create() => DiskUtilization();
+  static PbList<DiskUtilization> createRepeated() => PbList<DiskUtilization>();
   static DiskUtilization getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDiskUtilization();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDiskUtilization();
     return _defaultInstance;
   }
 
@@ -795,7 +788,7 @@ class _ReadonlyDiskUtilization extends DiskUtilization
     with ReadonlyMessageMixin {}
 
 class NetworkUtilization extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NetworkUtilization')
+  static final BuilderInfo _i = BuilderInfo('NetworkUtilization')
     ..a<int>(1, 'targetSentBytesPerSecond', PbFieldType.O3)
     ..a<int>(11, 'targetSentPacketsPerSecond', PbFieldType.O3)
     ..a<int>(12, 'targetReceivedBytesPerSecond', PbFieldType.O3)
@@ -809,15 +802,14 @@ class NetworkUtilization extends GeneratedMessage {
   NetworkUtilization.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  NetworkUtilization clone() =>
-      new NetworkUtilization()..mergeFromMessage(this);
+  NetworkUtilization clone() => NetworkUtilization()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static NetworkUtilization create() => new NetworkUtilization();
+  static NetworkUtilization create() => NetworkUtilization();
   static PbList<NetworkUtilization> createRepeated() =>
-      new PbList<NetworkUtilization>();
+      PbList<NetworkUtilization>();
   static NetworkUtilization getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNetworkUtilization();
+      _defaultInstance = _ReadonlyNetworkUtilization();
     return _defaultInstance;
   }
 
@@ -863,7 +855,7 @@ class _ReadonlyNetworkUtilization extends NetworkUtilization
     with ReadonlyMessageMixin {}
 
 class Network extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Network')
+  static final BuilderInfo _i = BuilderInfo('Network')
     ..pPS(1, 'forwardedPorts')
     ..aOS(2, 'instanceTag')
     ..aOS(3, 'name')
@@ -875,12 +867,12 @@ class Network extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Network.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Network clone() => new Network()..mergeFromMessage(this);
+  Network clone() => Network()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Network create() => new Network();
-  static PbList<Network> createRepeated() => new PbList<Network>();
+  static Network create() => Network();
+  static PbList<Network> createRepeated() => PbList<Network>();
   static Network getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyNetwork();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyNetwork();
     return _defaultInstance;
   }
 
@@ -911,7 +903,7 @@ class Network extends GeneratedMessage {
 class _ReadonlyNetwork extends Network with ReadonlyMessageMixin {}
 
 class Resources extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Resources')
+  static final BuilderInfo _i = BuilderInfo('Resources')
     ..a<double>(1, 'cpu', PbFieldType.OD)
     ..a<double>(2, 'diskGb', PbFieldType.OD)
     ..a<double>(3, 'memoryGb', PbFieldType.OD)
@@ -923,12 +915,12 @@ class Resources extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Resources.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Resources clone() => new Resources()..mergeFromMessage(this);
+  Resources clone() => Resources()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Resources create() => new Resources();
-  static PbList<Resources> createRepeated() => new PbList<Resources>();
+  static Resources create() => Resources();
+  static PbList<Resources> createRepeated() => PbList<Resources>();
   static Resources getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyResources();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyResources();
     return _defaultInstance;
   }
 

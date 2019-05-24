@@ -21,7 +21,7 @@ import 'session.pbenum.dart';
 export 'session.pbenum.dart';
 
 class DetectIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DetectIntentRequest')
+  static final BuilderInfo _i = BuilderInfo('DetectIntentRequest')
     ..aOS(1, 'session')
     ..a<QueryParameters>(2, 'queryParams', PbFieldType.OM,
         QueryParameters.getDefault, QueryParameters.create)
@@ -37,15 +37,14 @@ class DetectIntentRequest extends GeneratedMessage {
   DetectIntentRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DetectIntentRequest clone() =>
-      new DetectIntentRequest()..mergeFromMessage(this);
+  DetectIntentRequest clone() => DetectIntentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DetectIntentRequest create() => new DetectIntentRequest();
+  static DetectIntentRequest create() => DetectIntentRequest();
   static PbList<DetectIntentRequest> createRepeated() =>
-      new PbList<DetectIntentRequest>();
+      PbList<DetectIntentRequest>();
   static DetectIntentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDetectIntentRequest();
+      _defaultInstance = _ReadonlyDetectIntentRequest();
     return _defaultInstance;
   }
 
@@ -91,7 +90,7 @@ class _ReadonlyDetectIntentRequest extends DetectIntentRequest
     with ReadonlyMessageMixin {}
 
 class DetectIntentResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DetectIntentResponse')
+  static final BuilderInfo _i = BuilderInfo('DetectIntentResponse')
     ..aOS(1, 'responseId')
     ..a<QueryResult>(2, 'queryResult', PbFieldType.OM, QueryResult.getDefault,
         QueryResult.create)
@@ -107,14 +106,14 @@ class DetectIntentResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DetectIntentResponse clone() =>
-      new DetectIntentResponse()..mergeFromMessage(this);
+      DetectIntentResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DetectIntentResponse create() => new DetectIntentResponse();
+  static DetectIntentResponse create() => DetectIntentResponse();
   static PbList<DetectIntentResponse> createRepeated() =>
-      new PbList<DetectIntentResponse>();
+      PbList<DetectIntentResponse>();
   static DetectIntentResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDetectIntentResponse();
+      _defaultInstance = _ReadonlyDetectIntentResponse();
     return _defaultInstance;
   }
 
@@ -152,7 +151,7 @@ class _ReadonlyDetectIntentResponse extends DetectIntentResponse
     with ReadonlyMessageMixin {}
 
 class QueryParameters extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryParameters')
+  static final BuilderInfo _i = BuilderInfo('QueryParameters')
     ..aOS(1, 'timeZone')
     ..a<$google$type.LatLng>(2, 'geoLocation', PbFieldType.OM,
         $google$type.LatLng.getDefault, $google$type.LatLng.create)
@@ -172,14 +171,12 @@ class QueryParameters extends GeneratedMessage {
   QueryParameters.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QueryParameters clone() => new QueryParameters()..mergeFromMessage(this);
+  QueryParameters clone() => QueryParameters()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryParameters create() => new QueryParameters();
-  static PbList<QueryParameters> createRepeated() =>
-      new PbList<QueryParameters>();
+  static QueryParameters create() => QueryParameters();
+  static PbList<QueryParameters> createRepeated() => PbList<QueryParameters>();
   static QueryParameters getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryParameters();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQueryParameters();
     return _defaultInstance;
   }
 
@@ -229,7 +226,7 @@ class _ReadonlyQueryParameters extends QueryParameters
     with ReadonlyMessageMixin {}
 
 class QueryInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryInput')
+  static final BuilderInfo _i = BuilderInfo('QueryInput')
     ..a<InputAudioConfig>(1, 'audioConfig', PbFieldType.OM,
         InputAudioConfig.getDefault, InputAudioConfig.create)
     ..a<TextInput>(
@@ -244,12 +241,12 @@ class QueryInput extends GeneratedMessage {
       : super.fromBuffer(i, r);
   QueryInput.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QueryInput clone() => new QueryInput()..mergeFromMessage(this);
+  QueryInput clone() => QueryInput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryInput create() => new QueryInput();
-  static PbList<QueryInput> createRepeated() => new PbList<QueryInput>();
+  static QueryInput create() => QueryInput();
+  static PbList<QueryInput> createRepeated() => PbList<QueryInput>();
   static QueryInput getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQueryInput();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQueryInput();
     return _defaultInstance;
   }
 
@@ -286,7 +283,7 @@ class QueryInput extends GeneratedMessage {
 class _ReadonlyQueryInput extends QueryInput with ReadonlyMessageMixin {}
 
 class QueryResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryResult')
+  static final BuilderInfo _i = BuilderInfo('QueryResult')
     ..aOS(1, 'queryText')
     ..a<double>(2, 'speechRecognitionConfidence', PbFieldType.OF)
     ..aOS(3, 'action')
@@ -315,12 +312,12 @@ class QueryResult extends GeneratedMessage {
   QueryResult.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QueryResult clone() => new QueryResult()..mergeFromMessage(this);
+  QueryResult clone() => QueryResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryResult create() => new QueryResult();
-  static PbList<QueryResult> createRepeated() => new PbList<QueryResult>();
+  static QueryResult create() => QueryResult();
+  static PbList<QueryResult> createRepeated() => PbList<QueryResult>();
   static QueryResult getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQueryResult();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQueryResult();
     return _defaultInstance;
   }
 
@@ -433,7 +430,7 @@ class QueryResult extends GeneratedMessage {
 class _ReadonlyQueryResult extends QueryResult with ReadonlyMessageMixin {}
 
 class StreamingDetectIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingDetectIntentRequest')
+  static final BuilderInfo _i = BuilderInfo('StreamingDetectIntentRequest')
     ..aOS(1, 'session')
     ..a<QueryParameters>(2, 'queryParams', PbFieldType.OM,
         QueryParameters.getDefault, QueryParameters.create)
@@ -451,15 +448,15 @@ class StreamingDetectIntentRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingDetectIntentRequest clone() =>
-      new StreamingDetectIntentRequest()..mergeFromMessage(this);
+      StreamingDetectIntentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static StreamingDetectIntentRequest create() =>
-      new StreamingDetectIntentRequest();
+      StreamingDetectIntentRequest();
   static PbList<StreamingDetectIntentRequest> createRepeated() =>
-      new PbList<StreamingDetectIntentRequest>();
+      PbList<StreamingDetectIntentRequest>();
   static StreamingDetectIntentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingDetectIntentRequest();
+      _defaultInstance = _ReadonlyStreamingDetectIntentRequest();
     return _defaultInstance;
   }
 
@@ -514,7 +511,7 @@ class _ReadonlyStreamingDetectIntentRequest extends StreamingDetectIntentRequest
     with ReadonlyMessageMixin {}
 
 class StreamingDetectIntentResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingDetectIntentResponse')
+  static final BuilderInfo _i = BuilderInfo('StreamingDetectIntentResponse')
     ..aOS(1, 'responseId')
     ..a<StreamingRecognitionResult>(
         2,
@@ -536,15 +533,15 @@ class StreamingDetectIntentResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingDetectIntentResponse clone() =>
-      new StreamingDetectIntentResponse()..mergeFromMessage(this);
+      StreamingDetectIntentResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static StreamingDetectIntentResponse create() =>
-      new StreamingDetectIntentResponse();
+      StreamingDetectIntentResponse();
   static PbList<StreamingDetectIntentResponse> createRepeated() =>
-      new PbList<StreamingDetectIntentResponse>();
+      PbList<StreamingDetectIntentResponse>();
   static StreamingDetectIntentResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingDetectIntentResponse();
+      _defaultInstance = _ReadonlyStreamingDetectIntentResponse();
     return _defaultInstance;
   }
 
@@ -591,7 +588,7 @@ class _ReadonlyStreamingDetectIntentResponse
     extends StreamingDetectIntentResponse with ReadonlyMessageMixin {}
 
 class StreamingRecognitionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognitionResult')
+  static final BuilderInfo _i = BuilderInfo('StreamingRecognitionResult')
     ..e<StreamingRecognitionResult_MessageType>(
         1,
         'messageType',
@@ -612,15 +609,14 @@ class StreamingRecognitionResult extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognitionResult clone() =>
-      new StreamingRecognitionResult()..mergeFromMessage(this);
+      StreamingRecognitionResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamingRecognitionResult create() =>
-      new StreamingRecognitionResult();
+  static StreamingRecognitionResult create() => StreamingRecognitionResult();
   static PbList<StreamingRecognitionResult> createRepeated() =>
-      new PbList<StreamingRecognitionResult>();
+      PbList<StreamingRecognitionResult>();
   static StreamingRecognitionResult getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognitionResult();
+      _defaultInstance = _ReadonlyStreamingRecognitionResult();
     return _defaultInstance;
   }
 
@@ -667,7 +663,7 @@ class _ReadonlyStreamingRecognitionResult extends StreamingRecognitionResult
     with ReadonlyMessageMixin {}
 
 class InputAudioConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('InputAudioConfig')
+  static final BuilderInfo _i = BuilderInfo('InputAudioConfig')
     ..e<AudioEncoding>(
         1,
         'audioEncoding',
@@ -687,14 +683,14 @@ class InputAudioConfig extends GeneratedMessage {
   InputAudioConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  InputAudioConfig clone() => new InputAudioConfig()..mergeFromMessage(this);
+  InputAudioConfig clone() => InputAudioConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static InputAudioConfig create() => new InputAudioConfig();
+  static InputAudioConfig create() => InputAudioConfig();
   static PbList<InputAudioConfig> createRepeated() =>
-      new PbList<InputAudioConfig>();
+      PbList<InputAudioConfig>();
   static InputAudioConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInputAudioConfig();
+      _defaultInstance = _ReadonlyInputAudioConfig();
     return _defaultInstance;
   }
 
@@ -734,7 +730,7 @@ class _ReadonlyInputAudioConfig extends InputAudioConfig
     with ReadonlyMessageMixin {}
 
 class TextInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextInput')
+  static final BuilderInfo _i = BuilderInfo('TextInput')
     ..aOS(1, 'text')
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
@@ -745,12 +741,12 @@ class TextInput extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TextInput.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TextInput clone() => new TextInput()..mergeFromMessage(this);
+  TextInput clone() => TextInput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TextInput create() => new TextInput();
-  static PbList<TextInput> createRepeated() => new PbList<TextInput>();
+  static TextInput create() => TextInput();
+  static PbList<TextInput> createRepeated() => PbList<TextInput>();
   static TextInput getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTextInput();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTextInput();
     return _defaultInstance;
   }
 
@@ -779,7 +775,7 @@ class TextInput extends GeneratedMessage {
 class _ReadonlyTextInput extends TextInput with ReadonlyMessageMixin {}
 
 class EventInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EventInput')
+  static final BuilderInfo _i = BuilderInfo('EventInput')
     ..aOS(1, 'name')
     ..a<$google$protobuf.Struct>(2, 'parameters', PbFieldType.OM,
         $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
@@ -792,12 +788,12 @@ class EventInput extends GeneratedMessage {
       : super.fromBuffer(i, r);
   EventInput.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EventInput clone() => new EventInput()..mergeFromMessage(this);
+  EventInput clone() => EventInput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EventInput create() => new EventInput();
-  static PbList<EventInput> createRepeated() => new PbList<EventInput>();
+  static EventInput create() => EventInput();
+  static PbList<EventInput> createRepeated() => PbList<EventInput>();
   static EventInput getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEventInput();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEventInput();
     return _defaultInstance;
   }
 
@@ -839,14 +835,14 @@ class SessionsApi {
 
   Future<DetectIntentResponse> detectIntent(
       ClientContext ctx, DetectIntentRequest request) {
-    var emptyResponse = new DetectIntentResponse();
+    var emptyResponse = DetectIntentResponse();
     return _client.invoke<DetectIntentResponse>(
         ctx, 'Sessions', 'DetectIntent', request, emptyResponse);
   }
 
   Future<StreamingDetectIntentResponse> streamingDetectIntent(
       ClientContext ctx, StreamingDetectIntentRequest request) {
-    var emptyResponse = new StreamingDetectIntentResponse();
+    var emptyResponse = StreamingDetectIntentResponse();
     return _client.invoke<StreamingDetectIntentResponse>(
         ctx, 'Sessions', 'StreamingDetectIntent', request, emptyResponse);
   }

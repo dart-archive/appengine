@@ -13,7 +13,7 @@ import 'bigtable_data.pb.dart';
 import '../../rpc/status.pb.dart' as $google$rpc;
 
 class ReadRowsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRowsRequest')
+  static final BuilderInfo _i = BuilderInfo('ReadRowsRequest')
     ..aOS(1, 'tableName')
     ..a<List<int>>(2, 'rowKey', PbFieldType.OY)
     ..a<RowRange>(
@@ -32,14 +32,12 @@ class ReadRowsRequest extends GeneratedMessage {
   ReadRowsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadRowsRequest clone() => new ReadRowsRequest()..mergeFromMessage(this);
+  ReadRowsRequest clone() => ReadRowsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadRowsRequest create() => new ReadRowsRequest();
-  static PbList<ReadRowsRequest> createRepeated() =>
-      new PbList<ReadRowsRequest>();
+  static ReadRowsRequest create() => ReadRowsRequest();
+  static PbList<ReadRowsRequest> createRepeated() => PbList<ReadRowsRequest>();
   static ReadRowsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadRowsRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReadRowsRequest();
     return _defaultInstance;
   }
 
@@ -109,7 +107,7 @@ class _ReadonlyReadRowsRequest extends ReadRowsRequest
     with ReadonlyMessageMixin {}
 
 class ReadRowsResponse_Chunk extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRowsResponse_Chunk')
+  static final BuilderInfo _i = BuilderInfo('ReadRowsResponse_Chunk')
     ..a<Family>(
         1, 'rowContents', PbFieldType.OM, Family.getDefault, Family.create)
     ..aOB(2, 'resetRow')
@@ -124,14 +122,14 @@ class ReadRowsResponse_Chunk extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReadRowsResponse_Chunk clone() =>
-      new ReadRowsResponse_Chunk()..mergeFromMessage(this);
+      ReadRowsResponse_Chunk()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadRowsResponse_Chunk create() => new ReadRowsResponse_Chunk();
+  static ReadRowsResponse_Chunk create() => ReadRowsResponse_Chunk();
   static PbList<ReadRowsResponse_Chunk> createRepeated() =>
-      new PbList<ReadRowsResponse_Chunk>();
+      PbList<ReadRowsResponse_Chunk>();
   static ReadRowsResponse_Chunk getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadRowsResponse_Chunk();
+      _defaultInstance = _ReadonlyReadRowsResponse_Chunk();
     return _defaultInstance;
   }
 
@@ -170,7 +168,7 @@ class _ReadonlyReadRowsResponse_Chunk extends ReadRowsResponse_Chunk
     with ReadonlyMessageMixin {}
 
 class ReadRowsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRowsResponse')
+  static final BuilderInfo _i = BuilderInfo('ReadRowsResponse')
     ..a<List<int>>(1, 'rowKey', PbFieldType.OY)
     ..pp<ReadRowsResponse_Chunk>(2, 'chunks', PbFieldType.PM,
         ReadRowsResponse_Chunk.$checkItem, ReadRowsResponse_Chunk.create)
@@ -183,14 +181,14 @@ class ReadRowsResponse extends GeneratedMessage {
   ReadRowsResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadRowsResponse clone() => new ReadRowsResponse()..mergeFromMessage(this);
+  ReadRowsResponse clone() => ReadRowsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadRowsResponse create() => new ReadRowsResponse();
+  static ReadRowsResponse create() => ReadRowsResponse();
   static PbList<ReadRowsResponse> createRepeated() =>
-      new PbList<ReadRowsResponse>();
+      PbList<ReadRowsResponse>();
   static ReadRowsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadRowsResponse();
+      _defaultInstance = _ReadonlyReadRowsResponse();
     return _defaultInstance;
   }
 
@@ -214,7 +212,7 @@ class _ReadonlyReadRowsResponse extends ReadRowsResponse
     with ReadonlyMessageMixin {}
 
 class SampleRowKeysRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SampleRowKeysRequest')
+  static final BuilderInfo _i = BuilderInfo('SampleRowKeysRequest')
     ..aOS(1, 'tableName')
     ..hasRequiredFields = false;
 
@@ -226,14 +224,14 @@ class SampleRowKeysRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SampleRowKeysRequest clone() =>
-      new SampleRowKeysRequest()..mergeFromMessage(this);
+      SampleRowKeysRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SampleRowKeysRequest create() => new SampleRowKeysRequest();
+  static SampleRowKeysRequest create() => SampleRowKeysRequest();
   static PbList<SampleRowKeysRequest> createRepeated() =>
-      new PbList<SampleRowKeysRequest>();
+      PbList<SampleRowKeysRequest>();
   static SampleRowKeysRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySampleRowKeysRequest();
+      _defaultInstance = _ReadonlySampleRowKeysRequest();
     return _defaultInstance;
   }
 
@@ -255,7 +253,7 @@ class _ReadonlySampleRowKeysRequest extends SampleRowKeysRequest
     with ReadonlyMessageMixin {}
 
 class SampleRowKeysResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SampleRowKeysResponse')
+  static final BuilderInfo _i = BuilderInfo('SampleRowKeysResponse')
     ..a<List<int>>(1, 'rowKey', PbFieldType.OY)
     ..aInt64(2, 'offsetBytes')
     ..hasRequiredFields = false;
@@ -268,14 +266,14 @@ class SampleRowKeysResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SampleRowKeysResponse clone() =>
-      new SampleRowKeysResponse()..mergeFromMessage(this);
+      SampleRowKeysResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SampleRowKeysResponse create() => new SampleRowKeysResponse();
+  static SampleRowKeysResponse create() => SampleRowKeysResponse();
   static PbList<SampleRowKeysResponse> createRepeated() =>
-      new PbList<SampleRowKeysResponse>();
+      PbList<SampleRowKeysResponse>();
   static SampleRowKeysResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySampleRowKeysResponse();
+      _defaultInstance = _ReadonlySampleRowKeysResponse();
     return _defaultInstance;
   }
 
@@ -306,7 +304,7 @@ class _ReadonlySampleRowKeysResponse extends SampleRowKeysResponse
     with ReadonlyMessageMixin {}
 
 class MutateRowRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowRequest')
+  static final BuilderInfo _i = BuilderInfo('MutateRowRequest')
     ..aOS(1, 'tableName')
     ..a<List<int>>(2, 'rowKey', PbFieldType.OY)
     ..pp<Mutation>(
@@ -320,14 +318,14 @@ class MutateRowRequest extends GeneratedMessage {
   MutateRowRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutateRowRequest clone() => new MutateRowRequest()..mergeFromMessage(this);
+  MutateRowRequest clone() => MutateRowRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MutateRowRequest create() => new MutateRowRequest();
+  static MutateRowRequest create() => MutateRowRequest();
   static PbList<MutateRowRequest> createRepeated() =>
-      new PbList<MutateRowRequest>();
+      PbList<MutateRowRequest>();
   static MutateRowRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowRequest();
+      _defaultInstance = _ReadonlyMutateRowRequest();
     return _defaultInstance;
   }
 
@@ -359,7 +357,7 @@ class _ReadonlyMutateRowRequest extends MutateRowRequest
     with ReadonlyMessageMixin {}
 
 class MutateRowsRequest_Entry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowsRequest_Entry')
+  static final BuilderInfo _i = BuilderInfo('MutateRowsRequest_Entry')
     ..a<List<int>>(1, 'rowKey', PbFieldType.OY)
     ..pp<Mutation>(
         2, 'mutations', PbFieldType.PM, Mutation.$checkItem, Mutation.create)
@@ -373,14 +371,14 @@ class MutateRowsRequest_Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MutateRowsRequest_Entry clone() =>
-      new MutateRowsRequest_Entry()..mergeFromMessage(this);
+      MutateRowsRequest_Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MutateRowsRequest_Entry create() => new MutateRowsRequest_Entry();
+  static MutateRowsRequest_Entry create() => MutateRowsRequest_Entry();
   static PbList<MutateRowsRequest_Entry> createRepeated() =>
-      new PbList<MutateRowsRequest_Entry>();
+      PbList<MutateRowsRequest_Entry>();
   static MutateRowsRequest_Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowsRequest_Entry();
+      _defaultInstance = _ReadonlyMutateRowsRequest_Entry();
     return _defaultInstance;
   }
 
@@ -405,7 +403,7 @@ class _ReadonlyMutateRowsRequest_Entry extends MutateRowsRequest_Entry
     with ReadonlyMessageMixin {}
 
 class MutateRowsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowsRequest')
+  static final BuilderInfo _i = BuilderInfo('MutateRowsRequest')
     ..aOS(1, 'tableName')
     ..pp<MutateRowsRequest_Entry>(2, 'entries', PbFieldType.PM,
         MutateRowsRequest_Entry.$checkItem, MutateRowsRequest_Entry.create)
@@ -418,14 +416,14 @@ class MutateRowsRequest extends GeneratedMessage {
   MutateRowsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutateRowsRequest clone() => new MutateRowsRequest()..mergeFromMessage(this);
+  MutateRowsRequest clone() => MutateRowsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MutateRowsRequest create() => new MutateRowsRequest();
+  static MutateRowsRequest create() => MutateRowsRequest();
   static PbList<MutateRowsRequest> createRepeated() =>
-      new PbList<MutateRowsRequest>();
+      PbList<MutateRowsRequest>();
   static MutateRowsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowsRequest();
+      _defaultInstance = _ReadonlyMutateRowsRequest();
     return _defaultInstance;
   }
 
@@ -449,7 +447,7 @@ class _ReadonlyMutateRowsRequest extends MutateRowsRequest
     with ReadonlyMessageMixin {}
 
 class MutateRowsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutateRowsResponse')
+  static final BuilderInfo _i = BuilderInfo('MutateRowsResponse')
     ..pp<$google$rpc.Status>(1, 'statuses', PbFieldType.PM,
         $google$rpc.Status.$checkItem, $google$rpc.Status.create)
     ..hasRequiredFields = false;
@@ -461,15 +459,14 @@ class MutateRowsResponse extends GeneratedMessage {
   MutateRowsResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutateRowsResponse clone() =>
-      new MutateRowsResponse()..mergeFromMessage(this);
+  MutateRowsResponse clone() => MutateRowsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MutateRowsResponse create() => new MutateRowsResponse();
+  static MutateRowsResponse create() => MutateRowsResponse();
   static PbList<MutateRowsResponse> createRepeated() =>
-      new PbList<MutateRowsResponse>();
+      PbList<MutateRowsResponse>();
   static MutateRowsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutateRowsResponse();
+      _defaultInstance = _ReadonlyMutateRowsResponse();
     return _defaultInstance;
   }
 
@@ -485,7 +482,7 @@ class _ReadonlyMutateRowsResponse extends MutateRowsResponse
     with ReadonlyMessageMixin {}
 
 class CheckAndMutateRowRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckAndMutateRowRequest')
+  static final BuilderInfo _i = BuilderInfo('CheckAndMutateRowRequest')
     ..aOS(1, 'tableName')
     ..a<List<int>>(2, 'rowKey', PbFieldType.OY)
     ..pp<Mutation>(4, 'trueMutations', PbFieldType.PM, Mutation.$checkItem,
@@ -504,14 +501,14 @@ class CheckAndMutateRowRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckAndMutateRowRequest clone() =>
-      new CheckAndMutateRowRequest()..mergeFromMessage(this);
+      CheckAndMutateRowRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckAndMutateRowRequest create() => new CheckAndMutateRowRequest();
+  static CheckAndMutateRowRequest create() => CheckAndMutateRowRequest();
   static PbList<CheckAndMutateRowRequest> createRepeated() =>
-      new PbList<CheckAndMutateRowRequest>();
+      PbList<CheckAndMutateRowRequest>();
   static CheckAndMutateRowRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckAndMutateRowRequest();
+      _defaultInstance = _ReadonlyCheckAndMutateRowRequest();
     return _defaultInstance;
   }
 
@@ -554,7 +551,7 @@ class _ReadonlyCheckAndMutateRowRequest extends CheckAndMutateRowRequest
     with ReadonlyMessageMixin {}
 
 class CheckAndMutateRowResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckAndMutateRowResponse')
+  static final BuilderInfo _i = BuilderInfo('CheckAndMutateRowResponse')
     ..aOB(1, 'predicateMatched')
     ..hasRequiredFields = false;
 
@@ -566,14 +563,14 @@ class CheckAndMutateRowResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckAndMutateRowResponse clone() =>
-      new CheckAndMutateRowResponse()..mergeFromMessage(this);
+      CheckAndMutateRowResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckAndMutateRowResponse create() => new CheckAndMutateRowResponse();
+  static CheckAndMutateRowResponse create() => CheckAndMutateRowResponse();
   static PbList<CheckAndMutateRowResponse> createRepeated() =>
-      new PbList<CheckAndMutateRowResponse>();
+      PbList<CheckAndMutateRowResponse>();
   static CheckAndMutateRowResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckAndMutateRowResponse();
+      _defaultInstance = _ReadonlyCheckAndMutateRowResponse();
     return _defaultInstance;
   }
 
@@ -596,7 +593,7 @@ class _ReadonlyCheckAndMutateRowResponse extends CheckAndMutateRowResponse
     with ReadonlyMessageMixin {}
 
 class ReadModifyWriteRowRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadModifyWriteRowRequest')
+  static final BuilderInfo _i = BuilderInfo('ReadModifyWriteRowRequest')
     ..aOS(1, 'tableName')
     ..a<List<int>>(2, 'rowKey', PbFieldType.OY)
     ..pp<ReadModifyWriteRule>(3, 'rules', PbFieldType.PM,
@@ -611,14 +608,14 @@ class ReadModifyWriteRowRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReadModifyWriteRowRequest clone() =>
-      new ReadModifyWriteRowRequest()..mergeFromMessage(this);
+      ReadModifyWriteRowRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadModifyWriteRowRequest create() => new ReadModifyWriteRowRequest();
+  static ReadModifyWriteRowRequest create() => ReadModifyWriteRowRequest();
   static PbList<ReadModifyWriteRowRequest> createRepeated() =>
-      new PbList<ReadModifyWriteRowRequest>();
+      PbList<ReadModifyWriteRowRequest>();
   static ReadModifyWriteRowRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadModifyWriteRowRequest();
+      _defaultInstance = _ReadonlyReadModifyWriteRowRequest();
     return _defaultInstance;
   }
 

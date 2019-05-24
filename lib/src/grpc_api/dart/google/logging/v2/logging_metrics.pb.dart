@@ -18,11 +18,10 @@ import 'logging_metrics.pbenum.dart';
 export 'logging_metrics.pbenum.dart';
 
 class LogMetric_LabelExtractorsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('LogMetric_LabelExtractorsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('LogMetric_LabelExtractorsEntry')
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
+    ..hasRequiredFields = false;
 
   LogMetric_LabelExtractorsEntry() : super();
   LogMetric_LabelExtractorsEntry.fromBuffer(List<int> i,
@@ -32,15 +31,15 @@ class LogMetric_LabelExtractorsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LogMetric_LabelExtractorsEntry clone() =>
-      new LogMetric_LabelExtractorsEntry()..mergeFromMessage(this);
+      LogMetric_LabelExtractorsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static LogMetric_LabelExtractorsEntry create() =>
-      new LogMetric_LabelExtractorsEntry();
+      LogMetric_LabelExtractorsEntry();
   static PbList<LogMetric_LabelExtractorsEntry> createRepeated() =>
-      new PbList<LogMetric_LabelExtractorsEntry>();
+      PbList<LogMetric_LabelExtractorsEntry>();
   static LogMetric_LabelExtractorsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLogMetric_LabelExtractorsEntry();
+      _defaultInstance = _ReadonlyLogMetric_LabelExtractorsEntry();
     return _defaultInstance;
   }
 
@@ -71,7 +70,7 @@ class _ReadonlyLogMetric_LabelExtractorsEntry
     extends LogMetric_LabelExtractorsEntry with ReadonlyMessageMixin {}
 
 class LogMetric extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogMetric')
+  static final BuilderInfo _i = BuilderInfo('LogMetric')
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOS(3, 'filter')
@@ -109,12 +108,12 @@ class LogMetric extends GeneratedMessage {
       : super.fromBuffer(i, r);
   LogMetric.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogMetric clone() => new LogMetric()..mergeFromMessage(this);
+  LogMetric clone() => LogMetric()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LogMetric create() => new LogMetric();
-  static PbList<LogMetric> createRepeated() => new PbList<LogMetric>();
+  static LogMetric create() => LogMetric();
+  static PbList<LogMetric> createRepeated() => PbList<LogMetric>();
   static LogMetric getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLogMetric();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLogMetric();
     return _defaultInstance;
   }
 
@@ -185,7 +184,7 @@ class LogMetric extends GeneratedMessage {
 class _ReadonlyLogMetric extends LogMetric with ReadonlyMessageMixin {}
 
 class ListLogMetricsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListLogMetricsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListLogMetricsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -199,14 +198,14 @@ class ListLogMetricsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListLogMetricsRequest clone() =>
-      new ListLogMetricsRequest()..mergeFromMessage(this);
+      ListLogMetricsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListLogMetricsRequest create() => new ListLogMetricsRequest();
+  static ListLogMetricsRequest create() => ListLogMetricsRequest();
   static PbList<ListLogMetricsRequest> createRepeated() =>
-      new PbList<ListLogMetricsRequest>();
+      PbList<ListLogMetricsRequest>();
   static ListLogMetricsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListLogMetricsRequest();
+      _defaultInstance = _ReadonlyListLogMetricsRequest();
     return _defaultInstance;
   }
 
@@ -245,7 +244,7 @@ class _ReadonlyListLogMetricsRequest extends ListLogMetricsRequest
     with ReadonlyMessageMixin {}
 
 class ListLogMetricsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListLogMetricsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListLogMetricsResponse')
     ..pp<LogMetric>(
         1, 'metrics', PbFieldType.PM, LogMetric.$checkItem, LogMetric.create)
     ..aOS(2, 'nextPageToken')
@@ -259,14 +258,14 @@ class ListLogMetricsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListLogMetricsResponse clone() =>
-      new ListLogMetricsResponse()..mergeFromMessage(this);
+      ListLogMetricsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListLogMetricsResponse create() => new ListLogMetricsResponse();
+  static ListLogMetricsResponse create() => ListLogMetricsResponse();
   static PbList<ListLogMetricsResponse> createRepeated() =>
-      new PbList<ListLogMetricsResponse>();
+      PbList<ListLogMetricsResponse>();
   static ListLogMetricsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListLogMetricsResponse();
+      _defaultInstance = _ReadonlyListLogMetricsResponse();
     return _defaultInstance;
   }
 
@@ -291,7 +290,7 @@ class _ReadonlyListLogMetricsResponse extends ListLogMetricsResponse
     with ReadonlyMessageMixin {}
 
 class GetLogMetricRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetLogMetricRequest')
+  static final BuilderInfo _i = BuilderInfo('GetLogMetricRequest')
     ..aOS(1, 'metricName')
     ..hasRequiredFields = false;
 
@@ -302,15 +301,14 @@ class GetLogMetricRequest extends GeneratedMessage {
   GetLogMetricRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetLogMetricRequest clone() =>
-      new GetLogMetricRequest()..mergeFromMessage(this);
+  GetLogMetricRequest clone() => GetLogMetricRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetLogMetricRequest create() => new GetLogMetricRequest();
+  static GetLogMetricRequest create() => GetLogMetricRequest();
   static PbList<GetLogMetricRequest> createRepeated() =>
-      new PbList<GetLogMetricRequest>();
+      PbList<GetLogMetricRequest>();
   static GetLogMetricRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetLogMetricRequest();
+      _defaultInstance = _ReadonlyGetLogMetricRequest();
     return _defaultInstance;
   }
 
@@ -332,7 +330,7 @@ class _ReadonlyGetLogMetricRequest extends GetLogMetricRequest
     with ReadonlyMessageMixin {}
 
 class CreateLogMetricRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateLogMetricRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateLogMetricRequest')
     ..aOS(1, 'parent')
     ..a<LogMetric>(
         2, 'metric', PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
@@ -346,14 +344,14 @@ class CreateLogMetricRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateLogMetricRequest clone() =>
-      new CreateLogMetricRequest()..mergeFromMessage(this);
+      CreateLogMetricRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateLogMetricRequest create() => new CreateLogMetricRequest();
+  static CreateLogMetricRequest create() => CreateLogMetricRequest();
   static PbList<CreateLogMetricRequest> createRepeated() =>
-      new PbList<CreateLogMetricRequest>();
+      PbList<CreateLogMetricRequest>();
   static CreateLogMetricRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateLogMetricRequest();
+      _defaultInstance = _ReadonlyCreateLogMetricRequest();
     return _defaultInstance;
   }
 
@@ -384,7 +382,7 @@ class _ReadonlyCreateLogMetricRequest extends CreateLogMetricRequest
     with ReadonlyMessageMixin {}
 
 class UpdateLogMetricRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateLogMetricRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateLogMetricRequest')
     ..aOS(1, 'metricName')
     ..a<LogMetric>(
         2, 'metric', PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
@@ -398,14 +396,14 @@ class UpdateLogMetricRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateLogMetricRequest clone() =>
-      new UpdateLogMetricRequest()..mergeFromMessage(this);
+      UpdateLogMetricRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateLogMetricRequest create() => new UpdateLogMetricRequest();
+  static UpdateLogMetricRequest create() => UpdateLogMetricRequest();
   static PbList<UpdateLogMetricRequest> createRepeated() =>
-      new PbList<UpdateLogMetricRequest>();
+      PbList<UpdateLogMetricRequest>();
   static UpdateLogMetricRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateLogMetricRequest();
+      _defaultInstance = _ReadonlyUpdateLogMetricRequest();
     return _defaultInstance;
   }
 
@@ -436,7 +434,7 @@ class _ReadonlyUpdateLogMetricRequest extends UpdateLogMetricRequest
     with ReadonlyMessageMixin {}
 
 class DeleteLogMetricRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteLogMetricRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteLogMetricRequest')
     ..aOS(1, 'metricName')
     ..hasRequiredFields = false;
 
@@ -448,14 +446,14 @@ class DeleteLogMetricRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteLogMetricRequest clone() =>
-      new DeleteLogMetricRequest()..mergeFromMessage(this);
+      DeleteLogMetricRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteLogMetricRequest create() => new DeleteLogMetricRequest();
+  static DeleteLogMetricRequest create() => DeleteLogMetricRequest();
   static PbList<DeleteLogMetricRequest> createRepeated() =>
-      new PbList<DeleteLogMetricRequest>();
+      PbList<DeleteLogMetricRequest>();
   static DeleteLogMetricRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteLogMetricRequest();
+      _defaultInstance = _ReadonlyDeleteLogMetricRequest();
     return _defaultInstance;
   }
 
@@ -483,35 +481,35 @@ class MetricsServiceV2Api {
 
   Future<ListLogMetricsResponse> listLogMetrics(
       ClientContext ctx, ListLogMetricsRequest request) {
-    var emptyResponse = new ListLogMetricsResponse();
+    var emptyResponse = ListLogMetricsResponse();
     return _client.invoke<ListLogMetricsResponse>(
         ctx, 'MetricsServiceV2', 'ListLogMetrics', request, emptyResponse);
   }
 
   Future<LogMetric> getLogMetric(
       ClientContext ctx, GetLogMetricRequest request) {
-    var emptyResponse = new LogMetric();
+    var emptyResponse = LogMetric();
     return _client.invoke<LogMetric>(
         ctx, 'MetricsServiceV2', 'GetLogMetric', request, emptyResponse);
   }
 
   Future<LogMetric> createLogMetric(
       ClientContext ctx, CreateLogMetricRequest request) {
-    var emptyResponse = new LogMetric();
+    var emptyResponse = LogMetric();
     return _client.invoke<LogMetric>(
         ctx, 'MetricsServiceV2', 'CreateLogMetric', request, emptyResponse);
   }
 
   Future<LogMetric> updateLogMetric(
       ClientContext ctx, UpdateLogMetricRequest request) {
-    var emptyResponse = new LogMetric();
+    var emptyResponse = LogMetric();
     return _client.invoke<LogMetric>(
         ctx, 'MetricsServiceV2', 'UpdateLogMetric', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteLogMetric(
       ClientContext ctx, DeleteLogMetricRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'MetricsServiceV2', 'DeleteLogMetric', request, emptyResponse);
   }

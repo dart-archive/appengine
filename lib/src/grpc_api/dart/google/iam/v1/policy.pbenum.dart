@@ -9,12 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class BindingDelta_Action extends ProtobufEnum {
   static const BindingDelta_Action ACTION_UNSPECIFIED =
-      const BindingDelta_Action._(0, 'ACTION_UNSPECIFIED');
-  static const BindingDelta_Action ADD = const BindingDelta_Action._(1, 'ADD');
-  static const BindingDelta_Action REMOVE =
-      const BindingDelta_Action._(2, 'REMOVE');
+      BindingDelta_Action._(0, 'ACTION_UNSPECIFIED');
+  static const BindingDelta_Action ADD = BindingDelta_Action._(1, 'ADD');
+  static const BindingDelta_Action REMOVE = BindingDelta_Action._(2, 'REMOVE');
 
-  static const List<BindingDelta_Action> values = const <BindingDelta_Action>[
+  static const List<BindingDelta_Action> values = <BindingDelta_Action>[
     ACTION_UNSPECIFIED,
     ADD,
     REMOVE,

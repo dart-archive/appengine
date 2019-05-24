@@ -17,7 +17,7 @@ import '../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
 import '../../../iam/v1/policy.pb.dart' as $google$iam$v1;
 
 class CreateDeviceRegistryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateDeviceRegistryRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateDeviceRegistryRequest')
     ..aOS(1, 'parent')
     ..a<DeviceRegistry>(2, 'deviceRegistry', PbFieldType.OM,
         DeviceRegistry.getDefault, DeviceRegistry.create)
@@ -31,15 +31,14 @@ class CreateDeviceRegistryRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateDeviceRegistryRequest clone() =>
-      new CreateDeviceRegistryRequest()..mergeFromMessage(this);
+      CreateDeviceRegistryRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateDeviceRegistryRequest create() =>
-      new CreateDeviceRegistryRequest();
+  static CreateDeviceRegistryRequest create() => CreateDeviceRegistryRequest();
   static PbList<CreateDeviceRegistryRequest> createRepeated() =>
-      new PbList<CreateDeviceRegistryRequest>();
+      PbList<CreateDeviceRegistryRequest>();
   static CreateDeviceRegistryRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateDeviceRegistryRequest();
+      _defaultInstance = _ReadonlyCreateDeviceRegistryRequest();
     return _defaultInstance;
   }
 
@@ -70,7 +69,7 @@ class _ReadonlyCreateDeviceRegistryRequest extends CreateDeviceRegistryRequest
     with ReadonlyMessageMixin {}
 
 class GetDeviceRegistryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDeviceRegistryRequest')
+  static final BuilderInfo _i = BuilderInfo('GetDeviceRegistryRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -82,14 +81,14 @@ class GetDeviceRegistryRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetDeviceRegistryRequest clone() =>
-      new GetDeviceRegistryRequest()..mergeFromMessage(this);
+      GetDeviceRegistryRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetDeviceRegistryRequest create() => new GetDeviceRegistryRequest();
+  static GetDeviceRegistryRequest create() => GetDeviceRegistryRequest();
   static PbList<GetDeviceRegistryRequest> createRepeated() =>
-      new PbList<GetDeviceRegistryRequest>();
+      PbList<GetDeviceRegistryRequest>();
   static GetDeviceRegistryRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDeviceRegistryRequest();
+      _defaultInstance = _ReadonlyGetDeviceRegistryRequest();
     return _defaultInstance;
   }
 
@@ -112,7 +111,7 @@ class _ReadonlyGetDeviceRegistryRequest extends GetDeviceRegistryRequest
     with ReadonlyMessageMixin {}
 
 class DeleteDeviceRegistryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteDeviceRegistryRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteDeviceRegistryRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -124,15 +123,14 @@ class DeleteDeviceRegistryRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteDeviceRegistryRequest clone() =>
-      new DeleteDeviceRegistryRequest()..mergeFromMessage(this);
+      DeleteDeviceRegistryRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteDeviceRegistryRequest create() =>
-      new DeleteDeviceRegistryRequest();
+  static DeleteDeviceRegistryRequest create() => DeleteDeviceRegistryRequest();
   static PbList<DeleteDeviceRegistryRequest> createRepeated() =>
-      new PbList<DeleteDeviceRegistryRequest>();
+      PbList<DeleteDeviceRegistryRequest>();
   static DeleteDeviceRegistryRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteDeviceRegistryRequest();
+      _defaultInstance = _ReadonlyDeleteDeviceRegistryRequest();
     return _defaultInstance;
   }
 
@@ -155,7 +153,7 @@ class _ReadonlyDeleteDeviceRegistryRequest extends DeleteDeviceRegistryRequest
     with ReadonlyMessageMixin {}
 
 class UpdateDeviceRegistryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateDeviceRegistryRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateDeviceRegistryRequest')
     ..a<DeviceRegistry>(1, 'deviceRegistry', PbFieldType.OM,
         DeviceRegistry.getDefault, DeviceRegistry.create)
     ..a<$google$protobuf.FieldMask>(
@@ -174,15 +172,14 @@ class UpdateDeviceRegistryRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateDeviceRegistryRequest clone() =>
-      new UpdateDeviceRegistryRequest()..mergeFromMessage(this);
+      UpdateDeviceRegistryRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateDeviceRegistryRequest create() =>
-      new UpdateDeviceRegistryRequest();
+  static UpdateDeviceRegistryRequest create() => UpdateDeviceRegistryRequest();
   static PbList<UpdateDeviceRegistryRequest> createRepeated() =>
-      new PbList<UpdateDeviceRegistryRequest>();
+      PbList<UpdateDeviceRegistryRequest>();
   static UpdateDeviceRegistryRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateDeviceRegistryRequest();
+      _defaultInstance = _ReadonlyUpdateDeviceRegistryRequest();
     return _defaultInstance;
   }
 
@@ -213,7 +210,7 @@ class _ReadonlyUpdateDeviceRegistryRequest extends UpdateDeviceRegistryRequest
     with ReadonlyMessageMixin {}
 
 class ListDeviceRegistriesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDeviceRegistriesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListDeviceRegistriesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -227,15 +224,14 @@ class ListDeviceRegistriesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDeviceRegistriesRequest clone() =>
-      new ListDeviceRegistriesRequest()..mergeFromMessage(this);
+      ListDeviceRegistriesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDeviceRegistriesRequest create() =>
-      new ListDeviceRegistriesRequest();
+  static ListDeviceRegistriesRequest create() => ListDeviceRegistriesRequest();
   static PbList<ListDeviceRegistriesRequest> createRepeated() =>
-      new PbList<ListDeviceRegistriesRequest>();
+      PbList<ListDeviceRegistriesRequest>();
   static ListDeviceRegistriesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDeviceRegistriesRequest();
+      _defaultInstance = _ReadonlyListDeviceRegistriesRequest();
     return _defaultInstance;
   }
 
@@ -274,7 +270,7 @@ class _ReadonlyListDeviceRegistriesRequest extends ListDeviceRegistriesRequest
     with ReadonlyMessageMixin {}
 
 class ListDeviceRegistriesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDeviceRegistriesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListDeviceRegistriesResponse')
     ..pp<DeviceRegistry>(1, 'deviceRegistries', PbFieldType.PM,
         DeviceRegistry.$checkItem, DeviceRegistry.create)
     ..aOS(2, 'nextPageToken')
@@ -288,15 +284,15 @@ class ListDeviceRegistriesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDeviceRegistriesResponse clone() =>
-      new ListDeviceRegistriesResponse()..mergeFromMessage(this);
+      ListDeviceRegistriesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListDeviceRegistriesResponse create() =>
-      new ListDeviceRegistriesResponse();
+      ListDeviceRegistriesResponse();
   static PbList<ListDeviceRegistriesResponse> createRepeated() =>
-      new PbList<ListDeviceRegistriesResponse>();
+      PbList<ListDeviceRegistriesResponse>();
   static ListDeviceRegistriesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDeviceRegistriesResponse();
+      _defaultInstance = _ReadonlyListDeviceRegistriesResponse();
     return _defaultInstance;
   }
 
@@ -321,7 +317,7 @@ class _ReadonlyListDeviceRegistriesResponse extends ListDeviceRegistriesResponse
     with ReadonlyMessageMixin {}
 
 class CreateDeviceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateDeviceRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateDeviceRequest')
     ..aOS(1, 'parent')
     ..a<Device>(2, 'device', PbFieldType.OM, Device.getDefault, Device.create)
     ..hasRequiredFields = false;
@@ -333,15 +329,14 @@ class CreateDeviceRequest extends GeneratedMessage {
   CreateDeviceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateDeviceRequest clone() =>
-      new CreateDeviceRequest()..mergeFromMessage(this);
+  CreateDeviceRequest clone() => CreateDeviceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateDeviceRequest create() => new CreateDeviceRequest();
+  static CreateDeviceRequest create() => CreateDeviceRequest();
   static PbList<CreateDeviceRequest> createRepeated() =>
-      new PbList<CreateDeviceRequest>();
+      PbList<CreateDeviceRequest>();
   static CreateDeviceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateDeviceRequest();
+      _defaultInstance = _ReadonlyCreateDeviceRequest();
     return _defaultInstance;
   }
 
@@ -371,7 +366,7 @@ class _ReadonlyCreateDeviceRequest extends CreateDeviceRequest
     with ReadonlyMessageMixin {}
 
 class GetDeviceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDeviceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetDeviceRequest')
     ..aOS(1, 'name')
     ..a<$google$protobuf.FieldMask>(
         2,
@@ -388,14 +383,14 @@ class GetDeviceRequest extends GeneratedMessage {
   GetDeviceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetDeviceRequest clone() => new GetDeviceRequest()..mergeFromMessage(this);
+  GetDeviceRequest clone() => GetDeviceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetDeviceRequest create() => new GetDeviceRequest();
+  static GetDeviceRequest create() => GetDeviceRequest();
   static PbList<GetDeviceRequest> createRepeated() =>
-      new PbList<GetDeviceRequest>();
+      PbList<GetDeviceRequest>();
   static GetDeviceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDeviceRequest();
+      _defaultInstance = _ReadonlyGetDeviceRequest();
     return _defaultInstance;
   }
 
@@ -425,7 +420,7 @@ class _ReadonlyGetDeviceRequest extends GetDeviceRequest
     with ReadonlyMessageMixin {}
 
 class UpdateDeviceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateDeviceRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateDeviceRequest')
     ..a<Device>(2, 'device', PbFieldType.OM, Device.getDefault, Device.create)
     ..a<$google$protobuf.FieldMask>(
         3,
@@ -442,15 +437,14 @@ class UpdateDeviceRequest extends GeneratedMessage {
   UpdateDeviceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateDeviceRequest clone() =>
-      new UpdateDeviceRequest()..mergeFromMessage(this);
+  UpdateDeviceRequest clone() => UpdateDeviceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateDeviceRequest create() => new UpdateDeviceRequest();
+  static UpdateDeviceRequest create() => UpdateDeviceRequest();
   static PbList<UpdateDeviceRequest> createRepeated() =>
-      new PbList<UpdateDeviceRequest>();
+      PbList<UpdateDeviceRequest>();
   static UpdateDeviceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateDeviceRequest();
+      _defaultInstance = _ReadonlyUpdateDeviceRequest();
     return _defaultInstance;
   }
 
@@ -480,7 +474,7 @@ class _ReadonlyUpdateDeviceRequest extends UpdateDeviceRequest
     with ReadonlyMessageMixin {}
 
 class DeleteDeviceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteDeviceRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteDeviceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -491,15 +485,14 @@ class DeleteDeviceRequest extends GeneratedMessage {
   DeleteDeviceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteDeviceRequest clone() =>
-      new DeleteDeviceRequest()..mergeFromMessage(this);
+  DeleteDeviceRequest clone() => DeleteDeviceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteDeviceRequest create() => new DeleteDeviceRequest();
+  static DeleteDeviceRequest create() => DeleteDeviceRequest();
   static PbList<DeleteDeviceRequest> createRepeated() =>
-      new PbList<DeleteDeviceRequest>();
+      PbList<DeleteDeviceRequest>();
   static DeleteDeviceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteDeviceRequest();
+      _defaultInstance = _ReadonlyDeleteDeviceRequest();
     return _defaultInstance;
   }
 
@@ -521,7 +514,7 @@ class _ReadonlyDeleteDeviceRequest extends DeleteDeviceRequest
     with ReadonlyMessageMixin {}
 
 class ListDevicesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDevicesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListDevicesRequest')
     ..aOS(1, 'parent')
     ..p<Int64>(2, 'deviceNumIds', PbFieldType.PU6)
     ..pPS(3, 'deviceIds')
@@ -542,15 +535,14 @@ class ListDevicesRequest extends GeneratedMessage {
   ListDevicesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListDevicesRequest clone() =>
-      new ListDevicesRequest()..mergeFromMessage(this);
+  ListDevicesRequest clone() => ListDevicesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDevicesRequest create() => new ListDevicesRequest();
+  static ListDevicesRequest create() => ListDevicesRequest();
   static PbList<ListDevicesRequest> createRepeated() =>
-      new PbList<ListDevicesRequest>();
+      PbList<ListDevicesRequest>();
   static ListDevicesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDevicesRequest();
+      _defaultInstance = _ReadonlyListDevicesRequest();
     return _defaultInstance;
   }
 
@@ -600,7 +592,7 @@ class _ReadonlyListDevicesRequest extends ListDevicesRequest
     with ReadonlyMessageMixin {}
 
 class ListDevicesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDevicesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListDevicesResponse')
     ..pp<Device>(1, 'devices', PbFieldType.PM, Device.$checkItem, Device.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -612,15 +604,14 @@ class ListDevicesResponse extends GeneratedMessage {
   ListDevicesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListDevicesResponse clone() =>
-      new ListDevicesResponse()..mergeFromMessage(this);
+  ListDevicesResponse clone() => ListDevicesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDevicesResponse create() => new ListDevicesResponse();
+  static ListDevicesResponse create() => ListDevicesResponse();
   static PbList<ListDevicesResponse> createRepeated() =>
-      new PbList<ListDevicesResponse>();
+      PbList<ListDevicesResponse>();
   static ListDevicesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDevicesResponse();
+      _defaultInstance = _ReadonlyListDevicesResponse();
     return _defaultInstance;
   }
 
@@ -644,12 +635,11 @@ class _ReadonlyListDevicesResponse extends ListDevicesResponse
     with ReadonlyMessageMixin {}
 
 class ModifyCloudToDeviceConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ModifyCloudToDeviceConfigRequest')
-        ..aOS(1, 'name')
-        ..aInt64(2, 'versionToUpdate')
-        ..a<List<int>>(3, 'binaryData', PbFieldType.OY)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ModifyCloudToDeviceConfigRequest')
+    ..aOS(1, 'name')
+    ..aInt64(2, 'versionToUpdate')
+    ..a<List<int>>(3, 'binaryData', PbFieldType.OY)
+    ..hasRequiredFields = false;
 
   ModifyCloudToDeviceConfigRequest() : super();
   ModifyCloudToDeviceConfigRequest.fromBuffer(List<int> i,
@@ -659,15 +649,15 @@ class ModifyCloudToDeviceConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ModifyCloudToDeviceConfigRequest clone() =>
-      new ModifyCloudToDeviceConfigRequest()..mergeFromMessage(this);
+      ModifyCloudToDeviceConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ModifyCloudToDeviceConfigRequest create() =>
-      new ModifyCloudToDeviceConfigRequest();
+      ModifyCloudToDeviceConfigRequest();
   static PbList<ModifyCloudToDeviceConfigRequest> createRepeated() =>
-      new PbList<ModifyCloudToDeviceConfigRequest>();
+      PbList<ModifyCloudToDeviceConfigRequest>();
   static ModifyCloudToDeviceConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyModifyCloudToDeviceConfigRequest();
+      _defaultInstance = _ReadonlyModifyCloudToDeviceConfigRequest();
     return _defaultInstance;
   }
 
@@ -706,11 +696,10 @@ class _ReadonlyModifyCloudToDeviceConfigRequest
     extends ModifyCloudToDeviceConfigRequest with ReadonlyMessageMixin {}
 
 class ListDeviceConfigVersionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListDeviceConfigVersionsRequest')
-        ..aOS(1, 'name')
-        ..a<int>(2, 'numVersions', PbFieldType.O3)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ListDeviceConfigVersionsRequest')
+    ..aOS(1, 'name')
+    ..a<int>(2, 'numVersions', PbFieldType.O3)
+    ..hasRequiredFields = false;
 
   ListDeviceConfigVersionsRequest() : super();
   ListDeviceConfigVersionsRequest.fromBuffer(List<int> i,
@@ -720,15 +709,15 @@ class ListDeviceConfigVersionsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDeviceConfigVersionsRequest clone() =>
-      new ListDeviceConfigVersionsRequest()..mergeFromMessage(this);
+      ListDeviceConfigVersionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListDeviceConfigVersionsRequest create() =>
-      new ListDeviceConfigVersionsRequest();
+      ListDeviceConfigVersionsRequest();
   static PbList<ListDeviceConfigVersionsRequest> createRepeated() =>
-      new PbList<ListDeviceConfigVersionsRequest>();
+      PbList<ListDeviceConfigVersionsRequest>();
   static ListDeviceConfigVersionsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDeviceConfigVersionsRequest();
+      _defaultInstance = _ReadonlyListDeviceConfigVersionsRequest();
     return _defaultInstance;
   }
 
@@ -759,11 +748,10 @@ class _ReadonlyListDeviceConfigVersionsRequest
     extends ListDeviceConfigVersionsRequest with ReadonlyMessageMixin {}
 
 class ListDeviceConfigVersionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListDeviceConfigVersionsResponse')
-        ..pp<DeviceConfig>(1, 'deviceConfigs', PbFieldType.PM,
-            DeviceConfig.$checkItem, DeviceConfig.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ListDeviceConfigVersionsResponse')
+    ..pp<DeviceConfig>(1, 'deviceConfigs', PbFieldType.PM,
+        DeviceConfig.$checkItem, DeviceConfig.create)
+    ..hasRequiredFields = false;
 
   ListDeviceConfigVersionsResponse() : super();
   ListDeviceConfigVersionsResponse.fromBuffer(List<int> i,
@@ -773,15 +761,15 @@ class ListDeviceConfigVersionsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDeviceConfigVersionsResponse clone() =>
-      new ListDeviceConfigVersionsResponse()..mergeFromMessage(this);
+      ListDeviceConfigVersionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListDeviceConfigVersionsResponse create() =>
-      new ListDeviceConfigVersionsResponse();
+      ListDeviceConfigVersionsResponse();
   static PbList<ListDeviceConfigVersionsResponse> createRepeated() =>
-      new PbList<ListDeviceConfigVersionsResponse>();
+      PbList<ListDeviceConfigVersionsResponse>();
   static ListDeviceConfigVersionsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDeviceConfigVersionsResponse();
+      _defaultInstance = _ReadonlyListDeviceConfigVersionsResponse();
     return _defaultInstance;
   }
 
@@ -798,7 +786,7 @@ class _ReadonlyListDeviceConfigVersionsResponse
     extends ListDeviceConfigVersionsResponse with ReadonlyMessageMixin {}
 
 class ListDeviceStatesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDeviceStatesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListDeviceStatesRequest')
     ..aOS(1, 'name')
     ..a<int>(2, 'numStates', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -811,14 +799,14 @@ class ListDeviceStatesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDeviceStatesRequest clone() =>
-      new ListDeviceStatesRequest()..mergeFromMessage(this);
+      ListDeviceStatesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDeviceStatesRequest create() => new ListDeviceStatesRequest();
+  static ListDeviceStatesRequest create() => ListDeviceStatesRequest();
   static PbList<ListDeviceStatesRequest> createRepeated() =>
-      new PbList<ListDeviceStatesRequest>();
+      PbList<ListDeviceStatesRequest>();
   static ListDeviceStatesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDeviceStatesRequest();
+      _defaultInstance = _ReadonlyListDeviceStatesRequest();
     return _defaultInstance;
   }
 
@@ -849,7 +837,7 @@ class _ReadonlyListDeviceStatesRequest extends ListDeviceStatesRequest
     with ReadonlyMessageMixin {}
 
 class ListDeviceStatesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDeviceStatesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListDeviceStatesResponse')
     ..pp<DeviceState>(1, 'deviceStates', PbFieldType.PM, DeviceState.$checkItem,
         DeviceState.create)
     ..hasRequiredFields = false;
@@ -862,14 +850,14 @@ class ListDeviceStatesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDeviceStatesResponse clone() =>
-      new ListDeviceStatesResponse()..mergeFromMessage(this);
+      ListDeviceStatesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDeviceStatesResponse create() => new ListDeviceStatesResponse();
+  static ListDeviceStatesResponse create() => ListDeviceStatesResponse();
   static PbList<ListDeviceStatesResponse> createRepeated() =>
-      new PbList<ListDeviceStatesResponse>();
+      PbList<ListDeviceStatesResponse>();
   static ListDeviceStatesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDeviceStatesResponse();
+      _defaultInstance = _ReadonlyListDeviceStatesResponse();
     return _defaultInstance;
   }
 
@@ -891,109 +879,109 @@ class DeviceManagerApi {
 
   Future<DeviceRegistry> createDeviceRegistry(
       ClientContext ctx, CreateDeviceRegistryRequest request) {
-    var emptyResponse = new DeviceRegistry();
+    var emptyResponse = DeviceRegistry();
     return _client.invoke<DeviceRegistry>(
         ctx, 'DeviceManager', 'CreateDeviceRegistry', request, emptyResponse);
   }
 
   Future<DeviceRegistry> getDeviceRegistry(
       ClientContext ctx, GetDeviceRegistryRequest request) {
-    var emptyResponse = new DeviceRegistry();
+    var emptyResponse = DeviceRegistry();
     return _client.invoke<DeviceRegistry>(
         ctx, 'DeviceManager', 'GetDeviceRegistry', request, emptyResponse);
   }
 
   Future<DeviceRegistry> updateDeviceRegistry(
       ClientContext ctx, UpdateDeviceRegistryRequest request) {
-    var emptyResponse = new DeviceRegistry();
+    var emptyResponse = DeviceRegistry();
     return _client.invoke<DeviceRegistry>(
         ctx, 'DeviceManager', 'UpdateDeviceRegistry', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteDeviceRegistry(
       ClientContext ctx, DeleteDeviceRegistryRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'DeviceManager', 'DeleteDeviceRegistry', request, emptyResponse);
   }
 
   Future<ListDeviceRegistriesResponse> listDeviceRegistries(
       ClientContext ctx, ListDeviceRegistriesRequest request) {
-    var emptyResponse = new ListDeviceRegistriesResponse();
+    var emptyResponse = ListDeviceRegistriesResponse();
     return _client.invoke<ListDeviceRegistriesResponse>(
         ctx, 'DeviceManager', 'ListDeviceRegistries', request, emptyResponse);
   }
 
   Future<Device> createDevice(ClientContext ctx, CreateDeviceRequest request) {
-    var emptyResponse = new Device();
+    var emptyResponse = Device();
     return _client.invoke<Device>(
         ctx, 'DeviceManager', 'CreateDevice', request, emptyResponse);
   }
 
   Future<Device> getDevice(ClientContext ctx, GetDeviceRequest request) {
-    var emptyResponse = new Device();
+    var emptyResponse = Device();
     return _client.invoke<Device>(
         ctx, 'DeviceManager', 'GetDevice', request, emptyResponse);
   }
 
   Future<Device> updateDevice(ClientContext ctx, UpdateDeviceRequest request) {
-    var emptyResponse = new Device();
+    var emptyResponse = Device();
     return _client.invoke<Device>(
         ctx, 'DeviceManager', 'UpdateDevice', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteDevice(
       ClientContext ctx, DeleteDeviceRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'DeviceManager', 'DeleteDevice', request, emptyResponse);
   }
 
   Future<ListDevicesResponse> listDevices(
       ClientContext ctx, ListDevicesRequest request) {
-    var emptyResponse = new ListDevicesResponse();
+    var emptyResponse = ListDevicesResponse();
     return _client.invoke<ListDevicesResponse>(
         ctx, 'DeviceManager', 'ListDevices', request, emptyResponse);
   }
 
   Future<DeviceConfig> modifyCloudToDeviceConfig(
       ClientContext ctx, ModifyCloudToDeviceConfigRequest request) {
-    var emptyResponse = new DeviceConfig();
+    var emptyResponse = DeviceConfig();
     return _client.invoke<DeviceConfig>(ctx, 'DeviceManager',
         'ModifyCloudToDeviceConfig', request, emptyResponse);
   }
 
   Future<ListDeviceConfigVersionsResponse> listDeviceConfigVersions(
       ClientContext ctx, ListDeviceConfigVersionsRequest request) {
-    var emptyResponse = new ListDeviceConfigVersionsResponse();
+    var emptyResponse = ListDeviceConfigVersionsResponse();
     return _client.invoke<ListDeviceConfigVersionsResponse>(ctx,
         'DeviceManager', 'ListDeviceConfigVersions', request, emptyResponse);
   }
 
   Future<ListDeviceStatesResponse> listDeviceStates(
       ClientContext ctx, ListDeviceStatesRequest request) {
-    var emptyResponse = new ListDeviceStatesResponse();
+    var emptyResponse = ListDeviceStatesResponse();
     return _client.invoke<ListDeviceStatesResponse>(
         ctx, 'DeviceManager', 'ListDeviceStates', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> setIamPolicy(
       ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'DeviceManager', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> getIamPolicy(
       ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'DeviceManager', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
     return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
         ctx, 'DeviceManager', 'TestIamPermissions', request, emptyResponse);
   }

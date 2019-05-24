@@ -10,7 +10,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class PosixAccount extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PosixAccount')
+  static final BuilderInfo _i = BuilderInfo('PosixAccount')
     ..aOB(1, 'primary')
     ..aOS(2, 'username')
     ..aInt64(3, 'uid')
@@ -29,13 +29,12 @@ class PosixAccount extends GeneratedMessage {
   PosixAccount.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PosixAccount clone() => new PosixAccount()..mergeFromMessage(this);
+  PosixAccount clone() => PosixAccount()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PosixAccount create() => new PosixAccount();
-  static PbList<PosixAccount> createRepeated() => new PbList<PosixAccount>();
+  static PosixAccount create() => PosixAccount();
+  static PbList<PosixAccount> createRepeated() => PbList<PosixAccount>();
   static PosixAccount getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPosixAccount();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPosixAccount();
     return _defaultInstance;
   }
 
@@ -120,7 +119,7 @@ class PosixAccount extends GeneratedMessage {
 class _ReadonlyPosixAccount extends PosixAccount with ReadonlyMessageMixin {}
 
 class SshPublicKey extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SshPublicKey')
+  static final BuilderInfo _i = BuilderInfo('SshPublicKey')
     ..aOS(1, 'key')
     ..aInt64(2, 'expirationTimeUsec')
     ..aOS(3, 'fingerprint')
@@ -133,13 +132,12 @@ class SshPublicKey extends GeneratedMessage {
   SshPublicKey.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SshPublicKey clone() => new SshPublicKey()..mergeFromMessage(this);
+  SshPublicKey clone() => SshPublicKey()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SshPublicKey create() => new SshPublicKey();
-  static PbList<SshPublicKey> createRepeated() => new PbList<SshPublicKey>();
+  static SshPublicKey create() => SshPublicKey();
+  static PbList<SshPublicKey> createRepeated() => PbList<SshPublicKey>();
   static SshPublicKey getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySshPublicKey();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySshPublicKey();
     return _defaultInstance;
   }
 

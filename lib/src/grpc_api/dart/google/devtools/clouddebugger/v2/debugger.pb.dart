@@ -15,7 +15,7 @@ import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'data.pbenum.dart';
 
 class SetBreakpointRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetBreakpointRequest')
+  static final BuilderInfo _i = BuilderInfo('SetBreakpointRequest')
     ..aOS(1, 'debuggeeId')
     ..a<Breakpoint>(2, 'breakpoint', PbFieldType.OM, Breakpoint.getDefault,
         Breakpoint.create)
@@ -30,14 +30,14 @@ class SetBreakpointRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetBreakpointRequest clone() =>
-      new SetBreakpointRequest()..mergeFromMessage(this);
+      SetBreakpointRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SetBreakpointRequest create() => new SetBreakpointRequest();
+  static SetBreakpointRequest create() => SetBreakpointRequest();
   static PbList<SetBreakpointRequest> createRepeated() =>
-      new PbList<SetBreakpointRequest>();
+      PbList<SetBreakpointRequest>();
   static SetBreakpointRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetBreakpointRequest();
+      _defaultInstance = _ReadonlySetBreakpointRequest();
     return _defaultInstance;
   }
 
@@ -75,7 +75,7 @@ class _ReadonlySetBreakpointRequest extends SetBreakpointRequest
     with ReadonlyMessageMixin {}
 
 class SetBreakpointResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetBreakpointResponse')
+  static final BuilderInfo _i = BuilderInfo('SetBreakpointResponse')
     ..a<Breakpoint>(1, 'breakpoint', PbFieldType.OM, Breakpoint.getDefault,
         Breakpoint.create)
     ..hasRequiredFields = false;
@@ -88,14 +88,14 @@ class SetBreakpointResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetBreakpointResponse clone() =>
-      new SetBreakpointResponse()..mergeFromMessage(this);
+      SetBreakpointResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SetBreakpointResponse create() => new SetBreakpointResponse();
+  static SetBreakpointResponse create() => SetBreakpointResponse();
   static PbList<SetBreakpointResponse> createRepeated() =>
-      new PbList<SetBreakpointResponse>();
+      PbList<SetBreakpointResponse>();
   static SetBreakpointResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetBreakpointResponse();
+      _defaultInstance = _ReadonlySetBreakpointResponse();
     return _defaultInstance;
   }
 
@@ -118,7 +118,7 @@ class _ReadonlySetBreakpointResponse extends SetBreakpointResponse
     with ReadonlyMessageMixin {}
 
 class GetBreakpointRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetBreakpointRequest')
+  static final BuilderInfo _i = BuilderInfo('GetBreakpointRequest')
     ..aOS(1, 'debuggeeId')
     ..aOS(2, 'breakpointId')
     ..aOS(4, 'clientVersion')
@@ -132,14 +132,14 @@ class GetBreakpointRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetBreakpointRequest clone() =>
-      new GetBreakpointRequest()..mergeFromMessage(this);
+      GetBreakpointRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetBreakpointRequest create() => new GetBreakpointRequest();
+  static GetBreakpointRequest create() => GetBreakpointRequest();
   static PbList<GetBreakpointRequest> createRepeated() =>
-      new PbList<GetBreakpointRequest>();
+      PbList<GetBreakpointRequest>();
   static GetBreakpointRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetBreakpointRequest();
+      _defaultInstance = _ReadonlyGetBreakpointRequest();
     return _defaultInstance;
   }
 
@@ -177,7 +177,7 @@ class _ReadonlyGetBreakpointRequest extends GetBreakpointRequest
     with ReadonlyMessageMixin {}
 
 class GetBreakpointResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetBreakpointResponse')
+  static final BuilderInfo _i = BuilderInfo('GetBreakpointResponse')
     ..a<Breakpoint>(1, 'breakpoint', PbFieldType.OM, Breakpoint.getDefault,
         Breakpoint.create)
     ..hasRequiredFields = false;
@@ -190,14 +190,14 @@ class GetBreakpointResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetBreakpointResponse clone() =>
-      new GetBreakpointResponse()..mergeFromMessage(this);
+      GetBreakpointResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetBreakpointResponse create() => new GetBreakpointResponse();
+  static GetBreakpointResponse create() => GetBreakpointResponse();
   static PbList<GetBreakpointResponse> createRepeated() =>
-      new PbList<GetBreakpointResponse>();
+      PbList<GetBreakpointResponse>();
   static GetBreakpointResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetBreakpointResponse();
+      _defaultInstance = _ReadonlyGetBreakpointResponse();
     return _defaultInstance;
   }
 
@@ -220,7 +220,7 @@ class _ReadonlyGetBreakpointResponse extends GetBreakpointResponse
     with ReadonlyMessageMixin {}
 
 class DeleteBreakpointRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteBreakpointRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteBreakpointRequest')
     ..aOS(1, 'debuggeeId')
     ..aOS(2, 'breakpointId')
     ..aOS(3, 'clientVersion')
@@ -234,14 +234,14 @@ class DeleteBreakpointRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteBreakpointRequest clone() =>
-      new DeleteBreakpointRequest()..mergeFromMessage(this);
+      DeleteBreakpointRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteBreakpointRequest create() => new DeleteBreakpointRequest();
+  static DeleteBreakpointRequest create() => DeleteBreakpointRequest();
   static PbList<DeleteBreakpointRequest> createRepeated() =>
-      new PbList<DeleteBreakpointRequest>();
+      PbList<DeleteBreakpointRequest>();
   static DeleteBreakpointRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteBreakpointRequest();
+      _defaultInstance = _ReadonlyDeleteBreakpointRequest();
     return _defaultInstance;
   }
 
@@ -281,7 +281,7 @@ class _ReadonlyDeleteBreakpointRequest extends DeleteBreakpointRequest
 
 class ListBreakpointsRequest_BreakpointActionValue extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ListBreakpointsRequest_BreakpointActionValue')
+      BuilderInfo('ListBreakpointsRequest_BreakpointActionValue')
         ..e<Breakpoint_Action>(
             1,
             'value',
@@ -299,18 +299,17 @@ class ListBreakpointsRequest_BreakpointActionValue extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListBreakpointsRequest_BreakpointActionValue clone() =>
-      new ListBreakpointsRequest_BreakpointActionValue()
-        ..mergeFromMessage(this);
+      ListBreakpointsRequest_BreakpointActionValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListBreakpointsRequest_BreakpointActionValue create() =>
-      new ListBreakpointsRequest_BreakpointActionValue();
+      ListBreakpointsRequest_BreakpointActionValue();
   static PbList<ListBreakpointsRequest_BreakpointActionValue>
       createRepeated() =>
-          new PbList<ListBreakpointsRequest_BreakpointActionValue>();
+          PbList<ListBreakpointsRequest_BreakpointActionValue>();
   static ListBreakpointsRequest_BreakpointActionValue getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyListBreakpointsRequest_BreakpointActionValue();
+          _ReadonlyListBreakpointsRequest_BreakpointActionValue();
     return _defaultInstance;
   }
 
@@ -334,7 +333,7 @@ class _ReadonlyListBreakpointsRequest_BreakpointActionValue
     with ReadonlyMessageMixin {}
 
 class ListBreakpointsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListBreakpointsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListBreakpointsRequest')
     ..aOS(1, 'debuggeeId')
     ..aOB(2, 'includeAllUsers')
     ..aOB(3, 'includeInactive')
@@ -357,14 +356,14 @@ class ListBreakpointsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListBreakpointsRequest clone() =>
-      new ListBreakpointsRequest()..mergeFromMessage(this);
+      ListBreakpointsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListBreakpointsRequest create() => new ListBreakpointsRequest();
+  static ListBreakpointsRequest create() => ListBreakpointsRequest();
   static PbList<ListBreakpointsRequest> createRepeated() =>
-      new PbList<ListBreakpointsRequest>();
+      PbList<ListBreakpointsRequest>();
   static ListBreakpointsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListBreakpointsRequest();
+      _defaultInstance = _ReadonlyListBreakpointsRequest();
     return _defaultInstance;
   }
 
@@ -435,7 +434,7 @@ class _ReadonlyListBreakpointsRequest extends ListBreakpointsRequest
     with ReadonlyMessageMixin {}
 
 class ListBreakpointsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListBreakpointsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListBreakpointsResponse')
     ..pp<Breakpoint>(1, 'breakpoints', PbFieldType.PM, Breakpoint.$checkItem,
         Breakpoint.create)
     ..aOS(2, 'nextWaitToken')
@@ -449,14 +448,14 @@ class ListBreakpointsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListBreakpointsResponse clone() =>
-      new ListBreakpointsResponse()..mergeFromMessage(this);
+      ListBreakpointsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListBreakpointsResponse create() => new ListBreakpointsResponse();
+  static ListBreakpointsResponse create() => ListBreakpointsResponse();
   static PbList<ListBreakpointsResponse> createRepeated() =>
-      new PbList<ListBreakpointsResponse>();
+      PbList<ListBreakpointsResponse>();
   static ListBreakpointsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListBreakpointsResponse();
+      _defaultInstance = _ReadonlyListBreakpointsResponse();
     return _defaultInstance;
   }
 
@@ -481,7 +480,7 @@ class _ReadonlyListBreakpointsResponse extends ListBreakpointsResponse
     with ReadonlyMessageMixin {}
 
 class ListDebuggeesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDebuggeesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListDebuggeesRequest')
     ..aOS(2, 'project')
     ..aOB(3, 'includeInactive')
     ..aOS(4, 'clientVersion')
@@ -495,14 +494,14 @@ class ListDebuggeesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDebuggeesRequest clone() =>
-      new ListDebuggeesRequest()..mergeFromMessage(this);
+      ListDebuggeesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDebuggeesRequest create() => new ListDebuggeesRequest();
+  static ListDebuggeesRequest create() => ListDebuggeesRequest();
   static PbList<ListDebuggeesRequest> createRepeated() =>
-      new PbList<ListDebuggeesRequest>();
+      PbList<ListDebuggeesRequest>();
   static ListDebuggeesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDebuggeesRequest();
+      _defaultInstance = _ReadonlyListDebuggeesRequest();
     return _defaultInstance;
   }
 
@@ -540,7 +539,7 @@ class _ReadonlyListDebuggeesRequest extends ListDebuggeesRequest
     with ReadonlyMessageMixin {}
 
 class ListDebuggeesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDebuggeesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListDebuggeesResponse')
     ..pp<Debuggee>(
         1, 'debuggees', PbFieldType.PM, Debuggee.$checkItem, Debuggee.create)
     ..hasRequiredFields = false;
@@ -553,14 +552,14 @@ class ListDebuggeesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDebuggeesResponse clone() =>
-      new ListDebuggeesResponse()..mergeFromMessage(this);
+      ListDebuggeesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDebuggeesResponse create() => new ListDebuggeesResponse();
+  static ListDebuggeesResponse create() => ListDebuggeesResponse();
   static PbList<ListDebuggeesResponse> createRepeated() =>
-      new PbList<ListDebuggeesResponse>();
+      PbList<ListDebuggeesResponse>();
   static ListDebuggeesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDebuggeesResponse();
+      _defaultInstance = _ReadonlyListDebuggeesResponse();
     return _defaultInstance;
   }
 
@@ -582,35 +581,35 @@ class Debugger2Api {
 
   Future<SetBreakpointResponse> setBreakpoint(
       ClientContext ctx, SetBreakpointRequest request) {
-    var emptyResponse = new SetBreakpointResponse();
+    var emptyResponse = SetBreakpointResponse();
     return _client.invoke<SetBreakpointResponse>(
         ctx, 'Debugger2', 'SetBreakpoint', request, emptyResponse);
   }
 
   Future<GetBreakpointResponse> getBreakpoint(
       ClientContext ctx, GetBreakpointRequest request) {
-    var emptyResponse = new GetBreakpointResponse();
+    var emptyResponse = GetBreakpointResponse();
     return _client.invoke<GetBreakpointResponse>(
         ctx, 'Debugger2', 'GetBreakpoint', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteBreakpoint(
       ClientContext ctx, DeleteBreakpointRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Debugger2', 'DeleteBreakpoint', request, emptyResponse);
   }
 
   Future<ListBreakpointsResponse> listBreakpoints(
       ClientContext ctx, ListBreakpointsRequest request) {
-    var emptyResponse = new ListBreakpointsResponse();
+    var emptyResponse = ListBreakpointsResponse();
     return _client.invoke<ListBreakpointsResponse>(
         ctx, 'Debugger2', 'ListBreakpoints', request, emptyResponse);
   }
 
   Future<ListDebuggeesResponse> listDebuggees(
       ClientContext ctx, ListDebuggeesRequest request) {
-    var emptyResponse = new ListDebuggeesResponse();
+    var emptyResponse = ListDebuggeesResponse();
     return _client.invoke<ListDebuggeesResponse>(
         ctx, 'Debugger2', 'ListDebuggees', request, emptyResponse);
   }

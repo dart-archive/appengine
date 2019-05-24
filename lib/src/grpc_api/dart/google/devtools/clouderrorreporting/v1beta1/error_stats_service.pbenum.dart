@@ -9,13 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class TimedCountAlignment extends ProtobufEnum {
   static const TimedCountAlignment ERROR_COUNT_ALIGNMENT_UNSPECIFIED =
-      const TimedCountAlignment._(0, 'ERROR_COUNT_ALIGNMENT_UNSPECIFIED');
+      TimedCountAlignment._(0, 'ERROR_COUNT_ALIGNMENT_UNSPECIFIED');
   static const TimedCountAlignment ALIGNMENT_EQUAL_ROUNDED =
-      const TimedCountAlignment._(1, 'ALIGNMENT_EQUAL_ROUNDED');
+      TimedCountAlignment._(1, 'ALIGNMENT_EQUAL_ROUNDED');
   static const TimedCountAlignment ALIGNMENT_EQUAL_AT_END =
-      const TimedCountAlignment._(2, 'ALIGNMENT_EQUAL_AT_END');
+      TimedCountAlignment._(2, 'ALIGNMENT_EQUAL_AT_END');
 
-  static const List<TimedCountAlignment> values = const <TimedCountAlignment>[
+  static const List<TimedCountAlignment> values = <TimedCountAlignment>[
     ERROR_COUNT_ALIGNMENT_UNSPECIFIED,
     ALIGNMENT_EQUAL_ROUNDED,
     ALIGNMENT_EQUAL_AT_END,
@@ -33,17 +33,16 @@ class TimedCountAlignment extends ProtobufEnum {
 
 class ErrorGroupOrder extends ProtobufEnum {
   static const ErrorGroupOrder GROUP_ORDER_UNSPECIFIED =
-      const ErrorGroupOrder._(0, 'GROUP_ORDER_UNSPECIFIED');
-  static const ErrorGroupOrder COUNT_DESC =
-      const ErrorGroupOrder._(1, 'COUNT_DESC');
+      ErrorGroupOrder._(0, 'GROUP_ORDER_UNSPECIFIED');
+  static const ErrorGroupOrder COUNT_DESC = ErrorGroupOrder._(1, 'COUNT_DESC');
   static const ErrorGroupOrder LAST_SEEN_DESC =
-      const ErrorGroupOrder._(2, 'LAST_SEEN_DESC');
+      ErrorGroupOrder._(2, 'LAST_SEEN_DESC');
   static const ErrorGroupOrder CREATED_DESC =
-      const ErrorGroupOrder._(3, 'CREATED_DESC');
+      ErrorGroupOrder._(3, 'CREATED_DESC');
   static const ErrorGroupOrder AFFECTED_USERS_DESC =
-      const ErrorGroupOrder._(4, 'AFFECTED_USERS_DESC');
+      ErrorGroupOrder._(4, 'AFFECTED_USERS_DESC');
 
-  static const List<ErrorGroupOrder> values = const <ErrorGroupOrder>[
+  static const List<ErrorGroupOrder> values = <ErrorGroupOrder>[
     GROUP_ORDER_UNSPECIFIED,
     COUNT_DESC,
     LAST_SEEN_DESC,
@@ -63,20 +62,19 @@ class ErrorGroupOrder extends ProtobufEnum {
 
 class QueryTimeRange_Period extends ProtobufEnum {
   static const QueryTimeRange_Period PERIOD_UNSPECIFIED =
-      const QueryTimeRange_Period._(0, 'PERIOD_UNSPECIFIED');
+      QueryTimeRange_Period._(0, 'PERIOD_UNSPECIFIED');
   static const QueryTimeRange_Period PERIOD_1_HOUR =
-      const QueryTimeRange_Period._(1, 'PERIOD_1_HOUR');
+      QueryTimeRange_Period._(1, 'PERIOD_1_HOUR');
   static const QueryTimeRange_Period PERIOD_6_HOURS =
-      const QueryTimeRange_Period._(2, 'PERIOD_6_HOURS');
+      QueryTimeRange_Period._(2, 'PERIOD_6_HOURS');
   static const QueryTimeRange_Period PERIOD_1_DAY =
-      const QueryTimeRange_Period._(3, 'PERIOD_1_DAY');
+      QueryTimeRange_Period._(3, 'PERIOD_1_DAY');
   static const QueryTimeRange_Period PERIOD_1_WEEK =
-      const QueryTimeRange_Period._(4, 'PERIOD_1_WEEK');
+      QueryTimeRange_Period._(4, 'PERIOD_1_WEEK');
   static const QueryTimeRange_Period PERIOD_30_DAYS =
-      const QueryTimeRange_Period._(5, 'PERIOD_30_DAYS');
+      QueryTimeRange_Period._(5, 'PERIOD_30_DAYS');
 
-  static const List<QueryTimeRange_Period> values =
-      const <QueryTimeRange_Period>[
+  static const List<QueryTimeRange_Period> values = <QueryTimeRange_Period>[
     PERIOD_UNSPECIFIED,
     PERIOD_1_HOUR,
     PERIOD_6_HOURS,

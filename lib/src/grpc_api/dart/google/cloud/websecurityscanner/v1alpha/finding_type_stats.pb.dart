@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import 'finding.pbenum.dart';
 
 class FindingTypeStats extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FindingTypeStats')
+  static final BuilderInfo _i = BuilderInfo('FindingTypeStats')
     ..e<Finding_FindingType>(
         1,
         'findingType',
@@ -29,14 +29,14 @@ class FindingTypeStats extends GeneratedMessage {
   FindingTypeStats.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FindingTypeStats clone() => new FindingTypeStats()..mergeFromMessage(this);
+  FindingTypeStats clone() => FindingTypeStats()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FindingTypeStats create() => new FindingTypeStats();
+  static FindingTypeStats create() => FindingTypeStats();
   static PbList<FindingTypeStats> createRepeated() =>
-      new PbList<FindingTypeStats>();
+      PbList<FindingTypeStats>();
   static FindingTypeStats getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFindingTypeStats();
+      _defaultInstance = _ReadonlyFindingTypeStats();
     return _defaultInstance;
   }
 

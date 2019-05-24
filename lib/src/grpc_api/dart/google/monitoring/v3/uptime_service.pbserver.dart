@@ -31,19 +31,19 @@ abstract class UptimeCheckServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListUptimeCheckConfigs':
-        return new ListUptimeCheckConfigsRequest();
+        return ListUptimeCheckConfigsRequest();
       case 'GetUptimeCheckConfig':
-        return new GetUptimeCheckConfigRequest();
+        return GetUptimeCheckConfigRequest();
       case 'CreateUptimeCheckConfig':
-        return new CreateUptimeCheckConfigRequest();
+        return CreateUptimeCheckConfigRequest();
       case 'UpdateUptimeCheckConfig':
-        return new UpdateUptimeCheckConfigRequest();
+        return UpdateUptimeCheckConfigRequest();
       case 'DeleteUptimeCheckConfig':
-        return new DeleteUptimeCheckConfigRequest();
+        return DeleteUptimeCheckConfigRequest();
       case 'ListUptimeCheckIps':
-        return new ListUptimeCheckIpsRequest();
+        return ListUptimeCheckIpsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -63,7 +63,7 @@ abstract class UptimeCheckServiceBase extends GeneratedService {
       case 'ListUptimeCheckIps':
         return this.listUptimeCheckIps(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

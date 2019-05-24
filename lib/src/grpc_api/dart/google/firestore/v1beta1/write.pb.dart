@@ -17,7 +17,7 @@ import 'write.pbenum.dart';
 export 'write.pbenum.dart';
 
 class Write extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Write')
+  static final BuilderInfo _i = BuilderInfo('Write')
     ..a<Document>(
         1, 'update', PbFieldType.OM, Document.getDefault, Document.create)
     ..aOS(2, 'delete')
@@ -34,12 +34,12 @@ class Write extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Write.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Write clone() => new Write()..mergeFromMessage(this);
+  Write clone() => Write()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Write create() => new Write();
-  static PbList<Write> createRepeated() => new PbList<Write>();
+  static Write create() => Write();
+  static PbList<Write> createRepeated() => PbList<Write>();
   static Write getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWrite();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWrite();
     return _defaultInstance;
   }
 
@@ -92,8 +92,7 @@ class Write extends GeneratedMessage {
 class _ReadonlyWrite extends Write with ReadonlyMessageMixin {}
 
 class DocumentTransform_FieldTransform extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo(
-      'DocumentTransform_FieldTransform')
+  static final BuilderInfo _i = BuilderInfo('DocumentTransform_FieldTransform')
     ..aOS(1, 'fieldPath')
     ..e<DocumentTransform_FieldTransform_ServerValue>(
         2,
@@ -112,15 +111,15 @@ class DocumentTransform_FieldTransform extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DocumentTransform_FieldTransform clone() =>
-      new DocumentTransform_FieldTransform()..mergeFromMessage(this);
+      DocumentTransform_FieldTransform()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DocumentTransform_FieldTransform create() =>
-      new DocumentTransform_FieldTransform();
+      DocumentTransform_FieldTransform();
   static PbList<DocumentTransform_FieldTransform> createRepeated() =>
-      new PbList<DocumentTransform_FieldTransform>();
+      PbList<DocumentTransform_FieldTransform>();
   static DocumentTransform_FieldTransform getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentTransform_FieldTransform();
+      _defaultInstance = _ReadonlyDocumentTransform_FieldTransform();
     return _defaultInstance;
   }
 
@@ -152,7 +151,7 @@ class _ReadonlyDocumentTransform_FieldTransform
     extends DocumentTransform_FieldTransform with ReadonlyMessageMixin {}
 
 class DocumentTransform extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DocumentTransform')
+  static final BuilderInfo _i = BuilderInfo('DocumentTransform')
     ..aOS(1, 'document')
     ..pp<DocumentTransform_FieldTransform>(
         2,
@@ -169,14 +168,14 @@ class DocumentTransform extends GeneratedMessage {
   DocumentTransform.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DocumentTransform clone() => new DocumentTransform()..mergeFromMessage(this);
+  DocumentTransform clone() => DocumentTransform()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DocumentTransform create() => new DocumentTransform();
+  static DocumentTransform create() => DocumentTransform();
   static PbList<DocumentTransform> createRepeated() =>
-      new PbList<DocumentTransform>();
+      PbList<DocumentTransform>();
   static DocumentTransform getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentTransform();
+      _defaultInstance = _ReadonlyDocumentTransform();
     return _defaultInstance;
   }
 
@@ -200,7 +199,7 @@ class _ReadonlyDocumentTransform extends DocumentTransform
     with ReadonlyMessageMixin {}
 
 class WriteResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WriteResult')
+  static final BuilderInfo _i = BuilderInfo('WriteResult')
     ..a<$google$protobuf.Timestamp>(
         1,
         'updateTime',
@@ -218,12 +217,12 @@ class WriteResult extends GeneratedMessage {
   WriteResult.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WriteResult clone() => new WriteResult()..mergeFromMessage(this);
+  WriteResult clone() => WriteResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WriteResult create() => new WriteResult();
-  static PbList<WriteResult> createRepeated() => new PbList<WriteResult>();
+  static WriteResult create() => WriteResult();
+  static PbList<WriteResult> createRepeated() => PbList<WriteResult>();
   static WriteResult getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWriteResult();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWriteResult();
     return _defaultInstance;
   }
 
@@ -246,7 +245,7 @@ class WriteResult extends GeneratedMessage {
 class _ReadonlyWriteResult extends WriteResult with ReadonlyMessageMixin {}
 
 class DocumentChange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DocumentChange')
+  static final BuilderInfo _i = BuilderInfo('DocumentChange')
     ..a<Document>(
         1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
     ..p<int>(5, 'targetIds', PbFieldType.P3)
@@ -260,14 +259,12 @@ class DocumentChange extends GeneratedMessage {
   DocumentChange.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DocumentChange clone() => new DocumentChange()..mergeFromMessage(this);
+  DocumentChange clone() => DocumentChange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DocumentChange create() => new DocumentChange();
-  static PbList<DocumentChange> createRepeated() =>
-      new PbList<DocumentChange>();
+  static DocumentChange create() => DocumentChange();
+  static PbList<DocumentChange> createRepeated() => PbList<DocumentChange>();
   static DocumentChange getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentChange();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDocumentChange();
     return _defaultInstance;
   }
 
@@ -293,7 +290,7 @@ class _ReadonlyDocumentChange extends DocumentChange with ReadonlyMessageMixin {
 }
 
 class DocumentDelete extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DocumentDelete')
+  static final BuilderInfo _i = BuilderInfo('DocumentDelete')
     ..aOS(1, 'document')
     ..a<$google$protobuf.Timestamp>(
         4,
@@ -311,14 +308,12 @@ class DocumentDelete extends GeneratedMessage {
   DocumentDelete.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DocumentDelete clone() => new DocumentDelete()..mergeFromMessage(this);
+  DocumentDelete clone() => DocumentDelete()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DocumentDelete create() => new DocumentDelete();
-  static PbList<DocumentDelete> createRepeated() =>
-      new PbList<DocumentDelete>();
+  static DocumentDelete create() => DocumentDelete();
+  static PbList<DocumentDelete> createRepeated() => PbList<DocumentDelete>();
   static DocumentDelete getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentDelete();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDocumentDelete();
     return _defaultInstance;
   }
 
@@ -350,7 +345,7 @@ class _ReadonlyDocumentDelete extends DocumentDelete with ReadonlyMessageMixin {
 }
 
 class DocumentRemove extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DocumentRemove')
+  static final BuilderInfo _i = BuilderInfo('DocumentRemove')
     ..aOS(1, 'document')
     ..p<int>(2, 'removedTargetIds', PbFieldType.P3)
     ..a<$google$protobuf.Timestamp>(
@@ -368,14 +363,12 @@ class DocumentRemove extends GeneratedMessage {
   DocumentRemove.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DocumentRemove clone() => new DocumentRemove()..mergeFromMessage(this);
+  DocumentRemove clone() => DocumentRemove()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DocumentRemove create() => new DocumentRemove();
-  static PbList<DocumentRemove> createRepeated() =>
-      new PbList<DocumentRemove>();
+  static DocumentRemove create() => DocumentRemove();
+  static PbList<DocumentRemove> createRepeated() => PbList<DocumentRemove>();
   static DocumentRemove getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentRemove();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDocumentRemove();
     return _defaultInstance;
   }
 
@@ -407,7 +400,7 @@ class _ReadonlyDocumentRemove extends DocumentRemove with ReadonlyMessageMixin {
 }
 
 class ExistenceFilter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExistenceFilter')
+  static final BuilderInfo _i = BuilderInfo('ExistenceFilter')
     ..a<int>(1, 'targetId', PbFieldType.O3)
     ..a<int>(2, 'count', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -419,14 +412,12 @@ class ExistenceFilter extends GeneratedMessage {
   ExistenceFilter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExistenceFilter clone() => new ExistenceFilter()..mergeFromMessage(this);
+  ExistenceFilter clone() => ExistenceFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExistenceFilter create() => new ExistenceFilter();
-  static PbList<ExistenceFilter> createRepeated() =>
-      new PbList<ExistenceFilter>();
+  static ExistenceFilter create() => ExistenceFilter();
+  static PbList<ExistenceFilter> createRepeated() => PbList<ExistenceFilter>();
   static ExistenceFilter getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExistenceFilter();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyExistenceFilter();
     return _defaultInstance;
   }
 

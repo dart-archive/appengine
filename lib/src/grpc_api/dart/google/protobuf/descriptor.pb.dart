@@ -14,7 +14,7 @@ import 'descriptor.pbenum.dart';
 export 'descriptor.pbenum.dart';
 
 class FileDescriptorSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FileDescriptorSet')
+  static final BuilderInfo _i = BuilderInfo('FileDescriptorSet')
     ..pp<FileDescriptorProto>(1, 'file', PbFieldType.PM,
         FileDescriptorProto.$checkItem, FileDescriptorProto.create);
 
@@ -25,14 +25,14 @@ class FileDescriptorSet extends GeneratedMessage {
   FileDescriptorSet.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FileDescriptorSet clone() => new FileDescriptorSet()..mergeFromMessage(this);
+  FileDescriptorSet clone() => FileDescriptorSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FileDescriptorSet create() => new FileDescriptorSet();
+  static FileDescriptorSet create() => FileDescriptorSet();
   static PbList<FileDescriptorSet> createRepeated() =>
-      new PbList<FileDescriptorSet>();
+      PbList<FileDescriptorSet>();
   static FileDescriptorSet getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFileDescriptorSet();
+      _defaultInstance = _ReadonlyFileDescriptorSet();
     return _defaultInstance;
   }
 
@@ -48,7 +48,7 @@ class _ReadonlyFileDescriptorSet extends FileDescriptorSet
     with ReadonlyMessageMixin {}
 
 class FileDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FileDescriptorProto')
+  static final BuilderInfo _i = BuilderInfo('FileDescriptorProto')
     ..aOS(1, 'name')
     ..aOS(2, 'package')
     ..pPS(3, 'dependency')
@@ -75,15 +75,14 @@ class FileDescriptorProto extends GeneratedMessage {
   FileDescriptorProto.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FileDescriptorProto clone() =>
-      new FileDescriptorProto()..mergeFromMessage(this);
+  FileDescriptorProto clone() => FileDescriptorProto()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FileDescriptorProto create() => new FileDescriptorProto();
+  static FileDescriptorProto create() => FileDescriptorProto();
   static PbList<FileDescriptorProto> createRepeated() =>
-      new PbList<FileDescriptorProto>();
+      PbList<FileDescriptorProto>();
   static FileDescriptorProto getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFileDescriptorProto();
+      _defaultInstance = _ReadonlyFileDescriptorProto();
     return _defaultInstance;
   }
 
@@ -151,12 +150,11 @@ class _ReadonlyFileDescriptorProto extends FileDescriptorProto
     with ReadonlyMessageMixin {}
 
 class DescriptorProto_ExtensionRange extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('DescriptorProto_ExtensionRange')
-        ..a<int>(1, 'start', PbFieldType.O3)
-        ..a<int>(2, 'end', PbFieldType.O3)
-        ..a<ExtensionRangeOptions>(3, 'options', PbFieldType.OM,
-            ExtensionRangeOptions.getDefault, ExtensionRangeOptions.create);
+  static final BuilderInfo _i = BuilderInfo('DescriptorProto_ExtensionRange')
+    ..a<int>(1, 'start', PbFieldType.O3)
+    ..a<int>(2, 'end', PbFieldType.O3)
+    ..a<ExtensionRangeOptions>(3, 'options', PbFieldType.OM,
+        ExtensionRangeOptions.getDefault, ExtensionRangeOptions.create);
 
   DescriptorProto_ExtensionRange() : super();
   DescriptorProto_ExtensionRange.fromBuffer(List<int> i,
@@ -166,15 +164,15 @@ class DescriptorProto_ExtensionRange extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DescriptorProto_ExtensionRange clone() =>
-      new DescriptorProto_ExtensionRange()..mergeFromMessage(this);
+      DescriptorProto_ExtensionRange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DescriptorProto_ExtensionRange create() =>
-      new DescriptorProto_ExtensionRange();
+      DescriptorProto_ExtensionRange();
   static PbList<DescriptorProto_ExtensionRange> createRepeated() =>
-      new PbList<DescriptorProto_ExtensionRange>();
+      PbList<DescriptorProto_ExtensionRange>();
   static DescriptorProto_ExtensionRange getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDescriptorProto_ExtensionRange();
+      _defaultInstance = _ReadonlyDescriptorProto_ExtensionRange();
     return _defaultInstance;
   }
 
@@ -213,7 +211,7 @@ class _ReadonlyDescriptorProto_ExtensionRange
     extends DescriptorProto_ExtensionRange with ReadonlyMessageMixin {}
 
 class DescriptorProto_ReservedRange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DescriptorProto_ReservedRange')
+  static final BuilderInfo _i = BuilderInfo('DescriptorProto_ReservedRange')
     ..a<int>(1, 'start', PbFieldType.O3)
     ..a<int>(2, 'end', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -226,15 +224,15 @@ class DescriptorProto_ReservedRange extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DescriptorProto_ReservedRange clone() =>
-      new DescriptorProto_ReservedRange()..mergeFromMessage(this);
+      DescriptorProto_ReservedRange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DescriptorProto_ReservedRange create() =>
-      new DescriptorProto_ReservedRange();
+      DescriptorProto_ReservedRange();
   static PbList<DescriptorProto_ReservedRange> createRepeated() =>
-      new PbList<DescriptorProto_ReservedRange>();
+      PbList<DescriptorProto_ReservedRange>();
   static DescriptorProto_ReservedRange getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDescriptorProto_ReservedRange();
+      _defaultInstance = _ReadonlyDescriptorProto_ReservedRange();
     return _defaultInstance;
   }
 
@@ -265,7 +263,7 @@ class _ReadonlyDescriptorProto_ReservedRange
     extends DescriptorProto_ReservedRange with ReadonlyMessageMixin {}
 
 class DescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DescriptorProto')
+  static final BuilderInfo _i = BuilderInfo('DescriptorProto')
     ..aOS(1, 'name')
     ..pp<FieldDescriptorProto>(2, 'field', PbFieldType.PM,
         FieldDescriptorProto.$checkItem, FieldDescriptorProto.create)
@@ -300,14 +298,12 @@ class DescriptorProto extends GeneratedMessage {
   DescriptorProto.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DescriptorProto clone() => new DescriptorProto()..mergeFromMessage(this);
+  DescriptorProto clone() => DescriptorProto()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DescriptorProto create() => new DescriptorProto();
-  static PbList<DescriptorProto> createRepeated() =>
-      new PbList<DescriptorProto>();
+  static DescriptorProto create() => DescriptorProto();
+  static PbList<DescriptorProto> createRepeated() => PbList<DescriptorProto>();
   static DescriptorProto getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDescriptorProto();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDescriptorProto();
     return _defaultInstance;
   }
 
@@ -353,7 +349,7 @@ class _ReadonlyDescriptorProto extends DescriptorProto
     with ReadonlyMessageMixin {}
 
 class ExtensionRangeOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExtensionRangeOptions')
+  static final BuilderInfo _i = BuilderInfo('ExtensionRangeOptions')
     ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
         UninterpretedOption.$checkItem, UninterpretedOption.create)
     ..hasExtensions = true;
@@ -366,14 +362,14 @@ class ExtensionRangeOptions extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExtensionRangeOptions clone() =>
-      new ExtensionRangeOptions()..mergeFromMessage(this);
+      ExtensionRangeOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExtensionRangeOptions create() => new ExtensionRangeOptions();
+  static ExtensionRangeOptions create() => ExtensionRangeOptions();
   static PbList<ExtensionRangeOptions> createRepeated() =>
-      new PbList<ExtensionRangeOptions>();
+      PbList<ExtensionRangeOptions>();
   static ExtensionRangeOptions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExtensionRangeOptions();
+      _defaultInstance = _ReadonlyExtensionRangeOptions();
     return _defaultInstance;
   }
 
@@ -390,7 +386,7 @@ class _ReadonlyExtensionRangeOptions extends ExtensionRangeOptions
     with ReadonlyMessageMixin {}
 
 class FieldDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FieldDescriptorProto')
+  static final BuilderInfo _i = BuilderInfo('FieldDescriptorProto')
     ..aOS(1, 'name')
     ..aOS(2, 'extendee')
     ..a<int>(3, 'number', PbFieldType.O3)
@@ -423,14 +419,14 @@ class FieldDescriptorProto extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   FieldDescriptorProto clone() =>
-      new FieldDescriptorProto()..mergeFromMessage(this);
+      FieldDescriptorProto()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FieldDescriptorProto create() => new FieldDescriptorProto();
+  static FieldDescriptorProto create() => FieldDescriptorProto();
   static PbList<FieldDescriptorProto> createRepeated() =>
-      new PbList<FieldDescriptorProto>();
+      PbList<FieldDescriptorProto>();
   static FieldDescriptorProto getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFieldDescriptorProto();
+      _defaultInstance = _ReadonlyFieldDescriptorProto();
     return _defaultInstance;
   }
 
@@ -524,7 +520,7 @@ class _ReadonlyFieldDescriptorProto extends FieldDescriptorProto
     with ReadonlyMessageMixin {}
 
 class OneofDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OneofDescriptorProto')
+  static final BuilderInfo _i = BuilderInfo('OneofDescriptorProto')
     ..aOS(1, 'name')
     ..a<OneofOptions>(2, 'options', PbFieldType.OM, OneofOptions.getDefault,
         OneofOptions.create);
@@ -537,14 +533,14 @@ class OneofDescriptorProto extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   OneofDescriptorProto clone() =>
-      new OneofDescriptorProto()..mergeFromMessage(this);
+      OneofDescriptorProto()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OneofDescriptorProto create() => new OneofDescriptorProto();
+  static OneofDescriptorProto create() => OneofDescriptorProto();
   static PbList<OneofDescriptorProto> createRepeated() =>
-      new PbList<OneofDescriptorProto>();
+      PbList<OneofDescriptorProto>();
   static OneofDescriptorProto getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOneofDescriptorProto();
+      _defaultInstance = _ReadonlyOneofDescriptorProto();
     return _defaultInstance;
   }
 
@@ -575,7 +571,7 @@ class _ReadonlyOneofDescriptorProto extends OneofDescriptorProto
 
 class EnumDescriptorProto_EnumReservedRange extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('EnumDescriptorProto_EnumReservedRange')
+      BuilderInfo('EnumDescriptorProto_EnumReservedRange')
         ..a<int>(1, 'start', PbFieldType.O3)
         ..a<int>(2, 'end', PbFieldType.O3)
         ..hasRequiredFields = false;
@@ -588,15 +584,15 @@ class EnumDescriptorProto_EnumReservedRange extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   EnumDescriptorProto_EnumReservedRange clone() =>
-      new EnumDescriptorProto_EnumReservedRange()..mergeFromMessage(this);
+      EnumDescriptorProto_EnumReservedRange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static EnumDescriptorProto_EnumReservedRange create() =>
-      new EnumDescriptorProto_EnumReservedRange();
+      EnumDescriptorProto_EnumReservedRange();
   static PbList<EnumDescriptorProto_EnumReservedRange> createRepeated() =>
-      new PbList<EnumDescriptorProto_EnumReservedRange>();
+      PbList<EnumDescriptorProto_EnumReservedRange>();
   static EnumDescriptorProto_EnumReservedRange getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEnumDescriptorProto_EnumReservedRange();
+      _defaultInstance = _ReadonlyEnumDescriptorProto_EnumReservedRange();
     return _defaultInstance;
   }
 
@@ -627,7 +623,7 @@ class _ReadonlyEnumDescriptorProto_EnumReservedRange
     extends EnumDescriptorProto_EnumReservedRange with ReadonlyMessageMixin {}
 
 class EnumDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EnumDescriptorProto')
+  static final BuilderInfo _i = BuilderInfo('EnumDescriptorProto')
     ..aOS(1, 'name')
     ..pp<EnumValueDescriptorProto>(2, 'value', PbFieldType.PM,
         EnumValueDescriptorProto.$checkItem, EnumValueDescriptorProto.create)
@@ -648,15 +644,14 @@ class EnumDescriptorProto extends GeneratedMessage {
   EnumDescriptorProto.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EnumDescriptorProto clone() =>
-      new EnumDescriptorProto()..mergeFromMessage(this);
+  EnumDescriptorProto clone() => EnumDescriptorProto()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EnumDescriptorProto create() => new EnumDescriptorProto();
+  static EnumDescriptorProto create() => EnumDescriptorProto();
   static PbList<EnumDescriptorProto> createRepeated() =>
-      new PbList<EnumDescriptorProto>();
+      PbList<EnumDescriptorProto>();
   static EnumDescriptorProto getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEnumDescriptorProto();
+      _defaultInstance = _ReadonlyEnumDescriptorProto();
     return _defaultInstance;
   }
 
@@ -692,7 +687,7 @@ class _ReadonlyEnumDescriptorProto extends EnumDescriptorProto
     with ReadonlyMessageMixin {}
 
 class EnumValueDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EnumValueDescriptorProto')
+  static final BuilderInfo _i = BuilderInfo('EnumValueDescriptorProto')
     ..aOS(1, 'name')
     ..a<int>(2, 'number', PbFieldType.O3)
     ..a<EnumValueOptions>(3, 'options', PbFieldType.OM,
@@ -706,14 +701,14 @@ class EnumValueDescriptorProto extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   EnumValueDescriptorProto clone() =>
-      new EnumValueDescriptorProto()..mergeFromMessage(this);
+      EnumValueDescriptorProto()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EnumValueDescriptorProto create() => new EnumValueDescriptorProto();
+  static EnumValueDescriptorProto create() => EnumValueDescriptorProto();
   static PbList<EnumValueDescriptorProto> createRepeated() =>
-      new PbList<EnumValueDescriptorProto>();
+      PbList<EnumValueDescriptorProto>();
   static EnumValueDescriptorProto getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEnumValueDescriptorProto();
+      _defaultInstance = _ReadonlyEnumValueDescriptorProto();
     return _defaultInstance;
   }
 
@@ -752,7 +747,7 @@ class _ReadonlyEnumValueDescriptorProto extends EnumValueDescriptorProto
     with ReadonlyMessageMixin {}
 
 class ServiceDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ServiceDescriptorProto')
+  static final BuilderInfo _i = BuilderInfo('ServiceDescriptorProto')
     ..aOS(1, 'name')
     ..pp<MethodDescriptorProto>(2, 'method', PbFieldType.PM,
         MethodDescriptorProto.$checkItem, MethodDescriptorProto.create)
@@ -767,14 +762,14 @@ class ServiceDescriptorProto extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ServiceDescriptorProto clone() =>
-      new ServiceDescriptorProto()..mergeFromMessage(this);
+      ServiceDescriptorProto()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ServiceDescriptorProto create() => new ServiceDescriptorProto();
+  static ServiceDescriptorProto create() => ServiceDescriptorProto();
   static PbList<ServiceDescriptorProto> createRepeated() =>
-      new PbList<ServiceDescriptorProto>();
+      PbList<ServiceDescriptorProto>();
   static ServiceDescriptorProto getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyServiceDescriptorProto();
+      _defaultInstance = _ReadonlyServiceDescriptorProto();
     return _defaultInstance;
   }
 
@@ -807,7 +802,7 @@ class _ReadonlyServiceDescriptorProto extends ServiceDescriptorProto
     with ReadonlyMessageMixin {}
 
 class MethodDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MethodDescriptorProto')
+  static final BuilderInfo _i = BuilderInfo('MethodDescriptorProto')
     ..aOS(1, 'name')
     ..aOS(2, 'inputType')
     ..aOS(3, 'outputType')
@@ -824,14 +819,14 @@ class MethodDescriptorProto extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MethodDescriptorProto clone() =>
-      new MethodDescriptorProto()..mergeFromMessage(this);
+      MethodDescriptorProto()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MethodDescriptorProto create() => new MethodDescriptorProto();
+  static MethodDescriptorProto create() => MethodDescriptorProto();
   static PbList<MethodDescriptorProto> createRepeated() =>
-      new PbList<MethodDescriptorProto>();
+      PbList<MethodDescriptorProto>();
   static MethodDescriptorProto getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMethodDescriptorProto();
+      _defaultInstance = _ReadonlyMethodDescriptorProto();
     return _defaultInstance;
   }
 
@@ -894,7 +889,7 @@ class _ReadonlyMethodDescriptorProto extends MethodDescriptorProto
     with ReadonlyMessageMixin {}
 
 class FileOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FileOptions')
+  static final BuilderInfo _i = BuilderInfo('FileOptions')
     ..aOS(1, 'javaPackage')
     ..aOS(8, 'javaOuterClassname')
     ..e<FileOptions_OptimizeMode>(
@@ -932,12 +927,12 @@ class FileOptions extends GeneratedMessage {
   FileOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FileOptions clone() => new FileOptions()..mergeFromMessage(this);
+  FileOptions clone() => FileOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FileOptions create() => new FileOptions();
-  static PbList<FileOptions> createRepeated() => new PbList<FileOptions>();
+  static FileOptions create() => FileOptions();
+  static PbList<FileOptions> createRepeated() => PbList<FileOptions>();
   static FileOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFileOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileOptions();
     return _defaultInstance;
   }
 
@@ -1112,7 +1107,7 @@ class FileOptions extends GeneratedMessage {
 class _ReadonlyFileOptions extends FileOptions with ReadonlyMessageMixin {}
 
 class MessageOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MessageOptions')
+  static final BuilderInfo _i = BuilderInfo('MessageOptions')
     ..aOB(1, 'messageSetWireFormat')
     ..aOB(2, 'noStandardDescriptorAccessor')
     ..aOB(3, 'deprecated')
@@ -1128,14 +1123,12 @@ class MessageOptions extends GeneratedMessage {
   MessageOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MessageOptions clone() => new MessageOptions()..mergeFromMessage(this);
+  MessageOptions clone() => MessageOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MessageOptions create() => new MessageOptions();
-  static PbList<MessageOptions> createRepeated() =>
-      new PbList<MessageOptions>();
+  static MessageOptions create() => MessageOptions();
+  static PbList<MessageOptions> createRepeated() => PbList<MessageOptions>();
   static MessageOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMessageOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMessageOptions();
     return _defaultInstance;
   }
 
@@ -1183,7 +1176,7 @@ class _ReadonlyMessageOptions extends MessageOptions with ReadonlyMessageMixin {
 }
 
 class FieldOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FieldOptions')
+  static final BuilderInfo _i = BuilderInfo('FieldOptions')
     ..e<FieldOptions_CType>(
         1,
         'ctype',
@@ -1213,13 +1206,12 @@ class FieldOptions extends GeneratedMessage {
   FieldOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FieldOptions clone() => new FieldOptions()..mergeFromMessage(this);
+  FieldOptions clone() => FieldOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FieldOptions create() => new FieldOptions();
-  static PbList<FieldOptions> createRepeated() => new PbList<FieldOptions>();
+  static FieldOptions create() => FieldOptions();
+  static PbList<FieldOptions> createRepeated() => PbList<FieldOptions>();
   static FieldOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFieldOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFieldOptions();
     return _defaultInstance;
   }
 
@@ -1282,7 +1274,7 @@ class FieldOptions extends GeneratedMessage {
 class _ReadonlyFieldOptions extends FieldOptions with ReadonlyMessageMixin {}
 
 class OneofOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OneofOptions')
+  static final BuilderInfo _i = BuilderInfo('OneofOptions')
     ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
         UninterpretedOption.$checkItem, UninterpretedOption.create)
     ..hasExtensions = true;
@@ -1294,13 +1286,12 @@ class OneofOptions extends GeneratedMessage {
   OneofOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OneofOptions clone() => new OneofOptions()..mergeFromMessage(this);
+  OneofOptions clone() => OneofOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OneofOptions create() => new OneofOptions();
-  static PbList<OneofOptions> createRepeated() => new PbList<OneofOptions>();
+  static OneofOptions create() => OneofOptions();
+  static PbList<OneofOptions> createRepeated() => PbList<OneofOptions>();
   static OneofOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOneofOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOneofOptions();
     return _defaultInstance;
   }
 
@@ -1315,7 +1306,7 @@ class OneofOptions extends GeneratedMessage {
 class _ReadonlyOneofOptions extends OneofOptions with ReadonlyMessageMixin {}
 
 class EnumOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EnumOptions')
+  static final BuilderInfo _i = BuilderInfo('EnumOptions')
     ..aOB(2, 'allowAlias')
     ..aOB(3, 'deprecated')
     ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
@@ -1329,12 +1320,12 @@ class EnumOptions extends GeneratedMessage {
   EnumOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EnumOptions clone() => new EnumOptions()..mergeFromMessage(this);
+  EnumOptions clone() => EnumOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EnumOptions create() => new EnumOptions();
-  static PbList<EnumOptions> createRepeated() => new PbList<EnumOptions>();
+  static EnumOptions create() => EnumOptions();
+  static PbList<EnumOptions> createRepeated() => PbList<EnumOptions>();
   static EnumOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEnumOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEnumOptions();
     return _defaultInstance;
   }
 
@@ -1365,7 +1356,7 @@ class EnumOptions extends GeneratedMessage {
 class _ReadonlyEnumOptions extends EnumOptions with ReadonlyMessageMixin {}
 
 class EnumValueOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EnumValueOptions')
+  static final BuilderInfo _i = BuilderInfo('EnumValueOptions')
     ..aOB(1, 'deprecated')
     ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
         UninterpretedOption.$checkItem, UninterpretedOption.create)
@@ -1378,14 +1369,14 @@ class EnumValueOptions extends GeneratedMessage {
   EnumValueOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EnumValueOptions clone() => new EnumValueOptions()..mergeFromMessage(this);
+  EnumValueOptions clone() => EnumValueOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EnumValueOptions create() => new EnumValueOptions();
+  static EnumValueOptions create() => EnumValueOptions();
   static PbList<EnumValueOptions> createRepeated() =>
-      new PbList<EnumValueOptions>();
+      PbList<EnumValueOptions>();
   static EnumValueOptions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEnumValueOptions();
+      _defaultInstance = _ReadonlyEnumValueOptions();
     return _defaultInstance;
   }
 
@@ -1409,7 +1400,7 @@ class _ReadonlyEnumValueOptions extends EnumValueOptions
     with ReadonlyMessageMixin {}
 
 class ServiceOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ServiceOptions')
+  static final BuilderInfo _i = BuilderInfo('ServiceOptions')
     ..aOB(33, 'deprecated')
     ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
         UninterpretedOption.$checkItem, UninterpretedOption.create)
@@ -1422,14 +1413,12 @@ class ServiceOptions extends GeneratedMessage {
   ServiceOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ServiceOptions clone() => new ServiceOptions()..mergeFromMessage(this);
+  ServiceOptions clone() => ServiceOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ServiceOptions create() => new ServiceOptions();
-  static PbList<ServiceOptions> createRepeated() =>
-      new PbList<ServiceOptions>();
+  static ServiceOptions create() => ServiceOptions();
+  static PbList<ServiceOptions> createRepeated() => PbList<ServiceOptions>();
   static ServiceOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyServiceOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyServiceOptions();
     return _defaultInstance;
   }
 
@@ -1453,7 +1442,7 @@ class _ReadonlyServiceOptions extends ServiceOptions with ReadonlyMessageMixin {
 }
 
 class MethodOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MethodOptions')
+  static final BuilderInfo _i = BuilderInfo('MethodOptions')
     ..aOB(33, 'deprecated')
     ..e<MethodOptions_IdempotencyLevel>(
         34,
@@ -1473,13 +1462,12 @@ class MethodOptions extends GeneratedMessage {
   MethodOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MethodOptions clone() => new MethodOptions()..mergeFromMessage(this);
+  MethodOptions clone() => MethodOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MethodOptions create() => new MethodOptions();
-  static PbList<MethodOptions> createRepeated() => new PbList<MethodOptions>();
+  static MethodOptions create() => MethodOptions();
+  static PbList<MethodOptions> createRepeated() => PbList<MethodOptions>();
   static MethodOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMethodOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMethodOptions();
     return _defaultInstance;
   }
 
@@ -1510,7 +1498,7 @@ class MethodOptions extends GeneratedMessage {
 class _ReadonlyMethodOptions extends MethodOptions with ReadonlyMessageMixin {}
 
 class UninterpretedOption_NamePart extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UninterpretedOption_NamePart')
+  static final BuilderInfo _i = BuilderInfo('UninterpretedOption_NamePart')
     ..aQS(1, 'namePart')
     ..a<bool>(2, 'isExtension', PbFieldType.QB);
 
@@ -1522,15 +1510,15 @@ class UninterpretedOption_NamePart extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UninterpretedOption_NamePart clone() =>
-      new UninterpretedOption_NamePart()..mergeFromMessage(this);
+      UninterpretedOption_NamePart()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UninterpretedOption_NamePart create() =>
-      new UninterpretedOption_NamePart();
+      UninterpretedOption_NamePart();
   static PbList<UninterpretedOption_NamePart> createRepeated() =>
-      new PbList<UninterpretedOption_NamePart>();
+      PbList<UninterpretedOption_NamePart>();
   static UninterpretedOption_NamePart getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUninterpretedOption_NamePart();
+      _defaultInstance = _ReadonlyUninterpretedOption_NamePart();
     return _defaultInstance;
   }
 
@@ -1561,7 +1549,7 @@ class _ReadonlyUninterpretedOption_NamePart extends UninterpretedOption_NamePart
     with ReadonlyMessageMixin {}
 
 class UninterpretedOption extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UninterpretedOption')
+  static final BuilderInfo _i = BuilderInfo('UninterpretedOption')
     ..pp<UninterpretedOption_NamePart>(
         2,
         'name',
@@ -1582,15 +1570,14 @@ class UninterpretedOption extends GeneratedMessage {
   UninterpretedOption.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UninterpretedOption clone() =>
-      new UninterpretedOption()..mergeFromMessage(this);
+  UninterpretedOption clone() => UninterpretedOption()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UninterpretedOption create() => new UninterpretedOption();
+  static UninterpretedOption create() => UninterpretedOption();
   static PbList<UninterpretedOption> createRepeated() =>
-      new PbList<UninterpretedOption>();
+      PbList<UninterpretedOption>();
   static UninterpretedOption getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUninterpretedOption();
+      _defaultInstance = _ReadonlyUninterpretedOption();
     return _defaultInstance;
   }
 
@@ -1654,7 +1641,7 @@ class _ReadonlyUninterpretedOption extends UninterpretedOption
     with ReadonlyMessageMixin {}
 
 class SourceCodeInfo_Location extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceCodeInfo_Location')
+  static final BuilderInfo _i = BuilderInfo('SourceCodeInfo_Location')
     ..p<int>(1, 'path', PbFieldType.K3)
     ..p<int>(2, 'span', PbFieldType.K3)
     ..aOS(3, 'leadingComments')
@@ -1670,14 +1657,14 @@ class SourceCodeInfo_Location extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SourceCodeInfo_Location clone() =>
-      new SourceCodeInfo_Location()..mergeFromMessage(this);
+      SourceCodeInfo_Location()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceCodeInfo_Location create() => new SourceCodeInfo_Location();
+  static SourceCodeInfo_Location create() => SourceCodeInfo_Location();
   static PbList<SourceCodeInfo_Location> createRepeated() =>
-      new PbList<SourceCodeInfo_Location>();
+      PbList<SourceCodeInfo_Location>();
   static SourceCodeInfo_Location getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceCodeInfo_Location();
+      _defaultInstance = _ReadonlySourceCodeInfo_Location();
     return _defaultInstance;
   }
 
@@ -1714,7 +1701,7 @@ class _ReadonlySourceCodeInfo_Location extends SourceCodeInfo_Location
     with ReadonlyMessageMixin {}
 
 class SourceCodeInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceCodeInfo')
+  static final BuilderInfo _i = BuilderInfo('SourceCodeInfo')
     ..pp<SourceCodeInfo_Location>(1, 'location', PbFieldType.PM,
         SourceCodeInfo_Location.$checkItem, SourceCodeInfo_Location.create)
     ..hasRequiredFields = false;
@@ -1726,14 +1713,12 @@ class SourceCodeInfo extends GeneratedMessage {
   SourceCodeInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceCodeInfo clone() => new SourceCodeInfo()..mergeFromMessage(this);
+  SourceCodeInfo clone() => SourceCodeInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceCodeInfo create() => new SourceCodeInfo();
-  static PbList<SourceCodeInfo> createRepeated() =>
-      new PbList<SourceCodeInfo>();
+  static SourceCodeInfo create() => SourceCodeInfo();
+  static PbList<SourceCodeInfo> createRepeated() => PbList<SourceCodeInfo>();
   static SourceCodeInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceCodeInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceCodeInfo();
     return _defaultInstance;
   }
 
@@ -1749,7 +1734,7 @@ class _ReadonlySourceCodeInfo extends SourceCodeInfo with ReadonlyMessageMixin {
 }
 
 class GeneratedCodeInfo_Annotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GeneratedCodeInfo_Annotation')
+  static final BuilderInfo _i = BuilderInfo('GeneratedCodeInfo_Annotation')
     ..p<int>(1, 'path', PbFieldType.K3)
     ..aOS(2, 'sourceFile')
     ..a<int>(3, 'begin', PbFieldType.O3)
@@ -1764,15 +1749,15 @@ class GeneratedCodeInfo_Annotation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GeneratedCodeInfo_Annotation clone() =>
-      new GeneratedCodeInfo_Annotation()..mergeFromMessage(this);
+      GeneratedCodeInfo_Annotation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GeneratedCodeInfo_Annotation create() =>
-      new GeneratedCodeInfo_Annotation();
+      GeneratedCodeInfo_Annotation();
   static PbList<GeneratedCodeInfo_Annotation> createRepeated() =>
-      new PbList<GeneratedCodeInfo_Annotation>();
+      PbList<GeneratedCodeInfo_Annotation>();
   static GeneratedCodeInfo_Annotation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGeneratedCodeInfo_Annotation();
+      _defaultInstance = _ReadonlyGeneratedCodeInfo_Annotation();
     return _defaultInstance;
   }
 
@@ -1813,7 +1798,7 @@ class _ReadonlyGeneratedCodeInfo_Annotation extends GeneratedCodeInfo_Annotation
     with ReadonlyMessageMixin {}
 
 class GeneratedCodeInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GeneratedCodeInfo')
+  static final BuilderInfo _i = BuilderInfo('GeneratedCodeInfo')
     ..pp<GeneratedCodeInfo_Annotation>(
         1,
         'annotation',
@@ -1829,14 +1814,14 @@ class GeneratedCodeInfo extends GeneratedMessage {
   GeneratedCodeInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GeneratedCodeInfo clone() => new GeneratedCodeInfo()..mergeFromMessage(this);
+  GeneratedCodeInfo clone() => GeneratedCodeInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GeneratedCodeInfo create() => new GeneratedCodeInfo();
+  static GeneratedCodeInfo create() => GeneratedCodeInfo();
   static PbList<GeneratedCodeInfo> createRepeated() =>
-      new PbList<GeneratedCodeInfo>();
+      PbList<GeneratedCodeInfo>();
   static GeneratedCodeInfo getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGeneratedCodeInfo();
+      _defaultInstance = _ReadonlyGeneratedCodeInfo();
     return _defaultInstance;
   }
 

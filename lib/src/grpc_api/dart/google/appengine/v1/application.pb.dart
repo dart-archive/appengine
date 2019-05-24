@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../protobuf/duration.pb.dart' as $google$protobuf;
 
 class Application extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Application')
+  static final BuilderInfo _i = BuilderInfo('Application')
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..pp<UrlDispatchRule>(3, 'dispatchRules', PbFieldType.PM,
@@ -32,12 +32,12 @@ class Application extends GeneratedMessage {
   Application.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Application clone() => new Application()..mergeFromMessage(this);
+  Application clone() => Application()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Application create() => new Application();
-  static PbList<Application> createRepeated() => new PbList<Application>();
+  static Application create() => Application();
+  static PbList<Application> createRepeated() => PbList<Application>();
   static Application getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyApplication();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyApplication();
     return _defaultInstance;
   }
 
@@ -116,7 +116,7 @@ class Application extends GeneratedMessage {
 class _ReadonlyApplication extends Application with ReadonlyMessageMixin {}
 
 class UrlDispatchRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UrlDispatchRule')
+  static final BuilderInfo _i = BuilderInfo('UrlDispatchRule')
     ..aOS(1, 'domain')
     ..aOS(2, 'path')
     ..aOS(3, 'service')
@@ -129,14 +129,12 @@ class UrlDispatchRule extends GeneratedMessage {
   UrlDispatchRule.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UrlDispatchRule clone() => new UrlDispatchRule()..mergeFromMessage(this);
+  UrlDispatchRule clone() => UrlDispatchRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UrlDispatchRule create() => new UrlDispatchRule();
-  static PbList<UrlDispatchRule> createRepeated() =>
-      new PbList<UrlDispatchRule>();
+  static UrlDispatchRule create() => UrlDispatchRule();
+  static PbList<UrlDispatchRule> createRepeated() => PbList<UrlDispatchRule>();
   static UrlDispatchRule getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUrlDispatchRule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyUrlDispatchRule();
     return _defaultInstance;
   }
 

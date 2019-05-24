@@ -12,67 +12,67 @@ import '../../../rpc/status.pbjson.dart' as $google$rpc;
 import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
 import '../../../protobuf/field_mask.pbjson.dart' as $google$protobuf;
 
-const StreetViewPublishService$json = const {
+const StreetViewPublishService$json = {
   '1': 'StreetViewPublishService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'StartUpload',
       '2': '.google.protobuf.Empty',
       '3': '.google.streetview.publish.v1.UploadRef',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreatePhoto',
       '2': '.google.streetview.publish.v1.CreatePhotoRequest',
       '3': '.google.streetview.publish.v1.Photo',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetPhoto',
       '2': '.google.streetview.publish.v1.GetPhotoRequest',
       '3': '.google.streetview.publish.v1.Photo',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'BatchGetPhotos',
       '2': '.google.streetview.publish.v1.BatchGetPhotosRequest',
       '3': '.google.streetview.publish.v1.BatchGetPhotosResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListPhotos',
       '2': '.google.streetview.publish.v1.ListPhotosRequest',
       '3': '.google.streetview.publish.v1.ListPhotosResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdatePhoto',
       '2': '.google.streetview.publish.v1.UpdatePhotoRequest',
       '3': '.google.streetview.publish.v1.Photo',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'BatchUpdatePhotos',
       '2': '.google.streetview.publish.v1.BatchUpdatePhotosRequest',
       '3': '.google.streetview.publish.v1.BatchUpdatePhotosResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeletePhoto',
       '2': '.google.streetview.publish.v1.DeletePhotoRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'BatchDeletePhotos',
       '2': '.google.streetview.publish.v1.BatchDeletePhotosRequest',
       '3': '.google.streetview.publish.v1.BatchDeletePhotosResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const StreetViewPublishService$messageJson = const {
+const StreetViewPublishService$messageJson = {
   '.google.protobuf.Empty': $google$protobuf.Empty$json,
   '.google.streetview.publish.v1.UploadRef': UploadRef$json,
   '.google.streetview.publish.v1.CreatePhotoRequest': CreatePhotoRequest$json,

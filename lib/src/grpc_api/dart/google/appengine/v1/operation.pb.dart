@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
 
 class OperationMetadataV1 extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadataV1')
+  static final BuilderInfo _i = BuilderInfo('OperationMetadataV1')
     ..aOS(1, 'method')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -36,15 +36,14 @@ class OperationMetadataV1 extends GeneratedMessage {
   OperationMetadataV1.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OperationMetadataV1 clone() =>
-      new OperationMetadataV1()..mergeFromMessage(this);
+  OperationMetadataV1 clone() => OperationMetadataV1()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OperationMetadataV1 create() => new OperationMetadataV1();
+  static OperationMetadataV1 create() => OperationMetadataV1();
   static PbList<OperationMetadataV1> createRepeated() =>
-      new PbList<OperationMetadataV1>();
+      PbList<OperationMetadataV1>();
   static OperationMetadataV1 getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadataV1();
+      _defaultInstance = _ReadonlyOperationMetadataV1();
     return _defaultInstance;
   }
 

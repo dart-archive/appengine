@@ -16,7 +16,7 @@ import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class ListNotificationChannelDescriptorsRequest extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ListNotificationChannelDescriptorsRequest')
+      BuilderInfo('ListNotificationChannelDescriptorsRequest')
         ..a<int>(2, 'pageSize', PbFieldType.O3)
         ..aOS(3, 'pageToken')
         ..aOS(4, 'name')
@@ -30,16 +30,15 @@ class ListNotificationChannelDescriptorsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListNotificationChannelDescriptorsRequest clone() =>
-      new ListNotificationChannelDescriptorsRequest()..mergeFromMessage(this);
+      ListNotificationChannelDescriptorsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListNotificationChannelDescriptorsRequest create() =>
-      new ListNotificationChannelDescriptorsRequest();
+      ListNotificationChannelDescriptorsRequest();
   static PbList<ListNotificationChannelDescriptorsRequest> createRepeated() =>
-      new PbList<ListNotificationChannelDescriptorsRequest>();
+      PbList<ListNotificationChannelDescriptorsRequest>();
   static ListNotificationChannelDescriptorsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyListNotificationChannelDescriptorsRequest();
+      _defaultInstance = _ReadonlyListNotificationChannelDescriptorsRequest();
     return _defaultInstance;
   }
 
@@ -80,7 +79,7 @@ class _ReadonlyListNotificationChannelDescriptorsRequest
 
 class ListNotificationChannelDescriptorsResponse extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ListNotificationChannelDescriptorsResponse')
+      BuilderInfo('ListNotificationChannelDescriptorsResponse')
         ..pp<NotificationChannelDescriptor>(
             1,
             'channelDescriptors',
@@ -98,16 +97,15 @@ class ListNotificationChannelDescriptorsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListNotificationChannelDescriptorsResponse clone() =>
-      new ListNotificationChannelDescriptorsResponse()..mergeFromMessage(this);
+      ListNotificationChannelDescriptorsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListNotificationChannelDescriptorsResponse create() =>
-      new ListNotificationChannelDescriptorsResponse();
+      ListNotificationChannelDescriptorsResponse();
   static PbList<ListNotificationChannelDescriptorsResponse> createRepeated() =>
-      new PbList<ListNotificationChannelDescriptorsResponse>();
+      PbList<ListNotificationChannelDescriptorsResponse>();
   static ListNotificationChannelDescriptorsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyListNotificationChannelDescriptorsResponse();
+      _defaultInstance = _ReadonlyListNotificationChannelDescriptorsResponse();
     return _defaultInstance;
   }
 
@@ -134,7 +132,7 @@ class _ReadonlyListNotificationChannelDescriptorsResponse
 
 class GetNotificationChannelDescriptorRequest extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('GetNotificationChannelDescriptorRequest')
+      BuilderInfo('GetNotificationChannelDescriptorRequest')
         ..aOS(3, 'name')
         ..hasRequiredFields = false;
 
@@ -146,15 +144,15 @@ class GetNotificationChannelDescriptorRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetNotificationChannelDescriptorRequest clone() =>
-      new GetNotificationChannelDescriptorRequest()..mergeFromMessage(this);
+      GetNotificationChannelDescriptorRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetNotificationChannelDescriptorRequest create() =>
-      new GetNotificationChannelDescriptorRequest();
+      GetNotificationChannelDescriptorRequest();
   static PbList<GetNotificationChannelDescriptorRequest> createRepeated() =>
-      new PbList<GetNotificationChannelDescriptorRequest>();
+      PbList<GetNotificationChannelDescriptorRequest>();
   static GetNotificationChannelDescriptorRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetNotificationChannelDescriptorRequest();
+      _defaultInstance = _ReadonlyGetNotificationChannelDescriptorRequest();
     return _defaultInstance;
   }
 
@@ -177,12 +175,11 @@ class _ReadonlyGetNotificationChannelDescriptorRequest
     extends GetNotificationChannelDescriptorRequest with ReadonlyMessageMixin {}
 
 class CreateNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('CreateNotificationChannelRequest')
-        ..a<NotificationChannel>(2, 'notificationChannel', PbFieldType.OM,
-            NotificationChannel.getDefault, NotificationChannel.create)
-        ..aOS(3, 'name')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('CreateNotificationChannelRequest')
+    ..a<NotificationChannel>(2, 'notificationChannel', PbFieldType.OM,
+        NotificationChannel.getDefault, NotificationChannel.create)
+    ..aOS(3, 'name')
+    ..hasRequiredFields = false;
 
   CreateNotificationChannelRequest() : super();
   CreateNotificationChannelRequest.fromBuffer(List<int> i,
@@ -192,15 +189,15 @@ class CreateNotificationChannelRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateNotificationChannelRequest clone() =>
-      new CreateNotificationChannelRequest()..mergeFromMessage(this);
+      CreateNotificationChannelRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateNotificationChannelRequest create() =>
-      new CreateNotificationChannelRequest();
+      CreateNotificationChannelRequest();
   static PbList<CreateNotificationChannelRequest> createRepeated() =>
-      new PbList<CreateNotificationChannelRequest>();
+      PbList<CreateNotificationChannelRequest>();
   static CreateNotificationChannelRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateNotificationChannelRequest();
+      _defaultInstance = _ReadonlyCreateNotificationChannelRequest();
     return _defaultInstance;
   }
 
@@ -231,14 +228,13 @@ class _ReadonlyCreateNotificationChannelRequest
     extends CreateNotificationChannelRequest with ReadonlyMessageMixin {}
 
 class ListNotificationChannelsRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListNotificationChannelsRequest')
-        ..a<int>(3, 'pageSize', PbFieldType.O3)
-        ..aOS(4, 'pageToken')
-        ..aOS(5, 'name')
-        ..aOS(6, 'filter')
-        ..aOS(7, 'orderBy')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ListNotificationChannelsRequest')
+    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..aOS(4, 'pageToken')
+    ..aOS(5, 'name')
+    ..aOS(6, 'filter')
+    ..aOS(7, 'orderBy')
+    ..hasRequiredFields = false;
 
   ListNotificationChannelsRequest() : super();
   ListNotificationChannelsRequest.fromBuffer(List<int> i,
@@ -248,15 +244,15 @@ class ListNotificationChannelsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListNotificationChannelsRequest clone() =>
-      new ListNotificationChannelsRequest()..mergeFromMessage(this);
+      ListNotificationChannelsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListNotificationChannelsRequest create() =>
-      new ListNotificationChannelsRequest();
+      ListNotificationChannelsRequest();
   static PbList<ListNotificationChannelsRequest> createRepeated() =>
-      new PbList<ListNotificationChannelsRequest>();
+      PbList<ListNotificationChannelsRequest>();
   static ListNotificationChannelsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListNotificationChannelsRequest();
+      _defaultInstance = _ReadonlyListNotificationChannelsRequest();
     return _defaultInstance;
   }
 
@@ -311,12 +307,11 @@ class _ReadonlyListNotificationChannelsRequest
     extends ListNotificationChannelsRequest with ReadonlyMessageMixin {}
 
 class ListNotificationChannelsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListNotificationChannelsResponse')
-        ..aOS(2, 'nextPageToken')
-        ..pp<NotificationChannel>(3, 'notificationChannels', PbFieldType.PM,
-            NotificationChannel.$checkItem, NotificationChannel.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ListNotificationChannelsResponse')
+    ..aOS(2, 'nextPageToken')
+    ..pp<NotificationChannel>(3, 'notificationChannels', PbFieldType.PM,
+        NotificationChannel.$checkItem, NotificationChannel.create)
+    ..hasRequiredFields = false;
 
   ListNotificationChannelsResponse() : super();
   ListNotificationChannelsResponse.fromBuffer(List<int> i,
@@ -326,15 +321,15 @@ class ListNotificationChannelsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListNotificationChannelsResponse clone() =>
-      new ListNotificationChannelsResponse()..mergeFromMessage(this);
+      ListNotificationChannelsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListNotificationChannelsResponse create() =>
-      new ListNotificationChannelsResponse();
+      ListNotificationChannelsResponse();
   static PbList<ListNotificationChannelsResponse> createRepeated() =>
-      new PbList<ListNotificationChannelsResponse>();
+      PbList<ListNotificationChannelsResponse>();
   static ListNotificationChannelsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListNotificationChannelsResponse();
+      _defaultInstance = _ReadonlyListNotificationChannelsResponse();
     return _defaultInstance;
   }
 
@@ -359,7 +354,7 @@ class _ReadonlyListNotificationChannelsResponse
     extends ListNotificationChannelsResponse with ReadonlyMessageMixin {}
 
 class GetNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetNotificationChannelRequest')
+  static final BuilderInfo _i = BuilderInfo('GetNotificationChannelRequest')
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -371,15 +366,15 @@ class GetNotificationChannelRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetNotificationChannelRequest clone() =>
-      new GetNotificationChannelRequest()..mergeFromMessage(this);
+      GetNotificationChannelRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetNotificationChannelRequest create() =>
-      new GetNotificationChannelRequest();
+      GetNotificationChannelRequest();
   static PbList<GetNotificationChannelRequest> createRepeated() =>
-      new PbList<GetNotificationChannelRequest>();
+      PbList<GetNotificationChannelRequest>();
   static GetNotificationChannelRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetNotificationChannelRequest();
+      _defaultInstance = _ReadonlyGetNotificationChannelRequest();
     return _defaultInstance;
   }
 
@@ -402,17 +397,16 @@ class _ReadonlyGetNotificationChannelRequest
     extends GetNotificationChannelRequest with ReadonlyMessageMixin {}
 
 class UpdateNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('UpdateNotificationChannelRequest')
-        ..a<$google$protobuf.FieldMask>(
-            2,
-            'updateMask',
-            PbFieldType.OM,
-            $google$protobuf.FieldMask.getDefault,
-            $google$protobuf.FieldMask.create)
-        ..a<NotificationChannel>(3, 'notificationChannel', PbFieldType.OM,
-            NotificationChannel.getDefault, NotificationChannel.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('UpdateNotificationChannelRequest')
+    ..a<$google$protobuf.FieldMask>(
+        2,
+        'updateMask',
+        PbFieldType.OM,
+        $google$protobuf.FieldMask.getDefault,
+        $google$protobuf.FieldMask.create)
+    ..a<NotificationChannel>(3, 'notificationChannel', PbFieldType.OM,
+        NotificationChannel.getDefault, NotificationChannel.create)
+    ..hasRequiredFields = false;
 
   UpdateNotificationChannelRequest() : super();
   UpdateNotificationChannelRequest.fromBuffer(List<int> i,
@@ -422,15 +416,15 @@ class UpdateNotificationChannelRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateNotificationChannelRequest clone() =>
-      new UpdateNotificationChannelRequest()..mergeFromMessage(this);
+      UpdateNotificationChannelRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateNotificationChannelRequest create() =>
-      new UpdateNotificationChannelRequest();
+      UpdateNotificationChannelRequest();
   static PbList<UpdateNotificationChannelRequest> createRepeated() =>
-      new PbList<UpdateNotificationChannelRequest>();
+      PbList<UpdateNotificationChannelRequest>();
   static UpdateNotificationChannelRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateNotificationChannelRequest();
+      _defaultInstance = _ReadonlyUpdateNotificationChannelRequest();
     return _defaultInstance;
   }
 
@@ -461,11 +455,10 @@ class _ReadonlyUpdateNotificationChannelRequest
     extends UpdateNotificationChannelRequest with ReadonlyMessageMixin {}
 
 class DeleteNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('DeleteNotificationChannelRequest')
-        ..aOS(3, 'name')
-        ..aOB(5, 'force')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('DeleteNotificationChannelRequest')
+    ..aOS(3, 'name')
+    ..aOB(5, 'force')
+    ..hasRequiredFields = false;
 
   DeleteNotificationChannelRequest() : super();
   DeleteNotificationChannelRequest.fromBuffer(List<int> i,
@@ -475,15 +468,15 @@ class DeleteNotificationChannelRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteNotificationChannelRequest clone() =>
-      new DeleteNotificationChannelRequest()..mergeFromMessage(this);
+      DeleteNotificationChannelRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteNotificationChannelRequest create() =>
-      new DeleteNotificationChannelRequest();
+      DeleteNotificationChannelRequest();
   static PbList<DeleteNotificationChannelRequest> createRepeated() =>
-      new PbList<DeleteNotificationChannelRequest>();
+      PbList<DeleteNotificationChannelRequest>();
   static DeleteNotificationChannelRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteNotificationChannelRequest();
+      _defaultInstance = _ReadonlyDeleteNotificationChannelRequest();
     return _defaultInstance;
   }
 
@@ -515,7 +508,7 @@ class _ReadonlyDeleteNotificationChannelRequest
 
 class SendNotificationChannelVerificationCodeRequest extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('SendNotificationChannelVerificationCodeRequest')
+      BuilderInfo('SendNotificationChannelVerificationCodeRequest')
         ..aOS(1, 'name')
         ..hasRequiredFields = false;
 
@@ -527,18 +520,17 @@ class SendNotificationChannelVerificationCodeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SendNotificationChannelVerificationCodeRequest clone() =>
-      new SendNotificationChannelVerificationCodeRequest()
-        ..mergeFromMessage(this);
+      SendNotificationChannelVerificationCodeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static SendNotificationChannelVerificationCodeRequest create() =>
-      new SendNotificationChannelVerificationCodeRequest();
+      SendNotificationChannelVerificationCodeRequest();
   static PbList<SendNotificationChannelVerificationCodeRequest>
       createRepeated() =>
-          new PbList<SendNotificationChannelVerificationCodeRequest>();
+          PbList<SendNotificationChannelVerificationCodeRequest>();
   static SendNotificationChannelVerificationCodeRequest getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlySendNotificationChannelVerificationCodeRequest();
+          _ReadonlySendNotificationChannelVerificationCodeRequest();
     return _defaultInstance;
   }
 
@@ -563,7 +555,7 @@ class _ReadonlySendNotificationChannelVerificationCodeRequest
 
 class GetNotificationChannelVerificationCodeRequest extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('GetNotificationChannelVerificationCodeRequest')
+      BuilderInfo('GetNotificationChannelVerificationCodeRequest')
         ..aOS(1, 'name')
         ..a<$google$protobuf.Timestamp>(
             2,
@@ -581,18 +573,17 @@ class GetNotificationChannelVerificationCodeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetNotificationChannelVerificationCodeRequest clone() =>
-      new GetNotificationChannelVerificationCodeRequest()
-        ..mergeFromMessage(this);
+      GetNotificationChannelVerificationCodeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetNotificationChannelVerificationCodeRequest create() =>
-      new GetNotificationChannelVerificationCodeRequest();
+      GetNotificationChannelVerificationCodeRequest();
   static PbList<GetNotificationChannelVerificationCodeRequest>
       createRepeated() =>
-          new PbList<GetNotificationChannelVerificationCodeRequest>();
+          PbList<GetNotificationChannelVerificationCodeRequest>();
   static GetNotificationChannelVerificationCodeRequest getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyGetNotificationChannelVerificationCodeRequest();
+          _ReadonlyGetNotificationChannelVerificationCodeRequest();
     return _defaultInstance;
   }
 
@@ -625,7 +616,7 @@ class _ReadonlyGetNotificationChannelVerificationCodeRequest
 
 class GetNotificationChannelVerificationCodeResponse extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('GetNotificationChannelVerificationCodeResponse')
+      BuilderInfo('GetNotificationChannelVerificationCodeResponse')
         ..aOS(1, 'code')
         ..a<$google$protobuf.Timestamp>(
             2,
@@ -643,18 +634,17 @@ class GetNotificationChannelVerificationCodeResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetNotificationChannelVerificationCodeResponse clone() =>
-      new GetNotificationChannelVerificationCodeResponse()
-        ..mergeFromMessage(this);
+      GetNotificationChannelVerificationCodeResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetNotificationChannelVerificationCodeResponse create() =>
-      new GetNotificationChannelVerificationCodeResponse();
+      GetNotificationChannelVerificationCodeResponse();
   static PbList<GetNotificationChannelVerificationCodeResponse>
       createRepeated() =>
-          new PbList<GetNotificationChannelVerificationCodeResponse>();
+          PbList<GetNotificationChannelVerificationCodeResponse>();
   static GetNotificationChannelVerificationCodeResponse getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyGetNotificationChannelVerificationCodeResponse();
+          _ReadonlyGetNotificationChannelVerificationCodeResponse();
     return _defaultInstance;
   }
 
@@ -686,11 +676,10 @@ class _ReadonlyGetNotificationChannelVerificationCodeResponse
     with ReadonlyMessageMixin {}
 
 class VerifyNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('VerifyNotificationChannelRequest')
-        ..aOS(1, 'name')
-        ..aOS(2, 'code')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('VerifyNotificationChannelRequest')
+    ..aOS(1, 'name')
+    ..aOS(2, 'code')
+    ..hasRequiredFields = false;
 
   VerifyNotificationChannelRequest() : super();
   VerifyNotificationChannelRequest.fromBuffer(List<int> i,
@@ -700,15 +689,15 @@ class VerifyNotificationChannelRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VerifyNotificationChannelRequest clone() =>
-      new VerifyNotificationChannelRequest()..mergeFromMessage(this);
+      VerifyNotificationChannelRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static VerifyNotificationChannelRequest create() =>
-      new VerifyNotificationChannelRequest();
+      VerifyNotificationChannelRequest();
   static PbList<VerifyNotificationChannelRequest> createRepeated() =>
-      new PbList<VerifyNotificationChannelRequest>();
+      PbList<VerifyNotificationChannelRequest>();
   static VerifyNotificationChannelRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVerifyNotificationChannelRequest();
+      _defaultInstance = _ReadonlyVerifyNotificationChannelRequest();
     return _defaultInstance;
   }
 
@@ -745,7 +734,7 @@ class NotificationChannelServiceApi {
   Future<ListNotificationChannelDescriptorsResponse>
       listNotificationChannelDescriptors(ClientContext ctx,
           ListNotificationChannelDescriptorsRequest request) {
-    var emptyResponse = new ListNotificationChannelDescriptorsResponse();
+    var emptyResponse = ListNotificationChannelDescriptorsResponse();
     return _client.invoke<ListNotificationChannelDescriptorsResponse>(
         ctx,
         'NotificationChannelService',
@@ -756,7 +745,7 @@ class NotificationChannelServiceApi {
 
   Future<NotificationChannelDescriptor> getNotificationChannelDescriptor(
       ClientContext ctx, GetNotificationChannelDescriptorRequest request) {
-    var emptyResponse = new NotificationChannelDescriptor();
+    var emptyResponse = NotificationChannelDescriptor();
     return _client.invoke<NotificationChannelDescriptor>(
         ctx,
         'NotificationChannelService',
@@ -767,7 +756,7 @@ class NotificationChannelServiceApi {
 
   Future<ListNotificationChannelsResponse> listNotificationChannels(
       ClientContext ctx, ListNotificationChannelsRequest request) {
-    var emptyResponse = new ListNotificationChannelsResponse();
+    var emptyResponse = ListNotificationChannelsResponse();
     return _client.invoke<ListNotificationChannelsResponse>(
         ctx,
         'NotificationChannelService',
@@ -778,7 +767,7 @@ class NotificationChannelServiceApi {
 
   Future<NotificationChannel> getNotificationChannel(
       ClientContext ctx, GetNotificationChannelRequest request) {
-    var emptyResponse = new NotificationChannel();
+    var emptyResponse = NotificationChannel();
     return _client.invoke<NotificationChannel>(
         ctx,
         'NotificationChannelService',
@@ -789,7 +778,7 @@ class NotificationChannelServiceApi {
 
   Future<NotificationChannel> createNotificationChannel(
       ClientContext ctx, CreateNotificationChannelRequest request) {
-    var emptyResponse = new NotificationChannel();
+    var emptyResponse = NotificationChannel();
     return _client.invoke<NotificationChannel>(
         ctx,
         'NotificationChannelService',
@@ -800,7 +789,7 @@ class NotificationChannelServiceApi {
 
   Future<NotificationChannel> updateNotificationChannel(
       ClientContext ctx, UpdateNotificationChannelRequest request) {
-    var emptyResponse = new NotificationChannel();
+    var emptyResponse = NotificationChannel();
     return _client.invoke<NotificationChannel>(
         ctx,
         'NotificationChannelService',
@@ -811,7 +800,7 @@ class NotificationChannelServiceApi {
 
   Future<$google$protobuf.Empty> deleteNotificationChannel(
       ClientContext ctx, DeleteNotificationChannelRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx,
         'NotificationChannelService',
@@ -823,7 +812,7 @@ class NotificationChannelServiceApi {
   Future<$google$protobuf.Empty> sendNotificationChannelVerificationCode(
       ClientContext ctx,
       SendNotificationChannelVerificationCodeRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx,
         'NotificationChannelService',
@@ -835,7 +824,7 @@ class NotificationChannelServiceApi {
   Future<GetNotificationChannelVerificationCodeResponse>
       getNotificationChannelVerificationCode(ClientContext ctx,
           GetNotificationChannelVerificationCodeRequest request) {
-    var emptyResponse = new GetNotificationChannelVerificationCodeResponse();
+    var emptyResponse = GetNotificationChannelVerificationCodeResponse();
     return _client.invoke<GetNotificationChannelVerificationCodeResponse>(
         ctx,
         'NotificationChannelService',
@@ -846,7 +835,7 @@ class NotificationChannelServiceApi {
 
   Future<NotificationChannel> verifyNotificationChannel(
       ClientContext ctx, VerifyNotificationChannelRequest request) {
-    var emptyResponse = new NotificationChannel();
+    var emptyResponse = NotificationChannel();
     return _client.invoke<NotificationChannel>(
         ctx,
         'NotificationChannelService',

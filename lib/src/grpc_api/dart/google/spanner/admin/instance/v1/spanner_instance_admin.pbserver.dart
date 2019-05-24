@@ -40,27 +40,27 @@ abstract class InstanceAdminServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListInstanceConfigs':
-        return new ListInstanceConfigsRequest();
+        return ListInstanceConfigsRequest();
       case 'GetInstanceConfig':
-        return new GetInstanceConfigRequest();
+        return GetInstanceConfigRequest();
       case 'ListInstances':
-        return new ListInstancesRequest();
+        return ListInstancesRequest();
       case 'GetInstance':
-        return new GetInstanceRequest();
+        return GetInstanceRequest();
       case 'CreateInstance':
-        return new CreateInstanceRequest();
+        return CreateInstanceRequest();
       case 'UpdateInstance':
-        return new UpdateInstanceRequest();
+        return UpdateInstanceRequest();
       case 'DeleteInstance':
-        return new DeleteInstanceRequest();
+        return DeleteInstanceRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -88,7 +88,7 @@ abstract class InstanceAdminServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

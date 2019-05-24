@@ -9,12 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class PlanNode_Kind extends ProtobufEnum {
   static const PlanNode_Kind KIND_UNSPECIFIED =
-      const PlanNode_Kind._(0, 'KIND_UNSPECIFIED');
-  static const PlanNode_Kind RELATIONAL =
-      const PlanNode_Kind._(1, 'RELATIONAL');
-  static const PlanNode_Kind SCALAR = const PlanNode_Kind._(2, 'SCALAR');
+      PlanNode_Kind._(0, 'KIND_UNSPECIFIED');
+  static const PlanNode_Kind RELATIONAL = PlanNode_Kind._(1, 'RELATIONAL');
+  static const PlanNode_Kind SCALAR = PlanNode_Kind._(2, 'SCALAR');
 
-  static const List<PlanNode_Kind> values = const <PlanNode_Kind>[
+  static const List<PlanNode_Kind> values = <PlanNode_Kind>[
     KIND_UNSPECIFIED,
     RELATIONAL,
     SCALAR,

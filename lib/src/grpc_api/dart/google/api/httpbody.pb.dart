@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class HttpBody extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HttpBody')
+  static final BuilderInfo _i = BuilderInfo('HttpBody')
     ..aOS(1, 'contentType')
     ..a<List<int>>(2, 'data', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -20,12 +20,12 @@ class HttpBody extends GeneratedMessage {
       : super.fromBuffer(i, r);
   HttpBody.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HttpBody clone() => new HttpBody()..mergeFromMessage(this);
+  HttpBody clone() => HttpBody()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HttpBody create() => new HttpBody();
-  static PbList<HttpBody> createRepeated() => new PbList<HttpBody>();
+  static HttpBody create() => HttpBody();
+  static PbList<HttpBody> createRepeated() => PbList<HttpBody>();
   static HttpBody getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHttpBody();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHttpBody();
     return _defaultInstance;
   }
 

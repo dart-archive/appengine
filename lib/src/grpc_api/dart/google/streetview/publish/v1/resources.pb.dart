@@ -13,7 +13,7 @@ import '../../../type/latlng.pb.dart' as $google$type;
 import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 
 class UploadRef extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UploadRef')
+  static final BuilderInfo _i = BuilderInfo('UploadRef')
     ..aOS(1, 'uploadUrl')
     ..hasRequiredFields = false;
 
@@ -23,12 +23,12 @@ class UploadRef extends GeneratedMessage {
       : super.fromBuffer(i, r);
   UploadRef.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UploadRef clone() => new UploadRef()..mergeFromMessage(this);
+  UploadRef clone() => UploadRef()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UploadRef create() => new UploadRef();
-  static PbList<UploadRef> createRepeated() => new PbList<UploadRef>();
+  static UploadRef create() => UploadRef();
+  static PbList<UploadRef> createRepeated() => PbList<UploadRef>();
   static UploadRef getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUploadRef();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyUploadRef();
     return _defaultInstance;
   }
 
@@ -49,7 +49,7 @@ class UploadRef extends GeneratedMessage {
 class _ReadonlyUploadRef extends UploadRef with ReadonlyMessageMixin {}
 
 class PhotoId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PhotoId')
+  static final BuilderInfo _i = BuilderInfo('PhotoId')
     ..aOS(1, 'id')
     ..hasRequiredFields = false;
 
@@ -59,12 +59,12 @@ class PhotoId extends GeneratedMessage {
       : super.fromBuffer(i, r);
   PhotoId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PhotoId clone() => new PhotoId()..mergeFromMessage(this);
+  PhotoId clone() => PhotoId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PhotoId create() => new PhotoId();
-  static PbList<PhotoId> createRepeated() => new PbList<PhotoId>();
+  static PhotoId create() => PhotoId();
+  static PbList<PhotoId> createRepeated() => PbList<PhotoId>();
   static PhotoId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPhotoId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPhotoId();
     return _defaultInstance;
   }
 
@@ -85,7 +85,7 @@ class PhotoId extends GeneratedMessage {
 class _ReadonlyPhotoId extends PhotoId with ReadonlyMessageMixin {}
 
 class Level extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Level')
+  static final BuilderInfo _i = BuilderInfo('Level')
     ..a<double>(1, 'number', PbFieldType.OD)
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
@@ -95,12 +95,12 @@ class Level extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Level.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Level clone() => new Level()..mergeFromMessage(this);
+  Level clone() => Level()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Level create() => new Level();
-  static PbList<Level> createRepeated() => new PbList<Level>();
+  static Level create() => Level();
+  static PbList<Level> createRepeated() => PbList<Level>();
   static Level getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLevel();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLevel();
     return _defaultInstance;
   }
 
@@ -129,7 +129,7 @@ class Level extends GeneratedMessage {
 class _ReadonlyLevel extends Level with ReadonlyMessageMixin {}
 
 class Pose extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Pose')
+  static final BuilderInfo _i = BuilderInfo('Pose')
     ..a<$google$type.LatLng>(1, 'latLngPair', PbFieldType.OM,
         $google$type.LatLng.getDefault, $google$type.LatLng.create)
     ..a<double>(2, 'altitude', PbFieldType.OD)
@@ -144,12 +144,12 @@ class Pose extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Pose.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Pose clone() => new Pose()..mergeFromMessage(this);
+  Pose clone() => Pose()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Pose create() => new Pose();
-  static PbList<Pose> createRepeated() => new PbList<Pose>();
+  static Pose create() => Pose();
+  static PbList<Pose> createRepeated() => PbList<Pose>();
   static Pose getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPose();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPose();
     return _defaultInstance;
   }
 
@@ -210,7 +210,7 @@ class Pose extends GeneratedMessage {
 class _ReadonlyPose extends Pose with ReadonlyMessageMixin {}
 
 class Place extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Place')
+  static final BuilderInfo _i = BuilderInfo('Place')
     ..aOS(1, 'placeId')
     ..hasRequiredFields = false;
 
@@ -219,12 +219,12 @@ class Place extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Place.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Place clone() => new Place()..mergeFromMessage(this);
+  Place clone() => Place()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Place create() => new Place();
-  static PbList<Place> createRepeated() => new PbList<Place>();
+  static Place create() => Place();
+  static PbList<Place> createRepeated() => PbList<Place>();
   static Place getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPlace();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPlace();
     return _defaultInstance;
   }
 
@@ -245,7 +245,7 @@ class Place extends GeneratedMessage {
 class _ReadonlyPlace extends Place with ReadonlyMessageMixin {}
 
 class Connection extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Connection')
+  static final BuilderInfo _i = BuilderInfo('Connection')
     ..a<PhotoId>(
         1, 'target', PbFieldType.OM, PhotoId.getDefault, PhotoId.create)
     ..hasRequiredFields = false;
@@ -256,12 +256,12 @@ class Connection extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Connection.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Connection clone() => new Connection()..mergeFromMessage(this);
+  Connection clone() => Connection()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Connection create() => new Connection();
-  static PbList<Connection> createRepeated() => new PbList<Connection>();
+  static Connection create() => Connection();
+  static PbList<Connection> createRepeated() => PbList<Connection>();
   static Connection getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyConnection();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConnection();
     return _defaultInstance;
   }
 
@@ -282,7 +282,7 @@ class Connection extends GeneratedMessage {
 class _ReadonlyConnection extends Connection with ReadonlyMessageMixin {}
 
 class Photo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Photo')
+  static final BuilderInfo _i = BuilderInfo('Photo')
     ..a<PhotoId>(
         1, 'photoId', PbFieldType.OM, PhotoId.getDefault, PhotoId.create)
     ..a<UploadRef>(2, 'uploadReference', PbFieldType.OM, UploadRef.getDefault,
@@ -308,12 +308,12 @@ class Photo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Photo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Photo clone() => new Photo()..mergeFromMessage(this);
+  Photo clone() => Photo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Photo create() => new Photo();
-  static PbList<Photo> createRepeated() => new PbList<Photo>();
+  static Photo create() => Photo();
+  static PbList<Photo> createRepeated() => PbList<Photo>();
   static Photo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPhoto();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPhoto();
     return _defaultInstance;
   }
 

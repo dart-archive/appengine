@@ -13,7 +13,7 @@ import '../../../protobuf/struct.pb.dart' as $google$protobuf;
 import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class RequestSyncDevicesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RequestSyncDevicesRequest')
+  static final BuilderInfo _i = BuilderInfo('RequestSyncDevicesRequest')
     ..aOS(1, 'agentUserId')
     ..aOB(2, 'async')
     ..hasRequiredFields = false;
@@ -26,14 +26,14 @@ class RequestSyncDevicesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RequestSyncDevicesRequest clone() =>
-      new RequestSyncDevicesRequest()..mergeFromMessage(this);
+      RequestSyncDevicesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RequestSyncDevicesRequest create() => new RequestSyncDevicesRequest();
+  static RequestSyncDevicesRequest create() => RequestSyncDevicesRequest();
   static PbList<RequestSyncDevicesRequest> createRepeated() =>
-      new PbList<RequestSyncDevicesRequest>();
+      PbList<RequestSyncDevicesRequest>();
   static RequestSyncDevicesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRequestSyncDevicesRequest();
+      _defaultInstance = _ReadonlyRequestSyncDevicesRequest();
     return _defaultInstance;
   }
 
@@ -64,7 +64,7 @@ class _ReadonlyRequestSyncDevicesRequest extends RequestSyncDevicesRequest
     with ReadonlyMessageMixin {}
 
 class RequestSyncDevicesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RequestSyncDevicesResponse')
+  static final BuilderInfo _i = BuilderInfo('RequestSyncDevicesResponse')
     ..hasRequiredFields = false;
 
   RequestSyncDevicesResponse() : super();
@@ -75,15 +75,14 @@ class RequestSyncDevicesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RequestSyncDevicesResponse clone() =>
-      new RequestSyncDevicesResponse()..mergeFromMessage(this);
+      RequestSyncDevicesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RequestSyncDevicesResponse create() =>
-      new RequestSyncDevicesResponse();
+  static RequestSyncDevicesResponse create() => RequestSyncDevicesResponse();
   static PbList<RequestSyncDevicesResponse> createRepeated() =>
-      new PbList<RequestSyncDevicesResponse>();
+      PbList<RequestSyncDevicesResponse>();
   static RequestSyncDevicesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRequestSyncDevicesResponse();
+      _defaultInstance = _ReadonlyRequestSyncDevicesResponse();
     return _defaultInstance;
   }
 
@@ -98,18 +97,17 @@ class _ReadonlyRequestSyncDevicesResponse extends RequestSyncDevicesResponse
     with ReadonlyMessageMixin {}
 
 class ReportStateAndNotificationRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ReportStateAndNotificationRequest')
-        ..aOS(1, 'requestId')
-        ..aOS(2, 'agentUserId')
-        ..a<StateAndNotificationPayload>(
-            3,
-            'payload',
-            PbFieldType.OM,
-            StateAndNotificationPayload.getDefault,
-            StateAndNotificationPayload.create)
-        ..aOS(4, 'eventId')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ReportStateAndNotificationRequest')
+    ..aOS(1, 'requestId')
+    ..aOS(2, 'agentUserId')
+    ..a<StateAndNotificationPayload>(
+        3,
+        'payload',
+        PbFieldType.OM,
+        StateAndNotificationPayload.getDefault,
+        StateAndNotificationPayload.create)
+    ..aOS(4, 'eventId')
+    ..hasRequiredFields = false;
 
   ReportStateAndNotificationRequest() : super();
   ReportStateAndNotificationRequest.fromBuffer(List<int> i,
@@ -119,15 +117,15 @@ class ReportStateAndNotificationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReportStateAndNotificationRequest clone() =>
-      new ReportStateAndNotificationRequest()..mergeFromMessage(this);
+      ReportStateAndNotificationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ReportStateAndNotificationRequest create() =>
-      new ReportStateAndNotificationRequest();
+      ReportStateAndNotificationRequest();
   static PbList<ReportStateAndNotificationRequest> createRepeated() =>
-      new PbList<ReportStateAndNotificationRequest>();
+      PbList<ReportStateAndNotificationRequest>();
   static ReportStateAndNotificationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportStateAndNotificationRequest();
+      _defaultInstance = _ReadonlyReportStateAndNotificationRequest();
     return _defaultInstance;
   }
 
@@ -175,7 +173,7 @@ class _ReadonlyReportStateAndNotificationRequest
 
 class ReportStateAndNotificationResponse extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ReportStateAndNotificationResponse')
+      BuilderInfo('ReportStateAndNotificationResponse')
         ..aOS(1, 'requestId')
         ..hasRequiredFields = false;
 
@@ -187,15 +185,15 @@ class ReportStateAndNotificationResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReportStateAndNotificationResponse clone() =>
-      new ReportStateAndNotificationResponse()..mergeFromMessage(this);
+      ReportStateAndNotificationResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ReportStateAndNotificationResponse create() =>
-      new ReportStateAndNotificationResponse();
+      ReportStateAndNotificationResponse();
   static PbList<ReportStateAndNotificationResponse> createRepeated() =>
-      new PbList<ReportStateAndNotificationResponse>();
+      PbList<ReportStateAndNotificationResponse>();
   static ReportStateAndNotificationResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportStateAndNotificationResponse();
+      _defaultInstance = _ReadonlyReportStateAndNotificationResponse();
     return _defaultInstance;
   }
 
@@ -218,7 +216,7 @@ class _ReadonlyReportStateAndNotificationResponse
     extends ReportStateAndNotificationResponse with ReadonlyMessageMixin {}
 
 class StateAndNotificationPayload extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StateAndNotificationPayload')
+  static final BuilderInfo _i = BuilderInfo('StateAndNotificationPayload')
     ..a<ReportStateAndNotificationDevice>(
         1,
         'devices',
@@ -235,15 +233,14 @@ class StateAndNotificationPayload extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StateAndNotificationPayload clone() =>
-      new StateAndNotificationPayload()..mergeFromMessage(this);
+      StateAndNotificationPayload()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StateAndNotificationPayload create() =>
-      new StateAndNotificationPayload();
+  static StateAndNotificationPayload create() => StateAndNotificationPayload();
   static PbList<StateAndNotificationPayload> createRepeated() =>
-      new PbList<StateAndNotificationPayload>();
+      PbList<StateAndNotificationPayload>();
   static StateAndNotificationPayload getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStateAndNotificationPayload();
+      _defaultInstance = _ReadonlyStateAndNotificationPayload();
     return _defaultInstance;
   }
 
@@ -266,13 +263,12 @@ class _ReadonlyStateAndNotificationPayload extends StateAndNotificationPayload
     with ReadonlyMessageMixin {}
 
 class ReportStateAndNotificationDevice extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ReportStateAndNotificationDevice')
-        ..a<$google$protobuf.Struct>(1, 'states', PbFieldType.OM,
-            $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
-        ..a<$google$protobuf.Struct>(2, 'notifications', PbFieldType.OM,
-            $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ReportStateAndNotificationDevice')
+    ..a<$google$protobuf.Struct>(1, 'states', PbFieldType.OM,
+        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
+    ..a<$google$protobuf.Struct>(2, 'notifications', PbFieldType.OM,
+        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
+    ..hasRequiredFields = false;
 
   ReportStateAndNotificationDevice() : super();
   ReportStateAndNotificationDevice.fromBuffer(List<int> i,
@@ -282,15 +278,15 @@ class ReportStateAndNotificationDevice extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReportStateAndNotificationDevice clone() =>
-      new ReportStateAndNotificationDevice()..mergeFromMessage(this);
+      ReportStateAndNotificationDevice()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ReportStateAndNotificationDevice create() =>
-      new ReportStateAndNotificationDevice();
+      ReportStateAndNotificationDevice();
   static PbList<ReportStateAndNotificationDevice> createRepeated() =>
-      new PbList<ReportStateAndNotificationDevice>();
+      PbList<ReportStateAndNotificationDevice>();
   static ReportStateAndNotificationDevice getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportStateAndNotificationDevice();
+      _defaultInstance = _ReadonlyReportStateAndNotificationDevice();
     return _defaultInstance;
   }
 
@@ -321,7 +317,7 @@ class _ReadonlyReportStateAndNotificationDevice
     extends ReportStateAndNotificationDevice with ReadonlyMessageMixin {}
 
 class DeleteAgentUserRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteAgentUserRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteAgentUserRequest')
     ..aOS(1, 'requestId')
     ..aOS(2, 'agentUserId')
     ..hasRequiredFields = false;
@@ -334,14 +330,14 @@ class DeleteAgentUserRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteAgentUserRequest clone() =>
-      new DeleteAgentUserRequest()..mergeFromMessage(this);
+      DeleteAgentUserRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteAgentUserRequest create() => new DeleteAgentUserRequest();
+  static DeleteAgentUserRequest create() => DeleteAgentUserRequest();
   static PbList<DeleteAgentUserRequest> createRepeated() =>
-      new PbList<DeleteAgentUserRequest>();
+      PbList<DeleteAgentUserRequest>();
   static DeleteAgentUserRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteAgentUserRequest();
+      _defaultInstance = _ReadonlyDeleteAgentUserRequest();
     return _defaultInstance;
   }
 
@@ -377,14 +373,14 @@ class HomeGraphApiServiceApi {
 
   Future<RequestSyncDevicesResponse> requestSyncDevices(
       ClientContext ctx, RequestSyncDevicesRequest request) {
-    var emptyResponse = new RequestSyncDevicesResponse();
+    var emptyResponse = RequestSyncDevicesResponse();
     return _client.invoke<RequestSyncDevicesResponse>(ctx,
         'HomeGraphApiService', 'RequestSyncDevices', request, emptyResponse);
   }
 
   Future<ReportStateAndNotificationResponse> reportStateAndNotification(
       ClientContext ctx, ReportStateAndNotificationRequest request) {
-    var emptyResponse = new ReportStateAndNotificationResponse();
+    var emptyResponse = ReportStateAndNotificationResponse();
     return _client.invoke<ReportStateAndNotificationResponse>(
         ctx,
         'HomeGraphApiService',
@@ -395,7 +391,7 @@ class HomeGraphApiServiceApi {
 
   Future<$google$protobuf.Empty> deleteAgentUser(
       ClientContext ctx, DeleteAgentUserRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'HomeGraphApiService', 'DeleteAgentUser', request, emptyResponse);
   }

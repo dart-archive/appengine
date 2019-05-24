@@ -20,9 +20,9 @@ abstract class OnlinePredictionServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'Predict':
-        return new PredictRequest();
+        return PredictRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -32,7 +32,7 @@ abstract class OnlinePredictionServiceBase extends GeneratedService {
       case 'Predict':
         return this.predict(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

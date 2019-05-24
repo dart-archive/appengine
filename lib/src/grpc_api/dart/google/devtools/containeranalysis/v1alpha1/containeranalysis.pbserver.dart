@@ -60,49 +60,49 @@ abstract class ContainerAnalysisServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetOccurrence':
-        return new GetOccurrenceRequest();
+        return GetOccurrenceRequest();
       case 'ListOccurrences':
-        return new ListOccurrencesRequest();
+        return ListOccurrencesRequest();
       case 'DeleteOccurrence':
-        return new DeleteOccurrenceRequest();
+        return DeleteOccurrenceRequest();
       case 'CreateOccurrence':
-        return new CreateOccurrenceRequest();
+        return CreateOccurrenceRequest();
       case 'UpdateOccurrence':
-        return new UpdateOccurrenceRequest();
+        return UpdateOccurrenceRequest();
       case 'GetOccurrenceNote':
-        return new GetOccurrenceNoteRequest();
+        return GetOccurrenceNoteRequest();
       case 'GetNote':
-        return new GetNoteRequest();
+        return GetNoteRequest();
       case 'ListNotes':
-        return new ListNotesRequest();
+        return ListNotesRequest();
       case 'DeleteNote':
-        return new DeleteNoteRequest();
+        return DeleteNoteRequest();
       case 'CreateNote':
-        return new CreateNoteRequest();
+        return CreateNoteRequest();
       case 'UpdateNote':
-        return new UpdateNoteRequest();
+        return UpdateNoteRequest();
       case 'ListNoteOccurrences':
-        return new ListNoteOccurrencesRequest();
+        return ListNoteOccurrencesRequest();
       case 'GetVulnzOccurrencesSummary':
-        return new GetVulnzOccurrencesSummaryRequest();
+        return GetVulnzOccurrencesSummaryRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       case 'CreateOperation':
-        return new CreateOperationRequest();
+        return CreateOperationRequest();
       case 'UpdateOperation':
-        return new UpdateOperationRequest();
+        return UpdateOperationRequest();
       case 'GetScanConfig':
-        return new GetScanConfigRequest();
+        return GetScanConfigRequest();
       case 'ListScanConfigs':
-        return new ListScanConfigsRequest();
+        return ListScanConfigsRequest();
       case 'UpdateScanConfig':
-        return new UpdateScanConfigRequest();
+        return UpdateScanConfigRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -152,7 +152,7 @@ abstract class ContainerAnalysisServiceBase extends GeneratedService {
       case 'UpdateScanConfig':
         return this.updateScanConfig(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

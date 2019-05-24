@@ -23,13 +23,13 @@ abstract class TraceServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListTraces':
-        return new ListTracesRequest();
+        return ListTracesRequest();
       case 'GetTrace':
-        return new GetTraceRequest();
+        return GetTraceRequest();
       case 'PatchTraces':
-        return new PatchTracesRequest();
+        return PatchTracesRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -43,7 +43,7 @@ abstract class TraceServiceBase extends GeneratedService {
       case 'PatchTraces':
         return this.patchTraces(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

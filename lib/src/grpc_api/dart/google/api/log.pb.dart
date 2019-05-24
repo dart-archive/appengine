@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import 'label.pb.dart';
 
 class LogDescriptor extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogDescriptor')
+  static final BuilderInfo _i = BuilderInfo('LogDescriptor')
     ..aOS(1, 'name')
     ..pp<LabelDescriptor>(2, 'labels', PbFieldType.PM,
         LabelDescriptor.$checkItem, LabelDescriptor.create)
@@ -26,13 +26,12 @@ class LogDescriptor extends GeneratedMessage {
   LogDescriptor.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogDescriptor clone() => new LogDescriptor()..mergeFromMessage(this);
+  LogDescriptor clone() => LogDescriptor()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LogDescriptor create() => new LogDescriptor();
-  static PbList<LogDescriptor> createRepeated() => new PbList<LogDescriptor>();
+  static LogDescriptor create() => LogDescriptor();
+  static PbList<LogDescriptor> createRepeated() => PbList<LogDescriptor>();
   static LogDescriptor getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLogDescriptor();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLogDescriptor();
     return _defaultInstance;
   }
 

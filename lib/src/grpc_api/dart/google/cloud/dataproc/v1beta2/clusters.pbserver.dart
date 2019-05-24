@@ -29,19 +29,19 @@ abstract class ClusterControllerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateCluster':
-        return new CreateClusterRequest();
+        return CreateClusterRequest();
       case 'UpdateCluster':
-        return new UpdateClusterRequest();
+        return UpdateClusterRequest();
       case 'DeleteCluster':
-        return new DeleteClusterRequest();
+        return DeleteClusterRequest();
       case 'GetCluster':
-        return new GetClusterRequest();
+        return GetClusterRequest();
       case 'ListClusters':
-        return new ListClustersRequest();
+        return ListClustersRequest();
       case 'DiagnoseCluster':
-        return new DiagnoseClusterRequest();
+        return DiagnoseClusterRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -61,7 +61,7 @@ abstract class ClusterControllerServiceBase extends GeneratedService {
       case 'DiagnoseCluster':
         return this.diagnoseCluster(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

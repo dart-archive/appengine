@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Documentation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Documentation')
+  static final BuilderInfo _i = BuilderInfo('Documentation')
     ..aOS(1, 'summary')
     ..aOS(2, 'overview')
     ..pp<DocumentationRule>(3, 'rules', PbFieldType.PM,
@@ -25,13 +25,12 @@ class Documentation extends GeneratedMessage {
   Documentation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Documentation clone() => new Documentation()..mergeFromMessage(this);
+  Documentation clone() => Documentation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Documentation create() => new Documentation();
-  static PbList<Documentation> createRepeated() => new PbList<Documentation>();
+  static Documentation create() => Documentation();
+  static PbList<Documentation> createRepeated() => PbList<Documentation>();
   static Documentation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDocumentation();
     return _defaultInstance;
   }
 
@@ -72,7 +71,7 @@ class Documentation extends GeneratedMessage {
 class _ReadonlyDocumentation extends Documentation with ReadonlyMessageMixin {}
 
 class DocumentationRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DocumentationRule')
+  static final BuilderInfo _i = BuilderInfo('DocumentationRule')
     ..aOS(1, 'selector')
     ..aOS(2, 'description')
     ..aOS(3, 'deprecationDescription')
@@ -85,14 +84,14 @@ class DocumentationRule extends GeneratedMessage {
   DocumentationRule.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DocumentationRule clone() => new DocumentationRule()..mergeFromMessage(this);
+  DocumentationRule clone() => DocumentationRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DocumentationRule create() => new DocumentationRule();
+  static DocumentationRule create() => DocumentationRule();
   static PbList<DocumentationRule> createRepeated() =>
-      new PbList<DocumentationRule>();
+      PbList<DocumentationRule>();
   static DocumentationRule getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocumentationRule();
+      _defaultInstance = _ReadonlyDocumentationRule();
     return _defaultInstance;
   }
 
@@ -130,7 +129,7 @@ class _ReadonlyDocumentationRule extends DocumentationRule
     with ReadonlyMessageMixin {}
 
 class Page extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Page')
+  static final BuilderInfo _i = BuilderInfo('Page')
     ..aOS(1, 'name')
     ..aOS(2, 'content')
     ..pp<Page>(3, 'subpages', PbFieldType.PM, Page.$checkItem, Page.create)
@@ -141,12 +140,12 @@ class Page extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Page.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Page clone() => new Page()..mergeFromMessage(this);
+  Page clone() => Page()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Page create() => new Page();
-  static PbList<Page> createRepeated() => new PbList<Page>();
+  static Page create() => Page();
+  static PbList<Page> createRepeated() => PbList<Page>();
   static Page getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPage();
     return _defaultInstance;
   }
 

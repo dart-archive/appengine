@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class AuthorizationConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthorizationConfig')
+  static final BuilderInfo _i = BuilderInfo('AuthorizationConfig')
     ..aOS(1, 'provider')
     ..hasRequiredFields = false;
 
@@ -20,15 +20,14 @@ class AuthorizationConfig extends GeneratedMessage {
   AuthorizationConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthorizationConfig clone() =>
-      new AuthorizationConfig()..mergeFromMessage(this);
+  AuthorizationConfig clone() => AuthorizationConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuthorizationConfig create() => new AuthorizationConfig();
+  static AuthorizationConfig create() => AuthorizationConfig();
   static PbList<AuthorizationConfig> createRepeated() =>
-      new PbList<AuthorizationConfig>();
+      PbList<AuthorizationConfig>();
   static AuthorizationConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthorizationConfig();
+      _defaultInstance = _ReadonlyAuthorizationConfig();
     return _defaultInstance;
   }
 

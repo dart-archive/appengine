@@ -9,23 +9,17 @@ import 'package:protobuf/protobuf.dart';
 
 class LoggingConfig_Level extends ProtobufEnum {
   static const LoggingConfig_Level LEVEL_UNSPECIFIED =
-      const LoggingConfig_Level._(0, 'LEVEL_UNSPECIFIED');
-  static const LoggingConfig_Level ALL = const LoggingConfig_Level._(1, 'ALL');
-  static const LoggingConfig_Level TRACE =
-      const LoggingConfig_Level._(2, 'TRACE');
-  static const LoggingConfig_Level DEBUG =
-      const LoggingConfig_Level._(3, 'DEBUG');
-  static const LoggingConfig_Level INFO =
-      const LoggingConfig_Level._(4, 'INFO');
-  static const LoggingConfig_Level WARN =
-      const LoggingConfig_Level._(5, 'WARN');
-  static const LoggingConfig_Level ERROR =
-      const LoggingConfig_Level._(6, 'ERROR');
-  static const LoggingConfig_Level FATAL =
-      const LoggingConfig_Level._(7, 'FATAL');
-  static const LoggingConfig_Level OFF = const LoggingConfig_Level._(8, 'OFF');
+      LoggingConfig_Level._(0, 'LEVEL_UNSPECIFIED');
+  static const LoggingConfig_Level ALL = LoggingConfig_Level._(1, 'ALL');
+  static const LoggingConfig_Level TRACE = LoggingConfig_Level._(2, 'TRACE');
+  static const LoggingConfig_Level DEBUG = LoggingConfig_Level._(3, 'DEBUG');
+  static const LoggingConfig_Level INFO = LoggingConfig_Level._(4, 'INFO');
+  static const LoggingConfig_Level WARN = LoggingConfig_Level._(5, 'WARN');
+  static const LoggingConfig_Level ERROR = LoggingConfig_Level._(6, 'ERROR');
+  static const LoggingConfig_Level FATAL = LoggingConfig_Level._(7, 'FATAL');
+  static const LoggingConfig_Level OFF = LoggingConfig_Level._(8, 'OFF');
 
-  static const List<LoggingConfig_Level> values = const <LoggingConfig_Level>[
+  static const List<LoggingConfig_Level> values = <LoggingConfig_Level>[
     LEVEL_UNSPECIFIED,
     ALL,
     TRACE,
@@ -49,23 +43,21 @@ class LoggingConfig_Level extends ProtobufEnum {
 
 class JobStatus_State extends ProtobufEnum {
   static const JobStatus_State STATE_UNSPECIFIED =
-      const JobStatus_State._(0, 'STATE_UNSPECIFIED');
-  static const JobStatus_State PENDING = const JobStatus_State._(1, 'PENDING');
-  static const JobStatus_State SETUP_DONE =
-      const JobStatus_State._(8, 'SETUP_DONE');
-  static const JobStatus_State RUNNING = const JobStatus_State._(2, 'RUNNING');
+      JobStatus_State._(0, 'STATE_UNSPECIFIED');
+  static const JobStatus_State PENDING = JobStatus_State._(1, 'PENDING');
+  static const JobStatus_State SETUP_DONE = JobStatus_State._(8, 'SETUP_DONE');
+  static const JobStatus_State RUNNING = JobStatus_State._(2, 'RUNNING');
   static const JobStatus_State CANCEL_PENDING =
-      const JobStatus_State._(3, 'CANCEL_PENDING');
+      JobStatus_State._(3, 'CANCEL_PENDING');
   static const JobStatus_State CANCEL_STARTED =
-      const JobStatus_State._(7, 'CANCEL_STARTED');
-  static const JobStatus_State CANCELLED =
-      const JobStatus_State._(4, 'CANCELLED');
-  static const JobStatus_State DONE = const JobStatus_State._(5, 'DONE');
-  static const JobStatus_State ERROR = const JobStatus_State._(6, 'ERROR');
+      JobStatus_State._(7, 'CANCEL_STARTED');
+  static const JobStatus_State CANCELLED = JobStatus_State._(4, 'CANCELLED');
+  static const JobStatus_State DONE = JobStatus_State._(5, 'DONE');
+  static const JobStatus_State ERROR = JobStatus_State._(6, 'ERROR');
   static const JobStatus_State ATTEMPT_FAILURE =
-      const JobStatus_State._(9, 'ATTEMPT_FAILURE');
+      JobStatus_State._(9, 'ATTEMPT_FAILURE');
 
-  static const List<JobStatus_State> values = const <JobStatus_State>[
+  static const List<JobStatus_State> values = <JobStatus_State>[
     STATE_UNSPECIFIED,
     PENDING,
     SETUP_DONE,
@@ -90,15 +82,14 @@ class JobStatus_State extends ProtobufEnum {
 
 class JobStatus_Substate extends ProtobufEnum {
   static const JobStatus_Substate UNSPECIFIED =
-      const JobStatus_Substate._(0, 'UNSPECIFIED');
+      JobStatus_Substate._(0, 'UNSPECIFIED');
   static const JobStatus_Substate SUBMITTED =
-      const JobStatus_Substate._(1, 'SUBMITTED');
-  static const JobStatus_Substate QUEUED =
-      const JobStatus_Substate._(2, 'QUEUED');
+      JobStatus_Substate._(1, 'SUBMITTED');
+  static const JobStatus_Substate QUEUED = JobStatus_Substate._(2, 'QUEUED');
   static const JobStatus_Substate STALE_STATUS =
-      const JobStatus_Substate._(3, 'STALE_STATUS');
+      JobStatus_Substate._(3, 'STALE_STATUS');
 
-  static const List<JobStatus_Substate> values = const <JobStatus_Substate>[
+  static const List<JobStatus_Substate> values = <JobStatus_Substate>[
     UNSPECIFIED,
     SUBMITTED,
     QUEUED,
@@ -117,26 +108,24 @@ class JobStatus_Substate extends ProtobufEnum {
 
 class YarnApplication_State extends ProtobufEnum {
   static const YarnApplication_State STATE_UNSPECIFIED =
-      const YarnApplication_State._(0, 'STATE_UNSPECIFIED');
-  static const YarnApplication_State NEW =
-      const YarnApplication_State._(1, 'NEW');
+      YarnApplication_State._(0, 'STATE_UNSPECIFIED');
+  static const YarnApplication_State NEW = YarnApplication_State._(1, 'NEW');
   static const YarnApplication_State NEW_SAVING =
-      const YarnApplication_State._(2, 'NEW_SAVING');
+      YarnApplication_State._(2, 'NEW_SAVING');
   static const YarnApplication_State SUBMITTED =
-      const YarnApplication_State._(3, 'SUBMITTED');
+      YarnApplication_State._(3, 'SUBMITTED');
   static const YarnApplication_State ACCEPTED =
-      const YarnApplication_State._(4, 'ACCEPTED');
+      YarnApplication_State._(4, 'ACCEPTED');
   static const YarnApplication_State RUNNING =
-      const YarnApplication_State._(5, 'RUNNING');
+      YarnApplication_State._(5, 'RUNNING');
   static const YarnApplication_State FINISHED =
-      const YarnApplication_State._(6, 'FINISHED');
+      YarnApplication_State._(6, 'FINISHED');
   static const YarnApplication_State FAILED =
-      const YarnApplication_State._(7, 'FAILED');
+      YarnApplication_State._(7, 'FAILED');
   static const YarnApplication_State KILLED =
-      const YarnApplication_State._(8, 'KILLED');
+      YarnApplication_State._(8, 'KILLED');
 
-  static const List<YarnApplication_State> values =
-      const <YarnApplication_State>[
+  static const List<YarnApplication_State> values = <YarnApplication_State>[
     STATE_UNSPECIFIED,
     NEW,
     NEW_SAVING,
@@ -161,14 +150,14 @@ class YarnApplication_State extends ProtobufEnum {
 
 class ListJobsRequest_JobStateMatcher extends ProtobufEnum {
   static const ListJobsRequest_JobStateMatcher ALL =
-      const ListJobsRequest_JobStateMatcher._(0, 'ALL');
+      ListJobsRequest_JobStateMatcher._(0, 'ALL');
   static const ListJobsRequest_JobStateMatcher ACTIVE =
-      const ListJobsRequest_JobStateMatcher._(1, 'ACTIVE');
+      ListJobsRequest_JobStateMatcher._(1, 'ACTIVE');
   static const ListJobsRequest_JobStateMatcher NON_ACTIVE =
-      const ListJobsRequest_JobStateMatcher._(2, 'NON_ACTIVE');
+      ListJobsRequest_JobStateMatcher._(2, 'NON_ACTIVE');
 
   static const List<ListJobsRequest_JobStateMatcher> values =
-      const <ListJobsRequest_JobStateMatcher>[
+      <ListJobsRequest_JobStateMatcher>[
     ALL,
     ACTIVE,
     NON_ACTIVE,

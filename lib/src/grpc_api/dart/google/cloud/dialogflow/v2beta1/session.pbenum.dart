@@ -9,23 +9,23 @@ import 'package:protobuf/protobuf.dart';
 
 class AudioEncoding extends ProtobufEnum {
   static const AudioEncoding AUDIO_ENCODING_UNSPECIFIED =
-      const AudioEncoding._(0, 'AUDIO_ENCODING_UNSPECIFIED');
+      AudioEncoding._(0, 'AUDIO_ENCODING_UNSPECIFIED');
   static const AudioEncoding AUDIO_ENCODING_LINEAR_16 =
-      const AudioEncoding._(1, 'AUDIO_ENCODING_LINEAR_16');
+      AudioEncoding._(1, 'AUDIO_ENCODING_LINEAR_16');
   static const AudioEncoding AUDIO_ENCODING_FLAC =
-      const AudioEncoding._(2, 'AUDIO_ENCODING_FLAC');
+      AudioEncoding._(2, 'AUDIO_ENCODING_FLAC');
   static const AudioEncoding AUDIO_ENCODING_MULAW =
-      const AudioEncoding._(3, 'AUDIO_ENCODING_MULAW');
+      AudioEncoding._(3, 'AUDIO_ENCODING_MULAW');
   static const AudioEncoding AUDIO_ENCODING_AMR =
-      const AudioEncoding._(4, 'AUDIO_ENCODING_AMR');
+      AudioEncoding._(4, 'AUDIO_ENCODING_AMR');
   static const AudioEncoding AUDIO_ENCODING_AMR_WB =
-      const AudioEncoding._(5, 'AUDIO_ENCODING_AMR_WB');
+      AudioEncoding._(5, 'AUDIO_ENCODING_AMR_WB');
   static const AudioEncoding AUDIO_ENCODING_OGG_OPUS =
-      const AudioEncoding._(6, 'AUDIO_ENCODING_OGG_OPUS');
+      AudioEncoding._(6, 'AUDIO_ENCODING_OGG_OPUS');
   static const AudioEncoding AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE =
-      const AudioEncoding._(7, 'AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE');
+      AudioEncoding._(7, 'AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE');
 
-  static const List<AudioEncoding> values = const <AudioEncoding>[
+  static const List<AudioEncoding> values = <AudioEncoding>[
     AUDIO_ENCODING_UNSPECIFIED,
     AUDIO_ENCODING_LINEAR_16,
     AUDIO_ENCODING_FLAC,
@@ -47,16 +47,14 @@ class AudioEncoding extends ProtobufEnum {
 
 class StreamingRecognitionResult_MessageType extends ProtobufEnum {
   static const StreamingRecognitionResult_MessageType MESSAGE_TYPE_UNSPECIFIED =
-      const StreamingRecognitionResult_MessageType._(
-          0, 'MESSAGE_TYPE_UNSPECIFIED');
+      StreamingRecognitionResult_MessageType._(0, 'MESSAGE_TYPE_UNSPECIFIED');
   static const StreamingRecognitionResult_MessageType TRANSCRIPT =
-      const StreamingRecognitionResult_MessageType._(1, 'TRANSCRIPT');
+      StreamingRecognitionResult_MessageType._(1, 'TRANSCRIPT');
   static const StreamingRecognitionResult_MessageType END_OF_SINGLE_UTTERANCE =
-      const StreamingRecognitionResult_MessageType._(
-          2, 'END_OF_SINGLE_UTTERANCE');
+      StreamingRecognitionResult_MessageType._(2, 'END_OF_SINGLE_UTTERANCE');
 
   static const List<StreamingRecognitionResult_MessageType> values =
-      const <StreamingRecognitionResult_MessageType>[
+      <StreamingRecognitionResult_MessageType>[
     MESSAGE_TYPE_UNSPECIFIED,
     TRANSCRIPT,
     END_OF_SINGLE_UTTERANCE,

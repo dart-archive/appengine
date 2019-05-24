@@ -36,25 +36,25 @@ abstract class CloudSupportServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetSupportAccount':
-        return new GetSupportAccountRequest();
+        return GetSupportAccountRequest();
       case 'ListSupportAccounts':
-        return new ListSupportAccountsRequest();
+        return ListSupportAccountsRequest();
       case 'GetCase':
-        return new GetCaseRequest();
+        return GetCaseRequest();
       case 'ListCases':
-        return new ListCasesRequest();
+        return ListCasesRequest();
       case 'ListComments':
-        return new ListCommentsRequest();
+        return ListCommentsRequest();
       case 'CreateCase':
-        return new CreateCaseRequest();
+        return CreateCaseRequest();
       case 'UpdateCase':
-        return new UpdateCaseRequest();
+        return UpdateCaseRequest();
       case 'CreateComment':
-        return new CreateCommentRequest();
+        return CreateCommentRequest();
       case 'GetIssueTaxonomy':
-        return new GetIssueTaxonomyRequest();
+        return GetIssueTaxonomyRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -80,7 +80,7 @@ abstract class CloudSupportServiceBase extends GeneratedService {
       case 'GetIssueTaxonomy':
         return this.getIssueTaxonomy(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

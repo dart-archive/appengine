@@ -35,25 +35,25 @@ abstract class BigtableTableServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateTable':
-        return new CreateTableRequest();
+        return CreateTableRequest();
       case 'ListTables':
-        return new ListTablesRequest();
+        return ListTablesRequest();
       case 'GetTable':
-        return new GetTableRequest();
+        return GetTableRequest();
       case 'DeleteTable':
-        return new DeleteTableRequest();
+        return DeleteTableRequest();
       case 'RenameTable':
-        return new RenameTableRequest();
+        return RenameTableRequest();
       case 'CreateColumnFamily':
-        return new CreateColumnFamilyRequest();
+        return CreateColumnFamilyRequest();
       case 'UpdateColumnFamily':
-        return new ColumnFamily();
+        return ColumnFamily();
       case 'DeleteColumnFamily':
-        return new DeleteColumnFamilyRequest();
+        return DeleteColumnFamilyRequest();
       case 'BulkDeleteRows':
-        return new BulkDeleteRowsRequest();
+        return BulkDeleteRowsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -79,7 +79,7 @@ abstract class BigtableTableServiceBase extends GeneratedService {
       case 'BulkDeleteRows':
         return this.bulkDeleteRows(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

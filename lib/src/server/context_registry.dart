@@ -51,7 +51,7 @@ class ContextRegistry {
     }
 
     final services = _getServices(request, traceId);
-    final context = new _ClientContextImpl(
+    final context = _ClientContextImpl(
         services, _appengineContext.isDevelopmentEnvironment, traceId);
     _request2context[request] = context;
 
@@ -70,7 +70,7 @@ class ContextRegistry {
 
   Future remove(HttpRequest request) {
     _request2context.remove(request);
-    return new Future.value();
+    return Future.value();
   }
 
   Services newBackgroundServices() => _getServices(null, null);
@@ -108,7 +108,7 @@ class ContextRegistry {
       loggingService = _loggingFactory.newBackgroundLogger();
     }
 
-    return new Services(_db, _storage, loggingService);
+    return Services(_db, _storage, loggingService);
   }
 }
 

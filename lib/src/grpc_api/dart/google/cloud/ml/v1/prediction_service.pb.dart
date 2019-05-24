@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../../api/httpbody.pb.dart' as $google$api;
 
 class PredictRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PredictRequest')
+  static final BuilderInfo _i = BuilderInfo('PredictRequest')
     ..aOS(1, 'name')
     ..a<$google$api.HttpBody>(2, 'httpBody', PbFieldType.OM,
         $google$api.HttpBody.getDefault, $google$api.HttpBody.create)
@@ -25,14 +25,12 @@ class PredictRequest extends GeneratedMessage {
   PredictRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PredictRequest clone() => new PredictRequest()..mergeFromMessage(this);
+  PredictRequest clone() => PredictRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PredictRequest create() => new PredictRequest();
-  static PbList<PredictRequest> createRepeated() =>
-      new PbList<PredictRequest>();
+  static PredictRequest create() => PredictRequest();
+  static PbList<PredictRequest> createRepeated() => PbList<PredictRequest>();
   static PredictRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPredictRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPredictRequest();
     return _defaultInstance;
   }
 
@@ -67,7 +65,7 @@ class OnlinePredictionServiceApi {
 
   Future<$google$api.HttpBody> predict(
       ClientContext ctx, PredictRequest request) {
-    var emptyResponse = new $google$api.HttpBody();
+    var emptyResponse = $google$api.HttpBody();
     return _client.invoke<$google$api.HttpBody>(
         ctx, 'OnlinePredictionService', 'Predict', request, emptyResponse);
   }

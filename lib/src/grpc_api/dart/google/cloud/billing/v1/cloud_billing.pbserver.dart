@@ -27,17 +27,17 @@ abstract class CloudBillingServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetBillingAccount':
-        return new GetBillingAccountRequest();
+        return GetBillingAccountRequest();
       case 'ListBillingAccounts':
-        return new ListBillingAccountsRequest();
+        return ListBillingAccountsRequest();
       case 'ListProjectBillingInfo':
-        return new ListProjectBillingInfoRequest();
+        return ListProjectBillingInfoRequest();
       case 'GetProjectBillingInfo':
-        return new GetProjectBillingInfoRequest();
+        return GetProjectBillingInfoRequest();
       case 'UpdateProjectBillingInfo':
-        return new UpdateProjectBillingInfoRequest();
+        return UpdateProjectBillingInfoRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -55,7 +55,7 @@ abstract class CloudBillingServiceBase extends GeneratedService {
       case 'UpdateProjectBillingInfo':
         return this.updateProjectBillingInfo(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

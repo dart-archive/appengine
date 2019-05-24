@@ -10,7 +10,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Money extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Money')
+  static final BuilderInfo _i = BuilderInfo('Money')
     ..aOS(1, 'currencyCode')
     ..aInt64(2, 'units')
     ..a<int>(3, 'nanos', PbFieldType.O3)
@@ -21,12 +21,12 @@ class Money extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Money.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Money clone() => new Money()..mergeFromMessage(this);
+  Money clone() => Money()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Money create() => new Money();
-  static PbList<Money> createRepeated() => new PbList<Money>();
+  static Money create() => Money();
+  static PbList<Money> createRepeated() => PbList<Money>();
   static Money getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMoney();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMoney();
     return _defaultInstance;
   }
 

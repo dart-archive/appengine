@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
 
 class MutationRecord extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutationRecord')
+  static final BuilderInfo _i = BuilderInfo('MutationRecord')
     ..a<$google$protobuf.Timestamp>(
         1,
         'mutateTime',
@@ -28,14 +28,12 @@ class MutationRecord extends GeneratedMessage {
   MutationRecord.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutationRecord clone() => new MutationRecord()..mergeFromMessage(this);
+  MutationRecord clone() => MutationRecord()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MutationRecord create() => new MutationRecord();
-  static PbList<MutationRecord> createRepeated() =>
-      new PbList<MutationRecord>();
+  static MutationRecord create() => MutationRecord();
+  static PbList<MutationRecord> createRepeated() => PbList<MutationRecord>();
   static MutationRecord getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutationRecord();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMutationRecord();
     return _defaultInstance;
   }
 

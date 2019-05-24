@@ -22,11 +22,11 @@ abstract class PublishBuildEventServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'PublishLifecycleEvent':
-        return new PublishLifecycleEventRequest();
+        return PublishLifecycleEventRequest();
       case 'PublishBuildToolEventStream':
-        return new PublishBuildToolEventStreamRequest();
+        return PublishBuildToolEventStreamRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -38,7 +38,7 @@ abstract class PublishBuildEventServiceBase extends GeneratedService {
       case 'PublishBuildToolEventStream':
         return this.publishBuildToolEventStream(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

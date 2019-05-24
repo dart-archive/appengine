@@ -16,7 +16,7 @@ import 'scan_run.pbenum.dart';
 export 'scan_run.pbenum.dart';
 
 class ScanRun extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScanRun')
+  static final BuilderInfo _i = BuilderInfo('ScanRun')
     ..aOS(1, 'name')
     ..e<ScanRun_ExecutionState>(
         2,
@@ -56,12 +56,12 @@ class ScanRun extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ScanRun.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScanRun clone() => new ScanRun()..mergeFromMessage(this);
+  ScanRun clone() => ScanRun()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ScanRun create() => new ScanRun();
-  static PbList<ScanRun> createRepeated() => new PbList<ScanRun>();
+  static ScanRun create() => ScanRun();
+  static PbList<ScanRun> createRepeated() => PbList<ScanRun>();
   static ScanRun getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyScanRun();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyScanRun();
     return _defaultInstance;
   }
 

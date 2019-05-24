@@ -18,7 +18,7 @@ import '../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
 import '../../../iam/v1/policy.pb.dart' as $google$iam$v1;
 
 class CreateInstanceRequest_ClustersEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo(
+  static final BuilderInfo _i = BuilderInfo(
       'CreateInstanceRequest_ClustersEntry')
     ..aOS(1, 'key')
     ..a<Cluster>(2, 'value', PbFieldType.OM, Cluster.getDefault, Cluster.create)
@@ -32,15 +32,15 @@ class CreateInstanceRequest_ClustersEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateInstanceRequest_ClustersEntry clone() =>
-      new CreateInstanceRequest_ClustersEntry()..mergeFromMessage(this);
+      CreateInstanceRequest_ClustersEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateInstanceRequest_ClustersEntry create() =>
-      new CreateInstanceRequest_ClustersEntry();
+      CreateInstanceRequest_ClustersEntry();
   static PbList<CreateInstanceRequest_ClustersEntry> createRepeated() =>
-      new PbList<CreateInstanceRequest_ClustersEntry>();
+      PbList<CreateInstanceRequest_ClustersEntry>();
   static CreateInstanceRequest_ClustersEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateInstanceRequest_ClustersEntry();
+      _defaultInstance = _ReadonlyCreateInstanceRequest_ClustersEntry();
     return _defaultInstance;
   }
 
@@ -71,7 +71,7 @@ class _ReadonlyCreateInstanceRequest_ClustersEntry
     extends CreateInstanceRequest_ClustersEntry with ReadonlyMessageMixin {}
 
 class CreateInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateInstanceRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'instanceId')
     ..a<Instance>(
@@ -92,14 +92,14 @@ class CreateInstanceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateInstanceRequest clone() =>
-      new CreateInstanceRequest()..mergeFromMessage(this);
+      CreateInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateInstanceRequest create() => new CreateInstanceRequest();
+  static CreateInstanceRequest create() => CreateInstanceRequest();
   static PbList<CreateInstanceRequest> createRepeated() =>
-      new PbList<CreateInstanceRequest>();
+      PbList<CreateInstanceRequest>();
   static CreateInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateInstanceRequest();
+      _defaultInstance = _ReadonlyCreateInstanceRequest();
     return _defaultInstance;
   }
 
@@ -140,7 +140,7 @@ class _ReadonlyCreateInstanceRequest extends CreateInstanceRequest
     with ReadonlyMessageMixin {}
 
 class GetInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetInstanceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -151,15 +151,14 @@ class GetInstanceRequest extends GeneratedMessage {
   GetInstanceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetInstanceRequest clone() =>
-      new GetInstanceRequest()..mergeFromMessage(this);
+  GetInstanceRequest clone() => GetInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetInstanceRequest create() => new GetInstanceRequest();
+  static GetInstanceRequest create() => GetInstanceRequest();
   static PbList<GetInstanceRequest> createRepeated() =>
-      new PbList<GetInstanceRequest>();
+      PbList<GetInstanceRequest>();
   static GetInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetInstanceRequest();
+      _defaultInstance = _ReadonlyGetInstanceRequest();
     return _defaultInstance;
   }
 
@@ -181,7 +180,7 @@ class _ReadonlyGetInstanceRequest extends GetInstanceRequest
     with ReadonlyMessageMixin {}
 
 class ListInstancesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListInstancesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListInstancesRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
@@ -194,14 +193,14 @@ class ListInstancesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListInstancesRequest clone() =>
-      new ListInstancesRequest()..mergeFromMessage(this);
+      ListInstancesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListInstancesRequest create() => new ListInstancesRequest();
+  static ListInstancesRequest create() => ListInstancesRequest();
   static PbList<ListInstancesRequest> createRepeated() =>
-      new PbList<ListInstancesRequest>();
+      PbList<ListInstancesRequest>();
   static ListInstancesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListInstancesRequest();
+      _defaultInstance = _ReadonlyListInstancesRequest();
     return _defaultInstance;
   }
 
@@ -231,7 +230,7 @@ class _ReadonlyListInstancesRequest extends ListInstancesRequest
     with ReadonlyMessageMixin {}
 
 class ListInstancesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListInstancesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListInstancesResponse')
     ..pp<Instance>(
         1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
     ..pPS(2, 'failedLocations')
@@ -246,14 +245,14 @@ class ListInstancesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListInstancesResponse clone() =>
-      new ListInstancesResponse()..mergeFromMessage(this);
+      ListInstancesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListInstancesResponse create() => new ListInstancesResponse();
+  static ListInstancesResponse create() => ListInstancesResponse();
   static PbList<ListInstancesResponse> createRepeated() =>
-      new PbList<ListInstancesResponse>();
+      PbList<ListInstancesResponse>();
   static ListInstancesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListInstancesResponse();
+      _defaultInstance = _ReadonlyListInstancesResponse();
     return _defaultInstance;
   }
 
@@ -280,7 +279,7 @@ class _ReadonlyListInstancesResponse extends ListInstancesResponse
     with ReadonlyMessageMixin {}
 
 class PartialUpdateInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartialUpdateInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('PartialUpdateInstanceRequest')
     ..a<Instance>(
         1, 'instance', PbFieldType.OM, Instance.getDefault, Instance.create)
     ..a<$google$protobuf.FieldMask>(
@@ -299,15 +298,15 @@ class PartialUpdateInstanceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PartialUpdateInstanceRequest clone() =>
-      new PartialUpdateInstanceRequest()..mergeFromMessage(this);
+      PartialUpdateInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PartialUpdateInstanceRequest create() =>
-      new PartialUpdateInstanceRequest();
+      PartialUpdateInstanceRequest();
   static PbList<PartialUpdateInstanceRequest> createRepeated() =>
-      new PbList<PartialUpdateInstanceRequest>();
+      PbList<PartialUpdateInstanceRequest>();
   static PartialUpdateInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartialUpdateInstanceRequest();
+      _defaultInstance = _ReadonlyPartialUpdateInstanceRequest();
     return _defaultInstance;
   }
 
@@ -338,7 +337,7 @@ class _ReadonlyPartialUpdateInstanceRequest extends PartialUpdateInstanceRequest
     with ReadonlyMessageMixin {}
 
 class DeleteInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteInstanceRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteInstanceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -350,14 +349,14 @@ class DeleteInstanceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteInstanceRequest clone() =>
-      new DeleteInstanceRequest()..mergeFromMessage(this);
+      DeleteInstanceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteInstanceRequest create() => new DeleteInstanceRequest();
+  static DeleteInstanceRequest create() => DeleteInstanceRequest();
   static PbList<DeleteInstanceRequest> createRepeated() =>
-      new PbList<DeleteInstanceRequest>();
+      PbList<DeleteInstanceRequest>();
   static DeleteInstanceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteInstanceRequest();
+      _defaultInstance = _ReadonlyDeleteInstanceRequest();
     return _defaultInstance;
   }
 
@@ -380,7 +379,7 @@ class _ReadonlyDeleteInstanceRequest extends DeleteInstanceRequest
     with ReadonlyMessageMixin {}
 
 class CreateClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateClusterRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateClusterRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'clusterId')
     ..a<Cluster>(
@@ -395,14 +394,14 @@ class CreateClusterRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateClusterRequest clone() =>
-      new CreateClusterRequest()..mergeFromMessage(this);
+      CreateClusterRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateClusterRequest create() => new CreateClusterRequest();
+  static CreateClusterRequest create() => CreateClusterRequest();
   static PbList<CreateClusterRequest> createRepeated() =>
-      new PbList<CreateClusterRequest>();
+      PbList<CreateClusterRequest>();
   static CreateClusterRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateClusterRequest();
+      _defaultInstance = _ReadonlyCreateClusterRequest();
     return _defaultInstance;
   }
 
@@ -440,7 +439,7 @@ class _ReadonlyCreateClusterRequest extends CreateClusterRequest
     with ReadonlyMessageMixin {}
 
 class GetClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetClusterRequest')
+  static final BuilderInfo _i = BuilderInfo('GetClusterRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -451,14 +450,14 @@ class GetClusterRequest extends GeneratedMessage {
   GetClusterRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetClusterRequest clone() => new GetClusterRequest()..mergeFromMessage(this);
+  GetClusterRequest clone() => GetClusterRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetClusterRequest create() => new GetClusterRequest();
+  static GetClusterRequest create() => GetClusterRequest();
   static PbList<GetClusterRequest> createRepeated() =>
-      new PbList<GetClusterRequest>();
+      PbList<GetClusterRequest>();
   static GetClusterRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetClusterRequest();
+      _defaultInstance = _ReadonlyGetClusterRequest();
     return _defaultInstance;
   }
 
@@ -480,7 +479,7 @@ class _ReadonlyGetClusterRequest extends GetClusterRequest
     with ReadonlyMessageMixin {}
 
 class ListClustersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListClustersRequest')
+  static final BuilderInfo _i = BuilderInfo('ListClustersRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
@@ -492,15 +491,14 @@ class ListClustersRequest extends GeneratedMessage {
   ListClustersRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListClustersRequest clone() =>
-      new ListClustersRequest()..mergeFromMessage(this);
+  ListClustersRequest clone() => ListClustersRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListClustersRequest create() => new ListClustersRequest();
+  static ListClustersRequest create() => ListClustersRequest();
   static PbList<ListClustersRequest> createRepeated() =>
-      new PbList<ListClustersRequest>();
+      PbList<ListClustersRequest>();
   static ListClustersRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListClustersRequest();
+      _defaultInstance = _ReadonlyListClustersRequest();
     return _defaultInstance;
   }
 
@@ -530,7 +528,7 @@ class _ReadonlyListClustersRequest extends ListClustersRequest
     with ReadonlyMessageMixin {}
 
 class ListClustersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListClustersResponse')
+  static final BuilderInfo _i = BuilderInfo('ListClustersResponse')
     ..pp<Cluster>(
         1, 'clusters', PbFieldType.PM, Cluster.$checkItem, Cluster.create)
     ..pPS(2, 'failedLocations')
@@ -545,14 +543,14 @@ class ListClustersResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListClustersResponse clone() =>
-      new ListClustersResponse()..mergeFromMessage(this);
+      ListClustersResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListClustersResponse create() => new ListClustersResponse();
+  static ListClustersResponse create() => ListClustersResponse();
   static PbList<ListClustersResponse> createRepeated() =>
-      new PbList<ListClustersResponse>();
+      PbList<ListClustersResponse>();
   static ListClustersResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListClustersResponse();
+      _defaultInstance = _ReadonlyListClustersResponse();
     return _defaultInstance;
   }
 
@@ -578,7 +576,7 @@ class _ReadonlyListClustersResponse extends ListClustersResponse
     with ReadonlyMessageMixin {}
 
 class DeleteClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteClusterRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteClusterRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -590,14 +588,14 @@ class DeleteClusterRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteClusterRequest clone() =>
-      new DeleteClusterRequest()..mergeFromMessage(this);
+      DeleteClusterRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteClusterRequest create() => new DeleteClusterRequest();
+  static DeleteClusterRequest create() => DeleteClusterRequest();
   static PbList<DeleteClusterRequest> createRepeated() =>
-      new PbList<DeleteClusterRequest>();
+      PbList<DeleteClusterRequest>();
   static DeleteClusterRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteClusterRequest();
+      _defaultInstance = _ReadonlyDeleteClusterRequest();
     return _defaultInstance;
   }
 
@@ -619,7 +617,7 @@ class _ReadonlyDeleteClusterRequest extends DeleteClusterRequest
     with ReadonlyMessageMixin {}
 
 class CreateInstanceMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateInstanceMetadata')
+  static final BuilderInfo _i = BuilderInfo('CreateInstanceMetadata')
     ..a<CreateInstanceRequest>(1, 'originalRequest', PbFieldType.OM,
         CreateInstanceRequest.getDefault, CreateInstanceRequest.create)
     ..a<$google$protobuf.Timestamp>(
@@ -644,14 +642,14 @@ class CreateInstanceMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateInstanceMetadata clone() =>
-      new CreateInstanceMetadata()..mergeFromMessage(this);
+      CreateInstanceMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateInstanceMetadata create() => new CreateInstanceMetadata();
+  static CreateInstanceMetadata create() => CreateInstanceMetadata();
   static PbList<CreateInstanceMetadata> createRepeated() =>
-      new PbList<CreateInstanceMetadata>();
+      PbList<CreateInstanceMetadata>();
   static CreateInstanceMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateInstanceMetadata();
+      _defaultInstance = _ReadonlyCreateInstanceMetadata();
     return _defaultInstance;
   }
 
@@ -690,7 +688,7 @@ class _ReadonlyCreateInstanceMetadata extends CreateInstanceMetadata
     with ReadonlyMessageMixin {}
 
 class UpdateInstanceMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateInstanceMetadata')
+  static final BuilderInfo _i = BuilderInfo('UpdateInstanceMetadata')
     ..a<PartialUpdateInstanceRequest>(
         1,
         'originalRequest',
@@ -719,14 +717,14 @@ class UpdateInstanceMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateInstanceMetadata clone() =>
-      new UpdateInstanceMetadata()..mergeFromMessage(this);
+      UpdateInstanceMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateInstanceMetadata create() => new UpdateInstanceMetadata();
+  static UpdateInstanceMetadata create() => UpdateInstanceMetadata();
   static PbList<UpdateInstanceMetadata> createRepeated() =>
-      new PbList<UpdateInstanceMetadata>();
+      PbList<UpdateInstanceMetadata>();
   static UpdateInstanceMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateInstanceMetadata();
+      _defaultInstance = _ReadonlyUpdateInstanceMetadata();
     return _defaultInstance;
   }
 
@@ -765,7 +763,7 @@ class _ReadonlyUpdateInstanceMetadata extends UpdateInstanceMetadata
     with ReadonlyMessageMixin {}
 
 class CreateClusterMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateClusterMetadata')
+  static final BuilderInfo _i = BuilderInfo('CreateClusterMetadata')
     ..a<CreateClusterRequest>(1, 'originalRequest', PbFieldType.OM,
         CreateClusterRequest.getDefault, CreateClusterRequest.create)
     ..a<$google$protobuf.Timestamp>(
@@ -790,14 +788,14 @@ class CreateClusterMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateClusterMetadata clone() =>
-      new CreateClusterMetadata()..mergeFromMessage(this);
+      CreateClusterMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateClusterMetadata create() => new CreateClusterMetadata();
+  static CreateClusterMetadata create() => CreateClusterMetadata();
   static PbList<CreateClusterMetadata> createRepeated() =>
-      new PbList<CreateClusterMetadata>();
+      PbList<CreateClusterMetadata>();
   static CreateClusterMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateClusterMetadata();
+      _defaultInstance = _ReadonlyCreateClusterMetadata();
     return _defaultInstance;
   }
 
@@ -836,7 +834,7 @@ class _ReadonlyCreateClusterMetadata extends CreateClusterMetadata
     with ReadonlyMessageMixin {}
 
 class UpdateClusterMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateClusterMetadata')
+  static final BuilderInfo _i = BuilderInfo('UpdateClusterMetadata')
     ..a<Cluster>(1, 'originalRequest', PbFieldType.OM, Cluster.getDefault,
         Cluster.create)
     ..a<$google$protobuf.Timestamp>(
@@ -861,14 +859,14 @@ class UpdateClusterMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateClusterMetadata clone() =>
-      new UpdateClusterMetadata()..mergeFromMessage(this);
+      UpdateClusterMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateClusterMetadata create() => new UpdateClusterMetadata();
+  static UpdateClusterMetadata create() => UpdateClusterMetadata();
   static PbList<UpdateClusterMetadata> createRepeated() =>
-      new PbList<UpdateClusterMetadata>();
+      PbList<UpdateClusterMetadata>();
   static UpdateClusterMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateClusterMetadata();
+      _defaultInstance = _ReadonlyUpdateClusterMetadata();
     return _defaultInstance;
   }
 
@@ -907,7 +905,7 @@ class _ReadonlyUpdateClusterMetadata extends UpdateClusterMetadata
     with ReadonlyMessageMixin {}
 
 class CreateAppProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateAppProfileRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateAppProfileRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'appProfileId')
     ..a<AppProfile>(3, 'appProfile', PbFieldType.OM, AppProfile.getDefault,
@@ -923,14 +921,14 @@ class CreateAppProfileRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateAppProfileRequest clone() =>
-      new CreateAppProfileRequest()..mergeFromMessage(this);
+      CreateAppProfileRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateAppProfileRequest create() => new CreateAppProfileRequest();
+  static CreateAppProfileRequest create() => CreateAppProfileRequest();
   static PbList<CreateAppProfileRequest> createRepeated() =>
-      new PbList<CreateAppProfileRequest>();
+      PbList<CreateAppProfileRequest>();
   static CreateAppProfileRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateAppProfileRequest();
+      _defaultInstance = _ReadonlyCreateAppProfileRequest();
     return _defaultInstance;
   }
 
@@ -977,7 +975,7 @@ class _ReadonlyCreateAppProfileRequest extends CreateAppProfileRequest
     with ReadonlyMessageMixin {}
 
 class GetAppProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetAppProfileRequest')
+  static final BuilderInfo _i = BuilderInfo('GetAppProfileRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -989,14 +987,14 @@ class GetAppProfileRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetAppProfileRequest clone() =>
-      new GetAppProfileRequest()..mergeFromMessage(this);
+      GetAppProfileRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetAppProfileRequest create() => new GetAppProfileRequest();
+  static GetAppProfileRequest create() => GetAppProfileRequest();
   static PbList<GetAppProfileRequest> createRepeated() =>
-      new PbList<GetAppProfileRequest>();
+      PbList<GetAppProfileRequest>();
   static GetAppProfileRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetAppProfileRequest();
+      _defaultInstance = _ReadonlyGetAppProfileRequest();
     return _defaultInstance;
   }
 
@@ -1018,7 +1016,7 @@ class _ReadonlyGetAppProfileRequest extends GetAppProfileRequest
     with ReadonlyMessageMixin {}
 
 class ListAppProfilesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListAppProfilesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListAppProfilesRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
@@ -1031,14 +1029,14 @@ class ListAppProfilesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListAppProfilesRequest clone() =>
-      new ListAppProfilesRequest()..mergeFromMessage(this);
+      ListAppProfilesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListAppProfilesRequest create() => new ListAppProfilesRequest();
+  static ListAppProfilesRequest create() => ListAppProfilesRequest();
   static PbList<ListAppProfilesRequest> createRepeated() =>
-      new PbList<ListAppProfilesRequest>();
+      PbList<ListAppProfilesRequest>();
   static ListAppProfilesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListAppProfilesRequest();
+      _defaultInstance = _ReadonlyListAppProfilesRequest();
     return _defaultInstance;
   }
 
@@ -1069,7 +1067,7 @@ class _ReadonlyListAppProfilesRequest extends ListAppProfilesRequest
     with ReadonlyMessageMixin {}
 
 class ListAppProfilesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListAppProfilesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListAppProfilesResponse')
     ..pp<AppProfile>(1, 'appProfiles', PbFieldType.PM, AppProfile.$checkItem,
         AppProfile.create)
     ..aOS(2, 'nextPageToken')
@@ -1083,14 +1081,14 @@ class ListAppProfilesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListAppProfilesResponse clone() =>
-      new ListAppProfilesResponse()..mergeFromMessage(this);
+      ListAppProfilesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListAppProfilesResponse create() => new ListAppProfilesResponse();
+  static ListAppProfilesResponse create() => ListAppProfilesResponse();
   static PbList<ListAppProfilesResponse> createRepeated() =>
-      new PbList<ListAppProfilesResponse>();
+      PbList<ListAppProfilesResponse>();
   static ListAppProfilesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListAppProfilesResponse();
+      _defaultInstance = _ReadonlyListAppProfilesResponse();
     return _defaultInstance;
   }
 
@@ -1115,7 +1113,7 @@ class _ReadonlyListAppProfilesResponse extends ListAppProfilesResponse
     with ReadonlyMessageMixin {}
 
 class UpdateAppProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateAppProfileRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateAppProfileRequest')
     ..a<AppProfile>(1, 'appProfile', PbFieldType.OM, AppProfile.getDefault,
         AppProfile.create)
     ..a<$google$protobuf.FieldMask>(
@@ -1135,14 +1133,14 @@ class UpdateAppProfileRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateAppProfileRequest clone() =>
-      new UpdateAppProfileRequest()..mergeFromMessage(this);
+      UpdateAppProfileRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateAppProfileRequest create() => new UpdateAppProfileRequest();
+  static UpdateAppProfileRequest create() => UpdateAppProfileRequest();
   static PbList<UpdateAppProfileRequest> createRepeated() =>
-      new PbList<UpdateAppProfileRequest>();
+      PbList<UpdateAppProfileRequest>();
   static UpdateAppProfileRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateAppProfileRequest();
+      _defaultInstance = _ReadonlyUpdateAppProfileRequest();
     return _defaultInstance;
   }
 
@@ -1181,7 +1179,7 @@ class _ReadonlyUpdateAppProfileRequest extends UpdateAppProfileRequest
     with ReadonlyMessageMixin {}
 
 class DeleteAppProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteAppProfileRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteAppProfileRequest')
     ..aOS(1, 'name')
     ..aOB(2, 'ignoreWarnings')
     ..hasRequiredFields = false;
@@ -1194,14 +1192,14 @@ class DeleteAppProfileRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteAppProfileRequest clone() =>
-      new DeleteAppProfileRequest()..mergeFromMessage(this);
+      DeleteAppProfileRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteAppProfileRequest create() => new DeleteAppProfileRequest();
+  static DeleteAppProfileRequest create() => DeleteAppProfileRequest();
   static PbList<DeleteAppProfileRequest> createRepeated() =>
-      new PbList<DeleteAppProfileRequest>();
+      PbList<DeleteAppProfileRequest>();
   static DeleteAppProfileRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteAppProfileRequest();
+      _defaultInstance = _ReadonlyDeleteAppProfileRequest();
     return _defaultInstance;
   }
 
@@ -1232,7 +1230,7 @@ class _ReadonlyDeleteAppProfileRequest extends DeleteAppProfileRequest
     with ReadonlyMessageMixin {}
 
 class UpdateAppProfileMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateAppProfileMetadata')
+  static final BuilderInfo _i = BuilderInfo('UpdateAppProfileMetadata')
     ..hasRequiredFields = false;
 
   UpdateAppProfileMetadata() : super();
@@ -1243,14 +1241,14 @@ class UpdateAppProfileMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateAppProfileMetadata clone() =>
-      new UpdateAppProfileMetadata()..mergeFromMessage(this);
+      UpdateAppProfileMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateAppProfileMetadata create() => new UpdateAppProfileMetadata();
+  static UpdateAppProfileMetadata create() => UpdateAppProfileMetadata();
   static PbList<UpdateAppProfileMetadata> createRepeated() =>
-      new PbList<UpdateAppProfileMetadata>();
+      PbList<UpdateAppProfileMetadata>();
   static UpdateAppProfileMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateAppProfileMetadata();
+      _defaultInstance = _ReadonlyUpdateAppProfileMetadata();
     return _defaultInstance;
   }
 
@@ -1270,33 +1268,33 @@ class BigtableInstanceAdminApi {
 
   Future<$google$longrunning.Operation> createInstance(
       ClientContext ctx, CreateInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'BigtableInstanceAdmin', 'CreateInstance', request, emptyResponse);
   }
 
   Future<Instance> getInstance(ClientContext ctx, GetInstanceRequest request) {
-    var emptyResponse = new Instance();
+    var emptyResponse = Instance();
     return _client.invoke<Instance>(
         ctx, 'BigtableInstanceAdmin', 'GetInstance', request, emptyResponse);
   }
 
   Future<ListInstancesResponse> listInstances(
       ClientContext ctx, ListInstancesRequest request) {
-    var emptyResponse = new ListInstancesResponse();
+    var emptyResponse = ListInstancesResponse();
     return _client.invoke<ListInstancesResponse>(
         ctx, 'BigtableInstanceAdmin', 'ListInstances', request, emptyResponse);
   }
 
   Future<Instance> updateInstance(ClientContext ctx, Instance request) {
-    var emptyResponse = new Instance();
+    var emptyResponse = Instance();
     return _client.invoke<Instance>(
         ctx, 'BigtableInstanceAdmin', 'UpdateInstance', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> partialUpdateInstance(
       ClientContext ctx, PartialUpdateInstanceRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx,
         'BigtableInstanceAdmin',
@@ -1307,97 +1305,97 @@ class BigtableInstanceAdminApi {
 
   Future<$google$protobuf.Empty> deleteInstance(
       ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'BigtableInstanceAdmin', 'DeleteInstance', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createCluster(
       ClientContext ctx, CreateClusterRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'BigtableInstanceAdmin', 'CreateCluster', request, emptyResponse);
   }
 
   Future<Cluster> getCluster(ClientContext ctx, GetClusterRequest request) {
-    var emptyResponse = new Cluster();
+    var emptyResponse = Cluster();
     return _client.invoke<Cluster>(
         ctx, 'BigtableInstanceAdmin', 'GetCluster', request, emptyResponse);
   }
 
   Future<ListClustersResponse> listClusters(
       ClientContext ctx, ListClustersRequest request) {
-    var emptyResponse = new ListClustersResponse();
+    var emptyResponse = ListClustersResponse();
     return _client.invoke<ListClustersResponse>(
         ctx, 'BigtableInstanceAdmin', 'ListClusters', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> updateCluster(
       ClientContext ctx, Cluster request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'BigtableInstanceAdmin', 'UpdateCluster', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteCluster(
       ClientContext ctx, DeleteClusterRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'BigtableInstanceAdmin', 'DeleteCluster', request, emptyResponse);
   }
 
   Future<AppProfile> createAppProfile(
       ClientContext ctx, CreateAppProfileRequest request) {
-    var emptyResponse = new AppProfile();
+    var emptyResponse = AppProfile();
     return _client.invoke<AppProfile>(ctx, 'BigtableInstanceAdmin',
         'CreateAppProfile', request, emptyResponse);
   }
 
   Future<AppProfile> getAppProfile(
       ClientContext ctx, GetAppProfileRequest request) {
-    var emptyResponse = new AppProfile();
+    var emptyResponse = AppProfile();
     return _client.invoke<AppProfile>(
         ctx, 'BigtableInstanceAdmin', 'GetAppProfile', request, emptyResponse);
   }
 
   Future<ListAppProfilesResponse> listAppProfiles(
       ClientContext ctx, ListAppProfilesRequest request) {
-    var emptyResponse = new ListAppProfilesResponse();
+    var emptyResponse = ListAppProfilesResponse();
     return _client.invoke<ListAppProfilesResponse>(ctx, 'BigtableInstanceAdmin',
         'ListAppProfiles', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> updateAppProfile(
       ClientContext ctx, UpdateAppProfileRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(ctx,
         'BigtableInstanceAdmin', 'UpdateAppProfile', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteAppProfile(
       ClientContext ctx, DeleteAppProfileRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'BigtableInstanceAdmin',
         'DeleteAppProfile', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> getIamPolicy(
       ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'BigtableInstanceAdmin', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> setIamPolicy(
       ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'BigtableInstanceAdmin', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
     return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(ctx,
         'BigtableInstanceAdmin', 'TestIamPermissions', request, emptyResponse);
   }

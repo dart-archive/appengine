@@ -20,7 +20,7 @@ import 'variants.pbenum.dart';
 export 'variants.pbenum.dart';
 
 class VariantSetMetadata_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantSetMetadata_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('VariantSetMetadata_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -38,15 +38,15 @@ class VariantSetMetadata_InfoEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VariantSetMetadata_InfoEntry clone() =>
-      new VariantSetMetadata_InfoEntry()..mergeFromMessage(this);
+      VariantSetMetadata_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static VariantSetMetadata_InfoEntry create() =>
-      new VariantSetMetadata_InfoEntry();
+      VariantSetMetadata_InfoEntry();
   static PbList<VariantSetMetadata_InfoEntry> createRepeated() =>
-      new PbList<VariantSetMetadata_InfoEntry>();
+      PbList<VariantSetMetadata_InfoEntry>();
   static VariantSetMetadata_InfoEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantSetMetadata_InfoEntry();
+      _defaultInstance = _ReadonlyVariantSetMetadata_InfoEntry();
     return _defaultInstance;
   }
 
@@ -77,7 +77,7 @@ class _ReadonlyVariantSetMetadata_InfoEntry extends VariantSetMetadata_InfoEntry
     with ReadonlyMessageMixin {}
 
 class VariantSetMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantSetMetadata')
+  static final BuilderInfo _i = BuilderInfo('VariantSetMetadata')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..pp<VariantSetMetadata_InfoEntry>(
@@ -105,15 +105,14 @@ class VariantSetMetadata extends GeneratedMessage {
   VariantSetMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VariantSetMetadata clone() =>
-      new VariantSetMetadata()..mergeFromMessage(this);
+  VariantSetMetadata clone() => VariantSetMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VariantSetMetadata create() => new VariantSetMetadata();
+  static VariantSetMetadata create() => VariantSetMetadata();
   static PbList<VariantSetMetadata> createRepeated() =>
-      new PbList<VariantSetMetadata>();
+      PbList<VariantSetMetadata>();
   static VariantSetMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantSetMetadata();
+      _defaultInstance = _ReadonlyVariantSetMetadata();
     return _defaultInstance;
   }
 
@@ -177,7 +176,7 @@ class _ReadonlyVariantSetMetadata extends VariantSetMetadata
     with ReadonlyMessageMixin {}
 
 class VariantSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantSet')
+  static final BuilderInfo _i = BuilderInfo('VariantSet')
     ..aOS(1, 'datasetId')
     ..aOS(2, 'id')
     ..pp<VariantSetMetadata>(4, 'metadata', PbFieldType.PM,
@@ -195,12 +194,12 @@ class VariantSet extends GeneratedMessage {
       : super.fromBuffer(i, r);
   VariantSet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VariantSet clone() => new VariantSet()..mergeFromMessage(this);
+  VariantSet clone() => VariantSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VariantSet create() => new VariantSet();
-  static PbList<VariantSet> createRepeated() => new PbList<VariantSet>();
+  static VariantSet create() => VariantSet();
+  static PbList<VariantSet> createRepeated() => PbList<VariantSet>();
   static VariantSet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariantSet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVariantSet();
     return _defaultInstance;
   }
 
@@ -257,7 +256,7 @@ class VariantSet extends GeneratedMessage {
 class _ReadonlyVariantSet extends VariantSet with ReadonlyMessageMixin {}
 
 class Variant_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Variant_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('Variant_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -274,14 +273,14 @@ class Variant_InfoEntry extends GeneratedMessage {
   Variant_InfoEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Variant_InfoEntry clone() => new Variant_InfoEntry()..mergeFromMessage(this);
+  Variant_InfoEntry clone() => Variant_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Variant_InfoEntry create() => new Variant_InfoEntry();
+  static Variant_InfoEntry create() => Variant_InfoEntry();
   static PbList<Variant_InfoEntry> createRepeated() =>
-      new PbList<Variant_InfoEntry>();
+      PbList<Variant_InfoEntry>();
   static Variant_InfoEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariant_InfoEntry();
+      _defaultInstance = _ReadonlyVariant_InfoEntry();
     return _defaultInstance;
   }
 
@@ -311,7 +310,7 @@ class _ReadonlyVariant_InfoEntry extends Variant_InfoEntry
     with ReadonlyMessageMixin {}
 
 class Variant extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Variant')
+  static final BuilderInfo _i = BuilderInfo('Variant')
     ..aOS(2, 'id')
     ..pPS(3, 'names')
     ..aOS(6, 'referenceBases')
@@ -335,12 +334,12 @@ class Variant extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Variant.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Variant clone() => new Variant()..mergeFromMessage(this);
+  Variant clone() => Variant()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Variant create() => new Variant();
-  static PbList<Variant> createRepeated() => new PbList<Variant>();
+  static Variant create() => Variant();
+  static PbList<Variant> createRepeated() => PbList<Variant>();
   static Variant getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariant();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVariant();
     return _defaultInstance;
   }
 
@@ -427,7 +426,7 @@ class Variant extends GeneratedMessage {
 class _ReadonlyVariant extends Variant with ReadonlyMessageMixin {}
 
 class VariantCall_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantCall_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('VariantCall_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -445,14 +444,14 @@ class VariantCall_InfoEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VariantCall_InfoEntry clone() =>
-      new VariantCall_InfoEntry()..mergeFromMessage(this);
+      VariantCall_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VariantCall_InfoEntry create() => new VariantCall_InfoEntry();
+  static VariantCall_InfoEntry create() => VariantCall_InfoEntry();
   static PbList<VariantCall_InfoEntry> createRepeated() =>
-      new PbList<VariantCall_InfoEntry>();
+      PbList<VariantCall_InfoEntry>();
   static VariantCall_InfoEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantCall_InfoEntry();
+      _defaultInstance = _ReadonlyVariantCall_InfoEntry();
     return _defaultInstance;
   }
 
@@ -483,7 +482,7 @@ class _ReadonlyVariantCall_InfoEntry extends VariantCall_InfoEntry
     with ReadonlyMessageMixin {}
 
 class VariantCall extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantCall')
+  static final BuilderInfo _i = BuilderInfo('VariantCall')
     ..pp<VariantCall_InfoEntry>(2, 'info', PbFieldType.PM,
         VariantCall_InfoEntry.$checkItem, VariantCall_InfoEntry.create)
     ..aOS(5, 'phaseset')
@@ -500,12 +499,12 @@ class VariantCall extends GeneratedMessage {
   VariantCall.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VariantCall clone() => new VariantCall()..mergeFromMessage(this);
+  VariantCall clone() => VariantCall()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VariantCall create() => new VariantCall();
-  static PbList<VariantCall> createRepeated() => new PbList<VariantCall>();
+  static VariantCall create() => VariantCall();
+  static PbList<VariantCall> createRepeated() => PbList<VariantCall>();
   static VariantCall getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariantCall();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVariantCall();
     return _defaultInstance;
   }
 
@@ -548,7 +547,7 @@ class VariantCall extends GeneratedMessage {
 class _ReadonlyVariantCall extends VariantCall with ReadonlyMessageMixin {}
 
 class CallSet_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CallSet_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('CallSet_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -565,14 +564,14 @@ class CallSet_InfoEntry extends GeneratedMessage {
   CallSet_InfoEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CallSet_InfoEntry clone() => new CallSet_InfoEntry()..mergeFromMessage(this);
+  CallSet_InfoEntry clone() => CallSet_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CallSet_InfoEntry create() => new CallSet_InfoEntry();
+  static CallSet_InfoEntry create() => CallSet_InfoEntry();
   static PbList<CallSet_InfoEntry> createRepeated() =>
-      new PbList<CallSet_InfoEntry>();
+      PbList<CallSet_InfoEntry>();
   static CallSet_InfoEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCallSet_InfoEntry();
+      _defaultInstance = _ReadonlyCallSet_InfoEntry();
     return _defaultInstance;
   }
 
@@ -602,7 +601,7 @@ class _ReadonlyCallSet_InfoEntry extends CallSet_InfoEntry
     with ReadonlyMessageMixin {}
 
 class CallSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CallSet')
+  static final BuilderInfo _i = BuilderInfo('CallSet')
     ..aOS(1, 'id')
     ..aOS(2, 'name')
     ..pp<CallSet_InfoEntry>(4, 'info', PbFieldType.PM,
@@ -618,12 +617,12 @@ class CallSet extends GeneratedMessage {
       : super.fromBuffer(i, r);
   CallSet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CallSet clone() => new CallSet()..mergeFromMessage(this);
+  CallSet clone() => CallSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CallSet create() => new CallSet();
-  static PbList<CallSet> createRepeated() => new PbList<CallSet>();
+  static CallSet create() => CallSet();
+  static PbList<CallSet> createRepeated() => PbList<CallSet>();
   static CallSet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCallSet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCallSet();
     return _defaultInstance;
   }
 
@@ -672,7 +671,7 @@ class CallSet extends GeneratedMessage {
 class _ReadonlyCallSet extends CallSet with ReadonlyMessageMixin {}
 
 class ReferenceBound extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReferenceBound')
+  static final BuilderInfo _i = BuilderInfo('ReferenceBound')
     ..aOS(1, 'referenceName')
     ..aInt64(2, 'upperBound')
     ..hasRequiredFields = false;
@@ -684,14 +683,12 @@ class ReferenceBound extends GeneratedMessage {
   ReferenceBound.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReferenceBound clone() => new ReferenceBound()..mergeFromMessage(this);
+  ReferenceBound clone() => ReferenceBound()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReferenceBound create() => new ReferenceBound();
-  static PbList<ReferenceBound> createRepeated() =>
-      new PbList<ReferenceBound>();
+  static ReferenceBound create() => ReferenceBound();
+  static PbList<ReferenceBound> createRepeated() => PbList<ReferenceBound>();
   static ReferenceBound getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReferenceBound();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReferenceBound();
     return _defaultInstance;
   }
 
@@ -722,7 +719,7 @@ class _ReadonlyReferenceBound extends ReferenceBound with ReadonlyMessageMixin {
 
 class ImportVariantsRequest_InfoMergeConfigEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ImportVariantsRequest_InfoMergeConfigEntry')
+      BuilderInfo('ImportVariantsRequest_InfoMergeConfigEntry')
         ..aOS(1, 'key')
         ..e<InfoMergeOperation>(
             2,
@@ -741,16 +738,15 @@ class ImportVariantsRequest_InfoMergeConfigEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportVariantsRequest_InfoMergeConfigEntry clone() =>
-      new ImportVariantsRequest_InfoMergeConfigEntry()..mergeFromMessage(this);
+      ImportVariantsRequest_InfoMergeConfigEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ImportVariantsRequest_InfoMergeConfigEntry create() =>
-      new ImportVariantsRequest_InfoMergeConfigEntry();
+      ImportVariantsRequest_InfoMergeConfigEntry();
   static PbList<ImportVariantsRequest_InfoMergeConfigEntry> createRepeated() =>
-      new PbList<ImportVariantsRequest_InfoMergeConfigEntry>();
+      PbList<ImportVariantsRequest_InfoMergeConfigEntry>();
   static ImportVariantsRequest_InfoMergeConfigEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyImportVariantsRequest_InfoMergeConfigEntry();
+      _defaultInstance = _ReadonlyImportVariantsRequest_InfoMergeConfigEntry();
     return _defaultInstance;
   }
 
@@ -782,7 +778,7 @@ class _ReadonlyImportVariantsRequest_InfoMergeConfigEntry
     with ReadonlyMessageMixin {}
 
 class ImportVariantsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportVariantsRequest')
+  static final BuilderInfo _i = BuilderInfo('ImportVariantsRequest')
     ..aOS(1, 'variantSetId')
     ..pPS(2, 'sourceUris')
     ..e<ImportVariantsRequest_Format>(
@@ -809,14 +805,14 @@ class ImportVariantsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportVariantsRequest clone() =>
-      new ImportVariantsRequest()..mergeFromMessage(this);
+      ImportVariantsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportVariantsRequest create() => new ImportVariantsRequest();
+  static ImportVariantsRequest create() => ImportVariantsRequest();
   static PbList<ImportVariantsRequest> createRepeated() =>
-      new PbList<ImportVariantsRequest>();
+      PbList<ImportVariantsRequest>();
   static ImportVariantsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportVariantsRequest();
+      _defaultInstance = _ReadonlyImportVariantsRequest();
     return _defaultInstance;
   }
 
@@ -860,7 +856,7 @@ class _ReadonlyImportVariantsRequest extends ImportVariantsRequest
     with ReadonlyMessageMixin {}
 
 class ImportVariantsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportVariantsResponse')
+  static final BuilderInfo _i = BuilderInfo('ImportVariantsResponse')
     ..pPS(1, 'callSetIds')
     ..hasRequiredFields = false;
 
@@ -872,14 +868,14 @@ class ImportVariantsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportVariantsResponse clone() =>
-      new ImportVariantsResponse()..mergeFromMessage(this);
+      ImportVariantsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportVariantsResponse create() => new ImportVariantsResponse();
+  static ImportVariantsResponse create() => ImportVariantsResponse();
   static PbList<ImportVariantsResponse> createRepeated() =>
-      new PbList<ImportVariantsResponse>();
+      PbList<ImportVariantsResponse>();
   static ImportVariantsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportVariantsResponse();
+      _defaultInstance = _ReadonlyImportVariantsResponse();
     return _defaultInstance;
   }
 
@@ -896,7 +892,7 @@ class _ReadonlyImportVariantsResponse extends ImportVariantsResponse
     with ReadonlyMessageMixin {}
 
 class CreateVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateVariantSetRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateVariantSetRequest')
     ..a<VariantSet>(1, 'variantSet', PbFieldType.OM, VariantSet.getDefault,
         VariantSet.create)
     ..hasRequiredFields = false;
@@ -909,14 +905,14 @@ class CreateVariantSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateVariantSetRequest clone() =>
-      new CreateVariantSetRequest()..mergeFromMessage(this);
+      CreateVariantSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateVariantSetRequest create() => new CreateVariantSetRequest();
+  static CreateVariantSetRequest create() => CreateVariantSetRequest();
   static PbList<CreateVariantSetRequest> createRepeated() =>
-      new PbList<CreateVariantSetRequest>();
+      PbList<CreateVariantSetRequest>();
   static CreateVariantSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateVariantSetRequest();
+      _defaultInstance = _ReadonlyCreateVariantSetRequest();
     return _defaultInstance;
   }
 
@@ -939,7 +935,7 @@ class _ReadonlyCreateVariantSetRequest extends CreateVariantSetRequest
     with ReadonlyMessageMixin {}
 
 class ExportVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportVariantSetRequest')
+  static final BuilderInfo _i = BuilderInfo('ExportVariantSetRequest')
     ..aOS(1, 'variantSetId')
     ..pPS(2, 'callSetIds')
     ..aOS(3, 'projectId')
@@ -962,14 +958,14 @@ class ExportVariantSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportVariantSetRequest clone() =>
-      new ExportVariantSetRequest()..mergeFromMessage(this);
+      ExportVariantSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExportVariantSetRequest create() => new ExportVariantSetRequest();
+  static ExportVariantSetRequest create() => ExportVariantSetRequest();
   static PbList<ExportVariantSetRequest> createRepeated() =>
-      new PbList<ExportVariantSetRequest>();
+      PbList<ExportVariantSetRequest>();
   static ExportVariantSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportVariantSetRequest();
+      _defaultInstance = _ReadonlyExportVariantSetRequest();
     return _defaultInstance;
   }
 
@@ -1026,7 +1022,7 @@ class _ReadonlyExportVariantSetRequest extends ExportVariantSetRequest
     with ReadonlyMessageMixin {}
 
 class GetVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetVariantSetRequest')
+  static final BuilderInfo _i = BuilderInfo('GetVariantSetRequest')
     ..aOS(1, 'variantSetId')
     ..hasRequiredFields = false;
 
@@ -1038,14 +1034,14 @@ class GetVariantSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetVariantSetRequest clone() =>
-      new GetVariantSetRequest()..mergeFromMessage(this);
+      GetVariantSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetVariantSetRequest create() => new GetVariantSetRequest();
+  static GetVariantSetRequest create() => GetVariantSetRequest();
   static PbList<GetVariantSetRequest> createRepeated() =>
-      new PbList<GetVariantSetRequest>();
+      PbList<GetVariantSetRequest>();
   static GetVariantSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetVariantSetRequest();
+      _defaultInstance = _ReadonlyGetVariantSetRequest();
     return _defaultInstance;
   }
 
@@ -1067,7 +1063,7 @@ class _ReadonlyGetVariantSetRequest extends GetVariantSetRequest
     with ReadonlyMessageMixin {}
 
 class SearchVariantSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchVariantSetsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchVariantSetsRequest')
     ..pPS(1, 'datasetIds')
     ..aOS(2, 'pageToken')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -1081,14 +1077,14 @@ class SearchVariantSetsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchVariantSetsRequest clone() =>
-      new SearchVariantSetsRequest()..mergeFromMessage(this);
+      SearchVariantSetsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchVariantSetsRequest create() => new SearchVariantSetsRequest();
+  static SearchVariantSetsRequest create() => SearchVariantSetsRequest();
   static PbList<SearchVariantSetsRequest> createRepeated() =>
-      new PbList<SearchVariantSetsRequest>();
+      PbList<SearchVariantSetsRequest>();
   static SearchVariantSetsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchVariantSetsRequest();
+      _defaultInstance = _ReadonlySearchVariantSetsRequest();
     return _defaultInstance;
   }
 
@@ -1121,7 +1117,7 @@ class _ReadonlySearchVariantSetsRequest extends SearchVariantSetsRequest
     with ReadonlyMessageMixin {}
 
 class SearchVariantSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchVariantSetsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchVariantSetsResponse')
     ..pp<VariantSet>(1, 'variantSets', PbFieldType.PM, VariantSet.$checkItem,
         VariantSet.create)
     ..aOS(2, 'nextPageToken')
@@ -1135,14 +1131,14 @@ class SearchVariantSetsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchVariantSetsResponse clone() =>
-      new SearchVariantSetsResponse()..mergeFromMessage(this);
+      SearchVariantSetsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchVariantSetsResponse create() => new SearchVariantSetsResponse();
+  static SearchVariantSetsResponse create() => SearchVariantSetsResponse();
   static PbList<SearchVariantSetsResponse> createRepeated() =>
-      new PbList<SearchVariantSetsResponse>();
+      PbList<SearchVariantSetsResponse>();
   static SearchVariantSetsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchVariantSetsResponse();
+      _defaultInstance = _ReadonlySearchVariantSetsResponse();
     return _defaultInstance;
   }
 
@@ -1167,7 +1163,7 @@ class _ReadonlySearchVariantSetsResponse extends SearchVariantSetsResponse
     with ReadonlyMessageMixin {}
 
 class DeleteVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteVariantSetRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteVariantSetRequest')
     ..aOS(1, 'variantSetId')
     ..hasRequiredFields = false;
 
@@ -1179,14 +1175,14 @@ class DeleteVariantSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteVariantSetRequest clone() =>
-      new DeleteVariantSetRequest()..mergeFromMessage(this);
+      DeleteVariantSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteVariantSetRequest create() => new DeleteVariantSetRequest();
+  static DeleteVariantSetRequest create() => DeleteVariantSetRequest();
   static PbList<DeleteVariantSetRequest> createRepeated() =>
-      new PbList<DeleteVariantSetRequest>();
+      PbList<DeleteVariantSetRequest>();
   static DeleteVariantSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteVariantSetRequest();
+      _defaultInstance = _ReadonlyDeleteVariantSetRequest();
     return _defaultInstance;
   }
 
@@ -1209,7 +1205,7 @@ class _ReadonlyDeleteVariantSetRequest extends DeleteVariantSetRequest
     with ReadonlyMessageMixin {}
 
 class UpdateVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateVariantSetRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateVariantSetRequest')
     ..aOS(1, 'variantSetId')
     ..a<VariantSet>(2, 'variantSet', PbFieldType.OM, VariantSet.getDefault,
         VariantSet.create)
@@ -1229,14 +1225,14 @@ class UpdateVariantSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateVariantSetRequest clone() =>
-      new UpdateVariantSetRequest()..mergeFromMessage(this);
+      UpdateVariantSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateVariantSetRequest create() => new UpdateVariantSetRequest();
+  static UpdateVariantSetRequest create() => UpdateVariantSetRequest();
   static PbList<UpdateVariantSetRequest> createRepeated() =>
-      new PbList<UpdateVariantSetRequest>();
+      PbList<UpdateVariantSetRequest>();
   static UpdateVariantSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateVariantSetRequest();
+      _defaultInstance = _ReadonlyUpdateVariantSetRequest();
     return _defaultInstance;
   }
 
@@ -1275,7 +1271,7 @@ class _ReadonlyUpdateVariantSetRequest extends UpdateVariantSetRequest
     with ReadonlyMessageMixin {}
 
 class SearchVariantsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchVariantsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchVariantsRequest')
     ..pPS(1, 'variantSetIds')
     ..aOS(2, 'variantName')
     ..pPS(3, 'callSetIds')
@@ -1295,14 +1291,14 @@ class SearchVariantsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchVariantsRequest clone() =>
-      new SearchVariantsRequest()..mergeFromMessage(this);
+      SearchVariantsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchVariantsRequest create() => new SearchVariantsRequest();
+  static SearchVariantsRequest create() => SearchVariantsRequest();
   static PbList<SearchVariantsRequest> createRepeated() =>
-      new PbList<SearchVariantsRequest>();
+      PbList<SearchVariantsRequest>();
   static SearchVariantsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchVariantsRequest();
+      _defaultInstance = _ReadonlySearchVariantsRequest();
     return _defaultInstance;
   }
 
@@ -1377,7 +1373,7 @@ class _ReadonlySearchVariantsRequest extends SearchVariantsRequest
     with ReadonlyMessageMixin {}
 
 class SearchVariantsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchVariantsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchVariantsResponse')
     ..pp<Variant>(
         1, 'variants', PbFieldType.PM, Variant.$checkItem, Variant.create)
     ..aOS(2, 'nextPageToken')
@@ -1391,14 +1387,14 @@ class SearchVariantsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchVariantsResponse clone() =>
-      new SearchVariantsResponse()..mergeFromMessage(this);
+      SearchVariantsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchVariantsResponse create() => new SearchVariantsResponse();
+  static SearchVariantsResponse create() => SearchVariantsResponse();
   static PbList<SearchVariantsResponse> createRepeated() =>
-      new PbList<SearchVariantsResponse>();
+      PbList<SearchVariantsResponse>();
   static SearchVariantsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchVariantsResponse();
+      _defaultInstance = _ReadonlySearchVariantsResponse();
     return _defaultInstance;
   }
 
@@ -1423,7 +1419,7 @@ class _ReadonlySearchVariantsResponse extends SearchVariantsResponse
     with ReadonlyMessageMixin {}
 
 class CreateVariantRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateVariantRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateVariantRequest')
     ..a<Variant>(
         1, 'variant', PbFieldType.OM, Variant.getDefault, Variant.create)
     ..hasRequiredFields = false;
@@ -1436,14 +1432,14 @@ class CreateVariantRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateVariantRequest clone() =>
-      new CreateVariantRequest()..mergeFromMessage(this);
+      CreateVariantRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateVariantRequest create() => new CreateVariantRequest();
+  static CreateVariantRequest create() => CreateVariantRequest();
   static PbList<CreateVariantRequest> createRepeated() =>
-      new PbList<CreateVariantRequest>();
+      PbList<CreateVariantRequest>();
   static CreateVariantRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateVariantRequest();
+      _defaultInstance = _ReadonlyCreateVariantRequest();
     return _defaultInstance;
   }
 
@@ -1465,7 +1461,7 @@ class _ReadonlyCreateVariantRequest extends CreateVariantRequest
     with ReadonlyMessageMixin {}
 
 class UpdateVariantRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateVariantRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateVariantRequest')
     ..aOS(1, 'variantId')
     ..a<Variant>(
         2, 'variant', PbFieldType.OM, Variant.getDefault, Variant.create)
@@ -1485,14 +1481,14 @@ class UpdateVariantRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateVariantRequest clone() =>
-      new UpdateVariantRequest()..mergeFromMessage(this);
+      UpdateVariantRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateVariantRequest create() => new UpdateVariantRequest();
+  static UpdateVariantRequest create() => UpdateVariantRequest();
   static PbList<UpdateVariantRequest> createRepeated() =>
-      new PbList<UpdateVariantRequest>();
+      PbList<UpdateVariantRequest>();
   static UpdateVariantRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateVariantRequest();
+      _defaultInstance = _ReadonlyUpdateVariantRequest();
     return _defaultInstance;
   }
 
@@ -1530,7 +1526,7 @@ class _ReadonlyUpdateVariantRequest extends UpdateVariantRequest
     with ReadonlyMessageMixin {}
 
 class DeleteVariantRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteVariantRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteVariantRequest')
     ..aOS(1, 'variantId')
     ..hasRequiredFields = false;
 
@@ -1542,14 +1538,14 @@ class DeleteVariantRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteVariantRequest clone() =>
-      new DeleteVariantRequest()..mergeFromMessage(this);
+      DeleteVariantRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteVariantRequest create() => new DeleteVariantRequest();
+  static DeleteVariantRequest create() => DeleteVariantRequest();
   static PbList<DeleteVariantRequest> createRepeated() =>
-      new PbList<DeleteVariantRequest>();
+      PbList<DeleteVariantRequest>();
   static DeleteVariantRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteVariantRequest();
+      _defaultInstance = _ReadonlyDeleteVariantRequest();
     return _defaultInstance;
   }
 
@@ -1571,7 +1567,7 @@ class _ReadonlyDeleteVariantRequest extends DeleteVariantRequest
     with ReadonlyMessageMixin {}
 
 class GetVariantRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetVariantRequest')
+  static final BuilderInfo _i = BuilderInfo('GetVariantRequest')
     ..aOS(1, 'variantId')
     ..hasRequiredFields = false;
 
@@ -1582,14 +1578,14 @@ class GetVariantRequest extends GeneratedMessage {
   GetVariantRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetVariantRequest clone() => new GetVariantRequest()..mergeFromMessage(this);
+  GetVariantRequest clone() => GetVariantRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetVariantRequest create() => new GetVariantRequest();
+  static GetVariantRequest create() => GetVariantRequest();
   static PbList<GetVariantRequest> createRepeated() =>
-      new PbList<GetVariantRequest>();
+      PbList<GetVariantRequest>();
   static GetVariantRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetVariantRequest();
+      _defaultInstance = _ReadonlyGetVariantRequest();
     return _defaultInstance;
   }
 
@@ -1612,7 +1608,7 @@ class _ReadonlyGetVariantRequest extends GetVariantRequest
 
 class MergeVariantsRequest_InfoMergeConfigEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('MergeVariantsRequest_InfoMergeConfigEntry')
+      BuilderInfo('MergeVariantsRequest_InfoMergeConfigEntry')
         ..aOS(1, 'key')
         ..e<InfoMergeOperation>(
             2,
@@ -1631,16 +1627,15 @@ class MergeVariantsRequest_InfoMergeConfigEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MergeVariantsRequest_InfoMergeConfigEntry clone() =>
-      new MergeVariantsRequest_InfoMergeConfigEntry()..mergeFromMessage(this);
+      MergeVariantsRequest_InfoMergeConfigEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static MergeVariantsRequest_InfoMergeConfigEntry create() =>
-      new MergeVariantsRequest_InfoMergeConfigEntry();
+      MergeVariantsRequest_InfoMergeConfigEntry();
   static PbList<MergeVariantsRequest_InfoMergeConfigEntry> createRepeated() =>
-      new PbList<MergeVariantsRequest_InfoMergeConfigEntry>();
+      PbList<MergeVariantsRequest_InfoMergeConfigEntry>();
   static MergeVariantsRequest_InfoMergeConfigEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyMergeVariantsRequest_InfoMergeConfigEntry();
+      _defaultInstance = _ReadonlyMergeVariantsRequest_InfoMergeConfigEntry();
     return _defaultInstance;
   }
 
@@ -1672,7 +1667,7 @@ class _ReadonlyMergeVariantsRequest_InfoMergeConfigEntry
     with ReadonlyMessageMixin {}
 
 class MergeVariantsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MergeVariantsRequest')
+  static final BuilderInfo _i = BuilderInfo('MergeVariantsRequest')
     ..aOS(1, 'variantSetId')
     ..pp<Variant>(
         2, 'variants', PbFieldType.PM, Variant.$checkItem, Variant.create)
@@ -1692,14 +1687,14 @@ class MergeVariantsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MergeVariantsRequest clone() =>
-      new MergeVariantsRequest()..mergeFromMessage(this);
+      MergeVariantsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MergeVariantsRequest create() => new MergeVariantsRequest();
+  static MergeVariantsRequest create() => MergeVariantsRequest();
   static PbList<MergeVariantsRequest> createRepeated() =>
-      new PbList<MergeVariantsRequest>();
+      PbList<MergeVariantsRequest>();
   static MergeVariantsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMergeVariantsRequest();
+      _defaultInstance = _ReadonlyMergeVariantsRequest();
     return _defaultInstance;
   }
 
@@ -1726,7 +1721,7 @@ class _ReadonlyMergeVariantsRequest extends MergeVariantsRequest
     with ReadonlyMessageMixin {}
 
 class SearchCallSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchCallSetsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchCallSetsRequest')
     ..pPS(1, 'variantSetIds')
     ..aOS(2, 'name')
     ..aOS(3, 'pageToken')
@@ -1741,14 +1736,14 @@ class SearchCallSetsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchCallSetsRequest clone() =>
-      new SearchCallSetsRequest()..mergeFromMessage(this);
+      SearchCallSetsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchCallSetsRequest create() => new SearchCallSetsRequest();
+  static SearchCallSetsRequest create() => SearchCallSetsRequest();
   static PbList<SearchCallSetsRequest> createRepeated() =>
-      new PbList<SearchCallSetsRequest>();
+      PbList<SearchCallSetsRequest>();
   static SearchCallSetsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchCallSetsRequest();
+      _defaultInstance = _ReadonlySearchCallSetsRequest();
     return _defaultInstance;
   }
 
@@ -1789,7 +1784,7 @@ class _ReadonlySearchCallSetsRequest extends SearchCallSetsRequest
     with ReadonlyMessageMixin {}
 
 class SearchCallSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchCallSetsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchCallSetsResponse')
     ..pp<CallSet>(
         1, 'callSets', PbFieldType.PM, CallSet.$checkItem, CallSet.create)
     ..aOS(2, 'nextPageToken')
@@ -1803,14 +1798,14 @@ class SearchCallSetsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchCallSetsResponse clone() =>
-      new SearchCallSetsResponse()..mergeFromMessage(this);
+      SearchCallSetsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchCallSetsResponse create() => new SearchCallSetsResponse();
+  static SearchCallSetsResponse create() => SearchCallSetsResponse();
   static PbList<SearchCallSetsResponse> createRepeated() =>
-      new PbList<SearchCallSetsResponse>();
+      PbList<SearchCallSetsResponse>();
   static SearchCallSetsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchCallSetsResponse();
+      _defaultInstance = _ReadonlySearchCallSetsResponse();
     return _defaultInstance;
   }
 
@@ -1835,7 +1830,7 @@ class _ReadonlySearchCallSetsResponse extends SearchCallSetsResponse
     with ReadonlyMessageMixin {}
 
 class CreateCallSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateCallSetRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateCallSetRequest')
     ..a<CallSet>(
         1, 'callSet', PbFieldType.OM, CallSet.getDefault, CallSet.create)
     ..hasRequiredFields = false;
@@ -1848,14 +1843,14 @@ class CreateCallSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateCallSetRequest clone() =>
-      new CreateCallSetRequest()..mergeFromMessage(this);
+      CreateCallSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateCallSetRequest create() => new CreateCallSetRequest();
+  static CreateCallSetRequest create() => CreateCallSetRequest();
   static PbList<CreateCallSetRequest> createRepeated() =>
-      new PbList<CreateCallSetRequest>();
+      PbList<CreateCallSetRequest>();
   static CreateCallSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateCallSetRequest();
+      _defaultInstance = _ReadonlyCreateCallSetRequest();
     return _defaultInstance;
   }
 
@@ -1877,7 +1872,7 @@ class _ReadonlyCreateCallSetRequest extends CreateCallSetRequest
     with ReadonlyMessageMixin {}
 
 class UpdateCallSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateCallSetRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateCallSetRequest')
     ..aOS(1, 'callSetId')
     ..a<CallSet>(
         2, 'callSet', PbFieldType.OM, CallSet.getDefault, CallSet.create)
@@ -1897,14 +1892,14 @@ class UpdateCallSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateCallSetRequest clone() =>
-      new UpdateCallSetRequest()..mergeFromMessage(this);
+      UpdateCallSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateCallSetRequest create() => new UpdateCallSetRequest();
+  static UpdateCallSetRequest create() => UpdateCallSetRequest();
   static PbList<UpdateCallSetRequest> createRepeated() =>
-      new PbList<UpdateCallSetRequest>();
+      PbList<UpdateCallSetRequest>();
   static UpdateCallSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateCallSetRequest();
+      _defaultInstance = _ReadonlyUpdateCallSetRequest();
     return _defaultInstance;
   }
 
@@ -1942,7 +1937,7 @@ class _ReadonlyUpdateCallSetRequest extends UpdateCallSetRequest
     with ReadonlyMessageMixin {}
 
 class DeleteCallSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteCallSetRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteCallSetRequest')
     ..aOS(1, 'callSetId')
     ..hasRequiredFields = false;
 
@@ -1954,14 +1949,14 @@ class DeleteCallSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteCallSetRequest clone() =>
-      new DeleteCallSetRequest()..mergeFromMessage(this);
+      DeleteCallSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteCallSetRequest create() => new DeleteCallSetRequest();
+  static DeleteCallSetRequest create() => DeleteCallSetRequest();
   static PbList<DeleteCallSetRequest> createRepeated() =>
-      new PbList<DeleteCallSetRequest>();
+      PbList<DeleteCallSetRequest>();
   static DeleteCallSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteCallSetRequest();
+      _defaultInstance = _ReadonlyDeleteCallSetRequest();
     return _defaultInstance;
   }
 
@@ -1983,7 +1978,7 @@ class _ReadonlyDeleteCallSetRequest extends DeleteCallSetRequest
     with ReadonlyMessageMixin {}
 
 class GetCallSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetCallSetRequest')
+  static final BuilderInfo _i = BuilderInfo('GetCallSetRequest')
     ..aOS(1, 'callSetId')
     ..hasRequiredFields = false;
 
@@ -1994,14 +1989,14 @@ class GetCallSetRequest extends GeneratedMessage {
   GetCallSetRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetCallSetRequest clone() => new GetCallSetRequest()..mergeFromMessage(this);
+  GetCallSetRequest clone() => GetCallSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetCallSetRequest create() => new GetCallSetRequest();
+  static GetCallSetRequest create() => GetCallSetRequest();
   static PbList<GetCallSetRequest> createRepeated() =>
-      new PbList<GetCallSetRequest>();
+      PbList<GetCallSetRequest>();
   static GetCallSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetCallSetRequest();
+      _defaultInstance = _ReadonlyGetCallSetRequest();
     return _defaultInstance;
   }
 
@@ -2023,7 +2018,7 @@ class _ReadonlyGetCallSetRequest extends GetCallSetRequest
     with ReadonlyMessageMixin {}
 
 class StreamVariantsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamVariantsRequest')
+  static final BuilderInfo _i = BuilderInfo('StreamVariantsRequest')
     ..aOS(1, 'projectId')
     ..aOS(2, 'variantSetId')
     ..pPS(3, 'callSetIds')
@@ -2040,14 +2035,14 @@ class StreamVariantsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamVariantsRequest clone() =>
-      new StreamVariantsRequest()..mergeFromMessage(this);
+      StreamVariantsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamVariantsRequest create() => new StreamVariantsRequest();
+  static StreamVariantsRequest create() => StreamVariantsRequest();
   static PbList<StreamVariantsRequest> createRepeated() =>
-      new PbList<StreamVariantsRequest>();
+      PbList<StreamVariantsRequest>();
   static StreamVariantsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamVariantsRequest();
+      _defaultInstance = _ReadonlyStreamVariantsRequest();
     return _defaultInstance;
   }
 
@@ -2104,7 +2099,7 @@ class _ReadonlyStreamVariantsRequest extends StreamVariantsRequest
     with ReadonlyMessageMixin {}
 
 class StreamVariantsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamVariantsResponse')
+  static final BuilderInfo _i = BuilderInfo('StreamVariantsResponse')
     ..pp<Variant>(
         1, 'variants', PbFieldType.PM, Variant.$checkItem, Variant.create)
     ..hasRequiredFields = false;
@@ -2117,14 +2112,14 @@ class StreamVariantsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamVariantsResponse clone() =>
-      new StreamVariantsResponse()..mergeFromMessage(this);
+      StreamVariantsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamVariantsResponse create() => new StreamVariantsResponse();
+  static StreamVariantsResponse create() => StreamVariantsResponse();
   static PbList<StreamVariantsResponse> createRepeated() =>
-      new PbList<StreamVariantsResponse>();
+      PbList<StreamVariantsResponse>();
   static StreamVariantsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamVariantsResponse();
+      _defaultInstance = _ReadonlyStreamVariantsResponse();
     return _defaultInstance;
   }
 
@@ -2146,7 +2141,7 @@ class StreamingVariantServiceApi {
 
   Future<StreamVariantsResponse> streamVariants(
       ClientContext ctx, StreamVariantsRequest request) {
-    var emptyResponse = new StreamVariantsResponse();
+    var emptyResponse = StreamVariantsResponse();
     return _client.invoke<StreamVariantsResponse>(ctx,
         'StreamingVariantService', 'StreamVariants', request, emptyResponse);
   }
@@ -2158,124 +2153,124 @@ class VariantServiceV1Api {
 
   Future<$google$longrunning.Operation> importVariants(
       ClientContext ctx, ImportVariantsRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'VariantServiceV1', 'ImportVariants', request, emptyResponse);
   }
 
   Future<VariantSet> createVariantSet(
       ClientContext ctx, CreateVariantSetRequest request) {
-    var emptyResponse = new VariantSet();
+    var emptyResponse = VariantSet();
     return _client.invoke<VariantSet>(
         ctx, 'VariantServiceV1', 'CreateVariantSet', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> exportVariantSet(
       ClientContext ctx, ExportVariantSetRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'VariantServiceV1', 'ExportVariantSet', request, emptyResponse);
   }
 
   Future<VariantSet> getVariantSet(
       ClientContext ctx, GetVariantSetRequest request) {
-    var emptyResponse = new VariantSet();
+    var emptyResponse = VariantSet();
     return _client.invoke<VariantSet>(
         ctx, 'VariantServiceV1', 'GetVariantSet', request, emptyResponse);
   }
 
   Future<SearchVariantSetsResponse> searchVariantSets(
       ClientContext ctx, SearchVariantSetsRequest request) {
-    var emptyResponse = new SearchVariantSetsResponse();
+    var emptyResponse = SearchVariantSetsResponse();
     return _client.invoke<SearchVariantSetsResponse>(
         ctx, 'VariantServiceV1', 'SearchVariantSets', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteVariantSet(
       ClientContext ctx, DeleteVariantSetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'VariantServiceV1', 'DeleteVariantSet', request, emptyResponse);
   }
 
   Future<VariantSet> updateVariantSet(
       ClientContext ctx, UpdateVariantSetRequest request) {
-    var emptyResponse = new VariantSet();
+    var emptyResponse = VariantSet();
     return _client.invoke<VariantSet>(
         ctx, 'VariantServiceV1', 'UpdateVariantSet', request, emptyResponse);
   }
 
   Future<SearchVariantsResponse> searchVariants(
       ClientContext ctx, SearchVariantsRequest request) {
-    var emptyResponse = new SearchVariantsResponse();
+    var emptyResponse = SearchVariantsResponse();
     return _client.invoke<SearchVariantsResponse>(
         ctx, 'VariantServiceV1', 'SearchVariants', request, emptyResponse);
   }
 
   Future<Variant> createVariant(
       ClientContext ctx, CreateVariantRequest request) {
-    var emptyResponse = new Variant();
+    var emptyResponse = Variant();
     return _client.invoke<Variant>(
         ctx, 'VariantServiceV1', 'CreateVariant', request, emptyResponse);
   }
 
   Future<Variant> updateVariant(
       ClientContext ctx, UpdateVariantRequest request) {
-    var emptyResponse = new Variant();
+    var emptyResponse = Variant();
     return _client.invoke<Variant>(
         ctx, 'VariantServiceV1', 'UpdateVariant', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteVariant(
       ClientContext ctx, DeleteVariantRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'VariantServiceV1', 'DeleteVariant', request, emptyResponse);
   }
 
   Future<Variant> getVariant(ClientContext ctx, GetVariantRequest request) {
-    var emptyResponse = new Variant();
+    var emptyResponse = Variant();
     return _client.invoke<Variant>(
         ctx, 'VariantServiceV1', 'GetVariant', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> mergeVariants(
       ClientContext ctx, MergeVariantsRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'VariantServiceV1', 'MergeVariants', request, emptyResponse);
   }
 
   Future<SearchCallSetsResponse> searchCallSets(
       ClientContext ctx, SearchCallSetsRequest request) {
-    var emptyResponse = new SearchCallSetsResponse();
+    var emptyResponse = SearchCallSetsResponse();
     return _client.invoke<SearchCallSetsResponse>(
         ctx, 'VariantServiceV1', 'SearchCallSets', request, emptyResponse);
   }
 
   Future<CallSet> createCallSet(
       ClientContext ctx, CreateCallSetRequest request) {
-    var emptyResponse = new CallSet();
+    var emptyResponse = CallSet();
     return _client.invoke<CallSet>(
         ctx, 'VariantServiceV1', 'CreateCallSet', request, emptyResponse);
   }
 
   Future<CallSet> updateCallSet(
       ClientContext ctx, UpdateCallSetRequest request) {
-    var emptyResponse = new CallSet();
+    var emptyResponse = CallSet();
     return _client.invoke<CallSet>(
         ctx, 'VariantServiceV1', 'UpdateCallSet', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteCallSet(
       ClientContext ctx, DeleteCallSetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'VariantServiceV1', 'DeleteCallSet', request, emptyResponse);
   }
 
   Future<CallSet> getCallSet(ClientContext ctx, GetCallSetRequest request) {
-    var emptyResponse = new CallSet();
+    var emptyResponse = CallSet();
     return _client.invoke<CallSet>(
         ctx, 'VariantServiceV1', 'GetCallSet', request, emptyResponse);
   }

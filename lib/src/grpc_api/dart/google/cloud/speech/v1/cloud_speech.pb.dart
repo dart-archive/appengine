@@ -19,7 +19,7 @@ import 'cloud_speech.pbenum.dart';
 export 'cloud_speech.pbenum.dart';
 
 class RecognizeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognizeRequest')
+  static final BuilderInfo _i = BuilderInfo('RecognizeRequest')
     ..a<RecognitionConfig>(1, 'config', PbFieldType.OM,
         RecognitionConfig.getDefault, RecognitionConfig.create)
     ..a<RecognitionAudio>(2, 'audio', PbFieldType.OM,
@@ -33,14 +33,14 @@ class RecognizeRequest extends GeneratedMessage {
   RecognizeRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognizeRequest clone() => new RecognizeRequest()..mergeFromMessage(this);
+  RecognizeRequest clone() => RecognizeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RecognizeRequest create() => new RecognizeRequest();
+  static RecognizeRequest create() => RecognizeRequest();
   static PbList<RecognizeRequest> createRepeated() =>
-      new PbList<RecognizeRequest>();
+      PbList<RecognizeRequest>();
   static RecognizeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognizeRequest();
+      _defaultInstance = _ReadonlyRecognizeRequest();
     return _defaultInstance;
   }
 
@@ -70,7 +70,7 @@ class _ReadonlyRecognizeRequest extends RecognizeRequest
     with ReadonlyMessageMixin {}
 
 class LongRunningRecognizeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LongRunningRecognizeRequest')
+  static final BuilderInfo _i = BuilderInfo('LongRunningRecognizeRequest')
     ..a<RecognitionConfig>(1, 'config', PbFieldType.OM,
         RecognitionConfig.getDefault, RecognitionConfig.create)
     ..a<RecognitionAudio>(2, 'audio', PbFieldType.OM,
@@ -85,15 +85,14 @@ class LongRunningRecognizeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LongRunningRecognizeRequest clone() =>
-      new LongRunningRecognizeRequest()..mergeFromMessage(this);
+      LongRunningRecognizeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LongRunningRecognizeRequest create() =>
-      new LongRunningRecognizeRequest();
+  static LongRunningRecognizeRequest create() => LongRunningRecognizeRequest();
   static PbList<LongRunningRecognizeRequest> createRepeated() =>
-      new PbList<LongRunningRecognizeRequest>();
+      PbList<LongRunningRecognizeRequest>();
   static LongRunningRecognizeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLongRunningRecognizeRequest();
+      _defaultInstance = _ReadonlyLongRunningRecognizeRequest();
     return _defaultInstance;
   }
 
@@ -124,7 +123,7 @@ class _ReadonlyLongRunningRecognizeRequest extends LongRunningRecognizeRequest
     with ReadonlyMessageMixin {}
 
 class StreamingRecognizeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognizeRequest')
+  static final BuilderInfo _i = BuilderInfo('StreamingRecognizeRequest')
     ..a<StreamingRecognitionConfig>(
         1,
         'streamingConfig',
@@ -142,14 +141,14 @@ class StreamingRecognizeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognizeRequest clone() =>
-      new StreamingRecognizeRequest()..mergeFromMessage(this);
+      StreamingRecognizeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamingRecognizeRequest create() => new StreamingRecognizeRequest();
+  static StreamingRecognizeRequest create() => StreamingRecognizeRequest();
   static PbList<StreamingRecognizeRequest> createRepeated() =>
-      new PbList<StreamingRecognizeRequest>();
+      PbList<StreamingRecognizeRequest>();
   static StreamingRecognizeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognizeRequest();
+      _defaultInstance = _ReadonlyStreamingRecognizeRequest();
     return _defaultInstance;
   }
 
@@ -180,7 +179,7 @@ class _ReadonlyStreamingRecognizeRequest extends StreamingRecognizeRequest
     with ReadonlyMessageMixin {}
 
 class StreamingRecognitionConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognitionConfig')
+  static final BuilderInfo _i = BuilderInfo('StreamingRecognitionConfig')
     ..a<RecognitionConfig>(1, 'config', PbFieldType.OM,
         RecognitionConfig.getDefault, RecognitionConfig.create)
     ..aOB(2, 'singleUtterance')
@@ -195,15 +194,14 @@ class StreamingRecognitionConfig extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognitionConfig clone() =>
-      new StreamingRecognitionConfig()..mergeFromMessage(this);
+      StreamingRecognitionConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamingRecognitionConfig create() =>
-      new StreamingRecognitionConfig();
+  static StreamingRecognitionConfig create() => StreamingRecognitionConfig();
   static PbList<StreamingRecognitionConfig> createRepeated() =>
-      new PbList<StreamingRecognitionConfig>();
+      PbList<StreamingRecognitionConfig>();
   static StreamingRecognitionConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognitionConfig();
+      _defaultInstance = _ReadonlyStreamingRecognitionConfig();
     return _defaultInstance;
   }
 
@@ -242,7 +240,7 @@ class _ReadonlyStreamingRecognitionConfig extends StreamingRecognitionConfig
     with ReadonlyMessageMixin {}
 
 class RecognitionConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognitionConfig')
+  static final BuilderInfo _i = BuilderInfo('RecognitionConfig')
     ..e<RecognitionConfig_AudioEncoding>(
         1,
         'encoding',
@@ -266,14 +264,14 @@ class RecognitionConfig extends GeneratedMessage {
   RecognitionConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognitionConfig clone() => new RecognitionConfig()..mergeFromMessage(this);
+  RecognitionConfig clone() => RecognitionConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RecognitionConfig create() => new RecognitionConfig();
+  static RecognitionConfig create() => RecognitionConfig();
   static PbList<RecognitionConfig> createRepeated() =>
-      new PbList<RecognitionConfig>();
+      PbList<RecognitionConfig>();
   static RecognitionConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognitionConfig();
+      _defaultInstance = _ReadonlyRecognitionConfig();
     return _defaultInstance;
   }
 
@@ -337,7 +335,7 @@ class _ReadonlyRecognitionConfig extends RecognitionConfig
     with ReadonlyMessageMixin {}
 
 class SpeechContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SpeechContext')
+  static final BuilderInfo _i = BuilderInfo('SpeechContext')
     ..pPS(1, 'phrases')
     ..hasRequiredFields = false;
 
@@ -348,13 +346,12 @@ class SpeechContext extends GeneratedMessage {
   SpeechContext.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SpeechContext clone() => new SpeechContext()..mergeFromMessage(this);
+  SpeechContext clone() => SpeechContext()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SpeechContext create() => new SpeechContext();
-  static PbList<SpeechContext> createRepeated() => new PbList<SpeechContext>();
+  static SpeechContext create() => SpeechContext();
+  static PbList<SpeechContext> createRepeated() => PbList<SpeechContext>();
   static SpeechContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpeechContext();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySpeechContext();
     return _defaultInstance;
   }
 
@@ -369,7 +366,7 @@ class SpeechContext extends GeneratedMessage {
 class _ReadonlySpeechContext extends SpeechContext with ReadonlyMessageMixin {}
 
 class RecognitionAudio extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognitionAudio')
+  static final BuilderInfo _i = BuilderInfo('RecognitionAudio')
     ..a<List<int>>(1, 'content', PbFieldType.OY)
     ..aOS(2, 'uri')
     ..hasRequiredFields = false;
@@ -381,14 +378,14 @@ class RecognitionAudio extends GeneratedMessage {
   RecognitionAudio.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognitionAudio clone() => new RecognitionAudio()..mergeFromMessage(this);
+  RecognitionAudio clone() => RecognitionAudio()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RecognitionAudio create() => new RecognitionAudio();
+  static RecognitionAudio create() => RecognitionAudio();
   static PbList<RecognitionAudio> createRepeated() =>
-      new PbList<RecognitionAudio>();
+      PbList<RecognitionAudio>();
   static RecognitionAudio getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognitionAudio();
+      _defaultInstance = _ReadonlyRecognitionAudio();
     return _defaultInstance;
   }
 
@@ -418,7 +415,7 @@ class _ReadonlyRecognitionAudio extends RecognitionAudio
     with ReadonlyMessageMixin {}
 
 class RecognizeResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognizeResponse')
+  static final BuilderInfo _i = BuilderInfo('RecognizeResponse')
     ..pp<SpeechRecognitionResult>(2, 'results', PbFieldType.PM,
         SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
     ..hasRequiredFields = false;
@@ -430,14 +427,14 @@ class RecognizeResponse extends GeneratedMessage {
   RecognizeResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognizeResponse clone() => new RecognizeResponse()..mergeFromMessage(this);
+  RecognizeResponse clone() => RecognizeResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RecognizeResponse create() => new RecognizeResponse();
+  static RecognizeResponse create() => RecognizeResponse();
   static PbList<RecognizeResponse> createRepeated() =>
-      new PbList<RecognizeResponse>();
+      PbList<RecognizeResponse>();
   static RecognizeResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognizeResponse();
+      _defaultInstance = _ReadonlyRecognizeResponse();
     return _defaultInstance;
   }
 
@@ -453,7 +450,7 @@ class _ReadonlyRecognizeResponse extends RecognizeResponse
     with ReadonlyMessageMixin {}
 
 class LongRunningRecognizeResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LongRunningRecognizeResponse')
+  static final BuilderInfo _i = BuilderInfo('LongRunningRecognizeResponse')
     ..pp<SpeechRecognitionResult>(2, 'results', PbFieldType.PM,
         SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
     ..hasRequiredFields = false;
@@ -466,15 +463,15 @@ class LongRunningRecognizeResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LongRunningRecognizeResponse clone() =>
-      new LongRunningRecognizeResponse()..mergeFromMessage(this);
+      LongRunningRecognizeResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static LongRunningRecognizeResponse create() =>
-      new LongRunningRecognizeResponse();
+      LongRunningRecognizeResponse();
   static PbList<LongRunningRecognizeResponse> createRepeated() =>
-      new PbList<LongRunningRecognizeResponse>();
+      PbList<LongRunningRecognizeResponse>();
   static LongRunningRecognizeResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLongRunningRecognizeResponse();
+      _defaultInstance = _ReadonlyLongRunningRecognizeResponse();
     return _defaultInstance;
   }
 
@@ -491,7 +488,7 @@ class _ReadonlyLongRunningRecognizeResponse extends LongRunningRecognizeResponse
     with ReadonlyMessageMixin {}
 
 class LongRunningRecognizeMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LongRunningRecognizeMetadata')
+  static final BuilderInfo _i = BuilderInfo('LongRunningRecognizeMetadata')
     ..a<int>(1, 'progressPercent', PbFieldType.O3)
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -515,15 +512,15 @@ class LongRunningRecognizeMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LongRunningRecognizeMetadata clone() =>
-      new LongRunningRecognizeMetadata()..mergeFromMessage(this);
+      LongRunningRecognizeMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static LongRunningRecognizeMetadata create() =>
-      new LongRunningRecognizeMetadata();
+      LongRunningRecognizeMetadata();
   static PbList<LongRunningRecognizeMetadata> createRepeated() =>
-      new PbList<LongRunningRecognizeMetadata>();
+      PbList<LongRunningRecognizeMetadata>();
   static LongRunningRecognizeMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLongRunningRecognizeMetadata();
+      _defaultInstance = _ReadonlyLongRunningRecognizeMetadata();
     return _defaultInstance;
   }
 
@@ -562,7 +559,7 @@ class _ReadonlyLongRunningRecognizeMetadata extends LongRunningRecognizeMetadata
     with ReadonlyMessageMixin {}
 
 class StreamingRecognizeResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognizeResponse')
+  static final BuilderInfo _i = BuilderInfo('StreamingRecognizeResponse')
     ..a<$google$rpc.Status>(1, 'error', PbFieldType.OM,
         $google$rpc.Status.getDefault, $google$rpc.Status.create)
     ..pp<StreamingRecognitionResult>(
@@ -588,15 +585,14 @@ class StreamingRecognizeResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognizeResponse clone() =>
-      new StreamingRecognizeResponse()..mergeFromMessage(this);
+      StreamingRecognizeResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamingRecognizeResponse create() =>
-      new StreamingRecognizeResponse();
+  static StreamingRecognizeResponse create() => StreamingRecognizeResponse();
   static PbList<StreamingRecognizeResponse> createRepeated() =>
-      new PbList<StreamingRecognizeResponse>();
+      PbList<StreamingRecognizeResponse>();
   static StreamingRecognizeResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognizeResponse();
+      _defaultInstance = _ReadonlyStreamingRecognizeResponse();
     return _defaultInstance;
   }
 
@@ -629,7 +625,7 @@ class _ReadonlyStreamingRecognizeResponse extends StreamingRecognizeResponse
     with ReadonlyMessageMixin {}
 
 class StreamingRecognitionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognitionResult')
+  static final BuilderInfo _i = BuilderInfo('StreamingRecognitionResult')
     ..pp<SpeechRecognitionAlternative>(
         1,
         'alternatives',
@@ -648,15 +644,14 @@ class StreamingRecognitionResult extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognitionResult clone() =>
-      new StreamingRecognitionResult()..mergeFromMessage(this);
+      StreamingRecognitionResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StreamingRecognitionResult create() =>
-      new StreamingRecognitionResult();
+  static StreamingRecognitionResult create() => StreamingRecognitionResult();
   static PbList<StreamingRecognitionResult> createRepeated() =>
-      new PbList<StreamingRecognitionResult>();
+      PbList<StreamingRecognitionResult>();
   static StreamingRecognitionResult getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognitionResult();
+      _defaultInstance = _ReadonlyStreamingRecognitionResult();
     return _defaultInstance;
   }
 
@@ -689,7 +684,7 @@ class _ReadonlyStreamingRecognitionResult extends StreamingRecognitionResult
     with ReadonlyMessageMixin {}
 
 class SpeechRecognitionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SpeechRecognitionResult')
+  static final BuilderInfo _i = BuilderInfo('SpeechRecognitionResult')
     ..pp<SpeechRecognitionAlternative>(
         1,
         'alternatives',
@@ -706,14 +701,14 @@ class SpeechRecognitionResult extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SpeechRecognitionResult clone() =>
-      new SpeechRecognitionResult()..mergeFromMessage(this);
+      SpeechRecognitionResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SpeechRecognitionResult create() => new SpeechRecognitionResult();
+  static SpeechRecognitionResult create() => SpeechRecognitionResult();
   static PbList<SpeechRecognitionResult> createRepeated() =>
-      new PbList<SpeechRecognitionResult>();
+      PbList<SpeechRecognitionResult>();
   static SpeechRecognitionResult getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpeechRecognitionResult();
+      _defaultInstance = _ReadonlySpeechRecognitionResult();
     return _defaultInstance;
   }
 
@@ -730,7 +725,7 @@ class _ReadonlySpeechRecognitionResult extends SpeechRecognitionResult
     with ReadonlyMessageMixin {}
 
 class SpeechRecognitionAlternative extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SpeechRecognitionAlternative')
+  static final BuilderInfo _i = BuilderInfo('SpeechRecognitionAlternative')
     ..aOS(1, 'transcript')
     ..a<double>(2, 'confidence', PbFieldType.OF)
     ..pp<WordInfo>(
@@ -745,15 +740,15 @@ class SpeechRecognitionAlternative extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SpeechRecognitionAlternative clone() =>
-      new SpeechRecognitionAlternative()..mergeFromMessage(this);
+      SpeechRecognitionAlternative()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static SpeechRecognitionAlternative create() =>
-      new SpeechRecognitionAlternative();
+      SpeechRecognitionAlternative();
   static PbList<SpeechRecognitionAlternative> createRepeated() =>
-      new PbList<SpeechRecognitionAlternative>();
+      PbList<SpeechRecognitionAlternative>();
   static SpeechRecognitionAlternative getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpeechRecognitionAlternative();
+      _defaultInstance = _ReadonlySpeechRecognitionAlternative();
     return _defaultInstance;
   }
 
@@ -786,7 +781,7 @@ class _ReadonlySpeechRecognitionAlternative extends SpeechRecognitionAlternative
     with ReadonlyMessageMixin {}
 
 class WordInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WordInfo')
+  static final BuilderInfo _i = BuilderInfo('WordInfo')
     ..a<$google$protobuf.Duration>(1, 'startTime', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..a<$google$protobuf.Duration>(2, 'endTime', PbFieldType.OM,
@@ -800,12 +795,12 @@ class WordInfo extends GeneratedMessage {
       : super.fromBuffer(i, r);
   WordInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WordInfo clone() => new WordInfo()..mergeFromMessage(this);
+  WordInfo clone() => WordInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WordInfo create() => new WordInfo();
-  static PbList<WordInfo> createRepeated() => new PbList<WordInfo>();
+  static WordInfo create() => WordInfo();
+  static PbList<WordInfo> createRepeated() => PbList<WordInfo>();
   static WordInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWordInfo();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWordInfo();
     return _defaultInstance;
   }
 
@@ -847,21 +842,21 @@ class SpeechApi {
 
   Future<RecognizeResponse> recognize(
       ClientContext ctx, RecognizeRequest request) {
-    var emptyResponse = new RecognizeResponse();
+    var emptyResponse = RecognizeResponse();
     return _client.invoke<RecognizeResponse>(
         ctx, 'Speech', 'Recognize', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> longRunningRecognize(
       ClientContext ctx, LongRunningRecognizeRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Speech', 'LongRunningRecognize', request, emptyResponse);
   }
 
   Future<StreamingRecognizeResponse> streamingRecognize(
       ClientContext ctx, StreamingRecognizeRequest request) {
-    var emptyResponse = new StreamingRecognizeResponse();
+    var emptyResponse = StreamingRecognizeResponse();
     return _client.invoke<StreamingRecognizeResponse>(
         ctx, 'Speech', 'StreamingRecognize', request, emptyResponse);
   }

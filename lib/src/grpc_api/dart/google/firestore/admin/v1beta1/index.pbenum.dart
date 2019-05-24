@@ -9,13 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class IndexField_Mode extends ProtobufEnum {
   static const IndexField_Mode MODE_UNSPECIFIED =
-      const IndexField_Mode._(0, 'MODE_UNSPECIFIED');
-  static const IndexField_Mode ASCENDING =
-      const IndexField_Mode._(2, 'ASCENDING');
-  static const IndexField_Mode DESCENDING =
-      const IndexField_Mode._(3, 'DESCENDING');
+      IndexField_Mode._(0, 'MODE_UNSPECIFIED');
+  static const IndexField_Mode ASCENDING = IndexField_Mode._(2, 'ASCENDING');
+  static const IndexField_Mode DESCENDING = IndexField_Mode._(3, 'DESCENDING');
 
-  static const List<IndexField_Mode> values = const <IndexField_Mode>[
+  static const List<IndexField_Mode> values = <IndexField_Mode>[
     MODE_UNSPECIFIED,
     ASCENDING,
     DESCENDING,
@@ -33,12 +31,12 @@ class IndexField_Mode extends ProtobufEnum {
 
 class Index_State extends ProtobufEnum {
   static const Index_State STATE_UNSPECIFIED =
-      const Index_State._(0, 'STATE_UNSPECIFIED');
-  static const Index_State CREATING = const Index_State._(3, 'CREATING');
-  static const Index_State READY = const Index_State._(2, 'READY');
-  static const Index_State ERROR = const Index_State._(5, 'ERROR');
+      Index_State._(0, 'STATE_UNSPECIFIED');
+  static const Index_State CREATING = Index_State._(3, 'CREATING');
+  static const Index_State READY = Index_State._(2, 'READY');
+  static const Index_State ERROR = Index_State._(5, 'ERROR');
 
-  static const List<Index_State> values = const <Index_State>[
+  static const List<Index_State> values = <Index_State>[
     STATE_UNSPECIFIED,
     CREATING,
     READY,

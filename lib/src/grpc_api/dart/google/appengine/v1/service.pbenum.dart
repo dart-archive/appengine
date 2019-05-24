@@ -9,12 +9,12 @@ import 'package:protobuf/protobuf.dart';
 
 class TrafficSplit_ShardBy extends ProtobufEnum {
   static const TrafficSplit_ShardBy UNSPECIFIED =
-      const TrafficSplit_ShardBy._(0, 'UNSPECIFIED');
+      TrafficSplit_ShardBy._(0, 'UNSPECIFIED');
   static const TrafficSplit_ShardBy COOKIE =
-      const TrafficSplit_ShardBy._(1, 'COOKIE');
-  static const TrafficSplit_ShardBy IP = const TrafficSplit_ShardBy._(2, 'IP');
+      TrafficSplit_ShardBy._(1, 'COOKIE');
+  static const TrafficSplit_ShardBy IP = TrafficSplit_ShardBy._(2, 'IP');
 
-  static const List<TrafficSplit_ShardBy> values = const <TrafficSplit_ShardBy>[
+  static const List<TrafficSplit_ShardBy> values = <TrafficSplit_ShardBy>[
     UNSPECIFIED,
     COOKIE,
     IP,

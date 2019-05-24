@@ -18,7 +18,7 @@ import 'common.pbenum.dart';
 export 'common.pbenum.dart';
 
 class TypedValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TypedValue')
+  static final BuilderInfo _i = BuilderInfo('TypedValue')
     ..aOB(1, 'boolValue')
     ..aInt64(2, 'int64Value')
     ..a<double>(3, 'doubleValue', PbFieldType.OD)
@@ -33,12 +33,12 @@ class TypedValue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TypedValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TypedValue clone() => new TypedValue()..mergeFromMessage(this);
+  TypedValue clone() => TypedValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TypedValue create() => new TypedValue();
-  static PbList<TypedValue> createRepeated() => new PbList<TypedValue>();
+  static TypedValue create() => TypedValue();
+  static PbList<TypedValue> createRepeated() => PbList<TypedValue>();
   static TypedValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTypedValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTypedValue();
     return _defaultInstance;
   }
 
@@ -91,7 +91,7 @@ class TypedValue extends GeneratedMessage {
 class _ReadonlyTypedValue extends TypedValue with ReadonlyMessageMixin {}
 
 class TimeInterval extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TimeInterval')
+  static final BuilderInfo _i = BuilderInfo('TimeInterval')
     ..a<$google$protobuf.Timestamp>(
         1,
         'startTime',
@@ -113,13 +113,12 @@ class TimeInterval extends GeneratedMessage {
   TimeInterval.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TimeInterval clone() => new TimeInterval()..mergeFromMessage(this);
+  TimeInterval clone() => TimeInterval()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TimeInterval create() => new TimeInterval();
-  static PbList<TimeInterval> createRepeated() => new PbList<TimeInterval>();
+  static TimeInterval create() => TimeInterval();
+  static PbList<TimeInterval> createRepeated() => PbList<TimeInterval>();
   static TimeInterval getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTimeInterval();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTimeInterval();
     return _defaultInstance;
   }
 
@@ -148,7 +147,7 @@ class TimeInterval extends GeneratedMessage {
 class _ReadonlyTimeInterval extends TimeInterval with ReadonlyMessageMixin {}
 
 class Aggregation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Aggregation')
+  static final BuilderInfo _i = BuilderInfo('Aggregation')
     ..a<$google$protobuf.Duration>(1, 'alignmentPeriod', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..e<Aggregation_Aligner>(
@@ -175,12 +174,12 @@ class Aggregation extends GeneratedMessage {
   Aggregation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Aggregation clone() => new Aggregation()..mergeFromMessage(this);
+  Aggregation clone() => Aggregation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Aggregation create() => new Aggregation();
-  static PbList<Aggregation> createRepeated() => new PbList<Aggregation>();
+  static Aggregation create() => Aggregation();
+  static PbList<Aggregation> createRepeated() => PbList<Aggregation>();
   static Aggregation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAggregation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAggregation();
     return _defaultInstance;
   }
 

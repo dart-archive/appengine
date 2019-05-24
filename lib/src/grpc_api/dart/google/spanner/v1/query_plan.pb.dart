@@ -15,7 +15,7 @@ import 'query_plan.pbenum.dart';
 export 'query_plan.pbenum.dart';
 
 class PlanNode_ChildLink extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PlanNode_ChildLink')
+  static final BuilderInfo _i = BuilderInfo('PlanNode_ChildLink')
     ..a<int>(1, 'childIndex', PbFieldType.O3)
     ..aOS(2, 'type')
     ..aOS(3, 'variable')
@@ -28,15 +28,14 @@ class PlanNode_ChildLink extends GeneratedMessage {
   PlanNode_ChildLink.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PlanNode_ChildLink clone() =>
-      new PlanNode_ChildLink()..mergeFromMessage(this);
+  PlanNode_ChildLink clone() => PlanNode_ChildLink()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PlanNode_ChildLink create() => new PlanNode_ChildLink();
+  static PlanNode_ChildLink create() => PlanNode_ChildLink();
   static PbList<PlanNode_ChildLink> createRepeated() =>
-      new PbList<PlanNode_ChildLink>();
+      PbList<PlanNode_ChildLink>();
   static PlanNode_ChildLink getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPlanNode_ChildLink();
+      _defaultInstance = _ReadonlyPlanNode_ChildLink();
     return _defaultInstance;
   }
 
@@ -75,7 +74,7 @@ class _ReadonlyPlanNode_ChildLink extends PlanNode_ChildLink
 
 class PlanNode_ShortRepresentation_SubqueriesEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('PlanNode_ShortRepresentation_SubqueriesEntry')
+      BuilderInfo('PlanNode_ShortRepresentation_SubqueriesEntry')
         ..aOS(1, 'key')
         ..a<int>(2, 'value', PbFieldType.O3)
         ..hasRequiredFields = false;
@@ -88,18 +87,17 @@ class PlanNode_ShortRepresentation_SubqueriesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PlanNode_ShortRepresentation_SubqueriesEntry clone() =>
-      new PlanNode_ShortRepresentation_SubqueriesEntry()
-        ..mergeFromMessage(this);
+      PlanNode_ShortRepresentation_SubqueriesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PlanNode_ShortRepresentation_SubqueriesEntry create() =>
-      new PlanNode_ShortRepresentation_SubqueriesEntry();
+      PlanNode_ShortRepresentation_SubqueriesEntry();
   static PbList<PlanNode_ShortRepresentation_SubqueriesEntry>
       createRepeated() =>
-          new PbList<PlanNode_ShortRepresentation_SubqueriesEntry>();
+          PbList<PlanNode_ShortRepresentation_SubqueriesEntry>();
   static PlanNode_ShortRepresentation_SubqueriesEntry getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyPlanNode_ShortRepresentation_SubqueriesEntry();
+          _ReadonlyPlanNode_ShortRepresentation_SubqueriesEntry();
     return _defaultInstance;
   }
 
@@ -131,7 +129,7 @@ class _ReadonlyPlanNode_ShortRepresentation_SubqueriesEntry
     with ReadonlyMessageMixin {}
 
 class PlanNode_ShortRepresentation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PlanNode_ShortRepresentation')
+  static final BuilderInfo _i = BuilderInfo('PlanNode_ShortRepresentation')
     ..aOS(1, 'description')
     ..pp<PlanNode_ShortRepresentation_SubqueriesEntry>(
         2,
@@ -149,15 +147,15 @@ class PlanNode_ShortRepresentation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PlanNode_ShortRepresentation clone() =>
-      new PlanNode_ShortRepresentation()..mergeFromMessage(this);
+      PlanNode_ShortRepresentation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PlanNode_ShortRepresentation create() =>
-      new PlanNode_ShortRepresentation();
+      PlanNode_ShortRepresentation();
   static PbList<PlanNode_ShortRepresentation> createRepeated() =>
-      new PbList<PlanNode_ShortRepresentation>();
+      PbList<PlanNode_ShortRepresentation>();
   static PlanNode_ShortRepresentation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPlanNode_ShortRepresentation();
+      _defaultInstance = _ReadonlyPlanNode_ShortRepresentation();
     return _defaultInstance;
   }
 
@@ -183,7 +181,7 @@ class _ReadonlyPlanNode_ShortRepresentation extends PlanNode_ShortRepresentation
     with ReadonlyMessageMixin {}
 
 class PlanNode extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PlanNode')
+  static final BuilderInfo _i = BuilderInfo('PlanNode')
     ..a<int>(1, 'index', PbFieldType.O3)
     ..e<PlanNode_Kind>(
         2,
@@ -213,12 +211,12 @@ class PlanNode extends GeneratedMessage {
       : super.fromBuffer(i, r);
   PlanNode.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PlanNode clone() => new PlanNode()..mergeFromMessage(this);
+  PlanNode clone() => PlanNode()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PlanNode create() => new PlanNode();
-  static PbList<PlanNode> createRepeated() => new PbList<PlanNode>();
+  static PlanNode create() => PlanNode();
+  static PbList<PlanNode> createRepeated() => PbList<PlanNode>();
   static PlanNode getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPlanNode();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPlanNode();
     return _defaultInstance;
   }
 
@@ -281,7 +279,7 @@ class PlanNode extends GeneratedMessage {
 class _ReadonlyPlanNode extends PlanNode with ReadonlyMessageMixin {}
 
 class QueryPlan extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryPlan')
+  static final BuilderInfo _i = BuilderInfo('QueryPlan')
     ..pp<PlanNode>(
         1, 'planNodes', PbFieldType.PM, PlanNode.$checkItem, PlanNode.create)
     ..hasRequiredFields = false;
@@ -292,12 +290,12 @@ class QueryPlan extends GeneratedMessage {
       : super.fromBuffer(i, r);
   QueryPlan.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QueryPlan clone() => new QueryPlan()..mergeFromMessage(this);
+  QueryPlan clone() => QueryPlan()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryPlan create() => new QueryPlan();
-  static PbList<QueryPlan> createRepeated() => new PbList<QueryPlan>();
+  static QueryPlan create() => QueryPlan();
+  static PbList<QueryPlan> createRepeated() => PbList<QueryPlan>();
   static QueryPlan getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQueryPlan();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyQueryPlan();
     return _defaultInstance;
   }
 

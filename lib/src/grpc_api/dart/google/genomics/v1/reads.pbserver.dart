@@ -22,9 +22,9 @@ abstract class StreamingReadServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'StreamReads':
-        return new StreamReadsRequest();
+        return StreamReadsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -34,7 +34,7 @@ abstract class StreamingReadServiceBase extends GeneratedService {
       case 'StreamReads':
         return this.streamReads(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -64,23 +64,23 @@ abstract class ReadServiceV1ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ImportReadGroupSets':
-        return new ImportReadGroupSetsRequest();
+        return ImportReadGroupSetsRequest();
       case 'ExportReadGroupSet':
-        return new ExportReadGroupSetRequest();
+        return ExportReadGroupSetRequest();
       case 'SearchReadGroupSets':
-        return new SearchReadGroupSetsRequest();
+        return SearchReadGroupSetsRequest();
       case 'UpdateReadGroupSet':
-        return new UpdateReadGroupSetRequest();
+        return UpdateReadGroupSetRequest();
       case 'DeleteReadGroupSet':
-        return new DeleteReadGroupSetRequest();
+        return DeleteReadGroupSetRequest();
       case 'GetReadGroupSet':
-        return new GetReadGroupSetRequest();
+        return GetReadGroupSetRequest();
       case 'ListCoverageBuckets':
-        return new ListCoverageBucketsRequest();
+        return ListCoverageBucketsRequest();
       case 'SearchReads':
-        return new SearchReadsRequest();
+        return SearchReadsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -104,7 +104,7 @@ abstract class ReadServiceV1ServiceBase extends GeneratedService {
       case 'SearchReads':
         return this.searchReads(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

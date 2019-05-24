@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class TimeOfDay extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TimeOfDay')
+  static final BuilderInfo _i = BuilderInfo('TimeOfDay')
     ..a<int>(1, 'hours', PbFieldType.O3)
     ..a<int>(2, 'minutes', PbFieldType.O3)
     ..a<int>(3, 'seconds', PbFieldType.O3)
@@ -22,12 +22,12 @@ class TimeOfDay extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TimeOfDay.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TimeOfDay clone() => new TimeOfDay()..mergeFromMessage(this);
+  TimeOfDay clone() => TimeOfDay()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TimeOfDay create() => new TimeOfDay();
-  static PbList<TimeOfDay> createRepeated() => new PbList<TimeOfDay>();
+  static TimeOfDay create() => TimeOfDay();
+  static PbList<TimeOfDay> createRepeated() => PbList<TimeOfDay>();
   static TimeOfDay getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTimeOfDay();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTimeOfDay();
     return _defaultInstance;
   }
 

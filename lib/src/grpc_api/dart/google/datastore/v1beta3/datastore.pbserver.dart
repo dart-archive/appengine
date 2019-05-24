@@ -27,21 +27,21 @@ abstract class DatastoreServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'Lookup':
-        return new LookupRequest();
+        return LookupRequest();
       case 'RunQuery':
-        return new RunQueryRequest();
+        return RunQueryRequest();
       case 'BeginTransaction':
-        return new BeginTransactionRequest();
+        return BeginTransactionRequest();
       case 'Commit':
-        return new CommitRequest();
+        return CommitRequest();
       case 'Rollback':
-        return new RollbackRequest();
+        return RollbackRequest();
       case 'AllocateIds':
-        return new AllocateIdsRequest();
+        return AllocateIdsRequest();
       case 'ReserveIds':
-        return new ReserveIdsRequest();
+        return ReserveIdsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -63,7 +63,7 @@ abstract class DatastoreServiceBase extends GeneratedService {
       case 'ReserveIds':
         return this.reserveIds(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

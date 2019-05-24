@@ -50,39 +50,39 @@ abstract class DeviceManagerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateDeviceRegistry':
-        return new CreateDeviceRegistryRequest();
+        return CreateDeviceRegistryRequest();
       case 'GetDeviceRegistry':
-        return new GetDeviceRegistryRequest();
+        return GetDeviceRegistryRequest();
       case 'UpdateDeviceRegistry':
-        return new UpdateDeviceRegistryRequest();
+        return UpdateDeviceRegistryRequest();
       case 'DeleteDeviceRegistry':
-        return new DeleteDeviceRegistryRequest();
+        return DeleteDeviceRegistryRequest();
       case 'ListDeviceRegistries':
-        return new ListDeviceRegistriesRequest();
+        return ListDeviceRegistriesRequest();
       case 'CreateDevice':
-        return new CreateDeviceRequest();
+        return CreateDeviceRequest();
       case 'GetDevice':
-        return new GetDeviceRequest();
+        return GetDeviceRequest();
       case 'UpdateDevice':
-        return new UpdateDeviceRequest();
+        return UpdateDeviceRequest();
       case 'DeleteDevice':
-        return new DeleteDeviceRequest();
+        return DeleteDeviceRequest();
       case 'ListDevices':
-        return new ListDevicesRequest();
+        return ListDevicesRequest();
       case 'ModifyCloudToDeviceConfig':
-        return new ModifyCloudToDeviceConfigRequest();
+        return ModifyCloudToDeviceConfigRequest();
       case 'ListDeviceConfigVersions':
-        return new ListDeviceConfigVersionsRequest();
+        return ListDeviceConfigVersionsRequest();
       case 'ListDeviceStates':
-        return new ListDeviceStatesRequest();
+        return ListDeviceStatesRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -122,7 +122,7 @@ abstract class DeviceManagerServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

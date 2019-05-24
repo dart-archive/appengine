@@ -9,16 +9,16 @@ import 'package:protobuf/protobuf.dart';
 
 class Feature extends ProtobufEnum {
   static const Feature FEATURE_UNSPECIFIED =
-      const Feature._(0, 'FEATURE_UNSPECIFIED');
-  static const Feature LABEL_DETECTION = const Feature._(1, 'LABEL_DETECTION');
+      Feature._(0, 'FEATURE_UNSPECIFIED');
+  static const Feature LABEL_DETECTION = Feature._(1, 'LABEL_DETECTION');
   static const Feature SHOT_CHANGE_DETECTION =
-      const Feature._(2, 'SHOT_CHANGE_DETECTION');
+      Feature._(2, 'SHOT_CHANGE_DETECTION');
   static const Feature EXPLICIT_CONTENT_DETECTION =
-      const Feature._(3, 'EXPLICIT_CONTENT_DETECTION');
+      Feature._(3, 'EXPLICIT_CONTENT_DETECTION');
   static const Feature SPEECH_TRANSCRIPTION =
-      const Feature._(6, 'SPEECH_TRANSCRIPTION');
+      Feature._(6, 'SPEECH_TRANSCRIPTION');
 
-  static const List<Feature> values = const <Feature>[
+  static const List<Feature> values = <Feature>[
     FEATURE_UNSPECIFIED,
     LABEL_DETECTION,
     SHOT_CHANGE_DETECTION,
@@ -37,15 +37,15 @@ class Feature extends ProtobufEnum {
 
 class LabelDetectionMode extends ProtobufEnum {
   static const LabelDetectionMode LABEL_DETECTION_MODE_UNSPECIFIED =
-      const LabelDetectionMode._(0, 'LABEL_DETECTION_MODE_UNSPECIFIED');
+      LabelDetectionMode._(0, 'LABEL_DETECTION_MODE_UNSPECIFIED');
   static const LabelDetectionMode SHOT_MODE =
-      const LabelDetectionMode._(1, 'SHOT_MODE');
+      LabelDetectionMode._(1, 'SHOT_MODE');
   static const LabelDetectionMode FRAME_MODE =
-      const LabelDetectionMode._(2, 'FRAME_MODE');
+      LabelDetectionMode._(2, 'FRAME_MODE');
   static const LabelDetectionMode SHOT_AND_FRAME_MODE =
-      const LabelDetectionMode._(3, 'SHOT_AND_FRAME_MODE');
+      LabelDetectionMode._(3, 'SHOT_AND_FRAME_MODE');
 
-  static const List<LabelDetectionMode> values = const <LabelDetectionMode>[
+  static const List<LabelDetectionMode> values = <LabelDetectionMode>[
     LABEL_DETECTION_MODE_UNSPECIFIED,
     SHOT_MODE,
     FRAME_MODE,
@@ -64,15 +64,14 @@ class LabelDetectionMode extends ProtobufEnum {
 
 class Likelihood extends ProtobufEnum {
   static const Likelihood LIKELIHOOD_UNSPECIFIED =
-      const Likelihood._(0, 'LIKELIHOOD_UNSPECIFIED');
-  static const Likelihood VERY_UNLIKELY =
-      const Likelihood._(1, 'VERY_UNLIKELY');
-  static const Likelihood UNLIKELY = const Likelihood._(2, 'UNLIKELY');
-  static const Likelihood POSSIBLE = const Likelihood._(3, 'POSSIBLE');
-  static const Likelihood LIKELY = const Likelihood._(4, 'LIKELY');
-  static const Likelihood VERY_LIKELY = const Likelihood._(5, 'VERY_LIKELY');
+      Likelihood._(0, 'LIKELIHOOD_UNSPECIFIED');
+  static const Likelihood VERY_UNLIKELY = Likelihood._(1, 'VERY_UNLIKELY');
+  static const Likelihood UNLIKELY = Likelihood._(2, 'UNLIKELY');
+  static const Likelihood POSSIBLE = Likelihood._(3, 'POSSIBLE');
+  static const Likelihood LIKELY = Likelihood._(4, 'LIKELY');
+  static const Likelihood VERY_LIKELY = Likelihood._(5, 'VERY_LIKELY');
 
-  static const List<Likelihood> values = const <Likelihood>[
+  static const List<Likelihood> values = <Likelihood>[
     LIKELIHOOD_UNSPECIFIED,
     VERY_UNLIKELY,
     UNLIKELY,

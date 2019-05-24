@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Logging_LoggingDestination extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Logging_LoggingDestination')
+  static final BuilderInfo _i = BuilderInfo('Logging_LoggingDestination')
     ..pPS(1, 'logs')
     ..aOS(3, 'monitoredResource')
     ..hasRequiredFields = false;
@@ -22,15 +22,14 @@ class Logging_LoggingDestination extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Logging_LoggingDestination clone() =>
-      new Logging_LoggingDestination()..mergeFromMessage(this);
+      Logging_LoggingDestination()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Logging_LoggingDestination create() =>
-      new Logging_LoggingDestination();
+  static Logging_LoggingDestination create() => Logging_LoggingDestination();
   static PbList<Logging_LoggingDestination> createRepeated() =>
-      new PbList<Logging_LoggingDestination>();
+      PbList<Logging_LoggingDestination>();
   static Logging_LoggingDestination getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLogging_LoggingDestination();
+      _defaultInstance = _ReadonlyLogging_LoggingDestination();
     return _defaultInstance;
   }
 
@@ -55,7 +54,7 @@ class _ReadonlyLogging_LoggingDestination extends Logging_LoggingDestination
     with ReadonlyMessageMixin {}
 
 class Logging extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Logging')
+  static final BuilderInfo _i = BuilderInfo('Logging')
     ..pp<Logging_LoggingDestination>(
         1,
         'producerDestinations',
@@ -76,12 +75,12 @@ class Logging extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Logging.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Logging clone() => new Logging()..mergeFromMessage(this);
+  Logging clone() => Logging()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Logging create() => new Logging();
-  static PbList<Logging> createRepeated() => new PbList<Logging>();
+  static Logging create() => Logging();
+  static PbList<Logging> createRepeated() => PbList<Logging>();
   static Logging getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLogging();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLogging();
     return _defaultInstance;
   }
 

@@ -21,11 +21,11 @@ abstract class ProfilerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateProfile':
-        return new CreateProfileRequest();
+        return CreateProfileRequest();
       case 'UpdateProfile':
-        return new UpdateProfileRequest();
+        return UpdateProfileRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -37,7 +37,7 @@ abstract class ProfilerServiceBase extends GeneratedService {
       case 'UpdateProfile':
         return this.updateProfile(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

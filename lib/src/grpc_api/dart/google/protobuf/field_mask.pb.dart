@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class FieldMask extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FieldMask')
+  static final BuilderInfo _i = BuilderInfo('FieldMask')
     ..pPS(1, 'paths')
     ..hasRequiredFields = false;
 
@@ -19,12 +19,12 @@ class FieldMask extends GeneratedMessage {
       : super.fromBuffer(i, r);
   FieldMask.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FieldMask clone() => new FieldMask()..mergeFromMessage(this);
+  FieldMask clone() => FieldMask()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FieldMask create() => new FieldMask();
-  static PbList<FieldMask> createRepeated() => new PbList<FieldMask>();
+  static FieldMask create() => FieldMask();
+  static PbList<FieldMask> createRepeated() => PbList<FieldMask>();
   static FieldMask getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFieldMask();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFieldMask();
     return _defaultInstance;
   }
 

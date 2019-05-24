@@ -9,22 +9,22 @@ import 'package:protobuf/protobuf.dart';
 
 class DataSourceParameter_Type extends ProtobufEnum {
   static const DataSourceParameter_Type TYPE_UNSPECIFIED =
-      const DataSourceParameter_Type._(0, 'TYPE_UNSPECIFIED');
+      DataSourceParameter_Type._(0, 'TYPE_UNSPECIFIED');
   static const DataSourceParameter_Type STRING =
-      const DataSourceParameter_Type._(1, 'STRING');
+      DataSourceParameter_Type._(1, 'STRING');
   static const DataSourceParameter_Type INTEGER =
-      const DataSourceParameter_Type._(2, 'INTEGER');
+      DataSourceParameter_Type._(2, 'INTEGER');
   static const DataSourceParameter_Type DOUBLE =
-      const DataSourceParameter_Type._(3, 'DOUBLE');
+      DataSourceParameter_Type._(3, 'DOUBLE');
   static const DataSourceParameter_Type BOOLEAN =
-      const DataSourceParameter_Type._(4, 'BOOLEAN');
+      DataSourceParameter_Type._(4, 'BOOLEAN');
   static const DataSourceParameter_Type RECORD =
-      const DataSourceParameter_Type._(5, 'RECORD');
+      DataSourceParameter_Type._(5, 'RECORD');
   static const DataSourceParameter_Type PLUS_PAGE =
-      const DataSourceParameter_Type._(6, 'PLUS_PAGE');
+      DataSourceParameter_Type._(6, 'PLUS_PAGE');
 
   static const List<DataSourceParameter_Type> values =
-      const <DataSourceParameter_Type>[
+      <DataSourceParameter_Type>[
     TYPE_UNSPECIFIED,
     STRING,
     INTEGER,
@@ -47,14 +47,14 @@ class DataSourceParameter_Type extends ProtobufEnum {
 
 class DataSource_AuthorizationType extends ProtobufEnum {
   static const DataSource_AuthorizationType AUTHORIZATION_TYPE_UNSPECIFIED =
-      const DataSource_AuthorizationType._(0, 'AUTHORIZATION_TYPE_UNSPECIFIED');
+      DataSource_AuthorizationType._(0, 'AUTHORIZATION_TYPE_UNSPECIFIED');
   static const DataSource_AuthorizationType AUTHORIZATION_CODE =
-      const DataSource_AuthorizationType._(1, 'AUTHORIZATION_CODE');
+      DataSource_AuthorizationType._(1, 'AUTHORIZATION_CODE');
   static const DataSource_AuthorizationType GOOGLE_PLUS_AUTHORIZATION_CODE =
-      const DataSource_AuthorizationType._(2, 'GOOGLE_PLUS_AUTHORIZATION_CODE');
+      DataSource_AuthorizationType._(2, 'GOOGLE_PLUS_AUTHORIZATION_CODE');
 
   static const List<DataSource_AuthorizationType> values =
-      const <DataSource_AuthorizationType>[
+      <DataSource_AuthorizationType>[
     AUTHORIZATION_TYPE_UNSPECIFIED,
     AUTHORIZATION_CODE,
     GOOGLE_PLUS_AUTHORIZATION_CODE,
@@ -73,14 +73,14 @@ class DataSource_AuthorizationType extends ProtobufEnum {
 
 class DataSource_DataRefreshType extends ProtobufEnum {
   static const DataSource_DataRefreshType DATA_REFRESH_TYPE_UNSPECIFIED =
-      const DataSource_DataRefreshType._(0, 'DATA_REFRESH_TYPE_UNSPECIFIED');
+      DataSource_DataRefreshType._(0, 'DATA_REFRESH_TYPE_UNSPECIFIED');
   static const DataSource_DataRefreshType SLIDING_WINDOW =
-      const DataSource_DataRefreshType._(1, 'SLIDING_WINDOW');
+      DataSource_DataRefreshType._(1, 'SLIDING_WINDOW');
   static const DataSource_DataRefreshType CUSTOM_SLIDING_WINDOW =
-      const DataSource_DataRefreshType._(2, 'CUSTOM_SLIDING_WINDOW');
+      DataSource_DataRefreshType._(2, 'CUSTOM_SLIDING_WINDOW');
 
   static const List<DataSource_DataRefreshType> values =
-      const <DataSource_DataRefreshType>[
+      <DataSource_DataRefreshType>[
     DATA_REFRESH_TYPE_UNSPECIFIED,
     SLIDING_WINDOW,
     CUSTOM_SLIDING_WINDOW,
@@ -99,12 +99,12 @@ class DataSource_DataRefreshType extends ProtobufEnum {
 
 class ListTransferRunsRequest_RunAttempt extends ProtobufEnum {
   static const ListTransferRunsRequest_RunAttempt RUN_ATTEMPT_UNSPECIFIED =
-      const ListTransferRunsRequest_RunAttempt._(0, 'RUN_ATTEMPT_UNSPECIFIED');
+      ListTransferRunsRequest_RunAttempt._(0, 'RUN_ATTEMPT_UNSPECIFIED');
   static const ListTransferRunsRequest_RunAttempt LATEST =
-      const ListTransferRunsRequest_RunAttempt._(1, 'LATEST');
+      ListTransferRunsRequest_RunAttempt._(1, 'LATEST');
 
   static const List<ListTransferRunsRequest_RunAttempt> values =
-      const <ListTransferRunsRequest_RunAttempt>[
+      <ListTransferRunsRequest_RunAttempt>[
     RUN_ATTEMPT_UNSPECIFIED,
     LATEST,
   ];

@@ -16,7 +16,7 @@ import 'operation_metadata.pbenum.dart';
 export 'operation_metadata.pbenum.dart';
 
 class OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadata')
+  static final BuilderInfo _i = BuilderInfo('OperationMetadata')
     ..a<$google$protobuf.Timestamp>(
         1,
         'createTime',
@@ -55,14 +55,14 @@ class OperationMetadata extends GeneratedMessage {
   OperationMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OperationMetadata clone() => new OperationMetadata()..mergeFromMessage(this);
+  OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OperationMetadata create() => new OperationMetadata();
+  static OperationMetadata create() => OperationMetadata();
   static PbList<OperationMetadata> createRepeated() =>
-      new PbList<OperationMetadata>();
+      PbList<OperationMetadata>();
   static OperationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadata();
+      _defaultInstance = _ReadonlyOperationMetadata();
     return _defaultInstance;
   }
 

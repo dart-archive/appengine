@@ -8,12 +8,10 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Operation_Importance extends ProtobufEnum {
-  static const Operation_Importance LOW =
-      const Operation_Importance._(0, 'LOW');
-  static const Operation_Importance HIGH =
-      const Operation_Importance._(1, 'HIGH');
+  static const Operation_Importance LOW = Operation_Importance._(0, 'LOW');
+  static const Operation_Importance HIGH = Operation_Importance._(1, 'HIGH');
 
-  static const List<Operation_Importance> values = const <Operation_Importance>[
+  static const List<Operation_Importance> values = <Operation_Importance>[
     LOW,
     HIGH,
   ];

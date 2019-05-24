@@ -15,7 +15,7 @@ import 'metric.pbenum.dart';
 export 'metric.pbenum.dart';
 
 class MetricDescriptor extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricDescriptor')
+  static final BuilderInfo _i = BuilderInfo('MetricDescriptor')
     ..aOS(1, 'name')
     ..pp<LabelDescriptor>(2, 'labels', PbFieldType.PM,
         LabelDescriptor.$checkItem, LabelDescriptor.create)
@@ -46,14 +46,14 @@ class MetricDescriptor extends GeneratedMessage {
   MetricDescriptor.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MetricDescriptor clone() => new MetricDescriptor()..mergeFromMessage(this);
+  MetricDescriptor clone() => MetricDescriptor()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MetricDescriptor create() => new MetricDescriptor();
+  static MetricDescriptor create() => MetricDescriptor();
   static PbList<MetricDescriptor> createRepeated() =>
-      new PbList<MetricDescriptor>();
+      PbList<MetricDescriptor>();
   static MetricDescriptor getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMetricDescriptor();
+      _defaultInstance = _ReadonlyMetricDescriptor();
     return _defaultInstance;
   }
 
@@ -125,7 +125,7 @@ class _ReadonlyMetricDescriptor extends MetricDescriptor
     with ReadonlyMessageMixin {}
 
 class Metric_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Metric_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Metric_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -137,15 +137,14 @@ class Metric_LabelsEntry extends GeneratedMessage {
   Metric_LabelsEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Metric_LabelsEntry clone() =>
-      new Metric_LabelsEntry()..mergeFromMessage(this);
+  Metric_LabelsEntry clone() => Metric_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Metric_LabelsEntry create() => new Metric_LabelsEntry();
+  static Metric_LabelsEntry create() => Metric_LabelsEntry();
   static PbList<Metric_LabelsEntry> createRepeated() =>
-      new PbList<Metric_LabelsEntry>();
+      PbList<Metric_LabelsEntry>();
   static Metric_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMetric_LabelsEntry();
+      _defaultInstance = _ReadonlyMetric_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -175,7 +174,7 @@ class _ReadonlyMetric_LabelsEntry extends Metric_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Metric extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Metric')
+  static final BuilderInfo _i = BuilderInfo('Metric')
     ..pp<Metric_LabelsEntry>(2, 'labels', PbFieldType.PM,
         Metric_LabelsEntry.$checkItem, Metric_LabelsEntry.create)
     ..aOS(3, 'type')
@@ -187,12 +186,12 @@ class Metric extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Metric.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Metric clone() => new Metric()..mergeFromMessage(this);
+  Metric clone() => Metric()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Metric create() => new Metric();
-  static PbList<Metric> createRepeated() => new PbList<Metric>();
+  static Metric create() => Metric();
+  static PbList<Metric> createRepeated() => PbList<Metric>();
   static Metric getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMetric();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMetric();
     return _defaultInstance;
   }
 

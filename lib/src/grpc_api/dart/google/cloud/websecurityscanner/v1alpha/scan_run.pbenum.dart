@@ -9,16 +9,15 @@ import 'package:protobuf/protobuf.dart';
 
 class ScanRun_ExecutionState extends ProtobufEnum {
   static const ScanRun_ExecutionState EXECUTION_STATE_UNSPECIFIED =
-      const ScanRun_ExecutionState._(0, 'EXECUTION_STATE_UNSPECIFIED');
+      ScanRun_ExecutionState._(0, 'EXECUTION_STATE_UNSPECIFIED');
   static const ScanRun_ExecutionState QUEUED =
-      const ScanRun_ExecutionState._(1, 'QUEUED');
+      ScanRun_ExecutionState._(1, 'QUEUED');
   static const ScanRun_ExecutionState SCANNING =
-      const ScanRun_ExecutionState._(2, 'SCANNING');
+      ScanRun_ExecutionState._(2, 'SCANNING');
   static const ScanRun_ExecutionState FINISHED =
-      const ScanRun_ExecutionState._(3, 'FINISHED');
+      ScanRun_ExecutionState._(3, 'FINISHED');
 
-  static const List<ScanRun_ExecutionState> values =
-      const <ScanRun_ExecutionState>[
+  static const List<ScanRun_ExecutionState> values = <ScanRun_ExecutionState>[
     EXECUTION_STATE_UNSPECIFIED,
     QUEUED,
     SCANNING,
@@ -38,15 +37,13 @@ class ScanRun_ExecutionState extends ProtobufEnum {
 
 class ScanRun_ResultState extends ProtobufEnum {
   static const ScanRun_ResultState RESULT_STATE_UNSPECIFIED =
-      const ScanRun_ResultState._(0, 'RESULT_STATE_UNSPECIFIED');
+      ScanRun_ResultState._(0, 'RESULT_STATE_UNSPECIFIED');
   static const ScanRun_ResultState SUCCESS =
-      const ScanRun_ResultState._(1, 'SUCCESS');
-  static const ScanRun_ResultState ERROR =
-      const ScanRun_ResultState._(2, 'ERROR');
-  static const ScanRun_ResultState KILLED =
-      const ScanRun_ResultState._(3, 'KILLED');
+      ScanRun_ResultState._(1, 'SUCCESS');
+  static const ScanRun_ResultState ERROR = ScanRun_ResultState._(2, 'ERROR');
+  static const ScanRun_ResultState KILLED = ScanRun_ResultState._(3, 'KILLED');
 
-  static const List<ScanRun_ResultState> values = const <ScanRun_ResultState>[
+  static const List<ScanRun_ResultState> values = <ScanRun_ResultState>[
     RESULT_STATE_UNSPECIFIED,
     SUCCESS,
     ERROR,

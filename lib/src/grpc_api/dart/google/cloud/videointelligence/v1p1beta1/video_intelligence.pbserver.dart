@@ -20,9 +20,9 @@ abstract class VideoIntelligenceServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'AnnotateVideo':
-        return new AnnotateVideoRequest();
+        return AnnotateVideoRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -32,7 +32,7 @@ abstract class VideoIntelligenceServiceBase extends GeneratedService {
       case 'AnnotateVideo':
         return this.annotateVideo(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

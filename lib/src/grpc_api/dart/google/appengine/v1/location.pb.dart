@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class LocationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LocationMetadata')
+  static final BuilderInfo _i = BuilderInfo('LocationMetadata')
     ..aOB(2, 'standardEnvironmentAvailable')
     ..aOB(4, 'flexibleEnvironmentAvailable')
     ..hasRequiredFields = false;
@@ -21,14 +21,14 @@ class LocationMetadata extends GeneratedMessage {
   LocationMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LocationMetadata clone() => new LocationMetadata()..mergeFromMessage(this);
+  LocationMetadata clone() => LocationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LocationMetadata create() => new LocationMetadata();
+  static LocationMetadata create() => LocationMetadata();
   static PbList<LocationMetadata> createRepeated() =>
-      new PbList<LocationMetadata>();
+      PbList<LocationMetadata>();
   static LocationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocationMetadata();
+      _defaultInstance = _ReadonlyLocationMetadata();
     return _defaultInstance;
   }
 

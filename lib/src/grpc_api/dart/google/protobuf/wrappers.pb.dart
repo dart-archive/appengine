@@ -10,7 +10,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class DoubleValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DoubleValue')
+  static final BuilderInfo _i = BuilderInfo('DoubleValue')
     ..a<double>(1, 'value', PbFieldType.OD)
     ..hasRequiredFields = false;
 
@@ -21,12 +21,12 @@ class DoubleValue extends GeneratedMessage {
   DoubleValue.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DoubleValue clone() => new DoubleValue()..mergeFromMessage(this);
+  DoubleValue clone() => DoubleValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DoubleValue create() => new DoubleValue();
-  static PbList<DoubleValue> createRepeated() => new PbList<DoubleValue>();
+  static DoubleValue create() => DoubleValue();
+  static PbList<DoubleValue> createRepeated() => PbList<DoubleValue>();
   static DoubleValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDoubleValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDoubleValue();
     return _defaultInstance;
   }
 
@@ -47,7 +47,7 @@ class DoubleValue extends GeneratedMessage {
 class _ReadonlyDoubleValue extends DoubleValue with ReadonlyMessageMixin {}
 
 class FloatValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FloatValue')
+  static final BuilderInfo _i = BuilderInfo('FloatValue')
     ..a<double>(1, 'value', PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -57,12 +57,12 @@ class FloatValue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   FloatValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FloatValue clone() => new FloatValue()..mergeFromMessage(this);
+  FloatValue clone() => FloatValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FloatValue create() => new FloatValue();
-  static PbList<FloatValue> createRepeated() => new PbList<FloatValue>();
+  static FloatValue create() => FloatValue();
+  static PbList<FloatValue> createRepeated() => PbList<FloatValue>();
   static FloatValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFloatValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFloatValue();
     return _defaultInstance;
   }
 
@@ -83,7 +83,7 @@ class FloatValue extends GeneratedMessage {
 class _ReadonlyFloatValue extends FloatValue with ReadonlyMessageMixin {}
 
 class Int64Value extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Int64Value')
+  static final BuilderInfo _i = BuilderInfo('Int64Value')
     ..aInt64(1, 'value')
     ..hasRequiredFields = false;
 
@@ -93,12 +93,12 @@ class Int64Value extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Int64Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Int64Value clone() => new Int64Value()..mergeFromMessage(this);
+  Int64Value clone() => Int64Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Int64Value create() => new Int64Value();
-  static PbList<Int64Value> createRepeated() => new PbList<Int64Value>();
+  static Int64Value create() => Int64Value();
+  static PbList<Int64Value> createRepeated() => PbList<Int64Value>();
   static Int64Value getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInt64Value();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyInt64Value();
     return _defaultInstance;
   }
 
@@ -119,7 +119,7 @@ class Int64Value extends GeneratedMessage {
 class _ReadonlyInt64Value extends Int64Value with ReadonlyMessageMixin {}
 
 class UInt64Value extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UInt64Value')
+  static final BuilderInfo _i = BuilderInfo('UInt64Value')
     ..a<Int64>(1, 'value', PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false;
 
@@ -130,12 +130,12 @@ class UInt64Value extends GeneratedMessage {
   UInt64Value.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UInt64Value clone() => new UInt64Value()..mergeFromMessage(this);
+  UInt64Value clone() => UInt64Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UInt64Value create() => new UInt64Value();
-  static PbList<UInt64Value> createRepeated() => new PbList<UInt64Value>();
+  static UInt64Value create() => UInt64Value();
+  static PbList<UInt64Value> createRepeated() => PbList<UInt64Value>();
   static UInt64Value getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUInt64Value();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyUInt64Value();
     return _defaultInstance;
   }
 
@@ -156,7 +156,7 @@ class UInt64Value extends GeneratedMessage {
 class _ReadonlyUInt64Value extends UInt64Value with ReadonlyMessageMixin {}
 
 class Int32Value extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Int32Value')
+  static final BuilderInfo _i = BuilderInfo('Int32Value')
     ..a<int>(1, 'value', PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -166,12 +166,12 @@ class Int32Value extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Int32Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Int32Value clone() => new Int32Value()..mergeFromMessage(this);
+  Int32Value clone() => Int32Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Int32Value create() => new Int32Value();
-  static PbList<Int32Value> createRepeated() => new PbList<Int32Value>();
+  static Int32Value create() => Int32Value();
+  static PbList<Int32Value> createRepeated() => PbList<Int32Value>();
   static Int32Value getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInt32Value();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyInt32Value();
     return _defaultInstance;
   }
 
@@ -192,7 +192,7 @@ class Int32Value extends GeneratedMessage {
 class _ReadonlyInt32Value extends Int32Value with ReadonlyMessageMixin {}
 
 class UInt32Value extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UInt32Value')
+  static final BuilderInfo _i = BuilderInfo('UInt32Value')
     ..a<int>(1, 'value', PbFieldType.OU3)
     ..hasRequiredFields = false;
 
@@ -203,12 +203,12 @@ class UInt32Value extends GeneratedMessage {
   UInt32Value.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UInt32Value clone() => new UInt32Value()..mergeFromMessage(this);
+  UInt32Value clone() => UInt32Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UInt32Value create() => new UInt32Value();
-  static PbList<UInt32Value> createRepeated() => new PbList<UInt32Value>();
+  static UInt32Value create() => UInt32Value();
+  static PbList<UInt32Value> createRepeated() => PbList<UInt32Value>();
   static UInt32Value getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUInt32Value();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyUInt32Value();
     return _defaultInstance;
   }
 
@@ -229,7 +229,7 @@ class UInt32Value extends GeneratedMessage {
 class _ReadonlyUInt32Value extends UInt32Value with ReadonlyMessageMixin {}
 
 class BoolValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BoolValue')
+  static final BuilderInfo _i = BuilderInfo('BoolValue')
     ..aOB(1, 'value')
     ..hasRequiredFields = false;
 
@@ -239,12 +239,12 @@ class BoolValue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   BoolValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BoolValue clone() => new BoolValue()..mergeFromMessage(this);
+  BoolValue clone() => BoolValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BoolValue create() => new BoolValue();
-  static PbList<BoolValue> createRepeated() => new PbList<BoolValue>();
+  static BoolValue create() => BoolValue();
+  static PbList<BoolValue> createRepeated() => PbList<BoolValue>();
   static BoolValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBoolValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBoolValue();
     return _defaultInstance;
   }
 
@@ -265,7 +265,7 @@ class BoolValue extends GeneratedMessage {
 class _ReadonlyBoolValue extends BoolValue with ReadonlyMessageMixin {}
 
 class StringValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StringValue')
+  static final BuilderInfo _i = BuilderInfo('StringValue')
     ..aOS(1, 'value')
     ..hasRequiredFields = false;
 
@@ -276,12 +276,12 @@ class StringValue extends GeneratedMessage {
   StringValue.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StringValue clone() => new StringValue()..mergeFromMessage(this);
+  StringValue clone() => StringValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StringValue create() => new StringValue();
-  static PbList<StringValue> createRepeated() => new PbList<StringValue>();
+  static StringValue create() => StringValue();
+  static PbList<StringValue> createRepeated() => PbList<StringValue>();
   static StringValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyStringValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStringValue();
     return _defaultInstance;
   }
 
@@ -302,7 +302,7 @@ class StringValue extends GeneratedMessage {
 class _ReadonlyStringValue extends StringValue with ReadonlyMessageMixin {}
 
 class BytesValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BytesValue')
+  static final BuilderInfo _i = BuilderInfo('BytesValue')
     ..a<List<int>>(1, 'value', PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -312,12 +312,12 @@ class BytesValue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   BytesValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BytesValue clone() => new BytesValue()..mergeFromMessage(this);
+  BytesValue clone() => BytesValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BytesValue create() => new BytesValue();
-  static PbList<BytesValue> createRepeated() => new PbList<BytesValue>();
+  static BytesValue create() => BytesValue();
+  static PbList<BytesValue> createRepeated() => PbList<BytesValue>();
   static BytesValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBytesValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBytesValue();
     return _defaultInstance;
   }
 

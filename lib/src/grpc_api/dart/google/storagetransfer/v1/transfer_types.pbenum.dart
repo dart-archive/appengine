@@ -9,15 +9,13 @@ import 'package:protobuf/protobuf.dart';
 
 class TransferJob_Status extends ProtobufEnum {
   static const TransferJob_Status STATUS_UNSPECIFIED =
-      const TransferJob_Status._(0, 'STATUS_UNSPECIFIED');
-  static const TransferJob_Status ENABLED =
-      const TransferJob_Status._(1, 'ENABLED');
+      TransferJob_Status._(0, 'STATUS_UNSPECIFIED');
+  static const TransferJob_Status ENABLED = TransferJob_Status._(1, 'ENABLED');
   static const TransferJob_Status DISABLED =
-      const TransferJob_Status._(2, 'DISABLED');
-  static const TransferJob_Status DELETED =
-      const TransferJob_Status._(3, 'DELETED');
+      TransferJob_Status._(2, 'DISABLED');
+  static const TransferJob_Status DELETED = TransferJob_Status._(3, 'DELETED');
 
-  static const List<TransferJob_Status> values = const <TransferJob_Status>[
+  static const List<TransferJob_Status> values = <TransferJob_Status>[
     STATUS_UNSPECIFIED,
     ENABLED,
     DISABLED,
@@ -36,20 +34,20 @@ class TransferJob_Status extends ProtobufEnum {
 
 class TransferOperation_Status extends ProtobufEnum {
   static const TransferOperation_Status STATUS_UNSPECIFIED =
-      const TransferOperation_Status._(0, 'STATUS_UNSPECIFIED');
+      TransferOperation_Status._(0, 'STATUS_UNSPECIFIED');
   static const TransferOperation_Status IN_PROGRESS =
-      const TransferOperation_Status._(1, 'IN_PROGRESS');
+      TransferOperation_Status._(1, 'IN_PROGRESS');
   static const TransferOperation_Status PAUSED =
-      const TransferOperation_Status._(2, 'PAUSED');
+      TransferOperation_Status._(2, 'PAUSED');
   static const TransferOperation_Status SUCCESS =
-      const TransferOperation_Status._(3, 'SUCCESS');
+      TransferOperation_Status._(3, 'SUCCESS');
   static const TransferOperation_Status FAILED =
-      const TransferOperation_Status._(4, 'FAILED');
+      TransferOperation_Status._(4, 'FAILED');
   static const TransferOperation_Status ABORTED =
-      const TransferOperation_Status._(5, 'ABORTED');
+      TransferOperation_Status._(5, 'ABORTED');
 
   static const List<TransferOperation_Status> values =
-      const <TransferOperation_Status>[
+      <TransferOperation_Status>[
     STATUS_UNSPECIFIED,
     IN_PROGRESS,
     PAUSED,

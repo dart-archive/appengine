@@ -20,7 +20,7 @@ import 'workflow_templates.pbenum.dart';
 export 'workflow_templates.pbenum.dart';
 
 class WorkflowTemplate_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WorkflowTemplate_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('WorkflowTemplate_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -33,15 +33,15 @@ class WorkflowTemplate_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   WorkflowTemplate_LabelsEntry clone() =>
-      new WorkflowTemplate_LabelsEntry()..mergeFromMessage(this);
+      WorkflowTemplate_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static WorkflowTemplate_LabelsEntry create() =>
-      new WorkflowTemplate_LabelsEntry();
+      WorkflowTemplate_LabelsEntry();
   static PbList<WorkflowTemplate_LabelsEntry> createRepeated() =>
-      new PbList<WorkflowTemplate_LabelsEntry>();
+      PbList<WorkflowTemplate_LabelsEntry>();
   static WorkflowTemplate_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWorkflowTemplate_LabelsEntry();
+      _defaultInstance = _ReadonlyWorkflowTemplate_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -72,7 +72,7 @@ class _ReadonlyWorkflowTemplate_LabelsEntry extends WorkflowTemplate_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class WorkflowTemplate extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WorkflowTemplate')
+  static final BuilderInfo _i = BuilderInfo('WorkflowTemplate')
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..a<int>(3, 'version', PbFieldType.O3)
@@ -107,14 +107,14 @@ class WorkflowTemplate extends GeneratedMessage {
   WorkflowTemplate.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WorkflowTemplate clone() => new WorkflowTemplate()..mergeFromMessage(this);
+  WorkflowTemplate clone() => WorkflowTemplate()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WorkflowTemplate create() => new WorkflowTemplate();
+  static WorkflowTemplate create() => WorkflowTemplate();
   static PbList<WorkflowTemplate> createRepeated() =>
-      new PbList<WorkflowTemplate>();
+      PbList<WorkflowTemplate>();
   static WorkflowTemplate getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWorkflowTemplate();
+      _defaultInstance = _ReadonlyWorkflowTemplate();
     return _defaultInstance;
   }
 
@@ -180,7 +180,7 @@ class _ReadonlyWorkflowTemplate extends WorkflowTemplate
     with ReadonlyMessageMixin {}
 
 class WorkflowTemplatePlacement extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WorkflowTemplatePlacement')
+  static final BuilderInfo _i = BuilderInfo('WorkflowTemplatePlacement')
     ..a<ManagedCluster>(1, 'managedCluster', PbFieldType.OM,
         ManagedCluster.getDefault, ManagedCluster.create)
     ..a<ClusterSelector>(2, 'clusterSelector', PbFieldType.OM,
@@ -195,14 +195,14 @@ class WorkflowTemplatePlacement extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   WorkflowTemplatePlacement clone() =>
-      new WorkflowTemplatePlacement()..mergeFromMessage(this);
+      WorkflowTemplatePlacement()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WorkflowTemplatePlacement create() => new WorkflowTemplatePlacement();
+  static WorkflowTemplatePlacement create() => WorkflowTemplatePlacement();
   static PbList<WorkflowTemplatePlacement> createRepeated() =>
-      new PbList<WorkflowTemplatePlacement>();
+      PbList<WorkflowTemplatePlacement>();
   static WorkflowTemplatePlacement getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWorkflowTemplatePlacement();
+      _defaultInstance = _ReadonlyWorkflowTemplatePlacement();
     return _defaultInstance;
   }
 
@@ -233,7 +233,7 @@ class _ReadonlyWorkflowTemplatePlacement extends WorkflowTemplatePlacement
     with ReadonlyMessageMixin {}
 
 class ManagedCluster_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ManagedCluster_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('ManagedCluster_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -246,15 +246,14 @@ class ManagedCluster_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ManagedCluster_LabelsEntry clone() =>
-      new ManagedCluster_LabelsEntry()..mergeFromMessage(this);
+      ManagedCluster_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ManagedCluster_LabelsEntry create() =>
-      new ManagedCluster_LabelsEntry();
+  static ManagedCluster_LabelsEntry create() => ManagedCluster_LabelsEntry();
   static PbList<ManagedCluster_LabelsEntry> createRepeated() =>
-      new PbList<ManagedCluster_LabelsEntry>();
+      PbList<ManagedCluster_LabelsEntry>();
   static ManagedCluster_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyManagedCluster_LabelsEntry();
+      _defaultInstance = _ReadonlyManagedCluster_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -285,7 +284,7 @@ class _ReadonlyManagedCluster_LabelsEntry extends ManagedCluster_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class ManagedCluster extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ManagedCluster')
+  static final BuilderInfo _i = BuilderInfo('ManagedCluster')
     ..aOS(2, 'clusterName')
     ..a<ClusterConfig>(3, 'config', PbFieldType.OM, ClusterConfig.getDefault,
         ClusterConfig.create)
@@ -304,14 +303,12 @@ class ManagedCluster extends GeneratedMessage {
   ManagedCluster.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ManagedCluster clone() => new ManagedCluster()..mergeFromMessage(this);
+  ManagedCluster clone() => ManagedCluster()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ManagedCluster create() => new ManagedCluster();
-  static PbList<ManagedCluster> createRepeated() =>
-      new PbList<ManagedCluster>();
+  static ManagedCluster create() => ManagedCluster();
+  static PbList<ManagedCluster> createRepeated() => PbList<ManagedCluster>();
   static ManagedCluster getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyManagedCluster();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyManagedCluster();
     return _defaultInstance;
   }
 
@@ -344,7 +341,7 @@ class _ReadonlyManagedCluster extends ManagedCluster with ReadonlyMessageMixin {
 
 class ClusterSelector_ClusterLabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ClusterSelector_ClusterLabelsEntry')
+      BuilderInfo('ClusterSelector_ClusterLabelsEntry')
         ..aOS(1, 'key')
         ..aOS(2, 'value')
         ..hasRequiredFields = false;
@@ -357,15 +354,15 @@ class ClusterSelector_ClusterLabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ClusterSelector_ClusterLabelsEntry clone() =>
-      new ClusterSelector_ClusterLabelsEntry()..mergeFromMessage(this);
+      ClusterSelector_ClusterLabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ClusterSelector_ClusterLabelsEntry create() =>
-      new ClusterSelector_ClusterLabelsEntry();
+      ClusterSelector_ClusterLabelsEntry();
   static PbList<ClusterSelector_ClusterLabelsEntry> createRepeated() =>
-      new PbList<ClusterSelector_ClusterLabelsEntry>();
+      PbList<ClusterSelector_ClusterLabelsEntry>();
   static ClusterSelector_ClusterLabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterSelector_ClusterLabelsEntry();
+      _defaultInstance = _ReadonlyClusterSelector_ClusterLabelsEntry();
     return _defaultInstance;
   }
 
@@ -396,7 +393,7 @@ class _ReadonlyClusterSelector_ClusterLabelsEntry
     extends ClusterSelector_ClusterLabelsEntry with ReadonlyMessageMixin {}
 
 class ClusterSelector extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClusterSelector')
+  static final BuilderInfo _i = BuilderInfo('ClusterSelector')
     ..aOS(1, 'zone')
     ..pp<ClusterSelector_ClusterLabelsEntry>(
         2,
@@ -413,14 +410,12 @@ class ClusterSelector extends GeneratedMessage {
   ClusterSelector.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ClusterSelector clone() => new ClusterSelector()..mergeFromMessage(this);
+  ClusterSelector clone() => ClusterSelector()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ClusterSelector create() => new ClusterSelector();
-  static PbList<ClusterSelector> createRepeated() =>
-      new PbList<ClusterSelector>();
+  static ClusterSelector create() => ClusterSelector();
+  static PbList<ClusterSelector> createRepeated() => PbList<ClusterSelector>();
   static ClusterSelector getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterSelector();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyClusterSelector();
     return _defaultInstance;
   }
 
@@ -444,7 +439,7 @@ class _ReadonlyClusterSelector extends ClusterSelector
     with ReadonlyMessageMixin {}
 
 class OrderedJob_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OrderedJob_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('OrderedJob_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -457,14 +452,14 @@ class OrderedJob_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   OrderedJob_LabelsEntry clone() =>
-      new OrderedJob_LabelsEntry()..mergeFromMessage(this);
+      OrderedJob_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OrderedJob_LabelsEntry create() => new OrderedJob_LabelsEntry();
+  static OrderedJob_LabelsEntry create() => OrderedJob_LabelsEntry();
   static PbList<OrderedJob_LabelsEntry> createRepeated() =>
-      new PbList<OrderedJob_LabelsEntry>();
+      PbList<OrderedJob_LabelsEntry>();
   static OrderedJob_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOrderedJob_LabelsEntry();
+      _defaultInstance = _ReadonlyOrderedJob_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -495,7 +490,7 @@ class _ReadonlyOrderedJob_LabelsEntry extends OrderedJob_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class OrderedJob extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OrderedJob')
+  static final BuilderInfo _i = BuilderInfo('OrderedJob')
     ..aOS(1, 'stepId')
     ..a<HadoopJob>(
         2, 'hadoopJob', PbFieldType.OM, HadoopJob.getDefault, HadoopJob.create)
@@ -521,12 +516,12 @@ class OrderedJob extends GeneratedMessage {
       : super.fromBuffer(i, r);
   OrderedJob.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OrderedJob clone() => new OrderedJob()..mergeFromMessage(this);
+  OrderedJob clone() => OrderedJob()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OrderedJob create() => new OrderedJob();
-  static PbList<OrderedJob> createRepeated() => new PbList<OrderedJob>();
+  static OrderedJob create() => OrderedJob();
+  static PbList<OrderedJob> createRepeated() => PbList<OrderedJob>();
   static OrderedJob getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyOrderedJob();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOrderedJob();
     return _defaultInstance;
   }
 
@@ -607,7 +602,7 @@ class OrderedJob extends GeneratedMessage {
 class _ReadonlyOrderedJob extends OrderedJob with ReadonlyMessageMixin {}
 
 class WorkflowMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WorkflowMetadata')
+  static final BuilderInfo _i = BuilderInfo('WorkflowMetadata')
     ..aOS(1, 'template')
     ..a<int>(2, 'version', PbFieldType.O3)
     ..a<ClusterOperation>(3, 'createCluster', PbFieldType.OM,
@@ -633,14 +628,14 @@ class WorkflowMetadata extends GeneratedMessage {
   WorkflowMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WorkflowMetadata clone() => new WorkflowMetadata()..mergeFromMessage(this);
+  WorkflowMetadata clone() => WorkflowMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WorkflowMetadata create() => new WorkflowMetadata();
+  static WorkflowMetadata create() => WorkflowMetadata();
   static PbList<WorkflowMetadata> createRepeated() =>
-      new PbList<WorkflowMetadata>();
+      PbList<WorkflowMetadata>();
   static WorkflowMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWorkflowMetadata();
+      _defaultInstance = _ReadonlyWorkflowMetadata();
     return _defaultInstance;
   }
 
@@ -710,7 +705,7 @@ class _ReadonlyWorkflowMetadata extends WorkflowMetadata
     with ReadonlyMessageMixin {}
 
 class ClusterOperation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClusterOperation')
+  static final BuilderInfo _i = BuilderInfo('ClusterOperation')
     ..aOS(1, 'operationId')
     ..aOS(2, 'error')
     ..aOB(3, 'done')
@@ -723,14 +718,14 @@ class ClusterOperation extends GeneratedMessage {
   ClusterOperation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ClusterOperation clone() => new ClusterOperation()..mergeFromMessage(this);
+  ClusterOperation clone() => ClusterOperation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ClusterOperation create() => new ClusterOperation();
+  static ClusterOperation create() => ClusterOperation();
   static PbList<ClusterOperation> createRepeated() =>
-      new PbList<ClusterOperation>();
+      PbList<ClusterOperation>();
   static ClusterOperation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterOperation();
+      _defaultInstance = _ReadonlyClusterOperation();
     return _defaultInstance;
   }
 
@@ -768,7 +763,7 @@ class _ReadonlyClusterOperation extends ClusterOperation
     with ReadonlyMessageMixin {}
 
 class WorkflowGraph extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WorkflowGraph')
+  static final BuilderInfo _i = BuilderInfo('WorkflowGraph')
     ..pp<WorkflowNode>(1, 'nodes', PbFieldType.PM, WorkflowNode.$checkItem,
         WorkflowNode.create)
     ..hasRequiredFields = false;
@@ -780,13 +775,12 @@ class WorkflowGraph extends GeneratedMessage {
   WorkflowGraph.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WorkflowGraph clone() => new WorkflowGraph()..mergeFromMessage(this);
+  WorkflowGraph clone() => WorkflowGraph()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WorkflowGraph create() => new WorkflowGraph();
-  static PbList<WorkflowGraph> createRepeated() => new PbList<WorkflowGraph>();
+  static WorkflowGraph create() => WorkflowGraph();
+  static PbList<WorkflowGraph> createRepeated() => PbList<WorkflowGraph>();
   static WorkflowGraph getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWorkflowGraph();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWorkflowGraph();
     return _defaultInstance;
   }
 
@@ -801,7 +795,7 @@ class WorkflowGraph extends GeneratedMessage {
 class _ReadonlyWorkflowGraph extends WorkflowGraph with ReadonlyMessageMixin {}
 
 class WorkflowNode extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WorkflowNode')
+  static final BuilderInfo _i = BuilderInfo('WorkflowNode')
     ..aOS(1, 'stepId')
     ..pPS(2, 'prerequisiteStepIds')
     ..aOS(3, 'jobId')
@@ -822,13 +816,12 @@ class WorkflowNode extends GeneratedMessage {
   WorkflowNode.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WorkflowNode clone() => new WorkflowNode()..mergeFromMessage(this);
+  WorkflowNode clone() => WorkflowNode()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WorkflowNode create() => new WorkflowNode();
-  static PbList<WorkflowNode> createRepeated() => new PbList<WorkflowNode>();
+  static WorkflowNode create() => WorkflowNode();
+  static PbList<WorkflowNode> createRepeated() => PbList<WorkflowNode>();
   static WorkflowNode getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWorkflowNode();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWorkflowNode();
     return _defaultInstance;
   }
 
@@ -875,7 +868,7 @@ class WorkflowNode extends GeneratedMessage {
 class _ReadonlyWorkflowNode extends WorkflowNode with ReadonlyMessageMixin {}
 
 class CreateWorkflowTemplateRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateWorkflowTemplateRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateWorkflowTemplateRequest')
     ..aOS(1, 'parent')
     ..a<WorkflowTemplate>(2, 'template', PbFieldType.OM,
         WorkflowTemplate.getDefault, WorkflowTemplate.create)
@@ -889,15 +882,15 @@ class CreateWorkflowTemplateRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateWorkflowTemplateRequest clone() =>
-      new CreateWorkflowTemplateRequest()..mergeFromMessage(this);
+      CreateWorkflowTemplateRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateWorkflowTemplateRequest create() =>
-      new CreateWorkflowTemplateRequest();
+      CreateWorkflowTemplateRequest();
   static PbList<CreateWorkflowTemplateRequest> createRepeated() =>
-      new PbList<CreateWorkflowTemplateRequest>();
+      PbList<CreateWorkflowTemplateRequest>();
   static CreateWorkflowTemplateRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateWorkflowTemplateRequest();
+      _defaultInstance = _ReadonlyCreateWorkflowTemplateRequest();
     return _defaultInstance;
   }
 
@@ -928,7 +921,7 @@ class _ReadonlyCreateWorkflowTemplateRequest
     extends CreateWorkflowTemplateRequest with ReadonlyMessageMixin {}
 
 class GetWorkflowTemplateRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetWorkflowTemplateRequest')
+  static final BuilderInfo _i = BuilderInfo('GetWorkflowTemplateRequest')
     ..aOS(1, 'name')
     ..a<int>(2, 'version', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -941,15 +934,14 @@ class GetWorkflowTemplateRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetWorkflowTemplateRequest clone() =>
-      new GetWorkflowTemplateRequest()..mergeFromMessage(this);
+      GetWorkflowTemplateRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetWorkflowTemplateRequest create() =>
-      new GetWorkflowTemplateRequest();
+  static GetWorkflowTemplateRequest create() => GetWorkflowTemplateRequest();
   static PbList<GetWorkflowTemplateRequest> createRepeated() =>
-      new PbList<GetWorkflowTemplateRequest>();
+      PbList<GetWorkflowTemplateRequest>();
   static GetWorkflowTemplateRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetWorkflowTemplateRequest();
+      _defaultInstance = _ReadonlyGetWorkflowTemplateRequest();
     return _defaultInstance;
   }
 
@@ -981,7 +973,7 @@ class _ReadonlyGetWorkflowTemplateRequest extends GetWorkflowTemplateRequest
 
 class InstantiateWorkflowTemplateRequest extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('InstantiateWorkflowTemplateRequest')
+      BuilderInfo('InstantiateWorkflowTemplateRequest')
         ..aOS(1, 'name')
         ..a<int>(2, 'version', PbFieldType.O3)
         ..aOS(3, 'instanceId')
@@ -995,15 +987,15 @@ class InstantiateWorkflowTemplateRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   InstantiateWorkflowTemplateRequest clone() =>
-      new InstantiateWorkflowTemplateRequest()..mergeFromMessage(this);
+      InstantiateWorkflowTemplateRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static InstantiateWorkflowTemplateRequest create() =>
-      new InstantiateWorkflowTemplateRequest();
+      InstantiateWorkflowTemplateRequest();
   static PbList<InstantiateWorkflowTemplateRequest> createRepeated() =>
-      new PbList<InstantiateWorkflowTemplateRequest>();
+      PbList<InstantiateWorkflowTemplateRequest>();
   static InstantiateWorkflowTemplateRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInstantiateWorkflowTemplateRequest();
+      _defaultInstance = _ReadonlyInstantiateWorkflowTemplateRequest();
     return _defaultInstance;
   }
 
@@ -1042,7 +1034,7 @@ class _ReadonlyInstantiateWorkflowTemplateRequest
     extends InstantiateWorkflowTemplateRequest with ReadonlyMessageMixin {}
 
 class UpdateWorkflowTemplateRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateWorkflowTemplateRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateWorkflowTemplateRequest')
     ..a<WorkflowTemplate>(1, 'template', PbFieldType.OM,
         WorkflowTemplate.getDefault, WorkflowTemplate.create)
     ..hasRequiredFields = false;
@@ -1055,15 +1047,15 @@ class UpdateWorkflowTemplateRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateWorkflowTemplateRequest clone() =>
-      new UpdateWorkflowTemplateRequest()..mergeFromMessage(this);
+      UpdateWorkflowTemplateRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateWorkflowTemplateRequest create() =>
-      new UpdateWorkflowTemplateRequest();
+      UpdateWorkflowTemplateRequest();
   static PbList<UpdateWorkflowTemplateRequest> createRepeated() =>
-      new PbList<UpdateWorkflowTemplateRequest>();
+      PbList<UpdateWorkflowTemplateRequest>();
   static UpdateWorkflowTemplateRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateWorkflowTemplateRequest();
+      _defaultInstance = _ReadonlyUpdateWorkflowTemplateRequest();
     return _defaultInstance;
   }
 
@@ -1086,7 +1078,7 @@ class _ReadonlyUpdateWorkflowTemplateRequest
     extends UpdateWorkflowTemplateRequest with ReadonlyMessageMixin {}
 
 class ListWorkflowTemplatesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListWorkflowTemplatesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListWorkflowTemplatesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1100,15 +1092,15 @@ class ListWorkflowTemplatesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListWorkflowTemplatesRequest clone() =>
-      new ListWorkflowTemplatesRequest()..mergeFromMessage(this);
+      ListWorkflowTemplatesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListWorkflowTemplatesRequest create() =>
-      new ListWorkflowTemplatesRequest();
+      ListWorkflowTemplatesRequest();
   static PbList<ListWorkflowTemplatesRequest> createRepeated() =>
-      new PbList<ListWorkflowTemplatesRequest>();
+      PbList<ListWorkflowTemplatesRequest>();
   static ListWorkflowTemplatesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListWorkflowTemplatesRequest();
+      _defaultInstance = _ReadonlyListWorkflowTemplatesRequest();
     return _defaultInstance;
   }
 
@@ -1147,7 +1139,7 @@ class _ReadonlyListWorkflowTemplatesRequest extends ListWorkflowTemplatesRequest
     with ReadonlyMessageMixin {}
 
 class ListWorkflowTemplatesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListWorkflowTemplatesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListWorkflowTemplatesResponse')
     ..pp<WorkflowTemplate>(1, 'templates', PbFieldType.PM,
         WorkflowTemplate.$checkItem, WorkflowTemplate.create)
     ..aOS(2, 'nextPageToken')
@@ -1161,15 +1153,15 @@ class ListWorkflowTemplatesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListWorkflowTemplatesResponse clone() =>
-      new ListWorkflowTemplatesResponse()..mergeFromMessage(this);
+      ListWorkflowTemplatesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListWorkflowTemplatesResponse create() =>
-      new ListWorkflowTemplatesResponse();
+      ListWorkflowTemplatesResponse();
   static PbList<ListWorkflowTemplatesResponse> createRepeated() =>
-      new PbList<ListWorkflowTemplatesResponse>();
+      PbList<ListWorkflowTemplatesResponse>();
   static ListWorkflowTemplatesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListWorkflowTemplatesResponse();
+      _defaultInstance = _ReadonlyListWorkflowTemplatesResponse();
     return _defaultInstance;
   }
 
@@ -1194,7 +1186,7 @@ class _ReadonlyListWorkflowTemplatesResponse
     extends ListWorkflowTemplatesResponse with ReadonlyMessageMixin {}
 
 class DeleteWorkflowTemplateRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteWorkflowTemplateRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteWorkflowTemplateRequest')
     ..aOS(1, 'name')
     ..a<int>(2, 'version', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -1207,15 +1199,15 @@ class DeleteWorkflowTemplateRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteWorkflowTemplateRequest clone() =>
-      new DeleteWorkflowTemplateRequest()..mergeFromMessage(this);
+      DeleteWorkflowTemplateRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteWorkflowTemplateRequest create() =>
-      new DeleteWorkflowTemplateRequest();
+      DeleteWorkflowTemplateRequest();
   static PbList<DeleteWorkflowTemplateRequest> createRepeated() =>
-      new PbList<DeleteWorkflowTemplateRequest>();
+      PbList<DeleteWorkflowTemplateRequest>();
   static DeleteWorkflowTemplateRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteWorkflowTemplateRequest();
+      _defaultInstance = _ReadonlyDeleteWorkflowTemplateRequest();
     return _defaultInstance;
   }
 
@@ -1251,21 +1243,21 @@ class WorkflowTemplateServiceApi {
 
   Future<WorkflowTemplate> createWorkflowTemplate(
       ClientContext ctx, CreateWorkflowTemplateRequest request) {
-    var emptyResponse = new WorkflowTemplate();
+    var emptyResponse = WorkflowTemplate();
     return _client.invoke<WorkflowTemplate>(ctx, 'WorkflowTemplateService',
         'CreateWorkflowTemplate', request, emptyResponse);
   }
 
   Future<WorkflowTemplate> getWorkflowTemplate(
       ClientContext ctx, GetWorkflowTemplateRequest request) {
-    var emptyResponse = new WorkflowTemplate();
+    var emptyResponse = WorkflowTemplate();
     return _client.invoke<WorkflowTemplate>(ctx, 'WorkflowTemplateService',
         'GetWorkflowTemplate', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> instantiateWorkflowTemplate(
       ClientContext ctx, InstantiateWorkflowTemplateRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx,
         'WorkflowTemplateService',
@@ -1276,14 +1268,14 @@ class WorkflowTemplateServiceApi {
 
   Future<WorkflowTemplate> updateWorkflowTemplate(
       ClientContext ctx, UpdateWorkflowTemplateRequest request) {
-    var emptyResponse = new WorkflowTemplate();
+    var emptyResponse = WorkflowTemplate();
     return _client.invoke<WorkflowTemplate>(ctx, 'WorkflowTemplateService',
         'UpdateWorkflowTemplate', request, emptyResponse);
   }
 
   Future<ListWorkflowTemplatesResponse> listWorkflowTemplates(
       ClientContext ctx, ListWorkflowTemplatesRequest request) {
-    var emptyResponse = new ListWorkflowTemplatesResponse();
+    var emptyResponse = ListWorkflowTemplatesResponse();
     return _client.invoke<ListWorkflowTemplatesResponse>(
         ctx,
         'WorkflowTemplateService',
@@ -1294,7 +1286,7 @@ class WorkflowTemplateServiceApi {
 
   Future<$google$protobuf.Empty> deleteWorkflowTemplate(
       ClientContext ctx, DeleteWorkflowTemplateRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx,
         'WorkflowTemplateService',

@@ -9,13 +9,12 @@ import 'package:protobuf/protobuf.dart';
 
 class AliasContext_Kind extends ProtobufEnum {
   static const AliasContext_Kind KIND_UNSPECIFIED =
-      const AliasContext_Kind._(0, 'KIND_UNSPECIFIED');
-  static const AliasContext_Kind FIXED = const AliasContext_Kind._(1, 'FIXED');
-  static const AliasContext_Kind MOVABLE =
-      const AliasContext_Kind._(2, 'MOVABLE');
-  static const AliasContext_Kind OTHER = const AliasContext_Kind._(4, 'OTHER');
+      AliasContext_Kind._(0, 'KIND_UNSPECIFIED');
+  static const AliasContext_Kind FIXED = AliasContext_Kind._(1, 'FIXED');
+  static const AliasContext_Kind MOVABLE = AliasContext_Kind._(2, 'MOVABLE');
+  static const AliasContext_Kind OTHER = AliasContext_Kind._(4, 'OTHER');
 
-  static const List<AliasContext_Kind> values = const <AliasContext_Kind>[
+  static const List<AliasContext_Kind> values = <AliasContext_Kind>[
     KIND_UNSPECIFIED,
     FIXED,
     MOVABLE,

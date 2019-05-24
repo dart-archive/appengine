@@ -14,7 +14,7 @@ import '../../../protobuf/struct.pb.dart' as $google$protobuf;
 import 'context.pb.dart';
 
 class WebhookRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebhookRequest')
+  static final BuilderInfo _i = BuilderInfo('WebhookRequest')
     ..aOS(1, 'responseId')
     ..a<QueryResult>(2, 'queryResult', PbFieldType.OM, QueryResult.getDefault,
         QueryResult.create)
@@ -34,14 +34,12 @@ class WebhookRequest extends GeneratedMessage {
   WebhookRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WebhookRequest clone() => new WebhookRequest()..mergeFromMessage(this);
+  WebhookRequest clone() => WebhookRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WebhookRequest create() => new WebhookRequest();
-  static PbList<WebhookRequest> createRepeated() =>
-      new PbList<WebhookRequest>();
+  static WebhookRequest create() => WebhookRequest();
+  static PbList<WebhookRequest> createRepeated() => PbList<WebhookRequest>();
   static WebhookRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebhookRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWebhookRequest();
     return _defaultInstance;
   }
 
@@ -87,7 +85,7 @@ class _ReadonlyWebhookRequest extends WebhookRequest with ReadonlyMessageMixin {
 }
 
 class WebhookResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebhookResponse')
+  static final BuilderInfo _i = BuilderInfo('WebhookResponse')
     ..aOS(1, 'fulfillmentText')
     ..pp<Intent_Message>(2, 'fulfillmentMessages', PbFieldType.PM,
         Intent_Message.$checkItem, Intent_Message.create)
@@ -107,14 +105,12 @@ class WebhookResponse extends GeneratedMessage {
   WebhookResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WebhookResponse clone() => new WebhookResponse()..mergeFromMessage(this);
+  WebhookResponse clone() => WebhookResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WebhookResponse create() => new WebhookResponse();
-  static PbList<WebhookResponse> createRepeated() =>
-      new PbList<WebhookResponse>();
+  static WebhookResponse create() => WebhookResponse();
+  static PbList<WebhookResponse> createRepeated() => PbList<WebhookResponse>();
   static WebhookResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebhookResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWebhookResponse();
     return _defaultInstance;
   }
 
@@ -164,7 +160,7 @@ class _ReadonlyWebhookResponse extends WebhookResponse
     with ReadonlyMessageMixin {}
 
 class OriginalDetectIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OriginalDetectIntentRequest')
+  static final BuilderInfo _i = BuilderInfo('OriginalDetectIntentRequest')
     ..aOS(1, 'source')
     ..a<$google$protobuf.Struct>(3, 'payload', PbFieldType.OM,
         $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
@@ -178,15 +174,14 @@ class OriginalDetectIntentRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   OriginalDetectIntentRequest clone() =>
-      new OriginalDetectIntentRequest()..mergeFromMessage(this);
+      OriginalDetectIntentRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OriginalDetectIntentRequest create() =>
-      new OriginalDetectIntentRequest();
+  static OriginalDetectIntentRequest create() => OriginalDetectIntentRequest();
   static PbList<OriginalDetectIntentRequest> createRepeated() =>
-      new PbList<OriginalDetectIntentRequest>();
+      PbList<OriginalDetectIntentRequest>();
   static OriginalDetectIntentRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOriginalDetectIntentRequest();
+      _defaultInstance = _ReadonlyOriginalDetectIntentRequest();
     return _defaultInstance;
   }
 

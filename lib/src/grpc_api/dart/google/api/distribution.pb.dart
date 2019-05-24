@@ -10,7 +10,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Distribution_Range extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Distribution_Range')
+  static final BuilderInfo _i = BuilderInfo('Distribution_Range')
     ..a<double>(1, 'min', PbFieldType.OD)
     ..a<double>(2, 'max', PbFieldType.OD)
     ..hasRequiredFields = false;
@@ -22,15 +22,14 @@ class Distribution_Range extends GeneratedMessage {
   Distribution_Range.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Distribution_Range clone() =>
-      new Distribution_Range()..mergeFromMessage(this);
+  Distribution_Range clone() => Distribution_Range()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Distribution_Range create() => new Distribution_Range();
+  static Distribution_Range create() => Distribution_Range();
   static PbList<Distribution_Range> createRepeated() =>
-      new PbList<Distribution_Range>();
+      PbList<Distribution_Range>();
   static Distribution_Range getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution_Range();
+      _defaultInstance = _ReadonlyDistribution_Range();
     return _defaultInstance;
   }
 
@@ -60,12 +59,11 @@ class _ReadonlyDistribution_Range extends Distribution_Range
     with ReadonlyMessageMixin {}
 
 class Distribution_BucketOptions_Linear extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Distribution_BucketOptions_Linear')
-        ..a<int>(1, 'numFiniteBuckets', PbFieldType.O3)
-        ..a<double>(2, 'width', PbFieldType.OD)
-        ..a<double>(3, 'offset', PbFieldType.OD)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Distribution_BucketOptions_Linear')
+    ..a<int>(1, 'numFiniteBuckets', PbFieldType.O3)
+    ..a<double>(2, 'width', PbFieldType.OD)
+    ..a<double>(3, 'offset', PbFieldType.OD)
+    ..hasRequiredFields = false;
 
   Distribution_BucketOptions_Linear() : super();
   Distribution_BucketOptions_Linear.fromBuffer(List<int> i,
@@ -75,15 +73,15 @@ class Distribution_BucketOptions_Linear extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Distribution_BucketOptions_Linear clone() =>
-      new Distribution_BucketOptions_Linear()..mergeFromMessage(this);
+      Distribution_BucketOptions_Linear()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Distribution_BucketOptions_Linear create() =>
-      new Distribution_BucketOptions_Linear();
+      Distribution_BucketOptions_Linear();
   static PbList<Distribution_BucketOptions_Linear> createRepeated() =>
-      new PbList<Distribution_BucketOptions_Linear>();
+      PbList<Distribution_BucketOptions_Linear>();
   static Distribution_BucketOptions_Linear getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution_BucketOptions_Linear();
+      _defaultInstance = _ReadonlyDistribution_BucketOptions_Linear();
     return _defaultInstance;
   }
 
@@ -123,7 +121,7 @@ class _ReadonlyDistribution_BucketOptions_Linear
 
 class Distribution_BucketOptions_Exponential extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('Distribution_BucketOptions_Exponential')
+      BuilderInfo('Distribution_BucketOptions_Exponential')
         ..a<int>(1, 'numFiniteBuckets', PbFieldType.O3)
         ..a<double>(2, 'growthFactor', PbFieldType.OD)
         ..a<double>(3, 'scale', PbFieldType.OD)
@@ -137,15 +135,15 @@ class Distribution_BucketOptions_Exponential extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Distribution_BucketOptions_Exponential clone() =>
-      new Distribution_BucketOptions_Exponential()..mergeFromMessage(this);
+      Distribution_BucketOptions_Exponential()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Distribution_BucketOptions_Exponential create() =>
-      new Distribution_BucketOptions_Exponential();
+      Distribution_BucketOptions_Exponential();
   static PbList<Distribution_BucketOptions_Exponential> createRepeated() =>
-      new PbList<Distribution_BucketOptions_Exponential>();
+      PbList<Distribution_BucketOptions_Exponential>();
   static Distribution_BucketOptions_Exponential getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution_BucketOptions_Exponential();
+      _defaultInstance = _ReadonlyDistribution_BucketOptions_Exponential();
     return _defaultInstance;
   }
 
@@ -185,7 +183,7 @@ class _ReadonlyDistribution_BucketOptions_Exponential
 
 class Distribution_BucketOptions_Explicit extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('Distribution_BucketOptions_Explicit')
+      BuilderInfo('Distribution_BucketOptions_Explicit')
         ..p<double>(1, 'bounds', PbFieldType.PD)
         ..hasRequiredFields = false;
 
@@ -197,15 +195,15 @@ class Distribution_BucketOptions_Explicit extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Distribution_BucketOptions_Explicit clone() =>
-      new Distribution_BucketOptions_Explicit()..mergeFromMessage(this);
+      Distribution_BucketOptions_Explicit()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Distribution_BucketOptions_Explicit create() =>
-      new Distribution_BucketOptions_Explicit();
+      Distribution_BucketOptions_Explicit();
   static PbList<Distribution_BucketOptions_Explicit> createRepeated() =>
-      new PbList<Distribution_BucketOptions_Explicit>();
+      PbList<Distribution_BucketOptions_Explicit>();
   static Distribution_BucketOptions_Explicit getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution_BucketOptions_Explicit();
+      _defaultInstance = _ReadonlyDistribution_BucketOptions_Explicit();
     return _defaultInstance;
   }
 
@@ -222,7 +220,7 @@ class _ReadonlyDistribution_BucketOptions_Explicit
     extends Distribution_BucketOptions_Explicit with ReadonlyMessageMixin {}
 
 class Distribution_BucketOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Distribution_BucketOptions')
+  static final BuilderInfo _i = BuilderInfo('Distribution_BucketOptions')
     ..a<Distribution_BucketOptions_Linear>(
         1,
         'linearBuckets',
@@ -251,15 +249,14 @@ class Distribution_BucketOptions extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Distribution_BucketOptions clone() =>
-      new Distribution_BucketOptions()..mergeFromMessage(this);
+      Distribution_BucketOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Distribution_BucketOptions create() =>
-      new Distribution_BucketOptions();
+  static Distribution_BucketOptions create() => Distribution_BucketOptions();
   static PbList<Distribution_BucketOptions> createRepeated() =>
-      new PbList<Distribution_BucketOptions>();
+      PbList<Distribution_BucketOptions>();
   static Distribution_BucketOptions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution_BucketOptions();
+      _defaultInstance = _ReadonlyDistribution_BucketOptions();
     return _defaultInstance;
   }
 
@@ -298,7 +295,7 @@ class _ReadonlyDistribution_BucketOptions extends Distribution_BucketOptions
     with ReadonlyMessageMixin {}
 
 class Distribution extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Distribution')
+  static final BuilderInfo _i = BuilderInfo('Distribution')
     ..aInt64(1, 'count')
     ..a<double>(2, 'mean', PbFieldType.OD)
     ..a<double>(3, 'sumOfSquaredDeviation', PbFieldType.OD)
@@ -320,13 +317,12 @@ class Distribution extends GeneratedMessage {
   Distribution.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Distribution clone() => new Distribution()..mergeFromMessage(this);
+  Distribution clone() => Distribution()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Distribution create() => new Distribution();
-  static PbList<Distribution> createRepeated() => new PbList<Distribution>();
+  static Distribution create() => Distribution();
+  static PbList<Distribution> createRepeated() => PbList<Distribution>();
   static Distribution getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDistribution();
     return _defaultInstance;
   }
 

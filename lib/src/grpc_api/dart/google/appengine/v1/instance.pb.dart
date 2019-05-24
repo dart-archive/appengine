@@ -16,7 +16,7 @@ import 'instance.pbenum.dart';
 export 'instance.pbenum.dart';
 
 class Instance extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance')
+  static final BuilderInfo _i = BuilderInfo('Instance')
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..aOS(3, 'appEngineRelease')
@@ -51,12 +51,12 @@ class Instance extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Instance.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Instance clone() => new Instance()..mergeFromMessage(this);
+  Instance clone() => Instance()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Instance create() => new Instance();
-  static PbList<Instance> createRepeated() => new PbList<Instance>();
+  static Instance create() => Instance();
+  static PbList<Instance> createRepeated() => PbList<Instance>();
   static Instance getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInstance();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyInstance();
     return _defaultInstance;
   }
 

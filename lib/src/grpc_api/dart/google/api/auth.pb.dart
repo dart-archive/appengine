@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Authentication extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Authentication')
+  static final BuilderInfo _i = BuilderInfo('Authentication')
     ..pp<AuthenticationRule>(3, 'rules', PbFieldType.PM,
         AuthenticationRule.$checkItem, AuthenticationRule.create)
     ..pp<AuthProvider>(4, 'providers', PbFieldType.PM, AuthProvider.$checkItem,
@@ -23,14 +23,12 @@ class Authentication extends GeneratedMessage {
   Authentication.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Authentication clone() => new Authentication()..mergeFromMessage(this);
+  Authentication clone() => Authentication()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Authentication create() => new Authentication();
-  static PbList<Authentication> createRepeated() =>
-      new PbList<Authentication>();
+  static Authentication create() => Authentication();
+  static PbList<Authentication> createRepeated() => PbList<Authentication>();
   static Authentication getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthentication();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuthentication();
     return _defaultInstance;
   }
 
@@ -48,7 +46,7 @@ class _ReadonlyAuthentication extends Authentication with ReadonlyMessageMixin {
 }
 
 class AuthenticationRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthenticationRule')
+  static final BuilderInfo _i = BuilderInfo('AuthenticationRule')
     ..aOS(1, 'selector')
     ..a<OAuthRequirements>(2, 'oauth', PbFieldType.OM,
         OAuthRequirements.getDefault, OAuthRequirements.create)
@@ -64,15 +62,14 @@ class AuthenticationRule extends GeneratedMessage {
   AuthenticationRule.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthenticationRule clone() =>
-      new AuthenticationRule()..mergeFromMessage(this);
+  AuthenticationRule clone() => AuthenticationRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuthenticationRule create() => new AuthenticationRule();
+  static AuthenticationRule create() => AuthenticationRule();
   static PbList<AuthenticationRule> createRepeated() =>
-      new PbList<AuthenticationRule>();
+      PbList<AuthenticationRule>();
   static AuthenticationRule getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthenticationRule();
+      _defaultInstance = _ReadonlyAuthenticationRule();
     return _defaultInstance;
   }
 
@@ -112,7 +109,7 @@ class _ReadonlyAuthenticationRule extends AuthenticationRule
     with ReadonlyMessageMixin {}
 
 class AuthProvider extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthProvider')
+  static final BuilderInfo _i = BuilderInfo('AuthProvider')
     ..aOS(1, 'id')
     ..aOS(2, 'issuer')
     ..aOS(3, 'jwksUri')
@@ -127,13 +124,12 @@ class AuthProvider extends GeneratedMessage {
   AuthProvider.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthProvider clone() => new AuthProvider()..mergeFromMessage(this);
+  AuthProvider clone() => AuthProvider()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuthProvider create() => new AuthProvider();
-  static PbList<AuthProvider> createRepeated() => new PbList<AuthProvider>();
+  static AuthProvider create() => AuthProvider();
+  static PbList<AuthProvider> createRepeated() => PbList<AuthProvider>();
   static AuthProvider getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthProvider();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuthProvider();
     return _defaultInstance;
   }
 
@@ -186,7 +182,7 @@ class AuthProvider extends GeneratedMessage {
 class _ReadonlyAuthProvider extends AuthProvider with ReadonlyMessageMixin {}
 
 class OAuthRequirements extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OAuthRequirements')
+  static final BuilderInfo _i = BuilderInfo('OAuthRequirements')
     ..aOS(1, 'canonicalScopes')
     ..hasRequiredFields = false;
 
@@ -197,14 +193,14 @@ class OAuthRequirements extends GeneratedMessage {
   OAuthRequirements.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OAuthRequirements clone() => new OAuthRequirements()..mergeFromMessage(this);
+  OAuthRequirements clone() => OAuthRequirements()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OAuthRequirements create() => new OAuthRequirements();
+  static OAuthRequirements create() => OAuthRequirements();
   static PbList<OAuthRequirements> createRepeated() =>
-      new PbList<OAuthRequirements>();
+      PbList<OAuthRequirements>();
   static OAuthRequirements getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOAuthRequirements();
+      _defaultInstance = _ReadonlyOAuthRequirements();
     return _defaultInstance;
   }
 
@@ -226,7 +222,7 @@ class _ReadonlyOAuthRequirements extends OAuthRequirements
     with ReadonlyMessageMixin {}
 
 class AuthRequirement extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthRequirement')
+  static final BuilderInfo _i = BuilderInfo('AuthRequirement')
     ..aOS(1, 'providerId')
     ..aOS(2, 'audiences')
     ..hasRequiredFields = false;
@@ -238,14 +234,12 @@ class AuthRequirement extends GeneratedMessage {
   AuthRequirement.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthRequirement clone() => new AuthRequirement()..mergeFromMessage(this);
+  AuthRequirement clone() => AuthRequirement()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuthRequirement create() => new AuthRequirement();
-  static PbList<AuthRequirement> createRepeated() =>
-      new PbList<AuthRequirement>();
+  static AuthRequirement create() => AuthRequirement();
+  static PbList<AuthRequirement> createRepeated() => PbList<AuthRequirement>();
   static AuthRequirement getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthRequirement();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuthRequirement();
     return _defaultInstance;
   }
 

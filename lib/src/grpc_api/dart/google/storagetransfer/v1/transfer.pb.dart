@@ -14,10 +14,9 @@ import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
 import '../../protobuf/empty.pb.dart' as $google$protobuf;
 
 class GetGoogleServiceAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('GetGoogleServiceAccountRequest')
-        ..aOS(1, 'projectId')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('GetGoogleServiceAccountRequest')
+    ..aOS(1, 'projectId')
+    ..hasRequiredFields = false;
 
   GetGoogleServiceAccountRequest() : super();
   GetGoogleServiceAccountRequest.fromBuffer(List<int> i,
@@ -27,15 +26,15 @@ class GetGoogleServiceAccountRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetGoogleServiceAccountRequest clone() =>
-      new GetGoogleServiceAccountRequest()..mergeFromMessage(this);
+      GetGoogleServiceAccountRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GetGoogleServiceAccountRequest create() =>
-      new GetGoogleServiceAccountRequest();
+      GetGoogleServiceAccountRequest();
   static PbList<GetGoogleServiceAccountRequest> createRepeated() =>
-      new PbList<GetGoogleServiceAccountRequest>();
+      PbList<GetGoogleServiceAccountRequest>();
   static GetGoogleServiceAccountRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetGoogleServiceAccountRequest();
+      _defaultInstance = _ReadonlyGetGoogleServiceAccountRequest();
     return _defaultInstance;
   }
 
@@ -58,7 +57,7 @@ class _ReadonlyGetGoogleServiceAccountRequest
     extends GetGoogleServiceAccountRequest with ReadonlyMessageMixin {}
 
 class CreateTransferJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTransferJobRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateTransferJobRequest')
     ..a<TransferJob>(1, 'transferJob', PbFieldType.OM, TransferJob.getDefault,
         TransferJob.create)
     ..hasRequiredFields = false;
@@ -71,14 +70,14 @@ class CreateTransferJobRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTransferJobRequest clone() =>
-      new CreateTransferJobRequest()..mergeFromMessage(this);
+      CreateTransferJobRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateTransferJobRequest create() => new CreateTransferJobRequest();
+  static CreateTransferJobRequest create() => CreateTransferJobRequest();
   static PbList<CreateTransferJobRequest> createRepeated() =>
-      new PbList<CreateTransferJobRequest>();
+      PbList<CreateTransferJobRequest>();
   static CreateTransferJobRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTransferJobRequest();
+      _defaultInstance = _ReadonlyCreateTransferJobRequest();
     return _defaultInstance;
   }
 
@@ -101,7 +100,7 @@ class _ReadonlyCreateTransferJobRequest extends CreateTransferJobRequest
     with ReadonlyMessageMixin {}
 
 class UpdateTransferJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateTransferJobRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateTransferJobRequest')
     ..aOS(1, 'jobName')
     ..aOS(2, 'projectId')
     ..a<TransferJob>(3, 'transferJob', PbFieldType.OM, TransferJob.getDefault,
@@ -122,14 +121,14 @@ class UpdateTransferJobRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateTransferJobRequest clone() =>
-      new UpdateTransferJobRequest()..mergeFromMessage(this);
+      UpdateTransferJobRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateTransferJobRequest create() => new UpdateTransferJobRequest();
+  static UpdateTransferJobRequest create() => UpdateTransferJobRequest();
   static PbList<UpdateTransferJobRequest> createRepeated() =>
-      new PbList<UpdateTransferJobRequest>();
+      PbList<UpdateTransferJobRequest>();
   static UpdateTransferJobRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateTransferJobRequest();
+      _defaultInstance = _ReadonlyUpdateTransferJobRequest();
     return _defaultInstance;
   }
 
@@ -176,7 +175,7 @@ class _ReadonlyUpdateTransferJobRequest extends UpdateTransferJobRequest
     with ReadonlyMessageMixin {}
 
 class GetTransferJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTransferJobRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTransferJobRequest')
     ..aOS(1, 'jobName')
     ..aOS(2, 'projectId')
     ..hasRequiredFields = false;
@@ -189,14 +188,14 @@ class GetTransferJobRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetTransferJobRequest clone() =>
-      new GetTransferJobRequest()..mergeFromMessage(this);
+      GetTransferJobRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTransferJobRequest create() => new GetTransferJobRequest();
+  static GetTransferJobRequest create() => GetTransferJobRequest();
   static PbList<GetTransferJobRequest> createRepeated() =>
-      new PbList<GetTransferJobRequest>();
+      PbList<GetTransferJobRequest>();
   static GetTransferJobRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTransferJobRequest();
+      _defaultInstance = _ReadonlyGetTransferJobRequest();
     return _defaultInstance;
   }
 
@@ -227,7 +226,7 @@ class _ReadonlyGetTransferJobRequest extends GetTransferJobRequest
     with ReadonlyMessageMixin {}
 
 class ListTransferJobsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferJobsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTransferJobsRequest')
     ..aOS(1, 'filter')
     ..a<int>(4, 'pageSize', PbFieldType.O3)
     ..aOS(5, 'pageToken')
@@ -241,14 +240,14 @@ class ListTransferJobsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferJobsRequest clone() =>
-      new ListTransferJobsRequest()..mergeFromMessage(this);
+      ListTransferJobsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTransferJobsRequest create() => new ListTransferJobsRequest();
+  static ListTransferJobsRequest create() => ListTransferJobsRequest();
   static PbList<ListTransferJobsRequest> createRepeated() =>
-      new PbList<ListTransferJobsRequest>();
+      PbList<ListTransferJobsRequest>();
   static ListTransferJobsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferJobsRequest();
+      _defaultInstance = _ReadonlyListTransferJobsRequest();
     return _defaultInstance;
   }
 
@@ -287,7 +286,7 @@ class _ReadonlyListTransferJobsRequest extends ListTransferJobsRequest
     with ReadonlyMessageMixin {}
 
 class ListTransferJobsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferJobsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTransferJobsResponse')
     ..pp<TransferJob>(1, 'transferJobs', PbFieldType.PM, TransferJob.$checkItem,
         TransferJob.create)
     ..aOS(2, 'nextPageToken')
@@ -301,14 +300,14 @@ class ListTransferJobsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferJobsResponse clone() =>
-      new ListTransferJobsResponse()..mergeFromMessage(this);
+      ListTransferJobsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTransferJobsResponse create() => new ListTransferJobsResponse();
+  static ListTransferJobsResponse create() => ListTransferJobsResponse();
   static PbList<ListTransferJobsResponse> createRepeated() =>
-      new PbList<ListTransferJobsResponse>();
+      PbList<ListTransferJobsResponse>();
   static ListTransferJobsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferJobsResponse();
+      _defaultInstance = _ReadonlyListTransferJobsResponse();
     return _defaultInstance;
   }
 
@@ -333,7 +332,7 @@ class _ReadonlyListTransferJobsResponse extends ListTransferJobsResponse
     with ReadonlyMessageMixin {}
 
 class PauseTransferOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PauseTransferOperationRequest')
+  static final BuilderInfo _i = BuilderInfo('PauseTransferOperationRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -345,15 +344,15 @@ class PauseTransferOperationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PauseTransferOperationRequest clone() =>
-      new PauseTransferOperationRequest()..mergeFromMessage(this);
+      PauseTransferOperationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PauseTransferOperationRequest create() =>
-      new PauseTransferOperationRequest();
+      PauseTransferOperationRequest();
   static PbList<PauseTransferOperationRequest> createRepeated() =>
-      new PbList<PauseTransferOperationRequest>();
+      PbList<PauseTransferOperationRequest>();
   static PauseTransferOperationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPauseTransferOperationRequest();
+      _defaultInstance = _ReadonlyPauseTransferOperationRequest();
     return _defaultInstance;
   }
 
@@ -376,10 +375,9 @@ class _ReadonlyPauseTransferOperationRequest
     extends PauseTransferOperationRequest with ReadonlyMessageMixin {}
 
 class ResumeTransferOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ResumeTransferOperationRequest')
-        ..aOS(1, 'name')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ResumeTransferOperationRequest')
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
 
   ResumeTransferOperationRequest() : super();
   ResumeTransferOperationRequest.fromBuffer(List<int> i,
@@ -389,15 +387,15 @@ class ResumeTransferOperationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ResumeTransferOperationRequest clone() =>
-      new ResumeTransferOperationRequest()..mergeFromMessage(this);
+      ResumeTransferOperationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ResumeTransferOperationRequest create() =>
-      new ResumeTransferOperationRequest();
+      ResumeTransferOperationRequest();
   static PbList<ResumeTransferOperationRequest> createRepeated() =>
-      new PbList<ResumeTransferOperationRequest>();
+      PbList<ResumeTransferOperationRequest>();
   static ResumeTransferOperationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyResumeTransferOperationRequest();
+      _defaultInstance = _ReadonlyResumeTransferOperationRequest();
     return _defaultInstance;
   }
 
@@ -425,49 +423,49 @@ class StorageTransferServiceApi {
 
   Future<GoogleServiceAccount> getGoogleServiceAccount(
       ClientContext ctx, GetGoogleServiceAccountRequest request) {
-    var emptyResponse = new GoogleServiceAccount();
+    var emptyResponse = GoogleServiceAccount();
     return _client.invoke<GoogleServiceAccount>(ctx, 'StorageTransferService',
         'GetGoogleServiceAccount', request, emptyResponse);
   }
 
   Future<TransferJob> createTransferJob(
       ClientContext ctx, CreateTransferJobRequest request) {
-    var emptyResponse = new TransferJob();
+    var emptyResponse = TransferJob();
     return _client.invoke<TransferJob>(ctx, 'StorageTransferService',
         'CreateTransferJob', request, emptyResponse);
   }
 
   Future<TransferJob> updateTransferJob(
       ClientContext ctx, UpdateTransferJobRequest request) {
-    var emptyResponse = new TransferJob();
+    var emptyResponse = TransferJob();
     return _client.invoke<TransferJob>(ctx, 'StorageTransferService',
         'UpdateTransferJob', request, emptyResponse);
   }
 
   Future<TransferJob> getTransferJob(
       ClientContext ctx, GetTransferJobRequest request) {
-    var emptyResponse = new TransferJob();
+    var emptyResponse = TransferJob();
     return _client.invoke<TransferJob>(ctx, 'StorageTransferService',
         'GetTransferJob', request, emptyResponse);
   }
 
   Future<ListTransferJobsResponse> listTransferJobs(
       ClientContext ctx, ListTransferJobsRequest request) {
-    var emptyResponse = new ListTransferJobsResponse();
+    var emptyResponse = ListTransferJobsResponse();
     return _client.invoke<ListTransferJobsResponse>(ctx,
         'StorageTransferService', 'ListTransferJobs', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> pauseTransferOperation(
       ClientContext ctx, PauseTransferOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'StorageTransferService',
         'PauseTransferOperation', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> resumeTransferOperation(
       ClientContext ctx, ResumeTransferOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'StorageTransferService',
         'ResumeTransferOperation', request, emptyResponse);
   }

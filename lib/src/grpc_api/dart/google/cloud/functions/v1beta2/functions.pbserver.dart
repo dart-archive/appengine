@@ -30,19 +30,19 @@ abstract class CloudFunctionsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListFunctions':
-        return new ListFunctionsRequest();
+        return ListFunctionsRequest();
       case 'GetFunction':
-        return new GetFunctionRequest();
+        return GetFunctionRequest();
       case 'CreateFunction':
-        return new CreateFunctionRequest();
+        return CreateFunctionRequest();
       case 'UpdateFunction':
-        return new UpdateFunctionRequest();
+        return UpdateFunctionRequest();
       case 'DeleteFunction':
-        return new DeleteFunctionRequest();
+        return DeleteFunctionRequest();
       case 'CallFunction':
-        return new CallFunctionRequest();
+        return CallFunctionRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -62,7 +62,7 @@ abstract class CloudFunctionsServiceBase extends GeneratedService {
       case 'CallFunction':
         return this.callFunction(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

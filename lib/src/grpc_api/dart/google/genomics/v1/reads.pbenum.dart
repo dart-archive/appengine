@@ -10,17 +10,16 @@ import 'package:protobuf/protobuf.dart';
 class ImportReadGroupSetsRequest_PartitionStrategy extends ProtobufEnum {
   static const ImportReadGroupSetsRequest_PartitionStrategy
       PARTITION_STRATEGY_UNSPECIFIED =
-      const ImportReadGroupSetsRequest_PartitionStrategy._(
+      ImportReadGroupSetsRequest_PartitionStrategy._(
           0, 'PARTITION_STRATEGY_UNSPECIFIED');
   static const ImportReadGroupSetsRequest_PartitionStrategy
       PER_FILE_PER_SAMPLE =
-      const ImportReadGroupSetsRequest_PartitionStrategy._(
-          1, 'PER_FILE_PER_SAMPLE');
+      ImportReadGroupSetsRequest_PartitionStrategy._(1, 'PER_FILE_PER_SAMPLE');
   static const ImportReadGroupSetsRequest_PartitionStrategy MERGE_ALL =
-      const ImportReadGroupSetsRequest_PartitionStrategy._(2, 'MERGE_ALL');
+      ImportReadGroupSetsRequest_PartitionStrategy._(2, 'MERGE_ALL');
 
   static const List<ImportReadGroupSetsRequest_PartitionStrategy> values =
-      const <ImportReadGroupSetsRequest_PartitionStrategy>[
+      <ImportReadGroupSetsRequest_PartitionStrategy>[
     PARTITION_STRATEGY_UNSPECIFIED,
     PER_FILE_PER_SAMPLE,
     MERGE_ALL,

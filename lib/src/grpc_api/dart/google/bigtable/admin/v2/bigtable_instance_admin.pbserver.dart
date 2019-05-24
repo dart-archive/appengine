@@ -57,45 +57,45 @@ abstract class BigtableInstanceAdminServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateInstance':
-        return new CreateInstanceRequest();
+        return CreateInstanceRequest();
       case 'GetInstance':
-        return new GetInstanceRequest();
+        return GetInstanceRequest();
       case 'ListInstances':
-        return new ListInstancesRequest();
+        return ListInstancesRequest();
       case 'UpdateInstance':
-        return new Instance();
+        return Instance();
       case 'PartialUpdateInstance':
-        return new PartialUpdateInstanceRequest();
+        return PartialUpdateInstanceRequest();
       case 'DeleteInstance':
-        return new DeleteInstanceRequest();
+        return DeleteInstanceRequest();
       case 'CreateCluster':
-        return new CreateClusterRequest();
+        return CreateClusterRequest();
       case 'GetCluster':
-        return new GetClusterRequest();
+        return GetClusterRequest();
       case 'ListClusters':
-        return new ListClustersRequest();
+        return ListClustersRequest();
       case 'UpdateCluster':
-        return new Cluster();
+        return Cluster();
       case 'DeleteCluster':
-        return new DeleteClusterRequest();
+        return DeleteClusterRequest();
       case 'CreateAppProfile':
-        return new CreateAppProfileRequest();
+        return CreateAppProfileRequest();
       case 'GetAppProfile':
-        return new GetAppProfileRequest();
+        return GetAppProfileRequest();
       case 'ListAppProfiles':
-        return new ListAppProfilesRequest();
+        return ListAppProfilesRequest();
       case 'UpdateAppProfile':
-        return new UpdateAppProfileRequest();
+        return UpdateAppProfileRequest();
       case 'DeleteAppProfile':
-        return new DeleteAppProfileRequest();
+        return DeleteAppProfileRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -141,7 +141,7 @@ abstract class BigtableInstanceAdminServiceBase extends GeneratedService {
       case 'TestIamPermissions':
         return this.testIamPermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

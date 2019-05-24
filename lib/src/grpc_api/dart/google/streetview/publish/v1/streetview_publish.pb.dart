@@ -19,46 +19,46 @@ class StreetViewPublishServiceApi {
 
   Future<UploadRef> startUpload(
       ClientContext ctx, $google$protobuf.Empty request) {
-    var emptyResponse = new UploadRef();
+    var emptyResponse = UploadRef();
     return _client.invoke<UploadRef>(
         ctx, 'StreetViewPublishService', 'StartUpload', request, emptyResponse);
   }
 
   Future<Photo> createPhoto(ClientContext ctx, CreatePhotoRequest request) {
-    var emptyResponse = new Photo();
+    var emptyResponse = Photo();
     return _client.invoke<Photo>(
         ctx, 'StreetViewPublishService', 'CreatePhoto', request, emptyResponse);
   }
 
   Future<Photo> getPhoto(ClientContext ctx, GetPhotoRequest request) {
-    var emptyResponse = new Photo();
+    var emptyResponse = Photo();
     return _client.invoke<Photo>(
         ctx, 'StreetViewPublishService', 'GetPhoto', request, emptyResponse);
   }
 
   Future<BatchGetPhotosResponse> batchGetPhotos(
       ClientContext ctx, BatchGetPhotosRequest request) {
-    var emptyResponse = new BatchGetPhotosResponse();
+    var emptyResponse = BatchGetPhotosResponse();
     return _client.invoke<BatchGetPhotosResponse>(ctx,
         'StreetViewPublishService', 'BatchGetPhotos', request, emptyResponse);
   }
 
   Future<ListPhotosResponse> listPhotos(
       ClientContext ctx, ListPhotosRequest request) {
-    var emptyResponse = new ListPhotosResponse();
+    var emptyResponse = ListPhotosResponse();
     return _client.invoke<ListPhotosResponse>(
         ctx, 'StreetViewPublishService', 'ListPhotos', request, emptyResponse);
   }
 
   Future<Photo> updatePhoto(ClientContext ctx, UpdatePhotoRequest request) {
-    var emptyResponse = new Photo();
+    var emptyResponse = Photo();
     return _client.invoke<Photo>(
         ctx, 'StreetViewPublishService', 'UpdatePhoto', request, emptyResponse);
   }
 
   Future<BatchUpdatePhotosResponse> batchUpdatePhotos(
       ClientContext ctx, BatchUpdatePhotosRequest request) {
-    var emptyResponse = new BatchUpdatePhotosResponse();
+    var emptyResponse = BatchUpdatePhotosResponse();
     return _client.invoke<BatchUpdatePhotosResponse>(
         ctx,
         'StreetViewPublishService',
@@ -69,14 +69,14 @@ class StreetViewPublishServiceApi {
 
   Future<$google$protobuf.Empty> deletePhoto(
       ClientContext ctx, DeletePhotoRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'StreetViewPublishService', 'DeletePhoto', request, emptyResponse);
   }
 
   Future<BatchDeletePhotosResponse> batchDeletePhotos(
       ClientContext ctx, BatchDeletePhotosRequest request) {
-    var emptyResponse = new BatchDeletePhotosResponse();
+    var emptyResponse = BatchDeletePhotosResponse();
     return _client.invoke<BatchDeletePhotosResponse>(
         ctx,
         'StreetViewPublishService',

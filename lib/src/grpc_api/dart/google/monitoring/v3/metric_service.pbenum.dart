@@ -9,12 +9,12 @@ import 'package:protobuf/protobuf.dart';
 
 class ListTimeSeriesRequest_TimeSeriesView extends ProtobufEnum {
   static const ListTimeSeriesRequest_TimeSeriesView FULL =
-      const ListTimeSeriesRequest_TimeSeriesView._(0, 'FULL');
+      ListTimeSeriesRequest_TimeSeriesView._(0, 'FULL');
   static const ListTimeSeriesRequest_TimeSeriesView HEADERS =
-      const ListTimeSeriesRequest_TimeSeriesView._(1, 'HEADERS');
+      ListTimeSeriesRequest_TimeSeriesView._(1, 'HEADERS');
 
   static const List<ListTimeSeriesRequest_TimeSeriesView> values =
-      const <ListTimeSeriesRequest_TimeSeriesView>[
+      <ListTimeSeriesRequest_TimeSeriesView>[
     FULL,
     HEADERS,
   ];

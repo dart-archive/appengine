@@ -8,15 +8,14 @@ import 'dart:core' show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart';
 
 class Likelihood extends ProtobufEnum {
-  static const Likelihood UNKNOWN = const Likelihood._(0, 'UNKNOWN');
-  static const Likelihood VERY_UNLIKELY =
-      const Likelihood._(1, 'VERY_UNLIKELY');
-  static const Likelihood UNLIKELY = const Likelihood._(2, 'UNLIKELY');
-  static const Likelihood POSSIBLE = const Likelihood._(3, 'POSSIBLE');
-  static const Likelihood LIKELY = const Likelihood._(4, 'LIKELY');
-  static const Likelihood VERY_LIKELY = const Likelihood._(5, 'VERY_LIKELY');
+  static const Likelihood UNKNOWN = Likelihood._(0, 'UNKNOWN');
+  static const Likelihood VERY_UNLIKELY = Likelihood._(1, 'VERY_UNLIKELY');
+  static const Likelihood UNLIKELY = Likelihood._(2, 'UNLIKELY');
+  static const Likelihood POSSIBLE = Likelihood._(3, 'POSSIBLE');
+  static const Likelihood LIKELY = Likelihood._(4, 'LIKELY');
+  static const Likelihood VERY_LIKELY = Likelihood._(5, 'VERY_LIKELY');
 
-  static const List<Likelihood> values = const <Likelihood>[
+  static const List<Likelihood> values = <Likelihood>[
     UNKNOWN,
     VERY_UNLIKELY,
     UNLIKELY,
@@ -36,28 +35,27 @@ class Likelihood extends ProtobufEnum {
 
 class Feature_Type extends ProtobufEnum {
   static const Feature_Type TYPE_UNSPECIFIED =
-      const Feature_Type._(0, 'TYPE_UNSPECIFIED');
+      Feature_Type._(0, 'TYPE_UNSPECIFIED');
   static const Feature_Type FACE_DETECTION =
-      const Feature_Type._(1, 'FACE_DETECTION');
+      Feature_Type._(1, 'FACE_DETECTION');
   static const Feature_Type LANDMARK_DETECTION =
-      const Feature_Type._(2, 'LANDMARK_DETECTION');
+      Feature_Type._(2, 'LANDMARK_DETECTION');
   static const Feature_Type LOGO_DETECTION =
-      const Feature_Type._(3, 'LOGO_DETECTION');
+      Feature_Type._(3, 'LOGO_DETECTION');
   static const Feature_Type LABEL_DETECTION =
-      const Feature_Type._(4, 'LABEL_DETECTION');
+      Feature_Type._(4, 'LABEL_DETECTION');
   static const Feature_Type TEXT_DETECTION =
-      const Feature_Type._(5, 'TEXT_DETECTION');
+      Feature_Type._(5, 'TEXT_DETECTION');
   static const Feature_Type DOCUMENT_TEXT_DETECTION =
-      const Feature_Type._(11, 'DOCUMENT_TEXT_DETECTION');
+      Feature_Type._(11, 'DOCUMENT_TEXT_DETECTION');
   static const Feature_Type SAFE_SEARCH_DETECTION =
-      const Feature_Type._(6, 'SAFE_SEARCH_DETECTION');
+      Feature_Type._(6, 'SAFE_SEARCH_DETECTION');
   static const Feature_Type IMAGE_PROPERTIES =
-      const Feature_Type._(7, 'IMAGE_PROPERTIES');
-  static const Feature_Type CROP_HINTS = const Feature_Type._(9, 'CROP_HINTS');
-  static const Feature_Type WEB_DETECTION =
-      const Feature_Type._(10, 'WEB_DETECTION');
+      Feature_Type._(7, 'IMAGE_PROPERTIES');
+  static const Feature_Type CROP_HINTS = Feature_Type._(9, 'CROP_HINTS');
+  static const Feature_Type WEB_DETECTION = Feature_Type._(10, 'WEB_DETECTION');
 
-  static const List<Feature_Type> values = const <Feature_Type>[
+  static const List<Feature_Type> values = <Feature_Type>[
     TYPE_UNSPECIFIED,
     FACE_DETECTION,
     LANDMARK_DETECTION,
@@ -82,78 +80,78 @@ class Feature_Type extends ProtobufEnum {
 
 class FaceAnnotation_Landmark_Type extends ProtobufEnum {
   static const FaceAnnotation_Landmark_Type UNKNOWN_LANDMARK =
-      const FaceAnnotation_Landmark_Type._(0, 'UNKNOWN_LANDMARK');
+      FaceAnnotation_Landmark_Type._(0, 'UNKNOWN_LANDMARK');
   static const FaceAnnotation_Landmark_Type LEFT_EYE =
-      const FaceAnnotation_Landmark_Type._(1, 'LEFT_EYE');
+      FaceAnnotation_Landmark_Type._(1, 'LEFT_EYE');
   static const FaceAnnotation_Landmark_Type RIGHT_EYE =
-      const FaceAnnotation_Landmark_Type._(2, 'RIGHT_EYE');
+      FaceAnnotation_Landmark_Type._(2, 'RIGHT_EYE');
   static const FaceAnnotation_Landmark_Type LEFT_OF_LEFT_EYEBROW =
-      const FaceAnnotation_Landmark_Type._(3, 'LEFT_OF_LEFT_EYEBROW');
+      FaceAnnotation_Landmark_Type._(3, 'LEFT_OF_LEFT_EYEBROW');
   static const FaceAnnotation_Landmark_Type RIGHT_OF_LEFT_EYEBROW =
-      const FaceAnnotation_Landmark_Type._(4, 'RIGHT_OF_LEFT_EYEBROW');
+      FaceAnnotation_Landmark_Type._(4, 'RIGHT_OF_LEFT_EYEBROW');
   static const FaceAnnotation_Landmark_Type LEFT_OF_RIGHT_EYEBROW =
-      const FaceAnnotation_Landmark_Type._(5, 'LEFT_OF_RIGHT_EYEBROW');
+      FaceAnnotation_Landmark_Type._(5, 'LEFT_OF_RIGHT_EYEBROW');
   static const FaceAnnotation_Landmark_Type RIGHT_OF_RIGHT_EYEBROW =
-      const FaceAnnotation_Landmark_Type._(6, 'RIGHT_OF_RIGHT_EYEBROW');
+      FaceAnnotation_Landmark_Type._(6, 'RIGHT_OF_RIGHT_EYEBROW');
   static const FaceAnnotation_Landmark_Type MIDPOINT_BETWEEN_EYES =
-      const FaceAnnotation_Landmark_Type._(7, 'MIDPOINT_BETWEEN_EYES');
+      FaceAnnotation_Landmark_Type._(7, 'MIDPOINT_BETWEEN_EYES');
   static const FaceAnnotation_Landmark_Type NOSE_TIP =
-      const FaceAnnotation_Landmark_Type._(8, 'NOSE_TIP');
+      FaceAnnotation_Landmark_Type._(8, 'NOSE_TIP');
   static const FaceAnnotation_Landmark_Type UPPER_LIP =
-      const FaceAnnotation_Landmark_Type._(9, 'UPPER_LIP');
+      FaceAnnotation_Landmark_Type._(9, 'UPPER_LIP');
   static const FaceAnnotation_Landmark_Type LOWER_LIP =
-      const FaceAnnotation_Landmark_Type._(10, 'LOWER_LIP');
+      FaceAnnotation_Landmark_Type._(10, 'LOWER_LIP');
   static const FaceAnnotation_Landmark_Type MOUTH_LEFT =
-      const FaceAnnotation_Landmark_Type._(11, 'MOUTH_LEFT');
+      FaceAnnotation_Landmark_Type._(11, 'MOUTH_LEFT');
   static const FaceAnnotation_Landmark_Type MOUTH_RIGHT =
-      const FaceAnnotation_Landmark_Type._(12, 'MOUTH_RIGHT');
+      FaceAnnotation_Landmark_Type._(12, 'MOUTH_RIGHT');
   static const FaceAnnotation_Landmark_Type MOUTH_CENTER =
-      const FaceAnnotation_Landmark_Type._(13, 'MOUTH_CENTER');
+      FaceAnnotation_Landmark_Type._(13, 'MOUTH_CENTER');
   static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_RIGHT =
-      const FaceAnnotation_Landmark_Type._(14, 'NOSE_BOTTOM_RIGHT');
+      FaceAnnotation_Landmark_Type._(14, 'NOSE_BOTTOM_RIGHT');
   static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_LEFT =
-      const FaceAnnotation_Landmark_Type._(15, 'NOSE_BOTTOM_LEFT');
+      FaceAnnotation_Landmark_Type._(15, 'NOSE_BOTTOM_LEFT');
   static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_CENTER =
-      const FaceAnnotation_Landmark_Type._(16, 'NOSE_BOTTOM_CENTER');
+      FaceAnnotation_Landmark_Type._(16, 'NOSE_BOTTOM_CENTER');
   static const FaceAnnotation_Landmark_Type LEFT_EYE_TOP_BOUNDARY =
-      const FaceAnnotation_Landmark_Type._(17, 'LEFT_EYE_TOP_BOUNDARY');
+      FaceAnnotation_Landmark_Type._(17, 'LEFT_EYE_TOP_BOUNDARY');
   static const FaceAnnotation_Landmark_Type LEFT_EYE_RIGHT_CORNER =
-      const FaceAnnotation_Landmark_Type._(18, 'LEFT_EYE_RIGHT_CORNER');
+      FaceAnnotation_Landmark_Type._(18, 'LEFT_EYE_RIGHT_CORNER');
   static const FaceAnnotation_Landmark_Type LEFT_EYE_BOTTOM_BOUNDARY =
-      const FaceAnnotation_Landmark_Type._(19, 'LEFT_EYE_BOTTOM_BOUNDARY');
+      FaceAnnotation_Landmark_Type._(19, 'LEFT_EYE_BOTTOM_BOUNDARY');
   static const FaceAnnotation_Landmark_Type LEFT_EYE_LEFT_CORNER =
-      const FaceAnnotation_Landmark_Type._(20, 'LEFT_EYE_LEFT_CORNER');
+      FaceAnnotation_Landmark_Type._(20, 'LEFT_EYE_LEFT_CORNER');
   static const FaceAnnotation_Landmark_Type RIGHT_EYE_TOP_BOUNDARY =
-      const FaceAnnotation_Landmark_Type._(21, 'RIGHT_EYE_TOP_BOUNDARY');
+      FaceAnnotation_Landmark_Type._(21, 'RIGHT_EYE_TOP_BOUNDARY');
   static const FaceAnnotation_Landmark_Type RIGHT_EYE_RIGHT_CORNER =
-      const FaceAnnotation_Landmark_Type._(22, 'RIGHT_EYE_RIGHT_CORNER');
+      FaceAnnotation_Landmark_Type._(22, 'RIGHT_EYE_RIGHT_CORNER');
   static const FaceAnnotation_Landmark_Type RIGHT_EYE_BOTTOM_BOUNDARY =
-      const FaceAnnotation_Landmark_Type._(23, 'RIGHT_EYE_BOTTOM_BOUNDARY');
+      FaceAnnotation_Landmark_Type._(23, 'RIGHT_EYE_BOTTOM_BOUNDARY');
   static const FaceAnnotation_Landmark_Type RIGHT_EYE_LEFT_CORNER =
-      const FaceAnnotation_Landmark_Type._(24, 'RIGHT_EYE_LEFT_CORNER');
+      FaceAnnotation_Landmark_Type._(24, 'RIGHT_EYE_LEFT_CORNER');
   static const FaceAnnotation_Landmark_Type LEFT_EYEBROW_UPPER_MIDPOINT =
-      const FaceAnnotation_Landmark_Type._(25, 'LEFT_EYEBROW_UPPER_MIDPOINT');
+      FaceAnnotation_Landmark_Type._(25, 'LEFT_EYEBROW_UPPER_MIDPOINT');
   static const FaceAnnotation_Landmark_Type RIGHT_EYEBROW_UPPER_MIDPOINT =
-      const FaceAnnotation_Landmark_Type._(26, 'RIGHT_EYEBROW_UPPER_MIDPOINT');
+      FaceAnnotation_Landmark_Type._(26, 'RIGHT_EYEBROW_UPPER_MIDPOINT');
   static const FaceAnnotation_Landmark_Type LEFT_EAR_TRAGION =
-      const FaceAnnotation_Landmark_Type._(27, 'LEFT_EAR_TRAGION');
+      FaceAnnotation_Landmark_Type._(27, 'LEFT_EAR_TRAGION');
   static const FaceAnnotation_Landmark_Type RIGHT_EAR_TRAGION =
-      const FaceAnnotation_Landmark_Type._(28, 'RIGHT_EAR_TRAGION');
+      FaceAnnotation_Landmark_Type._(28, 'RIGHT_EAR_TRAGION');
   static const FaceAnnotation_Landmark_Type LEFT_EYE_PUPIL =
-      const FaceAnnotation_Landmark_Type._(29, 'LEFT_EYE_PUPIL');
+      FaceAnnotation_Landmark_Type._(29, 'LEFT_EYE_PUPIL');
   static const FaceAnnotation_Landmark_Type RIGHT_EYE_PUPIL =
-      const FaceAnnotation_Landmark_Type._(30, 'RIGHT_EYE_PUPIL');
+      FaceAnnotation_Landmark_Type._(30, 'RIGHT_EYE_PUPIL');
   static const FaceAnnotation_Landmark_Type FOREHEAD_GLABELLA =
-      const FaceAnnotation_Landmark_Type._(31, 'FOREHEAD_GLABELLA');
+      FaceAnnotation_Landmark_Type._(31, 'FOREHEAD_GLABELLA');
   static const FaceAnnotation_Landmark_Type CHIN_GNATHION =
-      const FaceAnnotation_Landmark_Type._(32, 'CHIN_GNATHION');
+      FaceAnnotation_Landmark_Type._(32, 'CHIN_GNATHION');
   static const FaceAnnotation_Landmark_Type CHIN_LEFT_GONION =
-      const FaceAnnotation_Landmark_Type._(33, 'CHIN_LEFT_GONION');
+      FaceAnnotation_Landmark_Type._(33, 'CHIN_LEFT_GONION');
   static const FaceAnnotation_Landmark_Type CHIN_RIGHT_GONION =
-      const FaceAnnotation_Landmark_Type._(34, 'CHIN_RIGHT_GONION');
+      FaceAnnotation_Landmark_Type._(34, 'CHIN_RIGHT_GONION');
 
   static const List<FaceAnnotation_Landmark_Type> values =
-      const <FaceAnnotation_Landmark_Type>[
+      <FaceAnnotation_Landmark_Type>[
     UNKNOWN_LANDMARK,
     LEFT_EYE,
     RIGHT_EYE,
@@ -204,18 +202,17 @@ class FaceAnnotation_Landmark_Type extends ProtobufEnum {
 
 class OperationMetadata_State extends ProtobufEnum {
   static const OperationMetadata_State STATE_UNSPECIFIED =
-      const OperationMetadata_State._(0, 'STATE_UNSPECIFIED');
+      OperationMetadata_State._(0, 'STATE_UNSPECIFIED');
   static const OperationMetadata_State CREATED =
-      const OperationMetadata_State._(1, 'CREATED');
+      OperationMetadata_State._(1, 'CREATED');
   static const OperationMetadata_State RUNNING =
-      const OperationMetadata_State._(2, 'RUNNING');
+      OperationMetadata_State._(2, 'RUNNING');
   static const OperationMetadata_State DONE =
-      const OperationMetadata_State._(3, 'DONE');
+      OperationMetadata_State._(3, 'DONE');
   static const OperationMetadata_State CANCELLED =
-      const OperationMetadata_State._(4, 'CANCELLED');
+      OperationMetadata_State._(4, 'CANCELLED');
 
-  static const List<OperationMetadata_State> values =
-      const <OperationMetadata_State>[
+  static const List<OperationMetadata_State> values = <OperationMetadata_State>[
     STATE_UNSPECIFIED,
     CREATED,
     RUNNING,

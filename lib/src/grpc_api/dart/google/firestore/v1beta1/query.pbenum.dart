@@ -9,14 +9,14 @@ import 'package:protobuf/protobuf.dart';
 
 class StructuredQuery_Direction extends ProtobufEnum {
   static const StructuredQuery_Direction DIRECTION_UNSPECIFIED =
-      const StructuredQuery_Direction._(0, 'DIRECTION_UNSPECIFIED');
+      StructuredQuery_Direction._(0, 'DIRECTION_UNSPECIFIED');
   static const StructuredQuery_Direction ASCENDING =
-      const StructuredQuery_Direction._(1, 'ASCENDING');
+      StructuredQuery_Direction._(1, 'ASCENDING');
   static const StructuredQuery_Direction DESCENDING =
-      const StructuredQuery_Direction._(2, 'DESCENDING');
+      StructuredQuery_Direction._(2, 'DESCENDING');
 
   static const List<StructuredQuery_Direction> values =
-      const <StructuredQuery_Direction>[
+      <StructuredQuery_Direction>[
     DIRECTION_UNSPECIFIED,
     ASCENDING,
     DESCENDING,
@@ -35,13 +35,12 @@ class StructuredQuery_Direction extends ProtobufEnum {
 
 class StructuredQuery_CompositeFilter_Operator extends ProtobufEnum {
   static const StructuredQuery_CompositeFilter_Operator OPERATOR_UNSPECIFIED =
-      const StructuredQuery_CompositeFilter_Operator._(
-          0, 'OPERATOR_UNSPECIFIED');
+      StructuredQuery_CompositeFilter_Operator._(0, 'OPERATOR_UNSPECIFIED');
   static const StructuredQuery_CompositeFilter_Operator AND =
-      const StructuredQuery_CompositeFilter_Operator._(1, 'AND');
+      StructuredQuery_CompositeFilter_Operator._(1, 'AND');
 
   static const List<StructuredQuery_CompositeFilter_Operator> values =
-      const <StructuredQuery_CompositeFilter_Operator>[
+      <StructuredQuery_CompositeFilter_Operator>[
     OPERATOR_UNSPECIFIED,
     AND,
   ];
@@ -60,20 +59,20 @@ class StructuredQuery_CompositeFilter_Operator extends ProtobufEnum {
 
 class StructuredQuery_FieldFilter_Operator extends ProtobufEnum {
   static const StructuredQuery_FieldFilter_Operator OPERATOR_UNSPECIFIED =
-      const StructuredQuery_FieldFilter_Operator._(0, 'OPERATOR_UNSPECIFIED');
+      StructuredQuery_FieldFilter_Operator._(0, 'OPERATOR_UNSPECIFIED');
   static const StructuredQuery_FieldFilter_Operator LESS_THAN =
-      const StructuredQuery_FieldFilter_Operator._(1, 'LESS_THAN');
+      StructuredQuery_FieldFilter_Operator._(1, 'LESS_THAN');
   static const StructuredQuery_FieldFilter_Operator LESS_THAN_OR_EQUAL =
-      const StructuredQuery_FieldFilter_Operator._(2, 'LESS_THAN_OR_EQUAL');
+      StructuredQuery_FieldFilter_Operator._(2, 'LESS_THAN_OR_EQUAL');
   static const StructuredQuery_FieldFilter_Operator GREATER_THAN =
-      const StructuredQuery_FieldFilter_Operator._(3, 'GREATER_THAN');
+      StructuredQuery_FieldFilter_Operator._(3, 'GREATER_THAN');
   static const StructuredQuery_FieldFilter_Operator GREATER_THAN_OR_EQUAL =
-      const StructuredQuery_FieldFilter_Operator._(4, 'GREATER_THAN_OR_EQUAL');
+      StructuredQuery_FieldFilter_Operator._(4, 'GREATER_THAN_OR_EQUAL');
   static const StructuredQuery_FieldFilter_Operator EQUAL =
-      const StructuredQuery_FieldFilter_Operator._(5, 'EQUAL');
+      StructuredQuery_FieldFilter_Operator._(5, 'EQUAL');
 
   static const List<StructuredQuery_FieldFilter_Operator> values =
-      const <StructuredQuery_FieldFilter_Operator>[
+      <StructuredQuery_FieldFilter_Operator>[
     OPERATOR_UNSPECIFIED,
     LESS_THAN,
     LESS_THAN_OR_EQUAL,
@@ -95,14 +94,14 @@ class StructuredQuery_FieldFilter_Operator extends ProtobufEnum {
 
 class StructuredQuery_UnaryFilter_Operator extends ProtobufEnum {
   static const StructuredQuery_UnaryFilter_Operator OPERATOR_UNSPECIFIED =
-      const StructuredQuery_UnaryFilter_Operator._(0, 'OPERATOR_UNSPECIFIED');
+      StructuredQuery_UnaryFilter_Operator._(0, 'OPERATOR_UNSPECIFIED');
   static const StructuredQuery_UnaryFilter_Operator IS_NAN =
-      const StructuredQuery_UnaryFilter_Operator._(2, 'IS_NAN');
+      StructuredQuery_UnaryFilter_Operator._(2, 'IS_NAN');
   static const StructuredQuery_UnaryFilter_Operator IS_NULL =
-      const StructuredQuery_UnaryFilter_Operator._(3, 'IS_NULL');
+      StructuredQuery_UnaryFilter_Operator._(3, 'IS_NULL');
 
   static const List<StructuredQuery_UnaryFilter_Operator> values =
-      const <StructuredQuery_UnaryFilter_Operator>[
+      <StructuredQuery_UnaryFilter_Operator>[
     OPERATOR_UNSPECIFIED,
     IS_NAN,
     IS_NULL,

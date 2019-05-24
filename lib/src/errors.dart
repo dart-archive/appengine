@@ -21,7 +21,7 @@ class NetworkError extends AppEngineError implements IOException {
 }
 
 class ProtocolError extends AppEngineError implements IOException {
-  static ProtocolError INVALID_RESPONSE = new ProtocolError("Invalid response");
+  static ProtocolError INVALID_RESPONSE = ProtocolError("Invalid response");
 
   ProtocolError(String message) : super(message);
 
@@ -31,7 +31,7 @@ class ProtocolError extends AppEngineError implements IOException {
 class ServiceError extends AppEngineError {
   final String serviceName;
 
-  ServiceError(String message, {this.serviceName: 'ServiceError'})
+  ServiceError(String message, {this.serviceName = 'ServiceError'})
       : super(message);
 
   String toString() => "$serviceName: $message";

@@ -15,7 +15,7 @@ import 'operations.pbenum.dart';
 export 'operations.pbenum.dart';
 
 class OperationMetadataV1Beta2 extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadataV1Beta2')
+  static final BuilderInfo _i = BuilderInfo('OperationMetadataV1Beta2')
     ..aOS(1, 'target')
     ..e<OperationType>(
         2,
@@ -36,14 +36,14 @@ class OperationMetadataV1Beta2 extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   OperationMetadataV1Beta2 clone() =>
-      new OperationMetadataV1Beta2()..mergeFromMessage(this);
+      OperationMetadataV1Beta2()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OperationMetadataV1Beta2 create() => new OperationMetadataV1Beta2();
+  static OperationMetadataV1Beta2 create() => OperationMetadataV1Beta2();
   static PbList<OperationMetadataV1Beta2> createRepeated() =>
-      new PbList<OperationMetadataV1Beta2>();
+      PbList<OperationMetadataV1Beta2>();
   static OperationMetadataV1Beta2 getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadataV1Beta2();
+      _defaultInstance = _ReadonlyOperationMetadataV1Beta2();
     return _defaultInstance;
   }
 

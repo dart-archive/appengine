@@ -13,7 +13,7 @@ import 'policy.pbenum.dart';
 export 'policy.pbenum.dart';
 
 class Policy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Policy')
+  static final BuilderInfo _i = BuilderInfo('Policy')
     ..a<int>(1, 'version', PbFieldType.O3)
     ..a<List<int>>(3, 'etag', PbFieldType.OY)
     ..pp<Binding>(
@@ -26,12 +26,12 @@ class Policy extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Policy.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Policy clone() => new Policy()..mergeFromMessage(this);
+  Policy clone() => Policy()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Policy create() => new Policy();
-  static PbList<Policy> createRepeated() => new PbList<Policy>();
+  static Policy create() => Policy();
+  static PbList<Policy> createRepeated() => PbList<Policy>();
   static Policy getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPolicy();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPolicy();
     return _defaultInstance;
   }
 
@@ -62,7 +62,7 @@ class Policy extends GeneratedMessage {
 class _ReadonlyPolicy extends Policy with ReadonlyMessageMixin {}
 
 class Binding extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Binding')
+  static final BuilderInfo _i = BuilderInfo('Binding')
     ..aOS(1, 'role')
     ..pPS(2, 'members')
     ..hasRequiredFields = false;
@@ -73,12 +73,12 @@ class Binding extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Binding.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Binding clone() => new Binding()..mergeFromMessage(this);
+  Binding clone() => Binding()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Binding create() => new Binding();
-  static PbList<Binding> createRepeated() => new PbList<Binding>();
+  static Binding create() => Binding();
+  static PbList<Binding> createRepeated() => PbList<Binding>();
   static Binding getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBinding();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBinding();
     return _defaultInstance;
   }
 
@@ -101,7 +101,7 @@ class Binding extends GeneratedMessage {
 class _ReadonlyBinding extends Binding with ReadonlyMessageMixin {}
 
 class PolicyDelta extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PolicyDelta')
+  static final BuilderInfo _i = BuilderInfo('PolicyDelta')
     ..pp<BindingDelta>(1, 'bindingDeltas', PbFieldType.PM,
         BindingDelta.$checkItem, BindingDelta.create)
     ..hasRequiredFields = false;
@@ -113,12 +113,12 @@ class PolicyDelta extends GeneratedMessage {
   PolicyDelta.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PolicyDelta clone() => new PolicyDelta()..mergeFromMessage(this);
+  PolicyDelta clone() => PolicyDelta()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PolicyDelta create() => new PolicyDelta();
-  static PbList<PolicyDelta> createRepeated() => new PbList<PolicyDelta>();
+  static PolicyDelta create() => PolicyDelta();
+  static PbList<PolicyDelta> createRepeated() => PbList<PolicyDelta>();
   static PolicyDelta getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPolicyDelta();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPolicyDelta();
     return _defaultInstance;
   }
 
@@ -133,7 +133,7 @@ class PolicyDelta extends GeneratedMessage {
 class _ReadonlyPolicyDelta extends PolicyDelta with ReadonlyMessageMixin {}
 
 class BindingDelta extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BindingDelta')
+  static final BuilderInfo _i = BuilderInfo('BindingDelta')
     ..e<BindingDelta_Action>(
         1,
         'action',
@@ -152,13 +152,12 @@ class BindingDelta extends GeneratedMessage {
   BindingDelta.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BindingDelta clone() => new BindingDelta()..mergeFromMessage(this);
+  BindingDelta clone() => BindingDelta()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BindingDelta create() => new BindingDelta();
-  static PbList<BindingDelta> createRepeated() => new PbList<BindingDelta>();
+  static BindingDelta create() => BindingDelta();
+  static PbList<BindingDelta> createRepeated() => PbList<BindingDelta>();
   static BindingDelta getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBindingDelta();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBindingDelta();
     return _defaultInstance;
   }
 

@@ -19,7 +19,7 @@ import 'common.pbenum.dart';
 export 'alert.pbenum.dart';
 
 class AlertPolicy_Documentation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AlertPolicy_Documentation')
+  static final BuilderInfo _i = BuilderInfo('AlertPolicy_Documentation')
     ..aOS(1, 'content')
     ..aOS(2, 'mimeType')
     ..hasRequiredFields = false;
@@ -32,14 +32,14 @@ class AlertPolicy_Documentation extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AlertPolicy_Documentation clone() =>
-      new AlertPolicy_Documentation()..mergeFromMessage(this);
+      AlertPolicy_Documentation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AlertPolicy_Documentation create() => new AlertPolicy_Documentation();
+  static AlertPolicy_Documentation create() => AlertPolicy_Documentation();
   static PbList<AlertPolicy_Documentation> createRepeated() =>
-      new PbList<AlertPolicy_Documentation>();
+      PbList<AlertPolicy_Documentation>();
   static AlertPolicy_Documentation getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAlertPolicy_Documentation();
+      _defaultInstance = _ReadonlyAlertPolicy_Documentation();
     return _defaultInstance;
   }
 
@@ -70,7 +70,7 @@ class _ReadonlyAlertPolicy_Documentation extends AlertPolicy_Documentation
     with ReadonlyMessageMixin {}
 
 class AlertPolicy_Condition_Trigger extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AlertPolicy_Condition_Trigger')
+  static final BuilderInfo _i = BuilderInfo('AlertPolicy_Condition_Trigger')
     ..a<int>(1, 'count', PbFieldType.O3)
     ..a<double>(2, 'percent', PbFieldType.OD)
     ..hasRequiredFields = false;
@@ -83,15 +83,15 @@ class AlertPolicy_Condition_Trigger extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AlertPolicy_Condition_Trigger clone() =>
-      new AlertPolicy_Condition_Trigger()..mergeFromMessage(this);
+      AlertPolicy_Condition_Trigger()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AlertPolicy_Condition_Trigger create() =>
-      new AlertPolicy_Condition_Trigger();
+      AlertPolicy_Condition_Trigger();
   static PbList<AlertPolicy_Condition_Trigger> createRepeated() =>
-      new PbList<AlertPolicy_Condition_Trigger>();
+      PbList<AlertPolicy_Condition_Trigger>();
   static AlertPolicy_Condition_Trigger getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAlertPolicy_Condition_Trigger();
+      _defaultInstance = _ReadonlyAlertPolicy_Condition_Trigger();
     return _defaultInstance;
   }
 
@@ -123,7 +123,7 @@ class _ReadonlyAlertPolicy_Condition_Trigger
 
 class AlertPolicy_Condition_MetricThreshold extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('AlertPolicy_Condition_MetricThreshold')
+      BuilderInfo('AlertPolicy_Condition_MetricThreshold')
         ..aOS(2, 'filter')
         ..e<ComparisonType>(
             4,
@@ -160,15 +160,15 @@ class AlertPolicy_Condition_MetricThreshold extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AlertPolicy_Condition_MetricThreshold clone() =>
-      new AlertPolicy_Condition_MetricThreshold()..mergeFromMessage(this);
+      AlertPolicy_Condition_MetricThreshold()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AlertPolicy_Condition_MetricThreshold create() =>
-      new AlertPolicy_Condition_MetricThreshold();
+      AlertPolicy_Condition_MetricThreshold();
   static PbList<AlertPolicy_Condition_MetricThreshold> createRepeated() =>
-      new PbList<AlertPolicy_Condition_MetricThreshold>();
+      PbList<AlertPolicy_Condition_MetricThreshold>();
   static AlertPolicy_Condition_MetricThreshold getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAlertPolicy_Condition_MetricThreshold();
+      _defaultInstance = _ReadonlyAlertPolicy_Condition_MetricThreshold();
     return _defaultInstance;
   }
 
@@ -236,7 +236,7 @@ class _ReadonlyAlertPolicy_Condition_MetricThreshold
 
 class AlertPolicy_Condition_MetricAbsence extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('AlertPolicy_Condition_MetricAbsence')
+      BuilderInfo('AlertPolicy_Condition_MetricAbsence')
         ..aOS(1, 'filter')
         ..a<$google$protobuf.Duration>(
             2,
@@ -262,15 +262,15 @@ class AlertPolicy_Condition_MetricAbsence extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AlertPolicy_Condition_MetricAbsence clone() =>
-      new AlertPolicy_Condition_MetricAbsence()..mergeFromMessage(this);
+      AlertPolicy_Condition_MetricAbsence()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AlertPolicy_Condition_MetricAbsence create() =>
-      new AlertPolicy_Condition_MetricAbsence();
+      AlertPolicy_Condition_MetricAbsence();
   static PbList<AlertPolicy_Condition_MetricAbsence> createRepeated() =>
-      new PbList<AlertPolicy_Condition_MetricAbsence>();
+      PbList<AlertPolicy_Condition_MetricAbsence>();
   static AlertPolicy_Condition_MetricAbsence getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAlertPolicy_Condition_MetricAbsence();
+      _defaultInstance = _ReadonlyAlertPolicy_Condition_MetricAbsence();
     return _defaultInstance;
   }
 
@@ -311,7 +311,7 @@ class _ReadonlyAlertPolicy_Condition_MetricAbsence
     extends AlertPolicy_Condition_MetricAbsence with ReadonlyMessageMixin {}
 
 class AlertPolicy_Condition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AlertPolicy_Condition')
+  static final BuilderInfo _i = BuilderInfo('AlertPolicy_Condition')
     ..a<AlertPolicy_Condition_MetricThreshold>(
         1,
         'conditionThreshold',
@@ -336,14 +336,14 @@ class AlertPolicy_Condition extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AlertPolicy_Condition clone() =>
-      new AlertPolicy_Condition()..mergeFromMessage(this);
+      AlertPolicy_Condition()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AlertPolicy_Condition create() => new AlertPolicy_Condition();
+  static AlertPolicy_Condition create() => AlertPolicy_Condition();
   static PbList<AlertPolicy_Condition> createRepeated() =>
-      new PbList<AlertPolicy_Condition>();
+      PbList<AlertPolicy_Condition>();
   static AlertPolicy_Condition getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAlertPolicy_Condition();
+      _defaultInstance = _ReadonlyAlertPolicy_Condition();
     return _defaultInstance;
   }
 
@@ -390,7 +390,7 @@ class _ReadonlyAlertPolicy_Condition extends AlertPolicy_Condition
     with ReadonlyMessageMixin {}
 
 class AlertPolicy_UserLabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AlertPolicy_UserLabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('AlertPolicy_UserLabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -403,15 +403,14 @@ class AlertPolicy_UserLabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AlertPolicy_UserLabelsEntry clone() =>
-      new AlertPolicy_UserLabelsEntry()..mergeFromMessage(this);
+      AlertPolicy_UserLabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AlertPolicy_UserLabelsEntry create() =>
-      new AlertPolicy_UserLabelsEntry();
+  static AlertPolicy_UserLabelsEntry create() => AlertPolicy_UserLabelsEntry();
   static PbList<AlertPolicy_UserLabelsEntry> createRepeated() =>
-      new PbList<AlertPolicy_UserLabelsEntry>();
+      PbList<AlertPolicy_UserLabelsEntry>();
   static AlertPolicy_UserLabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAlertPolicy_UserLabelsEntry();
+      _defaultInstance = _ReadonlyAlertPolicy_UserLabelsEntry();
     return _defaultInstance;
   }
 
@@ -442,7 +441,7 @@ class _ReadonlyAlertPolicy_UserLabelsEntry extends AlertPolicy_UserLabelsEntry
     with ReadonlyMessageMixin {}
 
 class AlertPolicy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AlertPolicy')
+  static final BuilderInfo _i = BuilderInfo('AlertPolicy')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..e<AlertPolicy_ConditionCombinerType>(
@@ -482,12 +481,12 @@ class AlertPolicy extends GeneratedMessage {
   AlertPolicy.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AlertPolicy clone() => new AlertPolicy()..mergeFromMessage(this);
+  AlertPolicy clone() => AlertPolicy()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AlertPolicy create() => new AlertPolicy();
-  static PbList<AlertPolicy> createRepeated() => new PbList<AlertPolicy>();
+  static AlertPolicy create() => AlertPolicy();
+  static PbList<AlertPolicy> createRepeated() => PbList<AlertPolicy>();
   static AlertPolicy getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAlertPolicy();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAlertPolicy();
     return _defaultInstance;
   }
 

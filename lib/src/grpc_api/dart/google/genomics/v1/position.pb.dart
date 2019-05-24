@@ -10,7 +10,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Position extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Position')
+  static final BuilderInfo _i = BuilderInfo('Position')
     ..aOS(1, 'referenceName')
     ..aInt64(2, 'position')
     ..aOB(3, 'reverseStrand')
@@ -22,12 +22,12 @@ class Position extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Position.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Position clone() => new Position()..mergeFromMessage(this);
+  Position clone() => Position()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Position create() => new Position();
-  static PbList<Position> createRepeated() => new PbList<Position>();
+  static Position create() => Position();
+  static PbList<Position> createRepeated() => PbList<Position>();
   static Position getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPosition();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPosition();
     return _defaultInstance;
   }
 

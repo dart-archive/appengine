@@ -27,17 +27,17 @@ abstract class CloudRedisServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListInstances':
-        return new ListInstancesRequest();
+        return ListInstancesRequest();
       case 'GetInstance':
-        return new GetInstanceRequest();
+        return GetInstanceRequest();
       case 'CreateInstance':
-        return new CreateInstanceRequest();
+        return CreateInstanceRequest();
       case 'UpdateInstance':
-        return new UpdateInstanceRequest();
+        return UpdateInstanceRequest();
       case 'DeleteInstance':
-        return new DeleteInstanceRequest();
+        return DeleteInstanceRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -55,7 +55,7 @@ abstract class CloudRedisServiceBase extends GeneratedService {
       case 'DeleteInstance':
         return this.deleteInstance(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

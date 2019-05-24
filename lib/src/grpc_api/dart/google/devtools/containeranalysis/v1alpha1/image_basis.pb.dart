@@ -13,7 +13,7 @@ import 'image_basis.pbenum.dart';
 export 'image_basis.pbenum.dart';
 
 class DockerImage_Layer extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DockerImage_Layer')
+  static final BuilderInfo _i = BuilderInfo('DockerImage_Layer')
     ..e<DockerImage_Layer_Directive>(
         1,
         'directive',
@@ -31,14 +31,14 @@ class DockerImage_Layer extends GeneratedMessage {
   DockerImage_Layer.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DockerImage_Layer clone() => new DockerImage_Layer()..mergeFromMessage(this);
+  DockerImage_Layer clone() => DockerImage_Layer()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DockerImage_Layer create() => new DockerImage_Layer();
+  static DockerImage_Layer create() => DockerImage_Layer();
   static PbList<DockerImage_Layer> createRepeated() =>
-      new PbList<DockerImage_Layer>();
+      PbList<DockerImage_Layer>();
   static DockerImage_Layer getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDockerImage_Layer();
+      _defaultInstance = _ReadonlyDockerImage_Layer();
     return _defaultInstance;
   }
 
@@ -68,7 +68,7 @@ class _ReadonlyDockerImage_Layer extends DockerImage_Layer
     with ReadonlyMessageMixin {}
 
 class DockerImage_Fingerprint extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DockerImage_Fingerprint')
+  static final BuilderInfo _i = BuilderInfo('DockerImage_Fingerprint')
     ..aOS(1, 'v1Name')
     ..pPS(2, 'v2Blob')
     ..aOS(3, 'v2Name')
@@ -82,14 +82,14 @@ class DockerImage_Fingerprint extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DockerImage_Fingerprint clone() =>
-      new DockerImage_Fingerprint()..mergeFromMessage(this);
+      DockerImage_Fingerprint()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DockerImage_Fingerprint create() => new DockerImage_Fingerprint();
+  static DockerImage_Fingerprint create() => DockerImage_Fingerprint();
   static PbList<DockerImage_Fingerprint> createRepeated() =>
-      new PbList<DockerImage_Fingerprint>();
+      PbList<DockerImage_Fingerprint>();
   static DockerImage_Fingerprint getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDockerImage_Fingerprint();
+      _defaultInstance = _ReadonlyDockerImage_Fingerprint();
     return _defaultInstance;
   }
 
@@ -122,7 +122,7 @@ class _ReadonlyDockerImage_Fingerprint extends DockerImage_Fingerprint
     with ReadonlyMessageMixin {}
 
 class DockerImage_Basis extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DockerImage_Basis')
+  static final BuilderInfo _i = BuilderInfo('DockerImage_Basis')
     ..aOS(1, 'resourceUrl')
     ..a<DockerImage_Fingerprint>(2, 'fingerprint', PbFieldType.OM,
         DockerImage_Fingerprint.getDefault, DockerImage_Fingerprint.create)
@@ -135,14 +135,14 @@ class DockerImage_Basis extends GeneratedMessage {
   DockerImage_Basis.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DockerImage_Basis clone() => new DockerImage_Basis()..mergeFromMessage(this);
+  DockerImage_Basis clone() => DockerImage_Basis()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DockerImage_Basis create() => new DockerImage_Basis();
+  static DockerImage_Basis create() => DockerImage_Basis();
   static PbList<DockerImage_Basis> createRepeated() =>
-      new PbList<DockerImage_Basis>();
+      PbList<DockerImage_Basis>();
   static DockerImage_Basis getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDockerImage_Basis();
+      _defaultInstance = _ReadonlyDockerImage_Basis();
     return _defaultInstance;
   }
 
@@ -172,7 +172,7 @@ class _ReadonlyDockerImage_Basis extends DockerImage_Basis
     with ReadonlyMessageMixin {}
 
 class DockerImage_Derived extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DockerImage_Derived')
+  static final BuilderInfo _i = BuilderInfo('DockerImage_Derived')
     ..a<DockerImage_Fingerprint>(1, 'fingerprint', PbFieldType.OM,
         DockerImage_Fingerprint.getDefault, DockerImage_Fingerprint.create)
     ..a<int>(2, 'distance', PbFieldType.OU3)
@@ -188,15 +188,14 @@ class DockerImage_Derived extends GeneratedMessage {
   DockerImage_Derived.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DockerImage_Derived clone() =>
-      new DockerImage_Derived()..mergeFromMessage(this);
+  DockerImage_Derived clone() => DockerImage_Derived()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DockerImage_Derived create() => new DockerImage_Derived();
+  static DockerImage_Derived create() => DockerImage_Derived();
   static PbList<DockerImage_Derived> createRepeated() =>
-      new PbList<DockerImage_Derived>();
+      PbList<DockerImage_Derived>();
   static DockerImage_Derived getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDockerImage_Derived();
+      _defaultInstance = _ReadonlyDockerImage_Derived();
     return _defaultInstance;
   }
 
@@ -236,7 +235,7 @@ class _ReadonlyDockerImage_Derived extends DockerImage_Derived
     with ReadonlyMessageMixin {}
 
 class DockerImage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DockerImage')
+  static final BuilderInfo _i = BuilderInfo('DockerImage')
     ..hasRequiredFields = false;
 
   DockerImage() : super();
@@ -246,12 +245,12 @@ class DockerImage extends GeneratedMessage {
   DockerImage.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DockerImage clone() => new DockerImage()..mergeFromMessage(this);
+  DockerImage clone() => DockerImage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DockerImage create() => new DockerImage();
-  static PbList<DockerImage> createRepeated() => new PbList<DockerImage>();
+  static DockerImage create() => DockerImage();
+  static PbList<DockerImage> createRepeated() => PbList<DockerImage>();
   static DockerImage getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDockerImage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDockerImage();
     return _defaultInstance;
   }
 

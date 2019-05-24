@@ -66,57 +66,57 @@ abstract class DlpServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'InspectContent':
-        return new InspectContentRequest();
+        return InspectContentRequest();
       case 'RedactImage':
-        return new RedactImageRequest();
+        return RedactImageRequest();
       case 'DeidentifyContent':
-        return new DeidentifyContentRequest();
+        return DeidentifyContentRequest();
       case 'ReidentifyContent':
-        return new ReidentifyContentRequest();
+        return ReidentifyContentRequest();
       case 'ListInfoTypes':
-        return new ListInfoTypesRequest();
+        return ListInfoTypesRequest();
       case 'CreateInspectTemplate':
-        return new CreateInspectTemplateRequest();
+        return CreateInspectTemplateRequest();
       case 'UpdateInspectTemplate':
-        return new UpdateInspectTemplateRequest();
+        return UpdateInspectTemplateRequest();
       case 'GetInspectTemplate':
-        return new GetInspectTemplateRequest();
+        return GetInspectTemplateRequest();
       case 'ListInspectTemplates':
-        return new ListInspectTemplatesRequest();
+        return ListInspectTemplatesRequest();
       case 'DeleteInspectTemplate':
-        return new DeleteInspectTemplateRequest();
+        return DeleteInspectTemplateRequest();
       case 'CreateDeidentifyTemplate':
-        return new CreateDeidentifyTemplateRequest();
+        return CreateDeidentifyTemplateRequest();
       case 'UpdateDeidentifyTemplate':
-        return new UpdateDeidentifyTemplateRequest();
+        return UpdateDeidentifyTemplateRequest();
       case 'GetDeidentifyTemplate':
-        return new GetDeidentifyTemplateRequest();
+        return GetDeidentifyTemplateRequest();
       case 'ListDeidentifyTemplates':
-        return new ListDeidentifyTemplatesRequest();
+        return ListDeidentifyTemplatesRequest();
       case 'DeleteDeidentifyTemplate':
-        return new DeleteDeidentifyTemplateRequest();
+        return DeleteDeidentifyTemplateRequest();
       case 'CreateJobTrigger':
-        return new CreateJobTriggerRequest();
+        return CreateJobTriggerRequest();
       case 'UpdateJobTrigger':
-        return new UpdateJobTriggerRequest();
+        return UpdateJobTriggerRequest();
       case 'GetJobTrigger':
-        return new GetJobTriggerRequest();
+        return GetJobTriggerRequest();
       case 'ListJobTriggers':
-        return new ListJobTriggersRequest();
+        return ListJobTriggersRequest();
       case 'DeleteJobTrigger':
-        return new DeleteJobTriggerRequest();
+        return DeleteJobTriggerRequest();
       case 'CreateDlpJob':
-        return new CreateDlpJobRequest();
+        return CreateDlpJobRequest();
       case 'ListDlpJobs':
-        return new ListDlpJobsRequest();
+        return ListDlpJobsRequest();
       case 'GetDlpJob':
-        return new GetDlpJobRequest();
+        return GetDlpJobRequest();
       case 'DeleteDlpJob':
-        return new DeleteDlpJobRequest();
+        return DeleteDlpJobRequest();
       case 'CancelDlpJob':
-        return new CancelDlpJobRequest();
+        return CancelDlpJobRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -174,7 +174,7 @@ abstract class DlpServiceBase extends GeneratedService {
       case 'CancelDlpJob':
         return this.cancelDlpJob(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

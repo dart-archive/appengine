@@ -21,7 +21,7 @@ import 'pipelines.pbenum.dart';
 export 'pipelines.pbenum.dart';
 
 class ComputeEngine extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ComputeEngine')
+  static final BuilderInfo _i = BuilderInfo('ComputeEngine')
     ..aOS(1, 'instanceName')
     ..aOS(2, 'zone')
     ..aOS(3, 'machineType')
@@ -35,13 +35,12 @@ class ComputeEngine extends GeneratedMessage {
   ComputeEngine.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ComputeEngine clone() => new ComputeEngine()..mergeFromMessage(this);
+  ComputeEngine clone() => ComputeEngine()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ComputeEngine create() => new ComputeEngine();
-  static PbList<ComputeEngine> createRepeated() => new PbList<ComputeEngine>();
+  static ComputeEngine create() => ComputeEngine();
+  static PbList<ComputeEngine> createRepeated() => PbList<ComputeEngine>();
   static ComputeEngine getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyComputeEngine();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyComputeEngine();
     return _defaultInstance;
   }
 
@@ -80,7 +79,7 @@ class ComputeEngine extends GeneratedMessage {
 class _ReadonlyComputeEngine extends ComputeEngine with ReadonlyMessageMixin {}
 
 class RuntimeMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RuntimeMetadata')
+  static final BuilderInfo _i = BuilderInfo('RuntimeMetadata')
     ..a<ComputeEngine>(1, 'computeEngine', PbFieldType.OM,
         ComputeEngine.getDefault, ComputeEngine.create)
     ..hasRequiredFields = false;
@@ -92,14 +91,12 @@ class RuntimeMetadata extends GeneratedMessage {
   RuntimeMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RuntimeMetadata clone() => new RuntimeMetadata()..mergeFromMessage(this);
+  RuntimeMetadata clone() => RuntimeMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RuntimeMetadata create() => new RuntimeMetadata();
-  static PbList<RuntimeMetadata> createRepeated() =>
-      new PbList<RuntimeMetadata>();
+  static RuntimeMetadata create() => RuntimeMetadata();
+  static PbList<RuntimeMetadata> createRepeated() => PbList<RuntimeMetadata>();
   static RuntimeMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRuntimeMetadata();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRuntimeMetadata();
     return _defaultInstance;
   }
 
@@ -121,7 +118,7 @@ class _ReadonlyRuntimeMetadata extends RuntimeMetadata
     with ReadonlyMessageMixin {}
 
 class Pipeline extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Pipeline')
+  static final BuilderInfo _i = BuilderInfo('Pipeline')
     ..aOS(1, 'projectId')
     ..aOS(2, 'name')
     ..aOS(3, 'description')
@@ -142,12 +139,12 @@ class Pipeline extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Pipeline.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Pipeline clone() => new Pipeline()..mergeFromMessage(this);
+  Pipeline clone() => Pipeline()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Pipeline create() => new Pipeline();
-  static PbList<Pipeline> createRepeated() => new PbList<Pipeline>();
+  static Pipeline create() => Pipeline();
+  static PbList<Pipeline> createRepeated() => PbList<Pipeline>();
   static Pipeline getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPipeline();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPipeline();
     return _defaultInstance;
   }
 
@@ -212,7 +209,7 @@ class Pipeline extends GeneratedMessage {
 class _ReadonlyPipeline extends Pipeline with ReadonlyMessageMixin {}
 
 class CreatePipelineRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreatePipelineRequest')
+  static final BuilderInfo _i = BuilderInfo('CreatePipelineRequest')
     ..a<Pipeline>(
         1, 'pipeline', PbFieldType.OM, Pipeline.getDefault, Pipeline.create)
     ..hasRequiredFields = false;
@@ -225,14 +222,14 @@ class CreatePipelineRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreatePipelineRequest clone() =>
-      new CreatePipelineRequest()..mergeFromMessage(this);
+      CreatePipelineRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreatePipelineRequest create() => new CreatePipelineRequest();
+  static CreatePipelineRequest create() => CreatePipelineRequest();
   static PbList<CreatePipelineRequest> createRepeated() =>
-      new PbList<CreatePipelineRequest>();
+      PbList<CreatePipelineRequest>();
   static CreatePipelineRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreatePipelineRequest();
+      _defaultInstance = _ReadonlyCreatePipelineRequest();
     return _defaultInstance;
   }
 
@@ -255,7 +252,7 @@ class _ReadonlyCreatePipelineRequest extends CreatePipelineRequest
     with ReadonlyMessageMixin {}
 
 class RunPipelineArgs_InputsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RunPipelineArgs_InputsEntry')
+  static final BuilderInfo _i = BuilderInfo('RunPipelineArgs_InputsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -268,15 +265,14 @@ class RunPipelineArgs_InputsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RunPipelineArgs_InputsEntry clone() =>
-      new RunPipelineArgs_InputsEntry()..mergeFromMessage(this);
+      RunPipelineArgs_InputsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RunPipelineArgs_InputsEntry create() =>
-      new RunPipelineArgs_InputsEntry();
+  static RunPipelineArgs_InputsEntry create() => RunPipelineArgs_InputsEntry();
   static PbList<RunPipelineArgs_InputsEntry> createRepeated() =>
-      new PbList<RunPipelineArgs_InputsEntry>();
+      PbList<RunPipelineArgs_InputsEntry>();
   static RunPipelineArgs_InputsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRunPipelineArgs_InputsEntry();
+      _defaultInstance = _ReadonlyRunPipelineArgs_InputsEntry();
     return _defaultInstance;
   }
 
@@ -307,7 +303,7 @@ class _ReadonlyRunPipelineArgs_InputsEntry extends RunPipelineArgs_InputsEntry
     with ReadonlyMessageMixin {}
 
 class RunPipelineArgs_OutputsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RunPipelineArgs_OutputsEntry')
+  static final BuilderInfo _i = BuilderInfo('RunPipelineArgs_OutputsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -320,15 +316,15 @@ class RunPipelineArgs_OutputsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RunPipelineArgs_OutputsEntry clone() =>
-      new RunPipelineArgs_OutputsEntry()..mergeFromMessage(this);
+      RunPipelineArgs_OutputsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static RunPipelineArgs_OutputsEntry create() =>
-      new RunPipelineArgs_OutputsEntry();
+      RunPipelineArgs_OutputsEntry();
   static PbList<RunPipelineArgs_OutputsEntry> createRepeated() =>
-      new PbList<RunPipelineArgs_OutputsEntry>();
+      PbList<RunPipelineArgs_OutputsEntry>();
   static RunPipelineArgs_OutputsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRunPipelineArgs_OutputsEntry();
+      _defaultInstance = _ReadonlyRunPipelineArgs_OutputsEntry();
     return _defaultInstance;
   }
 
@@ -359,7 +355,7 @@ class _ReadonlyRunPipelineArgs_OutputsEntry extends RunPipelineArgs_OutputsEntry
     with ReadonlyMessageMixin {}
 
 class RunPipelineArgs_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RunPipelineArgs_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('RunPipelineArgs_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -372,15 +368,14 @@ class RunPipelineArgs_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   RunPipelineArgs_LabelsEntry clone() =>
-      new RunPipelineArgs_LabelsEntry()..mergeFromMessage(this);
+      RunPipelineArgs_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RunPipelineArgs_LabelsEntry create() =>
-      new RunPipelineArgs_LabelsEntry();
+  static RunPipelineArgs_LabelsEntry create() => RunPipelineArgs_LabelsEntry();
   static PbList<RunPipelineArgs_LabelsEntry> createRepeated() =>
-      new PbList<RunPipelineArgs_LabelsEntry>();
+      PbList<RunPipelineArgs_LabelsEntry>();
   static RunPipelineArgs_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRunPipelineArgs_LabelsEntry();
+      _defaultInstance = _ReadonlyRunPipelineArgs_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -411,7 +406,7 @@ class _ReadonlyRunPipelineArgs_LabelsEntry extends RunPipelineArgs_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class RunPipelineArgs extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RunPipelineArgs')
+  static final BuilderInfo _i = BuilderInfo('RunPipelineArgs')
     ..aOS(1, 'projectId')
     ..pp<RunPipelineArgs_InputsEntry>(
         2,
@@ -453,14 +448,12 @@ class RunPipelineArgs extends GeneratedMessage {
   RunPipelineArgs.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RunPipelineArgs clone() => new RunPipelineArgs()..mergeFromMessage(this);
+  RunPipelineArgs clone() => RunPipelineArgs()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RunPipelineArgs create() => new RunPipelineArgs();
-  static PbList<RunPipelineArgs> createRepeated() =>
-      new PbList<RunPipelineArgs>();
+  static RunPipelineArgs create() => RunPipelineArgs();
+  static PbList<RunPipelineArgs> createRepeated() => PbList<RunPipelineArgs>();
   static RunPipelineArgs getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRunPipelineArgs();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRunPipelineArgs();
     return _defaultInstance;
   }
 
@@ -528,7 +521,7 @@ class _ReadonlyRunPipelineArgs extends RunPipelineArgs
     with ReadonlyMessageMixin {}
 
 class RunPipelineRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RunPipelineRequest')
+  static final BuilderInfo _i = BuilderInfo('RunPipelineRequest')
     ..aOS(1, 'pipelineId')
     ..a<Pipeline>(2, 'ephemeralPipeline', PbFieldType.OM, Pipeline.getDefault,
         Pipeline.create)
@@ -543,15 +536,14 @@ class RunPipelineRequest extends GeneratedMessage {
   RunPipelineRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RunPipelineRequest clone() =>
-      new RunPipelineRequest()..mergeFromMessage(this);
+  RunPipelineRequest clone() => RunPipelineRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RunPipelineRequest create() => new RunPipelineRequest();
+  static RunPipelineRequest create() => RunPipelineRequest();
   static PbList<RunPipelineRequest> createRepeated() =>
-      new PbList<RunPipelineRequest>();
+      PbList<RunPipelineRequest>();
   static RunPipelineRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRunPipelineRequest();
+      _defaultInstance = _ReadonlyRunPipelineRequest();
     return _defaultInstance;
   }
 
@@ -589,7 +581,7 @@ class _ReadonlyRunPipelineRequest extends RunPipelineRequest
     with ReadonlyMessageMixin {}
 
 class GetPipelineRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetPipelineRequest')
+  static final BuilderInfo _i = BuilderInfo('GetPipelineRequest')
     ..aOS(1, 'pipelineId')
     ..hasRequiredFields = false;
 
@@ -600,15 +592,14 @@ class GetPipelineRequest extends GeneratedMessage {
   GetPipelineRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetPipelineRequest clone() =>
-      new GetPipelineRequest()..mergeFromMessage(this);
+  GetPipelineRequest clone() => GetPipelineRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetPipelineRequest create() => new GetPipelineRequest();
+  static GetPipelineRequest create() => GetPipelineRequest();
   static PbList<GetPipelineRequest> createRepeated() =>
-      new PbList<GetPipelineRequest>();
+      PbList<GetPipelineRequest>();
   static GetPipelineRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetPipelineRequest();
+      _defaultInstance = _ReadonlyGetPipelineRequest();
     return _defaultInstance;
   }
 
@@ -630,7 +621,7 @@ class _ReadonlyGetPipelineRequest extends GetPipelineRequest
     with ReadonlyMessageMixin {}
 
 class ListPipelinesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListPipelinesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListPipelinesRequest')
     ..aOS(1, 'projectId')
     ..aOS(2, 'namePrefix')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -645,14 +636,14 @@ class ListPipelinesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListPipelinesRequest clone() =>
-      new ListPipelinesRequest()..mergeFromMessage(this);
+      ListPipelinesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListPipelinesRequest create() => new ListPipelinesRequest();
+  static ListPipelinesRequest create() => ListPipelinesRequest();
   static PbList<ListPipelinesRequest> createRepeated() =>
-      new PbList<ListPipelinesRequest>();
+      PbList<ListPipelinesRequest>();
   static ListPipelinesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListPipelinesRequest();
+      _defaultInstance = _ReadonlyListPipelinesRequest();
     return _defaultInstance;
   }
 
@@ -698,7 +689,7 @@ class _ReadonlyListPipelinesRequest extends ListPipelinesRequest
     with ReadonlyMessageMixin {}
 
 class ListPipelinesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListPipelinesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListPipelinesResponse')
     ..pp<Pipeline>(
         1, 'pipelines', PbFieldType.PM, Pipeline.$checkItem, Pipeline.create)
     ..aOS(2, 'nextPageToken')
@@ -712,14 +703,14 @@ class ListPipelinesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListPipelinesResponse clone() =>
-      new ListPipelinesResponse()..mergeFromMessage(this);
+      ListPipelinesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListPipelinesResponse create() => new ListPipelinesResponse();
+  static ListPipelinesResponse create() => ListPipelinesResponse();
   static PbList<ListPipelinesResponse> createRepeated() =>
-      new PbList<ListPipelinesResponse>();
+      PbList<ListPipelinesResponse>();
   static ListPipelinesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListPipelinesResponse();
+      _defaultInstance = _ReadonlyListPipelinesResponse();
     return _defaultInstance;
   }
 
@@ -744,7 +735,7 @@ class _ReadonlyListPipelinesResponse extends ListPipelinesResponse
     with ReadonlyMessageMixin {}
 
 class DeletePipelineRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeletePipelineRequest')
+  static final BuilderInfo _i = BuilderInfo('DeletePipelineRequest')
     ..aOS(1, 'pipelineId')
     ..hasRequiredFields = false;
 
@@ -756,14 +747,14 @@ class DeletePipelineRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeletePipelineRequest clone() =>
-      new DeletePipelineRequest()..mergeFromMessage(this);
+      DeletePipelineRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeletePipelineRequest create() => new DeletePipelineRequest();
+  static DeletePipelineRequest create() => DeletePipelineRequest();
   static PbList<DeletePipelineRequest> createRepeated() =>
-      new PbList<DeletePipelineRequest>();
+      PbList<DeletePipelineRequest>();
   static DeletePipelineRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeletePipelineRequest();
+      _defaultInstance = _ReadonlyDeletePipelineRequest();
     return _defaultInstance;
   }
 
@@ -786,7 +777,7 @@ class _ReadonlyDeletePipelineRequest extends DeletePipelineRequest
     with ReadonlyMessageMixin {}
 
 class GetControllerConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetControllerConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('GetControllerConfigRequest')
     ..aOS(1, 'operationId')
     ..a<Int64>(2, 'validationToken', PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false;
@@ -799,15 +790,14 @@ class GetControllerConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetControllerConfigRequest clone() =>
-      new GetControllerConfigRequest()..mergeFromMessage(this);
+      GetControllerConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetControllerConfigRequest create() =>
-      new GetControllerConfigRequest();
+  static GetControllerConfigRequest create() => GetControllerConfigRequest();
   static PbList<GetControllerConfigRequest> createRepeated() =>
-      new PbList<GetControllerConfigRequest>();
+      PbList<GetControllerConfigRequest>();
   static GetControllerConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetControllerConfigRequest();
+      _defaultInstance = _ReadonlyGetControllerConfigRequest();
     return _defaultInstance;
   }
 
@@ -838,10 +828,9 @@ class _ReadonlyGetControllerConfigRequest extends GetControllerConfigRequest
     with ReadonlyMessageMixin {}
 
 class ControllerConfig_RepeatedString extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ControllerConfig_RepeatedString')
-        ..pPS(1, 'values')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ControllerConfig_RepeatedString')
+    ..pPS(1, 'values')
+    ..hasRequiredFields = false;
 
   ControllerConfig_RepeatedString() : super();
   ControllerConfig_RepeatedString.fromBuffer(List<int> i,
@@ -851,15 +840,15 @@ class ControllerConfig_RepeatedString extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ControllerConfig_RepeatedString clone() =>
-      new ControllerConfig_RepeatedString()..mergeFromMessage(this);
+      ControllerConfig_RepeatedString()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ControllerConfig_RepeatedString create() =>
-      new ControllerConfig_RepeatedString();
+      ControllerConfig_RepeatedString();
   static PbList<ControllerConfig_RepeatedString> createRepeated() =>
-      new PbList<ControllerConfig_RepeatedString>();
+      PbList<ControllerConfig_RepeatedString>();
   static ControllerConfig_RepeatedString getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyControllerConfig_RepeatedString();
+      _defaultInstance = _ReadonlyControllerConfig_RepeatedString();
     return _defaultInstance;
   }
 
@@ -876,7 +865,7 @@ class _ReadonlyControllerConfig_RepeatedString
     extends ControllerConfig_RepeatedString with ReadonlyMessageMixin {}
 
 class ControllerConfig_VarsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ControllerConfig_VarsEntry')
+  static final BuilderInfo _i = BuilderInfo('ControllerConfig_VarsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -889,15 +878,14 @@ class ControllerConfig_VarsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ControllerConfig_VarsEntry clone() =>
-      new ControllerConfig_VarsEntry()..mergeFromMessage(this);
+      ControllerConfig_VarsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ControllerConfig_VarsEntry create() =>
-      new ControllerConfig_VarsEntry();
+  static ControllerConfig_VarsEntry create() => ControllerConfig_VarsEntry();
   static PbList<ControllerConfig_VarsEntry> createRepeated() =>
-      new PbList<ControllerConfig_VarsEntry>();
+      PbList<ControllerConfig_VarsEntry>();
   static ControllerConfig_VarsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyControllerConfig_VarsEntry();
+      _defaultInstance = _ReadonlyControllerConfig_VarsEntry();
     return _defaultInstance;
   }
 
@@ -928,7 +916,7 @@ class _ReadonlyControllerConfig_VarsEntry extends ControllerConfig_VarsEntry
     with ReadonlyMessageMixin {}
 
 class ControllerConfig_DisksEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ControllerConfig_DisksEntry')
+  static final BuilderInfo _i = BuilderInfo('ControllerConfig_DisksEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -941,15 +929,14 @@ class ControllerConfig_DisksEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ControllerConfig_DisksEntry clone() =>
-      new ControllerConfig_DisksEntry()..mergeFromMessage(this);
+      ControllerConfig_DisksEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ControllerConfig_DisksEntry create() =>
-      new ControllerConfig_DisksEntry();
+  static ControllerConfig_DisksEntry create() => ControllerConfig_DisksEntry();
   static PbList<ControllerConfig_DisksEntry> createRepeated() =>
-      new PbList<ControllerConfig_DisksEntry>();
+      PbList<ControllerConfig_DisksEntry>();
   static ControllerConfig_DisksEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyControllerConfig_DisksEntry();
+      _defaultInstance = _ReadonlyControllerConfig_DisksEntry();
     return _defaultInstance;
   }
 
@@ -980,16 +967,15 @@ class _ReadonlyControllerConfig_DisksEntry extends ControllerConfig_DisksEntry
     with ReadonlyMessageMixin {}
 
 class ControllerConfig_GcsSourcesEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ControllerConfig_GcsSourcesEntry')
-        ..aOS(1, 'key')
-        ..a<ControllerConfig_RepeatedString>(
-            2,
-            'value',
-            PbFieldType.OM,
-            ControllerConfig_RepeatedString.getDefault,
-            ControllerConfig_RepeatedString.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ControllerConfig_GcsSourcesEntry')
+    ..aOS(1, 'key')
+    ..a<ControllerConfig_RepeatedString>(
+        2,
+        'value',
+        PbFieldType.OM,
+        ControllerConfig_RepeatedString.getDefault,
+        ControllerConfig_RepeatedString.create)
+    ..hasRequiredFields = false;
 
   ControllerConfig_GcsSourcesEntry() : super();
   ControllerConfig_GcsSourcesEntry.fromBuffer(List<int> i,
@@ -999,15 +985,15 @@ class ControllerConfig_GcsSourcesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ControllerConfig_GcsSourcesEntry clone() =>
-      new ControllerConfig_GcsSourcesEntry()..mergeFromMessage(this);
+      ControllerConfig_GcsSourcesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ControllerConfig_GcsSourcesEntry create() =>
-      new ControllerConfig_GcsSourcesEntry();
+      ControllerConfig_GcsSourcesEntry();
   static PbList<ControllerConfig_GcsSourcesEntry> createRepeated() =>
-      new PbList<ControllerConfig_GcsSourcesEntry>();
+      PbList<ControllerConfig_GcsSourcesEntry>();
   static ControllerConfig_GcsSourcesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyControllerConfig_GcsSourcesEntry();
+      _defaultInstance = _ReadonlyControllerConfig_GcsSourcesEntry();
     return _defaultInstance;
   }
 
@@ -1038,16 +1024,15 @@ class _ReadonlyControllerConfig_GcsSourcesEntry
     extends ControllerConfig_GcsSourcesEntry with ReadonlyMessageMixin {}
 
 class ControllerConfig_GcsSinksEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ControllerConfig_GcsSinksEntry')
-        ..aOS(1, 'key')
-        ..a<ControllerConfig_RepeatedString>(
-            2,
-            'value',
-            PbFieldType.OM,
-            ControllerConfig_RepeatedString.getDefault,
-            ControllerConfig_RepeatedString.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ControllerConfig_GcsSinksEntry')
+    ..aOS(1, 'key')
+    ..a<ControllerConfig_RepeatedString>(
+        2,
+        'value',
+        PbFieldType.OM,
+        ControllerConfig_RepeatedString.getDefault,
+        ControllerConfig_RepeatedString.create)
+    ..hasRequiredFields = false;
 
   ControllerConfig_GcsSinksEntry() : super();
   ControllerConfig_GcsSinksEntry.fromBuffer(List<int> i,
@@ -1057,15 +1042,15 @@ class ControllerConfig_GcsSinksEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ControllerConfig_GcsSinksEntry clone() =>
-      new ControllerConfig_GcsSinksEntry()..mergeFromMessage(this);
+      ControllerConfig_GcsSinksEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ControllerConfig_GcsSinksEntry create() =>
-      new ControllerConfig_GcsSinksEntry();
+      ControllerConfig_GcsSinksEntry();
   static PbList<ControllerConfig_GcsSinksEntry> createRepeated() =>
-      new PbList<ControllerConfig_GcsSinksEntry>();
+      PbList<ControllerConfig_GcsSinksEntry>();
   static ControllerConfig_GcsSinksEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyControllerConfig_GcsSinksEntry();
+      _defaultInstance = _ReadonlyControllerConfig_GcsSinksEntry();
     return _defaultInstance;
   }
 
@@ -1096,7 +1081,7 @@ class _ReadonlyControllerConfig_GcsSinksEntry
     extends ControllerConfig_GcsSinksEntry with ReadonlyMessageMixin {}
 
 class ControllerConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ControllerConfig')
+  static final BuilderInfo _i = BuilderInfo('ControllerConfig')
     ..aOS(1, 'image')
     ..aOS(2, 'cmd')
     ..aOS(3, 'gcsLogPath')
@@ -1134,14 +1119,14 @@ class ControllerConfig extends GeneratedMessage {
   ControllerConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ControllerConfig clone() => new ControllerConfig()..mergeFromMessage(this);
+  ControllerConfig clone() => ControllerConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ControllerConfig create() => new ControllerConfig();
+  static ControllerConfig create() => ControllerConfig();
   static PbList<ControllerConfig> createRepeated() =>
-      new PbList<ControllerConfig>();
+      PbList<ControllerConfig>();
   static ControllerConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyControllerConfig();
+      _defaultInstance = _ReadonlyControllerConfig();
     return _defaultInstance;
   }
 
@@ -1195,7 +1180,7 @@ class _ReadonlyControllerConfig extends ControllerConfig
     with ReadonlyMessageMixin {}
 
 class TimestampEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TimestampEvent')
+  static final BuilderInfo _i = BuilderInfo('TimestampEvent')
     ..aOS(1, 'description')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -1212,14 +1197,12 @@ class TimestampEvent extends GeneratedMessage {
   TimestampEvent.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TimestampEvent clone() => new TimestampEvent()..mergeFromMessage(this);
+  TimestampEvent clone() => TimestampEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TimestampEvent create() => new TimestampEvent();
-  static PbList<TimestampEvent> createRepeated() =>
-      new PbList<TimestampEvent>();
+  static TimestampEvent create() => TimestampEvent();
+  static PbList<TimestampEvent> createRepeated() => PbList<TimestampEvent>();
   static TimestampEvent getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTimestampEvent();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTimestampEvent();
     return _defaultInstance;
   }
 
@@ -1249,7 +1232,7 @@ class _ReadonlyTimestampEvent extends TimestampEvent with ReadonlyMessageMixin {
 }
 
 class SetOperationStatusRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetOperationStatusRequest')
+  static final BuilderInfo _i = BuilderInfo('SetOperationStatusRequest')
     ..aOS(1, 'operationId')
     ..pp<TimestampEvent>(2, 'timestampEvents', PbFieldType.PM,
         TimestampEvent.$checkItem, TimestampEvent.create)
@@ -1267,14 +1250,14 @@ class SetOperationStatusRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetOperationStatusRequest clone() =>
-      new SetOperationStatusRequest()..mergeFromMessage(this);
+      SetOperationStatusRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SetOperationStatusRequest create() => new SetOperationStatusRequest();
+  static SetOperationStatusRequest create() => SetOperationStatusRequest();
   static PbList<SetOperationStatusRequest> createRepeated() =>
-      new PbList<SetOperationStatusRequest>();
+      PbList<SetOperationStatusRequest>();
   static SetOperationStatusRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetOperationStatusRequest();
+      _defaultInstance = _ReadonlySetOperationStatusRequest();
     return _defaultInstance;
   }
 
@@ -1323,7 +1306,7 @@ class _ReadonlySetOperationStatusRequest extends SetOperationStatusRequest
     with ReadonlyMessageMixin {}
 
 class ServiceAccount extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ServiceAccount')
+  static final BuilderInfo _i = BuilderInfo('ServiceAccount')
     ..aOS(1, 'email')
     ..pPS(2, 'scopes')
     ..hasRequiredFields = false;
@@ -1335,14 +1318,12 @@ class ServiceAccount extends GeneratedMessage {
   ServiceAccount.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ServiceAccount clone() => new ServiceAccount()..mergeFromMessage(this);
+  ServiceAccount clone() => ServiceAccount()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ServiceAccount create() => new ServiceAccount();
-  static PbList<ServiceAccount> createRepeated() =>
-      new PbList<ServiceAccount>();
+  static ServiceAccount create() => ServiceAccount();
+  static PbList<ServiceAccount> createRepeated() => PbList<ServiceAccount>();
   static ServiceAccount getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyServiceAccount();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyServiceAccount();
     return _defaultInstance;
   }
 
@@ -1366,7 +1347,7 @@ class _ReadonlyServiceAccount extends ServiceAccount with ReadonlyMessageMixin {
 }
 
 class LoggingOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LoggingOptions')
+  static final BuilderInfo _i = BuilderInfo('LoggingOptions')
     ..aOS(1, 'gcsPath')
     ..hasRequiredFields = false;
 
@@ -1377,14 +1358,12 @@ class LoggingOptions extends GeneratedMessage {
   LoggingOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LoggingOptions clone() => new LoggingOptions()..mergeFromMessage(this);
+  LoggingOptions clone() => LoggingOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LoggingOptions create() => new LoggingOptions();
-  static PbList<LoggingOptions> createRepeated() =>
-      new PbList<LoggingOptions>();
+  static LoggingOptions create() => LoggingOptions();
+  static PbList<LoggingOptions> createRepeated() => PbList<LoggingOptions>();
   static LoggingOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLoggingOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLoggingOptions();
     return _defaultInstance;
   }
 
@@ -1406,7 +1385,7 @@ class _ReadonlyLoggingOptions extends LoggingOptions with ReadonlyMessageMixin {
 }
 
 class PipelineResources_Disk extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PipelineResources_Disk')
+  static final BuilderInfo _i = BuilderInfo('PipelineResources_Disk')
     ..aOS(1, 'name')
     ..e<PipelineResources_Disk_Type>(
         2,
@@ -1429,14 +1408,14 @@ class PipelineResources_Disk extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PipelineResources_Disk clone() =>
-      new PipelineResources_Disk()..mergeFromMessage(this);
+      PipelineResources_Disk()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PipelineResources_Disk create() => new PipelineResources_Disk();
+  static PipelineResources_Disk create() => PipelineResources_Disk();
   static PbList<PipelineResources_Disk> createRepeated() =>
-      new PbList<PipelineResources_Disk>();
+      PbList<PipelineResources_Disk>();
   static PipelineResources_Disk getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPipelineResources_Disk();
+      _defaultInstance = _ReadonlyPipelineResources_Disk();
     return _defaultInstance;
   }
 
@@ -1499,7 +1478,7 @@ class _ReadonlyPipelineResources_Disk extends PipelineResources_Disk
     with ReadonlyMessageMixin {}
 
 class PipelineResources extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PipelineResources')
+  static final BuilderInfo _i = BuilderInfo('PipelineResources')
     ..a<int>(1, 'minimumCpuCores', PbFieldType.O3)
     ..aOB(2, 'preemptible')
     ..a<double>(3, 'minimumRamGb', PbFieldType.OD)
@@ -1517,14 +1496,14 @@ class PipelineResources extends GeneratedMessage {
   PipelineResources.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PipelineResources clone() => new PipelineResources()..mergeFromMessage(this);
+  PipelineResources clone() => PipelineResources()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PipelineResources create() => new PipelineResources();
+  static PipelineResources create() => PipelineResources();
   static PbList<PipelineResources> createRepeated() =>
-      new PbList<PipelineResources>();
+      PbList<PipelineResources>();
   static PipelineResources getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPipelineResources();
+      _defaultInstance = _ReadonlyPipelineResources();
     return _defaultInstance;
   }
 
@@ -1582,7 +1561,7 @@ class _ReadonlyPipelineResources extends PipelineResources
     with ReadonlyMessageMixin {}
 
 class PipelineParameter_LocalCopy extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PipelineParameter_LocalCopy')
+  static final BuilderInfo _i = BuilderInfo('PipelineParameter_LocalCopy')
     ..aOS(1, 'path')
     ..aOS(2, 'disk')
     ..hasRequiredFields = false;
@@ -1595,15 +1574,14 @@ class PipelineParameter_LocalCopy extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PipelineParameter_LocalCopy clone() =>
-      new PipelineParameter_LocalCopy()..mergeFromMessage(this);
+      PipelineParameter_LocalCopy()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PipelineParameter_LocalCopy create() =>
-      new PipelineParameter_LocalCopy();
+  static PipelineParameter_LocalCopy create() => PipelineParameter_LocalCopy();
   static PbList<PipelineParameter_LocalCopy> createRepeated() =>
-      new PbList<PipelineParameter_LocalCopy>();
+      PbList<PipelineParameter_LocalCopy>();
   static PipelineParameter_LocalCopy getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPipelineParameter_LocalCopy();
+      _defaultInstance = _ReadonlyPipelineParameter_LocalCopy();
     return _defaultInstance;
   }
 
@@ -1634,7 +1612,7 @@ class _ReadonlyPipelineParameter_LocalCopy extends PipelineParameter_LocalCopy
     with ReadonlyMessageMixin {}
 
 class PipelineParameter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PipelineParameter')
+  static final BuilderInfo _i = BuilderInfo('PipelineParameter')
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOS(5, 'defaultValue')
@@ -1653,14 +1631,14 @@ class PipelineParameter extends GeneratedMessage {
   PipelineParameter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PipelineParameter clone() => new PipelineParameter()..mergeFromMessage(this);
+  PipelineParameter clone() => PipelineParameter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PipelineParameter create() => new PipelineParameter();
+  static PipelineParameter create() => PipelineParameter();
   static PbList<PipelineParameter> createRepeated() =>
-      new PbList<PipelineParameter>();
+      PbList<PipelineParameter>();
   static PipelineParameter getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPipelineParameter();
+      _defaultInstance = _ReadonlyPipelineParameter();
     return _defaultInstance;
   }
 
@@ -1706,7 +1684,7 @@ class _ReadonlyPipelineParameter extends PipelineParameter
     with ReadonlyMessageMixin {}
 
 class DockerExecutor extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DockerExecutor')
+  static final BuilderInfo _i = BuilderInfo('DockerExecutor')
     ..aOS(1, 'imageName')
     ..aOS(2, 'cmd')
     ..hasRequiredFields = false;
@@ -1718,14 +1696,12 @@ class DockerExecutor extends GeneratedMessage {
   DockerExecutor.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DockerExecutor clone() => new DockerExecutor()..mergeFromMessage(this);
+  DockerExecutor clone() => DockerExecutor()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DockerExecutor create() => new DockerExecutor();
-  static PbList<DockerExecutor> createRepeated() =>
-      new PbList<DockerExecutor>();
+  static DockerExecutor create() => DockerExecutor();
+  static PbList<DockerExecutor> createRepeated() => PbList<DockerExecutor>();
   static DockerExecutor getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDockerExecutor();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDockerExecutor();
     return _defaultInstance;
   }
 
@@ -1760,48 +1736,48 @@ class PipelinesV1Alpha2Api {
 
   Future<Pipeline> createPipeline(
       ClientContext ctx, CreatePipelineRequest request) {
-    var emptyResponse = new Pipeline();
+    var emptyResponse = Pipeline();
     return _client.invoke<Pipeline>(
         ctx, 'PipelinesV1Alpha2', 'CreatePipeline', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> runPipeline(
       ClientContext ctx, RunPipelineRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'PipelinesV1Alpha2', 'RunPipeline', request, emptyResponse);
   }
 
   Future<Pipeline> getPipeline(ClientContext ctx, GetPipelineRequest request) {
-    var emptyResponse = new Pipeline();
+    var emptyResponse = Pipeline();
     return _client.invoke<Pipeline>(
         ctx, 'PipelinesV1Alpha2', 'GetPipeline', request, emptyResponse);
   }
 
   Future<ListPipelinesResponse> listPipelines(
       ClientContext ctx, ListPipelinesRequest request) {
-    var emptyResponse = new ListPipelinesResponse();
+    var emptyResponse = ListPipelinesResponse();
     return _client.invoke<ListPipelinesResponse>(
         ctx, 'PipelinesV1Alpha2', 'ListPipelines', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deletePipeline(
       ClientContext ctx, DeletePipelineRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'PipelinesV1Alpha2', 'DeletePipeline', request, emptyResponse);
   }
 
   Future<ControllerConfig> getControllerConfig(
       ClientContext ctx, GetControllerConfigRequest request) {
-    var emptyResponse = new ControllerConfig();
+    var emptyResponse = ControllerConfig();
     return _client.invoke<ControllerConfig>(ctx, 'PipelinesV1Alpha2',
         'GetControllerConfig', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> setOperationStatus(
       ClientContext ctx, SetOperationStatusRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'PipelinesV1Alpha2', 'SetOperationStatus', request, emptyResponse);
   }

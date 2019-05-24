@@ -18,7 +18,7 @@ import 'session_entity_type.pbenum.dart';
 export 'session_entity_type.pbenum.dart';
 
 class SessionEntityType extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SessionEntityType')
+  static final BuilderInfo _i = BuilderInfo('SessionEntityType')
     ..aOS(1, 'name')
     ..e<SessionEntityType_EntityOverrideMode>(
         2,
@@ -38,14 +38,14 @@ class SessionEntityType extends GeneratedMessage {
   SessionEntityType.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SessionEntityType clone() => new SessionEntityType()..mergeFromMessage(this);
+  SessionEntityType clone() => SessionEntityType()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SessionEntityType create() => new SessionEntityType();
+  static SessionEntityType create() => SessionEntityType();
   static PbList<SessionEntityType> createRepeated() =>
-      new PbList<SessionEntityType>();
+      PbList<SessionEntityType>();
   static SessionEntityType getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySessionEntityType();
+      _defaultInstance = _ReadonlySessionEntityType();
     return _defaultInstance;
   }
 
@@ -77,7 +77,7 @@ class _ReadonlySessionEntityType extends SessionEntityType
     with ReadonlyMessageMixin {}
 
 class ListSessionEntityTypesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSessionEntityTypesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListSessionEntityTypesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -91,15 +91,15 @@ class ListSessionEntityTypesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSessionEntityTypesRequest clone() =>
-      new ListSessionEntityTypesRequest()..mergeFromMessage(this);
+      ListSessionEntityTypesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListSessionEntityTypesRequest create() =>
-      new ListSessionEntityTypesRequest();
+      ListSessionEntityTypesRequest();
   static PbList<ListSessionEntityTypesRequest> createRepeated() =>
-      new PbList<ListSessionEntityTypesRequest>();
+      PbList<ListSessionEntityTypesRequest>();
   static ListSessionEntityTypesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSessionEntityTypesRequest();
+      _defaultInstance = _ReadonlyListSessionEntityTypesRequest();
     return _defaultInstance;
   }
 
@@ -138,12 +138,11 @@ class _ReadonlyListSessionEntityTypesRequest
     extends ListSessionEntityTypesRequest with ReadonlyMessageMixin {}
 
 class ListSessionEntityTypesResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListSessionEntityTypesResponse')
-        ..pp<SessionEntityType>(1, 'sessionEntityTypes', PbFieldType.PM,
-            SessionEntityType.$checkItem, SessionEntityType.create)
-        ..aOS(2, 'nextPageToken')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ListSessionEntityTypesResponse')
+    ..pp<SessionEntityType>(1, 'sessionEntityTypes', PbFieldType.PM,
+        SessionEntityType.$checkItem, SessionEntityType.create)
+    ..aOS(2, 'nextPageToken')
+    ..hasRequiredFields = false;
 
   ListSessionEntityTypesResponse() : super();
   ListSessionEntityTypesResponse.fromBuffer(List<int> i,
@@ -153,15 +152,15 @@ class ListSessionEntityTypesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSessionEntityTypesResponse clone() =>
-      new ListSessionEntityTypesResponse()..mergeFromMessage(this);
+      ListSessionEntityTypesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListSessionEntityTypesResponse create() =>
-      new ListSessionEntityTypesResponse();
+      ListSessionEntityTypesResponse();
   static PbList<ListSessionEntityTypesResponse> createRepeated() =>
-      new PbList<ListSessionEntityTypesResponse>();
+      PbList<ListSessionEntityTypesResponse>();
   static ListSessionEntityTypesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSessionEntityTypesResponse();
+      _defaultInstance = _ReadonlyListSessionEntityTypesResponse();
     return _defaultInstance;
   }
 
@@ -186,7 +185,7 @@ class _ReadonlyListSessionEntityTypesResponse
     extends ListSessionEntityTypesResponse with ReadonlyMessageMixin {}
 
 class GetSessionEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSessionEntityTypeRequest')
+  static final BuilderInfo _i = BuilderInfo('GetSessionEntityTypeRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -198,15 +197,14 @@ class GetSessionEntityTypeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetSessionEntityTypeRequest clone() =>
-      new GetSessionEntityTypeRequest()..mergeFromMessage(this);
+      GetSessionEntityTypeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetSessionEntityTypeRequest create() =>
-      new GetSessionEntityTypeRequest();
+  static GetSessionEntityTypeRequest create() => GetSessionEntityTypeRequest();
   static PbList<GetSessionEntityTypeRequest> createRepeated() =>
-      new PbList<GetSessionEntityTypeRequest>();
+      PbList<GetSessionEntityTypeRequest>();
   static GetSessionEntityTypeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSessionEntityTypeRequest();
+      _defaultInstance = _ReadonlyGetSessionEntityTypeRequest();
     return _defaultInstance;
   }
 
@@ -229,12 +227,11 @@ class _ReadonlyGetSessionEntityTypeRequest extends GetSessionEntityTypeRequest
     with ReadonlyMessageMixin {}
 
 class CreateSessionEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('CreateSessionEntityTypeRequest')
-        ..aOS(1, 'parent')
-        ..a<SessionEntityType>(2, 'sessionEntityType', PbFieldType.OM,
-            SessionEntityType.getDefault, SessionEntityType.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('CreateSessionEntityTypeRequest')
+    ..aOS(1, 'parent')
+    ..a<SessionEntityType>(2, 'sessionEntityType', PbFieldType.OM,
+        SessionEntityType.getDefault, SessionEntityType.create)
+    ..hasRequiredFields = false;
 
   CreateSessionEntityTypeRequest() : super();
   CreateSessionEntityTypeRequest.fromBuffer(List<int> i,
@@ -244,15 +241,15 @@ class CreateSessionEntityTypeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateSessionEntityTypeRequest clone() =>
-      new CreateSessionEntityTypeRequest()..mergeFromMessage(this);
+      CreateSessionEntityTypeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateSessionEntityTypeRequest create() =>
-      new CreateSessionEntityTypeRequest();
+      CreateSessionEntityTypeRequest();
   static PbList<CreateSessionEntityTypeRequest> createRepeated() =>
-      new PbList<CreateSessionEntityTypeRequest>();
+      PbList<CreateSessionEntityTypeRequest>();
   static CreateSessionEntityTypeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateSessionEntityTypeRequest();
+      _defaultInstance = _ReadonlyCreateSessionEntityTypeRequest();
     return _defaultInstance;
   }
 
@@ -283,17 +280,16 @@ class _ReadonlyCreateSessionEntityTypeRequest
     extends CreateSessionEntityTypeRequest with ReadonlyMessageMixin {}
 
 class UpdateSessionEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('UpdateSessionEntityTypeRequest')
-        ..a<SessionEntityType>(1, 'sessionEntityType', PbFieldType.OM,
-            SessionEntityType.getDefault, SessionEntityType.create)
-        ..a<$google$protobuf.FieldMask>(
-            2,
-            'updateMask',
-            PbFieldType.OM,
-            $google$protobuf.FieldMask.getDefault,
-            $google$protobuf.FieldMask.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('UpdateSessionEntityTypeRequest')
+    ..a<SessionEntityType>(1, 'sessionEntityType', PbFieldType.OM,
+        SessionEntityType.getDefault, SessionEntityType.create)
+    ..a<$google$protobuf.FieldMask>(
+        2,
+        'updateMask',
+        PbFieldType.OM,
+        $google$protobuf.FieldMask.getDefault,
+        $google$protobuf.FieldMask.create)
+    ..hasRequiredFields = false;
 
   UpdateSessionEntityTypeRequest() : super();
   UpdateSessionEntityTypeRequest.fromBuffer(List<int> i,
@@ -303,15 +299,15 @@ class UpdateSessionEntityTypeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateSessionEntityTypeRequest clone() =>
-      new UpdateSessionEntityTypeRequest()..mergeFromMessage(this);
+      UpdateSessionEntityTypeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static UpdateSessionEntityTypeRequest create() =>
-      new UpdateSessionEntityTypeRequest();
+      UpdateSessionEntityTypeRequest();
   static PbList<UpdateSessionEntityTypeRequest> createRepeated() =>
-      new PbList<UpdateSessionEntityTypeRequest>();
+      PbList<UpdateSessionEntityTypeRequest>();
   static UpdateSessionEntityTypeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateSessionEntityTypeRequest();
+      _defaultInstance = _ReadonlyUpdateSessionEntityTypeRequest();
     return _defaultInstance;
   }
 
@@ -342,10 +338,9 @@ class _ReadonlyUpdateSessionEntityTypeRequest
     extends UpdateSessionEntityTypeRequest with ReadonlyMessageMixin {}
 
 class DeleteSessionEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('DeleteSessionEntityTypeRequest')
-        ..aOS(1, 'name')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('DeleteSessionEntityTypeRequest')
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
 
   DeleteSessionEntityTypeRequest() : super();
   DeleteSessionEntityTypeRequest.fromBuffer(List<int> i,
@@ -355,15 +350,15 @@ class DeleteSessionEntityTypeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteSessionEntityTypeRequest clone() =>
-      new DeleteSessionEntityTypeRequest()..mergeFromMessage(this);
+      DeleteSessionEntityTypeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteSessionEntityTypeRequest create() =>
-      new DeleteSessionEntityTypeRequest();
+      DeleteSessionEntityTypeRequest();
   static PbList<DeleteSessionEntityTypeRequest> createRepeated() =>
-      new PbList<DeleteSessionEntityTypeRequest>();
+      PbList<DeleteSessionEntityTypeRequest>();
   static DeleteSessionEntityTypeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSessionEntityTypeRequest();
+      _defaultInstance = _ReadonlyDeleteSessionEntityTypeRequest();
     return _defaultInstance;
   }
 
@@ -391,35 +386,35 @@ class SessionEntityTypesApi {
 
   Future<ListSessionEntityTypesResponse> listSessionEntityTypes(
       ClientContext ctx, ListSessionEntityTypesRequest request) {
-    var emptyResponse = new ListSessionEntityTypesResponse();
+    var emptyResponse = ListSessionEntityTypesResponse();
     return _client.invoke<ListSessionEntityTypesResponse>(ctx,
         'SessionEntityTypes', 'ListSessionEntityTypes', request, emptyResponse);
   }
 
   Future<SessionEntityType> getSessionEntityType(
       ClientContext ctx, GetSessionEntityTypeRequest request) {
-    var emptyResponse = new SessionEntityType();
+    var emptyResponse = SessionEntityType();
     return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
         'GetSessionEntityType', request, emptyResponse);
   }
 
   Future<SessionEntityType> createSessionEntityType(
       ClientContext ctx, CreateSessionEntityTypeRequest request) {
-    var emptyResponse = new SessionEntityType();
+    var emptyResponse = SessionEntityType();
     return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
         'CreateSessionEntityType', request, emptyResponse);
   }
 
   Future<SessionEntityType> updateSessionEntityType(
       ClientContext ctx, UpdateSessionEntityTypeRequest request) {
-    var emptyResponse = new SessionEntityType();
+    var emptyResponse = SessionEntityType();
     return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
         'UpdateSessionEntityType', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteSessionEntityType(
       ClientContext ctx, DeleteSessionEntityTypeRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'SessionEntityTypes',
         'DeleteSessionEntityType', request, emptyResponse);
   }

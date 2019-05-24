@@ -57,51 +57,51 @@ abstract class IAMServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListServiceAccounts':
-        return new ListServiceAccountsRequest();
+        return ListServiceAccountsRequest();
       case 'GetServiceAccount':
-        return new GetServiceAccountRequest();
+        return GetServiceAccountRequest();
       case 'CreateServiceAccount':
-        return new CreateServiceAccountRequest();
+        return CreateServiceAccountRequest();
       case 'UpdateServiceAccount':
-        return new ServiceAccount();
+        return ServiceAccount();
       case 'DeleteServiceAccount':
-        return new DeleteServiceAccountRequest();
+        return DeleteServiceAccountRequest();
       case 'ListServiceAccountKeys':
-        return new ListServiceAccountKeysRequest();
+        return ListServiceAccountKeysRequest();
       case 'GetServiceAccountKey':
-        return new GetServiceAccountKeyRequest();
+        return GetServiceAccountKeyRequest();
       case 'CreateServiceAccountKey':
-        return new CreateServiceAccountKeyRequest();
+        return CreateServiceAccountKeyRequest();
       case 'DeleteServiceAccountKey':
-        return new DeleteServiceAccountKeyRequest();
+        return DeleteServiceAccountKeyRequest();
       case 'SignBlob':
-        return new SignBlobRequest();
+        return SignBlobRequest();
       case 'SignJwt':
-        return new SignJwtRequest();
+        return SignJwtRequest();
       case 'GetIamPolicy':
-        return new $google$iam$v1.GetIamPolicyRequest();
+        return $google$iam$v1.GetIamPolicyRequest();
       case 'SetIamPolicy':
-        return new $google$iam$v1.SetIamPolicyRequest();
+        return $google$iam$v1.SetIamPolicyRequest();
       case 'TestIamPermissions':
-        return new $google$iam$v1.TestIamPermissionsRequest();
+        return $google$iam$v1.TestIamPermissionsRequest();
       case 'QueryGrantableRoles':
-        return new QueryGrantableRolesRequest();
+        return QueryGrantableRolesRequest();
       case 'ListRoles':
-        return new ListRolesRequest();
+        return ListRolesRequest();
       case 'GetRole':
-        return new GetRoleRequest();
+        return GetRoleRequest();
       case 'CreateRole':
-        return new CreateRoleRequest();
+        return CreateRoleRequest();
       case 'UpdateRole':
-        return new UpdateRoleRequest();
+        return UpdateRoleRequest();
       case 'DeleteRole':
-        return new DeleteRoleRequest();
+        return DeleteRoleRequest();
       case 'UndeleteRole':
-        return new UndeleteRoleRequest();
+        return UndeleteRoleRequest();
       case 'QueryTestablePermissions':
-        return new QueryTestablePermissionsRequest();
+        return QueryTestablePermissionsRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -153,7 +153,7 @@ abstract class IAMServiceBase extends GeneratedService {
       case 'QueryTestablePermissions':
         return this.queryTestablePermissions(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

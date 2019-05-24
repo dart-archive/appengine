@@ -21,12 +21,11 @@ import 'test_messages_proto3.pbenum.dart';
 export 'test_messages_proto3.pbenum.dart';
 
 class TestAllTypesProto3_NestedMessage extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_NestedMessage')
-        ..a<int>(1, 'a', PbFieldType.O3)
-        ..a<TestAllTypesProto3>(2, 'corecursive', PbFieldType.OM,
-            TestAllTypesProto3.getDefault, TestAllTypesProto3.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('TestAllTypesProto3_NestedMessage')
+    ..a<int>(1, 'a', PbFieldType.O3)
+    ..a<TestAllTypesProto3>(2, 'corecursive', PbFieldType.OM,
+        TestAllTypesProto3.getDefault, TestAllTypesProto3.create)
+    ..hasRequiredFields = false;
 
   TestAllTypesProto3_NestedMessage() : super();
   TestAllTypesProto3_NestedMessage.fromBuffer(List<int> i,
@@ -36,15 +35,15 @@ class TestAllTypesProto3_NestedMessage extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_NestedMessage clone() =>
-      new TestAllTypesProto3_NestedMessage()..mergeFromMessage(this);
+      TestAllTypesProto3_NestedMessage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_NestedMessage create() =>
-      new TestAllTypesProto3_NestedMessage();
+      TestAllTypesProto3_NestedMessage();
   static PbList<TestAllTypesProto3_NestedMessage> createRepeated() =>
-      new PbList<TestAllTypesProto3_NestedMessage>();
+      PbList<TestAllTypesProto3_NestedMessage>();
   static TestAllTypesProto3_NestedMessage getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_NestedMessage();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_NestedMessage();
     return _defaultInstance;
   }
 
@@ -76,7 +75,7 @@ class _ReadonlyTestAllTypesProto3_NestedMessage
 
 class TestAllTypesProto3_MapInt32Int32Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapInt32Int32Entry')
+      BuilderInfo('TestAllTypesProto3_MapInt32Int32Entry')
         ..a<int>(1, 'key', PbFieldType.O3)
         ..a<int>(2, 'value', PbFieldType.O3)
         ..hasRequiredFields = false;
@@ -89,15 +88,15 @@ class TestAllTypesProto3_MapInt32Int32Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapInt32Int32Entry clone() =>
-      new TestAllTypesProto3_MapInt32Int32Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapInt32Int32Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapInt32Int32Entry create() =>
-      new TestAllTypesProto3_MapInt32Int32Entry();
+      TestAllTypesProto3_MapInt32Int32Entry();
   static PbList<TestAllTypesProto3_MapInt32Int32Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapInt32Int32Entry>();
+      PbList<TestAllTypesProto3_MapInt32Int32Entry>();
   static TestAllTypesProto3_MapInt32Int32Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapInt32Int32Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapInt32Int32Entry();
     return _defaultInstance;
   }
 
@@ -129,7 +128,7 @@ class _ReadonlyTestAllTypesProto3_MapInt32Int32Entry
 
 class TestAllTypesProto3_MapInt64Int64Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapInt64Int64Entry')
+      BuilderInfo('TestAllTypesProto3_MapInt64Int64Entry')
         ..aInt64(1, 'key')
         ..aInt64(2, 'value')
         ..hasRequiredFields = false;
@@ -142,15 +141,15 @@ class TestAllTypesProto3_MapInt64Int64Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapInt64Int64Entry clone() =>
-      new TestAllTypesProto3_MapInt64Int64Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapInt64Int64Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapInt64Int64Entry create() =>
-      new TestAllTypesProto3_MapInt64Int64Entry();
+      TestAllTypesProto3_MapInt64Int64Entry();
   static PbList<TestAllTypesProto3_MapInt64Int64Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapInt64Int64Entry>();
+      PbList<TestAllTypesProto3_MapInt64Int64Entry>();
   static TestAllTypesProto3_MapInt64Int64Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapInt64Int64Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapInt64Int64Entry();
     return _defaultInstance;
   }
 
@@ -182,7 +181,7 @@ class _ReadonlyTestAllTypesProto3_MapInt64Int64Entry
 
 class TestAllTypesProto3_MapUint32Uint32Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapUint32Uint32Entry')
+      BuilderInfo('TestAllTypesProto3_MapUint32Uint32Entry')
         ..a<int>(1, 'key', PbFieldType.OU3)
         ..a<int>(2, 'value', PbFieldType.OU3)
         ..hasRequiredFields = false;
@@ -195,15 +194,15 @@ class TestAllTypesProto3_MapUint32Uint32Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapUint32Uint32Entry clone() =>
-      new TestAllTypesProto3_MapUint32Uint32Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapUint32Uint32Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapUint32Uint32Entry create() =>
-      new TestAllTypesProto3_MapUint32Uint32Entry();
+      TestAllTypesProto3_MapUint32Uint32Entry();
   static PbList<TestAllTypesProto3_MapUint32Uint32Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapUint32Uint32Entry>();
+      PbList<TestAllTypesProto3_MapUint32Uint32Entry>();
   static TestAllTypesProto3_MapUint32Uint32Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapUint32Uint32Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapUint32Uint32Entry();
     return _defaultInstance;
   }
 
@@ -235,7 +234,7 @@ class _ReadonlyTestAllTypesProto3_MapUint32Uint32Entry
 
 class TestAllTypesProto3_MapUint64Uint64Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapUint64Uint64Entry')
+      BuilderInfo('TestAllTypesProto3_MapUint64Uint64Entry')
         ..a<Int64>(1, 'key', PbFieldType.OU6, Int64.ZERO)
         ..a<Int64>(2, 'value', PbFieldType.OU6, Int64.ZERO)
         ..hasRequiredFields = false;
@@ -248,15 +247,15 @@ class TestAllTypesProto3_MapUint64Uint64Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapUint64Uint64Entry clone() =>
-      new TestAllTypesProto3_MapUint64Uint64Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapUint64Uint64Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapUint64Uint64Entry create() =>
-      new TestAllTypesProto3_MapUint64Uint64Entry();
+      TestAllTypesProto3_MapUint64Uint64Entry();
   static PbList<TestAllTypesProto3_MapUint64Uint64Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapUint64Uint64Entry>();
+      PbList<TestAllTypesProto3_MapUint64Uint64Entry>();
   static TestAllTypesProto3_MapUint64Uint64Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapUint64Uint64Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapUint64Uint64Entry();
     return _defaultInstance;
   }
 
@@ -288,7 +287,7 @@ class _ReadonlyTestAllTypesProto3_MapUint64Uint64Entry
 
 class TestAllTypesProto3_MapSint32Sint32Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapSint32Sint32Entry')
+      BuilderInfo('TestAllTypesProto3_MapSint32Sint32Entry')
         ..a<int>(1, 'key', PbFieldType.OS3)
         ..a<int>(2, 'value', PbFieldType.OS3)
         ..hasRequiredFields = false;
@@ -301,15 +300,15 @@ class TestAllTypesProto3_MapSint32Sint32Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapSint32Sint32Entry clone() =>
-      new TestAllTypesProto3_MapSint32Sint32Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapSint32Sint32Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapSint32Sint32Entry create() =>
-      new TestAllTypesProto3_MapSint32Sint32Entry();
+      TestAllTypesProto3_MapSint32Sint32Entry();
   static PbList<TestAllTypesProto3_MapSint32Sint32Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapSint32Sint32Entry>();
+      PbList<TestAllTypesProto3_MapSint32Sint32Entry>();
   static TestAllTypesProto3_MapSint32Sint32Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapSint32Sint32Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapSint32Sint32Entry();
     return _defaultInstance;
   }
 
@@ -341,7 +340,7 @@ class _ReadonlyTestAllTypesProto3_MapSint32Sint32Entry
 
 class TestAllTypesProto3_MapSint64Sint64Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapSint64Sint64Entry')
+      BuilderInfo('TestAllTypesProto3_MapSint64Sint64Entry')
         ..a<Int64>(1, 'key', PbFieldType.OS6, Int64.ZERO)
         ..a<Int64>(2, 'value', PbFieldType.OS6, Int64.ZERO)
         ..hasRequiredFields = false;
@@ -354,15 +353,15 @@ class TestAllTypesProto3_MapSint64Sint64Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapSint64Sint64Entry clone() =>
-      new TestAllTypesProto3_MapSint64Sint64Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapSint64Sint64Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapSint64Sint64Entry create() =>
-      new TestAllTypesProto3_MapSint64Sint64Entry();
+      TestAllTypesProto3_MapSint64Sint64Entry();
   static PbList<TestAllTypesProto3_MapSint64Sint64Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapSint64Sint64Entry>();
+      PbList<TestAllTypesProto3_MapSint64Sint64Entry>();
   static TestAllTypesProto3_MapSint64Sint64Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapSint64Sint64Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapSint64Sint64Entry();
     return _defaultInstance;
   }
 
@@ -394,7 +393,7 @@ class _ReadonlyTestAllTypesProto3_MapSint64Sint64Entry
 
 class TestAllTypesProto3_MapFixed32Fixed32Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapFixed32Fixed32Entry')
+      BuilderInfo('TestAllTypesProto3_MapFixed32Fixed32Entry')
         ..a<int>(1, 'key', PbFieldType.OF3)
         ..a<int>(2, 'value', PbFieldType.OF3)
         ..hasRequiredFields = false;
@@ -407,16 +406,15 @@ class TestAllTypesProto3_MapFixed32Fixed32Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapFixed32Fixed32Entry clone() =>
-      new TestAllTypesProto3_MapFixed32Fixed32Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapFixed32Fixed32Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapFixed32Fixed32Entry create() =>
-      new TestAllTypesProto3_MapFixed32Fixed32Entry();
+      TestAllTypesProto3_MapFixed32Fixed32Entry();
   static PbList<TestAllTypesProto3_MapFixed32Fixed32Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapFixed32Fixed32Entry>();
+      PbList<TestAllTypesProto3_MapFixed32Fixed32Entry>();
   static TestAllTypesProto3_MapFixed32Fixed32Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyTestAllTypesProto3_MapFixed32Fixed32Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapFixed32Fixed32Entry();
     return _defaultInstance;
   }
 
@@ -449,7 +447,7 @@ class _ReadonlyTestAllTypesProto3_MapFixed32Fixed32Entry
 
 class TestAllTypesProto3_MapFixed64Fixed64Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapFixed64Fixed64Entry')
+      BuilderInfo('TestAllTypesProto3_MapFixed64Fixed64Entry')
         ..a<Int64>(1, 'key', PbFieldType.OF6, Int64.ZERO)
         ..a<Int64>(2, 'value', PbFieldType.OF6, Int64.ZERO)
         ..hasRequiredFields = false;
@@ -462,16 +460,15 @@ class TestAllTypesProto3_MapFixed64Fixed64Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapFixed64Fixed64Entry clone() =>
-      new TestAllTypesProto3_MapFixed64Fixed64Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapFixed64Fixed64Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapFixed64Fixed64Entry create() =>
-      new TestAllTypesProto3_MapFixed64Fixed64Entry();
+      TestAllTypesProto3_MapFixed64Fixed64Entry();
   static PbList<TestAllTypesProto3_MapFixed64Fixed64Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapFixed64Fixed64Entry>();
+      PbList<TestAllTypesProto3_MapFixed64Fixed64Entry>();
   static TestAllTypesProto3_MapFixed64Fixed64Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyTestAllTypesProto3_MapFixed64Fixed64Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapFixed64Fixed64Entry();
     return _defaultInstance;
   }
 
@@ -504,7 +501,7 @@ class _ReadonlyTestAllTypesProto3_MapFixed64Fixed64Entry
 
 class TestAllTypesProto3_MapSfixed32Sfixed32Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapSfixed32Sfixed32Entry')
+      BuilderInfo('TestAllTypesProto3_MapSfixed32Sfixed32Entry')
         ..a<int>(1, 'key', PbFieldType.OSF3)
         ..a<int>(2, 'value', PbFieldType.OSF3)
         ..hasRequiredFields = false;
@@ -517,16 +514,15 @@ class TestAllTypesProto3_MapSfixed32Sfixed32Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapSfixed32Sfixed32Entry clone() =>
-      new TestAllTypesProto3_MapSfixed32Sfixed32Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapSfixed32Sfixed32Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapSfixed32Sfixed32Entry create() =>
-      new TestAllTypesProto3_MapSfixed32Sfixed32Entry();
+      TestAllTypesProto3_MapSfixed32Sfixed32Entry();
   static PbList<TestAllTypesProto3_MapSfixed32Sfixed32Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapSfixed32Sfixed32Entry>();
+      PbList<TestAllTypesProto3_MapSfixed32Sfixed32Entry>();
   static TestAllTypesProto3_MapSfixed32Sfixed32Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyTestAllTypesProto3_MapSfixed32Sfixed32Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapSfixed32Sfixed32Entry();
     return _defaultInstance;
   }
 
@@ -559,7 +555,7 @@ class _ReadonlyTestAllTypesProto3_MapSfixed32Sfixed32Entry
 
 class TestAllTypesProto3_MapSfixed64Sfixed64Entry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapSfixed64Sfixed64Entry')
+      BuilderInfo('TestAllTypesProto3_MapSfixed64Sfixed64Entry')
         ..a<Int64>(1, 'key', PbFieldType.OSF6, Int64.ZERO)
         ..a<Int64>(2, 'value', PbFieldType.OSF6, Int64.ZERO)
         ..hasRequiredFields = false;
@@ -572,16 +568,15 @@ class TestAllTypesProto3_MapSfixed64Sfixed64Entry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapSfixed64Sfixed64Entry clone() =>
-      new TestAllTypesProto3_MapSfixed64Sfixed64Entry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapSfixed64Sfixed64Entry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapSfixed64Sfixed64Entry create() =>
-      new TestAllTypesProto3_MapSfixed64Sfixed64Entry();
+      TestAllTypesProto3_MapSfixed64Sfixed64Entry();
   static PbList<TestAllTypesProto3_MapSfixed64Sfixed64Entry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapSfixed64Sfixed64Entry>();
+      PbList<TestAllTypesProto3_MapSfixed64Sfixed64Entry>();
   static TestAllTypesProto3_MapSfixed64Sfixed64Entry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyTestAllTypesProto3_MapSfixed64Sfixed64Entry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapSfixed64Sfixed64Entry();
     return _defaultInstance;
   }
 
@@ -614,7 +609,7 @@ class _ReadonlyTestAllTypesProto3_MapSfixed64Sfixed64Entry
 
 class TestAllTypesProto3_MapInt32FloatEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapInt32FloatEntry')
+      BuilderInfo('TestAllTypesProto3_MapInt32FloatEntry')
         ..a<int>(1, 'key', PbFieldType.O3)
         ..a<double>(2, 'value', PbFieldType.OF)
         ..hasRequiredFields = false;
@@ -627,15 +622,15 @@ class TestAllTypesProto3_MapInt32FloatEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapInt32FloatEntry clone() =>
-      new TestAllTypesProto3_MapInt32FloatEntry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapInt32FloatEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapInt32FloatEntry create() =>
-      new TestAllTypesProto3_MapInt32FloatEntry();
+      TestAllTypesProto3_MapInt32FloatEntry();
   static PbList<TestAllTypesProto3_MapInt32FloatEntry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapInt32FloatEntry>();
+      PbList<TestAllTypesProto3_MapInt32FloatEntry>();
   static TestAllTypesProto3_MapInt32FloatEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapInt32FloatEntry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapInt32FloatEntry();
     return _defaultInstance;
   }
 
@@ -667,7 +662,7 @@ class _ReadonlyTestAllTypesProto3_MapInt32FloatEntry
 
 class TestAllTypesProto3_MapInt32DoubleEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapInt32DoubleEntry')
+      BuilderInfo('TestAllTypesProto3_MapInt32DoubleEntry')
         ..a<int>(1, 'key', PbFieldType.O3)
         ..a<double>(2, 'value', PbFieldType.OD)
         ..hasRequiredFields = false;
@@ -680,15 +675,15 @@ class TestAllTypesProto3_MapInt32DoubleEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapInt32DoubleEntry clone() =>
-      new TestAllTypesProto3_MapInt32DoubleEntry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapInt32DoubleEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapInt32DoubleEntry create() =>
-      new TestAllTypesProto3_MapInt32DoubleEntry();
+      TestAllTypesProto3_MapInt32DoubleEntry();
   static PbList<TestAllTypesProto3_MapInt32DoubleEntry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapInt32DoubleEntry>();
+      PbList<TestAllTypesProto3_MapInt32DoubleEntry>();
   static TestAllTypesProto3_MapInt32DoubleEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapInt32DoubleEntry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapInt32DoubleEntry();
     return _defaultInstance;
   }
 
@@ -720,7 +715,7 @@ class _ReadonlyTestAllTypesProto3_MapInt32DoubleEntry
 
 class TestAllTypesProto3_MapBoolBoolEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapBoolBoolEntry')
+      BuilderInfo('TestAllTypesProto3_MapBoolBoolEntry')
         ..aOB(1, 'key')
         ..aOB(2, 'value')
         ..hasRequiredFields = false;
@@ -733,15 +728,15 @@ class TestAllTypesProto3_MapBoolBoolEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapBoolBoolEntry clone() =>
-      new TestAllTypesProto3_MapBoolBoolEntry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapBoolBoolEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapBoolBoolEntry create() =>
-      new TestAllTypesProto3_MapBoolBoolEntry();
+      TestAllTypesProto3_MapBoolBoolEntry();
   static PbList<TestAllTypesProto3_MapBoolBoolEntry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapBoolBoolEntry>();
+      PbList<TestAllTypesProto3_MapBoolBoolEntry>();
   static TestAllTypesProto3_MapBoolBoolEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapBoolBoolEntry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapBoolBoolEntry();
     return _defaultInstance;
   }
 
@@ -773,7 +768,7 @@ class _ReadonlyTestAllTypesProto3_MapBoolBoolEntry
 
 class TestAllTypesProto3_MapStringStringEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapStringStringEntry')
+      BuilderInfo('TestAllTypesProto3_MapStringStringEntry')
         ..aOS(1, 'key')
         ..aOS(2, 'value')
         ..hasRequiredFields = false;
@@ -786,15 +781,15 @@ class TestAllTypesProto3_MapStringStringEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapStringStringEntry clone() =>
-      new TestAllTypesProto3_MapStringStringEntry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapStringStringEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapStringStringEntry create() =>
-      new TestAllTypesProto3_MapStringStringEntry();
+      TestAllTypesProto3_MapStringStringEntry();
   static PbList<TestAllTypesProto3_MapStringStringEntry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapStringStringEntry>();
+      PbList<TestAllTypesProto3_MapStringStringEntry>();
   static TestAllTypesProto3_MapStringStringEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapStringStringEntry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapStringStringEntry();
     return _defaultInstance;
   }
 
@@ -826,7 +821,7 @@ class _ReadonlyTestAllTypesProto3_MapStringStringEntry
 
 class TestAllTypesProto3_MapStringBytesEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapStringBytesEntry')
+      BuilderInfo('TestAllTypesProto3_MapStringBytesEntry')
         ..aOS(1, 'key')
         ..a<List<int>>(2, 'value', PbFieldType.OY)
         ..hasRequiredFields = false;
@@ -839,15 +834,15 @@ class TestAllTypesProto3_MapStringBytesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapStringBytesEntry clone() =>
-      new TestAllTypesProto3_MapStringBytesEntry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapStringBytesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapStringBytesEntry create() =>
-      new TestAllTypesProto3_MapStringBytesEntry();
+      TestAllTypesProto3_MapStringBytesEntry();
   static PbList<TestAllTypesProto3_MapStringBytesEntry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapStringBytesEntry>();
+      PbList<TestAllTypesProto3_MapStringBytesEntry>();
   static TestAllTypesProto3_MapStringBytesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3_MapStringBytesEntry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapStringBytesEntry();
     return _defaultInstance;
   }
 
@@ -879,7 +874,7 @@ class _ReadonlyTestAllTypesProto3_MapStringBytesEntry
 
 class TestAllTypesProto3_MapStringNestedMessageEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapStringNestedMessageEntry')
+      BuilderInfo('TestAllTypesProto3_MapStringNestedMessageEntry')
         ..aOS(1, 'key')
         ..a<TestAllTypesProto3_NestedMessage>(
             2,
@@ -897,18 +892,17 @@ class TestAllTypesProto3_MapStringNestedMessageEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapStringNestedMessageEntry clone() =>
-      new TestAllTypesProto3_MapStringNestedMessageEntry()
-        ..mergeFromMessage(this);
+      TestAllTypesProto3_MapStringNestedMessageEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapStringNestedMessageEntry create() =>
-      new TestAllTypesProto3_MapStringNestedMessageEntry();
+      TestAllTypesProto3_MapStringNestedMessageEntry();
   static PbList<TestAllTypesProto3_MapStringNestedMessageEntry>
       createRepeated() =>
-          new PbList<TestAllTypesProto3_MapStringNestedMessageEntry>();
+          PbList<TestAllTypesProto3_MapStringNestedMessageEntry>();
   static TestAllTypesProto3_MapStringNestedMessageEntry getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyTestAllTypesProto3_MapStringNestedMessageEntry();
+          _ReadonlyTestAllTypesProto3_MapStringNestedMessageEntry();
     return _defaultInstance;
   }
 
@@ -941,7 +935,7 @@ class _ReadonlyTestAllTypesProto3_MapStringNestedMessageEntry
 
 class TestAllTypesProto3_MapStringForeignMessageEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapStringForeignMessageEntry')
+      BuilderInfo('TestAllTypesProto3_MapStringForeignMessageEntry')
         ..aOS(1, 'key')
         ..a<ForeignMessage>(2, 'value', PbFieldType.OM,
             ForeignMessage.getDefault, ForeignMessage.create)
@@ -955,18 +949,17 @@ class TestAllTypesProto3_MapStringForeignMessageEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapStringForeignMessageEntry clone() =>
-      new TestAllTypesProto3_MapStringForeignMessageEntry()
-        ..mergeFromMessage(this);
+      TestAllTypesProto3_MapStringForeignMessageEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapStringForeignMessageEntry create() =>
-      new TestAllTypesProto3_MapStringForeignMessageEntry();
+      TestAllTypesProto3_MapStringForeignMessageEntry();
   static PbList<TestAllTypesProto3_MapStringForeignMessageEntry>
       createRepeated() =>
-          new PbList<TestAllTypesProto3_MapStringForeignMessageEntry>();
+          PbList<TestAllTypesProto3_MapStringForeignMessageEntry>();
   static TestAllTypesProto3_MapStringForeignMessageEntry getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyTestAllTypesProto3_MapStringForeignMessageEntry();
+          _ReadonlyTestAllTypesProto3_MapStringForeignMessageEntry();
     return _defaultInstance;
   }
 
@@ -999,7 +992,7 @@ class _ReadonlyTestAllTypesProto3_MapStringForeignMessageEntry
 
 class TestAllTypesProto3_MapStringNestedEnumEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapStringNestedEnumEntry')
+      BuilderInfo('TestAllTypesProto3_MapStringNestedEnumEntry')
         ..aOS(1, 'key')
         ..e<TestAllTypesProto3_NestedEnum>(
             2,
@@ -1018,16 +1011,15 @@ class TestAllTypesProto3_MapStringNestedEnumEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapStringNestedEnumEntry clone() =>
-      new TestAllTypesProto3_MapStringNestedEnumEntry()..mergeFromMessage(this);
+      TestAllTypesProto3_MapStringNestedEnumEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapStringNestedEnumEntry create() =>
-      new TestAllTypesProto3_MapStringNestedEnumEntry();
+      TestAllTypesProto3_MapStringNestedEnumEntry();
   static PbList<TestAllTypesProto3_MapStringNestedEnumEntry> createRepeated() =>
-      new PbList<TestAllTypesProto3_MapStringNestedEnumEntry>();
+      PbList<TestAllTypesProto3_MapStringNestedEnumEntry>();
   static TestAllTypesProto3_MapStringNestedEnumEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyTestAllTypesProto3_MapStringNestedEnumEntry();
+      _defaultInstance = _ReadonlyTestAllTypesProto3_MapStringNestedEnumEntry();
     return _defaultInstance;
   }
 
@@ -1060,7 +1052,7 @@ class _ReadonlyTestAllTypesProto3_MapStringNestedEnumEntry
 
 class TestAllTypesProto3_MapStringForeignEnumEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('TestAllTypesProto3_MapStringForeignEnumEntry')
+      BuilderInfo('TestAllTypesProto3_MapStringForeignEnumEntry')
         ..aOS(1, 'key')
         ..e<ForeignEnum>(2, 'value', PbFieldType.OE, ForeignEnum.FOREIGN_FOO,
             ForeignEnum.valueOf, ForeignEnum.values)
@@ -1074,18 +1066,17 @@ class TestAllTypesProto3_MapStringForeignEnumEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestAllTypesProto3_MapStringForeignEnumEntry clone() =>
-      new TestAllTypesProto3_MapStringForeignEnumEntry()
-        ..mergeFromMessage(this);
+      TestAllTypesProto3_MapStringForeignEnumEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static TestAllTypesProto3_MapStringForeignEnumEntry create() =>
-      new TestAllTypesProto3_MapStringForeignEnumEntry();
+      TestAllTypesProto3_MapStringForeignEnumEntry();
   static PbList<TestAllTypesProto3_MapStringForeignEnumEntry>
       createRepeated() =>
-          new PbList<TestAllTypesProto3_MapStringForeignEnumEntry>();
+          PbList<TestAllTypesProto3_MapStringForeignEnumEntry>();
   static TestAllTypesProto3_MapStringForeignEnumEntry getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyTestAllTypesProto3_MapStringForeignEnumEntry();
+          _ReadonlyTestAllTypesProto3_MapStringForeignEnumEntry();
     return _defaultInstance;
   }
 
@@ -1117,7 +1108,7 @@ class _ReadonlyTestAllTypesProto3_MapStringForeignEnumEntry
     with ReadonlyMessageMixin {}
 
 class TestAllTypesProto3 extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TestAllTypesProto3')
+  static final BuilderInfo _i = BuilderInfo('TestAllTypesProto3')
     ..a<int>(1, 'optionalInt32', PbFieldType.O3)
     ..aInt64(2, 'optionalInt64')
     ..a<int>(3, 'optionalUint32', PbFieldType.OU3)
@@ -1435,15 +1426,14 @@ class TestAllTypesProto3 extends GeneratedMessage {
   TestAllTypesProto3.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TestAllTypesProto3 clone() =>
-      new TestAllTypesProto3()..mergeFromMessage(this);
+  TestAllTypesProto3 clone() => TestAllTypesProto3()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TestAllTypesProto3 create() => new TestAllTypesProto3();
+  static TestAllTypesProto3 create() => TestAllTypesProto3();
   static PbList<TestAllTypesProto3> createRepeated() =>
-      new PbList<TestAllTypesProto3>();
+      PbList<TestAllTypesProto3>();
   static TestAllTypesProto3 getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestAllTypesProto3();
+      _defaultInstance = _ReadonlyTestAllTypesProto3();
     return _defaultInstance;
   }
 
@@ -2098,7 +2088,7 @@ class _ReadonlyTestAllTypesProto3 extends TestAllTypesProto3
     with ReadonlyMessageMixin {}
 
 class ForeignMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ForeignMessage')
+  static final BuilderInfo _i = BuilderInfo('ForeignMessage')
     ..a<int>(1, 'c', PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -2109,14 +2099,12 @@ class ForeignMessage extends GeneratedMessage {
   ForeignMessage.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ForeignMessage clone() => new ForeignMessage()..mergeFromMessage(this);
+  ForeignMessage clone() => ForeignMessage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ForeignMessage create() => new ForeignMessage();
-  static PbList<ForeignMessage> createRepeated() =>
-      new PbList<ForeignMessage>();
+  static ForeignMessage create() => ForeignMessage();
+  static PbList<ForeignMessage> createRepeated() => PbList<ForeignMessage>();
   static ForeignMessage getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyForeignMessage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyForeignMessage();
     return _defaultInstance;
   }
 

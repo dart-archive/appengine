@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class LatLng extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LatLng')
+  static final BuilderInfo _i = BuilderInfo('LatLng')
     ..a<double>(1, 'latitude', PbFieldType.OD)
     ..a<double>(2, 'longitude', PbFieldType.OD)
     ..hasRequiredFields = false;
@@ -20,12 +20,12 @@ class LatLng extends GeneratedMessage {
       : super.fromBuffer(i, r);
   LatLng.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LatLng clone() => new LatLng()..mergeFromMessage(this);
+  LatLng clone() => LatLng()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LatLng create() => new LatLng();
-  static PbList<LatLng> createRepeated() => new PbList<LatLng>();
+  static LatLng create() => LatLng();
+  static PbList<LatLng> createRepeated() => PbList<LatLng>();
   static LatLng getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLatLng();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLatLng();
     return _defaultInstance;
   }
 

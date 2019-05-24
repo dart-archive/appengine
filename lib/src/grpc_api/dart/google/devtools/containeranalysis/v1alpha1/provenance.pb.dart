@@ -17,11 +17,10 @@ import 'provenance.pbenum.dart';
 export 'provenance.pbenum.dart';
 
 class BuildProvenance_BuildOptionsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('BuildProvenance_BuildOptionsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('BuildProvenance_BuildOptionsEntry')
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
+    ..hasRequiredFields = false;
 
   BuildProvenance_BuildOptionsEntry() : super();
   BuildProvenance_BuildOptionsEntry.fromBuffer(List<int> i,
@@ -31,15 +30,15 @@ class BuildProvenance_BuildOptionsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BuildProvenance_BuildOptionsEntry clone() =>
-      new BuildProvenance_BuildOptionsEntry()..mergeFromMessage(this);
+      BuildProvenance_BuildOptionsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BuildProvenance_BuildOptionsEntry create() =>
-      new BuildProvenance_BuildOptionsEntry();
+      BuildProvenance_BuildOptionsEntry();
   static PbList<BuildProvenance_BuildOptionsEntry> createRepeated() =>
-      new PbList<BuildProvenance_BuildOptionsEntry>();
+      PbList<BuildProvenance_BuildOptionsEntry>();
   static BuildProvenance_BuildOptionsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBuildProvenance_BuildOptionsEntry();
+      _defaultInstance = _ReadonlyBuildProvenance_BuildOptionsEntry();
     return _defaultInstance;
   }
 
@@ -70,7 +69,7 @@ class _ReadonlyBuildProvenance_BuildOptionsEntry
     extends BuildProvenance_BuildOptionsEntry with ReadonlyMessageMixin {}
 
 class BuildProvenance extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BuildProvenance')
+  static final BuilderInfo _i = BuilderInfo('BuildProvenance')
     ..aOS(1, 'id')
     ..aOS(2, 'projectId')
     ..pp<Command>(
@@ -116,14 +115,12 @@ class BuildProvenance extends GeneratedMessage {
   BuildProvenance.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BuildProvenance clone() => new BuildProvenance()..mergeFromMessage(this);
+  BuildProvenance clone() => BuildProvenance()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BuildProvenance create() => new BuildProvenance();
-  static PbList<BuildProvenance> createRepeated() =>
-      new PbList<BuildProvenance>();
+  static BuildProvenance create() => BuildProvenance();
+  static PbList<BuildProvenance> createRepeated() => PbList<BuildProvenance>();
   static BuildProvenance getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBuildProvenance();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildProvenance();
     return _defaultInstance;
   }
 
@@ -223,7 +220,7 @@ class _ReadonlyBuildProvenance extends BuildProvenance
     with ReadonlyMessageMixin {}
 
 class Source_FileHashesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Source_FileHashesEntry')
+  static final BuilderInfo _i = BuilderInfo('Source_FileHashesEntry')
     ..aOS(1, 'key')
     ..a<FileHashes>(
         2, 'value', PbFieldType.OM, FileHashes.getDefault, FileHashes.create)
@@ -237,14 +234,14 @@ class Source_FileHashesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Source_FileHashesEntry clone() =>
-      new Source_FileHashesEntry()..mergeFromMessage(this);
+      Source_FileHashesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Source_FileHashesEntry create() => new Source_FileHashesEntry();
+  static Source_FileHashesEntry create() => Source_FileHashesEntry();
   static PbList<Source_FileHashesEntry> createRepeated() =>
-      new PbList<Source_FileHashesEntry>();
+      PbList<Source_FileHashesEntry>();
   static Source_FileHashesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySource_FileHashesEntry();
+      _defaultInstance = _ReadonlySource_FileHashesEntry();
     return _defaultInstance;
   }
 
@@ -275,7 +272,7 @@ class _ReadonlySource_FileHashesEntry extends Source_FileHashesEntry
     with ReadonlyMessageMixin {}
 
 class Source extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Source')
+  static final BuilderInfo _i = BuilderInfo('Source')
     ..a<StorageSource>(1, 'storageSource', PbFieldType.OM,
         StorageSource.getDefault, StorageSource.create)
     ..a<RepoSource>(2, 'repoSource', PbFieldType.OM, RepoSource.getDefault,
@@ -296,12 +293,12 @@ class Source extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Source.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Source clone() => new Source()..mergeFromMessage(this);
+  Source clone() => Source()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Source create() => new Source();
-  static PbList<Source> createRepeated() => new PbList<Source>();
+  static Source create() => Source();
+  static PbList<Source> createRepeated() => PbList<Source>();
   static Source getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySource();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySource();
     return _defaultInstance;
   }
 
@@ -350,7 +347,7 @@ class Source extends GeneratedMessage {
 class _ReadonlySource extends Source with ReadonlyMessageMixin {}
 
 class FileHashes extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FileHashes')
+  static final BuilderInfo _i = BuilderInfo('FileHashes')
     ..pp<Hash>(1, 'fileHash', PbFieldType.PM, Hash.$checkItem, Hash.create)
     ..hasRequiredFields = false;
 
@@ -360,12 +357,12 @@ class FileHashes extends GeneratedMessage {
       : super.fromBuffer(i, r);
   FileHashes.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FileHashes clone() => new FileHashes()..mergeFromMessage(this);
+  FileHashes clone() => FileHashes()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FileHashes create() => new FileHashes();
-  static PbList<FileHashes> createRepeated() => new PbList<FileHashes>();
+  static FileHashes create() => FileHashes();
+  static PbList<FileHashes> createRepeated() => PbList<FileHashes>();
   static FileHashes getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFileHashes();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileHashes();
     return _defaultInstance;
   }
 
@@ -380,7 +377,7 @@ class FileHashes extends GeneratedMessage {
 class _ReadonlyFileHashes extends FileHashes with ReadonlyMessageMixin {}
 
 class Hash extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Hash')
+  static final BuilderInfo _i = BuilderInfo('Hash')
     ..e<Hash_HashType>(1, 'type', PbFieldType.OE, Hash_HashType.NONE,
         Hash_HashType.valueOf, Hash_HashType.values)
     ..a<List<int>>(2, 'value', PbFieldType.OY)
@@ -391,12 +388,12 @@ class Hash extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Hash.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Hash clone() => new Hash()..mergeFromMessage(this);
+  Hash clone() => Hash()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Hash create() => new Hash();
-  static PbList<Hash> createRepeated() => new PbList<Hash>();
+  static Hash create() => Hash();
+  static PbList<Hash> createRepeated() => PbList<Hash>();
   static Hash getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHash();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHash();
     return _defaultInstance;
   }
 
@@ -425,7 +422,7 @@ class Hash extends GeneratedMessage {
 class _ReadonlyHash extends Hash with ReadonlyMessageMixin {}
 
 class StorageSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StorageSource')
+  static final BuilderInfo _i = BuilderInfo('StorageSource')
     ..aOS(1, 'bucket')
     ..aOS(2, 'object')
     ..aInt64(3, 'generation')
@@ -438,13 +435,12 @@ class StorageSource extends GeneratedMessage {
   StorageSource.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StorageSource clone() => new StorageSource()..mergeFromMessage(this);
+  StorageSource clone() => StorageSource()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StorageSource create() => new StorageSource();
-  static PbList<StorageSource> createRepeated() => new PbList<StorageSource>();
+  static StorageSource create() => StorageSource();
+  static PbList<StorageSource> createRepeated() => PbList<StorageSource>();
   static StorageSource getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStorageSource();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStorageSource();
     return _defaultInstance;
   }
 
@@ -481,7 +477,7 @@ class StorageSource extends GeneratedMessage {
 class _ReadonlyStorageSource extends StorageSource with ReadonlyMessageMixin {}
 
 class RepoSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RepoSource')
+  static final BuilderInfo _i = BuilderInfo('RepoSource')
     ..aOS(1, 'projectId')
     ..aOS(2, 'repoName')
     ..aOS(3, 'branchName')
@@ -495,12 +491,12 @@ class RepoSource extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RepoSource.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RepoSource clone() => new RepoSource()..mergeFromMessage(this);
+  RepoSource clone() => RepoSource()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RepoSource create() => new RepoSource();
-  static PbList<RepoSource> createRepeated() => new PbList<RepoSource>();
+  static RepoSource create() => RepoSource();
+  static PbList<RepoSource> createRepeated() => PbList<RepoSource>();
   static RepoSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRepoSource();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRepoSource();
     return _defaultInstance;
   }
 
@@ -553,7 +549,7 @@ class RepoSource extends GeneratedMessage {
 class _ReadonlyRepoSource extends RepoSource with ReadonlyMessageMixin {}
 
 class Command extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Command')
+  static final BuilderInfo _i = BuilderInfo('Command')
     ..aOS(1, 'name')
     ..pPS(2, 'env')
     ..pPS(3, 'args')
@@ -568,12 +564,12 @@ class Command extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Command.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Command clone() => new Command()..mergeFromMessage(this);
+  Command clone() => Command()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Command create() => new Command();
-  static PbList<Command> createRepeated() => new PbList<Command>();
+  static Command create() => Command();
+  static PbList<Command> createRepeated() => PbList<Command>();
   static Command getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCommand();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommand();
     return _defaultInstance;
   }
 
@@ -616,7 +612,7 @@ class Command extends GeneratedMessage {
 class _ReadonlyCommand extends Command with ReadonlyMessageMixin {}
 
 class Artifact extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Artifact')
+  static final BuilderInfo _i = BuilderInfo('Artifact')
     ..aOS(1, 'name')
     ..aOS(2, 'checksum')
     ..aOS(3, 'id')
@@ -629,12 +625,12 @@ class Artifact extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Artifact.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Artifact clone() => new Artifact()..mergeFromMessage(this);
+  Artifact clone() => Artifact()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Artifact create() => new Artifact();
-  static PbList<Artifact> createRepeated() => new PbList<Artifact>();
+  static Artifact create() => Artifact();
+  static PbList<Artifact> createRepeated() => PbList<Artifact>();
   static Artifact getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyArtifact();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyArtifact();
     return _defaultInstance;
   }
 

@@ -9,14 +9,14 @@ import 'package:protobuf/protobuf.dart';
 
 class ProfileType extends ProtobufEnum {
   static const ProfileType PROFILE_TYPE_UNSPECIFIED =
-      const ProfileType._(0, 'PROFILE_TYPE_UNSPECIFIED');
-  static const ProfileType CPU = const ProfileType._(1, 'CPU');
-  static const ProfileType WALL = const ProfileType._(2, 'WALL');
-  static const ProfileType HEAP = const ProfileType._(3, 'HEAP');
-  static const ProfileType THREADS = const ProfileType._(4, 'THREADS');
-  static const ProfileType CONTENTION = const ProfileType._(5, 'CONTENTION');
+      ProfileType._(0, 'PROFILE_TYPE_UNSPECIFIED');
+  static const ProfileType CPU = ProfileType._(1, 'CPU');
+  static const ProfileType WALL = ProfileType._(2, 'WALL');
+  static const ProfileType HEAP = ProfileType._(3, 'HEAP');
+  static const ProfileType THREADS = ProfileType._(4, 'THREADS');
+  static const ProfileType CONTENTION = ProfileType._(5, 'CONTENTION');
 
-  static const List<ProfileType> values = const <ProfileType>[
+  static const List<ProfileType> values = <ProfileType>[
     PROFILE_TYPE_UNSPECIFIED,
     CPU,
     WALL,

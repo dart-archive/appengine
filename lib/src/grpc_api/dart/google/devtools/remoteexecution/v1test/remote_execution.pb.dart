@@ -19,7 +19,7 @@ import 'remote_execution.pbenum.dart';
 export 'remote_execution.pbenum.dart';
 
 class Action extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Action')
+  static final BuilderInfo _i = BuilderInfo('Action')
     ..a<Digest>(
         1, 'commandDigest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..a<Digest>(
@@ -39,12 +39,12 @@ class Action extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Action.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Action clone() => new Action()..mergeFromMessage(this);
+  Action clone() => Action()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Action create() => new Action();
-  static PbList<Action> createRepeated() => new PbList<Action>();
+  static Action create() => Action();
+  static PbList<Action> createRepeated() => PbList<Action>();
   static Action getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAction();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAction();
     return _defaultInstance;
   }
 
@@ -101,7 +101,7 @@ class Action extends GeneratedMessage {
 class _ReadonlyAction extends Action with ReadonlyMessageMixin {}
 
 class Command_EnvironmentVariable extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Command_EnvironmentVariable')
+  static final BuilderInfo _i = BuilderInfo('Command_EnvironmentVariable')
     ..aOS(1, 'name')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -114,15 +114,14 @@ class Command_EnvironmentVariable extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Command_EnvironmentVariable clone() =>
-      new Command_EnvironmentVariable()..mergeFromMessage(this);
+      Command_EnvironmentVariable()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Command_EnvironmentVariable create() =>
-      new Command_EnvironmentVariable();
+  static Command_EnvironmentVariable create() => Command_EnvironmentVariable();
   static PbList<Command_EnvironmentVariable> createRepeated() =>
-      new PbList<Command_EnvironmentVariable>();
+      PbList<Command_EnvironmentVariable>();
   static Command_EnvironmentVariable getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommand_EnvironmentVariable();
+      _defaultInstance = _ReadonlyCommand_EnvironmentVariable();
     return _defaultInstance;
   }
 
@@ -153,7 +152,7 @@ class _ReadonlyCommand_EnvironmentVariable extends Command_EnvironmentVariable
     with ReadonlyMessageMixin {}
 
 class Command extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Command')
+  static final BuilderInfo _i = BuilderInfo('Command')
     ..pPS(1, 'arguments')
     ..pp<Command_EnvironmentVariable>(
         2,
@@ -169,12 +168,12 @@ class Command extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Command.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Command clone() => new Command()..mergeFromMessage(this);
+  Command clone() => Command()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Command create() => new Command();
-  static PbList<Command> createRepeated() => new PbList<Command>();
+  static Command create() => Command();
+  static PbList<Command> createRepeated() => PbList<Command>();
   static Command getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCommand();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommand();
     return _defaultInstance;
   }
 
@@ -191,7 +190,7 @@ class Command extends GeneratedMessage {
 class _ReadonlyCommand extends Command with ReadonlyMessageMixin {}
 
 class Platform_Property extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Platform_Property')
+  static final BuilderInfo _i = BuilderInfo('Platform_Property')
     ..aOS(1, 'name')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -203,14 +202,14 @@ class Platform_Property extends GeneratedMessage {
   Platform_Property.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Platform_Property clone() => new Platform_Property()..mergeFromMessage(this);
+  Platform_Property clone() => Platform_Property()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Platform_Property create() => new Platform_Property();
+  static Platform_Property create() => Platform_Property();
   static PbList<Platform_Property> createRepeated() =>
-      new PbList<Platform_Property>();
+      PbList<Platform_Property>();
   static Platform_Property getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPlatform_Property();
+      _defaultInstance = _ReadonlyPlatform_Property();
     return _defaultInstance;
   }
 
@@ -240,7 +239,7 @@ class _ReadonlyPlatform_Property extends Platform_Property
     with ReadonlyMessageMixin {}
 
 class Platform extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Platform')
+  static final BuilderInfo _i = BuilderInfo('Platform')
     ..pp<Platform_Property>(1, 'properties', PbFieldType.PM,
         Platform_Property.$checkItem, Platform_Property.create)
     ..hasRequiredFields = false;
@@ -251,12 +250,12 @@ class Platform extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Platform.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Platform clone() => new Platform()..mergeFromMessage(this);
+  Platform clone() => Platform()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Platform create() => new Platform();
-  static PbList<Platform> createRepeated() => new PbList<Platform>();
+  static Platform create() => Platform();
+  static PbList<Platform> createRepeated() => PbList<Platform>();
   static Platform getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPlatform();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPlatform();
     return _defaultInstance;
   }
 
@@ -271,7 +270,7 @@ class Platform extends GeneratedMessage {
 class _ReadonlyPlatform extends Platform with ReadonlyMessageMixin {}
 
 class Directory extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Directory')
+  static final BuilderInfo _i = BuilderInfo('Directory')
     ..pp<FileNode>(
         1, 'files', PbFieldType.PM, FileNode.$checkItem, FileNode.create)
     ..pp<DirectoryNode>(2, 'directories', PbFieldType.PM,
@@ -284,12 +283,12 @@ class Directory extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Directory.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Directory clone() => new Directory()..mergeFromMessage(this);
+  Directory clone() => Directory()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Directory create() => new Directory();
-  static PbList<Directory> createRepeated() => new PbList<Directory>();
+  static Directory create() => Directory();
+  static PbList<Directory> createRepeated() => PbList<Directory>();
   static Directory getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDirectory();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDirectory();
     return _defaultInstance;
   }
 
@@ -306,7 +305,7 @@ class Directory extends GeneratedMessage {
 class _ReadonlyDirectory extends Directory with ReadonlyMessageMixin {}
 
 class FileNode extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FileNode')
+  static final BuilderInfo _i = BuilderInfo('FileNode')
     ..aOS(1, 'name')
     ..a<Digest>(2, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..aOB(4, 'isExecutable')
@@ -318,12 +317,12 @@ class FileNode extends GeneratedMessage {
       : super.fromBuffer(i, r);
   FileNode.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FileNode clone() => new FileNode()..mergeFromMessage(this);
+  FileNode clone() => FileNode()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FileNode create() => new FileNode();
-  static PbList<FileNode> createRepeated() => new PbList<FileNode>();
+  static FileNode create() => FileNode();
+  static PbList<FileNode> createRepeated() => PbList<FileNode>();
   static FileNode getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFileNode();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileNode();
     return _defaultInstance;
   }
 
@@ -360,7 +359,7 @@ class FileNode extends GeneratedMessage {
 class _ReadonlyFileNode extends FileNode with ReadonlyMessageMixin {}
 
 class DirectoryNode extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DirectoryNode')
+  static final BuilderInfo _i = BuilderInfo('DirectoryNode')
     ..aOS(1, 'name')
     ..a<Digest>(2, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..hasRequiredFields = false;
@@ -372,13 +371,12 @@ class DirectoryNode extends GeneratedMessage {
   DirectoryNode.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DirectoryNode clone() => new DirectoryNode()..mergeFromMessage(this);
+  DirectoryNode clone() => DirectoryNode()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DirectoryNode create() => new DirectoryNode();
-  static PbList<DirectoryNode> createRepeated() => new PbList<DirectoryNode>();
+  static DirectoryNode create() => DirectoryNode();
+  static PbList<DirectoryNode> createRepeated() => PbList<DirectoryNode>();
   static DirectoryNode getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDirectoryNode();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDirectoryNode();
     return _defaultInstance;
   }
 
@@ -407,7 +405,7 @@ class DirectoryNode extends GeneratedMessage {
 class _ReadonlyDirectoryNode extends DirectoryNode with ReadonlyMessageMixin {}
 
 class Digest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Digest')
+  static final BuilderInfo _i = BuilderInfo('Digest')
     ..aOS(1, 'hash')
     ..aInt64(2, 'sizeBytes')
     ..hasRequiredFields = false;
@@ -418,12 +416,12 @@ class Digest extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Digest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Digest clone() => new Digest()..mergeFromMessage(this);
+  Digest clone() => Digest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Digest create() => new Digest();
-  static PbList<Digest> createRepeated() => new PbList<Digest>();
+  static Digest create() => Digest();
+  static PbList<Digest> createRepeated() => PbList<Digest>();
   static Digest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDigest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDigest();
     return _defaultInstance;
   }
 
@@ -452,7 +450,7 @@ class Digest extends GeneratedMessage {
 class _ReadonlyDigest extends Digest with ReadonlyMessageMixin {}
 
 class ActionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ActionResult')
+  static final BuilderInfo _i = BuilderInfo('ActionResult')
     ..pp<OutputFile>(2, 'outputFiles', PbFieldType.PM, OutputFile.$checkItem,
         OutputFile.create)
     ..pp<OutputDirectory>(3, 'outputDirectories', PbFieldType.PM,
@@ -473,13 +471,12 @@ class ActionResult extends GeneratedMessage {
   ActionResult.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ActionResult clone() => new ActionResult()..mergeFromMessage(this);
+  ActionResult clone() => ActionResult()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ActionResult create() => new ActionResult();
-  static PbList<ActionResult> createRepeated() => new PbList<ActionResult>();
+  static ActionResult create() => ActionResult();
+  static PbList<ActionResult> createRepeated() => PbList<ActionResult>();
   static ActionResult getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyActionResult();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyActionResult();
     return _defaultInstance;
   }
 
@@ -536,7 +533,7 @@ class ActionResult extends GeneratedMessage {
 class _ReadonlyActionResult extends ActionResult with ReadonlyMessageMixin {}
 
 class OutputFile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OutputFile')
+  static final BuilderInfo _i = BuilderInfo('OutputFile')
     ..aOS(1, 'path')
     ..a<Digest>(2, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..a<List<int>>(3, 'content', PbFieldType.OY)
@@ -549,12 +546,12 @@ class OutputFile extends GeneratedMessage {
       : super.fromBuffer(i, r);
   OutputFile.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OutputFile clone() => new OutputFile()..mergeFromMessage(this);
+  OutputFile clone() => OutputFile()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OutputFile create() => new OutputFile();
-  static PbList<OutputFile> createRepeated() => new PbList<OutputFile>();
+  static OutputFile create() => OutputFile();
+  static PbList<OutputFile> createRepeated() => PbList<OutputFile>();
   static OutputFile getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyOutputFile();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOutputFile();
     return _defaultInstance;
   }
 
@@ -599,7 +596,7 @@ class OutputFile extends GeneratedMessage {
 class _ReadonlyOutputFile extends OutputFile with ReadonlyMessageMixin {}
 
 class Tree extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Tree')
+  static final BuilderInfo _i = BuilderInfo('Tree')
     ..a<Directory>(
         1, 'root', PbFieldType.OM, Directory.getDefault, Directory.create)
     ..pp<Directory>(
@@ -611,12 +608,12 @@ class Tree extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Tree.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Tree clone() => new Tree()..mergeFromMessage(this);
+  Tree clone() => Tree()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Tree create() => new Tree();
-  static PbList<Tree> createRepeated() => new PbList<Tree>();
+  static Tree create() => Tree();
+  static PbList<Tree> createRepeated() => PbList<Tree>();
   static Tree getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTree();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTree();
     return _defaultInstance;
   }
 
@@ -639,7 +636,7 @@ class Tree extends GeneratedMessage {
 class _ReadonlyTree extends Tree with ReadonlyMessageMixin {}
 
 class OutputDirectory extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OutputDirectory')
+  static final BuilderInfo _i = BuilderInfo('OutputDirectory')
     ..aOS(1, 'path')
     ..a<Digest>(2, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..a<Digest>(
@@ -653,14 +650,12 @@ class OutputDirectory extends GeneratedMessage {
   OutputDirectory.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OutputDirectory clone() => new OutputDirectory()..mergeFromMessage(this);
+  OutputDirectory clone() => OutputDirectory()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OutputDirectory create() => new OutputDirectory();
-  static PbList<OutputDirectory> createRepeated() =>
-      new PbList<OutputDirectory>();
+  static OutputDirectory create() => OutputDirectory();
+  static PbList<OutputDirectory> createRepeated() => PbList<OutputDirectory>();
   static OutputDirectory getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOutputDirectory();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOutputDirectory();
     return _defaultInstance;
   }
 
@@ -698,7 +693,7 @@ class _ReadonlyOutputDirectory extends OutputDirectory
     with ReadonlyMessageMixin {}
 
 class ExecuteRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExecuteRequest')
+  static final BuilderInfo _i = BuilderInfo('ExecuteRequest')
     ..aOS(1, 'instanceName')
     ..a<Action>(2, 'action', PbFieldType.OM, Action.getDefault, Action.create)
     ..aOB(3, 'skipCacheLookup')
@@ -713,14 +708,12 @@ class ExecuteRequest extends GeneratedMessage {
   ExecuteRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExecuteRequest clone() => new ExecuteRequest()..mergeFromMessage(this);
+  ExecuteRequest clone() => ExecuteRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExecuteRequest create() => new ExecuteRequest();
-  static PbList<ExecuteRequest> createRepeated() =>
-      new PbList<ExecuteRequest>();
+  static ExecuteRequest create() => ExecuteRequest();
+  static PbList<ExecuteRequest> createRepeated() => PbList<ExecuteRequest>();
   static ExecuteRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExecuteRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyExecuteRequest();
     return _defaultInstance;
   }
 
@@ -774,7 +767,7 @@ class _ReadonlyExecuteRequest extends ExecuteRequest with ReadonlyMessageMixin {
 }
 
 class LogFile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogFile')
+  static final BuilderInfo _i = BuilderInfo('LogFile')
     ..a<Digest>(1, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..aOB(2, 'humanReadable')
     ..hasRequiredFields = false;
@@ -785,12 +778,12 @@ class LogFile extends GeneratedMessage {
       : super.fromBuffer(i, r);
   LogFile.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogFile clone() => new LogFile()..mergeFromMessage(this);
+  LogFile clone() => LogFile()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static LogFile create() => new LogFile();
-  static PbList<LogFile> createRepeated() => new PbList<LogFile>();
+  static LogFile create() => LogFile();
+  static PbList<LogFile> createRepeated() => PbList<LogFile>();
   static LogFile getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLogFile();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLogFile();
     return _defaultInstance;
   }
 
@@ -819,8 +812,7 @@ class LogFile extends GeneratedMessage {
 class _ReadonlyLogFile extends LogFile with ReadonlyMessageMixin {}
 
 class ExecuteResponse_ServerLogsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo(
-      'ExecuteResponse_ServerLogsEntry')
+  static final BuilderInfo _i = BuilderInfo('ExecuteResponse_ServerLogsEntry')
     ..aOS(1, 'key')
     ..a<LogFile>(2, 'value', PbFieldType.OM, LogFile.getDefault, LogFile.create)
     ..hasRequiredFields = false;
@@ -833,15 +825,15 @@ class ExecuteResponse_ServerLogsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExecuteResponse_ServerLogsEntry clone() =>
-      new ExecuteResponse_ServerLogsEntry()..mergeFromMessage(this);
+      ExecuteResponse_ServerLogsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ExecuteResponse_ServerLogsEntry create() =>
-      new ExecuteResponse_ServerLogsEntry();
+      ExecuteResponse_ServerLogsEntry();
   static PbList<ExecuteResponse_ServerLogsEntry> createRepeated() =>
-      new PbList<ExecuteResponse_ServerLogsEntry>();
+      PbList<ExecuteResponse_ServerLogsEntry>();
   static ExecuteResponse_ServerLogsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExecuteResponse_ServerLogsEntry();
+      _defaultInstance = _ReadonlyExecuteResponse_ServerLogsEntry();
     return _defaultInstance;
   }
 
@@ -872,7 +864,7 @@ class _ReadonlyExecuteResponse_ServerLogsEntry
     extends ExecuteResponse_ServerLogsEntry with ReadonlyMessageMixin {}
 
 class ExecuteResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExecuteResponse')
+  static final BuilderInfo _i = BuilderInfo('ExecuteResponse')
     ..a<ActionResult>(1, 'result', PbFieldType.OM, ActionResult.getDefault,
         ActionResult.create)
     ..aOB(2, 'cachedResult')
@@ -893,14 +885,12 @@ class ExecuteResponse extends GeneratedMessage {
   ExecuteResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExecuteResponse clone() => new ExecuteResponse()..mergeFromMessage(this);
+  ExecuteResponse clone() => ExecuteResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExecuteResponse create() => new ExecuteResponse();
-  static PbList<ExecuteResponse> createRepeated() =>
-      new PbList<ExecuteResponse>();
+  static ExecuteResponse create() => ExecuteResponse();
+  static PbList<ExecuteResponse> createRepeated() => PbList<ExecuteResponse>();
   static ExecuteResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExecuteResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyExecuteResponse();
     return _defaultInstance;
   }
 
@@ -940,7 +930,7 @@ class _ReadonlyExecuteResponse extends ExecuteResponse
     with ReadonlyMessageMixin {}
 
 class ExecuteOperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExecuteOperationMetadata')
+  static final BuilderInfo _i = BuilderInfo('ExecuteOperationMetadata')
     ..e<ExecuteOperationMetadata_Stage>(
         1,
         'stage',
@@ -962,14 +952,14 @@ class ExecuteOperationMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExecuteOperationMetadata clone() =>
-      new ExecuteOperationMetadata()..mergeFromMessage(this);
+      ExecuteOperationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExecuteOperationMetadata create() => new ExecuteOperationMetadata();
+  static ExecuteOperationMetadata create() => ExecuteOperationMetadata();
   static PbList<ExecuteOperationMetadata> createRepeated() =>
-      new PbList<ExecuteOperationMetadata>();
+      PbList<ExecuteOperationMetadata>();
   static ExecuteOperationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExecuteOperationMetadata();
+      _defaultInstance = _ReadonlyExecuteOperationMetadata();
     return _defaultInstance;
   }
 
@@ -1016,7 +1006,7 @@ class _ReadonlyExecuteOperationMetadata extends ExecuteOperationMetadata
     with ReadonlyMessageMixin {}
 
 class GetActionResultRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetActionResultRequest')
+  static final BuilderInfo _i = BuilderInfo('GetActionResultRequest')
     ..aOS(1, 'instanceName')
     ..a<Digest>(
         2, 'actionDigest', PbFieldType.OM, Digest.getDefault, Digest.create)
@@ -1030,14 +1020,14 @@ class GetActionResultRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetActionResultRequest clone() =>
-      new GetActionResultRequest()..mergeFromMessage(this);
+      GetActionResultRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetActionResultRequest create() => new GetActionResultRequest();
+  static GetActionResultRequest create() => GetActionResultRequest();
   static PbList<GetActionResultRequest> createRepeated() =>
-      new PbList<GetActionResultRequest>();
+      PbList<GetActionResultRequest>();
   static GetActionResultRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetActionResultRequest();
+      _defaultInstance = _ReadonlyGetActionResultRequest();
     return _defaultInstance;
   }
 
@@ -1068,7 +1058,7 @@ class _ReadonlyGetActionResultRequest extends GetActionResultRequest
     with ReadonlyMessageMixin {}
 
 class UpdateActionResultRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateActionResultRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateActionResultRequest')
     ..aOS(1, 'instanceName')
     ..a<Digest>(
         2, 'actionDigest', PbFieldType.OM, Digest.getDefault, Digest.create)
@@ -1084,14 +1074,14 @@ class UpdateActionResultRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateActionResultRequest clone() =>
-      new UpdateActionResultRequest()..mergeFromMessage(this);
+      UpdateActionResultRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateActionResultRequest create() => new UpdateActionResultRequest();
+  static UpdateActionResultRequest create() => UpdateActionResultRequest();
   static PbList<UpdateActionResultRequest> createRepeated() =>
-      new PbList<UpdateActionResultRequest>();
+      PbList<UpdateActionResultRequest>();
   static UpdateActionResultRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateActionResultRequest();
+      _defaultInstance = _ReadonlyUpdateActionResultRequest();
     return _defaultInstance;
   }
 
@@ -1130,7 +1120,7 @@ class _ReadonlyUpdateActionResultRequest extends UpdateActionResultRequest
     with ReadonlyMessageMixin {}
 
 class FindMissingBlobsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FindMissingBlobsRequest')
+  static final BuilderInfo _i = BuilderInfo('FindMissingBlobsRequest')
     ..aOS(1, 'instanceName')
     ..pp<Digest>(
         2, 'blobDigests', PbFieldType.PM, Digest.$checkItem, Digest.create)
@@ -1144,14 +1134,14 @@ class FindMissingBlobsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   FindMissingBlobsRequest clone() =>
-      new FindMissingBlobsRequest()..mergeFromMessage(this);
+      FindMissingBlobsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FindMissingBlobsRequest create() => new FindMissingBlobsRequest();
+  static FindMissingBlobsRequest create() => FindMissingBlobsRequest();
   static PbList<FindMissingBlobsRequest> createRepeated() =>
-      new PbList<FindMissingBlobsRequest>();
+      PbList<FindMissingBlobsRequest>();
   static FindMissingBlobsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFindMissingBlobsRequest();
+      _defaultInstance = _ReadonlyFindMissingBlobsRequest();
     return _defaultInstance;
   }
 
@@ -1176,7 +1166,7 @@ class _ReadonlyFindMissingBlobsRequest extends FindMissingBlobsRequest
     with ReadonlyMessageMixin {}
 
 class FindMissingBlobsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FindMissingBlobsResponse')
+  static final BuilderInfo _i = BuilderInfo('FindMissingBlobsResponse')
     ..pp<Digest>(2, 'missingBlobDigests', PbFieldType.PM, Digest.$checkItem,
         Digest.create)
     ..hasRequiredFields = false;
@@ -1189,14 +1179,14 @@ class FindMissingBlobsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   FindMissingBlobsResponse clone() =>
-      new FindMissingBlobsResponse()..mergeFromMessage(this);
+      FindMissingBlobsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FindMissingBlobsResponse create() => new FindMissingBlobsResponse();
+  static FindMissingBlobsResponse create() => FindMissingBlobsResponse();
   static PbList<FindMissingBlobsResponse> createRepeated() =>
-      new PbList<FindMissingBlobsResponse>();
+      PbList<FindMissingBlobsResponse>();
   static FindMissingBlobsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFindMissingBlobsResponse();
+      _defaultInstance = _ReadonlyFindMissingBlobsResponse();
     return _defaultInstance;
   }
 
@@ -1213,7 +1203,7 @@ class _ReadonlyFindMissingBlobsResponse extends FindMissingBlobsResponse
     with ReadonlyMessageMixin {}
 
 class UpdateBlobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateBlobRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateBlobRequest')
     ..a<Digest>(
         1, 'contentDigest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..a<List<int>>(2, 'data', PbFieldType.OY)
@@ -1226,14 +1216,14 @@ class UpdateBlobRequest extends GeneratedMessage {
   UpdateBlobRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateBlobRequest clone() => new UpdateBlobRequest()..mergeFromMessage(this);
+  UpdateBlobRequest clone() => UpdateBlobRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateBlobRequest create() => new UpdateBlobRequest();
+  static UpdateBlobRequest create() => UpdateBlobRequest();
   static PbList<UpdateBlobRequest> createRepeated() =>
-      new PbList<UpdateBlobRequest>();
+      PbList<UpdateBlobRequest>();
   static UpdateBlobRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateBlobRequest();
+      _defaultInstance = _ReadonlyUpdateBlobRequest();
     return _defaultInstance;
   }
 
@@ -1263,7 +1253,7 @@ class _ReadonlyUpdateBlobRequest extends UpdateBlobRequest
     with ReadonlyMessageMixin {}
 
 class BatchUpdateBlobsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdateBlobsRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchUpdateBlobsRequest')
     ..aOS(1, 'instanceName')
     ..pp<UpdateBlobRequest>(2, 'requests', PbFieldType.PM,
         UpdateBlobRequest.$checkItem, UpdateBlobRequest.create)
@@ -1277,14 +1267,14 @@ class BatchUpdateBlobsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateBlobsRequest clone() =>
-      new BatchUpdateBlobsRequest()..mergeFromMessage(this);
+      BatchUpdateBlobsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchUpdateBlobsRequest create() => new BatchUpdateBlobsRequest();
+  static BatchUpdateBlobsRequest create() => BatchUpdateBlobsRequest();
   static PbList<BatchUpdateBlobsRequest> createRepeated() =>
-      new PbList<BatchUpdateBlobsRequest>();
+      PbList<BatchUpdateBlobsRequest>();
   static BatchUpdateBlobsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateBlobsRequest();
+      _defaultInstance = _ReadonlyBatchUpdateBlobsRequest();
     return _defaultInstance;
   }
 
@@ -1309,13 +1299,12 @@ class _ReadonlyBatchUpdateBlobsRequest extends BatchUpdateBlobsRequest
     with ReadonlyMessageMixin {}
 
 class BatchUpdateBlobsResponse_Response extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('BatchUpdateBlobsResponse_Response')
-        ..a<Digest>(
-            1, 'blobDigest', PbFieldType.OM, Digest.getDefault, Digest.create)
-        ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM,
-            $google$rpc.Status.getDefault, $google$rpc.Status.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('BatchUpdateBlobsResponse_Response')
+    ..a<Digest>(
+        1, 'blobDigest', PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM,
+        $google$rpc.Status.getDefault, $google$rpc.Status.create)
+    ..hasRequiredFields = false;
 
   BatchUpdateBlobsResponse_Response() : super();
   BatchUpdateBlobsResponse_Response.fromBuffer(List<int> i,
@@ -1325,15 +1314,15 @@ class BatchUpdateBlobsResponse_Response extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateBlobsResponse_Response clone() =>
-      new BatchUpdateBlobsResponse_Response()..mergeFromMessage(this);
+      BatchUpdateBlobsResponse_Response()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BatchUpdateBlobsResponse_Response create() =>
-      new BatchUpdateBlobsResponse_Response();
+      BatchUpdateBlobsResponse_Response();
   static PbList<BatchUpdateBlobsResponse_Response> createRepeated() =>
-      new PbList<BatchUpdateBlobsResponse_Response>();
+      PbList<BatchUpdateBlobsResponse_Response>();
   static BatchUpdateBlobsResponse_Response getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateBlobsResponse_Response();
+      _defaultInstance = _ReadonlyBatchUpdateBlobsResponse_Response();
     return _defaultInstance;
   }
 
@@ -1364,7 +1353,7 @@ class _ReadonlyBatchUpdateBlobsResponse_Response
     extends BatchUpdateBlobsResponse_Response with ReadonlyMessageMixin {}
 
 class BatchUpdateBlobsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdateBlobsResponse')
+  static final BuilderInfo _i = BuilderInfo('BatchUpdateBlobsResponse')
     ..pp<BatchUpdateBlobsResponse_Response>(
         1,
         'responses',
@@ -1381,14 +1370,14 @@ class BatchUpdateBlobsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateBlobsResponse clone() =>
-      new BatchUpdateBlobsResponse()..mergeFromMessage(this);
+      BatchUpdateBlobsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchUpdateBlobsResponse create() => new BatchUpdateBlobsResponse();
+  static BatchUpdateBlobsResponse create() => BatchUpdateBlobsResponse();
   static PbList<BatchUpdateBlobsResponse> createRepeated() =>
-      new PbList<BatchUpdateBlobsResponse>();
+      PbList<BatchUpdateBlobsResponse>();
   static BatchUpdateBlobsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateBlobsResponse();
+      _defaultInstance = _ReadonlyBatchUpdateBlobsResponse();
     return _defaultInstance;
   }
 
@@ -1405,7 +1394,7 @@ class _ReadonlyBatchUpdateBlobsResponse extends BatchUpdateBlobsResponse
     with ReadonlyMessageMixin {}
 
 class GetTreeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTreeRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTreeRequest')
     ..aOS(1, 'instanceName')
     ..a<Digest>(
         2, 'rootDigest', PbFieldType.OM, Digest.getDefault, Digest.create)
@@ -1420,14 +1409,12 @@ class GetTreeRequest extends GeneratedMessage {
   GetTreeRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTreeRequest clone() => new GetTreeRequest()..mergeFromMessage(this);
+  GetTreeRequest clone() => GetTreeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTreeRequest create() => new GetTreeRequest();
-  static PbList<GetTreeRequest> createRepeated() =>
-      new PbList<GetTreeRequest>();
+  static GetTreeRequest create() => GetTreeRequest();
+  static PbList<GetTreeRequest> createRepeated() => PbList<GetTreeRequest>();
   static GetTreeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTreeRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetTreeRequest();
     return _defaultInstance;
   }
 
@@ -1473,7 +1460,7 @@ class _ReadonlyGetTreeRequest extends GetTreeRequest with ReadonlyMessageMixin {
 }
 
 class GetTreeResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTreeResponse')
+  static final BuilderInfo _i = BuilderInfo('GetTreeResponse')
     ..pp<Directory>(1, 'directories', PbFieldType.PM, Directory.$checkItem,
         Directory.create)
     ..aOS(2, 'nextPageToken')
@@ -1486,14 +1473,12 @@ class GetTreeResponse extends GeneratedMessage {
   GetTreeResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTreeResponse clone() => new GetTreeResponse()..mergeFromMessage(this);
+  GetTreeResponse clone() => GetTreeResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTreeResponse create() => new GetTreeResponse();
-  static PbList<GetTreeResponse> createRepeated() =>
-      new PbList<GetTreeResponse>();
+  static GetTreeResponse create() => GetTreeResponse();
+  static PbList<GetTreeResponse> createRepeated() => PbList<GetTreeResponse>();
   static GetTreeResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTreeResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetTreeResponse();
     return _defaultInstance;
   }
 
@@ -1517,7 +1502,7 @@ class _ReadonlyGetTreeResponse extends GetTreeResponse
     with ReadonlyMessageMixin {}
 
 class ToolDetails extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ToolDetails')
+  static final BuilderInfo _i = BuilderInfo('ToolDetails')
     ..aOS(1, 'toolName')
     ..aOS(2, 'toolVersion')
     ..hasRequiredFields = false;
@@ -1529,12 +1514,12 @@ class ToolDetails extends GeneratedMessage {
   ToolDetails.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ToolDetails clone() => new ToolDetails()..mergeFromMessage(this);
+  ToolDetails clone() => ToolDetails()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ToolDetails create() => new ToolDetails();
-  static PbList<ToolDetails> createRepeated() => new PbList<ToolDetails>();
+  static ToolDetails create() => ToolDetails();
+  static PbList<ToolDetails> createRepeated() => PbList<ToolDetails>();
   static ToolDetails getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyToolDetails();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyToolDetails();
     return _defaultInstance;
   }
 
@@ -1563,7 +1548,7 @@ class ToolDetails extends GeneratedMessage {
 class _ReadonlyToolDetails extends ToolDetails with ReadonlyMessageMixin {}
 
 class RequestMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RequestMetadata')
+  static final BuilderInfo _i = BuilderInfo('RequestMetadata')
     ..a<ToolDetails>(1, 'toolDetails', PbFieldType.OM, ToolDetails.getDefault,
         ToolDetails.create)
     ..aOS(2, 'actionId')
@@ -1578,14 +1563,12 @@ class RequestMetadata extends GeneratedMessage {
   RequestMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RequestMetadata clone() => new RequestMetadata()..mergeFromMessage(this);
+  RequestMetadata clone() => RequestMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RequestMetadata create() => new RequestMetadata();
-  static PbList<RequestMetadata> createRepeated() =>
-      new PbList<RequestMetadata>();
+  static RequestMetadata create() => RequestMetadata();
+  static PbList<RequestMetadata> createRepeated() => PbList<RequestMetadata>();
   static RequestMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRequestMetadata();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRequestMetadata();
     return _defaultInstance;
   }
 
@@ -1636,7 +1619,7 @@ class ExecutionApi {
 
   Future<$google$longrunning.Operation> execute(
       ClientContext ctx, ExecuteRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'Execution', 'Execute', request, emptyResponse);
   }
@@ -1648,14 +1631,14 @@ class ActionCacheApi {
 
   Future<ActionResult> getActionResult(
       ClientContext ctx, GetActionResultRequest request) {
-    var emptyResponse = new ActionResult();
+    var emptyResponse = ActionResult();
     return _client.invoke<ActionResult>(
         ctx, 'ActionCache', 'GetActionResult', request, emptyResponse);
   }
 
   Future<ActionResult> updateActionResult(
       ClientContext ctx, UpdateActionResultRequest request) {
-    var emptyResponse = new ActionResult();
+    var emptyResponse = ActionResult();
     return _client.invoke<ActionResult>(
         ctx, 'ActionCache', 'UpdateActionResult', request, emptyResponse);
   }
@@ -1667,7 +1650,7 @@ class ContentAddressableStorageApi {
 
   Future<FindMissingBlobsResponse> findMissingBlobs(
       ClientContext ctx, FindMissingBlobsRequest request) {
-    var emptyResponse = new FindMissingBlobsResponse();
+    var emptyResponse = FindMissingBlobsResponse();
     return _client.invoke<FindMissingBlobsResponse>(
         ctx,
         'ContentAddressableStorage',
@@ -1678,7 +1661,7 @@ class ContentAddressableStorageApi {
 
   Future<BatchUpdateBlobsResponse> batchUpdateBlobs(
       ClientContext ctx, BatchUpdateBlobsRequest request) {
-    var emptyResponse = new BatchUpdateBlobsResponse();
+    var emptyResponse = BatchUpdateBlobsResponse();
     return _client.invoke<BatchUpdateBlobsResponse>(
         ctx,
         'ContentAddressableStorage',
@@ -1688,7 +1671,7 @@ class ContentAddressableStorageApi {
   }
 
   Future<GetTreeResponse> getTree(ClientContext ctx, GetTreeRequest request) {
-    var emptyResponse = new GetTreeResponse();
+    var emptyResponse = GetTreeResponse();
     return _client.invoke<GetTreeResponse>(
         ctx, 'ContentAddressableStorage', 'GetTree', request, emptyResponse);
   }

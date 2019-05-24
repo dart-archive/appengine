@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class PostalAddress extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PostalAddress')
+  static final BuilderInfo _i = BuilderInfo('PostalAddress')
     ..a<int>(1, 'revision', PbFieldType.O3)
     ..aOS(2, 'regionCode')
     ..aOS(3, 'languageCode')
@@ -30,13 +30,12 @@ class PostalAddress extends GeneratedMessage {
   PostalAddress.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PostalAddress clone() => new PostalAddress()..mergeFromMessage(this);
+  PostalAddress clone() => PostalAddress()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PostalAddress create() => new PostalAddress();
-  static PbList<PostalAddress> createRepeated() => new PbList<PostalAddress>();
+  static PostalAddress create() => PostalAddress();
+  static PbList<PostalAddress> createRepeated() => PbList<PostalAddress>();
   static PostalAddress getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPostalAddress();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPostalAddress();
     return _defaultInstance;
   }
 

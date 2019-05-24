@@ -16,7 +16,7 @@ import 'watch.pbenum.dart';
 export 'watch.pbenum.dart';
 
 class Request extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Request')
+  static final BuilderInfo _i = BuilderInfo('Request')
     ..aOS(1, 'target')
     ..a<List<int>>(2, 'resumeMarker', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -27,12 +27,12 @@ class Request extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Request.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Request clone() => new Request()..mergeFromMessage(this);
+  Request clone() => Request()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Request create() => new Request();
-  static PbList<Request> createRepeated() => new PbList<Request>();
+  static Request create() => Request();
+  static PbList<Request> createRepeated() => PbList<Request>();
   static Request getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRequest();
     return _defaultInstance;
   }
 
@@ -61,7 +61,7 @@ class Request extends GeneratedMessage {
 class _ReadonlyRequest extends Request with ReadonlyMessageMixin {}
 
 class ChangeBatch extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ChangeBatch')
+  static final BuilderInfo _i = BuilderInfo('ChangeBatch')
     ..pp<Change>(1, 'changes', PbFieldType.PM, Change.$checkItem, Change.create)
     ..hasRequiredFields = false;
 
@@ -72,12 +72,12 @@ class ChangeBatch extends GeneratedMessage {
   ChangeBatch.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ChangeBatch clone() => new ChangeBatch()..mergeFromMessage(this);
+  ChangeBatch clone() => ChangeBatch()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ChangeBatch create() => new ChangeBatch();
-  static PbList<ChangeBatch> createRepeated() => new PbList<ChangeBatch>();
+  static ChangeBatch create() => ChangeBatch();
+  static PbList<ChangeBatch> createRepeated() => PbList<ChangeBatch>();
   static ChangeBatch getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyChangeBatch();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyChangeBatch();
     return _defaultInstance;
   }
 
@@ -92,7 +92,7 @@ class ChangeBatch extends GeneratedMessage {
 class _ReadonlyChangeBatch extends ChangeBatch with ReadonlyMessageMixin {}
 
 class Change extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Change')
+  static final BuilderInfo _i = BuilderInfo('Change')
     ..aOS(1, 'element')
     ..e<Change_State>(2, 'state', PbFieldType.OE, Change_State.EXISTS,
         Change_State.valueOf, Change_State.values)
@@ -108,12 +108,12 @@ class Change extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Change.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Change clone() => new Change()..mergeFromMessage(this);
+  Change clone() => Change()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Change create() => new Change();
-  static PbList<Change> createRepeated() => new PbList<Change>();
+  static Change create() => Change();
+  static PbList<Change> createRepeated() => PbList<Change>();
   static Change getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyChange();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyChange();
     return _defaultInstance;
   }
 
@@ -170,7 +170,7 @@ class WatcherApi {
   WatcherApi(this._client);
 
   Future<ChangeBatch> watch(ClientContext ctx, Request request) {
-    var emptyResponse = new ChangeBatch();
+    var emptyResponse = ChangeBatch();
     return _client.invoke<ChangeBatch>(
         ctx, 'Watcher', 'Watch', request, emptyResponse);
   }

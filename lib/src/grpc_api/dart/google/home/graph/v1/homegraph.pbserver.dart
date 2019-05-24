@@ -24,13 +24,13 @@ abstract class HomeGraphApiServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'RequestSyncDevices':
-        return new RequestSyncDevicesRequest();
+        return RequestSyncDevicesRequest();
       case 'ReportStateAndNotification':
-        return new ReportStateAndNotificationRequest();
+        return ReportStateAndNotificationRequest();
       case 'DeleteAgentUser':
-        return new DeleteAgentUserRequest();
+        return DeleteAgentUserRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -44,7 +44,7 @@ abstract class HomeGraphApiServiceBase extends GeneratedService {
       case 'DeleteAgentUser':
         return this.deleteAgentUser(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

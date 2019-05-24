@@ -9,13 +9,12 @@ import 'package:protobuf/protobuf.dart';
 
 class ContentOption extends ProtobufEnum {
   static const ContentOption CONTENT_UNSPECIFIED =
-      const ContentOption._(0, 'CONTENT_UNSPECIFIED');
-  static const ContentOption CONTENT_TEXT =
-      const ContentOption._(1, 'CONTENT_TEXT');
+      ContentOption._(0, 'CONTENT_UNSPECIFIED');
+  static const ContentOption CONTENT_TEXT = ContentOption._(1, 'CONTENT_TEXT');
   static const ContentOption CONTENT_IMAGE =
-      const ContentOption._(2, 'CONTENT_IMAGE');
+      ContentOption._(2, 'CONTENT_IMAGE');
 
-  static const List<ContentOption> values = const <ContentOption>[
+  static const List<ContentOption> values = <ContentOption>[
     CONTENT_UNSPECIFIED,
     CONTENT_TEXT,
     CONTENT_IMAGE,
@@ -32,13 +31,13 @@ class ContentOption extends ProtobufEnum {
 
 class InfoTypeSupportedBy extends ProtobufEnum {
   static const InfoTypeSupportedBy ENUM_TYPE_UNSPECIFIED =
-      const InfoTypeSupportedBy._(0, 'ENUM_TYPE_UNSPECIFIED');
+      InfoTypeSupportedBy._(0, 'ENUM_TYPE_UNSPECIFIED');
   static const InfoTypeSupportedBy INSPECT =
-      const InfoTypeSupportedBy._(1, 'INSPECT');
+      InfoTypeSupportedBy._(1, 'INSPECT');
   static const InfoTypeSupportedBy RISK_ANALYSIS =
-      const InfoTypeSupportedBy._(2, 'RISK_ANALYSIS');
+      InfoTypeSupportedBy._(2, 'RISK_ANALYSIS');
 
-  static const List<InfoTypeSupportedBy> values = const <InfoTypeSupportedBy>[
+  static const List<InfoTypeSupportedBy> values = <InfoTypeSupportedBy>[
     ENUM_TYPE_UNSPECIFIED,
     INSPECT,
     RISK_ANALYSIS,
@@ -56,23 +55,22 @@ class InfoTypeSupportedBy extends ProtobufEnum {
 
 class RelationalOperator extends ProtobufEnum {
   static const RelationalOperator RELATIONAL_OPERATOR_UNSPECIFIED =
-      const RelationalOperator._(0, 'RELATIONAL_OPERATOR_UNSPECIFIED');
+      RelationalOperator._(0, 'RELATIONAL_OPERATOR_UNSPECIFIED');
   static const RelationalOperator EQUAL_TO =
-      const RelationalOperator._(1, 'EQUAL_TO');
+      RelationalOperator._(1, 'EQUAL_TO');
   static const RelationalOperator NOT_EQUAL_TO =
-      const RelationalOperator._(2, 'NOT_EQUAL_TO');
+      RelationalOperator._(2, 'NOT_EQUAL_TO');
   static const RelationalOperator GREATER_THAN =
-      const RelationalOperator._(3, 'GREATER_THAN');
+      RelationalOperator._(3, 'GREATER_THAN');
   static const RelationalOperator LESS_THAN =
-      const RelationalOperator._(4, 'LESS_THAN');
+      RelationalOperator._(4, 'LESS_THAN');
   static const RelationalOperator GREATER_THAN_OR_EQUALS =
-      const RelationalOperator._(5, 'GREATER_THAN_OR_EQUALS');
+      RelationalOperator._(5, 'GREATER_THAN_OR_EQUALS');
   static const RelationalOperator LESS_THAN_OR_EQUALS =
-      const RelationalOperator._(6, 'LESS_THAN_OR_EQUALS');
-  static const RelationalOperator EXISTS =
-      const RelationalOperator._(7, 'EXISTS');
+      RelationalOperator._(6, 'LESS_THAN_OR_EQUALS');
+  static const RelationalOperator EXISTS = RelationalOperator._(7, 'EXISTS');
 
-  static const List<RelationalOperator> values = const <RelationalOperator>[
+  static const List<RelationalOperator> values = <RelationalOperator>[
     RELATIONAL_OPERATOR_UNSPECIFIED,
     EQUAL_TO,
     NOT_EQUAL_TO,
@@ -95,12 +93,12 @@ class RelationalOperator extends ProtobufEnum {
 
 class DlpJobType extends ProtobufEnum {
   static const DlpJobType DLP_JOB_TYPE_UNSPECIFIED =
-      const DlpJobType._(0, 'DLP_JOB_TYPE_UNSPECIFIED');
-  static const DlpJobType INSPECT_JOB = const DlpJobType._(1, 'INSPECT_JOB');
+      DlpJobType._(0, 'DLP_JOB_TYPE_UNSPECIFIED');
+  static const DlpJobType INSPECT_JOB = DlpJobType._(1, 'INSPECT_JOB');
   static const DlpJobType RISK_ANALYSIS_JOB =
-      const DlpJobType._(2, 'RISK_ANALYSIS_JOB');
+      DlpJobType._(2, 'RISK_ANALYSIS_JOB');
 
-  static const List<DlpJobType> values = const <DlpJobType>[
+  static const List<DlpJobType> values = <DlpJobType>[
     DLP_JOB_TYPE_UNSPECIFIED,
     INSPECT_JOB,
     RISK_ANALYSIS_JOB,
@@ -117,22 +115,22 @@ class DlpJobType extends ProtobufEnum {
 
 class ByteContentItem_BytesType extends ProtobufEnum {
   static const ByteContentItem_BytesType BYTES_TYPE_UNSPECIFIED =
-      const ByteContentItem_BytesType._(0, 'BYTES_TYPE_UNSPECIFIED');
+      ByteContentItem_BytesType._(0, 'BYTES_TYPE_UNSPECIFIED');
   static const ByteContentItem_BytesType IMAGE =
-      const ByteContentItem_BytesType._(6, 'IMAGE');
+      ByteContentItem_BytesType._(6, 'IMAGE');
   static const ByteContentItem_BytesType IMAGE_JPEG =
-      const ByteContentItem_BytesType._(1, 'IMAGE_JPEG');
+      ByteContentItem_BytesType._(1, 'IMAGE_JPEG');
   static const ByteContentItem_BytesType IMAGE_BMP =
-      const ByteContentItem_BytesType._(2, 'IMAGE_BMP');
+      ByteContentItem_BytesType._(2, 'IMAGE_BMP');
   static const ByteContentItem_BytesType IMAGE_PNG =
-      const ByteContentItem_BytesType._(3, 'IMAGE_PNG');
+      ByteContentItem_BytesType._(3, 'IMAGE_PNG');
   static const ByteContentItem_BytesType IMAGE_SVG =
-      const ByteContentItem_BytesType._(4, 'IMAGE_SVG');
+      ByteContentItem_BytesType._(4, 'IMAGE_SVG');
   static const ByteContentItem_BytesType TEXT_UTF8 =
-      const ByteContentItem_BytesType._(5, 'TEXT_UTF8');
+      ByteContentItem_BytesType._(5, 'TEXT_UTF8');
 
   static const List<ByteContentItem_BytesType> values =
-      const <ByteContentItem_BytesType>[
+      <ByteContentItem_BytesType>[
     BYTES_TYPE_UNSPECIFIED,
     IMAGE,
     IMAGE_JPEG,
@@ -155,20 +153,20 @@ class ByteContentItem_BytesType extends ProtobufEnum {
 
 class OutputStorageConfig_OutputSchema extends ProtobufEnum {
   static const OutputStorageConfig_OutputSchema OUTPUT_SCHEMA_UNSPECIFIED =
-      const OutputStorageConfig_OutputSchema._(0, 'OUTPUT_SCHEMA_UNSPECIFIED');
+      OutputStorageConfig_OutputSchema._(0, 'OUTPUT_SCHEMA_UNSPECIFIED');
   static const OutputStorageConfig_OutputSchema BASIC_COLUMNS =
-      const OutputStorageConfig_OutputSchema._(1, 'BASIC_COLUMNS');
+      OutputStorageConfig_OutputSchema._(1, 'BASIC_COLUMNS');
   static const OutputStorageConfig_OutputSchema GCS_COLUMNS =
-      const OutputStorageConfig_OutputSchema._(2, 'GCS_COLUMNS');
+      OutputStorageConfig_OutputSchema._(2, 'GCS_COLUMNS');
   static const OutputStorageConfig_OutputSchema DATASTORE_COLUMNS =
-      const OutputStorageConfig_OutputSchema._(3, 'DATASTORE_COLUMNS');
+      OutputStorageConfig_OutputSchema._(3, 'DATASTORE_COLUMNS');
   static const OutputStorageConfig_OutputSchema BIG_QUERY_COLUMNS =
-      const OutputStorageConfig_OutputSchema._(4, 'BIG_QUERY_COLUMNS');
+      OutputStorageConfig_OutputSchema._(4, 'BIG_QUERY_COLUMNS');
   static const OutputStorageConfig_OutputSchema ALL_COLUMNS =
-      const OutputStorageConfig_OutputSchema._(5, 'ALL_COLUMNS');
+      OutputStorageConfig_OutputSchema._(5, 'ALL_COLUMNS');
 
   static const List<OutputStorageConfig_OutputSchema> values =
-      const <OutputStorageConfig_OutputSchema>[
+      <OutputStorageConfig_OutputSchema>[
     OUTPUT_SCHEMA_UNSPECIFIED,
     BASIC_COLUMNS,
     GCS_COLUMNS,
@@ -190,22 +188,21 @@ class OutputStorageConfig_OutputSchema extends ProtobufEnum {
 
 class TimePartConfig_TimePart extends ProtobufEnum {
   static const TimePartConfig_TimePart TIME_PART_UNSPECIFIED =
-      const TimePartConfig_TimePart._(0, 'TIME_PART_UNSPECIFIED');
+      TimePartConfig_TimePart._(0, 'TIME_PART_UNSPECIFIED');
   static const TimePartConfig_TimePart YEAR =
-      const TimePartConfig_TimePart._(1, 'YEAR');
+      TimePartConfig_TimePart._(1, 'YEAR');
   static const TimePartConfig_TimePart MONTH =
-      const TimePartConfig_TimePart._(2, 'MONTH');
+      TimePartConfig_TimePart._(2, 'MONTH');
   static const TimePartConfig_TimePart DAY_OF_MONTH =
-      const TimePartConfig_TimePart._(3, 'DAY_OF_MONTH');
+      TimePartConfig_TimePart._(3, 'DAY_OF_MONTH');
   static const TimePartConfig_TimePart DAY_OF_WEEK =
-      const TimePartConfig_TimePart._(4, 'DAY_OF_WEEK');
+      TimePartConfig_TimePart._(4, 'DAY_OF_WEEK');
   static const TimePartConfig_TimePart WEEK_OF_YEAR =
-      const TimePartConfig_TimePart._(5, 'WEEK_OF_YEAR');
+      TimePartConfig_TimePart._(5, 'WEEK_OF_YEAR');
   static const TimePartConfig_TimePart HOUR_OF_DAY =
-      const TimePartConfig_TimePart._(6, 'HOUR_OF_DAY');
+      TimePartConfig_TimePart._(6, 'HOUR_OF_DAY');
 
-  static const List<TimePartConfig_TimePart> values =
-      const <TimePartConfig_TimePart>[
+  static const List<TimePartConfig_TimePart> values = <TimePartConfig_TimePart>[
     TIME_PART_UNSPECIFIED,
     YEAR,
     MONTH,
@@ -228,22 +225,21 @@ class TimePartConfig_TimePart extends ProtobufEnum {
 
 class CharsToIgnore_CommonCharsToIgnore extends ProtobufEnum {
   static const CharsToIgnore_CommonCharsToIgnore
-      COMMON_CHARS_TO_IGNORE_UNSPECIFIED =
-      const CharsToIgnore_CommonCharsToIgnore._(
+      COMMON_CHARS_TO_IGNORE_UNSPECIFIED = CharsToIgnore_CommonCharsToIgnore._(
           0, 'COMMON_CHARS_TO_IGNORE_UNSPECIFIED');
   static const CharsToIgnore_CommonCharsToIgnore NUMERIC =
-      const CharsToIgnore_CommonCharsToIgnore._(1, 'NUMERIC');
+      CharsToIgnore_CommonCharsToIgnore._(1, 'NUMERIC');
   static const CharsToIgnore_CommonCharsToIgnore ALPHA_UPPER_CASE =
-      const CharsToIgnore_CommonCharsToIgnore._(2, 'ALPHA_UPPER_CASE');
+      CharsToIgnore_CommonCharsToIgnore._(2, 'ALPHA_UPPER_CASE');
   static const CharsToIgnore_CommonCharsToIgnore ALPHA_LOWER_CASE =
-      const CharsToIgnore_CommonCharsToIgnore._(3, 'ALPHA_LOWER_CASE');
+      CharsToIgnore_CommonCharsToIgnore._(3, 'ALPHA_LOWER_CASE');
   static const CharsToIgnore_CommonCharsToIgnore PUNCTUATION =
-      const CharsToIgnore_CommonCharsToIgnore._(4, 'PUNCTUATION');
+      CharsToIgnore_CommonCharsToIgnore._(4, 'PUNCTUATION');
   static const CharsToIgnore_CommonCharsToIgnore WHITESPACE =
-      const CharsToIgnore_CommonCharsToIgnore._(5, 'WHITESPACE');
+      CharsToIgnore_CommonCharsToIgnore._(5, 'WHITESPACE');
 
   static const List<CharsToIgnore_CommonCharsToIgnore> values =
-      const <CharsToIgnore_CommonCharsToIgnore>[
+      <CharsToIgnore_CommonCharsToIgnore>[
     COMMON_CHARS_TO_IGNORE_UNSPECIFIED,
     NUMERIC,
     ALPHA_UPPER_CASE,
@@ -266,23 +262,21 @@ class CharsToIgnore_CommonCharsToIgnore extends ProtobufEnum {
 class CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet extends ProtobufEnum {
   static const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet
       FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED =
-      const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(
+      CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(
           0, 'FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED');
   static const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet NUMERIC =
-      const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(1, 'NUMERIC');
+      CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(1, 'NUMERIC');
   static const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet HEXADECIMAL =
-      const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(
-          2, 'HEXADECIMAL');
+      CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(2, 'HEXADECIMAL');
   static const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet
       UPPER_CASE_ALPHA_NUMERIC =
-      const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(
+      CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(
           3, 'UPPER_CASE_ALPHA_NUMERIC');
   static const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet ALPHA_NUMERIC =
-      const CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(
-          4, 'ALPHA_NUMERIC');
+      CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet._(4, 'ALPHA_NUMERIC');
 
   static const List<CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet> values =
-      const <CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet>[
+      <CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet>[
     FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED,
     NUMERIC,
     HEXADECIMAL,
@@ -305,13 +299,13 @@ class CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet extends ProtobufEnum {
 class RecordCondition_Expressions_LogicalOperator extends ProtobufEnum {
   static const RecordCondition_Expressions_LogicalOperator
       LOGICAL_OPERATOR_UNSPECIFIED =
-      const RecordCondition_Expressions_LogicalOperator._(
+      RecordCondition_Expressions_LogicalOperator._(
           0, 'LOGICAL_OPERATOR_UNSPECIFIED');
   static const RecordCondition_Expressions_LogicalOperator AND =
-      const RecordCondition_Expressions_LogicalOperator._(1, 'AND');
+      RecordCondition_Expressions_LogicalOperator._(1, 'AND');
 
   static const List<RecordCondition_Expressions_LogicalOperator> values =
-      const <RecordCondition_Expressions_LogicalOperator>[
+      <RecordCondition_Expressions_LogicalOperator>[
     LOGICAL_OPERATOR_UNSPECIFIED,
     AND,
   ];
@@ -331,15 +325,15 @@ class RecordCondition_Expressions_LogicalOperator extends ProtobufEnum {
 class TransformationSummary_TransformationResultCode extends ProtobufEnum {
   static const TransformationSummary_TransformationResultCode
       TRANSFORMATION_RESULT_CODE_UNSPECIFIED =
-      const TransformationSummary_TransformationResultCode._(
+      TransformationSummary_TransformationResultCode._(
           0, 'TRANSFORMATION_RESULT_CODE_UNSPECIFIED');
   static const TransformationSummary_TransformationResultCode SUCCESS =
-      const TransformationSummary_TransformationResultCode._(1, 'SUCCESS');
+      TransformationSummary_TransformationResultCode._(1, 'SUCCESS');
   static const TransformationSummary_TransformationResultCode ERROR =
-      const TransformationSummary_TransformationResultCode._(2, 'ERROR');
+      TransformationSummary_TransformationResultCode._(2, 'ERROR');
 
   static const List<TransformationSummary_TransformationResultCode> values =
-      const <TransformationSummary_TransformationResultCode>[
+      <TransformationSummary_TransformationResultCode>[
     TRANSFORMATION_RESULT_CODE_UNSPECIFIED,
     SUCCESS,
     ERROR,
@@ -359,15 +353,13 @@ class TransformationSummary_TransformationResultCode extends ProtobufEnum {
 
 class JobTrigger_Status extends ProtobufEnum {
   static const JobTrigger_Status STATUS_UNSPECIFIED =
-      const JobTrigger_Status._(0, 'STATUS_UNSPECIFIED');
-  static const JobTrigger_Status HEALTHY =
-      const JobTrigger_Status._(1, 'HEALTHY');
-  static const JobTrigger_Status PAUSED =
-      const JobTrigger_Status._(2, 'PAUSED');
+      JobTrigger_Status._(0, 'STATUS_UNSPECIFIED');
+  static const JobTrigger_Status HEALTHY = JobTrigger_Status._(1, 'HEALTHY');
+  static const JobTrigger_Status PAUSED = JobTrigger_Status._(2, 'PAUSED');
   static const JobTrigger_Status CANCELLED =
-      const JobTrigger_Status._(3, 'CANCELLED');
+      JobTrigger_Status._(3, 'CANCELLED');
 
-  static const List<JobTrigger_Status> values = const <JobTrigger_Status>[
+  static const List<JobTrigger_Status> values = <JobTrigger_Status>[
     STATUS_UNSPECIFIED,
     HEALTHY,
     PAUSED,
@@ -386,15 +378,14 @@ class JobTrigger_Status extends ProtobufEnum {
 
 class DlpJob_JobState extends ProtobufEnum {
   static const DlpJob_JobState JOB_STATE_UNSPECIFIED =
-      const DlpJob_JobState._(0, 'JOB_STATE_UNSPECIFIED');
-  static const DlpJob_JobState PENDING = const DlpJob_JobState._(1, 'PENDING');
-  static const DlpJob_JobState RUNNING = const DlpJob_JobState._(2, 'RUNNING');
-  static const DlpJob_JobState DONE = const DlpJob_JobState._(3, 'DONE');
-  static const DlpJob_JobState CANCELED =
-      const DlpJob_JobState._(4, 'CANCELED');
-  static const DlpJob_JobState FAILED = const DlpJob_JobState._(5, 'FAILED');
+      DlpJob_JobState._(0, 'JOB_STATE_UNSPECIFIED');
+  static const DlpJob_JobState PENDING = DlpJob_JobState._(1, 'PENDING');
+  static const DlpJob_JobState RUNNING = DlpJob_JobState._(2, 'RUNNING');
+  static const DlpJob_JobState DONE = DlpJob_JobState._(3, 'DONE');
+  static const DlpJob_JobState CANCELED = DlpJob_JobState._(4, 'CANCELED');
+  static const DlpJob_JobState FAILED = DlpJob_JobState._(5, 'FAILED');
 
-  static const List<DlpJob_JobState> values = const <DlpJob_JobState>[
+  static const List<DlpJob_JobState> values = <DlpJob_JobState>[
     JOB_STATE_UNSPECIFIED,
     PENDING,
     RUNNING,

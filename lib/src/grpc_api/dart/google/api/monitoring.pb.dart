@@ -9,11 +9,10 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Monitoring_MonitoringDestination extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Monitoring_MonitoringDestination')
-        ..aOS(1, 'monitoredResource')
-        ..pPS(2, 'metrics')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Monitoring_MonitoringDestination')
+    ..aOS(1, 'monitoredResource')
+    ..pPS(2, 'metrics')
+    ..hasRequiredFields = false;
 
   Monitoring_MonitoringDestination() : super();
   Monitoring_MonitoringDestination.fromBuffer(List<int> i,
@@ -23,15 +22,15 @@ class Monitoring_MonitoringDestination extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Monitoring_MonitoringDestination clone() =>
-      new Monitoring_MonitoringDestination()..mergeFromMessage(this);
+      Monitoring_MonitoringDestination()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Monitoring_MonitoringDestination create() =>
-      new Monitoring_MonitoringDestination();
+      Monitoring_MonitoringDestination();
   static PbList<Monitoring_MonitoringDestination> createRepeated() =>
-      new PbList<Monitoring_MonitoringDestination>();
+      PbList<Monitoring_MonitoringDestination>();
   static Monitoring_MonitoringDestination getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMonitoring_MonitoringDestination();
+      _defaultInstance = _ReadonlyMonitoring_MonitoringDestination();
     return _defaultInstance;
   }
 
@@ -56,7 +55,7 @@ class _ReadonlyMonitoring_MonitoringDestination
     extends Monitoring_MonitoringDestination with ReadonlyMessageMixin {}
 
 class Monitoring extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Monitoring')
+  static final BuilderInfo _i = BuilderInfo('Monitoring')
     ..pp<Monitoring_MonitoringDestination>(
         1,
         'producerDestinations',
@@ -77,12 +76,12 @@ class Monitoring extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Monitoring.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Monitoring clone() => new Monitoring()..mergeFromMessage(this);
+  Monitoring clone() => Monitoring()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Monitoring create() => new Monitoring();
-  static PbList<Monitoring> createRepeated() => new PbList<Monitoring>();
+  static Monitoring create() => Monitoring();
+  static PbList<Monitoring> createRepeated() => PbList<Monitoring>();
   static Monitoring getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMonitoring();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMonitoring();
     return _defaultInstance;
   }
 

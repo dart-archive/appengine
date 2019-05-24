@@ -14,7 +14,7 @@ import '../../protobuf/any.pb.dart' as $google$protobuf;
 import '../../protobuf/struct.pb.dart' as $google$protobuf;
 
 class AuditLog extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditLog')
+  static final BuilderInfo _i = BuilderInfo('AuditLog')
     ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM,
         $google$rpc.Status.getDefault, $google$rpc.Status.create)
     ..a<AuthenticationInfo>(3, 'authenticationInfo', PbFieldType.OM,
@@ -41,12 +41,12 @@ class AuditLog extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AuditLog.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuditLog clone() => new AuditLog()..mergeFromMessage(this);
+  AuditLog clone() => AuditLog()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuditLog create() => new AuditLog();
-  static PbList<AuditLog> createRepeated() => new PbList<AuditLog>();
+  static AuditLog create() => AuditLog();
+  static PbList<AuditLog> createRepeated() => PbList<AuditLog>();
   static AuditLog getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAuditLog();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuditLog();
     return _defaultInstance;
   }
 
@@ -141,7 +141,7 @@ class AuditLog extends GeneratedMessage {
 class _ReadonlyAuditLog extends AuditLog with ReadonlyMessageMixin {}
 
 class AuthenticationInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthenticationInfo')
+  static final BuilderInfo _i = BuilderInfo('AuthenticationInfo')
     ..aOS(1, 'principalEmail')
     ..hasRequiredFields = false;
 
@@ -152,15 +152,14 @@ class AuthenticationInfo extends GeneratedMessage {
   AuthenticationInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthenticationInfo clone() =>
-      new AuthenticationInfo()..mergeFromMessage(this);
+  AuthenticationInfo clone() => AuthenticationInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuthenticationInfo create() => new AuthenticationInfo();
+  static AuthenticationInfo create() => AuthenticationInfo();
   static PbList<AuthenticationInfo> createRepeated() =>
-      new PbList<AuthenticationInfo>();
+      PbList<AuthenticationInfo>();
   static AuthenticationInfo getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthenticationInfo();
+      _defaultInstance = _ReadonlyAuthenticationInfo();
     return _defaultInstance;
   }
 
@@ -182,7 +181,7 @@ class _ReadonlyAuthenticationInfo extends AuthenticationInfo
     with ReadonlyMessageMixin {}
 
 class AuthorizationInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthorizationInfo')
+  static final BuilderInfo _i = BuilderInfo('AuthorizationInfo')
     ..aOS(1, 'resource')
     ..aOS(2, 'permission')
     ..aOB(3, 'granted')
@@ -195,14 +194,14 @@ class AuthorizationInfo extends GeneratedMessage {
   AuthorizationInfo.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthorizationInfo clone() => new AuthorizationInfo()..mergeFromMessage(this);
+  AuthorizationInfo clone() => AuthorizationInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AuthorizationInfo create() => new AuthorizationInfo();
+  static AuthorizationInfo create() => AuthorizationInfo();
   static PbList<AuthorizationInfo> createRepeated() =>
-      new PbList<AuthorizationInfo>();
+      PbList<AuthorizationInfo>();
   static AuthorizationInfo getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthorizationInfo();
+      _defaultInstance = _ReadonlyAuthorizationInfo();
     return _defaultInstance;
   }
 
@@ -240,7 +239,7 @@ class _ReadonlyAuthorizationInfo extends AuthorizationInfo
     with ReadonlyMessageMixin {}
 
 class RequestMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RequestMetadata')
+  static final BuilderInfo _i = BuilderInfo('RequestMetadata')
     ..aOS(1, 'callerIp')
     ..aOS(2, 'callerSuppliedUserAgent')
     ..hasRequiredFields = false;
@@ -252,14 +251,12 @@ class RequestMetadata extends GeneratedMessage {
   RequestMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RequestMetadata clone() => new RequestMetadata()..mergeFromMessage(this);
+  RequestMetadata clone() => RequestMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RequestMetadata create() => new RequestMetadata();
-  static PbList<RequestMetadata> createRepeated() =>
-      new PbList<RequestMetadata>();
+  static RequestMetadata create() => RequestMetadata();
+  static PbList<RequestMetadata> createRepeated() => PbList<RequestMetadata>();
   static RequestMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRequestMetadata();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRequestMetadata();
     return _defaultInstance;
   }
 

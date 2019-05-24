@@ -12,7 +12,7 @@ import '../../protobuf/struct.pb.dart' as $google$protobuf;
 import 'keys.pb.dart';
 
 class Mutation_Write extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation_Write')
+  static final BuilderInfo _i = BuilderInfo('Mutation_Write')
     ..aOS(1, 'table')
     ..pPS(2, 'columns')
     ..pp<$google$protobuf.ListValue>(
@@ -30,14 +30,12 @@ class Mutation_Write extends GeneratedMessage {
   Mutation_Write.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Mutation_Write clone() => new Mutation_Write()..mergeFromMessage(this);
+  Mutation_Write clone() => Mutation_Write()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mutation_Write create() => new Mutation_Write();
-  static PbList<Mutation_Write> createRepeated() =>
-      new PbList<Mutation_Write>();
+  static Mutation_Write create() => Mutation_Write();
+  static PbList<Mutation_Write> createRepeated() => PbList<Mutation_Write>();
   static Mutation_Write getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutation_Write();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMutation_Write();
     return _defaultInstance;
   }
 
@@ -63,7 +61,7 @@ class _ReadonlyMutation_Write extends Mutation_Write with ReadonlyMessageMixin {
 }
 
 class Mutation_Delete extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation_Delete')
+  static final BuilderInfo _i = BuilderInfo('Mutation_Delete')
     ..aOS(1, 'table')
     ..a<KeySet>(2, 'keySet', PbFieldType.OM, KeySet.getDefault, KeySet.create)
     ..hasRequiredFields = false;
@@ -75,14 +73,12 @@ class Mutation_Delete extends GeneratedMessage {
   Mutation_Delete.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Mutation_Delete clone() => new Mutation_Delete()..mergeFromMessage(this);
+  Mutation_Delete clone() => Mutation_Delete()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mutation_Delete create() => new Mutation_Delete();
-  static PbList<Mutation_Delete> createRepeated() =>
-      new PbList<Mutation_Delete>();
+  static Mutation_Delete create() => Mutation_Delete();
+  static PbList<Mutation_Delete> createRepeated() => PbList<Mutation_Delete>();
   static Mutation_Delete getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutation_Delete();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMutation_Delete();
     return _defaultInstance;
   }
 
@@ -112,7 +108,7 @@ class _ReadonlyMutation_Delete extends Mutation_Delete
     with ReadonlyMessageMixin {}
 
 class Mutation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation')
+  static final BuilderInfo _i = BuilderInfo('Mutation')
     ..a<Mutation_Write>(1, 'insert', PbFieldType.OM, Mutation_Write.getDefault,
         Mutation_Write.create)
     ..a<Mutation_Write>(2, 'update', PbFieldType.OM, Mutation_Write.getDefault,
@@ -131,12 +127,12 @@ class Mutation extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Mutation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Mutation clone() => new Mutation()..mergeFromMessage(this);
+  Mutation clone() => Mutation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Mutation create() => new Mutation();
-  static PbList<Mutation> createRepeated() => new PbList<Mutation>();
+  static Mutation create() => Mutation();
+  static PbList<Mutation> createRepeated() => PbList<Mutation>();
   static Mutation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMutation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMutation();
     return _defaultInstance;
   }
 

@@ -9,14 +9,14 @@ import 'package:protobuf/protobuf.dart';
 
 class ServiceAccountKeyAlgorithm extends ProtobufEnum {
   static const ServiceAccountKeyAlgorithm KEY_ALG_UNSPECIFIED =
-      const ServiceAccountKeyAlgorithm._(0, 'KEY_ALG_UNSPECIFIED');
+      ServiceAccountKeyAlgorithm._(0, 'KEY_ALG_UNSPECIFIED');
   static const ServiceAccountKeyAlgorithm KEY_ALG_RSA_1024 =
-      const ServiceAccountKeyAlgorithm._(1, 'KEY_ALG_RSA_1024');
+      ServiceAccountKeyAlgorithm._(1, 'KEY_ALG_RSA_1024');
   static const ServiceAccountKeyAlgorithm KEY_ALG_RSA_2048 =
-      const ServiceAccountKeyAlgorithm._(2, 'KEY_ALG_RSA_2048');
+      ServiceAccountKeyAlgorithm._(2, 'KEY_ALG_RSA_2048');
 
   static const List<ServiceAccountKeyAlgorithm> values =
-      const <ServiceAccountKeyAlgorithm>[
+      <ServiceAccountKeyAlgorithm>[
     KEY_ALG_UNSPECIFIED,
     KEY_ALG_RSA_1024,
     KEY_ALG_RSA_2048,
@@ -35,14 +35,14 @@ class ServiceAccountKeyAlgorithm extends ProtobufEnum {
 
 class ServiceAccountPrivateKeyType extends ProtobufEnum {
   static const ServiceAccountPrivateKeyType TYPE_UNSPECIFIED =
-      const ServiceAccountPrivateKeyType._(0, 'TYPE_UNSPECIFIED');
+      ServiceAccountPrivateKeyType._(0, 'TYPE_UNSPECIFIED');
   static const ServiceAccountPrivateKeyType TYPE_PKCS12_FILE =
-      const ServiceAccountPrivateKeyType._(1, 'TYPE_PKCS12_FILE');
+      ServiceAccountPrivateKeyType._(1, 'TYPE_PKCS12_FILE');
   static const ServiceAccountPrivateKeyType TYPE_GOOGLE_CREDENTIALS_FILE =
-      const ServiceAccountPrivateKeyType._(2, 'TYPE_GOOGLE_CREDENTIALS_FILE');
+      ServiceAccountPrivateKeyType._(2, 'TYPE_GOOGLE_CREDENTIALS_FILE');
 
   static const List<ServiceAccountPrivateKeyType> values =
-      const <ServiceAccountPrivateKeyType>[
+      <ServiceAccountPrivateKeyType>[
     TYPE_UNSPECIFIED,
     TYPE_PKCS12_FILE,
     TYPE_GOOGLE_CREDENTIALS_FILE,
@@ -61,14 +61,14 @@ class ServiceAccountPrivateKeyType extends ProtobufEnum {
 
 class ServiceAccountPublicKeyType extends ProtobufEnum {
   static const ServiceAccountPublicKeyType TYPE_NONE =
-      const ServiceAccountPublicKeyType._(0, 'TYPE_NONE');
+      ServiceAccountPublicKeyType._(0, 'TYPE_NONE');
   static const ServiceAccountPublicKeyType TYPE_X509_PEM_FILE =
-      const ServiceAccountPublicKeyType._(1, 'TYPE_X509_PEM_FILE');
+      ServiceAccountPublicKeyType._(1, 'TYPE_X509_PEM_FILE');
   static const ServiceAccountPublicKeyType TYPE_RAW_PUBLIC_KEY =
-      const ServiceAccountPublicKeyType._(2, 'TYPE_RAW_PUBLIC_KEY');
+      ServiceAccountPublicKeyType._(2, 'TYPE_RAW_PUBLIC_KEY');
 
   static const List<ServiceAccountPublicKeyType> values =
-      const <ServiceAccountPublicKeyType>[
+      <ServiceAccountPublicKeyType>[
     TYPE_NONE,
     TYPE_X509_PEM_FILE,
     TYPE_RAW_PUBLIC_KEY,
@@ -86,10 +86,10 @@ class ServiceAccountPublicKeyType extends ProtobufEnum {
 }
 
 class RoleView extends ProtobufEnum {
-  static const RoleView BASIC = const RoleView._(0, 'BASIC');
-  static const RoleView FULL = const RoleView._(1, 'FULL');
+  static const RoleView BASIC = RoleView._(0, 'BASIC');
+  static const RoleView FULL = RoleView._(1, 'FULL');
 
-  static const List<RoleView> values = const <RoleView>[
+  static const List<RoleView> values = <RoleView>[
     BASIC,
     FULL,
   ];
@@ -105,14 +105,14 @@ class RoleView extends ProtobufEnum {
 
 class ListServiceAccountKeysRequest_KeyType extends ProtobufEnum {
   static const ListServiceAccountKeysRequest_KeyType KEY_TYPE_UNSPECIFIED =
-      const ListServiceAccountKeysRequest_KeyType._(0, 'KEY_TYPE_UNSPECIFIED');
+      ListServiceAccountKeysRequest_KeyType._(0, 'KEY_TYPE_UNSPECIFIED');
   static const ListServiceAccountKeysRequest_KeyType USER_MANAGED =
-      const ListServiceAccountKeysRequest_KeyType._(1, 'USER_MANAGED');
+      ListServiceAccountKeysRequest_KeyType._(1, 'USER_MANAGED');
   static const ListServiceAccountKeysRequest_KeyType SYSTEM_MANAGED =
-      const ListServiceAccountKeysRequest_KeyType._(2, 'SYSTEM_MANAGED');
+      ListServiceAccountKeysRequest_KeyType._(2, 'SYSTEM_MANAGED');
 
   static const List<ListServiceAccountKeysRequest_KeyType> values =
-      const <ListServiceAccountKeysRequest_KeyType>[
+      <ListServiceAccountKeysRequest_KeyType>[
     KEY_TYPE_UNSPECIFIED,
     USER_MANAGED,
     SYSTEM_MANAGED,
@@ -130,19 +130,16 @@ class ListServiceAccountKeysRequest_KeyType extends ProtobufEnum {
 }
 
 class Role_RoleLaunchStage extends ProtobufEnum {
-  static const Role_RoleLaunchStage ALPHA =
-      const Role_RoleLaunchStage._(0, 'ALPHA');
-  static const Role_RoleLaunchStage BETA =
-      const Role_RoleLaunchStage._(1, 'BETA');
-  static const Role_RoleLaunchStage GA = const Role_RoleLaunchStage._(2, 'GA');
+  static const Role_RoleLaunchStage ALPHA = Role_RoleLaunchStage._(0, 'ALPHA');
+  static const Role_RoleLaunchStage BETA = Role_RoleLaunchStage._(1, 'BETA');
+  static const Role_RoleLaunchStage GA = Role_RoleLaunchStage._(2, 'GA');
   static const Role_RoleLaunchStage DEPRECATED =
-      const Role_RoleLaunchStage._(4, 'DEPRECATED');
+      Role_RoleLaunchStage._(4, 'DEPRECATED');
   static const Role_RoleLaunchStage DISABLED =
-      const Role_RoleLaunchStage._(5, 'DISABLED');
-  static const Role_RoleLaunchStage EAP =
-      const Role_RoleLaunchStage._(6, 'EAP');
+      Role_RoleLaunchStage._(5, 'DISABLED');
+  static const Role_RoleLaunchStage EAP = Role_RoleLaunchStage._(6, 'EAP');
 
-  static const List<Role_RoleLaunchStage> values = const <Role_RoleLaunchStage>[
+  static const List<Role_RoleLaunchStage> values = <Role_RoleLaunchStage>[
     ALPHA,
     BETA,
     GA,
@@ -163,16 +160,16 @@ class Role_RoleLaunchStage extends ProtobufEnum {
 
 class Permission_PermissionLaunchStage extends ProtobufEnum {
   static const Permission_PermissionLaunchStage ALPHA =
-      const Permission_PermissionLaunchStage._(0, 'ALPHA');
+      Permission_PermissionLaunchStage._(0, 'ALPHA');
   static const Permission_PermissionLaunchStage BETA =
-      const Permission_PermissionLaunchStage._(1, 'BETA');
+      Permission_PermissionLaunchStage._(1, 'BETA');
   static const Permission_PermissionLaunchStage GA =
-      const Permission_PermissionLaunchStage._(2, 'GA');
+      Permission_PermissionLaunchStage._(2, 'GA');
   static const Permission_PermissionLaunchStage DEPRECATED =
-      const Permission_PermissionLaunchStage._(3, 'DEPRECATED');
+      Permission_PermissionLaunchStage._(3, 'DEPRECATED');
 
   static const List<Permission_PermissionLaunchStage> values =
-      const <Permission_PermissionLaunchStage>[
+      <Permission_PermissionLaunchStage>[
     ALPHA,
     BETA,
     GA,
@@ -192,14 +189,14 @@ class Permission_PermissionLaunchStage extends ProtobufEnum {
 
 class Permission_CustomRolesSupportLevel extends ProtobufEnum {
   static const Permission_CustomRolesSupportLevel SUPPORTED =
-      const Permission_CustomRolesSupportLevel._(0, 'SUPPORTED');
+      Permission_CustomRolesSupportLevel._(0, 'SUPPORTED');
   static const Permission_CustomRolesSupportLevel TESTING =
-      const Permission_CustomRolesSupportLevel._(1, 'TESTING');
+      Permission_CustomRolesSupportLevel._(1, 'TESTING');
   static const Permission_CustomRolesSupportLevel NOT_SUPPORTED =
-      const Permission_CustomRolesSupportLevel._(2, 'NOT_SUPPORTED');
+      Permission_CustomRolesSupportLevel._(2, 'NOT_SUPPORTED');
 
   static const List<Permission_CustomRolesSupportLevel> values =
-      const <Permission_CustomRolesSupportLevel>[
+      <Permission_CustomRolesSupportLevel>[
     SUPPORTED,
     TESTING,
     NOT_SUPPORTED,

@@ -22,11 +22,11 @@ abstract class TraceServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'BatchWriteSpans':
-        return new BatchWriteSpansRequest();
+        return BatchWriteSpansRequest();
       case 'CreateSpan':
-        return new Span();
+        return Span();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -38,7 +38,7 @@ abstract class TraceServiceBase extends GeneratedService {
       case 'CreateSpan':
         return this.createSpan(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

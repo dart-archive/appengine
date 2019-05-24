@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Date extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Date')
+  static final BuilderInfo _i = BuilderInfo('Date')
     ..a<int>(1, 'year', PbFieldType.O3)
     ..a<int>(2, 'month', PbFieldType.O3)
     ..a<int>(3, 'day', PbFieldType.O3)
@@ -20,12 +20,12 @@ class Date extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Date.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Date clone() => new Date()..mergeFromMessage(this);
+  Date clone() => Date()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Date create() => new Date();
-  static PbList<Date> createRepeated() => new PbList<Date>();
+  static Date create() => Date();
+  static PbList<Date> createRepeated() => PbList<Date>();
   static Date getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDate();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDate();
     return _defaultInstance;
   }
 

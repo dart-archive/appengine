@@ -13,7 +13,7 @@ import 'config_change.pbenum.dart';
 export 'config_change.pbenum.dart';
 
 class ConfigChange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConfigChange')
+  static final BuilderInfo _i = BuilderInfo('ConfigChange')
     ..aOS(1, 'element')
     ..aOS(2, 'oldValue')
     ..aOS(3, 'newValue')
@@ -34,13 +34,12 @@ class ConfigChange extends GeneratedMessage {
   ConfigChange.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConfigChange clone() => new ConfigChange()..mergeFromMessage(this);
+  ConfigChange clone() => ConfigChange()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ConfigChange create() => new ConfigChange();
-  static PbList<ConfigChange> createRepeated() => new PbList<ConfigChange>();
+  static ConfigChange create() => ConfigChange();
+  static PbList<ConfigChange> createRepeated() => PbList<ConfigChange>();
   static ConfigChange getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyConfigChange();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyConfigChange();
     return _defaultInstance;
   }
 
@@ -87,7 +86,7 @@ class ConfigChange extends GeneratedMessage {
 class _ReadonlyConfigChange extends ConfigChange with ReadonlyMessageMixin {}
 
 class Advice extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Advice')
+  static final BuilderInfo _i = BuilderInfo('Advice')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
@@ -97,12 +96,12 @@ class Advice extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Advice.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Advice clone() => new Advice()..mergeFromMessage(this);
+  Advice clone() => Advice()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Advice create() => new Advice();
-  static PbList<Advice> createRepeated() => new PbList<Advice>();
+  static Advice create() => Advice();
+  static PbList<Advice> createRepeated() => PbList<Advice>();
   static Advice getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAdvice();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAdvice();
     return _defaultInstance;
   }
 

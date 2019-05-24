@@ -21,7 +21,7 @@ import 'bots.pbenum.dart';
 export 'bots.pbenum.dart';
 
 class BotSession extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BotSession')
+  static final BuilderInfo _i = BuilderInfo('BotSession')
     ..aOS(1, 'name')
     ..aOS(2, 'botId')
     ..e<BotStatus>(3, 'status', PbFieldType.OE,
@@ -43,12 +43,12 @@ class BotSession extends GeneratedMessage {
       : super.fromBuffer(i, r);
   BotSession.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BotSession clone() => new BotSession()..mergeFromMessage(this);
+  BotSession clone() => BotSession()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BotSession create() => new BotSession();
-  static PbList<BotSession> createRepeated() => new PbList<BotSession>();
+  static BotSession create() => BotSession();
+  static PbList<BotSession> createRepeated() => PbList<BotSession>();
   static BotSession getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBotSession();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBotSession();
     return _defaultInstance;
   }
 
@@ -111,7 +111,7 @@ class BotSession extends GeneratedMessage {
 class _ReadonlyBotSession extends BotSession with ReadonlyMessageMixin {}
 
 class Lease extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Lease')
+  static final BuilderInfo _i = BuilderInfo('Lease')
     ..aOS(1, 'assignment')
     ..e<LeaseState>(
         2,
@@ -139,12 +139,12 @@ class Lease extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Lease.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Lease clone() => new Lease()..mergeFromMessage(this);
+  Lease clone() => Lease()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Lease create() => new Lease();
-  static PbList<Lease> createRepeated() => new PbList<Lease>();
+  static Lease create() => Lease();
+  static PbList<Lease> createRepeated() => PbList<Lease>();
   static Lease getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLease();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLease();
     return _defaultInstance;
   }
 
@@ -205,7 +205,7 @@ class Lease extends GeneratedMessage {
 class _ReadonlyLease extends Lease with ReadonlyMessageMixin {}
 
 class AdminTemp extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AdminTemp')
+  static final BuilderInfo _i = BuilderInfo('AdminTemp')
     ..e<AdminTemp_Command>(
         1,
         'command',
@@ -222,12 +222,12 @@ class AdminTemp extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AdminTemp.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AdminTemp clone() => new AdminTemp()..mergeFromMessage(this);
+  AdminTemp clone() => AdminTemp()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AdminTemp create() => new AdminTemp();
-  static PbList<AdminTemp> createRepeated() => new PbList<AdminTemp>();
+  static AdminTemp create() => AdminTemp();
+  static PbList<AdminTemp> createRepeated() => PbList<AdminTemp>();
   static AdminTemp getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAdminTemp();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAdminTemp();
     return _defaultInstance;
   }
 
@@ -256,7 +256,7 @@ class AdminTemp extends GeneratedMessage {
 class _ReadonlyAdminTemp extends AdminTemp with ReadonlyMessageMixin {}
 
 class CreateBotSessionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateBotSessionRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateBotSessionRequest')
     ..aOS(1, 'parent')
     ..a<BotSession>(2, 'botSession', PbFieldType.OM, BotSession.getDefault,
         BotSession.create)
@@ -270,14 +270,14 @@ class CreateBotSessionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateBotSessionRequest clone() =>
-      new CreateBotSessionRequest()..mergeFromMessage(this);
+      CreateBotSessionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateBotSessionRequest create() => new CreateBotSessionRequest();
+  static CreateBotSessionRequest create() => CreateBotSessionRequest();
   static PbList<CreateBotSessionRequest> createRepeated() =>
-      new PbList<CreateBotSessionRequest>();
+      PbList<CreateBotSessionRequest>();
   static CreateBotSessionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateBotSessionRequest();
+      _defaultInstance = _ReadonlyCreateBotSessionRequest();
     return _defaultInstance;
   }
 
@@ -308,7 +308,7 @@ class _ReadonlyCreateBotSessionRequest extends CreateBotSessionRequest
     with ReadonlyMessageMixin {}
 
 class UpdateBotSessionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateBotSessionRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateBotSessionRequest')
     ..aOS(1, 'name')
     ..a<BotSession>(2, 'botSession', PbFieldType.OM, BotSession.getDefault,
         BotSession.create)
@@ -328,14 +328,14 @@ class UpdateBotSessionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateBotSessionRequest clone() =>
-      new UpdateBotSessionRequest()..mergeFromMessage(this);
+      UpdateBotSessionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateBotSessionRequest create() => new UpdateBotSessionRequest();
+  static UpdateBotSessionRequest create() => UpdateBotSessionRequest();
   static PbList<UpdateBotSessionRequest> createRepeated() =>
-      new PbList<UpdateBotSessionRequest>();
+      PbList<UpdateBotSessionRequest>();
   static UpdateBotSessionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateBotSessionRequest();
+      _defaultInstance = _ReadonlyUpdateBotSessionRequest();
     return _defaultInstance;
   }
 
@@ -374,7 +374,7 @@ class _ReadonlyUpdateBotSessionRequest extends UpdateBotSessionRequest
     with ReadonlyMessageMixin {}
 
 class PostBotEventTempRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PostBotEventTempRequest')
+  static final BuilderInfo _i = BuilderInfo('PostBotEventTempRequest')
     ..aOS(1, 'name')
     ..e<PostBotEventTempRequest_Type>(
         2,
@@ -394,14 +394,14 @@ class PostBotEventTempRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PostBotEventTempRequest clone() =>
-      new PostBotEventTempRequest()..mergeFromMessage(this);
+      PostBotEventTempRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PostBotEventTempRequest create() => new PostBotEventTempRequest();
+  static PostBotEventTempRequest create() => PostBotEventTempRequest();
   static PbList<PostBotEventTempRequest> createRepeated() =>
-      new PbList<PostBotEventTempRequest>();
+      PbList<PostBotEventTempRequest>();
   static PostBotEventTempRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPostBotEventTempRequest();
+      _defaultInstance = _ReadonlyPostBotEventTempRequest();
     return _defaultInstance;
   }
 
@@ -445,21 +445,21 @@ class BotsApi {
 
   Future<BotSession> createBotSession(
       ClientContext ctx, CreateBotSessionRequest request) {
-    var emptyResponse = new BotSession();
+    var emptyResponse = BotSession();
     return _client.invoke<BotSession>(
         ctx, 'Bots', 'CreateBotSession', request, emptyResponse);
   }
 
   Future<BotSession> updateBotSession(
       ClientContext ctx, UpdateBotSessionRequest request) {
-    var emptyResponse = new BotSession();
+    var emptyResponse = BotSession();
     return _client.invoke<BotSession>(
         ctx, 'Bots', 'UpdateBotSession', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> postBotEventTemp(
       ClientContext ctx, PostBotEventTempRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Bots', 'PostBotEventTemp', request, emptyResponse);
   }

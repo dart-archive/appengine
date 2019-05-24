@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class WebDetection_WebEntity extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebDetection_WebEntity')
+  static final BuilderInfo _i = BuilderInfo('WebDetection_WebEntity')
     ..aOS(1, 'entityId')
     ..a<double>(2, 'score', PbFieldType.OF)
     ..aOS(3, 'description')
@@ -23,14 +23,14 @@ class WebDetection_WebEntity extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   WebDetection_WebEntity clone() =>
-      new WebDetection_WebEntity()..mergeFromMessage(this);
+      WebDetection_WebEntity()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WebDetection_WebEntity create() => new WebDetection_WebEntity();
+  static WebDetection_WebEntity create() => WebDetection_WebEntity();
   static PbList<WebDetection_WebEntity> createRepeated() =>
-      new PbList<WebDetection_WebEntity>();
+      PbList<WebDetection_WebEntity>();
   static WebDetection_WebEntity getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebDetection_WebEntity();
+      _defaultInstance = _ReadonlyWebDetection_WebEntity();
     return _defaultInstance;
   }
 
@@ -69,7 +69,7 @@ class _ReadonlyWebDetection_WebEntity extends WebDetection_WebEntity
     with ReadonlyMessageMixin {}
 
 class WebDetection_WebImage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebDetection_WebImage')
+  static final BuilderInfo _i = BuilderInfo('WebDetection_WebImage')
     ..aOS(1, 'url')
     ..a<double>(2, 'score', PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -82,14 +82,14 @@ class WebDetection_WebImage extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   WebDetection_WebImage clone() =>
-      new WebDetection_WebImage()..mergeFromMessage(this);
+      WebDetection_WebImage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WebDetection_WebImage create() => new WebDetection_WebImage();
+  static WebDetection_WebImage create() => WebDetection_WebImage();
   static PbList<WebDetection_WebImage> createRepeated() =>
-      new PbList<WebDetection_WebImage>();
+      PbList<WebDetection_WebImage>();
   static WebDetection_WebImage getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebDetection_WebImage();
+      _defaultInstance = _ReadonlyWebDetection_WebImage();
     return _defaultInstance;
   }
 
@@ -120,7 +120,7 @@ class _ReadonlyWebDetection_WebImage extends WebDetection_WebImage
     with ReadonlyMessageMixin {}
 
 class WebDetection_WebPage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebDetection_WebPage')
+  static final BuilderInfo _i = BuilderInfo('WebDetection_WebPage')
     ..aOS(1, 'url')
     ..a<double>(2, 'score', PbFieldType.OF)
     ..aOS(3, 'pageTitle')
@@ -138,14 +138,14 @@ class WebDetection_WebPage extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   WebDetection_WebPage clone() =>
-      new WebDetection_WebPage()..mergeFromMessage(this);
+      WebDetection_WebPage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WebDetection_WebPage create() => new WebDetection_WebPage();
+  static WebDetection_WebPage create() => WebDetection_WebPage();
   static PbList<WebDetection_WebPage> createRepeated() =>
-      new PbList<WebDetection_WebPage>();
+      PbList<WebDetection_WebPage>();
   static WebDetection_WebPage getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebDetection_WebPage();
+      _defaultInstance = _ReadonlyWebDetection_WebPage();
     return _defaultInstance;
   }
 
@@ -187,7 +187,7 @@ class _ReadonlyWebDetection_WebPage extends WebDetection_WebPage
     with ReadonlyMessageMixin {}
 
 class WebDetection_WebLabel extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebDetection_WebLabel')
+  static final BuilderInfo _i = BuilderInfo('WebDetection_WebLabel')
     ..aOS(1, 'label')
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
@@ -200,14 +200,14 @@ class WebDetection_WebLabel extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   WebDetection_WebLabel clone() =>
-      new WebDetection_WebLabel()..mergeFromMessage(this);
+      WebDetection_WebLabel()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WebDetection_WebLabel create() => new WebDetection_WebLabel();
+  static WebDetection_WebLabel create() => WebDetection_WebLabel();
   static PbList<WebDetection_WebLabel> createRepeated() =>
-      new PbList<WebDetection_WebLabel>();
+      PbList<WebDetection_WebLabel>();
   static WebDetection_WebLabel getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebDetection_WebLabel();
+      _defaultInstance = _ReadonlyWebDetection_WebLabel();
     return _defaultInstance;
   }
 
@@ -238,7 +238,7 @@ class _ReadonlyWebDetection_WebLabel extends WebDetection_WebLabel
     with ReadonlyMessageMixin {}
 
 class WebDetection extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebDetection')
+  static final BuilderInfo _i = BuilderInfo('WebDetection')
     ..pp<WebDetection_WebEntity>(1, 'webEntities', PbFieldType.PM,
         WebDetection_WebEntity.$checkItem, WebDetection_WebEntity.create)
     ..pp<WebDetection_WebImage>(2, 'fullMatchingImages', PbFieldType.PM,
@@ -260,13 +260,12 @@ class WebDetection extends GeneratedMessage {
   WebDetection.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WebDetection clone() => new WebDetection()..mergeFromMessage(this);
+  WebDetection clone() => WebDetection()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static WebDetection create() => new WebDetection();
-  static PbList<WebDetection> createRepeated() => new PbList<WebDetection>();
+  static WebDetection create() => WebDetection();
+  static PbList<WebDetection> createRepeated() => PbList<WebDetection>();
   static WebDetection getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebDetection();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWebDetection();
     return _defaultInstance;
   }
 

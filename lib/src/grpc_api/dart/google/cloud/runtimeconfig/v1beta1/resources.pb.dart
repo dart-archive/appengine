@@ -17,7 +17,7 @@ import 'resources.pbenum.dart';
 export 'resources.pbenum.dart';
 
 class RuntimeConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RuntimeConfig')
+  static final BuilderInfo _i = BuilderInfo('RuntimeConfig')
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
@@ -29,13 +29,12 @@ class RuntimeConfig extends GeneratedMessage {
   RuntimeConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RuntimeConfig clone() => new RuntimeConfig()..mergeFromMessage(this);
+  RuntimeConfig clone() => RuntimeConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RuntimeConfig create() => new RuntimeConfig();
-  static PbList<RuntimeConfig> createRepeated() => new PbList<RuntimeConfig>();
+  static RuntimeConfig create() => RuntimeConfig();
+  static PbList<RuntimeConfig> createRepeated() => PbList<RuntimeConfig>();
   static RuntimeConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRuntimeConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRuntimeConfig();
     return _defaultInstance;
   }
 
@@ -64,7 +63,7 @@ class RuntimeConfig extends GeneratedMessage {
 class _ReadonlyRuntimeConfig extends RuntimeConfig with ReadonlyMessageMixin {}
 
 class Variable extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Variable')
+  static final BuilderInfo _i = BuilderInfo('Variable')
     ..aOS(1, 'name')
     ..a<List<int>>(2, 'value', PbFieldType.OY)
     ..a<$google$protobuf.Timestamp>(
@@ -89,12 +88,12 @@ class Variable extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Variable.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Variable clone() => new Variable()..mergeFromMessage(this);
+  Variable clone() => Variable()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Variable create() => new Variable();
-  static PbList<Variable> createRepeated() => new PbList<Variable>();
+  static Variable create() => Variable();
+  static PbList<Variable> createRepeated() => PbList<Variable>();
   static Variable getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariable();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVariable();
     return _defaultInstance;
   }
 
@@ -147,7 +146,7 @@ class Variable extends GeneratedMessage {
 class _ReadonlyVariable extends Variable with ReadonlyMessageMixin {}
 
 class EndCondition_Cardinality extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EndCondition_Cardinality')
+  static final BuilderInfo _i = BuilderInfo('EndCondition_Cardinality')
     ..aOS(1, 'path')
     ..a<int>(2, 'number', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -160,14 +159,14 @@ class EndCondition_Cardinality extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   EndCondition_Cardinality clone() =>
-      new EndCondition_Cardinality()..mergeFromMessage(this);
+      EndCondition_Cardinality()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EndCondition_Cardinality create() => new EndCondition_Cardinality();
+  static EndCondition_Cardinality create() => EndCondition_Cardinality();
   static PbList<EndCondition_Cardinality> createRepeated() =>
-      new PbList<EndCondition_Cardinality>();
+      PbList<EndCondition_Cardinality>();
   static EndCondition_Cardinality getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEndCondition_Cardinality();
+      _defaultInstance = _ReadonlyEndCondition_Cardinality();
     return _defaultInstance;
   }
 
@@ -198,7 +197,7 @@ class _ReadonlyEndCondition_Cardinality extends EndCondition_Cardinality
     with ReadonlyMessageMixin {}
 
 class EndCondition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EndCondition')
+  static final BuilderInfo _i = BuilderInfo('EndCondition')
     ..a<EndCondition_Cardinality>(1, 'cardinality', PbFieldType.OM,
         EndCondition_Cardinality.getDefault, EndCondition_Cardinality.create)
     ..hasRequiredFields = false;
@@ -210,13 +209,12 @@ class EndCondition extends GeneratedMessage {
   EndCondition.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EndCondition clone() => new EndCondition()..mergeFromMessage(this);
+  EndCondition clone() => EndCondition()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EndCondition create() => new EndCondition();
-  static PbList<EndCondition> createRepeated() => new PbList<EndCondition>();
+  static EndCondition create() => EndCondition();
+  static PbList<EndCondition> createRepeated() => PbList<EndCondition>();
   static EndCondition getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEndCondition();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEndCondition();
     return _defaultInstance;
   }
 
@@ -237,7 +235,7 @@ class EndCondition extends GeneratedMessage {
 class _ReadonlyEndCondition extends EndCondition with ReadonlyMessageMixin {}
 
 class Waiter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Waiter')
+  static final BuilderInfo _i = BuilderInfo('Waiter')
     ..aOS(1, 'name')
     ..a<$google$protobuf.Duration>(2, 'timeout', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
@@ -262,12 +260,12 @@ class Waiter extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Waiter.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Waiter clone() => new Waiter()..mergeFromMessage(this);
+  Waiter clone() => Waiter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Waiter create() => new Waiter();
-  static PbList<Waiter> createRepeated() => new PbList<Waiter>();
+  static Waiter create() => Waiter();
+  static PbList<Waiter> createRepeated() => PbList<Waiter>();
   static Waiter getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWaiter();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWaiter();
     return _defaultInstance;
   }
 

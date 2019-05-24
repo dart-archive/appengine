@@ -18,7 +18,7 @@ import 'job_service.pbenum.dart';
 export 'job_service.pbenum.dart';
 
 class TrainingInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TrainingInput')
+  static final BuilderInfo _i = BuilderInfo('TrainingInput')
     ..e<TrainingInput_ScaleTier>(
         1,
         'scaleTier',
@@ -48,13 +48,12 @@ class TrainingInput extends GeneratedMessage {
   TrainingInput.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TrainingInput clone() => new TrainingInput()..mergeFromMessage(this);
+  TrainingInput clone() => TrainingInput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TrainingInput create() => new TrainingInput();
-  static PbList<TrainingInput> createRepeated() => new PbList<TrainingInput>();
+  static TrainingInput create() => TrainingInput();
+  static PbList<TrainingInput> createRepeated() => PbList<TrainingInput>();
   static TrainingInput getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTrainingInput();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTrainingInput();
     return _defaultInstance;
   }
 
@@ -159,7 +158,7 @@ class TrainingInput extends GeneratedMessage {
 class _ReadonlyTrainingInput extends TrainingInput with ReadonlyMessageMixin {}
 
 class HyperparameterSpec extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HyperparameterSpec')
+  static final BuilderInfo _i = BuilderInfo('HyperparameterSpec')
     ..e<HyperparameterSpec_GoalType>(
         1,
         'goal',
@@ -181,15 +180,14 @@ class HyperparameterSpec extends GeneratedMessage {
   HyperparameterSpec.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HyperparameterSpec clone() =>
-      new HyperparameterSpec()..mergeFromMessage(this);
+  HyperparameterSpec clone() => HyperparameterSpec()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HyperparameterSpec create() => new HyperparameterSpec();
+  static HyperparameterSpec create() => HyperparameterSpec();
   static PbList<HyperparameterSpec> createRepeated() =>
-      new PbList<HyperparameterSpec>();
+      PbList<HyperparameterSpec>();
   static HyperparameterSpec getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyHyperparameterSpec();
+      _defaultInstance = _ReadonlyHyperparameterSpec();
     return _defaultInstance;
   }
 
@@ -237,7 +235,7 @@ class _ReadonlyHyperparameterSpec extends HyperparameterSpec
     with ReadonlyMessageMixin {}
 
 class ParameterSpec extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ParameterSpec')
+  static final BuilderInfo _i = BuilderInfo('ParameterSpec')
     ..aOS(1, 'parameterName')
     ..a<double>(2, 'minValue', PbFieldType.OD)
     ..a<double>(3, 'maxValue', PbFieldType.OD)
@@ -266,13 +264,12 @@ class ParameterSpec extends GeneratedMessage {
   ParameterSpec.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ParameterSpec clone() => new ParameterSpec()..mergeFromMessage(this);
+  ParameterSpec clone() => ParameterSpec()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ParameterSpec create() => new ParameterSpec();
-  static PbList<ParameterSpec> createRepeated() => new PbList<ParameterSpec>();
+  static ParameterSpec create() => ParameterSpec();
+  static PbList<ParameterSpec> createRepeated() => PbList<ParameterSpec>();
   static ParameterSpec getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyParameterSpec();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyParameterSpec();
     return _defaultInstance;
   }
 
@@ -330,7 +327,7 @@ class _ReadonlyParameterSpec extends ParameterSpec with ReadonlyMessageMixin {}
 
 class HyperparameterOutput_HyperparameterMetric extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('HyperparameterOutput_HyperparameterMetric')
+      BuilderInfo('HyperparameterOutput_HyperparameterMetric')
         ..aInt64(1, 'trainingStep')
         ..a<double>(2, 'objectiveValue', PbFieldType.OD)
         ..hasRequiredFields = false;
@@ -343,16 +340,15 @@ class HyperparameterOutput_HyperparameterMetric extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   HyperparameterOutput_HyperparameterMetric clone() =>
-      new HyperparameterOutput_HyperparameterMetric()..mergeFromMessage(this);
+      HyperparameterOutput_HyperparameterMetric()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static HyperparameterOutput_HyperparameterMetric create() =>
-      new HyperparameterOutput_HyperparameterMetric();
+      HyperparameterOutput_HyperparameterMetric();
   static PbList<HyperparameterOutput_HyperparameterMetric> createRepeated() =>
-      new PbList<HyperparameterOutput_HyperparameterMetric>();
+      PbList<HyperparameterOutput_HyperparameterMetric>();
   static HyperparameterOutput_HyperparameterMetric getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyHyperparameterOutput_HyperparameterMetric();
+      _defaultInstance = _ReadonlyHyperparameterOutput_HyperparameterMetric();
     return _defaultInstance;
   }
 
@@ -385,7 +381,7 @@ class _ReadonlyHyperparameterOutput_HyperparameterMetric
 
 class HyperparameterOutput_HyperparametersEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('HyperparameterOutput_HyperparametersEntry')
+      BuilderInfo('HyperparameterOutput_HyperparametersEntry')
         ..aOS(1, 'key')
         ..aOS(2, 'value')
         ..hasRequiredFields = false;
@@ -398,16 +394,15 @@ class HyperparameterOutput_HyperparametersEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   HyperparameterOutput_HyperparametersEntry clone() =>
-      new HyperparameterOutput_HyperparametersEntry()..mergeFromMessage(this);
+      HyperparameterOutput_HyperparametersEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static HyperparameterOutput_HyperparametersEntry create() =>
-      new HyperparameterOutput_HyperparametersEntry();
+      HyperparameterOutput_HyperparametersEntry();
   static PbList<HyperparameterOutput_HyperparametersEntry> createRepeated() =>
-      new PbList<HyperparameterOutput_HyperparametersEntry>();
+      PbList<HyperparameterOutput_HyperparametersEntry>();
   static HyperparameterOutput_HyperparametersEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyHyperparameterOutput_HyperparametersEntry();
+      _defaultInstance = _ReadonlyHyperparameterOutput_HyperparametersEntry();
     return _defaultInstance;
   }
 
@@ -439,7 +434,7 @@ class _ReadonlyHyperparameterOutput_HyperparametersEntry
     with ReadonlyMessageMixin {}
 
 class HyperparameterOutput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HyperparameterOutput')
+  static final BuilderInfo _i = BuilderInfo('HyperparameterOutput')
     ..aOS(1, 'trialId')
     ..pp<HyperparameterOutput_HyperparametersEntry>(
         2,
@@ -469,14 +464,14 @@ class HyperparameterOutput extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   HyperparameterOutput clone() =>
-      new HyperparameterOutput()..mergeFromMessage(this);
+      HyperparameterOutput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HyperparameterOutput create() => new HyperparameterOutput();
+  static HyperparameterOutput create() => HyperparameterOutput();
   static PbList<HyperparameterOutput> createRepeated() =>
-      new PbList<HyperparameterOutput>();
+      PbList<HyperparameterOutput>();
   static HyperparameterOutput getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyHyperparameterOutput();
+      _defaultInstance = _ReadonlyHyperparameterOutput();
     return _defaultInstance;
   }
 
@@ -512,7 +507,7 @@ class _ReadonlyHyperparameterOutput extends HyperparameterOutput
     with ReadonlyMessageMixin {}
 
 class TrainingOutput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TrainingOutput')
+  static final BuilderInfo _i = BuilderInfo('TrainingOutput')
     ..aInt64(1, 'completedTrialCount')
     ..pp<HyperparameterOutput>(2, 'trials', PbFieldType.PM,
         HyperparameterOutput.$checkItem, HyperparameterOutput.create)
@@ -527,14 +522,12 @@ class TrainingOutput extends GeneratedMessage {
   TrainingOutput.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TrainingOutput clone() => new TrainingOutput()..mergeFromMessage(this);
+  TrainingOutput clone() => TrainingOutput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TrainingOutput create() => new TrainingOutput();
-  static PbList<TrainingOutput> createRepeated() =>
-      new PbList<TrainingOutput>();
+  static TrainingOutput create() => TrainingOutput();
+  static PbList<TrainingOutput> createRepeated() => PbList<TrainingOutput>();
   static TrainingOutput getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTrainingOutput();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTrainingOutput();
     return _defaultInstance;
   }
 
@@ -574,7 +567,7 @@ class _ReadonlyTrainingOutput extends TrainingOutput with ReadonlyMessageMixin {
 }
 
 class PredictionInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PredictionInput')
+  static final BuilderInfo _i = BuilderInfo('PredictionInput')
     ..aOS(1, 'modelName')
     ..aOS(2, 'versionName')
     ..e<PredictionInput_DataFormat>(
@@ -599,14 +592,12 @@ class PredictionInput extends GeneratedMessage {
   PredictionInput.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PredictionInput clone() => new PredictionInput()..mergeFromMessage(this);
+  PredictionInput clone() => PredictionInput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PredictionInput create() => new PredictionInput();
-  static PbList<PredictionInput> createRepeated() =>
-      new PbList<PredictionInput>();
+  static PredictionInput create() => PredictionInput();
+  static PbList<PredictionInput> createRepeated() => PbList<PredictionInput>();
   static PredictionInput getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPredictionInput();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPredictionInput();
     return _defaultInstance;
   }
 
@@ -686,7 +677,7 @@ class _ReadonlyPredictionInput extends PredictionInput
     with ReadonlyMessageMixin {}
 
 class PredictionOutput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PredictionOutput')
+  static final BuilderInfo _i = BuilderInfo('PredictionOutput')
     ..aOS(1, 'outputPath')
     ..aInt64(2, 'predictionCount')
     ..aInt64(3, 'errorCount')
@@ -700,14 +691,14 @@ class PredictionOutput extends GeneratedMessage {
   PredictionOutput.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PredictionOutput clone() => new PredictionOutput()..mergeFromMessage(this);
+  PredictionOutput clone() => PredictionOutput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PredictionOutput create() => new PredictionOutput();
+  static PredictionOutput create() => PredictionOutput();
   static PbList<PredictionOutput> createRepeated() =>
-      new PbList<PredictionOutput>();
+      PbList<PredictionOutput>();
   static PredictionOutput getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPredictionOutput();
+      _defaultInstance = _ReadonlyPredictionOutput();
     return _defaultInstance;
   }
 
@@ -753,7 +744,7 @@ class _ReadonlyPredictionOutput extends PredictionOutput
     with ReadonlyMessageMixin {}
 
 class Job extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Job')
+  static final BuilderInfo _i = BuilderInfo('Job')
     ..aOS(1, 'jobId')
     ..a<TrainingInput>(2, 'trainingInput', PbFieldType.OM,
         TrainingInput.getDefault, TrainingInput.create)
@@ -791,12 +782,12 @@ class Job extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Job.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Job clone() => new Job()..mergeFromMessage(this);
+  Job clone() => Job()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Job create() => new Job();
-  static PbList<Job> createRepeated() => new PbList<Job>();
+  static Job create() => Job();
+  static PbList<Job> createRepeated() => PbList<Job>();
   static Job getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyJob();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyJob();
     return _defaultInstance;
   }
 
@@ -889,7 +880,7 @@ class Job extends GeneratedMessage {
 class _ReadonlyJob extends Job with ReadonlyMessageMixin {}
 
 class CreateJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateJobRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateJobRequest')
     ..aOS(1, 'parent')
     ..a<Job>(2, 'job', PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
@@ -901,14 +892,14 @@ class CreateJobRequest extends GeneratedMessage {
   CreateJobRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateJobRequest clone() => new CreateJobRequest()..mergeFromMessage(this);
+  CreateJobRequest clone() => CreateJobRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateJobRequest create() => new CreateJobRequest();
+  static CreateJobRequest create() => CreateJobRequest();
   static PbList<CreateJobRequest> createRepeated() =>
-      new PbList<CreateJobRequest>();
+      PbList<CreateJobRequest>();
   static CreateJobRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateJobRequest();
+      _defaultInstance = _ReadonlyCreateJobRequest();
     return _defaultInstance;
   }
 
@@ -938,7 +929,7 @@ class _ReadonlyCreateJobRequest extends CreateJobRequest
     with ReadonlyMessageMixin {}
 
 class ListJobsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListJobsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListJobsRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..aOS(4, 'pageToken')
@@ -952,14 +943,12 @@ class ListJobsRequest extends GeneratedMessage {
   ListJobsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListJobsRequest clone() => new ListJobsRequest()..mergeFromMessage(this);
+  ListJobsRequest clone() => ListJobsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListJobsRequest create() => new ListJobsRequest();
-  static PbList<ListJobsRequest> createRepeated() =>
-      new PbList<ListJobsRequest>();
+  static ListJobsRequest create() => ListJobsRequest();
+  static PbList<ListJobsRequest> createRepeated() => PbList<ListJobsRequest>();
   static ListJobsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListJobsRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyListJobsRequest();
     return _defaultInstance;
   }
 
@@ -1005,7 +994,7 @@ class _ReadonlyListJobsRequest extends ListJobsRequest
     with ReadonlyMessageMixin {}
 
 class ListJobsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListJobsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListJobsResponse')
     ..pp<Job>(1, 'jobs', PbFieldType.PM, Job.$checkItem, Job.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -1017,14 +1006,14 @@ class ListJobsResponse extends GeneratedMessage {
   ListJobsResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListJobsResponse clone() => new ListJobsResponse()..mergeFromMessage(this);
+  ListJobsResponse clone() => ListJobsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListJobsResponse create() => new ListJobsResponse();
+  static ListJobsResponse create() => ListJobsResponse();
   static PbList<ListJobsResponse> createRepeated() =>
-      new PbList<ListJobsResponse>();
+      PbList<ListJobsResponse>();
   static ListJobsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListJobsResponse();
+      _defaultInstance = _ReadonlyListJobsResponse();
     return _defaultInstance;
   }
 
@@ -1048,7 +1037,7 @@ class _ReadonlyListJobsResponse extends ListJobsResponse
     with ReadonlyMessageMixin {}
 
 class GetJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetJobRequest')
+  static final BuilderInfo _i = BuilderInfo('GetJobRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1059,13 +1048,12 @@ class GetJobRequest extends GeneratedMessage {
   GetJobRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetJobRequest clone() => new GetJobRequest()..mergeFromMessage(this);
+  GetJobRequest clone() => GetJobRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetJobRequest create() => new GetJobRequest();
-  static PbList<GetJobRequest> createRepeated() => new PbList<GetJobRequest>();
+  static GetJobRequest create() => GetJobRequest();
+  static PbList<GetJobRequest> createRepeated() => PbList<GetJobRequest>();
   static GetJobRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetJobRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetJobRequest();
     return _defaultInstance;
   }
 
@@ -1086,7 +1074,7 @@ class GetJobRequest extends GeneratedMessage {
 class _ReadonlyGetJobRequest extends GetJobRequest with ReadonlyMessageMixin {}
 
 class CancelJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CancelJobRequest')
+  static final BuilderInfo _i = BuilderInfo('CancelJobRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1097,14 +1085,14 @@ class CancelJobRequest extends GeneratedMessage {
   CancelJobRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CancelJobRequest clone() => new CancelJobRequest()..mergeFromMessage(this);
+  CancelJobRequest clone() => CancelJobRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CancelJobRequest create() => new CancelJobRequest();
+  static CancelJobRequest create() => CancelJobRequest();
   static PbList<CancelJobRequest> createRepeated() =>
-      new PbList<CancelJobRequest>();
+      PbList<CancelJobRequest>();
   static CancelJobRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCancelJobRequest();
+      _defaultInstance = _ReadonlyCancelJobRequest();
     return _defaultInstance;
   }
 
@@ -1130,27 +1118,27 @@ class JobServiceApi {
   JobServiceApi(this._client);
 
   Future<Job> createJob(ClientContext ctx, CreateJobRequest request) {
-    var emptyResponse = new Job();
+    var emptyResponse = Job();
     return _client.invoke<Job>(
         ctx, 'JobService', 'CreateJob', request, emptyResponse);
   }
 
   Future<ListJobsResponse> listJobs(
       ClientContext ctx, ListJobsRequest request) {
-    var emptyResponse = new ListJobsResponse();
+    var emptyResponse = ListJobsResponse();
     return _client.invoke<ListJobsResponse>(
         ctx, 'JobService', 'ListJobs', request, emptyResponse);
   }
 
   Future<Job> getJob(ClientContext ctx, GetJobRequest request) {
-    var emptyResponse = new Job();
+    var emptyResponse = Job();
     return _client.invoke<Job>(
         ctx, 'JobService', 'GetJob', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> cancelJob(
       ClientContext ctx, CancelJobRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'JobService', 'CancelJob', request, emptyResponse);
   }

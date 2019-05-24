@@ -14,7 +14,7 @@ import '../rpc/status.pb.dart' as $google$rpc;
 import '../protobuf/empty.pb.dart' as $google$protobuf;
 
 class Operation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Operation')
+  static final BuilderInfo _i = BuilderInfo('Operation')
     ..aOS(1, 'name')
     ..a<$google$protobuf.Any>(2, 'metadata', PbFieldType.OM,
         $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
@@ -31,12 +31,12 @@ class Operation extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Operation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Operation clone() => new Operation()..mergeFromMessage(this);
+  Operation clone() => Operation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Operation create() => new Operation();
-  static PbList<Operation> createRepeated() => new PbList<Operation>();
+  static Operation create() => Operation();
+  static PbList<Operation> createRepeated() => PbList<Operation>();
   static Operation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyOperation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOperation();
     return _defaultInstance;
   }
 
@@ -89,7 +89,7 @@ class Operation extends GeneratedMessage {
 class _ReadonlyOperation extends Operation with ReadonlyMessageMixin {}
 
 class GetOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetOperationRequest')
+  static final BuilderInfo _i = BuilderInfo('GetOperationRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -100,15 +100,14 @@ class GetOperationRequest extends GeneratedMessage {
   GetOperationRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetOperationRequest clone() =>
-      new GetOperationRequest()..mergeFromMessage(this);
+  GetOperationRequest clone() => GetOperationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetOperationRequest create() => new GetOperationRequest();
+  static GetOperationRequest create() => GetOperationRequest();
   static PbList<GetOperationRequest> createRepeated() =>
-      new PbList<GetOperationRequest>();
+      PbList<GetOperationRequest>();
   static GetOperationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetOperationRequest();
+      _defaultInstance = _ReadonlyGetOperationRequest();
     return _defaultInstance;
   }
 
@@ -130,7 +129,7 @@ class _ReadonlyGetOperationRequest extends GetOperationRequest
     with ReadonlyMessageMixin {}
 
 class ListOperationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListOperationsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListOperationsRequest')
     ..aOS(1, 'filter')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -145,14 +144,14 @@ class ListOperationsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListOperationsRequest clone() =>
-      new ListOperationsRequest()..mergeFromMessage(this);
+      ListOperationsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListOperationsRequest create() => new ListOperationsRequest();
+  static ListOperationsRequest create() => ListOperationsRequest();
   static PbList<ListOperationsRequest> createRepeated() =>
-      new PbList<ListOperationsRequest>();
+      PbList<ListOperationsRequest>();
   static ListOperationsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListOperationsRequest();
+      _defaultInstance = _ReadonlyListOperationsRequest();
     return _defaultInstance;
   }
 
@@ -199,7 +198,7 @@ class _ReadonlyListOperationsRequest extends ListOperationsRequest
     with ReadonlyMessageMixin {}
 
 class ListOperationsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListOperationsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListOperationsResponse')
     ..pp<Operation>(
         1, 'operations', PbFieldType.PM, Operation.$checkItem, Operation.create)
     ..aOS(2, 'nextPageToken')
@@ -213,14 +212,14 @@ class ListOperationsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListOperationsResponse clone() =>
-      new ListOperationsResponse()..mergeFromMessage(this);
+      ListOperationsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListOperationsResponse create() => new ListOperationsResponse();
+  static ListOperationsResponse create() => ListOperationsResponse();
   static PbList<ListOperationsResponse> createRepeated() =>
-      new PbList<ListOperationsResponse>();
+      PbList<ListOperationsResponse>();
   static ListOperationsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListOperationsResponse();
+      _defaultInstance = _ReadonlyListOperationsResponse();
     return _defaultInstance;
   }
 
@@ -245,7 +244,7 @@ class _ReadonlyListOperationsResponse extends ListOperationsResponse
     with ReadonlyMessageMixin {}
 
 class CancelOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CancelOperationRequest')
+  static final BuilderInfo _i = BuilderInfo('CancelOperationRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -257,14 +256,14 @@ class CancelOperationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CancelOperationRequest clone() =>
-      new CancelOperationRequest()..mergeFromMessage(this);
+      CancelOperationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CancelOperationRequest create() => new CancelOperationRequest();
+  static CancelOperationRequest create() => CancelOperationRequest();
   static PbList<CancelOperationRequest> createRepeated() =>
-      new PbList<CancelOperationRequest>();
+      PbList<CancelOperationRequest>();
   static CancelOperationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCancelOperationRequest();
+      _defaultInstance = _ReadonlyCancelOperationRequest();
     return _defaultInstance;
   }
 
@@ -287,7 +286,7 @@ class _ReadonlyCancelOperationRequest extends CancelOperationRequest
     with ReadonlyMessageMixin {}
 
 class DeleteOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteOperationRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteOperationRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -299,14 +298,14 @@ class DeleteOperationRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteOperationRequest clone() =>
-      new DeleteOperationRequest()..mergeFromMessage(this);
+      DeleteOperationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteOperationRequest create() => new DeleteOperationRequest();
+  static DeleteOperationRequest create() => DeleteOperationRequest();
   static PbList<DeleteOperationRequest> createRepeated() =>
-      new PbList<DeleteOperationRequest>();
+      PbList<DeleteOperationRequest>();
   static DeleteOperationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteOperationRequest();
+      _defaultInstance = _ReadonlyDeleteOperationRequest();
     return _defaultInstance;
   }
 
@@ -334,28 +333,28 @@ class OperationsApi {
 
   Future<ListOperationsResponse> listOperations(
       ClientContext ctx, ListOperationsRequest request) {
-    var emptyResponse = new ListOperationsResponse();
+    var emptyResponse = ListOperationsResponse();
     return _client.invoke<ListOperationsResponse>(
         ctx, 'Operations', 'ListOperations', request, emptyResponse);
   }
 
   Future<Operation> getOperation(
       ClientContext ctx, GetOperationRequest request) {
-    var emptyResponse = new Operation();
+    var emptyResponse = Operation();
     return _client.invoke<Operation>(
         ctx, 'Operations', 'GetOperation', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteOperation(
       ClientContext ctx, DeleteOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Operations', 'DeleteOperation', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> cancelOperation(
       ClientContext ctx, CancelOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Operations', 'CancelOperation', request, emptyResponse);
   }

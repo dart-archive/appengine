@@ -15,7 +15,7 @@ import 'check_error.pb.dart';
 import '../../../rpc/status.pb.dart' as $google$rpc;
 
 class CheckRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckRequest')
+  static final BuilderInfo _i = BuilderInfo('CheckRequest')
     ..aOS(1, 'serviceName')
     ..a<Operation>(
         2, 'operation', PbFieldType.OM, Operation.getDefault, Operation.create)
@@ -29,13 +29,12 @@ class CheckRequest extends GeneratedMessage {
   CheckRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CheckRequest clone() => new CheckRequest()..mergeFromMessage(this);
+  CheckRequest clone() => CheckRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckRequest create() => new CheckRequest();
-  static PbList<CheckRequest> createRepeated() => new PbList<CheckRequest>();
+  static CheckRequest create() => CheckRequest();
+  static PbList<CheckRequest> createRepeated() => PbList<CheckRequest>();
   static CheckRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCheckRequest();
     return _defaultInstance;
   }
 
@@ -72,7 +71,7 @@ class CheckRequest extends GeneratedMessage {
 class _ReadonlyCheckRequest extends CheckRequest with ReadonlyMessageMixin {}
 
 class CheckResponse_CheckInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckResponse_CheckInfo')
+  static final BuilderInfo _i = BuilderInfo('CheckResponse_CheckInfo')
     ..a<CheckResponse_ConsumerInfo>(
         2,
         'consumerInfo',
@@ -89,14 +88,14 @@ class CheckResponse_CheckInfo extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckResponse_CheckInfo clone() =>
-      new CheckResponse_CheckInfo()..mergeFromMessage(this);
+      CheckResponse_CheckInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckResponse_CheckInfo create() => new CheckResponse_CheckInfo();
+  static CheckResponse_CheckInfo create() => CheckResponse_CheckInfo();
   static PbList<CheckResponse_CheckInfo> createRepeated() =>
-      new PbList<CheckResponse_CheckInfo>();
+      PbList<CheckResponse_CheckInfo>();
   static CheckResponse_CheckInfo getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckResponse_CheckInfo();
+      _defaultInstance = _ReadonlyCheckResponse_CheckInfo();
     return _defaultInstance;
   }
 
@@ -119,7 +118,7 @@ class _ReadonlyCheckResponse_CheckInfo extends CheckResponse_CheckInfo
     with ReadonlyMessageMixin {}
 
 class CheckResponse_ConsumerInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckResponse_ConsumerInfo')
+  static final BuilderInfo _i = BuilderInfo('CheckResponse_ConsumerInfo')
     ..aInt64(1, 'projectNumber')
     ..hasRequiredFields = false;
 
@@ -131,15 +130,14 @@ class CheckResponse_ConsumerInfo extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckResponse_ConsumerInfo clone() =>
-      new CheckResponse_ConsumerInfo()..mergeFromMessage(this);
+      CheckResponse_ConsumerInfo()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckResponse_ConsumerInfo create() =>
-      new CheckResponse_ConsumerInfo();
+  static CheckResponse_ConsumerInfo create() => CheckResponse_ConsumerInfo();
   static PbList<CheckResponse_ConsumerInfo> createRepeated() =>
-      new PbList<CheckResponse_ConsumerInfo>();
+      PbList<CheckResponse_ConsumerInfo>();
   static CheckResponse_ConsumerInfo getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckResponse_ConsumerInfo();
+      _defaultInstance = _ReadonlyCheckResponse_ConsumerInfo();
     return _defaultInstance;
   }
 
@@ -162,7 +160,7 @@ class _ReadonlyCheckResponse_ConsumerInfo extends CheckResponse_ConsumerInfo
     with ReadonlyMessageMixin {}
 
 class CheckResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckResponse')
+  static final BuilderInfo _i = BuilderInfo('CheckResponse')
     ..aOS(1, 'operationId')
     ..pp<CheckError>(2, 'checkErrors', PbFieldType.PM, CheckError.$checkItem,
         CheckError.create)
@@ -178,13 +176,12 @@ class CheckResponse extends GeneratedMessage {
   CheckResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CheckResponse clone() => new CheckResponse()..mergeFromMessage(this);
+  CheckResponse clone() => CheckResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckResponse create() => new CheckResponse();
-  static PbList<CheckResponse> createRepeated() => new PbList<CheckResponse>();
+  static CheckResponse create() => CheckResponse();
+  static PbList<CheckResponse> createRepeated() => PbList<CheckResponse>();
   static CheckResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCheckResponse();
     return _defaultInstance;
   }
 
@@ -223,7 +220,7 @@ class CheckResponse extends GeneratedMessage {
 class _ReadonlyCheckResponse extends CheckResponse with ReadonlyMessageMixin {}
 
 class ReportRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReportRequest')
+  static final BuilderInfo _i = BuilderInfo('ReportRequest')
     ..aOS(1, 'serviceName')
     ..pp<Operation>(
         2, 'operations', PbFieldType.PM, Operation.$checkItem, Operation.create)
@@ -237,13 +234,12 @@ class ReportRequest extends GeneratedMessage {
   ReportRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReportRequest clone() => new ReportRequest()..mergeFromMessage(this);
+  ReportRequest clone() => ReportRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReportRequest create() => new ReportRequest();
-  static PbList<ReportRequest> createRepeated() => new PbList<ReportRequest>();
+  static ReportRequest create() => ReportRequest();
+  static PbList<ReportRequest> createRepeated() => PbList<ReportRequest>();
   static ReportRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReportRequest();
     return _defaultInstance;
   }
 
@@ -274,7 +270,7 @@ class ReportRequest extends GeneratedMessage {
 class _ReadonlyReportRequest extends ReportRequest with ReadonlyMessageMixin {}
 
 class ReportResponse_ReportError extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReportResponse_ReportError')
+  static final BuilderInfo _i = BuilderInfo('ReportResponse_ReportError')
     ..aOS(1, 'operationId')
     ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM,
         $google$rpc.Status.getDefault, $google$rpc.Status.create)
@@ -288,15 +284,14 @@ class ReportResponse_ReportError extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReportResponse_ReportError clone() =>
-      new ReportResponse_ReportError()..mergeFromMessage(this);
+      ReportResponse_ReportError()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReportResponse_ReportError create() =>
-      new ReportResponse_ReportError();
+  static ReportResponse_ReportError create() => ReportResponse_ReportError();
   static PbList<ReportResponse_ReportError> createRepeated() =>
-      new PbList<ReportResponse_ReportError>();
+      PbList<ReportResponse_ReportError>();
   static ReportResponse_ReportError getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportResponse_ReportError();
+      _defaultInstance = _ReadonlyReportResponse_ReportError();
     return _defaultInstance;
   }
 
@@ -327,7 +322,7 @@ class _ReadonlyReportResponse_ReportError extends ReportResponse_ReportError
     with ReadonlyMessageMixin {}
 
 class ReportResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReportResponse')
+  static final BuilderInfo _i = BuilderInfo('ReportResponse')
     ..pp<ReportResponse_ReportError>(
         1,
         'reportErrors',
@@ -344,14 +339,12 @@ class ReportResponse extends GeneratedMessage {
   ReportResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReportResponse clone() => new ReportResponse()..mergeFromMessage(this);
+  ReportResponse clone() => ReportResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReportResponse create() => new ReportResponse();
-  static PbList<ReportResponse> createRepeated() =>
-      new PbList<ReportResponse>();
+  static ReportResponse create() => ReportResponse();
+  static PbList<ReportResponse> createRepeated() => PbList<ReportResponse>();
   static ReportResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReportResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReportResponse();
     return _defaultInstance;
   }
 
@@ -379,13 +372,13 @@ class ServiceControllerApi {
   ServiceControllerApi(this._client);
 
   Future<CheckResponse> check(ClientContext ctx, CheckRequest request) {
-    var emptyResponse = new CheckResponse();
+    var emptyResponse = CheckResponse();
     return _client.invoke<CheckResponse>(
         ctx, 'ServiceController', 'Check', request, emptyResponse);
   }
 
   Future<ReportResponse> report(ClientContext ctx, ReportRequest request) {
-    var emptyResponse = new ReportResponse();
+    var emptyResponse = ReportResponse();
     return _client.invoke<ReportResponse>(
         ctx, 'ServiceController', 'Report', request, emptyResponse);
   }

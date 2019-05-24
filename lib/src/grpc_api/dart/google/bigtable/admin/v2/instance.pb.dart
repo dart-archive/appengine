@@ -14,7 +14,7 @@ import 'common.pbenum.dart';
 export 'instance.pbenum.dart';
 
 class Instance_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Instance_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -27,14 +27,14 @@ class Instance_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Instance_LabelsEntry clone() =>
-      new Instance_LabelsEntry()..mergeFromMessage(this);
+      Instance_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Instance_LabelsEntry create() => new Instance_LabelsEntry();
+  static Instance_LabelsEntry create() => Instance_LabelsEntry();
   static PbList<Instance_LabelsEntry> createRepeated() =>
-      new PbList<Instance_LabelsEntry>();
+      PbList<Instance_LabelsEntry>();
   static Instance_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInstance_LabelsEntry();
+      _defaultInstance = _ReadonlyInstance_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -64,7 +64,7 @@ class _ReadonlyInstance_LabelsEntry extends Instance_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Instance extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance')
+  static final BuilderInfo _i = BuilderInfo('Instance')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..e<Instance_State>(
@@ -91,12 +91,12 @@ class Instance extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Instance.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Instance clone() => new Instance()..mergeFromMessage(this);
+  Instance clone() => Instance()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Instance create() => new Instance();
-  static PbList<Instance> createRepeated() => new PbList<Instance>();
+  static Instance create() => Instance();
+  static PbList<Instance> createRepeated() => PbList<Instance>();
   static Instance getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInstance();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyInstance();
     return _defaultInstance;
   }
 
@@ -143,7 +143,7 @@ class Instance extends GeneratedMessage {
 class _ReadonlyInstance extends Instance with ReadonlyMessageMixin {}
 
 class Cluster extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cluster')
+  static final BuilderInfo _i = BuilderInfo('Cluster')
     ..aOS(1, 'name')
     ..aOS(2, 'location')
     ..e<Cluster_State>(
@@ -169,12 +169,12 @@ class Cluster extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Cluster.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Cluster clone() => new Cluster()..mergeFromMessage(this);
+  Cluster clone() => Cluster()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Cluster create() => new Cluster();
-  static PbList<Cluster> createRepeated() => new PbList<Cluster>();
+  static Cluster create() => Cluster();
+  static PbList<Cluster> createRepeated() => PbList<Cluster>();
   static Cluster getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCluster();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCluster();
     return _defaultInstance;
   }
 
@@ -228,7 +228,7 @@ class _ReadonlyCluster extends Cluster with ReadonlyMessageMixin {}
 
 class AppProfile_MultiClusterRoutingUseAny extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('AppProfile_MultiClusterRoutingUseAny')
+      BuilderInfo('AppProfile_MultiClusterRoutingUseAny')
         ..hasRequiredFields = false;
 
   AppProfile_MultiClusterRoutingUseAny() : super();
@@ -239,15 +239,15 @@ class AppProfile_MultiClusterRoutingUseAny extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AppProfile_MultiClusterRoutingUseAny clone() =>
-      new AppProfile_MultiClusterRoutingUseAny()..mergeFromMessage(this);
+      AppProfile_MultiClusterRoutingUseAny()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AppProfile_MultiClusterRoutingUseAny create() =>
-      new AppProfile_MultiClusterRoutingUseAny();
+      AppProfile_MultiClusterRoutingUseAny();
   static PbList<AppProfile_MultiClusterRoutingUseAny> createRepeated() =>
-      new PbList<AppProfile_MultiClusterRoutingUseAny>();
+      PbList<AppProfile_MultiClusterRoutingUseAny>();
   static AppProfile_MultiClusterRoutingUseAny getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppProfile_MultiClusterRoutingUseAny();
+      _defaultInstance = _ReadonlyAppProfile_MultiClusterRoutingUseAny();
     return _defaultInstance;
   }
 
@@ -262,11 +262,10 @@ class _ReadonlyAppProfile_MultiClusterRoutingUseAny
     extends AppProfile_MultiClusterRoutingUseAny with ReadonlyMessageMixin {}
 
 class AppProfile_SingleClusterRouting extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AppProfile_SingleClusterRouting')
-        ..aOS(1, 'clusterId')
-        ..aOB(2, 'allowTransactionalWrites')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('AppProfile_SingleClusterRouting')
+    ..aOS(1, 'clusterId')
+    ..aOB(2, 'allowTransactionalWrites')
+    ..hasRequiredFields = false;
 
   AppProfile_SingleClusterRouting() : super();
   AppProfile_SingleClusterRouting.fromBuffer(List<int> i,
@@ -276,15 +275,15 @@ class AppProfile_SingleClusterRouting extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AppProfile_SingleClusterRouting clone() =>
-      new AppProfile_SingleClusterRouting()..mergeFromMessage(this);
+      AppProfile_SingleClusterRouting()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static AppProfile_SingleClusterRouting create() =>
-      new AppProfile_SingleClusterRouting();
+      AppProfile_SingleClusterRouting();
   static PbList<AppProfile_SingleClusterRouting> createRepeated() =>
-      new PbList<AppProfile_SingleClusterRouting>();
+      PbList<AppProfile_SingleClusterRouting>();
   static AppProfile_SingleClusterRouting getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppProfile_SingleClusterRouting();
+      _defaultInstance = _ReadonlyAppProfile_SingleClusterRouting();
     return _defaultInstance;
   }
 
@@ -315,7 +314,7 @@ class _ReadonlyAppProfile_SingleClusterRouting
     extends AppProfile_SingleClusterRouting with ReadonlyMessageMixin {}
 
 class AppProfile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AppProfile')
+  static final BuilderInfo _i = BuilderInfo('AppProfile')
     ..aOS(1, 'name')
     ..aOS(2, 'etag')
     ..aOS(3, 'description')
@@ -339,12 +338,12 @@ class AppProfile extends GeneratedMessage {
       : super.fromBuffer(i, r);
   AppProfile.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AppProfile clone() => new AppProfile()..mergeFromMessage(this);
+  AppProfile clone() => AppProfile()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AppProfile create() => new AppProfile();
-  static PbList<AppProfile> createRepeated() => new PbList<AppProfile>();
+  static AppProfile create() => AppProfile();
+  static PbList<AppProfile> createRepeated() => PbList<AppProfile>();
   static AppProfile getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAppProfile();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAppProfile();
     return _defaultInstance;
   }
 

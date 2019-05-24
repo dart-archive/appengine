@@ -9,20 +9,20 @@ import 'package:protobuf/protobuf.dart';
 
 class TextAnnotation_DetectedBreak_BreakType extends ProtobufEnum {
   static const TextAnnotation_DetectedBreak_BreakType UNKNOWN =
-      const TextAnnotation_DetectedBreak_BreakType._(0, 'UNKNOWN');
+      TextAnnotation_DetectedBreak_BreakType._(0, 'UNKNOWN');
   static const TextAnnotation_DetectedBreak_BreakType SPACE =
-      const TextAnnotation_DetectedBreak_BreakType._(1, 'SPACE');
+      TextAnnotation_DetectedBreak_BreakType._(1, 'SPACE');
   static const TextAnnotation_DetectedBreak_BreakType SURE_SPACE =
-      const TextAnnotation_DetectedBreak_BreakType._(2, 'SURE_SPACE');
+      TextAnnotation_DetectedBreak_BreakType._(2, 'SURE_SPACE');
   static const TextAnnotation_DetectedBreak_BreakType EOL_SURE_SPACE =
-      const TextAnnotation_DetectedBreak_BreakType._(3, 'EOL_SURE_SPACE');
+      TextAnnotation_DetectedBreak_BreakType._(3, 'EOL_SURE_SPACE');
   static const TextAnnotation_DetectedBreak_BreakType HYPHEN =
-      const TextAnnotation_DetectedBreak_BreakType._(4, 'HYPHEN');
+      TextAnnotation_DetectedBreak_BreakType._(4, 'HYPHEN');
   static const TextAnnotation_DetectedBreak_BreakType LINE_BREAK =
-      const TextAnnotation_DetectedBreak_BreakType._(5, 'LINE_BREAK');
+      TextAnnotation_DetectedBreak_BreakType._(5, 'LINE_BREAK');
 
   static const List<TextAnnotation_DetectedBreak_BreakType> values =
-      const <TextAnnotation_DetectedBreak_BreakType>[
+      <TextAnnotation_DetectedBreak_BreakType>[
     UNKNOWN,
     SPACE,
     SURE_SPACE,
@@ -43,14 +43,14 @@ class TextAnnotation_DetectedBreak_BreakType extends ProtobufEnum {
 }
 
 class Block_BlockType extends ProtobufEnum {
-  static const Block_BlockType UNKNOWN = const Block_BlockType._(0, 'UNKNOWN');
-  static const Block_BlockType TEXT = const Block_BlockType._(1, 'TEXT');
-  static const Block_BlockType TABLE = const Block_BlockType._(2, 'TABLE');
-  static const Block_BlockType PICTURE = const Block_BlockType._(3, 'PICTURE');
-  static const Block_BlockType RULER = const Block_BlockType._(4, 'RULER');
-  static const Block_BlockType BARCODE = const Block_BlockType._(5, 'BARCODE');
+  static const Block_BlockType UNKNOWN = Block_BlockType._(0, 'UNKNOWN');
+  static const Block_BlockType TEXT = Block_BlockType._(1, 'TEXT');
+  static const Block_BlockType TABLE = Block_BlockType._(2, 'TABLE');
+  static const Block_BlockType PICTURE = Block_BlockType._(3, 'PICTURE');
+  static const Block_BlockType RULER = Block_BlockType._(4, 'RULER');
+  static const Block_BlockType BARCODE = Block_BlockType._(5, 'BARCODE');
 
-  static const List<Block_BlockType> values = const <Block_BlockType>[
+  static const List<Block_BlockType> values = <Block_BlockType>[
     UNKNOWN,
     TEXT,
     TABLE,

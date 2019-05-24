@@ -9,15 +9,14 @@ import 'package:protobuf/protobuf.dart';
 
 class Likelihood extends ProtobufEnum {
   static const Likelihood LIKELIHOOD_UNSPECIFIED =
-      const Likelihood._(0, 'LIKELIHOOD_UNSPECIFIED');
-  static const Likelihood VERY_UNLIKELY =
-      const Likelihood._(1, 'VERY_UNLIKELY');
-  static const Likelihood UNLIKELY = const Likelihood._(2, 'UNLIKELY');
-  static const Likelihood POSSIBLE = const Likelihood._(3, 'POSSIBLE');
-  static const Likelihood LIKELY = const Likelihood._(4, 'LIKELY');
-  static const Likelihood VERY_LIKELY = const Likelihood._(5, 'VERY_LIKELY');
+      Likelihood._(0, 'LIKELIHOOD_UNSPECIFIED');
+  static const Likelihood VERY_UNLIKELY = Likelihood._(1, 'VERY_UNLIKELY');
+  static const Likelihood UNLIKELY = Likelihood._(2, 'UNLIKELY');
+  static const Likelihood POSSIBLE = Likelihood._(3, 'POSSIBLE');
+  static const Likelihood LIKELY = Likelihood._(4, 'LIKELY');
+  static const Likelihood VERY_LIKELY = Likelihood._(5, 'VERY_LIKELY');
 
-  static const List<Likelihood> values = const <Likelihood>[
+  static const List<Likelihood> values = <Likelihood>[
     LIKELIHOOD_UNSPECIFIED,
     VERY_UNLIKELY,
     UNLIKELY,
@@ -37,11 +36,11 @@ class Likelihood extends ProtobufEnum {
 
 class FileType extends ProtobufEnum {
   static const FileType FILE_TYPE_UNSPECIFIED =
-      const FileType._(0, 'FILE_TYPE_UNSPECIFIED');
-  static const FileType BINARY_FILE = const FileType._(1, 'BINARY_FILE');
-  static const FileType TEXT_FILE = const FileType._(2, 'TEXT_FILE');
+      FileType._(0, 'FILE_TYPE_UNSPECIFIED');
+  static const FileType BINARY_FILE = FileType._(1, 'BINARY_FILE');
+  static const FileType TEXT_FILE = FileType._(2, 'TEXT_FILE');
 
-  static const List<FileType> values = const <FileType>[
+  static const List<FileType> values = <FileType>[
     FILE_TYPE_UNSPECIFIED,
     BINARY_FILE,
     TEXT_FILE,
@@ -58,14 +57,14 @@ class FileType extends ProtobufEnum {
 
 class CloudStorageOptions_SampleMethod extends ProtobufEnum {
   static const CloudStorageOptions_SampleMethod SAMPLE_METHOD_UNSPECIFIED =
-      const CloudStorageOptions_SampleMethod._(0, 'SAMPLE_METHOD_UNSPECIFIED');
+      CloudStorageOptions_SampleMethod._(0, 'SAMPLE_METHOD_UNSPECIFIED');
   static const CloudStorageOptions_SampleMethod TOP =
-      const CloudStorageOptions_SampleMethod._(1, 'TOP');
+      CloudStorageOptions_SampleMethod._(1, 'TOP');
   static const CloudStorageOptions_SampleMethod RANDOM_START =
-      const CloudStorageOptions_SampleMethod._(2, 'RANDOM_START');
+      CloudStorageOptions_SampleMethod._(2, 'RANDOM_START');
 
   static const List<CloudStorageOptions_SampleMethod> values =
-      const <CloudStorageOptions_SampleMethod>[
+      <CloudStorageOptions_SampleMethod>[
     SAMPLE_METHOD_UNSPECIFIED,
     TOP,
     RANDOM_START,
@@ -84,14 +83,14 @@ class CloudStorageOptions_SampleMethod extends ProtobufEnum {
 
 class BigQueryOptions_SampleMethod extends ProtobufEnum {
   static const BigQueryOptions_SampleMethod SAMPLE_METHOD_UNSPECIFIED =
-      const BigQueryOptions_SampleMethod._(0, 'SAMPLE_METHOD_UNSPECIFIED');
+      BigQueryOptions_SampleMethod._(0, 'SAMPLE_METHOD_UNSPECIFIED');
   static const BigQueryOptions_SampleMethod TOP =
-      const BigQueryOptions_SampleMethod._(1, 'TOP');
+      BigQueryOptions_SampleMethod._(1, 'TOP');
   static const BigQueryOptions_SampleMethod RANDOM_START =
-      const BigQueryOptions_SampleMethod._(2, 'RANDOM_START');
+      BigQueryOptions_SampleMethod._(2, 'RANDOM_START');
 
   static const List<BigQueryOptions_SampleMethod> values =
-      const <BigQueryOptions_SampleMethod>[
+      <BigQueryOptions_SampleMethod>[
     SAMPLE_METHOD_UNSPECIFIED,
     TOP,
     RANDOM_START,

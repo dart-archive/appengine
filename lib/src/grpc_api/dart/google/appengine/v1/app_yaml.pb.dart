@@ -15,7 +15,7 @@ import 'app_yaml.pbenum.dart';
 export 'app_yaml.pbenum.dart';
 
 class ApiConfigHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ApiConfigHandler')
+  static final BuilderInfo _i = BuilderInfo('ApiConfigHandler')
     ..e<AuthFailAction>(
         1,
         'authFailAction',
@@ -48,14 +48,14 @@ class ApiConfigHandler extends GeneratedMessage {
   ApiConfigHandler.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ApiConfigHandler clone() => new ApiConfigHandler()..mergeFromMessage(this);
+  ApiConfigHandler clone() => ApiConfigHandler()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ApiConfigHandler create() => new ApiConfigHandler();
+  static ApiConfigHandler create() => ApiConfigHandler();
   static PbList<ApiConfigHandler> createRepeated() =>
-      new PbList<ApiConfigHandler>();
+      PbList<ApiConfigHandler>();
   static ApiConfigHandler getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyApiConfigHandler();
+      _defaultInstance = _ReadonlyApiConfigHandler();
     return _defaultInstance;
   }
 
@@ -109,7 +109,7 @@ class _ReadonlyApiConfigHandler extends ApiConfigHandler
     with ReadonlyMessageMixin {}
 
 class ErrorHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ErrorHandler')
+  static final BuilderInfo _i = BuilderInfo('ErrorHandler')
     ..e<ErrorHandler_ErrorCode>(
         1,
         'errorCode',
@@ -128,13 +128,12 @@ class ErrorHandler extends GeneratedMessage {
   ErrorHandler.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ErrorHandler clone() => new ErrorHandler()..mergeFromMessage(this);
+  ErrorHandler clone() => ErrorHandler()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ErrorHandler create() => new ErrorHandler();
-  static PbList<ErrorHandler> createRepeated() => new PbList<ErrorHandler>();
+  static ErrorHandler create() => ErrorHandler();
+  static PbList<ErrorHandler> createRepeated() => PbList<ErrorHandler>();
   static ErrorHandler getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyErrorHandler();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyErrorHandler();
     return _defaultInstance;
   }
 
@@ -171,7 +170,7 @@ class ErrorHandler extends GeneratedMessage {
 class _ReadonlyErrorHandler extends ErrorHandler with ReadonlyMessageMixin {}
 
 class UrlMap extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UrlMap')
+  static final BuilderInfo _i = BuilderInfo('UrlMap')
     ..aOS(1, 'urlRegex')
     ..a<StaticFilesHandler>(2, 'staticFiles', PbFieldType.OM,
         StaticFilesHandler.getDefault, StaticFilesHandler.create)
@@ -215,12 +214,12 @@ class UrlMap extends GeneratedMessage {
       : super.fromBuffer(i, r);
   UrlMap.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UrlMap clone() => new UrlMap()..mergeFromMessage(this);
+  UrlMap clone() => UrlMap()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UrlMap create() => new UrlMap();
-  static PbList<UrlMap> createRepeated() => new PbList<UrlMap>();
+  static UrlMap create() => UrlMap();
+  static PbList<UrlMap> createRepeated() => PbList<UrlMap>();
   static UrlMap getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUrlMap();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyUrlMap();
     return _defaultInstance;
   }
 
@@ -298,7 +297,7 @@ class _ReadonlyUrlMap extends UrlMap with ReadonlyMessageMixin {}
 
 class StaticFilesHandler_HttpHeadersEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('StaticFilesHandler_HttpHeadersEntry')
+      BuilderInfo('StaticFilesHandler_HttpHeadersEntry')
         ..aOS(1, 'key')
         ..aOS(2, 'value')
         ..hasRequiredFields = false;
@@ -311,15 +310,15 @@ class StaticFilesHandler_HttpHeadersEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StaticFilesHandler_HttpHeadersEntry clone() =>
-      new StaticFilesHandler_HttpHeadersEntry()..mergeFromMessage(this);
+      StaticFilesHandler_HttpHeadersEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static StaticFilesHandler_HttpHeadersEntry create() =>
-      new StaticFilesHandler_HttpHeadersEntry();
+      StaticFilesHandler_HttpHeadersEntry();
   static PbList<StaticFilesHandler_HttpHeadersEntry> createRepeated() =>
-      new PbList<StaticFilesHandler_HttpHeadersEntry>();
+      PbList<StaticFilesHandler_HttpHeadersEntry>();
   static StaticFilesHandler_HttpHeadersEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStaticFilesHandler_HttpHeadersEntry();
+      _defaultInstance = _ReadonlyStaticFilesHandler_HttpHeadersEntry();
     return _defaultInstance;
   }
 
@@ -350,7 +349,7 @@ class _ReadonlyStaticFilesHandler_HttpHeadersEntry
     extends StaticFilesHandler_HttpHeadersEntry with ReadonlyMessageMixin {}
 
 class StaticFilesHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StaticFilesHandler')
+  static final BuilderInfo _i = BuilderInfo('StaticFilesHandler')
     ..aOS(1, 'path')
     ..aOS(2, 'uploadPathRegex')
     ..pp<StaticFilesHandler_HttpHeadersEntry>(
@@ -373,15 +372,14 @@ class StaticFilesHandler extends GeneratedMessage {
   StaticFilesHandler.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StaticFilesHandler clone() =>
-      new StaticFilesHandler()..mergeFromMessage(this);
+  StaticFilesHandler clone() => StaticFilesHandler()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StaticFilesHandler create() => new StaticFilesHandler();
+  static StaticFilesHandler create() => StaticFilesHandler();
   static PbList<StaticFilesHandler> createRepeated() =>
-      new PbList<StaticFilesHandler>();
+      PbList<StaticFilesHandler>();
   static StaticFilesHandler getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStaticFilesHandler();
+      _defaultInstance = _ReadonlyStaticFilesHandler();
     return _defaultInstance;
   }
 
@@ -445,7 +443,7 @@ class _ReadonlyStaticFilesHandler extends StaticFilesHandler
     with ReadonlyMessageMixin {}
 
 class ScriptHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScriptHandler')
+  static final BuilderInfo _i = BuilderInfo('ScriptHandler')
     ..aOS(1, 'scriptPath')
     ..hasRequiredFields = false;
 
@@ -456,13 +454,12 @@ class ScriptHandler extends GeneratedMessage {
   ScriptHandler.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ScriptHandler clone() => new ScriptHandler()..mergeFromMessage(this);
+  ScriptHandler clone() => ScriptHandler()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ScriptHandler create() => new ScriptHandler();
-  static PbList<ScriptHandler> createRepeated() => new PbList<ScriptHandler>();
+  static ScriptHandler create() => ScriptHandler();
+  static PbList<ScriptHandler> createRepeated() => PbList<ScriptHandler>();
   static ScriptHandler getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScriptHandler();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyScriptHandler();
     return _defaultInstance;
   }
 
@@ -483,7 +480,7 @@ class ScriptHandler extends GeneratedMessage {
 class _ReadonlyScriptHandler extends ScriptHandler with ReadonlyMessageMixin {}
 
 class ApiEndpointHandler extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ApiEndpointHandler')
+  static final BuilderInfo _i = BuilderInfo('ApiEndpointHandler')
     ..aOS(1, 'scriptPath')
     ..hasRequiredFields = false;
 
@@ -494,15 +491,14 @@ class ApiEndpointHandler extends GeneratedMessage {
   ApiEndpointHandler.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ApiEndpointHandler clone() =>
-      new ApiEndpointHandler()..mergeFromMessage(this);
+  ApiEndpointHandler clone() => ApiEndpointHandler()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ApiEndpointHandler create() => new ApiEndpointHandler();
+  static ApiEndpointHandler create() => ApiEndpointHandler();
   static PbList<ApiEndpointHandler> createRepeated() =>
-      new PbList<ApiEndpointHandler>();
+      PbList<ApiEndpointHandler>();
   static ApiEndpointHandler getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyApiEndpointHandler();
+      _defaultInstance = _ReadonlyApiEndpointHandler();
     return _defaultInstance;
   }
 
@@ -524,7 +520,7 @@ class _ReadonlyApiEndpointHandler extends ApiEndpointHandler
     with ReadonlyMessageMixin {}
 
 class HealthCheck extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HealthCheck')
+  static final BuilderInfo _i = BuilderInfo('HealthCheck')
     ..aOB(1, 'disableHealthCheck')
     ..aOS(2, 'host')
     ..a<int>(3, 'healthyThreshold', PbFieldType.OU3)
@@ -543,12 +539,12 @@ class HealthCheck extends GeneratedMessage {
   HealthCheck.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HealthCheck clone() => new HealthCheck()..mergeFromMessage(this);
+  HealthCheck clone() => HealthCheck()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static HealthCheck create() => new HealthCheck();
-  static PbList<HealthCheck> createRepeated() => new PbList<HealthCheck>();
+  static HealthCheck create() => HealthCheck();
+  static PbList<HealthCheck> createRepeated() => PbList<HealthCheck>();
   static HealthCheck getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHealthCheck();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyHealthCheck();
     return _defaultInstance;
   }
 
@@ -617,7 +613,7 @@ class HealthCheck extends GeneratedMessage {
 class _ReadonlyHealthCheck extends HealthCheck with ReadonlyMessageMixin {}
 
 class Library extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Library')
+  static final BuilderInfo _i = BuilderInfo('Library')
     ..aOS(1, 'name')
     ..aOS(2, 'version')
     ..hasRequiredFields = false;
@@ -628,12 +624,12 @@ class Library extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Library.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Library clone() => new Library()..mergeFromMessage(this);
+  Library clone() => Library()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Library create() => new Library();
-  static PbList<Library> createRepeated() => new PbList<Library>();
+  static Library create() => Library();
+  static PbList<Library> createRepeated() => PbList<Library>();
   static Library getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLibrary();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLibrary();
     return _defaultInstance;
   }
 

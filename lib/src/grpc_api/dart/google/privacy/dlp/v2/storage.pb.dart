@@ -16,7 +16,7 @@ import 'storage.pbenum.dart';
 export 'storage.pbenum.dart';
 
 class InfoType extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('InfoType')
+  static final BuilderInfo _i = BuilderInfo('InfoType')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -26,12 +26,12 @@ class InfoType extends GeneratedMessage {
       : super.fromBuffer(i, r);
   InfoType.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  InfoType clone() => new InfoType()..mergeFromMessage(this);
+  InfoType clone() => InfoType()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static InfoType create() => new InfoType();
-  static PbList<InfoType> createRepeated() => new PbList<InfoType>();
+  static InfoType create() => InfoType();
+  static PbList<InfoType> createRepeated() => PbList<InfoType>();
   static InfoType getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInfoType();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyInfoType();
     return _defaultInstance;
   }
 
@@ -53,7 +53,7 @@ class _ReadonlyInfoType extends InfoType with ReadonlyMessageMixin {}
 
 class CustomInfoType_Dictionary_WordList extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('CustomInfoType_Dictionary_WordList')
+      BuilderInfo('CustomInfoType_Dictionary_WordList')
         ..pPS(1, 'words')
         ..hasRequiredFields = false;
 
@@ -65,15 +65,15 @@ class CustomInfoType_Dictionary_WordList extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CustomInfoType_Dictionary_WordList clone() =>
-      new CustomInfoType_Dictionary_WordList()..mergeFromMessage(this);
+      CustomInfoType_Dictionary_WordList()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CustomInfoType_Dictionary_WordList create() =>
-      new CustomInfoType_Dictionary_WordList();
+      CustomInfoType_Dictionary_WordList();
   static PbList<CustomInfoType_Dictionary_WordList> createRepeated() =>
-      new PbList<CustomInfoType_Dictionary_WordList>();
+      PbList<CustomInfoType_Dictionary_WordList>();
   static CustomInfoType_Dictionary_WordList getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomInfoType_Dictionary_WordList();
+      _defaultInstance = _ReadonlyCustomInfoType_Dictionary_WordList();
     return _defaultInstance;
   }
 
@@ -90,7 +90,7 @@ class _ReadonlyCustomInfoType_Dictionary_WordList
     extends CustomInfoType_Dictionary_WordList with ReadonlyMessageMixin {}
 
 class CustomInfoType_Dictionary extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CustomInfoType_Dictionary')
+  static final BuilderInfo _i = BuilderInfo('CustomInfoType_Dictionary')
     ..a<CustomInfoType_Dictionary_WordList>(
         1,
         'wordList',
@@ -109,14 +109,14 @@ class CustomInfoType_Dictionary extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CustomInfoType_Dictionary clone() =>
-      new CustomInfoType_Dictionary()..mergeFromMessage(this);
+      CustomInfoType_Dictionary()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CustomInfoType_Dictionary create() => new CustomInfoType_Dictionary();
+  static CustomInfoType_Dictionary create() => CustomInfoType_Dictionary();
   static PbList<CustomInfoType_Dictionary> createRepeated() =>
-      new PbList<CustomInfoType_Dictionary>();
+      PbList<CustomInfoType_Dictionary>();
   static CustomInfoType_Dictionary getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomInfoType_Dictionary();
+      _defaultInstance = _ReadonlyCustomInfoType_Dictionary();
     return _defaultInstance;
   }
 
@@ -147,7 +147,7 @@ class _ReadonlyCustomInfoType_Dictionary extends CustomInfoType_Dictionary
     with ReadonlyMessageMixin {}
 
 class CustomInfoType_Regex extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CustomInfoType_Regex')
+  static final BuilderInfo _i = BuilderInfo('CustomInfoType_Regex')
     ..aOS(1, 'pattern')
     ..hasRequiredFields = false;
 
@@ -159,14 +159,14 @@ class CustomInfoType_Regex extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CustomInfoType_Regex clone() =>
-      new CustomInfoType_Regex()..mergeFromMessage(this);
+      CustomInfoType_Regex()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CustomInfoType_Regex create() => new CustomInfoType_Regex();
+  static CustomInfoType_Regex create() => CustomInfoType_Regex();
   static PbList<CustomInfoType_Regex> createRepeated() =>
-      new PbList<CustomInfoType_Regex>();
+      PbList<CustomInfoType_Regex>();
   static CustomInfoType_Regex getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomInfoType_Regex();
+      _defaultInstance = _ReadonlyCustomInfoType_Regex();
     return _defaultInstance;
   }
 
@@ -188,7 +188,7 @@ class _ReadonlyCustomInfoType_Regex extends CustomInfoType_Regex
     with ReadonlyMessageMixin {}
 
 class CustomInfoType_SurrogateType extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CustomInfoType_SurrogateType')
+  static final BuilderInfo _i = BuilderInfo('CustomInfoType_SurrogateType')
     ..hasRequiredFields = false;
 
   CustomInfoType_SurrogateType() : super();
@@ -199,15 +199,15 @@ class CustomInfoType_SurrogateType extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CustomInfoType_SurrogateType clone() =>
-      new CustomInfoType_SurrogateType()..mergeFromMessage(this);
+      CustomInfoType_SurrogateType()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CustomInfoType_SurrogateType create() =>
-      new CustomInfoType_SurrogateType();
+      CustomInfoType_SurrogateType();
   static PbList<CustomInfoType_SurrogateType> createRepeated() =>
-      new PbList<CustomInfoType_SurrogateType>();
+      PbList<CustomInfoType_SurrogateType>();
   static CustomInfoType_SurrogateType getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomInfoType_SurrogateType();
+      _defaultInstance = _ReadonlyCustomInfoType_SurrogateType();
     return _defaultInstance;
   }
 
@@ -223,7 +223,7 @@ class _ReadonlyCustomInfoType_SurrogateType extends CustomInfoType_SurrogateType
 
 class CustomInfoType_DetectionRule_Proximity extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('CustomInfoType_DetectionRule_Proximity')
+      BuilderInfo('CustomInfoType_DetectionRule_Proximity')
         ..a<int>(1, 'windowBefore', PbFieldType.O3)
         ..a<int>(2, 'windowAfter', PbFieldType.O3)
         ..hasRequiredFields = false;
@@ -236,15 +236,15 @@ class CustomInfoType_DetectionRule_Proximity extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CustomInfoType_DetectionRule_Proximity clone() =>
-      new CustomInfoType_DetectionRule_Proximity()..mergeFromMessage(this);
+      CustomInfoType_DetectionRule_Proximity()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CustomInfoType_DetectionRule_Proximity create() =>
-      new CustomInfoType_DetectionRule_Proximity();
+      CustomInfoType_DetectionRule_Proximity();
   static PbList<CustomInfoType_DetectionRule_Proximity> createRepeated() =>
-      new PbList<CustomInfoType_DetectionRule_Proximity>();
+      PbList<CustomInfoType_DetectionRule_Proximity>();
   static CustomInfoType_DetectionRule_Proximity getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomInfoType_DetectionRule_Proximity();
+      _defaultInstance = _ReadonlyCustomInfoType_DetectionRule_Proximity();
     return _defaultInstance;
   }
 
@@ -277,7 +277,7 @@ class _ReadonlyCustomInfoType_DetectionRule_Proximity
 class CustomInfoType_DetectionRule_LikelihoodAdjustment
     extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('CustomInfoType_DetectionRule_LikelihoodAdjustment')
+      BuilderInfo('CustomInfoType_DetectionRule_LikelihoodAdjustment')
         ..e<Likelihood>(
             1,
             'fixedLikelihood',
@@ -296,18 +296,18 @@ class CustomInfoType_DetectionRule_LikelihoodAdjustment
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CustomInfoType_DetectionRule_LikelihoodAdjustment clone() =>
-      new CustomInfoType_DetectionRule_LikelihoodAdjustment()
+      CustomInfoType_DetectionRule_LikelihoodAdjustment()
         ..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CustomInfoType_DetectionRule_LikelihoodAdjustment create() =>
-      new CustomInfoType_DetectionRule_LikelihoodAdjustment();
+      CustomInfoType_DetectionRule_LikelihoodAdjustment();
   static PbList<CustomInfoType_DetectionRule_LikelihoodAdjustment>
       createRepeated() =>
-          new PbList<CustomInfoType_DetectionRule_LikelihoodAdjustment>();
+          PbList<CustomInfoType_DetectionRule_LikelihoodAdjustment>();
   static CustomInfoType_DetectionRule_LikelihoodAdjustment getDefault() {
     if (_defaultInstance == null)
       _defaultInstance =
-          new _ReadonlyCustomInfoType_DetectionRule_LikelihoodAdjustment();
+          _ReadonlyCustomInfoType_DetectionRule_LikelihoodAdjustment();
     return _defaultInstance;
   }
 
@@ -340,7 +340,7 @@ class _ReadonlyCustomInfoType_DetectionRule_LikelihoodAdjustment
 
 class CustomInfoType_DetectionRule_HotwordRule extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('CustomInfoType_DetectionRule_HotwordRule')
+      BuilderInfo('CustomInfoType_DetectionRule_HotwordRule')
         ..a<CustomInfoType_Regex>(1, 'hotwordRegex', PbFieldType.OM,
             CustomInfoType_Regex.getDefault, CustomInfoType_Regex.create)
         ..a<CustomInfoType_DetectionRule_Proximity>(
@@ -365,16 +365,15 @@ class CustomInfoType_DetectionRule_HotwordRule extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CustomInfoType_DetectionRule_HotwordRule clone() =>
-      new CustomInfoType_DetectionRule_HotwordRule()..mergeFromMessage(this);
+      CustomInfoType_DetectionRule_HotwordRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CustomInfoType_DetectionRule_HotwordRule create() =>
-      new CustomInfoType_DetectionRule_HotwordRule();
+      CustomInfoType_DetectionRule_HotwordRule();
   static PbList<CustomInfoType_DetectionRule_HotwordRule> createRepeated() =>
-      new PbList<CustomInfoType_DetectionRule_HotwordRule>();
+      PbList<CustomInfoType_DetectionRule_HotwordRule>();
   static CustomInfoType_DetectionRule_HotwordRule getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyCustomInfoType_DetectionRule_HotwordRule();
+      _defaultInstance = _ReadonlyCustomInfoType_DetectionRule_HotwordRule();
     return _defaultInstance;
   }
 
@@ -416,7 +415,7 @@ class _ReadonlyCustomInfoType_DetectionRule_HotwordRule
 }
 
 class CustomInfoType_DetectionRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CustomInfoType_DetectionRule')
+  static final BuilderInfo _i = BuilderInfo('CustomInfoType_DetectionRule')
     ..a<CustomInfoType_DetectionRule_HotwordRule>(
         1,
         'hotwordRule',
@@ -433,15 +432,15 @@ class CustomInfoType_DetectionRule extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CustomInfoType_DetectionRule clone() =>
-      new CustomInfoType_DetectionRule()..mergeFromMessage(this);
+      CustomInfoType_DetectionRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CustomInfoType_DetectionRule create() =>
-      new CustomInfoType_DetectionRule();
+      CustomInfoType_DetectionRule();
   static PbList<CustomInfoType_DetectionRule> createRepeated() =>
-      new PbList<CustomInfoType_DetectionRule>();
+      PbList<CustomInfoType_DetectionRule>();
   static CustomInfoType_DetectionRule getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomInfoType_DetectionRule();
+      _defaultInstance = _ReadonlyCustomInfoType_DetectionRule();
     return _defaultInstance;
   }
 
@@ -464,7 +463,7 @@ class _ReadonlyCustomInfoType_DetectionRule extends CustomInfoType_DetectionRule
     with ReadonlyMessageMixin {}
 
 class CustomInfoType extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CustomInfoType')
+  static final BuilderInfo _i = BuilderInfo('CustomInfoType')
     ..a<InfoType>(
         1, 'infoType', PbFieldType.OM, InfoType.getDefault, InfoType.create)
     ..a<CustomInfoType_Dictionary>(2, 'dictionary', PbFieldType.OM,
@@ -499,14 +498,12 @@ class CustomInfoType extends GeneratedMessage {
   CustomInfoType.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CustomInfoType clone() => new CustomInfoType()..mergeFromMessage(this);
+  CustomInfoType clone() => CustomInfoType()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CustomInfoType create() => new CustomInfoType();
-  static PbList<CustomInfoType> createRepeated() =>
-      new PbList<CustomInfoType>();
+  static CustomInfoType create() => CustomInfoType();
+  static PbList<CustomInfoType> createRepeated() => PbList<CustomInfoType>();
   static CustomInfoType getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCustomInfoType();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCustomInfoType();
     return _defaultInstance;
   }
 
@@ -562,7 +559,7 @@ class _ReadonlyCustomInfoType extends CustomInfoType with ReadonlyMessageMixin {
 }
 
 class FieldId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FieldId')
+  static final BuilderInfo _i = BuilderInfo('FieldId')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -572,12 +569,12 @@ class FieldId extends GeneratedMessage {
       : super.fromBuffer(i, r);
   FieldId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FieldId clone() => new FieldId()..mergeFromMessage(this);
+  FieldId clone() => FieldId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FieldId create() => new FieldId();
-  static PbList<FieldId> createRepeated() => new PbList<FieldId>();
+  static FieldId create() => FieldId();
+  static PbList<FieldId> createRepeated() => PbList<FieldId>();
   static FieldId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFieldId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFieldId();
     return _defaultInstance;
   }
 
@@ -598,7 +595,7 @@ class FieldId extends GeneratedMessage {
 class _ReadonlyFieldId extends FieldId with ReadonlyMessageMixin {}
 
 class PartitionId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionId')
+  static final BuilderInfo _i = BuilderInfo('PartitionId')
     ..aOS(2, 'projectId')
     ..aOS(4, 'namespaceId')
     ..hasRequiredFields = false;
@@ -610,12 +607,12 @@ class PartitionId extends GeneratedMessage {
   PartitionId.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PartitionId clone() => new PartitionId()..mergeFromMessage(this);
+  PartitionId clone() => PartitionId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PartitionId create() => new PartitionId();
-  static PbList<PartitionId> createRepeated() => new PbList<PartitionId>();
+  static PartitionId create() => PartitionId();
+  static PbList<PartitionId> createRepeated() => PbList<PartitionId>();
   static PartitionId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPartitionId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPartitionId();
     return _defaultInstance;
   }
 
@@ -644,7 +641,7 @@ class PartitionId extends GeneratedMessage {
 class _ReadonlyPartitionId extends PartitionId with ReadonlyMessageMixin {}
 
 class KindExpression extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('KindExpression')
+  static final BuilderInfo _i = BuilderInfo('KindExpression')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -655,14 +652,12 @@ class KindExpression extends GeneratedMessage {
   KindExpression.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  KindExpression clone() => new KindExpression()..mergeFromMessage(this);
+  KindExpression clone() => KindExpression()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static KindExpression create() => new KindExpression();
-  static PbList<KindExpression> createRepeated() =>
-      new PbList<KindExpression>();
+  static KindExpression create() => KindExpression();
+  static PbList<KindExpression> createRepeated() => PbList<KindExpression>();
   static KindExpression getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyKindExpression();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyKindExpression();
     return _defaultInstance;
   }
 
@@ -684,7 +679,7 @@ class _ReadonlyKindExpression extends KindExpression with ReadonlyMessageMixin {
 }
 
 class DatastoreOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatastoreOptions')
+  static final BuilderInfo _i = BuilderInfo('DatastoreOptions')
     ..a<PartitionId>(1, 'partitionId', PbFieldType.OM, PartitionId.getDefault,
         PartitionId.create)
     ..a<KindExpression>(2, 'kind', PbFieldType.OM, KindExpression.getDefault,
@@ -698,14 +693,14 @@ class DatastoreOptions extends GeneratedMessage {
   DatastoreOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DatastoreOptions clone() => new DatastoreOptions()..mergeFromMessage(this);
+  DatastoreOptions clone() => DatastoreOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatastoreOptions create() => new DatastoreOptions();
+  static DatastoreOptions create() => DatastoreOptions();
   static PbList<DatastoreOptions> createRepeated() =>
-      new PbList<DatastoreOptions>();
+      PbList<DatastoreOptions>();
   static DatastoreOptions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatastoreOptions();
+      _defaultInstance = _ReadonlyDatastoreOptions();
     return _defaultInstance;
   }
 
@@ -735,7 +730,7 @@ class _ReadonlyDatastoreOptions extends DatastoreOptions
     with ReadonlyMessageMixin {}
 
 class CloudStorageOptions_FileSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CloudStorageOptions_FileSet')
+  static final BuilderInfo _i = BuilderInfo('CloudStorageOptions_FileSet')
     ..aOS(1, 'url')
     ..hasRequiredFields = false;
 
@@ -747,15 +742,14 @@ class CloudStorageOptions_FileSet extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CloudStorageOptions_FileSet clone() =>
-      new CloudStorageOptions_FileSet()..mergeFromMessage(this);
+      CloudStorageOptions_FileSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CloudStorageOptions_FileSet create() =>
-      new CloudStorageOptions_FileSet();
+  static CloudStorageOptions_FileSet create() => CloudStorageOptions_FileSet();
   static PbList<CloudStorageOptions_FileSet> createRepeated() =>
-      new PbList<CloudStorageOptions_FileSet>();
+      PbList<CloudStorageOptions_FileSet>();
   static CloudStorageOptions_FileSet getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCloudStorageOptions_FileSet();
+      _defaultInstance = _ReadonlyCloudStorageOptions_FileSet();
     return _defaultInstance;
   }
 
@@ -778,7 +772,7 @@ class _ReadonlyCloudStorageOptions_FileSet extends CloudStorageOptions_FileSet
     with ReadonlyMessageMixin {}
 
 class CloudStorageOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CloudStorageOptions')
+  static final BuilderInfo _i = BuilderInfo('CloudStorageOptions')
     ..a<CloudStorageOptions_FileSet>(
         1,
         'fileSet',
@@ -805,15 +799,14 @@ class CloudStorageOptions extends GeneratedMessage {
   CloudStorageOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CloudStorageOptions clone() =>
-      new CloudStorageOptions()..mergeFromMessage(this);
+  CloudStorageOptions clone() => CloudStorageOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CloudStorageOptions create() => new CloudStorageOptions();
+  static CloudStorageOptions create() => CloudStorageOptions();
   static PbList<CloudStorageOptions> createRepeated() =>
-      new PbList<CloudStorageOptions>();
+      PbList<CloudStorageOptions>();
   static CloudStorageOptions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCloudStorageOptions();
+      _defaultInstance = _ReadonlyCloudStorageOptions();
     return _defaultInstance;
   }
 
@@ -861,7 +854,7 @@ class _ReadonlyCloudStorageOptions extends CloudStorageOptions
     with ReadonlyMessageMixin {}
 
 class CloudStoragePath extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CloudStoragePath')
+  static final BuilderInfo _i = BuilderInfo('CloudStoragePath')
     ..aOS(1, 'path')
     ..hasRequiredFields = false;
 
@@ -872,14 +865,14 @@ class CloudStoragePath extends GeneratedMessage {
   CloudStoragePath.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CloudStoragePath clone() => new CloudStoragePath()..mergeFromMessage(this);
+  CloudStoragePath clone() => CloudStoragePath()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CloudStoragePath create() => new CloudStoragePath();
+  static CloudStoragePath create() => CloudStoragePath();
   static PbList<CloudStoragePath> createRepeated() =>
-      new PbList<CloudStoragePath>();
+      PbList<CloudStoragePath>();
   static CloudStoragePath getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCloudStoragePath();
+      _defaultInstance = _ReadonlyCloudStoragePath();
     return _defaultInstance;
   }
 
@@ -901,7 +894,7 @@ class _ReadonlyCloudStoragePath extends CloudStoragePath
     with ReadonlyMessageMixin {}
 
 class BigQueryOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BigQueryOptions')
+  static final BuilderInfo _i = BuilderInfo('BigQueryOptions')
     ..a<BigQueryTable>(1, 'tableReference', PbFieldType.OM,
         BigQueryTable.getDefault, BigQueryTable.create)
     ..pp<FieldId>(2, 'identifyingFields', PbFieldType.PM, FieldId.$checkItem,
@@ -923,14 +916,12 @@ class BigQueryOptions extends GeneratedMessage {
   BigQueryOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BigQueryOptions clone() => new BigQueryOptions()..mergeFromMessage(this);
+  BigQueryOptions clone() => BigQueryOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BigQueryOptions create() => new BigQueryOptions();
-  static PbList<BigQueryOptions> createRepeated() =>
-      new PbList<BigQueryOptions>();
+  static BigQueryOptions create() => BigQueryOptions();
+  static PbList<BigQueryOptions> createRepeated() => PbList<BigQueryOptions>();
   static BigQueryOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBigQueryOptions();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBigQueryOptions();
     return _defaultInstance;
   }
 
@@ -970,7 +961,7 @@ class _ReadonlyBigQueryOptions extends BigQueryOptions
     with ReadonlyMessageMixin {}
 
 class StorageConfig_TimespanConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StorageConfig_TimespanConfig')
+  static final BuilderInfo _i = BuilderInfo('StorageConfig_TimespanConfig')
     ..a<$google$protobuf.Timestamp>(
         1,
         'startTime',
@@ -996,15 +987,15 @@ class StorageConfig_TimespanConfig extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StorageConfig_TimespanConfig clone() =>
-      new StorageConfig_TimespanConfig()..mergeFromMessage(this);
+      StorageConfig_TimespanConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static StorageConfig_TimespanConfig create() =>
-      new StorageConfig_TimespanConfig();
+      StorageConfig_TimespanConfig();
   static PbList<StorageConfig_TimespanConfig> createRepeated() =>
-      new PbList<StorageConfig_TimespanConfig>();
+      PbList<StorageConfig_TimespanConfig>();
   static StorageConfig_TimespanConfig getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStorageConfig_TimespanConfig();
+      _defaultInstance = _ReadonlyStorageConfig_TimespanConfig();
     return _defaultInstance;
   }
 
@@ -1051,7 +1042,7 @@ class _ReadonlyStorageConfig_TimespanConfig extends StorageConfig_TimespanConfig
     with ReadonlyMessageMixin {}
 
 class StorageConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StorageConfig')
+  static final BuilderInfo _i = BuilderInfo('StorageConfig')
     ..a<DatastoreOptions>(2, 'datastoreOptions', PbFieldType.OM,
         DatastoreOptions.getDefault, DatastoreOptions.create)
     ..a<CloudStorageOptions>(3, 'cloudStorageOptions', PbFieldType.OM,
@@ -1073,13 +1064,12 @@ class StorageConfig extends GeneratedMessage {
   StorageConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StorageConfig clone() => new StorageConfig()..mergeFromMessage(this);
+  StorageConfig clone() => StorageConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StorageConfig create() => new StorageConfig();
-  static PbList<StorageConfig> createRepeated() => new PbList<StorageConfig>();
+  static StorageConfig create() => StorageConfig();
+  static PbList<StorageConfig> createRepeated() => PbList<StorageConfig>();
   static StorageConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStorageConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStorageConfig();
     return _defaultInstance;
   }
 
@@ -1124,7 +1114,7 @@ class StorageConfig extends GeneratedMessage {
 class _ReadonlyStorageConfig extends StorageConfig with ReadonlyMessageMixin {}
 
 class BigQueryKey extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BigQueryKey')
+  static final BuilderInfo _i = BuilderInfo('BigQueryKey')
     ..a<BigQueryTable>(1, 'tableReference', PbFieldType.OM,
         BigQueryTable.getDefault, BigQueryTable.create)
     ..aInt64(2, 'rowNumber')
@@ -1137,12 +1127,12 @@ class BigQueryKey extends GeneratedMessage {
   BigQueryKey.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BigQueryKey clone() => new BigQueryKey()..mergeFromMessage(this);
+  BigQueryKey clone() => BigQueryKey()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BigQueryKey create() => new BigQueryKey();
-  static PbList<BigQueryKey> createRepeated() => new PbList<BigQueryKey>();
+  static BigQueryKey create() => BigQueryKey();
+  static PbList<BigQueryKey> createRepeated() => PbList<BigQueryKey>();
   static BigQueryKey getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBigQueryKey();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBigQueryKey();
     return _defaultInstance;
   }
 
@@ -1171,7 +1161,7 @@ class BigQueryKey extends GeneratedMessage {
 class _ReadonlyBigQueryKey extends BigQueryKey with ReadonlyMessageMixin {}
 
 class DatastoreKey extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DatastoreKey')
+  static final BuilderInfo _i = BuilderInfo('DatastoreKey')
     ..a<Key>(1, 'entityKey', PbFieldType.OM, Key.getDefault, Key.create)
     ..hasRequiredFields = false;
 
@@ -1182,13 +1172,12 @@ class DatastoreKey extends GeneratedMessage {
   DatastoreKey.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DatastoreKey clone() => new DatastoreKey()..mergeFromMessage(this);
+  DatastoreKey clone() => DatastoreKey()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DatastoreKey create() => new DatastoreKey();
-  static PbList<DatastoreKey> createRepeated() => new PbList<DatastoreKey>();
+  static DatastoreKey create() => DatastoreKey();
+  static PbList<DatastoreKey> createRepeated() => PbList<DatastoreKey>();
   static DatastoreKey getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDatastoreKey();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDatastoreKey();
     return _defaultInstance;
   }
 
@@ -1209,7 +1198,7 @@ class DatastoreKey extends GeneratedMessage {
 class _ReadonlyDatastoreKey extends DatastoreKey with ReadonlyMessageMixin {}
 
 class Key_PathElement extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Key_PathElement')
+  static final BuilderInfo _i = BuilderInfo('Key_PathElement')
     ..aOS(1, 'kind')
     ..aInt64(2, 'id')
     ..aOS(3, 'name')
@@ -1222,14 +1211,12 @@ class Key_PathElement extends GeneratedMessage {
   Key_PathElement.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Key_PathElement clone() => new Key_PathElement()..mergeFromMessage(this);
+  Key_PathElement clone() => Key_PathElement()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Key_PathElement create() => new Key_PathElement();
-  static PbList<Key_PathElement> createRepeated() =>
-      new PbList<Key_PathElement>();
+  static Key_PathElement create() => Key_PathElement();
+  static PbList<Key_PathElement> createRepeated() => PbList<Key_PathElement>();
   static Key_PathElement getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyKey_PathElement();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyKey_PathElement();
     return _defaultInstance;
   }
 
@@ -1267,7 +1254,7 @@ class _ReadonlyKey_PathElement extends Key_PathElement
     with ReadonlyMessageMixin {}
 
 class Key extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Key')
+  static final BuilderInfo _i = BuilderInfo('Key')
     ..a<PartitionId>(1, 'partitionId', PbFieldType.OM, PartitionId.getDefault,
         PartitionId.create)
     ..pp<Key_PathElement>(2, 'path', PbFieldType.PM, Key_PathElement.$checkItem,
@@ -1279,12 +1266,12 @@ class Key extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Key.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Key clone() => new Key()..mergeFromMessage(this);
+  Key clone() => Key()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Key create() => new Key();
-  static PbList<Key> createRepeated() => new PbList<Key>();
+  static Key create() => Key();
+  static PbList<Key> createRepeated() => PbList<Key>();
   static Key getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyKey();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyKey();
     return _defaultInstance;
   }
 
@@ -1307,7 +1294,7 @@ class Key extends GeneratedMessage {
 class _ReadonlyKey extends Key with ReadonlyMessageMixin {}
 
 class RecordKey extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecordKey')
+  static final BuilderInfo _i = BuilderInfo('RecordKey')
     ..a<DatastoreKey>(2, 'datastoreKey', PbFieldType.OM,
         DatastoreKey.getDefault, DatastoreKey.create)
     ..a<BigQueryKey>(3, 'bigQueryKey', PbFieldType.OM, BigQueryKey.getDefault,
@@ -1320,12 +1307,12 @@ class RecordKey extends GeneratedMessage {
       : super.fromBuffer(i, r);
   RecordKey.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecordKey clone() => new RecordKey()..mergeFromMessage(this);
+  RecordKey clone() => RecordKey()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RecordKey create() => new RecordKey();
-  static PbList<RecordKey> createRepeated() => new PbList<RecordKey>();
+  static RecordKey create() => RecordKey();
+  static PbList<RecordKey> createRepeated() => PbList<RecordKey>();
   static RecordKey getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRecordKey();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRecordKey();
     return _defaultInstance;
   }
 
@@ -1354,7 +1341,7 @@ class RecordKey extends GeneratedMessage {
 class _ReadonlyRecordKey extends RecordKey with ReadonlyMessageMixin {}
 
 class BigQueryTable extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BigQueryTable')
+  static final BuilderInfo _i = BuilderInfo('BigQueryTable')
     ..aOS(1, 'projectId')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'tableId')
@@ -1367,13 +1354,12 @@ class BigQueryTable extends GeneratedMessage {
   BigQueryTable.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BigQueryTable clone() => new BigQueryTable()..mergeFromMessage(this);
+  BigQueryTable clone() => BigQueryTable()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BigQueryTable create() => new BigQueryTable();
-  static PbList<BigQueryTable> createRepeated() => new PbList<BigQueryTable>();
+  static BigQueryTable create() => BigQueryTable();
+  static PbList<BigQueryTable> createRepeated() => PbList<BigQueryTable>();
   static BigQueryTable getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBigQueryTable();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBigQueryTable();
     return _defaultInstance;
   }
 
@@ -1410,7 +1396,7 @@ class BigQueryTable extends GeneratedMessage {
 class _ReadonlyBigQueryTable extends BigQueryTable with ReadonlyMessageMixin {}
 
 class EntityId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityId')
+  static final BuilderInfo _i = BuilderInfo('EntityId')
     ..a<FieldId>(
         1, 'field_1', PbFieldType.OM, FieldId.getDefault, FieldId.create)
     ..hasRequiredFields = false;
@@ -1421,12 +1407,12 @@ class EntityId extends GeneratedMessage {
       : super.fromBuffer(i, r);
   EntityId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityId clone() => new EntityId()..mergeFromMessage(this);
+  EntityId clone() => EntityId()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EntityId create() => new EntityId();
-  static PbList<EntityId> createRepeated() => new PbList<EntityId>();
+  static EntityId create() => EntityId();
+  static PbList<EntityId> createRepeated() => PbList<EntityId>();
   static EntityId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEntityId();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityId();
     return _defaultInstance;
   }
 

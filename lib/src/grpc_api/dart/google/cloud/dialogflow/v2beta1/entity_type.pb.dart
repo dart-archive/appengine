@@ -18,7 +18,7 @@ import 'entity_type.pbenum.dart';
 export 'entity_type.pbenum.dart';
 
 class EntityType_Entity extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityType_Entity')
+  static final BuilderInfo _i = BuilderInfo('EntityType_Entity')
     ..aOS(1, 'value')
     ..pPS(2, 'synonyms')
     ..hasRequiredFields = false;
@@ -30,14 +30,14 @@ class EntityType_Entity extends GeneratedMessage {
   EntityType_Entity.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityType_Entity clone() => new EntityType_Entity()..mergeFromMessage(this);
+  EntityType_Entity clone() => EntityType_Entity()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EntityType_Entity create() => new EntityType_Entity();
+  static EntityType_Entity create() => EntityType_Entity();
   static PbList<EntityType_Entity> createRepeated() =>
-      new PbList<EntityType_Entity>();
+      PbList<EntityType_Entity>();
   static EntityType_Entity getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntityType_Entity();
+      _defaultInstance = _ReadonlyEntityType_Entity();
     return _defaultInstance;
   }
 
@@ -61,7 +61,7 @@ class _ReadonlyEntityType_Entity extends EntityType_Entity
     with ReadonlyMessageMixin {}
 
 class EntityType extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityType')
+  static final BuilderInfo _i = BuilderInfo('EntityType')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..e<EntityType_Kind>(
@@ -88,12 +88,12 @@ class EntityType extends GeneratedMessage {
       : super.fromBuffer(i, r);
   EntityType.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityType clone() => new EntityType()..mergeFromMessage(this);
+  EntityType clone() => EntityType()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EntityType create() => new EntityType();
-  static PbList<EntityType> createRepeated() => new PbList<EntityType>();
+  static EntityType create() => EntityType();
+  static PbList<EntityType> createRepeated() => PbList<EntityType>();
   static EntityType getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEntityType();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityType();
     return _defaultInstance;
   }
 
@@ -140,7 +140,7 @@ class EntityType extends GeneratedMessage {
 class _ReadonlyEntityType extends EntityType with ReadonlyMessageMixin {}
 
 class ListEntityTypesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListEntityTypesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListEntityTypesRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'languageCode')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -155,14 +155,14 @@ class ListEntityTypesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListEntityTypesRequest clone() =>
-      new ListEntityTypesRequest()..mergeFromMessage(this);
+      ListEntityTypesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListEntityTypesRequest create() => new ListEntityTypesRequest();
+  static ListEntityTypesRequest create() => ListEntityTypesRequest();
   static PbList<ListEntityTypesRequest> createRepeated() =>
-      new PbList<ListEntityTypesRequest>();
+      PbList<ListEntityTypesRequest>();
   static ListEntityTypesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListEntityTypesRequest();
+      _defaultInstance = _ReadonlyListEntityTypesRequest();
     return _defaultInstance;
   }
 
@@ -209,7 +209,7 @@ class _ReadonlyListEntityTypesRequest extends ListEntityTypesRequest
     with ReadonlyMessageMixin {}
 
 class ListEntityTypesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListEntityTypesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListEntityTypesResponse')
     ..pp<EntityType>(1, 'entityTypes', PbFieldType.PM, EntityType.$checkItem,
         EntityType.create)
     ..aOS(2, 'nextPageToken')
@@ -223,14 +223,14 @@ class ListEntityTypesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListEntityTypesResponse clone() =>
-      new ListEntityTypesResponse()..mergeFromMessage(this);
+      ListEntityTypesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListEntityTypesResponse create() => new ListEntityTypesResponse();
+  static ListEntityTypesResponse create() => ListEntityTypesResponse();
   static PbList<ListEntityTypesResponse> createRepeated() =>
-      new PbList<ListEntityTypesResponse>();
+      PbList<ListEntityTypesResponse>();
   static ListEntityTypesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListEntityTypesResponse();
+      _defaultInstance = _ReadonlyListEntityTypesResponse();
     return _defaultInstance;
   }
 
@@ -255,7 +255,7 @@ class _ReadonlyListEntityTypesResponse extends ListEntityTypesResponse
     with ReadonlyMessageMixin {}
 
 class GetEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetEntityTypeRequest')
+  static final BuilderInfo _i = BuilderInfo('GetEntityTypeRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
@@ -268,14 +268,14 @@ class GetEntityTypeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetEntityTypeRequest clone() =>
-      new GetEntityTypeRequest()..mergeFromMessage(this);
+      GetEntityTypeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetEntityTypeRequest create() => new GetEntityTypeRequest();
+  static GetEntityTypeRequest create() => GetEntityTypeRequest();
   static PbList<GetEntityTypeRequest> createRepeated() =>
-      new PbList<GetEntityTypeRequest>();
+      PbList<GetEntityTypeRequest>();
   static GetEntityTypeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetEntityTypeRequest();
+      _defaultInstance = _ReadonlyGetEntityTypeRequest();
     return _defaultInstance;
   }
 
@@ -305,7 +305,7 @@ class _ReadonlyGetEntityTypeRequest extends GetEntityTypeRequest
     with ReadonlyMessageMixin {}
 
 class CreateEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateEntityTypeRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateEntityTypeRequest')
     ..aOS(1, 'parent')
     ..a<EntityType>(2, 'entityType', PbFieldType.OM, EntityType.getDefault,
         EntityType.create)
@@ -320,14 +320,14 @@ class CreateEntityTypeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateEntityTypeRequest clone() =>
-      new CreateEntityTypeRequest()..mergeFromMessage(this);
+      CreateEntityTypeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateEntityTypeRequest create() => new CreateEntityTypeRequest();
+  static CreateEntityTypeRequest create() => CreateEntityTypeRequest();
   static PbList<CreateEntityTypeRequest> createRepeated() =>
-      new PbList<CreateEntityTypeRequest>();
+      PbList<CreateEntityTypeRequest>();
   static CreateEntityTypeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateEntityTypeRequest();
+      _defaultInstance = _ReadonlyCreateEntityTypeRequest();
     return _defaultInstance;
   }
 
@@ -366,7 +366,7 @@ class _ReadonlyCreateEntityTypeRequest extends CreateEntityTypeRequest
     with ReadonlyMessageMixin {}
 
 class UpdateEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateEntityTypeRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateEntityTypeRequest')
     ..a<EntityType>(1, 'entityType', PbFieldType.OM, EntityType.getDefault,
         EntityType.create)
     ..aOS(2, 'languageCode')
@@ -386,14 +386,14 @@ class UpdateEntityTypeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateEntityTypeRequest clone() =>
-      new UpdateEntityTypeRequest()..mergeFromMessage(this);
+      UpdateEntityTypeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateEntityTypeRequest create() => new UpdateEntityTypeRequest();
+  static UpdateEntityTypeRequest create() => UpdateEntityTypeRequest();
   static PbList<UpdateEntityTypeRequest> createRepeated() =>
-      new PbList<UpdateEntityTypeRequest>();
+      PbList<UpdateEntityTypeRequest>();
   static UpdateEntityTypeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateEntityTypeRequest();
+      _defaultInstance = _ReadonlyUpdateEntityTypeRequest();
     return _defaultInstance;
   }
 
@@ -432,7 +432,7 @@ class _ReadonlyUpdateEntityTypeRequest extends UpdateEntityTypeRequest
     with ReadonlyMessageMixin {}
 
 class DeleteEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteEntityTypeRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteEntityTypeRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -444,14 +444,14 @@ class DeleteEntityTypeRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteEntityTypeRequest clone() =>
-      new DeleteEntityTypeRequest()..mergeFromMessage(this);
+      DeleteEntityTypeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteEntityTypeRequest create() => new DeleteEntityTypeRequest();
+  static DeleteEntityTypeRequest create() => DeleteEntityTypeRequest();
   static PbList<DeleteEntityTypeRequest> createRepeated() =>
-      new PbList<DeleteEntityTypeRequest>();
+      PbList<DeleteEntityTypeRequest>();
   static DeleteEntityTypeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteEntityTypeRequest();
+      _defaultInstance = _ReadonlyDeleteEntityTypeRequest();
     return _defaultInstance;
   }
 
@@ -474,7 +474,7 @@ class _ReadonlyDeleteEntityTypeRequest extends DeleteEntityTypeRequest
     with ReadonlyMessageMixin {}
 
 class BatchUpdateEntityTypesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdateEntityTypesRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchUpdateEntityTypesRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'entityTypeBatchUri')
     ..a<EntityTypeBatch>(3, 'entityTypeBatchInline', PbFieldType.OM,
@@ -496,15 +496,15 @@ class BatchUpdateEntityTypesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateEntityTypesRequest clone() =>
-      new BatchUpdateEntityTypesRequest()..mergeFromMessage(this);
+      BatchUpdateEntityTypesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BatchUpdateEntityTypesRequest create() =>
-      new BatchUpdateEntityTypesRequest();
+      BatchUpdateEntityTypesRequest();
   static PbList<BatchUpdateEntityTypesRequest> createRepeated() =>
-      new PbList<BatchUpdateEntityTypesRequest>();
+      PbList<BatchUpdateEntityTypesRequest>();
   static BatchUpdateEntityTypesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateEntityTypesRequest();
+      _defaultInstance = _ReadonlyBatchUpdateEntityTypesRequest();
     return _defaultInstance;
   }
 
@@ -559,11 +559,10 @@ class _ReadonlyBatchUpdateEntityTypesRequest
     extends BatchUpdateEntityTypesRequest with ReadonlyMessageMixin {}
 
 class BatchUpdateEntityTypesResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('BatchUpdateEntityTypesResponse')
-        ..pp<EntityType>(1, 'entityTypes', PbFieldType.PM,
-            EntityType.$checkItem, EntityType.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('BatchUpdateEntityTypesResponse')
+    ..pp<EntityType>(1, 'entityTypes', PbFieldType.PM, EntityType.$checkItem,
+        EntityType.create)
+    ..hasRequiredFields = false;
 
   BatchUpdateEntityTypesResponse() : super();
   BatchUpdateEntityTypesResponse.fromBuffer(List<int> i,
@@ -573,15 +572,15 @@ class BatchUpdateEntityTypesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateEntityTypesResponse clone() =>
-      new BatchUpdateEntityTypesResponse()..mergeFromMessage(this);
+      BatchUpdateEntityTypesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BatchUpdateEntityTypesResponse create() =>
-      new BatchUpdateEntityTypesResponse();
+      BatchUpdateEntityTypesResponse();
   static PbList<BatchUpdateEntityTypesResponse> createRepeated() =>
-      new PbList<BatchUpdateEntityTypesResponse>();
+      PbList<BatchUpdateEntityTypesResponse>();
   static BatchUpdateEntityTypesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateEntityTypesResponse();
+      _defaultInstance = _ReadonlyBatchUpdateEntityTypesResponse();
     return _defaultInstance;
   }
 
@@ -598,7 +597,7 @@ class _ReadonlyBatchUpdateEntityTypesResponse
     extends BatchUpdateEntityTypesResponse with ReadonlyMessageMixin {}
 
 class BatchDeleteEntityTypesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchDeleteEntityTypesRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchDeleteEntityTypesRequest')
     ..aOS(1, 'parent')
     ..pPS(2, 'entityTypeNames')
     ..hasRequiredFields = false;
@@ -611,15 +610,15 @@ class BatchDeleteEntityTypesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchDeleteEntityTypesRequest clone() =>
-      new BatchDeleteEntityTypesRequest()..mergeFromMessage(this);
+      BatchDeleteEntityTypesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static BatchDeleteEntityTypesRequest create() =>
-      new BatchDeleteEntityTypesRequest();
+      BatchDeleteEntityTypesRequest();
   static PbList<BatchDeleteEntityTypesRequest> createRepeated() =>
-      new PbList<BatchDeleteEntityTypesRequest>();
+      PbList<BatchDeleteEntityTypesRequest>();
   static BatchDeleteEntityTypesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchDeleteEntityTypesRequest();
+      _defaultInstance = _ReadonlyBatchDeleteEntityTypesRequest();
     return _defaultInstance;
   }
 
@@ -644,7 +643,7 @@ class _ReadonlyBatchDeleteEntityTypesRequest
     extends BatchDeleteEntityTypesRequest with ReadonlyMessageMixin {}
 
 class BatchCreateEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchCreateEntitiesRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchCreateEntitiesRequest')
     ..aOS(1, 'parent')
     ..pp<EntityType_Entity>(2, 'entities', PbFieldType.PM,
         EntityType_Entity.$checkItem, EntityType_Entity.create)
@@ -659,15 +658,14 @@ class BatchCreateEntitiesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchCreateEntitiesRequest clone() =>
-      new BatchCreateEntitiesRequest()..mergeFromMessage(this);
+      BatchCreateEntitiesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchCreateEntitiesRequest create() =>
-      new BatchCreateEntitiesRequest();
+  static BatchCreateEntitiesRequest create() => BatchCreateEntitiesRequest();
   static PbList<BatchCreateEntitiesRequest> createRepeated() =>
-      new PbList<BatchCreateEntitiesRequest>();
+      PbList<BatchCreateEntitiesRequest>();
   static BatchCreateEntitiesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchCreateEntitiesRequest();
+      _defaultInstance = _ReadonlyBatchCreateEntitiesRequest();
     return _defaultInstance;
   }
 
@@ -700,7 +698,7 @@ class _ReadonlyBatchCreateEntitiesRequest extends BatchCreateEntitiesRequest
     with ReadonlyMessageMixin {}
 
 class BatchUpdateEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdateEntitiesRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchUpdateEntitiesRequest')
     ..aOS(1, 'parent')
     ..pp<EntityType_Entity>(2, 'entities', PbFieldType.PM,
         EntityType_Entity.$checkItem, EntityType_Entity.create)
@@ -721,15 +719,14 @@ class BatchUpdateEntitiesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateEntitiesRequest clone() =>
-      new BatchUpdateEntitiesRequest()..mergeFromMessage(this);
+      BatchUpdateEntitiesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchUpdateEntitiesRequest create() =>
-      new BatchUpdateEntitiesRequest();
+  static BatchUpdateEntitiesRequest create() => BatchUpdateEntitiesRequest();
   static PbList<BatchUpdateEntitiesRequest> createRepeated() =>
-      new PbList<BatchUpdateEntitiesRequest>();
+      PbList<BatchUpdateEntitiesRequest>();
   static BatchUpdateEntitiesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateEntitiesRequest();
+      _defaultInstance = _ReadonlyBatchUpdateEntitiesRequest();
     return _defaultInstance;
   }
 
@@ -770,7 +767,7 @@ class _ReadonlyBatchUpdateEntitiesRequest extends BatchUpdateEntitiesRequest
     with ReadonlyMessageMixin {}
 
 class BatchDeleteEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchDeleteEntitiesRequest')
+  static final BuilderInfo _i = BuilderInfo('BatchDeleteEntitiesRequest')
     ..aOS(1, 'parent')
     ..pPS(2, 'entityValues')
     ..aOS(3, 'languageCode')
@@ -784,15 +781,14 @@ class BatchDeleteEntitiesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchDeleteEntitiesRequest clone() =>
-      new BatchDeleteEntitiesRequest()..mergeFromMessage(this);
+      BatchDeleteEntitiesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BatchDeleteEntitiesRequest create() =>
-      new BatchDeleteEntitiesRequest();
+  static BatchDeleteEntitiesRequest create() => BatchDeleteEntitiesRequest();
   static PbList<BatchDeleteEntitiesRequest> createRepeated() =>
-      new PbList<BatchDeleteEntitiesRequest>();
+      PbList<BatchDeleteEntitiesRequest>();
   static BatchDeleteEntitiesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchDeleteEntitiesRequest();
+      _defaultInstance = _ReadonlyBatchDeleteEntitiesRequest();
     return _defaultInstance;
   }
 
@@ -825,7 +821,7 @@ class _ReadonlyBatchDeleteEntitiesRequest extends BatchDeleteEntitiesRequest
     with ReadonlyMessageMixin {}
 
 class EntityTypeBatch extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityTypeBatch')
+  static final BuilderInfo _i = BuilderInfo('EntityTypeBatch')
     ..pp<EntityType>(1, 'entityTypes', PbFieldType.PM, EntityType.$checkItem,
         EntityType.create)
     ..hasRequiredFields = false;
@@ -837,14 +833,12 @@ class EntityTypeBatch extends GeneratedMessage {
   EntityTypeBatch.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityTypeBatch clone() => new EntityTypeBatch()..mergeFromMessage(this);
+  EntityTypeBatch clone() => EntityTypeBatch()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EntityTypeBatch create() => new EntityTypeBatch();
-  static PbList<EntityTypeBatch> createRepeated() =>
-      new PbList<EntityTypeBatch>();
+  static EntityTypeBatch create() => EntityTypeBatch();
+  static PbList<EntityTypeBatch> createRepeated() => PbList<EntityTypeBatch>();
   static EntityTypeBatch getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntityTypeBatch();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityTypeBatch();
     return _defaultInstance;
   }
 
@@ -865,70 +859,70 @@ class EntityTypesApi {
 
   Future<ListEntityTypesResponse> listEntityTypes(
       ClientContext ctx, ListEntityTypesRequest request) {
-    var emptyResponse = new ListEntityTypesResponse();
+    var emptyResponse = ListEntityTypesResponse();
     return _client.invoke<ListEntityTypesResponse>(
         ctx, 'EntityTypes', 'ListEntityTypes', request, emptyResponse);
   }
 
   Future<EntityType> getEntityType(
       ClientContext ctx, GetEntityTypeRequest request) {
-    var emptyResponse = new EntityType();
+    var emptyResponse = EntityType();
     return _client.invoke<EntityType>(
         ctx, 'EntityTypes', 'GetEntityType', request, emptyResponse);
   }
 
   Future<EntityType> createEntityType(
       ClientContext ctx, CreateEntityTypeRequest request) {
-    var emptyResponse = new EntityType();
+    var emptyResponse = EntityType();
     return _client.invoke<EntityType>(
         ctx, 'EntityTypes', 'CreateEntityType', request, emptyResponse);
   }
 
   Future<EntityType> updateEntityType(
       ClientContext ctx, UpdateEntityTypeRequest request) {
-    var emptyResponse = new EntityType();
+    var emptyResponse = EntityType();
     return _client.invoke<EntityType>(
         ctx, 'EntityTypes', 'UpdateEntityType', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteEntityType(
       ClientContext ctx, DeleteEntityTypeRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'EntityTypes', 'DeleteEntityType', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> batchUpdateEntityTypes(
       ClientContext ctx, BatchUpdateEntityTypesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'EntityTypes', 'BatchUpdateEntityTypes', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> batchDeleteEntityTypes(
       ClientContext ctx, BatchDeleteEntityTypesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'EntityTypes', 'BatchDeleteEntityTypes', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> batchCreateEntities(
       ClientContext ctx, BatchCreateEntitiesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'EntityTypes', 'BatchCreateEntities', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> batchUpdateEntities(
       ClientContext ctx, BatchUpdateEntitiesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'EntityTypes', 'BatchUpdateEntities', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> batchDeleteEntities(
       ClientContext ctx, BatchDeleteEntitiesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'EntityTypes', 'BatchDeleteEntities', request, emptyResponse);
   }

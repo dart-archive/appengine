@@ -32,21 +32,21 @@ abstract class BigtableClusterServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListZones':
-        return new ListZonesRequest();
+        return ListZonesRequest();
       case 'GetCluster':
-        return new GetClusterRequest();
+        return GetClusterRequest();
       case 'ListClusters':
-        return new ListClustersRequest();
+        return ListClustersRequest();
       case 'CreateCluster':
-        return new CreateClusterRequest();
+        return CreateClusterRequest();
       case 'UpdateCluster':
-        return new Cluster();
+        return Cluster();
       case 'DeleteCluster':
-        return new DeleteClusterRequest();
+        return DeleteClusterRequest();
       case 'UndeleteCluster':
-        return new UndeleteClusterRequest();
+        return UndeleteClusterRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -68,7 +68,7 @@ abstract class BigtableClusterServiceBase extends GeneratedService {
       case 'UndeleteCluster':
         return this.undeleteCluster(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

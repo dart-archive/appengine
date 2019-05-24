@@ -15,7 +15,7 @@ import '../../type/latlng.pb.dart' as $google$type;
 import '../../protobuf/struct.pbenum.dart' as $google$protobuf;
 
 class Document_FieldsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Document_FieldsEntry')
+  static final BuilderInfo _i = BuilderInfo('Document_FieldsEntry')
     ..aOS(1, 'key')
     ..a<Value>(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
     ..hasRequiredFields = false;
@@ -28,14 +28,14 @@ class Document_FieldsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Document_FieldsEntry clone() =>
-      new Document_FieldsEntry()..mergeFromMessage(this);
+      Document_FieldsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Document_FieldsEntry create() => new Document_FieldsEntry();
+  static Document_FieldsEntry create() => Document_FieldsEntry();
   static PbList<Document_FieldsEntry> createRepeated() =>
-      new PbList<Document_FieldsEntry>();
+      PbList<Document_FieldsEntry>();
   static Document_FieldsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDocument_FieldsEntry();
+      _defaultInstance = _ReadonlyDocument_FieldsEntry();
     return _defaultInstance;
   }
 
@@ -65,7 +65,7 @@ class _ReadonlyDocument_FieldsEntry extends Document_FieldsEntry
     with ReadonlyMessageMixin {}
 
 class Document extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Document')
+  static final BuilderInfo _i = BuilderInfo('Document')
     ..aOS(1, 'name')
     ..pp<Document_FieldsEntry>(2, 'fields', PbFieldType.PM,
         Document_FieldsEntry.$checkItem, Document_FieldsEntry.create)
@@ -89,12 +89,12 @@ class Document extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Document.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Document clone() => new Document()..mergeFromMessage(this);
+  Document clone() => Document()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Document create() => new Document();
-  static PbList<Document> createRepeated() => new PbList<Document>();
+  static Document create() => Document();
+  static PbList<Document> createRepeated() => PbList<Document>();
   static Document getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDocument();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDocument();
     return _defaultInstance;
   }
 
@@ -133,7 +133,7 @@ class Document extends GeneratedMessage {
 class _ReadonlyDocument extends Document with ReadonlyMessageMixin {}
 
 class Value extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Value')
+  static final BuilderInfo _i = BuilderInfo('Value')
     ..aOB(1, 'booleanValue')
     ..aInt64(2, 'integerValue')
     ..a<double>(3, 'doubleValue', PbFieldType.OD)
@@ -166,12 +166,12 @@ class Value extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Value clone() => new Value()..mergeFromMessage(this);
+  Value clone() => Value()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Value create() => new Value();
-  static PbList<Value> createRepeated() => new PbList<Value>();
+  static Value create() => Value();
+  static PbList<Value> createRepeated() => PbList<Value>();
   static Value getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyValue();
     return _defaultInstance;
   }
 
@@ -272,7 +272,7 @@ class Value extends GeneratedMessage {
 class _ReadonlyValue extends Value with ReadonlyMessageMixin {}
 
 class ArrayValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ArrayValue')
+  static final BuilderInfo _i = BuilderInfo('ArrayValue')
     ..pp<Value>(1, 'values', PbFieldType.PM, Value.$checkItem, Value.create)
     ..hasRequiredFields = false;
 
@@ -282,12 +282,12 @@ class ArrayValue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   ArrayValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ArrayValue clone() => new ArrayValue()..mergeFromMessage(this);
+  ArrayValue clone() => ArrayValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ArrayValue create() => new ArrayValue();
-  static PbList<ArrayValue> createRepeated() => new PbList<ArrayValue>();
+  static ArrayValue create() => ArrayValue();
+  static PbList<ArrayValue> createRepeated() => PbList<ArrayValue>();
   static ArrayValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyArrayValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyArrayValue();
     return _defaultInstance;
   }
 
@@ -302,7 +302,7 @@ class ArrayValue extends GeneratedMessage {
 class _ReadonlyArrayValue extends ArrayValue with ReadonlyMessageMixin {}
 
 class MapValue_FieldsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MapValue_FieldsEntry')
+  static final BuilderInfo _i = BuilderInfo('MapValue_FieldsEntry')
     ..aOS(1, 'key')
     ..a<Value>(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
     ..hasRequiredFields = false;
@@ -315,14 +315,14 @@ class MapValue_FieldsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MapValue_FieldsEntry clone() =>
-      new MapValue_FieldsEntry()..mergeFromMessage(this);
+      MapValue_FieldsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MapValue_FieldsEntry create() => new MapValue_FieldsEntry();
+  static MapValue_FieldsEntry create() => MapValue_FieldsEntry();
   static PbList<MapValue_FieldsEntry> createRepeated() =>
-      new PbList<MapValue_FieldsEntry>();
+      PbList<MapValue_FieldsEntry>();
   static MapValue_FieldsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMapValue_FieldsEntry();
+      _defaultInstance = _ReadonlyMapValue_FieldsEntry();
     return _defaultInstance;
   }
 
@@ -352,7 +352,7 @@ class _ReadonlyMapValue_FieldsEntry extends MapValue_FieldsEntry
     with ReadonlyMessageMixin {}
 
 class MapValue extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MapValue')
+  static final BuilderInfo _i = BuilderInfo('MapValue')
     ..pp<MapValue_FieldsEntry>(1, 'fields', PbFieldType.PM,
         MapValue_FieldsEntry.$checkItem, MapValue_FieldsEntry.create)
     ..hasRequiredFields = false;
@@ -363,12 +363,12 @@ class MapValue extends GeneratedMessage {
       : super.fromBuffer(i, r);
   MapValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MapValue clone() => new MapValue()..mergeFromMessage(this);
+  MapValue clone() => MapValue()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static MapValue create() => new MapValue();
-  static PbList<MapValue> createRepeated() => new PbList<MapValue>();
+  static MapValue create() => MapValue();
+  static PbList<MapValue> createRepeated() => PbList<MapValue>();
   static MapValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMapValue();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyMapValue();
     return _defaultInstance;
   }
 

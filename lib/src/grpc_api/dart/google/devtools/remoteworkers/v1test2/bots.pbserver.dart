@@ -24,13 +24,13 @@ abstract class BotsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateBotSession':
-        return new CreateBotSessionRequest();
+        return CreateBotSessionRequest();
       case 'UpdateBotSession':
-        return new UpdateBotSessionRequest();
+        return UpdateBotSessionRequest();
       case 'PostBotEventTemp':
-        return new PostBotEventTempRequest();
+        return PostBotEventTempRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -44,7 +44,7 @@ abstract class BotsServiceBase extends GeneratedService {
       case 'PostBotEventTemp':
         return this.postBotEventTemp(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

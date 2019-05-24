@@ -9,16 +9,16 @@ import 'package:protobuf/protobuf.dart';
 
 class OperationMetadata_OperationType extends ProtobufEnum {
   static const OperationMetadata_OperationType OPERATION_TYPE_UNSPECIFIED =
-      const OperationMetadata_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
+      OperationMetadata_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
   static const OperationMetadata_OperationType CREATE_VERSION =
-      const OperationMetadata_OperationType._(1, 'CREATE_VERSION');
+      OperationMetadata_OperationType._(1, 'CREATE_VERSION');
   static const OperationMetadata_OperationType DELETE_VERSION =
-      const OperationMetadata_OperationType._(2, 'DELETE_VERSION');
+      OperationMetadata_OperationType._(2, 'DELETE_VERSION');
   static const OperationMetadata_OperationType DELETE_MODEL =
-      const OperationMetadata_OperationType._(3, 'DELETE_MODEL');
+      OperationMetadata_OperationType._(3, 'DELETE_MODEL');
 
   static const List<OperationMetadata_OperationType> values =
-      const <OperationMetadata_OperationType>[
+      <OperationMetadata_OperationType>[
     OPERATION_TYPE_UNSPECIFIED,
     CREATE_VERSION,
     DELETE_VERSION,

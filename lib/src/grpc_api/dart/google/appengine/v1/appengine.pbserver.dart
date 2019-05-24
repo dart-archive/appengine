@@ -29,15 +29,15 @@ abstract class InstancesServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListInstances':
-        return new ListInstancesRequest();
+        return ListInstancesRequest();
       case 'GetInstance':
-        return new GetInstanceRequest();
+        return GetInstanceRequest();
       case 'DeleteInstance':
-        return new DeleteInstanceRequest();
+        return DeleteInstanceRequest();
       case 'DebugInstance':
-        return new DebugInstanceRequest();
+        return DebugInstanceRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -53,7 +53,7 @@ abstract class InstancesServiceBase extends GeneratedService {
       case 'DebugInstance':
         return this.debugInstance(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -75,17 +75,17 @@ abstract class VersionsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListVersions':
-        return new ListVersionsRequest();
+        return ListVersionsRequest();
       case 'GetVersion':
-        return new GetVersionRequest();
+        return GetVersionRequest();
       case 'CreateVersion':
-        return new CreateVersionRequest();
+        return CreateVersionRequest();
       case 'UpdateVersion':
-        return new UpdateVersionRequest();
+        return UpdateVersionRequest();
       case 'DeleteVersion':
-        return new DeleteVersionRequest();
+        return DeleteVersionRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -103,7 +103,7 @@ abstract class VersionsServiceBase extends GeneratedService {
       case 'DeleteVersion':
         return this.deleteVersion(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -123,15 +123,15 @@ abstract class ServicesServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListServices':
-        return new ListServicesRequest();
+        return ListServicesRequest();
       case 'GetService':
-        return new GetServiceRequest();
+        return GetServiceRequest();
       case 'UpdateService':
-        return new UpdateServiceRequest();
+        return UpdateServiceRequest();
       case 'DeleteService':
-        return new DeleteServiceRequest();
+        return DeleteServiceRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -147,7 +147,7 @@ abstract class ServicesServiceBase extends GeneratedService {
       case 'DeleteService':
         return this.deleteService(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -164,11 +164,11 @@ abstract class ApplicationsServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'GetApplication':
-        return new GetApplicationRequest();
+        return GetApplicationRequest();
       case 'RepairApplication':
-        return new RepairApplicationRequest();
+        return RepairApplicationRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -180,7 +180,7 @@ abstract class ApplicationsServiceBase extends GeneratedService {
       case 'RepairApplication':
         return this.repairApplication(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

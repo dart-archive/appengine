@@ -33,29 +33,29 @@ abstract class LibraryServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreateShelf':
-        return new CreateShelfRequest();
+        return CreateShelfRequest();
       case 'GetShelf':
-        return new GetShelfRequest();
+        return GetShelfRequest();
       case 'ListShelves':
-        return new ListShelvesRequest();
+        return ListShelvesRequest();
       case 'DeleteShelf':
-        return new DeleteShelfRequest();
+        return DeleteShelfRequest();
       case 'MergeShelves':
-        return new MergeShelvesRequest();
+        return MergeShelvesRequest();
       case 'CreateBook':
-        return new CreateBookRequest();
+        return CreateBookRequest();
       case 'GetBook':
-        return new GetBookRequest();
+        return GetBookRequest();
       case 'ListBooks':
-        return new ListBooksRequest();
+        return ListBooksRequest();
       case 'DeleteBook':
-        return new DeleteBookRequest();
+        return DeleteBookRequest();
       case 'UpdateBook':
-        return new UpdateBookRequest();
+        return UpdateBookRequest();
       case 'MoveBook':
-        return new MoveBookRequest();
+        return MoveBookRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -85,7 +85,7 @@ abstract class LibraryServiceBase extends GeneratedService {
       case 'MoveBook':
         return this.moveBook(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

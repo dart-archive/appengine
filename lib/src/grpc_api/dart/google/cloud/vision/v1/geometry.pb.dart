@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Vertex extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Vertex')
+  static final BuilderInfo _i = BuilderInfo('Vertex')
     ..a<int>(1, 'x', PbFieldType.O3)
     ..a<int>(2, 'y', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -20,12 +20,12 @@ class Vertex extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Vertex.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Vertex clone() => new Vertex()..mergeFromMessage(this);
+  Vertex clone() => Vertex()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Vertex create() => new Vertex();
-  static PbList<Vertex> createRepeated() => new PbList<Vertex>();
+  static Vertex create() => Vertex();
+  static PbList<Vertex> createRepeated() => PbList<Vertex>();
   static Vertex getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVertex();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVertex();
     return _defaultInstance;
   }
 
@@ -54,7 +54,7 @@ class Vertex extends GeneratedMessage {
 class _ReadonlyVertex extends Vertex with ReadonlyMessageMixin {}
 
 class NormalizedVertex extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('NormalizedVertex')
+  static final BuilderInfo _i = BuilderInfo('NormalizedVertex')
     ..a<double>(1, 'x', PbFieldType.OF)
     ..a<double>(2, 'y', PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -66,14 +66,14 @@ class NormalizedVertex extends GeneratedMessage {
   NormalizedVertex.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  NormalizedVertex clone() => new NormalizedVertex()..mergeFromMessage(this);
+  NormalizedVertex clone() => NormalizedVertex()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static NormalizedVertex create() => new NormalizedVertex();
+  static NormalizedVertex create() => NormalizedVertex();
   static PbList<NormalizedVertex> createRepeated() =>
-      new PbList<NormalizedVertex>();
+      PbList<NormalizedVertex>();
   static NormalizedVertex getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyNormalizedVertex();
+      _defaultInstance = _ReadonlyNormalizedVertex();
     return _defaultInstance;
   }
 
@@ -103,7 +103,7 @@ class _ReadonlyNormalizedVertex extends NormalizedVertex
     with ReadonlyMessageMixin {}
 
 class BoundingPoly extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BoundingPoly')
+  static final BuilderInfo _i = BuilderInfo('BoundingPoly')
     ..pp<Vertex>(
         1, 'vertices', PbFieldType.PM, Vertex.$checkItem, Vertex.create)
     ..pp<NormalizedVertex>(2, 'normalizedVertices', PbFieldType.PM,
@@ -117,13 +117,12 @@ class BoundingPoly extends GeneratedMessage {
   BoundingPoly.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BoundingPoly clone() => new BoundingPoly()..mergeFromMessage(this);
+  BoundingPoly clone() => BoundingPoly()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BoundingPoly create() => new BoundingPoly();
-  static PbList<BoundingPoly> createRepeated() => new PbList<BoundingPoly>();
+  static BoundingPoly create() => BoundingPoly();
+  static PbList<BoundingPoly> createRepeated() => PbList<BoundingPoly>();
   static BoundingPoly getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBoundingPoly();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBoundingPoly();
     return _defaultInstance;
   }
 
@@ -140,7 +139,7 @@ class BoundingPoly extends GeneratedMessage {
 class _ReadonlyBoundingPoly extends BoundingPoly with ReadonlyMessageMixin {}
 
 class Position extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Position')
+  static final BuilderInfo _i = BuilderInfo('Position')
     ..a<double>(1, 'x', PbFieldType.OF)
     ..a<double>(2, 'y', PbFieldType.OF)
     ..a<double>(3, 'z', PbFieldType.OF)
@@ -152,12 +151,12 @@ class Position extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Position.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Position clone() => new Position()..mergeFromMessage(this);
+  Position clone() => Position()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Position create() => new Position();
-  static PbList<Position> createRepeated() => new PbList<Position>();
+  static Position create() => Position();
+  static PbList<Position> createRepeated() => PbList<Position>();
   static Position getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPosition();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPosition();
     return _defaultInstance;
   }
 

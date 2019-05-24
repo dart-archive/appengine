@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Backend extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Backend')
+  static final BuilderInfo _i = BuilderInfo('Backend')
     ..pp<BackendRule>(
         1, 'rules', PbFieldType.PM, BackendRule.$checkItem, BackendRule.create)
     ..hasRequiredFields = false;
@@ -20,12 +20,12 @@ class Backend extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Backend.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Backend clone() => new Backend()..mergeFromMessage(this);
+  Backend clone() => Backend()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Backend create() => new Backend();
-  static PbList<Backend> createRepeated() => new PbList<Backend>();
+  static Backend create() => Backend();
+  static PbList<Backend> createRepeated() => PbList<Backend>();
   static Backend getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBackend();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBackend();
     return _defaultInstance;
   }
 
@@ -40,7 +40,7 @@ class Backend extends GeneratedMessage {
 class _ReadonlyBackend extends Backend with ReadonlyMessageMixin {}
 
 class BackendRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BackendRule')
+  static final BuilderInfo _i = BuilderInfo('BackendRule')
     ..aOS(1, 'selector')
     ..aOS(2, 'address')
     ..a<double>(3, 'deadline', PbFieldType.OD)
@@ -53,12 +53,12 @@ class BackendRule extends GeneratedMessage {
   BackendRule.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BackendRule clone() => new BackendRule()..mergeFromMessage(this);
+  BackendRule clone() => BackendRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BackendRule create() => new BackendRule();
-  static PbList<BackendRule> createRepeated() => new PbList<BackendRule>();
+  static BackendRule create() => BackendRule();
+  static PbList<BackendRule> createRepeated() => PbList<BackendRule>();
   static BackendRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBackendRule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBackendRule();
     return _defaultInstance;
   }
 

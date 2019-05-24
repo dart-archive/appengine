@@ -21,13 +21,13 @@ abstract class ByteStreamServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'Read':
-        return new ReadRequest();
+        return ReadRequest();
       case 'Write':
-        return new WriteRequest();
+        return WriteRequest();
       case 'QueryWriteStatus':
-        return new QueryWriteStatusRequest();
+        return QueryWriteStatusRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -41,7 +41,7 @@ abstract class ByteStreamServiceBase extends GeneratedService {
       case 'QueryWriteStatus':
         return this.queryWriteStatus(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

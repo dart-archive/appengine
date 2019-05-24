@@ -20,7 +20,7 @@ import 'spanner_database_admin.pbenum.dart';
 export 'spanner_database_admin.pbenum.dart';
 
 class Database extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Database')
+  static final BuilderInfo _i = BuilderInfo('Database')
     ..aOS(1, 'name')
     ..e<Database_State>(
         2,
@@ -37,12 +37,12 @@ class Database extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Database.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Database clone() => new Database()..mergeFromMessage(this);
+  Database clone() => Database()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Database create() => new Database();
-  static PbList<Database> createRepeated() => new PbList<Database>();
+  static Database create() => Database();
+  static PbList<Database> createRepeated() => PbList<Database>();
   static Database getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDatabase();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDatabase();
     return _defaultInstance;
   }
 
@@ -71,7 +71,7 @@ class Database extends GeneratedMessage {
 class _ReadonlyDatabase extends Database with ReadonlyMessageMixin {}
 
 class ListDatabasesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDatabasesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListDatabasesRequest')
     ..aOS(1, 'parent')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
     ..aOS(4, 'pageToken')
@@ -85,14 +85,14 @@ class ListDatabasesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDatabasesRequest clone() =>
-      new ListDatabasesRequest()..mergeFromMessage(this);
+      ListDatabasesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDatabasesRequest create() => new ListDatabasesRequest();
+  static ListDatabasesRequest create() => ListDatabasesRequest();
   static PbList<ListDatabasesRequest> createRepeated() =>
-      new PbList<ListDatabasesRequest>();
+      PbList<ListDatabasesRequest>();
   static ListDatabasesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDatabasesRequest();
+      _defaultInstance = _ReadonlyListDatabasesRequest();
     return _defaultInstance;
   }
 
@@ -130,7 +130,7 @@ class _ReadonlyListDatabasesRequest extends ListDatabasesRequest
     with ReadonlyMessageMixin {}
 
 class ListDatabasesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDatabasesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListDatabasesResponse')
     ..pp<Database>(
         1, 'databases', PbFieldType.PM, Database.$checkItem, Database.create)
     ..aOS(2, 'nextPageToken')
@@ -144,14 +144,14 @@ class ListDatabasesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDatabasesResponse clone() =>
-      new ListDatabasesResponse()..mergeFromMessage(this);
+      ListDatabasesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDatabasesResponse create() => new ListDatabasesResponse();
+  static ListDatabasesResponse create() => ListDatabasesResponse();
   static PbList<ListDatabasesResponse> createRepeated() =>
-      new PbList<ListDatabasesResponse>();
+      PbList<ListDatabasesResponse>();
   static ListDatabasesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDatabasesResponse();
+      _defaultInstance = _ReadonlyListDatabasesResponse();
     return _defaultInstance;
   }
 
@@ -176,7 +176,7 @@ class _ReadonlyListDatabasesResponse extends ListDatabasesResponse
     with ReadonlyMessageMixin {}
 
 class CreateDatabaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateDatabaseRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateDatabaseRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'createStatement')
     ..pPS(3, 'extraStatements')
@@ -190,14 +190,14 @@ class CreateDatabaseRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateDatabaseRequest clone() =>
-      new CreateDatabaseRequest()..mergeFromMessage(this);
+      CreateDatabaseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateDatabaseRequest create() => new CreateDatabaseRequest();
+  static CreateDatabaseRequest create() => CreateDatabaseRequest();
   static PbList<CreateDatabaseRequest> createRepeated() =>
-      new PbList<CreateDatabaseRequest>();
+      PbList<CreateDatabaseRequest>();
   static CreateDatabaseRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateDatabaseRequest();
+      _defaultInstance = _ReadonlyCreateDatabaseRequest();
     return _defaultInstance;
   }
 
@@ -230,7 +230,7 @@ class _ReadonlyCreateDatabaseRequest extends CreateDatabaseRequest
     with ReadonlyMessageMixin {}
 
 class CreateDatabaseMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateDatabaseMetadata')
+  static final BuilderInfo _i = BuilderInfo('CreateDatabaseMetadata')
     ..aOS(1, 'database')
     ..hasRequiredFields = false;
 
@@ -242,14 +242,14 @@ class CreateDatabaseMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateDatabaseMetadata clone() =>
-      new CreateDatabaseMetadata()..mergeFromMessage(this);
+      CreateDatabaseMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateDatabaseMetadata create() => new CreateDatabaseMetadata();
+  static CreateDatabaseMetadata create() => CreateDatabaseMetadata();
   static PbList<CreateDatabaseMetadata> createRepeated() =>
-      new PbList<CreateDatabaseMetadata>();
+      PbList<CreateDatabaseMetadata>();
   static CreateDatabaseMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateDatabaseMetadata();
+      _defaultInstance = _ReadonlyCreateDatabaseMetadata();
     return _defaultInstance;
   }
 
@@ -272,7 +272,7 @@ class _ReadonlyCreateDatabaseMetadata extends CreateDatabaseMetadata
     with ReadonlyMessageMixin {}
 
 class GetDatabaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDatabaseRequest')
+  static final BuilderInfo _i = BuilderInfo('GetDatabaseRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -283,15 +283,14 @@ class GetDatabaseRequest extends GeneratedMessage {
   GetDatabaseRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetDatabaseRequest clone() =>
-      new GetDatabaseRequest()..mergeFromMessage(this);
+  GetDatabaseRequest clone() => GetDatabaseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetDatabaseRequest create() => new GetDatabaseRequest();
+  static GetDatabaseRequest create() => GetDatabaseRequest();
   static PbList<GetDatabaseRequest> createRepeated() =>
-      new PbList<GetDatabaseRequest>();
+      PbList<GetDatabaseRequest>();
   static GetDatabaseRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDatabaseRequest();
+      _defaultInstance = _ReadonlyGetDatabaseRequest();
     return _defaultInstance;
   }
 
@@ -313,7 +312,7 @@ class _ReadonlyGetDatabaseRequest extends GetDatabaseRequest
     with ReadonlyMessageMixin {}
 
 class UpdateDatabaseDdlRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateDatabaseDdlRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateDatabaseDdlRequest')
     ..aOS(1, 'database')
     ..pPS(2, 'statements')
     ..aOS(3, 'operationId')
@@ -327,14 +326,14 @@ class UpdateDatabaseDdlRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateDatabaseDdlRequest clone() =>
-      new UpdateDatabaseDdlRequest()..mergeFromMessage(this);
+      UpdateDatabaseDdlRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateDatabaseDdlRequest create() => new UpdateDatabaseDdlRequest();
+  static UpdateDatabaseDdlRequest create() => UpdateDatabaseDdlRequest();
   static PbList<UpdateDatabaseDdlRequest> createRepeated() =>
-      new PbList<UpdateDatabaseDdlRequest>();
+      PbList<UpdateDatabaseDdlRequest>();
   static UpdateDatabaseDdlRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateDatabaseDdlRequest();
+      _defaultInstance = _ReadonlyUpdateDatabaseDdlRequest();
     return _defaultInstance;
   }
 
@@ -367,7 +366,7 @@ class _ReadonlyUpdateDatabaseDdlRequest extends UpdateDatabaseDdlRequest
     with ReadonlyMessageMixin {}
 
 class UpdateDatabaseDdlMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateDatabaseDdlMetadata')
+  static final BuilderInfo _i = BuilderInfo('UpdateDatabaseDdlMetadata')
     ..aOS(1, 'database')
     ..pPS(2, 'statements')
     ..pp<$google$protobuf.Timestamp>(
@@ -386,14 +385,14 @@ class UpdateDatabaseDdlMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateDatabaseDdlMetadata clone() =>
-      new UpdateDatabaseDdlMetadata()..mergeFromMessage(this);
+      UpdateDatabaseDdlMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateDatabaseDdlMetadata create() => new UpdateDatabaseDdlMetadata();
+  static UpdateDatabaseDdlMetadata create() => UpdateDatabaseDdlMetadata();
   static PbList<UpdateDatabaseDdlMetadata> createRepeated() =>
-      new PbList<UpdateDatabaseDdlMetadata>();
+      PbList<UpdateDatabaseDdlMetadata>();
   static UpdateDatabaseDdlMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateDatabaseDdlMetadata();
+      _defaultInstance = _ReadonlyUpdateDatabaseDdlMetadata();
     return _defaultInstance;
   }
 
@@ -420,7 +419,7 @@ class _ReadonlyUpdateDatabaseDdlMetadata extends UpdateDatabaseDdlMetadata
     with ReadonlyMessageMixin {}
 
 class DropDatabaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DropDatabaseRequest')
+  static final BuilderInfo _i = BuilderInfo('DropDatabaseRequest')
     ..aOS(1, 'database')
     ..hasRequiredFields = false;
 
@@ -431,15 +430,14 @@ class DropDatabaseRequest extends GeneratedMessage {
   DropDatabaseRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DropDatabaseRequest clone() =>
-      new DropDatabaseRequest()..mergeFromMessage(this);
+  DropDatabaseRequest clone() => DropDatabaseRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DropDatabaseRequest create() => new DropDatabaseRequest();
+  static DropDatabaseRequest create() => DropDatabaseRequest();
   static PbList<DropDatabaseRequest> createRepeated() =>
-      new PbList<DropDatabaseRequest>();
+      PbList<DropDatabaseRequest>();
   static DropDatabaseRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDropDatabaseRequest();
+      _defaultInstance = _ReadonlyDropDatabaseRequest();
     return _defaultInstance;
   }
 
@@ -461,7 +459,7 @@ class _ReadonlyDropDatabaseRequest extends DropDatabaseRequest
     with ReadonlyMessageMixin {}
 
 class GetDatabaseDdlRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDatabaseDdlRequest')
+  static final BuilderInfo _i = BuilderInfo('GetDatabaseDdlRequest')
     ..aOS(1, 'database')
     ..hasRequiredFields = false;
 
@@ -473,14 +471,14 @@ class GetDatabaseDdlRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetDatabaseDdlRequest clone() =>
-      new GetDatabaseDdlRequest()..mergeFromMessage(this);
+      GetDatabaseDdlRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetDatabaseDdlRequest create() => new GetDatabaseDdlRequest();
+  static GetDatabaseDdlRequest create() => GetDatabaseDdlRequest();
   static PbList<GetDatabaseDdlRequest> createRepeated() =>
-      new PbList<GetDatabaseDdlRequest>();
+      PbList<GetDatabaseDdlRequest>();
   static GetDatabaseDdlRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDatabaseDdlRequest();
+      _defaultInstance = _ReadonlyGetDatabaseDdlRequest();
     return _defaultInstance;
   }
 
@@ -503,7 +501,7 @@ class _ReadonlyGetDatabaseDdlRequest extends GetDatabaseDdlRequest
     with ReadonlyMessageMixin {}
 
 class GetDatabaseDdlResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDatabaseDdlResponse')
+  static final BuilderInfo _i = BuilderInfo('GetDatabaseDdlResponse')
     ..pPS(1, 'statements')
     ..hasRequiredFields = false;
 
@@ -515,14 +513,14 @@ class GetDatabaseDdlResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetDatabaseDdlResponse clone() =>
-      new GetDatabaseDdlResponse()..mergeFromMessage(this);
+      GetDatabaseDdlResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetDatabaseDdlResponse create() => new GetDatabaseDdlResponse();
+  static GetDatabaseDdlResponse create() => GetDatabaseDdlResponse();
   static PbList<GetDatabaseDdlResponse> createRepeated() =>
-      new PbList<GetDatabaseDdlResponse>();
+      PbList<GetDatabaseDdlResponse>();
   static GetDatabaseDdlResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDatabaseDdlResponse();
+      _defaultInstance = _ReadonlyGetDatabaseDdlResponse();
     return _defaultInstance;
   }
 
@@ -544,62 +542,62 @@ class DatabaseAdminApi {
 
   Future<ListDatabasesResponse> listDatabases(
       ClientContext ctx, ListDatabasesRequest request) {
-    var emptyResponse = new ListDatabasesResponse();
+    var emptyResponse = ListDatabasesResponse();
     return _client.invoke<ListDatabasesResponse>(
         ctx, 'DatabaseAdmin', 'ListDatabases', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createDatabase(
       ClientContext ctx, CreateDatabaseRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'DatabaseAdmin', 'CreateDatabase', request, emptyResponse);
   }
 
   Future<Database> getDatabase(ClientContext ctx, GetDatabaseRequest request) {
-    var emptyResponse = new Database();
+    var emptyResponse = Database();
     return _client.invoke<Database>(
         ctx, 'DatabaseAdmin', 'GetDatabase', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> updateDatabaseDdl(
       ClientContext ctx, UpdateDatabaseDdlRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'DatabaseAdmin', 'UpdateDatabaseDdl', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> dropDatabase(
       ClientContext ctx, DropDatabaseRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'DatabaseAdmin', 'DropDatabase', request, emptyResponse);
   }
 
   Future<GetDatabaseDdlResponse> getDatabaseDdl(
       ClientContext ctx, GetDatabaseDdlRequest request) {
-    var emptyResponse = new GetDatabaseDdlResponse();
+    var emptyResponse = GetDatabaseDdlResponse();
     return _client.invoke<GetDatabaseDdlResponse>(
         ctx, 'DatabaseAdmin', 'GetDatabaseDdl', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> setIamPolicy(
       ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'DatabaseAdmin', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> getIamPolicy(
       ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'DatabaseAdmin', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
     return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
         ctx, 'DatabaseAdmin', 'TestIamPermissions', request, emptyResponse);
   }

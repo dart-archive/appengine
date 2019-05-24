@@ -5,28 +5,28 @@
 
 import '../../../protobuf/empty.pbjson.dart' as $google$protobuf;
 
-const Book$json = const {
+const Book$json = {
   '1': 'Book',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'author', '3': 2, '4': 1, '5': 9, '10': 'author'},
-    const {'1': 'title', '3': 3, '4': 1, '5': 9, '10': 'title'},
-    const {'1': 'read', '3': 4, '4': 1, '5': 8, '10': 'read'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'author', '3': 2, '4': 1, '5': 9, '10': 'author'},
+    {'1': 'title', '3': 3, '4': 1, '5': 9, '10': 'title'},
+    {'1': 'read', '3': 4, '4': 1, '5': 8, '10': 'read'},
   ],
 };
 
-const Shelf$json = const {
+const Shelf$json = {
   '1': 'Shelf',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'theme', '3': 2, '4': 1, '5': 9, '10': 'theme'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'theme', '3': 2, '4': 1, '5': 9, '10': 'theme'},
   ],
 };
 
-const CreateShelfRequest$json = const {
+const CreateShelfRequest$json = {
   '1': 'CreateShelfRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'shelf',
       '3': 1,
       '4': 1,
@@ -37,25 +37,25 @@ const CreateShelfRequest$json = const {
   ],
 };
 
-const GetShelfRequest$json = const {
+const GetShelfRequest$json = {
   '1': 'GetShelfRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListShelvesRequest$json = const {
+const ListShelvesRequest$json = {
   '1': 'ListShelvesRequest',
-  '2': const [
-    const {'1': 'page_size', '3': 1, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'page_size', '3': 1, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListShelvesResponse$json = const {
+const ListShelvesResponse$json = {
   '1': 'ListShelvesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'shelves',
       '3': 1,
       '4': 3,
@@ -63,42 +63,30 @@ const ListShelvesResponse$json = const {
       '6': '.google.example.library.v1.Shelf',
       '10': 'shelves'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const DeleteShelfRequest$json = const {
+const DeleteShelfRequest$json = {
   '1': 'DeleteShelfRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const MergeShelvesRequest$json = const {
+const MergeShelvesRequest$json = {
   '1': 'MergeShelvesRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
-      '1': 'other_shelf_name',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'otherShelfName'
-    },
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'other_shelf_name', '3': 2, '4': 1, '5': 9, '10': 'otherShelfName'},
   ],
 };
 
-const CreateBookRequest$json = const {
+const CreateBookRequest$json = {
   '1': 'CreateBookRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'book',
       '3': 2,
       '4': 1,
@@ -109,26 +97,26 @@ const CreateBookRequest$json = const {
   ],
 };
 
-const GetBookRequest$json = const {
+const GetBookRequest$json = {
   '1': 'GetBookRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListBooksRequest$json = const {
+const ListBooksRequest$json = {
   '1': 'ListBooksRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListBooksResponse$json = const {
+const ListBooksResponse$json = {
   '1': 'ListBooksResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'books',
       '3': 1,
       '4': 3,
@@ -136,21 +124,15 @@ const ListBooksResponse$json = const {
       '6': '.google.example.library.v1.Book',
       '10': 'books'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const UpdateBookRequest$json = const {
+const UpdateBookRequest$json = {
   '1': 'UpdateBookRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'book',
       '3': 2,
       '4': 1,
@@ -161,100 +143,94 @@ const UpdateBookRequest$json = const {
   ],
 };
 
-const DeleteBookRequest$json = const {
+const DeleteBookRequest$json = {
   '1': 'DeleteBookRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const MoveBookRequest$json = const {
+const MoveBookRequest$json = {
   '1': 'MoveBookRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
-      '1': 'other_shelf_name',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'otherShelfName'
-    },
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'other_shelf_name', '3': 2, '4': 1, '5': 9, '10': 'otherShelfName'},
   ],
 };
 
-const LibraryService$json = const {
+const LibraryService$json = {
   '1': 'LibraryService',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateShelf',
       '2': '.google.example.library.v1.CreateShelfRequest',
       '3': '.google.example.library.v1.Shelf',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetShelf',
       '2': '.google.example.library.v1.GetShelfRequest',
       '3': '.google.example.library.v1.Shelf',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListShelves',
       '2': '.google.example.library.v1.ListShelvesRequest',
       '3': '.google.example.library.v1.ListShelvesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteShelf',
       '2': '.google.example.library.v1.DeleteShelfRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'MergeShelves',
       '2': '.google.example.library.v1.MergeShelvesRequest',
       '3': '.google.example.library.v1.Shelf',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateBook',
       '2': '.google.example.library.v1.CreateBookRequest',
       '3': '.google.example.library.v1.Book',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetBook',
       '2': '.google.example.library.v1.GetBookRequest',
       '3': '.google.example.library.v1.Book',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListBooks',
       '2': '.google.example.library.v1.ListBooksRequest',
       '3': '.google.example.library.v1.ListBooksResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteBook',
       '2': '.google.example.library.v1.DeleteBookRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateBook',
       '2': '.google.example.library.v1.UpdateBookRequest',
       '3': '.google.example.library.v1.Book',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'MoveBook',
       '2': '.google.example.library.v1.MoveBookRequest',
       '3': '.google.example.library.v1.Book',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const LibraryService$messageJson = const {
+const LibraryService$messageJson = {
   '.google.example.library.v1.CreateShelfRequest': CreateShelfRequest$json,
   '.google.example.library.v1.Shelf': Shelf$json,
   '.google.example.library.v1.GetShelfRequest': GetShelfRequest$json,

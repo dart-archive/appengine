@@ -12,7 +12,7 @@ import 'readgroup.pb.dart';
 import '../../protobuf/struct.pb.dart' as $google$protobuf;
 
 class ReadGroupSet_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroupSet_InfoEntry')
+  static final BuilderInfo _i = BuilderInfo('ReadGroupSet_InfoEntry')
     ..aOS(1, 'key')
     ..a<$google$protobuf.ListValue>(
         2,
@@ -30,14 +30,14 @@ class ReadGroupSet_InfoEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReadGroupSet_InfoEntry clone() =>
-      new ReadGroupSet_InfoEntry()..mergeFromMessage(this);
+      ReadGroupSet_InfoEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadGroupSet_InfoEntry create() => new ReadGroupSet_InfoEntry();
+  static ReadGroupSet_InfoEntry create() => ReadGroupSet_InfoEntry();
   static PbList<ReadGroupSet_InfoEntry> createRepeated() =>
-      new PbList<ReadGroupSet_InfoEntry>();
+      PbList<ReadGroupSet_InfoEntry>();
   static ReadGroupSet_InfoEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadGroupSet_InfoEntry();
+      _defaultInstance = _ReadonlyReadGroupSet_InfoEntry();
     return _defaultInstance;
   }
 
@@ -68,7 +68,7 @@ class _ReadonlyReadGroupSet_InfoEntry extends ReadGroupSet_InfoEntry
     with ReadonlyMessageMixin {}
 
 class ReadGroupSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroupSet')
+  static final BuilderInfo _i = BuilderInfo('ReadGroupSet')
     ..aOS(1, 'id')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'referenceSetId')
@@ -87,13 +87,12 @@ class ReadGroupSet extends GeneratedMessage {
   ReadGroupSet.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadGroupSet clone() => new ReadGroupSet()..mergeFromMessage(this);
+  ReadGroupSet clone() => ReadGroupSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadGroupSet create() => new ReadGroupSet();
-  static PbList<ReadGroupSet> createRepeated() => new PbList<ReadGroupSet>();
+  static ReadGroupSet create() => ReadGroupSet();
+  static PbList<ReadGroupSet> createRepeated() => PbList<ReadGroupSet>();
   static ReadGroupSet getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadGroupSet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReadGroupSet();
     return _defaultInstance;
   }
 

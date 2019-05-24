@@ -20,7 +20,7 @@ import 'iam.pbenum.dart';
 export 'iam.pbenum.dart';
 
 class ServiceAccount extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ServiceAccount')
+  static final BuilderInfo _i = BuilderInfo('ServiceAccount')
     ..aOS(1, 'name')
     ..aOS(2, 'projectId')
     ..aOS(4, 'uniqueId')
@@ -37,14 +37,12 @@ class ServiceAccount extends GeneratedMessage {
   ServiceAccount.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ServiceAccount clone() => new ServiceAccount()..mergeFromMessage(this);
+  ServiceAccount clone() => ServiceAccount()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ServiceAccount create() => new ServiceAccount();
-  static PbList<ServiceAccount> createRepeated() =>
-      new PbList<ServiceAccount>();
+  static ServiceAccount create() => ServiceAccount();
+  static PbList<ServiceAccount> createRepeated() => PbList<ServiceAccount>();
   static ServiceAccount getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyServiceAccount();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyServiceAccount();
     return _defaultInstance;
   }
 
@@ -114,7 +112,7 @@ class _ReadonlyServiceAccount extends ServiceAccount with ReadonlyMessageMixin {
 }
 
 class CreateServiceAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateServiceAccountRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateServiceAccountRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'accountId')
     ..a<ServiceAccount>(3, 'serviceAccount', PbFieldType.OM,
@@ -129,15 +127,14 @@ class CreateServiceAccountRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateServiceAccountRequest clone() =>
-      new CreateServiceAccountRequest()..mergeFromMessage(this);
+      CreateServiceAccountRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateServiceAccountRequest create() =>
-      new CreateServiceAccountRequest();
+  static CreateServiceAccountRequest create() => CreateServiceAccountRequest();
   static PbList<CreateServiceAccountRequest> createRepeated() =>
-      new PbList<CreateServiceAccountRequest>();
+      PbList<CreateServiceAccountRequest>();
   static CreateServiceAccountRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateServiceAccountRequest();
+      _defaultInstance = _ReadonlyCreateServiceAccountRequest();
     return _defaultInstance;
   }
 
@@ -176,7 +173,7 @@ class _ReadonlyCreateServiceAccountRequest extends CreateServiceAccountRequest
     with ReadonlyMessageMixin {}
 
 class ListServiceAccountsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServiceAccountsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListServiceAccountsRequest')
     ..aOS(1, 'name')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -190,15 +187,14 @@ class ListServiceAccountsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServiceAccountsRequest clone() =>
-      new ListServiceAccountsRequest()..mergeFromMessage(this);
+      ListServiceAccountsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServiceAccountsRequest create() =>
-      new ListServiceAccountsRequest();
+  static ListServiceAccountsRequest create() => ListServiceAccountsRequest();
   static PbList<ListServiceAccountsRequest> createRepeated() =>
-      new PbList<ListServiceAccountsRequest>();
+      PbList<ListServiceAccountsRequest>();
   static ListServiceAccountsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServiceAccountsRequest();
+      _defaultInstance = _ReadonlyListServiceAccountsRequest();
     return _defaultInstance;
   }
 
@@ -237,7 +233,7 @@ class _ReadonlyListServiceAccountsRequest extends ListServiceAccountsRequest
     with ReadonlyMessageMixin {}
 
 class ListServiceAccountsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServiceAccountsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListServiceAccountsResponse')
     ..pp<ServiceAccount>(1, 'accounts', PbFieldType.PM,
         ServiceAccount.$checkItem, ServiceAccount.create)
     ..aOS(2, 'nextPageToken')
@@ -251,15 +247,14 @@ class ListServiceAccountsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServiceAccountsResponse clone() =>
-      new ListServiceAccountsResponse()..mergeFromMessage(this);
+      ListServiceAccountsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListServiceAccountsResponse create() =>
-      new ListServiceAccountsResponse();
+  static ListServiceAccountsResponse create() => ListServiceAccountsResponse();
   static PbList<ListServiceAccountsResponse> createRepeated() =>
-      new PbList<ListServiceAccountsResponse>();
+      PbList<ListServiceAccountsResponse>();
   static ListServiceAccountsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServiceAccountsResponse();
+      _defaultInstance = _ReadonlyListServiceAccountsResponse();
     return _defaultInstance;
   }
 
@@ -284,7 +279,7 @@ class _ReadonlyListServiceAccountsResponse extends ListServiceAccountsResponse
     with ReadonlyMessageMixin {}
 
 class GetServiceAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetServiceAccountRequest')
+  static final BuilderInfo _i = BuilderInfo('GetServiceAccountRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -296,14 +291,14 @@ class GetServiceAccountRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetServiceAccountRequest clone() =>
-      new GetServiceAccountRequest()..mergeFromMessage(this);
+      GetServiceAccountRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetServiceAccountRequest create() => new GetServiceAccountRequest();
+  static GetServiceAccountRequest create() => GetServiceAccountRequest();
   static PbList<GetServiceAccountRequest> createRepeated() =>
-      new PbList<GetServiceAccountRequest>();
+      PbList<GetServiceAccountRequest>();
   static GetServiceAccountRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetServiceAccountRequest();
+      _defaultInstance = _ReadonlyGetServiceAccountRequest();
     return _defaultInstance;
   }
 
@@ -326,7 +321,7 @@ class _ReadonlyGetServiceAccountRequest extends GetServiceAccountRequest
     with ReadonlyMessageMixin {}
 
 class DeleteServiceAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteServiceAccountRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteServiceAccountRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -338,15 +333,14 @@ class DeleteServiceAccountRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteServiceAccountRequest clone() =>
-      new DeleteServiceAccountRequest()..mergeFromMessage(this);
+      DeleteServiceAccountRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteServiceAccountRequest create() =>
-      new DeleteServiceAccountRequest();
+  static DeleteServiceAccountRequest create() => DeleteServiceAccountRequest();
   static PbList<DeleteServiceAccountRequest> createRepeated() =>
-      new PbList<DeleteServiceAccountRequest>();
+      PbList<DeleteServiceAccountRequest>();
   static DeleteServiceAccountRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteServiceAccountRequest();
+      _defaultInstance = _ReadonlyDeleteServiceAccountRequest();
     return _defaultInstance;
   }
 
@@ -369,7 +363,7 @@ class _ReadonlyDeleteServiceAccountRequest extends DeleteServiceAccountRequest
     with ReadonlyMessageMixin {}
 
 class ListServiceAccountKeysRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListServiceAccountKeysRequest')
+  static final BuilderInfo _i = BuilderInfo('ListServiceAccountKeysRequest')
     ..aOS(1, 'name')
     ..pp<ListServiceAccountKeysRequest_KeyType>(
         2,
@@ -389,15 +383,15 @@ class ListServiceAccountKeysRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServiceAccountKeysRequest clone() =>
-      new ListServiceAccountKeysRequest()..mergeFromMessage(this);
+      ListServiceAccountKeysRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListServiceAccountKeysRequest create() =>
-      new ListServiceAccountKeysRequest();
+      ListServiceAccountKeysRequest();
   static PbList<ListServiceAccountKeysRequest> createRepeated() =>
-      new PbList<ListServiceAccountKeysRequest>();
+      PbList<ListServiceAccountKeysRequest>();
   static ListServiceAccountKeysRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServiceAccountKeysRequest();
+      _defaultInstance = _ReadonlyListServiceAccountKeysRequest();
     return _defaultInstance;
   }
 
@@ -422,11 +416,10 @@ class _ReadonlyListServiceAccountKeysRequest
     extends ListServiceAccountKeysRequest with ReadonlyMessageMixin {}
 
 class ListServiceAccountKeysResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ListServiceAccountKeysResponse')
-        ..pp<ServiceAccountKey>(1, 'keys', PbFieldType.PM,
-            ServiceAccountKey.$checkItem, ServiceAccountKey.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ListServiceAccountKeysResponse')
+    ..pp<ServiceAccountKey>(1, 'keys', PbFieldType.PM,
+        ServiceAccountKey.$checkItem, ServiceAccountKey.create)
+    ..hasRequiredFields = false;
 
   ListServiceAccountKeysResponse() : super();
   ListServiceAccountKeysResponse.fromBuffer(List<int> i,
@@ -436,15 +429,15 @@ class ListServiceAccountKeysResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListServiceAccountKeysResponse clone() =>
-      new ListServiceAccountKeysResponse()..mergeFromMessage(this);
+      ListServiceAccountKeysResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ListServiceAccountKeysResponse create() =>
-      new ListServiceAccountKeysResponse();
+      ListServiceAccountKeysResponse();
   static PbList<ListServiceAccountKeysResponse> createRepeated() =>
-      new PbList<ListServiceAccountKeysResponse>();
+      PbList<ListServiceAccountKeysResponse>();
   static ListServiceAccountKeysResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListServiceAccountKeysResponse();
+      _defaultInstance = _ReadonlyListServiceAccountKeysResponse();
     return _defaultInstance;
   }
 
@@ -461,7 +454,7 @@ class _ReadonlyListServiceAccountKeysResponse
     extends ListServiceAccountKeysResponse with ReadonlyMessageMixin {}
 
 class GetServiceAccountKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetServiceAccountKeyRequest')
+  static final BuilderInfo _i = BuilderInfo('GetServiceAccountKeyRequest')
     ..aOS(1, 'name')
     ..e<ServiceAccountPublicKeyType>(
         2,
@@ -480,15 +473,14 @@ class GetServiceAccountKeyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetServiceAccountKeyRequest clone() =>
-      new GetServiceAccountKeyRequest()..mergeFromMessage(this);
+      GetServiceAccountKeyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetServiceAccountKeyRequest create() =>
-      new GetServiceAccountKeyRequest();
+  static GetServiceAccountKeyRequest create() => GetServiceAccountKeyRequest();
   static PbList<GetServiceAccountKeyRequest> createRepeated() =>
-      new PbList<GetServiceAccountKeyRequest>();
+      PbList<GetServiceAccountKeyRequest>();
   static GetServiceAccountKeyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetServiceAccountKeyRequest();
+      _defaultInstance = _ReadonlyGetServiceAccountKeyRequest();
     return _defaultInstance;
   }
 
@@ -519,7 +511,7 @@ class _ReadonlyGetServiceAccountKeyRequest extends GetServiceAccountKeyRequest
     with ReadonlyMessageMixin {}
 
 class ServiceAccountKey extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ServiceAccountKey')
+  static final BuilderInfo _i = BuilderInfo('ServiceAccountKey')
     ..aOS(1, 'name')
     ..e<ServiceAccountPrivateKeyType>(
         2,
@@ -558,14 +550,14 @@ class ServiceAccountKey extends GeneratedMessage {
   ServiceAccountKey.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ServiceAccountKey clone() => new ServiceAccountKey()..mergeFromMessage(this);
+  ServiceAccountKey clone() => ServiceAccountKey()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ServiceAccountKey create() => new ServiceAccountKey();
+  static ServiceAccountKey create() => ServiceAccountKey();
   static PbList<ServiceAccountKey> createRepeated() =>
-      new PbList<ServiceAccountKey>();
+      PbList<ServiceAccountKey>();
   static ServiceAccountKey getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyServiceAccountKey();
+      _defaultInstance = _ReadonlyServiceAccountKey();
     return _defaultInstance;
   }
 
@@ -635,24 +627,23 @@ class _ReadonlyServiceAccountKey extends ServiceAccountKey
     with ReadonlyMessageMixin {}
 
 class CreateServiceAccountKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('CreateServiceAccountKeyRequest')
-        ..aOS(1, 'name')
-        ..e<ServiceAccountPrivateKeyType>(
-            2,
-            'privateKeyType',
-            PbFieldType.OE,
-            ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED,
-            ServiceAccountPrivateKeyType.valueOf,
-            ServiceAccountPrivateKeyType.values)
-        ..e<ServiceAccountKeyAlgorithm>(
-            3,
-            'keyAlgorithm',
-            PbFieldType.OE,
-            ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED,
-            ServiceAccountKeyAlgorithm.valueOf,
-            ServiceAccountKeyAlgorithm.values)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('CreateServiceAccountKeyRequest')
+    ..aOS(1, 'name')
+    ..e<ServiceAccountPrivateKeyType>(
+        2,
+        'privateKeyType',
+        PbFieldType.OE,
+        ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED,
+        ServiceAccountPrivateKeyType.valueOf,
+        ServiceAccountPrivateKeyType.values)
+    ..e<ServiceAccountKeyAlgorithm>(
+        3,
+        'keyAlgorithm',
+        PbFieldType.OE,
+        ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED,
+        ServiceAccountKeyAlgorithm.valueOf,
+        ServiceAccountKeyAlgorithm.values)
+    ..hasRequiredFields = false;
 
   CreateServiceAccountKeyRequest() : super();
   CreateServiceAccountKeyRequest.fromBuffer(List<int> i,
@@ -662,15 +653,15 @@ class CreateServiceAccountKeyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateServiceAccountKeyRequest clone() =>
-      new CreateServiceAccountKeyRequest()..mergeFromMessage(this);
+      CreateServiceAccountKeyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateServiceAccountKeyRequest create() =>
-      new CreateServiceAccountKeyRequest();
+      CreateServiceAccountKeyRequest();
   static PbList<CreateServiceAccountKeyRequest> createRepeated() =>
-      new PbList<CreateServiceAccountKeyRequest>();
+      PbList<CreateServiceAccountKeyRequest>();
   static CreateServiceAccountKeyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateServiceAccountKeyRequest();
+      _defaultInstance = _ReadonlyCreateServiceAccountKeyRequest();
     return _defaultInstance;
   }
 
@@ -709,10 +700,9 @@ class _ReadonlyCreateServiceAccountKeyRequest
     extends CreateServiceAccountKeyRequest with ReadonlyMessageMixin {}
 
 class DeleteServiceAccountKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('DeleteServiceAccountKeyRequest')
-        ..aOS(1, 'name')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('DeleteServiceAccountKeyRequest')
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
 
   DeleteServiceAccountKeyRequest() : super();
   DeleteServiceAccountKeyRequest.fromBuffer(List<int> i,
@@ -722,15 +712,15 @@ class DeleteServiceAccountKeyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteServiceAccountKeyRequest clone() =>
-      new DeleteServiceAccountKeyRequest()..mergeFromMessage(this);
+      DeleteServiceAccountKeyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static DeleteServiceAccountKeyRequest create() =>
-      new DeleteServiceAccountKeyRequest();
+      DeleteServiceAccountKeyRequest();
   static PbList<DeleteServiceAccountKeyRequest> createRepeated() =>
-      new PbList<DeleteServiceAccountKeyRequest>();
+      PbList<DeleteServiceAccountKeyRequest>();
   static DeleteServiceAccountKeyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteServiceAccountKeyRequest();
+      _defaultInstance = _ReadonlyDeleteServiceAccountKeyRequest();
     return _defaultInstance;
   }
 
@@ -753,7 +743,7 @@ class _ReadonlyDeleteServiceAccountKeyRequest
     extends DeleteServiceAccountKeyRequest with ReadonlyMessageMixin {}
 
 class SignBlobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SignBlobRequest')
+  static final BuilderInfo _i = BuilderInfo('SignBlobRequest')
     ..aOS(1, 'name')
     ..a<List<int>>(2, 'bytesToSign', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -765,14 +755,12 @@ class SignBlobRequest extends GeneratedMessage {
   SignBlobRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SignBlobRequest clone() => new SignBlobRequest()..mergeFromMessage(this);
+  SignBlobRequest clone() => SignBlobRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SignBlobRequest create() => new SignBlobRequest();
-  static PbList<SignBlobRequest> createRepeated() =>
-      new PbList<SignBlobRequest>();
+  static SignBlobRequest create() => SignBlobRequest();
+  static PbList<SignBlobRequest> createRepeated() => PbList<SignBlobRequest>();
   static SignBlobRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySignBlobRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySignBlobRequest();
     return _defaultInstance;
   }
 
@@ -802,7 +790,7 @@ class _ReadonlySignBlobRequest extends SignBlobRequest
     with ReadonlyMessageMixin {}
 
 class SignBlobResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SignBlobResponse')
+  static final BuilderInfo _i = BuilderInfo('SignBlobResponse')
     ..aOS(1, 'keyId')
     ..a<List<int>>(2, 'signature', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -814,14 +802,14 @@ class SignBlobResponse extends GeneratedMessage {
   SignBlobResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SignBlobResponse clone() => new SignBlobResponse()..mergeFromMessage(this);
+  SignBlobResponse clone() => SignBlobResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SignBlobResponse create() => new SignBlobResponse();
+  static SignBlobResponse create() => SignBlobResponse();
   static PbList<SignBlobResponse> createRepeated() =>
-      new PbList<SignBlobResponse>();
+      PbList<SignBlobResponse>();
   static SignBlobResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySignBlobResponse();
+      _defaultInstance = _ReadonlySignBlobResponse();
     return _defaultInstance;
   }
 
@@ -851,7 +839,7 @@ class _ReadonlySignBlobResponse extends SignBlobResponse
     with ReadonlyMessageMixin {}
 
 class SignJwtRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SignJwtRequest')
+  static final BuilderInfo _i = BuilderInfo('SignJwtRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'payload')
     ..hasRequiredFields = false;
@@ -863,14 +851,12 @@ class SignJwtRequest extends GeneratedMessage {
   SignJwtRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SignJwtRequest clone() => new SignJwtRequest()..mergeFromMessage(this);
+  SignJwtRequest clone() => SignJwtRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SignJwtRequest create() => new SignJwtRequest();
-  static PbList<SignJwtRequest> createRepeated() =>
-      new PbList<SignJwtRequest>();
+  static SignJwtRequest create() => SignJwtRequest();
+  static PbList<SignJwtRequest> createRepeated() => PbList<SignJwtRequest>();
   static SignJwtRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySignJwtRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySignJwtRequest();
     return _defaultInstance;
   }
 
@@ -900,7 +886,7 @@ class _ReadonlySignJwtRequest extends SignJwtRequest with ReadonlyMessageMixin {
 }
 
 class SignJwtResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SignJwtResponse')
+  static final BuilderInfo _i = BuilderInfo('SignJwtResponse')
     ..aOS(1, 'keyId')
     ..aOS(2, 'signedJwt')
     ..hasRequiredFields = false;
@@ -912,14 +898,12 @@ class SignJwtResponse extends GeneratedMessage {
   SignJwtResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SignJwtResponse clone() => new SignJwtResponse()..mergeFromMessage(this);
+  SignJwtResponse clone() => SignJwtResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SignJwtResponse create() => new SignJwtResponse();
-  static PbList<SignJwtResponse> createRepeated() =>
-      new PbList<SignJwtResponse>();
+  static SignJwtResponse create() => SignJwtResponse();
+  static PbList<SignJwtResponse> createRepeated() => PbList<SignJwtResponse>();
   static SignJwtResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySignJwtResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySignJwtResponse();
     return _defaultInstance;
   }
 
@@ -949,7 +933,7 @@ class _ReadonlySignJwtResponse extends SignJwtResponse
     with ReadonlyMessageMixin {}
 
 class Role extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Role')
+  static final BuilderInfo _i = BuilderInfo('Role')
     ..aOS(1, 'name')
     ..aOS(2, 'title')
     ..aOS(3, 'description')
@@ -970,12 +954,12 @@ class Role extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Role.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Role clone() => new Role()..mergeFromMessage(this);
+  Role clone() => Role()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Role create() => new Role();
-  static PbList<Role> createRepeated() => new PbList<Role>();
+  static Role create() => Role();
+  static PbList<Role> createRepeated() => PbList<Role>();
   static Role getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRole();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRole();
     return _defaultInstance;
   }
 
@@ -1038,7 +1022,7 @@ class Role extends GeneratedMessage {
 class _ReadonlyRole extends Role with ReadonlyMessageMixin {}
 
 class QueryGrantableRolesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryGrantableRolesRequest')
+  static final BuilderInfo _i = BuilderInfo('QueryGrantableRolesRequest')
     ..aOS(1, 'fullResourceName')
     ..e<RoleView>(2, 'view', PbFieldType.OE, RoleView.BASIC, RoleView.valueOf,
         RoleView.values)
@@ -1054,15 +1038,14 @@ class QueryGrantableRolesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QueryGrantableRolesRequest clone() =>
-      new QueryGrantableRolesRequest()..mergeFromMessage(this);
+      QueryGrantableRolesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryGrantableRolesRequest create() =>
-      new QueryGrantableRolesRequest();
+  static QueryGrantableRolesRequest create() => QueryGrantableRolesRequest();
   static PbList<QueryGrantableRolesRequest> createRepeated() =>
-      new PbList<QueryGrantableRolesRequest>();
+      PbList<QueryGrantableRolesRequest>();
   static QueryGrantableRolesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryGrantableRolesRequest();
+      _defaultInstance = _ReadonlyQueryGrantableRolesRequest();
     return _defaultInstance;
   }
 
@@ -1109,7 +1092,7 @@ class _ReadonlyQueryGrantableRolesRequest extends QueryGrantableRolesRequest
     with ReadonlyMessageMixin {}
 
 class QueryGrantableRolesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QueryGrantableRolesResponse')
+  static final BuilderInfo _i = BuilderInfo('QueryGrantableRolesResponse')
     ..pp<Role>(1, 'roles', PbFieldType.PM, Role.$checkItem, Role.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -1122,15 +1105,14 @@ class QueryGrantableRolesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QueryGrantableRolesResponse clone() =>
-      new QueryGrantableRolesResponse()..mergeFromMessage(this);
+      QueryGrantableRolesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static QueryGrantableRolesResponse create() =>
-      new QueryGrantableRolesResponse();
+  static QueryGrantableRolesResponse create() => QueryGrantableRolesResponse();
   static PbList<QueryGrantableRolesResponse> createRepeated() =>
-      new PbList<QueryGrantableRolesResponse>();
+      PbList<QueryGrantableRolesResponse>();
   static QueryGrantableRolesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryGrantableRolesResponse();
+      _defaultInstance = _ReadonlyQueryGrantableRolesResponse();
     return _defaultInstance;
   }
 
@@ -1155,7 +1137,7 @@ class _ReadonlyQueryGrantableRolesResponse extends QueryGrantableRolesResponse
     with ReadonlyMessageMixin {}
 
 class ListRolesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListRolesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListRolesRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1171,14 +1153,14 @@ class ListRolesRequest extends GeneratedMessage {
   ListRolesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListRolesRequest clone() => new ListRolesRequest()..mergeFromMessage(this);
+  ListRolesRequest clone() => ListRolesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListRolesRequest create() => new ListRolesRequest();
+  static ListRolesRequest create() => ListRolesRequest();
   static PbList<ListRolesRequest> createRepeated() =>
-      new PbList<ListRolesRequest>();
+      PbList<ListRolesRequest>();
   static ListRolesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListRolesRequest();
+      _defaultInstance = _ReadonlyListRolesRequest();
     return _defaultInstance;
   }
 
@@ -1232,7 +1214,7 @@ class _ReadonlyListRolesRequest extends ListRolesRequest
     with ReadonlyMessageMixin {}
 
 class ListRolesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListRolesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListRolesResponse')
     ..pp<Role>(1, 'roles', PbFieldType.PM, Role.$checkItem, Role.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -1244,14 +1226,14 @@ class ListRolesResponse extends GeneratedMessage {
   ListRolesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListRolesResponse clone() => new ListRolesResponse()..mergeFromMessage(this);
+  ListRolesResponse clone() => ListRolesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListRolesResponse create() => new ListRolesResponse();
+  static ListRolesResponse create() => ListRolesResponse();
   static PbList<ListRolesResponse> createRepeated() =>
-      new PbList<ListRolesResponse>();
+      PbList<ListRolesResponse>();
   static ListRolesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListRolesResponse();
+      _defaultInstance = _ReadonlyListRolesResponse();
     return _defaultInstance;
   }
 
@@ -1275,7 +1257,7 @@ class _ReadonlyListRolesResponse extends ListRolesResponse
     with ReadonlyMessageMixin {}
 
 class GetRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetRoleRequest')
+  static final BuilderInfo _i = BuilderInfo('GetRoleRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1286,14 +1268,12 @@ class GetRoleRequest extends GeneratedMessage {
   GetRoleRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetRoleRequest clone() => new GetRoleRequest()..mergeFromMessage(this);
+  GetRoleRequest clone() => GetRoleRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetRoleRequest create() => new GetRoleRequest();
-  static PbList<GetRoleRequest> createRepeated() =>
-      new PbList<GetRoleRequest>();
+  static GetRoleRequest create() => GetRoleRequest();
+  static PbList<GetRoleRequest> createRepeated() => PbList<GetRoleRequest>();
   static GetRoleRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetRoleRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetRoleRequest();
     return _defaultInstance;
   }
 
@@ -1315,7 +1295,7 @@ class _ReadonlyGetRoleRequest extends GetRoleRequest with ReadonlyMessageMixin {
 }
 
 class CreateRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateRoleRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateRoleRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'roleId')
     ..a<Role>(3, 'role', PbFieldType.OM, Role.getDefault, Role.create)
@@ -1328,14 +1308,14 @@ class CreateRoleRequest extends GeneratedMessage {
   CreateRoleRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateRoleRequest clone() => new CreateRoleRequest()..mergeFromMessage(this);
+  CreateRoleRequest clone() => CreateRoleRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateRoleRequest create() => new CreateRoleRequest();
+  static CreateRoleRequest create() => CreateRoleRequest();
   static PbList<CreateRoleRequest> createRepeated() =>
-      new PbList<CreateRoleRequest>();
+      PbList<CreateRoleRequest>();
   static CreateRoleRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateRoleRequest();
+      _defaultInstance = _ReadonlyCreateRoleRequest();
     return _defaultInstance;
   }
 
@@ -1373,7 +1353,7 @@ class _ReadonlyCreateRoleRequest extends CreateRoleRequest
     with ReadonlyMessageMixin {}
 
 class UpdateRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateRoleRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateRoleRequest')
     ..aOS(1, 'name')
     ..a<Role>(2, 'role', PbFieldType.OM, Role.getDefault, Role.create)
     ..a<$google$protobuf.FieldMask>(
@@ -1391,14 +1371,14 @@ class UpdateRoleRequest extends GeneratedMessage {
   UpdateRoleRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateRoleRequest clone() => new UpdateRoleRequest()..mergeFromMessage(this);
+  UpdateRoleRequest clone() => UpdateRoleRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateRoleRequest create() => new UpdateRoleRequest();
+  static UpdateRoleRequest create() => UpdateRoleRequest();
   static PbList<UpdateRoleRequest> createRepeated() =>
-      new PbList<UpdateRoleRequest>();
+      PbList<UpdateRoleRequest>();
   static UpdateRoleRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateRoleRequest();
+      _defaultInstance = _ReadonlyUpdateRoleRequest();
     return _defaultInstance;
   }
 
@@ -1436,7 +1416,7 @@ class _ReadonlyUpdateRoleRequest extends UpdateRoleRequest
     with ReadonlyMessageMixin {}
 
 class DeleteRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteRoleRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteRoleRequest')
     ..aOS(1, 'name')
     ..a<List<int>>(2, 'etag', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -1448,14 +1428,14 @@ class DeleteRoleRequest extends GeneratedMessage {
   DeleteRoleRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteRoleRequest clone() => new DeleteRoleRequest()..mergeFromMessage(this);
+  DeleteRoleRequest clone() => DeleteRoleRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteRoleRequest create() => new DeleteRoleRequest();
+  static DeleteRoleRequest create() => DeleteRoleRequest();
   static PbList<DeleteRoleRequest> createRepeated() =>
-      new PbList<DeleteRoleRequest>();
+      PbList<DeleteRoleRequest>();
   static DeleteRoleRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteRoleRequest();
+      _defaultInstance = _ReadonlyDeleteRoleRequest();
     return _defaultInstance;
   }
 
@@ -1485,7 +1465,7 @@ class _ReadonlyDeleteRoleRequest extends DeleteRoleRequest
     with ReadonlyMessageMixin {}
 
 class UndeleteRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteRoleRequest')
+  static final BuilderInfo _i = BuilderInfo('UndeleteRoleRequest')
     ..aOS(1, 'name')
     ..a<List<int>>(2, 'etag', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -1497,15 +1477,14 @@ class UndeleteRoleRequest extends GeneratedMessage {
   UndeleteRoleRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UndeleteRoleRequest clone() =>
-      new UndeleteRoleRequest()..mergeFromMessage(this);
+  UndeleteRoleRequest clone() => UndeleteRoleRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UndeleteRoleRequest create() => new UndeleteRoleRequest();
+  static UndeleteRoleRequest create() => UndeleteRoleRequest();
   static PbList<UndeleteRoleRequest> createRepeated() =>
-      new PbList<UndeleteRoleRequest>();
+      PbList<UndeleteRoleRequest>();
   static UndeleteRoleRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteRoleRequest();
+      _defaultInstance = _ReadonlyUndeleteRoleRequest();
     return _defaultInstance;
   }
 
@@ -1535,7 +1514,7 @@ class _ReadonlyUndeleteRoleRequest extends UndeleteRoleRequest
     with ReadonlyMessageMixin {}
 
 class Permission extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Permission')
+  static final BuilderInfo _i = BuilderInfo('Permission')
     ..aOS(1, 'name')
     ..aOS(2, 'title')
     ..aOS(3, 'description')
@@ -1562,12 +1541,12 @@ class Permission extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Permission.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Permission clone() => new Permission()..mergeFromMessage(this);
+  Permission clone() => Permission()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Permission create() => new Permission();
-  static PbList<Permission> createRepeated() => new PbList<Permission>();
+  static Permission create() => Permission();
+  static PbList<Permission> createRepeated() => PbList<Permission>();
   static Permission getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPermission();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPermission();
     return _defaultInstance;
   }
 
@@ -1628,12 +1607,11 @@ class Permission extends GeneratedMessage {
 class _ReadonlyPermission extends Permission with ReadonlyMessageMixin {}
 
 class QueryTestablePermissionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('QueryTestablePermissionsRequest')
-        ..aOS(1, 'fullResourceName')
-        ..a<int>(2, 'pageSize', PbFieldType.O3)
-        ..aOS(3, 'pageToken')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('QueryTestablePermissionsRequest')
+    ..aOS(1, 'fullResourceName')
+    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..aOS(3, 'pageToken')
+    ..hasRequiredFields = false;
 
   QueryTestablePermissionsRequest() : super();
   QueryTestablePermissionsRequest.fromBuffer(List<int> i,
@@ -1643,15 +1621,15 @@ class QueryTestablePermissionsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QueryTestablePermissionsRequest clone() =>
-      new QueryTestablePermissionsRequest()..mergeFromMessage(this);
+      QueryTestablePermissionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static QueryTestablePermissionsRequest create() =>
-      new QueryTestablePermissionsRequest();
+      QueryTestablePermissionsRequest();
   static PbList<QueryTestablePermissionsRequest> createRepeated() =>
-      new PbList<QueryTestablePermissionsRequest>();
+      PbList<QueryTestablePermissionsRequest>();
   static QueryTestablePermissionsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryTestablePermissionsRequest();
+      _defaultInstance = _ReadonlyQueryTestablePermissionsRequest();
     return _defaultInstance;
   }
 
@@ -1690,12 +1668,11 @@ class _ReadonlyQueryTestablePermissionsRequest
     extends QueryTestablePermissionsRequest with ReadonlyMessageMixin {}
 
 class QueryTestablePermissionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('QueryTestablePermissionsResponse')
-        ..pp<Permission>(1, 'permissions', PbFieldType.PM,
-            Permission.$checkItem, Permission.create)
-        ..aOS(2, 'nextPageToken')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('QueryTestablePermissionsResponse')
+    ..pp<Permission>(1, 'permissions', PbFieldType.PM, Permission.$checkItem,
+        Permission.create)
+    ..aOS(2, 'nextPageToken')
+    ..hasRequiredFields = false;
 
   QueryTestablePermissionsResponse() : super();
   QueryTestablePermissionsResponse.fromBuffer(List<int> i,
@@ -1705,15 +1682,15 @@ class QueryTestablePermissionsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   QueryTestablePermissionsResponse clone() =>
-      new QueryTestablePermissionsResponse()..mergeFromMessage(this);
+      QueryTestablePermissionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static QueryTestablePermissionsResponse create() =>
-      new QueryTestablePermissionsResponse();
+      QueryTestablePermissionsResponse();
   static PbList<QueryTestablePermissionsResponse> createRepeated() =>
-      new PbList<QueryTestablePermissionsResponse>();
+      PbList<QueryTestablePermissionsResponse>();
   static QueryTestablePermissionsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQueryTestablePermissionsResponse();
+      _defaultInstance = _ReadonlyQueryTestablePermissionsResponse();
     return _defaultInstance;
   }
 
@@ -1743,147 +1720,147 @@ class IAMApi {
 
   Future<ListServiceAccountsResponse> listServiceAccounts(
       ClientContext ctx, ListServiceAccountsRequest request) {
-    var emptyResponse = new ListServiceAccountsResponse();
+    var emptyResponse = ListServiceAccountsResponse();
     return _client.invoke<ListServiceAccountsResponse>(
         ctx, 'IAM', 'ListServiceAccounts', request, emptyResponse);
   }
 
   Future<ServiceAccount> getServiceAccount(
       ClientContext ctx, GetServiceAccountRequest request) {
-    var emptyResponse = new ServiceAccount();
+    var emptyResponse = ServiceAccount();
     return _client.invoke<ServiceAccount>(
         ctx, 'IAM', 'GetServiceAccount', request, emptyResponse);
   }
 
   Future<ServiceAccount> createServiceAccount(
       ClientContext ctx, CreateServiceAccountRequest request) {
-    var emptyResponse = new ServiceAccount();
+    var emptyResponse = ServiceAccount();
     return _client.invoke<ServiceAccount>(
         ctx, 'IAM', 'CreateServiceAccount', request, emptyResponse);
   }
 
   Future<ServiceAccount> updateServiceAccount(
       ClientContext ctx, ServiceAccount request) {
-    var emptyResponse = new ServiceAccount();
+    var emptyResponse = ServiceAccount();
     return _client.invoke<ServiceAccount>(
         ctx, 'IAM', 'UpdateServiceAccount', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteServiceAccount(
       ClientContext ctx, DeleteServiceAccountRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'IAM', 'DeleteServiceAccount', request, emptyResponse);
   }
 
   Future<ListServiceAccountKeysResponse> listServiceAccountKeys(
       ClientContext ctx, ListServiceAccountKeysRequest request) {
-    var emptyResponse = new ListServiceAccountKeysResponse();
+    var emptyResponse = ListServiceAccountKeysResponse();
     return _client.invoke<ListServiceAccountKeysResponse>(
         ctx, 'IAM', 'ListServiceAccountKeys', request, emptyResponse);
   }
 
   Future<ServiceAccountKey> getServiceAccountKey(
       ClientContext ctx, GetServiceAccountKeyRequest request) {
-    var emptyResponse = new ServiceAccountKey();
+    var emptyResponse = ServiceAccountKey();
     return _client.invoke<ServiceAccountKey>(
         ctx, 'IAM', 'GetServiceAccountKey', request, emptyResponse);
   }
 
   Future<ServiceAccountKey> createServiceAccountKey(
       ClientContext ctx, CreateServiceAccountKeyRequest request) {
-    var emptyResponse = new ServiceAccountKey();
+    var emptyResponse = ServiceAccountKey();
     return _client.invoke<ServiceAccountKey>(
         ctx, 'IAM', 'CreateServiceAccountKey', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteServiceAccountKey(
       ClientContext ctx, DeleteServiceAccountKeyRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'IAM', 'DeleteServiceAccountKey', request, emptyResponse);
   }
 
   Future<SignBlobResponse> signBlob(
       ClientContext ctx, SignBlobRequest request) {
-    var emptyResponse = new SignBlobResponse();
+    var emptyResponse = SignBlobResponse();
     return _client.invoke<SignBlobResponse>(
         ctx, 'IAM', 'SignBlob', request, emptyResponse);
   }
 
   Future<SignJwtResponse> signJwt(ClientContext ctx, SignJwtRequest request) {
-    var emptyResponse = new SignJwtResponse();
+    var emptyResponse = SignJwtResponse();
     return _client.invoke<SignJwtResponse>(
         ctx, 'IAM', 'SignJwt', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> getIamPolicy(
       ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'IAM', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> setIamPolicy(
       ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'IAM', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
     return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
         ctx, 'IAM', 'TestIamPermissions', request, emptyResponse);
   }
 
   Future<QueryGrantableRolesResponse> queryGrantableRoles(
       ClientContext ctx, QueryGrantableRolesRequest request) {
-    var emptyResponse = new QueryGrantableRolesResponse();
+    var emptyResponse = QueryGrantableRolesResponse();
     return _client.invoke<QueryGrantableRolesResponse>(
         ctx, 'IAM', 'QueryGrantableRoles', request, emptyResponse);
   }
 
   Future<ListRolesResponse> listRoles(
       ClientContext ctx, ListRolesRequest request) {
-    var emptyResponse = new ListRolesResponse();
+    var emptyResponse = ListRolesResponse();
     return _client.invoke<ListRolesResponse>(
         ctx, 'IAM', 'ListRoles', request, emptyResponse);
   }
 
   Future<Role> getRole(ClientContext ctx, GetRoleRequest request) {
-    var emptyResponse = new Role();
+    var emptyResponse = Role();
     return _client.invoke<Role>(ctx, 'IAM', 'GetRole', request, emptyResponse);
   }
 
   Future<Role> createRole(ClientContext ctx, CreateRoleRequest request) {
-    var emptyResponse = new Role();
+    var emptyResponse = Role();
     return _client.invoke<Role>(
         ctx, 'IAM', 'CreateRole', request, emptyResponse);
   }
 
   Future<Role> updateRole(ClientContext ctx, UpdateRoleRequest request) {
-    var emptyResponse = new Role();
+    var emptyResponse = Role();
     return _client.invoke<Role>(
         ctx, 'IAM', 'UpdateRole', request, emptyResponse);
   }
 
   Future<Role> deleteRole(ClientContext ctx, DeleteRoleRequest request) {
-    var emptyResponse = new Role();
+    var emptyResponse = Role();
     return _client.invoke<Role>(
         ctx, 'IAM', 'DeleteRole', request, emptyResponse);
   }
 
   Future<Role> undeleteRole(ClientContext ctx, UndeleteRoleRequest request) {
-    var emptyResponse = new Role();
+    var emptyResponse = Role();
     return _client.invoke<Role>(
         ctx, 'IAM', 'UndeleteRole', request, emptyResponse);
   }
 
   Future<QueryTestablePermissionsResponse> queryTestablePermissions(
       ClientContext ctx, QueryTestablePermissionsRequest request) {
-    var emptyResponse = new QueryTestablePermissionsResponse();
+    var emptyResponse = QueryTestablePermissionsResponse();
     return _client.invoke<QueryTestablePermissionsResponse>(
         ctx, 'IAM', 'QueryTestablePermissions', request, emptyResponse);
   }

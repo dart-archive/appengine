@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Worker_Property extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Worker_Property')
+  static final BuilderInfo _i = BuilderInfo('Worker_Property')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -21,14 +21,12 @@ class Worker_Property extends GeneratedMessage {
   Worker_Property.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Worker_Property clone() => new Worker_Property()..mergeFromMessage(this);
+  Worker_Property clone() => Worker_Property()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Worker_Property create() => new Worker_Property();
-  static PbList<Worker_Property> createRepeated() =>
-      new PbList<Worker_Property>();
+  static Worker_Property create() => Worker_Property();
+  static PbList<Worker_Property> createRepeated() => PbList<Worker_Property>();
   static Worker_Property getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWorker_Property();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWorker_Property();
     return _defaultInstance;
   }
 
@@ -58,7 +56,7 @@ class _ReadonlyWorker_Property extends Worker_Property
     with ReadonlyMessageMixin {}
 
 class Worker extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Worker')
+  static final BuilderInfo _i = BuilderInfo('Worker')
     ..pp<Device>(1, 'devices', PbFieldType.PM, Device.$checkItem, Device.create)
     ..pp<Worker_Property>(2, 'properties', PbFieldType.PM,
         Worker_Property.$checkItem, Worker_Property.create)
@@ -70,12 +68,12 @@ class Worker extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Worker.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Worker clone() => new Worker()..mergeFromMessage(this);
+  Worker clone() => Worker()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Worker create() => new Worker();
-  static PbList<Worker> createRepeated() => new PbList<Worker>();
+  static Worker create() => Worker();
+  static PbList<Worker> createRepeated() => PbList<Worker>();
   static Worker getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWorker();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyWorker();
     return _defaultInstance;
   }
 
@@ -92,7 +90,7 @@ class Worker extends GeneratedMessage {
 class _ReadonlyWorker extends Worker with ReadonlyMessageMixin {}
 
 class Device_Property extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Device_Property')
+  static final BuilderInfo _i = BuilderInfo('Device_Property')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -104,14 +102,12 @@ class Device_Property extends GeneratedMessage {
   Device_Property.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Device_Property clone() => new Device_Property()..mergeFromMessage(this);
+  Device_Property clone() => Device_Property()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Device_Property create() => new Device_Property();
-  static PbList<Device_Property> createRepeated() =>
-      new PbList<Device_Property>();
+  static Device_Property create() => Device_Property();
+  static PbList<Device_Property> createRepeated() => PbList<Device_Property>();
   static Device_Property getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDevice_Property();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDevice_Property();
     return _defaultInstance;
   }
 
@@ -141,7 +137,7 @@ class _ReadonlyDevice_Property extends Device_Property
     with ReadonlyMessageMixin {}
 
 class Device extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Device')
+  static final BuilderInfo _i = BuilderInfo('Device')
     ..aOS(1, 'handle')
     ..pp<Device_Property>(2, 'properties', PbFieldType.PM,
         Device_Property.$checkItem, Device_Property.create)
@@ -153,12 +149,12 @@ class Device extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Device.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Device clone() => new Device()..mergeFromMessage(this);
+  Device clone() => Device()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Device create() => new Device();
-  static PbList<Device> createRepeated() => new PbList<Device>();
+  static Device create() => Device();
+  static PbList<Device> createRepeated() => PbList<Device>();
   static Device getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDevice();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDevice();
     return _defaultInstance;
   }
 

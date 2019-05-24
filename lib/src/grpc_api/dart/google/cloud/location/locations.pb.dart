@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart';
 import '../../protobuf/any.pb.dart' as $google$protobuf;
 
 class ListLocationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListLocationsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListLocationsRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
     ..a<int>(3, 'pageSize', PbFieldType.O3)
@@ -27,14 +27,14 @@ class ListLocationsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListLocationsRequest clone() =>
-      new ListLocationsRequest()..mergeFromMessage(this);
+      ListLocationsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListLocationsRequest create() => new ListLocationsRequest();
+  static ListLocationsRequest create() => ListLocationsRequest();
   static PbList<ListLocationsRequest> createRepeated() =>
-      new PbList<ListLocationsRequest>();
+      PbList<ListLocationsRequest>();
   static ListLocationsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListLocationsRequest();
+      _defaultInstance = _ReadonlyListLocationsRequest();
     return _defaultInstance;
   }
 
@@ -80,7 +80,7 @@ class _ReadonlyListLocationsRequest extends ListLocationsRequest
     with ReadonlyMessageMixin {}
 
 class ListLocationsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListLocationsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListLocationsResponse')
     ..pp<Location>(
         1, 'locations', PbFieldType.PM, Location.$checkItem, Location.create)
     ..aOS(2, 'nextPageToken')
@@ -94,14 +94,14 @@ class ListLocationsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListLocationsResponse clone() =>
-      new ListLocationsResponse()..mergeFromMessage(this);
+      ListLocationsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListLocationsResponse create() => new ListLocationsResponse();
+  static ListLocationsResponse create() => ListLocationsResponse();
   static PbList<ListLocationsResponse> createRepeated() =>
-      new PbList<ListLocationsResponse>();
+      PbList<ListLocationsResponse>();
   static ListLocationsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListLocationsResponse();
+      _defaultInstance = _ReadonlyListLocationsResponse();
     return _defaultInstance;
   }
 
@@ -126,7 +126,7 @@ class _ReadonlyListLocationsResponse extends ListLocationsResponse
     with ReadonlyMessageMixin {}
 
 class GetLocationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetLocationRequest')
+  static final BuilderInfo _i = BuilderInfo('GetLocationRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -137,15 +137,14 @@ class GetLocationRequest extends GeneratedMessage {
   GetLocationRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetLocationRequest clone() =>
-      new GetLocationRequest()..mergeFromMessage(this);
+  GetLocationRequest clone() => GetLocationRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetLocationRequest create() => new GetLocationRequest();
+  static GetLocationRequest create() => GetLocationRequest();
   static PbList<GetLocationRequest> createRepeated() =>
-      new PbList<GetLocationRequest>();
+      PbList<GetLocationRequest>();
   static GetLocationRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetLocationRequest();
+      _defaultInstance = _ReadonlyGetLocationRequest();
     return _defaultInstance;
   }
 
@@ -167,7 +166,7 @@ class _ReadonlyGetLocationRequest extends GetLocationRequest
     with ReadonlyMessageMixin {}
 
 class Location_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Location_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Location_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -180,14 +179,14 @@ class Location_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Location_LabelsEntry clone() =>
-      new Location_LabelsEntry()..mergeFromMessage(this);
+      Location_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Location_LabelsEntry create() => new Location_LabelsEntry();
+  static Location_LabelsEntry create() => Location_LabelsEntry();
   static PbList<Location_LabelsEntry> createRepeated() =>
-      new PbList<Location_LabelsEntry>();
+      PbList<Location_LabelsEntry>();
   static Location_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocation_LabelsEntry();
+      _defaultInstance = _ReadonlyLocation_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -217,7 +216,7 @@ class _ReadonlyLocation_LabelsEntry extends Location_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Location extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Location')
+  static final BuilderInfo _i = BuilderInfo('Location')
     ..aOS(1, 'name')
     ..pp<Location_LabelsEntry>(2, 'labels', PbFieldType.PM,
         Location_LabelsEntry.$checkItem, Location_LabelsEntry.create)
@@ -233,12 +232,12 @@ class Location extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Location.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Location clone() => new Location()..mergeFromMessage(this);
+  Location clone() => Location()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Location create() => new Location();
-  static PbList<Location> createRepeated() => new PbList<Location>();
+  static Location create() => Location();
+  static PbList<Location> createRepeated() => PbList<Location>();
   static Location getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLocation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyLocation();
     return _defaultInstance;
   }
 
@@ -290,13 +289,13 @@ class LocationsApi {
 
   Future<ListLocationsResponse> listLocations(
       ClientContext ctx, ListLocationsRequest request) {
-    var emptyResponse = new ListLocationsResponse();
+    var emptyResponse = ListLocationsResponse();
     return _client.invoke<ListLocationsResponse>(
         ctx, 'Locations', 'ListLocations', request, emptyResponse);
   }
 
   Future<Location> getLocation(ClientContext ctx, GetLocationRequest request) {
-    var emptyResponse = new Location();
+    var emptyResponse = Location();
     return _client.invoke<Location>(
         ctx, 'Locations', 'GetLocation', request, emptyResponse);
   }

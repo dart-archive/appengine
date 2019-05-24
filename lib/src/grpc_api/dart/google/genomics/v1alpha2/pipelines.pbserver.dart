@@ -32,21 +32,21 @@ abstract class PipelinesV1Alpha2ServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'CreatePipeline':
-        return new CreatePipelineRequest();
+        return CreatePipelineRequest();
       case 'RunPipeline':
-        return new RunPipelineRequest();
+        return RunPipelineRequest();
       case 'GetPipeline':
-        return new GetPipelineRequest();
+        return GetPipelineRequest();
       case 'ListPipelines':
-        return new ListPipelinesRequest();
+        return ListPipelinesRequest();
       case 'DeletePipeline':
-        return new DeletePipelineRequest();
+        return DeletePipelineRequest();
       case 'GetControllerConfig':
-        return new GetControllerConfigRequest();
+        return GetControllerConfigRequest();
       case 'SetOperationStatus':
-        return new SetOperationStatusRequest();
+        return SetOperationStatusRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -68,7 +68,7 @@ abstract class PipelinesV1Alpha2ServiceBase extends GeneratedService {
       case 'SetOperationStatus':
         return this.setOperationStatus(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Endpoint extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Endpoint')
+  static final BuilderInfo _i = BuilderInfo('Endpoint')
     ..aOS(1, 'name')
     ..pPS(2, 'aliases')
     ..pPS(3, 'apis')
@@ -24,12 +24,12 @@ class Endpoint extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Endpoint.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Endpoint clone() => new Endpoint()..mergeFromMessage(this);
+  Endpoint clone() => Endpoint()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Endpoint create() => new Endpoint();
-  static PbList<Endpoint> createRepeated() => new PbList<Endpoint>();
+  static Endpoint create() => Endpoint();
+  static PbList<Endpoint> createRepeated() => PbList<Endpoint>();
   static Endpoint getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyEndpoint();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEndpoint();
     return _defaultInstance;
   }
 

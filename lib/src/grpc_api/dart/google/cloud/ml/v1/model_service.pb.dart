@@ -13,7 +13,7 @@ import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
 import '../../../longrunning/operations.pb.dart' as $google$longrunning;
 
 class Model extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Model')
+  static final BuilderInfo _i = BuilderInfo('Model')
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..a<Version>(
@@ -27,12 +27,12 @@ class Model extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Model.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Model clone() => new Model()..mergeFromMessage(this);
+  Model clone() => Model()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Model create() => new Model();
-  static PbList<Model> createRepeated() => new PbList<Model>();
+  static Model create() => Model();
+  static PbList<Model> createRepeated() => PbList<Model>();
   static Model getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyModel();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyModel();
     return _defaultInstance;
   }
 
@@ -79,7 +79,7 @@ class Model extends GeneratedMessage {
 class _ReadonlyModel extends Model with ReadonlyMessageMixin {}
 
 class Version extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Version')
+  static final BuilderInfo _i = BuilderInfo('Version')
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOB(3, 'isDefault')
@@ -107,12 +107,12 @@ class Version extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Version.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Version clone() => new Version()..mergeFromMessage(this);
+  Version clone() => Version()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Version create() => new Version();
-  static PbList<Version> createRepeated() => new PbList<Version>();
+  static Version create() => Version();
+  static PbList<Version> createRepeated() => PbList<Version>();
   static Version getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVersion();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVersion();
     return _defaultInstance;
   }
 
@@ -189,7 +189,7 @@ class Version extends GeneratedMessage {
 class _ReadonlyVersion extends Version with ReadonlyMessageMixin {}
 
 class ManualScaling extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ManualScaling')
+  static final BuilderInfo _i = BuilderInfo('ManualScaling')
     ..a<int>(1, 'nodes', PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -200,13 +200,12 @@ class ManualScaling extends GeneratedMessage {
   ManualScaling.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ManualScaling clone() => new ManualScaling()..mergeFromMessage(this);
+  ManualScaling clone() => ManualScaling()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ManualScaling create() => new ManualScaling();
-  static PbList<ManualScaling> createRepeated() => new PbList<ManualScaling>();
+  static ManualScaling create() => ManualScaling();
+  static PbList<ManualScaling> createRepeated() => PbList<ManualScaling>();
   static ManualScaling getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyManualScaling();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyManualScaling();
     return _defaultInstance;
   }
 
@@ -227,7 +226,7 @@ class ManualScaling extends GeneratedMessage {
 class _ReadonlyManualScaling extends ManualScaling with ReadonlyMessageMixin {}
 
 class CreateModelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateModelRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateModelRequest')
     ..aOS(1, 'parent')
     ..a<Model>(2, 'model', PbFieldType.OM, Model.getDefault, Model.create)
     ..hasRequiredFields = false;
@@ -239,15 +238,14 @@ class CreateModelRequest extends GeneratedMessage {
   CreateModelRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateModelRequest clone() =>
-      new CreateModelRequest()..mergeFromMessage(this);
+  CreateModelRequest clone() => CreateModelRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateModelRequest create() => new CreateModelRequest();
+  static CreateModelRequest create() => CreateModelRequest();
   static PbList<CreateModelRequest> createRepeated() =>
-      new PbList<CreateModelRequest>();
+      PbList<CreateModelRequest>();
   static CreateModelRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateModelRequest();
+      _defaultInstance = _ReadonlyCreateModelRequest();
     return _defaultInstance;
   }
 
@@ -277,7 +275,7 @@ class _ReadonlyCreateModelRequest extends CreateModelRequest
     with ReadonlyMessageMixin {}
 
 class ListModelsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListModelsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListModelsRequest')
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
     ..a<int>(5, 'pageSize', PbFieldType.O3)
@@ -290,14 +288,14 @@ class ListModelsRequest extends GeneratedMessage {
   ListModelsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListModelsRequest clone() => new ListModelsRequest()..mergeFromMessage(this);
+  ListModelsRequest clone() => ListModelsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListModelsRequest create() => new ListModelsRequest();
+  static ListModelsRequest create() => ListModelsRequest();
   static PbList<ListModelsRequest> createRepeated() =>
-      new PbList<ListModelsRequest>();
+      PbList<ListModelsRequest>();
   static ListModelsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListModelsRequest();
+      _defaultInstance = _ReadonlyListModelsRequest();
     return _defaultInstance;
   }
 
@@ -335,7 +333,7 @@ class _ReadonlyListModelsRequest extends ListModelsRequest
     with ReadonlyMessageMixin {}
 
 class ListModelsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListModelsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListModelsResponse')
     ..pp<Model>(1, 'models', PbFieldType.PM, Model.$checkItem, Model.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -347,15 +345,14 @@ class ListModelsResponse extends GeneratedMessage {
   ListModelsResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListModelsResponse clone() =>
-      new ListModelsResponse()..mergeFromMessage(this);
+  ListModelsResponse clone() => ListModelsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListModelsResponse create() => new ListModelsResponse();
+  static ListModelsResponse create() => ListModelsResponse();
   static PbList<ListModelsResponse> createRepeated() =>
-      new PbList<ListModelsResponse>();
+      PbList<ListModelsResponse>();
   static ListModelsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListModelsResponse();
+      _defaultInstance = _ReadonlyListModelsResponse();
     return _defaultInstance;
   }
 
@@ -379,7 +376,7 @@ class _ReadonlyListModelsResponse extends ListModelsResponse
     with ReadonlyMessageMixin {}
 
 class GetModelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetModelRequest')
+  static final BuilderInfo _i = BuilderInfo('GetModelRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -390,14 +387,12 @@ class GetModelRequest extends GeneratedMessage {
   GetModelRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetModelRequest clone() => new GetModelRequest()..mergeFromMessage(this);
+  GetModelRequest clone() => GetModelRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetModelRequest create() => new GetModelRequest();
-  static PbList<GetModelRequest> createRepeated() =>
-      new PbList<GetModelRequest>();
+  static GetModelRequest create() => GetModelRequest();
+  static PbList<GetModelRequest> createRepeated() => PbList<GetModelRequest>();
   static GetModelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetModelRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetModelRequest();
     return _defaultInstance;
   }
 
@@ -419,7 +414,7 @@ class _ReadonlyGetModelRequest extends GetModelRequest
     with ReadonlyMessageMixin {}
 
 class DeleteModelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteModelRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteModelRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -430,15 +425,14 @@ class DeleteModelRequest extends GeneratedMessage {
   DeleteModelRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteModelRequest clone() =>
-      new DeleteModelRequest()..mergeFromMessage(this);
+  DeleteModelRequest clone() => DeleteModelRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteModelRequest create() => new DeleteModelRequest();
+  static DeleteModelRequest create() => DeleteModelRequest();
   static PbList<DeleteModelRequest> createRepeated() =>
-      new PbList<DeleteModelRequest>();
+      PbList<DeleteModelRequest>();
   static DeleteModelRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteModelRequest();
+      _defaultInstance = _ReadonlyDeleteModelRequest();
     return _defaultInstance;
   }
 
@@ -460,7 +454,7 @@ class _ReadonlyDeleteModelRequest extends DeleteModelRequest
     with ReadonlyMessageMixin {}
 
 class CreateVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateVersionRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateVersionRequest')
     ..aOS(1, 'parent')
     ..a<Version>(
         2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
@@ -474,14 +468,14 @@ class CreateVersionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateVersionRequest clone() =>
-      new CreateVersionRequest()..mergeFromMessage(this);
+      CreateVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateVersionRequest create() => new CreateVersionRequest();
+  static CreateVersionRequest create() => CreateVersionRequest();
   static PbList<CreateVersionRequest> createRepeated() =>
-      new PbList<CreateVersionRequest>();
+      PbList<CreateVersionRequest>();
   static CreateVersionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateVersionRequest();
+      _defaultInstance = _ReadonlyCreateVersionRequest();
     return _defaultInstance;
   }
 
@@ -511,7 +505,7 @@ class _ReadonlyCreateVersionRequest extends CreateVersionRequest
     with ReadonlyMessageMixin {}
 
 class ListVersionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVersionsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListVersionsRequest')
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
     ..a<int>(5, 'pageSize', PbFieldType.O3)
@@ -524,15 +518,14 @@ class ListVersionsRequest extends GeneratedMessage {
   ListVersionsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListVersionsRequest clone() =>
-      new ListVersionsRequest()..mergeFromMessage(this);
+  ListVersionsRequest clone() => ListVersionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListVersionsRequest create() => new ListVersionsRequest();
+  static ListVersionsRequest create() => ListVersionsRequest();
   static PbList<ListVersionsRequest> createRepeated() =>
-      new PbList<ListVersionsRequest>();
+      PbList<ListVersionsRequest>();
   static ListVersionsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVersionsRequest();
+      _defaultInstance = _ReadonlyListVersionsRequest();
     return _defaultInstance;
   }
 
@@ -570,7 +563,7 @@ class _ReadonlyListVersionsRequest extends ListVersionsRequest
     with ReadonlyMessageMixin {}
 
 class ListVersionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVersionsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListVersionsResponse')
     ..pp<Version>(
         1, 'versions', PbFieldType.PM, Version.$checkItem, Version.create)
     ..aOS(2, 'nextPageToken')
@@ -584,14 +577,14 @@ class ListVersionsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListVersionsResponse clone() =>
-      new ListVersionsResponse()..mergeFromMessage(this);
+      ListVersionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListVersionsResponse create() => new ListVersionsResponse();
+  static ListVersionsResponse create() => ListVersionsResponse();
   static PbList<ListVersionsResponse> createRepeated() =>
-      new PbList<ListVersionsResponse>();
+      PbList<ListVersionsResponse>();
   static ListVersionsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVersionsResponse();
+      _defaultInstance = _ReadonlyListVersionsResponse();
     return _defaultInstance;
   }
 
@@ -615,7 +608,7 @@ class _ReadonlyListVersionsResponse extends ListVersionsResponse
     with ReadonlyMessageMixin {}
 
 class GetVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetVersionRequest')
+  static final BuilderInfo _i = BuilderInfo('GetVersionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -626,14 +619,14 @@ class GetVersionRequest extends GeneratedMessage {
   GetVersionRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetVersionRequest clone() => new GetVersionRequest()..mergeFromMessage(this);
+  GetVersionRequest clone() => GetVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetVersionRequest create() => new GetVersionRequest();
+  static GetVersionRequest create() => GetVersionRequest();
   static PbList<GetVersionRequest> createRepeated() =>
-      new PbList<GetVersionRequest>();
+      PbList<GetVersionRequest>();
   static GetVersionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetVersionRequest();
+      _defaultInstance = _ReadonlyGetVersionRequest();
     return _defaultInstance;
   }
 
@@ -655,7 +648,7 @@ class _ReadonlyGetVersionRequest extends GetVersionRequest
     with ReadonlyMessageMixin {}
 
 class DeleteVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteVersionRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteVersionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -667,14 +660,14 @@ class DeleteVersionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteVersionRequest clone() =>
-      new DeleteVersionRequest()..mergeFromMessage(this);
+      DeleteVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteVersionRequest create() => new DeleteVersionRequest();
+  static DeleteVersionRequest create() => DeleteVersionRequest();
   static PbList<DeleteVersionRequest> createRepeated() =>
-      new PbList<DeleteVersionRequest>();
+      PbList<DeleteVersionRequest>();
   static DeleteVersionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteVersionRequest();
+      _defaultInstance = _ReadonlyDeleteVersionRequest();
     return _defaultInstance;
   }
 
@@ -696,7 +689,7 @@ class _ReadonlyDeleteVersionRequest extends DeleteVersionRequest
     with ReadonlyMessageMixin {}
 
 class SetDefaultVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetDefaultVersionRequest')
+  static final BuilderInfo _i = BuilderInfo('SetDefaultVersionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -708,14 +701,14 @@ class SetDefaultVersionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetDefaultVersionRequest clone() =>
-      new SetDefaultVersionRequest()..mergeFromMessage(this);
+      SetDefaultVersionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SetDefaultVersionRequest create() => new SetDefaultVersionRequest();
+  static SetDefaultVersionRequest create() => SetDefaultVersionRequest();
   static PbList<SetDefaultVersionRequest> createRepeated() =>
-      new PbList<SetDefaultVersionRequest>();
+      PbList<SetDefaultVersionRequest>();
   static SetDefaultVersionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetDefaultVersionRequest();
+      _defaultInstance = _ReadonlySetDefaultVersionRequest();
     return _defaultInstance;
   }
 
@@ -742,61 +735,61 @@ class ModelServiceApi {
   ModelServiceApi(this._client);
 
   Future<Model> createModel(ClientContext ctx, CreateModelRequest request) {
-    var emptyResponse = new Model();
+    var emptyResponse = Model();
     return _client.invoke<Model>(
         ctx, 'ModelService', 'CreateModel', request, emptyResponse);
   }
 
   Future<ListModelsResponse> listModels(
       ClientContext ctx, ListModelsRequest request) {
-    var emptyResponse = new ListModelsResponse();
+    var emptyResponse = ListModelsResponse();
     return _client.invoke<ListModelsResponse>(
         ctx, 'ModelService', 'ListModels', request, emptyResponse);
   }
 
   Future<Model> getModel(ClientContext ctx, GetModelRequest request) {
-    var emptyResponse = new Model();
+    var emptyResponse = Model();
     return _client.invoke<Model>(
         ctx, 'ModelService', 'GetModel', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> deleteModel(
       ClientContext ctx, DeleteModelRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ModelService', 'DeleteModel', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createVersion(
       ClientContext ctx, CreateVersionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ModelService', 'CreateVersion', request, emptyResponse);
   }
 
   Future<ListVersionsResponse> listVersions(
       ClientContext ctx, ListVersionsRequest request) {
-    var emptyResponse = new ListVersionsResponse();
+    var emptyResponse = ListVersionsResponse();
     return _client.invoke<ListVersionsResponse>(
         ctx, 'ModelService', 'ListVersions', request, emptyResponse);
   }
 
   Future<Version> getVersion(ClientContext ctx, GetVersionRequest request) {
-    var emptyResponse = new Version();
+    var emptyResponse = Version();
     return _client.invoke<Version>(
         ctx, 'ModelService', 'GetVersion', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> deleteVersion(
       ClientContext ctx, DeleteVersionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'ModelService', 'DeleteVersion', request, emptyResponse);
   }
 
   Future<Version> setDefaultVersion(
       ClientContext ctx, SetDefaultVersionRequest request) {
-    var emptyResponse = new Version();
+    var emptyResponse = Version();
     return _client.invoke<Version>(
         ctx, 'ModelService', 'SetDefaultVersion', request, emptyResponse);
   }

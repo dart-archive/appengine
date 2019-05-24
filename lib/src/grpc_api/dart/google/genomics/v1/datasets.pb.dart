@@ -16,7 +16,7 @@ import '../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
 import '../../iam/v1/policy.pb.dart' as $google$iam$v1;
 
 class Dataset extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Dataset')
+  static final BuilderInfo _i = BuilderInfo('Dataset')
     ..aOS(1, 'id')
     ..aOS(2, 'projectId')
     ..aOS(3, 'name')
@@ -34,12 +34,12 @@ class Dataset extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Dataset.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Dataset clone() => new Dataset()..mergeFromMessage(this);
+  Dataset clone() => Dataset()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Dataset create() => new Dataset();
-  static PbList<Dataset> createRepeated() => new PbList<Dataset>();
+  static Dataset create() => Dataset();
+  static PbList<Dataset> createRepeated() => PbList<Dataset>();
   static Dataset getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDataset();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDataset();
     return _defaultInstance;
   }
 
@@ -84,7 +84,7 @@ class Dataset extends GeneratedMessage {
 class _ReadonlyDataset extends Dataset with ReadonlyMessageMixin {}
 
 class ListDatasetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDatasetsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListDatasetsRequest')
     ..aOS(1, 'projectId')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -97,15 +97,14 @@ class ListDatasetsRequest extends GeneratedMessage {
   ListDatasetsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListDatasetsRequest clone() =>
-      new ListDatasetsRequest()..mergeFromMessage(this);
+  ListDatasetsRequest clone() => ListDatasetsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDatasetsRequest create() => new ListDatasetsRequest();
+  static ListDatasetsRequest create() => ListDatasetsRequest();
   static PbList<ListDatasetsRequest> createRepeated() =>
-      new PbList<ListDatasetsRequest>();
+      PbList<ListDatasetsRequest>();
   static ListDatasetsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDatasetsRequest();
+      _defaultInstance = _ReadonlyListDatasetsRequest();
     return _defaultInstance;
   }
 
@@ -143,7 +142,7 @@ class _ReadonlyListDatasetsRequest extends ListDatasetsRequest
     with ReadonlyMessageMixin {}
 
 class ListDatasetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDatasetsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListDatasetsResponse')
     ..pp<Dataset>(
         1, 'datasets', PbFieldType.PM, Dataset.$checkItem, Dataset.create)
     ..aOS(2, 'nextPageToken')
@@ -157,14 +156,14 @@ class ListDatasetsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDatasetsResponse clone() =>
-      new ListDatasetsResponse()..mergeFromMessage(this);
+      ListDatasetsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDatasetsResponse create() => new ListDatasetsResponse();
+  static ListDatasetsResponse create() => ListDatasetsResponse();
   static PbList<ListDatasetsResponse> createRepeated() =>
-      new PbList<ListDatasetsResponse>();
+      PbList<ListDatasetsResponse>();
   static ListDatasetsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDatasetsResponse();
+      _defaultInstance = _ReadonlyListDatasetsResponse();
     return _defaultInstance;
   }
 
@@ -188,7 +187,7 @@ class _ReadonlyListDatasetsResponse extends ListDatasetsResponse
     with ReadonlyMessageMixin {}
 
 class CreateDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateDatasetRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateDatasetRequest')
     ..a<Dataset>(
         1, 'dataset', PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
@@ -201,14 +200,14 @@ class CreateDatasetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateDatasetRequest clone() =>
-      new CreateDatasetRequest()..mergeFromMessage(this);
+      CreateDatasetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateDatasetRequest create() => new CreateDatasetRequest();
+  static CreateDatasetRequest create() => CreateDatasetRequest();
   static PbList<CreateDatasetRequest> createRepeated() =>
-      new PbList<CreateDatasetRequest>();
+      PbList<CreateDatasetRequest>();
   static CreateDatasetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateDatasetRequest();
+      _defaultInstance = _ReadonlyCreateDatasetRequest();
     return _defaultInstance;
   }
 
@@ -230,7 +229,7 @@ class _ReadonlyCreateDatasetRequest extends CreateDatasetRequest
     with ReadonlyMessageMixin {}
 
 class UpdateDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateDatasetRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateDatasetRequest')
     ..aOS(1, 'datasetId')
     ..a<Dataset>(
         2, 'dataset', PbFieldType.OM, Dataset.getDefault, Dataset.create)
@@ -250,14 +249,14 @@ class UpdateDatasetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateDatasetRequest clone() =>
-      new UpdateDatasetRequest()..mergeFromMessage(this);
+      UpdateDatasetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateDatasetRequest create() => new UpdateDatasetRequest();
+  static UpdateDatasetRequest create() => UpdateDatasetRequest();
   static PbList<UpdateDatasetRequest> createRepeated() =>
-      new PbList<UpdateDatasetRequest>();
+      PbList<UpdateDatasetRequest>();
   static UpdateDatasetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateDatasetRequest();
+      _defaultInstance = _ReadonlyUpdateDatasetRequest();
     return _defaultInstance;
   }
 
@@ -295,7 +294,7 @@ class _ReadonlyUpdateDatasetRequest extends UpdateDatasetRequest
     with ReadonlyMessageMixin {}
 
 class DeleteDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteDatasetRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteDatasetRequest')
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
@@ -307,14 +306,14 @@ class DeleteDatasetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteDatasetRequest clone() =>
-      new DeleteDatasetRequest()..mergeFromMessage(this);
+      DeleteDatasetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteDatasetRequest create() => new DeleteDatasetRequest();
+  static DeleteDatasetRequest create() => DeleteDatasetRequest();
   static PbList<DeleteDatasetRequest> createRepeated() =>
-      new PbList<DeleteDatasetRequest>();
+      PbList<DeleteDatasetRequest>();
   static DeleteDatasetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteDatasetRequest();
+      _defaultInstance = _ReadonlyDeleteDatasetRequest();
     return _defaultInstance;
   }
 
@@ -336,7 +335,7 @@ class _ReadonlyDeleteDatasetRequest extends DeleteDatasetRequest
     with ReadonlyMessageMixin {}
 
 class UndeleteDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteDatasetRequest')
+  static final BuilderInfo _i = BuilderInfo('UndeleteDatasetRequest')
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
@@ -348,14 +347,14 @@ class UndeleteDatasetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UndeleteDatasetRequest clone() =>
-      new UndeleteDatasetRequest()..mergeFromMessage(this);
+      UndeleteDatasetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UndeleteDatasetRequest create() => new UndeleteDatasetRequest();
+  static UndeleteDatasetRequest create() => UndeleteDatasetRequest();
   static PbList<UndeleteDatasetRequest> createRepeated() =>
-      new PbList<UndeleteDatasetRequest>();
+      PbList<UndeleteDatasetRequest>();
   static UndeleteDatasetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteDatasetRequest();
+      _defaultInstance = _ReadonlyUndeleteDatasetRequest();
     return _defaultInstance;
   }
 
@@ -378,7 +377,7 @@ class _ReadonlyUndeleteDatasetRequest extends UndeleteDatasetRequest
     with ReadonlyMessageMixin {}
 
 class GetDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDatasetRequest')
+  static final BuilderInfo _i = BuilderInfo('GetDatasetRequest')
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
@@ -389,14 +388,14 @@ class GetDatasetRequest extends GeneratedMessage {
   GetDatasetRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetDatasetRequest clone() => new GetDatasetRequest()..mergeFromMessage(this);
+  GetDatasetRequest clone() => GetDatasetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetDatasetRequest create() => new GetDatasetRequest();
+  static GetDatasetRequest create() => GetDatasetRequest();
   static PbList<GetDatasetRequest> createRepeated() =>
-      new PbList<GetDatasetRequest>();
+      PbList<GetDatasetRequest>();
   static GetDatasetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDatasetRequest();
+      _defaultInstance = _ReadonlyGetDatasetRequest();
     return _defaultInstance;
   }
 
@@ -423,62 +422,62 @@ class DatasetServiceV1Api {
 
   Future<ListDatasetsResponse> listDatasets(
       ClientContext ctx, ListDatasetsRequest request) {
-    var emptyResponse = new ListDatasetsResponse();
+    var emptyResponse = ListDatasetsResponse();
     return _client.invoke<ListDatasetsResponse>(
         ctx, 'DatasetServiceV1', 'ListDatasets', request, emptyResponse);
   }
 
   Future<Dataset> createDataset(
       ClientContext ctx, CreateDatasetRequest request) {
-    var emptyResponse = new Dataset();
+    var emptyResponse = Dataset();
     return _client.invoke<Dataset>(
         ctx, 'DatasetServiceV1', 'CreateDataset', request, emptyResponse);
   }
 
   Future<Dataset> getDataset(ClientContext ctx, GetDatasetRequest request) {
-    var emptyResponse = new Dataset();
+    var emptyResponse = Dataset();
     return _client.invoke<Dataset>(
         ctx, 'DatasetServiceV1', 'GetDataset', request, emptyResponse);
   }
 
   Future<Dataset> updateDataset(
       ClientContext ctx, UpdateDatasetRequest request) {
-    var emptyResponse = new Dataset();
+    var emptyResponse = Dataset();
     return _client.invoke<Dataset>(
         ctx, 'DatasetServiceV1', 'UpdateDataset', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteDataset(
       ClientContext ctx, DeleteDatasetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'DatasetServiceV1', 'DeleteDataset', request, emptyResponse);
   }
 
   Future<Dataset> undeleteDataset(
       ClientContext ctx, UndeleteDatasetRequest request) {
-    var emptyResponse = new Dataset();
+    var emptyResponse = Dataset();
     return _client.invoke<Dataset>(
         ctx, 'DatasetServiceV1', 'UndeleteDataset', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> setIamPolicy(
       ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'DatasetServiceV1', 'SetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.Policy> getIamPolicy(
       ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
+    var emptyResponse = $google$iam$v1.Policy();
     return _client.invoke<$google$iam$v1.Policy>(
         ctx, 'DatasetServiceV1', 'GetIamPolicy', request, emptyResponse);
   }
 
   Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
       ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
+    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
     return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
         ctx, 'DatasetServiceV1', 'TestIamPermissions', request, emptyResponse);
   }

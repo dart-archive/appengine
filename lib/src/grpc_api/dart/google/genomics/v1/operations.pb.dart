@@ -12,7 +12,7 @@ import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
 import '../../protobuf/any.pb.dart' as $google$protobuf;
 
 class OperationMetadata_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadata_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('OperationMetadata_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -25,15 +25,15 @@ class OperationMetadata_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   OperationMetadata_LabelsEntry clone() =>
-      new OperationMetadata_LabelsEntry()..mergeFromMessage(this);
+      OperationMetadata_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static OperationMetadata_LabelsEntry create() =>
-      new OperationMetadata_LabelsEntry();
+      OperationMetadata_LabelsEntry();
   static PbList<OperationMetadata_LabelsEntry> createRepeated() =>
-      new PbList<OperationMetadata_LabelsEntry>();
+      PbList<OperationMetadata_LabelsEntry>();
   static OperationMetadata_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadata_LabelsEntry();
+      _defaultInstance = _ReadonlyOperationMetadata_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -64,7 +64,7 @@ class _ReadonlyOperationMetadata_LabelsEntry
     extends OperationMetadata_LabelsEntry with ReadonlyMessageMixin {}
 
 class OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadata')
+  static final BuilderInfo _i = BuilderInfo('OperationMetadata')
     ..aOS(1, 'projectId')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -106,14 +106,14 @@ class OperationMetadata extends GeneratedMessage {
   OperationMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OperationMetadata clone() => new OperationMetadata()..mergeFromMessage(this);
+  OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OperationMetadata create() => new OperationMetadata();
+  static OperationMetadata create() => OperationMetadata();
   static PbList<OperationMetadata> createRepeated() =>
-      new PbList<OperationMetadata>();
+      PbList<OperationMetadata>();
   static OperationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadata();
+      _defaultInstance = _ReadonlyOperationMetadata();
     return _defaultInstance;
   }
 
@@ -187,7 +187,7 @@ class _ReadonlyOperationMetadata extends OperationMetadata
     with ReadonlyMessageMixin {}
 
 class OperationEvent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationEvent')
+  static final BuilderInfo _i = BuilderInfo('OperationEvent')
     ..a<$google$protobuf.Timestamp>(
         1,
         'startTime',
@@ -210,14 +210,12 @@ class OperationEvent extends GeneratedMessage {
   OperationEvent.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OperationEvent clone() => new OperationEvent()..mergeFromMessage(this);
+  OperationEvent clone() => OperationEvent()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static OperationEvent create() => new OperationEvent();
-  static PbList<OperationEvent> createRepeated() =>
-      new PbList<OperationEvent>();
+  static OperationEvent create() => OperationEvent();
+  static PbList<OperationEvent> createRepeated() => PbList<OperationEvent>();
   static OperationEvent getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationEvent();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyOperationEvent();
     return _defaultInstance;
   }
 

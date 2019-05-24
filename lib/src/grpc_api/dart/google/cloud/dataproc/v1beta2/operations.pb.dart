@@ -15,7 +15,7 @@ import 'operations.pbenum.dart';
 export 'operations.pbenum.dart';
 
 class ClusterOperationStatus extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClusterOperationStatus')
+  static final BuilderInfo _i = BuilderInfo('ClusterOperationStatus')
     ..e<ClusterOperationStatus_State>(
         1,
         'state',
@@ -41,14 +41,14 @@ class ClusterOperationStatus extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ClusterOperationStatus clone() =>
-      new ClusterOperationStatus()..mergeFromMessage(this);
+      ClusterOperationStatus()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ClusterOperationStatus create() => new ClusterOperationStatus();
+  static ClusterOperationStatus create() => ClusterOperationStatus();
   static PbList<ClusterOperationStatus> createRepeated() =>
-      new PbList<ClusterOperationStatus>();
+      PbList<ClusterOperationStatus>();
   static ClusterOperationStatus getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterOperationStatus();
+      _defaultInstance = _ReadonlyClusterOperationStatus();
     return _defaultInstance;
   }
 
@@ -96,7 +96,7 @@ class _ReadonlyClusterOperationStatus extends ClusterOperationStatus
 
 class ClusterOperationMetadata_LabelsEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ClusterOperationMetadata_LabelsEntry')
+      BuilderInfo('ClusterOperationMetadata_LabelsEntry')
         ..aOS(1, 'key')
         ..aOS(2, 'value')
         ..hasRequiredFields = false;
@@ -109,15 +109,15 @@ class ClusterOperationMetadata_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ClusterOperationMetadata_LabelsEntry clone() =>
-      new ClusterOperationMetadata_LabelsEntry()..mergeFromMessage(this);
+      ClusterOperationMetadata_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ClusterOperationMetadata_LabelsEntry create() =>
-      new ClusterOperationMetadata_LabelsEntry();
+      ClusterOperationMetadata_LabelsEntry();
   static PbList<ClusterOperationMetadata_LabelsEntry> createRepeated() =>
-      new PbList<ClusterOperationMetadata_LabelsEntry>();
+      PbList<ClusterOperationMetadata_LabelsEntry>();
   static ClusterOperationMetadata_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterOperationMetadata_LabelsEntry();
+      _defaultInstance = _ReadonlyClusterOperationMetadata_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -148,7 +148,7 @@ class _ReadonlyClusterOperationMetadata_LabelsEntry
     extends ClusterOperationMetadata_LabelsEntry with ReadonlyMessageMixin {}
 
 class ClusterOperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ClusterOperationMetadata')
+  static final BuilderInfo _i = BuilderInfo('ClusterOperationMetadata')
     ..aOS(7, 'clusterName')
     ..aOS(8, 'clusterUuid')
     ..a<ClusterOperationStatus>(9, 'status', PbFieldType.OM,
@@ -174,14 +174,14 @@ class ClusterOperationMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ClusterOperationMetadata clone() =>
-      new ClusterOperationMetadata()..mergeFromMessage(this);
+      ClusterOperationMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ClusterOperationMetadata create() => new ClusterOperationMetadata();
+  static ClusterOperationMetadata create() => ClusterOperationMetadata();
   static PbList<ClusterOperationMetadata> createRepeated() =>
-      new PbList<ClusterOperationMetadata>();
+      PbList<ClusterOperationMetadata>();
   static ClusterOperationMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyClusterOperationMetadata();
+      _defaultInstance = _ReadonlyClusterOperationMetadata();
     return _defaultInstance;
   }
 

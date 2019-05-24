@@ -50,37 +50,37 @@ abstract class ServiceManagerServiceBase extends GeneratedService {
   GeneratedMessage createRequest(String method) {
     switch (method) {
       case 'ListServices':
-        return new ListServicesRequest();
+        return ListServicesRequest();
       case 'GetService':
-        return new GetServiceRequest();
+        return GetServiceRequest();
       case 'CreateService':
-        return new CreateServiceRequest();
+        return CreateServiceRequest();
       case 'DeleteService':
-        return new DeleteServiceRequest();
+        return DeleteServiceRequest();
       case 'UndeleteService':
-        return new UndeleteServiceRequest();
+        return UndeleteServiceRequest();
       case 'ListServiceConfigs':
-        return new ListServiceConfigsRequest();
+        return ListServiceConfigsRequest();
       case 'GetServiceConfig':
-        return new GetServiceConfigRequest();
+        return GetServiceConfigRequest();
       case 'CreateServiceConfig':
-        return new CreateServiceConfigRequest();
+        return CreateServiceConfigRequest();
       case 'SubmitConfigSource':
-        return new SubmitConfigSourceRequest();
+        return SubmitConfigSourceRequest();
       case 'ListServiceRollouts':
-        return new ListServiceRolloutsRequest();
+        return ListServiceRolloutsRequest();
       case 'GetServiceRollout':
-        return new GetServiceRolloutRequest();
+        return GetServiceRolloutRequest();
       case 'CreateServiceRollout':
-        return new CreateServiceRolloutRequest();
+        return CreateServiceRolloutRequest();
       case 'GenerateConfigReport':
-        return new GenerateConfigReportRequest();
+        return GenerateConfigReportRequest();
       case 'EnableService':
-        return new EnableServiceRequest();
+        return EnableServiceRequest();
       case 'DisableService':
-        return new DisableServiceRequest();
+        return DisableServiceRequest();
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 
@@ -118,7 +118,7 @@ abstract class ServiceManagerServiceBase extends GeneratedService {
       case 'DisableService':
         return this.disableService(ctx, request);
       default:
-        throw new ArgumentError('Unknown method: $method');
+        throw ArgumentError('Unknown method: $method');
     }
   }
 

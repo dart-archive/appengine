@@ -17,7 +17,7 @@ import 'data.pbenum.dart';
 export 'data.pbenum.dart';
 
 class FormatMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FormatMessage')
+  static final BuilderInfo _i = BuilderInfo('FormatMessage')
     ..aOS(1, 'format')
     ..pPS(2, 'parameters')
     ..hasRequiredFields = false;
@@ -29,13 +29,12 @@ class FormatMessage extends GeneratedMessage {
   FormatMessage.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FormatMessage clone() => new FormatMessage()..mergeFromMessage(this);
+  FormatMessage clone() => FormatMessage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FormatMessage create() => new FormatMessage();
-  static PbList<FormatMessage> createRepeated() => new PbList<FormatMessage>();
+  static FormatMessage create() => FormatMessage();
+  static PbList<FormatMessage> createRepeated() => PbList<FormatMessage>();
   static FormatMessage getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFormatMessage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFormatMessage();
     return _defaultInstance;
   }
 
@@ -58,7 +57,7 @@ class FormatMessage extends GeneratedMessage {
 class _ReadonlyFormatMessage extends FormatMessage with ReadonlyMessageMixin {}
 
 class StatusMessage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StatusMessage')
+  static final BuilderInfo _i = BuilderInfo('StatusMessage')
     ..aOB(1, 'isError')
     ..e<StatusMessage_Reference>(
         2,
@@ -78,13 +77,12 @@ class StatusMessage extends GeneratedMessage {
   StatusMessage.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StatusMessage clone() => new StatusMessage()..mergeFromMessage(this);
+  StatusMessage clone() => StatusMessage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StatusMessage create() => new StatusMessage();
-  static PbList<StatusMessage> createRepeated() => new PbList<StatusMessage>();
+  static StatusMessage create() => StatusMessage();
+  static PbList<StatusMessage> createRepeated() => PbList<StatusMessage>();
   static StatusMessage getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStatusMessage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStatusMessage();
     return _defaultInstance;
   }
 
@@ -121,7 +119,7 @@ class StatusMessage extends GeneratedMessage {
 class _ReadonlyStatusMessage extends StatusMessage with ReadonlyMessageMixin {}
 
 class SourceLocation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SourceLocation')
+  static final BuilderInfo _i = BuilderInfo('SourceLocation')
     ..aOS(1, 'path')
     ..a<int>(2, 'line', PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -133,14 +131,12 @@ class SourceLocation extends GeneratedMessage {
   SourceLocation.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SourceLocation clone() => new SourceLocation()..mergeFromMessage(this);
+  SourceLocation clone() => SourceLocation()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SourceLocation create() => new SourceLocation();
-  static PbList<SourceLocation> createRepeated() =>
-      new PbList<SourceLocation>();
+  static SourceLocation create() => SourceLocation();
+  static PbList<SourceLocation> createRepeated() => PbList<SourceLocation>();
   static SourceLocation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySourceLocation();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceLocation();
     return _defaultInstance;
   }
 
@@ -170,7 +166,7 @@ class _ReadonlySourceLocation extends SourceLocation with ReadonlyMessageMixin {
 }
 
 class Variable extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Variable')
+  static final BuilderInfo _i = BuilderInfo('Variable')
     ..aOS(1, 'name')
     ..aOS(2, 'value')
     ..pp<Variable>(
@@ -192,12 +188,12 @@ class Variable extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Variable.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Variable clone() => new Variable()..mergeFromMessage(this);
+  Variable clone() => Variable()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Variable create() => new Variable();
-  static PbList<Variable> createRepeated() => new PbList<Variable>();
+  static Variable create() => Variable();
+  static PbList<Variable> createRepeated() => PbList<Variable>();
   static Variable getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariable();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVariable();
     return _defaultInstance;
   }
 
@@ -252,7 +248,7 @@ class Variable extends GeneratedMessage {
 class _ReadonlyVariable extends Variable with ReadonlyMessageMixin {}
 
 class StackFrame extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StackFrame')
+  static final BuilderInfo _i = BuilderInfo('StackFrame')
     ..aOS(1, 'function')
     ..a<SourceLocation>(2, 'location', PbFieldType.OM,
         SourceLocation.getDefault, SourceLocation.create)
@@ -268,12 +264,12 @@ class StackFrame extends GeneratedMessage {
       : super.fromBuffer(i, r);
   StackFrame.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  StackFrame clone() => new StackFrame()..mergeFromMessage(this);
+  StackFrame clone() => StackFrame()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static StackFrame create() => new StackFrame();
-  static PbList<StackFrame> createRepeated() => new PbList<StackFrame>();
+  static StackFrame create() => StackFrame();
+  static PbList<StackFrame> createRepeated() => PbList<StackFrame>();
   static StackFrame getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyStackFrame();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyStackFrame();
     return _defaultInstance;
   }
 
@@ -306,7 +302,7 @@ class StackFrame extends GeneratedMessage {
 class _ReadonlyStackFrame extends StackFrame with ReadonlyMessageMixin {}
 
 class Breakpoint_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Breakpoint_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Breakpoint_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -319,14 +315,14 @@ class Breakpoint_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Breakpoint_LabelsEntry clone() =>
-      new Breakpoint_LabelsEntry()..mergeFromMessage(this);
+      Breakpoint_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Breakpoint_LabelsEntry create() => new Breakpoint_LabelsEntry();
+  static Breakpoint_LabelsEntry create() => Breakpoint_LabelsEntry();
   static PbList<Breakpoint_LabelsEntry> createRepeated() =>
-      new PbList<Breakpoint_LabelsEntry>();
+      PbList<Breakpoint_LabelsEntry>();
   static Breakpoint_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBreakpoint_LabelsEntry();
+      _defaultInstance = _ReadonlyBreakpoint_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -357,7 +353,7 @@ class _ReadonlyBreakpoint_LabelsEntry extends Breakpoint_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Breakpoint extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Breakpoint')
+  static final BuilderInfo _i = BuilderInfo('Breakpoint')
     ..aOS(1, 'id')
     ..a<SourceLocation>(2, 'location', PbFieldType.OM,
         SourceLocation.getDefault, SourceLocation.create)
@@ -410,12 +406,12 @@ class Breakpoint extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Breakpoint.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Breakpoint clone() => new Breakpoint()..mergeFromMessage(this);
+  Breakpoint clone() => Breakpoint()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Breakpoint create() => new Breakpoint();
-  static PbList<Breakpoint> createRepeated() => new PbList<Breakpoint>();
+  static Breakpoint create() => Breakpoint();
+  static PbList<Breakpoint> createRepeated() => PbList<Breakpoint>();
   static Breakpoint getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBreakpoint();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyBreakpoint();
     return _defaultInstance;
   }
 
@@ -526,7 +522,7 @@ class Breakpoint extends GeneratedMessage {
 class _ReadonlyBreakpoint extends Breakpoint with ReadonlyMessageMixin {}
 
 class Debuggee_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Debuggee_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Debuggee_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -539,14 +535,14 @@ class Debuggee_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Debuggee_LabelsEntry clone() =>
-      new Debuggee_LabelsEntry()..mergeFromMessage(this);
+      Debuggee_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Debuggee_LabelsEntry create() => new Debuggee_LabelsEntry();
+  static Debuggee_LabelsEntry create() => Debuggee_LabelsEntry();
   static PbList<Debuggee_LabelsEntry> createRepeated() =>
-      new PbList<Debuggee_LabelsEntry>();
+      PbList<Debuggee_LabelsEntry>();
   static Debuggee_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDebuggee_LabelsEntry();
+      _defaultInstance = _ReadonlyDebuggee_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -576,7 +572,7 @@ class _ReadonlyDebuggee_LabelsEntry extends Debuggee_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Debuggee extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Debuggee')
+  static final BuilderInfo _i = BuilderInfo('Debuggee')
     ..aOS(1, 'id')
     ..aOS(2, 'project')
     ..aOS(3, 'uniquifier')
@@ -608,12 +604,12 @@ class Debuggee extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Debuggee.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Debuggee clone() => new Debuggee()..mergeFromMessage(this);
+  Debuggee clone() => Debuggee()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Debuggee create() => new Debuggee();
-  static PbList<Debuggee> createRepeated() => new PbList<Debuggee>();
+  static Debuggee create() => Debuggee();
+  static PbList<Debuggee> createRepeated() => PbList<Debuggee>();
   static Debuggee getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDebuggee();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDebuggee();
     return _defaultInstance;
   }
 

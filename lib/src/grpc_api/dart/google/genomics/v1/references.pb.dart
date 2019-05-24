@@ -11,7 +11,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Reference extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Reference')
+  static final BuilderInfo _i = BuilderInfo('Reference')
     ..aOS(1, 'id')
     ..aInt64(2, 'length')
     ..aOS(3, 'md5checksum')
@@ -27,12 +27,12 @@ class Reference extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Reference.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Reference clone() => new Reference()..mergeFromMessage(this);
+  Reference clone() => Reference()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Reference create() => new Reference();
-  static PbList<Reference> createRepeated() => new PbList<Reference>();
+  static Reference create() => Reference();
+  static PbList<Reference> createRepeated() => PbList<Reference>();
   static Reference getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyReference();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReference();
     return _defaultInstance;
   }
 
@@ -95,7 +95,7 @@ class Reference extends GeneratedMessage {
 class _ReadonlyReference extends Reference with ReadonlyMessageMixin {}
 
 class ReferenceSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReferenceSet')
+  static final BuilderInfo _i = BuilderInfo('ReferenceSet')
     ..aOS(1, 'id')
     ..pPS(2, 'referenceIds')
     ..aOS(3, 'md5checksum')
@@ -113,13 +113,12 @@ class ReferenceSet extends GeneratedMessage {
   ReferenceSet.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReferenceSet clone() => new ReferenceSet()..mergeFromMessage(this);
+  ReferenceSet clone() => ReferenceSet()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReferenceSet create() => new ReferenceSet();
-  static PbList<ReferenceSet> createRepeated() => new PbList<ReferenceSet>();
+  static ReferenceSet create() => ReferenceSet();
+  static PbList<ReferenceSet> createRepeated() => PbList<ReferenceSet>();
   static ReferenceSet getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReferenceSet();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReferenceSet();
     return _defaultInstance;
   }
 
@@ -184,7 +183,7 @@ class ReferenceSet extends GeneratedMessage {
 class _ReadonlyReferenceSet extends ReferenceSet with ReadonlyMessageMixin {}
 
 class SearchReferenceSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchReferenceSetsRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchReferenceSetsRequest')
     ..pPS(1, 'md5checksums')
     ..pPS(2, 'accessions')
     ..aOS(3, 'assemblyId')
@@ -200,15 +199,14 @@ class SearchReferenceSetsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchReferenceSetsRequest clone() =>
-      new SearchReferenceSetsRequest()..mergeFromMessage(this);
+      SearchReferenceSetsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchReferenceSetsRequest create() =>
-      new SearchReferenceSetsRequest();
+  static SearchReferenceSetsRequest create() => SearchReferenceSetsRequest();
   static PbList<SearchReferenceSetsRequest> createRepeated() =>
-      new PbList<SearchReferenceSetsRequest>();
+      PbList<SearchReferenceSetsRequest>();
   static SearchReferenceSetsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchReferenceSetsRequest();
+      _defaultInstance = _ReadonlySearchReferenceSetsRequest();
     return _defaultInstance;
   }
 
@@ -251,7 +249,7 @@ class _ReadonlySearchReferenceSetsRequest extends SearchReferenceSetsRequest
     with ReadonlyMessageMixin {}
 
 class SearchReferenceSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchReferenceSetsResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchReferenceSetsResponse')
     ..pp<ReferenceSet>(1, 'referenceSets', PbFieldType.PM,
         ReferenceSet.$checkItem, ReferenceSet.create)
     ..aOS(2, 'nextPageToken')
@@ -265,15 +263,14 @@ class SearchReferenceSetsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchReferenceSetsResponse clone() =>
-      new SearchReferenceSetsResponse()..mergeFromMessage(this);
+      SearchReferenceSetsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchReferenceSetsResponse create() =>
-      new SearchReferenceSetsResponse();
+  static SearchReferenceSetsResponse create() => SearchReferenceSetsResponse();
   static PbList<SearchReferenceSetsResponse> createRepeated() =>
-      new PbList<SearchReferenceSetsResponse>();
+      PbList<SearchReferenceSetsResponse>();
   static SearchReferenceSetsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchReferenceSetsResponse();
+      _defaultInstance = _ReadonlySearchReferenceSetsResponse();
     return _defaultInstance;
   }
 
@@ -298,7 +295,7 @@ class _ReadonlySearchReferenceSetsResponse extends SearchReferenceSetsResponse
     with ReadonlyMessageMixin {}
 
 class GetReferenceSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetReferenceSetRequest')
+  static final BuilderInfo _i = BuilderInfo('GetReferenceSetRequest')
     ..aOS(1, 'referenceSetId')
     ..hasRequiredFields = false;
 
@@ -310,14 +307,14 @@ class GetReferenceSetRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetReferenceSetRequest clone() =>
-      new GetReferenceSetRequest()..mergeFromMessage(this);
+      GetReferenceSetRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetReferenceSetRequest create() => new GetReferenceSetRequest();
+  static GetReferenceSetRequest create() => GetReferenceSetRequest();
   static PbList<GetReferenceSetRequest> createRepeated() =>
-      new PbList<GetReferenceSetRequest>();
+      PbList<GetReferenceSetRequest>();
   static GetReferenceSetRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetReferenceSetRequest();
+      _defaultInstance = _ReadonlyGetReferenceSetRequest();
     return _defaultInstance;
   }
 
@@ -340,7 +337,7 @@ class _ReadonlyGetReferenceSetRequest extends GetReferenceSetRequest
     with ReadonlyMessageMixin {}
 
 class SearchReferencesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchReferencesRequest')
+  static final BuilderInfo _i = BuilderInfo('SearchReferencesRequest')
     ..pPS(1, 'md5checksums')
     ..pPS(2, 'accessions')
     ..aOS(3, 'referenceSetId')
@@ -356,14 +353,14 @@ class SearchReferencesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchReferencesRequest clone() =>
-      new SearchReferencesRequest()..mergeFromMessage(this);
+      SearchReferencesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchReferencesRequest create() => new SearchReferencesRequest();
+  static SearchReferencesRequest create() => SearchReferencesRequest();
   static PbList<SearchReferencesRequest> createRepeated() =>
-      new PbList<SearchReferencesRequest>();
+      PbList<SearchReferencesRequest>();
   static SearchReferencesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchReferencesRequest();
+      _defaultInstance = _ReadonlySearchReferencesRequest();
     return _defaultInstance;
   }
 
@@ -406,7 +403,7 @@ class _ReadonlySearchReferencesRequest extends SearchReferencesRequest
     with ReadonlyMessageMixin {}
 
 class SearchReferencesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchReferencesResponse')
+  static final BuilderInfo _i = BuilderInfo('SearchReferencesResponse')
     ..pp<Reference>(
         1, 'references', PbFieldType.PM, Reference.$checkItem, Reference.create)
     ..aOS(2, 'nextPageToken')
@@ -420,14 +417,14 @@ class SearchReferencesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchReferencesResponse clone() =>
-      new SearchReferencesResponse()..mergeFromMessage(this);
+      SearchReferencesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SearchReferencesResponse create() => new SearchReferencesResponse();
+  static SearchReferencesResponse create() => SearchReferencesResponse();
   static PbList<SearchReferencesResponse> createRepeated() =>
-      new PbList<SearchReferencesResponse>();
+      PbList<SearchReferencesResponse>();
   static SearchReferencesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchReferencesResponse();
+      _defaultInstance = _ReadonlySearchReferencesResponse();
     return _defaultInstance;
   }
 
@@ -452,7 +449,7 @@ class _ReadonlySearchReferencesResponse extends SearchReferencesResponse
     with ReadonlyMessageMixin {}
 
 class GetReferenceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetReferenceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetReferenceRequest')
     ..aOS(1, 'referenceId')
     ..hasRequiredFields = false;
 
@@ -463,15 +460,14 @@ class GetReferenceRequest extends GeneratedMessage {
   GetReferenceRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetReferenceRequest clone() =>
-      new GetReferenceRequest()..mergeFromMessage(this);
+  GetReferenceRequest clone() => GetReferenceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetReferenceRequest create() => new GetReferenceRequest();
+  static GetReferenceRequest create() => GetReferenceRequest();
   static PbList<GetReferenceRequest> createRepeated() =>
-      new PbList<GetReferenceRequest>();
+      PbList<GetReferenceRequest>();
   static GetReferenceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetReferenceRequest();
+      _defaultInstance = _ReadonlyGetReferenceRequest();
     return _defaultInstance;
   }
 
@@ -493,7 +489,7 @@ class _ReadonlyGetReferenceRequest extends GetReferenceRequest
     with ReadonlyMessageMixin {}
 
 class ListBasesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListBasesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListBasesRequest')
     ..aOS(1, 'referenceId')
     ..aInt64(2, 'start')
     ..aInt64(3, 'end')
@@ -508,14 +504,14 @@ class ListBasesRequest extends GeneratedMessage {
   ListBasesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListBasesRequest clone() => new ListBasesRequest()..mergeFromMessage(this);
+  ListBasesRequest clone() => ListBasesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListBasesRequest create() => new ListBasesRequest();
+  static ListBasesRequest create() => ListBasesRequest();
   static PbList<ListBasesRequest> createRepeated() =>
-      new PbList<ListBasesRequest>();
+      PbList<ListBasesRequest>();
   static ListBasesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListBasesRequest();
+      _defaultInstance = _ReadonlyListBasesRequest();
     return _defaultInstance;
   }
 
@@ -569,7 +565,7 @@ class _ReadonlyListBasesRequest extends ListBasesRequest
     with ReadonlyMessageMixin {}
 
 class ListBasesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListBasesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListBasesResponse')
     ..aInt64(1, 'offset')
     ..aOS(2, 'sequence')
     ..aOS(3, 'nextPageToken')
@@ -582,14 +578,14 @@ class ListBasesResponse extends GeneratedMessage {
   ListBasesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListBasesResponse clone() => new ListBasesResponse()..mergeFromMessage(this);
+  ListBasesResponse clone() => ListBasesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListBasesResponse create() => new ListBasesResponse();
+  static ListBasesResponse create() => ListBasesResponse();
   static PbList<ListBasesResponse> createRepeated() =>
-      new PbList<ListBasesResponse>();
+      PbList<ListBasesResponse>();
   static ListBasesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListBasesResponse();
+      _defaultInstance = _ReadonlyListBasesResponse();
     return _defaultInstance;
   }
 
@@ -632,35 +628,35 @@ class ReferenceServiceV1Api {
 
   Future<SearchReferenceSetsResponse> searchReferenceSets(
       ClientContext ctx, SearchReferenceSetsRequest request) {
-    var emptyResponse = new SearchReferenceSetsResponse();
+    var emptyResponse = SearchReferenceSetsResponse();
     return _client.invoke<SearchReferenceSetsResponse>(ctx,
         'ReferenceServiceV1', 'SearchReferenceSets', request, emptyResponse);
   }
 
   Future<ReferenceSet> getReferenceSet(
       ClientContext ctx, GetReferenceSetRequest request) {
-    var emptyResponse = new ReferenceSet();
+    var emptyResponse = ReferenceSet();
     return _client.invoke<ReferenceSet>(
         ctx, 'ReferenceServiceV1', 'GetReferenceSet', request, emptyResponse);
   }
 
   Future<SearchReferencesResponse> searchReferences(
       ClientContext ctx, SearchReferencesRequest request) {
-    var emptyResponse = new SearchReferencesResponse();
+    var emptyResponse = SearchReferencesResponse();
     return _client.invoke<SearchReferencesResponse>(
         ctx, 'ReferenceServiceV1', 'SearchReferences', request, emptyResponse);
   }
 
   Future<Reference> getReference(
       ClientContext ctx, GetReferenceRequest request) {
-    var emptyResponse = new Reference();
+    var emptyResponse = Reference();
     return _client.invoke<Reference>(
         ctx, 'ReferenceServiceV1', 'GetReference', request, emptyResponse);
   }
 
   Future<ListBasesResponse> listBases(
       ClientContext ctx, ListBasesRequest request) {
-    var emptyResponse = new ListBasesResponse();
+    var emptyResponse = ListBasesResponse();
     return _client.invoke<ListBasesResponse>(
         ctx, 'ReferenceServiceV1', 'ListBases', request, emptyResponse);
   }

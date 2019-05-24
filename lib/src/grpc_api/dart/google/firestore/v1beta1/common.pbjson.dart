@@ -3,18 +3,18 @@
 ///
 // ignore_for_file: non_constant_identifier_names,library_prefixes
 
-const DocumentMask$json = const {
+const DocumentMask$json = {
   '1': 'DocumentMask',
-  '2': const [
-    const {'1': 'field_paths', '3': 1, '4': 3, '5': 9, '10': 'fieldPaths'},
+  '2': [
+    {'1': 'field_paths', '3': 1, '4': 3, '5': 9, '10': 'fieldPaths'},
   ],
 };
 
-const Precondition$json = const {
+const Precondition$json = {
   '1': 'Precondition',
-  '2': const [
-    const {'1': 'exists', '3': 1, '4': 1, '5': 8, '9': 0, '10': 'exists'},
-    const {
+  '2': [
+    {'1': 'exists', '3': 1, '4': 1, '5': 8, '9': 0, '10': 'exists'},
+    {
       '1': 'update_time',
       '3': 2,
       '4': 1,
@@ -24,15 +24,15 @@ const Precondition$json = const {
       '10': 'updateTime'
     },
   ],
-  '8': const [
-    const {'1': 'condition_type'},
+  '8': [
+    {'1': 'condition_type'},
   ],
 };
 
-const TransactionOptions$json = const {
+const TransactionOptions$json = {
   '1': 'TransactionOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'read_only',
       '3': 2,
       '4': 1,
@@ -41,7 +41,7 @@ const TransactionOptions$json = const {
       '9': 0,
       '10': 'readOnly'
     },
-    const {
+    {
       '1': 'read_write',
       '3': 3,
       '4': 1,
@@ -51,19 +51,16 @@ const TransactionOptions$json = const {
       '10': 'readWrite'
     },
   ],
-  '3': const [
-    TransactionOptions_ReadWrite$json,
-    TransactionOptions_ReadOnly$json
-  ],
-  '8': const [
-    const {'1': 'mode'},
+  '3': [TransactionOptions_ReadWrite$json, TransactionOptions_ReadOnly$json],
+  '8': [
+    {'1': 'mode'},
   ],
 };
 
-const TransactionOptions_ReadWrite$json = const {
+const TransactionOptions_ReadWrite$json = {
   '1': 'ReadWrite',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'retry_transaction',
       '3': 1,
       '4': 1,
@@ -73,10 +70,10 @@ const TransactionOptions_ReadWrite$json = const {
   ],
 };
 
-const TransactionOptions_ReadOnly$json = const {
+const TransactionOptions_ReadOnly$json = {
   '1': 'ReadOnly',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'read_time',
       '3': 2,
       '4': 1,
@@ -86,7 +83,7 @@ const TransactionOptions_ReadOnly$json = const {
       '10': 'readTime'
     },
   ],
-  '8': const [
-    const {'1': 'consistency_selector'},
+  '8': [
+    {'1': 'consistency_selector'},
   ],
 };

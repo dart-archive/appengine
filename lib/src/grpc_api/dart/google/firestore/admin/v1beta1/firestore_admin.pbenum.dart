@@ -9,13 +9,12 @@ import 'package:protobuf/protobuf.dart';
 
 class IndexOperationMetadata_OperationType extends ProtobufEnum {
   static const IndexOperationMetadata_OperationType OPERATION_TYPE_UNSPECIFIED =
-      const IndexOperationMetadata_OperationType._(
-          0, 'OPERATION_TYPE_UNSPECIFIED');
+      IndexOperationMetadata_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
   static const IndexOperationMetadata_OperationType CREATING_INDEX =
-      const IndexOperationMetadata_OperationType._(1, 'CREATING_INDEX');
+      IndexOperationMetadata_OperationType._(1, 'CREATING_INDEX');
 
   static const List<IndexOperationMetadata_OperationType> values =
-      const <IndexOperationMetadata_OperationType>[
+      <IndexOperationMetadata_OperationType>[
     OPERATION_TYPE_UNSPECIFIED,
     CREATING_INDEX,
   ];

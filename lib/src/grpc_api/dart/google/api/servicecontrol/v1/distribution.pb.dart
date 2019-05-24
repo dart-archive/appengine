@@ -10,7 +10,7 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
 
 class Distribution_LinearBuckets extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Distribution_LinearBuckets')
+  static final BuilderInfo _i = BuilderInfo('Distribution_LinearBuckets')
     ..a<int>(1, 'numFiniteBuckets', PbFieldType.O3)
     ..a<double>(2, 'width', PbFieldType.OD)
     ..a<double>(3, 'offset', PbFieldType.OD)
@@ -24,15 +24,14 @@ class Distribution_LinearBuckets extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Distribution_LinearBuckets clone() =>
-      new Distribution_LinearBuckets()..mergeFromMessage(this);
+      Distribution_LinearBuckets()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Distribution_LinearBuckets create() =>
-      new Distribution_LinearBuckets();
+  static Distribution_LinearBuckets create() => Distribution_LinearBuckets();
   static PbList<Distribution_LinearBuckets> createRepeated() =>
-      new PbList<Distribution_LinearBuckets>();
+      PbList<Distribution_LinearBuckets>();
   static Distribution_LinearBuckets getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution_LinearBuckets();
+      _defaultInstance = _ReadonlyDistribution_LinearBuckets();
     return _defaultInstance;
   }
 
@@ -71,12 +70,11 @@ class _ReadonlyDistribution_LinearBuckets extends Distribution_LinearBuckets
     with ReadonlyMessageMixin {}
 
 class Distribution_ExponentialBuckets extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Distribution_ExponentialBuckets')
-        ..a<int>(1, 'numFiniteBuckets', PbFieldType.O3)
-        ..a<double>(2, 'growthFactor', PbFieldType.OD)
-        ..a<double>(3, 'scale', PbFieldType.OD)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('Distribution_ExponentialBuckets')
+    ..a<int>(1, 'numFiniteBuckets', PbFieldType.O3)
+    ..a<double>(2, 'growthFactor', PbFieldType.OD)
+    ..a<double>(3, 'scale', PbFieldType.OD)
+    ..hasRequiredFields = false;
 
   Distribution_ExponentialBuckets() : super();
   Distribution_ExponentialBuckets.fromBuffer(List<int> i,
@@ -86,15 +84,15 @@ class Distribution_ExponentialBuckets extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Distribution_ExponentialBuckets clone() =>
-      new Distribution_ExponentialBuckets()..mergeFromMessage(this);
+      Distribution_ExponentialBuckets()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Distribution_ExponentialBuckets create() =>
-      new Distribution_ExponentialBuckets();
+      Distribution_ExponentialBuckets();
   static PbList<Distribution_ExponentialBuckets> createRepeated() =>
-      new PbList<Distribution_ExponentialBuckets>();
+      PbList<Distribution_ExponentialBuckets>();
   static Distribution_ExponentialBuckets getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution_ExponentialBuckets();
+      _defaultInstance = _ReadonlyDistribution_ExponentialBuckets();
     return _defaultInstance;
   }
 
@@ -133,7 +131,7 @@ class _ReadonlyDistribution_ExponentialBuckets
     extends Distribution_ExponentialBuckets with ReadonlyMessageMixin {}
 
 class Distribution_ExplicitBuckets extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Distribution_ExplicitBuckets')
+  static final BuilderInfo _i = BuilderInfo('Distribution_ExplicitBuckets')
     ..p<double>(1, 'bounds', PbFieldType.PD)
     ..hasRequiredFields = false;
 
@@ -145,15 +143,15 @@ class Distribution_ExplicitBuckets extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Distribution_ExplicitBuckets clone() =>
-      new Distribution_ExplicitBuckets()..mergeFromMessage(this);
+      Distribution_ExplicitBuckets()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static Distribution_ExplicitBuckets create() =>
-      new Distribution_ExplicitBuckets();
+      Distribution_ExplicitBuckets();
   static PbList<Distribution_ExplicitBuckets> createRepeated() =>
-      new PbList<Distribution_ExplicitBuckets>();
+      PbList<Distribution_ExplicitBuckets>();
   static Distribution_ExplicitBuckets getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution_ExplicitBuckets();
+      _defaultInstance = _ReadonlyDistribution_ExplicitBuckets();
     return _defaultInstance;
   }
 
@@ -170,7 +168,7 @@ class _ReadonlyDistribution_ExplicitBuckets extends Distribution_ExplicitBuckets
     with ReadonlyMessageMixin {}
 
 class Distribution extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Distribution')
+  static final BuilderInfo _i = BuilderInfo('Distribution')
     ..aInt64(1, 'count')
     ..a<double>(2, 'mean', PbFieldType.OD)
     ..a<double>(3, 'minimum', PbFieldType.OD)
@@ -204,13 +202,12 @@ class Distribution extends GeneratedMessage {
   Distribution.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Distribution clone() => new Distribution()..mergeFromMessage(this);
+  Distribution clone() => Distribution()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Distribution create() => new Distribution();
-  static PbList<Distribution> createRepeated() => new PbList<Distribution>();
+  static Distribution create() => Distribution();
+  static PbList<Distribution> createRepeated() => PbList<Distribution>();
   static Distribution getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDistribution();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDistribution();
     return _defaultInstance;
   }
 

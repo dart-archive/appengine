@@ -24,7 +24,7 @@ import 'spanner.pbenum.dart';
 export 'spanner.pbenum.dart';
 
 class CreateSessionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateSessionRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateSessionRequest')
     ..aOS(1, 'database')
     ..a<Session>(
         2, 'session', PbFieldType.OM, Session.getDefault, Session.create)
@@ -38,14 +38,14 @@ class CreateSessionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateSessionRequest clone() =>
-      new CreateSessionRequest()..mergeFromMessage(this);
+      CreateSessionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateSessionRequest create() => new CreateSessionRequest();
+  static CreateSessionRequest create() => CreateSessionRequest();
   static PbList<CreateSessionRequest> createRepeated() =>
-      new PbList<CreateSessionRequest>();
+      PbList<CreateSessionRequest>();
   static CreateSessionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateSessionRequest();
+      _defaultInstance = _ReadonlyCreateSessionRequest();
     return _defaultInstance;
   }
 
@@ -75,7 +75,7 @@ class _ReadonlyCreateSessionRequest extends CreateSessionRequest
     with ReadonlyMessageMixin {}
 
 class Session_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Session_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('Session_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -87,15 +87,14 @@ class Session_LabelsEntry extends GeneratedMessage {
   Session_LabelsEntry.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Session_LabelsEntry clone() =>
-      new Session_LabelsEntry()..mergeFromMessage(this);
+  Session_LabelsEntry clone() => Session_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Session_LabelsEntry create() => new Session_LabelsEntry();
+  static Session_LabelsEntry create() => Session_LabelsEntry();
   static PbList<Session_LabelsEntry> createRepeated() =>
-      new PbList<Session_LabelsEntry>();
+      PbList<Session_LabelsEntry>();
   static Session_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySession_LabelsEntry();
+      _defaultInstance = _ReadonlySession_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -125,7 +124,7 @@ class _ReadonlySession_LabelsEntry extends Session_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class Session extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Session')
+  static final BuilderInfo _i = BuilderInfo('Session')
     ..aOS(1, 'name')
     ..pp<Session_LabelsEntry>(2, 'labels', PbFieldType.PM,
         Session_LabelsEntry.$checkItem, Session_LabelsEntry.create)
@@ -149,12 +148,12 @@ class Session extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Session.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Session clone() => new Session()..mergeFromMessage(this);
+  Session clone() => Session()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Session create() => new Session();
-  static PbList<Session> createRepeated() => new PbList<Session>();
+  static Session create() => Session();
+  static PbList<Session> createRepeated() => PbList<Session>();
   static Session getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySession();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySession();
     return _defaultInstance;
   }
 
@@ -193,7 +192,7 @@ class Session extends GeneratedMessage {
 class _ReadonlySession extends Session with ReadonlyMessageMixin {}
 
 class GetSessionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSessionRequest')
+  static final BuilderInfo _i = BuilderInfo('GetSessionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -204,14 +203,14 @@ class GetSessionRequest extends GeneratedMessage {
   GetSessionRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetSessionRequest clone() => new GetSessionRequest()..mergeFromMessage(this);
+  GetSessionRequest clone() => GetSessionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetSessionRequest create() => new GetSessionRequest();
+  static GetSessionRequest create() => GetSessionRequest();
   static PbList<GetSessionRequest> createRepeated() =>
-      new PbList<GetSessionRequest>();
+      PbList<GetSessionRequest>();
   static GetSessionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSessionRequest();
+      _defaultInstance = _ReadonlyGetSessionRequest();
     return _defaultInstance;
   }
 
@@ -233,7 +232,7 @@ class _ReadonlyGetSessionRequest extends GetSessionRequest
     with ReadonlyMessageMixin {}
 
 class ListSessionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSessionsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListSessionsRequest')
     ..aOS(1, 'database')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -247,15 +246,14 @@ class ListSessionsRequest extends GeneratedMessage {
   ListSessionsRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListSessionsRequest clone() =>
-      new ListSessionsRequest()..mergeFromMessage(this);
+  ListSessionsRequest clone() => ListSessionsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListSessionsRequest create() => new ListSessionsRequest();
+  static ListSessionsRequest create() => ListSessionsRequest();
   static PbList<ListSessionsRequest> createRepeated() =>
-      new PbList<ListSessionsRequest>();
+      PbList<ListSessionsRequest>();
   static ListSessionsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSessionsRequest();
+      _defaultInstance = _ReadonlyListSessionsRequest();
     return _defaultInstance;
   }
 
@@ -301,7 +299,7 @@ class _ReadonlyListSessionsRequest extends ListSessionsRequest
     with ReadonlyMessageMixin {}
 
 class ListSessionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSessionsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListSessionsResponse')
     ..pp<Session>(
         1, 'sessions', PbFieldType.PM, Session.$checkItem, Session.create)
     ..aOS(2, 'nextPageToken')
@@ -315,14 +313,14 @@ class ListSessionsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSessionsResponse clone() =>
-      new ListSessionsResponse()..mergeFromMessage(this);
+      ListSessionsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListSessionsResponse create() => new ListSessionsResponse();
+  static ListSessionsResponse create() => ListSessionsResponse();
   static PbList<ListSessionsResponse> createRepeated() =>
-      new PbList<ListSessionsResponse>();
+      PbList<ListSessionsResponse>();
   static ListSessionsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSessionsResponse();
+      _defaultInstance = _ReadonlyListSessionsResponse();
     return _defaultInstance;
   }
 
@@ -346,7 +344,7 @@ class _ReadonlyListSessionsResponse extends ListSessionsResponse
     with ReadonlyMessageMixin {}
 
 class DeleteSessionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSessionRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteSessionRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -358,14 +356,14 @@ class DeleteSessionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteSessionRequest clone() =>
-      new DeleteSessionRequest()..mergeFromMessage(this);
+      DeleteSessionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteSessionRequest create() => new DeleteSessionRequest();
+  static DeleteSessionRequest create() => DeleteSessionRequest();
   static PbList<DeleteSessionRequest> createRepeated() =>
-      new PbList<DeleteSessionRequest>();
+      PbList<DeleteSessionRequest>();
   static DeleteSessionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSessionRequest();
+      _defaultInstance = _ReadonlyDeleteSessionRequest();
     return _defaultInstance;
   }
 
@@ -387,11 +385,10 @@ class _ReadonlyDeleteSessionRequest extends DeleteSessionRequest
     with ReadonlyMessageMixin {}
 
 class ExecuteSqlRequest_ParamTypesEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ExecuteSqlRequest_ParamTypesEntry')
-        ..aOS(1, 'key')
-        ..a<Type>(2, 'value', PbFieldType.OM, Type.getDefault, Type.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ExecuteSqlRequest_ParamTypesEntry')
+    ..aOS(1, 'key')
+    ..a<Type>(2, 'value', PbFieldType.OM, Type.getDefault, Type.create)
+    ..hasRequiredFields = false;
 
   ExecuteSqlRequest_ParamTypesEntry() : super();
   ExecuteSqlRequest_ParamTypesEntry.fromBuffer(List<int> i,
@@ -401,15 +398,15 @@ class ExecuteSqlRequest_ParamTypesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExecuteSqlRequest_ParamTypesEntry clone() =>
-      new ExecuteSqlRequest_ParamTypesEntry()..mergeFromMessage(this);
+      ExecuteSqlRequest_ParamTypesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ExecuteSqlRequest_ParamTypesEntry create() =>
-      new ExecuteSqlRequest_ParamTypesEntry();
+      ExecuteSqlRequest_ParamTypesEntry();
   static PbList<ExecuteSqlRequest_ParamTypesEntry> createRepeated() =>
-      new PbList<ExecuteSqlRequest_ParamTypesEntry>();
+      PbList<ExecuteSqlRequest_ParamTypesEntry>();
   static ExecuteSqlRequest_ParamTypesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExecuteSqlRequest_ParamTypesEntry();
+      _defaultInstance = _ReadonlyExecuteSqlRequest_ParamTypesEntry();
     return _defaultInstance;
   }
 
@@ -440,7 +437,7 @@ class _ReadonlyExecuteSqlRequest_ParamTypesEntry
     extends ExecuteSqlRequest_ParamTypesEntry with ReadonlyMessageMixin {}
 
 class ExecuteSqlRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExecuteSqlRequest')
+  static final BuilderInfo _i = BuilderInfo('ExecuteSqlRequest')
     ..aOS(1, 'session')
     ..a<TransactionSelector>(2, 'transaction', PbFieldType.OM,
         TransactionSelector.getDefault, TransactionSelector.create)
@@ -471,14 +468,14 @@ class ExecuteSqlRequest extends GeneratedMessage {
   ExecuteSqlRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExecuteSqlRequest clone() => new ExecuteSqlRequest()..mergeFromMessage(this);
+  ExecuteSqlRequest clone() => ExecuteSqlRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExecuteSqlRequest create() => new ExecuteSqlRequest();
+  static ExecuteSqlRequest create() => ExecuteSqlRequest();
   static PbList<ExecuteSqlRequest> createRepeated() =>
-      new PbList<ExecuteSqlRequest>();
+      PbList<ExecuteSqlRequest>();
   static ExecuteSqlRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExecuteSqlRequest();
+      _defaultInstance = _ReadonlyExecuteSqlRequest();
     return _defaultInstance;
   }
 
@@ -550,7 +547,7 @@ class _ReadonlyExecuteSqlRequest extends ExecuteSqlRequest
     with ReadonlyMessageMixin {}
 
 class PartitionOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionOptions')
+  static final BuilderInfo _i = BuilderInfo('PartitionOptions')
     ..aInt64(1, 'partitionSizeBytes')
     ..aInt64(2, 'maxPartitions')
     ..hasRequiredFields = false;
@@ -562,14 +559,14 @@ class PartitionOptions extends GeneratedMessage {
   PartitionOptions.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PartitionOptions clone() => new PartitionOptions()..mergeFromMessage(this);
+  PartitionOptions clone() => PartitionOptions()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PartitionOptions create() => new PartitionOptions();
+  static PartitionOptions create() => PartitionOptions();
   static PbList<PartitionOptions> createRepeated() =>
-      new PbList<PartitionOptions>();
+      PbList<PartitionOptions>();
   static PartitionOptions getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionOptions();
+      _defaultInstance = _ReadonlyPartitionOptions();
     return _defaultInstance;
   }
 
@@ -600,7 +597,7 @@ class _ReadonlyPartitionOptions extends PartitionOptions
 
 class PartitionQueryRequest_ParamTypesEntry extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('PartitionQueryRequest_ParamTypesEntry')
+      BuilderInfo('PartitionQueryRequest_ParamTypesEntry')
         ..aOS(1, 'key')
         ..a<Type>(2, 'value', PbFieldType.OM, Type.getDefault, Type.create)
         ..hasRequiredFields = false;
@@ -613,15 +610,15 @@ class PartitionQueryRequest_ParamTypesEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PartitionQueryRequest_ParamTypesEntry clone() =>
-      new PartitionQueryRequest_ParamTypesEntry()..mergeFromMessage(this);
+      PartitionQueryRequest_ParamTypesEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static PartitionQueryRequest_ParamTypesEntry create() =>
-      new PartitionQueryRequest_ParamTypesEntry();
+      PartitionQueryRequest_ParamTypesEntry();
   static PbList<PartitionQueryRequest_ParamTypesEntry> createRepeated() =>
-      new PbList<PartitionQueryRequest_ParamTypesEntry>();
+      PbList<PartitionQueryRequest_ParamTypesEntry>();
   static PartitionQueryRequest_ParamTypesEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionQueryRequest_ParamTypesEntry();
+      _defaultInstance = _ReadonlyPartitionQueryRequest_ParamTypesEntry();
     return _defaultInstance;
   }
 
@@ -652,7 +649,7 @@ class _ReadonlyPartitionQueryRequest_ParamTypesEntry
     extends PartitionQueryRequest_ParamTypesEntry with ReadonlyMessageMixin {}
 
 class PartitionQueryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionQueryRequest')
+  static final BuilderInfo _i = BuilderInfo('PartitionQueryRequest')
     ..aOS(1, 'session')
     ..a<TransactionSelector>(2, 'transaction', PbFieldType.OM,
         TransactionSelector.getDefault, TransactionSelector.create)
@@ -677,14 +674,14 @@ class PartitionQueryRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PartitionQueryRequest clone() =>
-      new PartitionQueryRequest()..mergeFromMessage(this);
+      PartitionQueryRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PartitionQueryRequest create() => new PartitionQueryRequest();
+  static PartitionQueryRequest create() => PartitionQueryRequest();
   static PbList<PartitionQueryRequest> createRepeated() =>
-      new PbList<PartitionQueryRequest>();
+      PbList<PartitionQueryRequest>();
   static PartitionQueryRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionQueryRequest();
+      _defaultInstance = _ReadonlyPartitionQueryRequest();
     return _defaultInstance;
   }
 
@@ -741,7 +738,7 @@ class _ReadonlyPartitionQueryRequest extends PartitionQueryRequest
     with ReadonlyMessageMixin {}
 
 class PartitionReadRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionReadRequest')
+  static final BuilderInfo _i = BuilderInfo('PartitionReadRequest')
     ..aOS(1, 'session')
     ..a<TransactionSelector>(2, 'transaction', PbFieldType.OM,
         TransactionSelector.getDefault, TransactionSelector.create)
@@ -761,14 +758,14 @@ class PartitionReadRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PartitionReadRequest clone() =>
-      new PartitionReadRequest()..mergeFromMessage(this);
+      PartitionReadRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PartitionReadRequest create() => new PartitionReadRequest();
+  static PartitionReadRequest create() => PartitionReadRequest();
   static PbList<PartitionReadRequest> createRepeated() =>
-      new PbList<PartitionReadRequest>();
+      PbList<PartitionReadRequest>();
   static PartitionReadRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionReadRequest();
+      _defaultInstance = _ReadonlyPartitionReadRequest();
     return _defaultInstance;
   }
 
@@ -832,7 +829,7 @@ class _ReadonlyPartitionReadRequest extends PartitionReadRequest
     with ReadonlyMessageMixin {}
 
 class Partition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Partition')
+  static final BuilderInfo _i = BuilderInfo('Partition')
     ..a<List<int>>(1, 'partitionToken', PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -842,12 +839,12 @@ class Partition extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Partition.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Partition clone() => new Partition()..mergeFromMessage(this);
+  Partition clone() => Partition()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Partition create() => new Partition();
-  static PbList<Partition> createRepeated() => new PbList<Partition>();
+  static Partition create() => Partition();
+  static PbList<Partition> createRepeated() => PbList<Partition>();
   static Partition getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPartition();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyPartition();
     return _defaultInstance;
   }
 
@@ -868,7 +865,7 @@ class Partition extends GeneratedMessage {
 class _ReadonlyPartition extends Partition with ReadonlyMessageMixin {}
 
 class PartitionResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionResponse')
+  static final BuilderInfo _i = BuilderInfo('PartitionResponse')
     ..pp<Partition>(
         1, 'partitions', PbFieldType.PM, Partition.$checkItem, Partition.create)
     ..a<Transaction>(2, 'transaction', PbFieldType.OM, Transaction.getDefault,
@@ -882,14 +879,14 @@ class PartitionResponse extends GeneratedMessage {
   PartitionResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PartitionResponse clone() => new PartitionResponse()..mergeFromMessage(this);
+  PartitionResponse clone() => PartitionResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static PartitionResponse create() => new PartitionResponse();
+  static PartitionResponse create() => PartitionResponse();
   static PbList<PartitionResponse> createRepeated() =>
-      new PbList<PartitionResponse>();
+      PbList<PartitionResponse>();
   static PartitionResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionResponse();
+      _defaultInstance = _ReadonlyPartitionResponse();
     return _defaultInstance;
   }
 
@@ -913,7 +910,7 @@ class _ReadonlyPartitionResponse extends PartitionResponse
     with ReadonlyMessageMixin {}
 
 class ReadRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRequest')
+  static final BuilderInfo _i = BuilderInfo('ReadRequest')
     ..aOS(1, 'session')
     ..a<TransactionSelector>(2, 'transaction', PbFieldType.OM,
         TransactionSelector.getDefault, TransactionSelector.create)
@@ -933,12 +930,12 @@ class ReadRequest extends GeneratedMessage {
   ReadRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadRequest clone() => new ReadRequest()..mergeFromMessage(this);
+  ReadRequest clone() => ReadRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ReadRequest create() => new ReadRequest();
-  static PbList<ReadRequest> createRepeated() => new PbList<ReadRequest>();
+  static ReadRequest create() => ReadRequest();
+  static PbList<ReadRequest> createRepeated() => PbList<ReadRequest>();
   static ReadRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyReadRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyReadRequest();
     return _defaultInstance;
   }
 
@@ -1017,7 +1014,7 @@ class ReadRequest extends GeneratedMessage {
 class _ReadonlyReadRequest extends ReadRequest with ReadonlyMessageMixin {}
 
 class BeginTransactionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BeginTransactionRequest')
+  static final BuilderInfo _i = BuilderInfo('BeginTransactionRequest')
     ..aOS(1, 'session')
     ..a<TransactionOptions>(2, 'options', PbFieldType.OM,
         TransactionOptions.getDefault, TransactionOptions.create)
@@ -1031,14 +1028,14 @@ class BeginTransactionRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BeginTransactionRequest clone() =>
-      new BeginTransactionRequest()..mergeFromMessage(this);
+      BeginTransactionRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static BeginTransactionRequest create() => new BeginTransactionRequest();
+  static BeginTransactionRequest create() => BeginTransactionRequest();
   static PbList<BeginTransactionRequest> createRepeated() =>
-      new PbList<BeginTransactionRequest>();
+      PbList<BeginTransactionRequest>();
   static BeginTransactionRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBeginTransactionRequest();
+      _defaultInstance = _ReadonlyBeginTransactionRequest();
     return _defaultInstance;
   }
 
@@ -1069,7 +1066,7 @@ class _ReadonlyBeginTransactionRequest extends BeginTransactionRequest
     with ReadonlyMessageMixin {}
 
 class CommitRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommitRequest')
+  static final BuilderInfo _i = BuilderInfo('CommitRequest')
     ..aOS(1, 'session')
     ..a<List<int>>(2, 'transactionId', PbFieldType.OY)
     ..a<TransactionOptions>(3, 'singleUseTransaction', PbFieldType.OM,
@@ -1085,13 +1082,12 @@ class CommitRequest extends GeneratedMessage {
   CommitRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommitRequest clone() => new CommitRequest()..mergeFromMessage(this);
+  CommitRequest clone() => CommitRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommitRequest create() => new CommitRequest();
-  static PbList<CommitRequest> createRepeated() => new PbList<CommitRequest>();
+  static CommitRequest create() => CommitRequest();
+  static PbList<CommitRequest> createRepeated() => PbList<CommitRequest>();
   static CommitRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommitRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommitRequest();
     return _defaultInstance;
   }
 
@@ -1130,7 +1126,7 @@ class CommitRequest extends GeneratedMessage {
 class _ReadonlyCommitRequest extends CommitRequest with ReadonlyMessageMixin {}
 
 class CommitResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommitResponse')
+  static final BuilderInfo _i = BuilderInfo('CommitResponse')
     ..a<$google$protobuf.Timestamp>(
         1,
         'commitTimestamp',
@@ -1146,14 +1142,12 @@ class CommitResponse extends GeneratedMessage {
   CommitResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommitResponse clone() => new CommitResponse()..mergeFromMessage(this);
+  CommitResponse clone() => CommitResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommitResponse create() => new CommitResponse();
-  static PbList<CommitResponse> createRepeated() =>
-      new PbList<CommitResponse>();
+  static CommitResponse create() => CommitResponse();
+  static PbList<CommitResponse> createRepeated() => PbList<CommitResponse>();
   static CommitResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommitResponse();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommitResponse();
     return _defaultInstance;
   }
 
@@ -1175,7 +1169,7 @@ class _ReadonlyCommitResponse extends CommitResponse with ReadonlyMessageMixin {
 }
 
 class RollbackRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RollbackRequest')
+  static final BuilderInfo _i = BuilderInfo('RollbackRequest')
     ..aOS(1, 'session')
     ..a<List<int>>(2, 'transactionId', PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -1187,14 +1181,12 @@ class RollbackRequest extends GeneratedMessage {
   RollbackRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RollbackRequest clone() => new RollbackRequest()..mergeFromMessage(this);
+  RollbackRequest clone() => RollbackRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static RollbackRequest create() => new RollbackRequest();
-  static PbList<RollbackRequest> createRepeated() =>
-      new PbList<RollbackRequest>();
+  static RollbackRequest create() => RollbackRequest();
+  static PbList<RollbackRequest> createRepeated() => PbList<RollbackRequest>();
   static RollbackRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRollbackRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyRollbackRequest();
     return _defaultInstance;
   }
 
@@ -1229,87 +1221,87 @@ class SpannerApi {
 
   Future<Session> createSession(
       ClientContext ctx, CreateSessionRequest request) {
-    var emptyResponse = new Session();
+    var emptyResponse = Session();
     return _client.invoke<Session>(
         ctx, 'Spanner', 'CreateSession', request, emptyResponse);
   }
 
   Future<Session> getSession(ClientContext ctx, GetSessionRequest request) {
-    var emptyResponse = new Session();
+    var emptyResponse = Session();
     return _client.invoke<Session>(
         ctx, 'Spanner', 'GetSession', request, emptyResponse);
   }
 
   Future<ListSessionsResponse> listSessions(
       ClientContext ctx, ListSessionsRequest request) {
-    var emptyResponse = new ListSessionsResponse();
+    var emptyResponse = ListSessionsResponse();
     return _client.invoke<ListSessionsResponse>(
         ctx, 'Spanner', 'ListSessions', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteSession(
       ClientContext ctx, DeleteSessionRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Spanner', 'DeleteSession', request, emptyResponse);
   }
 
   Future<ResultSet> executeSql(ClientContext ctx, ExecuteSqlRequest request) {
-    var emptyResponse = new ResultSet();
+    var emptyResponse = ResultSet();
     return _client.invoke<ResultSet>(
         ctx, 'Spanner', 'ExecuteSql', request, emptyResponse);
   }
 
   Future<PartialResultSet> executeStreamingSql(
       ClientContext ctx, ExecuteSqlRequest request) {
-    var emptyResponse = new PartialResultSet();
+    var emptyResponse = PartialResultSet();
     return _client.invoke<PartialResultSet>(
         ctx, 'Spanner', 'ExecuteStreamingSql', request, emptyResponse);
   }
 
   Future<ResultSet> read(ClientContext ctx, ReadRequest request) {
-    var emptyResponse = new ResultSet();
+    var emptyResponse = ResultSet();
     return _client.invoke<ResultSet>(
         ctx, 'Spanner', 'Read', request, emptyResponse);
   }
 
   Future<PartialResultSet> streamingRead(
       ClientContext ctx, ReadRequest request) {
-    var emptyResponse = new PartialResultSet();
+    var emptyResponse = PartialResultSet();
     return _client.invoke<PartialResultSet>(
         ctx, 'Spanner', 'StreamingRead', request, emptyResponse);
   }
 
   Future<Transaction> beginTransaction(
       ClientContext ctx, BeginTransactionRequest request) {
-    var emptyResponse = new Transaction();
+    var emptyResponse = Transaction();
     return _client.invoke<Transaction>(
         ctx, 'Spanner', 'BeginTransaction', request, emptyResponse);
   }
 
   Future<CommitResponse> commit(ClientContext ctx, CommitRequest request) {
-    var emptyResponse = new CommitResponse();
+    var emptyResponse = CommitResponse();
     return _client.invoke<CommitResponse>(
         ctx, 'Spanner', 'Commit', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> rollback(
       ClientContext ctx, RollbackRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'Spanner', 'Rollback', request, emptyResponse);
   }
 
   Future<PartitionResponse> partitionQuery(
       ClientContext ctx, PartitionQueryRequest request) {
-    var emptyResponse = new PartitionResponse();
+    var emptyResponse = PartitionResponse();
     return _client.invoke<PartitionResponse>(
         ctx, 'Spanner', 'PartitionQuery', request, emptyResponse);
   }
 
   Future<PartitionResponse> partitionRead(
       ClientContext ctx, PartitionReadRequest request) {
-    var emptyResponse = new PartitionResponse();
+    var emptyResponse = PartitionResponse();
     return _client.invoke<PartitionResponse>(
         ctx, 'Spanner', 'PartitionRead', request, emptyResponse);
   }

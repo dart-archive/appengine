@@ -11,7 +11,7 @@ import 'package:protobuf/protobuf.dart';
 import 'any.pb.dart' as $google$protobuf;
 
 class TestAny extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TestAny')
+  static final BuilderInfo _i = BuilderInfo('TestAny')
     ..a<int>(1, 'int32Value', PbFieldType.O3)
     ..a<$google$protobuf.Any>(2, 'anyValue', PbFieldType.OM,
         $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
@@ -25,12 +25,12 @@ class TestAny extends GeneratedMessage {
       : super.fromBuffer(i, r);
   TestAny.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TestAny clone() => new TestAny()..mergeFromMessage(this);
+  TestAny clone() => TestAny()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static TestAny create() => new TestAny();
-  static PbList<TestAny> createRepeated() => new PbList<TestAny>();
+  static TestAny create() => TestAny();
+  static PbList<TestAny> createRepeated() => PbList<TestAny>();
   static TestAny getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTestAny();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyTestAny();
     return _defaultInstance;
   }
 

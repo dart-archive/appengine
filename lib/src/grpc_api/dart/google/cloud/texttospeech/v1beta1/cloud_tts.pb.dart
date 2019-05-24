@@ -14,7 +14,7 @@ import 'cloud_tts.pbenum.dart';
 export 'cloud_tts.pbenum.dart';
 
 class ListVoicesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVoicesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListVoicesRequest')
     ..aOS(1, 'languageCode')
     ..hasRequiredFields = false;
 
@@ -25,14 +25,14 @@ class ListVoicesRequest extends GeneratedMessage {
   ListVoicesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListVoicesRequest clone() => new ListVoicesRequest()..mergeFromMessage(this);
+  ListVoicesRequest clone() => ListVoicesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListVoicesRequest create() => new ListVoicesRequest();
+  static ListVoicesRequest create() => ListVoicesRequest();
   static PbList<ListVoicesRequest> createRepeated() =>
-      new PbList<ListVoicesRequest>();
+      PbList<ListVoicesRequest>();
   static ListVoicesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVoicesRequest();
+      _defaultInstance = _ReadonlyListVoicesRequest();
     return _defaultInstance;
   }
 
@@ -54,7 +54,7 @@ class _ReadonlyListVoicesRequest extends ListVoicesRequest
     with ReadonlyMessageMixin {}
 
 class ListVoicesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVoicesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListVoicesResponse')
     ..pp<Voice>(1, 'voices', PbFieldType.PM, Voice.$checkItem, Voice.create)
     ..hasRequiredFields = false;
 
@@ -65,15 +65,14 @@ class ListVoicesResponse extends GeneratedMessage {
   ListVoicesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListVoicesResponse clone() =>
-      new ListVoicesResponse()..mergeFromMessage(this);
+  ListVoicesResponse clone() => ListVoicesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListVoicesResponse create() => new ListVoicesResponse();
+  static ListVoicesResponse create() => ListVoicesResponse();
   static PbList<ListVoicesResponse> createRepeated() =>
-      new PbList<ListVoicesResponse>();
+      PbList<ListVoicesResponse>();
   static ListVoicesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVoicesResponse();
+      _defaultInstance = _ReadonlyListVoicesResponse();
     return _defaultInstance;
   }
 
@@ -89,7 +88,7 @@ class _ReadonlyListVoicesResponse extends ListVoicesResponse
     with ReadonlyMessageMixin {}
 
 class Voice extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Voice')
+  static final BuilderInfo _i = BuilderInfo('Voice')
     ..pPS(1, 'languageCodes')
     ..aOS(2, 'name')
     ..e<SsmlVoiceGender>(
@@ -107,12 +106,12 @@ class Voice extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Voice.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Voice clone() => new Voice()..mergeFromMessage(this);
+  Voice clone() => Voice()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Voice create() => new Voice();
-  static PbList<Voice> createRepeated() => new PbList<Voice>();
+  static Voice create() => Voice();
+  static PbList<Voice> createRepeated() => PbList<Voice>();
   static Voice getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVoice();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyVoice();
     return _defaultInstance;
   }
 
@@ -151,7 +150,7 @@ class Voice extends GeneratedMessage {
 class _ReadonlyVoice extends Voice with ReadonlyMessageMixin {}
 
 class SynthesizeSpeechRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SynthesizeSpeechRequest')
+  static final BuilderInfo _i = BuilderInfo('SynthesizeSpeechRequest')
     ..a<SynthesisInput>(1, 'input', PbFieldType.OM, SynthesisInput.getDefault,
         SynthesisInput.create)
     ..a<VoiceSelectionParams>(2, 'voice', PbFieldType.OM,
@@ -168,14 +167,14 @@ class SynthesizeSpeechRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SynthesizeSpeechRequest clone() =>
-      new SynthesizeSpeechRequest()..mergeFromMessage(this);
+      SynthesizeSpeechRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SynthesizeSpeechRequest create() => new SynthesizeSpeechRequest();
+  static SynthesizeSpeechRequest create() => SynthesizeSpeechRequest();
   static PbList<SynthesizeSpeechRequest> createRepeated() =>
-      new PbList<SynthesizeSpeechRequest>();
+      PbList<SynthesizeSpeechRequest>();
   static SynthesizeSpeechRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySynthesizeSpeechRequest();
+      _defaultInstance = _ReadonlySynthesizeSpeechRequest();
     return _defaultInstance;
   }
 
@@ -214,7 +213,7 @@ class _ReadonlySynthesizeSpeechRequest extends SynthesizeSpeechRequest
     with ReadonlyMessageMixin {}
 
 class SynthesisInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SynthesisInput')
+  static final BuilderInfo _i = BuilderInfo('SynthesisInput')
     ..aOS(1, 'text')
     ..aOS(2, 'ssml')
     ..hasRequiredFields = false;
@@ -226,14 +225,12 @@ class SynthesisInput extends GeneratedMessage {
   SynthesisInput.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SynthesisInput clone() => new SynthesisInput()..mergeFromMessage(this);
+  SynthesisInput clone() => SynthesisInput()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SynthesisInput create() => new SynthesisInput();
-  static PbList<SynthesisInput> createRepeated() =>
-      new PbList<SynthesisInput>();
+  static SynthesisInput create() => SynthesisInput();
+  static PbList<SynthesisInput> createRepeated() => PbList<SynthesisInput>();
   static SynthesisInput getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySynthesisInput();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlySynthesisInput();
     return _defaultInstance;
   }
 
@@ -263,7 +260,7 @@ class _ReadonlySynthesisInput extends SynthesisInput with ReadonlyMessageMixin {
 }
 
 class VoiceSelectionParams extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VoiceSelectionParams')
+  static final BuilderInfo _i = BuilderInfo('VoiceSelectionParams')
     ..aOS(1, 'languageCode')
     ..aOS(2, 'name')
     ..e<SsmlVoiceGender>(
@@ -283,14 +280,14 @@ class VoiceSelectionParams extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VoiceSelectionParams clone() =>
-      new VoiceSelectionParams()..mergeFromMessage(this);
+      VoiceSelectionParams()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static VoiceSelectionParams create() => new VoiceSelectionParams();
+  static VoiceSelectionParams create() => VoiceSelectionParams();
   static PbList<VoiceSelectionParams> createRepeated() =>
-      new PbList<VoiceSelectionParams>();
+      PbList<VoiceSelectionParams>();
   static VoiceSelectionParams getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVoiceSelectionParams();
+      _defaultInstance = _ReadonlyVoiceSelectionParams();
     return _defaultInstance;
   }
 
@@ -328,7 +325,7 @@ class _ReadonlyVoiceSelectionParams extends VoiceSelectionParams
     with ReadonlyMessageMixin {}
 
 class AudioConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioConfig')
+  static final BuilderInfo _i = BuilderInfo('AudioConfig')
     ..e<AudioEncoding>(
         1,
         'audioEncoding',
@@ -349,12 +346,12 @@ class AudioConfig extends GeneratedMessage {
   AudioConfig.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioConfig clone() => new AudioConfig()..mergeFromMessage(this);
+  AudioConfig clone() => AudioConfig()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static AudioConfig create() => new AudioConfig();
-  static PbList<AudioConfig> createRepeated() => new PbList<AudioConfig>();
+  static AudioConfig create() => AudioConfig();
+  static PbList<AudioConfig> createRepeated() => PbList<AudioConfig>();
   static AudioConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAudioConfig();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyAudioConfig();
     return _defaultInstance;
   }
 
@@ -407,7 +404,7 @@ class AudioConfig extends GeneratedMessage {
 class _ReadonlyAudioConfig extends AudioConfig with ReadonlyMessageMixin {}
 
 class SynthesizeSpeechResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SynthesizeSpeechResponse')
+  static final BuilderInfo _i = BuilderInfo('SynthesizeSpeechResponse')
     ..a<List<int>>(1, 'audioContent', PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -419,14 +416,14 @@ class SynthesizeSpeechResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SynthesizeSpeechResponse clone() =>
-      new SynthesizeSpeechResponse()..mergeFromMessage(this);
+      SynthesizeSpeechResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SynthesizeSpeechResponse create() => new SynthesizeSpeechResponse();
+  static SynthesizeSpeechResponse create() => SynthesizeSpeechResponse();
   static PbList<SynthesizeSpeechResponse> createRepeated() =>
-      new PbList<SynthesizeSpeechResponse>();
+      PbList<SynthesizeSpeechResponse>();
   static SynthesizeSpeechResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySynthesizeSpeechResponse();
+      _defaultInstance = _ReadonlySynthesizeSpeechResponse();
     return _defaultInstance;
   }
 
@@ -454,14 +451,14 @@ class TextToSpeechApi {
 
   Future<ListVoicesResponse> listVoices(
       ClientContext ctx, ListVoicesRequest request) {
-    var emptyResponse = new ListVoicesResponse();
+    var emptyResponse = ListVoicesResponse();
     return _client.invoke<ListVoicesResponse>(
         ctx, 'TextToSpeech', 'ListVoices', request, emptyResponse);
   }
 
   Future<SynthesizeSpeechResponse> synthesizeSpeech(
       ClientContext ctx, SynthesizeSpeechRequest request) {
-    var emptyResponse = new SynthesizeSpeechResponse();
+    var emptyResponse = SynthesizeSpeechResponse();
     return _client.invoke<SynthesizeSpeechResponse>(
         ctx, 'TextToSpeech', 'SynthesizeSpeech', request, emptyResponse);
   }

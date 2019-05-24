@@ -22,7 +22,7 @@ import 'transfer.pbenum.dart';
 export 'datatransfer.pbenum.dart';
 
 class DataSourceParameter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DataSourceParameter')
+  static final BuilderInfo _i = BuilderInfo('DataSourceParameter')
     ..aOS(1, 'paramId')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
@@ -64,15 +64,14 @@ class DataSourceParameter extends GeneratedMessage {
   DataSourceParameter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DataSourceParameter clone() =>
-      new DataSourceParameter()..mergeFromMessage(this);
+  DataSourceParameter clone() => DataSourceParameter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DataSourceParameter create() => new DataSourceParameter();
+  static DataSourceParameter create() => DataSourceParameter();
   static PbList<DataSourceParameter> createRepeated() =>
-      new PbList<DataSourceParameter>();
+      PbList<DataSourceParameter>();
   static DataSourceParameter getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDataSourceParameter();
+      _defaultInstance = _ReadonlyDataSourceParameter();
     return _defaultInstance;
   }
 
@@ -194,7 +193,7 @@ class _ReadonlyDataSourceParameter extends DataSourceParameter
     with ReadonlyMessageMixin {}
 
 class DataSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DataSource')
+  static final BuilderInfo _i = BuilderInfo('DataSource')
     ..aOS(1, 'name')
     ..aOS(2, 'dataSourceId')
     ..aOS(3, 'displayName')
@@ -245,12 +244,12 @@ class DataSource extends GeneratedMessage {
       : super.fromBuffer(i, r);
   DataSource.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DataSource clone() => new DataSource()..mergeFromMessage(this);
+  DataSource clone() => DataSource()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DataSource create() => new DataSource();
-  static PbList<DataSource> createRepeated() => new PbList<DataSource>();
+  static DataSource create() => DataSource();
+  static PbList<DataSource> createRepeated() => PbList<DataSource>();
   static DataSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDataSource();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDataSource();
     return _defaultInstance;
   }
 
@@ -395,7 +394,7 @@ class DataSource extends GeneratedMessage {
 class _ReadonlyDataSource extends DataSource with ReadonlyMessageMixin {}
 
 class GetDataSourceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDataSourceRequest')
+  static final BuilderInfo _i = BuilderInfo('GetDataSourceRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -407,14 +406,14 @@ class GetDataSourceRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetDataSourceRequest clone() =>
-      new GetDataSourceRequest()..mergeFromMessage(this);
+      GetDataSourceRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetDataSourceRequest create() => new GetDataSourceRequest();
+  static GetDataSourceRequest create() => GetDataSourceRequest();
   static PbList<GetDataSourceRequest> createRepeated() =>
-      new PbList<GetDataSourceRequest>();
+      PbList<GetDataSourceRequest>();
   static GetDataSourceRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDataSourceRequest();
+      _defaultInstance = _ReadonlyGetDataSourceRequest();
     return _defaultInstance;
   }
 
@@ -436,7 +435,7 @@ class _ReadonlyGetDataSourceRequest extends GetDataSourceRequest
     with ReadonlyMessageMixin {}
 
 class ListDataSourcesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDataSourcesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListDataSourcesRequest')
     ..aOS(1, 'parent')
     ..aOS(3, 'pageToken')
     ..a<int>(4, 'pageSize', PbFieldType.O3)
@@ -450,14 +449,14 @@ class ListDataSourcesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDataSourcesRequest clone() =>
-      new ListDataSourcesRequest()..mergeFromMessage(this);
+      ListDataSourcesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDataSourcesRequest create() => new ListDataSourcesRequest();
+  static ListDataSourcesRequest create() => ListDataSourcesRequest();
   static PbList<ListDataSourcesRequest> createRepeated() =>
-      new PbList<ListDataSourcesRequest>();
+      PbList<ListDataSourcesRequest>();
   static ListDataSourcesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDataSourcesRequest();
+      _defaultInstance = _ReadonlyListDataSourcesRequest();
     return _defaultInstance;
   }
 
@@ -496,7 +495,7 @@ class _ReadonlyListDataSourcesRequest extends ListDataSourcesRequest
     with ReadonlyMessageMixin {}
 
 class ListDataSourcesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDataSourcesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListDataSourcesResponse')
     ..pp<DataSource>(1, 'dataSources', PbFieldType.PM, DataSource.$checkItem,
         DataSource.create)
     ..aOS(2, 'nextPageToken')
@@ -510,14 +509,14 @@ class ListDataSourcesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDataSourcesResponse clone() =>
-      new ListDataSourcesResponse()..mergeFromMessage(this);
+      ListDataSourcesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListDataSourcesResponse create() => new ListDataSourcesResponse();
+  static ListDataSourcesResponse create() => ListDataSourcesResponse();
   static PbList<ListDataSourcesResponse> createRepeated() =>
-      new PbList<ListDataSourcesResponse>();
+      PbList<ListDataSourcesResponse>();
   static ListDataSourcesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDataSourcesResponse();
+      _defaultInstance = _ReadonlyListDataSourcesResponse();
     return _defaultInstance;
   }
 
@@ -542,7 +541,7 @@ class _ReadonlyListDataSourcesResponse extends ListDataSourcesResponse
     with ReadonlyMessageMixin {}
 
 class CreateTransferConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTransferConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateTransferConfigRequest')
     ..aOS(1, 'parent')
     ..a<TransferConfig>(2, 'transferConfig', PbFieldType.OM,
         TransferConfig.getDefault, TransferConfig.create)
@@ -557,15 +556,14 @@ class CreateTransferConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTransferConfigRequest clone() =>
-      new CreateTransferConfigRequest()..mergeFromMessage(this);
+      CreateTransferConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateTransferConfigRequest create() =>
-      new CreateTransferConfigRequest();
+  static CreateTransferConfigRequest create() => CreateTransferConfigRequest();
   static PbList<CreateTransferConfigRequest> createRepeated() =>
-      new PbList<CreateTransferConfigRequest>();
+      PbList<CreateTransferConfigRequest>();
   static CreateTransferConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTransferConfigRequest();
+      _defaultInstance = _ReadonlyCreateTransferConfigRequest();
     return _defaultInstance;
   }
 
@@ -604,7 +602,7 @@ class _ReadonlyCreateTransferConfigRequest extends CreateTransferConfigRequest
     with ReadonlyMessageMixin {}
 
 class UpdateTransferConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateTransferConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('UpdateTransferConfigRequest')
     ..a<TransferConfig>(1, 'transferConfig', PbFieldType.OM,
         TransferConfig.getDefault, TransferConfig.create)
     ..aOS(3, 'authorizationCode')
@@ -624,15 +622,14 @@ class UpdateTransferConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateTransferConfigRequest clone() =>
-      new UpdateTransferConfigRequest()..mergeFromMessage(this);
+      UpdateTransferConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UpdateTransferConfigRequest create() =>
-      new UpdateTransferConfigRequest();
+  static UpdateTransferConfigRequest create() => UpdateTransferConfigRequest();
   static PbList<UpdateTransferConfigRequest> createRepeated() =>
-      new PbList<UpdateTransferConfigRequest>();
+      PbList<UpdateTransferConfigRequest>();
   static UpdateTransferConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateTransferConfigRequest();
+      _defaultInstance = _ReadonlyUpdateTransferConfigRequest();
     return _defaultInstance;
   }
 
@@ -671,7 +668,7 @@ class _ReadonlyUpdateTransferConfigRequest extends UpdateTransferConfigRequest
     with ReadonlyMessageMixin {}
 
 class GetTransferConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTransferConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTransferConfigRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -683,14 +680,14 @@ class GetTransferConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetTransferConfigRequest clone() =>
-      new GetTransferConfigRequest()..mergeFromMessage(this);
+      GetTransferConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTransferConfigRequest create() => new GetTransferConfigRequest();
+  static GetTransferConfigRequest create() => GetTransferConfigRequest();
   static PbList<GetTransferConfigRequest> createRepeated() =>
-      new PbList<GetTransferConfigRequest>();
+      PbList<GetTransferConfigRequest>();
   static GetTransferConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTransferConfigRequest();
+      _defaultInstance = _ReadonlyGetTransferConfigRequest();
     return _defaultInstance;
   }
 
@@ -713,7 +710,7 @@ class _ReadonlyGetTransferConfigRequest extends GetTransferConfigRequest
     with ReadonlyMessageMixin {}
 
 class DeleteTransferConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTransferConfigRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteTransferConfigRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -725,15 +722,14 @@ class DeleteTransferConfigRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteTransferConfigRequest clone() =>
-      new DeleteTransferConfigRequest()..mergeFromMessage(this);
+      DeleteTransferConfigRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteTransferConfigRequest create() =>
-      new DeleteTransferConfigRequest();
+  static DeleteTransferConfigRequest create() => DeleteTransferConfigRequest();
   static PbList<DeleteTransferConfigRequest> createRepeated() =>
-      new PbList<DeleteTransferConfigRequest>();
+      PbList<DeleteTransferConfigRequest>();
   static DeleteTransferConfigRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTransferConfigRequest();
+      _defaultInstance = _ReadonlyDeleteTransferConfigRequest();
     return _defaultInstance;
   }
 
@@ -756,7 +752,7 @@ class _ReadonlyDeleteTransferConfigRequest extends DeleteTransferConfigRequest
     with ReadonlyMessageMixin {}
 
 class GetTransferRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTransferRunRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTransferRunRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -768,14 +764,14 @@ class GetTransferRunRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetTransferRunRequest clone() =>
-      new GetTransferRunRequest()..mergeFromMessage(this);
+      GetTransferRunRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTransferRunRequest create() => new GetTransferRunRequest();
+  static GetTransferRunRequest create() => GetTransferRunRequest();
   static PbList<GetTransferRunRequest> createRepeated() =>
-      new PbList<GetTransferRunRequest>();
+      PbList<GetTransferRunRequest>();
   static GetTransferRunRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTransferRunRequest();
+      _defaultInstance = _ReadonlyGetTransferRunRequest();
     return _defaultInstance;
   }
 
@@ -798,7 +794,7 @@ class _ReadonlyGetTransferRunRequest extends GetTransferRunRequest
     with ReadonlyMessageMixin {}
 
 class DeleteTransferRunRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTransferRunRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteTransferRunRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -810,14 +806,14 @@ class DeleteTransferRunRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteTransferRunRequest clone() =>
-      new DeleteTransferRunRequest()..mergeFromMessage(this);
+      DeleteTransferRunRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteTransferRunRequest create() => new DeleteTransferRunRequest();
+  static DeleteTransferRunRequest create() => DeleteTransferRunRequest();
   static PbList<DeleteTransferRunRequest> createRepeated() =>
-      new PbList<DeleteTransferRunRequest>();
+      PbList<DeleteTransferRunRequest>();
   static DeleteTransferRunRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTransferRunRequest();
+      _defaultInstance = _ReadonlyDeleteTransferRunRequest();
     return _defaultInstance;
   }
 
@@ -840,7 +836,7 @@ class _ReadonlyDeleteTransferRunRequest extends DeleteTransferRunRequest
     with ReadonlyMessageMixin {}
 
 class ListTransferConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferConfigsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTransferConfigsRequest')
     ..aOS(1, 'parent')
     ..pPS(2, 'dataSourceIds')
     ..aOS(3, 'pageToken')
@@ -855,15 +851,14 @@ class ListTransferConfigsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferConfigsRequest clone() =>
-      new ListTransferConfigsRequest()..mergeFromMessage(this);
+      ListTransferConfigsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTransferConfigsRequest create() =>
-      new ListTransferConfigsRequest();
+  static ListTransferConfigsRequest create() => ListTransferConfigsRequest();
   static PbList<ListTransferConfigsRequest> createRepeated() =>
-      new PbList<ListTransferConfigsRequest>();
+      PbList<ListTransferConfigsRequest>();
   static ListTransferConfigsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferConfigsRequest();
+      _defaultInstance = _ReadonlyListTransferConfigsRequest();
     return _defaultInstance;
   }
 
@@ -904,7 +899,7 @@ class _ReadonlyListTransferConfigsRequest extends ListTransferConfigsRequest
     with ReadonlyMessageMixin {}
 
 class ListTransferConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferConfigsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTransferConfigsResponse')
     ..pp<TransferConfig>(1, 'transferConfigs', PbFieldType.PM,
         TransferConfig.$checkItem, TransferConfig.create)
     ..aOS(2, 'nextPageToken')
@@ -918,15 +913,14 @@ class ListTransferConfigsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferConfigsResponse clone() =>
-      new ListTransferConfigsResponse()..mergeFromMessage(this);
+      ListTransferConfigsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTransferConfigsResponse create() =>
-      new ListTransferConfigsResponse();
+  static ListTransferConfigsResponse create() => ListTransferConfigsResponse();
   static PbList<ListTransferConfigsResponse> createRepeated() =>
-      new PbList<ListTransferConfigsResponse>();
+      PbList<ListTransferConfigsResponse>();
   static ListTransferConfigsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferConfigsResponse();
+      _defaultInstance = _ReadonlyListTransferConfigsResponse();
     return _defaultInstance;
   }
 
@@ -951,7 +945,7 @@ class _ReadonlyListTransferConfigsResponse extends ListTransferConfigsResponse
     with ReadonlyMessageMixin {}
 
 class ListTransferRunsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferRunsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTransferRunsRequest')
     ..aOS(1, 'parent')
     ..pp<TransferState>(2, 'states', PbFieldType.PE, TransferState.$checkItem,
         null, TransferState.valueOf, TransferState.values)
@@ -974,14 +968,14 @@ class ListTransferRunsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferRunsRequest clone() =>
-      new ListTransferRunsRequest()..mergeFromMessage(this);
+      ListTransferRunsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTransferRunsRequest create() => new ListTransferRunsRequest();
+  static ListTransferRunsRequest create() => ListTransferRunsRequest();
   static PbList<ListTransferRunsRequest> createRepeated() =>
-      new PbList<ListTransferRunsRequest>();
+      PbList<ListTransferRunsRequest>();
   static ListTransferRunsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferRunsRequest();
+      _defaultInstance = _ReadonlyListTransferRunsRequest();
     return _defaultInstance;
   }
 
@@ -1030,7 +1024,7 @@ class _ReadonlyListTransferRunsRequest extends ListTransferRunsRequest
     with ReadonlyMessageMixin {}
 
 class ListTransferRunsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferRunsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTransferRunsResponse')
     ..pp<TransferRun>(1, 'transferRuns', PbFieldType.PM, TransferRun.$checkItem,
         TransferRun.create)
     ..aOS(2, 'nextPageToken')
@@ -1044,14 +1038,14 @@ class ListTransferRunsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferRunsResponse clone() =>
-      new ListTransferRunsResponse()..mergeFromMessage(this);
+      ListTransferRunsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTransferRunsResponse create() => new ListTransferRunsResponse();
+  static ListTransferRunsResponse create() => ListTransferRunsResponse();
   static PbList<ListTransferRunsResponse> createRepeated() =>
-      new PbList<ListTransferRunsResponse>();
+      PbList<ListTransferRunsResponse>();
   static ListTransferRunsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferRunsResponse();
+      _defaultInstance = _ReadonlyListTransferRunsResponse();
     return _defaultInstance;
   }
 
@@ -1076,7 +1070,7 @@ class _ReadonlyListTransferRunsResponse extends ListTransferRunsResponse
     with ReadonlyMessageMixin {}
 
 class ListTransferLogsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferLogsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTransferLogsRequest')
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
     ..a<int>(5, 'pageSize', PbFieldType.O3)
@@ -1098,14 +1092,14 @@ class ListTransferLogsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferLogsRequest clone() =>
-      new ListTransferLogsRequest()..mergeFromMessage(this);
+      ListTransferLogsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTransferLogsRequest create() => new ListTransferLogsRequest();
+  static ListTransferLogsRequest create() => ListTransferLogsRequest();
   static PbList<ListTransferLogsRequest> createRepeated() =>
-      new PbList<ListTransferLogsRequest>();
+      PbList<ListTransferLogsRequest>();
   static ListTransferLogsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferLogsRequest();
+      _defaultInstance = _ReadonlyListTransferLogsRequest();
     return _defaultInstance;
   }
 
@@ -1146,7 +1140,7 @@ class _ReadonlyListTransferLogsRequest extends ListTransferLogsRequest
     with ReadonlyMessageMixin {}
 
 class ListTransferLogsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferLogsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTransferLogsResponse')
     ..pp<TransferMessage>(1, 'transferMessages', PbFieldType.PM,
         TransferMessage.$checkItem, TransferMessage.create)
     ..aOS(2, 'nextPageToken')
@@ -1160,14 +1154,14 @@ class ListTransferLogsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferLogsResponse clone() =>
-      new ListTransferLogsResponse()..mergeFromMessage(this);
+      ListTransferLogsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTransferLogsResponse create() => new ListTransferLogsResponse();
+  static ListTransferLogsResponse create() => ListTransferLogsResponse();
   static PbList<ListTransferLogsResponse> createRepeated() =>
-      new PbList<ListTransferLogsResponse>();
+      PbList<ListTransferLogsResponse>();
   static ListTransferLogsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferLogsResponse();
+      _defaultInstance = _ReadonlyListTransferLogsResponse();
     return _defaultInstance;
   }
 
@@ -1192,7 +1186,7 @@ class _ReadonlyListTransferLogsResponse extends ListTransferLogsResponse
     with ReadonlyMessageMixin {}
 
 class CheckValidCredsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckValidCredsRequest')
+  static final BuilderInfo _i = BuilderInfo('CheckValidCredsRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1204,14 +1198,14 @@ class CheckValidCredsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckValidCredsRequest clone() =>
-      new CheckValidCredsRequest()..mergeFromMessage(this);
+      CheckValidCredsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckValidCredsRequest create() => new CheckValidCredsRequest();
+  static CheckValidCredsRequest create() => CheckValidCredsRequest();
   static PbList<CheckValidCredsRequest> createRepeated() =>
-      new PbList<CheckValidCredsRequest>();
+      PbList<CheckValidCredsRequest>();
   static CheckValidCredsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckValidCredsRequest();
+      _defaultInstance = _ReadonlyCheckValidCredsRequest();
     return _defaultInstance;
   }
 
@@ -1234,7 +1228,7 @@ class _ReadonlyCheckValidCredsRequest extends CheckValidCredsRequest
     with ReadonlyMessageMixin {}
 
 class CheckValidCredsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckValidCredsResponse')
+  static final BuilderInfo _i = BuilderInfo('CheckValidCredsResponse')
     ..aOB(1, 'hasValidCreds')
     ..hasRequiredFields = false;
 
@@ -1246,14 +1240,14 @@ class CheckValidCredsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckValidCredsResponse clone() =>
-      new CheckValidCredsResponse()..mergeFromMessage(this);
+      CheckValidCredsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckValidCredsResponse create() => new CheckValidCredsResponse();
+  static CheckValidCredsResponse create() => CheckValidCredsResponse();
   static PbList<CheckValidCredsResponse> createRepeated() =>
-      new PbList<CheckValidCredsResponse>();
+      PbList<CheckValidCredsResponse>();
   static CheckValidCredsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckValidCredsResponse();
+      _defaultInstance = _ReadonlyCheckValidCredsResponse();
     return _defaultInstance;
   }
 
@@ -1276,7 +1270,7 @@ class _ReadonlyCheckValidCredsResponse extends CheckValidCredsResponse
     with ReadonlyMessageMixin {}
 
 class ScheduleTransferRunsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScheduleTransferRunsRequest')
+  static final BuilderInfo _i = BuilderInfo('ScheduleTransferRunsRequest')
     ..aOS(1, 'parent')
     ..a<$google$protobuf.Timestamp>(
         2,
@@ -1300,15 +1294,14 @@ class ScheduleTransferRunsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ScheduleTransferRunsRequest clone() =>
-      new ScheduleTransferRunsRequest()..mergeFromMessage(this);
+      ScheduleTransferRunsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ScheduleTransferRunsRequest create() =>
-      new ScheduleTransferRunsRequest();
+  static ScheduleTransferRunsRequest create() => ScheduleTransferRunsRequest();
   static PbList<ScheduleTransferRunsRequest> createRepeated() =>
-      new PbList<ScheduleTransferRunsRequest>();
+      PbList<ScheduleTransferRunsRequest>();
   static ScheduleTransferRunsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScheduleTransferRunsRequest();
+      _defaultInstance = _ReadonlyScheduleTransferRunsRequest();
     return _defaultInstance;
   }
 
@@ -1347,7 +1340,7 @@ class _ReadonlyScheduleTransferRunsRequest extends ScheduleTransferRunsRequest
     with ReadonlyMessageMixin {}
 
 class ScheduleTransferRunsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ScheduleTransferRunsResponse')
+  static final BuilderInfo _i = BuilderInfo('ScheduleTransferRunsResponse')
     ..pp<TransferRun>(
         1, 'runs', PbFieldType.PM, TransferRun.$checkItem, TransferRun.create)
     ..hasRequiredFields = false;
@@ -1360,15 +1353,15 @@ class ScheduleTransferRunsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ScheduleTransferRunsResponse clone() =>
-      new ScheduleTransferRunsResponse()..mergeFromMessage(this);
+      ScheduleTransferRunsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ScheduleTransferRunsResponse create() =>
-      new ScheduleTransferRunsResponse();
+      ScheduleTransferRunsResponse();
   static PbList<ScheduleTransferRunsResponse> createRepeated() =>
-      new PbList<ScheduleTransferRunsResponse>();
+      PbList<ScheduleTransferRunsResponse>();
   static ScheduleTransferRunsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyScheduleTransferRunsResponse();
+      _defaultInstance = _ReadonlyScheduleTransferRunsResponse();
     return _defaultInstance;
   }
 
@@ -1390,91 +1383,91 @@ class DataTransferServiceApi {
 
   Future<DataSource> getDataSource(
       ClientContext ctx, GetDataSourceRequest request) {
-    var emptyResponse = new DataSource();
+    var emptyResponse = DataSource();
     return _client.invoke<DataSource>(
         ctx, 'DataTransferService', 'GetDataSource', request, emptyResponse);
   }
 
   Future<ListDataSourcesResponse> listDataSources(
       ClientContext ctx, ListDataSourcesRequest request) {
-    var emptyResponse = new ListDataSourcesResponse();
+    var emptyResponse = ListDataSourcesResponse();
     return _client.invoke<ListDataSourcesResponse>(
         ctx, 'DataTransferService', 'ListDataSources', request, emptyResponse);
   }
 
   Future<TransferConfig> createTransferConfig(
       ClientContext ctx, CreateTransferConfigRequest request) {
-    var emptyResponse = new TransferConfig();
+    var emptyResponse = TransferConfig();
     return _client.invoke<TransferConfig>(ctx, 'DataTransferService',
         'CreateTransferConfig', request, emptyResponse);
   }
 
   Future<TransferConfig> updateTransferConfig(
       ClientContext ctx, UpdateTransferConfigRequest request) {
-    var emptyResponse = new TransferConfig();
+    var emptyResponse = TransferConfig();
     return _client.invoke<TransferConfig>(ctx, 'DataTransferService',
         'UpdateTransferConfig', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteTransferConfig(
       ClientContext ctx, DeleteTransferConfigRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'DataTransferService',
         'DeleteTransferConfig', request, emptyResponse);
   }
 
   Future<TransferConfig> getTransferConfig(
       ClientContext ctx, GetTransferConfigRequest request) {
-    var emptyResponse = new TransferConfig();
+    var emptyResponse = TransferConfig();
     return _client.invoke<TransferConfig>(ctx, 'DataTransferService',
         'GetTransferConfig', request, emptyResponse);
   }
 
   Future<ListTransferConfigsResponse> listTransferConfigs(
       ClientContext ctx, ListTransferConfigsRequest request) {
-    var emptyResponse = new ListTransferConfigsResponse();
+    var emptyResponse = ListTransferConfigsResponse();
     return _client.invoke<ListTransferConfigsResponse>(ctx,
         'DataTransferService', 'ListTransferConfigs', request, emptyResponse);
   }
 
   Future<ScheduleTransferRunsResponse> scheduleTransferRuns(
       ClientContext ctx, ScheduleTransferRunsRequest request) {
-    var emptyResponse = new ScheduleTransferRunsResponse();
+    var emptyResponse = ScheduleTransferRunsResponse();
     return _client.invoke<ScheduleTransferRunsResponse>(ctx,
         'DataTransferService', 'ScheduleTransferRuns', request, emptyResponse);
   }
 
   Future<TransferRun> getTransferRun(
       ClientContext ctx, GetTransferRunRequest request) {
-    var emptyResponse = new TransferRun();
+    var emptyResponse = TransferRun();
     return _client.invoke<TransferRun>(
         ctx, 'DataTransferService', 'GetTransferRun', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteTransferRun(
       ClientContext ctx, DeleteTransferRunRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(ctx, 'DataTransferService',
         'DeleteTransferRun', request, emptyResponse);
   }
 
   Future<ListTransferRunsResponse> listTransferRuns(
       ClientContext ctx, ListTransferRunsRequest request) {
-    var emptyResponse = new ListTransferRunsResponse();
+    var emptyResponse = ListTransferRunsResponse();
     return _client.invoke<ListTransferRunsResponse>(
         ctx, 'DataTransferService', 'ListTransferRuns', request, emptyResponse);
   }
 
   Future<ListTransferLogsResponse> listTransferLogs(
       ClientContext ctx, ListTransferLogsRequest request) {
-    var emptyResponse = new ListTransferLogsResponse();
+    var emptyResponse = ListTransferLogsResponse();
     return _client.invoke<ListTransferLogsResponse>(
         ctx, 'DataTransferService', 'ListTransferLogs', request, emptyResponse);
   }
 
   Future<CheckValidCredsResponse> checkValidCreds(
       ClientContext ctx, CheckValidCredsRequest request) {
-    var emptyResponse = new CheckValidCredsResponse();
+    var emptyResponse = CheckValidCredsResponse();
     return _client.invoke<CheckValidCredsResponse>(
         ctx, 'DataTransferService', 'CheckValidCreds', request, emptyResponse);
   }

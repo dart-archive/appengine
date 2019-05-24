@@ -12,25 +12,25 @@ import 'intent.pbjson.dart';
 import '../../../rpc/status.pbjson.dart' as $google$rpc;
 import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
 
-const AudioEncoding$json = const {
+const AudioEncoding$json = {
   '1': 'AudioEncoding',
-  '2': const [
-    const {'1': 'AUDIO_ENCODING_UNSPECIFIED', '2': 0},
-    const {'1': 'AUDIO_ENCODING_LINEAR_16', '2': 1},
-    const {'1': 'AUDIO_ENCODING_FLAC', '2': 2},
-    const {'1': 'AUDIO_ENCODING_MULAW', '2': 3},
-    const {'1': 'AUDIO_ENCODING_AMR', '2': 4},
-    const {'1': 'AUDIO_ENCODING_AMR_WB', '2': 5},
-    const {'1': 'AUDIO_ENCODING_OGG_OPUS', '2': 6},
-    const {'1': 'AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE', '2': 7},
+  '2': [
+    {'1': 'AUDIO_ENCODING_UNSPECIFIED', '2': 0},
+    {'1': 'AUDIO_ENCODING_LINEAR_16', '2': 1},
+    {'1': 'AUDIO_ENCODING_FLAC', '2': 2},
+    {'1': 'AUDIO_ENCODING_MULAW', '2': 3},
+    {'1': 'AUDIO_ENCODING_AMR', '2': 4},
+    {'1': 'AUDIO_ENCODING_AMR_WB', '2': 5},
+    {'1': 'AUDIO_ENCODING_OGG_OPUS', '2': 6},
+    {'1': 'AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE', '2': 7},
   ],
 };
 
-const DetectIntentRequest$json = const {
+const DetectIntentRequest$json = {
   '1': 'DetectIntentRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {
       '1': 'query_params',
       '3': 2,
       '4': 1,
@@ -38,7 +38,7 @@ const DetectIntentRequest$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.QueryParameters',
       '10': 'queryParams'
     },
-    const {
+    {
       '1': 'query_input',
       '3': 3,
       '4': 1,
@@ -46,15 +46,15 @@ const DetectIntentRequest$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.QueryInput',
       '10': 'queryInput'
     },
-    const {'1': 'input_audio', '3': 5, '4': 1, '5': 12, '10': 'inputAudio'},
+    {'1': 'input_audio', '3': 5, '4': 1, '5': 12, '10': 'inputAudio'},
   ],
 };
 
-const DetectIntentResponse$json = const {
+const DetectIntentResponse$json = {
   '1': 'DetectIntentResponse',
-  '2': const [
-    const {'1': 'response_id', '3': 1, '4': 1, '5': 9, '10': 'responseId'},
-    const {
+  '2': [
+    {'1': 'response_id', '3': 1, '4': 1, '5': 9, '10': 'responseId'},
+    {
       '1': 'query_result',
       '3': 2,
       '4': 1,
@@ -62,7 +62,7 @@ const DetectIntentResponse$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.QueryResult',
       '10': 'queryResult'
     },
-    const {
+    {
       '1': 'webhook_status',
       '3': 3,
       '4': 1,
@@ -73,11 +73,11 @@ const DetectIntentResponse$json = const {
   ],
 };
 
-const QueryParameters$json = const {
+const QueryParameters$json = {
   '1': 'QueryParameters',
-  '2': const [
-    const {'1': 'time_zone', '3': 1, '4': 1, '5': 9, '10': 'timeZone'},
-    const {
+  '2': [
+    {'1': 'time_zone', '3': 1, '4': 1, '5': 9, '10': 'timeZone'},
+    {
       '1': 'geo_location',
       '3': 2,
       '4': 1,
@@ -85,7 +85,7 @@ const QueryParameters$json = const {
       '6': '.google.type.LatLng',
       '10': 'geoLocation'
     },
-    const {
+    {
       '1': 'contexts',
       '3': 3,
       '4': 3,
@@ -93,14 +93,8 @@ const QueryParameters$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.Context',
       '10': 'contexts'
     },
-    const {
-      '1': 'reset_contexts',
-      '3': 4,
-      '4': 1,
-      '5': 8,
-      '10': 'resetContexts'
-    },
-    const {
+    {'1': 'reset_contexts', '3': 4, '4': 1, '5': 8, '10': 'resetContexts'},
+    {
       '1': 'session_entity_types',
       '3': 5,
       '4': 3,
@@ -108,7 +102,7 @@ const QueryParameters$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
       '10': 'sessionEntityTypes'
     },
-    const {
+    {
       '1': 'payload',
       '3': 6,
       '4': 1,
@@ -119,10 +113,10 @@ const QueryParameters$json = const {
   ],
 };
 
-const QueryInput$json = const {
+const QueryInput$json = {
   '1': 'QueryInput',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'audio_config',
       '3': 1,
       '4': 1,
@@ -131,7 +125,7 @@ const QueryInput$json = const {
       '9': 0,
       '10': 'audioConfig'
     },
-    const {
+    {
       '1': 'text',
       '3': 2,
       '4': 1,
@@ -140,7 +134,7 @@ const QueryInput$json = const {
       '9': 0,
       '10': 'text'
     },
-    const {
+    {
       '1': 'event',
       '3': 3,
       '4': 1,
@@ -150,25 +144,25 @@ const QueryInput$json = const {
       '10': 'event'
     },
   ],
-  '8': const [
-    const {'1': 'input'},
+  '8': [
+    {'1': 'input'},
   ],
 };
 
-const QueryResult$json = const {
+const QueryResult$json = {
   '1': 'QueryResult',
-  '2': const [
-    const {'1': 'query_text', '3': 1, '4': 1, '5': 9, '10': 'queryText'},
-    const {'1': 'language_code', '3': 15, '4': 1, '5': 9, '10': 'languageCode'},
-    const {
+  '2': [
+    {'1': 'query_text', '3': 1, '4': 1, '5': 9, '10': 'queryText'},
+    {'1': 'language_code', '3': 15, '4': 1, '5': 9, '10': 'languageCode'},
+    {
       '1': 'speech_recognition_confidence',
       '3': 2,
       '4': 1,
       '5': 2,
       '10': 'speechRecognitionConfidence'
     },
-    const {'1': 'action', '3': 3, '4': 1, '5': 9, '10': 'action'},
-    const {
+    {'1': 'action', '3': 3, '4': 1, '5': 9, '10': 'action'},
+    {
       '1': 'parameters',
       '3': 4,
       '4': 1,
@@ -176,21 +170,15 @@ const QueryResult$json = const {
       '6': '.google.protobuf.Struct',
       '10': 'parameters'
     },
-    const {
+    {
       '1': 'all_required_params_present',
       '3': 5,
       '4': 1,
       '5': 8,
       '10': 'allRequiredParamsPresent'
     },
-    const {
-      '1': 'fulfillment_text',
-      '3': 6,
-      '4': 1,
-      '5': 9,
-      '10': 'fulfillmentText'
-    },
-    const {
+    {'1': 'fulfillment_text', '3': 6, '4': 1, '5': 9, '10': 'fulfillmentText'},
+    {
       '1': 'fulfillment_messages',
       '3': 7,
       '4': 3,
@@ -198,14 +186,8 @@ const QueryResult$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.Intent.Message',
       '10': 'fulfillmentMessages'
     },
-    const {
-      '1': 'webhook_source',
-      '3': 8,
-      '4': 1,
-      '5': 9,
-      '10': 'webhookSource'
-    },
-    const {
+    {'1': 'webhook_source', '3': 8, '4': 1, '5': 9, '10': 'webhookSource'},
+    {
       '1': 'webhook_payload',
       '3': 9,
       '4': 1,
@@ -213,7 +195,7 @@ const QueryResult$json = const {
       '6': '.google.protobuf.Struct',
       '10': 'webhookPayload'
     },
-    const {
+    {
       '1': 'output_contexts',
       '3': 10,
       '4': 3,
@@ -221,7 +203,7 @@ const QueryResult$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.Context',
       '10': 'outputContexts'
     },
-    const {
+    {
       '1': 'intent',
       '3': 11,
       '4': 1,
@@ -229,14 +211,14 @@ const QueryResult$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.Intent',
       '10': 'intent'
     },
-    const {
+    {
       '1': 'intent_detection_confidence',
       '3': 12,
       '4': 1,
       '5': 2,
       '10': 'intentDetectionConfidence'
     },
-    const {
+    {
       '1': 'diagnostic_info',
       '3': 14,
       '4': 1,
@@ -247,11 +229,11 @@ const QueryResult$json = const {
   ],
 };
 
-const StreamingDetectIntentRequest$json = const {
+const StreamingDetectIntentRequest$json = {
   '1': 'StreamingDetectIntentRequest',
-  '2': const [
-    const {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
-    const {
+  '2': [
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {
       '1': 'query_params',
       '3': 2,
       '4': 1,
@@ -259,7 +241,7 @@ const StreamingDetectIntentRequest$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.QueryParameters',
       '10': 'queryParams'
     },
-    const {
+    {
       '1': 'query_input',
       '3': 3,
       '4': 1,
@@ -267,22 +249,16 @@ const StreamingDetectIntentRequest$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.QueryInput',
       '10': 'queryInput'
     },
-    const {
-      '1': 'single_utterance',
-      '3': 4,
-      '4': 1,
-      '5': 8,
-      '10': 'singleUtterance'
-    },
-    const {'1': 'input_audio', '3': 6, '4': 1, '5': 12, '10': 'inputAudio'},
+    {'1': 'single_utterance', '3': 4, '4': 1, '5': 8, '10': 'singleUtterance'},
+    {'1': 'input_audio', '3': 6, '4': 1, '5': 12, '10': 'inputAudio'},
   ],
 };
 
-const StreamingDetectIntentResponse$json = const {
+const StreamingDetectIntentResponse$json = {
   '1': 'StreamingDetectIntentResponse',
-  '2': const [
-    const {'1': 'response_id', '3': 1, '4': 1, '5': 9, '10': 'responseId'},
-    const {
+  '2': [
+    {'1': 'response_id', '3': 1, '4': 1, '5': 9, '10': 'responseId'},
+    {
       '1': 'recognition_result',
       '3': 2,
       '4': 1,
@@ -290,7 +266,7 @@ const StreamingDetectIntentResponse$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.StreamingRecognitionResult',
       '10': 'recognitionResult'
     },
-    const {
+    {
       '1': 'query_result',
       '3': 3,
       '4': 1,
@@ -298,7 +274,7 @@ const StreamingDetectIntentResponse$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.QueryResult',
       '10': 'queryResult'
     },
-    const {
+    {
       '1': 'webhook_status',
       '3': 4,
       '4': 1,
@@ -309,10 +285,10 @@ const StreamingDetectIntentResponse$json = const {
   ],
 };
 
-const StreamingRecognitionResult$json = const {
+const StreamingRecognitionResult$json = {
   '1': 'StreamingRecognitionResult',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'message_type',
       '3': 1,
       '4': 1,
@@ -321,26 +297,26 @@ const StreamingRecognitionResult$json = const {
           '.google.cloud.dialogflow.v2beta1.StreamingRecognitionResult.MessageType',
       '10': 'messageType'
     },
-    const {'1': 'transcript', '3': 2, '4': 1, '5': 9, '10': 'transcript'},
-    const {'1': 'is_final', '3': 3, '4': 1, '5': 8, '10': 'isFinal'},
-    const {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
+    {'1': 'transcript', '3': 2, '4': 1, '5': 9, '10': 'transcript'},
+    {'1': 'is_final', '3': 3, '4': 1, '5': 8, '10': 'isFinal'},
+    {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
   ],
-  '4': const [StreamingRecognitionResult_MessageType$json],
+  '4': [StreamingRecognitionResult_MessageType$json],
 };
 
-const StreamingRecognitionResult_MessageType$json = const {
+const StreamingRecognitionResult_MessageType$json = {
   '1': 'MessageType',
-  '2': const [
-    const {'1': 'MESSAGE_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'TRANSCRIPT', '2': 1},
-    const {'1': 'END_OF_SINGLE_UTTERANCE', '2': 2},
+  '2': [
+    {'1': 'MESSAGE_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'TRANSCRIPT', '2': 1},
+    {'1': 'END_OF_SINGLE_UTTERANCE', '2': 2},
   ],
 };
 
-const InputAudioConfig$json = const {
+const InputAudioConfig$json = {
   '1': 'InputAudioConfig',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'audio_encoding',
       '3': 1,
       '4': 1,
@@ -348,31 +324,25 @@ const InputAudioConfig$json = const {
       '6': '.google.cloud.dialogflow.v2beta1.AudioEncoding',
       '10': 'audioEncoding'
     },
-    const {
-      '1': 'sample_rate_hertz',
-      '3': 2,
-      '4': 1,
-      '5': 5,
-      '10': 'sampleRateHertz'
-    },
-    const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
-    const {'1': 'phrase_hints', '3': 4, '4': 3, '5': 9, '10': 'phraseHints'},
+    {'1': 'sample_rate_hertz', '3': 2, '4': 1, '5': 5, '10': 'sampleRateHertz'},
+    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'phrase_hints', '3': 4, '4': 3, '5': 9, '10': 'phraseHints'},
   ],
 };
 
-const TextInput$json = const {
+const TextInput$json = {
   '1': 'TextInput',
-  '2': const [
-    const {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
-    const {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
+  '2': [
+    {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
+    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
 
-const EventInput$json = const {
+const EventInput$json = {
   '1': 'EventInput',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'parameters',
       '3': 2,
       '4': 1,
@@ -380,20 +350,20 @@ const EventInput$json = const {
       '6': '.google.protobuf.Struct',
       '10': 'parameters'
     },
-    const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
 
-const Sessions$json = const {
+const Sessions$json = {
   '1': 'Sessions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'DetectIntent',
       '2': '.google.cloud.dialogflow.v2beta1.DetectIntentRequest',
       '3': '.google.cloud.dialogflow.v2beta1.DetectIntentResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'StreamingDetectIntent',
       '2': '.google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest',
       '3': '.google.cloud.dialogflow.v2beta1.StreamingDetectIntentResponse',
@@ -403,7 +373,7 @@ const Sessions$json = const {
   ],
 };
 
-const Sessions$messageJson = const {
+const Sessions$messageJson = {
   '.google.cloud.dialogflow.v2beta1.DetectIntentRequest':
       DetectIntentRequest$json,
   '.google.cloud.dialogflow.v2beta1.QueryParameters': QueryParameters$json,

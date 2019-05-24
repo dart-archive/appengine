@@ -9,14 +9,14 @@ import 'package:protobuf/protobuf.dart';
 
 class Span_TimeEvent_MessageEvent_Type extends ProtobufEnum {
   static const Span_TimeEvent_MessageEvent_Type TYPE_UNSPECIFIED =
-      const Span_TimeEvent_MessageEvent_Type._(0, 'TYPE_UNSPECIFIED');
+      Span_TimeEvent_MessageEvent_Type._(0, 'TYPE_UNSPECIFIED');
   static const Span_TimeEvent_MessageEvent_Type SENT =
-      const Span_TimeEvent_MessageEvent_Type._(1, 'SENT');
+      Span_TimeEvent_MessageEvent_Type._(1, 'SENT');
   static const Span_TimeEvent_MessageEvent_Type RECEIVED =
-      const Span_TimeEvent_MessageEvent_Type._(2, 'RECEIVED');
+      Span_TimeEvent_MessageEvent_Type._(2, 'RECEIVED');
 
   static const List<Span_TimeEvent_MessageEvent_Type> values =
-      const <Span_TimeEvent_MessageEvent_Type>[
+      <Span_TimeEvent_MessageEvent_Type>[
     TYPE_UNSPECIFIED,
     SENT,
     RECEIVED,
@@ -35,13 +35,13 @@ class Span_TimeEvent_MessageEvent_Type extends ProtobufEnum {
 
 class Span_Link_Type extends ProtobufEnum {
   static const Span_Link_Type TYPE_UNSPECIFIED =
-      const Span_Link_Type._(0, 'TYPE_UNSPECIFIED');
+      Span_Link_Type._(0, 'TYPE_UNSPECIFIED');
   static const Span_Link_Type CHILD_LINKED_SPAN =
-      const Span_Link_Type._(1, 'CHILD_LINKED_SPAN');
+      Span_Link_Type._(1, 'CHILD_LINKED_SPAN');
   static const Span_Link_Type PARENT_LINKED_SPAN =
-      const Span_Link_Type._(2, 'PARENT_LINKED_SPAN');
+      Span_Link_Type._(2, 'PARENT_LINKED_SPAN');
 
-  static const List<Span_Link_Type> values = const <Span_Link_Type>[
+  static const List<Span_Link_Type> values = <Span_Link_Type>[
     TYPE_UNSPECIFIED,
     CHILD_LINKED_SPAN,
     PARENT_LINKED_SPAN,

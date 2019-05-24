@@ -15,7 +15,7 @@ import 'bigtable_cluster_data.pbenum.dart';
 export 'bigtable_cluster_data.pbenum.dart';
 
 class Zone extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Zone')
+  static final BuilderInfo _i = BuilderInfo('Zone')
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..e<Zone_Status>(3, 'status', PbFieldType.OE, Zone_Status.UNKNOWN,
@@ -27,12 +27,12 @@ class Zone extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Zone.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Zone clone() => new Zone()..mergeFromMessage(this);
+  Zone clone() => Zone()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Zone create() => new Zone();
-  static PbList<Zone> createRepeated() => new PbList<Zone>();
+  static Zone create() => Zone();
+  static PbList<Zone> createRepeated() => PbList<Zone>();
   static Zone getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyZone();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyZone();
     return _defaultInstance;
   }
 
@@ -69,7 +69,7 @@ class Zone extends GeneratedMessage {
 class _ReadonlyZone extends Zone with ReadonlyMessageMixin {}
 
 class Cluster extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cluster')
+  static final BuilderInfo _i = BuilderInfo('Cluster')
     ..aOS(1, 'name')
     ..a<$google$longrunning.Operation>(
         3,
@@ -94,12 +94,12 @@ class Cluster extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Cluster.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Cluster clone() => new Cluster()..mergeFromMessage(this);
+  Cluster clone() => Cluster()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Cluster create() => new Cluster();
-  static PbList<Cluster> createRepeated() => new PbList<Cluster>();
+  static Cluster create() => Cluster();
+  static PbList<Cluster> createRepeated() => PbList<Cluster>();
   static Cluster getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCluster();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCluster();
     return _defaultInstance;
   }
 

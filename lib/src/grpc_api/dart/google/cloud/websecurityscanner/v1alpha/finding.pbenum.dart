@@ -9,21 +9,21 @@ import 'package:protobuf/protobuf.dart';
 
 class Finding_FindingType extends ProtobufEnum {
   static const Finding_FindingType FINDING_TYPE_UNSPECIFIED =
-      const Finding_FindingType._(0, 'FINDING_TYPE_UNSPECIFIED');
+      Finding_FindingType._(0, 'FINDING_TYPE_UNSPECIFIED');
   static const Finding_FindingType MIXED_CONTENT =
-      const Finding_FindingType._(1, 'MIXED_CONTENT');
+      Finding_FindingType._(1, 'MIXED_CONTENT');
   static const Finding_FindingType OUTDATED_LIBRARY =
-      const Finding_FindingType._(2, 'OUTDATED_LIBRARY');
+      Finding_FindingType._(2, 'OUTDATED_LIBRARY');
   static const Finding_FindingType ROSETTA_FLASH =
-      const Finding_FindingType._(5, 'ROSETTA_FLASH');
+      Finding_FindingType._(5, 'ROSETTA_FLASH');
   static const Finding_FindingType XSS_CALLBACK =
-      const Finding_FindingType._(3, 'XSS_CALLBACK');
+      Finding_FindingType._(3, 'XSS_CALLBACK');
   static const Finding_FindingType XSS_ERROR =
-      const Finding_FindingType._(4, 'XSS_ERROR');
+      Finding_FindingType._(4, 'XSS_ERROR');
   static const Finding_FindingType CLEAR_TEXT_PASSWORD =
-      const Finding_FindingType._(6, 'CLEAR_TEXT_PASSWORD');
+      Finding_FindingType._(6, 'CLEAR_TEXT_PASSWORD');
 
-  static const List<Finding_FindingType> values = const <Finding_FindingType>[
+  static const List<Finding_FindingType> values = <Finding_FindingType>[
     FINDING_TYPE_UNSPECIFIED,
     MIXED_CONTENT,
     OUTDATED_LIBRARY,

@@ -18,7 +18,7 @@ import '../../../protobuf/empty.pb.dart' as $google$protobuf;
 import 'table.pbenum.dart';
 
 class CreateTableRequest_Split extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTableRequest_Split')
+  static final BuilderInfo _i = BuilderInfo('CreateTableRequest_Split')
     ..a<List<int>>(1, 'key', PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -30,14 +30,14 @@ class CreateTableRequest_Split extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTableRequest_Split clone() =>
-      new CreateTableRequest_Split()..mergeFromMessage(this);
+      CreateTableRequest_Split()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateTableRequest_Split create() => new CreateTableRequest_Split();
+  static CreateTableRequest_Split create() => CreateTableRequest_Split();
   static PbList<CreateTableRequest_Split> createRepeated() =>
-      new PbList<CreateTableRequest_Split>();
+      PbList<CreateTableRequest_Split>();
   static CreateTableRequest_Split getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableRequest_Split();
+      _defaultInstance = _ReadonlyCreateTableRequest_Split();
     return _defaultInstance;
   }
 
@@ -60,7 +60,7 @@ class _ReadonlyCreateTableRequest_Split extends CreateTableRequest_Split
     with ReadonlyMessageMixin {}
 
 class CreateTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTableRequest')
+  static final BuilderInfo _i = BuilderInfo('CreateTableRequest')
     ..aOS(1, 'parent')
     ..aOS(2, 'tableId')
     ..a<Table>(3, 'table', PbFieldType.OM, Table.getDefault, Table.create)
@@ -75,15 +75,14 @@ class CreateTableRequest extends GeneratedMessage {
   CreateTableRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateTableRequest clone() =>
-      new CreateTableRequest()..mergeFromMessage(this);
+  CreateTableRequest clone() => CreateTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CreateTableRequest create() => new CreateTableRequest();
+  static CreateTableRequest create() => CreateTableRequest();
   static PbList<CreateTableRequest> createRepeated() =>
-      new PbList<CreateTableRequest>();
+      PbList<CreateTableRequest>();
   static CreateTableRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableRequest();
+      _defaultInstance = _ReadonlyCreateTableRequest();
     return _defaultInstance;
   }
 
@@ -123,12 +122,11 @@ class _ReadonlyCreateTableRequest extends CreateTableRequest
     with ReadonlyMessageMixin {}
 
 class CreateTableFromSnapshotRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('CreateTableFromSnapshotRequest')
-        ..aOS(1, 'parent')
-        ..aOS(2, 'tableId')
-        ..aOS(3, 'sourceSnapshot')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('CreateTableFromSnapshotRequest')
+    ..aOS(1, 'parent')
+    ..aOS(2, 'tableId')
+    ..aOS(3, 'sourceSnapshot')
+    ..hasRequiredFields = false;
 
   CreateTableFromSnapshotRequest() : super();
   CreateTableFromSnapshotRequest.fromBuffer(List<int> i,
@@ -138,15 +136,15 @@ class CreateTableFromSnapshotRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTableFromSnapshotRequest clone() =>
-      new CreateTableFromSnapshotRequest()..mergeFromMessage(this);
+      CreateTableFromSnapshotRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateTableFromSnapshotRequest create() =>
-      new CreateTableFromSnapshotRequest();
+      CreateTableFromSnapshotRequest();
   static PbList<CreateTableFromSnapshotRequest> createRepeated() =>
-      new PbList<CreateTableFromSnapshotRequest>();
+      PbList<CreateTableFromSnapshotRequest>();
   static CreateTableFromSnapshotRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableFromSnapshotRequest();
+      _defaultInstance = _ReadonlyCreateTableFromSnapshotRequest();
     return _defaultInstance;
   }
 
@@ -185,7 +183,7 @@ class _ReadonlyCreateTableFromSnapshotRequest
     extends CreateTableFromSnapshotRequest with ReadonlyMessageMixin {}
 
 class DropRowRangeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DropRowRangeRequest')
+  static final BuilderInfo _i = BuilderInfo('DropRowRangeRequest')
     ..aOS(1, 'name')
     ..a<List<int>>(2, 'rowKeyPrefix', PbFieldType.OY)
     ..aOB(3, 'deleteAllDataFromTable')
@@ -198,15 +196,14 @@ class DropRowRangeRequest extends GeneratedMessage {
   DropRowRangeRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DropRowRangeRequest clone() =>
-      new DropRowRangeRequest()..mergeFromMessage(this);
+  DropRowRangeRequest clone() => DropRowRangeRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DropRowRangeRequest create() => new DropRowRangeRequest();
+  static DropRowRangeRequest create() => DropRowRangeRequest();
   static PbList<DropRowRangeRequest> createRepeated() =>
-      new PbList<DropRowRangeRequest>();
+      PbList<DropRowRangeRequest>();
   static DropRowRangeRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDropRowRangeRequest();
+      _defaultInstance = _ReadonlyDropRowRangeRequest();
     return _defaultInstance;
   }
 
@@ -244,7 +241,7 @@ class _ReadonlyDropRowRangeRequest extends DropRowRangeRequest
     with ReadonlyMessageMixin {}
 
 class ListTablesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTablesRequest')
+  static final BuilderInfo _i = BuilderInfo('ListTablesRequest')
     ..aOS(1, 'parent')
     ..e<Table_View>(2, 'view', PbFieldType.OE, Table_View.VIEW_UNSPECIFIED,
         Table_View.valueOf, Table_View.values)
@@ -258,14 +255,14 @@ class ListTablesRequest extends GeneratedMessage {
   ListTablesRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTablesRequest clone() => new ListTablesRequest()..mergeFromMessage(this);
+  ListTablesRequest clone() => ListTablesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTablesRequest create() => new ListTablesRequest();
+  static ListTablesRequest create() => ListTablesRequest();
   static PbList<ListTablesRequest> createRepeated() =>
-      new PbList<ListTablesRequest>();
+      PbList<ListTablesRequest>();
   static ListTablesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTablesRequest();
+      _defaultInstance = _ReadonlyListTablesRequest();
     return _defaultInstance;
   }
 
@@ -303,7 +300,7 @@ class _ReadonlyListTablesRequest extends ListTablesRequest
     with ReadonlyMessageMixin {}
 
 class ListTablesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTablesResponse')
+  static final BuilderInfo _i = BuilderInfo('ListTablesResponse')
     ..pp<Table>(1, 'tables', PbFieldType.PM, Table.$checkItem, Table.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -315,15 +312,14 @@ class ListTablesResponse extends GeneratedMessage {
   ListTablesResponse.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTablesResponse clone() =>
-      new ListTablesResponse()..mergeFromMessage(this);
+  ListTablesResponse clone() => ListTablesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListTablesResponse create() => new ListTablesResponse();
+  static ListTablesResponse create() => ListTablesResponse();
   static PbList<ListTablesResponse> createRepeated() =>
-      new PbList<ListTablesResponse>();
+      PbList<ListTablesResponse>();
   static ListTablesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTablesResponse();
+      _defaultInstance = _ReadonlyListTablesResponse();
     return _defaultInstance;
   }
 
@@ -347,7 +343,7 @@ class _ReadonlyListTablesResponse extends ListTablesResponse
     with ReadonlyMessageMixin {}
 
 class GetTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTableRequest')
+  static final BuilderInfo _i = BuilderInfo('GetTableRequest')
     ..aOS(1, 'name')
     ..e<Table_View>(2, 'view', PbFieldType.OE, Table_View.VIEW_UNSPECIFIED,
         Table_View.valueOf, Table_View.values)
@@ -360,14 +356,12 @@ class GetTableRequest extends GeneratedMessage {
   GetTableRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTableRequest clone() => new GetTableRequest()..mergeFromMessage(this);
+  GetTableRequest clone() => GetTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetTableRequest create() => new GetTableRequest();
-  static PbList<GetTableRequest> createRepeated() =>
-      new PbList<GetTableRequest>();
+  static GetTableRequest create() => GetTableRequest();
+  static PbList<GetTableRequest> createRepeated() => PbList<GetTableRequest>();
   static GetTableRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTableRequest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetTableRequest();
     return _defaultInstance;
   }
 
@@ -397,7 +391,7 @@ class _ReadonlyGetTableRequest extends GetTableRequest
     with ReadonlyMessageMixin {}
 
 class DeleteTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTableRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteTableRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -408,15 +402,14 @@ class DeleteTableRequest extends GeneratedMessage {
   DeleteTableRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteTableRequest clone() =>
-      new DeleteTableRequest()..mergeFromMessage(this);
+  DeleteTableRequest clone() => DeleteTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteTableRequest create() => new DeleteTableRequest();
+  static DeleteTableRequest create() => DeleteTableRequest();
   static PbList<DeleteTableRequest> createRepeated() =>
-      new PbList<DeleteTableRequest>();
+      PbList<DeleteTableRequest>();
   static DeleteTableRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTableRequest();
+      _defaultInstance = _ReadonlyDeleteTableRequest();
     return _defaultInstance;
   }
 
@@ -439,7 +432,7 @@ class _ReadonlyDeleteTableRequest extends DeleteTableRequest
 
 class ModifyColumnFamiliesRequest_Modification extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('ModifyColumnFamiliesRequest_Modification')
+      BuilderInfo('ModifyColumnFamiliesRequest_Modification')
         ..aOS(1, 'id')
         ..a<ColumnFamily>(2, 'create_2', PbFieldType.OM,
             ColumnFamily.getDefault, ColumnFamily.create)
@@ -456,16 +449,15 @@ class ModifyColumnFamiliesRequest_Modification extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ModifyColumnFamiliesRequest_Modification clone() =>
-      new ModifyColumnFamiliesRequest_Modification()..mergeFromMessage(this);
+      ModifyColumnFamiliesRequest_Modification()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ModifyColumnFamiliesRequest_Modification create() =>
-      new ModifyColumnFamiliesRequest_Modification();
+      ModifyColumnFamiliesRequest_Modification();
   static PbList<ModifyColumnFamiliesRequest_Modification> createRepeated() =>
-      new PbList<ModifyColumnFamiliesRequest_Modification>();
+      PbList<ModifyColumnFamiliesRequest_Modification>();
   static ModifyColumnFamiliesRequest_Modification getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyModifyColumnFamiliesRequest_Modification();
+      _defaultInstance = _ReadonlyModifyColumnFamiliesRequest_Modification();
     return _defaultInstance;
   }
 
@@ -513,7 +505,7 @@ class _ReadonlyModifyColumnFamiliesRequest_Modification
 }
 
 class ModifyColumnFamiliesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ModifyColumnFamiliesRequest')
+  static final BuilderInfo _i = BuilderInfo('ModifyColumnFamiliesRequest')
     ..aOS(1, 'name')
     ..pp<ModifyColumnFamiliesRequest_Modification>(
         2,
@@ -531,15 +523,14 @@ class ModifyColumnFamiliesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ModifyColumnFamiliesRequest clone() =>
-      new ModifyColumnFamiliesRequest()..mergeFromMessage(this);
+      ModifyColumnFamiliesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ModifyColumnFamiliesRequest create() =>
-      new ModifyColumnFamiliesRequest();
+  static ModifyColumnFamiliesRequest create() => ModifyColumnFamiliesRequest();
   static PbList<ModifyColumnFamiliesRequest> createRepeated() =>
-      new PbList<ModifyColumnFamiliesRequest>();
+      PbList<ModifyColumnFamiliesRequest>();
   static ModifyColumnFamiliesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyModifyColumnFamiliesRequest();
+      _defaultInstance = _ReadonlyModifyColumnFamiliesRequest();
     return _defaultInstance;
   }
 
@@ -565,10 +556,9 @@ class _ReadonlyModifyColumnFamiliesRequest extends ModifyColumnFamiliesRequest
     with ReadonlyMessageMixin {}
 
 class GenerateConsistencyTokenRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('GenerateConsistencyTokenRequest')
-        ..aOS(1, 'name')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('GenerateConsistencyTokenRequest')
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
 
   GenerateConsistencyTokenRequest() : super();
   GenerateConsistencyTokenRequest.fromBuffer(List<int> i,
@@ -578,15 +568,15 @@ class GenerateConsistencyTokenRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GenerateConsistencyTokenRequest clone() =>
-      new GenerateConsistencyTokenRequest()..mergeFromMessage(this);
+      GenerateConsistencyTokenRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GenerateConsistencyTokenRequest create() =>
-      new GenerateConsistencyTokenRequest();
+      GenerateConsistencyTokenRequest();
   static PbList<GenerateConsistencyTokenRequest> createRepeated() =>
-      new PbList<GenerateConsistencyTokenRequest>();
+      PbList<GenerateConsistencyTokenRequest>();
   static GenerateConsistencyTokenRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGenerateConsistencyTokenRequest();
+      _defaultInstance = _ReadonlyGenerateConsistencyTokenRequest();
     return _defaultInstance;
   }
 
@@ -609,10 +599,9 @@ class _ReadonlyGenerateConsistencyTokenRequest
     extends GenerateConsistencyTokenRequest with ReadonlyMessageMixin {}
 
 class GenerateConsistencyTokenResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('GenerateConsistencyTokenResponse')
-        ..aOS(1, 'consistencyToken')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('GenerateConsistencyTokenResponse')
+    ..aOS(1, 'consistencyToken')
+    ..hasRequiredFields = false;
 
   GenerateConsistencyTokenResponse() : super();
   GenerateConsistencyTokenResponse.fromBuffer(List<int> i,
@@ -622,15 +611,15 @@ class GenerateConsistencyTokenResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GenerateConsistencyTokenResponse clone() =>
-      new GenerateConsistencyTokenResponse()..mergeFromMessage(this);
+      GenerateConsistencyTokenResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static GenerateConsistencyTokenResponse create() =>
-      new GenerateConsistencyTokenResponse();
+      GenerateConsistencyTokenResponse();
   static PbList<GenerateConsistencyTokenResponse> createRepeated() =>
-      new PbList<GenerateConsistencyTokenResponse>();
+      PbList<GenerateConsistencyTokenResponse>();
   static GenerateConsistencyTokenResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGenerateConsistencyTokenResponse();
+      _defaultInstance = _ReadonlyGenerateConsistencyTokenResponse();
     return _defaultInstance;
   }
 
@@ -653,7 +642,7 @@ class _ReadonlyGenerateConsistencyTokenResponse
     extends GenerateConsistencyTokenResponse with ReadonlyMessageMixin {}
 
 class CheckConsistencyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckConsistencyRequest')
+  static final BuilderInfo _i = BuilderInfo('CheckConsistencyRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'consistencyToken')
     ..hasRequiredFields = false;
@@ -666,14 +655,14 @@ class CheckConsistencyRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckConsistencyRequest clone() =>
-      new CheckConsistencyRequest()..mergeFromMessage(this);
+      CheckConsistencyRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckConsistencyRequest create() => new CheckConsistencyRequest();
+  static CheckConsistencyRequest create() => CheckConsistencyRequest();
   static PbList<CheckConsistencyRequest> createRepeated() =>
-      new PbList<CheckConsistencyRequest>();
+      PbList<CheckConsistencyRequest>();
   static CheckConsistencyRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckConsistencyRequest();
+      _defaultInstance = _ReadonlyCheckConsistencyRequest();
     return _defaultInstance;
   }
 
@@ -704,7 +693,7 @@ class _ReadonlyCheckConsistencyRequest extends CheckConsistencyRequest
     with ReadonlyMessageMixin {}
 
 class CheckConsistencyResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckConsistencyResponse')
+  static final BuilderInfo _i = BuilderInfo('CheckConsistencyResponse')
     ..aOB(1, 'consistent')
     ..hasRequiredFields = false;
 
@@ -716,14 +705,14 @@ class CheckConsistencyResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckConsistencyResponse clone() =>
-      new CheckConsistencyResponse()..mergeFromMessage(this);
+      CheckConsistencyResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CheckConsistencyResponse create() => new CheckConsistencyResponse();
+  static CheckConsistencyResponse create() => CheckConsistencyResponse();
   static PbList<CheckConsistencyResponse> createRepeated() =>
-      new PbList<CheckConsistencyResponse>();
+      PbList<CheckConsistencyResponse>();
   static CheckConsistencyResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckConsistencyResponse();
+      _defaultInstance = _ReadonlyCheckConsistencyResponse();
     return _defaultInstance;
   }
 
@@ -746,7 +735,7 @@ class _ReadonlyCheckConsistencyResponse extends CheckConsistencyResponse
     with ReadonlyMessageMixin {}
 
 class SnapshotTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SnapshotTableRequest')
+  static final BuilderInfo _i = BuilderInfo('SnapshotTableRequest')
     ..aOS(1, 'name')
     ..aOS(2, 'cluster')
     ..aOS(3, 'snapshotId')
@@ -763,14 +752,14 @@ class SnapshotTableRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SnapshotTableRequest clone() =>
-      new SnapshotTableRequest()..mergeFromMessage(this);
+      SnapshotTableRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SnapshotTableRequest create() => new SnapshotTableRequest();
+  static SnapshotTableRequest create() => SnapshotTableRequest();
   static PbList<SnapshotTableRequest> createRepeated() =>
-      new PbList<SnapshotTableRequest>();
+      PbList<SnapshotTableRequest>();
   static SnapshotTableRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySnapshotTableRequest();
+      _defaultInstance = _ReadonlySnapshotTableRequest();
     return _defaultInstance;
   }
 
@@ -824,7 +813,7 @@ class _ReadonlySnapshotTableRequest extends SnapshotTableRequest
     with ReadonlyMessageMixin {}
 
 class GetSnapshotRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSnapshotRequest')
+  static final BuilderInfo _i = BuilderInfo('GetSnapshotRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -835,15 +824,14 @@ class GetSnapshotRequest extends GeneratedMessage {
   GetSnapshotRequest.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetSnapshotRequest clone() =>
-      new GetSnapshotRequest()..mergeFromMessage(this);
+  GetSnapshotRequest clone() => GetSnapshotRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static GetSnapshotRequest create() => new GetSnapshotRequest();
+  static GetSnapshotRequest create() => GetSnapshotRequest();
   static PbList<GetSnapshotRequest> createRepeated() =>
-      new PbList<GetSnapshotRequest>();
+      PbList<GetSnapshotRequest>();
   static GetSnapshotRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSnapshotRequest();
+      _defaultInstance = _ReadonlyGetSnapshotRequest();
     return _defaultInstance;
   }
 
@@ -865,7 +853,7 @@ class _ReadonlyGetSnapshotRequest extends GetSnapshotRequest
     with ReadonlyMessageMixin {}
 
 class ListSnapshotsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSnapshotsRequest')
+  static final BuilderInfo _i = BuilderInfo('ListSnapshotsRequest')
     ..aOS(1, 'parent')
     ..a<int>(2, 'pageSize', PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -879,14 +867,14 @@ class ListSnapshotsRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSnapshotsRequest clone() =>
-      new ListSnapshotsRequest()..mergeFromMessage(this);
+      ListSnapshotsRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListSnapshotsRequest create() => new ListSnapshotsRequest();
+  static ListSnapshotsRequest create() => ListSnapshotsRequest();
   static PbList<ListSnapshotsRequest> createRepeated() =>
-      new PbList<ListSnapshotsRequest>();
+      PbList<ListSnapshotsRequest>();
   static ListSnapshotsRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSnapshotsRequest();
+      _defaultInstance = _ReadonlyListSnapshotsRequest();
     return _defaultInstance;
   }
 
@@ -924,7 +912,7 @@ class _ReadonlyListSnapshotsRequest extends ListSnapshotsRequest
     with ReadonlyMessageMixin {}
 
 class ListSnapshotsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSnapshotsResponse')
+  static final BuilderInfo _i = BuilderInfo('ListSnapshotsResponse')
     ..pp<Snapshot>(
         1, 'snapshots', PbFieldType.PM, Snapshot.$checkItem, Snapshot.create)
     ..aOS(2, 'nextPageToken')
@@ -938,14 +926,14 @@ class ListSnapshotsResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSnapshotsResponse clone() =>
-      new ListSnapshotsResponse()..mergeFromMessage(this);
+      ListSnapshotsResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ListSnapshotsResponse create() => new ListSnapshotsResponse();
+  static ListSnapshotsResponse create() => ListSnapshotsResponse();
   static PbList<ListSnapshotsResponse> createRepeated() =>
-      new PbList<ListSnapshotsResponse>();
+      PbList<ListSnapshotsResponse>();
   static ListSnapshotsResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSnapshotsResponse();
+      _defaultInstance = _ReadonlyListSnapshotsResponse();
     return _defaultInstance;
   }
 
@@ -970,7 +958,7 @@ class _ReadonlyListSnapshotsResponse extends ListSnapshotsResponse
     with ReadonlyMessageMixin {}
 
 class DeleteSnapshotRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSnapshotRequest')
+  static final BuilderInfo _i = BuilderInfo('DeleteSnapshotRequest')
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -982,14 +970,14 @@ class DeleteSnapshotRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteSnapshotRequest clone() =>
-      new DeleteSnapshotRequest()..mergeFromMessage(this);
+      DeleteSnapshotRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DeleteSnapshotRequest create() => new DeleteSnapshotRequest();
+  static DeleteSnapshotRequest create() => DeleteSnapshotRequest();
   static PbList<DeleteSnapshotRequest> createRepeated() =>
-      new PbList<DeleteSnapshotRequest>();
+      PbList<DeleteSnapshotRequest>();
   static DeleteSnapshotRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSnapshotRequest();
+      _defaultInstance = _ReadonlyDeleteSnapshotRequest();
     return _defaultInstance;
   }
 
@@ -1012,7 +1000,7 @@ class _ReadonlyDeleteSnapshotRequest extends DeleteSnapshotRequest
     with ReadonlyMessageMixin {}
 
 class SnapshotTableMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SnapshotTableMetadata')
+  static final BuilderInfo _i = BuilderInfo('SnapshotTableMetadata')
     ..a<SnapshotTableRequest>(1, 'originalRequest', PbFieldType.OM,
         SnapshotTableRequest.getDefault, SnapshotTableRequest.create)
     ..a<$google$protobuf.Timestamp>(
@@ -1037,14 +1025,14 @@ class SnapshotTableMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SnapshotTableMetadata clone() =>
-      new SnapshotTableMetadata()..mergeFromMessage(this);
+      SnapshotTableMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static SnapshotTableMetadata create() => new SnapshotTableMetadata();
+  static SnapshotTableMetadata create() => SnapshotTableMetadata();
   static PbList<SnapshotTableMetadata> createRepeated() =>
-      new PbList<SnapshotTableMetadata>();
+      PbList<SnapshotTableMetadata>();
   static SnapshotTableMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySnapshotTableMetadata();
+      _defaultInstance = _ReadonlySnapshotTableMetadata();
     return _defaultInstance;
   }
 
@@ -1083,27 +1071,26 @@ class _ReadonlySnapshotTableMetadata extends SnapshotTableMetadata
     with ReadonlyMessageMixin {}
 
 class CreateTableFromSnapshotMetadata extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('CreateTableFromSnapshotMetadata')
-        ..a<CreateTableFromSnapshotRequest>(
-            1,
-            'originalRequest',
-            PbFieldType.OM,
-            CreateTableFromSnapshotRequest.getDefault,
-            CreateTableFromSnapshotRequest.create)
-        ..a<$google$protobuf.Timestamp>(
-            2,
-            'requestTime',
-            PbFieldType.OM,
-            $google$protobuf.Timestamp.getDefault,
-            $google$protobuf.Timestamp.create)
-        ..a<$google$protobuf.Timestamp>(
-            3,
-            'finishTime',
-            PbFieldType.OM,
-            $google$protobuf.Timestamp.getDefault,
-            $google$protobuf.Timestamp.create)
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('CreateTableFromSnapshotMetadata')
+    ..a<CreateTableFromSnapshotRequest>(
+        1,
+        'originalRequest',
+        PbFieldType.OM,
+        CreateTableFromSnapshotRequest.getDefault,
+        CreateTableFromSnapshotRequest.create)
+    ..a<$google$protobuf.Timestamp>(
+        2,
+        'requestTime',
+        PbFieldType.OM,
+        $google$protobuf.Timestamp.getDefault,
+        $google$protobuf.Timestamp.create)
+    ..a<$google$protobuf.Timestamp>(
+        3,
+        'finishTime',
+        PbFieldType.OM,
+        $google$protobuf.Timestamp.getDefault,
+        $google$protobuf.Timestamp.create)
+    ..hasRequiredFields = false;
 
   CreateTableFromSnapshotMetadata() : super();
   CreateTableFromSnapshotMetadata.fromBuffer(List<int> i,
@@ -1113,15 +1100,15 @@ class CreateTableFromSnapshotMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTableFromSnapshotMetadata clone() =>
-      new CreateTableFromSnapshotMetadata()..mergeFromMessage(this);
+      CreateTableFromSnapshotMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CreateTableFromSnapshotMetadata create() =>
-      new CreateTableFromSnapshotMetadata();
+      CreateTableFromSnapshotMetadata();
   static PbList<CreateTableFromSnapshotMetadata> createRepeated() =>
-      new PbList<CreateTableFromSnapshotMetadata>();
+      PbList<CreateTableFromSnapshotMetadata>();
   static CreateTableFromSnapshotMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableFromSnapshotMetadata();
+      _defaultInstance = _ReadonlyCreateTableFromSnapshotMetadata();
     return _defaultInstance;
   }
 
@@ -1164,14 +1151,14 @@ class BigtableTableAdminApi {
   BigtableTableAdminApi(this._client);
 
   Future<Table> createTable(ClientContext ctx, CreateTableRequest request) {
-    var emptyResponse = new Table();
+    var emptyResponse = Table();
     return _client.invoke<Table>(
         ctx, 'BigtableTableAdmin', 'CreateTable', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> createTableFromSnapshot(
       ClientContext ctx, CreateTableFromSnapshotRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx,
         'BigtableTableAdmin',
@@ -1182,41 +1169,41 @@ class BigtableTableAdminApi {
 
   Future<ListTablesResponse> listTables(
       ClientContext ctx, ListTablesRequest request) {
-    var emptyResponse = new ListTablesResponse();
+    var emptyResponse = ListTablesResponse();
     return _client.invoke<ListTablesResponse>(
         ctx, 'BigtableTableAdmin', 'ListTables', request, emptyResponse);
   }
 
   Future<Table> getTable(ClientContext ctx, GetTableRequest request) {
-    var emptyResponse = new Table();
+    var emptyResponse = Table();
     return _client.invoke<Table>(
         ctx, 'BigtableTableAdmin', 'GetTable', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteTable(
       ClientContext ctx, DeleteTableRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'BigtableTableAdmin', 'DeleteTable', request, emptyResponse);
   }
 
   Future<Table> modifyColumnFamilies(
       ClientContext ctx, ModifyColumnFamiliesRequest request) {
-    var emptyResponse = new Table();
+    var emptyResponse = Table();
     return _client.invoke<Table>(ctx, 'BigtableTableAdmin',
         'ModifyColumnFamilies', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> dropRowRange(
       ClientContext ctx, DropRowRangeRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'BigtableTableAdmin', 'DropRowRange', request, emptyResponse);
   }
 
   Future<GenerateConsistencyTokenResponse> generateConsistencyToken(
       ClientContext ctx, GenerateConsistencyTokenRequest request) {
-    var emptyResponse = new GenerateConsistencyTokenResponse();
+    var emptyResponse = GenerateConsistencyTokenResponse();
     return _client.invoke<GenerateConsistencyTokenResponse>(
         ctx,
         'BigtableTableAdmin',
@@ -1227,34 +1214,34 @@ class BigtableTableAdminApi {
 
   Future<CheckConsistencyResponse> checkConsistency(
       ClientContext ctx, CheckConsistencyRequest request) {
-    var emptyResponse = new CheckConsistencyResponse();
+    var emptyResponse = CheckConsistencyResponse();
     return _client.invoke<CheckConsistencyResponse>(
         ctx, 'BigtableTableAdmin', 'CheckConsistency', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> snapshotTable(
       ClientContext ctx, SnapshotTableRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'BigtableTableAdmin', 'SnapshotTable', request, emptyResponse);
   }
 
   Future<Snapshot> getSnapshot(ClientContext ctx, GetSnapshotRequest request) {
-    var emptyResponse = new Snapshot();
+    var emptyResponse = Snapshot();
     return _client.invoke<Snapshot>(
         ctx, 'BigtableTableAdmin', 'GetSnapshot', request, emptyResponse);
   }
 
   Future<ListSnapshotsResponse> listSnapshots(
       ClientContext ctx, ListSnapshotsRequest request) {
-    var emptyResponse = new ListSnapshotsResponse();
+    var emptyResponse = ListSnapshotsResponse();
     return _client.invoke<ListSnapshotsResponse>(
         ctx, 'BigtableTableAdmin', 'ListSnapshots', request, emptyResponse);
   }
 
   Future<$google$protobuf.Empty> deleteSnapshot(
       ClientContext ctx, DeleteSnapshotRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
+    var emptyResponse = $google$protobuf.Empty();
     return _client.invoke<$google$protobuf.Empty>(
         ctx, 'BigtableTableAdmin', 'DeleteSnapshot', request, emptyResponse);
   }

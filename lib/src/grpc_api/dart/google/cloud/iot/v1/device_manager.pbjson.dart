@@ -12,11 +12,11 @@ import '../../../protobuf/any.pbjson.dart' as $google$protobuf;
 import '../../../iam/v1/iam_policy.pbjson.dart' as $google$iam$v1;
 import '../../../iam/v1/policy.pbjson.dart' as $google$iam$v1;
 
-const CreateDeviceRegistryRequest$json = const {
+const CreateDeviceRegistryRequest$json = {
   '1': 'CreateDeviceRegistryRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
       '1': 'device_registry',
       '3': 2,
       '4': 1,
@@ -27,24 +27,24 @@ const CreateDeviceRegistryRequest$json = const {
   ],
 };
 
-const GetDeviceRegistryRequest$json = const {
+const GetDeviceRegistryRequest$json = {
   '1': 'GetDeviceRegistryRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const DeleteDeviceRegistryRequest$json = const {
+const DeleteDeviceRegistryRequest$json = {
   '1': 'DeleteDeviceRegistryRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const UpdateDeviceRegistryRequest$json = const {
+const UpdateDeviceRegistryRequest$json = {
   '1': 'UpdateDeviceRegistryRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'device_registry',
       '3': 1,
       '4': 1,
@@ -52,7 +52,7 @@ const UpdateDeviceRegistryRequest$json = const {
       '6': '.google.cloud.iot.v1.DeviceRegistry',
       '10': 'deviceRegistry'
     },
-    const {
+    {
       '1': 'update_mask',
       '3': 2,
       '4': 1,
@@ -63,19 +63,19 @@ const UpdateDeviceRegistryRequest$json = const {
   ],
 };
 
-const ListDeviceRegistriesRequest$json = const {
+const ListDeviceRegistriesRequest$json = {
   '1': 'ListDeviceRegistriesRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListDeviceRegistriesResponse$json = const {
+const ListDeviceRegistriesResponse$json = {
   '1': 'ListDeviceRegistriesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'device_registries',
       '3': 1,
       '4': 3,
@@ -83,21 +83,15 @@ const ListDeviceRegistriesResponse$json = const {
       '6': '.google.cloud.iot.v1.DeviceRegistry',
       '10': 'deviceRegistries'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const CreateDeviceRequest$json = const {
+const CreateDeviceRequest$json = {
   '1': 'CreateDeviceRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
       '1': 'device',
       '3': 2,
       '4': 1,
@@ -108,11 +102,11 @@ const CreateDeviceRequest$json = const {
   ],
 };
 
-const GetDeviceRequest$json = const {
+const GetDeviceRequest$json = {
   '1': 'GetDeviceRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'field_mask',
       '3': 2,
       '4': 1,
@@ -123,10 +117,10 @@ const GetDeviceRequest$json = const {
   ],
 };
 
-const UpdateDeviceRequest$json = const {
+const UpdateDeviceRequest$json = {
   '1': 'UpdateDeviceRequest',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'device',
       '3': 2,
       '4': 1,
@@ -134,7 +128,7 @@ const UpdateDeviceRequest$json = const {
       '6': '.google.cloud.iot.v1.Device',
       '10': 'device'
     },
-    const {
+    {
       '1': 'update_mask',
       '3': 3,
       '4': 1,
@@ -145,20 +139,20 @@ const UpdateDeviceRequest$json = const {
   ],
 };
 
-const DeleteDeviceRequest$json = const {
+const DeleteDeviceRequest$json = {
   '1': 'DeleteDeviceRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListDevicesRequest$json = const {
+const ListDevicesRequest$json = {
   '1': 'ListDevicesRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'device_num_ids', '3': 2, '4': 3, '5': 4, '10': 'deviceNumIds'},
-    const {'1': 'device_ids', '3': 3, '4': 3, '5': 9, '10': 'deviceIds'},
-    const {
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'device_num_ids', '3': 2, '4': 3, '5': 4, '10': 'deviceNumIds'},
+    {'1': 'device_ids', '3': 3, '4': 3, '5': 9, '10': 'deviceIds'},
+    {
       '1': 'field_mask',
       '3': 4,
       '4': 1,
@@ -166,15 +160,15 @@ const ListDevicesRequest$json = const {
       '6': '.google.protobuf.FieldMask',
       '10': 'fieldMask'
     },
-    const {'1': 'page_size', '3': 100, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 101, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 100, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 101, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListDevicesResponse$json = const {
+const ListDevicesResponse$json = {
   '1': 'ListDevicesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'devices',
       '3': 1,
       '4': 3,
@@ -182,43 +176,31 @@ const ListDevicesResponse$json = const {
       '6': '.google.cloud.iot.v1.Device',
       '10': 'devices'
     },
-    const {
-      '1': 'next_page_token',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'nextPageToken'
-    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const ModifyCloudToDeviceConfigRequest$json = const {
+const ModifyCloudToDeviceConfigRequest$json = {
   '1': 'ModifyCloudToDeviceConfigRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
-      '1': 'version_to_update',
-      '3': 2,
-      '4': 1,
-      '5': 3,
-      '10': 'versionToUpdate'
-    },
-    const {'1': 'binary_data', '3': 3, '4': 1, '5': 12, '10': 'binaryData'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'version_to_update', '3': 2, '4': 1, '5': 3, '10': 'versionToUpdate'},
+    {'1': 'binary_data', '3': 3, '4': 1, '5': 12, '10': 'binaryData'},
   ],
 };
 
-const ListDeviceConfigVersionsRequest$json = const {
+const ListDeviceConfigVersionsRequest$json = {
   '1': 'ListDeviceConfigVersionsRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'num_versions', '3': 2, '4': 1, '5': 5, '10': 'numVersions'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'num_versions', '3': 2, '4': 1, '5': 5, '10': 'numVersions'},
   ],
 };
 
-const ListDeviceConfigVersionsResponse$json = const {
+const ListDeviceConfigVersionsResponse$json = {
   '1': 'ListDeviceConfigVersionsResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'device_configs',
       '3': 1,
       '4': 3,
@@ -229,18 +211,18 @@ const ListDeviceConfigVersionsResponse$json = const {
   ],
 };
 
-const ListDeviceStatesRequest$json = const {
+const ListDeviceStatesRequest$json = {
   '1': 'ListDeviceStatesRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'num_states', '3': 2, '4': 1, '5': 5, '10': 'numStates'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'num_states', '3': 2, '4': 1, '5': 5, '10': 'numStates'},
   ],
 };
 
-const ListDeviceStatesResponse$json = const {
+const ListDeviceStatesResponse$json = {
   '1': 'ListDeviceStatesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'device_states',
       '3': 1,
       '4': 3,
@@ -251,109 +233,109 @@ const ListDeviceStatesResponse$json = const {
   ],
 };
 
-const DeviceManager$json = const {
+const DeviceManager$json = {
   '1': 'DeviceManager',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'CreateDeviceRegistry',
       '2': '.google.cloud.iot.v1.CreateDeviceRegistryRequest',
       '3': '.google.cloud.iot.v1.DeviceRegistry',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetDeviceRegistry',
       '2': '.google.cloud.iot.v1.GetDeviceRegistryRequest',
       '3': '.google.cloud.iot.v1.DeviceRegistry',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateDeviceRegistry',
       '2': '.google.cloud.iot.v1.UpdateDeviceRegistryRequest',
       '3': '.google.cloud.iot.v1.DeviceRegistry',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteDeviceRegistry',
       '2': '.google.cloud.iot.v1.DeleteDeviceRegistryRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListDeviceRegistries',
       '2': '.google.cloud.iot.v1.ListDeviceRegistriesRequest',
       '3': '.google.cloud.iot.v1.ListDeviceRegistriesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'CreateDevice',
       '2': '.google.cloud.iot.v1.CreateDeviceRequest',
       '3': '.google.cloud.iot.v1.Device',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetDevice',
       '2': '.google.cloud.iot.v1.GetDeviceRequest',
       '3': '.google.cloud.iot.v1.Device',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'UpdateDevice',
       '2': '.google.cloud.iot.v1.UpdateDeviceRequest',
       '3': '.google.cloud.iot.v1.Device',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'DeleteDevice',
       '2': '.google.cloud.iot.v1.DeleteDeviceRequest',
       '3': '.google.protobuf.Empty',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListDevices',
       '2': '.google.cloud.iot.v1.ListDevicesRequest',
       '3': '.google.cloud.iot.v1.ListDevicesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ModifyCloudToDeviceConfig',
       '2': '.google.cloud.iot.v1.ModifyCloudToDeviceConfigRequest',
       '3': '.google.cloud.iot.v1.DeviceConfig',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListDeviceConfigVersions',
       '2': '.google.cloud.iot.v1.ListDeviceConfigVersionsRequest',
       '3': '.google.cloud.iot.v1.ListDeviceConfigVersionsResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'ListDeviceStates',
       '2': '.google.cloud.iot.v1.ListDeviceStatesRequest',
       '3': '.google.cloud.iot.v1.ListDeviceStatesResponse',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'SetIamPolicy',
       '2': '.google.iam.v1.SetIamPolicyRequest',
       '3': '.google.iam.v1.Policy',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'GetIamPolicy',
       '2': '.google.iam.v1.GetIamPolicyRequest',
       '3': '.google.iam.v1.Policy',
-      '4': const {}
+      '4': {}
     },
-    const {
+    {
       '1': 'TestIamPermissions',
       '2': '.google.iam.v1.TestIamPermissionsRequest',
       '3': '.google.iam.v1.TestIamPermissionsResponse',
-      '4': const {}
+      '4': {}
     },
   ],
 };
 
-const DeviceManager$messageJson = const {
+const DeviceManager$messageJson = {
   '.google.cloud.iot.v1.CreateDeviceRegistryRequest':
       CreateDeviceRegistryRequest$json,
   '.google.cloud.iot.v1.DeviceRegistry': DeviceRegistry$json,

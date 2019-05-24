@@ -9,14 +9,14 @@ import 'package:protobuf/protobuf.dart';
 
 class PackageManager_Architecture extends ProtobufEnum {
   static const PackageManager_Architecture ARCHITECTURE_UNSPECIFIED =
-      const PackageManager_Architecture._(0, 'ARCHITECTURE_UNSPECIFIED');
+      PackageManager_Architecture._(0, 'ARCHITECTURE_UNSPECIFIED');
   static const PackageManager_Architecture X86 =
-      const PackageManager_Architecture._(1, 'X86');
+      PackageManager_Architecture._(1, 'X86');
   static const PackageManager_Architecture X64 =
-      const PackageManager_Architecture._(2, 'X64');
+      PackageManager_Architecture._(2, 'X64');
 
   static const List<PackageManager_Architecture> values =
-      const <PackageManager_Architecture>[
+      <PackageManager_Architecture>[
     ARCHITECTURE_UNSPECIFIED,
     X86,
     X64,

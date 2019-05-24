@@ -9,11 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class MqttState extends ProtobufEnum {
   static const MqttState MQTT_STATE_UNSPECIFIED =
-      const MqttState._(0, 'MQTT_STATE_UNSPECIFIED');
-  static const MqttState MQTT_ENABLED = const MqttState._(1, 'MQTT_ENABLED');
-  static const MqttState MQTT_DISABLED = const MqttState._(2, 'MQTT_DISABLED');
+      MqttState._(0, 'MQTT_STATE_UNSPECIFIED');
+  static const MqttState MQTT_ENABLED = MqttState._(1, 'MQTT_ENABLED');
+  static const MqttState MQTT_DISABLED = MqttState._(2, 'MQTT_DISABLED');
 
-  static const List<MqttState> values = const <MqttState>[
+  static const List<MqttState> values = <MqttState>[
     MQTT_STATE_UNSPECIFIED,
     MQTT_ENABLED,
     MQTT_DISABLED,
@@ -30,11 +30,11 @@ class MqttState extends ProtobufEnum {
 
 class HttpState extends ProtobufEnum {
   static const HttpState HTTP_STATE_UNSPECIFIED =
-      const HttpState._(0, 'HTTP_STATE_UNSPECIFIED');
-  static const HttpState HTTP_ENABLED = const HttpState._(1, 'HTTP_ENABLED');
-  static const HttpState HTTP_DISABLED = const HttpState._(2, 'HTTP_DISABLED');
+      HttpState._(0, 'HTTP_STATE_UNSPECIFIED');
+  static const HttpState HTTP_ENABLED = HttpState._(1, 'HTTP_ENABLED');
+  static const HttpState HTTP_DISABLED = HttpState._(2, 'HTTP_DISABLED');
 
-  static const List<HttpState> values = const <HttpState>[
+  static const List<HttpState> values = <HttpState>[
     HTTP_STATE_UNSPECIFIED,
     HTTP_ENABLED,
     HTTP_DISABLED,
@@ -51,14 +51,13 @@ class HttpState extends ProtobufEnum {
 
 class PublicKeyCertificateFormat extends ProtobufEnum {
   static const PublicKeyCertificateFormat
-      UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT =
-      const PublicKeyCertificateFormat._(
+      UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT = PublicKeyCertificateFormat._(
           0, 'UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT');
   static const PublicKeyCertificateFormat X509_CERTIFICATE_PEM =
-      const PublicKeyCertificateFormat._(1, 'X509_CERTIFICATE_PEM');
+      PublicKeyCertificateFormat._(1, 'X509_CERTIFICATE_PEM');
 
   static const List<PublicKeyCertificateFormat> values =
-      const <PublicKeyCertificateFormat>[
+      <PublicKeyCertificateFormat>[
     UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT,
     X509_CERTIFICATE_PEM,
   ];
@@ -76,16 +75,15 @@ class PublicKeyCertificateFormat extends ProtobufEnum {
 
 class PublicKeyFormat extends ProtobufEnum {
   static const PublicKeyFormat UNSPECIFIED_PUBLIC_KEY_FORMAT =
-      const PublicKeyFormat._(0, 'UNSPECIFIED_PUBLIC_KEY_FORMAT');
-  static const PublicKeyFormat RSA_PEM = const PublicKeyFormat._(3, 'RSA_PEM');
+      PublicKeyFormat._(0, 'UNSPECIFIED_PUBLIC_KEY_FORMAT');
+  static const PublicKeyFormat RSA_PEM = PublicKeyFormat._(3, 'RSA_PEM');
   static const PublicKeyFormat RSA_X509_PEM =
-      const PublicKeyFormat._(1, 'RSA_X509_PEM');
-  static const PublicKeyFormat ES256_PEM =
-      const PublicKeyFormat._(2, 'ES256_PEM');
+      PublicKeyFormat._(1, 'RSA_X509_PEM');
+  static const PublicKeyFormat ES256_PEM = PublicKeyFormat._(2, 'ES256_PEM');
   static const PublicKeyFormat ES256_X509_PEM =
-      const PublicKeyFormat._(4, 'ES256_X509_PEM');
+      PublicKeyFormat._(4, 'ES256_X509_PEM');
 
-  static const List<PublicKeyFormat> values = const <PublicKeyFormat>[
+  static const List<PublicKeyFormat> values = <PublicKeyFormat>[
     UNSPECIFIED_PUBLIC_KEY_FORMAT,
     RSA_PEM,
     RSA_X509_PEM,

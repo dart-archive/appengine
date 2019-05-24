@@ -18,7 +18,7 @@ import 'datastore_admin.pbenum.dart';
 export 'datastore_admin.pbenum.dart';
 
 class CommonMetadata_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommonMetadata_LabelsEntry')
+  static final BuilderInfo _i = BuilderInfo('CommonMetadata_LabelsEntry')
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -31,15 +31,14 @@ class CommonMetadata_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CommonMetadata_LabelsEntry clone() =>
-      new CommonMetadata_LabelsEntry()..mergeFromMessage(this);
+      CommonMetadata_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommonMetadata_LabelsEntry create() =>
-      new CommonMetadata_LabelsEntry();
+  static CommonMetadata_LabelsEntry create() => CommonMetadata_LabelsEntry();
   static PbList<CommonMetadata_LabelsEntry> createRepeated() =>
-      new PbList<CommonMetadata_LabelsEntry>();
+      PbList<CommonMetadata_LabelsEntry>();
   static CommonMetadata_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommonMetadata_LabelsEntry();
+      _defaultInstance = _ReadonlyCommonMetadata_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -70,7 +69,7 @@ class _ReadonlyCommonMetadata_LabelsEntry extends CommonMetadata_LabelsEntry
     with ReadonlyMessageMixin {}
 
 class CommonMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommonMetadata')
+  static final BuilderInfo _i = BuilderInfo('CommonMetadata')
     ..a<$google$protobuf.Timestamp>(
         1,
         'startTime',
@@ -112,14 +111,12 @@ class CommonMetadata extends GeneratedMessage {
   CommonMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommonMetadata clone() => new CommonMetadata()..mergeFromMessage(this);
+  CommonMetadata clone() => CommonMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommonMetadata create() => new CommonMetadata();
-  static PbList<CommonMetadata> createRepeated() =>
-      new PbList<CommonMetadata>();
+  static CommonMetadata create() => CommonMetadata();
+  static PbList<CommonMetadata> createRepeated() => PbList<CommonMetadata>();
   static CommonMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommonMetadata();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommonMetadata();
     return _defaultInstance;
   }
 
@@ -167,7 +164,7 @@ class _ReadonlyCommonMetadata extends CommonMetadata with ReadonlyMessageMixin {
 }
 
 class Progress extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Progress')
+  static final BuilderInfo _i = BuilderInfo('Progress')
     ..aInt64(1, 'workCompleted')
     ..aInt64(2, 'workEstimated')
     ..hasRequiredFields = false;
@@ -178,12 +175,12 @@ class Progress extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Progress.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Progress clone() => new Progress()..mergeFromMessage(this);
+  Progress clone() => Progress()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Progress create() => new Progress();
-  static PbList<Progress> createRepeated() => new PbList<Progress>();
+  static Progress create() => Progress();
+  static PbList<Progress> createRepeated() => PbList<Progress>();
   static Progress getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProgress();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyProgress();
     return _defaultInstance;
   }
 
@@ -212,11 +209,10 @@ class Progress extends GeneratedMessage {
 class _ReadonlyProgress extends Progress with ReadonlyMessageMixin {}
 
 class ExportEntitiesRequest_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ExportEntitiesRequest_LabelsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ExportEntitiesRequest_LabelsEntry')
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
+    ..hasRequiredFields = false;
 
   ExportEntitiesRequest_LabelsEntry() : super();
   ExportEntitiesRequest_LabelsEntry.fromBuffer(List<int> i,
@@ -226,15 +222,15 @@ class ExportEntitiesRequest_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportEntitiesRequest_LabelsEntry clone() =>
-      new ExportEntitiesRequest_LabelsEntry()..mergeFromMessage(this);
+      ExportEntitiesRequest_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ExportEntitiesRequest_LabelsEntry create() =>
-      new ExportEntitiesRequest_LabelsEntry();
+      ExportEntitiesRequest_LabelsEntry();
   static PbList<ExportEntitiesRequest_LabelsEntry> createRepeated() =>
-      new PbList<ExportEntitiesRequest_LabelsEntry>();
+      PbList<ExportEntitiesRequest_LabelsEntry>();
   static ExportEntitiesRequest_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportEntitiesRequest_LabelsEntry();
+      _defaultInstance = _ReadonlyExportEntitiesRequest_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -265,7 +261,7 @@ class _ReadonlyExportEntitiesRequest_LabelsEntry
     extends ExportEntitiesRequest_LabelsEntry with ReadonlyMessageMixin {}
 
 class ExportEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportEntitiesRequest')
+  static final BuilderInfo _i = BuilderInfo('ExportEntitiesRequest')
     ..aOS(1, 'projectId')
     ..pp<ExportEntitiesRequest_LabelsEntry>(
         2,
@@ -286,14 +282,14 @@ class ExportEntitiesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportEntitiesRequest clone() =>
-      new ExportEntitiesRequest()..mergeFromMessage(this);
+      ExportEntitiesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExportEntitiesRequest create() => new ExportEntitiesRequest();
+  static ExportEntitiesRequest create() => ExportEntitiesRequest();
   static PbList<ExportEntitiesRequest> createRepeated() =>
-      new PbList<ExportEntitiesRequest>();
+      PbList<ExportEntitiesRequest>();
   static ExportEntitiesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportEntitiesRequest();
+      _defaultInstance = _ReadonlyExportEntitiesRequest();
     return _defaultInstance;
   }
 
@@ -334,11 +330,10 @@ class _ReadonlyExportEntitiesRequest extends ExportEntitiesRequest
     with ReadonlyMessageMixin {}
 
 class ImportEntitiesRequest_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ImportEntitiesRequest_LabelsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
+  static final BuilderInfo _i = BuilderInfo('ImportEntitiesRequest_LabelsEntry')
+    ..aOS(1, 'key')
+    ..aOS(2, 'value')
+    ..hasRequiredFields = false;
 
   ImportEntitiesRequest_LabelsEntry() : super();
   ImportEntitiesRequest_LabelsEntry.fromBuffer(List<int> i,
@@ -348,15 +343,15 @@ class ImportEntitiesRequest_LabelsEntry extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportEntitiesRequest_LabelsEntry clone() =>
-      new ImportEntitiesRequest_LabelsEntry()..mergeFromMessage(this);
+      ImportEntitiesRequest_LabelsEntry()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static ImportEntitiesRequest_LabelsEntry create() =>
-      new ImportEntitiesRequest_LabelsEntry();
+      ImportEntitiesRequest_LabelsEntry();
   static PbList<ImportEntitiesRequest_LabelsEntry> createRepeated() =>
-      new PbList<ImportEntitiesRequest_LabelsEntry>();
+      PbList<ImportEntitiesRequest_LabelsEntry>();
   static ImportEntitiesRequest_LabelsEntry getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportEntitiesRequest_LabelsEntry();
+      _defaultInstance = _ReadonlyImportEntitiesRequest_LabelsEntry();
     return _defaultInstance;
   }
 
@@ -387,7 +382,7 @@ class _ReadonlyImportEntitiesRequest_LabelsEntry
     extends ImportEntitiesRequest_LabelsEntry with ReadonlyMessageMixin {}
 
 class ImportEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportEntitiesRequest')
+  static final BuilderInfo _i = BuilderInfo('ImportEntitiesRequest')
     ..aOS(1, 'projectId')
     ..pp<ImportEntitiesRequest_LabelsEntry>(
         2,
@@ -408,14 +403,14 @@ class ImportEntitiesRequest extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportEntitiesRequest clone() =>
-      new ImportEntitiesRequest()..mergeFromMessage(this);
+      ImportEntitiesRequest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportEntitiesRequest create() => new ImportEntitiesRequest();
+  static ImportEntitiesRequest create() => ImportEntitiesRequest();
   static PbList<ImportEntitiesRequest> createRepeated() =>
-      new PbList<ImportEntitiesRequest>();
+      PbList<ImportEntitiesRequest>();
   static ImportEntitiesRequest getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportEntitiesRequest();
+      _defaultInstance = _ReadonlyImportEntitiesRequest();
     return _defaultInstance;
   }
 
@@ -456,7 +451,7 @@ class _ReadonlyImportEntitiesRequest extends ImportEntitiesRequest
     with ReadonlyMessageMixin {}
 
 class ExportEntitiesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportEntitiesResponse')
+  static final BuilderInfo _i = BuilderInfo('ExportEntitiesResponse')
     ..aOS(1, 'outputUrl')
     ..hasRequiredFields = false;
 
@@ -468,14 +463,14 @@ class ExportEntitiesResponse extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportEntitiesResponse clone() =>
-      new ExportEntitiesResponse()..mergeFromMessage(this);
+      ExportEntitiesResponse()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExportEntitiesResponse create() => new ExportEntitiesResponse();
+  static ExportEntitiesResponse create() => ExportEntitiesResponse();
   static PbList<ExportEntitiesResponse> createRepeated() =>
-      new PbList<ExportEntitiesResponse>();
+      PbList<ExportEntitiesResponse>();
   static ExportEntitiesResponse getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportEntitiesResponse();
+      _defaultInstance = _ReadonlyExportEntitiesResponse();
     return _defaultInstance;
   }
 
@@ -498,7 +493,7 @@ class _ReadonlyExportEntitiesResponse extends ExportEntitiesResponse
     with ReadonlyMessageMixin {}
 
 class ExportEntitiesMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportEntitiesMetadata')
+  static final BuilderInfo _i = BuilderInfo('ExportEntitiesMetadata')
     ..a<CommonMetadata>(1, 'common', PbFieldType.OM, CommonMetadata.getDefault,
         CommonMetadata.create)
     ..a<Progress>(2, 'progressEntities', PbFieldType.OM, Progress.getDefault,
@@ -518,14 +513,14 @@ class ExportEntitiesMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportEntitiesMetadata clone() =>
-      new ExportEntitiesMetadata()..mergeFromMessage(this);
+      ExportEntitiesMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ExportEntitiesMetadata create() => new ExportEntitiesMetadata();
+  static ExportEntitiesMetadata create() => ExportEntitiesMetadata();
   static PbList<ExportEntitiesMetadata> createRepeated() =>
-      new PbList<ExportEntitiesMetadata>();
+      PbList<ExportEntitiesMetadata>();
   static ExportEntitiesMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportEntitiesMetadata();
+      _defaultInstance = _ReadonlyExportEntitiesMetadata();
     return _defaultInstance;
   }
 
@@ -580,7 +575,7 @@ class _ReadonlyExportEntitiesMetadata extends ExportEntitiesMetadata
     with ReadonlyMessageMixin {}
 
 class ImportEntitiesMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportEntitiesMetadata')
+  static final BuilderInfo _i = BuilderInfo('ImportEntitiesMetadata')
     ..a<CommonMetadata>(1, 'common', PbFieldType.OM, CommonMetadata.getDefault,
         CommonMetadata.create)
     ..a<Progress>(2, 'progressEntities', PbFieldType.OM, Progress.getDefault,
@@ -600,14 +595,14 @@ class ImportEntitiesMetadata extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportEntitiesMetadata clone() =>
-      new ImportEntitiesMetadata()..mergeFromMessage(this);
+      ImportEntitiesMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static ImportEntitiesMetadata create() => new ImportEntitiesMetadata();
+  static ImportEntitiesMetadata create() => ImportEntitiesMetadata();
   static PbList<ImportEntitiesMetadata> createRepeated() =>
-      new PbList<ImportEntitiesMetadata>();
+      PbList<ImportEntitiesMetadata>();
   static ImportEntitiesMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportEntitiesMetadata();
+      _defaultInstance = _ReadonlyImportEntitiesMetadata();
     return _defaultInstance;
   }
 
@@ -662,7 +657,7 @@ class _ReadonlyImportEntitiesMetadata extends ImportEntitiesMetadata
     with ReadonlyMessageMixin {}
 
 class EntityFilter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityFilter')
+  static final BuilderInfo _i = BuilderInfo('EntityFilter')
     ..pPS(1, 'kinds')
     ..pPS(2, 'namespaceIds')
     ..hasRequiredFields = false;
@@ -674,13 +669,12 @@ class EntityFilter extends GeneratedMessage {
   EntityFilter.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityFilter clone() => new EntityFilter()..mergeFromMessage(this);
+  EntityFilter clone() => EntityFilter()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static EntityFilter create() => new EntityFilter();
-  static PbList<EntityFilter> createRepeated() => new PbList<EntityFilter>();
+  static EntityFilter create() => EntityFilter();
+  static PbList<EntityFilter> createRepeated() => PbList<EntityFilter>();
   static EntityFilter getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntityFilter();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityFilter();
     return _defaultInstance;
   }
 
@@ -702,14 +696,14 @@ class DatastoreAdminApi {
 
   Future<$google$longrunning.Operation> exportEntities(
       ClientContext ctx, ExportEntitiesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'DatastoreAdmin', 'ExportEntities', request, emptyResponse);
   }
 
   Future<$google$longrunning.Operation> importEntities(
       ClientContext ctx, ImportEntitiesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
+    var emptyResponse = $google$longrunning.Operation();
     return _client.invoke<$google$longrunning.Operation>(
         ctx, 'DatastoreAdmin', 'ImportEntities', request, emptyResponse);
   }

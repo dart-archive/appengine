@@ -9,13 +9,11 @@ import 'package:protobuf/protobuf.dart';
 
 class ConsoleOutputStream extends ProtobufEnum {
   static const ConsoleOutputStream UNKNOWN =
-      const ConsoleOutputStream._(0, 'UNKNOWN');
-  static const ConsoleOutputStream STDOUT =
-      const ConsoleOutputStream._(1, 'STDOUT');
-  static const ConsoleOutputStream STDERR =
-      const ConsoleOutputStream._(2, 'STDERR');
+      ConsoleOutputStream._(0, 'UNKNOWN');
+  static const ConsoleOutputStream STDOUT = ConsoleOutputStream._(1, 'STDOUT');
+  static const ConsoleOutputStream STDERR = ConsoleOutputStream._(2, 'STDERR');
 
-  static const List<ConsoleOutputStream> values = const <ConsoleOutputStream>[
+  static const List<ConsoleOutputStream> values = <ConsoleOutputStream>[
     UNKNOWN,
     STDOUT,
     STDERR,
@@ -34,15 +32,15 @@ class ConsoleOutputStream extends ProtobufEnum {
 class BuildEvent_BuildComponentStreamFinished_FinishType extends ProtobufEnum {
   static const BuildEvent_BuildComponentStreamFinished_FinishType
       FINISH_TYPE_UNSPECIFIED =
-      const BuildEvent_BuildComponentStreamFinished_FinishType._(
+      BuildEvent_BuildComponentStreamFinished_FinishType._(
           0, 'FINISH_TYPE_UNSPECIFIED');
   static const BuildEvent_BuildComponentStreamFinished_FinishType FINISHED =
-      const BuildEvent_BuildComponentStreamFinished_FinishType._(1, 'FINISHED');
+      BuildEvent_BuildComponentStreamFinished_FinishType._(1, 'FINISHED');
   static const BuildEvent_BuildComponentStreamFinished_FinishType EXPIRED =
-      const BuildEvent_BuildComponentStreamFinished_FinishType._(2, 'EXPIRED');
+      BuildEvent_BuildComponentStreamFinished_FinishType._(2, 'EXPIRED');
 
   static const List<BuildEvent_BuildComponentStreamFinished_FinishType> values =
-      const <BuildEvent_BuildComponentStreamFinished_FinishType>[
+      <BuildEvent_BuildComponentStreamFinished_FinishType>[
     FINISH_TYPE_UNSPECIFIED,
     FINISHED,
     EXPIRED,
@@ -63,16 +61,15 @@ class BuildEvent_BuildComponentStreamFinished_FinishType extends ProtobufEnum {
 
 class StreamId_BuildComponent extends ProtobufEnum {
   static const StreamId_BuildComponent UNKNOWN_COMPONENT =
-      const StreamId_BuildComponent._(0, 'UNKNOWN_COMPONENT');
+      StreamId_BuildComponent._(0, 'UNKNOWN_COMPONENT');
   static const StreamId_BuildComponent CONTROLLER =
-      const StreamId_BuildComponent._(1, 'CONTROLLER');
+      StreamId_BuildComponent._(1, 'CONTROLLER');
   static const StreamId_BuildComponent WORKER =
-      const StreamId_BuildComponent._(2, 'WORKER');
+      StreamId_BuildComponent._(2, 'WORKER');
   static const StreamId_BuildComponent TOOL =
-      const StreamId_BuildComponent._(3, 'TOOL');
+      StreamId_BuildComponent._(3, 'TOOL');
 
-  static const List<StreamId_BuildComponent> values =
-      const <StreamId_BuildComponent>[
+  static const List<StreamId_BuildComponent> values = <StreamId_BuildComponent>[
     UNKNOWN_COMPONENT,
     CONTROLLER,
     WORKER,

@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class Usage extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Usage')
+  static final BuilderInfo _i = BuilderInfo('Usage')
     ..pPS(1, 'requirements')
     ..pp<UsageRule>(
         6, 'rules', PbFieldType.PM, UsageRule.$checkItem, UsageRule.create)
@@ -21,12 +21,12 @@ class Usage extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Usage.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Usage clone() => new Usage()..mergeFromMessage(this);
+  Usage clone() => Usage()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Usage create() => new Usage();
-  static PbList<Usage> createRepeated() => new PbList<Usage>();
+  static Usage create() => Usage();
+  static PbList<Usage> createRepeated() => PbList<Usage>();
   static Usage getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUsage();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyUsage();
     return _defaultInstance;
   }
 
@@ -51,7 +51,7 @@ class Usage extends GeneratedMessage {
 class _ReadonlyUsage extends Usage with ReadonlyMessageMixin {}
 
 class UsageRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UsageRule')
+  static final BuilderInfo _i = BuilderInfo('UsageRule')
     ..aOS(1, 'selector')
     ..aOB(2, 'allowUnregisteredCalls')
     ..aOB(3, 'skipServiceControl')
@@ -63,12 +63,12 @@ class UsageRule extends GeneratedMessage {
       : super.fromBuffer(i, r);
   UsageRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UsageRule clone() => new UsageRule()..mergeFromMessage(this);
+  UsageRule clone() => UsageRule()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static UsageRule create() => new UsageRule();
-  static PbList<UsageRule> createRepeated() => new PbList<UsageRule>();
+  static UsageRule create() => UsageRule();
+  static PbList<UsageRule> createRepeated() => PbList<UsageRule>();
   static UsageRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyUsageRule();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyUsageRule();
     return _defaultInstance;
   }
 

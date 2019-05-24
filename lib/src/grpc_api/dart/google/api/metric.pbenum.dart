@@ -9,16 +9,16 @@ import 'package:protobuf/protobuf.dart';
 
 class MetricDescriptor_MetricKind extends ProtobufEnum {
   static const MetricDescriptor_MetricKind METRIC_KIND_UNSPECIFIED =
-      const MetricDescriptor_MetricKind._(0, 'METRIC_KIND_UNSPECIFIED');
+      MetricDescriptor_MetricKind._(0, 'METRIC_KIND_UNSPECIFIED');
   static const MetricDescriptor_MetricKind GAUGE =
-      const MetricDescriptor_MetricKind._(1, 'GAUGE');
+      MetricDescriptor_MetricKind._(1, 'GAUGE');
   static const MetricDescriptor_MetricKind DELTA =
-      const MetricDescriptor_MetricKind._(2, 'DELTA');
+      MetricDescriptor_MetricKind._(2, 'DELTA');
   static const MetricDescriptor_MetricKind CUMULATIVE =
-      const MetricDescriptor_MetricKind._(3, 'CUMULATIVE');
+      MetricDescriptor_MetricKind._(3, 'CUMULATIVE');
 
   static const List<MetricDescriptor_MetricKind> values =
-      const <MetricDescriptor_MetricKind>[
+      <MetricDescriptor_MetricKind>[
     METRIC_KIND_UNSPECIFIED,
     GAUGE,
     DELTA,
@@ -38,22 +38,22 @@ class MetricDescriptor_MetricKind extends ProtobufEnum {
 
 class MetricDescriptor_ValueType extends ProtobufEnum {
   static const MetricDescriptor_ValueType VALUE_TYPE_UNSPECIFIED =
-      const MetricDescriptor_ValueType._(0, 'VALUE_TYPE_UNSPECIFIED');
+      MetricDescriptor_ValueType._(0, 'VALUE_TYPE_UNSPECIFIED');
   static const MetricDescriptor_ValueType BOOL =
-      const MetricDescriptor_ValueType._(1, 'BOOL');
+      MetricDescriptor_ValueType._(1, 'BOOL');
   static const MetricDescriptor_ValueType INT64 =
-      const MetricDescriptor_ValueType._(2, 'INT64');
+      MetricDescriptor_ValueType._(2, 'INT64');
   static const MetricDescriptor_ValueType DOUBLE =
-      const MetricDescriptor_ValueType._(3, 'DOUBLE');
+      MetricDescriptor_ValueType._(3, 'DOUBLE');
   static const MetricDescriptor_ValueType STRING =
-      const MetricDescriptor_ValueType._(4, 'STRING');
+      MetricDescriptor_ValueType._(4, 'STRING');
   static const MetricDescriptor_ValueType DISTRIBUTION =
-      const MetricDescriptor_ValueType._(5, 'DISTRIBUTION');
+      MetricDescriptor_ValueType._(5, 'DISTRIBUTION');
   static const MetricDescriptor_ValueType MONEY =
-      const MetricDescriptor_ValueType._(6, 'MONEY');
+      MetricDescriptor_ValueType._(6, 'MONEY');
 
   static const List<MetricDescriptor_ValueType> values =
-      const <MetricDescriptor_ValueType>[
+      <MetricDescriptor_ValueType>[
     VALUE_TYPE_UNSPECIFIED,
     BOOL,
     INT64,

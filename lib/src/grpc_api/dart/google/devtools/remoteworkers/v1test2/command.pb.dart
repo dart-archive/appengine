@@ -13,7 +13,7 @@ import '../../../protobuf/duration.pb.dart' as $google$protobuf;
 
 class CommandTask_Inputs_EnvironmentVariable extends GeneratedMessage {
   static final BuilderInfo _i =
-      new BuilderInfo('CommandTask_Inputs_EnvironmentVariable')
+      BuilderInfo('CommandTask_Inputs_EnvironmentVariable')
         ..aOS(1, 'name')
         ..aOS(2, 'value')
         ..hasRequiredFields = false;
@@ -26,15 +26,15 @@ class CommandTask_Inputs_EnvironmentVariable extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CommandTask_Inputs_EnvironmentVariable clone() =>
-      new CommandTask_Inputs_EnvironmentVariable()..mergeFromMessage(this);
+      CommandTask_Inputs_EnvironmentVariable()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
   static CommandTask_Inputs_EnvironmentVariable create() =>
-      new CommandTask_Inputs_EnvironmentVariable();
+      CommandTask_Inputs_EnvironmentVariable();
   static PbList<CommandTask_Inputs_EnvironmentVariable> createRepeated() =>
-      new PbList<CommandTask_Inputs_EnvironmentVariable>();
+      PbList<CommandTask_Inputs_EnvironmentVariable>();
   static CommandTask_Inputs_EnvironmentVariable getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommandTask_Inputs_EnvironmentVariable();
+      _defaultInstance = _ReadonlyCommandTask_Inputs_EnvironmentVariable();
     return _defaultInstance;
   }
 
@@ -65,7 +65,7 @@ class _ReadonlyCommandTask_Inputs_EnvironmentVariable
     extends CommandTask_Inputs_EnvironmentVariable with ReadonlyMessageMixin {}
 
 class CommandTask_Inputs extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommandTask_Inputs')
+  static final BuilderInfo _i = BuilderInfo('CommandTask_Inputs')
     ..pPS(1, 'arguments')
     ..pp<Digest>(2, 'files', PbFieldType.PM, Digest.$checkItem, Digest.create)
     ..pp<CommandTask_Inputs_EnvironmentVariable>(
@@ -83,15 +83,14 @@ class CommandTask_Inputs extends GeneratedMessage {
   CommandTask_Inputs.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommandTask_Inputs clone() =>
-      new CommandTask_Inputs()..mergeFromMessage(this);
+  CommandTask_Inputs clone() => CommandTask_Inputs()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommandTask_Inputs create() => new CommandTask_Inputs();
+  static CommandTask_Inputs create() => CommandTask_Inputs();
   static PbList<CommandTask_Inputs> createRepeated() =>
-      new PbList<CommandTask_Inputs>();
+      PbList<CommandTask_Inputs>();
   static CommandTask_Inputs getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommandTask_Inputs();
+      _defaultInstance = _ReadonlyCommandTask_Inputs();
     return _defaultInstance;
   }
 
@@ -112,7 +111,7 @@ class _ReadonlyCommandTask_Inputs extends CommandTask_Inputs
     with ReadonlyMessageMixin {}
 
 class CommandTask_Outputs extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommandTask_Outputs')
+  static final BuilderInfo _i = BuilderInfo('CommandTask_Outputs')
     ..pPS(1, 'files')
     ..pPS(2, 'directories')
     ..hasRequiredFields = false;
@@ -124,15 +123,14 @@ class CommandTask_Outputs extends GeneratedMessage {
   CommandTask_Outputs.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommandTask_Outputs clone() =>
-      new CommandTask_Outputs()..mergeFromMessage(this);
+  CommandTask_Outputs clone() => CommandTask_Outputs()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommandTask_Outputs create() => new CommandTask_Outputs();
+  static CommandTask_Outputs create() => CommandTask_Outputs();
   static PbList<CommandTask_Outputs> createRepeated() =>
-      new PbList<CommandTask_Outputs>();
+      PbList<CommandTask_Outputs>();
   static CommandTask_Outputs getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommandTask_Outputs();
+      _defaultInstance = _ReadonlyCommandTask_Outputs();
     return _defaultInstance;
   }
 
@@ -150,7 +148,7 @@ class _ReadonlyCommandTask_Outputs extends CommandTask_Outputs
     with ReadonlyMessageMixin {}
 
 class CommandTask_Timeouts extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommandTask_Timeouts')
+  static final BuilderInfo _i = BuilderInfo('CommandTask_Timeouts')
     ..a<$google$protobuf.Duration>(1, 'execution', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..a<$google$protobuf.Duration>(2, 'idle', PbFieldType.OM,
@@ -167,14 +165,14 @@ class CommandTask_Timeouts extends GeneratedMessage {
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CommandTask_Timeouts clone() =>
-      new CommandTask_Timeouts()..mergeFromMessage(this);
+      CommandTask_Timeouts()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommandTask_Timeouts create() => new CommandTask_Timeouts();
+  static CommandTask_Timeouts create() => CommandTask_Timeouts();
   static PbList<CommandTask_Timeouts> createRepeated() =>
-      new PbList<CommandTask_Timeouts>();
+      PbList<CommandTask_Timeouts>();
   static CommandTask_Timeouts getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommandTask_Timeouts();
+      _defaultInstance = _ReadonlyCommandTask_Timeouts();
     return _defaultInstance;
   }
 
@@ -212,7 +210,7 @@ class _ReadonlyCommandTask_Timeouts extends CommandTask_Timeouts
     with ReadonlyMessageMixin {}
 
 class CommandTask extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommandTask')
+  static final BuilderInfo _i = BuilderInfo('CommandTask')
     ..a<CommandTask_Inputs>(1, 'inputs', PbFieldType.OM,
         CommandTask_Inputs.getDefault, CommandTask_Inputs.create)
     ..a<CommandTask_Outputs>(4, 'expectedOutputs', PbFieldType.OM,
@@ -228,12 +226,12 @@ class CommandTask extends GeneratedMessage {
   CommandTask.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommandTask clone() => new CommandTask()..mergeFromMessage(this);
+  CommandTask clone() => CommandTask()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommandTask create() => new CommandTask();
-  static PbList<CommandTask> createRepeated() => new PbList<CommandTask>();
+  static CommandTask create() => CommandTask();
+  static PbList<CommandTask> createRepeated() => PbList<CommandTask>();
   static CommandTask getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCommandTask();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommandTask();
     return _defaultInstance;
   }
 
@@ -270,7 +268,7 @@ class CommandTask extends GeneratedMessage {
 class _ReadonlyCommandTask extends CommandTask with ReadonlyMessageMixin {}
 
 class CommandOutputs extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommandOutputs')
+  static final BuilderInfo _i = BuilderInfo('CommandOutputs')
     ..a<int>(1, 'exitCode', PbFieldType.O3)
     ..a<Digest>(2, 'outputs', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..hasRequiredFields = false;
@@ -282,14 +280,12 @@ class CommandOutputs extends GeneratedMessage {
   CommandOutputs.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommandOutputs clone() => new CommandOutputs()..mergeFromMessage(this);
+  CommandOutputs clone() => CommandOutputs()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommandOutputs create() => new CommandOutputs();
-  static PbList<CommandOutputs> createRepeated() =>
-      new PbList<CommandOutputs>();
+  static CommandOutputs create() => CommandOutputs();
+  static PbList<CommandOutputs> createRepeated() => PbList<CommandOutputs>();
   static CommandOutputs getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommandOutputs();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommandOutputs();
     return _defaultInstance;
   }
 
@@ -319,7 +315,7 @@ class _ReadonlyCommandOutputs extends CommandOutputs with ReadonlyMessageMixin {
 }
 
 class CommandOverhead extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommandOverhead')
+  static final BuilderInfo _i = BuilderInfo('CommandOverhead')
     ..a<$google$protobuf.Duration>(1, 'duration', PbFieldType.OM,
         $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
     ..a<$google$protobuf.Duration>(2, 'overhead', PbFieldType.OM,
@@ -333,14 +329,12 @@ class CommandOverhead extends GeneratedMessage {
   CommandOverhead.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommandOverhead clone() => new CommandOverhead()..mergeFromMessage(this);
+  CommandOverhead clone() => CommandOverhead()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CommandOverhead create() => new CommandOverhead();
-  static PbList<CommandOverhead> createRepeated() =>
-      new PbList<CommandOverhead>();
+  static CommandOverhead create() => CommandOverhead();
+  static PbList<CommandOverhead> createRepeated() => PbList<CommandOverhead>();
   static CommandOverhead getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommandOverhead();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommandOverhead();
     return _defaultInstance;
   }
 
@@ -370,7 +364,7 @@ class _ReadonlyCommandOverhead extends CommandOverhead
     with ReadonlyMessageMixin {}
 
 class FileMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FileMetadata')
+  static final BuilderInfo _i = BuilderInfo('FileMetadata')
     ..aOS(1, 'path')
     ..a<Digest>(2, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..a<List<int>>(3, 'contents', PbFieldType.OY)
@@ -384,13 +378,12 @@ class FileMetadata extends GeneratedMessage {
   FileMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FileMetadata clone() => new FileMetadata()..mergeFromMessage(this);
+  FileMetadata clone() => FileMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static FileMetadata create() => new FileMetadata();
-  static PbList<FileMetadata> createRepeated() => new PbList<FileMetadata>();
+  static FileMetadata create() => FileMetadata();
+  static PbList<FileMetadata> createRepeated() => PbList<FileMetadata>();
   static FileMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFileMetadata();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileMetadata();
     return _defaultInstance;
   }
 
@@ -435,7 +428,7 @@ class FileMetadata extends GeneratedMessage {
 class _ReadonlyFileMetadata extends FileMetadata with ReadonlyMessageMixin {}
 
 class DirectoryMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DirectoryMetadata')
+  static final BuilderInfo _i = BuilderInfo('DirectoryMetadata')
     ..aOS(1, 'path')
     ..a<Digest>(2, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
     ..hasRequiredFields = false;
@@ -447,14 +440,14 @@ class DirectoryMetadata extends GeneratedMessage {
   DirectoryMetadata.fromJson(String i,
       [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DirectoryMetadata clone() => new DirectoryMetadata()..mergeFromMessage(this);
+  DirectoryMetadata clone() => DirectoryMetadata()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static DirectoryMetadata create() => new DirectoryMetadata();
+  static DirectoryMetadata create() => DirectoryMetadata();
   static PbList<DirectoryMetadata> createRepeated() =>
-      new PbList<DirectoryMetadata>();
+      PbList<DirectoryMetadata>();
   static DirectoryMetadata getDefault() {
     if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDirectoryMetadata();
+      _defaultInstance = _ReadonlyDirectoryMetadata();
     return _defaultInstance;
   }
 
@@ -484,7 +477,7 @@ class _ReadonlyDirectoryMetadata extends DirectoryMetadata
     with ReadonlyMessageMixin {}
 
 class Digest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Digest')
+  static final BuilderInfo _i = BuilderInfo('Digest')
     ..aOS(1, 'hash')
     ..aInt64(2, 'sizeBytes')
     ..hasRequiredFields = false;
@@ -495,12 +488,12 @@ class Digest extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Digest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Digest clone() => new Digest()..mergeFromMessage(this);
+  Digest clone() => Digest()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Digest create() => new Digest();
-  static PbList<Digest> createRepeated() => new PbList<Digest>();
+  static Digest create() => Digest();
+  static PbList<Digest> createRepeated() => PbList<Digest>();
   static Digest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDigest();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDigest();
     return _defaultInstance;
   }
 
@@ -529,7 +522,7 @@ class Digest extends GeneratedMessage {
 class _ReadonlyDigest extends Digest with ReadonlyMessageMixin {}
 
 class Directory extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Directory')
+  static final BuilderInfo _i = BuilderInfo('Directory')
     ..pp<FileMetadata>(1, 'files', PbFieldType.PM, FileMetadata.$checkItem,
         FileMetadata.create)
     ..pp<DirectoryMetadata>(2, 'directories', PbFieldType.PM,
@@ -542,12 +535,12 @@ class Directory extends GeneratedMessage {
       : super.fromBuffer(i, r);
   Directory.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Directory clone() => new Directory()..mergeFromMessage(this);
+  Directory clone() => Directory()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static Directory create() => new Directory();
-  static PbList<Directory> createRepeated() => new PbList<Directory>();
+  static Directory create() => Directory();
+  static PbList<Directory> createRepeated() => PbList<Directory>();
   static Directory getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDirectory();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyDirectory();
     return _defaultInstance;
   }
 

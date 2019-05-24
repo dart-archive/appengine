@@ -9,7 +9,7 @@ import 'dart:core' show int, bool, double, String, List, override;
 import 'package:protobuf/protobuf.dart';
 
 class CrawledUrl extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CrawledUrl')
+  static final BuilderInfo _i = BuilderInfo('CrawledUrl')
     ..aOS(1, 'httpMethod')
     ..aOS(2, 'url')
     ..aOS(3, 'body')
@@ -21,12 +21,12 @@ class CrawledUrl extends GeneratedMessage {
       : super.fromBuffer(i, r);
   CrawledUrl.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CrawledUrl clone() => new CrawledUrl()..mergeFromMessage(this);
+  CrawledUrl clone() => CrawledUrl()..mergeFromMessage(this);
   BuilderInfo get info_ => _i;
-  static CrawledUrl create() => new CrawledUrl();
-  static PbList<CrawledUrl> createRepeated() => new PbList<CrawledUrl>();
+  static CrawledUrl create() => CrawledUrl();
+  static PbList<CrawledUrl> createRepeated() => PbList<CrawledUrl>();
   static CrawledUrl getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCrawledUrl();
+    if (_defaultInstance == null) _defaultInstance = _ReadonlyCrawledUrl();
     return _defaultInstance;
   }
 
