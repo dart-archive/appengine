@@ -8,14 +8,21 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class CampaignExperimentTypeEnum_CampaignExperimentType extends $pb.ProtobufEnum {
-  static const CampaignExperimentTypeEnum_CampaignExperimentType UNSPECIFIED = CampaignExperimentTypeEnum_CampaignExperimentType._(0, 'UNSPECIFIED');
-  static const CampaignExperimentTypeEnum_CampaignExperimentType UNKNOWN = CampaignExperimentTypeEnum_CampaignExperimentType._(1, 'UNKNOWN');
-  static const CampaignExperimentTypeEnum_CampaignExperimentType BASE = CampaignExperimentTypeEnum_CampaignExperimentType._(2, 'BASE');
-  static const CampaignExperimentTypeEnum_CampaignExperimentType DRAFT = CampaignExperimentTypeEnum_CampaignExperimentType._(3, 'DRAFT');
-  static const CampaignExperimentTypeEnum_CampaignExperimentType EXPERIMENT = CampaignExperimentTypeEnum_CampaignExperimentType._(4, 'EXPERIMENT');
+class CampaignExperimentTypeEnum_CampaignExperimentType
+    extends $pb.ProtobufEnum {
+  static const CampaignExperimentTypeEnum_CampaignExperimentType UNSPECIFIED =
+      CampaignExperimentTypeEnum_CampaignExperimentType._(0, 'UNSPECIFIED');
+  static const CampaignExperimentTypeEnum_CampaignExperimentType UNKNOWN =
+      CampaignExperimentTypeEnum_CampaignExperimentType._(1, 'UNKNOWN');
+  static const CampaignExperimentTypeEnum_CampaignExperimentType BASE =
+      CampaignExperimentTypeEnum_CampaignExperimentType._(2, 'BASE');
+  static const CampaignExperimentTypeEnum_CampaignExperimentType DRAFT =
+      CampaignExperimentTypeEnum_CampaignExperimentType._(3, 'DRAFT');
+  static const CampaignExperimentTypeEnum_CampaignExperimentType EXPERIMENT =
+      CampaignExperimentTypeEnum_CampaignExperimentType._(4, 'EXPERIMENT');
 
-  static const $core.List<CampaignExperimentTypeEnum_CampaignExperimentType> values = <CampaignExperimentTypeEnum_CampaignExperimentType> [
+  static const $core.List<CampaignExperimentTypeEnum_CampaignExperimentType>
+      values = <CampaignExperimentTypeEnum_CampaignExperimentType>[
     UNSPECIFIED,
     UNKNOWN,
     BASE,
@@ -23,9 +30,14 @@ class CampaignExperimentTypeEnum_CampaignExperimentType extends $pb.ProtobufEnum
     EXPERIMENT,
   ];
 
-  static final $core.Map<$core.int, CampaignExperimentTypeEnum_CampaignExperimentType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CampaignExperimentTypeEnum_CampaignExperimentType valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, CampaignExperimentTypeEnum_CampaignExperimentType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CampaignExperimentTypeEnum_CampaignExperimentType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const CampaignExperimentTypeEnum_CampaignExperimentType._($core.int v, $core.String n) : super(v, n);
+  const CampaignExperimentTypeEnum_CampaignExperimentType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class BiddingSourceEnum_BiddingSource extends $pb.ProtobufEnum {
-  static const BiddingSourceEnum_BiddingSource UNSPECIFIED = BiddingSourceEnum_BiddingSource._(0, 'UNSPECIFIED');
-  static const BiddingSourceEnum_BiddingSource UNKNOWN = BiddingSourceEnum_BiddingSource._(1, 'UNKNOWN');
-  static const BiddingSourceEnum_BiddingSource CAMPAIGN_BIDDING_STRATEGY = BiddingSourceEnum_BiddingSource._(5, 'CAMPAIGN_BIDDING_STRATEGY');
-  static const BiddingSourceEnum_BiddingSource AD_GROUP = BiddingSourceEnum_BiddingSource._(6, 'AD_GROUP');
-  static const BiddingSourceEnum_BiddingSource AD_GROUP_CRITERION = BiddingSourceEnum_BiddingSource._(7, 'AD_GROUP_CRITERION');
+  static const BiddingSourceEnum_BiddingSource UNSPECIFIED =
+      BiddingSourceEnum_BiddingSource._(0, 'UNSPECIFIED');
+  static const BiddingSourceEnum_BiddingSource UNKNOWN =
+      BiddingSourceEnum_BiddingSource._(1, 'UNKNOWN');
+  static const BiddingSourceEnum_BiddingSource CAMPAIGN_BIDDING_STRATEGY =
+      BiddingSourceEnum_BiddingSource._(5, 'CAMPAIGN_BIDDING_STRATEGY');
+  static const BiddingSourceEnum_BiddingSource AD_GROUP =
+      BiddingSourceEnum_BiddingSource._(6, 'AD_GROUP');
+  static const BiddingSourceEnum_BiddingSource AD_GROUP_CRITERION =
+      BiddingSourceEnum_BiddingSource._(7, 'AD_GROUP_CRITERION');
 
-  static const $core.List<BiddingSourceEnum_BiddingSource> values = <BiddingSourceEnum_BiddingSource> [
+  static const $core.List<BiddingSourceEnum_BiddingSource> values =
+      <BiddingSourceEnum_BiddingSource>[
     UNSPECIFIED,
     UNKNOWN,
     CAMPAIGN_BIDDING_STRATEGY,
@@ -23,9 +29,11 @@ class BiddingSourceEnum_BiddingSource extends $pb.ProtobufEnum {
     AD_GROUP_CRITERION,
   ];
 
-  static final $core.Map<$core.int, BiddingSourceEnum_BiddingSource> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static BiddingSourceEnum_BiddingSource valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, BiddingSourceEnum_BiddingSource> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static BiddingSourceEnum_BiddingSource valueOf($core.int value) =>
+      _byValue[value];
 
-  const BiddingSourceEnum_BiddingSource._($core.int v, $core.String n) : super(v, n);
+  const BiddingSourceEnum_BiddingSource._($core.int v, $core.String n)
+      : super(v, n);
 }
-

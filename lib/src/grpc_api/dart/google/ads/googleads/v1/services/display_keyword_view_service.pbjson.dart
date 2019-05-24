@@ -6,22 +6,28 @@
 
 import '../resources/display_keyword_view.pbjson.dart' as $0;
 
-const GetDisplayKeywordViewRequest$json = const {
+const GetDisplayKeywordViewRequest$json = {
   '1': 'GetDisplayKeywordViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const DisplayKeywordViewServiceBase$json = const {
+const DisplayKeywordViewServiceBase$json = {
   '1': 'DisplayKeywordViewService',
-  '2': const [
-    const {'1': 'GetDisplayKeywordView', '2': '.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest', '3': '.google.ads.googleads.v1.resources.DisplayKeywordView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetDisplayKeywordView',
+      '2': '.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest',
+      '3': '.google.ads.googleads.v1.resources.DisplayKeywordView',
+      '4': {}
+    },
   ],
 };
 
-const DisplayKeywordViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest': GetDisplayKeywordViewRequest$json,
-  '.google.ads.googleads.v1.resources.DisplayKeywordView': $0.DisplayKeywordView$json,
+const DisplayKeywordViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetDisplayKeywordViewRequest':
+      GetDisplayKeywordViewRequest$json,
+  '.google.ads.googleads.v1.resources.DisplayKeywordView':
+      $0.DisplayKeywordView$json,
 };
-

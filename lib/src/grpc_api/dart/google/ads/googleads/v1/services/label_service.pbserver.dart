@@ -16,26 +16,35 @@ import 'label_service.pbjson.dart';
 export 'label_service.pb.dart';
 
 abstract class LabelServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.Label> getLabel($pb.ServerContext ctx, GetLabelRequest request);
-  $async.Future<MutateLabelsResponse> mutateLabels($pb.ServerContext ctx, MutateLabelsRequest request);
+  $async.Future<$0.Label> getLabel(
+      $pb.ServerContext ctx, GetLabelRequest request);
+  $async.Future<MutateLabelsResponse> mutateLabels(
+      $pb.ServerContext ctx, MutateLabelsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetLabel': return GetLabelRequest();
-      case 'MutateLabels': return MutateLabelsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetLabel':
+        return GetLabelRequest();
+      case 'MutateLabels':
+        return MutateLabelsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetLabel': return this.getLabel(ctx, request);
-      case 'MutateLabels': return this.mutateLabels(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetLabel':
+        return this.getLabel(ctx, request);
+      case 'MutateLabels':
+        return this.mutateLabels(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => LabelServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => LabelServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => LabelServiceBase$messageJson;
 }
-

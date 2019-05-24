@@ -9,19 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class FeedItemTargetDeviceEnum_FeedItemTargetDevice extends $pb.ProtobufEnum {
-  static const FeedItemTargetDeviceEnum_FeedItemTargetDevice UNSPECIFIED = FeedItemTargetDeviceEnum_FeedItemTargetDevice._(0, 'UNSPECIFIED');
-  static const FeedItemTargetDeviceEnum_FeedItemTargetDevice UNKNOWN = FeedItemTargetDeviceEnum_FeedItemTargetDevice._(1, 'UNKNOWN');
-  static const FeedItemTargetDeviceEnum_FeedItemTargetDevice MOBILE = FeedItemTargetDeviceEnum_FeedItemTargetDevice._(2, 'MOBILE');
+  static const FeedItemTargetDeviceEnum_FeedItemTargetDevice UNSPECIFIED =
+      FeedItemTargetDeviceEnum_FeedItemTargetDevice._(0, 'UNSPECIFIED');
+  static const FeedItemTargetDeviceEnum_FeedItemTargetDevice UNKNOWN =
+      FeedItemTargetDeviceEnum_FeedItemTargetDevice._(1, 'UNKNOWN');
+  static const FeedItemTargetDeviceEnum_FeedItemTargetDevice MOBILE =
+      FeedItemTargetDeviceEnum_FeedItemTargetDevice._(2, 'MOBILE');
 
-  static const $core.List<FeedItemTargetDeviceEnum_FeedItemTargetDevice> values = <FeedItemTargetDeviceEnum_FeedItemTargetDevice> [
+  static const $core.List<FeedItemTargetDeviceEnum_FeedItemTargetDevice>
+      values = <FeedItemTargetDeviceEnum_FeedItemTargetDevice>[
     UNSPECIFIED,
     UNKNOWN,
     MOBILE,
   ];
 
-  static final $core.Map<$core.int, FeedItemTargetDeviceEnum_FeedItemTargetDevice> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static FeedItemTargetDeviceEnum_FeedItemTargetDevice valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, FeedItemTargetDeviceEnum_FeedItemTargetDevice>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static FeedItemTargetDeviceEnum_FeedItemTargetDevice valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const FeedItemTargetDeviceEnum_FeedItemTargetDevice._($core.int v, $core.String n) : super(v, n);
+  const FeedItemTargetDeviceEnum_FeedItemTargetDevice._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

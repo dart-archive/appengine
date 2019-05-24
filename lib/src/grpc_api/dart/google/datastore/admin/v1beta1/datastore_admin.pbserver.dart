@@ -16,26 +16,36 @@ import 'datastore_admin.pbjson.dart';
 export 'datastore_admin.pb.dart';
 
 abstract class DatastoreAdminServiceBase extends $pb.GeneratedService {
-  $async.Future<$1.Operation> exportEntities($pb.ServerContext ctx, ExportEntitiesRequest request);
-  $async.Future<$1.Operation> importEntities($pb.ServerContext ctx, ImportEntitiesRequest request);
+  $async.Future<$1.Operation> exportEntities(
+      $pb.ServerContext ctx, ExportEntitiesRequest request);
+  $async.Future<$1.Operation> importEntities(
+      $pb.ServerContext ctx, ImportEntitiesRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'ExportEntities': return ExportEntitiesRequest();
-      case 'ImportEntities': return ImportEntitiesRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ExportEntities':
+        return ExportEntitiesRequest();
+      case 'ImportEntities':
+        return ImportEntitiesRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'ExportEntities': return this.exportEntities(ctx, request);
-      case 'ImportEntities': return this.importEntities(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ExportEntities':
+        return this.exportEntities(ctx, request);
+      case 'ImportEntities':
+        return this.importEntities(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => DatastoreAdminServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => DatastoreAdminServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      DatastoreAdminServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DatastoreAdminServiceBase$messageJson;
 }
-

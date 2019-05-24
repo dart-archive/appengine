@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const SimulationModificationMethodEnum$json = const {
+const SimulationModificationMethodEnum$json = {
   '1': 'SimulationModificationMethodEnum',
-  '4': const [SimulationModificationMethodEnum_SimulationModificationMethod$json],
+  '4': [SimulationModificationMethodEnum_SimulationModificationMethod$json],
 };
 
-const SimulationModificationMethodEnum_SimulationModificationMethod$json = const {
+const SimulationModificationMethodEnum_SimulationModificationMethod$json = {
   '1': 'SimulationModificationMethod',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'UNIFORM', '2': 2},
-    const {'1': 'DEFAULT', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'UNIFORM', '2': 2},
+    {'1': 'DEFAULT', '2': 3},
   ],
 };
-

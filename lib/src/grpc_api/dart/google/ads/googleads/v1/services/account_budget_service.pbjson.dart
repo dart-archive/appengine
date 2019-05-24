@@ -7,25 +7,31 @@
 import '../resources/account_budget.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetAccountBudgetRequest$json = const {
+const GetAccountBudgetRequest$json = {
   '1': 'GetAccountBudgetRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const AccountBudgetServiceBase$json = const {
+const AccountBudgetServiceBase$json = {
   '1': 'AccountBudgetService',
-  '2': const [
-    const {'1': 'GetAccountBudget', '2': '.google.ads.googleads.v1.services.GetAccountBudgetRequest', '3': '.google.ads.googleads.v1.resources.AccountBudget', '4': const {}},
+  '2': [
+    {
+      '1': 'GetAccountBudget',
+      '2': '.google.ads.googleads.v1.services.GetAccountBudgetRequest',
+      '3': '.google.ads.googleads.v1.resources.AccountBudget',
+      '4': {}
+    },
   ],
 };
 
-const AccountBudgetServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetAccountBudgetRequest': GetAccountBudgetRequest$json,
+const AccountBudgetServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetAccountBudgetRequest':
+      GetAccountBudgetRequest$json,
   '.google.ads.googleads.v1.resources.AccountBudget': $0.AccountBudget$json,
   '.google.protobuf.Int64Value': $1.Int64Value$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
-  '.google.ads.googleads.v1.resources.AccountBudget.PendingAccountBudgetProposal': $0.AccountBudget_PendingAccountBudgetProposal$json,
+  '.google.ads.googleads.v1.resources.AccountBudget.PendingAccountBudgetProposal':
+      $0.AccountBudget_PendingAccountBudgetProposal$json,
 };
-

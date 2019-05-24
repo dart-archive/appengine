@@ -9,16 +9,26 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PolicyTopicEntryTypeEnum_PolicyTopicEntryType extends $pb.ProtobufEnum {
-  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType UNSPECIFIED = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(0, 'UNSPECIFIED');
-  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType UNKNOWN = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(1, 'UNKNOWN');
-  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType PROHIBITED = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(2, 'PROHIBITED');
-  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType LIMITED = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(4, 'LIMITED');
-  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType FULLY_LIMITED = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(8, 'FULLY_LIMITED');
-  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType DESCRIPTIVE = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(5, 'DESCRIPTIVE');
-  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType BROADENING = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(6, 'BROADENING');
-  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType AREA_OF_INTEREST_ONLY = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(7, 'AREA_OF_INTEREST_ONLY');
+  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType UNSPECIFIED =
+      PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(0, 'UNSPECIFIED');
+  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType UNKNOWN =
+      PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(1, 'UNKNOWN');
+  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType PROHIBITED =
+      PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(2, 'PROHIBITED');
+  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType LIMITED =
+      PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(4, 'LIMITED');
+  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType FULLY_LIMITED =
+      PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(8, 'FULLY_LIMITED');
+  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType DESCRIPTIVE =
+      PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(5, 'DESCRIPTIVE');
+  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType BROADENING =
+      PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(6, 'BROADENING');
+  static const PolicyTopicEntryTypeEnum_PolicyTopicEntryType
+      AREA_OF_INTEREST_ONLY = PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(
+          7, 'AREA_OF_INTEREST_ONLY');
 
-  static const $core.List<PolicyTopicEntryTypeEnum_PolicyTopicEntryType> values = <PolicyTopicEntryTypeEnum_PolicyTopicEntryType> [
+  static const $core.List<PolicyTopicEntryTypeEnum_PolicyTopicEntryType>
+      values = <PolicyTopicEntryTypeEnum_PolicyTopicEntryType>[
     UNSPECIFIED,
     UNKNOWN,
     PROHIBITED,
@@ -29,9 +39,14 @@ class PolicyTopicEntryTypeEnum_PolicyTopicEntryType extends $pb.ProtobufEnum {
     AREA_OF_INTEREST_ONLY,
   ];
 
-  static final $core.Map<$core.int, PolicyTopicEntryTypeEnum_PolicyTopicEntryType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PolicyTopicEntryTypeEnum_PolicyTopicEntryType valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, PolicyTopicEntryTypeEnum_PolicyTopicEntryType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PolicyTopicEntryTypeEnum_PolicyTopicEntryType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const PolicyTopicEntryTypeEnum_PolicyTopicEntryType._($core.int v, $core.String n) : super(v, n);
+  const PolicyTopicEntryTypeEnum_PolicyTopicEntryType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

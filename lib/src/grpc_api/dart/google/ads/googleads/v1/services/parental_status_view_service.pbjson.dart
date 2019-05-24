@@ -6,22 +6,28 @@
 
 import '../resources/parental_status_view.pbjson.dart' as $0;
 
-const GetParentalStatusViewRequest$json = const {
+const GetParentalStatusViewRequest$json = {
   '1': 'GetParentalStatusViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const ParentalStatusViewServiceBase$json = const {
+const ParentalStatusViewServiceBase$json = {
   '1': 'ParentalStatusViewService',
-  '2': const [
-    const {'1': 'GetParentalStatusView', '2': '.google.ads.googleads.v1.services.GetParentalStatusViewRequest', '3': '.google.ads.googleads.v1.resources.ParentalStatusView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetParentalStatusView',
+      '2': '.google.ads.googleads.v1.services.GetParentalStatusViewRequest',
+      '3': '.google.ads.googleads.v1.resources.ParentalStatusView',
+      '4': {}
+    },
   ],
 };
 
-const ParentalStatusViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetParentalStatusViewRequest': GetParentalStatusViewRequest$json,
-  '.google.ads.googleads.v1.resources.ParentalStatusView': $0.ParentalStatusView$json,
+const ParentalStatusViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetParentalStatusViewRequest':
+      GetParentalStatusViewRequest$json,
+  '.google.ads.googleads.v1.resources.ParentalStatusView':
+      $0.ParentalStatusView$json,
 };
-

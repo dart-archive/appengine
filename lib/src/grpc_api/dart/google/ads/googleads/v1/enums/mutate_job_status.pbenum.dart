@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class MutateJobStatusEnum_MutateJobStatus extends $pb.ProtobufEnum {
-  static const MutateJobStatusEnum_MutateJobStatus UNSPECIFIED = MutateJobStatusEnum_MutateJobStatus._(0, 'UNSPECIFIED');
-  static const MutateJobStatusEnum_MutateJobStatus UNKNOWN = MutateJobStatusEnum_MutateJobStatus._(1, 'UNKNOWN');
-  static const MutateJobStatusEnum_MutateJobStatus PENDING = MutateJobStatusEnum_MutateJobStatus._(2, 'PENDING');
-  static const MutateJobStatusEnum_MutateJobStatus RUNNING = MutateJobStatusEnum_MutateJobStatus._(3, 'RUNNING');
-  static const MutateJobStatusEnum_MutateJobStatus DONE = MutateJobStatusEnum_MutateJobStatus._(4, 'DONE');
+  static const MutateJobStatusEnum_MutateJobStatus UNSPECIFIED =
+      MutateJobStatusEnum_MutateJobStatus._(0, 'UNSPECIFIED');
+  static const MutateJobStatusEnum_MutateJobStatus UNKNOWN =
+      MutateJobStatusEnum_MutateJobStatus._(1, 'UNKNOWN');
+  static const MutateJobStatusEnum_MutateJobStatus PENDING =
+      MutateJobStatusEnum_MutateJobStatus._(2, 'PENDING');
+  static const MutateJobStatusEnum_MutateJobStatus RUNNING =
+      MutateJobStatusEnum_MutateJobStatus._(3, 'RUNNING');
+  static const MutateJobStatusEnum_MutateJobStatus DONE =
+      MutateJobStatusEnum_MutateJobStatus._(4, 'DONE');
 
-  static const $core.List<MutateJobStatusEnum_MutateJobStatus> values = <MutateJobStatusEnum_MutateJobStatus> [
+  static const $core.List<MutateJobStatusEnum_MutateJobStatus> values =
+      <MutateJobStatusEnum_MutateJobStatus>[
     UNSPECIFIED,
     UNKNOWN,
     PENDING,
@@ -23,9 +29,11 @@ class MutateJobStatusEnum_MutateJobStatus extends $pb.ProtobufEnum {
     DONE,
   ];
 
-  static final $core.Map<$core.int, MutateJobStatusEnum_MutateJobStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static MutateJobStatusEnum_MutateJobStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, MutateJobStatusEnum_MutateJobStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static MutateJobStatusEnum_MutateJobStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const MutateJobStatusEnum_MutateJobStatus._($core.int v, $core.String n) : super(v, n);
+  const MutateJobStatusEnum_MutateJobStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-

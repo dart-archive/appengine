@@ -9,21 +9,31 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError extends $pb.ProtobufEnum {
-  static const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError UNSPECIFIED = KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(0, 'UNSPECIFIED');
-  static const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError UNKNOWN = KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(1, 'UNKNOWN');
-  static const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError URL_CRAWL_ERROR = KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(2, 'URL_CRAWL_ERROR');
-  static const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError INVALID_VALUE = KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(3, 'INVALID_VALUE');
+  static const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError UNSPECIFIED =
+      KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(0, 'UNSPECIFIED');
+  static const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError UNKNOWN =
+      KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(1, 'UNKNOWN');
+  static const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError URL_CRAWL_ERROR =
+      KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(2, 'URL_CRAWL_ERROR');
+  static const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError INVALID_VALUE =
+      KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(3, 'INVALID_VALUE');
 
-  static const $core.List<KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError> values = <KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError> [
+  static const $core.List<KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError>
+      values = <KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError>[
     UNSPECIFIED,
     UNKNOWN,
     URL_CRAWL_ERROR,
     INVALID_VALUE,
   ];
 
-  static final $core.Map<$core.int, KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._($core.int v, $core.String n) : super(v, n);
+  const KeywordPlanIdeaErrorEnum_KeywordPlanIdeaError._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

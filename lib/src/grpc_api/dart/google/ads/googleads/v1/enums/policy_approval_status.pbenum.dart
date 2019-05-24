@@ -9,14 +9,22 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PolicyApprovalStatusEnum_PolicyApprovalStatus extends $pb.ProtobufEnum {
-  static const PolicyApprovalStatusEnum_PolicyApprovalStatus UNSPECIFIED = PolicyApprovalStatusEnum_PolicyApprovalStatus._(0, 'UNSPECIFIED');
-  static const PolicyApprovalStatusEnum_PolicyApprovalStatus UNKNOWN = PolicyApprovalStatusEnum_PolicyApprovalStatus._(1, 'UNKNOWN');
-  static const PolicyApprovalStatusEnum_PolicyApprovalStatus DISAPPROVED = PolicyApprovalStatusEnum_PolicyApprovalStatus._(2, 'DISAPPROVED');
-  static const PolicyApprovalStatusEnum_PolicyApprovalStatus APPROVED_LIMITED = PolicyApprovalStatusEnum_PolicyApprovalStatus._(3, 'APPROVED_LIMITED');
-  static const PolicyApprovalStatusEnum_PolicyApprovalStatus APPROVED = PolicyApprovalStatusEnum_PolicyApprovalStatus._(4, 'APPROVED');
-  static const PolicyApprovalStatusEnum_PolicyApprovalStatus AREA_OF_INTEREST_ONLY = PolicyApprovalStatusEnum_PolicyApprovalStatus._(5, 'AREA_OF_INTEREST_ONLY');
+  static const PolicyApprovalStatusEnum_PolicyApprovalStatus UNSPECIFIED =
+      PolicyApprovalStatusEnum_PolicyApprovalStatus._(0, 'UNSPECIFIED');
+  static const PolicyApprovalStatusEnum_PolicyApprovalStatus UNKNOWN =
+      PolicyApprovalStatusEnum_PolicyApprovalStatus._(1, 'UNKNOWN');
+  static const PolicyApprovalStatusEnum_PolicyApprovalStatus DISAPPROVED =
+      PolicyApprovalStatusEnum_PolicyApprovalStatus._(2, 'DISAPPROVED');
+  static const PolicyApprovalStatusEnum_PolicyApprovalStatus APPROVED_LIMITED =
+      PolicyApprovalStatusEnum_PolicyApprovalStatus._(3, 'APPROVED_LIMITED');
+  static const PolicyApprovalStatusEnum_PolicyApprovalStatus APPROVED =
+      PolicyApprovalStatusEnum_PolicyApprovalStatus._(4, 'APPROVED');
+  static const PolicyApprovalStatusEnum_PolicyApprovalStatus
+      AREA_OF_INTEREST_ONLY = PolicyApprovalStatusEnum_PolicyApprovalStatus._(
+          5, 'AREA_OF_INTEREST_ONLY');
 
-  static const $core.List<PolicyApprovalStatusEnum_PolicyApprovalStatus> values = <PolicyApprovalStatusEnum_PolicyApprovalStatus> [
+  static const $core.List<PolicyApprovalStatusEnum_PolicyApprovalStatus>
+      values = <PolicyApprovalStatusEnum_PolicyApprovalStatus>[
     UNSPECIFIED,
     UNKNOWN,
     DISAPPROVED,
@@ -25,9 +33,14 @@ class PolicyApprovalStatusEnum_PolicyApprovalStatus extends $pb.ProtobufEnum {
     AREA_OF_INTEREST_ONLY,
   ];
 
-  static final $core.Map<$core.int, PolicyApprovalStatusEnum_PolicyApprovalStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PolicyApprovalStatusEnum_PolicyApprovalStatus valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, PolicyApprovalStatusEnum_PolicyApprovalStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PolicyApprovalStatusEnum_PolicyApprovalStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const PolicyApprovalStatusEnum_PolicyApprovalStatus._($core.int v, $core.String n) : super(v, n);
+  const PolicyApprovalStatusEnum_PolicyApprovalStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

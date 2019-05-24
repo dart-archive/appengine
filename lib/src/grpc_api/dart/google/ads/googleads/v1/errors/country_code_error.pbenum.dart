@@ -9,19 +9,25 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class CountryCodeErrorEnum_CountryCodeError extends $pb.ProtobufEnum {
-  static const CountryCodeErrorEnum_CountryCodeError UNSPECIFIED = CountryCodeErrorEnum_CountryCodeError._(0, 'UNSPECIFIED');
-  static const CountryCodeErrorEnum_CountryCodeError UNKNOWN = CountryCodeErrorEnum_CountryCodeError._(1, 'UNKNOWN');
-  static const CountryCodeErrorEnum_CountryCodeError INVALID_COUNTRY_CODE = CountryCodeErrorEnum_CountryCodeError._(2, 'INVALID_COUNTRY_CODE');
+  static const CountryCodeErrorEnum_CountryCodeError UNSPECIFIED =
+      CountryCodeErrorEnum_CountryCodeError._(0, 'UNSPECIFIED');
+  static const CountryCodeErrorEnum_CountryCodeError UNKNOWN =
+      CountryCodeErrorEnum_CountryCodeError._(1, 'UNKNOWN');
+  static const CountryCodeErrorEnum_CountryCodeError INVALID_COUNTRY_CODE =
+      CountryCodeErrorEnum_CountryCodeError._(2, 'INVALID_COUNTRY_CODE');
 
-  static const $core.List<CountryCodeErrorEnum_CountryCodeError> values = <CountryCodeErrorEnum_CountryCodeError> [
+  static const $core.List<CountryCodeErrorEnum_CountryCodeError> values =
+      <CountryCodeErrorEnum_CountryCodeError>[
     UNSPECIFIED,
     UNKNOWN,
     INVALID_COUNTRY_CODE,
   ];
 
-  static final $core.Map<$core.int, CountryCodeErrorEnum_CountryCodeError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CountryCodeErrorEnum_CountryCodeError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, CountryCodeErrorEnum_CountryCodeError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CountryCodeErrorEnum_CountryCodeError valueOf($core.int value) =>
+      _byValue[value];
 
-  const CountryCodeErrorEnum_CountryCodeError._($core.int v, $core.String n) : super(v, n);
+  const CountryCodeErrorEnum_CountryCodeError._($core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -4,19 +4,21 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const PolicyTopicEvidenceDestinationNotWorkingDeviceEnum$json = const {
+const PolicyTopicEvidenceDestinationNotWorkingDeviceEnum$json = {
   '1': 'PolicyTopicEvidenceDestinationNotWorkingDeviceEnum',
-  '4': const [PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice$json],
-};
-
-const PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice$json = const {
-  '1': 'PolicyTopicEvidenceDestinationNotWorkingDevice',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'DESKTOP', '2': 2},
-    const {'1': 'ANDROID', '2': 3},
-    const {'1': 'IOS', '2': 4},
+  '4': [
+    PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice$json
   ],
 };
 
+const PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice$json =
+    {
+  '1': 'PolicyTopicEvidenceDestinationNotWorkingDevice',
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'DESKTOP', '2': 2},
+    {'1': 'ANDROID', '2': 3},
+    {'1': 'IOS', '2': 4},
+  ],
+};

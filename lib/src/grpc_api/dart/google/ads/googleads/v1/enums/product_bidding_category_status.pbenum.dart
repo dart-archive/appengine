@@ -8,22 +8,40 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus extends $pb.ProtobufEnum {
-  static const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus UNSPECIFIED = ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(0, 'UNSPECIFIED');
-  static const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus UNKNOWN = ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(1, 'UNKNOWN');
-  static const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus ACTIVE = ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(2, 'ACTIVE');
-  static const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus OBSOLETE = ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(3, 'OBSOLETE');
+class ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus
+    extends $pb.ProtobufEnum {
+  static const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus
+      UNSPECIFIED =
+      ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(
+          0, 'UNSPECIFIED');
+  static const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus
+      UNKNOWN = ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(
+          1, 'UNKNOWN');
+  static const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus
+      ACTIVE = ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(
+          2, 'ACTIVE');
+  static const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus
+      OBSOLETE =
+      ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(
+          3, 'OBSOLETE');
 
-  static const $core.List<ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus> values = <ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus> [
+  static const $core
+          .List<ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus>
+      values = <ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ACTIVE,
     OBSOLETE,
   ];
 
-  static final $core.Map<$core.int, ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._($core.int v, $core.String n) : super(v, n);
+  const ProductBiddingCategoryStatusEnum_ProductBiddingCategoryStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

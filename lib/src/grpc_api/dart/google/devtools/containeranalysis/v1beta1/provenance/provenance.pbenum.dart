@@ -9,17 +9,18 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Hash_HashType extends $pb.ProtobufEnum {
-  static const Hash_HashType HASH_TYPE_UNSPECIFIED = Hash_HashType._(0, 'HASH_TYPE_UNSPECIFIED');
+  static const Hash_HashType HASH_TYPE_UNSPECIFIED =
+      Hash_HashType._(0, 'HASH_TYPE_UNSPECIFIED');
   static const Hash_HashType SHA256 = Hash_HashType._(1, 'SHA256');
 
-  static const $core.List<Hash_HashType> values = <Hash_HashType> [
+  static const $core.List<Hash_HashType> values = <Hash_HashType>[
     HASH_TYPE_UNSPECIFIED,
     SHA256,
   ];
 
-  static final $core.Map<$core.int, Hash_HashType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Hash_HashType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Hash_HashType valueOf($core.int value) => _byValue[value];
 
   const Hash_HashType._($core.int v, $core.String n) : super(v, n);
 }
-

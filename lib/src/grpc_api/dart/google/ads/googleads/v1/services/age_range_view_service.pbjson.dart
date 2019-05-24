@@ -6,22 +6,27 @@
 
 import '../resources/age_range_view.pbjson.dart' as $0;
 
-const GetAgeRangeViewRequest$json = const {
+const GetAgeRangeViewRequest$json = {
   '1': 'GetAgeRangeViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const AgeRangeViewServiceBase$json = const {
+const AgeRangeViewServiceBase$json = {
   '1': 'AgeRangeViewService',
-  '2': const [
-    const {'1': 'GetAgeRangeView', '2': '.google.ads.googleads.v1.services.GetAgeRangeViewRequest', '3': '.google.ads.googleads.v1.resources.AgeRangeView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetAgeRangeView',
+      '2': '.google.ads.googleads.v1.services.GetAgeRangeViewRequest',
+      '3': '.google.ads.googleads.v1.resources.AgeRangeView',
+      '4': {}
+    },
   ],
 };
 
-const AgeRangeViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetAgeRangeViewRequest': GetAgeRangeViewRequest$json,
+const AgeRangeViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetAgeRangeViewRequest':
+      GetAgeRangeViewRequest$json,
   '.google.ads.googleads.v1.resources.AgeRangeView': $0.AgeRangeView$json,
 };
-

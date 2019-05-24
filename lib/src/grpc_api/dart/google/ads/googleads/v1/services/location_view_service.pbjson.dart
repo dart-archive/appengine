@@ -6,22 +6,27 @@
 
 import '../resources/location_view.pbjson.dart' as $0;
 
-const GetLocationViewRequest$json = const {
+const GetLocationViewRequest$json = {
   '1': 'GetLocationViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const LocationViewServiceBase$json = const {
+const LocationViewServiceBase$json = {
   '1': 'LocationViewService',
-  '2': const [
-    const {'1': 'GetLocationView', '2': '.google.ads.googleads.v1.services.GetLocationViewRequest', '3': '.google.ads.googleads.v1.resources.LocationView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetLocationView',
+      '2': '.google.ads.googleads.v1.services.GetLocationViewRequest',
+      '3': '.google.ads.googleads.v1.resources.LocationView',
+      '4': {}
+    },
   ],
 };
 
-const LocationViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetLocationViewRequest': GetLocationViewRequest$json,
+const LocationViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetLocationViewRequest':
+      GetLocationViewRequest$json,
   '.google.ads.googleads.v1.resources.LocationView': $0.LocationView$json,
 };
-

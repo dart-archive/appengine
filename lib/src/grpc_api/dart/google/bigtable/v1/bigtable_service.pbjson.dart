@@ -10,19 +10,51 @@ import '../../protobuf/empty.pbjson.dart' as $1;
 import '../../rpc/status.pbjson.dart' as $3;
 import '../../protobuf/any.pbjson.dart' as $4;
 
-const BigtableServiceBase$json = const {
+const BigtableServiceBase$json = {
   '1': 'BigtableService',
-  '2': const [
-    const {'1': 'ReadRows', '2': '.google.bigtable.v1.ReadRowsRequest', '3': '.google.bigtable.v1.ReadRowsResponse', '4': const {}, '6': true},
-    const {'1': 'SampleRowKeys', '2': '.google.bigtable.v1.SampleRowKeysRequest', '3': '.google.bigtable.v1.SampleRowKeysResponse', '4': const {}, '6': true},
-    const {'1': 'MutateRow', '2': '.google.bigtable.v1.MutateRowRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'MutateRows', '2': '.google.bigtable.v1.MutateRowsRequest', '3': '.google.bigtable.v1.MutateRowsResponse', '4': const {}},
-    const {'1': 'CheckAndMutateRow', '2': '.google.bigtable.v1.CheckAndMutateRowRequest', '3': '.google.bigtable.v1.CheckAndMutateRowResponse', '4': const {}},
-    const {'1': 'ReadModifyWriteRow', '2': '.google.bigtable.v1.ReadModifyWriteRowRequest', '3': '.google.bigtable.v1.Row', '4': const {}},
+  '2': [
+    {
+      '1': 'ReadRows',
+      '2': '.google.bigtable.v1.ReadRowsRequest',
+      '3': '.google.bigtable.v1.ReadRowsResponse',
+      '4': {},
+      '6': true
+    },
+    {
+      '1': 'SampleRowKeys',
+      '2': '.google.bigtable.v1.SampleRowKeysRequest',
+      '3': '.google.bigtable.v1.SampleRowKeysResponse',
+      '4': {},
+      '6': true
+    },
+    {
+      '1': 'MutateRow',
+      '2': '.google.bigtable.v1.MutateRowRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'MutateRows',
+      '2': '.google.bigtable.v1.MutateRowsRequest',
+      '3': '.google.bigtable.v1.MutateRowsResponse',
+      '4': {}
+    },
+    {
+      '1': 'CheckAndMutateRow',
+      '2': '.google.bigtable.v1.CheckAndMutateRowRequest',
+      '3': '.google.bigtable.v1.CheckAndMutateRowResponse',
+      '4': {}
+    },
+    {
+      '1': 'ReadModifyWriteRow',
+      '2': '.google.bigtable.v1.ReadModifyWriteRowRequest',
+      '3': '.google.bigtable.v1.Row',
+      '4': {}
+    },
   ],
 };
 
-const BigtableServiceBase$messageJson = const {
+const BigtableServiceBase$messageJson = {
   '.google.bigtable.v1.ReadRowsRequest': $0.ReadRowsRequest$json,
   '.google.bigtable.v1.RowRange': $2.RowRange$json,
   '.google.bigtable.v1.RowFilter': $2.RowFilter$json,
@@ -43,19 +75,24 @@ const BigtableServiceBase$messageJson = const {
   '.google.bigtable.v1.MutateRowRequest': $0.MutateRowRequest$json,
   '.google.bigtable.v1.Mutation': $2.Mutation$json,
   '.google.bigtable.v1.Mutation.SetCell': $2.Mutation_SetCell$json,
-  '.google.bigtable.v1.Mutation.DeleteFromColumn': $2.Mutation_DeleteFromColumn$json,
-  '.google.bigtable.v1.Mutation.DeleteFromFamily': $2.Mutation_DeleteFromFamily$json,
+  '.google.bigtable.v1.Mutation.DeleteFromColumn':
+      $2.Mutation_DeleteFromColumn$json,
+  '.google.bigtable.v1.Mutation.DeleteFromFamily':
+      $2.Mutation_DeleteFromFamily$json,
   '.google.bigtable.v1.Mutation.DeleteFromRow': $2.Mutation_DeleteFromRow$json,
   '.google.protobuf.Empty': $1.Empty$json,
   '.google.bigtable.v1.MutateRowsRequest': $0.MutateRowsRequest$json,
-  '.google.bigtable.v1.MutateRowsRequest.Entry': $0.MutateRowsRequest_Entry$json,
+  '.google.bigtable.v1.MutateRowsRequest.Entry':
+      $0.MutateRowsRequest_Entry$json,
   '.google.bigtable.v1.MutateRowsResponse': $0.MutateRowsResponse$json,
   '.google.rpc.Status': $3.Status$json,
   '.google.protobuf.Any': $4.Any$json,
-  '.google.bigtable.v1.CheckAndMutateRowRequest': $0.CheckAndMutateRowRequest$json,
-  '.google.bigtable.v1.CheckAndMutateRowResponse': $0.CheckAndMutateRowResponse$json,
-  '.google.bigtable.v1.ReadModifyWriteRowRequest': $0.ReadModifyWriteRowRequest$json,
+  '.google.bigtable.v1.CheckAndMutateRowRequest':
+      $0.CheckAndMutateRowRequest$json,
+  '.google.bigtable.v1.CheckAndMutateRowResponse':
+      $0.CheckAndMutateRowResponse$json,
+  '.google.bigtable.v1.ReadModifyWriteRowRequest':
+      $0.ReadModifyWriteRowRequest$json,
   '.google.bigtable.v1.ReadModifyWriteRule': $2.ReadModifyWriteRule$json,
   '.google.bigtable.v1.Row': $2.Row$json,
 };
-

@@ -8,15 +8,25 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class AccountBudgetProposalTypeEnum_AccountBudgetProposalType extends $pb.ProtobufEnum {
-  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType UNSPECIFIED = AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(0, 'UNSPECIFIED');
-  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType UNKNOWN = AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(1, 'UNKNOWN');
-  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType CREATE = AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(2, 'CREATE');
-  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType UPDATE = AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(3, 'UPDATE');
-  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType END = AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(4, 'END');
-  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType REMOVE = AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(5, 'REMOVE');
+class AccountBudgetProposalTypeEnum_AccountBudgetProposalType
+    extends $pb.ProtobufEnum {
+  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType
+      UNSPECIFIED = AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(
+          0, 'UNSPECIFIED');
+  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType UNKNOWN =
+      AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(1, 'UNKNOWN');
+  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType CREATE =
+      AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(2, 'CREATE');
+  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType UPDATE =
+      AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(3, 'UPDATE');
+  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType END =
+      AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(4, 'END');
+  static const AccountBudgetProposalTypeEnum_AccountBudgetProposalType REMOVE =
+      AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(5, 'REMOVE');
 
-  static const $core.List<AccountBudgetProposalTypeEnum_AccountBudgetProposalType> values = <AccountBudgetProposalTypeEnum_AccountBudgetProposalType> [
+  static const $core
+          .List<AccountBudgetProposalTypeEnum_AccountBudgetProposalType>
+      values = <AccountBudgetProposalTypeEnum_AccountBudgetProposalType>[
     UNSPECIFIED,
     UNKNOWN,
     CREATE,
@@ -25,9 +35,14 @@ class AccountBudgetProposalTypeEnum_AccountBudgetProposalType extends $pb.Protob
     REMOVE,
   ];
 
-  static final $core.Map<$core.int, AccountBudgetProposalTypeEnum_AccountBudgetProposalType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AccountBudgetProposalTypeEnum_AccountBudgetProposalType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          AccountBudgetProposalTypeEnum_AccountBudgetProposalType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AccountBudgetProposalTypeEnum_AccountBudgetProposalType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const AccountBudgetProposalTypeEnum_AccountBudgetProposalType._($core.int v, $core.String n) : super(v, n);
+  const AccountBudgetProposalTypeEnum_AccountBudgetProposalType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

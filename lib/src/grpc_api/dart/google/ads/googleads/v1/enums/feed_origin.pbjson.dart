@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const FeedOriginEnum$json = const {
+const FeedOriginEnum$json = {
   '1': 'FeedOriginEnum',
-  '4': const [FeedOriginEnum_FeedOrigin$json],
+  '4': [FeedOriginEnum_FeedOrigin$json],
 };
 
-const FeedOriginEnum_FeedOrigin$json = const {
+const FeedOriginEnum_FeedOrigin$json = {
   '1': 'FeedOrigin',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'USER', '2': 2},
-    const {'1': 'GOOGLE', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'USER', '2': 2},
+    {'1': 'GOOGLE', '2': 3},
   ],
 };
-

@@ -15,23 +15,30 @@ import 'keyword_plan_idea_service.pbjson.dart';
 export 'keyword_plan_idea_service.pb.dart';
 
 abstract class KeywordPlanIdeaServiceBase extends $pb.GeneratedService {
-  $async.Future<GenerateKeywordIdeaResponse> generateKeywordIdeas($pb.ServerContext ctx, GenerateKeywordIdeasRequest request);
+  $async.Future<GenerateKeywordIdeaResponse> generateKeywordIdeas(
+      $pb.ServerContext ctx, GenerateKeywordIdeasRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GenerateKeywordIdeas': return GenerateKeywordIdeasRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GenerateKeywordIdeas':
+        return GenerateKeywordIdeasRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GenerateKeywordIdeas': return this.generateKeywordIdeas(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GenerateKeywordIdeas':
+        return this.generateKeywordIdeas(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => KeywordPlanIdeaServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => KeywordPlanIdeaServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      KeywordPlanIdeaServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => KeywordPlanIdeaServiceBase$messageJson;
 }
-

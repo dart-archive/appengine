@@ -15,24 +15,32 @@ import 'campaign_criterion_simulation_service.pbjson.dart';
 
 export 'campaign_criterion_simulation_service.pb.dart';
 
-abstract class CampaignCriterionSimulationServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.CampaignCriterionSimulation> getCampaignCriterionSimulation($pb.ServerContext ctx, GetCampaignCriterionSimulationRequest request);
+abstract class CampaignCriterionSimulationServiceBase
+    extends $pb.GeneratedService {
+  $async.Future<$0.CampaignCriterionSimulation> getCampaignCriterionSimulation(
+      $pb.ServerContext ctx, GetCampaignCriterionSimulationRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetCampaignCriterionSimulation': return GetCampaignCriterionSimulationRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCampaignCriterionSimulation':
+        return GetCampaignCriterionSimulationRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetCampaignCriterionSimulation': return this.getCampaignCriterionSimulation(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCampaignCriterionSimulation':
+        return this.getCampaignCriterionSimulation(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CampaignCriterionSimulationServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CampaignCriterionSimulationServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CampaignCriterionSimulationServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CampaignCriterionSimulationServiceBase$messageJson;
 }
-

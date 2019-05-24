@@ -15,26 +15,36 @@ import 'resultstore_file_download.pbjson.dart';
 export 'resultstore_file_download.pb.dart';
 
 abstract class ResultStoreFileDownloadServiceBase extends $pb.GeneratedService {
-  $async.Future<GetFileResponse> getFile($pb.ServerContext ctx, GetFileRequest request);
-  $async.Future<GetFileTailResponse> getFileTail($pb.ServerContext ctx, GetFileTailRequest request);
+  $async.Future<GetFileResponse> getFile(
+      $pb.ServerContext ctx, GetFileRequest request);
+  $async.Future<GetFileTailResponse> getFileTail(
+      $pb.ServerContext ctx, GetFileTailRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetFile': return GetFileRequest();
-      case 'GetFileTail': return GetFileTailRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetFile':
+        return GetFileRequest();
+      case 'GetFileTail':
+        return GetFileTailRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetFile': return this.getFile(ctx, request);
-      case 'GetFileTail': return this.getFileTail(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetFile':
+        return this.getFile(ctx, request);
+      case 'GetFileTail':
+        return this.getFileTail(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => ResultStoreFileDownloadServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ResultStoreFileDownloadServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ResultStoreFileDownloadServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ResultStoreFileDownloadServiceBase$messageJson;
 }
-

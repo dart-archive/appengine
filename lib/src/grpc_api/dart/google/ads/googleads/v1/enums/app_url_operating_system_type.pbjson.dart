@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const AppUrlOperatingSystemTypeEnum$json = const {
+const AppUrlOperatingSystemTypeEnum$json = {
   '1': 'AppUrlOperatingSystemTypeEnum',
-  '4': const [AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType$json],
+  '4': [AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType$json],
 };
 
-const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType$json = const {
+const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType$json = {
   '1': 'AppUrlOperatingSystemType',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'IOS', '2': 2},
-    const {'1': 'ANDROID', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'IOS', '2': 2},
+    {'1': 'ANDROID', '2': 3},
   ],
 };
-

@@ -12,14 +12,14 @@ class Hash_HashType extends $pb.ProtobufEnum {
   static const Hash_HashType NONE = Hash_HashType._(0, 'NONE');
   static const Hash_HashType SHA256 = Hash_HashType._(1, 'SHA256');
 
-  static const $core.List<Hash_HashType> values = <Hash_HashType> [
+  static const $core.List<Hash_HashType> values = <Hash_HashType>[
     NONE,
     SHA256,
   ];
 
-  static final $core.Map<$core.int, Hash_HashType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Hash_HashType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Hash_HashType valueOf($core.int value) => _byValue[value];
 
   const Hash_HashType._($core.int v, $core.String n) : super(v, n);
 }
-

@@ -15,11 +15,13 @@ class SlotEnum_Slot extends $pb.ProtobufEnum {
   static const SlotEnum_Slot SEARCH_TOP = SlotEnum_Slot._(3, 'SEARCH_TOP');
   static const SlotEnum_Slot SEARCH_OTHER = SlotEnum_Slot._(4, 'SEARCH_OTHER');
   static const SlotEnum_Slot CONTENT = SlotEnum_Slot._(5, 'CONTENT');
-  static const SlotEnum_Slot SEARCH_PARTNER_TOP = SlotEnum_Slot._(6, 'SEARCH_PARTNER_TOP');
-  static const SlotEnum_Slot SEARCH_PARTNER_OTHER = SlotEnum_Slot._(7, 'SEARCH_PARTNER_OTHER');
+  static const SlotEnum_Slot SEARCH_PARTNER_TOP =
+      SlotEnum_Slot._(6, 'SEARCH_PARTNER_TOP');
+  static const SlotEnum_Slot SEARCH_PARTNER_OTHER =
+      SlotEnum_Slot._(7, 'SEARCH_PARTNER_OTHER');
   static const SlotEnum_Slot MIXED = SlotEnum_Slot._(8, 'MIXED');
 
-  static const $core.List<SlotEnum_Slot> values = <SlotEnum_Slot> [
+  static const $core.List<SlotEnum_Slot> values = <SlotEnum_Slot>[
     UNSPECIFIED,
     UNKNOWN,
     SEARCH_SIDE,
@@ -31,9 +33,9 @@ class SlotEnum_Slot extends $pb.ProtobufEnum {
     MIXED,
   ];
 
-  static final $core.Map<$core.int, SlotEnum_Slot> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, SlotEnum_Slot> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static SlotEnum_Slot valueOf($core.int value) => _byValue[value];
 
   const SlotEnum_Slot._($core.int v, $core.String n) : super(v, n);
 }
-

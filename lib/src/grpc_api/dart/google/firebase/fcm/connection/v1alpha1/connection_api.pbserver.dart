@@ -15,23 +15,30 @@ import 'connection_api.pbjson.dart';
 export 'connection_api.pb.dart';
 
 abstract class ConnectionApiServiceBase extends $pb.GeneratedService {
-  $async.Future<DownstreamResponse> connect($pb.ServerContext ctx, UpstreamRequest request);
+  $async.Future<DownstreamResponse> connect(
+      $pb.ServerContext ctx, UpstreamRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'Connect': return UpstreamRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Connect':
+        return UpstreamRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'Connect': return this.connect(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Connect':
+        return this.connect(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => ConnectionApiServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ConnectionApiServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ConnectionApiServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ConnectionApiServiceBase$messageJson;
 }
-

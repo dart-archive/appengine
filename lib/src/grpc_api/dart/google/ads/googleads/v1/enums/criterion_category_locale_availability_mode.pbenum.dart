@@ -8,15 +8,37 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode extends $pb.ProtobufEnum {
-  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode UNSPECIFIED = CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode._(0, 'UNSPECIFIED');
-  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode UNKNOWN = CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode._(1, 'UNKNOWN');
-  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode ALL_LOCALES = CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode._(2, 'ALL_LOCALES');
-  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode COUNTRY_AND_ALL_LANGUAGES = CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode._(3, 'COUNTRY_AND_ALL_LANGUAGES');
-  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode LANGUAGE_AND_ALL_COUNTRIES = CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode._(4, 'LANGUAGE_AND_ALL_COUNTRIES');
-  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode COUNTRY_AND_LANGUAGE = CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode._(5, 'COUNTRY_AND_LANGUAGE');
+class CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+    extends $pb.ProtobufEnum {
+  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+      UNSPECIFIED =
+      CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+          ._(0, 'UNSPECIFIED');
+  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+      UNKNOWN =
+      CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+          ._(1, 'UNKNOWN');
+  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+      ALL_LOCALES =
+      CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+          ._(2, 'ALL_LOCALES');
+  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+      COUNTRY_AND_ALL_LANGUAGES =
+      CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+          ._(3, 'COUNTRY_AND_ALL_LANGUAGES');
+  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+      LANGUAGE_AND_ALL_COUNTRIES =
+      CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+          ._(4, 'LANGUAGE_AND_ALL_COUNTRIES');
+  static const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+      COUNTRY_AND_LANGUAGE =
+      CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+          ._(5, 'COUNTRY_AND_LANGUAGE');
 
-  static const $core.List<CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode> values = <CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode> [
+  static const $core.List<
+          CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode>
+      values =
+      <CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode>[
     UNSPECIFIED,
     UNKNOWN,
     ALL_LOCALES,
@@ -25,9 +47,13 @@ class CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailab
     COUNTRY_AND_LANGUAGE,
   ];
 
-  static final $core.Map<$core.int, CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode
+      valueOf($core.int value) => _byValue[value];
 
-  const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode._($core.int v, $core.String n) : super(v, n);
+  const CriterionCategoryLocaleAvailabilityModeEnum_CriterionCategoryLocaleAvailabilityMode._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AdGroupAdStatusEnum_AdGroupAdStatus extends $pb.ProtobufEnum {
-  static const AdGroupAdStatusEnum_AdGroupAdStatus UNSPECIFIED = AdGroupAdStatusEnum_AdGroupAdStatus._(0, 'UNSPECIFIED');
-  static const AdGroupAdStatusEnum_AdGroupAdStatus UNKNOWN = AdGroupAdStatusEnum_AdGroupAdStatus._(1, 'UNKNOWN');
-  static const AdGroupAdStatusEnum_AdGroupAdStatus ENABLED = AdGroupAdStatusEnum_AdGroupAdStatus._(2, 'ENABLED');
-  static const AdGroupAdStatusEnum_AdGroupAdStatus PAUSED = AdGroupAdStatusEnum_AdGroupAdStatus._(3, 'PAUSED');
-  static const AdGroupAdStatusEnum_AdGroupAdStatus REMOVED = AdGroupAdStatusEnum_AdGroupAdStatus._(4, 'REMOVED');
+  static const AdGroupAdStatusEnum_AdGroupAdStatus UNSPECIFIED =
+      AdGroupAdStatusEnum_AdGroupAdStatus._(0, 'UNSPECIFIED');
+  static const AdGroupAdStatusEnum_AdGroupAdStatus UNKNOWN =
+      AdGroupAdStatusEnum_AdGroupAdStatus._(1, 'UNKNOWN');
+  static const AdGroupAdStatusEnum_AdGroupAdStatus ENABLED =
+      AdGroupAdStatusEnum_AdGroupAdStatus._(2, 'ENABLED');
+  static const AdGroupAdStatusEnum_AdGroupAdStatus PAUSED =
+      AdGroupAdStatusEnum_AdGroupAdStatus._(3, 'PAUSED');
+  static const AdGroupAdStatusEnum_AdGroupAdStatus REMOVED =
+      AdGroupAdStatusEnum_AdGroupAdStatus._(4, 'REMOVED');
 
-  static const $core.List<AdGroupAdStatusEnum_AdGroupAdStatus> values = <AdGroupAdStatusEnum_AdGroupAdStatus> [
+  static const $core.List<AdGroupAdStatusEnum_AdGroupAdStatus> values =
+      <AdGroupAdStatusEnum_AdGroupAdStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
@@ -23,9 +29,11 @@ class AdGroupAdStatusEnum_AdGroupAdStatus extends $pb.ProtobufEnum {
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, AdGroupAdStatusEnum_AdGroupAdStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AdGroupAdStatusEnum_AdGroupAdStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, AdGroupAdStatusEnum_AdGroupAdStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AdGroupAdStatusEnum_AdGroupAdStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const AdGroupAdStatusEnum_AdGroupAdStatus._($core.int v, $core.String n) : super(v, n);
+  const AdGroupAdStatusEnum_AdGroupAdStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-

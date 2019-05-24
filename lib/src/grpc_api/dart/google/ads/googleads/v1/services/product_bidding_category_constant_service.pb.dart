@@ -5,32 +5,49 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../resources/product_bidding_category_constant.pb.dart' as $0;
 
 class GetProductBiddingCategoryConstantRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetProductBiddingCategoryConstantRequest', package: const $pb.PackageName('google.ads.googleads.v1.services'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GetProductBiddingCategoryConstantRequest',
+      package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..aOS(1, 'resourceName')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   GetProductBiddingCategoryConstantRequest() : super();
-  GetProductBiddingCategoryConstantRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GetProductBiddingCategoryConstantRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  GetProductBiddingCategoryConstantRequest clone() => GetProductBiddingCategoryConstantRequest()..mergeFromMessage(this);
-  GetProductBiddingCategoryConstantRequest copyWith(void Function(GetProductBiddingCategoryConstantRequest) updates) => super.copyWith((message) => updates(message as GetProductBiddingCategoryConstantRequest));
+  GetProductBiddingCategoryConstantRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GetProductBiddingCategoryConstantRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  GetProductBiddingCategoryConstantRequest clone() =>
+      GetProductBiddingCategoryConstantRequest()..mergeFromMessage(this);
+  GetProductBiddingCategoryConstantRequest copyWith(
+          void Function(GetProductBiddingCategoryConstantRequest) updates) =>
+      super.copyWith((message) =>
+          updates(message as GetProductBiddingCategoryConstantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetProductBiddingCategoryConstantRequest create() => GetProductBiddingCategoryConstantRequest();
+  static GetProductBiddingCategoryConstantRequest create() =>
+      GetProductBiddingCategoryConstantRequest();
   GetProductBiddingCategoryConstantRequest createEmptyInstance() => create();
-  static $pb.PbList<GetProductBiddingCategoryConstantRequest> createRepeated() => $pb.PbList<GetProductBiddingCategoryConstantRequest>();
-  static GetProductBiddingCategoryConstantRequest getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<GetProductBiddingCategoryConstantRequest>
+      createRepeated() =>
+          $pb.PbList<GetProductBiddingCategoryConstantRequest>();
+  static GetProductBiddingCategoryConstantRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetProductBiddingCategoryConstantRequest _defaultInstance;
 
   $core.String get resourceName => $_getS(0, '');
-  set resourceName($core.String v) { $_setString(0, v); }
+  set resourceName($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
 }
@@ -39,9 +56,15 @@ class ProductBiddingCategoryConstantServiceApi {
   $pb.RpcClient _client;
   ProductBiddingCategoryConstantServiceApi(this._client);
 
-  $async.Future<$0.ProductBiddingCategoryConstant> getProductBiddingCategoryConstant($pb.ClientContext ctx, GetProductBiddingCategoryConstantRequest request) {
+  $async.Future<$0.ProductBiddingCategoryConstant>
+      getProductBiddingCategoryConstant($pb.ClientContext ctx,
+          GetProductBiddingCategoryConstantRequest request) {
     var emptyResponse = $0.ProductBiddingCategoryConstant();
-    return _client.invoke<$0.ProductBiddingCategoryConstant>(ctx, 'ProductBiddingCategoryConstantService', 'GetProductBiddingCategoryConstant', request, emptyResponse);
+    return _client.invoke<$0.ProductBiddingCategoryConstant>(
+        ctx,
+        'ProductBiddingCategoryConstantService',
+        'GetProductBiddingCategoryConstant',
+        request,
+        emptyResponse);
   }
 }
-

@@ -16,26 +16,36 @@ import 'image_annotator.pbjson.dart';
 export 'image_annotator.pb.dart';
 
 abstract class ImageAnnotatorServiceBase extends $pb.GeneratedService {
-  $async.Future<BatchAnnotateImagesResponse> batchAnnotateImages($pb.ServerContext ctx, BatchAnnotateImagesRequest request);
-  $async.Future<$7.Operation> asyncBatchAnnotateFiles($pb.ServerContext ctx, AsyncBatchAnnotateFilesRequest request);
+  $async.Future<BatchAnnotateImagesResponse> batchAnnotateImages(
+      $pb.ServerContext ctx, BatchAnnotateImagesRequest request);
+  $async.Future<$7.Operation> asyncBatchAnnotateFiles(
+      $pb.ServerContext ctx, AsyncBatchAnnotateFilesRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'BatchAnnotateImages': return BatchAnnotateImagesRequest();
-      case 'AsyncBatchAnnotateFiles': return AsyncBatchAnnotateFilesRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'BatchAnnotateImages':
+        return BatchAnnotateImagesRequest();
+      case 'AsyncBatchAnnotateFiles':
+        return AsyncBatchAnnotateFilesRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'BatchAnnotateImages': return this.batchAnnotateImages(ctx, request);
-      case 'AsyncBatchAnnotateFiles': return this.asyncBatchAnnotateFiles(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'BatchAnnotateImages':
+        return this.batchAnnotateImages(ctx, request);
+      case 'AsyncBatchAnnotateFiles':
+        return this.asyncBatchAnnotateFiles(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => ImageAnnotatorServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ImageAnnotatorServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ImageAnnotatorServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ImageAnnotatorServiceBase$messageJson;
 }
-

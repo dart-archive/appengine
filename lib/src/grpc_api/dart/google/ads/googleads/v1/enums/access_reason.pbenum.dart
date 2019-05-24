@@ -9,15 +9,23 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AccessReasonEnum_AccessReason extends $pb.ProtobufEnum {
-  static const AccessReasonEnum_AccessReason UNSPECIFIED = AccessReasonEnum_AccessReason._(0, 'UNSPECIFIED');
-  static const AccessReasonEnum_AccessReason UNKNOWN = AccessReasonEnum_AccessReason._(1, 'UNKNOWN');
-  static const AccessReasonEnum_AccessReason OWNED = AccessReasonEnum_AccessReason._(2, 'OWNED');
-  static const AccessReasonEnum_AccessReason SHARED = AccessReasonEnum_AccessReason._(3, 'SHARED');
-  static const AccessReasonEnum_AccessReason LICENSED = AccessReasonEnum_AccessReason._(4, 'LICENSED');
-  static const AccessReasonEnum_AccessReason SUBSCRIBED = AccessReasonEnum_AccessReason._(5, 'SUBSCRIBED');
-  static const AccessReasonEnum_AccessReason AFFILIATED = AccessReasonEnum_AccessReason._(6, 'AFFILIATED');
+  static const AccessReasonEnum_AccessReason UNSPECIFIED =
+      AccessReasonEnum_AccessReason._(0, 'UNSPECIFIED');
+  static const AccessReasonEnum_AccessReason UNKNOWN =
+      AccessReasonEnum_AccessReason._(1, 'UNKNOWN');
+  static const AccessReasonEnum_AccessReason OWNED =
+      AccessReasonEnum_AccessReason._(2, 'OWNED');
+  static const AccessReasonEnum_AccessReason SHARED =
+      AccessReasonEnum_AccessReason._(3, 'SHARED');
+  static const AccessReasonEnum_AccessReason LICENSED =
+      AccessReasonEnum_AccessReason._(4, 'LICENSED');
+  static const AccessReasonEnum_AccessReason SUBSCRIBED =
+      AccessReasonEnum_AccessReason._(5, 'SUBSCRIBED');
+  static const AccessReasonEnum_AccessReason AFFILIATED =
+      AccessReasonEnum_AccessReason._(6, 'AFFILIATED');
 
-  static const $core.List<AccessReasonEnum_AccessReason> values = <AccessReasonEnum_AccessReason> [
+  static const $core.List<AccessReasonEnum_AccessReason> values =
+      <AccessReasonEnum_AccessReason>[
     UNSPECIFIED,
     UNKNOWN,
     OWNED,
@@ -27,9 +35,11 @@ class AccessReasonEnum_AccessReason extends $pb.ProtobufEnum {
     AFFILIATED,
   ];
 
-  static final $core.Map<$core.int, AccessReasonEnum_AccessReason> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AccessReasonEnum_AccessReason valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, AccessReasonEnum_AccessReason> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AccessReasonEnum_AccessReason valueOf($core.int value) =>
+      _byValue[value];
 
-  const AccessReasonEnum_AccessReason._($core.int v, $core.String n) : super(v, n);
+  const AccessReasonEnum_AccessReason._($core.int v, $core.String n)
+      : super(v, n);
 }
-

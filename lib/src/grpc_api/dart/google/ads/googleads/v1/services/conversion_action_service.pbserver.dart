@@ -16,26 +16,36 @@ import 'conversion_action_service.pbjson.dart';
 export 'conversion_action_service.pb.dart';
 
 abstract class ConversionActionServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.ConversionAction> getConversionAction($pb.ServerContext ctx, GetConversionActionRequest request);
-  $async.Future<MutateConversionActionsResponse> mutateConversionActions($pb.ServerContext ctx, MutateConversionActionsRequest request);
+  $async.Future<$0.ConversionAction> getConversionAction(
+      $pb.ServerContext ctx, GetConversionActionRequest request);
+  $async.Future<MutateConversionActionsResponse> mutateConversionActions(
+      $pb.ServerContext ctx, MutateConversionActionsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetConversionAction': return GetConversionActionRequest();
-      case 'MutateConversionActions': return MutateConversionActionsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetConversionAction':
+        return GetConversionActionRequest();
+      case 'MutateConversionActions':
+        return MutateConversionActionsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetConversionAction': return this.getConversionAction(ctx, request);
-      case 'MutateConversionActions': return this.mutateConversionActions(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetConversionAction':
+        return this.getConversionAction(ctx, request);
+      case 'MutateConversionActions':
+        return this.mutateConversionActions(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => ConversionActionServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ConversionActionServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ConversionActionServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ConversionActionServiceBase$messageJson;
 }
-

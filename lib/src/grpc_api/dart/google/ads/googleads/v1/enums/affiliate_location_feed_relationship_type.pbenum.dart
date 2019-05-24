@@ -8,20 +8,37 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType extends $pb.ProtobufEnum {
-  static const AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType UNSPECIFIED = AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType._(0, 'UNSPECIFIED');
-  static const AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType UNKNOWN = AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType._(1, 'UNKNOWN');
-  static const AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType GENERAL_RETAILER = AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType._(2, 'GENERAL_RETAILER');
+class AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType
+    extends $pb.ProtobufEnum {
+  static const AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType
+      UNSPECIFIED =
+      AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType
+          ._(0, 'UNSPECIFIED');
+  static const AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType
+      UNKNOWN =
+      AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType
+          ._(1, 'UNKNOWN');
+  static const AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType
+      GENERAL_RETAILER =
+      AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType
+          ._(2, 'GENERAL_RETAILER');
 
-  static const $core.List<AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType> values = <AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType> [
+  static const $core.List<
+          AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType>
+      values =
+      <AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType>[
     UNSPECIFIED,
     UNKNOWN,
     GENERAL_RETAILER,
   ];
 
-  static final $core.Map<$core.int, AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType
+      valueOf($core.int value) => _byValue[value];
 
-  const AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType._($core.int v, $core.String n) : super(v, n);
+  const AffiliateLocationFeedRelationshipTypeEnum_AffiliateLocationFeedRelationshipType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

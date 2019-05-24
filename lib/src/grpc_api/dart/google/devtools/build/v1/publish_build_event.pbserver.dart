@@ -16,26 +16,37 @@ import 'publish_build_event.pbjson.dart';
 export 'publish_build_event.pb.dart';
 
 abstract class PublishBuildEventServiceBase extends $pb.GeneratedService {
-  $async.Future<$2.Empty> publishLifecycleEvent($pb.ServerContext ctx, PublishLifecycleEventRequest request);
-  $async.Future<PublishBuildToolEventStreamResponse> publishBuildToolEventStream($pb.ServerContext ctx, PublishBuildToolEventStreamRequest request);
+  $async.Future<$2.Empty> publishLifecycleEvent(
+      $pb.ServerContext ctx, PublishLifecycleEventRequest request);
+  $async.Future<PublishBuildToolEventStreamResponse>
+      publishBuildToolEventStream(
+          $pb.ServerContext ctx, PublishBuildToolEventStreamRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'PublishLifecycleEvent': return PublishLifecycleEventRequest();
-      case 'PublishBuildToolEventStream': return PublishBuildToolEventStreamRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'PublishLifecycleEvent':
+        return PublishLifecycleEventRequest();
+      case 'PublishBuildToolEventStream':
+        return PublishBuildToolEventStreamRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'PublishLifecycleEvent': return this.publishLifecycleEvent(ctx, request);
-      case 'PublishBuildToolEventStream': return this.publishBuildToolEventStream(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'PublishLifecycleEvent':
+        return this.publishLifecycleEvent(ctx, request);
+      case 'PublishBuildToolEventStream':
+        return this.publishBuildToolEventStream(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => PublishBuildEventServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => PublishBuildEventServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      PublishBuildEventServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => PublishBuildEventServiceBase$messageJson;
 }
-

@@ -4,20 +4,19 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const DataDrivenModelStatusEnum$json = const {
+const DataDrivenModelStatusEnum$json = {
   '1': 'DataDrivenModelStatusEnum',
-  '4': const [DataDrivenModelStatusEnum_DataDrivenModelStatus$json],
+  '4': [DataDrivenModelStatusEnum_DataDrivenModelStatus$json],
 };
 
-const DataDrivenModelStatusEnum_DataDrivenModelStatus$json = const {
+const DataDrivenModelStatusEnum_DataDrivenModelStatus$json = {
   '1': 'DataDrivenModelStatus',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'AVAILABLE', '2': 2},
-    const {'1': 'STALE', '2': 3},
-    const {'1': 'EXPIRED', '2': 4},
-    const {'1': 'NEVER_GENERATED', '2': 5},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'AVAILABLE', '2': 2},
+    {'1': 'STALE', '2': 3},
+    {'1': 'EXPIRED', '2': 4},
+    {'1': 'NEVER_GENERATED', '2': 5},
   ],
 };
-

@@ -16,26 +16,36 @@ import 'ad_parameter_service.pbjson.dart';
 export 'ad_parameter_service.pb.dart';
 
 abstract class AdParameterServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.AdParameter> getAdParameter($pb.ServerContext ctx, GetAdParameterRequest request);
-  $async.Future<MutateAdParametersResponse> mutateAdParameters($pb.ServerContext ctx, MutateAdParametersRequest request);
+  $async.Future<$0.AdParameter> getAdParameter(
+      $pb.ServerContext ctx, GetAdParameterRequest request);
+  $async.Future<MutateAdParametersResponse> mutateAdParameters(
+      $pb.ServerContext ctx, MutateAdParametersRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetAdParameter': return GetAdParameterRequest();
-      case 'MutateAdParameters': return MutateAdParametersRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdParameter':
+        return GetAdParameterRequest();
+      case 'MutateAdParameters':
+        return MutateAdParametersRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetAdParameter': return this.getAdParameter(ctx, request);
-      case 'MutateAdParameters': return this.mutateAdParameters(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdParameter':
+        return this.getAdParameter(ctx, request);
+      case 'MutateAdParameters':
+        return this.mutateAdParameters(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => AdParameterServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => AdParameterServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      AdParameterServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AdParameterServiceBase$messageJson;
 }
-

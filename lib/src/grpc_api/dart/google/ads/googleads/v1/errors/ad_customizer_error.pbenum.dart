@@ -9,15 +9,27 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AdCustomizerErrorEnum_AdCustomizerError extends $pb.ProtobufEnum {
-  static const AdCustomizerErrorEnum_AdCustomizerError UNSPECIFIED = AdCustomizerErrorEnum_AdCustomizerError._(0, 'UNSPECIFIED');
-  static const AdCustomizerErrorEnum_AdCustomizerError UNKNOWN = AdCustomizerErrorEnum_AdCustomizerError._(1, 'UNKNOWN');
-  static const AdCustomizerErrorEnum_AdCustomizerError COUNTDOWN_INVALID_DATE_FORMAT = AdCustomizerErrorEnum_AdCustomizerError._(2, 'COUNTDOWN_INVALID_DATE_FORMAT');
-  static const AdCustomizerErrorEnum_AdCustomizerError COUNTDOWN_DATE_IN_PAST = AdCustomizerErrorEnum_AdCustomizerError._(3, 'COUNTDOWN_DATE_IN_PAST');
-  static const AdCustomizerErrorEnum_AdCustomizerError COUNTDOWN_INVALID_LOCALE = AdCustomizerErrorEnum_AdCustomizerError._(4, 'COUNTDOWN_INVALID_LOCALE');
-  static const AdCustomizerErrorEnum_AdCustomizerError COUNTDOWN_INVALID_START_DAYS_BEFORE = AdCustomizerErrorEnum_AdCustomizerError._(5, 'COUNTDOWN_INVALID_START_DAYS_BEFORE');
-  static const AdCustomizerErrorEnum_AdCustomizerError UNKNOWN_USER_LIST = AdCustomizerErrorEnum_AdCustomizerError._(6, 'UNKNOWN_USER_LIST');
+  static const AdCustomizerErrorEnum_AdCustomizerError UNSPECIFIED =
+      AdCustomizerErrorEnum_AdCustomizerError._(0, 'UNSPECIFIED');
+  static const AdCustomizerErrorEnum_AdCustomizerError UNKNOWN =
+      AdCustomizerErrorEnum_AdCustomizerError._(1, 'UNKNOWN');
+  static const AdCustomizerErrorEnum_AdCustomizerError
+      COUNTDOWN_INVALID_DATE_FORMAT = AdCustomizerErrorEnum_AdCustomizerError._(
+          2, 'COUNTDOWN_INVALID_DATE_FORMAT');
+  static const AdCustomizerErrorEnum_AdCustomizerError COUNTDOWN_DATE_IN_PAST =
+      AdCustomizerErrorEnum_AdCustomizerError._(3, 'COUNTDOWN_DATE_IN_PAST');
+  static const AdCustomizerErrorEnum_AdCustomizerError
+      COUNTDOWN_INVALID_LOCALE =
+      AdCustomizerErrorEnum_AdCustomizerError._(4, 'COUNTDOWN_INVALID_LOCALE');
+  static const AdCustomizerErrorEnum_AdCustomizerError
+      COUNTDOWN_INVALID_START_DAYS_BEFORE =
+      AdCustomizerErrorEnum_AdCustomizerError._(
+          5, 'COUNTDOWN_INVALID_START_DAYS_BEFORE');
+  static const AdCustomizerErrorEnum_AdCustomizerError UNKNOWN_USER_LIST =
+      AdCustomizerErrorEnum_AdCustomizerError._(6, 'UNKNOWN_USER_LIST');
 
-  static const $core.List<AdCustomizerErrorEnum_AdCustomizerError> values = <AdCustomizerErrorEnum_AdCustomizerError> [
+  static const $core.List<AdCustomizerErrorEnum_AdCustomizerError> values =
+      <AdCustomizerErrorEnum_AdCustomizerError>[
     UNSPECIFIED,
     UNKNOWN,
     COUNTDOWN_INVALID_DATE_FORMAT,
@@ -27,9 +39,11 @@ class AdCustomizerErrorEnum_AdCustomizerError extends $pb.ProtobufEnum {
     UNKNOWN_USER_LIST,
   ];
 
-  static final $core.Map<$core.int, AdCustomizerErrorEnum_AdCustomizerError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AdCustomizerErrorEnum_AdCustomizerError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, AdCustomizerErrorEnum_AdCustomizerError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AdCustomizerErrorEnum_AdCustomizerError valueOf($core.int value) =>
+      _byValue[value];
 
-  const AdCustomizerErrorEnum_AdCustomizerError._($core.int v, $core.String n) : super(v, n);
+  const AdCustomizerErrorEnum_AdCustomizerError._($core.int v, $core.String n)
+      : super(v, n);
 }
-

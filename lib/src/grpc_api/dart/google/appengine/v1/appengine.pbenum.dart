@@ -12,14 +12,14 @@ class VersionView extends $pb.ProtobufEnum {
   static const VersionView BASIC = VersionView._(0, 'BASIC');
   static const VersionView FULL = VersionView._(1, 'FULL');
 
-  static const $core.List<VersionView> values = <VersionView> [
+  static const $core.List<VersionView> values = <VersionView>[
     BASIC,
     FULL,
   ];
 
-  static final $core.Map<$core.int, VersionView> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, VersionView> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static VersionView valueOf($core.int value) => _byValue[value];
 
   const VersionView._($core.int v, $core.String n) : super(v, n);
 }
-

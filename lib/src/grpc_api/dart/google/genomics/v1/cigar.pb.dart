@@ -4,7 +4,8 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -14,18 +15,29 @@ import 'cigar.pbenum.dart';
 export 'cigar.pbenum.dart';
 
 class CigarUnit extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CigarUnit', package: const $pb.PackageName('google.genomics.v1'))
-    ..e<CigarUnit_Operation>(1, 'operation', $pb.PbFieldType.OE, CigarUnit_Operation.OPERATION_UNSPECIFIED, CigarUnit_Operation.valueOf, CigarUnit_Operation.values)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CigarUnit',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..e<CigarUnit_Operation>(
+        1,
+        'operation',
+        $pb.PbFieldType.OE,
+        CigarUnit_Operation.OPERATION_UNSPECIFIED,
+        CigarUnit_Operation.valueOf,
+        CigarUnit_Operation.values)
     ..aInt64(2, 'operationLength')
     ..aOS(3, 'referenceSequence')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   CigarUnit() : super();
-  CigarUnit.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CigarUnit.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CigarUnit.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CigarUnit.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   CigarUnit clone() => CigarUnit()..mergeFromMessage(this);
-  CigarUnit copyWith(void Function(CigarUnit) updates) => super.copyWith((message) => updates(message as CigarUnit));
+  CigarUnit copyWith(void Function(CigarUnit) updates) =>
+      super.copyWith((message) => updates(message as CigarUnit));
   $pb.BuilderInfo get info_ => _i;
   static CigarUnit create() => CigarUnit();
   CigarUnit createEmptyInstance() => create();
@@ -34,18 +46,26 @@ class CigarUnit extends $pb.GeneratedMessage {
   static CigarUnit _defaultInstance;
 
   CigarUnit_Operation get operation => $_getN(0);
-  set operation(CigarUnit_Operation v) { setField(1, v); }
+  set operation(CigarUnit_Operation v) {
+    setField(1, v);
+  }
+
   $core.bool hasOperation() => $_has(0);
   void clearOperation() => clearField(1);
 
   Int64 get operationLength => $_getI64(1);
-  set operationLength(Int64 v) { $_setInt64(1, v); }
+  set operationLength(Int64 v) {
+    $_setInt64(1, v);
+  }
+
   $core.bool hasOperationLength() => $_has(1);
   void clearOperationLength() => clearField(2);
 
   $core.String get referenceSequence => $_getS(2, '');
-  set referenceSequence($core.String v) { $_setString(2, v); }
+  set referenceSequence($core.String v) {
+    $_setString(2, v);
+  }
+
   $core.bool hasReferenceSequence() => $_has(2);
   void clearReferenceSequence() => clearField(3);
 }
-

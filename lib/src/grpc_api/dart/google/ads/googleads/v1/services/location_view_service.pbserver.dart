@@ -16,23 +16,30 @@ import 'location_view_service.pbjson.dart';
 export 'location_view_service.pb.dart';
 
 abstract class LocationViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.LocationView> getLocationView($pb.ServerContext ctx, GetLocationViewRequest request);
+  $async.Future<$0.LocationView> getLocationView(
+      $pb.ServerContext ctx, GetLocationViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetLocationView': return GetLocationViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetLocationView':
+        return GetLocationViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetLocationView': return this.getLocationView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetLocationView':
+        return this.getLocationView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => LocationViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => LocationViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      LocationViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => LocationViewServiceBase$messageJson;
 }
-

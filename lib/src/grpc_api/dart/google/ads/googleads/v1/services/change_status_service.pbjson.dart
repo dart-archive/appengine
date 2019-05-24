@@ -7,23 +7,28 @@
 import '../resources/change_status.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetChangeStatusRequest$json = const {
+const GetChangeStatusRequest$json = {
   '1': 'GetChangeStatusRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const ChangeStatusServiceBase$json = const {
+const ChangeStatusServiceBase$json = {
   '1': 'ChangeStatusService',
-  '2': const [
-    const {'1': 'GetChangeStatus', '2': '.google.ads.googleads.v1.services.GetChangeStatusRequest', '3': '.google.ads.googleads.v1.resources.ChangeStatus', '4': const {}},
+  '2': [
+    {
+      '1': 'GetChangeStatus',
+      '2': '.google.ads.googleads.v1.services.GetChangeStatusRequest',
+      '3': '.google.ads.googleads.v1.resources.ChangeStatus',
+      '4': {}
+    },
   ],
 };
 
-const ChangeStatusServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetChangeStatusRequest': GetChangeStatusRequest$json,
+const ChangeStatusServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetChangeStatusRequest':
+      GetChangeStatusRequest$json,
   '.google.ads.googleads.v1.resources.ChangeStatus': $0.ChangeStatus$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

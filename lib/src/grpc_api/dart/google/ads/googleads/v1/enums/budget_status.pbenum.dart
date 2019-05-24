@@ -9,21 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class BudgetStatusEnum_BudgetStatus extends $pb.ProtobufEnum {
-  static const BudgetStatusEnum_BudgetStatus UNSPECIFIED = BudgetStatusEnum_BudgetStatus._(0, 'UNSPECIFIED');
-  static const BudgetStatusEnum_BudgetStatus UNKNOWN = BudgetStatusEnum_BudgetStatus._(1, 'UNKNOWN');
-  static const BudgetStatusEnum_BudgetStatus ENABLED = BudgetStatusEnum_BudgetStatus._(2, 'ENABLED');
-  static const BudgetStatusEnum_BudgetStatus REMOVED = BudgetStatusEnum_BudgetStatus._(3, 'REMOVED');
+  static const BudgetStatusEnum_BudgetStatus UNSPECIFIED =
+      BudgetStatusEnum_BudgetStatus._(0, 'UNSPECIFIED');
+  static const BudgetStatusEnum_BudgetStatus UNKNOWN =
+      BudgetStatusEnum_BudgetStatus._(1, 'UNKNOWN');
+  static const BudgetStatusEnum_BudgetStatus ENABLED =
+      BudgetStatusEnum_BudgetStatus._(2, 'ENABLED');
+  static const BudgetStatusEnum_BudgetStatus REMOVED =
+      BudgetStatusEnum_BudgetStatus._(3, 'REMOVED');
 
-  static const $core.List<BudgetStatusEnum_BudgetStatus> values = <BudgetStatusEnum_BudgetStatus> [
+  static const $core.List<BudgetStatusEnum_BudgetStatus> values =
+      <BudgetStatusEnum_BudgetStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, BudgetStatusEnum_BudgetStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static BudgetStatusEnum_BudgetStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, BudgetStatusEnum_BudgetStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static BudgetStatusEnum_BudgetStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const BudgetStatusEnum_BudgetStatus._($core.int v, $core.String n) : super(v, n);
+  const BudgetStatusEnum_BudgetStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-

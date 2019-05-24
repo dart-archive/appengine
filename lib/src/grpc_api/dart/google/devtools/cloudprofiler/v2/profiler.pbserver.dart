@@ -15,29 +15,41 @@ import 'profiler.pbjson.dart';
 export 'profiler.pb.dart';
 
 abstract class ProfilerServiceBase extends $pb.GeneratedService {
-  $async.Future<Profile> createProfile($pb.ServerContext ctx, CreateProfileRequest request);
-  $async.Future<Profile> createOfflineProfile($pb.ServerContext ctx, CreateOfflineProfileRequest request);
-  $async.Future<Profile> updateProfile($pb.ServerContext ctx, UpdateProfileRequest request);
+  $async.Future<Profile> createProfile(
+      $pb.ServerContext ctx, CreateProfileRequest request);
+  $async.Future<Profile> createOfflineProfile(
+      $pb.ServerContext ctx, CreateOfflineProfileRequest request);
+  $async.Future<Profile> updateProfile(
+      $pb.ServerContext ctx, UpdateProfileRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'CreateProfile': return CreateProfileRequest();
-      case 'CreateOfflineProfile': return CreateOfflineProfileRequest();
-      case 'UpdateProfile': return UpdateProfileRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CreateProfile':
+        return CreateProfileRequest();
+      case 'CreateOfflineProfile':
+        return CreateOfflineProfileRequest();
+      case 'UpdateProfile':
+        return UpdateProfileRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'CreateProfile': return this.createProfile(ctx, request);
-      case 'CreateOfflineProfile': return this.createOfflineProfile(ctx, request);
-      case 'UpdateProfile': return this.updateProfile(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CreateProfile':
+        return this.createProfile(ctx, request);
+      case 'CreateOfflineProfile':
+        return this.createOfflineProfile(ctx, request);
+      case 'UpdateProfile':
+        return this.updateProfile(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => ProfilerServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ProfilerServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ProfilerServiceBase$messageJson;
 }
-

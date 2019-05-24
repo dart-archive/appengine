@@ -16,23 +16,30 @@ import 'campaign_audience_view_service.pbjson.dart';
 export 'campaign_audience_view_service.pb.dart';
 
 abstract class CampaignAudienceViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.CampaignAudienceView> getCampaignAudienceView($pb.ServerContext ctx, GetCampaignAudienceViewRequest request);
+  $async.Future<$0.CampaignAudienceView> getCampaignAudienceView(
+      $pb.ServerContext ctx, GetCampaignAudienceViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetCampaignAudienceView': return GetCampaignAudienceViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCampaignAudienceView':
+        return GetCampaignAudienceViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetCampaignAudienceView': return this.getCampaignAudienceView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCampaignAudienceView':
+        return this.getCampaignAudienceView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CampaignAudienceViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CampaignAudienceViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CampaignAudienceViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CampaignAudienceViewServiceBase$messageJson;
 }
-

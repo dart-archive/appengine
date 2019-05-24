@@ -9,21 +9,29 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AppCampaignAppStoreEnum_AppCampaignAppStore extends $pb.ProtobufEnum {
-  static const AppCampaignAppStoreEnum_AppCampaignAppStore UNSPECIFIED = AppCampaignAppStoreEnum_AppCampaignAppStore._(0, 'UNSPECIFIED');
-  static const AppCampaignAppStoreEnum_AppCampaignAppStore UNKNOWN = AppCampaignAppStoreEnum_AppCampaignAppStore._(1, 'UNKNOWN');
-  static const AppCampaignAppStoreEnum_AppCampaignAppStore APPLE_APP_STORE = AppCampaignAppStoreEnum_AppCampaignAppStore._(2, 'APPLE_APP_STORE');
-  static const AppCampaignAppStoreEnum_AppCampaignAppStore GOOGLE_APP_STORE = AppCampaignAppStoreEnum_AppCampaignAppStore._(3, 'GOOGLE_APP_STORE');
+  static const AppCampaignAppStoreEnum_AppCampaignAppStore UNSPECIFIED =
+      AppCampaignAppStoreEnum_AppCampaignAppStore._(0, 'UNSPECIFIED');
+  static const AppCampaignAppStoreEnum_AppCampaignAppStore UNKNOWN =
+      AppCampaignAppStoreEnum_AppCampaignAppStore._(1, 'UNKNOWN');
+  static const AppCampaignAppStoreEnum_AppCampaignAppStore APPLE_APP_STORE =
+      AppCampaignAppStoreEnum_AppCampaignAppStore._(2, 'APPLE_APP_STORE');
+  static const AppCampaignAppStoreEnum_AppCampaignAppStore GOOGLE_APP_STORE =
+      AppCampaignAppStoreEnum_AppCampaignAppStore._(3, 'GOOGLE_APP_STORE');
 
-  static const $core.List<AppCampaignAppStoreEnum_AppCampaignAppStore> values = <AppCampaignAppStoreEnum_AppCampaignAppStore> [
+  static const $core.List<AppCampaignAppStoreEnum_AppCampaignAppStore> values =
+      <AppCampaignAppStoreEnum_AppCampaignAppStore>[
     UNSPECIFIED,
     UNKNOWN,
     APPLE_APP_STORE,
     GOOGLE_APP_STORE,
   ];
 
-  static final $core.Map<$core.int, AppCampaignAppStoreEnum_AppCampaignAppStore> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AppCampaignAppStoreEnum_AppCampaignAppStore valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, AppCampaignAppStoreEnum_AppCampaignAppStore>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AppCampaignAppStoreEnum_AppCampaignAppStore valueOf($core.int value) =>
+      _byValue[value];
 
-  const AppCampaignAppStoreEnum_AppCampaignAppStore._($core.int v, $core.String n) : super(v, n);
+  const AppCampaignAppStoreEnum_AppCampaignAppStore._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

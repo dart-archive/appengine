@@ -7,23 +7,30 @@
 import '../resources/expanded_landing_page_view.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetExpandedLandingPageViewRequest$json = const {
+const GetExpandedLandingPageViewRequest$json = {
   '1': 'GetExpandedLandingPageViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const ExpandedLandingPageViewServiceBase$json = const {
+const ExpandedLandingPageViewServiceBase$json = {
   '1': 'ExpandedLandingPageViewService',
-  '2': const [
-    const {'1': 'GetExpandedLandingPageView', '2': '.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest', '3': '.google.ads.googleads.v1.resources.ExpandedLandingPageView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetExpandedLandingPageView',
+      '2':
+          '.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest',
+      '3': '.google.ads.googleads.v1.resources.ExpandedLandingPageView',
+      '4': {}
+    },
   ],
 };
 
-const ExpandedLandingPageViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest': GetExpandedLandingPageViewRequest$json,
-  '.google.ads.googleads.v1.resources.ExpandedLandingPageView': $0.ExpandedLandingPageView$json,
+const ExpandedLandingPageViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetExpandedLandingPageViewRequest':
+      GetExpandedLandingPageViewRequest$json,
+  '.google.ads.googleads.v1.resources.ExpandedLandingPageView':
+      $0.ExpandedLandingPageView$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

@@ -16,23 +16,30 @@ import 'customer_client_service.pbjson.dart';
 export 'customer_client_service.pb.dart';
 
 abstract class CustomerClientServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.CustomerClient> getCustomerClient($pb.ServerContext ctx, GetCustomerClientRequest request);
+  $async.Future<$0.CustomerClient> getCustomerClient(
+      $pb.ServerContext ctx, GetCustomerClientRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetCustomerClient': return GetCustomerClientRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCustomerClient':
+        return GetCustomerClientRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetCustomerClient': return this.getCustomerClient(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCustomerClient':
+        return this.getCustomerClient(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CustomerClientServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CustomerClientServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CustomerClientServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CustomerClientServiceBase$messageJson;
 }
-

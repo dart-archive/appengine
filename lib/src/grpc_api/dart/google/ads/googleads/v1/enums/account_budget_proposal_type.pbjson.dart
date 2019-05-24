@@ -4,20 +4,19 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const AccountBudgetProposalTypeEnum$json = const {
+const AccountBudgetProposalTypeEnum$json = {
   '1': 'AccountBudgetProposalTypeEnum',
-  '4': const [AccountBudgetProposalTypeEnum_AccountBudgetProposalType$json],
+  '4': [AccountBudgetProposalTypeEnum_AccountBudgetProposalType$json],
 };
 
-const AccountBudgetProposalTypeEnum_AccountBudgetProposalType$json = const {
+const AccountBudgetProposalTypeEnum_AccountBudgetProposalType$json = {
   '1': 'AccountBudgetProposalType',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'CREATE', '2': 2},
-    const {'1': 'UPDATE', '2': 3},
-    const {'1': 'END', '2': 4},
-    const {'1': 'REMOVE', '2': 5},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'CREATE', '2': 2},
+    {'1': 'UPDATE', '2': 3},
+    {'1': 'END', '2': 4},
+    {'1': 'REMOVE', '2': 5},
   ],
 };
-

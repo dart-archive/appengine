@@ -17,26 +17,34 @@ import 'tracing.pbjson.dart';
 export 'tracing.pb.dart';
 
 abstract class TraceServiceBase extends $pb.GeneratedService {
-  $async.Future<$1.Empty> batchWriteSpans($pb.ServerContext ctx, BatchWriteSpansRequest request);
+  $async.Future<$1.Empty> batchWriteSpans(
+      $pb.ServerContext ctx, BatchWriteSpansRequest request);
   $async.Future<$0.Span> createSpan($pb.ServerContext ctx, $0.Span request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'BatchWriteSpans': return BatchWriteSpansRequest();
-      case 'CreateSpan': return $0.Span();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'BatchWriteSpans':
+        return BatchWriteSpansRequest();
+      case 'CreateSpan':
+        return $0.Span();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'BatchWriteSpans': return this.batchWriteSpans(ctx, request);
-      case 'CreateSpan': return this.createSpan(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'BatchWriteSpans':
+        return this.batchWriteSpans(ctx, request);
+      case 'CreateSpan':
+        return this.createSpan(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => TraceServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => TraceServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => TraceServiceBase$messageJson;
 }
-

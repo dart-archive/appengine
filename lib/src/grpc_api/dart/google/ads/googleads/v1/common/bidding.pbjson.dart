@@ -4,110 +4,300 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const Commission$json = const {
+const Commission$json = {
   '1': 'Commission',
-  '2': const [
-    const {'1': 'commission_rate_micros', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'commissionRateMicros'},
+  '2': [
+    {
+      '1': 'commission_rate_micros',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'commissionRateMicros'
+    },
   ],
 };
 
-const EnhancedCpc$json = const {
+const EnhancedCpc$json = {
   '1': 'EnhancedCpc',
 };
 
-const ManualCpc$json = const {
+const ManualCpc$json = {
   '1': 'ManualCpc',
-  '2': const [
-    const {'1': 'enhanced_cpc_enabled', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.BoolValue', '10': 'enhancedCpcEnabled'},
+  '2': [
+    {
+      '1': 'enhanced_cpc_enabled',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'enhancedCpcEnabled'
+    },
   ],
 };
 
-const ManualCpm$json = const {
+const ManualCpm$json = {
   '1': 'ManualCpm',
 };
 
-const ManualCpv$json = const {
+const ManualCpv$json = {
   '1': 'ManualCpv',
 };
 
-const MaximizeConversions$json = const {
+const MaximizeConversions$json = {
   '1': 'MaximizeConversions',
 };
 
-const MaximizeConversionValue$json = const {
+const MaximizeConversionValue$json = {
   '1': 'MaximizeConversionValue',
-  '2': const [
-    const {'1': 'target_roas', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.DoubleValue', '10': 'targetRoas'},
+  '2': [
+    {
+      '1': 'target_roas',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.DoubleValue',
+      '10': 'targetRoas'
+    },
   ],
 };
 
-const PageOnePromoted$json = const {
+const PageOnePromoted$json = {
   '1': 'PageOnePromoted',
-  '2': const [
-    const {'1': 'strategy_goal', '3': 1, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal', '10': 'strategyGoal'},
-    const {'1': 'cpc_bid_ceiling_micros', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidCeilingMicros'},
-    const {'1': 'bid_modifier', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.DoubleValue', '10': 'bidModifier'},
-    const {'1': 'only_raise_cpc_bids', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.BoolValue', '10': 'onlyRaiseCpcBids'},
-    const {'1': 'raise_cpc_bid_when_budget_constrained', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.BoolValue', '10': 'raiseCpcBidWhenBudgetConstrained'},
-    const {'1': 'raise_cpc_bid_when_quality_score_is_low', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.BoolValue', '10': 'raiseCpcBidWhenQualityScoreIsLow'},
+  '2': [
+    {
+      '1': 'strategy_goal',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v1.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal',
+      '10': 'strategyGoal'
+    },
+    {
+      '1': 'cpc_bid_ceiling_micros',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidCeilingMicros'
+    },
+    {
+      '1': 'bid_modifier',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.DoubleValue',
+      '10': 'bidModifier'
+    },
+    {
+      '1': 'only_raise_cpc_bids',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'onlyRaiseCpcBids'
+    },
+    {
+      '1': 'raise_cpc_bid_when_budget_constrained',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'raiseCpcBidWhenBudgetConstrained'
+    },
+    {
+      '1': 'raise_cpc_bid_when_quality_score_is_low',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'raiseCpcBidWhenQualityScoreIsLow'
+    },
   ],
 };
 
-const TargetCpa$json = const {
+const TargetCpa$json = {
   '1': 'TargetCpa',
-  '2': const [
-    const {'1': 'target_cpa_micros', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'targetCpaMicros'},
-    const {'1': 'cpc_bid_ceiling_micros', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidCeilingMicros'},
-    const {'1': 'cpc_bid_floor_micros', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidFloorMicros'},
+  '2': [
+    {
+      '1': 'target_cpa_micros',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'targetCpaMicros'
+    },
+    {
+      '1': 'cpc_bid_ceiling_micros',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidCeilingMicros'
+    },
+    {
+      '1': 'cpc_bid_floor_micros',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidFloorMicros'
+    },
   ],
 };
 
-const TargetCpm$json = const {
+const TargetCpm$json = {
   '1': 'TargetCpm',
 };
 
-const TargetImpressionShare$json = const {
+const TargetImpressionShare$json = {
   '1': 'TargetImpressionShare',
-  '2': const [
-    const {'1': 'location', '3': 1, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation', '10': 'location'},
-    const {'1': 'location_fraction_micros', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'locationFractionMicros'},
-    const {'1': 'cpc_bid_ceiling_micros', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidCeilingMicros'},
+  '2': [
+    {
+      '1': 'location',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v1.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation',
+      '10': 'location'
+    },
+    {
+      '1': 'location_fraction_micros',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'locationFractionMicros'
+    },
+    {
+      '1': 'cpc_bid_ceiling_micros',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidCeilingMicros'
+    },
   ],
 };
 
-const TargetOutrankShare$json = const {
+const TargetOutrankShare$json = {
   '1': 'TargetOutrankShare',
-  '2': const [
-    const {'1': 'target_outrank_share_micros', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Int32Value', '10': 'targetOutrankShareMicros'},
-    const {'1': 'competitor_domain', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'competitorDomain'},
-    const {'1': 'cpc_bid_ceiling_micros', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidCeilingMicros'},
-    const {'1': 'only_raise_cpc_bids', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.BoolValue', '10': 'onlyRaiseCpcBids'},
-    const {'1': 'raise_cpc_bid_when_quality_score_is_low', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.BoolValue', '10': 'raiseCpcBidWhenQualityScoreIsLow'},
+  '2': [
+    {
+      '1': 'target_outrank_share_micros',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int32Value',
+      '10': 'targetOutrankShareMicros'
+    },
+    {
+      '1': 'competitor_domain',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'competitorDomain'
+    },
+    {
+      '1': 'cpc_bid_ceiling_micros',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidCeilingMicros'
+    },
+    {
+      '1': 'only_raise_cpc_bids',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'onlyRaiseCpcBids'
+    },
+    {
+      '1': 'raise_cpc_bid_when_quality_score_is_low',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'raiseCpcBidWhenQualityScoreIsLow'
+    },
   ],
 };
 
-const TargetRoas$json = const {
+const TargetRoas$json = {
   '1': 'TargetRoas',
-  '2': const [
-    const {'1': 'target_roas', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.DoubleValue', '10': 'targetRoas'},
-    const {'1': 'cpc_bid_ceiling_micros', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidCeilingMicros'},
-    const {'1': 'cpc_bid_floor_micros', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidFloorMicros'},
+  '2': [
+    {
+      '1': 'target_roas',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.DoubleValue',
+      '10': 'targetRoas'
+    },
+    {
+      '1': 'cpc_bid_ceiling_micros',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidCeilingMicros'
+    },
+    {
+      '1': 'cpc_bid_floor_micros',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidFloorMicros'
+    },
   ],
 };
 
-const TargetSpend$json = const {
+const TargetSpend$json = {
   '1': 'TargetSpend',
-  '2': const [
-    const {'1': 'target_spend_micros', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'targetSpendMicros'},
-    const {'1': 'cpc_bid_ceiling_micros', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidCeilingMicros'},
+  '2': [
+    {
+      '1': 'target_spend_micros',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'targetSpendMicros'
+    },
+    {
+      '1': 'cpc_bid_ceiling_micros',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidCeilingMicros'
+    },
   ],
 };
 
-const PercentCpc$json = const {
+const PercentCpc$json = {
   '1': 'PercentCpc',
-  '2': const [
-    const {'1': 'cpc_bid_ceiling_micros', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'cpcBidCeilingMicros'},
-    const {'1': 'enhanced_cpc_enabled', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.BoolValue', '10': 'enhancedCpcEnabled'},
+  '2': [
+    {
+      '1': 'cpc_bid_ceiling_micros',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'cpcBidCeilingMicros'
+    },
+    {
+      '1': 'enhanced_cpc_enabled',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'enhancedCpcEnabled'
+    },
   ],
 };
-

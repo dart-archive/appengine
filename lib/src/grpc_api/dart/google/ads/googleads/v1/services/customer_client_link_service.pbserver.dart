@@ -16,26 +16,36 @@ import 'customer_client_link_service.pbjson.dart';
 export 'customer_client_link_service.pb.dart';
 
 abstract class CustomerClientLinkServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.CustomerClientLink> getCustomerClientLink($pb.ServerContext ctx, GetCustomerClientLinkRequest request);
-  $async.Future<MutateCustomerClientLinkResponse> mutateCustomerClientLink($pb.ServerContext ctx, MutateCustomerClientLinkRequest request);
+  $async.Future<$0.CustomerClientLink> getCustomerClientLink(
+      $pb.ServerContext ctx, GetCustomerClientLinkRequest request);
+  $async.Future<MutateCustomerClientLinkResponse> mutateCustomerClientLink(
+      $pb.ServerContext ctx, MutateCustomerClientLinkRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetCustomerClientLink': return GetCustomerClientLinkRequest();
-      case 'MutateCustomerClientLink': return MutateCustomerClientLinkRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCustomerClientLink':
+        return GetCustomerClientLinkRequest();
+      case 'MutateCustomerClientLink':
+        return MutateCustomerClientLinkRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetCustomerClientLink': return this.getCustomerClientLink(ctx, request);
-      case 'MutateCustomerClientLink': return this.mutateCustomerClientLink(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCustomerClientLink':
+        return this.getCustomerClientLink(ctx, request);
+      case 'MutateCustomerClientLink':
+        return this.mutateCustomerClientLink(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CustomerClientLinkServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CustomerClientLinkServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CustomerClientLinkServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CustomerClientLinkServiceBase$messageJson;
 }
-

@@ -13,99 +13,171 @@ import '../../../protobuf/duration.pbjson.dart' as $7;
 import '../../../protobuf/field_mask.pbjson.dart' as $1;
 import '../../../protobuf/empty.pbjson.dart' as $2;
 
-const ListJobsRequest$json = const {
+const ListJobsRequest$json = {
   '1': 'ListJobsRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 6, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 6, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListJobsResponse$json = const {
+const ListJobsResponse$json = {
   '1': 'ListJobsResponse',
-  '2': const [
-    const {'1': 'jobs', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.scheduler.v1beta1.Job', '10': 'jobs'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'jobs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.scheduler.v1beta1.Job',
+      '10': 'jobs'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetJobRequest$json = const {
+const GetJobRequest$json = {
   '1': 'GetJobRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const CreateJobRequest$json = const {
+const CreateJobRequest$json = {
   '1': 'CreateJobRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'job', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.scheduler.v1beta1.Job', '10': 'job'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'job',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.scheduler.v1beta1.Job',
+      '10': 'job'
+    },
   ],
 };
 
-const UpdateJobRequest$json = const {
+const UpdateJobRequest$json = {
   '1': 'UpdateJobRequest',
-  '2': const [
-    const {'1': 'job', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.scheduler.v1beta1.Job', '10': 'job'},
-    const {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+  '2': [
+    {
+      '1': 'job',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.scheduler.v1beta1.Job',
+      '10': 'job'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
-const DeleteJobRequest$json = const {
+const DeleteJobRequest$json = {
   '1': 'DeleteJobRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const PauseJobRequest$json = const {
+const PauseJobRequest$json = {
   '1': 'PauseJobRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ResumeJobRequest$json = const {
+const ResumeJobRequest$json = {
   '1': 'ResumeJobRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const RunJobRequest$json = const {
+const RunJobRequest$json = {
   '1': 'RunJobRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const CloudSchedulerServiceBase$json = const {
+const CloudSchedulerServiceBase$json = {
   '1': 'CloudScheduler',
-  '2': const [
-    const {'1': 'ListJobs', '2': '.google.cloud.scheduler.v1beta1.ListJobsRequest', '3': '.google.cloud.scheduler.v1beta1.ListJobsResponse', '4': const {}},
-    const {'1': 'GetJob', '2': '.google.cloud.scheduler.v1beta1.GetJobRequest', '3': '.google.cloud.scheduler.v1beta1.Job', '4': const {}},
-    const {'1': 'CreateJob', '2': '.google.cloud.scheduler.v1beta1.CreateJobRequest', '3': '.google.cloud.scheduler.v1beta1.Job', '4': const {}},
-    const {'1': 'UpdateJob', '2': '.google.cloud.scheduler.v1beta1.UpdateJobRequest', '3': '.google.cloud.scheduler.v1beta1.Job', '4': const {}},
-    const {'1': 'DeleteJob', '2': '.google.cloud.scheduler.v1beta1.DeleteJobRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'PauseJob', '2': '.google.cloud.scheduler.v1beta1.PauseJobRequest', '3': '.google.cloud.scheduler.v1beta1.Job', '4': const {}},
-    const {'1': 'ResumeJob', '2': '.google.cloud.scheduler.v1beta1.ResumeJobRequest', '3': '.google.cloud.scheduler.v1beta1.Job', '4': const {}},
-    const {'1': 'RunJob', '2': '.google.cloud.scheduler.v1beta1.RunJobRequest', '3': '.google.cloud.scheduler.v1beta1.Job', '4': const {}},
+  '2': [
+    {
+      '1': 'ListJobs',
+      '2': '.google.cloud.scheduler.v1beta1.ListJobsRequest',
+      '3': '.google.cloud.scheduler.v1beta1.ListJobsResponse',
+      '4': {}
+    },
+    {
+      '1': 'GetJob',
+      '2': '.google.cloud.scheduler.v1beta1.GetJobRequest',
+      '3': '.google.cloud.scheduler.v1beta1.Job',
+      '4': {}
+    },
+    {
+      '1': 'CreateJob',
+      '2': '.google.cloud.scheduler.v1beta1.CreateJobRequest',
+      '3': '.google.cloud.scheduler.v1beta1.Job',
+      '4': {}
+    },
+    {
+      '1': 'UpdateJob',
+      '2': '.google.cloud.scheduler.v1beta1.UpdateJobRequest',
+      '3': '.google.cloud.scheduler.v1beta1.Job',
+      '4': {}
+    },
+    {
+      '1': 'DeleteJob',
+      '2': '.google.cloud.scheduler.v1beta1.DeleteJobRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'PauseJob',
+      '2': '.google.cloud.scheduler.v1beta1.PauseJobRequest',
+      '3': '.google.cloud.scheduler.v1beta1.Job',
+      '4': {}
+    },
+    {
+      '1': 'ResumeJob',
+      '2': '.google.cloud.scheduler.v1beta1.ResumeJobRequest',
+      '3': '.google.cloud.scheduler.v1beta1.Job',
+      '4': {}
+    },
+    {
+      '1': 'RunJob',
+      '2': '.google.cloud.scheduler.v1beta1.RunJobRequest',
+      '3': '.google.cloud.scheduler.v1beta1.Job',
+      '4': {}
+    },
   ],
 };
 
-const CloudSchedulerServiceBase$messageJson = const {
+const CloudSchedulerServiceBase$messageJson = {
   '.google.cloud.scheduler.v1beta1.ListJobsRequest': ListJobsRequest$json,
   '.google.cloud.scheduler.v1beta1.ListJobsResponse': ListJobsResponse$json,
   '.google.cloud.scheduler.v1beta1.Job': $0.Job$json,
   '.google.cloud.scheduler.v1beta1.PubsubTarget': $3.PubsubTarget$json,
-  '.google.cloud.scheduler.v1beta1.PubsubTarget.AttributesEntry': $3.PubsubTarget_AttributesEntry$json,
-  '.google.cloud.scheduler.v1beta1.AppEngineHttpTarget': $3.AppEngineHttpTarget$json,
+  '.google.cloud.scheduler.v1beta1.PubsubTarget.AttributesEntry':
+      $3.PubsubTarget_AttributesEntry$json,
+  '.google.cloud.scheduler.v1beta1.AppEngineHttpTarget':
+      $3.AppEngineHttpTarget$json,
   '.google.cloud.scheduler.v1beta1.AppEngineRouting': $3.AppEngineRouting$json,
-  '.google.cloud.scheduler.v1beta1.AppEngineHttpTarget.HeadersEntry': $3.AppEngineHttpTarget_HeadersEntry$json,
+  '.google.cloud.scheduler.v1beta1.AppEngineHttpTarget.HeadersEntry':
+      $3.AppEngineHttpTarget_HeadersEntry$json,
   '.google.cloud.scheduler.v1beta1.HttpTarget': $3.HttpTarget$json,
-  '.google.cloud.scheduler.v1beta1.HttpTarget.HeadersEntry': $3.HttpTarget_HeadersEntry$json,
+  '.google.cloud.scheduler.v1beta1.HttpTarget.HeadersEntry':
+      $3.HttpTarget_HeadersEntry$json,
   '.google.cloud.scheduler.v1beta1.OAuthToken': $3.OAuthToken$json,
   '.google.cloud.scheduler.v1beta1.OidcToken': $3.OidcToken$json,
   '.google.protobuf.Timestamp': $4.Timestamp$json,
@@ -123,4 +195,3 @@ const CloudSchedulerServiceBase$messageJson = const {
   '.google.cloud.scheduler.v1beta1.ResumeJobRequest': ResumeJobRequest$json,
   '.google.cloud.scheduler.v1beta1.RunJobRequest': RunJobRequest$json,
 };
-

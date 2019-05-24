@@ -17,31 +17,45 @@ export 'model.pb.dart';
 
 abstract class ModelServiceBase extends $pb.GeneratedService {
   $async.Future<Model> getModel($pb.ServerContext ctx, GetModelRequest request);
-  $async.Future<ListModelsResponse> listModels($pb.ServerContext ctx, ListModelsRequest request);
-  $async.Future<Model> patchModel($pb.ServerContext ctx, PatchModelRequest request);
-  $async.Future<$4.Empty> deleteModel($pb.ServerContext ctx, DeleteModelRequest request);
+  $async.Future<ListModelsResponse> listModels(
+      $pb.ServerContext ctx, ListModelsRequest request);
+  $async.Future<Model> patchModel(
+      $pb.ServerContext ctx, PatchModelRequest request);
+  $async.Future<$4.Empty> deleteModel(
+      $pb.ServerContext ctx, DeleteModelRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetModel': return GetModelRequest();
-      case 'ListModels': return ListModelsRequest();
-      case 'PatchModel': return PatchModelRequest();
-      case 'DeleteModel': return DeleteModelRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetModel':
+        return GetModelRequest();
+      case 'ListModels':
+        return ListModelsRequest();
+      case 'PatchModel':
+        return PatchModelRequest();
+      case 'DeleteModel':
+        return DeleteModelRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetModel': return this.getModel(ctx, request);
-      case 'ListModels': return this.listModels(ctx, request);
-      case 'PatchModel': return this.patchModel(ctx, request);
-      case 'DeleteModel': return this.deleteModel(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetModel':
+        return this.getModel(ctx, request);
+      case 'ListModels':
+        return this.listModels(ctx, request);
+      case 'PatchModel':
+        return this.patchModel(ctx, request);
+      case 'DeleteModel':
+        return this.deleteModel(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => ModelServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ModelServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ModelServiceBase$messageJson;
 }
-

@@ -6,22 +6,28 @@
 
 import '../resources/ad_group_audience_view.pbjson.dart' as $0;
 
-const GetAdGroupAudienceViewRequest$json = const {
+const GetAdGroupAudienceViewRequest$json = {
   '1': 'GetAdGroupAudienceViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const AdGroupAudienceViewServiceBase$json = const {
+const AdGroupAudienceViewServiceBase$json = {
   '1': 'AdGroupAudienceViewService',
-  '2': const [
-    const {'1': 'GetAdGroupAudienceView', '2': '.google.ads.googleads.v1.services.GetAdGroupAudienceViewRequest', '3': '.google.ads.googleads.v1.resources.AdGroupAudienceView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetAdGroupAudienceView',
+      '2': '.google.ads.googleads.v1.services.GetAdGroupAudienceViewRequest',
+      '3': '.google.ads.googleads.v1.resources.AdGroupAudienceView',
+      '4': {}
+    },
   ],
 };
 
-const AdGroupAudienceViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetAdGroupAudienceViewRequest': GetAdGroupAudienceViewRequest$json,
-  '.google.ads.googleads.v1.resources.AdGroupAudienceView': $0.AdGroupAudienceView$json,
+const AdGroupAudienceViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetAdGroupAudienceViewRequest':
+      GetAdGroupAudienceViewRequest$json,
+  '.google.ads.googleads.v1.resources.AdGroupAudienceView':
+      $0.AdGroupAudienceView$json,
 };
-

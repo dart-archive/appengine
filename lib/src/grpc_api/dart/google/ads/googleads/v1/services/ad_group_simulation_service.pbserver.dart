@@ -16,23 +16,30 @@ import 'ad_group_simulation_service.pbjson.dart';
 export 'ad_group_simulation_service.pb.dart';
 
 abstract class AdGroupSimulationServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.AdGroupSimulation> getAdGroupSimulation($pb.ServerContext ctx, GetAdGroupSimulationRequest request);
+  $async.Future<$0.AdGroupSimulation> getAdGroupSimulation(
+      $pb.ServerContext ctx, GetAdGroupSimulationRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetAdGroupSimulation': return GetAdGroupSimulationRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdGroupSimulation':
+        return GetAdGroupSimulationRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetAdGroupSimulation': return this.getAdGroupSimulation(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdGroupSimulation':
+        return this.getAdGroupSimulation(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => AdGroupSimulationServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => AdGroupSimulationServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      AdGroupSimulationServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AdGroupSimulationServiceBase$messageJson;
 }
-

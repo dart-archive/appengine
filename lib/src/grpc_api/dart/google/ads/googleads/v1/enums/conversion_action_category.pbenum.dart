@@ -8,17 +8,28 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ConversionActionCategoryEnum_ConversionActionCategory extends $pb.ProtobufEnum {
-  static const ConversionActionCategoryEnum_ConversionActionCategory UNSPECIFIED = ConversionActionCategoryEnum_ConversionActionCategory._(0, 'UNSPECIFIED');
-  static const ConversionActionCategoryEnum_ConversionActionCategory UNKNOWN = ConversionActionCategoryEnum_ConversionActionCategory._(1, 'UNKNOWN');
-  static const ConversionActionCategoryEnum_ConversionActionCategory DEFAULT = ConversionActionCategoryEnum_ConversionActionCategory._(2, 'DEFAULT');
-  static const ConversionActionCategoryEnum_ConversionActionCategory PAGE_VIEW = ConversionActionCategoryEnum_ConversionActionCategory._(3, 'PAGE_VIEW');
-  static const ConversionActionCategoryEnum_ConversionActionCategory PURCHASE = ConversionActionCategoryEnum_ConversionActionCategory._(4, 'PURCHASE');
-  static const ConversionActionCategoryEnum_ConversionActionCategory SIGNUP = ConversionActionCategoryEnum_ConversionActionCategory._(5, 'SIGNUP');
-  static const ConversionActionCategoryEnum_ConversionActionCategory LEAD = ConversionActionCategoryEnum_ConversionActionCategory._(6, 'LEAD');
-  static const ConversionActionCategoryEnum_ConversionActionCategory DOWNLOAD = ConversionActionCategoryEnum_ConversionActionCategory._(7, 'DOWNLOAD');
+class ConversionActionCategoryEnum_ConversionActionCategory
+    extends $pb.ProtobufEnum {
+  static const ConversionActionCategoryEnum_ConversionActionCategory
+      UNSPECIFIED =
+      ConversionActionCategoryEnum_ConversionActionCategory._(0, 'UNSPECIFIED');
+  static const ConversionActionCategoryEnum_ConversionActionCategory UNKNOWN =
+      ConversionActionCategoryEnum_ConversionActionCategory._(1, 'UNKNOWN');
+  static const ConversionActionCategoryEnum_ConversionActionCategory DEFAULT =
+      ConversionActionCategoryEnum_ConversionActionCategory._(2, 'DEFAULT');
+  static const ConversionActionCategoryEnum_ConversionActionCategory PAGE_VIEW =
+      ConversionActionCategoryEnum_ConversionActionCategory._(3, 'PAGE_VIEW');
+  static const ConversionActionCategoryEnum_ConversionActionCategory PURCHASE =
+      ConversionActionCategoryEnum_ConversionActionCategory._(4, 'PURCHASE');
+  static const ConversionActionCategoryEnum_ConversionActionCategory SIGNUP =
+      ConversionActionCategoryEnum_ConversionActionCategory._(5, 'SIGNUP');
+  static const ConversionActionCategoryEnum_ConversionActionCategory LEAD =
+      ConversionActionCategoryEnum_ConversionActionCategory._(6, 'LEAD');
+  static const ConversionActionCategoryEnum_ConversionActionCategory DOWNLOAD =
+      ConversionActionCategoryEnum_ConversionActionCategory._(7, 'DOWNLOAD');
 
-  static const $core.List<ConversionActionCategoryEnum_ConversionActionCategory> values = <ConversionActionCategoryEnum_ConversionActionCategory> [
+  static const $core.List<ConversionActionCategoryEnum_ConversionActionCategory>
+      values = <ConversionActionCategoryEnum_ConversionActionCategory>[
     UNSPECIFIED,
     UNKNOWN,
     DEFAULT,
@@ -29,9 +40,14 @@ class ConversionActionCategoryEnum_ConversionActionCategory extends $pb.Protobuf
     DOWNLOAD,
   ];
 
-  static final $core.Map<$core.int, ConversionActionCategoryEnum_ConversionActionCategory> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ConversionActionCategoryEnum_ConversionActionCategory valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, ConversionActionCategoryEnum_ConversionActionCategory>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ConversionActionCategoryEnum_ConversionActionCategory valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ConversionActionCategoryEnum_ConversionActionCategory._($core.int v, $core.String n) : super(v, n);
+  const ConversionActionCategoryEnum_ConversionActionCategory._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

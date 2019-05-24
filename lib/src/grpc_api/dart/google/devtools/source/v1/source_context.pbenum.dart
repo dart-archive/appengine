@@ -14,16 +14,16 @@ class AliasContext_Kind extends $pb.ProtobufEnum {
   static const AliasContext_Kind MOVABLE = AliasContext_Kind._(2, 'MOVABLE');
   static const AliasContext_Kind OTHER = AliasContext_Kind._(4, 'OTHER');
 
-  static const $core.List<AliasContext_Kind> values = <AliasContext_Kind> [
+  static const $core.List<AliasContext_Kind> values = <AliasContext_Kind>[
     ANY,
     FIXED,
     MOVABLE,
     OTHER,
   ];
 
-  static final $core.Map<$core.int, AliasContext_Kind> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, AliasContext_Kind> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static AliasContext_Kind valueOf($core.int value) => _byValue[value];
 
   const AliasContext_Kind._($core.int v, $core.String n) : super(v, n);
 }
-

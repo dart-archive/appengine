@@ -15,23 +15,30 @@ import 'embedded_assistant.pbjson.dart';
 export 'embedded_assistant.pb.dart';
 
 abstract class EmbeddedAssistantServiceBase extends $pb.GeneratedService {
-  $async.Future<ConverseResponse> converse($pb.ServerContext ctx, ConverseRequest request);
+  $async.Future<ConverseResponse> converse(
+      $pb.ServerContext ctx, ConverseRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'Converse': return ConverseRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Converse':
+        return ConverseRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'Converse': return this.converse(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Converse':
+        return this.converse(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => EmbeddedAssistantServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => EmbeddedAssistantServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      EmbeddedAssistantServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => EmbeddedAssistantServiceBase$messageJson;
 }
-

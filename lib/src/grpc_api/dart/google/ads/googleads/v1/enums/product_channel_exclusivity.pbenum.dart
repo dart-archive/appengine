@@ -8,22 +8,38 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ProductChannelExclusivityEnum_ProductChannelExclusivity extends $pb.ProtobufEnum {
-  static const ProductChannelExclusivityEnum_ProductChannelExclusivity UNSPECIFIED = ProductChannelExclusivityEnum_ProductChannelExclusivity._(0, 'UNSPECIFIED');
-  static const ProductChannelExclusivityEnum_ProductChannelExclusivity UNKNOWN = ProductChannelExclusivityEnum_ProductChannelExclusivity._(1, 'UNKNOWN');
-  static const ProductChannelExclusivityEnum_ProductChannelExclusivity SINGLE_CHANNEL = ProductChannelExclusivityEnum_ProductChannelExclusivity._(2, 'SINGLE_CHANNEL');
-  static const ProductChannelExclusivityEnum_ProductChannelExclusivity MULTI_CHANNEL = ProductChannelExclusivityEnum_ProductChannelExclusivity._(3, 'MULTI_CHANNEL');
+class ProductChannelExclusivityEnum_ProductChannelExclusivity
+    extends $pb.ProtobufEnum {
+  static const ProductChannelExclusivityEnum_ProductChannelExclusivity
+      UNSPECIFIED = ProductChannelExclusivityEnum_ProductChannelExclusivity._(
+          0, 'UNSPECIFIED');
+  static const ProductChannelExclusivityEnum_ProductChannelExclusivity UNKNOWN =
+      ProductChannelExclusivityEnum_ProductChannelExclusivity._(1, 'UNKNOWN');
+  static const ProductChannelExclusivityEnum_ProductChannelExclusivity
+      SINGLE_CHANNEL =
+      ProductChannelExclusivityEnum_ProductChannelExclusivity._(
+          2, 'SINGLE_CHANNEL');
+  static const ProductChannelExclusivityEnum_ProductChannelExclusivity
+      MULTI_CHANNEL = ProductChannelExclusivityEnum_ProductChannelExclusivity._(
+          3, 'MULTI_CHANNEL');
 
-  static const $core.List<ProductChannelExclusivityEnum_ProductChannelExclusivity> values = <ProductChannelExclusivityEnum_ProductChannelExclusivity> [
+  static const $core
+          .List<ProductChannelExclusivityEnum_ProductChannelExclusivity>
+      values = <ProductChannelExclusivityEnum_ProductChannelExclusivity>[
     UNSPECIFIED,
     UNKNOWN,
     SINGLE_CHANNEL,
     MULTI_CHANNEL,
   ];
 
-  static final $core.Map<$core.int, ProductChannelExclusivityEnum_ProductChannelExclusivity> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ProductChannelExclusivityEnum_ProductChannelExclusivity valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          ProductChannelExclusivityEnum_ProductChannelExclusivity> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ProductChannelExclusivityEnum_ProductChannelExclusivity valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ProductChannelExclusivityEnum_ProductChannelExclusivity._($core.int v, $core.String n) : super(v, n);
+  const ProductChannelExclusivityEnum_ProductChannelExclusivity._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

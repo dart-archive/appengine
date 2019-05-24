@@ -8,17 +8,45 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator extends $pb.ProtobufEnum {
-  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator UNSPECIFIED = UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(0, 'UNSPECIFIED');
-  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator UNKNOWN = UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(1, 'UNKNOWN');
-  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator GREATER_THAN = UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(2, 'GREATER_THAN');
-  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator GREATER_THAN_OR_EQUAL = UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(3, 'GREATER_THAN_OR_EQUAL');
-  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator EQUALS = UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(4, 'EQUALS');
-  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator NOT_EQUALS = UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(5, 'NOT_EQUALS');
-  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator LESS_THAN = UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(6, 'LESS_THAN');
-  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator LESS_THAN_OR_EQUAL = UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(7, 'LESS_THAN_OR_EQUAL');
+class UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+    extends $pb.ProtobufEnum {
+  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      UNSPECIFIED =
+      UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+          0, 'UNSPECIFIED');
+  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      UNKNOWN =
+      UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+          1, 'UNKNOWN');
+  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      GREATER_THAN =
+      UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+          2, 'GREATER_THAN');
+  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      GREATER_THAN_OR_EQUAL =
+      UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+          3, 'GREATER_THAN_OR_EQUAL');
+  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      EQUALS =
+      UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+          4, 'EQUALS');
+  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      NOT_EQUALS =
+      UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+          5, 'NOT_EQUALS');
+  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      LESS_THAN =
+      UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+          6, 'LESS_THAN');
+  static const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      LESS_THAN_OR_EQUAL =
+      UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+          7, 'LESS_THAN_OR_EQUAL');
 
-  static const $core.List<UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator> values = <UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator> [
+  static const $core.List<
+          UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator>
+      values =
+      <UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator>[
     UNSPECIFIED,
     UNKNOWN,
     GREATER_THAN,
@@ -29,9 +57,13 @@ class UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator extends 
     LESS_THAN_OR_EQUAL,
   ];
 
-  static final $core.Map<$core.int, UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator
+      valueOf($core.int value) => _byValue[value];
 
-  const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._($core.int v, $core.String n) : super(v, n);
+  const UserListNumberRuleItemOperatorEnum_UserListNumberRuleItemOperator._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

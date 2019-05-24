@@ -7,24 +7,29 @@
 import '../resources/topic_constant.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetTopicConstantRequest$json = const {
+const GetTopicConstantRequest$json = {
   '1': 'GetTopicConstantRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const TopicConstantServiceBase$json = const {
+const TopicConstantServiceBase$json = {
   '1': 'TopicConstantService',
-  '2': const [
-    const {'1': 'GetTopicConstant', '2': '.google.ads.googleads.v1.services.GetTopicConstantRequest', '3': '.google.ads.googleads.v1.resources.TopicConstant', '4': const {}},
+  '2': [
+    {
+      '1': 'GetTopicConstant',
+      '2': '.google.ads.googleads.v1.services.GetTopicConstantRequest',
+      '3': '.google.ads.googleads.v1.resources.TopicConstant',
+      '4': {}
+    },
   ],
 };
 
-const TopicConstantServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetTopicConstantRequest': GetTopicConstantRequest$json,
+const TopicConstantServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetTopicConstantRequest':
+      GetTopicConstantRequest$json,
   '.google.ads.googleads.v1.resources.TopicConstant': $0.TopicConstant$json,
   '.google.protobuf.Int64Value': $1.Int64Value$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

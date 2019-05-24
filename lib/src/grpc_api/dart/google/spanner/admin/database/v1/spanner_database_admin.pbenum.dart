@@ -9,19 +9,20 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Database_State extends $pb.ProtobufEnum {
-  static const Database_State STATE_UNSPECIFIED = Database_State._(0, 'STATE_UNSPECIFIED');
+  static const Database_State STATE_UNSPECIFIED =
+      Database_State._(0, 'STATE_UNSPECIFIED');
   static const Database_State CREATING = Database_State._(1, 'CREATING');
   static const Database_State READY = Database_State._(2, 'READY');
 
-  static const $core.List<Database_State> values = <Database_State> [
+  static const $core.List<Database_State> values = <Database_State>[
     STATE_UNSPECIFIED,
     CREATING,
     READY,
   ];
 
-  static final $core.Map<$core.int, Database_State> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Database_State> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Database_State valueOf($core.int value) => _byValue[value];
 
   const Database_State._($core.int v, $core.String n) : super(v, n);
 }
-

@@ -9,139 +9,246 @@ import '../../../longrunning/operations.pbjson.dart' as $1;
 import '../../../protobuf/any.pbjson.dart' as $2;
 import '../../../rpc/status.pbjson.dart' as $3;
 
-const Model$json = const {
+const Model$json = {
   '1': 'Model',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
-    const {'1': 'default_version', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.ml.v1.Version', '10': 'defaultVersion'},
-    const {'1': 'regions', '3': 4, '4': 3, '5': 9, '10': 'regions'},
-    const {'1': 'online_prediction_logging', '3': 5, '4': 1, '5': 8, '10': 'onlinePredictionLogging'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
+    {
+      '1': 'default_version',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.ml.v1.Version',
+      '10': 'defaultVersion'
+    },
+    {'1': 'regions', '3': 4, '4': 3, '5': 9, '10': 'regions'},
+    {
+      '1': 'online_prediction_logging',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'onlinePredictionLogging'
+    },
   ],
 };
 
-const Version$json = const {
+const Version$json = {
   '1': 'Version',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
-    const {'1': 'is_default', '3': 3, '4': 1, '5': 8, '10': 'isDefault'},
-    const {'1': 'deployment_uri', '3': 4, '4': 1, '5': 9, '10': 'deploymentUri'},
-    const {'1': 'create_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
-    const {'1': 'last_use_time', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'lastUseTime'},
-    const {'1': 'runtime_version', '3': 8, '4': 1, '5': 9, '10': 'runtimeVersion'},
-    const {'1': 'manual_scaling', '3': 9, '4': 1, '5': 11, '6': '.google.cloud.ml.v1.ManualScaling', '10': 'manualScaling'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'is_default', '3': 3, '4': 1, '5': 8, '10': 'isDefault'},
+    {'1': 'deployment_uri', '3': 4, '4': 1, '5': 9, '10': 'deploymentUri'},
+    {
+      '1': 'create_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    {
+      '1': 'last_use_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'lastUseTime'
+    },
+    {'1': 'runtime_version', '3': 8, '4': 1, '5': 9, '10': 'runtimeVersion'},
+    {
+      '1': 'manual_scaling',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.ml.v1.ManualScaling',
+      '10': 'manualScaling'
+    },
   ],
 };
 
-const ManualScaling$json = const {
+const ManualScaling$json = {
   '1': 'ManualScaling',
-  '2': const [
-    const {'1': 'nodes', '3': 1, '4': 1, '5': 5, '10': 'nodes'},
+  '2': [
+    {'1': 'nodes', '3': 1, '4': 1, '5': 5, '10': 'nodes'},
   ],
 };
 
-const CreateModelRequest$json = const {
+const CreateModelRequest$json = {
   '1': 'CreateModelRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'model', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.ml.v1.Model', '10': 'model'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'model',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.ml.v1.Model',
+      '10': 'model'
+    },
   ],
 };
 
-const ListModelsRequest$json = const {
+const ListModelsRequest$json = {
   '1': 'ListModelsRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
   ],
 };
 
-const ListModelsResponse$json = const {
+const ListModelsResponse$json = {
   '1': 'ListModelsResponse',
-  '2': const [
-    const {'1': 'models', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.ml.v1.Model', '10': 'models'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'models',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.ml.v1.Model',
+      '10': 'models'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetModelRequest$json = const {
+const GetModelRequest$json = {
   '1': 'GetModelRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const DeleteModelRequest$json = const {
+const DeleteModelRequest$json = {
   '1': 'DeleteModelRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const CreateVersionRequest$json = const {
+const CreateVersionRequest$json = {
   '1': 'CreateVersionRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'version', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.ml.v1.Version', '10': 'version'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'version',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.ml.v1.Version',
+      '10': 'version'
+    },
   ],
 };
 
-const ListVersionsRequest$json = const {
+const ListVersionsRequest$json = {
   '1': 'ListVersionsRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
   ],
 };
 
-const ListVersionsResponse$json = const {
+const ListVersionsResponse$json = {
   '1': 'ListVersionsResponse',
-  '2': const [
-    const {'1': 'versions', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.ml.v1.Version', '10': 'versions'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'versions',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.ml.v1.Version',
+      '10': 'versions'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetVersionRequest$json = const {
+const GetVersionRequest$json = {
   '1': 'GetVersionRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const DeleteVersionRequest$json = const {
+const DeleteVersionRequest$json = {
   '1': 'DeleteVersionRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const SetDefaultVersionRequest$json = const {
+const SetDefaultVersionRequest$json = {
   '1': 'SetDefaultVersionRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ModelServiceBase$json = const {
+const ModelServiceBase$json = {
   '1': 'ModelService',
-  '2': const [
-    const {'1': 'CreateModel', '2': '.google.cloud.ml.v1.CreateModelRequest', '3': '.google.cloud.ml.v1.Model', '4': const {}},
-    const {'1': 'ListModels', '2': '.google.cloud.ml.v1.ListModelsRequest', '3': '.google.cloud.ml.v1.ListModelsResponse', '4': const {}},
-    const {'1': 'GetModel', '2': '.google.cloud.ml.v1.GetModelRequest', '3': '.google.cloud.ml.v1.Model', '4': const {}},
-    const {'1': 'DeleteModel', '2': '.google.cloud.ml.v1.DeleteModelRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'CreateVersion', '2': '.google.cloud.ml.v1.CreateVersionRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'ListVersions', '2': '.google.cloud.ml.v1.ListVersionsRequest', '3': '.google.cloud.ml.v1.ListVersionsResponse', '4': const {}},
-    const {'1': 'GetVersion', '2': '.google.cloud.ml.v1.GetVersionRequest', '3': '.google.cloud.ml.v1.Version', '4': const {}},
-    const {'1': 'DeleteVersion', '2': '.google.cloud.ml.v1.DeleteVersionRequest', '3': '.google.longrunning.Operation', '4': const {}},
-    const {'1': 'SetDefaultVersion', '2': '.google.cloud.ml.v1.SetDefaultVersionRequest', '3': '.google.cloud.ml.v1.Version', '4': const {}},
+  '2': [
+    {
+      '1': 'CreateModel',
+      '2': '.google.cloud.ml.v1.CreateModelRequest',
+      '3': '.google.cloud.ml.v1.Model',
+      '4': {}
+    },
+    {
+      '1': 'ListModels',
+      '2': '.google.cloud.ml.v1.ListModelsRequest',
+      '3': '.google.cloud.ml.v1.ListModelsResponse',
+      '4': {}
+    },
+    {
+      '1': 'GetModel',
+      '2': '.google.cloud.ml.v1.GetModelRequest',
+      '3': '.google.cloud.ml.v1.Model',
+      '4': {}
+    },
+    {
+      '1': 'DeleteModel',
+      '2': '.google.cloud.ml.v1.DeleteModelRequest',
+      '3': '.google.longrunning.Operation',
+      '4': {}
+    },
+    {
+      '1': 'CreateVersion',
+      '2': '.google.cloud.ml.v1.CreateVersionRequest',
+      '3': '.google.longrunning.Operation',
+      '4': {}
+    },
+    {
+      '1': 'ListVersions',
+      '2': '.google.cloud.ml.v1.ListVersionsRequest',
+      '3': '.google.cloud.ml.v1.ListVersionsResponse',
+      '4': {}
+    },
+    {
+      '1': 'GetVersion',
+      '2': '.google.cloud.ml.v1.GetVersionRequest',
+      '3': '.google.cloud.ml.v1.Version',
+      '4': {}
+    },
+    {
+      '1': 'DeleteVersion',
+      '2': '.google.cloud.ml.v1.DeleteVersionRequest',
+      '3': '.google.longrunning.Operation',
+      '4': {}
+    },
+    {
+      '1': 'SetDefaultVersion',
+      '2': '.google.cloud.ml.v1.SetDefaultVersionRequest',
+      '3': '.google.cloud.ml.v1.Version',
+      '4': {}
+    },
   ],
 };
 
-const ModelServiceBase$messageJson = const {
+const ModelServiceBase$messageJson = {
   '.google.cloud.ml.v1.CreateModelRequest': CreateModelRequest$json,
   '.google.cloud.ml.v1.Model': Model$json,
   '.google.cloud.ml.v1.Version': Version$json,
@@ -161,4 +268,3 @@ const ModelServiceBase$messageJson = const {
   '.google.cloud.ml.v1.DeleteVersionRequest': DeleteVersionRequest$json,
   '.google.cloud.ml.v1.SetDefaultVersionRequest': SetDefaultVersionRequest$json,
 };
-

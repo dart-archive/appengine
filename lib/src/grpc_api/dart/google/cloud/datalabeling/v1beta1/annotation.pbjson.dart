@@ -4,241 +4,550 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const AnnotationSource$json = const {
+const AnnotationSource$json = {
   '1': 'AnnotationSource',
-  '2': const [
-    const {'1': 'ANNOTATION_SOURCE_UNSPECIFIED', '2': 0},
-    const {'1': 'OPERATOR', '2': 3},
+  '2': [
+    {'1': 'ANNOTATION_SOURCE_UNSPECIFIED', '2': 0},
+    {'1': 'OPERATOR', '2': 3},
   ],
 };
 
-const AnnotationSentiment$json = const {
+const AnnotationSentiment$json = {
   '1': 'AnnotationSentiment',
-  '2': const [
-    const {'1': 'ANNOTATION_SENTIMENT_UNSPECIFIED', '2': 0},
-    const {'1': 'NEGATIVE', '2': 1},
-    const {'1': 'POSITIVE', '2': 2},
+  '2': [
+    {'1': 'ANNOTATION_SENTIMENT_UNSPECIFIED', '2': 0},
+    {'1': 'NEGATIVE', '2': 1},
+    {'1': 'POSITIVE', '2': 2},
   ],
 };
 
-const AnnotationType$json = const {
+const AnnotationType$json = {
   '1': 'AnnotationType',
-  '2': const [
-    const {'1': 'ANNOTATION_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'IMAGE_CLASSIFICATION_ANNOTATION', '2': 1},
-    const {'1': 'IMAGE_BOUNDING_BOX_ANNOTATION', '2': 2},
-    const {'1': 'IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION', '2': 13},
-    const {'1': 'IMAGE_BOUNDING_POLY_ANNOTATION', '2': 10},
-    const {'1': 'IMAGE_POLYLINE_ANNOTATION', '2': 11},
-    const {'1': 'IMAGE_SEGMENTATION_ANNOTATION', '2': 12},
-    const {'1': 'VIDEO_SHOTS_CLASSIFICATION_ANNOTATION', '2': 3},
-    const {'1': 'VIDEO_OBJECT_TRACKING_ANNOTATION', '2': 4},
-    const {'1': 'VIDEO_OBJECT_DETECTION_ANNOTATION', '2': 5},
-    const {'1': 'VIDEO_EVENT_ANNOTATION', '2': 6},
-    const {'1': 'AUDIO_TRANSCRIPTION_ANNOTATION', '2': 7},
-    const {'1': 'TEXT_CLASSIFICATION_ANNOTATION', '2': 8},
-    const {'1': 'TEXT_ENTITY_EXTRACTION_ANNOTATION', '2': 9},
+  '2': [
+    {'1': 'ANNOTATION_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'IMAGE_CLASSIFICATION_ANNOTATION', '2': 1},
+    {'1': 'IMAGE_BOUNDING_BOX_ANNOTATION', '2': 2},
+    {'1': 'IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION', '2': 13},
+    {'1': 'IMAGE_BOUNDING_POLY_ANNOTATION', '2': 10},
+    {'1': 'IMAGE_POLYLINE_ANNOTATION', '2': 11},
+    {'1': 'IMAGE_SEGMENTATION_ANNOTATION', '2': 12},
+    {'1': 'VIDEO_SHOTS_CLASSIFICATION_ANNOTATION', '2': 3},
+    {'1': 'VIDEO_OBJECT_TRACKING_ANNOTATION', '2': 4},
+    {'1': 'VIDEO_OBJECT_DETECTION_ANNOTATION', '2': 5},
+    {'1': 'VIDEO_EVENT_ANNOTATION', '2': 6},
+    {'1': 'AUDIO_TRANSCRIPTION_ANNOTATION', '2': 7},
+    {'1': 'TEXT_CLASSIFICATION_ANNOTATION', '2': 8},
+    {'1': 'TEXT_ENTITY_EXTRACTION_ANNOTATION', '2': 9},
   ],
 };
 
-const Annotation$json = const {
+const Annotation$json = {
   '1': 'Annotation',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'annotation_source', '3': 2, '4': 1, '5': 14, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSource', '10': 'annotationSource'},
-    const {'1': 'annotation_value', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationValue', '10': 'annotationValue'},
-    const {'1': 'annotation_metadata', '3': 4, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationMetadata', '10': 'annotationMetadata'},
-    const {'1': 'annotation_sentiment', '3': 6, '4': 1, '5': 14, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSentiment', '10': 'annotationSentiment'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'annotation_source',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSource',
+      '10': 'annotationSource'
+    },
+    {
+      '1': 'annotation_value',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationValue',
+      '10': 'annotationValue'
+    },
+    {
+      '1': 'annotation_metadata',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationMetadata',
+      '10': 'annotationMetadata'
+    },
+    {
+      '1': 'annotation_sentiment',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSentiment',
+      '10': 'annotationSentiment'
+    },
   ],
 };
 
-const AnnotationValue$json = const {
+const AnnotationValue$json = {
   '1': 'AnnotationValue',
-  '2': const [
-    const {'1': 'image_classification_annotation', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.ImageClassificationAnnotation', '9': 0, '10': 'imageClassificationAnnotation'},
-    const {'1': 'image_bounding_poly_annotation', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.ImageBoundingPolyAnnotation', '9': 0, '10': 'imageBoundingPolyAnnotation'},
-    const {'1': 'image_polyline_annotation', '3': 8, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.ImagePolylineAnnotation', '9': 0, '10': 'imagePolylineAnnotation'},
-    const {'1': 'image_segmentation_annotation', '3': 9, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.ImageSegmentationAnnotation', '9': 0, '10': 'imageSegmentationAnnotation'},
-    const {'1': 'text_classification_annotation', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.TextClassificationAnnotation', '9': 0, '10': 'textClassificationAnnotation'},
-    const {'1': 'video_classification_annotation', '3': 4, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.VideoClassificationAnnotation', '9': 0, '10': 'videoClassificationAnnotation'},
-    const {'1': 'video_object_tracking_annotation', '3': 5, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.VideoObjectTrackingAnnotation', '9': 0, '10': 'videoObjectTrackingAnnotation'},
-    const {'1': 'video_event_annotation', '3': 6, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.VideoEventAnnotation', '9': 0, '10': 'videoEventAnnotation'},
-    const {'1': 'audio_recognition_annotation', '3': 7, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AudioRecognitionAnnotation', '9': 0, '10': 'audioRecognitionAnnotation'},
+  '2': [
+    {
+      '1': 'image_classification_annotation',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.ImageClassificationAnnotation',
+      '9': 0,
+      '10': 'imageClassificationAnnotation'
+    },
+    {
+      '1': 'image_bounding_poly_annotation',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.ImageBoundingPolyAnnotation',
+      '9': 0,
+      '10': 'imageBoundingPolyAnnotation'
+    },
+    {
+      '1': 'image_polyline_annotation',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.ImagePolylineAnnotation',
+      '9': 0,
+      '10': 'imagePolylineAnnotation'
+    },
+    {
+      '1': 'image_segmentation_annotation',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.ImageSegmentationAnnotation',
+      '9': 0,
+      '10': 'imageSegmentationAnnotation'
+    },
+    {
+      '1': 'text_classification_annotation',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.TextClassificationAnnotation',
+      '9': 0,
+      '10': 'textClassificationAnnotation'
+    },
+    {
+      '1': 'video_classification_annotation',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.VideoClassificationAnnotation',
+      '9': 0,
+      '10': 'videoClassificationAnnotation'
+    },
+    {
+      '1': 'video_object_tracking_annotation',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.VideoObjectTrackingAnnotation',
+      '9': 0,
+      '10': 'videoObjectTrackingAnnotation'
+    },
+    {
+      '1': 'video_event_annotation',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.VideoEventAnnotation',
+      '9': 0,
+      '10': 'videoEventAnnotation'
+    },
+    {
+      '1': 'audio_recognition_annotation',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AudioRecognitionAnnotation',
+      '9': 0,
+      '10': 'audioRecognitionAnnotation'
+    },
   ],
-  '8': const [
-    const {'1': 'value_type'},
+  '8': [
+    {'1': 'value_type'},
   ],
 };
 
-const ImageClassificationAnnotation$json = const {
+const ImageClassificationAnnotation$json = {
   '1': 'ImageClassificationAnnotation',
-  '2': const [
-    const {'1': 'annotation_spec', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec', '10': 'annotationSpec'},
+  '2': [
+    {
+      '1': 'annotation_spec',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'annotationSpec'
+    },
   ],
 };
 
-const Vertex$json = const {
+const Vertex$json = {
   '1': 'Vertex',
-  '2': const [
-    const {'1': 'x', '3': 1, '4': 1, '5': 5, '10': 'x'},
-    const {'1': 'y', '3': 2, '4': 1, '5': 5, '10': 'y'},
+  '2': [
+    {'1': 'x', '3': 1, '4': 1, '5': 5, '10': 'x'},
+    {'1': 'y', '3': 2, '4': 1, '5': 5, '10': 'y'},
   ],
 };
 
-const NormalizedVertex$json = const {
+const NormalizedVertex$json = {
   '1': 'NormalizedVertex',
-  '2': const [
-    const {'1': 'x', '3': 1, '4': 1, '5': 2, '10': 'x'},
-    const {'1': 'y', '3': 2, '4': 1, '5': 2, '10': 'y'},
+  '2': [
+    {'1': 'x', '3': 1, '4': 1, '5': 2, '10': 'x'},
+    {'1': 'y', '3': 2, '4': 1, '5': 2, '10': 'y'},
   ],
 };
 
-const BoundingPoly$json = const {
+const BoundingPoly$json = {
   '1': 'BoundingPoly',
-  '2': const [
-    const {'1': 'vertices', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.Vertex', '10': 'vertices'},
+  '2': [
+    {
+      '1': 'vertices',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.Vertex',
+      '10': 'vertices'
+    },
   ],
 };
 
-const NormalizedBoundingPoly$json = const {
+const NormalizedBoundingPoly$json = {
   '1': 'NormalizedBoundingPoly',
-  '2': const [
-    const {'1': 'normalized_vertices', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.NormalizedVertex', '10': 'normalizedVertices'},
+  '2': [
+    {
+      '1': 'normalized_vertices',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.NormalizedVertex',
+      '10': 'normalizedVertices'
+    },
   ],
 };
 
-const ImageBoundingPolyAnnotation$json = const {
+const ImageBoundingPolyAnnotation$json = {
   '1': 'ImageBoundingPolyAnnotation',
-  '2': const [
-    const {'1': 'bounding_poly', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.BoundingPoly', '9': 0, '10': 'boundingPoly'},
-    const {'1': 'normalized_bounding_poly', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.NormalizedBoundingPoly', '9': 0, '10': 'normalizedBoundingPoly'},
-    const {'1': 'annotation_spec', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec', '10': 'annotationSpec'},
+  '2': [
+    {
+      '1': 'bounding_poly',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.BoundingPoly',
+      '9': 0,
+      '10': 'boundingPoly'
+    },
+    {
+      '1': 'normalized_bounding_poly',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.NormalizedBoundingPoly',
+      '9': 0,
+      '10': 'normalizedBoundingPoly'
+    },
+    {
+      '1': 'annotation_spec',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'annotationSpec'
+    },
   ],
-  '8': const [
-    const {'1': 'bounded_area'},
+  '8': [
+    {'1': 'bounded_area'},
   ],
 };
 
-const Polyline$json = const {
+const Polyline$json = {
   '1': 'Polyline',
-  '2': const [
-    const {'1': 'vertices', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.Vertex', '10': 'vertices'},
+  '2': [
+    {
+      '1': 'vertices',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.Vertex',
+      '10': 'vertices'
+    },
   ],
 };
 
-const NormalizedPolyline$json = const {
+const NormalizedPolyline$json = {
   '1': 'NormalizedPolyline',
-  '2': const [
-    const {'1': 'normalized_vertices', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.NormalizedVertex', '10': 'normalizedVertices'},
+  '2': [
+    {
+      '1': 'normalized_vertices',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.NormalizedVertex',
+      '10': 'normalizedVertices'
+    },
   ],
 };
 
-const ImagePolylineAnnotation$json = const {
+const ImagePolylineAnnotation$json = {
   '1': 'ImagePolylineAnnotation',
-  '2': const [
-    const {'1': 'polyline', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.Polyline', '9': 0, '10': 'polyline'},
-    const {'1': 'normalized_polyline', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.NormalizedPolyline', '9': 0, '10': 'normalizedPolyline'},
-    const {'1': 'annotation_spec', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec', '10': 'annotationSpec'},
+  '2': [
+    {
+      '1': 'polyline',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.Polyline',
+      '9': 0,
+      '10': 'polyline'
+    },
+    {
+      '1': 'normalized_polyline',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.NormalizedPolyline',
+      '9': 0,
+      '10': 'normalizedPolyline'
+    },
+    {
+      '1': 'annotation_spec',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'annotationSpec'
+    },
   ],
-  '8': const [
-    const {'1': 'poly'},
+  '8': [
+    {'1': 'poly'},
   ],
 };
 
-const ImageSegmentationAnnotation$json = const {
+const ImageSegmentationAnnotation$json = {
   '1': 'ImageSegmentationAnnotation',
-  '2': const [
-    const {'1': 'annotation_colors', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.ImageSegmentationAnnotation.AnnotationColorsEntry', '10': 'annotationColors'},
-    const {'1': 'mime_type', '3': 2, '4': 1, '5': 9, '10': 'mimeType'},
-    const {'1': 'image_bytes', '3': 3, '4': 1, '5': 12, '10': 'imageBytes'},
+  '2': [
+    {
+      '1': 'annotation_colors',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.datalabeling.v1beta1.ImageSegmentationAnnotation.AnnotationColorsEntry',
+      '10': 'annotationColors'
+    },
+    {'1': 'mime_type', '3': 2, '4': 1, '5': 9, '10': 'mimeType'},
+    {'1': 'image_bytes', '3': 3, '4': 1, '5': 12, '10': 'imageBytes'},
   ],
-  '3': const [ImageSegmentationAnnotation_AnnotationColorsEntry$json],
+  '3': [ImageSegmentationAnnotation_AnnotationColorsEntry$json],
 };
 
-const ImageSegmentationAnnotation_AnnotationColorsEntry$json = const {
+const ImageSegmentationAnnotation_AnnotationColorsEntry$json = {
   '1': 'AnnotationColorsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec', '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'value'
+    },
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const TextClassificationAnnotation$json = const {
+const TextClassificationAnnotation$json = {
   '1': 'TextClassificationAnnotation',
-  '2': const [
-    const {'1': 'annotation_spec', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec', '10': 'annotationSpec'},
+  '2': [
+    {
+      '1': 'annotation_spec',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'annotationSpec'
+    },
   ],
 };
 
-const TimeSegment$json = const {
+const TimeSegment$json = {
   '1': 'TimeSegment',
-  '2': const [
-    const {'1': 'start_time_offset', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'startTimeOffset'},
-    const {'1': 'end_time_offset', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'endTimeOffset'},
+  '2': [
+    {
+      '1': 'start_time_offset',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'startTimeOffset'
+    },
+    {
+      '1': 'end_time_offset',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'endTimeOffset'
+    },
   ],
 };
 
-const VideoClassificationAnnotation$json = const {
+const VideoClassificationAnnotation$json = {
   '1': 'VideoClassificationAnnotation',
-  '2': const [
-    const {'1': 'time_segment', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.TimeSegment', '10': 'timeSegment'},
-    const {'1': 'annotation_spec', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec', '10': 'annotationSpec'},
+  '2': [
+    {
+      '1': 'time_segment',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.TimeSegment',
+      '10': 'timeSegment'
+    },
+    {
+      '1': 'annotation_spec',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'annotationSpec'
+    },
   ],
 };
 
-const ObjectTrackingFrame$json = const {
+const ObjectTrackingFrame$json = {
   '1': 'ObjectTrackingFrame',
-  '2': const [
-    const {'1': 'bounding_poly', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.BoundingPoly', '9': 0, '10': 'boundingPoly'},
-    const {'1': 'normalized_bounding_poly', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.NormalizedBoundingPoly', '9': 0, '10': 'normalizedBoundingPoly'},
-    const {'1': 'time_offset', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'timeOffset'},
+  '2': [
+    {
+      '1': 'bounding_poly',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.BoundingPoly',
+      '9': 0,
+      '10': 'boundingPoly'
+    },
+    {
+      '1': 'normalized_bounding_poly',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.NormalizedBoundingPoly',
+      '9': 0,
+      '10': 'normalizedBoundingPoly'
+    },
+    {
+      '1': 'time_offset',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'timeOffset'
+    },
   ],
-  '8': const [
-    const {'1': 'bounded_area'},
+  '8': [
+    {'1': 'bounded_area'},
   ],
 };
 
-const VideoObjectTrackingAnnotation$json = const {
+const VideoObjectTrackingAnnotation$json = {
   '1': 'VideoObjectTrackingAnnotation',
-  '2': const [
-    const {'1': 'annotation_spec', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec', '10': 'annotationSpec'},
-    const {'1': 'time_segment', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.TimeSegment', '10': 'timeSegment'},
-    const {'1': 'object_tracking_frames', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.ObjectTrackingFrame', '10': 'objectTrackingFrames'},
+  '2': [
+    {
+      '1': 'annotation_spec',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'annotationSpec'
+    },
+    {
+      '1': 'time_segment',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.TimeSegment',
+      '10': 'timeSegment'
+    },
+    {
+      '1': 'object_tracking_frames',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.ObjectTrackingFrame',
+      '10': 'objectTrackingFrames'
+    },
   ],
 };
 
-const VideoEventAnnotation$json = const {
+const VideoEventAnnotation$json = {
   '1': 'VideoEventAnnotation',
-  '2': const [
-    const {'1': 'annotation_spec', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec', '10': 'annotationSpec'},
-    const {'1': 'time_segment', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.TimeSegment', '10': 'timeSegment'},
+  '2': [
+    {
+      '1': 'annotation_spec',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'annotationSpec'
+    },
+    {
+      '1': 'time_segment',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.TimeSegment',
+      '10': 'timeSegment'
+    },
   ],
 };
 
-const AudioRecognitionAnnotation$json = const {
+const AudioRecognitionAnnotation$json = {
   '1': 'AudioRecognitionAnnotation',
-  '2': const [
-    const {'1': 'transcript', '3': 1, '4': 1, '5': 9, '10': 'transcript'},
-    const {'1': 'start_offset', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'startOffset'},
-    const {'1': 'end_offset', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'endOffset'},
+  '2': [
+    {'1': 'transcript', '3': 1, '4': 1, '5': 9, '10': 'transcript'},
+    {
+      '1': 'start_offset',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'startOffset'
+    },
+    {
+      '1': 'end_offset',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'endOffset'
+    },
   ],
 };
 
-const AnnotationMetadata$json = const {
+const AnnotationMetadata$json = {
   '1': 'AnnotationMetadata',
-  '2': const [
-    const {'1': 'operator_metadata', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.datalabeling.v1beta1.OperatorMetadata', '10': 'operatorMetadata'},
+  '2': [
+    {
+      '1': 'operator_metadata',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.OperatorMetadata',
+      '10': 'operatorMetadata'
+    },
   ],
 };
 
-const OperatorMetadata$json = const {
+const OperatorMetadata$json = {
   '1': 'OperatorMetadata',
-  '2': const [
-    const {'1': 'score', '3': 1, '4': 1, '5': 2, '10': 'score'},
-    const {'1': 'total_votes', '3': 2, '4': 1, '5': 5, '10': 'totalVotes'},
-    const {'1': 'label_votes', '3': 3, '4': 1, '5': 5, '10': 'labelVotes'},
-    const {'1': 'comments', '3': 4, '4': 3, '5': 9, '10': 'comments'},
+  '2': [
+    {'1': 'score', '3': 1, '4': 1, '5': 2, '10': 'score'},
+    {'1': 'total_votes', '3': 2, '4': 1, '5': 5, '10': 'totalVotes'},
+    {'1': 'label_votes', '3': 3, '4': 1, '5': 5, '10': 'labelVotes'},
+    {'1': 'comments', '3': 4, '4': 3, '5': 9, '10': 'comments'},
   ],
 };
-

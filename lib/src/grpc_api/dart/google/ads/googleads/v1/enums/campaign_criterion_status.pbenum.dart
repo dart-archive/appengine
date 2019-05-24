@@ -8,14 +8,21 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class CampaignCriterionStatusEnum_CampaignCriterionStatus extends $pb.ProtobufEnum {
-  static const CampaignCriterionStatusEnum_CampaignCriterionStatus UNSPECIFIED = CampaignCriterionStatusEnum_CampaignCriterionStatus._(0, 'UNSPECIFIED');
-  static const CampaignCriterionStatusEnum_CampaignCriterionStatus UNKNOWN = CampaignCriterionStatusEnum_CampaignCriterionStatus._(1, 'UNKNOWN');
-  static const CampaignCriterionStatusEnum_CampaignCriterionStatus ENABLED = CampaignCriterionStatusEnum_CampaignCriterionStatus._(2, 'ENABLED');
-  static const CampaignCriterionStatusEnum_CampaignCriterionStatus PAUSED = CampaignCriterionStatusEnum_CampaignCriterionStatus._(3, 'PAUSED');
-  static const CampaignCriterionStatusEnum_CampaignCriterionStatus REMOVED = CampaignCriterionStatusEnum_CampaignCriterionStatus._(4, 'REMOVED');
+class CampaignCriterionStatusEnum_CampaignCriterionStatus
+    extends $pb.ProtobufEnum {
+  static const CampaignCriterionStatusEnum_CampaignCriterionStatus UNSPECIFIED =
+      CampaignCriterionStatusEnum_CampaignCriterionStatus._(0, 'UNSPECIFIED');
+  static const CampaignCriterionStatusEnum_CampaignCriterionStatus UNKNOWN =
+      CampaignCriterionStatusEnum_CampaignCriterionStatus._(1, 'UNKNOWN');
+  static const CampaignCriterionStatusEnum_CampaignCriterionStatus ENABLED =
+      CampaignCriterionStatusEnum_CampaignCriterionStatus._(2, 'ENABLED');
+  static const CampaignCriterionStatusEnum_CampaignCriterionStatus PAUSED =
+      CampaignCriterionStatusEnum_CampaignCriterionStatus._(3, 'PAUSED');
+  static const CampaignCriterionStatusEnum_CampaignCriterionStatus REMOVED =
+      CampaignCriterionStatusEnum_CampaignCriterionStatus._(4, 'REMOVED');
 
-  static const $core.List<CampaignCriterionStatusEnum_CampaignCriterionStatus> values = <CampaignCriterionStatusEnum_CampaignCriterionStatus> [
+  static const $core.List<CampaignCriterionStatusEnum_CampaignCriterionStatus>
+      values = <CampaignCriterionStatusEnum_CampaignCriterionStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
@@ -23,9 +30,14 @@ class CampaignCriterionStatusEnum_CampaignCriterionStatus extends $pb.ProtobufEn
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, CampaignCriterionStatusEnum_CampaignCriterionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CampaignCriterionStatusEnum_CampaignCriterionStatus valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, CampaignCriterionStatusEnum_CampaignCriterionStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CampaignCriterionStatusEnum_CampaignCriterionStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const CampaignCriterionStatusEnum_CampaignCriterionStatus._($core.int v, $core.String n) : super(v, n);
+  const CampaignCriterionStatusEnum_CampaignCriterionStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

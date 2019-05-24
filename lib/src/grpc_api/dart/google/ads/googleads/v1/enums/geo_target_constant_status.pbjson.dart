@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const GeoTargetConstantStatusEnum$json = const {
+const GeoTargetConstantStatusEnum$json = {
   '1': 'GeoTargetConstantStatusEnum',
-  '4': const [GeoTargetConstantStatusEnum_GeoTargetConstantStatus$json],
+  '4': [GeoTargetConstantStatusEnum_GeoTargetConstantStatus$json],
 };
 
-const GeoTargetConstantStatusEnum_GeoTargetConstantStatus$json = const {
+const GeoTargetConstantStatusEnum_GeoTargetConstantStatus$json = {
   '1': 'GeoTargetConstantStatus',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'ENABLED', '2': 2},
-    const {'1': 'REMOVAL_PLANNED', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'ENABLED', '2': 2},
+    {'1': 'REMOVAL_PLANNED', '2': 3},
   ],
 };
-

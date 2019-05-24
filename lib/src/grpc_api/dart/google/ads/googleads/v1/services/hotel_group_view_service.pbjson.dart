@@ -6,22 +6,27 @@
 
 import '../resources/hotel_group_view.pbjson.dart' as $0;
 
-const GetHotelGroupViewRequest$json = const {
+const GetHotelGroupViewRequest$json = {
   '1': 'GetHotelGroupViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const HotelGroupViewServiceBase$json = const {
+const HotelGroupViewServiceBase$json = {
   '1': 'HotelGroupViewService',
-  '2': const [
-    const {'1': 'GetHotelGroupView', '2': '.google.ads.googleads.v1.services.GetHotelGroupViewRequest', '3': '.google.ads.googleads.v1.resources.HotelGroupView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetHotelGroupView',
+      '2': '.google.ads.googleads.v1.services.GetHotelGroupViewRequest',
+      '3': '.google.ads.googleads.v1.resources.HotelGroupView',
+      '4': {}
+    },
   ],
 };
 
-const HotelGroupViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetHotelGroupViewRequest': GetHotelGroupViewRequest$json,
+const HotelGroupViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetHotelGroupViewRequest':
+      GetHotelGroupViewRequest$json,
   '.google.ads.googleads.v1.resources.HotelGroupView': $0.HotelGroupView$json,
 };
-

@@ -4,11 +4,25 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const FinalAppUrl$json = const {
+const FinalAppUrl$json = {
   '1': 'FinalAppUrl',
-  '2': const [
-    const {'1': 'os_type', '3': 1, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType', '10': 'osType'},
-    const {'1': 'url', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'url'},
+  '2': [
+    {
+      '1': 'os_type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v1.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType',
+      '10': 'osType'
+    },
+    {
+      '1': 'url',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'url'
+    },
   ],
 };
-

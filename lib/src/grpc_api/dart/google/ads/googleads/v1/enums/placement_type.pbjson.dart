@@ -4,21 +4,20 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const PlacementTypeEnum$json = const {
+const PlacementTypeEnum$json = {
   '1': 'PlacementTypeEnum',
-  '4': const [PlacementTypeEnum_PlacementType$json],
+  '4': [PlacementTypeEnum_PlacementType$json],
 };
 
-const PlacementTypeEnum_PlacementType$json = const {
+const PlacementTypeEnum_PlacementType$json = {
   '1': 'PlacementType',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'WEBSITE', '2': 2},
-    const {'1': 'MOBILE_APP_CATEGORY', '2': 3},
-    const {'1': 'MOBILE_APPLICATION', '2': 4},
-    const {'1': 'YOUTUBE_VIDEO', '2': 5},
-    const {'1': 'YOUTUBE_CHANNEL', '2': 6},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'WEBSITE', '2': 2},
+    {'1': 'MOBILE_APP_CATEGORY', '2': 3},
+    {'1': 'MOBILE_APPLICATION', '2': 4},
+    {'1': 'YOUTUBE_VIDEO', '2': 5},
+    {'1': 'YOUTUBE_CHANNEL', '2': 6},
   ],
 };
-

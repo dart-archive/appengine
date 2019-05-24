@@ -4,38 +4,198 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const AccountBudgetProposal$json = const {
+const AccountBudgetProposal$json = {
   '1': 'AccountBudgetProposal',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
-    const {'1': 'id', '3': 14, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '10': 'id'},
-    const {'1': 'billing_setup', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'billingSetup'},
-    const {'1': 'account_budget', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'accountBudget'},
-    const {'1': 'proposal_type', '3': 4, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType', '10': 'proposalType'},
-    const {'1': 'status', '3': 15, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus', '10': 'status'},
-    const {'1': 'proposed_name', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'proposedName'},
-    const {'1': 'approved_start_date_time', '3': 20, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'approvedStartDateTime'},
-    const {'1': 'proposed_purchase_order_number', '3': 12, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'proposedPurchaseOrderNumber'},
-    const {'1': 'proposed_notes', '3': 13, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'proposedNotes'},
-    const {'1': 'creation_date_time', '3': 16, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'creationDateTime'},
-    const {'1': 'approval_date_time', '3': 17, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'approvalDateTime'},
-    const {'1': 'proposed_start_date_time', '3': 18, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'proposedStartDateTime'},
-    const {'1': 'proposed_start_time_type', '3': 7, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.TimeTypeEnum.TimeType', '9': 0, '10': 'proposedStartTimeType'},
-    const {'1': 'proposed_end_date_time', '3': 19, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 1, '10': 'proposedEndDateTime'},
-    const {'1': 'proposed_end_time_type', '3': 9, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.TimeTypeEnum.TimeType', '9': 1, '10': 'proposedEndTimeType'},
-    const {'1': 'approved_end_date_time', '3': 21, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 2, '10': 'approvedEndDateTime'},
-    const {'1': 'approved_end_time_type', '3': 22, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.TimeTypeEnum.TimeType', '9': 2, '10': 'approvedEndTimeType'},
-    const {'1': 'proposed_spending_limit_micros', '3': 10, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '9': 3, '10': 'proposedSpendingLimitMicros'},
-    const {'1': 'proposed_spending_limit_type', '3': 11, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.SpendingLimitTypeEnum.SpendingLimitType', '9': 3, '10': 'proposedSpendingLimitType'},
-    const {'1': 'approved_spending_limit_micros', '3': 23, '4': 1, '5': 11, '6': '.google.protobuf.Int64Value', '9': 4, '10': 'approvedSpendingLimitMicros'},
-    const {'1': 'approved_spending_limit_type', '3': 24, '4': 1, '5': 14, '6': '.google.ads.googleads.v1.enums.SpendingLimitTypeEnum.SpendingLimitType', '9': 4, '10': 'approvedSpendingLimitType'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {
+      '1': 'id',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'id'
+    },
+    {
+      '1': 'billing_setup',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'billingSetup'
+    },
+    {
+      '1': 'account_budget',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'accountBudget'
+    },
+    {
+      '1': 'proposal_type',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v1.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType',
+      '10': 'proposalType'
+    },
+    {
+      '1': 'status',
+      '3': 15,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v1.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus',
+      '10': 'status'
+    },
+    {
+      '1': 'proposed_name',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'proposedName'
+    },
+    {
+      '1': 'approved_start_date_time',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'approvedStartDateTime'
+    },
+    {
+      '1': 'proposed_purchase_order_number',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'proposedPurchaseOrderNumber'
+    },
+    {
+      '1': 'proposed_notes',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'proposedNotes'
+    },
+    {
+      '1': 'creation_date_time',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'creationDateTime'
+    },
+    {
+      '1': 'approval_date_time',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'approvalDateTime'
+    },
+    {
+      '1': 'proposed_start_date_time',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'proposedStartDateTime'
+    },
+    {
+      '1': 'proposed_start_time_type',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.google.ads.googleads.v1.enums.TimeTypeEnum.TimeType',
+      '9': 0,
+      '10': 'proposedStartTimeType'
+    },
+    {
+      '1': 'proposed_end_date_time',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 1,
+      '10': 'proposedEndDateTime'
+    },
+    {
+      '1': 'proposed_end_time_type',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.google.ads.googleads.v1.enums.TimeTypeEnum.TimeType',
+      '9': 1,
+      '10': 'proposedEndTimeType'
+    },
+    {
+      '1': 'approved_end_date_time',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 2,
+      '10': 'approvedEndDateTime'
+    },
+    {
+      '1': 'approved_end_time_type',
+      '3': 22,
+      '4': 1,
+      '5': 14,
+      '6': '.google.ads.googleads.v1.enums.TimeTypeEnum.TimeType',
+      '9': 2,
+      '10': 'approvedEndTimeType'
+    },
+    {
+      '1': 'proposed_spending_limit_micros',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '9': 3,
+      '10': 'proposedSpendingLimitMicros'
+    },
+    {
+      '1': 'proposed_spending_limit_type',
+      '3': 11,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v1.enums.SpendingLimitTypeEnum.SpendingLimitType',
+      '9': 3,
+      '10': 'proposedSpendingLimitType'
+    },
+    {
+      '1': 'approved_spending_limit_micros',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '9': 4,
+      '10': 'approvedSpendingLimitMicros'
+    },
+    {
+      '1': 'approved_spending_limit_type',
+      '3': 24,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v1.enums.SpendingLimitTypeEnum.SpendingLimitType',
+      '9': 4,
+      '10': 'approvedSpendingLimitType'
+    },
   ],
-  '8': const [
-    const {'1': 'proposed_start_time'},
-    const {'1': 'proposed_end_time'},
-    const {'1': 'approved_end_time'},
-    const {'1': 'proposed_spending_limit'},
-    const {'1': 'approved_spending_limit'},
+  '8': [
+    {'1': 'proposed_start_time'},
+    {'1': 'proposed_end_time'},
+    {'1': 'approved_end_time'},
+    {'1': 'proposed_spending_limit'},
+    {'1': 'approved_spending_limit'},
   ],
 };
-

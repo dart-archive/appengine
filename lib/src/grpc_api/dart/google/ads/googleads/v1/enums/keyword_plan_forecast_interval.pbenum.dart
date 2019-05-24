@@ -8,14 +8,30 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval extends $pb.ProtobufEnum {
-  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval UNSPECIFIED = KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(0, 'UNSPECIFIED');
-  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval UNKNOWN = KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(1, 'UNKNOWN');
-  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval NEXT_WEEK = KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(3, 'NEXT_WEEK');
-  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval NEXT_MONTH = KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(4, 'NEXT_MONTH');
-  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval NEXT_QUARTER = KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(5, 'NEXT_QUARTER');
+class KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval
+    extends $pb.ProtobufEnum {
+  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval
+      UNSPECIFIED =
+      KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(
+          0, 'UNSPECIFIED');
+  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval
+      UNKNOWN = KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(
+          1, 'UNKNOWN');
+  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval
+      NEXT_WEEK = KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(
+          3, 'NEXT_WEEK');
+  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval
+      NEXT_MONTH =
+      KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(
+          4, 'NEXT_MONTH');
+  static const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval
+      NEXT_QUARTER =
+      KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(
+          5, 'NEXT_QUARTER');
 
-  static const $core.List<KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval> values = <KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval> [
+  static const $core
+          .List<KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval>
+      values = <KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval>[
     UNSPECIFIED,
     UNKNOWN,
     NEXT_WEEK,
@@ -23,9 +39,14 @@ class KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval extends $pb.Pr
     NEXT_QUARTER,
   ];
 
-  static final $core.Map<$core.int, KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._($core.int v, $core.String n) : super(v, n);
+  const KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

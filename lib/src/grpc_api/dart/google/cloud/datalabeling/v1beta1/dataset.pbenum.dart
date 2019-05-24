@@ -9,13 +9,14 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class DataType extends $pb.ProtobufEnum {
-  static const DataType DATA_TYPE_UNSPECIFIED = DataType._(0, 'DATA_TYPE_UNSPECIFIED');
+  static const DataType DATA_TYPE_UNSPECIFIED =
+      DataType._(0, 'DATA_TYPE_UNSPECIFIED');
   static const DataType IMAGE = DataType._(1, 'IMAGE');
   static const DataType VIDEO = DataType._(2, 'VIDEO');
   static const DataType TEXT = DataType._(4, 'TEXT');
   static const DataType AUDIO = DataType._(5, 'AUDIO');
 
-  static const $core.List<DataType> values = <DataType> [
+  static const $core.List<DataType> values = <DataType>[
     DATA_TYPE_UNSPECIFIED,
     IMAGE,
     VIDEO,
@@ -23,9 +24,9 @@ class DataType extends $pb.ProtobufEnum {
     AUDIO,
   ];
 
-  static final $core.Map<$core.int, DataType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, DataType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static DataType valueOf($core.int value) => _byValue[value];
 
   const DataType._($core.int v, $core.String n) : super(v, n);
 }
-

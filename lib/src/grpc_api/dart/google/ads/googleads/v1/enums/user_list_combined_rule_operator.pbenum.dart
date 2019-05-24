@@ -8,22 +8,39 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator extends $pb.ProtobufEnum {
-  static const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator UNSPECIFIED = UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(0, 'UNSPECIFIED');
-  static const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator UNKNOWN = UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(1, 'UNKNOWN');
-  static const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator AND = UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(2, 'AND');
-  static const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator AND_NOT = UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(3, 'AND_NOT');
+class UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator
+    extends $pb.ProtobufEnum {
+  static const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator
+      UNSPECIFIED =
+      UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(
+          0, 'UNSPECIFIED');
+  static const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator
+      UNKNOWN = UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(
+          1, 'UNKNOWN');
+  static const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator
+      AND =
+      UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(2, 'AND');
+  static const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator
+      AND_NOT = UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(
+          3, 'AND_NOT');
 
-  static const $core.List<UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator> values = <UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator> [
+  static const $core
+          .List<UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator>
+      values = <UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator>[
     UNSPECIFIED,
     UNKNOWN,
     AND,
     AND_NOT,
   ];
 
-  static final $core.Map<$core.int, UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._($core.int v, $core.String n) : super(v, n);
+  const UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

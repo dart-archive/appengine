@@ -9,13 +9,18 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Property_PropertyType extends $pb.ProtobufEnum {
-  static const Property_PropertyType UNSPECIFIED = Property_PropertyType._(0, 'UNSPECIFIED');
-  static const Property_PropertyType INT64 = Property_PropertyType._(1, 'INT64');
+  static const Property_PropertyType UNSPECIFIED =
+      Property_PropertyType._(0, 'UNSPECIFIED');
+  static const Property_PropertyType INT64 =
+      Property_PropertyType._(1, 'INT64');
   static const Property_PropertyType BOOL = Property_PropertyType._(2, 'BOOL');
-  static const Property_PropertyType STRING = Property_PropertyType._(3, 'STRING');
-  static const Property_PropertyType DOUBLE = Property_PropertyType._(4, 'DOUBLE');
+  static const Property_PropertyType STRING =
+      Property_PropertyType._(3, 'STRING');
+  static const Property_PropertyType DOUBLE =
+      Property_PropertyType._(4, 'DOUBLE');
 
-  static const $core.List<Property_PropertyType> values = <Property_PropertyType> [
+  static const $core.List<Property_PropertyType> values =
+      <Property_PropertyType>[
     UNSPECIFIED,
     INT64,
     BOOL,
@@ -23,9 +28,9 @@ class Property_PropertyType extends $pb.ProtobufEnum {
     DOUBLE,
   ];
 
-  static final $core.Map<$core.int, Property_PropertyType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Property_PropertyType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Property_PropertyType valueOf($core.int value) => _byValue[value];
 
   const Property_PropertyType._($core.int v, $core.String n) : super(v, n);
 }
-

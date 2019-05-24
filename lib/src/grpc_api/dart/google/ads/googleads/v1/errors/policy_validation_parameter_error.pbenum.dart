@@ -8,14 +8,33 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class PolicyValidationParameterErrorEnum_PolicyValidationParameterError extends $pb.ProtobufEnum {
-  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError UNSPECIFIED = PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(0, 'UNSPECIFIED');
-  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError UNKNOWN = PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(1, 'UNKNOWN');
-  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS = PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(2, 'UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS');
-  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS = PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(3, 'UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS');
-  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS = PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(4, 'CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS');
+class PolicyValidationParameterErrorEnum_PolicyValidationParameterError
+    extends $pb.ProtobufEnum {
+  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError
+      UNSPECIFIED =
+      PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(
+          0, 'UNSPECIFIED');
+  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError
+      UNKNOWN =
+      PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(
+          1, 'UNKNOWN');
+  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError
+      UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS =
+      PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(
+          2, 'UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS');
+  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError
+      UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS =
+      PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(
+          3, 'UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS');
+  static const PolicyValidationParameterErrorEnum_PolicyValidationParameterError
+      CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS =
+      PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(4,
+          'CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS');
 
-  static const $core.List<PolicyValidationParameterErrorEnum_PolicyValidationParameterError> values = <PolicyValidationParameterErrorEnum_PolicyValidationParameterError> [
+  static const $core.List<
+          PolicyValidationParameterErrorEnum_PolicyValidationParameterError>
+      values =
+      <PolicyValidationParameterErrorEnum_PolicyValidationParameterError>[
     UNSPECIFIED,
     UNKNOWN,
     UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS,
@@ -23,9 +42,13 @@ class PolicyValidationParameterErrorEnum_PolicyValidationParameterError extends 
     CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS,
   ];
 
-  static final $core.Map<$core.int, PolicyValidationParameterErrorEnum_PolicyValidationParameterError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PolicyValidationParameterErrorEnum_PolicyValidationParameterError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          PolicyValidationParameterErrorEnum_PolicyValidationParameterError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PolicyValidationParameterErrorEnum_PolicyValidationParameterError
+      valueOf($core.int value) => _byValue[value];
 
-  const PolicyValidationParameterErrorEnum_PolicyValidationParameterError._($core.int v, $core.String n) : super(v, n);
+  const PolicyValidationParameterErrorEnum_PolicyValidationParameterError._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

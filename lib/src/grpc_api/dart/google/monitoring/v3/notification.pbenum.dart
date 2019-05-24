@@ -9,19 +9,27 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class NotificationChannel_VerificationStatus extends $pb.ProtobufEnum {
-  static const NotificationChannel_VerificationStatus VERIFICATION_STATUS_UNSPECIFIED = NotificationChannel_VerificationStatus._(0, 'VERIFICATION_STATUS_UNSPECIFIED');
-  static const NotificationChannel_VerificationStatus UNVERIFIED = NotificationChannel_VerificationStatus._(1, 'UNVERIFIED');
-  static const NotificationChannel_VerificationStatus VERIFIED = NotificationChannel_VerificationStatus._(2, 'VERIFIED');
+  static const NotificationChannel_VerificationStatus
+      VERIFICATION_STATUS_UNSPECIFIED =
+      NotificationChannel_VerificationStatus._(
+          0, 'VERIFICATION_STATUS_UNSPECIFIED');
+  static const NotificationChannel_VerificationStatus UNVERIFIED =
+      NotificationChannel_VerificationStatus._(1, 'UNVERIFIED');
+  static const NotificationChannel_VerificationStatus VERIFIED =
+      NotificationChannel_VerificationStatus._(2, 'VERIFIED');
 
-  static const $core.List<NotificationChannel_VerificationStatus> values = <NotificationChannel_VerificationStatus> [
+  static const $core.List<NotificationChannel_VerificationStatus> values =
+      <NotificationChannel_VerificationStatus>[
     VERIFICATION_STATUS_UNSPECIFIED,
     UNVERIFIED,
     VERIFIED,
   ];
 
-  static final $core.Map<$core.int, NotificationChannel_VerificationStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static NotificationChannel_VerificationStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, NotificationChannel_VerificationStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static NotificationChannel_VerificationStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const NotificationChannel_VerificationStatus._($core.int v, $core.String n) : super(v, n);
+  const NotificationChannel_VerificationStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-

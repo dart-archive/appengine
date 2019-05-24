@@ -9,19 +9,25 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class FeedAttributeOperation_Operator extends $pb.ProtobufEnum {
-  static const FeedAttributeOperation_Operator UNSPECIFIED = FeedAttributeOperation_Operator._(0, 'UNSPECIFIED');
-  static const FeedAttributeOperation_Operator UNKNOWN = FeedAttributeOperation_Operator._(1, 'UNKNOWN');
-  static const FeedAttributeOperation_Operator ADD = FeedAttributeOperation_Operator._(2, 'ADD');
+  static const FeedAttributeOperation_Operator UNSPECIFIED =
+      FeedAttributeOperation_Operator._(0, 'UNSPECIFIED');
+  static const FeedAttributeOperation_Operator UNKNOWN =
+      FeedAttributeOperation_Operator._(1, 'UNKNOWN');
+  static const FeedAttributeOperation_Operator ADD =
+      FeedAttributeOperation_Operator._(2, 'ADD');
 
-  static const $core.List<FeedAttributeOperation_Operator> values = <FeedAttributeOperation_Operator> [
+  static const $core.List<FeedAttributeOperation_Operator> values =
+      <FeedAttributeOperation_Operator>[
     UNSPECIFIED,
     UNKNOWN,
     ADD,
   ];
 
-  static final $core.Map<$core.int, FeedAttributeOperation_Operator> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static FeedAttributeOperation_Operator valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, FeedAttributeOperation_Operator> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static FeedAttributeOperation_Operator valueOf($core.int value) =>
+      _byValue[value];
 
-  const FeedAttributeOperation_Operator._($core.int v, $core.String n) : super(v, n);
+  const FeedAttributeOperation_Operator._($core.int v, $core.String n)
+      : super(v, n);
 }
-

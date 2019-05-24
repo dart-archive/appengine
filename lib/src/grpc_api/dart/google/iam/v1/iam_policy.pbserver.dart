@@ -16,29 +16,41 @@ import 'iam_policy.pbjson.dart';
 export 'iam_policy.pb.dart';
 
 abstract class IAMPolicyServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.Policy> setIamPolicy($pb.ServerContext ctx, SetIamPolicyRequest request);
-  $async.Future<$0.Policy> getIamPolicy($pb.ServerContext ctx, GetIamPolicyRequest request);
-  $async.Future<TestIamPermissionsResponse> testIamPermissions($pb.ServerContext ctx, TestIamPermissionsRequest request);
+  $async.Future<$0.Policy> setIamPolicy(
+      $pb.ServerContext ctx, SetIamPolicyRequest request);
+  $async.Future<$0.Policy> getIamPolicy(
+      $pb.ServerContext ctx, GetIamPolicyRequest request);
+  $async.Future<TestIamPermissionsResponse> testIamPermissions(
+      $pb.ServerContext ctx, TestIamPermissionsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'SetIamPolicy': return SetIamPolicyRequest();
-      case 'GetIamPolicy': return GetIamPolicyRequest();
-      case 'TestIamPermissions': return TestIamPermissionsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'SetIamPolicy':
+        return SetIamPolicyRequest();
+      case 'GetIamPolicy':
+        return GetIamPolicyRequest();
+      case 'TestIamPermissions':
+        return TestIamPermissionsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'SetIamPolicy': return this.setIamPolicy(ctx, request);
-      case 'GetIamPolicy': return this.getIamPolicy(ctx, request);
-      case 'TestIamPermissions': return this.testIamPermissions(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'SetIamPolicy':
+        return this.setIamPolicy(ctx, request);
+      case 'GetIamPolicy':
+        return this.getIamPolicy(ctx, request);
+      case 'TestIamPermissions':
+        return this.testIamPermissions(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => IAMPolicyServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => IAMPolicyServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => IAMPolicyServiceBase$messageJson;
 }
-

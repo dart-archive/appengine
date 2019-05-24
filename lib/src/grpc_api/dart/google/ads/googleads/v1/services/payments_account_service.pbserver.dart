@@ -15,23 +15,30 @@ import 'payments_account_service.pbjson.dart';
 export 'payments_account_service.pb.dart';
 
 abstract class PaymentsAccountServiceBase extends $pb.GeneratedService {
-  $async.Future<ListPaymentsAccountsResponse> listPaymentsAccounts($pb.ServerContext ctx, ListPaymentsAccountsRequest request);
+  $async.Future<ListPaymentsAccountsResponse> listPaymentsAccounts(
+      $pb.ServerContext ctx, ListPaymentsAccountsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'ListPaymentsAccounts': return ListPaymentsAccountsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ListPaymentsAccounts':
+        return ListPaymentsAccountsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'ListPaymentsAccounts': return this.listPaymentsAccounts(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ListPaymentsAccounts':
+        return this.listPaymentsAccounts(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => PaymentsAccountServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => PaymentsAccountServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      PaymentsAccountServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => PaymentsAccountServiceBase$messageJson;
 }
-

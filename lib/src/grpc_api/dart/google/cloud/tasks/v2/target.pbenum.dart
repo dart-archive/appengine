@@ -9,7 +9,8 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class HttpMethod extends $pb.ProtobufEnum {
-  static const HttpMethod HTTP_METHOD_UNSPECIFIED = HttpMethod._(0, 'HTTP_METHOD_UNSPECIFIED');
+  static const HttpMethod HTTP_METHOD_UNSPECIFIED =
+      HttpMethod._(0, 'HTTP_METHOD_UNSPECIFIED');
   static const HttpMethod POST = HttpMethod._(1, 'POST');
   static const HttpMethod GET = HttpMethod._(2, 'GET');
   static const HttpMethod HEAD = HttpMethod._(3, 'HEAD');
@@ -18,7 +19,7 @@ class HttpMethod extends $pb.ProtobufEnum {
   static const HttpMethod PATCH = HttpMethod._(6, 'PATCH');
   static const HttpMethod OPTIONS = HttpMethod._(7, 'OPTIONS');
 
-  static const $core.List<HttpMethod> values = <HttpMethod> [
+  static const $core.List<HttpMethod> values = <HttpMethod>[
     HTTP_METHOD_UNSPECIFIED,
     POST,
     GET,
@@ -29,9 +30,9 @@ class HttpMethod extends $pb.ProtobufEnum {
     OPTIONS,
   ];
 
-  static final $core.Map<$core.int, HttpMethod> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, HttpMethod> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static HttpMethod valueOf($core.int value) => _byValue[value];
 
   const HttpMethod._($core.int v, $core.String n) : super(v, n);
 }
-

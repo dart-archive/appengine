@@ -9,17 +9,22 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PublishLifecycleEventRequest_ServiceLevel extends $pb.ProtobufEnum {
-  static const PublishLifecycleEventRequest_ServiceLevel NONINTERACTIVE = PublishLifecycleEventRequest_ServiceLevel._(0, 'NONINTERACTIVE');
-  static const PublishLifecycleEventRequest_ServiceLevel INTERACTIVE = PublishLifecycleEventRequest_ServiceLevel._(1, 'INTERACTIVE');
+  static const PublishLifecycleEventRequest_ServiceLevel NONINTERACTIVE =
+      PublishLifecycleEventRequest_ServiceLevel._(0, 'NONINTERACTIVE');
+  static const PublishLifecycleEventRequest_ServiceLevel INTERACTIVE =
+      PublishLifecycleEventRequest_ServiceLevel._(1, 'INTERACTIVE');
 
-  static const $core.List<PublishLifecycleEventRequest_ServiceLevel> values = <PublishLifecycleEventRequest_ServiceLevel> [
+  static const $core.List<PublishLifecycleEventRequest_ServiceLevel> values =
+      <PublishLifecycleEventRequest_ServiceLevel>[
     NONINTERACTIVE,
     INTERACTIVE,
   ];
 
-  static final $core.Map<$core.int, PublishLifecycleEventRequest_ServiceLevel> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PublishLifecycleEventRequest_ServiceLevel valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, PublishLifecycleEventRequest_ServiceLevel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PublishLifecycleEventRequest_ServiceLevel valueOf($core.int value) =>
+      _byValue[value];
 
-  const PublishLifecycleEventRequest_ServiceLevel._($core.int v, $core.String n) : super(v, n);
+  const PublishLifecycleEventRequest_ServiceLevel._($core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -15,29 +15,42 @@ import 'controller.pbjson.dart';
 export 'controller.pb.dart';
 
 abstract class Controller2ServiceBase extends $pb.GeneratedService {
-  $async.Future<RegisterDebuggeeResponse> registerDebuggee($pb.ServerContext ctx, RegisterDebuggeeRequest request);
-  $async.Future<ListActiveBreakpointsResponse> listActiveBreakpoints($pb.ServerContext ctx, ListActiveBreakpointsRequest request);
-  $async.Future<UpdateActiveBreakpointResponse> updateActiveBreakpoint($pb.ServerContext ctx, UpdateActiveBreakpointRequest request);
+  $async.Future<RegisterDebuggeeResponse> registerDebuggee(
+      $pb.ServerContext ctx, RegisterDebuggeeRequest request);
+  $async.Future<ListActiveBreakpointsResponse> listActiveBreakpoints(
+      $pb.ServerContext ctx, ListActiveBreakpointsRequest request);
+  $async.Future<UpdateActiveBreakpointResponse> updateActiveBreakpoint(
+      $pb.ServerContext ctx, UpdateActiveBreakpointRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'RegisterDebuggee': return RegisterDebuggeeRequest();
-      case 'ListActiveBreakpoints': return ListActiveBreakpointsRequest();
-      case 'UpdateActiveBreakpoint': return UpdateActiveBreakpointRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'RegisterDebuggee':
+        return RegisterDebuggeeRequest();
+      case 'ListActiveBreakpoints':
+        return ListActiveBreakpointsRequest();
+      case 'UpdateActiveBreakpoint':
+        return UpdateActiveBreakpointRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'RegisterDebuggee': return this.registerDebuggee(ctx, request);
-      case 'ListActiveBreakpoints': return this.listActiveBreakpoints(ctx, request);
-      case 'UpdateActiveBreakpoint': return this.updateActiveBreakpoint(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'RegisterDebuggee':
+        return this.registerDebuggee(ctx, request);
+      case 'ListActiveBreakpoints':
+        return this.listActiveBreakpoints(ctx, request);
+      case 'UpdateActiveBreakpoint':
+        return this.updateActiveBreakpoint(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => Controller2ServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => Controller2ServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      Controller2ServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => Controller2ServiceBase$messageJson;
 }
-

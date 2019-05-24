@@ -9,7 +9,8 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class NoteKind extends $pb.ProtobufEnum {
-  static const NoteKind NOTE_KIND_UNSPECIFIED = NoteKind._(0, 'NOTE_KIND_UNSPECIFIED');
+  static const NoteKind NOTE_KIND_UNSPECIFIED =
+      NoteKind._(0, 'NOTE_KIND_UNSPECIFIED');
   static const NoteKind VULNERABILITY = NoteKind._(1, 'VULNERABILITY');
   static const NoteKind BUILD = NoteKind._(2, 'BUILD');
   static const NoteKind IMAGE = NoteKind._(3, 'IMAGE');
@@ -18,7 +19,7 @@ class NoteKind extends $pb.ProtobufEnum {
   static const NoteKind DISCOVERY = NoteKind._(6, 'DISCOVERY');
   static const NoteKind ATTESTATION = NoteKind._(7, 'ATTESTATION');
 
-  static const $core.List<NoteKind> values = <NoteKind> [
+  static const $core.List<NoteKind> values = <NoteKind>[
     NOTE_KIND_UNSPECIFIED,
     VULNERABILITY,
     BUILD,
@@ -29,9 +30,9 @@ class NoteKind extends $pb.ProtobufEnum {
     ATTESTATION,
   ];
 
-  static final $core.Map<$core.int, NoteKind> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, NoteKind> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static NoteKind valueOf($core.int value) => _byValue[value];
 
   const NoteKind._($core.int v, $core.String n) : super(v, n);
 }
-

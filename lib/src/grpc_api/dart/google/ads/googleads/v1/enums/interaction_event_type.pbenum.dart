@@ -9,14 +9,21 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class InteractionEventTypeEnum_InteractionEventType extends $pb.ProtobufEnum {
-  static const InteractionEventTypeEnum_InteractionEventType UNSPECIFIED = InteractionEventTypeEnum_InteractionEventType._(0, 'UNSPECIFIED');
-  static const InteractionEventTypeEnum_InteractionEventType UNKNOWN = InteractionEventTypeEnum_InteractionEventType._(1, 'UNKNOWN');
-  static const InteractionEventTypeEnum_InteractionEventType CLICK = InteractionEventTypeEnum_InteractionEventType._(2, 'CLICK');
-  static const InteractionEventTypeEnum_InteractionEventType ENGAGEMENT = InteractionEventTypeEnum_InteractionEventType._(3, 'ENGAGEMENT');
-  static const InteractionEventTypeEnum_InteractionEventType VIDEO_VIEW = InteractionEventTypeEnum_InteractionEventType._(4, 'VIDEO_VIEW');
-  static const InteractionEventTypeEnum_InteractionEventType NONE = InteractionEventTypeEnum_InteractionEventType._(5, 'NONE');
+  static const InteractionEventTypeEnum_InteractionEventType UNSPECIFIED =
+      InteractionEventTypeEnum_InteractionEventType._(0, 'UNSPECIFIED');
+  static const InteractionEventTypeEnum_InteractionEventType UNKNOWN =
+      InteractionEventTypeEnum_InteractionEventType._(1, 'UNKNOWN');
+  static const InteractionEventTypeEnum_InteractionEventType CLICK =
+      InteractionEventTypeEnum_InteractionEventType._(2, 'CLICK');
+  static const InteractionEventTypeEnum_InteractionEventType ENGAGEMENT =
+      InteractionEventTypeEnum_InteractionEventType._(3, 'ENGAGEMENT');
+  static const InteractionEventTypeEnum_InteractionEventType VIDEO_VIEW =
+      InteractionEventTypeEnum_InteractionEventType._(4, 'VIDEO_VIEW');
+  static const InteractionEventTypeEnum_InteractionEventType NONE =
+      InteractionEventTypeEnum_InteractionEventType._(5, 'NONE');
 
-  static const $core.List<InteractionEventTypeEnum_InteractionEventType> values = <InteractionEventTypeEnum_InteractionEventType> [
+  static const $core.List<InteractionEventTypeEnum_InteractionEventType>
+      values = <InteractionEventTypeEnum_InteractionEventType>[
     UNSPECIFIED,
     UNKNOWN,
     CLICK,
@@ -25,9 +32,14 @@ class InteractionEventTypeEnum_InteractionEventType extends $pb.ProtobufEnum {
     NONE,
   ];
 
-  static final $core.Map<$core.int, InteractionEventTypeEnum_InteractionEventType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static InteractionEventTypeEnum_InteractionEventType valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, InteractionEventTypeEnum_InteractionEventType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static InteractionEventTypeEnum_InteractionEventType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const InteractionEventTypeEnum_InteractionEventType._($core.int v, $core.String n) : super(v, n);
+  const InteractionEventTypeEnum_InteractionEventType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

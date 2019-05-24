@@ -16,23 +16,30 @@ import 'prediction_service.pbjson.dart';
 export 'prediction_service.pb.dart';
 
 abstract class OnlinePredictionServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.HttpBody> predict($pb.ServerContext ctx, PredictRequest request);
+  $async.Future<$0.HttpBody> predict(
+      $pb.ServerContext ctx, PredictRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'Predict': return PredictRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Predict':
+        return PredictRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'Predict': return this.predict(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Predict':
+        return this.predict(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => OnlinePredictionServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => OnlinePredictionServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      OnlinePredictionServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => OnlinePredictionServiceBase$messageJson;
 }
-

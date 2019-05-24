@@ -16,23 +16,30 @@ import 'carrier_constant_service.pbjson.dart';
 export 'carrier_constant_service.pb.dart';
 
 abstract class CarrierConstantServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.CarrierConstant> getCarrierConstant($pb.ServerContext ctx, GetCarrierConstantRequest request);
+  $async.Future<$0.CarrierConstant> getCarrierConstant(
+      $pb.ServerContext ctx, GetCarrierConstantRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetCarrierConstant': return GetCarrierConstantRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCarrierConstant':
+        return GetCarrierConstantRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetCarrierConstant': return this.getCarrierConstant(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCarrierConstant':
+        return this.getCarrierConstant(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CarrierConstantServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CarrierConstantServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CarrierConstantServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CarrierConstantServiceBase$messageJson;
 }
-

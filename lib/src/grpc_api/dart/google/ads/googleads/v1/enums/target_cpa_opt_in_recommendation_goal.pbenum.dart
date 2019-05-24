@@ -8,15 +8,37 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal extends $pb.ProtobufEnum {
-  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal UNSPECIFIED = TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(0, 'UNSPECIFIED');
-  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal UNKNOWN = TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(1, 'UNKNOWN');
-  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal SAME_COST = TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(2, 'SAME_COST');
-  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal SAME_CONVERSIONS = TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(3, 'SAME_CONVERSIONS');
-  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal SAME_CPA = TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(4, 'SAME_CPA');
-  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal CLOSEST_CPA = TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(5, 'CLOSEST_CPA');
+class TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+    extends $pb.ProtobufEnum {
+  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+      UNSPECIFIED =
+      TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(
+          0, 'UNSPECIFIED');
+  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+      UNKNOWN =
+      TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(
+          1, 'UNKNOWN');
+  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+      SAME_COST =
+      TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(
+          2, 'SAME_COST');
+  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+      SAME_CONVERSIONS =
+      TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(
+          3, 'SAME_CONVERSIONS');
+  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+      SAME_CPA =
+      TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(
+          4, 'SAME_CPA');
+  static const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+      CLOSEST_CPA =
+      TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(
+          5, 'CLOSEST_CPA');
 
-  static const $core.List<TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal> values = <TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal> [
+  static const $core.List<
+          TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal>
+      values =
+      <TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal>[
     UNSPECIFIED,
     UNKNOWN,
     SAME_COST,
@@ -25,9 +47,13 @@ class TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal exte
     CLOSEST_CPA,
   ];
 
-  static final $core.Map<$core.int, TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal
+      valueOf($core.int value) => _byValue[value];
 
-  const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._($core.int v, $core.String n) : super(v, n);
+  const TargetCpaOptInRecommendationGoalEnum_TargetCpaOptInRecommendationGoal._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

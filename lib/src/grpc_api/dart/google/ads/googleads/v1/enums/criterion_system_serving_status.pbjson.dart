@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const CriterionSystemServingStatusEnum$json = const {
+const CriterionSystemServingStatusEnum$json = {
   '1': 'CriterionSystemServingStatusEnum',
-  '4': const [CriterionSystemServingStatusEnum_CriterionSystemServingStatus$json],
+  '4': [CriterionSystemServingStatusEnum_CriterionSystemServingStatus$json],
 };
 
-const CriterionSystemServingStatusEnum_CriterionSystemServingStatus$json = const {
+const CriterionSystemServingStatusEnum_CriterionSystemServingStatus$json = {
   '1': 'CriterionSystemServingStatus',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'ELIGIBLE', '2': 2},
-    const {'1': 'RARELY_SERVED', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'ELIGIBLE', '2': 2},
+    {'1': 'RARELY_SERVED', '2': 3},
   ],
 };
-

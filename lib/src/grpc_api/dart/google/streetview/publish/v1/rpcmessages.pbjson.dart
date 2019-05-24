@@ -4,113 +4,203 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const PhotoView$json = const {
+const PhotoView$json = {
   '1': 'PhotoView',
-  '2': const [
-    const {'1': 'BASIC', '2': 0},
-    const {'1': 'INCLUDE_DOWNLOAD_URL', '2': 1},
+  '2': [
+    {'1': 'BASIC', '2': 0},
+    {'1': 'INCLUDE_DOWNLOAD_URL', '2': 1},
   ],
 };
 
-const CreatePhotoRequest$json = const {
+const CreatePhotoRequest$json = {
   '1': 'CreatePhotoRequest',
-  '2': const [
-    const {'1': 'photo', '3': 1, '4': 1, '5': 11, '6': '.google.streetview.publish.v1.Photo', '10': 'photo'},
+  '2': [
+    {
+      '1': 'photo',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.streetview.publish.v1.Photo',
+      '10': 'photo'
+    },
   ],
 };
 
-const GetPhotoRequest$json = const {
+const GetPhotoRequest$json = {
   '1': 'GetPhotoRequest',
-  '2': const [
-    const {'1': 'photo_id', '3': 1, '4': 1, '5': 9, '10': 'photoId'},
-    const {'1': 'view', '3': 2, '4': 1, '5': 14, '6': '.google.streetview.publish.v1.PhotoView', '10': 'view'},
-    const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+  '2': [
+    {'1': 'photo_id', '3': 1, '4': 1, '5': 9, '10': 'photoId'},
+    {
+      '1': 'view',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.streetview.publish.v1.PhotoView',
+      '10': 'view'
+    },
+    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
 
-const BatchGetPhotosRequest$json = const {
+const BatchGetPhotosRequest$json = {
   '1': 'BatchGetPhotosRequest',
-  '2': const [
-    const {'1': 'photo_ids', '3': 1, '4': 3, '5': 9, '10': 'photoIds'},
-    const {'1': 'view', '3': 2, '4': 1, '5': 14, '6': '.google.streetview.publish.v1.PhotoView', '10': 'view'},
-    const {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+  '2': [
+    {'1': 'photo_ids', '3': 1, '4': 3, '5': 9, '10': 'photoIds'},
+    {
+      '1': 'view',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.streetview.publish.v1.PhotoView',
+      '10': 'view'
+    },
+    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
 
-const BatchGetPhotosResponse$json = const {
+const BatchGetPhotosResponse$json = {
   '1': 'BatchGetPhotosResponse',
-  '2': const [
-    const {'1': 'results', '3': 1, '4': 3, '5': 11, '6': '.google.streetview.publish.v1.PhotoResponse', '10': 'results'},
+  '2': [
+    {
+      '1': 'results',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.streetview.publish.v1.PhotoResponse',
+      '10': 'results'
+    },
   ],
 };
 
-const PhotoResponse$json = const {
+const PhotoResponse$json = {
   '1': 'PhotoResponse',
-  '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'status'},
-    const {'1': 'photo', '3': 2, '4': 1, '5': 11, '6': '.google.streetview.publish.v1.Photo', '10': 'photo'},
+  '2': [
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'status'
+    },
+    {
+      '1': 'photo',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.streetview.publish.v1.Photo',
+      '10': 'photo'
+    },
   ],
 };
 
-const ListPhotosRequest$json = const {
+const ListPhotosRequest$json = {
   '1': 'ListPhotosRequest',
-  '2': const [
-    const {'1': 'view', '3': 1, '4': 1, '5': 14, '6': '.google.streetview.publish.v1.PhotoView', '10': 'view'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
-    const {'1': 'language_code', '3': 5, '4': 1, '5': 9, '10': 'languageCode'},
+  '2': [
+    {
+      '1': 'view',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.streetview.publish.v1.PhotoView',
+      '10': 'view'
+    },
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'language_code', '3': 5, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
 
-const ListPhotosResponse$json = const {
+const ListPhotosResponse$json = {
   '1': 'ListPhotosResponse',
-  '2': const [
-    const {'1': 'photos', '3': 1, '4': 3, '5': 11, '6': '.google.streetview.publish.v1.Photo', '10': 'photos'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'photos',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.streetview.publish.v1.Photo',
+      '10': 'photos'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const UpdatePhotoRequest$json = const {
+const UpdatePhotoRequest$json = {
   '1': 'UpdatePhotoRequest',
-  '2': const [
-    const {'1': 'photo', '3': 1, '4': 1, '5': 11, '6': '.google.streetview.publish.v1.Photo', '10': 'photo'},
-    const {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+  '2': [
+    {
+      '1': 'photo',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.streetview.publish.v1.Photo',
+      '10': 'photo'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
-const BatchUpdatePhotosRequest$json = const {
+const BatchUpdatePhotosRequest$json = {
   '1': 'BatchUpdatePhotosRequest',
-  '2': const [
-    const {'1': 'update_photo_requests', '3': 1, '4': 3, '5': 11, '6': '.google.streetview.publish.v1.UpdatePhotoRequest', '10': 'updatePhotoRequests'},
+  '2': [
+    {
+      '1': 'update_photo_requests',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.streetview.publish.v1.UpdatePhotoRequest',
+      '10': 'updatePhotoRequests'
+    },
   ],
 };
 
-const BatchUpdatePhotosResponse$json = const {
+const BatchUpdatePhotosResponse$json = {
   '1': 'BatchUpdatePhotosResponse',
-  '2': const [
-    const {'1': 'results', '3': 1, '4': 3, '5': 11, '6': '.google.streetview.publish.v1.PhotoResponse', '10': 'results'},
+  '2': [
+    {
+      '1': 'results',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.streetview.publish.v1.PhotoResponse',
+      '10': 'results'
+    },
   ],
 };
 
-const DeletePhotoRequest$json = const {
+const DeletePhotoRequest$json = {
   '1': 'DeletePhotoRequest',
-  '2': const [
-    const {'1': 'photo_id', '3': 1, '4': 1, '5': 9, '10': 'photoId'},
+  '2': [
+    {'1': 'photo_id', '3': 1, '4': 1, '5': 9, '10': 'photoId'},
   ],
 };
 
-const BatchDeletePhotosRequest$json = const {
+const BatchDeletePhotosRequest$json = {
   '1': 'BatchDeletePhotosRequest',
-  '2': const [
-    const {'1': 'photo_ids', '3': 1, '4': 3, '5': 9, '10': 'photoIds'},
+  '2': [
+    {'1': 'photo_ids', '3': 1, '4': 3, '5': 9, '10': 'photoIds'},
   ],
 };
 
-const BatchDeletePhotosResponse$json = const {
+const BatchDeletePhotosResponse$json = {
   '1': 'BatchDeletePhotosResponse',
-  '2': const [
-    const {'1': 'status', '3': 1, '4': 3, '5': 11, '6': '.google.rpc.Status', '10': 'status'},
+  '2': [
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'status'
+    },
   ],
 };
-

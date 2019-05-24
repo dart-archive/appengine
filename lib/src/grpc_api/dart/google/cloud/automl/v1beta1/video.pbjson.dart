@@ -4,11 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const VideoClassificationDatasetMetadata$json = const {
+const VideoClassificationDatasetMetadata$json = {
   '1': 'VideoClassificationDatasetMetadata',
 };
 
-const VideoClassificationModelMetadata$json = const {
+const VideoClassificationModelMetadata$json = {
   '1': 'VideoClassificationModelMetadata',
 };
-

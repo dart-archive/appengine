@@ -16,6 +16,5 @@ export '../grpc_api/dart/google/logging/v2/logging.pb.dart';
 export '../grpc_api/dart/google/logging/v2/logging.pb.dart';
 export '../grpc_api/dart/google/protobuf/any.pb.dart' show Any;
 export '../grpc_api/dart/google/protobuf/duration.pb.dart' show Duration;
-export '../grpc_api/dart/google/protobuf/struct.pb.dart'
-    show Struct, Value;
+export '../grpc_api/dart/google/protobuf/struct.pb.dart' show Struct, Value;
 export '../grpc_api/dart/google/protobuf/timestamp.pb.dart' show Timestamp;

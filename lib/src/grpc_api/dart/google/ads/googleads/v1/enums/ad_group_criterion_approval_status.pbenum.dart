@@ -8,15 +8,37 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus extends $pb.ProtobufEnum {
-  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus UNSPECIFIED = AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(0, 'UNSPECIFIED');
-  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus UNKNOWN = AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(1, 'UNKNOWN');
-  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus APPROVED = AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(2, 'APPROVED');
-  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus DISAPPROVED = AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(3, 'DISAPPROVED');
-  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus PENDING_REVIEW = AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(4, 'PENDING_REVIEW');
-  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus UNDER_REVIEW = AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(5, 'UNDER_REVIEW');
+class AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus
+    extends $pb.ProtobufEnum {
+  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus
+      UNSPECIFIED =
+      AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(
+          0, 'UNSPECIFIED');
+  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus
+      UNKNOWN =
+      AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(
+          1, 'UNKNOWN');
+  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus
+      APPROVED =
+      AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(
+          2, 'APPROVED');
+  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus
+      DISAPPROVED =
+      AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(
+          3, 'DISAPPROVED');
+  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus
+      PENDING_REVIEW =
+      AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(
+          4, 'PENDING_REVIEW');
+  static const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus
+      UNDER_REVIEW =
+      AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(
+          5, 'UNDER_REVIEW');
 
-  static const $core.List<AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus> values = <AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus> [
+  static const $core.List<
+          AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus>
+      values =
+      <AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus>[
     UNSPECIFIED,
     UNKNOWN,
     APPROVED,
@@ -25,9 +47,13 @@ class AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus extends 
     UNDER_REVIEW,
   ];
 
-  static final $core.Map<$core.int, AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus
+      valueOf($core.int value) => _byValue[value];
 
-  const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._($core.int v, $core.String n) : super(v, n);
+  const AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

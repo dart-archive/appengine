@@ -15,16 +15,31 @@ import '../../../protobuf/empty.pbjson.dart' as $7;
 import 'eval.pbjson.dart' as $8;
 import 'value.pbjson.dart' as $9;
 
-const CelServiceBase$json = const {
+const CelServiceBase$json = {
   '1': 'CelService',
-  '2': const [
-    const {'1': 'Parse', '2': '.google.api.expr.v1alpha1.ParseRequest', '3': '.google.api.expr.v1alpha1.ParseResponse', '4': const {}},
-    const {'1': 'Check', '2': '.google.api.expr.v1alpha1.CheckRequest', '3': '.google.api.expr.v1alpha1.CheckResponse', '4': const {}},
-    const {'1': 'Eval', '2': '.google.api.expr.v1alpha1.EvalRequest', '3': '.google.api.expr.v1alpha1.EvalResponse', '4': const {}},
+  '2': [
+    {
+      '1': 'Parse',
+      '2': '.google.api.expr.v1alpha1.ParseRequest',
+      '3': '.google.api.expr.v1alpha1.ParseResponse',
+      '4': {}
+    },
+    {
+      '1': 'Check',
+      '2': '.google.api.expr.v1alpha1.CheckRequest',
+      '3': '.google.api.expr.v1alpha1.CheckResponse',
+      '4': {}
+    },
+    {
+      '1': 'Eval',
+      '2': '.google.api.expr.v1alpha1.EvalRequest',
+      '3': '.google.api.expr.v1alpha1.EvalResponse',
+      '4': {}
+    },
   ],
 };
 
-const CelServiceBase$messageJson = const {
+const CelServiceBase$messageJson = {
   '.google.api.expr.v1alpha1.ParseRequest': $0.ParseRequest$json,
   '.google.api.expr.v1alpha1.ParseResponse': $0.ParseResponse$json,
   '.google.api.expr.v1alpha1.ParsedExpr': $1.ParsedExpr$json,
@@ -37,10 +52,12 @@ const CelServiceBase$messageJson = const {
   '.google.api.expr.v1alpha1.Expr.Call': $1.Expr_Call$json,
   '.google.api.expr.v1alpha1.Expr.CreateList': $1.Expr_CreateList$json,
   '.google.api.expr.v1alpha1.Expr.CreateStruct': $1.Expr_CreateStruct$json,
-  '.google.api.expr.v1alpha1.Expr.CreateStruct.Entry': $1.Expr_CreateStruct_Entry$json,
+  '.google.api.expr.v1alpha1.Expr.CreateStruct.Entry':
+      $1.Expr_CreateStruct_Entry$json,
   '.google.api.expr.v1alpha1.Expr.Comprehension': $1.Expr_Comprehension$json,
   '.google.api.expr.v1alpha1.SourceInfo': $1.SourceInfo$json,
-  '.google.api.expr.v1alpha1.SourceInfo.PositionsEntry': $1.SourceInfo_PositionsEntry$json,
+  '.google.api.expr.v1alpha1.SourceInfo.PositionsEntry':
+      $1.SourceInfo_PositionsEntry$json,
   '.google.rpc.Status': $4.Status$json,
   '.google.protobuf.Any': $5.Any$json,
   '.google.api.expr.v1alpha1.CheckRequest': $0.CheckRequest$json,
@@ -53,14 +70,18 @@ const CelServiceBase$messageJson = const {
   '.google.api.expr.v1alpha1.Type.FunctionType': $6.Type_FunctionType$json,
   '.google.api.expr.v1alpha1.Type.AbstractType': $6.Type_AbstractType$json,
   '.google.api.expr.v1alpha1.Decl.FunctionDecl': $6.Decl_FunctionDecl$json,
-  '.google.api.expr.v1alpha1.Decl.FunctionDecl.Overload': $6.Decl_FunctionDecl_Overload$json,
+  '.google.api.expr.v1alpha1.Decl.FunctionDecl.Overload':
+      $6.Decl_FunctionDecl_Overload$json,
   '.google.api.expr.v1alpha1.CheckResponse': $0.CheckResponse$json,
   '.google.api.expr.v1alpha1.CheckedExpr': $6.CheckedExpr$json,
-  '.google.api.expr.v1alpha1.CheckedExpr.ReferenceMapEntry': $6.CheckedExpr_ReferenceMapEntry$json,
+  '.google.api.expr.v1alpha1.CheckedExpr.ReferenceMapEntry':
+      $6.CheckedExpr_ReferenceMapEntry$json,
   '.google.api.expr.v1alpha1.Reference': $6.Reference$json,
-  '.google.api.expr.v1alpha1.CheckedExpr.TypeMapEntry': $6.CheckedExpr_TypeMapEntry$json,
+  '.google.api.expr.v1alpha1.CheckedExpr.TypeMapEntry':
+      $6.CheckedExpr_TypeMapEntry$json,
   '.google.api.expr.v1alpha1.EvalRequest': $0.EvalRequest$json,
-  '.google.api.expr.v1alpha1.EvalRequest.BindingsEntry': $0.EvalRequest_BindingsEntry$json,
+  '.google.api.expr.v1alpha1.EvalRequest.BindingsEntry':
+      $0.EvalRequest_BindingsEntry$json,
   '.google.api.expr.v1alpha1.ExprValue': $8.ExprValue$json,
   '.google.api.expr.v1alpha1.Value': $9.Value$json,
   '.google.api.expr.v1alpha1.EnumValue': $9.EnumValue$json,
@@ -71,4 +92,3 @@ const CelServiceBase$messageJson = const {
   '.google.api.expr.v1alpha1.UnknownSet': $8.UnknownSet$json,
   '.google.api.expr.v1alpha1.EvalResponse': $0.EvalResponse$json,
 };
-

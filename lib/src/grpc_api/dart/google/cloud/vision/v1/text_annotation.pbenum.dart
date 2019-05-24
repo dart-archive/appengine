@@ -9,14 +9,21 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class TextAnnotation_DetectedBreak_BreakType extends $pb.ProtobufEnum {
-  static const TextAnnotation_DetectedBreak_BreakType UNKNOWN = TextAnnotation_DetectedBreak_BreakType._(0, 'UNKNOWN');
-  static const TextAnnotation_DetectedBreak_BreakType SPACE = TextAnnotation_DetectedBreak_BreakType._(1, 'SPACE');
-  static const TextAnnotation_DetectedBreak_BreakType SURE_SPACE = TextAnnotation_DetectedBreak_BreakType._(2, 'SURE_SPACE');
-  static const TextAnnotation_DetectedBreak_BreakType EOL_SURE_SPACE = TextAnnotation_DetectedBreak_BreakType._(3, 'EOL_SURE_SPACE');
-  static const TextAnnotation_DetectedBreak_BreakType HYPHEN = TextAnnotation_DetectedBreak_BreakType._(4, 'HYPHEN');
-  static const TextAnnotation_DetectedBreak_BreakType LINE_BREAK = TextAnnotation_DetectedBreak_BreakType._(5, 'LINE_BREAK');
+  static const TextAnnotation_DetectedBreak_BreakType UNKNOWN =
+      TextAnnotation_DetectedBreak_BreakType._(0, 'UNKNOWN');
+  static const TextAnnotation_DetectedBreak_BreakType SPACE =
+      TextAnnotation_DetectedBreak_BreakType._(1, 'SPACE');
+  static const TextAnnotation_DetectedBreak_BreakType SURE_SPACE =
+      TextAnnotation_DetectedBreak_BreakType._(2, 'SURE_SPACE');
+  static const TextAnnotation_DetectedBreak_BreakType EOL_SURE_SPACE =
+      TextAnnotation_DetectedBreak_BreakType._(3, 'EOL_SURE_SPACE');
+  static const TextAnnotation_DetectedBreak_BreakType HYPHEN =
+      TextAnnotation_DetectedBreak_BreakType._(4, 'HYPHEN');
+  static const TextAnnotation_DetectedBreak_BreakType LINE_BREAK =
+      TextAnnotation_DetectedBreak_BreakType._(5, 'LINE_BREAK');
 
-  static const $core.List<TextAnnotation_DetectedBreak_BreakType> values = <TextAnnotation_DetectedBreak_BreakType> [
+  static const $core.List<TextAnnotation_DetectedBreak_BreakType> values =
+      <TextAnnotation_DetectedBreak_BreakType>[
     UNKNOWN,
     SPACE,
     SURE_SPACE,
@@ -25,10 +32,13 @@ class TextAnnotation_DetectedBreak_BreakType extends $pb.ProtobufEnum {
     LINE_BREAK,
   ];
 
-  static final $core.Map<$core.int, TextAnnotation_DetectedBreak_BreakType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static TextAnnotation_DetectedBreak_BreakType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, TextAnnotation_DetectedBreak_BreakType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static TextAnnotation_DetectedBreak_BreakType valueOf($core.int value) =>
+      _byValue[value];
 
-  const TextAnnotation_DetectedBreak_BreakType._($core.int v, $core.String n) : super(v, n);
+  const TextAnnotation_DetectedBreak_BreakType._($core.int v, $core.String n)
+      : super(v, n);
 }
 
 class Block_BlockType extends $pb.ProtobufEnum {
@@ -39,7 +49,7 @@ class Block_BlockType extends $pb.ProtobufEnum {
   static const Block_BlockType RULER = Block_BlockType._(4, 'RULER');
   static const Block_BlockType BARCODE = Block_BlockType._(5, 'BARCODE');
 
-  static const $core.List<Block_BlockType> values = <Block_BlockType> [
+  static const $core.List<Block_BlockType> values = <Block_BlockType>[
     UNKNOWN,
     TEXT,
     TABLE,
@@ -48,9 +58,9 @@ class Block_BlockType extends $pb.ProtobufEnum {
     BARCODE,
   ];
 
-  static final $core.Map<$core.int, Block_BlockType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Block_BlockType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Block_BlockType valueOf($core.int value) => _byValue[value];
 
   const Block_BlockType._($core.int v, $core.String n) : super(v, n);
 }
-

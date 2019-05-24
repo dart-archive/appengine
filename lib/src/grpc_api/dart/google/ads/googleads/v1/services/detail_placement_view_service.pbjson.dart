@@ -7,23 +7,29 @@
 import '../resources/detail_placement_view.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetDetailPlacementViewRequest$json = const {
+const GetDetailPlacementViewRequest$json = {
   '1': 'GetDetailPlacementViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const DetailPlacementViewServiceBase$json = const {
+const DetailPlacementViewServiceBase$json = {
   '1': 'DetailPlacementViewService',
-  '2': const [
-    const {'1': 'GetDetailPlacementView', '2': '.google.ads.googleads.v1.services.GetDetailPlacementViewRequest', '3': '.google.ads.googleads.v1.resources.DetailPlacementView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetDetailPlacementView',
+      '2': '.google.ads.googleads.v1.services.GetDetailPlacementViewRequest',
+      '3': '.google.ads.googleads.v1.resources.DetailPlacementView',
+      '4': {}
+    },
   ],
 };
 
-const DetailPlacementViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetDetailPlacementViewRequest': GetDetailPlacementViewRequest$json,
-  '.google.ads.googleads.v1.resources.DetailPlacementView': $0.DetailPlacementView$json,
+const DetailPlacementViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetDetailPlacementViewRequest':
+      GetDetailPlacementViewRequest$json,
+  '.google.ads.googleads.v1.resources.DetailPlacementView':
+      $0.DetailPlacementView$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

@@ -16,23 +16,30 @@ import 'detail_placement_view_service.pbjson.dart';
 export 'detail_placement_view_service.pb.dart';
 
 abstract class DetailPlacementViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.DetailPlacementView> getDetailPlacementView($pb.ServerContext ctx, GetDetailPlacementViewRequest request);
+  $async.Future<$0.DetailPlacementView> getDetailPlacementView(
+      $pb.ServerContext ctx, GetDetailPlacementViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetDetailPlacementView': return GetDetailPlacementViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetDetailPlacementView':
+        return GetDetailPlacementViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetDetailPlacementView': return this.getDetailPlacementView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetDetailPlacementView':
+        return this.getDetailPlacementView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => DetailPlacementViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => DetailPlacementViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      DetailPlacementViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DetailPlacementViewServiceBase$messageJson;
 }
-

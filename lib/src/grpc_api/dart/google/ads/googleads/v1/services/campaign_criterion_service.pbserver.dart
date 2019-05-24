@@ -16,26 +16,36 @@ import 'campaign_criterion_service.pbjson.dart';
 export 'campaign_criterion_service.pb.dart';
 
 abstract class CampaignCriterionServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.CampaignCriterion> getCampaignCriterion($pb.ServerContext ctx, GetCampaignCriterionRequest request);
-  $async.Future<MutateCampaignCriteriaResponse> mutateCampaignCriteria($pb.ServerContext ctx, MutateCampaignCriteriaRequest request);
+  $async.Future<$0.CampaignCriterion> getCampaignCriterion(
+      $pb.ServerContext ctx, GetCampaignCriterionRequest request);
+  $async.Future<MutateCampaignCriteriaResponse> mutateCampaignCriteria(
+      $pb.ServerContext ctx, MutateCampaignCriteriaRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetCampaignCriterion': return GetCampaignCriterionRequest();
-      case 'MutateCampaignCriteria': return MutateCampaignCriteriaRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCampaignCriterion':
+        return GetCampaignCriterionRequest();
+      case 'MutateCampaignCriteria':
+        return MutateCampaignCriteriaRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetCampaignCriterion': return this.getCampaignCriterion(ctx, request);
-      case 'MutateCampaignCriteria': return this.mutateCampaignCriteria(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCampaignCriterion':
+        return this.getCampaignCriterion(ctx, request);
+      case 'MutateCampaignCriteria':
+        return this.mutateCampaignCriteria(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CampaignCriterionServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CampaignCriterionServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CampaignCriterionServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CampaignCriterionServiceBase$messageJson;
 }
-

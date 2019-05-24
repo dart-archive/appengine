@@ -12,12 +12,13 @@ class Syntax extends $pb.ProtobufEnum {
   static const Syntax SYNTAX_PROTO2 = Syntax._(0, 'SYNTAX_PROTO2');
   static const Syntax SYNTAX_PROTO3 = Syntax._(1, 'SYNTAX_PROTO3');
 
-  static const $core.List<Syntax> values = <Syntax> [
+  static const $core.List<Syntax> values = <Syntax>[
     SYNTAX_PROTO2,
     SYNTAX_PROTO3,
   ];
 
-  static final $core.Map<$core.int, Syntax> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Syntax> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Syntax valueOf($core.int value) => _byValue[value];
 
   const Syntax._($core.int v, $core.String n) : super(v, n);
@@ -44,7 +45,7 @@ class Field_Kind extends $pb.ProtobufEnum {
   static const Field_Kind TYPE_SINT32 = Field_Kind._(17, 'TYPE_SINT32');
   static const Field_Kind TYPE_SINT64 = Field_Kind._(18, 'TYPE_SINT64');
 
-  static const $core.List<Field_Kind> values = <Field_Kind> [
+  static const $core.List<Field_Kind> values = <Field_Kind>[
     TYPE_UNKNOWN,
     TYPE_DOUBLE,
     TYPE_FLOAT,
@@ -66,28 +67,33 @@ class Field_Kind extends $pb.ProtobufEnum {
     TYPE_SINT64,
   ];
 
-  static final $core.Map<$core.int, Field_Kind> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Field_Kind> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Field_Kind valueOf($core.int value) => _byValue[value];
 
   const Field_Kind._($core.int v, $core.String n) : super(v, n);
 }
 
 class Field_Cardinality extends $pb.ProtobufEnum {
-  static const Field_Cardinality CARDINALITY_UNKNOWN = Field_Cardinality._(0, 'CARDINALITY_UNKNOWN');
-  static const Field_Cardinality CARDINALITY_OPTIONAL = Field_Cardinality._(1, 'CARDINALITY_OPTIONAL');
-  static const Field_Cardinality CARDINALITY_REQUIRED = Field_Cardinality._(2, 'CARDINALITY_REQUIRED');
-  static const Field_Cardinality CARDINALITY_REPEATED = Field_Cardinality._(3, 'CARDINALITY_REPEATED');
+  static const Field_Cardinality CARDINALITY_UNKNOWN =
+      Field_Cardinality._(0, 'CARDINALITY_UNKNOWN');
+  static const Field_Cardinality CARDINALITY_OPTIONAL =
+      Field_Cardinality._(1, 'CARDINALITY_OPTIONAL');
+  static const Field_Cardinality CARDINALITY_REQUIRED =
+      Field_Cardinality._(2, 'CARDINALITY_REQUIRED');
+  static const Field_Cardinality CARDINALITY_REPEATED =
+      Field_Cardinality._(3, 'CARDINALITY_REPEATED');
 
-  static const $core.List<Field_Cardinality> values = <Field_Cardinality> [
+  static const $core.List<Field_Cardinality> values = <Field_Cardinality>[
     CARDINALITY_UNKNOWN,
     CARDINALITY_OPTIONAL,
     CARDINALITY_REQUIRED,
     CARDINALITY_REPEATED,
   ];
 
-  static final $core.Map<$core.int, Field_Cardinality> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Field_Cardinality> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Field_Cardinality valueOf($core.int value) => _byValue[value];
 
   const Field_Cardinality._($core.int v, $core.String n) : super(v, n);
 }
-

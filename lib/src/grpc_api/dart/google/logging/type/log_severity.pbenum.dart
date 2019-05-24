@@ -19,7 +19,7 @@ class LogSeverity extends $pb.ProtobufEnum {
   static const LogSeverity ALERT = LogSeverity._(700, 'ALERT');
   static const LogSeverity EMERGENCY = LogSeverity._(800, 'EMERGENCY');
 
-  static const $core.List<LogSeverity> values = <LogSeverity> [
+  static const $core.List<LogSeverity> values = <LogSeverity>[
     DEFAULT,
     DEBUG,
     INFO,
@@ -31,9 +31,9 @@ class LogSeverity extends $pb.ProtobufEnum {
     EMERGENCY,
   ];
 
-  static final $core.Map<$core.int, LogSeverity> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, LogSeverity> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static LogSeverity valueOf($core.int value) => _byValue[value];
 
   const LogSeverity._($core.int v, $core.String n) : super(v, n);
 }
-

@@ -6,22 +6,28 @@
 
 import '../resources/feed_placeholder_view.pbjson.dart' as $0;
 
-const GetFeedPlaceholderViewRequest$json = const {
+const GetFeedPlaceholderViewRequest$json = {
   '1': 'GetFeedPlaceholderViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const FeedPlaceholderViewServiceBase$json = const {
+const FeedPlaceholderViewServiceBase$json = {
   '1': 'FeedPlaceholderViewService',
-  '2': const [
-    const {'1': 'GetFeedPlaceholderView', '2': '.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest', '3': '.google.ads.googleads.v1.resources.FeedPlaceholderView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetFeedPlaceholderView',
+      '2': '.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest',
+      '3': '.google.ads.googleads.v1.resources.FeedPlaceholderView',
+      '4': {}
+    },
   ],
 };
 
-const FeedPlaceholderViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest': GetFeedPlaceholderViewRequest$json,
-  '.google.ads.googleads.v1.resources.FeedPlaceholderView': $0.FeedPlaceholderView$json,
+const FeedPlaceholderViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest':
+      GetFeedPlaceholderViewRequest$json,
+  '.google.ads.googleads.v1.resources.FeedPlaceholderView':
+      $0.FeedPlaceholderView$json,
 };
-

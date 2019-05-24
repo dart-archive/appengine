@@ -9,14 +9,21 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SimulationTypeEnum_SimulationType extends $pb.ProtobufEnum {
-  static const SimulationTypeEnum_SimulationType UNSPECIFIED = SimulationTypeEnum_SimulationType._(0, 'UNSPECIFIED');
-  static const SimulationTypeEnum_SimulationType UNKNOWN = SimulationTypeEnum_SimulationType._(1, 'UNKNOWN');
-  static const SimulationTypeEnum_SimulationType CPC_BID = SimulationTypeEnum_SimulationType._(2, 'CPC_BID');
-  static const SimulationTypeEnum_SimulationType CPV_BID = SimulationTypeEnum_SimulationType._(3, 'CPV_BID');
-  static const SimulationTypeEnum_SimulationType TARGET_CPA = SimulationTypeEnum_SimulationType._(4, 'TARGET_CPA');
-  static const SimulationTypeEnum_SimulationType BID_MODIFIER = SimulationTypeEnum_SimulationType._(5, 'BID_MODIFIER');
+  static const SimulationTypeEnum_SimulationType UNSPECIFIED =
+      SimulationTypeEnum_SimulationType._(0, 'UNSPECIFIED');
+  static const SimulationTypeEnum_SimulationType UNKNOWN =
+      SimulationTypeEnum_SimulationType._(1, 'UNKNOWN');
+  static const SimulationTypeEnum_SimulationType CPC_BID =
+      SimulationTypeEnum_SimulationType._(2, 'CPC_BID');
+  static const SimulationTypeEnum_SimulationType CPV_BID =
+      SimulationTypeEnum_SimulationType._(3, 'CPV_BID');
+  static const SimulationTypeEnum_SimulationType TARGET_CPA =
+      SimulationTypeEnum_SimulationType._(4, 'TARGET_CPA');
+  static const SimulationTypeEnum_SimulationType BID_MODIFIER =
+      SimulationTypeEnum_SimulationType._(5, 'BID_MODIFIER');
 
-  static const $core.List<SimulationTypeEnum_SimulationType> values = <SimulationTypeEnum_SimulationType> [
+  static const $core.List<SimulationTypeEnum_SimulationType> values =
+      <SimulationTypeEnum_SimulationType>[
     UNSPECIFIED,
     UNKNOWN,
     CPC_BID,
@@ -25,9 +32,11 @@ class SimulationTypeEnum_SimulationType extends $pb.ProtobufEnum {
     BID_MODIFIER,
   ];
 
-  static final $core.Map<$core.int, SimulationTypeEnum_SimulationType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static SimulationTypeEnum_SimulationType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, SimulationTypeEnum_SimulationType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SimulationTypeEnum_SimulationType valueOf($core.int value) =>
+      _byValue[value];
 
-  const SimulationTypeEnum_SimulationType._($core.int v, $core.String n) : super(v, n);
+  const SimulationTypeEnum_SimulationType._($core.int v, $core.String n)
+      : super(v, n);
 }
-

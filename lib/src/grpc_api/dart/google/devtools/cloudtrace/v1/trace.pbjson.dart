@@ -7,123 +7,215 @@
 import '../../../protobuf/timestamp.pbjson.dart' as $0;
 import '../../../protobuf/empty.pbjson.dart' as $1;
 
-const Trace$json = const {
+const Trace$json = {
   '1': 'Trace',
-  '2': const [
-    const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    const {'1': 'trace_id', '3': 2, '4': 1, '5': 9, '10': 'traceId'},
-    const {'1': 'spans', '3': 3, '4': 3, '5': 11, '6': '.google.devtools.cloudtrace.v1.TraceSpan', '10': 'spans'},
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'trace_id', '3': 2, '4': 1, '5': 9, '10': 'traceId'},
+    {
+      '1': 'spans',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudtrace.v1.TraceSpan',
+      '10': 'spans'
+    },
   ],
 };
 
-const Traces$json = const {
+const Traces$json = {
   '1': 'Traces',
-  '2': const [
-    const {'1': 'traces', '3': 1, '4': 3, '5': 11, '6': '.google.devtools.cloudtrace.v1.Trace', '10': 'traces'},
+  '2': [
+    {
+      '1': 'traces',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudtrace.v1.Trace',
+      '10': 'traces'
+    },
   ],
 };
 
-const TraceSpan$json = const {
+const TraceSpan$json = {
   '1': 'TraceSpan',
-  '2': const [
-    const {'1': 'span_id', '3': 1, '4': 1, '5': 6, '10': 'spanId'},
-    const {'1': 'kind', '3': 2, '4': 1, '5': 14, '6': '.google.devtools.cloudtrace.v1.TraceSpan.SpanKind', '10': 'kind'},
-    const {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'start_time', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'startTime'},
-    const {'1': 'end_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'endTime'},
-    const {'1': 'parent_span_id', '3': 6, '4': 1, '5': 6, '10': 'parentSpanId'},
-    const {'1': 'labels', '3': 7, '4': 3, '5': 11, '6': '.google.devtools.cloudtrace.v1.TraceSpan.LabelsEntry', '10': 'labels'},
+  '2': [
+    {'1': 'span_id', '3': 1, '4': 1, '5': 6, '10': 'spanId'},
+    {
+      '1': 'kind',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.devtools.cloudtrace.v1.TraceSpan.SpanKind',
+      '10': 'kind'
+    },
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'start_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    {'1': 'parent_span_id', '3': 6, '4': 1, '5': 6, '10': 'parentSpanId'},
+    {
+      '1': 'labels',
+      '3': 7,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudtrace.v1.TraceSpan.LabelsEntry',
+      '10': 'labels'
+    },
   ],
-  '3': const [TraceSpan_LabelsEntry$json],
-  '4': const [TraceSpan_SpanKind$json],
+  '3': [TraceSpan_LabelsEntry$json],
+  '4': [TraceSpan_SpanKind$json],
 };
 
-const TraceSpan_LabelsEntry$json = const {
+const TraceSpan_LabelsEntry$json = {
   '1': 'LabelsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const TraceSpan_SpanKind$json = const {
+const TraceSpan_SpanKind$json = {
   '1': 'SpanKind',
-  '2': const [
-    const {'1': 'SPAN_KIND_UNSPECIFIED', '2': 0},
-    const {'1': 'RPC_SERVER', '2': 1},
-    const {'1': 'RPC_CLIENT', '2': 2},
+  '2': [
+    {'1': 'SPAN_KIND_UNSPECIFIED', '2': 0},
+    {'1': 'RPC_SERVER', '2': 1},
+    {'1': 'RPC_CLIENT', '2': 2},
   ],
 };
 
-const ListTracesRequest$json = const {
+const ListTracesRequest$json = {
   '1': 'ListTracesRequest',
-  '2': const [
-    const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    const {'1': 'view', '3': 2, '4': 1, '5': 14, '6': '.google.devtools.cloudtrace.v1.ListTracesRequest.ViewType', '10': 'view'},
-    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'start_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'startTime'},
-    const {'1': 'end_time', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'endTime'},
-    const {'1': 'filter', '3': 7, '4': 1, '5': 9, '10': 'filter'},
-    const {'1': 'order_by', '3': 8, '4': 1, '5': 9, '10': 'orderBy'},
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {
+      '1': 'view',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.devtools.cloudtrace.v1.ListTracesRequest.ViewType',
+      '10': 'view'
+    },
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {
+      '1': 'start_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    {'1': 'filter', '3': 7, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'order_by', '3': 8, '4': 1, '5': 9, '10': 'orderBy'},
   ],
-  '4': const [ListTracesRequest_ViewType$json],
+  '4': [ListTracesRequest_ViewType$json],
 };
 
-const ListTracesRequest_ViewType$json = const {
+const ListTracesRequest_ViewType$json = {
   '1': 'ViewType',
-  '2': const [
-    const {'1': 'VIEW_TYPE_UNSPECIFIED', '2': 0},
-    const {'1': 'MINIMAL', '2': 1},
-    const {'1': 'ROOTSPAN', '2': 2},
-    const {'1': 'COMPLETE', '2': 3},
+  '2': [
+    {'1': 'VIEW_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'MINIMAL', '2': 1},
+    {'1': 'ROOTSPAN', '2': 2},
+    {'1': 'COMPLETE', '2': 3},
   ],
 };
 
-const ListTracesResponse$json = const {
+const ListTracesResponse$json = {
   '1': 'ListTracesResponse',
-  '2': const [
-    const {'1': 'traces', '3': 1, '4': 3, '5': 11, '6': '.google.devtools.cloudtrace.v1.Trace', '10': 'traces'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'traces',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudtrace.v1.Trace',
+      '10': 'traces'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetTraceRequest$json = const {
+const GetTraceRequest$json = {
   '1': 'GetTraceRequest',
-  '2': const [
-    const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    const {'1': 'trace_id', '3': 2, '4': 1, '5': 9, '10': 'traceId'},
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'trace_id', '3': 2, '4': 1, '5': 9, '10': 'traceId'},
   ],
 };
 
-const PatchTracesRequest$json = const {
+const PatchTracesRequest$json = {
   '1': 'PatchTracesRequest',
-  '2': const [
-    const {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    const {'1': 'traces', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.cloudtrace.v1.Traces', '10': 'traces'},
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {
+      '1': 'traces',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudtrace.v1.Traces',
+      '10': 'traces'
+    },
   ],
 };
 
-const TraceServiceBase$json = const {
+const TraceServiceBase$json = {
   '1': 'TraceService',
-  '2': const [
-    const {'1': 'ListTraces', '2': '.google.devtools.cloudtrace.v1.ListTracesRequest', '3': '.google.devtools.cloudtrace.v1.ListTracesResponse', '4': const {}},
-    const {'1': 'GetTrace', '2': '.google.devtools.cloudtrace.v1.GetTraceRequest', '3': '.google.devtools.cloudtrace.v1.Trace', '4': const {}},
-    const {'1': 'PatchTraces', '2': '.google.devtools.cloudtrace.v1.PatchTracesRequest', '3': '.google.protobuf.Empty', '4': const {}},
+  '2': [
+    {
+      '1': 'ListTraces',
+      '2': '.google.devtools.cloudtrace.v1.ListTracesRequest',
+      '3': '.google.devtools.cloudtrace.v1.ListTracesResponse',
+      '4': {}
+    },
+    {
+      '1': 'GetTrace',
+      '2': '.google.devtools.cloudtrace.v1.GetTraceRequest',
+      '3': '.google.devtools.cloudtrace.v1.Trace',
+      '4': {}
+    },
+    {
+      '1': 'PatchTraces',
+      '2': '.google.devtools.cloudtrace.v1.PatchTracesRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
   ],
 };
 
-const TraceServiceBase$messageJson = const {
+const TraceServiceBase$messageJson = {
   '.google.devtools.cloudtrace.v1.ListTracesRequest': ListTracesRequest$json,
   '.google.protobuf.Timestamp': $0.Timestamp$json,
   '.google.devtools.cloudtrace.v1.ListTracesResponse': ListTracesResponse$json,
   '.google.devtools.cloudtrace.v1.Trace': Trace$json,
   '.google.devtools.cloudtrace.v1.TraceSpan': TraceSpan$json,
-  '.google.devtools.cloudtrace.v1.TraceSpan.LabelsEntry': TraceSpan_LabelsEntry$json,
+  '.google.devtools.cloudtrace.v1.TraceSpan.LabelsEntry':
+      TraceSpan_LabelsEntry$json,
   '.google.devtools.cloudtrace.v1.GetTraceRequest': GetTraceRequest$json,
   '.google.devtools.cloudtrace.v1.PatchTracesRequest': PatchTracesRequest$json,
   '.google.devtools.cloudtrace.v1.Traces': Traces$json,
   '.google.protobuf.Empty': $1.Empty$json,
 };
-

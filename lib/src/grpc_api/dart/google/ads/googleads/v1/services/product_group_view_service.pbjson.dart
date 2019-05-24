@@ -6,22 +6,28 @@
 
 import '../resources/product_group_view.pbjson.dart' as $0;
 
-const GetProductGroupViewRequest$json = const {
+const GetProductGroupViewRequest$json = {
   '1': 'GetProductGroupViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const ProductGroupViewServiceBase$json = const {
+const ProductGroupViewServiceBase$json = {
   '1': 'ProductGroupViewService',
-  '2': const [
-    const {'1': 'GetProductGroupView', '2': '.google.ads.googleads.v1.services.GetProductGroupViewRequest', '3': '.google.ads.googleads.v1.resources.ProductGroupView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetProductGroupView',
+      '2': '.google.ads.googleads.v1.services.GetProductGroupViewRequest',
+      '3': '.google.ads.googleads.v1.resources.ProductGroupView',
+      '4': {}
+    },
   ],
 };
 
-const ProductGroupViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetProductGroupViewRequest': GetProductGroupViewRequest$json,
-  '.google.ads.googleads.v1.resources.ProductGroupView': $0.ProductGroupView$json,
+const ProductGroupViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetProductGroupViewRequest':
+      GetProductGroupViewRequest$json,
+  '.google.ads.googleads.v1.resources.ProductGroupView':
+      $0.ProductGroupView$json,
 };
-

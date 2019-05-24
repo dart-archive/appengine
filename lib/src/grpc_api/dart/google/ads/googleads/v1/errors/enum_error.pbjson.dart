@@ -4,17 +4,16 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const EnumErrorEnum$json = const {
+const EnumErrorEnum$json = {
   '1': 'EnumErrorEnum',
-  '4': const [EnumErrorEnum_EnumError$json],
+  '4': [EnumErrorEnum_EnumError$json],
 };
 
-const EnumErrorEnum_EnumError$json = const {
+const EnumErrorEnum_EnumError$json = {
   '1': 'EnumError',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'ENUM_VALUE_NOT_PERMITTED', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'ENUM_VALUE_NOT_PERMITTED', '2': 3},
   ],
 };
-

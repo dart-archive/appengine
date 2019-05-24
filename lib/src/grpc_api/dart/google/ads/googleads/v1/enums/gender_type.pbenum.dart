@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class GenderTypeEnum_GenderType extends $pb.ProtobufEnum {
-  static const GenderTypeEnum_GenderType UNSPECIFIED = GenderTypeEnum_GenderType._(0, 'UNSPECIFIED');
-  static const GenderTypeEnum_GenderType UNKNOWN = GenderTypeEnum_GenderType._(1, 'UNKNOWN');
-  static const GenderTypeEnum_GenderType MALE = GenderTypeEnum_GenderType._(10, 'MALE');
-  static const GenderTypeEnum_GenderType FEMALE = GenderTypeEnum_GenderType._(11, 'FEMALE');
-  static const GenderTypeEnum_GenderType UNDETERMINED = GenderTypeEnum_GenderType._(20, 'UNDETERMINED');
+  static const GenderTypeEnum_GenderType UNSPECIFIED =
+      GenderTypeEnum_GenderType._(0, 'UNSPECIFIED');
+  static const GenderTypeEnum_GenderType UNKNOWN =
+      GenderTypeEnum_GenderType._(1, 'UNKNOWN');
+  static const GenderTypeEnum_GenderType MALE =
+      GenderTypeEnum_GenderType._(10, 'MALE');
+  static const GenderTypeEnum_GenderType FEMALE =
+      GenderTypeEnum_GenderType._(11, 'FEMALE');
+  static const GenderTypeEnum_GenderType UNDETERMINED =
+      GenderTypeEnum_GenderType._(20, 'UNDETERMINED');
 
-  static const $core.List<GenderTypeEnum_GenderType> values = <GenderTypeEnum_GenderType> [
+  static const $core.List<GenderTypeEnum_GenderType> values =
+      <GenderTypeEnum_GenderType>[
     UNSPECIFIED,
     UNKNOWN,
     MALE,
@@ -23,9 +29,9 @@ class GenderTypeEnum_GenderType extends $pb.ProtobufEnum {
     UNDETERMINED,
   ];
 
-  static final $core.Map<$core.int, GenderTypeEnum_GenderType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, GenderTypeEnum_GenderType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static GenderTypeEnum_GenderType valueOf($core.int value) => _byValue[value];
 
   const GenderTypeEnum_GenderType._($core.int v, $core.String n) : super(v, n);
 }
-

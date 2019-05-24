@@ -8,20 +8,34 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError extends $pb.ProtobufEnum {
-  static const ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError UNSPECIFIED = ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError._(0, 'UNSPECIFIED');
-  static const ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError UNKNOWN = ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError._(1, 'UNKNOWN');
-  static const ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError WRITE_ACCESS_DENIED = ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError._(3, 'WRITE_ACCESS_DENIED');
+class ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError
+    extends $pb.ProtobufEnum {
+  static const ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError
+      UNSPECIFIED = ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError._(
+          0, 'UNSPECIFIED');
+  static const ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError UNKNOWN =
+      ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError._(1, 'UNKNOWN');
+  static const ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError
+      WRITE_ACCESS_DENIED =
+      ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError._(
+          3, 'WRITE_ACCESS_DENIED');
 
-  static const $core.List<ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError> values = <ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError> [
+  static const $core
+          .List<ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError>
+      values = <ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError>[
     UNSPECIFIED,
     UNKNOWN,
     WRITE_ACCESS_DENIED,
   ];
 
-  static final $core.Map<$core.int, ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError._($core.int v, $core.String n) : super(v, n);
+  const ResourceAccessDeniedErrorEnum_ResourceAccessDeniedError._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -16,26 +16,36 @@ import 'keyword_plan_keyword_service.pbjson.dart';
 export 'keyword_plan_keyword_service.pb.dart';
 
 abstract class KeywordPlanKeywordServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.KeywordPlanKeyword> getKeywordPlanKeyword($pb.ServerContext ctx, GetKeywordPlanKeywordRequest request);
-  $async.Future<MutateKeywordPlanKeywordsResponse> mutateKeywordPlanKeywords($pb.ServerContext ctx, MutateKeywordPlanKeywordsRequest request);
+  $async.Future<$0.KeywordPlanKeyword> getKeywordPlanKeyword(
+      $pb.ServerContext ctx, GetKeywordPlanKeywordRequest request);
+  $async.Future<MutateKeywordPlanKeywordsResponse> mutateKeywordPlanKeywords(
+      $pb.ServerContext ctx, MutateKeywordPlanKeywordsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetKeywordPlanKeyword': return GetKeywordPlanKeywordRequest();
-      case 'MutateKeywordPlanKeywords': return MutateKeywordPlanKeywordsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetKeywordPlanKeyword':
+        return GetKeywordPlanKeywordRequest();
+      case 'MutateKeywordPlanKeywords':
+        return MutateKeywordPlanKeywordsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetKeywordPlanKeyword': return this.getKeywordPlanKeyword(ctx, request);
-      case 'MutateKeywordPlanKeywords': return this.mutateKeywordPlanKeywords(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetKeywordPlanKeyword':
+        return this.getKeywordPlanKeyword(ctx, request);
+      case 'MutateKeywordPlanKeywords':
+        return this.mutateKeywordPlanKeywords(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => KeywordPlanKeywordServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => KeywordPlanKeywordServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      KeywordPlanKeywordServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => KeywordPlanKeywordServiceBase$messageJson;
 }
-

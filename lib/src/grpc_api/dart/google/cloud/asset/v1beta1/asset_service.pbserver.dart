@@ -16,26 +16,35 @@ import 'asset_service.pbjson.dart';
 export 'asset_service.pb.dart';
 
 abstract class AssetServiceBase extends $pb.GeneratedService {
-  $async.Future<$2.Operation> exportAssets($pb.ServerContext ctx, ExportAssetsRequest request);
-  $async.Future<BatchGetAssetsHistoryResponse> batchGetAssetsHistory($pb.ServerContext ctx, BatchGetAssetsHistoryRequest request);
+  $async.Future<$2.Operation> exportAssets(
+      $pb.ServerContext ctx, ExportAssetsRequest request);
+  $async.Future<BatchGetAssetsHistoryResponse> batchGetAssetsHistory(
+      $pb.ServerContext ctx, BatchGetAssetsHistoryRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'ExportAssets': return ExportAssetsRequest();
-      case 'BatchGetAssetsHistory': return BatchGetAssetsHistoryRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ExportAssets':
+        return ExportAssetsRequest();
+      case 'BatchGetAssetsHistory':
+        return BatchGetAssetsHistoryRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'ExportAssets': return this.exportAssets(ctx, request);
-      case 'BatchGetAssetsHistory': return this.batchGetAssetsHistory(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ExportAssets':
+        return this.exportAssets(ctx, request);
+      case 'BatchGetAssetsHistory':
+        return this.batchGetAssetsHistory(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => AssetServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => AssetServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AssetServiceBase$messageJson;
 }
-

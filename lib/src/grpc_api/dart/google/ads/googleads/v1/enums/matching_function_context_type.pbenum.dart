@@ -8,22 +8,41 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class MatchingFunctionContextTypeEnum_MatchingFunctionContextType extends $pb.ProtobufEnum {
-  static const MatchingFunctionContextTypeEnum_MatchingFunctionContextType UNSPECIFIED = MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(0, 'UNSPECIFIED');
-  static const MatchingFunctionContextTypeEnum_MatchingFunctionContextType UNKNOWN = MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(1, 'UNKNOWN');
-  static const MatchingFunctionContextTypeEnum_MatchingFunctionContextType FEED_ITEM_ID = MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(2, 'FEED_ITEM_ID');
-  static const MatchingFunctionContextTypeEnum_MatchingFunctionContextType DEVICE_NAME = MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(3, 'DEVICE_NAME');
+class MatchingFunctionContextTypeEnum_MatchingFunctionContextType
+    extends $pb.ProtobufEnum {
+  static const MatchingFunctionContextTypeEnum_MatchingFunctionContextType
+      UNSPECIFIED =
+      MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(
+          0, 'UNSPECIFIED');
+  static const MatchingFunctionContextTypeEnum_MatchingFunctionContextType
+      UNKNOWN = MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(
+          1, 'UNKNOWN');
+  static const MatchingFunctionContextTypeEnum_MatchingFunctionContextType
+      FEED_ITEM_ID =
+      MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(
+          2, 'FEED_ITEM_ID');
+  static const MatchingFunctionContextTypeEnum_MatchingFunctionContextType
+      DEVICE_NAME =
+      MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(
+          3, 'DEVICE_NAME');
 
-  static const $core.List<MatchingFunctionContextTypeEnum_MatchingFunctionContextType> values = <MatchingFunctionContextTypeEnum_MatchingFunctionContextType> [
+  static const $core
+          .List<MatchingFunctionContextTypeEnum_MatchingFunctionContextType>
+      values = <MatchingFunctionContextTypeEnum_MatchingFunctionContextType>[
     UNSPECIFIED,
     UNKNOWN,
     FEED_ITEM_ID,
     DEVICE_NAME,
   ];
 
-  static final $core.Map<$core.int, MatchingFunctionContextTypeEnum_MatchingFunctionContextType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static MatchingFunctionContextTypeEnum_MatchingFunctionContextType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          MatchingFunctionContextTypeEnum_MatchingFunctionContextType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static MatchingFunctionContextTypeEnum_MatchingFunctionContextType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const MatchingFunctionContextTypeEnum_MatchingFunctionContextType._($core.int v, $core.String n) : super(v, n);
+  const MatchingFunctionContextTypeEnum_MatchingFunctionContextType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

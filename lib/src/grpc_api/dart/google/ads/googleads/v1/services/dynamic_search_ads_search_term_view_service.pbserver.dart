@@ -15,24 +15,33 @@ import 'dynamic_search_ads_search_term_view_service.pbjson.dart';
 
 export 'dynamic_search_ads_search_term_view_service.pb.dart';
 
-abstract class DynamicSearchAdsSearchTermViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.DynamicSearchAdsSearchTermView> getDynamicSearchAdsSearchTermView($pb.ServerContext ctx, GetDynamicSearchAdsSearchTermViewRequest request);
+abstract class DynamicSearchAdsSearchTermViewServiceBase
+    extends $pb.GeneratedService {
+  $async.Future<$0.DynamicSearchAdsSearchTermView>
+      getDynamicSearchAdsSearchTermView($pb.ServerContext ctx,
+          GetDynamicSearchAdsSearchTermViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetDynamicSearchAdsSearchTermView': return GetDynamicSearchAdsSearchTermViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetDynamicSearchAdsSearchTermView':
+        return GetDynamicSearchAdsSearchTermViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetDynamicSearchAdsSearchTermView': return this.getDynamicSearchAdsSearchTermView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetDynamicSearchAdsSearchTermView':
+        return this.getDynamicSearchAdsSearchTermView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => DynamicSearchAdsSearchTermViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => DynamicSearchAdsSearchTermViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      DynamicSearchAdsSearchTermViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DynamicSearchAdsSearchTermViewServiceBase$messageJson;
 }
-

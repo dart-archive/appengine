@@ -9,15 +9,24 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AssetErrorEnum_AssetError extends $pb.ProtobufEnum {
-  static const AssetErrorEnum_AssetError UNSPECIFIED = AssetErrorEnum_AssetError._(0, 'UNSPECIFIED');
-  static const AssetErrorEnum_AssetError UNKNOWN = AssetErrorEnum_AssetError._(1, 'UNKNOWN');
-  static const AssetErrorEnum_AssetError CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE = AssetErrorEnum_AssetError._(2, 'CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE');
-  static const AssetErrorEnum_AssetError DUPLICATE_ASSET = AssetErrorEnum_AssetError._(3, 'DUPLICATE_ASSET');
-  static const AssetErrorEnum_AssetError DUPLICATE_ASSET_NAME = AssetErrorEnum_AssetError._(4, 'DUPLICATE_ASSET_NAME');
-  static const AssetErrorEnum_AssetError ASSET_DATA_IS_MISSING = AssetErrorEnum_AssetError._(5, 'ASSET_DATA_IS_MISSING');
-  static const AssetErrorEnum_AssetError CANNOT_MODIFY_ASSET_NAME = AssetErrorEnum_AssetError._(6, 'CANNOT_MODIFY_ASSET_NAME');
+  static const AssetErrorEnum_AssetError UNSPECIFIED =
+      AssetErrorEnum_AssetError._(0, 'UNSPECIFIED');
+  static const AssetErrorEnum_AssetError UNKNOWN =
+      AssetErrorEnum_AssetError._(1, 'UNKNOWN');
+  static const AssetErrorEnum_AssetError
+      CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE =
+      AssetErrorEnum_AssetError._(2, 'CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE');
+  static const AssetErrorEnum_AssetError DUPLICATE_ASSET =
+      AssetErrorEnum_AssetError._(3, 'DUPLICATE_ASSET');
+  static const AssetErrorEnum_AssetError DUPLICATE_ASSET_NAME =
+      AssetErrorEnum_AssetError._(4, 'DUPLICATE_ASSET_NAME');
+  static const AssetErrorEnum_AssetError ASSET_DATA_IS_MISSING =
+      AssetErrorEnum_AssetError._(5, 'ASSET_DATA_IS_MISSING');
+  static const AssetErrorEnum_AssetError CANNOT_MODIFY_ASSET_NAME =
+      AssetErrorEnum_AssetError._(6, 'CANNOT_MODIFY_ASSET_NAME');
 
-  static const $core.List<AssetErrorEnum_AssetError> values = <AssetErrorEnum_AssetError> [
+  static const $core.List<AssetErrorEnum_AssetError> values =
+      <AssetErrorEnum_AssetError>[
     UNSPECIFIED,
     UNKNOWN,
     CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE,
@@ -27,9 +36,9 @@ class AssetErrorEnum_AssetError extends $pb.ProtobufEnum {
     CANNOT_MODIFY_ASSET_NAME,
   ];
 
-  static final $core.Map<$core.int, AssetErrorEnum_AssetError> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, AssetErrorEnum_AssetError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static AssetErrorEnum_AssetError valueOf($core.int value) => _byValue[value];
 
   const AssetErrorEnum_AssetError._($core.int v, $core.String n) : super(v, n);
 }
-

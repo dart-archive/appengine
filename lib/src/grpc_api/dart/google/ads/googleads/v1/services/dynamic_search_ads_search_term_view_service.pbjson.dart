@@ -7,23 +7,30 @@
 import '../resources/dynamic_search_ads_search_term_view.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetDynamicSearchAdsSearchTermViewRequest$json = const {
+const GetDynamicSearchAdsSearchTermViewRequest$json = {
   '1': 'GetDynamicSearchAdsSearchTermViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const DynamicSearchAdsSearchTermViewServiceBase$json = const {
+const DynamicSearchAdsSearchTermViewServiceBase$json = {
   '1': 'DynamicSearchAdsSearchTermViewService',
-  '2': const [
-    const {'1': 'GetDynamicSearchAdsSearchTermView', '2': '.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest', '3': '.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetDynamicSearchAdsSearchTermView',
+      '2':
+          '.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest',
+      '3': '.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView',
+      '4': {}
+    },
   ],
 };
 
-const DynamicSearchAdsSearchTermViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest': GetDynamicSearchAdsSearchTermViewRequest$json,
-  '.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView': $0.DynamicSearchAdsSearchTermView$json,
+const DynamicSearchAdsSearchTermViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetDynamicSearchAdsSearchTermViewRequest':
+      GetDynamicSearchAdsSearchTermViewRequest$json,
+  '.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView':
+      $0.DynamicSearchAdsSearchTermView$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

@@ -16,38 +16,60 @@ import 'clusters.pbjson.dart';
 export 'clusters.pb.dart';
 
 abstract class ClusterControllerServiceBase extends $pb.GeneratedService {
-  $async.Future<$3.Operation> createCluster($pb.ServerContext ctx, CreateClusterRequest request);
-  $async.Future<$3.Operation> updateCluster($pb.ServerContext ctx, UpdateClusterRequest request);
-  $async.Future<$3.Operation> deleteCluster($pb.ServerContext ctx, DeleteClusterRequest request);
-  $async.Future<Cluster> getCluster($pb.ServerContext ctx, GetClusterRequest request);
-  $async.Future<ListClustersResponse> listClusters($pb.ServerContext ctx, ListClustersRequest request);
-  $async.Future<$3.Operation> diagnoseCluster($pb.ServerContext ctx, DiagnoseClusterRequest request);
+  $async.Future<$3.Operation> createCluster(
+      $pb.ServerContext ctx, CreateClusterRequest request);
+  $async.Future<$3.Operation> updateCluster(
+      $pb.ServerContext ctx, UpdateClusterRequest request);
+  $async.Future<$3.Operation> deleteCluster(
+      $pb.ServerContext ctx, DeleteClusterRequest request);
+  $async.Future<Cluster> getCluster(
+      $pb.ServerContext ctx, GetClusterRequest request);
+  $async.Future<ListClustersResponse> listClusters(
+      $pb.ServerContext ctx, ListClustersRequest request);
+  $async.Future<$3.Operation> diagnoseCluster(
+      $pb.ServerContext ctx, DiagnoseClusterRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'CreateCluster': return CreateClusterRequest();
-      case 'UpdateCluster': return UpdateClusterRequest();
-      case 'DeleteCluster': return DeleteClusterRequest();
-      case 'GetCluster': return GetClusterRequest();
-      case 'ListClusters': return ListClustersRequest();
-      case 'DiagnoseCluster': return DiagnoseClusterRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CreateCluster':
+        return CreateClusterRequest();
+      case 'UpdateCluster':
+        return UpdateClusterRequest();
+      case 'DeleteCluster':
+        return DeleteClusterRequest();
+      case 'GetCluster':
+        return GetClusterRequest();
+      case 'ListClusters':
+        return ListClustersRequest();
+      case 'DiagnoseCluster':
+        return DiagnoseClusterRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'CreateCluster': return this.createCluster(ctx, request);
-      case 'UpdateCluster': return this.updateCluster(ctx, request);
-      case 'DeleteCluster': return this.deleteCluster(ctx, request);
-      case 'GetCluster': return this.getCluster(ctx, request);
-      case 'ListClusters': return this.listClusters(ctx, request);
-      case 'DiagnoseCluster': return this.diagnoseCluster(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CreateCluster':
+        return this.createCluster(ctx, request);
+      case 'UpdateCluster':
+        return this.updateCluster(ctx, request);
+      case 'DeleteCluster':
+        return this.deleteCluster(ctx, request);
+      case 'GetCluster':
+        return this.getCluster(ctx, request);
+      case 'ListClusters':
+        return this.listClusters(ctx, request);
+      case 'DiagnoseCluster':
+        return this.diagnoseCluster(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => ClusterControllerServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ClusterControllerServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ClusterControllerServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ClusterControllerServiceBase$messageJson;
 }
-

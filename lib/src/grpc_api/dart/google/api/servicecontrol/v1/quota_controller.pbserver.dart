@@ -15,23 +15,30 @@ import 'quota_controller.pbjson.dart';
 export 'quota_controller.pb.dart';
 
 abstract class QuotaControllerServiceBase extends $pb.GeneratedService {
-  $async.Future<AllocateQuotaResponse> allocateQuota($pb.ServerContext ctx, AllocateQuotaRequest request);
+  $async.Future<AllocateQuotaResponse> allocateQuota(
+      $pb.ServerContext ctx, AllocateQuotaRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'AllocateQuota': return AllocateQuotaRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'AllocateQuota':
+        return AllocateQuotaRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'AllocateQuota': return this.allocateQuota(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'AllocateQuota':
+        return this.allocateQuota(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => QuotaControllerServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => QuotaControllerServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      QuotaControllerServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => QuotaControllerServiceBase$messageJson;
 }
-

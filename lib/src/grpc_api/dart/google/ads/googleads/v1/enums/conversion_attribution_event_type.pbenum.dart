@@ -8,22 +8,42 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ConversionAttributionEventTypeEnum_ConversionAttributionEventType extends $pb.ProtobufEnum {
-  static const ConversionAttributionEventTypeEnum_ConversionAttributionEventType UNSPECIFIED = ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(0, 'UNSPECIFIED');
-  static const ConversionAttributionEventTypeEnum_ConversionAttributionEventType UNKNOWN = ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(1, 'UNKNOWN');
-  static const ConversionAttributionEventTypeEnum_ConversionAttributionEventType IMPRESSION = ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(2, 'IMPRESSION');
-  static const ConversionAttributionEventTypeEnum_ConversionAttributionEventType INTERACTION = ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(3, 'INTERACTION');
+class ConversionAttributionEventTypeEnum_ConversionAttributionEventType
+    extends $pb.ProtobufEnum {
+  static const ConversionAttributionEventTypeEnum_ConversionAttributionEventType
+      UNSPECIFIED =
+      ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(
+          0, 'UNSPECIFIED');
+  static const ConversionAttributionEventTypeEnum_ConversionAttributionEventType
+      UNKNOWN =
+      ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(
+          1, 'UNKNOWN');
+  static const ConversionAttributionEventTypeEnum_ConversionAttributionEventType
+      IMPRESSION =
+      ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(
+          2, 'IMPRESSION');
+  static const ConversionAttributionEventTypeEnum_ConversionAttributionEventType
+      INTERACTION =
+      ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(
+          3, 'INTERACTION');
 
-  static const $core.List<ConversionAttributionEventTypeEnum_ConversionAttributionEventType> values = <ConversionAttributionEventTypeEnum_ConversionAttributionEventType> [
+  static const $core.List<
+          ConversionAttributionEventTypeEnum_ConversionAttributionEventType>
+      values =
+      <ConversionAttributionEventTypeEnum_ConversionAttributionEventType>[
     UNSPECIFIED,
     UNKNOWN,
     IMPRESSION,
     INTERACTION,
   ];
 
-  static final $core.Map<$core.int, ConversionAttributionEventTypeEnum_ConversionAttributionEventType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ConversionAttributionEventTypeEnum_ConversionAttributionEventType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          ConversionAttributionEventTypeEnum_ConversionAttributionEventType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ConversionAttributionEventTypeEnum_ConversionAttributionEventType
+      valueOf($core.int value) => _byValue[value];
 
-  const ConversionAttributionEventTypeEnum_ConversionAttributionEventType._($core.int v, $core.String n) : super(v, n);
+  const ConversionAttributionEventTypeEnum_ConversionAttributionEventType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

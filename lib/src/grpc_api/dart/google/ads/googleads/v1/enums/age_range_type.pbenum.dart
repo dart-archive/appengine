@@ -9,17 +9,27 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AgeRangeTypeEnum_AgeRangeType extends $pb.ProtobufEnum {
-  static const AgeRangeTypeEnum_AgeRangeType UNSPECIFIED = AgeRangeTypeEnum_AgeRangeType._(0, 'UNSPECIFIED');
-  static const AgeRangeTypeEnum_AgeRangeType UNKNOWN = AgeRangeTypeEnum_AgeRangeType._(1, 'UNKNOWN');
-  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_18_24 = AgeRangeTypeEnum_AgeRangeType._(503001, 'AGE_RANGE_18_24');
-  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_25_34 = AgeRangeTypeEnum_AgeRangeType._(503002, 'AGE_RANGE_25_34');
-  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_35_44 = AgeRangeTypeEnum_AgeRangeType._(503003, 'AGE_RANGE_35_44');
-  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_45_54 = AgeRangeTypeEnum_AgeRangeType._(503004, 'AGE_RANGE_45_54');
-  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_55_64 = AgeRangeTypeEnum_AgeRangeType._(503005, 'AGE_RANGE_55_64');
-  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_65_UP = AgeRangeTypeEnum_AgeRangeType._(503006, 'AGE_RANGE_65_UP');
-  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_UNDETERMINED = AgeRangeTypeEnum_AgeRangeType._(503999, 'AGE_RANGE_UNDETERMINED');
+  static const AgeRangeTypeEnum_AgeRangeType UNSPECIFIED =
+      AgeRangeTypeEnum_AgeRangeType._(0, 'UNSPECIFIED');
+  static const AgeRangeTypeEnum_AgeRangeType UNKNOWN =
+      AgeRangeTypeEnum_AgeRangeType._(1, 'UNKNOWN');
+  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_18_24 =
+      AgeRangeTypeEnum_AgeRangeType._(503001, 'AGE_RANGE_18_24');
+  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_25_34 =
+      AgeRangeTypeEnum_AgeRangeType._(503002, 'AGE_RANGE_25_34');
+  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_35_44 =
+      AgeRangeTypeEnum_AgeRangeType._(503003, 'AGE_RANGE_35_44');
+  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_45_54 =
+      AgeRangeTypeEnum_AgeRangeType._(503004, 'AGE_RANGE_45_54');
+  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_55_64 =
+      AgeRangeTypeEnum_AgeRangeType._(503005, 'AGE_RANGE_55_64');
+  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_65_UP =
+      AgeRangeTypeEnum_AgeRangeType._(503006, 'AGE_RANGE_65_UP');
+  static const AgeRangeTypeEnum_AgeRangeType AGE_RANGE_UNDETERMINED =
+      AgeRangeTypeEnum_AgeRangeType._(503999, 'AGE_RANGE_UNDETERMINED');
 
-  static const $core.List<AgeRangeTypeEnum_AgeRangeType> values = <AgeRangeTypeEnum_AgeRangeType> [
+  static const $core.List<AgeRangeTypeEnum_AgeRangeType> values =
+      <AgeRangeTypeEnum_AgeRangeType>[
     UNSPECIFIED,
     UNKNOWN,
     AGE_RANGE_18_24,
@@ -31,9 +41,11 @@ class AgeRangeTypeEnum_AgeRangeType extends $pb.ProtobufEnum {
     AGE_RANGE_UNDETERMINED,
   ];
 
-  static final $core.Map<$core.int, AgeRangeTypeEnum_AgeRangeType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AgeRangeTypeEnum_AgeRangeType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, AgeRangeTypeEnum_AgeRangeType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AgeRangeTypeEnum_AgeRangeType valueOf($core.int value) =>
+      _byValue[value];
 
-  const AgeRangeTypeEnum_AgeRangeType._($core.int v, $core.String n) : super(v, n);
+  const AgeRangeTypeEnum_AgeRangeType._($core.int v, $core.String n)
+      : super(v, n);
 }
-

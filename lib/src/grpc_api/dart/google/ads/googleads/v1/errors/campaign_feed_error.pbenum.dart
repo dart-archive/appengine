@@ -9,16 +9,36 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class CampaignFeedErrorEnum_CampaignFeedError extends $pb.ProtobufEnum {
-  static const CampaignFeedErrorEnum_CampaignFeedError UNSPECIFIED = CampaignFeedErrorEnum_CampaignFeedError._(0, 'UNSPECIFIED');
-  static const CampaignFeedErrorEnum_CampaignFeedError UNKNOWN = CampaignFeedErrorEnum_CampaignFeedError._(1, 'UNKNOWN');
-  static const CampaignFeedErrorEnum_CampaignFeedError FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE = CampaignFeedErrorEnum_CampaignFeedError._(2, 'FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE');
-  static const CampaignFeedErrorEnum_CampaignFeedError CANNOT_CREATE_FOR_REMOVED_FEED = CampaignFeedErrorEnum_CampaignFeedError._(4, 'CANNOT_CREATE_FOR_REMOVED_FEED');
-  static const CampaignFeedErrorEnum_CampaignFeedError CANNOT_CREATE_ALREADY_EXISTING_CAMPAIGN_FEED = CampaignFeedErrorEnum_CampaignFeedError._(5, 'CANNOT_CREATE_ALREADY_EXISTING_CAMPAIGN_FEED');
-  static const CampaignFeedErrorEnum_CampaignFeedError CANNOT_MODIFY_REMOVED_CAMPAIGN_FEED = CampaignFeedErrorEnum_CampaignFeedError._(6, 'CANNOT_MODIFY_REMOVED_CAMPAIGN_FEED');
-  static const CampaignFeedErrorEnum_CampaignFeedError INVALID_PLACEHOLDER_TYPE = CampaignFeedErrorEnum_CampaignFeedError._(7, 'INVALID_PLACEHOLDER_TYPE');
-  static const CampaignFeedErrorEnum_CampaignFeedError MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE = CampaignFeedErrorEnum_CampaignFeedError._(8, 'MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE');
+  static const CampaignFeedErrorEnum_CampaignFeedError UNSPECIFIED =
+      CampaignFeedErrorEnum_CampaignFeedError._(0, 'UNSPECIFIED');
+  static const CampaignFeedErrorEnum_CampaignFeedError UNKNOWN =
+      CampaignFeedErrorEnum_CampaignFeedError._(1, 'UNKNOWN');
+  static const CampaignFeedErrorEnum_CampaignFeedError
+      FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE =
+      CampaignFeedErrorEnum_CampaignFeedError._(
+          2, 'FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE');
+  static const CampaignFeedErrorEnum_CampaignFeedError
+      CANNOT_CREATE_FOR_REMOVED_FEED =
+      CampaignFeedErrorEnum_CampaignFeedError._(
+          4, 'CANNOT_CREATE_FOR_REMOVED_FEED');
+  static const CampaignFeedErrorEnum_CampaignFeedError
+      CANNOT_CREATE_ALREADY_EXISTING_CAMPAIGN_FEED =
+      CampaignFeedErrorEnum_CampaignFeedError._(
+          5, 'CANNOT_CREATE_ALREADY_EXISTING_CAMPAIGN_FEED');
+  static const CampaignFeedErrorEnum_CampaignFeedError
+      CANNOT_MODIFY_REMOVED_CAMPAIGN_FEED =
+      CampaignFeedErrorEnum_CampaignFeedError._(
+          6, 'CANNOT_MODIFY_REMOVED_CAMPAIGN_FEED');
+  static const CampaignFeedErrorEnum_CampaignFeedError
+      INVALID_PLACEHOLDER_TYPE =
+      CampaignFeedErrorEnum_CampaignFeedError._(7, 'INVALID_PLACEHOLDER_TYPE');
+  static const CampaignFeedErrorEnum_CampaignFeedError
+      MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE =
+      CampaignFeedErrorEnum_CampaignFeedError._(
+          8, 'MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE');
 
-  static const $core.List<CampaignFeedErrorEnum_CampaignFeedError> values = <CampaignFeedErrorEnum_CampaignFeedError> [
+  static const $core.List<CampaignFeedErrorEnum_CampaignFeedError> values =
+      <CampaignFeedErrorEnum_CampaignFeedError>[
     UNSPECIFIED,
     UNKNOWN,
     FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE,
@@ -29,9 +49,11 @@ class CampaignFeedErrorEnum_CampaignFeedError extends $pb.ProtobufEnum {
     MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE,
   ];
 
-  static final $core.Map<$core.int, CampaignFeedErrorEnum_CampaignFeedError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CampaignFeedErrorEnum_CampaignFeedError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, CampaignFeedErrorEnum_CampaignFeedError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CampaignFeedErrorEnum_CampaignFeedError valueOf($core.int value) =>
+      _byValue[value];
 
-  const CampaignFeedErrorEnum_CampaignFeedError._($core.int v, $core.String n) : super(v, n);
+  const CampaignFeedErrorEnum_CampaignFeedError._($core.int v, $core.String n)
+      : super(v, n);
 }
-

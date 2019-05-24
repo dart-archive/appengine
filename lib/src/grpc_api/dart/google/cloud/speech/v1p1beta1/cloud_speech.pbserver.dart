@@ -16,29 +16,41 @@ import 'cloud_speech.pbjson.dart';
 export 'cloud_speech.pb.dart';
 
 abstract class SpeechServiceBase extends $pb.GeneratedService {
-  $async.Future<RecognizeResponse> recognize($pb.ServerContext ctx, RecognizeRequest request);
-  $async.Future<$3.Operation> longRunningRecognize($pb.ServerContext ctx, LongRunningRecognizeRequest request);
-  $async.Future<StreamingRecognizeResponse> streamingRecognize($pb.ServerContext ctx, StreamingRecognizeRequest request);
+  $async.Future<RecognizeResponse> recognize(
+      $pb.ServerContext ctx, RecognizeRequest request);
+  $async.Future<$3.Operation> longRunningRecognize(
+      $pb.ServerContext ctx, LongRunningRecognizeRequest request);
+  $async.Future<StreamingRecognizeResponse> streamingRecognize(
+      $pb.ServerContext ctx, StreamingRecognizeRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'Recognize': return RecognizeRequest();
-      case 'LongRunningRecognize': return LongRunningRecognizeRequest();
-      case 'StreamingRecognize': return StreamingRecognizeRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Recognize':
+        return RecognizeRequest();
+      case 'LongRunningRecognize':
+        return LongRunningRecognizeRequest();
+      case 'StreamingRecognize':
+        return StreamingRecognizeRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'Recognize': return this.recognize(ctx, request);
-      case 'LongRunningRecognize': return this.longRunningRecognize(ctx, request);
-      case 'StreamingRecognize': return this.streamingRecognize(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Recognize':
+        return this.recognize(ctx, request);
+      case 'LongRunningRecognize':
+        return this.longRunningRecognize(ctx, request);
+      case 'StreamingRecognize':
+        return this.streamingRecognize(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => SpeechServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => SpeechServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => SpeechServiceBase$messageJson;
 }
-

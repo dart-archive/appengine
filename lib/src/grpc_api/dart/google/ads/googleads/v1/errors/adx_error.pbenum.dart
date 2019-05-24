@@ -9,19 +9,23 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AdxErrorEnum_AdxError extends $pb.ProtobufEnum {
-  static const AdxErrorEnum_AdxError UNSPECIFIED = AdxErrorEnum_AdxError._(0, 'UNSPECIFIED');
-  static const AdxErrorEnum_AdxError UNKNOWN = AdxErrorEnum_AdxError._(1, 'UNKNOWN');
-  static const AdxErrorEnum_AdxError UNSUPPORTED_FEATURE = AdxErrorEnum_AdxError._(2, 'UNSUPPORTED_FEATURE');
+  static const AdxErrorEnum_AdxError UNSPECIFIED =
+      AdxErrorEnum_AdxError._(0, 'UNSPECIFIED');
+  static const AdxErrorEnum_AdxError UNKNOWN =
+      AdxErrorEnum_AdxError._(1, 'UNKNOWN');
+  static const AdxErrorEnum_AdxError UNSUPPORTED_FEATURE =
+      AdxErrorEnum_AdxError._(2, 'UNSUPPORTED_FEATURE');
 
-  static const $core.List<AdxErrorEnum_AdxError> values = <AdxErrorEnum_AdxError> [
+  static const $core.List<AdxErrorEnum_AdxError> values =
+      <AdxErrorEnum_AdxError>[
     UNSPECIFIED,
     UNKNOWN,
     UNSUPPORTED_FEATURE,
   ];
 
-  static final $core.Map<$core.int, AdxErrorEnum_AdxError> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, AdxErrorEnum_AdxError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static AdxErrorEnum_AdxError valueOf($core.int value) => _byValue[value];
 
   const AdxErrorEnum_AdxError._($core.int v, $core.String n) : super(v, n);
 }
-

@@ -8,22 +8,35 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType extends $pb.ProtobufEnum {
-  static const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType UNSPECIFIED = AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(0, 'UNSPECIFIED');
-  static const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType UNKNOWN = AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(1, 'UNKNOWN');
-  static const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType IOS = AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(2, 'IOS');
-  static const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType ANDROID = AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(3, 'ANDROID');
+class AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType
+    extends $pb.ProtobufEnum {
+  static const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType
+      UNSPECIFIED = AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(
+          0, 'UNSPECIFIED');
+  static const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType UNKNOWN =
+      AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(1, 'UNKNOWN');
+  static const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType IOS =
+      AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(2, 'IOS');
+  static const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType ANDROID =
+      AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(3, 'ANDROID');
 
-  static const $core.List<AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType> values = <AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType> [
+  static const $core
+          .List<AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType>
+      values = <AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType>[
     UNSPECIFIED,
     UNKNOWN,
     IOS,
     ANDROID,
   ];
 
-  static final $core.Map<$core.int, AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._($core.int v, $core.String n) : super(v, n);
+  const AppUrlOperatingSystemTypeEnum_AppUrlOperatingSystemType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

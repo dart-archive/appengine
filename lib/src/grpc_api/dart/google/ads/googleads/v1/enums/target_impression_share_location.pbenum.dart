@@ -8,14 +8,33 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class TargetImpressionShareLocationEnum_TargetImpressionShareLocation extends $pb.ProtobufEnum {
-  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation UNSPECIFIED = TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(0, 'UNSPECIFIED');
-  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation UNKNOWN = TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(1, 'UNKNOWN');
-  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation ANYWHERE_ON_PAGE = TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(2, 'ANYWHERE_ON_PAGE');
-  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation TOP_OF_PAGE = TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(3, 'TOP_OF_PAGE');
-  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation ABSOLUTE_TOP_OF_PAGE = TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(4, 'ABSOLUTE_TOP_OF_PAGE');
+class TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+    extends $pb.ProtobufEnum {
+  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+      UNSPECIFIED =
+      TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(
+          0, 'UNSPECIFIED');
+  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+      UNKNOWN =
+      TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(
+          1, 'UNKNOWN');
+  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+      ANYWHERE_ON_PAGE =
+      TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(
+          2, 'ANYWHERE_ON_PAGE');
+  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+      TOP_OF_PAGE =
+      TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(
+          3, 'TOP_OF_PAGE');
+  static const TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+      ABSOLUTE_TOP_OF_PAGE =
+      TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(
+          4, 'ABSOLUTE_TOP_OF_PAGE');
 
-  static const $core.List<TargetImpressionShareLocationEnum_TargetImpressionShareLocation> values = <TargetImpressionShareLocationEnum_TargetImpressionShareLocation> [
+  static const $core
+          .List<TargetImpressionShareLocationEnum_TargetImpressionShareLocation>
+      values =
+      <TargetImpressionShareLocationEnum_TargetImpressionShareLocation>[
     UNSPECIFIED,
     UNKNOWN,
     ANYWHERE_ON_PAGE,
@@ -23,9 +42,13 @@ class TargetImpressionShareLocationEnum_TargetImpressionShareLocation extends $p
     ABSOLUTE_TOP_OF_PAGE,
   ];
 
-  static final $core.Map<$core.int, TargetImpressionShareLocationEnum_TargetImpressionShareLocation> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static TargetImpressionShareLocationEnum_TargetImpressionShareLocation valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          TargetImpressionShareLocationEnum_TargetImpressionShareLocation>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+      valueOf($core.int value) => _byValue[value];
 
-  const TargetImpressionShareLocationEnum_TargetImpressionShareLocation._($core.int v, $core.String n) : super(v, n);
+  const TargetImpressionShareLocationEnum_TargetImpressionShareLocation._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

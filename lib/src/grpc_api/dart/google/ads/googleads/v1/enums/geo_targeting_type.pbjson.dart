@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const GeoTargetingTypeEnum$json = const {
+const GeoTargetingTypeEnum$json = {
   '1': 'GeoTargetingTypeEnum',
-  '4': const [GeoTargetingTypeEnum_GeoTargetingType$json],
+  '4': [GeoTargetingTypeEnum_GeoTargetingType$json],
 };
 
-const GeoTargetingTypeEnum_GeoTargetingType$json = const {
+const GeoTargetingTypeEnum_GeoTargetingType$json = {
   '1': 'GeoTargetingType',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'AREA_OF_INTEREST', '2': 2},
-    const {'1': 'LOCATION_OF_PRESENCE', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'AREA_OF_INTEREST', '2': 2},
+    {'1': 'LOCATION_OF_PRESENCE', '2': 3},
   ],
 };
-

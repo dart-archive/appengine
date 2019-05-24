@@ -9,14 +9,21 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class DataDrivenModelStatusEnum_DataDrivenModelStatus extends $pb.ProtobufEnum {
-  static const DataDrivenModelStatusEnum_DataDrivenModelStatus UNSPECIFIED = DataDrivenModelStatusEnum_DataDrivenModelStatus._(0, 'UNSPECIFIED');
-  static const DataDrivenModelStatusEnum_DataDrivenModelStatus UNKNOWN = DataDrivenModelStatusEnum_DataDrivenModelStatus._(1, 'UNKNOWN');
-  static const DataDrivenModelStatusEnum_DataDrivenModelStatus AVAILABLE = DataDrivenModelStatusEnum_DataDrivenModelStatus._(2, 'AVAILABLE');
-  static const DataDrivenModelStatusEnum_DataDrivenModelStatus STALE = DataDrivenModelStatusEnum_DataDrivenModelStatus._(3, 'STALE');
-  static const DataDrivenModelStatusEnum_DataDrivenModelStatus EXPIRED = DataDrivenModelStatusEnum_DataDrivenModelStatus._(4, 'EXPIRED');
-  static const DataDrivenModelStatusEnum_DataDrivenModelStatus NEVER_GENERATED = DataDrivenModelStatusEnum_DataDrivenModelStatus._(5, 'NEVER_GENERATED');
+  static const DataDrivenModelStatusEnum_DataDrivenModelStatus UNSPECIFIED =
+      DataDrivenModelStatusEnum_DataDrivenModelStatus._(0, 'UNSPECIFIED');
+  static const DataDrivenModelStatusEnum_DataDrivenModelStatus UNKNOWN =
+      DataDrivenModelStatusEnum_DataDrivenModelStatus._(1, 'UNKNOWN');
+  static const DataDrivenModelStatusEnum_DataDrivenModelStatus AVAILABLE =
+      DataDrivenModelStatusEnum_DataDrivenModelStatus._(2, 'AVAILABLE');
+  static const DataDrivenModelStatusEnum_DataDrivenModelStatus STALE =
+      DataDrivenModelStatusEnum_DataDrivenModelStatus._(3, 'STALE');
+  static const DataDrivenModelStatusEnum_DataDrivenModelStatus EXPIRED =
+      DataDrivenModelStatusEnum_DataDrivenModelStatus._(4, 'EXPIRED');
+  static const DataDrivenModelStatusEnum_DataDrivenModelStatus NEVER_GENERATED =
+      DataDrivenModelStatusEnum_DataDrivenModelStatus._(5, 'NEVER_GENERATED');
 
-  static const $core.List<DataDrivenModelStatusEnum_DataDrivenModelStatus> values = <DataDrivenModelStatusEnum_DataDrivenModelStatus> [
+  static const $core.List<DataDrivenModelStatusEnum_DataDrivenModelStatus>
+      values = <DataDrivenModelStatusEnum_DataDrivenModelStatus>[
     UNSPECIFIED,
     UNKNOWN,
     AVAILABLE,
@@ -25,9 +32,14 @@ class DataDrivenModelStatusEnum_DataDrivenModelStatus extends $pb.ProtobufEnum {
     NEVER_GENERATED,
   ];
 
-  static final $core.Map<$core.int, DataDrivenModelStatusEnum_DataDrivenModelStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static DataDrivenModelStatusEnum_DataDrivenModelStatus valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, DataDrivenModelStatusEnum_DataDrivenModelStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DataDrivenModelStatusEnum_DataDrivenModelStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const DataDrivenModelStatusEnum_DataDrivenModelStatus._($core.int v, $core.String n) : super(v, n);
+  const DataDrivenModelStatusEnum_DataDrivenModelStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

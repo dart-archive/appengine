@@ -7,23 +7,28 @@
 import '../resources/geographic_view.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetGeographicViewRequest$json = const {
+const GetGeographicViewRequest$json = {
   '1': 'GetGeographicViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const GeographicViewServiceBase$json = const {
+const GeographicViewServiceBase$json = {
   '1': 'GeographicViewService',
-  '2': const [
-    const {'1': 'GetGeographicView', '2': '.google.ads.googleads.v1.services.GetGeographicViewRequest', '3': '.google.ads.googleads.v1.resources.GeographicView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetGeographicView',
+      '2': '.google.ads.googleads.v1.services.GetGeographicViewRequest',
+      '3': '.google.ads.googleads.v1.resources.GeographicView',
+      '4': {}
+    },
   ],
 };
 
-const GeographicViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetGeographicViewRequest': GetGeographicViewRequest$json,
+const GeographicViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetGeographicViewRequest':
+      GetGeographicViewRequest$json,
   '.google.ads.googleads.v1.resources.GeographicView': $0.GeographicView$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

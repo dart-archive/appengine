@@ -15,27 +15,39 @@ import 'campaign_extension_setting_service.pbjson.dart';
 
 export 'campaign_extension_setting_service.pb.dart';
 
-abstract class CampaignExtensionSettingServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.CampaignExtensionSetting> getCampaignExtensionSetting($pb.ServerContext ctx, GetCampaignExtensionSettingRequest request);
-  $async.Future<MutateCampaignExtensionSettingsResponse> mutateCampaignExtensionSettings($pb.ServerContext ctx, MutateCampaignExtensionSettingsRequest request);
+abstract class CampaignExtensionSettingServiceBase
+    extends $pb.GeneratedService {
+  $async.Future<$0.CampaignExtensionSetting> getCampaignExtensionSetting(
+      $pb.ServerContext ctx, GetCampaignExtensionSettingRequest request);
+  $async.Future<MutateCampaignExtensionSettingsResponse>
+      mutateCampaignExtensionSettings($pb.ServerContext ctx,
+          MutateCampaignExtensionSettingsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetCampaignExtensionSetting': return GetCampaignExtensionSettingRequest();
-      case 'MutateCampaignExtensionSettings': return MutateCampaignExtensionSettingsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCampaignExtensionSetting':
+        return GetCampaignExtensionSettingRequest();
+      case 'MutateCampaignExtensionSettings':
+        return MutateCampaignExtensionSettingsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetCampaignExtensionSetting': return this.getCampaignExtensionSetting(ctx, request);
-      case 'MutateCampaignExtensionSettings': return this.mutateCampaignExtensionSettings(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCampaignExtensionSetting':
+        return this.getCampaignExtensionSetting(ctx, request);
+      case 'MutateCampaignExtensionSettings':
+        return this.mutateCampaignExtensionSettings(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CampaignExtensionSettingServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CampaignExtensionSettingServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CampaignExtensionSettingServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CampaignExtensionSettingServiceBase$messageJson;
 }
-

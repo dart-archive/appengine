@@ -8,14 +8,21 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class AdGroupCriterionStatusEnum_AdGroupCriterionStatus extends $pb.ProtobufEnum {
-  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus UNSPECIFIED = AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(0, 'UNSPECIFIED');
-  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus UNKNOWN = AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(1, 'UNKNOWN');
-  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus ENABLED = AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(2, 'ENABLED');
-  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus PAUSED = AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(3, 'PAUSED');
-  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus REMOVED = AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(4, 'REMOVED');
+class AdGroupCriterionStatusEnum_AdGroupCriterionStatus
+    extends $pb.ProtobufEnum {
+  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus UNSPECIFIED =
+      AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(0, 'UNSPECIFIED');
+  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus UNKNOWN =
+      AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(1, 'UNKNOWN');
+  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus ENABLED =
+      AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(2, 'ENABLED');
+  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus PAUSED =
+      AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(3, 'PAUSED');
+  static const AdGroupCriterionStatusEnum_AdGroupCriterionStatus REMOVED =
+      AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(4, 'REMOVED');
 
-  static const $core.List<AdGroupCriterionStatusEnum_AdGroupCriterionStatus> values = <AdGroupCriterionStatusEnum_AdGroupCriterionStatus> [
+  static const $core.List<AdGroupCriterionStatusEnum_AdGroupCriterionStatus>
+      values = <AdGroupCriterionStatusEnum_AdGroupCriterionStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
@@ -23,9 +30,14 @@ class AdGroupCriterionStatusEnum_AdGroupCriterionStatus extends $pb.ProtobufEnum
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, AdGroupCriterionStatusEnum_AdGroupCriterionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AdGroupCriterionStatusEnum_AdGroupCriterionStatus valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, AdGroupCriterionStatusEnum_AdGroupCriterionStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AdGroupCriterionStatusEnum_AdGroupCriterionStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const AdGroupCriterionStatusEnum_AdGroupCriterionStatus._($core.int v, $core.String n) : super(v, n);
+  const AdGroupCriterionStatusEnum_AdGroupCriterionStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

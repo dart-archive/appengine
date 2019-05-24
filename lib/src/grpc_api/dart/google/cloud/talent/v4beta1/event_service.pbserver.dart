@@ -16,23 +16,29 @@ import 'event_service.pbjson.dart';
 export 'event_service.pb.dart';
 
 abstract class EventServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.ClientEvent> createClientEvent($pb.ServerContext ctx, CreateClientEventRequest request);
+  $async.Future<$0.ClientEvent> createClientEvent(
+      $pb.ServerContext ctx, CreateClientEventRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'CreateClientEvent': return CreateClientEventRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CreateClientEvent':
+        return CreateClientEventRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'CreateClientEvent': return this.createClientEvent(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CreateClientEvent':
+        return this.createClientEvent(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => EventServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => EventServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => EventServiceBase$messageJson;
 }
-

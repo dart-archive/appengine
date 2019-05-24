@@ -15,24 +15,32 @@ import 'ad_group_criterion_simulation_service.pbjson.dart';
 
 export 'ad_group_criterion_simulation_service.pb.dart';
 
-abstract class AdGroupCriterionSimulationServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.AdGroupCriterionSimulation> getAdGroupCriterionSimulation($pb.ServerContext ctx, GetAdGroupCriterionSimulationRequest request);
+abstract class AdGroupCriterionSimulationServiceBase
+    extends $pb.GeneratedService {
+  $async.Future<$0.AdGroupCriterionSimulation> getAdGroupCriterionSimulation(
+      $pb.ServerContext ctx, GetAdGroupCriterionSimulationRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetAdGroupCriterionSimulation': return GetAdGroupCriterionSimulationRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdGroupCriterionSimulation':
+        return GetAdGroupCriterionSimulationRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetAdGroupCriterionSimulation': return this.getAdGroupCriterionSimulation(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdGroupCriterionSimulation':
+        return this.getAdGroupCriterionSimulation(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => AdGroupCriterionSimulationServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => AdGroupCriterionSimulationServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      AdGroupCriterionSimulationServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AdGroupCriterionSimulationServiceBase$messageJson;
 }
-

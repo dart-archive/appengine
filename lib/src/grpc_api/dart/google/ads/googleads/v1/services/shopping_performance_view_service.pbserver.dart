@@ -16,23 +16,30 @@ import 'shopping_performance_view_service.pbjson.dart';
 export 'shopping_performance_view_service.pb.dart';
 
 abstract class ShoppingPerformanceViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.ShoppingPerformanceView> getShoppingPerformanceView($pb.ServerContext ctx, GetShoppingPerformanceViewRequest request);
+  $async.Future<$0.ShoppingPerformanceView> getShoppingPerformanceView(
+      $pb.ServerContext ctx, GetShoppingPerformanceViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetShoppingPerformanceView': return GetShoppingPerformanceViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetShoppingPerformanceView':
+        return GetShoppingPerformanceViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetShoppingPerformanceView': return this.getShoppingPerformanceView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetShoppingPerformanceView':
+        return this.getShoppingPerformanceView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => ShoppingPerformanceViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ShoppingPerformanceViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ShoppingPerformanceViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ShoppingPerformanceViewServiceBase$messageJson;
 }
-

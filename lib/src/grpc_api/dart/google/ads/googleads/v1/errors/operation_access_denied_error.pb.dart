@@ -4,27 +4,39 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 export 'operation_access_denied_error.pbenum.dart';
 
 class OperationAccessDeniedErrorEnum extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationAccessDeniedErrorEnum', package: const $pb.PackageName('google.ads.googleads.v1.errors'))
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'OperationAccessDeniedErrorEnum',
+      package: const $pb.PackageName('google.ads.googleads.v1.errors'))
+    ..hasRequiredFields = false;
 
   OperationAccessDeniedErrorEnum() : super();
-  OperationAccessDeniedErrorEnum.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  OperationAccessDeniedErrorEnum.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  OperationAccessDeniedErrorEnum clone() => OperationAccessDeniedErrorEnum()..mergeFromMessage(this);
-  OperationAccessDeniedErrorEnum copyWith(void Function(OperationAccessDeniedErrorEnum) updates) => super.copyWith((message) => updates(message as OperationAccessDeniedErrorEnum));
+  OperationAccessDeniedErrorEnum.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  OperationAccessDeniedErrorEnum.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  OperationAccessDeniedErrorEnum clone() =>
+      OperationAccessDeniedErrorEnum()..mergeFromMessage(this);
+  OperationAccessDeniedErrorEnum copyWith(
+          void Function(OperationAccessDeniedErrorEnum) updates) =>
+      super.copyWith(
+          (message) => updates(message as OperationAccessDeniedErrorEnum));
   $pb.BuilderInfo get info_ => _i;
-  static OperationAccessDeniedErrorEnum create() => OperationAccessDeniedErrorEnum();
+  static OperationAccessDeniedErrorEnum create() =>
+      OperationAccessDeniedErrorEnum();
   OperationAccessDeniedErrorEnum createEmptyInstance() => create();
-  static $pb.PbList<OperationAccessDeniedErrorEnum> createRepeated() => $pb.PbList<OperationAccessDeniedErrorEnum>();
-  static OperationAccessDeniedErrorEnum getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<OperationAccessDeniedErrorEnum> createRepeated() =>
+      $pb.PbList<OperationAccessDeniedErrorEnum>();
+  static OperationAccessDeniedErrorEnum getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static OperationAccessDeniedErrorEnum _defaultInstance;
 }
-

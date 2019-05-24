@@ -5,7 +5,8 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,17 +17,24 @@ class ContainerAnalysisApi {
   $pb.RpcClient _client;
   ContainerAnalysisApi(this._client);
 
-  $async.Future<$1.Policy> setIamPolicy($pb.ClientContext ctx, $0.SetIamPolicyRequest request) {
+  $async.Future<$1.Policy> setIamPolicy(
+      $pb.ClientContext ctx, $0.SetIamPolicyRequest request) {
     var emptyResponse = $1.Policy();
-    return _client.invoke<$1.Policy>(ctx, 'ContainerAnalysis', 'SetIamPolicy', request, emptyResponse);
+    return _client.invoke<$1.Policy>(
+        ctx, 'ContainerAnalysis', 'SetIamPolicy', request, emptyResponse);
   }
-  $async.Future<$1.Policy> getIamPolicy($pb.ClientContext ctx, $0.GetIamPolicyRequest request) {
+
+  $async.Future<$1.Policy> getIamPolicy(
+      $pb.ClientContext ctx, $0.GetIamPolicyRequest request) {
     var emptyResponse = $1.Policy();
-    return _client.invoke<$1.Policy>(ctx, 'ContainerAnalysis', 'GetIamPolicy', request, emptyResponse);
+    return _client.invoke<$1.Policy>(
+        ctx, 'ContainerAnalysis', 'GetIamPolicy', request, emptyResponse);
   }
-  $async.Future<$0.TestIamPermissionsResponse> testIamPermissions($pb.ClientContext ctx, $0.TestIamPermissionsRequest request) {
+
+  $async.Future<$0.TestIamPermissionsResponse> testIamPermissions(
+      $pb.ClientContext ctx, $0.TestIamPermissionsRequest request) {
     var emptyResponse = $0.TestIamPermissionsResponse();
-    return _client.invoke<$0.TestIamPermissionsResponse>(ctx, 'ContainerAnalysis', 'TestIamPermissions', request, emptyResponse);
+    return _client.invoke<$0.TestIamPermissionsResponse>(
+        ctx, 'ContainerAnalysis', 'TestIamPermissions', request, emptyResponse);
   }
 }
-

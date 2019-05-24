@@ -8,14 +8,24 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class BrandSafetySuitabilityEnum_BrandSafetySuitability extends $pb.ProtobufEnum {
-  static const BrandSafetySuitabilityEnum_BrandSafetySuitability UNSPECIFIED = BrandSafetySuitabilityEnum_BrandSafetySuitability._(0, 'UNSPECIFIED');
-  static const BrandSafetySuitabilityEnum_BrandSafetySuitability UNKNOWN = BrandSafetySuitabilityEnum_BrandSafetySuitability._(1, 'UNKNOWN');
-  static const BrandSafetySuitabilityEnum_BrandSafetySuitability EXPANDED_INVENTORY = BrandSafetySuitabilityEnum_BrandSafetySuitability._(2, 'EXPANDED_INVENTORY');
-  static const BrandSafetySuitabilityEnum_BrandSafetySuitability STANDARD_INVENTORY = BrandSafetySuitabilityEnum_BrandSafetySuitability._(3, 'STANDARD_INVENTORY');
-  static const BrandSafetySuitabilityEnum_BrandSafetySuitability LIMITED_INVENTORY = BrandSafetySuitabilityEnum_BrandSafetySuitability._(4, 'LIMITED_INVENTORY');
+class BrandSafetySuitabilityEnum_BrandSafetySuitability
+    extends $pb.ProtobufEnum {
+  static const BrandSafetySuitabilityEnum_BrandSafetySuitability UNSPECIFIED =
+      BrandSafetySuitabilityEnum_BrandSafetySuitability._(0, 'UNSPECIFIED');
+  static const BrandSafetySuitabilityEnum_BrandSafetySuitability UNKNOWN =
+      BrandSafetySuitabilityEnum_BrandSafetySuitability._(1, 'UNKNOWN');
+  static const BrandSafetySuitabilityEnum_BrandSafetySuitability
+      EXPANDED_INVENTORY = BrandSafetySuitabilityEnum_BrandSafetySuitability._(
+          2, 'EXPANDED_INVENTORY');
+  static const BrandSafetySuitabilityEnum_BrandSafetySuitability
+      STANDARD_INVENTORY = BrandSafetySuitabilityEnum_BrandSafetySuitability._(
+          3, 'STANDARD_INVENTORY');
+  static const BrandSafetySuitabilityEnum_BrandSafetySuitability
+      LIMITED_INVENTORY = BrandSafetySuitabilityEnum_BrandSafetySuitability._(
+          4, 'LIMITED_INVENTORY');
 
-  static const $core.List<BrandSafetySuitabilityEnum_BrandSafetySuitability> values = <BrandSafetySuitabilityEnum_BrandSafetySuitability> [
+  static const $core.List<BrandSafetySuitabilityEnum_BrandSafetySuitability>
+      values = <BrandSafetySuitabilityEnum_BrandSafetySuitability>[
     UNSPECIFIED,
     UNKNOWN,
     EXPANDED_INVENTORY,
@@ -23,9 +33,14 @@ class BrandSafetySuitabilityEnum_BrandSafetySuitability extends $pb.ProtobufEnum
     LIMITED_INVENTORY,
   ];
 
-  static final $core.Map<$core.int, BrandSafetySuitabilityEnum_BrandSafetySuitability> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static BrandSafetySuitabilityEnum_BrandSafetySuitability valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, BrandSafetySuitabilityEnum_BrandSafetySuitability>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static BrandSafetySuitabilityEnum_BrandSafetySuitability valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const BrandSafetySuitabilityEnum_BrandSafetySuitability._($core.int v, $core.String n) : super(v, n);
+  const BrandSafetySuitabilityEnum_BrandSafetySuitability._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

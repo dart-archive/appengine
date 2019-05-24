@@ -4,19 +4,18 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const GenderTypeEnum$json = const {
+const GenderTypeEnum$json = {
   '1': 'GenderTypeEnum',
-  '4': const [GenderTypeEnum_GenderType$json],
+  '4': [GenderTypeEnum_GenderType$json],
 };
 
-const GenderTypeEnum_GenderType$json = const {
+const GenderTypeEnum_GenderType$json = {
   '1': 'GenderType',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'MALE', '2': 10},
-    const {'1': 'FEMALE', '2': 11},
-    const {'1': 'UNDETERMINED', '2': 20},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'MALE', '2': 10},
+    {'1': 'FEMALE', '2': 11},
+    {'1': 'UNDETERMINED', '2': 20},
   ],
 };
-

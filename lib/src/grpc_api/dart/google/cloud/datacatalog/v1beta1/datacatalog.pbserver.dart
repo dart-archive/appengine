@@ -15,23 +15,30 @@ import 'datacatalog.pbjson.dart';
 export 'datacatalog.pb.dart';
 
 abstract class DataCatalogServiceBase extends $pb.GeneratedService {
-  $async.Future<Entry> lookupEntry($pb.ServerContext ctx, LookupEntryRequest request);
+  $async.Future<Entry> lookupEntry(
+      $pb.ServerContext ctx, LookupEntryRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'LookupEntry': return LookupEntryRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'LookupEntry':
+        return LookupEntryRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'LookupEntry': return this.lookupEntry(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'LookupEntry':
+        return this.lookupEntry(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => DataCatalogServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => DataCatalogServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      DataCatalogServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => DataCatalogServiceBase$messageJson;
 }
-

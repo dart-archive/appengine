@@ -4,24 +4,30 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Range extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Range', package: const $pb.PackageName('google.genomics.v1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Range',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'referenceName')
     ..aInt64(2, 'start')
     ..aInt64(3, 'end')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   Range() : super();
-  Range.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Range.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Range.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Range.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Range clone() => Range()..mergeFromMessage(this);
-  Range copyWith(void Function(Range) updates) => super.copyWith((message) => updates(message as Range));
+  Range copyWith(void Function(Range) updates) =>
+      super.copyWith((message) => updates(message as Range));
   $pb.BuilderInfo get info_ => _i;
   static Range create() => Range();
   Range createEmptyInstance() => create();
@@ -30,18 +36,26 @@ class Range extends $pb.GeneratedMessage {
   static Range _defaultInstance;
 
   $core.String get referenceName => $_getS(0, '');
-  set referenceName($core.String v) { $_setString(0, v); }
+  set referenceName($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasReferenceName() => $_has(0);
   void clearReferenceName() => clearField(1);
 
   Int64 get start => $_getI64(1);
-  set start(Int64 v) { $_setInt64(1, v); }
+  set start(Int64 v) {
+    $_setInt64(1, v);
+  }
+
   $core.bool hasStart() => $_has(1);
   void clearStart() => clearField(2);
 
   Int64 get end => $_getI64(2);
-  set end(Int64 v) { $_setInt64(2, v); }
+  set end(Int64 v) {
+    $_setInt64(2, v);
+  }
+
   $core.bool hasEnd() => $_has(2);
   void clearEnd() => clearField(3);
 }
-

@@ -16,26 +16,35 @@ import 'ad_group_ad_service.pbjson.dart';
 export 'ad_group_ad_service.pb.dart';
 
 abstract class AdGroupAdServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.AdGroupAd> getAdGroupAd($pb.ServerContext ctx, GetAdGroupAdRequest request);
-  $async.Future<MutateAdGroupAdsResponse> mutateAdGroupAds($pb.ServerContext ctx, MutateAdGroupAdsRequest request);
+  $async.Future<$0.AdGroupAd> getAdGroupAd(
+      $pb.ServerContext ctx, GetAdGroupAdRequest request);
+  $async.Future<MutateAdGroupAdsResponse> mutateAdGroupAds(
+      $pb.ServerContext ctx, MutateAdGroupAdsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetAdGroupAd': return GetAdGroupAdRequest();
-      case 'MutateAdGroupAds': return MutateAdGroupAdsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdGroupAd':
+        return GetAdGroupAdRequest();
+      case 'MutateAdGroupAds':
+        return MutateAdGroupAdsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetAdGroupAd': return this.getAdGroupAd(ctx, request);
-      case 'MutateAdGroupAds': return this.mutateAdGroupAds(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdGroupAd':
+        return this.getAdGroupAd(ctx, request);
+      case 'MutateAdGroupAds':
+        return this.mutateAdGroupAds(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => AdGroupAdServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => AdGroupAdServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AdGroupAdServiceBase$messageJson;
 }
-

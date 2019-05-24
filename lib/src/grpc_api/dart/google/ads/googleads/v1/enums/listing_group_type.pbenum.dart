@@ -9,21 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ListingGroupTypeEnum_ListingGroupType extends $pb.ProtobufEnum {
-  static const ListingGroupTypeEnum_ListingGroupType UNSPECIFIED = ListingGroupTypeEnum_ListingGroupType._(0, 'UNSPECIFIED');
-  static const ListingGroupTypeEnum_ListingGroupType UNKNOWN = ListingGroupTypeEnum_ListingGroupType._(1, 'UNKNOWN');
-  static const ListingGroupTypeEnum_ListingGroupType SUBDIVISION = ListingGroupTypeEnum_ListingGroupType._(2, 'SUBDIVISION');
-  static const ListingGroupTypeEnum_ListingGroupType UNIT = ListingGroupTypeEnum_ListingGroupType._(3, 'UNIT');
+  static const ListingGroupTypeEnum_ListingGroupType UNSPECIFIED =
+      ListingGroupTypeEnum_ListingGroupType._(0, 'UNSPECIFIED');
+  static const ListingGroupTypeEnum_ListingGroupType UNKNOWN =
+      ListingGroupTypeEnum_ListingGroupType._(1, 'UNKNOWN');
+  static const ListingGroupTypeEnum_ListingGroupType SUBDIVISION =
+      ListingGroupTypeEnum_ListingGroupType._(2, 'SUBDIVISION');
+  static const ListingGroupTypeEnum_ListingGroupType UNIT =
+      ListingGroupTypeEnum_ListingGroupType._(3, 'UNIT');
 
-  static const $core.List<ListingGroupTypeEnum_ListingGroupType> values = <ListingGroupTypeEnum_ListingGroupType> [
+  static const $core.List<ListingGroupTypeEnum_ListingGroupType> values =
+      <ListingGroupTypeEnum_ListingGroupType>[
     UNSPECIFIED,
     UNKNOWN,
     SUBDIVISION,
     UNIT,
   ];
 
-  static final $core.Map<$core.int, ListingGroupTypeEnum_ListingGroupType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ListingGroupTypeEnum_ListingGroupType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, ListingGroupTypeEnum_ListingGroupType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ListingGroupTypeEnum_ListingGroupType valueOf($core.int value) =>
+      _byValue[value];
 
-  const ListingGroupTypeEnum_ListingGroupType._($core.int v, $core.String n) : super(v, n);
+  const ListingGroupTypeEnum_ListingGroupType._($core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class QualityScoreBucketEnum_QualityScoreBucket extends $pb.ProtobufEnum {
-  static const QualityScoreBucketEnum_QualityScoreBucket UNSPECIFIED = QualityScoreBucketEnum_QualityScoreBucket._(0, 'UNSPECIFIED');
-  static const QualityScoreBucketEnum_QualityScoreBucket UNKNOWN = QualityScoreBucketEnum_QualityScoreBucket._(1, 'UNKNOWN');
-  static const QualityScoreBucketEnum_QualityScoreBucket BELOW_AVERAGE = QualityScoreBucketEnum_QualityScoreBucket._(2, 'BELOW_AVERAGE');
-  static const QualityScoreBucketEnum_QualityScoreBucket AVERAGE = QualityScoreBucketEnum_QualityScoreBucket._(3, 'AVERAGE');
-  static const QualityScoreBucketEnum_QualityScoreBucket ABOVE_AVERAGE = QualityScoreBucketEnum_QualityScoreBucket._(4, 'ABOVE_AVERAGE');
+  static const QualityScoreBucketEnum_QualityScoreBucket UNSPECIFIED =
+      QualityScoreBucketEnum_QualityScoreBucket._(0, 'UNSPECIFIED');
+  static const QualityScoreBucketEnum_QualityScoreBucket UNKNOWN =
+      QualityScoreBucketEnum_QualityScoreBucket._(1, 'UNKNOWN');
+  static const QualityScoreBucketEnum_QualityScoreBucket BELOW_AVERAGE =
+      QualityScoreBucketEnum_QualityScoreBucket._(2, 'BELOW_AVERAGE');
+  static const QualityScoreBucketEnum_QualityScoreBucket AVERAGE =
+      QualityScoreBucketEnum_QualityScoreBucket._(3, 'AVERAGE');
+  static const QualityScoreBucketEnum_QualityScoreBucket ABOVE_AVERAGE =
+      QualityScoreBucketEnum_QualityScoreBucket._(4, 'ABOVE_AVERAGE');
 
-  static const $core.List<QualityScoreBucketEnum_QualityScoreBucket> values = <QualityScoreBucketEnum_QualityScoreBucket> [
+  static const $core.List<QualityScoreBucketEnum_QualityScoreBucket> values =
+      <QualityScoreBucketEnum_QualityScoreBucket>[
     UNSPECIFIED,
     UNKNOWN,
     BELOW_AVERAGE,
@@ -23,9 +29,11 @@ class QualityScoreBucketEnum_QualityScoreBucket extends $pb.ProtobufEnum {
     ABOVE_AVERAGE,
   ];
 
-  static final $core.Map<$core.int, QualityScoreBucketEnum_QualityScoreBucket> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static QualityScoreBucketEnum_QualityScoreBucket valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, QualityScoreBucketEnum_QualityScoreBucket>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static QualityScoreBucketEnum_QualityScoreBucket valueOf($core.int value) =>
+      _byValue[value];
 
-  const QualityScoreBucketEnum_QualityScoreBucket._($core.int v, $core.String n) : super(v, n);
+  const QualityScoreBucketEnum_QualityScoreBucket._($core.int v, $core.String n)
+      : super(v, n);
 }
-

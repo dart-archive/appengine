@@ -9,7 +9,8 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class DayOfWeek extends $pb.ProtobufEnum {
-  static const DayOfWeek DAY_OF_WEEK_UNSPECIFIED = DayOfWeek._(0, 'DAY_OF_WEEK_UNSPECIFIED');
+  static const DayOfWeek DAY_OF_WEEK_UNSPECIFIED =
+      DayOfWeek._(0, 'DAY_OF_WEEK_UNSPECIFIED');
   static const DayOfWeek MONDAY = DayOfWeek._(1, 'MONDAY');
   static const DayOfWeek TUESDAY = DayOfWeek._(2, 'TUESDAY');
   static const DayOfWeek WEDNESDAY = DayOfWeek._(3, 'WEDNESDAY');
@@ -18,7 +19,7 @@ class DayOfWeek extends $pb.ProtobufEnum {
   static const DayOfWeek SATURDAY = DayOfWeek._(6, 'SATURDAY');
   static const DayOfWeek SUNDAY = DayOfWeek._(7, 'SUNDAY');
 
-  static const $core.List<DayOfWeek> values = <DayOfWeek> [
+  static const $core.List<DayOfWeek> values = <DayOfWeek>[
     DAY_OF_WEEK_UNSPECIFIED,
     MONDAY,
     TUESDAY,
@@ -29,9 +30,9 @@ class DayOfWeek extends $pb.ProtobufEnum {
     SUNDAY,
   ];
 
-  static final $core.Map<$core.int, DayOfWeek> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, DayOfWeek> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static DayOfWeek valueOf($core.int value) => _byValue[value];
 
   const DayOfWeek._($core.int v, $core.String n) : super(v, n);
 }
-

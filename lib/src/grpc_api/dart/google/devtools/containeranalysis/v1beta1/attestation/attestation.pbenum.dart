@@ -9,17 +9,22 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PgpSignedAttestation_ContentType extends $pb.ProtobufEnum {
-  static const PgpSignedAttestation_ContentType CONTENT_TYPE_UNSPECIFIED = PgpSignedAttestation_ContentType._(0, 'CONTENT_TYPE_UNSPECIFIED');
-  static const PgpSignedAttestation_ContentType SIMPLE_SIGNING_JSON = PgpSignedAttestation_ContentType._(1, 'SIMPLE_SIGNING_JSON');
+  static const PgpSignedAttestation_ContentType CONTENT_TYPE_UNSPECIFIED =
+      PgpSignedAttestation_ContentType._(0, 'CONTENT_TYPE_UNSPECIFIED');
+  static const PgpSignedAttestation_ContentType SIMPLE_SIGNING_JSON =
+      PgpSignedAttestation_ContentType._(1, 'SIMPLE_SIGNING_JSON');
 
-  static const $core.List<PgpSignedAttestation_ContentType> values = <PgpSignedAttestation_ContentType> [
+  static const $core.List<PgpSignedAttestation_ContentType> values =
+      <PgpSignedAttestation_ContentType>[
     CONTENT_TYPE_UNSPECIFIED,
     SIMPLE_SIGNING_JSON,
   ];
 
-  static final $core.Map<$core.int, PgpSignedAttestation_ContentType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PgpSignedAttestation_ContentType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, PgpSignedAttestation_ContentType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PgpSignedAttestation_ContentType valueOf($core.int value) =>
+      _byValue[value];
 
-  const PgpSignedAttestation_ContentType._($core.int v, $core.String n) : super(v, n);
+  const PgpSignedAttestation_ContentType._($core.int v, $core.String n)
+      : super(v, n);
 }
-

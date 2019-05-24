@@ -7,23 +7,28 @@
 import '../resources/search_term_view.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetSearchTermViewRequest$json = const {
+const GetSearchTermViewRequest$json = {
   '1': 'GetSearchTermViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const SearchTermViewServiceBase$json = const {
+const SearchTermViewServiceBase$json = {
   '1': 'SearchTermViewService',
-  '2': const [
-    const {'1': 'GetSearchTermView', '2': '.google.ads.googleads.v1.services.GetSearchTermViewRequest', '3': '.google.ads.googleads.v1.resources.SearchTermView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetSearchTermView',
+      '2': '.google.ads.googleads.v1.services.GetSearchTermViewRequest',
+      '3': '.google.ads.googleads.v1.resources.SearchTermView',
+      '4': {}
+    },
   ],
 };
 
-const SearchTermViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetSearchTermViewRequest': GetSearchTermViewRequest$json,
+const SearchTermViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetSearchTermViewRequest':
+      GetSearchTermViewRequest$json,
   '.google.ads.googleads.v1.resources.SearchTermView': $0.SearchTermView$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

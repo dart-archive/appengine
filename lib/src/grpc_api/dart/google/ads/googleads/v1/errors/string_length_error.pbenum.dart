@@ -9,21 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class StringLengthErrorEnum_StringLengthError extends $pb.ProtobufEnum {
-  static const StringLengthErrorEnum_StringLengthError UNSPECIFIED = StringLengthErrorEnum_StringLengthError._(0, 'UNSPECIFIED');
-  static const StringLengthErrorEnum_StringLengthError UNKNOWN = StringLengthErrorEnum_StringLengthError._(1, 'UNKNOWN');
-  static const StringLengthErrorEnum_StringLengthError TOO_SHORT = StringLengthErrorEnum_StringLengthError._(2, 'TOO_SHORT');
-  static const StringLengthErrorEnum_StringLengthError TOO_LONG = StringLengthErrorEnum_StringLengthError._(3, 'TOO_LONG');
+  static const StringLengthErrorEnum_StringLengthError UNSPECIFIED =
+      StringLengthErrorEnum_StringLengthError._(0, 'UNSPECIFIED');
+  static const StringLengthErrorEnum_StringLengthError UNKNOWN =
+      StringLengthErrorEnum_StringLengthError._(1, 'UNKNOWN');
+  static const StringLengthErrorEnum_StringLengthError TOO_SHORT =
+      StringLengthErrorEnum_StringLengthError._(2, 'TOO_SHORT');
+  static const StringLengthErrorEnum_StringLengthError TOO_LONG =
+      StringLengthErrorEnum_StringLengthError._(3, 'TOO_LONG');
 
-  static const $core.List<StringLengthErrorEnum_StringLengthError> values = <StringLengthErrorEnum_StringLengthError> [
+  static const $core.List<StringLengthErrorEnum_StringLengthError> values =
+      <StringLengthErrorEnum_StringLengthError>[
     UNSPECIFIED,
     UNKNOWN,
     TOO_SHORT,
     TOO_LONG,
   ];
 
-  static final $core.Map<$core.int, StringLengthErrorEnum_StringLengthError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static StringLengthErrorEnum_StringLengthError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, StringLengthErrorEnum_StringLengthError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static StringLengthErrorEnum_StringLengthError valueOf($core.int value) =>
+      _byValue[value];
 
-  const StringLengthErrorEnum_StringLengthError._($core.int v, $core.String n) : super(v, n);
+  const StringLengthErrorEnum_StringLengthError._($core.int v, $core.String n)
+      : super(v, n);
 }
-

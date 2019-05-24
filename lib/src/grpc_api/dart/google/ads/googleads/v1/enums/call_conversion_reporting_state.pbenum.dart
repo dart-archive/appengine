@@ -8,14 +8,31 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class CallConversionReportingStateEnum_CallConversionReportingState extends $pb.ProtobufEnum {
-  static const CallConversionReportingStateEnum_CallConversionReportingState UNSPECIFIED = CallConversionReportingStateEnum_CallConversionReportingState._(0, 'UNSPECIFIED');
-  static const CallConversionReportingStateEnum_CallConversionReportingState UNKNOWN = CallConversionReportingStateEnum_CallConversionReportingState._(1, 'UNKNOWN');
-  static const CallConversionReportingStateEnum_CallConversionReportingState DISABLED = CallConversionReportingStateEnum_CallConversionReportingState._(2, 'DISABLED');
-  static const CallConversionReportingStateEnum_CallConversionReportingState USE_ACCOUNT_LEVEL_CALL_CONVERSION_ACTION = CallConversionReportingStateEnum_CallConversionReportingState._(3, 'USE_ACCOUNT_LEVEL_CALL_CONVERSION_ACTION');
-  static const CallConversionReportingStateEnum_CallConversionReportingState USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION = CallConversionReportingStateEnum_CallConversionReportingState._(4, 'USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION');
+class CallConversionReportingStateEnum_CallConversionReportingState
+    extends $pb.ProtobufEnum {
+  static const CallConversionReportingStateEnum_CallConversionReportingState
+      UNSPECIFIED =
+      CallConversionReportingStateEnum_CallConversionReportingState._(
+          0, 'UNSPECIFIED');
+  static const CallConversionReportingStateEnum_CallConversionReportingState
+      UNKNOWN = CallConversionReportingStateEnum_CallConversionReportingState._(
+          1, 'UNKNOWN');
+  static const CallConversionReportingStateEnum_CallConversionReportingState
+      DISABLED =
+      CallConversionReportingStateEnum_CallConversionReportingState._(
+          2, 'DISABLED');
+  static const CallConversionReportingStateEnum_CallConversionReportingState
+      USE_ACCOUNT_LEVEL_CALL_CONVERSION_ACTION =
+      CallConversionReportingStateEnum_CallConversionReportingState._(
+          3, 'USE_ACCOUNT_LEVEL_CALL_CONVERSION_ACTION');
+  static const CallConversionReportingStateEnum_CallConversionReportingState
+      USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION =
+      CallConversionReportingStateEnum_CallConversionReportingState._(
+          4, 'USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION');
 
-  static const $core.List<CallConversionReportingStateEnum_CallConversionReportingState> values = <CallConversionReportingStateEnum_CallConversionReportingState> [
+  static const $core
+          .List<CallConversionReportingStateEnum_CallConversionReportingState>
+      values = <CallConversionReportingStateEnum_CallConversionReportingState>[
     UNSPECIFIED,
     UNKNOWN,
     DISABLED,
@@ -23,9 +40,14 @@ class CallConversionReportingStateEnum_CallConversionReportingState extends $pb.
     USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION,
   ];
 
-  static final $core.Map<$core.int, CallConversionReportingStateEnum_CallConversionReportingState> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CallConversionReportingStateEnum_CallConversionReportingState valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          CallConversionReportingStateEnum_CallConversionReportingState>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CallConversionReportingStateEnum_CallConversionReportingState valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const CallConversionReportingStateEnum_CallConversionReportingState._($core.int v, $core.String n) : super(v, n);
+  const CallConversionReportingStateEnum_CallConversionReportingState._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

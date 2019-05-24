@@ -16,26 +16,35 @@ import 'feed_item_service.pbjson.dart';
 export 'feed_item_service.pb.dart';
 
 abstract class FeedItemServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.FeedItem> getFeedItem($pb.ServerContext ctx, GetFeedItemRequest request);
-  $async.Future<MutateFeedItemsResponse> mutateFeedItems($pb.ServerContext ctx, MutateFeedItemsRequest request);
+  $async.Future<$0.FeedItem> getFeedItem(
+      $pb.ServerContext ctx, GetFeedItemRequest request);
+  $async.Future<MutateFeedItemsResponse> mutateFeedItems(
+      $pb.ServerContext ctx, MutateFeedItemsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetFeedItem': return GetFeedItemRequest();
-      case 'MutateFeedItems': return MutateFeedItemsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetFeedItem':
+        return GetFeedItemRequest();
+      case 'MutateFeedItems':
+        return MutateFeedItemsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetFeedItem': return this.getFeedItem(ctx, request);
-      case 'MutateFeedItems': return this.mutateFeedItems(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetFeedItem':
+        return this.getFeedItem(ctx, request);
+      case 'MutateFeedItems':
+        return this.mutateFeedItems(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => FeedItemServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => FeedItemServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => FeedItemServiceBase$messageJson;
 }
-

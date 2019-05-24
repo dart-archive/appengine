@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PaymentModeEnum_PaymentMode extends $pb.ProtobufEnum {
-  static const PaymentModeEnum_PaymentMode UNSPECIFIED = PaymentModeEnum_PaymentMode._(0, 'UNSPECIFIED');
-  static const PaymentModeEnum_PaymentMode UNKNOWN = PaymentModeEnum_PaymentMode._(1, 'UNKNOWN');
-  static const PaymentModeEnum_PaymentMode CLICKS = PaymentModeEnum_PaymentMode._(4, 'CLICKS');
-  static const PaymentModeEnum_PaymentMode CONVERSION_VALUE = PaymentModeEnum_PaymentMode._(5, 'CONVERSION_VALUE');
-  static const PaymentModeEnum_PaymentMode CONVERSIONS = PaymentModeEnum_PaymentMode._(6, 'CONVERSIONS');
+  static const PaymentModeEnum_PaymentMode UNSPECIFIED =
+      PaymentModeEnum_PaymentMode._(0, 'UNSPECIFIED');
+  static const PaymentModeEnum_PaymentMode UNKNOWN =
+      PaymentModeEnum_PaymentMode._(1, 'UNKNOWN');
+  static const PaymentModeEnum_PaymentMode CLICKS =
+      PaymentModeEnum_PaymentMode._(4, 'CLICKS');
+  static const PaymentModeEnum_PaymentMode CONVERSION_VALUE =
+      PaymentModeEnum_PaymentMode._(5, 'CONVERSION_VALUE');
+  static const PaymentModeEnum_PaymentMode CONVERSIONS =
+      PaymentModeEnum_PaymentMode._(6, 'CONVERSIONS');
 
-  static const $core.List<PaymentModeEnum_PaymentMode> values = <PaymentModeEnum_PaymentMode> [
+  static const $core.List<PaymentModeEnum_PaymentMode> values =
+      <PaymentModeEnum_PaymentMode>[
     UNSPECIFIED,
     UNKNOWN,
     CLICKS,
@@ -23,9 +29,11 @@ class PaymentModeEnum_PaymentMode extends $pb.ProtobufEnum {
     CONVERSIONS,
   ];
 
-  static final $core.Map<$core.int, PaymentModeEnum_PaymentMode> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PaymentModeEnum_PaymentMode valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, PaymentModeEnum_PaymentMode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PaymentModeEnum_PaymentMode valueOf($core.int value) =>
+      _byValue[value];
 
-  const PaymentModeEnum_PaymentMode._($core.int v, $core.String n) : super(v, n);
+  const PaymentModeEnum_PaymentMode._($core.int v, $core.String n)
+      : super(v, n);
 }
-

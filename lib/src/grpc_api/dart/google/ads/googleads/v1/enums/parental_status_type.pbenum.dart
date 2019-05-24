@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ParentalStatusTypeEnum_ParentalStatusType extends $pb.ProtobufEnum {
-  static const ParentalStatusTypeEnum_ParentalStatusType UNSPECIFIED = ParentalStatusTypeEnum_ParentalStatusType._(0, 'UNSPECIFIED');
-  static const ParentalStatusTypeEnum_ParentalStatusType UNKNOWN = ParentalStatusTypeEnum_ParentalStatusType._(1, 'UNKNOWN');
-  static const ParentalStatusTypeEnum_ParentalStatusType PARENT = ParentalStatusTypeEnum_ParentalStatusType._(300, 'PARENT');
-  static const ParentalStatusTypeEnum_ParentalStatusType NOT_A_PARENT = ParentalStatusTypeEnum_ParentalStatusType._(301, 'NOT_A_PARENT');
-  static const ParentalStatusTypeEnum_ParentalStatusType UNDETERMINED = ParentalStatusTypeEnum_ParentalStatusType._(302, 'UNDETERMINED');
+  static const ParentalStatusTypeEnum_ParentalStatusType UNSPECIFIED =
+      ParentalStatusTypeEnum_ParentalStatusType._(0, 'UNSPECIFIED');
+  static const ParentalStatusTypeEnum_ParentalStatusType UNKNOWN =
+      ParentalStatusTypeEnum_ParentalStatusType._(1, 'UNKNOWN');
+  static const ParentalStatusTypeEnum_ParentalStatusType PARENT =
+      ParentalStatusTypeEnum_ParentalStatusType._(300, 'PARENT');
+  static const ParentalStatusTypeEnum_ParentalStatusType NOT_A_PARENT =
+      ParentalStatusTypeEnum_ParentalStatusType._(301, 'NOT_A_PARENT');
+  static const ParentalStatusTypeEnum_ParentalStatusType UNDETERMINED =
+      ParentalStatusTypeEnum_ParentalStatusType._(302, 'UNDETERMINED');
 
-  static const $core.List<ParentalStatusTypeEnum_ParentalStatusType> values = <ParentalStatusTypeEnum_ParentalStatusType> [
+  static const $core.List<ParentalStatusTypeEnum_ParentalStatusType> values =
+      <ParentalStatusTypeEnum_ParentalStatusType>[
     UNSPECIFIED,
     UNKNOWN,
     PARENT,
@@ -23,9 +29,11 @@ class ParentalStatusTypeEnum_ParentalStatusType extends $pb.ProtobufEnum {
     UNDETERMINED,
   ];
 
-  static final $core.Map<$core.int, ParentalStatusTypeEnum_ParentalStatusType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ParentalStatusTypeEnum_ParentalStatusType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, ParentalStatusTypeEnum_ParentalStatusType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ParentalStatusTypeEnum_ParentalStatusType valueOf($core.int value) =>
+      _byValue[value];
 
-  const ParentalStatusTypeEnum_ParentalStatusType._($core.int v, $core.String n) : super(v, n);
+  const ParentalStatusTypeEnum_ParentalStatusType._($core.int v, $core.String n)
+      : super(v, n);
 }
-

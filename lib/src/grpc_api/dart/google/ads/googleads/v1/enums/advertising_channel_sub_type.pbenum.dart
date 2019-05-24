@@ -8,24 +8,67 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType extends $pb.ProtobufEnum {
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType UNSPECIFIED = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(0, 'UNSPECIFIED');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType UNKNOWN = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(1, 'UNKNOWN');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType SEARCH_MOBILE_APP = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(2, 'SEARCH_MOBILE_APP');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType DISPLAY_MOBILE_APP = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(3, 'DISPLAY_MOBILE_APP');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType SEARCH_EXPRESS = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(4, 'SEARCH_EXPRESS');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType DISPLAY_EXPRESS = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(5, 'DISPLAY_EXPRESS');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType SHOPPING_SMART_ADS = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(6, 'SHOPPING_SMART_ADS');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType DISPLAY_GMAIL_AD = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(7, 'DISPLAY_GMAIL_AD');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType DISPLAY_SMART_CAMPAIGN = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(8, 'DISPLAY_SMART_CAMPAIGN');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType VIDEO_OUTSTREAM = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(9, 'VIDEO_OUTSTREAM');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType VIDEO_ACTION = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(10, 'VIDEO_ACTION');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType VIDEO_NON_SKIPPABLE = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(11, 'VIDEO_NON_SKIPPABLE');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType APP_CAMPAIGN = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(12, 'APP_CAMPAIGN');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType APP_CAMPAIGN_FOR_ENGAGEMENT = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(13, 'APP_CAMPAIGN_FOR_ENGAGEMENT');
-  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType SHOPPING_COMPARISON_LISTING_ADS = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(15, 'SHOPPING_COMPARISON_LISTING_ADS');
+class AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+    extends $pb.ProtobufEnum {
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      UNSPECIFIED = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          0, 'UNSPECIFIED');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType UNKNOWN =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(1, 'UNKNOWN');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      SEARCH_MOBILE_APP =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          2, 'SEARCH_MOBILE_APP');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      DISPLAY_MOBILE_APP =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          3, 'DISPLAY_MOBILE_APP');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      SEARCH_EXPRESS =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          4, 'SEARCH_EXPRESS');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      DISPLAY_EXPRESS =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          5, 'DISPLAY_EXPRESS');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      SHOPPING_SMART_ADS =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          6, 'SHOPPING_SMART_ADS');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      DISPLAY_GMAIL_AD =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          7, 'DISPLAY_GMAIL_AD');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      DISPLAY_SMART_CAMPAIGN =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          8, 'DISPLAY_SMART_CAMPAIGN');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      VIDEO_OUTSTREAM =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          9, 'VIDEO_OUTSTREAM');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      VIDEO_ACTION = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          10, 'VIDEO_ACTION');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      VIDEO_NON_SKIPPABLE =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          11, 'VIDEO_NON_SKIPPABLE');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      APP_CAMPAIGN = AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          12, 'APP_CAMPAIGN');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      APP_CAMPAIGN_FOR_ENGAGEMENT =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          13, 'APP_CAMPAIGN_FOR_ENGAGEMENT');
+  static const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType
+      SHOPPING_COMPARISON_LISTING_ADS =
+      AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+          15, 'SHOPPING_COMPARISON_LISTING_ADS');
 
-  static const $core.List<AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType> values = <AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType> [
+  static const $core
+          .List<AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType>
+      values = <AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType>[
     UNSPECIFIED,
     UNKNOWN,
     SEARCH_MOBILE_APP,
@@ -43,9 +86,14 @@ class AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType extends $pb.Protob
     SHOPPING_COMPARISON_LISTING_ADS,
   ];
 
-  static final $core.Map<$core.int, AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._($core.int v, $core.String n) : super(v, n);
+  const AdvertisingChannelSubTypeEnum_AdvertisingChannelSubType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

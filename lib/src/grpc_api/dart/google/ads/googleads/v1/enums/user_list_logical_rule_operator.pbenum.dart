@@ -8,14 +8,26 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator extends $pb.ProtobufEnum {
-  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator UNSPECIFIED = UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(0, 'UNSPECIFIED');
-  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator UNKNOWN = UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(1, 'UNKNOWN');
-  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator ALL = UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(2, 'ALL');
-  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator ANY = UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(3, 'ANY');
-  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator NONE = UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(4, 'NONE');
+class UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator
+    extends $pb.ProtobufEnum {
+  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator
+      UNSPECIFIED =
+      UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(
+          0, 'UNSPECIFIED');
+  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator
+      UNKNOWN = UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(
+          1, 'UNKNOWN');
+  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator ALL =
+      UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(2, 'ALL');
+  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator ANY =
+      UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(3, 'ANY');
+  static const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator
+      NONE =
+      UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(4, 'NONE');
 
-  static const $core.List<UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator> values = <UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator> [
+  static const $core
+          .List<UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator>
+      values = <UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator>[
     UNSPECIFIED,
     UNKNOWN,
     ALL,
@@ -23,9 +35,14 @@ class UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator extends $pb.Pr
     NONE,
   ];
 
-  static final $core.Map<$core.int, UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._($core.int v, $core.String n) : super(v, n);
+  const UserListLogicalRuleOperatorEnum_UserListLogicalRuleOperator._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

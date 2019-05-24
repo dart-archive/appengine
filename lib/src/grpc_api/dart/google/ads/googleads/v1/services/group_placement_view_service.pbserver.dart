@@ -16,23 +16,30 @@ import 'group_placement_view_service.pbjson.dart';
 export 'group_placement_view_service.pb.dart';
 
 abstract class GroupPlacementViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.GroupPlacementView> getGroupPlacementView($pb.ServerContext ctx, GetGroupPlacementViewRequest request);
+  $async.Future<$0.GroupPlacementView> getGroupPlacementView(
+      $pb.ServerContext ctx, GetGroupPlacementViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetGroupPlacementView': return GetGroupPlacementViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetGroupPlacementView':
+        return GetGroupPlacementViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetGroupPlacementView': return this.getGroupPlacementView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetGroupPlacementView':
+        return this.getGroupPlacementView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => GroupPlacementViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => GroupPlacementViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      GroupPlacementViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => GroupPlacementViewServiceBase$messageJson;
 }
-

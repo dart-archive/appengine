@@ -4,50 +4,61 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const GetFileRequest$json = const {
+const GetFileRequest$json = {
   '1': 'GetFileRequest',
-  '2': const [
-    const {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
-    const {'1': 'read_offset', '3': 2, '4': 1, '5': 3, '10': 'readOffset'},
-    const {'1': 'read_limit', '3': 3, '4': 1, '5': 3, '10': 'readLimit'},
+  '2': [
+    {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+    {'1': 'read_offset', '3': 2, '4': 1, '5': 3, '10': 'readOffset'},
+    {'1': 'read_limit', '3': 3, '4': 1, '5': 3, '10': 'readLimit'},
   ],
 };
 
-const GetFileResponse$json = const {
+const GetFileResponse$json = {
   '1': 'GetFileResponse',
-  '2': const [
-    const {'1': 'data', '3': 1, '4': 1, '5': 12, '10': 'data'},
+  '2': [
+    {'1': 'data', '3': 1, '4': 1, '5': 12, '10': 'data'},
   ],
 };
 
-const GetFileTailRequest$json = const {
+const GetFileTailRequest$json = {
   '1': 'GetFileTailRequest',
-  '2': const [
-    const {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
-    const {'1': 'read_offset', '3': 2, '4': 1, '5': 3, '10': 'readOffset'},
-    const {'1': 'read_limit', '3': 3, '4': 1, '5': 3, '10': 'readLimit'},
+  '2': [
+    {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+    {'1': 'read_offset', '3': 2, '4': 1, '5': 3, '10': 'readOffset'},
+    {'1': 'read_limit', '3': 3, '4': 1, '5': 3, '10': 'readLimit'},
   ],
 };
 
-const GetFileTailResponse$json = const {
+const GetFileTailResponse$json = {
   '1': 'GetFileTailResponse',
-  '2': const [
-    const {'1': 'data', '3': 1, '4': 1, '5': 12, '10': 'data'},
+  '2': [
+    {'1': 'data', '3': 1, '4': 1, '5': 12, '10': 'data'},
   ],
 };
 
-const ResultStoreFileDownloadServiceBase$json = const {
+const ResultStoreFileDownloadServiceBase$json = {
   '1': 'ResultStoreFileDownload',
-  '2': const [
-    const {'1': 'GetFile', '2': '.google.devtools.resultstore.v2.GetFileRequest', '3': '.google.devtools.resultstore.v2.GetFileResponse', '4': const {}, '6': true},
-    const {'1': 'GetFileTail', '2': '.google.devtools.resultstore.v2.GetFileTailRequest', '3': '.google.devtools.resultstore.v2.GetFileTailResponse', '4': const {}},
+  '2': [
+    {
+      '1': 'GetFile',
+      '2': '.google.devtools.resultstore.v2.GetFileRequest',
+      '3': '.google.devtools.resultstore.v2.GetFileResponse',
+      '4': {},
+      '6': true
+    },
+    {
+      '1': 'GetFileTail',
+      '2': '.google.devtools.resultstore.v2.GetFileTailRequest',
+      '3': '.google.devtools.resultstore.v2.GetFileTailResponse',
+      '4': {}
+    },
   ],
 };
 
-const ResultStoreFileDownloadServiceBase$messageJson = const {
+const ResultStoreFileDownloadServiceBase$messageJson = {
   '.google.devtools.resultstore.v2.GetFileRequest': GetFileRequest$json,
   '.google.devtools.resultstore.v2.GetFileResponse': GetFileResponse$json,
   '.google.devtools.resultstore.v2.GetFileTailRequest': GetFileTailRequest$json,
-  '.google.devtools.resultstore.v2.GetFileTailResponse': GetFileTailResponse$json,
+  '.google.devtools.resultstore.v2.GetFileTailResponse':
+      GetFileTailResponse$json,
 };
-

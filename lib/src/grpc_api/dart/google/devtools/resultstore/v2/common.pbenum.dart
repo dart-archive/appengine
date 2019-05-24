@@ -9,7 +9,8 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Language extends $pb.ProtobufEnum {
-  static const Language LANGUAGE_UNSPECIFIED = Language._(0, 'LANGUAGE_UNSPECIFIED');
+  static const Language LANGUAGE_UNSPECIFIED =
+      Language._(0, 'LANGUAGE_UNSPECIFIED');
   static const Language NONE = Language._(1, 'NONE');
   static const Language ANDROID = Language._(2, 'ANDROID');
   static const Language AS = Language._(3, 'AS');
@@ -31,7 +32,7 @@ class Language extends $pb.ProtobufEnum {
   static const Language SCALA = Language._(20, 'SCALA');
   static const Language PROTO = Language._(21, 'PROTO');
 
-  static const $core.List<Language> values = <Language> [
+  static const $core.List<Language> values = <Language>[
     LANGUAGE_UNSPECIFIED,
     NONE,
     ANDROID,
@@ -55,7 +56,8 @@ class Language extends $pb.ProtobufEnum {
     PROTO,
   ];
 
-  static final $core.Map<$core.int, Language> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Language> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Language valueOf($core.int value) => _byValue[value];
 
   const Language._($core.int v, $core.String n) : super(v, n);
@@ -77,7 +79,7 @@ class Status extends $pb.ProtobufEnum {
   static const Status UNKNOWN = Status._(12, 'UNKNOWN');
   static const Status SKIPPED = Status._(13, 'SKIPPED');
 
-  static const $core.List<Status> values = <Status> [
+  static const $core.List<Status> values = <Status>[
     STATUS_UNSPECIFIED,
     BUILDING,
     BUILT,
@@ -94,9 +96,9 @@ class Status extends $pb.ProtobufEnum {
     SKIPPED,
   ];
 
-  static final $core.Map<$core.int, Status> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Status> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Status valueOf($core.int value) => _byValue[value];
 
   const Status._($core.int v, $core.String n) : super(v, n);
 }
-

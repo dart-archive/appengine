@@ -8,19 +8,53 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator extends $pb.ProtobufEnum {
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator UNSPECIFIED = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(0, 'UNSPECIFIED');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator UNKNOWN = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(1, 'UNKNOWN');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator CONTAINS = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(2, 'CONTAINS');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator EQUALS = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(3, 'EQUALS');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator STARTS_WITH = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(4, 'STARTS_WITH');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator ENDS_WITH = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(5, 'ENDS_WITH');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator NOT_EQUALS = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(6, 'NOT_EQUALS');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator NOT_CONTAINS = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(7, 'NOT_CONTAINS');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator NOT_STARTS_WITH = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(8, 'NOT_STARTS_WITH');
-  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator NOT_ENDS_WITH = UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(9, 'NOT_ENDS_WITH');
+class UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+    extends $pb.ProtobufEnum {
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      UNSPECIFIED =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          0, 'UNSPECIFIED');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      UNKNOWN =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          1, 'UNKNOWN');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      CONTAINS =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          2, 'CONTAINS');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      EQUALS =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          3, 'EQUALS');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      STARTS_WITH =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          4, 'STARTS_WITH');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      ENDS_WITH =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          5, 'ENDS_WITH');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      NOT_EQUALS =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          6, 'NOT_EQUALS');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      NOT_CONTAINS =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          7, 'NOT_CONTAINS');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      NOT_STARTS_WITH =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          8, 'NOT_STARTS_WITH');
+  static const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      NOT_ENDS_WITH =
+      UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+          9, 'NOT_ENDS_WITH');
 
-  static const $core.List<UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator> values = <UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator> [
+  static const $core.List<
+          UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator>
+      values =
+      <UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator>[
     UNSPECIFIED,
     UNKNOWN,
     CONTAINS,
@@ -33,9 +67,13 @@ class UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator extends 
     NOT_ENDS_WITH,
   ];
 
-  static final $core.Map<$core.int, UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator
+      valueOf($core.int value) => _byValue[value];
 
-  const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._($core.int v, $core.String n) : super(v, n);
+  const UserListStringRuleItemOperatorEnum_UserListStringRuleItemOperator._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

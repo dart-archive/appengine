@@ -12,305 +12,560 @@ import '../../../protobuf/empty.pbjson.dart' as $4;
 import 'geometry.pbjson.dart' as $2;
 import '../../../longrunning/operations.pbjson.dart' as $5;
 
-const Product$json = const {
+const Product$json = {
   '1': 'Product',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
-    const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
-    const {'1': 'product_category', '3': 4, '4': 1, '5': 9, '10': 'productCategory'},
-    const {'1': 'product_labels', '3': 5, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Product.KeyValue', '10': 'productLabels'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'product_category', '3': 4, '4': 1, '5': 9, '10': 'productCategory'},
+    {
+      '1': 'product_labels',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Product.KeyValue',
+      '10': 'productLabels'
+    },
   ],
-  '3': const [Product_KeyValue$json],
+  '3': [Product_KeyValue$json],
 };
 
-const Product_KeyValue$json = const {
+const Product_KeyValue$json = {
   '1': 'KeyValue',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
 };
 
-const ProductSet$json = const {
+const ProductSet$json = {
   '1': 'ProductSet',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
-    const {'1': 'index_time', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'indexTime'},
-    const {'1': 'index_error', '3': 4, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'indexError'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    {
+      '1': 'index_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'indexTime'
+    },
+    {
+      '1': 'index_error',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'indexError'
+    },
   ],
 };
 
-const ReferenceImage$json = const {
+const ReferenceImage$json = {
   '1': 'ReferenceImage',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'uri', '3': 2, '4': 1, '5': 9, '10': 'uri'},
-    const {'1': 'bounding_polys', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.BoundingPoly', '10': 'boundingPolys'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'uri', '3': 2, '4': 1, '5': 9, '10': 'uri'},
+    {
+      '1': 'bounding_polys',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.BoundingPoly',
+      '10': 'boundingPolys'
+    },
   ],
 };
 
-const CreateProductRequest$json = const {
+const CreateProductRequest$json = {
   '1': 'CreateProductRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'product', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.Product', '10': 'product'},
-    const {'1': 'product_id', '3': 3, '4': 1, '5': 9, '10': 'productId'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'product',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Product',
+      '10': 'product'
+    },
+    {'1': 'product_id', '3': 3, '4': 1, '5': 9, '10': 'productId'},
   ],
 };
 
-const ListProductsRequest$json = const {
+const ListProductsRequest$json = {
   '1': 'ListProductsRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListProductsResponse$json = const {
+const ListProductsResponse$json = {
   '1': 'ListProductsResponse',
-  '2': const [
-    const {'1': 'products', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Product', '10': 'products'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'products',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Product',
+      '10': 'products'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetProductRequest$json = const {
+const GetProductRequest$json = {
   '1': 'GetProductRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const UpdateProductRequest$json = const {
+const UpdateProductRequest$json = {
   '1': 'UpdateProductRequest',
-  '2': const [
-    const {'1': 'product', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.Product', '10': 'product'},
-    const {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+  '2': [
+    {
+      '1': 'product',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Product',
+      '10': 'product'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
-const DeleteProductRequest$json = const {
+const DeleteProductRequest$json = {
   '1': 'DeleteProductRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const CreateProductSetRequest$json = const {
+const CreateProductSetRequest$json = {
   '1': 'CreateProductSetRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'product_set', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ProductSet', '10': 'productSet'},
-    const {'1': 'product_set_id', '3': 3, '4': 1, '5': 9, '10': 'productSetId'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'product_set',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ProductSet',
+      '10': 'productSet'
+    },
+    {'1': 'product_set_id', '3': 3, '4': 1, '5': 9, '10': 'productSetId'},
   ],
 };
 
-const ListProductSetsRequest$json = const {
+const ListProductSetsRequest$json = {
   '1': 'ListProductSetsRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListProductSetsResponse$json = const {
+const ListProductSetsResponse$json = {
   '1': 'ListProductSetsResponse',
-  '2': const [
-    const {'1': 'product_sets', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.ProductSet', '10': 'productSets'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'product_sets',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ProductSet',
+      '10': 'productSets'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetProductSetRequest$json = const {
+const GetProductSetRequest$json = {
   '1': 'GetProductSetRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const UpdateProductSetRequest$json = const {
+const UpdateProductSetRequest$json = {
   '1': 'UpdateProductSetRequest',
-  '2': const [
-    const {'1': 'product_set', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ProductSet', '10': 'productSet'},
-    const {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+  '2': [
+    {
+      '1': 'product_set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ProductSet',
+      '10': 'productSet'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
-const DeleteProductSetRequest$json = const {
+const DeleteProductSetRequest$json = {
   '1': 'DeleteProductSetRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const CreateReferenceImageRequest$json = const {
+const CreateReferenceImageRequest$json = {
   '1': 'CreateReferenceImageRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'reference_image', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ReferenceImage', '10': 'referenceImage'},
-    const {'1': 'reference_image_id', '3': 3, '4': 1, '5': 9, '10': 'referenceImageId'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'reference_image',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ReferenceImage',
+      '10': 'referenceImage'
+    },
+    {
+      '1': 'reference_image_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'referenceImageId'
+    },
   ],
 };
 
-const ListReferenceImagesRequest$json = const {
+const ListReferenceImagesRequest$json = {
   '1': 'ListReferenceImagesRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListReferenceImagesResponse$json = const {
+const ListReferenceImagesResponse$json = {
   '1': 'ListReferenceImagesResponse',
-  '2': const [
-    const {'1': 'reference_images', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.ReferenceImage', '10': 'referenceImages'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'reference_images',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ReferenceImage',
+      '10': 'referenceImages'
+    },
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const GetReferenceImageRequest$json = const {
+const GetReferenceImageRequest$json = {
   '1': 'GetReferenceImageRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const DeleteReferenceImageRequest$json = const {
+const DeleteReferenceImageRequest$json = {
   '1': 'DeleteReferenceImageRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const AddProductToProductSetRequest$json = const {
+const AddProductToProductSetRequest$json = {
   '1': 'AddProductToProductSetRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'product', '3': 2, '4': 1, '5': 9, '10': 'product'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'product', '3': 2, '4': 1, '5': 9, '10': 'product'},
   ],
 };
 
-const RemoveProductFromProductSetRequest$json = const {
+const RemoveProductFromProductSetRequest$json = {
   '1': 'RemoveProductFromProductSetRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'product', '3': 2, '4': 1, '5': 9, '10': 'product'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'product', '3': 2, '4': 1, '5': 9, '10': 'product'},
   ],
 };
 
-const ListProductsInProductSetRequest$json = const {
+const ListProductsInProductSetRequest$json = {
   '1': 'ListProductsInProductSetRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
-const ListProductsInProductSetResponse$json = const {
+const ListProductsInProductSetResponse$json = {
   '1': 'ListProductsInProductSetResponse',
-  '2': const [
-    const {'1': 'products', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.Product', '10': 'products'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  '2': [
+    {
+      '1': 'products',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.Product',
+      '10': 'products'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
-const ImportProductSetsGcsSource$json = const {
+const ImportProductSetsGcsSource$json = {
   '1': 'ImportProductSetsGcsSource',
-  '2': const [
-    const {'1': 'csv_file_uri', '3': 1, '4': 1, '5': 9, '10': 'csvFileUri'},
+  '2': [
+    {'1': 'csv_file_uri', '3': 1, '4': 1, '5': 9, '10': 'csvFileUri'},
   ],
 };
 
-const ImportProductSetsInputConfig$json = const {
+const ImportProductSetsInputConfig$json = {
   '1': 'ImportProductSetsInputConfig',
-  '2': const [
-    const {'1': 'gcs_source', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ImportProductSetsGcsSource', '9': 0, '10': 'gcsSource'},
+  '2': [
+    {
+      '1': 'gcs_source',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ImportProductSetsGcsSource',
+      '9': 0,
+      '10': 'gcsSource'
+    },
   ],
-  '8': const [
-    const {'1': 'source'},
+  '8': [
+    {'1': 'source'},
   ],
 };
 
-const ImportProductSetsRequest$json = const {
+const ImportProductSetsRequest$json = {
   '1': 'ImportProductSetsRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'input_config', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.vision.v1.ImportProductSetsInputConfig', '10': 'inputConfig'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'input_config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ImportProductSetsInputConfig',
+      '10': 'inputConfig'
+    },
   ],
 };
 
-const ImportProductSetsResponse$json = const {
+const ImportProductSetsResponse$json = {
   '1': 'ImportProductSetsResponse',
-  '2': const [
-    const {'1': 'reference_images', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.vision.v1.ReferenceImage', '10': 'referenceImages'},
-    const {'1': 'statuses', '3': 2, '4': 3, '5': 11, '6': '.google.rpc.Status', '10': 'statuses'},
+  '2': [
+    {
+      '1': 'reference_images',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ReferenceImage',
+      '10': 'referenceImages'
+    },
+    {
+      '1': 'statuses',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'statuses'
+    },
   ],
 };
 
-const BatchOperationMetadata$json = const {
+const BatchOperationMetadata$json = {
   '1': 'BatchOperationMetadata',
-  '2': const [
-    const {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.google.cloud.vision.v1.BatchOperationMetadata.State', '10': 'state'},
-    const {'1': 'submit_time', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'submitTime'},
-    const {'1': 'end_time', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'endTime'},
+  '2': [
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.vision.v1.BatchOperationMetadata.State',
+      '10': 'state'
+    },
+    {
+      '1': 'submit_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'submitTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
   ],
-  '4': const [BatchOperationMetadata_State$json],
+  '4': [BatchOperationMetadata_State$json],
 };
 
-const BatchOperationMetadata_State$json = const {
+const BatchOperationMetadata_State$json = {
   '1': 'State',
-  '2': const [
-    const {'1': 'STATE_UNSPECIFIED', '2': 0},
-    const {'1': 'PROCESSING', '2': 1},
-    const {'1': 'SUCCESSFUL', '2': 2},
-    const {'1': 'FAILED', '2': 3},
-    const {'1': 'CANCELLED', '2': 4},
+  '2': [
+    {'1': 'STATE_UNSPECIFIED', '2': 0},
+    {'1': 'PROCESSING', '2': 1},
+    {'1': 'SUCCESSFUL', '2': 2},
+    {'1': 'FAILED', '2': 3},
+    {'1': 'CANCELLED', '2': 4},
   ],
 };
 
-const ProductSearchServiceBase$json = const {
+const ProductSearchServiceBase$json = {
   '1': 'ProductSearch',
-  '2': const [
-    const {'1': 'CreateProductSet', '2': '.google.cloud.vision.v1.CreateProductSetRequest', '3': '.google.cloud.vision.v1.ProductSet', '4': const {}},
-    const {'1': 'ListProductSets', '2': '.google.cloud.vision.v1.ListProductSetsRequest', '3': '.google.cloud.vision.v1.ListProductSetsResponse', '4': const {}},
-    const {'1': 'GetProductSet', '2': '.google.cloud.vision.v1.GetProductSetRequest', '3': '.google.cloud.vision.v1.ProductSet', '4': const {}},
-    const {'1': 'UpdateProductSet', '2': '.google.cloud.vision.v1.UpdateProductSetRequest', '3': '.google.cloud.vision.v1.ProductSet', '4': const {}},
-    const {'1': 'DeleteProductSet', '2': '.google.cloud.vision.v1.DeleteProductSetRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'CreateProduct', '2': '.google.cloud.vision.v1.CreateProductRequest', '3': '.google.cloud.vision.v1.Product', '4': const {}},
-    const {'1': 'ListProducts', '2': '.google.cloud.vision.v1.ListProductsRequest', '3': '.google.cloud.vision.v1.ListProductsResponse', '4': const {}},
-    const {'1': 'GetProduct', '2': '.google.cloud.vision.v1.GetProductRequest', '3': '.google.cloud.vision.v1.Product', '4': const {}},
-    const {'1': 'UpdateProduct', '2': '.google.cloud.vision.v1.UpdateProductRequest', '3': '.google.cloud.vision.v1.Product', '4': const {}},
-    const {'1': 'DeleteProduct', '2': '.google.cloud.vision.v1.DeleteProductRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'CreateReferenceImage', '2': '.google.cloud.vision.v1.CreateReferenceImageRequest', '3': '.google.cloud.vision.v1.ReferenceImage', '4': const {}},
-    const {'1': 'DeleteReferenceImage', '2': '.google.cloud.vision.v1.DeleteReferenceImageRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'ListReferenceImages', '2': '.google.cloud.vision.v1.ListReferenceImagesRequest', '3': '.google.cloud.vision.v1.ListReferenceImagesResponse', '4': const {}},
-    const {'1': 'GetReferenceImage', '2': '.google.cloud.vision.v1.GetReferenceImageRequest', '3': '.google.cloud.vision.v1.ReferenceImage', '4': const {}},
-    const {'1': 'AddProductToProductSet', '2': '.google.cloud.vision.v1.AddProductToProductSetRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'RemoveProductFromProductSet', '2': '.google.cloud.vision.v1.RemoveProductFromProductSetRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'ListProductsInProductSet', '2': '.google.cloud.vision.v1.ListProductsInProductSetRequest', '3': '.google.cloud.vision.v1.ListProductsInProductSetResponse', '4': const {}},
-    const {'1': 'ImportProductSets', '2': '.google.cloud.vision.v1.ImportProductSetsRequest', '3': '.google.longrunning.Operation', '4': const {}},
+  '2': [
+    {
+      '1': 'CreateProductSet',
+      '2': '.google.cloud.vision.v1.CreateProductSetRequest',
+      '3': '.google.cloud.vision.v1.ProductSet',
+      '4': {}
+    },
+    {
+      '1': 'ListProductSets',
+      '2': '.google.cloud.vision.v1.ListProductSetsRequest',
+      '3': '.google.cloud.vision.v1.ListProductSetsResponse',
+      '4': {}
+    },
+    {
+      '1': 'GetProductSet',
+      '2': '.google.cloud.vision.v1.GetProductSetRequest',
+      '3': '.google.cloud.vision.v1.ProductSet',
+      '4': {}
+    },
+    {
+      '1': 'UpdateProductSet',
+      '2': '.google.cloud.vision.v1.UpdateProductSetRequest',
+      '3': '.google.cloud.vision.v1.ProductSet',
+      '4': {}
+    },
+    {
+      '1': 'DeleteProductSet',
+      '2': '.google.cloud.vision.v1.DeleteProductSetRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'CreateProduct',
+      '2': '.google.cloud.vision.v1.CreateProductRequest',
+      '3': '.google.cloud.vision.v1.Product',
+      '4': {}
+    },
+    {
+      '1': 'ListProducts',
+      '2': '.google.cloud.vision.v1.ListProductsRequest',
+      '3': '.google.cloud.vision.v1.ListProductsResponse',
+      '4': {}
+    },
+    {
+      '1': 'GetProduct',
+      '2': '.google.cloud.vision.v1.GetProductRequest',
+      '3': '.google.cloud.vision.v1.Product',
+      '4': {}
+    },
+    {
+      '1': 'UpdateProduct',
+      '2': '.google.cloud.vision.v1.UpdateProductRequest',
+      '3': '.google.cloud.vision.v1.Product',
+      '4': {}
+    },
+    {
+      '1': 'DeleteProduct',
+      '2': '.google.cloud.vision.v1.DeleteProductRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'CreateReferenceImage',
+      '2': '.google.cloud.vision.v1.CreateReferenceImageRequest',
+      '3': '.google.cloud.vision.v1.ReferenceImage',
+      '4': {}
+    },
+    {
+      '1': 'DeleteReferenceImage',
+      '2': '.google.cloud.vision.v1.DeleteReferenceImageRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'ListReferenceImages',
+      '2': '.google.cloud.vision.v1.ListReferenceImagesRequest',
+      '3': '.google.cloud.vision.v1.ListReferenceImagesResponse',
+      '4': {}
+    },
+    {
+      '1': 'GetReferenceImage',
+      '2': '.google.cloud.vision.v1.GetReferenceImageRequest',
+      '3': '.google.cloud.vision.v1.ReferenceImage',
+      '4': {}
+    },
+    {
+      '1': 'AddProductToProductSet',
+      '2': '.google.cloud.vision.v1.AddProductToProductSetRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'RemoveProductFromProductSet',
+      '2': '.google.cloud.vision.v1.RemoveProductFromProductSetRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'ListProductsInProductSet',
+      '2': '.google.cloud.vision.v1.ListProductsInProductSetRequest',
+      '3': '.google.cloud.vision.v1.ListProductsInProductSetResponse',
+      '4': {}
+    },
+    {
+      '1': 'ImportProductSets',
+      '2': '.google.cloud.vision.v1.ImportProductSetsRequest',
+      '3': '.google.longrunning.Operation',
+      '4': {}
+    },
   ],
 };
 
-const ProductSearchServiceBase$messageJson = const {
-  '.google.cloud.vision.v1.CreateProductSetRequest': CreateProductSetRequest$json,
+const ProductSearchServiceBase$messageJson = {
+  '.google.cloud.vision.v1.CreateProductSetRequest':
+      CreateProductSetRequest$json,
   '.google.cloud.vision.v1.ProductSet': ProductSet$json,
   '.google.protobuf.Timestamp': $0.Timestamp$json,
   '.google.rpc.Status': $1.Status$json,
   '.google.protobuf.Any': $6.Any$json,
   '.google.cloud.vision.v1.ListProductSetsRequest': ListProductSetsRequest$json,
-  '.google.cloud.vision.v1.ListProductSetsResponse': ListProductSetsResponse$json,
+  '.google.cloud.vision.v1.ListProductSetsResponse':
+      ListProductSetsResponse$json,
   '.google.cloud.vision.v1.GetProductSetRequest': GetProductSetRequest$json,
-  '.google.cloud.vision.v1.UpdateProductSetRequest': UpdateProductSetRequest$json,
+  '.google.cloud.vision.v1.UpdateProductSetRequest':
+      UpdateProductSetRequest$json,
   '.google.protobuf.FieldMask': $3.FieldMask$json,
-  '.google.cloud.vision.v1.DeleteProductSetRequest': DeleteProductSetRequest$json,
+  '.google.cloud.vision.v1.DeleteProductSetRequest':
+      DeleteProductSetRequest$json,
   '.google.protobuf.Empty': $4.Empty$json,
   '.google.cloud.vision.v1.CreateProductRequest': CreateProductRequest$json,
   '.google.cloud.vision.v1.Product': Product$json,
@@ -320,22 +575,33 @@ const ProductSearchServiceBase$messageJson = const {
   '.google.cloud.vision.v1.GetProductRequest': GetProductRequest$json,
   '.google.cloud.vision.v1.UpdateProductRequest': UpdateProductRequest$json,
   '.google.cloud.vision.v1.DeleteProductRequest': DeleteProductRequest$json,
-  '.google.cloud.vision.v1.CreateReferenceImageRequest': CreateReferenceImageRequest$json,
+  '.google.cloud.vision.v1.CreateReferenceImageRequest':
+      CreateReferenceImageRequest$json,
   '.google.cloud.vision.v1.ReferenceImage': ReferenceImage$json,
   '.google.cloud.vision.v1.BoundingPoly': $2.BoundingPoly$json,
   '.google.cloud.vision.v1.Vertex': $2.Vertex$json,
   '.google.cloud.vision.v1.NormalizedVertex': $2.NormalizedVertex$json,
-  '.google.cloud.vision.v1.DeleteReferenceImageRequest': DeleteReferenceImageRequest$json,
-  '.google.cloud.vision.v1.ListReferenceImagesRequest': ListReferenceImagesRequest$json,
-  '.google.cloud.vision.v1.ListReferenceImagesResponse': ListReferenceImagesResponse$json,
-  '.google.cloud.vision.v1.GetReferenceImageRequest': GetReferenceImageRequest$json,
-  '.google.cloud.vision.v1.AddProductToProductSetRequest': AddProductToProductSetRequest$json,
-  '.google.cloud.vision.v1.RemoveProductFromProductSetRequest': RemoveProductFromProductSetRequest$json,
-  '.google.cloud.vision.v1.ListProductsInProductSetRequest': ListProductsInProductSetRequest$json,
-  '.google.cloud.vision.v1.ListProductsInProductSetResponse': ListProductsInProductSetResponse$json,
-  '.google.cloud.vision.v1.ImportProductSetsRequest': ImportProductSetsRequest$json,
-  '.google.cloud.vision.v1.ImportProductSetsInputConfig': ImportProductSetsInputConfig$json,
-  '.google.cloud.vision.v1.ImportProductSetsGcsSource': ImportProductSetsGcsSource$json,
+  '.google.cloud.vision.v1.DeleteReferenceImageRequest':
+      DeleteReferenceImageRequest$json,
+  '.google.cloud.vision.v1.ListReferenceImagesRequest':
+      ListReferenceImagesRequest$json,
+  '.google.cloud.vision.v1.ListReferenceImagesResponse':
+      ListReferenceImagesResponse$json,
+  '.google.cloud.vision.v1.GetReferenceImageRequest':
+      GetReferenceImageRequest$json,
+  '.google.cloud.vision.v1.AddProductToProductSetRequest':
+      AddProductToProductSetRequest$json,
+  '.google.cloud.vision.v1.RemoveProductFromProductSetRequest':
+      RemoveProductFromProductSetRequest$json,
+  '.google.cloud.vision.v1.ListProductsInProductSetRequest':
+      ListProductsInProductSetRequest$json,
+  '.google.cloud.vision.v1.ListProductsInProductSetResponse':
+      ListProductsInProductSetResponse$json,
+  '.google.cloud.vision.v1.ImportProductSetsRequest':
+      ImportProductSetsRequest$json,
+  '.google.cloud.vision.v1.ImportProductSetsInputConfig':
+      ImportProductSetsInputConfig$json,
+  '.google.cloud.vision.v1.ImportProductSetsGcsSource':
+      ImportProductSetsGcsSource$json,
   '.google.longrunning.Operation': $5.Operation$json,
 };
-

@@ -16,23 +16,29 @@ import 'topic_view_service.pbjson.dart';
 export 'topic_view_service.pb.dart';
 
 abstract class TopicViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.TopicView> getTopicView($pb.ServerContext ctx, GetTopicViewRequest request);
+  $async.Future<$0.TopicView> getTopicView(
+      $pb.ServerContext ctx, GetTopicViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetTopicView': return GetTopicViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetTopicView':
+        return GetTopicViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetTopicView': return this.getTopicView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetTopicView':
+        return this.getTopicView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => TopicViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => TopicViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => TopicViewServiceBase$messageJson;
 }
-

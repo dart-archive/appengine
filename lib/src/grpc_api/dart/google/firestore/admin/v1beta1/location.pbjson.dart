@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const LocationMetadata$json = const {
+const LocationMetadata$json = {
   '1': 'LocationMetadata',
 };
-

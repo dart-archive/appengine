@@ -16,29 +16,42 @@ import 'recommendation_service.pbjson.dart';
 export 'recommendation_service.pb.dart';
 
 abstract class RecommendationServiceBase extends $pb.GeneratedService {
-  $async.Future<$4.Recommendation> getRecommendation($pb.ServerContext ctx, GetRecommendationRequest request);
-  $async.Future<ApplyRecommendationResponse> applyRecommendation($pb.ServerContext ctx, ApplyRecommendationRequest request);
-  $async.Future<DismissRecommendationResponse> dismissRecommendation($pb.ServerContext ctx, DismissRecommendationRequest request);
+  $async.Future<$4.Recommendation> getRecommendation(
+      $pb.ServerContext ctx, GetRecommendationRequest request);
+  $async.Future<ApplyRecommendationResponse> applyRecommendation(
+      $pb.ServerContext ctx, ApplyRecommendationRequest request);
+  $async.Future<DismissRecommendationResponse> dismissRecommendation(
+      $pb.ServerContext ctx, DismissRecommendationRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetRecommendation': return GetRecommendationRequest();
-      case 'ApplyRecommendation': return ApplyRecommendationRequest();
-      case 'DismissRecommendation': return DismissRecommendationRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetRecommendation':
+        return GetRecommendationRequest();
+      case 'ApplyRecommendation':
+        return ApplyRecommendationRequest();
+      case 'DismissRecommendation':
+        return DismissRecommendationRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetRecommendation': return this.getRecommendation(ctx, request);
-      case 'ApplyRecommendation': return this.applyRecommendation(ctx, request);
-      case 'DismissRecommendation': return this.dismissRecommendation(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetRecommendation':
+        return this.getRecommendation(ctx, request);
+      case 'ApplyRecommendation':
+        return this.applyRecommendation(ctx, request);
+      case 'DismissRecommendation':
+        return this.dismissRecommendation(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => RecommendationServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => RecommendationServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      RecommendationServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => RecommendationServiceBase$messageJson;
 }
-

@@ -16,23 +16,30 @@ import 'expanded_landing_page_view_service.pbjson.dart';
 export 'expanded_landing_page_view_service.pb.dart';
 
 abstract class ExpandedLandingPageViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.ExpandedLandingPageView> getExpandedLandingPageView($pb.ServerContext ctx, GetExpandedLandingPageViewRequest request);
+  $async.Future<$0.ExpandedLandingPageView> getExpandedLandingPageView(
+      $pb.ServerContext ctx, GetExpandedLandingPageViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetExpandedLandingPageView': return GetExpandedLandingPageViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetExpandedLandingPageView':
+        return GetExpandedLandingPageViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetExpandedLandingPageView': return this.getExpandedLandingPageView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetExpandedLandingPageView':
+        return this.getExpandedLandingPageView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => ExpandedLandingPageViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ExpandedLandingPageViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      ExpandedLandingPageViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => ExpandedLandingPageViewServiceBase$messageJson;
 }
-

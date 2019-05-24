@@ -19,19 +19,24 @@ abstract class WatcherServiceBase extends $pb.GeneratedService {
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'Watch': return Request();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Watch':
+        return Request();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'Watch': return this.watch(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Watch':
+        return this.watch(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => WatcherServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => WatcherServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => WatcherServiceBase$messageJson;
 }
-

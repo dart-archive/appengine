@@ -7,26 +7,31 @@
 import '../resources/domain_category.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetDomainCategoryRequest$json = const {
+const GetDomainCategoryRequest$json = {
   '1': 'GetDomainCategoryRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const DomainCategoryServiceBase$json = const {
+const DomainCategoryServiceBase$json = {
   '1': 'DomainCategoryService',
-  '2': const [
-    const {'1': 'GetDomainCategory', '2': '.google.ads.googleads.v1.services.GetDomainCategoryRequest', '3': '.google.ads.googleads.v1.resources.DomainCategory', '4': const {}},
+  '2': [
+    {
+      '1': 'GetDomainCategory',
+      '2': '.google.ads.googleads.v1.services.GetDomainCategoryRequest',
+      '3': '.google.ads.googleads.v1.resources.DomainCategory',
+      '4': {}
+    },
   ],
 };
 
-const DomainCategoryServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetDomainCategoryRequest': GetDomainCategoryRequest$json,
+const DomainCategoryServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetDomainCategoryRequest':
+      GetDomainCategoryRequest$json,
   '.google.ads.googleads.v1.resources.DomainCategory': $0.DomainCategory$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
   '.google.protobuf.DoubleValue': $1.DoubleValue$json,
   '.google.protobuf.Int64Value': $1.Int64Value$json,
   '.google.protobuf.BoolValue': $1.BoolValue$json,
 };
-

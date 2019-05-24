@@ -4,11 +4,24 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const TimeSegment$json = const {
+const TimeSegment$json = {
   '1': 'TimeSegment',
-  '2': const [
-    const {'1': 'start_time_offset', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'startTimeOffset'},
-    const {'1': 'end_time_offset', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Duration', '10': 'endTimeOffset'},
+  '2': [
+    {
+      '1': 'start_time_offset',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'startTimeOffset'
+    },
+    {
+      '1': 'end_time_offset',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'endTimeOffset'
+    },
   ],
 };
-

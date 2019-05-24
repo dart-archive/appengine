@@ -6,22 +6,28 @@
 
 import '../resources/campaign_audience_view.pbjson.dart' as $0;
 
-const GetCampaignAudienceViewRequest$json = const {
+const GetCampaignAudienceViewRequest$json = {
   '1': 'GetCampaignAudienceViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const CampaignAudienceViewServiceBase$json = const {
+const CampaignAudienceViewServiceBase$json = {
   '1': 'CampaignAudienceViewService',
-  '2': const [
-    const {'1': 'GetCampaignAudienceView', '2': '.google.ads.googleads.v1.services.GetCampaignAudienceViewRequest', '3': '.google.ads.googleads.v1.resources.CampaignAudienceView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetCampaignAudienceView',
+      '2': '.google.ads.googleads.v1.services.GetCampaignAudienceViewRequest',
+      '3': '.google.ads.googleads.v1.resources.CampaignAudienceView',
+      '4': {}
+    },
   ],
 };
 
-const CampaignAudienceViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetCampaignAudienceViewRequest': GetCampaignAudienceViewRequest$json,
-  '.google.ads.googleads.v1.resources.CampaignAudienceView': $0.CampaignAudienceView$json,
+const CampaignAudienceViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetCampaignAudienceViewRequest':
+      GetCampaignAudienceViewRequest$json,
+  '.google.ads.googleads.v1.resources.CampaignAudienceView':
+      $0.CampaignAudienceView$json,
 };
-

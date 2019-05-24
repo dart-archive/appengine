@@ -16,23 +16,30 @@ import 'geographic_view_service.pbjson.dart';
 export 'geographic_view_service.pb.dart';
 
 abstract class GeographicViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.GeographicView> getGeographicView($pb.ServerContext ctx, GetGeographicViewRequest request);
+  $async.Future<$0.GeographicView> getGeographicView(
+      $pb.ServerContext ctx, GetGeographicViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetGeographicView': return GetGeographicViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetGeographicView':
+        return GetGeographicViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetGeographicView': return this.getGeographicView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetGeographicView':
+        return this.getGeographicView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => GeographicViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => GeographicViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      GeographicViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => GeographicViewServiceBase$messageJson;
 }
-

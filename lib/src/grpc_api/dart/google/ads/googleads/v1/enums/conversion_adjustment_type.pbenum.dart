@@ -8,22 +8,36 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ConversionAdjustmentTypeEnum_ConversionAdjustmentType extends $pb.ProtobufEnum {
-  static const ConversionAdjustmentTypeEnum_ConversionAdjustmentType UNSPECIFIED = ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(0, 'UNSPECIFIED');
-  static const ConversionAdjustmentTypeEnum_ConversionAdjustmentType UNKNOWN = ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(1, 'UNKNOWN');
-  static const ConversionAdjustmentTypeEnum_ConversionAdjustmentType RETRACTION = ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(2, 'RETRACTION');
-  static const ConversionAdjustmentTypeEnum_ConversionAdjustmentType RESTATEMENT = ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(3, 'RESTATEMENT');
+class ConversionAdjustmentTypeEnum_ConversionAdjustmentType
+    extends $pb.ProtobufEnum {
+  static const ConversionAdjustmentTypeEnum_ConversionAdjustmentType
+      UNSPECIFIED =
+      ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(0, 'UNSPECIFIED');
+  static const ConversionAdjustmentTypeEnum_ConversionAdjustmentType UNKNOWN =
+      ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(1, 'UNKNOWN');
+  static const ConversionAdjustmentTypeEnum_ConversionAdjustmentType
+      RETRACTION =
+      ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(2, 'RETRACTION');
+  static const ConversionAdjustmentTypeEnum_ConversionAdjustmentType
+      RESTATEMENT =
+      ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(3, 'RESTATEMENT');
 
-  static const $core.List<ConversionAdjustmentTypeEnum_ConversionAdjustmentType> values = <ConversionAdjustmentTypeEnum_ConversionAdjustmentType> [
+  static const $core.List<ConversionAdjustmentTypeEnum_ConversionAdjustmentType>
+      values = <ConversionAdjustmentTypeEnum_ConversionAdjustmentType>[
     UNSPECIFIED,
     UNKNOWN,
     RETRACTION,
     RESTATEMENT,
   ];
 
-  static final $core.Map<$core.int, ConversionAdjustmentTypeEnum_ConversionAdjustmentType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ConversionAdjustmentTypeEnum_ConversionAdjustmentType valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, ConversionAdjustmentTypeEnum_ConversionAdjustmentType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ConversionAdjustmentTypeEnum_ConversionAdjustmentType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ConversionAdjustmentTypeEnum_ConversionAdjustmentType._($core.int v, $core.String n) : super(v, n);
+  const ConversionAdjustmentTypeEnum_ConversionAdjustmentType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

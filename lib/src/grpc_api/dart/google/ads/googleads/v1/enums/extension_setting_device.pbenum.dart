@@ -8,22 +8,33 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ExtensionSettingDeviceEnum_ExtensionSettingDevice extends $pb.ProtobufEnum {
-  static const ExtensionSettingDeviceEnum_ExtensionSettingDevice UNSPECIFIED = ExtensionSettingDeviceEnum_ExtensionSettingDevice._(0, 'UNSPECIFIED');
-  static const ExtensionSettingDeviceEnum_ExtensionSettingDevice UNKNOWN = ExtensionSettingDeviceEnum_ExtensionSettingDevice._(1, 'UNKNOWN');
-  static const ExtensionSettingDeviceEnum_ExtensionSettingDevice MOBILE = ExtensionSettingDeviceEnum_ExtensionSettingDevice._(2, 'MOBILE');
-  static const ExtensionSettingDeviceEnum_ExtensionSettingDevice DESKTOP = ExtensionSettingDeviceEnum_ExtensionSettingDevice._(3, 'DESKTOP');
+class ExtensionSettingDeviceEnum_ExtensionSettingDevice
+    extends $pb.ProtobufEnum {
+  static const ExtensionSettingDeviceEnum_ExtensionSettingDevice UNSPECIFIED =
+      ExtensionSettingDeviceEnum_ExtensionSettingDevice._(0, 'UNSPECIFIED');
+  static const ExtensionSettingDeviceEnum_ExtensionSettingDevice UNKNOWN =
+      ExtensionSettingDeviceEnum_ExtensionSettingDevice._(1, 'UNKNOWN');
+  static const ExtensionSettingDeviceEnum_ExtensionSettingDevice MOBILE =
+      ExtensionSettingDeviceEnum_ExtensionSettingDevice._(2, 'MOBILE');
+  static const ExtensionSettingDeviceEnum_ExtensionSettingDevice DESKTOP =
+      ExtensionSettingDeviceEnum_ExtensionSettingDevice._(3, 'DESKTOP');
 
-  static const $core.List<ExtensionSettingDeviceEnum_ExtensionSettingDevice> values = <ExtensionSettingDeviceEnum_ExtensionSettingDevice> [
+  static const $core.List<ExtensionSettingDeviceEnum_ExtensionSettingDevice>
+      values = <ExtensionSettingDeviceEnum_ExtensionSettingDevice>[
     UNSPECIFIED,
     UNKNOWN,
     MOBILE,
     DESKTOP,
   ];
 
-  static final $core.Map<$core.int, ExtensionSettingDeviceEnum_ExtensionSettingDevice> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ExtensionSettingDeviceEnum_ExtensionSettingDevice valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, ExtensionSettingDeviceEnum_ExtensionSettingDevice>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ExtensionSettingDeviceEnum_ExtensionSettingDevice valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ExtensionSettingDeviceEnum_ExtensionSettingDevice._($core.int v, $core.String n) : super(v, n);
+  const ExtensionSettingDeviceEnum_ExtensionSettingDevice._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

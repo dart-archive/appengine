@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const UserListAccessStatusEnum$json = const {
+const UserListAccessStatusEnum$json = {
   '1': 'UserListAccessStatusEnum',
-  '4': const [UserListAccessStatusEnum_UserListAccessStatus$json],
+  '4': [UserListAccessStatusEnum_UserListAccessStatus$json],
 };
 
-const UserListAccessStatusEnum_UserListAccessStatus$json = const {
+const UserListAccessStatusEnum_UserListAccessStatus$json = {
   '1': 'UserListAccessStatus',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'ENABLED', '2': 2},
-    const {'1': 'DISABLED', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'ENABLED', '2': 2},
+    {'1': 'DISABLED', '2': 3},
   ],
 };
-

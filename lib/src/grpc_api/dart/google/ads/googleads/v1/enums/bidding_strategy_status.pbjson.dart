@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const BiddingStrategyStatusEnum$json = const {
+const BiddingStrategyStatusEnum$json = {
   '1': 'BiddingStrategyStatusEnum',
-  '4': const [BiddingStrategyStatusEnum_BiddingStrategyStatus$json],
+  '4': [BiddingStrategyStatusEnum_BiddingStrategyStatus$json],
 };
 
-const BiddingStrategyStatusEnum_BiddingStrategyStatus$json = const {
+const BiddingStrategyStatusEnum_BiddingStrategyStatus$json = {
   '1': 'BiddingStrategyStatus',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'ENABLED', '2': 2},
-    const {'1': 'REMOVED', '2': 4},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'ENABLED', '2': 2},
+    {'1': 'REMOVED', '2': 4},
   ],
 };
-

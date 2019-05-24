@@ -11,38 +11,61 @@ import '../../../protobuf/any.pbjson.dart' as $4;
 import '../../../protobuf/wrappers.pbjson.dart' as $5;
 import '../../../protobuf/empty.pbjson.dart' as $1;
 
-const BatchWriteSpansRequest$json = const {
+const BatchWriteSpansRequest$json = {
   '1': 'BatchWriteSpansRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'spans', '3': 2, '4': 3, '5': 11, '6': '.google.devtools.cloudtrace.v2.Span', '10': 'spans'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'spans',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudtrace.v2.Span',
+      '10': 'spans'
+    },
   ],
 };
 
-const TraceServiceBase$json = const {
+const TraceServiceBase$json = {
   '1': 'TraceService',
-  '2': const [
-    const {'1': 'BatchWriteSpans', '2': '.google.devtools.cloudtrace.v2.BatchWriteSpansRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'CreateSpan', '2': '.google.devtools.cloudtrace.v2.Span', '3': '.google.devtools.cloudtrace.v2.Span', '4': const {}},
+  '2': [
+    {
+      '1': 'BatchWriteSpans',
+      '2': '.google.devtools.cloudtrace.v2.BatchWriteSpansRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'CreateSpan',
+      '2': '.google.devtools.cloudtrace.v2.Span',
+      '3': '.google.devtools.cloudtrace.v2.Span',
+      '4': {}
+    },
   ],
 };
 
-const TraceServiceBase$messageJson = const {
-  '.google.devtools.cloudtrace.v2.BatchWriteSpansRequest': BatchWriteSpansRequest$json,
+const TraceServiceBase$messageJson = {
+  '.google.devtools.cloudtrace.v2.BatchWriteSpansRequest':
+      BatchWriteSpansRequest$json,
   '.google.devtools.cloudtrace.v2.Span': $0.Span$json,
   '.google.devtools.cloudtrace.v2.TruncatableString': $0.TruncatableString$json,
   '.google.protobuf.Timestamp': $2.Timestamp$json,
   '.google.devtools.cloudtrace.v2.Span.Attributes': $0.Span_Attributes$json,
-  '.google.devtools.cloudtrace.v2.Span.Attributes.AttributeMapEntry': $0.Span_Attributes_AttributeMapEntry$json,
+  '.google.devtools.cloudtrace.v2.Span.Attributes.AttributeMapEntry':
+      $0.Span_Attributes_AttributeMapEntry$json,
   '.google.devtools.cloudtrace.v2.AttributeValue': $0.AttributeValue$json,
   '.google.devtools.cloudtrace.v2.StackTrace': $0.StackTrace$json,
-  '.google.devtools.cloudtrace.v2.StackTrace.StackFrames': $0.StackTrace_StackFrames$json,
-  '.google.devtools.cloudtrace.v2.StackTrace.StackFrame': $0.StackTrace_StackFrame$json,
+  '.google.devtools.cloudtrace.v2.StackTrace.StackFrames':
+      $0.StackTrace_StackFrames$json,
+  '.google.devtools.cloudtrace.v2.StackTrace.StackFrame':
+      $0.StackTrace_StackFrame$json,
   '.google.devtools.cloudtrace.v2.Module': $0.Module$json,
   '.google.devtools.cloudtrace.v2.Span.TimeEvents': $0.Span_TimeEvents$json,
   '.google.devtools.cloudtrace.v2.Span.TimeEvent': $0.Span_TimeEvent$json,
-  '.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation': $0.Span_TimeEvent_Annotation$json,
-  '.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent': $0.Span_TimeEvent_MessageEvent$json,
+  '.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation':
+      $0.Span_TimeEvent_Annotation$json,
+  '.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent':
+      $0.Span_TimeEvent_MessageEvent$json,
   '.google.devtools.cloudtrace.v2.Span.Links': $0.Span_Links$json,
   '.google.devtools.cloudtrace.v2.Span.Link': $0.Span_Link$json,
   '.google.rpc.Status': $3.Status$json,
@@ -51,4 +74,3 @@ const TraceServiceBase$messageJson = const {
   '.google.protobuf.Int32Value': $5.Int32Value$json,
   '.google.protobuf.Empty': $1.Empty$json,
 };
-

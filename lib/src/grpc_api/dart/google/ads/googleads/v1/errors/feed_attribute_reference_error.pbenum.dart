@@ -8,14 +8,31 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError extends $pb.ProtobufEnum {
-  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError UNSPECIFIED = FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(0, 'UNSPECIFIED');
-  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError UNKNOWN = FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(1, 'UNKNOWN');
-  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError CANNOT_REFERENCE_REMOVED_FEED = FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(2, 'CANNOT_REFERENCE_REMOVED_FEED');
-  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError INVALID_FEED_NAME = FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(3, 'INVALID_FEED_NAME');
-  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError INVALID_FEED_ATTRIBUTE_NAME = FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(4, 'INVALID_FEED_ATTRIBUTE_NAME');
+class FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError
+    extends $pb.ProtobufEnum {
+  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError
+      UNSPECIFIED =
+      FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(
+          0, 'UNSPECIFIED');
+  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError
+      UNKNOWN = FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(
+          1, 'UNKNOWN');
+  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError
+      CANNOT_REFERENCE_REMOVED_FEED =
+      FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(
+          2, 'CANNOT_REFERENCE_REMOVED_FEED');
+  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError
+      INVALID_FEED_NAME =
+      FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(
+          3, 'INVALID_FEED_NAME');
+  static const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError
+      INVALID_FEED_ATTRIBUTE_NAME =
+      FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(
+          4, 'INVALID_FEED_ATTRIBUTE_NAME');
 
-  static const $core.List<FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError> values = <FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError> [
+  static const $core
+          .List<FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError>
+      values = <FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError>[
     UNSPECIFIED,
     UNKNOWN,
     CANNOT_REFERENCE_REMOVED_FEED,
@@ -23,9 +40,14 @@ class FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError extends $pb.Pr
     INVALID_FEED_ATTRIBUTE_NAME,
   ];
 
-  static final $core.Map<$core.int, FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._($core.int v, $core.String n) : super(v, n);
+  const FeedAttributeReferenceErrorEnum_FeedAttributeReferenceError._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

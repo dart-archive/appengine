@@ -9,13 +9,16 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class CloudFunctionStatus extends $pb.ProtobufEnum {
-  static const CloudFunctionStatus STATUS_UNSPECIFIED = CloudFunctionStatus._(0, 'STATUS_UNSPECIFIED');
+  static const CloudFunctionStatus STATUS_UNSPECIFIED =
+      CloudFunctionStatus._(0, 'STATUS_UNSPECIFIED');
   static const CloudFunctionStatus READY = CloudFunctionStatus._(1, 'READY');
   static const CloudFunctionStatus FAILED = CloudFunctionStatus._(2, 'FAILED');
-  static const CloudFunctionStatus DEPLOYING = CloudFunctionStatus._(3, 'DEPLOYING');
-  static const CloudFunctionStatus DELETING = CloudFunctionStatus._(4, 'DELETING');
+  static const CloudFunctionStatus DEPLOYING =
+      CloudFunctionStatus._(3, 'DEPLOYING');
+  static const CloudFunctionStatus DELETING =
+      CloudFunctionStatus._(4, 'DELETING');
 
-  static const $core.List<CloudFunctionStatus> values = <CloudFunctionStatus> [
+  static const $core.List<CloudFunctionStatus> values = <CloudFunctionStatus>[
     STATUS_UNSPECIFIED,
     READY,
     FAILED,
@@ -23,9 +26,9 @@ class CloudFunctionStatus extends $pb.ProtobufEnum {
     DELETING,
   ];
 
-  static final $core.Map<$core.int, CloudFunctionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, CloudFunctionStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static CloudFunctionStatus valueOf($core.int value) => _byValue[value];
 
   const CloudFunctionStatus._($core.int v, $core.String n) : super(v, n);
 }
-

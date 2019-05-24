@@ -8,20 +8,31 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class CalloutPlaceholderFieldEnum_CalloutPlaceholderField extends $pb.ProtobufEnum {
-  static const CalloutPlaceholderFieldEnum_CalloutPlaceholderField UNSPECIFIED = CalloutPlaceholderFieldEnum_CalloutPlaceholderField._(0, 'UNSPECIFIED');
-  static const CalloutPlaceholderFieldEnum_CalloutPlaceholderField UNKNOWN = CalloutPlaceholderFieldEnum_CalloutPlaceholderField._(1, 'UNKNOWN');
-  static const CalloutPlaceholderFieldEnum_CalloutPlaceholderField CALLOUT_TEXT = CalloutPlaceholderFieldEnum_CalloutPlaceholderField._(2, 'CALLOUT_TEXT');
+class CalloutPlaceholderFieldEnum_CalloutPlaceholderField
+    extends $pb.ProtobufEnum {
+  static const CalloutPlaceholderFieldEnum_CalloutPlaceholderField UNSPECIFIED =
+      CalloutPlaceholderFieldEnum_CalloutPlaceholderField._(0, 'UNSPECIFIED');
+  static const CalloutPlaceholderFieldEnum_CalloutPlaceholderField UNKNOWN =
+      CalloutPlaceholderFieldEnum_CalloutPlaceholderField._(1, 'UNKNOWN');
+  static const CalloutPlaceholderFieldEnum_CalloutPlaceholderField
+      CALLOUT_TEXT =
+      CalloutPlaceholderFieldEnum_CalloutPlaceholderField._(2, 'CALLOUT_TEXT');
 
-  static const $core.List<CalloutPlaceholderFieldEnum_CalloutPlaceholderField> values = <CalloutPlaceholderFieldEnum_CalloutPlaceholderField> [
+  static const $core.List<CalloutPlaceholderFieldEnum_CalloutPlaceholderField>
+      values = <CalloutPlaceholderFieldEnum_CalloutPlaceholderField>[
     UNSPECIFIED,
     UNKNOWN,
     CALLOUT_TEXT,
   ];
 
-  static final $core.Map<$core.int, CalloutPlaceholderFieldEnum_CalloutPlaceholderField> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CalloutPlaceholderFieldEnum_CalloutPlaceholderField valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, CalloutPlaceholderFieldEnum_CalloutPlaceholderField>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CalloutPlaceholderFieldEnum_CalloutPlaceholderField valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const CalloutPlaceholderFieldEnum_CalloutPlaceholderField._($core.int v, $core.String n) : super(v, n);
+  const CalloutPlaceholderFieldEnum_CalloutPlaceholderField._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

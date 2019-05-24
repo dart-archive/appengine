@@ -8,15 +8,32 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator extends $pb.ProtobufEnum {
-  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator UNSPECIFIED = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(0, 'UNSPECIFIED');
-  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator UNKNOWN = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(1, 'UNKNOWN');
-  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator EQUALS = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(2, 'EQUALS');
-  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator NOT_EQUALS = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(3, 'NOT_EQUALS');
-  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator BEFORE = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(4, 'BEFORE');
-  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator AFTER = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(5, 'AFTER');
+class UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator
+    extends $pb.ProtobufEnum {
+  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator
+      UNSPECIFIED =
+      UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(
+          0, 'UNSPECIFIED');
+  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator
+      UNKNOWN = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(
+          1, 'UNKNOWN');
+  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator
+      EQUALS = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(
+          2, 'EQUALS');
+  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator
+      NOT_EQUALS =
+      UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(
+          3, 'NOT_EQUALS');
+  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator
+      BEFORE = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(
+          4, 'BEFORE');
+  static const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator
+      AFTER = UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(
+          5, 'AFTER');
 
-  static const $core.List<UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator> values = <UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator> [
+  static const $core
+          .List<UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator>
+      values = <UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator>[
     UNSPECIFIED,
     UNKNOWN,
     EQUALS,
@@ -25,9 +42,14 @@ class UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator extends $pb.
     AFTER,
   ];
 
-  static final $core.Map<$core.int, UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._($core.int v, $core.String n) : super(v, n);
+  const UserListDateRuleItemOperatorEnum_UserListDateRuleItemOperator._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

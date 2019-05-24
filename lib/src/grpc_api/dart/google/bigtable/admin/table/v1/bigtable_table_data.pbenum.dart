@@ -9,15 +9,17 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Table_TimestampGranularity extends $pb.ProtobufEnum {
-  static const Table_TimestampGranularity MILLIS = Table_TimestampGranularity._(0, 'MILLIS');
+  static const Table_TimestampGranularity MILLIS =
+      Table_TimestampGranularity._(0, 'MILLIS');
 
-  static const $core.List<Table_TimestampGranularity> values = <Table_TimestampGranularity> [
+  static const $core.List<Table_TimestampGranularity> values =
+      <Table_TimestampGranularity>[
     MILLIS,
   ];
 
-  static final $core.Map<$core.int, Table_TimestampGranularity> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Table_TimestampGranularity> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Table_TimestampGranularity valueOf($core.int value) => _byValue[value];
 
   const Table_TimestampGranularity._($core.int v, $core.String n) : super(v, n);
 }
-

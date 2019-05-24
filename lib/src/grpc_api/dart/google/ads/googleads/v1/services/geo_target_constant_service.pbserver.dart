@@ -16,26 +16,36 @@ import 'geo_target_constant_service.pbjson.dart';
 export 'geo_target_constant_service.pb.dart';
 
 abstract class GeoTargetConstantServiceBase extends $pb.GeneratedService {
-  $async.Future<$1.GeoTargetConstant> getGeoTargetConstant($pb.ServerContext ctx, GetGeoTargetConstantRequest request);
-  $async.Future<SuggestGeoTargetConstantsResponse> suggestGeoTargetConstants($pb.ServerContext ctx, SuggestGeoTargetConstantsRequest request);
+  $async.Future<$1.GeoTargetConstant> getGeoTargetConstant(
+      $pb.ServerContext ctx, GetGeoTargetConstantRequest request);
+  $async.Future<SuggestGeoTargetConstantsResponse> suggestGeoTargetConstants(
+      $pb.ServerContext ctx, SuggestGeoTargetConstantsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetGeoTargetConstant': return GetGeoTargetConstantRequest();
-      case 'SuggestGeoTargetConstants': return SuggestGeoTargetConstantsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetGeoTargetConstant':
+        return GetGeoTargetConstantRequest();
+      case 'SuggestGeoTargetConstants':
+        return SuggestGeoTargetConstantsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetGeoTargetConstant': return this.getGeoTargetConstant(ctx, request);
-      case 'SuggestGeoTargetConstants': return this.suggestGeoTargetConstants(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetGeoTargetConstant':
+        return this.getGeoTargetConstant(ctx, request);
+      case 'SuggestGeoTargetConstants':
+        return this.suggestGeoTargetConstants(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => GeoTargetConstantServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => GeoTargetConstantServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      GeoTargetConstantServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => GeoTargetConstantServiceBase$messageJson;
 }
-

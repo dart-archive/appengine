@@ -17,122 +17,217 @@ import '../../../../protobuf/field_mask.pbjson.dart' as $1;
 import '../../../../rpc/status.pbjson.dart' as $3;
 import '../../../../protobuf/any.pbjson.dart' as $11;
 
-const GetAdGroupAdRequest$json = const {
+const GetAdGroupAdRequest$json = {
   '1': 'GetAdGroupAdRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const MutateAdGroupAdsRequest$json = const {
+const MutateAdGroupAdsRequest$json = {
   '1': 'MutateAdGroupAdsRequest',
-  '2': const [
-    const {'1': 'customer_id', '3': 1, '4': 1, '5': 9, '10': 'customerId'},
-    const {'1': 'operations', '3': 2, '4': 3, '5': 11, '6': '.google.ads.googleads.v1.services.AdGroupAdOperation', '10': 'operations'},
-    const {'1': 'partial_failure', '3': 3, '4': 1, '5': 8, '10': 'partialFailure'},
-    const {'1': 'validate_only', '3': 4, '4': 1, '5': 8, '10': 'validateOnly'},
+  '2': [
+    {'1': 'customer_id', '3': 1, '4': 1, '5': 9, '10': 'customerId'},
+    {
+      '1': 'operations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.services.AdGroupAdOperation',
+      '10': 'operations'
+    },
+    {'1': 'partial_failure', '3': 3, '4': 1, '5': 8, '10': 'partialFailure'},
+    {'1': 'validate_only', '3': 4, '4': 1, '5': 8, '10': 'validateOnly'},
   ],
 };
 
-const AdGroupAdOperation$json = const {
+const AdGroupAdOperation$json = {
   '1': 'AdGroupAdOperation',
-  '2': const [
-    const {'1': 'update_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'policy_validation_parameter', '3': 5, '4': 1, '5': 11, '6': '.google.ads.googleads.v1.common.PolicyValidationParameter', '10': 'policyValidationParameter'},
-    const {'1': 'create', '3': 1, '4': 1, '5': 11, '6': '.google.ads.googleads.v1.resources.AdGroupAd', '9': 0, '10': 'create'},
-    const {'1': 'update', '3': 2, '4': 1, '5': 11, '6': '.google.ads.googleads.v1.resources.AdGroupAd', '9': 0, '10': 'update'},
-    const {'1': 'remove', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'remove'},
+  '2': [
+    {
+      '1': 'update_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    {
+      '1': 'policy_validation_parameter',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.common.PolicyValidationParameter',
+      '10': 'policyValidationParameter'
+    },
+    {
+      '1': 'create',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.resources.AdGroupAd',
+      '9': 0,
+      '10': 'create'
+    },
+    {
+      '1': 'update',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.resources.AdGroupAd',
+      '9': 0,
+      '10': 'update'
+    },
+    {'1': 'remove', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'remove'},
   ],
-  '8': const [
-    const {'1': 'operation'},
+  '8': [
+    {'1': 'operation'},
   ],
 };
 
-const MutateAdGroupAdsResponse$json = const {
+const MutateAdGroupAdsResponse$json = {
   '1': 'MutateAdGroupAdsResponse',
-  '2': const [
-    const {'1': 'partial_failure_error', '3': 3, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'partialFailureError'},
-    const {'1': 'results', '3': 2, '4': 3, '5': 11, '6': '.google.ads.googleads.v1.services.MutateAdGroupAdResult', '10': 'results'},
+  '2': [
+    {
+      '1': 'partial_failure_error',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'partialFailureError'
+    },
+    {
+      '1': 'results',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.services.MutateAdGroupAdResult',
+      '10': 'results'
+    },
   ],
 };
 
-const MutateAdGroupAdResult$json = const {
+const MutateAdGroupAdResult$json = {
   '1': 'MutateAdGroupAdResult',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const AdGroupAdServiceBase$json = const {
+const AdGroupAdServiceBase$json = {
   '1': 'AdGroupAdService',
-  '2': const [
-    const {'1': 'GetAdGroupAd', '2': '.google.ads.googleads.v1.services.GetAdGroupAdRequest', '3': '.google.ads.googleads.v1.resources.AdGroupAd', '4': const {}},
-    const {'1': 'MutateAdGroupAds', '2': '.google.ads.googleads.v1.services.MutateAdGroupAdsRequest', '3': '.google.ads.googleads.v1.services.MutateAdGroupAdsResponse', '4': const {}},
+  '2': [
+    {
+      '1': 'GetAdGroupAd',
+      '2': '.google.ads.googleads.v1.services.GetAdGroupAdRequest',
+      '3': '.google.ads.googleads.v1.resources.AdGroupAd',
+      '4': {}
+    },
+    {
+      '1': 'MutateAdGroupAds',
+      '2': '.google.ads.googleads.v1.services.MutateAdGroupAdsRequest',
+      '3': '.google.ads.googleads.v1.services.MutateAdGroupAdsResponse',
+      '4': {}
+    },
   ],
 };
 
-const AdGroupAdServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetAdGroupAdRequest': GetAdGroupAdRequest$json,
+const AdGroupAdServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetAdGroupAdRequest':
+      GetAdGroupAdRequest$json,
   '.google.ads.googleads.v1.resources.AdGroupAd': $0.AdGroupAd$json,
   '.google.protobuf.StringValue': $4.StringValue$json,
   '.google.ads.googleads.v1.resources.Ad': $5.Ad$json,
   '.google.protobuf.Int64Value': $4.Int64Value$json,
   '.google.ads.googleads.v1.common.TextAdInfo': $6.TextAdInfo$json,
-  '.google.ads.googleads.v1.common.ExpandedTextAdInfo': $6.ExpandedTextAdInfo$json,
+  '.google.ads.googleads.v1.common.ExpandedTextAdInfo':
+      $6.ExpandedTextAdInfo$json,
   '.google.ads.googleads.v1.common.CustomParameter': $7.CustomParameter$json,
   '.google.ads.googleads.v1.common.CallOnlyAdInfo': $6.CallOnlyAdInfo$json,
   '.google.protobuf.BoolValue': $4.BoolValue$json,
-  '.google.ads.googleads.v1.common.ExpandedDynamicSearchAdInfo': $6.ExpandedDynamicSearchAdInfo$json,
+  '.google.ads.googleads.v1.common.ExpandedDynamicSearchAdInfo':
+      $6.ExpandedDynamicSearchAdInfo$json,
   '.google.ads.googleads.v1.common.HotelAdInfo': $6.HotelAdInfo$json,
-  '.google.ads.googleads.v1.common.ShoppingSmartAdInfo': $6.ShoppingSmartAdInfo$json,
-  '.google.ads.googleads.v1.common.ShoppingProductAdInfo': $6.ShoppingProductAdInfo$json,
+  '.google.ads.googleads.v1.common.ShoppingSmartAdInfo':
+      $6.ShoppingSmartAdInfo$json,
+  '.google.ads.googleads.v1.common.ShoppingProductAdInfo':
+      $6.ShoppingProductAdInfo$json,
   '.google.ads.googleads.v1.common.GmailAdInfo': $6.GmailAdInfo$json,
   '.google.ads.googleads.v1.common.GmailTeaser': $6.GmailTeaser$json,
-  '.google.ads.googleads.v1.common.DisplayCallToAction': $6.DisplayCallToAction$json,
+  '.google.ads.googleads.v1.common.DisplayCallToAction':
+      $6.DisplayCallToAction$json,
   '.google.ads.googleads.v1.common.ProductImage': $6.ProductImage$json,
   '.google.ads.googleads.v1.common.ProductVideo': $6.ProductVideo$json,
   '.google.ads.googleads.v1.common.ImageAdInfo': $6.ImageAdInfo$json,
   '.google.protobuf.BytesValue': $4.BytesValue$json,
   '.google.ads.googleads.v1.common.VideoAdInfo': $6.VideoAdInfo$json,
-  '.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo': $6.VideoTrueViewInStreamAdInfo$json,
-  '.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo': $6.VideoBumperInStreamAdInfo$json,
-  '.google.ads.googleads.v1.common.VideoOutstreamAdInfo': $6.VideoOutstreamAdInfo$json,
-  '.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo': $6.VideoNonSkippableInStreamAdInfo$json,
-  '.google.ads.googleads.v1.common.ResponsiveSearchAdInfo': $6.ResponsiveSearchAdInfo$json,
+  '.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo':
+      $6.VideoTrueViewInStreamAdInfo$json,
+  '.google.ads.googleads.v1.common.VideoBumperInStreamAdInfo':
+      $6.VideoBumperInStreamAdInfo$json,
+  '.google.ads.googleads.v1.common.VideoOutstreamAdInfo':
+      $6.VideoOutstreamAdInfo$json,
+  '.google.ads.googleads.v1.common.VideoNonSkippableInStreamAdInfo':
+      $6.VideoNonSkippableInStreamAdInfo$json,
+  '.google.ads.googleads.v1.common.ResponsiveSearchAdInfo':
+      $6.ResponsiveSearchAdInfo$json,
   '.google.ads.googleads.v1.common.AdTextAsset': $8.AdTextAsset$json,
   '.google.ads.googleads.v1.common.UrlCollection': $9.UrlCollection$json,
-  '.google.ads.googleads.v1.common.LegacyResponsiveDisplayAdInfo': $6.LegacyResponsiveDisplayAdInfo$json,
+  '.google.ads.googleads.v1.common.LegacyResponsiveDisplayAdInfo':
+      $6.LegacyResponsiveDisplayAdInfo$json,
   '.google.ads.googleads.v1.common.AppAdInfo': $6.AppAdInfo$json,
   '.google.ads.googleads.v1.common.AdImageAsset': $8.AdImageAsset$json,
   '.google.ads.googleads.v1.common.AdVideoAsset': $8.AdVideoAsset$json,
-  '.google.ads.googleads.v1.common.AdMediaBundleAsset': $8.AdMediaBundleAsset$json,
-  '.google.ads.googleads.v1.common.LegacyAppInstallAdInfo': $6.LegacyAppInstallAdInfo$json,
-  '.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo': $6.ResponsiveDisplayAdInfo$json,
-  '.google.ads.googleads.v1.common.DisplayUploadAdInfo': $6.DisplayUploadAdInfo$json,
-  '.google.ads.googleads.v1.common.AppEngagementAdInfo': $6.AppEngagementAdInfo$json,
+  '.google.ads.googleads.v1.common.AdMediaBundleAsset':
+      $8.AdMediaBundleAsset$json,
+  '.google.ads.googleads.v1.common.LegacyAppInstallAdInfo':
+      $6.LegacyAppInstallAdInfo$json,
+  '.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo':
+      $6.ResponsiveDisplayAdInfo$json,
+  '.google.ads.googleads.v1.common.DisplayUploadAdInfo':
+      $6.DisplayUploadAdInfo$json,
+  '.google.ads.googleads.v1.common.AppEngagementAdInfo':
+      $6.AppEngagementAdInfo$json,
   '.google.ads.googleads.v1.common.FinalAppUrl': $10.FinalAppUrl$json,
-  '.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo': $6.ShoppingComparisonListingAdInfo$json,
-  '.google.ads.googleads.v1.resources.AdGroupAdPolicySummary': $0.AdGroupAdPolicySummary$json,
+  '.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo':
+      $6.ShoppingComparisonListingAdInfo$json,
+  '.google.ads.googleads.v1.resources.AdGroupAdPolicySummary':
+      $0.AdGroupAdPolicySummary$json,
   '.google.ads.googleads.v1.common.PolicyTopicEntry': $2.PolicyTopicEntry$json,
-  '.google.ads.googleads.v1.common.PolicyTopicEvidence': $2.PolicyTopicEvidence$json,
+  '.google.ads.googleads.v1.common.PolicyTopicEvidence':
+      $2.PolicyTopicEvidence$json,
   '.google.protobuf.Int32Value': $4.Int32Value$json,
-  '.google.ads.googleads.v1.common.PolicyTopicEvidence.WebsiteList': $2.PolicyTopicEvidence_WebsiteList$json,
-  '.google.ads.googleads.v1.common.PolicyTopicEvidence.TextList': $2.PolicyTopicEvidence_TextList$json,
-  '.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationTextList': $2.PolicyTopicEvidence_DestinationTextList$json,
-  '.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationMismatch': $2.PolicyTopicEvidence_DestinationMismatch$json,
-  '.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking': $2.PolicyTopicEvidence_DestinationNotWorking$json,
-  '.google.ads.googleads.v1.common.PolicyTopicConstraint': $2.PolicyTopicConstraint$json,
-  '.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraintList': $2.PolicyTopicConstraint_CountryConstraintList$json,
-  '.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint': $2.PolicyTopicConstraint_CountryConstraint$json,
-  '.google.ads.googleads.v1.common.PolicyTopicConstraint.ResellerConstraint': $2.PolicyTopicConstraint_ResellerConstraint$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupAdsRequest': MutateAdGroupAdsRequest$json,
-  '.google.ads.googleads.v1.services.AdGroupAdOperation': AdGroupAdOperation$json,
+  '.google.ads.googleads.v1.common.PolicyTopicEvidence.WebsiteList':
+      $2.PolicyTopicEvidence_WebsiteList$json,
+  '.google.ads.googleads.v1.common.PolicyTopicEvidence.TextList':
+      $2.PolicyTopicEvidence_TextList$json,
+  '.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationTextList':
+      $2.PolicyTopicEvidence_DestinationTextList$json,
+  '.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationMismatch':
+      $2.PolicyTopicEvidence_DestinationMismatch$json,
+  '.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking':
+      $2.PolicyTopicEvidence_DestinationNotWorking$json,
+  '.google.ads.googleads.v1.common.PolicyTopicConstraint':
+      $2.PolicyTopicConstraint$json,
+  '.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraintList':
+      $2.PolicyTopicConstraint_CountryConstraintList$json,
+  '.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint':
+      $2.PolicyTopicConstraint_CountryConstraint$json,
+  '.google.ads.googleads.v1.common.PolicyTopicConstraint.ResellerConstraint':
+      $2.PolicyTopicConstraint_ResellerConstraint$json,
+  '.google.ads.googleads.v1.services.MutateAdGroupAdsRequest':
+      MutateAdGroupAdsRequest$json,
+  '.google.ads.googleads.v1.services.AdGroupAdOperation':
+      AdGroupAdOperation$json,
   '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.common.PolicyValidationParameter': $2.PolicyValidationParameter$json,
-  '.google.ads.googleads.v1.common.PolicyViolationKey': $2.PolicyViolationKey$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupAdsResponse': MutateAdGroupAdsResponse$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupAdResult': MutateAdGroupAdResult$json,
+  '.google.ads.googleads.v1.common.PolicyValidationParameter':
+      $2.PolicyValidationParameter$json,
+  '.google.ads.googleads.v1.common.PolicyViolationKey':
+      $2.PolicyViolationKey$json,
+  '.google.ads.googleads.v1.services.MutateAdGroupAdsResponse':
+      MutateAdGroupAdsResponse$json,
+  '.google.ads.googleads.v1.services.MutateAdGroupAdResult':
+      MutateAdGroupAdResult$json,
   '.google.rpc.Status': $3.Status$json,
   '.google.protobuf.Any': $11.Any$json,
 };
-

@@ -16,23 +16,30 @@ import 'hotel_performance_view_service.pbjson.dart';
 export 'hotel_performance_view_service.pb.dart';
 
 abstract class HotelPerformanceViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.HotelPerformanceView> getHotelPerformanceView($pb.ServerContext ctx, GetHotelPerformanceViewRequest request);
+  $async.Future<$0.HotelPerformanceView> getHotelPerformanceView(
+      $pb.ServerContext ctx, GetHotelPerformanceViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetHotelPerformanceView': return GetHotelPerformanceViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetHotelPerformanceView':
+        return GetHotelPerformanceViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetHotelPerformanceView': return this.getHotelPerformanceView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetHotelPerformanceView':
+        return this.getHotelPerformanceView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => HotelPerformanceViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => HotelPerformanceViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      HotelPerformanceViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => HotelPerformanceViewServiceBase$messageJson;
 }
-

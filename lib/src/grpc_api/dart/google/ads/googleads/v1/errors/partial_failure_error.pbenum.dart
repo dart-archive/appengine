@@ -9,19 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PartialFailureErrorEnum_PartialFailureError extends $pb.ProtobufEnum {
-  static const PartialFailureErrorEnum_PartialFailureError UNSPECIFIED = PartialFailureErrorEnum_PartialFailureError._(0, 'UNSPECIFIED');
-  static const PartialFailureErrorEnum_PartialFailureError UNKNOWN = PartialFailureErrorEnum_PartialFailureError._(1, 'UNKNOWN');
-  static const PartialFailureErrorEnum_PartialFailureError PARTIAL_FAILURE_MODE_REQUIRED = PartialFailureErrorEnum_PartialFailureError._(2, 'PARTIAL_FAILURE_MODE_REQUIRED');
+  static const PartialFailureErrorEnum_PartialFailureError UNSPECIFIED =
+      PartialFailureErrorEnum_PartialFailureError._(0, 'UNSPECIFIED');
+  static const PartialFailureErrorEnum_PartialFailureError UNKNOWN =
+      PartialFailureErrorEnum_PartialFailureError._(1, 'UNKNOWN');
+  static const PartialFailureErrorEnum_PartialFailureError
+      PARTIAL_FAILURE_MODE_REQUIRED =
+      PartialFailureErrorEnum_PartialFailureError._(
+          2, 'PARTIAL_FAILURE_MODE_REQUIRED');
 
-  static const $core.List<PartialFailureErrorEnum_PartialFailureError> values = <PartialFailureErrorEnum_PartialFailureError> [
+  static const $core.List<PartialFailureErrorEnum_PartialFailureError> values =
+      <PartialFailureErrorEnum_PartialFailureError>[
     UNSPECIFIED,
     UNKNOWN,
     PARTIAL_FAILURE_MODE_REQUIRED,
   ];
 
-  static final $core.Map<$core.int, PartialFailureErrorEnum_PartialFailureError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PartialFailureErrorEnum_PartialFailureError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, PartialFailureErrorEnum_PartialFailureError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PartialFailureErrorEnum_PartialFailureError valueOf($core.int value) =>
+      _byValue[value];
 
-  const PartialFailureErrorEnum_PartialFailureError._($core.int v, $core.String n) : super(v, n);
+  const PartialFailureErrorEnum_PartialFailureError._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

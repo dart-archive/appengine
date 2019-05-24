@@ -6,22 +6,29 @@
 
 import '../resources/shopping_performance_view.pbjson.dart' as $0;
 
-const GetShoppingPerformanceViewRequest$json = const {
+const GetShoppingPerformanceViewRequest$json = {
   '1': 'GetShoppingPerformanceViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const ShoppingPerformanceViewServiceBase$json = const {
+const ShoppingPerformanceViewServiceBase$json = {
   '1': 'ShoppingPerformanceViewService',
-  '2': const [
-    const {'1': 'GetShoppingPerformanceView', '2': '.google.ads.googleads.v1.services.GetShoppingPerformanceViewRequest', '3': '.google.ads.googleads.v1.resources.ShoppingPerformanceView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetShoppingPerformanceView',
+      '2':
+          '.google.ads.googleads.v1.services.GetShoppingPerformanceViewRequest',
+      '3': '.google.ads.googleads.v1.resources.ShoppingPerformanceView',
+      '4': {}
+    },
   ],
 };
 
-const ShoppingPerformanceViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetShoppingPerformanceViewRequest': GetShoppingPerformanceViewRequest$json,
-  '.google.ads.googleads.v1.resources.ShoppingPerformanceView': $0.ShoppingPerformanceView$json,
+const ShoppingPerformanceViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetShoppingPerformanceViewRequest':
+      GetShoppingPerformanceViewRequest$json,
+  '.google.ads.googleads.v1.resources.ShoppingPerformanceView':
+      $0.ShoppingPerformanceView$json,
 };
-

@@ -7,45 +7,70 @@
 import '../resources/google_ads_field.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetGoogleAdsFieldRequest$json = const {
+const GetGoogleAdsFieldRequest$json = {
   '1': 'GetGoogleAdsFieldRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const SearchGoogleAdsFieldsRequest$json = const {
+const SearchGoogleAdsFieldsRequest$json = {
   '1': 'SearchGoogleAdsFieldsRequest',
-  '2': const [
-    const {'1': 'query', '3': 1, '4': 1, '5': 9, '10': 'query'},
-    const {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+  '2': [
+    {'1': 'query', '3': 1, '4': 1, '5': 9, '10': 'query'},
+    {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
   ],
 };
 
-const SearchGoogleAdsFieldsResponse$json = const {
+const SearchGoogleAdsFieldsResponse$json = {
   '1': 'SearchGoogleAdsFieldsResponse',
-  '2': const [
-    const {'1': 'results', '3': 1, '4': 3, '5': 11, '6': '.google.ads.googleads.v1.resources.GoogleAdsField', '10': 'results'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
-    const {'1': 'total_results_count', '3': 3, '4': 1, '5': 3, '10': 'totalResultsCount'},
+  '2': [
+    {
+      '1': 'results',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.resources.GoogleAdsField',
+      '10': 'results'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'total_results_count',
+      '3': 3,
+      '4': 1,
+      '5': 3,
+      '10': 'totalResultsCount'
+    },
   ],
 };
 
-const GoogleAdsFieldServiceBase$json = const {
+const GoogleAdsFieldServiceBase$json = {
   '1': 'GoogleAdsFieldService',
-  '2': const [
-    const {'1': 'GetGoogleAdsField', '2': '.google.ads.googleads.v1.services.GetGoogleAdsFieldRequest', '3': '.google.ads.googleads.v1.resources.GoogleAdsField', '4': const {}},
-    const {'1': 'SearchGoogleAdsFields', '2': '.google.ads.googleads.v1.services.SearchGoogleAdsFieldsRequest', '3': '.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse', '4': const {}},
+  '2': [
+    {
+      '1': 'GetGoogleAdsField',
+      '2': '.google.ads.googleads.v1.services.GetGoogleAdsFieldRequest',
+      '3': '.google.ads.googleads.v1.resources.GoogleAdsField',
+      '4': {}
+    },
+    {
+      '1': 'SearchGoogleAdsFields',
+      '2': '.google.ads.googleads.v1.services.SearchGoogleAdsFieldsRequest',
+      '3': '.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse',
+      '4': {}
+    },
   ],
 };
 
-const GoogleAdsFieldServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetGoogleAdsFieldRequest': GetGoogleAdsFieldRequest$json,
+const GoogleAdsFieldServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetGoogleAdsFieldRequest':
+      GetGoogleAdsFieldRequest$json,
   '.google.ads.googleads.v1.resources.GoogleAdsField': $0.GoogleAdsField$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
   '.google.protobuf.BoolValue': $1.BoolValue$json,
-  '.google.ads.googleads.v1.services.SearchGoogleAdsFieldsRequest': SearchGoogleAdsFieldsRequest$json,
-  '.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse': SearchGoogleAdsFieldsResponse$json,
+  '.google.ads.googleads.v1.services.SearchGoogleAdsFieldsRequest':
+      SearchGoogleAdsFieldsRequest$json,
+  '.google.ads.googleads.v1.services.SearchGoogleAdsFieldsResponse':
+      SearchGoogleAdsFieldsResponse$json,
 };
-

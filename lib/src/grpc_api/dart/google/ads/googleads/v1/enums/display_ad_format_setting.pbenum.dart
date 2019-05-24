@@ -8,14 +8,21 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class DisplayAdFormatSettingEnum_DisplayAdFormatSetting extends $pb.ProtobufEnum {
-  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting UNSPECIFIED = DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(0, 'UNSPECIFIED');
-  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting UNKNOWN = DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(1, 'UNKNOWN');
-  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting ALL_FORMATS = DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(2, 'ALL_FORMATS');
-  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting NON_NATIVE = DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(3, 'NON_NATIVE');
-  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting NATIVE = DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(4, 'NATIVE');
+class DisplayAdFormatSettingEnum_DisplayAdFormatSetting
+    extends $pb.ProtobufEnum {
+  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting UNSPECIFIED =
+      DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(0, 'UNSPECIFIED');
+  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting UNKNOWN =
+      DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(1, 'UNKNOWN');
+  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting ALL_FORMATS =
+      DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(2, 'ALL_FORMATS');
+  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting NON_NATIVE =
+      DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(3, 'NON_NATIVE');
+  static const DisplayAdFormatSettingEnum_DisplayAdFormatSetting NATIVE =
+      DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(4, 'NATIVE');
 
-  static const $core.List<DisplayAdFormatSettingEnum_DisplayAdFormatSetting> values = <DisplayAdFormatSettingEnum_DisplayAdFormatSetting> [
+  static const $core.List<DisplayAdFormatSettingEnum_DisplayAdFormatSetting>
+      values = <DisplayAdFormatSettingEnum_DisplayAdFormatSetting>[
     UNSPECIFIED,
     UNKNOWN,
     ALL_FORMATS,
@@ -23,9 +30,14 @@ class DisplayAdFormatSettingEnum_DisplayAdFormatSetting extends $pb.ProtobufEnum
     NATIVE,
   ];
 
-  static final $core.Map<$core.int, DisplayAdFormatSettingEnum_DisplayAdFormatSetting> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static DisplayAdFormatSettingEnum_DisplayAdFormatSetting valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, DisplayAdFormatSettingEnum_DisplayAdFormatSetting>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DisplayAdFormatSettingEnum_DisplayAdFormatSetting valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const DisplayAdFormatSettingEnum_DisplayAdFormatSetting._($core.int v, $core.String n) : super(v, n);
+  const DisplayAdFormatSettingEnum_DisplayAdFormatSetting._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

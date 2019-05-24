@@ -9,21 +9,26 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class FeedStatusEnum_FeedStatus extends $pb.ProtobufEnum {
-  static const FeedStatusEnum_FeedStatus UNSPECIFIED = FeedStatusEnum_FeedStatus._(0, 'UNSPECIFIED');
-  static const FeedStatusEnum_FeedStatus UNKNOWN = FeedStatusEnum_FeedStatus._(1, 'UNKNOWN');
-  static const FeedStatusEnum_FeedStatus ENABLED = FeedStatusEnum_FeedStatus._(2, 'ENABLED');
-  static const FeedStatusEnum_FeedStatus REMOVED = FeedStatusEnum_FeedStatus._(3, 'REMOVED');
+  static const FeedStatusEnum_FeedStatus UNSPECIFIED =
+      FeedStatusEnum_FeedStatus._(0, 'UNSPECIFIED');
+  static const FeedStatusEnum_FeedStatus UNKNOWN =
+      FeedStatusEnum_FeedStatus._(1, 'UNKNOWN');
+  static const FeedStatusEnum_FeedStatus ENABLED =
+      FeedStatusEnum_FeedStatus._(2, 'ENABLED');
+  static const FeedStatusEnum_FeedStatus REMOVED =
+      FeedStatusEnum_FeedStatus._(3, 'REMOVED');
 
-  static const $core.List<FeedStatusEnum_FeedStatus> values = <FeedStatusEnum_FeedStatus> [
+  static const $core.List<FeedStatusEnum_FeedStatus> values =
+      <FeedStatusEnum_FeedStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, FeedStatusEnum_FeedStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, FeedStatusEnum_FeedStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static FeedStatusEnum_FeedStatus valueOf($core.int value) => _byValue[value];
 
   const FeedStatusEnum_FeedStatus._($core.int v, $core.String n) : super(v, n);
 }
-

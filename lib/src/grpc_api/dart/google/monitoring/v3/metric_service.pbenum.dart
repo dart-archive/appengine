@@ -9,17 +9,22 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ListTimeSeriesRequest_TimeSeriesView extends $pb.ProtobufEnum {
-  static const ListTimeSeriesRequest_TimeSeriesView FULL = ListTimeSeriesRequest_TimeSeriesView._(0, 'FULL');
-  static const ListTimeSeriesRequest_TimeSeriesView HEADERS = ListTimeSeriesRequest_TimeSeriesView._(1, 'HEADERS');
+  static const ListTimeSeriesRequest_TimeSeriesView FULL =
+      ListTimeSeriesRequest_TimeSeriesView._(0, 'FULL');
+  static const ListTimeSeriesRequest_TimeSeriesView HEADERS =
+      ListTimeSeriesRequest_TimeSeriesView._(1, 'HEADERS');
 
-  static const $core.List<ListTimeSeriesRequest_TimeSeriesView> values = <ListTimeSeriesRequest_TimeSeriesView> [
+  static const $core.List<ListTimeSeriesRequest_TimeSeriesView> values =
+      <ListTimeSeriesRequest_TimeSeriesView>[
     FULL,
     HEADERS,
   ];
 
-  static final $core.Map<$core.int, ListTimeSeriesRequest_TimeSeriesView> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ListTimeSeriesRequest_TimeSeriesView valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, ListTimeSeriesRequest_TimeSeriesView>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ListTimeSeriesRequest_TimeSeriesView valueOf($core.int value) =>
+      _byValue[value];
 
-  const ListTimeSeriesRequest_TimeSeriesView._($core.int v, $core.String n) : super(v, n);
+  const ListTimeSeriesRequest_TimeSeriesView._($core.int v, $core.String n)
+      : super(v, n);
 }
-

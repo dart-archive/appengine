@@ -8,14 +8,21 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ConversionActionStatusEnum_ConversionActionStatus extends $pb.ProtobufEnum {
-  static const ConversionActionStatusEnum_ConversionActionStatus UNSPECIFIED = ConversionActionStatusEnum_ConversionActionStatus._(0, 'UNSPECIFIED');
-  static const ConversionActionStatusEnum_ConversionActionStatus UNKNOWN = ConversionActionStatusEnum_ConversionActionStatus._(1, 'UNKNOWN');
-  static const ConversionActionStatusEnum_ConversionActionStatus ENABLED = ConversionActionStatusEnum_ConversionActionStatus._(2, 'ENABLED');
-  static const ConversionActionStatusEnum_ConversionActionStatus REMOVED = ConversionActionStatusEnum_ConversionActionStatus._(3, 'REMOVED');
-  static const ConversionActionStatusEnum_ConversionActionStatus HIDDEN = ConversionActionStatusEnum_ConversionActionStatus._(4, 'HIDDEN');
+class ConversionActionStatusEnum_ConversionActionStatus
+    extends $pb.ProtobufEnum {
+  static const ConversionActionStatusEnum_ConversionActionStatus UNSPECIFIED =
+      ConversionActionStatusEnum_ConversionActionStatus._(0, 'UNSPECIFIED');
+  static const ConversionActionStatusEnum_ConversionActionStatus UNKNOWN =
+      ConversionActionStatusEnum_ConversionActionStatus._(1, 'UNKNOWN');
+  static const ConversionActionStatusEnum_ConversionActionStatus ENABLED =
+      ConversionActionStatusEnum_ConversionActionStatus._(2, 'ENABLED');
+  static const ConversionActionStatusEnum_ConversionActionStatus REMOVED =
+      ConversionActionStatusEnum_ConversionActionStatus._(3, 'REMOVED');
+  static const ConversionActionStatusEnum_ConversionActionStatus HIDDEN =
+      ConversionActionStatusEnum_ConversionActionStatus._(4, 'HIDDEN');
 
-  static const $core.List<ConversionActionStatusEnum_ConversionActionStatus> values = <ConversionActionStatusEnum_ConversionActionStatus> [
+  static const $core.List<ConversionActionStatusEnum_ConversionActionStatus>
+      values = <ConversionActionStatusEnum_ConversionActionStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
@@ -23,9 +30,14 @@ class ConversionActionStatusEnum_ConversionActionStatus extends $pb.ProtobufEnum
     HIDDEN,
   ];
 
-  static final $core.Map<$core.int, ConversionActionStatusEnum_ConversionActionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ConversionActionStatusEnum_ConversionActionStatus valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, ConversionActionStatusEnum_ConversionActionStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ConversionActionStatusEnum_ConversionActionStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ConversionActionStatusEnum_ConversionActionStatus._($core.int v, $core.String n) : super(v, n);
+  const ConversionActionStatusEnum_ConversionActionStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

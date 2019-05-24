@@ -7,25 +7,32 @@
 import '../resources/operating_system_version_constant.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetOperatingSystemVersionConstantRequest$json = const {
+const GetOperatingSystemVersionConstantRequest$json = {
   '1': 'GetOperatingSystemVersionConstantRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const OperatingSystemVersionConstantServiceBase$json = const {
+const OperatingSystemVersionConstantServiceBase$json = {
   '1': 'OperatingSystemVersionConstantService',
-  '2': const [
-    const {'1': 'GetOperatingSystemVersionConstant', '2': '.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest', '3': '.google.ads.googleads.v1.resources.OperatingSystemVersionConstant', '4': const {}},
+  '2': [
+    {
+      '1': 'GetOperatingSystemVersionConstant',
+      '2':
+          '.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest',
+      '3': '.google.ads.googleads.v1.resources.OperatingSystemVersionConstant',
+      '4': {}
+    },
   ],
 };
 
-const OperatingSystemVersionConstantServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest': GetOperatingSystemVersionConstantRequest$json,
-  '.google.ads.googleads.v1.resources.OperatingSystemVersionConstant': $0.OperatingSystemVersionConstant$json,
+const OperatingSystemVersionConstantServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetOperatingSystemVersionConstantRequest':
+      GetOperatingSystemVersionConstantRequest$json,
+  '.google.ads.googleads.v1.resources.OperatingSystemVersionConstant':
+      $0.OperatingSystemVersionConstant$json,
   '.google.protobuf.Int64Value': $1.Int64Value$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
   '.google.protobuf.Int32Value': $1.Int32Value$json,
 };
-

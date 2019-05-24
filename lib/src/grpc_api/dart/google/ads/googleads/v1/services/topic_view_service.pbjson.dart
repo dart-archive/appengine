@@ -6,22 +6,27 @@
 
 import '../resources/topic_view.pbjson.dart' as $0;
 
-const GetTopicViewRequest$json = const {
+const GetTopicViewRequest$json = {
   '1': 'GetTopicViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const TopicViewServiceBase$json = const {
+const TopicViewServiceBase$json = {
   '1': 'TopicViewService',
-  '2': const [
-    const {'1': 'GetTopicView', '2': '.google.ads.googleads.v1.services.GetTopicViewRequest', '3': '.google.ads.googleads.v1.resources.TopicView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetTopicView',
+      '2': '.google.ads.googleads.v1.services.GetTopicViewRequest',
+      '3': '.google.ads.googleads.v1.resources.TopicView',
+      '4': {}
+    },
   ],
 };
 
-const TopicViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetTopicViewRequest': GetTopicViewRequest$json,
+const TopicViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetTopicViewRequest':
+      GetTopicViewRequest$json,
   '.google.ads.googleads.v1.resources.TopicView': $0.TopicView$json,
 };
-

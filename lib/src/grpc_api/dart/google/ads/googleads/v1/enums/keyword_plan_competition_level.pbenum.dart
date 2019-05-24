@@ -8,14 +8,27 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel extends $pb.ProtobufEnum {
-  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel UNSPECIFIED = KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(0, 'UNSPECIFIED');
-  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel UNKNOWN = KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(1, 'UNKNOWN');
-  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel LOW = KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(2, 'LOW');
-  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel MEDIUM = KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(3, 'MEDIUM');
-  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel HIGH = KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(4, 'HIGH');
+class KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel
+    extends $pb.ProtobufEnum {
+  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel
+      UNSPECIFIED =
+      KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(
+          0, 'UNSPECIFIED');
+  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel
+      UNKNOWN = KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(
+          1, 'UNKNOWN');
+  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel LOW =
+      KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(2, 'LOW');
+  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel
+      MEDIUM = KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(
+          3, 'MEDIUM');
+  static const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel
+      HIGH =
+      KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(4, 'HIGH');
 
-  static const $core.List<KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel> values = <KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel> [
+  static const $core
+          .List<KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel>
+      values = <KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel>[
     UNSPECIFIED,
     UNKNOWN,
     LOW,
@@ -23,9 +36,14 @@ class KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel extends $pb.Pr
     HIGH,
   ];
 
-  static final $core.Map<$core.int, KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._($core.int v, $core.String n) : super(v, n);
+  const KeywordPlanCompetitionLevelEnum_KeywordPlanCompetitionLevel._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

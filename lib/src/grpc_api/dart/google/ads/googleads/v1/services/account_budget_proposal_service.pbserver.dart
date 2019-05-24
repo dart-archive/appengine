@@ -16,26 +16,37 @@ import 'account_budget_proposal_service.pbjson.dart';
 export 'account_budget_proposal_service.pb.dart';
 
 abstract class AccountBudgetProposalServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.AccountBudgetProposal> getAccountBudgetProposal($pb.ServerContext ctx, GetAccountBudgetProposalRequest request);
-  $async.Future<MutateAccountBudgetProposalResponse> mutateAccountBudgetProposal($pb.ServerContext ctx, MutateAccountBudgetProposalRequest request);
+  $async.Future<$0.AccountBudgetProposal> getAccountBudgetProposal(
+      $pb.ServerContext ctx, GetAccountBudgetProposalRequest request);
+  $async.Future<MutateAccountBudgetProposalResponse>
+      mutateAccountBudgetProposal(
+          $pb.ServerContext ctx, MutateAccountBudgetProposalRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetAccountBudgetProposal': return GetAccountBudgetProposalRequest();
-      case 'MutateAccountBudgetProposal': return MutateAccountBudgetProposalRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAccountBudgetProposal':
+        return GetAccountBudgetProposalRequest();
+      case 'MutateAccountBudgetProposal':
+        return MutateAccountBudgetProposalRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetAccountBudgetProposal': return this.getAccountBudgetProposal(ctx, request);
-      case 'MutateAccountBudgetProposal': return this.mutateAccountBudgetProposal(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAccountBudgetProposal':
+        return this.getAccountBudgetProposal(ctx, request);
+      case 'MutateAccountBudgetProposal':
+        return this.mutateAccountBudgetProposal(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => AccountBudgetProposalServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => AccountBudgetProposalServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      AccountBudgetProposalServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AccountBudgetProposalServiceBase$messageJson;
 }
-

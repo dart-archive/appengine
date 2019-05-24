@@ -16,28 +16,39 @@ export 'tasks.pb.dart';
 
 abstract class TasksServiceBase extends $pb.GeneratedService {
   $async.Future<Task> getTask($pb.ServerContext ctx, GetTaskRequest request);
-  $async.Future<TaskResult> updateTaskResult($pb.ServerContext ctx, UpdateTaskResultRequest request);
-  $async.Future<AddTaskLogResponse> addTaskLog($pb.ServerContext ctx, AddTaskLogRequest request);
+  $async.Future<TaskResult> updateTaskResult(
+      $pb.ServerContext ctx, UpdateTaskResultRequest request);
+  $async.Future<AddTaskLogResponse> addTaskLog(
+      $pb.ServerContext ctx, AddTaskLogRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetTask': return GetTaskRequest();
-      case 'UpdateTaskResult': return UpdateTaskResultRequest();
-      case 'AddTaskLog': return AddTaskLogRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetTask':
+        return GetTaskRequest();
+      case 'UpdateTaskResult':
+        return UpdateTaskResultRequest();
+      case 'AddTaskLog':
+        return AddTaskLogRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetTask': return this.getTask(ctx, request);
-      case 'UpdateTaskResult': return this.updateTaskResult(ctx, request);
-      case 'AddTaskLog': return this.addTaskLog(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetTask':
+        return this.getTask(ctx, request);
+      case 'UpdateTaskResult':
+        return this.updateTaskResult(ctx, request);
+      case 'AddTaskLog':
+        return this.addTaskLog(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => TasksServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => TasksServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => TasksServiceBase$messageJson;
 }
-

@@ -8,22 +8,33 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class CampaignSharedSetStatusEnum_CampaignSharedSetStatus extends $pb.ProtobufEnum {
-  static const CampaignSharedSetStatusEnum_CampaignSharedSetStatus UNSPECIFIED = CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(0, 'UNSPECIFIED');
-  static const CampaignSharedSetStatusEnum_CampaignSharedSetStatus UNKNOWN = CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(1, 'UNKNOWN');
-  static const CampaignSharedSetStatusEnum_CampaignSharedSetStatus ENABLED = CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(2, 'ENABLED');
-  static const CampaignSharedSetStatusEnum_CampaignSharedSetStatus REMOVED = CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(3, 'REMOVED');
+class CampaignSharedSetStatusEnum_CampaignSharedSetStatus
+    extends $pb.ProtobufEnum {
+  static const CampaignSharedSetStatusEnum_CampaignSharedSetStatus UNSPECIFIED =
+      CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(0, 'UNSPECIFIED');
+  static const CampaignSharedSetStatusEnum_CampaignSharedSetStatus UNKNOWN =
+      CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(1, 'UNKNOWN');
+  static const CampaignSharedSetStatusEnum_CampaignSharedSetStatus ENABLED =
+      CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(2, 'ENABLED');
+  static const CampaignSharedSetStatusEnum_CampaignSharedSetStatus REMOVED =
+      CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(3, 'REMOVED');
 
-  static const $core.List<CampaignSharedSetStatusEnum_CampaignSharedSetStatus> values = <CampaignSharedSetStatusEnum_CampaignSharedSetStatus> [
+  static const $core.List<CampaignSharedSetStatusEnum_CampaignSharedSetStatus>
+      values = <CampaignSharedSetStatusEnum_CampaignSharedSetStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, CampaignSharedSetStatusEnum_CampaignSharedSetStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CampaignSharedSetStatusEnum_CampaignSharedSetStatus valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, CampaignSharedSetStatusEnum_CampaignSharedSetStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CampaignSharedSetStatusEnum_CampaignSharedSetStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const CampaignSharedSetStatusEnum_CampaignSharedSetStatus._($core.int v, $core.String n) : super(v, n);
+  const CampaignSharedSetStatusEnum_CampaignSharedSetStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

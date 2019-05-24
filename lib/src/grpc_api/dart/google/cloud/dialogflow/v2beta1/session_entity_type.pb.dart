@@ -5,7 +5,8 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,32 +19,52 @@ import 'session_entity_type.pbenum.dart';
 export 'session_entity_type.pbenum.dart';
 
 class SessionEntityType extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SessionEntityType', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SessionEntityType',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..aOS(1, 'name')
-    ..e<SessionEntityType_EntityOverrideMode>(2, 'entityOverrideMode', $pb.PbFieldType.OE, SessionEntityType_EntityOverrideMode.ENTITY_OVERRIDE_MODE_UNSPECIFIED, SessionEntityType_EntityOverrideMode.valueOf, SessionEntityType_EntityOverrideMode.values)
-    ..pc<$0.EntityType_Entity>(3, 'entities', $pb.PbFieldType.PM,$0.EntityType_Entity.create)
-    ..hasRequiredFields = false
-  ;
+    ..e<SessionEntityType_EntityOverrideMode>(
+        2,
+        'entityOverrideMode',
+        $pb.PbFieldType.OE,
+        SessionEntityType_EntityOverrideMode.ENTITY_OVERRIDE_MODE_UNSPECIFIED,
+        SessionEntityType_EntityOverrideMode.valueOf,
+        SessionEntityType_EntityOverrideMode.values)
+    ..pc<$0.EntityType_Entity>(
+        3, 'entities', $pb.PbFieldType.PM, $0.EntityType_Entity.create)
+    ..hasRequiredFields = false;
 
   SessionEntityType() : super();
-  SessionEntityType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  SessionEntityType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  SessionEntityType.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SessionEntityType.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   SessionEntityType clone() => SessionEntityType()..mergeFromMessage(this);
-  SessionEntityType copyWith(void Function(SessionEntityType) updates) => super.copyWith((message) => updates(message as SessionEntityType));
+  SessionEntityType copyWith(void Function(SessionEntityType) updates) =>
+      super.copyWith((message) => updates(message as SessionEntityType));
   $pb.BuilderInfo get info_ => _i;
   static SessionEntityType create() => SessionEntityType();
   SessionEntityType createEmptyInstance() => create();
-  static $pb.PbList<SessionEntityType> createRepeated() => $pb.PbList<SessionEntityType>();
-  static SessionEntityType getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<SessionEntityType> createRepeated() =>
+      $pb.PbList<SessionEntityType>();
+  static SessionEntityType getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SessionEntityType _defaultInstance;
 
   $core.String get name => $_getS(0, '');
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   SessionEntityType_EntityOverrideMode get entityOverrideMode => $_getN(1);
-  set entityOverrideMode(SessionEntityType_EntityOverrideMode v) { setField(2, v); }
+  set entityOverrideMode(SessionEntityType_EntityOverrideMode v) {
+    setField(2, v);
+  }
+
   $core.bool hasEntityOverrideMode() => $_has(1);
   void clearEntityOverrideMode() => clearField(2);
 
@@ -51,172 +72,277 @@ class SessionEntityType extends $pb.GeneratedMessage {
 }
 
 class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSessionEntityTypesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListSessionEntityTypesRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListSessionEntityTypesRequest() : super();
-  ListSessionEntityTypesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListSessionEntityTypesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListSessionEntityTypesRequest clone() => ListSessionEntityTypesRequest()..mergeFromMessage(this);
-  ListSessionEntityTypesRequest copyWith(void Function(ListSessionEntityTypesRequest) updates) => super.copyWith((message) => updates(message as ListSessionEntityTypesRequest));
+  ListSessionEntityTypesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListSessionEntityTypesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListSessionEntityTypesRequest clone() =>
+      ListSessionEntityTypesRequest()..mergeFromMessage(this);
+  ListSessionEntityTypesRequest copyWith(
+          void Function(ListSessionEntityTypesRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListSessionEntityTypesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListSessionEntityTypesRequest create() => ListSessionEntityTypesRequest();
+  static ListSessionEntityTypesRequest create() =>
+      ListSessionEntityTypesRequest();
   ListSessionEntityTypesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListSessionEntityTypesRequest> createRepeated() => $pb.PbList<ListSessionEntityTypesRequest>();
-  static ListSessionEntityTypesRequest getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<ListSessionEntityTypesRequest> createRepeated() =>
+      $pb.PbList<ListSessionEntityTypesRequest>();
+  static ListSessionEntityTypesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSessionEntityTypesRequest _defaultInstance;
 
   $core.String get parent => $_getS(0, '');
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   $core.int get pageSize => $_get(1, 0);
-  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  set pageSize($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
   $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
   $core.String get pageToken => $_getS(2, '');
-  set pageToken($core.String v) { $_setString(2, v); }
+  set pageToken($core.String v) {
+    $_setString(2, v);
+  }
+
   $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
 class ListSessionEntityTypesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSessionEntityTypesResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
-    ..pc<SessionEntityType>(1, 'sessionEntityTypes', $pb.PbFieldType.PM,SessionEntityType.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListSessionEntityTypesResponse',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+    ..pc<SessionEntityType>(
+        1, 'sessionEntityTypes', $pb.PbFieldType.PM, SessionEntityType.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ListSessionEntityTypesResponse() : super();
-  ListSessionEntityTypesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  ListSessionEntityTypesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  ListSessionEntityTypesResponse clone() => ListSessionEntityTypesResponse()..mergeFromMessage(this);
-  ListSessionEntityTypesResponse copyWith(void Function(ListSessionEntityTypesResponse) updates) => super.copyWith((message) => updates(message as ListSessionEntityTypesResponse));
+  ListSessionEntityTypesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ListSessionEntityTypesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ListSessionEntityTypesResponse clone() =>
+      ListSessionEntityTypesResponse()..mergeFromMessage(this);
+  ListSessionEntityTypesResponse copyWith(
+          void Function(ListSessionEntityTypesResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListSessionEntityTypesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListSessionEntityTypesResponse create() => ListSessionEntityTypesResponse();
+  static ListSessionEntityTypesResponse create() =>
+      ListSessionEntityTypesResponse();
   ListSessionEntityTypesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListSessionEntityTypesResponse> createRepeated() => $pb.PbList<ListSessionEntityTypesResponse>();
-  static ListSessionEntityTypesResponse getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<ListSessionEntityTypesResponse> createRepeated() =>
+      $pb.PbList<ListSessionEntityTypesResponse>();
+  static ListSessionEntityTypesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSessionEntityTypesResponse _defaultInstance;
 
   $core.List<SessionEntityType> get sessionEntityTypes => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
-  set nextPageToken($core.String v) { $_setString(1, v); }
+  set nextPageToken($core.String v) {
+    $_setString(1, v);
+  }
+
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
 class GetSessionEntityTypeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSessionEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GetSessionEntityTypeRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   GetSessionEntityTypeRequest() : super();
-  GetSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  GetSessionEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  GetSessionEntityTypeRequest clone() => GetSessionEntityTypeRequest()..mergeFromMessage(this);
-  GetSessionEntityTypeRequest copyWith(void Function(GetSessionEntityTypeRequest) updates) => super.copyWith((message) => updates(message as GetSessionEntityTypeRequest));
+  GetSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GetSessionEntityTypeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  GetSessionEntityTypeRequest clone() =>
+      GetSessionEntityTypeRequest()..mergeFromMessage(this);
+  GetSessionEntityTypeRequest copyWith(
+          void Function(GetSessionEntityTypeRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as GetSessionEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
   static GetSessionEntityTypeRequest create() => GetSessionEntityTypeRequest();
   GetSessionEntityTypeRequest createEmptyInstance() => create();
-  static $pb.PbList<GetSessionEntityTypeRequest> createRepeated() => $pb.PbList<GetSessionEntityTypeRequest>();
-  static GetSessionEntityTypeRequest getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<GetSessionEntityTypeRequest> createRepeated() =>
+      $pb.PbList<GetSessionEntityTypeRequest>();
+  static GetSessionEntityTypeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetSessionEntityTypeRequest _defaultInstance;
 
   $core.String get name => $_getS(0, '');
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
 class CreateSessionEntityTypeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSessionEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'CreateSessionEntityTypeRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..aOS(1, 'parent')
-    ..a<SessionEntityType>(2, 'sessionEntityType', $pb.PbFieldType.OM, SessionEntityType.getDefault, SessionEntityType.create)
-    ..hasRequiredFields = false
-  ;
+    ..a<SessionEntityType>(2, 'sessionEntityType', $pb.PbFieldType.OM,
+        SessionEntityType.getDefault, SessionEntityType.create)
+    ..hasRequiredFields = false;
 
   CreateSessionEntityTypeRequest() : super();
-  CreateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  CreateSessionEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  CreateSessionEntityTypeRequest clone() => CreateSessionEntityTypeRequest()..mergeFromMessage(this);
-  CreateSessionEntityTypeRequest copyWith(void Function(CreateSessionEntityTypeRequest) updates) => super.copyWith((message) => updates(message as CreateSessionEntityTypeRequest));
+  CreateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  CreateSessionEntityTypeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  CreateSessionEntityTypeRequest clone() =>
+      CreateSessionEntityTypeRequest()..mergeFromMessage(this);
+  CreateSessionEntityTypeRequest copyWith(
+          void Function(CreateSessionEntityTypeRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as CreateSessionEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateSessionEntityTypeRequest create() => CreateSessionEntityTypeRequest();
+  static CreateSessionEntityTypeRequest create() =>
+      CreateSessionEntityTypeRequest();
   CreateSessionEntityTypeRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateSessionEntityTypeRequest> createRepeated() => $pb.PbList<CreateSessionEntityTypeRequest>();
-  static CreateSessionEntityTypeRequest getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<CreateSessionEntityTypeRequest> createRepeated() =>
+      $pb.PbList<CreateSessionEntityTypeRequest>();
+  static CreateSessionEntityTypeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateSessionEntityTypeRequest _defaultInstance;
 
   $core.String get parent => $_getS(0, '');
-  set parent($core.String v) { $_setString(0, v); }
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   SessionEntityType get sessionEntityType => $_getN(1);
-  set sessionEntityType(SessionEntityType v) { setField(2, v); }
+  set sessionEntityType(SessionEntityType v) {
+    setField(2, v);
+  }
+
   $core.bool hasSessionEntityType() => $_has(1);
   void clearSessionEntityType() => clearField(2);
 }
 
 class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSessionEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
-    ..a<SessionEntityType>(1, 'sessionEntityType', $pb.PbFieldType.OM, SessionEntityType.getDefault, SessionEntityType.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM, $1.FieldMask.getDefault, $1.FieldMask.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'UpdateSessionEntityTypeRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+    ..a<SessionEntityType>(1, 'sessionEntityType', $pb.PbFieldType.OM,
+        SessionEntityType.getDefault, SessionEntityType.create)
+    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..hasRequiredFields = false;
 
   UpdateSessionEntityTypeRequest() : super();
-  UpdateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  UpdateSessionEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  UpdateSessionEntityTypeRequest clone() => UpdateSessionEntityTypeRequest()..mergeFromMessage(this);
-  UpdateSessionEntityTypeRequest copyWith(void Function(UpdateSessionEntityTypeRequest) updates) => super.copyWith((message) => updates(message as UpdateSessionEntityTypeRequest));
+  UpdateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  UpdateSessionEntityTypeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  UpdateSessionEntityTypeRequest clone() =>
+      UpdateSessionEntityTypeRequest()..mergeFromMessage(this);
+  UpdateSessionEntityTypeRequest copyWith(
+          void Function(UpdateSessionEntityTypeRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as UpdateSessionEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateSessionEntityTypeRequest create() => UpdateSessionEntityTypeRequest();
+  static UpdateSessionEntityTypeRequest create() =>
+      UpdateSessionEntityTypeRequest();
   UpdateSessionEntityTypeRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateSessionEntityTypeRequest> createRepeated() => $pb.PbList<UpdateSessionEntityTypeRequest>();
-  static UpdateSessionEntityTypeRequest getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<UpdateSessionEntityTypeRequest> createRepeated() =>
+      $pb.PbList<UpdateSessionEntityTypeRequest>();
+  static UpdateSessionEntityTypeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateSessionEntityTypeRequest _defaultInstance;
 
   SessionEntityType get sessionEntityType => $_getN(0);
-  set sessionEntityType(SessionEntityType v) { setField(1, v); }
+  set sessionEntityType(SessionEntityType v) {
+    setField(1, v);
+  }
+
   $core.bool hasSessionEntityType() => $_has(0);
   void clearSessionEntityType() => clearField(1);
 
   $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) { setField(2, v); }
+  set updateMask($1.FieldMask v) {
+    setField(2, v);
+  }
+
   $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(2);
 }
 
 class DeleteSessionEntityTypeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSessionEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DeleteSessionEntityTypeRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   DeleteSessionEntityTypeRequest() : super();
-  DeleteSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  DeleteSessionEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
-  DeleteSessionEntityTypeRequest clone() => DeleteSessionEntityTypeRequest()..mergeFromMessage(this);
-  DeleteSessionEntityTypeRequest copyWith(void Function(DeleteSessionEntityTypeRequest) updates) => super.copyWith((message) => updates(message as DeleteSessionEntityTypeRequest));
+  DeleteSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DeleteSessionEntityTypeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DeleteSessionEntityTypeRequest clone() =>
+      DeleteSessionEntityTypeRequest()..mergeFromMessage(this);
+  DeleteSessionEntityTypeRequest copyWith(
+          void Function(DeleteSessionEntityTypeRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as DeleteSessionEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteSessionEntityTypeRequest create() => DeleteSessionEntityTypeRequest();
+  static DeleteSessionEntityTypeRequest create() =>
+      DeleteSessionEntityTypeRequest();
   DeleteSessionEntityTypeRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteSessionEntityTypeRequest> createRepeated() => $pb.PbList<DeleteSessionEntityTypeRequest>();
-  static DeleteSessionEntityTypeRequest getDefault() => _defaultInstance ??= create()..freeze();
+  static $pb.PbList<DeleteSessionEntityTypeRequest> createRepeated() =>
+      $pb.PbList<DeleteSessionEntityTypeRequest>();
+  static DeleteSessionEntityTypeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteSessionEntityTypeRequest _defaultInstance;
 
   $core.String get name => $_getS(0, '');
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
@@ -225,25 +351,38 @@ class SessionEntityTypesApi {
   $pb.RpcClient _client;
   SessionEntityTypesApi(this._client);
 
-  $async.Future<ListSessionEntityTypesResponse> listSessionEntityTypes($pb.ClientContext ctx, ListSessionEntityTypesRequest request) {
+  $async.Future<ListSessionEntityTypesResponse> listSessionEntityTypes(
+      $pb.ClientContext ctx, ListSessionEntityTypesRequest request) {
     var emptyResponse = ListSessionEntityTypesResponse();
-    return _client.invoke<ListSessionEntityTypesResponse>(ctx, 'SessionEntityTypes', 'ListSessionEntityTypes', request, emptyResponse);
+    return _client.invoke<ListSessionEntityTypesResponse>(ctx,
+        'SessionEntityTypes', 'ListSessionEntityTypes', request, emptyResponse);
   }
-  $async.Future<SessionEntityType> getSessionEntityType($pb.ClientContext ctx, GetSessionEntityTypeRequest request) {
+
+  $async.Future<SessionEntityType> getSessionEntityType(
+      $pb.ClientContext ctx, GetSessionEntityTypeRequest request) {
     var emptyResponse = SessionEntityType();
-    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes', 'GetSessionEntityType', request, emptyResponse);
+    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
+        'GetSessionEntityType', request, emptyResponse);
   }
-  $async.Future<SessionEntityType> createSessionEntityType($pb.ClientContext ctx, CreateSessionEntityTypeRequest request) {
+
+  $async.Future<SessionEntityType> createSessionEntityType(
+      $pb.ClientContext ctx, CreateSessionEntityTypeRequest request) {
     var emptyResponse = SessionEntityType();
-    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes', 'CreateSessionEntityType', request, emptyResponse);
+    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
+        'CreateSessionEntityType', request, emptyResponse);
   }
-  $async.Future<SessionEntityType> updateSessionEntityType($pb.ClientContext ctx, UpdateSessionEntityTypeRequest request) {
+
+  $async.Future<SessionEntityType> updateSessionEntityType(
+      $pb.ClientContext ctx, UpdateSessionEntityTypeRequest request) {
     var emptyResponse = SessionEntityType();
-    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes', 'UpdateSessionEntityType', request, emptyResponse);
+    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
+        'UpdateSessionEntityType', request, emptyResponse);
   }
-  $async.Future<$2.Empty> deleteSessionEntityType($pb.ClientContext ctx, DeleteSessionEntityTypeRequest request) {
+
+  $async.Future<$2.Empty> deleteSessionEntityType(
+      $pb.ClientContext ctx, DeleteSessionEntityTypeRequest request) {
     var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(ctx, 'SessionEntityTypes', 'DeleteSessionEntityType', request, emptyResponse);
+    return _client.invoke<$2.Empty>(ctx, 'SessionEntityTypes',
+        'DeleteSessionEntityType', request, emptyResponse);
   }
 }
-

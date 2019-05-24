@@ -9,19 +9,22 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class TableSourceType extends $pb.ProtobufEnum {
-  static const TableSourceType TABLE_SOURCE_TYPE_UNSPECIFIED = TableSourceType._(0, 'TABLE_SOURCE_TYPE_UNSPECIFIED');
-  static const TableSourceType BIGQUERY_VIEW = TableSourceType._(2, 'BIGQUERY_VIEW');
-  static const TableSourceType BIGQUERY_TABLE = TableSourceType._(5, 'BIGQUERY_TABLE');
+  static const TableSourceType TABLE_SOURCE_TYPE_UNSPECIFIED =
+      TableSourceType._(0, 'TABLE_SOURCE_TYPE_UNSPECIFIED');
+  static const TableSourceType BIGQUERY_VIEW =
+      TableSourceType._(2, 'BIGQUERY_VIEW');
+  static const TableSourceType BIGQUERY_TABLE =
+      TableSourceType._(5, 'BIGQUERY_TABLE');
 
-  static const $core.List<TableSourceType> values = <TableSourceType> [
+  static const $core.List<TableSourceType> values = <TableSourceType>[
     TABLE_SOURCE_TYPE_UNSPECIFIED,
     BIGQUERY_VIEW,
     BIGQUERY_TABLE,
   ];
 
-  static final $core.Map<$core.int, TableSourceType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, TableSourceType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static TableSourceType valueOf($core.int value) => _byValue[value];
 
   const TableSourceType._($core.int v, $core.String n) : super(v, n);
 }
-

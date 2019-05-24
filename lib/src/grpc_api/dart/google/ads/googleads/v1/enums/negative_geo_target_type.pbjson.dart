@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const NegativeGeoTargetTypeEnum$json = const {
+const NegativeGeoTargetTypeEnum$json = {
   '1': 'NegativeGeoTargetTypeEnum',
-  '4': const [NegativeGeoTargetTypeEnum_NegativeGeoTargetType$json],
+  '4': [NegativeGeoTargetTypeEnum_NegativeGeoTargetType$json],
 };
 
-const NegativeGeoTargetTypeEnum_NegativeGeoTargetType$json = const {
+const NegativeGeoTargetTypeEnum_NegativeGeoTargetType$json = {
   '1': 'NegativeGeoTargetType',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'DONT_CARE', '2': 2},
-    const {'1': 'LOCATION_OF_PRESENCE', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'DONT_CARE', '2': 2},
+    {'1': 'LOCATION_OF_PRESENCE', '2': 3},
   ],
 };
-

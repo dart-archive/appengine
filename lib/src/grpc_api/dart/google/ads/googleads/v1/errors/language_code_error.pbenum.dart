@@ -9,21 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class LanguageCodeErrorEnum_LanguageCodeError extends $pb.ProtobufEnum {
-  static const LanguageCodeErrorEnum_LanguageCodeError UNSPECIFIED = LanguageCodeErrorEnum_LanguageCodeError._(0, 'UNSPECIFIED');
-  static const LanguageCodeErrorEnum_LanguageCodeError UNKNOWN = LanguageCodeErrorEnum_LanguageCodeError._(1, 'UNKNOWN');
-  static const LanguageCodeErrorEnum_LanguageCodeError LANGUAGE_CODE_NOT_FOUND = LanguageCodeErrorEnum_LanguageCodeError._(2, 'LANGUAGE_CODE_NOT_FOUND');
-  static const LanguageCodeErrorEnum_LanguageCodeError INVALID_LANGUAGE_CODE = LanguageCodeErrorEnum_LanguageCodeError._(3, 'INVALID_LANGUAGE_CODE');
+  static const LanguageCodeErrorEnum_LanguageCodeError UNSPECIFIED =
+      LanguageCodeErrorEnum_LanguageCodeError._(0, 'UNSPECIFIED');
+  static const LanguageCodeErrorEnum_LanguageCodeError UNKNOWN =
+      LanguageCodeErrorEnum_LanguageCodeError._(1, 'UNKNOWN');
+  static const LanguageCodeErrorEnum_LanguageCodeError LANGUAGE_CODE_NOT_FOUND =
+      LanguageCodeErrorEnum_LanguageCodeError._(2, 'LANGUAGE_CODE_NOT_FOUND');
+  static const LanguageCodeErrorEnum_LanguageCodeError INVALID_LANGUAGE_CODE =
+      LanguageCodeErrorEnum_LanguageCodeError._(3, 'INVALID_LANGUAGE_CODE');
 
-  static const $core.List<LanguageCodeErrorEnum_LanguageCodeError> values = <LanguageCodeErrorEnum_LanguageCodeError> [
+  static const $core.List<LanguageCodeErrorEnum_LanguageCodeError> values =
+      <LanguageCodeErrorEnum_LanguageCodeError>[
     UNSPECIFIED,
     UNKNOWN,
     LANGUAGE_CODE_NOT_FOUND,
     INVALID_LANGUAGE_CODE,
   ];
 
-  static final $core.Map<$core.int, LanguageCodeErrorEnum_LanguageCodeError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static LanguageCodeErrorEnum_LanguageCodeError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, LanguageCodeErrorEnum_LanguageCodeError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static LanguageCodeErrorEnum_LanguageCodeError valueOf($core.int value) =>
+      _byValue[value];
 
-  const LanguageCodeErrorEnum_LanguageCodeError._($core.int v, $core.String n) : super(v, n);
+  const LanguageCodeErrorEnum_LanguageCodeError._($core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -9,21 +9,22 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class File_HashType extends $pb.ProtobufEnum {
-  static const File_HashType HASH_TYPE_UNSPECIFIED = File_HashType._(0, 'HASH_TYPE_UNSPECIFIED');
+  static const File_HashType HASH_TYPE_UNSPECIFIED =
+      File_HashType._(0, 'HASH_TYPE_UNSPECIFIED');
   static const File_HashType MD5 = File_HashType._(1, 'MD5');
   static const File_HashType SHA1 = File_HashType._(2, 'SHA1');
   static const File_HashType SHA256 = File_HashType._(3, 'SHA256');
 
-  static const $core.List<File_HashType> values = <File_HashType> [
+  static const $core.List<File_HashType> values = <File_HashType>[
     HASH_TYPE_UNSPECIFIED,
     MD5,
     SHA1,
     SHA256,
   ];
 
-  static final $core.Map<$core.int, File_HashType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, File_HashType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static File_HashType valueOf($core.int value) => _byValue[value];
 
   const File_HashType._($core.int v, $core.String n) : super(v, n);
 }
-

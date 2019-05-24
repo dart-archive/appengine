@@ -6,22 +6,28 @@
 
 import '../resources/managed_placement_view.pbjson.dart' as $0;
 
-const GetManagedPlacementViewRequest$json = const {
+const GetManagedPlacementViewRequest$json = {
   '1': 'GetManagedPlacementViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const ManagedPlacementViewServiceBase$json = const {
+const ManagedPlacementViewServiceBase$json = {
   '1': 'ManagedPlacementViewService',
-  '2': const [
-    const {'1': 'GetManagedPlacementView', '2': '.google.ads.googleads.v1.services.GetManagedPlacementViewRequest', '3': '.google.ads.googleads.v1.resources.ManagedPlacementView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetManagedPlacementView',
+      '2': '.google.ads.googleads.v1.services.GetManagedPlacementViewRequest',
+      '3': '.google.ads.googleads.v1.resources.ManagedPlacementView',
+      '4': {}
+    },
   ],
 };
 
-const ManagedPlacementViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetManagedPlacementViewRequest': GetManagedPlacementViewRequest$json,
-  '.google.ads.googleads.v1.resources.ManagedPlacementView': $0.ManagedPlacementView$json,
+const ManagedPlacementViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetManagedPlacementViewRequest':
+      GetManagedPlacementViewRequest$json,
+  '.google.ads.googleads.v1.resources.ManagedPlacementView':
+      $0.ManagedPlacementView$json,
 };
-

@@ -9,21 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class BidModifierSourceEnum_BidModifierSource extends $pb.ProtobufEnum {
-  static const BidModifierSourceEnum_BidModifierSource UNSPECIFIED = BidModifierSourceEnum_BidModifierSource._(0, 'UNSPECIFIED');
-  static const BidModifierSourceEnum_BidModifierSource UNKNOWN = BidModifierSourceEnum_BidModifierSource._(1, 'UNKNOWN');
-  static const BidModifierSourceEnum_BidModifierSource CAMPAIGN = BidModifierSourceEnum_BidModifierSource._(2, 'CAMPAIGN');
-  static const BidModifierSourceEnum_BidModifierSource AD_GROUP = BidModifierSourceEnum_BidModifierSource._(3, 'AD_GROUP');
+  static const BidModifierSourceEnum_BidModifierSource UNSPECIFIED =
+      BidModifierSourceEnum_BidModifierSource._(0, 'UNSPECIFIED');
+  static const BidModifierSourceEnum_BidModifierSource UNKNOWN =
+      BidModifierSourceEnum_BidModifierSource._(1, 'UNKNOWN');
+  static const BidModifierSourceEnum_BidModifierSource CAMPAIGN =
+      BidModifierSourceEnum_BidModifierSource._(2, 'CAMPAIGN');
+  static const BidModifierSourceEnum_BidModifierSource AD_GROUP =
+      BidModifierSourceEnum_BidModifierSource._(3, 'AD_GROUP');
 
-  static const $core.List<BidModifierSourceEnum_BidModifierSource> values = <BidModifierSourceEnum_BidModifierSource> [
+  static const $core.List<BidModifierSourceEnum_BidModifierSource> values =
+      <BidModifierSourceEnum_BidModifierSource>[
     UNSPECIFIED,
     UNKNOWN,
     CAMPAIGN,
     AD_GROUP,
   ];
 
-  static final $core.Map<$core.int, BidModifierSourceEnum_BidModifierSource> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static BidModifierSourceEnum_BidModifierSource valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, BidModifierSourceEnum_BidModifierSource>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static BidModifierSourceEnum_BidModifierSource valueOf($core.int value) =>
+      _byValue[value];
 
-  const BidModifierSourceEnum_BidModifierSource._($core.int v, $core.String n) : super(v, n);
+  const BidModifierSourceEnum_BidModifierSource._($core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -27,7 +27,7 @@ class Code extends $pb.ProtobufEnum {
   static const Code UNAVAILABLE = Code._(14, 'UNAVAILABLE');
   static const Code DATA_LOSS = Code._(15, 'DATA_LOSS');
 
-  static const $core.List<Code> values = <Code> [
+  static const $core.List<Code> values = <Code>[
     OK,
     CANCELLED,
     UNKNOWN,
@@ -47,9 +47,9 @@ class Code extends $pb.ProtobufEnum {
     DATA_LOSS,
   ];
 
-  static final $core.Map<$core.int, Code> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Code> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Code valueOf($core.int value) => _byValue[value];
 
   const Code._($core.int v, $core.String n) : super(v, n);
 }
-

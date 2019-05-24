@@ -16,26 +16,36 @@ import 'remarketing_action_service.pbjson.dart';
 export 'remarketing_action_service.pb.dart';
 
 abstract class RemarketingActionServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.RemarketingAction> getRemarketingAction($pb.ServerContext ctx, GetRemarketingActionRequest request);
-  $async.Future<MutateRemarketingActionsResponse> mutateRemarketingActions($pb.ServerContext ctx, MutateRemarketingActionsRequest request);
+  $async.Future<$0.RemarketingAction> getRemarketingAction(
+      $pb.ServerContext ctx, GetRemarketingActionRequest request);
+  $async.Future<MutateRemarketingActionsResponse> mutateRemarketingActions(
+      $pb.ServerContext ctx, MutateRemarketingActionsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetRemarketingAction': return GetRemarketingActionRequest();
-      case 'MutateRemarketingActions': return MutateRemarketingActionsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetRemarketingAction':
+        return GetRemarketingActionRequest();
+      case 'MutateRemarketingActions':
+        return MutateRemarketingActionsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetRemarketingAction': return this.getRemarketingAction(ctx, request);
-      case 'MutateRemarketingActions': return this.mutateRemarketingActions(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetRemarketingAction':
+        return this.getRemarketingAction(ctx, request);
+      case 'MutateRemarketingActions':
+        return this.mutateRemarketingActions(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => RemarketingActionServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => RemarketingActionServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      RemarketingActionServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => RemarketingActionServiceBase$messageJson;
 }
-

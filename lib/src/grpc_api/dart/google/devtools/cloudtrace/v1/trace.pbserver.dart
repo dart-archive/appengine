@@ -16,29 +16,40 @@ import 'trace.pbjson.dart';
 export 'trace.pb.dart';
 
 abstract class TraceServiceBase extends $pb.GeneratedService {
-  $async.Future<ListTracesResponse> listTraces($pb.ServerContext ctx, ListTracesRequest request);
+  $async.Future<ListTracesResponse> listTraces(
+      $pb.ServerContext ctx, ListTracesRequest request);
   $async.Future<Trace> getTrace($pb.ServerContext ctx, GetTraceRequest request);
-  $async.Future<$1.Empty> patchTraces($pb.ServerContext ctx, PatchTracesRequest request);
+  $async.Future<$1.Empty> patchTraces(
+      $pb.ServerContext ctx, PatchTracesRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'ListTraces': return ListTracesRequest();
-      case 'GetTrace': return GetTraceRequest();
-      case 'PatchTraces': return PatchTracesRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ListTraces':
+        return ListTracesRequest();
+      case 'GetTrace':
+        return GetTraceRequest();
+      case 'PatchTraces':
+        return PatchTracesRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'ListTraces': return this.listTraces(ctx, request);
-      case 'GetTrace': return this.getTrace(ctx, request);
-      case 'PatchTraces': return this.patchTraces(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ListTraces':
+        return this.listTraces(ctx, request);
+      case 'GetTrace':
+        return this.getTrace(ctx, request);
+      case 'PatchTraces':
+        return this.patchTraces(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => TraceServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => TraceServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => TraceServiceBase$messageJson;
 }
-

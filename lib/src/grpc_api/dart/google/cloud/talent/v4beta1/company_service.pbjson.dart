@@ -11,80 +11,145 @@ import '../../../type/latlng.pbjson.dart' as $5;
 import '../../../protobuf/field_mask.pbjson.dart' as $1;
 import '../../../protobuf/empty.pbjson.dart' as $3;
 
-const CreateCompanyRequest$json = const {
+const CreateCompanyRequest$json = {
   '1': 'CreateCompanyRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'company', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.talent.v4beta1.Company', '10': 'company'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'company',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.Company',
+      '10': 'company'
+    },
   ],
 };
 
-const GetCompanyRequest$json = const {
+const GetCompanyRequest$json = {
   '1': 'GetCompanyRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const UpdateCompanyRequest$json = const {
+const UpdateCompanyRequest$json = {
   '1': 'UpdateCompanyRequest',
-  '2': const [
-    const {'1': 'company', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.talent.v4beta1.Company', '10': 'company'},
-    const {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+  '2': [
+    {
+      '1': 'company',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.Company',
+      '10': 'company'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
-const DeleteCompanyRequest$json = const {
+const DeleteCompanyRequest$json = {
   '1': 'DeleteCompanyRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListCompaniesRequest$json = const {
+const ListCompaniesRequest$json = {
   '1': 'ListCompaniesRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
-    const {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
-    const {'1': 'require_open_jobs', '3': 4, '4': 1, '5': 8, '10': 'requireOpenJobs'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'require_open_jobs', '3': 4, '4': 1, '5': 8, '10': 'requireOpenJobs'},
   ],
 };
 
-const ListCompaniesResponse$json = const {
+const ListCompaniesResponse$json = {
   '1': 'ListCompaniesResponse',
-  '2': const [
-    const {'1': 'companies', '3': 1, '4': 3, '5': 11, '6': '.google.cloud.talent.v4beta1.Company', '10': 'companies'},
-    const {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
-    const {'1': 'metadata', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.talent.v4beta1.ResponseMetadata', '10': 'metadata'},
+  '2': [
+    {
+      '1': 'companies',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.Company',
+      '10': 'companies'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'metadata',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.ResponseMetadata',
+      '10': 'metadata'
+    },
   ],
 };
 
-const CompanyServiceBase$json = const {
+const CompanyServiceBase$json = {
   '1': 'CompanyService',
-  '2': const [
-    const {'1': 'CreateCompany', '2': '.google.cloud.talent.v4beta1.CreateCompanyRequest', '3': '.google.cloud.talent.v4beta1.Company', '4': const {}},
-    const {'1': 'GetCompany', '2': '.google.cloud.talent.v4beta1.GetCompanyRequest', '3': '.google.cloud.talent.v4beta1.Company', '4': const {}},
-    const {'1': 'UpdateCompany', '2': '.google.cloud.talent.v4beta1.UpdateCompanyRequest', '3': '.google.cloud.talent.v4beta1.Company', '4': const {}},
-    const {'1': 'DeleteCompany', '2': '.google.cloud.talent.v4beta1.DeleteCompanyRequest', '3': '.google.protobuf.Empty', '4': const {}},
-    const {'1': 'ListCompanies', '2': '.google.cloud.talent.v4beta1.ListCompaniesRequest', '3': '.google.cloud.talent.v4beta1.ListCompaniesResponse', '4': const {}},
+  '2': [
+    {
+      '1': 'CreateCompany',
+      '2': '.google.cloud.talent.v4beta1.CreateCompanyRequest',
+      '3': '.google.cloud.talent.v4beta1.Company',
+      '4': {}
+    },
+    {
+      '1': 'GetCompany',
+      '2': '.google.cloud.talent.v4beta1.GetCompanyRequest',
+      '3': '.google.cloud.talent.v4beta1.Company',
+      '4': {}
+    },
+    {
+      '1': 'UpdateCompany',
+      '2': '.google.cloud.talent.v4beta1.UpdateCompanyRequest',
+      '3': '.google.cloud.talent.v4beta1.Company',
+      '4': {}
+    },
+    {
+      '1': 'DeleteCompany',
+      '2': '.google.cloud.talent.v4beta1.DeleteCompanyRequest',
+      '3': '.google.protobuf.Empty',
+      '4': {}
+    },
+    {
+      '1': 'ListCompanies',
+      '2': '.google.cloud.talent.v4beta1.ListCompaniesRequest',
+      '3': '.google.cloud.talent.v4beta1.ListCompaniesResponse',
+      '4': {}
+    },
   ],
 };
 
-const CompanyServiceBase$messageJson = const {
-  '.google.cloud.talent.v4beta1.CreateCompanyRequest': CreateCompanyRequest$json,
+const CompanyServiceBase$messageJson = {
+  '.google.cloud.talent.v4beta1.CreateCompanyRequest':
+      CreateCompanyRequest$json,
   '.google.cloud.talent.v4beta1.Company': $0.Company$json,
-  '.google.cloud.talent.v4beta1.Company.DerivedInfo': $0.Company_DerivedInfo$json,
+  '.google.cloud.talent.v4beta1.Company.DerivedInfo':
+      $0.Company_DerivedInfo$json,
   '.google.cloud.talent.v4beta1.Location': $2.Location$json,
   '.google.type.PostalAddress': $4.PostalAddress$json,
   '.google.type.LatLng': $5.LatLng$json,
   '.google.cloud.talent.v4beta1.GetCompanyRequest': GetCompanyRequest$json,
-  '.google.cloud.talent.v4beta1.UpdateCompanyRequest': UpdateCompanyRequest$json,
+  '.google.cloud.talent.v4beta1.UpdateCompanyRequest':
+      UpdateCompanyRequest$json,
   '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.cloud.talent.v4beta1.DeleteCompanyRequest': DeleteCompanyRequest$json,
+  '.google.cloud.talent.v4beta1.DeleteCompanyRequest':
+      DeleteCompanyRequest$json,
   '.google.protobuf.Empty': $3.Empty$json,
-  '.google.cloud.talent.v4beta1.ListCompaniesRequest': ListCompaniesRequest$json,
-  '.google.cloud.talent.v4beta1.ListCompaniesResponse': ListCompaniesResponse$json,
+  '.google.cloud.talent.v4beta1.ListCompaniesRequest':
+      ListCompaniesRequest$json,
+  '.google.cloud.talent.v4beta1.ListCompaniesResponse':
+      ListCompaniesResponse$json,
   '.google.cloud.talent.v4beta1.ResponseMetadata': $2.ResponseMetadata$json,
 };
-

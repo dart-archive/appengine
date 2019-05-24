@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ChangeStatusOperationEnum_ChangeStatusOperation extends $pb.ProtobufEnum {
-  static const ChangeStatusOperationEnum_ChangeStatusOperation UNSPECIFIED = ChangeStatusOperationEnum_ChangeStatusOperation._(0, 'UNSPECIFIED');
-  static const ChangeStatusOperationEnum_ChangeStatusOperation UNKNOWN = ChangeStatusOperationEnum_ChangeStatusOperation._(1, 'UNKNOWN');
-  static const ChangeStatusOperationEnum_ChangeStatusOperation ADDED = ChangeStatusOperationEnum_ChangeStatusOperation._(2, 'ADDED');
-  static const ChangeStatusOperationEnum_ChangeStatusOperation CHANGED = ChangeStatusOperationEnum_ChangeStatusOperation._(3, 'CHANGED');
-  static const ChangeStatusOperationEnum_ChangeStatusOperation REMOVED = ChangeStatusOperationEnum_ChangeStatusOperation._(4, 'REMOVED');
+  static const ChangeStatusOperationEnum_ChangeStatusOperation UNSPECIFIED =
+      ChangeStatusOperationEnum_ChangeStatusOperation._(0, 'UNSPECIFIED');
+  static const ChangeStatusOperationEnum_ChangeStatusOperation UNKNOWN =
+      ChangeStatusOperationEnum_ChangeStatusOperation._(1, 'UNKNOWN');
+  static const ChangeStatusOperationEnum_ChangeStatusOperation ADDED =
+      ChangeStatusOperationEnum_ChangeStatusOperation._(2, 'ADDED');
+  static const ChangeStatusOperationEnum_ChangeStatusOperation CHANGED =
+      ChangeStatusOperationEnum_ChangeStatusOperation._(3, 'CHANGED');
+  static const ChangeStatusOperationEnum_ChangeStatusOperation REMOVED =
+      ChangeStatusOperationEnum_ChangeStatusOperation._(4, 'REMOVED');
 
-  static const $core.List<ChangeStatusOperationEnum_ChangeStatusOperation> values = <ChangeStatusOperationEnum_ChangeStatusOperation> [
+  static const $core.List<ChangeStatusOperationEnum_ChangeStatusOperation>
+      values = <ChangeStatusOperationEnum_ChangeStatusOperation>[
     UNSPECIFIED,
     UNKNOWN,
     ADDED,
@@ -23,9 +29,14 @@ class ChangeStatusOperationEnum_ChangeStatusOperation extends $pb.ProtobufEnum {
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, ChangeStatusOperationEnum_ChangeStatusOperation> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ChangeStatusOperationEnum_ChangeStatusOperation valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, ChangeStatusOperationEnum_ChangeStatusOperation>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ChangeStatusOperationEnum_ChangeStatusOperation valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ChangeStatusOperationEnum_ChangeStatusOperation._($core.int v, $core.String n) : super(v, n);
+  const ChangeStatusOperationEnum_ChangeStatusOperation._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

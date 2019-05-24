@@ -8,20 +8,37 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier extends $pb.ProtobufEnum {
-  static const PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier UNSPECIFIED = PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier._(0, 'UNSPECIFIED');
-  static const PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier UNKNOWN = PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier._(1, 'UNKNOWN');
-  static const PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier UP_TO = PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier._(2, 'UP_TO');
+class PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier
+    extends $pb.ProtobufEnum {
+  static const PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier
+      UNSPECIFIED =
+      PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier
+          ._(0, 'UNSPECIFIED');
+  static const PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier
+      UNKNOWN =
+      PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier
+          ._(1, 'UNKNOWN');
+  static const PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier
+      UP_TO =
+      PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier
+          ._(2, 'UP_TO');
 
-  static const $core.List<PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier> values = <PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier> [
+  static const $core.List<
+          PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier>
+      values =
+      <PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier>[
     UNSPECIFIED,
     UNKNOWN,
     UP_TO,
   ];
 
-  static final $core.Map<$core.int, PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier
+      valueOf($core.int value) => _byValue[value];
 
-  const PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier._($core.int v, $core.String n) : super(v, n);
+  const PromotionExtensionDiscountModifierEnum_PromotionExtensionDiscountModifier._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

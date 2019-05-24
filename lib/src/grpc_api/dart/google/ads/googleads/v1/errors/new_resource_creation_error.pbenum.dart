@@ -8,14 +8,28 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class NewResourceCreationErrorEnum_NewResourceCreationError extends $pb.ProtobufEnum {
-  static const NewResourceCreationErrorEnum_NewResourceCreationError UNSPECIFIED = NewResourceCreationErrorEnum_NewResourceCreationError._(0, 'UNSPECIFIED');
-  static const NewResourceCreationErrorEnum_NewResourceCreationError UNKNOWN = NewResourceCreationErrorEnum_NewResourceCreationError._(1, 'UNKNOWN');
-  static const NewResourceCreationErrorEnum_NewResourceCreationError CANNOT_SET_ID_FOR_CREATE = NewResourceCreationErrorEnum_NewResourceCreationError._(2, 'CANNOT_SET_ID_FOR_CREATE');
-  static const NewResourceCreationErrorEnum_NewResourceCreationError DUPLICATE_TEMP_IDS = NewResourceCreationErrorEnum_NewResourceCreationError._(3, 'DUPLICATE_TEMP_IDS');
-  static const NewResourceCreationErrorEnum_NewResourceCreationError TEMP_ID_RESOURCE_HAD_ERRORS = NewResourceCreationErrorEnum_NewResourceCreationError._(4, 'TEMP_ID_RESOURCE_HAD_ERRORS');
+class NewResourceCreationErrorEnum_NewResourceCreationError
+    extends $pb.ProtobufEnum {
+  static const NewResourceCreationErrorEnum_NewResourceCreationError
+      UNSPECIFIED =
+      NewResourceCreationErrorEnum_NewResourceCreationError._(0, 'UNSPECIFIED');
+  static const NewResourceCreationErrorEnum_NewResourceCreationError UNKNOWN =
+      NewResourceCreationErrorEnum_NewResourceCreationError._(1, 'UNKNOWN');
+  static const NewResourceCreationErrorEnum_NewResourceCreationError
+      CANNOT_SET_ID_FOR_CREATE =
+      NewResourceCreationErrorEnum_NewResourceCreationError._(
+          2, 'CANNOT_SET_ID_FOR_CREATE');
+  static const NewResourceCreationErrorEnum_NewResourceCreationError
+      DUPLICATE_TEMP_IDS =
+      NewResourceCreationErrorEnum_NewResourceCreationError._(
+          3, 'DUPLICATE_TEMP_IDS');
+  static const NewResourceCreationErrorEnum_NewResourceCreationError
+      TEMP_ID_RESOURCE_HAD_ERRORS =
+      NewResourceCreationErrorEnum_NewResourceCreationError._(
+          4, 'TEMP_ID_RESOURCE_HAD_ERRORS');
 
-  static const $core.List<NewResourceCreationErrorEnum_NewResourceCreationError> values = <NewResourceCreationErrorEnum_NewResourceCreationError> [
+  static const $core.List<NewResourceCreationErrorEnum_NewResourceCreationError>
+      values = <NewResourceCreationErrorEnum_NewResourceCreationError>[
     UNSPECIFIED,
     UNKNOWN,
     CANNOT_SET_ID_FOR_CREATE,
@@ -23,9 +37,14 @@ class NewResourceCreationErrorEnum_NewResourceCreationError extends $pb.Protobuf
     TEMP_ID_RESOURCE_HAD_ERRORS,
   ];
 
-  static final $core.Map<$core.int, NewResourceCreationErrorEnum_NewResourceCreationError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static NewResourceCreationErrorEnum_NewResourceCreationError valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, NewResourceCreationErrorEnum_NewResourceCreationError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static NewResourceCreationErrorEnum_NewResourceCreationError valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const NewResourceCreationErrorEnum_NewResourceCreationError._($core.int v, $core.String n) : super(v, n);
+  const NewResourceCreationErrorEnum_NewResourceCreationError._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

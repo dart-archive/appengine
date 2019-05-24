@@ -4,13 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const Expr$json = const {
+const Expr$json = {
   '1': 'Expr',
-  '2': const [
-    const {'1': 'expression', '3': 1, '4': 1, '5': 9, '10': 'expression'},
-    const {'1': 'title', '3': 2, '4': 1, '5': 9, '10': 'title'},
-    const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
-    const {'1': 'location', '3': 4, '4': 1, '5': 9, '10': 'location'},
+  '2': [
+    {'1': 'expression', '3': 1, '4': 1, '5': 9, '10': 'expression'},
+    {'1': 'title', '3': 2, '4': 1, '5': 9, '10': 'title'},
+    {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'location', '3': 4, '4': 1, '5': 9, '10': 'location'},
   ],
 };
-

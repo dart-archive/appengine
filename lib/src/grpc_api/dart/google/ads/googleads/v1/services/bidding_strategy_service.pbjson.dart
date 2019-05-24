@@ -11,61 +11,116 @@ import '../../../../protobuf/field_mask.pbjson.dart' as $1;
 import '../../../../rpc/status.pbjson.dart' as $2;
 import '../../../../protobuf/any.pbjson.dart' as $5;
 
-const GetBiddingStrategyRequest$json = const {
+const GetBiddingStrategyRequest$json = {
   '1': 'GetBiddingStrategyRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const MutateBiddingStrategiesRequest$json = const {
+const MutateBiddingStrategiesRequest$json = {
   '1': 'MutateBiddingStrategiesRequest',
-  '2': const [
-    const {'1': 'customer_id', '3': 1, '4': 1, '5': 9, '10': 'customerId'},
-    const {'1': 'operations', '3': 2, '4': 3, '5': 11, '6': '.google.ads.googleads.v1.services.BiddingStrategyOperation', '10': 'operations'},
-    const {'1': 'partial_failure', '3': 3, '4': 1, '5': 8, '10': 'partialFailure'},
-    const {'1': 'validate_only', '3': 4, '4': 1, '5': 8, '10': 'validateOnly'},
+  '2': [
+    {'1': 'customer_id', '3': 1, '4': 1, '5': 9, '10': 'customerId'},
+    {
+      '1': 'operations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.services.BiddingStrategyOperation',
+      '10': 'operations'
+    },
+    {'1': 'partial_failure', '3': 3, '4': 1, '5': 8, '10': 'partialFailure'},
+    {'1': 'validate_only', '3': 4, '4': 1, '5': 8, '10': 'validateOnly'},
   ],
 };
 
-const BiddingStrategyOperation$json = const {
+const BiddingStrategyOperation$json = {
   '1': 'BiddingStrategyOperation',
-  '2': const [
-    const {'1': 'update_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'create', '3': 1, '4': 1, '5': 11, '6': '.google.ads.googleads.v1.resources.BiddingStrategy', '9': 0, '10': 'create'},
-    const {'1': 'update', '3': 2, '4': 1, '5': 11, '6': '.google.ads.googleads.v1.resources.BiddingStrategy', '9': 0, '10': 'update'},
-    const {'1': 'remove', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'remove'},
+  '2': [
+    {
+      '1': 'update_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    {
+      '1': 'create',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.resources.BiddingStrategy',
+      '9': 0,
+      '10': 'create'
+    },
+    {
+      '1': 'update',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.resources.BiddingStrategy',
+      '9': 0,
+      '10': 'update'
+    },
+    {'1': 'remove', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'remove'},
   ],
-  '8': const [
-    const {'1': 'operation'},
+  '8': [
+    {'1': 'operation'},
   ],
 };
 
-const MutateBiddingStrategiesResponse$json = const {
+const MutateBiddingStrategiesResponse$json = {
   '1': 'MutateBiddingStrategiesResponse',
-  '2': const [
-    const {'1': 'partial_failure_error', '3': 3, '4': 1, '5': 11, '6': '.google.rpc.Status', '10': 'partialFailureError'},
-    const {'1': 'results', '3': 2, '4': 3, '5': 11, '6': '.google.ads.googleads.v1.services.MutateBiddingStrategyResult', '10': 'results'},
+  '2': [
+    {
+      '1': 'partial_failure_error',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'partialFailureError'
+    },
+    {
+      '1': 'results',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.ads.googleads.v1.services.MutateBiddingStrategyResult',
+      '10': 'results'
+    },
   ],
 };
 
-const MutateBiddingStrategyResult$json = const {
+const MutateBiddingStrategyResult$json = {
   '1': 'MutateBiddingStrategyResult',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const BiddingStrategyServiceBase$json = const {
+const BiddingStrategyServiceBase$json = {
   '1': 'BiddingStrategyService',
-  '2': const [
-    const {'1': 'GetBiddingStrategy', '2': '.google.ads.googleads.v1.services.GetBiddingStrategyRequest', '3': '.google.ads.googleads.v1.resources.BiddingStrategy', '4': const {}},
-    const {'1': 'MutateBiddingStrategies', '2': '.google.ads.googleads.v1.services.MutateBiddingStrategiesRequest', '3': '.google.ads.googleads.v1.services.MutateBiddingStrategiesResponse', '4': const {}},
+  '2': [
+    {
+      '1': 'GetBiddingStrategy',
+      '2': '.google.ads.googleads.v1.services.GetBiddingStrategyRequest',
+      '3': '.google.ads.googleads.v1.resources.BiddingStrategy',
+      '4': {}
+    },
+    {
+      '1': 'MutateBiddingStrategies',
+      '2': '.google.ads.googleads.v1.services.MutateBiddingStrategiesRequest',
+      '3': '.google.ads.googleads.v1.services.MutateBiddingStrategiesResponse',
+      '4': {}
+    },
   ],
 };
 
-const BiddingStrategyServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetBiddingStrategyRequest': GetBiddingStrategyRequest$json,
+const BiddingStrategyServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetBiddingStrategyRequest':
+      GetBiddingStrategyRequest$json,
   '.google.ads.googleads.v1.resources.BiddingStrategy': $0.BiddingStrategy$json,
   '.google.protobuf.Int64Value': $3.Int64Value$json,
   '.google.protobuf.StringValue': $3.StringValue$json,
@@ -74,17 +129,22 @@ const BiddingStrategyServiceBase$messageJson = const {
   '.google.protobuf.DoubleValue': $3.DoubleValue$json,
   '.google.protobuf.BoolValue': $3.BoolValue$json,
   '.google.ads.googleads.v1.common.TargetCpa': $4.TargetCpa$json,
-  '.google.ads.googleads.v1.common.TargetOutrankShare': $4.TargetOutrankShare$json,
+  '.google.ads.googleads.v1.common.TargetOutrankShare':
+      $4.TargetOutrankShare$json,
   '.google.protobuf.Int32Value': $3.Int32Value$json,
   '.google.ads.googleads.v1.common.TargetRoas': $4.TargetRoas$json,
   '.google.ads.googleads.v1.common.TargetSpend': $4.TargetSpend$json,
-  '.google.ads.googleads.v1.common.TargetImpressionShare': $4.TargetImpressionShare$json,
-  '.google.ads.googleads.v1.services.MutateBiddingStrategiesRequest': MutateBiddingStrategiesRequest$json,
-  '.google.ads.googleads.v1.services.BiddingStrategyOperation': BiddingStrategyOperation$json,
+  '.google.ads.googleads.v1.common.TargetImpressionShare':
+      $4.TargetImpressionShare$json,
+  '.google.ads.googleads.v1.services.MutateBiddingStrategiesRequest':
+      MutateBiddingStrategiesRequest$json,
+  '.google.ads.googleads.v1.services.BiddingStrategyOperation':
+      BiddingStrategyOperation$json,
   '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateBiddingStrategiesResponse': MutateBiddingStrategiesResponse$json,
-  '.google.ads.googleads.v1.services.MutateBiddingStrategyResult': MutateBiddingStrategyResult$json,
+  '.google.ads.googleads.v1.services.MutateBiddingStrategiesResponse':
+      MutateBiddingStrategiesResponse$json,
+  '.google.ads.googleads.v1.services.MutateBiddingStrategyResult':
+      MutateBiddingStrategyResult$json,
   '.google.rpc.Status': $2.Status$json,
   '.google.protobuf.Any': $5.Any$json,
 };
-

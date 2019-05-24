@@ -9,15 +9,23 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ServedAssetFieldTypeEnum_ServedAssetFieldType extends $pb.ProtobufEnum {
-  static const ServedAssetFieldTypeEnum_ServedAssetFieldType UNSPECIFIED = ServedAssetFieldTypeEnum_ServedAssetFieldType._(0, 'UNSPECIFIED');
-  static const ServedAssetFieldTypeEnum_ServedAssetFieldType UNKNOWN = ServedAssetFieldTypeEnum_ServedAssetFieldType._(1, 'UNKNOWN');
-  static const ServedAssetFieldTypeEnum_ServedAssetFieldType HEADLINE_1 = ServedAssetFieldTypeEnum_ServedAssetFieldType._(2, 'HEADLINE_1');
-  static const ServedAssetFieldTypeEnum_ServedAssetFieldType HEADLINE_2 = ServedAssetFieldTypeEnum_ServedAssetFieldType._(3, 'HEADLINE_2');
-  static const ServedAssetFieldTypeEnum_ServedAssetFieldType HEADLINE_3 = ServedAssetFieldTypeEnum_ServedAssetFieldType._(4, 'HEADLINE_3');
-  static const ServedAssetFieldTypeEnum_ServedAssetFieldType DESCRIPTION_1 = ServedAssetFieldTypeEnum_ServedAssetFieldType._(5, 'DESCRIPTION_1');
-  static const ServedAssetFieldTypeEnum_ServedAssetFieldType DESCRIPTION_2 = ServedAssetFieldTypeEnum_ServedAssetFieldType._(6, 'DESCRIPTION_2');
+  static const ServedAssetFieldTypeEnum_ServedAssetFieldType UNSPECIFIED =
+      ServedAssetFieldTypeEnum_ServedAssetFieldType._(0, 'UNSPECIFIED');
+  static const ServedAssetFieldTypeEnum_ServedAssetFieldType UNKNOWN =
+      ServedAssetFieldTypeEnum_ServedAssetFieldType._(1, 'UNKNOWN');
+  static const ServedAssetFieldTypeEnum_ServedAssetFieldType HEADLINE_1 =
+      ServedAssetFieldTypeEnum_ServedAssetFieldType._(2, 'HEADLINE_1');
+  static const ServedAssetFieldTypeEnum_ServedAssetFieldType HEADLINE_2 =
+      ServedAssetFieldTypeEnum_ServedAssetFieldType._(3, 'HEADLINE_2');
+  static const ServedAssetFieldTypeEnum_ServedAssetFieldType HEADLINE_3 =
+      ServedAssetFieldTypeEnum_ServedAssetFieldType._(4, 'HEADLINE_3');
+  static const ServedAssetFieldTypeEnum_ServedAssetFieldType DESCRIPTION_1 =
+      ServedAssetFieldTypeEnum_ServedAssetFieldType._(5, 'DESCRIPTION_1');
+  static const ServedAssetFieldTypeEnum_ServedAssetFieldType DESCRIPTION_2 =
+      ServedAssetFieldTypeEnum_ServedAssetFieldType._(6, 'DESCRIPTION_2');
 
-  static const $core.List<ServedAssetFieldTypeEnum_ServedAssetFieldType> values = <ServedAssetFieldTypeEnum_ServedAssetFieldType> [
+  static const $core.List<ServedAssetFieldTypeEnum_ServedAssetFieldType>
+      values = <ServedAssetFieldTypeEnum_ServedAssetFieldType>[
     UNSPECIFIED,
     UNKNOWN,
     HEADLINE_1,
@@ -27,9 +35,14 @@ class ServedAssetFieldTypeEnum_ServedAssetFieldType extends $pb.ProtobufEnum {
     DESCRIPTION_2,
   ];
 
-  static final $core.Map<$core.int, ServedAssetFieldTypeEnum_ServedAssetFieldType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ServedAssetFieldTypeEnum_ServedAssetFieldType valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, ServedAssetFieldTypeEnum_ServedAssetFieldType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ServedAssetFieldTypeEnum_ServedAssetFieldType valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ServedAssetFieldTypeEnum_ServedAssetFieldType._($core.int v, $core.String n) : super(v, n);
+  const ServedAssetFieldTypeEnum_ServedAssetFieldType._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

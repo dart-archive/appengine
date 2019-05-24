@@ -4,21 +4,20 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const UserInterestTaxonomyTypeEnum$json = const {
+const UserInterestTaxonomyTypeEnum$json = {
   '1': 'UserInterestTaxonomyTypeEnum',
-  '4': const [UserInterestTaxonomyTypeEnum_UserInterestTaxonomyType$json],
+  '4': [UserInterestTaxonomyTypeEnum_UserInterestTaxonomyType$json],
 };
 
-const UserInterestTaxonomyTypeEnum_UserInterestTaxonomyType$json = const {
+const UserInterestTaxonomyTypeEnum_UserInterestTaxonomyType$json = {
   '1': 'UserInterestTaxonomyType',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'AFFINITY', '2': 2},
-    const {'1': 'IN_MARKET', '2': 3},
-    const {'1': 'MOBILE_APP_INSTALL_USER', '2': 4},
-    const {'1': 'VERTICAL_GEO', '2': 5},
-    const {'1': 'NEW_SMART_PHONE_USER', '2': 6},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'AFFINITY', '2': 2},
+    {'1': 'IN_MARKET', '2': 3},
+    {'1': 'MOBILE_APP_INSTALL_USER', '2': 4},
+    {'1': 'VERTICAL_GEO', '2': 5},
+    {'1': 'NEW_SMART_PHONE_USER', '2': 6},
   ],
 };
-

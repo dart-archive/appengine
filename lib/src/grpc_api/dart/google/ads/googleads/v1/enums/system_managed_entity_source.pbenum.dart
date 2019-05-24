@@ -8,20 +8,36 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class SystemManagedResourceSourceEnum_SystemManagedResourceSource extends $pb.ProtobufEnum {
-  static const SystemManagedResourceSourceEnum_SystemManagedResourceSource UNSPECIFIED = SystemManagedResourceSourceEnum_SystemManagedResourceSource._(0, 'UNSPECIFIED');
-  static const SystemManagedResourceSourceEnum_SystemManagedResourceSource UNKNOWN = SystemManagedResourceSourceEnum_SystemManagedResourceSource._(1, 'UNKNOWN');
-  static const SystemManagedResourceSourceEnum_SystemManagedResourceSource AD_VARIATIONS = SystemManagedResourceSourceEnum_SystemManagedResourceSource._(2, 'AD_VARIATIONS');
+class SystemManagedResourceSourceEnum_SystemManagedResourceSource
+    extends $pb.ProtobufEnum {
+  static const SystemManagedResourceSourceEnum_SystemManagedResourceSource
+      UNSPECIFIED =
+      SystemManagedResourceSourceEnum_SystemManagedResourceSource._(
+          0, 'UNSPECIFIED');
+  static const SystemManagedResourceSourceEnum_SystemManagedResourceSource
+      UNKNOWN = SystemManagedResourceSourceEnum_SystemManagedResourceSource._(
+          1, 'UNKNOWN');
+  static const SystemManagedResourceSourceEnum_SystemManagedResourceSource
+      AD_VARIATIONS =
+      SystemManagedResourceSourceEnum_SystemManagedResourceSource._(
+          2, 'AD_VARIATIONS');
 
-  static const $core.List<SystemManagedResourceSourceEnum_SystemManagedResourceSource> values = <SystemManagedResourceSourceEnum_SystemManagedResourceSource> [
+  static const $core
+          .List<SystemManagedResourceSourceEnum_SystemManagedResourceSource>
+      values = <SystemManagedResourceSourceEnum_SystemManagedResourceSource>[
     UNSPECIFIED,
     UNKNOWN,
     AD_VARIATIONS,
   ];
 
-  static final $core.Map<$core.int, SystemManagedResourceSourceEnum_SystemManagedResourceSource> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static SystemManagedResourceSourceEnum_SystemManagedResourceSource valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          SystemManagedResourceSourceEnum_SystemManagedResourceSource>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SystemManagedResourceSourceEnum_SystemManagedResourceSource valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const SystemManagedResourceSourceEnum_SystemManagedResourceSource._($core.int v, $core.String n) : super(v, n);
+  const SystemManagedResourceSourceEnum_SystemManagedResourceSource._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

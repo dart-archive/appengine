@@ -16,26 +16,35 @@ import 'asset_service.pbjson.dart';
 export 'asset_service.pb.dart';
 
 abstract class AssetServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.Asset> getAsset($pb.ServerContext ctx, GetAssetRequest request);
-  $async.Future<MutateAssetsResponse> mutateAssets($pb.ServerContext ctx, MutateAssetsRequest request);
+  $async.Future<$0.Asset> getAsset(
+      $pb.ServerContext ctx, GetAssetRequest request);
+  $async.Future<MutateAssetsResponse> mutateAssets(
+      $pb.ServerContext ctx, MutateAssetsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetAsset': return GetAssetRequest();
-      case 'MutateAssets': return MutateAssetsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAsset':
+        return GetAssetRequest();
+      case 'MutateAssets':
+        return MutateAssetsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetAsset': return this.getAsset(ctx, request);
-      case 'MutateAssets': return this.mutateAssets(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAsset':
+        return this.getAsset(ctx, request);
+      case 'MutateAssets':
+        return this.mutateAssets(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => AssetServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => AssetServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AssetServiceBase$messageJson;
 }
-

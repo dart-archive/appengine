@@ -9,21 +9,22 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ChangeType extends $pb.ProtobufEnum {
-  static const ChangeType CHANGE_TYPE_UNSPECIFIED = ChangeType._(0, 'CHANGE_TYPE_UNSPECIFIED');
+  static const ChangeType CHANGE_TYPE_UNSPECIFIED =
+      ChangeType._(0, 'CHANGE_TYPE_UNSPECIFIED');
   static const ChangeType ADDED = ChangeType._(1, 'ADDED');
   static const ChangeType REMOVED = ChangeType._(2, 'REMOVED');
   static const ChangeType MODIFIED = ChangeType._(3, 'MODIFIED');
 
-  static const $core.List<ChangeType> values = <ChangeType> [
+  static const $core.List<ChangeType> values = <ChangeType>[
     CHANGE_TYPE_UNSPECIFIED,
     ADDED,
     REMOVED,
     MODIFIED,
   ];
 
-  static final $core.Map<$core.int, ChangeType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, ChangeType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static ChangeType valueOf($core.int value) => _byValue[value];
 
   const ChangeType._($core.int v, $core.String n) : super(v, n);
 }
-

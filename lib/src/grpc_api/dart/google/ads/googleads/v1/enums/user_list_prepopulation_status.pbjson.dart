@@ -4,19 +4,18 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const UserListPrepopulationStatusEnum$json = const {
+const UserListPrepopulationStatusEnum$json = {
   '1': 'UserListPrepopulationStatusEnum',
-  '4': const [UserListPrepopulationStatusEnum_UserListPrepopulationStatus$json],
+  '4': [UserListPrepopulationStatusEnum_UserListPrepopulationStatus$json],
 };
 
-const UserListPrepopulationStatusEnum_UserListPrepopulationStatus$json = const {
+const UserListPrepopulationStatusEnum_UserListPrepopulationStatus$json = {
   '1': 'UserListPrepopulationStatus',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'REQUESTED', '2': 2},
-    const {'1': 'FINISHED', '2': 3},
-    const {'1': 'FAILED', '2': 4},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'REQUESTED', '2': 2},
+    {'1': 'FINISHED', '2': 3},
+    {'1': 'FAILED', '2': 4},
   ],
 };
-

@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const KeywordPlanAdGroupErrorEnum$json = const {
+const KeywordPlanAdGroupErrorEnum$json = {
   '1': 'KeywordPlanAdGroupErrorEnum',
-  '4': const [KeywordPlanAdGroupErrorEnum_KeywordPlanAdGroupError$json],
+  '4': [KeywordPlanAdGroupErrorEnum_KeywordPlanAdGroupError$json],
 };
 
-const KeywordPlanAdGroupErrorEnum_KeywordPlanAdGroupError$json = const {
+const KeywordPlanAdGroupErrorEnum_KeywordPlanAdGroupError$json = {
   '1': 'KeywordPlanAdGroupError',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'INVALID_NAME', '2': 2},
-    const {'1': 'DUPLICATE_NAME', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'INVALID_NAME', '2': 2},
+    {'1': 'DUPLICATE_NAME', '2': 3},
   ],
 };
-

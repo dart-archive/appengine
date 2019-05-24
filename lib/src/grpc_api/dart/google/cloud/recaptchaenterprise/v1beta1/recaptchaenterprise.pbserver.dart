@@ -14,27 +14,39 @@ import 'recaptchaenterprise.pbjson.dart';
 
 export 'recaptchaenterprise.pb.dart';
 
-abstract class RecaptchaEnterpriseServiceV1Beta1ServiceBase extends $pb.GeneratedService {
-  $async.Future<Assessment> createAssessment($pb.ServerContext ctx, CreateAssessmentRequest request);
-  $async.Future<AnnotateAssessmentResponse> annotateAssessment($pb.ServerContext ctx, AnnotateAssessmentRequest request);
+abstract class RecaptchaEnterpriseServiceV1Beta1ServiceBase
+    extends $pb.GeneratedService {
+  $async.Future<Assessment> createAssessment(
+      $pb.ServerContext ctx, CreateAssessmentRequest request);
+  $async.Future<AnnotateAssessmentResponse> annotateAssessment(
+      $pb.ServerContext ctx, AnnotateAssessmentRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'CreateAssessment': return CreateAssessmentRequest();
-      case 'AnnotateAssessment': return AnnotateAssessmentRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CreateAssessment':
+        return CreateAssessmentRequest();
+      case 'AnnotateAssessment':
+        return AnnotateAssessmentRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'CreateAssessment': return this.createAssessment(ctx, request);
-      case 'AnnotateAssessment': return this.annotateAssessment(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CreateAssessment':
+        return this.createAssessment(ctx, request);
+      case 'AnnotateAssessment':
+        return this.annotateAssessment(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => RecaptchaEnterpriseServiceV1Beta1ServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => RecaptchaEnterpriseServiceV1Beta1ServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      RecaptchaEnterpriseServiceV1Beta1ServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson =>
+          RecaptchaEnterpriseServiceV1Beta1ServiceBase$messageJson;
 }
-

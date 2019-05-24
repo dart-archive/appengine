@@ -4,7 +4,8 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +16,24 @@ import 'bigtable_cluster_data.pbenum.dart';
 export 'bigtable_cluster_data.pbenum.dart';
 
 class Zone extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Zone', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Zone',
+      package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..e<Zone_Status>(3, 'status', $pb.PbFieldType.OE, Zone_Status.UNKNOWN, Zone_Status.valueOf, Zone_Status.values)
-    ..hasRequiredFields = false
-  ;
+    ..e<Zone_Status>(3, 'status', $pb.PbFieldType.OE, Zone_Status.UNKNOWN,
+        Zone_Status.valueOf, Zone_Status.values)
+    ..hasRequiredFields = false;
 
   Zone() : super();
-  Zone.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Zone.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Zone.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Zone.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Zone clone() => Zone()..mergeFromMessage(this);
-  Zone copyWith(void Function(Zone) updates) => super.copyWith((message) => updates(message as Zone));
+  Zone copyWith(void Function(Zone) updates) =>
+      super.copyWith((message) => updates(message as Zone));
   $pb.BuilderInfo get info_ => _i;
   static Zone create() => Zone();
   Zone createEmptyInstance() => create();
@@ -35,36 +42,57 @@ class Zone extends $pb.GeneratedMessage {
   static Zone _defaultInstance;
 
   $core.String get name => $_getS(0, '');
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   $core.String get displayName => $_getS(1, '');
-  set displayName($core.String v) { $_setString(1, v); }
+  set displayName($core.String v) {
+    $_setString(1, v);
+  }
+
   $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
   Zone_Status get status => $_getN(2);
-  set status(Zone_Status v) { setField(3, v); }
+  set status(Zone_Status v) {
+    setField(3, v);
+  }
+
   $core.bool hasStatus() => $_has(2);
   void clearStatus() => clearField(3);
 }
 
 class Cluster extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cluster', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cluster',
+      package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
-    ..a<$0.Operation>(3, 'currentOperation', $pb.PbFieldType.OM, $0.Operation.getDefault, $0.Operation.create)
+    ..a<$0.Operation>(3, 'currentOperation', $pb.PbFieldType.OM,
+        $0.Operation.getDefault, $0.Operation.create)
     ..aOS(4, 'displayName')
     ..a<$core.int>(5, 'serveNodes', $pb.PbFieldType.O3)
-    ..e<StorageType>(8, 'defaultStorageType', $pb.PbFieldType.OE, StorageType.STORAGE_UNSPECIFIED, StorageType.valueOf, StorageType.values)
-    ..hasRequiredFields = false
-  ;
+    ..e<StorageType>(
+        8,
+        'defaultStorageType',
+        $pb.PbFieldType.OE,
+        StorageType.STORAGE_UNSPECIFIED,
+        StorageType.valueOf,
+        StorageType.values)
+    ..hasRequiredFields = false;
 
   Cluster() : super();
-  Cluster.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Cluster.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Cluster.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Cluster.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Cluster clone() => Cluster()..mergeFromMessage(this);
-  Cluster copyWith(void Function(Cluster) updates) => super.copyWith((message) => updates(message as Cluster));
+  Cluster copyWith(void Function(Cluster) updates) =>
+      super.copyWith((message) => updates(message as Cluster));
   $pb.BuilderInfo get info_ => _i;
   static Cluster create() => Cluster();
   Cluster createEmptyInstance() => create();
@@ -73,28 +101,42 @@ class Cluster extends $pb.GeneratedMessage {
   static Cluster _defaultInstance;
 
   $core.String get name => $_getS(0, '');
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   $0.Operation get currentOperation => $_getN(1);
-  set currentOperation($0.Operation v) { setField(3, v); }
+  set currentOperation($0.Operation v) {
+    setField(3, v);
+  }
+
   $core.bool hasCurrentOperation() => $_has(1);
   void clearCurrentOperation() => clearField(3);
 
   $core.String get displayName => $_getS(2, '');
-  set displayName($core.String v) { $_setString(2, v); }
+  set displayName($core.String v) {
+    $_setString(2, v);
+  }
+
   $core.bool hasDisplayName() => $_has(2);
   void clearDisplayName() => clearField(4);
 
   $core.int get serveNodes => $_get(3, 0);
-  set serveNodes($core.int v) { $_setSignedInt32(3, v); }
+  set serveNodes($core.int v) {
+    $_setSignedInt32(3, v);
+  }
+
   $core.bool hasServeNodes() => $_has(3);
   void clearServeNodes() => clearField(5);
 
   StorageType get defaultStorageType => $_getN(4);
-  set defaultStorageType(StorageType v) { setField(8, v); }
+  set defaultStorageType(StorageType v) {
+    setField(8, v);
+  }
+
   $core.bool hasDefaultStorageType() => $_has(4);
   void clearDefaultStorageType() => clearField(8);
 }
-

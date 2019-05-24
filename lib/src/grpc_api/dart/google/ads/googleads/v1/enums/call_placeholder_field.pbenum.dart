@@ -9,15 +9,26 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class CallPlaceholderFieldEnum_CallPlaceholderField extends $pb.ProtobufEnum {
-  static const CallPlaceholderFieldEnum_CallPlaceholderField UNSPECIFIED = CallPlaceholderFieldEnum_CallPlaceholderField._(0, 'UNSPECIFIED');
-  static const CallPlaceholderFieldEnum_CallPlaceholderField UNKNOWN = CallPlaceholderFieldEnum_CallPlaceholderField._(1, 'UNKNOWN');
-  static const CallPlaceholderFieldEnum_CallPlaceholderField PHONE_NUMBER = CallPlaceholderFieldEnum_CallPlaceholderField._(2, 'PHONE_NUMBER');
-  static const CallPlaceholderFieldEnum_CallPlaceholderField COUNTRY_CODE = CallPlaceholderFieldEnum_CallPlaceholderField._(3, 'COUNTRY_CODE');
-  static const CallPlaceholderFieldEnum_CallPlaceholderField TRACKED = CallPlaceholderFieldEnum_CallPlaceholderField._(4, 'TRACKED');
-  static const CallPlaceholderFieldEnum_CallPlaceholderField CONVERSION_TYPE_ID = CallPlaceholderFieldEnum_CallPlaceholderField._(5, 'CONVERSION_TYPE_ID');
-  static const CallPlaceholderFieldEnum_CallPlaceholderField CONVERSION_REPORTING_STATE = CallPlaceholderFieldEnum_CallPlaceholderField._(6, 'CONVERSION_REPORTING_STATE');
+  static const CallPlaceholderFieldEnum_CallPlaceholderField UNSPECIFIED =
+      CallPlaceholderFieldEnum_CallPlaceholderField._(0, 'UNSPECIFIED');
+  static const CallPlaceholderFieldEnum_CallPlaceholderField UNKNOWN =
+      CallPlaceholderFieldEnum_CallPlaceholderField._(1, 'UNKNOWN');
+  static const CallPlaceholderFieldEnum_CallPlaceholderField PHONE_NUMBER =
+      CallPlaceholderFieldEnum_CallPlaceholderField._(2, 'PHONE_NUMBER');
+  static const CallPlaceholderFieldEnum_CallPlaceholderField COUNTRY_CODE =
+      CallPlaceholderFieldEnum_CallPlaceholderField._(3, 'COUNTRY_CODE');
+  static const CallPlaceholderFieldEnum_CallPlaceholderField TRACKED =
+      CallPlaceholderFieldEnum_CallPlaceholderField._(4, 'TRACKED');
+  static const CallPlaceholderFieldEnum_CallPlaceholderField
+      CONVERSION_TYPE_ID =
+      CallPlaceholderFieldEnum_CallPlaceholderField._(5, 'CONVERSION_TYPE_ID');
+  static const CallPlaceholderFieldEnum_CallPlaceholderField
+      CONVERSION_REPORTING_STATE =
+      CallPlaceholderFieldEnum_CallPlaceholderField._(
+          6, 'CONVERSION_REPORTING_STATE');
 
-  static const $core.List<CallPlaceholderFieldEnum_CallPlaceholderField> values = <CallPlaceholderFieldEnum_CallPlaceholderField> [
+  static const $core.List<CallPlaceholderFieldEnum_CallPlaceholderField>
+      values = <CallPlaceholderFieldEnum_CallPlaceholderField>[
     UNSPECIFIED,
     UNKNOWN,
     PHONE_NUMBER,
@@ -27,9 +38,14 @@ class CallPlaceholderFieldEnum_CallPlaceholderField extends $pb.ProtobufEnum {
     CONVERSION_REPORTING_STATE,
   ];
 
-  static final $core.Map<$core.int, CallPlaceholderFieldEnum_CallPlaceholderField> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CallPlaceholderFieldEnum_CallPlaceholderField valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, CallPlaceholderFieldEnum_CallPlaceholderField>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CallPlaceholderFieldEnum_CallPlaceholderField valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const CallPlaceholderFieldEnum_CallPlaceholderField._($core.int v, $core.String n) : super(v, n);
+  const CallPlaceholderFieldEnum_CallPlaceholderField._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

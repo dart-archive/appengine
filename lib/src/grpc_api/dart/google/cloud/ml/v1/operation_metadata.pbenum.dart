@@ -9,21 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class OperationMetadata_OperationType extends $pb.ProtobufEnum {
-  static const OperationMetadata_OperationType OPERATION_TYPE_UNSPECIFIED = OperationMetadata_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
-  static const OperationMetadata_OperationType CREATE_VERSION = OperationMetadata_OperationType._(1, 'CREATE_VERSION');
-  static const OperationMetadata_OperationType DELETE_VERSION = OperationMetadata_OperationType._(2, 'DELETE_VERSION');
-  static const OperationMetadata_OperationType DELETE_MODEL = OperationMetadata_OperationType._(3, 'DELETE_MODEL');
+  static const OperationMetadata_OperationType OPERATION_TYPE_UNSPECIFIED =
+      OperationMetadata_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
+  static const OperationMetadata_OperationType CREATE_VERSION =
+      OperationMetadata_OperationType._(1, 'CREATE_VERSION');
+  static const OperationMetadata_OperationType DELETE_VERSION =
+      OperationMetadata_OperationType._(2, 'DELETE_VERSION');
+  static const OperationMetadata_OperationType DELETE_MODEL =
+      OperationMetadata_OperationType._(3, 'DELETE_MODEL');
 
-  static const $core.List<OperationMetadata_OperationType> values = <OperationMetadata_OperationType> [
+  static const $core.List<OperationMetadata_OperationType> values =
+      <OperationMetadata_OperationType>[
     OPERATION_TYPE_UNSPECIFIED,
     CREATE_VERSION,
     DELETE_VERSION,
     DELETE_MODEL,
   ];
 
-  static final $core.Map<$core.int, OperationMetadata_OperationType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static OperationMetadata_OperationType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, OperationMetadata_OperationType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static OperationMetadata_OperationType valueOf($core.int value) =>
+      _byValue[value];
 
-  const OperationMetadata_OperationType._($core.int v, $core.String n) : super(v, n);
+  const OperationMetadata_OperationType._($core.int v, $core.String n)
+      : super(v, n);
 }
-

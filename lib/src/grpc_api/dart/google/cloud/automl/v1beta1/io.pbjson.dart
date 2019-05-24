@@ -4,133 +4,241 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const InputConfig$json = const {
+const InputConfig$json = {
   '1': 'InputConfig',
-  '2': const [
-    const {'1': 'gcs_source', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.GcsSource', '9': 0, '10': 'gcsSource'},
-    const {'1': 'bigquery_source', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.BigQuerySource', '9': 0, '10': 'bigquerySource'},
-    const {'1': 'params', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.automl.v1beta1.InputConfig.ParamsEntry', '10': 'params'},
+  '2': [
+    {
+      '1': 'gcs_source',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.GcsSource',
+      '9': 0,
+      '10': 'gcsSource'
+    },
+    {
+      '1': 'bigquery_source',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.BigQuerySource',
+      '9': 0,
+      '10': 'bigquerySource'
+    },
+    {
+      '1': 'params',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.InputConfig.ParamsEntry',
+      '10': 'params'
+    },
   ],
-  '3': const [InputConfig_ParamsEntry$json],
-  '8': const [
-    const {'1': 'source'},
+  '3': [InputConfig_ParamsEntry$json],
+  '8': [
+    {'1': 'source'},
   ],
 };
 
-const InputConfig_ParamsEntry$json = const {
+const InputConfig_ParamsEntry$json = {
   '1': 'ParamsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const BatchPredictInputConfig$json = const {
+const BatchPredictInputConfig$json = {
   '1': 'BatchPredictInputConfig',
-  '2': const [
-    const {'1': 'gcs_source', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.GcsSource', '9': 0, '10': 'gcsSource'},
-    const {'1': 'bigquery_source', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.BigQuerySource', '9': 0, '10': 'bigquerySource'},
+  '2': [
+    {
+      '1': 'gcs_source',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.GcsSource',
+      '9': 0,
+      '10': 'gcsSource'
+    },
+    {
+      '1': 'bigquery_source',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.BigQuerySource',
+      '9': 0,
+      '10': 'bigquerySource'
+    },
   ],
-  '8': const [
-    const {'1': 'source'},
+  '8': [
+    {'1': 'source'},
   ],
 };
 
-const DocumentInputConfig$json = const {
+const DocumentInputConfig$json = {
   '1': 'DocumentInputConfig',
-  '2': const [
-    const {'1': 'gcs_source', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.GcsSource', '10': 'gcsSource'},
+  '2': [
+    {
+      '1': 'gcs_source',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.GcsSource',
+      '10': 'gcsSource'
+    },
   ],
 };
 
-const OutputConfig$json = const {
+const OutputConfig$json = {
   '1': 'OutputConfig',
-  '2': const [
-    const {'1': 'gcs_destination', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.GcsDestination', '9': 0, '10': 'gcsDestination'},
-    const {'1': 'bigquery_destination', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.BigQueryDestination', '9': 0, '10': 'bigqueryDestination'},
+  '2': [
+    {
+      '1': 'gcs_destination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.GcsDestination',
+      '9': 0,
+      '10': 'gcsDestination'
+    },
+    {
+      '1': 'bigquery_destination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.BigQueryDestination',
+      '9': 0,
+      '10': 'bigqueryDestination'
+    },
   ],
-  '8': const [
-    const {'1': 'destination'},
+  '8': [
+    {'1': 'destination'},
   ],
 };
 
-const BatchPredictOutputConfig$json = const {
+const BatchPredictOutputConfig$json = {
   '1': 'BatchPredictOutputConfig',
-  '2': const [
-    const {'1': 'gcs_destination', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.GcsDestination', '9': 0, '10': 'gcsDestination'},
-    const {'1': 'bigquery_destination', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.BigQueryDestination', '9': 0, '10': 'bigqueryDestination'},
+  '2': [
+    {
+      '1': 'gcs_destination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.GcsDestination',
+      '9': 0,
+      '10': 'gcsDestination'
+    },
+    {
+      '1': 'bigquery_destination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.BigQueryDestination',
+      '9': 0,
+      '10': 'bigqueryDestination'
+    },
   ],
-  '8': const [
-    const {'1': 'destination'},
+  '8': [
+    {'1': 'destination'},
   ],
 };
 
-const ModelExportOutputConfig$json = const {
+const ModelExportOutputConfig$json = {
   '1': 'ModelExportOutputConfig',
-  '2': const [
-    const {'1': 'gcs_destination', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.GcsDestination', '9': 0, '10': 'gcsDestination'},
-    const {'1': 'gcr_destination', '3': 3, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.GcrDestination', '9': 0, '10': 'gcrDestination'},
-    const {'1': 'model_format', '3': 4, '4': 1, '5': 9, '10': 'modelFormat'},
-    const {'1': 'params', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.automl.v1beta1.ModelExportOutputConfig.ParamsEntry', '10': 'params'},
+  '2': [
+    {
+      '1': 'gcs_destination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.GcsDestination',
+      '9': 0,
+      '10': 'gcsDestination'
+    },
+    {
+      '1': 'gcr_destination',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.GcrDestination',
+      '9': 0,
+      '10': 'gcrDestination'
+    },
+    {'1': 'model_format', '3': 4, '4': 1, '5': 9, '10': 'modelFormat'},
+    {
+      '1': 'params',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.ModelExportOutputConfig.ParamsEntry',
+      '10': 'params'
+    },
   ],
-  '3': const [ModelExportOutputConfig_ParamsEntry$json],
-  '8': const [
-    const {'1': 'destination'},
+  '3': [ModelExportOutputConfig_ParamsEntry$json],
+  '8': [
+    {'1': 'destination'},
   ],
 };
 
-const ModelExportOutputConfig_ParamsEntry$json = const {
+const ModelExportOutputConfig_ParamsEntry$json = {
   '1': 'ParamsEntry',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': const {'7': true},
+  '7': {'7': true},
 };
 
-const ExportEvaluatedExamplesOutputConfig$json = const {
+const ExportEvaluatedExamplesOutputConfig$json = {
   '1': 'ExportEvaluatedExamplesOutputConfig',
-  '2': const [
-    const {'1': 'bigquery_destination', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.automl.v1beta1.BigQueryDestination', '9': 0, '10': 'bigqueryDestination'},
+  '2': [
+    {
+      '1': 'bigquery_destination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.BigQueryDestination',
+      '9': 0,
+      '10': 'bigqueryDestination'
+    },
   ],
-  '8': const [
-    const {'1': 'destination'},
+  '8': [
+    {'1': 'destination'},
   ],
 };
 
-const GcsSource$json = const {
+const GcsSource$json = {
   '1': 'GcsSource',
-  '2': const [
-    const {'1': 'input_uris', '3': 1, '4': 3, '5': 9, '10': 'inputUris'},
+  '2': [
+    {'1': 'input_uris', '3': 1, '4': 3, '5': 9, '10': 'inputUris'},
   ],
 };
 
-const BigQuerySource$json = const {
+const BigQuerySource$json = {
   '1': 'BigQuerySource',
-  '2': const [
-    const {'1': 'input_uri', '3': 1, '4': 1, '5': 9, '10': 'inputUri'},
+  '2': [
+    {'1': 'input_uri', '3': 1, '4': 1, '5': 9, '10': 'inputUri'},
   ],
 };
 
-const GcsDestination$json = const {
+const GcsDestination$json = {
   '1': 'GcsDestination',
-  '2': const [
-    const {'1': 'output_uri_prefix', '3': 1, '4': 1, '5': 9, '10': 'outputUriPrefix'},
+  '2': [
+    {'1': 'output_uri_prefix', '3': 1, '4': 1, '5': 9, '10': 'outputUriPrefix'},
   ],
 };
 
-const BigQueryDestination$json = const {
+const BigQueryDestination$json = {
   '1': 'BigQueryDestination',
-  '2': const [
-    const {'1': 'output_uri', '3': 1, '4': 1, '5': 9, '10': 'outputUri'},
+  '2': [
+    {'1': 'output_uri', '3': 1, '4': 1, '5': 9, '10': 'outputUri'},
   ],
 };
 
-const GcrDestination$json = const {
+const GcrDestination$json = {
   '1': 'GcrDestination',
-  '2': const [
-    const {'1': 'output_uri', '3': 1, '4': 1, '5': 9, '10': 'outputUri'},
+  '2': [
+    {'1': 'output_uri', '3': 1, '4': 1, '5': 9, '10': 'outputUri'},
   ],
 };
-

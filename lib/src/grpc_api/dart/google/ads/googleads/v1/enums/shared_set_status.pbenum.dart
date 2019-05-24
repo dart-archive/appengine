@@ -9,21 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SharedSetStatusEnum_SharedSetStatus extends $pb.ProtobufEnum {
-  static const SharedSetStatusEnum_SharedSetStatus UNSPECIFIED = SharedSetStatusEnum_SharedSetStatus._(0, 'UNSPECIFIED');
-  static const SharedSetStatusEnum_SharedSetStatus UNKNOWN = SharedSetStatusEnum_SharedSetStatus._(1, 'UNKNOWN');
-  static const SharedSetStatusEnum_SharedSetStatus ENABLED = SharedSetStatusEnum_SharedSetStatus._(2, 'ENABLED');
-  static const SharedSetStatusEnum_SharedSetStatus REMOVED = SharedSetStatusEnum_SharedSetStatus._(3, 'REMOVED');
+  static const SharedSetStatusEnum_SharedSetStatus UNSPECIFIED =
+      SharedSetStatusEnum_SharedSetStatus._(0, 'UNSPECIFIED');
+  static const SharedSetStatusEnum_SharedSetStatus UNKNOWN =
+      SharedSetStatusEnum_SharedSetStatus._(1, 'UNKNOWN');
+  static const SharedSetStatusEnum_SharedSetStatus ENABLED =
+      SharedSetStatusEnum_SharedSetStatus._(2, 'ENABLED');
+  static const SharedSetStatusEnum_SharedSetStatus REMOVED =
+      SharedSetStatusEnum_SharedSetStatus._(3, 'REMOVED');
 
-  static const $core.List<SharedSetStatusEnum_SharedSetStatus> values = <SharedSetStatusEnum_SharedSetStatus> [
+  static const $core.List<SharedSetStatusEnum_SharedSetStatus> values =
+      <SharedSetStatusEnum_SharedSetStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, SharedSetStatusEnum_SharedSetStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static SharedSetStatusEnum_SharedSetStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, SharedSetStatusEnum_SharedSetStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SharedSetStatusEnum_SharedSetStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const SharedSetStatusEnum_SharedSetStatus._($core.int v, $core.String n) : super(v, n);
+  const SharedSetStatusEnum_SharedSetStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -9,7 +9,8 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Component extends $pb.ProtobufEnum {
-  static const Component COMPONENT_UNSPECIFIED = Component._(0, 'COMPONENT_UNSPECIFIED');
+  static const Component COMPONENT_UNSPECIFIED =
+      Component._(0, 'COMPONENT_UNSPECIFIED');
   static const Component ANACONDA = Component._(5, 'ANACONDA');
   static const Component DRUID = Component._(9, 'DRUID');
   static const Component HIVE_WEBHCAT = Component._(3, 'HIVE_WEBHCAT');
@@ -19,7 +20,7 @@ class Component extends $pb.ProtobufEnum {
   static const Component ZEPPELIN = Component._(4, 'ZEPPELIN');
   static const Component ZOOKEEPER = Component._(8, 'ZOOKEEPER');
 
-  static const $core.List<Component> values = <Component> [
+  static const $core.List<Component> values = <Component>[
     COMPONENT_UNSPECIFIED,
     ANACONDA,
     DRUID,
@@ -31,9 +32,9 @@ class Component extends $pb.ProtobufEnum {
     ZOOKEEPER,
   ];
 
-  static final $core.Map<$core.int, Component> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Component> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Component valueOf($core.int value) => _byValue[value];
 
   const Component._($core.int v, $core.String n) : super(v, n);
 }
-

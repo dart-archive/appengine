@@ -9,15 +9,23 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class CampaignDraftStatusEnum_CampaignDraftStatus extends $pb.ProtobufEnum {
-  static const CampaignDraftStatusEnum_CampaignDraftStatus UNSPECIFIED = CampaignDraftStatusEnum_CampaignDraftStatus._(0, 'UNSPECIFIED');
-  static const CampaignDraftStatusEnum_CampaignDraftStatus UNKNOWN = CampaignDraftStatusEnum_CampaignDraftStatus._(1, 'UNKNOWN');
-  static const CampaignDraftStatusEnum_CampaignDraftStatus PROPOSED = CampaignDraftStatusEnum_CampaignDraftStatus._(2, 'PROPOSED');
-  static const CampaignDraftStatusEnum_CampaignDraftStatus REMOVED = CampaignDraftStatusEnum_CampaignDraftStatus._(3, 'REMOVED');
-  static const CampaignDraftStatusEnum_CampaignDraftStatus PROMOTING = CampaignDraftStatusEnum_CampaignDraftStatus._(5, 'PROMOTING');
-  static const CampaignDraftStatusEnum_CampaignDraftStatus PROMOTED = CampaignDraftStatusEnum_CampaignDraftStatus._(4, 'PROMOTED');
-  static const CampaignDraftStatusEnum_CampaignDraftStatus PROMOTE_FAILED = CampaignDraftStatusEnum_CampaignDraftStatus._(6, 'PROMOTE_FAILED');
+  static const CampaignDraftStatusEnum_CampaignDraftStatus UNSPECIFIED =
+      CampaignDraftStatusEnum_CampaignDraftStatus._(0, 'UNSPECIFIED');
+  static const CampaignDraftStatusEnum_CampaignDraftStatus UNKNOWN =
+      CampaignDraftStatusEnum_CampaignDraftStatus._(1, 'UNKNOWN');
+  static const CampaignDraftStatusEnum_CampaignDraftStatus PROPOSED =
+      CampaignDraftStatusEnum_CampaignDraftStatus._(2, 'PROPOSED');
+  static const CampaignDraftStatusEnum_CampaignDraftStatus REMOVED =
+      CampaignDraftStatusEnum_CampaignDraftStatus._(3, 'REMOVED');
+  static const CampaignDraftStatusEnum_CampaignDraftStatus PROMOTING =
+      CampaignDraftStatusEnum_CampaignDraftStatus._(5, 'PROMOTING');
+  static const CampaignDraftStatusEnum_CampaignDraftStatus PROMOTED =
+      CampaignDraftStatusEnum_CampaignDraftStatus._(4, 'PROMOTED');
+  static const CampaignDraftStatusEnum_CampaignDraftStatus PROMOTE_FAILED =
+      CampaignDraftStatusEnum_CampaignDraftStatus._(6, 'PROMOTE_FAILED');
 
-  static const $core.List<CampaignDraftStatusEnum_CampaignDraftStatus> values = <CampaignDraftStatusEnum_CampaignDraftStatus> [
+  static const $core.List<CampaignDraftStatusEnum_CampaignDraftStatus> values =
+      <CampaignDraftStatusEnum_CampaignDraftStatus>[
     UNSPECIFIED,
     UNKNOWN,
     PROPOSED,
@@ -27,9 +35,12 @@ class CampaignDraftStatusEnum_CampaignDraftStatus extends $pb.ProtobufEnum {
     PROMOTE_FAILED,
   ];
 
-  static final $core.Map<$core.int, CampaignDraftStatusEnum_CampaignDraftStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static CampaignDraftStatusEnum_CampaignDraftStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, CampaignDraftStatusEnum_CampaignDraftStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CampaignDraftStatusEnum_CampaignDraftStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const CampaignDraftStatusEnum_CampaignDraftStatus._($core.int v, $core.String n) : super(v, n);
+  const CampaignDraftStatusEnum_CampaignDraftStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

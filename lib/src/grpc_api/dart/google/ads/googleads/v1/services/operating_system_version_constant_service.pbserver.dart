@@ -15,24 +15,33 @@ import 'operating_system_version_constant_service.pbjson.dart';
 
 export 'operating_system_version_constant_service.pb.dart';
 
-abstract class OperatingSystemVersionConstantServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.OperatingSystemVersionConstant> getOperatingSystemVersionConstant($pb.ServerContext ctx, GetOperatingSystemVersionConstantRequest request);
+abstract class OperatingSystemVersionConstantServiceBase
+    extends $pb.GeneratedService {
+  $async.Future<$0.OperatingSystemVersionConstant>
+      getOperatingSystemVersionConstant($pb.ServerContext ctx,
+          GetOperatingSystemVersionConstantRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetOperatingSystemVersionConstant': return GetOperatingSystemVersionConstantRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetOperatingSystemVersionConstant':
+        return GetOperatingSystemVersionConstantRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetOperatingSystemVersionConstant': return this.getOperatingSystemVersionConstant(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetOperatingSystemVersionConstant':
+        return this.getOperatingSystemVersionConstant(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => OperatingSystemVersionConstantServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => OperatingSystemVersionConstantServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      OperatingSystemVersionConstantServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => OperatingSystemVersionConstantServiceBase$messageJson;
 }
-

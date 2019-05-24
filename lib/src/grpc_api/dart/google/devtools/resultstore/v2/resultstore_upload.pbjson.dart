@@ -20,205 +20,527 @@ import 'coverage.pbjson.dart' as $14;
 import 'configuration.pbjson.dart' as $6;
 import 'file_set.pbjson.dart' as $7;
 
-const CreateInvocationRequest$json = const {
+const CreateInvocationRequest$json = {
   '1': 'CreateInvocationRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'invocation_id', '3': 2, '4': 1, '5': 9, '10': 'invocationId'},
-    const {'1': 'invocation', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Invocation', '10': 'invocation'},
-    const {'1': 'authorization_token', '3': 4, '4': 1, '5': 9, '10': 'authorizationToken'},
-    const {'1': 'auto_finish_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'autoFinishTime'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'invocation_id', '3': 2, '4': 1, '5': 9, '10': 'invocationId'},
+    {
+      '1': 'invocation',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Invocation',
+      '10': 'invocation'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
+    {
+      '1': 'auto_finish_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'autoFinishTime'
+    },
   ],
 };
 
-const UpdateInvocationRequest$json = const {
+const UpdateInvocationRequest$json = {
   '1': 'UpdateInvocationRequest',
-  '2': const [
-    const {'1': 'invocation', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Invocation', '10': 'invocation'},
-    const {'1': 'update_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {
+      '1': 'invocation',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Invocation',
+      '10': 'invocation'
+    },
+    {
+      '1': 'update_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const FinishInvocationRequest$json = const {
+const FinishInvocationRequest$json = {
   '1': 'FinishInvocationRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'authorization_token', '3': 3, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'authorization_token',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const FinishInvocationResponse$json = const {
+const FinishInvocationResponse$json = {
   '1': 'FinishInvocationResponse',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'id', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Invocation.Id', '10': 'id'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'id',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Invocation.Id',
+      '10': 'id'
+    },
   ],
 };
 
-const CreateTargetRequest$json = const {
+const CreateTargetRequest$json = {
   '1': 'CreateTargetRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'target_id', '3': 3, '4': 1, '5': 9, '10': 'targetId'},
-    const {'1': 'target', '3': 4, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Target', '10': 'target'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'target_id', '3': 3, '4': 1, '5': 9, '10': 'targetId'},
+    {
+      '1': 'target',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Target',
+      '10': 'target'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const UpdateTargetRequest$json = const {
+const UpdateTargetRequest$json = {
   '1': 'UpdateTargetRequest',
-  '2': const [
-    const {'1': 'target', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Target', '10': 'target'},
-    const {'1': 'update_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {
+      '1': 'target',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Target',
+      '10': 'target'
+    },
+    {
+      '1': 'update_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const FinishTargetRequest$json = const {
+const FinishTargetRequest$json = {
   '1': 'FinishTargetRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'authorization_token', '3': 3, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'authorization_token',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const FinishTargetResponse$json = const {
+const FinishTargetResponse$json = {
   '1': 'FinishTargetResponse',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'id', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Target.Id', '10': 'id'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'id',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Target.Id',
+      '10': 'id'
+    },
   ],
 };
 
-const CreateConfiguredTargetRequest$json = const {
+const CreateConfiguredTargetRequest$json = {
   '1': 'CreateConfiguredTargetRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'config_id', '3': 3, '4': 1, '5': 9, '10': 'configId'},
-    const {'1': 'configured_target', '3': 4, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.ConfiguredTarget', '10': 'configuredTarget'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'config_id', '3': 3, '4': 1, '5': 9, '10': 'configId'},
+    {
+      '1': 'configured_target',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.ConfiguredTarget',
+      '10': 'configuredTarget'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const UpdateConfiguredTargetRequest$json = const {
+const UpdateConfiguredTargetRequest$json = {
   '1': 'UpdateConfiguredTargetRequest',
-  '2': const [
-    const {'1': 'configured_target', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.ConfiguredTarget', '10': 'configuredTarget'},
-    const {'1': 'update_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {
+      '1': 'configured_target',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.ConfiguredTarget',
+      '10': 'configuredTarget'
+    },
+    {
+      '1': 'update_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const FinishConfiguredTargetRequest$json = const {
+const FinishConfiguredTargetRequest$json = {
   '1': 'FinishConfiguredTargetRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'authorization_token', '3': 3, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'authorization_token',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const FinishConfiguredTargetResponse$json = const {
+const FinishConfiguredTargetResponse$json = {
   '1': 'FinishConfiguredTargetResponse',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'id', '3': 2, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.ConfiguredTarget.Id', '10': 'id'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'id',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.ConfiguredTarget.Id',
+      '10': 'id'
+    },
   ],
 };
 
-const CreateActionRequest$json = const {
+const CreateActionRequest$json = {
   '1': 'CreateActionRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'action_id', '3': 3, '4': 1, '5': 9, '10': 'actionId'},
-    const {'1': 'action', '3': 4, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Action', '10': 'action'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'action_id', '3': 3, '4': 1, '5': 9, '10': 'actionId'},
+    {
+      '1': 'action',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Action',
+      '10': 'action'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const UpdateActionRequest$json = const {
+const UpdateActionRequest$json = {
   '1': 'UpdateActionRequest',
-  '2': const [
-    const {'1': 'action', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Action', '10': 'action'},
-    const {'1': 'update_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {
+      '1': 'action',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Action',
+      '10': 'action'
+    },
+    {
+      '1': 'update_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const CreateConfigurationRequest$json = const {
+const CreateConfigurationRequest$json = {
   '1': 'CreateConfigurationRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'config_id', '3': 3, '4': 1, '5': 9, '10': 'configId'},
-    const {'1': 'configuration', '3': 4, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Configuration', '10': 'configuration'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'config_id', '3': 3, '4': 1, '5': 9, '10': 'configId'},
+    {
+      '1': 'configuration',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Configuration',
+      '10': 'configuration'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const UpdateConfigurationRequest$json = const {
+const UpdateConfigurationRequest$json = {
   '1': 'UpdateConfigurationRequest',
-  '2': const [
-    const {'1': 'configuration', '3': 3, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.Configuration', '10': 'configuration'},
-    const {'1': 'update_mask', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {
+      '1': 'configuration',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.Configuration',
+      '10': 'configuration'
+    },
+    {
+      '1': 'update_mask',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const CreateFileSetRequest$json = const {
+const CreateFileSetRequest$json = {
   '1': 'CreateFileSetRequest',
-  '2': const [
-    const {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    const {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'file_set_id', '3': 3, '4': 1, '5': 9, '10': 'fileSetId'},
-    const {'1': 'file_set', '3': 4, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.FileSet', '10': 'fileSet'},
-    const {'1': 'authorization_token', '3': 5, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'file_set_id', '3': 3, '4': 1, '5': 9, '10': 'fileSetId'},
+    {
+      '1': 'file_set',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.FileSet',
+      '10': 'fileSet'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const UpdateFileSetRequest$json = const {
+const UpdateFileSetRequest$json = {
   '1': 'UpdateFileSetRequest',
-  '2': const [
-    const {'1': 'file_set', '3': 1, '4': 1, '5': 11, '6': '.google.devtools.resultstore.v2.FileSet', '10': 'fileSet'},
-    const {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
-    const {'1': 'authorization_token', '3': 3, '4': 1, '5': 9, '10': 'authorizationToken'},
+  '2': [
+    {
+      '1': 'file_set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.FileSet',
+      '10': 'fileSet'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+    {
+      '1': 'authorization_token',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'authorizationToken'
+    },
   ],
 };
 
-const ResultStoreUploadServiceBase$json = const {
+const ResultStoreUploadServiceBase$json = {
   '1': 'ResultStoreUpload',
-  '2': const [
-    const {'1': 'CreateInvocation', '2': '.google.devtools.resultstore.v2.CreateInvocationRequest', '3': '.google.devtools.resultstore.v2.Invocation', '4': const {}},
-    const {'1': 'UpdateInvocation', '2': '.google.devtools.resultstore.v2.UpdateInvocationRequest', '3': '.google.devtools.resultstore.v2.Invocation', '4': const {}},
-    const {'1': 'FinishInvocation', '2': '.google.devtools.resultstore.v2.FinishInvocationRequest', '3': '.google.devtools.resultstore.v2.FinishInvocationResponse', '4': const {}},
-    const {'1': 'CreateTarget', '2': '.google.devtools.resultstore.v2.CreateTargetRequest', '3': '.google.devtools.resultstore.v2.Target', '4': const {}},
-    const {'1': 'UpdateTarget', '2': '.google.devtools.resultstore.v2.UpdateTargetRequest', '3': '.google.devtools.resultstore.v2.Target', '4': const {}},
-    const {'1': 'FinishTarget', '2': '.google.devtools.resultstore.v2.FinishTargetRequest', '3': '.google.devtools.resultstore.v2.FinishTargetResponse', '4': const {}},
-    const {'1': 'CreateConfiguredTarget', '2': '.google.devtools.resultstore.v2.CreateConfiguredTargetRequest', '3': '.google.devtools.resultstore.v2.ConfiguredTarget', '4': const {}},
-    const {'1': 'UpdateConfiguredTarget', '2': '.google.devtools.resultstore.v2.UpdateConfiguredTargetRequest', '3': '.google.devtools.resultstore.v2.ConfiguredTarget', '4': const {}},
-    const {'1': 'FinishConfiguredTarget', '2': '.google.devtools.resultstore.v2.FinishConfiguredTargetRequest', '3': '.google.devtools.resultstore.v2.FinishConfiguredTargetResponse', '4': const {}},
-    const {'1': 'CreateAction', '2': '.google.devtools.resultstore.v2.CreateActionRequest', '3': '.google.devtools.resultstore.v2.Action', '4': const {}},
-    const {'1': 'UpdateAction', '2': '.google.devtools.resultstore.v2.UpdateActionRequest', '3': '.google.devtools.resultstore.v2.Action', '4': const {}},
-    const {'1': 'CreateConfiguration', '2': '.google.devtools.resultstore.v2.CreateConfigurationRequest', '3': '.google.devtools.resultstore.v2.Configuration', '4': const {}},
-    const {'1': 'UpdateConfiguration', '2': '.google.devtools.resultstore.v2.UpdateConfigurationRequest', '3': '.google.devtools.resultstore.v2.Configuration', '4': const {}},
-    const {'1': 'CreateFileSet', '2': '.google.devtools.resultstore.v2.CreateFileSetRequest', '3': '.google.devtools.resultstore.v2.FileSet', '4': const {}},
-    const {'1': 'UpdateFileSet', '2': '.google.devtools.resultstore.v2.UpdateFileSetRequest', '3': '.google.devtools.resultstore.v2.FileSet', '4': const {}},
+  '2': [
+    {
+      '1': 'CreateInvocation',
+      '2': '.google.devtools.resultstore.v2.CreateInvocationRequest',
+      '3': '.google.devtools.resultstore.v2.Invocation',
+      '4': {}
+    },
+    {
+      '1': 'UpdateInvocation',
+      '2': '.google.devtools.resultstore.v2.UpdateInvocationRequest',
+      '3': '.google.devtools.resultstore.v2.Invocation',
+      '4': {}
+    },
+    {
+      '1': 'FinishInvocation',
+      '2': '.google.devtools.resultstore.v2.FinishInvocationRequest',
+      '3': '.google.devtools.resultstore.v2.FinishInvocationResponse',
+      '4': {}
+    },
+    {
+      '1': 'CreateTarget',
+      '2': '.google.devtools.resultstore.v2.CreateTargetRequest',
+      '3': '.google.devtools.resultstore.v2.Target',
+      '4': {}
+    },
+    {
+      '1': 'UpdateTarget',
+      '2': '.google.devtools.resultstore.v2.UpdateTargetRequest',
+      '3': '.google.devtools.resultstore.v2.Target',
+      '4': {}
+    },
+    {
+      '1': 'FinishTarget',
+      '2': '.google.devtools.resultstore.v2.FinishTargetRequest',
+      '3': '.google.devtools.resultstore.v2.FinishTargetResponse',
+      '4': {}
+    },
+    {
+      '1': 'CreateConfiguredTarget',
+      '2': '.google.devtools.resultstore.v2.CreateConfiguredTargetRequest',
+      '3': '.google.devtools.resultstore.v2.ConfiguredTarget',
+      '4': {}
+    },
+    {
+      '1': 'UpdateConfiguredTarget',
+      '2': '.google.devtools.resultstore.v2.UpdateConfiguredTargetRequest',
+      '3': '.google.devtools.resultstore.v2.ConfiguredTarget',
+      '4': {}
+    },
+    {
+      '1': 'FinishConfiguredTarget',
+      '2': '.google.devtools.resultstore.v2.FinishConfiguredTargetRequest',
+      '3': '.google.devtools.resultstore.v2.FinishConfiguredTargetResponse',
+      '4': {}
+    },
+    {
+      '1': 'CreateAction',
+      '2': '.google.devtools.resultstore.v2.CreateActionRequest',
+      '3': '.google.devtools.resultstore.v2.Action',
+      '4': {}
+    },
+    {
+      '1': 'UpdateAction',
+      '2': '.google.devtools.resultstore.v2.UpdateActionRequest',
+      '3': '.google.devtools.resultstore.v2.Action',
+      '4': {}
+    },
+    {
+      '1': 'CreateConfiguration',
+      '2': '.google.devtools.resultstore.v2.CreateConfigurationRequest',
+      '3': '.google.devtools.resultstore.v2.Configuration',
+      '4': {}
+    },
+    {
+      '1': 'UpdateConfiguration',
+      '2': '.google.devtools.resultstore.v2.UpdateConfigurationRequest',
+      '3': '.google.devtools.resultstore.v2.Configuration',
+      '4': {}
+    },
+    {
+      '1': 'CreateFileSet',
+      '2': '.google.devtools.resultstore.v2.CreateFileSetRequest',
+      '3': '.google.devtools.resultstore.v2.FileSet',
+      '4': {}
+    },
+    {
+      '1': 'UpdateFileSet',
+      '2': '.google.devtools.resultstore.v2.UpdateFileSetRequest',
+      '3': '.google.devtools.resultstore.v2.FileSet',
+      '4': {}
+    },
   ],
 };
 
-const ResultStoreUploadServiceBase$messageJson = const {
-  '.google.devtools.resultstore.v2.CreateInvocationRequest': CreateInvocationRequest$json,
+const ResultStoreUploadServiceBase$messageJson = {
+  '.google.devtools.resultstore.v2.CreateInvocationRequest':
+      CreateInvocationRequest$json,
   '.google.devtools.resultstore.v2.Invocation': $0.Invocation$json,
   '.google.devtools.resultstore.v2.Invocation.Id': $0.Invocation_Id$json,
   '.google.devtools.resultstore.v2.StatusAttributes': $8.StatusAttributes$json,
   '.google.devtools.resultstore.v2.Timing': $8.Timing$json,
   '.google.protobuf.Timestamp': $1.Timestamp$json,
   '.google.protobuf.Duration': $9.Duration$json,
-  '.google.devtools.resultstore.v2.InvocationAttributes': $0.InvocationAttributes$json,
-  '.google.devtools.resultstore.v2.InvocationContext': $0.InvocationContext$json,
+  '.google.devtools.resultstore.v2.InvocationAttributes':
+      $0.InvocationAttributes$json,
+  '.google.devtools.resultstore.v2.InvocationContext':
+      $0.InvocationContext$json,
   '.google.devtools.resultstore.v2.WorkspaceInfo': $0.WorkspaceInfo$json,
   '.google.devtools.resultstore.v2.WorkspaceContext': $0.WorkspaceContext$json,
   '.google.devtools.resultstore.v2.CommandLine': $0.CommandLine$json,
@@ -226,29 +548,46 @@ const ResultStoreUploadServiceBase$messageJson = const {
   '.google.devtools.resultstore.v2.File': $10.File$json,
   '.google.protobuf.Int64Value': $11.Int64Value$json,
   '.google.devtools.resultstore.v2.ArchiveEntry': $10.ArchiveEntry$json,
-  '.google.devtools.resultstore.v2.LanguageCoverageSummary': $12.LanguageCoverageSummary$json,
-  '.google.devtools.resultstore.v2.LineCoverageSummary': $12.LineCoverageSummary$json,
-  '.google.devtools.resultstore.v2.BranchCoverageSummary': $12.BranchCoverageSummary$json,
-  '.google.devtools.resultstore.v2.UpdateInvocationRequest': UpdateInvocationRequest$json,
+  '.google.devtools.resultstore.v2.LanguageCoverageSummary':
+      $12.LanguageCoverageSummary$json,
+  '.google.devtools.resultstore.v2.LineCoverageSummary':
+      $12.LineCoverageSummary$json,
+  '.google.devtools.resultstore.v2.BranchCoverageSummary':
+      $12.BranchCoverageSummary$json,
+  '.google.devtools.resultstore.v2.UpdateInvocationRequest':
+      UpdateInvocationRequest$json,
   '.google.protobuf.FieldMask': $2.FieldMask$json,
-  '.google.devtools.resultstore.v2.FinishInvocationRequest': FinishInvocationRequest$json,
-  '.google.devtools.resultstore.v2.FinishInvocationResponse': FinishInvocationResponse$json,
-  '.google.devtools.resultstore.v2.CreateTargetRequest': CreateTargetRequest$json,
+  '.google.devtools.resultstore.v2.FinishInvocationRequest':
+      FinishInvocationRequest$json,
+  '.google.devtools.resultstore.v2.FinishInvocationResponse':
+      FinishInvocationResponse$json,
+  '.google.devtools.resultstore.v2.CreateTargetRequest':
+      CreateTargetRequest$json,
   '.google.devtools.resultstore.v2.Target': $3.Target$json,
   '.google.devtools.resultstore.v2.Target.Id': $3.Target_Id$json,
   '.google.devtools.resultstore.v2.TargetAttributes': $3.TargetAttributes$json,
   '.google.devtools.resultstore.v2.TestAttributes': $3.TestAttributes$json,
-  '.google.devtools.resultstore.v2.UpdateTargetRequest': UpdateTargetRequest$json,
-  '.google.devtools.resultstore.v2.FinishTargetRequest': FinishTargetRequest$json,
-  '.google.devtools.resultstore.v2.FinishTargetResponse': FinishTargetResponse$json,
-  '.google.devtools.resultstore.v2.CreateConfiguredTargetRequest': CreateConfiguredTargetRequest$json,
+  '.google.devtools.resultstore.v2.UpdateTargetRequest':
+      UpdateTargetRequest$json,
+  '.google.devtools.resultstore.v2.FinishTargetRequest':
+      FinishTargetRequest$json,
+  '.google.devtools.resultstore.v2.FinishTargetResponse':
+      FinishTargetResponse$json,
+  '.google.devtools.resultstore.v2.CreateConfiguredTargetRequest':
+      CreateConfiguredTargetRequest$json,
   '.google.devtools.resultstore.v2.ConfiguredTarget': $4.ConfiguredTarget$json,
-  '.google.devtools.resultstore.v2.ConfiguredTarget.Id': $4.ConfiguredTarget_Id$json,
-  '.google.devtools.resultstore.v2.ConfiguredTestAttributes': $4.ConfiguredTestAttributes$json,
-  '.google.devtools.resultstore.v2.UpdateConfiguredTargetRequest': UpdateConfiguredTargetRequest$json,
-  '.google.devtools.resultstore.v2.FinishConfiguredTargetRequest': FinishConfiguredTargetRequest$json,
-  '.google.devtools.resultstore.v2.FinishConfiguredTargetResponse': FinishConfiguredTargetResponse$json,
-  '.google.devtools.resultstore.v2.CreateActionRequest': CreateActionRequest$json,
+  '.google.devtools.resultstore.v2.ConfiguredTarget.Id':
+      $4.ConfiguredTarget_Id$json,
+  '.google.devtools.resultstore.v2.ConfiguredTestAttributes':
+      $4.ConfiguredTestAttributes$json,
+  '.google.devtools.resultstore.v2.UpdateConfiguredTargetRequest':
+      UpdateConfiguredTargetRequest$json,
+  '.google.devtools.resultstore.v2.FinishConfiguredTargetRequest':
+      FinishConfiguredTargetRequest$json,
+  '.google.devtools.resultstore.v2.FinishConfiguredTargetResponse':
+      FinishConfiguredTargetResponse$json,
+  '.google.devtools.resultstore.v2.CreateActionRequest':
+      CreateActionRequest$json,
   '.google.devtools.resultstore.v2.Action': $5.Action$json,
   '.google.devtools.resultstore.v2.Action.Id': $5.Action_Id$json,
   '.google.devtools.resultstore.v2.ActionAttributes': $5.ActionAttributes$json,
@@ -258,7 +597,8 @@ const ResultStoreUploadServiceBase$messageJson = const {
   '.google.devtools.resultstore.v2.TestTiming': $5.TestTiming$json,
   '.google.devtools.resultstore.v2.LocalTestTiming': $5.LocalTestTiming$json,
   '.google.devtools.resultstore.v2.RemoteTestTiming': $5.RemoteTestTiming$json,
-  '.google.devtools.resultstore.v2.RemoteTestAttemptTiming': $5.RemoteTestAttemptTiming$json,
+  '.google.devtools.resultstore.v2.RemoteTestAttemptTiming':
+      $5.RemoteTestAttemptTiming$json,
   '.google.devtools.resultstore.v2.TestSuite': $13.TestSuite$json,
   '.google.devtools.resultstore.v2.Test': $13.Test$json,
   '.google.devtools.resultstore.v2.TestCase': $13.TestCase$json,
@@ -269,18 +609,25 @@ const ResultStoreUploadServiceBase$messageJson = const {
   '.google.devtools.resultstore.v2.FileCoverage': $14.FileCoverage$json,
   '.google.devtools.resultstore.v2.LineCoverage': $14.LineCoverage$json,
   '.google.devtools.resultstore.v2.BranchCoverage': $14.BranchCoverage$json,
-  '.google.devtools.resultstore.v2.FileProcessingErrors': $5.FileProcessingErrors$json,
-  '.google.devtools.resultstore.v2.FileProcessingError': $5.FileProcessingError$json,
+  '.google.devtools.resultstore.v2.FileProcessingErrors':
+      $5.FileProcessingErrors$json,
+  '.google.devtools.resultstore.v2.FileProcessingError':
+      $5.FileProcessingError$json,
   '.google.devtools.resultstore.v2.Dependency': $8.Dependency$json,
-  '.google.devtools.resultstore.v2.UpdateActionRequest': UpdateActionRequest$json,
-  '.google.devtools.resultstore.v2.CreateConfigurationRequest': CreateConfigurationRequest$json,
+  '.google.devtools.resultstore.v2.UpdateActionRequest':
+      UpdateActionRequest$json,
+  '.google.devtools.resultstore.v2.CreateConfigurationRequest':
+      CreateConfigurationRequest$json,
   '.google.devtools.resultstore.v2.Configuration': $6.Configuration$json,
   '.google.devtools.resultstore.v2.Configuration.Id': $6.Configuration_Id$json,
-  '.google.devtools.resultstore.v2.ConfigurationAttributes': $6.ConfigurationAttributes$json,
-  '.google.devtools.resultstore.v2.UpdateConfigurationRequest': UpdateConfigurationRequest$json,
-  '.google.devtools.resultstore.v2.CreateFileSetRequest': CreateFileSetRequest$json,
+  '.google.devtools.resultstore.v2.ConfigurationAttributes':
+      $6.ConfigurationAttributes$json,
+  '.google.devtools.resultstore.v2.UpdateConfigurationRequest':
+      UpdateConfigurationRequest$json,
+  '.google.devtools.resultstore.v2.CreateFileSetRequest':
+      CreateFileSetRequest$json,
   '.google.devtools.resultstore.v2.FileSet': $7.FileSet$json,
   '.google.devtools.resultstore.v2.FileSet.Id': $7.FileSet_Id$json,
-  '.google.devtools.resultstore.v2.UpdateFileSetRequest': UpdateFileSetRequest$json,
+  '.google.devtools.resultstore.v2.UpdateFileSetRequest':
+      UpdateFileSetRequest$json,
 };
-

@@ -8,22 +8,42 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus extends $pb.ProtobufEnum {
-  static const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus UNSPECIFIED = FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(0, 'UNSPECIFIED');
-  static const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus UNKNOWN = FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(1, 'UNKNOWN');
-  static const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus APPROVED = FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(2, 'APPROVED');
-  static const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus DISAPPROVED = FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(3, 'DISAPPROVED');
+class FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus
+    extends $pb.ProtobufEnum {
+  static const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus
+      UNSPECIFIED =
+      FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(
+          0, 'UNSPECIFIED');
+  static const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus
+      UNKNOWN =
+      FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(
+          1, 'UNKNOWN');
+  static const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus
+      APPROVED =
+      FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(
+          2, 'APPROVED');
+  static const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus
+      DISAPPROVED =
+      FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(
+          3, 'DISAPPROVED');
 
-  static const $core.List<FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus> values = <FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus> [
+  static const $core
+          .List<FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus>
+      values =
+      <FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus>[
     UNSPECIFIED,
     UNKNOWN,
     APPROVED,
     DISAPPROVED,
   ];
 
-  static final $core.Map<$core.int, FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus
+      valueOf($core.int value) => _byValue[value];
 
-  const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._($core.int v, $core.String n) : super(v, n);
+  const FeedItemQualityApprovalStatusEnum_FeedItemQualityApprovalStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

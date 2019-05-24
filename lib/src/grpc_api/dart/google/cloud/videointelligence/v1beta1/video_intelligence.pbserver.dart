@@ -16,23 +16,30 @@ import 'video_intelligence.pbjson.dart';
 export 'video_intelligence.pb.dart';
 
 abstract class VideoIntelligenceServiceBase extends $pb.GeneratedService {
-  $async.Future<$2.Operation> annotateVideo($pb.ServerContext ctx, AnnotateVideoRequest request);
+  $async.Future<$2.Operation> annotateVideo(
+      $pb.ServerContext ctx, AnnotateVideoRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'AnnotateVideo': return AnnotateVideoRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'AnnotateVideo':
+        return AnnotateVideoRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'AnnotateVideo': return this.annotateVideo(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'AnnotateVideo':
+        return this.annotateVideo(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => VideoIntelligenceServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => VideoIntelligenceServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      VideoIntelligenceServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => VideoIntelligenceServiceBase$messageJson;
 }
-

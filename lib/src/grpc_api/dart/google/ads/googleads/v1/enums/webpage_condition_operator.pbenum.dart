@@ -8,22 +8,34 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class WebpageConditionOperatorEnum_WebpageConditionOperator extends $pb.ProtobufEnum {
-  static const WebpageConditionOperatorEnum_WebpageConditionOperator UNSPECIFIED = WebpageConditionOperatorEnum_WebpageConditionOperator._(0, 'UNSPECIFIED');
-  static const WebpageConditionOperatorEnum_WebpageConditionOperator UNKNOWN = WebpageConditionOperatorEnum_WebpageConditionOperator._(1, 'UNKNOWN');
-  static const WebpageConditionOperatorEnum_WebpageConditionOperator EQUALS = WebpageConditionOperatorEnum_WebpageConditionOperator._(2, 'EQUALS');
-  static const WebpageConditionOperatorEnum_WebpageConditionOperator CONTAINS = WebpageConditionOperatorEnum_WebpageConditionOperator._(3, 'CONTAINS');
+class WebpageConditionOperatorEnum_WebpageConditionOperator
+    extends $pb.ProtobufEnum {
+  static const WebpageConditionOperatorEnum_WebpageConditionOperator
+      UNSPECIFIED =
+      WebpageConditionOperatorEnum_WebpageConditionOperator._(0, 'UNSPECIFIED');
+  static const WebpageConditionOperatorEnum_WebpageConditionOperator UNKNOWN =
+      WebpageConditionOperatorEnum_WebpageConditionOperator._(1, 'UNKNOWN');
+  static const WebpageConditionOperatorEnum_WebpageConditionOperator EQUALS =
+      WebpageConditionOperatorEnum_WebpageConditionOperator._(2, 'EQUALS');
+  static const WebpageConditionOperatorEnum_WebpageConditionOperator CONTAINS =
+      WebpageConditionOperatorEnum_WebpageConditionOperator._(3, 'CONTAINS');
 
-  static const $core.List<WebpageConditionOperatorEnum_WebpageConditionOperator> values = <WebpageConditionOperatorEnum_WebpageConditionOperator> [
+  static const $core.List<WebpageConditionOperatorEnum_WebpageConditionOperator>
+      values = <WebpageConditionOperatorEnum_WebpageConditionOperator>[
     UNSPECIFIED,
     UNKNOWN,
     EQUALS,
     CONTAINS,
   ];
 
-  static final $core.Map<$core.int, WebpageConditionOperatorEnum_WebpageConditionOperator> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static WebpageConditionOperatorEnum_WebpageConditionOperator valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, WebpageConditionOperatorEnum_WebpageConditionOperator>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static WebpageConditionOperatorEnum_WebpageConditionOperator valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const WebpageConditionOperatorEnum_WebpageConditionOperator._($core.int v, $core.String n) : super(v, n);
+  const WebpageConditionOperatorEnum_WebpageConditionOperator._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

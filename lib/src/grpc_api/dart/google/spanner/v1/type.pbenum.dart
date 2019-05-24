@@ -9,7 +9,8 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class TypeCode extends $pb.ProtobufEnum {
-  static const TypeCode TYPE_CODE_UNSPECIFIED = TypeCode._(0, 'TYPE_CODE_UNSPECIFIED');
+  static const TypeCode TYPE_CODE_UNSPECIFIED =
+      TypeCode._(0, 'TYPE_CODE_UNSPECIFIED');
   static const TypeCode BOOL = TypeCode._(1, 'BOOL');
   static const TypeCode INT64 = TypeCode._(2, 'INT64');
   static const TypeCode FLOAT64 = TypeCode._(3, 'FLOAT64');
@@ -20,7 +21,7 @@ class TypeCode extends $pb.ProtobufEnum {
   static const TypeCode ARRAY = TypeCode._(8, 'ARRAY');
   static const TypeCode STRUCT = TypeCode._(9, 'STRUCT');
 
-  static const $core.List<TypeCode> values = <TypeCode> [
+  static const $core.List<TypeCode> values = <TypeCode>[
     TYPE_CODE_UNSPECIFIED,
     BOOL,
     INT64,
@@ -33,9 +34,9 @@ class TypeCode extends $pb.ProtobufEnum {
     STRUCT,
   ];
 
-  static final $core.Map<$core.int, TypeCode> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, TypeCode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static TypeCode valueOf($core.int value) => _byValue[value];
 
   const TypeCode._($core.int v, $core.String n) : super(v, n);
 }
-

@@ -4,18 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const FeedMappingCriterionTypeEnum$json = const {
+const FeedMappingCriterionTypeEnum$json = {
   '1': 'FeedMappingCriterionTypeEnum',
-  '4': const [FeedMappingCriterionTypeEnum_FeedMappingCriterionType$json],
+  '4': [FeedMappingCriterionTypeEnum_FeedMappingCriterionType$json],
 };
 
-const FeedMappingCriterionTypeEnum_FeedMappingCriterionType$json = const {
+const FeedMappingCriterionTypeEnum_FeedMappingCriterionType$json = {
   '1': 'FeedMappingCriterionType',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'LOCATION_EXTENSION_TARGETING', '2': 4},
-    const {'1': 'DSA_PAGE_FEED', '2': 3},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'LOCATION_EXTENSION_TARGETING', '2': 4},
+    {'1': 'DSA_PAGE_FEED', '2': 3},
   ],
 };
-

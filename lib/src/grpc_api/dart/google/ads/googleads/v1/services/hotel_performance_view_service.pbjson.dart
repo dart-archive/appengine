@@ -6,22 +6,28 @@
 
 import '../resources/hotel_performance_view.pbjson.dart' as $0;
 
-const GetHotelPerformanceViewRequest$json = const {
+const GetHotelPerformanceViewRequest$json = {
   '1': 'GetHotelPerformanceViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const HotelPerformanceViewServiceBase$json = const {
+const HotelPerformanceViewServiceBase$json = {
   '1': 'HotelPerformanceViewService',
-  '2': const [
-    const {'1': 'GetHotelPerformanceView', '2': '.google.ads.googleads.v1.services.GetHotelPerformanceViewRequest', '3': '.google.ads.googleads.v1.resources.HotelPerformanceView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetHotelPerformanceView',
+      '2': '.google.ads.googleads.v1.services.GetHotelPerformanceViewRequest',
+      '3': '.google.ads.googleads.v1.resources.HotelPerformanceView',
+      '4': {}
+    },
   ],
 };
 
-const HotelPerformanceViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetHotelPerformanceViewRequest': GetHotelPerformanceViewRequest$json,
-  '.google.ads.googleads.v1.resources.HotelPerformanceView': $0.HotelPerformanceView$json,
+const HotelPerformanceViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetHotelPerformanceViewRequest':
+      GetHotelPerformanceViewRequest$json,
+  '.google.ads.googleads.v1.resources.HotelPerformanceView':
+      $0.HotelPerformanceView$json,
 };
-

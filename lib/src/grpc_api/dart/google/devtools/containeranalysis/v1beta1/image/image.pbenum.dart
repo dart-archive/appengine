@@ -9,7 +9,8 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Layer_Directive extends $pb.ProtobufEnum {
-  static const Layer_Directive DIRECTIVE_UNSPECIFIED = Layer_Directive._(0, 'DIRECTIVE_UNSPECIFIED');
+  static const Layer_Directive DIRECTIVE_UNSPECIFIED =
+      Layer_Directive._(0, 'DIRECTIVE_UNSPECIFIED');
   static const Layer_Directive MAINTAINER = Layer_Directive._(1, 'MAINTAINER');
   static const Layer_Directive RUN = Layer_Directive._(2, 'RUN');
   static const Layer_Directive CMD = Layer_Directive._(3, 'CMD');
@@ -25,10 +26,11 @@ class Layer_Directive extends $pb.ProtobufEnum {
   static const Layer_Directive ARG = Layer_Directive._(13, 'ARG');
   static const Layer_Directive ONBUILD = Layer_Directive._(14, 'ONBUILD');
   static const Layer_Directive STOPSIGNAL = Layer_Directive._(15, 'STOPSIGNAL');
-  static const Layer_Directive HEALTHCHECK = Layer_Directive._(16, 'HEALTHCHECK');
+  static const Layer_Directive HEALTHCHECK =
+      Layer_Directive._(16, 'HEALTHCHECK');
   static const Layer_Directive SHELL = Layer_Directive._(17, 'SHELL');
 
-  static const $core.List<Layer_Directive> values = <Layer_Directive> [
+  static const $core.List<Layer_Directive> values = <Layer_Directive>[
     DIRECTIVE_UNSPECIFIED,
     MAINTAINER,
     RUN,
@@ -49,9 +51,9 @@ class Layer_Directive extends $pb.ProtobufEnum {
     SHELL,
   ];
 
-  static final $core.Map<$core.int, Layer_Directive> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, Layer_Directive> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static Layer_Directive valueOf($core.int value) => _byValue[value];
 
   const Layer_Directive._($core.int v, $core.String n) : super(v, n);
 }
-

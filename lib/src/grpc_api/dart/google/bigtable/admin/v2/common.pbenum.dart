@@ -9,19 +9,20 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class StorageType extends $pb.ProtobufEnum {
-  static const StorageType STORAGE_TYPE_UNSPECIFIED = StorageType._(0, 'STORAGE_TYPE_UNSPECIFIED');
+  static const StorageType STORAGE_TYPE_UNSPECIFIED =
+      StorageType._(0, 'STORAGE_TYPE_UNSPECIFIED');
   static const StorageType SSD = StorageType._(1, 'SSD');
   static const StorageType HDD = StorageType._(2, 'HDD');
 
-  static const $core.List<StorageType> values = <StorageType> [
+  static const $core.List<StorageType> values = <StorageType>[
     STORAGE_TYPE_UNSPECIFIED,
     SSD,
     HDD,
   ];
 
-  static final $core.Map<$core.int, StorageType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, StorageType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static StorageType valueOf($core.int value) => _byValue[value];
 
   const StorageType._($core.int v, $core.String n) : super(v, n);
 }
-

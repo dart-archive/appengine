@@ -9,14 +9,23 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SharedSetErrorEnum_SharedSetError extends $pb.ProtobufEnum {
-  static const SharedSetErrorEnum_SharedSetError UNSPECIFIED = SharedSetErrorEnum_SharedSetError._(0, 'UNSPECIFIED');
-  static const SharedSetErrorEnum_SharedSetError UNKNOWN = SharedSetErrorEnum_SharedSetError._(1, 'UNKNOWN');
-  static const SharedSetErrorEnum_SharedSetError CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE = SharedSetErrorEnum_SharedSetError._(2, 'CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE');
-  static const SharedSetErrorEnum_SharedSetError DUPLICATE_NAME = SharedSetErrorEnum_SharedSetError._(3, 'DUPLICATE_NAME');
-  static const SharedSetErrorEnum_SharedSetError SHARED_SET_REMOVED = SharedSetErrorEnum_SharedSetError._(4, 'SHARED_SET_REMOVED');
-  static const SharedSetErrorEnum_SharedSetError SHARED_SET_IN_USE = SharedSetErrorEnum_SharedSetError._(5, 'SHARED_SET_IN_USE');
+  static const SharedSetErrorEnum_SharedSetError UNSPECIFIED =
+      SharedSetErrorEnum_SharedSetError._(0, 'UNSPECIFIED');
+  static const SharedSetErrorEnum_SharedSetError UNKNOWN =
+      SharedSetErrorEnum_SharedSetError._(1, 'UNKNOWN');
+  static const SharedSetErrorEnum_SharedSetError
+      CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE =
+      SharedSetErrorEnum_SharedSetError._(
+          2, 'CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE');
+  static const SharedSetErrorEnum_SharedSetError DUPLICATE_NAME =
+      SharedSetErrorEnum_SharedSetError._(3, 'DUPLICATE_NAME');
+  static const SharedSetErrorEnum_SharedSetError SHARED_SET_REMOVED =
+      SharedSetErrorEnum_SharedSetError._(4, 'SHARED_SET_REMOVED');
+  static const SharedSetErrorEnum_SharedSetError SHARED_SET_IN_USE =
+      SharedSetErrorEnum_SharedSetError._(5, 'SHARED_SET_IN_USE');
 
-  static const $core.List<SharedSetErrorEnum_SharedSetError> values = <SharedSetErrorEnum_SharedSetError> [
+  static const $core.List<SharedSetErrorEnum_SharedSetError> values =
+      <SharedSetErrorEnum_SharedSetError>[
     UNSPECIFIED,
     UNKNOWN,
     CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE,
@@ -25,9 +34,11 @@ class SharedSetErrorEnum_SharedSetError extends $pb.ProtobufEnum {
     SHARED_SET_IN_USE,
   ];
 
-  static final $core.Map<$core.int, SharedSetErrorEnum_SharedSetError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static SharedSetErrorEnum_SharedSetError valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, SharedSetErrorEnum_SharedSetError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SharedSetErrorEnum_SharedSetError valueOf($core.int value) =>
+      _byValue[value];
 
-  const SharedSetErrorEnum_SharedSetError._($core.int v, $core.String n) : super(v, n);
+  const SharedSetErrorEnum_SharedSetError._($core.int v, $core.String n)
+      : super(v, n);
 }
-

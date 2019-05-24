@@ -8,16 +8,34 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel extends $pb.ProtobufEnum {
-  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel UNSPECIFIED = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(0, 'UNSPECIFIED');
-  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel UNKNOWN = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(1, 'UNKNOWN');
-  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel LEVEL1 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(2, 'LEVEL1');
-  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel LEVEL2 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(3, 'LEVEL2');
-  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel LEVEL3 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(4, 'LEVEL3');
-  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel LEVEL4 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(5, 'LEVEL4');
-  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel LEVEL5 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(6, 'LEVEL5');
+class ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+    extends $pb.ProtobufEnum {
+  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+      UNSPECIFIED =
+      ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(
+          0, 'UNSPECIFIED');
+  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+      UNKNOWN = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(
+          1, 'UNKNOWN');
+  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+      LEVEL1 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(
+          2, 'LEVEL1');
+  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+      LEVEL2 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(
+          3, 'LEVEL2');
+  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+      LEVEL3 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(
+          4, 'LEVEL3');
+  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+      LEVEL4 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(
+          5, 'LEVEL4');
+  static const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+      LEVEL5 = ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(
+          6, 'LEVEL5');
 
-  static const $core.List<ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel> values = <ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel> [
+  static const $core
+          .List<ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel>
+      values = <ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel>[
     UNSPECIFIED,
     UNKNOWN,
     LEVEL1,
@@ -27,9 +45,14 @@ class ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel extends $pb.Pr
     LEVEL5,
   ];
 
-  static final $core.Map<$core.int, ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._($core.int v, $core.String n) : super(v, n);
+  const ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

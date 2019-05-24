@@ -4,7 +4,8 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,24 +18,47 @@ import 'operation.pbenum.dart';
 export 'operation.pbenum.dart';
 
 class Operation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Operation', package: const $pb.PackageName('google.api.servicecontrol.v1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Operation',
+      package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'operationId')
     ..aOS(2, 'operationName')
     ..aOS(3, 'consumerId')
-    ..a<$0.Timestamp>(4, 'startTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..m<$core.String, $core.String>(6, 'labels', 'Operation.LabelsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.api.servicecontrol.v1'))
-    ..pc<$1.MetricValueSet>(7, 'metricValueSets', $pb.PbFieldType.PM,$1.MetricValueSet.create)
-    ..pc<$2.LogEntry>(8, 'logEntries', $pb.PbFieldType.PM,$2.LogEntry.create)
-    ..e<Operation_Importance>(11, 'importance', $pb.PbFieldType.OE, Operation_Importance.LOW, Operation_Importance.valueOf, Operation_Importance.values)
-    ..hasRequiredFields = false
-  ;
+    ..a<$0.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
+        $0.Timestamp.create)
+    ..m<$core.String, $core.String>(
+        6,
+        'labels',
+        'Operation.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..pc<$1.MetricValueSet>(
+        7, 'metricValueSets', $pb.PbFieldType.PM, $1.MetricValueSet.create)
+    ..pc<$2.LogEntry>(8, 'logEntries', $pb.PbFieldType.PM, $2.LogEntry.create)
+    ..e<Operation_Importance>(
+        11,
+        'importance',
+        $pb.PbFieldType.OE,
+        Operation_Importance.LOW,
+        Operation_Importance.valueOf,
+        Operation_Importance.values)
+    ..hasRequiredFields = false;
 
   Operation() : super();
-  Operation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  Operation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Operation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Operation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   Operation clone() => Operation()..mergeFromMessage(this);
-  Operation copyWith(void Function(Operation) updates) => super.copyWith((message) => updates(message as Operation));
+  Operation copyWith(void Function(Operation) updates) =>
+      super.copyWith((message) => updates(message as Operation));
   $pb.BuilderInfo get info_ => _i;
   static Operation create() => Operation();
   Operation createEmptyInstance() => create();
@@ -43,27 +67,42 @@ class Operation extends $pb.GeneratedMessage {
   static Operation _defaultInstance;
 
   $core.String get operationId => $_getS(0, '');
-  set operationId($core.String v) { $_setString(0, v); }
+  set operationId($core.String v) {
+    $_setString(0, v);
+  }
+
   $core.bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
   $core.String get operationName => $_getS(1, '');
-  set operationName($core.String v) { $_setString(1, v); }
+  set operationName($core.String v) {
+    $_setString(1, v);
+  }
+
   $core.bool hasOperationName() => $_has(1);
   void clearOperationName() => clearField(2);
 
   $core.String get consumerId => $_getS(2, '');
-  set consumerId($core.String v) { $_setString(2, v); }
+  set consumerId($core.String v) {
+    $_setString(2, v);
+  }
+
   $core.bool hasConsumerId() => $_has(2);
   void clearConsumerId() => clearField(3);
 
   $0.Timestamp get startTime => $_getN(3);
-  set startTime($0.Timestamp v) { setField(4, v); }
+  set startTime($0.Timestamp v) {
+    setField(4, v);
+  }
+
   $core.bool hasStartTime() => $_has(3);
   void clearStartTime() => clearField(4);
 
   $0.Timestamp get endTime => $_getN(4);
-  set endTime($0.Timestamp v) { setField(5, v); }
+  set endTime($0.Timestamp v) {
+    setField(5, v);
+  }
+
   $core.bool hasEndTime() => $_has(4);
   void clearEndTime() => clearField(5);
 
@@ -74,8 +113,10 @@ class Operation extends $pb.GeneratedMessage {
   $core.List<$2.LogEntry> get logEntries => $_getList(7);
 
   Operation_Importance get importance => $_getN(8);
-  set importance(Operation_Importance v) { setField(11, v); }
+  set importance(Operation_Importance v) {
+    setField(11, v);
+  }
+
   $core.bool hasImportance() => $_has(8);
   void clearImportance() => clearField(11);
 }
-

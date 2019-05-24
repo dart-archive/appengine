@@ -14,24 +14,33 @@ import 'phishingprotection.pbjson.dart';
 
 export 'phishingprotection.pb.dart';
 
-abstract class PhishingProtectionServiceV1Beta1ServiceBase extends $pb.GeneratedService {
-  $async.Future<ReportPhishingResponse> reportPhishing($pb.ServerContext ctx, ReportPhishingRequest request);
+abstract class PhishingProtectionServiceV1Beta1ServiceBase
+    extends $pb.GeneratedService {
+  $async.Future<ReportPhishingResponse> reportPhishing(
+      $pb.ServerContext ctx, ReportPhishingRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'ReportPhishing': return ReportPhishingRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ReportPhishing':
+        return ReportPhishingRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'ReportPhishing': return this.reportPhishing(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'ReportPhishing':
+        return this.reportPhishing(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => PhishingProtectionServiceV1Beta1ServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => PhishingProtectionServiceV1Beta1ServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      PhishingProtectionServiceV1Beta1ServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson =>
+          PhishingProtectionServiceV1Beta1ServiceBase$messageJson;
 }
-

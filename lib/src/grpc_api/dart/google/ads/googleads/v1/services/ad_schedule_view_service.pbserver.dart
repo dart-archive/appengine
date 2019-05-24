@@ -16,23 +16,30 @@ import 'ad_schedule_view_service.pbjson.dart';
 export 'ad_schedule_view_service.pb.dart';
 
 abstract class AdScheduleViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.AdScheduleView> getAdScheduleView($pb.ServerContext ctx, GetAdScheduleViewRequest request);
+  $async.Future<$0.AdScheduleView> getAdScheduleView(
+      $pb.ServerContext ctx, GetAdScheduleViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetAdScheduleView': return GetAdScheduleViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdScheduleView':
+        return GetAdScheduleViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetAdScheduleView': return this.getAdScheduleView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetAdScheduleView':
+        return this.getAdScheduleView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => AdScheduleViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => AdScheduleViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      AdScheduleViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => AdScheduleViewServiceBase$messageJson;
 }
-

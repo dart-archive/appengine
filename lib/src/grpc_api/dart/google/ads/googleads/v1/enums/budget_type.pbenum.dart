@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class BudgetTypeEnum_BudgetType extends $pb.ProtobufEnum {
-  static const BudgetTypeEnum_BudgetType UNSPECIFIED = BudgetTypeEnum_BudgetType._(0, 'UNSPECIFIED');
-  static const BudgetTypeEnum_BudgetType UNKNOWN = BudgetTypeEnum_BudgetType._(1, 'UNKNOWN');
-  static const BudgetTypeEnum_BudgetType STANDARD = BudgetTypeEnum_BudgetType._(2, 'STANDARD');
-  static const BudgetTypeEnum_BudgetType HOTEL_ADS_COMMISSION = BudgetTypeEnum_BudgetType._(3, 'HOTEL_ADS_COMMISSION');
-  static const BudgetTypeEnum_BudgetType FIXED_CPA = BudgetTypeEnum_BudgetType._(4, 'FIXED_CPA');
+  static const BudgetTypeEnum_BudgetType UNSPECIFIED =
+      BudgetTypeEnum_BudgetType._(0, 'UNSPECIFIED');
+  static const BudgetTypeEnum_BudgetType UNKNOWN =
+      BudgetTypeEnum_BudgetType._(1, 'UNKNOWN');
+  static const BudgetTypeEnum_BudgetType STANDARD =
+      BudgetTypeEnum_BudgetType._(2, 'STANDARD');
+  static const BudgetTypeEnum_BudgetType HOTEL_ADS_COMMISSION =
+      BudgetTypeEnum_BudgetType._(3, 'HOTEL_ADS_COMMISSION');
+  static const BudgetTypeEnum_BudgetType FIXED_CPA =
+      BudgetTypeEnum_BudgetType._(4, 'FIXED_CPA');
 
-  static const $core.List<BudgetTypeEnum_BudgetType> values = <BudgetTypeEnum_BudgetType> [
+  static const $core.List<BudgetTypeEnum_BudgetType> values =
+      <BudgetTypeEnum_BudgetType>[
     UNSPECIFIED,
     UNKNOWN,
     STANDARD,
@@ -23,9 +29,9 @@ class BudgetTypeEnum_BudgetType extends $pb.ProtobufEnum {
     FIXED_CPA,
   ];
 
-  static final $core.Map<$core.int, BudgetTypeEnum_BudgetType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, BudgetTypeEnum_BudgetType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static BudgetTypeEnum_BudgetType valueOf($core.int value) => _byValue[value];
 
   const BudgetTypeEnum_BudgetType._($core.int v, $core.String n) : super(v, n);
 }
-

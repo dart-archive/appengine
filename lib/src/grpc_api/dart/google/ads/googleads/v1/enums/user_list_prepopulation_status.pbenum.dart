@@ -8,14 +8,28 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class UserListPrepopulationStatusEnum_UserListPrepopulationStatus extends $pb.ProtobufEnum {
-  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus UNSPECIFIED = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(0, 'UNSPECIFIED');
-  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus UNKNOWN = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(1, 'UNKNOWN');
-  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus REQUESTED = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(2, 'REQUESTED');
-  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus FINISHED = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(3, 'FINISHED');
-  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus FAILED = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(4, 'FAILED');
+class UserListPrepopulationStatusEnum_UserListPrepopulationStatus
+    extends $pb.ProtobufEnum {
+  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus
+      UNSPECIFIED =
+      UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(
+          0, 'UNSPECIFIED');
+  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus
+      UNKNOWN = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(
+          1, 'UNKNOWN');
+  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus
+      REQUESTED = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(
+          2, 'REQUESTED');
+  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus
+      FINISHED = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(
+          3, 'FINISHED');
+  static const UserListPrepopulationStatusEnum_UserListPrepopulationStatus
+      FAILED = UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(
+          4, 'FAILED');
 
-  static const $core.List<UserListPrepopulationStatusEnum_UserListPrepopulationStatus> values = <UserListPrepopulationStatusEnum_UserListPrepopulationStatus> [
+  static const $core
+          .List<UserListPrepopulationStatusEnum_UserListPrepopulationStatus>
+      values = <UserListPrepopulationStatusEnum_UserListPrepopulationStatus>[
     UNSPECIFIED,
     UNKNOWN,
     REQUESTED,
@@ -23,9 +37,14 @@ class UserListPrepopulationStatusEnum_UserListPrepopulationStatus extends $pb.Pr
     FAILED,
   ];
 
-  static final $core.Map<$core.int, UserListPrepopulationStatusEnum_UserListPrepopulationStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static UserListPrepopulationStatusEnum_UserListPrepopulationStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int,
+          UserListPrepopulationStatusEnum_UserListPrepopulationStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserListPrepopulationStatusEnum_UserListPrepopulationStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const UserListPrepopulationStatusEnum_UserListPrepopulationStatus._($core.int v, $core.String n) : super(v, n);
+  const UserListPrepopulationStatusEnum_UserListPrepopulationStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

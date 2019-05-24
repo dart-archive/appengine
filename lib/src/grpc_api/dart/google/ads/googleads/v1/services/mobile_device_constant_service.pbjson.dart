@@ -7,24 +7,30 @@
 import '../resources/mobile_device_constant.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetMobileDeviceConstantRequest$json = const {
+const GetMobileDeviceConstantRequest$json = {
   '1': 'GetMobileDeviceConstantRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const MobileDeviceConstantServiceBase$json = const {
+const MobileDeviceConstantServiceBase$json = {
   '1': 'MobileDeviceConstantService',
-  '2': const [
-    const {'1': 'GetMobileDeviceConstant', '2': '.google.ads.googleads.v1.services.GetMobileDeviceConstantRequest', '3': '.google.ads.googleads.v1.resources.MobileDeviceConstant', '4': const {}},
+  '2': [
+    {
+      '1': 'GetMobileDeviceConstant',
+      '2': '.google.ads.googleads.v1.services.GetMobileDeviceConstantRequest',
+      '3': '.google.ads.googleads.v1.resources.MobileDeviceConstant',
+      '4': {}
+    },
   ],
 };
 
-const MobileDeviceConstantServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetMobileDeviceConstantRequest': GetMobileDeviceConstantRequest$json,
-  '.google.ads.googleads.v1.resources.MobileDeviceConstant': $0.MobileDeviceConstant$json,
+const MobileDeviceConstantServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetMobileDeviceConstantRequest':
+      GetMobileDeviceConstantRequest$json,
+  '.google.ads.googleads.v1.resources.MobileDeviceConstant':
+      $0.MobileDeviceConstant$json,
   '.google.protobuf.Int64Value': $1.Int64Value$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

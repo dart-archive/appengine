@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class TrackingCodeTypeEnum_TrackingCodeType extends $pb.ProtobufEnum {
-  static const TrackingCodeTypeEnum_TrackingCodeType UNSPECIFIED = TrackingCodeTypeEnum_TrackingCodeType._(0, 'UNSPECIFIED');
-  static const TrackingCodeTypeEnum_TrackingCodeType UNKNOWN = TrackingCodeTypeEnum_TrackingCodeType._(1, 'UNKNOWN');
-  static const TrackingCodeTypeEnum_TrackingCodeType WEBPAGE = TrackingCodeTypeEnum_TrackingCodeType._(2, 'WEBPAGE');
-  static const TrackingCodeTypeEnum_TrackingCodeType WEBPAGE_ONCLICK = TrackingCodeTypeEnum_TrackingCodeType._(3, 'WEBPAGE_ONCLICK');
-  static const TrackingCodeTypeEnum_TrackingCodeType CLICK_TO_CALL = TrackingCodeTypeEnum_TrackingCodeType._(4, 'CLICK_TO_CALL');
+  static const TrackingCodeTypeEnum_TrackingCodeType UNSPECIFIED =
+      TrackingCodeTypeEnum_TrackingCodeType._(0, 'UNSPECIFIED');
+  static const TrackingCodeTypeEnum_TrackingCodeType UNKNOWN =
+      TrackingCodeTypeEnum_TrackingCodeType._(1, 'UNKNOWN');
+  static const TrackingCodeTypeEnum_TrackingCodeType WEBPAGE =
+      TrackingCodeTypeEnum_TrackingCodeType._(2, 'WEBPAGE');
+  static const TrackingCodeTypeEnum_TrackingCodeType WEBPAGE_ONCLICK =
+      TrackingCodeTypeEnum_TrackingCodeType._(3, 'WEBPAGE_ONCLICK');
+  static const TrackingCodeTypeEnum_TrackingCodeType CLICK_TO_CALL =
+      TrackingCodeTypeEnum_TrackingCodeType._(4, 'CLICK_TO_CALL');
 
-  static const $core.List<TrackingCodeTypeEnum_TrackingCodeType> values = <TrackingCodeTypeEnum_TrackingCodeType> [
+  static const $core.List<TrackingCodeTypeEnum_TrackingCodeType> values =
+      <TrackingCodeTypeEnum_TrackingCodeType>[
     UNSPECIFIED,
     UNKNOWN,
     WEBPAGE,
@@ -23,9 +29,11 @@ class TrackingCodeTypeEnum_TrackingCodeType extends $pb.ProtobufEnum {
     CLICK_TO_CALL,
   ];
 
-  static final $core.Map<$core.int, TrackingCodeTypeEnum_TrackingCodeType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static TrackingCodeTypeEnum_TrackingCodeType valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, TrackingCodeTypeEnum_TrackingCodeType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static TrackingCodeTypeEnum_TrackingCodeType valueOf($core.int value) =>
+      _byValue[value];
 
-  const TrackingCodeTypeEnum_TrackingCodeType._($core.int v, $core.String n) : super(v, n);
+  const TrackingCodeTypeEnum_TrackingCodeType._($core.int v, $core.String n)
+      : super(v, n);
 }
-

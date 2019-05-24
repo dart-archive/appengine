@@ -7,26 +7,38 @@
 import 'event.pbjson.dart' as $0;
 import '../../../protobuf/timestamp.pbjson.dart' as $1;
 
-const CreateClientEventRequest$json = const {
+const CreateClientEventRequest$json = {
   '1': 'CreateClientEventRequest',
-  '2': const [
-    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    const {'1': 'client_event', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.talent.v4beta1.ClientEvent', '10': 'clientEvent'},
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'client_event',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.ClientEvent',
+      '10': 'clientEvent'
+    },
   ],
 };
 
-const EventServiceBase$json = const {
+const EventServiceBase$json = {
   '1': 'EventService',
-  '2': const [
-    const {'1': 'CreateClientEvent', '2': '.google.cloud.talent.v4beta1.CreateClientEventRequest', '3': '.google.cloud.talent.v4beta1.ClientEvent', '4': const {}},
+  '2': [
+    {
+      '1': 'CreateClientEvent',
+      '2': '.google.cloud.talent.v4beta1.CreateClientEventRequest',
+      '3': '.google.cloud.talent.v4beta1.ClientEvent',
+      '4': {}
+    },
   ],
 };
 
-const EventServiceBase$messageJson = const {
-  '.google.cloud.talent.v4beta1.CreateClientEventRequest': CreateClientEventRequest$json,
+const EventServiceBase$messageJson = {
+  '.google.cloud.talent.v4beta1.CreateClientEventRequest':
+      CreateClientEventRequest$json,
   '.google.cloud.talent.v4beta1.ClientEvent': $0.ClientEvent$json,
   '.google.protobuf.Timestamp': $1.Timestamp$json,
   '.google.cloud.talent.v4beta1.JobEvent': $0.JobEvent$json,
   '.google.cloud.talent.v4beta1.ProfileEvent': $0.ProfileEvent$json,
 };
-

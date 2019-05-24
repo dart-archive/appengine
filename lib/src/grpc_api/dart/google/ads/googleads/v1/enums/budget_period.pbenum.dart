@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class BudgetPeriodEnum_BudgetPeriod extends $pb.ProtobufEnum {
-  static const BudgetPeriodEnum_BudgetPeriod UNSPECIFIED = BudgetPeriodEnum_BudgetPeriod._(0, 'UNSPECIFIED');
-  static const BudgetPeriodEnum_BudgetPeriod UNKNOWN = BudgetPeriodEnum_BudgetPeriod._(1, 'UNKNOWN');
-  static const BudgetPeriodEnum_BudgetPeriod DAILY = BudgetPeriodEnum_BudgetPeriod._(2, 'DAILY');
-  static const BudgetPeriodEnum_BudgetPeriod CUSTOM = BudgetPeriodEnum_BudgetPeriod._(3, 'CUSTOM');
-  static const BudgetPeriodEnum_BudgetPeriod FIXED_DAILY = BudgetPeriodEnum_BudgetPeriod._(4, 'FIXED_DAILY');
+  static const BudgetPeriodEnum_BudgetPeriod UNSPECIFIED =
+      BudgetPeriodEnum_BudgetPeriod._(0, 'UNSPECIFIED');
+  static const BudgetPeriodEnum_BudgetPeriod UNKNOWN =
+      BudgetPeriodEnum_BudgetPeriod._(1, 'UNKNOWN');
+  static const BudgetPeriodEnum_BudgetPeriod DAILY =
+      BudgetPeriodEnum_BudgetPeriod._(2, 'DAILY');
+  static const BudgetPeriodEnum_BudgetPeriod CUSTOM =
+      BudgetPeriodEnum_BudgetPeriod._(3, 'CUSTOM');
+  static const BudgetPeriodEnum_BudgetPeriod FIXED_DAILY =
+      BudgetPeriodEnum_BudgetPeriod._(4, 'FIXED_DAILY');
 
-  static const $core.List<BudgetPeriodEnum_BudgetPeriod> values = <BudgetPeriodEnum_BudgetPeriod> [
+  static const $core.List<BudgetPeriodEnum_BudgetPeriod> values =
+      <BudgetPeriodEnum_BudgetPeriod>[
     UNSPECIFIED,
     UNKNOWN,
     DAILY,
@@ -23,9 +29,11 @@ class BudgetPeriodEnum_BudgetPeriod extends $pb.ProtobufEnum {
     FIXED_DAILY,
   ];
 
-  static final $core.Map<$core.int, BudgetPeriodEnum_BudgetPeriod> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static BudgetPeriodEnum_BudgetPeriod valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, BudgetPeriodEnum_BudgetPeriod> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static BudgetPeriodEnum_BudgetPeriod valueOf($core.int value) =>
+      _byValue[value];
 
-  const BudgetPeriodEnum_BudgetPeriod._($core.int v, $core.String n) : super(v, n);
+  const BudgetPeriodEnum_BudgetPeriod._($core.int v, $core.String n)
+      : super(v, n);
 }
-

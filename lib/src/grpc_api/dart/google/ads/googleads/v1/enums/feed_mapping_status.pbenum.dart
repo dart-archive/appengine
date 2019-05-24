@@ -9,21 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class FeedMappingStatusEnum_FeedMappingStatus extends $pb.ProtobufEnum {
-  static const FeedMappingStatusEnum_FeedMappingStatus UNSPECIFIED = FeedMappingStatusEnum_FeedMappingStatus._(0, 'UNSPECIFIED');
-  static const FeedMappingStatusEnum_FeedMappingStatus UNKNOWN = FeedMappingStatusEnum_FeedMappingStatus._(1, 'UNKNOWN');
-  static const FeedMappingStatusEnum_FeedMappingStatus ENABLED = FeedMappingStatusEnum_FeedMappingStatus._(2, 'ENABLED');
-  static const FeedMappingStatusEnum_FeedMappingStatus REMOVED = FeedMappingStatusEnum_FeedMappingStatus._(3, 'REMOVED');
+  static const FeedMappingStatusEnum_FeedMappingStatus UNSPECIFIED =
+      FeedMappingStatusEnum_FeedMappingStatus._(0, 'UNSPECIFIED');
+  static const FeedMappingStatusEnum_FeedMappingStatus UNKNOWN =
+      FeedMappingStatusEnum_FeedMappingStatus._(1, 'UNKNOWN');
+  static const FeedMappingStatusEnum_FeedMappingStatus ENABLED =
+      FeedMappingStatusEnum_FeedMappingStatus._(2, 'ENABLED');
+  static const FeedMappingStatusEnum_FeedMappingStatus REMOVED =
+      FeedMappingStatusEnum_FeedMappingStatus._(3, 'REMOVED');
 
-  static const $core.List<FeedMappingStatusEnum_FeedMappingStatus> values = <FeedMappingStatusEnum_FeedMappingStatus> [
+  static const $core.List<FeedMappingStatusEnum_FeedMappingStatus> values =
+      <FeedMappingStatusEnum_FeedMappingStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, FeedMappingStatusEnum_FeedMappingStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static FeedMappingStatusEnum_FeedMappingStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, FeedMappingStatusEnum_FeedMappingStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static FeedMappingStatusEnum_FeedMappingStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const FeedMappingStatusEnum_FeedMappingStatus._($core.int v, $core.String n) : super(v, n);
+  const FeedMappingStatusEnum_FeedMappingStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-

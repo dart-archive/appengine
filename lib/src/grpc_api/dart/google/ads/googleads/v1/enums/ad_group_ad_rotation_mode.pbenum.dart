@@ -9,21 +9,31 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AdGroupAdRotationModeEnum_AdGroupAdRotationMode extends $pb.ProtobufEnum {
-  static const AdGroupAdRotationModeEnum_AdGroupAdRotationMode UNSPECIFIED = AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(0, 'UNSPECIFIED');
-  static const AdGroupAdRotationModeEnum_AdGroupAdRotationMode UNKNOWN = AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(1, 'UNKNOWN');
-  static const AdGroupAdRotationModeEnum_AdGroupAdRotationMode OPTIMIZE = AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(2, 'OPTIMIZE');
-  static const AdGroupAdRotationModeEnum_AdGroupAdRotationMode ROTATE_FOREVER = AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(3, 'ROTATE_FOREVER');
+  static const AdGroupAdRotationModeEnum_AdGroupAdRotationMode UNSPECIFIED =
+      AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(0, 'UNSPECIFIED');
+  static const AdGroupAdRotationModeEnum_AdGroupAdRotationMode UNKNOWN =
+      AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(1, 'UNKNOWN');
+  static const AdGroupAdRotationModeEnum_AdGroupAdRotationMode OPTIMIZE =
+      AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(2, 'OPTIMIZE');
+  static const AdGroupAdRotationModeEnum_AdGroupAdRotationMode ROTATE_FOREVER =
+      AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(3, 'ROTATE_FOREVER');
 
-  static const $core.List<AdGroupAdRotationModeEnum_AdGroupAdRotationMode> values = <AdGroupAdRotationModeEnum_AdGroupAdRotationMode> [
+  static const $core.List<AdGroupAdRotationModeEnum_AdGroupAdRotationMode>
+      values = <AdGroupAdRotationModeEnum_AdGroupAdRotationMode>[
     UNSPECIFIED,
     UNKNOWN,
     OPTIMIZE,
     ROTATE_FOREVER,
   ];
 
-  static final $core.Map<$core.int, AdGroupAdRotationModeEnum_AdGroupAdRotationMode> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AdGroupAdRotationModeEnum_AdGroupAdRotationMode valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, AdGroupAdRotationModeEnum_AdGroupAdRotationMode>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AdGroupAdRotationModeEnum_AdGroupAdRotationMode valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const AdGroupAdRotationModeEnum_AdGroupAdRotationMode._($core.int v, $core.String n) : super(v, n);
+  const AdGroupAdRotationModeEnum_AdGroupAdRotationMode._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

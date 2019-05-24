@@ -9,19 +9,21 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class TrafficSplit_ShardBy extends $pb.ProtobufEnum {
-  static const TrafficSplit_ShardBy UNSPECIFIED = TrafficSplit_ShardBy._(0, 'UNSPECIFIED');
-  static const TrafficSplit_ShardBy COOKIE = TrafficSplit_ShardBy._(1, 'COOKIE');
+  static const TrafficSplit_ShardBy UNSPECIFIED =
+      TrafficSplit_ShardBy._(0, 'UNSPECIFIED');
+  static const TrafficSplit_ShardBy COOKIE =
+      TrafficSplit_ShardBy._(1, 'COOKIE');
   static const TrafficSplit_ShardBy IP = TrafficSplit_ShardBy._(2, 'IP');
 
-  static const $core.List<TrafficSplit_ShardBy> values = <TrafficSplit_ShardBy> [
+  static const $core.List<TrafficSplit_ShardBy> values = <TrafficSplit_ShardBy>[
     UNSPECIFIED,
     COOKIE,
     IP,
   ];
 
-  static final $core.Map<$core.int, TrafficSplit_ShardBy> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, TrafficSplit_ShardBy> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static TrafficSplit_ShardBy valueOf($core.int value) => _byValue[value];
 
   const TrafficSplit_ShardBy._($core.int v, $core.String n) : super(v, n);
 }
-

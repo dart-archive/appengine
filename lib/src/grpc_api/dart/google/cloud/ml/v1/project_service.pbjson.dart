@@ -4,30 +4,40 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const GetConfigRequest$json = const {
+const GetConfigRequest$json = {
   '1': 'GetConfigRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const GetConfigResponse$json = const {
+const GetConfigResponse$json = {
   '1': 'GetConfigResponse',
-  '2': const [
-    const {'1': 'service_account', '3': 1, '4': 1, '5': 9, '10': 'serviceAccount'},
-    const {'1': 'service_account_project', '3': 2, '4': 1, '5': 3, '10': 'serviceAccountProject'},
+  '2': [
+    {'1': 'service_account', '3': 1, '4': 1, '5': 9, '10': 'serviceAccount'},
+    {
+      '1': 'service_account_project',
+      '3': 2,
+      '4': 1,
+      '5': 3,
+      '10': 'serviceAccountProject'
+    },
   ],
 };
 
-const ProjectManagementServiceBase$json = const {
+const ProjectManagementServiceBase$json = {
   '1': 'ProjectManagementService',
-  '2': const [
-    const {'1': 'GetConfig', '2': '.google.cloud.ml.v1.GetConfigRequest', '3': '.google.cloud.ml.v1.GetConfigResponse', '4': const {}},
+  '2': [
+    {
+      '1': 'GetConfig',
+      '2': '.google.cloud.ml.v1.GetConfigRequest',
+      '3': '.google.cloud.ml.v1.GetConfigResponse',
+      '4': {}
+    },
   ],
 };
 
-const ProjectManagementServiceBase$messageJson = const {
+const ProjectManagementServiceBase$messageJson = {
   '.google.cloud.ml.v1.GetConfigRequest': GetConfigRequest$json,
   '.google.cloud.ml.v1.GetConfigResponse': GetConfigResponse$json,
 };
-

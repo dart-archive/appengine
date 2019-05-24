@@ -9,15 +9,17 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class DeviceEnum_Device extends $pb.ProtobufEnum {
-  static const DeviceEnum_Device UNSPECIFIED = DeviceEnum_Device._(0, 'UNSPECIFIED');
+  static const DeviceEnum_Device UNSPECIFIED =
+      DeviceEnum_Device._(0, 'UNSPECIFIED');
   static const DeviceEnum_Device UNKNOWN = DeviceEnum_Device._(1, 'UNKNOWN');
   static const DeviceEnum_Device MOBILE = DeviceEnum_Device._(2, 'MOBILE');
   static const DeviceEnum_Device TABLET = DeviceEnum_Device._(3, 'TABLET');
   static const DeviceEnum_Device DESKTOP = DeviceEnum_Device._(4, 'DESKTOP');
-  static const DeviceEnum_Device CONNECTED_TV = DeviceEnum_Device._(6, 'CONNECTED_TV');
+  static const DeviceEnum_Device CONNECTED_TV =
+      DeviceEnum_Device._(6, 'CONNECTED_TV');
   static const DeviceEnum_Device OTHER = DeviceEnum_Device._(5, 'OTHER');
 
-  static const $core.List<DeviceEnum_Device> values = <DeviceEnum_Device> [
+  static const $core.List<DeviceEnum_Device> values = <DeviceEnum_Device>[
     UNSPECIFIED,
     UNKNOWN,
     MOBILE,
@@ -27,9 +29,9 @@ class DeviceEnum_Device extends $pb.ProtobufEnum {
     OTHER,
   ];
 
-  static final $core.Map<$core.int, DeviceEnum_Device> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, DeviceEnum_Device> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static DeviceEnum_Device valueOf($core.int value) => _byValue[value];
 
   const DeviceEnum_Device._($core.int v, $core.String n) : super(v, n);
 }
-

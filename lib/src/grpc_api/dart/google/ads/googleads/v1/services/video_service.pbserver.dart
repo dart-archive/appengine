@@ -16,23 +16,29 @@ import 'video_service.pbjson.dart';
 export 'video_service.pb.dart';
 
 abstract class VideoServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.Video> getVideo($pb.ServerContext ctx, GetVideoRequest request);
+  $async.Future<$0.Video> getVideo(
+      $pb.ServerContext ctx, GetVideoRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetVideo': return GetVideoRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetVideo':
+        return GetVideoRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetVideo': return this.getVideo(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetVideo':
+        return this.getVideo(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => VideoServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => VideoServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => VideoServiceBase$messageJson;
 }
-

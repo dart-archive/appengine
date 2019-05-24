@@ -16,23 +16,30 @@ import 'keyword_view_service.pbjson.dart';
 export 'keyword_view_service.pb.dart';
 
 abstract class KeywordViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.KeywordView> getKeywordView($pb.ServerContext ctx, GetKeywordViewRequest request);
+  $async.Future<$0.KeywordView> getKeywordView(
+      $pb.ServerContext ctx, GetKeywordViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetKeywordView': return GetKeywordViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetKeywordView':
+        return GetKeywordViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetKeywordView': return this.getKeywordView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetKeywordView':
+        return this.getKeywordView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => KeywordViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => KeywordViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      KeywordViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => KeywordViewServiceBase$messageJson;
 }
-

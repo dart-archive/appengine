@@ -9,19 +9,28 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PolicyViolationErrorEnum_PolicyViolationError extends $pb.ProtobufEnum {
-  static const PolicyViolationErrorEnum_PolicyViolationError UNSPECIFIED = PolicyViolationErrorEnum_PolicyViolationError._(0, 'UNSPECIFIED');
-  static const PolicyViolationErrorEnum_PolicyViolationError UNKNOWN = PolicyViolationErrorEnum_PolicyViolationError._(1, 'UNKNOWN');
-  static const PolicyViolationErrorEnum_PolicyViolationError POLICY_ERROR = PolicyViolationErrorEnum_PolicyViolationError._(2, 'POLICY_ERROR');
+  static const PolicyViolationErrorEnum_PolicyViolationError UNSPECIFIED =
+      PolicyViolationErrorEnum_PolicyViolationError._(0, 'UNSPECIFIED');
+  static const PolicyViolationErrorEnum_PolicyViolationError UNKNOWN =
+      PolicyViolationErrorEnum_PolicyViolationError._(1, 'UNKNOWN');
+  static const PolicyViolationErrorEnum_PolicyViolationError POLICY_ERROR =
+      PolicyViolationErrorEnum_PolicyViolationError._(2, 'POLICY_ERROR');
 
-  static const $core.List<PolicyViolationErrorEnum_PolicyViolationError> values = <PolicyViolationErrorEnum_PolicyViolationError> [
+  static const $core.List<PolicyViolationErrorEnum_PolicyViolationError>
+      values = <PolicyViolationErrorEnum_PolicyViolationError>[
     UNSPECIFIED,
     UNKNOWN,
     POLICY_ERROR,
   ];
 
-  static final $core.Map<$core.int, PolicyViolationErrorEnum_PolicyViolationError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PolicyViolationErrorEnum_PolicyViolationError valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, PolicyViolationErrorEnum_PolicyViolationError>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PolicyViolationErrorEnum_PolicyViolationError valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const PolicyViolationErrorEnum_PolicyViolationError._($core.int v, $core.String n) : super(v, n);
+  const PolicyViolationErrorEnum_PolicyViolationError._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

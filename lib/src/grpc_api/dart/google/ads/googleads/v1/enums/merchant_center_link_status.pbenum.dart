@@ -8,22 +8,34 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus extends $pb.ProtobufEnum {
-  static const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus UNSPECIFIED = MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(0, 'UNSPECIFIED');
-  static const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus UNKNOWN = MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(1, 'UNKNOWN');
-  static const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus ENABLED = MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(2, 'ENABLED');
-  static const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus PENDING = MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(3, 'PENDING');
+class MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus
+    extends $pb.ProtobufEnum {
+  static const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus
+      UNSPECIFIED =
+      MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(0, 'UNSPECIFIED');
+  static const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus UNKNOWN =
+      MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(1, 'UNKNOWN');
+  static const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus ENABLED =
+      MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(2, 'ENABLED');
+  static const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus PENDING =
+      MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(3, 'PENDING');
 
-  static const $core.List<MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus> values = <MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus> [
+  static const $core.List<MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus>
+      values = <MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
     PENDING,
   ];
 
-  static final $core.Map<$core.int, MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._($core.int v, $core.String n) : super(v, n);
+  const MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

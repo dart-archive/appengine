@@ -16,32 +16,48 @@ import 'keyword_plan_service.pbjson.dart';
 export 'keyword_plan_service.pb.dart';
 
 abstract class KeywordPlanServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.KeywordPlan> getKeywordPlan($pb.ServerContext ctx, GetKeywordPlanRequest request);
-  $async.Future<MutateKeywordPlansResponse> mutateKeywordPlans($pb.ServerContext ctx, MutateKeywordPlansRequest request);
-  $async.Future<GenerateForecastMetricsResponse> generateForecastMetrics($pb.ServerContext ctx, GenerateForecastMetricsRequest request);
-  $async.Future<GenerateHistoricalMetricsResponse> generateHistoricalMetrics($pb.ServerContext ctx, GenerateHistoricalMetricsRequest request);
+  $async.Future<$0.KeywordPlan> getKeywordPlan(
+      $pb.ServerContext ctx, GetKeywordPlanRequest request);
+  $async.Future<MutateKeywordPlansResponse> mutateKeywordPlans(
+      $pb.ServerContext ctx, MutateKeywordPlansRequest request);
+  $async.Future<GenerateForecastMetricsResponse> generateForecastMetrics(
+      $pb.ServerContext ctx, GenerateForecastMetricsRequest request);
+  $async.Future<GenerateHistoricalMetricsResponse> generateHistoricalMetrics(
+      $pb.ServerContext ctx, GenerateHistoricalMetricsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetKeywordPlan': return GetKeywordPlanRequest();
-      case 'MutateKeywordPlans': return MutateKeywordPlansRequest();
-      case 'GenerateForecastMetrics': return GenerateForecastMetricsRequest();
-      case 'GenerateHistoricalMetrics': return GenerateHistoricalMetricsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetKeywordPlan':
+        return GetKeywordPlanRequest();
+      case 'MutateKeywordPlans':
+        return MutateKeywordPlansRequest();
+      case 'GenerateForecastMetrics':
+        return GenerateForecastMetricsRequest();
+      case 'GenerateHistoricalMetrics':
+        return GenerateHistoricalMetricsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetKeywordPlan': return this.getKeywordPlan(ctx, request);
-      case 'MutateKeywordPlans': return this.mutateKeywordPlans(ctx, request);
-      case 'GenerateForecastMetrics': return this.generateForecastMetrics(ctx, request);
-      case 'GenerateHistoricalMetrics': return this.generateHistoricalMetrics(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetKeywordPlan':
+        return this.getKeywordPlan(ctx, request);
+      case 'MutateKeywordPlans':
+        return this.mutateKeywordPlans(ctx, request);
+      case 'GenerateForecastMetrics':
+        return this.generateForecastMetrics(ctx, request);
+      case 'GenerateHistoricalMetrics':
+        return this.generateHistoricalMetrics(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => KeywordPlanServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => KeywordPlanServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      KeywordPlanServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => KeywordPlanServiceBase$messageJson;
 }
-

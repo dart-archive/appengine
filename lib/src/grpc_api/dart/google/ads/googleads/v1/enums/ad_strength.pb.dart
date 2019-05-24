@@ -4,27 +4,33 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 export 'ad_strength.pbenum.dart';
 
 class AdStrengthEnum extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdStrengthEnum', package: const $pb.PackageName('google.ads.googleads.v1.enums'))
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdStrengthEnum',
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+    ..hasRequiredFields = false;
 
   AdStrengthEnum() : super();
-  AdStrengthEnum.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
-  AdStrengthEnum.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AdStrengthEnum.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  AdStrengthEnum.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
   AdStrengthEnum clone() => AdStrengthEnum()..mergeFromMessage(this);
-  AdStrengthEnum copyWith(void Function(AdStrengthEnum) updates) => super.copyWith((message) => updates(message as AdStrengthEnum));
+  AdStrengthEnum copyWith(void Function(AdStrengthEnum) updates) =>
+      super.copyWith((message) => updates(message as AdStrengthEnum));
   $pb.BuilderInfo get info_ => _i;
   static AdStrengthEnum create() => AdStrengthEnum();
   AdStrengthEnum createEmptyInstance() => create();
-  static $pb.PbList<AdStrengthEnum> createRepeated() => $pb.PbList<AdStrengthEnum>();
+  static $pb.PbList<AdStrengthEnum> createRepeated() =>
+      $pb.PbList<AdStrengthEnum>();
   static AdStrengthEnum getDefault() => _defaultInstance ??= create()..freeze();
   static AdStrengthEnum _defaultInstance;
 }
-

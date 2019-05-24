@@ -16,23 +16,30 @@ import 'feed_placeholder_view_service.pbjson.dart';
 export 'feed_placeholder_view_service.pb.dart';
 
 abstract class FeedPlaceholderViewServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.FeedPlaceholderView> getFeedPlaceholderView($pb.ServerContext ctx, GetFeedPlaceholderViewRequest request);
+  $async.Future<$0.FeedPlaceholderView> getFeedPlaceholderView(
+      $pb.ServerContext ctx, GetFeedPlaceholderViewRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetFeedPlaceholderView': return GetFeedPlaceholderViewRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetFeedPlaceholderView':
+        return GetFeedPlaceholderViewRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetFeedPlaceholderView': return this.getFeedPlaceholderView(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetFeedPlaceholderView':
+        return this.getFeedPlaceholderView(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => FeedPlaceholderViewServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => FeedPlaceholderViewServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      FeedPlaceholderViewServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => FeedPlaceholderViewServiceBase$messageJson;
 }
-

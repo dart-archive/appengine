@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AdGroupStatusEnum_AdGroupStatus extends $pb.ProtobufEnum {
-  static const AdGroupStatusEnum_AdGroupStatus UNSPECIFIED = AdGroupStatusEnum_AdGroupStatus._(0, 'UNSPECIFIED');
-  static const AdGroupStatusEnum_AdGroupStatus UNKNOWN = AdGroupStatusEnum_AdGroupStatus._(1, 'UNKNOWN');
-  static const AdGroupStatusEnum_AdGroupStatus ENABLED = AdGroupStatusEnum_AdGroupStatus._(2, 'ENABLED');
-  static const AdGroupStatusEnum_AdGroupStatus PAUSED = AdGroupStatusEnum_AdGroupStatus._(3, 'PAUSED');
-  static const AdGroupStatusEnum_AdGroupStatus REMOVED = AdGroupStatusEnum_AdGroupStatus._(4, 'REMOVED');
+  static const AdGroupStatusEnum_AdGroupStatus UNSPECIFIED =
+      AdGroupStatusEnum_AdGroupStatus._(0, 'UNSPECIFIED');
+  static const AdGroupStatusEnum_AdGroupStatus UNKNOWN =
+      AdGroupStatusEnum_AdGroupStatus._(1, 'UNKNOWN');
+  static const AdGroupStatusEnum_AdGroupStatus ENABLED =
+      AdGroupStatusEnum_AdGroupStatus._(2, 'ENABLED');
+  static const AdGroupStatusEnum_AdGroupStatus PAUSED =
+      AdGroupStatusEnum_AdGroupStatus._(3, 'PAUSED');
+  static const AdGroupStatusEnum_AdGroupStatus REMOVED =
+      AdGroupStatusEnum_AdGroupStatus._(4, 'REMOVED');
 
-  static const $core.List<AdGroupStatusEnum_AdGroupStatus> values = <AdGroupStatusEnum_AdGroupStatus> [
+  static const $core.List<AdGroupStatusEnum_AdGroupStatus> values =
+      <AdGroupStatusEnum_AdGroupStatus>[
     UNSPECIFIED,
     UNKNOWN,
     ENABLED,
@@ -23,9 +29,11 @@ class AdGroupStatusEnum_AdGroupStatus extends $pb.ProtobufEnum {
     REMOVED,
   ];
 
-  static final $core.Map<$core.int, AdGroupStatusEnum_AdGroupStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AdGroupStatusEnum_AdGroupStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, AdGroupStatusEnum_AdGroupStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AdGroupStatusEnum_AdGroupStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const AdGroupStatusEnum_AdGroupStatus._($core.int v, $core.String n) : super(v, n);
+  const AdGroupStatusEnum_AdGroupStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-

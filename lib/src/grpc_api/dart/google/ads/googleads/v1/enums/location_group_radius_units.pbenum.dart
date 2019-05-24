@@ -8,22 +8,34 @@
 import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits extends $pb.ProtobufEnum {
-  static const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits UNSPECIFIED = LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(0, 'UNSPECIFIED');
-  static const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits UNKNOWN = LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(1, 'UNKNOWN');
-  static const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits METERS = LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(2, 'METERS');
-  static const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits MILES = LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(3, 'MILES');
+class LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits
+    extends $pb.ProtobufEnum {
+  static const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits
+      UNSPECIFIED =
+      LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(0, 'UNSPECIFIED');
+  static const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits UNKNOWN =
+      LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(1, 'UNKNOWN');
+  static const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits METERS =
+      LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(2, 'METERS');
+  static const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits MILES =
+      LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(3, 'MILES');
 
-  static const $core.List<LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits> values = <LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits> [
+  static const $core.List<LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits>
+      values = <LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits>[
     UNSPECIFIED,
     UNKNOWN,
     METERS,
     MILES,
   ];
 
-  static final $core.Map<$core.int, LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits valueOf($core.int value) => _byValue[value];
+  static final $core
+          .Map<$core.int, LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._($core.int v, $core.String n) : super(v, n);
+  const LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }
-

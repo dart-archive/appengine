@@ -16,26 +16,36 @@ import 'custom_interest_service.pbjson.dart';
 export 'custom_interest_service.pb.dart';
 
 abstract class CustomInterestServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.CustomInterest> getCustomInterest($pb.ServerContext ctx, GetCustomInterestRequest request);
-  $async.Future<MutateCustomInterestsResponse> mutateCustomInterests($pb.ServerContext ctx, MutateCustomInterestsRequest request);
+  $async.Future<$0.CustomInterest> getCustomInterest(
+      $pb.ServerContext ctx, GetCustomInterestRequest request);
+  $async.Future<MutateCustomInterestsResponse> mutateCustomInterests(
+      $pb.ServerContext ctx, MutateCustomInterestsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'GetCustomInterest': return GetCustomInterestRequest();
-      case 'MutateCustomInterests': return MutateCustomInterestsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCustomInterest':
+        return GetCustomInterestRequest();
+      case 'MutateCustomInterests':
+        return MutateCustomInterestsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'GetCustomInterest': return this.getCustomInterest(ctx, request);
-      case 'MutateCustomInterests': return this.mutateCustomInterests(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'GetCustomInterest':
+        return this.getCustomInterest(ctx, request);
+      case 'MutateCustomInterests':
+        return this.mutateCustomInterests(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CustomInterestServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CustomInterestServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CustomInterestServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CustomInterestServiceBase$messageJson;
 }
-

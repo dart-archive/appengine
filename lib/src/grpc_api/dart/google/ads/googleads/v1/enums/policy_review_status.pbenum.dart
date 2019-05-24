@@ -9,13 +9,19 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PolicyReviewStatusEnum_PolicyReviewStatus extends $pb.ProtobufEnum {
-  static const PolicyReviewStatusEnum_PolicyReviewStatus UNSPECIFIED = PolicyReviewStatusEnum_PolicyReviewStatus._(0, 'UNSPECIFIED');
-  static const PolicyReviewStatusEnum_PolicyReviewStatus UNKNOWN = PolicyReviewStatusEnum_PolicyReviewStatus._(1, 'UNKNOWN');
-  static const PolicyReviewStatusEnum_PolicyReviewStatus REVIEW_IN_PROGRESS = PolicyReviewStatusEnum_PolicyReviewStatus._(2, 'REVIEW_IN_PROGRESS');
-  static const PolicyReviewStatusEnum_PolicyReviewStatus REVIEWED = PolicyReviewStatusEnum_PolicyReviewStatus._(3, 'REVIEWED');
-  static const PolicyReviewStatusEnum_PolicyReviewStatus UNDER_APPEAL = PolicyReviewStatusEnum_PolicyReviewStatus._(4, 'UNDER_APPEAL');
+  static const PolicyReviewStatusEnum_PolicyReviewStatus UNSPECIFIED =
+      PolicyReviewStatusEnum_PolicyReviewStatus._(0, 'UNSPECIFIED');
+  static const PolicyReviewStatusEnum_PolicyReviewStatus UNKNOWN =
+      PolicyReviewStatusEnum_PolicyReviewStatus._(1, 'UNKNOWN');
+  static const PolicyReviewStatusEnum_PolicyReviewStatus REVIEW_IN_PROGRESS =
+      PolicyReviewStatusEnum_PolicyReviewStatus._(2, 'REVIEW_IN_PROGRESS');
+  static const PolicyReviewStatusEnum_PolicyReviewStatus REVIEWED =
+      PolicyReviewStatusEnum_PolicyReviewStatus._(3, 'REVIEWED');
+  static const PolicyReviewStatusEnum_PolicyReviewStatus UNDER_APPEAL =
+      PolicyReviewStatusEnum_PolicyReviewStatus._(4, 'UNDER_APPEAL');
 
-  static const $core.List<PolicyReviewStatusEnum_PolicyReviewStatus> values = <PolicyReviewStatusEnum_PolicyReviewStatus> [
+  static const $core.List<PolicyReviewStatusEnum_PolicyReviewStatus> values =
+      <PolicyReviewStatusEnum_PolicyReviewStatus>[
     UNSPECIFIED,
     UNKNOWN,
     REVIEW_IN_PROGRESS,
@@ -23,9 +29,11 @@ class PolicyReviewStatusEnum_PolicyReviewStatus extends $pb.ProtobufEnum {
     UNDER_APPEAL,
   ];
 
-  static final $core.Map<$core.int, PolicyReviewStatusEnum_PolicyReviewStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static PolicyReviewStatusEnum_PolicyReviewStatus valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, PolicyReviewStatusEnum_PolicyReviewStatus>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static PolicyReviewStatusEnum_PolicyReviewStatus valueOf($core.int value) =>
+      _byValue[value];
 
-  const PolicyReviewStatusEnum_PolicyReviewStatus._($core.int v, $core.String n) : super(v, n);
+  const PolicyReviewStatusEnum_PolicyReviewStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-

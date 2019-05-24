@@ -15,26 +15,35 @@ import 'google_ads_service.pbjson.dart';
 export 'google_ads_service.pb.dart';
 
 abstract class GoogleAdsServiceBase extends $pb.GeneratedService {
-  $async.Future<SearchGoogleAdsResponse> search($pb.ServerContext ctx, SearchGoogleAdsRequest request);
-  $async.Future<MutateGoogleAdsResponse> mutate($pb.ServerContext ctx, MutateGoogleAdsRequest request);
+  $async.Future<SearchGoogleAdsResponse> search(
+      $pb.ServerContext ctx, SearchGoogleAdsRequest request);
+  $async.Future<MutateGoogleAdsResponse> mutate(
+      $pb.ServerContext ctx, MutateGoogleAdsRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'Search': return SearchGoogleAdsRequest();
-      case 'Mutate': return MutateGoogleAdsRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Search':
+        return SearchGoogleAdsRequest();
+      case 'Mutate':
+        return MutateGoogleAdsRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'Search': return this.search(ctx, request);
-      case 'Mutate': return this.mutate(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Search':
+        return this.search(ctx, request);
+      case 'Mutate':
+        return this.mutate(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
   $core.Map<$core.String, $core.dynamic> get $json => GoogleAdsServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => GoogleAdsServiceBase$messageJson;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => GoogleAdsServiceBase$messageJson;
 }
-

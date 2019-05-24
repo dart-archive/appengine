@@ -4,21 +4,20 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const AccessReasonEnum$json = const {
+const AccessReasonEnum$json = {
   '1': 'AccessReasonEnum',
-  '4': const [AccessReasonEnum_AccessReason$json],
+  '4': [AccessReasonEnum_AccessReason$json],
 };
 
-const AccessReasonEnum_AccessReason$json = const {
+const AccessReasonEnum_AccessReason$json = {
   '1': 'AccessReason',
-  '2': const [
-    const {'1': 'UNSPECIFIED', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'OWNED', '2': 2},
-    const {'1': 'SHARED', '2': 3},
-    const {'1': 'LICENSED', '2': 4},
-    const {'1': 'SUBSCRIBED', '2': 5},
-    const {'1': 'AFFILIATED', '2': 6},
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'UNKNOWN', '2': 1},
+    {'1': 'OWNED', '2': 2},
+    {'1': 'SHARED', '2': 3},
+    {'1': 'LICENSED', '2': 4},
+    {'1': 'SUBSCRIBED', '2': 5},
+    {'1': 'AFFILIATED', '2': 6},
   ],
 };
-

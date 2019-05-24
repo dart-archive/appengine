@@ -7,24 +7,31 @@
 import '../resources/product_bidding_category_constant.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetProductBiddingCategoryConstantRequest$json = const {
+const GetProductBiddingCategoryConstantRequest$json = {
   '1': 'GetProductBiddingCategoryConstantRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const ProductBiddingCategoryConstantServiceBase$json = const {
+const ProductBiddingCategoryConstantServiceBase$json = {
   '1': 'ProductBiddingCategoryConstantService',
-  '2': const [
-    const {'1': 'GetProductBiddingCategoryConstant', '2': '.google.ads.googleads.v1.services.GetProductBiddingCategoryConstantRequest', '3': '.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant', '4': const {}},
+  '2': [
+    {
+      '1': 'GetProductBiddingCategoryConstant',
+      '2':
+          '.google.ads.googleads.v1.services.GetProductBiddingCategoryConstantRequest',
+      '3': '.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant',
+      '4': {}
+    },
   ],
 };
 
-const ProductBiddingCategoryConstantServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetProductBiddingCategoryConstantRequest': GetProductBiddingCategoryConstantRequest$json,
-  '.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant': $0.ProductBiddingCategoryConstant$json,
+const ProductBiddingCategoryConstantServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetProductBiddingCategoryConstantRequest':
+      GetProductBiddingCategoryConstantRequest$json,
+  '.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant':
+      $0.ProductBiddingCategoryConstant$json,
   '.google.protobuf.Int64Value': $1.Int64Value$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-

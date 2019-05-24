@@ -15,23 +15,30 @@ import 'completion_service.pbjson.dart';
 export 'completion_service.pb.dart';
 
 abstract class CompletionServiceBase extends $pb.GeneratedService {
-  $async.Future<CompleteQueryResponse> completeQuery($pb.ServerContext ctx, CompleteQueryRequest request);
+  $async.Future<CompleteQueryResponse> completeQuery(
+      $pb.ServerContext ctx, CompleteQueryRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'CompleteQuery': return CompleteQueryRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CompleteQuery':
+        return CompleteQueryRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'CompleteQuery': return this.completeQuery(ctx, request);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'CompleteQuery':
+        return this.completeQuery(ctx, request);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $core.Map<$core.String, $core.dynamic> get $json => CompletionServiceBase$json;
-  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => CompletionServiceBase$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json =>
+      CompletionServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+      get $messageJson => CompletionServiceBase$messageJson;
 }
-

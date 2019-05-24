@@ -9,22 +9,53 @@ import 'dart:core' as $core show int, dynamic, String, List, Map;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class VanityPharmaTextEnum_VanityPharmaText extends $pb.ProtobufEnum {
-  static const VanityPharmaTextEnum_VanityPharmaText UNSPECIFIED = VanityPharmaTextEnum_VanityPharmaText._(0, 'UNSPECIFIED');
-  static const VanityPharmaTextEnum_VanityPharmaText UNKNOWN = VanityPharmaTextEnum_VanityPharmaText._(1, 'UNKNOWN');
-  static const VanityPharmaTextEnum_VanityPharmaText PRESCRIPTION_TREATMENT_WEBSITE_EN = VanityPharmaTextEnum_VanityPharmaText._(2, 'PRESCRIPTION_TREATMENT_WEBSITE_EN');
-  static const VanityPharmaTextEnum_VanityPharmaText PRESCRIPTION_TREATMENT_WEBSITE_ES = VanityPharmaTextEnum_VanityPharmaText._(3, 'PRESCRIPTION_TREATMENT_WEBSITE_ES');
-  static const VanityPharmaTextEnum_VanityPharmaText PRESCRIPTION_DEVICE_WEBSITE_EN = VanityPharmaTextEnum_VanityPharmaText._(4, 'PRESCRIPTION_DEVICE_WEBSITE_EN');
-  static const VanityPharmaTextEnum_VanityPharmaText PRESCRIPTION_DEVICE_WEBSITE_ES = VanityPharmaTextEnum_VanityPharmaText._(5, 'PRESCRIPTION_DEVICE_WEBSITE_ES');
-  static const VanityPharmaTextEnum_VanityPharmaText MEDICAL_DEVICE_WEBSITE_EN = VanityPharmaTextEnum_VanityPharmaText._(6, 'MEDICAL_DEVICE_WEBSITE_EN');
-  static const VanityPharmaTextEnum_VanityPharmaText MEDICAL_DEVICE_WEBSITE_ES = VanityPharmaTextEnum_VanityPharmaText._(7, 'MEDICAL_DEVICE_WEBSITE_ES');
-  static const VanityPharmaTextEnum_VanityPharmaText PREVENTATIVE_TREATMENT_WEBSITE_EN = VanityPharmaTextEnum_VanityPharmaText._(8, 'PREVENTATIVE_TREATMENT_WEBSITE_EN');
-  static const VanityPharmaTextEnum_VanityPharmaText PREVENTATIVE_TREATMENT_WEBSITE_ES = VanityPharmaTextEnum_VanityPharmaText._(9, 'PREVENTATIVE_TREATMENT_WEBSITE_ES');
-  static const VanityPharmaTextEnum_VanityPharmaText PRESCRIPTION_CONTRACEPTION_WEBSITE_EN = VanityPharmaTextEnum_VanityPharmaText._(10, 'PRESCRIPTION_CONTRACEPTION_WEBSITE_EN');
-  static const VanityPharmaTextEnum_VanityPharmaText PRESCRIPTION_CONTRACEPTION_WEBSITE_ES = VanityPharmaTextEnum_VanityPharmaText._(11, 'PRESCRIPTION_CONTRACEPTION_WEBSITE_ES');
-  static const VanityPharmaTextEnum_VanityPharmaText PRESCRIPTION_VACCINE_WEBSITE_EN = VanityPharmaTextEnum_VanityPharmaText._(12, 'PRESCRIPTION_VACCINE_WEBSITE_EN');
-  static const VanityPharmaTextEnum_VanityPharmaText PRESCRIPTION_VACCINE_WEBSITE_ES = VanityPharmaTextEnum_VanityPharmaText._(13, 'PRESCRIPTION_VACCINE_WEBSITE_ES');
+  static const VanityPharmaTextEnum_VanityPharmaText UNSPECIFIED =
+      VanityPharmaTextEnum_VanityPharmaText._(0, 'UNSPECIFIED');
+  static const VanityPharmaTextEnum_VanityPharmaText UNKNOWN =
+      VanityPharmaTextEnum_VanityPharmaText._(1, 'UNKNOWN');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PRESCRIPTION_TREATMENT_WEBSITE_EN =
+      VanityPharmaTextEnum_VanityPharmaText._(
+          2, 'PRESCRIPTION_TREATMENT_WEBSITE_EN');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PRESCRIPTION_TREATMENT_WEBSITE_ES =
+      VanityPharmaTextEnum_VanityPharmaText._(
+          3, 'PRESCRIPTION_TREATMENT_WEBSITE_ES');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PRESCRIPTION_DEVICE_WEBSITE_EN = VanityPharmaTextEnum_VanityPharmaText._(
+          4, 'PRESCRIPTION_DEVICE_WEBSITE_EN');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PRESCRIPTION_DEVICE_WEBSITE_ES = VanityPharmaTextEnum_VanityPharmaText._(
+          5, 'PRESCRIPTION_DEVICE_WEBSITE_ES');
+  static const VanityPharmaTextEnum_VanityPharmaText MEDICAL_DEVICE_WEBSITE_EN =
+      VanityPharmaTextEnum_VanityPharmaText._(6, 'MEDICAL_DEVICE_WEBSITE_EN');
+  static const VanityPharmaTextEnum_VanityPharmaText MEDICAL_DEVICE_WEBSITE_ES =
+      VanityPharmaTextEnum_VanityPharmaText._(7, 'MEDICAL_DEVICE_WEBSITE_ES');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PREVENTATIVE_TREATMENT_WEBSITE_EN =
+      VanityPharmaTextEnum_VanityPharmaText._(
+          8, 'PREVENTATIVE_TREATMENT_WEBSITE_EN');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PREVENTATIVE_TREATMENT_WEBSITE_ES =
+      VanityPharmaTextEnum_VanityPharmaText._(
+          9, 'PREVENTATIVE_TREATMENT_WEBSITE_ES');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PRESCRIPTION_CONTRACEPTION_WEBSITE_EN =
+      VanityPharmaTextEnum_VanityPharmaText._(
+          10, 'PRESCRIPTION_CONTRACEPTION_WEBSITE_EN');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PRESCRIPTION_CONTRACEPTION_WEBSITE_ES =
+      VanityPharmaTextEnum_VanityPharmaText._(
+          11, 'PRESCRIPTION_CONTRACEPTION_WEBSITE_ES');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PRESCRIPTION_VACCINE_WEBSITE_EN = VanityPharmaTextEnum_VanityPharmaText._(
+          12, 'PRESCRIPTION_VACCINE_WEBSITE_EN');
+  static const VanityPharmaTextEnum_VanityPharmaText
+      PRESCRIPTION_VACCINE_WEBSITE_ES = VanityPharmaTextEnum_VanityPharmaText._(
+          13, 'PRESCRIPTION_VACCINE_WEBSITE_ES');
 
-  static const $core.List<VanityPharmaTextEnum_VanityPharmaText> values = <VanityPharmaTextEnum_VanityPharmaText> [
+  static const $core.List<VanityPharmaTextEnum_VanityPharmaText> values =
+      <VanityPharmaTextEnum_VanityPharmaText>[
     UNSPECIFIED,
     UNKNOWN,
     PRESCRIPTION_TREATMENT_WEBSITE_EN,
@@ -41,9 +72,11 @@ class VanityPharmaTextEnum_VanityPharmaText extends $pb.ProtobufEnum {
     PRESCRIPTION_VACCINE_WEBSITE_ES,
   ];
 
-  static final $core.Map<$core.int, VanityPharmaTextEnum_VanityPharmaText> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static VanityPharmaTextEnum_VanityPharmaText valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, VanityPharmaTextEnum_VanityPharmaText>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static VanityPharmaTextEnum_VanityPharmaText valueOf($core.int value) =>
+      _byValue[value];
 
-  const VanityPharmaTextEnum_VanityPharmaText._($core.int v, $core.String n) : super(v, n);
+  const VanityPharmaTextEnum_VanityPharmaText._($core.int v, $core.String n)
+      : super(v, n);
 }
-

@@ -7,23 +7,30 @@
 import '../resources/paid_organic_search_term_view.pbjson.dart' as $0;
 import '../../../../protobuf/wrappers.pbjson.dart' as $1;
 
-const GetPaidOrganicSearchTermViewRequest$json = const {
+const GetPaidOrganicSearchTermViewRequest$json = {
   '1': 'GetPaidOrganicSearchTermViewRequest',
-  '2': const [
-    const {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
 };
 
-const PaidOrganicSearchTermViewServiceBase$json = const {
+const PaidOrganicSearchTermViewServiceBase$json = {
   '1': 'PaidOrganicSearchTermViewService',
-  '2': const [
-    const {'1': 'GetPaidOrganicSearchTermView', '2': '.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest', '3': '.google.ads.googleads.v1.resources.PaidOrganicSearchTermView', '4': const {}},
+  '2': [
+    {
+      '1': 'GetPaidOrganicSearchTermView',
+      '2':
+          '.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest',
+      '3': '.google.ads.googleads.v1.resources.PaidOrganicSearchTermView',
+      '4': {}
+    },
   ],
 };
 
-const PaidOrganicSearchTermViewServiceBase$messageJson = const {
-  '.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest': GetPaidOrganicSearchTermViewRequest$json,
-  '.google.ads.googleads.v1.resources.PaidOrganicSearchTermView': $0.PaidOrganicSearchTermView$json,
+const PaidOrganicSearchTermViewServiceBase$messageJson = {
+  '.google.ads.googleads.v1.services.GetPaidOrganicSearchTermViewRequest':
+      GetPaidOrganicSearchTermViewRequest$json,
+  '.google.ads.googleads.v1.resources.PaidOrganicSearchTermView':
+      $0.PaidOrganicSearchTermView$json,
   '.google.protobuf.StringValue': $1.StringValue$json,
 };
-
