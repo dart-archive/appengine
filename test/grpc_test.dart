@@ -342,6 +342,11 @@ class MockGeneratedMessage extends protobuf.GeneratedMessage {
   MockGeneratedMessage clone() =>
       MockGeneratedMessage()..mergeFromMessage(this);
   protobuf.BuilderInfo get info_ => _i;
+
+  @override
+  MockGeneratedMessage createEmptyInstance() {
+    return MockGeneratedMessage();
+  }
 }
 
 class MockDialer implements grpc.Dialer {

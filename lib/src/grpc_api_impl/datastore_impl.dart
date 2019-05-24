@@ -427,12 +427,11 @@ class _Codec {
     final properties = <String, Object>{};
     final unIndexedProperties = Set<String>();
 
-    for (final propertyPb in pb.properties) {
-      final name = propertyPb.key;
-      final value = decodeValue(propertyPb.value);
+    for (final name in pb.properties.keys) {
+      final value = decodeValue(pb.properties[name]);
 
-      if (propertyPb.value.hasExcludeFromIndexes() &&
-          propertyPb.value.excludeFromIndexes) {
+      if (pb.properties[name].hasExcludeFromIndexes() &&
+          pb.properties[name].excludeFromIndexes) {
         unIndexedProperties.add(name);
       }
 
@@ -446,7 +445,7 @@ class _Codec {
       // to lists (no matter whether they are not present, a value or a list
       // from this `properties` here).
       if (!properties.containsKey(name)) {
-        properties[name] = decodeValue(propertyPb.value);
+        properties[name] = decodeValue(pb.properties[name]);
       } else {
         final oldValue = properties[name];
         if (oldValue is List) {
@@ -526,10 +525,7 @@ class _Codec {
       bool indexProperty = (unIndexedProperties == null ||
           !unIndexedProperties.contains(property));
 
-      final pbProperty = Entity_PropertiesEntry();
-      pbProperty.key = property;
-      pbProperty.value = encodeValue(value, !indexProperty);
-      pb.properties.add(pbProperty);
+      pb.properties[property] = encodeValue(value, !indexProperty);
     });
     return pb;
   }

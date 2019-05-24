@@ -237,7 +237,7 @@ class SharedLoggingService {
   final String versionId;
   final String instanceId;
   final String _instanceName;
-  final List<api.MonitoredResource_LabelsEntry> resourceLabels;
+  final Map<String, String> resourceLabels;
   final String requestLogName;
   final String backgroundLogName;
 
@@ -253,22 +253,16 @@ class SharedLoggingService {
             api.LoggingServiceV2Api(grpc.Channel('google.logging.v2', client)),
         projectId = projectId,
         versionId = versionId,
-        resourceLabels = <api.MonitoredResource_LabelsEntry>[
-          _makeLabel('project_id', projectId),
-          _makeLabel('version_id', versionId),
-          _makeLabel('module_id', serviceId),
-          _makeLabel('zone', zoneId),
-        ],
+        resourceLabels = {
+          'project_id': projectId,
+          'version_id': versionId,
+          'module_id': serviceId,
+          'zone': zoneId,
+        },
         requestLogName =
             'projects/$projectId/logs/appengine.googleapis.com%2Frequest_log',
         backgroundLogName =
             'projects/$projectId/logs/appengine.googleapis.com%2Fstderr';
-
-  static _makeLabel(String key, String value) {
-    return api.MonitoredResource_LabelsEntry()
-      ..key = key
-      ..value = value;
-  }
 
   void enqueue(api.LogEntry entry) {
     _addLabel(entry, 'appengine.googleapis.com/instance_name', _instanceName);
@@ -334,10 +328,7 @@ class SharedLoggingService {
 }
 
 void _addLabel(api.LogEntry entry, String key, String value) {
-  entry
-    ..labels.add(api.LogEntry_LabelsEntry()
-      ..key = key
-      ..value = value);
+  entry..labels[key] = value;
 }
 
 api.Timestamp _protobufTimestampFromMilliseconds(int ms) {
