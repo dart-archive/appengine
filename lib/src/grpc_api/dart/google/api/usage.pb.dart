@@ -1,105 +1,76 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/usage.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Usage extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Usage')
+class Usage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Usage', package: const $pb.PackageName('google.api'))
     ..pPS(1, 'requirements')
-    ..pp<UsageRule>(
-        6, 'rules', PbFieldType.PM, UsageRule.$checkItem, UsageRule.create)
+    ..pc<UsageRule>(6, 'rules', $pb.PbFieldType.PM,UsageRule.create)
     ..aOS(7, 'producerNotificationChannel')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Usage() : super();
-  Usage.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Usage.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Usage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Usage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Usage clone() => Usage()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Usage copyWith(void Function(Usage) updates) => super.copyWith((message) => updates(message as Usage));
+  $pb.BuilderInfo get info_ => _i;
   static Usage create() => Usage();
-  static PbList<Usage> createRepeated() => PbList<Usage>();
-  static Usage getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyUsage();
-    return _defaultInstance;
-  }
-
+  Usage createEmptyInstance() => create();
+  static $pb.PbList<Usage> createRepeated() => $pb.PbList<Usage>();
+  static Usage getDefault() => _defaultInstance ??= create()..freeze();
   static Usage _defaultInstance;
-  static void $checkItem(Usage v) {
-    if (v is! Usage) checkItemFailed(v, 'Usage');
-  }
 
-  List<String> get requirements => $_getList(0);
+  $core.List<$core.String> get requirements => $_getList(0);
 
-  List<UsageRule> get rules => $_getList(1);
+  $core.List<UsageRule> get rules => $_getList(1);
 
-  String get producerNotificationChannel => $_getS(2, '');
-  set producerNotificationChannel(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasProducerNotificationChannel() => $_has(2);
+  $core.String get producerNotificationChannel => $_getS(2, '');
+  set producerNotificationChannel($core.String v) { $_setString(2, v); }
+  $core.bool hasProducerNotificationChannel() => $_has(2);
   void clearProducerNotificationChannel() => clearField(7);
 }
 
-class _ReadonlyUsage extends Usage with ReadonlyMessageMixin {}
-
-class UsageRule extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UsageRule')
+class UsageRule extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UsageRule', package: const $pb.PackageName('google.api'))
     ..aOS(1, 'selector')
     ..aOB(2, 'allowUnregisteredCalls')
     ..aOB(3, 'skipServiceControl')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   UsageRule() : super();
-  UsageRule.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UsageRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UsageRule.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UsageRule.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   UsageRule clone() => UsageRule()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UsageRule copyWith(void Function(UsageRule) updates) => super.copyWith((message) => updates(message as UsageRule));
+  $pb.BuilderInfo get info_ => _i;
   static UsageRule create() => UsageRule();
-  static PbList<UsageRule> createRepeated() => PbList<UsageRule>();
-  static UsageRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyUsageRule();
-    return _defaultInstance;
-  }
-
+  UsageRule createEmptyInstance() => create();
+  static $pb.PbList<UsageRule> createRepeated() => $pb.PbList<UsageRule>();
+  static UsageRule getDefault() => _defaultInstance ??= create()..freeze();
   static UsageRule _defaultInstance;
-  static void $checkItem(UsageRule v) {
-    if (v is! UsageRule) checkItemFailed(v, 'UsageRule');
-  }
 
-  String get selector => $_getS(0, '');
-  set selector(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasSelector() => $_has(0);
+  $core.String get selector => $_getS(0, '');
+  set selector($core.String v) { $_setString(0, v); }
+  $core.bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  bool get allowUnregisteredCalls => $_get(1, false);
-  set allowUnregisteredCalls(bool v) {
-    $_setBool(1, v);
-  }
-
-  bool hasAllowUnregisteredCalls() => $_has(1);
+  $core.bool get allowUnregisteredCalls => $_get(1, false);
+  set allowUnregisteredCalls($core.bool v) { $_setBool(1, v); }
+  $core.bool hasAllowUnregisteredCalls() => $_has(1);
   void clearAllowUnregisteredCalls() => clearField(2);
 
-  bool get skipServiceControl => $_get(2, false);
-  set skipServiceControl(bool v) {
-    $_setBool(2, v);
-  }
-
-  bool hasSkipServiceControl() => $_has(2);
+  $core.bool get skipServiceControl => $_get(2, false);
+  set skipServiceControl($core.bool v) { $_setBool(2, v); }
+  $core.bool hasSkipServiceControl() => $_has(2);
   void clearSkipServiceControl() => clearField(3);
 }
 
-class _ReadonlyUsageRule extends UsageRule with ReadonlyMessageMixin {}

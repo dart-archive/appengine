@@ -1,1522 +1,876 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/language/v1/language_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'language_service.pbenum.dart';
 
 export 'language_service.pbenum.dart';
 
-class Document extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Document')
-    ..e<Document_Type>(
-        1,
-        'type',
-        PbFieldType.OE,
-        Document_Type.TYPE_UNSPECIFIED,
-        Document_Type.valueOf,
-        Document_Type.values)
+enum Document_Source {
+  content, 
+  gcsContentUri, 
+  notSet
+}
+
+class Document extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Document_Source> _Document_SourceByTag = {
+    2 : Document_Source.content,
+    3 : Document_Source.gcsContentUri,
+    0 : Document_Source.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Document', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..e<Document_Type>(1, 'type', $pb.PbFieldType.OE, Document_Type.TYPE_UNSPECIFIED, Document_Type.valueOf, Document_Type.values)
     ..aOS(2, 'content')
     ..aOS(3, 'gcsContentUri')
     ..aOS(4, 'language')
-    ..hasRequiredFields = false;
+    ..oo(0, [2, 3])
+    ..hasRequiredFields = false
+  ;
 
   Document() : super();
-  Document.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Document.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Document.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Document.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Document clone() => Document()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Document copyWith(void Function(Document) updates) => super.copyWith((message) => updates(message as Document));
+  $pb.BuilderInfo get info_ => _i;
   static Document create() => Document();
-  static PbList<Document> createRepeated() => PbList<Document>();
-  static Document getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyDocument();
-    return _defaultInstance;
-  }
-
+  Document createEmptyInstance() => create();
+  static $pb.PbList<Document> createRepeated() => $pb.PbList<Document>();
+  static Document getDefault() => _defaultInstance ??= create()..freeze();
   static Document _defaultInstance;
-  static void $checkItem(Document v) {
-    if (v is! Document) checkItemFailed(v, 'Document');
-  }
+
+  Document_Source whichSource() => _Document_SourceByTag[$_whichOneof(0)];
+  void clearSource() => clearField($_whichOneof(0));
 
   Document_Type get type => $_getN(0);
-  set type(Document_Type v) {
-    setField(1, v);
-  }
-
-  bool hasType() => $_has(0);
+  set type(Document_Type v) { setField(1, v); }
+  $core.bool hasType() => $_has(0);
   void clearType() => clearField(1);
 
-  String get content => $_getS(1, '');
-  set content(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasContent() => $_has(1);
+  $core.String get content => $_getS(1, '');
+  set content($core.String v) { $_setString(1, v); }
+  $core.bool hasContent() => $_has(1);
   void clearContent() => clearField(2);
 
-  String get gcsContentUri => $_getS(2, '');
-  set gcsContentUri(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasGcsContentUri() => $_has(2);
+  $core.String get gcsContentUri => $_getS(2, '');
+  set gcsContentUri($core.String v) { $_setString(2, v); }
+  $core.bool hasGcsContentUri() => $_has(2);
   void clearGcsContentUri() => clearField(3);
 
-  String get language => $_getS(3, '');
-  set language(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasLanguage() => $_has(3);
+  $core.String get language => $_getS(3, '');
+  set language($core.String v) { $_setString(3, v); }
+  $core.bool hasLanguage() => $_has(3);
   void clearLanguage() => clearField(4);
 }
 
-class _ReadonlyDocument extends Document with ReadonlyMessageMixin {}
-
-class Sentence extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Sentence')
-    ..a<TextSpan>(
-        1, 'text', PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
-    ..a<Sentiment>(
-        2, 'sentiment', PbFieldType.OM, Sentiment.getDefault, Sentiment.create)
-    ..hasRequiredFields = false;
+class Sentence extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Sentence', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<TextSpan>(1, 'text', $pb.PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
+    ..a<Sentiment>(2, 'sentiment', $pb.PbFieldType.OM, Sentiment.getDefault, Sentiment.create)
+    ..hasRequiredFields = false
+  ;
 
   Sentence() : super();
-  Sentence.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Sentence.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Sentence.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Sentence.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Sentence clone() => Sentence()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Sentence copyWith(void Function(Sentence) updates) => super.copyWith((message) => updates(message as Sentence));
+  $pb.BuilderInfo get info_ => _i;
   static Sentence create() => Sentence();
-  static PbList<Sentence> createRepeated() => PbList<Sentence>();
-  static Sentence getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySentence();
-    return _defaultInstance;
-  }
-
+  Sentence createEmptyInstance() => create();
+  static $pb.PbList<Sentence> createRepeated() => $pb.PbList<Sentence>();
+  static Sentence getDefault() => _defaultInstance ??= create()..freeze();
   static Sentence _defaultInstance;
-  static void $checkItem(Sentence v) {
-    if (v is! Sentence) checkItemFailed(v, 'Sentence');
-  }
 
   TextSpan get text => $_getN(0);
-  set text(TextSpan v) {
-    setField(1, v);
-  }
-
-  bool hasText() => $_has(0);
+  set text(TextSpan v) { setField(1, v); }
+  $core.bool hasText() => $_has(0);
   void clearText() => clearField(1);
 
   Sentiment get sentiment => $_getN(1);
-  set sentiment(Sentiment v) {
-    setField(2, v);
-  }
-
-  bool hasSentiment() => $_has(1);
+  set sentiment(Sentiment v) { setField(2, v); }
+  $core.bool hasSentiment() => $_has(1);
   void clearSentiment() => clearField(2);
 }
 
-class _ReadonlySentence extends Sentence with ReadonlyMessageMixin {}
-
-class Entity_MetadataEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Entity_MetadataEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Entity_MetadataEntry() : super();
-  Entity_MetadataEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Entity_MetadataEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Entity_MetadataEntry clone() =>
-      Entity_MetadataEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Entity_MetadataEntry create() => Entity_MetadataEntry();
-  static PbList<Entity_MetadataEntry> createRepeated() =>
-      PbList<Entity_MetadataEntry>();
-  static Entity_MetadataEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyEntity_MetadataEntry();
-    return _defaultInstance;
-  }
-
-  static Entity_MetadataEntry _defaultInstance;
-  static void $checkItem(Entity_MetadataEntry v) {
-    if (v is! Entity_MetadataEntry) checkItemFailed(v, 'Entity_MetadataEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyEntity_MetadataEntry extends Entity_MetadataEntry
-    with ReadonlyMessageMixin {}
-
-class Entity extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Entity')
+class Entity extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Entity', package: const $pb.PackageName('google.cloud.language.v1'))
     ..aOS(1, 'name')
-    ..e<Entity_Type>(2, 'type', PbFieldType.OE, Entity_Type.UNKNOWN,
-        Entity_Type.valueOf, Entity_Type.values)
-    ..pp<Entity_MetadataEntry>(3, 'metadata', PbFieldType.PM,
-        Entity_MetadataEntry.$checkItem, Entity_MetadataEntry.create)
-    ..a<double>(4, 'salience', PbFieldType.OF)
-    ..pp<EntityMention>(5, 'mentions', PbFieldType.PM, EntityMention.$checkItem,
-        EntityMention.create)
-    ..a<Sentiment>(
-        6, 'sentiment', PbFieldType.OM, Sentiment.getDefault, Sentiment.create)
-    ..hasRequiredFields = false;
+    ..e<Entity_Type>(2, 'type', $pb.PbFieldType.OE, Entity_Type.UNKNOWN, Entity_Type.valueOf, Entity_Type.values)
+    ..m<$core.String, $core.String>(3, 'metadata', 'Entity.MetadataEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.cloud.language.v1'))
+    ..a<$core.double>(4, 'salience', $pb.PbFieldType.OF)
+    ..pc<EntityMention>(5, 'mentions', $pb.PbFieldType.PM,EntityMention.create)
+    ..a<Sentiment>(6, 'sentiment', $pb.PbFieldType.OM, Sentiment.getDefault, Sentiment.create)
+    ..hasRequiredFields = false
+  ;
 
   Entity() : super();
-  Entity.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Entity.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Entity.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Entity.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Entity clone() => Entity()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Entity copyWith(void Function(Entity) updates) => super.copyWith((message) => updates(message as Entity));
+  $pb.BuilderInfo get info_ => _i;
   static Entity create() => Entity();
-  static PbList<Entity> createRepeated() => PbList<Entity>();
-  static Entity getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntity();
-    return _defaultInstance;
-  }
-
+  Entity createEmptyInstance() => create();
+  static $pb.PbList<Entity> createRepeated() => $pb.PbList<Entity>();
+  static Entity getDefault() => _defaultInstance ??= create()..freeze();
   static Entity _defaultInstance;
-  static void $checkItem(Entity v) {
-    if (v is! Entity) checkItemFailed(v, 'Entity');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Entity_Type get type => $_getN(1);
-  set type(Entity_Type v) {
-    setField(2, v);
-  }
-
-  bool hasType() => $_has(1);
+  set type(Entity_Type v) { setField(2, v); }
+  $core.bool hasType() => $_has(1);
   void clearType() => clearField(2);
 
-  List<Entity_MetadataEntry> get metadata => $_getList(2);
+  $core.Map<$core.String, $core.String> get metadata => $_getMap(2);
 
-  double get salience => $_getN(3);
-  set salience(double v) {
-    $_setFloat(3, v);
-  }
-
-  bool hasSalience() => $_has(3);
+  $core.double get salience => $_getN(3);
+  set salience($core.double v) { $_setFloat(3, v); }
+  $core.bool hasSalience() => $_has(3);
   void clearSalience() => clearField(4);
 
-  List<EntityMention> get mentions => $_getList(4);
+  $core.List<EntityMention> get mentions => $_getList(4);
 
   Sentiment get sentiment => $_getN(5);
-  set sentiment(Sentiment v) {
-    setField(6, v);
-  }
-
-  bool hasSentiment() => $_has(5);
+  set sentiment(Sentiment v) { setField(6, v); }
+  $core.bool hasSentiment() => $_has(5);
   void clearSentiment() => clearField(6);
 }
 
-class _ReadonlyEntity extends Entity with ReadonlyMessageMixin {}
-
-class Token extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Token')
-    ..a<TextSpan>(
-        1, 'text', PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
-    ..a<PartOfSpeech>(2, 'partOfSpeech', PbFieldType.OM,
-        PartOfSpeech.getDefault, PartOfSpeech.create)
-    ..a<DependencyEdge>(3, 'dependencyEdge', PbFieldType.OM,
-        DependencyEdge.getDefault, DependencyEdge.create)
+class Token extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Token', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<TextSpan>(1, 'text', $pb.PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
+    ..a<PartOfSpeech>(2, 'partOfSpeech', $pb.PbFieldType.OM, PartOfSpeech.getDefault, PartOfSpeech.create)
+    ..a<DependencyEdge>(3, 'dependencyEdge', $pb.PbFieldType.OM, DependencyEdge.getDefault, DependencyEdge.create)
     ..aOS(4, 'lemma')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Token() : super();
-  Token.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Token.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Token.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Token.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Token clone() => Token()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Token copyWith(void Function(Token) updates) => super.copyWith((message) => updates(message as Token));
+  $pb.BuilderInfo get info_ => _i;
   static Token create() => Token();
-  static PbList<Token> createRepeated() => PbList<Token>();
-  static Token getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyToken();
-    return _defaultInstance;
-  }
-
+  Token createEmptyInstance() => create();
+  static $pb.PbList<Token> createRepeated() => $pb.PbList<Token>();
+  static Token getDefault() => _defaultInstance ??= create()..freeze();
   static Token _defaultInstance;
-  static void $checkItem(Token v) {
-    if (v is! Token) checkItemFailed(v, 'Token');
-  }
 
   TextSpan get text => $_getN(0);
-  set text(TextSpan v) {
-    setField(1, v);
-  }
-
-  bool hasText() => $_has(0);
+  set text(TextSpan v) { setField(1, v); }
+  $core.bool hasText() => $_has(0);
   void clearText() => clearField(1);
 
   PartOfSpeech get partOfSpeech => $_getN(1);
-  set partOfSpeech(PartOfSpeech v) {
-    setField(2, v);
-  }
-
-  bool hasPartOfSpeech() => $_has(1);
+  set partOfSpeech(PartOfSpeech v) { setField(2, v); }
+  $core.bool hasPartOfSpeech() => $_has(1);
   void clearPartOfSpeech() => clearField(2);
 
   DependencyEdge get dependencyEdge => $_getN(2);
-  set dependencyEdge(DependencyEdge v) {
-    setField(3, v);
-  }
-
-  bool hasDependencyEdge() => $_has(2);
+  set dependencyEdge(DependencyEdge v) { setField(3, v); }
+  $core.bool hasDependencyEdge() => $_has(2);
   void clearDependencyEdge() => clearField(3);
 
-  String get lemma => $_getS(3, '');
-  set lemma(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasLemma() => $_has(3);
+  $core.String get lemma => $_getS(3, '');
+  set lemma($core.String v) { $_setString(3, v); }
+  $core.bool hasLemma() => $_has(3);
   void clearLemma() => clearField(4);
 }
 
-class _ReadonlyToken extends Token with ReadonlyMessageMixin {}
-
-class Sentiment extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Sentiment')
-    ..a<double>(2, 'magnitude', PbFieldType.OF)
-    ..a<double>(3, 'score', PbFieldType.OF)
-    ..hasRequiredFields = false;
+class Sentiment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Sentiment', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<$core.double>(2, 'magnitude', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, 'score', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
 
   Sentiment() : super();
-  Sentiment.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Sentiment.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Sentiment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Sentiment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Sentiment clone() => Sentiment()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Sentiment copyWith(void Function(Sentiment) updates) => super.copyWith((message) => updates(message as Sentiment));
+  $pb.BuilderInfo get info_ => _i;
   static Sentiment create() => Sentiment();
-  static PbList<Sentiment> createRepeated() => PbList<Sentiment>();
-  static Sentiment getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySentiment();
-    return _defaultInstance;
-  }
-
+  Sentiment createEmptyInstance() => create();
+  static $pb.PbList<Sentiment> createRepeated() => $pb.PbList<Sentiment>();
+  static Sentiment getDefault() => _defaultInstance ??= create()..freeze();
   static Sentiment _defaultInstance;
-  static void $checkItem(Sentiment v) {
-    if (v is! Sentiment) checkItemFailed(v, 'Sentiment');
-  }
 
-  double get magnitude => $_getN(0);
-  set magnitude(double v) {
-    $_setFloat(0, v);
-  }
-
-  bool hasMagnitude() => $_has(0);
+  $core.double get magnitude => $_getN(0);
+  set magnitude($core.double v) { $_setFloat(0, v); }
+  $core.bool hasMagnitude() => $_has(0);
   void clearMagnitude() => clearField(2);
 
-  double get score => $_getN(1);
-  set score(double v) {
-    $_setFloat(1, v);
-  }
-
-  bool hasScore() => $_has(1);
+  $core.double get score => $_getN(1);
+  set score($core.double v) { $_setFloat(1, v); }
+  $core.bool hasScore() => $_has(1);
   void clearScore() => clearField(3);
 }
 
-class _ReadonlySentiment extends Sentiment with ReadonlyMessageMixin {}
-
-class PartOfSpeech extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('PartOfSpeech')
-    ..e<PartOfSpeech_Tag>(1, 'tag', PbFieldType.OE, PartOfSpeech_Tag.UNKNOWN,
-        PartOfSpeech_Tag.valueOf, PartOfSpeech_Tag.values)
-    ..e<PartOfSpeech_Aspect>(
-        2,
-        'aspect',
-        PbFieldType.OE,
-        PartOfSpeech_Aspect.ASPECT_UNKNOWN,
-        PartOfSpeech_Aspect.valueOf,
-        PartOfSpeech_Aspect.values)
-    ..e<PartOfSpeech_Case>(
-        3,
-        'case_3',
-        PbFieldType.OE,
-        PartOfSpeech_Case.CASE_UNKNOWN,
-        PartOfSpeech_Case.valueOf,
-        PartOfSpeech_Case.values)
-    ..e<PartOfSpeech_Form>(
-        4,
-        'form',
-        PbFieldType.OE,
-        PartOfSpeech_Form.FORM_UNKNOWN,
-        PartOfSpeech_Form.valueOf,
-        PartOfSpeech_Form.values)
-    ..e<PartOfSpeech_Gender>(
-        5,
-        'gender',
-        PbFieldType.OE,
-        PartOfSpeech_Gender.GENDER_UNKNOWN,
-        PartOfSpeech_Gender.valueOf,
-        PartOfSpeech_Gender.values)
-    ..e<PartOfSpeech_Mood>(
-        6,
-        'mood',
-        PbFieldType.OE,
-        PartOfSpeech_Mood.MOOD_UNKNOWN,
-        PartOfSpeech_Mood.valueOf,
-        PartOfSpeech_Mood.values)
-    ..e<PartOfSpeech_Number>(
-        7,
-        'number',
-        PbFieldType.OE,
-        PartOfSpeech_Number.NUMBER_UNKNOWN,
-        PartOfSpeech_Number.valueOf,
-        PartOfSpeech_Number.values)
-    ..e<PartOfSpeech_Person>(
-        8,
-        'person',
-        PbFieldType.OE,
-        PartOfSpeech_Person.PERSON_UNKNOWN,
-        PartOfSpeech_Person.valueOf,
-        PartOfSpeech_Person.values)
-    ..e<PartOfSpeech_Proper>(
-        9,
-        'proper',
-        PbFieldType.OE,
-        PartOfSpeech_Proper.PROPER_UNKNOWN,
-        PartOfSpeech_Proper.valueOf,
-        PartOfSpeech_Proper.values)
-    ..e<PartOfSpeech_Reciprocity>(
-        10,
-        'reciprocity',
-        PbFieldType.OE,
-        PartOfSpeech_Reciprocity.RECIPROCITY_UNKNOWN,
-        PartOfSpeech_Reciprocity.valueOf,
-        PartOfSpeech_Reciprocity.values)
-    ..e<PartOfSpeech_Tense>(
-        11,
-        'tense',
-        PbFieldType.OE,
-        PartOfSpeech_Tense.TENSE_UNKNOWN,
-        PartOfSpeech_Tense.valueOf,
-        PartOfSpeech_Tense.values)
-    ..e<PartOfSpeech_Voice>(
-        12,
-        'voice',
-        PbFieldType.OE,
-        PartOfSpeech_Voice.VOICE_UNKNOWN,
-        PartOfSpeech_Voice.valueOf,
-        PartOfSpeech_Voice.values)
-    ..hasRequiredFields = false;
+class PartOfSpeech extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartOfSpeech', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..e<PartOfSpeech_Tag>(1, 'tag', $pb.PbFieldType.OE, PartOfSpeech_Tag.UNKNOWN, PartOfSpeech_Tag.valueOf, PartOfSpeech_Tag.values)
+    ..e<PartOfSpeech_Aspect>(2, 'aspect', $pb.PbFieldType.OE, PartOfSpeech_Aspect.ASPECT_UNKNOWN, PartOfSpeech_Aspect.valueOf, PartOfSpeech_Aspect.values)
+    ..e<PartOfSpeech_Case>(3, 'case_3', $pb.PbFieldType.OE, PartOfSpeech_Case.CASE_UNKNOWN, PartOfSpeech_Case.valueOf, PartOfSpeech_Case.values)
+    ..e<PartOfSpeech_Form>(4, 'form', $pb.PbFieldType.OE, PartOfSpeech_Form.FORM_UNKNOWN, PartOfSpeech_Form.valueOf, PartOfSpeech_Form.values)
+    ..e<PartOfSpeech_Gender>(5, 'gender', $pb.PbFieldType.OE, PartOfSpeech_Gender.GENDER_UNKNOWN, PartOfSpeech_Gender.valueOf, PartOfSpeech_Gender.values)
+    ..e<PartOfSpeech_Mood>(6, 'mood', $pb.PbFieldType.OE, PartOfSpeech_Mood.MOOD_UNKNOWN, PartOfSpeech_Mood.valueOf, PartOfSpeech_Mood.values)
+    ..e<PartOfSpeech_Number>(7, 'number', $pb.PbFieldType.OE, PartOfSpeech_Number.NUMBER_UNKNOWN, PartOfSpeech_Number.valueOf, PartOfSpeech_Number.values)
+    ..e<PartOfSpeech_Person>(8, 'person', $pb.PbFieldType.OE, PartOfSpeech_Person.PERSON_UNKNOWN, PartOfSpeech_Person.valueOf, PartOfSpeech_Person.values)
+    ..e<PartOfSpeech_Proper>(9, 'proper', $pb.PbFieldType.OE, PartOfSpeech_Proper.PROPER_UNKNOWN, PartOfSpeech_Proper.valueOf, PartOfSpeech_Proper.values)
+    ..e<PartOfSpeech_Reciprocity>(10, 'reciprocity', $pb.PbFieldType.OE, PartOfSpeech_Reciprocity.RECIPROCITY_UNKNOWN, PartOfSpeech_Reciprocity.valueOf, PartOfSpeech_Reciprocity.values)
+    ..e<PartOfSpeech_Tense>(11, 'tense', $pb.PbFieldType.OE, PartOfSpeech_Tense.TENSE_UNKNOWN, PartOfSpeech_Tense.valueOf, PartOfSpeech_Tense.values)
+    ..e<PartOfSpeech_Voice>(12, 'voice', $pb.PbFieldType.OE, PartOfSpeech_Voice.VOICE_UNKNOWN, PartOfSpeech_Voice.valueOf, PartOfSpeech_Voice.values)
+    ..hasRequiredFields = false
+  ;
 
   PartOfSpeech() : super();
-  PartOfSpeech.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartOfSpeech.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PartOfSpeech.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  PartOfSpeech.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   PartOfSpeech clone() => PartOfSpeech()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  PartOfSpeech copyWith(void Function(PartOfSpeech) updates) => super.copyWith((message) => updates(message as PartOfSpeech));
+  $pb.BuilderInfo get info_ => _i;
   static PartOfSpeech create() => PartOfSpeech();
-  static PbList<PartOfSpeech> createRepeated() => PbList<PartOfSpeech>();
-  static PartOfSpeech getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyPartOfSpeech();
-    return _defaultInstance;
-  }
-
+  PartOfSpeech createEmptyInstance() => create();
+  static $pb.PbList<PartOfSpeech> createRepeated() => $pb.PbList<PartOfSpeech>();
+  static PartOfSpeech getDefault() => _defaultInstance ??= create()..freeze();
   static PartOfSpeech _defaultInstance;
-  static void $checkItem(PartOfSpeech v) {
-    if (v is! PartOfSpeech) checkItemFailed(v, 'PartOfSpeech');
-  }
 
   PartOfSpeech_Tag get tag => $_getN(0);
-  set tag(PartOfSpeech_Tag v) {
-    setField(1, v);
-  }
-
-  bool hasTag() => $_has(0);
+  set tag(PartOfSpeech_Tag v) { setField(1, v); }
+  $core.bool hasTag() => $_has(0);
   void clearTag() => clearField(1);
 
   PartOfSpeech_Aspect get aspect => $_getN(1);
-  set aspect(PartOfSpeech_Aspect v) {
-    setField(2, v);
-  }
-
-  bool hasAspect() => $_has(1);
+  set aspect(PartOfSpeech_Aspect v) { setField(2, v); }
+  $core.bool hasAspect() => $_has(1);
   void clearAspect() => clearField(2);
 
   PartOfSpeech_Case get case_3 => $_getN(2);
-  set case_3(PartOfSpeech_Case v) {
-    setField(3, v);
-  }
-
-  bool hasCase_3() => $_has(2);
+  set case_3(PartOfSpeech_Case v) { setField(3, v); }
+  $core.bool hasCase_3() => $_has(2);
   void clearCase_3() => clearField(3);
 
   PartOfSpeech_Form get form => $_getN(3);
-  set form(PartOfSpeech_Form v) {
-    setField(4, v);
-  }
-
-  bool hasForm() => $_has(3);
+  set form(PartOfSpeech_Form v) { setField(4, v); }
+  $core.bool hasForm() => $_has(3);
   void clearForm() => clearField(4);
 
   PartOfSpeech_Gender get gender => $_getN(4);
-  set gender(PartOfSpeech_Gender v) {
-    setField(5, v);
-  }
-
-  bool hasGender() => $_has(4);
+  set gender(PartOfSpeech_Gender v) { setField(5, v); }
+  $core.bool hasGender() => $_has(4);
   void clearGender() => clearField(5);
 
   PartOfSpeech_Mood get mood => $_getN(5);
-  set mood(PartOfSpeech_Mood v) {
-    setField(6, v);
-  }
-
-  bool hasMood() => $_has(5);
+  set mood(PartOfSpeech_Mood v) { setField(6, v); }
+  $core.bool hasMood() => $_has(5);
   void clearMood() => clearField(6);
 
   PartOfSpeech_Number get number => $_getN(6);
-  set number(PartOfSpeech_Number v) {
-    setField(7, v);
-  }
-
-  bool hasNumber() => $_has(6);
+  set number(PartOfSpeech_Number v) { setField(7, v); }
+  $core.bool hasNumber() => $_has(6);
   void clearNumber() => clearField(7);
 
   PartOfSpeech_Person get person => $_getN(7);
-  set person(PartOfSpeech_Person v) {
-    setField(8, v);
-  }
-
-  bool hasPerson() => $_has(7);
+  set person(PartOfSpeech_Person v) { setField(8, v); }
+  $core.bool hasPerson() => $_has(7);
   void clearPerson() => clearField(8);
 
   PartOfSpeech_Proper get proper => $_getN(8);
-  set proper(PartOfSpeech_Proper v) {
-    setField(9, v);
-  }
-
-  bool hasProper() => $_has(8);
+  set proper(PartOfSpeech_Proper v) { setField(9, v); }
+  $core.bool hasProper() => $_has(8);
   void clearProper() => clearField(9);
 
   PartOfSpeech_Reciprocity get reciprocity => $_getN(9);
-  set reciprocity(PartOfSpeech_Reciprocity v) {
-    setField(10, v);
-  }
-
-  bool hasReciprocity() => $_has(9);
+  set reciprocity(PartOfSpeech_Reciprocity v) { setField(10, v); }
+  $core.bool hasReciprocity() => $_has(9);
   void clearReciprocity() => clearField(10);
 
   PartOfSpeech_Tense get tense => $_getN(10);
-  set tense(PartOfSpeech_Tense v) {
-    setField(11, v);
-  }
-
-  bool hasTense() => $_has(10);
+  set tense(PartOfSpeech_Tense v) { setField(11, v); }
+  $core.bool hasTense() => $_has(10);
   void clearTense() => clearField(11);
 
   PartOfSpeech_Voice get voice => $_getN(11);
-  set voice(PartOfSpeech_Voice v) {
-    setField(12, v);
-  }
-
-  bool hasVoice() => $_has(11);
+  set voice(PartOfSpeech_Voice v) { setField(12, v); }
+  $core.bool hasVoice() => $_has(11);
   void clearVoice() => clearField(12);
 }
 
-class _ReadonlyPartOfSpeech extends PartOfSpeech with ReadonlyMessageMixin {}
-
-class DependencyEdge extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DependencyEdge')
-    ..a<int>(1, 'headTokenIndex', PbFieldType.O3)
-    ..e<DependencyEdge_Label>(
-        2,
-        'label',
-        PbFieldType.OE,
-        DependencyEdge_Label.UNKNOWN,
-        DependencyEdge_Label.valueOf,
-        DependencyEdge_Label.values)
-    ..hasRequiredFields = false;
+class DependencyEdge extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DependencyEdge', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<$core.int>(1, 'headTokenIndex', $pb.PbFieldType.O3)
+    ..e<DependencyEdge_Label>(2, 'label', $pb.PbFieldType.OE, DependencyEdge_Label.UNKNOWN, DependencyEdge_Label.valueOf, DependencyEdge_Label.values)
+    ..hasRequiredFields = false
+  ;
 
   DependencyEdge() : super();
-  DependencyEdge.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DependencyEdge.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DependencyEdge.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DependencyEdge.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DependencyEdge clone() => DependencyEdge()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DependencyEdge copyWith(void Function(DependencyEdge) updates) => super.copyWith((message) => updates(message as DependencyEdge));
+  $pb.BuilderInfo get info_ => _i;
   static DependencyEdge create() => DependencyEdge();
-  static PbList<DependencyEdge> createRepeated() => PbList<DependencyEdge>();
-  static DependencyEdge getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyDependencyEdge();
-    return _defaultInstance;
-  }
-
+  DependencyEdge createEmptyInstance() => create();
+  static $pb.PbList<DependencyEdge> createRepeated() => $pb.PbList<DependencyEdge>();
+  static DependencyEdge getDefault() => _defaultInstance ??= create()..freeze();
   static DependencyEdge _defaultInstance;
-  static void $checkItem(DependencyEdge v) {
-    if (v is! DependencyEdge) checkItemFailed(v, 'DependencyEdge');
-  }
 
-  int get headTokenIndex => $_get(0, 0);
-  set headTokenIndex(int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  bool hasHeadTokenIndex() => $_has(0);
+  $core.int get headTokenIndex => $_get(0, 0);
+  set headTokenIndex($core.int v) { $_setSignedInt32(0, v); }
+  $core.bool hasHeadTokenIndex() => $_has(0);
   void clearHeadTokenIndex() => clearField(1);
 
   DependencyEdge_Label get label => $_getN(1);
-  set label(DependencyEdge_Label v) {
-    setField(2, v);
-  }
-
-  bool hasLabel() => $_has(1);
+  set label(DependencyEdge_Label v) { setField(2, v); }
+  $core.bool hasLabel() => $_has(1);
   void clearLabel() => clearField(2);
 }
 
-class _ReadonlyDependencyEdge extends DependencyEdge with ReadonlyMessageMixin {
-}
-
-class EntityMention extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EntityMention')
-    ..a<TextSpan>(
-        1, 'text', PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
-    ..e<EntityMention_Type>(
-        2,
-        'type',
-        PbFieldType.OE,
-        EntityMention_Type.TYPE_UNKNOWN,
-        EntityMention_Type.valueOf,
-        EntityMention_Type.values)
-    ..a<Sentiment>(
-        3, 'sentiment', PbFieldType.OM, Sentiment.getDefault, Sentiment.create)
-    ..hasRequiredFields = false;
+class EntityMention extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityMention', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<TextSpan>(1, 'text', $pb.PbFieldType.OM, TextSpan.getDefault, TextSpan.create)
+    ..e<EntityMention_Type>(2, 'type', $pb.PbFieldType.OE, EntityMention_Type.TYPE_UNKNOWN, EntityMention_Type.valueOf, EntityMention_Type.values)
+    ..a<Sentiment>(3, 'sentiment', $pb.PbFieldType.OM, Sentiment.getDefault, Sentiment.create)
+    ..hasRequiredFields = false
+  ;
 
   EntityMention() : super();
-  EntityMention.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityMention.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityMention.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EntityMention.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   EntityMention clone() => EntityMention()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EntityMention copyWith(void Function(EntityMention) updates) => super.copyWith((message) => updates(message as EntityMention));
+  $pb.BuilderInfo get info_ => _i;
   static EntityMention create() => EntityMention();
-  static PbList<EntityMention> createRepeated() => PbList<EntityMention>();
-  static EntityMention getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityMention();
-    return _defaultInstance;
-  }
-
+  EntityMention createEmptyInstance() => create();
+  static $pb.PbList<EntityMention> createRepeated() => $pb.PbList<EntityMention>();
+  static EntityMention getDefault() => _defaultInstance ??= create()..freeze();
   static EntityMention _defaultInstance;
-  static void $checkItem(EntityMention v) {
-    if (v is! EntityMention) checkItemFailed(v, 'EntityMention');
-  }
 
   TextSpan get text => $_getN(0);
-  set text(TextSpan v) {
-    setField(1, v);
-  }
-
-  bool hasText() => $_has(0);
+  set text(TextSpan v) { setField(1, v); }
+  $core.bool hasText() => $_has(0);
   void clearText() => clearField(1);
 
   EntityMention_Type get type => $_getN(1);
-  set type(EntityMention_Type v) {
-    setField(2, v);
-  }
-
-  bool hasType() => $_has(1);
+  set type(EntityMention_Type v) { setField(2, v); }
+  $core.bool hasType() => $_has(1);
   void clearType() => clearField(2);
 
   Sentiment get sentiment => $_getN(2);
-  set sentiment(Sentiment v) {
-    setField(3, v);
-  }
-
-  bool hasSentiment() => $_has(2);
+  set sentiment(Sentiment v) { setField(3, v); }
+  $core.bool hasSentiment() => $_has(2);
   void clearSentiment() => clearField(3);
 }
 
-class _ReadonlyEntityMention extends EntityMention with ReadonlyMessageMixin {}
-
-class TextSpan extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('TextSpan')
+class TextSpan extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextSpan', package: const $pb.PackageName('google.cloud.language.v1'))
     ..aOS(1, 'content')
-    ..a<int>(2, 'beginOffset', PbFieldType.O3)
-    ..hasRequiredFields = false;
+    ..a<$core.int>(2, 'beginOffset', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
 
   TextSpan() : super();
-  TextSpan.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextSpan.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextSpan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  TextSpan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   TextSpan clone() => TextSpan()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  TextSpan copyWith(void Function(TextSpan) updates) => super.copyWith((message) => updates(message as TextSpan));
+  $pb.BuilderInfo get info_ => _i;
   static TextSpan create() => TextSpan();
-  static PbList<TextSpan> createRepeated() => PbList<TextSpan>();
-  static TextSpan getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyTextSpan();
-    return _defaultInstance;
-  }
-
+  TextSpan createEmptyInstance() => create();
+  static $pb.PbList<TextSpan> createRepeated() => $pb.PbList<TextSpan>();
+  static TextSpan getDefault() => _defaultInstance ??= create()..freeze();
   static TextSpan _defaultInstance;
-  static void $checkItem(TextSpan v) {
-    if (v is! TextSpan) checkItemFailed(v, 'TextSpan');
-  }
 
-  String get content => $_getS(0, '');
-  set content(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasContent() => $_has(0);
+  $core.String get content => $_getS(0, '');
+  set content($core.String v) { $_setString(0, v); }
+  $core.bool hasContent() => $_has(0);
   void clearContent() => clearField(1);
 
-  int get beginOffset => $_get(1, 0);
-  set beginOffset(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasBeginOffset() => $_has(1);
+  $core.int get beginOffset => $_get(1, 0);
+  set beginOffset($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasBeginOffset() => $_has(1);
   void clearBeginOffset() => clearField(2);
 }
 
-class _ReadonlyTextSpan extends TextSpan with ReadonlyMessageMixin {}
-
-class ClassificationCategory extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ClassificationCategory')
+class ClassificationCategory extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClassificationCategory', package: const $pb.PackageName('google.cloud.language.v1'))
     ..aOS(1, 'name')
-    ..a<double>(2, 'confidence', PbFieldType.OF)
-    ..hasRequiredFields = false;
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
 
   ClassificationCategory() : super();
-  ClassificationCategory.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClassificationCategory.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ClassificationCategory clone() =>
-      ClassificationCategory()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ClassificationCategory.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ClassificationCategory.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ClassificationCategory clone() => ClassificationCategory()..mergeFromMessage(this);
+  ClassificationCategory copyWith(void Function(ClassificationCategory) updates) => super.copyWith((message) => updates(message as ClassificationCategory));
+  $pb.BuilderInfo get info_ => _i;
   static ClassificationCategory create() => ClassificationCategory();
-  static PbList<ClassificationCategory> createRepeated() =>
-      PbList<ClassificationCategory>();
-  static ClassificationCategory getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyClassificationCategory();
-    return _defaultInstance;
-  }
-
+  ClassificationCategory createEmptyInstance() => create();
+  static $pb.PbList<ClassificationCategory> createRepeated() => $pb.PbList<ClassificationCategory>();
+  static ClassificationCategory getDefault() => _defaultInstance ??= create()..freeze();
   static ClassificationCategory _defaultInstance;
-  static void $checkItem(ClassificationCategory v) {
-    if (v is! ClassificationCategory)
-      checkItemFailed(v, 'ClassificationCategory');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  double get confidence => $_getN(1);
-  set confidence(double v) {
-    $_setFloat(1, v);
-  }
-
-  bool hasConfidence() => $_has(1);
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) { $_setFloat(1, v); }
+  $core.bool hasConfidence() => $_has(1);
   void clearConfidence() => clearField(2);
 }
 
-class _ReadonlyClassificationCategory extends ClassificationCategory
-    with ReadonlyMessageMixin {}
-
-class AnalyzeSentimentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnalyzeSentimentRequest')
-    ..a<Document>(
-        1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
-    ..e<EncodingType>(2, 'encodingType', PbFieldType.OE, EncodingType.NONE,
-        EncodingType.valueOf, EncodingType.values)
-    ..hasRequiredFields = false;
+class AnalyzeSentimentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeSentimentRequest', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<Document>(1, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
+    ..e<EncodingType>(2, 'encodingType', $pb.PbFieldType.OE, EncodingType.NONE, EncodingType.valueOf, EncodingType.values)
+    ..hasRequiredFields = false
+  ;
 
   AnalyzeSentimentRequest() : super();
-  AnalyzeSentimentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeSentimentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnalyzeSentimentRequest clone() =>
-      AnalyzeSentimentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AnalyzeSentimentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnalyzeSentimentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnalyzeSentimentRequest clone() => AnalyzeSentimentRequest()..mergeFromMessage(this);
+  AnalyzeSentimentRequest copyWith(void Function(AnalyzeSentimentRequest) updates) => super.copyWith((message) => updates(message as AnalyzeSentimentRequest));
+  $pb.BuilderInfo get info_ => _i;
   static AnalyzeSentimentRequest create() => AnalyzeSentimentRequest();
-  static PbList<AnalyzeSentimentRequest> createRepeated() =>
-      PbList<AnalyzeSentimentRequest>();
-  static AnalyzeSentimentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnalyzeSentimentRequest();
-    return _defaultInstance;
-  }
-
+  AnalyzeSentimentRequest createEmptyInstance() => create();
+  static $pb.PbList<AnalyzeSentimentRequest> createRepeated() => $pb.PbList<AnalyzeSentimentRequest>();
+  static AnalyzeSentimentRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AnalyzeSentimentRequest _defaultInstance;
-  static void $checkItem(AnalyzeSentimentRequest v) {
-    if (v is! AnalyzeSentimentRequest)
-      checkItemFailed(v, 'AnalyzeSentimentRequest');
-  }
 
   Document get document => $_getN(0);
-  set document(Document v) {
-    setField(1, v);
-  }
-
-  bool hasDocument() => $_has(0);
+  set document(Document v) { setField(1, v); }
+  $core.bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
   EncodingType get encodingType => $_getN(1);
-  set encodingType(EncodingType v) {
-    setField(2, v);
-  }
-
-  bool hasEncodingType() => $_has(1);
+  set encodingType(EncodingType v) { setField(2, v); }
+  $core.bool hasEncodingType() => $_has(1);
   void clearEncodingType() => clearField(2);
 }
 
-class _ReadonlyAnalyzeSentimentRequest extends AnalyzeSentimentRequest
-    with ReadonlyMessageMixin {}
-
-class AnalyzeSentimentResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnalyzeSentimentResponse')
-    ..a<Sentiment>(1, 'documentSentiment', PbFieldType.OM, Sentiment.getDefault,
-        Sentiment.create)
+class AnalyzeSentimentResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeSentimentResponse', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<Sentiment>(1, 'documentSentiment', $pb.PbFieldType.OM, Sentiment.getDefault, Sentiment.create)
     ..aOS(2, 'language')
-    ..pp<Sentence>(
-        3, 'sentences', PbFieldType.PM, Sentence.$checkItem, Sentence.create)
-    ..hasRequiredFields = false;
+    ..pc<Sentence>(3, 'sentences', $pb.PbFieldType.PM,Sentence.create)
+    ..hasRequiredFields = false
+  ;
 
   AnalyzeSentimentResponse() : super();
-  AnalyzeSentimentResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeSentimentResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnalyzeSentimentResponse clone() =>
-      AnalyzeSentimentResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AnalyzeSentimentResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnalyzeSentimentResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnalyzeSentimentResponse clone() => AnalyzeSentimentResponse()..mergeFromMessage(this);
+  AnalyzeSentimentResponse copyWith(void Function(AnalyzeSentimentResponse) updates) => super.copyWith((message) => updates(message as AnalyzeSentimentResponse));
+  $pb.BuilderInfo get info_ => _i;
   static AnalyzeSentimentResponse create() => AnalyzeSentimentResponse();
-  static PbList<AnalyzeSentimentResponse> createRepeated() =>
-      PbList<AnalyzeSentimentResponse>();
-  static AnalyzeSentimentResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnalyzeSentimentResponse();
-    return _defaultInstance;
-  }
-
+  AnalyzeSentimentResponse createEmptyInstance() => create();
+  static $pb.PbList<AnalyzeSentimentResponse> createRepeated() => $pb.PbList<AnalyzeSentimentResponse>();
+  static AnalyzeSentimentResponse getDefault() => _defaultInstance ??= create()..freeze();
   static AnalyzeSentimentResponse _defaultInstance;
-  static void $checkItem(AnalyzeSentimentResponse v) {
-    if (v is! AnalyzeSentimentResponse)
-      checkItemFailed(v, 'AnalyzeSentimentResponse');
-  }
 
   Sentiment get documentSentiment => $_getN(0);
-  set documentSentiment(Sentiment v) {
-    setField(1, v);
-  }
-
-  bool hasDocumentSentiment() => $_has(0);
+  set documentSentiment(Sentiment v) { setField(1, v); }
+  $core.bool hasDocumentSentiment() => $_has(0);
   void clearDocumentSentiment() => clearField(1);
 
-  String get language => $_getS(1, '');
-  set language(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasLanguage() => $_has(1);
+  $core.String get language => $_getS(1, '');
+  set language($core.String v) { $_setString(1, v); }
+  $core.bool hasLanguage() => $_has(1);
   void clearLanguage() => clearField(2);
 
-  List<Sentence> get sentences => $_getList(2);
+  $core.List<Sentence> get sentences => $_getList(2);
 }
 
-class _ReadonlyAnalyzeSentimentResponse extends AnalyzeSentimentResponse
-    with ReadonlyMessageMixin {}
-
-class AnalyzeEntitySentimentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnalyzeEntitySentimentRequest')
-    ..a<Document>(
-        1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
-    ..e<EncodingType>(2, 'encodingType', PbFieldType.OE, EncodingType.NONE,
-        EncodingType.valueOf, EncodingType.values)
-    ..hasRequiredFields = false;
+class AnalyzeEntitySentimentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeEntitySentimentRequest', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<Document>(1, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
+    ..e<EncodingType>(2, 'encodingType', $pb.PbFieldType.OE, EncodingType.NONE, EncodingType.valueOf, EncodingType.values)
+    ..hasRequiredFields = false
+  ;
 
   AnalyzeEntitySentimentRequest() : super();
-  AnalyzeEntitySentimentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeEntitySentimentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnalyzeEntitySentimentRequest clone() =>
-      AnalyzeEntitySentimentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnalyzeEntitySentimentRequest create() =>
-      AnalyzeEntitySentimentRequest();
-  static PbList<AnalyzeEntitySentimentRequest> createRepeated() =>
-      PbList<AnalyzeEntitySentimentRequest>();
-  static AnalyzeEntitySentimentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnalyzeEntitySentimentRequest();
-    return _defaultInstance;
-  }
-
+  AnalyzeEntitySentimentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnalyzeEntitySentimentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnalyzeEntitySentimentRequest clone() => AnalyzeEntitySentimentRequest()..mergeFromMessage(this);
+  AnalyzeEntitySentimentRequest copyWith(void Function(AnalyzeEntitySentimentRequest) updates) => super.copyWith((message) => updates(message as AnalyzeEntitySentimentRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AnalyzeEntitySentimentRequest create() => AnalyzeEntitySentimentRequest();
+  AnalyzeEntitySentimentRequest createEmptyInstance() => create();
+  static $pb.PbList<AnalyzeEntitySentimentRequest> createRepeated() => $pb.PbList<AnalyzeEntitySentimentRequest>();
+  static AnalyzeEntitySentimentRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AnalyzeEntitySentimentRequest _defaultInstance;
-  static void $checkItem(AnalyzeEntitySentimentRequest v) {
-    if (v is! AnalyzeEntitySentimentRequest)
-      checkItemFailed(v, 'AnalyzeEntitySentimentRequest');
-  }
 
   Document get document => $_getN(0);
-  set document(Document v) {
-    setField(1, v);
-  }
-
-  bool hasDocument() => $_has(0);
+  set document(Document v) { setField(1, v); }
+  $core.bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
   EncodingType get encodingType => $_getN(1);
-  set encodingType(EncodingType v) {
-    setField(2, v);
-  }
-
-  bool hasEncodingType() => $_has(1);
+  set encodingType(EncodingType v) { setField(2, v); }
+  $core.bool hasEncodingType() => $_has(1);
   void clearEncodingType() => clearField(2);
 }
 
-class _ReadonlyAnalyzeEntitySentimentRequest
-    extends AnalyzeEntitySentimentRequest with ReadonlyMessageMixin {}
-
-class AnalyzeEntitySentimentResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnalyzeEntitySentimentResponse')
-    ..pp<Entity>(
-        1, 'entities', PbFieldType.PM, Entity.$checkItem, Entity.create)
+class AnalyzeEntitySentimentResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeEntitySentimentResponse', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..pc<Entity>(1, 'entities', $pb.PbFieldType.PM,Entity.create)
     ..aOS(2, 'language')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   AnalyzeEntitySentimentResponse() : super();
-  AnalyzeEntitySentimentResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeEntitySentimentResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnalyzeEntitySentimentResponse clone() =>
-      AnalyzeEntitySentimentResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnalyzeEntitySentimentResponse create() =>
-      AnalyzeEntitySentimentResponse();
-  static PbList<AnalyzeEntitySentimentResponse> createRepeated() =>
-      PbList<AnalyzeEntitySentimentResponse>();
-  static AnalyzeEntitySentimentResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnalyzeEntitySentimentResponse();
-    return _defaultInstance;
-  }
-
+  AnalyzeEntitySentimentResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnalyzeEntitySentimentResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnalyzeEntitySentimentResponse clone() => AnalyzeEntitySentimentResponse()..mergeFromMessage(this);
+  AnalyzeEntitySentimentResponse copyWith(void Function(AnalyzeEntitySentimentResponse) updates) => super.copyWith((message) => updates(message as AnalyzeEntitySentimentResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static AnalyzeEntitySentimentResponse create() => AnalyzeEntitySentimentResponse();
+  AnalyzeEntitySentimentResponse createEmptyInstance() => create();
+  static $pb.PbList<AnalyzeEntitySentimentResponse> createRepeated() => $pb.PbList<AnalyzeEntitySentimentResponse>();
+  static AnalyzeEntitySentimentResponse getDefault() => _defaultInstance ??= create()..freeze();
   static AnalyzeEntitySentimentResponse _defaultInstance;
-  static void $checkItem(AnalyzeEntitySentimentResponse v) {
-    if (v is! AnalyzeEntitySentimentResponse)
-      checkItemFailed(v, 'AnalyzeEntitySentimentResponse');
-  }
 
-  List<Entity> get entities => $_getList(0);
+  $core.List<Entity> get entities => $_getList(0);
 
-  String get language => $_getS(1, '');
-  set language(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasLanguage() => $_has(1);
+  $core.String get language => $_getS(1, '');
+  set language($core.String v) { $_setString(1, v); }
+  $core.bool hasLanguage() => $_has(1);
   void clearLanguage() => clearField(2);
 }
 
-class _ReadonlyAnalyzeEntitySentimentResponse
-    extends AnalyzeEntitySentimentResponse with ReadonlyMessageMixin {}
-
-class AnalyzeEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnalyzeEntitiesRequest')
-    ..a<Document>(
-        1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
-    ..e<EncodingType>(2, 'encodingType', PbFieldType.OE, EncodingType.NONE,
-        EncodingType.valueOf, EncodingType.values)
-    ..hasRequiredFields = false;
+class AnalyzeEntitiesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeEntitiesRequest', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<Document>(1, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
+    ..e<EncodingType>(2, 'encodingType', $pb.PbFieldType.OE, EncodingType.NONE, EncodingType.valueOf, EncodingType.values)
+    ..hasRequiredFields = false
+  ;
 
   AnalyzeEntitiesRequest() : super();
-  AnalyzeEntitiesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeEntitiesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnalyzeEntitiesRequest clone() =>
-      AnalyzeEntitiesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AnalyzeEntitiesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnalyzeEntitiesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnalyzeEntitiesRequest clone() => AnalyzeEntitiesRequest()..mergeFromMessage(this);
+  AnalyzeEntitiesRequest copyWith(void Function(AnalyzeEntitiesRequest) updates) => super.copyWith((message) => updates(message as AnalyzeEntitiesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static AnalyzeEntitiesRequest create() => AnalyzeEntitiesRequest();
-  static PbList<AnalyzeEntitiesRequest> createRepeated() =>
-      PbList<AnalyzeEntitiesRequest>();
-  static AnalyzeEntitiesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnalyzeEntitiesRequest();
-    return _defaultInstance;
-  }
-
+  AnalyzeEntitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<AnalyzeEntitiesRequest> createRepeated() => $pb.PbList<AnalyzeEntitiesRequest>();
+  static AnalyzeEntitiesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AnalyzeEntitiesRequest _defaultInstance;
-  static void $checkItem(AnalyzeEntitiesRequest v) {
-    if (v is! AnalyzeEntitiesRequest)
-      checkItemFailed(v, 'AnalyzeEntitiesRequest');
-  }
 
   Document get document => $_getN(0);
-  set document(Document v) {
-    setField(1, v);
-  }
-
-  bool hasDocument() => $_has(0);
+  set document(Document v) { setField(1, v); }
+  $core.bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
   EncodingType get encodingType => $_getN(1);
-  set encodingType(EncodingType v) {
-    setField(2, v);
-  }
-
-  bool hasEncodingType() => $_has(1);
+  set encodingType(EncodingType v) { setField(2, v); }
+  $core.bool hasEncodingType() => $_has(1);
   void clearEncodingType() => clearField(2);
 }
 
-class _ReadonlyAnalyzeEntitiesRequest extends AnalyzeEntitiesRequest
-    with ReadonlyMessageMixin {}
-
-class AnalyzeEntitiesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnalyzeEntitiesResponse')
-    ..pp<Entity>(
-        1, 'entities', PbFieldType.PM, Entity.$checkItem, Entity.create)
+class AnalyzeEntitiesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeEntitiesResponse', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..pc<Entity>(1, 'entities', $pb.PbFieldType.PM,Entity.create)
     ..aOS(2, 'language')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   AnalyzeEntitiesResponse() : super();
-  AnalyzeEntitiesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeEntitiesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnalyzeEntitiesResponse clone() =>
-      AnalyzeEntitiesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AnalyzeEntitiesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnalyzeEntitiesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnalyzeEntitiesResponse clone() => AnalyzeEntitiesResponse()..mergeFromMessage(this);
+  AnalyzeEntitiesResponse copyWith(void Function(AnalyzeEntitiesResponse) updates) => super.copyWith((message) => updates(message as AnalyzeEntitiesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static AnalyzeEntitiesResponse create() => AnalyzeEntitiesResponse();
-  static PbList<AnalyzeEntitiesResponse> createRepeated() =>
-      PbList<AnalyzeEntitiesResponse>();
-  static AnalyzeEntitiesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnalyzeEntitiesResponse();
-    return _defaultInstance;
-  }
-
+  AnalyzeEntitiesResponse createEmptyInstance() => create();
+  static $pb.PbList<AnalyzeEntitiesResponse> createRepeated() => $pb.PbList<AnalyzeEntitiesResponse>();
+  static AnalyzeEntitiesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static AnalyzeEntitiesResponse _defaultInstance;
-  static void $checkItem(AnalyzeEntitiesResponse v) {
-    if (v is! AnalyzeEntitiesResponse)
-      checkItemFailed(v, 'AnalyzeEntitiesResponse');
-  }
 
-  List<Entity> get entities => $_getList(0);
+  $core.List<Entity> get entities => $_getList(0);
 
-  String get language => $_getS(1, '');
-  set language(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasLanguage() => $_has(1);
+  $core.String get language => $_getS(1, '');
+  set language($core.String v) { $_setString(1, v); }
+  $core.bool hasLanguage() => $_has(1);
   void clearLanguage() => clearField(2);
 }
 
-class _ReadonlyAnalyzeEntitiesResponse extends AnalyzeEntitiesResponse
-    with ReadonlyMessageMixin {}
-
-class AnalyzeSyntaxRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnalyzeSyntaxRequest')
-    ..a<Document>(
-        1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
-    ..e<EncodingType>(2, 'encodingType', PbFieldType.OE, EncodingType.NONE,
-        EncodingType.valueOf, EncodingType.values)
-    ..hasRequiredFields = false;
+class AnalyzeSyntaxRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeSyntaxRequest', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<Document>(1, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
+    ..e<EncodingType>(2, 'encodingType', $pb.PbFieldType.OE, EncodingType.NONE, EncodingType.valueOf, EncodingType.values)
+    ..hasRequiredFields = false
+  ;
 
   AnalyzeSyntaxRequest() : super();
-  AnalyzeSyntaxRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeSyntaxRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnalyzeSyntaxRequest clone() =>
-      AnalyzeSyntaxRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AnalyzeSyntaxRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnalyzeSyntaxRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnalyzeSyntaxRequest clone() => AnalyzeSyntaxRequest()..mergeFromMessage(this);
+  AnalyzeSyntaxRequest copyWith(void Function(AnalyzeSyntaxRequest) updates) => super.copyWith((message) => updates(message as AnalyzeSyntaxRequest));
+  $pb.BuilderInfo get info_ => _i;
   static AnalyzeSyntaxRequest create() => AnalyzeSyntaxRequest();
-  static PbList<AnalyzeSyntaxRequest> createRepeated() =>
-      PbList<AnalyzeSyntaxRequest>();
-  static AnalyzeSyntaxRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnalyzeSyntaxRequest();
-    return _defaultInstance;
-  }
-
+  AnalyzeSyntaxRequest createEmptyInstance() => create();
+  static $pb.PbList<AnalyzeSyntaxRequest> createRepeated() => $pb.PbList<AnalyzeSyntaxRequest>();
+  static AnalyzeSyntaxRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AnalyzeSyntaxRequest _defaultInstance;
-  static void $checkItem(AnalyzeSyntaxRequest v) {
-    if (v is! AnalyzeSyntaxRequest) checkItemFailed(v, 'AnalyzeSyntaxRequest');
-  }
 
   Document get document => $_getN(0);
-  set document(Document v) {
-    setField(1, v);
-  }
-
-  bool hasDocument() => $_has(0);
+  set document(Document v) { setField(1, v); }
+  $core.bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
   EncodingType get encodingType => $_getN(1);
-  set encodingType(EncodingType v) {
-    setField(2, v);
-  }
-
-  bool hasEncodingType() => $_has(1);
+  set encodingType(EncodingType v) { setField(2, v); }
+  $core.bool hasEncodingType() => $_has(1);
   void clearEncodingType() => clearField(2);
 }
 
-class _ReadonlyAnalyzeSyntaxRequest extends AnalyzeSyntaxRequest
-    with ReadonlyMessageMixin {}
-
-class AnalyzeSyntaxResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnalyzeSyntaxResponse')
-    ..pp<Sentence>(
-        1, 'sentences', PbFieldType.PM, Sentence.$checkItem, Sentence.create)
-    ..pp<Token>(2, 'tokens', PbFieldType.PM, Token.$checkItem, Token.create)
+class AnalyzeSyntaxResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeSyntaxResponse', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..pc<Sentence>(1, 'sentences', $pb.PbFieldType.PM,Sentence.create)
+    ..pc<Token>(2, 'tokens', $pb.PbFieldType.PM,Token.create)
     ..aOS(3, 'language')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   AnalyzeSyntaxResponse() : super();
-  AnalyzeSyntaxResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeSyntaxResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnalyzeSyntaxResponse clone() =>
-      AnalyzeSyntaxResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AnalyzeSyntaxResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnalyzeSyntaxResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnalyzeSyntaxResponse clone() => AnalyzeSyntaxResponse()..mergeFromMessage(this);
+  AnalyzeSyntaxResponse copyWith(void Function(AnalyzeSyntaxResponse) updates) => super.copyWith((message) => updates(message as AnalyzeSyntaxResponse));
+  $pb.BuilderInfo get info_ => _i;
   static AnalyzeSyntaxResponse create() => AnalyzeSyntaxResponse();
-  static PbList<AnalyzeSyntaxResponse> createRepeated() =>
-      PbList<AnalyzeSyntaxResponse>();
-  static AnalyzeSyntaxResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnalyzeSyntaxResponse();
-    return _defaultInstance;
-  }
-
+  AnalyzeSyntaxResponse createEmptyInstance() => create();
+  static $pb.PbList<AnalyzeSyntaxResponse> createRepeated() => $pb.PbList<AnalyzeSyntaxResponse>();
+  static AnalyzeSyntaxResponse getDefault() => _defaultInstance ??= create()..freeze();
   static AnalyzeSyntaxResponse _defaultInstance;
-  static void $checkItem(AnalyzeSyntaxResponse v) {
-    if (v is! AnalyzeSyntaxResponse)
-      checkItemFailed(v, 'AnalyzeSyntaxResponse');
-  }
 
-  List<Sentence> get sentences => $_getList(0);
+  $core.List<Sentence> get sentences => $_getList(0);
 
-  List<Token> get tokens => $_getList(1);
+  $core.List<Token> get tokens => $_getList(1);
 
-  String get language => $_getS(2, '');
-  set language(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasLanguage() => $_has(2);
+  $core.String get language => $_getS(2, '');
+  set language($core.String v) { $_setString(2, v); }
+  $core.bool hasLanguage() => $_has(2);
   void clearLanguage() => clearField(3);
 }
 
-class _ReadonlyAnalyzeSyntaxResponse extends AnalyzeSyntaxResponse
-    with ReadonlyMessageMixin {}
-
-class ClassifyTextRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ClassifyTextRequest')
-    ..a<Document>(
-        1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
-    ..hasRequiredFields = false;
+class ClassifyTextRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClassifyTextRequest', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<Document>(1, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
+    ..hasRequiredFields = false
+  ;
 
   ClassifyTextRequest() : super();
-  ClassifyTextRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClassifyTextRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClassifyTextRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ClassifyTextRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ClassifyTextRequest clone() => ClassifyTextRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ClassifyTextRequest copyWith(void Function(ClassifyTextRequest) updates) => super.copyWith((message) => updates(message as ClassifyTextRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ClassifyTextRequest create() => ClassifyTextRequest();
-  static PbList<ClassifyTextRequest> createRepeated() =>
-      PbList<ClassifyTextRequest>();
-  static ClassifyTextRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyClassifyTextRequest();
-    return _defaultInstance;
-  }
-
+  ClassifyTextRequest createEmptyInstance() => create();
+  static $pb.PbList<ClassifyTextRequest> createRepeated() => $pb.PbList<ClassifyTextRequest>();
+  static ClassifyTextRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ClassifyTextRequest _defaultInstance;
-  static void $checkItem(ClassifyTextRequest v) {
-    if (v is! ClassifyTextRequest) checkItemFailed(v, 'ClassifyTextRequest');
-  }
 
   Document get document => $_getN(0);
-  set document(Document v) {
-    setField(1, v);
-  }
-
-  bool hasDocument() => $_has(0);
+  set document(Document v) { setField(1, v); }
+  $core.bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 }
 
-class _ReadonlyClassifyTextRequest extends ClassifyTextRequest
-    with ReadonlyMessageMixin {}
-
-class ClassifyTextResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ClassifyTextResponse')
-    ..pp<ClassificationCategory>(1, 'categories', PbFieldType.PM,
-        ClassificationCategory.$checkItem, ClassificationCategory.create)
-    ..hasRequiredFields = false;
+class ClassifyTextResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClassifyTextResponse', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..pc<ClassificationCategory>(1, 'categories', $pb.PbFieldType.PM,ClassificationCategory.create)
+    ..hasRequiredFields = false
+  ;
 
   ClassifyTextResponse() : super();
-  ClassifyTextResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClassifyTextResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ClassifyTextResponse clone() =>
-      ClassifyTextResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ClassifyTextResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ClassifyTextResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ClassifyTextResponse clone() => ClassifyTextResponse()..mergeFromMessage(this);
+  ClassifyTextResponse copyWith(void Function(ClassifyTextResponse) updates) => super.copyWith((message) => updates(message as ClassifyTextResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ClassifyTextResponse create() => ClassifyTextResponse();
-  static PbList<ClassifyTextResponse> createRepeated() =>
-      PbList<ClassifyTextResponse>();
-  static ClassifyTextResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyClassifyTextResponse();
-    return _defaultInstance;
-  }
-
+  ClassifyTextResponse createEmptyInstance() => create();
+  static $pb.PbList<ClassifyTextResponse> createRepeated() => $pb.PbList<ClassifyTextResponse>();
+  static ClassifyTextResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ClassifyTextResponse _defaultInstance;
-  static void $checkItem(ClassifyTextResponse v) {
-    if (v is! ClassifyTextResponse) checkItemFailed(v, 'ClassifyTextResponse');
-  }
 
-  List<ClassificationCategory> get categories => $_getList(0);
+  $core.List<ClassificationCategory> get categories => $_getList(0);
 }
 
-class _ReadonlyClassifyTextResponse extends ClassifyTextResponse
-    with ReadonlyMessageMixin {}
-
-class AnnotateTextRequest_Features extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnnotateTextRequest_Features')
+class AnnotateTextRequest_Features extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateTextRequest.Features', package: const $pb.PackageName('google.cloud.language.v1'))
     ..aOB(1, 'extractSyntax')
     ..aOB(2, 'extractEntities')
     ..aOB(3, 'extractDocumentSentiment')
     ..aOB(4, 'extractEntitySentiment')
     ..aOB(6, 'classifyText')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   AnnotateTextRequest_Features() : super();
-  AnnotateTextRequest_Features.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotateTextRequest_Features.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnnotateTextRequest_Features clone() =>
-      AnnotateTextRequest_Features()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotateTextRequest_Features create() =>
-      AnnotateTextRequest_Features();
-  static PbList<AnnotateTextRequest_Features> createRepeated() =>
-      PbList<AnnotateTextRequest_Features>();
-  static AnnotateTextRequest_Features getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnnotateTextRequest_Features();
-    return _defaultInstance;
-  }
-
+  AnnotateTextRequest_Features.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnnotateTextRequest_Features.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnnotateTextRequest_Features clone() => AnnotateTextRequest_Features()..mergeFromMessage(this);
+  AnnotateTextRequest_Features copyWith(void Function(AnnotateTextRequest_Features) updates) => super.copyWith((message) => updates(message as AnnotateTextRequest_Features));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotateTextRequest_Features create() => AnnotateTextRequest_Features();
+  AnnotateTextRequest_Features createEmptyInstance() => create();
+  static $pb.PbList<AnnotateTextRequest_Features> createRepeated() => $pb.PbList<AnnotateTextRequest_Features>();
+  static AnnotateTextRequest_Features getDefault() => _defaultInstance ??= create()..freeze();
   static AnnotateTextRequest_Features _defaultInstance;
-  static void $checkItem(AnnotateTextRequest_Features v) {
-    if (v is! AnnotateTextRequest_Features)
-      checkItemFailed(v, 'AnnotateTextRequest_Features');
-  }
 
-  bool get extractSyntax => $_get(0, false);
-  set extractSyntax(bool v) {
-    $_setBool(0, v);
-  }
-
-  bool hasExtractSyntax() => $_has(0);
+  $core.bool get extractSyntax => $_get(0, false);
+  set extractSyntax($core.bool v) { $_setBool(0, v); }
+  $core.bool hasExtractSyntax() => $_has(0);
   void clearExtractSyntax() => clearField(1);
 
-  bool get extractEntities => $_get(1, false);
-  set extractEntities(bool v) {
-    $_setBool(1, v);
-  }
-
-  bool hasExtractEntities() => $_has(1);
+  $core.bool get extractEntities => $_get(1, false);
+  set extractEntities($core.bool v) { $_setBool(1, v); }
+  $core.bool hasExtractEntities() => $_has(1);
   void clearExtractEntities() => clearField(2);
 
-  bool get extractDocumentSentiment => $_get(2, false);
-  set extractDocumentSentiment(bool v) {
-    $_setBool(2, v);
-  }
-
-  bool hasExtractDocumentSentiment() => $_has(2);
+  $core.bool get extractDocumentSentiment => $_get(2, false);
+  set extractDocumentSentiment($core.bool v) { $_setBool(2, v); }
+  $core.bool hasExtractDocumentSentiment() => $_has(2);
   void clearExtractDocumentSentiment() => clearField(3);
 
-  bool get extractEntitySentiment => $_get(3, false);
-  set extractEntitySentiment(bool v) {
-    $_setBool(3, v);
-  }
-
-  bool hasExtractEntitySentiment() => $_has(3);
+  $core.bool get extractEntitySentiment => $_get(3, false);
+  set extractEntitySentiment($core.bool v) { $_setBool(3, v); }
+  $core.bool hasExtractEntitySentiment() => $_has(3);
   void clearExtractEntitySentiment() => clearField(4);
 
-  bool get classifyText => $_get(4, false);
-  set classifyText(bool v) {
-    $_setBool(4, v);
-  }
-
-  bool hasClassifyText() => $_has(4);
+  $core.bool get classifyText => $_get(4, false);
+  set classifyText($core.bool v) { $_setBool(4, v); }
+  $core.bool hasClassifyText() => $_has(4);
   void clearClassifyText() => clearField(6);
 }
 
-class _ReadonlyAnnotateTextRequest_Features extends AnnotateTextRequest_Features
-    with ReadonlyMessageMixin {}
-
-class AnnotateTextRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnnotateTextRequest')
-    ..a<Document>(
-        1, 'document', PbFieldType.OM, Document.getDefault, Document.create)
-    ..a<AnnotateTextRequest_Features>(
-        2,
-        'features',
-        PbFieldType.OM,
-        AnnotateTextRequest_Features.getDefault,
-        AnnotateTextRequest_Features.create)
-    ..e<EncodingType>(3, 'encodingType', PbFieldType.OE, EncodingType.NONE,
-        EncodingType.valueOf, EncodingType.values)
-    ..hasRequiredFields = false;
+class AnnotateTextRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateTextRequest', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..a<Document>(1, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
+    ..a<AnnotateTextRequest_Features>(2, 'features', $pb.PbFieldType.OM, AnnotateTextRequest_Features.getDefault, AnnotateTextRequest_Features.create)
+    ..e<EncodingType>(3, 'encodingType', $pb.PbFieldType.OE, EncodingType.NONE, EncodingType.valueOf, EncodingType.values)
+    ..hasRequiredFields = false
+  ;
 
   AnnotateTextRequest() : super();
-  AnnotateTextRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotateTextRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotateTextRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnnotateTextRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   AnnotateTextRequest clone() => AnnotateTextRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AnnotateTextRequest copyWith(void Function(AnnotateTextRequest) updates) => super.copyWith((message) => updates(message as AnnotateTextRequest));
+  $pb.BuilderInfo get info_ => _i;
   static AnnotateTextRequest create() => AnnotateTextRequest();
-  static PbList<AnnotateTextRequest> createRepeated() =>
-      PbList<AnnotateTextRequest>();
-  static AnnotateTextRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnnotateTextRequest();
-    return _defaultInstance;
-  }
-
+  AnnotateTextRequest createEmptyInstance() => create();
+  static $pb.PbList<AnnotateTextRequest> createRepeated() => $pb.PbList<AnnotateTextRequest>();
+  static AnnotateTextRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AnnotateTextRequest _defaultInstance;
-  static void $checkItem(AnnotateTextRequest v) {
-    if (v is! AnnotateTextRequest) checkItemFailed(v, 'AnnotateTextRequest');
-  }
 
   Document get document => $_getN(0);
-  set document(Document v) {
-    setField(1, v);
-  }
-
-  bool hasDocument() => $_has(0);
+  set document(Document v) { setField(1, v); }
+  $core.bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
   AnnotateTextRequest_Features get features => $_getN(1);
-  set features(AnnotateTextRequest_Features v) {
-    setField(2, v);
-  }
-
-  bool hasFeatures() => $_has(1);
+  set features(AnnotateTextRequest_Features v) { setField(2, v); }
+  $core.bool hasFeatures() => $_has(1);
   void clearFeatures() => clearField(2);
 
   EncodingType get encodingType => $_getN(2);
-  set encodingType(EncodingType v) {
-    setField(3, v);
-  }
-
-  bool hasEncodingType() => $_has(2);
+  set encodingType(EncodingType v) { setField(3, v); }
+  $core.bool hasEncodingType() => $_has(2);
   void clearEncodingType() => clearField(3);
 }
 
-class _ReadonlyAnnotateTextRequest extends AnnotateTextRequest
-    with ReadonlyMessageMixin {}
-
-class AnnotateTextResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AnnotateTextResponse')
-    ..pp<Sentence>(
-        1, 'sentences', PbFieldType.PM, Sentence.$checkItem, Sentence.create)
-    ..pp<Token>(2, 'tokens', PbFieldType.PM, Token.$checkItem, Token.create)
-    ..pp<Entity>(
-        3, 'entities', PbFieldType.PM, Entity.$checkItem, Entity.create)
-    ..a<Sentiment>(4, 'documentSentiment', PbFieldType.OM, Sentiment.getDefault,
-        Sentiment.create)
+class AnnotateTextResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateTextResponse', package: const $pb.PackageName('google.cloud.language.v1'))
+    ..pc<Sentence>(1, 'sentences', $pb.PbFieldType.PM,Sentence.create)
+    ..pc<Token>(2, 'tokens', $pb.PbFieldType.PM,Token.create)
+    ..pc<Entity>(3, 'entities', $pb.PbFieldType.PM,Entity.create)
+    ..a<Sentiment>(4, 'documentSentiment', $pb.PbFieldType.OM, Sentiment.getDefault, Sentiment.create)
     ..aOS(5, 'language')
-    ..pp<ClassificationCategory>(6, 'categories', PbFieldType.PM,
-        ClassificationCategory.$checkItem, ClassificationCategory.create)
-    ..hasRequiredFields = false;
+    ..pc<ClassificationCategory>(6, 'categories', $pb.PbFieldType.PM,ClassificationCategory.create)
+    ..hasRequiredFields = false
+  ;
 
   AnnotateTextResponse() : super();
-  AnnotateTextResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotateTextResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnnotateTextResponse clone() =>
-      AnnotateTextResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AnnotateTextResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AnnotateTextResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AnnotateTextResponse clone() => AnnotateTextResponse()..mergeFromMessage(this);
+  AnnotateTextResponse copyWith(void Function(AnnotateTextResponse) updates) => super.copyWith((message) => updates(message as AnnotateTextResponse));
+  $pb.BuilderInfo get info_ => _i;
   static AnnotateTextResponse create() => AnnotateTextResponse();
-  static PbList<AnnotateTextResponse> createRepeated() =>
-      PbList<AnnotateTextResponse>();
-  static AnnotateTextResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAnnotateTextResponse();
-    return _defaultInstance;
-  }
-
+  AnnotateTextResponse createEmptyInstance() => create();
+  static $pb.PbList<AnnotateTextResponse> createRepeated() => $pb.PbList<AnnotateTextResponse>();
+  static AnnotateTextResponse getDefault() => _defaultInstance ??= create()..freeze();
   static AnnotateTextResponse _defaultInstance;
-  static void $checkItem(AnnotateTextResponse v) {
-    if (v is! AnnotateTextResponse) checkItemFailed(v, 'AnnotateTextResponse');
-  }
 
-  List<Sentence> get sentences => $_getList(0);
+  $core.List<Sentence> get sentences => $_getList(0);
 
-  List<Token> get tokens => $_getList(1);
+  $core.List<Token> get tokens => $_getList(1);
 
-  List<Entity> get entities => $_getList(2);
+  $core.List<Entity> get entities => $_getList(2);
 
   Sentiment get documentSentiment => $_getN(3);
-  set documentSentiment(Sentiment v) {
-    setField(4, v);
-  }
-
-  bool hasDocumentSentiment() => $_has(3);
+  set documentSentiment(Sentiment v) { setField(4, v); }
+  $core.bool hasDocumentSentiment() => $_has(3);
   void clearDocumentSentiment() => clearField(4);
 
-  String get language => $_getS(4, '');
-  set language(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasLanguage() => $_has(4);
+  $core.String get language => $_getS(4, '');
+  set language($core.String v) { $_setString(4, v); }
+  $core.bool hasLanguage() => $_has(4);
   void clearLanguage() => clearField(5);
 
-  List<ClassificationCategory> get categories => $_getList(5);
+  $core.List<ClassificationCategory> get categories => $_getList(5);
 }
-
-class _ReadonlyAnnotateTextResponse extends AnnotateTextResponse
-    with ReadonlyMessageMixin {}
 
 class LanguageServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   LanguageServiceApi(this._client);
 
-  Future<AnalyzeSentimentResponse> analyzeSentiment(
-      ClientContext ctx, AnalyzeSentimentRequest request) {
+  $async.Future<AnalyzeSentimentResponse> analyzeSentiment($pb.ClientContext ctx, AnalyzeSentimentRequest request) {
     var emptyResponse = AnalyzeSentimentResponse();
-    return _client.invoke<AnalyzeSentimentResponse>(
-        ctx, 'LanguageService', 'AnalyzeSentiment', request, emptyResponse);
+    return _client.invoke<AnalyzeSentimentResponse>(ctx, 'LanguageService', 'AnalyzeSentiment', request, emptyResponse);
   }
-
-  Future<AnalyzeEntitiesResponse> analyzeEntities(
-      ClientContext ctx, AnalyzeEntitiesRequest request) {
+  $async.Future<AnalyzeEntitiesResponse> analyzeEntities($pb.ClientContext ctx, AnalyzeEntitiesRequest request) {
     var emptyResponse = AnalyzeEntitiesResponse();
-    return _client.invoke<AnalyzeEntitiesResponse>(
-        ctx, 'LanguageService', 'AnalyzeEntities', request, emptyResponse);
+    return _client.invoke<AnalyzeEntitiesResponse>(ctx, 'LanguageService', 'AnalyzeEntities', request, emptyResponse);
   }
-
-  Future<AnalyzeEntitySentimentResponse> analyzeEntitySentiment(
-      ClientContext ctx, AnalyzeEntitySentimentRequest request) {
+  $async.Future<AnalyzeEntitySentimentResponse> analyzeEntitySentiment($pb.ClientContext ctx, AnalyzeEntitySentimentRequest request) {
     var emptyResponse = AnalyzeEntitySentimentResponse();
-    return _client.invoke<AnalyzeEntitySentimentResponse>(ctx,
-        'LanguageService', 'AnalyzeEntitySentiment', request, emptyResponse);
+    return _client.invoke<AnalyzeEntitySentimentResponse>(ctx, 'LanguageService', 'AnalyzeEntitySentiment', request, emptyResponse);
   }
-
-  Future<AnalyzeSyntaxResponse> analyzeSyntax(
-      ClientContext ctx, AnalyzeSyntaxRequest request) {
+  $async.Future<AnalyzeSyntaxResponse> analyzeSyntax($pb.ClientContext ctx, AnalyzeSyntaxRequest request) {
     var emptyResponse = AnalyzeSyntaxResponse();
-    return _client.invoke<AnalyzeSyntaxResponse>(
-        ctx, 'LanguageService', 'AnalyzeSyntax', request, emptyResponse);
+    return _client.invoke<AnalyzeSyntaxResponse>(ctx, 'LanguageService', 'AnalyzeSyntax', request, emptyResponse);
   }
-
-  Future<ClassifyTextResponse> classifyText(
-      ClientContext ctx, ClassifyTextRequest request) {
+  $async.Future<ClassifyTextResponse> classifyText($pb.ClientContext ctx, ClassifyTextRequest request) {
     var emptyResponse = ClassifyTextResponse();
-    return _client.invoke<ClassifyTextResponse>(
-        ctx, 'LanguageService', 'ClassifyText', request, emptyResponse);
+    return _client.invoke<ClassifyTextResponse>(ctx, 'LanguageService', 'ClassifyText', request, emptyResponse);
   }
-
-  Future<AnnotateTextResponse> annotateText(
-      ClientContext ctx, AnnotateTextRequest request) {
+  $async.Future<AnnotateTextResponse> annotateText($pb.ClientContext ctx, AnnotateTextRequest request) {
     var emptyResponse = AnnotateTextResponse();
-    return _client.invoke<AnnotateTextResponse>(
-        ctx, 'LanguageService', 'AnnotateText', request, emptyResponse);
+    return _client.invoke<AnnotateTextResponse>(ctx, 'LanguageService', 'AnnotateText', request, emptyResponse);
   }
 }
+

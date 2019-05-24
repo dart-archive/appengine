@@ -1,13 +1,14 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/rpc/code.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Code extends ProtobufEnum {
+class Code extends $pb.ProtobufEnum {
   static const Code OK = Code._(0, 'OK');
   static const Code CANCELLED = Code._(1, 'CANCELLED');
   static const Code UNKNOWN = Code._(2, 'UNKNOWN');
@@ -26,7 +27,7 @@ class Code extends ProtobufEnum {
   static const Code UNAVAILABLE = Code._(14, 'UNAVAILABLE');
   static const Code DATA_LOSS = Code._(15, 'DATA_LOSS');
 
-  static const List<Code> values = <Code>[
+  static const $core.List<Code> values = <Code> [
     OK,
     CANCELLED,
     UNKNOWN,
@@ -46,11 +47,9 @@ class Code extends ProtobufEnum {
     DATA_LOSS,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Code valueOf(int value) => _byValue[value] as Code;
-  static void $checkItem(Code v) {
-    if (v is! Code) checkItemFailed(v, 'Code');
-  }
+  static final $core.Map<$core.int, Code> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Code valueOf($core.int value) => _byValue[value];
 
-  const Code._(int v, String n) : super(v, n);
+  const Code._($core.int v, $core.String n) : super(v, n);
 }
+

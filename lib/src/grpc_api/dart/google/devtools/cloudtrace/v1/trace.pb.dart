@@ -1,531 +1,301 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/cloudtrace/v1/trace.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
 
 import 'trace.pbenum.dart';
 
 export 'trace.pbenum.dart';
 
-class Trace extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Trace')
+class Trace extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Trace', package: const $pb.PackageName('google.devtools.cloudtrace.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'traceId')
-    ..pp<TraceSpan>(
-        3, 'spans', PbFieldType.PM, TraceSpan.$checkItem, TraceSpan.create)
-    ..hasRequiredFields = false;
+    ..pc<TraceSpan>(3, 'spans', $pb.PbFieldType.PM,TraceSpan.create)
+    ..hasRequiredFields = false
+  ;
 
   Trace() : super();
-  Trace.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Trace.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Trace.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Trace.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Trace clone() => Trace()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Trace copyWith(void Function(Trace) updates) => super.copyWith((message) => updates(message as Trace));
+  $pb.BuilderInfo get info_ => _i;
   static Trace create() => Trace();
-  static PbList<Trace> createRepeated() => PbList<Trace>();
-  static Trace getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyTrace();
-    return _defaultInstance;
-  }
-
+  Trace createEmptyInstance() => create();
+  static $pb.PbList<Trace> createRepeated() => $pb.PbList<Trace>();
+  static Trace getDefault() => _defaultInstance ??= create()..freeze();
   static Trace _defaultInstance;
-  static void $checkItem(Trace v) {
-    if (v is! Trace) checkItemFailed(v, 'Trace');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get traceId => $_getS(1, '');
-  set traceId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTraceId() => $_has(1);
+  $core.String get traceId => $_getS(1, '');
+  set traceId($core.String v) { $_setString(1, v); }
+  $core.bool hasTraceId() => $_has(1);
   void clearTraceId() => clearField(2);
 
-  List<TraceSpan> get spans => $_getList(2);
+  $core.List<TraceSpan> get spans => $_getList(2);
 }
 
-class _ReadonlyTrace extends Trace with ReadonlyMessageMixin {}
-
-class Traces extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Traces')
-    ..pp<Trace>(1, 'traces', PbFieldType.PM, Trace.$checkItem, Trace.create)
-    ..hasRequiredFields = false;
+class Traces extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Traces', package: const $pb.PackageName('google.devtools.cloudtrace.v1'))
+    ..pc<Trace>(1, 'traces', $pb.PbFieldType.PM,Trace.create)
+    ..hasRequiredFields = false
+  ;
 
   Traces() : super();
-  Traces.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Traces.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Traces.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Traces.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Traces clone() => Traces()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Traces copyWith(void Function(Traces) updates) => super.copyWith((message) => updates(message as Traces));
+  $pb.BuilderInfo get info_ => _i;
   static Traces create() => Traces();
-  static PbList<Traces> createRepeated() => PbList<Traces>();
-  static Traces getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyTraces();
-    return _defaultInstance;
-  }
-
+  Traces createEmptyInstance() => create();
+  static $pb.PbList<Traces> createRepeated() => $pb.PbList<Traces>();
+  static Traces getDefault() => _defaultInstance ??= create()..freeze();
   static Traces _defaultInstance;
-  static void $checkItem(Traces v) {
-    if (v is! Traces) checkItemFailed(v, 'Traces');
-  }
 
-  List<Trace> get traces => $_getList(0);
+  $core.List<Trace> get traces => $_getList(0);
 }
 
-class _ReadonlyTraces extends Traces with ReadonlyMessageMixin {}
-
-class TraceSpan_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('TraceSpan_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  TraceSpan_LabelsEntry() : super();
-  TraceSpan_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TraceSpan_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  TraceSpan_LabelsEntry clone() =>
-      TraceSpan_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TraceSpan_LabelsEntry create() => TraceSpan_LabelsEntry();
-  static PbList<TraceSpan_LabelsEntry> createRepeated() =>
-      PbList<TraceSpan_LabelsEntry>();
-  static TraceSpan_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyTraceSpan_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static TraceSpan_LabelsEntry _defaultInstance;
-  static void $checkItem(TraceSpan_LabelsEntry v) {
-    if (v is! TraceSpan_LabelsEntry)
-      checkItemFailed(v, 'TraceSpan_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyTraceSpan_LabelsEntry extends TraceSpan_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class TraceSpan extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('TraceSpan')
-    ..a<Int64>(1, 'spanId', PbFieldType.OF6, Int64.ZERO)
-    ..e<TraceSpan_SpanKind>(
-        2,
-        'kind',
-        PbFieldType.OE,
-        TraceSpan_SpanKind.SPAN_KIND_UNSPECIFIED,
-        TraceSpan_SpanKind.valueOf,
-        TraceSpan_SpanKind.values)
+class TraceSpan extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TraceSpan', package: const $pb.PackageName('google.devtools.cloudtrace.v1'))
+    ..a<Int64>(1, 'spanId', $pb.PbFieldType.OF6, Int64.ZERO)
+    ..e<TraceSpan_SpanKind>(2, 'kind', $pb.PbFieldType.OE, TraceSpan_SpanKind.SPAN_KIND_UNSPECIFIED, TraceSpan_SpanKind.valueOf, TraceSpan_SpanKind.values)
     ..aOS(3, 'name')
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<Int64>(6, 'parentSpanId', PbFieldType.OF6, Int64.ZERO)
-    ..pp<TraceSpan_LabelsEntry>(7, 'labels', PbFieldType.PM,
-        TraceSpan_LabelsEntry.$checkItem, TraceSpan_LabelsEntry.create)
-    ..hasRequiredFields = false;
+    ..a<$0.Timestamp>(4, 'startTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<Int64>(6, 'parentSpanId', $pb.PbFieldType.OF6, Int64.ZERO)
+    ..m<$core.String, $core.String>(7, 'labels', 'TraceSpan.LabelsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.devtools.cloudtrace.v1'))
+    ..hasRequiredFields = false
+  ;
 
   TraceSpan() : super();
-  TraceSpan.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TraceSpan.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TraceSpan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  TraceSpan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   TraceSpan clone() => TraceSpan()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  TraceSpan copyWith(void Function(TraceSpan) updates) => super.copyWith((message) => updates(message as TraceSpan));
+  $pb.BuilderInfo get info_ => _i;
   static TraceSpan create() => TraceSpan();
-  static PbList<TraceSpan> createRepeated() => PbList<TraceSpan>();
-  static TraceSpan getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyTraceSpan();
-    return _defaultInstance;
-  }
-
+  TraceSpan createEmptyInstance() => create();
+  static $pb.PbList<TraceSpan> createRepeated() => $pb.PbList<TraceSpan>();
+  static TraceSpan getDefault() => _defaultInstance ??= create()..freeze();
   static TraceSpan _defaultInstance;
-  static void $checkItem(TraceSpan v) {
-    if (v is! TraceSpan) checkItemFailed(v, 'TraceSpan');
-  }
 
   Int64 get spanId => $_getI64(0);
-  set spanId(Int64 v) {
-    $_setInt64(0, v);
-  }
-
-  bool hasSpanId() => $_has(0);
+  set spanId(Int64 v) { $_setInt64(0, v); }
+  $core.bool hasSpanId() => $_has(0);
   void clearSpanId() => clearField(1);
 
   TraceSpan_SpanKind get kind => $_getN(1);
-  set kind(TraceSpan_SpanKind v) {
-    setField(2, v);
-  }
-
-  bool hasKind() => $_has(1);
+  set kind(TraceSpan_SpanKind v) { setField(2, v); }
+  $core.bool hasKind() => $_has(1);
   void clearKind() => clearField(2);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasName() => $_has(2);
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) { $_setString(2, v); }
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  $google$protobuf.Timestamp get startTime => $_getN(3);
-  set startTime($google$protobuf.Timestamp v) {
-    setField(4, v);
-  }
-
-  bool hasStartTime() => $_has(3);
+  $0.Timestamp get startTime => $_getN(3);
+  set startTime($0.Timestamp v) { setField(4, v); }
+  $core.bool hasStartTime() => $_has(3);
   void clearStartTime() => clearField(4);
 
-  $google$protobuf.Timestamp get endTime => $_getN(4);
-  set endTime($google$protobuf.Timestamp v) {
-    setField(5, v);
-  }
-
-  bool hasEndTime() => $_has(4);
+  $0.Timestamp get endTime => $_getN(4);
+  set endTime($0.Timestamp v) { setField(5, v); }
+  $core.bool hasEndTime() => $_has(4);
   void clearEndTime() => clearField(5);
 
   Int64 get parentSpanId => $_getI64(5);
-  set parentSpanId(Int64 v) {
-    $_setInt64(5, v);
-  }
-
-  bool hasParentSpanId() => $_has(5);
+  set parentSpanId(Int64 v) { $_setInt64(5, v); }
+  $core.bool hasParentSpanId() => $_has(5);
   void clearParentSpanId() => clearField(6);
 
-  List<TraceSpan_LabelsEntry> get labels => $_getList(6);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(6);
 }
 
-class _ReadonlyTraceSpan extends TraceSpan with ReadonlyMessageMixin {}
-
-class ListTracesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListTracesRequest')
+class ListTracesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTracesRequest', package: const $pb.PackageName('google.devtools.cloudtrace.v1'))
     ..aOS(1, 'projectId')
-    ..e<ListTracesRequest_ViewType>(
-        2,
-        'view',
-        PbFieldType.OE,
-        ListTracesRequest_ViewType.VIEW_TYPE_UNSPECIFIED,
-        ListTracesRequest_ViewType.valueOf,
-        ListTracesRequest_ViewType.values)
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..e<ListTracesRequest_ViewType>(2, 'view', $pb.PbFieldType.OE, ListTracesRequest_ViewType.VIEW_TYPE_UNSPECIFIED, ListTracesRequest_ViewType.valueOf, ListTracesRequest_ViewType.values)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        6,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'startTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
     ..aOS(7, 'filter')
     ..aOS(8, 'orderBy')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListTracesRequest() : super();
-  ListTracesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTracesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTracesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListTracesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListTracesRequest clone() => ListTracesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListTracesRequest copyWith(void Function(ListTracesRequest) updates) => super.copyWith((message) => updates(message as ListTracesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListTracesRequest create() => ListTracesRequest();
-  static PbList<ListTracesRequest> createRepeated() =>
-      PbList<ListTracesRequest>();
-  static ListTracesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListTracesRequest();
-    return _defaultInstance;
-  }
-
+  ListTracesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTracesRequest> createRepeated() => $pb.PbList<ListTracesRequest>();
+  static ListTracesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListTracesRequest _defaultInstance;
-  static void $checkItem(ListTracesRequest v) {
-    if (v is! ListTracesRequest) checkItemFailed(v, 'ListTracesRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
   ListTracesRequest_ViewType get view => $_getN(1);
-  set view(ListTracesRequest_ViewType v) {
-    setField(2, v);
-  }
-
-  bool hasView() => $_has(1);
+  set view(ListTracesRequest_ViewType v) { setField(2, v); }
+  $core.bool hasView() => $_has(1);
   void clearView() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(3, '');
-  set pageToken(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasPageToken() => $_has(3);
+  $core.String get pageToken => $_getS(3, '');
+  set pageToken($core.String v) { $_setString(3, v); }
+  $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 
-  $google$protobuf.Timestamp get startTime => $_getN(4);
-  set startTime($google$protobuf.Timestamp v) {
-    setField(5, v);
-  }
-
-  bool hasStartTime() => $_has(4);
+  $0.Timestamp get startTime => $_getN(4);
+  set startTime($0.Timestamp v) { setField(5, v); }
+  $core.bool hasStartTime() => $_has(4);
   void clearStartTime() => clearField(5);
 
-  $google$protobuf.Timestamp get endTime => $_getN(5);
-  set endTime($google$protobuf.Timestamp v) {
-    setField(6, v);
-  }
-
-  bool hasEndTime() => $_has(5);
+  $0.Timestamp get endTime => $_getN(5);
+  set endTime($0.Timestamp v) { setField(6, v); }
+  $core.bool hasEndTime() => $_has(5);
   void clearEndTime() => clearField(6);
 
-  String get filter => $_getS(6, '');
-  set filter(String v) {
-    $_setString(6, v);
-  }
-
-  bool hasFilter() => $_has(6);
+  $core.String get filter => $_getS(6, '');
+  set filter($core.String v) { $_setString(6, v); }
+  $core.bool hasFilter() => $_has(6);
   void clearFilter() => clearField(7);
 
-  String get orderBy => $_getS(7, '');
-  set orderBy(String v) {
-    $_setString(7, v);
-  }
-
-  bool hasOrderBy() => $_has(7);
+  $core.String get orderBy => $_getS(7, '');
+  set orderBy($core.String v) { $_setString(7, v); }
+  $core.bool hasOrderBy() => $_has(7);
   void clearOrderBy() => clearField(8);
 }
 
-class _ReadonlyListTracesRequest extends ListTracesRequest
-    with ReadonlyMessageMixin {}
-
-class ListTracesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListTracesResponse')
-    ..pp<Trace>(1, 'traces', PbFieldType.PM, Trace.$checkItem, Trace.create)
+class ListTracesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTracesResponse', package: const $pb.PackageName('google.devtools.cloudtrace.v1'))
+    ..pc<Trace>(1, 'traces', $pb.PbFieldType.PM,Trace.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListTracesResponse() : super();
-  ListTracesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTracesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTracesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListTracesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListTracesResponse clone() => ListTracesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListTracesResponse copyWith(void Function(ListTracesResponse) updates) => super.copyWith((message) => updates(message as ListTracesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListTracesResponse create() => ListTracesResponse();
-  static PbList<ListTracesResponse> createRepeated() =>
-      PbList<ListTracesResponse>();
-  static ListTracesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListTracesResponse();
-    return _defaultInstance;
-  }
-
+  ListTracesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTracesResponse> createRepeated() => $pb.PbList<ListTracesResponse>();
+  static ListTracesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListTracesResponse _defaultInstance;
-  static void $checkItem(ListTracesResponse v) {
-    if (v is! ListTracesResponse) checkItemFailed(v, 'ListTracesResponse');
-  }
 
-  List<Trace> get traces => $_getList(0);
+  $core.List<Trace> get traces => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListTracesResponse extends ListTracesResponse
-    with ReadonlyMessageMixin {}
-
-class GetTraceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetTraceRequest')
+class GetTraceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTraceRequest', package: const $pb.PackageName('google.devtools.cloudtrace.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'traceId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetTraceRequest() : super();
-  GetTraceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetTraceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetTraceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetTraceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetTraceRequest clone() => GetTraceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetTraceRequest copyWith(void Function(GetTraceRequest) updates) => super.copyWith((message) => updates(message as GetTraceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetTraceRequest create() => GetTraceRequest();
-  static PbList<GetTraceRequest> createRepeated() => PbList<GetTraceRequest>();
-  static GetTraceRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetTraceRequest();
-    return _defaultInstance;
-  }
-
+  GetTraceRequest createEmptyInstance() => create();
+  static $pb.PbList<GetTraceRequest> createRepeated() => $pb.PbList<GetTraceRequest>();
+  static GetTraceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetTraceRequest _defaultInstance;
-  static void $checkItem(GetTraceRequest v) {
-    if (v is! GetTraceRequest) checkItemFailed(v, 'GetTraceRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get traceId => $_getS(1, '');
-  set traceId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTraceId() => $_has(1);
+  $core.String get traceId => $_getS(1, '');
+  set traceId($core.String v) { $_setString(1, v); }
+  $core.bool hasTraceId() => $_has(1);
   void clearTraceId() => clearField(2);
 }
 
-class _ReadonlyGetTraceRequest extends GetTraceRequest
-    with ReadonlyMessageMixin {}
-
-class PatchTracesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('PatchTracesRequest')
+class PatchTracesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PatchTracesRequest', package: const $pb.PackageName('google.devtools.cloudtrace.v1'))
     ..aOS(1, 'projectId')
-    ..a<Traces>(2, 'traces', PbFieldType.OM, Traces.getDefault, Traces.create)
-    ..hasRequiredFields = false;
+    ..a<Traces>(2, 'traces', $pb.PbFieldType.OM, Traces.getDefault, Traces.create)
+    ..hasRequiredFields = false
+  ;
 
   PatchTracesRequest() : super();
-  PatchTracesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PatchTracesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PatchTracesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  PatchTracesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   PatchTracesRequest clone() => PatchTracesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  PatchTracesRequest copyWith(void Function(PatchTracesRequest) updates) => super.copyWith((message) => updates(message as PatchTracesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static PatchTracesRequest create() => PatchTracesRequest();
-  static PbList<PatchTracesRequest> createRepeated() =>
-      PbList<PatchTracesRequest>();
-  static PatchTracesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyPatchTracesRequest();
-    return _defaultInstance;
-  }
-
+  PatchTracesRequest createEmptyInstance() => create();
+  static $pb.PbList<PatchTracesRequest> createRepeated() => $pb.PbList<PatchTracesRequest>();
+  static PatchTracesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static PatchTracesRequest _defaultInstance;
-  static void $checkItem(PatchTracesRequest v) {
-    if (v is! PatchTracesRequest) checkItemFailed(v, 'PatchTracesRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
   Traces get traces => $_getN(1);
-  set traces(Traces v) {
-    setField(2, v);
-  }
-
-  bool hasTraces() => $_has(1);
+  set traces(Traces v) { setField(2, v); }
+  $core.bool hasTraces() => $_has(1);
   void clearTraces() => clearField(2);
 }
 
-class _ReadonlyPatchTracesRequest extends PatchTracesRequest
-    with ReadonlyMessageMixin {}
-
 class TraceServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   TraceServiceApi(this._client);
 
-  Future<ListTracesResponse> listTraces(
-      ClientContext ctx, ListTracesRequest request) {
+  $async.Future<ListTracesResponse> listTraces($pb.ClientContext ctx, ListTracesRequest request) {
     var emptyResponse = ListTracesResponse();
-    return _client.invoke<ListTracesResponse>(
-        ctx, 'TraceService', 'ListTraces', request, emptyResponse);
+    return _client.invoke<ListTracesResponse>(ctx, 'TraceService', 'ListTraces', request, emptyResponse);
   }
-
-  Future<Trace> getTrace(ClientContext ctx, GetTraceRequest request) {
+  $async.Future<Trace> getTrace($pb.ClientContext ctx, GetTraceRequest request) {
     var emptyResponse = Trace();
-    return _client.invoke<Trace>(
-        ctx, 'TraceService', 'GetTrace', request, emptyResponse);
+    return _client.invoke<Trace>(ctx, 'TraceService', 'GetTrace', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> patchTraces(
-      ClientContext ctx, PatchTracesRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'TraceService', 'PatchTraces', request, emptyResponse);
+  $async.Future<$1.Empty> patchTraces($pb.ClientContext ctx, PatchTracesRequest request) {
+    var emptyResponse = $1.Empty();
+    return _client.invoke<$1.Empty>(ctx, 'TraceService', 'PatchTraces', request, emptyResponse);
   }
 }
+

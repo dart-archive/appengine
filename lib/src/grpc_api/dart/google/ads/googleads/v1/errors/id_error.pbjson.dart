@@ -1,0 +1,20 @@
+///
+//  Generated code. Do not modify.
+//  source: google/ads/googleads/v1/errors/id_error.proto
+///
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+
+const IdErrorEnum$json = const {
+  '1': 'IdErrorEnum',
+  '4': const [IdErrorEnum_IdError$json],
+};
+
+const IdErrorEnum_IdError$json = const {
+  '1': 'IdError',
+  '2': const [
+    const {'1': 'UNSPECIFIED', '2': 0},
+    const {'1': 'UNKNOWN', '2': 1},
+    const {'1': 'NOT_FOUND', '2': 2},
+  ],
+};
+

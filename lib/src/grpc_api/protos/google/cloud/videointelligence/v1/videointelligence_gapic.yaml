@@ -17,15 +17,12 @@ language_settings:
   nodejs:
     package_name: video-intelligence.v1
     domain_layer_location: google-cloud
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
 interfaces:
 - name: google.cloud.videointelligence.v1.VideoIntelligenceService
   smoke_test:
     method: AnnotateVideo
     init_fields:
-    - input_uri=gs://demomaker/cat.mp4
+    - input_uri=gs://cloud-samples-data/video/cat.mp4
     - features[0]=LABEL_DETECTION
   collections: []
   retry_codes_def:
@@ -58,10 +55,9 @@ interfaces:
       poll_delay_multiplier: 1.5
       max_poll_delay_millis: 45000
       total_poll_timeout_millis: 86400000
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
     sample_code_init_fields:
-    - input_uri=gs://demomaker/cat.mp4
+    - input_uri=gs://cloud-samples-data/video/cat.mp4
     - features[0]=LABEL_DETECTION

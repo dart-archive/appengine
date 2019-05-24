@@ -1,1125 +1,898 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/v2/data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Row extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Row')
-    ..a<List<int>>(1, 'key', PbFieldType.OY)
-    ..pp<Family>(
-        2, 'families', PbFieldType.PM, Family.$checkItem, Family.create)
-    ..hasRequiredFields = false;
+class Row extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Row', package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<$core.List<$core.int>>(1, 'key', $pb.PbFieldType.OY)
+    ..pc<Family>(2, 'families', $pb.PbFieldType.PM,Family.create)
+    ..hasRequiredFields = false
+  ;
 
   Row() : super();
-  Row.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Row.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Row.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Row.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Row clone() => Row()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Row copyWith(void Function(Row) updates) => super.copyWith((message) => updates(message as Row));
+  $pb.BuilderInfo get info_ => _i;
   static Row create() => Row();
-  static PbList<Row> createRepeated() => PbList<Row>();
-  static Row getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRow();
-    return _defaultInstance;
-  }
-
+  Row createEmptyInstance() => create();
+  static $pb.PbList<Row> createRepeated() => $pb.PbList<Row>();
+  static Row getDefault() => _defaultInstance ??= create()..freeze();
   static Row _defaultInstance;
-  static void $checkItem(Row v) {
-    if (v is! Row) checkItemFailed(v, 'Row');
-  }
 
-  List<int> get key => $_getN(0);
-  set key(List<int> v) {
-    $_setBytes(0, v);
-  }
-
-  bool hasKey() => $_has(0);
+  $core.List<$core.int> get key => $_getN(0);
+  set key($core.List<$core.int> v) { $_setBytes(0, v); }
+  $core.bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  List<Family> get families => $_getList(1);
+  $core.List<Family> get families => $_getList(1);
 }
 
-class _ReadonlyRow extends Row with ReadonlyMessageMixin {}
-
-class Family extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Family')
+class Family extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Family', package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'name')
-    ..pp<Column>(2, 'columns', PbFieldType.PM, Column.$checkItem, Column.create)
-    ..hasRequiredFields = false;
+    ..pc<Column>(2, 'columns', $pb.PbFieldType.PM,Column.create)
+    ..hasRequiredFields = false
+  ;
 
   Family() : super();
-  Family.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Family.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Family.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Family.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Family clone() => Family()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Family copyWith(void Function(Family) updates) => super.copyWith((message) => updates(message as Family));
+  $pb.BuilderInfo get info_ => _i;
   static Family create() => Family();
-  static PbList<Family> createRepeated() => PbList<Family>();
-  static Family getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyFamily();
-    return _defaultInstance;
-  }
-
+  Family createEmptyInstance() => create();
+  static $pb.PbList<Family> createRepeated() => $pb.PbList<Family>();
+  static Family getDefault() => _defaultInstance ??= create()..freeze();
   static Family _defaultInstance;
-  static void $checkItem(Family v) {
-    if (v is! Family) checkItemFailed(v, 'Family');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<Column> get columns => $_getList(1);
+  $core.List<Column> get columns => $_getList(1);
 }
 
-class _ReadonlyFamily extends Family with ReadonlyMessageMixin {}
-
-class Column extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Column')
-    ..a<List<int>>(1, 'qualifier', PbFieldType.OY)
-    ..pp<Cell>(2, 'cells', PbFieldType.PM, Cell.$checkItem, Cell.create)
-    ..hasRequiredFields = false;
+class Column extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Column', package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<$core.List<$core.int>>(1, 'qualifier', $pb.PbFieldType.OY)
+    ..pc<Cell>(2, 'cells', $pb.PbFieldType.PM,Cell.create)
+    ..hasRequiredFields = false
+  ;
 
   Column() : super();
-  Column.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Column.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Column.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Column.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Column clone() => Column()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Column copyWith(void Function(Column) updates) => super.copyWith((message) => updates(message as Column));
+  $pb.BuilderInfo get info_ => _i;
   static Column create() => Column();
-  static PbList<Column> createRepeated() => PbList<Column>();
-  static Column getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyColumn();
-    return _defaultInstance;
-  }
-
+  Column createEmptyInstance() => create();
+  static $pb.PbList<Column> createRepeated() => $pb.PbList<Column>();
+  static Column getDefault() => _defaultInstance ??= create()..freeze();
   static Column _defaultInstance;
-  static void $checkItem(Column v) {
-    if (v is! Column) checkItemFailed(v, 'Column');
-  }
 
-  List<int> get qualifier => $_getN(0);
-  set qualifier(List<int> v) {
-    $_setBytes(0, v);
-  }
-
-  bool hasQualifier() => $_has(0);
+  $core.List<$core.int> get qualifier => $_getN(0);
+  set qualifier($core.List<$core.int> v) { $_setBytes(0, v); }
+  $core.bool hasQualifier() => $_has(0);
   void clearQualifier() => clearField(1);
 
-  List<Cell> get cells => $_getList(1);
+  $core.List<Cell> get cells => $_getList(1);
 }
 
-class _ReadonlyColumn extends Column with ReadonlyMessageMixin {}
-
-class Cell extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Cell')
+class Cell extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cell', package: const $pb.PackageName('google.bigtable.v2'))
     ..aInt64(1, 'timestampMicros')
-    ..a<List<int>>(2, 'value', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'value', $pb.PbFieldType.OY)
     ..pPS(3, 'labels')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Cell() : super();
-  Cell.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Cell.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Cell.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Cell.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Cell clone() => Cell()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Cell copyWith(void Function(Cell) updates) => super.copyWith((message) => updates(message as Cell));
+  $pb.BuilderInfo get info_ => _i;
   static Cell create() => Cell();
-  static PbList<Cell> createRepeated() => PbList<Cell>();
-  static Cell getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyCell();
-    return _defaultInstance;
-  }
-
+  Cell createEmptyInstance() => create();
+  static $pb.PbList<Cell> createRepeated() => $pb.PbList<Cell>();
+  static Cell getDefault() => _defaultInstance ??= create()..freeze();
   static Cell _defaultInstance;
-  static void $checkItem(Cell v) {
-    if (v is! Cell) checkItemFailed(v, 'Cell');
-  }
 
   Int64 get timestampMicros => $_getI64(0);
-  set timestampMicros(Int64 v) {
-    $_setInt64(0, v);
-  }
-
-  bool hasTimestampMicros() => $_has(0);
+  set timestampMicros(Int64 v) { $_setInt64(0, v); }
+  $core.bool hasTimestampMicros() => $_has(0);
   void clearTimestampMicros() => clearField(1);
 
-  List<int> get value => $_getN(1);
-  set value(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasValue() => $_has(1);
+  $core.List<$core.int> get value => $_getN(1);
+  set value($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 
-  List<String> get labels => $_getList(2);
+  $core.List<$core.String> get labels => $_getList(2);
 }
 
-class _ReadonlyCell extends Cell with ReadonlyMessageMixin {}
+enum RowRange_StartKey {
+  startKeyClosed, 
+  startKeyOpen, 
+  notSet
+}
 
-class RowRange extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RowRange')
-    ..a<List<int>>(1, 'startKeyClosed', PbFieldType.OY)
-    ..a<List<int>>(2, 'startKeyOpen', PbFieldType.OY)
-    ..a<List<int>>(3, 'endKeyOpen', PbFieldType.OY)
-    ..a<List<int>>(4, 'endKeyClosed', PbFieldType.OY)
-    ..hasRequiredFields = false;
+enum RowRange_EndKey {
+  endKeyOpen, 
+  endKeyClosed, 
+  notSet
+}
+
+class RowRange extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RowRange_StartKey> _RowRange_StartKeyByTag = {
+    1 : RowRange_StartKey.startKeyClosed,
+    2 : RowRange_StartKey.startKeyOpen,
+    0 : RowRange_StartKey.notSet
+  };
+  static const $core.Map<$core.int, RowRange_EndKey> _RowRange_EndKeyByTag = {
+    3 : RowRange_EndKey.endKeyOpen,
+    4 : RowRange_EndKey.endKeyClosed,
+    0 : RowRange_EndKey.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowRange', package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<$core.List<$core.int>>(1, 'startKeyClosed', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'startKeyOpen', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, 'endKeyOpen', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(4, 'endKeyClosed', $pb.PbFieldType.OY)
+    ..oo(0, [1, 2])
+    ..oo(1, [3, 4])
+    ..hasRequiredFields = false
+  ;
 
   RowRange() : super();
-  RowRange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowRange.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RowRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RowRange clone() => RowRange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RowRange copyWith(void Function(RowRange) updates) => super.copyWith((message) => updates(message as RowRange));
+  $pb.BuilderInfo get info_ => _i;
   static RowRange create() => RowRange();
-  static PbList<RowRange> createRepeated() => PbList<RowRange>();
-  static RowRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRowRange();
-    return _defaultInstance;
-  }
-
+  RowRange createEmptyInstance() => create();
+  static $pb.PbList<RowRange> createRepeated() => $pb.PbList<RowRange>();
+  static RowRange getDefault() => _defaultInstance ??= create()..freeze();
   static RowRange _defaultInstance;
-  static void $checkItem(RowRange v) {
-    if (v is! RowRange) checkItemFailed(v, 'RowRange');
-  }
 
-  List<int> get startKeyClosed => $_getN(0);
-  set startKeyClosed(List<int> v) {
-    $_setBytes(0, v);
-  }
+  RowRange_StartKey whichStartKey() => _RowRange_StartKeyByTag[$_whichOneof(0)];
+  void clearStartKey() => clearField($_whichOneof(0));
 
-  bool hasStartKeyClosed() => $_has(0);
+  RowRange_EndKey whichEndKey() => _RowRange_EndKeyByTag[$_whichOneof(1)];
+  void clearEndKey() => clearField($_whichOneof(1));
+
+  $core.List<$core.int> get startKeyClosed => $_getN(0);
+  set startKeyClosed($core.List<$core.int> v) { $_setBytes(0, v); }
+  $core.bool hasStartKeyClosed() => $_has(0);
   void clearStartKeyClosed() => clearField(1);
 
-  List<int> get startKeyOpen => $_getN(1);
-  set startKeyOpen(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasStartKeyOpen() => $_has(1);
+  $core.List<$core.int> get startKeyOpen => $_getN(1);
+  set startKeyOpen($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasStartKeyOpen() => $_has(1);
   void clearStartKeyOpen() => clearField(2);
 
-  List<int> get endKeyOpen => $_getN(2);
-  set endKeyOpen(List<int> v) {
-    $_setBytes(2, v);
-  }
-
-  bool hasEndKeyOpen() => $_has(2);
+  $core.List<$core.int> get endKeyOpen => $_getN(2);
+  set endKeyOpen($core.List<$core.int> v) { $_setBytes(2, v); }
+  $core.bool hasEndKeyOpen() => $_has(2);
   void clearEndKeyOpen() => clearField(3);
 
-  List<int> get endKeyClosed => $_getN(3);
-  set endKeyClosed(List<int> v) {
-    $_setBytes(3, v);
-  }
-
-  bool hasEndKeyClosed() => $_has(3);
+  $core.List<$core.int> get endKeyClosed => $_getN(3);
+  set endKeyClosed($core.List<$core.int> v) { $_setBytes(3, v); }
+  $core.bool hasEndKeyClosed() => $_has(3);
   void clearEndKeyClosed() => clearField(4);
 }
 
-class _ReadonlyRowRange extends RowRange with ReadonlyMessageMixin {}
-
-class RowSet extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RowSet')
-    ..p<List<int>>(1, 'rowKeys', PbFieldType.PY)
-    ..pp<RowRange>(
-        2, 'rowRanges', PbFieldType.PM, RowRange.$checkItem, RowRange.create)
-    ..hasRequiredFields = false;
+class RowSet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowSet', package: const $pb.PackageName('google.bigtable.v2'))
+    ..p<$core.List<$core.int>>(1, 'rowKeys', $pb.PbFieldType.PY)
+    ..pc<RowRange>(2, 'rowRanges', $pb.PbFieldType.PM,RowRange.create)
+    ..hasRequiredFields = false
+  ;
 
   RowSet() : super();
-  RowSet.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowSet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowSet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RowSet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RowSet clone() => RowSet()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RowSet copyWith(void Function(RowSet) updates) => super.copyWith((message) => updates(message as RowSet));
+  $pb.BuilderInfo get info_ => _i;
   static RowSet create() => RowSet();
-  static PbList<RowSet> createRepeated() => PbList<RowSet>();
-  static RowSet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRowSet();
-    return _defaultInstance;
-  }
-
+  RowSet createEmptyInstance() => create();
+  static $pb.PbList<RowSet> createRepeated() => $pb.PbList<RowSet>();
+  static RowSet getDefault() => _defaultInstance ??= create()..freeze();
   static RowSet _defaultInstance;
-  static void $checkItem(RowSet v) {
-    if (v is! RowSet) checkItemFailed(v, 'RowSet');
-  }
 
-  List<List<int>> get rowKeys => $_getList(0);
+  $core.List<$core.List<$core.int>> get rowKeys => $_getList(0);
 
-  List<RowRange> get rowRanges => $_getList(1);
+  $core.List<RowRange> get rowRanges => $_getList(1);
 }
 
-class _ReadonlyRowSet extends RowSet with ReadonlyMessageMixin {}
+enum ColumnRange_StartQualifier {
+  startQualifierClosed, 
+  startQualifierOpen, 
+  notSet
+}
 
-class ColumnRange extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ColumnRange')
+enum ColumnRange_EndQualifier {
+  endQualifierClosed, 
+  endQualifierOpen, 
+  notSet
+}
+
+class ColumnRange extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ColumnRange_StartQualifier> _ColumnRange_StartQualifierByTag = {
+    2 : ColumnRange_StartQualifier.startQualifierClosed,
+    3 : ColumnRange_StartQualifier.startQualifierOpen,
+    0 : ColumnRange_StartQualifier.notSet
+  };
+  static const $core.Map<$core.int, ColumnRange_EndQualifier> _ColumnRange_EndQualifierByTag = {
+    4 : ColumnRange_EndQualifier.endQualifierClosed,
+    5 : ColumnRange_EndQualifier.endQualifierOpen,
+    0 : ColumnRange_EndQualifier.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ColumnRange', package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'familyName')
-    ..a<List<int>>(2, 'startQualifierClosed', PbFieldType.OY)
-    ..a<List<int>>(3, 'startQualifierOpen', PbFieldType.OY)
-    ..a<List<int>>(4, 'endQualifierClosed', PbFieldType.OY)
-    ..a<List<int>>(5, 'endQualifierOpen', PbFieldType.OY)
-    ..hasRequiredFields = false;
+    ..a<$core.List<$core.int>>(2, 'startQualifierClosed', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, 'startQualifierOpen', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(4, 'endQualifierClosed', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(5, 'endQualifierOpen', $pb.PbFieldType.OY)
+    ..oo(0, [2, 3])
+    ..oo(1, [4, 5])
+    ..hasRequiredFields = false
+  ;
 
   ColumnRange() : super();
-  ColumnRange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ColumnRange.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ColumnRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ColumnRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ColumnRange clone() => ColumnRange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ColumnRange copyWith(void Function(ColumnRange) updates) => super.copyWith((message) => updates(message as ColumnRange));
+  $pb.BuilderInfo get info_ => _i;
   static ColumnRange create() => ColumnRange();
-  static PbList<ColumnRange> createRepeated() => PbList<ColumnRange>();
-  static ColumnRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyColumnRange();
-    return _defaultInstance;
-  }
-
+  ColumnRange createEmptyInstance() => create();
+  static $pb.PbList<ColumnRange> createRepeated() => $pb.PbList<ColumnRange>();
+  static ColumnRange getDefault() => _defaultInstance ??= create()..freeze();
   static ColumnRange _defaultInstance;
-  static void $checkItem(ColumnRange v) {
-    if (v is! ColumnRange) checkItemFailed(v, 'ColumnRange');
-  }
 
-  String get familyName => $_getS(0, '');
-  set familyName(String v) {
-    $_setString(0, v);
-  }
+  ColumnRange_StartQualifier whichStartQualifier() => _ColumnRange_StartQualifierByTag[$_whichOneof(0)];
+  void clearStartQualifier() => clearField($_whichOneof(0));
 
-  bool hasFamilyName() => $_has(0);
+  ColumnRange_EndQualifier whichEndQualifier() => _ColumnRange_EndQualifierByTag[$_whichOneof(1)];
+  void clearEndQualifier() => clearField($_whichOneof(1));
+
+  $core.String get familyName => $_getS(0, '');
+  set familyName($core.String v) { $_setString(0, v); }
+  $core.bool hasFamilyName() => $_has(0);
   void clearFamilyName() => clearField(1);
 
-  List<int> get startQualifierClosed => $_getN(1);
-  set startQualifierClosed(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasStartQualifierClosed() => $_has(1);
+  $core.List<$core.int> get startQualifierClosed => $_getN(1);
+  set startQualifierClosed($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasStartQualifierClosed() => $_has(1);
   void clearStartQualifierClosed() => clearField(2);
 
-  List<int> get startQualifierOpen => $_getN(2);
-  set startQualifierOpen(List<int> v) {
-    $_setBytes(2, v);
-  }
-
-  bool hasStartQualifierOpen() => $_has(2);
+  $core.List<$core.int> get startQualifierOpen => $_getN(2);
+  set startQualifierOpen($core.List<$core.int> v) { $_setBytes(2, v); }
+  $core.bool hasStartQualifierOpen() => $_has(2);
   void clearStartQualifierOpen() => clearField(3);
 
-  List<int> get endQualifierClosed => $_getN(3);
-  set endQualifierClosed(List<int> v) {
-    $_setBytes(3, v);
-  }
-
-  bool hasEndQualifierClosed() => $_has(3);
+  $core.List<$core.int> get endQualifierClosed => $_getN(3);
+  set endQualifierClosed($core.List<$core.int> v) { $_setBytes(3, v); }
+  $core.bool hasEndQualifierClosed() => $_has(3);
   void clearEndQualifierClosed() => clearField(4);
 
-  List<int> get endQualifierOpen => $_getN(4);
-  set endQualifierOpen(List<int> v) {
-    $_setBytes(4, v);
-  }
-
-  bool hasEndQualifierOpen() => $_has(4);
+  $core.List<$core.int> get endQualifierOpen => $_getN(4);
+  set endQualifierOpen($core.List<$core.int> v) { $_setBytes(4, v); }
+  $core.bool hasEndQualifierOpen() => $_has(4);
   void clearEndQualifierOpen() => clearField(5);
 }
 
-class _ReadonlyColumnRange extends ColumnRange with ReadonlyMessageMixin {}
-
-class TimestampRange extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('TimestampRange')
+class TimestampRange extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimestampRange', package: const $pb.PackageName('google.bigtable.v2'))
     ..aInt64(1, 'startTimestampMicros')
     ..aInt64(2, 'endTimestampMicros')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   TimestampRange() : super();
-  TimestampRange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimestampRange.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimestampRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  TimestampRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   TimestampRange clone() => TimestampRange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  TimestampRange copyWith(void Function(TimestampRange) updates) => super.copyWith((message) => updates(message as TimestampRange));
+  $pb.BuilderInfo get info_ => _i;
   static TimestampRange create() => TimestampRange();
-  static PbList<TimestampRange> createRepeated() => PbList<TimestampRange>();
-  static TimestampRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyTimestampRange();
-    return _defaultInstance;
-  }
-
+  TimestampRange createEmptyInstance() => create();
+  static $pb.PbList<TimestampRange> createRepeated() => $pb.PbList<TimestampRange>();
+  static TimestampRange getDefault() => _defaultInstance ??= create()..freeze();
   static TimestampRange _defaultInstance;
-  static void $checkItem(TimestampRange v) {
-    if (v is! TimestampRange) checkItemFailed(v, 'TimestampRange');
-  }
 
   Int64 get startTimestampMicros => $_getI64(0);
-  set startTimestampMicros(Int64 v) {
-    $_setInt64(0, v);
-  }
-
-  bool hasStartTimestampMicros() => $_has(0);
+  set startTimestampMicros(Int64 v) { $_setInt64(0, v); }
+  $core.bool hasStartTimestampMicros() => $_has(0);
   void clearStartTimestampMicros() => clearField(1);
 
   Int64 get endTimestampMicros => $_getI64(1);
-  set endTimestampMicros(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasEndTimestampMicros() => $_has(1);
+  set endTimestampMicros(Int64 v) { $_setInt64(1, v); }
+  $core.bool hasEndTimestampMicros() => $_has(1);
   void clearEndTimestampMicros() => clearField(2);
 }
 
-class _ReadonlyTimestampRange extends TimestampRange with ReadonlyMessageMixin {
+enum ValueRange_StartValue {
+  startValueClosed, 
+  startValueOpen, 
+  notSet
 }
 
-class ValueRange extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ValueRange')
-    ..a<List<int>>(1, 'startValueClosed', PbFieldType.OY)
-    ..a<List<int>>(2, 'startValueOpen', PbFieldType.OY)
-    ..a<List<int>>(3, 'endValueClosed', PbFieldType.OY)
-    ..a<List<int>>(4, 'endValueOpen', PbFieldType.OY)
-    ..hasRequiredFields = false;
+enum ValueRange_EndValue {
+  endValueClosed, 
+  endValueOpen, 
+  notSet
+}
+
+class ValueRange extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ValueRange_StartValue> _ValueRange_StartValueByTag = {
+    1 : ValueRange_StartValue.startValueClosed,
+    2 : ValueRange_StartValue.startValueOpen,
+    0 : ValueRange_StartValue.notSet
+  };
+  static const $core.Map<$core.int, ValueRange_EndValue> _ValueRange_EndValueByTag = {
+    3 : ValueRange_EndValue.endValueClosed,
+    4 : ValueRange_EndValue.endValueOpen,
+    0 : ValueRange_EndValue.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ValueRange', package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<$core.List<$core.int>>(1, 'startValueClosed', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'startValueOpen', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, 'endValueClosed', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(4, 'endValueOpen', $pb.PbFieldType.OY)
+    ..oo(0, [1, 2])
+    ..oo(1, [3, 4])
+    ..hasRequiredFields = false
+  ;
 
   ValueRange() : super();
-  ValueRange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ValueRange.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ValueRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ValueRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ValueRange clone() => ValueRange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ValueRange copyWith(void Function(ValueRange) updates) => super.copyWith((message) => updates(message as ValueRange));
+  $pb.BuilderInfo get info_ => _i;
   static ValueRange create() => ValueRange();
-  static PbList<ValueRange> createRepeated() => PbList<ValueRange>();
-  static ValueRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyValueRange();
-    return _defaultInstance;
-  }
-
+  ValueRange createEmptyInstance() => create();
+  static $pb.PbList<ValueRange> createRepeated() => $pb.PbList<ValueRange>();
+  static ValueRange getDefault() => _defaultInstance ??= create()..freeze();
   static ValueRange _defaultInstance;
-  static void $checkItem(ValueRange v) {
-    if (v is! ValueRange) checkItemFailed(v, 'ValueRange');
-  }
 
-  List<int> get startValueClosed => $_getN(0);
-  set startValueClosed(List<int> v) {
-    $_setBytes(0, v);
-  }
+  ValueRange_StartValue whichStartValue() => _ValueRange_StartValueByTag[$_whichOneof(0)];
+  void clearStartValue() => clearField($_whichOneof(0));
 
-  bool hasStartValueClosed() => $_has(0);
+  ValueRange_EndValue whichEndValue() => _ValueRange_EndValueByTag[$_whichOneof(1)];
+  void clearEndValue() => clearField($_whichOneof(1));
+
+  $core.List<$core.int> get startValueClosed => $_getN(0);
+  set startValueClosed($core.List<$core.int> v) { $_setBytes(0, v); }
+  $core.bool hasStartValueClosed() => $_has(0);
   void clearStartValueClosed() => clearField(1);
 
-  List<int> get startValueOpen => $_getN(1);
-  set startValueOpen(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasStartValueOpen() => $_has(1);
+  $core.List<$core.int> get startValueOpen => $_getN(1);
+  set startValueOpen($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasStartValueOpen() => $_has(1);
   void clearStartValueOpen() => clearField(2);
 
-  List<int> get endValueClosed => $_getN(2);
-  set endValueClosed(List<int> v) {
-    $_setBytes(2, v);
-  }
-
-  bool hasEndValueClosed() => $_has(2);
+  $core.List<$core.int> get endValueClosed => $_getN(2);
+  set endValueClosed($core.List<$core.int> v) { $_setBytes(2, v); }
+  $core.bool hasEndValueClosed() => $_has(2);
   void clearEndValueClosed() => clearField(3);
 
-  List<int> get endValueOpen => $_getN(3);
-  set endValueOpen(List<int> v) {
-    $_setBytes(3, v);
-  }
-
-  bool hasEndValueOpen() => $_has(3);
+  $core.List<$core.int> get endValueOpen => $_getN(3);
+  set endValueOpen($core.List<$core.int> v) { $_setBytes(3, v); }
+  $core.bool hasEndValueOpen() => $_has(3);
   void clearEndValueOpen() => clearField(4);
 }
 
-class _ReadonlyValueRange extends ValueRange with ReadonlyMessageMixin {}
-
-class RowFilter_Chain extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RowFilter_Chain')
-    ..pp<RowFilter>(
-        1, 'filters', PbFieldType.PM, RowFilter.$checkItem, RowFilter.create)
-    ..hasRequiredFields = false;
+class RowFilter_Chain extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter.Chain', package: const $pb.PackageName('google.bigtable.v2'))
+    ..pc<RowFilter>(1, 'filters', $pb.PbFieldType.PM,RowFilter.create)
+    ..hasRequiredFields = false
+  ;
 
   RowFilter_Chain() : super();
-  RowFilter_Chain.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowFilter_Chain.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowFilter_Chain.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RowFilter_Chain.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RowFilter_Chain clone() => RowFilter_Chain()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RowFilter_Chain copyWith(void Function(RowFilter_Chain) updates) => super.copyWith((message) => updates(message as RowFilter_Chain));
+  $pb.BuilderInfo get info_ => _i;
   static RowFilter_Chain create() => RowFilter_Chain();
-  static PbList<RowFilter_Chain> createRepeated() => PbList<RowFilter_Chain>();
-  static RowFilter_Chain getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRowFilter_Chain();
-    return _defaultInstance;
-  }
-
+  RowFilter_Chain createEmptyInstance() => create();
+  static $pb.PbList<RowFilter_Chain> createRepeated() => $pb.PbList<RowFilter_Chain>();
+  static RowFilter_Chain getDefault() => _defaultInstance ??= create()..freeze();
   static RowFilter_Chain _defaultInstance;
-  static void $checkItem(RowFilter_Chain v) {
-    if (v is! RowFilter_Chain) checkItemFailed(v, 'RowFilter_Chain');
-  }
 
-  List<RowFilter> get filters => $_getList(0);
+  $core.List<RowFilter> get filters => $_getList(0);
 }
 
-class _ReadonlyRowFilter_Chain extends RowFilter_Chain
-    with ReadonlyMessageMixin {}
-
-class RowFilter_Interleave extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RowFilter_Interleave')
-    ..pp<RowFilter>(
-        1, 'filters', PbFieldType.PM, RowFilter.$checkItem, RowFilter.create)
-    ..hasRequiredFields = false;
+class RowFilter_Interleave extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter.Interleave', package: const $pb.PackageName('google.bigtable.v2'))
+    ..pc<RowFilter>(1, 'filters', $pb.PbFieldType.PM,RowFilter.create)
+    ..hasRequiredFields = false
+  ;
 
   RowFilter_Interleave() : super();
-  RowFilter_Interleave.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowFilter_Interleave.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  RowFilter_Interleave clone() =>
-      RowFilter_Interleave()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RowFilter_Interleave.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RowFilter_Interleave.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  RowFilter_Interleave clone() => RowFilter_Interleave()..mergeFromMessage(this);
+  RowFilter_Interleave copyWith(void Function(RowFilter_Interleave) updates) => super.copyWith((message) => updates(message as RowFilter_Interleave));
+  $pb.BuilderInfo get info_ => _i;
   static RowFilter_Interleave create() => RowFilter_Interleave();
-  static PbList<RowFilter_Interleave> createRepeated() =>
-      PbList<RowFilter_Interleave>();
-  static RowFilter_Interleave getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyRowFilter_Interleave();
-    return _defaultInstance;
-  }
-
+  RowFilter_Interleave createEmptyInstance() => create();
+  static $pb.PbList<RowFilter_Interleave> createRepeated() => $pb.PbList<RowFilter_Interleave>();
+  static RowFilter_Interleave getDefault() => _defaultInstance ??= create()..freeze();
   static RowFilter_Interleave _defaultInstance;
-  static void $checkItem(RowFilter_Interleave v) {
-    if (v is! RowFilter_Interleave) checkItemFailed(v, 'RowFilter_Interleave');
-  }
 
-  List<RowFilter> get filters => $_getList(0);
+  $core.List<RowFilter> get filters => $_getList(0);
 }
 
-class _ReadonlyRowFilter_Interleave extends RowFilter_Interleave
-    with ReadonlyMessageMixin {}
-
-class RowFilter_Condition extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RowFilter_Condition')
-    ..a<RowFilter>(1, 'predicateFilter', PbFieldType.OM, RowFilter.getDefault,
-        RowFilter.create)
-    ..a<RowFilter>(
-        2, 'trueFilter', PbFieldType.OM, RowFilter.getDefault, RowFilter.create)
-    ..a<RowFilter>(3, 'falseFilter', PbFieldType.OM, RowFilter.getDefault,
-        RowFilter.create)
-    ..hasRequiredFields = false;
+class RowFilter_Condition extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter.Condition', package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<RowFilter>(1, 'predicateFilter', $pb.PbFieldType.OM, RowFilter.getDefault, RowFilter.create)
+    ..a<RowFilter>(2, 'trueFilter', $pb.PbFieldType.OM, RowFilter.getDefault, RowFilter.create)
+    ..a<RowFilter>(3, 'falseFilter', $pb.PbFieldType.OM, RowFilter.getDefault, RowFilter.create)
+    ..hasRequiredFields = false
+  ;
 
   RowFilter_Condition() : super();
-  RowFilter_Condition.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowFilter_Condition.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowFilter_Condition.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RowFilter_Condition.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RowFilter_Condition clone() => RowFilter_Condition()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RowFilter_Condition copyWith(void Function(RowFilter_Condition) updates) => super.copyWith((message) => updates(message as RowFilter_Condition));
+  $pb.BuilderInfo get info_ => _i;
   static RowFilter_Condition create() => RowFilter_Condition();
-  static PbList<RowFilter_Condition> createRepeated() =>
-      PbList<RowFilter_Condition>();
-  static RowFilter_Condition getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyRowFilter_Condition();
-    return _defaultInstance;
-  }
-
+  RowFilter_Condition createEmptyInstance() => create();
+  static $pb.PbList<RowFilter_Condition> createRepeated() => $pb.PbList<RowFilter_Condition>();
+  static RowFilter_Condition getDefault() => _defaultInstance ??= create()..freeze();
   static RowFilter_Condition _defaultInstance;
-  static void $checkItem(RowFilter_Condition v) {
-    if (v is! RowFilter_Condition) checkItemFailed(v, 'RowFilter_Condition');
-  }
 
   RowFilter get predicateFilter => $_getN(0);
-  set predicateFilter(RowFilter v) {
-    setField(1, v);
-  }
-
-  bool hasPredicateFilter() => $_has(0);
+  set predicateFilter(RowFilter v) { setField(1, v); }
+  $core.bool hasPredicateFilter() => $_has(0);
   void clearPredicateFilter() => clearField(1);
 
   RowFilter get trueFilter => $_getN(1);
-  set trueFilter(RowFilter v) {
-    setField(2, v);
-  }
-
-  bool hasTrueFilter() => $_has(1);
+  set trueFilter(RowFilter v) { setField(2, v); }
+  $core.bool hasTrueFilter() => $_has(1);
   void clearTrueFilter() => clearField(2);
 
   RowFilter get falseFilter => $_getN(2);
-  set falseFilter(RowFilter v) {
-    setField(3, v);
-  }
-
-  bool hasFalseFilter() => $_has(2);
+  set falseFilter(RowFilter v) { setField(3, v); }
+  $core.bool hasFalseFilter() => $_has(2);
   void clearFalseFilter() => clearField(3);
 }
 
-class _ReadonlyRowFilter_Condition extends RowFilter_Condition
-    with ReadonlyMessageMixin {}
+enum RowFilter_Filter {
+  chain, 
+  interleave, 
+  condition, 
+  rowKeyRegexFilter, 
+  familyNameRegexFilter, 
+  columnQualifierRegexFilter, 
+  columnRangeFilter, 
+  timestampRangeFilter, 
+  valueRegexFilter, 
+  cellsPerRowOffsetFilter, 
+  cellsPerRowLimitFilter, 
+  cellsPerColumnLimitFilter, 
+  stripValueTransformer, 
+  rowSampleFilter, 
+  valueRangeFilter, 
+  sink, 
+  passAllFilter, 
+  blockAllFilter, 
+  applyLabelTransformer, 
+  notSet
+}
 
-class RowFilter extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RowFilter')
-    ..a<RowFilter_Chain>(1, 'chain', PbFieldType.OM, RowFilter_Chain.getDefault,
-        RowFilter_Chain.create)
-    ..a<RowFilter_Interleave>(2, 'interleave', PbFieldType.OM,
-        RowFilter_Interleave.getDefault, RowFilter_Interleave.create)
-    ..a<RowFilter_Condition>(3, 'condition', PbFieldType.OM,
-        RowFilter_Condition.getDefault, RowFilter_Condition.create)
-    ..a<List<int>>(4, 'rowKeyRegexFilter', PbFieldType.OY)
+class RowFilter extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RowFilter_Filter> _RowFilter_FilterByTag = {
+    1 : RowFilter_Filter.chain,
+    2 : RowFilter_Filter.interleave,
+    3 : RowFilter_Filter.condition,
+    4 : RowFilter_Filter.rowKeyRegexFilter,
+    5 : RowFilter_Filter.familyNameRegexFilter,
+    6 : RowFilter_Filter.columnQualifierRegexFilter,
+    7 : RowFilter_Filter.columnRangeFilter,
+    8 : RowFilter_Filter.timestampRangeFilter,
+    9 : RowFilter_Filter.valueRegexFilter,
+    10 : RowFilter_Filter.cellsPerRowOffsetFilter,
+    11 : RowFilter_Filter.cellsPerRowLimitFilter,
+    12 : RowFilter_Filter.cellsPerColumnLimitFilter,
+    13 : RowFilter_Filter.stripValueTransformer,
+    14 : RowFilter_Filter.rowSampleFilter,
+    15 : RowFilter_Filter.valueRangeFilter,
+    16 : RowFilter_Filter.sink,
+    17 : RowFilter_Filter.passAllFilter,
+    18 : RowFilter_Filter.blockAllFilter,
+    19 : RowFilter_Filter.applyLabelTransformer,
+    0 : RowFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter', package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<RowFilter_Chain>(1, 'chain', $pb.PbFieldType.OM, RowFilter_Chain.getDefault, RowFilter_Chain.create)
+    ..a<RowFilter_Interleave>(2, 'interleave', $pb.PbFieldType.OM, RowFilter_Interleave.getDefault, RowFilter_Interleave.create)
+    ..a<RowFilter_Condition>(3, 'condition', $pb.PbFieldType.OM, RowFilter_Condition.getDefault, RowFilter_Condition.create)
+    ..a<$core.List<$core.int>>(4, 'rowKeyRegexFilter', $pb.PbFieldType.OY)
     ..aOS(5, 'familyNameRegexFilter')
-    ..a<List<int>>(6, 'columnQualifierRegexFilter', PbFieldType.OY)
-    ..a<ColumnRange>(7, 'columnRangeFilter', PbFieldType.OM,
-        ColumnRange.getDefault, ColumnRange.create)
-    ..a<TimestampRange>(8, 'timestampRangeFilter', PbFieldType.OM,
-        TimestampRange.getDefault, TimestampRange.create)
-    ..a<List<int>>(9, 'valueRegexFilter', PbFieldType.OY)
-    ..a<int>(10, 'cellsPerRowOffsetFilter', PbFieldType.O3)
-    ..a<int>(11, 'cellsPerRowLimitFilter', PbFieldType.O3)
-    ..a<int>(12, 'cellsPerColumnLimitFilter', PbFieldType.O3)
+    ..a<$core.List<$core.int>>(6, 'columnQualifierRegexFilter', $pb.PbFieldType.OY)
+    ..a<ColumnRange>(7, 'columnRangeFilter', $pb.PbFieldType.OM, ColumnRange.getDefault, ColumnRange.create)
+    ..a<TimestampRange>(8, 'timestampRangeFilter', $pb.PbFieldType.OM, TimestampRange.getDefault, TimestampRange.create)
+    ..a<$core.List<$core.int>>(9, 'valueRegexFilter', $pb.PbFieldType.OY)
+    ..a<$core.int>(10, 'cellsPerRowOffsetFilter', $pb.PbFieldType.O3)
+    ..a<$core.int>(11, 'cellsPerRowLimitFilter', $pb.PbFieldType.O3)
+    ..a<$core.int>(12, 'cellsPerColumnLimitFilter', $pb.PbFieldType.O3)
     ..aOB(13, 'stripValueTransformer')
-    ..a<double>(14, 'rowSampleFilter', PbFieldType.OD)
-    ..a<ValueRange>(15, 'valueRangeFilter', PbFieldType.OM,
-        ValueRange.getDefault, ValueRange.create)
+    ..a<$core.double>(14, 'rowSampleFilter', $pb.PbFieldType.OD)
+    ..a<ValueRange>(15, 'valueRangeFilter', $pb.PbFieldType.OM, ValueRange.getDefault, ValueRange.create)
     ..aOB(16, 'sink')
     ..aOB(17, 'passAllFilter')
     ..aOB(18, 'blockAllFilter')
     ..aOS(19, 'applyLabelTransformer')
-    ..hasRequiredFields = false;
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
+    ..hasRequiredFields = false
+  ;
 
   RowFilter() : super();
-  RowFilter.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowFilter.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RowFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RowFilter clone() => RowFilter()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RowFilter copyWith(void Function(RowFilter) updates) => super.copyWith((message) => updates(message as RowFilter));
+  $pb.BuilderInfo get info_ => _i;
   static RowFilter create() => RowFilter();
-  static PbList<RowFilter> createRepeated() => PbList<RowFilter>();
-  static RowFilter getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRowFilter();
-    return _defaultInstance;
-  }
-
+  RowFilter createEmptyInstance() => create();
+  static $pb.PbList<RowFilter> createRepeated() => $pb.PbList<RowFilter>();
+  static RowFilter getDefault() => _defaultInstance ??= create()..freeze();
   static RowFilter _defaultInstance;
-  static void $checkItem(RowFilter v) {
-    if (v is! RowFilter) checkItemFailed(v, 'RowFilter');
-  }
+
+  RowFilter_Filter whichFilter() => _RowFilter_FilterByTag[$_whichOneof(0)];
+  void clearFilter() => clearField($_whichOneof(0));
 
   RowFilter_Chain get chain => $_getN(0);
-  set chain(RowFilter_Chain v) {
-    setField(1, v);
-  }
-
-  bool hasChain() => $_has(0);
+  set chain(RowFilter_Chain v) { setField(1, v); }
+  $core.bool hasChain() => $_has(0);
   void clearChain() => clearField(1);
 
   RowFilter_Interleave get interleave => $_getN(1);
-  set interleave(RowFilter_Interleave v) {
-    setField(2, v);
-  }
-
-  bool hasInterleave() => $_has(1);
+  set interleave(RowFilter_Interleave v) { setField(2, v); }
+  $core.bool hasInterleave() => $_has(1);
   void clearInterleave() => clearField(2);
 
   RowFilter_Condition get condition => $_getN(2);
-  set condition(RowFilter_Condition v) {
-    setField(3, v);
-  }
-
-  bool hasCondition() => $_has(2);
+  set condition(RowFilter_Condition v) { setField(3, v); }
+  $core.bool hasCondition() => $_has(2);
   void clearCondition() => clearField(3);
 
-  List<int> get rowKeyRegexFilter => $_getN(3);
-  set rowKeyRegexFilter(List<int> v) {
-    $_setBytes(3, v);
-  }
-
-  bool hasRowKeyRegexFilter() => $_has(3);
+  $core.List<$core.int> get rowKeyRegexFilter => $_getN(3);
+  set rowKeyRegexFilter($core.List<$core.int> v) { $_setBytes(3, v); }
+  $core.bool hasRowKeyRegexFilter() => $_has(3);
   void clearRowKeyRegexFilter() => clearField(4);
 
-  String get familyNameRegexFilter => $_getS(4, '');
-  set familyNameRegexFilter(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasFamilyNameRegexFilter() => $_has(4);
+  $core.String get familyNameRegexFilter => $_getS(4, '');
+  set familyNameRegexFilter($core.String v) { $_setString(4, v); }
+  $core.bool hasFamilyNameRegexFilter() => $_has(4);
   void clearFamilyNameRegexFilter() => clearField(5);
 
-  List<int> get columnQualifierRegexFilter => $_getN(5);
-  set columnQualifierRegexFilter(List<int> v) {
-    $_setBytes(5, v);
-  }
-
-  bool hasColumnQualifierRegexFilter() => $_has(5);
+  $core.List<$core.int> get columnQualifierRegexFilter => $_getN(5);
+  set columnQualifierRegexFilter($core.List<$core.int> v) { $_setBytes(5, v); }
+  $core.bool hasColumnQualifierRegexFilter() => $_has(5);
   void clearColumnQualifierRegexFilter() => clearField(6);
 
   ColumnRange get columnRangeFilter => $_getN(6);
-  set columnRangeFilter(ColumnRange v) {
-    setField(7, v);
-  }
-
-  bool hasColumnRangeFilter() => $_has(6);
+  set columnRangeFilter(ColumnRange v) { setField(7, v); }
+  $core.bool hasColumnRangeFilter() => $_has(6);
   void clearColumnRangeFilter() => clearField(7);
 
   TimestampRange get timestampRangeFilter => $_getN(7);
-  set timestampRangeFilter(TimestampRange v) {
-    setField(8, v);
-  }
-
-  bool hasTimestampRangeFilter() => $_has(7);
+  set timestampRangeFilter(TimestampRange v) { setField(8, v); }
+  $core.bool hasTimestampRangeFilter() => $_has(7);
   void clearTimestampRangeFilter() => clearField(8);
 
-  List<int> get valueRegexFilter => $_getN(8);
-  set valueRegexFilter(List<int> v) {
-    $_setBytes(8, v);
-  }
-
-  bool hasValueRegexFilter() => $_has(8);
+  $core.List<$core.int> get valueRegexFilter => $_getN(8);
+  set valueRegexFilter($core.List<$core.int> v) { $_setBytes(8, v); }
+  $core.bool hasValueRegexFilter() => $_has(8);
   void clearValueRegexFilter() => clearField(9);
 
-  int get cellsPerRowOffsetFilter => $_get(9, 0);
-  set cellsPerRowOffsetFilter(int v) {
-    $_setSignedInt32(9, v);
-  }
-
-  bool hasCellsPerRowOffsetFilter() => $_has(9);
+  $core.int get cellsPerRowOffsetFilter => $_get(9, 0);
+  set cellsPerRowOffsetFilter($core.int v) { $_setSignedInt32(9, v); }
+  $core.bool hasCellsPerRowOffsetFilter() => $_has(9);
   void clearCellsPerRowOffsetFilter() => clearField(10);
 
-  int get cellsPerRowLimitFilter => $_get(10, 0);
-  set cellsPerRowLimitFilter(int v) {
-    $_setSignedInt32(10, v);
-  }
-
-  bool hasCellsPerRowLimitFilter() => $_has(10);
+  $core.int get cellsPerRowLimitFilter => $_get(10, 0);
+  set cellsPerRowLimitFilter($core.int v) { $_setSignedInt32(10, v); }
+  $core.bool hasCellsPerRowLimitFilter() => $_has(10);
   void clearCellsPerRowLimitFilter() => clearField(11);
 
-  int get cellsPerColumnLimitFilter => $_get(11, 0);
-  set cellsPerColumnLimitFilter(int v) {
-    $_setSignedInt32(11, v);
-  }
-
-  bool hasCellsPerColumnLimitFilter() => $_has(11);
+  $core.int get cellsPerColumnLimitFilter => $_get(11, 0);
+  set cellsPerColumnLimitFilter($core.int v) { $_setSignedInt32(11, v); }
+  $core.bool hasCellsPerColumnLimitFilter() => $_has(11);
   void clearCellsPerColumnLimitFilter() => clearField(12);
 
-  bool get stripValueTransformer => $_get(12, false);
-  set stripValueTransformer(bool v) {
-    $_setBool(12, v);
-  }
-
-  bool hasStripValueTransformer() => $_has(12);
+  $core.bool get stripValueTransformer => $_get(12, false);
+  set stripValueTransformer($core.bool v) { $_setBool(12, v); }
+  $core.bool hasStripValueTransformer() => $_has(12);
   void clearStripValueTransformer() => clearField(13);
 
-  double get rowSampleFilter => $_getN(13);
-  set rowSampleFilter(double v) {
-    $_setDouble(13, v);
-  }
-
-  bool hasRowSampleFilter() => $_has(13);
+  $core.double get rowSampleFilter => $_getN(13);
+  set rowSampleFilter($core.double v) { $_setDouble(13, v); }
+  $core.bool hasRowSampleFilter() => $_has(13);
   void clearRowSampleFilter() => clearField(14);
 
   ValueRange get valueRangeFilter => $_getN(14);
-  set valueRangeFilter(ValueRange v) {
-    setField(15, v);
-  }
-
-  bool hasValueRangeFilter() => $_has(14);
+  set valueRangeFilter(ValueRange v) { setField(15, v); }
+  $core.bool hasValueRangeFilter() => $_has(14);
   void clearValueRangeFilter() => clearField(15);
 
-  bool get sink => $_get(15, false);
-  set sink(bool v) {
-    $_setBool(15, v);
-  }
-
-  bool hasSink() => $_has(15);
+  $core.bool get sink => $_get(15, false);
+  set sink($core.bool v) { $_setBool(15, v); }
+  $core.bool hasSink() => $_has(15);
   void clearSink() => clearField(16);
 
-  bool get passAllFilter => $_get(16, false);
-  set passAllFilter(bool v) {
-    $_setBool(16, v);
-  }
-
-  bool hasPassAllFilter() => $_has(16);
+  $core.bool get passAllFilter => $_get(16, false);
+  set passAllFilter($core.bool v) { $_setBool(16, v); }
+  $core.bool hasPassAllFilter() => $_has(16);
   void clearPassAllFilter() => clearField(17);
 
-  bool get blockAllFilter => $_get(17, false);
-  set blockAllFilter(bool v) {
-    $_setBool(17, v);
-  }
-
-  bool hasBlockAllFilter() => $_has(17);
+  $core.bool get blockAllFilter => $_get(17, false);
+  set blockAllFilter($core.bool v) { $_setBool(17, v); }
+  $core.bool hasBlockAllFilter() => $_has(17);
   void clearBlockAllFilter() => clearField(18);
 
-  String get applyLabelTransformer => $_getS(18, '');
-  set applyLabelTransformer(String v) {
-    $_setString(18, v);
-  }
-
-  bool hasApplyLabelTransformer() => $_has(18);
+  $core.String get applyLabelTransformer => $_getS(18, '');
+  set applyLabelTransformer($core.String v) { $_setString(18, v); }
+  $core.bool hasApplyLabelTransformer() => $_has(18);
   void clearApplyLabelTransformer() => clearField(19);
 }
 
-class _ReadonlyRowFilter extends RowFilter with ReadonlyMessageMixin {}
-
-class Mutation_SetCell extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Mutation_SetCell')
+class Mutation_SetCell extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.SetCell', package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'familyName')
-    ..a<List<int>>(2, 'columnQualifier', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'columnQualifier', $pb.PbFieldType.OY)
     ..aInt64(3, 'timestampMicros')
-    ..a<List<int>>(4, 'value', PbFieldType.OY)
-    ..hasRequiredFields = false;
+    ..a<$core.List<$core.int>>(4, 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
 
   Mutation_SetCell() : super();
-  Mutation_SetCell.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_SetCell.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation_SetCell.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Mutation_SetCell.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Mutation_SetCell clone() => Mutation_SetCell()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Mutation_SetCell copyWith(void Function(Mutation_SetCell) updates) => super.copyWith((message) => updates(message as Mutation_SetCell));
+  $pb.BuilderInfo get info_ => _i;
   static Mutation_SetCell create() => Mutation_SetCell();
-  static PbList<Mutation_SetCell> createRepeated() =>
-      PbList<Mutation_SetCell>();
-  static Mutation_SetCell getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyMutation_SetCell();
-    return _defaultInstance;
-  }
-
+  Mutation_SetCell createEmptyInstance() => create();
+  static $pb.PbList<Mutation_SetCell> createRepeated() => $pb.PbList<Mutation_SetCell>();
+  static Mutation_SetCell getDefault() => _defaultInstance ??= create()..freeze();
   static Mutation_SetCell _defaultInstance;
-  static void $checkItem(Mutation_SetCell v) {
-    if (v is! Mutation_SetCell) checkItemFailed(v, 'Mutation_SetCell');
-  }
 
-  String get familyName => $_getS(0, '');
-  set familyName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasFamilyName() => $_has(0);
+  $core.String get familyName => $_getS(0, '');
+  set familyName($core.String v) { $_setString(0, v); }
+  $core.bool hasFamilyName() => $_has(0);
   void clearFamilyName() => clearField(1);
 
-  List<int> get columnQualifier => $_getN(1);
-  set columnQualifier(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasColumnQualifier() => $_has(1);
+  $core.List<$core.int> get columnQualifier => $_getN(1);
+  set columnQualifier($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasColumnQualifier() => $_has(1);
   void clearColumnQualifier() => clearField(2);
 
   Int64 get timestampMicros => $_getI64(2);
-  set timestampMicros(Int64 v) {
-    $_setInt64(2, v);
-  }
-
-  bool hasTimestampMicros() => $_has(2);
+  set timestampMicros(Int64 v) { $_setInt64(2, v); }
+  $core.bool hasTimestampMicros() => $_has(2);
   void clearTimestampMicros() => clearField(3);
 
-  List<int> get value => $_getN(3);
-  set value(List<int> v) {
-    $_setBytes(3, v);
-  }
-
-  bool hasValue() => $_has(3);
+  $core.List<$core.int> get value => $_getN(3);
+  set value($core.List<$core.int> v) { $_setBytes(3, v); }
+  $core.bool hasValue() => $_has(3);
   void clearValue() => clearField(4);
 }
 
-class _ReadonlyMutation_SetCell extends Mutation_SetCell
-    with ReadonlyMessageMixin {}
-
-class Mutation_DeleteFromColumn extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Mutation_DeleteFromColumn')
+class Mutation_DeleteFromColumn extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.DeleteFromColumn', package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'familyName')
-    ..a<List<int>>(2, 'columnQualifier', PbFieldType.OY)
-    ..a<TimestampRange>(3, 'timeRange', PbFieldType.OM,
-        TimestampRange.getDefault, TimestampRange.create)
-    ..hasRequiredFields = false;
+    ..a<$core.List<$core.int>>(2, 'columnQualifier', $pb.PbFieldType.OY)
+    ..a<TimestampRange>(3, 'timeRange', $pb.PbFieldType.OM, TimestampRange.getDefault, TimestampRange.create)
+    ..hasRequiredFields = false
+  ;
 
   Mutation_DeleteFromColumn() : super();
-  Mutation_DeleteFromColumn.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_DeleteFromColumn.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Mutation_DeleteFromColumn clone() =>
-      Mutation_DeleteFromColumn()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Mutation_DeleteFromColumn.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Mutation_DeleteFromColumn.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Mutation_DeleteFromColumn clone() => Mutation_DeleteFromColumn()..mergeFromMessage(this);
+  Mutation_DeleteFromColumn copyWith(void Function(Mutation_DeleteFromColumn) updates) => super.copyWith((message) => updates(message as Mutation_DeleteFromColumn));
+  $pb.BuilderInfo get info_ => _i;
   static Mutation_DeleteFromColumn create() => Mutation_DeleteFromColumn();
-  static PbList<Mutation_DeleteFromColumn> createRepeated() =>
-      PbList<Mutation_DeleteFromColumn>();
-  static Mutation_DeleteFromColumn getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyMutation_DeleteFromColumn();
-    return _defaultInstance;
-  }
-
+  Mutation_DeleteFromColumn createEmptyInstance() => create();
+  static $pb.PbList<Mutation_DeleteFromColumn> createRepeated() => $pb.PbList<Mutation_DeleteFromColumn>();
+  static Mutation_DeleteFromColumn getDefault() => _defaultInstance ??= create()..freeze();
   static Mutation_DeleteFromColumn _defaultInstance;
-  static void $checkItem(Mutation_DeleteFromColumn v) {
-    if (v is! Mutation_DeleteFromColumn)
-      checkItemFailed(v, 'Mutation_DeleteFromColumn');
-  }
 
-  String get familyName => $_getS(0, '');
-  set familyName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasFamilyName() => $_has(0);
+  $core.String get familyName => $_getS(0, '');
+  set familyName($core.String v) { $_setString(0, v); }
+  $core.bool hasFamilyName() => $_has(0);
   void clearFamilyName() => clearField(1);
 
-  List<int> get columnQualifier => $_getN(1);
-  set columnQualifier(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasColumnQualifier() => $_has(1);
+  $core.List<$core.int> get columnQualifier => $_getN(1);
+  set columnQualifier($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasColumnQualifier() => $_has(1);
   void clearColumnQualifier() => clearField(2);
 
   TimestampRange get timeRange => $_getN(2);
-  set timeRange(TimestampRange v) {
-    setField(3, v);
-  }
-
-  bool hasTimeRange() => $_has(2);
+  set timeRange(TimestampRange v) { setField(3, v); }
+  $core.bool hasTimeRange() => $_has(2);
   void clearTimeRange() => clearField(3);
 }
 
-class _ReadonlyMutation_DeleteFromColumn extends Mutation_DeleteFromColumn
-    with ReadonlyMessageMixin {}
-
-class Mutation_DeleteFromFamily extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Mutation_DeleteFromFamily')
+class Mutation_DeleteFromFamily extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.DeleteFromFamily', package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'familyName')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Mutation_DeleteFromFamily() : super();
-  Mutation_DeleteFromFamily.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_DeleteFromFamily.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Mutation_DeleteFromFamily clone() =>
-      Mutation_DeleteFromFamily()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Mutation_DeleteFromFamily.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Mutation_DeleteFromFamily.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Mutation_DeleteFromFamily clone() => Mutation_DeleteFromFamily()..mergeFromMessage(this);
+  Mutation_DeleteFromFamily copyWith(void Function(Mutation_DeleteFromFamily) updates) => super.copyWith((message) => updates(message as Mutation_DeleteFromFamily));
+  $pb.BuilderInfo get info_ => _i;
   static Mutation_DeleteFromFamily create() => Mutation_DeleteFromFamily();
-  static PbList<Mutation_DeleteFromFamily> createRepeated() =>
-      PbList<Mutation_DeleteFromFamily>();
-  static Mutation_DeleteFromFamily getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyMutation_DeleteFromFamily();
-    return _defaultInstance;
-  }
-
+  Mutation_DeleteFromFamily createEmptyInstance() => create();
+  static $pb.PbList<Mutation_DeleteFromFamily> createRepeated() => $pb.PbList<Mutation_DeleteFromFamily>();
+  static Mutation_DeleteFromFamily getDefault() => _defaultInstance ??= create()..freeze();
   static Mutation_DeleteFromFamily _defaultInstance;
-  static void $checkItem(Mutation_DeleteFromFamily v) {
-    if (v is! Mutation_DeleteFromFamily)
-      checkItemFailed(v, 'Mutation_DeleteFromFamily');
-  }
 
-  String get familyName => $_getS(0, '');
-  set familyName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasFamilyName() => $_has(0);
+  $core.String get familyName => $_getS(0, '');
+  set familyName($core.String v) { $_setString(0, v); }
+  $core.bool hasFamilyName() => $_has(0);
   void clearFamilyName() => clearField(1);
 }
 
-class _ReadonlyMutation_DeleteFromFamily extends Mutation_DeleteFromFamily
-    with ReadonlyMessageMixin {}
-
-class Mutation_DeleteFromRow extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Mutation_DeleteFromRow')
-    ..hasRequiredFields = false;
+class Mutation_DeleteFromRow extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.DeleteFromRow', package: const $pb.PackageName('google.bigtable.v2'))
+    ..hasRequiredFields = false
+  ;
 
   Mutation_DeleteFromRow() : super();
-  Mutation_DeleteFromRow.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_DeleteFromRow.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Mutation_DeleteFromRow clone() =>
-      Mutation_DeleteFromRow()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Mutation_DeleteFromRow.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Mutation_DeleteFromRow.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Mutation_DeleteFromRow clone() => Mutation_DeleteFromRow()..mergeFromMessage(this);
+  Mutation_DeleteFromRow copyWith(void Function(Mutation_DeleteFromRow) updates) => super.copyWith((message) => updates(message as Mutation_DeleteFromRow));
+  $pb.BuilderInfo get info_ => _i;
   static Mutation_DeleteFromRow create() => Mutation_DeleteFromRow();
-  static PbList<Mutation_DeleteFromRow> createRepeated() =>
-      PbList<Mutation_DeleteFromRow>();
-  static Mutation_DeleteFromRow getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyMutation_DeleteFromRow();
-    return _defaultInstance;
-  }
-
+  Mutation_DeleteFromRow createEmptyInstance() => create();
+  static $pb.PbList<Mutation_DeleteFromRow> createRepeated() => $pb.PbList<Mutation_DeleteFromRow>();
+  static Mutation_DeleteFromRow getDefault() => _defaultInstance ??= create()..freeze();
   static Mutation_DeleteFromRow _defaultInstance;
-  static void $checkItem(Mutation_DeleteFromRow v) {
-    if (v is! Mutation_DeleteFromRow)
-      checkItemFailed(v, 'Mutation_DeleteFromRow');
-  }
 }
 
-class _ReadonlyMutation_DeleteFromRow extends Mutation_DeleteFromRow
-    with ReadonlyMessageMixin {}
+enum Mutation_Mutation {
+  setCell, 
+  deleteFromColumn, 
+  deleteFromFamily, 
+  deleteFromRow, 
+  notSet
+}
 
-class Mutation extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Mutation')
-    ..a<Mutation_SetCell>(1, 'setCell', PbFieldType.OM,
-        Mutation_SetCell.getDefault, Mutation_SetCell.create)
-    ..a<Mutation_DeleteFromColumn>(2, 'deleteFromColumn', PbFieldType.OM,
-        Mutation_DeleteFromColumn.getDefault, Mutation_DeleteFromColumn.create)
-    ..a<Mutation_DeleteFromFamily>(3, 'deleteFromFamily', PbFieldType.OM,
-        Mutation_DeleteFromFamily.getDefault, Mutation_DeleteFromFamily.create)
-    ..a<Mutation_DeleteFromRow>(4, 'deleteFromRow', PbFieldType.OM,
-        Mutation_DeleteFromRow.getDefault, Mutation_DeleteFromRow.create)
-    ..hasRequiredFields = false;
+class Mutation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Mutation_Mutation> _Mutation_MutationByTag = {
+    1 : Mutation_Mutation.setCell,
+    2 : Mutation_Mutation.deleteFromColumn,
+    3 : Mutation_Mutation.deleteFromFamily,
+    4 : Mutation_Mutation.deleteFromRow,
+    0 : Mutation_Mutation.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation', package: const $pb.PackageName('google.bigtable.v2'))
+    ..a<Mutation_SetCell>(1, 'setCell', $pb.PbFieldType.OM, Mutation_SetCell.getDefault, Mutation_SetCell.create)
+    ..a<Mutation_DeleteFromColumn>(2, 'deleteFromColumn', $pb.PbFieldType.OM, Mutation_DeleteFromColumn.getDefault, Mutation_DeleteFromColumn.create)
+    ..a<Mutation_DeleteFromFamily>(3, 'deleteFromFamily', $pb.PbFieldType.OM, Mutation_DeleteFromFamily.getDefault, Mutation_DeleteFromFamily.create)
+    ..a<Mutation_DeleteFromRow>(4, 'deleteFromRow', $pb.PbFieldType.OM, Mutation_DeleteFromRow.getDefault, Mutation_DeleteFromRow.create)
+    ..oo(0, [1, 2, 3, 4])
+    ..hasRequiredFields = false
+  ;
 
   Mutation() : super();
-  Mutation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Mutation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Mutation clone() => Mutation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Mutation copyWith(void Function(Mutation) updates) => super.copyWith((message) => updates(message as Mutation));
+  $pb.BuilderInfo get info_ => _i;
   static Mutation create() => Mutation();
-  static PbList<Mutation> createRepeated() => PbList<Mutation>();
-  static Mutation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyMutation();
-    return _defaultInstance;
-  }
-
+  Mutation createEmptyInstance() => create();
+  static $pb.PbList<Mutation> createRepeated() => $pb.PbList<Mutation>();
+  static Mutation getDefault() => _defaultInstance ??= create()..freeze();
   static Mutation _defaultInstance;
-  static void $checkItem(Mutation v) {
-    if (v is! Mutation) checkItemFailed(v, 'Mutation');
-  }
+
+  Mutation_Mutation whichMutation() => _Mutation_MutationByTag[$_whichOneof(0)];
+  void clearMutation() => clearField($_whichOneof(0));
 
   Mutation_SetCell get setCell => $_getN(0);
-  set setCell(Mutation_SetCell v) {
-    setField(1, v);
-  }
-
-  bool hasSetCell() => $_has(0);
+  set setCell(Mutation_SetCell v) { setField(1, v); }
+  $core.bool hasSetCell() => $_has(0);
   void clearSetCell() => clearField(1);
 
   Mutation_DeleteFromColumn get deleteFromColumn => $_getN(1);
-  set deleteFromColumn(Mutation_DeleteFromColumn v) {
-    setField(2, v);
-  }
-
-  bool hasDeleteFromColumn() => $_has(1);
+  set deleteFromColumn(Mutation_DeleteFromColumn v) { setField(2, v); }
+  $core.bool hasDeleteFromColumn() => $_has(1);
   void clearDeleteFromColumn() => clearField(2);
 
   Mutation_DeleteFromFamily get deleteFromFamily => $_getN(2);
-  set deleteFromFamily(Mutation_DeleteFromFamily v) {
-    setField(3, v);
-  }
-
-  bool hasDeleteFromFamily() => $_has(2);
+  set deleteFromFamily(Mutation_DeleteFromFamily v) { setField(3, v); }
+  $core.bool hasDeleteFromFamily() => $_has(2);
   void clearDeleteFromFamily() => clearField(3);
 
   Mutation_DeleteFromRow get deleteFromRow => $_getN(3);
-  set deleteFromRow(Mutation_DeleteFromRow v) {
-    setField(4, v);
-  }
-
-  bool hasDeleteFromRow() => $_has(3);
+  set deleteFromRow(Mutation_DeleteFromRow v) { setField(4, v); }
+  $core.bool hasDeleteFromRow() => $_has(3);
   void clearDeleteFromRow() => clearField(4);
 }
 
-class _ReadonlyMutation extends Mutation with ReadonlyMessageMixin {}
+enum ReadModifyWriteRule_Rule {
+  appendValue, 
+  incrementAmount, 
+  notSet
+}
 
-class ReadModifyWriteRule extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ReadModifyWriteRule')
+class ReadModifyWriteRule extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ReadModifyWriteRule_Rule> _ReadModifyWriteRule_RuleByTag = {
+    3 : ReadModifyWriteRule_Rule.appendValue,
+    4 : ReadModifyWriteRule_Rule.incrementAmount,
+    0 : ReadModifyWriteRule_Rule.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadModifyWriteRule', package: const $pb.PackageName('google.bigtable.v2'))
     ..aOS(1, 'familyName')
-    ..a<List<int>>(2, 'columnQualifier', PbFieldType.OY)
-    ..a<List<int>>(3, 'appendValue', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'columnQualifier', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, 'appendValue', $pb.PbFieldType.OY)
     ..aInt64(4, 'incrementAmount')
-    ..hasRequiredFields = false;
+    ..oo(0, [3, 4])
+    ..hasRequiredFields = false
+  ;
 
   ReadModifyWriteRule() : super();
-  ReadModifyWriteRule.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadModifyWriteRule.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadModifyWriteRule.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ReadModifyWriteRule.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ReadModifyWriteRule clone() => ReadModifyWriteRule()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ReadModifyWriteRule copyWith(void Function(ReadModifyWriteRule) updates) => super.copyWith((message) => updates(message as ReadModifyWriteRule));
+  $pb.BuilderInfo get info_ => _i;
   static ReadModifyWriteRule create() => ReadModifyWriteRule();
-  static PbList<ReadModifyWriteRule> createRepeated() =>
-      PbList<ReadModifyWriteRule>();
-  static ReadModifyWriteRule getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyReadModifyWriteRule();
-    return _defaultInstance;
-  }
-
+  ReadModifyWriteRule createEmptyInstance() => create();
+  static $pb.PbList<ReadModifyWriteRule> createRepeated() => $pb.PbList<ReadModifyWriteRule>();
+  static ReadModifyWriteRule getDefault() => _defaultInstance ??= create()..freeze();
   static ReadModifyWriteRule _defaultInstance;
-  static void $checkItem(ReadModifyWriteRule v) {
-    if (v is! ReadModifyWriteRule) checkItemFailed(v, 'ReadModifyWriteRule');
-  }
 
-  String get familyName => $_getS(0, '');
-  set familyName(String v) {
-    $_setString(0, v);
-  }
+  ReadModifyWriteRule_Rule whichRule() => _ReadModifyWriteRule_RuleByTag[$_whichOneof(0)];
+  void clearRule() => clearField($_whichOneof(0));
 
-  bool hasFamilyName() => $_has(0);
+  $core.String get familyName => $_getS(0, '');
+  set familyName($core.String v) { $_setString(0, v); }
+  $core.bool hasFamilyName() => $_has(0);
   void clearFamilyName() => clearField(1);
 
-  List<int> get columnQualifier => $_getN(1);
-  set columnQualifier(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasColumnQualifier() => $_has(1);
+  $core.List<$core.int> get columnQualifier => $_getN(1);
+  set columnQualifier($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasColumnQualifier() => $_has(1);
   void clearColumnQualifier() => clearField(2);
 
-  List<int> get appendValue => $_getN(2);
-  set appendValue(List<int> v) {
-    $_setBytes(2, v);
-  }
-
-  bool hasAppendValue() => $_has(2);
+  $core.List<$core.int> get appendValue => $_getN(2);
+  set appendValue($core.List<$core.int> v) { $_setBytes(2, v); }
+  $core.bool hasAppendValue() => $_has(2);
   void clearAppendValue() => clearField(3);
 
   Int64 get incrementAmount => $_getI64(3);
-  set incrementAmount(Int64 v) {
-    $_setInt64(3, v);
-  }
-
-  bool hasIncrementAmount() => $_has(3);
+  set incrementAmount(Int64 v) { $_setInt64(3, v); }
+  $core.bool hasIncrementAmount() => $_has(3);
   void clearIncrementAmount() => clearField(4);
 }
 
-class _ReadonlyReadModifyWriteRule extends ReadModifyWriteRule
-    with ReadonlyMessageMixin {}

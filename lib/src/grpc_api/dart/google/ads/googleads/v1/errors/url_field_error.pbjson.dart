@@ -1,0 +1,71 @@
+///
+//  Generated code. Do not modify.
+//  source: google/ads/googleads/v1/errors/url_field_error.proto
+///
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+
+const UrlFieldErrorEnum$json = const {
+  '1': 'UrlFieldErrorEnum',
+  '4': const [UrlFieldErrorEnum_UrlFieldError$json],
+};
+
+const UrlFieldErrorEnum_UrlFieldError$json = const {
+  '1': 'UrlFieldError',
+  '2': const [
+    const {'1': 'UNSPECIFIED', '2': 0},
+    const {'1': 'UNKNOWN', '2': 1},
+    const {'1': 'INVALID_TRACKING_URL_TEMPLATE', '2': 2},
+    const {'1': 'INVALID_TAG_IN_TRACKING_URL_TEMPLATE', '2': 3},
+    const {'1': 'MISSING_TRACKING_URL_TEMPLATE_TAG', '2': 4},
+    const {'1': 'MISSING_PROTOCOL_IN_TRACKING_URL_TEMPLATE', '2': 5},
+    const {'1': 'INVALID_PROTOCOL_IN_TRACKING_URL_TEMPLATE', '2': 6},
+    const {'1': 'MALFORMED_TRACKING_URL_TEMPLATE', '2': 7},
+    const {'1': 'MISSING_HOST_IN_TRACKING_URL_TEMPLATE', '2': 8},
+    const {'1': 'INVALID_TLD_IN_TRACKING_URL_TEMPLATE', '2': 9},
+    const {'1': 'REDUNDANT_NESTED_TRACKING_URL_TEMPLATE_TAG', '2': 10},
+    const {'1': 'INVALID_FINAL_URL', '2': 11},
+    const {'1': 'INVALID_TAG_IN_FINAL_URL', '2': 12},
+    const {'1': 'REDUNDANT_NESTED_FINAL_URL_TAG', '2': 13},
+    const {'1': 'MISSING_PROTOCOL_IN_FINAL_URL', '2': 14},
+    const {'1': 'INVALID_PROTOCOL_IN_FINAL_URL', '2': 15},
+    const {'1': 'MALFORMED_FINAL_URL', '2': 16},
+    const {'1': 'MISSING_HOST_IN_FINAL_URL', '2': 17},
+    const {'1': 'INVALID_TLD_IN_FINAL_URL', '2': 18},
+    const {'1': 'INVALID_FINAL_MOBILE_URL', '2': 19},
+    const {'1': 'INVALID_TAG_IN_FINAL_MOBILE_URL', '2': 20},
+    const {'1': 'REDUNDANT_NESTED_FINAL_MOBILE_URL_TAG', '2': 21},
+    const {'1': 'MISSING_PROTOCOL_IN_FINAL_MOBILE_URL', '2': 22},
+    const {'1': 'INVALID_PROTOCOL_IN_FINAL_MOBILE_URL', '2': 23},
+    const {'1': 'MALFORMED_FINAL_MOBILE_URL', '2': 24},
+    const {'1': 'MISSING_HOST_IN_FINAL_MOBILE_URL', '2': 25},
+    const {'1': 'INVALID_TLD_IN_FINAL_MOBILE_URL', '2': 26},
+    const {'1': 'INVALID_FINAL_APP_URL', '2': 27},
+    const {'1': 'INVALID_TAG_IN_FINAL_APP_URL', '2': 28},
+    const {'1': 'REDUNDANT_NESTED_FINAL_APP_URL_TAG', '2': 29},
+    const {'1': 'MULTIPLE_APP_URLS_FOR_OSTYPE', '2': 30},
+    const {'1': 'INVALID_OSTYPE', '2': 31},
+    const {'1': 'INVALID_PROTOCOL_FOR_APP_URL', '2': 32},
+    const {'1': 'INVALID_PACKAGE_ID_FOR_APP_URL', '2': 33},
+    const {'1': 'URL_CUSTOM_PARAMETERS_COUNT_EXCEEDS_LIMIT', '2': 34},
+    const {'1': 'INVALID_CHARACTERS_IN_URL_CUSTOM_PARAMETER_KEY', '2': 39},
+    const {'1': 'INVALID_CHARACTERS_IN_URL_CUSTOM_PARAMETER_VALUE', '2': 40},
+    const {'1': 'INVALID_TAG_IN_URL_CUSTOM_PARAMETER_VALUE', '2': 41},
+    const {'1': 'REDUNDANT_NESTED_URL_CUSTOM_PARAMETER_TAG', '2': 42},
+    const {'1': 'MISSING_PROTOCOL', '2': 43},
+    const {'1': 'INVALID_PROTOCOL', '2': 52},
+    const {'1': 'INVALID_URL', '2': 44},
+    const {'1': 'DESTINATION_URL_DEPRECATED', '2': 45},
+    const {'1': 'INVALID_TAG_IN_URL', '2': 46},
+    const {'1': 'MISSING_URL_TAG', '2': 47},
+    const {'1': 'DUPLICATE_URL_ID', '2': 48},
+    const {'1': 'INVALID_URL_ID', '2': 49},
+    const {'1': 'FINAL_URL_SUFFIX_MALFORMED', '2': 50},
+    const {'1': 'INVALID_TAG_IN_FINAL_URL_SUFFIX', '2': 51},
+    const {'1': 'INVALID_TOP_LEVEL_DOMAIN', '2': 53},
+    const {'1': 'MALFORMED_TOP_LEVEL_DOMAIN', '2': 54},
+    const {'1': 'MALFORMED_URL', '2': 55},
+    const {'1': 'MISSING_HOST', '2': 56},
+    const {'1': 'NULL_CUSTOM_PARAMETER_VALUE', '2': 57},
+  ],
+};
+

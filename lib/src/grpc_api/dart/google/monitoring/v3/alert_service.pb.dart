@@ -1,371 +1,224 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/alert_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'alert.pb.dart';
-import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'alert.pb.dart' as $0;
+import '../../protobuf/field_mask.pb.dart' as $1;
+import '../../protobuf/empty.pb.dart' as $2;
 
-class CreateAlertPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateAlertPolicyRequest')
-    ..a<AlertPolicy>(2, 'alertPolicy', PbFieldType.OM, AlertPolicy.getDefault,
-        AlertPolicy.create)
+class CreateAlertPolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAlertPolicyRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$0.AlertPolicy>(2, 'alertPolicy', $pb.PbFieldType.OM, $0.AlertPolicy.getDefault, $0.AlertPolicy.create)
     ..aOS(3, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   CreateAlertPolicyRequest() : super();
-  CreateAlertPolicyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateAlertPolicyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateAlertPolicyRequest clone() =>
-      CreateAlertPolicyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateAlertPolicyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateAlertPolicyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateAlertPolicyRequest clone() => CreateAlertPolicyRequest()..mergeFromMessage(this);
+  CreateAlertPolicyRequest copyWith(void Function(CreateAlertPolicyRequest) updates) => super.copyWith((message) => updates(message as CreateAlertPolicyRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateAlertPolicyRequest create() => CreateAlertPolicyRequest();
-  static PbList<CreateAlertPolicyRequest> createRepeated() =>
-      PbList<CreateAlertPolicyRequest>();
-  static CreateAlertPolicyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateAlertPolicyRequest();
-    return _defaultInstance;
-  }
-
+  CreateAlertPolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateAlertPolicyRequest> createRepeated() => $pb.PbList<CreateAlertPolicyRequest>();
+  static CreateAlertPolicyRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateAlertPolicyRequest _defaultInstance;
-  static void $checkItem(CreateAlertPolicyRequest v) {
-    if (v is! CreateAlertPolicyRequest)
-      checkItemFailed(v, 'CreateAlertPolicyRequest');
-  }
 
-  AlertPolicy get alertPolicy => $_getN(0);
-  set alertPolicy(AlertPolicy v) {
-    setField(2, v);
-  }
-
-  bool hasAlertPolicy() => $_has(0);
+  $0.AlertPolicy get alertPolicy => $_getN(0);
+  set alertPolicy($0.AlertPolicy v) { setField(2, v); }
+  $core.bool hasAlertPolicy() => $_has(0);
   void clearAlertPolicy() => clearField(2);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasName() => $_has(1);
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) { $_setString(1, v); }
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyCreateAlertPolicyRequest extends CreateAlertPolicyRequest
-    with ReadonlyMessageMixin {}
-
-class GetAlertPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetAlertPolicyRequest')
+class GetAlertPolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAlertPolicyRequest', package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(3, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetAlertPolicyRequest() : super();
-  GetAlertPolicyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAlertPolicyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetAlertPolicyRequest clone() =>
-      GetAlertPolicyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetAlertPolicyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetAlertPolicyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetAlertPolicyRequest clone() => GetAlertPolicyRequest()..mergeFromMessage(this);
+  GetAlertPolicyRequest copyWith(void Function(GetAlertPolicyRequest) updates) => super.copyWith((message) => updates(message as GetAlertPolicyRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetAlertPolicyRequest create() => GetAlertPolicyRequest();
-  static PbList<GetAlertPolicyRequest> createRepeated() =>
-      PbList<GetAlertPolicyRequest>();
-  static GetAlertPolicyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetAlertPolicyRequest();
-    return _defaultInstance;
-  }
-
+  GetAlertPolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<GetAlertPolicyRequest> createRepeated() => $pb.PbList<GetAlertPolicyRequest>();
+  static GetAlertPolicyRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetAlertPolicyRequest _defaultInstance;
-  static void $checkItem(GetAlertPolicyRequest v) {
-    if (v is! GetAlertPolicyRequest)
-      checkItemFailed(v, 'GetAlertPolicyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyGetAlertPolicyRequest extends GetAlertPolicyRequest
-    with ReadonlyMessageMixin {}
-
-class ListAlertPoliciesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListAlertPoliciesRequest')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+class ListAlertPoliciesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAlertPoliciesRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'name')
     ..aOS(5, 'filter')
     ..aOS(6, 'orderBy')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListAlertPoliciesRequest() : super();
-  ListAlertPoliciesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAlertPoliciesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListAlertPoliciesRequest clone() =>
-      ListAlertPoliciesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListAlertPoliciesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListAlertPoliciesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListAlertPoliciesRequest clone() => ListAlertPoliciesRequest()..mergeFromMessage(this);
+  ListAlertPoliciesRequest copyWith(void Function(ListAlertPoliciesRequest) updates) => super.copyWith((message) => updates(message as ListAlertPoliciesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListAlertPoliciesRequest create() => ListAlertPoliciesRequest();
-  static PbList<ListAlertPoliciesRequest> createRepeated() =>
-      PbList<ListAlertPoliciesRequest>();
-  static ListAlertPoliciesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListAlertPoliciesRequest();
-    return _defaultInstance;
-  }
-
+  ListAlertPoliciesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListAlertPoliciesRequest> createRepeated() => $pb.PbList<ListAlertPoliciesRequest>();
+  static ListAlertPoliciesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListAlertPoliciesRequest _defaultInstance;
-  static void $checkItem(ListAlertPoliciesRequest v) {
-    if (v is! ListAlertPoliciesRequest)
-      checkItemFailed(v, 'ListAlertPoliciesRequest');
-  }
 
-  int get pageSize => $_get(0, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  bool hasPageSize() => $_has(0);
+  $core.int get pageSize => $_get(0, 0);
+  set pageSize($core.int v) { $_setSignedInt32(0, v); }
+  $core.bool hasPageSize() => $_has(0);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPageToken() => $_has(1);
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(3);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasName() => $_has(2);
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) { $_setString(2, v); }
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(4);
 
-  String get filter => $_getS(3, '');
-  set filter(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasFilter() => $_has(3);
+  $core.String get filter => $_getS(3, '');
+  set filter($core.String v) { $_setString(3, v); }
+  $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(5);
 
-  String get orderBy => $_getS(4, '');
-  set orderBy(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasOrderBy() => $_has(4);
+  $core.String get orderBy => $_getS(4, '');
+  set orderBy($core.String v) { $_setString(4, v); }
+  $core.bool hasOrderBy() => $_has(4);
   void clearOrderBy() => clearField(6);
 }
 
-class _ReadonlyListAlertPoliciesRequest extends ListAlertPoliciesRequest
-    with ReadonlyMessageMixin {}
-
-class ListAlertPoliciesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListAlertPoliciesResponse')
+class ListAlertPoliciesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAlertPoliciesResponse', package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(2, 'nextPageToken')
-    ..pp<AlertPolicy>(3, 'alertPolicies', PbFieldType.PM,
-        AlertPolicy.$checkItem, AlertPolicy.create)
-    ..hasRequiredFields = false;
+    ..pc<$0.AlertPolicy>(3, 'alertPolicies', $pb.PbFieldType.PM,$0.AlertPolicy.create)
+    ..hasRequiredFields = false
+  ;
 
   ListAlertPoliciesResponse() : super();
-  ListAlertPoliciesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAlertPoliciesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListAlertPoliciesResponse clone() =>
-      ListAlertPoliciesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListAlertPoliciesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListAlertPoliciesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListAlertPoliciesResponse clone() => ListAlertPoliciesResponse()..mergeFromMessage(this);
+  ListAlertPoliciesResponse copyWith(void Function(ListAlertPoliciesResponse) updates) => super.copyWith((message) => updates(message as ListAlertPoliciesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListAlertPoliciesResponse create() => ListAlertPoliciesResponse();
-  static PbList<ListAlertPoliciesResponse> createRepeated() =>
-      PbList<ListAlertPoliciesResponse>();
-  static ListAlertPoliciesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListAlertPoliciesResponse();
-    return _defaultInstance;
-  }
-
+  ListAlertPoliciesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListAlertPoliciesResponse> createRepeated() => $pb.PbList<ListAlertPoliciesResponse>();
+  static ListAlertPoliciesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListAlertPoliciesResponse _defaultInstance;
-  static void $checkItem(ListAlertPoliciesResponse v) {
-    if (v is! ListAlertPoliciesResponse)
-      checkItemFailed(v, 'ListAlertPoliciesResponse');
-  }
 
-  String get nextPageToken => $_getS(0, '');
-  set nextPageToken(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasNextPageToken() => $_has(0);
+  $core.String get nextPageToken => $_getS(0, '');
+  set nextPageToken($core.String v) { $_setString(0, v); }
+  $core.bool hasNextPageToken() => $_has(0);
   void clearNextPageToken() => clearField(2);
 
-  List<AlertPolicy> get alertPolicies => $_getList(1);
+  $core.List<$0.AlertPolicy> get alertPolicies => $_getList(1);
 }
 
-class _ReadonlyListAlertPoliciesResponse extends ListAlertPoliciesResponse
-    with ReadonlyMessageMixin {}
-
-class UpdateAlertPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateAlertPolicyRequest')
-    ..a<$google$protobuf.FieldMask>(
-        2,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..a<AlertPolicy>(3, 'alertPolicy', PbFieldType.OM, AlertPolicy.getDefault,
-        AlertPolicy.create)
-    ..hasRequiredFields = false;
+class UpdateAlertPolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAlertPolicyRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM, $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$0.AlertPolicy>(3, 'alertPolicy', $pb.PbFieldType.OM, $0.AlertPolicy.getDefault, $0.AlertPolicy.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateAlertPolicyRequest() : super();
-  UpdateAlertPolicyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateAlertPolicyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateAlertPolicyRequest clone() =>
-      UpdateAlertPolicyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateAlertPolicyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateAlertPolicyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateAlertPolicyRequest clone() => UpdateAlertPolicyRequest()..mergeFromMessage(this);
+  UpdateAlertPolicyRequest copyWith(void Function(UpdateAlertPolicyRequest) updates) => super.copyWith((message) => updates(message as UpdateAlertPolicyRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateAlertPolicyRequest create() => UpdateAlertPolicyRequest();
-  static PbList<UpdateAlertPolicyRequest> createRepeated() =>
-      PbList<UpdateAlertPolicyRequest>();
-  static UpdateAlertPolicyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateAlertPolicyRequest();
-    return _defaultInstance;
-  }
-
+  UpdateAlertPolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateAlertPolicyRequest> createRepeated() => $pb.PbList<UpdateAlertPolicyRequest>();
+  static UpdateAlertPolicyRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateAlertPolicyRequest _defaultInstance;
-  static void $checkItem(UpdateAlertPolicyRequest v) {
-    if (v is! UpdateAlertPolicyRequest)
-      checkItemFailed(v, 'UpdateAlertPolicyRequest');
-  }
 
-  $google$protobuf.FieldMask get updateMask => $_getN(0);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(2, v);
-  }
-
-  bool hasUpdateMask() => $_has(0);
+  $1.FieldMask get updateMask => $_getN(0);
+  set updateMask($1.FieldMask v) { setField(2, v); }
+  $core.bool hasUpdateMask() => $_has(0);
   void clearUpdateMask() => clearField(2);
 
-  AlertPolicy get alertPolicy => $_getN(1);
-  set alertPolicy(AlertPolicy v) {
-    setField(3, v);
-  }
-
-  bool hasAlertPolicy() => $_has(1);
+  $0.AlertPolicy get alertPolicy => $_getN(1);
+  set alertPolicy($0.AlertPolicy v) { setField(3, v); }
+  $core.bool hasAlertPolicy() => $_has(1);
   void clearAlertPolicy() => clearField(3);
 }
 
-class _ReadonlyUpdateAlertPolicyRequest extends UpdateAlertPolicyRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteAlertPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteAlertPolicyRequest')
+class DeleteAlertPolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAlertPolicyRequest', package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(3, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteAlertPolicyRequest() : super();
-  DeleteAlertPolicyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteAlertPolicyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteAlertPolicyRequest clone() =>
-      DeleteAlertPolicyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteAlertPolicyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteAlertPolicyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteAlertPolicyRequest clone() => DeleteAlertPolicyRequest()..mergeFromMessage(this);
+  DeleteAlertPolicyRequest copyWith(void Function(DeleteAlertPolicyRequest) updates) => super.copyWith((message) => updates(message as DeleteAlertPolicyRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteAlertPolicyRequest create() => DeleteAlertPolicyRequest();
-  static PbList<DeleteAlertPolicyRequest> createRepeated() =>
-      PbList<DeleteAlertPolicyRequest>();
-  static DeleteAlertPolicyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteAlertPolicyRequest();
-    return _defaultInstance;
-  }
-
+  DeleteAlertPolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteAlertPolicyRequest> createRepeated() => $pb.PbList<DeleteAlertPolicyRequest>();
+  static DeleteAlertPolicyRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteAlertPolicyRequest _defaultInstance;
-  static void $checkItem(DeleteAlertPolicyRequest v) {
-    if (v is! DeleteAlertPolicyRequest)
-      checkItemFailed(v, 'DeleteAlertPolicyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyDeleteAlertPolicyRequest extends DeleteAlertPolicyRequest
-    with ReadonlyMessageMixin {}
-
 class AlertPolicyServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   AlertPolicyServiceApi(this._client);
 
-  Future<ListAlertPoliciesResponse> listAlertPolicies(
-      ClientContext ctx, ListAlertPoliciesRequest request) {
+  $async.Future<ListAlertPoliciesResponse> listAlertPolicies($pb.ClientContext ctx, ListAlertPoliciesRequest request) {
     var emptyResponse = ListAlertPoliciesResponse();
-    return _client.invoke<ListAlertPoliciesResponse>(
-        ctx, 'AlertPolicyService', 'ListAlertPolicies', request, emptyResponse);
+    return _client.invoke<ListAlertPoliciesResponse>(ctx, 'AlertPolicyService', 'ListAlertPolicies', request, emptyResponse);
   }
-
-  Future<AlertPolicy> getAlertPolicy(
-      ClientContext ctx, GetAlertPolicyRequest request) {
-    var emptyResponse = AlertPolicy();
-    return _client.invoke<AlertPolicy>(
-        ctx, 'AlertPolicyService', 'GetAlertPolicy', request, emptyResponse);
+  $async.Future<$0.AlertPolicy> getAlertPolicy($pb.ClientContext ctx, GetAlertPolicyRequest request) {
+    var emptyResponse = $0.AlertPolicy();
+    return _client.invoke<$0.AlertPolicy>(ctx, 'AlertPolicyService', 'GetAlertPolicy', request, emptyResponse);
   }
-
-  Future<AlertPolicy> createAlertPolicy(
-      ClientContext ctx, CreateAlertPolicyRequest request) {
-    var emptyResponse = AlertPolicy();
-    return _client.invoke<AlertPolicy>(
-        ctx, 'AlertPolicyService', 'CreateAlertPolicy', request, emptyResponse);
+  $async.Future<$0.AlertPolicy> createAlertPolicy($pb.ClientContext ctx, CreateAlertPolicyRequest request) {
+    var emptyResponse = $0.AlertPolicy();
+    return _client.invoke<$0.AlertPolicy>(ctx, 'AlertPolicyService', 'CreateAlertPolicy', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteAlertPolicy(
-      ClientContext ctx, DeleteAlertPolicyRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'AlertPolicyService', 'DeleteAlertPolicy', request, emptyResponse);
+  $async.Future<$2.Empty> deleteAlertPolicy($pb.ClientContext ctx, DeleteAlertPolicyRequest request) {
+    var emptyResponse = $2.Empty();
+    return _client.invoke<$2.Empty>(ctx, 'AlertPolicyService', 'DeleteAlertPolicy', request, emptyResponse);
   }
-
-  Future<AlertPolicy> updateAlertPolicy(
-      ClientContext ctx, UpdateAlertPolicyRequest request) {
-    var emptyResponse = AlertPolicy();
-    return _client.invoke<AlertPolicy>(
-        ctx, 'AlertPolicyService', 'UpdateAlertPolicy', request, emptyResponse);
+  $async.Future<$0.AlertPolicy> updateAlertPolicy($pb.ClientContext ctx, UpdateAlertPolicyRequest request) {
+    var emptyResponse = $0.AlertPolicy();
+    return _client.invoke<$0.AlertPolicy>(ctx, 'AlertPolicyService', 'UpdateAlertPolicy', request, emptyResponse);
   }
 }
+

@@ -1,59 +1,49 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/remoteworkers/v1test2/worker.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const Worker$json = {
+const Worker$json = const {
   '1': 'Worker',
-  '2': [
-    {
-      '1': 'devices',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.google.devtools.remoteworkers.v1test2.Device',
-      '10': 'devices'
-    },
-    {
-      '1': 'properties',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.devtools.remoteworkers.v1test2.Worker.Property',
-      '10': 'properties'
-    },
+  '2': const [
+    const {'1': 'devices', '3': 1, '4': 3, '5': 11, '6': '.google.devtools.remoteworkers.v1test2.Device', '10': 'devices'},
+    const {'1': 'properties', '3': 2, '4': 3, '5': 11, '6': '.google.devtools.remoteworkers.v1test2.Worker.Property', '10': 'properties'},
+    const {'1': 'configs', '3': 3, '4': 3, '5': 11, '6': '.google.devtools.remoteworkers.v1test2.Worker.Config', '10': 'configs'},
   ],
-  '3': [Worker_Property$json],
+  '3': const [Worker_Property$json, Worker_Config$json],
 };
 
-const Worker_Property$json = {
+const Worker_Property$json = const {
   '1': 'Property',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
 };
 
-const Device$json = {
+const Worker_Config$json = const {
+  '1': 'Config',
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+};
+
+const Device$json = const {
   '1': 'Device',
-  '2': [
-    {'1': 'handle', '3': 1, '4': 1, '5': 9, '10': 'handle'},
-    {
-      '1': 'properties',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.devtools.remoteworkers.v1test2.Device.Property',
-      '10': 'properties'
-    },
+  '2': const [
+    const {'1': 'handle', '3': 1, '4': 1, '5': 9, '10': 'handle'},
+    const {'1': 'properties', '3': 2, '4': 3, '5': 11, '6': '.google.devtools.remoteworkers.v1test2.Device.Property', '10': 'properties'},
   ],
-  '3': [Device_Property$json],
+  '3': const [Device_Property$json],
 };
 
-const Device_Property$json = {
+const Device_Property$json = const {
   '1': 'Property',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
 };
+

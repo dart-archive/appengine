@@ -1,198 +1,111 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/oslogin/v1/oslogin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/empty.pbjson.dart' as $google$protobuf;
-import '../common/common.pbjson.dart' as $google$cloud$oslogin$common;
-import '../../../protobuf/field_mask.pbjson.dart' as $google$protobuf;
+import '../../../protobuf/empty.pbjson.dart' as $2;
+import '../common/common.pbjson.dart' as $0;
+import '../../../protobuf/field_mask.pbjson.dart' as $1;
 
-const LoginProfile$json = {
+const LoginProfile$json = const {
   '1': 'LoginProfile',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {
-      '1': 'posix_accounts',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.cloud.oslogin.common.PosixAccount',
-      '10': 'posixAccounts'
-    },
-    {
-      '1': 'ssh_public_keys',
-      '3': 3,
-      '4': 3,
-      '5': 11,
-      '6': '.google.cloud.oslogin.v1.LoginProfile.SshPublicKeysEntry',
-      '10': 'sshPublicKeys'
-    },
-    {'1': 'suspended', '3': 4, '4': 1, '5': 8, '10': 'suspended'},
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'posix_accounts', '3': 2, '4': 3, '5': 11, '6': '.google.cloud.oslogin.common.PosixAccount', '10': 'posixAccounts'},
+    const {'1': 'ssh_public_keys', '3': 3, '4': 3, '5': 11, '6': '.google.cloud.oslogin.v1.LoginProfile.SshPublicKeysEntry', '10': 'sshPublicKeys'},
+    const {'1': 'suspended', '3': 4, '4': 1, '5': 8, '10': 'suspended'},
   ],
-  '3': [LoginProfile_SshPublicKeysEntry$json],
+  '3': const [LoginProfile_SshPublicKeysEntry$json],
 };
 
-const LoginProfile_SshPublicKeysEntry$json = {
+const LoginProfile_SshPublicKeysEntry$json = const {
   '1': 'SshPublicKeysEntry',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {
-      '1': 'value',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.oslogin.common.SshPublicKey',
-      '10': 'value'
-    },
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.oslogin.common.SshPublicKey', '10': 'value'},
   ],
-  '7': {'7': true},
+  '7': const {'7': true},
 };
 
-const DeletePosixAccountRequest$json = {
+const DeletePosixAccountRequest$json = const {
   '1': 'DeletePosixAccountRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const DeleteSshPublicKeyRequest$json = {
+const DeleteSshPublicKeyRequest$json = const {
   '1': 'DeleteSshPublicKeyRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const GetLoginProfileRequest$json = {
+const GetLoginProfileRequest$json = const {
   '1': 'GetLoginProfileRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const GetSshPublicKeyRequest$json = {
+const GetSshPublicKeyRequest$json = const {
   '1': 'GetSshPublicKeyRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ImportSshPublicKeyRequest$json = {
+const ImportSshPublicKeyRequest$json = const {
   '1': 'ImportSshPublicKeyRequest',
-  '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {
-      '1': 'ssh_public_key',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.oslogin.common.SshPublicKey',
-      '10': 'sshPublicKey'
-    },
-    {'1': 'project_id', '3': 3, '4': 1, '5': 9, '10': 'projectId'},
+  '2': const [
+    const {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    const {'1': 'ssh_public_key', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.oslogin.common.SshPublicKey', '10': 'sshPublicKey'},
+    const {'1': 'project_id', '3': 3, '4': 1, '5': 9, '10': 'projectId'},
   ],
 };
 
-const ImportSshPublicKeyResponse$json = {
+const ImportSshPublicKeyResponse$json = const {
   '1': 'ImportSshPublicKeyResponse',
-  '2': [
-    {
-      '1': 'login_profile',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.oslogin.v1.LoginProfile',
-      '10': 'loginProfile'
-    },
+  '2': const [
+    const {'1': 'login_profile', '3': 1, '4': 1, '5': 11, '6': '.google.cloud.oslogin.v1.LoginProfile', '10': 'loginProfile'},
   ],
 };
 
-const UpdateSshPublicKeyRequest$json = {
+const UpdateSshPublicKeyRequest$json = const {
   '1': 'UpdateSshPublicKeyRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {
-      '1': 'ssh_public_key',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.oslogin.common.SshPublicKey',
-      '10': 'sshPublicKey'
-    },
-    {
-      '1': 'update_mask',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.FieldMask',
-      '10': 'updateMask'
-    },
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'ssh_public_key', '3': 2, '4': 1, '5': 11, '6': '.google.cloud.oslogin.common.SshPublicKey', '10': 'sshPublicKey'},
+    const {'1': 'update_mask', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
   ],
 };
 
-const OsLoginService$json = {
+const OsLoginServiceBase$json = const {
   '1': 'OsLoginService',
-  '2': [
-    {
-      '1': 'DeletePosixAccount',
-      '2': '.google.cloud.oslogin.v1.DeletePosixAccountRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'DeleteSshPublicKey',
-      '2': '.google.cloud.oslogin.v1.DeleteSshPublicKeyRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'GetLoginProfile',
-      '2': '.google.cloud.oslogin.v1.GetLoginProfileRequest',
-      '3': '.google.cloud.oslogin.v1.LoginProfile',
-      '4': {}
-    },
-    {
-      '1': 'GetSshPublicKey',
-      '2': '.google.cloud.oslogin.v1.GetSshPublicKeyRequest',
-      '3': '.google.cloud.oslogin.common.SshPublicKey',
-      '4': {}
-    },
-    {
-      '1': 'ImportSshPublicKey',
-      '2': '.google.cloud.oslogin.v1.ImportSshPublicKeyRequest',
-      '3': '.google.cloud.oslogin.v1.ImportSshPublicKeyResponse',
-      '4': {}
-    },
-    {
-      '1': 'UpdateSshPublicKey',
-      '2': '.google.cloud.oslogin.v1.UpdateSshPublicKeyRequest',
-      '3': '.google.cloud.oslogin.common.SshPublicKey',
-      '4': {}
-    },
+  '2': const [
+    const {'1': 'DeletePosixAccount', '2': '.google.cloud.oslogin.v1.DeletePosixAccountRequest', '3': '.google.protobuf.Empty', '4': const {}},
+    const {'1': 'DeleteSshPublicKey', '2': '.google.cloud.oslogin.v1.DeleteSshPublicKeyRequest', '3': '.google.protobuf.Empty', '4': const {}},
+    const {'1': 'GetLoginProfile', '2': '.google.cloud.oslogin.v1.GetLoginProfileRequest', '3': '.google.cloud.oslogin.v1.LoginProfile', '4': const {}},
+    const {'1': 'GetSshPublicKey', '2': '.google.cloud.oslogin.v1.GetSshPublicKeyRequest', '3': '.google.cloud.oslogin.common.SshPublicKey', '4': const {}},
+    const {'1': 'ImportSshPublicKey', '2': '.google.cloud.oslogin.v1.ImportSshPublicKeyRequest', '3': '.google.cloud.oslogin.v1.ImportSshPublicKeyResponse', '4': const {}},
+    const {'1': 'UpdateSshPublicKey', '2': '.google.cloud.oslogin.v1.UpdateSshPublicKeyRequest', '3': '.google.cloud.oslogin.common.SshPublicKey', '4': const {}},
   ],
 };
 
-const OsLoginService$messageJson = {
-  '.google.cloud.oslogin.v1.DeletePosixAccountRequest':
-      DeletePosixAccountRequest$json,
-  '.google.protobuf.Empty': $google$protobuf.Empty$json,
-  '.google.cloud.oslogin.v1.DeleteSshPublicKeyRequest':
-      DeleteSshPublicKeyRequest$json,
-  '.google.cloud.oslogin.v1.GetLoginProfileRequest':
-      GetLoginProfileRequest$json,
+const OsLoginServiceBase$messageJson = const {
+  '.google.cloud.oslogin.v1.DeletePosixAccountRequest': DeletePosixAccountRequest$json,
+  '.google.protobuf.Empty': $2.Empty$json,
+  '.google.cloud.oslogin.v1.DeleteSshPublicKeyRequest': DeleteSshPublicKeyRequest$json,
+  '.google.cloud.oslogin.v1.GetLoginProfileRequest': GetLoginProfileRequest$json,
   '.google.cloud.oslogin.v1.LoginProfile': LoginProfile$json,
-  '.google.cloud.oslogin.common.PosixAccount':
-      $google$cloud$oslogin$common.PosixAccount$json,
-  '.google.cloud.oslogin.v1.LoginProfile.SshPublicKeysEntry':
-      LoginProfile_SshPublicKeysEntry$json,
-  '.google.cloud.oslogin.common.SshPublicKey':
-      $google$cloud$oslogin$common.SshPublicKey$json,
-  '.google.cloud.oslogin.v1.GetSshPublicKeyRequest':
-      GetSshPublicKeyRequest$json,
-  '.google.cloud.oslogin.v1.ImportSshPublicKeyRequest':
-      ImportSshPublicKeyRequest$json,
-  '.google.cloud.oslogin.v1.ImportSshPublicKeyResponse':
-      ImportSshPublicKeyResponse$json,
-  '.google.cloud.oslogin.v1.UpdateSshPublicKeyRequest':
-      UpdateSshPublicKeyRequest$json,
-  '.google.protobuf.FieldMask': $google$protobuf.FieldMask$json,
+  '.google.cloud.oslogin.common.PosixAccount': $0.PosixAccount$json,
+  '.google.cloud.oslogin.v1.LoginProfile.SshPublicKeysEntry': LoginProfile_SshPublicKeysEntry$json,
+  '.google.cloud.oslogin.common.SshPublicKey': $0.SshPublicKey$json,
+  '.google.cloud.oslogin.v1.GetSshPublicKeyRequest': GetSshPublicKeyRequest$json,
+  '.google.cloud.oslogin.v1.ImportSshPublicKeyRequest': ImportSshPublicKeyRequest$json,
+  '.google.cloud.oslogin.v1.ImportSshPublicKeyResponse': ImportSshPublicKeyResponse$json,
+  '.google.cloud.oslogin.v1.UpdateSshPublicKeyRequest': UpdateSshPublicKeyRequest$json,
+  '.google.protobuf.FieldMask': $1.FieldMask$json,
 };
+

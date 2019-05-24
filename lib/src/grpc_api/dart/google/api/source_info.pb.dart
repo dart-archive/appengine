@@ -1,42 +1,33 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/source_info.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../protobuf/any.pb.dart' as $google$protobuf;
+import '../protobuf/any.pb.dart' as $0;
 
-class SourceInfo extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SourceInfo')
-    ..pp<$google$protobuf.Any>(1, 'sourceFiles', PbFieldType.PM,
-        $google$protobuf.Any.$checkItem, $google$protobuf.Any.create)
-    ..hasRequiredFields = false;
+class SourceInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceInfo', package: const $pb.PackageName('google.api'))
+    ..pc<$0.Any>(1, 'sourceFiles', $pb.PbFieldType.PM,$0.Any.create)
+    ..hasRequiredFields = false
+  ;
 
   SourceInfo() : super();
-  SourceInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SourceInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SourceInfo clone() => SourceInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SourceInfo copyWith(void Function(SourceInfo) updates) => super.copyWith((message) => updates(message as SourceInfo));
+  $pb.BuilderInfo get info_ => _i;
   static SourceInfo create() => SourceInfo();
-  static PbList<SourceInfo> createRepeated() => PbList<SourceInfo>();
-  static SourceInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceInfo();
-    return _defaultInstance;
-  }
-
+  SourceInfo createEmptyInstance() => create();
+  static $pb.PbList<SourceInfo> createRepeated() => $pb.PbList<SourceInfo>();
+  static SourceInfo getDefault() => _defaultInstance ??= create()..freeze();
   static SourceInfo _defaultInstance;
-  static void $checkItem(SourceInfo v) {
-    if (v is! SourceInfo) checkItemFailed(v, 'SourceInfo');
-  }
 
-  List<$google$protobuf.Any> get sourceFiles => $_getList(0);
+  $core.List<$0.Any> get sourceFiles => $_getList(0);
 }
 
-class _ReadonlySourceInfo extends SourceInfo with ReadonlyMessageMixin {}

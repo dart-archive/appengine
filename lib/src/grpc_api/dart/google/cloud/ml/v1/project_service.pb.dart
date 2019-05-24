@@ -1,112 +1,76 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/ml/v1/project_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class GetConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetConfigRequest')
+class GetConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetConfigRequest', package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetConfigRequest() : super();
-  GetConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetConfigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetConfigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetConfigRequest clone() => GetConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetConfigRequest copyWith(void Function(GetConfigRequest) updates) => super.copyWith((message) => updates(message as GetConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetConfigRequest create() => GetConfigRequest();
-  static PbList<GetConfigRequest> createRepeated() =>
-      PbList<GetConfigRequest>();
-  static GetConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetConfigRequest();
-    return _defaultInstance;
-  }
-
+  GetConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetConfigRequest> createRepeated() => $pb.PbList<GetConfigRequest>();
+  static GetConfigRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetConfigRequest _defaultInstance;
-  static void $checkItem(GetConfigRequest v) {
-    if (v is! GetConfigRequest) checkItemFailed(v, 'GetConfigRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetConfigRequest extends GetConfigRequest
-    with ReadonlyMessageMixin {}
-
-class GetConfigResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetConfigResponse')
+class GetConfigResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetConfigResponse', package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'serviceAccount')
     ..aInt64(2, 'serviceAccountProject')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetConfigResponse() : super();
-  GetConfigResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetConfigResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetConfigResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetConfigResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetConfigResponse clone() => GetConfigResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetConfigResponse copyWith(void Function(GetConfigResponse) updates) => super.copyWith((message) => updates(message as GetConfigResponse));
+  $pb.BuilderInfo get info_ => _i;
   static GetConfigResponse create() => GetConfigResponse();
-  static PbList<GetConfigResponse> createRepeated() =>
-      PbList<GetConfigResponse>();
-  static GetConfigResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetConfigResponse();
-    return _defaultInstance;
-  }
-
+  GetConfigResponse createEmptyInstance() => create();
+  static $pb.PbList<GetConfigResponse> createRepeated() => $pb.PbList<GetConfigResponse>();
+  static GetConfigResponse getDefault() => _defaultInstance ??= create()..freeze();
   static GetConfigResponse _defaultInstance;
-  static void $checkItem(GetConfigResponse v) {
-    if (v is! GetConfigResponse) checkItemFailed(v, 'GetConfigResponse');
-  }
 
-  String get serviceAccount => $_getS(0, '');
-  set serviceAccount(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceAccount() => $_has(0);
+  $core.String get serviceAccount => $_getS(0, '');
+  set serviceAccount($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceAccount() => $_has(0);
   void clearServiceAccount() => clearField(1);
 
   Int64 get serviceAccountProject => $_getI64(1);
-  set serviceAccountProject(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasServiceAccountProject() => $_has(1);
+  set serviceAccountProject(Int64 v) { $_setInt64(1, v); }
+  $core.bool hasServiceAccountProject() => $_has(1);
   void clearServiceAccountProject() => clearField(2);
 }
 
-class _ReadonlyGetConfigResponse extends GetConfigResponse
-    with ReadonlyMessageMixin {}
-
 class ProjectManagementServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   ProjectManagementServiceApi(this._client);
 
-  Future<GetConfigResponse> getConfig(
-      ClientContext ctx, GetConfigRequest request) {
+  $async.Future<GetConfigResponse> getConfig($pb.ClientContext ctx, GetConfigRequest request) {
     var emptyResponse = GetConfigResponse();
-    return _client.invoke<GetConfigResponse>(
-        ctx, 'ProjectManagementService', 'GetConfig', request, emptyResponse);
+    return _client.invoke<GetConfigResponse>(ctx, 'ProjectManagementService', 'GetConfig', request, emptyResponse);
   }
 }
+

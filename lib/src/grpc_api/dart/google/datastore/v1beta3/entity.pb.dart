@@ -1,435 +1,301 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/datastore/v1beta3/entity.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../type/latlng.pb.dart' as $google$type;
-import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../type/latlng.pb.dart' as $0;
+import '../../protobuf/timestamp.pb.dart' as $1;
 
-import '../../protobuf/struct.pbenum.dart' as $google$protobuf;
+import '../../protobuf/struct.pbenum.dart' as $2;
 
-class PartitionId extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('PartitionId')
+class PartitionId extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionId', package: const $pb.PackageName('google.datastore.v1beta3'))
     ..aOS(2, 'projectId')
     ..aOS(4, 'namespaceId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   PartitionId() : super();
-  PartitionId.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartitionId.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PartitionId.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  PartitionId.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   PartitionId clone() => PartitionId()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  PartitionId copyWith(void Function(PartitionId) updates) => super.copyWith((message) => updates(message as PartitionId));
+  $pb.BuilderInfo get info_ => _i;
   static PartitionId create() => PartitionId();
-  static PbList<PartitionId> createRepeated() => PbList<PartitionId>();
-  static PartitionId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyPartitionId();
-    return _defaultInstance;
-  }
-
+  PartitionId createEmptyInstance() => create();
+  static $pb.PbList<PartitionId> createRepeated() => $pb.PbList<PartitionId>();
+  static PartitionId getDefault() => _defaultInstance ??= create()..freeze();
   static PartitionId _defaultInstance;
-  static void $checkItem(PartitionId v) {
-    if (v is! PartitionId) checkItemFailed(v, 'PartitionId');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(2);
 
-  String get namespaceId => $_getS(1, '');
-  set namespaceId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNamespaceId() => $_has(1);
+  $core.String get namespaceId => $_getS(1, '');
+  set namespaceId($core.String v) { $_setString(1, v); }
+  $core.bool hasNamespaceId() => $_has(1);
   void clearNamespaceId() => clearField(4);
 }
 
-class _ReadonlyPartitionId extends PartitionId with ReadonlyMessageMixin {}
+enum Key_PathElement_IdType {
+  id, 
+  name, 
+  notSet
+}
 
-class Key_PathElement extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Key_PathElement')
+class Key_PathElement extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Key_PathElement_IdType> _Key_PathElement_IdTypeByTag = {
+    2 : Key_PathElement_IdType.id,
+    3 : Key_PathElement_IdType.name,
+    0 : Key_PathElement_IdType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Key.PathElement', package: const $pb.PackageName('google.datastore.v1beta3'))
     ..aOS(1, 'kind')
     ..aInt64(2, 'id')
     ..aOS(3, 'name')
-    ..hasRequiredFields = false;
+    ..oo(0, [2, 3])
+    ..hasRequiredFields = false
+  ;
 
   Key_PathElement() : super();
-  Key_PathElement.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Key_PathElement.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Key_PathElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Key_PathElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Key_PathElement clone() => Key_PathElement()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Key_PathElement copyWith(void Function(Key_PathElement) updates) => super.copyWith((message) => updates(message as Key_PathElement));
+  $pb.BuilderInfo get info_ => _i;
   static Key_PathElement create() => Key_PathElement();
-  static PbList<Key_PathElement> createRepeated() => PbList<Key_PathElement>();
-  static Key_PathElement getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyKey_PathElement();
-    return _defaultInstance;
-  }
-
+  Key_PathElement createEmptyInstance() => create();
+  static $pb.PbList<Key_PathElement> createRepeated() => $pb.PbList<Key_PathElement>();
+  static Key_PathElement getDefault() => _defaultInstance ??= create()..freeze();
   static Key_PathElement _defaultInstance;
-  static void $checkItem(Key_PathElement v) {
-    if (v is! Key_PathElement) checkItemFailed(v, 'Key_PathElement');
-  }
 
-  String get kind => $_getS(0, '');
-  set kind(String v) {
-    $_setString(0, v);
-  }
+  Key_PathElement_IdType whichIdType() => _Key_PathElement_IdTypeByTag[$_whichOneof(0)];
+  void clearIdType() => clearField($_whichOneof(0));
 
-  bool hasKind() => $_has(0);
+  $core.String get kind => $_getS(0, '');
+  set kind($core.String v) { $_setString(0, v); }
+  $core.bool hasKind() => $_has(0);
   void clearKind() => clearField(1);
 
   Int64 get id => $_getI64(1);
-  set id(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasId() => $_has(1);
+  set id(Int64 v) { $_setInt64(1, v); }
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasName() => $_has(2);
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) { $_setString(2, v); }
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyKey_PathElement extends Key_PathElement
-    with ReadonlyMessageMixin {}
-
-class Key extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Key')
-    ..a<PartitionId>(1, 'partitionId', PbFieldType.OM, PartitionId.getDefault,
-        PartitionId.create)
-    ..pp<Key_PathElement>(2, 'path', PbFieldType.PM, Key_PathElement.$checkItem,
-        Key_PathElement.create)
-    ..hasRequiredFields = false;
+class Key extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Key', package: const $pb.PackageName('google.datastore.v1beta3'))
+    ..a<PartitionId>(1, 'partitionId', $pb.PbFieldType.OM, PartitionId.getDefault, PartitionId.create)
+    ..pc<Key_PathElement>(2, 'path', $pb.PbFieldType.PM,Key_PathElement.create)
+    ..hasRequiredFields = false
+  ;
 
   Key() : super();
-  Key.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Key.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Key.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Key.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Key clone() => Key()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Key copyWith(void Function(Key) updates) => super.copyWith((message) => updates(message as Key));
+  $pb.BuilderInfo get info_ => _i;
   static Key create() => Key();
-  static PbList<Key> createRepeated() => PbList<Key>();
-  static Key getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyKey();
-    return _defaultInstance;
-  }
-
+  Key createEmptyInstance() => create();
+  static $pb.PbList<Key> createRepeated() => $pb.PbList<Key>();
+  static Key getDefault() => _defaultInstance ??= create()..freeze();
   static Key _defaultInstance;
-  static void $checkItem(Key v) {
-    if (v is! Key) checkItemFailed(v, 'Key');
-  }
 
   PartitionId get partitionId => $_getN(0);
-  set partitionId(PartitionId v) {
-    setField(1, v);
-  }
-
-  bool hasPartitionId() => $_has(0);
+  set partitionId(PartitionId v) { setField(1, v); }
+  $core.bool hasPartitionId() => $_has(0);
   void clearPartitionId() => clearField(1);
 
-  List<Key_PathElement> get path => $_getList(1);
+  $core.List<Key_PathElement> get path => $_getList(1);
 }
 
-class _ReadonlyKey extends Key with ReadonlyMessageMixin {}
-
-class ArrayValue extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ArrayValue')
-    ..pp<Value>(1, 'values', PbFieldType.PM, Value.$checkItem, Value.create)
-    ..hasRequiredFields = false;
+class ArrayValue extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ArrayValue', package: const $pb.PackageName('google.datastore.v1beta3'))
+    ..pc<Value>(1, 'values', $pb.PbFieldType.PM,Value.create)
+    ..hasRequiredFields = false
+  ;
 
   ArrayValue() : super();
-  ArrayValue.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ArrayValue.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ArrayValue.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ArrayValue.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ArrayValue clone() => ArrayValue()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ArrayValue copyWith(void Function(ArrayValue) updates) => super.copyWith((message) => updates(message as ArrayValue));
+  $pb.BuilderInfo get info_ => _i;
   static ArrayValue create() => ArrayValue();
-  static PbList<ArrayValue> createRepeated() => PbList<ArrayValue>();
-  static ArrayValue getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyArrayValue();
-    return _defaultInstance;
-  }
-
+  ArrayValue createEmptyInstance() => create();
+  static $pb.PbList<ArrayValue> createRepeated() => $pb.PbList<ArrayValue>();
+  static ArrayValue getDefault() => _defaultInstance ??= create()..freeze();
   static ArrayValue _defaultInstance;
-  static void $checkItem(ArrayValue v) {
-    if (v is! ArrayValue) checkItemFailed(v, 'ArrayValue');
-  }
 
-  List<Value> get values => $_getList(0);
+  $core.List<Value> get values => $_getList(0);
 }
 
-class _ReadonlyArrayValue extends ArrayValue with ReadonlyMessageMixin {}
+enum Value_ValueType {
+  booleanValue, 
+  integerValue, 
+  doubleValue, 
+  keyValue, 
+  entityValue, 
+  geoPointValue, 
+  arrayValue, 
+  timestampValue, 
+  nullValue, 
+  stringValue, 
+  blobValue, 
+  notSet
+}
 
-class Value extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Value')
+class Value extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Value_ValueType> _Value_ValueTypeByTag = {
+    1 : Value_ValueType.booleanValue,
+    2 : Value_ValueType.integerValue,
+    3 : Value_ValueType.doubleValue,
+    5 : Value_ValueType.keyValue,
+    6 : Value_ValueType.entityValue,
+    8 : Value_ValueType.geoPointValue,
+    9 : Value_ValueType.arrayValue,
+    10 : Value_ValueType.timestampValue,
+    11 : Value_ValueType.nullValue,
+    17 : Value_ValueType.stringValue,
+    18 : Value_ValueType.blobValue,
+    0 : Value_ValueType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Value', package: const $pb.PackageName('google.datastore.v1beta3'))
     ..aOB(1, 'booleanValue')
     ..aInt64(2, 'integerValue')
-    ..a<double>(3, 'doubleValue', PbFieldType.OD)
-    ..a<Key>(5, 'keyValue', PbFieldType.OM, Key.getDefault, Key.create)
-    ..a<Entity>(
-        6, 'entityValue', PbFieldType.OM, Entity.getDefault, Entity.create)
-    ..a<$google$type.LatLng>(8, 'geoPointValue', PbFieldType.OM,
-        $google$type.LatLng.getDefault, $google$type.LatLng.create)
-    ..a<ArrayValue>(9, 'arrayValue', PbFieldType.OM, ArrayValue.getDefault,
-        ArrayValue.create)
-    ..a<$google$protobuf.Timestamp>(
-        10,
-        'timestampValue',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..e<$google$protobuf.NullValue>(
-        11,
-        'nullValue',
-        PbFieldType.OE,
-        $google$protobuf.NullValue.NULL_VALUE,
-        $google$protobuf.NullValue.valueOf,
-        $google$protobuf.NullValue.values)
-    ..a<int>(14, 'meaning', PbFieldType.O3)
+    ..a<$core.double>(3, 'doubleValue', $pb.PbFieldType.OD)
+    ..a<Key>(5, 'keyValue', $pb.PbFieldType.OM, Key.getDefault, Key.create)
+    ..a<Entity>(6, 'entityValue', $pb.PbFieldType.OM, Entity.getDefault, Entity.create)
+    ..a<$0.LatLng>(8, 'geoPointValue', $pb.PbFieldType.OM, $0.LatLng.getDefault, $0.LatLng.create)
+    ..a<ArrayValue>(9, 'arrayValue', $pb.PbFieldType.OM, ArrayValue.getDefault, ArrayValue.create)
+    ..a<$1.Timestamp>(10, 'timestampValue', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..e<$2.NullValue>(11, 'nullValue', $pb.PbFieldType.OE, $2.NullValue.NULL_VALUE, $2.NullValue.valueOf, $2.NullValue.values)
+    ..a<$core.int>(14, 'meaning', $pb.PbFieldType.O3)
     ..aOS(17, 'stringValue')
-    ..a<List<int>>(18, 'blobValue', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(18, 'blobValue', $pb.PbFieldType.OY)
     ..aOB(19, 'excludeFromIndexes')
-    ..hasRequiredFields = false;
+    ..oo(0, [1, 2, 3, 5, 6, 8, 9, 10, 11, 17, 18])
+    ..hasRequiredFields = false
+  ;
 
   Value() : super();
-  Value.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Value.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Value.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Value.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Value clone() => Value()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Value copyWith(void Function(Value) updates) => super.copyWith((message) => updates(message as Value));
+  $pb.BuilderInfo get info_ => _i;
   static Value create() => Value();
-  static PbList<Value> createRepeated() => PbList<Value>();
-  static Value getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyValue();
-    return _defaultInstance;
-  }
-
+  Value createEmptyInstance() => create();
+  static $pb.PbList<Value> createRepeated() => $pb.PbList<Value>();
+  static Value getDefault() => _defaultInstance ??= create()..freeze();
   static Value _defaultInstance;
-  static void $checkItem(Value v) {
-    if (v is! Value) checkItemFailed(v, 'Value');
-  }
 
-  bool get booleanValue => $_get(0, false);
-  set booleanValue(bool v) {
-    $_setBool(0, v);
-  }
+  Value_ValueType whichValueType() => _Value_ValueTypeByTag[$_whichOneof(0)];
+  void clearValueType() => clearField($_whichOneof(0));
 
-  bool hasBooleanValue() => $_has(0);
+  $core.bool get booleanValue => $_get(0, false);
+  set booleanValue($core.bool v) { $_setBool(0, v); }
+  $core.bool hasBooleanValue() => $_has(0);
   void clearBooleanValue() => clearField(1);
 
   Int64 get integerValue => $_getI64(1);
-  set integerValue(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasIntegerValue() => $_has(1);
+  set integerValue(Int64 v) { $_setInt64(1, v); }
+  $core.bool hasIntegerValue() => $_has(1);
   void clearIntegerValue() => clearField(2);
 
-  double get doubleValue => $_getN(2);
-  set doubleValue(double v) {
-    $_setDouble(2, v);
-  }
-
-  bool hasDoubleValue() => $_has(2);
+  $core.double get doubleValue => $_getN(2);
+  set doubleValue($core.double v) { $_setDouble(2, v); }
+  $core.bool hasDoubleValue() => $_has(2);
   void clearDoubleValue() => clearField(3);
 
   Key get keyValue => $_getN(3);
-  set keyValue(Key v) {
-    setField(5, v);
-  }
-
-  bool hasKeyValue() => $_has(3);
+  set keyValue(Key v) { setField(5, v); }
+  $core.bool hasKeyValue() => $_has(3);
   void clearKeyValue() => clearField(5);
 
   Entity get entityValue => $_getN(4);
-  set entityValue(Entity v) {
-    setField(6, v);
-  }
-
-  bool hasEntityValue() => $_has(4);
+  set entityValue(Entity v) { setField(6, v); }
+  $core.bool hasEntityValue() => $_has(4);
   void clearEntityValue() => clearField(6);
 
-  $google$type.LatLng get geoPointValue => $_getN(5);
-  set geoPointValue($google$type.LatLng v) {
-    setField(8, v);
-  }
-
-  bool hasGeoPointValue() => $_has(5);
+  $0.LatLng get geoPointValue => $_getN(5);
+  set geoPointValue($0.LatLng v) { setField(8, v); }
+  $core.bool hasGeoPointValue() => $_has(5);
   void clearGeoPointValue() => clearField(8);
 
   ArrayValue get arrayValue => $_getN(6);
-  set arrayValue(ArrayValue v) {
-    setField(9, v);
-  }
-
-  bool hasArrayValue() => $_has(6);
+  set arrayValue(ArrayValue v) { setField(9, v); }
+  $core.bool hasArrayValue() => $_has(6);
   void clearArrayValue() => clearField(9);
 
-  $google$protobuf.Timestamp get timestampValue => $_getN(7);
-  set timestampValue($google$protobuf.Timestamp v) {
-    setField(10, v);
-  }
-
-  bool hasTimestampValue() => $_has(7);
+  $1.Timestamp get timestampValue => $_getN(7);
+  set timestampValue($1.Timestamp v) { setField(10, v); }
+  $core.bool hasTimestampValue() => $_has(7);
   void clearTimestampValue() => clearField(10);
 
-  $google$protobuf.NullValue get nullValue => $_getN(8);
-  set nullValue($google$protobuf.NullValue v) {
-    setField(11, v);
-  }
-
-  bool hasNullValue() => $_has(8);
+  $2.NullValue get nullValue => $_getN(8);
+  set nullValue($2.NullValue v) { setField(11, v); }
+  $core.bool hasNullValue() => $_has(8);
   void clearNullValue() => clearField(11);
 
-  int get meaning => $_get(9, 0);
-  set meaning(int v) {
-    $_setSignedInt32(9, v);
-  }
-
-  bool hasMeaning() => $_has(9);
+  $core.int get meaning => $_get(9, 0);
+  set meaning($core.int v) { $_setSignedInt32(9, v); }
+  $core.bool hasMeaning() => $_has(9);
   void clearMeaning() => clearField(14);
 
-  String get stringValue => $_getS(10, '');
-  set stringValue(String v) {
-    $_setString(10, v);
-  }
-
-  bool hasStringValue() => $_has(10);
+  $core.String get stringValue => $_getS(10, '');
+  set stringValue($core.String v) { $_setString(10, v); }
+  $core.bool hasStringValue() => $_has(10);
   void clearStringValue() => clearField(17);
 
-  List<int> get blobValue => $_getN(11);
-  set blobValue(List<int> v) {
-    $_setBytes(11, v);
-  }
-
-  bool hasBlobValue() => $_has(11);
+  $core.List<$core.int> get blobValue => $_getN(11);
+  set blobValue($core.List<$core.int> v) { $_setBytes(11, v); }
+  $core.bool hasBlobValue() => $_has(11);
   void clearBlobValue() => clearField(18);
 
-  bool get excludeFromIndexes => $_get(12, false);
-  set excludeFromIndexes(bool v) {
-    $_setBool(12, v);
-  }
-
-  bool hasExcludeFromIndexes() => $_has(12);
+  $core.bool get excludeFromIndexes => $_get(12, false);
+  set excludeFromIndexes($core.bool v) { $_setBool(12, v); }
+  $core.bool hasExcludeFromIndexes() => $_has(12);
   void clearExcludeFromIndexes() => clearField(19);
 }
 
-class _ReadonlyValue extends Value with ReadonlyMessageMixin {}
-
-class Entity_PropertiesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Entity_PropertiesEntry')
-    ..aOS(1, 'key')
-    ..a<Value>(2, 'value', PbFieldType.OM, Value.getDefault, Value.create)
-    ..hasRequiredFields = false;
-
-  Entity_PropertiesEntry() : super();
-  Entity_PropertiesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Entity_PropertiesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Entity_PropertiesEntry clone() =>
-      Entity_PropertiesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Entity_PropertiesEntry create() => Entity_PropertiesEntry();
-  static PbList<Entity_PropertiesEntry> createRepeated() =>
-      PbList<Entity_PropertiesEntry>();
-  static Entity_PropertiesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyEntity_PropertiesEntry();
-    return _defaultInstance;
-  }
-
-  static Entity_PropertiesEntry _defaultInstance;
-  static void $checkItem(Entity_PropertiesEntry v) {
-    if (v is! Entity_PropertiesEntry)
-      checkItemFailed(v, 'Entity_PropertiesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  Value get value => $_getN(1);
-  set value(Value v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyEntity_PropertiesEntry extends Entity_PropertiesEntry
-    with ReadonlyMessageMixin {}
-
-class Entity extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Entity')
-    ..a<Key>(1, 'key', PbFieldType.OM, Key.getDefault, Key.create)
-    ..pp<Entity_PropertiesEntry>(3, 'properties', PbFieldType.PM,
-        Entity_PropertiesEntry.$checkItem, Entity_PropertiesEntry.create)
-    ..hasRequiredFields = false;
+class Entity extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Entity', package: const $pb.PackageName('google.datastore.v1beta3'))
+    ..a<Key>(1, 'key', $pb.PbFieldType.OM, Key.getDefault, Key.create)
+    ..m<$core.String, Value>(3, 'properties', 'Entity.PropertiesEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OM, Value.create, null, null , const $pb.PackageName('google.datastore.v1beta3'))
+    ..hasRequiredFields = false
+  ;
 
   Entity() : super();
-  Entity.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Entity.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Entity.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Entity.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Entity clone() => Entity()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Entity copyWith(void Function(Entity) updates) => super.copyWith((message) => updates(message as Entity));
+  $pb.BuilderInfo get info_ => _i;
   static Entity create() => Entity();
-  static PbList<Entity> createRepeated() => PbList<Entity>();
-  static Entity getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntity();
-    return _defaultInstance;
-  }
-
+  Entity createEmptyInstance() => create();
+  static $pb.PbList<Entity> createRepeated() => $pb.PbList<Entity>();
+  static Entity getDefault() => _defaultInstance ??= create()..freeze();
   static Entity _defaultInstance;
-  static void $checkItem(Entity v) {
-    if (v is! Entity) checkItemFailed(v, 'Entity');
-  }
 
   Key get key => $_getN(0);
-  set key(Key v) {
-    setField(1, v);
-  }
-
-  bool hasKey() => $_has(0);
+  set key(Key v) { setField(1, v); }
+  $core.bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  List<Entity_PropertiesEntry> get properties => $_getList(1);
+  $core.Map<$core.String, Value> get properties => $_getMap(1);
 }
 
-class _ReadonlyEntity extends Entity with ReadonlyMessageMixin {}

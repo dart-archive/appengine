@@ -1,336 +1,183 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/servicecontrol/v1/quota_controller.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'metric_value.pb.dart';
+import 'metric_value.pb.dart' as $0;
 
 import 'quota_controller.pbenum.dart';
 
 export 'quota_controller.pbenum.dart';
 
-class AllocateQuotaRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AllocateQuotaRequest')
+class AllocateQuotaRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateQuotaRequest', package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'serviceName')
-    ..a<QuotaOperation>(2, 'allocateOperation', PbFieldType.OM,
-        QuotaOperation.getDefault, QuotaOperation.create)
+    ..a<QuotaOperation>(2, 'allocateOperation', $pb.PbFieldType.OM, QuotaOperation.getDefault, QuotaOperation.create)
     ..aOS(4, 'serviceConfigId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   AllocateQuotaRequest() : super();
-  AllocateQuotaRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AllocateQuotaRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AllocateQuotaRequest clone() =>
-      AllocateQuotaRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AllocateQuotaRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AllocateQuotaRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AllocateQuotaRequest clone() => AllocateQuotaRequest()..mergeFromMessage(this);
+  AllocateQuotaRequest copyWith(void Function(AllocateQuotaRequest) updates) => super.copyWith((message) => updates(message as AllocateQuotaRequest));
+  $pb.BuilderInfo get info_ => _i;
   static AllocateQuotaRequest create() => AllocateQuotaRequest();
-  static PbList<AllocateQuotaRequest> createRepeated() =>
-      PbList<AllocateQuotaRequest>();
-  static AllocateQuotaRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAllocateQuotaRequest();
-    return _defaultInstance;
-  }
-
+  AllocateQuotaRequest createEmptyInstance() => create();
+  static $pb.PbList<AllocateQuotaRequest> createRepeated() => $pb.PbList<AllocateQuotaRequest>();
+  static AllocateQuotaRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AllocateQuotaRequest _defaultInstance;
-  static void $checkItem(AllocateQuotaRequest v) {
-    if (v is! AllocateQuotaRequest) checkItemFailed(v, 'AllocateQuotaRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
   QuotaOperation get allocateOperation => $_getN(1);
-  set allocateOperation(QuotaOperation v) {
-    setField(2, v);
-  }
-
-  bool hasAllocateOperation() => $_has(1);
+  set allocateOperation(QuotaOperation v) { setField(2, v); }
+  $core.bool hasAllocateOperation() => $_has(1);
   void clearAllocateOperation() => clearField(2);
 
-  String get serviceConfigId => $_getS(2, '');
-  set serviceConfigId(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasServiceConfigId() => $_has(2);
+  $core.String get serviceConfigId => $_getS(2, '');
+  set serviceConfigId($core.String v) { $_setString(2, v); }
+  $core.bool hasServiceConfigId() => $_has(2);
   void clearServiceConfigId() => clearField(4);
 }
 
-class _ReadonlyAllocateQuotaRequest extends AllocateQuotaRequest
-    with ReadonlyMessageMixin {}
-
-class QuotaOperation_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('QuotaOperation_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  QuotaOperation_LabelsEntry() : super();
-  QuotaOperation_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaOperation_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  QuotaOperation_LabelsEntry clone() =>
-      QuotaOperation_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static QuotaOperation_LabelsEntry create() => QuotaOperation_LabelsEntry();
-  static PbList<QuotaOperation_LabelsEntry> createRepeated() =>
-      PbList<QuotaOperation_LabelsEntry>();
-  static QuotaOperation_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyQuotaOperation_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static QuotaOperation_LabelsEntry _defaultInstance;
-  static void $checkItem(QuotaOperation_LabelsEntry v) {
-    if (v is! QuotaOperation_LabelsEntry)
-      checkItemFailed(v, 'QuotaOperation_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyQuotaOperation_LabelsEntry extends QuotaOperation_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class QuotaOperation extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('QuotaOperation')
+class QuotaOperation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuotaOperation', package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'operationId')
     ..aOS(2, 'methodName')
     ..aOS(3, 'consumerId')
-    ..pp<QuotaOperation_LabelsEntry>(
-        4,
-        'labels',
-        PbFieldType.PM,
-        QuotaOperation_LabelsEntry.$checkItem,
-        QuotaOperation_LabelsEntry.create)
-    ..pp<MetricValueSet>(5, 'quotaMetrics', PbFieldType.PM,
-        MetricValueSet.$checkItem, MetricValueSet.create)
-    ..e<QuotaOperation_QuotaMode>(
-        6,
-        'quotaMode',
-        PbFieldType.OE,
-        QuotaOperation_QuotaMode.UNSPECIFIED,
-        QuotaOperation_QuotaMode.valueOf,
-        QuotaOperation_QuotaMode.values)
-    ..hasRequiredFields = false;
+    ..m<$core.String, $core.String>(4, 'labels', 'QuotaOperation.LabelsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..pc<$0.MetricValueSet>(5, 'quotaMetrics', $pb.PbFieldType.PM,$0.MetricValueSet.create)
+    ..e<QuotaOperation_QuotaMode>(6, 'quotaMode', $pb.PbFieldType.OE, QuotaOperation_QuotaMode.UNSPECIFIED, QuotaOperation_QuotaMode.valueOf, QuotaOperation_QuotaMode.values)
+    ..hasRequiredFields = false
+  ;
 
   QuotaOperation() : super();
-  QuotaOperation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaOperation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuotaOperation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  QuotaOperation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   QuotaOperation clone() => QuotaOperation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  QuotaOperation copyWith(void Function(QuotaOperation) updates) => super.copyWith((message) => updates(message as QuotaOperation));
+  $pb.BuilderInfo get info_ => _i;
   static QuotaOperation create() => QuotaOperation();
-  static PbList<QuotaOperation> createRepeated() => PbList<QuotaOperation>();
-  static QuotaOperation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyQuotaOperation();
-    return _defaultInstance;
-  }
-
+  QuotaOperation createEmptyInstance() => create();
+  static $pb.PbList<QuotaOperation> createRepeated() => $pb.PbList<QuotaOperation>();
+  static QuotaOperation getDefault() => _defaultInstance ??= create()..freeze();
   static QuotaOperation _defaultInstance;
-  static void $checkItem(QuotaOperation v) {
-    if (v is! QuotaOperation) checkItemFailed(v, 'QuotaOperation');
-  }
 
-  String get operationId => $_getS(0, '');
-  set operationId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasOperationId() => $_has(0);
+  $core.String get operationId => $_getS(0, '');
+  set operationId($core.String v) { $_setString(0, v); }
+  $core.bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
-  String get methodName => $_getS(1, '');
-  set methodName(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasMethodName() => $_has(1);
+  $core.String get methodName => $_getS(1, '');
+  set methodName($core.String v) { $_setString(1, v); }
+  $core.bool hasMethodName() => $_has(1);
   void clearMethodName() => clearField(2);
 
-  String get consumerId => $_getS(2, '');
-  set consumerId(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasConsumerId() => $_has(2);
+  $core.String get consumerId => $_getS(2, '');
+  set consumerId($core.String v) { $_setString(2, v); }
+  $core.bool hasConsumerId() => $_has(2);
   void clearConsumerId() => clearField(3);
 
-  List<QuotaOperation_LabelsEntry> get labels => $_getList(3);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(3);
 
-  List<MetricValueSet> get quotaMetrics => $_getList(4);
+  $core.List<$0.MetricValueSet> get quotaMetrics => $_getList(4);
 
   QuotaOperation_QuotaMode get quotaMode => $_getN(5);
-  set quotaMode(QuotaOperation_QuotaMode v) {
-    setField(6, v);
-  }
-
-  bool hasQuotaMode() => $_has(5);
+  set quotaMode(QuotaOperation_QuotaMode v) { setField(6, v); }
+  $core.bool hasQuotaMode() => $_has(5);
   void clearQuotaMode() => clearField(6);
 }
 
-class _ReadonlyQuotaOperation extends QuotaOperation with ReadonlyMessageMixin {
-}
-
-class AllocateQuotaResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AllocateQuotaResponse')
+class AllocateQuotaResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateQuotaResponse', package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'operationId')
-    ..pp<QuotaError>(2, 'allocateErrors', PbFieldType.PM, QuotaError.$checkItem,
-        QuotaError.create)
-    ..pp<MetricValueSet>(3, 'quotaMetrics', PbFieldType.PM,
-        MetricValueSet.$checkItem, MetricValueSet.create)
+    ..pc<QuotaError>(2, 'allocateErrors', $pb.PbFieldType.PM,QuotaError.create)
+    ..pc<$0.MetricValueSet>(3, 'quotaMetrics', $pb.PbFieldType.PM,$0.MetricValueSet.create)
     ..aOS(4, 'serviceConfigId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   AllocateQuotaResponse() : super();
-  AllocateQuotaResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AllocateQuotaResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AllocateQuotaResponse clone() =>
-      AllocateQuotaResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AllocateQuotaResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AllocateQuotaResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AllocateQuotaResponse clone() => AllocateQuotaResponse()..mergeFromMessage(this);
+  AllocateQuotaResponse copyWith(void Function(AllocateQuotaResponse) updates) => super.copyWith((message) => updates(message as AllocateQuotaResponse));
+  $pb.BuilderInfo get info_ => _i;
   static AllocateQuotaResponse create() => AllocateQuotaResponse();
-  static PbList<AllocateQuotaResponse> createRepeated() =>
-      PbList<AllocateQuotaResponse>();
-  static AllocateQuotaResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAllocateQuotaResponse();
-    return _defaultInstance;
-  }
-
+  AllocateQuotaResponse createEmptyInstance() => create();
+  static $pb.PbList<AllocateQuotaResponse> createRepeated() => $pb.PbList<AllocateQuotaResponse>();
+  static AllocateQuotaResponse getDefault() => _defaultInstance ??= create()..freeze();
   static AllocateQuotaResponse _defaultInstance;
-  static void $checkItem(AllocateQuotaResponse v) {
-    if (v is! AllocateQuotaResponse)
-      checkItemFailed(v, 'AllocateQuotaResponse');
-  }
 
-  String get operationId => $_getS(0, '');
-  set operationId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasOperationId() => $_has(0);
+  $core.String get operationId => $_getS(0, '');
+  set operationId($core.String v) { $_setString(0, v); }
+  $core.bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
-  List<QuotaError> get allocateErrors => $_getList(1);
+  $core.List<QuotaError> get allocateErrors => $_getList(1);
 
-  List<MetricValueSet> get quotaMetrics => $_getList(2);
+  $core.List<$0.MetricValueSet> get quotaMetrics => $_getList(2);
 
-  String get serviceConfigId => $_getS(3, '');
-  set serviceConfigId(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasServiceConfigId() => $_has(3);
+  $core.String get serviceConfigId => $_getS(3, '');
+  set serviceConfigId($core.String v) { $_setString(3, v); }
+  $core.bool hasServiceConfigId() => $_has(3);
   void clearServiceConfigId() => clearField(4);
 }
 
-class _ReadonlyAllocateQuotaResponse extends AllocateQuotaResponse
-    with ReadonlyMessageMixin {}
-
-class QuotaError extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('QuotaError')
-    ..e<QuotaError_Code>(1, 'code', PbFieldType.OE, QuotaError_Code.UNSPECIFIED,
-        QuotaError_Code.valueOf, QuotaError_Code.values)
+class QuotaError extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuotaError', package: const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..e<QuotaError_Code>(1, 'code', $pb.PbFieldType.OE, QuotaError_Code.UNSPECIFIED, QuotaError_Code.valueOf, QuotaError_Code.values)
     ..aOS(2, 'subject')
     ..aOS(3, 'description')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   QuotaError() : super();
-  QuotaError.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaError.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuotaError.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  QuotaError.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   QuotaError clone() => QuotaError()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  QuotaError copyWith(void Function(QuotaError) updates) => super.copyWith((message) => updates(message as QuotaError));
+  $pb.BuilderInfo get info_ => _i;
   static QuotaError create() => QuotaError();
-  static PbList<QuotaError> createRepeated() => PbList<QuotaError>();
-  static QuotaError getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyQuotaError();
-    return _defaultInstance;
-  }
-
+  QuotaError createEmptyInstance() => create();
+  static $pb.PbList<QuotaError> createRepeated() => $pb.PbList<QuotaError>();
+  static QuotaError getDefault() => _defaultInstance ??= create()..freeze();
   static QuotaError _defaultInstance;
-  static void $checkItem(QuotaError v) {
-    if (v is! QuotaError) checkItemFailed(v, 'QuotaError');
-  }
 
   QuotaError_Code get code => $_getN(0);
-  set code(QuotaError_Code v) {
-    setField(1, v);
-  }
-
-  bool hasCode() => $_has(0);
+  set code(QuotaError_Code v) { setField(1, v); }
+  $core.bool hasCode() => $_has(0);
   void clearCode() => clearField(1);
 
-  String get subject => $_getS(1, '');
-  set subject(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasSubject() => $_has(1);
+  $core.String get subject => $_getS(1, '');
+  set subject($core.String v) { $_setString(1, v); }
+  $core.bool hasSubject() => $_has(1);
   void clearSubject() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasDescription() => $_has(2);
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) { $_setString(2, v); }
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 }
 
-class _ReadonlyQuotaError extends QuotaError with ReadonlyMessageMixin {}
-
 class QuotaControllerApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   QuotaControllerApi(this._client);
 
-  Future<AllocateQuotaResponse> allocateQuota(
-      ClientContext ctx, AllocateQuotaRequest request) {
+  $async.Future<AllocateQuotaResponse> allocateQuota($pb.ClientContext ctx, AllocateQuotaRequest request) {
     var emptyResponse = AllocateQuotaResponse();
-    return _client.invoke<AllocateQuotaResponse>(
-        ctx, 'QuotaController', 'AllocateQuota', request, emptyResponse);
+    return _client.invoke<AllocateQuotaResponse>(ctx, 'QuotaController', 'AllocateQuota', request, emptyResponse);
   }
 }
+

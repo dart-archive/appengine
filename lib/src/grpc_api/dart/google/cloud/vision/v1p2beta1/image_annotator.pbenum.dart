@@ -1,13 +1,14 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/vision/v1p2beta1/image_annotator.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Likelihood extends ProtobufEnum {
+class Likelihood extends $pb.ProtobufEnum {
   static const Likelihood UNKNOWN = Likelihood._(0, 'UNKNOWN');
   static const Likelihood VERY_UNLIKELY = Likelihood._(1, 'VERY_UNLIKELY');
   static const Likelihood UNLIKELY = Likelihood._(2, 'UNLIKELY');
@@ -15,7 +16,7 @@ class Likelihood extends ProtobufEnum {
   static const Likelihood LIKELY = Likelihood._(4, 'LIKELY');
   static const Likelihood VERY_LIKELY = Likelihood._(5, 'VERY_LIKELY');
 
-  static const List<Likelihood> values = <Likelihood>[
+  static const $core.List<Likelihood> values = <Likelihood> [
     UNKNOWN,
     VERY_UNLIKELY,
     UNLIKELY,
@@ -24,38 +25,26 @@ class Likelihood extends ProtobufEnum {
     VERY_LIKELY,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Likelihood valueOf(int value) => _byValue[value] as Likelihood;
-  static void $checkItem(Likelihood v) {
-    if (v is! Likelihood) checkItemFailed(v, 'Likelihood');
-  }
+  static final $core.Map<$core.int, Likelihood> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Likelihood valueOf($core.int value) => _byValue[value];
 
-  const Likelihood._(int v, String n) : super(v, n);
+  const Likelihood._($core.int v, $core.String n) : super(v, n);
 }
 
-class Feature_Type extends ProtobufEnum {
-  static const Feature_Type TYPE_UNSPECIFIED =
-      Feature_Type._(0, 'TYPE_UNSPECIFIED');
-  static const Feature_Type FACE_DETECTION =
-      Feature_Type._(1, 'FACE_DETECTION');
-  static const Feature_Type LANDMARK_DETECTION =
-      Feature_Type._(2, 'LANDMARK_DETECTION');
-  static const Feature_Type LOGO_DETECTION =
-      Feature_Type._(3, 'LOGO_DETECTION');
-  static const Feature_Type LABEL_DETECTION =
-      Feature_Type._(4, 'LABEL_DETECTION');
-  static const Feature_Type TEXT_DETECTION =
-      Feature_Type._(5, 'TEXT_DETECTION');
-  static const Feature_Type DOCUMENT_TEXT_DETECTION =
-      Feature_Type._(11, 'DOCUMENT_TEXT_DETECTION');
-  static const Feature_Type SAFE_SEARCH_DETECTION =
-      Feature_Type._(6, 'SAFE_SEARCH_DETECTION');
-  static const Feature_Type IMAGE_PROPERTIES =
-      Feature_Type._(7, 'IMAGE_PROPERTIES');
+class Feature_Type extends $pb.ProtobufEnum {
+  static const Feature_Type TYPE_UNSPECIFIED = Feature_Type._(0, 'TYPE_UNSPECIFIED');
+  static const Feature_Type FACE_DETECTION = Feature_Type._(1, 'FACE_DETECTION');
+  static const Feature_Type LANDMARK_DETECTION = Feature_Type._(2, 'LANDMARK_DETECTION');
+  static const Feature_Type LOGO_DETECTION = Feature_Type._(3, 'LOGO_DETECTION');
+  static const Feature_Type LABEL_DETECTION = Feature_Type._(4, 'LABEL_DETECTION');
+  static const Feature_Type TEXT_DETECTION = Feature_Type._(5, 'TEXT_DETECTION');
+  static const Feature_Type DOCUMENT_TEXT_DETECTION = Feature_Type._(11, 'DOCUMENT_TEXT_DETECTION');
+  static const Feature_Type SAFE_SEARCH_DETECTION = Feature_Type._(6, 'SAFE_SEARCH_DETECTION');
+  static const Feature_Type IMAGE_PROPERTIES = Feature_Type._(7, 'IMAGE_PROPERTIES');
   static const Feature_Type CROP_HINTS = Feature_Type._(9, 'CROP_HINTS');
   static const Feature_Type WEB_DETECTION = Feature_Type._(10, 'WEB_DETECTION');
 
-  static const List<Feature_Type> values = <Feature_Type>[
+  static const $core.List<Feature_Type> values = <Feature_Type> [
     TYPE_UNSPECIFIED,
     FACE_DETECTION,
     LANDMARK_DETECTION,
@@ -69,89 +58,50 @@ class Feature_Type extends ProtobufEnum {
     WEB_DETECTION,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Feature_Type valueOf(int value) => _byValue[value] as Feature_Type;
-  static void $checkItem(Feature_Type v) {
-    if (v is! Feature_Type) checkItemFailed(v, 'Feature_Type');
-  }
+  static final $core.Map<$core.int, Feature_Type> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Feature_Type valueOf($core.int value) => _byValue[value];
 
-  const Feature_Type._(int v, String n) : super(v, n);
+  const Feature_Type._($core.int v, $core.String n) : super(v, n);
 }
 
-class FaceAnnotation_Landmark_Type extends ProtobufEnum {
-  static const FaceAnnotation_Landmark_Type UNKNOWN_LANDMARK =
-      FaceAnnotation_Landmark_Type._(0, 'UNKNOWN_LANDMARK');
-  static const FaceAnnotation_Landmark_Type LEFT_EYE =
-      FaceAnnotation_Landmark_Type._(1, 'LEFT_EYE');
-  static const FaceAnnotation_Landmark_Type RIGHT_EYE =
-      FaceAnnotation_Landmark_Type._(2, 'RIGHT_EYE');
-  static const FaceAnnotation_Landmark_Type LEFT_OF_LEFT_EYEBROW =
-      FaceAnnotation_Landmark_Type._(3, 'LEFT_OF_LEFT_EYEBROW');
-  static const FaceAnnotation_Landmark_Type RIGHT_OF_LEFT_EYEBROW =
-      FaceAnnotation_Landmark_Type._(4, 'RIGHT_OF_LEFT_EYEBROW');
-  static const FaceAnnotation_Landmark_Type LEFT_OF_RIGHT_EYEBROW =
-      FaceAnnotation_Landmark_Type._(5, 'LEFT_OF_RIGHT_EYEBROW');
-  static const FaceAnnotation_Landmark_Type RIGHT_OF_RIGHT_EYEBROW =
-      FaceAnnotation_Landmark_Type._(6, 'RIGHT_OF_RIGHT_EYEBROW');
-  static const FaceAnnotation_Landmark_Type MIDPOINT_BETWEEN_EYES =
-      FaceAnnotation_Landmark_Type._(7, 'MIDPOINT_BETWEEN_EYES');
-  static const FaceAnnotation_Landmark_Type NOSE_TIP =
-      FaceAnnotation_Landmark_Type._(8, 'NOSE_TIP');
-  static const FaceAnnotation_Landmark_Type UPPER_LIP =
-      FaceAnnotation_Landmark_Type._(9, 'UPPER_LIP');
-  static const FaceAnnotation_Landmark_Type LOWER_LIP =
-      FaceAnnotation_Landmark_Type._(10, 'LOWER_LIP');
-  static const FaceAnnotation_Landmark_Type MOUTH_LEFT =
-      FaceAnnotation_Landmark_Type._(11, 'MOUTH_LEFT');
-  static const FaceAnnotation_Landmark_Type MOUTH_RIGHT =
-      FaceAnnotation_Landmark_Type._(12, 'MOUTH_RIGHT');
-  static const FaceAnnotation_Landmark_Type MOUTH_CENTER =
-      FaceAnnotation_Landmark_Type._(13, 'MOUTH_CENTER');
-  static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_RIGHT =
-      FaceAnnotation_Landmark_Type._(14, 'NOSE_BOTTOM_RIGHT');
-  static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_LEFT =
-      FaceAnnotation_Landmark_Type._(15, 'NOSE_BOTTOM_LEFT');
-  static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_CENTER =
-      FaceAnnotation_Landmark_Type._(16, 'NOSE_BOTTOM_CENTER');
-  static const FaceAnnotation_Landmark_Type LEFT_EYE_TOP_BOUNDARY =
-      FaceAnnotation_Landmark_Type._(17, 'LEFT_EYE_TOP_BOUNDARY');
-  static const FaceAnnotation_Landmark_Type LEFT_EYE_RIGHT_CORNER =
-      FaceAnnotation_Landmark_Type._(18, 'LEFT_EYE_RIGHT_CORNER');
-  static const FaceAnnotation_Landmark_Type LEFT_EYE_BOTTOM_BOUNDARY =
-      FaceAnnotation_Landmark_Type._(19, 'LEFT_EYE_BOTTOM_BOUNDARY');
-  static const FaceAnnotation_Landmark_Type LEFT_EYE_LEFT_CORNER =
-      FaceAnnotation_Landmark_Type._(20, 'LEFT_EYE_LEFT_CORNER');
-  static const FaceAnnotation_Landmark_Type RIGHT_EYE_TOP_BOUNDARY =
-      FaceAnnotation_Landmark_Type._(21, 'RIGHT_EYE_TOP_BOUNDARY');
-  static const FaceAnnotation_Landmark_Type RIGHT_EYE_RIGHT_CORNER =
-      FaceAnnotation_Landmark_Type._(22, 'RIGHT_EYE_RIGHT_CORNER');
-  static const FaceAnnotation_Landmark_Type RIGHT_EYE_BOTTOM_BOUNDARY =
-      FaceAnnotation_Landmark_Type._(23, 'RIGHT_EYE_BOTTOM_BOUNDARY');
-  static const FaceAnnotation_Landmark_Type RIGHT_EYE_LEFT_CORNER =
-      FaceAnnotation_Landmark_Type._(24, 'RIGHT_EYE_LEFT_CORNER');
-  static const FaceAnnotation_Landmark_Type LEFT_EYEBROW_UPPER_MIDPOINT =
-      FaceAnnotation_Landmark_Type._(25, 'LEFT_EYEBROW_UPPER_MIDPOINT');
-  static const FaceAnnotation_Landmark_Type RIGHT_EYEBROW_UPPER_MIDPOINT =
-      FaceAnnotation_Landmark_Type._(26, 'RIGHT_EYEBROW_UPPER_MIDPOINT');
-  static const FaceAnnotation_Landmark_Type LEFT_EAR_TRAGION =
-      FaceAnnotation_Landmark_Type._(27, 'LEFT_EAR_TRAGION');
-  static const FaceAnnotation_Landmark_Type RIGHT_EAR_TRAGION =
-      FaceAnnotation_Landmark_Type._(28, 'RIGHT_EAR_TRAGION');
-  static const FaceAnnotation_Landmark_Type LEFT_EYE_PUPIL =
-      FaceAnnotation_Landmark_Type._(29, 'LEFT_EYE_PUPIL');
-  static const FaceAnnotation_Landmark_Type RIGHT_EYE_PUPIL =
-      FaceAnnotation_Landmark_Type._(30, 'RIGHT_EYE_PUPIL');
-  static const FaceAnnotation_Landmark_Type FOREHEAD_GLABELLA =
-      FaceAnnotation_Landmark_Type._(31, 'FOREHEAD_GLABELLA');
-  static const FaceAnnotation_Landmark_Type CHIN_GNATHION =
-      FaceAnnotation_Landmark_Type._(32, 'CHIN_GNATHION');
-  static const FaceAnnotation_Landmark_Type CHIN_LEFT_GONION =
-      FaceAnnotation_Landmark_Type._(33, 'CHIN_LEFT_GONION');
-  static const FaceAnnotation_Landmark_Type CHIN_RIGHT_GONION =
-      FaceAnnotation_Landmark_Type._(34, 'CHIN_RIGHT_GONION');
+class FaceAnnotation_Landmark_Type extends $pb.ProtobufEnum {
+  static const FaceAnnotation_Landmark_Type UNKNOWN_LANDMARK = FaceAnnotation_Landmark_Type._(0, 'UNKNOWN_LANDMARK');
+  static const FaceAnnotation_Landmark_Type LEFT_EYE = FaceAnnotation_Landmark_Type._(1, 'LEFT_EYE');
+  static const FaceAnnotation_Landmark_Type RIGHT_EYE = FaceAnnotation_Landmark_Type._(2, 'RIGHT_EYE');
+  static const FaceAnnotation_Landmark_Type LEFT_OF_LEFT_EYEBROW = FaceAnnotation_Landmark_Type._(3, 'LEFT_OF_LEFT_EYEBROW');
+  static const FaceAnnotation_Landmark_Type RIGHT_OF_LEFT_EYEBROW = FaceAnnotation_Landmark_Type._(4, 'RIGHT_OF_LEFT_EYEBROW');
+  static const FaceAnnotation_Landmark_Type LEFT_OF_RIGHT_EYEBROW = FaceAnnotation_Landmark_Type._(5, 'LEFT_OF_RIGHT_EYEBROW');
+  static const FaceAnnotation_Landmark_Type RIGHT_OF_RIGHT_EYEBROW = FaceAnnotation_Landmark_Type._(6, 'RIGHT_OF_RIGHT_EYEBROW');
+  static const FaceAnnotation_Landmark_Type MIDPOINT_BETWEEN_EYES = FaceAnnotation_Landmark_Type._(7, 'MIDPOINT_BETWEEN_EYES');
+  static const FaceAnnotation_Landmark_Type NOSE_TIP = FaceAnnotation_Landmark_Type._(8, 'NOSE_TIP');
+  static const FaceAnnotation_Landmark_Type UPPER_LIP = FaceAnnotation_Landmark_Type._(9, 'UPPER_LIP');
+  static const FaceAnnotation_Landmark_Type LOWER_LIP = FaceAnnotation_Landmark_Type._(10, 'LOWER_LIP');
+  static const FaceAnnotation_Landmark_Type MOUTH_LEFT = FaceAnnotation_Landmark_Type._(11, 'MOUTH_LEFT');
+  static const FaceAnnotation_Landmark_Type MOUTH_RIGHT = FaceAnnotation_Landmark_Type._(12, 'MOUTH_RIGHT');
+  static const FaceAnnotation_Landmark_Type MOUTH_CENTER = FaceAnnotation_Landmark_Type._(13, 'MOUTH_CENTER');
+  static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_RIGHT = FaceAnnotation_Landmark_Type._(14, 'NOSE_BOTTOM_RIGHT');
+  static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_LEFT = FaceAnnotation_Landmark_Type._(15, 'NOSE_BOTTOM_LEFT');
+  static const FaceAnnotation_Landmark_Type NOSE_BOTTOM_CENTER = FaceAnnotation_Landmark_Type._(16, 'NOSE_BOTTOM_CENTER');
+  static const FaceAnnotation_Landmark_Type LEFT_EYE_TOP_BOUNDARY = FaceAnnotation_Landmark_Type._(17, 'LEFT_EYE_TOP_BOUNDARY');
+  static const FaceAnnotation_Landmark_Type LEFT_EYE_RIGHT_CORNER = FaceAnnotation_Landmark_Type._(18, 'LEFT_EYE_RIGHT_CORNER');
+  static const FaceAnnotation_Landmark_Type LEFT_EYE_BOTTOM_BOUNDARY = FaceAnnotation_Landmark_Type._(19, 'LEFT_EYE_BOTTOM_BOUNDARY');
+  static const FaceAnnotation_Landmark_Type LEFT_EYE_LEFT_CORNER = FaceAnnotation_Landmark_Type._(20, 'LEFT_EYE_LEFT_CORNER');
+  static const FaceAnnotation_Landmark_Type RIGHT_EYE_TOP_BOUNDARY = FaceAnnotation_Landmark_Type._(21, 'RIGHT_EYE_TOP_BOUNDARY');
+  static const FaceAnnotation_Landmark_Type RIGHT_EYE_RIGHT_CORNER = FaceAnnotation_Landmark_Type._(22, 'RIGHT_EYE_RIGHT_CORNER');
+  static const FaceAnnotation_Landmark_Type RIGHT_EYE_BOTTOM_BOUNDARY = FaceAnnotation_Landmark_Type._(23, 'RIGHT_EYE_BOTTOM_BOUNDARY');
+  static const FaceAnnotation_Landmark_Type RIGHT_EYE_LEFT_CORNER = FaceAnnotation_Landmark_Type._(24, 'RIGHT_EYE_LEFT_CORNER');
+  static const FaceAnnotation_Landmark_Type LEFT_EYEBROW_UPPER_MIDPOINT = FaceAnnotation_Landmark_Type._(25, 'LEFT_EYEBROW_UPPER_MIDPOINT');
+  static const FaceAnnotation_Landmark_Type RIGHT_EYEBROW_UPPER_MIDPOINT = FaceAnnotation_Landmark_Type._(26, 'RIGHT_EYEBROW_UPPER_MIDPOINT');
+  static const FaceAnnotation_Landmark_Type LEFT_EAR_TRAGION = FaceAnnotation_Landmark_Type._(27, 'LEFT_EAR_TRAGION');
+  static const FaceAnnotation_Landmark_Type RIGHT_EAR_TRAGION = FaceAnnotation_Landmark_Type._(28, 'RIGHT_EAR_TRAGION');
+  static const FaceAnnotation_Landmark_Type LEFT_EYE_PUPIL = FaceAnnotation_Landmark_Type._(29, 'LEFT_EYE_PUPIL');
+  static const FaceAnnotation_Landmark_Type RIGHT_EYE_PUPIL = FaceAnnotation_Landmark_Type._(30, 'RIGHT_EYE_PUPIL');
+  static const FaceAnnotation_Landmark_Type FOREHEAD_GLABELLA = FaceAnnotation_Landmark_Type._(31, 'FOREHEAD_GLABELLA');
+  static const FaceAnnotation_Landmark_Type CHIN_GNATHION = FaceAnnotation_Landmark_Type._(32, 'CHIN_GNATHION');
+  static const FaceAnnotation_Landmark_Type CHIN_LEFT_GONION = FaceAnnotation_Landmark_Type._(33, 'CHIN_LEFT_GONION');
+  static const FaceAnnotation_Landmark_Type CHIN_RIGHT_GONION = FaceAnnotation_Landmark_Type._(34, 'CHIN_RIGHT_GONION');
 
-  static const List<FaceAnnotation_Landmark_Type> values =
-      <FaceAnnotation_Landmark_Type>[
+  static const $core.List<FaceAnnotation_Landmark_Type> values = <FaceAnnotation_Landmark_Type> [
     UNKNOWN_LANDMARK,
     LEFT_EYE,
     RIGHT_EYE,
@@ -189,30 +139,20 @@ class FaceAnnotation_Landmark_Type extends ProtobufEnum {
     CHIN_RIGHT_GONION,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static FaceAnnotation_Landmark_Type valueOf(int value) =>
-      _byValue[value] as FaceAnnotation_Landmark_Type;
-  static void $checkItem(FaceAnnotation_Landmark_Type v) {
-    if (v is! FaceAnnotation_Landmark_Type)
-      checkItemFailed(v, 'FaceAnnotation_Landmark_Type');
-  }
+  static final $core.Map<$core.int, FaceAnnotation_Landmark_Type> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static FaceAnnotation_Landmark_Type valueOf($core.int value) => _byValue[value];
 
-  const FaceAnnotation_Landmark_Type._(int v, String n) : super(v, n);
+  const FaceAnnotation_Landmark_Type._($core.int v, $core.String n) : super(v, n);
 }
 
-class OperationMetadata_State extends ProtobufEnum {
-  static const OperationMetadata_State STATE_UNSPECIFIED =
-      OperationMetadata_State._(0, 'STATE_UNSPECIFIED');
-  static const OperationMetadata_State CREATED =
-      OperationMetadata_State._(1, 'CREATED');
-  static const OperationMetadata_State RUNNING =
-      OperationMetadata_State._(2, 'RUNNING');
-  static const OperationMetadata_State DONE =
-      OperationMetadata_State._(3, 'DONE');
-  static const OperationMetadata_State CANCELLED =
-      OperationMetadata_State._(4, 'CANCELLED');
+class OperationMetadata_State extends $pb.ProtobufEnum {
+  static const OperationMetadata_State STATE_UNSPECIFIED = OperationMetadata_State._(0, 'STATE_UNSPECIFIED');
+  static const OperationMetadata_State CREATED = OperationMetadata_State._(1, 'CREATED');
+  static const OperationMetadata_State RUNNING = OperationMetadata_State._(2, 'RUNNING');
+  static const OperationMetadata_State DONE = OperationMetadata_State._(3, 'DONE');
+  static const OperationMetadata_State CANCELLED = OperationMetadata_State._(4, 'CANCELLED');
 
-  static const List<OperationMetadata_State> values = <OperationMetadata_State>[
+  static const $core.List<OperationMetadata_State> values = <OperationMetadata_State> [
     STATE_UNSPECIFIED,
     CREATED,
     RUNNING,
@@ -220,13 +160,9 @@ class OperationMetadata_State extends ProtobufEnum {
     CANCELLED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static OperationMetadata_State valueOf(int value) =>
-      _byValue[value] as OperationMetadata_State;
-  static void $checkItem(OperationMetadata_State v) {
-    if (v is! OperationMetadata_State)
-      checkItemFailed(v, 'OperationMetadata_State');
-  }
+  static final $core.Map<$core.int, OperationMetadata_State> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static OperationMetadata_State valueOf($core.int value) => _byValue[value];
 
-  const OperationMetadata_State._(int v, String n) : super(v, n);
+  const OperationMetadata_State._($core.int v, $core.String n) : super(v, n);
 }
+

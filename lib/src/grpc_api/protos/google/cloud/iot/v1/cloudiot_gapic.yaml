@@ -17,12 +17,6 @@ language_settings:
   nodejs:
     package_name: iot.v1
     domain_layer_location: google-cloud
-# The configuration for the license header to put on generated files.
-license_header:
-  # The file containing the copyright line(s).
-  copyright_file: copyright-google.txt
-  # The file containing the raw license header without any copyright line(s).
-  license_file: license-header-apache-2.0.txt
 # A list of API interface configurations.
 interfaces:
   # The fully qualified name of the API interface.
@@ -97,10 +91,6 @@ interfaces:
   #   required_fields - Fields that are always required for a request to be
   #   valid.
   #
-  #   request_object_method - Turns on or off the generation of a method whose
-  #   sole parameter is a request object. Not all languages will generate this
-  #   method.
-  #
   #   resource_name_treatment - An enum that specifies how to treat the resource
   #   name formats defined in the field_name_patterns and
   #   response_field_name_patterns fields.
@@ -151,7 +141,6 @@ interfaces:
     - device_registry
     header_request_params:
     - parent
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -167,7 +156,6 @@ interfaces:
     - name
     header_request_params:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -185,7 +173,6 @@ interfaces:
     - update_mask
     header_request_params:
     - device_registry.name
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -201,7 +188,6 @@ interfaces:
     - name
     header_request_params:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -217,7 +203,6 @@ interfaces:
     - parent
     header_request_params:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -242,7 +227,6 @@ interfaces:
     - device
     header_request_params:
     - parent
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -258,7 +242,6 @@ interfaces:
     - name
     header_request_params:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -276,7 +259,6 @@ interfaces:
     - update_mask
     header_request_params:
     - device.name
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -292,7 +274,6 @@ interfaces:
     - name
     header_request_params:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -308,7 +289,6 @@ interfaces:
     - parent
     header_request_params:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -333,7 +313,6 @@ interfaces:
     - binary_data
     header_request_params:
     - name
-    request_object_method: true
     retry_codes_name: rate_limited_aware
     retry_params_name: rate_limited_aware
     field_name_patterns:
@@ -349,7 +328,6 @@ interfaces:
     - name
     header_request_params:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -365,7 +343,6 @@ interfaces:
     - name
     header_request_params:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -383,7 +360,6 @@ interfaces:
     - policy
     header_request_params:
     - resource
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -399,7 +375,6 @@ interfaces:
     - resource
     header_request_params:
     - resource
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -417,11 +392,66 @@ interfaces:
     - permissions
     header_request_params:
     - resource
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       resource: registry
+    resource_name_treatment: STATIC_TYPES
+    timeout_millis: 60000
+  - name: SendCommandToDevice
+    flattening:
+      groups:
+      - parameters:
+        - name
+        - binary_data
+        - subfolder
+    required_fields:
+    - name
+    - binary_data
+    header_request_params:
+    - name
+    retry_codes_name: rate_limited_aware
+    retry_params_name: rate_limited_aware
+    field_name_patterns:
+      name: device
+    resource_name_treatment: STATIC_TYPES
+    timeout_millis: 60000
+  - name: BindDeviceToGateway
+    flattening:
+      groups:
+      - parameters:
+        - parent
+        - gateway_id
+        - device_id
+    required_fields:
+    - parent
+    - gateway_id
+    - device_id
+    header_request_params:
+    - parent
+    retry_codes_name: non_idempotent
+    retry_params_name: default
+    field_name_patterns:
+      parent: registry
+    resource_name_treatment: STATIC_TYPES
+    timeout_millis: 60000
+  - name: UnbindDeviceFromGateway
+    flattening:
+      groups:
+      - parameters:
+        - parent
+        - gateway_id
+        - device_id
+    required_fields:
+    - parent
+    - gateway_id
+    - device_id
+    header_request_params:
+    - parent
+    retry_codes_name: non_idempotent
+    retry_params_name: default
+    field_name_patterns:
+      parent: registry
     resource_name_treatment: STATIC_TYPES
     timeout_millis: 60000
 resource_name_generation:
@@ -467,6 +497,15 @@ resource_name_generation:
 - message_name: ListDeviceStatesRequest
   field_entity_map:
     name: device
+- message_name: SendCommandToDeviceRequest
+  field_entity_map:
+    name: device
+- message_name: BindDeviceToGatewayRequest
+  field_entity_map:
+    parent: registry
+- message_name: UnbindDeviceFromGatewayRequest
+  field_entity_map:
+    parent: registry
 - message_name: Device
   field_entity_map:
     name: device

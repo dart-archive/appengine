@@ -1,929 +1,569 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dialogflow/v2/entity_type.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../protobuf/field_mask.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
 
 import 'entity_type.pbenum.dart';
 
 export 'entity_type.pbenum.dart';
 
-class EntityType_Entity extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EntityType_Entity')
+class EntityType_Entity extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityType.Entity', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'value')
     ..pPS(2, 'synonyms')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   EntityType_Entity() : super();
-  EntityType_Entity.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityType_Entity.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityType_Entity.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EntityType_Entity.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   EntityType_Entity clone() => EntityType_Entity()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EntityType_Entity copyWith(void Function(EntityType_Entity) updates) => super.copyWith((message) => updates(message as EntityType_Entity));
+  $pb.BuilderInfo get info_ => _i;
   static EntityType_Entity create() => EntityType_Entity();
-  static PbList<EntityType_Entity> createRepeated() =>
-      PbList<EntityType_Entity>();
-  static EntityType_Entity getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyEntityType_Entity();
-    return _defaultInstance;
-  }
-
+  EntityType_Entity createEmptyInstance() => create();
+  static $pb.PbList<EntityType_Entity> createRepeated() => $pb.PbList<EntityType_Entity>();
+  static EntityType_Entity getDefault() => _defaultInstance ??= create()..freeze();
   static EntityType_Entity _defaultInstance;
-  static void $checkItem(EntityType_Entity v) {
-    if (v is! EntityType_Entity) checkItemFailed(v, 'EntityType_Entity');
-  }
 
-  String get value => $_getS(0, '');
-  set value(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasValue() => $_has(0);
+  $core.String get value => $_getS(0, '');
+  set value($core.String v) { $_setString(0, v); }
+  $core.bool hasValue() => $_has(0);
   void clearValue() => clearField(1);
 
-  List<String> get synonyms => $_getList(1);
+  $core.List<$core.String> get synonyms => $_getList(1);
 }
 
-class _ReadonlyEntityType_Entity extends EntityType_Entity
-    with ReadonlyMessageMixin {}
-
-class EntityType extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EntityType')
+class EntityType extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityType', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..e<EntityType_Kind>(
-        3,
-        'kind',
-        PbFieldType.OE,
-        EntityType_Kind.KIND_UNSPECIFIED,
-        EntityType_Kind.valueOf,
-        EntityType_Kind.values)
-    ..e<EntityType_AutoExpansionMode>(
-        4,
-        'autoExpansionMode',
-        PbFieldType.OE,
-        EntityType_AutoExpansionMode.AUTO_EXPANSION_MODE_UNSPECIFIED,
-        EntityType_AutoExpansionMode.valueOf,
-        EntityType_AutoExpansionMode.values)
-    ..pp<EntityType_Entity>(6, 'entities', PbFieldType.PM,
-        EntityType_Entity.$checkItem, EntityType_Entity.create)
-    ..hasRequiredFields = false;
+    ..e<EntityType_Kind>(3, 'kind', $pb.PbFieldType.OE, EntityType_Kind.KIND_UNSPECIFIED, EntityType_Kind.valueOf, EntityType_Kind.values)
+    ..e<EntityType_AutoExpansionMode>(4, 'autoExpansionMode', $pb.PbFieldType.OE, EntityType_AutoExpansionMode.AUTO_EXPANSION_MODE_UNSPECIFIED, EntityType_AutoExpansionMode.valueOf, EntityType_AutoExpansionMode.values)
+    ..pc<EntityType_Entity>(6, 'entities', $pb.PbFieldType.PM,EntityType_Entity.create)
+    ..hasRequiredFields = false
+  ;
 
   EntityType() : super();
-  EntityType.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityType.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EntityType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   EntityType clone() => EntityType()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EntityType copyWith(void Function(EntityType) updates) => super.copyWith((message) => updates(message as EntityType));
+  $pb.BuilderInfo get info_ => _i;
   static EntityType create() => EntityType();
-  static PbList<EntityType> createRepeated() => PbList<EntityType>();
-  static EntityType getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityType();
-    return _defaultInstance;
-  }
-
+  EntityType createEmptyInstance() => create();
+  static $pb.PbList<EntityType> createRepeated() => $pb.PbList<EntityType>();
+  static EntityType getDefault() => _defaultInstance ??= create()..freeze();
   static EntityType _defaultInstance;
-  static void $checkItem(EntityType v) {
-    if (v is! EntityType) checkItemFailed(v, 'EntityType');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get displayName => $_getS(1, '');
-  set displayName(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasDisplayName() => $_has(1);
+  $core.String get displayName => $_getS(1, '');
+  set displayName($core.String v) { $_setString(1, v); }
+  $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
   EntityType_Kind get kind => $_getN(2);
-  set kind(EntityType_Kind v) {
-    setField(3, v);
-  }
-
-  bool hasKind() => $_has(2);
+  set kind(EntityType_Kind v) { setField(3, v); }
+  $core.bool hasKind() => $_has(2);
   void clearKind() => clearField(3);
 
   EntityType_AutoExpansionMode get autoExpansionMode => $_getN(3);
-  set autoExpansionMode(EntityType_AutoExpansionMode v) {
-    setField(4, v);
-  }
-
-  bool hasAutoExpansionMode() => $_has(3);
+  set autoExpansionMode(EntityType_AutoExpansionMode v) { setField(4, v); }
+  $core.bool hasAutoExpansionMode() => $_has(3);
   void clearAutoExpansionMode() => clearField(4);
 
-  List<EntityType_Entity> get entities => $_getList(4);
+  $core.List<EntityType_Entity> get entities => $_getList(4);
 }
 
-class _ReadonlyEntityType extends EntityType with ReadonlyMessageMixin {}
-
-class ListEntityTypesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListEntityTypesRequest')
+class ListEntityTypesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEntityTypesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'languageCode')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListEntityTypesRequest() : super();
-  ListEntityTypesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListEntityTypesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListEntityTypesRequest clone() =>
-      ListEntityTypesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListEntityTypesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListEntityTypesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListEntityTypesRequest clone() => ListEntityTypesRequest()..mergeFromMessage(this);
+  ListEntityTypesRequest copyWith(void Function(ListEntityTypesRequest) updates) => super.copyWith((message) => updates(message as ListEntityTypesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListEntityTypesRequest create() => ListEntityTypesRequest();
-  static PbList<ListEntityTypesRequest> createRepeated() =>
-      PbList<ListEntityTypesRequest>();
-  static ListEntityTypesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListEntityTypesRequest();
-    return _defaultInstance;
-  }
-
+  ListEntityTypesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListEntityTypesRequest> createRepeated() => $pb.PbList<ListEntityTypesRequest>();
+  static ListEntityTypesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListEntityTypesRequest _defaultInstance;
-  static void $checkItem(ListEntityTypesRequest v) {
-    if (v is! ListEntityTypesRequest)
-      checkItemFailed(v, 'ListEntityTypesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get languageCode => $_getS(1, '');
-  set languageCode(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasLanguageCode() => $_has(1);
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) { $_setString(1, v); }
+  $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(3, '');
-  set pageToken(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasPageToken() => $_has(3);
+  $core.String get pageToken => $_getS(3, '');
+  set pageToken($core.String v) { $_setString(3, v); }
+  $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 }
 
-class _ReadonlyListEntityTypesRequest extends ListEntityTypesRequest
-    with ReadonlyMessageMixin {}
-
-class ListEntityTypesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListEntityTypesResponse')
-    ..pp<EntityType>(1, 'entityTypes', PbFieldType.PM, EntityType.$checkItem,
-        EntityType.create)
+class ListEntityTypesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEntityTypesResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM,EntityType.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListEntityTypesResponse() : super();
-  ListEntityTypesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListEntityTypesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListEntityTypesResponse clone() =>
-      ListEntityTypesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListEntityTypesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListEntityTypesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListEntityTypesResponse clone() => ListEntityTypesResponse()..mergeFromMessage(this);
+  ListEntityTypesResponse copyWith(void Function(ListEntityTypesResponse) updates) => super.copyWith((message) => updates(message as ListEntityTypesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListEntityTypesResponse create() => ListEntityTypesResponse();
-  static PbList<ListEntityTypesResponse> createRepeated() =>
-      PbList<ListEntityTypesResponse>();
-  static ListEntityTypesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListEntityTypesResponse();
-    return _defaultInstance;
-  }
-
+  ListEntityTypesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListEntityTypesResponse> createRepeated() => $pb.PbList<ListEntityTypesResponse>();
+  static ListEntityTypesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListEntityTypesResponse _defaultInstance;
-  static void $checkItem(ListEntityTypesResponse v) {
-    if (v is! ListEntityTypesResponse)
-      checkItemFailed(v, 'ListEntityTypesResponse');
-  }
 
-  List<EntityType> get entityTypes => $_getList(0);
+  $core.List<EntityType> get entityTypes => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListEntityTypesResponse extends ListEntityTypesResponse
-    with ReadonlyMessageMixin {}
-
-class GetEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetEntityTypeRequest')
+class GetEntityTypeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'languageCode')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetEntityTypeRequest() : super();
-  GetEntityTypeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetEntityTypeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetEntityTypeRequest clone() =>
-      GetEntityTypeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetEntityTypeRequest clone() => GetEntityTypeRequest()..mergeFromMessage(this);
+  GetEntityTypeRequest copyWith(void Function(GetEntityTypeRequest) updates) => super.copyWith((message) => updates(message as GetEntityTypeRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetEntityTypeRequest create() => GetEntityTypeRequest();
-  static PbList<GetEntityTypeRequest> createRepeated() =>
-      PbList<GetEntityTypeRequest>();
-  static GetEntityTypeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetEntityTypeRequest();
-    return _defaultInstance;
-  }
-
+  GetEntityTypeRequest createEmptyInstance() => create();
+  static $pb.PbList<GetEntityTypeRequest> createRepeated() => $pb.PbList<GetEntityTypeRequest>();
+  static GetEntityTypeRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetEntityTypeRequest _defaultInstance;
-  static void $checkItem(GetEntityTypeRequest v) {
-    if (v is! GetEntityTypeRequest) checkItemFailed(v, 'GetEntityTypeRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get languageCode => $_getS(1, '');
-  set languageCode(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasLanguageCode() => $_has(1);
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) { $_setString(1, v); }
+  $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 }
 
-class _ReadonlyGetEntityTypeRequest extends GetEntityTypeRequest
-    with ReadonlyMessageMixin {}
-
-class CreateEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateEntityTypeRequest')
+class CreateEntityTypeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
-    ..a<EntityType>(2, 'entityType', PbFieldType.OM, EntityType.getDefault,
-        EntityType.create)
+    ..a<EntityType>(2, 'entityType', $pb.PbFieldType.OM, EntityType.getDefault, EntityType.create)
     ..aOS(3, 'languageCode')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   CreateEntityTypeRequest() : super();
-  CreateEntityTypeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateEntityTypeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateEntityTypeRequest clone() =>
-      CreateEntityTypeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateEntityTypeRequest clone() => CreateEntityTypeRequest()..mergeFromMessage(this);
+  CreateEntityTypeRequest copyWith(void Function(CreateEntityTypeRequest) updates) => super.copyWith((message) => updates(message as CreateEntityTypeRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateEntityTypeRequest create() => CreateEntityTypeRequest();
-  static PbList<CreateEntityTypeRequest> createRepeated() =>
-      PbList<CreateEntityTypeRequest>();
-  static CreateEntityTypeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateEntityTypeRequest();
-    return _defaultInstance;
-  }
-
+  CreateEntityTypeRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateEntityTypeRequest> createRepeated() => $pb.PbList<CreateEntityTypeRequest>();
+  static CreateEntityTypeRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateEntityTypeRequest _defaultInstance;
-  static void $checkItem(CreateEntityTypeRequest v) {
-    if (v is! CreateEntityTypeRequest)
-      checkItemFailed(v, 'CreateEntityTypeRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   EntityType get entityType => $_getN(1);
-  set entityType(EntityType v) {
-    setField(2, v);
-  }
-
-  bool hasEntityType() => $_has(1);
+  set entityType(EntityType v) { setField(2, v); }
+  $core.bool hasEntityType() => $_has(1);
   void clearEntityType() => clearField(2);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasLanguageCode() => $_has(2);
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) { $_setString(2, v); }
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 }
 
-class _ReadonlyCreateEntityTypeRequest extends CreateEntityTypeRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateEntityTypeRequest')
-    ..a<EntityType>(1, 'entityType', PbFieldType.OM, EntityType.getDefault,
-        EntityType.create)
+class UpdateEntityTypeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..a<EntityType>(1, 'entityType', $pb.PbFieldType.OM, EntityType.getDefault, EntityType.create)
     ..aOS(2, 'languageCode')
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+    ..a<$0.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM, $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateEntityTypeRequest() : super();
-  UpdateEntityTypeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateEntityTypeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateEntityTypeRequest clone() =>
-      UpdateEntityTypeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateEntityTypeRequest clone() => UpdateEntityTypeRequest()..mergeFromMessage(this);
+  UpdateEntityTypeRequest copyWith(void Function(UpdateEntityTypeRequest) updates) => super.copyWith((message) => updates(message as UpdateEntityTypeRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateEntityTypeRequest create() => UpdateEntityTypeRequest();
-  static PbList<UpdateEntityTypeRequest> createRepeated() =>
-      PbList<UpdateEntityTypeRequest>();
-  static UpdateEntityTypeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateEntityTypeRequest();
-    return _defaultInstance;
-  }
-
+  UpdateEntityTypeRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateEntityTypeRequest> createRepeated() => $pb.PbList<UpdateEntityTypeRequest>();
+  static UpdateEntityTypeRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateEntityTypeRequest _defaultInstance;
-  static void $checkItem(UpdateEntityTypeRequest v) {
-    if (v is! UpdateEntityTypeRequest)
-      checkItemFailed(v, 'UpdateEntityTypeRequest');
-  }
 
   EntityType get entityType => $_getN(0);
-  set entityType(EntityType v) {
-    setField(1, v);
-  }
-
-  bool hasEntityType() => $_has(0);
+  set entityType(EntityType v) { setField(1, v); }
+  $core.bool hasEntityType() => $_has(0);
   void clearEntityType() => clearField(1);
 
-  String get languageCode => $_getS(1, '');
-  set languageCode(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasLanguageCode() => $_has(1);
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) { $_setString(1, v); }
+  $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(3, v);
-  }
-
-  bool hasUpdateMask() => $_has(2);
+  $0.FieldMask get updateMask => $_getN(2);
+  set updateMask($0.FieldMask v) { setField(3, v); }
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateEntityTypeRequest extends UpdateEntityTypeRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteEntityTypeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteEntityTypeRequest')
+class DeleteEntityTypeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteEntityTypeRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteEntityTypeRequest() : super();
-  DeleteEntityTypeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteEntityTypeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteEntityTypeRequest clone() =>
-      DeleteEntityTypeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteEntityTypeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteEntityTypeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteEntityTypeRequest clone() => DeleteEntityTypeRequest()..mergeFromMessage(this);
+  DeleteEntityTypeRequest copyWith(void Function(DeleteEntityTypeRequest) updates) => super.copyWith((message) => updates(message as DeleteEntityTypeRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteEntityTypeRequest create() => DeleteEntityTypeRequest();
-  static PbList<DeleteEntityTypeRequest> createRepeated() =>
-      PbList<DeleteEntityTypeRequest>();
-  static DeleteEntityTypeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteEntityTypeRequest();
-    return _defaultInstance;
-  }
-
+  DeleteEntityTypeRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteEntityTypeRequest> createRepeated() => $pb.PbList<DeleteEntityTypeRequest>();
+  static DeleteEntityTypeRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteEntityTypeRequest _defaultInstance;
-  static void $checkItem(DeleteEntityTypeRequest v) {
-    if (v is! DeleteEntityTypeRequest)
-      checkItemFailed(v, 'DeleteEntityTypeRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteEntityTypeRequest extends DeleteEntityTypeRequest
-    with ReadonlyMessageMixin {}
+enum BatchUpdateEntityTypesRequest_EntityTypeBatch {
+  entityTypeBatchUri, 
+  entityTypeBatchInline, 
+  notSet
+}
 
-class BatchUpdateEntityTypesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BatchUpdateEntityTypesRequest')
+class BatchUpdateEntityTypesRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, BatchUpdateEntityTypesRequest_EntityTypeBatch> _BatchUpdateEntityTypesRequest_EntityTypeBatchByTag = {
+    2 : BatchUpdateEntityTypesRequest_EntityTypeBatch.entityTypeBatchUri,
+    3 : BatchUpdateEntityTypesRequest_EntityTypeBatch.entityTypeBatchInline,
+    0 : BatchUpdateEntityTypesRequest_EntityTypeBatch.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdateEntityTypesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'entityTypeBatchUri')
-    ..a<EntityTypeBatch>(3, 'entityTypeBatchInline', PbFieldType.OM,
-        EntityTypeBatch.getDefault, EntityTypeBatch.create)
+    ..a<EntityTypeBatch>(3, 'entityTypeBatchInline', $pb.PbFieldType.OM, EntityTypeBatch.getDefault, EntityTypeBatch.create)
     ..aOS(4, 'languageCode')
-    ..a<$google$protobuf.FieldMask>(
-        5,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+    ..a<$0.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM, $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..oo(0, [2, 3])
+    ..hasRequiredFields = false
+  ;
 
   BatchUpdateEntityTypesRequest() : super();
-  BatchUpdateEntityTypesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdateEntityTypesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BatchUpdateEntityTypesRequest clone() =>
-      BatchUpdateEntityTypesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchUpdateEntityTypesRequest create() =>
-      BatchUpdateEntityTypesRequest();
-  static PbList<BatchUpdateEntityTypesRequest> createRepeated() =>
-      PbList<BatchUpdateEntityTypesRequest>();
-  static BatchUpdateEntityTypesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBatchUpdateEntityTypesRequest();
-    return _defaultInstance;
-  }
-
+  BatchUpdateEntityTypesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BatchUpdateEntityTypesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BatchUpdateEntityTypesRequest clone() => BatchUpdateEntityTypesRequest()..mergeFromMessage(this);
+  BatchUpdateEntityTypesRequest copyWith(void Function(BatchUpdateEntityTypesRequest) updates) => super.copyWith((message) => updates(message as BatchUpdateEntityTypesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchUpdateEntityTypesRequest create() => BatchUpdateEntityTypesRequest();
+  BatchUpdateEntityTypesRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchUpdateEntityTypesRequest> createRepeated() => $pb.PbList<BatchUpdateEntityTypesRequest>();
+  static BatchUpdateEntityTypesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static BatchUpdateEntityTypesRequest _defaultInstance;
-  static void $checkItem(BatchUpdateEntityTypesRequest v) {
-    if (v is! BatchUpdateEntityTypesRequest)
-      checkItemFailed(v, 'BatchUpdateEntityTypesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
+  BatchUpdateEntityTypesRequest_EntityTypeBatch whichEntityTypeBatch() => _BatchUpdateEntityTypesRequest_EntityTypeBatchByTag[$_whichOneof(0)];
+  void clearEntityTypeBatch() => clearField($_whichOneof(0));
 
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get entityTypeBatchUri => $_getS(1, '');
-  set entityTypeBatchUri(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasEntityTypeBatchUri() => $_has(1);
+  $core.String get entityTypeBatchUri => $_getS(1, '');
+  set entityTypeBatchUri($core.String v) { $_setString(1, v); }
+  $core.bool hasEntityTypeBatchUri() => $_has(1);
   void clearEntityTypeBatchUri() => clearField(2);
 
   EntityTypeBatch get entityTypeBatchInline => $_getN(2);
-  set entityTypeBatchInline(EntityTypeBatch v) {
-    setField(3, v);
-  }
-
-  bool hasEntityTypeBatchInline() => $_has(2);
+  set entityTypeBatchInline(EntityTypeBatch v) { setField(3, v); }
+  $core.bool hasEntityTypeBatchInline() => $_has(2);
   void clearEntityTypeBatchInline() => clearField(3);
 
-  String get languageCode => $_getS(3, '');
-  set languageCode(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasLanguageCode() => $_has(3);
+  $core.String get languageCode => $_getS(3, '');
+  set languageCode($core.String v) { $_setString(3, v); }
+  $core.bool hasLanguageCode() => $_has(3);
   void clearLanguageCode() => clearField(4);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(4);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(5, v);
-  }
-
-  bool hasUpdateMask() => $_has(4);
+  $0.FieldMask get updateMask => $_getN(4);
+  set updateMask($0.FieldMask v) { setField(5, v); }
+  $core.bool hasUpdateMask() => $_has(4);
   void clearUpdateMask() => clearField(5);
 }
 
-class _ReadonlyBatchUpdateEntityTypesRequest
-    extends BatchUpdateEntityTypesRequest with ReadonlyMessageMixin {}
-
-class BatchUpdateEntityTypesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BatchUpdateEntityTypesResponse')
-    ..pp<EntityType>(1, 'entityTypes', PbFieldType.PM, EntityType.$checkItem,
-        EntityType.create)
-    ..hasRequiredFields = false;
+class BatchUpdateEntityTypesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdateEntityTypesResponse', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM,EntityType.create)
+    ..hasRequiredFields = false
+  ;
 
   BatchUpdateEntityTypesResponse() : super();
-  BatchUpdateEntityTypesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdateEntityTypesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BatchUpdateEntityTypesResponse clone() =>
-      BatchUpdateEntityTypesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchUpdateEntityTypesResponse create() =>
-      BatchUpdateEntityTypesResponse();
-  static PbList<BatchUpdateEntityTypesResponse> createRepeated() =>
-      PbList<BatchUpdateEntityTypesResponse>();
-  static BatchUpdateEntityTypesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBatchUpdateEntityTypesResponse();
-    return _defaultInstance;
-  }
-
+  BatchUpdateEntityTypesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BatchUpdateEntityTypesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BatchUpdateEntityTypesResponse clone() => BatchUpdateEntityTypesResponse()..mergeFromMessage(this);
+  BatchUpdateEntityTypesResponse copyWith(void Function(BatchUpdateEntityTypesResponse) updates) => super.copyWith((message) => updates(message as BatchUpdateEntityTypesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchUpdateEntityTypesResponse create() => BatchUpdateEntityTypesResponse();
+  BatchUpdateEntityTypesResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchUpdateEntityTypesResponse> createRepeated() => $pb.PbList<BatchUpdateEntityTypesResponse>();
+  static BatchUpdateEntityTypesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static BatchUpdateEntityTypesResponse _defaultInstance;
-  static void $checkItem(BatchUpdateEntityTypesResponse v) {
-    if (v is! BatchUpdateEntityTypesResponse)
-      checkItemFailed(v, 'BatchUpdateEntityTypesResponse');
-  }
 
-  List<EntityType> get entityTypes => $_getList(0);
+  $core.List<EntityType> get entityTypes => $_getList(0);
 }
 
-class _ReadonlyBatchUpdateEntityTypesResponse
-    extends BatchUpdateEntityTypesResponse with ReadonlyMessageMixin {}
-
-class BatchDeleteEntityTypesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BatchDeleteEntityTypesRequest')
+class BatchDeleteEntityTypesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchDeleteEntityTypesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
     ..pPS(2, 'entityTypeNames')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   BatchDeleteEntityTypesRequest() : super();
-  BatchDeleteEntityTypesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchDeleteEntityTypesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BatchDeleteEntityTypesRequest clone() =>
-      BatchDeleteEntityTypesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchDeleteEntityTypesRequest create() =>
-      BatchDeleteEntityTypesRequest();
-  static PbList<BatchDeleteEntityTypesRequest> createRepeated() =>
-      PbList<BatchDeleteEntityTypesRequest>();
-  static BatchDeleteEntityTypesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBatchDeleteEntityTypesRequest();
-    return _defaultInstance;
-  }
-
+  BatchDeleteEntityTypesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BatchDeleteEntityTypesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BatchDeleteEntityTypesRequest clone() => BatchDeleteEntityTypesRequest()..mergeFromMessage(this);
+  BatchDeleteEntityTypesRequest copyWith(void Function(BatchDeleteEntityTypesRequest) updates) => super.copyWith((message) => updates(message as BatchDeleteEntityTypesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchDeleteEntityTypesRequest create() => BatchDeleteEntityTypesRequest();
+  BatchDeleteEntityTypesRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchDeleteEntityTypesRequest> createRepeated() => $pb.PbList<BatchDeleteEntityTypesRequest>();
+  static BatchDeleteEntityTypesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static BatchDeleteEntityTypesRequest _defaultInstance;
-  static void $checkItem(BatchDeleteEntityTypesRequest v) {
-    if (v is! BatchDeleteEntityTypesRequest)
-      checkItemFailed(v, 'BatchDeleteEntityTypesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  List<String> get entityTypeNames => $_getList(1);
+  $core.List<$core.String> get entityTypeNames => $_getList(1);
 }
 
-class _ReadonlyBatchDeleteEntityTypesRequest
-    extends BatchDeleteEntityTypesRequest with ReadonlyMessageMixin {}
-
-class BatchCreateEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BatchCreateEntitiesRequest')
+class BatchCreateEntitiesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchCreateEntitiesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
-    ..pp<EntityType_Entity>(2, 'entities', PbFieldType.PM,
-        EntityType_Entity.$checkItem, EntityType_Entity.create)
+    ..pc<EntityType_Entity>(2, 'entities', $pb.PbFieldType.PM,EntityType_Entity.create)
     ..aOS(3, 'languageCode')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   BatchCreateEntitiesRequest() : super();
-  BatchCreateEntitiesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateEntitiesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BatchCreateEntitiesRequest clone() =>
-      BatchCreateEntitiesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BatchCreateEntitiesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BatchCreateEntitiesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BatchCreateEntitiesRequest clone() => BatchCreateEntitiesRequest()..mergeFromMessage(this);
+  BatchCreateEntitiesRequest copyWith(void Function(BatchCreateEntitiesRequest) updates) => super.copyWith((message) => updates(message as BatchCreateEntitiesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static BatchCreateEntitiesRequest create() => BatchCreateEntitiesRequest();
-  static PbList<BatchCreateEntitiesRequest> createRepeated() =>
-      PbList<BatchCreateEntitiesRequest>();
-  static BatchCreateEntitiesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBatchCreateEntitiesRequest();
-    return _defaultInstance;
-  }
-
+  BatchCreateEntitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchCreateEntitiesRequest> createRepeated() => $pb.PbList<BatchCreateEntitiesRequest>();
+  static BatchCreateEntitiesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static BatchCreateEntitiesRequest _defaultInstance;
-  static void $checkItem(BatchCreateEntitiesRequest v) {
-    if (v is! BatchCreateEntitiesRequest)
-      checkItemFailed(v, 'BatchCreateEntitiesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  List<EntityType_Entity> get entities => $_getList(1);
+  $core.List<EntityType_Entity> get entities => $_getList(1);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasLanguageCode() => $_has(2);
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) { $_setString(2, v); }
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 }
 
-class _ReadonlyBatchCreateEntitiesRequest extends BatchCreateEntitiesRequest
-    with ReadonlyMessageMixin {}
-
-class BatchUpdateEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BatchUpdateEntitiesRequest')
+class BatchUpdateEntitiesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdateEntitiesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
-    ..pp<EntityType_Entity>(2, 'entities', PbFieldType.PM,
-        EntityType_Entity.$checkItem, EntityType_Entity.create)
+    ..pc<EntityType_Entity>(2, 'entities', $pb.PbFieldType.PM,EntityType_Entity.create)
     ..aOS(3, 'languageCode')
-    ..a<$google$protobuf.FieldMask>(
-        4,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+    ..a<$0.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM, $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..hasRequiredFields = false
+  ;
 
   BatchUpdateEntitiesRequest() : super();
-  BatchUpdateEntitiesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdateEntitiesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BatchUpdateEntitiesRequest clone() =>
-      BatchUpdateEntitiesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BatchUpdateEntitiesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BatchUpdateEntitiesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BatchUpdateEntitiesRequest clone() => BatchUpdateEntitiesRequest()..mergeFromMessage(this);
+  BatchUpdateEntitiesRequest copyWith(void Function(BatchUpdateEntitiesRequest) updates) => super.copyWith((message) => updates(message as BatchUpdateEntitiesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static BatchUpdateEntitiesRequest create() => BatchUpdateEntitiesRequest();
-  static PbList<BatchUpdateEntitiesRequest> createRepeated() =>
-      PbList<BatchUpdateEntitiesRequest>();
-  static BatchUpdateEntitiesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBatchUpdateEntitiesRequest();
-    return _defaultInstance;
-  }
-
+  BatchUpdateEntitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchUpdateEntitiesRequest> createRepeated() => $pb.PbList<BatchUpdateEntitiesRequest>();
+  static BatchUpdateEntitiesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static BatchUpdateEntitiesRequest _defaultInstance;
-  static void $checkItem(BatchUpdateEntitiesRequest v) {
-    if (v is! BatchUpdateEntitiesRequest)
-      checkItemFailed(v, 'BatchUpdateEntitiesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  List<EntityType_Entity> get entities => $_getList(1);
+  $core.List<EntityType_Entity> get entities => $_getList(1);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasLanguageCode() => $_has(2);
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) { $_setString(2, v); }
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(3);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(4, v);
-  }
-
-  bool hasUpdateMask() => $_has(3);
+  $0.FieldMask get updateMask => $_getN(3);
+  set updateMask($0.FieldMask v) { setField(4, v); }
+  $core.bool hasUpdateMask() => $_has(3);
   void clearUpdateMask() => clearField(4);
 }
 
-class _ReadonlyBatchUpdateEntitiesRequest extends BatchUpdateEntitiesRequest
-    with ReadonlyMessageMixin {}
-
-class BatchDeleteEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BatchDeleteEntitiesRequest')
+class BatchDeleteEntitiesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchDeleteEntitiesRequest', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
     ..pPS(2, 'entityValues')
     ..aOS(3, 'languageCode')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   BatchDeleteEntitiesRequest() : super();
-  BatchDeleteEntitiesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchDeleteEntitiesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BatchDeleteEntitiesRequest clone() =>
-      BatchDeleteEntitiesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BatchDeleteEntitiesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BatchDeleteEntitiesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BatchDeleteEntitiesRequest clone() => BatchDeleteEntitiesRequest()..mergeFromMessage(this);
+  BatchDeleteEntitiesRequest copyWith(void Function(BatchDeleteEntitiesRequest) updates) => super.copyWith((message) => updates(message as BatchDeleteEntitiesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static BatchDeleteEntitiesRequest create() => BatchDeleteEntitiesRequest();
-  static PbList<BatchDeleteEntitiesRequest> createRepeated() =>
-      PbList<BatchDeleteEntitiesRequest>();
-  static BatchDeleteEntitiesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBatchDeleteEntitiesRequest();
-    return _defaultInstance;
-  }
-
+  BatchDeleteEntitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchDeleteEntitiesRequest> createRepeated() => $pb.PbList<BatchDeleteEntitiesRequest>();
+  static BatchDeleteEntitiesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static BatchDeleteEntitiesRequest _defaultInstance;
-  static void $checkItem(BatchDeleteEntitiesRequest v) {
-    if (v is! BatchDeleteEntitiesRequest)
-      checkItemFailed(v, 'BatchDeleteEntitiesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  List<String> get entityValues => $_getList(1);
+  $core.List<$core.String> get entityValues => $_getList(1);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasLanguageCode() => $_has(2);
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) { $_setString(2, v); }
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 }
 
-class _ReadonlyBatchDeleteEntitiesRequest extends BatchDeleteEntitiesRequest
-    with ReadonlyMessageMixin {}
-
-class EntityTypeBatch extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EntityTypeBatch')
-    ..pp<EntityType>(1, 'entityTypes', PbFieldType.PM, EntityType.$checkItem,
-        EntityType.create)
-    ..hasRequiredFields = false;
+class EntityTypeBatch extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityTypeBatch', package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM,EntityType.create)
+    ..hasRequiredFields = false
+  ;
 
   EntityTypeBatch() : super();
-  EntityTypeBatch.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityTypeBatch.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityTypeBatch.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EntityTypeBatch.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   EntityTypeBatch clone() => EntityTypeBatch()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EntityTypeBatch copyWith(void Function(EntityTypeBatch) updates) => super.copyWith((message) => updates(message as EntityTypeBatch));
+  $pb.BuilderInfo get info_ => _i;
   static EntityTypeBatch create() => EntityTypeBatch();
-  static PbList<EntityTypeBatch> createRepeated() => PbList<EntityTypeBatch>();
-  static EntityTypeBatch getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyEntityTypeBatch();
-    return _defaultInstance;
-  }
-
+  EntityTypeBatch createEmptyInstance() => create();
+  static $pb.PbList<EntityTypeBatch> createRepeated() => $pb.PbList<EntityTypeBatch>();
+  static EntityTypeBatch getDefault() => _defaultInstance ??= create()..freeze();
   static EntityTypeBatch _defaultInstance;
-  static void $checkItem(EntityTypeBatch v) {
-    if (v is! EntityTypeBatch) checkItemFailed(v, 'EntityTypeBatch');
-  }
 
-  List<EntityType> get entityTypes => $_getList(0);
+  $core.List<EntityType> get entityTypes => $_getList(0);
 }
-
-class _ReadonlyEntityTypeBatch extends EntityTypeBatch
-    with ReadonlyMessageMixin {}
 
 class EntityTypesApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   EntityTypesApi(this._client);
 
-  Future<ListEntityTypesResponse> listEntityTypes(
-      ClientContext ctx, ListEntityTypesRequest request) {
+  $async.Future<ListEntityTypesResponse> listEntityTypes($pb.ClientContext ctx, ListEntityTypesRequest request) {
     var emptyResponse = ListEntityTypesResponse();
-    return _client.invoke<ListEntityTypesResponse>(
-        ctx, 'EntityTypes', 'ListEntityTypes', request, emptyResponse);
+    return _client.invoke<ListEntityTypesResponse>(ctx, 'EntityTypes', 'ListEntityTypes', request, emptyResponse);
   }
-
-  Future<EntityType> getEntityType(
-      ClientContext ctx, GetEntityTypeRequest request) {
+  $async.Future<EntityType> getEntityType($pb.ClientContext ctx, GetEntityTypeRequest request) {
     var emptyResponse = EntityType();
-    return _client.invoke<EntityType>(
-        ctx, 'EntityTypes', 'GetEntityType', request, emptyResponse);
+    return _client.invoke<EntityType>(ctx, 'EntityTypes', 'GetEntityType', request, emptyResponse);
   }
-
-  Future<EntityType> createEntityType(
-      ClientContext ctx, CreateEntityTypeRequest request) {
+  $async.Future<EntityType> createEntityType($pb.ClientContext ctx, CreateEntityTypeRequest request) {
     var emptyResponse = EntityType();
-    return _client.invoke<EntityType>(
-        ctx, 'EntityTypes', 'CreateEntityType', request, emptyResponse);
+    return _client.invoke<EntityType>(ctx, 'EntityTypes', 'CreateEntityType', request, emptyResponse);
   }
-
-  Future<EntityType> updateEntityType(
-      ClientContext ctx, UpdateEntityTypeRequest request) {
+  $async.Future<EntityType> updateEntityType($pb.ClientContext ctx, UpdateEntityTypeRequest request) {
     var emptyResponse = EntityType();
-    return _client.invoke<EntityType>(
-        ctx, 'EntityTypes', 'UpdateEntityType', request, emptyResponse);
+    return _client.invoke<EntityType>(ctx, 'EntityTypes', 'UpdateEntityType', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteEntityType(
-      ClientContext ctx, DeleteEntityTypeRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'EntityTypes', 'DeleteEntityType', request, emptyResponse);
+  $async.Future<$1.Empty> deleteEntityType($pb.ClientContext ctx, DeleteEntityTypeRequest request) {
+    var emptyResponse = $1.Empty();
+    return _client.invoke<$1.Empty>(ctx, 'EntityTypes', 'DeleteEntityType', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> batchUpdateEntityTypes(
-      ClientContext ctx, BatchUpdateEntityTypesRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'EntityTypes', 'BatchUpdateEntityTypes', request, emptyResponse);
+  $async.Future<$2.Operation> batchUpdateEntityTypes($pb.ClientContext ctx, BatchUpdateEntityTypesRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'EntityTypes', 'BatchUpdateEntityTypes', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> batchDeleteEntityTypes(
-      ClientContext ctx, BatchDeleteEntityTypesRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'EntityTypes', 'BatchDeleteEntityTypes', request, emptyResponse);
+  $async.Future<$2.Operation> batchDeleteEntityTypes($pb.ClientContext ctx, BatchDeleteEntityTypesRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'EntityTypes', 'BatchDeleteEntityTypes', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> batchCreateEntities(
-      ClientContext ctx, BatchCreateEntitiesRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'EntityTypes', 'BatchCreateEntities', request, emptyResponse);
+  $async.Future<$2.Operation> batchCreateEntities($pb.ClientContext ctx, BatchCreateEntitiesRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'EntityTypes', 'BatchCreateEntities', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> batchUpdateEntities(
-      ClientContext ctx, BatchUpdateEntitiesRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'EntityTypes', 'BatchUpdateEntities', request, emptyResponse);
+  $async.Future<$2.Operation> batchUpdateEntities($pb.ClientContext ctx, BatchUpdateEntitiesRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'EntityTypes', 'BatchUpdateEntities', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> batchDeleteEntities(
-      ClientContext ctx, BatchDeleteEntitiesRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'EntityTypes', 'BatchDeleteEntities', request, emptyResponse);
+  $async.Future<$2.Operation> batchDeleteEntities($pb.ClientContext ctx, BatchDeleteEntitiesRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'EntityTypes', 'BatchDeleteEntities', request, emptyResponse);
   }
 }
+

@@ -1,242 +1,115 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dataproc/v1/operations.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../../protobuf/timestamp.pb.dart' as $0;
 
 import 'operations.pbenum.dart';
 
 export 'operations.pbenum.dart';
 
-class ClusterOperationStatus extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ClusterOperationStatus')
-    ..e<ClusterOperationStatus_State>(
-        1,
-        'state',
-        PbFieldType.OE,
-        ClusterOperationStatus_State.UNKNOWN,
-        ClusterOperationStatus_State.valueOf,
-        ClusterOperationStatus_State.values)
+class ClusterOperationStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClusterOperationStatus', package: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..e<ClusterOperationStatus_State>(1, 'state', $pb.PbFieldType.OE, ClusterOperationStatus_State.UNKNOWN, ClusterOperationStatus_State.valueOf, ClusterOperationStatus_State.values)
     ..aOS(2, 'innerState')
     ..aOS(3, 'details')
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'stateStartTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false;
+    ..a<$0.Timestamp>(4, 'stateStartTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   ClusterOperationStatus() : super();
-  ClusterOperationStatus.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterOperationStatus.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ClusterOperationStatus clone() =>
-      ClusterOperationStatus()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ClusterOperationStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ClusterOperationStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ClusterOperationStatus clone() => ClusterOperationStatus()..mergeFromMessage(this);
+  ClusterOperationStatus copyWith(void Function(ClusterOperationStatus) updates) => super.copyWith((message) => updates(message as ClusterOperationStatus));
+  $pb.BuilderInfo get info_ => _i;
   static ClusterOperationStatus create() => ClusterOperationStatus();
-  static PbList<ClusterOperationStatus> createRepeated() =>
-      PbList<ClusterOperationStatus>();
-  static ClusterOperationStatus getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyClusterOperationStatus();
-    return _defaultInstance;
-  }
-
+  ClusterOperationStatus createEmptyInstance() => create();
+  static $pb.PbList<ClusterOperationStatus> createRepeated() => $pb.PbList<ClusterOperationStatus>();
+  static ClusterOperationStatus getDefault() => _defaultInstance ??= create()..freeze();
   static ClusterOperationStatus _defaultInstance;
-  static void $checkItem(ClusterOperationStatus v) {
-    if (v is! ClusterOperationStatus)
-      checkItemFailed(v, 'ClusterOperationStatus');
-  }
 
   ClusterOperationStatus_State get state => $_getN(0);
-  set state(ClusterOperationStatus_State v) {
-    setField(1, v);
-  }
-
-  bool hasState() => $_has(0);
+  set state(ClusterOperationStatus_State v) { setField(1, v); }
+  $core.bool hasState() => $_has(0);
   void clearState() => clearField(1);
 
-  String get innerState => $_getS(1, '');
-  set innerState(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasInnerState() => $_has(1);
+  $core.String get innerState => $_getS(1, '');
+  set innerState($core.String v) { $_setString(1, v); }
+  $core.bool hasInnerState() => $_has(1);
   void clearInnerState() => clearField(2);
 
-  String get details => $_getS(2, '');
-  set details(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasDetails() => $_has(2);
+  $core.String get details => $_getS(2, '');
+  set details($core.String v) { $_setString(2, v); }
+  $core.bool hasDetails() => $_has(2);
   void clearDetails() => clearField(3);
 
-  $google$protobuf.Timestamp get stateStartTime => $_getN(3);
-  set stateStartTime($google$protobuf.Timestamp v) {
-    setField(4, v);
-  }
-
-  bool hasStateStartTime() => $_has(3);
+  $0.Timestamp get stateStartTime => $_getN(3);
+  set stateStartTime($0.Timestamp v) { setField(4, v); }
+  $core.bool hasStateStartTime() => $_has(3);
   void clearStateStartTime() => clearField(4);
 }
 
-class _ReadonlyClusterOperationStatus extends ClusterOperationStatus
-    with ReadonlyMessageMixin {}
-
-class ClusterOperationMetadata_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('ClusterOperationMetadata_LabelsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  ClusterOperationMetadata_LabelsEntry() : super();
-  ClusterOperationMetadata_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterOperationMetadata_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ClusterOperationMetadata_LabelsEntry clone() =>
-      ClusterOperationMetadata_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ClusterOperationMetadata_LabelsEntry create() =>
-      ClusterOperationMetadata_LabelsEntry();
-  static PbList<ClusterOperationMetadata_LabelsEntry> createRepeated() =>
-      PbList<ClusterOperationMetadata_LabelsEntry>();
-  static ClusterOperationMetadata_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyClusterOperationMetadata_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static ClusterOperationMetadata_LabelsEntry _defaultInstance;
-  static void $checkItem(ClusterOperationMetadata_LabelsEntry v) {
-    if (v is! ClusterOperationMetadata_LabelsEntry)
-      checkItemFailed(v, 'ClusterOperationMetadata_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyClusterOperationMetadata_LabelsEntry
-    extends ClusterOperationMetadata_LabelsEntry with ReadonlyMessageMixin {}
-
-class ClusterOperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ClusterOperationMetadata')
+class ClusterOperationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClusterOperationMetadata', package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(7, 'clusterName')
     ..aOS(8, 'clusterUuid')
-    ..a<ClusterOperationStatus>(9, 'status', PbFieldType.OM,
-        ClusterOperationStatus.getDefault, ClusterOperationStatus.create)
-    ..pp<ClusterOperationStatus>(10, 'statusHistory', PbFieldType.PM,
-        ClusterOperationStatus.$checkItem, ClusterOperationStatus.create)
+    ..a<ClusterOperationStatus>(9, 'status', $pb.PbFieldType.OM, ClusterOperationStatus.getDefault, ClusterOperationStatus.create)
+    ..pc<ClusterOperationStatus>(10, 'statusHistory', $pb.PbFieldType.PM,ClusterOperationStatus.create)
     ..aOS(11, 'operationType')
     ..aOS(12, 'description')
-    ..pp<ClusterOperationMetadata_LabelsEntry>(
-        13,
-        'labels',
-        PbFieldType.PM,
-        ClusterOperationMetadata_LabelsEntry.$checkItem,
-        ClusterOperationMetadata_LabelsEntry.create)
+    ..m<$core.String, $core.String>(13, 'labels', 'ClusterOperationMetadata.LabelsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.cloud.dataproc.v1'))
     ..pPS(14, 'warnings')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ClusterOperationMetadata() : super();
-  ClusterOperationMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterOperationMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ClusterOperationMetadata clone() =>
-      ClusterOperationMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ClusterOperationMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ClusterOperationMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ClusterOperationMetadata clone() => ClusterOperationMetadata()..mergeFromMessage(this);
+  ClusterOperationMetadata copyWith(void Function(ClusterOperationMetadata) updates) => super.copyWith((message) => updates(message as ClusterOperationMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static ClusterOperationMetadata create() => ClusterOperationMetadata();
-  static PbList<ClusterOperationMetadata> createRepeated() =>
-      PbList<ClusterOperationMetadata>();
-  static ClusterOperationMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyClusterOperationMetadata();
-    return _defaultInstance;
-  }
-
+  ClusterOperationMetadata createEmptyInstance() => create();
+  static $pb.PbList<ClusterOperationMetadata> createRepeated() => $pb.PbList<ClusterOperationMetadata>();
+  static ClusterOperationMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static ClusterOperationMetadata _defaultInstance;
-  static void $checkItem(ClusterOperationMetadata v) {
-    if (v is! ClusterOperationMetadata)
-      checkItemFailed(v, 'ClusterOperationMetadata');
-  }
 
-  String get clusterName => $_getS(0, '');
-  set clusterName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasClusterName() => $_has(0);
+  $core.String get clusterName => $_getS(0, '');
+  set clusterName($core.String v) { $_setString(0, v); }
+  $core.bool hasClusterName() => $_has(0);
   void clearClusterName() => clearField(7);
 
-  String get clusterUuid => $_getS(1, '');
-  set clusterUuid(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasClusterUuid() => $_has(1);
+  $core.String get clusterUuid => $_getS(1, '');
+  set clusterUuid($core.String v) { $_setString(1, v); }
+  $core.bool hasClusterUuid() => $_has(1);
   void clearClusterUuid() => clearField(8);
 
   ClusterOperationStatus get status => $_getN(2);
-  set status(ClusterOperationStatus v) {
-    setField(9, v);
-  }
-
-  bool hasStatus() => $_has(2);
+  set status(ClusterOperationStatus v) { setField(9, v); }
+  $core.bool hasStatus() => $_has(2);
   void clearStatus() => clearField(9);
 
-  List<ClusterOperationStatus> get statusHistory => $_getList(3);
+  $core.List<ClusterOperationStatus> get statusHistory => $_getList(3);
 
-  String get operationType => $_getS(4, '');
-  set operationType(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasOperationType() => $_has(4);
+  $core.String get operationType => $_getS(4, '');
+  set operationType($core.String v) { $_setString(4, v); }
+  $core.bool hasOperationType() => $_has(4);
   void clearOperationType() => clearField(11);
 
-  String get description => $_getS(5, '');
-  set description(String v) {
-    $_setString(5, v);
-  }
-
-  bool hasDescription() => $_has(5);
+  $core.String get description => $_getS(5, '');
+  set description($core.String v) { $_setString(5, v); }
+  $core.bool hasDescription() => $_has(5);
   void clearDescription() => clearField(12);
 
-  List<ClusterOperationMetadata_LabelsEntry> get labels => $_getList(6);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(6);
 
-  List<String> get warnings => $_getList(7);
+  $core.List<$core.String> get warnings => $_getList(7);
 }
 
-class _ReadonlyClusterOperationMetadata extends ClusterOperationMetadata
-    with ReadonlyMessageMixin {}

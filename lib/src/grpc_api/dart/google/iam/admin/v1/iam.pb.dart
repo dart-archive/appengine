@@ -1,1867 +1,1114 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/iam/admin/v1/iam.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../v1/policy.pb.dart' as $google$iam$v1;
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../protobuf/field_mask.pb.dart' as $1;
+import '../../../protobuf/empty.pb.dart' as $2;
+import '../../v1/iam_policy.pb.dart' as $3;
+import '../../v1/policy.pb.dart' as $4;
 
 import 'iam.pbenum.dart';
 
 export 'iam.pbenum.dart';
 
-class ServiceAccount extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ServiceAccount')
+class ServiceAccount extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServiceAccount', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'projectId')
     ..aOS(4, 'uniqueId')
     ..aOS(5, 'email')
     ..aOS(6, 'displayName')
-    ..a<List<int>>(7, 'etag', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(7, 'etag', $pb.PbFieldType.OY)
     ..aOS(9, 'oauth2ClientId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ServiceAccount() : super();
-  ServiceAccount.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ServiceAccount.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ServiceAccount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ServiceAccount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ServiceAccount clone() => ServiceAccount()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ServiceAccount copyWith(void Function(ServiceAccount) updates) => super.copyWith((message) => updates(message as ServiceAccount));
+  $pb.BuilderInfo get info_ => _i;
   static ServiceAccount create() => ServiceAccount();
-  static PbList<ServiceAccount> createRepeated() => PbList<ServiceAccount>();
-  static ServiceAccount getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyServiceAccount();
-    return _defaultInstance;
-  }
-
+  ServiceAccount createEmptyInstance() => create();
+  static $pb.PbList<ServiceAccount> createRepeated() => $pb.PbList<ServiceAccount>();
+  static ServiceAccount getDefault() => _defaultInstance ??= create()..freeze();
   static ServiceAccount _defaultInstance;
-  static void $checkItem(ServiceAccount v) {
-    if (v is! ServiceAccount) checkItemFailed(v, 'ServiceAccount');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get projectId => $_getS(1, '');
-  set projectId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasProjectId() => $_has(1);
+  $core.String get projectId => $_getS(1, '');
+  set projectId($core.String v) { $_setString(1, v); }
+  $core.bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 
-  String get uniqueId => $_getS(2, '');
-  set uniqueId(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasUniqueId() => $_has(2);
+  $core.String get uniqueId => $_getS(2, '');
+  set uniqueId($core.String v) { $_setString(2, v); }
+  $core.bool hasUniqueId() => $_has(2);
   void clearUniqueId() => clearField(4);
 
-  String get email => $_getS(3, '');
-  set email(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasEmail() => $_has(3);
+  $core.String get email => $_getS(3, '');
+  set email($core.String v) { $_setString(3, v); }
+  $core.bool hasEmail() => $_has(3);
   void clearEmail() => clearField(5);
 
-  String get displayName => $_getS(4, '');
-  set displayName(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasDisplayName() => $_has(4);
+  $core.String get displayName => $_getS(4, '');
+  set displayName($core.String v) { $_setString(4, v); }
+  $core.bool hasDisplayName() => $_has(4);
   void clearDisplayName() => clearField(6);
 
-  List<int> get etag => $_getN(5);
-  set etag(List<int> v) {
-    $_setBytes(5, v);
-  }
-
-  bool hasEtag() => $_has(5);
+  $core.List<$core.int> get etag => $_getN(5);
+  set etag($core.List<$core.int> v) { $_setBytes(5, v); }
+  $core.bool hasEtag() => $_has(5);
   void clearEtag() => clearField(7);
 
-  String get oauth2ClientId => $_getS(6, '');
-  set oauth2ClientId(String v) {
-    $_setString(6, v);
-  }
-
-  bool hasOauth2ClientId() => $_has(6);
+  $core.String get oauth2ClientId => $_getS(6, '');
+  set oauth2ClientId($core.String v) { $_setString(6, v); }
+  $core.bool hasOauth2ClientId() => $_has(6);
   void clearOauth2ClientId() => clearField(9);
 }
 
-class _ReadonlyServiceAccount extends ServiceAccount with ReadonlyMessageMixin {
-}
-
-class CreateServiceAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateServiceAccountRequest')
+class CreateServiceAccountRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateServiceAccountRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'accountId')
-    ..a<ServiceAccount>(3, 'serviceAccount', PbFieldType.OM,
-        ServiceAccount.getDefault, ServiceAccount.create)
-    ..hasRequiredFields = false;
+    ..a<ServiceAccount>(3, 'serviceAccount', $pb.PbFieldType.OM, ServiceAccount.getDefault, ServiceAccount.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateServiceAccountRequest() : super();
-  CreateServiceAccountRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateServiceAccountRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateServiceAccountRequest clone() =>
-      CreateServiceAccountRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateServiceAccountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateServiceAccountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateServiceAccountRequest clone() => CreateServiceAccountRequest()..mergeFromMessage(this);
+  CreateServiceAccountRequest copyWith(void Function(CreateServiceAccountRequest) updates) => super.copyWith((message) => updates(message as CreateServiceAccountRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateServiceAccountRequest create() => CreateServiceAccountRequest();
-  static PbList<CreateServiceAccountRequest> createRepeated() =>
-      PbList<CreateServiceAccountRequest>();
-  static CreateServiceAccountRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateServiceAccountRequest();
-    return _defaultInstance;
-  }
-
+  CreateServiceAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateServiceAccountRequest> createRepeated() => $pb.PbList<CreateServiceAccountRequest>();
+  static CreateServiceAccountRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateServiceAccountRequest _defaultInstance;
-  static void $checkItem(CreateServiceAccountRequest v) {
-    if (v is! CreateServiceAccountRequest)
-      checkItemFailed(v, 'CreateServiceAccountRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get accountId => $_getS(1, '');
-  set accountId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasAccountId() => $_has(1);
+  $core.String get accountId => $_getS(1, '');
+  set accountId($core.String v) { $_setString(1, v); }
+  $core.bool hasAccountId() => $_has(1);
   void clearAccountId() => clearField(2);
 
   ServiceAccount get serviceAccount => $_getN(2);
-  set serviceAccount(ServiceAccount v) {
-    setField(3, v);
-  }
-
-  bool hasServiceAccount() => $_has(2);
+  set serviceAccount(ServiceAccount v) { setField(3, v); }
+  $core.bool hasServiceAccount() => $_has(2);
   void clearServiceAccount() => clearField(3);
 }
 
-class _ReadonlyCreateServiceAccountRequest extends CreateServiceAccountRequest
-    with ReadonlyMessageMixin {}
-
-class ListServiceAccountsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServiceAccountsRequest')
+class ListServiceAccountsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceAccountsRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListServiceAccountsRequest() : super();
-  ListServiceAccountsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServiceAccountsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServiceAccountsRequest clone() =>
-      ListServiceAccountsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListServiceAccountsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServiceAccountsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServiceAccountsRequest clone() => ListServiceAccountsRequest()..mergeFromMessage(this);
+  ListServiceAccountsRequest copyWith(void Function(ListServiceAccountsRequest) updates) => super.copyWith((message) => updates(message as ListServiceAccountsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListServiceAccountsRequest create() => ListServiceAccountsRequest();
-  static PbList<ListServiceAccountsRequest> createRepeated() =>
-      PbList<ListServiceAccountsRequest>();
-  static ListServiceAccountsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServiceAccountsRequest();
-    return _defaultInstance;
-  }
-
+  ListServiceAccountsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListServiceAccountsRequest> createRepeated() => $pb.PbList<ListServiceAccountsRequest>();
+  static ListServiceAccountsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListServiceAccountsRequest _defaultInstance;
-  static void $checkItem(ListServiceAccountsRequest v) {
-    if (v is! ListServiceAccountsRequest)
-      checkItemFailed(v, 'ListServiceAccountsRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasPageSize() => $_has(1);
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasPageToken() => $_has(2);
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) { $_setString(2, v); }
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListServiceAccountsRequest extends ListServiceAccountsRequest
-    with ReadonlyMessageMixin {}
-
-class ListServiceAccountsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServiceAccountsResponse')
-    ..pp<ServiceAccount>(1, 'accounts', PbFieldType.PM,
-        ServiceAccount.$checkItem, ServiceAccount.create)
+class ListServiceAccountsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceAccountsResponse', package: const $pb.PackageName('google.iam.admin.v1'))
+    ..pc<ServiceAccount>(1, 'accounts', $pb.PbFieldType.PM,ServiceAccount.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListServiceAccountsResponse() : super();
-  ListServiceAccountsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServiceAccountsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServiceAccountsResponse clone() =>
-      ListServiceAccountsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListServiceAccountsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServiceAccountsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServiceAccountsResponse clone() => ListServiceAccountsResponse()..mergeFromMessage(this);
+  ListServiceAccountsResponse copyWith(void Function(ListServiceAccountsResponse) updates) => super.copyWith((message) => updates(message as ListServiceAccountsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListServiceAccountsResponse create() => ListServiceAccountsResponse();
-  static PbList<ListServiceAccountsResponse> createRepeated() =>
-      PbList<ListServiceAccountsResponse>();
-  static ListServiceAccountsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServiceAccountsResponse();
-    return _defaultInstance;
-  }
-
+  ListServiceAccountsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListServiceAccountsResponse> createRepeated() => $pb.PbList<ListServiceAccountsResponse>();
+  static ListServiceAccountsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListServiceAccountsResponse _defaultInstance;
-  static void $checkItem(ListServiceAccountsResponse v) {
-    if (v is! ListServiceAccountsResponse)
-      checkItemFailed(v, 'ListServiceAccountsResponse');
-  }
 
-  List<ServiceAccount> get accounts => $_getList(0);
+  $core.List<ServiceAccount> get accounts => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListServiceAccountsResponse extends ListServiceAccountsResponse
-    with ReadonlyMessageMixin {}
-
-class GetServiceAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetServiceAccountRequest')
+class GetServiceAccountRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceAccountRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetServiceAccountRequest() : super();
-  GetServiceAccountRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetServiceAccountRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetServiceAccountRequest clone() =>
-      GetServiceAccountRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetServiceAccountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetServiceAccountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetServiceAccountRequest clone() => GetServiceAccountRequest()..mergeFromMessage(this);
+  GetServiceAccountRequest copyWith(void Function(GetServiceAccountRequest) updates) => super.copyWith((message) => updates(message as GetServiceAccountRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetServiceAccountRequest create() => GetServiceAccountRequest();
-  static PbList<GetServiceAccountRequest> createRepeated() =>
-      PbList<GetServiceAccountRequest>();
-  static GetServiceAccountRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetServiceAccountRequest();
-    return _defaultInstance;
-  }
-
+  GetServiceAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<GetServiceAccountRequest> createRepeated() => $pb.PbList<GetServiceAccountRequest>();
+  static GetServiceAccountRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetServiceAccountRequest _defaultInstance;
-  static void $checkItem(GetServiceAccountRequest v) {
-    if (v is! GetServiceAccountRequest)
-      checkItemFailed(v, 'GetServiceAccountRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetServiceAccountRequest extends GetServiceAccountRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteServiceAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteServiceAccountRequest')
+class DeleteServiceAccountRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteServiceAccountRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteServiceAccountRequest() : super();
-  DeleteServiceAccountRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteServiceAccountRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteServiceAccountRequest clone() =>
-      DeleteServiceAccountRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteServiceAccountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteServiceAccountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteServiceAccountRequest clone() => DeleteServiceAccountRequest()..mergeFromMessage(this);
+  DeleteServiceAccountRequest copyWith(void Function(DeleteServiceAccountRequest) updates) => super.copyWith((message) => updates(message as DeleteServiceAccountRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteServiceAccountRequest create() => DeleteServiceAccountRequest();
-  static PbList<DeleteServiceAccountRequest> createRepeated() =>
-      PbList<DeleteServiceAccountRequest>();
-  static DeleteServiceAccountRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteServiceAccountRequest();
-    return _defaultInstance;
-  }
-
+  DeleteServiceAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteServiceAccountRequest> createRepeated() => $pb.PbList<DeleteServiceAccountRequest>();
+  static DeleteServiceAccountRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteServiceAccountRequest _defaultInstance;
-  static void $checkItem(DeleteServiceAccountRequest v) {
-    if (v is! DeleteServiceAccountRequest)
-      checkItemFailed(v, 'DeleteServiceAccountRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteServiceAccountRequest extends DeleteServiceAccountRequest
-    with ReadonlyMessageMixin {}
-
-class ListServiceAccountKeysRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServiceAccountKeysRequest')
+class ListServiceAccountKeysRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceAccountKeysRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..pp<ListServiceAccountKeysRequest_KeyType>(
-        2,
-        'keyTypes',
-        PbFieldType.PE,
-        ListServiceAccountKeysRequest_KeyType.$checkItem,
-        null,
-        ListServiceAccountKeysRequest_KeyType.valueOf,
-        ListServiceAccountKeysRequest_KeyType.values)
-    ..hasRequiredFields = false;
+    ..pc<ListServiceAccountKeysRequest_KeyType>(2, 'keyTypes', $pb.PbFieldType.PE, null, ListServiceAccountKeysRequest_KeyType.valueOf, ListServiceAccountKeysRequest_KeyType.values)
+    ..hasRequiredFields = false
+  ;
 
   ListServiceAccountKeysRequest() : super();
-  ListServiceAccountKeysRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServiceAccountKeysRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServiceAccountKeysRequest clone() =>
-      ListServiceAccountKeysRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListServiceAccountKeysRequest create() =>
-      ListServiceAccountKeysRequest();
-  static PbList<ListServiceAccountKeysRequest> createRepeated() =>
-      PbList<ListServiceAccountKeysRequest>();
-  static ListServiceAccountKeysRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServiceAccountKeysRequest();
-    return _defaultInstance;
-  }
-
+  ListServiceAccountKeysRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServiceAccountKeysRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServiceAccountKeysRequest clone() => ListServiceAccountKeysRequest()..mergeFromMessage(this);
+  ListServiceAccountKeysRequest copyWith(void Function(ListServiceAccountKeysRequest) updates) => super.copyWith((message) => updates(message as ListServiceAccountKeysRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListServiceAccountKeysRequest create() => ListServiceAccountKeysRequest();
+  ListServiceAccountKeysRequest createEmptyInstance() => create();
+  static $pb.PbList<ListServiceAccountKeysRequest> createRepeated() => $pb.PbList<ListServiceAccountKeysRequest>();
+  static ListServiceAccountKeysRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListServiceAccountKeysRequest _defaultInstance;
-  static void $checkItem(ListServiceAccountKeysRequest v) {
-    if (v is! ListServiceAccountKeysRequest)
-      checkItemFailed(v, 'ListServiceAccountKeysRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<ListServiceAccountKeysRequest_KeyType> get keyTypes => $_getList(1);
+  $core.List<ListServiceAccountKeysRequest_KeyType> get keyTypes => $_getList(1);
 }
 
-class _ReadonlyListServiceAccountKeysRequest
-    extends ListServiceAccountKeysRequest with ReadonlyMessageMixin {}
-
-class ListServiceAccountKeysResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServiceAccountKeysResponse')
-    ..pp<ServiceAccountKey>(1, 'keys', PbFieldType.PM,
-        ServiceAccountKey.$checkItem, ServiceAccountKey.create)
-    ..hasRequiredFields = false;
+class ListServiceAccountKeysResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceAccountKeysResponse', package: const $pb.PackageName('google.iam.admin.v1'))
+    ..pc<ServiceAccountKey>(1, 'keys', $pb.PbFieldType.PM,ServiceAccountKey.create)
+    ..hasRequiredFields = false
+  ;
 
   ListServiceAccountKeysResponse() : super();
-  ListServiceAccountKeysResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServiceAccountKeysResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServiceAccountKeysResponse clone() =>
-      ListServiceAccountKeysResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListServiceAccountKeysResponse create() =>
-      ListServiceAccountKeysResponse();
-  static PbList<ListServiceAccountKeysResponse> createRepeated() =>
-      PbList<ListServiceAccountKeysResponse>();
-  static ListServiceAccountKeysResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServiceAccountKeysResponse();
-    return _defaultInstance;
-  }
-
+  ListServiceAccountKeysResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServiceAccountKeysResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServiceAccountKeysResponse clone() => ListServiceAccountKeysResponse()..mergeFromMessage(this);
+  ListServiceAccountKeysResponse copyWith(void Function(ListServiceAccountKeysResponse) updates) => super.copyWith((message) => updates(message as ListServiceAccountKeysResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListServiceAccountKeysResponse create() => ListServiceAccountKeysResponse();
+  ListServiceAccountKeysResponse createEmptyInstance() => create();
+  static $pb.PbList<ListServiceAccountKeysResponse> createRepeated() => $pb.PbList<ListServiceAccountKeysResponse>();
+  static ListServiceAccountKeysResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListServiceAccountKeysResponse _defaultInstance;
-  static void $checkItem(ListServiceAccountKeysResponse v) {
-    if (v is! ListServiceAccountKeysResponse)
-      checkItemFailed(v, 'ListServiceAccountKeysResponse');
-  }
 
-  List<ServiceAccountKey> get keys => $_getList(0);
+  $core.List<ServiceAccountKey> get keys => $_getList(0);
 }
 
-class _ReadonlyListServiceAccountKeysResponse
-    extends ListServiceAccountKeysResponse with ReadonlyMessageMixin {}
-
-class GetServiceAccountKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetServiceAccountKeyRequest')
+class GetServiceAccountKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceAccountKeyRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..e<ServiceAccountPublicKeyType>(
-        2,
-        'publicKeyType',
-        PbFieldType.OE,
-        ServiceAccountPublicKeyType.TYPE_NONE,
-        ServiceAccountPublicKeyType.valueOf,
-        ServiceAccountPublicKeyType.values)
-    ..hasRequiredFields = false;
+    ..e<ServiceAccountPublicKeyType>(2, 'publicKeyType', $pb.PbFieldType.OE, ServiceAccountPublicKeyType.TYPE_NONE, ServiceAccountPublicKeyType.valueOf, ServiceAccountPublicKeyType.values)
+    ..hasRequiredFields = false
+  ;
 
   GetServiceAccountKeyRequest() : super();
-  GetServiceAccountKeyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetServiceAccountKeyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetServiceAccountKeyRequest clone() =>
-      GetServiceAccountKeyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetServiceAccountKeyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetServiceAccountKeyRequest clone() => GetServiceAccountKeyRequest()..mergeFromMessage(this);
+  GetServiceAccountKeyRequest copyWith(void Function(GetServiceAccountKeyRequest) updates) => super.copyWith((message) => updates(message as GetServiceAccountKeyRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetServiceAccountKeyRequest create() => GetServiceAccountKeyRequest();
-  static PbList<GetServiceAccountKeyRequest> createRepeated() =>
-      PbList<GetServiceAccountKeyRequest>();
-  static GetServiceAccountKeyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetServiceAccountKeyRequest();
-    return _defaultInstance;
-  }
-
+  GetServiceAccountKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<GetServiceAccountKeyRequest> createRepeated() => $pb.PbList<GetServiceAccountKeyRequest>();
+  static GetServiceAccountKeyRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetServiceAccountKeyRequest _defaultInstance;
-  static void $checkItem(GetServiceAccountKeyRequest v) {
-    if (v is! GetServiceAccountKeyRequest)
-      checkItemFailed(v, 'GetServiceAccountKeyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   ServiceAccountPublicKeyType get publicKeyType => $_getN(1);
-  set publicKeyType(ServiceAccountPublicKeyType v) {
-    setField(2, v);
-  }
-
-  bool hasPublicKeyType() => $_has(1);
+  set publicKeyType(ServiceAccountPublicKeyType v) { setField(2, v); }
+  $core.bool hasPublicKeyType() => $_has(1);
   void clearPublicKeyType() => clearField(2);
 }
 
-class _ReadonlyGetServiceAccountKeyRequest extends GetServiceAccountKeyRequest
-    with ReadonlyMessageMixin {}
-
-class ServiceAccountKey extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ServiceAccountKey')
+class ServiceAccountKey extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServiceAccountKey', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..e<ServiceAccountPrivateKeyType>(
-        2,
-        'privateKeyType',
-        PbFieldType.OE,
-        ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED,
-        ServiceAccountPrivateKeyType.valueOf,
-        ServiceAccountPrivateKeyType.values)
-    ..a<List<int>>(3, 'privateKeyData', PbFieldType.OY)
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'validAfterTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'validBeforeTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<List<int>>(7, 'publicKeyData', PbFieldType.OY)
-    ..e<ServiceAccountKeyAlgorithm>(
-        8,
-        'keyAlgorithm',
-        PbFieldType.OE,
-        ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED,
-        ServiceAccountKeyAlgorithm.valueOf,
-        ServiceAccountKeyAlgorithm.values)
-    ..hasRequiredFields = false;
+    ..e<ServiceAccountPrivateKeyType>(2, 'privateKeyType', $pb.PbFieldType.OE, ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED, ServiceAccountPrivateKeyType.valueOf, ServiceAccountPrivateKeyType.values)
+    ..a<$core.List<$core.int>>(3, 'privateKeyData', $pb.PbFieldType.OY)
+    ..a<$0.Timestamp>(4, 'validAfterTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'validBeforeTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$core.List<$core.int>>(7, 'publicKeyData', $pb.PbFieldType.OY)
+    ..e<ServiceAccountKeyAlgorithm>(8, 'keyAlgorithm', $pb.PbFieldType.OE, ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED, ServiceAccountKeyAlgorithm.valueOf, ServiceAccountKeyAlgorithm.values)
+    ..hasRequiredFields = false
+  ;
 
   ServiceAccountKey() : super();
-  ServiceAccountKey.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ServiceAccountKey.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ServiceAccountKey.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ServiceAccountKey.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ServiceAccountKey clone() => ServiceAccountKey()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ServiceAccountKey copyWith(void Function(ServiceAccountKey) updates) => super.copyWith((message) => updates(message as ServiceAccountKey));
+  $pb.BuilderInfo get info_ => _i;
   static ServiceAccountKey create() => ServiceAccountKey();
-  static PbList<ServiceAccountKey> createRepeated() =>
-      PbList<ServiceAccountKey>();
-  static ServiceAccountKey getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyServiceAccountKey();
-    return _defaultInstance;
-  }
-
+  ServiceAccountKey createEmptyInstance() => create();
+  static $pb.PbList<ServiceAccountKey> createRepeated() => $pb.PbList<ServiceAccountKey>();
+  static ServiceAccountKey getDefault() => _defaultInstance ??= create()..freeze();
   static ServiceAccountKey _defaultInstance;
-  static void $checkItem(ServiceAccountKey v) {
-    if (v is! ServiceAccountKey) checkItemFailed(v, 'ServiceAccountKey');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   ServiceAccountPrivateKeyType get privateKeyType => $_getN(1);
-  set privateKeyType(ServiceAccountPrivateKeyType v) {
-    setField(2, v);
-  }
-
-  bool hasPrivateKeyType() => $_has(1);
+  set privateKeyType(ServiceAccountPrivateKeyType v) { setField(2, v); }
+  $core.bool hasPrivateKeyType() => $_has(1);
   void clearPrivateKeyType() => clearField(2);
 
-  List<int> get privateKeyData => $_getN(2);
-  set privateKeyData(List<int> v) {
-    $_setBytes(2, v);
-  }
-
-  bool hasPrivateKeyData() => $_has(2);
+  $core.List<$core.int> get privateKeyData => $_getN(2);
+  set privateKeyData($core.List<$core.int> v) { $_setBytes(2, v); }
+  $core.bool hasPrivateKeyData() => $_has(2);
   void clearPrivateKeyData() => clearField(3);
 
-  $google$protobuf.Timestamp get validAfterTime => $_getN(3);
-  set validAfterTime($google$protobuf.Timestamp v) {
-    setField(4, v);
-  }
-
-  bool hasValidAfterTime() => $_has(3);
+  $0.Timestamp get validAfterTime => $_getN(3);
+  set validAfterTime($0.Timestamp v) { setField(4, v); }
+  $core.bool hasValidAfterTime() => $_has(3);
   void clearValidAfterTime() => clearField(4);
 
-  $google$protobuf.Timestamp get validBeforeTime => $_getN(4);
-  set validBeforeTime($google$protobuf.Timestamp v) {
-    setField(5, v);
-  }
-
-  bool hasValidBeforeTime() => $_has(4);
+  $0.Timestamp get validBeforeTime => $_getN(4);
+  set validBeforeTime($0.Timestamp v) { setField(5, v); }
+  $core.bool hasValidBeforeTime() => $_has(4);
   void clearValidBeforeTime() => clearField(5);
 
-  List<int> get publicKeyData => $_getN(5);
-  set publicKeyData(List<int> v) {
-    $_setBytes(5, v);
-  }
-
-  bool hasPublicKeyData() => $_has(5);
+  $core.List<$core.int> get publicKeyData => $_getN(5);
+  set publicKeyData($core.List<$core.int> v) { $_setBytes(5, v); }
+  $core.bool hasPublicKeyData() => $_has(5);
   void clearPublicKeyData() => clearField(7);
 
   ServiceAccountKeyAlgorithm get keyAlgorithm => $_getN(6);
-  set keyAlgorithm(ServiceAccountKeyAlgorithm v) {
-    setField(8, v);
-  }
-
-  bool hasKeyAlgorithm() => $_has(6);
+  set keyAlgorithm(ServiceAccountKeyAlgorithm v) { setField(8, v); }
+  $core.bool hasKeyAlgorithm() => $_has(6);
   void clearKeyAlgorithm() => clearField(8);
 }
 
-class _ReadonlyServiceAccountKey extends ServiceAccountKey
-    with ReadonlyMessageMixin {}
-
-class CreateServiceAccountKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateServiceAccountKeyRequest')
+class CreateServiceAccountKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateServiceAccountKeyRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..e<ServiceAccountPrivateKeyType>(
-        2,
-        'privateKeyType',
-        PbFieldType.OE,
-        ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED,
-        ServiceAccountPrivateKeyType.valueOf,
-        ServiceAccountPrivateKeyType.values)
-    ..e<ServiceAccountKeyAlgorithm>(
-        3,
-        'keyAlgorithm',
-        PbFieldType.OE,
-        ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED,
-        ServiceAccountKeyAlgorithm.valueOf,
-        ServiceAccountKeyAlgorithm.values)
-    ..hasRequiredFields = false;
+    ..e<ServiceAccountPrivateKeyType>(2, 'privateKeyType', $pb.PbFieldType.OE, ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED, ServiceAccountPrivateKeyType.valueOf, ServiceAccountPrivateKeyType.values)
+    ..e<ServiceAccountKeyAlgorithm>(3, 'keyAlgorithm', $pb.PbFieldType.OE, ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED, ServiceAccountKeyAlgorithm.valueOf, ServiceAccountKeyAlgorithm.values)
+    ..hasRequiredFields = false
+  ;
 
   CreateServiceAccountKeyRequest() : super();
-  CreateServiceAccountKeyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateServiceAccountKeyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateServiceAccountKeyRequest clone() =>
-      CreateServiceAccountKeyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateServiceAccountKeyRequest create() =>
-      CreateServiceAccountKeyRequest();
-  static PbList<CreateServiceAccountKeyRequest> createRepeated() =>
-      PbList<CreateServiceAccountKeyRequest>();
-  static CreateServiceAccountKeyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateServiceAccountKeyRequest();
-    return _defaultInstance;
-  }
-
+  CreateServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateServiceAccountKeyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateServiceAccountKeyRequest clone() => CreateServiceAccountKeyRequest()..mergeFromMessage(this);
+  CreateServiceAccountKeyRequest copyWith(void Function(CreateServiceAccountKeyRequest) updates) => super.copyWith((message) => updates(message as CreateServiceAccountKeyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateServiceAccountKeyRequest create() => CreateServiceAccountKeyRequest();
+  CreateServiceAccountKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateServiceAccountKeyRequest> createRepeated() => $pb.PbList<CreateServiceAccountKeyRequest>();
+  static CreateServiceAccountKeyRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateServiceAccountKeyRequest _defaultInstance;
-  static void $checkItem(CreateServiceAccountKeyRequest v) {
-    if (v is! CreateServiceAccountKeyRequest)
-      checkItemFailed(v, 'CreateServiceAccountKeyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   ServiceAccountPrivateKeyType get privateKeyType => $_getN(1);
-  set privateKeyType(ServiceAccountPrivateKeyType v) {
-    setField(2, v);
-  }
-
-  bool hasPrivateKeyType() => $_has(1);
+  set privateKeyType(ServiceAccountPrivateKeyType v) { setField(2, v); }
+  $core.bool hasPrivateKeyType() => $_has(1);
   void clearPrivateKeyType() => clearField(2);
 
   ServiceAccountKeyAlgorithm get keyAlgorithm => $_getN(2);
-  set keyAlgorithm(ServiceAccountKeyAlgorithm v) {
-    setField(3, v);
-  }
-
-  bool hasKeyAlgorithm() => $_has(2);
+  set keyAlgorithm(ServiceAccountKeyAlgorithm v) { setField(3, v); }
+  $core.bool hasKeyAlgorithm() => $_has(2);
   void clearKeyAlgorithm() => clearField(3);
 }
 
-class _ReadonlyCreateServiceAccountKeyRequest
-    extends CreateServiceAccountKeyRequest with ReadonlyMessageMixin {}
-
-class DeleteServiceAccountKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteServiceAccountKeyRequest')
+class DeleteServiceAccountKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteServiceAccountKeyRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteServiceAccountKeyRequest() : super();
-  DeleteServiceAccountKeyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteServiceAccountKeyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteServiceAccountKeyRequest clone() =>
-      DeleteServiceAccountKeyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteServiceAccountKeyRequest create() =>
-      DeleteServiceAccountKeyRequest();
-  static PbList<DeleteServiceAccountKeyRequest> createRepeated() =>
-      PbList<DeleteServiceAccountKeyRequest>();
-  static DeleteServiceAccountKeyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteServiceAccountKeyRequest();
-    return _defaultInstance;
-  }
-
+  DeleteServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteServiceAccountKeyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteServiceAccountKeyRequest clone() => DeleteServiceAccountKeyRequest()..mergeFromMessage(this);
+  DeleteServiceAccountKeyRequest copyWith(void Function(DeleteServiceAccountKeyRequest) updates) => super.copyWith((message) => updates(message as DeleteServiceAccountKeyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteServiceAccountKeyRequest create() => DeleteServiceAccountKeyRequest();
+  DeleteServiceAccountKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteServiceAccountKeyRequest> createRepeated() => $pb.PbList<DeleteServiceAccountKeyRequest>();
+  static DeleteServiceAccountKeyRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteServiceAccountKeyRequest _defaultInstance;
-  static void $checkItem(DeleteServiceAccountKeyRequest v) {
-    if (v is! DeleteServiceAccountKeyRequest)
-      checkItemFailed(v, 'DeleteServiceAccountKeyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteServiceAccountKeyRequest
-    extends DeleteServiceAccountKeyRequest with ReadonlyMessageMixin {}
-
-class SignBlobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SignBlobRequest')
+class SignBlobRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SignBlobRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..a<List<int>>(2, 'bytesToSign', PbFieldType.OY)
-    ..hasRequiredFields = false;
+    ..a<$core.List<$core.int>>(2, 'bytesToSign', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
 
   SignBlobRequest() : super();
-  SignBlobRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SignBlobRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SignBlobRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SignBlobRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SignBlobRequest clone() => SignBlobRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SignBlobRequest copyWith(void Function(SignBlobRequest) updates) => super.copyWith((message) => updates(message as SignBlobRequest));
+  $pb.BuilderInfo get info_ => _i;
   static SignBlobRequest create() => SignBlobRequest();
-  static PbList<SignBlobRequest> createRepeated() => PbList<SignBlobRequest>();
-  static SignBlobRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySignBlobRequest();
-    return _defaultInstance;
-  }
-
+  SignBlobRequest createEmptyInstance() => create();
+  static $pb.PbList<SignBlobRequest> createRepeated() => $pb.PbList<SignBlobRequest>();
+  static SignBlobRequest getDefault() => _defaultInstance ??= create()..freeze();
   static SignBlobRequest _defaultInstance;
-  static void $checkItem(SignBlobRequest v) {
-    if (v is! SignBlobRequest) checkItemFailed(v, 'SignBlobRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<int> get bytesToSign => $_getN(1);
-  set bytesToSign(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasBytesToSign() => $_has(1);
+  $core.List<$core.int> get bytesToSign => $_getN(1);
+  set bytesToSign($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasBytesToSign() => $_has(1);
   void clearBytesToSign() => clearField(2);
 }
 
-class _ReadonlySignBlobRequest extends SignBlobRequest
-    with ReadonlyMessageMixin {}
-
-class SignBlobResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SignBlobResponse')
+class SignBlobResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SignBlobResponse', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'keyId')
-    ..a<List<int>>(2, 'signature', PbFieldType.OY)
-    ..hasRequiredFields = false;
+    ..a<$core.List<$core.int>>(2, 'signature', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
 
   SignBlobResponse() : super();
-  SignBlobResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SignBlobResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SignBlobResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SignBlobResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SignBlobResponse clone() => SignBlobResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SignBlobResponse copyWith(void Function(SignBlobResponse) updates) => super.copyWith((message) => updates(message as SignBlobResponse));
+  $pb.BuilderInfo get info_ => _i;
   static SignBlobResponse create() => SignBlobResponse();
-  static PbList<SignBlobResponse> createRepeated() =>
-      PbList<SignBlobResponse>();
-  static SignBlobResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlySignBlobResponse();
-    return _defaultInstance;
-  }
-
+  SignBlobResponse createEmptyInstance() => create();
+  static $pb.PbList<SignBlobResponse> createRepeated() => $pb.PbList<SignBlobResponse>();
+  static SignBlobResponse getDefault() => _defaultInstance ??= create()..freeze();
   static SignBlobResponse _defaultInstance;
-  static void $checkItem(SignBlobResponse v) {
-    if (v is! SignBlobResponse) checkItemFailed(v, 'SignBlobResponse');
-  }
 
-  String get keyId => $_getS(0, '');
-  set keyId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKeyId() => $_has(0);
+  $core.String get keyId => $_getS(0, '');
+  set keyId($core.String v) { $_setString(0, v); }
+  $core.bool hasKeyId() => $_has(0);
   void clearKeyId() => clearField(1);
 
-  List<int> get signature => $_getN(1);
-  set signature(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasSignature() => $_has(1);
+  $core.List<$core.int> get signature => $_getN(1);
+  set signature($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasSignature() => $_has(1);
   void clearSignature() => clearField(2);
 }
 
-class _ReadonlySignBlobResponse extends SignBlobResponse
-    with ReadonlyMessageMixin {}
-
-class SignJwtRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SignJwtRequest')
+class SignJwtRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SignJwtRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'payload')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   SignJwtRequest() : super();
-  SignJwtRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SignJwtRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SignJwtRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SignJwtRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SignJwtRequest clone() => SignJwtRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SignJwtRequest copyWith(void Function(SignJwtRequest) updates) => super.copyWith((message) => updates(message as SignJwtRequest));
+  $pb.BuilderInfo get info_ => _i;
   static SignJwtRequest create() => SignJwtRequest();
-  static PbList<SignJwtRequest> createRepeated() => PbList<SignJwtRequest>();
-  static SignJwtRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySignJwtRequest();
-    return _defaultInstance;
-  }
-
+  SignJwtRequest createEmptyInstance() => create();
+  static $pb.PbList<SignJwtRequest> createRepeated() => $pb.PbList<SignJwtRequest>();
+  static SignJwtRequest getDefault() => _defaultInstance ??= create()..freeze();
   static SignJwtRequest _defaultInstance;
-  static void $checkItem(SignJwtRequest v) {
-    if (v is! SignJwtRequest) checkItemFailed(v, 'SignJwtRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get payload => $_getS(1, '');
-  set payload(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPayload() => $_has(1);
+  $core.String get payload => $_getS(1, '');
+  set payload($core.String v) { $_setString(1, v); }
+  $core.bool hasPayload() => $_has(1);
   void clearPayload() => clearField(2);
 }
 
-class _ReadonlySignJwtRequest extends SignJwtRequest with ReadonlyMessageMixin {
-}
-
-class SignJwtResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SignJwtResponse')
+class SignJwtResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SignJwtResponse', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'keyId')
     ..aOS(2, 'signedJwt')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   SignJwtResponse() : super();
-  SignJwtResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SignJwtResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SignJwtResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SignJwtResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SignJwtResponse clone() => SignJwtResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SignJwtResponse copyWith(void Function(SignJwtResponse) updates) => super.copyWith((message) => updates(message as SignJwtResponse));
+  $pb.BuilderInfo get info_ => _i;
   static SignJwtResponse create() => SignJwtResponse();
-  static PbList<SignJwtResponse> createRepeated() => PbList<SignJwtResponse>();
-  static SignJwtResponse getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySignJwtResponse();
-    return _defaultInstance;
-  }
-
+  SignJwtResponse createEmptyInstance() => create();
+  static $pb.PbList<SignJwtResponse> createRepeated() => $pb.PbList<SignJwtResponse>();
+  static SignJwtResponse getDefault() => _defaultInstance ??= create()..freeze();
   static SignJwtResponse _defaultInstance;
-  static void $checkItem(SignJwtResponse v) {
-    if (v is! SignJwtResponse) checkItemFailed(v, 'SignJwtResponse');
-  }
 
-  String get keyId => $_getS(0, '');
-  set keyId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKeyId() => $_has(0);
+  $core.String get keyId => $_getS(0, '');
+  set keyId($core.String v) { $_setString(0, v); }
+  $core.bool hasKeyId() => $_has(0);
   void clearKeyId() => clearField(1);
 
-  String get signedJwt => $_getS(1, '');
-  set signedJwt(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasSignedJwt() => $_has(1);
+  $core.String get signedJwt => $_getS(1, '');
+  set signedJwt($core.String v) { $_setString(1, v); }
+  $core.bool hasSignedJwt() => $_has(1);
   void clearSignedJwt() => clearField(2);
 }
 
-class _ReadonlySignJwtResponse extends SignJwtResponse
-    with ReadonlyMessageMixin {}
-
-class Role extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Role')
+class Role extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Role', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'title')
     ..aOS(3, 'description')
     ..pPS(7, 'includedPermissions')
-    ..e<Role_RoleLaunchStage>(
-        8,
-        'stage',
-        PbFieldType.OE,
-        Role_RoleLaunchStage.ALPHA,
-        Role_RoleLaunchStage.valueOf,
-        Role_RoleLaunchStage.values)
-    ..a<List<int>>(9, 'etag', PbFieldType.OY)
+    ..e<Role_RoleLaunchStage>(8, 'stage', $pb.PbFieldType.OE, Role_RoleLaunchStage.ALPHA, Role_RoleLaunchStage.valueOf, Role_RoleLaunchStage.values)
+    ..a<$core.List<$core.int>>(9, 'etag', $pb.PbFieldType.OY)
     ..aOB(11, 'deleted')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Role() : super();
-  Role.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Role.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Role.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Role.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Role clone() => Role()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Role copyWith(void Function(Role) updates) => super.copyWith((message) => updates(message as Role));
+  $pb.BuilderInfo get info_ => _i;
   static Role create() => Role();
-  static PbList<Role> createRepeated() => PbList<Role>();
-  static Role getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRole();
-    return _defaultInstance;
-  }
-
+  Role createEmptyInstance() => create();
+  static $pb.PbList<Role> createRepeated() => $pb.PbList<Role>();
+  static Role getDefault() => _defaultInstance ??= create()..freeze();
   static Role _defaultInstance;
-  static void $checkItem(Role v) {
-    if (v is! Role) checkItemFailed(v, 'Role');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get title => $_getS(1, '');
-  set title(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTitle() => $_has(1);
+  $core.String get title => $_getS(1, '');
+  set title($core.String v) { $_setString(1, v); }
+  $core.bool hasTitle() => $_has(1);
   void clearTitle() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasDescription() => $_has(2);
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) { $_setString(2, v); }
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  List<String> get includedPermissions => $_getList(3);
+  $core.List<$core.String> get includedPermissions => $_getList(3);
 
   Role_RoleLaunchStage get stage => $_getN(4);
-  set stage(Role_RoleLaunchStage v) {
-    setField(8, v);
-  }
-
-  bool hasStage() => $_has(4);
+  set stage(Role_RoleLaunchStage v) { setField(8, v); }
+  $core.bool hasStage() => $_has(4);
   void clearStage() => clearField(8);
 
-  List<int> get etag => $_getN(5);
-  set etag(List<int> v) {
-    $_setBytes(5, v);
-  }
-
-  bool hasEtag() => $_has(5);
+  $core.List<$core.int> get etag => $_getN(5);
+  set etag($core.List<$core.int> v) { $_setBytes(5, v); }
+  $core.bool hasEtag() => $_has(5);
   void clearEtag() => clearField(9);
 
-  bool get deleted => $_get(6, false);
-  set deleted(bool v) {
-    $_setBool(6, v);
-  }
-
-  bool hasDeleted() => $_has(6);
+  $core.bool get deleted => $_get(6, false);
+  set deleted($core.bool v) { $_setBool(6, v); }
+  $core.bool hasDeleted() => $_has(6);
   void clearDeleted() => clearField(11);
 }
 
-class _ReadonlyRole extends Role with ReadonlyMessageMixin {}
-
-class QueryGrantableRolesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('QueryGrantableRolesRequest')
+class QueryGrantableRolesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryGrantableRolesRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'fullResourceName')
-    ..e<RoleView>(2, 'view', PbFieldType.OE, RoleView.BASIC, RoleView.valueOf,
-        RoleView.values)
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..e<RoleView>(2, 'view', $pb.PbFieldType.OE, RoleView.BASIC, RoleView.valueOf, RoleView.values)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   QueryGrantableRolesRequest() : super();
-  QueryGrantableRolesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryGrantableRolesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  QueryGrantableRolesRequest clone() =>
-      QueryGrantableRolesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  QueryGrantableRolesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  QueryGrantableRolesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  QueryGrantableRolesRequest clone() => QueryGrantableRolesRequest()..mergeFromMessage(this);
+  QueryGrantableRolesRequest copyWith(void Function(QueryGrantableRolesRequest) updates) => super.copyWith((message) => updates(message as QueryGrantableRolesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static QueryGrantableRolesRequest create() => QueryGrantableRolesRequest();
-  static PbList<QueryGrantableRolesRequest> createRepeated() =>
-      PbList<QueryGrantableRolesRequest>();
-  static QueryGrantableRolesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyQueryGrantableRolesRequest();
-    return _defaultInstance;
-  }
-
+  QueryGrantableRolesRequest createEmptyInstance() => create();
+  static $pb.PbList<QueryGrantableRolesRequest> createRepeated() => $pb.PbList<QueryGrantableRolesRequest>();
+  static QueryGrantableRolesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static QueryGrantableRolesRequest _defaultInstance;
-  static void $checkItem(QueryGrantableRolesRequest v) {
-    if (v is! QueryGrantableRolesRequest)
-      checkItemFailed(v, 'QueryGrantableRolesRequest');
-  }
 
-  String get fullResourceName => $_getS(0, '');
-  set fullResourceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasFullResourceName() => $_has(0);
+  $core.String get fullResourceName => $_getS(0, '');
+  set fullResourceName($core.String v) { $_setString(0, v); }
+  $core.bool hasFullResourceName() => $_has(0);
   void clearFullResourceName() => clearField(1);
 
   RoleView get view => $_getN(1);
-  set view(RoleView v) {
-    setField(2, v);
-  }
-
-  bool hasView() => $_has(1);
+  set view(RoleView v) { setField(2, v); }
+  $core.bool hasView() => $_has(1);
   void clearView() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(3, '');
-  set pageToken(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasPageToken() => $_has(3);
+  $core.String get pageToken => $_getS(3, '');
+  set pageToken($core.String v) { $_setString(3, v); }
+  $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 }
 
-class _ReadonlyQueryGrantableRolesRequest extends QueryGrantableRolesRequest
-    with ReadonlyMessageMixin {}
-
-class QueryGrantableRolesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('QueryGrantableRolesResponse')
-    ..pp<Role>(1, 'roles', PbFieldType.PM, Role.$checkItem, Role.create)
+class QueryGrantableRolesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryGrantableRolesResponse', package: const $pb.PackageName('google.iam.admin.v1'))
+    ..pc<Role>(1, 'roles', $pb.PbFieldType.PM,Role.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   QueryGrantableRolesResponse() : super();
-  QueryGrantableRolesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryGrantableRolesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  QueryGrantableRolesResponse clone() =>
-      QueryGrantableRolesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  QueryGrantableRolesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  QueryGrantableRolesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  QueryGrantableRolesResponse clone() => QueryGrantableRolesResponse()..mergeFromMessage(this);
+  QueryGrantableRolesResponse copyWith(void Function(QueryGrantableRolesResponse) updates) => super.copyWith((message) => updates(message as QueryGrantableRolesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static QueryGrantableRolesResponse create() => QueryGrantableRolesResponse();
-  static PbList<QueryGrantableRolesResponse> createRepeated() =>
-      PbList<QueryGrantableRolesResponse>();
-  static QueryGrantableRolesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyQueryGrantableRolesResponse();
-    return _defaultInstance;
-  }
-
+  QueryGrantableRolesResponse createEmptyInstance() => create();
+  static $pb.PbList<QueryGrantableRolesResponse> createRepeated() => $pb.PbList<QueryGrantableRolesResponse>();
+  static QueryGrantableRolesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static QueryGrantableRolesResponse _defaultInstance;
-  static void $checkItem(QueryGrantableRolesResponse v) {
-    if (v is! QueryGrantableRolesResponse)
-      checkItemFailed(v, 'QueryGrantableRolesResponse');
-  }
 
-  List<Role> get roles => $_getList(0);
+  $core.List<Role> get roles => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyQueryGrantableRolesResponse extends QueryGrantableRolesResponse
-    with ReadonlyMessageMixin {}
-
-class ListRolesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListRolesRequest')
+class ListRolesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListRolesRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'parent')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
-    ..e<RoleView>(4, 'view', PbFieldType.OE, RoleView.BASIC, RoleView.valueOf,
-        RoleView.values)
+    ..e<RoleView>(4, 'view', $pb.PbFieldType.OE, RoleView.BASIC, RoleView.valueOf, RoleView.values)
     ..aOB(6, 'showDeleted')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListRolesRequest() : super();
-  ListRolesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListRolesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListRolesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListRolesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListRolesRequest clone() => ListRolesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListRolesRequest copyWith(void Function(ListRolesRequest) updates) => super.copyWith((message) => updates(message as ListRolesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListRolesRequest create() => ListRolesRequest();
-  static PbList<ListRolesRequest> createRepeated() =>
-      PbList<ListRolesRequest>();
-  static ListRolesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListRolesRequest();
-    return _defaultInstance;
-  }
-
+  ListRolesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListRolesRequest> createRepeated() => $pb.PbList<ListRolesRequest>();
+  static ListRolesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListRolesRequest _defaultInstance;
-  static void $checkItem(ListRolesRequest v) {
-    if (v is! ListRolesRequest) checkItemFailed(v, 'ListRolesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasPageSize() => $_has(1);
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasPageToken() => $_has(2);
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) { $_setString(2, v); }
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
   RoleView get view => $_getN(3);
-  set view(RoleView v) {
-    setField(4, v);
-  }
-
-  bool hasView() => $_has(3);
+  set view(RoleView v) { setField(4, v); }
+  $core.bool hasView() => $_has(3);
   void clearView() => clearField(4);
 
-  bool get showDeleted => $_get(4, false);
-  set showDeleted(bool v) {
-    $_setBool(4, v);
-  }
-
-  bool hasShowDeleted() => $_has(4);
+  $core.bool get showDeleted => $_get(4, false);
+  set showDeleted($core.bool v) { $_setBool(4, v); }
+  $core.bool hasShowDeleted() => $_has(4);
   void clearShowDeleted() => clearField(6);
 }
 
-class _ReadonlyListRolesRequest extends ListRolesRequest
-    with ReadonlyMessageMixin {}
-
-class ListRolesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListRolesResponse')
-    ..pp<Role>(1, 'roles', PbFieldType.PM, Role.$checkItem, Role.create)
+class ListRolesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListRolesResponse', package: const $pb.PackageName('google.iam.admin.v1'))
+    ..pc<Role>(1, 'roles', $pb.PbFieldType.PM,Role.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListRolesResponse() : super();
-  ListRolesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListRolesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListRolesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListRolesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListRolesResponse clone() => ListRolesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListRolesResponse copyWith(void Function(ListRolesResponse) updates) => super.copyWith((message) => updates(message as ListRolesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListRolesResponse create() => ListRolesResponse();
-  static PbList<ListRolesResponse> createRepeated() =>
-      PbList<ListRolesResponse>();
-  static ListRolesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListRolesResponse();
-    return _defaultInstance;
-  }
-
+  ListRolesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListRolesResponse> createRepeated() => $pb.PbList<ListRolesResponse>();
+  static ListRolesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListRolesResponse _defaultInstance;
-  static void $checkItem(ListRolesResponse v) {
-    if (v is! ListRolesResponse) checkItemFailed(v, 'ListRolesResponse');
-  }
 
-  List<Role> get roles => $_getList(0);
+  $core.List<Role> get roles => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListRolesResponse extends ListRolesResponse
-    with ReadonlyMessageMixin {}
-
-class GetRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetRoleRequest')
+class GetRoleRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetRoleRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetRoleRequest() : super();
-  GetRoleRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetRoleRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetRoleRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetRoleRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetRoleRequest clone() => GetRoleRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetRoleRequest copyWith(void Function(GetRoleRequest) updates) => super.copyWith((message) => updates(message as GetRoleRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetRoleRequest create() => GetRoleRequest();
-  static PbList<GetRoleRequest> createRepeated() => PbList<GetRoleRequest>();
-  static GetRoleRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetRoleRequest();
-    return _defaultInstance;
-  }
-
+  GetRoleRequest createEmptyInstance() => create();
+  static $pb.PbList<GetRoleRequest> createRepeated() => $pb.PbList<GetRoleRequest>();
+  static GetRoleRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetRoleRequest _defaultInstance;
-  static void $checkItem(GetRoleRequest v) {
-    if (v is! GetRoleRequest) checkItemFailed(v, 'GetRoleRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetRoleRequest extends GetRoleRequest with ReadonlyMessageMixin {
-}
-
-class CreateRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateRoleRequest')
+class CreateRoleRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateRoleRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'roleId')
-    ..a<Role>(3, 'role', PbFieldType.OM, Role.getDefault, Role.create)
-    ..hasRequiredFields = false;
+    ..a<Role>(3, 'role', $pb.PbFieldType.OM, Role.getDefault, Role.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateRoleRequest() : super();
-  CreateRoleRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateRoleRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateRoleRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateRoleRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CreateRoleRequest clone() => CreateRoleRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateRoleRequest copyWith(void Function(CreateRoleRequest) updates) => super.copyWith((message) => updates(message as CreateRoleRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateRoleRequest create() => CreateRoleRequest();
-  static PbList<CreateRoleRequest> createRepeated() =>
-      PbList<CreateRoleRequest>();
-  static CreateRoleRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateRoleRequest();
-    return _defaultInstance;
-  }
-
+  CreateRoleRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateRoleRequest> createRepeated() => $pb.PbList<CreateRoleRequest>();
+  static CreateRoleRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateRoleRequest _defaultInstance;
-  static void $checkItem(CreateRoleRequest v) {
-    if (v is! CreateRoleRequest) checkItemFailed(v, 'CreateRoleRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get roleId => $_getS(1, '');
-  set roleId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasRoleId() => $_has(1);
+  $core.String get roleId => $_getS(1, '');
+  set roleId($core.String v) { $_setString(1, v); }
+  $core.bool hasRoleId() => $_has(1);
   void clearRoleId() => clearField(2);
 
   Role get role => $_getN(2);
-  set role(Role v) {
-    setField(3, v);
-  }
-
-  bool hasRole() => $_has(2);
+  set role(Role v) { setField(3, v); }
+  $core.bool hasRole() => $_has(2);
   void clearRole() => clearField(3);
 }
 
-class _ReadonlyCreateRoleRequest extends CreateRoleRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateRoleRequest')
+class UpdateRoleRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateRoleRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..a<Role>(2, 'role', PbFieldType.OM, Role.getDefault, Role.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+    ..a<Role>(2, 'role', $pb.PbFieldType.OM, Role.getDefault, Role.create)
+    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM, $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateRoleRequest() : super();
-  UpdateRoleRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateRoleRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateRoleRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateRoleRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   UpdateRoleRequest clone() => UpdateRoleRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateRoleRequest copyWith(void Function(UpdateRoleRequest) updates) => super.copyWith((message) => updates(message as UpdateRoleRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateRoleRequest create() => UpdateRoleRequest();
-  static PbList<UpdateRoleRequest> createRepeated() =>
-      PbList<UpdateRoleRequest>();
-  static UpdateRoleRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateRoleRequest();
-    return _defaultInstance;
-  }
-
+  UpdateRoleRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateRoleRequest> createRepeated() => $pb.PbList<UpdateRoleRequest>();
+  static UpdateRoleRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateRoleRequest _defaultInstance;
-  static void $checkItem(UpdateRoleRequest v) {
-    if (v is! UpdateRoleRequest) checkItemFailed(v, 'UpdateRoleRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Role get role => $_getN(1);
-  set role(Role v) {
-    setField(2, v);
-  }
-
-  bool hasRole() => $_has(1);
+  set role(Role v) { setField(2, v); }
+  $core.bool hasRole() => $_has(1);
   void clearRole() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(3, v);
-  }
-
-  bool hasUpdateMask() => $_has(2);
+  $1.FieldMask get updateMask => $_getN(2);
+  set updateMask($1.FieldMask v) { setField(3, v); }
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateRoleRequest extends UpdateRoleRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteRoleRequest')
+class DeleteRoleRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteRoleRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..a<List<int>>(2, 'etag', PbFieldType.OY)
-    ..hasRequiredFields = false;
+    ..a<$core.List<$core.int>>(2, 'etag', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
 
   DeleteRoleRequest() : super();
-  DeleteRoleRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteRoleRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteRoleRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteRoleRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DeleteRoleRequest clone() => DeleteRoleRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteRoleRequest copyWith(void Function(DeleteRoleRequest) updates) => super.copyWith((message) => updates(message as DeleteRoleRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteRoleRequest create() => DeleteRoleRequest();
-  static PbList<DeleteRoleRequest> createRepeated() =>
-      PbList<DeleteRoleRequest>();
-  static DeleteRoleRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteRoleRequest();
-    return _defaultInstance;
-  }
-
+  DeleteRoleRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteRoleRequest> createRepeated() => $pb.PbList<DeleteRoleRequest>();
+  static DeleteRoleRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteRoleRequest _defaultInstance;
-  static void $checkItem(DeleteRoleRequest v) {
-    if (v is! DeleteRoleRequest) checkItemFailed(v, 'DeleteRoleRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<int> get etag => $_getN(1);
-  set etag(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasEtag() => $_has(1);
+  $core.List<$core.int> get etag => $_getN(1);
+  set etag($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasEtag() => $_has(1);
   void clearEtag() => clearField(2);
 }
 
-class _ReadonlyDeleteRoleRequest extends DeleteRoleRequest
-    with ReadonlyMessageMixin {}
-
-class UndeleteRoleRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UndeleteRoleRequest')
+class UndeleteRoleRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteRoleRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
-    ..a<List<int>>(2, 'etag', PbFieldType.OY)
-    ..hasRequiredFields = false;
+    ..a<$core.List<$core.int>>(2, 'etag', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
 
   UndeleteRoleRequest() : super();
-  UndeleteRoleRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UndeleteRoleRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UndeleteRoleRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UndeleteRoleRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   UndeleteRoleRequest clone() => UndeleteRoleRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UndeleteRoleRequest copyWith(void Function(UndeleteRoleRequest) updates) => super.copyWith((message) => updates(message as UndeleteRoleRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UndeleteRoleRequest create() => UndeleteRoleRequest();
-  static PbList<UndeleteRoleRequest> createRepeated() =>
-      PbList<UndeleteRoleRequest>();
-  static UndeleteRoleRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUndeleteRoleRequest();
-    return _defaultInstance;
-  }
-
+  UndeleteRoleRequest createEmptyInstance() => create();
+  static $pb.PbList<UndeleteRoleRequest> createRepeated() => $pb.PbList<UndeleteRoleRequest>();
+  static UndeleteRoleRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UndeleteRoleRequest _defaultInstance;
-  static void $checkItem(UndeleteRoleRequest v) {
-    if (v is! UndeleteRoleRequest) checkItemFailed(v, 'UndeleteRoleRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<int> get etag => $_getN(1);
-  set etag(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasEtag() => $_has(1);
+  $core.List<$core.int> get etag => $_getN(1);
+  set etag($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasEtag() => $_has(1);
   void clearEtag() => clearField(2);
 }
 
-class _ReadonlyUndeleteRoleRequest extends UndeleteRoleRequest
-    with ReadonlyMessageMixin {}
-
-class Permission extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Permission')
+class Permission extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Permission', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'title')
     ..aOS(3, 'description')
     ..aOB(4, 'onlyInPredefinedRoles')
-    ..e<Permission_PermissionLaunchStage>(
-        5,
-        'stage',
-        PbFieldType.OE,
-        Permission_PermissionLaunchStage.ALPHA,
-        Permission_PermissionLaunchStage.valueOf,
-        Permission_PermissionLaunchStage.values)
-    ..e<Permission_CustomRolesSupportLevel>(
-        6,
-        'customRolesSupportLevel',
-        PbFieldType.OE,
-        Permission_CustomRolesSupportLevel.SUPPORTED,
-        Permission_CustomRolesSupportLevel.valueOf,
-        Permission_CustomRolesSupportLevel.values)
-    ..hasRequiredFields = false;
+    ..e<Permission_PermissionLaunchStage>(5, 'stage', $pb.PbFieldType.OE, Permission_PermissionLaunchStage.ALPHA, Permission_PermissionLaunchStage.valueOf, Permission_PermissionLaunchStage.values)
+    ..e<Permission_CustomRolesSupportLevel>(6, 'customRolesSupportLevel', $pb.PbFieldType.OE, Permission_CustomRolesSupportLevel.SUPPORTED, Permission_CustomRolesSupportLevel.valueOf, Permission_CustomRolesSupportLevel.values)
+    ..hasRequiredFields = false
+  ;
 
   Permission() : super();
-  Permission.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Permission.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Permission.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Permission.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Permission clone() => Permission()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Permission copyWith(void Function(Permission) updates) => super.copyWith((message) => updates(message as Permission));
+  $pb.BuilderInfo get info_ => _i;
   static Permission create() => Permission();
-  static PbList<Permission> createRepeated() => PbList<Permission>();
-  static Permission getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyPermission();
-    return _defaultInstance;
-  }
-
+  Permission createEmptyInstance() => create();
+  static $pb.PbList<Permission> createRepeated() => $pb.PbList<Permission>();
+  static Permission getDefault() => _defaultInstance ??= create()..freeze();
   static Permission _defaultInstance;
-  static void $checkItem(Permission v) {
-    if (v is! Permission) checkItemFailed(v, 'Permission');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get title => $_getS(1, '');
-  set title(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTitle() => $_has(1);
+  $core.String get title => $_getS(1, '');
+  set title($core.String v) { $_setString(1, v); }
+  $core.bool hasTitle() => $_has(1);
   void clearTitle() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasDescription() => $_has(2);
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) { $_setString(2, v); }
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  bool get onlyInPredefinedRoles => $_get(3, false);
-  set onlyInPredefinedRoles(bool v) {
-    $_setBool(3, v);
-  }
-
-  bool hasOnlyInPredefinedRoles() => $_has(3);
+  $core.bool get onlyInPredefinedRoles => $_get(3, false);
+  set onlyInPredefinedRoles($core.bool v) { $_setBool(3, v); }
+  $core.bool hasOnlyInPredefinedRoles() => $_has(3);
   void clearOnlyInPredefinedRoles() => clearField(4);
 
   Permission_PermissionLaunchStage get stage => $_getN(4);
-  set stage(Permission_PermissionLaunchStage v) {
-    setField(5, v);
-  }
-
-  bool hasStage() => $_has(4);
+  set stage(Permission_PermissionLaunchStage v) { setField(5, v); }
+  $core.bool hasStage() => $_has(4);
   void clearStage() => clearField(5);
 
   Permission_CustomRolesSupportLevel get customRolesSupportLevel => $_getN(5);
-  set customRolesSupportLevel(Permission_CustomRolesSupportLevel v) {
-    setField(6, v);
-  }
-
-  bool hasCustomRolesSupportLevel() => $_has(5);
+  set customRolesSupportLevel(Permission_CustomRolesSupportLevel v) { setField(6, v); }
+  $core.bool hasCustomRolesSupportLevel() => $_has(5);
   void clearCustomRolesSupportLevel() => clearField(6);
 }
 
-class _ReadonlyPermission extends Permission with ReadonlyMessageMixin {}
-
-class QueryTestablePermissionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('QueryTestablePermissionsRequest')
+class QueryTestablePermissionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryTestablePermissionsRequest', package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'fullResourceName')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   QueryTestablePermissionsRequest() : super();
-  QueryTestablePermissionsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryTestablePermissionsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  QueryTestablePermissionsRequest clone() =>
-      QueryTestablePermissionsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static QueryTestablePermissionsRequest create() =>
-      QueryTestablePermissionsRequest();
-  static PbList<QueryTestablePermissionsRequest> createRepeated() =>
-      PbList<QueryTestablePermissionsRequest>();
-  static QueryTestablePermissionsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyQueryTestablePermissionsRequest();
-    return _defaultInstance;
-  }
-
+  QueryTestablePermissionsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  QueryTestablePermissionsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  QueryTestablePermissionsRequest clone() => QueryTestablePermissionsRequest()..mergeFromMessage(this);
+  QueryTestablePermissionsRequest copyWith(void Function(QueryTestablePermissionsRequest) updates) => super.copyWith((message) => updates(message as QueryTestablePermissionsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static QueryTestablePermissionsRequest create() => QueryTestablePermissionsRequest();
+  QueryTestablePermissionsRequest createEmptyInstance() => create();
+  static $pb.PbList<QueryTestablePermissionsRequest> createRepeated() => $pb.PbList<QueryTestablePermissionsRequest>();
+  static QueryTestablePermissionsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static QueryTestablePermissionsRequest _defaultInstance;
-  static void $checkItem(QueryTestablePermissionsRequest v) {
-    if (v is! QueryTestablePermissionsRequest)
-      checkItemFailed(v, 'QueryTestablePermissionsRequest');
-  }
 
-  String get fullResourceName => $_getS(0, '');
-  set fullResourceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasFullResourceName() => $_has(0);
+  $core.String get fullResourceName => $_getS(0, '');
+  set fullResourceName($core.String v) { $_setString(0, v); }
+  $core.bool hasFullResourceName() => $_has(0);
   void clearFullResourceName() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasPageSize() => $_has(1);
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasPageToken() => $_has(2);
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) { $_setString(2, v); }
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyQueryTestablePermissionsRequest
-    extends QueryTestablePermissionsRequest with ReadonlyMessageMixin {}
-
-class QueryTestablePermissionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('QueryTestablePermissionsResponse')
-    ..pp<Permission>(1, 'permissions', PbFieldType.PM, Permission.$checkItem,
-        Permission.create)
+class QueryTestablePermissionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryTestablePermissionsResponse', package: const $pb.PackageName('google.iam.admin.v1'))
+    ..pc<Permission>(1, 'permissions', $pb.PbFieldType.PM,Permission.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   QueryTestablePermissionsResponse() : super();
-  QueryTestablePermissionsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryTestablePermissionsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  QueryTestablePermissionsResponse clone() =>
-      QueryTestablePermissionsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static QueryTestablePermissionsResponse create() =>
-      QueryTestablePermissionsResponse();
-  static PbList<QueryTestablePermissionsResponse> createRepeated() =>
-      PbList<QueryTestablePermissionsResponse>();
-  static QueryTestablePermissionsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyQueryTestablePermissionsResponse();
-    return _defaultInstance;
-  }
-
+  QueryTestablePermissionsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  QueryTestablePermissionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  QueryTestablePermissionsResponse clone() => QueryTestablePermissionsResponse()..mergeFromMessage(this);
+  QueryTestablePermissionsResponse copyWith(void Function(QueryTestablePermissionsResponse) updates) => super.copyWith((message) => updates(message as QueryTestablePermissionsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static QueryTestablePermissionsResponse create() => QueryTestablePermissionsResponse();
+  QueryTestablePermissionsResponse createEmptyInstance() => create();
+  static $pb.PbList<QueryTestablePermissionsResponse> createRepeated() => $pb.PbList<QueryTestablePermissionsResponse>();
+  static QueryTestablePermissionsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static QueryTestablePermissionsResponse _defaultInstance;
-  static void $checkItem(QueryTestablePermissionsResponse v) {
-    if (v is! QueryTestablePermissionsResponse)
-      checkItemFailed(v, 'QueryTestablePermissionsResponse');
-  }
 
-  List<Permission> get permissions => $_getList(0);
+  $core.List<Permission> get permissions => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyQueryTestablePermissionsResponse
-    extends QueryTestablePermissionsResponse with ReadonlyMessageMixin {}
-
 class IAMApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   IAMApi(this._client);
 
-  Future<ListServiceAccountsResponse> listServiceAccounts(
-      ClientContext ctx, ListServiceAccountsRequest request) {
+  $async.Future<ListServiceAccountsResponse> listServiceAccounts($pb.ClientContext ctx, ListServiceAccountsRequest request) {
     var emptyResponse = ListServiceAccountsResponse();
-    return _client.invoke<ListServiceAccountsResponse>(
-        ctx, 'IAM', 'ListServiceAccounts', request, emptyResponse);
+    return _client.invoke<ListServiceAccountsResponse>(ctx, 'IAM', 'ListServiceAccounts', request, emptyResponse);
   }
-
-  Future<ServiceAccount> getServiceAccount(
-      ClientContext ctx, GetServiceAccountRequest request) {
+  $async.Future<ServiceAccount> getServiceAccount($pb.ClientContext ctx, GetServiceAccountRequest request) {
     var emptyResponse = ServiceAccount();
-    return _client.invoke<ServiceAccount>(
-        ctx, 'IAM', 'GetServiceAccount', request, emptyResponse);
+    return _client.invoke<ServiceAccount>(ctx, 'IAM', 'GetServiceAccount', request, emptyResponse);
   }
-
-  Future<ServiceAccount> createServiceAccount(
-      ClientContext ctx, CreateServiceAccountRequest request) {
+  $async.Future<ServiceAccount> createServiceAccount($pb.ClientContext ctx, CreateServiceAccountRequest request) {
     var emptyResponse = ServiceAccount();
-    return _client.invoke<ServiceAccount>(
-        ctx, 'IAM', 'CreateServiceAccount', request, emptyResponse);
+    return _client.invoke<ServiceAccount>(ctx, 'IAM', 'CreateServiceAccount', request, emptyResponse);
   }
-
-  Future<ServiceAccount> updateServiceAccount(
-      ClientContext ctx, ServiceAccount request) {
+  $async.Future<ServiceAccount> updateServiceAccount($pb.ClientContext ctx, ServiceAccount request) {
     var emptyResponse = ServiceAccount();
-    return _client.invoke<ServiceAccount>(
-        ctx, 'IAM', 'UpdateServiceAccount', request, emptyResponse);
+    return _client.invoke<ServiceAccount>(ctx, 'IAM', 'UpdateServiceAccount', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteServiceAccount(
-      ClientContext ctx, DeleteServiceAccountRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'IAM', 'DeleteServiceAccount', request, emptyResponse);
+  $async.Future<$2.Empty> deleteServiceAccount($pb.ClientContext ctx, DeleteServiceAccountRequest request) {
+    var emptyResponse = $2.Empty();
+    return _client.invoke<$2.Empty>(ctx, 'IAM', 'DeleteServiceAccount', request, emptyResponse);
   }
-
-  Future<ListServiceAccountKeysResponse> listServiceAccountKeys(
-      ClientContext ctx, ListServiceAccountKeysRequest request) {
+  $async.Future<ListServiceAccountKeysResponse> listServiceAccountKeys($pb.ClientContext ctx, ListServiceAccountKeysRequest request) {
     var emptyResponse = ListServiceAccountKeysResponse();
-    return _client.invoke<ListServiceAccountKeysResponse>(
-        ctx, 'IAM', 'ListServiceAccountKeys', request, emptyResponse);
+    return _client.invoke<ListServiceAccountKeysResponse>(ctx, 'IAM', 'ListServiceAccountKeys', request, emptyResponse);
   }
-
-  Future<ServiceAccountKey> getServiceAccountKey(
-      ClientContext ctx, GetServiceAccountKeyRequest request) {
+  $async.Future<ServiceAccountKey> getServiceAccountKey($pb.ClientContext ctx, GetServiceAccountKeyRequest request) {
     var emptyResponse = ServiceAccountKey();
-    return _client.invoke<ServiceAccountKey>(
-        ctx, 'IAM', 'GetServiceAccountKey', request, emptyResponse);
+    return _client.invoke<ServiceAccountKey>(ctx, 'IAM', 'GetServiceAccountKey', request, emptyResponse);
   }
-
-  Future<ServiceAccountKey> createServiceAccountKey(
-      ClientContext ctx, CreateServiceAccountKeyRequest request) {
+  $async.Future<ServiceAccountKey> createServiceAccountKey($pb.ClientContext ctx, CreateServiceAccountKeyRequest request) {
     var emptyResponse = ServiceAccountKey();
-    return _client.invoke<ServiceAccountKey>(
-        ctx, 'IAM', 'CreateServiceAccountKey', request, emptyResponse);
+    return _client.invoke<ServiceAccountKey>(ctx, 'IAM', 'CreateServiceAccountKey', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteServiceAccountKey(
-      ClientContext ctx, DeleteServiceAccountKeyRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'IAM', 'DeleteServiceAccountKey', request, emptyResponse);
+  $async.Future<$2.Empty> deleteServiceAccountKey($pb.ClientContext ctx, DeleteServiceAccountKeyRequest request) {
+    var emptyResponse = $2.Empty();
+    return _client.invoke<$2.Empty>(ctx, 'IAM', 'DeleteServiceAccountKey', request, emptyResponse);
   }
-
-  Future<SignBlobResponse> signBlob(
-      ClientContext ctx, SignBlobRequest request) {
+  $async.Future<SignBlobResponse> signBlob($pb.ClientContext ctx, SignBlobRequest request) {
     var emptyResponse = SignBlobResponse();
-    return _client.invoke<SignBlobResponse>(
-        ctx, 'IAM', 'SignBlob', request, emptyResponse);
+    return _client.invoke<SignBlobResponse>(ctx, 'IAM', 'SignBlob', request, emptyResponse);
   }
-
-  Future<SignJwtResponse> signJwt(ClientContext ctx, SignJwtRequest request) {
+  $async.Future<SignJwtResponse> signJwt($pb.ClientContext ctx, SignJwtRequest request) {
     var emptyResponse = SignJwtResponse();
-    return _client.invoke<SignJwtResponse>(
-        ctx, 'IAM', 'SignJwt', request, emptyResponse);
+    return _client.invoke<SignJwtResponse>(ctx, 'IAM', 'SignJwt', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
-        ctx, 'IAM', 'GetIamPolicy', request, emptyResponse);
+  $async.Future<$4.Policy> getIamPolicy($pb.ClientContext ctx, $3.GetIamPolicyRequest request) {
+    var emptyResponse = $4.Policy();
+    return _client.invoke<$4.Policy>(ctx, 'IAM', 'GetIamPolicy', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
-        ctx, 'IAM', 'SetIamPolicy', request, emptyResponse);
+  $async.Future<$4.Policy> setIamPolicy($pb.ClientContext ctx, $3.SetIamPolicyRequest request) {
+    var emptyResponse = $4.Policy();
+    return _client.invoke<$4.Policy>(ctx, 'IAM', 'SetIamPolicy', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
-    return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
-        ctx, 'IAM', 'TestIamPermissions', request, emptyResponse);
+  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions($pb.ClientContext ctx, $3.TestIamPermissionsRequest request) {
+    var emptyResponse = $3.TestIamPermissionsResponse();
+    return _client.invoke<$3.TestIamPermissionsResponse>(ctx, 'IAM', 'TestIamPermissions', request, emptyResponse);
   }
-
-  Future<QueryGrantableRolesResponse> queryGrantableRoles(
-      ClientContext ctx, QueryGrantableRolesRequest request) {
+  $async.Future<QueryGrantableRolesResponse> queryGrantableRoles($pb.ClientContext ctx, QueryGrantableRolesRequest request) {
     var emptyResponse = QueryGrantableRolesResponse();
-    return _client.invoke<QueryGrantableRolesResponse>(
-        ctx, 'IAM', 'QueryGrantableRoles', request, emptyResponse);
+    return _client.invoke<QueryGrantableRolesResponse>(ctx, 'IAM', 'QueryGrantableRoles', request, emptyResponse);
   }
-
-  Future<ListRolesResponse> listRoles(
-      ClientContext ctx, ListRolesRequest request) {
+  $async.Future<ListRolesResponse> listRoles($pb.ClientContext ctx, ListRolesRequest request) {
     var emptyResponse = ListRolesResponse();
-    return _client.invoke<ListRolesResponse>(
-        ctx, 'IAM', 'ListRoles', request, emptyResponse);
+    return _client.invoke<ListRolesResponse>(ctx, 'IAM', 'ListRoles', request, emptyResponse);
   }
-
-  Future<Role> getRole(ClientContext ctx, GetRoleRequest request) {
+  $async.Future<Role> getRole($pb.ClientContext ctx, GetRoleRequest request) {
     var emptyResponse = Role();
     return _client.invoke<Role>(ctx, 'IAM', 'GetRole', request, emptyResponse);
   }
-
-  Future<Role> createRole(ClientContext ctx, CreateRoleRequest request) {
+  $async.Future<Role> createRole($pb.ClientContext ctx, CreateRoleRequest request) {
     var emptyResponse = Role();
-    return _client.invoke<Role>(
-        ctx, 'IAM', 'CreateRole', request, emptyResponse);
+    return _client.invoke<Role>(ctx, 'IAM', 'CreateRole', request, emptyResponse);
   }
-
-  Future<Role> updateRole(ClientContext ctx, UpdateRoleRequest request) {
+  $async.Future<Role> updateRole($pb.ClientContext ctx, UpdateRoleRequest request) {
     var emptyResponse = Role();
-    return _client.invoke<Role>(
-        ctx, 'IAM', 'UpdateRole', request, emptyResponse);
+    return _client.invoke<Role>(ctx, 'IAM', 'UpdateRole', request, emptyResponse);
   }
-
-  Future<Role> deleteRole(ClientContext ctx, DeleteRoleRequest request) {
+  $async.Future<Role> deleteRole($pb.ClientContext ctx, DeleteRoleRequest request) {
     var emptyResponse = Role();
-    return _client.invoke<Role>(
-        ctx, 'IAM', 'DeleteRole', request, emptyResponse);
+    return _client.invoke<Role>(ctx, 'IAM', 'DeleteRole', request, emptyResponse);
   }
-
-  Future<Role> undeleteRole(ClientContext ctx, UndeleteRoleRequest request) {
+  $async.Future<Role> undeleteRole($pb.ClientContext ctx, UndeleteRoleRequest request) {
     var emptyResponse = Role();
-    return _client.invoke<Role>(
-        ctx, 'IAM', 'UndeleteRole', request, emptyResponse);
+    return _client.invoke<Role>(ctx, 'IAM', 'UndeleteRole', request, emptyResponse);
   }
-
-  Future<QueryTestablePermissionsResponse> queryTestablePermissions(
-      ClientContext ctx, QueryTestablePermissionsRequest request) {
+  $async.Future<QueryTestablePermissionsResponse> queryTestablePermissions($pb.ClientContext ctx, QueryTestablePermissionsRequest request) {
     var emptyResponse = QueryTestablePermissionsResponse();
-    return _client.invoke<QueryTestablePermissionsResponse>(
-        ctx, 'IAM', 'QueryTestablePermissions', request, emptyResponse);
+    return _client.invoke<QueryTestablePermissionsResponse>(ctx, 'IAM', 'QueryTestablePermissions', request, emptyResponse);
   }
 }
+

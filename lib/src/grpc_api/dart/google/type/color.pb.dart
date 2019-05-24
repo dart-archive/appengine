@@ -1,78 +1,54 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/type/color.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../protobuf/wrappers.pb.dart' as $google$protobuf;
+import '../protobuf/wrappers.pb.dart' as $0;
 
-class Color extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Color')
-    ..a<double>(1, 'red', PbFieldType.OF)
-    ..a<double>(2, 'green', PbFieldType.OF)
-    ..a<double>(3, 'blue', PbFieldType.OF)
-    ..a<$google$protobuf.FloatValue>(
-        4,
-        'alpha',
-        PbFieldType.OM,
-        $google$protobuf.FloatValue.getDefault,
-        $google$protobuf.FloatValue.create)
-    ..hasRequiredFields = false;
+class Color extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Color', package: const $pb.PackageName('google.type'))
+    ..a<$core.double>(1, 'red', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, 'green', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, 'blue', $pb.PbFieldType.OF)
+    ..a<$0.FloatValue>(4, 'alpha', $pb.PbFieldType.OM, $0.FloatValue.getDefault, $0.FloatValue.create)
+    ..hasRequiredFields = false
+  ;
 
   Color() : super();
-  Color.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Color.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Color.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Color.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Color clone() => Color()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Color copyWith(void Function(Color) updates) => super.copyWith((message) => updates(message as Color));
+  $pb.BuilderInfo get info_ => _i;
   static Color create() => Color();
-  static PbList<Color> createRepeated() => PbList<Color>();
-  static Color getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyColor();
-    return _defaultInstance;
-  }
-
+  Color createEmptyInstance() => create();
+  static $pb.PbList<Color> createRepeated() => $pb.PbList<Color>();
+  static Color getDefault() => _defaultInstance ??= create()..freeze();
   static Color _defaultInstance;
-  static void $checkItem(Color v) {
-    if (v is! Color) checkItemFailed(v, 'Color');
-  }
 
-  double get red => $_getN(0);
-  set red(double v) {
-    $_setFloat(0, v);
-  }
-
-  bool hasRed() => $_has(0);
+  $core.double get red => $_getN(0);
+  set red($core.double v) { $_setFloat(0, v); }
+  $core.bool hasRed() => $_has(0);
   void clearRed() => clearField(1);
 
-  double get green => $_getN(1);
-  set green(double v) {
-    $_setFloat(1, v);
-  }
-
-  bool hasGreen() => $_has(1);
+  $core.double get green => $_getN(1);
+  set green($core.double v) { $_setFloat(1, v); }
+  $core.bool hasGreen() => $_has(1);
   void clearGreen() => clearField(2);
 
-  double get blue => $_getN(2);
-  set blue(double v) {
-    $_setFloat(2, v);
-  }
-
-  bool hasBlue() => $_has(2);
+  $core.double get blue => $_getN(2);
+  set blue($core.double v) { $_setFloat(2, v); }
+  $core.bool hasBlue() => $_has(2);
   void clearBlue() => clearField(3);
 
-  $google$protobuf.FloatValue get alpha => $_getN(3);
-  set alpha($google$protobuf.FloatValue v) {
-    setField(4, v);
-  }
-
-  bool hasAlpha() => $_has(3);
+  $0.FloatValue get alpha => $_getN(3);
+  set alpha($0.FloatValue v) { setField(4, v); }
+  $core.bool hasAlpha() => $_has(3);
   void clearAlpha() => clearField(4);
 }
 
-class _ReadonlyColor extends Color with ReadonlyMessageMixin {}

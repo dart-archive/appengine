@@ -1,286 +1,186 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/audit/audit_log.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../rpc/status.pb.dart' as $google$rpc;
-import '../../protobuf/any.pb.dart' as $google$protobuf;
-import '../../protobuf/struct.pb.dart' as $google$protobuf;
+import '../../rpc/status.pb.dart' as $0;
+import '../../protobuf/any.pb.dart' as $1;
+import '../../protobuf/struct.pb.dart' as $2;
 
-class AuditLog extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AuditLog')
-    ..a<$google$rpc.Status>(2, 'status', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
-    ..a<AuthenticationInfo>(3, 'authenticationInfo', PbFieldType.OM,
-        AuthenticationInfo.getDefault, AuthenticationInfo.create)
-    ..a<RequestMetadata>(4, 'requestMetadata', PbFieldType.OM,
-        RequestMetadata.getDefault, RequestMetadata.create)
+class AuditLog extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuditLog', package: const $pb.PackageName('google.cloud.audit'))
+    ..a<$0.Status>(2, 'status', $pb.PbFieldType.OM, $0.Status.getDefault, $0.Status.create)
+    ..a<AuthenticationInfo>(3, 'authenticationInfo', $pb.PbFieldType.OM, AuthenticationInfo.getDefault, AuthenticationInfo.create)
+    ..a<RequestMetadata>(4, 'requestMetadata', $pb.PbFieldType.OM, RequestMetadata.getDefault, RequestMetadata.create)
     ..aOS(7, 'serviceName')
     ..aOS(8, 'methodName')
-    ..pp<AuthorizationInfo>(9, 'authorizationInfo', PbFieldType.PM,
-        AuthorizationInfo.$checkItem, AuthorizationInfo.create)
+    ..pc<AuthorizationInfo>(9, 'authorizationInfo', $pb.PbFieldType.PM,AuthorizationInfo.create)
     ..aOS(11, 'resourceName')
     ..aInt64(12, 'numResponseItems')
-    ..a<$google$protobuf.Any>(15, 'serviceData', PbFieldType.OM,
-        $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
-    ..a<$google$protobuf.Struct>(16, 'request', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
-    ..a<$google$protobuf.Struct>(17, 'response', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
-    ..hasRequiredFields = false;
+    ..a<$1.Any>(15, 'serviceData', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
+    ..a<$2.Struct>(16, 'request', $pb.PbFieldType.OM, $2.Struct.getDefault, $2.Struct.create)
+    ..a<$2.Struct>(17, 'response', $pb.PbFieldType.OM, $2.Struct.getDefault, $2.Struct.create)
+    ..hasRequiredFields = false
+  ;
 
   AuditLog() : super();
-  AuditLog.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuditLog.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuditLog.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AuditLog.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   AuditLog clone() => AuditLog()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AuditLog copyWith(void Function(AuditLog) updates) => super.copyWith((message) => updates(message as AuditLog));
+  $pb.BuilderInfo get info_ => _i;
   static AuditLog create() => AuditLog();
-  static PbList<AuditLog> createRepeated() => PbList<AuditLog>();
-  static AuditLog getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuditLog();
-    return _defaultInstance;
-  }
-
+  AuditLog createEmptyInstance() => create();
+  static $pb.PbList<AuditLog> createRepeated() => $pb.PbList<AuditLog>();
+  static AuditLog getDefault() => _defaultInstance ??= create()..freeze();
   static AuditLog _defaultInstance;
-  static void $checkItem(AuditLog v) {
-    if (v is! AuditLog) checkItemFailed(v, 'AuditLog');
-  }
 
-  $google$rpc.Status get status => $_getN(0);
-  set status($google$rpc.Status v) {
-    setField(2, v);
-  }
-
-  bool hasStatus() => $_has(0);
+  $0.Status get status => $_getN(0);
+  set status($0.Status v) { setField(2, v); }
+  $core.bool hasStatus() => $_has(0);
   void clearStatus() => clearField(2);
 
   AuthenticationInfo get authenticationInfo => $_getN(1);
-  set authenticationInfo(AuthenticationInfo v) {
-    setField(3, v);
-  }
-
-  bool hasAuthenticationInfo() => $_has(1);
+  set authenticationInfo(AuthenticationInfo v) { setField(3, v); }
+  $core.bool hasAuthenticationInfo() => $_has(1);
   void clearAuthenticationInfo() => clearField(3);
 
   RequestMetadata get requestMetadata => $_getN(2);
-  set requestMetadata(RequestMetadata v) {
-    setField(4, v);
-  }
-
-  bool hasRequestMetadata() => $_has(2);
+  set requestMetadata(RequestMetadata v) { setField(4, v); }
+  $core.bool hasRequestMetadata() => $_has(2);
   void clearRequestMetadata() => clearField(4);
 
-  String get serviceName => $_getS(3, '');
-  set serviceName(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasServiceName() => $_has(3);
+  $core.String get serviceName => $_getS(3, '');
+  set serviceName($core.String v) { $_setString(3, v); }
+  $core.bool hasServiceName() => $_has(3);
   void clearServiceName() => clearField(7);
 
-  String get methodName => $_getS(4, '');
-  set methodName(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasMethodName() => $_has(4);
+  $core.String get methodName => $_getS(4, '');
+  set methodName($core.String v) { $_setString(4, v); }
+  $core.bool hasMethodName() => $_has(4);
   void clearMethodName() => clearField(8);
 
-  List<AuthorizationInfo> get authorizationInfo => $_getList(5);
+  $core.List<AuthorizationInfo> get authorizationInfo => $_getList(5);
 
-  String get resourceName => $_getS(6, '');
-  set resourceName(String v) {
-    $_setString(6, v);
-  }
-
-  bool hasResourceName() => $_has(6);
+  $core.String get resourceName => $_getS(6, '');
+  set resourceName($core.String v) { $_setString(6, v); }
+  $core.bool hasResourceName() => $_has(6);
   void clearResourceName() => clearField(11);
 
   Int64 get numResponseItems => $_getI64(7);
-  set numResponseItems(Int64 v) {
-    $_setInt64(7, v);
-  }
-
-  bool hasNumResponseItems() => $_has(7);
+  set numResponseItems(Int64 v) { $_setInt64(7, v); }
+  $core.bool hasNumResponseItems() => $_has(7);
   void clearNumResponseItems() => clearField(12);
 
-  $google$protobuf.Any get serviceData => $_getN(8);
-  set serviceData($google$protobuf.Any v) {
-    setField(15, v);
-  }
-
-  bool hasServiceData() => $_has(8);
+  $1.Any get serviceData => $_getN(8);
+  set serviceData($1.Any v) { setField(15, v); }
+  $core.bool hasServiceData() => $_has(8);
   void clearServiceData() => clearField(15);
 
-  $google$protobuf.Struct get request => $_getN(9);
-  set request($google$protobuf.Struct v) {
-    setField(16, v);
-  }
-
-  bool hasRequest() => $_has(9);
+  $2.Struct get request => $_getN(9);
+  set request($2.Struct v) { setField(16, v); }
+  $core.bool hasRequest() => $_has(9);
   void clearRequest() => clearField(16);
 
-  $google$protobuf.Struct get response => $_getN(10);
-  set response($google$protobuf.Struct v) {
-    setField(17, v);
-  }
-
-  bool hasResponse() => $_has(10);
+  $2.Struct get response => $_getN(10);
+  set response($2.Struct v) { setField(17, v); }
+  $core.bool hasResponse() => $_has(10);
   void clearResponse() => clearField(17);
 }
 
-class _ReadonlyAuditLog extends AuditLog with ReadonlyMessageMixin {}
-
-class AuthenticationInfo extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AuthenticationInfo')
+class AuthenticationInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuthenticationInfo', package: const $pb.PackageName('google.cloud.audit'))
     ..aOS(1, 'principalEmail')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   AuthenticationInfo() : super();
-  AuthenticationInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuthenticationInfo.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuthenticationInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AuthenticationInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   AuthenticationInfo clone() => AuthenticationInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AuthenticationInfo copyWith(void Function(AuthenticationInfo) updates) => super.copyWith((message) => updates(message as AuthenticationInfo));
+  $pb.BuilderInfo get info_ => _i;
   static AuthenticationInfo create() => AuthenticationInfo();
-  static PbList<AuthenticationInfo> createRepeated() =>
-      PbList<AuthenticationInfo>();
-  static AuthenticationInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAuthenticationInfo();
-    return _defaultInstance;
-  }
-
+  AuthenticationInfo createEmptyInstance() => create();
+  static $pb.PbList<AuthenticationInfo> createRepeated() => $pb.PbList<AuthenticationInfo>();
+  static AuthenticationInfo getDefault() => _defaultInstance ??= create()..freeze();
   static AuthenticationInfo _defaultInstance;
-  static void $checkItem(AuthenticationInfo v) {
-    if (v is! AuthenticationInfo) checkItemFailed(v, 'AuthenticationInfo');
-  }
 
-  String get principalEmail => $_getS(0, '');
-  set principalEmail(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasPrincipalEmail() => $_has(0);
+  $core.String get principalEmail => $_getS(0, '');
+  set principalEmail($core.String v) { $_setString(0, v); }
+  $core.bool hasPrincipalEmail() => $_has(0);
   void clearPrincipalEmail() => clearField(1);
 }
 
-class _ReadonlyAuthenticationInfo extends AuthenticationInfo
-    with ReadonlyMessageMixin {}
-
-class AuthorizationInfo extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AuthorizationInfo')
+class AuthorizationInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuthorizationInfo', package: const $pb.PackageName('google.cloud.audit'))
     ..aOS(1, 'resource')
     ..aOS(2, 'permission')
     ..aOB(3, 'granted')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   AuthorizationInfo() : super();
-  AuthorizationInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuthorizationInfo.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuthorizationInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AuthorizationInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   AuthorizationInfo clone() => AuthorizationInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AuthorizationInfo copyWith(void Function(AuthorizationInfo) updates) => super.copyWith((message) => updates(message as AuthorizationInfo));
+  $pb.BuilderInfo get info_ => _i;
   static AuthorizationInfo create() => AuthorizationInfo();
-  static PbList<AuthorizationInfo> createRepeated() =>
-      PbList<AuthorizationInfo>();
-  static AuthorizationInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAuthorizationInfo();
-    return _defaultInstance;
-  }
-
+  AuthorizationInfo createEmptyInstance() => create();
+  static $pb.PbList<AuthorizationInfo> createRepeated() => $pb.PbList<AuthorizationInfo>();
+  static AuthorizationInfo getDefault() => _defaultInstance ??= create()..freeze();
   static AuthorizationInfo _defaultInstance;
-  static void $checkItem(AuthorizationInfo v) {
-    if (v is! AuthorizationInfo) checkItemFailed(v, 'AuthorizationInfo');
-  }
 
-  String get resource => $_getS(0, '');
-  set resource(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasResource() => $_has(0);
+  $core.String get resource => $_getS(0, '');
+  set resource($core.String v) { $_setString(0, v); }
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 
-  String get permission => $_getS(1, '');
-  set permission(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPermission() => $_has(1);
+  $core.String get permission => $_getS(1, '');
+  set permission($core.String v) { $_setString(1, v); }
+  $core.bool hasPermission() => $_has(1);
   void clearPermission() => clearField(2);
 
-  bool get granted => $_get(2, false);
-  set granted(bool v) {
-    $_setBool(2, v);
-  }
-
-  bool hasGranted() => $_has(2);
+  $core.bool get granted => $_get(2, false);
+  set granted($core.bool v) { $_setBool(2, v); }
+  $core.bool hasGranted() => $_has(2);
   void clearGranted() => clearField(3);
 }
 
-class _ReadonlyAuthorizationInfo extends AuthorizationInfo
-    with ReadonlyMessageMixin {}
-
-class RequestMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RequestMetadata')
+class RequestMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RequestMetadata', package: const $pb.PackageName('google.cloud.audit'))
     ..aOS(1, 'callerIp')
     ..aOS(2, 'callerSuppliedUserAgent')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   RequestMetadata() : super();
-  RequestMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RequestMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RequestMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RequestMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RequestMetadata clone() => RequestMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RequestMetadata copyWith(void Function(RequestMetadata) updates) => super.copyWith((message) => updates(message as RequestMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static RequestMetadata create() => RequestMetadata();
-  static PbList<RequestMetadata> createRepeated() => PbList<RequestMetadata>();
-  static RequestMetadata getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRequestMetadata();
-    return _defaultInstance;
-  }
-
+  RequestMetadata createEmptyInstance() => create();
+  static $pb.PbList<RequestMetadata> createRepeated() => $pb.PbList<RequestMetadata>();
+  static RequestMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static RequestMetadata _defaultInstance;
-  static void $checkItem(RequestMetadata v) {
-    if (v is! RequestMetadata) checkItemFailed(v, 'RequestMetadata');
-  }
 
-  String get callerIp => $_getS(0, '');
-  set callerIp(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasCallerIp() => $_has(0);
+  $core.String get callerIp => $_getS(0, '');
+  set callerIp($core.String v) { $_setString(0, v); }
+  $core.bool hasCallerIp() => $_has(0);
   void clearCallerIp() => clearField(1);
 
-  String get callerSuppliedUserAgent => $_getS(1, '');
-  set callerSuppliedUserAgent(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasCallerSuppliedUserAgent() => $_has(1);
+  $core.String get callerSuppliedUserAgent => $_getS(1, '');
+  set callerSuppliedUserAgent($core.String v) { $_setString(1, v); }
+  $core.bool hasCallerSuppliedUserAgent() => $_has(1);
   void clearCallerSuppliedUserAgent() => clearField(2);
 }
 
-class _ReadonlyRequestMetadata extends RequestMetadata
-    with ReadonlyMessageMixin {}

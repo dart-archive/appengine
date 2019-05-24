@@ -1,26 +1,21 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/remoteexecution/v1test/remote_execution.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class ExecuteOperationMetadata_Stage extends ProtobufEnum {
-  static const ExecuteOperationMetadata_Stage UNKNOWN =
-      ExecuteOperationMetadata_Stage._(0, 'UNKNOWN');
-  static const ExecuteOperationMetadata_Stage CACHE_CHECK =
-      ExecuteOperationMetadata_Stage._(1, 'CACHE_CHECK');
-  static const ExecuteOperationMetadata_Stage QUEUED =
-      ExecuteOperationMetadata_Stage._(2, 'QUEUED');
-  static const ExecuteOperationMetadata_Stage EXECUTING =
-      ExecuteOperationMetadata_Stage._(3, 'EXECUTING');
-  static const ExecuteOperationMetadata_Stage COMPLETED =
-      ExecuteOperationMetadata_Stage._(4, 'COMPLETED');
+class ExecuteOperationMetadata_Stage extends $pb.ProtobufEnum {
+  static const ExecuteOperationMetadata_Stage UNKNOWN = ExecuteOperationMetadata_Stage._(0, 'UNKNOWN');
+  static const ExecuteOperationMetadata_Stage CACHE_CHECK = ExecuteOperationMetadata_Stage._(1, 'CACHE_CHECK');
+  static const ExecuteOperationMetadata_Stage QUEUED = ExecuteOperationMetadata_Stage._(2, 'QUEUED');
+  static const ExecuteOperationMetadata_Stage EXECUTING = ExecuteOperationMetadata_Stage._(3, 'EXECUTING');
+  static const ExecuteOperationMetadata_Stage COMPLETED = ExecuteOperationMetadata_Stage._(4, 'COMPLETED');
 
-  static const List<ExecuteOperationMetadata_Stage> values =
-      <ExecuteOperationMetadata_Stage>[
+  static const $core.List<ExecuteOperationMetadata_Stage> values = <ExecuteOperationMetadata_Stage> [
     UNKNOWN,
     CACHE_CHECK,
     QUEUED,
@@ -28,13 +23,9 @@ class ExecuteOperationMetadata_Stage extends ProtobufEnum {
     COMPLETED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ExecuteOperationMetadata_Stage valueOf(int value) =>
-      _byValue[value] as ExecuteOperationMetadata_Stage;
-  static void $checkItem(ExecuteOperationMetadata_Stage v) {
-    if (v is! ExecuteOperationMetadata_Stage)
-      checkItemFailed(v, 'ExecuteOperationMetadata_Stage');
-  }
+  static final $core.Map<$core.int, ExecuteOperationMetadata_Stage> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ExecuteOperationMetadata_Stage valueOf($core.int value) => _byValue[value];
 
-  const ExecuteOperationMetadata_Stage._(int v, String n) : super(v, n);
+  const ExecuteOperationMetadata_Stage._($core.int v, $core.String n) : super(v, n);
 }
+

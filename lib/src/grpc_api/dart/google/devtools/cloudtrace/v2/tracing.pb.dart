@@ -1,76 +1,55 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/cloudtrace/v2/tracing.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'trace.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'trace.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
 
-class BatchWriteSpansRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BatchWriteSpansRequest')
+class BatchWriteSpansRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchWriteSpansRequest', package: const $pb.PackageName('google.devtools.cloudtrace.v2'))
     ..aOS(1, 'name')
-    ..pp<Span>(2, 'spans', PbFieldType.PM, Span.$checkItem, Span.create)
-    ..hasRequiredFields = false;
+    ..pc<$0.Span>(2, 'spans', $pb.PbFieldType.PM,$0.Span.create)
+    ..hasRequiredFields = false
+  ;
 
   BatchWriteSpansRequest() : super();
-  BatchWriteSpansRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchWriteSpansRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BatchWriteSpansRequest clone() =>
-      BatchWriteSpansRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BatchWriteSpansRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BatchWriteSpansRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BatchWriteSpansRequest clone() => BatchWriteSpansRequest()..mergeFromMessage(this);
+  BatchWriteSpansRequest copyWith(void Function(BatchWriteSpansRequest) updates) => super.copyWith((message) => updates(message as BatchWriteSpansRequest));
+  $pb.BuilderInfo get info_ => _i;
   static BatchWriteSpansRequest create() => BatchWriteSpansRequest();
-  static PbList<BatchWriteSpansRequest> createRepeated() =>
-      PbList<BatchWriteSpansRequest>();
-  static BatchWriteSpansRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBatchWriteSpansRequest();
-    return _defaultInstance;
-  }
-
+  BatchWriteSpansRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchWriteSpansRequest> createRepeated() => $pb.PbList<BatchWriteSpansRequest>();
+  static BatchWriteSpansRequest getDefault() => _defaultInstance ??= create()..freeze();
   static BatchWriteSpansRequest _defaultInstance;
-  static void $checkItem(BatchWriteSpansRequest v) {
-    if (v is! BatchWriteSpansRequest)
-      checkItemFailed(v, 'BatchWriteSpansRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<Span> get spans => $_getList(1);
+  $core.List<$0.Span> get spans => $_getList(1);
 }
-
-class _ReadonlyBatchWriteSpansRequest extends BatchWriteSpansRequest
-    with ReadonlyMessageMixin {}
 
 class TraceServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   TraceServiceApi(this._client);
 
-  Future<$google$protobuf.Empty> batchWriteSpans(
-      ClientContext ctx, BatchWriteSpansRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'TraceService', 'BatchWriteSpans', request, emptyResponse);
+  $async.Future<$1.Empty> batchWriteSpans($pb.ClientContext ctx, BatchWriteSpansRequest request) {
+    var emptyResponse = $1.Empty();
+    return _client.invoke<$1.Empty>(ctx, 'TraceService', 'BatchWriteSpans', request, emptyResponse);
   }
-
-  Future<Span> createSpan(ClientContext ctx, Span request) {
-    var emptyResponse = Span();
-    return _client.invoke<Span>(
-        ctx, 'TraceService', 'CreateSpan', request, emptyResponse);
+  $async.Future<$0.Span> createSpan($pb.ClientContext ctx, $0.Span request) {
+    var emptyResponse = $0.Span();
+    return _client.invoke<$0.Span>(ctx, 'TraceService', 'CreateSpan', request, emptyResponse);
   }
 }
+

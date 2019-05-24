@@ -1,0 +1,72 @@
+///
+//  Generated code. Do not modify.
+//  source: google/ads/googleads/v1/enums/price_placeholder_field.proto
+///
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+
+const PricePlaceholderFieldEnum$json = const {
+  '1': 'PricePlaceholderFieldEnum',
+  '4': const [PricePlaceholderFieldEnum_PricePlaceholderField$json],
+};
+
+const PricePlaceholderFieldEnum_PricePlaceholderField$json = const {
+  '1': 'PricePlaceholderField',
+  '2': const [
+    const {'1': 'UNSPECIFIED', '2': 0},
+    const {'1': 'UNKNOWN', '2': 1},
+    const {'1': 'TYPE', '2': 2},
+    const {'1': 'PRICE_QUALIFIER', '2': 3},
+    const {'1': 'TRACKING_TEMPLATE', '2': 4},
+    const {'1': 'LANGUAGE', '2': 5},
+    const {'1': 'FINAL_URL_SUFFIX', '2': 6},
+    const {'1': 'ITEM_1_HEADER', '2': 100},
+    const {'1': 'ITEM_1_DESCRIPTION', '2': 101},
+    const {'1': 'ITEM_1_PRICE', '2': 102},
+    const {'1': 'ITEM_1_UNIT', '2': 103},
+    const {'1': 'ITEM_1_FINAL_URLS', '2': 104},
+    const {'1': 'ITEM_1_FINAL_MOBILE_URLS', '2': 105},
+    const {'1': 'ITEM_2_HEADER', '2': 200},
+    const {'1': 'ITEM_2_DESCRIPTION', '2': 201},
+    const {'1': 'ITEM_2_PRICE', '2': 202},
+    const {'1': 'ITEM_2_UNIT', '2': 203},
+    const {'1': 'ITEM_2_FINAL_URLS', '2': 204},
+    const {'1': 'ITEM_2_FINAL_MOBILE_URLS', '2': 205},
+    const {'1': 'ITEM_3_HEADER', '2': 300},
+    const {'1': 'ITEM_3_DESCRIPTION', '2': 301},
+    const {'1': 'ITEM_3_PRICE', '2': 302},
+    const {'1': 'ITEM_3_UNIT', '2': 303},
+    const {'1': 'ITEM_3_FINAL_URLS', '2': 304},
+    const {'1': 'ITEM_3_FINAL_MOBILE_URLS', '2': 305},
+    const {'1': 'ITEM_4_HEADER', '2': 400},
+    const {'1': 'ITEM_4_DESCRIPTION', '2': 401},
+    const {'1': 'ITEM_4_PRICE', '2': 402},
+    const {'1': 'ITEM_4_UNIT', '2': 403},
+    const {'1': 'ITEM_4_FINAL_URLS', '2': 404},
+    const {'1': 'ITEM_4_FINAL_MOBILE_URLS', '2': 405},
+    const {'1': 'ITEM_5_HEADER', '2': 500},
+    const {'1': 'ITEM_5_DESCRIPTION', '2': 501},
+    const {'1': 'ITEM_5_PRICE', '2': 502},
+    const {'1': 'ITEM_5_UNIT', '2': 503},
+    const {'1': 'ITEM_5_FINAL_URLS', '2': 504},
+    const {'1': 'ITEM_5_FINAL_MOBILE_URLS', '2': 505},
+    const {'1': 'ITEM_6_HEADER', '2': 600},
+    const {'1': 'ITEM_6_DESCRIPTION', '2': 601},
+    const {'1': 'ITEM_6_PRICE', '2': 602},
+    const {'1': 'ITEM_6_UNIT', '2': 603},
+    const {'1': 'ITEM_6_FINAL_URLS', '2': 604},
+    const {'1': 'ITEM_6_FINAL_MOBILE_URLS', '2': 605},
+    const {'1': 'ITEM_7_HEADER', '2': 700},
+    const {'1': 'ITEM_7_DESCRIPTION', '2': 701},
+    const {'1': 'ITEM_7_PRICE', '2': 702},
+    const {'1': 'ITEM_7_UNIT', '2': 703},
+    const {'1': 'ITEM_7_FINAL_URLS', '2': 704},
+    const {'1': 'ITEM_7_FINAL_MOBILE_URLS', '2': 705},
+    const {'1': 'ITEM_8_HEADER', '2': 800},
+    const {'1': 'ITEM_8_DESCRIPTION', '2': 801},
+    const {'1': 'ITEM_8_PRICE', '2': 802},
+    const {'1': 'ITEM_8_UNIT', '2': 803},
+    const {'1': 'ITEM_8_FINAL_URLS', '2': 804},
+    const {'1': 'ITEM_8_FINAL_MOBILE_URLS', '2': 805},
+  ],
+};
+

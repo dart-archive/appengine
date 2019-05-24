@@ -6,29 +6,30 @@ language_settings:
     interface_names:
       google.pubsub.v1.Publisher: TopicAdmin
       google.pubsub.v1.Subscriber: SubscriptionAdmin
+    release_level: GA
   python:
     package_name: google.cloud.pubsub_v1.gapic
+    release_level: GA
   go:
     package_name: cloud.google.com/go/pubsub/apiv1
     domain_layer_location: cloud.google.com/go/pubsub
+    release_level: GA
   csharp:
     package_name: Google.Cloud.PubSub.V1
     interface_names:
       google.pubsub.v1.Publisher: PublisherServiceApi
       google.pubsub.v1.Subscriber: SubscriberServiceApi
+    release_level: GA
   ruby:
-    package_name: Google::Cloud::Pubsub::V1
+    package_name: Google::Cloud::PubSub::V1
+    release_level: BETA
   php:
     package_name: Google\Cloud\PubSub\V1
+    release_level: GA
   nodejs:
     package_name: pubsub.v1
     domain_layer_location: google-cloud
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
-fixed_resource_name_values:
-- entity_name: deleted_topic
-  fixed_value: _deleted-topic_
+    release_level: GA
 collection_oneofs:
 - oneof_name: topic_oneof
   collection_names:
@@ -55,6 +56,8 @@ collections:
   language_overrides:
   - language: java
     entity_name: project_topic
+- name_pattern: _deleted-topic_
+  entity_name: deleted_topic
 interfaces:
 - name: google.pubsub.v1.Subscriber
   lang_doc:
@@ -62,48 +65,39 @@ interfaces:
   retry_codes_def:
   - name: idempotent
     retry_codes:
+    - UNKNOWN
+    - ABORTED
     - UNAVAILABLE
-    - DEADLINE_EXCEEDED
   - name: non_idempotent
-    retry_codes: []
-  - name: pull
     retry_codes:
-    - DEADLINE_EXCEEDED
-    - INTERNAL
-    - CANCELLED
-    - RESOURCE_EXHAUSTED
     - UNAVAILABLE
+  - name: none
+    retry_codes: []
   retry_params_def:
   - name: default
     initial_retry_delay_millis: 100
     retry_delay_multiplier: 1.3
-    max_retry_delay_millis: 60000 # 60 seconds
-    initial_rpc_timeout_millis: 60000 # 60 seconds
+    max_retry_delay_millis: 60000  # 60 seconds
+    initial_rpc_timeout_millis: 60000  # 60 seconds
     rpc_timeout_multiplier: 1
-    max_rpc_timeout_millis: 60000 # 60 seconds
-    total_timeout_millis: 600000 # 10 minutes
+    max_rpc_timeout_millis: 60000  # 60 seconds
+    total_timeout_millis: 600000  # 10 minutes
   - name: messaging
     initial_retry_delay_millis: 100
     retry_delay_multiplier: 1.3
-    max_retry_delay_millis: 60000 # 60 seconds
-    initial_rpc_timeout_millis: 12000 # 12 seconds
+    max_retry_delay_millis: 60000  # 60 seconds
+    initial_rpc_timeout_millis: 25000  # 25 seconds
     rpc_timeout_multiplier: 1
-    max_rpc_timeout_millis: 12000 # 12 seconds
-    total_timeout_millis: 600000 # 10 minutes
+    max_rpc_timeout_millis: 25000  # 25 seconds
+    total_timeout_millis: 600000  # 10 minutes
   - name: streaming_messaging
     initial_retry_delay_millis: 100
     retry_delay_multiplier: 1.3
-    max_retry_delay_millis: 60000 # 60 seconds
-    initial_rpc_timeout_millis: 600000 # 10 minutes
+    max_retry_delay_millis: 60000  # 60 seconds
+    initial_rpc_timeout_millis: 600000  # 10 minutes
     rpc_timeout_multiplier: 1
-    max_rpc_timeout_millis: 600000 # 10 minutes
-    total_timeout_millis: 600000 # 10 minutes
-  experimental_features:
-    iam_resources:
-    - type: google.pubsub.v1.Subscription
-      field: name
-    - type: google.pubsub.v1.Topic
-      field: name
+    max_rpc_timeout_millis: 600000  # 10 minutes
+    total_timeout_millis: 600000  # 10 minutes
   methods:
   - name: CreateSubscription
     flattening:
@@ -116,7 +110,6 @@ interfaces:
     required_fields:
     - name
     - topic
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -131,7 +124,6 @@ interfaces:
         - subscription
     required_fields:
     - subscription
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -142,8 +134,7 @@ interfaces:
     required_fields:
     - subscription
     - update_mask
-    request_object_method: true
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
     sample_code_init_fields:
@@ -156,7 +147,6 @@ interfaces:
         - project
     required_fields:
     - project
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
@@ -177,13 +167,23 @@ interfaces:
         - subscription
     required_fields:
     - subscription
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       subscription: subscription
     timeout_millis: 60000
+  - name: GetSnapshot
+    surface_treatments:
+    - include_languages:
+      - go
+      - java
+      - csharp
+      - ruby
+      - nodejs
+      - python
+      - php
+      visibility: DISABLED
   - name: ModifyAckDeadline
     flattening:
       groups:
@@ -195,7 +195,6 @@ interfaces:
     - subscription
     - ack_ids
     - ack_deadline_seconds
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: non_idempotent
     retry_params_name: default
@@ -215,7 +214,6 @@ interfaces:
     required_fields:
     - subscription
     - ack_ids
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: non_idempotent
     retry_params_name: messaging
@@ -236,9 +234,8 @@ interfaces:
     required_fields:
     - subscription
     - max_messages
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: pull
+    retry_codes_name: idempotent
     retry_params_name: messaging
     field_name_patterns:
       subscription: subscription
@@ -255,7 +252,7 @@ interfaces:
       response:
         resources_field: received_messages
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: pull
+    retry_codes_name: none
     retry_params_name: streaming_messaging
     field_name_patterns:
       subscription: subscription
@@ -273,7 +270,6 @@ interfaces:
     required_fields:
     - subscription
     - push_config
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: non_idempotent
     retry_params_name: default
@@ -287,7 +283,6 @@ interfaces:
         - project
     required_fields:
     - project
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
@@ -310,9 +305,8 @@ interfaces:
     required_fields:
     - name
     - subscription
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       name: snapshot
@@ -322,8 +316,7 @@ interfaces:
     required_fields:
     - snapshot
     - update_mask
-    request_object_method: true
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
     sample_code_init_fields:
@@ -336,9 +329,8 @@ interfaces:
         - snapshot
     required_fields:
     - snapshot
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       snapshot: snapshot
@@ -348,9 +340,8 @@ interfaces:
     # https://github.com/googleapis/toolkit/issues/1057
     required_fields:
     - subscription
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: non_idempotent
+    retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       subscription: subscription
@@ -364,7 +355,6 @@ interfaces:
     required_fields:
     - resource
     - policy
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -382,7 +372,6 @@ interfaces:
         - resource
     required_fields:
     - resource
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -402,7 +391,6 @@ interfaces:
     required_fields:
     - resource
     - permissions
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -423,9 +411,15 @@ interfaces:
   retry_codes_def:
   - name: idempotent
     retry_codes:
+    - UNKNOWN
+    - ABORTED
     - UNAVAILABLE
-    - DEADLINE_EXCEEDED
-  - name: one_plus_delivery
+  - name: non_idempotent
+    retry_codes:
+    - UNAVAILABLE
+  - name: none
+    retry_codes: []
+  - name: publish
     retry_codes:
     - ABORTED
     - CANCELLED
@@ -434,8 +428,6 @@ interfaces:
     - UNKNOWN
     - UNAVAILABLE
     - DEADLINE_EXCEEDED
-  - name: non_idempotent
-    retry_codes: []
   retry_params_def:
   - name: default
     initial_retry_delay_millis: 100
@@ -453,12 +445,6 @@ interfaces:
     rpc_timeout_multiplier: 1
     max_rpc_timeout_millis: 30000 # 30 seconds
     total_timeout_millis: 600000 # 10 minutes
-  experimental_features:
-    iam_resources:
-    - type: google.pubsub.v1.Subscription
-      field: name
-    - type: google.pubsub.v1.Topic
-      field: name
   methods:
   - name: CreateTopic
     flattening:
@@ -467,9 +453,8 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       name: topic
@@ -478,14 +463,9 @@ interfaces:
     required_fields:
     - topic
     - update_mask
-    request_object_method: true
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
-    surface_treatments:
-    - include_languages:
-      - java
-      visibility: PACKAGE
   - name: Publish
     flattening:
       groups:
@@ -495,9 +475,8 @@ interfaces:
     required_fields:
     - topic
     - messages
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: one_plus_delivery
+    retry_codes_name: publish
     retry_params_name: messaging
     batching:
       thresholds:
@@ -527,7 +506,6 @@ interfaces:
         - topic
     required_fields:
     - topic
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -541,7 +519,6 @@ interfaces:
         - project
     required_fields:
     - project
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
@@ -562,7 +539,6 @@ interfaces:
         - topic
     required_fields:
     - topic
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
@@ -576,6 +552,17 @@ interfaces:
     field_name_patterns:
       topic: topic
     timeout_millis: 60000
+  - name: ListTopicSnapshots
+    surface_treatments:
+    - include_languages:
+      - go
+      - java
+      - csharp
+      - ruby
+      - nodejs
+      - python
+      - php
+      visibility: DISABLED
   - name: DeleteTopic
     flattening:
       groups:
@@ -583,9 +570,8 @@ interfaces:
         - topic
     required_fields:
     - topic
-    request_object_method: false
     resource_name_treatment: STATIC_TYPES
-    retry_codes_name: idempotent
+    retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       topic: topic
@@ -599,7 +585,6 @@ interfaces:
     required_fields:
     - resource
     - policy
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -617,7 +602,6 @@ interfaces:
         - resource
     required_fields:
     - resource
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -637,7 +621,6 @@ interfaces:
     required_fields:
     - resource
     - permissions
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:

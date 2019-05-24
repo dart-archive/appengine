@@ -1,846 +1,452 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/notification_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'notification.pb.dart';
-import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'notification.pb.dart' as $0;
+import '../../protobuf/field_mask.pb.dart' as $1;
+import '../../protobuf/timestamp.pb.dart' as $2;
+import '../../protobuf/empty.pb.dart' as $3;
 
-class ListNotificationChannelDescriptorsRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('ListNotificationChannelDescriptorsRequest')
-        ..a<int>(2, 'pageSize', PbFieldType.O3)
-        ..aOS(3, 'pageToken')
-        ..aOS(4, 'name')
-        ..hasRequiredFields = false;
+class ListNotificationChannelDescriptorsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNotificationChannelDescriptorsRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, 'pageToken')
+    ..aOS(4, 'name')
+    ..hasRequiredFields = false
+  ;
 
   ListNotificationChannelDescriptorsRequest() : super();
-  ListNotificationChannelDescriptorsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNotificationChannelDescriptorsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListNotificationChannelDescriptorsRequest clone() =>
-      ListNotificationChannelDescriptorsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListNotificationChannelDescriptorsRequest create() =>
-      ListNotificationChannelDescriptorsRequest();
-  static PbList<ListNotificationChannelDescriptorsRequest> createRepeated() =>
-      PbList<ListNotificationChannelDescriptorsRequest>();
-  static ListNotificationChannelDescriptorsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListNotificationChannelDescriptorsRequest();
-    return _defaultInstance;
-  }
-
+  ListNotificationChannelDescriptorsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListNotificationChannelDescriptorsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListNotificationChannelDescriptorsRequest clone() => ListNotificationChannelDescriptorsRequest()..mergeFromMessage(this);
+  ListNotificationChannelDescriptorsRequest copyWith(void Function(ListNotificationChannelDescriptorsRequest) updates) => super.copyWith((message) => updates(message as ListNotificationChannelDescriptorsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListNotificationChannelDescriptorsRequest create() => ListNotificationChannelDescriptorsRequest();
+  ListNotificationChannelDescriptorsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListNotificationChannelDescriptorsRequest> createRepeated() => $pb.PbList<ListNotificationChannelDescriptorsRequest>();
+  static ListNotificationChannelDescriptorsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListNotificationChannelDescriptorsRequest _defaultInstance;
-  static void $checkItem(ListNotificationChannelDescriptorsRequest v) {
-    if (v is! ListNotificationChannelDescriptorsRequest)
-      checkItemFailed(v, 'ListNotificationChannelDescriptorsRequest');
-  }
 
-  int get pageSize => $_get(0, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  bool hasPageSize() => $_has(0);
+  $core.int get pageSize => $_get(0, 0);
+  set pageSize($core.int v) { $_setSignedInt32(0, v); }
+  $core.bool hasPageSize() => $_has(0);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPageToken() => $_has(1);
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(3);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasName() => $_has(2);
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) { $_setString(2, v); }
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(4);
 }
 
-class _ReadonlyListNotificationChannelDescriptorsRequest
-    extends ListNotificationChannelDescriptorsRequest
-    with ReadonlyMessageMixin {}
-
-class ListNotificationChannelDescriptorsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('ListNotificationChannelDescriptorsResponse')
-        ..pp<NotificationChannelDescriptor>(
-            1,
-            'channelDescriptors',
-            PbFieldType.PM,
-            NotificationChannelDescriptor.$checkItem,
-            NotificationChannelDescriptor.create)
-        ..aOS(2, 'nextPageToken')
-        ..hasRequiredFields = false;
+class ListNotificationChannelDescriptorsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNotificationChannelDescriptorsResponse', package: const $pb.PackageName('google.monitoring.v3'))
+    ..pc<$0.NotificationChannelDescriptor>(1, 'channelDescriptors', $pb.PbFieldType.PM,$0.NotificationChannelDescriptor.create)
+    ..aOS(2, 'nextPageToken')
+    ..hasRequiredFields = false
+  ;
 
   ListNotificationChannelDescriptorsResponse() : super();
-  ListNotificationChannelDescriptorsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNotificationChannelDescriptorsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListNotificationChannelDescriptorsResponse clone() =>
-      ListNotificationChannelDescriptorsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListNotificationChannelDescriptorsResponse create() =>
-      ListNotificationChannelDescriptorsResponse();
-  static PbList<ListNotificationChannelDescriptorsResponse> createRepeated() =>
-      PbList<ListNotificationChannelDescriptorsResponse>();
-  static ListNotificationChannelDescriptorsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListNotificationChannelDescriptorsResponse();
-    return _defaultInstance;
-  }
-
+  ListNotificationChannelDescriptorsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListNotificationChannelDescriptorsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListNotificationChannelDescriptorsResponse clone() => ListNotificationChannelDescriptorsResponse()..mergeFromMessage(this);
+  ListNotificationChannelDescriptorsResponse copyWith(void Function(ListNotificationChannelDescriptorsResponse) updates) => super.copyWith((message) => updates(message as ListNotificationChannelDescriptorsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListNotificationChannelDescriptorsResponse create() => ListNotificationChannelDescriptorsResponse();
+  ListNotificationChannelDescriptorsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListNotificationChannelDescriptorsResponse> createRepeated() => $pb.PbList<ListNotificationChannelDescriptorsResponse>();
+  static ListNotificationChannelDescriptorsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListNotificationChannelDescriptorsResponse _defaultInstance;
-  static void $checkItem(ListNotificationChannelDescriptorsResponse v) {
-    if (v is! ListNotificationChannelDescriptorsResponse)
-      checkItemFailed(v, 'ListNotificationChannelDescriptorsResponse');
-  }
 
-  List<NotificationChannelDescriptor> get channelDescriptors => $_getList(0);
+  $core.List<$0.NotificationChannelDescriptor> get channelDescriptors => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListNotificationChannelDescriptorsResponse
-    extends ListNotificationChannelDescriptorsResponse
-    with ReadonlyMessageMixin {}
-
-class GetNotificationChannelDescriptorRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('GetNotificationChannelDescriptorRequest')
-        ..aOS(3, 'name')
-        ..hasRequiredFields = false;
+class GetNotificationChannelDescriptorRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetNotificationChannelDescriptorRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..aOS(3, 'name')
+    ..hasRequiredFields = false
+  ;
 
   GetNotificationChannelDescriptorRequest() : super();
-  GetNotificationChannelDescriptorRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetNotificationChannelDescriptorRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetNotificationChannelDescriptorRequest clone() =>
-      GetNotificationChannelDescriptorRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetNotificationChannelDescriptorRequest create() =>
-      GetNotificationChannelDescriptorRequest();
-  static PbList<GetNotificationChannelDescriptorRequest> createRepeated() =>
-      PbList<GetNotificationChannelDescriptorRequest>();
-  static GetNotificationChannelDescriptorRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetNotificationChannelDescriptorRequest();
-    return _defaultInstance;
-  }
-
+  GetNotificationChannelDescriptorRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetNotificationChannelDescriptorRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetNotificationChannelDescriptorRequest clone() => GetNotificationChannelDescriptorRequest()..mergeFromMessage(this);
+  GetNotificationChannelDescriptorRequest copyWith(void Function(GetNotificationChannelDescriptorRequest) updates) => super.copyWith((message) => updates(message as GetNotificationChannelDescriptorRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetNotificationChannelDescriptorRequest create() => GetNotificationChannelDescriptorRequest();
+  GetNotificationChannelDescriptorRequest createEmptyInstance() => create();
+  static $pb.PbList<GetNotificationChannelDescriptorRequest> createRepeated() => $pb.PbList<GetNotificationChannelDescriptorRequest>();
+  static GetNotificationChannelDescriptorRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetNotificationChannelDescriptorRequest _defaultInstance;
-  static void $checkItem(GetNotificationChannelDescriptorRequest v) {
-    if (v is! GetNotificationChannelDescriptorRequest)
-      checkItemFailed(v, 'GetNotificationChannelDescriptorRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyGetNotificationChannelDescriptorRequest
-    extends GetNotificationChannelDescriptorRequest with ReadonlyMessageMixin {}
-
-class CreateNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateNotificationChannelRequest')
-    ..a<NotificationChannel>(2, 'notificationChannel', PbFieldType.OM,
-        NotificationChannel.getDefault, NotificationChannel.create)
+class CreateNotificationChannelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateNotificationChannelRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$0.NotificationChannel>(2, 'notificationChannel', $pb.PbFieldType.OM, $0.NotificationChannel.getDefault, $0.NotificationChannel.create)
     ..aOS(3, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   CreateNotificationChannelRequest() : super();
-  CreateNotificationChannelRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateNotificationChannelRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateNotificationChannelRequest clone() =>
-      CreateNotificationChannelRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateNotificationChannelRequest create() =>
-      CreateNotificationChannelRequest();
-  static PbList<CreateNotificationChannelRequest> createRepeated() =>
-      PbList<CreateNotificationChannelRequest>();
-  static CreateNotificationChannelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateNotificationChannelRequest();
-    return _defaultInstance;
-  }
-
+  CreateNotificationChannelRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateNotificationChannelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateNotificationChannelRequest clone() => CreateNotificationChannelRequest()..mergeFromMessage(this);
+  CreateNotificationChannelRequest copyWith(void Function(CreateNotificationChannelRequest) updates) => super.copyWith((message) => updates(message as CreateNotificationChannelRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateNotificationChannelRequest create() => CreateNotificationChannelRequest();
+  CreateNotificationChannelRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateNotificationChannelRequest> createRepeated() => $pb.PbList<CreateNotificationChannelRequest>();
+  static CreateNotificationChannelRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateNotificationChannelRequest _defaultInstance;
-  static void $checkItem(CreateNotificationChannelRequest v) {
-    if (v is! CreateNotificationChannelRequest)
-      checkItemFailed(v, 'CreateNotificationChannelRequest');
-  }
 
-  NotificationChannel get notificationChannel => $_getN(0);
-  set notificationChannel(NotificationChannel v) {
-    setField(2, v);
-  }
-
-  bool hasNotificationChannel() => $_has(0);
+  $0.NotificationChannel get notificationChannel => $_getN(0);
+  set notificationChannel($0.NotificationChannel v) { setField(2, v); }
+  $core.bool hasNotificationChannel() => $_has(0);
   void clearNotificationChannel() => clearField(2);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasName() => $_has(1);
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) { $_setString(1, v); }
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyCreateNotificationChannelRequest
-    extends CreateNotificationChannelRequest with ReadonlyMessageMixin {}
-
-class ListNotificationChannelsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListNotificationChannelsRequest')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+class ListNotificationChannelsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNotificationChannelsRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'name')
     ..aOS(6, 'filter')
     ..aOS(7, 'orderBy')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListNotificationChannelsRequest() : super();
-  ListNotificationChannelsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNotificationChannelsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListNotificationChannelsRequest clone() =>
-      ListNotificationChannelsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListNotificationChannelsRequest create() =>
-      ListNotificationChannelsRequest();
-  static PbList<ListNotificationChannelsRequest> createRepeated() =>
-      PbList<ListNotificationChannelsRequest>();
-  static ListNotificationChannelsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListNotificationChannelsRequest();
-    return _defaultInstance;
-  }
-
+  ListNotificationChannelsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListNotificationChannelsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListNotificationChannelsRequest clone() => ListNotificationChannelsRequest()..mergeFromMessage(this);
+  ListNotificationChannelsRequest copyWith(void Function(ListNotificationChannelsRequest) updates) => super.copyWith((message) => updates(message as ListNotificationChannelsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListNotificationChannelsRequest create() => ListNotificationChannelsRequest();
+  ListNotificationChannelsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListNotificationChannelsRequest> createRepeated() => $pb.PbList<ListNotificationChannelsRequest>();
+  static ListNotificationChannelsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListNotificationChannelsRequest _defaultInstance;
-  static void $checkItem(ListNotificationChannelsRequest v) {
-    if (v is! ListNotificationChannelsRequest)
-      checkItemFailed(v, 'ListNotificationChannelsRequest');
-  }
 
-  int get pageSize => $_get(0, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  bool hasPageSize() => $_has(0);
+  $core.int get pageSize => $_get(0, 0);
+  set pageSize($core.int v) { $_setSignedInt32(0, v); }
+  $core.bool hasPageSize() => $_has(0);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPageToken() => $_has(1);
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(4);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasName() => $_has(2);
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) { $_setString(2, v); }
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(5);
 
-  String get filter => $_getS(3, '');
-  set filter(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasFilter() => $_has(3);
+  $core.String get filter => $_getS(3, '');
+  set filter($core.String v) { $_setString(3, v); }
+  $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(6);
 
-  String get orderBy => $_getS(4, '');
-  set orderBy(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasOrderBy() => $_has(4);
+  $core.String get orderBy => $_getS(4, '');
+  set orderBy($core.String v) { $_setString(4, v); }
+  $core.bool hasOrderBy() => $_has(4);
   void clearOrderBy() => clearField(7);
 }
 
-class _ReadonlyListNotificationChannelsRequest
-    extends ListNotificationChannelsRequest with ReadonlyMessageMixin {}
-
-class ListNotificationChannelsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListNotificationChannelsResponse')
+class ListNotificationChannelsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNotificationChannelsResponse', package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(2, 'nextPageToken')
-    ..pp<NotificationChannel>(3, 'notificationChannels', PbFieldType.PM,
-        NotificationChannel.$checkItem, NotificationChannel.create)
-    ..hasRequiredFields = false;
+    ..pc<$0.NotificationChannel>(3, 'notificationChannels', $pb.PbFieldType.PM,$0.NotificationChannel.create)
+    ..hasRequiredFields = false
+  ;
 
   ListNotificationChannelsResponse() : super();
-  ListNotificationChannelsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNotificationChannelsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListNotificationChannelsResponse clone() =>
-      ListNotificationChannelsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListNotificationChannelsResponse create() =>
-      ListNotificationChannelsResponse();
-  static PbList<ListNotificationChannelsResponse> createRepeated() =>
-      PbList<ListNotificationChannelsResponse>();
-  static ListNotificationChannelsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListNotificationChannelsResponse();
-    return _defaultInstance;
-  }
-
+  ListNotificationChannelsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListNotificationChannelsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListNotificationChannelsResponse clone() => ListNotificationChannelsResponse()..mergeFromMessage(this);
+  ListNotificationChannelsResponse copyWith(void Function(ListNotificationChannelsResponse) updates) => super.copyWith((message) => updates(message as ListNotificationChannelsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListNotificationChannelsResponse create() => ListNotificationChannelsResponse();
+  ListNotificationChannelsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListNotificationChannelsResponse> createRepeated() => $pb.PbList<ListNotificationChannelsResponse>();
+  static ListNotificationChannelsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListNotificationChannelsResponse _defaultInstance;
-  static void $checkItem(ListNotificationChannelsResponse v) {
-    if (v is! ListNotificationChannelsResponse)
-      checkItemFailed(v, 'ListNotificationChannelsResponse');
-  }
 
-  String get nextPageToken => $_getS(0, '');
-  set nextPageToken(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasNextPageToken() => $_has(0);
+  $core.String get nextPageToken => $_getS(0, '');
+  set nextPageToken($core.String v) { $_setString(0, v); }
+  $core.bool hasNextPageToken() => $_has(0);
   void clearNextPageToken() => clearField(2);
 
-  List<NotificationChannel> get notificationChannels => $_getList(1);
+  $core.List<$0.NotificationChannel> get notificationChannels => $_getList(1);
 }
 
-class _ReadonlyListNotificationChannelsResponse
-    extends ListNotificationChannelsResponse with ReadonlyMessageMixin {}
-
-class GetNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetNotificationChannelRequest')
+class GetNotificationChannelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetNotificationChannelRequest', package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(3, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetNotificationChannelRequest() : super();
-  GetNotificationChannelRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetNotificationChannelRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetNotificationChannelRequest clone() =>
-      GetNotificationChannelRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetNotificationChannelRequest create() =>
-      GetNotificationChannelRequest();
-  static PbList<GetNotificationChannelRequest> createRepeated() =>
-      PbList<GetNotificationChannelRequest>();
-  static GetNotificationChannelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetNotificationChannelRequest();
-    return _defaultInstance;
-  }
-
+  GetNotificationChannelRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetNotificationChannelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetNotificationChannelRequest clone() => GetNotificationChannelRequest()..mergeFromMessage(this);
+  GetNotificationChannelRequest copyWith(void Function(GetNotificationChannelRequest) updates) => super.copyWith((message) => updates(message as GetNotificationChannelRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetNotificationChannelRequest create() => GetNotificationChannelRequest();
+  GetNotificationChannelRequest createEmptyInstance() => create();
+  static $pb.PbList<GetNotificationChannelRequest> createRepeated() => $pb.PbList<GetNotificationChannelRequest>();
+  static GetNotificationChannelRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetNotificationChannelRequest _defaultInstance;
-  static void $checkItem(GetNotificationChannelRequest v) {
-    if (v is! GetNotificationChannelRequest)
-      checkItemFailed(v, 'GetNotificationChannelRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
 }
 
-class _ReadonlyGetNotificationChannelRequest
-    extends GetNotificationChannelRequest with ReadonlyMessageMixin {}
-
-class UpdateNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateNotificationChannelRequest')
-    ..a<$google$protobuf.FieldMask>(
-        2,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..a<NotificationChannel>(3, 'notificationChannel', PbFieldType.OM,
-        NotificationChannel.getDefault, NotificationChannel.create)
-    ..hasRequiredFields = false;
+class UpdateNotificationChannelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateNotificationChannelRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM, $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$0.NotificationChannel>(3, 'notificationChannel', $pb.PbFieldType.OM, $0.NotificationChannel.getDefault, $0.NotificationChannel.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateNotificationChannelRequest() : super();
-  UpdateNotificationChannelRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateNotificationChannelRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateNotificationChannelRequest clone() =>
-      UpdateNotificationChannelRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateNotificationChannelRequest create() =>
-      UpdateNotificationChannelRequest();
-  static PbList<UpdateNotificationChannelRequest> createRepeated() =>
-      PbList<UpdateNotificationChannelRequest>();
-  static UpdateNotificationChannelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateNotificationChannelRequest();
-    return _defaultInstance;
-  }
-
+  UpdateNotificationChannelRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateNotificationChannelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateNotificationChannelRequest clone() => UpdateNotificationChannelRequest()..mergeFromMessage(this);
+  UpdateNotificationChannelRequest copyWith(void Function(UpdateNotificationChannelRequest) updates) => super.copyWith((message) => updates(message as UpdateNotificationChannelRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateNotificationChannelRequest create() => UpdateNotificationChannelRequest();
+  UpdateNotificationChannelRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateNotificationChannelRequest> createRepeated() => $pb.PbList<UpdateNotificationChannelRequest>();
+  static UpdateNotificationChannelRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateNotificationChannelRequest _defaultInstance;
-  static void $checkItem(UpdateNotificationChannelRequest v) {
-    if (v is! UpdateNotificationChannelRequest)
-      checkItemFailed(v, 'UpdateNotificationChannelRequest');
-  }
 
-  $google$protobuf.FieldMask get updateMask => $_getN(0);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(2, v);
-  }
-
-  bool hasUpdateMask() => $_has(0);
+  $1.FieldMask get updateMask => $_getN(0);
+  set updateMask($1.FieldMask v) { setField(2, v); }
+  $core.bool hasUpdateMask() => $_has(0);
   void clearUpdateMask() => clearField(2);
 
-  NotificationChannel get notificationChannel => $_getN(1);
-  set notificationChannel(NotificationChannel v) {
-    setField(3, v);
-  }
-
-  bool hasNotificationChannel() => $_has(1);
+  $0.NotificationChannel get notificationChannel => $_getN(1);
+  set notificationChannel($0.NotificationChannel v) { setField(3, v); }
+  $core.bool hasNotificationChannel() => $_has(1);
   void clearNotificationChannel() => clearField(3);
 }
 
-class _ReadonlyUpdateNotificationChannelRequest
-    extends UpdateNotificationChannelRequest with ReadonlyMessageMixin {}
-
-class DeleteNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteNotificationChannelRequest')
+class DeleteNotificationChannelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteNotificationChannelRequest', package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(3, 'name')
     ..aOB(5, 'force')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteNotificationChannelRequest() : super();
-  DeleteNotificationChannelRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteNotificationChannelRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteNotificationChannelRequest clone() =>
-      DeleteNotificationChannelRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteNotificationChannelRequest create() =>
-      DeleteNotificationChannelRequest();
-  static PbList<DeleteNotificationChannelRequest> createRepeated() =>
-      PbList<DeleteNotificationChannelRequest>();
-  static DeleteNotificationChannelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteNotificationChannelRequest();
-    return _defaultInstance;
-  }
-
+  DeleteNotificationChannelRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteNotificationChannelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteNotificationChannelRequest clone() => DeleteNotificationChannelRequest()..mergeFromMessage(this);
+  DeleteNotificationChannelRequest copyWith(void Function(DeleteNotificationChannelRequest) updates) => super.copyWith((message) => updates(message as DeleteNotificationChannelRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteNotificationChannelRequest create() => DeleteNotificationChannelRequest();
+  DeleteNotificationChannelRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteNotificationChannelRequest> createRepeated() => $pb.PbList<DeleteNotificationChannelRequest>();
+  static DeleteNotificationChannelRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteNotificationChannelRequest _defaultInstance;
-  static void $checkItem(DeleteNotificationChannelRequest v) {
-    if (v is! DeleteNotificationChannelRequest)
-      checkItemFailed(v, 'DeleteNotificationChannelRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
 
-  bool get force => $_get(1, false);
-  set force(bool v) {
-    $_setBool(1, v);
-  }
-
-  bool hasForce() => $_has(1);
+  $core.bool get force => $_get(1, false);
+  set force($core.bool v) { $_setBool(1, v); }
+  $core.bool hasForce() => $_has(1);
   void clearForce() => clearField(5);
 }
 
-class _ReadonlyDeleteNotificationChannelRequest
-    extends DeleteNotificationChannelRequest with ReadonlyMessageMixin {}
-
-class SendNotificationChannelVerificationCodeRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('SendNotificationChannelVerificationCodeRequest')
-        ..aOS(1, 'name')
-        ..hasRequiredFields = false;
+class SendNotificationChannelVerificationCodeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendNotificationChannelVerificationCodeRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false
+  ;
 
   SendNotificationChannelVerificationCodeRequest() : super();
-  SendNotificationChannelVerificationCodeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SendNotificationChannelVerificationCodeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  SendNotificationChannelVerificationCodeRequest clone() =>
-      SendNotificationChannelVerificationCodeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SendNotificationChannelVerificationCodeRequest create() =>
-      SendNotificationChannelVerificationCodeRequest();
-  static PbList<SendNotificationChannelVerificationCodeRequest>
-      createRepeated() =>
-          PbList<SendNotificationChannelVerificationCodeRequest>();
-  static SendNotificationChannelVerificationCodeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          _ReadonlySendNotificationChannelVerificationCodeRequest();
-    return _defaultInstance;
-  }
-
+  SendNotificationChannelVerificationCodeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SendNotificationChannelVerificationCodeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  SendNotificationChannelVerificationCodeRequest clone() => SendNotificationChannelVerificationCodeRequest()..mergeFromMessage(this);
+  SendNotificationChannelVerificationCodeRequest copyWith(void Function(SendNotificationChannelVerificationCodeRequest) updates) => super.copyWith((message) => updates(message as SendNotificationChannelVerificationCodeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SendNotificationChannelVerificationCodeRequest create() => SendNotificationChannelVerificationCodeRequest();
+  SendNotificationChannelVerificationCodeRequest createEmptyInstance() => create();
+  static $pb.PbList<SendNotificationChannelVerificationCodeRequest> createRepeated() => $pb.PbList<SendNotificationChannelVerificationCodeRequest>();
+  static SendNotificationChannelVerificationCodeRequest getDefault() => _defaultInstance ??= create()..freeze();
   static SendNotificationChannelVerificationCodeRequest _defaultInstance;
-  static void $checkItem(SendNotificationChannelVerificationCodeRequest v) {
-    if (v is! SendNotificationChannelVerificationCodeRequest)
-      checkItemFailed(v, 'SendNotificationChannelVerificationCodeRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlySendNotificationChannelVerificationCodeRequest
-    extends SendNotificationChannelVerificationCodeRequest
-    with ReadonlyMessageMixin {}
-
-class GetNotificationChannelVerificationCodeRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('GetNotificationChannelVerificationCodeRequest')
-        ..aOS(1, 'name')
-        ..a<$google$protobuf.Timestamp>(
-            2,
-            'expireTime',
-            PbFieldType.OM,
-            $google$protobuf.Timestamp.getDefault,
-            $google$protobuf.Timestamp.create)
-        ..hasRequiredFields = false;
+class GetNotificationChannelVerificationCodeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetNotificationChannelVerificationCodeRequest', package: const $pb.PackageName('google.monitoring.v3'))
+    ..aOS(1, 'name')
+    ..a<$2.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   GetNotificationChannelVerificationCodeRequest() : super();
-  GetNotificationChannelVerificationCodeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetNotificationChannelVerificationCodeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetNotificationChannelVerificationCodeRequest clone() =>
-      GetNotificationChannelVerificationCodeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetNotificationChannelVerificationCodeRequest create() =>
-      GetNotificationChannelVerificationCodeRequest();
-  static PbList<GetNotificationChannelVerificationCodeRequest>
-      createRepeated() =>
-          PbList<GetNotificationChannelVerificationCodeRequest>();
-  static GetNotificationChannelVerificationCodeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          _ReadonlyGetNotificationChannelVerificationCodeRequest();
-    return _defaultInstance;
-  }
-
+  GetNotificationChannelVerificationCodeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetNotificationChannelVerificationCodeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetNotificationChannelVerificationCodeRequest clone() => GetNotificationChannelVerificationCodeRequest()..mergeFromMessage(this);
+  GetNotificationChannelVerificationCodeRequest copyWith(void Function(GetNotificationChannelVerificationCodeRequest) updates) => super.copyWith((message) => updates(message as GetNotificationChannelVerificationCodeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetNotificationChannelVerificationCodeRequest create() => GetNotificationChannelVerificationCodeRequest();
+  GetNotificationChannelVerificationCodeRequest createEmptyInstance() => create();
+  static $pb.PbList<GetNotificationChannelVerificationCodeRequest> createRepeated() => $pb.PbList<GetNotificationChannelVerificationCodeRequest>();
+  static GetNotificationChannelVerificationCodeRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetNotificationChannelVerificationCodeRequest _defaultInstance;
-  static void $checkItem(GetNotificationChannelVerificationCodeRequest v) {
-    if (v is! GetNotificationChannelVerificationCodeRequest)
-      checkItemFailed(v, 'GetNotificationChannelVerificationCodeRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $google$protobuf.Timestamp get expireTime => $_getN(1);
-  set expireTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasExpireTime() => $_has(1);
+  $2.Timestamp get expireTime => $_getN(1);
+  set expireTime($2.Timestamp v) { setField(2, v); }
+  $core.bool hasExpireTime() => $_has(1);
   void clearExpireTime() => clearField(2);
 }
 
-class _ReadonlyGetNotificationChannelVerificationCodeRequest
-    extends GetNotificationChannelVerificationCodeRequest
-    with ReadonlyMessageMixin {}
-
-class GetNotificationChannelVerificationCodeResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('GetNotificationChannelVerificationCodeResponse')
-        ..aOS(1, 'code')
-        ..a<$google$protobuf.Timestamp>(
-            2,
-            'expireTime',
-            PbFieldType.OM,
-            $google$protobuf.Timestamp.getDefault,
-            $google$protobuf.Timestamp.create)
-        ..hasRequiredFields = false;
+class GetNotificationChannelVerificationCodeResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetNotificationChannelVerificationCodeResponse', package: const $pb.PackageName('google.monitoring.v3'))
+    ..aOS(1, 'code')
+    ..a<$2.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   GetNotificationChannelVerificationCodeResponse() : super();
-  GetNotificationChannelVerificationCodeResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetNotificationChannelVerificationCodeResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetNotificationChannelVerificationCodeResponse clone() =>
-      GetNotificationChannelVerificationCodeResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetNotificationChannelVerificationCodeResponse create() =>
-      GetNotificationChannelVerificationCodeResponse();
-  static PbList<GetNotificationChannelVerificationCodeResponse>
-      createRepeated() =>
-          PbList<GetNotificationChannelVerificationCodeResponse>();
-  static GetNotificationChannelVerificationCodeResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          _ReadonlyGetNotificationChannelVerificationCodeResponse();
-    return _defaultInstance;
-  }
-
+  GetNotificationChannelVerificationCodeResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetNotificationChannelVerificationCodeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetNotificationChannelVerificationCodeResponse clone() => GetNotificationChannelVerificationCodeResponse()..mergeFromMessage(this);
+  GetNotificationChannelVerificationCodeResponse copyWith(void Function(GetNotificationChannelVerificationCodeResponse) updates) => super.copyWith((message) => updates(message as GetNotificationChannelVerificationCodeResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static GetNotificationChannelVerificationCodeResponse create() => GetNotificationChannelVerificationCodeResponse();
+  GetNotificationChannelVerificationCodeResponse createEmptyInstance() => create();
+  static $pb.PbList<GetNotificationChannelVerificationCodeResponse> createRepeated() => $pb.PbList<GetNotificationChannelVerificationCodeResponse>();
+  static GetNotificationChannelVerificationCodeResponse getDefault() => _defaultInstance ??= create()..freeze();
   static GetNotificationChannelVerificationCodeResponse _defaultInstance;
-  static void $checkItem(GetNotificationChannelVerificationCodeResponse v) {
-    if (v is! GetNotificationChannelVerificationCodeResponse)
-      checkItemFailed(v, 'GetNotificationChannelVerificationCodeResponse');
-  }
 
-  String get code => $_getS(0, '');
-  set code(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasCode() => $_has(0);
+  $core.String get code => $_getS(0, '');
+  set code($core.String v) { $_setString(0, v); }
+  $core.bool hasCode() => $_has(0);
   void clearCode() => clearField(1);
 
-  $google$protobuf.Timestamp get expireTime => $_getN(1);
-  set expireTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasExpireTime() => $_has(1);
+  $2.Timestamp get expireTime => $_getN(1);
+  set expireTime($2.Timestamp v) { setField(2, v); }
+  $core.bool hasExpireTime() => $_has(1);
   void clearExpireTime() => clearField(2);
 }
 
-class _ReadonlyGetNotificationChannelVerificationCodeResponse
-    extends GetNotificationChannelVerificationCodeResponse
-    with ReadonlyMessageMixin {}
-
-class VerifyNotificationChannelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('VerifyNotificationChannelRequest')
+class VerifyNotificationChannelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VerifyNotificationChannelRequest', package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(1, 'name')
     ..aOS(2, 'code')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   VerifyNotificationChannelRequest() : super();
-  VerifyNotificationChannelRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VerifyNotificationChannelRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  VerifyNotificationChannelRequest clone() =>
-      VerifyNotificationChannelRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VerifyNotificationChannelRequest create() =>
-      VerifyNotificationChannelRequest();
-  static PbList<VerifyNotificationChannelRequest> createRepeated() =>
-      PbList<VerifyNotificationChannelRequest>();
-  static VerifyNotificationChannelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyVerifyNotificationChannelRequest();
-    return _defaultInstance;
-  }
-
+  VerifyNotificationChannelRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  VerifyNotificationChannelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  VerifyNotificationChannelRequest clone() => VerifyNotificationChannelRequest()..mergeFromMessage(this);
+  VerifyNotificationChannelRequest copyWith(void Function(VerifyNotificationChannelRequest) updates) => super.copyWith((message) => updates(message as VerifyNotificationChannelRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static VerifyNotificationChannelRequest create() => VerifyNotificationChannelRequest();
+  VerifyNotificationChannelRequest createEmptyInstance() => create();
+  static $pb.PbList<VerifyNotificationChannelRequest> createRepeated() => $pb.PbList<VerifyNotificationChannelRequest>();
+  static VerifyNotificationChannelRequest getDefault() => _defaultInstance ??= create()..freeze();
   static VerifyNotificationChannelRequest _defaultInstance;
-  static void $checkItem(VerifyNotificationChannelRequest v) {
-    if (v is! VerifyNotificationChannelRequest)
-      checkItemFailed(v, 'VerifyNotificationChannelRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get code => $_getS(1, '');
-  set code(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasCode() => $_has(1);
+  $core.String get code => $_getS(1, '');
+  set code($core.String v) { $_setString(1, v); }
+  $core.bool hasCode() => $_has(1);
   void clearCode() => clearField(2);
 }
 
-class _ReadonlyVerifyNotificationChannelRequest
-    extends VerifyNotificationChannelRequest with ReadonlyMessageMixin {}
-
 class NotificationChannelServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   NotificationChannelServiceApi(this._client);
 
-  Future<ListNotificationChannelDescriptorsResponse>
-      listNotificationChannelDescriptors(ClientContext ctx,
-          ListNotificationChannelDescriptorsRequest request) {
+  $async.Future<ListNotificationChannelDescriptorsResponse> listNotificationChannelDescriptors($pb.ClientContext ctx, ListNotificationChannelDescriptorsRequest request) {
     var emptyResponse = ListNotificationChannelDescriptorsResponse();
-    return _client.invoke<ListNotificationChannelDescriptorsResponse>(
-        ctx,
-        'NotificationChannelService',
-        'ListNotificationChannelDescriptors',
-        request,
-        emptyResponse);
+    return _client.invoke<ListNotificationChannelDescriptorsResponse>(ctx, 'NotificationChannelService', 'ListNotificationChannelDescriptors', request, emptyResponse);
   }
-
-  Future<NotificationChannelDescriptor> getNotificationChannelDescriptor(
-      ClientContext ctx, GetNotificationChannelDescriptorRequest request) {
-    var emptyResponse = NotificationChannelDescriptor();
-    return _client.invoke<NotificationChannelDescriptor>(
-        ctx,
-        'NotificationChannelService',
-        'GetNotificationChannelDescriptor',
-        request,
-        emptyResponse);
+  $async.Future<$0.NotificationChannelDescriptor> getNotificationChannelDescriptor($pb.ClientContext ctx, GetNotificationChannelDescriptorRequest request) {
+    var emptyResponse = $0.NotificationChannelDescriptor();
+    return _client.invoke<$0.NotificationChannelDescriptor>(ctx, 'NotificationChannelService', 'GetNotificationChannelDescriptor', request, emptyResponse);
   }
-
-  Future<ListNotificationChannelsResponse> listNotificationChannels(
-      ClientContext ctx, ListNotificationChannelsRequest request) {
+  $async.Future<ListNotificationChannelsResponse> listNotificationChannels($pb.ClientContext ctx, ListNotificationChannelsRequest request) {
     var emptyResponse = ListNotificationChannelsResponse();
-    return _client.invoke<ListNotificationChannelsResponse>(
-        ctx,
-        'NotificationChannelService',
-        'ListNotificationChannels',
-        request,
-        emptyResponse);
+    return _client.invoke<ListNotificationChannelsResponse>(ctx, 'NotificationChannelService', 'ListNotificationChannels', request, emptyResponse);
   }
-
-  Future<NotificationChannel> getNotificationChannel(
-      ClientContext ctx, GetNotificationChannelRequest request) {
-    var emptyResponse = NotificationChannel();
-    return _client.invoke<NotificationChannel>(
-        ctx,
-        'NotificationChannelService',
-        'GetNotificationChannel',
-        request,
-        emptyResponse);
+  $async.Future<$0.NotificationChannel> getNotificationChannel($pb.ClientContext ctx, GetNotificationChannelRequest request) {
+    var emptyResponse = $0.NotificationChannel();
+    return _client.invoke<$0.NotificationChannel>(ctx, 'NotificationChannelService', 'GetNotificationChannel', request, emptyResponse);
   }
-
-  Future<NotificationChannel> createNotificationChannel(
-      ClientContext ctx, CreateNotificationChannelRequest request) {
-    var emptyResponse = NotificationChannel();
-    return _client.invoke<NotificationChannel>(
-        ctx,
-        'NotificationChannelService',
-        'CreateNotificationChannel',
-        request,
-        emptyResponse);
+  $async.Future<$0.NotificationChannel> createNotificationChannel($pb.ClientContext ctx, CreateNotificationChannelRequest request) {
+    var emptyResponse = $0.NotificationChannel();
+    return _client.invoke<$0.NotificationChannel>(ctx, 'NotificationChannelService', 'CreateNotificationChannel', request, emptyResponse);
   }
-
-  Future<NotificationChannel> updateNotificationChannel(
-      ClientContext ctx, UpdateNotificationChannelRequest request) {
-    var emptyResponse = NotificationChannel();
-    return _client.invoke<NotificationChannel>(
-        ctx,
-        'NotificationChannelService',
-        'UpdateNotificationChannel',
-        request,
-        emptyResponse);
+  $async.Future<$0.NotificationChannel> updateNotificationChannel($pb.ClientContext ctx, UpdateNotificationChannelRequest request) {
+    var emptyResponse = $0.NotificationChannel();
+    return _client.invoke<$0.NotificationChannel>(ctx, 'NotificationChannelService', 'UpdateNotificationChannel', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteNotificationChannel(
-      ClientContext ctx, DeleteNotificationChannelRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx,
-        'NotificationChannelService',
-        'DeleteNotificationChannel',
-        request,
-        emptyResponse);
+  $async.Future<$3.Empty> deleteNotificationChannel($pb.ClientContext ctx, DeleteNotificationChannelRequest request) {
+    var emptyResponse = $3.Empty();
+    return _client.invoke<$3.Empty>(ctx, 'NotificationChannelService', 'DeleteNotificationChannel', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> sendNotificationChannelVerificationCode(
-      ClientContext ctx,
-      SendNotificationChannelVerificationCodeRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx,
-        'NotificationChannelService',
-        'SendNotificationChannelVerificationCode',
-        request,
-        emptyResponse);
+  $async.Future<$3.Empty> sendNotificationChannelVerificationCode($pb.ClientContext ctx, SendNotificationChannelVerificationCodeRequest request) {
+    var emptyResponse = $3.Empty();
+    return _client.invoke<$3.Empty>(ctx, 'NotificationChannelService', 'SendNotificationChannelVerificationCode', request, emptyResponse);
   }
-
-  Future<GetNotificationChannelVerificationCodeResponse>
-      getNotificationChannelVerificationCode(ClientContext ctx,
-          GetNotificationChannelVerificationCodeRequest request) {
+  $async.Future<GetNotificationChannelVerificationCodeResponse> getNotificationChannelVerificationCode($pb.ClientContext ctx, GetNotificationChannelVerificationCodeRequest request) {
     var emptyResponse = GetNotificationChannelVerificationCodeResponse();
-    return _client.invoke<GetNotificationChannelVerificationCodeResponse>(
-        ctx,
-        'NotificationChannelService',
-        'GetNotificationChannelVerificationCode',
-        request,
-        emptyResponse);
+    return _client.invoke<GetNotificationChannelVerificationCodeResponse>(ctx, 'NotificationChannelService', 'GetNotificationChannelVerificationCode', request, emptyResponse);
   }
-
-  Future<NotificationChannel> verifyNotificationChannel(
-      ClientContext ctx, VerifyNotificationChannelRequest request) {
-    var emptyResponse = NotificationChannel();
-    return _client.invoke<NotificationChannel>(
-        ctx,
-        'NotificationChannelService',
-        'VerifyNotificationChannel',
-        request,
-        emptyResponse);
+  $async.Future<$0.NotificationChannel> verifyNotificationChannel($pb.ClientContext ctx, VerifyNotificationChannelRequest request) {
+    var emptyResponse = $0.NotificationChannel();
+    return _client.invoke<$0.NotificationChannel>(ctx, 'NotificationChannelService', 'VerifyNotificationChannel', request, emptyResponse);
   }
 }
+

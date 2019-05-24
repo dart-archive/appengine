@@ -1,100 +1,61 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/monitoring.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Monitoring_MonitoringDestination extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Monitoring_MonitoringDestination')
+class Monitoring_MonitoringDestination extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Monitoring.MonitoringDestination', package: const $pb.PackageName('google.api'))
     ..aOS(1, 'monitoredResource')
     ..pPS(2, 'metrics')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Monitoring_MonitoringDestination() : super();
-  Monitoring_MonitoringDestination.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Monitoring_MonitoringDestination.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Monitoring_MonitoringDestination clone() =>
-      Monitoring_MonitoringDestination()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Monitoring_MonitoringDestination create() =>
-      Monitoring_MonitoringDestination();
-  static PbList<Monitoring_MonitoringDestination> createRepeated() =>
-      PbList<Monitoring_MonitoringDestination>();
-  static Monitoring_MonitoringDestination getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyMonitoring_MonitoringDestination();
-    return _defaultInstance;
-  }
-
+  Monitoring_MonitoringDestination.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Monitoring_MonitoringDestination.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Monitoring_MonitoringDestination clone() => Monitoring_MonitoringDestination()..mergeFromMessage(this);
+  Monitoring_MonitoringDestination copyWith(void Function(Monitoring_MonitoringDestination) updates) => super.copyWith((message) => updates(message as Monitoring_MonitoringDestination));
+  $pb.BuilderInfo get info_ => _i;
+  static Monitoring_MonitoringDestination create() => Monitoring_MonitoringDestination();
+  Monitoring_MonitoringDestination createEmptyInstance() => create();
+  static $pb.PbList<Monitoring_MonitoringDestination> createRepeated() => $pb.PbList<Monitoring_MonitoringDestination>();
+  static Monitoring_MonitoringDestination getDefault() => _defaultInstance ??= create()..freeze();
   static Monitoring_MonitoringDestination _defaultInstance;
-  static void $checkItem(Monitoring_MonitoringDestination v) {
-    if (v is! Monitoring_MonitoringDestination)
-      checkItemFailed(v, 'Monitoring_MonitoringDestination');
-  }
 
-  String get monitoredResource => $_getS(0, '');
-  set monitoredResource(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasMonitoredResource() => $_has(0);
+  $core.String get monitoredResource => $_getS(0, '');
+  set monitoredResource($core.String v) { $_setString(0, v); }
+  $core.bool hasMonitoredResource() => $_has(0);
   void clearMonitoredResource() => clearField(1);
 
-  List<String> get metrics => $_getList(1);
+  $core.List<$core.String> get metrics => $_getList(1);
 }
 
-class _ReadonlyMonitoring_MonitoringDestination
-    extends Monitoring_MonitoringDestination with ReadonlyMessageMixin {}
-
-class Monitoring extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Monitoring')
-    ..pp<Monitoring_MonitoringDestination>(
-        1,
-        'producerDestinations',
-        PbFieldType.PM,
-        Monitoring_MonitoringDestination.$checkItem,
-        Monitoring_MonitoringDestination.create)
-    ..pp<Monitoring_MonitoringDestination>(
-        2,
-        'consumerDestinations',
-        PbFieldType.PM,
-        Monitoring_MonitoringDestination.$checkItem,
-        Monitoring_MonitoringDestination.create)
-    ..hasRequiredFields = false;
+class Monitoring extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Monitoring', package: const $pb.PackageName('google.api'))
+    ..pc<Monitoring_MonitoringDestination>(1, 'producerDestinations', $pb.PbFieldType.PM,Monitoring_MonitoringDestination.create)
+    ..pc<Monitoring_MonitoringDestination>(2, 'consumerDestinations', $pb.PbFieldType.PM,Monitoring_MonitoringDestination.create)
+    ..hasRequiredFields = false
+  ;
 
   Monitoring() : super();
-  Monitoring.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Monitoring.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Monitoring.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Monitoring.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Monitoring clone() => Monitoring()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Monitoring copyWith(void Function(Monitoring) updates) => super.copyWith((message) => updates(message as Monitoring));
+  $pb.BuilderInfo get info_ => _i;
   static Monitoring create() => Monitoring();
-  static PbList<Monitoring> createRepeated() => PbList<Monitoring>();
-  static Monitoring getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyMonitoring();
-    return _defaultInstance;
-  }
-
+  Monitoring createEmptyInstance() => create();
+  static $pb.PbList<Monitoring> createRepeated() => $pb.PbList<Monitoring>();
+  static Monitoring getDefault() => _defaultInstance ??= create()..freeze();
   static Monitoring _defaultInstance;
-  static void $checkItem(Monitoring v) {
-    if (v is! Monitoring) checkItemFailed(v, 'Monitoring');
-  }
 
-  List<Monitoring_MonitoringDestination> get producerDestinations =>
-      $_getList(0);
+  $core.List<Monitoring_MonitoringDestination> get producerDestinations => $_getList(0);
 
-  List<Monitoring_MonitoringDestination> get consumerDestinations =>
-      $_getList(1);
+  $core.List<Monitoring_MonitoringDestination> get consumerDestinations => $_getList(1);
 }
 
-class _ReadonlyMonitoring extends Monitoring with ReadonlyMessageMixin {}

@@ -1,263 +1,164 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/containeranalysis/v1alpha1/image_basis.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'image_basis.pbenum.dart';
 
 export 'image_basis.pbenum.dart';
 
-class DockerImage_Layer extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DockerImage_Layer')
-    ..e<DockerImage_Layer_Directive>(
-        1,
-        'directive',
-        PbFieldType.OE,
-        DockerImage_Layer_Directive.DIRECTIVE_UNSPECIFIED,
-        DockerImage_Layer_Directive.valueOf,
-        DockerImage_Layer_Directive.values)
+class DockerImage_Layer extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DockerImage.Layer', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..e<DockerImage_Layer_Directive>(1, 'directive', $pb.PbFieldType.OE, DockerImage_Layer_Directive.DIRECTIVE_UNSPECIFIED, DockerImage_Layer_Directive.valueOf, DockerImage_Layer_Directive.values)
     ..aOS(2, 'arguments')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DockerImage_Layer() : super();
-  DockerImage_Layer.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage_Layer.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage_Layer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DockerImage_Layer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DockerImage_Layer clone() => DockerImage_Layer()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DockerImage_Layer copyWith(void Function(DockerImage_Layer) updates) => super.copyWith((message) => updates(message as DockerImage_Layer));
+  $pb.BuilderInfo get info_ => _i;
   static DockerImage_Layer create() => DockerImage_Layer();
-  static PbList<DockerImage_Layer> createRepeated() =>
-      PbList<DockerImage_Layer>();
-  static DockerImage_Layer getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDockerImage_Layer();
-    return _defaultInstance;
-  }
-
+  DockerImage_Layer createEmptyInstance() => create();
+  static $pb.PbList<DockerImage_Layer> createRepeated() => $pb.PbList<DockerImage_Layer>();
+  static DockerImage_Layer getDefault() => _defaultInstance ??= create()..freeze();
   static DockerImage_Layer _defaultInstance;
-  static void $checkItem(DockerImage_Layer v) {
-    if (v is! DockerImage_Layer) checkItemFailed(v, 'DockerImage_Layer');
-  }
 
   DockerImage_Layer_Directive get directive => $_getN(0);
-  set directive(DockerImage_Layer_Directive v) {
-    setField(1, v);
-  }
-
-  bool hasDirective() => $_has(0);
+  set directive(DockerImage_Layer_Directive v) { setField(1, v); }
+  $core.bool hasDirective() => $_has(0);
   void clearDirective() => clearField(1);
 
-  String get arguments => $_getS(1, '');
-  set arguments(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasArguments() => $_has(1);
+  $core.String get arguments => $_getS(1, '');
+  set arguments($core.String v) { $_setString(1, v); }
+  $core.bool hasArguments() => $_has(1);
   void clearArguments() => clearField(2);
 }
 
-class _ReadonlyDockerImage_Layer extends DockerImage_Layer
-    with ReadonlyMessageMixin {}
-
-class DockerImage_Fingerprint extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DockerImage_Fingerprint')
+class DockerImage_Fingerprint extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DockerImage.Fingerprint', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'v1Name')
     ..pPS(2, 'v2Blob')
     ..aOS(3, 'v2Name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DockerImage_Fingerprint() : super();
-  DockerImage_Fingerprint.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage_Fingerprint.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DockerImage_Fingerprint clone() =>
-      DockerImage_Fingerprint()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DockerImage_Fingerprint.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DockerImage_Fingerprint.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DockerImage_Fingerprint clone() => DockerImage_Fingerprint()..mergeFromMessage(this);
+  DockerImage_Fingerprint copyWith(void Function(DockerImage_Fingerprint) updates) => super.copyWith((message) => updates(message as DockerImage_Fingerprint));
+  $pb.BuilderInfo get info_ => _i;
   static DockerImage_Fingerprint create() => DockerImage_Fingerprint();
-  static PbList<DockerImage_Fingerprint> createRepeated() =>
-      PbList<DockerImage_Fingerprint>();
-  static DockerImage_Fingerprint getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDockerImage_Fingerprint();
-    return _defaultInstance;
-  }
-
+  DockerImage_Fingerprint createEmptyInstance() => create();
+  static $pb.PbList<DockerImage_Fingerprint> createRepeated() => $pb.PbList<DockerImage_Fingerprint>();
+  static DockerImage_Fingerprint getDefault() => _defaultInstance ??= create()..freeze();
   static DockerImage_Fingerprint _defaultInstance;
-  static void $checkItem(DockerImage_Fingerprint v) {
-    if (v is! DockerImage_Fingerprint)
-      checkItemFailed(v, 'DockerImage_Fingerprint');
-  }
 
-  String get v1Name => $_getS(0, '');
-  set v1Name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasV1Name() => $_has(0);
+  $core.String get v1Name => $_getS(0, '');
+  set v1Name($core.String v) { $_setString(0, v); }
+  $core.bool hasV1Name() => $_has(0);
   void clearV1Name() => clearField(1);
 
-  List<String> get v2Blob => $_getList(1);
+  $core.List<$core.String> get v2Blob => $_getList(1);
 
-  String get v2Name => $_getS(2, '');
-  set v2Name(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasV2Name() => $_has(2);
+  $core.String get v2Name => $_getS(2, '');
+  set v2Name($core.String v) { $_setString(2, v); }
+  $core.bool hasV2Name() => $_has(2);
   void clearV2Name() => clearField(3);
 }
 
-class _ReadonlyDockerImage_Fingerprint extends DockerImage_Fingerprint
-    with ReadonlyMessageMixin {}
-
-class DockerImage_Basis extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DockerImage_Basis')
+class DockerImage_Basis extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DockerImage.Basis', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'resourceUrl')
-    ..a<DockerImage_Fingerprint>(2, 'fingerprint', PbFieldType.OM,
-        DockerImage_Fingerprint.getDefault, DockerImage_Fingerprint.create)
-    ..hasRequiredFields = false;
+    ..a<DockerImage_Fingerprint>(2, 'fingerprint', $pb.PbFieldType.OM, DockerImage_Fingerprint.getDefault, DockerImage_Fingerprint.create)
+    ..hasRequiredFields = false
+  ;
 
   DockerImage_Basis() : super();
-  DockerImage_Basis.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage_Basis.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage_Basis.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DockerImage_Basis.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DockerImage_Basis clone() => DockerImage_Basis()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DockerImage_Basis copyWith(void Function(DockerImage_Basis) updates) => super.copyWith((message) => updates(message as DockerImage_Basis));
+  $pb.BuilderInfo get info_ => _i;
   static DockerImage_Basis create() => DockerImage_Basis();
-  static PbList<DockerImage_Basis> createRepeated() =>
-      PbList<DockerImage_Basis>();
-  static DockerImage_Basis getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDockerImage_Basis();
-    return _defaultInstance;
-  }
-
+  DockerImage_Basis createEmptyInstance() => create();
+  static $pb.PbList<DockerImage_Basis> createRepeated() => $pb.PbList<DockerImage_Basis>();
+  static DockerImage_Basis getDefault() => _defaultInstance ??= create()..freeze();
   static DockerImage_Basis _defaultInstance;
-  static void $checkItem(DockerImage_Basis v) {
-    if (v is! DockerImage_Basis) checkItemFailed(v, 'DockerImage_Basis');
-  }
 
-  String get resourceUrl => $_getS(0, '');
-  set resourceUrl(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasResourceUrl() => $_has(0);
+  $core.String get resourceUrl => $_getS(0, '');
+  set resourceUrl($core.String v) { $_setString(0, v); }
+  $core.bool hasResourceUrl() => $_has(0);
   void clearResourceUrl() => clearField(1);
 
   DockerImage_Fingerprint get fingerprint => $_getN(1);
-  set fingerprint(DockerImage_Fingerprint v) {
-    setField(2, v);
-  }
-
-  bool hasFingerprint() => $_has(1);
+  set fingerprint(DockerImage_Fingerprint v) { setField(2, v); }
+  $core.bool hasFingerprint() => $_has(1);
   void clearFingerprint() => clearField(2);
 }
 
-class _ReadonlyDockerImage_Basis extends DockerImage_Basis
-    with ReadonlyMessageMixin {}
-
-class DockerImage_Derived extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DockerImage_Derived')
-    ..a<DockerImage_Fingerprint>(1, 'fingerprint', PbFieldType.OM,
-        DockerImage_Fingerprint.getDefault, DockerImage_Fingerprint.create)
-    ..a<int>(2, 'distance', PbFieldType.OU3)
-    ..pp<DockerImage_Layer>(3, 'layerInfo', PbFieldType.PM,
-        DockerImage_Layer.$checkItem, DockerImage_Layer.create)
+class DockerImage_Derived extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DockerImage.Derived', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..a<DockerImage_Fingerprint>(1, 'fingerprint', $pb.PbFieldType.OM, DockerImage_Fingerprint.getDefault, DockerImage_Fingerprint.create)
+    ..a<$core.int>(2, 'distance', $pb.PbFieldType.OU3)
+    ..pc<DockerImage_Layer>(3, 'layerInfo', $pb.PbFieldType.PM,DockerImage_Layer.create)
     ..aOS(4, 'baseResourceUrl')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DockerImage_Derived() : super();
-  DockerImage_Derived.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage_Derived.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage_Derived.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DockerImage_Derived.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DockerImage_Derived clone() => DockerImage_Derived()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DockerImage_Derived copyWith(void Function(DockerImage_Derived) updates) => super.copyWith((message) => updates(message as DockerImage_Derived));
+  $pb.BuilderInfo get info_ => _i;
   static DockerImage_Derived create() => DockerImage_Derived();
-  static PbList<DockerImage_Derived> createRepeated() =>
-      PbList<DockerImage_Derived>();
-  static DockerImage_Derived getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDockerImage_Derived();
-    return _defaultInstance;
-  }
-
+  DockerImage_Derived createEmptyInstance() => create();
+  static $pb.PbList<DockerImage_Derived> createRepeated() => $pb.PbList<DockerImage_Derived>();
+  static DockerImage_Derived getDefault() => _defaultInstance ??= create()..freeze();
   static DockerImage_Derived _defaultInstance;
-  static void $checkItem(DockerImage_Derived v) {
-    if (v is! DockerImage_Derived) checkItemFailed(v, 'DockerImage_Derived');
-  }
 
   DockerImage_Fingerprint get fingerprint => $_getN(0);
-  set fingerprint(DockerImage_Fingerprint v) {
-    setField(1, v);
-  }
-
-  bool hasFingerprint() => $_has(0);
+  set fingerprint(DockerImage_Fingerprint v) { setField(1, v); }
+  $core.bool hasFingerprint() => $_has(0);
   void clearFingerprint() => clearField(1);
 
-  int get distance => $_get(1, 0);
-  set distance(int v) {
-    $_setUnsignedInt32(1, v);
-  }
-
-  bool hasDistance() => $_has(1);
+  $core.int get distance => $_get(1, 0);
+  set distance($core.int v) { $_setUnsignedInt32(1, v); }
+  $core.bool hasDistance() => $_has(1);
   void clearDistance() => clearField(2);
 
-  List<DockerImage_Layer> get layerInfo => $_getList(2);
+  $core.List<DockerImage_Layer> get layerInfo => $_getList(2);
 
-  String get baseResourceUrl => $_getS(3, '');
-  set baseResourceUrl(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasBaseResourceUrl() => $_has(3);
+  $core.String get baseResourceUrl => $_getS(3, '');
+  set baseResourceUrl($core.String v) { $_setString(3, v); }
+  $core.bool hasBaseResourceUrl() => $_has(3);
   void clearBaseResourceUrl() => clearField(4);
 }
 
-class _ReadonlyDockerImage_Derived extends DockerImage_Derived
-    with ReadonlyMessageMixin {}
-
-class DockerImage extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DockerImage')
-    ..hasRequiredFields = false;
+class DockerImage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DockerImage', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..hasRequiredFields = false
+  ;
 
   DockerImage() : super();
-  DockerImage.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DockerImage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DockerImage clone() => DockerImage()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DockerImage copyWith(void Function(DockerImage) updates) => super.copyWith((message) => updates(message as DockerImage));
+  $pb.BuilderInfo get info_ => _i;
   static DockerImage create() => DockerImage();
-  static PbList<DockerImage> createRepeated() => PbList<DockerImage>();
-  static DockerImage getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyDockerImage();
-    return _defaultInstance;
-  }
-
+  DockerImage createEmptyInstance() => create();
+  static $pb.PbList<DockerImage> createRepeated() => $pb.PbList<DockerImage>();
+  static DockerImage getDefault() => _defaultInstance ??= create()..freeze();
   static DockerImage _defaultInstance;
-  static void $checkItem(DockerImage v) {
-    if (v is! DockerImage) checkItemFailed(v, 'DockerImage');
-  }
 }
 
-class _ReadonlyDockerImage extends DockerImage with ReadonlyMessageMixin {}

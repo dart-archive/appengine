@@ -1,45 +1,34 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/control.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Control extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Control')
+class Control extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Control', package: const $pb.PackageName('google.api'))
     ..aOS(1, 'environment')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Control() : super();
-  Control.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Control.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Control.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Control.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Control clone() => Control()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Control copyWith(void Function(Control) updates) => super.copyWith((message) => updates(message as Control));
+  $pb.BuilderInfo get info_ => _i;
   static Control create() => Control();
-  static PbList<Control> createRepeated() => PbList<Control>();
-  static Control getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyControl();
-    return _defaultInstance;
-  }
-
+  Control createEmptyInstance() => create();
+  static $pb.PbList<Control> createRepeated() => $pb.PbList<Control>();
+  static Control getDefault() => _defaultInstance ??= create()..freeze();
   static Control _defaultInstance;
-  static void $checkItem(Control v) {
-    if (v is! Control) checkItemFailed(v, 'Control');
-  }
 
-  String get environment => $_getS(0, '');
-  set environment(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasEnvironment() => $_has(0);
+  $core.String get environment => $_getS(0, '');
+  set environment($core.String v) { $_setString(0, v); }
+  $core.bool hasEnvironment() => $_has(0);
   void clearEnvironment() => clearField(1);
 }
 
-class _ReadonlyControl extends Control with ReadonlyMessageMixin {}

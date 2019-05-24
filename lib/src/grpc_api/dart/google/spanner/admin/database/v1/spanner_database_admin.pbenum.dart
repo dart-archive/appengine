@@ -1,29 +1,27 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/admin/database/v1/spanner_database_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Database_State extends ProtobufEnum {
-  static const Database_State STATE_UNSPECIFIED =
-      Database_State._(0, 'STATE_UNSPECIFIED');
+class Database_State extends $pb.ProtobufEnum {
+  static const Database_State STATE_UNSPECIFIED = Database_State._(0, 'STATE_UNSPECIFIED');
   static const Database_State CREATING = Database_State._(1, 'CREATING');
   static const Database_State READY = Database_State._(2, 'READY');
 
-  static const List<Database_State> values = <Database_State>[
+  static const $core.List<Database_State> values = <Database_State> [
     STATE_UNSPECIFIED,
     CREATING,
     READY,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Database_State valueOf(int value) => _byValue[value] as Database_State;
-  static void $checkItem(Database_State v) {
-    if (v is! Database_State) checkItemFailed(v, 'Database_State');
-  }
+  static final $core.Map<$core.int, Database_State> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Database_State valueOf($core.int value) => _byValue[value];
 
-  const Database_State._(int v, String n) : super(v, n);
+  const Database_State._($core.int v, $core.String n) : super(v, n);
 }
+

@@ -1,906 +1,503 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/admin/instance/v1/spanner_instance_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../../../iam/v1/policy.pb.dart' as $google$iam$v1;
+import '../../../../protobuf/field_mask.pb.dart' as $0;
+import '../../../../protobuf/timestamp.pb.dart' as $1;
+import '../../../../longrunning/operations.pb.dart' as $2;
+import '../../../../protobuf/empty.pb.dart' as $3;
+import '../../../../iam/v1/iam_policy.pb.dart' as $4;
+import '../../../../iam/v1/policy.pb.dart' as $5;
 
 import 'spanner_instance_admin.pbenum.dart';
 
 export 'spanner_instance_admin.pbenum.dart';
 
-class InstanceConfig extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('InstanceConfig')
+class InstanceConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('InstanceConfig', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   InstanceConfig() : super();
-  InstanceConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InstanceConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InstanceConfig.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  InstanceConfig.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   InstanceConfig clone() => InstanceConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  InstanceConfig copyWith(void Function(InstanceConfig) updates) => super.copyWith((message) => updates(message as InstanceConfig));
+  $pb.BuilderInfo get info_ => _i;
   static InstanceConfig create() => InstanceConfig();
-  static PbList<InstanceConfig> createRepeated() => PbList<InstanceConfig>();
-  static InstanceConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyInstanceConfig();
-    return _defaultInstance;
-  }
-
+  InstanceConfig createEmptyInstance() => create();
+  static $pb.PbList<InstanceConfig> createRepeated() => $pb.PbList<InstanceConfig>();
+  static InstanceConfig getDefault() => _defaultInstance ??= create()..freeze();
   static InstanceConfig _defaultInstance;
-  static void $checkItem(InstanceConfig v) {
-    if (v is! InstanceConfig) checkItemFailed(v, 'InstanceConfig');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get displayName => $_getS(1, '');
-  set displayName(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasDisplayName() => $_has(1);
+  $core.String get displayName => $_getS(1, '');
+  set displayName($core.String v) { $_setString(1, v); }
+  $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 }
 
-class _ReadonlyInstanceConfig extends InstanceConfig with ReadonlyMessageMixin {
-}
-
-class Instance_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Instance_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Instance_LabelsEntry() : super();
-  Instance_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Instance_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Instance_LabelsEntry clone() =>
-      Instance_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Instance_LabelsEntry create() => Instance_LabelsEntry();
-  static PbList<Instance_LabelsEntry> createRepeated() =>
-      PbList<Instance_LabelsEntry>();
-  static Instance_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyInstance_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static Instance_LabelsEntry _defaultInstance;
-  static void $checkItem(Instance_LabelsEntry v) {
-    if (v is! Instance_LabelsEntry) checkItemFailed(v, 'Instance_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyInstance_LabelsEntry extends Instance_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class Instance extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Instance')
+class Instance extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Instance', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'config')
     ..aOS(3, 'displayName')
-    ..a<int>(5, 'nodeCount', PbFieldType.O3)
-    ..e<Instance_State>(
-        6,
-        'state',
-        PbFieldType.OE,
-        Instance_State.STATE_UNSPECIFIED,
-        Instance_State.valueOf,
-        Instance_State.values)
-    ..pp<Instance_LabelsEntry>(7, 'labels', PbFieldType.PM,
-        Instance_LabelsEntry.$checkItem, Instance_LabelsEntry.create)
-    ..hasRequiredFields = false;
+    ..a<$core.int>(5, 'nodeCount', $pb.PbFieldType.O3)
+    ..e<Instance_State>(6, 'state', $pb.PbFieldType.OE, Instance_State.STATE_UNSPECIFIED, Instance_State.valueOf, Instance_State.values)
+    ..m<$core.String, $core.String>(7, 'labels', 'Instance.LabelsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.spanner.admin.instance.v1'))
+    ..hasRequiredFields = false
+  ;
 
   Instance() : super();
-  Instance.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Instance.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Instance.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Instance.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Instance clone() => Instance()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Instance copyWith(void Function(Instance) updates) => super.copyWith((message) => updates(message as Instance));
+  $pb.BuilderInfo get info_ => _i;
   static Instance create() => Instance();
-  static PbList<Instance> createRepeated() => PbList<Instance>();
-  static Instance getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyInstance();
-    return _defaultInstance;
-  }
-
+  Instance createEmptyInstance() => create();
+  static $pb.PbList<Instance> createRepeated() => $pb.PbList<Instance>();
+  static Instance getDefault() => _defaultInstance ??= create()..freeze();
   static Instance _defaultInstance;
-  static void $checkItem(Instance v) {
-    if (v is! Instance) checkItemFailed(v, 'Instance');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get config => $_getS(1, '');
-  set config(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasConfig() => $_has(1);
+  $core.String get config => $_getS(1, '');
+  set config($core.String v) { $_setString(1, v); }
+  $core.bool hasConfig() => $_has(1);
   void clearConfig() => clearField(2);
 
-  String get displayName => $_getS(2, '');
-  set displayName(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasDisplayName() => $_has(2);
+  $core.String get displayName => $_getS(2, '');
+  set displayName($core.String v) { $_setString(2, v); }
+  $core.bool hasDisplayName() => $_has(2);
   void clearDisplayName() => clearField(3);
 
-  int get nodeCount => $_get(3, 0);
-  set nodeCount(int v) {
-    $_setSignedInt32(3, v);
-  }
-
-  bool hasNodeCount() => $_has(3);
+  $core.int get nodeCount => $_get(3, 0);
+  set nodeCount($core.int v) { $_setSignedInt32(3, v); }
+  $core.bool hasNodeCount() => $_has(3);
   void clearNodeCount() => clearField(5);
 
   Instance_State get state => $_getN(4);
-  set state(Instance_State v) {
-    setField(6, v);
-  }
-
-  bool hasState() => $_has(4);
+  set state(Instance_State v) { setField(6, v); }
+  $core.bool hasState() => $_has(4);
   void clearState() => clearField(6);
 
-  List<Instance_LabelsEntry> get labels => $_getList(5);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(5);
 }
 
-class _ReadonlyInstance extends Instance with ReadonlyMessageMixin {}
-
-class ListInstanceConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListInstanceConfigsRequest')
+class ListInstanceConfigsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstanceConfigsRequest', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..aOS(1, 'parent')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListInstanceConfigsRequest() : super();
-  ListInstanceConfigsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInstanceConfigsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListInstanceConfigsRequest clone() =>
-      ListInstanceConfigsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListInstanceConfigsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListInstanceConfigsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListInstanceConfigsRequest clone() => ListInstanceConfigsRequest()..mergeFromMessage(this);
+  ListInstanceConfigsRequest copyWith(void Function(ListInstanceConfigsRequest) updates) => super.copyWith((message) => updates(message as ListInstanceConfigsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListInstanceConfigsRequest create() => ListInstanceConfigsRequest();
-  static PbList<ListInstanceConfigsRequest> createRepeated() =>
-      PbList<ListInstanceConfigsRequest>();
-  static ListInstanceConfigsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListInstanceConfigsRequest();
-    return _defaultInstance;
-  }
-
+  ListInstanceConfigsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListInstanceConfigsRequest> createRepeated() => $pb.PbList<ListInstanceConfigsRequest>();
+  static ListInstanceConfigsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListInstanceConfigsRequest _defaultInstance;
-  static void $checkItem(ListInstanceConfigsRequest v) {
-    if (v is! ListInstanceConfigsRequest)
-      checkItemFailed(v, 'ListInstanceConfigsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasPageSize() => $_has(1);
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasPageToken() => $_has(2);
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) { $_setString(2, v); }
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListInstanceConfigsRequest extends ListInstanceConfigsRequest
-    with ReadonlyMessageMixin {}
-
-class ListInstanceConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListInstanceConfigsResponse')
-    ..pp<InstanceConfig>(1, 'instanceConfigs', PbFieldType.PM,
-        InstanceConfig.$checkItem, InstanceConfig.create)
+class ListInstanceConfigsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstanceConfigsResponse', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+    ..pc<InstanceConfig>(1, 'instanceConfigs', $pb.PbFieldType.PM,InstanceConfig.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListInstanceConfigsResponse() : super();
-  ListInstanceConfigsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInstanceConfigsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListInstanceConfigsResponse clone() =>
-      ListInstanceConfigsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListInstanceConfigsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListInstanceConfigsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListInstanceConfigsResponse clone() => ListInstanceConfigsResponse()..mergeFromMessage(this);
+  ListInstanceConfigsResponse copyWith(void Function(ListInstanceConfigsResponse) updates) => super.copyWith((message) => updates(message as ListInstanceConfigsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListInstanceConfigsResponse create() => ListInstanceConfigsResponse();
-  static PbList<ListInstanceConfigsResponse> createRepeated() =>
-      PbList<ListInstanceConfigsResponse>();
-  static ListInstanceConfigsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListInstanceConfigsResponse();
-    return _defaultInstance;
-  }
-
+  ListInstanceConfigsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListInstanceConfigsResponse> createRepeated() => $pb.PbList<ListInstanceConfigsResponse>();
+  static ListInstanceConfigsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListInstanceConfigsResponse _defaultInstance;
-  static void $checkItem(ListInstanceConfigsResponse v) {
-    if (v is! ListInstanceConfigsResponse)
-      checkItemFailed(v, 'ListInstanceConfigsResponse');
-  }
 
-  List<InstanceConfig> get instanceConfigs => $_getList(0);
+  $core.List<InstanceConfig> get instanceConfigs => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListInstanceConfigsResponse extends ListInstanceConfigsResponse
-    with ReadonlyMessageMixin {}
-
-class GetInstanceConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetInstanceConfigRequest')
+class GetInstanceConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInstanceConfigRequest', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetInstanceConfigRequest() : super();
-  GetInstanceConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetInstanceConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetInstanceConfigRequest clone() =>
-      GetInstanceConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetInstanceConfigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetInstanceConfigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetInstanceConfigRequest clone() => GetInstanceConfigRequest()..mergeFromMessage(this);
+  GetInstanceConfigRequest copyWith(void Function(GetInstanceConfigRequest) updates) => super.copyWith((message) => updates(message as GetInstanceConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetInstanceConfigRequest create() => GetInstanceConfigRequest();
-  static PbList<GetInstanceConfigRequest> createRepeated() =>
-      PbList<GetInstanceConfigRequest>();
-  static GetInstanceConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetInstanceConfigRequest();
-    return _defaultInstance;
-  }
-
+  GetInstanceConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetInstanceConfigRequest> createRepeated() => $pb.PbList<GetInstanceConfigRequest>();
+  static GetInstanceConfigRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetInstanceConfigRequest _defaultInstance;
-  static void $checkItem(GetInstanceConfigRequest v) {
-    if (v is! GetInstanceConfigRequest)
-      checkItemFailed(v, 'GetInstanceConfigRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetInstanceConfigRequest extends GetInstanceConfigRequest
-    with ReadonlyMessageMixin {}
-
-class GetInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetInstanceRequest')
+class GetInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInstanceRequest', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetInstanceRequest() : super();
-  GetInstanceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetInstanceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetInstanceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetInstanceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetInstanceRequest clone() => GetInstanceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetInstanceRequest copyWith(void Function(GetInstanceRequest) updates) => super.copyWith((message) => updates(message as GetInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetInstanceRequest create() => GetInstanceRequest();
-  static PbList<GetInstanceRequest> createRepeated() =>
-      PbList<GetInstanceRequest>();
-  static GetInstanceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetInstanceRequest();
-    return _defaultInstance;
-  }
-
+  GetInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<GetInstanceRequest> createRepeated() => $pb.PbList<GetInstanceRequest>();
+  static GetInstanceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetInstanceRequest _defaultInstance;
-  static void $checkItem(GetInstanceRequest v) {
-    if (v is! GetInstanceRequest) checkItemFailed(v, 'GetInstanceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetInstanceRequest extends GetInstanceRequest
-    with ReadonlyMessageMixin {}
-
-class CreateInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateInstanceRequest')
+class CreateInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInstanceRequest', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'instanceId')
-    ..a<Instance>(
-        3, 'instance', PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..hasRequiredFields = false;
+    ..a<Instance>(3, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateInstanceRequest() : super();
-  CreateInstanceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateInstanceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateInstanceRequest clone() =>
-      CreateInstanceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateInstanceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateInstanceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateInstanceRequest clone() => CreateInstanceRequest()..mergeFromMessage(this);
+  CreateInstanceRequest copyWith(void Function(CreateInstanceRequest) updates) => super.copyWith((message) => updates(message as CreateInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateInstanceRequest create() => CreateInstanceRequest();
-  static PbList<CreateInstanceRequest> createRepeated() =>
-      PbList<CreateInstanceRequest>();
-  static CreateInstanceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateInstanceRequest();
-    return _defaultInstance;
-  }
-
+  CreateInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateInstanceRequest> createRepeated() => $pb.PbList<CreateInstanceRequest>();
+  static CreateInstanceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateInstanceRequest _defaultInstance;
-  static void $checkItem(CreateInstanceRequest v) {
-    if (v is! CreateInstanceRequest)
-      checkItemFailed(v, 'CreateInstanceRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get instanceId => $_getS(1, '');
-  set instanceId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasInstanceId() => $_has(1);
+  $core.String get instanceId => $_getS(1, '');
+  set instanceId($core.String v) { $_setString(1, v); }
+  $core.bool hasInstanceId() => $_has(1);
   void clearInstanceId() => clearField(2);
 
   Instance get instance => $_getN(2);
-  set instance(Instance v) {
-    setField(3, v);
-  }
-
-  bool hasInstance() => $_has(2);
+  set instance(Instance v) { setField(3, v); }
+  $core.bool hasInstance() => $_has(2);
   void clearInstance() => clearField(3);
 }
 
-class _ReadonlyCreateInstanceRequest extends CreateInstanceRequest
-    with ReadonlyMessageMixin {}
-
-class ListInstancesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListInstancesRequest')
+class ListInstancesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesRequest', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..aOS(1, 'parent')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'filter')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListInstancesRequest() : super();
-  ListInstancesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInstancesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListInstancesRequest clone() =>
-      ListInstancesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListInstancesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListInstancesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListInstancesRequest clone() => ListInstancesRequest()..mergeFromMessage(this);
+  ListInstancesRequest copyWith(void Function(ListInstancesRequest) updates) => super.copyWith((message) => updates(message as ListInstancesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListInstancesRequest create() => ListInstancesRequest();
-  static PbList<ListInstancesRequest> createRepeated() =>
-      PbList<ListInstancesRequest>();
-  static ListInstancesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListInstancesRequest();
-    return _defaultInstance;
-  }
-
+  ListInstancesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListInstancesRequest> createRepeated() => $pb.PbList<ListInstancesRequest>();
+  static ListInstancesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListInstancesRequest _defaultInstance;
-  static void $checkItem(ListInstancesRequest v) {
-    if (v is! ListInstancesRequest) checkItemFailed(v, 'ListInstancesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasPageSize() => $_has(1);
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasPageToken() => $_has(2);
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) { $_setString(2, v); }
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  String get filter => $_getS(3, '');
-  set filter(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasFilter() => $_has(3);
+  $core.String get filter => $_getS(3, '');
+  set filter($core.String v) { $_setString(3, v); }
+  $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(4);
 }
 
-class _ReadonlyListInstancesRequest extends ListInstancesRequest
-    with ReadonlyMessageMixin {}
-
-class ListInstancesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListInstancesResponse')
-    ..pp<Instance>(
-        1, 'instances', PbFieldType.PM, Instance.$checkItem, Instance.create)
+class ListInstancesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesResponse', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+    ..pc<Instance>(1, 'instances', $pb.PbFieldType.PM,Instance.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListInstancesResponse() : super();
-  ListInstancesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInstancesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListInstancesResponse clone() =>
-      ListInstancesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListInstancesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListInstancesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListInstancesResponse clone() => ListInstancesResponse()..mergeFromMessage(this);
+  ListInstancesResponse copyWith(void Function(ListInstancesResponse) updates) => super.copyWith((message) => updates(message as ListInstancesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListInstancesResponse create() => ListInstancesResponse();
-  static PbList<ListInstancesResponse> createRepeated() =>
-      PbList<ListInstancesResponse>();
-  static ListInstancesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListInstancesResponse();
-    return _defaultInstance;
-  }
-
+  ListInstancesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListInstancesResponse> createRepeated() => $pb.PbList<ListInstancesResponse>();
+  static ListInstancesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListInstancesResponse _defaultInstance;
-  static void $checkItem(ListInstancesResponse v) {
-    if (v is! ListInstancesResponse)
-      checkItemFailed(v, 'ListInstancesResponse');
-  }
 
-  List<Instance> get instances => $_getList(0);
+  $core.List<Instance> get instances => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListInstancesResponse extends ListInstancesResponse
-    with ReadonlyMessageMixin {}
-
-class UpdateInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateInstanceRequest')
-    ..a<Instance>(
-        1, 'instance', PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$google$protobuf.FieldMask>(
-        2,
-        'fieldMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+class UpdateInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateInstanceRequest', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+    ..a<Instance>(1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
+    ..a<$0.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM, $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateInstanceRequest() : super();
-  UpdateInstanceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateInstanceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateInstanceRequest clone() =>
-      UpdateInstanceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateInstanceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateInstanceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateInstanceRequest clone() => UpdateInstanceRequest()..mergeFromMessage(this);
+  UpdateInstanceRequest copyWith(void Function(UpdateInstanceRequest) updates) => super.copyWith((message) => updates(message as UpdateInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateInstanceRequest create() => UpdateInstanceRequest();
-  static PbList<UpdateInstanceRequest> createRepeated() =>
-      PbList<UpdateInstanceRequest>();
-  static UpdateInstanceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateInstanceRequest();
-    return _defaultInstance;
-  }
-
+  UpdateInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateInstanceRequest> createRepeated() => $pb.PbList<UpdateInstanceRequest>();
+  static UpdateInstanceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateInstanceRequest _defaultInstance;
-  static void $checkItem(UpdateInstanceRequest v) {
-    if (v is! UpdateInstanceRequest)
-      checkItemFailed(v, 'UpdateInstanceRequest');
-  }
 
   Instance get instance => $_getN(0);
-  set instance(Instance v) {
-    setField(1, v);
-  }
-
-  bool hasInstance() => $_has(0);
+  set instance(Instance v) { setField(1, v); }
+  $core.bool hasInstance() => $_has(0);
   void clearInstance() => clearField(1);
 
-  $google$protobuf.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($google$protobuf.FieldMask v) {
-    setField(2, v);
-  }
-
-  bool hasFieldMask() => $_has(1);
+  $0.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($0.FieldMask v) { setField(2, v); }
+  $core.bool hasFieldMask() => $_has(1);
   void clearFieldMask() => clearField(2);
 }
 
-class _ReadonlyUpdateInstanceRequest extends UpdateInstanceRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteInstanceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteInstanceRequest')
+class DeleteInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteInstanceRequest', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteInstanceRequest() : super();
-  DeleteInstanceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteInstanceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteInstanceRequest clone() =>
-      DeleteInstanceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteInstanceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteInstanceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteInstanceRequest clone() => DeleteInstanceRequest()..mergeFromMessage(this);
+  DeleteInstanceRequest copyWith(void Function(DeleteInstanceRequest) updates) => super.copyWith((message) => updates(message as DeleteInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteInstanceRequest create() => DeleteInstanceRequest();
-  static PbList<DeleteInstanceRequest> createRepeated() =>
-      PbList<DeleteInstanceRequest>();
-  static DeleteInstanceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteInstanceRequest();
-    return _defaultInstance;
-  }
-
+  DeleteInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteInstanceRequest> createRepeated() => $pb.PbList<DeleteInstanceRequest>();
+  static DeleteInstanceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteInstanceRequest _defaultInstance;
-  static void $checkItem(DeleteInstanceRequest v) {
-    if (v is! DeleteInstanceRequest)
-      checkItemFailed(v, 'DeleteInstanceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteInstanceRequest extends DeleteInstanceRequest
-    with ReadonlyMessageMixin {}
-
-class CreateInstanceMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateInstanceMetadata')
-    ..a<Instance>(
-        1, 'instance', PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'cancelTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false;
+class CreateInstanceMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInstanceMetadata', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+    ..a<Instance>(1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
+    ..a<$1.Timestamp>(2, 'startTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(4, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateInstanceMetadata() : super();
-  CreateInstanceMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateInstanceMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateInstanceMetadata clone() =>
-      CreateInstanceMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateInstanceMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateInstanceMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateInstanceMetadata clone() => CreateInstanceMetadata()..mergeFromMessage(this);
+  CreateInstanceMetadata copyWith(void Function(CreateInstanceMetadata) updates) => super.copyWith((message) => updates(message as CreateInstanceMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static CreateInstanceMetadata create() => CreateInstanceMetadata();
-  static PbList<CreateInstanceMetadata> createRepeated() =>
-      PbList<CreateInstanceMetadata>();
-  static CreateInstanceMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateInstanceMetadata();
-    return _defaultInstance;
-  }
-
+  CreateInstanceMetadata createEmptyInstance() => create();
+  static $pb.PbList<CreateInstanceMetadata> createRepeated() => $pb.PbList<CreateInstanceMetadata>();
+  static CreateInstanceMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static CreateInstanceMetadata _defaultInstance;
-  static void $checkItem(CreateInstanceMetadata v) {
-    if (v is! CreateInstanceMetadata)
-      checkItemFailed(v, 'CreateInstanceMetadata');
-  }
 
   Instance get instance => $_getN(0);
-  set instance(Instance v) {
-    setField(1, v);
-  }
-
-  bool hasInstance() => $_has(0);
+  set instance(Instance v) { setField(1, v); }
+  $core.bool hasInstance() => $_has(0);
   void clearInstance() => clearField(1);
 
-  $google$protobuf.Timestamp get startTime => $_getN(1);
-  set startTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasStartTime() => $_has(1);
+  $1.Timestamp get startTime => $_getN(1);
+  set startTime($1.Timestamp v) { setField(2, v); }
+  $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $google$protobuf.Timestamp get cancelTime => $_getN(2);
-  set cancelTime($google$protobuf.Timestamp v) {
-    setField(3, v);
-  }
-
-  bool hasCancelTime() => $_has(2);
+  $1.Timestamp get cancelTime => $_getN(2);
+  set cancelTime($1.Timestamp v) { setField(3, v); }
+  $core.bool hasCancelTime() => $_has(2);
   void clearCancelTime() => clearField(3);
 
-  $google$protobuf.Timestamp get endTime => $_getN(3);
-  set endTime($google$protobuf.Timestamp v) {
-    setField(4, v);
-  }
-
-  bool hasEndTime() => $_has(3);
+  $1.Timestamp get endTime => $_getN(3);
+  set endTime($1.Timestamp v) { setField(4, v); }
+  $core.bool hasEndTime() => $_has(3);
   void clearEndTime() => clearField(4);
 }
 
-class _ReadonlyCreateInstanceMetadata extends CreateInstanceMetadata
-    with ReadonlyMessageMixin {}
-
-class UpdateInstanceMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateInstanceMetadata')
-    ..a<Instance>(
-        1, 'instance', PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'cancelTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false;
+class UpdateInstanceMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateInstanceMetadata', package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+    ..a<Instance>(1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
+    ..a<$1.Timestamp>(2, 'startTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(4, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateInstanceMetadata() : super();
-  UpdateInstanceMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateInstanceMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateInstanceMetadata clone() =>
-      UpdateInstanceMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateInstanceMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateInstanceMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateInstanceMetadata clone() => UpdateInstanceMetadata()..mergeFromMessage(this);
+  UpdateInstanceMetadata copyWith(void Function(UpdateInstanceMetadata) updates) => super.copyWith((message) => updates(message as UpdateInstanceMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateInstanceMetadata create() => UpdateInstanceMetadata();
-  static PbList<UpdateInstanceMetadata> createRepeated() =>
-      PbList<UpdateInstanceMetadata>();
-  static UpdateInstanceMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateInstanceMetadata();
-    return _defaultInstance;
-  }
-
+  UpdateInstanceMetadata createEmptyInstance() => create();
+  static $pb.PbList<UpdateInstanceMetadata> createRepeated() => $pb.PbList<UpdateInstanceMetadata>();
+  static UpdateInstanceMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateInstanceMetadata _defaultInstance;
-  static void $checkItem(UpdateInstanceMetadata v) {
-    if (v is! UpdateInstanceMetadata)
-      checkItemFailed(v, 'UpdateInstanceMetadata');
-  }
 
   Instance get instance => $_getN(0);
-  set instance(Instance v) {
-    setField(1, v);
-  }
-
-  bool hasInstance() => $_has(0);
+  set instance(Instance v) { setField(1, v); }
+  $core.bool hasInstance() => $_has(0);
   void clearInstance() => clearField(1);
 
-  $google$protobuf.Timestamp get startTime => $_getN(1);
-  set startTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasStartTime() => $_has(1);
+  $1.Timestamp get startTime => $_getN(1);
+  set startTime($1.Timestamp v) { setField(2, v); }
+  $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $google$protobuf.Timestamp get cancelTime => $_getN(2);
-  set cancelTime($google$protobuf.Timestamp v) {
-    setField(3, v);
-  }
-
-  bool hasCancelTime() => $_has(2);
+  $1.Timestamp get cancelTime => $_getN(2);
+  set cancelTime($1.Timestamp v) { setField(3, v); }
+  $core.bool hasCancelTime() => $_has(2);
   void clearCancelTime() => clearField(3);
 
-  $google$protobuf.Timestamp get endTime => $_getN(3);
-  set endTime($google$protobuf.Timestamp v) {
-    setField(4, v);
-  }
-
-  bool hasEndTime() => $_has(3);
+  $1.Timestamp get endTime => $_getN(3);
+  set endTime($1.Timestamp v) { setField(4, v); }
+  $core.bool hasEndTime() => $_has(3);
   void clearEndTime() => clearField(4);
 }
 
-class _ReadonlyUpdateInstanceMetadata extends UpdateInstanceMetadata
-    with ReadonlyMessageMixin {}
-
 class InstanceAdminApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   InstanceAdminApi(this._client);
 
-  Future<ListInstanceConfigsResponse> listInstanceConfigs(
-      ClientContext ctx, ListInstanceConfigsRequest request) {
+  $async.Future<ListInstanceConfigsResponse> listInstanceConfigs($pb.ClientContext ctx, ListInstanceConfigsRequest request) {
     var emptyResponse = ListInstanceConfigsResponse();
-    return _client.invoke<ListInstanceConfigsResponse>(
-        ctx, 'InstanceAdmin', 'ListInstanceConfigs', request, emptyResponse);
+    return _client.invoke<ListInstanceConfigsResponse>(ctx, 'InstanceAdmin', 'ListInstanceConfigs', request, emptyResponse);
   }
-
-  Future<InstanceConfig> getInstanceConfig(
-      ClientContext ctx, GetInstanceConfigRequest request) {
+  $async.Future<InstanceConfig> getInstanceConfig($pb.ClientContext ctx, GetInstanceConfigRequest request) {
     var emptyResponse = InstanceConfig();
-    return _client.invoke<InstanceConfig>(
-        ctx, 'InstanceAdmin', 'GetInstanceConfig', request, emptyResponse);
+    return _client.invoke<InstanceConfig>(ctx, 'InstanceAdmin', 'GetInstanceConfig', request, emptyResponse);
   }
-
-  Future<ListInstancesResponse> listInstances(
-      ClientContext ctx, ListInstancesRequest request) {
+  $async.Future<ListInstancesResponse> listInstances($pb.ClientContext ctx, ListInstancesRequest request) {
     var emptyResponse = ListInstancesResponse();
-    return _client.invoke<ListInstancesResponse>(
-        ctx, 'InstanceAdmin', 'ListInstances', request, emptyResponse);
+    return _client.invoke<ListInstancesResponse>(ctx, 'InstanceAdmin', 'ListInstances', request, emptyResponse);
   }
-
-  Future<Instance> getInstance(ClientContext ctx, GetInstanceRequest request) {
+  $async.Future<Instance> getInstance($pb.ClientContext ctx, GetInstanceRequest request) {
     var emptyResponse = Instance();
-    return _client.invoke<Instance>(
-        ctx, 'InstanceAdmin', 'GetInstance', request, emptyResponse);
+    return _client.invoke<Instance>(ctx, 'InstanceAdmin', 'GetInstance', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> createInstance(
-      ClientContext ctx, CreateInstanceRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'InstanceAdmin', 'CreateInstance', request, emptyResponse);
+  $async.Future<$2.Operation> createInstance($pb.ClientContext ctx, CreateInstanceRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'InstanceAdmin', 'CreateInstance', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> updateInstance(
-      ClientContext ctx, UpdateInstanceRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'InstanceAdmin', 'UpdateInstance', request, emptyResponse);
+  $async.Future<$2.Operation> updateInstance($pb.ClientContext ctx, UpdateInstanceRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'InstanceAdmin', 'UpdateInstance', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteInstance(
-      ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'InstanceAdmin', 'DeleteInstance', request, emptyResponse);
+  $async.Future<$3.Empty> deleteInstance($pb.ClientContext ctx, DeleteInstanceRequest request) {
+    var emptyResponse = $3.Empty();
+    return _client.invoke<$3.Empty>(ctx, 'InstanceAdmin', 'DeleteInstance', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
-        ctx, 'InstanceAdmin', 'SetIamPolicy', request, emptyResponse);
+  $async.Future<$5.Policy> setIamPolicy($pb.ClientContext ctx, $4.SetIamPolicyRequest request) {
+    var emptyResponse = $5.Policy();
+    return _client.invoke<$5.Policy>(ctx, 'InstanceAdmin', 'SetIamPolicy', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
-        ctx, 'InstanceAdmin', 'GetIamPolicy', request, emptyResponse);
+  $async.Future<$5.Policy> getIamPolicy($pb.ClientContext ctx, $4.GetIamPolicyRequest request) {
+    var emptyResponse = $5.Policy();
+    return _client.invoke<$5.Policy>(ctx, 'InstanceAdmin', 'GetIamPolicy', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
-    return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
-        ctx, 'InstanceAdmin', 'TestIamPermissions', request, emptyResponse);
+  $async.Future<$4.TestIamPermissionsResponse> testIamPermissions($pb.ClientContext ctx, $4.TestIamPermissionsRequest request) {
+    var emptyResponse = $4.TestIamPermissionsResponse();
+    return _client.invoke<$4.TestIamPermissionsResponse>(ctx, 'InstanceAdmin', 'TestIamPermissions', request, emptyResponse);
   }
 }
+

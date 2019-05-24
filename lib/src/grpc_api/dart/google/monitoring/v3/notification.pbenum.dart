@@ -1,36 +1,27 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/notification.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class NotificationChannel_VerificationStatus extends ProtobufEnum {
-  static const NotificationChannel_VerificationStatus
-      VERIFICATION_STATUS_UNSPECIFIED =
-      NotificationChannel_VerificationStatus._(
-          0, 'VERIFICATION_STATUS_UNSPECIFIED');
-  static const NotificationChannel_VerificationStatus UNVERIFIED =
-      NotificationChannel_VerificationStatus._(1, 'UNVERIFIED');
-  static const NotificationChannel_VerificationStatus VERIFIED =
-      NotificationChannel_VerificationStatus._(2, 'VERIFIED');
+class NotificationChannel_VerificationStatus extends $pb.ProtobufEnum {
+  static const NotificationChannel_VerificationStatus VERIFICATION_STATUS_UNSPECIFIED = NotificationChannel_VerificationStatus._(0, 'VERIFICATION_STATUS_UNSPECIFIED');
+  static const NotificationChannel_VerificationStatus UNVERIFIED = NotificationChannel_VerificationStatus._(1, 'UNVERIFIED');
+  static const NotificationChannel_VerificationStatus VERIFIED = NotificationChannel_VerificationStatus._(2, 'VERIFIED');
 
-  static const List<NotificationChannel_VerificationStatus> values =
-      <NotificationChannel_VerificationStatus>[
+  static const $core.List<NotificationChannel_VerificationStatus> values = <NotificationChannel_VerificationStatus> [
     VERIFICATION_STATUS_UNSPECIFIED,
     UNVERIFIED,
     VERIFIED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static NotificationChannel_VerificationStatus valueOf(int value) =>
-      _byValue[value] as NotificationChannel_VerificationStatus;
-  static void $checkItem(NotificationChannel_VerificationStatus v) {
-    if (v is! NotificationChannel_VerificationStatus)
-      checkItemFailed(v, 'NotificationChannel_VerificationStatus');
-  }
+  static final $core.Map<$core.int, NotificationChannel_VerificationStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static NotificationChannel_VerificationStatus valueOf($core.int value) => _byValue[value];
 
-  const NotificationChannel_VerificationStatus._(int v, String n) : super(v, n);
+  const NotificationChannel_VerificationStatus._($core.int v, $core.String n) : super(v, n);
 }
+

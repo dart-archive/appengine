@@ -1,31 +1,29 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/source/v1/source_context.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class AliasContext_Kind extends ProtobufEnum {
+class AliasContext_Kind extends $pb.ProtobufEnum {
   static const AliasContext_Kind ANY = AliasContext_Kind._(0, 'ANY');
   static const AliasContext_Kind FIXED = AliasContext_Kind._(1, 'FIXED');
   static const AliasContext_Kind MOVABLE = AliasContext_Kind._(2, 'MOVABLE');
   static const AliasContext_Kind OTHER = AliasContext_Kind._(4, 'OTHER');
 
-  static const List<AliasContext_Kind> values = <AliasContext_Kind>[
+  static const $core.List<AliasContext_Kind> values = <AliasContext_Kind> [
     ANY,
     FIXED,
     MOVABLE,
     OTHER,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static AliasContext_Kind valueOf(int value) =>
-      _byValue[value] as AliasContext_Kind;
-  static void $checkItem(AliasContext_Kind v) {
-    if (v is! AliasContext_Kind) checkItemFailed(v, 'AliasContext_Kind');
-  }
+  static final $core.Map<$core.int, AliasContext_Kind> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AliasContext_Kind valueOf($core.int value) => _byValue[value];
 
-  const AliasContext_Kind._(int v, String n) : super(v, n);
+  const AliasContext_Kind._($core.int v, $core.String n) : super(v, n);
 }
+

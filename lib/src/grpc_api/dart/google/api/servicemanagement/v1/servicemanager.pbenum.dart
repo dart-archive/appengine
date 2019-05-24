@@ -1,31 +1,25 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/servicemanagement/v1/servicemanager.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class GetServiceConfigRequest_ConfigView extends ProtobufEnum {
-  static const GetServiceConfigRequest_ConfigView BASIC =
-      GetServiceConfigRequest_ConfigView._(0, 'BASIC');
-  static const GetServiceConfigRequest_ConfigView FULL =
-      GetServiceConfigRequest_ConfigView._(1, 'FULL');
+class GetServiceConfigRequest_ConfigView extends $pb.ProtobufEnum {
+  static const GetServiceConfigRequest_ConfigView BASIC = GetServiceConfigRequest_ConfigView._(0, 'BASIC');
+  static const GetServiceConfigRequest_ConfigView FULL = GetServiceConfigRequest_ConfigView._(1, 'FULL');
 
-  static const List<GetServiceConfigRequest_ConfigView> values =
-      <GetServiceConfigRequest_ConfigView>[
+  static const $core.List<GetServiceConfigRequest_ConfigView> values = <GetServiceConfigRequest_ConfigView> [
     BASIC,
     FULL,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static GetServiceConfigRequest_ConfigView valueOf(int value) =>
-      _byValue[value] as GetServiceConfigRequest_ConfigView;
-  static void $checkItem(GetServiceConfigRequest_ConfigView v) {
-    if (v is! GetServiceConfigRequest_ConfigView)
-      checkItemFailed(v, 'GetServiceConfigRequest_ConfigView');
-  }
+  static final $core.Map<$core.int, GetServiceConfigRequest_ConfigView> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static GetServiceConfigRequest_ConfigView valueOf($core.int value) => _byValue[value];
 
-  const GetServiceConfigRequest_ConfigView._(int v, String n) : super(v, n);
+  const GetServiceConfigRequest_ConfigView._($core.int v, $core.String n) : super(v, n);
 }
+

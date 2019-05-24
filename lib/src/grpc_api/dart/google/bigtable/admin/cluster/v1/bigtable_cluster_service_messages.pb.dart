@@ -1,596 +1,340 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/cluster/v1/bigtable_cluster_service_messages.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'bigtable_cluster_data.pb.dart';
-import '../../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import 'bigtable_cluster_data.pb.dart' as $0;
+import '../../../../protobuf/timestamp.pb.dart' as $1;
 
-class ListZonesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListZonesRequest')
+class ListZonesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListZonesRequest', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListZonesRequest() : super();
-  ListZonesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListZonesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListZonesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListZonesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListZonesRequest clone() => ListZonesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListZonesRequest copyWith(void Function(ListZonesRequest) updates) => super.copyWith((message) => updates(message as ListZonesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListZonesRequest create() => ListZonesRequest();
-  static PbList<ListZonesRequest> createRepeated() =>
-      PbList<ListZonesRequest>();
-  static ListZonesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListZonesRequest();
-    return _defaultInstance;
-  }
-
+  ListZonesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListZonesRequest> createRepeated() => $pb.PbList<ListZonesRequest>();
+  static ListZonesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListZonesRequest _defaultInstance;
-  static void $checkItem(ListZonesRequest v) {
-    if (v is! ListZonesRequest) checkItemFailed(v, 'ListZonesRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyListZonesRequest extends ListZonesRequest
-    with ReadonlyMessageMixin {}
-
-class ListZonesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListZonesResponse')
-    ..pp<Zone>(1, 'zones', PbFieldType.PM, Zone.$checkItem, Zone.create)
-    ..hasRequiredFields = false;
+class ListZonesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListZonesResponse', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
+    ..pc<$0.Zone>(1, 'zones', $pb.PbFieldType.PM,$0.Zone.create)
+    ..hasRequiredFields = false
+  ;
 
   ListZonesResponse() : super();
-  ListZonesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListZonesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListZonesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListZonesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListZonesResponse clone() => ListZonesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListZonesResponse copyWith(void Function(ListZonesResponse) updates) => super.copyWith((message) => updates(message as ListZonesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListZonesResponse create() => ListZonesResponse();
-  static PbList<ListZonesResponse> createRepeated() =>
-      PbList<ListZonesResponse>();
-  static ListZonesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListZonesResponse();
-    return _defaultInstance;
-  }
-
+  ListZonesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListZonesResponse> createRepeated() => $pb.PbList<ListZonesResponse>();
+  static ListZonesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListZonesResponse _defaultInstance;
-  static void $checkItem(ListZonesResponse v) {
-    if (v is! ListZonesResponse) checkItemFailed(v, 'ListZonesResponse');
-  }
 
-  List<Zone> get zones => $_getList(0);
+  $core.List<$0.Zone> get zones => $_getList(0);
 }
 
-class _ReadonlyListZonesResponse extends ListZonesResponse
-    with ReadonlyMessageMixin {}
-
-class GetClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetClusterRequest')
+class GetClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetClusterRequest', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetClusterRequest() : super();
-  GetClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetClusterRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetClusterRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetClusterRequest clone() => GetClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetClusterRequest copyWith(void Function(GetClusterRequest) updates) => super.copyWith((message) => updates(message as GetClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetClusterRequest create() => GetClusterRequest();
-  static PbList<GetClusterRequest> createRepeated() =>
-      PbList<GetClusterRequest>();
-  static GetClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetClusterRequest();
-    return _defaultInstance;
-  }
-
+  GetClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<GetClusterRequest> createRepeated() => $pb.PbList<GetClusterRequest>();
+  static GetClusterRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetClusterRequest _defaultInstance;
-  static void $checkItem(GetClusterRequest v) {
-    if (v is! GetClusterRequest) checkItemFailed(v, 'GetClusterRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetClusterRequest extends GetClusterRequest
-    with ReadonlyMessageMixin {}
-
-class ListClustersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListClustersRequest')
+class ListClustersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersRequest', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListClustersRequest() : super();
-  ListClustersRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListClustersRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListClustersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListClustersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListClustersRequest clone() => ListClustersRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListClustersRequest copyWith(void Function(ListClustersRequest) updates) => super.copyWith((message) => updates(message as ListClustersRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListClustersRequest create() => ListClustersRequest();
-  static PbList<ListClustersRequest> createRepeated() =>
-      PbList<ListClustersRequest>();
-  static ListClustersRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListClustersRequest();
-    return _defaultInstance;
-  }
-
+  ListClustersRequest createEmptyInstance() => create();
+  static $pb.PbList<ListClustersRequest> createRepeated() => $pb.PbList<ListClustersRequest>();
+  static ListClustersRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListClustersRequest _defaultInstance;
-  static void $checkItem(ListClustersRequest v) {
-    if (v is! ListClustersRequest) checkItemFailed(v, 'ListClustersRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyListClustersRequest extends ListClustersRequest
-    with ReadonlyMessageMixin {}
-
-class ListClustersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListClustersResponse')
-    ..pp<Cluster>(
-        1, 'clusters', PbFieldType.PM, Cluster.$checkItem, Cluster.create)
-    ..pp<Zone>(2, 'failedZones', PbFieldType.PM, Zone.$checkItem, Zone.create)
-    ..hasRequiredFields = false;
+class ListClustersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersResponse', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
+    ..pc<$0.Cluster>(1, 'clusters', $pb.PbFieldType.PM,$0.Cluster.create)
+    ..pc<$0.Zone>(2, 'failedZones', $pb.PbFieldType.PM,$0.Zone.create)
+    ..hasRequiredFields = false
+  ;
 
   ListClustersResponse() : super();
-  ListClustersResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListClustersResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListClustersResponse clone() =>
-      ListClustersResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListClustersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListClustersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListClustersResponse clone() => ListClustersResponse()..mergeFromMessage(this);
+  ListClustersResponse copyWith(void Function(ListClustersResponse) updates) => super.copyWith((message) => updates(message as ListClustersResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListClustersResponse create() => ListClustersResponse();
-  static PbList<ListClustersResponse> createRepeated() =>
-      PbList<ListClustersResponse>();
-  static ListClustersResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListClustersResponse();
-    return _defaultInstance;
-  }
-
+  ListClustersResponse createEmptyInstance() => create();
+  static $pb.PbList<ListClustersResponse> createRepeated() => $pb.PbList<ListClustersResponse>();
+  static ListClustersResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListClustersResponse _defaultInstance;
-  static void $checkItem(ListClustersResponse v) {
-    if (v is! ListClustersResponse) checkItemFailed(v, 'ListClustersResponse');
-  }
 
-  List<Cluster> get clusters => $_getList(0);
+  $core.List<$0.Cluster> get clusters => $_getList(0);
 
-  List<Zone> get failedZones => $_getList(1);
+  $core.List<$0.Zone> get failedZones => $_getList(1);
 }
 
-class _ReadonlyListClustersResponse extends ListClustersResponse
-    with ReadonlyMessageMixin {}
-
-class CreateClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateClusterRequest')
+class CreateClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateClusterRequest', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'clusterId')
-    ..a<Cluster>(
-        3, 'cluster', PbFieldType.OM, Cluster.getDefault, Cluster.create)
-    ..hasRequiredFields = false;
+    ..a<$0.Cluster>(3, 'cluster', $pb.PbFieldType.OM, $0.Cluster.getDefault, $0.Cluster.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateClusterRequest() : super();
-  CreateClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateClusterRequest clone() =>
-      CreateClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateClusterRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateClusterRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateClusterRequest clone() => CreateClusterRequest()..mergeFromMessage(this);
+  CreateClusterRequest copyWith(void Function(CreateClusterRequest) updates) => super.copyWith((message) => updates(message as CreateClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateClusterRequest create() => CreateClusterRequest();
-  static PbList<CreateClusterRequest> createRepeated() =>
-      PbList<CreateClusterRequest>();
-  static CreateClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateClusterRequest();
-    return _defaultInstance;
-  }
-
+  CreateClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateClusterRequest> createRepeated() => $pb.PbList<CreateClusterRequest>();
+  static CreateClusterRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateClusterRequest _defaultInstance;
-  static void $checkItem(CreateClusterRequest v) {
-    if (v is! CreateClusterRequest) checkItemFailed(v, 'CreateClusterRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get clusterId => $_getS(1, '');
-  set clusterId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasClusterId() => $_has(1);
+  $core.String get clusterId => $_getS(1, '');
+  set clusterId($core.String v) { $_setString(1, v); }
+  $core.bool hasClusterId() => $_has(1);
   void clearClusterId() => clearField(2);
 
-  Cluster get cluster => $_getN(2);
-  set cluster(Cluster v) {
-    setField(3, v);
-  }
-
-  bool hasCluster() => $_has(2);
+  $0.Cluster get cluster => $_getN(2);
+  set cluster($0.Cluster v) { setField(3, v); }
+  $core.bool hasCluster() => $_has(2);
   void clearCluster() => clearField(3);
 }
 
-class _ReadonlyCreateClusterRequest extends CreateClusterRequest
-    with ReadonlyMessageMixin {}
-
-class CreateClusterMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateClusterMetadata')
-    ..a<CreateClusterRequest>(1, 'originalRequest', PbFieldType.OM,
-        CreateClusterRequest.getDefault, CreateClusterRequest.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'requestTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'finishTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false;
+class CreateClusterMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateClusterMetadata', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
+    ..a<CreateClusterRequest>(1, 'originalRequest', $pb.PbFieldType.OM, CreateClusterRequest.getDefault, CreateClusterRequest.create)
+    ..a<$1.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateClusterMetadata() : super();
-  CreateClusterMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateClusterMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateClusterMetadata clone() =>
-      CreateClusterMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateClusterMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateClusterMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateClusterMetadata clone() => CreateClusterMetadata()..mergeFromMessage(this);
+  CreateClusterMetadata copyWith(void Function(CreateClusterMetadata) updates) => super.copyWith((message) => updates(message as CreateClusterMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static CreateClusterMetadata create() => CreateClusterMetadata();
-  static PbList<CreateClusterMetadata> createRepeated() =>
-      PbList<CreateClusterMetadata>();
-  static CreateClusterMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateClusterMetadata();
-    return _defaultInstance;
-  }
-
+  CreateClusterMetadata createEmptyInstance() => create();
+  static $pb.PbList<CreateClusterMetadata> createRepeated() => $pb.PbList<CreateClusterMetadata>();
+  static CreateClusterMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static CreateClusterMetadata _defaultInstance;
-  static void $checkItem(CreateClusterMetadata v) {
-    if (v is! CreateClusterMetadata)
-      checkItemFailed(v, 'CreateClusterMetadata');
-  }
 
   CreateClusterRequest get originalRequest => $_getN(0);
-  set originalRequest(CreateClusterRequest v) {
-    setField(1, v);
-  }
-
-  bool hasOriginalRequest() => $_has(0);
+  set originalRequest(CreateClusterRequest v) { setField(1, v); }
+  $core.bool hasOriginalRequest() => $_has(0);
   void clearOriginalRequest() => clearField(1);
 
-  $google$protobuf.Timestamp get requestTime => $_getN(1);
-  set requestTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasRequestTime() => $_has(1);
+  $1.Timestamp get requestTime => $_getN(1);
+  set requestTime($1.Timestamp v) { setField(2, v); }
+  $core.bool hasRequestTime() => $_has(1);
   void clearRequestTime() => clearField(2);
 
-  $google$protobuf.Timestamp get finishTime => $_getN(2);
-  set finishTime($google$protobuf.Timestamp v) {
-    setField(3, v);
-  }
-
-  bool hasFinishTime() => $_has(2);
+  $1.Timestamp get finishTime => $_getN(2);
+  set finishTime($1.Timestamp v) { setField(3, v); }
+  $core.bool hasFinishTime() => $_has(2);
   void clearFinishTime() => clearField(3);
 }
 
-class _ReadonlyCreateClusterMetadata extends CreateClusterMetadata
-    with ReadonlyMessageMixin {}
-
-class UpdateClusterMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateClusterMetadata')
-    ..a<Cluster>(1, 'originalRequest', PbFieldType.OM, Cluster.getDefault,
-        Cluster.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'requestTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'cancelTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'finishTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false;
+class UpdateClusterMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateClusterMetadata', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
+    ..a<$0.Cluster>(1, 'originalRequest', $pb.PbFieldType.OM, $0.Cluster.getDefault, $0.Cluster.create)
+    ..a<$1.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(4, 'finishTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateClusterMetadata() : super();
-  UpdateClusterMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateClusterMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateClusterMetadata clone() =>
-      UpdateClusterMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateClusterMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateClusterMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateClusterMetadata clone() => UpdateClusterMetadata()..mergeFromMessage(this);
+  UpdateClusterMetadata copyWith(void Function(UpdateClusterMetadata) updates) => super.copyWith((message) => updates(message as UpdateClusterMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateClusterMetadata create() => UpdateClusterMetadata();
-  static PbList<UpdateClusterMetadata> createRepeated() =>
-      PbList<UpdateClusterMetadata>();
-  static UpdateClusterMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateClusterMetadata();
-    return _defaultInstance;
-  }
-
+  UpdateClusterMetadata createEmptyInstance() => create();
+  static $pb.PbList<UpdateClusterMetadata> createRepeated() => $pb.PbList<UpdateClusterMetadata>();
+  static UpdateClusterMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateClusterMetadata _defaultInstance;
-  static void $checkItem(UpdateClusterMetadata v) {
-    if (v is! UpdateClusterMetadata)
-      checkItemFailed(v, 'UpdateClusterMetadata');
-  }
 
-  Cluster get originalRequest => $_getN(0);
-  set originalRequest(Cluster v) {
-    setField(1, v);
-  }
-
-  bool hasOriginalRequest() => $_has(0);
+  $0.Cluster get originalRequest => $_getN(0);
+  set originalRequest($0.Cluster v) { setField(1, v); }
+  $core.bool hasOriginalRequest() => $_has(0);
   void clearOriginalRequest() => clearField(1);
 
-  $google$protobuf.Timestamp get requestTime => $_getN(1);
-  set requestTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasRequestTime() => $_has(1);
+  $1.Timestamp get requestTime => $_getN(1);
+  set requestTime($1.Timestamp v) { setField(2, v); }
+  $core.bool hasRequestTime() => $_has(1);
   void clearRequestTime() => clearField(2);
 
-  $google$protobuf.Timestamp get cancelTime => $_getN(2);
-  set cancelTime($google$protobuf.Timestamp v) {
-    setField(3, v);
-  }
-
-  bool hasCancelTime() => $_has(2);
+  $1.Timestamp get cancelTime => $_getN(2);
+  set cancelTime($1.Timestamp v) { setField(3, v); }
+  $core.bool hasCancelTime() => $_has(2);
   void clearCancelTime() => clearField(3);
 
-  $google$protobuf.Timestamp get finishTime => $_getN(3);
-  set finishTime($google$protobuf.Timestamp v) {
-    setField(4, v);
-  }
-
-  bool hasFinishTime() => $_has(3);
+  $1.Timestamp get finishTime => $_getN(3);
+  set finishTime($1.Timestamp v) { setField(4, v); }
+  $core.bool hasFinishTime() => $_has(3);
   void clearFinishTime() => clearField(4);
 }
 
-class _ReadonlyUpdateClusterMetadata extends UpdateClusterMetadata
-    with ReadonlyMessageMixin {}
-
-class DeleteClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteClusterRequest')
+class DeleteClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteClusterRequest', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteClusterRequest() : super();
-  DeleteClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteClusterRequest clone() =>
-      DeleteClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteClusterRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteClusterRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteClusterRequest clone() => DeleteClusterRequest()..mergeFromMessage(this);
+  DeleteClusterRequest copyWith(void Function(DeleteClusterRequest) updates) => super.copyWith((message) => updates(message as DeleteClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteClusterRequest create() => DeleteClusterRequest();
-  static PbList<DeleteClusterRequest> createRepeated() =>
-      PbList<DeleteClusterRequest>();
-  static DeleteClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteClusterRequest();
-    return _defaultInstance;
-  }
-
+  DeleteClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteClusterRequest> createRepeated() => $pb.PbList<DeleteClusterRequest>();
+  static DeleteClusterRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteClusterRequest _defaultInstance;
-  static void $checkItem(DeleteClusterRequest v) {
-    if (v is! DeleteClusterRequest) checkItemFailed(v, 'DeleteClusterRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteClusterRequest extends DeleteClusterRequest
-    with ReadonlyMessageMixin {}
-
-class UndeleteClusterRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UndeleteClusterRequest')
+class UndeleteClusterRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteClusterRequest', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   UndeleteClusterRequest() : super();
-  UndeleteClusterRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UndeleteClusterRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UndeleteClusterRequest clone() =>
-      UndeleteClusterRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UndeleteClusterRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UndeleteClusterRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UndeleteClusterRequest clone() => UndeleteClusterRequest()..mergeFromMessage(this);
+  UndeleteClusterRequest copyWith(void Function(UndeleteClusterRequest) updates) => super.copyWith((message) => updates(message as UndeleteClusterRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UndeleteClusterRequest create() => UndeleteClusterRequest();
-  static PbList<UndeleteClusterRequest> createRepeated() =>
-      PbList<UndeleteClusterRequest>();
-  static UndeleteClusterRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUndeleteClusterRequest();
-    return _defaultInstance;
-  }
-
+  UndeleteClusterRequest createEmptyInstance() => create();
+  static $pb.PbList<UndeleteClusterRequest> createRepeated() => $pb.PbList<UndeleteClusterRequest>();
+  static UndeleteClusterRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UndeleteClusterRequest _defaultInstance;
-  static void $checkItem(UndeleteClusterRequest v) {
-    if (v is! UndeleteClusterRequest)
-      checkItemFailed(v, 'UndeleteClusterRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyUndeleteClusterRequest extends UndeleteClusterRequest
-    with ReadonlyMessageMixin {}
-
-class UndeleteClusterMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UndeleteClusterMetadata')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'requestTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'finishTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false;
+class UndeleteClusterMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteClusterMetadata', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
+    ..a<$1.Timestamp>(1, 'requestTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'finishTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   UndeleteClusterMetadata() : super();
-  UndeleteClusterMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UndeleteClusterMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UndeleteClusterMetadata clone() =>
-      UndeleteClusterMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UndeleteClusterMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UndeleteClusterMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UndeleteClusterMetadata clone() => UndeleteClusterMetadata()..mergeFromMessage(this);
+  UndeleteClusterMetadata copyWith(void Function(UndeleteClusterMetadata) updates) => super.copyWith((message) => updates(message as UndeleteClusterMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static UndeleteClusterMetadata create() => UndeleteClusterMetadata();
-  static PbList<UndeleteClusterMetadata> createRepeated() =>
-      PbList<UndeleteClusterMetadata>();
-  static UndeleteClusterMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUndeleteClusterMetadata();
-    return _defaultInstance;
-  }
-
+  UndeleteClusterMetadata createEmptyInstance() => create();
+  static $pb.PbList<UndeleteClusterMetadata> createRepeated() => $pb.PbList<UndeleteClusterMetadata>();
+  static UndeleteClusterMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static UndeleteClusterMetadata _defaultInstance;
-  static void $checkItem(UndeleteClusterMetadata v) {
-    if (v is! UndeleteClusterMetadata)
-      checkItemFailed(v, 'UndeleteClusterMetadata');
-  }
 
-  $google$protobuf.Timestamp get requestTime => $_getN(0);
-  set requestTime($google$protobuf.Timestamp v) {
-    setField(1, v);
-  }
-
-  bool hasRequestTime() => $_has(0);
+  $1.Timestamp get requestTime => $_getN(0);
+  set requestTime($1.Timestamp v) { setField(1, v); }
+  $core.bool hasRequestTime() => $_has(0);
   void clearRequestTime() => clearField(1);
 
-  $google$protobuf.Timestamp get finishTime => $_getN(1);
-  set finishTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasFinishTime() => $_has(1);
+  $1.Timestamp get finishTime => $_getN(1);
+  set finishTime($1.Timestamp v) { setField(2, v); }
+  $core.bool hasFinishTime() => $_has(1);
   void clearFinishTime() => clearField(2);
 }
 
-class _ReadonlyUndeleteClusterMetadata extends UndeleteClusterMetadata
-    with ReadonlyMessageMixin {}
-
-class V2OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('V2OperationMetadata')
-    ..hasRequiredFields = false;
+class V2OperationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('V2OperationMetadata', package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
+    ..hasRequiredFields = false
+  ;
 
   V2OperationMetadata() : super();
-  V2OperationMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  V2OperationMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  V2OperationMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  V2OperationMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   V2OperationMetadata clone() => V2OperationMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  V2OperationMetadata copyWith(void Function(V2OperationMetadata) updates) => super.copyWith((message) => updates(message as V2OperationMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static V2OperationMetadata create() => V2OperationMetadata();
-  static PbList<V2OperationMetadata> createRepeated() =>
-      PbList<V2OperationMetadata>();
-  static V2OperationMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyV2OperationMetadata();
-    return _defaultInstance;
-  }
-
+  V2OperationMetadata createEmptyInstance() => create();
+  static $pb.PbList<V2OperationMetadata> createRepeated() => $pb.PbList<V2OperationMetadata>();
+  static V2OperationMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static V2OperationMetadata _defaultInstance;
-  static void $checkItem(V2OperationMetadata v) {
-    if (v is! V2OperationMetadata) checkItemFailed(v, 'V2OperationMetadata');
-  }
 }
 
-class _ReadonlyV2OperationMetadata extends V2OperationMetadata
-    with ReadonlyMessageMixin {}

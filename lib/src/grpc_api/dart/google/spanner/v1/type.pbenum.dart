@@ -1,15 +1,15 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/v1/type.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class TypeCode extends ProtobufEnum {
-  static const TypeCode TYPE_CODE_UNSPECIFIED =
-      TypeCode._(0, 'TYPE_CODE_UNSPECIFIED');
+class TypeCode extends $pb.ProtobufEnum {
+  static const TypeCode TYPE_CODE_UNSPECIFIED = TypeCode._(0, 'TYPE_CODE_UNSPECIFIED');
   static const TypeCode BOOL = TypeCode._(1, 'BOOL');
   static const TypeCode INT64 = TypeCode._(2, 'INT64');
   static const TypeCode FLOAT64 = TypeCode._(3, 'FLOAT64');
@@ -20,7 +20,7 @@ class TypeCode extends ProtobufEnum {
   static const TypeCode ARRAY = TypeCode._(8, 'ARRAY');
   static const TypeCode STRUCT = TypeCode._(9, 'STRUCT');
 
-  static const List<TypeCode> values = <TypeCode>[
+  static const $core.List<TypeCode> values = <TypeCode> [
     TYPE_CODE_UNSPECIFIED,
     BOOL,
     INT64,
@@ -33,11 +33,9 @@ class TypeCode extends ProtobufEnum {
     STRUCT,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static TypeCode valueOf(int value) => _byValue[value] as TypeCode;
-  static void $checkItem(TypeCode v) {
-    if (v is! TypeCode) checkItemFailed(v, 'TypeCode');
-  }
+  static final $core.Map<$core.int, TypeCode> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static TypeCode valueOf($core.int value) => _byValue[value];
 
-  const TypeCode._(int v, String n) : super(v, n);
+  const TypeCode._($core.int v, $core.String n) : super(v, n);
 }
+

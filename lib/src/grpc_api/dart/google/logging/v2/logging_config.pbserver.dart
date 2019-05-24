@@ -1,93 +1,65 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/logging/v2/logging_config.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'logging_config.pb.dart';
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../protobuf/empty.pb.dart' as $2;
 import 'logging_config.pbjson.dart';
 
 export 'logging_config.pb.dart';
 
-abstract class ConfigServiceV2ServiceBase extends GeneratedService {
-  Future<ListSinksResponse> listSinks(
-      ServerContext ctx, ListSinksRequest request);
-  Future<LogSink> getSink(ServerContext ctx, GetSinkRequest request);
-  Future<LogSink> createSink(ServerContext ctx, CreateSinkRequest request);
-  Future<LogSink> updateSink(ServerContext ctx, UpdateSinkRequest request);
-  Future<$google$protobuf.Empty> deleteSink(
-      ServerContext ctx, DeleteSinkRequest request);
-  Future<ListExclusionsResponse> listExclusions(
-      ServerContext ctx, ListExclusionsRequest request);
-  Future<LogExclusion> getExclusion(
-      ServerContext ctx, GetExclusionRequest request);
-  Future<LogExclusion> createExclusion(
-      ServerContext ctx, CreateExclusionRequest request);
-  Future<LogExclusion> updateExclusion(
-      ServerContext ctx, UpdateExclusionRequest request);
-  Future<$google$protobuf.Empty> deleteExclusion(
-      ServerContext ctx, DeleteExclusionRequest request);
+abstract class ConfigServiceV2ServiceBase extends $pb.GeneratedService {
+  $async.Future<ListSinksResponse> listSinks($pb.ServerContext ctx, ListSinksRequest request);
+  $async.Future<LogSink> getSink($pb.ServerContext ctx, GetSinkRequest request);
+  $async.Future<LogSink> createSink($pb.ServerContext ctx, CreateSinkRequest request);
+  $async.Future<LogSink> updateSink($pb.ServerContext ctx, UpdateSinkRequest request);
+  $async.Future<$2.Empty> deleteSink($pb.ServerContext ctx, DeleteSinkRequest request);
+  $async.Future<ListExclusionsResponse> listExclusions($pb.ServerContext ctx, ListExclusionsRequest request);
+  $async.Future<LogExclusion> getExclusion($pb.ServerContext ctx, GetExclusionRequest request);
+  $async.Future<LogExclusion> createExclusion($pb.ServerContext ctx, CreateExclusionRequest request);
+  $async.Future<LogExclusion> updateExclusion($pb.ServerContext ctx, UpdateExclusionRequest request);
+  $async.Future<$2.Empty> deleteExclusion($pb.ServerContext ctx, DeleteExclusionRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'ListSinks':
-        return ListSinksRequest();
-      case 'GetSink':
-        return GetSinkRequest();
-      case 'CreateSink':
-        return CreateSinkRequest();
-      case 'UpdateSink':
-        return UpdateSinkRequest();
-      case 'DeleteSink':
-        return DeleteSinkRequest();
-      case 'ListExclusions':
-        return ListExclusionsRequest();
-      case 'GetExclusion':
-        return GetExclusionRequest();
-      case 'CreateExclusion':
-        return CreateExclusionRequest();
-      case 'UpdateExclusion':
-        return UpdateExclusionRequest();
-      case 'DeleteExclusion':
-        return DeleteExclusionRequest();
-      default:
-        throw ArgumentError('Unknown method: $method');
+      case 'ListSinks': return ListSinksRequest();
+      case 'GetSink': return GetSinkRequest();
+      case 'CreateSink': return CreateSinkRequest();
+      case 'UpdateSink': return UpdateSinkRequest();
+      case 'DeleteSink': return DeleteSinkRequest();
+      case 'ListExclusions': return ListExclusionsRequest();
+      case 'GetExclusion': return GetExclusionRequest();
+      case 'CreateExclusion': return CreateExclusionRequest();
+      case 'UpdateExclusion': return UpdateExclusionRequest();
+      case 'DeleteExclusion': return DeleteExclusionRequest();
+      default: throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'ListSinks':
-        return this.listSinks(ctx, request);
-      case 'GetSink':
-        return this.getSink(ctx, request);
-      case 'CreateSink':
-        return this.createSink(ctx, request);
-      case 'UpdateSink':
-        return this.updateSink(ctx, request);
-      case 'DeleteSink':
-        return this.deleteSink(ctx, request);
-      case 'ListExclusions':
-        return this.listExclusions(ctx, request);
-      case 'GetExclusion':
-        return this.getExclusion(ctx, request);
-      case 'CreateExclusion':
-        return this.createExclusion(ctx, request);
-      case 'UpdateExclusion':
-        return this.updateExclusion(ctx, request);
-      case 'DeleteExclusion':
-        return this.deleteExclusion(ctx, request);
-      default:
-        throw ArgumentError('Unknown method: $method');
+      case 'ListSinks': return this.listSinks(ctx, request);
+      case 'GetSink': return this.getSink(ctx, request);
+      case 'CreateSink': return this.createSink(ctx, request);
+      case 'UpdateSink': return this.updateSink(ctx, request);
+      case 'DeleteSink': return this.deleteSink(ctx, request);
+      case 'ListExclusions': return this.listExclusions(ctx, request);
+      case 'GetExclusion': return this.getExclusion(ctx, request);
+      case 'CreateExclusion': return this.createExclusion(ctx, request);
+      case 'UpdateExclusion': return this.updateExclusion(ctx, request);
+      case 'DeleteExclusion': return this.deleteExclusion(ctx, request);
+      default: throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => ConfigServiceV2$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      ConfigServiceV2$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => ConfigServiceV2ServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => ConfigServiceV2ServiceBase$messageJson;
 }
+

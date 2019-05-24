@@ -1,149 +1,67 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/readgroupset.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'readgroup.pb.dart';
-import '../../protobuf/struct.pb.dart' as $google$protobuf;
+import 'readgroup.pb.dart' as $0;
+import '../../protobuf/struct.pb.dart' as $1;
 
-class ReadGroupSet_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ReadGroupSet_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  ReadGroupSet_InfoEntry() : super();
-  ReadGroupSet_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadGroupSet_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ReadGroupSet_InfoEntry clone() =>
-      ReadGroupSet_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadGroupSet_InfoEntry create() => ReadGroupSet_InfoEntry();
-  static PbList<ReadGroupSet_InfoEntry> createRepeated() =>
-      PbList<ReadGroupSet_InfoEntry>();
-  static ReadGroupSet_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyReadGroupSet_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static ReadGroupSet_InfoEntry _defaultInstance;
-  static void $checkItem(ReadGroupSet_InfoEntry v) {
-    if (v is! ReadGroupSet_InfoEntry)
-      checkItemFailed(v, 'ReadGroupSet_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyReadGroupSet_InfoEntry extends ReadGroupSet_InfoEntry
-    with ReadonlyMessageMixin {}
-
-class ReadGroupSet extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ReadGroupSet')
+class ReadGroupSet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadGroupSet', package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'referenceSetId')
     ..aOS(4, 'name')
     ..aOS(5, 'filename')
-    ..pp<ReadGroup>(
-        6, 'readGroups', PbFieldType.PM, ReadGroup.$checkItem, ReadGroup.create)
-    ..pp<ReadGroupSet_InfoEntry>(7, 'info', PbFieldType.PM,
-        ReadGroupSet_InfoEntry.$checkItem, ReadGroupSet_InfoEntry.create)
-    ..hasRequiredFields = false;
+    ..pc<$0.ReadGroup>(6, 'readGroups', $pb.PbFieldType.PM,$0.ReadGroup.create)
+    ..m<$core.String, $1.ListValue>(7, 'info', 'ReadGroupSet.InfoEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OM, $1.ListValue.create, null, null , const $pb.PackageName('google.genomics.v1'))
+    ..hasRequiredFields = false
+  ;
 
   ReadGroupSet() : super();
-  ReadGroupSet.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadGroupSet.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadGroupSet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ReadGroupSet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ReadGroupSet clone() => ReadGroupSet()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ReadGroupSet copyWith(void Function(ReadGroupSet) updates) => super.copyWith((message) => updates(message as ReadGroupSet));
+  $pb.BuilderInfo get info_ => _i;
   static ReadGroupSet create() => ReadGroupSet();
-  static PbList<ReadGroupSet> createRepeated() => PbList<ReadGroupSet>();
-  static ReadGroupSet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyReadGroupSet();
-    return _defaultInstance;
-  }
-
+  ReadGroupSet createEmptyInstance() => create();
+  static $pb.PbList<ReadGroupSet> createRepeated() => $pb.PbList<ReadGroupSet>();
+  static ReadGroupSet getDefault() => _defaultInstance ??= create()..freeze();
   static ReadGroupSet _defaultInstance;
-  static void $checkItem(ReadGroupSet v) {
-    if (v is! ReadGroupSet) checkItemFailed(v, 'ReadGroupSet');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasId() => $_has(0);
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) { $_setString(0, v); }
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get datasetId => $_getS(1, '');
-  set datasetId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasDatasetId() => $_has(1);
+  $core.String get datasetId => $_getS(1, '');
+  set datasetId($core.String v) { $_setString(1, v); }
+  $core.bool hasDatasetId() => $_has(1);
   void clearDatasetId() => clearField(2);
 
-  String get referenceSetId => $_getS(2, '');
-  set referenceSetId(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasReferenceSetId() => $_has(2);
+  $core.String get referenceSetId => $_getS(2, '');
+  set referenceSetId($core.String v) { $_setString(2, v); }
+  $core.bool hasReferenceSetId() => $_has(2);
   void clearReferenceSetId() => clearField(3);
 
-  String get name => $_getS(3, '');
-  set name(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasName() => $_has(3);
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) { $_setString(3, v); }
+  $core.bool hasName() => $_has(3);
   void clearName() => clearField(4);
 
-  String get filename => $_getS(4, '');
-  set filename(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasFilename() => $_has(4);
+  $core.String get filename => $_getS(4, '');
+  set filename($core.String v) { $_setString(4, v); }
+  $core.bool hasFilename() => $_has(4);
   void clearFilename() => clearField(5);
 
-  List<ReadGroup> get readGroups => $_getList(5);
+  $core.List<$0.ReadGroup> get readGroups => $_getList(5);
 
-  List<ReadGroupSet_InfoEntry> get info => $_getList(6);
+  $core.Map<$core.String, $1.ListValue> get info => $_getMap(6);
 }
 
-class _ReadonlyReadGroupSet extends ReadGroupSet with ReadonlyMessageMixin {}

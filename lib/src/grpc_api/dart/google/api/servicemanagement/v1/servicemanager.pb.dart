@@ -1,1209 +1,719 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/servicemanagement/v1/servicemanager.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart';
-import '../../service.pb.dart' as $google$api;
-import '../../../protobuf/any.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import 'resources.pb.dart' as $0;
+import '../../service.pb.dart' as $1;
+import '../../../protobuf/any.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $3;
 
 import 'servicemanager.pbenum.dart';
 
 export 'servicemanager.pbenum.dart';
 
-class ListServicesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServicesRequest')
+class ListServicesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'producerProjectId')
-    ..a<int>(5, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
     ..aOS(7, 'consumerId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListServicesRequest() : super();
-  ListServicesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServicesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListServicesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServicesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListServicesRequest clone() => ListServicesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListServicesRequest copyWith(void Function(ListServicesRequest) updates) => super.copyWith((message) => updates(message as ListServicesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListServicesRequest create() => ListServicesRequest();
-  static PbList<ListServicesRequest> createRepeated() =>
-      PbList<ListServicesRequest>();
-  static ListServicesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServicesRequest();
-    return _defaultInstance;
-  }
-
+  ListServicesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListServicesRequest> createRepeated() => $pb.PbList<ListServicesRequest>();
+  static ListServicesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListServicesRequest _defaultInstance;
-  static void $checkItem(ListServicesRequest v) {
-    if (v is! ListServicesRequest) checkItemFailed(v, 'ListServicesRequest');
-  }
 
-  String get producerProjectId => $_getS(0, '');
-  set producerProjectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProducerProjectId() => $_has(0);
+  $core.String get producerProjectId => $_getS(0, '');
+  set producerProjectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProducerProjectId() => $_has(0);
   void clearProducerProjectId() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasPageSize() => $_has(1);
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(5);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasPageToken() => $_has(2);
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) { $_setString(2, v); }
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(6);
 
-  String get consumerId => $_getS(3, '');
-  set consumerId(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasConsumerId() => $_has(3);
+  $core.String get consumerId => $_getS(3, '');
+  set consumerId($core.String v) { $_setString(3, v); }
+  $core.bool hasConsumerId() => $_has(3);
   void clearConsumerId() => clearField(7);
 }
 
-class _ReadonlyListServicesRequest extends ListServicesRequest
-    with ReadonlyMessageMixin {}
-
-class ListServicesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServicesResponse')
-    ..pp<ManagedService>(1, 'services', PbFieldType.PM,
-        ManagedService.$checkItem, ManagedService.create)
+class ListServicesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesResponse', package: const $pb.PackageName('google.api.servicemanagement.v1'))
+    ..pc<$0.ManagedService>(1, 'services', $pb.PbFieldType.PM,$0.ManagedService.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListServicesResponse() : super();
-  ListServicesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServicesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServicesResponse clone() =>
-      ListServicesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListServicesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServicesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServicesResponse clone() => ListServicesResponse()..mergeFromMessage(this);
+  ListServicesResponse copyWith(void Function(ListServicesResponse) updates) => super.copyWith((message) => updates(message as ListServicesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListServicesResponse create() => ListServicesResponse();
-  static PbList<ListServicesResponse> createRepeated() =>
-      PbList<ListServicesResponse>();
-  static ListServicesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServicesResponse();
-    return _defaultInstance;
-  }
-
+  ListServicesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListServicesResponse> createRepeated() => $pb.PbList<ListServicesResponse>();
+  static ListServicesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListServicesResponse _defaultInstance;
-  static void $checkItem(ListServicesResponse v) {
-    if (v is! ListServicesResponse) checkItemFailed(v, 'ListServicesResponse');
-  }
 
-  List<ManagedService> get services => $_getList(0);
+  $core.List<$0.ManagedService> get services => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListServicesResponse extends ListServicesResponse
-    with ReadonlyMessageMixin {}
-
-class GetServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetServiceRequest')
+class GetServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetServiceRequest() : super();
-  GetServiceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetServiceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetServiceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetServiceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetServiceRequest clone() => GetServiceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetServiceRequest copyWith(void Function(GetServiceRequest) updates) => super.copyWith((message) => updates(message as GetServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetServiceRequest create() => GetServiceRequest();
-  static PbList<GetServiceRequest> createRepeated() =>
-      PbList<GetServiceRequest>();
-  static GetServiceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetServiceRequest();
-    return _defaultInstance;
-  }
-
+  GetServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<GetServiceRequest> createRepeated() => $pb.PbList<GetServiceRequest>();
+  static GetServiceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetServiceRequest _defaultInstance;
-  static void $checkItem(GetServiceRequest v) {
-    if (v is! GetServiceRequest) checkItemFailed(v, 'GetServiceRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 }
 
-class _ReadonlyGetServiceRequest extends GetServiceRequest
-    with ReadonlyMessageMixin {}
-
-class CreateServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateServiceRequest')
-    ..a<ManagedService>(1, 'service', PbFieldType.OM, ManagedService.getDefault,
-        ManagedService.create)
-    ..hasRequiredFields = false;
+class CreateServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateServiceRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
+    ..a<$0.ManagedService>(1, 'service', $pb.PbFieldType.OM, $0.ManagedService.getDefault, $0.ManagedService.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateServiceRequest() : super();
-  CreateServiceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateServiceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateServiceRequest clone() =>
-      CreateServiceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateServiceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateServiceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateServiceRequest clone() => CreateServiceRequest()..mergeFromMessage(this);
+  CreateServiceRequest copyWith(void Function(CreateServiceRequest) updates) => super.copyWith((message) => updates(message as CreateServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateServiceRequest create() => CreateServiceRequest();
-  static PbList<CreateServiceRequest> createRepeated() =>
-      PbList<CreateServiceRequest>();
-  static CreateServiceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateServiceRequest();
-    return _defaultInstance;
-  }
-
+  CreateServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateServiceRequest> createRepeated() => $pb.PbList<CreateServiceRequest>();
+  static CreateServiceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateServiceRequest _defaultInstance;
-  static void $checkItem(CreateServiceRequest v) {
-    if (v is! CreateServiceRequest) checkItemFailed(v, 'CreateServiceRequest');
-  }
 
-  ManagedService get service => $_getN(0);
-  set service(ManagedService v) {
-    setField(1, v);
-  }
-
-  bool hasService() => $_has(0);
+  $0.ManagedService get service => $_getN(0);
+  set service($0.ManagedService v) { setField(1, v); }
+  $core.bool hasService() => $_has(0);
   void clearService() => clearField(1);
 }
 
-class _ReadonlyCreateServiceRequest extends CreateServiceRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteServiceRequest')
+class DeleteServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteServiceRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteServiceRequest() : super();
-  DeleteServiceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteServiceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteServiceRequest clone() =>
-      DeleteServiceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteServiceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteServiceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteServiceRequest clone() => DeleteServiceRequest()..mergeFromMessage(this);
+  DeleteServiceRequest copyWith(void Function(DeleteServiceRequest) updates) => super.copyWith((message) => updates(message as DeleteServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteServiceRequest create() => DeleteServiceRequest();
-  static PbList<DeleteServiceRequest> createRepeated() =>
-      PbList<DeleteServiceRequest>();
-  static DeleteServiceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteServiceRequest();
-    return _defaultInstance;
-  }
-
+  DeleteServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteServiceRequest> createRepeated() => $pb.PbList<DeleteServiceRequest>();
+  static DeleteServiceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteServiceRequest _defaultInstance;
-  static void $checkItem(DeleteServiceRequest v) {
-    if (v is! DeleteServiceRequest) checkItemFailed(v, 'DeleteServiceRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 }
 
-class _ReadonlyDeleteServiceRequest extends DeleteServiceRequest
-    with ReadonlyMessageMixin {}
-
-class UndeleteServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UndeleteServiceRequest')
+class UndeleteServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteServiceRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   UndeleteServiceRequest() : super();
-  UndeleteServiceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UndeleteServiceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UndeleteServiceRequest clone() =>
-      UndeleteServiceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UndeleteServiceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UndeleteServiceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UndeleteServiceRequest clone() => UndeleteServiceRequest()..mergeFromMessage(this);
+  UndeleteServiceRequest copyWith(void Function(UndeleteServiceRequest) updates) => super.copyWith((message) => updates(message as UndeleteServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UndeleteServiceRequest create() => UndeleteServiceRequest();
-  static PbList<UndeleteServiceRequest> createRepeated() =>
-      PbList<UndeleteServiceRequest>();
-  static UndeleteServiceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUndeleteServiceRequest();
-    return _defaultInstance;
-  }
-
+  UndeleteServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<UndeleteServiceRequest> createRepeated() => $pb.PbList<UndeleteServiceRequest>();
+  static UndeleteServiceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UndeleteServiceRequest _defaultInstance;
-  static void $checkItem(UndeleteServiceRequest v) {
-    if (v is! UndeleteServiceRequest)
-      checkItemFailed(v, 'UndeleteServiceRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 }
 
-class _ReadonlyUndeleteServiceRequest extends UndeleteServiceRequest
-    with ReadonlyMessageMixin {}
-
-class UndeleteServiceResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UndeleteServiceResponse')
-    ..a<ManagedService>(1, 'service', PbFieldType.OM, ManagedService.getDefault,
-        ManagedService.create)
-    ..hasRequiredFields = false;
+class UndeleteServiceResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteServiceResponse', package: const $pb.PackageName('google.api.servicemanagement.v1'))
+    ..a<$0.ManagedService>(1, 'service', $pb.PbFieldType.OM, $0.ManagedService.getDefault, $0.ManagedService.create)
+    ..hasRequiredFields = false
+  ;
 
   UndeleteServiceResponse() : super();
-  UndeleteServiceResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UndeleteServiceResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UndeleteServiceResponse clone() =>
-      UndeleteServiceResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UndeleteServiceResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UndeleteServiceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UndeleteServiceResponse clone() => UndeleteServiceResponse()..mergeFromMessage(this);
+  UndeleteServiceResponse copyWith(void Function(UndeleteServiceResponse) updates) => super.copyWith((message) => updates(message as UndeleteServiceResponse));
+  $pb.BuilderInfo get info_ => _i;
   static UndeleteServiceResponse create() => UndeleteServiceResponse();
-  static PbList<UndeleteServiceResponse> createRepeated() =>
-      PbList<UndeleteServiceResponse>();
-  static UndeleteServiceResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUndeleteServiceResponse();
-    return _defaultInstance;
-  }
-
+  UndeleteServiceResponse createEmptyInstance() => create();
+  static $pb.PbList<UndeleteServiceResponse> createRepeated() => $pb.PbList<UndeleteServiceResponse>();
+  static UndeleteServiceResponse getDefault() => _defaultInstance ??= create()..freeze();
   static UndeleteServiceResponse _defaultInstance;
-  static void $checkItem(UndeleteServiceResponse v) {
-    if (v is! UndeleteServiceResponse)
-      checkItemFailed(v, 'UndeleteServiceResponse');
-  }
 
-  ManagedService get service => $_getN(0);
-  set service(ManagedService v) {
-    setField(1, v);
-  }
-
-  bool hasService() => $_has(0);
+  $0.ManagedService get service => $_getN(0);
+  set service($0.ManagedService v) { setField(1, v); }
+  $core.bool hasService() => $_has(0);
   void clearService() => clearField(1);
 }
 
-class _ReadonlyUndeleteServiceResponse extends UndeleteServiceResponse
-    with ReadonlyMessageMixin {}
-
-class GetServiceConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetServiceConfigRequest')
+class GetServiceConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceConfigRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
     ..aOS(2, 'configId')
-    ..e<GetServiceConfigRequest_ConfigView>(
-        3,
-        'view',
-        PbFieldType.OE,
-        GetServiceConfigRequest_ConfigView.BASIC,
-        GetServiceConfigRequest_ConfigView.valueOf,
-        GetServiceConfigRequest_ConfigView.values)
-    ..hasRequiredFields = false;
+    ..e<GetServiceConfigRequest_ConfigView>(3, 'view', $pb.PbFieldType.OE, GetServiceConfigRequest_ConfigView.BASIC, GetServiceConfigRequest_ConfigView.valueOf, GetServiceConfigRequest_ConfigView.values)
+    ..hasRequiredFields = false
+  ;
 
   GetServiceConfigRequest() : super();
-  GetServiceConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetServiceConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetServiceConfigRequest clone() =>
-      GetServiceConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetServiceConfigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetServiceConfigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetServiceConfigRequest clone() => GetServiceConfigRequest()..mergeFromMessage(this);
+  GetServiceConfigRequest copyWith(void Function(GetServiceConfigRequest) updates) => super.copyWith((message) => updates(message as GetServiceConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetServiceConfigRequest create() => GetServiceConfigRequest();
-  static PbList<GetServiceConfigRequest> createRepeated() =>
-      PbList<GetServiceConfigRequest>();
-  static GetServiceConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetServiceConfigRequest();
-    return _defaultInstance;
-  }
-
+  GetServiceConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetServiceConfigRequest> createRepeated() => $pb.PbList<GetServiceConfigRequest>();
+  static GetServiceConfigRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetServiceConfigRequest _defaultInstance;
-  static void $checkItem(GetServiceConfigRequest v) {
-    if (v is! GetServiceConfigRequest)
-      checkItemFailed(v, 'GetServiceConfigRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get configId => $_getS(1, '');
-  set configId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasConfigId() => $_has(1);
+  $core.String get configId => $_getS(1, '');
+  set configId($core.String v) { $_setString(1, v); }
+  $core.bool hasConfigId() => $_has(1);
   void clearConfigId() => clearField(2);
 
   GetServiceConfigRequest_ConfigView get view => $_getN(2);
-  set view(GetServiceConfigRequest_ConfigView v) {
-    setField(3, v);
-  }
-
-  bool hasView() => $_has(2);
+  set view(GetServiceConfigRequest_ConfigView v) { setField(3, v); }
+  $core.bool hasView() => $_has(2);
   void clearView() => clearField(3);
 }
 
-class _ReadonlyGetServiceConfigRequest extends GetServiceConfigRequest
-    with ReadonlyMessageMixin {}
-
-class ListServiceConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServiceConfigsRequest')
+class ListServiceConfigsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceConfigsRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
-    ..hasRequiredFields = false;
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
 
   ListServiceConfigsRequest() : super();
-  ListServiceConfigsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServiceConfigsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServiceConfigsRequest clone() =>
-      ListServiceConfigsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListServiceConfigsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServiceConfigsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServiceConfigsRequest clone() => ListServiceConfigsRequest()..mergeFromMessage(this);
+  ListServiceConfigsRequest copyWith(void Function(ListServiceConfigsRequest) updates) => super.copyWith((message) => updates(message as ListServiceConfigsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListServiceConfigsRequest create() => ListServiceConfigsRequest();
-  static PbList<ListServiceConfigsRequest> createRepeated() =>
-      PbList<ListServiceConfigsRequest>();
-  static ListServiceConfigsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServiceConfigsRequest();
-    return _defaultInstance;
-  }
-
+  ListServiceConfigsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListServiceConfigsRequest> createRepeated() => $pb.PbList<ListServiceConfigsRequest>();
+  static ListServiceConfigsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListServiceConfigsRequest _defaultInstance;
-  static void $checkItem(ListServiceConfigsRequest v) {
-    if (v is! ListServiceConfigsRequest)
-      checkItemFailed(v, 'ListServiceConfigsRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPageToken() => $_has(1);
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
-class _ReadonlyListServiceConfigsRequest extends ListServiceConfigsRequest
-    with ReadonlyMessageMixin {}
-
-class ListServiceConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServiceConfigsResponse')
-    ..pp<$google$api.Service>(1, 'serviceConfigs', PbFieldType.PM,
-        $google$api.Service.$checkItem, $google$api.Service.create)
+class ListServiceConfigsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceConfigsResponse', package: const $pb.PackageName('google.api.servicemanagement.v1'))
+    ..pc<$1.Service>(1, 'serviceConfigs', $pb.PbFieldType.PM,$1.Service.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListServiceConfigsResponse() : super();
-  ListServiceConfigsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServiceConfigsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServiceConfigsResponse clone() =>
-      ListServiceConfigsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListServiceConfigsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServiceConfigsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServiceConfigsResponse clone() => ListServiceConfigsResponse()..mergeFromMessage(this);
+  ListServiceConfigsResponse copyWith(void Function(ListServiceConfigsResponse) updates) => super.copyWith((message) => updates(message as ListServiceConfigsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListServiceConfigsResponse create() => ListServiceConfigsResponse();
-  static PbList<ListServiceConfigsResponse> createRepeated() =>
-      PbList<ListServiceConfigsResponse>();
-  static ListServiceConfigsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServiceConfigsResponse();
-    return _defaultInstance;
-  }
-
+  ListServiceConfigsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListServiceConfigsResponse> createRepeated() => $pb.PbList<ListServiceConfigsResponse>();
+  static ListServiceConfigsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListServiceConfigsResponse _defaultInstance;
-  static void $checkItem(ListServiceConfigsResponse v) {
-    if (v is! ListServiceConfigsResponse)
-      checkItemFailed(v, 'ListServiceConfigsResponse');
-  }
 
-  List<$google$api.Service> get serviceConfigs => $_getList(0);
+  $core.List<$1.Service> get serviceConfigs => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListServiceConfigsResponse extends ListServiceConfigsResponse
-    with ReadonlyMessageMixin {}
-
-class CreateServiceConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateServiceConfigRequest')
+class CreateServiceConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateServiceConfigRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..a<$google$api.Service>(2, 'serviceConfig', PbFieldType.OM,
-        $google$api.Service.getDefault, $google$api.Service.create)
-    ..hasRequiredFields = false;
+    ..a<$1.Service>(2, 'serviceConfig', $pb.PbFieldType.OM, $1.Service.getDefault, $1.Service.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateServiceConfigRequest() : super();
-  CreateServiceConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateServiceConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateServiceConfigRequest clone() =>
-      CreateServiceConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateServiceConfigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateServiceConfigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateServiceConfigRequest clone() => CreateServiceConfigRequest()..mergeFromMessage(this);
+  CreateServiceConfigRequest copyWith(void Function(CreateServiceConfigRequest) updates) => super.copyWith((message) => updates(message as CreateServiceConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateServiceConfigRequest create() => CreateServiceConfigRequest();
-  static PbList<CreateServiceConfigRequest> createRepeated() =>
-      PbList<CreateServiceConfigRequest>();
-  static CreateServiceConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateServiceConfigRequest();
-    return _defaultInstance;
-  }
-
+  CreateServiceConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateServiceConfigRequest> createRepeated() => $pb.PbList<CreateServiceConfigRequest>();
+  static CreateServiceConfigRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateServiceConfigRequest _defaultInstance;
-  static void $checkItem(CreateServiceConfigRequest v) {
-    if (v is! CreateServiceConfigRequest)
-      checkItemFailed(v, 'CreateServiceConfigRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  $google$api.Service get serviceConfig => $_getN(1);
-  set serviceConfig($google$api.Service v) {
-    setField(2, v);
-  }
-
-  bool hasServiceConfig() => $_has(1);
+  $1.Service get serviceConfig => $_getN(1);
+  set serviceConfig($1.Service v) { setField(2, v); }
+  $core.bool hasServiceConfig() => $_has(1);
   void clearServiceConfig() => clearField(2);
 }
 
-class _ReadonlyCreateServiceConfigRequest extends CreateServiceConfigRequest
-    with ReadonlyMessageMixin {}
-
-class SubmitConfigSourceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SubmitConfigSourceRequest')
+class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SubmitConfigSourceRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..a<ConfigSource>(2, 'configSource', PbFieldType.OM,
-        ConfigSource.getDefault, ConfigSource.create)
+    ..a<$0.ConfigSource>(2, 'configSource', $pb.PbFieldType.OM, $0.ConfigSource.getDefault, $0.ConfigSource.create)
     ..aOB(3, 'validateOnly')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   SubmitConfigSourceRequest() : super();
-  SubmitConfigSourceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SubmitConfigSourceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  SubmitConfigSourceRequest clone() =>
-      SubmitConfigSourceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SubmitConfigSourceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SubmitConfigSourceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  SubmitConfigSourceRequest clone() => SubmitConfigSourceRequest()..mergeFromMessage(this);
+  SubmitConfigSourceRequest copyWith(void Function(SubmitConfigSourceRequest) updates) => super.copyWith((message) => updates(message as SubmitConfigSourceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static SubmitConfigSourceRequest create() => SubmitConfigSourceRequest();
-  static PbList<SubmitConfigSourceRequest> createRepeated() =>
-      PbList<SubmitConfigSourceRequest>();
-  static SubmitConfigSourceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlySubmitConfigSourceRequest();
-    return _defaultInstance;
-  }
-
+  SubmitConfigSourceRequest createEmptyInstance() => create();
+  static $pb.PbList<SubmitConfigSourceRequest> createRepeated() => $pb.PbList<SubmitConfigSourceRequest>();
+  static SubmitConfigSourceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static SubmitConfigSourceRequest _defaultInstance;
-  static void $checkItem(SubmitConfigSourceRequest v) {
-    if (v is! SubmitConfigSourceRequest)
-      checkItemFailed(v, 'SubmitConfigSourceRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  ConfigSource get configSource => $_getN(1);
-  set configSource(ConfigSource v) {
-    setField(2, v);
-  }
-
-  bool hasConfigSource() => $_has(1);
+  $0.ConfigSource get configSource => $_getN(1);
+  set configSource($0.ConfigSource v) { setField(2, v); }
+  $core.bool hasConfigSource() => $_has(1);
   void clearConfigSource() => clearField(2);
 
-  bool get validateOnly => $_get(2, false);
-  set validateOnly(bool v) {
-    $_setBool(2, v);
-  }
-
-  bool hasValidateOnly() => $_has(2);
+  $core.bool get validateOnly => $_get(2, false);
+  set validateOnly($core.bool v) { $_setBool(2, v); }
+  $core.bool hasValidateOnly() => $_has(2);
   void clearValidateOnly() => clearField(3);
 }
 
-class _ReadonlySubmitConfigSourceRequest extends SubmitConfigSourceRequest
-    with ReadonlyMessageMixin {}
-
-class SubmitConfigSourceResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SubmitConfigSourceResponse')
-    ..a<$google$api.Service>(1, 'serviceConfig', PbFieldType.OM,
-        $google$api.Service.getDefault, $google$api.Service.create)
-    ..hasRequiredFields = false;
+class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SubmitConfigSourceResponse', package: const $pb.PackageName('google.api.servicemanagement.v1'))
+    ..a<$1.Service>(1, 'serviceConfig', $pb.PbFieldType.OM, $1.Service.getDefault, $1.Service.create)
+    ..hasRequiredFields = false
+  ;
 
   SubmitConfigSourceResponse() : super();
-  SubmitConfigSourceResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SubmitConfigSourceResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  SubmitConfigSourceResponse clone() =>
-      SubmitConfigSourceResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SubmitConfigSourceResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SubmitConfigSourceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  SubmitConfigSourceResponse clone() => SubmitConfigSourceResponse()..mergeFromMessage(this);
+  SubmitConfigSourceResponse copyWith(void Function(SubmitConfigSourceResponse) updates) => super.copyWith((message) => updates(message as SubmitConfigSourceResponse));
+  $pb.BuilderInfo get info_ => _i;
   static SubmitConfigSourceResponse create() => SubmitConfigSourceResponse();
-  static PbList<SubmitConfigSourceResponse> createRepeated() =>
-      PbList<SubmitConfigSourceResponse>();
-  static SubmitConfigSourceResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlySubmitConfigSourceResponse();
-    return _defaultInstance;
-  }
-
+  SubmitConfigSourceResponse createEmptyInstance() => create();
+  static $pb.PbList<SubmitConfigSourceResponse> createRepeated() => $pb.PbList<SubmitConfigSourceResponse>();
+  static SubmitConfigSourceResponse getDefault() => _defaultInstance ??= create()..freeze();
   static SubmitConfigSourceResponse _defaultInstance;
-  static void $checkItem(SubmitConfigSourceResponse v) {
-    if (v is! SubmitConfigSourceResponse)
-      checkItemFailed(v, 'SubmitConfigSourceResponse');
-  }
 
-  $google$api.Service get serviceConfig => $_getN(0);
-  set serviceConfig($google$api.Service v) {
-    setField(1, v);
-  }
-
-  bool hasServiceConfig() => $_has(0);
+  $1.Service get serviceConfig => $_getN(0);
+  set serviceConfig($1.Service v) { setField(1, v); }
+  $core.bool hasServiceConfig() => $_has(0);
   void clearServiceConfig() => clearField(1);
 }
 
-class _ReadonlySubmitConfigSourceResponse extends SubmitConfigSourceResponse
-    with ReadonlyMessageMixin {}
-
-class CreateServiceRolloutRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateServiceRolloutRequest')
+class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateServiceRolloutRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..a<Rollout>(
-        2, 'rollout', PbFieldType.OM, Rollout.getDefault, Rollout.create)
-    ..hasRequiredFields = false;
+    ..a<$0.Rollout>(2, 'rollout', $pb.PbFieldType.OM, $0.Rollout.getDefault, $0.Rollout.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateServiceRolloutRequest() : super();
-  CreateServiceRolloutRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateServiceRolloutRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateServiceRolloutRequest clone() =>
-      CreateServiceRolloutRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateServiceRolloutRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateServiceRolloutRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateServiceRolloutRequest clone() => CreateServiceRolloutRequest()..mergeFromMessage(this);
+  CreateServiceRolloutRequest copyWith(void Function(CreateServiceRolloutRequest) updates) => super.copyWith((message) => updates(message as CreateServiceRolloutRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateServiceRolloutRequest create() => CreateServiceRolloutRequest();
-  static PbList<CreateServiceRolloutRequest> createRepeated() =>
-      PbList<CreateServiceRolloutRequest>();
-  static CreateServiceRolloutRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateServiceRolloutRequest();
-    return _defaultInstance;
-  }
-
+  CreateServiceRolloutRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateServiceRolloutRequest> createRepeated() => $pb.PbList<CreateServiceRolloutRequest>();
+  static CreateServiceRolloutRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateServiceRolloutRequest _defaultInstance;
-  static void $checkItem(CreateServiceRolloutRequest v) {
-    if (v is! CreateServiceRolloutRequest)
-      checkItemFailed(v, 'CreateServiceRolloutRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  Rollout get rollout => $_getN(1);
-  set rollout(Rollout v) {
-    setField(2, v);
-  }
-
-  bool hasRollout() => $_has(1);
+  $0.Rollout get rollout => $_getN(1);
+  set rollout($0.Rollout v) { setField(2, v); }
+  $core.bool hasRollout() => $_has(1);
   void clearRollout() => clearField(2);
 }
 
-class _ReadonlyCreateServiceRolloutRequest extends CreateServiceRolloutRequest
-    with ReadonlyMessageMixin {}
-
-class ListServiceRolloutsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServiceRolloutsRequest')
+class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceRolloutsRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'filter')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListServiceRolloutsRequest() : super();
-  ListServiceRolloutsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServiceRolloutsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServiceRolloutsRequest clone() =>
-      ListServiceRolloutsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListServiceRolloutsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServiceRolloutsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServiceRolloutsRequest clone() => ListServiceRolloutsRequest()..mergeFromMessage(this);
+  ListServiceRolloutsRequest copyWith(void Function(ListServiceRolloutsRequest) updates) => super.copyWith((message) => updates(message as ListServiceRolloutsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListServiceRolloutsRequest create() => ListServiceRolloutsRequest();
-  static PbList<ListServiceRolloutsRequest> createRepeated() =>
-      PbList<ListServiceRolloutsRequest>();
-  static ListServiceRolloutsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServiceRolloutsRequest();
-    return _defaultInstance;
-  }
-
+  ListServiceRolloutsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListServiceRolloutsRequest> createRepeated() => $pb.PbList<ListServiceRolloutsRequest>();
+  static ListServiceRolloutsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListServiceRolloutsRequest _defaultInstance;
-  static void $checkItem(ListServiceRolloutsRequest v) {
-    if (v is! ListServiceRolloutsRequest)
-      checkItemFailed(v, 'ListServiceRolloutsRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPageToken() => $_has(1);
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get filter => $_getS(3, '');
-  set filter(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasFilter() => $_has(3);
+  $core.String get filter => $_getS(3, '');
+  set filter($core.String v) { $_setString(3, v); }
+  $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(4);
 }
 
-class _ReadonlyListServiceRolloutsRequest extends ListServiceRolloutsRequest
-    with ReadonlyMessageMixin {}
-
-class ListServiceRolloutsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListServiceRolloutsResponse')
-    ..pp<Rollout>(
-        1, 'rollouts', PbFieldType.PM, Rollout.$checkItem, Rollout.create)
+class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceRolloutsResponse', package: const $pb.PackageName('google.api.servicemanagement.v1'))
+    ..pc<$0.Rollout>(1, 'rollouts', $pb.PbFieldType.PM,$0.Rollout.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListServiceRolloutsResponse() : super();
-  ListServiceRolloutsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServiceRolloutsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListServiceRolloutsResponse clone() =>
-      ListServiceRolloutsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListServiceRolloutsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListServiceRolloutsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListServiceRolloutsResponse clone() => ListServiceRolloutsResponse()..mergeFromMessage(this);
+  ListServiceRolloutsResponse copyWith(void Function(ListServiceRolloutsResponse) updates) => super.copyWith((message) => updates(message as ListServiceRolloutsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListServiceRolloutsResponse create() => ListServiceRolloutsResponse();
-  static PbList<ListServiceRolloutsResponse> createRepeated() =>
-      PbList<ListServiceRolloutsResponse>();
-  static ListServiceRolloutsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListServiceRolloutsResponse();
-    return _defaultInstance;
-  }
-
+  ListServiceRolloutsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListServiceRolloutsResponse> createRepeated() => $pb.PbList<ListServiceRolloutsResponse>();
+  static ListServiceRolloutsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListServiceRolloutsResponse _defaultInstance;
-  static void $checkItem(ListServiceRolloutsResponse v) {
-    if (v is! ListServiceRolloutsResponse)
-      checkItemFailed(v, 'ListServiceRolloutsResponse');
-  }
 
-  List<Rollout> get rollouts => $_getList(0);
+  $core.List<$0.Rollout> get rollouts => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListServiceRolloutsResponse extends ListServiceRolloutsResponse
-    with ReadonlyMessageMixin {}
-
-class GetServiceRolloutRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetServiceRolloutRequest')
+class GetServiceRolloutRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceRolloutRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
     ..aOS(2, 'rolloutId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetServiceRolloutRequest() : super();
-  GetServiceRolloutRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetServiceRolloutRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetServiceRolloutRequest clone() =>
-      GetServiceRolloutRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetServiceRolloutRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetServiceRolloutRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetServiceRolloutRequest clone() => GetServiceRolloutRequest()..mergeFromMessage(this);
+  GetServiceRolloutRequest copyWith(void Function(GetServiceRolloutRequest) updates) => super.copyWith((message) => updates(message as GetServiceRolloutRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetServiceRolloutRequest create() => GetServiceRolloutRequest();
-  static PbList<GetServiceRolloutRequest> createRepeated() =>
-      PbList<GetServiceRolloutRequest>();
-  static GetServiceRolloutRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetServiceRolloutRequest();
-    return _defaultInstance;
-  }
-
+  GetServiceRolloutRequest createEmptyInstance() => create();
+  static $pb.PbList<GetServiceRolloutRequest> createRepeated() => $pb.PbList<GetServiceRolloutRequest>();
+  static GetServiceRolloutRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetServiceRolloutRequest _defaultInstance;
-  static void $checkItem(GetServiceRolloutRequest v) {
-    if (v is! GetServiceRolloutRequest)
-      checkItemFailed(v, 'GetServiceRolloutRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get rolloutId => $_getS(1, '');
-  set rolloutId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasRolloutId() => $_has(1);
+  $core.String get rolloutId => $_getS(1, '');
+  set rolloutId($core.String v) { $_setString(1, v); }
+  $core.bool hasRolloutId() => $_has(1);
   void clearRolloutId() => clearField(2);
 }
 
-class _ReadonlyGetServiceRolloutRequest extends GetServiceRolloutRequest
-    with ReadonlyMessageMixin {}
-
-class EnableServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EnableServiceRequest')
+class EnableServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnableServiceRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
     ..aOS(2, 'consumerId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   EnableServiceRequest() : super();
-  EnableServiceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnableServiceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  EnableServiceRequest clone() =>
-      EnableServiceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EnableServiceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EnableServiceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  EnableServiceRequest clone() => EnableServiceRequest()..mergeFromMessage(this);
+  EnableServiceRequest copyWith(void Function(EnableServiceRequest) updates) => super.copyWith((message) => updates(message as EnableServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static EnableServiceRequest create() => EnableServiceRequest();
-  static PbList<EnableServiceRequest> createRepeated() =>
-      PbList<EnableServiceRequest>();
-  static EnableServiceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyEnableServiceRequest();
-    return _defaultInstance;
-  }
-
+  EnableServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<EnableServiceRequest> createRepeated() => $pb.PbList<EnableServiceRequest>();
+  static EnableServiceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static EnableServiceRequest _defaultInstance;
-  static void $checkItem(EnableServiceRequest v) {
-    if (v is! EnableServiceRequest) checkItemFailed(v, 'EnableServiceRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get consumerId => $_getS(1, '');
-  set consumerId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasConsumerId() => $_has(1);
+  $core.String get consumerId => $_getS(1, '');
+  set consumerId($core.String v) { $_setString(1, v); }
+  $core.bool hasConsumerId() => $_has(1);
   void clearConsumerId() => clearField(2);
 }
 
-class _ReadonlyEnableServiceRequest extends EnableServiceRequest
-    with ReadonlyMessageMixin {}
-
-class DisableServiceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DisableServiceRequest')
+class DisableServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DisableServiceRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
     ..aOS(2, 'consumerId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DisableServiceRequest() : super();
-  DisableServiceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DisableServiceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DisableServiceRequest clone() =>
-      DisableServiceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DisableServiceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DisableServiceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DisableServiceRequest clone() => DisableServiceRequest()..mergeFromMessage(this);
+  DisableServiceRequest copyWith(void Function(DisableServiceRequest) updates) => super.copyWith((message) => updates(message as DisableServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DisableServiceRequest create() => DisableServiceRequest();
-  static PbList<DisableServiceRequest> createRepeated() =>
-      PbList<DisableServiceRequest>();
-  static DisableServiceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDisableServiceRequest();
-    return _defaultInstance;
-  }
-
+  DisableServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<DisableServiceRequest> createRepeated() => $pb.PbList<DisableServiceRequest>();
+  static DisableServiceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DisableServiceRequest _defaultInstance;
-  static void $checkItem(DisableServiceRequest v) {
-    if (v is! DisableServiceRequest)
-      checkItemFailed(v, 'DisableServiceRequest');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get consumerId => $_getS(1, '');
-  set consumerId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasConsumerId() => $_has(1);
+  $core.String get consumerId => $_getS(1, '');
+  set consumerId($core.String v) { $_setString(1, v); }
+  $core.bool hasConsumerId() => $_has(1);
   void clearConsumerId() => clearField(2);
 }
 
-class _ReadonlyDisableServiceRequest extends DisableServiceRequest
-    with ReadonlyMessageMixin {}
-
-class GenerateConfigReportRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GenerateConfigReportRequest')
-    ..a<$google$protobuf.Any>(1, 'newConfig', PbFieldType.OM,
-        $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
-    ..a<$google$protobuf.Any>(2, 'oldConfig', PbFieldType.OM,
-        $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
-    ..hasRequiredFields = false;
+class GenerateConfigReportRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GenerateConfigReportRequest', package: const $pb.PackageName('google.api.servicemanagement.v1'))
+    ..a<$2.Any>(1, 'newConfig', $pb.PbFieldType.OM, $2.Any.getDefault, $2.Any.create)
+    ..a<$2.Any>(2, 'oldConfig', $pb.PbFieldType.OM, $2.Any.getDefault, $2.Any.create)
+    ..hasRequiredFields = false
+  ;
 
   GenerateConfigReportRequest() : super();
-  GenerateConfigReportRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateConfigReportRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GenerateConfigReportRequest clone() =>
-      GenerateConfigReportRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GenerateConfigReportRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GenerateConfigReportRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GenerateConfigReportRequest clone() => GenerateConfigReportRequest()..mergeFromMessage(this);
+  GenerateConfigReportRequest copyWith(void Function(GenerateConfigReportRequest) updates) => super.copyWith((message) => updates(message as GenerateConfigReportRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GenerateConfigReportRequest create() => GenerateConfigReportRequest();
-  static PbList<GenerateConfigReportRequest> createRepeated() =>
-      PbList<GenerateConfigReportRequest>();
-  static GenerateConfigReportRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGenerateConfigReportRequest();
-    return _defaultInstance;
-  }
-
+  GenerateConfigReportRequest createEmptyInstance() => create();
+  static $pb.PbList<GenerateConfigReportRequest> createRepeated() => $pb.PbList<GenerateConfigReportRequest>();
+  static GenerateConfigReportRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GenerateConfigReportRequest _defaultInstance;
-  static void $checkItem(GenerateConfigReportRequest v) {
-    if (v is! GenerateConfigReportRequest)
-      checkItemFailed(v, 'GenerateConfigReportRequest');
-  }
 
-  $google$protobuf.Any get newConfig => $_getN(0);
-  set newConfig($google$protobuf.Any v) {
-    setField(1, v);
-  }
-
-  bool hasNewConfig() => $_has(0);
+  $2.Any get newConfig => $_getN(0);
+  set newConfig($2.Any v) { setField(1, v); }
+  $core.bool hasNewConfig() => $_has(0);
   void clearNewConfig() => clearField(1);
 
-  $google$protobuf.Any get oldConfig => $_getN(1);
-  set oldConfig($google$protobuf.Any v) {
-    setField(2, v);
-  }
-
-  bool hasOldConfig() => $_has(1);
+  $2.Any get oldConfig => $_getN(1);
+  set oldConfig($2.Any v) { setField(2, v); }
+  $core.bool hasOldConfig() => $_has(1);
   void clearOldConfig() => clearField(2);
 }
 
-class _ReadonlyGenerateConfigReportRequest extends GenerateConfigReportRequest
-    with ReadonlyMessageMixin {}
-
-class GenerateConfigReportResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GenerateConfigReportResponse')
+class GenerateConfigReportResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GenerateConfigReportResponse', package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
     ..aOS(2, 'id')
-    ..pp<ChangeReport>(3, 'changeReports', PbFieldType.PM,
-        ChangeReport.$checkItem, ChangeReport.create)
-    ..pp<Diagnostic>(4, 'diagnostics', PbFieldType.PM, Diagnostic.$checkItem,
-        Diagnostic.create)
-    ..hasRequiredFields = false;
+    ..pc<$0.ChangeReport>(3, 'changeReports', $pb.PbFieldType.PM,$0.ChangeReport.create)
+    ..pc<$0.Diagnostic>(4, 'diagnostics', $pb.PbFieldType.PM,$0.Diagnostic.create)
+    ..hasRequiredFields = false
+  ;
 
   GenerateConfigReportResponse() : super();
-  GenerateConfigReportResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateConfigReportResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GenerateConfigReportResponse clone() =>
-      GenerateConfigReportResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GenerateConfigReportResponse create() =>
-      GenerateConfigReportResponse();
-  static PbList<GenerateConfigReportResponse> createRepeated() =>
-      PbList<GenerateConfigReportResponse>();
-  static GenerateConfigReportResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGenerateConfigReportResponse();
-    return _defaultInstance;
-  }
-
+  GenerateConfigReportResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GenerateConfigReportResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GenerateConfigReportResponse clone() => GenerateConfigReportResponse()..mergeFromMessage(this);
+  GenerateConfigReportResponse copyWith(void Function(GenerateConfigReportResponse) updates) => super.copyWith((message) => updates(message as GenerateConfigReportResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static GenerateConfigReportResponse create() => GenerateConfigReportResponse();
+  GenerateConfigReportResponse createEmptyInstance() => create();
+  static $pb.PbList<GenerateConfigReportResponse> createRepeated() => $pb.PbList<GenerateConfigReportResponse>();
+  static GenerateConfigReportResponse getDefault() => _defaultInstance ??= create()..freeze();
   static GenerateConfigReportResponse _defaultInstance;
-  static void $checkItem(GenerateConfigReportResponse v) {
-    if (v is! GenerateConfigReportResponse)
-      checkItemFailed(v, 'GenerateConfigReportResponse');
-  }
 
-  String get serviceName => $_getS(0, '');
-  set serviceName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasServiceName() => $_has(0);
+  $core.String get serviceName => $_getS(0, '');
+  set serviceName($core.String v) { $_setString(0, v); }
+  $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  String get id => $_getS(1, '');
-  set id(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasId() => $_has(1);
+  $core.String get id => $_getS(1, '');
+  set id($core.String v) { $_setString(1, v); }
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  List<ChangeReport> get changeReports => $_getList(2);
+  $core.List<$0.ChangeReport> get changeReports => $_getList(2);
 
-  List<Diagnostic> get diagnostics => $_getList(3);
+  $core.List<$0.Diagnostic> get diagnostics => $_getList(3);
 }
-
-class _ReadonlyGenerateConfigReportResponse extends GenerateConfigReportResponse
-    with ReadonlyMessageMixin {}
 
 class ServiceManagerApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   ServiceManagerApi(this._client);
 
-  Future<ListServicesResponse> listServices(
-      ClientContext ctx, ListServicesRequest request) {
+  $async.Future<ListServicesResponse> listServices($pb.ClientContext ctx, ListServicesRequest request) {
     var emptyResponse = ListServicesResponse();
-    return _client.invoke<ListServicesResponse>(
-        ctx, 'ServiceManager', 'ListServices', request, emptyResponse);
+    return _client.invoke<ListServicesResponse>(ctx, 'ServiceManager', 'ListServices', request, emptyResponse);
   }
-
-  Future<ManagedService> getService(
-      ClientContext ctx, GetServiceRequest request) {
-    var emptyResponse = ManagedService();
-    return _client.invoke<ManagedService>(
-        ctx, 'ServiceManager', 'GetService', request, emptyResponse);
+  $async.Future<$0.ManagedService> getService($pb.ClientContext ctx, GetServiceRequest request) {
+    var emptyResponse = $0.ManagedService();
+    return _client.invoke<$0.ManagedService>(ctx, 'ServiceManager', 'GetService', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> createService(
-      ClientContext ctx, CreateServiceRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ServiceManager', 'CreateService', request, emptyResponse);
+  $async.Future<$3.Operation> createService($pb.ClientContext ctx, CreateServiceRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'ServiceManager', 'CreateService', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> deleteService(
-      ClientContext ctx, DeleteServiceRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ServiceManager', 'DeleteService', request, emptyResponse);
+  $async.Future<$3.Operation> deleteService($pb.ClientContext ctx, DeleteServiceRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'ServiceManager', 'DeleteService', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> undeleteService(
-      ClientContext ctx, UndeleteServiceRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ServiceManager', 'UndeleteService', request, emptyResponse);
+  $async.Future<$3.Operation> undeleteService($pb.ClientContext ctx, UndeleteServiceRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'ServiceManager', 'UndeleteService', request, emptyResponse);
   }
-
-  Future<ListServiceConfigsResponse> listServiceConfigs(
-      ClientContext ctx, ListServiceConfigsRequest request) {
+  $async.Future<ListServiceConfigsResponse> listServiceConfigs($pb.ClientContext ctx, ListServiceConfigsRequest request) {
     var emptyResponse = ListServiceConfigsResponse();
-    return _client.invoke<ListServiceConfigsResponse>(
-        ctx, 'ServiceManager', 'ListServiceConfigs', request, emptyResponse);
+    return _client.invoke<ListServiceConfigsResponse>(ctx, 'ServiceManager', 'ListServiceConfigs', request, emptyResponse);
   }
-
-  Future<$google$api.Service> getServiceConfig(
-      ClientContext ctx, GetServiceConfigRequest request) {
-    var emptyResponse = $google$api.Service();
-    return _client.invoke<$google$api.Service>(
-        ctx, 'ServiceManager', 'GetServiceConfig', request, emptyResponse);
+  $async.Future<$1.Service> getServiceConfig($pb.ClientContext ctx, GetServiceConfigRequest request) {
+    var emptyResponse = $1.Service();
+    return _client.invoke<$1.Service>(ctx, 'ServiceManager', 'GetServiceConfig', request, emptyResponse);
   }
-
-  Future<$google$api.Service> createServiceConfig(
-      ClientContext ctx, CreateServiceConfigRequest request) {
-    var emptyResponse = $google$api.Service();
-    return _client.invoke<$google$api.Service>(
-        ctx, 'ServiceManager', 'CreateServiceConfig', request, emptyResponse);
+  $async.Future<$1.Service> createServiceConfig($pb.ClientContext ctx, CreateServiceConfigRequest request) {
+    var emptyResponse = $1.Service();
+    return _client.invoke<$1.Service>(ctx, 'ServiceManager', 'CreateServiceConfig', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> submitConfigSource(
-      ClientContext ctx, SubmitConfigSourceRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ServiceManager', 'SubmitConfigSource', request, emptyResponse);
+  $async.Future<$3.Operation> submitConfigSource($pb.ClientContext ctx, SubmitConfigSourceRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'ServiceManager', 'SubmitConfigSource', request, emptyResponse);
   }
-
-  Future<ListServiceRolloutsResponse> listServiceRollouts(
-      ClientContext ctx, ListServiceRolloutsRequest request) {
+  $async.Future<ListServiceRolloutsResponse> listServiceRollouts($pb.ClientContext ctx, ListServiceRolloutsRequest request) {
     var emptyResponse = ListServiceRolloutsResponse();
-    return _client.invoke<ListServiceRolloutsResponse>(
-        ctx, 'ServiceManager', 'ListServiceRollouts', request, emptyResponse);
+    return _client.invoke<ListServiceRolloutsResponse>(ctx, 'ServiceManager', 'ListServiceRollouts', request, emptyResponse);
   }
-
-  Future<Rollout> getServiceRollout(
-      ClientContext ctx, GetServiceRolloutRequest request) {
-    var emptyResponse = Rollout();
-    return _client.invoke<Rollout>(
-        ctx, 'ServiceManager', 'GetServiceRollout', request, emptyResponse);
+  $async.Future<$0.Rollout> getServiceRollout($pb.ClientContext ctx, GetServiceRolloutRequest request) {
+    var emptyResponse = $0.Rollout();
+    return _client.invoke<$0.Rollout>(ctx, 'ServiceManager', 'GetServiceRollout', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> createServiceRollout(
-      ClientContext ctx, CreateServiceRolloutRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ServiceManager', 'CreateServiceRollout', request, emptyResponse);
+  $async.Future<$3.Operation> createServiceRollout($pb.ClientContext ctx, CreateServiceRolloutRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'ServiceManager', 'CreateServiceRollout', request, emptyResponse);
   }
-
-  Future<GenerateConfigReportResponse> generateConfigReport(
-      ClientContext ctx, GenerateConfigReportRequest request) {
+  $async.Future<GenerateConfigReportResponse> generateConfigReport($pb.ClientContext ctx, GenerateConfigReportRequest request) {
     var emptyResponse = GenerateConfigReportResponse();
-    return _client.invoke<GenerateConfigReportResponse>(
-        ctx, 'ServiceManager', 'GenerateConfigReport', request, emptyResponse);
+    return _client.invoke<GenerateConfigReportResponse>(ctx, 'ServiceManager', 'GenerateConfigReport', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> enableService(
-      ClientContext ctx, EnableServiceRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ServiceManager', 'EnableService', request, emptyResponse);
+  $async.Future<$3.Operation> enableService($pb.ClientContext ctx, EnableServiceRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'ServiceManager', 'EnableService', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> disableService(
-      ClientContext ctx, DisableServiceRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ServiceManager', 'DisableService', request, emptyResponse);
+  $async.Future<$3.Operation> disableService($pb.ClientContext ctx, DisableServiceRequest request) {
+    var emptyResponse = $3.Operation();
+    return _client.invoke<$3.Operation>(ctx, 'ServiceManager', 'DisableService', request, emptyResponse);
   }
 }
+

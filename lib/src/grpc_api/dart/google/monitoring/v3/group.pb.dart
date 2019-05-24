@@ -1,80 +1,58 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/group.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Group extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Group')
+class Group extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Group', package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'parentName')
     ..aOS(5, 'filter')
     ..aOB(6, 'isCluster')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Group() : super();
-  Group.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Group.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Group.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Group.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Group clone() => Group()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Group copyWith(void Function(Group) updates) => super.copyWith((message) => updates(message as Group));
+  $pb.BuilderInfo get info_ => _i;
   static Group create() => Group();
-  static PbList<Group> createRepeated() => PbList<Group>();
-  static Group getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyGroup();
-    return _defaultInstance;
-  }
-
+  Group createEmptyInstance() => create();
+  static $pb.PbList<Group> createRepeated() => $pb.PbList<Group>();
+  static Group getDefault() => _defaultInstance ??= create()..freeze();
   static Group _defaultInstance;
-  static void $checkItem(Group v) {
-    if (v is! Group) checkItemFailed(v, 'Group');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get displayName => $_getS(1, '');
-  set displayName(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasDisplayName() => $_has(1);
+  $core.String get displayName => $_getS(1, '');
+  set displayName($core.String v) { $_setString(1, v); }
+  $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
-  String get parentName => $_getS(2, '');
-  set parentName(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasParentName() => $_has(2);
+  $core.String get parentName => $_getS(2, '');
+  set parentName($core.String v) { $_setString(2, v); }
+  $core.bool hasParentName() => $_has(2);
   void clearParentName() => clearField(3);
 
-  String get filter => $_getS(3, '');
-  set filter(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasFilter() => $_has(3);
+  $core.String get filter => $_getS(3, '');
+  set filter($core.String v) { $_setString(3, v); }
+  $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(5);
 
-  bool get isCluster => $_get(4, false);
-  set isCluster(bool v) {
-    $_setBool(4, v);
-  }
-
-  bool hasIsCluster() => $_has(4);
+  $core.bool get isCluster => $_get(4, false);
+  set isCluster($core.bool v) { $_setBool(4, v); }
+  $core.bool hasIsCluster() => $_has(4);
   void clearIsCluster() => clearField(6);
 }
 
-class _ReadonlyGroup extends Group with ReadonlyMessageMixin {}

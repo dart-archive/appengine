@@ -1,2722 +1,1665 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/containeranalysis/v1alpha1/containeranalysis.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'package_vulnerability.pb.dart';
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import 'image_basis.pb.dart';
-import 'bill_of_materials.pb.dart';
-import 'provenance.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../rpc/status.pb.dart' as $google$rpc;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../../iam/v1/policy.pb.dart' as $google$iam$v1;
+import 'package_vulnerability.pb.dart' as $0;
+import '../../../protobuf/timestamp.pb.dart' as $1;
+import 'image_basis.pb.dart' as $2;
+import 'bill_of_materials.pb.dart' as $3;
+import 'provenance.pb.dart' as $4;
+import '../../../longrunning/operations.pb.dart' as $5;
+import '../../../rpc/status.pb.dart' as $6;
+import '../../../protobuf/field_mask.pb.dart' as $7;
+import '../../../protobuf/empty.pb.dart' as $8;
+import '../../../iam/v1/iam_policy.pb.dart' as $9;
+import '../../../iam/v1/policy.pb.dart' as $10;
 
 import 'containeranalysis.pbenum.dart';
-import 'package_vulnerability.pbenum.dart';
+import 'package_vulnerability.pbenum.dart' as $0;
 
 export 'containeranalysis.pbenum.dart';
 
-class Occurrence extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Occurrence')
+enum Occurrence_Details {
+  buildDetails, 
+  vulnerabilityDetails, 
+  derivedImage, 
+  installation, 
+  deployment, 
+  discovered, 
+  attestation, 
+  notSet
+}
+
+class Occurrence extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Occurrence_Details> _Occurrence_DetailsByTag = {
+    7 : Occurrence_Details.buildDetails,
+    8 : Occurrence_Details.vulnerabilityDetails,
+    11 : Occurrence_Details.derivedImage,
+    12 : Occurrence_Details.installation,
+    14 : Occurrence_Details.deployment,
+    15 : Occurrence_Details.discovered,
+    16 : Occurrence_Details.attestation,
+    0 : Occurrence_Details.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Occurrence', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'resourceUrl')
     ..aOS(3, 'noteName')
     ..aOS(5, 'remediation')
-    ..e<Note_Kind>(6, 'kind', PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED,
-        Note_Kind.valueOf, Note_Kind.values)
-    ..a<BuildDetails>(7, 'buildDetails', PbFieldType.OM,
-        BuildDetails.getDefault, BuildDetails.create)
-    ..a<VulnerabilityType_VulnerabilityDetails>(
-        8,
-        'vulnerabilityDetails',
-        PbFieldType.OM,
-        VulnerabilityType_VulnerabilityDetails.getDefault,
-        VulnerabilityType_VulnerabilityDetails.create)
-    ..a<$google$protobuf.Timestamp>(
-        9,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        10,
-        'updateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<DockerImage_Derived>(11, 'derivedImage', PbFieldType.OM,
-        DockerImage_Derived.getDefault, DockerImage_Derived.create)
-    ..a<PackageManager_Installation>(
-        12,
-        'installation',
-        PbFieldType.OM,
-        PackageManager_Installation.getDefault,
-        PackageManager_Installation.create)
-    ..a<Deployable_Deployment>(14, 'deployment', PbFieldType.OM,
-        Deployable_Deployment.getDefault, Deployable_Deployment.create)
-    ..a<Discovery_Discovered>(15, 'discovered', PbFieldType.OM,
-        Discovery_Discovered.getDefault, Discovery_Discovered.create)
-    ..a<AttestationAuthority_Attestation>(
-        16,
-        'attestation',
-        PbFieldType.OM,
-        AttestationAuthority_Attestation.getDefault,
-        AttestationAuthority_Attestation.create)
-    ..a<Resource>(
-        17, 'resource', PbFieldType.OM, Resource.getDefault, Resource.create)
-    ..hasRequiredFields = false;
+    ..e<Note_Kind>(6, 'kind', $pb.PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED, Note_Kind.valueOf, Note_Kind.values)
+    ..a<BuildDetails>(7, 'buildDetails', $pb.PbFieldType.OM, BuildDetails.getDefault, BuildDetails.create)
+    ..a<$0.VulnerabilityType_VulnerabilityDetails>(8, 'vulnerabilityDetails', $pb.PbFieldType.OM, $0.VulnerabilityType_VulnerabilityDetails.getDefault, $0.VulnerabilityType_VulnerabilityDetails.create)
+    ..a<$1.Timestamp>(9, 'createTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(10, 'updateTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.DockerImage_Derived>(11, 'derivedImage', $pb.PbFieldType.OM, $2.DockerImage_Derived.getDefault, $2.DockerImage_Derived.create)
+    ..a<$3.PackageManager_Installation>(12, 'installation', $pb.PbFieldType.OM, $3.PackageManager_Installation.getDefault, $3.PackageManager_Installation.create)
+    ..a<Deployable_Deployment>(14, 'deployment', $pb.PbFieldType.OM, Deployable_Deployment.getDefault, Deployable_Deployment.create)
+    ..a<Discovery_Discovered>(15, 'discovered', $pb.PbFieldType.OM, Discovery_Discovered.getDefault, Discovery_Discovered.create)
+    ..a<AttestationAuthority_Attestation>(16, 'attestation', $pb.PbFieldType.OM, AttestationAuthority_Attestation.getDefault, AttestationAuthority_Attestation.create)
+    ..a<Resource>(17, 'resource', $pb.PbFieldType.OM, Resource.getDefault, Resource.create)
+    ..oo(0, [7, 8, 11, 12, 14, 15, 16])
+    ..hasRequiredFields = false
+  ;
 
   Occurrence() : super();
-  Occurrence.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Occurrence.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Occurrence.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Occurrence.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Occurrence clone() => Occurrence()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Occurrence copyWith(void Function(Occurrence) updates) => super.copyWith((message) => updates(message as Occurrence));
+  $pb.BuilderInfo get info_ => _i;
   static Occurrence create() => Occurrence();
-  static PbList<Occurrence> createRepeated() => PbList<Occurrence>();
-  static Occurrence getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyOccurrence();
-    return _defaultInstance;
-  }
-
+  Occurrence createEmptyInstance() => create();
+  static $pb.PbList<Occurrence> createRepeated() => $pb.PbList<Occurrence>();
+  static Occurrence getDefault() => _defaultInstance ??= create()..freeze();
   static Occurrence _defaultInstance;
-  static void $checkItem(Occurrence v) {
-    if (v is! Occurrence) checkItemFailed(v, 'Occurrence');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
+  Occurrence_Details whichDetails() => _Occurrence_DetailsByTag[$_whichOneof(0)];
+  void clearDetails() => clearField($_whichOneof(0));
 
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get resourceUrl => $_getS(1, '');
-  set resourceUrl(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasResourceUrl() => $_has(1);
+  $core.String get resourceUrl => $_getS(1, '');
+  set resourceUrl($core.String v) { $_setString(1, v); }
+  $core.bool hasResourceUrl() => $_has(1);
   void clearResourceUrl() => clearField(2);
 
-  String get noteName => $_getS(2, '');
-  set noteName(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasNoteName() => $_has(2);
+  $core.String get noteName => $_getS(2, '');
+  set noteName($core.String v) { $_setString(2, v); }
+  $core.bool hasNoteName() => $_has(2);
   void clearNoteName() => clearField(3);
 
-  String get remediation => $_getS(3, '');
-  set remediation(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasRemediation() => $_has(3);
+  $core.String get remediation => $_getS(3, '');
+  set remediation($core.String v) { $_setString(3, v); }
+  $core.bool hasRemediation() => $_has(3);
   void clearRemediation() => clearField(5);
 
   Note_Kind get kind => $_getN(4);
-  set kind(Note_Kind v) {
-    setField(6, v);
-  }
-
-  bool hasKind() => $_has(4);
+  set kind(Note_Kind v) { setField(6, v); }
+  $core.bool hasKind() => $_has(4);
   void clearKind() => clearField(6);
 
   BuildDetails get buildDetails => $_getN(5);
-  set buildDetails(BuildDetails v) {
-    setField(7, v);
-  }
-
-  bool hasBuildDetails() => $_has(5);
+  set buildDetails(BuildDetails v) { setField(7, v); }
+  $core.bool hasBuildDetails() => $_has(5);
   void clearBuildDetails() => clearField(7);
 
-  VulnerabilityType_VulnerabilityDetails get vulnerabilityDetails => $_getN(6);
-  set vulnerabilityDetails(VulnerabilityType_VulnerabilityDetails v) {
-    setField(8, v);
-  }
-
-  bool hasVulnerabilityDetails() => $_has(6);
+  $0.VulnerabilityType_VulnerabilityDetails get vulnerabilityDetails => $_getN(6);
+  set vulnerabilityDetails($0.VulnerabilityType_VulnerabilityDetails v) { setField(8, v); }
+  $core.bool hasVulnerabilityDetails() => $_has(6);
   void clearVulnerabilityDetails() => clearField(8);
 
-  $google$protobuf.Timestamp get createTime => $_getN(7);
-  set createTime($google$protobuf.Timestamp v) {
-    setField(9, v);
-  }
-
-  bool hasCreateTime() => $_has(7);
+  $1.Timestamp get createTime => $_getN(7);
+  set createTime($1.Timestamp v) { setField(9, v); }
+  $core.bool hasCreateTime() => $_has(7);
   void clearCreateTime() => clearField(9);
 
-  $google$protobuf.Timestamp get updateTime => $_getN(8);
-  set updateTime($google$protobuf.Timestamp v) {
-    setField(10, v);
-  }
-
-  bool hasUpdateTime() => $_has(8);
+  $1.Timestamp get updateTime => $_getN(8);
+  set updateTime($1.Timestamp v) { setField(10, v); }
+  $core.bool hasUpdateTime() => $_has(8);
   void clearUpdateTime() => clearField(10);
 
-  DockerImage_Derived get derivedImage => $_getN(9);
-  set derivedImage(DockerImage_Derived v) {
-    setField(11, v);
-  }
-
-  bool hasDerivedImage() => $_has(9);
+  $2.DockerImage_Derived get derivedImage => $_getN(9);
+  set derivedImage($2.DockerImage_Derived v) { setField(11, v); }
+  $core.bool hasDerivedImage() => $_has(9);
   void clearDerivedImage() => clearField(11);
 
-  PackageManager_Installation get installation => $_getN(10);
-  set installation(PackageManager_Installation v) {
-    setField(12, v);
-  }
-
-  bool hasInstallation() => $_has(10);
+  $3.PackageManager_Installation get installation => $_getN(10);
+  set installation($3.PackageManager_Installation v) { setField(12, v); }
+  $core.bool hasInstallation() => $_has(10);
   void clearInstallation() => clearField(12);
 
   Deployable_Deployment get deployment => $_getN(11);
-  set deployment(Deployable_Deployment v) {
-    setField(14, v);
-  }
-
-  bool hasDeployment() => $_has(11);
+  set deployment(Deployable_Deployment v) { setField(14, v); }
+  $core.bool hasDeployment() => $_has(11);
   void clearDeployment() => clearField(14);
 
   Discovery_Discovered get discovered => $_getN(12);
-  set discovered(Discovery_Discovered v) {
-    setField(15, v);
-  }
-
-  bool hasDiscovered() => $_has(12);
+  set discovered(Discovery_Discovered v) { setField(15, v); }
+  $core.bool hasDiscovered() => $_has(12);
   void clearDiscovered() => clearField(15);
 
   AttestationAuthority_Attestation get attestation => $_getN(13);
-  set attestation(AttestationAuthority_Attestation v) {
-    setField(16, v);
-  }
-
-  bool hasAttestation() => $_has(13);
+  set attestation(AttestationAuthority_Attestation v) { setField(16, v); }
+  $core.bool hasAttestation() => $_has(13);
   void clearAttestation() => clearField(16);
 
   Resource get resource => $_getN(14);
-  set resource(Resource v) {
-    setField(17, v);
-  }
-
-  bool hasResource() => $_has(14);
+  set resource(Resource v) { setField(17, v); }
+  $core.bool hasResource() => $_has(14);
   void clearResource() => clearField(17);
 }
 
-class _ReadonlyOccurrence extends Occurrence with ReadonlyMessageMixin {}
-
-class Resource extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Resource')
+class Resource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Resource', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'uri')
-    ..a<Hash>(3, 'contentHash', PbFieldType.OM, Hash.getDefault, Hash.create)
-    ..hasRequiredFields = false;
+    ..a<$4.Hash>(3, 'contentHash', $pb.PbFieldType.OM, $4.Hash.getDefault, $4.Hash.create)
+    ..hasRequiredFields = false
+  ;
 
   Resource() : super();
-  Resource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Resource.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Resource.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Resource.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Resource clone() => Resource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Resource copyWith(void Function(Resource) updates) => super.copyWith((message) => updates(message as Resource));
+  $pb.BuilderInfo get info_ => _i;
   static Resource create() => Resource();
-  static PbList<Resource> createRepeated() => PbList<Resource>();
-  static Resource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyResource();
-    return _defaultInstance;
-  }
-
+  Resource createEmptyInstance() => create();
+  static $pb.PbList<Resource> createRepeated() => $pb.PbList<Resource>();
+  static Resource getDefault() => _defaultInstance ??= create()..freeze();
   static Resource _defaultInstance;
-  static void $checkItem(Resource v) {
-    if (v is! Resource) checkItemFailed(v, 'Resource');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get uri => $_getS(1, '');
-  set uri(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasUri() => $_has(1);
+  $core.String get uri => $_getS(1, '');
+  set uri($core.String v) { $_setString(1, v); }
+  $core.bool hasUri() => $_has(1);
   void clearUri() => clearField(2);
 
-  Hash get contentHash => $_getN(2);
-  set contentHash(Hash v) {
-    setField(3, v);
-  }
-
-  bool hasContentHash() => $_has(2);
+  $4.Hash get contentHash => $_getN(2);
+  set contentHash($4.Hash v) { setField(3, v); }
+  $core.bool hasContentHash() => $_has(2);
   void clearContentHash() => clearField(3);
 }
 
-class _ReadonlyResource extends Resource with ReadonlyMessageMixin {}
-
-class Note_RelatedUrl extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Note_RelatedUrl')
+class Note_RelatedUrl extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Note.RelatedUrl', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'url')
     ..aOS(2, 'label')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Note_RelatedUrl() : super();
-  Note_RelatedUrl.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Note_RelatedUrl.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Note_RelatedUrl.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Note_RelatedUrl.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Note_RelatedUrl clone() => Note_RelatedUrl()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Note_RelatedUrl copyWith(void Function(Note_RelatedUrl) updates) => super.copyWith((message) => updates(message as Note_RelatedUrl));
+  $pb.BuilderInfo get info_ => _i;
   static Note_RelatedUrl create() => Note_RelatedUrl();
-  static PbList<Note_RelatedUrl> createRepeated() => PbList<Note_RelatedUrl>();
-  static Note_RelatedUrl getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyNote_RelatedUrl();
-    return _defaultInstance;
-  }
-
+  Note_RelatedUrl createEmptyInstance() => create();
+  static $pb.PbList<Note_RelatedUrl> createRepeated() => $pb.PbList<Note_RelatedUrl>();
+  static Note_RelatedUrl getDefault() => _defaultInstance ??= create()..freeze();
   static Note_RelatedUrl _defaultInstance;
-  static void $checkItem(Note_RelatedUrl v) {
-    if (v is! Note_RelatedUrl) checkItemFailed(v, 'Note_RelatedUrl');
-  }
 
-  String get url => $_getS(0, '');
-  set url(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasUrl() => $_has(0);
+  $core.String get url => $_getS(0, '');
+  set url($core.String v) { $_setString(0, v); }
+  $core.bool hasUrl() => $_has(0);
   void clearUrl() => clearField(1);
 
-  String get label => $_getS(1, '');
-  set label(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasLabel() => $_has(1);
+  $core.String get label => $_getS(1, '');
+  set label($core.String v) { $_setString(1, v); }
+  $core.bool hasLabel() => $_has(1);
   void clearLabel() => clearField(2);
 }
 
-class _ReadonlyNote_RelatedUrl extends Note_RelatedUrl
-    with ReadonlyMessageMixin {}
+enum Note_NoteType {
+  vulnerabilityType, 
+  buildType, 
+  baseImage, 
+  package, 
+  deployable, 
+  discovery, 
+  attestationAuthority, 
+  notSet
+}
 
-class Note extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Note')
+class Note extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Note_NoteType> _Note_NoteTypeByTag = {
+    6 : Note_NoteType.vulnerabilityType,
+    8 : Note_NoteType.buildType,
+    13 : Note_NoteType.baseImage,
+    14 : Note_NoteType.package,
+    17 : Note_NoteType.deployable,
+    18 : Note_NoteType.discovery,
+    19 : Note_NoteType.attestationAuthority,
+    0 : Note_NoteType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Note', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(3, 'shortDescription')
     ..aOS(4, 'longDescription')
-    ..a<VulnerabilityType>(6, 'vulnerabilityType', PbFieldType.OM,
-        VulnerabilityType.getDefault, VulnerabilityType.create)
-    ..pp<Note_RelatedUrl>(7, 'relatedUrl', PbFieldType.PM,
-        Note_RelatedUrl.$checkItem, Note_RelatedUrl.create)
-    ..a<BuildType>(
-        8, 'buildType', PbFieldType.OM, BuildType.getDefault, BuildType.create)
-    ..e<Note_Kind>(9, 'kind', PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED,
-        Note_Kind.valueOf, Note_Kind.values)
-    ..a<$google$protobuf.Timestamp>(
-        10,
-        'expirationTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        11,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        12,
-        'updateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<DockerImage_Basis>(13, 'baseImage', PbFieldType.OM,
-        DockerImage_Basis.getDefault, DockerImage_Basis.create)
-    ..a<PackageManager_Package>(14, 'package', PbFieldType.OM,
-        PackageManager_Package.getDefault, PackageManager_Package.create)
-    ..a<Deployable>(17, 'deployable', PbFieldType.OM, Deployable.getDefault,
-        Deployable.create)
-    ..a<Discovery>(
-        18, 'discovery', PbFieldType.OM, Discovery.getDefault, Discovery.create)
-    ..a<AttestationAuthority>(19, 'attestationAuthority', PbFieldType.OM,
-        AttestationAuthority.getDefault, AttestationAuthority.create)
-    ..hasRequiredFields = false;
+    ..a<$0.VulnerabilityType>(6, 'vulnerabilityType', $pb.PbFieldType.OM, $0.VulnerabilityType.getDefault, $0.VulnerabilityType.create)
+    ..pc<Note_RelatedUrl>(7, 'relatedUrl', $pb.PbFieldType.PM,Note_RelatedUrl.create)
+    ..a<BuildType>(8, 'buildType', $pb.PbFieldType.OM, BuildType.getDefault, BuildType.create)
+    ..e<Note_Kind>(9, 'kind', $pb.PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED, Note_Kind.valueOf, Note_Kind.values)
+    ..a<$1.Timestamp>(10, 'expirationTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(11, 'createTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(12, 'updateTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.DockerImage_Basis>(13, 'baseImage', $pb.PbFieldType.OM, $2.DockerImage_Basis.getDefault, $2.DockerImage_Basis.create)
+    ..a<$3.PackageManager_Package>(14, 'package', $pb.PbFieldType.OM, $3.PackageManager_Package.getDefault, $3.PackageManager_Package.create)
+    ..a<Deployable>(17, 'deployable', $pb.PbFieldType.OM, Deployable.getDefault, Deployable.create)
+    ..a<Discovery>(18, 'discovery', $pb.PbFieldType.OM, Discovery.getDefault, Discovery.create)
+    ..a<AttestationAuthority>(19, 'attestationAuthority', $pb.PbFieldType.OM, AttestationAuthority.getDefault, AttestationAuthority.create)
+    ..oo(0, [6, 8, 13, 14, 17, 18, 19])
+    ..hasRequiredFields = false
+  ;
 
   Note() : super();
-  Note.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Note.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Note.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Note.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Note clone() => Note()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Note copyWith(void Function(Note) updates) => super.copyWith((message) => updates(message as Note));
+  $pb.BuilderInfo get info_ => _i;
   static Note create() => Note();
-  static PbList<Note> createRepeated() => PbList<Note>();
-  static Note getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyNote();
-    return _defaultInstance;
-  }
-
+  Note createEmptyInstance() => create();
+  static $pb.PbList<Note> createRepeated() => $pb.PbList<Note>();
+  static Note getDefault() => _defaultInstance ??= create()..freeze();
   static Note _defaultInstance;
-  static void $checkItem(Note v) {
-    if (v is! Note) checkItemFailed(v, 'Note');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
+  Note_NoteType whichNoteType() => _Note_NoteTypeByTag[$_whichOneof(0)];
+  void clearNoteType() => clearField($_whichOneof(0));
 
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get shortDescription => $_getS(1, '');
-  set shortDescription(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasShortDescription() => $_has(1);
+  $core.String get shortDescription => $_getS(1, '');
+  set shortDescription($core.String v) { $_setString(1, v); }
+  $core.bool hasShortDescription() => $_has(1);
   void clearShortDescription() => clearField(3);
 
-  String get longDescription => $_getS(2, '');
-  set longDescription(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasLongDescription() => $_has(2);
+  $core.String get longDescription => $_getS(2, '');
+  set longDescription($core.String v) { $_setString(2, v); }
+  $core.bool hasLongDescription() => $_has(2);
   void clearLongDescription() => clearField(4);
 
-  VulnerabilityType get vulnerabilityType => $_getN(3);
-  set vulnerabilityType(VulnerabilityType v) {
-    setField(6, v);
-  }
-
-  bool hasVulnerabilityType() => $_has(3);
+  $0.VulnerabilityType get vulnerabilityType => $_getN(3);
+  set vulnerabilityType($0.VulnerabilityType v) { setField(6, v); }
+  $core.bool hasVulnerabilityType() => $_has(3);
   void clearVulnerabilityType() => clearField(6);
 
-  List<Note_RelatedUrl> get relatedUrl => $_getList(4);
+  $core.List<Note_RelatedUrl> get relatedUrl => $_getList(4);
 
   BuildType get buildType => $_getN(5);
-  set buildType(BuildType v) {
-    setField(8, v);
-  }
-
-  bool hasBuildType() => $_has(5);
+  set buildType(BuildType v) { setField(8, v); }
+  $core.bool hasBuildType() => $_has(5);
   void clearBuildType() => clearField(8);
 
   Note_Kind get kind => $_getN(6);
-  set kind(Note_Kind v) {
-    setField(9, v);
-  }
-
-  bool hasKind() => $_has(6);
+  set kind(Note_Kind v) { setField(9, v); }
+  $core.bool hasKind() => $_has(6);
   void clearKind() => clearField(9);
 
-  $google$protobuf.Timestamp get expirationTime => $_getN(7);
-  set expirationTime($google$protobuf.Timestamp v) {
-    setField(10, v);
-  }
-
-  bool hasExpirationTime() => $_has(7);
+  $1.Timestamp get expirationTime => $_getN(7);
+  set expirationTime($1.Timestamp v) { setField(10, v); }
+  $core.bool hasExpirationTime() => $_has(7);
   void clearExpirationTime() => clearField(10);
 
-  $google$protobuf.Timestamp get createTime => $_getN(8);
-  set createTime($google$protobuf.Timestamp v) {
-    setField(11, v);
-  }
-
-  bool hasCreateTime() => $_has(8);
+  $1.Timestamp get createTime => $_getN(8);
+  set createTime($1.Timestamp v) { setField(11, v); }
+  $core.bool hasCreateTime() => $_has(8);
   void clearCreateTime() => clearField(11);
 
-  $google$protobuf.Timestamp get updateTime => $_getN(9);
-  set updateTime($google$protobuf.Timestamp v) {
-    setField(12, v);
-  }
-
-  bool hasUpdateTime() => $_has(9);
+  $1.Timestamp get updateTime => $_getN(9);
+  set updateTime($1.Timestamp v) { setField(12, v); }
+  $core.bool hasUpdateTime() => $_has(9);
   void clearUpdateTime() => clearField(12);
 
-  DockerImage_Basis get baseImage => $_getN(10);
-  set baseImage(DockerImage_Basis v) {
-    setField(13, v);
-  }
-
-  bool hasBaseImage() => $_has(10);
+  $2.DockerImage_Basis get baseImage => $_getN(10);
+  set baseImage($2.DockerImage_Basis v) { setField(13, v); }
+  $core.bool hasBaseImage() => $_has(10);
   void clearBaseImage() => clearField(13);
 
-  PackageManager_Package get package => $_getN(11);
-  set package(PackageManager_Package v) {
-    setField(14, v);
-  }
-
-  bool hasPackage() => $_has(11);
+  $3.PackageManager_Package get package => $_getN(11);
+  set package($3.PackageManager_Package v) { setField(14, v); }
+  $core.bool hasPackage() => $_has(11);
   void clearPackage() => clearField(14);
 
   Deployable get deployable => $_getN(12);
-  set deployable(Deployable v) {
-    setField(17, v);
-  }
-
-  bool hasDeployable() => $_has(12);
+  set deployable(Deployable v) { setField(17, v); }
+  $core.bool hasDeployable() => $_has(12);
   void clearDeployable() => clearField(17);
 
   Discovery get discovery => $_getN(13);
-  set discovery(Discovery v) {
-    setField(18, v);
-  }
-
-  bool hasDiscovery() => $_has(13);
+  set discovery(Discovery v) { setField(18, v); }
+  $core.bool hasDiscovery() => $_has(13);
   void clearDiscovery() => clearField(18);
 
   AttestationAuthority get attestationAuthority => $_getN(14);
-  set attestationAuthority(AttestationAuthority v) {
-    setField(19, v);
-  }
-
-  bool hasAttestationAuthority() => $_has(14);
+  set attestationAuthority(AttestationAuthority v) { setField(19, v); }
+  $core.bool hasAttestationAuthority() => $_has(14);
   void clearAttestationAuthority() => clearField(19);
 }
 
-class _ReadonlyNote extends Note with ReadonlyMessageMixin {}
-
-class Deployable_Deployment extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Deployable_Deployment')
+class Deployable_Deployment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Deployable.Deployment', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'userEmail')
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'deployTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'undeployTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'deployTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'undeployTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
     ..aOS(5, 'address')
     ..pPS(6, 'resourceUri')
-    ..e<Deployable_Deployment_Platform>(
-        7,
-        'platform',
-        PbFieldType.OE,
-        Deployable_Deployment_Platform.PLATFORM_UNSPECIFIED,
-        Deployable_Deployment_Platform.valueOf,
-        Deployable_Deployment_Platform.values)
+    ..e<Deployable_Deployment_Platform>(7, 'platform', $pb.PbFieldType.OE, Deployable_Deployment_Platform.PLATFORM_UNSPECIFIED, Deployable_Deployment_Platform.valueOf, Deployable_Deployment_Platform.values)
     ..aOS(8, 'config')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Deployable_Deployment() : super();
-  Deployable_Deployment.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Deployable_Deployment.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Deployable_Deployment clone() =>
-      Deployable_Deployment()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Deployable_Deployment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Deployable_Deployment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Deployable_Deployment clone() => Deployable_Deployment()..mergeFromMessage(this);
+  Deployable_Deployment copyWith(void Function(Deployable_Deployment) updates) => super.copyWith((message) => updates(message as Deployable_Deployment));
+  $pb.BuilderInfo get info_ => _i;
   static Deployable_Deployment create() => Deployable_Deployment();
-  static PbList<Deployable_Deployment> createRepeated() =>
-      PbList<Deployable_Deployment>();
-  static Deployable_Deployment getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeployable_Deployment();
-    return _defaultInstance;
-  }
-
+  Deployable_Deployment createEmptyInstance() => create();
+  static $pb.PbList<Deployable_Deployment> createRepeated() => $pb.PbList<Deployable_Deployment>();
+  static Deployable_Deployment getDefault() => _defaultInstance ??= create()..freeze();
   static Deployable_Deployment _defaultInstance;
-  static void $checkItem(Deployable_Deployment v) {
-    if (v is! Deployable_Deployment)
-      checkItemFailed(v, 'Deployable_Deployment');
-  }
 
-  String get userEmail => $_getS(0, '');
-  set userEmail(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasUserEmail() => $_has(0);
+  $core.String get userEmail => $_getS(0, '');
+  set userEmail($core.String v) { $_setString(0, v); }
+  $core.bool hasUserEmail() => $_has(0);
   void clearUserEmail() => clearField(1);
 
-  $google$protobuf.Timestamp get deployTime => $_getN(1);
-  set deployTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasDeployTime() => $_has(1);
+  $1.Timestamp get deployTime => $_getN(1);
+  set deployTime($1.Timestamp v) { setField(2, v); }
+  $core.bool hasDeployTime() => $_has(1);
   void clearDeployTime() => clearField(2);
 
-  $google$protobuf.Timestamp get undeployTime => $_getN(2);
-  set undeployTime($google$protobuf.Timestamp v) {
-    setField(3, v);
-  }
-
-  bool hasUndeployTime() => $_has(2);
+  $1.Timestamp get undeployTime => $_getN(2);
+  set undeployTime($1.Timestamp v) { setField(3, v); }
+  $core.bool hasUndeployTime() => $_has(2);
   void clearUndeployTime() => clearField(3);
 
-  String get address => $_getS(3, '');
-  set address(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasAddress() => $_has(3);
+  $core.String get address => $_getS(3, '');
+  set address($core.String v) { $_setString(3, v); }
+  $core.bool hasAddress() => $_has(3);
   void clearAddress() => clearField(5);
 
-  List<String> get resourceUri => $_getList(4);
+  $core.List<$core.String> get resourceUri => $_getList(4);
 
   Deployable_Deployment_Platform get platform => $_getN(5);
-  set platform(Deployable_Deployment_Platform v) {
-    setField(7, v);
-  }
-
-  bool hasPlatform() => $_has(5);
+  set platform(Deployable_Deployment_Platform v) { setField(7, v); }
+  $core.bool hasPlatform() => $_has(5);
   void clearPlatform() => clearField(7);
 
-  String get config => $_getS(6, '');
-  set config(String v) {
-    $_setString(6, v);
-  }
-
-  bool hasConfig() => $_has(6);
+  $core.String get config => $_getS(6, '');
+  set config($core.String v) { $_setString(6, v); }
+  $core.bool hasConfig() => $_has(6);
   void clearConfig() => clearField(8);
 }
 
-class _ReadonlyDeployable_Deployment extends Deployable_Deployment
-    with ReadonlyMessageMixin {}
-
-class Deployable extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Deployable')
+class Deployable extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Deployable', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..pPS(1, 'resourceUri')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Deployable() : super();
-  Deployable.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Deployable.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Deployable.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Deployable.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Deployable clone() => Deployable()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Deployable copyWith(void Function(Deployable) updates) => super.copyWith((message) => updates(message as Deployable));
+  $pb.BuilderInfo get info_ => _i;
   static Deployable create() => Deployable();
-  static PbList<Deployable> createRepeated() => PbList<Deployable>();
-  static Deployable getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyDeployable();
-    return _defaultInstance;
-  }
-
+  Deployable createEmptyInstance() => create();
+  static $pb.PbList<Deployable> createRepeated() => $pb.PbList<Deployable>();
+  static Deployable getDefault() => _defaultInstance ??= create()..freeze();
   static Deployable _defaultInstance;
-  static void $checkItem(Deployable v) {
-    if (v is! Deployable) checkItemFailed(v, 'Deployable');
-  }
 
-  List<String> get resourceUri => $_getList(0);
+  $core.List<$core.String> get resourceUri => $_getList(0);
 }
 
-class _ReadonlyDeployable extends Deployable with ReadonlyMessageMixin {}
-
-class Discovery_Discovered extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Discovery_Discovered')
-    ..a<$google$longrunning.Operation>(
-        1,
-        'operation',
-        PbFieldType.OM,
-        $google$longrunning.Operation.getDefault,
-        $google$longrunning.Operation.create)
-    ..e<Discovery_Discovered_AnalysisStatus>(
-        5,
-        'analysisStatus',
-        PbFieldType.OE,
-        Discovery_Discovered_AnalysisStatus.ANALYSIS_STATUS_UNSPECIFIED,
-        Discovery_Discovered_AnalysisStatus.valueOf,
-        Discovery_Discovered_AnalysisStatus.values)
-    ..a<$google$rpc.Status>(6, 'analysisStatusError', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
-    ..hasRequiredFields = false;
+class Discovery_Discovered extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Discovery.Discovered', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..a<$5.Operation>(1, 'operation', $pb.PbFieldType.OM, $5.Operation.getDefault, $5.Operation.create)
+    ..e<Discovery_Discovered_AnalysisStatus>(5, 'analysisStatus', $pb.PbFieldType.OE, Discovery_Discovered_AnalysisStatus.ANALYSIS_STATUS_UNSPECIFIED, Discovery_Discovered_AnalysisStatus.valueOf, Discovery_Discovered_AnalysisStatus.values)
+    ..a<$6.Status>(6, 'analysisStatusError', $pb.PbFieldType.OM, $6.Status.getDefault, $6.Status.create)
+    ..hasRequiredFields = false
+  ;
 
   Discovery_Discovered() : super();
-  Discovery_Discovered.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Discovery_Discovered.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Discovery_Discovered clone() =>
-      Discovery_Discovered()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Discovery_Discovered.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Discovery_Discovered.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Discovery_Discovered clone() => Discovery_Discovered()..mergeFromMessage(this);
+  Discovery_Discovered copyWith(void Function(Discovery_Discovered) updates) => super.copyWith((message) => updates(message as Discovery_Discovered));
+  $pb.BuilderInfo get info_ => _i;
   static Discovery_Discovered create() => Discovery_Discovered();
-  static PbList<Discovery_Discovered> createRepeated() =>
-      PbList<Discovery_Discovered>();
-  static Discovery_Discovered getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDiscovery_Discovered();
-    return _defaultInstance;
-  }
-
+  Discovery_Discovered createEmptyInstance() => create();
+  static $pb.PbList<Discovery_Discovered> createRepeated() => $pb.PbList<Discovery_Discovered>();
+  static Discovery_Discovered getDefault() => _defaultInstance ??= create()..freeze();
   static Discovery_Discovered _defaultInstance;
-  static void $checkItem(Discovery_Discovered v) {
-    if (v is! Discovery_Discovered) checkItemFailed(v, 'Discovery_Discovered');
-  }
 
-  $google$longrunning.Operation get operation => $_getN(0);
-  set operation($google$longrunning.Operation v) {
-    setField(1, v);
-  }
-
-  bool hasOperation() => $_has(0);
+  $5.Operation get operation => $_getN(0);
+  set operation($5.Operation v) { setField(1, v); }
+  $core.bool hasOperation() => $_has(0);
   void clearOperation() => clearField(1);
 
   Discovery_Discovered_AnalysisStatus get analysisStatus => $_getN(1);
-  set analysisStatus(Discovery_Discovered_AnalysisStatus v) {
-    setField(5, v);
-  }
-
-  bool hasAnalysisStatus() => $_has(1);
+  set analysisStatus(Discovery_Discovered_AnalysisStatus v) { setField(5, v); }
+  $core.bool hasAnalysisStatus() => $_has(1);
   void clearAnalysisStatus() => clearField(5);
 
-  $google$rpc.Status get analysisStatusError => $_getN(2);
-  set analysisStatusError($google$rpc.Status v) {
-    setField(6, v);
-  }
-
-  bool hasAnalysisStatusError() => $_has(2);
+  $6.Status get analysisStatusError => $_getN(2);
+  set analysisStatusError($6.Status v) { setField(6, v); }
+  $core.bool hasAnalysisStatusError() => $_has(2);
   void clearAnalysisStatusError() => clearField(6);
 }
 
-class _ReadonlyDiscovery_Discovered extends Discovery_Discovered
-    with ReadonlyMessageMixin {}
-
-class Discovery extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Discovery')
-    ..e<Note_Kind>(1, 'analysisKind', PbFieldType.OE,
-        Note_Kind.KIND_UNSPECIFIED, Note_Kind.valueOf, Note_Kind.values)
-    ..hasRequiredFields = false;
+class Discovery extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Discovery', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..e<Note_Kind>(1, 'analysisKind', $pb.PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED, Note_Kind.valueOf, Note_Kind.values)
+    ..hasRequiredFields = false
+  ;
 
   Discovery() : super();
-  Discovery.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Discovery.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Discovery.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Discovery.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Discovery clone() => Discovery()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Discovery copyWith(void Function(Discovery) updates) => super.copyWith((message) => updates(message as Discovery));
+  $pb.BuilderInfo get info_ => _i;
   static Discovery create() => Discovery();
-  static PbList<Discovery> createRepeated() => PbList<Discovery>();
-  static Discovery getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyDiscovery();
-    return _defaultInstance;
-  }
-
+  Discovery createEmptyInstance() => create();
+  static $pb.PbList<Discovery> createRepeated() => $pb.PbList<Discovery>();
+  static Discovery getDefault() => _defaultInstance ??= create()..freeze();
   static Discovery _defaultInstance;
-  static void $checkItem(Discovery v) {
-    if (v is! Discovery) checkItemFailed(v, 'Discovery');
-  }
 
   Note_Kind get analysisKind => $_getN(0);
-  set analysisKind(Note_Kind v) {
-    setField(1, v);
-  }
-
-  bool hasAnalysisKind() => $_has(0);
+  set analysisKind(Note_Kind v) { setField(1, v); }
+  $core.bool hasAnalysisKind() => $_has(0);
   void clearAnalysisKind() => clearField(1);
 }
 
-class _ReadonlyDiscovery extends Discovery with ReadonlyMessageMixin {}
-
-class BuildType extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildType')
+class BuildType extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildType', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'builderVersion')
-    ..a<BuildSignature>(2, 'signature', PbFieldType.OM,
-        BuildSignature.getDefault, BuildSignature.create)
-    ..hasRequiredFields = false;
+    ..a<BuildSignature>(2, 'signature', $pb.PbFieldType.OM, BuildSignature.getDefault, BuildSignature.create)
+    ..hasRequiredFields = false
+  ;
 
   BuildType() : super();
-  BuildType.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildType.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuildType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BuildType clone() => BuildType()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuildType copyWith(void Function(BuildType) updates) => super.copyWith((message) => updates(message as BuildType));
+  $pb.BuilderInfo get info_ => _i;
   static BuildType create() => BuildType();
-  static PbList<BuildType> createRepeated() => PbList<BuildType>();
-  static BuildType getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildType();
-    return _defaultInstance;
-  }
-
+  BuildType createEmptyInstance() => create();
+  static $pb.PbList<BuildType> createRepeated() => $pb.PbList<BuildType>();
+  static BuildType getDefault() => _defaultInstance ??= create()..freeze();
   static BuildType _defaultInstance;
-  static void $checkItem(BuildType v) {
-    if (v is! BuildType) checkItemFailed(v, 'BuildType');
-  }
 
-  String get builderVersion => $_getS(0, '');
-  set builderVersion(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasBuilderVersion() => $_has(0);
+  $core.String get builderVersion => $_getS(0, '');
+  set builderVersion($core.String v) { $_setString(0, v); }
+  $core.bool hasBuilderVersion() => $_has(0);
   void clearBuilderVersion() => clearField(1);
 
   BuildSignature get signature => $_getN(1);
-  set signature(BuildSignature v) {
-    setField(2, v);
-  }
-
-  bool hasSignature() => $_has(1);
+  set signature(BuildSignature v) { setField(2, v); }
+  $core.bool hasSignature() => $_has(1);
   void clearSignature() => clearField(2);
 }
 
-class _ReadonlyBuildType extends BuildType with ReadonlyMessageMixin {}
-
-class BuildSignature extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildSignature')
+class BuildSignature extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildSignature', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'publicKey')
     ..aOS(2, 'signature')
     ..aOS(3, 'keyId')
-    ..e<BuildSignature_KeyType>(
-        4,
-        'keyType',
-        PbFieldType.OE,
-        BuildSignature_KeyType.KEY_TYPE_UNSPECIFIED,
-        BuildSignature_KeyType.valueOf,
-        BuildSignature_KeyType.values)
-    ..hasRequiredFields = false;
+    ..e<BuildSignature_KeyType>(4, 'keyType', $pb.PbFieldType.OE, BuildSignature_KeyType.KEY_TYPE_UNSPECIFIED, BuildSignature_KeyType.valueOf, BuildSignature_KeyType.values)
+    ..hasRequiredFields = false
+  ;
 
   BuildSignature() : super();
-  BuildSignature.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildSignature.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildSignature.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuildSignature.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BuildSignature clone() => BuildSignature()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuildSignature copyWith(void Function(BuildSignature) updates) => super.copyWith((message) => updates(message as BuildSignature));
+  $pb.BuilderInfo get info_ => _i;
   static BuildSignature create() => BuildSignature();
-  static PbList<BuildSignature> createRepeated() => PbList<BuildSignature>();
-  static BuildSignature getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildSignature();
-    return _defaultInstance;
-  }
-
+  BuildSignature createEmptyInstance() => create();
+  static $pb.PbList<BuildSignature> createRepeated() => $pb.PbList<BuildSignature>();
+  static BuildSignature getDefault() => _defaultInstance ??= create()..freeze();
   static BuildSignature _defaultInstance;
-  static void $checkItem(BuildSignature v) {
-    if (v is! BuildSignature) checkItemFailed(v, 'BuildSignature');
-  }
 
-  String get publicKey => $_getS(0, '');
-  set publicKey(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasPublicKey() => $_has(0);
+  $core.String get publicKey => $_getS(0, '');
+  set publicKey($core.String v) { $_setString(0, v); }
+  $core.bool hasPublicKey() => $_has(0);
   void clearPublicKey() => clearField(1);
 
-  String get signature => $_getS(1, '');
-  set signature(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasSignature() => $_has(1);
+  $core.String get signature => $_getS(1, '');
+  set signature($core.String v) { $_setString(1, v); }
+  $core.bool hasSignature() => $_has(1);
   void clearSignature() => clearField(2);
 
-  String get keyId => $_getS(2, '');
-  set keyId(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasKeyId() => $_has(2);
+  $core.String get keyId => $_getS(2, '');
+  set keyId($core.String v) { $_setString(2, v); }
+  $core.bool hasKeyId() => $_has(2);
   void clearKeyId() => clearField(3);
 
   BuildSignature_KeyType get keyType => $_getN(3);
-  set keyType(BuildSignature_KeyType v) {
-    setField(4, v);
-  }
-
-  bool hasKeyType() => $_has(3);
+  set keyType(BuildSignature_KeyType v) { setField(4, v); }
+  $core.bool hasKeyType() => $_has(3);
   void clearKeyType() => clearField(4);
 }
 
-class _ReadonlyBuildSignature extends BuildSignature with ReadonlyMessageMixin {
+enum PgpSignedAttestation_KeyId {
+  pgpKeyId, 
+  notSet
 }
 
-class PgpSignedAttestation extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('PgpSignedAttestation')
+class PgpSignedAttestation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, PgpSignedAttestation_KeyId> _PgpSignedAttestation_KeyIdByTag = {
+    2 : PgpSignedAttestation_KeyId.pgpKeyId,
+    0 : PgpSignedAttestation_KeyId.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PgpSignedAttestation', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'signature')
     ..aOS(2, 'pgpKeyId')
-    ..e<PgpSignedAttestation_ContentType>(
-        3,
-        'contentType',
-        PbFieldType.OE,
-        PgpSignedAttestation_ContentType.CONTENT_TYPE_UNSPECIFIED,
-        PgpSignedAttestation_ContentType.valueOf,
-        PgpSignedAttestation_ContentType.values)
-    ..hasRequiredFields = false;
+    ..e<PgpSignedAttestation_ContentType>(3, 'contentType', $pb.PbFieldType.OE, PgpSignedAttestation_ContentType.CONTENT_TYPE_UNSPECIFIED, PgpSignedAttestation_ContentType.valueOf, PgpSignedAttestation_ContentType.values)
+    ..oo(0, [2])
+    ..hasRequiredFields = false
+  ;
 
   PgpSignedAttestation() : super();
-  PgpSignedAttestation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PgpSignedAttestation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  PgpSignedAttestation clone() =>
-      PgpSignedAttestation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  PgpSignedAttestation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  PgpSignedAttestation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  PgpSignedAttestation clone() => PgpSignedAttestation()..mergeFromMessage(this);
+  PgpSignedAttestation copyWith(void Function(PgpSignedAttestation) updates) => super.copyWith((message) => updates(message as PgpSignedAttestation));
+  $pb.BuilderInfo get info_ => _i;
   static PgpSignedAttestation create() => PgpSignedAttestation();
-  static PbList<PgpSignedAttestation> createRepeated() =>
-      PbList<PgpSignedAttestation>();
-  static PgpSignedAttestation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyPgpSignedAttestation();
-    return _defaultInstance;
-  }
-
+  PgpSignedAttestation createEmptyInstance() => create();
+  static $pb.PbList<PgpSignedAttestation> createRepeated() => $pb.PbList<PgpSignedAttestation>();
+  static PgpSignedAttestation getDefault() => _defaultInstance ??= create()..freeze();
   static PgpSignedAttestation _defaultInstance;
-  static void $checkItem(PgpSignedAttestation v) {
-    if (v is! PgpSignedAttestation) checkItemFailed(v, 'PgpSignedAttestation');
-  }
 
-  String get signature => $_getS(0, '');
-  set signature(String v) {
-    $_setString(0, v);
-  }
+  PgpSignedAttestation_KeyId whichKeyId() => _PgpSignedAttestation_KeyIdByTag[$_whichOneof(0)];
+  void clearKeyId() => clearField($_whichOneof(0));
 
-  bool hasSignature() => $_has(0);
+  $core.String get signature => $_getS(0, '');
+  set signature($core.String v) { $_setString(0, v); }
+  $core.bool hasSignature() => $_has(0);
   void clearSignature() => clearField(1);
 
-  String get pgpKeyId => $_getS(1, '');
-  set pgpKeyId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPgpKeyId() => $_has(1);
+  $core.String get pgpKeyId => $_getS(1, '');
+  set pgpKeyId($core.String v) { $_setString(1, v); }
+  $core.bool hasPgpKeyId() => $_has(1);
   void clearPgpKeyId() => clearField(2);
 
   PgpSignedAttestation_ContentType get contentType => $_getN(2);
-  set contentType(PgpSignedAttestation_ContentType v) {
-    setField(3, v);
-  }
-
-  bool hasContentType() => $_has(2);
+  set contentType(PgpSignedAttestation_ContentType v) { setField(3, v); }
+  $core.bool hasContentType() => $_has(2);
   void clearContentType() => clearField(3);
 }
 
-class _ReadonlyPgpSignedAttestation extends PgpSignedAttestation
-    with ReadonlyMessageMixin {}
-
-class AttestationAuthority_AttestationAuthorityHint extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('AttestationAuthority_AttestationAuthorityHint')
-        ..aOS(1, 'humanReadableName')
-        ..hasRequiredFields = false;
+class AttestationAuthority_AttestationAuthorityHint extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttestationAuthority.AttestationAuthorityHint', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..aOS(1, 'humanReadableName')
+    ..hasRequiredFields = false
+  ;
 
   AttestationAuthority_AttestationAuthorityHint() : super();
-  AttestationAuthority_AttestationAuthorityHint.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AttestationAuthority_AttestationAuthorityHint.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AttestationAuthority_AttestationAuthorityHint clone() =>
-      AttestationAuthority_AttestationAuthorityHint()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AttestationAuthority_AttestationAuthorityHint create() =>
-      AttestationAuthority_AttestationAuthorityHint();
-  static PbList<AttestationAuthority_AttestationAuthorityHint>
-      createRepeated() =>
-          PbList<AttestationAuthority_AttestationAuthorityHint>();
-  static AttestationAuthority_AttestationAuthorityHint getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          _ReadonlyAttestationAuthority_AttestationAuthorityHint();
-    return _defaultInstance;
-  }
-
+  AttestationAuthority_AttestationAuthorityHint.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AttestationAuthority_AttestationAuthorityHint.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AttestationAuthority_AttestationAuthorityHint clone() => AttestationAuthority_AttestationAuthorityHint()..mergeFromMessage(this);
+  AttestationAuthority_AttestationAuthorityHint copyWith(void Function(AttestationAuthority_AttestationAuthorityHint) updates) => super.copyWith((message) => updates(message as AttestationAuthority_AttestationAuthorityHint));
+  $pb.BuilderInfo get info_ => _i;
+  static AttestationAuthority_AttestationAuthorityHint create() => AttestationAuthority_AttestationAuthorityHint();
+  AttestationAuthority_AttestationAuthorityHint createEmptyInstance() => create();
+  static $pb.PbList<AttestationAuthority_AttestationAuthorityHint> createRepeated() => $pb.PbList<AttestationAuthority_AttestationAuthorityHint>();
+  static AttestationAuthority_AttestationAuthorityHint getDefault() => _defaultInstance ??= create()..freeze();
   static AttestationAuthority_AttestationAuthorityHint _defaultInstance;
-  static void $checkItem(AttestationAuthority_AttestationAuthorityHint v) {
-    if (v is! AttestationAuthority_AttestationAuthorityHint)
-      checkItemFailed(v, 'AttestationAuthority_AttestationAuthorityHint');
-  }
 
-  String get humanReadableName => $_getS(0, '');
-  set humanReadableName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasHumanReadableName() => $_has(0);
+  $core.String get humanReadableName => $_getS(0, '');
+  set humanReadableName($core.String v) { $_setString(0, v); }
+  $core.bool hasHumanReadableName() => $_has(0);
   void clearHumanReadableName() => clearField(1);
 }
 
-class _ReadonlyAttestationAuthority_AttestationAuthorityHint
-    extends AttestationAuthority_AttestationAuthorityHint
-    with ReadonlyMessageMixin {}
+enum AttestationAuthority_Attestation_Signature {
+  pgpSignedAttestation, 
+  notSet
+}
 
-class AttestationAuthority_Attestation extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AttestationAuthority_Attestation')
-    ..a<PgpSignedAttestation>(1, 'pgpSignedAttestation', PbFieldType.OM,
-        PgpSignedAttestation.getDefault, PgpSignedAttestation.create)
-    ..hasRequiredFields = false;
+class AttestationAuthority_Attestation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AttestationAuthority_Attestation_Signature> _AttestationAuthority_Attestation_SignatureByTag = {
+    1 : AttestationAuthority_Attestation_Signature.pgpSignedAttestation,
+    0 : AttestationAuthority_Attestation_Signature.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttestationAuthority.Attestation', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..a<PgpSignedAttestation>(1, 'pgpSignedAttestation', $pb.PbFieldType.OM, PgpSignedAttestation.getDefault, PgpSignedAttestation.create)
+    ..oo(0, [1])
+    ..hasRequiredFields = false
+  ;
 
   AttestationAuthority_Attestation() : super();
-  AttestationAuthority_Attestation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AttestationAuthority_Attestation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AttestationAuthority_Attestation clone() =>
-      AttestationAuthority_Attestation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AttestationAuthority_Attestation create() =>
-      AttestationAuthority_Attestation();
-  static PbList<AttestationAuthority_Attestation> createRepeated() =>
-      PbList<AttestationAuthority_Attestation>();
-  static AttestationAuthority_Attestation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAttestationAuthority_Attestation();
-    return _defaultInstance;
-  }
-
+  AttestationAuthority_Attestation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AttestationAuthority_Attestation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AttestationAuthority_Attestation clone() => AttestationAuthority_Attestation()..mergeFromMessage(this);
+  AttestationAuthority_Attestation copyWith(void Function(AttestationAuthority_Attestation) updates) => super.copyWith((message) => updates(message as AttestationAuthority_Attestation));
+  $pb.BuilderInfo get info_ => _i;
+  static AttestationAuthority_Attestation create() => AttestationAuthority_Attestation();
+  AttestationAuthority_Attestation createEmptyInstance() => create();
+  static $pb.PbList<AttestationAuthority_Attestation> createRepeated() => $pb.PbList<AttestationAuthority_Attestation>();
+  static AttestationAuthority_Attestation getDefault() => _defaultInstance ??= create()..freeze();
   static AttestationAuthority_Attestation _defaultInstance;
-  static void $checkItem(AttestationAuthority_Attestation v) {
-    if (v is! AttestationAuthority_Attestation)
-      checkItemFailed(v, 'AttestationAuthority_Attestation');
-  }
+
+  AttestationAuthority_Attestation_Signature whichSignature() => _AttestationAuthority_Attestation_SignatureByTag[$_whichOneof(0)];
+  void clearSignature() => clearField($_whichOneof(0));
 
   PgpSignedAttestation get pgpSignedAttestation => $_getN(0);
-  set pgpSignedAttestation(PgpSignedAttestation v) {
-    setField(1, v);
-  }
-
-  bool hasPgpSignedAttestation() => $_has(0);
+  set pgpSignedAttestation(PgpSignedAttestation v) { setField(1, v); }
+  $core.bool hasPgpSignedAttestation() => $_has(0);
   void clearPgpSignedAttestation() => clearField(1);
 }
 
-class _ReadonlyAttestationAuthority_Attestation
-    extends AttestationAuthority_Attestation with ReadonlyMessageMixin {}
-
-class AttestationAuthority extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AttestationAuthority')
-    ..a<AttestationAuthority_AttestationAuthorityHint>(
-        1,
-        'hint',
-        PbFieldType.OM,
-        AttestationAuthority_AttestationAuthorityHint.getDefault,
-        AttestationAuthority_AttestationAuthorityHint.create)
-    ..hasRequiredFields = false;
+class AttestationAuthority extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttestationAuthority', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..a<AttestationAuthority_AttestationAuthorityHint>(1, 'hint', $pb.PbFieldType.OM, AttestationAuthority_AttestationAuthorityHint.getDefault, AttestationAuthority_AttestationAuthorityHint.create)
+    ..hasRequiredFields = false
+  ;
 
   AttestationAuthority() : super();
-  AttestationAuthority.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AttestationAuthority.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AttestationAuthority clone() =>
-      AttestationAuthority()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AttestationAuthority.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AttestationAuthority.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  AttestationAuthority clone() => AttestationAuthority()..mergeFromMessage(this);
+  AttestationAuthority copyWith(void Function(AttestationAuthority) updates) => super.copyWith((message) => updates(message as AttestationAuthority));
+  $pb.BuilderInfo get info_ => _i;
   static AttestationAuthority create() => AttestationAuthority();
-  static PbList<AttestationAuthority> createRepeated() =>
-      PbList<AttestationAuthority>();
-  static AttestationAuthority getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyAttestationAuthority();
-    return _defaultInstance;
-  }
-
+  AttestationAuthority createEmptyInstance() => create();
+  static $pb.PbList<AttestationAuthority> createRepeated() => $pb.PbList<AttestationAuthority>();
+  static AttestationAuthority getDefault() => _defaultInstance ??= create()..freeze();
   static AttestationAuthority _defaultInstance;
-  static void $checkItem(AttestationAuthority v) {
-    if (v is! AttestationAuthority) checkItemFailed(v, 'AttestationAuthority');
-  }
 
   AttestationAuthority_AttestationAuthorityHint get hint => $_getN(0);
-  set hint(AttestationAuthority_AttestationAuthorityHint v) {
-    setField(1, v);
-  }
-
-  bool hasHint() => $_has(0);
+  set hint(AttestationAuthority_AttestationAuthorityHint v) { setField(1, v); }
+  $core.bool hasHint() => $_has(0);
   void clearHint() => clearField(1);
 }
 
-class _ReadonlyAttestationAuthority extends AttestationAuthority
-    with ReadonlyMessageMixin {}
-
-class BuildDetails extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildDetails')
-    ..a<BuildProvenance>(1, 'provenance', PbFieldType.OM,
-        BuildProvenance.getDefault, BuildProvenance.create)
+class BuildDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildDetails', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..a<$4.BuildProvenance>(1, 'provenance', $pb.PbFieldType.OM, $4.BuildProvenance.getDefault, $4.BuildProvenance.create)
     ..aOS(2, 'provenanceBytes')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   BuildDetails() : super();
-  BuildDetails.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildDetails.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuildDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BuildDetails clone() => BuildDetails()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuildDetails copyWith(void Function(BuildDetails) updates) => super.copyWith((message) => updates(message as BuildDetails));
+  $pb.BuilderInfo get info_ => _i;
   static BuildDetails create() => BuildDetails();
-  static PbList<BuildDetails> createRepeated() => PbList<BuildDetails>();
-  static BuildDetails getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildDetails();
-    return _defaultInstance;
-  }
-
+  BuildDetails createEmptyInstance() => create();
+  static $pb.PbList<BuildDetails> createRepeated() => $pb.PbList<BuildDetails>();
+  static BuildDetails getDefault() => _defaultInstance ??= create()..freeze();
   static BuildDetails _defaultInstance;
-  static void $checkItem(BuildDetails v) {
-    if (v is! BuildDetails) checkItemFailed(v, 'BuildDetails');
-  }
 
-  BuildProvenance get provenance => $_getN(0);
-  set provenance(BuildProvenance v) {
-    setField(1, v);
-  }
-
-  bool hasProvenance() => $_has(0);
+  $4.BuildProvenance get provenance => $_getN(0);
+  set provenance($4.BuildProvenance v) { setField(1, v); }
+  $core.bool hasProvenance() => $_has(0);
   void clearProvenance() => clearField(1);
 
-  String get provenanceBytes => $_getS(1, '');
-  set provenanceBytes(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasProvenanceBytes() => $_has(1);
+  $core.String get provenanceBytes => $_getS(1, '');
+  set provenanceBytes($core.String v) { $_setString(1, v); }
+  $core.bool hasProvenanceBytes() => $_has(1);
   void clearProvenanceBytes() => clearField(2);
 }
 
-class _ReadonlyBuildDetails extends BuildDetails with ReadonlyMessageMixin {}
-
-class ScanConfig extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ScanConfig')
+class ScanConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScanConfig', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOB(3, 'enabled')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ScanConfig() : super();
-  ScanConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanConfig.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ScanConfig.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ScanConfig clone() => ScanConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ScanConfig copyWith(void Function(ScanConfig) updates) => super.copyWith((message) => updates(message as ScanConfig));
+  $pb.BuilderInfo get info_ => _i;
   static ScanConfig create() => ScanConfig();
-  static PbList<ScanConfig> createRepeated() => PbList<ScanConfig>();
-  static ScanConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyScanConfig();
-    return _defaultInstance;
-  }
-
+  ScanConfig createEmptyInstance() => create();
+  static $pb.PbList<ScanConfig> createRepeated() => $pb.PbList<ScanConfig>();
+  static ScanConfig getDefault() => _defaultInstance ??= create()..freeze();
   static ScanConfig _defaultInstance;
-  static void $checkItem(ScanConfig v) {
-    if (v is! ScanConfig) checkItemFailed(v, 'ScanConfig');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasDescription() => $_has(1);
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) { $_setString(1, v); }
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  bool get enabled => $_get(2, false);
-  set enabled(bool v) {
-    $_setBool(2, v);
-  }
-
-  bool hasEnabled() => $_has(2);
+  $core.bool get enabled => $_get(2, false);
+  set enabled($core.bool v) { $_setBool(2, v); }
+  $core.bool hasEnabled() => $_has(2);
   void clearEnabled() => clearField(3);
 }
 
-class _ReadonlyScanConfig extends ScanConfig with ReadonlyMessageMixin {}
-
-class GetOccurrenceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetOccurrenceRequest')
+class GetOccurrenceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetOccurrenceRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetOccurrenceRequest() : super();
-  GetOccurrenceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetOccurrenceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetOccurrenceRequest clone() =>
-      GetOccurrenceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetOccurrenceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetOccurrenceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetOccurrenceRequest clone() => GetOccurrenceRequest()..mergeFromMessage(this);
+  GetOccurrenceRequest copyWith(void Function(GetOccurrenceRequest) updates) => super.copyWith((message) => updates(message as GetOccurrenceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetOccurrenceRequest create() => GetOccurrenceRequest();
-  static PbList<GetOccurrenceRequest> createRepeated() =>
-      PbList<GetOccurrenceRequest>();
-  static GetOccurrenceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetOccurrenceRequest();
-    return _defaultInstance;
-  }
-
+  GetOccurrenceRequest createEmptyInstance() => create();
+  static $pb.PbList<GetOccurrenceRequest> createRepeated() => $pb.PbList<GetOccurrenceRequest>();
+  static GetOccurrenceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetOccurrenceRequest _defaultInstance;
-  static void $checkItem(GetOccurrenceRequest v) {
-    if (v is! GetOccurrenceRequest) checkItemFailed(v, 'GetOccurrenceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetOccurrenceRequest extends GetOccurrenceRequest
-    with ReadonlyMessageMixin {}
-
-class ListOccurrencesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListOccurrencesRequest')
+class ListOccurrencesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListOccurrencesRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'parent')
-    ..e<Note_Kind>(6, 'kind', PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED,
-        Note_Kind.valueOf, Note_Kind.values)
-    ..hasRequiredFields = false;
+    ..e<Note_Kind>(6, 'kind', $pb.PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED, Note_Kind.valueOf, Note_Kind.values)
+    ..hasRequiredFields = false
+  ;
 
   ListOccurrencesRequest() : super();
-  ListOccurrencesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListOccurrencesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListOccurrencesRequest clone() =>
-      ListOccurrencesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListOccurrencesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListOccurrencesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListOccurrencesRequest clone() => ListOccurrencesRequest()..mergeFromMessage(this);
+  ListOccurrencesRequest copyWith(void Function(ListOccurrencesRequest) updates) => super.copyWith((message) => updates(message as ListOccurrencesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListOccurrencesRequest create() => ListOccurrencesRequest();
-  static PbList<ListOccurrencesRequest> createRepeated() =>
-      PbList<ListOccurrencesRequest>();
-  static ListOccurrencesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListOccurrencesRequest();
-    return _defaultInstance;
-  }
-
+  ListOccurrencesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListOccurrencesRequest> createRepeated() => $pb.PbList<ListOccurrencesRequest>();
+  static ListOccurrencesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListOccurrencesRequest _defaultInstance;
-  static void $checkItem(ListOccurrencesRequest v) {
-    if (v is! ListOccurrencesRequest)
-      checkItemFailed(v, 'ListOccurrencesRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get filter => $_getS(1, '');
-  set filter(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasFilter() => $_has(1);
+  $core.String get filter => $_getS(1, '');
+  set filter($core.String v) { $_setString(1, v); }
+  $core.bool hasFilter() => $_has(1);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(3, '');
-  set pageToken(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasPageToken() => $_has(3);
+  $core.String get pageToken => $_getS(3, '');
+  set pageToken($core.String v) { $_setString(3, v); }
+  $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 
-  String get parent => $_getS(4, '');
-  set parent(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasParent() => $_has(4);
+  $core.String get parent => $_getS(4, '');
+  set parent($core.String v) { $_setString(4, v); }
+  $core.bool hasParent() => $_has(4);
   void clearParent() => clearField(5);
 
   Note_Kind get kind => $_getN(5);
-  set kind(Note_Kind v) {
-    setField(6, v);
-  }
-
-  bool hasKind() => $_has(5);
+  set kind(Note_Kind v) { setField(6, v); }
+  $core.bool hasKind() => $_has(5);
   void clearKind() => clearField(6);
 }
 
-class _ReadonlyListOccurrencesRequest extends ListOccurrencesRequest
-    with ReadonlyMessageMixin {}
-
-class ListOccurrencesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListOccurrencesResponse')
-    ..pp<Occurrence>(1, 'occurrences', PbFieldType.PM, Occurrence.$checkItem,
-        Occurrence.create)
+class ListOccurrencesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListOccurrencesResponse', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..pc<Occurrence>(1, 'occurrences', $pb.PbFieldType.PM,Occurrence.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListOccurrencesResponse() : super();
-  ListOccurrencesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListOccurrencesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListOccurrencesResponse clone() =>
-      ListOccurrencesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListOccurrencesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListOccurrencesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListOccurrencesResponse clone() => ListOccurrencesResponse()..mergeFromMessage(this);
+  ListOccurrencesResponse copyWith(void Function(ListOccurrencesResponse) updates) => super.copyWith((message) => updates(message as ListOccurrencesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListOccurrencesResponse create() => ListOccurrencesResponse();
-  static PbList<ListOccurrencesResponse> createRepeated() =>
-      PbList<ListOccurrencesResponse>();
-  static ListOccurrencesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListOccurrencesResponse();
-    return _defaultInstance;
-  }
-
+  ListOccurrencesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListOccurrencesResponse> createRepeated() => $pb.PbList<ListOccurrencesResponse>();
+  static ListOccurrencesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListOccurrencesResponse _defaultInstance;
-  static void $checkItem(ListOccurrencesResponse v) {
-    if (v is! ListOccurrencesResponse)
-      checkItemFailed(v, 'ListOccurrencesResponse');
-  }
 
-  List<Occurrence> get occurrences => $_getList(0);
+  $core.List<Occurrence> get occurrences => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListOccurrencesResponse extends ListOccurrencesResponse
-    with ReadonlyMessageMixin {}
-
-class DeleteOccurrenceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteOccurrenceRequest')
+class DeleteOccurrenceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteOccurrenceRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteOccurrenceRequest() : super();
-  DeleteOccurrenceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteOccurrenceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteOccurrenceRequest clone() =>
-      DeleteOccurrenceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteOccurrenceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteOccurrenceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteOccurrenceRequest clone() => DeleteOccurrenceRequest()..mergeFromMessage(this);
+  DeleteOccurrenceRequest copyWith(void Function(DeleteOccurrenceRequest) updates) => super.copyWith((message) => updates(message as DeleteOccurrenceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteOccurrenceRequest create() => DeleteOccurrenceRequest();
-  static PbList<DeleteOccurrenceRequest> createRepeated() =>
-      PbList<DeleteOccurrenceRequest>();
-  static DeleteOccurrenceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteOccurrenceRequest();
-    return _defaultInstance;
-  }
-
+  DeleteOccurrenceRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteOccurrenceRequest> createRepeated() => $pb.PbList<DeleteOccurrenceRequest>();
+  static DeleteOccurrenceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteOccurrenceRequest _defaultInstance;
-  static void $checkItem(DeleteOccurrenceRequest v) {
-    if (v is! DeleteOccurrenceRequest)
-      checkItemFailed(v, 'DeleteOccurrenceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteOccurrenceRequest extends DeleteOccurrenceRequest
-    with ReadonlyMessageMixin {}
-
-class CreateOccurrenceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateOccurrenceRequest')
+class CreateOccurrenceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateOccurrenceRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..a<Occurrence>(2, 'occurrence', PbFieldType.OM, Occurrence.getDefault,
-        Occurrence.create)
+    ..a<Occurrence>(2, 'occurrence', $pb.PbFieldType.OM, Occurrence.getDefault, Occurrence.create)
     ..aOS(3, 'parent')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   CreateOccurrenceRequest() : super();
-  CreateOccurrenceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateOccurrenceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateOccurrenceRequest clone() =>
-      CreateOccurrenceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateOccurrenceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateOccurrenceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateOccurrenceRequest clone() => CreateOccurrenceRequest()..mergeFromMessage(this);
+  CreateOccurrenceRequest copyWith(void Function(CreateOccurrenceRequest) updates) => super.copyWith((message) => updates(message as CreateOccurrenceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateOccurrenceRequest create() => CreateOccurrenceRequest();
-  static PbList<CreateOccurrenceRequest> createRepeated() =>
-      PbList<CreateOccurrenceRequest>();
-  static CreateOccurrenceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateOccurrenceRequest();
-    return _defaultInstance;
-  }
-
+  CreateOccurrenceRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateOccurrenceRequest> createRepeated() => $pb.PbList<CreateOccurrenceRequest>();
+  static CreateOccurrenceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateOccurrenceRequest _defaultInstance;
-  static void $checkItem(CreateOccurrenceRequest v) {
-    if (v is! CreateOccurrenceRequest)
-      checkItemFailed(v, 'CreateOccurrenceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Occurrence get occurrence => $_getN(1);
-  set occurrence(Occurrence v) {
-    setField(2, v);
-  }
-
-  bool hasOccurrence() => $_has(1);
+  set occurrence(Occurrence v) { setField(2, v); }
+  $core.bool hasOccurrence() => $_has(1);
   void clearOccurrence() => clearField(2);
 
-  String get parent => $_getS(2, '');
-  set parent(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasParent() => $_has(2);
+  $core.String get parent => $_getS(2, '');
+  set parent($core.String v) { $_setString(2, v); }
+  $core.bool hasParent() => $_has(2);
   void clearParent() => clearField(3);
 }
 
-class _ReadonlyCreateOccurrenceRequest extends CreateOccurrenceRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateOccurrenceRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateOccurrenceRequest')
+class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateOccurrenceRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..a<Occurrence>(2, 'occurrence', PbFieldType.OM, Occurrence.getDefault,
-        Occurrence.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+    ..a<Occurrence>(2, 'occurrence', $pb.PbFieldType.OM, Occurrence.getDefault, Occurrence.create)
+    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM, $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateOccurrenceRequest() : super();
-  UpdateOccurrenceRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateOccurrenceRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateOccurrenceRequest clone() =>
-      UpdateOccurrenceRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateOccurrenceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateOccurrenceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateOccurrenceRequest clone() => UpdateOccurrenceRequest()..mergeFromMessage(this);
+  UpdateOccurrenceRequest copyWith(void Function(UpdateOccurrenceRequest) updates) => super.copyWith((message) => updates(message as UpdateOccurrenceRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateOccurrenceRequest create() => UpdateOccurrenceRequest();
-  static PbList<UpdateOccurrenceRequest> createRepeated() =>
-      PbList<UpdateOccurrenceRequest>();
-  static UpdateOccurrenceRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateOccurrenceRequest();
-    return _defaultInstance;
-  }
-
+  UpdateOccurrenceRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateOccurrenceRequest> createRepeated() => $pb.PbList<UpdateOccurrenceRequest>();
+  static UpdateOccurrenceRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateOccurrenceRequest _defaultInstance;
-  static void $checkItem(UpdateOccurrenceRequest v) {
-    if (v is! UpdateOccurrenceRequest)
-      checkItemFailed(v, 'UpdateOccurrenceRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Occurrence get occurrence => $_getN(1);
-  set occurrence(Occurrence v) {
-    setField(2, v);
-  }
-
-  bool hasOccurrence() => $_has(1);
+  set occurrence(Occurrence v) { setField(2, v); }
+  $core.bool hasOccurrence() => $_has(1);
   void clearOccurrence() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(3, v);
-  }
-
-  bool hasUpdateMask() => $_has(2);
+  $7.FieldMask get updateMask => $_getN(2);
+  set updateMask($7.FieldMask v) { setField(3, v); }
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateOccurrenceRequest extends UpdateOccurrenceRequest
-    with ReadonlyMessageMixin {}
-
-class GetNoteRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetNoteRequest')
+class GetNoteRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetNoteRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetNoteRequest() : super();
-  GetNoteRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetNoteRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetNoteRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetNoteRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetNoteRequest clone() => GetNoteRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetNoteRequest copyWith(void Function(GetNoteRequest) updates) => super.copyWith((message) => updates(message as GetNoteRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetNoteRequest create() => GetNoteRequest();
-  static PbList<GetNoteRequest> createRepeated() => PbList<GetNoteRequest>();
-  static GetNoteRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetNoteRequest();
-    return _defaultInstance;
-  }
-
+  GetNoteRequest createEmptyInstance() => create();
+  static $pb.PbList<GetNoteRequest> createRepeated() => $pb.PbList<GetNoteRequest>();
+  static GetNoteRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetNoteRequest _defaultInstance;
-  static void $checkItem(GetNoteRequest v) {
-    if (v is! GetNoteRequest) checkItemFailed(v, 'GetNoteRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetNoteRequest extends GetNoteRequest with ReadonlyMessageMixin {
-}
-
-class GetOccurrenceNoteRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetOccurrenceNoteRequest')
+class GetOccurrenceNoteRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetOccurrenceNoteRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetOccurrenceNoteRequest() : super();
-  GetOccurrenceNoteRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetOccurrenceNoteRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetOccurrenceNoteRequest clone() =>
-      GetOccurrenceNoteRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetOccurrenceNoteRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetOccurrenceNoteRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetOccurrenceNoteRequest clone() => GetOccurrenceNoteRequest()..mergeFromMessage(this);
+  GetOccurrenceNoteRequest copyWith(void Function(GetOccurrenceNoteRequest) updates) => super.copyWith((message) => updates(message as GetOccurrenceNoteRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetOccurrenceNoteRequest create() => GetOccurrenceNoteRequest();
-  static PbList<GetOccurrenceNoteRequest> createRepeated() =>
-      PbList<GetOccurrenceNoteRequest>();
-  static GetOccurrenceNoteRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetOccurrenceNoteRequest();
-    return _defaultInstance;
-  }
-
+  GetOccurrenceNoteRequest createEmptyInstance() => create();
+  static $pb.PbList<GetOccurrenceNoteRequest> createRepeated() => $pb.PbList<GetOccurrenceNoteRequest>();
+  static GetOccurrenceNoteRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetOccurrenceNoteRequest _defaultInstance;
-  static void $checkItem(GetOccurrenceNoteRequest v) {
-    if (v is! GetOccurrenceNoteRequest)
-      checkItemFailed(v, 'GetOccurrenceNoteRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetOccurrenceNoteRequest extends GetOccurrenceNoteRequest
-    with ReadonlyMessageMixin {}
-
-class ListNotesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListNotesRequest')
+class ListNotesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNotesRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'parent')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListNotesRequest() : super();
-  ListNotesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNotesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListNotesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListNotesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListNotesRequest clone() => ListNotesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListNotesRequest copyWith(void Function(ListNotesRequest) updates) => super.copyWith((message) => updates(message as ListNotesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListNotesRequest create() => ListNotesRequest();
-  static PbList<ListNotesRequest> createRepeated() =>
-      PbList<ListNotesRequest>();
-  static ListNotesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListNotesRequest();
-    return _defaultInstance;
-  }
-
+  ListNotesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListNotesRequest> createRepeated() => $pb.PbList<ListNotesRequest>();
+  static ListNotesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListNotesRequest _defaultInstance;
-  static void $checkItem(ListNotesRequest v) {
-    if (v is! ListNotesRequest) checkItemFailed(v, 'ListNotesRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get filter => $_getS(1, '');
-  set filter(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasFilter() => $_has(1);
+  $core.String get filter => $_getS(1, '');
+  set filter($core.String v) { $_setString(1, v); }
+  $core.bool hasFilter() => $_has(1);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(3, '');
-  set pageToken(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasPageToken() => $_has(3);
+  $core.String get pageToken => $_getS(3, '');
+  set pageToken($core.String v) { $_setString(3, v); }
+  $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 
-  String get parent => $_getS(4, '');
-  set parent(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasParent() => $_has(4);
+  $core.String get parent => $_getS(4, '');
+  set parent($core.String v) { $_setString(4, v); }
+  $core.bool hasParent() => $_has(4);
   void clearParent() => clearField(5);
 }
 
-class _ReadonlyListNotesRequest extends ListNotesRequest
-    with ReadonlyMessageMixin {}
-
-class ListNotesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListNotesResponse')
-    ..pp<Note>(1, 'notes', PbFieldType.PM, Note.$checkItem, Note.create)
+class ListNotesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNotesResponse', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..pc<Note>(1, 'notes', $pb.PbFieldType.PM,Note.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListNotesResponse() : super();
-  ListNotesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNotesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListNotesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListNotesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListNotesResponse clone() => ListNotesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListNotesResponse copyWith(void Function(ListNotesResponse) updates) => super.copyWith((message) => updates(message as ListNotesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListNotesResponse create() => ListNotesResponse();
-  static PbList<ListNotesResponse> createRepeated() =>
-      PbList<ListNotesResponse>();
-  static ListNotesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListNotesResponse();
-    return _defaultInstance;
-  }
-
+  ListNotesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListNotesResponse> createRepeated() => $pb.PbList<ListNotesResponse>();
+  static ListNotesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListNotesResponse _defaultInstance;
-  static void $checkItem(ListNotesResponse v) {
-    if (v is! ListNotesResponse) checkItemFailed(v, 'ListNotesResponse');
-  }
 
-  List<Note> get notes => $_getList(0);
+  $core.List<Note> get notes => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListNotesResponse extends ListNotesResponse
-    with ReadonlyMessageMixin {}
-
-class DeleteNoteRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteNoteRequest')
+class DeleteNoteRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteNoteRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteNoteRequest() : super();
-  DeleteNoteRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteNoteRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteNoteRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteNoteRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DeleteNoteRequest clone() => DeleteNoteRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteNoteRequest copyWith(void Function(DeleteNoteRequest) updates) => super.copyWith((message) => updates(message as DeleteNoteRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteNoteRequest create() => DeleteNoteRequest();
-  static PbList<DeleteNoteRequest> createRepeated() =>
-      PbList<DeleteNoteRequest>();
-  static DeleteNoteRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteNoteRequest();
-    return _defaultInstance;
-  }
-
+  DeleteNoteRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteNoteRequest> createRepeated() => $pb.PbList<DeleteNoteRequest>();
+  static DeleteNoteRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteNoteRequest _defaultInstance;
-  static void $checkItem(DeleteNoteRequest v) {
-    if (v is! DeleteNoteRequest) checkItemFailed(v, 'DeleteNoteRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteNoteRequest extends DeleteNoteRequest
-    with ReadonlyMessageMixin {}
-
-class CreateNoteRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateNoteRequest')
+class CreateNoteRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateNoteRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'noteId')
-    ..a<Note>(3, 'note', PbFieldType.OM, Note.getDefault, Note.create)
+    ..a<Note>(3, 'note', $pb.PbFieldType.OM, Note.getDefault, Note.create)
     ..aOS(4, 'parent')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   CreateNoteRequest() : super();
-  CreateNoteRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateNoteRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateNoteRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateNoteRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CreateNoteRequest clone() => CreateNoteRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateNoteRequest copyWith(void Function(CreateNoteRequest) updates) => super.copyWith((message) => updates(message as CreateNoteRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateNoteRequest create() => CreateNoteRequest();
-  static PbList<CreateNoteRequest> createRepeated() =>
-      PbList<CreateNoteRequest>();
-  static CreateNoteRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateNoteRequest();
-    return _defaultInstance;
-  }
-
+  CreateNoteRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateNoteRequest> createRepeated() => $pb.PbList<CreateNoteRequest>();
+  static CreateNoteRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateNoteRequest _defaultInstance;
-  static void $checkItem(CreateNoteRequest v) {
-    if (v is! CreateNoteRequest) checkItemFailed(v, 'CreateNoteRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get noteId => $_getS(1, '');
-  set noteId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNoteId() => $_has(1);
+  $core.String get noteId => $_getS(1, '');
+  set noteId($core.String v) { $_setString(1, v); }
+  $core.bool hasNoteId() => $_has(1);
   void clearNoteId() => clearField(2);
 
   Note get note => $_getN(2);
-  set note(Note v) {
-    setField(3, v);
-  }
-
-  bool hasNote() => $_has(2);
+  set note(Note v) { setField(3, v); }
+  $core.bool hasNote() => $_has(2);
   void clearNote() => clearField(3);
 
-  String get parent => $_getS(3, '');
-  set parent(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasParent() => $_has(3);
+  $core.String get parent => $_getS(3, '');
+  set parent($core.String v) { $_setString(3, v); }
+  $core.bool hasParent() => $_has(3);
   void clearParent() => clearField(4);
 }
 
-class _ReadonlyCreateNoteRequest extends CreateNoteRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateNoteRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateNoteRequest')
+class UpdateNoteRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateNoteRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..a<Note>(2, 'note', PbFieldType.OM, Note.getDefault, Note.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+    ..a<Note>(2, 'note', $pb.PbFieldType.OM, Note.getDefault, Note.create)
+    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM, $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateNoteRequest() : super();
-  UpdateNoteRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateNoteRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateNoteRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateNoteRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   UpdateNoteRequest clone() => UpdateNoteRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateNoteRequest copyWith(void Function(UpdateNoteRequest) updates) => super.copyWith((message) => updates(message as UpdateNoteRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateNoteRequest create() => UpdateNoteRequest();
-  static PbList<UpdateNoteRequest> createRepeated() =>
-      PbList<UpdateNoteRequest>();
-  static UpdateNoteRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateNoteRequest();
-    return _defaultInstance;
-  }
-
+  UpdateNoteRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateNoteRequest> createRepeated() => $pb.PbList<UpdateNoteRequest>();
+  static UpdateNoteRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateNoteRequest _defaultInstance;
-  static void $checkItem(UpdateNoteRequest v) {
-    if (v is! UpdateNoteRequest) checkItemFailed(v, 'UpdateNoteRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Note get note => $_getN(1);
-  set note(Note v) {
-    setField(2, v);
-  }
-
-  bool hasNote() => $_has(1);
+  set note(Note v) { setField(2, v); }
+  $core.bool hasNote() => $_has(1);
   void clearNote() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(3, v);
-  }
-
-  bool hasUpdateMask() => $_has(2);
+  $7.FieldMask get updateMask => $_getN(2);
+  set updateMask($7.FieldMask v) { setField(3, v); }
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateNoteRequest extends UpdateNoteRequest
-    with ReadonlyMessageMixin {}
-
-class ListNoteOccurrencesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListNoteOccurrencesRequest')
+class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNoteOccurrencesRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListNoteOccurrencesRequest() : super();
-  ListNoteOccurrencesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNoteOccurrencesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListNoteOccurrencesRequest clone() =>
-      ListNoteOccurrencesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListNoteOccurrencesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListNoteOccurrencesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListNoteOccurrencesRequest clone() => ListNoteOccurrencesRequest()..mergeFromMessage(this);
+  ListNoteOccurrencesRequest copyWith(void Function(ListNoteOccurrencesRequest) updates) => super.copyWith((message) => updates(message as ListNoteOccurrencesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListNoteOccurrencesRequest create() => ListNoteOccurrencesRequest();
-  static PbList<ListNoteOccurrencesRequest> createRepeated() =>
-      PbList<ListNoteOccurrencesRequest>();
-  static ListNoteOccurrencesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListNoteOccurrencesRequest();
-    return _defaultInstance;
-  }
-
+  ListNoteOccurrencesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListNoteOccurrencesRequest> createRepeated() => $pb.PbList<ListNoteOccurrencesRequest>();
+  static ListNoteOccurrencesRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListNoteOccurrencesRequest _defaultInstance;
-  static void $checkItem(ListNoteOccurrencesRequest v) {
-    if (v is! ListNoteOccurrencesRequest)
-      checkItemFailed(v, 'ListNoteOccurrencesRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get filter => $_getS(1, '');
-  set filter(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasFilter() => $_has(1);
+  $core.String get filter => $_getS(1, '');
+  set filter($core.String v) { $_setString(1, v); }
+  $core.bool hasFilter() => $_has(1);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(3, '');
-  set pageToken(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasPageToken() => $_has(3);
+  $core.String get pageToken => $_getS(3, '');
+  set pageToken($core.String v) { $_setString(3, v); }
+  $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 }
 
-class _ReadonlyListNoteOccurrencesRequest extends ListNoteOccurrencesRequest
-    with ReadonlyMessageMixin {}
-
-class ListNoteOccurrencesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListNoteOccurrencesResponse')
-    ..pp<Occurrence>(1, 'occurrences', PbFieldType.PM, Occurrence.$checkItem,
-        Occurrence.create)
+class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNoteOccurrencesResponse', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..pc<Occurrence>(1, 'occurrences', $pb.PbFieldType.PM,Occurrence.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListNoteOccurrencesResponse() : super();
-  ListNoteOccurrencesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNoteOccurrencesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListNoteOccurrencesResponse clone() =>
-      ListNoteOccurrencesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListNoteOccurrencesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListNoteOccurrencesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListNoteOccurrencesResponse clone() => ListNoteOccurrencesResponse()..mergeFromMessage(this);
+  ListNoteOccurrencesResponse copyWith(void Function(ListNoteOccurrencesResponse) updates) => super.copyWith((message) => updates(message as ListNoteOccurrencesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListNoteOccurrencesResponse create() => ListNoteOccurrencesResponse();
-  static PbList<ListNoteOccurrencesResponse> createRepeated() =>
-      PbList<ListNoteOccurrencesResponse>();
-  static ListNoteOccurrencesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListNoteOccurrencesResponse();
-    return _defaultInstance;
-  }
-
+  ListNoteOccurrencesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListNoteOccurrencesResponse> createRepeated() => $pb.PbList<ListNoteOccurrencesResponse>();
+  static ListNoteOccurrencesResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListNoteOccurrencesResponse _defaultInstance;
-  static void $checkItem(ListNoteOccurrencesResponse v) {
-    if (v is! ListNoteOccurrencesResponse)
-      checkItemFailed(v, 'ListNoteOccurrencesResponse');
-  }
 
-  List<Occurrence> get occurrences => $_getList(0);
+  $core.List<Occurrence> get occurrences => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListNoteOccurrencesResponse extends ListNoteOccurrencesResponse
-    with ReadonlyMessageMixin {}
-
-class CreateOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateOperationRequest')
+class CreateOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateOperationRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'operationId')
-    ..a<$google$longrunning.Operation>(
-        3,
-        'operation',
-        PbFieldType.OM,
-        $google$longrunning.Operation.getDefault,
-        $google$longrunning.Operation.create)
-    ..hasRequiredFields = false;
+    ..a<$5.Operation>(3, 'operation', $pb.PbFieldType.OM, $5.Operation.getDefault, $5.Operation.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateOperationRequest() : super();
-  CreateOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateOperationRequest clone() =>
-      CreateOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateOperationRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateOperationRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateOperationRequest clone() => CreateOperationRequest()..mergeFromMessage(this);
+  CreateOperationRequest copyWith(void Function(CreateOperationRequest) updates) => super.copyWith((message) => updates(message as CreateOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateOperationRequest create() => CreateOperationRequest();
-  static PbList<CreateOperationRequest> createRepeated() =>
-      PbList<CreateOperationRequest>();
-  static CreateOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateOperationRequest();
-    return _defaultInstance;
-  }
-
+  CreateOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateOperationRequest> createRepeated() => $pb.PbList<CreateOperationRequest>();
+  static CreateOperationRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateOperationRequest _defaultInstance;
-  static void $checkItem(CreateOperationRequest v) {
-    if (v is! CreateOperationRequest)
-      checkItemFailed(v, 'CreateOperationRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get operationId => $_getS(1, '');
-  set operationId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasOperationId() => $_has(1);
+  $core.String get operationId => $_getS(1, '');
+  set operationId($core.String v) { $_setString(1, v); }
+  $core.bool hasOperationId() => $_has(1);
   void clearOperationId() => clearField(2);
 
-  $google$longrunning.Operation get operation => $_getN(2);
-  set operation($google$longrunning.Operation v) {
-    setField(3, v);
-  }
-
-  bool hasOperation() => $_has(2);
+  $5.Operation get operation => $_getN(2);
+  set operation($5.Operation v) { setField(3, v); }
+  $core.bool hasOperation() => $_has(2);
   void clearOperation() => clearField(3);
 }
 
-class _ReadonlyCreateOperationRequest extends CreateOperationRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateOperationRequest')
+class UpdateOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateOperationRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..a<$google$longrunning.Operation>(
-        3,
-        'operation',
-        PbFieldType.OM,
-        $google$longrunning.Operation.getDefault,
-        $google$longrunning.Operation.create)
-    ..a<$google$protobuf.FieldMask>(
-        4,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+    ..a<$5.Operation>(3, 'operation', $pb.PbFieldType.OM, $5.Operation.getDefault, $5.Operation.create)
+    ..a<$7.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM, $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateOperationRequest() : super();
-  UpdateOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateOperationRequest clone() =>
-      UpdateOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateOperationRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateOperationRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateOperationRequest clone() => UpdateOperationRequest()..mergeFromMessage(this);
+  UpdateOperationRequest copyWith(void Function(UpdateOperationRequest) updates) => super.copyWith((message) => updates(message as UpdateOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateOperationRequest create() => UpdateOperationRequest();
-  static PbList<UpdateOperationRequest> createRepeated() =>
-      PbList<UpdateOperationRequest>();
-  static UpdateOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateOperationRequest();
-    return _defaultInstance;
-  }
-
+  UpdateOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateOperationRequest> createRepeated() => $pb.PbList<UpdateOperationRequest>();
+  static UpdateOperationRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateOperationRequest _defaultInstance;
-  static void $checkItem(UpdateOperationRequest v) {
-    if (v is! UpdateOperationRequest)
-      checkItemFailed(v, 'UpdateOperationRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $google$longrunning.Operation get operation => $_getN(1);
-  set operation($google$longrunning.Operation v) {
-    setField(3, v);
-  }
-
-  bool hasOperation() => $_has(1);
+  $5.Operation get operation => $_getN(1);
+  set operation($5.Operation v) { setField(3, v); }
+  $core.bool hasOperation() => $_has(1);
   void clearOperation() => clearField(3);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(4, v);
-  }
-
-  bool hasUpdateMask() => $_has(2);
+  $7.FieldMask get updateMask => $_getN(2);
+  set updateMask($7.FieldMask v) { setField(4, v); }
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(4);
 }
 
-class _ReadonlyUpdateOperationRequest extends UpdateOperationRequest
-    with ReadonlyMessageMixin {}
-
-class OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('OperationMetadata')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false;
+class OperationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..a<$1.Timestamp>(1, 'createTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   OperationMetadata() : super();
-  OperationMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  OperationMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  OperationMetadata copyWith(void Function(OperationMetadata) updates) => super.copyWith((message) => updates(message as OperationMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static OperationMetadata create() => OperationMetadata();
-  static PbList<OperationMetadata> createRepeated() =>
-      PbList<OperationMetadata>();
-  static OperationMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyOperationMetadata();
-    return _defaultInstance;
-  }
-
+  OperationMetadata createEmptyInstance() => create();
+  static $pb.PbList<OperationMetadata> createRepeated() => $pb.PbList<OperationMetadata>();
+  static OperationMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static OperationMetadata _defaultInstance;
-  static void $checkItem(OperationMetadata v) {
-    if (v is! OperationMetadata) checkItemFailed(v, 'OperationMetadata');
-  }
 
-  $google$protobuf.Timestamp get createTime => $_getN(0);
-  set createTime($google$protobuf.Timestamp v) {
-    setField(1, v);
-  }
-
-  bool hasCreateTime() => $_has(0);
+  $1.Timestamp get createTime => $_getN(0);
+  set createTime($1.Timestamp v) { setField(1, v); }
+  $core.bool hasCreateTime() => $_has(0);
   void clearCreateTime() => clearField(1);
 
-  $google$protobuf.Timestamp get endTime => $_getN(1);
-  set endTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasEndTime() => $_has(1);
+  $1.Timestamp get endTime => $_getN(1);
+  set endTime($1.Timestamp v) { setField(2, v); }
+  $core.bool hasEndTime() => $_has(1);
   void clearEndTime() => clearField(2);
 }
 
-class _ReadonlyOperationMetadata extends OperationMetadata
-    with ReadonlyMessageMixin {}
-
-class GetVulnzOccurrencesSummaryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetVulnzOccurrencesSummaryRequest')
+class GetVulnzOccurrencesSummaryRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVulnzOccurrencesSummaryRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetVulnzOccurrencesSummaryRequest() : super();
-  GetVulnzOccurrencesSummaryRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetVulnzOccurrencesSummaryRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetVulnzOccurrencesSummaryRequest clone() =>
-      GetVulnzOccurrencesSummaryRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetVulnzOccurrencesSummaryRequest create() =>
-      GetVulnzOccurrencesSummaryRequest();
-  static PbList<GetVulnzOccurrencesSummaryRequest> createRepeated() =>
-      PbList<GetVulnzOccurrencesSummaryRequest>();
-  static GetVulnzOccurrencesSummaryRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetVulnzOccurrencesSummaryRequest();
-    return _defaultInstance;
-  }
-
+  GetVulnzOccurrencesSummaryRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetVulnzOccurrencesSummaryRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetVulnzOccurrencesSummaryRequest clone() => GetVulnzOccurrencesSummaryRequest()..mergeFromMessage(this);
+  GetVulnzOccurrencesSummaryRequest copyWith(void Function(GetVulnzOccurrencesSummaryRequest) updates) => super.copyWith((message) => updates(message as GetVulnzOccurrencesSummaryRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetVulnzOccurrencesSummaryRequest create() => GetVulnzOccurrencesSummaryRequest();
+  GetVulnzOccurrencesSummaryRequest createEmptyInstance() => create();
+  static $pb.PbList<GetVulnzOccurrencesSummaryRequest> createRepeated() => $pb.PbList<GetVulnzOccurrencesSummaryRequest>();
+  static GetVulnzOccurrencesSummaryRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetVulnzOccurrencesSummaryRequest _defaultInstance;
-  static void $checkItem(GetVulnzOccurrencesSummaryRequest v) {
-    if (v is! GetVulnzOccurrencesSummaryRequest)
-      checkItemFailed(v, 'GetVulnzOccurrencesSummaryRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get filter => $_getS(1, '');
-  set filter(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasFilter() => $_has(1);
+  $core.String get filter => $_getS(1, '');
+  set filter($core.String v) { $_setString(1, v); }
+  $core.bool hasFilter() => $_has(1);
   void clearFilter() => clearField(2);
 }
 
-class _ReadonlyGetVulnzOccurrencesSummaryRequest
-    extends GetVulnzOccurrencesSummaryRequest with ReadonlyMessageMixin {}
-
-class GetVulnzOccurrencesSummaryResponse_SeverityCount
-    extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('GetVulnzOccurrencesSummaryResponse_SeverityCount')
-        ..e<VulnerabilityType_Severity>(
-            1,
-            'severity',
-            PbFieldType.OE,
-            VulnerabilityType_Severity.SEVERITY_UNSPECIFIED,
-            VulnerabilityType_Severity.valueOf,
-            VulnerabilityType_Severity.values)
-        ..aInt64(2, 'count')
-        ..hasRequiredFields = false;
+class GetVulnzOccurrencesSummaryResponse_SeverityCount extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVulnzOccurrencesSummaryResponse.SeverityCount', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..e<$0.VulnerabilityType_Severity>(1, 'severity', $pb.PbFieldType.OE, $0.VulnerabilityType_Severity.SEVERITY_UNSPECIFIED, $0.VulnerabilityType_Severity.valueOf, $0.VulnerabilityType_Severity.values)
+    ..aInt64(2, 'count')
+    ..hasRequiredFields = false
+  ;
 
   GetVulnzOccurrencesSummaryResponse_SeverityCount() : super();
-  GetVulnzOccurrencesSummaryResponse_SeverityCount.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetVulnzOccurrencesSummaryResponse_SeverityCount.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetVulnzOccurrencesSummaryResponse_SeverityCount clone() =>
-      GetVulnzOccurrencesSummaryResponse_SeverityCount()
-        ..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetVulnzOccurrencesSummaryResponse_SeverityCount create() =>
-      GetVulnzOccurrencesSummaryResponse_SeverityCount();
-  static PbList<GetVulnzOccurrencesSummaryResponse_SeverityCount>
-      createRepeated() =>
-          PbList<GetVulnzOccurrencesSummaryResponse_SeverityCount>();
-  static GetVulnzOccurrencesSummaryResponse_SeverityCount getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          _ReadonlyGetVulnzOccurrencesSummaryResponse_SeverityCount();
-    return _defaultInstance;
-  }
-
+  GetVulnzOccurrencesSummaryResponse_SeverityCount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetVulnzOccurrencesSummaryResponse_SeverityCount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetVulnzOccurrencesSummaryResponse_SeverityCount clone() => GetVulnzOccurrencesSummaryResponse_SeverityCount()..mergeFromMessage(this);
+  GetVulnzOccurrencesSummaryResponse_SeverityCount copyWith(void Function(GetVulnzOccurrencesSummaryResponse_SeverityCount) updates) => super.copyWith((message) => updates(message as GetVulnzOccurrencesSummaryResponse_SeverityCount));
+  $pb.BuilderInfo get info_ => _i;
+  static GetVulnzOccurrencesSummaryResponse_SeverityCount create() => GetVulnzOccurrencesSummaryResponse_SeverityCount();
+  GetVulnzOccurrencesSummaryResponse_SeverityCount createEmptyInstance() => create();
+  static $pb.PbList<GetVulnzOccurrencesSummaryResponse_SeverityCount> createRepeated() => $pb.PbList<GetVulnzOccurrencesSummaryResponse_SeverityCount>();
+  static GetVulnzOccurrencesSummaryResponse_SeverityCount getDefault() => _defaultInstance ??= create()..freeze();
   static GetVulnzOccurrencesSummaryResponse_SeverityCount _defaultInstance;
-  static void $checkItem(GetVulnzOccurrencesSummaryResponse_SeverityCount v) {
-    if (v is! GetVulnzOccurrencesSummaryResponse_SeverityCount)
-      checkItemFailed(v, 'GetVulnzOccurrencesSummaryResponse_SeverityCount');
-  }
 
-  VulnerabilityType_Severity get severity => $_getN(0);
-  set severity(VulnerabilityType_Severity v) {
-    setField(1, v);
-  }
-
-  bool hasSeverity() => $_has(0);
+  $0.VulnerabilityType_Severity get severity => $_getN(0);
+  set severity($0.VulnerabilityType_Severity v) { setField(1, v); }
+  $core.bool hasSeverity() => $_has(0);
   void clearSeverity() => clearField(1);
 
   Int64 get count => $_getI64(1);
-  set count(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasCount() => $_has(1);
+  set count(Int64 v) { $_setInt64(1, v); }
+  $core.bool hasCount() => $_has(1);
   void clearCount() => clearField(2);
 }
 
-class _ReadonlyGetVulnzOccurrencesSummaryResponse_SeverityCount
-    extends GetVulnzOccurrencesSummaryResponse_SeverityCount
-    with ReadonlyMessageMixin {}
-
-class GetVulnzOccurrencesSummaryResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('GetVulnzOccurrencesSummaryResponse')
-        ..pp<GetVulnzOccurrencesSummaryResponse_SeverityCount>(
-            1,
-            'counts',
-            PbFieldType.PM,
-            GetVulnzOccurrencesSummaryResponse_SeverityCount.$checkItem,
-            GetVulnzOccurrencesSummaryResponse_SeverityCount.create)
-        ..hasRequiredFields = false;
+class GetVulnzOccurrencesSummaryResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVulnzOccurrencesSummaryResponse', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..pc<GetVulnzOccurrencesSummaryResponse_SeverityCount>(1, 'counts', $pb.PbFieldType.PM,GetVulnzOccurrencesSummaryResponse_SeverityCount.create)
+    ..hasRequiredFields = false
+  ;
 
   GetVulnzOccurrencesSummaryResponse() : super();
-  GetVulnzOccurrencesSummaryResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetVulnzOccurrencesSummaryResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetVulnzOccurrencesSummaryResponse clone() =>
-      GetVulnzOccurrencesSummaryResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetVulnzOccurrencesSummaryResponse create() =>
-      GetVulnzOccurrencesSummaryResponse();
-  static PbList<GetVulnzOccurrencesSummaryResponse> createRepeated() =>
-      PbList<GetVulnzOccurrencesSummaryResponse>();
-  static GetVulnzOccurrencesSummaryResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetVulnzOccurrencesSummaryResponse();
-    return _defaultInstance;
-  }
-
+  GetVulnzOccurrencesSummaryResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetVulnzOccurrencesSummaryResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetVulnzOccurrencesSummaryResponse clone() => GetVulnzOccurrencesSummaryResponse()..mergeFromMessage(this);
+  GetVulnzOccurrencesSummaryResponse copyWith(void Function(GetVulnzOccurrencesSummaryResponse) updates) => super.copyWith((message) => updates(message as GetVulnzOccurrencesSummaryResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static GetVulnzOccurrencesSummaryResponse create() => GetVulnzOccurrencesSummaryResponse();
+  GetVulnzOccurrencesSummaryResponse createEmptyInstance() => create();
+  static $pb.PbList<GetVulnzOccurrencesSummaryResponse> createRepeated() => $pb.PbList<GetVulnzOccurrencesSummaryResponse>();
+  static GetVulnzOccurrencesSummaryResponse getDefault() => _defaultInstance ??= create()..freeze();
   static GetVulnzOccurrencesSummaryResponse _defaultInstance;
-  static void $checkItem(GetVulnzOccurrencesSummaryResponse v) {
-    if (v is! GetVulnzOccurrencesSummaryResponse)
-      checkItemFailed(v, 'GetVulnzOccurrencesSummaryResponse');
-  }
 
-  List<GetVulnzOccurrencesSummaryResponse_SeverityCount> get counts =>
-      $_getList(0);
+  $core.List<GetVulnzOccurrencesSummaryResponse_SeverityCount> get counts => $_getList(0);
 }
 
-class _ReadonlyGetVulnzOccurrencesSummaryResponse
-    extends GetVulnzOccurrencesSummaryResponse with ReadonlyMessageMixin {}
-
-class GetScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetScanConfigRequest')
+class GetScanConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetScanConfigRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetScanConfigRequest() : super();
-  GetScanConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetScanConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetScanConfigRequest clone() =>
-      GetScanConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetScanConfigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetScanConfigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetScanConfigRequest clone() => GetScanConfigRequest()..mergeFromMessage(this);
+  GetScanConfigRequest copyWith(void Function(GetScanConfigRequest) updates) => super.copyWith((message) => updates(message as GetScanConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetScanConfigRequest create() => GetScanConfigRequest();
-  static PbList<GetScanConfigRequest> createRepeated() =>
-      PbList<GetScanConfigRequest>();
-  static GetScanConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetScanConfigRequest();
-    return _defaultInstance;
-  }
-
+  GetScanConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<GetScanConfigRequest> createRepeated() => $pb.PbList<GetScanConfigRequest>();
+  static GetScanConfigRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetScanConfigRequest _defaultInstance;
-  static void $checkItem(GetScanConfigRequest v) {
-    if (v is! GetScanConfigRequest) checkItemFailed(v, 'GetScanConfigRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetScanConfigRequest extends GetScanConfigRequest
-    with ReadonlyMessageMixin {}
-
-class ListScanConfigsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListScanConfigsRequest')
+class ListScanConfigsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanConfigsRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListScanConfigsRequest() : super();
-  ListScanConfigsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListScanConfigsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListScanConfigsRequest clone() =>
-      ListScanConfigsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListScanConfigsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListScanConfigsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListScanConfigsRequest clone() => ListScanConfigsRequest()..mergeFromMessage(this);
+  ListScanConfigsRequest copyWith(void Function(ListScanConfigsRequest) updates) => super.copyWith((message) => updates(message as ListScanConfigsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListScanConfigsRequest create() => ListScanConfigsRequest();
-  static PbList<ListScanConfigsRequest> createRepeated() =>
-      PbList<ListScanConfigsRequest>();
-  static ListScanConfigsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListScanConfigsRequest();
-    return _defaultInstance;
-  }
-
+  ListScanConfigsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListScanConfigsRequest> createRepeated() => $pb.PbList<ListScanConfigsRequest>();
+  static ListScanConfigsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListScanConfigsRequest _defaultInstance;
-  static void $checkItem(ListScanConfigsRequest v) {
-    if (v is! ListScanConfigsRequest)
-      checkItemFailed(v, 'ListScanConfigsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasParent() => $_has(0);
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) { $_setString(0, v); }
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get filter => $_getS(1, '');
-  set filter(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasFilter() => $_has(1);
+  $core.String get filter => $_getS(1, '');
+  set filter($core.String v) { $_setString(1, v); }
+  $core.bool hasFilter() => $_has(1);
   void clearFilter() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasPageSize() => $_has(2);
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(3, '');
-  set pageToken(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasPageToken() => $_has(3);
+  $core.String get pageToken => $_getS(3, '');
+  set pageToken($core.String v) { $_setString(3, v); }
+  $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 }
 
-class _ReadonlyListScanConfigsRequest extends ListScanConfigsRequest
-    with ReadonlyMessageMixin {}
-
-class ListScanConfigsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListScanConfigsResponse')
-    ..pp<ScanConfig>(1, 'scanConfigs', PbFieldType.PM, ScanConfig.$checkItem,
-        ScanConfig.create)
+class ListScanConfigsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanConfigsResponse', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..pc<ScanConfig>(1, 'scanConfigs', $pb.PbFieldType.PM,ScanConfig.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListScanConfigsResponse() : super();
-  ListScanConfigsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListScanConfigsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListScanConfigsResponse clone() =>
-      ListScanConfigsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListScanConfigsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListScanConfigsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListScanConfigsResponse clone() => ListScanConfigsResponse()..mergeFromMessage(this);
+  ListScanConfigsResponse copyWith(void Function(ListScanConfigsResponse) updates) => super.copyWith((message) => updates(message as ListScanConfigsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListScanConfigsResponse create() => ListScanConfigsResponse();
-  static PbList<ListScanConfigsResponse> createRepeated() =>
-      PbList<ListScanConfigsResponse>();
-  static ListScanConfigsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListScanConfigsResponse();
-    return _defaultInstance;
-  }
-
+  ListScanConfigsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListScanConfigsResponse> createRepeated() => $pb.PbList<ListScanConfigsResponse>();
+  static ListScanConfigsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListScanConfigsResponse _defaultInstance;
-  static void $checkItem(ListScanConfigsResponse v) {
-    if (v is! ListScanConfigsResponse)
-      checkItemFailed(v, 'ListScanConfigsResponse');
-  }
 
-  List<ScanConfig> get scanConfigs => $_getList(0);
+  $core.List<ScanConfig> get scanConfigs => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListScanConfigsResponse extends ListScanConfigsResponse
-    with ReadonlyMessageMixin {}
-
-class UpdateScanConfigRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateScanConfigRequest')
+class UpdateScanConfigRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateScanConfigRequest', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..a<ScanConfig>(2, 'scanConfig', PbFieldType.OM, ScanConfig.getDefault,
-        ScanConfig.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
-    ..hasRequiredFields = false;
+    ..a<ScanConfig>(2, 'scanConfig', $pb.PbFieldType.OM, ScanConfig.getDefault, ScanConfig.create)
+    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM, $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateScanConfigRequest() : super();
-  UpdateScanConfigRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateScanConfigRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateScanConfigRequest clone() =>
-      UpdateScanConfigRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateScanConfigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateScanConfigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateScanConfigRequest clone() => UpdateScanConfigRequest()..mergeFromMessage(this);
+  UpdateScanConfigRequest copyWith(void Function(UpdateScanConfigRequest) updates) => super.copyWith((message) => updates(message as UpdateScanConfigRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateScanConfigRequest create() => UpdateScanConfigRequest();
-  static PbList<UpdateScanConfigRequest> createRepeated() =>
-      PbList<UpdateScanConfigRequest>();
-  static UpdateScanConfigRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateScanConfigRequest();
-    return _defaultInstance;
-  }
-
+  UpdateScanConfigRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateScanConfigRequest> createRepeated() => $pb.PbList<UpdateScanConfigRequest>();
+  static UpdateScanConfigRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateScanConfigRequest _defaultInstance;
-  static void $checkItem(UpdateScanConfigRequest v) {
-    if (v is! UpdateScanConfigRequest)
-      checkItemFailed(v, 'UpdateScanConfigRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   ScanConfig get scanConfig => $_getN(1);
-  set scanConfig(ScanConfig v) {
-    setField(2, v);
-  }
-
-  bool hasScanConfig() => $_has(1);
+  set scanConfig(ScanConfig v) { setField(2, v); }
+  $core.bool hasScanConfig() => $_has(1);
   void clearScanConfig() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
-    setField(3, v);
-  }
-
-  bool hasUpdateMask() => $_has(2);
+  $7.FieldMask get updateMask => $_getN(2);
+  set updateMask($7.FieldMask v) { setField(3, v); }
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateScanConfigRequest extends UpdateScanConfigRequest
-    with ReadonlyMessageMixin {}
-
 class ContainerAnalysisApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   ContainerAnalysisApi(this._client);
 
-  Future<Occurrence> getOccurrence(
-      ClientContext ctx, GetOccurrenceRequest request) {
+  $async.Future<Occurrence> getOccurrence($pb.ClientContext ctx, GetOccurrenceRequest request) {
     var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'ContainerAnalysis', 'GetOccurrence', request, emptyResponse);
+    return _client.invoke<Occurrence>(ctx, 'ContainerAnalysis', 'GetOccurrence', request, emptyResponse);
   }
-
-  Future<ListOccurrencesResponse> listOccurrences(
-      ClientContext ctx, ListOccurrencesRequest request) {
+  $async.Future<ListOccurrencesResponse> listOccurrences($pb.ClientContext ctx, ListOccurrencesRequest request) {
     var emptyResponse = ListOccurrencesResponse();
-    return _client.invoke<ListOccurrencesResponse>(
-        ctx, 'ContainerAnalysis', 'ListOccurrences', request, emptyResponse);
+    return _client.invoke<ListOccurrencesResponse>(ctx, 'ContainerAnalysis', 'ListOccurrences', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteOccurrence(
-      ClientContext ctx, DeleteOccurrenceRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'ContainerAnalysis', 'DeleteOccurrence', request, emptyResponse);
+  $async.Future<$8.Empty> deleteOccurrence($pb.ClientContext ctx, DeleteOccurrenceRequest request) {
+    var emptyResponse = $8.Empty();
+    return _client.invoke<$8.Empty>(ctx, 'ContainerAnalysis', 'DeleteOccurrence', request, emptyResponse);
   }
-
-  Future<Occurrence> createOccurrence(
-      ClientContext ctx, CreateOccurrenceRequest request) {
+  $async.Future<Occurrence> createOccurrence($pb.ClientContext ctx, CreateOccurrenceRequest request) {
     var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'ContainerAnalysis', 'CreateOccurrence', request, emptyResponse);
+    return _client.invoke<Occurrence>(ctx, 'ContainerAnalysis', 'CreateOccurrence', request, emptyResponse);
   }
-
-  Future<Occurrence> updateOccurrence(
-      ClientContext ctx, UpdateOccurrenceRequest request) {
+  $async.Future<Occurrence> updateOccurrence($pb.ClientContext ctx, UpdateOccurrenceRequest request) {
     var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'ContainerAnalysis', 'UpdateOccurrence', request, emptyResponse);
+    return _client.invoke<Occurrence>(ctx, 'ContainerAnalysis', 'UpdateOccurrence', request, emptyResponse);
   }
-
-  Future<Note> getOccurrenceNote(
-      ClientContext ctx, GetOccurrenceNoteRequest request) {
+  $async.Future<Note> getOccurrenceNote($pb.ClientContext ctx, GetOccurrenceNoteRequest request) {
     var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'ContainerAnalysis', 'GetOccurrenceNote', request, emptyResponse);
+    return _client.invoke<Note>(ctx, 'ContainerAnalysis', 'GetOccurrenceNote', request, emptyResponse);
   }
-
-  Future<Note> getNote(ClientContext ctx, GetNoteRequest request) {
+  $async.Future<Note> getNote($pb.ClientContext ctx, GetNoteRequest request) {
     var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'ContainerAnalysis', 'GetNote', request, emptyResponse);
+    return _client.invoke<Note>(ctx, 'ContainerAnalysis', 'GetNote', request, emptyResponse);
   }
-
-  Future<ListNotesResponse> listNotes(
-      ClientContext ctx, ListNotesRequest request) {
+  $async.Future<ListNotesResponse> listNotes($pb.ClientContext ctx, ListNotesRequest request) {
     var emptyResponse = ListNotesResponse();
-    return _client.invoke<ListNotesResponse>(
-        ctx, 'ContainerAnalysis', 'ListNotes', request, emptyResponse);
+    return _client.invoke<ListNotesResponse>(ctx, 'ContainerAnalysis', 'ListNotes', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteNote(
-      ClientContext ctx, DeleteNoteRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'ContainerAnalysis', 'DeleteNote', request, emptyResponse);
+  $async.Future<$8.Empty> deleteNote($pb.ClientContext ctx, DeleteNoteRequest request) {
+    var emptyResponse = $8.Empty();
+    return _client.invoke<$8.Empty>(ctx, 'ContainerAnalysis', 'DeleteNote', request, emptyResponse);
   }
-
-  Future<Note> createNote(ClientContext ctx, CreateNoteRequest request) {
+  $async.Future<Note> createNote($pb.ClientContext ctx, CreateNoteRequest request) {
     var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'ContainerAnalysis', 'CreateNote', request, emptyResponse);
+    return _client.invoke<Note>(ctx, 'ContainerAnalysis', 'CreateNote', request, emptyResponse);
   }
-
-  Future<Note> updateNote(ClientContext ctx, UpdateNoteRequest request) {
+  $async.Future<Note> updateNote($pb.ClientContext ctx, UpdateNoteRequest request) {
     var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'ContainerAnalysis', 'UpdateNote', request, emptyResponse);
+    return _client.invoke<Note>(ctx, 'ContainerAnalysis', 'UpdateNote', request, emptyResponse);
   }
-
-  Future<ListNoteOccurrencesResponse> listNoteOccurrences(
-      ClientContext ctx, ListNoteOccurrencesRequest request) {
+  $async.Future<ListNoteOccurrencesResponse> listNoteOccurrences($pb.ClientContext ctx, ListNoteOccurrencesRequest request) {
     var emptyResponse = ListNoteOccurrencesResponse();
-    return _client.invoke<ListNoteOccurrencesResponse>(ctx, 'ContainerAnalysis',
-        'ListNoteOccurrences', request, emptyResponse);
+    return _client.invoke<ListNoteOccurrencesResponse>(ctx, 'ContainerAnalysis', 'ListNoteOccurrences', request, emptyResponse);
   }
-
-  Future<GetVulnzOccurrencesSummaryResponse> getVulnzOccurrencesSummary(
-      ClientContext ctx, GetVulnzOccurrencesSummaryRequest request) {
+  $async.Future<GetVulnzOccurrencesSummaryResponse> getVulnzOccurrencesSummary($pb.ClientContext ctx, GetVulnzOccurrencesSummaryRequest request) {
     var emptyResponse = GetVulnzOccurrencesSummaryResponse();
-    return _client.invoke<GetVulnzOccurrencesSummaryResponse>(
-        ctx,
-        'ContainerAnalysis',
-        'GetVulnzOccurrencesSummary',
-        request,
-        emptyResponse);
+    return _client.invoke<GetVulnzOccurrencesSummaryResponse>(ctx, 'ContainerAnalysis', 'GetVulnzOccurrencesSummary', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
-        ctx, 'ContainerAnalysis', 'SetIamPolicy', request, emptyResponse);
+  $async.Future<$10.Policy> setIamPolicy($pb.ClientContext ctx, $9.SetIamPolicyRequest request) {
+    var emptyResponse = $10.Policy();
+    return _client.invoke<$10.Policy>(ctx, 'ContainerAnalysis', 'SetIamPolicy', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
-        ctx, 'ContainerAnalysis', 'GetIamPolicy', request, emptyResponse);
+  $async.Future<$10.Policy> getIamPolicy($pb.ClientContext ctx, $9.GetIamPolicyRequest request) {
+    var emptyResponse = $10.Policy();
+    return _client.invoke<$10.Policy>(ctx, 'ContainerAnalysis', 'GetIamPolicy', request, emptyResponse);
   }
-
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = $google$iam$v1.TestIamPermissionsResponse();
-    return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
-        ctx, 'ContainerAnalysis', 'TestIamPermissions', request, emptyResponse);
+  $async.Future<$9.TestIamPermissionsResponse> testIamPermissions($pb.ClientContext ctx, $9.TestIamPermissionsRequest request) {
+    var emptyResponse = $9.TestIamPermissionsResponse();
+    return _client.invoke<$9.TestIamPermissionsResponse>(ctx, 'ContainerAnalysis', 'TestIamPermissions', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> createOperation(
-      ClientContext ctx, CreateOperationRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ContainerAnalysis', 'CreateOperation', request, emptyResponse);
+  $async.Future<$5.Operation> createOperation($pb.ClientContext ctx, CreateOperationRequest request) {
+    var emptyResponse = $5.Operation();
+    return _client.invoke<$5.Operation>(ctx, 'ContainerAnalysis', 'CreateOperation', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> updateOperation(
-      ClientContext ctx, UpdateOperationRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ContainerAnalysis', 'UpdateOperation', request, emptyResponse);
+  $async.Future<$5.Operation> updateOperation($pb.ClientContext ctx, UpdateOperationRequest request) {
+    var emptyResponse = $5.Operation();
+    return _client.invoke<$5.Operation>(ctx, 'ContainerAnalysis', 'UpdateOperation', request, emptyResponse);
   }
-
-  Future<ScanConfig> getScanConfig(
-      ClientContext ctx, GetScanConfigRequest request) {
+  $async.Future<ScanConfig> getScanConfig($pb.ClientContext ctx, GetScanConfigRequest request) {
     var emptyResponse = ScanConfig();
-    return _client.invoke<ScanConfig>(
-        ctx, 'ContainerAnalysis', 'GetScanConfig', request, emptyResponse);
+    return _client.invoke<ScanConfig>(ctx, 'ContainerAnalysis', 'GetScanConfig', request, emptyResponse);
   }
-
-  Future<ListScanConfigsResponse> listScanConfigs(
-      ClientContext ctx, ListScanConfigsRequest request) {
+  $async.Future<ListScanConfigsResponse> listScanConfigs($pb.ClientContext ctx, ListScanConfigsRequest request) {
     var emptyResponse = ListScanConfigsResponse();
-    return _client.invoke<ListScanConfigsResponse>(
-        ctx, 'ContainerAnalysis', 'ListScanConfigs', request, emptyResponse);
+    return _client.invoke<ListScanConfigsResponse>(ctx, 'ContainerAnalysis', 'ListScanConfigs', request, emptyResponse);
   }
-
-  Future<ScanConfig> updateScanConfig(
-      ClientContext ctx, UpdateScanConfigRequest request) {
+  $async.Future<ScanConfig> updateScanConfig($pb.ClientContext ctx, UpdateScanConfigRequest request) {
     var emptyResponse = ScanConfig();
-    return _client.invoke<ScanConfig>(
-        ctx, 'ContainerAnalysis', 'UpdateScanConfig', request, emptyResponse);
+    return _client.invoke<ScanConfig>(ctx, 'ContainerAnalysis', 'UpdateScanConfig', request, emptyResponse);
   }
 }
+

@@ -1,172 +1,96 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/servicecontrol/v1/log_entry.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/any.pb.dart' as $google$protobuf;
-import '../../../protobuf/struct.pb.dart' as $google$protobuf;
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
+import '../../../protobuf/any.pb.dart' as $0;
+import '../../../protobuf/struct.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
-import '../../../logging/type/log_severity.pbenum.dart' as $google$logging$type;
+import '../../../logging/type/log_severity.pbenum.dart' as $3;
 
-class LogEntry_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('LogEntry_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  LogEntry_LabelsEntry() : super();
-  LogEntry_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogEntry_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  LogEntry_LabelsEntry clone() =>
-      LogEntry_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LogEntry_LabelsEntry create() => LogEntry_LabelsEntry();
-  static PbList<LogEntry_LabelsEntry> createRepeated() =>
-      PbList<LogEntry_LabelsEntry>();
-  static LogEntry_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyLogEntry_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static LogEntry_LabelsEntry _defaultInstance;
-  static void $checkItem(LogEntry_LabelsEntry v) {
-    if (v is! LogEntry_LabelsEntry) checkItemFailed(v, 'LogEntry_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
+enum LogEntry_Payload {
+  protoPayload, 
+  textPayload, 
+  structPayload, 
+  notSet
 }
 
-class _ReadonlyLogEntry_LabelsEntry extends LogEntry_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class LogEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('LogEntry')
-    ..a<$google$protobuf.Any>(2, 'protoPayload', PbFieldType.OM,
-        $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
+class LogEntry extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, LogEntry_Payload> _LogEntry_PayloadByTag = {
+    2 : LogEntry_Payload.protoPayload,
+    3 : LogEntry_Payload.textPayload,
+    6 : LogEntry_Payload.structPayload,
+    0 : LogEntry_Payload.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogEntry', package: const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..a<$0.Any>(2, 'protoPayload', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
     ..aOS(3, 'textPayload')
     ..aOS(4, 'insertId')
-    ..a<$google$protobuf.Struct>(6, 'structPayload', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
+    ..a<$1.Struct>(6, 'structPayload', $pb.PbFieldType.OM, $1.Struct.getDefault, $1.Struct.create)
     ..aOS(10, 'name')
-    ..a<$google$protobuf.Timestamp>(
-        11,
-        'timestamp',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..e<$google$logging$type.LogSeverity>(
-        12,
-        'severity',
-        PbFieldType.OE,
-        $google$logging$type.LogSeverity.DEFAULT,
-        $google$logging$type.LogSeverity.valueOf,
-        $google$logging$type.LogSeverity.values)
-    ..pp<LogEntry_LabelsEntry>(13, 'labels', PbFieldType.PM,
-        LogEntry_LabelsEntry.$checkItem, LogEntry_LabelsEntry.create)
-    ..hasRequiredFields = false;
+    ..a<$2.Timestamp>(11, 'timestamp', $pb.PbFieldType.OM, $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..e<$3.LogSeverity>(12, 'severity', $pb.PbFieldType.OE, $3.LogSeverity.DEFAULT, $3.LogSeverity.valueOf, $3.LogSeverity.values)
+    ..m<$core.String, $core.String>(13, 'labels', 'LogEntry.LabelsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..oo(0, [2, 3, 6])
+    ..hasRequiredFields = false
+  ;
 
   LogEntry() : super();
-  LogEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogEntry.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogEntry.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  LogEntry.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   LogEntry clone() => LogEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  LogEntry copyWith(void Function(LogEntry) updates) => super.copyWith((message) => updates(message as LogEntry));
+  $pb.BuilderInfo get info_ => _i;
   static LogEntry create() => LogEntry();
-  static PbList<LogEntry> createRepeated() => PbList<LogEntry>();
-  static LogEntry getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyLogEntry();
-    return _defaultInstance;
-  }
-
+  LogEntry createEmptyInstance() => create();
+  static $pb.PbList<LogEntry> createRepeated() => $pb.PbList<LogEntry>();
+  static LogEntry getDefault() => _defaultInstance ??= create()..freeze();
   static LogEntry _defaultInstance;
-  static void $checkItem(LogEntry v) {
-    if (v is! LogEntry) checkItemFailed(v, 'LogEntry');
-  }
 
-  $google$protobuf.Any get protoPayload => $_getN(0);
-  set protoPayload($google$protobuf.Any v) {
-    setField(2, v);
-  }
+  LogEntry_Payload whichPayload() => _LogEntry_PayloadByTag[$_whichOneof(0)];
+  void clearPayload() => clearField($_whichOneof(0));
 
-  bool hasProtoPayload() => $_has(0);
+  $0.Any get protoPayload => $_getN(0);
+  set protoPayload($0.Any v) { setField(2, v); }
+  $core.bool hasProtoPayload() => $_has(0);
   void clearProtoPayload() => clearField(2);
 
-  String get textPayload => $_getS(1, '');
-  set textPayload(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTextPayload() => $_has(1);
+  $core.String get textPayload => $_getS(1, '');
+  set textPayload($core.String v) { $_setString(1, v); }
+  $core.bool hasTextPayload() => $_has(1);
   void clearTextPayload() => clearField(3);
 
-  String get insertId => $_getS(2, '');
-  set insertId(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasInsertId() => $_has(2);
+  $core.String get insertId => $_getS(2, '');
+  set insertId($core.String v) { $_setString(2, v); }
+  $core.bool hasInsertId() => $_has(2);
   void clearInsertId() => clearField(4);
 
-  $google$protobuf.Struct get structPayload => $_getN(3);
-  set structPayload($google$protobuf.Struct v) {
-    setField(6, v);
-  }
-
-  bool hasStructPayload() => $_has(3);
+  $1.Struct get structPayload => $_getN(3);
+  set structPayload($1.Struct v) { setField(6, v); }
+  $core.bool hasStructPayload() => $_has(3);
   void clearStructPayload() => clearField(6);
 
-  String get name => $_getS(4, '');
-  set name(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasName() => $_has(4);
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) { $_setString(4, v); }
+  $core.bool hasName() => $_has(4);
   void clearName() => clearField(10);
 
-  $google$protobuf.Timestamp get timestamp => $_getN(5);
-  set timestamp($google$protobuf.Timestamp v) {
-    setField(11, v);
-  }
-
-  bool hasTimestamp() => $_has(5);
+  $2.Timestamp get timestamp => $_getN(5);
+  set timestamp($2.Timestamp v) { setField(11, v); }
+  $core.bool hasTimestamp() => $_has(5);
   void clearTimestamp() => clearField(11);
 
-  $google$logging$type.LogSeverity get severity => $_getN(6);
-  set severity($google$logging$type.LogSeverity v) {
-    setField(12, v);
-  }
-
-  bool hasSeverity() => $_has(6);
+  $3.LogSeverity get severity => $_getN(6);
+  set severity($3.LogSeverity v) { setField(12, v); }
+  $core.bool hasSeverity() => $_has(6);
   void clearSeverity() => clearField(12);
 
-  List<LogEntry_LabelsEntry> get labels => $_getList(7);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(7);
 }
 
-class _ReadonlyLogEntry extends LogEntry with ReadonlyMessageMixin {}

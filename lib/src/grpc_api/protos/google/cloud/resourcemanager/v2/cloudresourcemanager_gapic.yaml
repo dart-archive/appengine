@@ -17,12 +17,6 @@ language_settings:
   nodejs:
     package_name: resourcemanager.v2
     domain_layer_location: google-cloud
-# The configuration for the license header to put on generated files.
-license_header:
-  # The file containing the copyright line(s).
-  copyright_file: copyright-google.txt
-  # The file containing the raw license header without any copyright line(s).
-  license_file: license-header-apache-2.0.txt
 collection_oneofs:
 - oneof_name: parent_oneof
   collection_names:
@@ -83,9 +77,7 @@ interfaces:
   #       message.
   #   required_fields - Fields that are always required for a request to be
   #       valid.
-  #   request_object_method - Turns on or off the generation of a method whose
-  #       sole parameter is a request object. Not all languages will generate
-  #       this method.
+  #
   #   resource_name_treatment - An enum that specifies how to treat the
   #       resource name formats defined in the field_name_patterns
   #       and response_field_name_patterns fields.
@@ -131,7 +123,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -150,7 +141,6 @@ interfaces:
       groups:
       - parameters:
         - query
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -168,7 +158,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -184,7 +173,6 @@ interfaces:
     required_fields:
     - parent
     - folder
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -200,7 +188,6 @@ interfaces:
     required_fields:
     - folder
     - update_mask
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 30000
@@ -213,7 +200,6 @@ interfaces:
     required_fields:
     - name
     - destination_parent
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -231,7 +217,6 @@ interfaces:
         - recursive_delete
     required_fields:
     - name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -245,7 +230,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -259,7 +243,6 @@ interfaces:
         - resource
     required_fields:
     - resource
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -274,7 +257,6 @@ interfaces:
     required_fields:
     - resource
     - policy
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -289,7 +271,6 @@ interfaces:
     required_fields:
     - resource
     - permissions
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:

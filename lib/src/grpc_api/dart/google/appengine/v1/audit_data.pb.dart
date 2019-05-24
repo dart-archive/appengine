@@ -1,140 +1,105 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/audit_data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'appengine.pb.dart';
+import 'appengine.pb.dart' as $0;
 
-class AuditData extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('AuditData')
-    ..a<UpdateServiceMethod>(1, 'updateService', PbFieldType.OM,
-        UpdateServiceMethod.getDefault, UpdateServiceMethod.create)
-    ..a<CreateVersionMethod>(2, 'createVersion', PbFieldType.OM,
-        CreateVersionMethod.getDefault, CreateVersionMethod.create)
-    ..hasRequiredFields = false;
+enum AuditData_Method {
+  updateService, 
+  createVersion, 
+  notSet
+}
+
+class AuditData extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AuditData_Method> _AuditData_MethodByTag = {
+    1 : AuditData_Method.updateService,
+    2 : AuditData_Method.createVersion,
+    0 : AuditData_Method.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuditData', package: const $pb.PackageName('google.appengine.v1'))
+    ..a<UpdateServiceMethod>(1, 'updateService', $pb.PbFieldType.OM, UpdateServiceMethod.getDefault, UpdateServiceMethod.create)
+    ..a<CreateVersionMethod>(2, 'createVersion', $pb.PbFieldType.OM, CreateVersionMethod.getDefault, CreateVersionMethod.create)
+    ..oo(0, [1, 2])
+    ..hasRequiredFields = false
+  ;
 
   AuditData() : super();
-  AuditData.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuditData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuditData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  AuditData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   AuditData clone() => AuditData()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  AuditData copyWith(void Function(AuditData) updates) => super.copyWith((message) => updates(message as AuditData));
+  $pb.BuilderInfo get info_ => _i;
   static AuditData create() => AuditData();
-  static PbList<AuditData> createRepeated() => PbList<AuditData>();
-  static AuditData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyAuditData();
-    return _defaultInstance;
-  }
-
+  AuditData createEmptyInstance() => create();
+  static $pb.PbList<AuditData> createRepeated() => $pb.PbList<AuditData>();
+  static AuditData getDefault() => _defaultInstance ??= create()..freeze();
   static AuditData _defaultInstance;
-  static void $checkItem(AuditData v) {
-    if (v is! AuditData) checkItemFailed(v, 'AuditData');
-  }
+
+  AuditData_Method whichMethod() => _AuditData_MethodByTag[$_whichOneof(0)];
+  void clearMethod() => clearField($_whichOneof(0));
 
   UpdateServiceMethod get updateService => $_getN(0);
-  set updateService(UpdateServiceMethod v) {
-    setField(1, v);
-  }
-
-  bool hasUpdateService() => $_has(0);
+  set updateService(UpdateServiceMethod v) { setField(1, v); }
+  $core.bool hasUpdateService() => $_has(0);
   void clearUpdateService() => clearField(1);
 
   CreateVersionMethod get createVersion => $_getN(1);
-  set createVersion(CreateVersionMethod v) {
-    setField(2, v);
-  }
-
-  bool hasCreateVersion() => $_has(1);
+  set createVersion(CreateVersionMethod v) { setField(2, v); }
+  $core.bool hasCreateVersion() => $_has(1);
   void clearCreateVersion() => clearField(2);
 }
 
-class _ReadonlyAuditData extends AuditData with ReadonlyMessageMixin {}
-
-class UpdateServiceMethod extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateServiceMethod')
-    ..a<UpdateServiceRequest>(1, 'request', PbFieldType.OM,
-        UpdateServiceRequest.getDefault, UpdateServiceRequest.create)
-    ..hasRequiredFields = false;
+class UpdateServiceMethod extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateServiceMethod', package: const $pb.PackageName('google.appengine.v1'))
+    ..a<$0.UpdateServiceRequest>(1, 'request', $pb.PbFieldType.OM, $0.UpdateServiceRequest.getDefault, $0.UpdateServiceRequest.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateServiceMethod() : super();
-  UpdateServiceMethod.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateServiceMethod.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateServiceMethod.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateServiceMethod.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   UpdateServiceMethod clone() => UpdateServiceMethod()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateServiceMethod copyWith(void Function(UpdateServiceMethod) updates) => super.copyWith((message) => updates(message as UpdateServiceMethod));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateServiceMethod create() => UpdateServiceMethod();
-  static PbList<UpdateServiceMethod> createRepeated() =>
-      PbList<UpdateServiceMethod>();
-  static UpdateServiceMethod getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateServiceMethod();
-    return _defaultInstance;
-  }
-
+  UpdateServiceMethod createEmptyInstance() => create();
+  static $pb.PbList<UpdateServiceMethod> createRepeated() => $pb.PbList<UpdateServiceMethod>();
+  static UpdateServiceMethod getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateServiceMethod _defaultInstance;
-  static void $checkItem(UpdateServiceMethod v) {
-    if (v is! UpdateServiceMethod) checkItemFailed(v, 'UpdateServiceMethod');
-  }
 
-  UpdateServiceRequest get request => $_getN(0);
-  set request(UpdateServiceRequest v) {
-    setField(1, v);
-  }
-
-  bool hasRequest() => $_has(0);
+  $0.UpdateServiceRequest get request => $_getN(0);
+  set request($0.UpdateServiceRequest v) { setField(1, v); }
+  $core.bool hasRequest() => $_has(0);
   void clearRequest() => clearField(1);
 }
 
-class _ReadonlyUpdateServiceMethod extends UpdateServiceMethod
-    with ReadonlyMessageMixin {}
-
-class CreateVersionMethod extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateVersionMethod')
-    ..a<CreateVersionRequest>(1, 'request', PbFieldType.OM,
-        CreateVersionRequest.getDefault, CreateVersionRequest.create)
-    ..hasRequiredFields = false;
+class CreateVersionMethod extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVersionMethod', package: const $pb.PackageName('google.appengine.v1'))
+    ..a<$0.CreateVersionRequest>(1, 'request', $pb.PbFieldType.OM, $0.CreateVersionRequest.getDefault, $0.CreateVersionRequest.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateVersionMethod() : super();
-  CreateVersionMethod.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateVersionMethod.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateVersionMethod.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateVersionMethod.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CreateVersionMethod clone() => CreateVersionMethod()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateVersionMethod copyWith(void Function(CreateVersionMethod) updates) => super.copyWith((message) => updates(message as CreateVersionMethod));
+  $pb.BuilderInfo get info_ => _i;
   static CreateVersionMethod create() => CreateVersionMethod();
-  static PbList<CreateVersionMethod> createRepeated() =>
-      PbList<CreateVersionMethod>();
-  static CreateVersionMethod getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateVersionMethod();
-    return _defaultInstance;
-  }
-
+  CreateVersionMethod createEmptyInstance() => create();
+  static $pb.PbList<CreateVersionMethod> createRepeated() => $pb.PbList<CreateVersionMethod>();
+  static CreateVersionMethod getDefault() => _defaultInstance ??= create()..freeze();
   static CreateVersionMethod _defaultInstance;
-  static void $checkItem(CreateVersionMethod v) {
-    if (v is! CreateVersionMethod) checkItemFailed(v, 'CreateVersionMethod');
-  }
 
-  CreateVersionRequest get request => $_getN(0);
-  set request(CreateVersionRequest v) {
-    setField(1, v);
-  }
-
-  bool hasRequest() => $_has(0);
+  $0.CreateVersionRequest get request => $_getN(0);
+  set request($0.CreateVersionRequest v) { setField(1, v); }
+  $core.bool hasRequest() => $_has(0);
   void clearRequest() => clearField(1);
 }
 
-class _ReadonlyCreateVersionMethod extends CreateVersionMethod
-    with ReadonlyMessageMixin {}

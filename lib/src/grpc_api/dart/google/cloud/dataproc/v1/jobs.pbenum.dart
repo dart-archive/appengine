@@ -1,15 +1,15 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dataproc/v1/jobs.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class LoggingConfig_Level extends ProtobufEnum {
-  static const LoggingConfig_Level LEVEL_UNSPECIFIED =
-      LoggingConfig_Level._(0, 'LEVEL_UNSPECIFIED');
+class LoggingConfig_Level extends $pb.ProtobufEnum {
+  static const LoggingConfig_Level LEVEL_UNSPECIFIED = LoggingConfig_Level._(0, 'LEVEL_UNSPECIFIED');
   static const LoggingConfig_Level ALL = LoggingConfig_Level._(1, 'ALL');
   static const LoggingConfig_Level TRACE = LoggingConfig_Level._(2, 'TRACE');
   static const LoggingConfig_Level DEBUG = LoggingConfig_Level._(3, 'DEBUG');
@@ -19,7 +19,7 @@ class LoggingConfig_Level extends ProtobufEnum {
   static const LoggingConfig_Level FATAL = LoggingConfig_Level._(7, 'FATAL');
   static const LoggingConfig_Level OFF = LoggingConfig_Level._(8, 'OFF');
 
-  static const List<LoggingConfig_Level> values = <LoggingConfig_Level>[
+  static const $core.List<LoggingConfig_Level> values = <LoggingConfig_Level> [
     LEVEL_UNSPECIFIED,
     ALL,
     TRACE,
@@ -31,33 +31,25 @@ class LoggingConfig_Level extends ProtobufEnum {
     OFF,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static LoggingConfig_Level valueOf(int value) =>
-      _byValue[value] as LoggingConfig_Level;
-  static void $checkItem(LoggingConfig_Level v) {
-    if (v is! LoggingConfig_Level) checkItemFailed(v, 'LoggingConfig_Level');
-  }
+  static final $core.Map<$core.int, LoggingConfig_Level> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static LoggingConfig_Level valueOf($core.int value) => _byValue[value];
 
-  const LoggingConfig_Level._(int v, String n) : super(v, n);
+  const LoggingConfig_Level._($core.int v, $core.String n) : super(v, n);
 }
 
-class JobStatus_State extends ProtobufEnum {
-  static const JobStatus_State STATE_UNSPECIFIED =
-      JobStatus_State._(0, 'STATE_UNSPECIFIED');
+class JobStatus_State extends $pb.ProtobufEnum {
+  static const JobStatus_State STATE_UNSPECIFIED = JobStatus_State._(0, 'STATE_UNSPECIFIED');
   static const JobStatus_State PENDING = JobStatus_State._(1, 'PENDING');
   static const JobStatus_State SETUP_DONE = JobStatus_State._(8, 'SETUP_DONE');
   static const JobStatus_State RUNNING = JobStatus_State._(2, 'RUNNING');
-  static const JobStatus_State CANCEL_PENDING =
-      JobStatus_State._(3, 'CANCEL_PENDING');
-  static const JobStatus_State CANCEL_STARTED =
-      JobStatus_State._(7, 'CANCEL_STARTED');
+  static const JobStatus_State CANCEL_PENDING = JobStatus_State._(3, 'CANCEL_PENDING');
+  static const JobStatus_State CANCEL_STARTED = JobStatus_State._(7, 'CANCEL_STARTED');
   static const JobStatus_State CANCELLED = JobStatus_State._(4, 'CANCELLED');
   static const JobStatus_State DONE = JobStatus_State._(5, 'DONE');
   static const JobStatus_State ERROR = JobStatus_State._(6, 'ERROR');
-  static const JobStatus_State ATTEMPT_FAILURE =
-      JobStatus_State._(9, 'ATTEMPT_FAILURE');
+  static const JobStatus_State ATTEMPT_FAILURE = JobStatus_State._(9, 'ATTEMPT_FAILURE');
 
-  static const List<JobStatus_State> values = <JobStatus_State>[
+  static const $core.List<JobStatus_State> values = <JobStatus_State> [
     STATE_UNSPECIFIED,
     PENDING,
     SETUP_DONE,
@@ -70,62 +62,43 @@ class JobStatus_State extends ProtobufEnum {
     ATTEMPT_FAILURE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static JobStatus_State valueOf(int value) =>
-      _byValue[value] as JobStatus_State;
-  static void $checkItem(JobStatus_State v) {
-    if (v is! JobStatus_State) checkItemFailed(v, 'JobStatus_State');
-  }
+  static final $core.Map<$core.int, JobStatus_State> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static JobStatus_State valueOf($core.int value) => _byValue[value];
 
-  const JobStatus_State._(int v, String n) : super(v, n);
+  const JobStatus_State._($core.int v, $core.String n) : super(v, n);
 }
 
-class JobStatus_Substate extends ProtobufEnum {
-  static const JobStatus_Substate UNSPECIFIED =
-      JobStatus_Substate._(0, 'UNSPECIFIED');
-  static const JobStatus_Substate SUBMITTED =
-      JobStatus_Substate._(1, 'SUBMITTED');
+class JobStatus_Substate extends $pb.ProtobufEnum {
+  static const JobStatus_Substate UNSPECIFIED = JobStatus_Substate._(0, 'UNSPECIFIED');
+  static const JobStatus_Substate SUBMITTED = JobStatus_Substate._(1, 'SUBMITTED');
   static const JobStatus_Substate QUEUED = JobStatus_Substate._(2, 'QUEUED');
-  static const JobStatus_Substate STALE_STATUS =
-      JobStatus_Substate._(3, 'STALE_STATUS');
+  static const JobStatus_Substate STALE_STATUS = JobStatus_Substate._(3, 'STALE_STATUS');
 
-  static const List<JobStatus_Substate> values = <JobStatus_Substate>[
+  static const $core.List<JobStatus_Substate> values = <JobStatus_Substate> [
     UNSPECIFIED,
     SUBMITTED,
     QUEUED,
     STALE_STATUS,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static JobStatus_Substate valueOf(int value) =>
-      _byValue[value] as JobStatus_Substate;
-  static void $checkItem(JobStatus_Substate v) {
-    if (v is! JobStatus_Substate) checkItemFailed(v, 'JobStatus_Substate');
-  }
+  static final $core.Map<$core.int, JobStatus_Substate> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static JobStatus_Substate valueOf($core.int value) => _byValue[value];
 
-  const JobStatus_Substate._(int v, String n) : super(v, n);
+  const JobStatus_Substate._($core.int v, $core.String n) : super(v, n);
 }
 
-class YarnApplication_State extends ProtobufEnum {
-  static const YarnApplication_State STATE_UNSPECIFIED =
-      YarnApplication_State._(0, 'STATE_UNSPECIFIED');
+class YarnApplication_State extends $pb.ProtobufEnum {
+  static const YarnApplication_State STATE_UNSPECIFIED = YarnApplication_State._(0, 'STATE_UNSPECIFIED');
   static const YarnApplication_State NEW = YarnApplication_State._(1, 'NEW');
-  static const YarnApplication_State NEW_SAVING =
-      YarnApplication_State._(2, 'NEW_SAVING');
-  static const YarnApplication_State SUBMITTED =
-      YarnApplication_State._(3, 'SUBMITTED');
-  static const YarnApplication_State ACCEPTED =
-      YarnApplication_State._(4, 'ACCEPTED');
-  static const YarnApplication_State RUNNING =
-      YarnApplication_State._(5, 'RUNNING');
-  static const YarnApplication_State FINISHED =
-      YarnApplication_State._(6, 'FINISHED');
-  static const YarnApplication_State FAILED =
-      YarnApplication_State._(7, 'FAILED');
-  static const YarnApplication_State KILLED =
-      YarnApplication_State._(8, 'KILLED');
+  static const YarnApplication_State NEW_SAVING = YarnApplication_State._(2, 'NEW_SAVING');
+  static const YarnApplication_State SUBMITTED = YarnApplication_State._(3, 'SUBMITTED');
+  static const YarnApplication_State ACCEPTED = YarnApplication_State._(4, 'ACCEPTED');
+  static const YarnApplication_State RUNNING = YarnApplication_State._(5, 'RUNNING');
+  static const YarnApplication_State FINISHED = YarnApplication_State._(6, 'FINISHED');
+  static const YarnApplication_State FAILED = YarnApplication_State._(7, 'FAILED');
+  static const YarnApplication_State KILLED = YarnApplication_State._(8, 'KILLED');
 
-  static const List<YarnApplication_State> values = <YarnApplication_State>[
+  static const $core.List<YarnApplication_State> values = <YarnApplication_State> [
     STATE_UNSPECIFIED,
     NEW,
     NEW_SAVING,
@@ -137,39 +110,26 @@ class YarnApplication_State extends ProtobufEnum {
     KILLED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static YarnApplication_State valueOf(int value) =>
-      _byValue[value] as YarnApplication_State;
-  static void $checkItem(YarnApplication_State v) {
-    if (v is! YarnApplication_State)
-      checkItemFailed(v, 'YarnApplication_State');
-  }
+  static final $core.Map<$core.int, YarnApplication_State> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static YarnApplication_State valueOf($core.int value) => _byValue[value];
 
-  const YarnApplication_State._(int v, String n) : super(v, n);
+  const YarnApplication_State._($core.int v, $core.String n) : super(v, n);
 }
 
-class ListJobsRequest_JobStateMatcher extends ProtobufEnum {
-  static const ListJobsRequest_JobStateMatcher ALL =
-      ListJobsRequest_JobStateMatcher._(0, 'ALL');
-  static const ListJobsRequest_JobStateMatcher ACTIVE =
-      ListJobsRequest_JobStateMatcher._(1, 'ACTIVE');
-  static const ListJobsRequest_JobStateMatcher NON_ACTIVE =
-      ListJobsRequest_JobStateMatcher._(2, 'NON_ACTIVE');
+class ListJobsRequest_JobStateMatcher extends $pb.ProtobufEnum {
+  static const ListJobsRequest_JobStateMatcher ALL = ListJobsRequest_JobStateMatcher._(0, 'ALL');
+  static const ListJobsRequest_JobStateMatcher ACTIVE = ListJobsRequest_JobStateMatcher._(1, 'ACTIVE');
+  static const ListJobsRequest_JobStateMatcher NON_ACTIVE = ListJobsRequest_JobStateMatcher._(2, 'NON_ACTIVE');
 
-  static const List<ListJobsRequest_JobStateMatcher> values =
-      <ListJobsRequest_JobStateMatcher>[
+  static const $core.List<ListJobsRequest_JobStateMatcher> values = <ListJobsRequest_JobStateMatcher> [
     ALL,
     ACTIVE,
     NON_ACTIVE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ListJobsRequest_JobStateMatcher valueOf(int value) =>
-      _byValue[value] as ListJobsRequest_JobStateMatcher;
-  static void $checkItem(ListJobsRequest_JobStateMatcher v) {
-    if (v is! ListJobsRequest_JobStateMatcher)
-      checkItemFailed(v, 'ListJobsRequest_JobStateMatcher');
-  }
+  static final $core.Map<$core.int, ListJobsRequest_JobStateMatcher> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ListJobsRequest_JobStateMatcher valueOf($core.int value) => _byValue[value];
 
-  const ListJobsRequest_JobStateMatcher._(int v, String n) : super(v, n);
+  const ListJobsRequest_JobStateMatcher._($core.int v, $core.String n) : super(v, n);
 }
+

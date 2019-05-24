@@ -1,0 +1,20 @@
+///
+//  Generated code. Do not modify.
+//  source: google/ads/googleads/v1/enums/interaction_type.proto
+///
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+
+const InteractionTypeEnum$json = const {
+  '1': 'InteractionTypeEnum',
+  '4': const [InteractionTypeEnum_InteractionType$json],
+};
+
+const InteractionTypeEnum_InteractionType$json = const {
+  '1': 'InteractionType',
+  '2': const [
+    const {'1': 'UNSPECIFIED', '2': 0},
+    const {'1': 'UNKNOWN', '2': 1},
+    const {'1': 'CALLS', '2': 8000},
+  ],
+};
+

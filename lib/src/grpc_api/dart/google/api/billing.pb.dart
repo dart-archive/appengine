@@ -1,89 +1,58 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/billing.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Billing_BillingDestination extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Billing_BillingDestination')
+class Billing_BillingDestination extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Billing.BillingDestination', package: const $pb.PackageName('google.api'))
     ..aOS(1, 'monitoredResource')
     ..pPS(2, 'metrics')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Billing_BillingDestination() : super();
-  Billing_BillingDestination.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Billing_BillingDestination.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Billing_BillingDestination clone() =>
-      Billing_BillingDestination()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Billing_BillingDestination.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Billing_BillingDestination.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Billing_BillingDestination clone() => Billing_BillingDestination()..mergeFromMessage(this);
+  Billing_BillingDestination copyWith(void Function(Billing_BillingDestination) updates) => super.copyWith((message) => updates(message as Billing_BillingDestination));
+  $pb.BuilderInfo get info_ => _i;
   static Billing_BillingDestination create() => Billing_BillingDestination();
-  static PbList<Billing_BillingDestination> createRepeated() =>
-      PbList<Billing_BillingDestination>();
-  static Billing_BillingDestination getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBilling_BillingDestination();
-    return _defaultInstance;
-  }
-
+  Billing_BillingDestination createEmptyInstance() => create();
+  static $pb.PbList<Billing_BillingDestination> createRepeated() => $pb.PbList<Billing_BillingDestination>();
+  static Billing_BillingDestination getDefault() => _defaultInstance ??= create()..freeze();
   static Billing_BillingDestination _defaultInstance;
-  static void $checkItem(Billing_BillingDestination v) {
-    if (v is! Billing_BillingDestination)
-      checkItemFailed(v, 'Billing_BillingDestination');
-  }
 
-  String get monitoredResource => $_getS(0, '');
-  set monitoredResource(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasMonitoredResource() => $_has(0);
+  $core.String get monitoredResource => $_getS(0, '');
+  set monitoredResource($core.String v) { $_setString(0, v); }
+  $core.bool hasMonitoredResource() => $_has(0);
   void clearMonitoredResource() => clearField(1);
 
-  List<String> get metrics => $_getList(1);
+  $core.List<$core.String> get metrics => $_getList(1);
 }
 
-class _ReadonlyBilling_BillingDestination extends Billing_BillingDestination
-    with ReadonlyMessageMixin {}
-
-class Billing extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Billing')
-    ..pp<Billing_BillingDestination>(
-        8,
-        'consumerDestinations',
-        PbFieldType.PM,
-        Billing_BillingDestination.$checkItem,
-        Billing_BillingDestination.create)
-    ..hasRequiredFields = false;
+class Billing extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Billing', package: const $pb.PackageName('google.api'))
+    ..pc<Billing_BillingDestination>(8, 'consumerDestinations', $pb.PbFieldType.PM,Billing_BillingDestination.create)
+    ..hasRequiredFields = false
+  ;
 
   Billing() : super();
-  Billing.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Billing.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Billing.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Billing.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Billing clone() => Billing()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Billing copyWith(void Function(Billing) updates) => super.copyWith((message) => updates(message as Billing));
+  $pb.BuilderInfo get info_ => _i;
   static Billing create() => Billing();
-  static PbList<Billing> createRepeated() => PbList<Billing>();
-  static Billing getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBilling();
-    return _defaultInstance;
-  }
-
+  Billing createEmptyInstance() => create();
+  static $pb.PbList<Billing> createRepeated() => $pb.PbList<Billing>();
+  static Billing getDefault() => _defaultInstance ??= create()..freeze();
   static Billing _defaultInstance;
-  static void $checkItem(Billing v) {
-    if (v is! Billing) checkItemFailed(v, 'Billing');
-  }
 
-  List<Billing_BillingDestination> get consumerDestinations => $_getList(0);
+  $core.List<Billing_BillingDestination> get consumerDestinations => $_getList(0);
 }
 
-class _ReadonlyBilling extends Billing with ReadonlyMessageMixin {}

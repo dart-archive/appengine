@@ -1,181 +1,121 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/websecurityscanner/v1alpha/finding_addon.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class OutdatedLibrary extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('OutdatedLibrary')
+class OutdatedLibrary extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutdatedLibrary', package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'libraryName')
     ..aOS(2, 'version')
     ..pPS(3, 'learnMoreUrls')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   OutdatedLibrary() : super();
-  OutdatedLibrary.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OutdatedLibrary.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OutdatedLibrary.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  OutdatedLibrary.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   OutdatedLibrary clone() => OutdatedLibrary()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  OutdatedLibrary copyWith(void Function(OutdatedLibrary) updates) => super.copyWith((message) => updates(message as OutdatedLibrary));
+  $pb.BuilderInfo get info_ => _i;
   static OutdatedLibrary create() => OutdatedLibrary();
-  static PbList<OutdatedLibrary> createRepeated() => PbList<OutdatedLibrary>();
-  static OutdatedLibrary getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyOutdatedLibrary();
-    return _defaultInstance;
-  }
-
+  OutdatedLibrary createEmptyInstance() => create();
+  static $pb.PbList<OutdatedLibrary> createRepeated() => $pb.PbList<OutdatedLibrary>();
+  static OutdatedLibrary getDefault() => _defaultInstance ??= create()..freeze();
   static OutdatedLibrary _defaultInstance;
-  static void $checkItem(OutdatedLibrary v) {
-    if (v is! OutdatedLibrary) checkItemFailed(v, 'OutdatedLibrary');
-  }
 
-  String get libraryName => $_getS(0, '');
-  set libraryName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasLibraryName() => $_has(0);
+  $core.String get libraryName => $_getS(0, '');
+  set libraryName($core.String v) { $_setString(0, v); }
+  $core.bool hasLibraryName() => $_has(0);
   void clearLibraryName() => clearField(1);
 
-  String get version => $_getS(1, '');
-  set version(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasVersion() => $_has(1);
+  $core.String get version => $_getS(1, '');
+  set version($core.String v) { $_setString(1, v); }
+  $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
-  List<String> get learnMoreUrls => $_getList(2);
+  $core.List<$core.String> get learnMoreUrls => $_getList(2);
 }
 
-class _ReadonlyOutdatedLibrary extends OutdatedLibrary
-    with ReadonlyMessageMixin {}
-
-class ViolatingResource extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ViolatingResource')
+class ViolatingResource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ViolatingResource', package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'contentType')
     ..aOS(2, 'resourceUrl')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ViolatingResource() : super();
-  ViolatingResource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ViolatingResource.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ViolatingResource.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ViolatingResource.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ViolatingResource clone() => ViolatingResource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ViolatingResource copyWith(void Function(ViolatingResource) updates) => super.copyWith((message) => updates(message as ViolatingResource));
+  $pb.BuilderInfo get info_ => _i;
   static ViolatingResource create() => ViolatingResource();
-  static PbList<ViolatingResource> createRepeated() =>
-      PbList<ViolatingResource>();
-  static ViolatingResource getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyViolatingResource();
-    return _defaultInstance;
-  }
-
+  ViolatingResource createEmptyInstance() => create();
+  static $pb.PbList<ViolatingResource> createRepeated() => $pb.PbList<ViolatingResource>();
+  static ViolatingResource getDefault() => _defaultInstance ??= create()..freeze();
   static ViolatingResource _defaultInstance;
-  static void $checkItem(ViolatingResource v) {
-    if (v is! ViolatingResource) checkItemFailed(v, 'ViolatingResource');
-  }
 
-  String get contentType => $_getS(0, '');
-  set contentType(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasContentType() => $_has(0);
+  $core.String get contentType => $_getS(0, '');
+  set contentType($core.String v) { $_setString(0, v); }
+  $core.bool hasContentType() => $_has(0);
   void clearContentType() => clearField(1);
 
-  String get resourceUrl => $_getS(1, '');
-  set resourceUrl(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasResourceUrl() => $_has(1);
+  $core.String get resourceUrl => $_getS(1, '');
+  set resourceUrl($core.String v) { $_setString(1, v); }
+  $core.bool hasResourceUrl() => $_has(1);
   void clearResourceUrl() => clearField(2);
 }
 
-class _ReadonlyViolatingResource extends ViolatingResource
-    with ReadonlyMessageMixin {}
-
-class VulnerableParameters extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('VulnerableParameters')
+class VulnerableParameters extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VulnerableParameters', package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..pPS(1, 'parameterNames')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   VulnerableParameters() : super();
-  VulnerableParameters.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VulnerableParameters.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  VulnerableParameters clone() =>
-      VulnerableParameters()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  VulnerableParameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  VulnerableParameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  VulnerableParameters clone() => VulnerableParameters()..mergeFromMessage(this);
+  VulnerableParameters copyWith(void Function(VulnerableParameters) updates) => super.copyWith((message) => updates(message as VulnerableParameters));
+  $pb.BuilderInfo get info_ => _i;
   static VulnerableParameters create() => VulnerableParameters();
-  static PbList<VulnerableParameters> createRepeated() =>
-      PbList<VulnerableParameters>();
-  static VulnerableParameters getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyVulnerableParameters();
-    return _defaultInstance;
-  }
-
+  VulnerableParameters createEmptyInstance() => create();
+  static $pb.PbList<VulnerableParameters> createRepeated() => $pb.PbList<VulnerableParameters>();
+  static VulnerableParameters getDefault() => _defaultInstance ??= create()..freeze();
   static VulnerableParameters _defaultInstance;
-  static void $checkItem(VulnerableParameters v) {
-    if (v is! VulnerableParameters) checkItemFailed(v, 'VulnerableParameters');
-  }
 
-  List<String> get parameterNames => $_getList(0);
+  $core.List<$core.String> get parameterNames => $_getList(0);
 }
 
-class _ReadonlyVulnerableParameters extends VulnerableParameters
-    with ReadonlyMessageMixin {}
-
-class Xss extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Xss')
+class Xss extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Xss', package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..pPS(1, 'stackTraces')
     ..aOS(2, 'errorMessage')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Xss() : super();
-  Xss.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Xss.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Xss.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Xss.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Xss clone() => Xss()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Xss copyWith(void Function(Xss) updates) => super.copyWith((message) => updates(message as Xss));
+  $pb.BuilderInfo get info_ => _i;
   static Xss create() => Xss();
-  static PbList<Xss> createRepeated() => PbList<Xss>();
-  static Xss getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyXss();
-    return _defaultInstance;
-  }
-
+  Xss createEmptyInstance() => create();
+  static $pb.PbList<Xss> createRepeated() => $pb.PbList<Xss>();
+  static Xss getDefault() => _defaultInstance ??= create()..freeze();
   static Xss _defaultInstance;
-  static void $checkItem(Xss v) {
-    if (v is! Xss) checkItemFailed(v, 'Xss');
-  }
 
-  List<String> get stackTraces => $_getList(0);
+  $core.List<$core.String> get stackTraces => $_getList(0);
 
-  String get errorMessage => $_getS(1, '');
-  set errorMessage(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasErrorMessage() => $_has(1);
+  $core.String get errorMessage => $_getS(1, '');
+  set errorMessage($core.String v) { $_setString(1, v); }
+  $core.bool hasErrorMessage() => $_has(1);
   void clearErrorMessage() => clearField(2);
 }
 
-class _ReadonlyXss extends Xss with ReadonlyMessageMixin {}

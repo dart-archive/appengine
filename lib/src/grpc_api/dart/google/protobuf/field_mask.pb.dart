@@ -1,39 +1,31 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/protobuf/field_mask.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class FieldMask extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FieldMask')
+class FieldMask extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FieldMask', package: const $pb.PackageName('google.protobuf'))
     ..pPS(1, 'paths')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   FieldMask() : super();
-  FieldMask.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FieldMask.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FieldMask.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FieldMask.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   FieldMask clone() => FieldMask()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FieldMask copyWith(void Function(FieldMask) updates) => super.copyWith((message) => updates(message as FieldMask));
+  $pb.BuilderInfo get info_ => _i;
   static FieldMask create() => FieldMask();
-  static PbList<FieldMask> createRepeated() => PbList<FieldMask>();
-  static FieldMask getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyFieldMask();
-    return _defaultInstance;
-  }
-
+  FieldMask createEmptyInstance() => create();
+  static $pb.PbList<FieldMask> createRepeated() => $pb.PbList<FieldMask>();
+  static FieldMask getDefault() => _defaultInstance ??= create()..freeze();
   static FieldMask _defaultInstance;
-  static void $checkItem(FieldMask v) {
-    if (v is! FieldMask) checkItemFailed(v, 'FieldMask');
-  }
 
-  List<String> get paths => $_getList(0);
+  $core.List<$core.String> get paths => $_getList(0);
 }
 
-class _ReadonlyFieldMask extends FieldMask with ReadonlyMessageMixin {}

@@ -18,9 +18,6 @@ language_settings:
   csharp:
     package_name: Google.Cloud.Trace.V1
     release_level: GA
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
 interfaces:
 - name: google.devtools.cloudtrace.v1.TraceService
   smoke_test:
@@ -56,7 +53,6 @@ interfaces:
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 30000
-    request_object_method: true
   - name: GetTrace
     flattening:
       groups:
@@ -69,10 +65,10 @@ interfaces:
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 30000
-    request_object_method: false
   - name: ListTraces
     page_streaming:
       request:
+        page_size_field: page_size
         token_field: page_token
       response:
         token_field: next_page_token
@@ -86,4 +82,3 @@ interfaces:
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 30000
-    request_object_method: true

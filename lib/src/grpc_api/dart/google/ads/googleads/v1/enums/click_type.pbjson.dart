@@ -1,0 +1,72 @@
+///
+//  Generated code. Do not modify.
+//  source: google/ads/googleads/v1/enums/click_type.proto
+///
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+
+const ClickTypeEnum$json = const {
+  '1': 'ClickTypeEnum',
+  '4': const [ClickTypeEnum_ClickType$json],
+};
+
+const ClickTypeEnum_ClickType$json = const {
+  '1': 'ClickType',
+  '2': const [
+    const {'1': 'UNSPECIFIED', '2': 0},
+    const {'1': 'UNKNOWN', '2': 1},
+    const {'1': 'APP_DEEPLINK', '2': 2},
+    const {'1': 'BREADCRUMBS', '2': 3},
+    const {'1': 'BROADBAND_PLAN', '2': 4},
+    const {'1': 'CALL_TRACKING', '2': 5},
+    const {'1': 'CALLS', '2': 6},
+    const {'1': 'CLICK_ON_ENGAGEMENT_AD', '2': 7},
+    const {'1': 'GET_DIRECTIONS', '2': 8},
+    const {'1': 'LOCATION_EXPANSION', '2': 9},
+    const {'1': 'LOCATION_FORMAT_CALL', '2': 10},
+    const {'1': 'LOCATION_FORMAT_DIRECTIONS', '2': 11},
+    const {'1': 'LOCATION_FORMAT_IMAGE', '2': 12},
+    const {'1': 'LOCATION_FORMAT_LANDING_PAGE', '2': 13},
+    const {'1': 'LOCATION_FORMAT_MAP', '2': 14},
+    const {'1': 'LOCATION_FORMAT_STORE_INFO', '2': 15},
+    const {'1': 'LOCATION_FORMAT_TEXT', '2': 16},
+    const {'1': 'MOBILE_CALL_TRACKING', '2': 17},
+    const {'1': 'OFFER_PRINTS', '2': 18},
+    const {'1': 'OTHER', '2': 19},
+    const {'1': 'PRODUCT_EXTENSION_CLICKS', '2': 20},
+    const {'1': 'PRODUCT_LISTING_AD_CLICKS', '2': 21},
+    const {'1': 'SITELINKS', '2': 22},
+    const {'1': 'STORE_LOCATOR', '2': 23},
+    const {'1': 'URL_CLICKS', '2': 25},
+    const {'1': 'VIDEO_APP_STORE_CLICKS', '2': 26},
+    const {'1': 'VIDEO_CALL_TO_ACTION_CLICKS', '2': 27},
+    const {'1': 'VIDEO_CARD_ACTION_HEADLINE_CLICKS', '2': 28},
+    const {'1': 'VIDEO_END_CAP_CLICKS', '2': 29},
+    const {'1': 'VIDEO_WEBSITE_CLICKS', '2': 30},
+    const {'1': 'VISUAL_SITELINKS', '2': 31},
+    const {'1': 'WIRELESS_PLAN', '2': 32},
+    const {'1': 'PRODUCT_LISTING_AD_LOCAL', '2': 33},
+    const {'1': 'PRODUCT_LISTING_AD_MULTICHANNEL_LOCAL', '2': 34},
+    const {'1': 'PRODUCT_LISTING_AD_MULTICHANNEL_ONLINE', '2': 35},
+    const {'1': 'PRODUCT_LISTING_ADS_COUPON', '2': 36},
+    const {'1': 'PRODUCT_LISTING_AD_TRANSACTABLE', '2': 37},
+    const {'1': 'PRODUCT_AD_APP_DEEPLINK', '2': 38},
+    const {'1': 'SHOWCASE_AD_CATEGORY_LINK', '2': 39},
+    const {'1': 'SHOWCASE_AD_LOCAL_STOREFRONT_LINK', '2': 40},
+    const {'1': 'SHOWCASE_AD_ONLINE_PRODUCT_LINK', '2': 42},
+    const {'1': 'SHOWCASE_AD_LOCAL_PRODUCT_LINK', '2': 43},
+    const {'1': 'PROMOTION_EXTENSION', '2': 44},
+    const {'1': 'SWIPEABLE_GALLERY_AD_HEADLINE', '2': 45},
+    const {'1': 'SWIPEABLE_GALLERY_AD_SWIPES', '2': 46},
+    const {'1': 'SWIPEABLE_GALLERY_AD_SEE_MORE', '2': 47},
+    const {'1': 'SWIPEABLE_GALLERY_AD_SITELINK_ONE', '2': 48},
+    const {'1': 'SWIPEABLE_GALLERY_AD_SITELINK_TWO', '2': 49},
+    const {'1': 'SWIPEABLE_GALLERY_AD_SITELINK_THREE', '2': 50},
+    const {'1': 'SWIPEABLE_GALLERY_AD_SITELINK_FOUR', '2': 51},
+    const {'1': 'SWIPEABLE_GALLERY_AD_SITELINK_FIVE', '2': 52},
+    const {'1': 'HOTEL_PRICE', '2': 53},
+    const {'1': 'PRICE_EXTENSION', '2': 54},
+    const {'1': 'HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION', '2': 55},
+    const {'1': 'SHOPPING_COMPARISON_LISTING', '2': 56},
+  ],
+};
+

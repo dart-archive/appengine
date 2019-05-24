@@ -1,557 +1,425 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/remoteworkers/v1test2/command.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $google$protobuf;
+import '../../../protobuf/duration.pb.dart' as $0;
+import '../../../rpc/status.pb.dart' as $1;
+import '../../../protobuf/any.pb.dart' as $2;
 
-class CommandTask_Inputs_EnvironmentVariable extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('CommandTask_Inputs_EnvironmentVariable')
-        ..aOS(1, 'name')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
+class CommandTask_Inputs_EnvironmentVariable extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommandTask.Inputs.EnvironmentVariable', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+    ..aOS(1, 'name')
+    ..aOS(2, 'value')
+    ..hasRequiredFields = false
+  ;
 
   CommandTask_Inputs_EnvironmentVariable() : super();
-  CommandTask_Inputs_EnvironmentVariable.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommandTask_Inputs_EnvironmentVariable.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CommandTask_Inputs_EnvironmentVariable clone() =>
-      CommandTask_Inputs_EnvironmentVariable()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CommandTask_Inputs_EnvironmentVariable create() =>
-      CommandTask_Inputs_EnvironmentVariable();
-  static PbList<CommandTask_Inputs_EnvironmentVariable> createRepeated() =>
-      PbList<CommandTask_Inputs_EnvironmentVariable>();
-  static CommandTask_Inputs_EnvironmentVariable getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCommandTask_Inputs_EnvironmentVariable();
-    return _defaultInstance;
-  }
-
+  CommandTask_Inputs_EnvironmentVariable.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CommandTask_Inputs_EnvironmentVariable.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CommandTask_Inputs_EnvironmentVariable clone() => CommandTask_Inputs_EnvironmentVariable()..mergeFromMessage(this);
+  CommandTask_Inputs_EnvironmentVariable copyWith(void Function(CommandTask_Inputs_EnvironmentVariable) updates) => super.copyWith((message) => updates(message as CommandTask_Inputs_EnvironmentVariable));
+  $pb.BuilderInfo get info_ => _i;
+  static CommandTask_Inputs_EnvironmentVariable create() => CommandTask_Inputs_EnvironmentVariable();
+  CommandTask_Inputs_EnvironmentVariable createEmptyInstance() => create();
+  static $pb.PbList<CommandTask_Inputs_EnvironmentVariable> createRepeated() => $pb.PbList<CommandTask_Inputs_EnvironmentVariable>();
+  static CommandTask_Inputs_EnvironmentVariable getDefault() => _defaultInstance ??= create()..freeze();
   static CommandTask_Inputs_EnvironmentVariable _defaultInstance;
-  static void $checkItem(CommandTask_Inputs_EnvironmentVariable v) {
-    if (v is! CommandTask_Inputs_EnvironmentVariable)
-      checkItemFailed(v, 'CommandTask_Inputs_EnvironmentVariable');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
+  $core.String get value => $_getS(1, '');
+  set value($core.String v) { $_setString(1, v); }
+  $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
-class _ReadonlyCommandTask_Inputs_EnvironmentVariable
-    extends CommandTask_Inputs_EnvironmentVariable with ReadonlyMessageMixin {}
-
-class CommandTask_Inputs extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CommandTask_Inputs')
+class CommandTask_Inputs extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommandTask.Inputs', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..pPS(1, 'arguments')
-    ..pp<Digest>(2, 'files', PbFieldType.PM, Digest.$checkItem, Digest.create)
-    ..pp<CommandTask_Inputs_EnvironmentVariable>(
-        3,
-        'environmentVariables',
-        PbFieldType.PM,
-        CommandTask_Inputs_EnvironmentVariable.$checkItem,
-        CommandTask_Inputs_EnvironmentVariable.create)
-    ..hasRequiredFields = false;
+    ..pc<Digest>(2, 'files', $pb.PbFieldType.PM,Digest.create)
+    ..pc<CommandTask_Inputs_EnvironmentVariable>(3, 'environmentVariables', $pb.PbFieldType.PM,CommandTask_Inputs_EnvironmentVariable.create)
+    ..hasRequiredFields = false
+  ;
 
   CommandTask_Inputs() : super();
-  CommandTask_Inputs.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommandTask_Inputs.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommandTask_Inputs.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CommandTask_Inputs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CommandTask_Inputs clone() => CommandTask_Inputs()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CommandTask_Inputs copyWith(void Function(CommandTask_Inputs) updates) => super.copyWith((message) => updates(message as CommandTask_Inputs));
+  $pb.BuilderInfo get info_ => _i;
   static CommandTask_Inputs create() => CommandTask_Inputs();
-  static PbList<CommandTask_Inputs> createRepeated() =>
-      PbList<CommandTask_Inputs>();
-  static CommandTask_Inputs getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCommandTask_Inputs();
-    return _defaultInstance;
-  }
-
+  CommandTask_Inputs createEmptyInstance() => create();
+  static $pb.PbList<CommandTask_Inputs> createRepeated() => $pb.PbList<CommandTask_Inputs>();
+  static CommandTask_Inputs getDefault() => _defaultInstance ??= create()..freeze();
   static CommandTask_Inputs _defaultInstance;
-  static void $checkItem(CommandTask_Inputs v) {
-    if (v is! CommandTask_Inputs) checkItemFailed(v, 'CommandTask_Inputs');
-  }
 
-  List<String> get arguments => $_getList(0);
+  $core.List<$core.String> get arguments => $_getList(0);
 
-  List<Digest> get files => $_getList(1);
+  $core.List<Digest> get files => $_getList(1);
 
-  List<CommandTask_Inputs_EnvironmentVariable> get environmentVariables =>
-      $_getList(2);
+  $core.List<CommandTask_Inputs_EnvironmentVariable> get environmentVariables => $_getList(2);
 }
 
-class _ReadonlyCommandTask_Inputs extends CommandTask_Inputs
-    with ReadonlyMessageMixin {}
-
-class CommandTask_Outputs extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CommandTask_Outputs')
+class CommandTask_Outputs extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommandTask.Outputs', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..pPS(1, 'files')
     ..pPS(2, 'directories')
-    ..hasRequiredFields = false;
+    ..aOS(3, 'stdoutDestination')
+    ..aOS(4, 'stderrDestination')
+    ..hasRequiredFields = false
+  ;
 
   CommandTask_Outputs() : super();
-  CommandTask_Outputs.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommandTask_Outputs.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommandTask_Outputs.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CommandTask_Outputs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CommandTask_Outputs clone() => CommandTask_Outputs()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CommandTask_Outputs copyWith(void Function(CommandTask_Outputs) updates) => super.copyWith((message) => updates(message as CommandTask_Outputs));
+  $pb.BuilderInfo get info_ => _i;
   static CommandTask_Outputs create() => CommandTask_Outputs();
-  static PbList<CommandTask_Outputs> createRepeated() =>
-      PbList<CommandTask_Outputs>();
-  static CommandTask_Outputs getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCommandTask_Outputs();
-    return _defaultInstance;
-  }
-
+  CommandTask_Outputs createEmptyInstance() => create();
+  static $pb.PbList<CommandTask_Outputs> createRepeated() => $pb.PbList<CommandTask_Outputs>();
+  static CommandTask_Outputs getDefault() => _defaultInstance ??= create()..freeze();
   static CommandTask_Outputs _defaultInstance;
-  static void $checkItem(CommandTask_Outputs v) {
-    if (v is! CommandTask_Outputs) checkItemFailed(v, 'CommandTask_Outputs');
-  }
 
-  List<String> get files => $_getList(0);
+  $core.List<$core.String> get files => $_getList(0);
 
-  List<String> get directories => $_getList(1);
+  $core.List<$core.String> get directories => $_getList(1);
+
+  $core.String get stdoutDestination => $_getS(2, '');
+  set stdoutDestination($core.String v) { $_setString(2, v); }
+  $core.bool hasStdoutDestination() => $_has(2);
+  void clearStdoutDestination() => clearField(3);
+
+  $core.String get stderrDestination => $_getS(3, '');
+  set stderrDestination($core.String v) { $_setString(3, v); }
+  $core.bool hasStderrDestination() => $_has(3);
+  void clearStderrDestination() => clearField(4);
 }
 
-class _ReadonlyCommandTask_Outputs extends CommandTask_Outputs
-    with ReadonlyMessageMixin {}
-
-class CommandTask_Timeouts extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CommandTask_Timeouts')
-    ..a<$google$protobuf.Duration>(1, 'execution', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<$google$protobuf.Duration>(2, 'idle', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<$google$protobuf.Duration>(3, 'shutdown', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..hasRequiredFields = false;
+class CommandTask_Timeouts extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommandTask.Timeouts', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+    ..a<$0.Duration>(1, 'execution', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
+    ..a<$0.Duration>(2, 'idle', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
+    ..a<$0.Duration>(3, 'shutdown', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
+    ..hasRequiredFields = false
+  ;
 
   CommandTask_Timeouts() : super();
-  CommandTask_Timeouts.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommandTask_Timeouts.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CommandTask_Timeouts clone() =>
-      CommandTask_Timeouts()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CommandTask_Timeouts.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CommandTask_Timeouts.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CommandTask_Timeouts clone() => CommandTask_Timeouts()..mergeFromMessage(this);
+  CommandTask_Timeouts copyWith(void Function(CommandTask_Timeouts) updates) => super.copyWith((message) => updates(message as CommandTask_Timeouts));
+  $pb.BuilderInfo get info_ => _i;
   static CommandTask_Timeouts create() => CommandTask_Timeouts();
-  static PbList<CommandTask_Timeouts> createRepeated() =>
-      PbList<CommandTask_Timeouts>();
-  static CommandTask_Timeouts getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCommandTask_Timeouts();
-    return _defaultInstance;
-  }
-
+  CommandTask_Timeouts createEmptyInstance() => create();
+  static $pb.PbList<CommandTask_Timeouts> createRepeated() => $pb.PbList<CommandTask_Timeouts>();
+  static CommandTask_Timeouts getDefault() => _defaultInstance ??= create()..freeze();
   static CommandTask_Timeouts _defaultInstance;
-  static void $checkItem(CommandTask_Timeouts v) {
-    if (v is! CommandTask_Timeouts) checkItemFailed(v, 'CommandTask_Timeouts');
-  }
 
-  $google$protobuf.Duration get execution => $_getN(0);
-  set execution($google$protobuf.Duration v) {
-    setField(1, v);
-  }
-
-  bool hasExecution() => $_has(0);
+  $0.Duration get execution => $_getN(0);
+  set execution($0.Duration v) { setField(1, v); }
+  $core.bool hasExecution() => $_has(0);
   void clearExecution() => clearField(1);
 
-  $google$protobuf.Duration get idle => $_getN(1);
-  set idle($google$protobuf.Duration v) {
-    setField(2, v);
-  }
-
-  bool hasIdle() => $_has(1);
+  $0.Duration get idle => $_getN(1);
+  set idle($0.Duration v) { setField(2, v); }
+  $core.bool hasIdle() => $_has(1);
   void clearIdle() => clearField(2);
 
-  $google$protobuf.Duration get shutdown => $_getN(2);
-  set shutdown($google$protobuf.Duration v) {
-    setField(3, v);
-  }
-
-  bool hasShutdown() => $_has(2);
+  $0.Duration get shutdown => $_getN(2);
+  set shutdown($0.Duration v) { setField(3, v); }
+  $core.bool hasShutdown() => $_has(2);
   void clearShutdown() => clearField(3);
 }
 
-class _ReadonlyCommandTask_Timeouts extends CommandTask_Timeouts
-    with ReadonlyMessageMixin {}
-
-class CommandTask extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CommandTask')
-    ..a<CommandTask_Inputs>(1, 'inputs', PbFieldType.OM,
-        CommandTask_Inputs.getDefault, CommandTask_Inputs.create)
-    ..a<CommandTask_Outputs>(4, 'expectedOutputs', PbFieldType.OM,
-        CommandTask_Outputs.getDefault, CommandTask_Outputs.create)
-    ..a<CommandTask_Timeouts>(5, 'timeouts', PbFieldType.OM,
-        CommandTask_Timeouts.getDefault, CommandTask_Timeouts.create)
-    ..hasRequiredFields = false;
+class CommandTask extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommandTask', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+    ..a<CommandTask_Inputs>(1, 'inputs', $pb.PbFieldType.OM, CommandTask_Inputs.getDefault, CommandTask_Inputs.create)
+    ..a<CommandTask_Outputs>(4, 'expectedOutputs', $pb.PbFieldType.OM, CommandTask_Outputs.getDefault, CommandTask_Outputs.create)
+    ..a<CommandTask_Timeouts>(5, 'timeouts', $pb.PbFieldType.OM, CommandTask_Timeouts.getDefault, CommandTask_Timeouts.create)
+    ..hasRequiredFields = false
+  ;
 
   CommandTask() : super();
-  CommandTask.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommandTask.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommandTask.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CommandTask.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CommandTask clone() => CommandTask()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CommandTask copyWith(void Function(CommandTask) updates) => super.copyWith((message) => updates(message as CommandTask));
+  $pb.BuilderInfo get info_ => _i;
   static CommandTask create() => CommandTask();
-  static PbList<CommandTask> createRepeated() => PbList<CommandTask>();
-  static CommandTask getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommandTask();
-    return _defaultInstance;
-  }
-
+  CommandTask createEmptyInstance() => create();
+  static $pb.PbList<CommandTask> createRepeated() => $pb.PbList<CommandTask>();
+  static CommandTask getDefault() => _defaultInstance ??= create()..freeze();
   static CommandTask _defaultInstance;
-  static void $checkItem(CommandTask v) {
-    if (v is! CommandTask) checkItemFailed(v, 'CommandTask');
-  }
 
   CommandTask_Inputs get inputs => $_getN(0);
-  set inputs(CommandTask_Inputs v) {
-    setField(1, v);
-  }
-
-  bool hasInputs() => $_has(0);
+  set inputs(CommandTask_Inputs v) { setField(1, v); }
+  $core.bool hasInputs() => $_has(0);
   void clearInputs() => clearField(1);
 
   CommandTask_Outputs get expectedOutputs => $_getN(1);
-  set expectedOutputs(CommandTask_Outputs v) {
-    setField(4, v);
-  }
-
-  bool hasExpectedOutputs() => $_has(1);
+  set expectedOutputs(CommandTask_Outputs v) { setField(4, v); }
+  $core.bool hasExpectedOutputs() => $_has(1);
   void clearExpectedOutputs() => clearField(4);
 
   CommandTask_Timeouts get timeouts => $_getN(2);
-  set timeouts(CommandTask_Timeouts v) {
-    setField(5, v);
-  }
-
-  bool hasTimeouts() => $_has(2);
+  set timeouts(CommandTask_Timeouts v) { setField(5, v); }
+  $core.bool hasTimeouts() => $_has(2);
   void clearTimeouts() => clearField(5);
 }
 
-class _ReadonlyCommandTask extends CommandTask with ReadonlyMessageMixin {}
-
-class CommandOutputs extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CommandOutputs')
-    ..a<int>(1, 'exitCode', PbFieldType.O3)
-    ..a<Digest>(2, 'outputs', PbFieldType.OM, Digest.getDefault, Digest.create)
-    ..hasRequiredFields = false;
+class CommandOutputs extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommandOutputs', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+    ..a<$core.int>(1, 'exitCode', $pb.PbFieldType.O3)
+    ..a<Digest>(2, 'outputs', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..hasRequiredFields = false
+  ;
 
   CommandOutputs() : super();
-  CommandOutputs.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommandOutputs.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommandOutputs.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CommandOutputs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CommandOutputs clone() => CommandOutputs()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CommandOutputs copyWith(void Function(CommandOutputs) updates) => super.copyWith((message) => updates(message as CommandOutputs));
+  $pb.BuilderInfo get info_ => _i;
   static CommandOutputs create() => CommandOutputs();
-  static PbList<CommandOutputs> createRepeated() => PbList<CommandOutputs>();
-  static CommandOutputs getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommandOutputs();
-    return _defaultInstance;
-  }
-
+  CommandOutputs createEmptyInstance() => create();
+  static $pb.PbList<CommandOutputs> createRepeated() => $pb.PbList<CommandOutputs>();
+  static CommandOutputs getDefault() => _defaultInstance ??= create()..freeze();
   static CommandOutputs _defaultInstance;
-  static void $checkItem(CommandOutputs v) {
-    if (v is! CommandOutputs) checkItemFailed(v, 'CommandOutputs');
-  }
 
-  int get exitCode => $_get(0, 0);
-  set exitCode(int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  bool hasExitCode() => $_has(0);
+  $core.int get exitCode => $_get(0, 0);
+  set exitCode($core.int v) { $_setSignedInt32(0, v); }
+  $core.bool hasExitCode() => $_has(0);
   void clearExitCode() => clearField(1);
 
   Digest get outputs => $_getN(1);
-  set outputs(Digest v) {
-    setField(2, v);
-  }
-
-  bool hasOutputs() => $_has(1);
+  set outputs(Digest v) { setField(2, v); }
+  $core.bool hasOutputs() => $_has(1);
   void clearOutputs() => clearField(2);
 }
 
-class _ReadonlyCommandOutputs extends CommandOutputs with ReadonlyMessageMixin {
-}
-
-class CommandOverhead extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CommandOverhead')
-    ..a<$google$protobuf.Duration>(1, 'duration', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<$google$protobuf.Duration>(2, 'overhead', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..hasRequiredFields = false;
+class CommandOverhead extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommandOverhead', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+    ..a<$0.Duration>(1, 'duration', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
+    ..a<$0.Duration>(2, 'overhead', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
+    ..hasRequiredFields = false
+  ;
 
   CommandOverhead() : super();
-  CommandOverhead.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommandOverhead.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommandOverhead.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CommandOverhead.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CommandOverhead clone() => CommandOverhead()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CommandOverhead copyWith(void Function(CommandOverhead) updates) => super.copyWith((message) => updates(message as CommandOverhead));
+  $pb.BuilderInfo get info_ => _i;
   static CommandOverhead create() => CommandOverhead();
-  static PbList<CommandOverhead> createRepeated() => PbList<CommandOverhead>();
-  static CommandOverhead getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommandOverhead();
-    return _defaultInstance;
-  }
-
+  CommandOverhead createEmptyInstance() => create();
+  static $pb.PbList<CommandOverhead> createRepeated() => $pb.PbList<CommandOverhead>();
+  static CommandOverhead getDefault() => _defaultInstance ??= create()..freeze();
   static CommandOverhead _defaultInstance;
-  static void $checkItem(CommandOverhead v) {
-    if (v is! CommandOverhead) checkItemFailed(v, 'CommandOverhead');
-  }
 
-  $google$protobuf.Duration get duration => $_getN(0);
-  set duration($google$protobuf.Duration v) {
-    setField(1, v);
-  }
-
-  bool hasDuration() => $_has(0);
+  $0.Duration get duration => $_getN(0);
+  set duration($0.Duration v) { setField(1, v); }
+  $core.bool hasDuration() => $_has(0);
   void clearDuration() => clearField(1);
 
-  $google$protobuf.Duration get overhead => $_getN(1);
-  set overhead($google$protobuf.Duration v) {
-    setField(2, v);
-  }
-
-  bool hasOverhead() => $_has(1);
+  $0.Duration get overhead => $_getN(1);
+  set overhead($0.Duration v) { setField(2, v); }
+  $core.bool hasOverhead() => $_has(1);
   void clearOverhead() => clearField(2);
 }
 
-class _ReadonlyCommandOverhead extends CommandOverhead
-    with ReadonlyMessageMixin {}
+class CommandResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommandResult', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+    ..a<$1.Status>(1, 'status', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
+    ..a<$core.int>(2, 'exitCode', $pb.PbFieldType.O3)
+    ..a<Digest>(3, 'outputs', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..a<$0.Duration>(4, 'duration', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
+    ..a<$0.Duration>(5, 'overhead', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
+    ..pc<$2.Any>(6, 'statistics', $pb.PbFieldType.PM,$2.Any.create)
+    ..hasRequiredFields = false
+  ;
 
-class FileMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FileMetadata')
+  CommandResult() : super();
+  CommandResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CommandResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CommandResult clone() => CommandResult()..mergeFromMessage(this);
+  CommandResult copyWith(void Function(CommandResult) updates) => super.copyWith((message) => updates(message as CommandResult));
+  $pb.BuilderInfo get info_ => _i;
+  static CommandResult create() => CommandResult();
+  CommandResult createEmptyInstance() => create();
+  static $pb.PbList<CommandResult> createRepeated() => $pb.PbList<CommandResult>();
+  static CommandResult getDefault() => _defaultInstance ??= create()..freeze();
+  static CommandResult _defaultInstance;
+
+  $1.Status get status => $_getN(0);
+  set status($1.Status v) { setField(1, v); }
+  $core.bool hasStatus() => $_has(0);
+  void clearStatus() => clearField(1);
+
+  $core.int get exitCode => $_get(1, 0);
+  set exitCode($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasExitCode() => $_has(1);
+  void clearExitCode() => clearField(2);
+
+  Digest get outputs => $_getN(2);
+  set outputs(Digest v) { setField(3, v); }
+  $core.bool hasOutputs() => $_has(2);
+  void clearOutputs() => clearField(3);
+
+  @$core.Deprecated('This field is deprecated.')
+  $0.Duration get duration => $_getN(3);
+  @$core.Deprecated('This field is deprecated.')
+  set duration($0.Duration v) { setField(4, v); }
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasDuration() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  void clearDuration() => clearField(4);
+
+  @$core.Deprecated('This field is deprecated.')
+  $0.Duration get overhead => $_getN(4);
+  @$core.Deprecated('This field is deprecated.')
+  set overhead($0.Duration v) { setField(5, v); }
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasOverhead() => $_has(4);
+  @$core.Deprecated('This field is deprecated.')
+  void clearOverhead() => clearField(5);
+
+  $core.List<$2.Any> get statistics => $_getList(5);
+}
+
+class FileMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileMetadata', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..aOS(1, 'path')
-    ..a<Digest>(2, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
-    ..a<List<int>>(3, 'contents', PbFieldType.OY)
+    ..a<Digest>(2, 'digest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..a<$core.List<$core.int>>(3, 'contents', $pb.PbFieldType.OY)
     ..aOB(4, 'isExecutable')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   FileMetadata() : super();
-  FileMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FileMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   FileMetadata clone() => FileMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FileMetadata copyWith(void Function(FileMetadata) updates) => super.copyWith((message) => updates(message as FileMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static FileMetadata create() => FileMetadata();
-  static PbList<FileMetadata> createRepeated() => PbList<FileMetadata>();
-  static FileMetadata getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileMetadata();
-    return _defaultInstance;
-  }
-
+  FileMetadata createEmptyInstance() => create();
+  static $pb.PbList<FileMetadata> createRepeated() => $pb.PbList<FileMetadata>();
+  static FileMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static FileMetadata _defaultInstance;
-  static void $checkItem(FileMetadata v) {
-    if (v is! FileMetadata) checkItemFailed(v, 'FileMetadata');
-  }
 
-  String get path => $_getS(0, '');
-  set path(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasPath() => $_has(0);
+  $core.String get path => $_getS(0, '');
+  set path($core.String v) { $_setString(0, v); }
+  $core.bool hasPath() => $_has(0);
   void clearPath() => clearField(1);
 
   Digest get digest => $_getN(1);
-  set digest(Digest v) {
-    setField(2, v);
-  }
-
-  bool hasDigest() => $_has(1);
+  set digest(Digest v) { setField(2, v); }
+  $core.bool hasDigest() => $_has(1);
   void clearDigest() => clearField(2);
 
-  List<int> get contents => $_getN(2);
-  set contents(List<int> v) {
-    $_setBytes(2, v);
-  }
-
-  bool hasContents() => $_has(2);
+  $core.List<$core.int> get contents => $_getN(2);
+  set contents($core.List<$core.int> v) { $_setBytes(2, v); }
+  $core.bool hasContents() => $_has(2);
   void clearContents() => clearField(3);
 
-  bool get isExecutable => $_get(3, false);
-  set isExecutable(bool v) {
-    $_setBool(3, v);
-  }
-
-  bool hasIsExecutable() => $_has(3);
+  $core.bool get isExecutable => $_get(3, false);
+  set isExecutable($core.bool v) { $_setBool(3, v); }
+  $core.bool hasIsExecutable() => $_has(3);
   void clearIsExecutable() => clearField(4);
 }
 
-class _ReadonlyFileMetadata extends FileMetadata with ReadonlyMessageMixin {}
-
-class DirectoryMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DirectoryMetadata')
+class DirectoryMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectoryMetadata', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..aOS(1, 'path')
-    ..a<Digest>(2, 'digest', PbFieldType.OM, Digest.getDefault, Digest.create)
-    ..hasRequiredFields = false;
+    ..a<Digest>(2, 'digest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..hasRequiredFields = false
+  ;
 
   DirectoryMetadata() : super();
-  DirectoryMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DirectoryMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DirectoryMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DirectoryMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DirectoryMetadata clone() => DirectoryMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DirectoryMetadata copyWith(void Function(DirectoryMetadata) updates) => super.copyWith((message) => updates(message as DirectoryMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static DirectoryMetadata create() => DirectoryMetadata();
-  static PbList<DirectoryMetadata> createRepeated() =>
-      PbList<DirectoryMetadata>();
-  static DirectoryMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDirectoryMetadata();
-    return _defaultInstance;
-  }
-
+  DirectoryMetadata createEmptyInstance() => create();
+  static $pb.PbList<DirectoryMetadata> createRepeated() => $pb.PbList<DirectoryMetadata>();
+  static DirectoryMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static DirectoryMetadata _defaultInstance;
-  static void $checkItem(DirectoryMetadata v) {
-    if (v is! DirectoryMetadata) checkItemFailed(v, 'DirectoryMetadata');
-  }
 
-  String get path => $_getS(0, '');
-  set path(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasPath() => $_has(0);
+  $core.String get path => $_getS(0, '');
+  set path($core.String v) { $_setString(0, v); }
+  $core.bool hasPath() => $_has(0);
   void clearPath() => clearField(1);
 
   Digest get digest => $_getN(1);
-  set digest(Digest v) {
-    setField(2, v);
-  }
-
-  bool hasDigest() => $_has(1);
+  set digest(Digest v) { setField(2, v); }
+  $core.bool hasDigest() => $_has(1);
   void clearDigest() => clearField(2);
 }
 
-class _ReadonlyDirectoryMetadata extends DirectoryMetadata
-    with ReadonlyMessageMixin {}
-
-class Digest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Digest')
+class Digest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Digest', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..aOS(1, 'hash')
     ..aInt64(2, 'sizeBytes')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Digest() : super();
-  Digest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Digest.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Digest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Digest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Digest clone() => Digest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Digest copyWith(void Function(Digest) updates) => super.copyWith((message) => updates(message as Digest));
+  $pb.BuilderInfo get info_ => _i;
   static Digest create() => Digest();
-  static PbList<Digest> createRepeated() => PbList<Digest>();
-  static Digest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyDigest();
-    return _defaultInstance;
-  }
-
+  Digest createEmptyInstance() => create();
+  static $pb.PbList<Digest> createRepeated() => $pb.PbList<Digest>();
+  static Digest getDefault() => _defaultInstance ??= create()..freeze();
   static Digest _defaultInstance;
-  static void $checkItem(Digest v) {
-    if (v is! Digest) checkItemFailed(v, 'Digest');
-  }
 
-  String get hash => $_getS(0, '');
-  set hash(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasHash() => $_has(0);
+  $core.String get hash => $_getS(0, '');
+  set hash($core.String v) { $_setString(0, v); }
+  $core.bool hasHash() => $_has(0);
   void clearHash() => clearField(1);
 
   Int64 get sizeBytes => $_getI64(1);
-  set sizeBytes(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasSizeBytes() => $_has(1);
+  set sizeBytes(Int64 v) { $_setInt64(1, v); }
+  $core.bool hasSizeBytes() => $_has(1);
   void clearSizeBytes() => clearField(2);
 }
 
-class _ReadonlyDigest extends Digest with ReadonlyMessageMixin {}
-
-class Directory extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Directory')
-    ..pp<FileMetadata>(1, 'files', PbFieldType.PM, FileMetadata.$checkItem,
-        FileMetadata.create)
-    ..pp<DirectoryMetadata>(2, 'directories', PbFieldType.PM,
-        DirectoryMetadata.$checkItem, DirectoryMetadata.create)
-    ..hasRequiredFields = false;
+class Directory extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Directory', package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+    ..pc<FileMetadata>(1, 'files', $pb.PbFieldType.PM,FileMetadata.create)
+    ..pc<DirectoryMetadata>(2, 'directories', $pb.PbFieldType.PM,DirectoryMetadata.create)
+    ..hasRequiredFields = false
+  ;
 
   Directory() : super();
-  Directory.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Directory.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Directory.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Directory.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Directory clone() => Directory()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Directory copyWith(void Function(Directory) updates) => super.copyWith((message) => updates(message as Directory));
+  $pb.BuilderInfo get info_ => _i;
   static Directory create() => Directory();
-  static PbList<Directory> createRepeated() => PbList<Directory>();
-  static Directory getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyDirectory();
-    return _defaultInstance;
-  }
-
+  Directory createEmptyInstance() => create();
+  static $pb.PbList<Directory> createRepeated() => $pb.PbList<Directory>();
+  static Directory getDefault() => _defaultInstance ??= create()..freeze();
   static Directory _defaultInstance;
-  static void $checkItem(Directory v) {
-    if (v is! Directory) checkItemFailed(v, 'Directory');
-  }
 
-  List<FileMetadata> get files => $_getList(0);
+  $core.List<FileMetadata> get files => $_getList(0);
 
-  List<DirectoryMetadata> get directories => $_getList(1);
+  $core.List<DirectoryMetadata> get directories => $_getList(1);
 }
 
-class _ReadonlyDirectory extends Directory with ReadonlyMessageMixin {}

@@ -1,374 +1,280 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/cloudbuild/v1/cloudbuild.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $google$protobuf;
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../protobuf/duration.pb.dart' as $0;
+import '../../../protobuf/timestamp.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/empty.pb.dart' as $3;
 
 import 'cloudbuild.pbenum.dart';
 
 export 'cloudbuild.pbenum.dart';
 
-class RetryBuildRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RetryBuildRequest')
+class RetryBuildRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RetryBuildRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'id')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   RetryBuildRequest() : super();
-  RetryBuildRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RetryBuildRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RetryBuildRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RetryBuildRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RetryBuildRequest clone() => RetryBuildRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RetryBuildRequest copyWith(void Function(RetryBuildRequest) updates) => super.copyWith((message) => updates(message as RetryBuildRequest));
+  $pb.BuilderInfo get info_ => _i;
   static RetryBuildRequest create() => RetryBuildRequest();
-  static PbList<RetryBuildRequest> createRepeated() =>
-      PbList<RetryBuildRequest>();
-  static RetryBuildRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyRetryBuildRequest();
-    return _defaultInstance;
-  }
-
+  RetryBuildRequest createEmptyInstance() => create();
+  static $pb.PbList<RetryBuildRequest> createRepeated() => $pb.PbList<RetryBuildRequest>();
+  static RetryBuildRequest getDefault() => _defaultInstance ??= create()..freeze();
   static RetryBuildRequest _defaultInstance;
-  static void $checkItem(RetryBuildRequest v) {
-    if (v is! RetryBuildRequest) checkItemFailed(v, 'RetryBuildRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get id => $_getS(1, '');
-  set id(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasId() => $_has(1);
+  $core.String get id => $_getS(1, '');
+  set id($core.String v) { $_setString(1, v); }
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 }
 
-class _ReadonlyRetryBuildRequest extends RetryBuildRequest
-    with ReadonlyMessageMixin {}
-
-class RunBuildTriggerRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RunBuildTriggerRequest')
+class RunBuildTriggerRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunBuildTriggerRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'triggerId')
-    ..a<RepoSource>(
-        3, 'source', PbFieldType.OM, RepoSource.getDefault, RepoSource.create)
-    ..hasRequiredFields = false;
+    ..a<RepoSource>(3, 'source', $pb.PbFieldType.OM, RepoSource.getDefault, RepoSource.create)
+    ..hasRequiredFields = false
+  ;
 
   RunBuildTriggerRequest() : super();
-  RunBuildTriggerRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RunBuildTriggerRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  RunBuildTriggerRequest clone() =>
-      RunBuildTriggerRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RunBuildTriggerRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RunBuildTriggerRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  RunBuildTriggerRequest clone() => RunBuildTriggerRequest()..mergeFromMessage(this);
+  RunBuildTriggerRequest copyWith(void Function(RunBuildTriggerRequest) updates) => super.copyWith((message) => updates(message as RunBuildTriggerRequest));
+  $pb.BuilderInfo get info_ => _i;
   static RunBuildTriggerRequest create() => RunBuildTriggerRequest();
-  static PbList<RunBuildTriggerRequest> createRepeated() =>
-      PbList<RunBuildTriggerRequest>();
-  static RunBuildTriggerRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyRunBuildTriggerRequest();
-    return _defaultInstance;
-  }
-
+  RunBuildTriggerRequest createEmptyInstance() => create();
+  static $pb.PbList<RunBuildTriggerRequest> createRepeated() => $pb.PbList<RunBuildTriggerRequest>();
+  static RunBuildTriggerRequest getDefault() => _defaultInstance ??= create()..freeze();
   static RunBuildTriggerRequest _defaultInstance;
-  static void $checkItem(RunBuildTriggerRequest v) {
-    if (v is! RunBuildTriggerRequest)
-      checkItemFailed(v, 'RunBuildTriggerRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get triggerId => $_getS(1, '');
-  set triggerId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTriggerId() => $_has(1);
+  $core.String get triggerId => $_getS(1, '');
+  set triggerId($core.String v) { $_setString(1, v); }
+  $core.bool hasTriggerId() => $_has(1);
   void clearTriggerId() => clearField(2);
 
   RepoSource get source => $_getN(2);
-  set source(RepoSource v) {
-    setField(3, v);
-  }
-
-  bool hasSource() => $_has(2);
+  set source(RepoSource v) { setField(3, v); }
+  $core.bool hasSource() => $_has(2);
   void clearSource() => clearField(3);
 }
 
-class _ReadonlyRunBuildTriggerRequest extends RunBuildTriggerRequest
-    with ReadonlyMessageMixin {}
-
-class StorageSource extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('StorageSource')
+class StorageSource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StorageSource', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'bucket')
     ..aOS(2, 'object')
     ..aInt64(3, 'generation')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   StorageSource() : super();
-  StorageSource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StorageSource.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StorageSource.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  StorageSource.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   StorageSource clone() => StorageSource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  StorageSource copyWith(void Function(StorageSource) updates) => super.copyWith((message) => updates(message as StorageSource));
+  $pb.BuilderInfo get info_ => _i;
   static StorageSource create() => StorageSource();
-  static PbList<StorageSource> createRepeated() => PbList<StorageSource>();
-  static StorageSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyStorageSource();
-    return _defaultInstance;
-  }
-
+  StorageSource createEmptyInstance() => create();
+  static $pb.PbList<StorageSource> createRepeated() => $pb.PbList<StorageSource>();
+  static StorageSource getDefault() => _defaultInstance ??= create()..freeze();
   static StorageSource _defaultInstance;
-  static void $checkItem(StorageSource v) {
-    if (v is! StorageSource) checkItemFailed(v, 'StorageSource');
-  }
 
-  String get bucket => $_getS(0, '');
-  set bucket(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasBucket() => $_has(0);
+  $core.String get bucket => $_getS(0, '');
+  set bucket($core.String v) { $_setString(0, v); }
+  $core.bool hasBucket() => $_has(0);
   void clearBucket() => clearField(1);
 
-  String get object => $_getS(1, '');
-  set object(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasObject() => $_has(1);
+  $core.String get object => $_getS(1, '');
+  set object($core.String v) { $_setString(1, v); }
+  $core.bool hasObject() => $_has(1);
   void clearObject() => clearField(2);
 
   Int64 get generation => $_getI64(2);
-  set generation(Int64 v) {
-    $_setInt64(2, v);
-  }
-
-  bool hasGeneration() => $_has(2);
+  set generation(Int64 v) { $_setInt64(2, v); }
+  $core.bool hasGeneration() => $_has(2);
   void clearGeneration() => clearField(3);
 }
 
-class _ReadonlyStorageSource extends StorageSource with ReadonlyMessageMixin {}
+enum RepoSource_Revision {
+  branchName, 
+  tagName, 
+  commitSha, 
+  notSet
+}
 
-class RepoSource extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RepoSource')
+class RepoSource extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RepoSource_Revision> _RepoSource_RevisionByTag = {
+    3 : RepoSource_Revision.branchName,
+    4 : RepoSource_Revision.tagName,
+    5 : RepoSource_Revision.commitSha,
+    0 : RepoSource_Revision.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RepoSource', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'repoName')
     ..aOS(3, 'branchName')
     ..aOS(4, 'tagName')
     ..aOS(5, 'commitSha')
     ..aOS(7, 'dir')
-    ..hasRequiredFields = false;
+    ..oo(0, [3, 4, 5])
+    ..hasRequiredFields = false
+  ;
 
   RepoSource() : super();
-  RepoSource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RepoSource.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RepoSource.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RepoSource.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RepoSource clone() => RepoSource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RepoSource copyWith(void Function(RepoSource) updates) => super.copyWith((message) => updates(message as RepoSource));
+  $pb.BuilderInfo get info_ => _i;
   static RepoSource create() => RepoSource();
-  static PbList<RepoSource> createRepeated() => PbList<RepoSource>();
-  static RepoSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRepoSource();
-    return _defaultInstance;
-  }
-
+  RepoSource createEmptyInstance() => create();
+  static $pb.PbList<RepoSource> createRepeated() => $pb.PbList<RepoSource>();
+  static RepoSource getDefault() => _defaultInstance ??= create()..freeze();
   static RepoSource _defaultInstance;
-  static void $checkItem(RepoSource v) {
-    if (v is! RepoSource) checkItemFailed(v, 'RepoSource');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
+  RepoSource_Revision whichRevision() => _RepoSource_RevisionByTag[$_whichOneof(0)];
+  void clearRevision() => clearField($_whichOneof(0));
 
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get repoName => $_getS(1, '');
-  set repoName(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasRepoName() => $_has(1);
+  $core.String get repoName => $_getS(1, '');
+  set repoName($core.String v) { $_setString(1, v); }
+  $core.bool hasRepoName() => $_has(1);
   void clearRepoName() => clearField(2);
 
-  String get branchName => $_getS(2, '');
-  set branchName(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasBranchName() => $_has(2);
+  $core.String get branchName => $_getS(2, '');
+  set branchName($core.String v) { $_setString(2, v); }
+  $core.bool hasBranchName() => $_has(2);
   void clearBranchName() => clearField(3);
 
-  String get tagName => $_getS(3, '');
-  set tagName(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasTagName() => $_has(3);
+  $core.String get tagName => $_getS(3, '');
+  set tagName($core.String v) { $_setString(3, v); }
+  $core.bool hasTagName() => $_has(3);
   void clearTagName() => clearField(4);
 
-  String get commitSha => $_getS(4, '');
-  set commitSha(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasCommitSha() => $_has(4);
+  $core.String get commitSha => $_getS(4, '');
+  set commitSha($core.String v) { $_setString(4, v); }
+  $core.bool hasCommitSha() => $_has(4);
   void clearCommitSha() => clearField(5);
 
-  String get dir => $_getS(5, '');
-  set dir(String v) {
-    $_setString(5, v);
-  }
-
-  bool hasDir() => $_has(5);
+  $core.String get dir => $_getS(5, '');
+  set dir($core.String v) { $_setString(5, v); }
+  $core.bool hasDir() => $_has(5);
   void clearDir() => clearField(7);
 }
 
-class _ReadonlyRepoSource extends RepoSource with ReadonlyMessageMixin {}
+enum Source_Source {
+  storageSource, 
+  repoSource, 
+  notSet
+}
 
-class Source extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Source')
-    ..a<StorageSource>(2, 'storageSource', PbFieldType.OM,
-        StorageSource.getDefault, StorageSource.create)
-    ..a<RepoSource>(3, 'repoSource', PbFieldType.OM, RepoSource.getDefault,
-        RepoSource.create)
-    ..hasRequiredFields = false;
+class Source extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Source_Source> _Source_SourceByTag = {
+    2 : Source_Source.storageSource,
+    3 : Source_Source.repoSource,
+    0 : Source_Source.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Source', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..a<StorageSource>(2, 'storageSource', $pb.PbFieldType.OM, StorageSource.getDefault, StorageSource.create)
+    ..a<RepoSource>(3, 'repoSource', $pb.PbFieldType.OM, RepoSource.getDefault, RepoSource.create)
+    ..oo(0, [2, 3])
+    ..hasRequiredFields = false
+  ;
 
   Source() : super();
-  Source.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Source.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Source.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Source.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Source clone() => Source()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Source copyWith(void Function(Source) updates) => super.copyWith((message) => updates(message as Source));
+  $pb.BuilderInfo get info_ => _i;
   static Source create() => Source();
-  static PbList<Source> createRepeated() => PbList<Source>();
-  static Source getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySource();
-    return _defaultInstance;
-  }
-
+  Source createEmptyInstance() => create();
+  static $pb.PbList<Source> createRepeated() => $pb.PbList<Source>();
+  static Source getDefault() => _defaultInstance ??= create()..freeze();
   static Source _defaultInstance;
-  static void $checkItem(Source v) {
-    if (v is! Source) checkItemFailed(v, 'Source');
-  }
+
+  Source_Source whichSource() => _Source_SourceByTag[$_whichOneof(0)];
+  void clearSource() => clearField($_whichOneof(0));
 
   StorageSource get storageSource => $_getN(0);
-  set storageSource(StorageSource v) {
-    setField(2, v);
-  }
-
-  bool hasStorageSource() => $_has(0);
+  set storageSource(StorageSource v) { setField(2, v); }
+  $core.bool hasStorageSource() => $_has(0);
   void clearStorageSource() => clearField(2);
 
   RepoSource get repoSource => $_getN(1);
-  set repoSource(RepoSource v) {
-    setField(3, v);
-  }
-
-  bool hasRepoSource() => $_has(1);
+  set repoSource(RepoSource v) { setField(3, v); }
+  $core.bool hasRepoSource() => $_has(1);
   void clearRepoSource() => clearField(3);
 }
 
-class _ReadonlySource extends Source with ReadonlyMessageMixin {}
-
-class BuiltImage extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuiltImage')
+class BuiltImage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuiltImage', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'name')
     ..aOS(3, 'digest')
-    ..a<TimeSpan>(
-        4, 'pushTiming', PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
-    ..hasRequiredFields = false;
+    ..a<TimeSpan>(4, 'pushTiming', $pb.PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
+    ..hasRequiredFields = false
+  ;
 
   BuiltImage() : super();
-  BuiltImage.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuiltImage.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuiltImage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuiltImage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BuiltImage clone() => BuiltImage()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuiltImage copyWith(void Function(BuiltImage) updates) => super.copyWith((message) => updates(message as BuiltImage));
+  $pb.BuilderInfo get info_ => _i;
   static BuiltImage create() => BuiltImage();
-  static PbList<BuiltImage> createRepeated() => PbList<BuiltImage>();
-  static BuiltImage getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuiltImage();
-    return _defaultInstance;
-  }
-
+  BuiltImage createEmptyInstance() => create();
+  static $pb.PbList<BuiltImage> createRepeated() => $pb.PbList<BuiltImage>();
+  static BuiltImage getDefault() => _defaultInstance ??= create()..freeze();
   static BuiltImage _defaultInstance;
-  static void $checkItem(BuiltImage v) {
-    if (v is! BuiltImage) checkItemFailed(v, 'BuiltImage');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get digest => $_getS(1, '');
-  set digest(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasDigest() => $_has(1);
+  $core.String get digest => $_getS(1, '');
+  set digest($core.String v) { $_setString(1, v); }
+  $core.bool hasDigest() => $_has(1);
   void clearDigest() => clearField(3);
 
   TimeSpan get pushTiming => $_getN(2);
-  set pushTiming(TimeSpan v) {
-    setField(4, v);
-  }
-
-  bool hasPushTiming() => $_has(2);
+  set pushTiming(TimeSpan v) { setField(4, v); }
+  $core.bool hasPushTiming() => $_has(2);
   void clearPushTiming() => clearField(4);
 }
 
-class _ReadonlyBuiltImage extends BuiltImage with ReadonlyMessageMixin {}
-
-class BuildStep extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildStep')
+class BuildStep extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildStep', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'name')
     ..pPS(2, 'env')
     ..pPS(3, 'args')
@@ -377,1916 +283,1063 @@ class BuildStep extends GeneratedMessage {
     ..pPS(6, 'waitFor')
     ..aOS(7, 'entrypoint')
     ..pPS(8, 'secretEnv')
-    ..pp<Volume>(9, 'volumes', PbFieldType.PM, Volume.$checkItem, Volume.create)
-    ..a<TimeSpan>(
-        10, 'timing', PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
-    ..a<$google$protobuf.Duration>(11, 'timeout', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..e<Build_Status>(12, 'status', PbFieldType.OE, Build_Status.STATUS_UNKNOWN,
-        Build_Status.valueOf, Build_Status.values)
-    ..hasRequiredFields = false;
+    ..pc<Volume>(9, 'volumes', $pb.PbFieldType.PM,Volume.create)
+    ..a<TimeSpan>(10, 'timing', $pb.PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
+    ..a<$0.Duration>(11, 'timeout', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
+    ..e<Build_Status>(12, 'status', $pb.PbFieldType.OE, Build_Status.STATUS_UNKNOWN, Build_Status.valueOf, Build_Status.values)
+    ..a<TimeSpan>(13, 'pullTiming', $pb.PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
+    ..hasRequiredFields = false
+  ;
 
   BuildStep() : super();
-  BuildStep.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildStep.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildStep.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuildStep.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BuildStep clone() => BuildStep()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuildStep copyWith(void Function(BuildStep) updates) => super.copyWith((message) => updates(message as BuildStep));
+  $pb.BuilderInfo get info_ => _i;
   static BuildStep create() => BuildStep();
-  static PbList<BuildStep> createRepeated() => PbList<BuildStep>();
-  static BuildStep getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildStep();
-    return _defaultInstance;
-  }
-
+  BuildStep createEmptyInstance() => create();
+  static $pb.PbList<BuildStep> createRepeated() => $pb.PbList<BuildStep>();
+  static BuildStep getDefault() => _defaultInstance ??= create()..freeze();
   static BuildStep _defaultInstance;
-  static void $checkItem(BuildStep v) {
-    if (v is! BuildStep) checkItemFailed(v, 'BuildStep');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<String> get env => $_getList(1);
+  $core.List<$core.String> get env => $_getList(1);
 
-  List<String> get args => $_getList(2);
+  $core.List<$core.String> get args => $_getList(2);
 
-  String get dir => $_getS(3, '');
-  set dir(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasDir() => $_has(3);
+  $core.String get dir => $_getS(3, '');
+  set dir($core.String v) { $_setString(3, v); }
+  $core.bool hasDir() => $_has(3);
   void clearDir() => clearField(4);
 
-  String get id => $_getS(4, '');
-  set id(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasId() => $_has(4);
+  $core.String get id => $_getS(4, '');
+  set id($core.String v) { $_setString(4, v); }
+  $core.bool hasId() => $_has(4);
   void clearId() => clearField(5);
 
-  List<String> get waitFor => $_getList(5);
+  $core.List<$core.String> get waitFor => $_getList(5);
 
-  String get entrypoint => $_getS(6, '');
-  set entrypoint(String v) {
-    $_setString(6, v);
-  }
-
-  bool hasEntrypoint() => $_has(6);
+  $core.String get entrypoint => $_getS(6, '');
+  set entrypoint($core.String v) { $_setString(6, v); }
+  $core.bool hasEntrypoint() => $_has(6);
   void clearEntrypoint() => clearField(7);
 
-  List<String> get secretEnv => $_getList(7);
+  $core.List<$core.String> get secretEnv => $_getList(7);
 
-  List<Volume> get volumes => $_getList(8);
+  $core.List<Volume> get volumes => $_getList(8);
 
   TimeSpan get timing => $_getN(9);
-  set timing(TimeSpan v) {
-    setField(10, v);
-  }
-
-  bool hasTiming() => $_has(9);
+  set timing(TimeSpan v) { setField(10, v); }
+  $core.bool hasTiming() => $_has(9);
   void clearTiming() => clearField(10);
 
-  $google$protobuf.Duration get timeout => $_getN(10);
-  set timeout($google$protobuf.Duration v) {
-    setField(11, v);
-  }
-
-  bool hasTimeout() => $_has(10);
+  $0.Duration get timeout => $_getN(10);
+  set timeout($0.Duration v) { setField(11, v); }
+  $core.bool hasTimeout() => $_has(10);
   void clearTimeout() => clearField(11);
 
   Build_Status get status => $_getN(11);
-  set status(Build_Status v) {
-    setField(12, v);
-  }
-
-  bool hasStatus() => $_has(11);
+  set status(Build_Status v) { setField(12, v); }
+  $core.bool hasStatus() => $_has(11);
   void clearStatus() => clearField(12);
+
+  TimeSpan get pullTiming => $_getN(12);
+  set pullTiming(TimeSpan v) { setField(13, v); }
+  $core.bool hasPullTiming() => $_has(12);
+  void clearPullTiming() => clearField(13);
 }
 
-class _ReadonlyBuildStep extends BuildStep with ReadonlyMessageMixin {}
-
-class Volume extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Volume')
+class Volume extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Volume', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'path')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Volume() : super();
-  Volume.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Volume.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Volume.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Volume.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Volume clone() => Volume()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Volume copyWith(void Function(Volume) updates) => super.copyWith((message) => updates(message as Volume));
+  $pb.BuilderInfo get info_ => _i;
   static Volume create() => Volume();
-  static PbList<Volume> createRepeated() => PbList<Volume>();
-  static Volume getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyVolume();
-    return _defaultInstance;
-  }
-
+  Volume createEmptyInstance() => create();
+  static $pb.PbList<Volume> createRepeated() => $pb.PbList<Volume>();
+  static Volume getDefault() => _defaultInstance ??= create()..freeze();
   static Volume _defaultInstance;
-  static void $checkItem(Volume v) {
-    if (v is! Volume) checkItemFailed(v, 'Volume');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get path => $_getS(1, '');
-  set path(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPath() => $_has(1);
+  $core.String get path => $_getS(1, '');
+  set path($core.String v) { $_setString(1, v); }
+  $core.bool hasPath() => $_has(1);
   void clearPath() => clearField(2);
 }
 
-class _ReadonlyVolume extends Volume with ReadonlyMessageMixin {}
-
-class Results extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Results')
-    ..pp<BuiltImage>(
-        2, 'images', PbFieldType.PM, BuiltImage.$checkItem, BuiltImage.create)
+class Results extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Results', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..pc<BuiltImage>(2, 'images', $pb.PbFieldType.PM,BuiltImage.create)
     ..pPS(3, 'buildStepImages')
     ..aOS(4, 'artifactManifest')
     ..aInt64(5, 'numArtifacts')
-    ..hasRequiredFields = false;
+    ..p<$core.List<$core.int>>(6, 'buildStepOutputs', $pb.PbFieldType.PY)
+    ..hasRequiredFields = false
+  ;
 
   Results() : super();
-  Results.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Results.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Results.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Results.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Results clone() => Results()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Results copyWith(void Function(Results) updates) => super.copyWith((message) => updates(message as Results));
+  $pb.BuilderInfo get info_ => _i;
   static Results create() => Results();
-  static PbList<Results> createRepeated() => PbList<Results>();
-  static Results getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyResults();
-    return _defaultInstance;
-  }
-
+  Results createEmptyInstance() => create();
+  static $pb.PbList<Results> createRepeated() => $pb.PbList<Results>();
+  static Results getDefault() => _defaultInstance ??= create()..freeze();
   static Results _defaultInstance;
-  static void $checkItem(Results v) {
-    if (v is! Results) checkItemFailed(v, 'Results');
-  }
 
-  List<BuiltImage> get images => $_getList(0);
+  $core.List<BuiltImage> get images => $_getList(0);
 
-  List<String> get buildStepImages => $_getList(1);
+  $core.List<$core.String> get buildStepImages => $_getList(1);
 
-  String get artifactManifest => $_getS(2, '');
-  set artifactManifest(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasArtifactManifest() => $_has(2);
+  $core.String get artifactManifest => $_getS(2, '');
+  set artifactManifest($core.String v) { $_setString(2, v); }
+  $core.bool hasArtifactManifest() => $_has(2);
   void clearArtifactManifest() => clearField(4);
 
   Int64 get numArtifacts => $_getI64(3);
-  set numArtifacts(Int64 v) {
-    $_setInt64(3, v);
-  }
-
-  bool hasNumArtifacts() => $_has(3);
+  set numArtifacts(Int64 v) { $_setInt64(3, v); }
+  $core.bool hasNumArtifacts() => $_has(3);
   void clearNumArtifacts() => clearField(5);
+
+  $core.List<$core.List<$core.int>> get buildStepOutputs => $_getList(4);
 }
 
-class _ReadonlyResults extends Results with ReadonlyMessageMixin {}
-
-class ArtifactResult extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ArtifactResult')
+class ArtifactResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ArtifactResult', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'location')
-    ..pp<FileHashes>(
-        2, 'fileHash', PbFieldType.PM, FileHashes.$checkItem, FileHashes.create)
-    ..hasRequiredFields = false;
+    ..pc<FileHashes>(2, 'fileHash', $pb.PbFieldType.PM,FileHashes.create)
+    ..hasRequiredFields = false
+  ;
 
   ArtifactResult() : super();
-  ArtifactResult.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ArtifactResult.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ArtifactResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ArtifactResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ArtifactResult clone() => ArtifactResult()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ArtifactResult copyWith(void Function(ArtifactResult) updates) => super.copyWith((message) => updates(message as ArtifactResult));
+  $pb.BuilderInfo get info_ => _i;
   static ArtifactResult create() => ArtifactResult();
-  static PbList<ArtifactResult> createRepeated() => PbList<ArtifactResult>();
-  static ArtifactResult getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyArtifactResult();
-    return _defaultInstance;
-  }
-
+  ArtifactResult createEmptyInstance() => create();
+  static $pb.PbList<ArtifactResult> createRepeated() => $pb.PbList<ArtifactResult>();
+  static ArtifactResult getDefault() => _defaultInstance ??= create()..freeze();
   static ArtifactResult _defaultInstance;
-  static void $checkItem(ArtifactResult v) {
-    if (v is! ArtifactResult) checkItemFailed(v, 'ArtifactResult');
-  }
 
-  String get location => $_getS(0, '');
-  set location(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasLocation() => $_has(0);
+  $core.String get location => $_getS(0, '');
+  set location($core.String v) { $_setString(0, v); }
+  $core.bool hasLocation() => $_has(0);
   void clearLocation() => clearField(1);
 
-  List<FileHashes> get fileHash => $_getList(1);
+  $core.List<FileHashes> get fileHash => $_getList(1);
 }
 
-class _ReadonlyArtifactResult extends ArtifactResult with ReadonlyMessageMixin {
-}
-
-class Build_SubstitutionsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Build_SubstitutionsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Build_SubstitutionsEntry() : super();
-  Build_SubstitutionsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Build_SubstitutionsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Build_SubstitutionsEntry clone() =>
-      Build_SubstitutionsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Build_SubstitutionsEntry create() => Build_SubstitutionsEntry();
-  static PbList<Build_SubstitutionsEntry> createRepeated() =>
-      PbList<Build_SubstitutionsEntry>();
-  static Build_SubstitutionsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBuild_SubstitutionsEntry();
-    return _defaultInstance;
-  }
-
-  static Build_SubstitutionsEntry _defaultInstance;
-  static void $checkItem(Build_SubstitutionsEntry v) {
-    if (v is! Build_SubstitutionsEntry)
-      checkItemFailed(v, 'Build_SubstitutionsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyBuild_SubstitutionsEntry extends Build_SubstitutionsEntry
-    with ReadonlyMessageMixin {}
-
-class Build_TimingEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Build_TimingEntry')
-    ..aOS(1, 'key')
-    ..a<TimeSpan>(
-        2, 'value', PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
-    ..hasRequiredFields = false;
-
-  Build_TimingEntry() : super();
-  Build_TimingEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Build_TimingEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Build_TimingEntry clone() => Build_TimingEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Build_TimingEntry create() => Build_TimingEntry();
-  static PbList<Build_TimingEntry> createRepeated() =>
-      PbList<Build_TimingEntry>();
-  static Build_TimingEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBuild_TimingEntry();
-    return _defaultInstance;
-  }
-
-  static Build_TimingEntry _defaultInstance;
-  static void $checkItem(Build_TimingEntry v) {
-    if (v is! Build_TimingEntry) checkItemFailed(v, 'Build_TimingEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  TimeSpan get value => $_getN(1);
-  set value(TimeSpan v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyBuild_TimingEntry extends Build_TimingEntry
-    with ReadonlyMessageMixin {}
-
-class Build extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Build')
+class Build extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Build', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'id')
-    ..e<Build_Status>(2, 'status', PbFieldType.OE, Build_Status.STATUS_UNKNOWN,
-        Build_Status.valueOf, Build_Status.values)
-    ..a<Source>(3, 'source', PbFieldType.OM, Source.getDefault, Source.create)
-    ..a<$google$protobuf.Timestamp>(
-        6,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        7,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        8,
-        'finishTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<Results>(
-        10, 'results', PbFieldType.OM, Results.getDefault, Results.create)
-    ..pp<BuildStep>(
-        11, 'steps', PbFieldType.PM, BuildStep.$checkItem, BuildStep.create)
-    ..a<$google$protobuf.Duration>(12, 'timeout', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..e<Build_Status>(2, 'status', $pb.PbFieldType.OE, Build_Status.STATUS_UNKNOWN, Build_Status.valueOf, Build_Status.values)
+    ..a<Source>(3, 'source', $pb.PbFieldType.OM, Source.getDefault, Source.create)
+    ..a<$1.Timestamp>(6, 'createTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(7, 'startTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(8, 'finishTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<Results>(10, 'results', $pb.PbFieldType.OM, Results.getDefault, Results.create)
+    ..pc<BuildStep>(11, 'steps', $pb.PbFieldType.PM,BuildStep.create)
+    ..a<$0.Duration>(12, 'timeout', $pb.PbFieldType.OM, $0.Duration.getDefault, $0.Duration.create)
     ..pPS(13, 'images')
     ..aOS(16, 'projectId')
     ..aOS(19, 'logsBucket')
-    ..a<SourceProvenance>(21, 'sourceProvenance', PbFieldType.OM,
-        SourceProvenance.getDefault, SourceProvenance.create)
+    ..a<SourceProvenance>(21, 'sourceProvenance', $pb.PbFieldType.OM, SourceProvenance.getDefault, SourceProvenance.create)
     ..aOS(22, 'buildTriggerId')
-    ..a<BuildOptions>(23, 'options', PbFieldType.OM, BuildOptions.getDefault,
-        BuildOptions.create)
+    ..a<BuildOptions>(23, 'options', $pb.PbFieldType.OM, BuildOptions.getDefault, BuildOptions.create)
     ..aOS(24, 'statusDetail')
     ..aOS(25, 'logUrl')
-    ..pp<Build_SubstitutionsEntry>(29, 'substitutions', PbFieldType.PM,
-        Build_SubstitutionsEntry.$checkItem, Build_SubstitutionsEntry.create)
+    ..m<$core.String, $core.String>(29, 'substitutions', 'Build.SubstitutionsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..pPS(31, 'tags')
-    ..pp<Secret>(
-        32, 'secrets', PbFieldType.PM, Secret.$checkItem, Secret.create)
-    ..pp<Build_TimingEntry>(33, 'timing', PbFieldType.PM,
-        Build_TimingEntry.$checkItem, Build_TimingEntry.create)
-    ..a<Artifacts>(
-        37, 'artifacts', PbFieldType.OM, Artifacts.getDefault, Artifacts.create)
-    ..hasRequiredFields = false;
+    ..pc<Secret>(32, 'secrets', $pb.PbFieldType.PM,Secret.create)
+    ..m<$core.String, TimeSpan>(33, 'timing', 'Build.TimingEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OM, TimeSpan.create, null, null , const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..a<Artifacts>(37, 'artifacts', $pb.PbFieldType.OM, Artifacts.getDefault, Artifacts.create)
+    ..hasRequiredFields = false
+  ;
 
   Build() : super();
-  Build.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Build.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Build.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Build.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Build clone() => Build()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Build copyWith(void Function(Build) updates) => super.copyWith((message) => updates(message as Build));
+  $pb.BuilderInfo get info_ => _i;
   static Build create() => Build();
-  static PbList<Build> createRepeated() => PbList<Build>();
-  static Build getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuild();
-    return _defaultInstance;
-  }
-
+  Build createEmptyInstance() => create();
+  static $pb.PbList<Build> createRepeated() => $pb.PbList<Build>();
+  static Build getDefault() => _defaultInstance ??= create()..freeze();
   static Build _defaultInstance;
-  static void $checkItem(Build v) {
-    if (v is! Build) checkItemFailed(v, 'Build');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasId() => $_has(0);
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) { $_setString(0, v); }
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
   Build_Status get status => $_getN(1);
-  set status(Build_Status v) {
-    setField(2, v);
-  }
-
-  bool hasStatus() => $_has(1);
+  set status(Build_Status v) { setField(2, v); }
+  $core.bool hasStatus() => $_has(1);
   void clearStatus() => clearField(2);
 
   Source get source => $_getN(2);
-  set source(Source v) {
-    setField(3, v);
-  }
-
-  bool hasSource() => $_has(2);
+  set source(Source v) { setField(3, v); }
+  $core.bool hasSource() => $_has(2);
   void clearSource() => clearField(3);
 
-  $google$protobuf.Timestamp get createTime => $_getN(3);
-  set createTime($google$protobuf.Timestamp v) {
-    setField(6, v);
-  }
-
-  bool hasCreateTime() => $_has(3);
+  $1.Timestamp get createTime => $_getN(3);
+  set createTime($1.Timestamp v) { setField(6, v); }
+  $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(6);
 
-  $google$protobuf.Timestamp get startTime => $_getN(4);
-  set startTime($google$protobuf.Timestamp v) {
-    setField(7, v);
-  }
-
-  bool hasStartTime() => $_has(4);
+  $1.Timestamp get startTime => $_getN(4);
+  set startTime($1.Timestamp v) { setField(7, v); }
+  $core.bool hasStartTime() => $_has(4);
   void clearStartTime() => clearField(7);
 
-  $google$protobuf.Timestamp get finishTime => $_getN(5);
-  set finishTime($google$protobuf.Timestamp v) {
-    setField(8, v);
-  }
-
-  bool hasFinishTime() => $_has(5);
+  $1.Timestamp get finishTime => $_getN(5);
+  set finishTime($1.Timestamp v) { setField(8, v); }
+  $core.bool hasFinishTime() => $_has(5);
   void clearFinishTime() => clearField(8);
 
   Results get results => $_getN(6);
-  set results(Results v) {
-    setField(10, v);
-  }
-
-  bool hasResults() => $_has(6);
+  set results(Results v) { setField(10, v); }
+  $core.bool hasResults() => $_has(6);
   void clearResults() => clearField(10);
 
-  List<BuildStep> get steps => $_getList(7);
+  $core.List<BuildStep> get steps => $_getList(7);
 
-  $google$protobuf.Duration get timeout => $_getN(8);
-  set timeout($google$protobuf.Duration v) {
-    setField(12, v);
-  }
-
-  bool hasTimeout() => $_has(8);
+  $0.Duration get timeout => $_getN(8);
+  set timeout($0.Duration v) { setField(12, v); }
+  $core.bool hasTimeout() => $_has(8);
   void clearTimeout() => clearField(12);
 
-  List<String> get images => $_getList(9);
+  $core.List<$core.String> get images => $_getList(9);
 
-  String get projectId => $_getS(10, '');
-  set projectId(String v) {
-    $_setString(10, v);
-  }
-
-  bool hasProjectId() => $_has(10);
+  $core.String get projectId => $_getS(10, '');
+  set projectId($core.String v) { $_setString(10, v); }
+  $core.bool hasProjectId() => $_has(10);
   void clearProjectId() => clearField(16);
 
-  String get logsBucket => $_getS(11, '');
-  set logsBucket(String v) {
-    $_setString(11, v);
-  }
-
-  bool hasLogsBucket() => $_has(11);
+  $core.String get logsBucket => $_getS(11, '');
+  set logsBucket($core.String v) { $_setString(11, v); }
+  $core.bool hasLogsBucket() => $_has(11);
   void clearLogsBucket() => clearField(19);
 
   SourceProvenance get sourceProvenance => $_getN(12);
-  set sourceProvenance(SourceProvenance v) {
-    setField(21, v);
-  }
-
-  bool hasSourceProvenance() => $_has(12);
+  set sourceProvenance(SourceProvenance v) { setField(21, v); }
+  $core.bool hasSourceProvenance() => $_has(12);
   void clearSourceProvenance() => clearField(21);
 
-  String get buildTriggerId => $_getS(13, '');
-  set buildTriggerId(String v) {
-    $_setString(13, v);
-  }
-
-  bool hasBuildTriggerId() => $_has(13);
+  $core.String get buildTriggerId => $_getS(13, '');
+  set buildTriggerId($core.String v) { $_setString(13, v); }
+  $core.bool hasBuildTriggerId() => $_has(13);
   void clearBuildTriggerId() => clearField(22);
 
   BuildOptions get options => $_getN(14);
-  set options(BuildOptions v) {
-    setField(23, v);
-  }
-
-  bool hasOptions() => $_has(14);
+  set options(BuildOptions v) { setField(23, v); }
+  $core.bool hasOptions() => $_has(14);
   void clearOptions() => clearField(23);
 
-  String get statusDetail => $_getS(15, '');
-  set statusDetail(String v) {
-    $_setString(15, v);
-  }
-
-  bool hasStatusDetail() => $_has(15);
+  $core.String get statusDetail => $_getS(15, '');
+  set statusDetail($core.String v) { $_setString(15, v); }
+  $core.bool hasStatusDetail() => $_has(15);
   void clearStatusDetail() => clearField(24);
 
-  String get logUrl => $_getS(16, '');
-  set logUrl(String v) {
-    $_setString(16, v);
-  }
-
-  bool hasLogUrl() => $_has(16);
+  $core.String get logUrl => $_getS(16, '');
+  set logUrl($core.String v) { $_setString(16, v); }
+  $core.bool hasLogUrl() => $_has(16);
   void clearLogUrl() => clearField(25);
 
-  List<Build_SubstitutionsEntry> get substitutions => $_getList(17);
+  $core.Map<$core.String, $core.String> get substitutions => $_getMap(17);
 
-  List<String> get tags => $_getList(18);
+  $core.List<$core.String> get tags => $_getList(18);
 
-  List<Secret> get secrets => $_getList(19);
+  $core.List<Secret> get secrets => $_getList(19);
 
-  List<Build_TimingEntry> get timing => $_getList(20);
+  $core.Map<$core.String, TimeSpan> get timing => $_getMap(20);
 
   Artifacts get artifacts => $_getN(21);
-  set artifacts(Artifacts v) {
-    setField(37, v);
-  }
-
-  bool hasArtifacts() => $_has(21);
+  set artifacts(Artifacts v) { setField(37, v); }
+  $core.bool hasArtifacts() => $_has(21);
   void clearArtifacts() => clearField(37);
 }
 
-class _ReadonlyBuild extends Build with ReadonlyMessageMixin {}
-
-class Artifacts_ArtifactObjects extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Artifacts_ArtifactObjects')
+class Artifacts_ArtifactObjects extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Artifacts.ArtifactObjects', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'location')
     ..pPS(2, 'paths')
-    ..a<TimeSpan>(
-        3, 'timing', PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
-    ..hasRequiredFields = false;
+    ..a<TimeSpan>(3, 'timing', $pb.PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
+    ..hasRequiredFields = false
+  ;
 
   Artifacts_ArtifactObjects() : super();
-  Artifacts_ArtifactObjects.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Artifacts_ArtifactObjects.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Artifacts_ArtifactObjects clone() =>
-      Artifacts_ArtifactObjects()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Artifacts_ArtifactObjects.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Artifacts_ArtifactObjects.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Artifacts_ArtifactObjects clone() => Artifacts_ArtifactObjects()..mergeFromMessage(this);
+  Artifacts_ArtifactObjects copyWith(void Function(Artifacts_ArtifactObjects) updates) => super.copyWith((message) => updates(message as Artifacts_ArtifactObjects));
+  $pb.BuilderInfo get info_ => _i;
   static Artifacts_ArtifactObjects create() => Artifacts_ArtifactObjects();
-  static PbList<Artifacts_ArtifactObjects> createRepeated() =>
-      PbList<Artifacts_ArtifactObjects>();
-  static Artifacts_ArtifactObjects getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyArtifacts_ArtifactObjects();
-    return _defaultInstance;
-  }
-
+  Artifacts_ArtifactObjects createEmptyInstance() => create();
+  static $pb.PbList<Artifacts_ArtifactObjects> createRepeated() => $pb.PbList<Artifacts_ArtifactObjects>();
+  static Artifacts_ArtifactObjects getDefault() => _defaultInstance ??= create()..freeze();
   static Artifacts_ArtifactObjects _defaultInstance;
-  static void $checkItem(Artifacts_ArtifactObjects v) {
-    if (v is! Artifacts_ArtifactObjects)
-      checkItemFailed(v, 'Artifacts_ArtifactObjects');
-  }
 
-  String get location => $_getS(0, '');
-  set location(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasLocation() => $_has(0);
+  $core.String get location => $_getS(0, '');
+  set location($core.String v) { $_setString(0, v); }
+  $core.bool hasLocation() => $_has(0);
   void clearLocation() => clearField(1);
 
-  List<String> get paths => $_getList(1);
+  $core.List<$core.String> get paths => $_getList(1);
 
   TimeSpan get timing => $_getN(2);
-  set timing(TimeSpan v) {
-    setField(3, v);
-  }
-
-  bool hasTiming() => $_has(2);
+  set timing(TimeSpan v) { setField(3, v); }
+  $core.bool hasTiming() => $_has(2);
   void clearTiming() => clearField(3);
 }
 
-class _ReadonlyArtifacts_ArtifactObjects extends Artifacts_ArtifactObjects
-    with ReadonlyMessageMixin {}
-
-class Artifacts extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Artifacts')
+class Artifacts extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Artifacts', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..pPS(1, 'images')
-    ..a<Artifacts_ArtifactObjects>(2, 'objects', PbFieldType.OM,
-        Artifacts_ArtifactObjects.getDefault, Artifacts_ArtifactObjects.create)
-    ..hasRequiredFields = false;
+    ..a<Artifacts_ArtifactObjects>(2, 'objects', $pb.PbFieldType.OM, Artifacts_ArtifactObjects.getDefault, Artifacts_ArtifactObjects.create)
+    ..hasRequiredFields = false
+  ;
 
   Artifacts() : super();
-  Artifacts.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Artifacts.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Artifacts.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Artifacts.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Artifacts clone() => Artifacts()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Artifacts copyWith(void Function(Artifacts) updates) => super.copyWith((message) => updates(message as Artifacts));
+  $pb.BuilderInfo get info_ => _i;
   static Artifacts create() => Artifacts();
-  static PbList<Artifacts> createRepeated() => PbList<Artifacts>();
-  static Artifacts getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyArtifacts();
-    return _defaultInstance;
-  }
-
+  Artifacts createEmptyInstance() => create();
+  static $pb.PbList<Artifacts> createRepeated() => $pb.PbList<Artifacts>();
+  static Artifacts getDefault() => _defaultInstance ??= create()..freeze();
   static Artifacts _defaultInstance;
-  static void $checkItem(Artifacts v) {
-    if (v is! Artifacts) checkItemFailed(v, 'Artifacts');
-  }
 
-  List<String> get images => $_getList(0);
+  $core.List<$core.String> get images => $_getList(0);
 
   Artifacts_ArtifactObjects get objects => $_getN(1);
-  set objects(Artifacts_ArtifactObjects v) {
-    setField(2, v);
-  }
-
-  bool hasObjects() => $_has(1);
+  set objects(Artifacts_ArtifactObjects v) { setField(2, v); }
+  $core.bool hasObjects() => $_has(1);
   void clearObjects() => clearField(2);
 }
 
-class _ReadonlyArtifacts extends Artifacts with ReadonlyMessageMixin {}
-
-class TimeSpan extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('TimeSpan')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..hasRequiredFields = false;
+class TimeSpan extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeSpan', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..a<$1.Timestamp>(1, 'startTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
   TimeSpan() : super();
-  TimeSpan.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimeSpan.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimeSpan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  TimeSpan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   TimeSpan clone() => TimeSpan()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  TimeSpan copyWith(void Function(TimeSpan) updates) => super.copyWith((message) => updates(message as TimeSpan));
+  $pb.BuilderInfo get info_ => _i;
   static TimeSpan create() => TimeSpan();
-  static PbList<TimeSpan> createRepeated() => PbList<TimeSpan>();
-  static TimeSpan getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyTimeSpan();
-    return _defaultInstance;
-  }
-
+  TimeSpan createEmptyInstance() => create();
+  static $pb.PbList<TimeSpan> createRepeated() => $pb.PbList<TimeSpan>();
+  static TimeSpan getDefault() => _defaultInstance ??= create()..freeze();
   static TimeSpan _defaultInstance;
-  static void $checkItem(TimeSpan v) {
-    if (v is! TimeSpan) checkItemFailed(v, 'TimeSpan');
-  }
 
-  $google$protobuf.Timestamp get startTime => $_getN(0);
-  set startTime($google$protobuf.Timestamp v) {
-    setField(1, v);
-  }
-
-  bool hasStartTime() => $_has(0);
+  $1.Timestamp get startTime => $_getN(0);
+  set startTime($1.Timestamp v) { setField(1, v); }
+  $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $google$protobuf.Timestamp get endTime => $_getN(1);
-  set endTime($google$protobuf.Timestamp v) {
-    setField(2, v);
-  }
-
-  bool hasEndTime() => $_has(1);
+  $1.Timestamp get endTime => $_getN(1);
+  set endTime($1.Timestamp v) { setField(2, v); }
+  $core.bool hasEndTime() => $_has(1);
   void clearEndTime() => clearField(2);
 }
 
-class _ReadonlyTimeSpan extends TimeSpan with ReadonlyMessageMixin {}
-
-class BuildOperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildOperationMetadata')
-    ..a<Build>(1, 'build', PbFieldType.OM, Build.getDefault, Build.create)
-    ..hasRequiredFields = false;
+class BuildOperationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildOperationMetadata', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..a<Build>(1, 'build', $pb.PbFieldType.OM, Build.getDefault, Build.create)
+    ..hasRequiredFields = false
+  ;
 
   BuildOperationMetadata() : super();
-  BuildOperationMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildOperationMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BuildOperationMetadata clone() =>
-      BuildOperationMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuildOperationMetadata.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuildOperationMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  BuildOperationMetadata clone() => BuildOperationMetadata()..mergeFromMessage(this);
+  BuildOperationMetadata copyWith(void Function(BuildOperationMetadata) updates) => super.copyWith((message) => updates(message as BuildOperationMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static BuildOperationMetadata create() => BuildOperationMetadata();
-  static PbList<BuildOperationMetadata> createRepeated() =>
-      PbList<BuildOperationMetadata>();
-  static BuildOperationMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBuildOperationMetadata();
-    return _defaultInstance;
-  }
-
+  BuildOperationMetadata createEmptyInstance() => create();
+  static $pb.PbList<BuildOperationMetadata> createRepeated() => $pb.PbList<BuildOperationMetadata>();
+  static BuildOperationMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static BuildOperationMetadata _defaultInstance;
-  static void $checkItem(BuildOperationMetadata v) {
-    if (v is! BuildOperationMetadata)
-      checkItemFailed(v, 'BuildOperationMetadata');
-  }
 
   Build get build => $_getN(0);
-  set build(Build v) {
-    setField(1, v);
-  }
-
-  bool hasBuild() => $_has(0);
+  set build(Build v) { setField(1, v); }
+  $core.bool hasBuild() => $_has(0);
   void clearBuild() => clearField(1);
 }
 
-class _ReadonlyBuildOperationMetadata extends BuildOperationMetadata
-    with ReadonlyMessageMixin {}
-
-class SourceProvenance_FileHashesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SourceProvenance_FileHashesEntry')
-    ..aOS(1, 'key')
-    ..a<FileHashes>(
-        2, 'value', PbFieldType.OM, FileHashes.getDefault, FileHashes.create)
-    ..hasRequiredFields = false;
-
-  SourceProvenance_FileHashesEntry() : super();
-  SourceProvenance_FileHashesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceProvenance_FileHashesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  SourceProvenance_FileHashesEntry clone() =>
-      SourceProvenance_FileHashesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SourceProvenance_FileHashesEntry create() =>
-      SourceProvenance_FileHashesEntry();
-  static PbList<SourceProvenance_FileHashesEntry> createRepeated() =>
-      PbList<SourceProvenance_FileHashesEntry>();
-  static SourceProvenance_FileHashesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlySourceProvenance_FileHashesEntry();
-    return _defaultInstance;
-  }
-
-  static SourceProvenance_FileHashesEntry _defaultInstance;
-  static void $checkItem(SourceProvenance_FileHashesEntry v) {
-    if (v is! SourceProvenance_FileHashesEntry)
-      checkItemFailed(v, 'SourceProvenance_FileHashesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  FileHashes get value => $_getN(1);
-  set value(FileHashes v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlySourceProvenance_FileHashesEntry
-    extends SourceProvenance_FileHashesEntry with ReadonlyMessageMixin {}
-
-class SourceProvenance extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SourceProvenance')
-    ..a<StorageSource>(3, 'resolvedStorageSource', PbFieldType.OM,
-        StorageSource.getDefault, StorageSource.create)
-    ..pp<SourceProvenance_FileHashesEntry>(
-        4,
-        'fileHashes',
-        PbFieldType.PM,
-        SourceProvenance_FileHashesEntry.$checkItem,
-        SourceProvenance_FileHashesEntry.create)
-    ..a<RepoSource>(6, 'resolvedRepoSource', PbFieldType.OM,
-        RepoSource.getDefault, RepoSource.create)
-    ..hasRequiredFields = false;
+class SourceProvenance extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceProvenance', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..a<StorageSource>(3, 'resolvedStorageSource', $pb.PbFieldType.OM, StorageSource.getDefault, StorageSource.create)
+    ..m<$core.String, FileHashes>(4, 'fileHashes', 'SourceProvenance.FileHashesEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OM, FileHashes.create, null, null , const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..a<RepoSource>(6, 'resolvedRepoSource', $pb.PbFieldType.OM, RepoSource.getDefault, RepoSource.create)
+    ..hasRequiredFields = false
+  ;
 
   SourceProvenance() : super();
-  SourceProvenance.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceProvenance.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceProvenance.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SourceProvenance.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SourceProvenance clone() => SourceProvenance()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SourceProvenance copyWith(void Function(SourceProvenance) updates) => super.copyWith((message) => updates(message as SourceProvenance));
+  $pb.BuilderInfo get info_ => _i;
   static SourceProvenance create() => SourceProvenance();
-  static PbList<SourceProvenance> createRepeated() =>
-      PbList<SourceProvenance>();
-  static SourceProvenance getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlySourceProvenance();
-    return _defaultInstance;
-  }
-
+  SourceProvenance createEmptyInstance() => create();
+  static $pb.PbList<SourceProvenance> createRepeated() => $pb.PbList<SourceProvenance>();
+  static SourceProvenance getDefault() => _defaultInstance ??= create()..freeze();
   static SourceProvenance _defaultInstance;
-  static void $checkItem(SourceProvenance v) {
-    if (v is! SourceProvenance) checkItemFailed(v, 'SourceProvenance');
-  }
 
   StorageSource get resolvedStorageSource => $_getN(0);
-  set resolvedStorageSource(StorageSource v) {
-    setField(3, v);
-  }
-
-  bool hasResolvedStorageSource() => $_has(0);
+  set resolvedStorageSource(StorageSource v) { setField(3, v); }
+  $core.bool hasResolvedStorageSource() => $_has(0);
   void clearResolvedStorageSource() => clearField(3);
 
-  List<SourceProvenance_FileHashesEntry> get fileHashes => $_getList(1);
+  $core.Map<$core.String, FileHashes> get fileHashes => $_getMap(1);
 
   RepoSource get resolvedRepoSource => $_getN(2);
-  set resolvedRepoSource(RepoSource v) {
-    setField(6, v);
-  }
-
-  bool hasResolvedRepoSource() => $_has(2);
+  set resolvedRepoSource(RepoSource v) { setField(6, v); }
+  $core.bool hasResolvedRepoSource() => $_has(2);
   void clearResolvedRepoSource() => clearField(6);
 }
 
-class _ReadonlySourceProvenance extends SourceProvenance
-    with ReadonlyMessageMixin {}
-
-class FileHashes extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FileHashes')
-    ..pp<Hash>(1, 'fileHash', PbFieldType.PM, Hash.$checkItem, Hash.create)
-    ..hasRequiredFields = false;
+class FileHashes extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileHashes', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..pc<Hash>(1, 'fileHash', $pb.PbFieldType.PM,Hash.create)
+    ..hasRequiredFields = false
+  ;
 
   FileHashes() : super();
-  FileHashes.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileHashes.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileHashes.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FileHashes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   FileHashes clone() => FileHashes()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FileHashes copyWith(void Function(FileHashes) updates) => super.copyWith((message) => updates(message as FileHashes));
+  $pb.BuilderInfo get info_ => _i;
   static FileHashes create() => FileHashes();
-  static PbList<FileHashes> createRepeated() => PbList<FileHashes>();
-  static FileHashes getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileHashes();
-    return _defaultInstance;
-  }
-
+  FileHashes createEmptyInstance() => create();
+  static $pb.PbList<FileHashes> createRepeated() => $pb.PbList<FileHashes>();
+  static FileHashes getDefault() => _defaultInstance ??= create()..freeze();
   static FileHashes _defaultInstance;
-  static void $checkItem(FileHashes v) {
-    if (v is! FileHashes) checkItemFailed(v, 'FileHashes');
-  }
 
-  List<Hash> get fileHash => $_getList(0);
+  $core.List<Hash> get fileHash => $_getList(0);
 }
 
-class _ReadonlyFileHashes extends FileHashes with ReadonlyMessageMixin {}
-
-class Hash extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Hash')
-    ..e<Hash_HashType>(1, 'type', PbFieldType.OE, Hash_HashType.NONE,
-        Hash_HashType.valueOf, Hash_HashType.values)
-    ..a<List<int>>(2, 'value', PbFieldType.OY)
-    ..hasRequiredFields = false;
+class Hash extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Hash', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..e<Hash_HashType>(1, 'type', $pb.PbFieldType.OE, Hash_HashType.NONE, Hash_HashType.valueOf, Hash_HashType.values)
+    ..a<$core.List<$core.int>>(2, 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
 
   Hash() : super();
-  Hash.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Hash.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Hash.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Hash.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Hash clone() => Hash()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Hash copyWith(void Function(Hash) updates) => super.copyWith((message) => updates(message as Hash));
+  $pb.BuilderInfo get info_ => _i;
   static Hash create() => Hash();
-  static PbList<Hash> createRepeated() => PbList<Hash>();
-  static Hash getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyHash();
-    return _defaultInstance;
-  }
-
+  Hash createEmptyInstance() => create();
+  static $pb.PbList<Hash> createRepeated() => $pb.PbList<Hash>();
+  static Hash getDefault() => _defaultInstance ??= create()..freeze();
   static Hash _defaultInstance;
-  static void $checkItem(Hash v) {
-    if (v is! Hash) checkItemFailed(v, 'Hash');
-  }
 
   Hash_HashType get type => $_getN(0);
-  set type(Hash_HashType v) {
-    setField(1, v);
-  }
-
-  bool hasType() => $_has(0);
+  set type(Hash_HashType v) { setField(1, v); }
+  $core.bool hasType() => $_has(0);
   void clearType() => clearField(1);
 
-  List<int> get value => $_getN(1);
-  set value(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasValue() => $_has(1);
+  $core.List<$core.int> get value => $_getN(1);
+  set value($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
-class _ReadonlyHash extends Hash with ReadonlyMessageMixin {}
-
-class Secret_SecretEnvEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Secret_SecretEnvEntry')
-    ..aOS(1, 'key')
-    ..a<List<int>>(2, 'value', PbFieldType.OY)
-    ..hasRequiredFields = false;
-
-  Secret_SecretEnvEntry() : super();
-  Secret_SecretEnvEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Secret_SecretEnvEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Secret_SecretEnvEntry clone() =>
-      Secret_SecretEnvEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Secret_SecretEnvEntry create() => Secret_SecretEnvEntry();
-  static PbList<Secret_SecretEnvEntry> createRepeated() =>
-      PbList<Secret_SecretEnvEntry>();
-  static Secret_SecretEnvEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlySecret_SecretEnvEntry();
-    return _defaultInstance;
-  }
-
-  static Secret_SecretEnvEntry _defaultInstance;
-  static void $checkItem(Secret_SecretEnvEntry v) {
-    if (v is! Secret_SecretEnvEntry)
-      checkItemFailed(v, 'Secret_SecretEnvEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  List<int> get value => $_getN(1);
-  set value(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlySecret_SecretEnvEntry extends Secret_SecretEnvEntry
-    with ReadonlyMessageMixin {}
-
-class Secret extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Secret')
+class Secret extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Secret', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'kmsKeyName')
-    ..pp<Secret_SecretEnvEntry>(3, 'secretEnv', PbFieldType.PM,
-        Secret_SecretEnvEntry.$checkItem, Secret_SecretEnvEntry.create)
-    ..hasRequiredFields = false;
+    ..m<$core.String, $core.List<$core.int>>(3, 'secretEnv', 'Secret.SecretEnvEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OY, null, null, null , const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..hasRequiredFields = false
+  ;
 
   Secret() : super();
-  Secret.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Secret.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Secret.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Secret.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Secret clone() => Secret()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Secret copyWith(void Function(Secret) updates) => super.copyWith((message) => updates(message as Secret));
+  $pb.BuilderInfo get info_ => _i;
   static Secret create() => Secret();
-  static PbList<Secret> createRepeated() => PbList<Secret>();
-  static Secret getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySecret();
-    return _defaultInstance;
-  }
-
+  Secret createEmptyInstance() => create();
+  static $pb.PbList<Secret> createRepeated() => $pb.PbList<Secret>();
+  static Secret getDefault() => _defaultInstance ??= create()..freeze();
   static Secret _defaultInstance;
-  static void $checkItem(Secret v) {
-    if (v is! Secret) checkItemFailed(v, 'Secret');
-  }
 
-  String get kmsKeyName => $_getS(0, '');
-  set kmsKeyName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKmsKeyName() => $_has(0);
+  $core.String get kmsKeyName => $_getS(0, '');
+  set kmsKeyName($core.String v) { $_setString(0, v); }
+  $core.bool hasKmsKeyName() => $_has(0);
   void clearKmsKeyName() => clearField(1);
 
-  List<Secret_SecretEnvEntry> get secretEnv => $_getList(1);
+  $core.Map<$core.String, $core.List<$core.int>> get secretEnv => $_getMap(1);
 }
 
-class _ReadonlySecret extends Secret with ReadonlyMessageMixin {}
-
-class CreateBuildRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateBuildRequest')
+class CreateBuildRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateBuildRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
-    ..a<Build>(2, 'build', PbFieldType.OM, Build.getDefault, Build.create)
-    ..hasRequiredFields = false;
+    ..a<Build>(2, 'build', $pb.PbFieldType.OM, Build.getDefault, Build.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateBuildRequest() : super();
-  CreateBuildRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateBuildRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateBuildRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateBuildRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CreateBuildRequest clone() => CreateBuildRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateBuildRequest copyWith(void Function(CreateBuildRequest) updates) => super.copyWith((message) => updates(message as CreateBuildRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateBuildRequest create() => CreateBuildRequest();
-  static PbList<CreateBuildRequest> createRepeated() =>
-      PbList<CreateBuildRequest>();
-  static CreateBuildRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateBuildRequest();
-    return _defaultInstance;
-  }
-
+  CreateBuildRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateBuildRequest> createRepeated() => $pb.PbList<CreateBuildRequest>();
+  static CreateBuildRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateBuildRequest _defaultInstance;
-  static void $checkItem(CreateBuildRequest v) {
-    if (v is! CreateBuildRequest) checkItemFailed(v, 'CreateBuildRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
   Build get build => $_getN(1);
-  set build(Build v) {
-    setField(2, v);
-  }
-
-  bool hasBuild() => $_has(1);
+  set build(Build v) { setField(2, v); }
+  $core.bool hasBuild() => $_has(1);
   void clearBuild() => clearField(2);
 }
 
-class _ReadonlyCreateBuildRequest extends CreateBuildRequest
-    with ReadonlyMessageMixin {}
-
-class GetBuildRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetBuildRequest')
+class GetBuildRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBuildRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'id')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetBuildRequest() : super();
-  GetBuildRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetBuildRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetBuildRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetBuildRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetBuildRequest clone() => GetBuildRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetBuildRequest copyWith(void Function(GetBuildRequest) updates) => super.copyWith((message) => updates(message as GetBuildRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetBuildRequest create() => GetBuildRequest();
-  static PbList<GetBuildRequest> createRepeated() => PbList<GetBuildRequest>();
-  static GetBuildRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetBuildRequest();
-    return _defaultInstance;
-  }
-
+  GetBuildRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBuildRequest> createRepeated() => $pb.PbList<GetBuildRequest>();
+  static GetBuildRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetBuildRequest _defaultInstance;
-  static void $checkItem(GetBuildRequest v) {
-    if (v is! GetBuildRequest) checkItemFailed(v, 'GetBuildRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get id => $_getS(1, '');
-  set id(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasId() => $_has(1);
+  $core.String get id => $_getS(1, '');
+  set id($core.String v) { $_setString(1, v); }
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 }
 
-class _ReadonlyGetBuildRequest extends GetBuildRequest
-    with ReadonlyMessageMixin {}
-
-class ListBuildsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListBuildsRequest')
+class ListBuildsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBuildsRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(8, 'filter')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListBuildsRequest() : super();
-  ListBuildsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListBuildsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListBuildsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListBuildsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListBuildsRequest clone() => ListBuildsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListBuildsRequest copyWith(void Function(ListBuildsRequest) updates) => super.copyWith((message) => updates(message as ListBuildsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListBuildsRequest create() => ListBuildsRequest();
-  static PbList<ListBuildsRequest> createRepeated() =>
-      PbList<ListBuildsRequest>();
-  static ListBuildsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListBuildsRequest();
-    return _defaultInstance;
-  }
-
+  ListBuildsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListBuildsRequest> createRepeated() => $pb.PbList<ListBuildsRequest>();
+  static ListBuildsRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListBuildsRequest _defaultInstance;
-  static void $checkItem(ListBuildsRequest v) {
-    if (v is! ListBuildsRequest) checkItemFailed(v, 'ListBuildsRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasPageSize() => $_has(1);
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasPageToken() => $_has(2);
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) { $_setString(2, v); }
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  String get filter => $_getS(3, '');
-  set filter(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasFilter() => $_has(3);
+  $core.String get filter => $_getS(3, '');
+  set filter($core.String v) { $_setString(3, v); }
+  $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(8);
 }
 
-class _ReadonlyListBuildsRequest extends ListBuildsRequest
-    with ReadonlyMessageMixin {}
-
-class ListBuildsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListBuildsResponse')
-    ..pp<Build>(1, 'builds', PbFieldType.PM, Build.$checkItem, Build.create)
+class ListBuildsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBuildsResponse', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..pc<Build>(1, 'builds', $pb.PbFieldType.PM,Build.create)
     ..aOS(2, 'nextPageToken')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListBuildsResponse() : super();
-  ListBuildsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListBuildsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListBuildsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListBuildsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ListBuildsResponse clone() => ListBuildsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListBuildsResponse copyWith(void Function(ListBuildsResponse) updates) => super.copyWith((message) => updates(message as ListBuildsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListBuildsResponse create() => ListBuildsResponse();
-  static PbList<ListBuildsResponse> createRepeated() =>
-      PbList<ListBuildsResponse>();
-  static ListBuildsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListBuildsResponse();
-    return _defaultInstance;
-  }
-
+  ListBuildsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListBuildsResponse> createRepeated() => $pb.PbList<ListBuildsResponse>();
+  static ListBuildsResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListBuildsResponse _defaultInstance;
-  static void $checkItem(ListBuildsResponse v) {
-    if (v is! ListBuildsResponse) checkItemFailed(v, 'ListBuildsResponse');
-  }
 
-  List<Build> get builds => $_getList(0);
+  $core.List<Build> get builds => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasNextPageToken() => $_has(1);
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) { $_setString(1, v); }
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListBuildsResponse extends ListBuildsResponse
-    with ReadonlyMessageMixin {}
-
-class CancelBuildRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CancelBuildRequest')
+class CancelBuildRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancelBuildRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'id')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   CancelBuildRequest() : super();
-  CancelBuildRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CancelBuildRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CancelBuildRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CancelBuildRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CancelBuildRequest clone() => CancelBuildRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CancelBuildRequest copyWith(void Function(CancelBuildRequest) updates) => super.copyWith((message) => updates(message as CancelBuildRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CancelBuildRequest create() => CancelBuildRequest();
-  static PbList<CancelBuildRequest> createRepeated() =>
-      PbList<CancelBuildRequest>();
-  static CancelBuildRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCancelBuildRequest();
-    return _defaultInstance;
-  }
-
+  CancelBuildRequest createEmptyInstance() => create();
+  static $pb.PbList<CancelBuildRequest> createRepeated() => $pb.PbList<CancelBuildRequest>();
+  static CancelBuildRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CancelBuildRequest _defaultInstance;
-  static void $checkItem(CancelBuildRequest v) {
-    if (v is! CancelBuildRequest) checkItemFailed(v, 'CancelBuildRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get id => $_getS(1, '');
-  set id(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasId() => $_has(1);
+  $core.String get id => $_getS(1, '');
+  set id($core.String v) { $_setString(1, v); }
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 }
 
-class _ReadonlyCancelBuildRequest extends CancelBuildRequest
-    with ReadonlyMessageMixin {}
-
-class BuildTrigger_SubstitutionsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildTrigger_SubstitutionsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  BuildTrigger_SubstitutionsEntry() : super();
-  BuildTrigger_SubstitutionsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildTrigger_SubstitutionsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BuildTrigger_SubstitutionsEntry clone() =>
-      BuildTrigger_SubstitutionsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BuildTrigger_SubstitutionsEntry create() =>
-      BuildTrigger_SubstitutionsEntry();
-  static PbList<BuildTrigger_SubstitutionsEntry> createRepeated() =>
-      PbList<BuildTrigger_SubstitutionsEntry>();
-  static BuildTrigger_SubstitutionsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBuildTrigger_SubstitutionsEntry();
-    return _defaultInstance;
-  }
-
-  static BuildTrigger_SubstitutionsEntry _defaultInstance;
-  static void $checkItem(BuildTrigger_SubstitutionsEntry v) {
-    if (v is! BuildTrigger_SubstitutionsEntry)
-      checkItemFailed(v, 'BuildTrigger_SubstitutionsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
+enum BuildTrigger_BuildTemplate {
+  build, 
+  filename, 
+  notSet
 }
 
-class _ReadonlyBuildTrigger_SubstitutionsEntry
-    extends BuildTrigger_SubstitutionsEntry with ReadonlyMessageMixin {}
-
-class BuildTrigger extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildTrigger')
+class BuildTrigger extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, BuildTrigger_BuildTemplate> _BuildTrigger_BuildTemplateByTag = {
+    4 : BuildTrigger_BuildTemplate.build,
+    8 : BuildTrigger_BuildTemplate.filename,
+    0 : BuildTrigger_BuildTemplate.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildTrigger', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'id')
-    ..a<Build>(4, 'build', PbFieldType.OM, Build.getDefault, Build.create)
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<RepoSource>(7, 'triggerTemplate', PbFieldType.OM, RepoSource.getDefault,
-        RepoSource.create)
+    ..a<Build>(4, 'build', $pb.PbFieldType.OM, Build.getDefault, Build.create)
+    ..a<$1.Timestamp>(5, 'createTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<RepoSource>(7, 'triggerTemplate', $pb.PbFieldType.OM, RepoSource.getDefault, RepoSource.create)
     ..aOS(8, 'filename')
     ..aOB(9, 'disabled')
     ..aOS(10, 'description')
-    ..pp<BuildTrigger_SubstitutionsEntry>(
-        11,
-        'substitutions',
-        PbFieldType.PM,
-        BuildTrigger_SubstitutionsEntry.$checkItem,
-        BuildTrigger_SubstitutionsEntry.create)
-    ..hasRequiredFields = false;
+    ..m<$core.String, $core.String>(11, 'substitutions', 'BuildTrigger.SubstitutionsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..pPS(15, 'ignoredFiles')
+    ..pPS(16, 'includedFiles')
+    ..oo(0, [4, 8])
+    ..hasRequiredFields = false
+  ;
 
   BuildTrigger() : super();
-  BuildTrigger.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildTrigger.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildTrigger.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuildTrigger.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BuildTrigger clone() => BuildTrigger()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuildTrigger copyWith(void Function(BuildTrigger) updates) => super.copyWith((message) => updates(message as BuildTrigger));
+  $pb.BuilderInfo get info_ => _i;
   static BuildTrigger create() => BuildTrigger();
-  static PbList<BuildTrigger> createRepeated() => PbList<BuildTrigger>();
-  static BuildTrigger getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildTrigger();
-    return _defaultInstance;
-  }
-
+  BuildTrigger createEmptyInstance() => create();
+  static $pb.PbList<BuildTrigger> createRepeated() => $pb.PbList<BuildTrigger>();
+  static BuildTrigger getDefault() => _defaultInstance ??= create()..freeze();
   static BuildTrigger _defaultInstance;
-  static void $checkItem(BuildTrigger v) {
-    if (v is! BuildTrigger) checkItemFailed(v, 'BuildTrigger');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
-    $_setString(0, v);
-  }
+  BuildTrigger_BuildTemplate whichBuildTemplate() => _BuildTrigger_BuildTemplateByTag[$_whichOneof(0)];
+  void clearBuildTemplate() => clearField($_whichOneof(0));
 
-  bool hasId() => $_has(0);
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) { $_setString(0, v); }
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
   Build get build => $_getN(1);
-  set build(Build v) {
-    setField(4, v);
-  }
-
-  bool hasBuild() => $_has(1);
+  set build(Build v) { setField(4, v); }
+  $core.bool hasBuild() => $_has(1);
   void clearBuild() => clearField(4);
 
-  $google$protobuf.Timestamp get createTime => $_getN(2);
-  set createTime($google$protobuf.Timestamp v) {
-    setField(5, v);
-  }
-
-  bool hasCreateTime() => $_has(2);
+  $1.Timestamp get createTime => $_getN(2);
+  set createTime($1.Timestamp v) { setField(5, v); }
+  $core.bool hasCreateTime() => $_has(2);
   void clearCreateTime() => clearField(5);
 
   RepoSource get triggerTemplate => $_getN(3);
-  set triggerTemplate(RepoSource v) {
-    setField(7, v);
-  }
-
-  bool hasTriggerTemplate() => $_has(3);
+  set triggerTemplate(RepoSource v) { setField(7, v); }
+  $core.bool hasTriggerTemplate() => $_has(3);
   void clearTriggerTemplate() => clearField(7);
 
-  String get filename => $_getS(4, '');
-  set filename(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasFilename() => $_has(4);
+  $core.String get filename => $_getS(4, '');
+  set filename($core.String v) { $_setString(4, v); }
+  $core.bool hasFilename() => $_has(4);
   void clearFilename() => clearField(8);
 
-  bool get disabled => $_get(5, false);
-  set disabled(bool v) {
-    $_setBool(5, v);
-  }
-
-  bool hasDisabled() => $_has(5);
+  $core.bool get disabled => $_get(5, false);
+  set disabled($core.bool v) { $_setBool(5, v); }
+  $core.bool hasDisabled() => $_has(5);
   void clearDisabled() => clearField(9);
 
-  String get description => $_getS(6, '');
-  set description(String v) {
-    $_setString(6, v);
-  }
-
-  bool hasDescription() => $_has(6);
+  $core.String get description => $_getS(6, '');
+  set description($core.String v) { $_setString(6, v); }
+  $core.bool hasDescription() => $_has(6);
   void clearDescription() => clearField(10);
 
-  List<BuildTrigger_SubstitutionsEntry> get substitutions => $_getList(7);
+  $core.Map<$core.String, $core.String> get substitutions => $_getMap(7);
+
+  $core.List<$core.String> get ignoredFiles => $_getList(8);
+
+  $core.List<$core.String> get includedFiles => $_getList(9);
 }
 
-class _ReadonlyBuildTrigger extends BuildTrigger with ReadonlyMessageMixin {}
-
-class CreateBuildTriggerRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('CreateBuildTriggerRequest')
+class CreateBuildTriggerRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateBuildTriggerRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
-    ..a<BuildTrigger>(2, 'trigger', PbFieldType.OM, BuildTrigger.getDefault,
-        BuildTrigger.create)
-    ..hasRequiredFields = false;
+    ..a<BuildTrigger>(2, 'trigger', $pb.PbFieldType.OM, BuildTrigger.getDefault, BuildTrigger.create)
+    ..hasRequiredFields = false
+  ;
 
   CreateBuildTriggerRequest() : super();
-  CreateBuildTriggerRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateBuildTriggerRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CreateBuildTriggerRequest clone() =>
-      CreateBuildTriggerRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  CreateBuildTriggerRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  CreateBuildTriggerRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  CreateBuildTriggerRequest clone() => CreateBuildTriggerRequest()..mergeFromMessage(this);
+  CreateBuildTriggerRequest copyWith(void Function(CreateBuildTriggerRequest) updates) => super.copyWith((message) => updates(message as CreateBuildTriggerRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateBuildTriggerRequest create() => CreateBuildTriggerRequest();
-  static PbList<CreateBuildTriggerRequest> createRepeated() =>
-      PbList<CreateBuildTriggerRequest>();
-  static CreateBuildTriggerRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyCreateBuildTriggerRequest();
-    return _defaultInstance;
-  }
-
+  CreateBuildTriggerRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateBuildTriggerRequest> createRepeated() => $pb.PbList<CreateBuildTriggerRequest>();
+  static CreateBuildTriggerRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CreateBuildTriggerRequest _defaultInstance;
-  static void $checkItem(CreateBuildTriggerRequest v) {
-    if (v is! CreateBuildTriggerRequest)
-      checkItemFailed(v, 'CreateBuildTriggerRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
   BuildTrigger get trigger => $_getN(1);
-  set trigger(BuildTrigger v) {
-    setField(2, v);
-  }
-
-  bool hasTrigger() => $_has(1);
+  set trigger(BuildTrigger v) { setField(2, v); }
+  $core.bool hasTrigger() => $_has(1);
   void clearTrigger() => clearField(2);
 }
 
-class _ReadonlyCreateBuildTriggerRequest extends CreateBuildTriggerRequest
-    with ReadonlyMessageMixin {}
-
-class GetBuildTriggerRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetBuildTriggerRequest')
+class GetBuildTriggerRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBuildTriggerRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'triggerId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetBuildTriggerRequest() : super();
-  GetBuildTriggerRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetBuildTriggerRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GetBuildTriggerRequest clone() =>
-      GetBuildTriggerRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetBuildTriggerRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetBuildTriggerRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GetBuildTriggerRequest clone() => GetBuildTriggerRequest()..mergeFromMessage(this);
+  GetBuildTriggerRequest copyWith(void Function(GetBuildTriggerRequest) updates) => super.copyWith((message) => updates(message as GetBuildTriggerRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetBuildTriggerRequest create() => GetBuildTriggerRequest();
-  static PbList<GetBuildTriggerRequest> createRepeated() =>
-      PbList<GetBuildTriggerRequest>();
-  static GetBuildTriggerRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGetBuildTriggerRequest();
-    return _defaultInstance;
-  }
-
+  GetBuildTriggerRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBuildTriggerRequest> createRepeated() => $pb.PbList<GetBuildTriggerRequest>();
+  static GetBuildTriggerRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetBuildTriggerRequest _defaultInstance;
-  static void $checkItem(GetBuildTriggerRequest v) {
-    if (v is! GetBuildTriggerRequest)
-      checkItemFailed(v, 'GetBuildTriggerRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get triggerId => $_getS(1, '');
-  set triggerId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTriggerId() => $_has(1);
+  $core.String get triggerId => $_getS(1, '');
+  set triggerId($core.String v) { $_setString(1, v); }
+  $core.bool hasTriggerId() => $_has(1);
   void clearTriggerId() => clearField(2);
 }
 
-class _ReadonlyGetBuildTriggerRequest extends GetBuildTriggerRequest
-    with ReadonlyMessageMixin {}
-
-class ListBuildTriggersRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListBuildTriggersRequest')
+class ListBuildTriggersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBuildTriggersRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   ListBuildTriggersRequest() : super();
-  ListBuildTriggersRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListBuildTriggersRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListBuildTriggersRequest clone() =>
-      ListBuildTriggersRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListBuildTriggersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListBuildTriggersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListBuildTriggersRequest clone() => ListBuildTriggersRequest()..mergeFromMessage(this);
+  ListBuildTriggersRequest copyWith(void Function(ListBuildTriggersRequest) updates) => super.copyWith((message) => updates(message as ListBuildTriggersRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ListBuildTriggersRequest create() => ListBuildTriggersRequest();
-  static PbList<ListBuildTriggersRequest> createRepeated() =>
-      PbList<ListBuildTriggersRequest>();
-  static ListBuildTriggersRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListBuildTriggersRequest();
-    return _defaultInstance;
-  }
-
+  ListBuildTriggersRequest createEmptyInstance() => create();
+  static $pb.PbList<ListBuildTriggersRequest> createRepeated() => $pb.PbList<ListBuildTriggersRequest>();
+  static ListBuildTriggersRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ListBuildTriggersRequest _defaultInstance;
-  static void $checkItem(ListBuildTriggersRequest v) {
-    if (v is! ListBuildTriggersRequest)
-      checkItemFailed(v, 'ListBuildTriggersRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 }
 
-class _ReadonlyListBuildTriggersRequest extends ListBuildTriggersRequest
-    with ReadonlyMessageMixin {}
-
-class ListBuildTriggersResponse extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ListBuildTriggersResponse')
-    ..pp<BuildTrigger>(1, 'triggers', PbFieldType.PM, BuildTrigger.$checkItem,
-        BuildTrigger.create)
-    ..hasRequiredFields = false;
+class ListBuildTriggersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBuildTriggersResponse', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..pc<BuildTrigger>(1, 'triggers', $pb.PbFieldType.PM,BuildTrigger.create)
+    ..hasRequiredFields = false
+  ;
 
   ListBuildTriggersResponse() : super();
-  ListBuildTriggersResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListBuildTriggersResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ListBuildTriggersResponse clone() =>
-      ListBuildTriggersResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ListBuildTriggersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ListBuildTriggersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ListBuildTriggersResponse clone() => ListBuildTriggersResponse()..mergeFromMessage(this);
+  ListBuildTriggersResponse copyWith(void Function(ListBuildTriggersResponse) updates) => super.copyWith((message) => updates(message as ListBuildTriggersResponse));
+  $pb.BuilderInfo get info_ => _i;
   static ListBuildTriggersResponse create() => ListBuildTriggersResponse();
-  static PbList<ListBuildTriggersResponse> createRepeated() =>
-      PbList<ListBuildTriggersResponse>();
-  static ListBuildTriggersResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyListBuildTriggersResponse();
-    return _defaultInstance;
-  }
-
+  ListBuildTriggersResponse createEmptyInstance() => create();
+  static $pb.PbList<ListBuildTriggersResponse> createRepeated() => $pb.PbList<ListBuildTriggersResponse>();
+  static ListBuildTriggersResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ListBuildTriggersResponse _defaultInstance;
-  static void $checkItem(ListBuildTriggersResponse v) {
-    if (v is! ListBuildTriggersResponse)
-      checkItemFailed(v, 'ListBuildTriggersResponse');
-  }
 
-  List<BuildTrigger> get triggers => $_getList(0);
+  $core.List<BuildTrigger> get triggers => $_getList(0);
 }
 
-class _ReadonlyListBuildTriggersResponse extends ListBuildTriggersResponse
-    with ReadonlyMessageMixin {}
-
-class DeleteBuildTriggerRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DeleteBuildTriggerRequest')
+class DeleteBuildTriggerRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteBuildTriggerRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'triggerId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   DeleteBuildTriggerRequest() : super();
-  DeleteBuildTriggerRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteBuildTriggerRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DeleteBuildTriggerRequest clone() =>
-      DeleteBuildTriggerRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DeleteBuildTriggerRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DeleteBuildTriggerRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DeleteBuildTriggerRequest clone() => DeleteBuildTriggerRequest()..mergeFromMessage(this);
+  DeleteBuildTriggerRequest copyWith(void Function(DeleteBuildTriggerRequest) updates) => super.copyWith((message) => updates(message as DeleteBuildTriggerRequest));
+  $pb.BuilderInfo get info_ => _i;
   static DeleteBuildTriggerRequest create() => DeleteBuildTriggerRequest();
-  static PbList<DeleteBuildTriggerRequest> createRepeated() =>
-      PbList<DeleteBuildTriggerRequest>();
-  static DeleteBuildTriggerRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDeleteBuildTriggerRequest();
-    return _defaultInstance;
-  }
-
+  DeleteBuildTriggerRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteBuildTriggerRequest> createRepeated() => $pb.PbList<DeleteBuildTriggerRequest>();
+  static DeleteBuildTriggerRequest getDefault() => _defaultInstance ??= create()..freeze();
   static DeleteBuildTriggerRequest _defaultInstance;
-  static void $checkItem(DeleteBuildTriggerRequest v) {
-    if (v is! DeleteBuildTriggerRequest)
-      checkItemFailed(v, 'DeleteBuildTriggerRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get triggerId => $_getS(1, '');
-  set triggerId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTriggerId() => $_has(1);
+  $core.String get triggerId => $_getS(1, '');
+  set triggerId($core.String v) { $_setString(1, v); }
+  $core.bool hasTriggerId() => $_has(1);
   void clearTriggerId() => clearField(2);
 }
 
-class _ReadonlyDeleteBuildTriggerRequest extends DeleteBuildTriggerRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateBuildTriggerRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateBuildTriggerRequest')
+class UpdateBuildTriggerRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateBuildTriggerRequest', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'triggerId')
-    ..a<BuildTrigger>(3, 'trigger', PbFieldType.OM, BuildTrigger.getDefault,
-        BuildTrigger.create)
-    ..hasRequiredFields = false;
+    ..a<BuildTrigger>(3, 'trigger', $pb.PbFieldType.OM, BuildTrigger.getDefault, BuildTrigger.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateBuildTriggerRequest() : super();
-  UpdateBuildTriggerRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateBuildTriggerRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UpdateBuildTriggerRequest clone() =>
-      UpdateBuildTriggerRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateBuildTriggerRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateBuildTriggerRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UpdateBuildTriggerRequest clone() => UpdateBuildTriggerRequest()..mergeFromMessage(this);
+  UpdateBuildTriggerRequest copyWith(void Function(UpdateBuildTriggerRequest) updates) => super.copyWith((message) => updates(message as UpdateBuildTriggerRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateBuildTriggerRequest create() => UpdateBuildTriggerRequest();
-  static PbList<UpdateBuildTriggerRequest> createRepeated() =>
-      PbList<UpdateBuildTriggerRequest>();
-  static UpdateBuildTriggerRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateBuildTriggerRequest();
-    return _defaultInstance;
-  }
-
+  UpdateBuildTriggerRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateBuildTriggerRequest> createRepeated() => $pb.PbList<UpdateBuildTriggerRequest>();
+  static UpdateBuildTriggerRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateBuildTriggerRequest _defaultInstance;
-  static void $checkItem(UpdateBuildTriggerRequest v) {
-    if (v is! UpdateBuildTriggerRequest)
-      checkItemFailed(v, 'UpdateBuildTriggerRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get triggerId => $_getS(1, '');
-  set triggerId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasTriggerId() => $_has(1);
+  $core.String get triggerId => $_getS(1, '');
+  set triggerId($core.String v) { $_setString(1, v); }
+  $core.bool hasTriggerId() => $_has(1);
   void clearTriggerId() => clearField(2);
 
   BuildTrigger get trigger => $_getN(2);
-  set trigger(BuildTrigger v) {
-    setField(3, v);
-  }
-
-  bool hasTrigger() => $_has(2);
+  set trigger(BuildTrigger v) { setField(3, v); }
+  $core.bool hasTrigger() => $_has(2);
   void clearTrigger() => clearField(3);
 }
 
-class _ReadonlyUpdateBuildTriggerRequest extends UpdateBuildTriggerRequest
-    with ReadonlyMessageMixin {}
-
-class BuildOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildOptions')
-    ..pp<Hash_HashType>(
-        1,
-        'sourceProvenanceHash',
-        PbFieldType.PE,
-        Hash_HashType.$checkItem,
-        null,
-        Hash_HashType.valueOf,
-        Hash_HashType.values)
-    ..e<BuildOptions_VerifyOption>(
-        2,
-        'requestedVerifyOption',
-        PbFieldType.OE,
-        BuildOptions_VerifyOption.NOT_VERIFIED,
-        BuildOptions_VerifyOption.valueOf,
-        BuildOptions_VerifyOption.values)
-    ..e<BuildOptions_MachineType>(
-        3,
-        'machineType',
-        PbFieldType.OE,
-        BuildOptions_MachineType.UNSPECIFIED,
-        BuildOptions_MachineType.valueOf,
-        BuildOptions_MachineType.values)
-    ..e<BuildOptions_SubstitutionOption>(
-        4,
-        'substitutionOption',
-        PbFieldType.OE,
-        BuildOptions_SubstitutionOption.MUST_MATCH,
-        BuildOptions_SubstitutionOption.valueOf,
-        BuildOptions_SubstitutionOption.values)
-    ..e<BuildOptions_LogStreamingOption>(
-        5,
-        'logStreamingOption',
-        PbFieldType.OE,
-        BuildOptions_LogStreamingOption.STREAM_DEFAULT,
-        BuildOptions_LogStreamingOption.valueOf,
-        BuildOptions_LogStreamingOption.values)
+class BuildOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildOptions', package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
+    ..pc<Hash_HashType>(1, 'sourceProvenanceHash', $pb.PbFieldType.PE, null, Hash_HashType.valueOf, Hash_HashType.values)
+    ..e<BuildOptions_VerifyOption>(2, 'requestedVerifyOption', $pb.PbFieldType.OE, BuildOptions_VerifyOption.NOT_VERIFIED, BuildOptions_VerifyOption.valueOf, BuildOptions_VerifyOption.values)
+    ..e<BuildOptions_MachineType>(3, 'machineType', $pb.PbFieldType.OE, BuildOptions_MachineType.UNSPECIFIED, BuildOptions_MachineType.valueOf, BuildOptions_MachineType.values)
+    ..e<BuildOptions_SubstitutionOption>(4, 'substitutionOption', $pb.PbFieldType.OE, BuildOptions_SubstitutionOption.MUST_MATCH, BuildOptions_SubstitutionOption.valueOf, BuildOptions_SubstitutionOption.values)
+    ..e<BuildOptions_LogStreamingOption>(5, 'logStreamingOption', $pb.PbFieldType.OE, BuildOptions_LogStreamingOption.STREAM_DEFAULT, BuildOptions_LogStreamingOption.valueOf, BuildOptions_LogStreamingOption.values)
     ..aInt64(6, 'diskSizeGb')
-    ..hasRequiredFields = false;
+    ..aOS(7, 'workerPool')
+    ..e<BuildOptions_LoggingMode>(11, 'logging', $pb.PbFieldType.OE, BuildOptions_LoggingMode.LOGGING_UNSPECIFIED, BuildOptions_LoggingMode.valueOf, BuildOptions_LoggingMode.values)
+    ..pPS(12, 'env')
+    ..pPS(13, 'secretEnv')
+    ..pc<Volume>(14, 'volumes', $pb.PbFieldType.PM,Volume.create)
+    ..hasRequiredFields = false
+  ;
 
   BuildOptions() : super();
-  BuildOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuildOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BuildOptions clone() => BuildOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuildOptions copyWith(void Function(BuildOptions) updates) => super.copyWith((message) => updates(message as BuildOptions));
+  $pb.BuilderInfo get info_ => _i;
   static BuildOptions create() => BuildOptions();
-  static PbList<BuildOptions> createRepeated() => PbList<BuildOptions>();
-  static BuildOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildOptions();
-    return _defaultInstance;
-  }
-
+  BuildOptions createEmptyInstance() => create();
+  static $pb.PbList<BuildOptions> createRepeated() => $pb.PbList<BuildOptions>();
+  static BuildOptions getDefault() => _defaultInstance ??= create()..freeze();
   static BuildOptions _defaultInstance;
-  static void $checkItem(BuildOptions v) {
-    if (v is! BuildOptions) checkItemFailed(v, 'BuildOptions');
-  }
 
-  List<Hash_HashType> get sourceProvenanceHash => $_getList(0);
+  $core.List<Hash_HashType> get sourceProvenanceHash => $_getList(0);
 
   BuildOptions_VerifyOption get requestedVerifyOption => $_getN(1);
-  set requestedVerifyOption(BuildOptions_VerifyOption v) {
-    setField(2, v);
-  }
-
-  bool hasRequestedVerifyOption() => $_has(1);
+  set requestedVerifyOption(BuildOptions_VerifyOption v) { setField(2, v); }
+  $core.bool hasRequestedVerifyOption() => $_has(1);
   void clearRequestedVerifyOption() => clearField(2);
 
   BuildOptions_MachineType get machineType => $_getN(2);
-  set machineType(BuildOptions_MachineType v) {
-    setField(3, v);
-  }
-
-  bool hasMachineType() => $_has(2);
+  set machineType(BuildOptions_MachineType v) { setField(3, v); }
+  $core.bool hasMachineType() => $_has(2);
   void clearMachineType() => clearField(3);
 
   BuildOptions_SubstitutionOption get substitutionOption => $_getN(3);
-  set substitutionOption(BuildOptions_SubstitutionOption v) {
-    setField(4, v);
-  }
-
-  bool hasSubstitutionOption() => $_has(3);
+  set substitutionOption(BuildOptions_SubstitutionOption v) { setField(4, v); }
+  $core.bool hasSubstitutionOption() => $_has(3);
   void clearSubstitutionOption() => clearField(4);
 
   BuildOptions_LogStreamingOption get logStreamingOption => $_getN(4);
-  set logStreamingOption(BuildOptions_LogStreamingOption v) {
-    setField(5, v);
-  }
-
-  bool hasLogStreamingOption() => $_has(4);
+  set logStreamingOption(BuildOptions_LogStreamingOption v) { setField(5, v); }
+  $core.bool hasLogStreamingOption() => $_has(4);
   void clearLogStreamingOption() => clearField(5);
 
   Int64 get diskSizeGb => $_getI64(5);
-  set diskSizeGb(Int64 v) {
-    $_setInt64(5, v);
-  }
-
-  bool hasDiskSizeGb() => $_has(5);
+  set diskSizeGb(Int64 v) { $_setInt64(5, v); }
+  $core.bool hasDiskSizeGb() => $_has(5);
   void clearDiskSizeGb() => clearField(6);
-}
 
-class _ReadonlyBuildOptions extends BuildOptions with ReadonlyMessageMixin {}
+  $core.String get workerPool => $_getS(6, '');
+  set workerPool($core.String v) { $_setString(6, v); }
+  $core.bool hasWorkerPool() => $_has(6);
+  void clearWorkerPool() => clearField(7);
+
+  BuildOptions_LoggingMode get logging => $_getN(7);
+  set logging(BuildOptions_LoggingMode v) { setField(11, v); }
+  $core.bool hasLogging() => $_has(7);
+  void clearLogging() => clearField(11);
+
+  $core.List<$core.String> get env => $_getList(8);
+
+  $core.List<$core.String> get secretEnv => $_getList(9);
+
+  $core.List<Volume> get volumes => $_getList(10);
+}
 
 class CloudBuildApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   CloudBuildApi(this._client);
 
-  Future<$google$longrunning.Operation> createBuild(
-      ClientContext ctx, CreateBuildRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'CloudBuild', 'CreateBuild', request, emptyResponse);
+  $async.Future<$2.Operation> createBuild($pb.ClientContext ctx, CreateBuildRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'CloudBuild', 'CreateBuild', request, emptyResponse);
   }
-
-  Future<Build> getBuild(ClientContext ctx, GetBuildRequest request) {
+  $async.Future<Build> getBuild($pb.ClientContext ctx, GetBuildRequest request) {
     var emptyResponse = Build();
-    return _client.invoke<Build>(
-        ctx, 'CloudBuild', 'GetBuild', request, emptyResponse);
+    return _client.invoke<Build>(ctx, 'CloudBuild', 'GetBuild', request, emptyResponse);
   }
-
-  Future<ListBuildsResponse> listBuilds(
-      ClientContext ctx, ListBuildsRequest request) {
+  $async.Future<ListBuildsResponse> listBuilds($pb.ClientContext ctx, ListBuildsRequest request) {
     var emptyResponse = ListBuildsResponse();
-    return _client.invoke<ListBuildsResponse>(
-        ctx, 'CloudBuild', 'ListBuilds', request, emptyResponse);
+    return _client.invoke<ListBuildsResponse>(ctx, 'CloudBuild', 'ListBuilds', request, emptyResponse);
   }
-
-  Future<Build> cancelBuild(ClientContext ctx, CancelBuildRequest request) {
+  $async.Future<Build> cancelBuild($pb.ClientContext ctx, CancelBuildRequest request) {
     var emptyResponse = Build();
-    return _client.invoke<Build>(
-        ctx, 'CloudBuild', 'CancelBuild', request, emptyResponse);
+    return _client.invoke<Build>(ctx, 'CloudBuild', 'CancelBuild', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> retryBuild(
-      ClientContext ctx, RetryBuildRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'CloudBuild', 'RetryBuild', request, emptyResponse);
+  $async.Future<$2.Operation> retryBuild($pb.ClientContext ctx, RetryBuildRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'CloudBuild', 'RetryBuild', request, emptyResponse);
   }
-
-  Future<BuildTrigger> createBuildTrigger(
-      ClientContext ctx, CreateBuildTriggerRequest request) {
+  $async.Future<BuildTrigger> createBuildTrigger($pb.ClientContext ctx, CreateBuildTriggerRequest request) {
     var emptyResponse = BuildTrigger();
-    return _client.invoke<BuildTrigger>(
-        ctx, 'CloudBuild', 'CreateBuildTrigger', request, emptyResponse);
+    return _client.invoke<BuildTrigger>(ctx, 'CloudBuild', 'CreateBuildTrigger', request, emptyResponse);
   }
-
-  Future<BuildTrigger> getBuildTrigger(
-      ClientContext ctx, GetBuildTriggerRequest request) {
+  $async.Future<BuildTrigger> getBuildTrigger($pb.ClientContext ctx, GetBuildTriggerRequest request) {
     var emptyResponse = BuildTrigger();
-    return _client.invoke<BuildTrigger>(
-        ctx, 'CloudBuild', 'GetBuildTrigger', request, emptyResponse);
+    return _client.invoke<BuildTrigger>(ctx, 'CloudBuild', 'GetBuildTrigger', request, emptyResponse);
   }
-
-  Future<ListBuildTriggersResponse> listBuildTriggers(
-      ClientContext ctx, ListBuildTriggersRequest request) {
+  $async.Future<ListBuildTriggersResponse> listBuildTriggers($pb.ClientContext ctx, ListBuildTriggersRequest request) {
     var emptyResponse = ListBuildTriggersResponse();
-    return _client.invoke<ListBuildTriggersResponse>(
-        ctx, 'CloudBuild', 'ListBuildTriggers', request, emptyResponse);
+    return _client.invoke<ListBuildTriggersResponse>(ctx, 'CloudBuild', 'ListBuildTriggers', request, emptyResponse);
   }
-
-  Future<$google$protobuf.Empty> deleteBuildTrigger(
-      ClientContext ctx, DeleteBuildTriggerRequest request) {
-    var emptyResponse = $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'CloudBuild', 'DeleteBuildTrigger', request, emptyResponse);
+  $async.Future<$3.Empty> deleteBuildTrigger($pb.ClientContext ctx, DeleteBuildTriggerRequest request) {
+    var emptyResponse = $3.Empty();
+    return _client.invoke<$3.Empty>(ctx, 'CloudBuild', 'DeleteBuildTrigger', request, emptyResponse);
   }
-
-  Future<BuildTrigger> updateBuildTrigger(
-      ClientContext ctx, UpdateBuildTriggerRequest request) {
+  $async.Future<BuildTrigger> updateBuildTrigger($pb.ClientContext ctx, UpdateBuildTriggerRequest request) {
     var emptyResponse = BuildTrigger();
-    return _client.invoke<BuildTrigger>(
-        ctx, 'CloudBuild', 'UpdateBuildTrigger', request, emptyResponse);
+    return _client.invoke<BuildTrigger>(ctx, 'CloudBuild', 'UpdateBuildTrigger', request, emptyResponse);
   }
-
-  Future<$google$longrunning.Operation> runBuildTrigger(
-      ClientContext ctx, RunBuildTriggerRequest request) {
-    var emptyResponse = $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'CloudBuild', 'RunBuildTrigger', request, emptyResponse);
+  $async.Future<$2.Operation> runBuildTrigger($pb.ClientContext ctx, RunBuildTriggerRequest request) {
+    var emptyResponse = $2.Operation();
+    return _client.invoke<$2.Operation>(ctx, 'CloudBuild', 'RunBuildTrigger', request, emptyResponse);
   }
 }
+

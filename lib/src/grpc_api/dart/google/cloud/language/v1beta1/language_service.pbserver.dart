@@ -1,59 +1,46 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/language/v1beta1/language_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'language_service.pb.dart';
 import 'language_service.pbjson.dart';
 
 export 'language_service.pb.dart';
 
-abstract class LanguageServiceBase extends GeneratedService {
-  Future<AnalyzeSentimentResponse> analyzeSentiment(
-      ServerContext ctx, AnalyzeSentimentRequest request);
-  Future<AnalyzeEntitiesResponse> analyzeEntities(
-      ServerContext ctx, AnalyzeEntitiesRequest request);
-  Future<AnalyzeSyntaxResponse> analyzeSyntax(
-      ServerContext ctx, AnalyzeSyntaxRequest request);
-  Future<AnnotateTextResponse> annotateText(
-      ServerContext ctx, AnnotateTextRequest request);
+abstract class LanguageServiceBase extends $pb.GeneratedService {
+  $async.Future<AnalyzeSentimentResponse> analyzeSentiment($pb.ServerContext ctx, AnalyzeSentimentRequest request);
+  $async.Future<AnalyzeEntitiesResponse> analyzeEntities($pb.ServerContext ctx, AnalyzeEntitiesRequest request);
+  $async.Future<AnalyzeSyntaxResponse> analyzeSyntax($pb.ServerContext ctx, AnalyzeSyntaxRequest request);
+  $async.Future<AnnotateTextResponse> annotateText($pb.ServerContext ctx, AnnotateTextRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'AnalyzeSentiment':
-        return AnalyzeSentimentRequest();
-      case 'AnalyzeEntities':
-        return AnalyzeEntitiesRequest();
-      case 'AnalyzeSyntax':
-        return AnalyzeSyntaxRequest();
-      case 'AnnotateText':
-        return AnnotateTextRequest();
-      default:
-        throw ArgumentError('Unknown method: $method');
+      case 'AnalyzeSentiment': return AnalyzeSentimentRequest();
+      case 'AnalyzeEntities': return AnalyzeEntitiesRequest();
+      case 'AnalyzeSyntax': return AnalyzeSyntaxRequest();
+      case 'AnnotateText': return AnnotateTextRequest();
+      default: throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'AnalyzeSentiment':
-        return this.analyzeSentiment(ctx, request);
-      case 'AnalyzeEntities':
-        return this.analyzeEntities(ctx, request);
-      case 'AnalyzeSyntax':
-        return this.analyzeSyntax(ctx, request);
-      case 'AnnotateText':
-        return this.annotateText(ctx, request);
-      default:
-        throw ArgumentError('Unknown method: $method');
+      case 'AnalyzeSentiment': return this.analyzeSentiment(ctx, request);
+      case 'AnalyzeEntities': return this.analyzeEntities(ctx, request);
+      case 'AnalyzeSyntax': return this.analyzeSyntax(ctx, request);
+      case 'AnnotateText': return this.annotateText(ctx, request);
+      default: throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => LanguageService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      LanguageService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => LanguageServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => LanguageServiceBase$messageJson;
 }
+

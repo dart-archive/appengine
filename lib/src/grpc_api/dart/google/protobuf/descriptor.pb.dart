@@ -1,904 +1,544 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/protobuf/descriptor.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'descriptor.pbenum.dart';
 
 export 'descriptor.pbenum.dart';
 
-class FileDescriptorSet extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FileDescriptorSet')
-    ..pp<FileDescriptorProto>(1, 'file', PbFieldType.PM,
-        FileDescriptorProto.$checkItem, FileDescriptorProto.create);
+class FileDescriptorSet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileDescriptorSet', package: const $pb.PackageName('google.protobuf'))
+    ..pc<FileDescriptorProto>(1, 'file', $pb.PbFieldType.PM,FileDescriptorProto.create)
+  ;
 
   FileDescriptorSet() : super();
-  FileDescriptorSet.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileDescriptorSet.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileDescriptorSet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FileDescriptorSet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   FileDescriptorSet clone() => FileDescriptorSet()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FileDescriptorSet copyWith(void Function(FileDescriptorSet) updates) => super.copyWith((message) => updates(message as FileDescriptorSet));
+  $pb.BuilderInfo get info_ => _i;
   static FileDescriptorSet create() => FileDescriptorSet();
-  static PbList<FileDescriptorSet> createRepeated() =>
-      PbList<FileDescriptorSet>();
-  static FileDescriptorSet getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyFileDescriptorSet();
-    return _defaultInstance;
-  }
-
+  FileDescriptorSet createEmptyInstance() => create();
+  static $pb.PbList<FileDescriptorSet> createRepeated() => $pb.PbList<FileDescriptorSet>();
+  static FileDescriptorSet getDefault() => _defaultInstance ??= create()..freeze();
   static FileDescriptorSet _defaultInstance;
-  static void $checkItem(FileDescriptorSet v) {
-    if (v is! FileDescriptorSet) checkItemFailed(v, 'FileDescriptorSet');
-  }
 
-  List<FileDescriptorProto> get file => $_getList(0);
+  $core.List<FileDescriptorProto> get file => $_getList(0);
 }
 
-class _ReadonlyFileDescriptorSet extends FileDescriptorSet
-    with ReadonlyMessageMixin {}
-
-class FileDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FileDescriptorProto')
+class FileDescriptorProto extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileDescriptorProto', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'name')
     ..aOS(2, 'package')
     ..pPS(3, 'dependency')
-    ..pp<DescriptorProto>(4, 'messageType', PbFieldType.PM,
-        DescriptorProto.$checkItem, DescriptorProto.create)
-    ..pp<EnumDescriptorProto>(5, 'enumType', PbFieldType.PM,
-        EnumDescriptorProto.$checkItem, EnumDescriptorProto.create)
-    ..pp<ServiceDescriptorProto>(6, 'service', PbFieldType.PM,
-        ServiceDescriptorProto.$checkItem, ServiceDescriptorProto.create)
-    ..pp<FieldDescriptorProto>(7, 'extension', PbFieldType.PM,
-        FieldDescriptorProto.$checkItem, FieldDescriptorProto.create)
-    ..a<FileOptions>(8, 'options', PbFieldType.OM, FileOptions.getDefault,
-        FileOptions.create)
-    ..a<SourceCodeInfo>(9, 'sourceCodeInfo', PbFieldType.OM,
-        SourceCodeInfo.getDefault, SourceCodeInfo.create)
-    ..p<int>(10, 'publicDependency', PbFieldType.P3)
-    ..p<int>(11, 'weakDependency', PbFieldType.P3)
-    ..aOS(12, 'syntax');
+    ..pc<DescriptorProto>(4, 'messageType', $pb.PbFieldType.PM,DescriptorProto.create)
+    ..pc<EnumDescriptorProto>(5, 'enumType', $pb.PbFieldType.PM,EnumDescriptorProto.create)
+    ..pc<ServiceDescriptorProto>(6, 'service', $pb.PbFieldType.PM,ServiceDescriptorProto.create)
+    ..pc<FieldDescriptorProto>(7, 'extension', $pb.PbFieldType.PM,FieldDescriptorProto.create)
+    ..a<FileOptions>(8, 'options', $pb.PbFieldType.OM, FileOptions.getDefault, FileOptions.create)
+    ..a<SourceCodeInfo>(9, 'sourceCodeInfo', $pb.PbFieldType.OM, SourceCodeInfo.getDefault, SourceCodeInfo.create)
+    ..p<$core.int>(10, 'publicDependency', $pb.PbFieldType.P3)
+    ..p<$core.int>(11, 'weakDependency', $pb.PbFieldType.P3)
+    ..aOS(12, 'syntax')
+  ;
 
   FileDescriptorProto() : super();
-  FileDescriptorProto.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileDescriptorProto.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileDescriptorProto.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FileDescriptorProto.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   FileDescriptorProto clone() => FileDescriptorProto()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FileDescriptorProto copyWith(void Function(FileDescriptorProto) updates) => super.copyWith((message) => updates(message as FileDescriptorProto));
+  $pb.BuilderInfo get info_ => _i;
   static FileDescriptorProto create() => FileDescriptorProto();
-  static PbList<FileDescriptorProto> createRepeated() =>
-      PbList<FileDescriptorProto>();
-  static FileDescriptorProto getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyFileDescriptorProto();
-    return _defaultInstance;
-  }
-
+  FileDescriptorProto createEmptyInstance() => create();
+  static $pb.PbList<FileDescriptorProto> createRepeated() => $pb.PbList<FileDescriptorProto>();
+  static FileDescriptorProto getDefault() => _defaultInstance ??= create()..freeze();
   static FileDescriptorProto _defaultInstance;
-  static void $checkItem(FileDescriptorProto v) {
-    if (v is! FileDescriptorProto) checkItemFailed(v, 'FileDescriptorProto');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get package => $_getS(1, '');
-  set package(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasPackage() => $_has(1);
+  $core.String get package => $_getS(1, '');
+  set package($core.String v) { $_setString(1, v); }
+  $core.bool hasPackage() => $_has(1);
   void clearPackage() => clearField(2);
 
-  List<String> get dependency => $_getList(2);
+  $core.List<$core.String> get dependency => $_getList(2);
 
-  List<DescriptorProto> get messageType => $_getList(3);
+  $core.List<DescriptorProto> get messageType => $_getList(3);
 
-  List<EnumDescriptorProto> get enumType => $_getList(4);
+  $core.List<EnumDescriptorProto> get enumType => $_getList(4);
 
-  List<ServiceDescriptorProto> get service => $_getList(5);
+  $core.List<ServiceDescriptorProto> get service => $_getList(5);
 
-  List<FieldDescriptorProto> get extension => $_getList(6);
+  $core.List<FieldDescriptorProto> get extension => $_getList(6);
 
   FileOptions get options => $_getN(7);
-  set options(FileOptions v) {
-    setField(8, v);
-  }
-
-  bool hasOptions() => $_has(7);
+  set options(FileOptions v) { setField(8, v); }
+  $core.bool hasOptions() => $_has(7);
   void clearOptions() => clearField(8);
 
   SourceCodeInfo get sourceCodeInfo => $_getN(8);
-  set sourceCodeInfo(SourceCodeInfo v) {
-    setField(9, v);
-  }
-
-  bool hasSourceCodeInfo() => $_has(8);
+  set sourceCodeInfo(SourceCodeInfo v) { setField(9, v); }
+  $core.bool hasSourceCodeInfo() => $_has(8);
   void clearSourceCodeInfo() => clearField(9);
 
-  List<int> get publicDependency => $_getList(9);
+  $core.List<$core.int> get publicDependency => $_getList(9);
 
-  List<int> get weakDependency => $_getList(10);
+  $core.List<$core.int> get weakDependency => $_getList(10);
 
-  String get syntax => $_getS(11, '');
-  set syntax(String v) {
-    $_setString(11, v);
-  }
-
-  bool hasSyntax() => $_has(11);
+  $core.String get syntax => $_getS(11, '');
+  set syntax($core.String v) { $_setString(11, v); }
+  $core.bool hasSyntax() => $_has(11);
   void clearSyntax() => clearField(12);
 }
 
-class _ReadonlyFileDescriptorProto extends FileDescriptorProto
-    with ReadonlyMessageMixin {}
-
-class DescriptorProto_ExtensionRange extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DescriptorProto_ExtensionRange')
-    ..a<int>(1, 'start', PbFieldType.O3)
-    ..a<int>(2, 'end', PbFieldType.O3)
-    ..a<ExtensionRangeOptions>(3, 'options', PbFieldType.OM,
-        ExtensionRangeOptions.getDefault, ExtensionRangeOptions.create);
+class DescriptorProto_ExtensionRange extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DescriptorProto.ExtensionRange', package: const $pb.PackageName('google.protobuf'))
+    ..a<$core.int>(1, 'start', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, 'end', $pb.PbFieldType.O3)
+    ..a<ExtensionRangeOptions>(3, 'options', $pb.PbFieldType.OM, ExtensionRangeOptions.getDefault, ExtensionRangeOptions.create)
+  ;
 
   DescriptorProto_ExtensionRange() : super();
-  DescriptorProto_ExtensionRange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DescriptorProto_ExtensionRange.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DescriptorProto_ExtensionRange clone() =>
-      DescriptorProto_ExtensionRange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DescriptorProto_ExtensionRange create() =>
-      DescriptorProto_ExtensionRange();
-  static PbList<DescriptorProto_ExtensionRange> createRepeated() =>
-      PbList<DescriptorProto_ExtensionRange>();
-  static DescriptorProto_ExtensionRange getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDescriptorProto_ExtensionRange();
-    return _defaultInstance;
-  }
-
+  DescriptorProto_ExtensionRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DescriptorProto_ExtensionRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DescriptorProto_ExtensionRange clone() => DescriptorProto_ExtensionRange()..mergeFromMessage(this);
+  DescriptorProto_ExtensionRange copyWith(void Function(DescriptorProto_ExtensionRange) updates) => super.copyWith((message) => updates(message as DescriptorProto_ExtensionRange));
+  $pb.BuilderInfo get info_ => _i;
+  static DescriptorProto_ExtensionRange create() => DescriptorProto_ExtensionRange();
+  DescriptorProto_ExtensionRange createEmptyInstance() => create();
+  static $pb.PbList<DescriptorProto_ExtensionRange> createRepeated() => $pb.PbList<DescriptorProto_ExtensionRange>();
+  static DescriptorProto_ExtensionRange getDefault() => _defaultInstance ??= create()..freeze();
   static DescriptorProto_ExtensionRange _defaultInstance;
-  static void $checkItem(DescriptorProto_ExtensionRange v) {
-    if (v is! DescriptorProto_ExtensionRange)
-      checkItemFailed(v, 'DescriptorProto_ExtensionRange');
-  }
 
-  int get start => $_get(0, 0);
-  set start(int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  bool hasStart() => $_has(0);
+  $core.int get start => $_get(0, 0);
+  set start($core.int v) { $_setSignedInt32(0, v); }
+  $core.bool hasStart() => $_has(0);
   void clearStart() => clearField(1);
 
-  int get end => $_get(1, 0);
-  set end(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasEnd() => $_has(1);
+  $core.int get end => $_get(1, 0);
+  set end($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasEnd() => $_has(1);
   void clearEnd() => clearField(2);
 
   ExtensionRangeOptions get options => $_getN(2);
-  set options(ExtensionRangeOptions v) {
-    setField(3, v);
-  }
-
-  bool hasOptions() => $_has(2);
+  set options(ExtensionRangeOptions v) { setField(3, v); }
+  $core.bool hasOptions() => $_has(2);
   void clearOptions() => clearField(3);
 }
 
-class _ReadonlyDescriptorProto_ExtensionRange
-    extends DescriptorProto_ExtensionRange with ReadonlyMessageMixin {}
-
-class DescriptorProto_ReservedRange extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DescriptorProto_ReservedRange')
-    ..a<int>(1, 'start', PbFieldType.O3)
-    ..a<int>(2, 'end', PbFieldType.O3)
-    ..hasRequiredFields = false;
+class DescriptorProto_ReservedRange extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DescriptorProto.ReservedRange', package: const $pb.PackageName('google.protobuf'))
+    ..a<$core.int>(1, 'start', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, 'end', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
 
   DescriptorProto_ReservedRange() : super();
-  DescriptorProto_ReservedRange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DescriptorProto_ReservedRange.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  DescriptorProto_ReservedRange clone() =>
-      DescriptorProto_ReservedRange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DescriptorProto_ReservedRange create() =>
-      DescriptorProto_ReservedRange();
-  static PbList<DescriptorProto_ReservedRange> createRepeated() =>
-      PbList<DescriptorProto_ReservedRange>();
-  static DescriptorProto_ReservedRange getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyDescriptorProto_ReservedRange();
-    return _defaultInstance;
-  }
-
+  DescriptorProto_ReservedRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DescriptorProto_ReservedRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  DescriptorProto_ReservedRange clone() => DescriptorProto_ReservedRange()..mergeFromMessage(this);
+  DescriptorProto_ReservedRange copyWith(void Function(DescriptorProto_ReservedRange) updates) => super.copyWith((message) => updates(message as DescriptorProto_ReservedRange));
+  $pb.BuilderInfo get info_ => _i;
+  static DescriptorProto_ReservedRange create() => DescriptorProto_ReservedRange();
+  DescriptorProto_ReservedRange createEmptyInstance() => create();
+  static $pb.PbList<DescriptorProto_ReservedRange> createRepeated() => $pb.PbList<DescriptorProto_ReservedRange>();
+  static DescriptorProto_ReservedRange getDefault() => _defaultInstance ??= create()..freeze();
   static DescriptorProto_ReservedRange _defaultInstance;
-  static void $checkItem(DescriptorProto_ReservedRange v) {
-    if (v is! DescriptorProto_ReservedRange)
-      checkItemFailed(v, 'DescriptorProto_ReservedRange');
-  }
 
-  int get start => $_get(0, 0);
-  set start(int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  bool hasStart() => $_has(0);
+  $core.int get start => $_get(0, 0);
+  set start($core.int v) { $_setSignedInt32(0, v); }
+  $core.bool hasStart() => $_has(0);
   void clearStart() => clearField(1);
 
-  int get end => $_get(1, 0);
-  set end(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasEnd() => $_has(1);
+  $core.int get end => $_get(1, 0);
+  set end($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasEnd() => $_has(1);
   void clearEnd() => clearField(2);
 }
 
-class _ReadonlyDescriptorProto_ReservedRange
-    extends DescriptorProto_ReservedRange with ReadonlyMessageMixin {}
-
-class DescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('DescriptorProto')
+class DescriptorProto extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DescriptorProto', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'name')
-    ..pp<FieldDescriptorProto>(2, 'field', PbFieldType.PM,
-        FieldDescriptorProto.$checkItem, FieldDescriptorProto.create)
-    ..pp<DescriptorProto>(3, 'nestedType', PbFieldType.PM,
-        DescriptorProto.$checkItem, DescriptorProto.create)
-    ..pp<EnumDescriptorProto>(4, 'enumType', PbFieldType.PM,
-        EnumDescriptorProto.$checkItem, EnumDescriptorProto.create)
-    ..pp<DescriptorProto_ExtensionRange>(
-        5,
-        'extensionRange',
-        PbFieldType.PM,
-        DescriptorProto_ExtensionRange.$checkItem,
-        DescriptorProto_ExtensionRange.create)
-    ..pp<FieldDescriptorProto>(6, 'extension', PbFieldType.PM,
-        FieldDescriptorProto.$checkItem, FieldDescriptorProto.create)
-    ..a<MessageOptions>(7, 'options', PbFieldType.OM, MessageOptions.getDefault,
-        MessageOptions.create)
-    ..pp<OneofDescriptorProto>(8, 'oneofDecl', PbFieldType.PM,
-        OneofDescriptorProto.$checkItem, OneofDescriptorProto.create)
-    ..pp<DescriptorProto_ReservedRange>(
-        9,
-        'reservedRange',
-        PbFieldType.PM,
-        DescriptorProto_ReservedRange.$checkItem,
-        DescriptorProto_ReservedRange.create)
-    ..pPS(10, 'reservedName');
+    ..pc<FieldDescriptorProto>(2, 'field', $pb.PbFieldType.PM,FieldDescriptorProto.create)
+    ..pc<DescriptorProto>(3, 'nestedType', $pb.PbFieldType.PM,DescriptorProto.create)
+    ..pc<EnumDescriptorProto>(4, 'enumType', $pb.PbFieldType.PM,EnumDescriptorProto.create)
+    ..pc<DescriptorProto_ExtensionRange>(5, 'extensionRange', $pb.PbFieldType.PM,DescriptorProto_ExtensionRange.create)
+    ..pc<FieldDescriptorProto>(6, 'extension', $pb.PbFieldType.PM,FieldDescriptorProto.create)
+    ..a<MessageOptions>(7, 'options', $pb.PbFieldType.OM, MessageOptions.getDefault, MessageOptions.create)
+    ..pc<OneofDescriptorProto>(8, 'oneofDecl', $pb.PbFieldType.PM,OneofDescriptorProto.create)
+    ..pc<DescriptorProto_ReservedRange>(9, 'reservedRange', $pb.PbFieldType.PM,DescriptorProto_ReservedRange.create)
+    ..pPS(10, 'reservedName')
+  ;
 
   DescriptorProto() : super();
-  DescriptorProto.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DescriptorProto.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DescriptorProto.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  DescriptorProto.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DescriptorProto clone() => DescriptorProto()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  DescriptorProto copyWith(void Function(DescriptorProto) updates) => super.copyWith((message) => updates(message as DescriptorProto));
+  $pb.BuilderInfo get info_ => _i;
   static DescriptorProto create() => DescriptorProto();
-  static PbList<DescriptorProto> createRepeated() => PbList<DescriptorProto>();
-  static DescriptorProto getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyDescriptorProto();
-    return _defaultInstance;
-  }
-
+  DescriptorProto createEmptyInstance() => create();
+  static $pb.PbList<DescriptorProto> createRepeated() => $pb.PbList<DescriptorProto>();
+  static DescriptorProto getDefault() => _defaultInstance ??= create()..freeze();
   static DescriptorProto _defaultInstance;
-  static void $checkItem(DescriptorProto v) {
-    if (v is! DescriptorProto) checkItemFailed(v, 'DescriptorProto');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<FieldDescriptorProto> get field => $_getList(1);
+  $core.List<FieldDescriptorProto> get field => $_getList(1);
 
-  List<DescriptorProto> get nestedType => $_getList(2);
+  $core.List<DescriptorProto> get nestedType => $_getList(2);
 
-  List<EnumDescriptorProto> get enumType => $_getList(3);
+  $core.List<EnumDescriptorProto> get enumType => $_getList(3);
 
-  List<DescriptorProto_ExtensionRange> get extensionRange => $_getList(4);
+  $core.List<DescriptorProto_ExtensionRange> get extensionRange => $_getList(4);
 
-  List<FieldDescriptorProto> get extension => $_getList(5);
+  $core.List<FieldDescriptorProto> get extension => $_getList(5);
 
   MessageOptions get options => $_getN(6);
-  set options(MessageOptions v) {
-    setField(7, v);
-  }
-
-  bool hasOptions() => $_has(6);
+  set options(MessageOptions v) { setField(7, v); }
+  $core.bool hasOptions() => $_has(6);
   void clearOptions() => clearField(7);
 
-  List<OneofDescriptorProto> get oneofDecl => $_getList(7);
+  $core.List<OneofDescriptorProto> get oneofDecl => $_getList(7);
 
-  List<DescriptorProto_ReservedRange> get reservedRange => $_getList(8);
+  $core.List<DescriptorProto_ReservedRange> get reservedRange => $_getList(8);
 
-  List<String> get reservedName => $_getList(9);
+  $core.List<$core.String> get reservedName => $_getList(9);
 }
 
-class _ReadonlyDescriptorProto extends DescriptorProto
-    with ReadonlyMessageMixin {}
-
-class ExtensionRangeOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ExtensionRangeOptions')
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+class ExtensionRangeOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExtensionRangeOptions', package: const $pb.PackageName('google.protobuf'))
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   ExtensionRangeOptions() : super();
-  ExtensionRangeOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExtensionRangeOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ExtensionRangeOptions clone() =>
-      ExtensionRangeOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ExtensionRangeOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ExtensionRangeOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ExtensionRangeOptions clone() => ExtensionRangeOptions()..mergeFromMessage(this);
+  ExtensionRangeOptions copyWith(void Function(ExtensionRangeOptions) updates) => super.copyWith((message) => updates(message as ExtensionRangeOptions));
+  $pb.BuilderInfo get info_ => _i;
   static ExtensionRangeOptions create() => ExtensionRangeOptions();
-  static PbList<ExtensionRangeOptions> createRepeated() =>
-      PbList<ExtensionRangeOptions>();
-  static ExtensionRangeOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyExtensionRangeOptions();
-    return _defaultInstance;
-  }
-
+  ExtensionRangeOptions createEmptyInstance() => create();
+  static $pb.PbList<ExtensionRangeOptions> createRepeated() => $pb.PbList<ExtensionRangeOptions>();
+  static ExtensionRangeOptions getDefault() => _defaultInstance ??= create()..freeze();
   static ExtensionRangeOptions _defaultInstance;
-  static void $checkItem(ExtensionRangeOptions v) {
-    if (v is! ExtensionRangeOptions)
-      checkItemFailed(v, 'ExtensionRangeOptions');
-  }
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(0);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(0);
 }
 
-class _ReadonlyExtensionRangeOptions extends ExtensionRangeOptions
-    with ReadonlyMessageMixin {}
-
-class FieldDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FieldDescriptorProto')
+class FieldDescriptorProto extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FieldDescriptorProto', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'name')
     ..aOS(2, 'extendee')
-    ..a<int>(3, 'number', PbFieldType.O3)
-    ..e<FieldDescriptorProto_Label>(
-        4,
-        'label',
-        PbFieldType.OE,
-        FieldDescriptorProto_Label.LABEL_OPTIONAL,
-        FieldDescriptorProto_Label.valueOf,
-        FieldDescriptorProto_Label.values)
-    ..e<FieldDescriptorProto_Type>(
-        5,
-        'type',
-        PbFieldType.OE,
-        FieldDescriptorProto_Type.TYPE_DOUBLE,
-        FieldDescriptorProto_Type.valueOf,
-        FieldDescriptorProto_Type.values)
+    ..a<$core.int>(3, 'number', $pb.PbFieldType.O3)
+    ..e<FieldDescriptorProto_Label>(4, 'label', $pb.PbFieldType.OE, FieldDescriptorProto_Label.LABEL_OPTIONAL, FieldDescriptorProto_Label.valueOf, FieldDescriptorProto_Label.values)
+    ..e<FieldDescriptorProto_Type>(5, 'type', $pb.PbFieldType.OE, FieldDescriptorProto_Type.TYPE_DOUBLE, FieldDescriptorProto_Type.valueOf, FieldDescriptorProto_Type.values)
     ..aOS(6, 'typeName')
     ..aOS(7, 'defaultValue')
-    ..a<FieldOptions>(8, 'options', PbFieldType.OM, FieldOptions.getDefault,
-        FieldOptions.create)
-    ..a<int>(9, 'oneofIndex', PbFieldType.O3)
-    ..aOS(10, 'jsonName');
+    ..a<FieldOptions>(8, 'options', $pb.PbFieldType.OM, FieldOptions.getDefault, FieldOptions.create)
+    ..a<$core.int>(9, 'oneofIndex', $pb.PbFieldType.O3)
+    ..aOS(10, 'jsonName')
+  ;
 
   FieldDescriptorProto() : super();
-  FieldDescriptorProto.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FieldDescriptorProto.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  FieldDescriptorProto clone() =>
-      FieldDescriptorProto()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FieldDescriptorProto.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FieldDescriptorProto.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  FieldDescriptorProto clone() => FieldDescriptorProto()..mergeFromMessage(this);
+  FieldDescriptorProto copyWith(void Function(FieldDescriptorProto) updates) => super.copyWith((message) => updates(message as FieldDescriptorProto));
+  $pb.BuilderInfo get info_ => _i;
   static FieldDescriptorProto create() => FieldDescriptorProto();
-  static PbList<FieldDescriptorProto> createRepeated() =>
-      PbList<FieldDescriptorProto>();
-  static FieldDescriptorProto getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyFieldDescriptorProto();
-    return _defaultInstance;
-  }
-
+  FieldDescriptorProto createEmptyInstance() => create();
+  static $pb.PbList<FieldDescriptorProto> createRepeated() => $pb.PbList<FieldDescriptorProto>();
+  static FieldDescriptorProto getDefault() => _defaultInstance ??= create()..freeze();
   static FieldDescriptorProto _defaultInstance;
-  static void $checkItem(FieldDescriptorProto v) {
-    if (v is! FieldDescriptorProto) checkItemFailed(v, 'FieldDescriptorProto');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get extendee => $_getS(1, '');
-  set extendee(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasExtendee() => $_has(1);
+  $core.String get extendee => $_getS(1, '');
+  set extendee($core.String v) { $_setString(1, v); }
+  $core.bool hasExtendee() => $_has(1);
   void clearExtendee() => clearField(2);
 
-  int get number => $_get(2, 0);
-  set number(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasNumber() => $_has(2);
+  $core.int get number => $_get(2, 0);
+  set number($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasNumber() => $_has(2);
   void clearNumber() => clearField(3);
 
   FieldDescriptorProto_Label get label => $_getN(3);
-  set label(FieldDescriptorProto_Label v) {
-    setField(4, v);
-  }
-
-  bool hasLabel() => $_has(3);
+  set label(FieldDescriptorProto_Label v) { setField(4, v); }
+  $core.bool hasLabel() => $_has(3);
   void clearLabel() => clearField(4);
 
   FieldDescriptorProto_Type get type => $_getN(4);
-  set type(FieldDescriptorProto_Type v) {
-    setField(5, v);
-  }
-
-  bool hasType() => $_has(4);
+  set type(FieldDescriptorProto_Type v) { setField(5, v); }
+  $core.bool hasType() => $_has(4);
   void clearType() => clearField(5);
 
-  String get typeName => $_getS(5, '');
-  set typeName(String v) {
-    $_setString(5, v);
-  }
-
-  bool hasTypeName() => $_has(5);
+  $core.String get typeName => $_getS(5, '');
+  set typeName($core.String v) { $_setString(5, v); }
+  $core.bool hasTypeName() => $_has(5);
   void clearTypeName() => clearField(6);
 
-  String get defaultValue => $_getS(6, '');
-  set defaultValue(String v) {
-    $_setString(6, v);
-  }
-
-  bool hasDefaultValue() => $_has(6);
+  $core.String get defaultValue => $_getS(6, '');
+  set defaultValue($core.String v) { $_setString(6, v); }
+  $core.bool hasDefaultValue() => $_has(6);
   void clearDefaultValue() => clearField(7);
 
   FieldOptions get options => $_getN(7);
-  set options(FieldOptions v) {
-    setField(8, v);
-  }
-
-  bool hasOptions() => $_has(7);
+  set options(FieldOptions v) { setField(8, v); }
+  $core.bool hasOptions() => $_has(7);
   void clearOptions() => clearField(8);
 
-  int get oneofIndex => $_get(8, 0);
-  set oneofIndex(int v) {
-    $_setSignedInt32(8, v);
-  }
-
-  bool hasOneofIndex() => $_has(8);
+  $core.int get oneofIndex => $_get(8, 0);
+  set oneofIndex($core.int v) { $_setSignedInt32(8, v); }
+  $core.bool hasOneofIndex() => $_has(8);
   void clearOneofIndex() => clearField(9);
 
-  String get jsonName => $_getS(9, '');
-  set jsonName(String v) {
-    $_setString(9, v);
-  }
-
-  bool hasJsonName() => $_has(9);
+  $core.String get jsonName => $_getS(9, '');
+  set jsonName($core.String v) { $_setString(9, v); }
+  $core.bool hasJsonName() => $_has(9);
   void clearJsonName() => clearField(10);
 }
 
-class _ReadonlyFieldDescriptorProto extends FieldDescriptorProto
-    with ReadonlyMessageMixin {}
-
-class OneofDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('OneofDescriptorProto')
+class OneofDescriptorProto extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OneofDescriptorProto', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'name')
-    ..a<OneofOptions>(2, 'options', PbFieldType.OM, OneofOptions.getDefault,
-        OneofOptions.create);
+    ..a<OneofOptions>(2, 'options', $pb.PbFieldType.OM, OneofOptions.getDefault, OneofOptions.create)
+  ;
 
   OneofDescriptorProto() : super();
-  OneofDescriptorProto.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OneofDescriptorProto.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  OneofDescriptorProto clone() =>
-      OneofDescriptorProto()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  OneofDescriptorProto.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  OneofDescriptorProto.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  OneofDescriptorProto clone() => OneofDescriptorProto()..mergeFromMessage(this);
+  OneofDescriptorProto copyWith(void Function(OneofDescriptorProto) updates) => super.copyWith((message) => updates(message as OneofDescriptorProto));
+  $pb.BuilderInfo get info_ => _i;
   static OneofDescriptorProto create() => OneofDescriptorProto();
-  static PbList<OneofDescriptorProto> createRepeated() =>
-      PbList<OneofDescriptorProto>();
-  static OneofDescriptorProto getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyOneofDescriptorProto();
-    return _defaultInstance;
-  }
-
+  OneofDescriptorProto createEmptyInstance() => create();
+  static $pb.PbList<OneofDescriptorProto> createRepeated() => $pb.PbList<OneofDescriptorProto>();
+  static OneofDescriptorProto getDefault() => _defaultInstance ??= create()..freeze();
   static OneofDescriptorProto _defaultInstance;
-  static void $checkItem(OneofDescriptorProto v) {
-    if (v is! OneofDescriptorProto) checkItemFailed(v, 'OneofDescriptorProto');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   OneofOptions get options => $_getN(1);
-  set options(OneofOptions v) {
-    setField(2, v);
-  }
-
-  bool hasOptions() => $_has(1);
+  set options(OneofOptions v) { setField(2, v); }
+  $core.bool hasOptions() => $_has(1);
   void clearOptions() => clearField(2);
 }
 
-class _ReadonlyOneofDescriptorProto extends OneofDescriptorProto
-    with ReadonlyMessageMixin {}
-
-class EnumDescriptorProto_EnumReservedRange extends GeneratedMessage {
-  static final BuilderInfo _i =
-      BuilderInfo('EnumDescriptorProto_EnumReservedRange')
-        ..a<int>(1, 'start', PbFieldType.O3)
-        ..a<int>(2, 'end', PbFieldType.O3)
-        ..hasRequiredFields = false;
+class EnumDescriptorProto_EnumReservedRange extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnumDescriptorProto.EnumReservedRange', package: const $pb.PackageName('google.protobuf'))
+    ..a<$core.int>(1, 'start', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, 'end', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
 
   EnumDescriptorProto_EnumReservedRange() : super();
-  EnumDescriptorProto_EnumReservedRange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnumDescriptorProto_EnumReservedRange.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  EnumDescriptorProto_EnumReservedRange clone() =>
-      EnumDescriptorProto_EnumReservedRange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static EnumDescriptorProto_EnumReservedRange create() =>
-      EnumDescriptorProto_EnumReservedRange();
-  static PbList<EnumDescriptorProto_EnumReservedRange> createRepeated() =>
-      PbList<EnumDescriptorProto_EnumReservedRange>();
-  static EnumDescriptorProto_EnumReservedRange getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyEnumDescriptorProto_EnumReservedRange();
-    return _defaultInstance;
-  }
-
+  EnumDescriptorProto_EnumReservedRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EnumDescriptorProto_EnumReservedRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  EnumDescriptorProto_EnumReservedRange clone() => EnumDescriptorProto_EnumReservedRange()..mergeFromMessage(this);
+  EnumDescriptorProto_EnumReservedRange copyWith(void Function(EnumDescriptorProto_EnumReservedRange) updates) => super.copyWith((message) => updates(message as EnumDescriptorProto_EnumReservedRange));
+  $pb.BuilderInfo get info_ => _i;
+  static EnumDescriptorProto_EnumReservedRange create() => EnumDescriptorProto_EnumReservedRange();
+  EnumDescriptorProto_EnumReservedRange createEmptyInstance() => create();
+  static $pb.PbList<EnumDescriptorProto_EnumReservedRange> createRepeated() => $pb.PbList<EnumDescriptorProto_EnumReservedRange>();
+  static EnumDescriptorProto_EnumReservedRange getDefault() => _defaultInstance ??= create()..freeze();
   static EnumDescriptorProto_EnumReservedRange _defaultInstance;
-  static void $checkItem(EnumDescriptorProto_EnumReservedRange v) {
-    if (v is! EnumDescriptorProto_EnumReservedRange)
-      checkItemFailed(v, 'EnumDescriptorProto_EnumReservedRange');
-  }
 
-  int get start => $_get(0, 0);
-  set start(int v) {
-    $_setSignedInt32(0, v);
-  }
-
-  bool hasStart() => $_has(0);
+  $core.int get start => $_get(0, 0);
+  set start($core.int v) { $_setSignedInt32(0, v); }
+  $core.bool hasStart() => $_has(0);
   void clearStart() => clearField(1);
 
-  int get end => $_get(1, 0);
-  set end(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasEnd() => $_has(1);
+  $core.int get end => $_get(1, 0);
+  set end($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasEnd() => $_has(1);
   void clearEnd() => clearField(2);
 }
 
-class _ReadonlyEnumDescriptorProto_EnumReservedRange
-    extends EnumDescriptorProto_EnumReservedRange with ReadonlyMessageMixin {}
-
-class EnumDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EnumDescriptorProto')
+class EnumDescriptorProto extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnumDescriptorProto', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'name')
-    ..pp<EnumValueDescriptorProto>(2, 'value', PbFieldType.PM,
-        EnumValueDescriptorProto.$checkItem, EnumValueDescriptorProto.create)
-    ..a<EnumOptions>(3, 'options', PbFieldType.OM, EnumOptions.getDefault,
-        EnumOptions.create)
-    ..pp<EnumDescriptorProto_EnumReservedRange>(
-        4,
-        'reservedRange',
-        PbFieldType.PM,
-        EnumDescriptorProto_EnumReservedRange.$checkItem,
-        EnumDescriptorProto_EnumReservedRange.create)
-    ..pPS(5, 'reservedName');
+    ..pc<EnumValueDescriptorProto>(2, 'value', $pb.PbFieldType.PM,EnumValueDescriptorProto.create)
+    ..a<EnumOptions>(3, 'options', $pb.PbFieldType.OM, EnumOptions.getDefault, EnumOptions.create)
+    ..pc<EnumDescriptorProto_EnumReservedRange>(4, 'reservedRange', $pb.PbFieldType.PM,EnumDescriptorProto_EnumReservedRange.create)
+    ..pPS(5, 'reservedName')
+  ;
 
   EnumDescriptorProto() : super();
-  EnumDescriptorProto.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnumDescriptorProto.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EnumDescriptorProto.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EnumDescriptorProto.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   EnumDescriptorProto clone() => EnumDescriptorProto()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EnumDescriptorProto copyWith(void Function(EnumDescriptorProto) updates) => super.copyWith((message) => updates(message as EnumDescriptorProto));
+  $pb.BuilderInfo get info_ => _i;
   static EnumDescriptorProto create() => EnumDescriptorProto();
-  static PbList<EnumDescriptorProto> createRepeated() =>
-      PbList<EnumDescriptorProto>();
-  static EnumDescriptorProto getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyEnumDescriptorProto();
-    return _defaultInstance;
-  }
-
+  EnumDescriptorProto createEmptyInstance() => create();
+  static $pb.PbList<EnumDescriptorProto> createRepeated() => $pb.PbList<EnumDescriptorProto>();
+  static EnumDescriptorProto getDefault() => _defaultInstance ??= create()..freeze();
   static EnumDescriptorProto _defaultInstance;
-  static void $checkItem(EnumDescriptorProto v) {
-    if (v is! EnumDescriptorProto) checkItemFailed(v, 'EnumDescriptorProto');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<EnumValueDescriptorProto> get value => $_getList(1);
+  $core.List<EnumValueDescriptorProto> get value => $_getList(1);
 
   EnumOptions get options => $_getN(2);
-  set options(EnumOptions v) {
-    setField(3, v);
-  }
-
-  bool hasOptions() => $_has(2);
+  set options(EnumOptions v) { setField(3, v); }
+  $core.bool hasOptions() => $_has(2);
   void clearOptions() => clearField(3);
 
-  List<EnumDescriptorProto_EnumReservedRange> get reservedRange => $_getList(3);
+  $core.List<EnumDescriptorProto_EnumReservedRange> get reservedRange => $_getList(3);
 
-  List<String> get reservedName => $_getList(4);
+  $core.List<$core.String> get reservedName => $_getList(4);
 }
 
-class _ReadonlyEnumDescriptorProto extends EnumDescriptorProto
-    with ReadonlyMessageMixin {}
-
-class EnumValueDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EnumValueDescriptorProto')
+class EnumValueDescriptorProto extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnumValueDescriptorProto', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'name')
-    ..a<int>(2, 'number', PbFieldType.O3)
-    ..a<EnumValueOptions>(3, 'options', PbFieldType.OM,
-        EnumValueOptions.getDefault, EnumValueOptions.create);
+    ..a<$core.int>(2, 'number', $pb.PbFieldType.O3)
+    ..a<EnumValueOptions>(3, 'options', $pb.PbFieldType.OM, EnumValueOptions.getDefault, EnumValueOptions.create)
+  ;
 
   EnumValueDescriptorProto() : super();
-  EnumValueDescriptorProto.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnumValueDescriptorProto.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  EnumValueDescriptorProto clone() =>
-      EnumValueDescriptorProto()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EnumValueDescriptorProto.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EnumValueDescriptorProto.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  EnumValueDescriptorProto clone() => EnumValueDescriptorProto()..mergeFromMessage(this);
+  EnumValueDescriptorProto copyWith(void Function(EnumValueDescriptorProto) updates) => super.copyWith((message) => updates(message as EnumValueDescriptorProto));
+  $pb.BuilderInfo get info_ => _i;
   static EnumValueDescriptorProto create() => EnumValueDescriptorProto();
-  static PbList<EnumValueDescriptorProto> createRepeated() =>
-      PbList<EnumValueDescriptorProto>();
-  static EnumValueDescriptorProto getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyEnumValueDescriptorProto();
-    return _defaultInstance;
-  }
-
+  EnumValueDescriptorProto createEmptyInstance() => create();
+  static $pb.PbList<EnumValueDescriptorProto> createRepeated() => $pb.PbList<EnumValueDescriptorProto>();
+  static EnumValueDescriptorProto getDefault() => _defaultInstance ??= create()..freeze();
   static EnumValueDescriptorProto _defaultInstance;
-  static void $checkItem(EnumValueDescriptorProto v) {
-    if (v is! EnumValueDescriptorProto)
-      checkItemFailed(v, 'EnumValueDescriptorProto');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  int get number => $_get(1, 0);
-  set number(int v) {
-    $_setSignedInt32(1, v);
-  }
-
-  bool hasNumber() => $_has(1);
+  $core.int get number => $_get(1, 0);
+  set number($core.int v) { $_setSignedInt32(1, v); }
+  $core.bool hasNumber() => $_has(1);
   void clearNumber() => clearField(2);
 
   EnumValueOptions get options => $_getN(2);
-  set options(EnumValueOptions v) {
-    setField(3, v);
-  }
-
-  bool hasOptions() => $_has(2);
+  set options(EnumValueOptions v) { setField(3, v); }
+  $core.bool hasOptions() => $_has(2);
   void clearOptions() => clearField(3);
 }
 
-class _ReadonlyEnumValueDescriptorProto extends EnumValueDescriptorProto
-    with ReadonlyMessageMixin {}
-
-class ServiceDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ServiceDescriptorProto')
+class ServiceDescriptorProto extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServiceDescriptorProto', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'name')
-    ..pp<MethodDescriptorProto>(2, 'method', PbFieldType.PM,
-        MethodDescriptorProto.$checkItem, MethodDescriptorProto.create)
-    ..a<ServiceOptions>(3, 'options', PbFieldType.OM, ServiceOptions.getDefault,
-        ServiceOptions.create);
+    ..pc<MethodDescriptorProto>(2, 'method', $pb.PbFieldType.PM,MethodDescriptorProto.create)
+    ..a<ServiceOptions>(3, 'options', $pb.PbFieldType.OM, ServiceOptions.getDefault, ServiceOptions.create)
+  ;
 
   ServiceDescriptorProto() : super();
-  ServiceDescriptorProto.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ServiceDescriptorProto.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ServiceDescriptorProto clone() =>
-      ServiceDescriptorProto()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ServiceDescriptorProto.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ServiceDescriptorProto.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  ServiceDescriptorProto clone() => ServiceDescriptorProto()..mergeFromMessage(this);
+  ServiceDescriptorProto copyWith(void Function(ServiceDescriptorProto) updates) => super.copyWith((message) => updates(message as ServiceDescriptorProto));
+  $pb.BuilderInfo get info_ => _i;
   static ServiceDescriptorProto create() => ServiceDescriptorProto();
-  static PbList<ServiceDescriptorProto> createRepeated() =>
-      PbList<ServiceDescriptorProto>();
-  static ServiceDescriptorProto getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyServiceDescriptorProto();
-    return _defaultInstance;
-  }
-
+  ServiceDescriptorProto createEmptyInstance() => create();
+  static $pb.PbList<ServiceDescriptorProto> createRepeated() => $pb.PbList<ServiceDescriptorProto>();
+  static ServiceDescriptorProto getDefault() => _defaultInstance ??= create()..freeze();
   static ServiceDescriptorProto _defaultInstance;
-  static void $checkItem(ServiceDescriptorProto v) {
-    if (v is! ServiceDescriptorProto)
-      checkItemFailed(v, 'ServiceDescriptorProto');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<MethodDescriptorProto> get method => $_getList(1);
+  $core.List<MethodDescriptorProto> get method => $_getList(1);
 
   ServiceOptions get options => $_getN(2);
-  set options(ServiceOptions v) {
-    setField(3, v);
-  }
-
-  bool hasOptions() => $_has(2);
+  set options(ServiceOptions v) { setField(3, v); }
+  $core.bool hasOptions() => $_has(2);
   void clearOptions() => clearField(3);
 }
 
-class _ReadonlyServiceDescriptorProto extends ServiceDescriptorProto
-    with ReadonlyMessageMixin {}
-
-class MethodDescriptorProto extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('MethodDescriptorProto')
+class MethodDescriptorProto extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MethodDescriptorProto', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'name')
     ..aOS(2, 'inputType')
     ..aOS(3, 'outputType')
-    ..a<MethodOptions>(4, 'options', PbFieldType.OM, MethodOptions.getDefault,
-        MethodOptions.create)
+    ..a<MethodOptions>(4, 'options', $pb.PbFieldType.OM, MethodOptions.getDefault, MethodOptions.create)
     ..aOB(5, 'clientStreaming')
-    ..aOB(6, 'serverStreaming');
+    ..aOB(6, 'serverStreaming')
+  ;
 
   MethodDescriptorProto() : super();
-  MethodDescriptorProto.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MethodDescriptorProto.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  MethodDescriptorProto clone() =>
-      MethodDescriptorProto()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  MethodDescriptorProto.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  MethodDescriptorProto.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  MethodDescriptorProto clone() => MethodDescriptorProto()..mergeFromMessage(this);
+  MethodDescriptorProto copyWith(void Function(MethodDescriptorProto) updates) => super.copyWith((message) => updates(message as MethodDescriptorProto));
+  $pb.BuilderInfo get info_ => _i;
   static MethodDescriptorProto create() => MethodDescriptorProto();
-  static PbList<MethodDescriptorProto> createRepeated() =>
-      PbList<MethodDescriptorProto>();
-  static MethodDescriptorProto getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyMethodDescriptorProto();
-    return _defaultInstance;
-  }
-
+  MethodDescriptorProto createEmptyInstance() => create();
+  static $pb.PbList<MethodDescriptorProto> createRepeated() => $pb.PbList<MethodDescriptorProto>();
+  static MethodDescriptorProto getDefault() => _defaultInstance ??= create()..freeze();
   static MethodDescriptorProto _defaultInstance;
-  static void $checkItem(MethodDescriptorProto v) {
-    if (v is! MethodDescriptorProto)
-      checkItemFailed(v, 'MethodDescriptorProto');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get inputType => $_getS(1, '');
-  set inputType(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasInputType() => $_has(1);
+  $core.String get inputType => $_getS(1, '');
+  set inputType($core.String v) { $_setString(1, v); }
+  $core.bool hasInputType() => $_has(1);
   void clearInputType() => clearField(2);
 
-  String get outputType => $_getS(2, '');
-  set outputType(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasOutputType() => $_has(2);
+  $core.String get outputType => $_getS(2, '');
+  set outputType($core.String v) { $_setString(2, v); }
+  $core.bool hasOutputType() => $_has(2);
   void clearOutputType() => clearField(3);
 
   MethodOptions get options => $_getN(3);
-  set options(MethodOptions v) {
-    setField(4, v);
-  }
-
-  bool hasOptions() => $_has(3);
+  set options(MethodOptions v) { setField(4, v); }
+  $core.bool hasOptions() => $_has(3);
   void clearOptions() => clearField(4);
 
-  bool get clientStreaming => $_get(4, false);
-  set clientStreaming(bool v) {
-    $_setBool(4, v);
-  }
-
-  bool hasClientStreaming() => $_has(4);
+  $core.bool get clientStreaming => $_get(4, false);
+  set clientStreaming($core.bool v) { $_setBool(4, v); }
+  $core.bool hasClientStreaming() => $_has(4);
   void clearClientStreaming() => clearField(5);
 
-  bool get serverStreaming => $_get(5, false);
-  set serverStreaming(bool v) {
-    $_setBool(5, v);
-  }
-
-  bool hasServerStreaming() => $_has(5);
+  $core.bool get serverStreaming => $_get(5, false);
+  set serverStreaming($core.bool v) { $_setBool(5, v); }
+  $core.bool hasServerStreaming() => $_has(5);
   void clearServerStreaming() => clearField(6);
 }
 
-class _ReadonlyMethodDescriptorProto extends MethodDescriptorProto
-    with ReadonlyMessageMixin {}
-
-class FileOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FileOptions')
+class FileOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileOptions', package: const $pb.PackageName('google.protobuf'))
     ..aOS(1, 'javaPackage')
     ..aOS(8, 'javaOuterClassname')
-    ..e<FileOptions_OptimizeMode>(
-        9,
-        'optimizeFor',
-        PbFieldType.OE,
-        FileOptions_OptimizeMode.SPEED,
-        FileOptions_OptimizeMode.valueOf,
-        FileOptions_OptimizeMode.values)
+    ..e<FileOptions_OptimizeMode>(9, 'optimizeFor', $pb.PbFieldType.OE, FileOptions_OptimizeMode.SPEED, FileOptions_OptimizeMode.valueOf, FileOptions_OptimizeMode.values)
     ..aOB(10, 'javaMultipleFiles')
     ..aOS(11, 'goPackage')
     ..aOB(16, 'ccGenericServices')
@@ -916,922 +556,574 @@ class FileOptions extends GeneratedMessage {
     ..aOB(42, 'phpGenericServices')
     ..aOS(44, 'phpMetadataNamespace')
     ..aOS(45, 'rubyPackage')
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   FileOptions() : super();
-  FileOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FileOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   FileOptions clone() => FileOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FileOptions copyWith(void Function(FileOptions) updates) => super.copyWith((message) => updates(message as FileOptions));
+  $pb.BuilderInfo get info_ => _i;
   static FileOptions create() => FileOptions();
-  static PbList<FileOptions> createRepeated() => PbList<FileOptions>();
-  static FileOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileOptions();
-    return _defaultInstance;
-  }
-
+  FileOptions createEmptyInstance() => create();
+  static $pb.PbList<FileOptions> createRepeated() => $pb.PbList<FileOptions>();
+  static FileOptions getDefault() => _defaultInstance ??= create()..freeze();
   static FileOptions _defaultInstance;
-  static void $checkItem(FileOptions v) {
-    if (v is! FileOptions) checkItemFailed(v, 'FileOptions');
-  }
 
-  String get javaPackage => $_getS(0, '');
-  set javaPackage(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasJavaPackage() => $_has(0);
+  $core.String get javaPackage => $_getS(0, '');
+  set javaPackage($core.String v) { $_setString(0, v); }
+  $core.bool hasJavaPackage() => $_has(0);
   void clearJavaPackage() => clearField(1);
 
-  String get javaOuterClassname => $_getS(1, '');
-  set javaOuterClassname(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasJavaOuterClassname() => $_has(1);
+  $core.String get javaOuterClassname => $_getS(1, '');
+  set javaOuterClassname($core.String v) { $_setString(1, v); }
+  $core.bool hasJavaOuterClassname() => $_has(1);
   void clearJavaOuterClassname() => clearField(8);
 
   FileOptions_OptimizeMode get optimizeFor => $_getN(2);
-  set optimizeFor(FileOptions_OptimizeMode v) {
-    setField(9, v);
-  }
-
-  bool hasOptimizeFor() => $_has(2);
+  set optimizeFor(FileOptions_OptimizeMode v) { setField(9, v); }
+  $core.bool hasOptimizeFor() => $_has(2);
   void clearOptimizeFor() => clearField(9);
 
-  bool get javaMultipleFiles => $_get(3, false);
-  set javaMultipleFiles(bool v) {
-    $_setBool(3, v);
-  }
-
-  bool hasJavaMultipleFiles() => $_has(3);
+  $core.bool get javaMultipleFiles => $_get(3, false);
+  set javaMultipleFiles($core.bool v) { $_setBool(3, v); }
+  $core.bool hasJavaMultipleFiles() => $_has(3);
   void clearJavaMultipleFiles() => clearField(10);
 
-  String get goPackage => $_getS(4, '');
-  set goPackage(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasGoPackage() => $_has(4);
+  $core.String get goPackage => $_getS(4, '');
+  set goPackage($core.String v) { $_setString(4, v); }
+  $core.bool hasGoPackage() => $_has(4);
   void clearGoPackage() => clearField(11);
 
-  bool get ccGenericServices => $_get(5, false);
-  set ccGenericServices(bool v) {
-    $_setBool(5, v);
-  }
-
-  bool hasCcGenericServices() => $_has(5);
+  $core.bool get ccGenericServices => $_get(5, false);
+  set ccGenericServices($core.bool v) { $_setBool(5, v); }
+  $core.bool hasCcGenericServices() => $_has(5);
   void clearCcGenericServices() => clearField(16);
 
-  bool get javaGenericServices => $_get(6, false);
-  set javaGenericServices(bool v) {
-    $_setBool(6, v);
-  }
-
-  bool hasJavaGenericServices() => $_has(6);
+  $core.bool get javaGenericServices => $_get(6, false);
+  set javaGenericServices($core.bool v) { $_setBool(6, v); }
+  $core.bool hasJavaGenericServices() => $_has(6);
   void clearJavaGenericServices() => clearField(17);
 
-  bool get pyGenericServices => $_get(7, false);
-  set pyGenericServices(bool v) {
-    $_setBool(7, v);
-  }
-
-  bool hasPyGenericServices() => $_has(7);
+  $core.bool get pyGenericServices => $_get(7, false);
+  set pyGenericServices($core.bool v) { $_setBool(7, v); }
+  $core.bool hasPyGenericServices() => $_has(7);
   void clearPyGenericServices() => clearField(18);
 
-  bool get javaGenerateEqualsAndHash => $_get(8, false);
-  set javaGenerateEqualsAndHash(bool v) {
-    $_setBool(8, v);
-  }
-
-  bool hasJavaGenerateEqualsAndHash() => $_has(8);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool get javaGenerateEqualsAndHash => $_get(8, false);
+  @$core.Deprecated('This field is deprecated.')
+  set javaGenerateEqualsAndHash($core.bool v) { $_setBool(8, v); }
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasJavaGenerateEqualsAndHash() => $_has(8);
+  @$core.Deprecated('This field is deprecated.')
   void clearJavaGenerateEqualsAndHash() => clearField(20);
 
-  bool get deprecated => $_get(9, false);
-  set deprecated(bool v) {
-    $_setBool(9, v);
-  }
-
-  bool hasDeprecated() => $_has(9);
+  $core.bool get deprecated => $_get(9, false);
+  set deprecated($core.bool v) { $_setBool(9, v); }
+  $core.bool hasDeprecated() => $_has(9);
   void clearDeprecated() => clearField(23);
 
-  bool get javaStringCheckUtf8 => $_get(10, false);
-  set javaStringCheckUtf8(bool v) {
-    $_setBool(10, v);
-  }
-
-  bool hasJavaStringCheckUtf8() => $_has(10);
+  $core.bool get javaStringCheckUtf8 => $_get(10, false);
+  set javaStringCheckUtf8($core.bool v) { $_setBool(10, v); }
+  $core.bool hasJavaStringCheckUtf8() => $_has(10);
   void clearJavaStringCheckUtf8() => clearField(27);
 
-  bool get ccEnableArenas => $_get(11, false);
-  set ccEnableArenas(bool v) {
-    $_setBool(11, v);
-  }
-
-  bool hasCcEnableArenas() => $_has(11);
+  $core.bool get ccEnableArenas => $_get(11, false);
+  set ccEnableArenas($core.bool v) { $_setBool(11, v); }
+  $core.bool hasCcEnableArenas() => $_has(11);
   void clearCcEnableArenas() => clearField(31);
 
-  String get objcClassPrefix => $_getS(12, '');
-  set objcClassPrefix(String v) {
-    $_setString(12, v);
-  }
-
-  bool hasObjcClassPrefix() => $_has(12);
+  $core.String get objcClassPrefix => $_getS(12, '');
+  set objcClassPrefix($core.String v) { $_setString(12, v); }
+  $core.bool hasObjcClassPrefix() => $_has(12);
   void clearObjcClassPrefix() => clearField(36);
 
-  String get csharpNamespace => $_getS(13, '');
-  set csharpNamespace(String v) {
-    $_setString(13, v);
-  }
-
-  bool hasCsharpNamespace() => $_has(13);
+  $core.String get csharpNamespace => $_getS(13, '');
+  set csharpNamespace($core.String v) { $_setString(13, v); }
+  $core.bool hasCsharpNamespace() => $_has(13);
   void clearCsharpNamespace() => clearField(37);
 
-  String get swiftPrefix => $_getS(14, '');
-  set swiftPrefix(String v) {
-    $_setString(14, v);
-  }
-
-  bool hasSwiftPrefix() => $_has(14);
+  $core.String get swiftPrefix => $_getS(14, '');
+  set swiftPrefix($core.String v) { $_setString(14, v); }
+  $core.bool hasSwiftPrefix() => $_has(14);
   void clearSwiftPrefix() => clearField(39);
 
-  String get phpClassPrefix => $_getS(15, '');
-  set phpClassPrefix(String v) {
-    $_setString(15, v);
-  }
-
-  bool hasPhpClassPrefix() => $_has(15);
+  $core.String get phpClassPrefix => $_getS(15, '');
+  set phpClassPrefix($core.String v) { $_setString(15, v); }
+  $core.bool hasPhpClassPrefix() => $_has(15);
   void clearPhpClassPrefix() => clearField(40);
 
-  String get phpNamespace => $_getS(16, '');
-  set phpNamespace(String v) {
-    $_setString(16, v);
-  }
-
-  bool hasPhpNamespace() => $_has(16);
+  $core.String get phpNamespace => $_getS(16, '');
+  set phpNamespace($core.String v) { $_setString(16, v); }
+  $core.bool hasPhpNamespace() => $_has(16);
   void clearPhpNamespace() => clearField(41);
 
-  bool get phpGenericServices => $_get(17, false);
-  set phpGenericServices(bool v) {
-    $_setBool(17, v);
-  }
-
-  bool hasPhpGenericServices() => $_has(17);
+  $core.bool get phpGenericServices => $_get(17, false);
+  set phpGenericServices($core.bool v) { $_setBool(17, v); }
+  $core.bool hasPhpGenericServices() => $_has(17);
   void clearPhpGenericServices() => clearField(42);
 
-  String get phpMetadataNamespace => $_getS(18, '');
-  set phpMetadataNamespace(String v) {
-    $_setString(18, v);
-  }
-
-  bool hasPhpMetadataNamespace() => $_has(18);
+  $core.String get phpMetadataNamespace => $_getS(18, '');
+  set phpMetadataNamespace($core.String v) { $_setString(18, v); }
+  $core.bool hasPhpMetadataNamespace() => $_has(18);
   void clearPhpMetadataNamespace() => clearField(44);
 
-  String get rubyPackage => $_getS(19, '');
-  set rubyPackage(String v) {
-    $_setString(19, v);
-  }
-
-  bool hasRubyPackage() => $_has(19);
+  $core.String get rubyPackage => $_getS(19, '');
+  set rubyPackage($core.String v) { $_setString(19, v); }
+  $core.bool hasRubyPackage() => $_has(19);
   void clearRubyPackage() => clearField(45);
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(20);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(20);
 }
 
-class _ReadonlyFileOptions extends FileOptions with ReadonlyMessageMixin {}
-
-class MessageOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('MessageOptions')
+class MessageOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MessageOptions', package: const $pb.PackageName('google.protobuf'))
     ..aOB(1, 'messageSetWireFormat')
     ..aOB(2, 'noStandardDescriptorAccessor')
     ..aOB(3, 'deprecated')
     ..aOB(7, 'mapEntry')
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   MessageOptions() : super();
-  MessageOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MessageOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MessageOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  MessageOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   MessageOptions clone() => MessageOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  MessageOptions copyWith(void Function(MessageOptions) updates) => super.copyWith((message) => updates(message as MessageOptions));
+  $pb.BuilderInfo get info_ => _i;
   static MessageOptions create() => MessageOptions();
-  static PbList<MessageOptions> createRepeated() => PbList<MessageOptions>();
-  static MessageOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyMessageOptions();
-    return _defaultInstance;
-  }
-
+  MessageOptions createEmptyInstance() => create();
+  static $pb.PbList<MessageOptions> createRepeated() => $pb.PbList<MessageOptions>();
+  static MessageOptions getDefault() => _defaultInstance ??= create()..freeze();
   static MessageOptions _defaultInstance;
-  static void $checkItem(MessageOptions v) {
-    if (v is! MessageOptions) checkItemFailed(v, 'MessageOptions');
-  }
 
-  bool get messageSetWireFormat => $_get(0, false);
-  set messageSetWireFormat(bool v) {
-    $_setBool(0, v);
-  }
-
-  bool hasMessageSetWireFormat() => $_has(0);
+  $core.bool get messageSetWireFormat => $_get(0, false);
+  set messageSetWireFormat($core.bool v) { $_setBool(0, v); }
+  $core.bool hasMessageSetWireFormat() => $_has(0);
   void clearMessageSetWireFormat() => clearField(1);
 
-  bool get noStandardDescriptorAccessor => $_get(1, false);
-  set noStandardDescriptorAccessor(bool v) {
-    $_setBool(1, v);
-  }
-
-  bool hasNoStandardDescriptorAccessor() => $_has(1);
+  $core.bool get noStandardDescriptorAccessor => $_get(1, false);
+  set noStandardDescriptorAccessor($core.bool v) { $_setBool(1, v); }
+  $core.bool hasNoStandardDescriptorAccessor() => $_has(1);
   void clearNoStandardDescriptorAccessor() => clearField(2);
 
-  bool get deprecated => $_get(2, false);
-  set deprecated(bool v) {
-    $_setBool(2, v);
-  }
-
-  bool hasDeprecated() => $_has(2);
+  $core.bool get deprecated => $_get(2, false);
+  set deprecated($core.bool v) { $_setBool(2, v); }
+  $core.bool hasDeprecated() => $_has(2);
   void clearDeprecated() => clearField(3);
 
-  bool get mapEntry => $_get(3, false);
-  set mapEntry(bool v) {
-    $_setBool(3, v);
-  }
-
-  bool hasMapEntry() => $_has(3);
+  $core.bool get mapEntry => $_get(3, false);
+  set mapEntry($core.bool v) { $_setBool(3, v); }
+  $core.bool hasMapEntry() => $_has(3);
   void clearMapEntry() => clearField(7);
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(4);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(4);
 }
 
-class _ReadonlyMessageOptions extends MessageOptions with ReadonlyMessageMixin {
-}
-
-class FieldOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FieldOptions')
-    ..e<FieldOptions_CType>(
-        1,
-        'ctype',
-        PbFieldType.OE,
-        FieldOptions_CType.STRING,
-        FieldOptions_CType.valueOf,
-        FieldOptions_CType.values)
+class FieldOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FieldOptions', package: const $pb.PackageName('google.protobuf'))
+    ..e<FieldOptions_CType>(1, 'ctype', $pb.PbFieldType.OE, FieldOptions_CType.STRING, FieldOptions_CType.valueOf, FieldOptions_CType.values)
     ..aOB(2, 'packed')
     ..aOB(3, 'deprecated')
     ..aOB(5, 'lazy')
-    ..e<FieldOptions_JSType>(
-        6,
-        'jstype',
-        PbFieldType.OE,
-        FieldOptions_JSType.JS_NORMAL,
-        FieldOptions_JSType.valueOf,
-        FieldOptions_JSType.values)
+    ..e<FieldOptions_JSType>(6, 'jstype', $pb.PbFieldType.OE, FieldOptions_JSType.JS_NORMAL, FieldOptions_JSType.valueOf, FieldOptions_JSType.values)
     ..aOB(10, 'weak')
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   FieldOptions() : super();
-  FieldOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FieldOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FieldOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FieldOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   FieldOptions clone() => FieldOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FieldOptions copyWith(void Function(FieldOptions) updates) => super.copyWith((message) => updates(message as FieldOptions));
+  $pb.BuilderInfo get info_ => _i;
   static FieldOptions create() => FieldOptions();
-  static PbList<FieldOptions> createRepeated() => PbList<FieldOptions>();
-  static FieldOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyFieldOptions();
-    return _defaultInstance;
-  }
-
+  FieldOptions createEmptyInstance() => create();
+  static $pb.PbList<FieldOptions> createRepeated() => $pb.PbList<FieldOptions>();
+  static FieldOptions getDefault() => _defaultInstance ??= create()..freeze();
   static FieldOptions _defaultInstance;
-  static void $checkItem(FieldOptions v) {
-    if (v is! FieldOptions) checkItemFailed(v, 'FieldOptions');
-  }
 
   FieldOptions_CType get ctype => $_getN(0);
-  set ctype(FieldOptions_CType v) {
-    setField(1, v);
-  }
-
-  bool hasCtype() => $_has(0);
+  set ctype(FieldOptions_CType v) { setField(1, v); }
+  $core.bool hasCtype() => $_has(0);
   void clearCtype() => clearField(1);
 
-  bool get packed => $_get(1, false);
-  set packed(bool v) {
-    $_setBool(1, v);
-  }
-
-  bool hasPacked() => $_has(1);
+  $core.bool get packed => $_get(1, false);
+  set packed($core.bool v) { $_setBool(1, v); }
+  $core.bool hasPacked() => $_has(1);
   void clearPacked() => clearField(2);
 
-  bool get deprecated => $_get(2, false);
-  set deprecated(bool v) {
-    $_setBool(2, v);
-  }
-
-  bool hasDeprecated() => $_has(2);
+  $core.bool get deprecated => $_get(2, false);
+  set deprecated($core.bool v) { $_setBool(2, v); }
+  $core.bool hasDeprecated() => $_has(2);
   void clearDeprecated() => clearField(3);
 
-  bool get lazy => $_get(3, false);
-  set lazy(bool v) {
-    $_setBool(3, v);
-  }
-
-  bool hasLazy() => $_has(3);
+  $core.bool get lazy => $_get(3, false);
+  set lazy($core.bool v) { $_setBool(3, v); }
+  $core.bool hasLazy() => $_has(3);
   void clearLazy() => clearField(5);
 
   FieldOptions_JSType get jstype => $_getN(4);
-  set jstype(FieldOptions_JSType v) {
-    setField(6, v);
-  }
-
-  bool hasJstype() => $_has(4);
+  set jstype(FieldOptions_JSType v) { setField(6, v); }
+  $core.bool hasJstype() => $_has(4);
   void clearJstype() => clearField(6);
 
-  bool get weak => $_get(5, false);
-  set weak(bool v) {
-    $_setBool(5, v);
-  }
-
-  bool hasWeak() => $_has(5);
+  $core.bool get weak => $_get(5, false);
+  set weak($core.bool v) { $_setBool(5, v); }
+  $core.bool hasWeak() => $_has(5);
   void clearWeak() => clearField(10);
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(6);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(6);
 }
 
-class _ReadonlyFieldOptions extends FieldOptions with ReadonlyMessageMixin {}
-
-class OneofOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('OneofOptions')
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+class OneofOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OneofOptions', package: const $pb.PackageName('google.protobuf'))
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   OneofOptions() : super();
-  OneofOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OneofOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OneofOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  OneofOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   OneofOptions clone() => OneofOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  OneofOptions copyWith(void Function(OneofOptions) updates) => super.copyWith((message) => updates(message as OneofOptions));
+  $pb.BuilderInfo get info_ => _i;
   static OneofOptions create() => OneofOptions();
-  static PbList<OneofOptions> createRepeated() => PbList<OneofOptions>();
-  static OneofOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyOneofOptions();
-    return _defaultInstance;
-  }
-
+  OneofOptions createEmptyInstance() => create();
+  static $pb.PbList<OneofOptions> createRepeated() => $pb.PbList<OneofOptions>();
+  static OneofOptions getDefault() => _defaultInstance ??= create()..freeze();
   static OneofOptions _defaultInstance;
-  static void $checkItem(OneofOptions v) {
-    if (v is! OneofOptions) checkItemFailed(v, 'OneofOptions');
-  }
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(0);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(0);
 }
 
-class _ReadonlyOneofOptions extends OneofOptions with ReadonlyMessageMixin {}
-
-class EnumOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EnumOptions')
+class EnumOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnumOptions', package: const $pb.PackageName('google.protobuf'))
     ..aOB(2, 'allowAlias')
     ..aOB(3, 'deprecated')
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   EnumOptions() : super();
-  EnumOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnumOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EnumOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EnumOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   EnumOptions clone() => EnumOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EnumOptions copyWith(void Function(EnumOptions) updates) => super.copyWith((message) => updates(message as EnumOptions));
+  $pb.BuilderInfo get info_ => _i;
   static EnumOptions create() => EnumOptions();
-  static PbList<EnumOptions> createRepeated() => PbList<EnumOptions>();
-  static EnumOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyEnumOptions();
-    return _defaultInstance;
-  }
-
+  EnumOptions createEmptyInstance() => create();
+  static $pb.PbList<EnumOptions> createRepeated() => $pb.PbList<EnumOptions>();
+  static EnumOptions getDefault() => _defaultInstance ??= create()..freeze();
   static EnumOptions _defaultInstance;
-  static void $checkItem(EnumOptions v) {
-    if (v is! EnumOptions) checkItemFailed(v, 'EnumOptions');
-  }
 
-  bool get allowAlias => $_get(0, false);
-  set allowAlias(bool v) {
-    $_setBool(0, v);
-  }
-
-  bool hasAllowAlias() => $_has(0);
+  $core.bool get allowAlias => $_get(0, false);
+  set allowAlias($core.bool v) { $_setBool(0, v); }
+  $core.bool hasAllowAlias() => $_has(0);
   void clearAllowAlias() => clearField(2);
 
-  bool get deprecated => $_get(1, false);
-  set deprecated(bool v) {
-    $_setBool(1, v);
-  }
-
-  bool hasDeprecated() => $_has(1);
+  $core.bool get deprecated => $_get(1, false);
+  set deprecated($core.bool v) { $_setBool(1, v); }
+  $core.bool hasDeprecated() => $_has(1);
   void clearDeprecated() => clearField(3);
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(2);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(2);
 }
 
-class _ReadonlyEnumOptions extends EnumOptions with ReadonlyMessageMixin {}
-
-class EnumValueOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('EnumValueOptions')
+class EnumValueOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnumValueOptions', package: const $pb.PackageName('google.protobuf'))
     ..aOB(1, 'deprecated')
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   EnumValueOptions() : super();
-  EnumValueOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnumValueOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EnumValueOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  EnumValueOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   EnumValueOptions clone() => EnumValueOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  EnumValueOptions copyWith(void Function(EnumValueOptions) updates) => super.copyWith((message) => updates(message as EnumValueOptions));
+  $pb.BuilderInfo get info_ => _i;
   static EnumValueOptions create() => EnumValueOptions();
-  static PbList<EnumValueOptions> createRepeated() =>
-      PbList<EnumValueOptions>();
-  static EnumValueOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyEnumValueOptions();
-    return _defaultInstance;
-  }
-
+  EnumValueOptions createEmptyInstance() => create();
+  static $pb.PbList<EnumValueOptions> createRepeated() => $pb.PbList<EnumValueOptions>();
+  static EnumValueOptions getDefault() => _defaultInstance ??= create()..freeze();
   static EnumValueOptions _defaultInstance;
-  static void $checkItem(EnumValueOptions v) {
-    if (v is! EnumValueOptions) checkItemFailed(v, 'EnumValueOptions');
-  }
 
-  bool get deprecated => $_get(0, false);
-  set deprecated(bool v) {
-    $_setBool(0, v);
-  }
-
-  bool hasDeprecated() => $_has(0);
+  $core.bool get deprecated => $_get(0, false);
+  set deprecated($core.bool v) { $_setBool(0, v); }
+  $core.bool hasDeprecated() => $_has(0);
   void clearDeprecated() => clearField(1);
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(1);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(1);
 }
 
-class _ReadonlyEnumValueOptions extends EnumValueOptions
-    with ReadonlyMessageMixin {}
-
-class ServiceOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('ServiceOptions')
+class ServiceOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServiceOptions', package: const $pb.PackageName('google.protobuf'))
     ..aOB(33, 'deprecated')
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   ServiceOptions() : super();
-  ServiceOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ServiceOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ServiceOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  ServiceOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ServiceOptions clone() => ServiceOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  ServiceOptions copyWith(void Function(ServiceOptions) updates) => super.copyWith((message) => updates(message as ServiceOptions));
+  $pb.BuilderInfo get info_ => _i;
   static ServiceOptions create() => ServiceOptions();
-  static PbList<ServiceOptions> createRepeated() => PbList<ServiceOptions>();
-  static ServiceOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyServiceOptions();
-    return _defaultInstance;
-  }
-
+  ServiceOptions createEmptyInstance() => create();
+  static $pb.PbList<ServiceOptions> createRepeated() => $pb.PbList<ServiceOptions>();
+  static ServiceOptions getDefault() => _defaultInstance ??= create()..freeze();
   static ServiceOptions _defaultInstance;
-  static void $checkItem(ServiceOptions v) {
-    if (v is! ServiceOptions) checkItemFailed(v, 'ServiceOptions');
-  }
 
-  bool get deprecated => $_get(0, false);
-  set deprecated(bool v) {
-    $_setBool(0, v);
-  }
-
-  bool hasDeprecated() => $_has(0);
+  $core.bool get deprecated => $_get(0, false);
+  set deprecated($core.bool v) { $_setBool(0, v); }
+  $core.bool hasDeprecated() => $_has(0);
   void clearDeprecated() => clearField(33);
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(1);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(1);
 }
 
-class _ReadonlyServiceOptions extends ServiceOptions with ReadonlyMessageMixin {
-}
-
-class MethodOptions extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('MethodOptions')
+class MethodOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MethodOptions', package: const $pb.PackageName('google.protobuf'))
     ..aOB(33, 'deprecated')
-    ..e<MethodOptions_IdempotencyLevel>(
-        34,
-        'idempotencyLevel',
-        PbFieldType.OE,
-        MethodOptions_IdempotencyLevel.IDEMPOTENCY_UNKNOWN,
-        MethodOptions_IdempotencyLevel.valueOf,
-        MethodOptions_IdempotencyLevel.values)
-    ..pp<UninterpretedOption>(999, 'uninterpretedOption', PbFieldType.PM,
-        UninterpretedOption.$checkItem, UninterpretedOption.create)
-    ..hasExtensions = true;
+    ..e<MethodOptions_IdempotencyLevel>(34, 'idempotencyLevel', $pb.PbFieldType.OE, MethodOptions_IdempotencyLevel.IDEMPOTENCY_UNKNOWN, MethodOptions_IdempotencyLevel.valueOf, MethodOptions_IdempotencyLevel.values)
+    ..pc<UninterpretedOption>(999, 'uninterpretedOption', $pb.PbFieldType.PM,UninterpretedOption.create)
+    ..hasExtensions = true
+  ;
 
   MethodOptions() : super();
-  MethodOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MethodOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MethodOptions.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  MethodOptions.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   MethodOptions clone() => MethodOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  MethodOptions copyWith(void Function(MethodOptions) updates) => super.copyWith((message) => updates(message as MethodOptions));
+  $pb.BuilderInfo get info_ => _i;
   static MethodOptions create() => MethodOptions();
-  static PbList<MethodOptions> createRepeated() => PbList<MethodOptions>();
-  static MethodOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyMethodOptions();
-    return _defaultInstance;
-  }
-
+  MethodOptions createEmptyInstance() => create();
+  static $pb.PbList<MethodOptions> createRepeated() => $pb.PbList<MethodOptions>();
+  static MethodOptions getDefault() => _defaultInstance ??= create()..freeze();
   static MethodOptions _defaultInstance;
-  static void $checkItem(MethodOptions v) {
-    if (v is! MethodOptions) checkItemFailed(v, 'MethodOptions');
-  }
 
-  bool get deprecated => $_get(0, false);
-  set deprecated(bool v) {
-    $_setBool(0, v);
-  }
-
-  bool hasDeprecated() => $_has(0);
+  $core.bool get deprecated => $_get(0, false);
+  set deprecated($core.bool v) { $_setBool(0, v); }
+  $core.bool hasDeprecated() => $_has(0);
   void clearDeprecated() => clearField(33);
 
   MethodOptions_IdempotencyLevel get idempotencyLevel => $_getN(1);
-  set idempotencyLevel(MethodOptions_IdempotencyLevel v) {
-    setField(34, v);
-  }
-
-  bool hasIdempotencyLevel() => $_has(1);
+  set idempotencyLevel(MethodOptions_IdempotencyLevel v) { setField(34, v); }
+  $core.bool hasIdempotencyLevel() => $_has(1);
   void clearIdempotencyLevel() => clearField(34);
 
-  List<UninterpretedOption> get uninterpretedOption => $_getList(2);
+  $core.List<UninterpretedOption> get uninterpretedOption => $_getList(2);
 }
 
-class _ReadonlyMethodOptions extends MethodOptions with ReadonlyMessageMixin {}
-
-class UninterpretedOption_NamePart extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UninterpretedOption_NamePart')
+class UninterpretedOption_NamePart extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UninterpretedOption.NamePart', package: const $pb.PackageName('google.protobuf'))
     ..aQS(1, 'namePart')
-    ..a<bool>(2, 'isExtension', PbFieldType.QB);
+    ..a<$core.bool>(2, 'isExtension', $pb.PbFieldType.QB)
+  ;
 
   UninterpretedOption_NamePart() : super();
-  UninterpretedOption_NamePart.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UninterpretedOption_NamePart.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  UninterpretedOption_NamePart clone() =>
-      UninterpretedOption_NamePart()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UninterpretedOption_NamePart create() =>
-      UninterpretedOption_NamePart();
-  static PbList<UninterpretedOption_NamePart> createRepeated() =>
-      PbList<UninterpretedOption_NamePart>();
-  static UninterpretedOption_NamePart getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUninterpretedOption_NamePart();
-    return _defaultInstance;
-  }
-
+  UninterpretedOption_NamePart.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UninterpretedOption_NamePart.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  UninterpretedOption_NamePart clone() => UninterpretedOption_NamePart()..mergeFromMessage(this);
+  UninterpretedOption_NamePart copyWith(void Function(UninterpretedOption_NamePart) updates) => super.copyWith((message) => updates(message as UninterpretedOption_NamePart));
+  $pb.BuilderInfo get info_ => _i;
+  static UninterpretedOption_NamePart create() => UninterpretedOption_NamePart();
+  UninterpretedOption_NamePart createEmptyInstance() => create();
+  static $pb.PbList<UninterpretedOption_NamePart> createRepeated() => $pb.PbList<UninterpretedOption_NamePart>();
+  static UninterpretedOption_NamePart getDefault() => _defaultInstance ??= create()..freeze();
   static UninterpretedOption_NamePart _defaultInstance;
-  static void $checkItem(UninterpretedOption_NamePart v) {
-    if (v is! UninterpretedOption_NamePart)
-      checkItemFailed(v, 'UninterpretedOption_NamePart');
-  }
 
-  String get namePart => $_getS(0, '');
-  set namePart(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasNamePart() => $_has(0);
+  $core.String get namePart => $_getS(0, '');
+  set namePart($core.String v) { $_setString(0, v); }
+  $core.bool hasNamePart() => $_has(0);
   void clearNamePart() => clearField(1);
 
-  bool get isExtension => $_get(1, false);
-  set isExtension(bool v) {
-    $_setBool(1, v);
-  }
-
-  bool hasIsExtension() => $_has(1);
+  $core.bool get isExtension => $_get(1, false);
+  set isExtension($core.bool v) { $_setBool(1, v); }
+  $core.bool hasIsExtension() => $_has(1);
   void clearIsExtension() => clearField(2);
 }
 
-class _ReadonlyUninterpretedOption_NamePart extends UninterpretedOption_NamePart
-    with ReadonlyMessageMixin {}
-
-class UninterpretedOption extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UninterpretedOption')
-    ..pp<UninterpretedOption_NamePart>(
-        2,
-        'name',
-        PbFieldType.PM,
-        UninterpretedOption_NamePart.$checkItem,
-        UninterpretedOption_NamePart.create)
+class UninterpretedOption extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UninterpretedOption', package: const $pb.PackageName('google.protobuf'))
+    ..pc<UninterpretedOption_NamePart>(2, 'name', $pb.PbFieldType.PM,UninterpretedOption_NamePart.create)
     ..aOS(3, 'identifierValue')
-    ..a<Int64>(4, 'positiveIntValue', PbFieldType.OU6, Int64.ZERO)
+    ..a<Int64>(4, 'positiveIntValue', $pb.PbFieldType.OU6, Int64.ZERO)
     ..aInt64(5, 'negativeIntValue')
-    ..a<double>(6, 'doubleValue', PbFieldType.OD)
-    ..a<List<int>>(7, 'stringValue', PbFieldType.OY)
-    ..aOS(8, 'aggregateValue');
+    ..a<$core.double>(6, 'doubleValue', $pb.PbFieldType.OD)
+    ..a<$core.List<$core.int>>(7, 'stringValue', $pb.PbFieldType.OY)
+    ..aOS(8, 'aggregateValue')
+  ;
 
   UninterpretedOption() : super();
-  UninterpretedOption.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UninterpretedOption.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UninterpretedOption.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UninterpretedOption.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   UninterpretedOption clone() => UninterpretedOption()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UninterpretedOption copyWith(void Function(UninterpretedOption) updates) => super.copyWith((message) => updates(message as UninterpretedOption));
+  $pb.BuilderInfo get info_ => _i;
   static UninterpretedOption create() => UninterpretedOption();
-  static PbList<UninterpretedOption> createRepeated() =>
-      PbList<UninterpretedOption>();
-  static UninterpretedOption getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUninterpretedOption();
-    return _defaultInstance;
-  }
-
+  UninterpretedOption createEmptyInstance() => create();
+  static $pb.PbList<UninterpretedOption> createRepeated() => $pb.PbList<UninterpretedOption>();
+  static UninterpretedOption getDefault() => _defaultInstance ??= create()..freeze();
   static UninterpretedOption _defaultInstance;
-  static void $checkItem(UninterpretedOption v) {
-    if (v is! UninterpretedOption) checkItemFailed(v, 'UninterpretedOption');
-  }
 
-  List<UninterpretedOption_NamePart> get name => $_getList(0);
+  $core.List<UninterpretedOption_NamePart> get name => $_getList(0);
 
-  String get identifierValue => $_getS(1, '');
-  set identifierValue(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasIdentifierValue() => $_has(1);
+  $core.String get identifierValue => $_getS(1, '');
+  set identifierValue($core.String v) { $_setString(1, v); }
+  $core.bool hasIdentifierValue() => $_has(1);
   void clearIdentifierValue() => clearField(3);
 
   Int64 get positiveIntValue => $_getI64(2);
-  set positiveIntValue(Int64 v) {
-    $_setInt64(2, v);
-  }
-
-  bool hasPositiveIntValue() => $_has(2);
+  set positiveIntValue(Int64 v) { $_setInt64(2, v); }
+  $core.bool hasPositiveIntValue() => $_has(2);
   void clearPositiveIntValue() => clearField(4);
 
   Int64 get negativeIntValue => $_getI64(3);
-  set negativeIntValue(Int64 v) {
-    $_setInt64(3, v);
-  }
-
-  bool hasNegativeIntValue() => $_has(3);
+  set negativeIntValue(Int64 v) { $_setInt64(3, v); }
+  $core.bool hasNegativeIntValue() => $_has(3);
   void clearNegativeIntValue() => clearField(5);
 
-  double get doubleValue => $_getN(4);
-  set doubleValue(double v) {
-    $_setDouble(4, v);
-  }
-
-  bool hasDoubleValue() => $_has(4);
+  $core.double get doubleValue => $_getN(4);
+  set doubleValue($core.double v) { $_setDouble(4, v); }
+  $core.bool hasDoubleValue() => $_has(4);
   void clearDoubleValue() => clearField(6);
 
-  List<int> get stringValue => $_getN(5);
-  set stringValue(List<int> v) {
-    $_setBytes(5, v);
-  }
-
-  bool hasStringValue() => $_has(5);
+  $core.List<$core.int> get stringValue => $_getN(5);
+  set stringValue($core.List<$core.int> v) { $_setBytes(5, v); }
+  $core.bool hasStringValue() => $_has(5);
   void clearStringValue() => clearField(7);
 
-  String get aggregateValue => $_getS(6, '');
-  set aggregateValue(String v) {
-    $_setString(6, v);
-  }
-
-  bool hasAggregateValue() => $_has(6);
+  $core.String get aggregateValue => $_getS(6, '');
+  set aggregateValue($core.String v) { $_setString(6, v); }
+  $core.bool hasAggregateValue() => $_has(6);
   void clearAggregateValue() => clearField(8);
 }
 
-class _ReadonlyUninterpretedOption extends UninterpretedOption
-    with ReadonlyMessageMixin {}
-
-class SourceCodeInfo_Location extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SourceCodeInfo_Location')
-    ..p<int>(1, 'path', PbFieldType.K3)
-    ..p<int>(2, 'span', PbFieldType.K3)
+class SourceCodeInfo_Location extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceCodeInfo.Location', package: const $pb.PackageName('google.protobuf'))
+    ..p<$core.int>(1, 'path', $pb.PbFieldType.K3)
+    ..p<$core.int>(2, 'span', $pb.PbFieldType.K3)
     ..aOS(3, 'leadingComments')
     ..aOS(4, 'trailingComments')
     ..pPS(6, 'leadingDetachedComments')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   SourceCodeInfo_Location() : super();
-  SourceCodeInfo_Location.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceCodeInfo_Location.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  SourceCodeInfo_Location clone() =>
-      SourceCodeInfo_Location()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SourceCodeInfo_Location.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SourceCodeInfo_Location.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  SourceCodeInfo_Location clone() => SourceCodeInfo_Location()..mergeFromMessage(this);
+  SourceCodeInfo_Location copyWith(void Function(SourceCodeInfo_Location) updates) => super.copyWith((message) => updates(message as SourceCodeInfo_Location));
+  $pb.BuilderInfo get info_ => _i;
   static SourceCodeInfo_Location create() => SourceCodeInfo_Location();
-  static PbList<SourceCodeInfo_Location> createRepeated() =>
-      PbList<SourceCodeInfo_Location>();
-  static SourceCodeInfo_Location getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlySourceCodeInfo_Location();
-    return _defaultInstance;
-  }
-
+  SourceCodeInfo_Location createEmptyInstance() => create();
+  static $pb.PbList<SourceCodeInfo_Location> createRepeated() => $pb.PbList<SourceCodeInfo_Location>();
+  static SourceCodeInfo_Location getDefault() => _defaultInstance ??= create()..freeze();
   static SourceCodeInfo_Location _defaultInstance;
-  static void $checkItem(SourceCodeInfo_Location v) {
-    if (v is! SourceCodeInfo_Location)
-      checkItemFailed(v, 'SourceCodeInfo_Location');
-  }
 
-  List<int> get path => $_getList(0);
+  $core.List<$core.int> get path => $_getList(0);
 
-  List<int> get span => $_getList(1);
+  $core.List<$core.int> get span => $_getList(1);
 
-  String get leadingComments => $_getS(2, '');
-  set leadingComments(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasLeadingComments() => $_has(2);
+  $core.String get leadingComments => $_getS(2, '');
+  set leadingComments($core.String v) { $_setString(2, v); }
+  $core.bool hasLeadingComments() => $_has(2);
   void clearLeadingComments() => clearField(3);
 
-  String get trailingComments => $_getS(3, '');
-  set trailingComments(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasTrailingComments() => $_has(3);
+  $core.String get trailingComments => $_getS(3, '');
+  set trailingComments($core.String v) { $_setString(3, v); }
+  $core.bool hasTrailingComments() => $_has(3);
   void clearTrailingComments() => clearField(4);
 
-  List<String> get leadingDetachedComments => $_getList(4);
+  $core.List<$core.String> get leadingDetachedComments => $_getList(4);
 }
 
-class _ReadonlySourceCodeInfo_Location extends SourceCodeInfo_Location
-    with ReadonlyMessageMixin {}
-
-class SourceCodeInfo extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('SourceCodeInfo')
-    ..pp<SourceCodeInfo_Location>(1, 'location', PbFieldType.PM,
-        SourceCodeInfo_Location.$checkItem, SourceCodeInfo_Location.create)
-    ..hasRequiredFields = false;
+class SourceCodeInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceCodeInfo', package: const $pb.PackageName('google.protobuf'))
+    ..pc<SourceCodeInfo_Location>(1, 'location', $pb.PbFieldType.PM,SourceCodeInfo_Location.create)
+    ..hasRequiredFields = false
+  ;
 
   SourceCodeInfo() : super();
-  SourceCodeInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceCodeInfo.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceCodeInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  SourceCodeInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SourceCodeInfo clone() => SourceCodeInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  SourceCodeInfo copyWith(void Function(SourceCodeInfo) updates) => super.copyWith((message) => updates(message as SourceCodeInfo));
+  $pb.BuilderInfo get info_ => _i;
   static SourceCodeInfo create() => SourceCodeInfo();
-  static PbList<SourceCodeInfo> createRepeated() => PbList<SourceCodeInfo>();
-  static SourceCodeInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySourceCodeInfo();
-    return _defaultInstance;
-  }
-
+  SourceCodeInfo createEmptyInstance() => create();
+  static $pb.PbList<SourceCodeInfo> createRepeated() => $pb.PbList<SourceCodeInfo>();
+  static SourceCodeInfo getDefault() => _defaultInstance ??= create()..freeze();
   static SourceCodeInfo _defaultInstance;
-  static void $checkItem(SourceCodeInfo v) {
-    if (v is! SourceCodeInfo) checkItemFailed(v, 'SourceCodeInfo');
-  }
 
-  List<SourceCodeInfo_Location> get location => $_getList(0);
+  $core.List<SourceCodeInfo_Location> get location => $_getList(0);
 }
 
-class _ReadonlySourceCodeInfo extends SourceCodeInfo with ReadonlyMessageMixin {
-}
-
-class GeneratedCodeInfo_Annotation extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GeneratedCodeInfo_Annotation')
-    ..p<int>(1, 'path', PbFieldType.K3)
+class GeneratedCodeInfo_Annotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GeneratedCodeInfo.Annotation', package: const $pb.PackageName('google.protobuf'))
+    ..p<$core.int>(1, 'path', $pb.PbFieldType.K3)
     ..aOS(2, 'sourceFile')
-    ..a<int>(3, 'begin', PbFieldType.O3)
-    ..a<int>(4, 'end', PbFieldType.O3)
-    ..hasRequiredFields = false;
+    ..a<$core.int>(3, 'begin', $pb.PbFieldType.O3)
+    ..a<$core.int>(4, 'end', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
 
   GeneratedCodeInfo_Annotation() : super();
-  GeneratedCodeInfo_Annotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GeneratedCodeInfo_Annotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GeneratedCodeInfo_Annotation clone() =>
-      GeneratedCodeInfo_Annotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GeneratedCodeInfo_Annotation create() =>
-      GeneratedCodeInfo_Annotation();
-  static PbList<GeneratedCodeInfo_Annotation> createRepeated() =>
-      PbList<GeneratedCodeInfo_Annotation>();
-  static GeneratedCodeInfo_Annotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGeneratedCodeInfo_Annotation();
-    return _defaultInstance;
-  }
-
+  GeneratedCodeInfo_Annotation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GeneratedCodeInfo_Annotation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  GeneratedCodeInfo_Annotation clone() => GeneratedCodeInfo_Annotation()..mergeFromMessage(this);
+  GeneratedCodeInfo_Annotation copyWith(void Function(GeneratedCodeInfo_Annotation) updates) => super.copyWith((message) => updates(message as GeneratedCodeInfo_Annotation));
+  $pb.BuilderInfo get info_ => _i;
+  static GeneratedCodeInfo_Annotation create() => GeneratedCodeInfo_Annotation();
+  GeneratedCodeInfo_Annotation createEmptyInstance() => create();
+  static $pb.PbList<GeneratedCodeInfo_Annotation> createRepeated() => $pb.PbList<GeneratedCodeInfo_Annotation>();
+  static GeneratedCodeInfo_Annotation getDefault() => _defaultInstance ??= create()..freeze();
   static GeneratedCodeInfo_Annotation _defaultInstance;
-  static void $checkItem(GeneratedCodeInfo_Annotation v) {
-    if (v is! GeneratedCodeInfo_Annotation)
-      checkItemFailed(v, 'GeneratedCodeInfo_Annotation');
-  }
 
-  List<int> get path => $_getList(0);
+  $core.List<$core.int> get path => $_getList(0);
 
-  String get sourceFile => $_getS(1, '');
-  set sourceFile(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasSourceFile() => $_has(1);
+  $core.String get sourceFile => $_getS(1, '');
+  set sourceFile($core.String v) { $_setString(1, v); }
+  $core.bool hasSourceFile() => $_has(1);
   void clearSourceFile() => clearField(2);
 
-  int get begin => $_get(2, 0);
-  set begin(int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  bool hasBegin() => $_has(2);
+  $core.int get begin => $_get(2, 0);
+  set begin($core.int v) { $_setSignedInt32(2, v); }
+  $core.bool hasBegin() => $_has(2);
   void clearBegin() => clearField(3);
 
-  int get end => $_get(3, 0);
-  set end(int v) {
-    $_setSignedInt32(3, v);
-  }
-
-  bool hasEnd() => $_has(3);
+  $core.int get end => $_get(3, 0);
+  set end($core.int v) { $_setSignedInt32(3, v); }
+  $core.bool hasEnd() => $_has(3);
   void clearEnd() => clearField(4);
 }
 
-class _ReadonlyGeneratedCodeInfo_Annotation extends GeneratedCodeInfo_Annotation
-    with ReadonlyMessageMixin {}
-
-class GeneratedCodeInfo extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GeneratedCodeInfo')
-    ..pp<GeneratedCodeInfo_Annotation>(
-        1,
-        'annotation',
-        PbFieldType.PM,
-        GeneratedCodeInfo_Annotation.$checkItem,
-        GeneratedCodeInfo_Annotation.create)
-    ..hasRequiredFields = false;
+class GeneratedCodeInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GeneratedCodeInfo', package: const $pb.PackageName('google.protobuf'))
+    ..pc<GeneratedCodeInfo_Annotation>(1, 'annotation', $pb.PbFieldType.PM,GeneratedCodeInfo_Annotation.create)
+    ..hasRequiredFields = false
+  ;
 
   GeneratedCodeInfo() : super();
-  GeneratedCodeInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GeneratedCodeInfo.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GeneratedCodeInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GeneratedCodeInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GeneratedCodeInfo clone() => GeneratedCodeInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GeneratedCodeInfo copyWith(void Function(GeneratedCodeInfo) updates) => super.copyWith((message) => updates(message as GeneratedCodeInfo));
+  $pb.BuilderInfo get info_ => _i;
   static GeneratedCodeInfo create() => GeneratedCodeInfo();
-  static PbList<GeneratedCodeInfo> createRepeated() =>
-      PbList<GeneratedCodeInfo>();
-  static GeneratedCodeInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyGeneratedCodeInfo();
-    return _defaultInstance;
-  }
-
+  GeneratedCodeInfo createEmptyInstance() => create();
+  static $pb.PbList<GeneratedCodeInfo> createRepeated() => $pb.PbList<GeneratedCodeInfo>();
+  static GeneratedCodeInfo getDefault() => _defaultInstance ??= create()..freeze();
   static GeneratedCodeInfo _defaultInstance;
-  static void $checkItem(GeneratedCodeInfo v) {
-    if (v is! GeneratedCodeInfo) checkItemFailed(v, 'GeneratedCodeInfo');
-  }
 
-  List<GeneratedCodeInfo_Annotation> get annotation => $_getList(0);
+  $core.List<GeneratedCodeInfo_Annotation> get annotation => $_getList(0);
 }
 
-class _ReadonlyGeneratedCodeInfo extends GeneratedCodeInfo
-    with ReadonlyMessageMixin {}

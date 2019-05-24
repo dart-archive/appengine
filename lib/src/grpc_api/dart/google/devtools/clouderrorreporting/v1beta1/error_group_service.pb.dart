@@ -1,109 +1,75 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/clouderrorreporting/v1beta1/error_group_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:async' as $async;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'common.pb.dart';
+import 'common.pb.dart' as $0;
 
-class GetGroupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('GetGroupRequest')
+class GetGroupRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetGroupRequest', package: const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
     ..aOS(1, 'groupName')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   GetGroupRequest() : super();
-  GetGroupRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetGroupRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetGroupRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  GetGroupRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   GetGroupRequest clone() => GetGroupRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  GetGroupRequest copyWith(void Function(GetGroupRequest) updates) => super.copyWith((message) => updates(message as GetGroupRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetGroupRequest create() => GetGroupRequest();
-  static PbList<GetGroupRequest> createRepeated() => PbList<GetGroupRequest>();
-  static GetGroupRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyGetGroupRequest();
-    return _defaultInstance;
-  }
-
+  GetGroupRequest createEmptyInstance() => create();
+  static $pb.PbList<GetGroupRequest> createRepeated() => $pb.PbList<GetGroupRequest>();
+  static GetGroupRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetGroupRequest _defaultInstance;
-  static void $checkItem(GetGroupRequest v) {
-    if (v is! GetGroupRequest) checkItemFailed(v, 'GetGroupRequest');
-  }
 
-  String get groupName => $_getS(0, '');
-  set groupName(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasGroupName() => $_has(0);
+  $core.String get groupName => $_getS(0, '');
+  set groupName($core.String v) { $_setString(0, v); }
+  $core.bool hasGroupName() => $_has(0);
   void clearGroupName() => clearField(1);
 }
 
-class _ReadonlyGetGroupRequest extends GetGroupRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateGroupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('UpdateGroupRequest')
-    ..a<ErrorGroup>(
-        1, 'group', PbFieldType.OM, ErrorGroup.getDefault, ErrorGroup.create)
-    ..hasRequiredFields = false;
+class UpdateGroupRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateGroupRequest', package: const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
+    ..a<$0.ErrorGroup>(1, 'group', $pb.PbFieldType.OM, $0.ErrorGroup.getDefault, $0.ErrorGroup.create)
+    ..hasRequiredFields = false
+  ;
 
   UpdateGroupRequest() : super();
-  UpdateGroupRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateGroupRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateGroupRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  UpdateGroupRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   UpdateGroupRequest clone() => UpdateGroupRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  UpdateGroupRequest copyWith(void Function(UpdateGroupRequest) updates) => super.copyWith((message) => updates(message as UpdateGroupRequest));
+  $pb.BuilderInfo get info_ => _i;
   static UpdateGroupRequest create() => UpdateGroupRequest();
-  static PbList<UpdateGroupRequest> createRepeated() =>
-      PbList<UpdateGroupRequest>();
-  static UpdateGroupRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyUpdateGroupRequest();
-    return _defaultInstance;
-  }
-
+  UpdateGroupRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateGroupRequest> createRepeated() => $pb.PbList<UpdateGroupRequest>();
+  static UpdateGroupRequest getDefault() => _defaultInstance ??= create()..freeze();
   static UpdateGroupRequest _defaultInstance;
-  static void $checkItem(UpdateGroupRequest v) {
-    if (v is! UpdateGroupRequest) checkItemFailed(v, 'UpdateGroupRequest');
-  }
 
-  ErrorGroup get group => $_getN(0);
-  set group(ErrorGroup v) {
-    setField(1, v);
-  }
-
-  bool hasGroup() => $_has(0);
+  $0.ErrorGroup get group => $_getN(0);
+  set group($0.ErrorGroup v) { setField(1, v); }
+  $core.bool hasGroup() => $_has(0);
   void clearGroup() => clearField(1);
 }
 
-class _ReadonlyUpdateGroupRequest extends UpdateGroupRequest
-    with ReadonlyMessageMixin {}
-
 class ErrorGroupServiceApi {
-  RpcClient _client;
+  $pb.RpcClient _client;
   ErrorGroupServiceApi(this._client);
 
-  Future<ErrorGroup> getGroup(ClientContext ctx, GetGroupRequest request) {
-    var emptyResponse = ErrorGroup();
-    return _client.invoke<ErrorGroup>(
-        ctx, 'ErrorGroupService', 'GetGroup', request, emptyResponse);
+  $async.Future<$0.ErrorGroup> getGroup($pb.ClientContext ctx, GetGroupRequest request) {
+    var emptyResponse = $0.ErrorGroup();
+    return _client.invoke<$0.ErrorGroup>(ctx, 'ErrorGroupService', 'GetGroup', request, emptyResponse);
   }
-
-  Future<ErrorGroup> updateGroup(
-      ClientContext ctx, UpdateGroupRequest request) {
-    var emptyResponse = ErrorGroup();
-    return _client.invoke<ErrorGroup>(
-        ctx, 'ErrorGroupService', 'UpdateGroup', request, emptyResponse);
+  $async.Future<$0.ErrorGroup> updateGroup($pb.ClientContext ctx, UpdateGroupRequest request) {
+    var emptyResponse = $0.ErrorGroup();
+    return _client.invoke<$0.ErrorGroup>(ctx, 'ErrorGroupService', 'UpdateGroup', request, emptyResponse);
   }
 }
+

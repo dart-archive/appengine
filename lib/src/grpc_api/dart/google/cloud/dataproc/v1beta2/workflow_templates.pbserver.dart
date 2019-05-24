@@ -1,73 +1,57 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dataproc/v1beta2/workflow_templates.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
+import 'dart:async' as $async;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'dart:core' as $core show String, Map, ArgumentError, dynamic;
 import 'workflow_templates.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../../longrunning/operations.pb.dart' as $3;
+import '../../../protobuf/empty.pb.dart' as $4;
 import 'workflow_templates.pbjson.dart';
 
 export 'workflow_templates.pb.dart';
 
-abstract class WorkflowTemplateServiceBase extends GeneratedService {
-  Future<WorkflowTemplate> createWorkflowTemplate(
-      ServerContext ctx, CreateWorkflowTemplateRequest request);
-  Future<WorkflowTemplate> getWorkflowTemplate(
-      ServerContext ctx, GetWorkflowTemplateRequest request);
-  Future<$google$longrunning.Operation> instantiateWorkflowTemplate(
-      ServerContext ctx, InstantiateWorkflowTemplateRequest request);
-  Future<WorkflowTemplate> updateWorkflowTemplate(
-      ServerContext ctx, UpdateWorkflowTemplateRequest request);
-  Future<ListWorkflowTemplatesResponse> listWorkflowTemplates(
-      ServerContext ctx, ListWorkflowTemplatesRequest request);
-  Future<$google$protobuf.Empty> deleteWorkflowTemplate(
-      ServerContext ctx, DeleteWorkflowTemplateRequest request);
+abstract class WorkflowTemplateServiceBase extends $pb.GeneratedService {
+  $async.Future<WorkflowTemplate> createWorkflowTemplate($pb.ServerContext ctx, CreateWorkflowTemplateRequest request);
+  $async.Future<WorkflowTemplate> getWorkflowTemplate($pb.ServerContext ctx, GetWorkflowTemplateRequest request);
+  $async.Future<$3.Operation> instantiateWorkflowTemplate($pb.ServerContext ctx, InstantiateWorkflowTemplateRequest request);
+  $async.Future<$3.Operation> instantiateInlineWorkflowTemplate($pb.ServerContext ctx, InstantiateInlineWorkflowTemplateRequest request);
+  $async.Future<WorkflowTemplate> updateWorkflowTemplate($pb.ServerContext ctx, UpdateWorkflowTemplateRequest request);
+  $async.Future<ListWorkflowTemplatesResponse> listWorkflowTemplates($pb.ServerContext ctx, ListWorkflowTemplatesRequest request);
+  $async.Future<$4.Empty> deleteWorkflowTemplate($pb.ServerContext ctx, DeleteWorkflowTemplateRequest request);
 
-  GeneratedMessage createRequest(String method) {
+  $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'CreateWorkflowTemplate':
-        return CreateWorkflowTemplateRequest();
-      case 'GetWorkflowTemplate':
-        return GetWorkflowTemplateRequest();
-      case 'InstantiateWorkflowTemplate':
-        return InstantiateWorkflowTemplateRequest();
-      case 'UpdateWorkflowTemplate':
-        return UpdateWorkflowTemplateRequest();
-      case 'ListWorkflowTemplates':
-        return ListWorkflowTemplatesRequest();
-      case 'DeleteWorkflowTemplate':
-        return DeleteWorkflowTemplateRequest();
-      default:
-        throw ArgumentError('Unknown method: $method');
+      case 'CreateWorkflowTemplate': return CreateWorkflowTemplateRequest();
+      case 'GetWorkflowTemplate': return GetWorkflowTemplateRequest();
+      case 'InstantiateWorkflowTemplate': return InstantiateWorkflowTemplateRequest();
+      case 'InstantiateInlineWorkflowTemplate': return InstantiateInlineWorkflowTemplateRequest();
+      case 'UpdateWorkflowTemplate': return UpdateWorkflowTemplateRequest();
+      case 'ListWorkflowTemplates': return ListWorkflowTemplatesRequest();
+      case 'DeleteWorkflowTemplate': return DeleteWorkflowTemplateRequest();
+      default: throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Future<GeneratedMessage> handleCall(
-      ServerContext ctx, String method, GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'CreateWorkflowTemplate':
-        return this.createWorkflowTemplate(ctx, request);
-      case 'GetWorkflowTemplate':
-        return this.getWorkflowTemplate(ctx, request);
-      case 'InstantiateWorkflowTemplate':
-        return this.instantiateWorkflowTemplate(ctx, request);
-      case 'UpdateWorkflowTemplate':
-        return this.updateWorkflowTemplate(ctx, request);
-      case 'ListWorkflowTemplates':
-        return this.listWorkflowTemplates(ctx, request);
-      case 'DeleteWorkflowTemplate':
-        return this.deleteWorkflowTemplate(ctx, request);
-      default:
-        throw ArgumentError('Unknown method: $method');
+      case 'CreateWorkflowTemplate': return this.createWorkflowTemplate(ctx, request);
+      case 'GetWorkflowTemplate': return this.getWorkflowTemplate(ctx, request);
+      case 'InstantiateWorkflowTemplate': return this.instantiateWorkflowTemplate(ctx, request);
+      case 'InstantiateInlineWorkflowTemplate': return this.instantiateInlineWorkflowTemplate(ctx, request);
+      case 'UpdateWorkflowTemplate': return this.updateWorkflowTemplate(ctx, request);
+      case 'ListWorkflowTemplates': return this.listWorkflowTemplates(ctx, request);
+      case 'DeleteWorkflowTemplate': return this.deleteWorkflowTemplate(ctx, request);
+      default: throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  Map<String, dynamic> get $json => WorkflowTemplateService$json;
-  Map<String, Map<String, dynamic>> get $messageJson =>
-      WorkflowTemplateService$messageJson;
+  $core.Map<$core.String, $core.dynamic> get $json => WorkflowTemplateServiceBase$json;
+  $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> get $messageJson => WorkflowTemplateServiceBase$messageJson;
 }
+

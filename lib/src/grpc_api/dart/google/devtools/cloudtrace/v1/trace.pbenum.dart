@@ -1,61 +1,46 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/cloudtrace/v1/trace.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class TraceSpan_SpanKind extends ProtobufEnum {
-  static const TraceSpan_SpanKind SPAN_KIND_UNSPECIFIED =
-      TraceSpan_SpanKind._(0, 'SPAN_KIND_UNSPECIFIED');
-  static const TraceSpan_SpanKind RPC_SERVER =
-      TraceSpan_SpanKind._(1, 'RPC_SERVER');
-  static const TraceSpan_SpanKind RPC_CLIENT =
-      TraceSpan_SpanKind._(2, 'RPC_CLIENT');
+class TraceSpan_SpanKind extends $pb.ProtobufEnum {
+  static const TraceSpan_SpanKind SPAN_KIND_UNSPECIFIED = TraceSpan_SpanKind._(0, 'SPAN_KIND_UNSPECIFIED');
+  static const TraceSpan_SpanKind RPC_SERVER = TraceSpan_SpanKind._(1, 'RPC_SERVER');
+  static const TraceSpan_SpanKind RPC_CLIENT = TraceSpan_SpanKind._(2, 'RPC_CLIENT');
 
-  static const List<TraceSpan_SpanKind> values = <TraceSpan_SpanKind>[
+  static const $core.List<TraceSpan_SpanKind> values = <TraceSpan_SpanKind> [
     SPAN_KIND_UNSPECIFIED,
     RPC_SERVER,
     RPC_CLIENT,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static TraceSpan_SpanKind valueOf(int value) =>
-      _byValue[value] as TraceSpan_SpanKind;
-  static void $checkItem(TraceSpan_SpanKind v) {
-    if (v is! TraceSpan_SpanKind) checkItemFailed(v, 'TraceSpan_SpanKind');
-  }
+  static final $core.Map<$core.int, TraceSpan_SpanKind> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static TraceSpan_SpanKind valueOf($core.int value) => _byValue[value];
 
-  const TraceSpan_SpanKind._(int v, String n) : super(v, n);
+  const TraceSpan_SpanKind._($core.int v, $core.String n) : super(v, n);
 }
 
-class ListTracesRequest_ViewType extends ProtobufEnum {
-  static const ListTracesRequest_ViewType VIEW_TYPE_UNSPECIFIED =
-      ListTracesRequest_ViewType._(0, 'VIEW_TYPE_UNSPECIFIED');
-  static const ListTracesRequest_ViewType MINIMAL =
-      ListTracesRequest_ViewType._(1, 'MINIMAL');
-  static const ListTracesRequest_ViewType ROOTSPAN =
-      ListTracesRequest_ViewType._(2, 'ROOTSPAN');
-  static const ListTracesRequest_ViewType COMPLETE =
-      ListTracesRequest_ViewType._(3, 'COMPLETE');
+class ListTracesRequest_ViewType extends $pb.ProtobufEnum {
+  static const ListTracesRequest_ViewType VIEW_TYPE_UNSPECIFIED = ListTracesRequest_ViewType._(0, 'VIEW_TYPE_UNSPECIFIED');
+  static const ListTracesRequest_ViewType MINIMAL = ListTracesRequest_ViewType._(1, 'MINIMAL');
+  static const ListTracesRequest_ViewType ROOTSPAN = ListTracesRequest_ViewType._(2, 'ROOTSPAN');
+  static const ListTracesRequest_ViewType COMPLETE = ListTracesRequest_ViewType._(3, 'COMPLETE');
 
-  static const List<ListTracesRequest_ViewType> values =
-      <ListTracesRequest_ViewType>[
+  static const $core.List<ListTracesRequest_ViewType> values = <ListTracesRequest_ViewType> [
     VIEW_TYPE_UNSPECIFIED,
     MINIMAL,
     ROOTSPAN,
     COMPLETE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ListTracesRequest_ViewType valueOf(int value) =>
-      _byValue[value] as ListTracesRequest_ViewType;
-  static void $checkItem(ListTracesRequest_ViewType v) {
-    if (v is! ListTracesRequest_ViewType)
-      checkItemFailed(v, 'ListTracesRequest_ViewType');
-  }
+  static final $core.Map<$core.int, ListTracesRequest_ViewType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ListTracesRequest_ViewType valueOf($core.int value) => _byValue[value];
 
-  const ListTracesRequest_ViewType._(int v, String n) : super(v, n);
+  const ListTracesRequest_ViewType._($core.int v, $core.String n) : super(v, n);
 }
+

@@ -1,544 +1,207 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/v2/data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const Row$json = {
+const Row$json = const {
   '1': 'Row',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
-    {
-      '1': 'families',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.bigtable.v2.Family',
-      '10': 'families'
-    },
+  '2': const [
+    const {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
+    const {'1': 'families', '3': 2, '4': 3, '5': 11, '6': '.google.bigtable.v2.Family', '10': 'families'},
   ],
 };
 
-const Family$json = {
+const Family$json = const {
   '1': 'Family',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {
-      '1': 'columns',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.bigtable.v2.Column',
-      '10': 'columns'
-    },
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'columns', '3': 2, '4': 3, '5': 11, '6': '.google.bigtable.v2.Column', '10': 'columns'},
   ],
 };
 
-const Column$json = {
+const Column$json = const {
   '1': 'Column',
-  '2': [
-    {'1': 'qualifier', '3': 1, '4': 1, '5': 12, '10': 'qualifier'},
-    {
-      '1': 'cells',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.bigtable.v2.Cell',
-      '10': 'cells'
-    },
+  '2': const [
+    const {'1': 'qualifier', '3': 1, '4': 1, '5': 12, '10': 'qualifier'},
+    const {'1': 'cells', '3': 2, '4': 3, '5': 11, '6': '.google.bigtable.v2.Cell', '10': 'cells'},
   ],
 };
 
-const Cell$json = {
+const Cell$json = const {
   '1': 'Cell',
-  '2': [
-    {'1': 'timestamp_micros', '3': 1, '4': 1, '5': 3, '10': 'timestampMicros'},
-    {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
-    {'1': 'labels', '3': 3, '4': 3, '5': 9, '10': 'labels'},
+  '2': const [
+    const {'1': 'timestamp_micros', '3': 1, '4': 1, '5': 3, '10': 'timestampMicros'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
+    const {'1': 'labels', '3': 3, '4': 3, '5': 9, '10': 'labels'},
   ],
 };
 
-const RowRange$json = {
+const RowRange$json = const {
   '1': 'RowRange',
-  '2': [
-    {
-      '1': 'start_key_closed',
-      '3': 1,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'startKeyClosed'
-    },
-    {
-      '1': 'start_key_open',
-      '3': 2,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'startKeyOpen'
-    },
-    {'1': 'end_key_open', '3': 3, '4': 1, '5': 12, '9': 1, '10': 'endKeyOpen'},
-    {
-      '1': 'end_key_closed',
-      '3': 4,
-      '4': 1,
-      '5': 12,
-      '9': 1,
-      '10': 'endKeyClosed'
-    },
+  '2': const [
+    const {'1': 'start_key_closed', '3': 1, '4': 1, '5': 12, '9': 0, '10': 'startKeyClosed'},
+    const {'1': 'start_key_open', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'startKeyOpen'},
+    const {'1': 'end_key_open', '3': 3, '4': 1, '5': 12, '9': 1, '10': 'endKeyOpen'},
+    const {'1': 'end_key_closed', '3': 4, '4': 1, '5': 12, '9': 1, '10': 'endKeyClosed'},
   ],
-  '8': [
-    {'1': 'start_key'},
-    {'1': 'end_key'},
+  '8': const [
+    const {'1': 'start_key'},
+    const {'1': 'end_key'},
   ],
 };
 
-const RowSet$json = {
+const RowSet$json = const {
   '1': 'RowSet',
-  '2': [
-    {'1': 'row_keys', '3': 1, '4': 3, '5': 12, '10': 'rowKeys'},
-    {
-      '1': 'row_ranges',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowRange',
-      '10': 'rowRanges'
-    },
+  '2': const [
+    const {'1': 'row_keys', '3': 1, '4': 3, '5': 12, '10': 'rowKeys'},
+    const {'1': 'row_ranges', '3': 2, '4': 3, '5': 11, '6': '.google.bigtable.v2.RowRange', '10': 'rowRanges'},
   ],
 };
 
-const ColumnRange$json = {
+const ColumnRange$json = const {
   '1': 'ColumnRange',
-  '2': [
-    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
-    {
-      '1': 'start_qualifier_closed',
-      '3': 2,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'startQualifierClosed'
-    },
-    {
-      '1': 'start_qualifier_open',
-      '3': 3,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'startQualifierOpen'
-    },
-    {
-      '1': 'end_qualifier_closed',
-      '3': 4,
-      '4': 1,
-      '5': 12,
-      '9': 1,
-      '10': 'endQualifierClosed'
-    },
-    {
-      '1': 'end_qualifier_open',
-      '3': 5,
-      '4': 1,
-      '5': 12,
-      '9': 1,
-      '10': 'endQualifierOpen'
-    },
+  '2': const [
+    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+    const {'1': 'start_qualifier_closed', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'startQualifierClosed'},
+    const {'1': 'start_qualifier_open', '3': 3, '4': 1, '5': 12, '9': 0, '10': 'startQualifierOpen'},
+    const {'1': 'end_qualifier_closed', '3': 4, '4': 1, '5': 12, '9': 1, '10': 'endQualifierClosed'},
+    const {'1': 'end_qualifier_open', '3': 5, '4': 1, '5': 12, '9': 1, '10': 'endQualifierOpen'},
   ],
-  '8': [
-    {'1': 'start_qualifier'},
-    {'1': 'end_qualifier'},
+  '8': const [
+    const {'1': 'start_qualifier'},
+    const {'1': 'end_qualifier'},
   ],
 };
 
-const TimestampRange$json = {
+const TimestampRange$json = const {
   '1': 'TimestampRange',
-  '2': [
-    {
-      '1': 'start_timestamp_micros',
-      '3': 1,
-      '4': 1,
-      '5': 3,
-      '10': 'startTimestampMicros'
-    },
-    {
-      '1': 'end_timestamp_micros',
-      '3': 2,
-      '4': 1,
-      '5': 3,
-      '10': 'endTimestampMicros'
-    },
+  '2': const [
+    const {'1': 'start_timestamp_micros', '3': 1, '4': 1, '5': 3, '10': 'startTimestampMicros'},
+    const {'1': 'end_timestamp_micros', '3': 2, '4': 1, '5': 3, '10': 'endTimestampMicros'},
   ],
 };
 
-const ValueRange$json = {
+const ValueRange$json = const {
   '1': 'ValueRange',
-  '2': [
-    {
-      '1': 'start_value_closed',
-      '3': 1,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'startValueClosed'
-    },
-    {
-      '1': 'start_value_open',
-      '3': 2,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'startValueOpen'
-    },
-    {
-      '1': 'end_value_closed',
-      '3': 3,
-      '4': 1,
-      '5': 12,
-      '9': 1,
-      '10': 'endValueClosed'
-    },
-    {
-      '1': 'end_value_open',
-      '3': 4,
-      '4': 1,
-      '5': 12,
-      '9': 1,
-      '10': 'endValueOpen'
-    },
+  '2': const [
+    const {'1': 'start_value_closed', '3': 1, '4': 1, '5': 12, '9': 0, '10': 'startValueClosed'},
+    const {'1': 'start_value_open', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'startValueOpen'},
+    const {'1': 'end_value_closed', '3': 3, '4': 1, '5': 12, '9': 1, '10': 'endValueClosed'},
+    const {'1': 'end_value_open', '3': 4, '4': 1, '5': 12, '9': 1, '10': 'endValueOpen'},
   ],
-  '8': [
-    {'1': 'start_value'},
-    {'1': 'end_value'},
+  '8': const [
+    const {'1': 'start_value'},
+    const {'1': 'end_value'},
   ],
 };
 
-const RowFilter$json = {
+const RowFilter$json = const {
   '1': 'RowFilter',
-  '2': [
-    {
-      '1': 'chain',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowFilter.Chain',
-      '9': 0,
-      '10': 'chain'
-    },
-    {
-      '1': 'interleave',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowFilter.Interleave',
-      '9': 0,
-      '10': 'interleave'
-    },
-    {
-      '1': 'condition',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowFilter.Condition',
-      '9': 0,
-      '10': 'condition'
-    },
-    {'1': 'sink', '3': 16, '4': 1, '5': 8, '9': 0, '10': 'sink'},
-    {
-      '1': 'pass_all_filter',
-      '3': 17,
-      '4': 1,
-      '5': 8,
-      '9': 0,
-      '10': 'passAllFilter'
-    },
-    {
-      '1': 'block_all_filter',
-      '3': 18,
-      '4': 1,
-      '5': 8,
-      '9': 0,
-      '10': 'blockAllFilter'
-    },
-    {
-      '1': 'row_key_regex_filter',
-      '3': 4,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'rowKeyRegexFilter'
-    },
-    {
-      '1': 'row_sample_filter',
-      '3': 14,
-      '4': 1,
-      '5': 1,
-      '9': 0,
-      '10': 'rowSampleFilter'
-    },
-    {
-      '1': 'family_name_regex_filter',
-      '3': 5,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'familyNameRegexFilter'
-    },
-    {
-      '1': 'column_qualifier_regex_filter',
-      '3': 6,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'columnQualifierRegexFilter'
-    },
-    {
-      '1': 'column_range_filter',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.ColumnRange',
-      '9': 0,
-      '10': 'columnRangeFilter'
-    },
-    {
-      '1': 'timestamp_range_filter',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.TimestampRange',
-      '9': 0,
-      '10': 'timestampRangeFilter'
-    },
-    {
-      '1': 'value_regex_filter',
-      '3': 9,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'valueRegexFilter'
-    },
-    {
-      '1': 'value_range_filter',
-      '3': 15,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.ValueRange',
-      '9': 0,
-      '10': 'valueRangeFilter'
-    },
-    {
-      '1': 'cells_per_row_offset_filter',
-      '3': 10,
-      '4': 1,
-      '5': 5,
-      '9': 0,
-      '10': 'cellsPerRowOffsetFilter'
-    },
-    {
-      '1': 'cells_per_row_limit_filter',
-      '3': 11,
-      '4': 1,
-      '5': 5,
-      '9': 0,
-      '10': 'cellsPerRowLimitFilter'
-    },
-    {
-      '1': 'cells_per_column_limit_filter',
-      '3': 12,
-      '4': 1,
-      '5': 5,
-      '9': 0,
-      '10': 'cellsPerColumnLimitFilter'
-    },
-    {
-      '1': 'strip_value_transformer',
-      '3': 13,
-      '4': 1,
-      '5': 8,
-      '9': 0,
-      '10': 'stripValueTransformer'
-    },
-    {
-      '1': 'apply_label_transformer',
-      '3': 19,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'applyLabelTransformer'
-    },
+  '2': const [
+    const {'1': 'chain', '3': 1, '4': 1, '5': 11, '6': '.google.bigtable.v2.RowFilter.Chain', '9': 0, '10': 'chain'},
+    const {'1': 'interleave', '3': 2, '4': 1, '5': 11, '6': '.google.bigtable.v2.RowFilter.Interleave', '9': 0, '10': 'interleave'},
+    const {'1': 'condition', '3': 3, '4': 1, '5': 11, '6': '.google.bigtable.v2.RowFilter.Condition', '9': 0, '10': 'condition'},
+    const {'1': 'sink', '3': 16, '4': 1, '5': 8, '9': 0, '10': 'sink'},
+    const {'1': 'pass_all_filter', '3': 17, '4': 1, '5': 8, '9': 0, '10': 'passAllFilter'},
+    const {'1': 'block_all_filter', '3': 18, '4': 1, '5': 8, '9': 0, '10': 'blockAllFilter'},
+    const {'1': 'row_key_regex_filter', '3': 4, '4': 1, '5': 12, '9': 0, '10': 'rowKeyRegexFilter'},
+    const {'1': 'row_sample_filter', '3': 14, '4': 1, '5': 1, '9': 0, '10': 'rowSampleFilter'},
+    const {'1': 'family_name_regex_filter', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'familyNameRegexFilter'},
+    const {'1': 'column_qualifier_regex_filter', '3': 6, '4': 1, '5': 12, '9': 0, '10': 'columnQualifierRegexFilter'},
+    const {'1': 'column_range_filter', '3': 7, '4': 1, '5': 11, '6': '.google.bigtable.v2.ColumnRange', '9': 0, '10': 'columnRangeFilter'},
+    const {'1': 'timestamp_range_filter', '3': 8, '4': 1, '5': 11, '6': '.google.bigtable.v2.TimestampRange', '9': 0, '10': 'timestampRangeFilter'},
+    const {'1': 'value_regex_filter', '3': 9, '4': 1, '5': 12, '9': 0, '10': 'valueRegexFilter'},
+    const {'1': 'value_range_filter', '3': 15, '4': 1, '5': 11, '6': '.google.bigtable.v2.ValueRange', '9': 0, '10': 'valueRangeFilter'},
+    const {'1': 'cells_per_row_offset_filter', '3': 10, '4': 1, '5': 5, '9': 0, '10': 'cellsPerRowOffsetFilter'},
+    const {'1': 'cells_per_row_limit_filter', '3': 11, '4': 1, '5': 5, '9': 0, '10': 'cellsPerRowLimitFilter'},
+    const {'1': 'cells_per_column_limit_filter', '3': 12, '4': 1, '5': 5, '9': 0, '10': 'cellsPerColumnLimitFilter'},
+    const {'1': 'strip_value_transformer', '3': 13, '4': 1, '5': 8, '9': 0, '10': 'stripValueTransformer'},
+    const {'1': 'apply_label_transformer', '3': 19, '4': 1, '5': 9, '9': 0, '10': 'applyLabelTransformer'},
   ],
-  '3': [
-    RowFilter_Chain$json,
-    RowFilter_Interleave$json,
-    RowFilter_Condition$json
-  ],
-  '8': [
-    {'1': 'filter'},
+  '3': const [RowFilter_Chain$json, RowFilter_Interleave$json, RowFilter_Condition$json],
+  '8': const [
+    const {'1': 'filter'},
   ],
 };
 
-const RowFilter_Chain$json = {
+const RowFilter_Chain$json = const {
   '1': 'Chain',
-  '2': [
-    {
-      '1': 'filters',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowFilter',
-      '10': 'filters'
-    },
+  '2': const [
+    const {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.google.bigtable.v2.RowFilter', '10': 'filters'},
   ],
 };
 
-const RowFilter_Interleave$json = {
+const RowFilter_Interleave$json = const {
   '1': 'Interleave',
-  '2': [
-    {
-      '1': 'filters',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowFilter',
-      '10': 'filters'
-    },
+  '2': const [
+    const {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.google.bigtable.v2.RowFilter', '10': 'filters'},
   ],
 };
 
-const RowFilter_Condition$json = {
+const RowFilter_Condition$json = const {
   '1': 'Condition',
-  '2': [
-    {
-      '1': 'predicate_filter',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowFilter',
-      '10': 'predicateFilter'
-    },
-    {
-      '1': 'true_filter',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowFilter',
-      '10': 'trueFilter'
-    },
-    {
-      '1': 'false_filter',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.RowFilter',
-      '10': 'falseFilter'
-    },
+  '2': const [
+    const {'1': 'predicate_filter', '3': 1, '4': 1, '5': 11, '6': '.google.bigtable.v2.RowFilter', '10': 'predicateFilter'},
+    const {'1': 'true_filter', '3': 2, '4': 1, '5': 11, '6': '.google.bigtable.v2.RowFilter', '10': 'trueFilter'},
+    const {'1': 'false_filter', '3': 3, '4': 1, '5': 11, '6': '.google.bigtable.v2.RowFilter', '10': 'falseFilter'},
   ],
 };
 
-const Mutation$json = {
+const Mutation$json = const {
   '1': 'Mutation',
-  '2': [
-    {
-      '1': 'set_cell',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.Mutation.SetCell',
-      '9': 0,
-      '10': 'setCell'
-    },
-    {
-      '1': 'delete_from_column',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.Mutation.DeleteFromColumn',
-      '9': 0,
-      '10': 'deleteFromColumn'
-    },
-    {
-      '1': 'delete_from_family',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.Mutation.DeleteFromFamily',
-      '9': 0,
-      '10': 'deleteFromFamily'
-    },
-    {
-      '1': 'delete_from_row',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.Mutation.DeleteFromRow',
-      '9': 0,
-      '10': 'deleteFromRow'
-    },
+  '2': const [
+    const {'1': 'set_cell', '3': 1, '4': 1, '5': 11, '6': '.google.bigtable.v2.Mutation.SetCell', '9': 0, '10': 'setCell'},
+    const {'1': 'delete_from_column', '3': 2, '4': 1, '5': 11, '6': '.google.bigtable.v2.Mutation.DeleteFromColumn', '9': 0, '10': 'deleteFromColumn'},
+    const {'1': 'delete_from_family', '3': 3, '4': 1, '5': 11, '6': '.google.bigtable.v2.Mutation.DeleteFromFamily', '9': 0, '10': 'deleteFromFamily'},
+    const {'1': 'delete_from_row', '3': 4, '4': 1, '5': 11, '6': '.google.bigtable.v2.Mutation.DeleteFromRow', '9': 0, '10': 'deleteFromRow'},
   ],
-  '3': [
-    Mutation_SetCell$json,
-    Mutation_DeleteFromColumn$json,
-    Mutation_DeleteFromFamily$json,
-    Mutation_DeleteFromRow$json
-  ],
-  '8': [
-    {'1': 'mutation'},
+  '3': const [Mutation_SetCell$json, Mutation_DeleteFromColumn$json, Mutation_DeleteFromFamily$json, Mutation_DeleteFromRow$json],
+  '8': const [
+    const {'1': 'mutation'},
   ],
 };
 
-const Mutation_SetCell$json = {
+const Mutation_SetCell$json = const {
   '1': 'SetCell',
-  '2': [
-    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
-    {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
-    {'1': 'timestamp_micros', '3': 3, '4': 1, '5': 3, '10': 'timestampMicros'},
-    {'1': 'value', '3': 4, '4': 1, '5': 12, '10': 'value'},
+  '2': const [
+    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+    const {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
+    const {'1': 'timestamp_micros', '3': 3, '4': 1, '5': 3, '10': 'timestampMicros'},
+    const {'1': 'value', '3': 4, '4': 1, '5': 12, '10': 'value'},
   ],
 };
 
-const Mutation_DeleteFromColumn$json = {
+const Mutation_DeleteFromColumn$json = const {
   '1': 'DeleteFromColumn',
-  '2': [
-    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
-    {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
-    {
-      '1': 'time_range',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.google.bigtable.v2.TimestampRange',
-      '10': 'timeRange'
-    },
+  '2': const [
+    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+    const {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
+    const {'1': 'time_range', '3': 3, '4': 1, '5': 11, '6': '.google.bigtable.v2.TimestampRange', '10': 'timeRange'},
   ],
 };
 
-const Mutation_DeleteFromFamily$json = {
+const Mutation_DeleteFromFamily$json = const {
   '1': 'DeleteFromFamily',
-  '2': [
-    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+  '2': const [
+    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
   ],
 };
 
-const Mutation_DeleteFromRow$json = {
+const Mutation_DeleteFromRow$json = const {
   '1': 'DeleteFromRow',
 };
 
-const ReadModifyWriteRule$json = {
+const ReadModifyWriteRule$json = const {
   '1': 'ReadModifyWriteRule',
-  '2': [
-    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
-    {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
-    {'1': 'append_value', '3': 3, '4': 1, '5': 12, '9': 0, '10': 'appendValue'},
-    {
-      '1': 'increment_amount',
-      '3': 4,
-      '4': 1,
-      '5': 3,
-      '9': 0,
-      '10': 'incrementAmount'
-    },
+  '2': const [
+    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+    const {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
+    const {'1': 'append_value', '3': 3, '4': 1, '5': 12, '9': 0, '10': 'appendValue'},
+    const {'1': 'increment_amount', '3': 4, '4': 1, '5': 3, '9': 0, '10': 'incrementAmount'},
   ],
-  '8': [
-    {'1': 'rule'},
+  '8': const [
+    const {'1': 'rule'},
   ],
 };
+

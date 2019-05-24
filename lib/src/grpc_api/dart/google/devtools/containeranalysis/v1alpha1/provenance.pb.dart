@@ -1,669 +1,404 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/devtools/containeranalysis/v1alpha1/provenance.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import 'source_context.pb.dart';
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import 'source_context.pb.dart' as $1;
 
 import 'provenance.pbenum.dart';
 
 export 'provenance.pbenum.dart';
 
-class BuildProvenance_BuildOptionsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildProvenance_BuildOptionsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  BuildProvenance_BuildOptionsEntry() : super();
-  BuildProvenance_BuildOptionsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildProvenance_BuildOptionsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  BuildProvenance_BuildOptionsEntry clone() =>
-      BuildProvenance_BuildOptionsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BuildProvenance_BuildOptionsEntry create() =>
-      BuildProvenance_BuildOptionsEntry();
-  static PbList<BuildProvenance_BuildOptionsEntry> createRepeated() =>
-      PbList<BuildProvenance_BuildOptionsEntry>();
-  static BuildProvenance_BuildOptionsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlyBuildProvenance_BuildOptionsEntry();
-    return _defaultInstance;
-  }
-
-  static BuildProvenance_BuildOptionsEntry _defaultInstance;
-  static void $checkItem(BuildProvenance_BuildOptionsEntry v) {
-    if (v is! BuildProvenance_BuildOptionsEntry)
-      checkItemFailed(v, 'BuildProvenance_BuildOptionsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyBuildProvenance_BuildOptionsEntry
-    extends BuildProvenance_BuildOptionsEntry with ReadonlyMessageMixin {}
-
-class BuildProvenance extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('BuildProvenance')
+class BuildProvenance extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildProvenance', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'id')
     ..aOS(2, 'projectId')
-    ..pp<Command>(
-        5, 'commands', PbFieldType.PM, Command.$checkItem, Command.create)
-    ..pp<Artifact>(6, 'builtArtifacts', PbFieldType.PM, Artifact.$checkItem,
-        Artifact.create)
-    ..a<$google$protobuf.Timestamp>(
-        7,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        8,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        9,
-        'finishTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..pc<Command>(5, 'commands', $pb.PbFieldType.PM,Command.create)
+    ..pc<Artifact>(6, 'builtArtifacts', $pb.PbFieldType.PM,Artifact.create)
+    ..a<$0.Timestamp>(7, 'createTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(8, 'startTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(9, 'finishTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
     ..aOS(11, 'creator')
     ..aOS(13, 'logsBucket')
-    ..a<Source>(14, 'sourceProvenance', PbFieldType.OM, Source.getDefault,
-        Source.create)
+    ..a<Source>(14, 'sourceProvenance', $pb.PbFieldType.OM, Source.getDefault, Source.create)
     ..aOS(15, 'triggerId')
-    ..pp<BuildProvenance_BuildOptionsEntry>(
-        16,
-        'buildOptions',
-        PbFieldType.PM,
-        BuildProvenance_BuildOptionsEntry.$checkItem,
-        BuildProvenance_BuildOptionsEntry.create)
+    ..m<$core.String, $core.String>(16, 'buildOptions', 'BuildProvenance.BuildOptionsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(17, 'builderVersion')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   BuildProvenance() : super();
-  BuildProvenance.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildProvenance.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildProvenance.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  BuildProvenance.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BuildProvenance clone() => BuildProvenance()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  BuildProvenance copyWith(void Function(BuildProvenance) updates) => super.copyWith((message) => updates(message as BuildProvenance));
+  $pb.BuilderInfo get info_ => _i;
   static BuildProvenance create() => BuildProvenance();
-  static PbList<BuildProvenance> createRepeated() => PbList<BuildProvenance>();
-  static BuildProvenance getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyBuildProvenance();
-    return _defaultInstance;
-  }
-
+  BuildProvenance createEmptyInstance() => create();
+  static $pb.PbList<BuildProvenance> createRepeated() => $pb.PbList<BuildProvenance>();
+  static BuildProvenance getDefault() => _defaultInstance ??= create()..freeze();
   static BuildProvenance _defaultInstance;
-  static void $checkItem(BuildProvenance v) {
-    if (v is! BuildProvenance) checkItemFailed(v, 'BuildProvenance');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasId() => $_has(0);
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) { $_setString(0, v); }
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get projectId => $_getS(1, '');
-  set projectId(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasProjectId() => $_has(1);
+  $core.String get projectId => $_getS(1, '');
+  set projectId($core.String v) { $_setString(1, v); }
+  $core.bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 
-  List<Command> get commands => $_getList(2);
+  $core.List<Command> get commands => $_getList(2);
 
-  List<Artifact> get builtArtifacts => $_getList(3);
+  $core.List<Artifact> get builtArtifacts => $_getList(3);
 
-  $google$protobuf.Timestamp get createTime => $_getN(4);
-  set createTime($google$protobuf.Timestamp v) {
-    setField(7, v);
-  }
-
-  bool hasCreateTime() => $_has(4);
+  $0.Timestamp get createTime => $_getN(4);
+  set createTime($0.Timestamp v) { setField(7, v); }
+  $core.bool hasCreateTime() => $_has(4);
   void clearCreateTime() => clearField(7);
 
-  $google$protobuf.Timestamp get startTime => $_getN(5);
-  set startTime($google$protobuf.Timestamp v) {
-    setField(8, v);
-  }
-
-  bool hasStartTime() => $_has(5);
+  $0.Timestamp get startTime => $_getN(5);
+  set startTime($0.Timestamp v) { setField(8, v); }
+  $core.bool hasStartTime() => $_has(5);
   void clearStartTime() => clearField(8);
 
-  $google$protobuf.Timestamp get finishTime => $_getN(6);
-  set finishTime($google$protobuf.Timestamp v) {
-    setField(9, v);
-  }
-
-  bool hasFinishTime() => $_has(6);
+  $0.Timestamp get finishTime => $_getN(6);
+  set finishTime($0.Timestamp v) { setField(9, v); }
+  $core.bool hasFinishTime() => $_has(6);
   void clearFinishTime() => clearField(9);
 
-  String get creator => $_getS(7, '');
-  set creator(String v) {
-    $_setString(7, v);
-  }
-
-  bool hasCreator() => $_has(7);
+  $core.String get creator => $_getS(7, '');
+  set creator($core.String v) { $_setString(7, v); }
+  $core.bool hasCreator() => $_has(7);
   void clearCreator() => clearField(11);
 
-  String get logsBucket => $_getS(8, '');
-  set logsBucket(String v) {
-    $_setString(8, v);
-  }
-
-  bool hasLogsBucket() => $_has(8);
+  $core.String get logsBucket => $_getS(8, '');
+  set logsBucket($core.String v) { $_setString(8, v); }
+  $core.bool hasLogsBucket() => $_has(8);
   void clearLogsBucket() => clearField(13);
 
   Source get sourceProvenance => $_getN(9);
-  set sourceProvenance(Source v) {
-    setField(14, v);
-  }
-
-  bool hasSourceProvenance() => $_has(9);
+  set sourceProvenance(Source v) { setField(14, v); }
+  $core.bool hasSourceProvenance() => $_has(9);
   void clearSourceProvenance() => clearField(14);
 
-  String get triggerId => $_getS(10, '');
-  set triggerId(String v) {
-    $_setString(10, v);
-  }
-
-  bool hasTriggerId() => $_has(10);
+  $core.String get triggerId => $_getS(10, '');
+  set triggerId($core.String v) { $_setString(10, v); }
+  $core.bool hasTriggerId() => $_has(10);
   void clearTriggerId() => clearField(15);
 
-  List<BuildProvenance_BuildOptionsEntry> get buildOptions => $_getList(11);
+  $core.Map<$core.String, $core.String> get buildOptions => $_getMap(11);
 
-  String get builderVersion => $_getS(12, '');
-  set builderVersion(String v) {
-    $_setString(12, v);
-  }
-
-  bool hasBuilderVersion() => $_has(12);
+  $core.String get builderVersion => $_getS(12, '');
+  set builderVersion($core.String v) { $_setString(12, v); }
+  $core.bool hasBuilderVersion() => $_has(12);
   void clearBuilderVersion() => clearField(17);
 }
 
-class _ReadonlyBuildProvenance extends BuildProvenance
-    with ReadonlyMessageMixin {}
-
-class Source_FileHashesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Source_FileHashesEntry')
-    ..aOS(1, 'key')
-    ..a<FileHashes>(
-        2, 'value', PbFieldType.OM, FileHashes.getDefault, FileHashes.create)
-    ..hasRequiredFields = false;
-
-  Source_FileHashesEntry() : super();
-  Source_FileHashesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Source_FileHashesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Source_FileHashesEntry clone() =>
-      Source_FileHashesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Source_FileHashesEntry create() => Source_FileHashesEntry();
-  static PbList<Source_FileHashesEntry> createRepeated() =>
-      PbList<Source_FileHashesEntry>();
-  static Source_FileHashesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = _ReadonlySource_FileHashesEntry();
-    return _defaultInstance;
-  }
-
-  static Source_FileHashesEntry _defaultInstance;
-  static void $checkItem(Source_FileHashesEntry v) {
-    if (v is! Source_FileHashesEntry)
-      checkItemFailed(v, 'Source_FileHashesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  FileHashes get value => $_getN(1);
-  set value(FileHashes v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
+enum Source_Source {
+  storageSource, 
+  repoSource, 
+  notSet
 }
 
-class _ReadonlySource_FileHashesEntry extends Source_FileHashesEntry
-    with ReadonlyMessageMixin {}
-
-class Source extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Source')
-    ..a<StorageSource>(1, 'storageSource', PbFieldType.OM,
-        StorageSource.getDefault, StorageSource.create)
-    ..a<RepoSource>(2, 'repoSource', PbFieldType.OM, RepoSource.getDefault,
-        RepoSource.create)
-    ..pp<Source_FileHashesEntry>(3, 'fileHashes', PbFieldType.PM,
-        Source_FileHashesEntry.$checkItem, Source_FileHashesEntry.create)
-    ..a<StorageSource>(4, 'artifactStorageSource', PbFieldType.OM,
-        StorageSource.getDefault, StorageSource.create)
-    ..a<SourceContext>(7, 'context', PbFieldType.OM, SourceContext.getDefault,
-        SourceContext.create)
-    ..pp<SourceContext>(8, 'additionalContexts', PbFieldType.PM,
-        SourceContext.$checkItem, SourceContext.create)
-    ..hasRequiredFields = false;
+class Source extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Source_Source> _Source_SourceByTag = {
+    1 : Source_Source.storageSource,
+    2 : Source_Source.repoSource,
+    0 : Source_Source.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Source', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..a<StorageSource>(1, 'storageSource', $pb.PbFieldType.OM, StorageSource.getDefault, StorageSource.create)
+    ..a<RepoSource>(2, 'repoSource', $pb.PbFieldType.OM, RepoSource.getDefault, RepoSource.create)
+    ..m<$core.String, FileHashes>(3, 'fileHashes', 'Source.FileHashesEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OM, FileHashes.create, null, null , const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..a<StorageSource>(4, 'artifactStorageSource', $pb.PbFieldType.OM, StorageSource.getDefault, StorageSource.create)
+    ..a<$1.SourceContext>(7, 'context', $pb.PbFieldType.OM, $1.SourceContext.getDefault, $1.SourceContext.create)
+    ..pc<$1.SourceContext>(8, 'additionalContexts', $pb.PbFieldType.PM,$1.SourceContext.create)
+    ..oo(0, [1, 2])
+    ..hasRequiredFields = false
+  ;
 
   Source() : super();
-  Source.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Source.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Source.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Source.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Source clone() => Source()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Source copyWith(void Function(Source) updates) => super.copyWith((message) => updates(message as Source));
+  $pb.BuilderInfo get info_ => _i;
   static Source create() => Source();
-  static PbList<Source> createRepeated() => PbList<Source>();
-  static Source getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlySource();
-    return _defaultInstance;
-  }
-
+  Source createEmptyInstance() => create();
+  static $pb.PbList<Source> createRepeated() => $pb.PbList<Source>();
+  static Source getDefault() => _defaultInstance ??= create()..freeze();
   static Source _defaultInstance;
-  static void $checkItem(Source v) {
-    if (v is! Source) checkItemFailed(v, 'Source');
-  }
+
+  Source_Source whichSource() => _Source_SourceByTag[$_whichOneof(0)];
+  void clearSource() => clearField($_whichOneof(0));
 
   StorageSource get storageSource => $_getN(0);
-  set storageSource(StorageSource v) {
-    setField(1, v);
-  }
-
-  bool hasStorageSource() => $_has(0);
+  set storageSource(StorageSource v) { setField(1, v); }
+  $core.bool hasStorageSource() => $_has(0);
   void clearStorageSource() => clearField(1);
 
   RepoSource get repoSource => $_getN(1);
-  set repoSource(RepoSource v) {
-    setField(2, v);
-  }
-
-  bool hasRepoSource() => $_has(1);
+  set repoSource(RepoSource v) { setField(2, v); }
+  $core.bool hasRepoSource() => $_has(1);
   void clearRepoSource() => clearField(2);
 
-  List<Source_FileHashesEntry> get fileHashes => $_getList(2);
+  $core.Map<$core.String, FileHashes> get fileHashes => $_getMap(2);
 
   StorageSource get artifactStorageSource => $_getN(3);
-  set artifactStorageSource(StorageSource v) {
-    setField(4, v);
-  }
-
-  bool hasArtifactStorageSource() => $_has(3);
+  set artifactStorageSource(StorageSource v) { setField(4, v); }
+  $core.bool hasArtifactStorageSource() => $_has(3);
   void clearArtifactStorageSource() => clearField(4);
 
-  SourceContext get context => $_getN(4);
-  set context(SourceContext v) {
-    setField(7, v);
-  }
-
-  bool hasContext() => $_has(4);
+  $1.SourceContext get context => $_getN(4);
+  set context($1.SourceContext v) { setField(7, v); }
+  $core.bool hasContext() => $_has(4);
   void clearContext() => clearField(7);
 
-  List<SourceContext> get additionalContexts => $_getList(5);
+  $core.List<$1.SourceContext> get additionalContexts => $_getList(5);
 }
 
-class _ReadonlySource extends Source with ReadonlyMessageMixin {}
-
-class FileHashes extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('FileHashes')
-    ..pp<Hash>(1, 'fileHash', PbFieldType.PM, Hash.$checkItem, Hash.create)
-    ..hasRequiredFields = false;
+class FileHashes extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileHashes', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..pc<Hash>(1, 'fileHash', $pb.PbFieldType.PM,Hash.create)
+    ..hasRequiredFields = false
+  ;
 
   FileHashes() : super();
-  FileHashes.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileHashes.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileHashes.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  FileHashes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   FileHashes clone() => FileHashes()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  FileHashes copyWith(void Function(FileHashes) updates) => super.copyWith((message) => updates(message as FileHashes));
+  $pb.BuilderInfo get info_ => _i;
   static FileHashes create() => FileHashes();
-  static PbList<FileHashes> createRepeated() => PbList<FileHashes>();
-  static FileHashes getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyFileHashes();
-    return _defaultInstance;
-  }
-
+  FileHashes createEmptyInstance() => create();
+  static $pb.PbList<FileHashes> createRepeated() => $pb.PbList<FileHashes>();
+  static FileHashes getDefault() => _defaultInstance ??= create()..freeze();
   static FileHashes _defaultInstance;
-  static void $checkItem(FileHashes v) {
-    if (v is! FileHashes) checkItemFailed(v, 'FileHashes');
-  }
 
-  List<Hash> get fileHash => $_getList(0);
+  $core.List<Hash> get fileHash => $_getList(0);
 }
 
-class _ReadonlyFileHashes extends FileHashes with ReadonlyMessageMixin {}
-
-class Hash extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Hash')
-    ..e<Hash_HashType>(1, 'type', PbFieldType.OE, Hash_HashType.NONE,
-        Hash_HashType.valueOf, Hash_HashType.values)
-    ..a<List<int>>(2, 'value', PbFieldType.OY)
-    ..hasRequiredFields = false;
+class Hash extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Hash', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+    ..e<Hash_HashType>(1, 'type', $pb.PbFieldType.OE, Hash_HashType.NONE, Hash_HashType.valueOf, Hash_HashType.values)
+    ..a<$core.List<$core.int>>(2, 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
 
   Hash() : super();
-  Hash.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Hash.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Hash.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Hash.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Hash clone() => Hash()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Hash copyWith(void Function(Hash) updates) => super.copyWith((message) => updates(message as Hash));
+  $pb.BuilderInfo get info_ => _i;
   static Hash create() => Hash();
-  static PbList<Hash> createRepeated() => PbList<Hash>();
-  static Hash getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyHash();
-    return _defaultInstance;
-  }
-
+  Hash createEmptyInstance() => create();
+  static $pb.PbList<Hash> createRepeated() => $pb.PbList<Hash>();
+  static Hash getDefault() => _defaultInstance ??= create()..freeze();
   static Hash _defaultInstance;
-  static void $checkItem(Hash v) {
-    if (v is! Hash) checkItemFailed(v, 'Hash');
-  }
 
   Hash_HashType get type => $_getN(0);
-  set type(Hash_HashType v) {
-    setField(1, v);
-  }
-
-  bool hasType() => $_has(0);
+  set type(Hash_HashType v) { setField(1, v); }
+  $core.bool hasType() => $_has(0);
   void clearType() => clearField(1);
 
-  List<int> get value => $_getN(1);
-  set value(List<int> v) {
-    $_setBytes(1, v);
-  }
-
-  bool hasValue() => $_has(1);
+  $core.List<$core.int> get value => $_getN(1);
+  set value($core.List<$core.int> v) { $_setBytes(1, v); }
+  $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 }
 
-class _ReadonlyHash extends Hash with ReadonlyMessageMixin {}
-
-class StorageSource extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('StorageSource')
+class StorageSource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StorageSource', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'bucket')
     ..aOS(2, 'object')
     ..aInt64(3, 'generation')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   StorageSource() : super();
-  StorageSource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StorageSource.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StorageSource.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  StorageSource.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   StorageSource clone() => StorageSource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  StorageSource copyWith(void Function(StorageSource) updates) => super.copyWith((message) => updates(message as StorageSource));
+  $pb.BuilderInfo get info_ => _i;
   static StorageSource create() => StorageSource();
-  static PbList<StorageSource> createRepeated() => PbList<StorageSource>();
-  static StorageSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyStorageSource();
-    return _defaultInstance;
-  }
-
+  StorageSource createEmptyInstance() => create();
+  static $pb.PbList<StorageSource> createRepeated() => $pb.PbList<StorageSource>();
+  static StorageSource getDefault() => _defaultInstance ??= create()..freeze();
   static StorageSource _defaultInstance;
-  static void $checkItem(StorageSource v) {
-    if (v is! StorageSource) checkItemFailed(v, 'StorageSource');
-  }
 
-  String get bucket => $_getS(0, '');
-  set bucket(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasBucket() => $_has(0);
+  $core.String get bucket => $_getS(0, '');
+  set bucket($core.String v) { $_setString(0, v); }
+  $core.bool hasBucket() => $_has(0);
   void clearBucket() => clearField(1);
 
-  String get object => $_getS(1, '');
-  set object(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasObject() => $_has(1);
+  $core.String get object => $_getS(1, '');
+  set object($core.String v) { $_setString(1, v); }
+  $core.bool hasObject() => $_has(1);
   void clearObject() => clearField(2);
 
   Int64 get generation => $_getI64(2);
-  set generation(Int64 v) {
-    $_setInt64(2, v);
-  }
-
-  bool hasGeneration() => $_has(2);
+  set generation(Int64 v) { $_setInt64(2, v); }
+  $core.bool hasGeneration() => $_has(2);
   void clearGeneration() => clearField(3);
 }
 
-class _ReadonlyStorageSource extends StorageSource with ReadonlyMessageMixin {}
+enum RepoSource_Revision {
+  branchName, 
+  tagName, 
+  commitSha, 
+  notSet
+}
 
-class RepoSource extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('RepoSource')
+class RepoSource extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RepoSource_Revision> _RepoSource_RevisionByTag = {
+    3 : RepoSource_Revision.branchName,
+    4 : RepoSource_Revision.tagName,
+    5 : RepoSource_Revision.commitSha,
+    0 : RepoSource_Revision.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RepoSource', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'repoName')
     ..aOS(3, 'branchName')
     ..aOS(4, 'tagName')
     ..aOS(5, 'commitSha')
-    ..hasRequiredFields = false;
+    ..oo(0, [3, 4, 5])
+    ..hasRequiredFields = false
+  ;
 
   RepoSource() : super();
-  RepoSource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RepoSource.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RepoSource.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  RepoSource.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   RepoSource clone() => RepoSource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  RepoSource copyWith(void Function(RepoSource) updates) => super.copyWith((message) => updates(message as RepoSource));
+  $pb.BuilderInfo get info_ => _i;
   static RepoSource create() => RepoSource();
-  static PbList<RepoSource> createRepeated() => PbList<RepoSource>();
-  static RepoSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyRepoSource();
-    return _defaultInstance;
-  }
-
+  RepoSource createEmptyInstance() => create();
+  static $pb.PbList<RepoSource> createRepeated() => $pb.PbList<RepoSource>();
+  static RepoSource getDefault() => _defaultInstance ??= create()..freeze();
   static RepoSource _defaultInstance;
-  static void $checkItem(RepoSource v) {
-    if (v is! RepoSource) checkItemFailed(v, 'RepoSource');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
-    $_setString(0, v);
-  }
+  RepoSource_Revision whichRevision() => _RepoSource_RevisionByTag[$_whichOneof(0)];
+  void clearRevision() => clearField($_whichOneof(0));
 
-  bool hasProjectId() => $_has(0);
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) { $_setString(0, v); }
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get repoName => $_getS(1, '');
-  set repoName(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasRepoName() => $_has(1);
+  $core.String get repoName => $_getS(1, '');
+  set repoName($core.String v) { $_setString(1, v); }
+  $core.bool hasRepoName() => $_has(1);
   void clearRepoName() => clearField(2);
 
-  String get branchName => $_getS(2, '');
-  set branchName(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasBranchName() => $_has(2);
+  $core.String get branchName => $_getS(2, '');
+  set branchName($core.String v) { $_setString(2, v); }
+  $core.bool hasBranchName() => $_has(2);
   void clearBranchName() => clearField(3);
 
-  String get tagName => $_getS(3, '');
-  set tagName(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasTagName() => $_has(3);
+  $core.String get tagName => $_getS(3, '');
+  set tagName($core.String v) { $_setString(3, v); }
+  $core.bool hasTagName() => $_has(3);
   void clearTagName() => clearField(4);
 
-  String get commitSha => $_getS(4, '');
-  set commitSha(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasCommitSha() => $_has(4);
+  $core.String get commitSha => $_getS(4, '');
+  set commitSha($core.String v) { $_setString(4, v); }
+  $core.bool hasCommitSha() => $_has(4);
   void clearCommitSha() => clearField(5);
 }
 
-class _ReadonlyRepoSource extends RepoSource with ReadonlyMessageMixin {}
-
-class Command extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Command')
+class Command extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Command', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..pPS(2, 'env')
     ..pPS(3, 'args')
     ..aOS(4, 'dir')
     ..aOS(5, 'id')
     ..pPS(6, 'waitFor')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Command() : super();
-  Command.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Command.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Command.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Command.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Command clone() => Command()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Command copyWith(void Function(Command) updates) => super.copyWith((message) => updates(message as Command));
+  $pb.BuilderInfo get info_ => _i;
   static Command create() => Command();
-  static PbList<Command> createRepeated() => PbList<Command>();
-  static Command getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyCommand();
-    return _defaultInstance;
-  }
-
+  Command createEmptyInstance() => create();
+  static $pb.PbList<Command> createRepeated() => $pb.PbList<Command>();
+  static Command getDefault() => _defaultInstance ??= create()..freeze();
   static Command _defaultInstance;
-  static void $checkItem(Command v) {
-    if (v is! Command) checkItemFailed(v, 'Command');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<String> get env => $_getList(1);
+  $core.List<$core.String> get env => $_getList(1);
 
-  List<String> get args => $_getList(2);
+  $core.List<$core.String> get args => $_getList(2);
 
-  String get dir => $_getS(3, '');
-  set dir(String v) {
-    $_setString(3, v);
-  }
-
-  bool hasDir() => $_has(3);
+  $core.String get dir => $_getS(3, '');
+  set dir($core.String v) { $_setString(3, v); }
+  $core.bool hasDir() => $_has(3);
   void clearDir() => clearField(4);
 
-  String get id => $_getS(4, '');
-  set id(String v) {
-    $_setString(4, v);
-  }
-
-  bool hasId() => $_has(4);
+  $core.String get id => $_getS(4, '');
+  set id($core.String v) { $_setString(4, v); }
+  $core.bool hasId() => $_has(4);
   void clearId() => clearField(5);
 
-  List<String> get waitFor => $_getList(5);
+  $core.List<$core.String> get waitFor => $_getList(5);
 }
 
-class _ReadonlyCommand extends Command with ReadonlyMessageMixin {}
-
-class Artifact extends GeneratedMessage {
-  static final BuilderInfo _i = BuilderInfo('Artifact')
+class Artifact extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Artifact', package: const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'checksum')
     ..aOS(3, 'id')
     ..pPS(4, 'names')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   Artifact() : super();
-  Artifact.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Artifact.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Artifact.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Artifact.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Artifact clone() => Artifact()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+  Artifact copyWith(void Function(Artifact) updates) => super.copyWith((message) => updates(message as Artifact));
+  $pb.BuilderInfo get info_ => _i;
   static Artifact create() => Artifact();
-  static PbList<Artifact> createRepeated() => PbList<Artifact>();
-  static Artifact getDefault() {
-    if (_defaultInstance == null) _defaultInstance = _ReadonlyArtifact();
-    return _defaultInstance;
-  }
-
+  Artifact createEmptyInstance() => create();
+  static $pb.PbList<Artifact> createRepeated() => $pb.PbList<Artifact>();
+  static Artifact getDefault() => _defaultInstance ??= create()..freeze();
   static Artifact _defaultInstance;
-  static void $checkItem(Artifact v) {
-    if (v is! Artifact) checkItemFailed(v, 'Artifact');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasName() => $_has(0);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) { $_setString(0, v); }
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get checksum => $_getS(1, '');
-  set checksum(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasChecksum() => $_has(1);
+  $core.String get checksum => $_getS(1, '');
+  set checksum($core.String v) { $_setString(1, v); }
+  $core.bool hasChecksum() => $_has(1);
   void clearChecksum() => clearField(2);
 
-  String get id => $_getS(2, '');
-  set id(String v) {
-    $_setString(2, v);
-  }
-
-  bool hasId() => $_has(2);
+  $core.String get id => $_getS(2, '');
+  set id($core.String v) { $_setString(2, v); }
+  $core.bool hasId() => $_has(2);
   void clearId() => clearField(3);
 
-  List<String> get names => $_getList(3);
+  $core.List<$core.String> get names => $_getList(3);
 }
 
-class _ReadonlyArtifact extends Artifact with ReadonlyMessageMixin {}
